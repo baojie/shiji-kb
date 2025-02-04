@@ -1,0 +1,71 @@
+# 《高祖本紀》
+# https://ctext.org/shiji/gao-zu-ben-ji/zh
+
+# 8.1 高祖，沛豐邑中陽裏人，姓劉氏，字季。父曰太公，母曰劉媼。其先劉媼嘗息大澤之陂，夢與神遇。是時雷電晦冥，太公往視，則見蛟龍於其上。已而有身，遂產高祖。
+
+@prefix ex: <http://memect.cn/baojie/ontologies/2025/1/shiji/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# 定义实体
+ex:高祖 a ex:人物 ;
+    ex:姓 "刘" ;
+    ex:字 "季" ;
+    ex:出生地 ex:沛豐邑中陽里 ;
+    ex:父亲 ex:太公 ;
+    ex:母亲 ex:刘媼 ;
+    ex:出生事件 ex:刘媼梦神遇蛟龙 .
+
+ex:太公 a ex:人物 ;
+    ex:身份 "高祖的父亲" ;
+    ex:子 ex:高祖 ;
+    ex:配偶 ex:刘媼 ;
+    ex:参与事件 ex:目睹蛟龙 .
+
+ex:刘媼 a ex:人物 ;
+    ex:身份 "高祖的母亲" ;
+    ex:子 ex:高祖 ;
+    ex:配偶 ex:太公 ;
+    ex:参与事件 ex:梦与神遇, ex:蛟龙现 .
+
+ex:沛豐邑中陽里 a ex:地点 ;
+    ex:类型 "出生地" ;
+    ex:关联人物 ex:高祖 .
+
+ex:大泽之陂 a ex:地点 ;
+    ex:类型 "事件发生地" ;
+    ex:关联事件 ex:刘媼梦神遇 .
+
+ex:蛟龙 a ex:神话生物 ;
+    ex:象征 "神圣、天命" ;
+    ex:关联事件 ex:出现在刘媼身上 .
+
+ex:梦与神遇 a ex:事件 ;
+    ex:参与者 ex:刘媼 ;
+    ex:结果 ex:怀孕生高祖 .
+
+ex:雷电晦冥 a ex:自然现象 ;
+    ex:事件背景 ex:刘媼梦神遇 .
+
+ex:高祖出生 a ex:事件 ;
+    ex:原因 ex:刘媼梦神遇蛟龙 ;
+    ex:结果 ex:高祖诞生 .
+
+# 定义事件关系
+ex:刘媼梦神遇蛟龙 a ex:事件 ;
+    ex:参与者 ex:刘媼 ;
+    ex:地点 ex:大泽之陂 ;
+    ex:背景 ex:雷电晦冥 ;
+    ex:结果 ex:高祖出生 .
+
+ex:目睹蛟龙 a ex:事件 ;
+    ex:参与者 ex:太公 ;
+    ex:关联生物 ex:蛟龙 .
+
+ex:出现在刘媼身上 a ex:事件 ;
+    ex:参与者 ex:蛟龙 ;
+    ex:关联人物 ex:刘媼 .
+
+ex:怀孕生高祖 a ex:事件 ;
+    ex:参与者 ex:刘媼 ;
+    ex:结果 ex:高祖出生 .
