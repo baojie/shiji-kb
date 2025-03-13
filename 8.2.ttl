@@ -57,16 +57,17 @@
     rdfs:label "不事生產"@zh-hant .
 
 :泗水亭長 a :職務 ;
-    rdfs:subClassOf :官吏制度 ;
     rdfs:label "泗水亭長"@zh-hant .
 
 :醉臥顯龍 a :超自然現象 ;
-    rdfs:subClassOf :歷史事件 ;
+    rdfs:subClassOf :事件 ;
     rdfs:label "醉臥顯龍"@zh-hant ;
-    :發生場所 [:酒店 ;
-              :經營者 :王媼, :武負 ] ;
+    :發生場所 :某酒家;  
     :見證者 :王媼, :武負 ;
     :後續影響 :折券棄責 .
+
+:某酒家 a :酒店 ; 
+    :經營者 :王媼, :武負 .
 
 :折券棄責 a :經濟行為 ;
     rdfs:subClassOf :商業活動 ;
@@ -77,11 +78,11 @@
 
 :王媼 a :人物 ;
     rdfs:label "王媼"@zh-hant ;
-    :職業 :酒家 .
+    :職業 :酒家主人 .
 
 :武負 a :人物 ;
     rdfs:label "武負"@zh-hant ;
-    :職業 :酒家 .
+    :職業 :酒家主人 .
 
 :生物特徵 a rdfs:Class ;
     rdfs:label "生物特徵"@zh-hant .
