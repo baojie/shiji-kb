@@ -1,0 +1,93 @@
+# https://ctext.org/shiji/gao-zu-ben-ji/zh#n4898
+# 高祖為人，隆準而龍顏，美須髯，左股有七十二黑子。仁而愛人，喜施，意豁如也。常有大度，不事家人生產作業。及壯，試為吏，為泗水亭長，廷中吏無所不狎侮，好酒及色。常從王媼、武負貰酒，醉臥，武負、王媼見其上常有龍，怪之。高祖每酤留飲，酒讎數倍。及見怪，歲竟，此兩家常折券棄責。
+
+@prefix : <http://memect.cn/baojie/ontologies/2025/1/shiji/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@base <http://memect.cn/baojie/ontologies/2025/1/shiji/> .
+
+:shiji_8_2 rdf:type owl:Ontology ;
+    owl:imports <file:///work/shiji/ontology.ttl> .
+
+:高祖 a :人物 ;
+    rdfs:label "高祖"@zh-hant ;
+    :姓名 "劉邦" ;
+    :外貌特征 :隆准, :龍顏, :美須髯, :左股七十二黑子 ;
+    :性格特征 :仁愛, :喜施, :豁達, :大度 ;
+    :行為特征 :不事生產 ;
+    :職業經歷 :泗水亭長 ;
+    :社會關係 :王媼, :武負 ;
+    :特殊經歷 :醉臥顯龍, :折券棄責 .
+
+:隆准 a :外貌特征 ;
+    rdfs:subClassOf :生物特徵 ;
+    rdfs:label "隆準"@zh-hant .
+
+:龍顏 a :外貌特征 ;
+    rdfs:subClassOf :生物特徵 ;
+    rdfs:label "龍顏"@zh-hant .
+
+:美須髯 a :外貌特征 ;
+    rdfs:subClassOf :生物特徵 ;
+    rdfs:label "美須髯"@zh-hant .
+
+:左股七十二黑子 a :外貌特征 ;
+    rdfs:subClassOf :生物特徵 ;
+    rdfs:label "左股七十二黑子"@zh-hant .
+
+:仁愛 a :性格特征 ;
+    rdfs:subClassOf :心理特質 ;
+    rdfs:label "仁愛"@zh-hant .
+
+:喜施 a :性格特征 ;
+    rdfs:subClassOf :行為傾向 ;
+    rdfs:label "喜施"@zh-hant .
+
+:豁達 a :性格特征 ;
+    rdfs:subClassOf :心理特質 ;
+    rdfs:label "豁達"@zh-hant .
+
+:大度 a :性格特征 ;
+    rdfs:subClassOf :心理特質 ;
+    rdfs:label "大度"@zh-hant .
+
+:不事生產 a :行為模式 ;
+    rdfs:subClassOf :生活習慣 ;
+    rdfs:label "不事生產"@zh-hant .
+
+:泗水亭長 a :職務 ;
+    rdfs:subClassOf :官吏制度 ;
+    rdfs:label "泗水亭長"@zh-hant .
+
+:醉臥顯龍 a :超自然現象 ;
+    rdfs:subClassOf :歷史事件 ;
+    rdfs:label "醉臥顯龍"@zh-hant ;
+    :發生場所 [:酒店 ;
+              :經營者 :王媼, :武負 ] ;
+    :見證者 :王媼, :武負 ;
+    :後續影響 :折券棄責 .
+
+:折券棄責 a :經濟行為 ;
+    rdfs:subClassOf :商業活動 ;
+    rdfs:label "折券棄責"@zh-hant ;
+    :執行者 :王媼, :武負 ;
+    :關聯事件 :醉臥顯龍 ;
+    :時間標記 "歲竟" .
+
+:王媼 a :人物 ;
+    rdfs:label "王媼"@zh-hant ;
+    :職業 :酒家 .
+
+:武負 a :人物 ;
+    rdfs:label "武負"@zh-hant ;
+    :職業 :酒家 .
+
+:生物特徵 a rdfs:Class ;
+    rdfs:label "生物特徵"@zh-hant .
+
+:心理特質 a rdfs:Class ;
+    rdfs:label "心理特質"@zh-hant .
+
+:歷史事件 a rdfs:Class ;
+    rdfs:label "歷史事件"@zh-hant .
