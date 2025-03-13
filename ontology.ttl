@@ -1,0 +1,13 @@
+@prefix : <http://memect.cn/baojie/ontologies/2025/1/shiji/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+
+:人物 a rdfs:Class.
+:地点 a rdfs:Class.
+:事件 a rdfs:Class.
+
+
+:皇帝 rdfs:subClassOf :人物.
+
+:子 rdfs:subPropertyOf :子女.
