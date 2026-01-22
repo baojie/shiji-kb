@@ -6,7 +6,7 @@
 
 标记语法：
 - @人名@ -> <span class="person">人名</span>
-- #地名# -> <span class="place">地名</span>
+- =地名= -> <span class="place">地名</span>
 - $官职$ -> <span class="official">官职</span>
 - %时间% -> <span class="time">时间</span>
 - &朝代& -> <span class="dynasty">朝代</span>
@@ -25,7 +25,7 @@ from pathlib import Path
 # 实体类型映射
 ENTITY_PATTERNS = [
     (r'@([^@]+)@', r'<span class="person">\1</span>'),      # 人名
-    (r'#([^#]+)#', r'<span class="place">\1</span>'),       # 地名
+    (r'=([^=]+)=', r'<span class="place">\1</span>'),       # 地名
     (r'\$([^$]+)\$', r'<span class="official">\1</span>'),  # 官职
     (r'%([^%]+)%', r'<span class="time">\1</span>'),        # 时间
     (r'&([^&]+)&', r'<span class="dynasty">\1</span>'),     # 朝代
@@ -116,20 +116,36 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
         
         # 引用块 或 NOTE 块
         elif line.startswith('> '):
-            # NOTE 块语法 '> [!NOTE]'
-            if re.match(r'^>\s*\[!NOTE\]', line):
+            # NOTE 块语法:
+            #   开始:  > [!NOTE] 或 > [!NOTE tag]
+            #   显式结束: > [!ENDNOTE]
+            m_start = re.match(r'^>\s*\[!NOTE(?:\s*[: ]\s*(?P<tag>[\w-]+))?\]\s*(?P<rest>.*)$', line)
+            m_end = re.match(r'^>\s*\[!ENDNOTE\]\s*$', line)
+            if m_end:
+                if in_note:
+                    html_lines.append('</div>')
+                    in_note = False
+                # if not in_note, ignore stray END marker
+                continue
+            if m_start:
                 # 关闭普通 blockquote 若打开
                 if in_blockquote:
                     html_lines.append('</blockquote>')
                     in_blockquote = False
-                # 开始一个 note-box
-                html_lines.append('<div class="note-box">')
-                html_lines.append('<h4>NOTE</h4>')
+                tag = m_start.group('tag')
+                rest = m_start.group('rest') or ''
+                classes = 'note-box'
+                if tag:
+                    # add semantic class
+                    classes += f' note-{tag}'
+                html_lines.append(f'<div class="{classes}">')
+                heading = 'NOTE'
+                if tag:
+                    heading = f'{heading} — {tag}'
+                html_lines.append(f'<h4>{heading}</h4>')
                 in_note = True
-                # 剥离 '> [!NOTE]' 前缀剩余内容
-                content = re.sub(r'^>\s*\[!NOTE\]\s*', '', line)
-                if content:
-                    html_lines.append(f'<p>{content}</p>')
+                if rest:
+                    html_lines.append(f'<p>{rest}</p>')
                 continue
             else:
                 if in_note:

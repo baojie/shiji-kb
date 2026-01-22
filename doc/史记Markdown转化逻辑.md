@@ -40,7 +40,10 @@
 
 ### 3.1 轶事与侧写
 
-- 针对篇幅较长、具有故事性或独立性的片段（如“舜受磨难”），使用 **警告/注意框 (`> [!NOTE]`)** 进行视觉隔离，突出其叙事地位。
+- 针对篇幅较长、具有故事性或独立性的片段（如“舜受磨难”），使用开始/结束式的 **警告/注意框** 来进行视觉隔离：
+  - 开始语法： `> [!NOTE]` 或可带语义标签的 `> [!NOTE tag]` （例如 `> [!NOTE warning]`）
+  - 结束语法： `> [!ENDNOTE]`
+  - 渲染器会把该区块转换为 `<div class="note-box [note-tag]"><h4>NOTE — tag</h4>...</div>`，便于对特定类型的注记应用不同样式或语义处理。
 
 ### 3.2 评价与总结
 
@@ -59,7 +62,7 @@
 #### Token 与 CSS 映射（常用）
 
 - 人名: @人名@ → `.person`
-- 地名: #地名# → `.place`
+- 地名: =地名= → `.place`
 - 官职: $官职$ → `.official`
 - 时间/纪年: %时间% → `.time`
 - 朝代/氏族/国号: &朝代& → `.dynasty`（可选改为 `.clan`，详见下文）
@@ -72,7 +75,7 @@
 示例（源 Markdown 行）:
 
 ```markdown
-[1] @黄帝@居#轩辕之丘#，娶於&西陵&之女。$天子$受命，%元年%始。
+[1] @黄帝@居=轩辕之丘=，娶於&西陵&之女。$天子$受命，%元年%始。
 ```
 
 渲染器会把上行转换为相应的 `<span class="...">` 标签，由 `doc/shiji-styles.css` 控制视觉样式。
@@ -84,7 +87,7 @@
 3. 在 Markdown 层做轻量预处理：
    - 规范化段落编号（例如把 `[23.a]`、`[23a]` 规整为 `[23]`）。
    - 根据配置（如 `config/clans.json`）对已知氏族名做语义修正（可选择把它们转为 `&朝代&` 或在渲染阶段输出 `.clan`）。
-4. 用渲染器（`render_shiji_html.py`）将 token → HTML（生成 `<span class="...">`）并做基础 Markdown → HTML 转换（标题、列表、`[!NOTE]` → `.note-box`、引用合并等）。
+4. 用渲染器（`render_shiji_html.py`）将 token → HTML（生成 `<span class="...">`）并做基础 Markdown → HTML 转换（标题、列表、`[!NOTE] / [!NOTE tag]` → `.note-box`、引用合并等）。
 5. 后处理（HTML 层）：合并相邻引用/注记片段、展平重复嵌套的 span、并对裸文本进行必要的语义包裹（仅显示层面，不改动原文字符）。
 
 #### 工具与命令示例
@@ -107,7 +110,16 @@ python3 render_shiji_html.py chapter_md/001_五帝本纪.simple.md
   - 方案 A（兼容）：渲染器后处理阶段把确认的氏族名替换为 `<span class="dynasty">...</span>`。
   - 方案 B（语义化）：新增 `.clan` 类并在渲染阶段输出 `<span class="clan">...</span>`；推荐把氏族名单放入 `config/clans.json`。
 - 孤立 `>` 行：渲染器把仅含 `>` 的行视为容器内空段落 `<p></p>`，以合并相邻引用/注记，避免出现字面 `>`。
-- `> [!NOTE]`：渲染为 `<div class="note-box"><h4>NOTE</h4>...</div>` 并收纳后续行直到 note 结束。
+- `> [!NOTE]` / `> [!NOTE tag]` + `> [!ENDNOTE]`：渲染为带语义类的 note 区块，例如
+
+  ```html
+  <div class="note-box note-warning">
+    <h4>NOTE — warning</h4>
+    <p>...</p>
+  </div>
+  ```
+
+  渲染器同时允许在没有显式 `> [!ENDNOTE]` 的情况下根据上下文关闭 note（遇到非 `>` 行时结束），但推荐使用显式结束标记以避免语义模糊并支持嵌套/并列注记。
 - 防止嵌套 span：后处理应展平重复的同类 span（例如 `<span class="dynasty"><span class="dynasty">高辛</span></span>` → `<span class="dynasty">高辛</span>`）。
 
 ----
