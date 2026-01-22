@@ -114,8 +114,10 @@
 
 - **视觉效果**：
   - 引号内的文字显示为**斜体**
-  - 背景添加**淡褐色网纹线阴影**（45度斜纹）
+  - 背景添加**极淡的褐色底色**（透明度0.03）
+  - 底部添加**褐色虚线**（透明度0.3），提供清晰的视觉边界
   - 引号内的实体标记（人名、地名等）仍然保持各自的样式
+  - 设计理念：克制优雅，不干扰阅读，同时提供足够的视觉区分
 
 - **示例**：
   ```markdown
@@ -133,13 +135,8 @@
   ```css
   .quoted {
       font-style: italic;
-      background: repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 2px,
-          rgba(139, 69, 19, 0.03) 2px,
-          rgba(139, 69, 19, 0.03) 4px
-      );
+      background-color: rgba(139, 69, 19, 0.03);
+      border-bottom: 1px dashed rgba(139, 69, 19, 0.3);
       padding: 0 2px;
   }
   ```

@@ -44,7 +44,7 @@ ENTITY_PATTERNS = [
 # 支持中文引号：""、''、「」、『』
 QUOTE_PATTERNS = [
     (r'"([^"<>]+)"', r'<span class="quoted">"\1"</span>'),      # 中文双引号
-    (r"'([^'<>]+)'", r"<span class=\"quoted\">'\\1'</span>"),      # 中文单引号
+    (r"'([^'<>]+)'", '<span class="quoted">\'\\1\'</span>'),      # 中文单引号
     (r'「([^」<>]+)」', r'<span class="quoted">「\1」</span>'),    # 日式单引号
     (r'『([^』<>]+)』', r'<span class="quoted">『\1』</span>'),    # 日式双引号
 ]
