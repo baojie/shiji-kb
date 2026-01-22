@@ -23,22 +23,29 @@ import os
 from pathlib import Path
 
 # 实体类型映射
+# 注意：这些模式必须按照特定顺序应用，以避免相互干扰
+# 使用负向前瞻和负向后顾来避免匹配HTML标签内的字符
+# 重要：** 必须在 * 之前处理，以避免冲突
 ENTITY_PATTERNS = [
-    (r'@([^@]+)@', r'<span class="person">\1</span>'),      # 人名
-    (r'=([^=]+)=', r'<span class="place">\1</span>'),       # 地名
-    (r'\$([^$]+)\$', r'<span class="official">\1</span>'),  # 官职
-    (r'%([^%]+)%', r'<span class="time">\1</span>'),        # 时间
-    (r'&([^&]+)&', r'<span class="dynasty">\1</span>'),     # 朝代
-    (r'\^([^^]+)\^', r'<span class="institution">\1</span>'),  # 制度
-    (r'~([^~]+)~', r'<span class="tribe">\1</span>'),       # 族群
-    (r'\*\*([^*]+)\*\*', r'<strong>\1</strong>'),           # 加粗（保留Markdown）
-    (r'!([^!]+)!', r'<span class="astronomy">\1</span>'),   # 天文
-    (r'\?([^?]+)\?', r'<span class="mythical">\1</span>'),  # 神话
+    (r'@([^@<>]+)@', r'<span class="person">\1</span>'),      # 人名
+    (r'=([^=<>]+)=', r'<span class="place">\1</span>'),       # 地名
+    (r'\$([^$<>]+)\$', r'<span class="official">\1</span>'),  # 官职
+    (r'%([^%<>]+)%', r'<span class="time">\1</span>'),        # 时间
+    (r'&([^&<>]+)&', r'<span class="dynasty">\1</span>'),     # 朝代
+    (r'\^([^<>^]+)\^', r'<span class="institution">\1</span>'),  # 制度
+    (r'~([^~<>]+)~', r'<span class="tribe">\1</span>'),       # 族群
+    (r'\*\*([^*<>]+)\*\*', r'<strong>\1</strong>'),           # 加粗（保留Markdown，必须在单*之前）
+    (r'\*([^*<>]+)\*', r'<span class="artifact">\1</span>'),  # 器物/礼器/书名
+    (r'!([^!<>]+)!', r'<span class="astronomy">\1</span>'),   # 天文
+    (r'\?([^?<>]+)\?', r'<span class="mythical">\1</span>'),  # 神话
 ]
 
 
 def convert_entities(text):
-    """转换实体标记为HTML标签"""
+    """转换实体标记为HTML标签
+
+    注意：此函数应该只在纯文本行上调用，不应该在已经包含HTML标签的文本上调用
+    """
     for pattern, replacement in ENTITY_PATTERNS:
         text = re.sub(pattern, replacement, text)
     return text
@@ -155,7 +162,13 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
                 if not in_blockquote:
                     html_lines.append('<blockquote>')
                     in_blockquote = True
-                line = line[2:]
+                # 在 blockquote 中，每行添加 <br> 以保持诗歌格式
+                content = line[2:]
+                if content.strip():  # 非空行
+                    html_lines.append(content + '<br>')
+                else:
+                    html_lines.append('')
+                continue
         elif in_blockquote and not line.startswith('>'):
             html_lines.append('</blockquote>')
             in_blockquote = False
@@ -187,23 +200,27 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
         html_lines.append('</ul>')
     
     html_body = '\n'.join(html_lines)
+
+    # 后处理：展平嵌套的同类 span 标签
+    # 例如: <span class="person"><span class="person">名字</span></span> -> <span class="person">名字</span>
+    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'artifact', 'astronomy', 'mythical']:
+        # 匹配嵌套的同类 span 并展平
+        pattern = rf'<span class="{entity_class}">(<span class="{entity_class}">.*?</span>)</span>'
+        while re.search(pattern, html_body):
+            html_body = re.sub(pattern, r'\1', html_body)
+
     # 特殊语义调整：将已标注为人名但实际上为氏族的若干名称，转换为朝代/氏族样式
-    # 为避免产生嵌套的 <span class="dynasty"><span class="dynasty">...</span></span>
-    # 先用占位符替换口，以保证最终只插入单一的 dynasty span
     CLAN_NAMES = [
         '高阳',
         '高辛',
     ]
-    for i, cname in enumerate(CLAN_NAMES):
-        placeholder = f'__CLAN_PLACEHOLDER_{i}__'
-        # 替换已被标注为 person 或 dynasty 的情形为占位符
-        html_body = re.sub(rf'<span[^>]*class="(?:person|dynasty)"[^>]*>\s*{re.escape(cname)}\s*</span>', placeholder, html_body)
-        # 替换裸露在标签之间的名字，如 >高辛< 为 >{placeholder}<
-        html_body = re.sub(rf'>(\s*){re.escape(cname)}(\s*)<', rf'>\1{placeholder}\2<', html_body)
-        # 也替换独立的文本节点（行首/行内的名字），在不改变HTML结构前提下用占位符替换
-        html_body = re.sub(rf'(?<![\w\u4e00-\u9fff]){re.escape(cname)}(?![\w\u4e00-\u9fff])', placeholder, html_body)
-        # 最后将占位符替换为单一的 dynasty span
-        html_body = html_body.replace(placeholder, f'<span class="dynasty">{cname}</span>')
+    for cname in CLAN_NAMES:
+        # 只替换被标注为 person 的情形，改为 dynasty
+        html_body = re.sub(
+            rf'<span class="person">({re.escape(cname)})</span>',
+            rf'<span class="dynasty">\1</span>',
+            html_body
+        )
     
     # 生成完整HTML
     # compute a safe href for CSS: try relative path, else absolute path
