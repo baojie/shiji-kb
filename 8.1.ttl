@@ -1,94 +1,263 @@
-# 《高祖本紀》
-# https://ctext.org/shiji/gao-zu-ben-ji/zh
-
-# https://ctext.org/shiji/gao-zu-ben-ji/zh#n4897
-# 8.1 高祖，沛豐邑中陽裏人，姓劉氏，字季。父曰太公，母曰劉媼。其先劉媼嘗息大澤之陂，夢與神遇。是時雷電晦冥，太公往視，則見蛟龍於其上。已而有身，遂產高祖。
-
 @prefix : <http://memect.cn/baojie/ontologies/2025/1/shiji/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://memect.cn/baojie/ontologies/2025/1/shiji/> .
 
-:shiji_8_1 rdf:type owl:Ontology ;
-    owl:imports <file:///work/shiji/ontology.ttl> .
+<http://memect.cn/baojie/ontologies/2025/1/shiji/shiji_8_1> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/partOf
+:partOf rdf:type owl:AnnotationProperty .
 
 
-:生物过程 a rdfs:Class;
-    rdfs:subClassOf :事件.
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/事件背景
+:事件背景 rdf:type owl:AnnotationProperty .
 
-:神异事件 a rdfs:Class; 
-    rdfs:subClassOf :事件.
 
-:龙类 a rdfs:Class;
-    rdfs:subClassOf :神话生物.
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/关联事件
+:关联事件 rdf:type owl:AnnotationProperty .
 
-# 定义实体 
-:高祖 a :皇帝 ;    # 皇帝定义在ontology.ttl中
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/关联人物
+:关联人物 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/关联生物
+:关联生物 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/出生事件
+:出生事件 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/出生地
+:出生地 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/原因
+:原因 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/参与事件
+:参与事件 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/参与者
+:参与者 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/地点
+:地点 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/姓
+:姓 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/子
+:子 rdf:type owl:AnnotationProperty ;
+   rdfs:subPropertyOf :子女 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/子女
+:子女 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/字
+:字 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/母亲
+:母亲 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/父亲
+:父亲 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/类型
+:类型 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/结果
+:结果 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/背景
+:背景 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/象征
+:象征 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/身份
+:身份 rdf:type owl:AnnotationProperty .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/配偶
+:配偶 rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/事件
+:事件 rdf:type owl:Class .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/人物
+:人物 rdf:type owl:Class .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/地点
+:地点 rdf:type owl:Class .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/生物过程
+:生物过程 rdf:type owl:Class ;
+      rdfs:subClassOf :事件 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/皇帝
+:皇帝 rdf:type owl:Class ;
+    rdfs:subClassOf :人物 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/神异事件
+:神异事件 rdf:type owl:Class ;
+      rdfs:subClassOf :事件 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/神话生物
+:神话生物 rdf:type owl:Class .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/自然现象
+:自然现象 rdf:type owl:Class .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/龙类
+:龙类 rdf:type owl:Class ;
+    rdfs:subClassOf :神话生物 .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/中陽裏
+:中陽裏 rdf:type owl:NamedIndividual ,
+              :地点 ;
+     :partOf :沛豐邑中陽裏 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/出现在刘媼身上
+:出现在刘媼身上 rdf:type owl:NamedIndividual ,
+                  :事件 ;
+         :关联人物 :刘媼 ;
+         :参与者 :蛟龙 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/刘媼
+:刘媼 rdf:type owl:NamedIndividual ,
+             :人物 ;
+    :参与事件 :梦与神遇 ,
+          :蛟龙现 ;
+    :子 :高祖 ;
+    :子女 :高祖 ;
+    :身份 "高祖的母亲" ;
+    :配偶 :太公 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/刘媼梦神遇蛟龙
+:刘媼梦神遇蛟龙 rdf:type owl:NamedIndividual ,
+                  :事件 ,
+                  :神异事件 ;
+         :参与者 :刘媼 ,
+              :蛟龙 ;
+         :地点 :大泽之陂 ;
+         :结果 :高祖出生 ;
+         :背景 :雷电晦冥 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/大泽之陂
+:大泽之陂 rdf:type owl:NamedIndividual ,
+               :地点 ;
+      :关联事件 :刘媼梦神遇 ;
+      :类型 "事件发生地" .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/太公
+:太公 rdf:type owl:NamedIndividual ,
+             :人物 ;
+    :参与事件 :目睹蛟龙 ;
+    :子 :高祖 ;
+    :子女 :高祖 ;
+    :身份 "高祖的父亲" ;
+    :配偶 :刘媼 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/怀孕生高祖
+:怀孕生高祖 rdf:type owl:NamedIndividual ,
+                :事件 ,
+                :生物过程 ;
+       :参与者 :刘媼 ;
+       :结果 :高祖出生 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/沛豐邑中陽裏
+:沛豐邑中陽裏 rdf:type owl:NamedIndividual ,
+                 :地点 ;
+        :关联人物 :高祖 ;
+        :类型 "出生地" .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/目睹蛟龙
+:目睹蛟龙 rdf:type owl:NamedIndividual ,
+               :事件 ;
+      :关联生物 :蛟龙 ;
+      :参与者 :太公 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/蛟龙
+:蛟龙 rdf:type owl:NamedIndividual ,
+             :神话生物 ,
+             :龙类 ;
+    :关联事件 :出现在刘媼身上 ;
+    :象征 "神圣、天命" .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/雷电晦冥
+:雷电晦冥 rdf:type owl:NamedIndividual ,
+               :自然现象 ;
+      :事件背景 :刘媼梦神遇 .
+
+
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/高祖
+:高祖 rdf:type owl:NamedIndividual ,
+             :皇帝 ;
+    :出生事件 :刘媼梦神遇蛟龙 ;
+    :出生地 :中陽裏 ,
+         :沛豐邑中陽裏 ;
     :姓 "劉" ;
     :字 "季" ;
-    :出生地 :沛豐邑中陽裏 ;
-    :出生地 :中陽裏 ;
-    :父亲 :太公 ;
     :母亲 :劉媼 ;
-    :出生事件 :刘媼梦神遇蛟龙 .    
-
-:太公 a :人物 ;
-    :身份 "高祖的父亲" ;
-    :子 :高祖 ;
-    :子女 :高祖 ;
-    :配偶 :刘媼 ;
-    :参与事件 :目睹蛟龙 .
-
-:刘媼 a :人物 ;
-    :身份 "高祖的母亲" ;
-    :子 :高祖 ;
-    :子女 :高祖 ;
-    :配偶 :太公 ;
-    :参与事件 :梦与神遇, :蛟龙现 .
-
-:沛豐邑中陽裏 a :地点 ;
-    :类型 "出生地" ;
-    :关联人物 :高祖 .
-
-:中陽裏 a :地点 ;
-    :partOf :沛豐邑中陽裏 .   
-
-:大泽之陂 a :地点 ;
-    :类型 "事件发生地" ;
-    :关联事件 :刘媼梦神遇 .
-
-:蛟龙 a :神话生物 ;
-    a :龙类;
-    :象征 "神圣、天命" ;
-    :关联事件 :出现在刘媼身上 .
-
-:雷电晦冥 a :自然现象 ;
-    :事件背景 :刘媼梦神遇 .
-
-:高祖出生 a :事件 ;
-    :原因 :刘媼梦神遇蛟龙 ;
-    :结果 :高祖诞生 .
-
-# 定义事件关系
-:刘媼梦神遇蛟龙 a :事件 ;
-    a :神异事件;
-    :参与者 :刘媼 ;
-    :参与者 :蛟龙 ;
-    :地点 :大泽之陂 ;
-    :背景 :雷电晦冥 ;
-    :结果 :高祖出生 .
+    :父亲 :太公 .
 
 
-:目睹蛟龙 a :事件 ;
-    :参与者 :太公 ;
-    :关联生物 :蛟龙 .
+###  http://memect.cn/baojie/ontologies/2025/1/shiji/高祖出生
+:高祖出生 rdf:type owl:NamedIndividual ,
+               :事件 ;
+      :原因 :刘媼梦神遇蛟龙 ;
+      :结果 :高祖诞生 .
 
-:出现在刘媼身上 a :事件 ;
-    :参与者 :蛟龙 ;
-    :关联人物 :刘媼 .
 
-:怀孕生高祖 a :事件 ;
-    a :生物过程 ;
-    :参与者 :刘媼 ;
-    :结果 :高祖出生 .
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
