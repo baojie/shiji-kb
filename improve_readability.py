@@ -177,7 +177,7 @@ def process_directory(input_dir, output_dir):
     print(f"\n完成! 改进后的文件保存在: {output_dir}")
 
 if __name__ == "__main__":
-    input_directory = "/home/baojie/work/shiji-kb/chapter"
-    output_directory = "/home/baojie/work/shiji-kb/chapter_improved"
+    input_directory = "/home/baojie/work/shiji-kb/archive/chapter"
+    output_directory = "/home/baojie/work/shiji-kb/archive/chapter_improved"
     
     process_directory(input_directory, output_directory)

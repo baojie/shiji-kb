@@ -33,4 +33,4 @@ def add_numbering_to_txt(input_dir, output_dir):
     print(f"Numbered files saved to {output_dir}")
 
 if __name__ == "__main__":
-    add_numbering_to_txt("/home/baojie/work/shiji-kb/chapter_improved", "/home/baojie/work/shiji-kb/chapter_numbered")
+    add_numbering_to_txt("/home/baojie/work/shiji-kb/archive/chapter_improved", "/home/baojie/work/shiji-kb/chapter_numbered")
