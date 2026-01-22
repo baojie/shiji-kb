@@ -26,28 +26,34 @@ from pathlib import Path
 # 注意：这些模式必须按照特定顺序应用，以避免相互干扰
 # 使用负向前瞻和负向后顾来避免匹配HTML标签内的字符
 # 重要：** 必须在 * 之前处理，以避免冲突
+# 排除 " 字符以避免匹配HTML属性
 ENTITY_PATTERNS = [
-    (r'@([^@<>]+)@', r'<span class="person">\1</span>'),      # 人名
-    (r'=([^=<>]+)=', r'<span class="place">\1</span>'),       # 地名
-    (r'\$([^$<>]+)\$', r'<span class="official">\1</span>'),  # 官职
-    (r'%([^%<>]+)%', r'<span class="time">\1</span>'),        # 时间
-    (r'&([^&<>]+)&', r'<span class="dynasty">\1</span>'),     # 朝代
-    (r'\^([^<>^]+)\^', r'<span class="institution">\1</span>'),  # 制度
-    (r'~([^~<>]+)~', r'<span class="tribe">\1</span>'),       # 族群
-    (r'\*\*([^*<>]+)\*\*', r'<strong>\1</strong>'),           # 加粗（保留Markdown，必须在单*之前）
-    (r'\*([^*<>]+)\*', r'<span class="artifact">\1</span>'),  # 器物/礼器/书名
-    (r'!([^!<>]+)!', r'<span class="astronomy">\1</span>'),   # 天文
-    (r'\?([^?<>]+)\?', r'<span class="mythical">\1</span>'),  # 神话
+    (r'@([^@<>"]+)@', r'<span class="person" title="人名">\1</span>'),      # 人名
+    (r'=([^=<>"]+)=', r'<span class="place" title="地名">\1</span>'),       # 地名
+    (r'\$([^$<>"]+)\$', r'<span class="official" title="官职">\1</span>'),  # 官职
+    (r'%([^%<>"]+)%', r'<span class="time" title="时间">\1</span>'),        # 时间
+    (r'&([^&<>"]+)&', r'<span class="dynasty" title="朝代/氏族">\1</span>'),     # 朝代
+    (r'\^([^<>^"]+)\^', r'<span class="institution" title="制度">\1</span>'),  # 制度
+    (r'~([^~<>"]+)~', r'<span class="tribe" title="族群">\1</span>'),       # 族群
+    (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),           # 加粗（保留Markdown，必须在单*之前）
+    (r'\*([^*<>"]+)\*', r'<span class="artifact" title="器物/书名">\1</span>'),  # 器物/礼器/书名
+    (r'!([^!<>"]+)!', r'<span class="astronomy" title="天文/历法">\1</span>'),   # 天文
+    (r'\?([^?<>"]+)\?', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话
 ]
 
 # 引号内容模式（用于对话）
-# 支持中文引号：""、''、「」、『』
+# 只支持中文引号：""、''、「」、『』
+# 注意：明确使用Unicode转义，不匹配ASCII引号（\u0022）
 QUOTE_PATTERNS = [
-    (r'"([^"<>]+)"', r'<span class="quoted">"\1"</span>'),      # 中文双引号
-    (r"'([^'<>]+)'", '<span class="quoted">\'\\1\'</span>'),      # 中文单引号
+    (r'[\u201c]([^\u201d<>]+)[\u201d]', r'<span class="quoted">"\1"</span>'),      # 中文双引号 " "
+    (r'[\u2018]([^\u2019<>]+)[\u2019]', r'<span class="quoted">\'\1\'</span>'),    # 中文单引号 ' '
     (r'「([^」<>]+)」', r'<span class="quoted">「\1」</span>'),    # 日式单引号
     (r'『([^』<>]+)』', r'<span class="quoted">『\1』</span>'),    # 日式双引号
 ]
+
+# 段落编号模式
+# 匹配 [数字] 或 [数字.数字] 或 [数字.数字.数字] 等格式
+PARAGRAPH_NUMBER_PATTERN = r'\[(\d+(?:\.\d+)*)\]'
 
 
 def convert_entities(text):
@@ -55,13 +61,17 @@ def convert_entities(text):
 
     注意：此函数应该只在纯文本行上调用，不应该在已经包含HTML标签的文本上调用
     """
-    # 先处理引号内容（在实体标记之前），避免引号符号干扰实体标记
+    # 先处理引号内容（在实体标记之前）
+    # 这样引号内的实体标记也会被正确处理
     for pattern, replacement in QUOTE_PATTERNS:
         text = re.sub(pattern, replacement, text)
 
     # 再处理实体标记
     for pattern, replacement in ENTITY_PATTERNS:
         text = re.sub(pattern, replacement, text)
+
+    # 最后处理段落编号
+    text = re.sub(r'(?<!["\'>])\[(\d+(?:\.\d+)*)\]', r'<span class="para-num">\1</span>', text)
 
     return text
 
@@ -203,7 +213,8 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
             in_list = False
         
         # 段落
-        elif line.strip() and not line.startswith('<'):
+        # 注意：包含段落编号的行也应该被包裹成 <p> 标签
+        elif line.strip() and not line.startswith('<h') and not line.startswith('<hr') and not line.startswith('<ul') and not line.startswith('<ol') and not line.startswith('<div'):
             line = f'<p>{line}</p>'
         
         html_lines.append(line)

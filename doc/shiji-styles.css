@@ -11,6 +11,11 @@ body {
     color: #2c2c2c;
 }
 
+/* 段落间距 */
+p {
+    margin: 2em 0;
+}
+
 /* 人名样式 */
 .person {
     color: #8B4513;
@@ -18,6 +23,7 @@ body {
     text-decoration-color: #8B451380;
     text-underline-offset: 2px;
     font-weight: 500;
+    cursor: help;
 }
 
 /* 地名样式 */
@@ -26,18 +32,21 @@ body {
     text-decoration: underline;
     text-decoration-color: #B8860B80;
     text-underline-offset: 2px;
+    cursor: help;
 }
 
 /* 官职样式 */
 .official {
     color: #8B0000;
     font-weight: 500;
+    cursor: help;
 }
 
 /* 时间/纪年样式 */
 .time {
     color: #008B8B;
     font-style: italic;
+    cursor: help;
 }
 
 /* 朝代/氏族/国号样式 */
@@ -46,36 +55,42 @@ body {
     background-color: #F0E6FF;
     padding: 0 3px;
     border-radius: 2px;
+    cursor: help;
 }
 
 /* 制度/典章样式 */
 .institution {
     color: #4682B4;
     font-weight: 500;
+    cursor: help;
 }
 
 /* 族群/部落样式 */
 .tribe {
     color: #2F4F4F;
     font-weight: 500;
+    cursor: help;
 }
 
 /* 器物样式 */
 .artifact {
     color: #CD853F;
     font-weight: 500;
+    cursor: help;
 }
 
 /* 天文/历法样式 */
 .astronomy {
     color: #483D8B;
     font-style: italic;
+    cursor: help;
 }
 
 /* 传说生物/神话样式 */
 .mythical {
     color: #8B008B;
     font-weight: 500;
+    cursor: help;
 }
 
 /* 引号内容样式（对话） */
@@ -132,11 +147,33 @@ ul, ol {
     line-height: 2;
 }
 
-/* 段落编号 */
-[id^="p"] {
-    color: #999;
-    font-size: 0.9em;
-    margin-right: 5px;
+/* 段落编号 - 淡雅书卷风格 */
+.para-num {
+    display: inline-block;
+    background-color: #FFF8E1;
+    color: #6D4C41;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85em;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #C0C0C0;
+    margin-right: 8px;
+    line-height: 1.2;
+    vertical-align: baseline;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    min-width: 1.5em;
+}
+
+/* 当段落编号独立成段时（段落只包含编号），显示为块级元素 */
+p:has(> .para-num:only-child) {
+    margin: 0.5em 0;
+}
+
+p > .para-num:only-child {
+    display: inline-block;
+    margin-bottom: 0.3em;
 }
 
 /* NOTE框 */
