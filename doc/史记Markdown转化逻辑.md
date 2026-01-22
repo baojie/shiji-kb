@@ -92,6 +92,7 @@
 - 器物/礼器/书名（注意冲突）: *器物* → `.artifact`（若与 Markdown emphasis 冲突，优先使用转义或双星表示加粗）
 - 天文/历法: !天文! → `.astronomy`
 - 传说/神话: ?神话? → `.mythical`
+- **引号内容（对话）**: "内容" / '内容' / 「内容」 / 『内容』 → `.quoted`（自动识别，无需手动标记）
 
 示例（源 Markdown 行）:
 
@@ -100,6 +101,48 @@
 ```
 
 渲染器会把上行转换为相应的 `<span class="...">` 标签，由 `doc/shiji-styles.css` 控制视觉样式。
+
+#### 对话引号的自动识别与样式
+
+渲染器会自动识别对话中的引号内容，并应用特殊样式以提升可读性：
+
+- **支持的引号类型**：
+  - 中文双引号：""
+  - 中文单引号：''
+  - 日式单引号：「」
+  - 日式双引号：『』
+
+- **视觉效果**：
+  - 引号内的文字显示为**斜体**
+  - 背景添加**淡褐色网纹线阴影**（45度斜纹）
+  - 引号内的实体标记（人名、地名等）仍然保持各自的样式
+
+- **示例**：
+  ```markdown
+  - @尧@曰："谁可顺此事？"
+  - @放齐@曰："嗣子@丹硃@开明。"
+  ```
+
+  渲染为：
+  ```html
+  <li><span class="person">尧</span>曰：<span class="quoted">谁可顺此事？</span></li>
+  <li><span class="person">放齐</span>曰：<span class="quoted">嗣子<span class="person">丹硃</span>开明。</span></li>
+  ```
+
+  CSS 样式（`.quoted`）：
+  ```css
+  .quoted {
+      font-style: italic;
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 2px,
+          rgba(139, 69, 19, 0.03) 2px,
+          rgba(139, 69, 19, 0.03) 4px
+      );
+      padding: 0 2px;
+  }
+  ```
 
 #### 推荐转换管道（工作流）
 

@@ -40,14 +40,29 @@ ENTITY_PATTERNS = [
     (r'\?([^?<>]+)\?', r'<span class="mythical">\1</span>'),  # 神话
 ]
 
+# 引号内容模式（用于对话）
+# 支持中文引号：""、''、「」、『』
+QUOTE_PATTERNS = [
+    (r'"([^"<>]+)"', r'<span class="quoted">\1</span>'),      # 中文双引号
+    (r"'([^'<>]+)'", r'<span class="quoted">\1</span>'),      # 中文单引号
+    (r'「([^」<>]+)」', r'<span class="quoted">\1</span>'),    # 日式单引号
+    (r'『([^』<>]+)』', r'<span class="quoted">\1</span>'),    # 日式双引号
+]
+
 
 def convert_entities(text):
     """转换实体标记为HTML标签
 
     注意：此函数应该只在纯文本行上调用，不应该在已经包含HTML标签的文本上调用
     """
+    # 先处理引号内容（在实体标记之前），避免引号符号干扰实体标记
+    for pattern, replacement in QUOTE_PATTERNS:
+        text = re.sub(pattern, replacement, text)
+
+    # 再处理实体标记
     for pattern, replacement in ENTITY_PATTERNS:
         text = re.sub(pattern, replacement, text)
+
     return text
 
 
@@ -203,7 +218,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
 
     # 后处理：展平嵌套的同类 span 标签
     # 例如: <span class="person"><span class="person">名字</span></span> -> <span class="person">名字</span>
-    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'artifact', 'astronomy', 'mythical']:
+    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'artifact', 'astronomy', 'mythical', 'quoted']:
         # 匹配嵌套的同类 span 并展平
         pattern = rf'<span class="{entity_class}">(<span class="{entity_class}">.*?</span>)</span>'
         while re.search(pattern, html_body):
