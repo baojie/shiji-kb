@@ -43,10 +43,10 @@ ENTITY_PATTERNS = [
 # 引号内容模式（用于对话）
 # 支持中文引号：""、''、「」、『』
 QUOTE_PATTERNS = [
-    (r'"([^"<>]+)"', r'<span class="quoted">\1</span>'),      # 中文双引号
-    (r"'([^'<>]+)'", r'<span class="quoted">\1</span>'),      # 中文单引号
-    (r'「([^」<>]+)」', r'<span class="quoted">\1</span>'),    # 日式单引号
-    (r'『([^』<>]+)』', r'<span class="quoted">\1</span>'),    # 日式双引号
+    (r'"([^"<>]+)"', r'<span class="quoted">"\1"</span>'),      # 中文双引号
+    (r"'([^'<>]+)'", r"<span class=\"quoted\">'\\1'</span>"),      # 中文单引号
+    (r'「([^」<>]+)」', r'<span class="quoted">「\1」</span>'),    # 日式单引号
+    (r'『([^』<>]+)』', r'<span class="quoted">『\1』</span>'),    # 日式双引号
 ]
 
 
