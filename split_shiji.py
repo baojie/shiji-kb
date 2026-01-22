@@ -89,4 +89,4 @@ def split_shiji(input_file, output_dir):
     print(f"Successfully split into {len(chapters)} files in '{output_dir}'.")
 
 if __name__ == "__main__":
-    split_shiji("/home/baojie/work/shiji-kb/史记.txt", "/home/baojie/work/shiji-kb/史记_章节")
+    split_shiji("/home/baojie/work/shiji-kb/史记.txt", "/home/baojie/work/shiji-kb/chapter")
