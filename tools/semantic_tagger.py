@@ -4,7 +4,7 @@
 and applies token-wrapping to a source Markdown file.
 
 Usage:
-  python3 tools/semantic_tagger.py --source chapter_md/002_夏本纪.md --htmls chapter_md/*.simple.html --out chapter_md/002_夏本纪.simple.md
+  python3 tools/semantic_tagger.py --source chapter_md/002_夏本纪.md --htmls chapter_md/*.simple.html --out chapter_md/002_夏本纪.tagged.md
 
 The script is conservative: it matches whole-name occurrences (not inside other Han characters)
 and replaces longer names first to avoid partial overlaps.

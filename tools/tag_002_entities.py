@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Tag remaining entities in 002_夏本纪.simple.md"""
+"""Tag remaining entities in 002_夏本纪.tagged.md"""
 
 import re
 from pathlib import Path
@@ -92,7 +92,7 @@ def tag_entities(content):
     return content
 
 def main():
-    file_path = Path('chapter_md/002_夏本纪.simple.md')
+    file_path = Path('chapter_md/002_夏本纪.tagged.md')
 
     if not file_path.exists():
         print(f'File not found: {file_path}')

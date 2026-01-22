@@ -144,7 +144,7 @@
 #### 推荐转换管道（工作流）
 
 1. 保留原文与段落编号（遵守"忠实原则"）。
-2. 将原始文件中基于颜色或行内 `<span>` 的人工高亮，先用 `tools/convert_spans_to_simple.py` 转为短记号 token。
+2. 将原始文件中基于颜色或行内 `<span>` 的人工高亮，先用 `tools/convert_spans_to_simple.py` 转为短记号 token，生成 `*.tagged.md` 文件。
 3. 在 Markdown 层做轻量预处理：
    - 规范化段落编号（例如把 `[23.a]`、`[23a]` 规整为 `[23]`）。
    - 根据配置（如 `config/clans.json`）对已知氏族名做语义修正（可选择把它们转为 `&朝代&` 或在渲染阶段输出 `.clan`）。
@@ -240,7 +240,7 @@ python3 tools/split_dialogues_v2.py chapter_md/002_夏本纪.md
 
 #### 工具与命令示例
 
-- 从行内样式生成 token：
+- 从行内样式生成 token（生成 `*.tagged.md` 文件）：
 
 ```bash
 python3 tools/convert_spans_to_simple.py chapter_md/001_五帝本纪.md
@@ -255,7 +255,7 @@ python3 tools/split_dialogues_v2.py chapter_md/002_夏本纪.md chapter_md/002_�
 - 将 token 的 Markdown 渲染为 HTML：
 
 ```bash
-python3 render_shiji_html.py chapter_md/001_五帝本纪.simple.md
+python3 render_shiji_html.py chapter_md/001_五帝本纪.tagged.md
 ```
 
 #### 常见边界与建议策略

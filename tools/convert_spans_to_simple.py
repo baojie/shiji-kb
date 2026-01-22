@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 将包含 <span style="color: #xxxxxx; ...">...</span> 的 Markdown 转为简洁标记。
-输出到同目录下的 *.simple.md
+输出到同目录下的 *.tagged.md
 
 用法: python tools/convert_spans_to_simple.py ../chapter_md/001_五帝本纪.md
 """
@@ -51,7 +51,7 @@ def convert_file(src_path: Path):
     out = out.replace('&nbsp;', ' ')
     out = out.replace('&lt;', '<').replace('&gt;', '>')
     # write output
-    out_path = src_path.with_name(src_path.stem + '.simple.md')
+    out_path = src_path.with_name(src_path.stem + '.tagged.md')
     out_path.write_text(out, encoding='utf-8')
     print(f'Converted: {src_path} -> {out_path}')
     return out_path
