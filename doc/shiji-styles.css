@@ -1,0 +1,140 @@
+/* 史记命名实体样式表 */
+
+/* 基础样式 */
+body {
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+    line-height: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdf8;
+    color: #2c2c2c;
+}
+
+/* 人名样式 */
+.person {
+    color: #8B4513;
+    text-decoration: underline;
+    text-decoration-color: #8B451380;
+    text-underline-offset: 2px;
+    font-weight: 500;
+}
+
+/* 地名样式 */
+.place {
+    color: #B8860B;
+    text-decoration: underline;
+    text-decoration-color: #B8860B80;
+    text-underline-offset: 2px;
+}
+
+/* 官职样式 */
+.official {
+    color: #8B0000;
+    font-weight: 500;
+}
+
+/* 时间/纪年样式 */
+.time {
+    color: #008B8B;
+    font-style: italic;
+}
+
+/* 朝代/氏族/国号样式 */
+.dynasty {
+    color: #9370DB;
+    background-color: #F0E6FF;
+    padding: 0 3px;
+    border-radius: 2px;
+}
+
+/* 制度/典章样式 */
+.institution {
+    color: #4682B4;
+    font-weight: 500;
+}
+
+/* 族群/部落样式 */
+.tribe {
+    color: #2F4F4F;
+    font-weight: 500;
+}
+
+/* 器物样式 */
+.artifact {
+    color: #CD853F;
+    font-weight: 500;
+}
+
+/* 天文/历法样式 */
+.astronomy {
+    color: #483D8B;
+    font-style: italic;
+}
+
+/* 传说生物/神话样式 */
+.mythical {
+    color: #8B008B;
+    font-weight: 500;
+}
+
+/* 章节标题 */
+h1 {
+    color: #8B0000;
+    border-bottom: 3px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #8B4513;
+    border-left: 5px solid #8B4513;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #B8860B;
+    margin-top: 30px;
+}
+
+/* 分隔线 */
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 40px 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #9370DB;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #faf8ff;
+    font-style: italic;
+}
+
+/* 列表样式 */
+ul, ol {
+    line-height: 2;
+}
+
+/* 段落编号 */
+[id^="p"] {
+    color: #999;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+/* NOTE框 */
+.note-box {
+    background-color: #fffef0;
+    border: 1px solid #e6e0c0;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.note-box h4 {
+    color: #8B7500;
+    margin-top: 0;
+}
