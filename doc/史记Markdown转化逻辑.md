@@ -49,7 +49,27 @@
 
 ### 3.3 实体高亮
 
-- 在正文中对**人名**、**官名**等关键实体使用 **加粗 (`**`)\*\* 处理，便于快速扫读。
+为了提升古文阅读体验，对不同类型的命名实体采用不同的视觉标记：
+
+- **人名**: 棕色+下划线 (`<span style="color: #8B4513; text-decoration: underline;">人名</span>`)
+- **地名**: 深黄色+下划线 (`<span style="color: #B8860B; text-decoration: underline;">地名</span>`)
+- **官职**: 深红色 (`<span style="color: #8B0000;">官职</span>`)
+- **时间**: 青色 (`<span style="color: #008B8B;">时间</span>`)
+- **朝代/国号/氏族**: 紫色+高亮 (`<span style="color: #9370DB; background-color: #F0E6FF;">氏族</span>`)
+- **书名**: 传统书名号 (`《书名》`)
+- **族群/部落**: 深灰绿色 (`<span style="color: #2F4F4F;">族群</span>`)
+- **器物/礼器**: 秘鲁棕色 (`<span style="color: #CD853F;">器物</span>`)
+- **制度/典章**: 钢青色 (`<span style="color: #4682B4;">制度</span>`)
+- **天文/历法**: 深蓝紫色 (`<span style="color: #483D8B;">天文</span>`)
+- **传说生物/神话**: 深洋红色 (`<span style="color: #8B008B;">神话</span>`)
+
+**示例**:
+```markdown
+<span style="color: #8B4513; text-decoration: underline;">黄帝</span>居<span style="color: #B8860B; text-decoration: underline;">轩辕之丘</span>，而娶於<span style="color: #B8860B; text-decoration: underline;">西陵</span>之女，是为<span style="color: #8B4513; text-decoration: underline;">嫘祖</span>。
+<span style="color: #8B4513; text-decoration: underline;">舜</span>为<span style="color: #8B0000;">司空</span>，可美帝功。
+<span style="color: #9370DB; background-color: #F0E6FF;">神农氏</span>世衰，诸侯相侵伐。
+<span style="color: #8B4513; text-decoration: underline;">舜</span><span style="color: #008B8B;">年二十</span>以孝闻。
+```
 
 ---
 
