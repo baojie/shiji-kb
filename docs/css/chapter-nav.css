@@ -1,0 +1,54 @@
+/* 章节导航栏样式 */
+.chapter-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    margin: 15px 0;
+}
+
+.chapter-nav a {
+    padding: 6px 14px;
+    background-color: #fff;
+    color: #666;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.chapter-nav a:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+    color: #333;
+}
+
+.chapter-nav .nav-home {
+    color: #8B4513;
+    border-color: #8B4513;
+}
+
+.chapter-nav .nav-home:hover {
+    background-color: #8B4513;
+    color: white;
+}
+
+/* 原文链接样式 */
+.original-text-link {
+    font-size: 0.5em;
+    color: #888;
+    background-color: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: normal;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.original-text-link:hover {
+    background-color: #ddd;
+    color: #555;
+}

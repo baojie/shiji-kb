@@ -306,9 +306,15 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         # 使用 os.path.relpath 来计算相对路径，支持兄弟目录
         import os
         css_href = os.path.relpath(css_file, output_path.parent)
+        # 计算chapter-nav.css的相对路径
+        chapter_nav_css = os.path.relpath(str(Path(css_file).parent / 'chapter-nav.css'), output_path.parent)
+        # 计算purple-numbers.js的相对路径
+        purple_numbers_js = os.path.relpath(str(Path(css_file).parent.parent / 'js' / 'purple-numbers.js'), output_path.parent)
     except Exception:
         # 如果失败，使用简单的相对路径（假设标准目录结构）
         css_href = "../doc/shiji-styles.css"
+        chapter_nav_css = "../css/chapter-nav.css"
+        purple_numbers_js = "../js/purple-numbers.js"
 
     # 生成导航栏HTML
     nav_html = '<nav class="chapter-nav">\n'
@@ -326,82 +332,8 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{md_path.stem}</title>
     <link rel="stylesheet" href="{css_href}">
-    <style>
-    .chapter-nav {{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        padding: 20px;
-        background-color: #f5f5dc;
-        border-radius: 8px;
-        margin: 20px 0;
-        flex-wrap: wrap;
-    }}
-    .chapter-nav a {{
-        padding: 10px 20px;
-        background-color: #8B4513;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        font-weight: 500;
-    }}
-    .chapter-nav a:hover {{
-        background-color: #A0522D;
-    }}
-    .chapter-nav .nav-home {{
-        background-color: #8B0000;
-    }}
-    .chapter-nav .nav-home:hover {{
-        background-color: #A52A2A;
-    }}
-    .original-text-link {{
-        font-size: 0.5em;
-        color: #888;
-        background-color: #f0f0f0;
-        padding: 4px 10px;
-        border-radius: 12px;
-        text-decoration: none;
-        margin-left: 15px;
-        font-weight: normal;
-        transition: background-color 0.3s, color 0.3s;
-    }}
-    .original-text-link:hover {{
-        background-color: #ddd;
-        color: #555;
-    }}
-    </style>
-    <script>
-    // Purple Numbers (PN) 点击复制功能
-    document.addEventListener('DOMContentLoaded', function() {{
-        // 为所有 PN 添加点击事件
-        document.querySelectorAll('.para-num').forEach(function(pn) {{
-            pn.addEventListener('click', function(e) {{
-                e.preventDefault();
-
-                // 获取完整的 URL（包含锚点）
-                const url = window.location.href.split('#')[0] + this.getAttribute('href');
-
-                // 复制到剪贴板
-                navigator.clipboard.writeText(url).then(function() {{
-                    // 显示复制成功提示
-                    const originalText = pn.textContent;
-                    pn.textContent = '✓';
-                    pn.style.color = '#4CAF50';
-
-                    setTimeout(function() {{
-                        pn.textContent = originalText;
-                        pn.style.color = '';
-                    }}, 1000);
-                }}).catch(function(err) {{
-                    console.error('复制失败:', err);
-                    alert('复制失败，请手动复制链接');
-                }});
-            }});
-        }});
-    }});
-    </script>
+    <link rel="stylesheet" href="{chapter_nav_css}">
+    <script src="{purple_numbers_js}"></script>
 </head>
 <body>
 {nav_html}
