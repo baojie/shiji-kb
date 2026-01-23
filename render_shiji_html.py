@@ -4,6 +4,9 @@
 史记Markdown渲染器
 将简洁标记的Markdown转换为带CSS样式的HTML
 
+注意：本模块提供单个文件的转换功能。
+批量生成所有章节请使用：python generate_all_chapters.py
+
 标记语法：
 - @人名@ -> <span class="person">人名</span>
 - =地名= -> <span class="place">地名</span>

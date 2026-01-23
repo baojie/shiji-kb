@@ -4,6 +4,64 @@
 
 ---
 
+## 0. 完整处理流程
+
+假设要处理第 N 章（如 005_秦本纪），完整的处理流程如下：
+
+### 步骤 1：获取原始文本
+- 从 `chapter_numbered/` 目录下找到 `N_*.txt` 文件
+- 例如：`chapter_numbered/005_秦本纪.txt`
+
+### 步骤 2：语义化标注（生成 tagged.md）
+根据本文档的转化逻辑进行处理：
+1. **章节划分**：根据历史人物、时期或大的叙事单元划分章节
+2. **段落拆分**：
+   - 控制段落长度（叙事段落不超过150字符）
+   - 拆分对话段落（每个"X曰"独立成行）
+   - 使用子段落编号（如 [N.1]、[N.2]）
+3. **实体识别**（使用大模型NER能力）：
+   - 识别人名、地名、官职、时间、朝代、制度、族群、器物、天文、神话、动植物
+   - 根据上下文判断词性，只标记名词性实体
+   - 避免误标动词、成语、抽象概念
+4. **生成文件**：`chapter_md/N_*.tagged.md`
+   - 例如：`chapter_md/005_秦本纪.tagged.md`
+
+### 步骤 3：批量生成 HTML（推荐）
+使用批量生成脚本将所有章节转换为 HTML 并生成索引页面：
+```bash
+python generate_all_chapters.py
+```
+- 自动发现 `chapter_md` 目录下所有 `.tagged.md` 文件
+- 为每个章节生成 HTML 文件，包含上一章/下一章导航链接
+- 自动生成/更新 `docs/index.html` 索引页面
+- 输出文件：`chapter_md/N_*.tagged.html`
+
+**单文件转换**（仅在需要单独处理某个文件时使用）：
+```bash
+python render_shiji_html.py chapter_md/N_*.tagged.md
+```
+
+### 步骤 4：发布到 docs 目录
+运行发布脚本，将可发布文件复制到 `/docs` 目录：
+```bash
+./publish_to_docs.sh
+```
+- 这会将 HTML 文件和相关资源复制到 `docs/` 目录
+- 用于 GitHub Pages 或其他静态网站托管
+
+### 完整示例
+```bash
+# 假设处理 005_秦本纪
+# 1. 原始文件位于：chapter_numbered/005_秦本纪.txt
+# 2. 使用大模型进行实体识别和标注，生成：chapter_md/005_秦本纪.tagged.md
+# 3. 批量生成所有章节的 HTML 和索引页面
+python generate_all_chapters.py
+# 4. 发布到 docs
+./publish_to_docs.sh
+```
+
+---
+
 ## 1. 层级结构 (Hierarchical Structure)
 
 ### 1.1 标题等级
@@ -268,10 +326,16 @@ python3 tools/convert_spans_to_simple.py chapter_md/001_五帝本纪.md
 python3 tools/split_dialogues_v2.py chapter_md/002_夏本纪.md chapter_md/002_夏本纪.split.md
 ```
 
-- 将 token 的 Markdown 渲染为 HTML：
+- 批量生成所有章节的 HTML 和索引页面（推荐）：
 
 ```bash
-python3 render_shiji_html.py chapter_md/001_五帝本纪.tagged.md
+python generate_all_chapters.py
+```
+
+- 单文件转换（仅在需要时使用）：
+
+```bash
+python render_shiji_html.py chapter_md/001_五帝本纪.tagged.md
 ```
 
 #### 常见边界与建议策略
