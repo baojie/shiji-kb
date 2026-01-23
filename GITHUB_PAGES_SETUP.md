@@ -4,7 +4,7 @@
 
 1. **推送代码到 GitHub**
    ```bash
-   git add site/
+   git add docs/
    git commit -m "Add GitHub Pages files"
    git push origin main
    ```
@@ -16,7 +16,7 @@
    - 在 "Build and deployment" 部分：
      - **Source**: 选择 "Deploy from a branch"
      - **Branch**: 选择 `main`
-     - **Folder**: 选择 `/site`
+     - **Folder**: 选择 `/docs`
    - 点击 **Save**（保存）
 
 3. **等待部署**
@@ -30,20 +30,20 @@
 
 ## 文件说明
 
-- **site/.nojekyll**: 告诉 GitHub Pages 不使用 Jekyll 处理文件
-- **site/index.html**: 主页，包含章节目录
-- **site/css/**: CSS 样式文件
-- **site/chapters/**: 所有章节的 HTML 文件
+- **docs/.nojekyll**: 告诉 GitHub Pages 不使用 Jekyll 处理文件
+- **docs/index.html**: 主页，包含章节目录
+- **docs/css/**: CSS 样式文件
+- **docs/chapters/**: 所有章节的 HTML 文件
 
 ## 更新内容
 
 当你更新了章节内容后：
 
 1. 重新生成 HTML 文件
-2. 复制到 `site/chapters/` 目录
+2. 复制到 `docs/chapters/` 目录
 3. 提交并推送到 GitHub：
    ```bash
-   git add site/chapters/
+   git add docs/chapters/
    git commit -m "Update chapter content"
    git push
    ```
@@ -55,7 +55,7 @@ GitHub Pages 会自动重新部署。
 在推送到 GitHub 之前，建议先本地测试：
 
 ```bash
-cd site
+cd docs
 python3 -m http.server 8000
 ```
 
@@ -66,7 +66,7 @@ python3 -m http.server 8000
 ### CSS 样式没有加载
 - 检查浏览器控制台是否有 404 错误
 - 确认 CSS 路径是相对路径（`../css/shiji-styles.css`）
-- 确保 `site/.nojekyll` 文件存在
+- 确保 `docs/.nojekyll` 文件存在
 
 ### 页面显示 404
 - 确认已经在 GitHub Settings 中正确配置了 Pages

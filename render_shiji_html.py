@@ -42,11 +42,14 @@ ENTITY_PATTERNS = [
 ]
 
 # 引号内容模式（用于对话）
-# 只支持中文引号：""、''、「」、『』
-# 注意：明确使用Unicode转义，不匹配ASCII引号（\u0022）
+# 支持中文引号：""、''、「」、『』以及ASCII引号："、'
+# 注意：单引号模式排除已经在span标签内的内容
 QUOTE_PATTERNS = [
     (r'[\u201c]([^\u201d<>]+)[\u201d]', r'<span class="quoted">"\1"</span>'),      # 中文双引号 " "
+    (r'[\u0022]([^\u0022<>]+)[\u0022]', r'<span class="quoted">"\1"</span>'),      # ASCII双引号 " "
     (r'[\u2018]([^\u2019<>]+)[\u2019]', r'<span class="quoted">\'\1\'</span>'),    # 中文单引号 ' '
+    # ASCII单引号：不处理，因为容易与嵌套引号冲突
+    # (r'[\u0027]([^\u0027<>]+)[\u0027]', r'<span class="quoted">\'\1\'</span>'),    # ASCII单引号 ' '
     (r'「([^」<>]+)」', r'<span class="quoted">「\1」</span>'),    # 日式单引号
     (r'『([^』<>]+)』', r'<span class="quoted">『\1』</span>'),    # 日式双引号
 ]
@@ -63,7 +66,10 @@ def convert_entities(text):
     """
     # 先处理引号内容（在实体标记之前）
     # 这样引号内的实体标记也会被正确处理
+    # 注意：只处理外层引号，避免嵌套引号被重复处理
+    # 优先处理双引号（中文和ASCII），然后处理单引号
     for pattern, replacement in QUOTE_PATTERNS:
+        # 使用负向前瞻避免匹配已经在 span 标签内的引号
         text = re.sub(pattern, replacement, text)
 
     # 再处理实体标记
@@ -181,24 +187,57 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
                 continue
             else:
                 if in_note:
-                    # 如果正在 note 中但遇到普通引用行，把它当作 note 内段落
-                    html_lines.append(f'<p>{line[2:]}</p>')
+                    # 如果正在 note 中但遇到普通引用行
+                    content = line[2:]
+                    if content.strip().startswith('- '):
+                        # 这是列表项
+                        if not in_list:
+                            html_lines.append('<ul>')
+                            in_list = True
+                        html_lines.append(f'<li>{content.strip()[2:]}</li>')
+                    else:
+                        # 关闭列表（如果有）
+                        if in_list:
+                            html_lines.append('</ul>')
+                            in_list = False
+                        # 把它当作 note 内段落
+                        html_lines.append(f'<p>{content}</p>')
                     continue
                 if not in_blockquote:
                     html_lines.append('<blockquote>')
                     in_blockquote = True
-                # 在 blockquote 中，每行添加 <br> 以保持诗歌格式
+                # 在 blockquote 中，检查是否是列表项
                 content = line[2:]
-                if content.strip():  # 非空行
-                    html_lines.append(content + '<br>')
+                if content.strip().startswith('- '):
+                    # 这是列表项
+                    if not in_list:
+                        html_lines.append('<ul>')
+                        in_list = True
+                    html_lines.append(f'<li>{content.strip()[2:]}</li>')
                 else:
-                    html_lines.append('')
+                    # 关闭列表（如果有）
+                    if in_list:
+                        html_lines.append('</ul>')
+                        in_list = False
+                    # 普通内容，添加 <br> 以保持诗歌格式
+                    if content.strip():  # 非空行
+                        html_lines.append(content + '<br>')
+                    else:
+                        html_lines.append('')
                 continue
         elif in_blockquote and not line.startswith('>'):
+            # 关闭列表（如果有）
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
             html_lines.append('</blockquote>')
             in_blockquote = False
         elif in_note and not line.startswith('>'):
             # 结束 note 区块
+            # 关闭列表（如果有）
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
             html_lines.append('</div>')
             in_note = False
         
@@ -247,13 +286,16 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
             rf'<span class="dynasty">\1</span>',
             html_body
         )
-    
+
     # 生成完整HTML
-    # compute a safe href for CSS: try relative path, else absolute path
+    # 计算CSS文件的相对路径（从输出HTML文件到CSS文件）
     try:
-        css_href = str(Path(css_file).relative_to(output_path.parent))
+        # 使用 os.path.relpath 来计算相对路径，支持兄弟目录
+        import os
+        css_href = os.path.relpath(css_file, output_path.parent)
     except Exception:
-        css_href = str(Path(css_file).resolve())
+        # 如果失败，使用简单的相对路径（假设标准目录结构）
+        css_href = "../doc/shiji-styles.css"
 
     html_template = f"""<!DOCTYPE html>
 <html lang="zh-CN">

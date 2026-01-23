@@ -142,9 +142,16 @@ blockquote {
     font-style: italic;
 }
 
-/* 列表样式 */
+/* 列表样式 - 古籍风格，去除项目符号，仅缩进 */
 ul, ol {
     line-height: 2;
+    list-style: none;
+    padding-left: 2em;
+    margin: 1em 0;
+}
+
+ul li, ol li {
+    margin: 0;
 }
 
 /* 段落编号 - 淡雅书卷风格 */

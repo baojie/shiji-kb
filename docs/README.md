@@ -5,7 +5,7 @@
 ## 文件结构
 
 ```
-site/
+docs/
 ├── index.html          # 主索引页面
 ├── css/                # 样式文件
 │   └── shiji-styles.css
@@ -28,7 +28,7 @@ site/
 
 ```bash
 # 使用 Python 启动简单 HTTP 服务器
-cd site
+cd docs
 python3 -m http.server 8000
 ```
 
