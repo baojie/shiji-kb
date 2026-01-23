@@ -15,6 +15,7 @@
 - *器物* -> <span class="artifact">器物</span>
 - !天文! -> <span class="astronomy">天文</span>
 - ?神话? -> <span class="mythical">神话</span>
+- 🌿动植物🌿 -> <span class="flora-fauna">动植物</span>
 """
 
 import re
@@ -35,6 +36,7 @@ ENTITY_PATTERNS = [
     (r'&([^&<>"]+)&', r'<span class="dynasty" title="朝代/氏族">\1</span>'),     # 朝代
     (r'\^([^<>^"]+)\^', r'<span class="institution" title="制度">\1</span>'),  # 制度
     (r'~([^~<>"]+)~', r'<span class="tribe" title="族群">\1</span>'),       # 族群
+    (r'🌿([^🌿<>"]+)🌿', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物
     (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),           # 加粗（保留Markdown，必须在单*之前）
     (r'\*([^*<>"]+)\*', r'<span class="artifact" title="器物/书名">\1</span>'),  # 器物/礼器/书名
     (r'!([^!<>"]+)!', r'<span class="astronomy" title="天文/历法">\1</span>'),   # 天文
