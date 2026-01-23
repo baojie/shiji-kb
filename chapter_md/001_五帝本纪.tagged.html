@@ -4,7 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>001_五帝本纪.tagged</title>
-    <link rel="stylesheet" href="../doc/shiji-styles.css">
+    <link rel="stylesheet" href="../docs/css/shiji-styles.css">
+    <style>
+    .chapter-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: #f5f5dc;
+        border-radius: 8px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+    .chapter-nav a {
+        padding: 10px 20px;
+        background-color: #8B4513;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-weight: 500;
+    }
+    .chapter-nav a:hover {
+        background-color: #A0522D;
+    }
+    .chapter-nav .nav-home {
+        background-color: #8B0000;
+    }
+    .chapter-nav .nav-home:hover {
+        background-color: #A52A2A;
+    }
+    .original-text-link {
+        font-size: 0.5em;
+        color: #888;
+        background-color: #f0f0f0;
+        padding: 4px 10px;
+        border-radius: 12px;
+        text-decoration: none;
+        margin-left: 15px;
+        font-weight: normal;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .original-text-link:hover {
+        background-color: #ddd;
+        color: #555;
+    }
+    </style>
     <script>
     // Purple Numbers (PN) 点击复制功能
     document.addEventListener('DOMContentLoaded', function() {
@@ -37,7 +83,11 @@
     </script>
 </head>
 <body>
-<h1><a href="#pn-0" id="pn-0" class="para-num" title="点击复制链接">0</a> 五帝本纪</h1>
+<nav class="chapter-nav">
+    <a href="../docs/index.html" class="nav-home">回到主页</a>
+    <a href="002_夏本纪.tagged.html" class="nav-next">下一页 →</a>
+</nav>
+<h1><a href="#pn-0" id="pn-0" class="para-num" title="点击复制链接">0</a> 五帝本纪 <a href="../docs/original_text/001_五帝本纪.txt" class="original-text-link">原文</a></h1>
 
 <h2><span class="person" title="人名">黄帝</span></h2>
 
@@ -316,5 +366,9 @@
 <a href="#pn-28.5" id="pn-28.5" class="para-num" title="点击复制链接">28.5</a> 能让天下，贤哉二君！<br>
 </blockquote>
 
+<nav class="chapter-nav">
+    <a href="../docs/index.html" class="nav-home">回到主页</a>
+    <a href="002_夏本纪.tagged.html" class="nav-next">下一页 →</a>
+</nav>
 </body>
 </html>

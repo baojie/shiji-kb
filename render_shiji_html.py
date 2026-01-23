@@ -88,14 +88,17 @@ def convert_entities(text):
     return text
 
 
-def markdown_to_html(md_file, output_file=None, css_file=None):
+def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None, next_chapter=None, original_text_file=None):
     """
     将简洁标记的Markdown转换为HTML
-    
+
     Args:
         md_file: 输入的Markdown文件路径
         output_file: 输出的HTML文件路径（可选，默认为同名.html）
         css_file: CSS文件路径（可选，默认为doc/shiji-styles.css）
+        prev_chapter: 上一章的文件名（可选）
+        next_chapter: 下一章的文件名（可选）
+        original_text_file: 原文txt文件的路径（可选）
     """
     md_path = Path(md_file)
     
@@ -143,10 +146,14 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
             # 非引用上下文下的孤立 '>' 保持为页面空行
             html_lines.append('<p></p>')
             continue
-        
-        # 标题
+
+        # 标题 - 为h1标题添加原文链接
         if line.startswith('# '):
-            line = f'<h1>{line[2:]}</h1>'
+            title_content = line[2:]
+            if original_text_file:
+                line = f'<h1>{title_content} <a href="{original_text_file}" class="original-text-link">原文</a></h1>'
+            else:
+                line = f'<h1>{title_content}</h1>'
         elif line.startswith('## '):
             line = f'<h2>{line[3:]}</h2>'
         elif line.startswith('### '):
@@ -303,6 +310,15 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
         # 如果失败，使用简单的相对路径（假设标准目录结构）
         css_href = "../doc/shiji-styles.css"
 
+    # 生成导航栏HTML
+    nav_html = '<nav class="chapter-nav">\n'
+    nav_html += '    <a href="../docs/index.html" class="nav-home">回到主页</a>\n'
+    if prev_chapter:
+        nav_html += f'    <a href="{prev_chapter}" class="nav-prev">← 上一页</a>\n'
+    if next_chapter:
+        nav_html += f'    <a href="{next_chapter}" class="nav-next">下一页 →</a>\n'
+    nav_html += '</nav>'
+
     html_template = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -310,6 +326,52 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{md_path.stem}</title>
     <link rel="stylesheet" href="{css_href}">
+    <style>
+    .chapter-nav {{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: #f5f5dc;
+        border-radius: 8px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }}
+    .chapter-nav a {{
+        padding: 10px 20px;
+        background-color: #8B4513;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-weight: 500;
+    }}
+    .chapter-nav a:hover {{
+        background-color: #A0522D;
+    }}
+    .chapter-nav .nav-home {{
+        background-color: #8B0000;
+    }}
+    .chapter-nav .nav-home:hover {{
+        background-color: #A52A2A;
+    }}
+    .original-text-link {{
+        font-size: 0.5em;
+        color: #888;
+        background-color: #f0f0f0;
+        padding: 4px 10px;
+        border-radius: 12px;
+        text-decoration: none;
+        margin-left: 15px;
+        font-weight: normal;
+        transition: background-color 0.3s, color 0.3s;
+    }}
+    .original-text-link:hover {{
+        background-color: #ddd;
+        color: #555;
+    }}
+    </style>
     <script>
     // Purple Numbers (PN) 点击复制功能
     document.addEventListener('DOMContentLoaded', function() {{
@@ -342,7 +404,9 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
     </script>
 </head>
 <body>
+{nav_html}
 {html_body}
+{nav_html}
 </body>
 </html>
 """
