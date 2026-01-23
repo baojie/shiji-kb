@@ -76,8 +76,14 @@ def convert_entities(text):
     for pattern, replacement in ENTITY_PATTERNS:
         text = re.sub(pattern, replacement, text)
 
-    # 最后处理段落编号
-    text = re.sub(r'(?<!["\'>])\[(\d+(?:\.\d+)*)\]', r'<span class="para-num">\1</span>', text)
+    # 最后处理段落编号（PN - Purple Numbers）
+    # 将 [编号] 转换为可点击的锚点链接
+    def pn_replacement(match):
+        pn = match.group(1)
+        pn_id = f"pn-{pn}"
+        return f'<a href="#{pn_id}" id="{pn_id}" class="para-num" title="点击复制链接">{pn}</a>'
+
+    text = re.sub(r'(?<!["\'>])\[(\d+(?:\.\d+)*)\]', pn_replacement, text)
 
     return text
 
@@ -304,6 +310,36 @@ def markdown_to_html(md_file, output_file=None, css_file=None):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{md_path.stem}</title>
     <link rel="stylesheet" href="{css_href}">
+    <script>
+    // Purple Numbers (PN) 点击复制功能
+    document.addEventListener('DOMContentLoaded', function() {{
+        // 为所有 PN 添加点击事件
+        document.querySelectorAll('.para-num').forEach(function(pn) {{
+            pn.addEventListener('click', function(e) {{
+                e.preventDefault();
+
+                // 获取完整的 URL（包含锚点）
+                const url = window.location.href.split('#')[0] + this.getAttribute('href');
+
+                // 复制到剪贴板
+                navigator.clipboard.writeText(url).then(function() {{
+                    // 显示复制成功提示
+                    const originalText = pn.textContent;
+                    pn.textContent = '✓';
+                    pn.style.color = '#4CAF50';
+
+                    setTimeout(function() {{
+                        pn.textContent = originalText;
+                        pn.style.color = '';
+                    }}, 1000);
+                }}).catch(function(err) {{
+                    console.error('复制失败:', err);
+                    alert('复制失败，请手动复制链接');
+                }});
+            }});
+        }});
+    }});
+    </script>
 </head>
 <body>
 {html_body}

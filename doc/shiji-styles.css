@@ -154,29 +154,35 @@ ul li, ol li {
     margin: 0;
 }
 
-/* 段落编号 - 致敬 Doug Engelbart 的 Purple Numbers
+/* 段落编号 (PN - Purple Numbers) - 致敬 Doug Engelbart
  * Purple Numbers 是 Doug Engelbart 在 1960 年代提出的概念，
  * 用于为文档中的每个段落分配唯一的、可引用的编号。
  * 这一创新使得超文本链接和精确引用成为可能，
  * 是现代互联网和知识管理系统的重要基础。
- * 我们使用淡紫色来致敬这一伟大的发明。
+ *
+ * 参考 Eugene Eric Kim 的实现 (https://eekim.com/software/purple/purple.html)
+ * 使用淡紫色，字体较小，显示在段落开头。
+ * 点击 PN 可复制带锚点的完整 URL，便于分享和引用。
  */
 .para-num {
-    display: inline-block;
-    background-color: #F3E5F5;  /* 淡紫色背景 */
-    color: #7B1FA2;  /* 紫色文字 */
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.85em;
-    font-weight: 500;
-    padding: 2px 6px;
-    border-radius: 4px;
-    border: 1px solid #CE93D8;  /* 淡紫色边框 */
-    margin-right: 8px;
-    line-height: 1.2;
+    display: inline;
+    color: #C8A8FF;  /* 淡紫色 - 参考 Purple 原始实现 */
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.75em;  /* x-small */
+    font-weight: bold;
+    font-style: normal;
+    margin-right: 0.5em;  /* 开头位置，右边距 */
+    text-decoration: none;
     vertical-align: baseline;
     font-variant-numeric: tabular-nums;
-    text-align: center;
-    min-width: 1.5em;
+    cursor: pointer;  /* 显示为可点击 */
+    transition: color 0.2s ease;
+}
+
+/* 段落编号悬停效果 */
+.para-num:hover {
+    color: #9370DB;  /* 深一点的紫色 */
+    text-decoration: underline;
 }
 
 /* 当段落编号独立成段时（段落只包含编号），显示为块级元素 */
