@@ -1,0 +1,191 @@
+/* 史记命名实体样式表 */
+
+/* 基础样式 */
+body {
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+    line-height: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdf8;
+    color: #2c2c2c;
+}
+
+/* 段落间距 */
+p {
+    margin: 2em 0;
+}
+
+/* 人名样式 */
+.person {
+    color: #8B4513;
+    text-decoration: underline;
+    text-decoration-color: #8B451380;
+    text-underline-offset: 2px;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* 地名样式 */
+.place {
+    color: #B8860B;
+    text-decoration: underline;
+    text-decoration-color: #B8860B80;
+    text-underline-offset: 2px;
+    cursor: help;
+}
+
+/* 官职样式 */
+.official {
+    color: #8B0000;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* 时间/纪年样式 */
+.time {
+    color: #008B8B;
+    font-style: italic;
+    cursor: help;
+}
+
+/* 朝代/氏族/国号样式 */
+.dynasty {
+    color: #9370DB;
+    background-color: #F0E6FF;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 制度/典章样式 */
+.institution {
+    color: #4682B4;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* 族群/部落样式 */
+.tribe {
+    color: #2F4F4F;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* 器物样式 */
+.artifact {
+    color: #CD853F;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* 天文/历法样式 */
+.astronomy {
+    color: #483D8B;
+    font-style: italic;
+    cursor: help;
+}
+
+/* 传说生物/神话样式 */
+.mythical {
+    color: #8B008B;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* 引号内容样式（对话） */
+/* 视觉设计：克制优雅的对话标记
+ * - 斜体：区分对话与叙述
+ * - 淡褐色背景：极淡的底色（透明度0.03），不干扰阅读
+ * - 底部虚线：褐色虚线（透明度0.3），提供清晰但不突兀的视觉边界
+ * - 适度内边距：左右各2px，保持文字呼吸感
+ */
+.quoted {
+    font-style: italic;
+    background-color: rgba(139, 69, 19, 0.03);
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.3);
+    padding: 0 2px;
+}
+
+/* 章节标题 */
+h1 {
+    color: #8B0000;
+    border-bottom: 3px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #8B4513;
+    border-left: 5px solid #8B4513;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #B8860B;
+    margin-top: 30px;
+}
+
+/* 分隔线 */
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 40px 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #9370DB;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #faf8ff;
+    font-style: italic;
+}
+
+/* 列表样式 */
+ul, ol {
+    line-height: 2;
+}
+
+/* 段落编号 - 淡雅书卷风格 */
+.para-num {
+    display: inline-block;
+    background-color: #FFF8E1;
+    color: #6D4C41;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85em;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #C0C0C0;
+    margin-right: 8px;
+    line-height: 1.2;
+    vertical-align: baseline;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    min-width: 1.5em;
+}
+
+/* 当段落编号独立成段时（段落只包含编号），显示为块级元素 */
+p:has(> .para-num:only-child) {
+    margin: 0.5em 0;
+}
+
+p > .para-num:only-child {
+    display: inline-block;
+    margin-bottom: 0.3em;
+}
+
+/* NOTE框 */
+.note-box {
+    background-color: #fffef0;
+    border: 1px solid #e6e0c0;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.note-box h4 {
+    color: #8B7500;
+    margin-top: 0;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>史记 - 知识库</title>
+    <link rel="stylesheet" href="css/shiji-styles.css">
+    <style>
+        .chapter-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .chapter-list li {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fffef0;
+            border-left: 5px solid #8B4513;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .chapter-list li:hover {
+            background-color: #FFF8E1;
+        }
+
+        .chapter-list a {
+            text-decoration: none;
+            color: #8B0000;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .chapter-list a:hover {
+            color: #8B4513;
+        }
+
+        .intro {
+            background-color: #faf8ff;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #e6e0c0;
+            margin: 30px 0;
+        }
+
+        .intro h2 {
+            margin-top: 0;
+            border: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>史记 - 知识库</h1>
+
+    <div class="intro">
+        <h2>简介</h2>
+        <p>本项目是《史记》知识库的在线展示，对文本进行了命名实体标注，包括人名、地名、官职、朝代、族群、器物等类别，并进行了段落编号和对话标识，便于阅读和研究。</p>
+        <p>文本中的实体使用不同颜色和样式标识：
+            <span class="person">人名</span>、
+            <span class="place">地名</span>、
+            <span class="official">官职</span>、
+            <span class="dynasty">朝代/氏族</span>、
+            <span class="tribe">族群</span>、
+            <span class="artifact">器物</span> 等。
+        </p>
+    </div>
+
+    <h2>章节目录</h2>
+
+    <ul class="chapter-list">
+        <li>
+            <a href="chapters/001_五帝本纪.tagged.html">001 五帝本纪</a>
+            <p>记载黄帝、颛顼、帝喾、尧、舜五位上古帝王的事迹</p>
+        </li>
+        <li>
+            <a href="chapters/002_夏本纪.tagged.html">002 夏本纪</a>
+            <p>记载夏朝历史，从大禹治水到夏桀灭亡</p>
+        </li>
+        <li>
+            <a href="chapters/003_殷本纪.tagged.html">003 殷本纪</a>
+            <p>记载商（殷）朝历史，从商汤建国到纣王亡国</p>
+        </li>
+        <li>
+            <a href="chapters/004_周本纪.tagged.html">004 周本纪</a>
+            <p>记载周朝历史，从后稷至周幽王</p>
+        </li>
+    </ul>
+
+    <hr>
+
+    <footer style="text-align: center; color: #666; margin-top: 40px;">
+        <p>史记知识库 | 命名实体标注版</p>
+    </footer>
+</body>
+</html>
