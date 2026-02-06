@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>史记争霸 - 历史策略卡牌游戏</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <!-- 游戏标题 -->
+      <header class="game-header">
+        <h1>史记争霸</h1>
+        <p class="subtitle">以史为鉴，运筹帷幄</p>
+      </header>
+
+      <!-- 主菜单 -->
+      <div id="main-menu" class="screen active">
+        <div class="menu-content">
+          <h2>选择游戏模式</h2>
+          <div class="menu-buttons">
+            <button class="menu-btn primary" onclick="startStoryMode()">
+              <span class="btn-icon">📜</span>
+              <span class="btn-text">历史重演</span>
+              <span class="btn-desc">体验真实历史事件</span>
+            </button>
+            <button class="menu-btn" onclick="showSkillLibrary()">
+              <span class="btn-icon">🎴</span>
+              <span class="btn-text">技能图鉴</span>
+              <span class="btn-desc">查看所有技能卡牌</span>
+            </button>
+            <button class="menu-btn" onclick="showTutorial()">
+              <span class="btn-icon">📖</span>
+              <span class="btn-text">游戏教程</span>
+              <span class="btn-desc">学习游戏规则</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 技能图鉴 -->
+      <div id="skill-library" class="screen">
+        <div class="screen-header">
+          <h2>技能图鉴</h2>
+          <button class="back-btn" onclick="showMainMenu()">返回</button>
+        </div>
+        <div class="skill-filter">
+          <button class="filter-btn active" onclick="filterSkills('all')">
+            全部
+          </button>
+          <button class="filter-btn" onclick="filterSkills('military')">
+            军事
+          </button>
+          <button class="filter-btn" onclick="filterSkills('politics')">
+            政治
+          </button>
+          <button class="filter-btn" onclick="filterSkills('culture')">
+            文化
+          </button>
+        </div>
+        <div id="skill-cards-container" class="skill-cards-grid"></div>
+      </div>
+
+      <!-- 游戏主界面 -->
+      <div id="game-screen" class="screen">
+        <!-- 顶部状态栏 -->
+        <div class="status-bar">
+          <div class="resource-display">
+            <div class="resource-item">
+              <span class="resource-icon">💰</span>
+              <span class="resource-label">财富</span>
+              <span class="resource-value" id="wealth">100</span>
+            </div>
+            <div class="resource-item">
+              <span class="resource-icon">👥</span>
+              <span class="resource-label">民心</span>
+              <span class="resource-value" id="popularity">100</span>
+            </div>
+            <div class="resource-item">
+              <span class="resource-icon">⚔️</span>
+              <span class="resource-label">军力</span>
+              <span class="resource-value" id="military">100</span>
+            </div>
+            <div class="resource-item">
+              <span class="resource-icon">📜</span>
+              <span class="resource-label">威望</span>
+              <span class="resource-value" id="prestige">100</span>
+            </div>
+          </div>
+          <div class="turn-info">
+            <span>回合: <span id="current-turn">1</span></span>
+          </div>
+        </div>
+
+        <!-- 剧情显示区 -->
+        <div class="story-panel">
+          <div class="story-content" id="story-content">
+            <h3 id="story-title">第一章：商周之变</h3>
+            <p id="story-text">
+              公元前1046年，商纣王暴虐无道，天下苦秦久矣。周武王姬发在姜子牙等贤臣辅佐下，决定起兵伐纣...
+            </p>
+          </div>
+          <div class="story-choices" id="story-choices"></div>
+        </div>
+
+        <!-- 手牌区 -->
+        <div class="hand-area">
+          <h4>你的技能卡牌</h4>
+          <div class="hand-cards" id="hand-cards"></div>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="action-buttons">
+          <button class="action-btn" onclick="endTurn()">结束回合</button>
+          <button class="action-btn secondary" onclick="showMainMenu()">
+            返回菜单
+          </button>
+        </div>
+      </div>
+
+      <!-- 技能详情弹窗 -->
+      <div id="skill-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeSkillModal()">&times;</span>
+          <div id="skill-detail"></div>
+        </div>
+      </div>
+
+      <!-- 教程弹窗 -->
+      <div id="tutorial-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeTutorial()">&times;</span>
+          <div class="tutorial-content">
+            <h2>游戏教程</h2>
+            <div class="tutorial-section">
+              <h3>🎯 游戏目标</h3>
+              <p>
+                通过合理使用技能卡牌，完成历史任务，平衡四大资源（财富、民心、军力、威望）。
+              </p>
+            </div>
+            <div class="tutorial-section">
+              <h3>🃏 技能卡牌</h3>
+              <p>
+                每张技能卡都源自《史记》中的真实历史事件或制度。使用技能卡会消耗相应资源，但能产生强大效果。
+              </p>
+            </div>
+            <div class="tutorial-section">
+              <h3>📊 资源管理</h3>
+              <ul>
+                <li><strong>财富</strong>：用于招募人才、维持军队</li>
+                <li><strong>民心</strong>：影响政策推行效果</li>
+                <li><strong>军力</strong>：决定战争胜负</li>
+                <li><strong>威望</strong>：影响外交和人才吸引</li>
+              </ul>
+            </div>
+            <div class="tutorial-section">
+              <h3>🎮 操作方式</h3>
+              <p>
+                点击技能卡查看详情，点击"使用"按钮打出卡牌。每回合可以使用多张卡牌，但要注意资源消耗。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

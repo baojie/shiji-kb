@@ -1,0 +1,604 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "KaiTi", "楷体", serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #f0e6d2;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#game-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 游戏标题 */
+.game-header {
+  text-align: center;
+  padding: 30px 0;
+  background: linear-gradient(to bottom, rgba(139, 69, 19, 0.3), transparent);
+  border-bottom: 2px solid #8b4513;
+  margin-bottom: 30px;
+}
+
+.game-header h1 {
+  font-size: 3em;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  letter-spacing: 8px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #d4af37;
+  font-style: italic;
+}
+
+/* 屏幕切换 */
+.screen {
+  display: none;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 主菜单 */
+.menu-content {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.menu-content h2 {
+  font-size: 2em;
+  color: #ffd700;
+  margin-bottom: 50px;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.menu-btn {
+  background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+  border: 2px solid #d4af37;
+  padding: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #f0e6d2;
+}
+
+.menu-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+  border-color: #ffd700;
+}
+
+.menu-btn.primary {
+  background: linear-gradient(135deg, #b8860b 0%, #8b6914 100%);
+}
+
+.btn-icon {
+  font-size: 3em;
+}
+
+.btn-text {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.btn-desc {
+  font-size: 0.9em;
+  color: #d4af37;
+}
+
+/* 屏幕头部 */
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(139, 69, 19, 0.3);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.screen-header h2 {
+  color: #ffd700;
+  font-size: 2em;
+}
+
+.back-btn {
+  background: #654321;
+  border: 2px solid #8b4513;
+  color: #f0e6d2;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #8b4513;
+  border-color: #d4af37;
+}
+
+/* 技能过滤器 */
+.skill-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: #654321;
+  border: 2px solid #8b4513;
+  color: #f0e6d2;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #8b4513;
+  border-color: #d4af37;
+}
+
+/* 技能卡牌网格 */
+.skill-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 技能卡牌 */
+.skill-card {
+  background: linear-gradient(135deg, #2c1810 0%, #1a0f08 100%);
+  border: 3px solid #8b4513;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ffd700, #d4af37, #ffd700);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+  border-color: #ffd700;
+}
+
+.skill-card.military::before {
+  background: linear-gradient(90deg, #dc143c, #8b0000, #dc143c);
+}
+.skill-card.politics::before {
+  background: linear-gradient(90deg, #4169e1, #000080, #4169e1);
+}
+.skill-card.culture::before {
+  background: linear-gradient(90deg, #32cd32, #006400, #32cd32);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.skill-rarity {
+  color: #ffd700;
+  font-size: 1.2em;
+}
+
+.skill-category {
+  display: inline-block;
+  padding: 5px 10px;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 5px;
+  font-size: 0.9em;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.skill-description {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #f0e6d2;
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+.skill-cost {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.cost-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  color: #ff6b6b;
+}
+
+.skill-effect {
+  font-size: 0.9em;
+  color: #90ee90;
+  padding: 10px;
+  background: rgba(144, 238, 144, 0.1);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* 状态栏 */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(139, 69, 19, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.resource-display {
+  display: flex;
+  gap: 30px;
+}
+
+.resource-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.resource-icon {
+  font-size: 2em;
+}
+
+.resource-label {
+  font-size: 0.9em;
+  color: #d4af37;
+}
+
+.resource-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.turn-info {
+  font-size: 1.3em;
+  color: #ffd700;
+}
+
+/* 剧情面板 */
+.story-panel {
+  background: linear-gradient(135deg, #2c1810 0%, #1a0f08 100%);
+  border: 3px solid #8b4513;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+  min-height: 300px;
+}
+
+.story-content h3 {
+  color: #ffd700;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.story-content p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #f0e6d2;
+  text-indent: 2em;
+}
+
+.story-choices {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.choice-btn {
+  background: linear-gradient(135deg, #654321 0%, #4a3219 100%);
+  border: 2px solid #8b4513;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: #f0e6d2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-size: 1.05em;
+}
+
+.choice-btn:hover {
+  background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+  border-color: #d4af37;
+  transform: translateX(10px);
+}
+
+/* 手牌区 */
+.hand-area {
+  margin-bottom: 20px;
+}
+
+.hand-area h4 {
+  color: #ffd700;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.hand-cards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.hand-card {
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, #b8860b 0%, #8b6914 100%);
+  border: 2px solid #d4af37;
+  color: #f0e6d2;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.action-btn.secondary {
+  background: linear-gradient(135deg, #654321 0%, #4a3219 100%);
+}
+
+/* 弹窗 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #2c1810 0%, #1a0f08 100%);
+  border: 3px solid #d4af37;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2em;
+  color: #d4af37;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ffd700;
+}
+
+/* 教程内容 */
+.tutorial-content h2 {
+  color: #ffd700;
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tutorial-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(139, 69, 19, 0.2);
+  border-radius: 10px;
+}
+
+.tutorial-section h3 {
+  color: #d4af37;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.tutorial-section p,
+.tutorial-section li {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #f0e6d2;
+}
+
+.tutorial-section ul {
+  list-style-position: inside;
+  padding-left: 20px;
+}
+
+.tutorial-section li {
+  margin-bottom: 10px;
+}
+
+/* 技能详情 */
+#skill-detail {
+  color: #f0e6d2;
+}
+
+#skill-detail h2 {
+  color: #ffd700;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill-detail-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(139, 69, 19, 0.2);
+  border-radius: 10px;
+}
+
+.skill-detail-section h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.shiji-quote {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-left: 4px solid #d4af37;
+  margin: 20px 0;
+  font-style: italic;
+  color: #d4af37;
+}
+
+.use-skill-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #b8860b 0%, #8b6914 100%);
+  border: 2px solid #d4af37;
+  color: #f0e6d2;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.use-skill-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.use-skill-btn:disabled {
+  background: #555;
+  border-color: #777;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .game-header h1 {
+    font-size: 2em;
+    letter-spacing: 4px;
+  }
+
+  .resource-display {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .skill-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hand-cards {
+    flex-direction: column;
+  }
+
+  .hand-card {
+    min-width: auto;
+  }
+}
