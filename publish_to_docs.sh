@@ -69,6 +69,8 @@ for file in *.html; do
     sed -i 's|href="../docs/original_text/|href="../original_text/|g' "$file"
     # 修复主页链接路径：从 ../docs/index.html 改为 ../index.html
     sed -i 's|href="../docs/index.html"|href="../index.html"|g' "$file"
+    # 修复导航链接：移除章节链接中的 .tagged 后缀
+    sed -i 's|href="\([0-9]\{3\}_[^"]*\)\.tagged\.html"|href="\1.html"|g' "$file"
 done
 cd ../..
 
