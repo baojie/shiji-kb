@@ -301,8 +301,8 @@ def main():
     print("史记家庭关系提取工具")
     print("="*60 + "\n")
 
-    chapter_dir = "/home/baojie/work/shiji-kb/chapter_md"
-    output_dir = Path("/home/baojie/work/shiji-kb/relations")
+    chapter_dir = "chapter_md"
+    output_dir = Path("kg/relations")
 
     extractor = FamilyRelationExtractor(chapter_dir)
 

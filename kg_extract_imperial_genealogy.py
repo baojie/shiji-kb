@@ -448,8 +448,8 @@ def main():
     print("史记帝王家谱提取工具")
     print("="*60 + "\n")
 
-    chapter_dir = "/home/baojie/work/shiji-kb/chapter_md"
-    output_dir = Path("/home/baojie/work/shiji-kb/genealogy")
+    chapter_dir = "chapter_md"
+    output_dir = Path("kg/genealogy")
 
     extractor = ImperialGenealogyExtractor(chapter_dir)
 

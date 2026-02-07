@@ -234,8 +234,8 @@ def main():
     print("史记分类词表构建工具")
     print("="*60 + "\n")
 
-    chapter_dir = "/home/baojie/work/shiji-kb/chapter_md"
-    output_dir = Path("/home/baojie/work/shiji-kb/vocabularies")
+    chapter_dir = "chapter_md"
+    output_dir = Path("kg/vocabularies")
 
     # 创建构建器
     builder = VocabularyBuilder(chapter_dir)

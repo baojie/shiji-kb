@@ -70,7 +70,9 @@ def main():
     print("\n" + "="*60)
     print("提取完成！")
     print("\n建议使用Task工具逐个分析每个章节文件")
-    print("然后将结果整理到 FLORA_FAUNA_TAGGING_GUIDE.md 中")
+    print("然后将结果整理到以下位置：")
+    print("  - kg/vocabularies/动植物词典.md")
+    print("  - FLORA_FAUNA_TAGGING_GUIDE.md (标注指南)")
 
 if __name__ == '__main__':
     main()
