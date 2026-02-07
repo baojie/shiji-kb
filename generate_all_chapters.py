@@ -35,8 +35,24 @@ def extract_chapter_title(md_file):
 
 
 def generate_index_html(chapters, output_file='docs/index.html'):
-    """生成索引页面 HTML"""
+    """生成索引页面 HTML
+
+    注意：如果已存在详细设计的index.html（包含chapter-card样式），
+    则跳过生成，避免覆盖精心设计的版本。
+    如需重新生成简单版本，请先删除或重命名现有的index.html
+    """
     print(f"\n生成索引页面: {output_file}")
+
+    # 检查是否已存在详细设计的index.html
+    output_path = Path(output_file)
+    if output_path.exists():
+        with open(output_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+            # 检查是否包含详细设计的标志（chapter-card类）
+            if 'chapter-card' in content or 'chapter-grid' in content:
+                print("⚠️  检测到已存在详细设计的index.html，跳过生成以保护设计")
+                print("   如需重新生成，请先备份或删除现有文件")
+                return
 
     # 生成章节列表 HTML
     chapter_items = []

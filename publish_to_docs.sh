@@ -36,6 +36,8 @@ echo "3. 复制 JavaScript 文件..."
 cp docs/js/purple-numbers.js docs/js/ 2>/dev/null || echo "   purple-numbers.js 已存在"
 
 # 生成所有章节HTML（带 .tagged.html 后缀）
+# 注意：generate_all_chapters.py 已添加保护机制，
+#       不会覆盖已存在的详细设计版 index.html
 echo "4. 生成所有章节HTML文件..."
 python generate_all_chapters.py
 
