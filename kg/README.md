@@ -14,15 +14,15 @@ kg/
 
 ## 知识图谱构建脚本
 
-所有知识图谱相关的Python脚本统一使用 `kg_` 前缀，位于项目根目录：
+所有知识图谱相关的Python脚本统一使用 `kg_` 前缀，位于 `kg/` 目录：
 
 ### 1. 实体词汇表构建
-**脚本**: `kg_build_vocabularies.py`
+**脚本**: `kg/kg_build_vocabularies.py`
 **输出**: `kg/vocabularies/`
 **功能**: 从标注文本中提取11类实体，生成分类词汇表
 
 ```bash
-python kg_build_vocabularies.py
+python kg/kg_build_vocabularies.py
 ```
 
 生成文件：
@@ -39,30 +39,30 @@ python kg_build_vocabularies.py
 - 动植物词典.md
 
 ### 2. 人物关系提取
-**脚本**: `kg_extract_all_relations.py`
+**脚本**: `kg/kg_extract_all_relations.py`
 **输出**: `kg/relations/`
 **功能**: 提取所有人物间的关系（家族、政治、师徒等）
 
 ```bash
-python kg_extract_all_relations.py
+python kg/kg_extract_all_relations.py
 ```
 
 ### 3. 家族关系提取
-**脚本**: `kg_extract_family_relations.py`
+**脚本**: `kg/kg_extract_family_relations.py`
 **输出**: `kg/relations/`
 **功能**: 专门提取家族关系（父子、母子、兄弟、姻亲等）
 
 ```bash
-python kg_extract_family_relations.py
+python kg/kg_extract_family_relations.py
 ```
 
 ### 4. 帝王家谱构建
-**脚本**: `kg_extract_imperial_genealogy.py`
+**脚本**: `kg/kg_extract_imperial_genealogy.py`
 **输出**: `kg/genealogy/`
 **功能**: 构建各朝代帝王世系图
 
 ```bash
-python kg_extract_imperial_genealogy.py
+python kg/kg_extract_imperial_genealogy.py
 ```
 
 生成文件：
@@ -75,12 +75,12 @@ python kg_extract_imperial_genealogy.py
 - imperial_genealogy.json
 
 ### 5. 动植物实体提取
-**脚本**: `kg_extract_flora_fauna.py`
+**脚本**: `kg/kg_extract_flora_fauna.py`
 **输出**: `kg/vocabularies/动植物词典.md`
 **功能**: 提取文本中的动植物实体
 
 ```bash
-python kg_extract_flora_fauna.py
+python kg/kg_extract_flora_fauna.py
 ```
 
 ## 数据格式
