@@ -162,7 +162,7 @@ def generate_index_html(chapters, output_file='docs/index.html'):
 def generate_all_chapters():
     """生成所有章节的HTML文件"""
     input_dir = Path('chapter_md')
-    output_dir = Path('docs/chapters')  # 修改输出目录到docs/chapters
+    output_dir = Path('chapter_md')
     css_file = Path('docs/css/shiji-styles.css')
 
     # 确保输出目录存在
@@ -199,9 +199,9 @@ def generate_all_chapters():
         output_file = output_dir / chapter.replace('.md', '.html')
 
         # 原文txt文件路径（相对于生成的HTML文件）
-        # 从 docs/chapters/*.html 到 docs/original_text/*.txt
+        # 从 chapter_md/*.html 到 docs/original_text/*.txt
         original_text_filename = chapter.replace('.tagged.md', '.txt')
-        original_text_path = f'../original_text/{original_text_filename}'
+        original_text_path = f'../docs/original_text/{original_text_filename}'
 
         print(f"\n处理: {chapter}")
         print(f"  上一章: {prev_chapter if prev_chapter else '无'}")
