@@ -3,1336 +3,598 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>史记知识库 - 命名实体标注版</title>
+    <title>史记 - 知识库</title>
     <link rel="stylesheet" href="css/shiji-styles.css">
     <style>
-        body {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            font-family: "Microsoft YaHei", "SimHei", sans-serif;
-            background-color: #faf8f0;
+        .chapter-list {
+            list-style: none;
+            padding: 0;
         }
 
-        h1 {
-            text-align: center;
+        .chapter-list li {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fffef0;
+            border-left: 5px solid #8B4513;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .chapter-list li:hover {
+            background-color: #FFF8E1;
+        }
+
+        .chapter-list a {
+            text-decoration: none;
+            color: #8B0000;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .chapter-list a:hover {
             color: #8B4513;
-            border-bottom: 3px solid #8B4513;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
         }
 
         .intro {
-            background-color: #fff9e6;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 5px solid #d4af37;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #faf8ff;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #e6e0c0;
+            margin: 30px 0;
         }
 
         .intro h2 {
             margin-top: 0;
-            color: #8B4513;
-        }
-
-        .entity-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .entity-tags span {
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.9em;
-        }
-
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .section-header {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-        }
-
-        .section-header h2 {
-            margin: 0;
-            font-size: 1.6em;
             border: none;
             padding: 0;
-        }
-
-        .section-desc {
-            color: rgba(255,255,255,0.9);
-            font-size: 0.95em;
-            margin-top: 8px;
-        }
-
-        .chapter-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
-        }
-
-        .chapter-card {
-            background-color: #fffef0;
-            border: 1px solid #e6d8b0;
-            border-left: 4px solid #8B4513;
-            border-radius: 6px;
-            padding: 18px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .chapter-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border-left-color: #d4af37;
-            background-color: #fffcf0;
-        }
-
-        .chapter-title {
-            font-size: 1.1em;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .chapter-title a {
-            text-decoration: none;
-            color: #8B0000;
-        }
-
-        .chapter-title a:hover {
-            color: #d4af37;
-        }
-
-        .chapter-num {
-            display: inline-block;
-            background-color: #8B4513;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            margin-right: 8px;
-        }
-
-        .chapter-desc {
-            color: #555;
-            font-size: 0.9em;
-            line-height: 1.6;
-            margin-top: 8px;
-        }
-
-
-        .section-links {
-            margin-top: 12px;
-            padding-top: 10px;
-            border-top: 1px dashed #d4af37;
-            font-size: 0.85em;
-            line-height: 1.8;
-        }
-
-        .section-links a {
-            color: #8B4513;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .section-links a:hover {
-            color: #d4af37;
-            text-decoration: underline;
-        }
-
-        .more-sections {
-            color: #999;
-            font-style: italic;
-        }
-
-        footer {
-            text-align: center;
-            color: #888;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid #e6d8b0;
         }
     </style>
 </head>
 <body>
-    <h1>📜 史记知识库 - 命名实体标注版</h1>
+    <h1>史记 - 知识库</h1>
 
     <div class="intro">
-        <h2>🎯 项目简介</h2>
-        <p>本项目是《史记》全130章的命名实体标注知识库。采用11类实体标注系统，对所有人名、地名、官职、朝代、器物等关键信息进行了精细标注，并使用Biblical-style段落编号系统（Purple Numbers），便于引用和学术研究。</p>
-
-        <h3>✨ 标注类型</h3>
-        <div class="entity-tags">
-            <span class="person">人名</span>
-            <span class="place">地名</span>
-            <span class="official">官职</span>
-            <span class="time">时间</span>
-            <span class="dynasty">朝代/氏族</span>
-            <span class="institution">制度</span>
-            <span class="tribe">族群</span>
-            <span class="artifact">器物/书名</span>
-            <span class="astronomy">天文</span>
-            <span class="mythical">神话</span>
-            <span class="flora-fauna">动植物</span>
-        </div>
-
-        <h3>🔢 Purple Numbers 段落编号</h3>
-        <p>每个段落都有唯一的编号（如 [0], [1], [1.1], [2.3.1]），可点击复制链接，精确引用到具体段落，便于学术讨论和知识管理。</p>
-
-        <h3>🚀 未来开发规划</h3>
-        <p>本项目将持续增补完善，计划开发以下功能：</p>
-        <ul style="line-height: 1.8; color: #555;">
-            <li><strong>📌 事件标识</strong>：标注重大历史事件（战争、改革、政变等），建立事件索引</li>
-            <li><strong>🔗 人物关系链接</strong>：为人物间的关系建立超链接（师承、姻亲、君臣等），可视化人际网络</li>
-            <li><strong>📊 表格补全和现代化</strong>：将史记十表转换为可交互的现代化表格，支持排序、筛选、检索</li>
-            <li><strong>📑 分类实体索引</strong>：按类别生成实体索引（人名索引、地名索引、官职索引等），提供快速检索</li>
-            <li><strong>📝 三家注标注</strong>：整合裴骃《集解》、司马贞《索隐》、张守节《正义》的注释</li>
-            <li><strong>⏱️ 时间年表阅读</strong>：提供时间轴视图，按年代浏览历史事件的发生顺序</li>
-            <li><strong>🕸️ 知识图谱浏览</strong>：构建史记知识图谱，支持图形化浏览人物、地点、事件的关联网络</li>
-        </ul>
-    </div>
-
-    <!-- 本纪 -->
-    <div class="section">
-        <div class="section-header">
-            <h2>📖 本纪（12篇）</h2>
-            <div class="section-desc">记载帝王言行政绩，贯通古今，是全书的纲领</div>
-        </div>
-        <div class="chapter-grid">
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">001</span>
-                    <a href="chapters/001_五帝本纪.tagged.html">五帝本纪</a>
-                </div>
-                <div class="chapter-desc">记载黄帝、颛顼、帝喾、尧、舜五位上古帝王的事迹，是中华文明起源的重要史料</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">002</span>
-                    <a href="chapters/002_夏本纪.tagged.html">夏本纪</a>
-                </div>
-                <div class="chapter-desc">记载夏朝从大禹治水到桀亡国的历史，中国第一个世袭制王朝</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">003</span>
-                    <a href="chapters/003_殷本纪.tagged.html">殷本纪</a>
-                </div>
-                <div class="chapter-desc">记载商朝从汤建国到纣王亡国的六百年历史</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">004</span>
-                    <a href="chapters/004_周本纪.tagged.html">周本纪</a>
-                </div>
-                <div class="chapter-desc">记载西周从后稷到平王东迁的历史，封建制度的奠基时期</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">005</span>
-                    <a href="chapters/005_秦本纪.tagged.html">秦本纪</a>
-                </div>
-                <div class="chapter-desc">记载秦国从非子养马到秦孝公变法、商鞅改革的崛起历程</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">006</span>
-                    <a href="chapters/006_秦始皇本纪.tagged.html">秦始皇本纪</a>
-                </div>
-                <div class="chapter-desc">记载秦始皇统一六国、建立中央集权、修筑长城、焚书坑儒等重大事件</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">007</span>
-                    <a href="chapters/007_项羽本纪.tagged.html">项羽本纪</a>
-                </div>
-                <div class="chapter-desc">记载西楚霸王项羽的传奇一生，破釜沉舟、鸿门宴、垓下之战等经典场景</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">008</span>
-                    <a href="chapters/008_高祖本纪.tagged.html">高祖本纪</a>
-                </div>
-                <div class="chapter-desc">记载汉高祖刘邦从草根到开国皇帝的传奇经历</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">009</span>
-                    <a href="chapters/009_吕太后本纪.tagged.html">吕太后本纪</a>
-                </div>
-                <div class="chapter-desc">记载吕后临朝称制，是中国历史上第一位临朝称制的女性统治者</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">010</span>
-                    <a href="chapters/010_孝文本纪.tagged.html">孝文本纪</a>
-                </div>
-                <div class="chapter-desc">记载汉文帝仁政爱民，开创"文景之治"盛世的前期</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">011</span>
-                    <a href="chapters/011_孝景本纪.tagged.html">孝景本纪</a>
-                </div>
-                <div class="chapter-desc">记载汉景帝继续文帝政策，平定七国之乱，"文景之治"后期</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">012</span>
-                    <a href="chapters/012_孝武本纪.tagged.html">孝武本纪</a>
-                </div>
-                <div class="chapter-desc">记载汉武帝开疆拓土、独尊儒术、丝绸之路，汉朝鼎盛时期</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 表 -->
-    <div class="section">
-        <div class="section-header">
-            <h2>📅 表（10篇）</h2>
-            <div class="section-desc">编年体大事年表，以表格形式记录历史大事和人物世系</div>
-        </div>
-        <div class="chapter-grid">
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">013</span>
-                    <a href="chapters/013_三代世表.tagged.html">三代世表</a>
-                </div>
-                <div class="chapter-desc">夏商周三代世系表，记载王室世系传承</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">014</span>
-                    <a href="chapters/014_十二诸侯年表.tagged.html">十二诸侯年表</a>
-                </div>
-                <div class="chapter-desc">春秋时期十二诸侯国大事年表</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">015</span>
-                    <a href="chapters/015_六国年表.tagged.html">六国年表</a>
-                </div>
-                <div class="chapter-desc">战国时期六国大事年表，记录纵横捭阖的战国风云</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">016</span>
-                    <a href="chapters/016_秦楚之际月表.tagged.html">秦楚之际月表</a>
-                </div>
-                <div class="chapter-desc">秦末楚汉相争时期的详细月表</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">017</span>
-                    <a href="chapters/017_汉兴以来诸侯王年表.tagged.html">汉兴以来诸侯王年表</a>
-                </div>
-                <div class="chapter-desc">汉朝诸侯王的分封与变迁</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">018</span>
-                    <a href="chapters/018_高祖功臣侯者年表.tagged.html">高祖功臣侯者年表</a>
-                </div>
-                <div class="chapter-desc">汉高祖分封功臣列侯的名录</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">019</span>
-                    <a href="chapters/019_惠景间侯者年表.tagged.html">惠景间侯者年表</a>
-                </div>
-                <div class="chapter-desc">惠帝、景帝时期封侯者名录</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">020</span>
-                    <a href="chapters/020_建元以来侯者年表.tagged.html">建元以来侯者年表</a>
-                </div>
-                <div class="chapter-desc">武帝建元年间以来封侯者名录</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">021</span>
-                    <a href="chapters/021_建元已来王子侯者年表.tagged.html">建元已来王子侯者年表</a>
-                </div>
-                <div class="chapter-desc">建元以来诸侯王子弟封侯者名录</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">022</span>
-                    <a href="chapters/022_汉兴以来将相名臣年表.tagged.html">汉兴以来将相名臣年表</a>
-                </div>
-                <div class="chapter-desc">汉朝历代将相大臣名录</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 书 -->
-    <div class="section">
-        <div class="section-header">
-            <h2>📚 书（8篇）</h2>
-            <div class="section-desc">记载典章制度、礼乐律历、天文地理、经济思想等专题</div>
-        </div>
-        <div class="chapter-grid">
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">023</span>
-                    <a href="chapters/023_礼书.tagged.html">礼书</a>
-                </div>
-                <div class="chapter-desc">论述礼制的起源、发展和意义</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">024</span>
-                    <a href="chapters/024_乐书.tagged.html">乐书</a>
-                </div>
-                <div class="chapter-desc">论述音乐的政治教化作用</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">025</span>
-                    <a href="chapters/025_律书.tagged.html">律书</a>
-                </div>
-                <div class="章-desc">论述音律与兵法</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">026</span>
-                    <a href="chapters/026_历书.tagged.html">历书</a>
-                </div>
-                <div class="chapter-desc">记载太初历的制定，古代天文历法的重要文献</div>
-                <div class="section-links"><a href="chapters/026_历书.tagged.html#pn-1">[1] 历法总论</a> · <a href="chapters/026_历书.tagged.html#pn-2">[2] 历史沿革</a> · <a href="chapters/026_历书.tagged.html#pn-3">[3] 汉代历法改革</a> · <a href="chapters/026_历书.tagged.html#pn-4">[4] 历术甲子篇</a> · <a href="chapters/026_历书.tagged.html#pn-5">[5] 太史公赞</a></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">027</span>
-                    <a href="chapters/027_天官书.tagged.html">天官书</a>
-                </div>
-                <div class="chapter-desc">记载天文星象及其占卜意义，古代天文学集大成之作</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">028</span>
-                    <a href="chapters/028_封禅书.tagged.html">封禅书</a>
-                </div>
-                <div class="chapter-desc">记载封禅祭祀礼仪和神仙方术</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">029</span>
-                    <a href="chapters/029_河渠书.tagged.html">河渠书</a>
-                </div>
-                <div class="chapter-desc">记载水利工程建设，从大禹治水到汉代水利</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">030</span>
-                    <a href="chapters/030_平准书.tagged.html">平准书</a>
-                </div>
-                <div class="chapter-desc">记载汉代经济政策、盐铁专营、平抑物价等经济思想</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 世家 -->
-    <div class="section">
-        <div class="section-header">
-            <h2>🏛️ 世家（30篇）</h2>
-            <div class="section-desc">记载诸侯国和名门世族的兴衰历史</div>
-        </div>
-        <div class="chapter-grid">
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">031</span>
-                    <a href="chapters/031_吴太伯世家.tagged.html">吴太伯世家</a>
-                </div>
-                <div class="chapter-desc">吴国世系，从太伯奔吴到夫差亡国</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">032</span>
-                    <a href="chapters/032_齐太公世家.tagged.html">齐太公世家</a>
-                </div>
-                <div class="chapter-desc">齐国世系，从姜太公封齐到田氏代齐</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">033</span>
-                    <a href="chapters/033_鲁周公世家.tagged.html">鲁周公世家</a>
-                </div>
-                <div class="chapter-desc">鲁国世系，周公之后，礼仪之邦</div>
-                <div class="section-links"><a href="chapters/033_鲁周公世家.tagged.html#pn-1">[1] 周公的身世与辅佐武王</a> · <a href="chapters/033_鲁周公世家.tagged.html#pn-2">[2] 周公代武王请命</a> · <a href="chapters/033_鲁周公世家.tagged.html#pn-3">[3] 周公摄政辅佐成王</a> · <a href="chapters/033_鲁周公世家.tagged.html#pn-4">[4] 周公平定叛乱</a> · <a href="chapters/033_鲁周公世家.tagged.html#pn-5">[5] 周公还政成王</a> · <a href="chapters/033_鲁周公世家.tagged.html#pn-6">[6] 周公之死与哀荣</a> · <span class="more-sections">... 共26节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">034</span>
-                    <a href="chapters/034_燕召公世家.tagged.html">燕召公世家</a>
-                </div>
-                <div class="chapter-desc">燕国世系，召公之后，北方重镇</div>
-                <div class="section-links"><a href="chapters/034_燕召公世家.tagged.html#pn-1">[1] 召公封燕</a> · <a href="chapters/034_燕召公世家.tagged.html#pn-2">[2] 召公辅政</a> · <a href="chapters/034_燕召公世家.tagged.html#pn-3">[3] 召公德政与甘棠之思</a> · <a href="chapters/034_燕召公世家.tagged.html#pn-4">[4] 惠侯时期</a> · <a href="chapters/034_燕召公世家.tagged.html#pn-5">[5] 釐侯至顷侯</a> · <a href="chapters/034_燕召公世家.tagged.html#pn-6">[6] 缪侯至庄公</a> · <span class="more-sections">... 共24节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">035</span>
-                    <a href="chapters/035_管蔡世家.tagged.html">管蔡世家</a>
-                </div>
-                <div class="chapter-desc">管叔、蔡叔之后的世系</div>
-                <div class="section-links"><a href="chapters/035_管蔡世家.tagged.html#pn-1">[1] 段落1</a> · <a href="chapters/035_管蔡世家.tagged.html#pn-2">[2] 段落2</a> · <a href="chapters/035_管蔡世家.tagged.html#pn-3">[3] 段落3</a> · <a href="chapters/035_管蔡世家.tagged.html#pn-4">[4] 段落4</a> · <a href="chapters/035_管蔡世家.tagged.html#pn-5">[5] 段落5</a> · <a href="chapters/035_管蔡世家.tagged.html#pn-6">[6] 段落6</a> · <span class="more-sections">... 共41节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">036</span>
-                    <a href="chapters/036_陈杞世家.tagged.html">陈杞世家</a>
-                </div>
-                <div class="chapter-desc">陈国、杞国的世系历史</div>
-                <div class="section-links"><a href="chapters/036_陈杞世家.tagged.html#pn-1">[1] 段落1</a> · <a href="chapters/036_陈杞世家.tagged.html#pn-2">[2] 段落2</a> · <a href="chapters/036_陈杞世家.tagged.html#pn-3">[3] 段落3</a> · <a href="chapters/036_陈杞世家.tagged.html#pn-4">[4] 段落4</a> · <a href="chapters/036_陈杞世家.tagged.html#pn-5">[5] 段落5</a> · <a href="chapters/036_陈杞世家.tagged.html#pn-6">[6] 段落6</a> · <span class="more-sections">... 共31节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">037</span>
-                    <a href="chapters/037_卫康叔世家.tagged.html">卫康叔世家</a>
-                </div>
-                <div class="chapter-desc">卫国世系，康叔之后</div>
-                <div class="section-links"><a href="chapters/037_卫康叔世家.tagged.html#pn-1">[1] 段落1</a> · <a href="chapters/037_卫康叔世家.tagged.html#pn-2">[2] 段落2</a> · <a href="chapters/037_卫康叔世家.tagged.html#pn-3">[3] 段落3</a> · <a href="chapters/037_卫康叔世家.tagged.html#pn-4">[4] 段落4</a> · <a href="chapters/037_卫康叔世家.tagged.html#pn-5">[5] 段落5</a> · <a href="chapters/037_卫康叔世家.tagged.html#pn-6">[6] 段落6</a> · <span class="more-sections">... 共47节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">038</span>
-                    <a href="chapters/038_宋微子世家.tagged.html">宋微子世家</a>
-                </div>
-                <div class="chapter-desc">宋国世系，殷商后裔</div>
-                <div class="section-links"><a href="chapters/038_宋微子世家.tagged.html#pn-1">[1] 段落1</a> · <a href="chapters/038_宋微子世家.tagged.html#pn-2">[2] 段落2</a> · <a href="chapters/038_宋微子世家.tagged.html#pn-3">[3] 段落3</a> · <a href="chapters/038_宋微子世家.tagged.html#pn-4">[4] 段落4</a> · <a href="chapters/038_宋微子世家.tagged.html#pn-5">[5] 段落5</a> · <a href="chapters/038_宋微子世家.tagged.html#pn-6">[6] 段落6</a> · <span class="more-sections">... 共45节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">039</span>
-                    <a href="chapters/039_晋世家.tagged.html">晋世家</a>
-                </div>
-                <div class="chapter-desc">晋国世系，从唐叔虞到三家分晋</div>
-                <div class="section-links"><a href="chapters/039_晋世家.tagged.html#pn-1">[1] 段落1</a> · <a href="chapters/039_晋世家.tagged.html#pn-2">[2] 段落2</a> · <a href="chapters/039_晋世家.tagged.html#pn-3">[3] 段落3</a> · <a href="chapters/039_晋世家.tagged.html#pn-4">[4] 段落4</a> · <a href="chapters/039_晋世家.tagged.html#pn-5">[5] 段落5</a> · <a href="chapters/039_晋世家.tagged.html#pn-6">[6] 段落6</a> · <span class="more-sections">... 共131节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">040</span>
-                    <a href="chapters/040_楚世家.tagged.html">楚世家</a>
-                </div>
-                <div class="chapter-desc">楚国世系，南方大国的兴衰</div>
-                <div class="section-links"><a href="chapters/040_楚世家.tagged.html#pn-1">[1] 段落1</a> · <a href="chapters/040_楚世家.tagged.html#pn-2">[2] 段落2</a> · <a href="chapters/040_楚世家.tagged.html#pn-3">[3] 段落3</a> · <a href="chapters/040_楚世家.tagged.html#pn-4">[4] 段落4</a> · <a href="chapters/040_楚世家.tagged.html#pn-5">[5] 段落5</a> · <a href="chapters/040_楚世家.tagged.html#pn-6">[6] 段落6</a> · <span class="more-sections">... 共98节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">041</span>
-                    <a href="chapters/041_越王句践世家.tagged.html">越王句践世家</a>
-                </div>
-                <div class="chapter-desc">记载越王句践卧薪尝胆、灭吴复国的传奇</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">042</span>
-                    <a href="chapters/042_郑世家.tagged.html">郑世家</a>
-                </div>
-                <div class="chapter-desc">郑国世系，郑庄公小霸</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">043</span>
-                    <a href="chapters/043_赵世家.tagged.html">赵世家</a>
-                </div>
-                <div class="chapter-desc">赵国世系，从赵氏孤儿到赵武灵王胡服骑射</div>
-                <div class="section-links"><a href="chapters/043_赵世家.tagged.html#pn-1">[1] 赵氏起源与秦同祖</a> · <a href="chapters/043_赵世家.tagged.html#pn-2">[2] 赵夙至赵衰</a> · <a href="chapters/043_赵世家.tagged.html#pn-3">[3] 赵盾与晋灵公</a> · <a href="chapters/043_赵世家.tagged.html#pn-4">[4] 下宫之难与赵氏孤儿</a> · <a href="chapters/043_赵世家.tagged.html#pn-5">[5] 赵氏复位至赵简子</a> · <a href="chapters/043_赵世家.tagged.html#pn-6">[6] 赵简子在位</a> · <span class="more-sections">... 共36节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">044</span>
-                    <a href="chapters/044_魏世家.tagged.html">魏世家</a>
-                </div>
-                <div class="chapter-desc">魏国世系，魏文侯任贤使能</div>
-                <div class="section-links"><a href="chapters/044_魏世家.tagged.html#pn-1">[1] 魏氏起源</a> · <a href="chapters/044_魏世家.tagged.html#pn-2">[2] 魏氏世代</a> · <a href="chapters/044_魏世家.tagged.html#pn-3">[3] 魏绛事晋</a> · <a href="chapters/044_魏世家.tagged.html#pn-4">[4] 魏献子为政</a> · <a href="chapters/044_魏世家.tagged.html#pn-5">[5] 魏文侯建国</a> · <a href="chapters/044_魏世家.tagged.html#pn-6">[6] 文侯礼贤</a> · <span class="more-sections">... 共28节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">045</span>
-                    <a href="chapters/045_韩世家.tagged.html">韩世家</a>
-                </div>
-                <div class="chapter-desc">韩国世系，三家分晋之一</div>
-                <div class="section-links"><a href="chapters/045_韩世家.tagged.html#pn-1">[1] 韩氏起源</a> · <a href="chapters/045_韩世家.tagged.html#pn-2">[2] 韩厥救赵孤</a> · <a href="chapters/045_韩世家.tagged.html#pn-3">[3] 韩献子至宣子</a> · <a href="chapters/045_韩世家.tagged.html#pn-4">[4] 三家分晋</a> · <a href="chapters/045_韩世家.tagged.html#pn-5">[5] 韩景侯时期</a> · <a href="chapters/045_韩世家.tagged.html#pn-6">[6] 韩列侯时期</a> · <span class="more-sections">... 共21节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">046</span>
-                    <a href="chapters/046_田敬仲完世家.tagged.html">田敬仲完世家</a>
-                </div>
-                <div class="chapter-desc">田氏代齐的历史过程</div>
-                <div class="section-links"><a href="chapters/046_田敬仲完世家.tagged.html#pn-1">[1] 陈完出生与预言</a> · <a href="chapters/046_田敬仲完世家.tagged.html#pn-2">[2] 陈厉公之乱</a> · <a href="chapters/046_田敬仲完世家.tagged.html#pn-3">[3] 陈完奔齐</a> · <a href="chapters/046_田敬仲完世家.tagged.html#pn-4">[4] 田氏世代</a> · <a href="chapters/046_田敬仲完世家.tagged.html#pn-5">[5] 田釐子行阴德</a> · <a href="chapters/046_田敬仲完世家.tagged.html#pn-6">[6] 田乞立阳生</a> · <span class="more-sections">... 共28节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">047</span>
-                    <a href="chapters/047_孔子世家.tagged.html">孔子世家</a>
-                </div>
-                <div class="chapter-desc">孔子生平及儒家思想，唯一以平民身份入世家者</div>
-                <div class="section-links"><a href="chapters/047_孔子世家.tagged.html#pn-1">[1] 孔子的出生与家世</a> · <a href="chapters/047_孔子世家.tagged.html#pn-2">[2] 青年时期</a> · <a href="chapters/047_孔子世家.tagged.html#pn-3">[3] 问礼老子</a> · <a href="chapters/047_孔子世家.tagged.html#pn-4">[4] 诸侯形势</a> · <a href="chapters/047_孔子世家.tagged.html#pn-5">[5] 齐景公问政</a> · <a href="chapters/047_孔子世家.tagged.html#pn-6">[6] 初適齐国</a> · <span class="more-sections">... 共38节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">048</span>
-                    <a href="chapters/048_陈涉世家.tagged.html">陈涉世家</a>
-                </div>
-                <div class="chapter-desc">陈胜吴广起义，"王侯将相宁有种乎"</div>
-                <div class="section-links"><a href="chapters/048_陈涉世家.tagged.html#pn-1">[1] 陈涉与吴广</a> · <a href="chapters/048_陈涉世家.tagged.html#pn-2">[2] 大泽乡起义</a> · <a href="chapters/048_陈涉世家.tagged.html#pn-3">[3] 各地响应</a> · <a href="chapters/048_陈涉世家.tagged.html#pn-4">[4] 周文伐秦</a> · <a href="chapters/048_陈涉世家.tagged.html#pn-5">[5] 武臣立为赵王</a> · <a href="chapters/048_陈涉世家.tagged.html#pn-6">[6] 韩广立为燕王</a> · <span class="more-sections">... 共18节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">049</span>
-                    <a href="chapters/049_外戚世家.tagged.html">外戚世家</a>
-                </div>
-                <div class="chapter-desc">汉代外戚家族的历史</div>
-                <div class="section-links"><a href="chapters/049_外戚世家.tagged.html#pn-1">[1] 序言</a> · <a href="chapters/049_外戚世家.tagged.html#pn-2">[2] 太史公曰</a> · <a href="chapters/049_外戚世家.tagged.html#pn-3">[3] 吕后与孝惠皇后</a> · <a href="chapters/049_外戚世家.tagged.html#pn-4">[4] 薄太后</a> · <a href="chapters/049_外戚世家.tagged.html#pn-5">[5] 窦太后</a> · <a href="chapters/049_外戚世家.tagged.html#pn-6">[6] 窦广国</a> · <span class="more-sections">... 共19节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">050</span>
-                    <a href="chapters/050_楚元王世家.tagged.html">楚元王世家</a>
-                </div>
-                <div class="chapter-desc">刘邦兄弟刘交的后代</div>
-                <div class="section-links"><a href="chapters/050_楚元王世家.tagged.html#pn-1">[1] 楚元王刘交</a> · <a href="chapters/050_楚元王世家.tagged.html#pn-2">[2] 楚王戊叛乱</a> · <a href="chapters/050_楚元王世家.tagged.html#pn-3">[3] 楚文王立</a> · <a href="chapters/050_楚元王世家.tagged.html#pn-4">[4] 楚王世系</a> · <a href="chapters/050_楚元王世家.tagged.html#pn-5">[5] 赵王刘遂</a> · <a href="chapters/050_楚元王世家.tagged.html#pn-6">[6] 河间王辟彊</a> · <span class="more-sections">... 共9节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">051</span>
-                    <a href="chapters/051_荆燕世家.tagged.html">荆燕世家</a>
-                </div>
-                <div class="chapter-desc">汉初荆王、燕王世系</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">052</span>
-                    <a href="chapters/052_齐悼惠王世家.tagged.html">齐悼惠王世家</a>
-                </div>
-                <div class="chapter-desc">汉初齐王世系</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">053</span>
-                    <a href="chapters/053_萧相国世家.tagged.html">萧相国世家</a>
-                </div>
-                <div class="chapter-desc">萧何辅佐刘邦建立汉朝，汉初三杰之一</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">054</span>
-                    <a href="chapters/054_曹相国世家.tagged.html">曹相国世家</a>
-                </div>
-                <div class="chapter-desc">曹参继萧何为相，"萧规曹随"</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">055</span>
-                    <a href="chapters/055_留侯世家.tagged.html">留侯世家</a>
-                </div>
-                <div class="chapter-desc">张良辅佐刘邦，运筹帷幄，汉初三杰之一</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">056</span>
-                    <a href="chapters/056_陈丞相世家.tagged.html">陈丞相世家</a>
-                </div>
-                <div class="chapter-desc">陈平奇谋定天下</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">057</span>
-                    <a href="chapters/057_绛侯周勃世家.tagged.html">绛侯周勃世家</a>
-                </div>
-                <div class="chapter-desc">周勃平定诸吕之乱，拥立汉文帝</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">058</span>
-                    <a href="chapters/058_梁孝王世家.tagged.html">梁孝王世家</a>
-                </div>
-                <div class="chapter-desc">汉景帝之弟梁孝王刘武的故事</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">059</span>
-                    <a href="chapters/059_五宗世家.tagged.html">五宗世家</a>
-                </div>
-                <div class="chapter-desc">汉景帝五个儿子的世系</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">060</span>
-                    <a href="chapters/060_三王世家.tagged.html">三王世家</a>
-                </div>
-                <div class="chapter-desc">汉武帝三个儿子的世系</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 列传 -->
-    <div class="section">
-        <div class="section-header">
-            <h2>👥 列传（70篇）</h2>
-            <div class="section-desc">记载各类人物传记，包括将相、文士、侠客、方士等各色人物</div>
-        </div>
-        <div class="chapter-grid">
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">061</span>
-                    <a href="chapters/061_伯夷列传.tagged.html">伯夷列传</a>
-                </div>
-                <div class="chapter-desc">伯夷叔齐不食周粟，首篇列传论述义利观</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">062</span>
-                    <a href="chapters/062_管晏列传.tagged.html">管晏列传</a>
-                </div>
-                <div class="chapter-desc">管仲相齐、晏婴善谏，春秋名相</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">063</span>
-                    <a href="chapters/063_老子韩非列传.tagged.html">老子韩非列传</a>
-                </div>
-                <div class="chapter-desc">老子、庄子、韩非子等道家法家思想家</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">064</span>
-                    <a href="chapters/064_司马穰苴列传.tagged.html">司马穰苴列传</a>
-                </div>
-                <div class="chapter-desc">齐国名将，以法治军</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">065</span>
-                    <a href="chapters/065_孙子吴起列传.tagged.html">孙子吴起列传</a>
-                </div>
-                <div class="chapter-desc">孙武《孙子兵法》、吴起兵法改革</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">066</span>
-                    <a href="chapters/066_伍子胥列传.tagged.html">伍子胥列传</a>
-                </div>
-                <div class="chapter-desc">伍子胥复仇、辅佐吴王，忠而被诛</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">067</span>
-                    <a href="chapters/067_仲尼弟子列传.tagged.html">仲尼弟子列传</a>
-                </div>
-                <div class="chapter-desc">孔子七十二弟子，儒家传承</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">068</span>
-                    <a href="chapters/068_商君列传.tagged.html">商君列传</a>
-                </div>
-                <div class="chapter-desc">商鞅变法强秦，最终车裂而死</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">069</span>
-                    <a href="chapters/069_苏秦列传.tagged.html">苏秦列传</a>
-                </div>
-                <div class="chapter-desc">苏秦合纵抗秦，身佩六国相印</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">070</span>
-                    <a href="chapters/070_张仪列传.tagged.html">张仪列传</a>
-                </div>
-                <div class="chapter-desc">张仪连横事秦，破解合纵</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">071</span>
-                    <a href="chapters/071_樗里子甘茂列传.tagged.html">樗里子甘茂列传</a>
-                </div>
-                <div class="chapter-desc">秦国名臣樗里子、甘茂</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">072</span>
-                    <a href="chapters/072_穰侯列传.tagged.html">穰侯列传</a>
-                </div>
-                <div class="chapter-desc">秦国权臣魏冉，宣太后之弟</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">073</span>
-                    <a href="chapters/073_白起王翦列传.tagged.html">白起王翦列传</a>
-                </div>
-                <div class="chapter-desc">秦国两大名将，白起善战、王翦灭六国</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">074</span>
-                    <a href="chapters/074_孟子荀卿列传.tagged.html">孟子荀卿列传</a>
-                </div>
-                <div class="chapter-desc">孟子、荀子等儒家大师</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">075</span>
-                    <a href="chapters/075_孟尝君列传.tagged.html">孟尝君列传</a>
-                </div>
-                <div class="chapter-desc">战国四公子之一，门客三千</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">076</span>
-                    <a href="chapters/076_平原君虞卿列传.tagged.html">平原君虞卿列传</a>
-                </div>
-                <div class="chapter-desc">战国四公子之一平原君赵胜、谋士虞卿</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">077</span>
-                    <a href="chapters/077_魏公子列传.tagged.html">魏公子列传</a>
-                </div>
-                <div class="chapter-desc">信陵君窃符救赵，战国四公子之首</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">078</span>
-                    <a href="chapters/078_春申君列传.tagged.html">春申君列传</a>
-                </div>
-                <div class="chapter-desc">战国四公子之一，楚国令尹</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">079</span>
-                    <a href="chapters/079_范睢蔡泽列传.tagged.html">范睢蔡泽列传</a>
-                </div>
-                <div class="chapter-desc">范睢远交近攻策略，蔡泽明哲保身</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">080</span>
-                    <a href="chapters/080_乐毅列传.tagged.html">乐毅列传</a>
-                </div>
-                <div class="chapter-desc">乐毅伐齐，连下七十余城</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">081</span>
-                    <a href="chapters/081_廉颇蔺相如列传.tagged.html">廉颇蔺相如列传</a>
-                </div>
-                <div class="chapter-desc">完璧归赵、渑池之会、将相和</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">082</span>
-                    <a href="chapters/082_田单列传.tagged.html">田单列传</a>
-                </div>
-                <div class="chapter-desc">田单火牛阵破燕军，收复齐国</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">083</span>
-                    <a href="chapters/083_鲁仲连邹阳列传.tagged.html">鲁仲连邹阳列传</a>
-                </div>
-                <div class="chapter-desc">鲁仲连义不帝秦、邹阳狱中上书</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">084</span>
-                    <a href="chapters/084_屈原贾生列传.tagged.html">屈原贾生列传</a>
-                </div>
-                <div class="chapter-desc">屈原《离骚》、贾谊《过秦论》，文学双璧</div>
-                <div class="section-links"><a href="chapters/084_屈原贾生列传.tagged.html#pn-1">[1] 屈原生平与事迹</a> · <a href="chapters/084_屈原贾生列传.tagged.html#pn-2">[2] 屈原作离骚</a> · <a href="chapters/084_屈原贾生列传.tagged.html#pn-3">[3] 张仪欺楚</a> · <a href="chapters/084_屈原贾生列传.tagged.html#pn-4">[4] 怀王入秦不返</a> · <a href="chapters/084_屈原贾生列传.tagged.html#pn-5">[5] 屈原论治道</a> · <a href="chapters/084_屈原贾生列传.tagged.html#pn-6">[6] 屈原被迁</a> · <span class="more-sections">... 共17节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">085</span>
-                    <a href="chapters/085_吕不韦列传.tagged.html">吕不韦列传</a>
-                </div>
-                <div class="chapter-desc">吕不韦奇货可居，主持《吕氏春秋》编撰</div>
-                <div class="section-links"><a href="chapters/085_吕不韦列传.tagged.html#pn-1">[1] 吕不韦其人</a> · <a href="chapters/085_吕不韦列传.tagged.html#pn-2">[2] 子楚质于赵</a> · <a href="chapters/085_吕不韦列传.tagged.html#pn-3">[3] 吕不韦谋划</a> · <a href="chapters/085_吕不韦列传.tagged.html#pn-4">[4] 游说华阳夫人</a> · <a href="chapters/085_吕不韦列传.tagged.html#pn-5">[5] 献姬生政</a> · <a href="chapters/085_吕不韦列传.tagged.html#pn-6">[6] 子楚归秦</a> · <span class="more-sections">... 共17节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">086</span>
-                    <a href="chapters/086_刺客列传.tagged.html">刺客列传</a>
-                </div>
-                <div class="chapter-desc">专诸、聂政、荆轲等刺客故事，慷慨悲歌</div>
-                <div class="section-links"><a href="chapters/086_刺客列传.tagged.html#pn-1">[1] 曹沫</a> · <a href="chapters/086_刺客列传.tagged.html#pn-2">[2] 专诸</a> · <a href="chapters/086_刺客列传.tagged.html#pn-3">[3] 豫让</a> · <a href="chapters/086_刺客列传.tagged.html#pn-4">[4] 聂政</a> · <a href="chapters/086_刺客列传.tagged.html#pn-5">[5] 荆轲</a> · <a href="chapters/086_刺客列传.tagged.html#pn-6">[6] 太史公曰</a> · <span class="more-sections">... 共7节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">087</span>
-                    <a href="chapters/087_李斯列传.tagged.html">李斯列传</a>
-                </div>
-                <div class="chapter-desc">李斯辅佐秦始皇统一天下，后被赵高陷害</div>
-                <div class="section-links"><a href="chapters/087_李斯列传.tagged.html#pn-1">[1] 李斯早年</a> · <a href="chapters/087_李斯列传.tagged.html#pn-2">[2] 从荀卿学,西入秦</a> · <a href="chapters/087_李斯列传.tagged.html#pn-3">[3] 入秦说秦王</a> · <a href="chapters/087_李斯列传.tagged.html#pn-4">[4] 谏逐客书</a> · <a href="chapters/087_李斯列传.tagged.html#pn-5">[5] 李斯为相</a> · <a href="chapters/087_李斯列传.tagged.html#pn-6">[6] 焚书坑儒</a> · <span class="more-sections">... 共22节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">088</span>
-                    <a href="chapters/088_蒙恬列传.tagged.html">蒙恬列传</a>
-                </div>
-                <div class="chapter-desc">蒙恬北击匈奴、修筑长城</div>
-                <div class="section-links"><a href="chapters/088_蒙恬列传.tagged.html#pn-1">[1] 蒙氏家世</a> · <a href="chapters/088_蒙恬列传.tagged.html#pn-2">[2] 蒙恬北逐匈奴</a> · <a href="chapters/088_蒙恬列传.tagged.html#pn-3">[3] 赵高与蒙毅</a> · <a href="chapters/088_蒙恬列传.tagged.html#pn-4">[4] 始皇崩</a> · <a href="chapters/088_蒙恬列传.tagged.html#pn-5">[5] 扶苏蒙恬受诏</a> · <a href="chapters/088_蒙恬列传.tagged.html#pn-6">[6] 赵高谮蒙毅</a> · <span class="more-sections">... 共11节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">089</span>
-                    <a href="chapters/089_张耳陈馀列传.tagged.html">张耳陈馀列传</a>
-                </div>
-                <div class="chapter-desc">刎颈之交变仇敌，秦末风云人物</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">090</span>
-                    <a href="chapters/090_魏豹彭越列传.tagged.html">魏豹彭越列传</a>
-                </div>
-                <div class="chapter-desc">魏豹、彭越在楚汉之争中的故事</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">091</span>
-                    <a href="chapters/091_黥布列传.tagged.html">黥布列传</a>
-                </div>
-                <div class="chapter-desc">黥布从项羽部将到汉初异姓王，最终叛乱</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">092</span>
-                    <a href="chapters/092_淮阴侯列传.tagged.html">淮阴侯列传</a>
-                </div>
-                <div class="chapter-desc">韩信胯下之辱、萧何月下追韩信、背水一战、垓下会师，兵仙传奇</div>
-                <div class="section-links"><a href="chapters/092_淮阴侯列传.tagged.html#pn-1">[1] 早年困顿</a> · <a href="chapters/092_淮阴侯列传.tagged.html#pn-2">[2] 投奔项羽与汉王</a> · <a href="chapters/092_淮阴侯列传.tagged.html#pn-3">[3] 萧何月下追韩信</a> · <a href="chapters/092_淮阴侯列传.tagged.html#pn-4">[4] 拜将坛上论天下</a> · <a href="chapters/092_淮阴侯列传.tagged.html#pn-5">[5] 平定三秦与河北</a> · <a href="chapters/092_淮阴侯列传.tagged.html#pn-6">[6] 背水一战</a> · <span class="more-sections">... 共16节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">093</span>
-                    <a href="chapters/093_韩信卢绾列传.tagged.html">韩信卢绾列传</a>
-                </div>
-                <div class="chapter-desc">韩王信、燕王卢绾的故事</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">094</span>
-                    <a href="chapters/094_田儋列传.tagged.html">田儋列传</a>
-                </div>
-                <div class="chapter-desc">田儋兄弟在秦末的起义</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">095</span>
-                    <a href="chapters/095_樊郦滕灌列传.tagged.html">樊郦滕灌列传</a>
-                </div>
-                <div class="chapter-desc">樊哙、郦商、滕公、灌婴等汉初功臣</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">096</span>
-                    <a href="chapters/096_张丞相列传.tagged.html">张丞相列传</a>
-                </div>
-                <div class="chapter-desc">张苍、周昌等汉初丞相</div>
-                <div class="section-links"><a href="chapters/096_张丞相列传.tagged.html#pn-1">[1] 张苍早年经历</a> · <a href="chapters/096_张丞相列传.tagged.html#pn-2">[2] 周昌兄弟</a> · <a href="chapters/096_张丞相列传.tagged.html#pn-3">[3] 赵尧进言</a> · <a href="chapters/096_张丞相列传.tagged.html#pn-4">[4] 任敖事迹</a> · <a href="chapters/096_张丞相列传.tagged.html#pn-5">[5] 张苍为相</a> · <a href="chapters/096_张丞相列传.tagged.html#pn-6">[6] 申屠嘉事迹</a> · <span class="more-sections">... 共13节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">097</span>
-                    <a href="chapters/097_郦生陆贾列传.tagged.html">郦生陆贾列传</a>
-                </div>
-                <div class="chapter-desc">郦食其辩士、陆贾使南越</div>
-                <div class="section-links"><a href="chapters/097_郦生陆贾列传.tagged.html#pn-1">[1] 郦生早年</a> · <a href="chapters/097_郦生陆贾列传.tagged.html#pn-2">[2] 初见沛公</a> · <a href="chapters/097_郦生陆贾列传.tagged.html#pn-3">[3] 说齐被烹</a> · <a href="chapters/097_郦生陆贾列传.tagged.html#pn-4">[4] 陆贾使越</a> · <a href="chapters/097_郦生陆贾列传.tagged.html#pn-5">[5] 陆贾著新语</a> · <a href="chapters/097_郦生陆贾列传.tagged.html#pn-6">[6] 陆贾家居</a> · <span class="more-sections">... 共11节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">098</span>
-                    <a href="chapters/098_傅靳蒯成列传.tagged.html">傅靳蒯成列传</a>
-                </div>
-                <div class="chapter-desc">傅宽、靳歙、蒯成侯等汉初将领</div>
-                <div class="section-links"><a href="chapters/098_傅靳蒯成列传.tagged.html#pn-1">[1] 傅宽事迹</a> · <a href="chapters/098_傅靳蒯成列传.tagged.html#pn-2">[2] 靳歙事迹</a> · <a href="chapters/098_傅靳蒯成列传.tagged.html#pn-3">[3] 周緤事迹</a> · <a href="chapters/098_傅靳蒯成列传.tagged.html#pn-4">[4] 太史公曰</a> · <a href="chapters/098_傅靳蒯成列传.tagged.html#pn-5">[5] 赞</a></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">099</span>
-                    <a href="chapters/099_刘敬叔孙通列传.tagged.html">刘敬叔孙通列传</a>
-                </div>
-                <div class="chapter-desc">刘敬建议和亲、叔孙通制礼仪</div>
-                <div class="section-links"><a href="chapters/099_刘敬叔孙通列传.tagged.html#pn-1">[1] 刘敬劝都关中</a> · <a href="chapters/099_刘敬叔孙通列传.tagged.html#pn-2">[2] 刘敬论匈奴</a> · <a href="chapters/099_刘敬叔孙通列传.tagged.html#pn-3">[3] 刘敬徙豪杰实关中</a> · <a href="chapters/099_刘敬叔孙通列传.tagged.html#pn-4">[4] 叔孙通秦时事</a> · <a href="chapters/099_刘敬叔孙通列传.tagged.html#pn-5">[5] 叔孙通制礼仪</a> · <a href="chapters/099_刘敬叔孙通列传.tagged.html#pn-6">[6] 叔孙通为太子太傅</a> · <span class="more-sections">... 共9节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">100</span>
-                    <a href="chapters/100_季布栾布列传.tagged.html">季布栾布列传</a>
-                </div>
-                <div class="chapter-desc">季布一诺千金、栾布刚直</div>
-                <div class="section-links"><a href="chapters/100_季布栾布列传.tagged.html#pn-1">[1] 季布为项羽将</a> · <a href="chapters/100_季布栾布列传.tagged.html#pn-2">[2] 季布劝阻击匈奴</a> · <a href="chapters/100_季布栾布列传.tagged.html#pn-3">[3] 季布为河东守</a> · <a href="chapters/100_季布栾布列传.tagged.html#pn-4">[4] 曹丘生扬布名</a> · <a href="chapters/100_季布栾布列传.tagged.html#pn-5">[5] 季心任侠</a> · <a href="chapters/100_季布栾布列传.tagged.html#pn-6">[6] 丁公不忠被诛</a> · <span class="more-sections">... 共11节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">101</span>
-                    <a href="chapters/101_袁盎晁错列传.tagged.html">袁盎晁错列传</a>
-                </div>
-                <div class="chapter-desc">袁盎、晁错政见之争</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">102</span>
-                    <a href="chapters/102_张释之冯唐列传.tagged.html">张释之冯唐列传</a>
-                </div>
-                <div class="chapter-desc">张释之执法、冯唐论将</div>
-                <div class="section-links"><a href="chapters/102_张释之冯唐列传.tagged.html#pn-1">[1] @张释之@生平与事迹</a> · <a href="chapters/102_张释之冯唐列传.tagged.html#pn-2">[2] @冯唐@生平与事迹</a> · <a href="chapters/102_张释之冯唐列传.tagged.html#pn-3">[3] @太史公@曰</a> · <a href="chapters/102_张释之冯唐列传.tagged.html#pn-4">[4] 赞诗</a></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">103</span>
-                    <a href="chapters/103_万石张叔列传.tagged.html">万石张叔列传</a>
-                </div>
-                <div class="chapter-desc">万石君家族的孝行</div>
-                <div class="section-links"><a href="chapters/103_万石张叔列传.tagged.html#pn-1">[1] @万石君@生平与家风</a> · <a href="chapters/103_万石张叔列传.tagged.html#pn-2">[2] @石庆@事迹</a> · <a href="chapters/103_万石张叔列传.tagged.html#pn-3">[3] $建陵侯$@卫绾@</a> · <a href="chapters/103_万石张叔列传.tagged.html#pn-4">[4] $塞侯$@直不疑@</a> · <a href="chapters/103_万石张叔列传.tagged.html#pn-5">[5] $郎中令$@周文@</a> · <a href="chapters/103_万石张叔列传.tagged.html#pn-6">[6] $御史大夫$@张叔@</a> · <span class="more-sections">... 共8节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">104</span>
-                    <a href="chapters/104_田叔列传.tagged.html">田叔列传</a>
-                </div>
-                <div class="chapter-desc">田叔义行、孟舒等人事迹</div>
-                <div class="section-links"><a href="chapters/104_田叔列传.tagged.html#pn-1">[1] @田叔@生平</a> · <a href="chapters/104_田叔列传.tagged.html#pn-2">[2] @田仁@事迹</a> · <a href="chapters/104_田叔列传.tagged.html#pn-3">[3] @太史公@曰</a> · <a href="chapters/104_田叔列传.tagged.html#pn-4">[4] @褚先生@补记</a> · <a href="chapters/104_田叔列传.tagged.html#pn-5">[5] 赞诗</a></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">105</span>
-                    <a href="chapters/105_扁鹊仓公列传.tagged.html">扁鹊仓公列传</a>
-                </div>
-                <div class="chapter-desc">扁鹊神医、淳于意医案，中国医学史重要文献</div>
-                <div class="section-links"><a href="chapters/105_扁鹊仓公列传.tagged.html#pn-1">[1] @扁鹊@生平与医术</a> · <a href="chapters/105_扁鹊仓公列传.tagged.html#pn-2">[2] $太仓公$@淳于意@</a> · <a href="chapters/105_扁鹊仓公列传.tagged.html#pn-3">[3] 诊病案例</a> · <a href="chapters/105_扁鹊仓公列传.tagged.html#pn-4">[4] 问答医理</a> · <a href="chapters/105_扁鹊仓公列传.tagged.html#pn-5">[5] @太史公@曰</a> · <a href="chapters/105_扁鹊仓公列传.tagged.html#pn-6">[6] 赞诗与正义</a></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">106</span>
-                    <a href="chapters/106_吴王濞列传.tagged.html">吴王濞列传</a>
-                </div>
-                <div class="chapter-desc">吴王刘濞发动七国之乱</div>
-                <div class="section-links"><a href="chapters/106_吴王濞列传.tagged.html#pn-1">[1] @吴王濞@早期</a> · <a href="chapters/106_吴王濞列传.tagged.html#pn-2">[2] 七国之乱</a> · <a href="chapters/106_吴王濞列传.tagged.html#pn-3">[3] 七国败亡</a> · <a href="chapters/106_吴王濞列传.tagged.html#pn-4">[4] @太史公@曰</a> · <a href="chapters/106_吴王濞列传.tagged.html#pn-5">[5] 赞诗</a></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">107</span>
-                    <a href="chapters/107_魏其武安侯列传.tagged.html">魏其武安侯列传</a>
-                </div>
-                <div class="chapter-desc">魏其侯窦婴、武安侯田蚡的权力斗争</div>
-                <div class="section-links"><a href="chapters/107_魏其武安侯列传.tagged.html#pn-1">[1] $魏其侯$@窦婴@</a> · <a href="chapters/107_魏其武安侯列传.tagged.html#pn-2">[2] $武安侯$@田蚡@</a> · <a href="chapters/107_魏其武安侯列传.tagged.html#pn-3">[3] $灌将军$@夫@</a> · <a href="chapters/107_魏其武安侯列传.tagged.html#pn-4">[4] 魏其武安交恶</a> · <a href="chapters/107_魏其武安侯列传.tagged.html#pn-5">[5] 丞相娶燕王女宴会失礼</a> · <a href="chapters/107_魏其武安侯列传.tagged.html#pn-6">[6] 魏其灌夫之死</a> · <span class="more-sections">... 共8节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">108</span>
-                    <a href="chapters/108_韩长孺列传.tagged.html">韩长孺列传</a>
-                </div>
-                <div class="chapter-desc">韩安国的政治智慧</div>
-                <div class="section-links"><a href="chapters/108_韩长孺列传.tagged.html#pn-1">[1] @韩安国@早期</a> · <a href="chapters/108_韩长孺列传.tagged.html#pn-2">[2] @韩安国@为御史大夫</a> · <a href="chapters/108_韩长孺列传.tagged.html#pn-3">[3] @韩安国@晚年</a> · <a href="chapters/108_韩长孺列传.tagged.html#pn-4">[4] @太史公@曰</a> · <a href="chapters/108_韩长孺列传.tagged.html#pn-5">[5] 赞诗</a></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">109</span>
-                    <a href="chapters/109_李将军列传.tagged.html">李将军列传</a>
-                </div>
-                <div class="chapter-desc">飞将军李广，一生抗匈奴却终生不封侯</div>
-                <div class="section-links"><a href="chapters/109_李将军列传.tagged.html#pn-1">[1] @李广@生平</a> · <a href="chapters/109_李将军列传.tagged.html#pn-2">[2] @李广@子孙</a> · <a href="chapters/109_李将军列传.tagged.html#pn-3">[3] @太史公@曰</a> · <a href="chapters/109_李将军列传.tagged.html#pn-4">[4] 赞诗</a></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">110</span>
-                    <a href="chapters/110_匈奴列传.tagged.html">匈奴列传</a>
-                </div>
-                <div class="chapter-desc">匈奴族历史、冒顿单于崛起、汉匈百年战争，最重要的民族史文献</div>
-                <div class="section-links"><a href="chapters/110_匈奴列传.tagged.html#pn-1">[1] 匈奴的起源与习俗</a> · <a href="chapters/110_匈奴列传.tagged.html#pn-2">[2] 夏周时期的戎狄历史</a> · <a href="chapters/110_匈奴列传.tagged.html#pn-3">[3] 战国时期的戎狄分布</a> · <a href="chapters/110_匈奴列传.tagged.html#pn-4">[4] 战国晚期的北方形势</a> · <a href="chapters/110_匈奴列传.tagged.html#pn-5">[5] 冒顿单于的崛起</a> · <a href="chapters/110_匈奴列传.tagged.html#pn-6">[6] 冒顿征服东胡与月氏</a> · <span class="more-sections">... 共47节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">111</span>
-                    <a href="chapters/111_卫将军骠骑列传.tagged.html">卫将军骠骑列传</a>
-                </div>
-                <div class="chapter-desc">卫青、霍去病舅甥统兵破匈奴</div>
-                <div class="section-links"><a href="chapters/111_卫将军骠骑列传.tagged.html#pn-1">[1] 卫青家世</a> · <a href="chapters/111_卫将军骠骑列传.tagged.html#pn-2">[2] 卫青崛起</a> · <a href="chapters/111_卫将军骠骑列传.tagged.html#pn-3">[3] 初战匈奴</a> · <a href="chapters/111_卫将军骠骑列传.tagged.html#pn-4">[4] 封侯拜将</a> · <a href="chapters/111_卫将军骠骑列传.tagged.html#pn-5">[5] 大破右贤王</a> · <a href="chapters/111_卫将军骠骑列传.tagged.html#pn-6">[6] 定襄之战与赵信降敌</a> · <span class="more-sections">... 共20节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">112</span>
-                    <a href="chapters/112_平津侯主父列传.tagged.html">平津侯主父列传</a>
-                </div>
-                <div class="chapter-desc">公孙弘、主父偃的政治改革</div>
-                <div class="section-links"><a href="chapters/112_平津侯主父列传.tagged.html#pn-1">[1] 公孙弘早年</a> · <a href="chapters/112_平津侯主父列传.tagged.html#pn-2">[2] 初入仕途</a> · <a href="chapters/112_平津侯主父列传.tagged.html#pn-3">[3] 公孙弘为人与升迁</a> · <a href="chapters/112_平津侯主父列传.tagged.html#pn-4">[4] 拜为御史大夫</a> · <a href="chapters/112_平津侯主父列传.tagged.html#pn-5">[5] 庭辩布被之诈</a> · <a href="chapters/112_平津侯主父列传.tagged.html#pn-6">[6] 公孙弘性格与作为</a> · <span class="more-sections">... 共22节</span></div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">113</span>
-                    <a href="chapters/113_南越列传.tagged.html">南越列传</a>
-                </div>
-                <div class="chapter-desc">南越国历史，岭南地区的开发</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">114</span>
-                    <a href="chapters/114_东越列传.tagged.html">东越列传</a>
-                </div>
-                <div class="chapter-desc">东越国（闽越）的历史</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">115</span>
-                    <a href="chapters/115_朝鲜列传.tagged.html">朝鲜列传</a>
-                </div>
-                <div class="chapter-desc">卫满朝鲜的建立与灭亡</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">116</span>
-                    <a href="chapters/116_西南夷列传.tagged.html">西南夷列传</a>
-                </div>
-                <div class="chapter-desc">西南地区少数民族，夜郎、滇国等</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">117</span>
-                    <a href="chapters/117_司马相如列传.tagged.html">司马相如列传</a>
-                </div>
-                <div class="chapter-desc">汉赋大家司马相如，《子虚赋》《上林赋》</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">118</span>
-                    <a href="chapters/118_淮南衡山列传.tagged.html">淮南衡山列传</a>
-                </div>
-                <div class="chapter-desc">淮南王刘安、衡山王刘赐的谋反</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">119</span>
-                    <a href="chapters/119_循吏列传.tagged.html">循吏列传</a>
-                </div>
-                <div class="chapter-desc">贤良官吏的典范，仁政爱民</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">120</span>
-                    <a href="chapters/120_汲郑列传.tagged.html">汲郑列传</a>
-                </div>
-                <div class="chapter-desc">汲黯刚直不阿、郑当时待人宽厚</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">121</span>
-                    <a href="chapters/121_儒林列传.tagged.html">儒林列传</a>
-                </div>
-                <div class="chapter-desc">汉代儒学大师，经学传承</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">122</span>
-                    <a href="chapters/122_酷吏列传.tagged.html">酷吏列传</a>
-                </div>
-                <div class="chapter-desc">严刑峻法的酷吏，对法家思想的批判</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">123</span>
-                    <a href="chapters/123_大宛列传.tagged.html">大宛列传</a>
-                </div>
-                <div class="chapter-desc">张骞通西域、丝绸之路开辟，中西交通史的里程碑</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">124</span>
-                    <a href="chapters/124_游侠列传.tagged.html">游侠列传</a>
-                </div>
-                <div class="chapter-desc">民间侠客，"侠以武犯禁"的社会现象</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">125</span>
-                    <a href="chapters/125_佞幸列传.tagged.html">佞幸列传</a>
-                </div>
-                <div class="chapter-desc">宠臣佞幸，对君主偏私的批判</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">126</span>
-                    <a href="chapters/126_滑稽列传.tagged.html">滑稽列传</a>
-                </div>
-                <div class="chapter-desc">幽默讽刺的艺人和智者，淳于髡、优孟等</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">127</span>
-                    <a href="chapters/127_日者列传.tagged.html">日者列传</a>
-                </div>
-                <div class="chapter-desc">占卜术士，反映古代占卜文化</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">128</span>
-                    <a href="chapters/128_龟策列传.tagged.html">龟策列传</a>
-                </div>
-                <div class="chapter-desc">龟卜和筮占，古代占卜方法</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">129</span>
-                    <a href="chapters/129_货殖列传.tagged.html">货殖列传</a>
-                </div>
-                <div class="chapter-desc">商业经济史，记载富商巨贾，中国最早的经济史专篇</div>
-            </div>
-
-            <div class="chapter-card">
-                <div class="chapter-title">
-                    <span class="chapter-num">130</span>
-                    <a href="chapters/130_太史公自序.tagged.html">太史公自序</a>
-                </div>
-                <div class="chapter-desc">司马迁自述家世、撰史缘由和全书总纲，最重要的章节</div>
-                <div class="section-links"><a href="chapters/130_太史公自序.tagged.html#pn-1">[1] 司马氏的家族世系</a> · <a href="chapters/130_太史公自序.tagged.html#pn-2">[2] 司马谈论六家要指</a> · <a href="chapters/130_太史公自序.tagged.html#pn-3">[3] 论阴阳家</a> · <a href="chapters/130_太史公自序.tagged.html#pn-4">[4] 论儒家</a> · <a href="chapters/130_太史公自序.tagged.html#pn-5">[5] 论墨家</a> · <a href="chapters/130_太史公自序.tagged.html#pn-6">[6] 论法家</a> · <span class="more-sections">... 共151节</span></div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p><strong>史记知识库</strong> | 命名实体标注版 | 11类实体 × 130章 × Purple Numbers</p>
-        <p style="color: #999; font-size: 0.9em; margin-top: 10px;">
-            基于《史记》原文进行命名实体标注，采用Biblical-style段落编号系统<br>
-            便于学术引用、知识管理和数字人文研究
+        <h2>简介</h2>
+        <p>本项目是《史记》知识库的在线展示，对文本进行了命名实体标注，包括人名、地名、官职、朝代、族群、器物等类别，并进行了段落编号和对话标识，便于阅读和研究。</p>
+        <p>文本中的实体使用不同颜色和样式标识：
+            <span class="person">人名</span>、
+            <span class="place">地名</span>、
+            <span class="official">官职</span>、
+            <span class="dynasty">朝代/氏族</span>、
+            <span class="tribe">族群</span>、
+            <span class="artifact">器物</span> 等。
         </p>
+    </div>
+
+    <h2>章节目录</h2>
+
+    <ul class="chapter-list">
+        <li>
+            <a href="chapters/001_五帝本纪.html">001 五帝本纪</a>
+            <p>五帝本纪</p>
+        </li>
+        <li>
+            <a href="chapters/002_夏本纪.html">002 夏本纪</a>
+            <p>夏本纪</p>
+        </li>
+        <li>
+            <a href="chapters/003_殷本纪.html">003 殷本纪</a>
+            <p>殷本纪</p>
+        </li>
+        <li>
+            <a href="chapters/004_周本纪.html">004 周本纪</a>
+            <p>周本纪</p>
+        </li>
+        <li>
+            <a href="chapters/005_秦本纪.html">005 秦本纪</a>
+            <p>秦本纪</p>
+        </li>
+        <li>
+            <a href="chapters/006_秦始皇本纪.html">006 秦始皇本纪</a>
+            <p>秦始皇本纪</p>
+        </li>
+        <li>
+            <a href="chapters/007_项羽本纪.html">007 项羽本纪</a>
+            <p>项羽本纪</p>
+        </li>
+        <li>
+            <a href="chapters/008_高祖本纪.html">008 高祖本纪</a>
+            <p>高祖本纪</p>
+        </li>
+        <li>
+            <a href="chapters/009_吕太后本纪.html">009 吕太后本纪</a>
+            <p>吕太后本纪</p>
+        </li>
+        <li>
+            <a href="chapters/010_孝文本纪.html">010 孝文本纪</a>
+            <p>孝文本纪</p>
+        </li>
+        <li>
+            <a href="chapters/011_孝景本纪.html">011 孝景本纪</a>
+            <p>孝景本纪</p>
+        </li>
+        <li>
+            <a href="chapters/012_孝武本纪.html">012 孝武本纪</a>
+            <p>孝武本纪</p>
+        </li>
+        <li>
+            <a href="chapters/013_三代世表.html">013 三代世表</a>
+            <p>三代世表</p>
+        </li>
+        <li>
+            <a href="chapters/014_十二诸侯年表.html">014 十二诸侯年表</a>
+            <p>十二诸侯年表</p>
+        </li>
+        <li>
+            <a href="chapters/015_六国年表.html">015 六国年表</a>
+            <p>六国年表</p>
+        </li>
+        <li>
+            <a href="chapters/016_秦楚之际月表.html">016 秦楚之际月表</a>
+            <p>秦楚之际月表</p>
+        </li>
+        <li>
+            <a href="chapters/017_汉兴以来诸侯王年表.html">017 汉兴以来诸侯王年表</a>
+            <p>汉兴以来诸侯王年表</p>
+        </li>
+        <li>
+            <a href="chapters/018_高祖功臣侯者年表.html">018 高祖功臣侯者年表</a>
+            <p>高祖功臣侯者年表</p>
+        </li>
+        <li>
+            <a href="chapters/019_惠景间侯者年表.html">019 惠景间侯者年表</a>
+            <p>惠景间侯者年表</p>
+        </li>
+        <li>
+            <a href="chapters/020_建元以来侯者年表.html">020 建元以来侯者年表</a>
+            <p>建元以来侯者年表</p>
+        </li>
+        <li>
+            <a href="chapters/021_建元已来王子侯者年表.html">021 建元已来王子侯者年表</a>
+            <p>建元已来王子侯者年表</p>
+        </li>
+        <li>
+            <a href="chapters/022_汉兴以来将相名臣年表.html">022 汉兴以来将相名臣年表</a>
+            <p>汉兴以来将相名臣年表</p>
+        </li>
+        <li>
+            <a href="chapters/023_礼书.html">023 礼书</a>
+            <p>礼书</p>
+        </li>
+        <li>
+            <a href="chapters/024_乐书.html">024 乐书</a>
+            <p>乐书</p>
+        </li>
+        <li>
+            <a href="chapters/025_律书.html">025 律书</a>
+            <p>律书</p>
+        </li>
+        <li>
+            <a href="chapters/026_历书.html">026 历书</a>
+            <p>历书</p>
+        </li>
+        <li>
+            <a href="chapters/027_天官书.html">027 天官书</a>
+            <p>天官书</p>
+        </li>
+        <li>
+            <a href="chapters/028_封禅书.html">028 封禅书</a>
+            <p>封禅书</p>
+        </li>
+        <li>
+            <a href="chapters/029_河渠书.html">029 河渠书</a>
+            <p>河渠书</p>
+        </li>
+        <li>
+            <a href="chapters/030_平准书.html">030 平准书</a>
+            <p>平准书</p>
+        </li>
+        <li>
+            <a href="chapters/031_吴太伯世家.html">031 吴太伯世家</a>
+            <p>吴太伯世家</p>
+        </li>
+        <li>
+            <a href="chapters/032_齐太公世家.html">032 齐太公世家</a>
+            <p>032_齐太公世家</p>
+        </li>
+        <li>
+            <a href="chapters/033_鲁周公世家.html">033 鲁周公世家</a>
+            <p>033 鲁周公世家</p>
+        </li>
+        <li>
+            <a href="chapters/034_燕召公世家.html">034 燕召公世家</a>
+            <p>034 燕召公世家</p>
+        </li>
+        <li>
+            <a href="chapters/035_管蔡世家.html">035 管蔡世家</a>
+            <p>035 管蔡世家</p>
+        </li>
+        <li>
+            <a href="chapters/036_陈杞世家.html">036 陈杞世家</a>
+            <p>036 陈杞世家</p>
+        </li>
+        <li>
+            <a href="chapters/037_卫康叔世家.html">037 卫康叔世家</a>
+            <p>037 卫康叔世家</p>
+        </li>
+        <li>
+            <a href="chapters/038_宋微子世家.html">038 宋微子世家</a>
+            <p>038 宋微子世家</p>
+        </li>
+        <li>
+            <a href="chapters/039_晋世家.html">039 晋世家</a>
+            <p>039 晋世家</p>
+        </li>
+        <li>
+            <a href="chapters/040_楚世家.html">040 楚世家</a>
+            <p>040 楚世家</p>
+        </li>
+        <li>
+            <a href="chapters/041_越王句践世家.html">041 越王句践世家</a>
+            <p>越王句践世家</p>
+        </li>
+        <li>
+            <a href="chapters/042_郑世家.html">042 郑世家</a>
+            <p>郑世家</p>
+        </li>
+        <li>
+            <a href="chapters/043_赵世家.html">043 赵世家</a>
+            <p>043 赵世家</p>
+        </li>
+        <li>
+            <a href="chapters/044_魏世家.html">044 魏世家</a>
+            <p>044 魏世家</p>
+        </li>
+        <li>
+            <a href="chapters/045_韩世家.html">045 韩世家</a>
+            <p>045 韩世家</p>
+        </li>
+        <li>
+            <a href="chapters/046_田敬仲完世家.html">046 田敬仲完世家</a>
+            <p>046 田敬仲完世家</p>
+        </li>
+        <li>
+            <a href="chapters/047_孔子世家.html">047 孔子世家</a>
+            <p>047 孔子世家</p>
+        </li>
+        <li>
+            <a href="chapters/048_陈涉世家.html">048 陈涉世家</a>
+            <p>048 陈涉世家</p>
+        </li>
+        <li>
+            <a href="chapters/049_外戚世家.html">049 外戚世家</a>
+            <p>049 外戚世家</p>
+        </li>
+        <li>
+            <a href="chapters/050_楚元王世家.html">050 楚元王世家</a>
+            <p>050 楚元王世家</p>
+        </li>
+        <li>
+            <a href="chapters/051_荆燕世家.html">051 荆燕世家</a>
+            <p>荆燕世家</p>
+        </li>
+        <li>
+            <a href="chapters/052_齐悼惠王世家.html">052 齐悼惠王世家</a>
+            <p>齐悼惠王世家</p>
+        </li>
+        <li>
+            <a href="chapters/053_萧相国世家.html">053 萧相国世家</a>
+            <p>萧相国世家</p>
+        </li>
+        <li>
+            <a href="chapters/054_曹相国世家.html">054 曹相国世家</a>
+            <p>曹相国世家</p>
+        </li>
+        <li>
+            <a href="chapters/055_留侯世家.html">055 留侯世家</a>
+            <p>留侯世家</p>
+        </li>
+        <li>
+            <a href="chapters/056_陈丞相世家.html">056 陈丞相世家</a>
+            <p>陈丞相世家</p>
+        </li>
+        <li>
+            <a href="chapters/057_绛侯周勃世家.html">057 绛侯周勃世家</a>
+            <p>绛侯周勃世家</p>
+        </li>
+        <li>
+            <a href="chapters/058_梁孝王世家.html">058 梁孝王世家</a>
+            <p>梁孝王世家</p>
+        </li>
+        <li>
+            <a href="chapters/059_五宗世家.html">059 五宗世家</a>
+            <p>五宗世家</p>
+        </li>
+        <li>
+            <a href="chapters/060_三王世家.html">060 三王世家</a>
+            <p>三王世家</p>
+        </li>
+        <li>
+            <a href="chapters/061_伯夷列传.html">061 伯夷列传</a>
+            <p>伯夷列传</p>
+        </li>
+        <li>
+            <a href="chapters/062_管晏列传.html">062 管晏列传</a>
+            <p>管晏列传</p>
+        </li>
+        <li>
+            <a href="chapters/063_老子韩非列传.html">063 老子韩非列传</a>
+            <p>老子韩非列传</p>
+        </li>
+        <li>
+            <a href="chapters/064_司马穰苴列传.html">064 司马穰苴列传</a>
+            <p>司马穰苴列传</p>
+        </li>
+        <li>
+            <a href="chapters/065_孙子吴起列传.html">065 孙子吴起列传</a>
+            <p>孙子吴起列传</p>
+        </li>
+        <li>
+            <a href="chapters/066_伍子胥列传.html">066 伍子胥列传</a>
+            <p>伍子胥列传</p>
+        </li>
+        <li>
+            <a href="chapters/067_仲尼弟子列传.html">067 仲尼弟子列传</a>
+            <p>仲尼弟子列传</p>
+        </li>
+        <li>
+            <a href="chapters/068_商君列传.html">068 商君列传</a>
+            <p>商君列传</p>
+        </li>
+        <li>
+            <a href="chapters/069_苏秦列传.html">069 苏秦列传</a>
+            <p>苏秦列传</p>
+        </li>
+        <li>
+            <a href="chapters/070_张仪列传.html">070 张仪列传</a>
+            <p>张仪列传</p>
+        </li>
+        <li>
+            <a href="chapters/071_樗里子甘茂列传.html">071 樗里子甘茂列传</a>
+            <p>樗里子甘茂列传</p>
+        </li>
+        <li>
+            <a href="chapters/072_穰侯列传.html">072 穰侯列传</a>
+            <p>穰侯列传</p>
+        </li>
+        <li>
+            <a href="chapters/073_白起王翦列传.html">073 白起王翦列传</a>
+            <p>白起王翦列传</p>
+        </li>
+        <li>
+            <a href="chapters/074_孟子荀卿列传.html">074 孟子荀卿列传</a>
+            <p>孟子荀卿列传</p>
+        </li>
+        <li>
+            <a href="chapters/075_孟尝君列传.html">075 孟尝君列传</a>
+            <p>孟尝君列传</p>
+        </li>
+        <li>
+            <a href="chapters/076_平原君虞卿列传.html">076 平原君虞卿列传</a>
+            <p>平原君虞卿列传</p>
+        </li>
+        <li>
+            <a href="chapters/077_魏公子列传.html">077 魏公子列传</a>
+            <p>魏公子列传</p>
+        </li>
+        <li>
+            <a href="chapters/078_春申君列传.html">078 春申君列传</a>
+            <p>春申君列传</p>
+        </li>
+        <li>
+            <a href="chapters/079_范睢蔡泽列传.html">079 范睢蔡泽列传</a>
+            <p>范睢蔡泽列传</p>
+        </li>
+        <li>
+            <a href="chapters/080_乐毅列传.html">080 乐毅列传</a>
+            <p>乐毅列传</p>
+        </li>
+        <li>
+            <a href="chapters/081_廉颇蔺相如列传.html">081 廉颇蔺相如列传</a>
+            <p>廉颇蔺相如列传</p>
+        </li>
+        <li>
+            <a href="chapters/082_田单列传.html">082 田单列传</a>
+            <p>田单列传</p>
+        </li>
+        <li>
+            <a href="chapters/083_鲁仲连邹阳列传.html">083 鲁仲连邹阳列传</a>
+            <p>鲁仲连邹阳列传</p>
+        </li>
+        <li>
+            <a href="chapters/084_屈原贾生列传.html">084 屈原贾生列传</a>
+            <p>084 屈原贾生列传</p>
+        </li>
+        <li>
+            <a href="chapters/085_吕不韦列传.html">085 吕不韦列传</a>
+            <p>085 吕不韦列传</p>
+        </li>
+        <li>
+            <a href="chapters/086_刺客列传.html">086 刺客列传</a>
+            <p>086 刺客列传</p>
+        </li>
+        <li>
+            <a href="chapters/087_李斯列传.html">087 李斯列传</a>
+            <p>087 李斯列传</p>
+        </li>
+        <li>
+            <a href="chapters/088_蒙恬列传.html">088 蒙恬列传</a>
+            <p>088 蒙恬列传</p>
+        </li>
+        <li>
+            <a href="chapters/089_张耳陈馀列传.html">089 张耳陈馀列传</a>
+            <p>089_张耳陈馀列传</p>
+        </li>
+        <li>
+            <a href="chapters/090_魏豹彭越列传.html">090 魏豹彭越列传</a>
+            <p>090_魏豹彭越列传</p>
+        </li>
+        <li>
+            <a href="chapters/091_黥布列传.html">091 黥布列传</a>
+            <p>091_黥布列传</p>
+        </li>
+        <li>
+            <a href="chapters/092_淮阴侯列传.html">092 淮阴侯列传</a>
+            <p>092 淮阴侯列传</p>
+        </li>
+        <li>
+            <a href="chapters/093_韩信卢绾列传.html">093 韩信卢绾列传</a>
+            <p>093_韩信卢绾列传</p>
+        </li>
+        <li>
+            <a href="chapters/094_田儋列传.html">094 田儋列传</a>
+            <p>094_田儋列传</p>
+        </li>
+        <li>
+            <a href="chapters/095_樊郦滕灌列传.html">095 樊郦滕灌列传</a>
+            <p>095_樊郦滕灌列传</p>
+        </li>
+        <li>
+            <a href="chapters/096_张丞相列传.html">096 张丞相列传</a>
+            <p>096 张丞相列传</p>
+        </li>
+        <li>
+            <a href="chapters/097_郦生陆贾列传.html">097 郦生陆贾列传</a>
+            <p>097 郦生陆贾列传</p>
+        </li>
+        <li>
+            <a href="chapters/098_傅靳蒯成列传.html">098 傅靳蒯成列传</a>
+            <p>098 傅靳蒯成列传</p>
+        </li>
+        <li>
+            <a href="chapters/099_刘敬叔孙通列传.html">099 刘敬叔孙通列传</a>
+            <p>099 刘敬叔孙通列传</p>
+        </li>
+        <li>
+            <a href="chapters/100_季布栾布列传.html">100 季布栾布列传</a>
+            <p>100 季布栾布列传</p>
+        </li>
+        <li>
+            <a href="chapters/101_袁盎晁错列传.html">101 袁盎晁错列传</a>
+            <p>袁盎晁错列传</p>
+        </li>
+        <li>
+            <a href="chapters/102_张释之冯唐列传.html">102 张释之冯唐列传</a>
+            <p>张释之冯唐列传</p>
+        </li>
+        <li>
+            <a href="chapters/103_万石张叔列传.html">103 万石张叔列传</a>
+            <p>万石张叔列传</p>
+        </li>
+        <li>
+            <a href="chapters/104_田叔列传.html">104 田叔列传</a>
+            <p>田叔列传</p>
+        </li>
+        <li>
+            <a href="chapters/105_扁鹊仓公列传.html">105 扁鹊仓公列传</a>
+            <p>扁鹊仓公列传</p>
+        </li>
+        <li>
+            <a href="chapters/106_吴王濞列传.html">106 吴王濞列传</a>
+            <p>吴王濞列传</p>
+        </li>
+        <li>
+            <a href="chapters/107_魏其武安侯列传.html">107 魏其武安侯列传</a>
+            <p>魏其武安侯列传</p>
+        </li>
+        <li>
+            <a href="chapters/108_韩长孺列传.html">108 韩长孺列传</a>
+            <p>韩长孺列传</p>
+        </li>
+        <li>
+            <a href="chapters/109_李将军列传.html">109 李将军列传</a>
+            <p>李将军列传</p>
+        </li>
+        <li>
+            <a href="chapters/110_匈奴列传.html">110 匈奴列传</a>
+            <p>110_匈奴列传</p>
+        </li>
+        <li>
+            <a href="chapters/111_卫将军骠骑列传.html">111 卫将军骠骑列传</a>
+            <p>111 卫将军骠骑列传</p>
+        </li>
+        <li>
+            <a href="chapters/112_平津侯主父列传.html">112 平津侯主父列传</a>
+            <p>112 平津侯主父列传</p>
+        </li>
+        <li>
+            <a href="chapters/113_南越列传.html">113 南越列传</a>
+            <p>113 南越列传</p>
+        </li>
+        <li>
+            <a href="chapters/114_东越列传.html">114 东越列传</a>
+            <p>114 东越列传</p>
+        </li>
+        <li>
+            <a href="chapters/115_朝鲜列传.html">115 朝鲜列传</a>
+            <p>115 朝鲜列传</p>
+        </li>
+        <li>
+            <a href="chapters/116_西南夷列传.html">116 西南夷列传</a>
+            <p>116 西南夷列传</p>
+        </li>
+        <li>
+            <a href="chapters/117_司马相如列传.html">117 司马相如列传</a>
+            <p>117 司马相如列传</p>
+        </li>
+        <li>
+            <a href="chapters/118_淮南衡山列传.html">118 淮南衡山列传</a>
+            <p>118 淮南衡山列传</p>
+        </li>
+        <li>
+            <a href="chapters/119_循吏列传.html">119 循吏列传</a>
+            <p>119 循吏列传</p>
+        </li>
+        <li>
+            <a href="chapters/120_汲郑列传.html">120 汲郑列传</a>
+            <p>120 汲郑列传</p>
+        </li>
+        <li>
+            <a href="chapters/121_儒林列传.html">121 儒林列传</a>
+            <p>儒林列传</p>
+        </li>
+        <li>
+            <a href="chapters/122_酷吏列传.html">122 酷吏列传</a>
+            <p>酷吏列传</p>
+        </li>
+        <li>
+            <a href="chapters/123_大宛列传.html">123 大宛列传</a>
+            <p>大宛列传</p>
+        </li>
+        <li>
+            <a href="chapters/124_游侠列传.html">124 游侠列传</a>
+            <p>游侠列传</p>
+        </li>
+        <li>
+            <a href="chapters/125_佞幸列传.html">125 佞幸列传</a>
+            <p>佞幸列传</p>
+        </li>
+        <li>
+            <a href="chapters/126_滑稽列传.html">126 滑稽列传</a>
+            <p>滑稽列传</p>
+        </li>
+        <li>
+            <a href="chapters/127_日者列传.html">127 日者列传</a>
+            <p>日者列传</p>
+        </li>
+        <li>
+            <a href="chapters/128_龟策列传.html">128 龟策列传</a>
+            <p>龟策列传</p>
+        </li>
+        <li>
+            <a href="chapters/129_货殖列传.html">129 货殖列传</a>
+            <p>货殖列传</p>
+        </li>
+        <li>
+            <a href="chapters/130_太史公自序.html">130 太史公自序</a>
+            <p>130_太史公自序</p>
+        </li>
+    </ul>
+
+    <hr>
+
+    <footer style="text-align: center; color: #666; margin-top: 40px;">
+        <p>史记知识库 | 命名实体标注版</p>
     </footer>
 </body>
 </html>

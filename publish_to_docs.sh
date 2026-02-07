@@ -1,5 +1,5 @@
 #!/bin/bash
-# 一键发布脚本：从 chapter_md 同步到 docs 目录
+# 一键发布脚本：生成HTML并发布到 GitHub Pages
 # 用法: ./publish_to_docs.sh
 
 set -e  # 遇到错误立即退出
@@ -35,12 +35,26 @@ cp docs/css/chapter-nav.css docs/css/ 2>/dev/null || echo "   chapter-nav.css �
 echo "3. 复制 JavaScript 文件..."
 cp docs/js/purple-numbers.js docs/js/ 2>/dev/null || echo "   purple-numbers.js 已存在"
 
-# 复制 HTML 文件
-echo "4. 复制章节 HTML 文件..."
-cp chapter_md/*.tagged.html docs/chapters/
+# 生成所有章节HTML（带 .tagged.html 后缀）
+echo "4. 生成所有章节HTML文件..."
+python generate_all_chapters.py
+
+# 在 docs/chapters/ 中重命名文件：移除 .tagged 后缀
+echo "5. 移除文件名中的 .tagged 后缀..."
+cd docs/chapters
+renamed_count=0
+for file in *.tagged.html; do
+    if [ -f "$file" ]; then
+        newname="${file/.tagged.html/.html}"
+        mv "$file" "$newname"
+        renamed_count=$((renamed_count + 1))
+    fi
+done
+echo "   已重命名 $renamed_count 个文件"
+cd ../..
 
 # 修复 HTML 文件中的 CSS 路径和原文链接路径
-echo "5. 修复 CSS 引用路径和原文链接路径..."
+echo "6. 修复 HTML 文件中的路径引用..."
 cd docs/chapters
 for file in *.html; do
     # 将任何绝对路径或相对路径改为标准的相对路径
@@ -56,9 +70,16 @@ for file in *.html; do
 done
 cd ../..
 
+# 更新索引页面中的链接（移除 .tagged 后缀）
+echo "7. 更新索引页面中的链接..."
+if [ -f "docs/index.html" ]; then
+    sed -i 's|\.tagged\.html|.html|g' docs/index.html
+    echo "   已更新 index.html 中的章节链接"
+fi
+
 # 确保 .nojekyll 文件存在
 if [ ! -f "docs/.nojekyll" ]; then
-    echo "6. 创建 .nojekyll 文件..."
+    echo "8. 创建 .nojekyll 文件..."
     touch docs/.nojekyll
 fi
 
@@ -69,7 +90,8 @@ echo ""
 echo "=========================================="
 echo "  发布完成！"
 echo "=========================================="
-echo "已复制 $html_count 个 HTML 文件到 docs/chapters/"
+echo "已生成并处理 $html_count 个 HTML 文件"
+echo "所有文件已移除 .tagged 后缀"
 echo "CSS 文件已更新到 docs/css/"
 echo "JS 文件已更新到 docs/js/"
 echo ""
