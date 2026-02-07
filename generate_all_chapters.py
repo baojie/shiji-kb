@@ -242,6 +242,34 @@ def generate_all_chapters():
     print("生成索引页面...")
     generate_index_html(chapters)
 
+    # 运行HTML Linter检查生成的文件
+    print("\n" + "=" * 60)
+    print("运行质量检查...")
+    print("=" * 60)
+
+    import subprocess
+    try:
+        result = subprocess.run(
+            ['python3', 'lint_html.py', 'docs/chapters/'],
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+
+        # 显示检查结果摘要
+        if result.returncode == 0:
+            print("✅ HTML质量检查通过")
+        else:
+            print("⚠️  HTML质量检查发现问题，详细信息：")
+            print(result.stdout)
+
+    except subprocess.TimeoutExpired:
+        print("⚠️  HTML质量检查超时")
+    except FileNotFoundError:
+        print("ℹ️  跳过质量检查（lint_html.py未找到）")
+    except Exception as e:
+        print(f"ℹ️  质量检查遇到问题: {e}")
+
     print("\n" + "=" * 60)
     print("全部完成！")
 

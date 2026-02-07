@@ -99,6 +99,51 @@ echo "所有文件已移除 .tagged 后缀"
 echo "CSS 文件已更新到 docs/css/"
 echo "JS 文件已更新到 docs/js/"
 echo ""
+
+# 运行质量检查
+echo "=========================================="
+echo "  运行质量检查"
+echo "=========================================="
+echo ""
+
+# 检查HTML文件
+echo "8. 检查生成的HTML文件..."
+if [ -f "lint_html.py" ]; then
+    python3 lint_html.py docs/chapters/ > /tmp/lint_html_output.txt 2>&1
+    lint_exit_code=$?
+
+    if [ $lint_exit_code -eq 0 ]; then
+        echo "   ✅ HTML质量检查通过"
+    else
+        echo "   ⚠️  HTML质量检查发现问题"
+        echo "   详细信息见: /tmp/lint_html_output.txt"
+        # 显示错误摘要
+        grep -E "^(❌|⚠️|总计:)" /tmp/lint_html_output.txt | head -20
+    fi
+else
+    echo "   ℹ️  跳过HTML检查（lint_html.py未找到）"
+fi
+
+# 检查Index页面
+echo "9. 检查index.html..."
+if [ -f "lint_html.py" ] && [ -f "docs/index.html" ]; then
+    python3 lint_html.py docs/index.html > /tmp/lint_index_output.txt 2>&1
+    index_lint_exit_code=$?
+
+    if [ $index_lint_exit_code -eq 0 ]; then
+        echo "   ✅ Index页面检查通过"
+    else
+        echo "   ⚠️  Index页面有问题"
+        grep -E "^(❌|⚠️)" /tmp/lint_index_output.txt | head -10
+    fi
+fi
+
+echo ""
+echo "=========================================="
+echo "  质量检查完成"
+echo "=========================================="
+echo ""
+
 echo "下一步："
 echo "  git add docs/"
 echo "  git commit -m \"Update GitHub Pages content\""
