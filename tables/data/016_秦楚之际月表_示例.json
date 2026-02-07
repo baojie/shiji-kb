@@ -1,0 +1,300 @@
+{
+  "table_info": {
+    "id": "016",
+    "title": "秦楚之际月表",
+    "type": "chronological_table",
+    "time_range": {
+      "start": {"year": -209, "month": 7, "era": "秦二世元年"},
+      "end": {"year": -202, "month": 10, "era": "汉高祖五年"}
+    },
+    "dimensions": ["时间", "势力/国家", "统治者", "重大事件"],
+    "source_chapters": [
+      "006_秦始皇本纪",
+      "007_项羽本纪",
+      "008_高祖本纪"
+    ]
+  },
+
+  "commentary": {
+    "author": "太史公",
+    "text": "初作难，发於陈涉；虐戾灭秦，自项氏；拨乱诛暴，平定海内，卒践帝祚，成於汉家。五年之间，号令三嬗。"
+  },
+
+  "timeline_data": [
+    {
+      "date": {
+        "year": -209,
+        "month": 7,
+        "era": "秦二世元年七月"
+      },
+      "entities": {
+        "秦": {
+          "ruler": {
+            "name": "胡亥",
+            "title": "二世皇帝",
+            "reign_name": "秦二世"
+          },
+          "events": [
+            {
+              "type": "起义",
+              "description": "陈胜、吴广起兵大泽乡",
+              "location": "大泽乡",
+              "participants": ["陈胜", "吴广"],
+              "significance": "秦末农民起义开始",
+              "source_ref": "006_秦始皇本纪#[XX]"
+            }
+          ],
+          "capital": "咸阳"
+        }
+      }
+    },
+    {
+      "date": {
+        "year": -209,
+        "month": 9,
+        "era": "秦二世元年九月"
+      },
+      "entities": {
+        "秦": {
+          "ruler": {
+            "name": "胡亥",
+            "title": "二世皇帝"
+          },
+          "events": [
+            {
+              "type": "镇压",
+              "description": "章邯击败周文，周文自杀",
+              "participants": ["章邯", "周文"],
+              "location": "曹阳"
+            }
+          ]
+        },
+        "陈": {
+          "ruler": {
+            "name": "陈胜",
+            "title": "陈王",
+            "regime": "张楚"
+          },
+          "events": [
+            {
+              "type": "建国",
+              "description": "陈胜称王，国号张楚",
+              "location": "陈",
+              "significance": "第一个反秦政权建立"
+            }
+          ],
+          "capital": "陈"
+        },
+        "楚": {
+          "ruler": {
+            "name": "项梁",
+            "title": "武信君"
+          },
+          "events": [
+            {
+              "type": "起兵",
+              "description": "项梁、项羽起兵会稽",
+              "participants": ["项梁", "项羽"],
+              "location": "会稽"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "date": {
+        "year": -208,
+        "month": 12,
+        "era": "秦二世二年十二月"
+      },
+      "entities": {
+        "陈": {
+          "events": [
+            {
+              "type": "灭亡",
+              "description": "陈胜被车夫庄贾杀害，张楚政权覆灭",
+              "participants": ["陈胜", "庄贾"],
+              "location": "下城父",
+              "significance": "第一个反秦政权灭亡，历时约半年",
+              "source_ref": "048_陈涉世家"
+            }
+          ],
+          "status": "已灭亡"
+        },
+        "楚": {
+          "ruler": {
+            "name": "项梁",
+            "title": "武信君"
+          },
+          "events": [
+            {
+              "type": "立君",
+              "description": "项梁立楚怀王孙心为楚王",
+              "participants": ["项梁", "熊心"],
+              "location": "盱台",
+              "significance": "名义上恢复楚国"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "date": {
+        "year": -207,
+        "month": 10,
+        "era": "秦二世三年十月"
+      },
+      "entities": {
+        "秦": {
+          "ruler": {
+            "name": "子婴",
+            "title": "秦王",
+            "note": "二世已被赵高所杀，子婴降为王"
+          },
+          "events": [
+            {
+              "type": "政变",
+              "description": "赵高杀二世，立子婴为秦王",
+              "participants": ["赵高", "胡亥", "子婴"]
+            }
+          ]
+        },
+        "楚": {
+          "events": [
+            {
+              "type": "战役",
+              "description": "项羽巨鹿之战大破秦军",
+              "participants": ["项羽", "章邯", "王离"],
+              "location": "巨鹿",
+              "significance": "秦军主力被歼，项羽成为诸侯上将军",
+              "source_ref": "007_项羽本纪"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "date": {
+        "year": -206,
+        "month": 10,
+        "era": "汉元年十月"
+      },
+      "entities": {
+        "秦": {
+          "events": [
+            {
+              "type": "灭亡",
+              "description": "刘邦入咸阳，子婴降，秦朝灭亡",
+              "participants": ["刘邦", "子婴"],
+              "location": "咸阳",
+              "significance": "秦朝覆灭（前221-前206，历15年）",
+              "source_ref": "008_高祖本纪"
+            }
+          ],
+          "status": "已灭亡"
+        },
+        "汉": {
+          "ruler": {
+            "name": "刘邦",
+            "title": "汉王"
+          },
+          "events": [
+            {
+              "type": "入关",
+              "description": "刘邦先入关中，约法三章",
+              "location": "咸阳",
+              "significance": "约法三章，废除秦苛法"
+            }
+          ],
+          "capital": "咸阳（暂）"
+        },
+        "西楚": {
+          "ruler": {
+            "name": "项羽",
+            "title": "西楚霸王"
+          },
+          "events": [
+            {
+              "type": "封王",
+              "description": "项羽分封十八路诸侯",
+              "location": "戏下",
+              "significance": "楚汉格局形成",
+              "note": "刘邦被封为汉王，都南郑"
+            }
+          ],
+          "capital": "彭城"
+        }
+      }
+    },
+    {
+      "date": {
+        "year": -202,
+        "month": 12,
+        "era": "汉五年十二月"
+      },
+      "entities": {
+        "汉": {
+          "ruler": {
+            "name": "刘邦",
+            "title": "汉王 → 皇帝"
+          },
+          "events": [
+            {
+              "type": "称帝",
+              "description": "刘邦称帝，建立汉朝",
+              "location": "定陶",
+              "significance": "汉朝建立（前202-220，西汉前202-8）",
+              "source_ref": "008_高祖本纪"
+            }
+          ],
+          "capital": "洛阳（待迁长安）"
+        },
+        "西楚": {
+          "events": [
+            {
+              "type": "灭亡",
+              "description": "项羽垓下兵败，乌江自刎",
+              "participants": ["项羽"],
+              "location": "乌江",
+              "significance": "楚汉之争结束",
+              "source_ref": "007_项羽本纪"
+            }
+          ],
+          "status": "已灭亡"
+        }
+      }
+    }
+  ],
+
+  "statistics": {
+    "duration_months": 63,
+    "total_entities": 12,
+    "major_battles": 8,
+    "regime_changes": 6,
+    "key_figures": [
+      "陈胜", "吴广", "项梁", "项羽", "刘邦",
+      "章邯", "胡亥", "赵高", "子婴", "范增"
+    ]
+  },
+
+  "cross_references": {
+    "related_tables": [
+      "017_汉兴以来诸侯王年表",
+      "018_高祖功臣侯者年表"
+    ],
+    "related_chapters": [
+      "006_秦始皇本纪",
+      "007_项羽本纪",
+      "008_高祖本纪",
+      "048_陈涉世家"
+    ]
+  },
+
+  "metadata": {
+    "created_date": "2026-02-08",
+    "data_source": "史记原文 + 中华书局标点本",
+    "coverage": "示例数据（仅6个时间点）",
+    "complete": false,
+    "note": "完整版本应包含约60-80个月度条目"
+  }
+}
