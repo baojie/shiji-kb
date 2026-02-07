@@ -53,15 +53,15 @@
 | 🐉 神话 | 68 | 黄帝、女娲、禹 |
 | 🌿 动植物 | 104 | 龙、凤、桑 |
 
-**详情参见**：[vocabularies/README.md](vocabularies/README.md)
+**详情参见**：[kg/vocabularies/README.md](kg/vocabularies/README.md)
 
 #### 2. 研究方法体系
 
 建立了完整的数字人文研究方法框架：
 
-- 📖 [研究方法总则](研究方法总则.md)：综合方法论
-- 📋 [高级分析计划](史记高级分析计划.md)：10大分析方向
-- 📊 [统计分析报告](史记统计分析.md)：全书统计数据
+- 📖 [研究方法总则](doc/研究方法总则.md)：综合方法论
+- 📋 [高级分析计划](doc/史记高级分析计划.md)：10大分析方向
+- 📊 [统计分析报告](doc/史记统计分析.md)：全书统计数据
 
 #### 3. 分析工具
 
@@ -75,37 +75,61 @@
 ```
 shiji-kb/
 ├── README.md                      # 项目说明
-├── 研究方法总则.md                 # 研究方法体系
-├── 史记高级分析计划.md             # 高级分析方案
-├── 史记统计分析.md                 # 统计数据报告
-├── 史记编年表.md                   # 历史编年表
-├── game_design.md                 # 游戏设计文档
+├── TODO.md                        # 任务清单
 │
-├── docs/                          # 原始文本与网页
-│   ├── original_text/            # 130篇原始文本
-│   │   ├── 001_五帝本纪.txt
-│   │   ├── 002_夏本纪.txt
-│   │   └── ...
-│   └── index.html                # GitHub Pages首页
+├── docs/                          # 网站与原始文本
+│   ├── index.html                # GitHub Pages首页
+│   ├── chapters/                 # HTML格式章节
+│   └── original_text/            # 130篇原始文本
 │
-├── chapter_md/                    # 标注后的markdown文件
-│   ├── 001_五帝本纪.tagged.md
+├── chapter_md/                    # 标注后的Markdown文件
+│   ├── 001_五帝本纪.tagged.md   # 已标注
 │   ├── 002_夏本纪.tagged.md
-│   └── ...                       # 52个已完成
+│   └── ...                       # 99/130已完成
 │
-├── vocabularies/                  # 实体分类词表
-│   ├── README.md                 # 词表索引
-│   ├── 01_人名词表.md
-│   ├── 02_地名词表.md
-│   └── ...                       # 11个词表
+├── kg/                           # 知识图谱数据
+│   ├── README.md                 # 知识图谱说明
+│   ├── vocabularies/             # 实体分类词表（11类）
+│   ├── relations/                # 人物关系网络
+│   ├── genealogy/                # 帝王家谱
+│   ├── kg_build_vocabularies.py      # 词表生成脚本
+│   ├── kg_extract_all_relations.py   # 关系提取脚本
+│   ├── kg_extract_family_relations.py
+│   ├── kg_extract_imperial_genealogy.py
+│   └── kg_extract_flora_fauna.py
 │
-├── scripts/                       # 处理脚本
-│   ├── process_chapters_*.py    # 批量处理脚本
+├── doc/                          # 技术文档
+│   ├── 研究方法总则.md            # 研究方法体系
+│   ├── 史记高级分析计划.md        # 高级分析方案
+│   ├── 史记统计分析.md            # 统计数据报告
+│   ├── ENTITY_TAGGING_SCHEME.md  # 实体标注规范
+│   ├── PARAGRAPH_NUMBERING_SUMMARY.md
+│   └── GITHUB_PAGES_SETUP.md
+│
+├── game/                         # 史记争霸游戏
+│   ├── index.html               # 游戏入口
+│   ├── game.js                  # 游戏逻辑
+│   ├── styles.css               # 游戏样式
+│   └── game_design.md           # 设计文档
+│
+├── scripts/                      # 通用工具脚本
+│   ├── validate_tagging.py      # 标注验证
+│   ├── convert_quotes.py        # 引号转换
 │   └── ...
 │
-├── resources/                     # 资源文件
-├── game/                          # 游戏相关文件
-└── build_vocabularies.py          # 词表生成工具
+├── temp/                         # 历史开发文件
+│   ├── README.md                # 说明文档
+│   ├── batch_*.py               # 批处理脚本
+│   └── ...                      # 历史工具存档
+│
+├── resources/                    # 资源文件
+│
+├── render_shiji_html.py         # 核心：Markdown→HTML
+├── generate_all_chapters.py     # 批量生成HTML
+├── extract_sections.py          # 章节信息提取
+├── update_index_with_sections.py # 索引更新
+├── fix_quote_issues.py          # 引号修复
+└── add_section_ids_to_html.py   # 添加锚点
 ```
 
 ---
@@ -166,7 +190,7 @@ shiji-kb/
 - 相关性分析：篇幅与重要性、时空关系
 - 聚类与回归：人物分群、特征预测
 
-**详细方法论**参见：[研究方法总则.md](研究方法总则.md)
+**详细方法论**参见：[研究方法总则.md](doc/研究方法总则.md)
 
 ---
 
@@ -220,13 +244,23 @@ pip install -r requirements.txt
 ### 3. 生成词表
 
 ```bash
-python build_vocabularies.py
+python kg/kg_build_vocabularies.py
 ```
 
-### 4. 查看结果
+### 4. 生成HTML
+
+```bash
+# 生成单个章节
+python render_shiji_html.py chapter_md/001_五帝本纪.tagged.md
+
+# 批量生成所有章节
+python generate_all_chapters.py
+```
+
+### 5. 查看结果
 
 - **在线访问**：https://baojie.github.io/shiji-kb
-- **本地查看**：打开 `vocabularies/README.md`
+- **本地查看**：打开 `kg/vocabularies/README.md`
 
 ---
 
@@ -327,7 +361,7 @@ python build_vocabularies.py
 - [ ] 撰写学术论文
 - [ ] 发布开源数据集
 
-**详细计划**参见：[史记高级分析计划.md](史记高级分析计划.md)
+**详细计划**参见：[史记高级分析计划.md](doc/史记高级分析计划.md)
 
 ---
 
