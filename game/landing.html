@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>史记争霸 - 历史策略卡牌游戏</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'KaiTi', '楷体', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #f0e6d2;
+            min-height: 100vh;
+        }
+        
+        #game-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 游戏标题 */
+        .game-header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(to bottom, rgba(139, 69, 19, 0.3), transparent);
+            border-bottom: 2px solid #8b4513;
+            margin-bottom: 30px;
+        }
+        
+        .game-header h1 {
+            font-size: 3em;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+            letter-spacing: 8px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #d4af37;
+            font-style: italic;
+        }
+        
+        /* 消息提示 */
+        .message-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+            border: 2px solid #d4af37;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            max-width: 400px;
+        }
+        
+        .message-toast.show {
+            transform: translateX(0);
+        }
+        
+        .message-toast .message-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        /* 屏幕切换 */
+        .screen {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .screen.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 主菜单 */
+        .menu-content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .menu-content h2 {
+            font-size: 2em;
+            color: #ffd700;
+            margin-bottom: 50px;
+        }
+        
+        .menu-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .menu-btn {
+            background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+            border: 2px solid #d4af37;
+            padding: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: #f0e6d2;
+        }
+        
+        .menu-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            border-color: #ffd700;
+        }
+        
+        .menu-btn.primary {
+            background: linear-gradient(135deg, #b8860b 0%, #8b6914 100%);
+        }
+        
+        .btn-icon {
+            font-size: 3em;
+        }
+        
+        .btn-text {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .btn-desc {
+            font-size: 0.9em;
+            color: #d4af37;
+        }
+        
+        /* 加载提示 */
+        .loading {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .loading h2 {
+            color: #ffd700;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #654321;
+            border-top-color: #ffd700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <header class="game-header">
+            <h1>史记争霸</h1>
+            <p class="subtitle">以史为鉴，运筹帷幄</p>
+        </header>
+        
+        <div id="main-menu" class="screen active">
+            <div class="menu-content">
+                <h2>选择游戏模式</h2>
+                <div class="menu-buttons">
+                    <button class="menu-btn primary" onclick="window.location.href='https://shiji-game.netlify.app'">
+                        <span class="btn-icon">🎮</span>
+                        <span class="btn-text">开始游戏</span>
+                        <span class="btn-desc">访问完整版游戏</span>
+                    </button>
+                    <button class="menu-btn" onclick="showInfo()">
+                        <span class="btn-icon">📖</span>
+                        <span class="btn-text">游戏介绍</span>
+                        <span class="btn-desc">了解游戏特色</span>
+                    </button>
+                    <button class="menu-btn" onclick="showUpdates()">
+                        <span class="btn-icon">🆕</span>
+                        <span class="btn-text">更新日志</span>
+                        <span class="btn-desc">查看最新功能</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="loading" class="screen">
+            <div class="loading">
+                <h2>正在加载游戏...</h2>
+                <div class="spinner"></div>
+                <p style="margin-top: 20px; color: #d4af37;">请稍候，精彩即将呈现</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="message-toast" class="message-toast">
+        <div class="message-text"></div>
+    </div>
+    
+    <script>
+        function showMessage(text) {
+            const toast = document.getElementById('message-toast');
+            const textEl = toast.querySelector('.message-text');
+            textEl.textContent = text;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+        
+        function showInfo() {
+            showMessage('《史记争霸》是一款基于司马迁《史记》的历史策略卡牌游戏，包含15个技能卡牌和2个完整章节！');
+        }
+        
+        function showUpdates() {
+            showMessage('v0.2版本：新增7个技能、2个完整章节、音效系统和优化动画！');
+        }
+    </script>
+</body>
+</html>
