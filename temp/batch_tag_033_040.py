@@ -33,7 +33,7 @@ def create_tagged_template(chapter_num, title, original_text):
 
     # 基础模板
     output = f"# {chapter_num} {title}\n\n"
-    output += f"## [0] 标题\n{title}\n\n"
+    output += f"## 标题\n{title}\n\n"
 
     # 分段处理原文
     lines = original_text.strip().split('\n')

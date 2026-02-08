@@ -172,7 +172,7 @@ def process_chapter(chapter_id, chapter_title):
 
     # 3. 生成输出
     output = f"# {chapter_id.split('_')[0]} {chapter_title}\n\n"
-    output += f"## [0] 标题\n{chapter_title}\n\n"
+    output += f"## 标题\n{chapter_title}\n\n"
     output += tagged_content
 
     # 保存结果

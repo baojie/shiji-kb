@@ -57,7 +57,7 @@ def simple_tag_chapter(input_file, output_file):
     text_lines = lines[1:]
 
     # 构建标注的markdown
-    tagged_content = f"# {title}\n\n## [0] 标题\n{title}\n\n"
+    tagged_content = f"# {title}\n\n## 标题\n{title}\n\n"
 
     para_num = 1
     for i, line in enumerate(text_lines):

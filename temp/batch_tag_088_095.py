@@ -116,7 +116,7 @@ def process_chapter(input_file, output_file):
 
     output_lines = []
     output_lines.append(f"# {chapter_num} {title}\n\n")
-    output_lines.append(f"## [0] 标题\n")
+    output_lines.append(f"## 标题\n")
     output_lines.append(f"{tag_entities(title)}\n\n")
 
     # 处理正文
