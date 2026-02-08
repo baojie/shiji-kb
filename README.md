@@ -81,6 +81,7 @@
 - 📖 [研究方法总则](doc/研究方法总则.md)：综合方法论
 - 📋 [高级分析计划](doc/史记高级分析计划.md)：10大分析方向
 - 📊 [统计分析报告](doc/史记统计分析.md)：全书统计数据
+- 📐 [标注格式规范](doc/FORMAT_SPECIFICATION.md)：含Lint规则
 
 #### 3. 分析工具
 
@@ -220,11 +221,15 @@
 ```
 shiji-kb/
 ├── README.md                      # 项目说明
-├── TODO.md                        # 任务清单
+├── CHANGELOG.md                   # 更新日志
+├── render_shiji_html.py           # 核心：Markdown→HTML渲染器
+├── generate_all_chapters.py       # 批量生成全部130章HTML
+├── sections_data.json             # 章节小节数据
 │
-├── docs/                          # 网站与原始文本
-│   ├── index.html                # GitHub Pages首页
-│   ├── chapters/                 # HTML格式章节
+├── docs/                          # GitHub Pages网站
+│   ├── index.html                # 首页（瀑布流卡片布局）
+│   ├── css/shiji-styles.css      # 样式表
+│   ├── chapters/                 # HTML格式章节（130篇）
 │   └── original_text/            # 130篇原始文本
 │
 ├── chapter_md/                    # 标注后的Markdown文件
@@ -243,13 +248,35 @@ shiji-kb/
 │   ├── kg_extract_imperial_genealogy.py
 │   └── kg_extract_flora_fauna.py
 │
-├── doc/                          # 技术文档
+├── doc/                          # 项目文档
+│   ├── TODO.md                   # 任务清单
+│   ├── FORMAT_SPECIFICATION.md   # 标注格式规范（含Lint规则）
+│   ├── ENTITY_TAGGING_SCHEME.md  # 实体标注规范
+│   ├── WORKFLOW.md               # 工作流程
+│   ├── LINT_GUIDE.md             # Lint使用指南
+│   ├── LINTER_COVERAGE.md        # Linter覆盖率报告
+│   ├── PARAGRAPH_NUMBERING_SUMMARY.md
+│   ├── GITHUB_PAGES_SETUP.md
+│   ├── PURPLE_NUMBERS.md         # Purple Numbers系统说明
 │   ├── 研究方法总则.md            # 研究方法体系
 │   ├── 史记高级分析计划.md        # 高级分析方案
 │   ├── 史记统计分析.md            # 统计数据报告
-│   ├── ENTITY_TAGGING_SCHEME.md  # 实体标注规范
-│   ├── PARAGRAPH_NUMBERING_SUMMARY.md
-│   └── GITHUB_PAGES_SETUP.md
+│   └── ...                       # 其他技术文档
+│
+├── scripts/                      # 工具脚本
+│   ├── lint_markdown.py          # Markdown标注格式检查
+│   ├── lint_html.py              # HTML输出格式检查
+│   ├── validate_tagging.py       # 标注验证
+│   ├── extract_all_sections.py   # 批量提取章节小节
+│   ├── extract_sections.py       # 单章小节提取
+│   ├── update_index_with_sections.py # 更新索引页小节链接
+│   ├── add_section_ids_to_html.py    # 为HTML添加锚点ID
+│   ├── fix_quote_issues.py       # 引号格式修复
+│   ├── fix_verse_format.py       # 韵文格式修复
+│   ├── convert_quotes.py         # 引号转换
+│   ├── analyze_word_frequency.py # 词频统计分析
+│   ├── generate_auto_sections.py # 自动生成小节划分
+│   └── ...                       # 其他辅助脚本
 │
 ├── game/                         # 史记争霸游戏
 │   ├── index.html               # 游戏入口
@@ -257,24 +284,9 @@ shiji-kb/
 │   ├── styles.css               # 游戏样式
 │   └── game_design.md           # 设计文档
 │
-├── scripts/                      # 通用工具脚本
-│   ├── validate_tagging.py      # 标注验证
-│   ├── convert_quotes.py        # 引号转换
-│   └── ...
+├── temp/                         # 历史开发文件存档
 │
-├── temp/                         # 历史开发文件
-│   ├── README.md                # 说明文档
-│   ├── batch_*.py               # 批处理脚本
-│   └── ...                      # 历史工具存档
-│
-├── resources/                    # 资源文件
-│
-├── render_shiji_html.py         # 核心：Markdown→HTML
-├── generate_all_chapters.py     # 批量生成HTML
-├── extract_sections.py          # 章节信息提取
-├── update_index_with_sections.py # 索引更新
-├── fix_quote_issues.py          # 引号修复
-└── add_section_ids_to_html.py   # 添加锚点
+└── resources/                    # 资源文件
 ```
 
 ---
@@ -550,10 +562,10 @@ python generate_all_chapters.py
 ### 最新进展 (2026-02-08)
 
 - ✅ **完成全部130章节标注**（本纪12、表10、书8、世家30、列传70）
-- ✅ **完成全部130章节HTML生成**
+- ✅ **完成全部130章节HTML生成**，含小节划分和锚点导航
+- 🔧 **HTML渲染修复**：嵌套标注符号处理、韵文格式、对话缩进
+- 📁 **项目文件结构整理**：工具脚本统一到scripts/，文档统一到doc/
 - 🎮 **史记争霸游戏**初始版本上线
-- 📁 **项目结构重构**（kg/, doc/, temp/, private/目录）
-- 🔒 **隐私保护**（移除所有个人路径信息）
 - 📊 **知识图谱系统**完善（5个提取脚本）
 
 ---

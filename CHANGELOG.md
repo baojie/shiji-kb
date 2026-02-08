@@ -9,10 +9,50 @@
 ## [Unreleased]
 
 ### 计划中
-- 完成剩余31章节标注（当前99/130）
+
 - 实施10大高级分析
 - 开发交互式可视化平台
 - 构建Neo4j知识图谱数据库
+- index页面展开小节目录、章节卡片高度可变
+
+---
+
+## [项目文件结构整理](https://github.com/baojie/shiji-kb/commit/0de6edc) - 2026-02-08
+
+### 更改 (Changed)
+
+- 📁 **工具脚本统一到 `scripts/` 目录**
+  - 移入lint_markdown.py、lint_html.py、fix_verse_format.py等11个工具脚本
+  - 根目录仅保留 render_shiji_html.py 和 generate_all_chapters.py 两个核心脚本
+- 📝 **文档统一到 `doc/` 目录**
+  - 移入CHANGELOG.md、TODO.md、FORMAT_SPECIFICATION.md、WORKFLOW.md等
+  - 移入小节划分完成报告.md等中文文档
+
+---
+
+## [HTML渲染修复](https://github.com/baojie/shiji-kb/commit/fbf6b4b) - 2026-02-08
+
+### 修复 (Fixed)
+
+- 🐛 **标注符号泄露修复**
+  - 修复嵌套实体标注时 `$`、`@` 等标记符号泄露到HTML的问题
+  - 调整ENTITY_PATTERNS处理顺序：外层标记（`**`、`*`）先于内层标记（`@`最后）
+  - 添加安全网清理：最终移除所有残留标注符号
+- 🎵 **韵文格式修复**
+  - 修复秦始皇本纪等章节的韵文/诗歌格式（verse类）
+- 💬 **对话缩进**
+  - 为引语内容添加CSS缩进样式（`.quoted`类）
+
+---
+
+## [全部130章小节划分](https://github.com/baojie/shiji-kb/commit/98d97a3) - 2026-02-08
+
+### 新增 (Added)
+
+- 📑 **为全部130章完成有意义的小节划分**
+  - 每章按内容语义划分为多个小节
+  - 小节数据保存到 sections_data.json
+  - index页面各章卡片显示可点击的小节链接
 
 ---
 
@@ -186,7 +226,7 @@
 ## 贡献者
 
 - [@baojie](https://github.com/baojie) - 项目创建者和主要维护者
-- Claude Sonnet 4.5 - AI助手（标注工具开发、文档编写）
+- Claude Sonnet 4.5 / Opus 4.6 - AI助手（标注工具开发、文档编写）
 
 ---
 
