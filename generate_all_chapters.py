@@ -204,15 +204,15 @@ def generate_all_chapters():
 
         if i > 0:
             # 有上一章
-            prev_chapter = chapters[i-1].name.replace('.md', '.html')
+            prev_chapter = chapters[i-1].name.replace('.tagged.md', '.html').replace('.md', '.html')
 
         if i < len(chapters) - 1:
             # 有下一章
-            next_chapter = chapters[i+1].name.replace('.md', '.html')
+            next_chapter = chapters[i+1].name.replace('.tagged.md', '.html').replace('.md', '.html')
 
-        # 输入和输出文件路径
+        # 输入和输出文件路径（去掉 .tagged 以匹配 index.html 中的链接）
         input_file = chapter_path
-        output_file = output_dir / chapter.replace('.md', '.html')
+        output_file = output_dir / chapter.replace('.tagged.md', '.html').replace('.md', '.html')
 
         # 原文txt文件路径（相对于生成的HTML文件）
         # 从 docs/chapters/*.html 到 docs/original_text/*.txt

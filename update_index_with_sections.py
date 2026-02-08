@@ -11,8 +11,8 @@ def load_sections_data():
     with open('sections_data.json', 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def generate_section_links(chapter_name, sections_data, max_display=6):
-    """为一个章节生成小节链接的HTML"""
+def generate_section_links(chapter_name, sections_data):
+    """为一个章节生成小节链接的HTML，显示所有小节"""
     if chapter_name not in sections_data:
         return ""
 
@@ -20,21 +20,18 @@ def generate_section_links(chapter_name, sections_data, max_display=6):
     if not sections:
         return ""
 
-    # 过滤掉标题段落 [0]
-    sections = [s for s in sections if s['num'] != '0']
+    # 过滤掉无锚点和通用段落名的小节
+    sections = [s for s in sections
+                if s.get('anchor') and not s['title'].startswith('段落')]
 
-    # 限制显示的小节数量
-    display_sections = sections[:max_display]
-    has_more = len(sections) > max_display
+    if not sections:
+        return ""
 
     links = []
-    for section in display_sections:
-        # 生成链接
-        link = f'<a href="chapters/{chapter_name}.tagged.html#pn-{section["num"]}">[{section["num"]}] {section["title"]}</a>'
+    for section in sections:
+        anchor = section["anchor"]
+        link = f'<a href="chapters/{chapter_name}.html#pn-{anchor}">[{anchor}] {section["title"]}</a>'
         links.append(link)
-
-    if has_more:
-        links.append(f'<span class="more-sections">... 共{len(sections)}节</span>')
 
     html = '<div class="section-links">' + ' · '.join(links) + '</div>'
     return html
@@ -114,8 +111,9 @@ def update_index_html(sections_data):
     if old_stats_block:
         content = content.replace(old_stats_block.group(0), new_stats_style)
 
-    # 2. 添加小节链接的CSS样式
-    section_links_style = """
+    # 2. 添加小节链接的CSS样式（仅在尚未存在时添加）
+    if '.section-links {' not in content:
+        section_links_style = """
         .section-links {
             margin-top: 12px;
             padding-top: 10px;
@@ -140,28 +138,29 @@ def update_index_html(sections_data):
             font-style: italic;
         }
 """
+        # 在 footer 样式前插入
+        content = content.replace(
+            '        footer {',
+            section_links_style + '\n        footer {'
+        )
 
-    # 在 footer 样式前插入
-    content = content.replace(
-        '        footer {',
-        section_links_style + '\n        footer {'
-    )
+    # 3. 先移除已有的小节链接（避免重复）
+    content = re.sub(r'\s*<div class="section-links">.*?</div>', '', content)
 
-    # 3. 为每个章节卡片添加小节链接
-    # 匹配章节卡片的模式
+    # 4. 为每个章节卡片添加小节链接
     def add_section_links_to_card(match):
         card_html = match.group(0)
 
-        # 提取章节编号和名称
+        # 提取章节名称（兼容 .tagged.html 和 .html）
         chapter_match = re.search(
-            r'<span class="chapter-num">(\d+)</span>\s*<a href="chapters/(\d+_[^"]+)\.tagged\.html">',
+            r'<a href="chapters/(\d+_[^"]+?)(?:\.tagged)?\.html">',
             card_html
         )
 
         if not chapter_match:
             return card_html
 
-        chapter_name = chapter_match.group(2)
+        chapter_name = chapter_match.group(1)
 
         # 生成小节链接
         section_links_html = generate_section_links(chapter_name, sections_data)
@@ -178,9 +177,9 @@ def update_index_html(sections_data):
 
         return card_html
 
-    # 匹配所有的 chapter-card
+    # 匹配所有的 chapter-card（使用更精确的模式）
     content = re.sub(
-        r'<div class="chapter-card">.*?</div>\s*\n\s*</div>',
+        r'<div class="chapter-card">\s*<div class="chapter-title">.*?</div>\s*<div class="chapter-desc">.*?</div>\s*</div>',
         add_section_links_to_card,
         content,
         flags=re.DOTALL

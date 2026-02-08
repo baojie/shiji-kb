@@ -15,7 +15,7 @@ import json
 
 
 def extract_sections_from_chapter(md_file):
-    """从Markdown文件中提取小节标题"""
+    """从Markdown文件中提取小节标题，并记录每个小节起始段落的Purple Number"""
     try:
         with open(md_file, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -26,7 +26,8 @@ def extract_sections_from_chapter(md_file):
     sections = []
     lines = content.split('\n')
 
-    section_num = 0  # 自动编号计数器
+    # 待填充锚点的小节列表（可能有多个：一个##和它后面的###）
+    pending_sections = []
 
     for line_num, line in enumerate(lines, 1):
         line = line.strip()
@@ -35,54 +36,62 @@ def extract_sections_from_chapter(md_file):
         if line_num == 1 and line.startswith('# '):
             continue
 
-        # 格式1: ## [数字] 标题
+        # 检查是否是段落编号行 [N] 或 [N.N] 等
+        pn_match = re.match(r'^\[(\d+(?:\.\d+)*)\]', line)
+        if pn_match and pending_sections:
+            anchor = pn_match.group(1)
+            # 为所有等待锚点的小节填充
+            for ps in pending_sections:
+                if ps['anchor'] is None:
+                    ps['anchor'] = anchor
+            pending_sections = []
+
+        # 格式1: ## [数字] 标题 - 标题自带段落编号
         match_numbered = re.match(r'^## \[(\d+)\] (.+)$', line)
         if match_numbered:
             num = match_numbered.group(1)
             title = match_numbered.group(2)
-            # 移除实体标注符号
             title = clean_entity_tags(title)
-            sections.append({
-                'num': num,
+            section = {
+                'anchor': num,
                 'title': title,
                 'level': 2
-            })
+            }
+            sections.append(section)
+            pending_sections = []
             continue
 
         # 格式2: ## 标题（无编号）
         match_h2 = re.match(r'^## (.+)$', line)
         if match_h2:
             title = match_h2.group(1)
-            # 移除实体标注符号
             title = clean_entity_tags(title)
-            # 跳过某些特殊标题
             if should_skip_title(title):
                 continue
-            section_num += 1
-            sections.append({
-                'num': str(section_num),
+            section = {
+                'anchor': None,
                 'title': title,
                 'level': 2
-            })
+            }
+            sections.append(section)
+            pending_sections = [section]
             continue
 
         # 格式3: ### 标题（三级标题，作为子节）
         match_h3 = re.match(r'^### (.+)$', line)
         if match_h3:
             title = match_h3.group(1)
-            # 移除实体标注符号
             title = clean_entity_tags(title)
-            # 跳过某些特殊标题
             if should_skip_title(title):
                 continue
-            # 三级标题不单独编号，作为上一个二级标题的子节
-            if sections:  # 确保有父节
-                section_num += 0.1  # 使用小数表示子节
-                sections.append({
-                    'num': f"{int(section_num)}.{len([s for s in sections if s.get('level') == 3 and s['num'].startswith(f'{int(section_num)}.')])+ 1}",
+            if sections:
+                section = {
+                    'anchor': None,
                     'title': title,
                     'level': 3
-                })
+                }
+                sections.append(section)
+                pending_sections.append(section)
 
     return sections
 
@@ -161,11 +170,11 @@ def main():
         sections = extract_sections_from_chapter(tagged_file)
 
         if sections:
-            # 只保留二级标题（level=2）的小节用于导航
-            nav_sections = [s for s in sections if s.get('level', 2) == 2]
+            # 只保留二级标题（level=2）且有锚点的小节用于导航
+            nav_sections = [s for s in sections if s.get('level', 2) == 2 and s.get('anchor')]
             if nav_sections:
                 sections_data[chapter_name] = [
-                    {'num': s['num'], 'title': s['title']}
+                    {'anchor': s['anchor'], 'title': s['title']}
                     for s in nav_sections
                 ]
                 chapters_with_sections += 1

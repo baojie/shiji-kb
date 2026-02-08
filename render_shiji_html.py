@@ -27,23 +27,26 @@ import os
 from pathlib import Path
 
 # 实体类型映射
-# 注意：这些模式必须按照特定顺序应用，以避免相互干扰
-# 使用负向前瞻和负向后顾来避免匹配HTML标签内的字符
+# 注意：顺序至关重要！外层标记必须先于内层标记处理。
+# 人名 @..@ 最常作为内层标注（如 $@安国君@$、$太子@安国君@$），
+# 因此 @人名@ 放在最后，确保外层标记先转为<span>，内层再在其中匹配。
 # 重要：** 必须在 * 之前处理，以避免冲突
 # 排除 " 字符以避免匹配HTML属性
 ENTITY_PATTERNS = [
-    (r'@([^@<>"]+)@', r'<span class="person" title="人名">\1</span>'),      # 人名
+    # ** 和 * 必须最先处理：韵文中 **粗体** 常包含实体标注（如 **...^制度^...**）
+    (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),           # 加粗（必须在单*之前）
+    (r'\*([^*<>"]+)\*', r'<span class="artifact" title="器物/书名">\1</span>'),  # 器物/礼器/书名
+    # 实体标注：外层标记先于内层处理
+    (r'\$([^$<>"]+)\$', r'<span class="official" title="官职">\1</span>'),  # 官职（常包裹人名）
     (r'=([^=<>"]+)=', r'<span class="place" title="地名">\1</span>'),       # 地名
-    (r'\$([^$<>"]+)\$', r'<span class="official" title="官职">\1</span>'),  # 官职
     (r'%([^%<>"]+)%', r'<span class="time" title="时间">\1</span>'),        # 时间
     (r'&([^&<>"]+)&', r'<span class="dynasty" title="朝代/氏族">\1</span>'),     # 朝代
     (r'\^([^<>^"]+)\^', r'<span class="institution" title="制度">\1</span>'),  # 制度
     (r'~([^~<>"]+)~', r'<span class="tribe" title="族群">\1</span>'),       # 族群
     (r'🌿([^🌿<>"]+)🌿', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物
-    (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),           # 加粗（保留Markdown，必须在单*之前）
-    (r'\*([^*<>"]+)\*', r'<span class="artifact" title="器物/书名">\1</span>'),  # 器物/礼器/书名
     (r'!([^!<>"]+)!', r'<span class="astronomy" title="天文/历法">\1</span>'),   # 天文
     (r'\?([^?<>"]+)\?', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话
+    (r'@([^@<>"]+)@', r'<span class="person" title="人名">\1</span>'),      # 人名（最后处理，常为内层）
 ]
 
 # 引号内容模式（用于对话）
@@ -80,6 +83,15 @@ def convert_entities(text):
     # 再处理实体标记
     for pattern, replacement in ENTITY_PATTERNS:
         text = re.sub(pattern, replacement, text)
+
+    # 安全网：清理残留的标注符号
+    # 1. 紧邻<span>标签的裸字符（嵌套标注残留）
+    text = re.sub(r'[\$@\^~\*!?🌿](?=<span[\s>])', '', text)
+    text = re.sub(r'(?<=</span>)[\$@\^~\*!?🌿]', '', text)
+    # 2. 清除残留的 $ 和 @（源数据中未配对的标注符号）
+    #    这两个字符在古汉语中不出现，且不在生成的HTML属性中，可安全清除
+    #    注意：不能清除 % = & ，因为它们在HTML中有合法用途
+    text = text.replace('$', '').replace('@', '')
 
     # 最后处理段落编号（PN - Purple Numbers）
     # 将 [编号] 转换为可点击的锚点链接
