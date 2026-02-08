@@ -140,13 +140,20 @@ hr {
     margin: 40px 0;
 }
 
-/* 引用块 */
+/* 引用块（对话） - 缩进两个汉字 */
 blockquote {
-    border-left: 4px solid #9370DB;
-    margin: 20px 0;
-    padding: 10px 20px;
-    background-color: #faf8ff;
+    border: none;
+    margin: 0.2em 0;
+    padding: 0;
+    padding-left: 2em;
+    background: none;
     font-style: italic;
+}
+
+/* 长对话缩进 - 段内较长引号内容另起一行，缩进两个汉字 */
+.dialogue {
+    display: block;
+    padding-left: 2em;
 }
 
 /* 列表样式 - 古籍风格，去除项目符号，仅缩进 */

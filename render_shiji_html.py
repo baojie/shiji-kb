@@ -330,6 +330,22 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
     
     html_body = '\n'.join(html_lines)
 
+    # 后处理：长对话缩进 - 较长的引号内容另起一行，缩进两个汉字
+    # 短引号（<=15字）保持内联
+    def _indent_long_dialogue(m):
+        open_q = m.group(1)   # 开始引号
+        content = m.group(2)  # 对话内容
+        close_q = m.group(3)  # 结束引号
+        # 去掉HTML标签计算实际文本长度
+        plain = re.sub(r'<[^>]+>', '', content)
+        if len(plain) > 15:
+            return f'<span class="dialogue quoted">{open_q}{content}{close_q}</span>'
+        return m.group(0)
+    # 匹配各种引号格式的 quoted span
+    html_body = re.sub(
+        r'<span class="quoted">(["\u201c\u300c\u300e])(.+?)(["\u201d\u300d\u300f])</span>',
+        _indent_long_dialogue, html_body)
+
     # 后处理：展平嵌套的同类 span 标签
     # 例如: <span class="person"><span class="person">名字</span></span> -> <span class="person">名字</span>
     for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'artifact', 'astronomy', 'mythical', 'quoted']:
