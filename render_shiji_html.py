@@ -346,6 +346,45 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         r'<span class="quoted">(["\u201c\u300c\u300e])(.+?)(["\u201d\u300d\u300f])</span>',
         _indent_long_dialogue, html_body)
 
+    # 后处理：韵文自动分行
+    # 检测规整短句模式（如赞中的四字韵文），在句号后自动换行
+    # 保持为同一段落，仅插入 <br> 换行
+    def _auto_verse_linebreak(m):
+        content = m.group(1)
+        # 已有换行的段落不处理
+        if '<br>' in content:
+            return m.group(0)
+        # 提取纯文本（去掉HTML标签）
+        plain = re.sub(r'<[^>]+>', '', content)
+        # 去掉段落编号前缀
+        plain = re.sub(r'^\d+(?:\.\d+)*\s*', '', plain)
+        # 统计句末标点
+        endings = re.findall(r'[。！？]', plain)
+        if len(endings) < 3:
+            return m.group(0)
+        # 按句分割
+        sentences = re.split(r'[。！？]', plain)
+        sentences = [s.strip() for s in sentences if s.strip()]
+        if len(sentences) < 3:
+            return m.group(0)
+        # 平均句长须短（韵文特征）
+        avg_len = sum(len(s) for s in sentences) / len(sentences)
+        if avg_len > 12:
+            return m.group(0)
+        # 多数句子须含逗号（韵文: X，Y 对仗结构）
+        comma_count = sum(1 for s in sentences if '，' in s or ',' in s)
+        if comma_count < len(sentences) * 0.6:
+            return m.group(0)
+        # 多数句子须短（≤14字），排除夹杂长句的散文
+        short_count = sum(1 for s in sentences if len(s) <= 14)
+        if short_count < len(sentences) * 0.7:
+            return m.group(0)
+        # 确认为韵文：在每个句末标点后插入 <br>（最末除外）
+        new_content = re.sub(r'([。！？])(?=.)', r'\1<br>\n', content)
+        return f'<p>{new_content}</p>'
+
+    html_body = re.sub(r'<p>(.*?)</p>', _auto_verse_linebreak, html_body, flags=re.DOTALL)
+
     # 后处理：展平嵌套的同类 span 标签
     # 例如: <span class="person"><span class="person">名字</span></span> -> <span class="person">名字</span>
     for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'artifact', 'astronomy', 'mythical', 'quoted']:
