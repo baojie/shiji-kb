@@ -145,7 +145,23 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
     in_blockquote = False
     in_note = False
     in_list = False
-    
+    para_buffer = []  # 累积连续行，合并为同一段落
+
+    def flush_para():
+        """将累积的连续行合并为一个 <p>，用 <br> 连接"""
+        if para_buffer:
+            html_lines.append('<p>' + '<br>\n'.join(para_buffer) + '</p>')
+            para_buffer.clear()
+
+    def is_plain_text(line):
+        """判断行是否为普通文本（应累积为段落）"""
+        return (line.strip()
+                and not line.startswith('<h')
+                and not line.startswith('<hr')
+                and not line.startswith('<ul')
+                and not line.startswith('<ol')
+                and not line.startswith('<div'))
+
     for line in md_content.split('\n'):
         # 转换实体标记
         line = convert_entities(line)
@@ -154,6 +170,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         # 将空行作为当前 blockquote 或 note 内的空段落，而不是关闭容器，
         # 以便把相邻的引用/注记合并为一个容器，减少碎片化的 <p></p>。
         if re.match(r'^\s*>\s*$', line):
+            flush_para()
             if in_note:
                 html_lines.append('<p></p>')
                 continue
@@ -166,24 +183,33 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
         # 标题 - 为h1标题添加原文链接
         if line.startswith('# '):
+            flush_para()
             title_content = line[2:]
             if original_text_file:
                 line = f'<h1>{title_content} <a href="{original_text_file}" class="original-text-link">原文</a></h1>'
             else:
                 line = f'<h1>{title_content}</h1>'
         elif line.startswith('## '):
+            flush_para()
             line = f'<h2>{line[3:]}</h2>'
         elif line.startswith('### '):
+            flush_para()
             line = f'<h3>{line[4:]}</h3>'
         elif line.startswith('#### '):
+            flush_para()
             line = f'<h4>{line[5:]}</h4>'
-        
+        elif line.startswith('##### '):
+            flush_para()
+            line = f'<h5>{line[6:]}</h5>'
+
         # 分隔线
         elif line.strip() == '---':
+            flush_para()
             line = '<hr>'
-        
+
         # 引用块 或 NOTE 块
         elif line.startswith('> '):
+            flush_para()
             # NOTE 块语法:
             #   开始:  > [!NOTE] 或 > [!NOTE tag]
             #   显式结束: > [!ENDNOTE]
@@ -250,6 +276,8 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
                         html_lines.append('</ul>')
                         in_list = False
                     # 普通内容，添加 <br> 以保持诗歌格式
+                    # 去掉 [NOTE] 标记（非 [!NOTE] 格式的注释标签）
+                    content = re.sub(r'^\s*\[NOTE\]\s*', '', content)
                     if content.strip():  # 非空行
                         html_lines.append(content + '<br>')
                     else:
@@ -270,9 +298,10 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
                 in_list = False
             html_lines.append('</div>')
             in_note = False
-        
+
         # 列表
         elif line.strip().startswith('- '):
+            flush_para()
             if not in_list:
                 html_lines.append('<ul>')
                 in_list = True
@@ -280,15 +309,20 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         elif in_list and not line.strip().startswith('- '):
             html_lines.append('</ul>')
             in_list = False
-        
-        # 段落
-        # 注意：包含段落编号的行也应该被包裹成 <p> 标签
-        elif line.strip() and not line.startswith('<h') and not line.startswith('<hr') and not line.startswith('<ul') and not line.startswith('<ol') and not line.startswith('<div'):
-            line = f'<p>{line}</p>'
-        
+
+        # 段落：连续非空行合并为同一 <p>，用 <br> 连接
+        elif is_plain_text(line):
+            para_buffer.append(line)
+            continue
+
+        # 空行：结束当前段落
+        elif not line.strip():
+            flush_para()
+
         html_lines.append(line)
-    
+
     # 关闭未闭合的标签
+    flush_para()
     if in_blockquote:
         html_lines.append('</blockquote>')
     if in_list:
