@@ -17,16 +17,20 @@
 
 ---
 
-## [项目文件结构整理](https://github.com/baojie/shiji-kb/commit/0de6edc) - 2026-02-08
+## [项目文件结构整理](https://github.com/baojie/shiji-kb/commit/e5d8429) - 2026-02-08
 
 ### 更改 (Changed)
 
 - 📁 **工具脚本统一到 `scripts/` 目录**
-  - 移入lint_markdown.py、lint_html.py、fix_verse_format.py等11个工具脚本
+  - 移入lint_markdown.py、lint_html.py、fix_verse_format.py等18个工具脚本
   - 根目录仅保留 render_shiji_html.py 和 generate_all_chapters.py 两个核心脚本
 - 📝 **文档统一到 `doc/` 目录**
-  - 移入CHANGELOG.md、TODO.md、FORMAT_SPECIFICATION.md、WORKFLOW.md等
+  - 移入TODO.md、FORMAT_SPECIFICATION.md、WORKFLOW.md等技术文档
   - 移入小节划分完成报告.md等中文文档
+  - CHANGELOG.md保留在根目录
+- 📖 **README.md更新**
+  - 目录结构重写，反映scripts/和doc/新组织
+  - 更新最新进展和文档链接
 
 ---
 
@@ -197,6 +201,9 @@
 
 | Commit | 日期 | 已标注章节 | 完成度 | 里程碑 |
 |--------|------|-----------|--------|--------|
+| [e5d8429](https://github.com/baojie/shiji-kb/commit/e5d8429) | 2026-02-08 | 130/130 | 100% ✅ | 文件结构整理+文档更新 |
+| [fbf6b4b](https://github.com/baojie/shiji-kb/commit/fbf6b4b) | 2026-02-08 | 130/130 | 100% ✅ | HTML渲染修复 |
+| [98d97a3](https://github.com/baojie/shiji-kb/commit/98d97a3) | 2026-02-08 | 130/130 | 100% ✅ | 130章小节划分 |
 | [2f8f0ad](https://github.com/baojie/shiji-kb/commit/2f8f0ad) | 2026-02-08 | 130/130 | 100% ✅ | 项目结构重构 |
 | [863b6c3](https://github.com/baojie/shiji-kb/commit/863b6c3) | 2026-02-07 | 130/130 | 100% ✅ | 知识图谱系统 |
 | [02508b4](https://github.com/baojie/shiji-kb/commit/02508b4) | 2026-02-06 | 130/130 | 100% ✅ | HTML展示完善 |
