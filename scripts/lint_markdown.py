@@ -44,6 +44,13 @@ class MarkdownLinter:
             '标题/职位': r'\$([^$]+)\$'
         }
 
+        # 检查是否有任何实体标注
+        total_entity_count = 0
+        for pattern in entity_patterns.values():
+            total_entity_count += len(re.findall(pattern, self.content))
+        if total_entity_count == 0:
+            self.errors.append("文档中没有任何实体标注（@人名@、=地名= 等），请检查是否遗漏标注")
+
         for entity_type, pattern in entity_patterns.items():
             # 检查未闭合的标注
             if entity_type == '人名':

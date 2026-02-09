@@ -139,7 +139,73 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
     # 规范化段落编号：将行首类似 [23.a] 或 [23a] 的编号替换为仅数字的 [23]
     # 只在行首进行替换以减少误伤其他中括号用法
     md_content = re.sub(r'(?m)^\[(\d+)(?:\.[a-zA-Z]+|[a-zA-Z]+)\]', r'[\1]', md_content)
-    
+
+    # 预处理：将Markdown表格块转换为HTML
+    # 检测连续的 | ... | 行，转换为 <table class="shiji-table">
+    def _convert_md_tables(text):
+        """将Markdown表格语法转换为HTML表格"""
+        lines = text.split('\n')
+        result = []
+        i = 0
+        while i < len(lines):
+            # 检测表格起始行：以 | 开头
+            if lines[i].strip().startswith('|') and '|' in lines[i].strip()[1:]:
+                table_lines = []
+                while i < len(lines) and lines[i].strip().startswith('|'):
+                    table_lines.append(lines[i].strip())
+                    i += 1
+                # 至少需要2行（表头 + 分隔行）才构成表格
+                if len(table_lines) >= 2:
+                    result.append(_md_table_to_html(table_lines))
+                else:
+                    result.extend(table_lines)
+            else:
+                result.append(lines[i])
+                i += 1
+        return '\n'.join(result)
+
+    def _md_table_to_html(table_lines):
+        """将Markdown表格行列表转换为HTML表格字符串
+
+        输出为单行HTML（无换行），确保主循环将其视为 <div> 开头的块级元素，
+        不会被 is_plain_text() 误判为段落文本。
+        """
+        def parse_row(line):
+            """解析 | cell1 | cell2 | ... | 为单元格列表"""
+            stripped = line.strip()
+            if stripped.startswith('|'):
+                stripped = stripped[1:]
+            if stripped.endswith('|'):
+                stripped = stripped[:-1]
+            return [cell.strip() for cell in stripped.split('|')]
+
+        # 第一行为表头
+        headers = parse_row(table_lines[0])
+        # 第二行为分隔行（| --- | --- | ...），跳过
+        data_start = 1
+        if len(table_lines) > 1 and re.match(r'^[\s|:-]+$', table_lines[1].replace('-', '')):
+            data_start = 2
+
+        parts = ['<div class="shiji-table-wrapper">', '<table class="shiji-table">']
+        # 表头（对表头也做实体转换，以支持 &朝代& 等标记）
+        parts.append('<thead><tr>')
+        for h in headers:
+            parts.append(f'<th>{convert_entities(h)}</th>')
+        parts.append('</tr></thead>')
+        # 数据行（对单元格内容做实体转换）
+        parts.append('<tbody>')
+        for idx, row_line in enumerate(table_lines[data_start:]):
+            row_class = 'even' if idx % 2 == 0 else 'odd'
+            cells = parse_row(row_line)
+            parts.append(f'<tr class="{row_class}">')
+            for cell in cells:
+                parts.append(f'<td>{convert_entities(cell)}</td>')
+            parts.append('</tr>')
+        parts.append('</tbody></table></div>')
+        return ''.join(parts)
+
+    md_content = _convert_md_tables(md_content)
+
     # 基础的Markdown转HTML（简单版）
     html_lines = []
     in_blockquote = False
@@ -163,6 +229,11 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
                 and not line.startswith('<div'))
 
     for line in md_content.split('\n'):
+        # 跳过已预转换的HTML块（如表格）的实体标记转换
+        if line.startswith('<div class="shiji-table-wrapper">'):
+            flush_para()
+            html_lines.append(line)
+            continue
         # 转换实体标记
         line = convert_entities(line)
 
@@ -406,6 +477,23 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
             html_body
         )
 
+    # 后处理：注入年表数据（替换"（表略）"）
+    if '<p>（表略）</p>' in html_body:
+        # 从文件名推断章节编号
+        chapter_prefix = md_path.stem.replace('.tagged', '')
+        table_html_dir = md_path.parent.parent / 'docs' / 'table_html'
+        if not table_html_dir.exists():
+            table_html_dir = Path('docs/table_html')
+        table_file = table_html_dir / f'{chapter_prefix}_table.html'
+        if table_file.exists():
+            with open(table_file, 'r', encoding='utf-8') as tf:
+                table_content = tf.read()
+            html_body = html_body.replace(
+                '<p>（表略）</p>',
+                table_content,
+                1  # 只替换第一个
+            )
+
     # 生成完整HTML
     # 计算CSS文件的相对路径（从输出HTML文件到CSS文件）
     try:
@@ -423,8 +511,14 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         purple_numbers_js = "../js/purple-numbers.js"
 
     # 生成导航栏HTML
+    # 计算主页链接：如果输出在 docs/chapters/ 下则用 ../index.html
+    index_path = Path('docs/index.html')
+    try:
+        home_href = os.path.relpath(str(index_path), str(output_path.parent))
+    except Exception:
+        home_href = "../index.html"
     nav_html = '<nav class="chapter-nav">\n'
-    nav_html += '    <a href="../docs/index.html" class="nav-home">回到主页</a>\n'
+    nav_html += f'    <a href="{home_href}" class="nav-home">回到主页</a>\n'
     if prev_chapter:
         nav_html += f'    <a href="{prev_chapter}" class="nav-prev">← 上一页</a>\n'
     if next_chapter:
@@ -436,7 +530,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{md_path.stem}</title>
+    <title>{md_path.stem.replace('.tagged', '')}</title>
     <link rel="stylesheet" href="{css_href}">
     <link rel="stylesheet" href="{chapter_nav_css}">
     <script src="{purple_numbers_js}"></script>

@@ -209,6 +209,74 @@ p > .para-num:only-child {
     margin-bottom: 0.3em;
 }
 
+/* 史记年表样式 - 突破 body max-width 限制，占满视口宽度 */
+/* wrapper 同时限制高度并启用双向滚动，使 thead sticky 生效 */
+.shiji-table-wrapper {
+    overflow: auto;
+    width: 100vw;
+    max-height: 85vh;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: 1px solid #d0c8a0;
+    border-bottom: 1px solid #d0c8a0;
+    box-shadow: 0 1px 4px rgba(90, 74, 42, 0.08);
+}
+
+.shiji-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85em;
+    line-height: 1.7;
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+}
+
+.shiji-table th {
+    background-color: #5a4a2a;
+    color: #f5f0e0;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #4a3c1e;
+    text-align: center;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    font-size: 0.95em;
+    letter-spacing: 0.05em;
+}
+
+.shiji-table td {
+    padding: 6px 10px;
+    border: 1px solid #e0dcc8;
+    text-align: left;
+    vertical-align: top;
+    color: #2c2c2c;
+}
+
+.shiji-table tr.even td {
+    background-color: #fdfdf8;
+}
+
+.shiji-table tr.odd td {
+    background-color: #f5f0e0;
+}
+
+.shiji-table tbody tr:hover td {
+    background-color: #ede8d4;
+    transition: background-color 0.15s ease;
+}
+
+.shiji-table td:first-child {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #5a4a2a;
+    background-color: rgba(90, 74, 42, 0.06);
+    text-align: center;
+    border-right: 2px solid #d0c8a0;
+}
+
 /* NOTE框 */
 .note-box {
     background-color: #fffef0;
