@@ -19,6 +19,7 @@ import html
 from pathlib import Path
 from collections import defaultdict
 from urllib.parse import quote
+from pypinyin import pinyin, Style
 
 # --- 配置 ---
 CHAPTER_DIR = Path('chapter_md')
@@ -195,10 +196,34 @@ def save_index_json(index, output_file):
     print(f"索引数据已保存: {output_file}")
 
 
+def _get_pinyin_key(name):
+    """获取实体名的拼音排序键"""
+    py = pinyin(name, style=Style.TONE3)
+    return ''.join(p[0] for p in py).lower()
+
+
+def _get_pinyin_initial(name):
+    """获取实体名的拼音首字母（大写）"""
+    py = pinyin(name[0], style=Style.NORMAL)
+    initial = py[0][0][0].upper() if py and py[0] and py[0][0] else '#'
+    if initial.isalpha():
+        return initial
+    return '#'
+
+
 def generate_type_page(type_key, css_class, label, filename, entries):
     """生成单个类型的索引 HTML 页面"""
-    # 按出现次数降序排序
-    sorted_entries = sorted(entries.items(), key=lambda x: -x[1]['count'])
+    # 按拼音排序
+    sorted_entries = sorted(entries.items(), key=lambda x: _get_pinyin_key(x[0]))
+
+    # 按拼音首字母分组
+    grouped_by_letter = defaultdict(list)
+    for canonical, entry in sorted_entries:
+        letter = _get_pinyin_initial(canonical)
+        grouped_by_letter[letter].append((canonical, entry))
+
+    # 收集所有出现的字母，排序
+    letters = sorted(grouped_by_letter.keys(), key=lambda x: (x == '#', x))
 
     total_entities = len(sorted_entries)
     total_refs = sum(e['count'] for _, e in sorted_entries)
@@ -230,35 +255,47 @@ def generate_type_page(type_key, css_class, label, filename, entries):
     lines.append(f'    <input type="text" id="filter-input" placeholder="搜索{label}...">')
     lines.append('</div>')
 
-    # 实体列表
+    # 拼音字母导航栏
+    lines.append('<div class="pinyin-nav">')
+    for letter in letters:
+        count = len(grouped_by_letter[letter])
+        lines.append(f'  <a href="#letter-{letter}" class="pinyin-letter">{letter}<span class="letter-count">{count}</span></a>')
+    lines.append('</div>')
+
+    # 实体列表（按字母分节）
     lines.append('<div class="entity-index">')
 
-    for canonical, entry in sorted_entries:
-        aliases = [a for a in entry['aliases'] if a != canonical]
-        esc_canonical = html.escape(canonical)
+    for letter in letters:
+        group = grouped_by_letter[letter]
+        lines.append(f'<div class="letter-section" id="letter-{letter}">')
+        lines.append(f'  <h2 class="letter-heading">{letter}</h2>')
 
-        # 主锚点
-        lines.append(f'<div class="entity-entry" id="entity-{esc_canonical}">')
+        for canonical, entry in group:
+            aliases = [a for a in entry['aliases'] if a != canonical]
+            esc_canonical = html.escape(canonical)
 
-        # 别名锚点
-        for alias in aliases:
-            esc_alias = html.escape(alias)
-            lines.append(f'<a id="entity-{esc_alias}"></a>')
+            # 主锚点
+            lines.append(f'  <div class="entity-entry" id="entity-{esc_canonical}">')
 
-        # 左侧：名称 + 别名
-        lines.append('  <div class="entry-left">')
-        lines.append(f'    <span class="canonical-name {css_class}">{esc_canonical}</span>')
-        if aliases:
-            alias_str = '、'.join(html.escape(a) for a in aliases)
-            lines.append(f'    <span class="alias-list">{alias_str}</span>')
-        lines.append(f'    <span class="entry-count">({entry["count"]})</span>')
-        lines.append('  </div>')
+            # 左侧：名称 + 别名（别名锚点放在 entry-left 内部）
+            lines.append('    <div class="entry-left">')
+            for alias in aliases:
+                esc_alias = html.escape(alias)
+                lines.append(f'      <a id="entity-{esc_alias}"></a>')
+            lines.append(f'      <span class="canonical-name {css_class}">{esc_canonical}</span>')
+            if aliases:
+                alias_str = '、'.join(html.escape(a) for a in aliases)
+                lines.append(f'      <span class="alias-list">{alias_str}</span>')
+            lines.append(f'      <span class="entry-count">({entry["count"]})</span>')
+            lines.append('    </div>')
 
-        # 右侧：章节引用
-        lines.append('  <div class="entry-right">')
-        refs_html = _format_refs(entry['refs'])
-        lines.append(f'    {refs_html}')
-        lines.append('  </div>')
+            # 右侧：章节引用
+            lines.append('    <div class="entry-right">')
+            refs_html = _format_refs(entry['refs'])
+            lines.append(f'      {refs_html}')
+            lines.append('    </div>')
+
+            lines.append('  </div>')
 
         lines.append('</div>')
 

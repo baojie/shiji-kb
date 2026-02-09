@@ -40,6 +40,60 @@ body {
     box-shadow: 0 0 3px rgba(139, 69, 19, 0.3);
 }
 
+/* 拼音字母导航栏 */
+.pinyin-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1.5em;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e0c0;
+}
+
+.pinyin-letter {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+    padding: 4px 10px;
+    border: 1px solid #d0c8a0;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95em;
+    color: #5a4a2a;
+    background: #fffef8;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.pinyin-letter:hover {
+    background-color: #f5f0e0;
+    border-color: #8B4513;
+    color: #8B0000;
+}
+
+.letter-count {
+    font-size: 0.7em;
+    font-weight: 400;
+    color: #999;
+}
+
+/* 字母分节标题 */
+.letter-section {
+    margin-bottom: 1em;
+}
+
+.letter-heading {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #8B0000;
+    border-left: 5px solid #8B0000;
+    padding-left: 12px;
+    margin: 1.5em 0 0.5em 0;
+    scroll-margin-top: 60px;
+}
+
 /* 实体条目 */
 .entity-index {
     line-height: 1.8;
@@ -59,9 +113,8 @@ body {
 
 /* 左侧：名称 + 别名 */
 .entry-left {
-    flex: 0 0 auto;
-    min-width: 100px;
-    max-width: 200px;
+    flex: 0 0 160px;
+    text-align: left;
 }
 
 .canonical-name {
