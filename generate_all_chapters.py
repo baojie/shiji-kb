@@ -16,6 +16,7 @@
 from pathlib import Path
 from render_shiji_html import markdown_to_html
 import re
+import subprocess
 
 
 def extract_chapter_title(md_file):
@@ -242,12 +243,32 @@ def generate_all_chapters():
     print("生成索引页面...")
     generate_index_html(chapters)
 
+    # 生成实体索引
+    print("\n" + "=" * 60)
+    print("生成实体索引...")
+    print("=" * 60)
+    try:
+        result = subprocess.run(
+            ['python3', 'build_entity_index.py'],
+            capture_output=True, text=True, timeout=120
+        )
+        if result.returncode == 0:
+            # 打印脚本输出中的统计信息
+            for line in result.stdout.split('\n'):
+                if line.strip():
+                    print(f"  {line}")
+        else:
+            print(f"⚠️  实体索引生成失败: {result.stderr}")
+    except FileNotFoundError:
+        print("ℹ️  跳过实体索引生成（build_entity_index.py未找到）")
+    except Exception as e:
+        print(f"ℹ️  实体索引生成遇到问题: {e}")
+
     # 运行HTML Linter检查生成的文件
     print("\n" + "=" * 60)
     print("运行质量检查...")
     print("=" * 60)
 
-    import subprocess
     try:
         result = subprocess.run(
             ['python3', 'lint_html.py', 'docs/chapters/'],

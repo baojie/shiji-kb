@@ -1,0 +1,164 @@
+/* 实体索引页面样式 */
+
+/* 覆盖 body 默认样式 */
+body {
+    max-width: 1100px;
+}
+
+/* 统计信息 */
+.index-stats {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+/* 搜索过滤框 */
+.entity-filter {
+    position: sticky;
+    top: 0;
+    background: #fdfdf8;
+    padding: 10px 0;
+    z-index: 100;
+    border-bottom: 1px solid #e6e0c0;
+    margin-bottom: 1em;
+}
+
+.entity-filter input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    border: 1px solid #d0c8a0;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+    background: #fff;
+}
+
+.entity-filter input:focus {
+    outline: none;
+    border-color: #8B4513;
+    box-shadow: 0 0 3px rgba(139, 69, 19, 0.3);
+}
+
+/* 实体条目 */
+.entity-index {
+    line-height: 1.8;
+}
+
+.entity-entry {
+    display: flex;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0ece0;
+    gap: 20px;
+}
+
+.entity-entry:hover {
+    background-color: rgba(139, 69, 19, 0.03);
+}
+
+/* 左侧：名称 + 别名 */
+.entry-left {
+    flex: 0 0 auto;
+    min-width: 100px;
+    max-width: 200px;
+}
+
+.canonical-name {
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+.alias-list {
+    display: block;
+    font-size: 0.78em;
+    color: #999;
+    margin-top: 1px;
+}
+
+.entry-count {
+    font-size: 0.75em;
+    color: #bbb;
+    margin-left: 4px;
+}
+
+/* 右侧：章节引用 */
+.entry-right {
+    flex: 1;
+    font-size: 0.82em;
+    line-height: 1.9;
+    color: #555;
+}
+
+.entry-right a {
+    text-decoration: none;
+}
+
+.entry-right a:hover {
+    text-decoration: underline;
+}
+
+.chapter-ref-name {
+    font-weight: 500;
+    color: #5a4a2a;
+}
+
+.para-ref {
+    color: #8B0000;
+}
+
+.para-ref:hover {
+    color: #d4af37;
+}
+
+.ref-sep {
+    color: #ddd;
+    margin: 0 4px;
+}
+
+/* 总览页卡片网格 */
+.entity-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 2em 0;
+}
+
+.entity-type-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px;
+    border: 1px solid #e6e0c0;
+    border-radius: 6px;
+    background: #fffef8;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.entity-type-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.12);
+}
+
+.type-label {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.type-count {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.type-total {
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* 正文中实体链接样式 */
+a.entity-link {
+    text-decoration: none;
+    color: inherit;
+}

@@ -290,3 +290,9 @@ p > .para-num:only-child {
     color: #8B7500;
     margin-top: 0;
 }
+
+/* 正文中实体索引链接 - 不改变实体原有视觉样式 */
+a.entity-link {
+    text-decoration: none;
+    color: inherit;
+}

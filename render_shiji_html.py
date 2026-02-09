@@ -24,7 +24,9 @@
 import re
 import sys
 import os
+import json
 from pathlib import Path
+from html import escape as html_escape
 
 # 实体类型映射
 # 注意：顺序至关重要！外层标记必须先于内层标记处理。
@@ -66,6 +68,82 @@ QUOTE_PATTERNS = [
 # 匹配 [数字] 或 [数字.数字] 或 [数字.数字.数字] 等格式
 PARAGRAPH_NUMBER_PATTERN = r'\[(\d+(?:\.\d+)*)\]'
 
+# --- 实体索引链接 ---
+# 实体类CSS类 → 索引页文件名
+_ENTITY_TYPE_FILES = {
+    'person': 'person.html',
+    'place': 'place.html',
+    'official': 'official.html',
+    'time': 'time.html',
+    'dynasty': 'dynasty.html',
+    'institution': 'institution.html',
+    'tribe': 'tribe.html',
+    'artifact': 'artifact.html',
+    'astronomy': 'astronomy.html',
+    'mythical': 'mythical.html',
+    'flora-fauna': 'flora-fauna.html',
+}
+
+# 别名映射缓存（模块级，只加载一次）
+_alias_reverse_map = None
+
+def _get_alias_reverse_map():
+    """加载 entity_aliases.json，构建 {type: {surface → canonical}} 反向映射"""
+    global _alias_reverse_map
+    if _alias_reverse_map is not None:
+        return _alias_reverse_map
+
+    alias_file = Path(__file__).parent / 'entity_aliases.json'
+    _alias_reverse_map = {}
+    if alias_file.exists():
+        try:
+            with open(alias_file, 'r', encoding='utf-8') as f:
+                raw = json.load(f)
+            for etype, mappings in raw.items():
+                _alias_reverse_map[etype] = {}
+                for canonical, aliases in mappings.items():
+                    _alias_reverse_map[etype][canonical] = canonical
+                    for alias in aliases:
+                        if alias:
+                            _alias_reverse_map[etype][alias] = canonical
+        except Exception:
+            pass
+    return _alias_reverse_map
+
+
+def _add_entity_links(text):
+    """后处理：为实体 <span> 包裹 <a> 链接指向实体索引页
+
+    只匹配最内层的实体span（文本中不含<的span），
+    避免嵌套标注（如 $@安国君@$）产生嵌套 <a> 标签。
+    """
+    alias_map = _get_alias_reverse_map()
+
+    def _entity_link_replacer(match):
+        full_span = match.group(0)
+        css_class = match.group(1)
+        entity_text = match.group(2)
+
+        filename = _ENTITY_TYPE_FILES.get(css_class)
+        if not filename:
+            return full_span
+
+        # 别名解析：找规范名
+        type_map = alias_map.get(css_class, {})
+        canonical = type_map.get(entity_text, entity_text)
+
+        href = f"../entities/{filename}#entity-{html_escape(canonical)}"
+        return f'<a href="{href}" class="entity-link">{full_span}</a>'
+
+    # 匹配最内层实体span: <span class="TYPE" title="LABEL">TEXT</span>
+    # [^<]+ 确保只匹配不含子标签的最内层span
+    text = re.sub(
+        r'<span class="([^"]+)" title="[^"]*">([^<]+)</span>',
+        _entity_link_replacer,
+        text
+    )
+    return text
+
 
 def convert_entities(text):
     """转换实体标记为HTML标签
@@ -101,6 +179,9 @@ def convert_entities(text):
         return f'<a href="#{pn_id}" id="{pn_id}" class="para-num" title="点击复制链接">{pn}</a>'
 
     text = re.sub(r'(?<!["\'>])\[(\d+(?:\.\d+)*)\]', pn_replacement, text)
+
+    # 为实体添加索引链接
+    text = _add_entity_links(text)
 
     return text
 
