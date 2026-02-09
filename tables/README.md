@@ -39,18 +39,18 @@ tables/
 
 ## 史记十表清单
 
-| 编号 | 表名 | 类型 | 时间跨度 | 状态 | 优先级 |
-|------|------|------|----------|------|--------|
-| 013 | 三代世表 | 世系表 | 黄帝-共和 | 📝 计划中 | 中 |
-| 014 | 十二诸侯年表 | 编年表 | 春秋时期 | 📝 计划中 | 高 |
-| 015 | 六国年表 | 编年表 | 战国时期 | 📝 计划中 | 高 |
-| 016 | 秦楚之际月表 | 编年表 | 前209-前202 | ✏️ 示例中 | **最高** |
-| 017 | 汉兴以来诸侯王年表 | 封国表 | 西汉 | 📝 计划中 | 高 |
-| 018 | 高祖功臣侯者年表 | 封侯表 | 西汉初 | 📝 计划中 | **最高** |
-| 019 | 惠景间侯者年表 | 封侯表 | 惠帝-景帝 | 📝 计划中 | 中 |
-| 020 | 建元以来侯者年表 | 封侯表 | 武帝 | 📝 计划中 | 中 |
-| 021 | 建元已来王子侯者年表 | 封侯表 | 武帝 | 📝 计划中 | 中 |
-| 022 | 汉兴以来将相名臣年表 | 官职表 | 西汉 | 📝 计划中 | **最高** |
+| 编号 | 表名 | 类型 | 时间跨度 | 状态 | 在线查看 |
+|------|------|------|----------|------|----------|
+| 013 | 三代世表 | 世系表 | 黄帝-共和 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/013_三代世表.html) · [独立表](../resources/table_html/013_三代世表_table.html) |
+| 014 | 十二诸侯年表 | 编年表 | 春秋时期 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/014_十二诸侯年表.html) · [独立表](../resources/table_html/014_十二诸侯年表_table.html) |
+| 015 | 六国年表 | 编年表 | 战国时期 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/015_六国年表.html) · [独立表](../resources/table_html/015_六国年表_table.html) |
+| 016 | 秦楚之际月表 | 编年表 | 前209-前202 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/016_秦楚之际月表.html) · [独立表](../resources/table_html/016_秦楚之际月表_table.html) |
+| 017 | 汉兴以来诸侯王年表 | 封国表 | 西汉 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/017_汉兴以来诸侯王年表.html) · [独立表](../resources/table_html/017_汉兴以来诸侯王年表_table.html) |
+| 018 | 高祖功臣侯者年表 | 封侯表 | 西汉初 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/018_高祖功臣侯者年表.html) · [独立表](../resources/table_html/018_高祖功臣侯者年表_table.html) |
+| 019 | 惠景间侯者年表 | 封侯表 | 惠帝-景帝 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/019_惠景间侯者年表.html) · [独立表](../resources/table_html/019_惠景间侯者年表_table.html) |
+| 020 | 建元以来侯者年表 | 封侯表 | 武帝 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/020_建元以来侯者年表.html) · [独立表](../resources/table_html/020_建元以来侯者年表_table.html) |
+| 021 | 建元已来王子侯者年表 | 封侯表 | 武帝 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/021_建元已来王子侯者年表.html) · [独立表](../resources/table_html/021_建元已来王子侯者年表_table.html) |
+| 022 | 汉兴以来将相名臣年表 | 官职表 | 西汉 | ✅ 已渲染 | [章节](https://baojie.github.io/shiji-kb/chapters/022_汉兴以来将相名臣年表.html) · [独立表](../resources/table_html/022_汉兴以来将相名臣年表_table.html) |
 
 **图例**：
 - ✅ 已完成

@@ -5,6 +5,8 @@
 [![在线访问](https://img.shields.io/badge/在线访问-GitHub%20Pages-blue)](https://baojie.github.io/shiji-kb)
 [![许可证](https://img.shields.io/badge/许可证-CC%20BY--NC--SA%204.0-orange)](LICENSE)
 
+**在线Demo**：[首页](https://baojie.github.io/shiji-kb) · [五帝本纪](https://baojie.github.io/shiji-kb/chapters/001_五帝本纪.html) · [项羽本纪](https://baojie.github.io/shiji-kb/chapters/007_项羽本纪.html) · [秦楚之际月表](https://baojie.github.io/shiji-kb/chapters/016_秦楚之际月表.html) · [孔子世家](https://baojie.github.io/shiji-kb/chapters/047_孔子世家.html) · [刺客列传](https://baojie.github.io/shiji-kb/chapters/086_刺客列传.html)
+
 ---
 
 ## 项目愿景
@@ -43,12 +45,13 @@
 
 ## 项目进展
 
-### 当前状态（2026-02-08）
+### 当前状态（2026-02-09）
 
 | 任务 | 进度 | 说明 |
 |------|------|------|
 | **文本标注** | 130/130 (100%) ✅ | 已完成全部130篇：本纪12篇、表10篇、书8篇、世家30篇、列传70篇 |
 | **HTML生成** | 130/130 (100%) ✅ | 全部章节已生成HTML格式 |
+| **十表渲染** | 10/10 (100%) ✅ | 十篇年表全部嵌入渲染（全视口宽度、sticky表头、实体标注） |
 | **实体词表** | ✅ 完成 | 提取5,282个词条，24,249次标注 |
 | **研究方法** | ✅ 完成 | 建立完整的数字人文研究方法体系 |
 
@@ -162,10 +165,14 @@
 
 **当前状态**：
 
-- ✅ 已创建 `tables/` 目录结构
-- ✅ 已设计JSON数据模型
-- ✅ 已创建016表示例数据（6个时间点）
-- 📝 待开发：交互式查看器、完整数据录入
+- ✅ 十篇年表全部完成Markdown嵌入和HTML渲染
+- ✅ 表格CSS：全视口宽度、sticky表头、交替行、实体高亮
+- ✅ 016秦楚之际月表按原始数据拆分为两表（秦二世 / 项羽分封）
+- ✅ 十篇独立主题表格HTML（Ocean Depths风格）
+- ✅ 已创建 `tables/` 目录结构和JSON数据模型
+- 📝 待开发：交互式查看器、完整JSON数据录入
+
+**在线查看**：[十表清单及在线链接](tables/README.md) | [示例：秦楚之际月表](https://baojie.github.io/shiji-kb/chapters/016_秦楚之际月表.html)
 
 **详细计划**：[表格结构化计划](doc/表格结构化计划.md) | [示例数据](tables/data/016_秦楚之际月表_示例.json)
 
@@ -287,6 +294,7 @@ shiji-kb/
 ├── temp/                         # 历史开发文件存档
 │
 └── resources/                    # 资源文件
+    └── table_html/              # 十表独立主题HTML（Ocean Depths风格）
 ```
 
 ---
@@ -559,8 +567,9 @@ python generate_all_chapters.py
 
 查看完整更新日志：[CHANGELOG.md](CHANGELOG.md)
 
-### 最新进展 (2026-02-08)
+### 最新进展 (2026-02-09)
 
+- 📊 **十表完整表格渲染管线**：十篇年表全部嵌入Markdown并渲染为HTML，含实体标注、全视口宽度、sticky表头
 - ✅ **完成全部130章节标注**（本纪12、表10、书8、世家30、列传70）
 - ✅ **完成全部130章节HTML生成**，含小节划分和锚点导航
 - 🔧 **HTML渲染修复**：嵌套标注符号处理、韵文格式、对话缩进
@@ -571,7 +580,7 @@ python generate_all_chapters.py
 ---
 
 **项目维护者**：[baojie](https://github.com/baojie)
-**最后更新**：2026-02-08
+**最后更新**：2026-02-09
 
 ---
 
