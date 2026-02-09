@@ -86,6 +86,10 @@ _ENTITY_TYPE_FILES = {
 
 # 别名映射缓存（模块级，只加载一次）
 _alias_reverse_map = None
+# 消歧映射缓存（模块级，只加载一次）
+_disambiguation_map = None
+# 当前渲染的章节ID（由 markdown_to_html 设置，供 _add_entity_links 使用）
+_current_chapter_id = None
 
 def _get_alias_reverse_map():
     """加载 entity_aliases.json，构建 {type: {surface → canonical}} 反向映射"""
@@ -111,13 +115,42 @@ def _get_alias_reverse_map():
     return _alias_reverse_map
 
 
+def _get_disambiguation_map():
+    """加载 disambiguation_map.json，返回 {chapter_id: {short_name: full_name}}"""
+    global _disambiguation_map
+    if _disambiguation_map is not None:
+        return _disambiguation_map
+
+    map_file = Path(__file__).parent / 'disambiguation_map.json'
+    _disambiguation_map = {}
+    if map_file.exists():
+        try:
+            with open(map_file, 'r', encoding='utf-8') as f:
+                _disambiguation_map = json.load(f)
+        except Exception:
+            pass
+    return _disambiguation_map
+
+
+def set_chapter_context(chapter_id):
+    """设置当前章节ID，供消歧映射使用"""
+    global _current_chapter_id
+    _current_chapter_id = chapter_id
+
+
 def _add_entity_links(text):
     """后处理：为实体 <span> 包裹 <a> 链接指向实体索引页
 
     只匹配最内层的实体span（文本中不含<的span），
     避免嵌套标注（如 $@安国君@$）产生嵌套 <a> 标签。
+
+    消歧逻辑：对人名实体，先查 disambiguation_map（章节级短名→全名），
+    再查 entity_aliases（别名→规范名），确定链接目标。
+    显示文本保持原文不变，仅链接指向消歧后的实体。
     """
     alias_map = _get_alias_reverse_map()
+    disambig_map = _get_disambiguation_map()
+    chapter_id = _current_chapter_id
 
     def _entity_link_replacer(match):
         full_span = match.group(0)
@@ -128,11 +161,24 @@ def _add_entity_links(text):
         if not filename:
             return full_span
 
-        # 别名解析：找规范名
+        # Step 1: 消歧（仅人名，章节级）
+        resolved = entity_text
+        disambiguated = False
+        if css_class == 'person' and chapter_id:
+            chapter_disambig = disambig_map.get(chapter_id, {})
+            if entity_text in chapter_disambig:
+                resolved = chapter_disambig[entity_text]
+                disambiguated = True
+
+        # Step 2: 别名解析 → 规范名
         type_map = alias_map.get(css_class, {})
-        canonical = type_map.get(entity_text, entity_text)
+        canonical = type_map.get(resolved, resolved)
 
         href = f"../entities/{filename}#entity-{html_escape(canonical)}"
+
+        # 消歧后添加 tooltip 显示全名
+        if disambiguated:
+            return f'<a href="{href}" class="entity-link" title="{html_escape(resolved)}">{full_span}</a>'
         return f'<a href="{href}" class="entity-link">{full_span}</a>'
 
     # 匹配最内层实体span: <span class="TYPE" title="LABEL">TEXT</span>
@@ -199,11 +245,16 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         original_text_file: 原文txt文件的路径（可选）
     """
     md_path = Path(md_file)
-    
+
+    # 设置章节上下文，供消歧映射使用
+    # 从文件名提取章节ID（如 "004_周本纪.tagged.md" → "004"）
+    chapter_id = md_path.stem.replace('.tagged', '')[:3]
+    set_chapter_context(chapter_id)
+
     if not md_path.exists():
         print(f"错误：文件 {md_file} 不存在")
         return
-    
+
     # 确定输出文件
     if output_file is None:
         output_file = md_path.with_suffix('.html')

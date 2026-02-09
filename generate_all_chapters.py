@@ -192,7 +192,26 @@ def generate_all_chapters():
         print(f"错误: 在 {input_dir} 目录下未找到 .tagged.md 文件")
         return
 
-    print("开始生成章节HTML文件...")
+    # 生成消歧映射（在章节渲染之前，渲染器需要读取 disambiguation_map.json）
+    print("生成消歧映射...")
+    print("=" * 60)
+    try:
+        result = subprocess.run(
+            ['python3', 'disambiguate_names.py'],
+            capture_output=True, text=True, timeout=120
+        )
+        if result.returncode == 0:
+            for line in result.stdout.split('\n'):
+                if 'SUMMARY' in line or 'mappings' in line.lower() or 'Manual' in line:
+                    print(f"  {line}")
+        else:
+            print(f"⚠️  消歧映射生成失败: {result.stderr}")
+    except FileNotFoundError:
+        print("ℹ️  跳过消歧映射生成（disambiguate_names.py未找到）")
+    except Exception as e:
+        print(f"ℹ️  消歧映射生成遇到问题: {e}")
+
+    print("\n开始生成章节HTML文件...")
     print("=" * 60)
     print(f"发现 {len(chapters)} 个章节文件")
 
