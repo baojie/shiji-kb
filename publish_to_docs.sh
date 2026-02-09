@@ -25,15 +25,18 @@ echo "1. 准备 docs 目录结构..."
 mkdir -p docs/chapters
 mkdir -p docs/css
 mkdir -p docs/js
+mkdir -p docs/entities
 
 # 复制 CSS 文件
 echo "2. 复制 CSS 样式文件..."
 cp doc/shiji-styles.css docs/css/
 cp docs/css/chapter-nav.css docs/css/ 2>/dev/null || echo "   chapter-nav.css 已存在"
+cp docs/css/entity-index.css docs/css/ 2>/dev/null || echo "   entity-index.css 已存在"
 
 # 复制 JS 文件
 echo "3. 复制 JavaScript 文件..."
 cp docs/js/purple-numbers.js docs/js/ 2>/dev/null || echo "   purple-numbers.js 已存在"
+cp docs/js/entity-filter.js docs/js/ 2>/dev/null || echo "   entity-filter.js 已存在"
 
 # 生成所有章节HTML（带 .tagged.html 后缀）
 # 注意：generate_all_chapters.py 已添加保护机制，
@@ -89,12 +92,14 @@ fi
 
 # 统计文件数量
 html_count=$(ls -1 docs/chapters/*.html 2>/dev/null | wc -l)
+entity_count=$(ls -1 docs/entities/*.html 2>/dev/null | wc -l)
 
 echo ""
 echo "=========================================="
 echo "  发布完成！"
 echo "=========================================="
-echo "已生成并处理 $html_count 个 HTML 文件"
+echo "已生成并处理 $html_count 个章节 HTML 文件"
+echo "已生成 $entity_count 个实体索引页面"
 echo "所有文件已移除 .tagged 后缀"
 echo "CSS 文件已更新到 docs/css/"
 echo "JS 文件已更新到 docs/js/"
@@ -136,6 +141,23 @@ if [ -f "lint_html.py" ] && [ -f "docs/index.html" ]; then
         echo "   ⚠️  Index页面有问题"
         grep -E "^(❌|⚠️)" /tmp/lint_index_output.txt | head -10
     fi
+fi
+
+# 检查实体索引页面
+echo "10. 检查实体索引页面..."
+if [ -f "lint_html.py" ] && [ -d "docs/entities" ]; then
+    python3 lint_html.py docs/entities/ > /tmp/lint_entity_output.txt 2>&1
+    entity_lint_exit_code=$?
+
+    if [ $entity_lint_exit_code -eq 0 ]; then
+        echo "   ✅ 实体索引页面检查通过"
+    else
+        echo "   ⚠️  实体索引页面有问题"
+        echo "   详细信息见: /tmp/lint_entity_output.txt"
+        grep -E "^(❌|⚠️|总计:)" /tmp/lint_entity_output.txt | head -20
+    fi
+else
+    echo "   ℹ️  跳过实体索引检查"
 fi
 
 echo ""
