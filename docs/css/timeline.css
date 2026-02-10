@@ -1,0 +1,18 @@
+/* 编年索引页面样式 - timeline.html 专用 */
+
+/* 年份条目左侧需要更宽 */
+.timeline-index .entry-left {
+    flex: 0 0 200px;
+}
+
+/* 年份名称用暗青色 */
+.timeline-index .canonical-name.time {
+    color: #008B8B;
+    font-style: italic;
+}
+
+/* 世纪标题用暗青色 */
+.timeline-index .letter-heading {
+    color: #008B8B;
+    border-left-color: #008B8B;
+}

@@ -88,8 +88,12 @@ _ENTITY_TYPE_FILES = {
 _alias_reverse_map = None
 # 消歧映射缓存（模块级，只加载一次）
 _disambiguation_map = None
+# 年份→公元映射缓存（模块级，只加载一次）
+_year_ce_map = None
 # 当前渲染的章节ID（由 markdown_to_html 设置，供 _add_entity_links 使用）
 _current_chapter_id = None
+# 当前段落ID（由 convert_entities 设置，供 _add_entity_links 使用）
+_current_para_id = None
 
 def _get_alias_reverse_map():
     """加载 entity_aliases.json，构建 {type: {surface → canonical}} 反向映射"""
@@ -132,6 +136,23 @@ def _get_disambiguation_map():
     return _disambiguation_map
 
 
+def _get_year_ce_map():
+    """加载 year_ce_map.json，返回 {chapter_id: {para_id: {surface: {ce_year, ruler, method}}}}"""
+    global _year_ce_map
+    if _year_ce_map is not None:
+        return _year_ce_map
+
+    map_file = Path(__file__).parent / 'year_ce_map.json'
+    _year_ce_map = {}
+    if map_file.exists():
+        try:
+            with open(map_file, 'r', encoding='utf-8') as f:
+                _year_ce_map = json.load(f)
+        except Exception:
+            pass
+    return _year_ce_map
+
+
 def set_chapter_context(chapter_id):
     """设置当前章节ID，供消歧映射使用"""
     global _current_chapter_id
@@ -146,11 +167,14 @@ def _add_entity_links(text):
 
     消歧逻辑：对人名实体，先查 disambiguation_map（章节级短名→全名），
     再查 entity_aliases（别名→规范名），确定链接目标。
+    对时间实体中的年份，查 year_ce_map 添加公元纪年tooltip并链接到编年索引。
     显示文本保持原文不变，仅链接指向消歧后的实体。
     """
     alias_map = _get_alias_reverse_map()
     disambig_map = _get_disambiguation_map()
+    year_ce_map = _get_year_ce_map()
     chapter_id = _current_chapter_id
+    para_id = _current_para_id
 
     def _entity_link_replacer(match):
         full_span = match.group(0)
@@ -160,6 +184,21 @@ def _add_entity_links(text):
         filename = _ENTITY_TYPE_FILES.get(css_class)
         if not filename:
             return full_span
+
+        # 时间实体：年份→公元纪年映射
+        if css_class == 'time' and chapter_id and para_id:
+            chapter_years = year_ce_map.get(chapter_id, {})
+            para_years = chapter_years.get(para_id, {})
+            year_info = para_years.get(entity_text)
+            if year_info:
+                ce_year = year_info['ce_year']
+                ruler = year_info.get('ruler', '')
+                if ce_year < 0:
+                    tooltip = f'公元前{-ce_year}年（{ruler}{entity_text}）'
+                else:
+                    tooltip = f'公元{ce_year}年（{ruler}{entity_text}）'
+                href = f"../entities/timeline.html#year-{ce_year}"
+                return f'<a href="{href}" class="entity-link" title="{html_escape(tooltip)}">{full_span}</a>'
 
         # Step 1: 消歧（仅人名，章节级）
         resolved = entity_text
@@ -219,6 +258,12 @@ def convert_entities(text):
 
     # 最后处理段落编号（PN - Purple Numbers）
     # 将 [编号] 转换为可点击的锚点链接
+    # 同时更新当前段落ID供年份映射使用
+    global _current_para_id
+    pn_match = re.search(r'(?<!["\'>])\[(\d+(?:\.\d+)*)\]', text)
+    if pn_match:
+        _current_para_id = pn_match.group(1)
+
     def pn_replacement(match):
         pn = match.group(1)
         pn_id = f"pn-{pn}"

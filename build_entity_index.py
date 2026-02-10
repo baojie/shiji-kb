@@ -385,6 +385,27 @@ def generate_landing_page(index):
         lines.append(f'    <span class="type-total">{total} 次出现</span>')
         lines.append(f'  </a>')
 
+    # 添加编年索引卡片（从 year_ce_map.json 读取统计信息）
+    year_map_file = Path(__file__).parent / 'year_ce_map.json'
+    if year_map_file.exists():
+        try:
+            with open(year_map_file, 'r', encoding='utf-8') as f:
+                year_map = json.load(f)
+            year_set = set()
+            total_refs = 0
+            for ch_data in year_map.values():
+                for para_data in ch_data.values():
+                    for surface, info in para_data.items():
+                        year_set.add(info['ce_year'])
+                        total_refs += 1
+            lines.append(f'  <a href="timeline.html" class="entity-type-card">')
+            lines.append(f'    <span class="type-label time">编年</span>')
+            lines.append(f'    <span class="type-count">{len(year_set)} 个年份</span>')
+            lines.append(f'    <span class="type-total">{total_refs} 次引用（公元纪年索引）</span>')
+            lines.append(f'  </a>')
+        except Exception:
+            pass
+
     lines.append('</div>')
 
     lines.append('<nav class="chapter-nav">')
