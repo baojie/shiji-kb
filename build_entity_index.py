@@ -371,6 +371,35 @@ def generate_landing_page(index):
 
     lines.append('<div class="entity-type-grid">')
 
+    # 预加载编年索引统计（用于在时间卡片后插入）
+    timeline_card = None
+    year_map_file = Path(__file__).parent / 'year_ce_map.json'
+    if year_map_file.exists():
+        try:
+            with open(year_map_file, 'r', encoding='utf-8') as f:
+                year_map = json.load(f)
+            year_set = set()
+            total_refs = 0
+            ruler_keys = set()
+            for ch_data in year_map.values():
+                for para_data in ch_data.values():
+                    for surface, info in para_data.items():
+                        if 'ce_year' in info:
+                            year_set.add(info['ce_year'])
+                        elif 'ruler_key' in info:
+                            ruler_keys.add(info['ruler_key'])
+                        total_refs += 1
+            total_entries = len(year_set) + len(ruler_keys)
+            timeline_card = [
+                f'  <a href="timeline.html" class="entity-type-card">',
+                f'    <span class="type-label time">编年</span>',
+                f'    <span class="type-count">{total_entries} 个条目</span>',
+                f'    <span class="type-total">{total_refs} 次引用（公元纪年索引）</span>',
+                f'  </a>',
+            ]
+        except Exception:
+            pass
+
     for type_key, _, css_class, label, filename in ENTITY_TYPES:
         entries = index.get(type_key, {})
         count = len(entries)
@@ -385,26 +414,9 @@ def generate_landing_page(index):
         lines.append(f'    <span class="type-total">{total} 次出现</span>')
         lines.append(f'  </a>')
 
-    # 添加编年索引卡片（从 year_ce_map.json 读取统计信息）
-    year_map_file = Path(__file__).parent / 'year_ce_map.json'
-    if year_map_file.exists():
-        try:
-            with open(year_map_file, 'r', encoding='utf-8') as f:
-                year_map = json.load(f)
-            year_set = set()
-            total_refs = 0
-            for ch_data in year_map.values():
-                for para_data in ch_data.values():
-                    for surface, info in para_data.items():
-                        year_set.add(info['ce_year'])
-                        total_refs += 1
-            lines.append(f'  <a href="timeline.html" class="entity-type-card">')
-            lines.append(f'    <span class="type-label time">编年</span>')
-            lines.append(f'    <span class="type-count">{len(year_set)} 个年份</span>')
-            lines.append(f'    <span class="type-total">{total_refs} 次引用（公元纪年索引）</span>')
-            lines.append(f'  </a>')
-        except Exception:
-            pass
+        # 在时间卡片后紧跟编年卡片
+        if type_key == 'time' and timeline_card:
+            lines.extend(timeline_card)
 
     lines.append('</div>')
 

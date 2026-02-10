@@ -191,14 +191,20 @@ def _add_entity_links(text):
             para_years = chapter_years.get(para_id, {})
             year_info = para_years.get(entity_text)
             if year_info:
-                ce_year = year_info['ce_year']
+                ce_year = year_info.get('ce_year')
                 ruler = year_info.get('ruler', '')
-                if ce_year < 0:
-                    tooltip = f'公元前{-ce_year}年（{ruler}{entity_text}）'
-                else:
-                    tooltip = f'公元{ce_year}年（{ruler}{entity_text}）'
-                href = f"../entities/timeline.html#year-{ce_year}"
-                return f'<a href="{href}" class="entity-link" title="{html_escape(tooltip)}">{full_span}</a>'
+                ruler_key = year_info.get('ruler_key', '')
+                if ce_year is not None:
+                    if ce_year < 0:
+                        tooltip = f'公元前{-ce_year}年（{ruler}{entity_text}）'
+                    else:
+                        tooltip = f'公元{ce_year}年（{ruler}{entity_text}）'
+                    href = f"../entities/timeline.html#year-{ce_year}"
+                    return f'<a href="{href}" class="entity-link" title="{html_escape(tooltip)}">{full_span}</a>'
+                elif ruler_key:
+                    tooltip = f'{ruler}{entity_text}'
+                    href = f"../entities/timeline.html#ruler-{html_escape(ruler_key)}"
+                    return f'<a href="{href}" class="entity-link" title="{html_escape(tooltip)}">{full_span}</a>'
 
         # Step 1: 消歧（仅人名，章节级）
         resolved = entity_text

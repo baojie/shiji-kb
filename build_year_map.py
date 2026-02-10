@@ -67,6 +67,29 @@ def cn_to_int(s):
     return result if result > 0 else None
 
 
+CN_DIGIT_STRS = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九']
+
+def int_to_cn(n):
+    """Convert integer to Chinese numeral string.
+    1→'元', 2→'二', 10→'十', 13→'十三', 20→'二十', 23→'二十三'
+    """
+    if n == 1:
+        return '元'
+    if n <= 0 or n > 99:
+        return str(n)
+    if n < 10:
+        return CN_DIGIT_STRS[n]
+    tens = n // 10
+    ones = n % 10
+    result = ''
+    if tens > 1:
+        result += CN_DIGIT_STRS[tens]
+    result += '十'
+    if ones > 0:
+        result += CN_DIGIT_STRS[ones]
+    return result
+
+
 # Chinese numeral pattern (matches 元 or 1-99 in Chinese)
 CN_NUM_PAT = r'(?:元|[二三四五六七八九]十[一二三四五六七八九]?|十[一二三四五六七八九]?|[一二三四五六七八九])'
 
@@ -473,6 +496,8 @@ RULER_ALIASES = {
     '秦惠文王': ['秦惠王'],
     '秦昭襄王': ['秦昭王'],
     '秦始皇帝': ['秦始皇'],
+    '秦始皇': ['秦王政'],
+    '秦二世': ['二世'],
 }
 
 
@@ -553,22 +578,29 @@ NOT_CALENDAR_YEAR_PATS = [
 PARA_NUM_RE = re.compile(r'^\[([0-9]+(?:\.[0-9]+)*)\]')
 
 # Person entity pattern (for finding nearby ruler mentions)
+# Also match $title$ since many rulers are tagged as titles (e.g., $武公$, $庄公$)
 PERSON_RE = re.compile(r'@([^@\n]+)@')
+TITLE_RE = re.compile(r'\$([^$\n]+)\$')
 
 # Section header with ruler name
 SECTION_HEADER_RE = re.compile(r'^##+ (.+)')
 
 # Chapter → primary state mapping (same logic as disambiguate_names.py)
 CHAPTER_STATE = {
+    '001': '', '002': '', '003': '',  # 五帝/夏/殷 - no fixed state
     '004': '周', '005': '秦', '006': '秦',
     '007': '楚',  # 项羽本纪 - special
     '008': '汉', '009': '汉', '010': '汉', '011': '汉', '012': '汉',
     '031': '吴', '032': '齐', '033': '鲁', '034': '燕', '035': '管',
     '036': '陈', '037': '卫', '038': '宋', '039': '晋', '040': '楚',
     '041': '越', '042': '郑', '043': '赵', '044': '魏', '045': '韩',
-    '046': '田',  # 田敬仲完世家 (齐)
+    '046': '齐',  # 田敬仲完世家 (田齐=齐)
     '047': '孔', '048': '陈', '049': '楚',
 }
+
+# State aliases: some chapters use a different state name than reign_periods
+# e.g., 田 → 齐 (田齐 in table 015 is listed under 齐)
+STATE_ALIASES = {'田': '齐'}
 
 
 def build_ruler_lookup(reign_data):
@@ -614,16 +646,24 @@ def load_person_disambig():
 
 
 def find_nearby_rulers(text, year_pos, max_dist=60):
-    """Find all person entities before the year position (within max_dist).
-    Returns list of person names, ordered nearest-first.
+    """Find all person/title entities before the year position (within max_dist).
+    Searches both @person@ and $title$ patterns since rulers may be tagged as either.
+    Returns list of (name, tag_type) tuples, ordered nearest-first.
     """
     search_start = max(0, year_pos - max_dist)
     before_text = text[search_start:year_pos]
 
-    # Find all person entities in the before text
-    persons = list(PERSON_RE.finditer(before_text))
-    # Return in reverse order (nearest first)
-    return [p.group(1) for p in reversed(persons)]
+    # Find all person entities AND title entities in the before text
+    # Combine and sort by position
+    found = []
+    for m in PERSON_RE.finditer(before_text):
+        found.append((m.start(), m.group(1), 'person'))
+    for m in TITLE_RE.finditer(before_text):
+        found.append((m.start(), m.group(1), 'title'))
+
+    # Sort by position descending (nearest first)
+    found.sort(key=lambda x: x[0], reverse=True)
+    return [name for _, name, _ in found]
 
 
 def resolve_ruler_name(raw_name, chapter_id, name_to_start, alias_to_primary, person_disambig,
@@ -723,6 +763,8 @@ def disambiguate_years(reign_data):
             continue
 
         chapter_state = CHAPTER_STATE.get(chapter_id, '')
+        # Resolve state aliases (e.g., 田→齐)
+        lookup_state = STATE_ALIASES.get(chapter_state, chapter_state) if chapter_state else ''
 
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -743,16 +785,22 @@ def disambiguate_years(reign_data):
             if m:
                 header_text = strip_entity_tags(m.group(1)).strip()
                 # Check if header contains a ruler name
-                # Headers like "## 文公、宁公" or "## 秦孝公"
-                for part in re.split(r'[、，]', header_text):
+                # Headers like "## 文公、宁公" or "## 秦王政时期"
+                # Strip common suffixes before matching
+                header_cleaned = re.sub(
+                    r'(?:时期|早期|晚期|征伐|之乱|世系表|大事记|东巡|暴政|称王|继位|称霸|末年|灭国|让国|出使|篡位)$',
+                    '', header_text)
+                for part in re.split(r'[、，]', header_cleaned):
                     part = part.strip()
+                    if not part:
+                        continue
                     resolved = resolve_ruler_name(
                         part, chapter_id, name_to_start,
-                        alias_to_primary, person_disambig, chapter_state)
+                        alias_to_primary, person_disambig, lookup_state)
                     if resolved:
                         # Only use as section ruler if matches chapter state
                         ruler_state = reign_data['rulers'].get(resolved, {}).get('state', '')
-                        if not chapter_state or ruler_state == chapter_state:
+                        if not lookup_state or ruler_state == lookup_state:
                             current_section_ruler = resolved
                             current_ruler = resolved
                         break
@@ -805,38 +853,50 @@ def disambiguate_years(reign_data):
 
                 # Try to find the ruler for this year
                 ruler = None
+                raw_ruler = None  # unresolved nearby person name
                 method = None
 
-                # Strategy 1: Nearby explicit ruler mention
+                # Strategy 1: Nearby explicit ruler/title mention
                 # Prefer rulers from the chapter's primary state;
                 # only use foreign rulers if chapter has no primary state
                 nearby_persons = find_nearby_rulers(line, match_start)
                 if nearby_persons:
                     best_foreign = None
+                    # Remember nearest clean name for fallback
+                    best_raw = None
+                    for p in nearby_persons:
+                        pc = p.strip()
+                        if (pc and len(pc) <= 8
+                                and not any(c in pc for c in '。，；：,.%@$&=*!?~')
+                                and re.search(r'[\u4e00-\u9fff]', pc)):
+                            best_raw = pc
+                            break
                     for person in nearby_persons:
                         resolved = resolve_ruler_name(
                             person, chapter_id, name_to_start,
-                            alias_to_primary, person_disambig, chapter_state)
+                            alias_to_primary, person_disambig, lookup_state)
                         if resolved:
                             ruler_state = reign_data['rulers'].get(resolved, {}).get('state', '')
-                            if ruler_state == chapter_state:
+                            if ruler_state == lookup_state and lookup_state:
                                 ruler = resolved
                                 method = 'nearby_ruler'
                                 break
                             elif best_foreign is None:
                                 best_foreign = resolved
-                    # Only use foreign ruler if chapter has no primary state
-                    if ruler is None and best_foreign and not chapter_state:
+                    # Use foreign ruler if chapter has no primary state
+                    if ruler is None and best_foreign and not lookup_state:
                         ruler = best_foreign
                         method = 'nearby_ruler'
+                    # Remember raw name for pre-table-era fallback
+                    if ruler is None and best_raw:
+                        raw_ruler = best_raw
 
                 # Strategy 2: Same ruler as previous year in this section
                 if ruler is None and current_ruler:
                     # If this is 元年, it might be a new ruler
                     if year_num == 1 and nearby_persons:
-                        # 元年 with a person mention - might be new ruler
                         pass  # already handled above
-                    elif current_ruler in name_to_start:
+                    else:
                         ruler = current_ruler
                         method = 'sequential'
 
@@ -845,41 +905,49 @@ def disambiguate_years(reign_data):
                     ruler = current_section_ruler
                     method = 'section_ruler'
 
-                # Strategy 4: Chapter state → find most likely ruler
-                # (this is very approximate - skip for now to avoid errors)
-
+                # Compute CE year if ruler is in reign_periods
+                ce_year = None
                 if ruler and ruler in name_to_start:
                     start_bce = name_to_start[ruler]
                     ce_year = calc_ce_year(start_bce, year_num)
 
-                    # Sanity check: the resulting year should be reasonable
-                    # (within the ruler's known reign period)
+                    # Sanity check: year should be within ruler's reign
                     ruler_info = reign_data['rulers'].get(ruler, {})
                     ruler_end = ruler_info.get('end_bce', 0)
                     result_bce = start_bce - year_num + 1
                     if ruler_end > 0 and result_bce < ruler_end - 5:
-                        # Year extends significantly beyond ruler's known end
+                        ce_year = None  # out of range, but still record ruler
                         stats['skipped_out_of_range'] += 1
-                        continue
 
+                # Determine ruler_key for indexing (used when ce_year is None)
+                display_ruler = ruler or raw_ruler or ''
+                ruler_key = f'{display_ruler}{surface}' if display_ruler else None
+
+                # Record the mapping
+                if ruler or raw_ruler:
                     if chapter_id not in year_map:
                         year_map[chapter_id] = {}
                     if current_para not in year_map[chapter_id]:
                         year_map[chapter_id][current_para] = {}
-                    year_map[chapter_id][current_para][surface] = {
-                        'ce_year': ce_year,
-                        'ruler': ruler,
-                        'method': method
+                    entry = {
+                        'ruler': display_ruler,
+                        'method': method or 'raw_nearby'
                     }
-                    stats[method] += 1
+                    if ce_year is not None:
+                        entry['ce_year'] = ce_year
+                    if ruler_key and ce_year is None:
+                        entry['ruler_key'] = ruler_key
+                    year_map[chapter_id][current_para][surface] = entry
+                    stats[method or 'raw_nearby'] += 1
 
-                    # Update current ruler tracking (only for chapter-state rulers)
-                    ruler_state = reign_data['rulers'].get(ruler, {}).get('state', '')
-                    if not chapter_state or ruler_state == chapter_state:
-                        if year_num == 1 and method == 'nearby_ruler':
-                            current_ruler = ruler
-                        elif method in ('nearby_ruler', 'sequential'):
-                            current_ruler = ruler
+                    # Update current ruler tracking
+                    if ruler and ruler in name_to_start:
+                        ruler_state = reign_data['rulers'].get(ruler, {}).get('state', '')
+                        if not lookup_state or ruler_state == lookup_state:
+                            if year_num == 1 and method == 'nearby_ruler':
+                                current_ruler = ruler
+                            elif method in ('nearby_ruler', 'sequential'):
+                                current_ruler = ruler
                 else:
                     stats['unresolved'] += 1
 
@@ -888,7 +956,7 @@ def disambiguate_years(reign_data):
                        if k not in ('unresolved', 'skipped_duration', 'skipped_out_of_range'))
     print(f"\n  SUMMARY:")
     print(f"    Mapped: {total_mapped}")
-    for method in ['era_name', 'nearby_ruler', 'sequential', 'section_ruler']:
+    for method in ['era_name', 'nearby_ruler', 'sequential', 'section_ruler', 'raw_nearby']:
         if stats[method]:
             print(f"      {method}: {stats[method]}")
     print(f"    Skipped (duration/age): {stats['skipped_duration']}")
@@ -979,29 +1047,59 @@ def get_century_label(ce_year):
         return f'{century}世纪'
 
 
-def generate_timeline(year_map):
-    """Generate timeline.html — CE-year indexed page."""
+def compute_reign_aliases(reign_data, ce_year):
+    """Compute all concurrent reign-year aliases for a given CE year.
+    Returns list of strings like '秦孝公元年', '周显王八年'.
+    """
+    aliases = []
+    bce = -ce_year if ce_year <= 0 else 0
+    for ruler_name, info in reign_data.get('rulers', {}).items():
+        start = info.get('start_bce', 0)
+        end = info.get('end_bce', 0)
+        if start >= bce >= end:
+            year_num = start - bce + 1
+            cn_year = int_to_cn(year_num)
+            aliases.append((start, f'{ruler_name}{cn_year}年'))
+    # Sort by start_bce descending (earliest-established states first)
+    aliases.sort(key=lambda x: x[0], reverse=True)
+    return [a[1] for a in aliases]
+
+
+def generate_timeline(year_map, reign_data=None):
+    """Generate timeline.html — CE-year indexed page.
+    Handles both CE-year entries and ruler_key entries (pre-841 BCE).
+    """
     print("\n=== Phase 3: Generating timeline.html ===")
 
     chapter_names = get_chapter_name_map()
 
-    # Aggregate all year references by CE year
-    # {ce_year: [(chapter_id, para_id, surface, ruler), ...]}
+    # Aggregate references:
+    # CE-year entries → by_year {ce_year: [...]}
+    # ruler_key entries → by_ruler_key {ruler_key: [...]}
     by_year = defaultdict(list)
+    by_ruler_key = defaultdict(list)
 
     for chapter_id, paras in year_map.items():
         for para_id, entries in paras.items():
             for surface, info in entries.items():
-                ce_year = info['ce_year']
-                ruler = info['ruler']
-                by_year[ce_year].append((chapter_id, para_id, surface, ruler))
+                ruler = info.get('ruler', '')
+                if 'ce_year' in info:
+                    ce_year = info['ce_year']
+                    by_year[ce_year].append((chapter_id, para_id, surface, ruler))
+                elif 'ruler_key' in info:
+                    rk = info['ruler_key']
+                    by_ruler_key[rk].append((chapter_id, para_id, surface, ruler))
 
     # Sort by CE year (ascending = earliest BCE first)
     sorted_years = sorted(by_year.keys())
 
     total_years = len(sorted_years)
     total_refs = sum(len(refs) for refs in by_year.values())
+    total_ruler_keys = len(by_ruler_key)
+    total_ruler_refs = sum(len(refs) for refs in by_ruler_key.values())
     print(f"  {total_years} distinct CE years, {total_refs} references")
+    if total_ruler_keys:
+        print(f"  {total_ruler_keys} ruler+year entries (pre-table era), {total_ruler_refs} references")
 
     # Group by century
     centuries = OrderedDict()
@@ -1049,6 +1147,9 @@ def generate_timeline(year_map):
         safe_id = label.replace('前', 'pre')
         lines.append(f'  <a href="#century-{safe_id}" class="pinyin-letter">'
                      f'{label}<span class="letter-count">{count}</span></a>')
+    if by_ruler_key:
+        lines.append(f'  <a href="#century-pretable" class="pinyin-letter">'
+                     f'先秦早期<span class="letter-count">{total_ruler_keys}</span></a>')
     lines.append('</div>')
 
     # Year entries grouped by century
@@ -1064,9 +1165,16 @@ def generate_timeline(year_map):
             year_display = format_bce_year(ce_year)
             year_anchor = f'year-{ce_year}'
 
-            # Determine ruler annotation for this year
-            rulers_at_year = set(r for _, _, _, r in refs)
-            ruler_str = '、'.join(sorted(rulers_at_year))
+            # Compute reign year aliases from all concurrent rulers
+            if reign_data:
+                alias_list = compute_reign_aliases(reign_data, ce_year)
+            else:
+                alias_list = []
+            # Fallback: use rulers from references if no reign_data
+            if not alias_list:
+                rulers_at_year = set(r for _, _, _, r in refs)
+                alias_list = sorted(rulers_at_year)
+            ruler_str = '、'.join(alias_list)
 
             lines.append(f'  <div class="entity-entry timeline-entry" id="{year_anchor}">')
 
@@ -1105,6 +1213,46 @@ def generate_timeline(year_map):
 
             lines.append('  </div>')
 
+        lines.append('</div>')
+
+    # Pre-table-era section (ruler+year indexed, no CE year)
+    if by_ruler_key:
+        lines.append('<div class="letter-section" id="century-pretable">')
+        lines.append('  <h2 class="letter-heading">先秦早期（年代不详）</h2>')
+        # Sort by ruler_key alphabetically
+        for rk in sorted(by_ruler_key.keys()):
+            refs = by_ruler_key[rk]
+            anchor = f'ruler-{rk}'
+            ruler_display = refs[0][3] if refs else ''  # ruler from first ref
+            surface_display = refs[0][2] if refs else ''  # surface from first ref
+
+            lines.append(f'  <div class="entity-entry timeline-entry" id="{html_mod.escape(anchor)}">')
+            lines.append('    <div class="entry-left">')
+            lines.append(f'      <span class="canonical-name time">{html_mod.escape(rk)}</span>')
+            lines.append(f'      <span class="entry-count">({len(refs)})</span>')
+            lines.append('    </div>')
+            lines.append('    <div class="entry-right">')
+
+            refs_by_chapter = defaultdict(list)
+            for ch_id, para_id, surface, ruler in refs:
+                refs_by_chapter[ch_id].append((para_id, surface, ruler))
+
+            ref_parts = []
+            for ch_id in sorted(refs_by_chapter.keys()):
+                ch_title, ch_stem = chapter_names.get(ch_id, (ch_id, ch_id))
+                ch_name = html_mod.escape(ch_title)
+                ch_refs = refs_by_chapter[ch_id]
+                ch_link = f'<a href="../chapters/{ch_stem}.html" class="chapter-ref-name">{ch_name}</a>'
+                para_links = []
+                for para_id, surface, ruler in ch_refs:
+                    para_links.append(
+                        f'<a href="../chapters/{ch_stem}.html#pn-{para_id}" class="para-ref">{para_id}</a>'
+                    )
+                ref_parts.append(f'{ch_link} {", ".join(para_links)}')
+
+            lines.append('      ' + ' <span class="ref-sep">|</span> '.join(ref_parts))
+            lines.append('    </div>')
+            lines.append('  </div>')
         lines.append('</div>')
 
     lines.append('</div>')
@@ -1179,7 +1327,7 @@ def main():
     save_year_map(year_map)
 
     # Phase 3: Generate timeline.html
-    generate_timeline(year_map)
+    generate_timeline(year_map, reign_data)
 
 
 if __name__ == '__main__':
