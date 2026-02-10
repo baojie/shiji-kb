@@ -478,11 +478,56 @@ MANUAL_RULERS = {
     '秦二世': {'state': '秦', 'start_bce': 209, 'end_bce': 207},
     # 共和 regency
     '共和': {'state': '周', 'start_bce': 841, 'end_bce': 828},
+
+    # ── 夏商周断代工程：西周王室（pre-841 BCE） ──
+    '周文王': {'state': '周', 'start_bce': 1099, 'end_bce': 1050},  # 即位约50年，断代工程推算
+    '周武王': {'state': '周', 'start_bce': 1049, 'end_bce': 1043},  # 克商1046年
+    '周成王': {'state': '周', 'start_bce': 1042, 'end_bce': 1021},
+    '周康王': {'state': '周', 'start_bce': 1020, 'end_bce': 996},
+    '周昭王': {'state': '周', 'start_bce': 995, 'end_bce': 977},
+    '周穆王': {'state': '周', 'start_bce': 976, 'end_bce': 922},
+    '周共王': {'state': '周', 'start_bce': 922, 'end_bce': 900},
+    '周懿王': {'state': '周', 'start_bce': 899, 'end_bce': 892},
+    '周孝王': {'state': '周', 'start_bce': 892, 'end_bce': 886},
+    '周夷王': {'state': '周', 'start_bce': 885, 'end_bce': 878},
+    '周厉王': {'state': '周', 'start_bce': 877, 'end_bce': 841},
+    # 周公摄政（成王年幼期间）
+    '周公': {'state': '周', 'start_bce': 1042, 'end_bce': 1036},
+
+    # ── 夏商周断代工程：商后期 ──
+    '帝武丁': {'state': '商', 'start_bce': 1250, 'end_bce': 1192},
+    '武乙': {'state': '商', 'start_bce': 1147, 'end_bce': 1113},
+    '文丁': {'state': '商', 'start_bce': 1112, 'end_bce': 1102},
+    '帝乙': {'state': '商', 'start_bce': 1101, 'end_bce': 1076},
+    '帝辛': {'state': '商', 'start_bce': 1075, 'end_bce': 1046},
+
+    # ── 鲁国早期（由鲁真公855BCE向前推算，据史记记载年数） ──
+    '鲁公伯禽': {'state': '鲁', 'start_bce': 1040, 'end_bce': 997},  # 46年（一说53年）
+    '鲁考公': {'state': '鲁', 'start_bce': 996, 'end_bce': 993},     # 4年
+    '鲁炀公': {'state': '鲁', 'start_bce': 992, 'end_bce': 987},     # 6年
+    '鲁幽公': {'state': '鲁', 'start_bce': 986, 'end_bce': 973},     # 14年
+    '鲁魏公': {'state': '鲁', 'start_bce': 972, 'end_bce': 923},     # 50年
+    '鲁厉公': {'state': '鲁', 'start_bce': 922, 'end_bce': 886},     # 37年
+    '鲁献公': {'state': '鲁', 'start_bce': 885, 'end_bce': 855},     # 32年（一说50年）
+
+    # ── 齐国早期（由齐武公850BCE向前推算） ──
+    '齐献公': {'state': '齐', 'start_bce': 859, 'end_bce': 851},     # 9年
+
+    # ── 宋国早期 ──
+    '宋微子': {'state': '宋', 'start_bce': 1040, 'end_bce': 996},    # 微子启，约44年
+
+    # ── 其他重要诸侯/人物 ──
+    '越王勾践': {'state': '越', 'start_bce': 496, 'end_bce': 465},   # 句践
+    '赵襄子': {'state': '赵', 'start_bce': 475, 'end_bce': 425},     # 无恤，赵氏执政
+    '赵幽缪王': {'state': '赵', 'start_bce': 236, 'end_bce': 228},   # 赵迁
+
+    # ── 汉代（CE纪年，用负数表示公元后） ──
+    '孝明皇帝': {'state': '汉', 'start_bce': -57, 'end_bce': -75},   # 汉明帝 (57-75 CE)
 }
 
 # Alias mapping: primary_name → [aliases that appear in text]
 RULER_ALIASES = {
-    '高皇帝': ['高祖', '高帝', '刘邦'],
+    '高皇帝': ['高祖', '高帝', '刘邦', '汉王'],
     '孝惠': ['孝惠帝', '惠帝', '孝惠皇帝'],
     '高后': ['吕后', '吕太后', '高太后'],
     '孝文': ['孝文帝', '文帝', '孝文皇帝'],
@@ -495,9 +540,19 @@ RULER_ALIASES = {
     # Table names that differ from common text names
     '秦惠文王': ['秦惠王'],
     '秦昭襄王': ['秦昭王'],
-    '秦始皇帝': ['秦始皇'],
+    '秦始皇帝': ['秦始皇', '始皇'],
     '秦始皇': ['秦王政'],
     '秦二世': ['二世'],
+    # Pre-841 BCE aliases (unambiguous in 史记 context)
+    '周文王': ['西伯'],           # 西伯昌 = 周文王
+    '帝武丁': ['高宗'],           # 商高宗 = 武丁
+    '帝辛': ['纣', '纣王', '帝纣'],  # 商纣王
+    '鲁公伯禽': ['伯禽'],         # 鲁国始封君
+    '鲁湣公': ['鲁闵公'],         # 闵/湣 通假
+    '宋微子': ['微子'],           # 宋国始封君
+    '越王勾践': ['句践', '勾践'],  # 越王
+    '赵幽缪王': ['幽缪王'],       # 赵末代王
+    '孝明皇帝': ['孝明', '明帝', '汉孝明皇帝'],  # 汉明帝
 }
 
 
@@ -522,6 +577,21 @@ def extract_reign_periods():
     all_rulers.update(rulers_015)  # Later table takes precedence
     all_rulers.update(rulers_022)
     all_rulers.update(MANUAL_RULERS)
+
+    # Fix rulers whose end_bce is wrong due to table boundaries or parsing issues.
+    # In BCE numbering, LOWER values = LATER dates (207 is later than 256).
+    # Two cases:
+    #   - end_bce too late (too low): table default 478/207 for rulers who died earlier
+    #   - end_bce too early (too high): table boundary cut off rulers who reigned longer
+    END_BCE_CORRECTIONS = {
+        '鲁哀公': 468,     # 实际在位到约468 BCE（史记：27年），表默认478过早
+        '晋定公': 475,     # 实际在位到约475 BCE
+        '郑声公': 463,     # 实际在位到约463 BCE
+        '周赧王': 256,     # 周灭于256 BCE，表默认207过晚
+    }
+    for name, corrected_end in END_BCE_CORRECTIONS.items():
+        if name in all_rulers:
+            all_rulers[name]['end_bce'] = corrected_end
 
     # Add aliases
     aliases = {}
@@ -726,7 +796,7 @@ def is_calendar_year(surface_text, context_before):
     # Check context: "立X年" or "在位X年" etc. are durations
     if context_before:
         last_chars = context_before[-3:]
-        if any(c in last_chars for c in ['立', '居', '历', '凡', '共', '在']):
+        if any(c in last_chars for c in ['立', '居', '历', '凡', '共', '在', '生', '国']):
             # Likely a duration: "立十二年卒" = "ruled for 12 years, died"
             return False
 
@@ -788,7 +858,7 @@ def disambiguate_years(reign_data):
                 # Headers like "## 文公、宁公" or "## 秦王政时期"
                 # Strip common suffixes before matching
                 header_cleaned = re.sub(
-                    r'(?:时期|早期|晚期|征伐|之乱|世系表|大事记|东巡|暴政|称王|继位|称霸|末年|灭国|让国|出使|篡位)$',
+                    r'(?:时期|早期|晚期|征伐|之乱|世系表|大事记|东巡|暴政|称王|继位|称霸|末年|灭国|让国|出使|篡位|诏|诏书)$',
                     '', header_text)
                 for part in re.split(r'[、，]', header_cleaned):
                     part = part.strip()
@@ -855,15 +925,16 @@ def disambiguate_years(reign_data):
                 ruler = None
                 raw_ruler = None  # unresolved nearby person name
                 method = None
+                best_foreign = None
+                best_raw = None
 
                 # Strategy 1: Nearby explicit ruler/title mention
                 # Prefer rulers from the chapter's primary state;
-                # only use foreign rulers if chapter has no primary state
+                # track closest foreign ruler for fallback
                 nearby_persons = find_nearby_rulers(line, match_start)
+                first_resolved_foreign = None  # closest resolved foreign ruler
                 if nearby_persons:
-                    best_foreign = None
                     # Remember nearest clean name for fallback
-                    best_raw = None
                     for p in nearby_persons:
                         pc = p.strip()
                         if (pc and len(pc) <= 8
@@ -883,6 +954,8 @@ def disambiguate_years(reign_data):
                                 break
                             elif best_foreign is None:
                                 best_foreign = resolved
+                                if first_resolved_foreign is None:
+                                    first_resolved_foreign = resolved
                     # Use foreign ruler if chapter has no primary state
                     if ruler is None and best_foreign and not lookup_state:
                         ruler = best_foreign
@@ -890,6 +963,18 @@ def disambiguate_years(reign_data):
                     # Remember raw name for pre-table-era fallback
                     if ruler is None and best_raw:
                         raw_ruler = best_raw
+
+                # Strategy 1b: If the closest resolved entity is a foreign ruler
+                # and it's the FIRST person found (immediately preceding the year),
+                # it takes priority over sequential — explicit mention outranks inheritance
+                if ruler is None and first_resolved_foreign and nearby_persons:
+                    first_person = nearby_persons[0]
+                    first_resolved = resolve_ruler_name(
+                        first_person, chapter_id, name_to_start,
+                        alias_to_primary, person_disambig, lookup_state)
+                    if first_resolved == first_resolved_foreign:
+                        ruler = first_resolved_foreign
+                        method = 'nearby_ruler'
 
                 # Strategy 2: Same ruler as previous year in this section
                 if ruler is None and current_ruler:
@@ -905,6 +990,11 @@ def disambiguate_years(reign_data):
                     ruler = current_section_ruler
                     method = 'section_ruler'
 
+                # Strategy 4: Foreign ruler fallback (e.g., 周武王 in 鲁世家 narrative)
+                if ruler is None and best_foreign:
+                    ruler = best_foreign
+                    method = 'nearby_ruler'
+
                 # Compute CE year if ruler is in reign_periods
                 ce_year = None
                 if ruler and ruler in name_to_start:
@@ -916,8 +1006,28 @@ def disambiguate_years(reign_data):
                     ruler_end = ruler_info.get('end_bce', 0)
                     result_bce = start_bce - year_num + 1
                     if ruler_end > 0 and result_bce < ruler_end - 5:
-                        ce_year = None  # out of range, but still record ruler
-                        stats['skipped_out_of_range'] += 1
+                        # Out of range — try recovery: find correct same-state ruler
+                        # whose reign actually contains year_num
+                        ce_year = None
+                        ruler_state = ruler_info.get('state', '')
+                        recovered = False
+                        if ruler_state and year_num <= 60:
+                            matched_start = name_to_start[ruler]
+                            # Look for later rulers of same state (lower start_bce)
+                            candidates = [(n, s, e) for n, s, e in
+                                          state_rulers.get(ruler_state, [])
+                                          if s < matched_start]
+                            for r_name, r_start, r_end in candidates:
+                                new_bce = r_start - year_num + 1
+                                if r_end - 5 <= new_bce <= r_start:
+                                    ce_year = -new_bce
+                                    ruler = r_name
+                                    method = (method or 'sequential') + '_corrected'
+                                    recovered = True
+                                    stats['out_of_range_recovered'] += 1
+                                    break
+                        if not recovered:
+                            stats['skipped_out_of_range'] += 1
 
                 # Determine ruler_key for indexing (used when ce_year is None)
                 display_ruler = ruler or raw_ruler or ''
@@ -953,12 +1063,15 @@ def disambiguate_years(reign_data):
 
     # Print stats
     total_mapped = sum(v for k, v in stats.items()
-                       if k not in ('unresolved', 'skipped_duration', 'skipped_out_of_range'))
+                       if k not in ('unresolved', 'skipped_duration', 'skipped_out_of_range',
+                                    'out_of_range_recovered'))
     print(f"\n  SUMMARY:")
     print(f"    Mapped: {total_mapped}")
     for method in ['era_name', 'nearby_ruler', 'sequential', 'section_ruler', 'raw_nearby']:
         if stats[method]:
             print(f"      {method}: {stats[method]}")
+    if stats['out_of_range_recovered']:
+        print(f"    Recovered (out-of-range → correct ruler): {stats['out_of_range_recovered']}")
     print(f"    Skipped (duration/age): {stats['skipped_duration']}")
     print(f"    Skipped (out of range): {stats['skipped_out_of_range']}")
     print(f"    Unresolved: {stats['unresolved']}")
