@@ -27,7 +27,7 @@ ontology/
 
 | Type | Description | Files |
 |------|-------------|-------|
-| **Factual** | Facts, definitions, data points, statistics | `header.md` + `content.md` or `content.json` |
+| **Factual** | Facts, definitions, data points, statistics | `header.md` + `content.md` or `content.json` + `entities.json` |
 | **Procedural** | Workflows, skills, step-by-step processes | `header.md` + `SKILL.md` |
 | **Relational** | Category hierarchy and glossary | `label_tree.json` + `glossary.json` |
 
@@ -58,6 +58,17 @@ ontology/
 | 礼乐祭祀 | 5 | 封禅、祭祀制度 |
 | 史记总论与司马迁 | 5 | 著述缘起、体例、太史公自序 |
 | 天文历法与地理 | 1 | 律吕 |
+
+## 实体标注
+
+基于项目已有的 11 类命名实体识别（人名、地名、官职、时间、朝代、制度、族群、器物、天文、神话、动植物），对 Factual SKU 内容进行了实体匹配增补：
+
+- **已标注**：394 / 434 个 SKU（90.8%）
+- **总实体标注数**：7,497（平均每个 SKU 19.0 个实体）
+- **输出文件**：每个 SKU 目录下的 `entities.json`
+- **40 个未标注**：内容为纯英文，无中文实体名可匹配
+
+每个 `entities.json` 包含按类型分组的实体列表、实体总数和 top 5 高频实体。`skus_index.json` 中同步更新了 `entity_count` 和 `top_entities` 字段。
 
 ## 关系知识
 
