@@ -1,0 +1,16 @@
+**Rang Hou Wei Ran (穰侯魏厓)**
+- Relation: Brother of Queen Mother Xuan (宣太后), maternal uncle of King Zhao
+- Origin: Ancestors from Chu, surname Mi (羋)
+- Family:
+  - Half-brother (same mother): Mi Rong, Lord of Huayang (华阳君)
+  - King Zhao's full brothers: Lord of Gaoling (高陵君), Lord of Jingyang (泾阳君)
+- Career:
+  - Served since King Hui and King Wu's time
+  - Instrumental in establishing King Zhao on throne
+  - Appointed General, guarded Xianyang
+  - Suppressed the rebellion of Lord Ji (季君)
+  - Four times served as Chancellor of Qin
+  - 14th year of King Zhao: Appointed Bai Qi, defeated Han and Wei at Yique (240,000 killed)
+  - Granted fiefs: Rang (穰) and Tao (陶), hence title Rang Hou
+- Downfall: Removed from power due to Fan Ju's (范睢) criticism of his excessive power
+- Death: Died in Tao, buried there; Qin later reclaimed Tao as a commandery

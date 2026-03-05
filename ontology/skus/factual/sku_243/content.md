@@ -1,0 +1,13 @@
+**Wang Jian (王翦)**
+- Origin: Pinyang Dongxiang (频阳东乡)
+- Served: Qin Shi Huang (秦始皇)
+- Major campaigns:
+  - 11th year: Attacked Zhao Yu-yu, took 9 cities
+  - 18th year: Conquered Zhao, Zhao king surrendered
+  - Following year: Attacked Yan (after Jing Ke assassination attempt); Yan king fled to Liaodong
+  - Chu campaign: Initially recommended 600,000 troops; Qin used Li Xin with 200,000 instead and was defeated
+  - Later led 600,000 troops, defeated Chu, killed general Xiang Yan, captured King Fuchu
+- Strategy: Requested many fields and gardens to show he had no political ambitions, reassuring the suspicious Qin king
+- Son: Wang Ben (王贲) - helped conquer Yan and Qi
+- Grandson: Wang Li (王离) - captured by Xiang Yu at Julu
+- Proverb about three generations of generals: "A family that has been generals for three generations will surely fail" (夫为将三世者必败)

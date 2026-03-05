@@ -1,0 +1,1 @@
+**Yu Qing (虞卿)** was a persuader/lobbyist (游说之士). He wore straw sandals (蹑蹻) and carried an umbrella (檐簦) to persuade King Xiaocheng of Zhao. At first meeting, he was given 100 yi of gold and a pair of white jade. At second meeting, he was made Supreme Minister (上卿) of Zhao, hence called Yu Qing.

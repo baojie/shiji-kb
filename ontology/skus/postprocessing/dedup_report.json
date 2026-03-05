@@ -1,0 +1,674 @@
+{
+  "created_at": "2026-02-28T20:51:16.336757",
+  "buckets_scanned": 9,
+  "pairs_flagged": 66,
+  "pairs_resolved": 66,
+  "total_deleted": 0,
+  "total_rewritten": 0,
+  "total_merged": 0,
+  "total_kept": 66,
+  "total_contradictions": 0,
+  "actions": [
+    {
+      "sku_a": "sku_271",
+      "sku_b": "sku_299",
+      "action": "keep",
+      "detail": "Both SKUs cover the same Four Lords topic but serve different purposes. SKU A provides clean structured JSON data (title/state pairs), while SKU B offers richer content with personal names (田文, 赵胜, 魏无忌, 黄歇) and historical context text. They are complementary rather than near-identical duplicates.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_344",
+      "sku_b": "sku_356",
+      "action": "keep",
+      "detail": "These SKUs cover different aspects of the same historical event (七国之乱 - Rebellion of Seven States). SKU A provides a structured list of the seven participating kingdoms, their rulers, and their fates. SKU B covers different information: the timing, roles of key figures (窦婴 and 灌夫), and the rebellion's outcome. They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_345",
+      "sku_b": "sku_356",
+      "action": "keep",
+      "detail": "Both SKUs cover the same historical event (Seven States Rebellion/七国之乱) but from completely different angles. SKU A provides a chronological timeline of military and political events with specific dates. SKU B focuses on biographical details of specific individuals (Dou Ying and Guan Fu) and their roles during the rebellion. They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_351",
+      "sku_b": "sku_356",
+      "action": "keep",
+      "detail": "These SKUs cover different aspects of the same historical event (Rebellion of Seven States). SKU A focuses on the post-rebellion political reorganization - what happened to the kingdoms and kings after the rebellion ended. SKU B focuses on the rebellion itself - key figures like Dou Ying and Guan Fu, their roles during the conflict, and the military outcome. They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_297",
+      "sku_b": "sku_355",
+      "action": "keep",
+      "detail": "These are distinct datasets covering different historical periods. SKU A (warring-states-rankings) covers Warring States period figures (黄歇, 范睢, 乐毅, 廉颇, etc.) with territory/enfeoffment information. SKU B (official-appointments) covers Han Dynasty figures (窦婴, 田蚡, 灌夫, etc.) with chronological appointment data using era names (孝文, 孝景, 建元). No overlap in persons, different data structures (territory vs era), and different historical contexts. Both serve complementary purposes.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_403",
+      "sku_b": "sku_355",
+      "action": "keep",
+      "detail": "These are two distinct datasets with different purposes. SKU A (enfeoffments-titles) documents military enfeoffments - marquis titles granted with household counts to generals like Wei Qing and Huo Qubing for campaign victories. SKU B (official-appointments) tracks government administrative appointments (chancellor, imperial secretary, etc.) with era/time information for court officials like Dou Ying and Tian Fen. There is no overlap in the people listed, and the data structures serve different historical documentation purposes - one for feudal noble titles, one for bureaucratic positions.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_294",
+      "sku_b": "sku_319",
+      "action": "keep",
+      "detail": "These are NOT duplicates - they cover completely different historical figures. SKU A (sku_294) is about 田单, a Warring States period general famous for the 'fire cattle' strategy against Yan (~284-279 BCE). SKU B (sku_319) is about 田儋, 田荣, and 田横 - Qin-Han transition period figures (~209-202 BCE) who rebelled against Qin. Despite sharing the same SKU name 'tian-dan-biography', the content is about entirely different people from different eras. SKU B's description mentions 'Tian Dan' but the actual content is about 田儋 and his brothers. Both should be kept, though SKU B's name/description is misleading.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_333",
+      "sku_b": "sku_349",
+      "action": "keep",
+      "detail": "These SKUs serve different purposes and are not duplicates. SKU A is a comprehensive Chinese-language biography covering Chao Cuo's entire life with structured details (background, career, personality, father's warning, death). SKU B is a focused English-language narrative specifically about his execution and its immediate context. They complement each other - one provides full biographical reference, the other offers a targeted account of his fate. The information is consistent between them, not contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_201",
+      "sku_b": "sku_132",
+      "action": "keep",
+      "detail": "These SKUs are complementary, not duplicates. SKU A is a comprehensive biography from the Shiji perspective, covering ancestry, physical description, career progression, travels, works, and disciples in Classical Chinese style. SKU B focuses specifically on Confucius's political career in Lu state, with detailed diplomatic events (Jia Gu meeting, Three Huan fortifications, Qi dancing girls incident) not mentioned in SKU A. The birth (551 BCE/22nd year of Duke Xiang) and death (479 BCE/16th year of Duke Ai) dates are consistent between both. They serve different purposes: one is a broad biographical overview, the other is a focused political timeline.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_233",
+      "sku_b": "sku_237",
+      "action": "keep",
+      "detail": "These two SKUs serve different purposes and are complementary, not duplicates. SKU A (sku_233) is a comprehensive structured data list of 35 disciples with detailed fields including names, courtesy names, origins, ages relative to Confucius, and classifications. SKU B (sku_237) is a narrative summary that highlights only the key disciples in each category and adds unique value with Confucius's evaluations (师也辟，参也鲁，柴也愚，由也喭，回也屡空; 赐不受命而货殖焉，亿则屡中). The categorizations in both are consistent - no contradictions exist. One is a reference dataset, the other is an interpretive summary with additional commentary.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_316",
+      "sku_b": "sku_317",
+      "action": "keep",
+      "detail": "These are two different historical figures who happen to share the same name (韩信/Han Xin). SKU A is about the famous general Han Xin, Marquis of Huaiyin (淮阴侯韩信), known for his brilliant military strategies and eventual execution by Empress Lü. SKU B is about Han Xin, King of Han (韩王信), a descendant of Korean royalty who was made King of Han, later defected to the Xiongnu, and was killed in battle. This is a well-known historical distinction - there were two notable figures named Han Xin during the Chu-Han Contention period. The description in SKU B even explicitly notes 'different from Marquis of Huaiyin.' Both entries are accurate and serve different purposes.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_072",
+      "sku_b": "sku_318",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures. SKU A is about Liu Bang (刘邦), the founder of the Han Dynasty and Emperor Gaozu. SKU B is about Lu Wan (卢绾), a close friend and associate of Liu Bang who later became King of Yan but eventually fled to the Xiongnu. While Lu Wan's biography references Liu Bang (as they were close friends from the same village born on the same day), the subjects are entirely different people with distinct life stories. No overlap or contradiction exists.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_204",
+      "sku_b": "sku_205",
+      "action": "keep",
+      "detail": "These are biographies of two different historical figures from the Han Dynasty. SKU A is about Xiao He (萧何), while SKU B is about Cao Can (曹参). They are distinct individuals - Xiao He was the first chancellor who preserved Qin's legal documents and recommended Han Xin, while Cao Can succeeded him as chancellor and was known for his Huang-Lao governance philosophy. The only connection is that Cao Can followed Xiao He's policies, which is reflected in the famous saying in SKU B. These are complementary, not duplicate or contradictory entries.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_206",
+      "sku_b": "sku_207",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures from the Han Dynasty. SKU A is about Zhang Liang (张良), the Marquis of Liu (留侯), known for his role in helping Liu Bang establish the Han dynasty. SKU B is about Chen Ping (陈平), the Chancellor who served as Left and Right Prime Minister under Emperor Hui and Empress Lü. They are distinct individuals with different backgrounds, career paths, titles, and contributions. Both SKUs contain unique, non-overlapping content about different people.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_222",
+      "sku_b": "sku_128",
+      "action": "keep",
+      "detail": "These are distinct topics with no overlap. SKU A is a biography of Guan Zhong (a specific historical figure, prime minister of Qi). SKU B is about the geography and culture of the state of Qi itself, drawing from Sima Qian's descriptions. While both relate to Qi state history, one focuses on a person and the other on regional geography/culture. They complement each other rather than duplicate or contradict.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_285",
+      "sku_b": "sku_268",
+      "action": "keep",
+      "detail": "These are completely different topics. SKU A is a biography of Lord Chunshen (春申君/Huang Xie), Chancellor of Chu. SKU B is Sima Qian's evaluation of Pingyuan Lord (平原君) and Yu Qing - entirely different historical figures. Pingyuan Lord and Lord Chunshen were two of the 'Four Lords of the Warring States' but are distinct individuals with separate biographies. No overlap or contradiction exists.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_300",
+      "sku_b": "sku_302",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures. SKU A is about Qu Yuan (屈原), a Warring States period poet and minister from Chu who wrote 'Li Sao' and drowned himself in the Miluo River. SKU B is about Jia Yi (贾谊), a Han dynasty scholar who served Emperor Wen and wrote 'Lament for Qu Yuan' among other works. The only connection is that Jia Yi wrote a literary piece commemorating Qu Yuan, but they are distinct individuals from different eras (centuries apart).",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_311",
+      "sku_b": "sku_312",
+      "action": "keep",
+      "detail": "These are biographies of two distinct historical figures from the late Qin/early Han dynasty period. SKU A is about Zhang Er (张耳), while SKU B is about Chen Yu (陈馀). They were contemporaries and former allies who later became enemies, but they are separate individuals with different life stories, careers, and deaths. The fact that each biography references the other is appropriate historical context, not duplication. Zhang Er died in Han Year 5 and was posthumously named King Jing, while Chen Yu was killed by Han Xin in Han Year 3. These are clearly distinct content pieces about different people.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_314",
+      "sku_b": "sku_315",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures from the Chu-Han Contention period. SKU A is about Peng Yue (彭越), who became King of Liang. SKU B is about Qing Bu/Ying Bu (黥布/英布), who became King of Jiujiang and later King of Huainan. They have different origins, different career paths, and different fates. The only connection is that Qing Bu's biography mentions he became fearful after Peng Yue was executed, but these are distinct individuals with separate biographical entries. No overlap or contradiction exists.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_320",
+      "sku_b": "sku_321",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures from the Han Dynasty period. SKU A is about 樊哙, the Marquis of Wuyang, who was a butcher turned general and brother-in-law to Empress Lü. SKU B is about 郦商, the Marquis of Quzhou, a different general who came from Gaoyang. They have different backgrounds, different military achievements, different family lines, and different titles. There is no overlap or contradiction - they are simply two distinct biographical entries for two different people.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_322",
+      "sku_b": "sku_323",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures from the Han Dynasty founding era. SKU A is about 夏侯婴 (Xiahou Ying), the Marquis of Ruyin - a charioteer who served as Grand Servant (太仆) and famously protected Liu Bang's children during flight. SKU B is about 灌婴 (Guan Ying), the Marquis of Yingyin - a former silk merchant who became a cavalry commander and Imperial Secretary, later Prime Minister. Different names, titles, backgrounds, careers, and posthumous honors (文侯 vs 懿侯). Not duplicates.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_324",
+      "sku_b": "sku_325",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures from the Han dynasty. SKU A is about 张苍 (Zhang Cang), a chancellor known for his scholarly contributions to music theory and calendar reform, who lived over 100 years. SKU B is about 周昌 (Zhou Chang), an upright official famous for his outspoken nature and defending the crown prince with his memorable '期期' (qi qi) stutter. Different people, different life stories, different contributions - both should be preserved.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_326",
+      "sku_b": "sku_327",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures from the Han Dynasty. SKU A is about 郦食其, who was killed by the King of Qi. SKU B is about 陆贾, a different diplomat who served Liu Bang, was sent to Nanyue, and wrote 'Xinyu' (New Language). They are distinct individuals with different life stories, accomplishments, and fates.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_328",
+      "sku_b": "sku_330",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures from the Han Dynasty. SKU A is about Liu Jing (刘敬, originally named Lou Jing 娄敬), an advisor to Emperor Gaozu known for recommending the capital location in Guanzhong and proposing the heqin (marriage alliance) policy with the Xiongnu. SKU B is about Ji Bu (季布), a different person entirely - a knight-errant from Chu famous for keeping promises ('得黄金百，不如得季布一诺'). They are distinct individuals with different backgrounds, accomplishments, and historical significance. No overlap or contradiction exists.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_331",
+      "sku_b": "sku_332",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures from the Han dynasty. SKU A is about 栾布, known for his loyalty to Peng Yue and crying at his executed friend's head. SKU B is about 袁盎, an outspoken official known for his direct remonstrations to Emperor Wen. They have different backgrounds, different life stories, different accomplishments, and different deaths. There is no overlap, duplication, or contradiction between these entries.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_334",
+      "sku_b": "sku_338",
+      "action": "keep",
+      "detail": "These are two completely different biographies of different historical figures. SKU A is about Zhang Shizhi (张释之), a Han Dynasty law enforcement official known for his strict and fair application of law. SKU B is about Bian Que (扁鹊), a legendary ancient Chinese physician known for his medical skills and famous treatments. They share no overlap in subject matter, time period, or content. Both should be retained as distinct entries.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_339",
+      "sku_b": "sku_338",
+      "action": "keep",
+      "detail": "These are biographies of two completely different historical figures. SKU A is about Cang Gong (仓公), also known as Chunyu Yi (淳于意), a physician from the Han Dynasty who was the Granary Official of Qi. SKU B is about Bian Que (扁鹊), also known as Qin Yueren (秦越人), a legendary physician from the Warring States period. They have different origins, different teachers, different medical stories, and different historical contexts. Cang Gong is famous for the Tiyin saving her father story and his diagnostic records, while Bian Que is famous for the six incurable conditions, treating the Crown Prince of Guo, and his tragic death at the hands of a rival physician. These are distinct, complementary content pieces about two major figures in Chinese medical history.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_352",
+      "sku_b": "sku_353",
+      "action": "keep",
+      "detail": "These are two distinct biographical entries about two different historical figures from the Han Dynasty. SKU A is about Dou Ying (窦婴, 魏其侯), while SKU B is about Tian Fen (田蚡, 武安侯). They are separate individuals with their own identities, career trajectories, and character descriptions. While they are related figures who interacted with each other (noted in both entries as political rivals), each SKU provides unique biographical information about a different person. There is no duplication or contradiction - these are complementary entries about two different people.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_354",
+      "sku_b": "sku_352",
+      "action": "keep",
+      "detail": "These are biographies of two different historical figures from the Han Dynasty. SKU A is about Guan Fu (灌夫), a general, while SKU B is about Dou Ying (窦婴), also known as Wei Qi Hou. They are distinct individuals with different backgrounds, careers, and fates. Notably, SKU A even references their relationship ('与魏其侯相得，游如父子' - he got along well with Wei Qi Hou like father and son), confirming they are separate persons. Both entries contain unique, non-overlapping biographical content.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_363",
+      "sku_b": "sku_364",
+      "action": "keep",
+      "detail": "These two SKUs serve different purposes and are complementary, not duplicates. SKU A is a general biography covering multiple aspects of Han Anguo's life (background, teacher, personality, military achievements, talent recommendations, death). SKU B is specifically a structured career timeline in JSON format with detailed position progression. While there is some overlap (both mention he served as 中大夫 under 梁孝王 and became 御史大夫), the focus and format are entirely different. SKU A provides narrative context while SKU B provides granular career data useful for structured queries or timeline visualizations.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_368",
+      "sku_b": "sku_363",
+      "action": "keep",
+      "detail": "These are distinct, complementary SKUs. SKU A focuses on a specific famous anecdote (the 'dead ashes' story about Han Anguo's imprisonment and forgiveness of the prison guard). SKU B is a general biographical entry covering Han Anguo's life, career, military achievements, character, and death. They serve different purposes and do not overlap or contradict each other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_369",
+      "sku_b": "sku_363",
+      "action": "keep",
+      "detail": "These are distinct entries serving different purposes. SKU A (sku_369) focuses on a specific historical incident - the Gongsun Gui and Yang Sheng assassination plot - with detailed content about the conspiracy, pursuit, and Han Anguo's persuasive arguments. SKU B (sku_363) is a general biographical entry about Han Anguo covering his background, career, military achievements, character traits, and death. While they both reference Han Anguo, one is event-focused and the other is person-focused. They complement rather than duplicate each other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_370",
+      "sku_b": "sku_363",
+      "action": "keep",
+      "detail": "These two SKUs serve different purposes and cover distinct aspects of Han Anguo. SKU A (sku_370) focuses specifically on his final military campaign at Yuyang, the strategic error of withdrawing troops, the Xiongnu attack, and the events leading to his death. SKU B (sku_363) is a general biographical overview covering his entire life including birthplace, teachers, early career, character traits, and achievements during the Rebellion of the Seven States. While both mention his death by vomiting blood, SKU A provides detailed context while SKU B only notes the year and cause. They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_365",
+      "sku_b": "sku_371",
+      "action": "keep",
+      "detail": "These two SKUs cover different aspects of the same historical event (the Mayi ambush). SKU A documents the military deployment - troop counts, location, commanders with their titles/positions, the plan, and a brief outcome summary. SKU B focuses specifically on the aftermath for one commander (Wang Hui), detailing his crime, defense, trial, plea for leniency, and eventual suicide. They are complementary, not duplicates or contradictory. SKU A provides the operational context while SKU B provides the consequential legal/political narrative.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_366",
+      "sku_b": "sku_390",
+      "action": "keep",
+      "detail": "These SKUs cover distinctly different aspects of Han-Xiongnu relations. SKU A documents a specific court debate (likely during Emperor Wu's reign) between Wang Hui and Han Anguo about whether to accept a Heqin proposal, including their detailed arguments and the outcome. SKU B provides a broader historical overview of the Heqin policy itself - its origins under Emperor Gaozu, implementation under Empress Dowager Lü and Emperor Wen, and diplomatic protocols. One is an incident-focused narrative; the other is a policy overview. They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_387",
+      "sku_b": "sku_388",
+      "action": "keep",
+      "detail": "These two SKUs cover distinctly different aspects of Modu Chanyu's life. SKU 387 focuses on his rise to power - the internal succession struggle, the whistling arrow training method, and his assassination of his father Touman to become Chanyu. SKU 388 covers his subsequent military conquests and territorial expansion AFTER becoming Chanyu - the destruction of Donghu, western campaigns against Yuezhi, northern conquests, and recovery of lands from Qin. They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_389",
+      "sku_b": "sku_390",
+      "action": "keep",
+      "detail": "These are distinct but related topics. SKU A covers the Battle of Baideng - a specific military event where Emperor Gaozu was besieged. SKU B covers the Heqin policy - a diplomatic marriage alliance system that was created as a RESULT of the Baideng siege. SKU B even references the siege as the origin point for the policy. They cover different aspects of Han-Xiongnu relations (military vs. diplomatic) and complement rather than duplicate each other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_394",
+      "sku_b": "sku_400",
+      "action": "keep",
+      "detail": "These SKUs have different scopes and serve different purposes. SKU A provides a broad overview of all Han military campaigns against Xiongnu under Emperor Wu, covering multiple generals (Wei Qing, Huo Qubing, Li Guang, Gongsun Ao, Gongsun He) and events like the Mayi Ambush. SKU B is specifically a detailed record of Wei Qing's seven campaigns in structured JSON format with Chinese characters, official titles, and routes. The information about Wei Qing's campaigns is consistent between both (e.g., 700 heads at Longcheng, 15,000 captured at Right Wise King battle, 19,000 at Zhaoxin City). They complement rather than duplicate each other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_394",
+      "sku_b": "sku_402",
+      "action": "keep",
+      "detail": "These are complementary, not duplicates or contradictory. SKU A provides a broad overview of all Han campaigns against Xiongnu under Emperor Wu, covering multiple generals (Wei Qing, Gongsun He, Gongsun Ao, Li Guang, and Huo Qubing) across multiple campaigns. SKU B is a focused, detailed record specifically of Huo Qubing's six campaigns with granular data including Chinese characters, exact troop numbers, specific achievements, and enfeoffment rewards. While there's overlap in the Huo Qubing campaigns (121 BCE and 119 BCE), SKU B provides significantly more detail and structured data for those specific operations. The numerical figures are consistent (e.g., ~70,000 enemies in 119 BCE), just presented at different precision levels. They serve different purposes: one is a general historical overview, the other is a specialized military record.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_400",
+      "sku_b": "sku_402",
+      "action": "keep",
+      "detail": "These are records of two different historical figures: Wei Qing (卫青) and Huo Qubing (霍去病). Both were Han dynasty generals who fought against the Xiongnu, but they are distinct individuals with separate military careers. Wei Qing was the older general and Huo Qubing's uncle by marriage. The campaigns, dates, achievements, and titles are different for each general. These are complementary records, not duplicates or contradictions.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_397",
+      "sku_b": "sku_398",
+      "action": "keep",
+      "detail": "These are two different historical figures. SKU A is about Li Ling (grandson of Li Guang) who led 5,000 infantry and surrendered after running out of supplies. SKU B is about Li Guangli (Ershi General) who led much larger forces in two separate campaigns and surrendered after learning his family was executed in a witchcraft scandal. While both generals surrendered to the Xiongnu, they are distinct individuals with different campaigns, circumstances, and outcomes. Both entries should be preserved.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_415",
+      "sku_b": "sku_426",
+      "action": "keep",
+      "detail": "These are distinct documents with different scopes and purposes. SKU A is a broad categorized list of notable Han dynasty officials across 14 categories (military, diplomatic, scholarly, artistic, etc.) as recorded by Ban Gu - it's essentially a reference index of names. SKU B focuses specifically on Confucian scholars with detailed biographical narratives including origins, positions, notable incidents, and philosophical contributions. While there's one overlapping name (董仲舒/Dong Zhongshu), the treatment is entirely different - SKU A just lists him, while SKU B provides his biography. These complement rather than duplicate each other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_415",
+      "sku_b": "sku_427",
+      "action": "keep",
+      "detail": "These are two distinct datasets about Han dynasty officials. SKU A is a categorized list of notable officials by their attributes/skills (儒雅, 笃行, 质直, etc.) as recorded by Ban Gu - a reference classification. SKU B is specifically about 'cruel officials' (酷吏) with detailed biographical narratives. While Zhang Tang (张汤) appears in both, this is appropriate - he was both involved in law-making AND known as a harsh official. The SKUs serve different purposes: one is a categorical reference, the other is biographical narratives about a specific type of official. They are complementary, not duplicates or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_426",
+      "sku_b": "sku_427",
+      "action": "keep",
+      "detail": "These are two completely distinct topics. SKU A profiles Confucian scholars (intellectuals, teachers, philosophers) during the Han dynasty, including figures like Dong Zhungshu and Fu Sheng. SKU B profiles cruel officials (harsh administrators and enforcers), including figures like Zhang Tang and Zhi Du. The names, descriptions, and all content are different. There is no overlap or contradiction - these are complementary articles about different categories of Han dynasty historical figures.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_429",
+      "sku_b": "sku_426",
+      "action": "keep",
+      "detail": "These are completely distinct topics. SKU A covers knight-errants (Youxia) - martial figures known for chivalry and helping others - profiling Zhu Jia, Ju Meng, and Guo Xie. SKU B covers Confucian scholars - intellectual figures focused on teaching and philosophy - profiling Shen Pei Gong, Yuan Gu Sheng, Han Sheng, Fu Sheng, and Dong Zhongshu. Different people, different social roles, different themes. No overlap or contradiction.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_429",
+      "sku_b": "sku_427",
+      "action": "keep",
+      "detail": "These are two completely different topics. SKU A covers knight-errants (Youxia) - vigilante heroes like Zhu Jia, Ju Meng, and Guo Xie who were known for helping people and practicing virtue. SKU B covers cruel officials like Zhi Du, Zhang Tang, and Du Zhou who were government administrators known for harsh enforcement and brutality. Different people, different themes, different historical roles. No overlap or contradiction.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_018",
+      "sku_b": "sku_031",
+      "action": "keep",
+      "detail": "These are two different historical systems that share the same name but represent distinct interpretations. SKU A describes the 禹贡 version from the Book of Documents - a territorial administration system with 5 zones (甸服, 侯服, 绥服, 要服, 荒服) focused on distance-based tax duties. SKU B describes the 国语 version attributed to King Mu's minister - a ritual submission system with different zones (甸服, 侯服, 宾服, 要服, 荒服) focused on tribute frequency. Note the key difference: SKU A has 绥服 while SKU B has 宾服. These are complementary historical perspectives, not duplicates.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_080",
+      "sku_b": "sku_081",
+      "action": "keep",
+      "detail": "These two SKUs describe entirely different historical periods and feudal systems. SKU A covers the Zhou dynasty's five-rank nobility system with specific feudatory details, while SKU B covers the Han dynasty's two-rank system with different administrative structures, the Push Grace policy, and later Han developments. They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_105",
+      "sku_b": "sku_019",
+      "action": "keep",
+      "detail": "These are completely different concepts. SKU A describes the Five Virtues (五德) - the Wuxing/Five Elements theory applied to dynastic succession in Chinese history, associating each dynasty with an elemental virtue (earth, wood, metal, fire, water). SKU B describes Gaoyao's Nine Virtues (九德) - character traits for evaluating government officials, such as '宽而栗' (broad-minded yet dignified). Despite both having 'virtues' in their names, they address entirely different topics: dynastic cosmology vs. official evaluation criteria.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_094",
+      "sku_b": "sku_095",
+      "action": "keep",
+      "detail": "These are two distinct concepts in Chinese music theory. SKU A describes the five tones (五音) of the pentatonic scale with their cosmological correspondences (political roles, organs, virtues). SKU B describes the twelve pitch pipes (十二律) of the chromatic scale with their calendrical correspondences (months, celestial stems/branches). While both relate to traditional Chinese music theory, they cover entirely different systems with different purposes and attributes. Neither duplicates nor contradicts the other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "sku_097",
+      "sku_b": "sku_098",
+      "action": "keep",
+      "detail": "These two SKUs cover entirely different aspects of the same five planets. SKU A documents symbolic correspondences (elements, directions, seasons, heavenly stems) from a Chinese cosmological/philosophical perspective. SKU B documents orbital periods and astronomical movement patterns. They are complementary, not duplicates or contradictory - one addresses metaphysical associations while the other addresses physical orbital characteristics.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_097",
+      "sku_b": "skill_130",
+      "action": "keep",
+      "detail": "These two SKUs serve distinct purposes despite similar names. SKU A (alliance-formation-strategy) is a comprehensive framework covering all types of alliances (marriage, military, mutual defense) with focus on assessment, negotiation, and long-term maintenance. SKU B (strategic-alliance-formation) is specifically tactical - focused on coalition-building against a powerful adversary by identifying disgruntled parties and coordinating multi-front pressure. SKU A is broader and diplomatic; SKU B is targeted and military-strategic. They complement rather than duplicate each other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_097",
+      "sku_b": "skill_137",
+      "action": "keep",
+      "detail": "These two SKUs address alliance-building from distinctly different angles. SKU A (alliance-formation-strategy) provides a general structural framework covering alliance types (marriage, military, mutual defense), pre-alliance assessment criteria, and ongoing maintenance practices. SKU B (alliance-building-diplomacy) focuses specifically on diplomatic persuasion tactics for coalition-building against a common threat, with tailored approaches for different party types (weaker states, stronger states, states with geographic barriers) and draws from Su Qin's historical Chinese strategies. They are complementary rather than duplicative - one is structural/process-oriented, the other is tactical/persuasion-oriented.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_130",
+      "sku_b": "skill_137",
+      "action": "keep",
+      "detail": "These two SKUs address alliance-building from different angles with distinct methodologies. SKU A (strategic-alliance-formation) focuses on military strategy - identifying allies based on grievances against an enemy, coordinating multi-front attacks, and tactical coordination. SKU B (alliance-building-diplomacy) focuses on diplomatic negotiation - analyzing each party's unique position, tailoring appeals to different types of states (weaker vs stronger), and formalizing agreements with ceremonies and guarantees. While both involve forming alliances against common threats, SKU A is tactical/military-focused while SKU B is diplomatic/negotiation-focused with different frameworks and expected outcomes.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_106",
+      "sku_b": "skill_141",
+      "action": "keep",
+      "detail": "These are distinct strategies with different scopes and applications. SKU A (strategic-alliance-encirclement) is a grand strategy focused on diplomatic coalition-building to isolate a superior enemy over time through alliances and political maneuvering. SKU B (military-encirclement-tactics) is a battlefield tactic focused on luring a fortified enemy out and destroying them through physical encirclement and supply interdiction. Different use cases (undefeatable enemy vs fortified enemy), different methods (diplomacy/alliances vs feigned retreat/ambush), different historical sources (Feng Tong vs Bai Qi), and different scales (strategic vs tactical).",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_135",
+      "sku_b": "skill_128",
+      "action": "keep",
+      "detail": "These are distinct strategies. SKU A (military-deception-tactics) focuses on battlefield deception - staging retreats to lure enemies into ambushes and asymmetric troop deployment for tactical advantage. SKU B (counterintelligence-and-strategic-deception) focuses on psychological warfare - sowing discord between enemy leaders and advisors through disinformation campaigns. While both involve deception, they address completely different scenarios and methods. No overlap or contradiction exists.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_110",
+      "sku_b": "skill_144",
+      "action": "keep",
+      "detail": "These are distinct military strategy skills with different historical sources, contexts, and applications. SKU A (timing-military-attack) is based on Fan Li's counsel to Goujian and focuses on attacking when an enemy has internally weakened themselves (eliminated advisors, deployed forces elsewhere, become complacent). SKU B (strategic-patience-warfare) is based on Wang Jian's conquest of Chu and focuses on commanding overwhelming force, maintaining defensive positions, and striking when the enemy tires and withdraws. While both involve patience, they address different tactical scenarios: exploiting enemy self-weakening vs. outwaiting a determined enemy with superior force.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_088",
+      "sku_b": "skill_090",
+      "action": "keep",
+      "detail": "These are distinct skills serving different purposes. SKU A is a governance decision-making framework that uses divination as ONE of four consultation sources (alongside personal judgment, ministers, and common people), focusing on how to weigh multiple inputs for major decisions. SKU B is a technical procedure specifically for interpreting Zhou Yi (I Ching) hexagram transformations and readings for future predictions. They address different domains (decision process vs. interpretation technique), use different methods (multi-source consultation vs. hexagram analysis), and serve different use cases. They could even be complementary - one might use SKU B's interpretation method as part of SKU A's divination consultation step.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_091",
+      "sku_b": "skill_131",
+      "action": "keep",
+      "detail": "These two SKUs describe fundamentally different succession systems from ancient Chinese governance. SKU A (virtuous-succession-protocol) focuses on hereditary succession (世袭) - father-to-son or brother-to-brother transitions, with guidance on when to deviate from primogeniture for virtuous reasons. SKU B (ancient-leadership-succession-protocol) focuses on the merit-based abdication system (禅让) used by sage kings like Yao, Shun, and Yu, where successors are chosen based on capability regardless of bloodline. These are complementary, not duplicative or contradictory - they address different governance contexts and succession paradigms.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_096",
+      "sku_b": "skill_103",
+      "action": "keep",
+      "detail": "These are distinct skills addressing different succession scenarios. SKU A (succession-crisis-resolution) provides a political/institutional framework with priority rules and ministerial consensus for disputed succession. SKU B (divine-succession-determination) is a specific ritual method for breaking ties when multiple heirs have equal claim and the decision-maker needs to avoid appearing biased. They use fundamentally different approaches (political vs. ritual/divine) and serve different use cases - one for establishing legitimate rule through established protocols, the other for using divine will as a tie-breaker. They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_098",
+      "sku_b": "skill_119",
+      "action": "keep",
+      "detail": "These are distinct skills serving different purposes. SKU A (minister-selection-meritocracy) is a process-oriented framework covering the entire selection workflow with principles for recommendations and a step-by-step process. SKU B (five-criteria-official-evaluation) is a specific character evaluation methodology with five distinct observational criteria. They are complementary rather than duplicative - the five criteria could be used within step 3 (Evaluate Candidates) of the meritocracy process. Neither contradicts the other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_083",
+      "sku_b": "skill_140",
+      "action": "keep",
+      "detail": "These are distinct governance approaches addressing different aspects of leadership. SKU A focuses on personal leadership style - how a ruler should be physically present and accessible to administer justice directly to people at all social levels. SKU B focuses on systemic institutional reform - legal codes, economic incentives, collective punishment systems, and merit-based restructuring. They represent different philosophical traditions (benevolent personal governance vs. legalist systemic reform) and serve different use cases. Neither duplicates nor contradicts the other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_100",
+      "sku_b": "skill_129",
+      "action": "keep",
+      "detail": "These are distinct skills serving different purposes. SKU A (five-difficulties-state-assessment) evaluates whether a contender can successfully ACQUIRE power - it's a pre-takeover assessment focused on structural conditions for seizing political control. SKU B (proper-rulership-assessment) evaluates whether an existing ruler is governing well - it's a post-takeover governance quality assessment. They address different stages of political leadership (acquiring vs. exercising power), use different frameworks (Five Difficulties vs. governance indicators), and evaluate different subjects (contenders vs. sitting rulers). They are complementary, not duplicative or contradictory.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_155",
+      "sku_b": "skill_082",
+      "action": "keep",
+      "detail": "These are distinct recruitment strategies with different philosophies and target candidates. SKU A focuses on accepting unconventional/diverse talent (social outcasts, unusual skills) that others reject, emphasizing tolerance of social pressure and waiting for crisis moments where unconventional skills shine. SKU B focuses on actively attracting high-quality conventional talent through demonstrations of respect, humility, and symbolic gestures. They address different recruitment scenarios: one for building crisis-resilient teams through diversity, the other for attracting skilled individuals through reputation and good treatment. They are complementary, not duplicative.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_156",
+      "sku_b": "skill_155",
+      "action": "keep",
+      "detail": "These are distinct skills addressing different aspects of talent management. SKU A (skill_156) focuses on RETENTION - how to keep talented followers by maintaining credibility and demonstrating values alignment through corrective action. SKU B (skill_155) focuses on RECRUITMENT - how to build a versatile team by accepting unconventional talent. They address different phases of the talent lifecycle and different leadership challenges. Neither duplicates nor contradicts the other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    },
+    {
+      "sku_a": "skill_160",
+      "sku_b": "skill_130",
+      "action": "keep",
+      "detail": "These two SKUs share the same name but serve different strategic purposes. SKU A (skill_160) is specifically about responding to territorial demands by using contested resources as leverage to build counter-alliances - a defensive posture decision framework. SKU B (skill_130) is a broader methodology for identifying and recruiting allies against a common enemy, including coordination of multi-front pressure. They have different steps, different use cases (defensive leverage vs. offensive coalition-building), and SKU B includes specific historical examples while A focuses on a decision matrix. They complement rather than duplicate each other.",
+      "deleted_skus": [],
+      "rewritten_skus": [],
+      "new_content": null,
+      "merged_content": null
+    }
+  ],
+  "contradictions": []
+}

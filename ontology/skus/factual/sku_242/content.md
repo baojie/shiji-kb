@@ -1,0 +1,18 @@
+**Bai Qi (白起)**
+- Origin: Mei (郿)
+- Title: Wu'an Jun (武安君 - Lord of Military Peace)
+- Major military campaigns:
+  - Yique (伊阙): Defeated Han and Wei, killed 240,000, captured General Gongsun Xi
+  - Conquered Wei: Took 61 cities
+  - Conquered Chu: Took Yan, Deng (5 cities), then Ying; burned Yiling; Chu king fled to Chen
+  - Qin established Nanyang Commandery from conquered Chu territory
+  - Huayang: Defeated Wei, killed 130,000, drowned 20,000 Zhao troops
+  - Xingcheng: Killed 50,000
+  - **Changping (长平)**: Most famous battle against Zhao
+    - Zhao commander Lian Po initially defended
+    - Qin used counter-espionage to make Zhao replace Lian Po with Zhao Kuo
+    - Bai Qi secretly took command
+    - Result: 450,000 Zhao soldiers killed/buried alive; only 240 young ones spared
+- Death: 50th year of King Zhao (November), ordered to commit suicide at Duyou (杜邮)
+- Reason for execution: Refused to lead attack on Handan after Changping, angering King Zhao
+- After death: People of Qin pitied him; villages and towns all offered sacrifices to him

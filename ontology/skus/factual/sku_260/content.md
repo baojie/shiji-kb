@@ -1,0 +1,1 @@
+**Pingyuan Lord (平原君)** - Named Zhao Sheng (赵胜), was a prince of Zhao State. Among all princes, he was considered the most virtuous. He enjoyed hosting guests, with thousands arriving at his residence. He served as Prime Minister to King Huiwen and King Xiaocheng of Zhao, being removed and restored to the position three times. He was enfeoffed at Dongwu City (东武城).

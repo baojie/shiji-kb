@@ -1,0 +1,1 @@
+A theory states: 'Things begin in the east and mature in the west.' Those who initiate actions always do so in the southeast, but those who achieve success often do so in the northwest. Examples: Yu arose in Western Qiang; Tang rose in Bo; the Zhou kings used Feng and Hao to attack Yin; the Qin empire rose through Yong province; the Han rose from Shu and Han regions.

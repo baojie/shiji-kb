@@ -1,0 +1,15 @@
+**Qiu Lizi (樗里子)**
+- Personal name: Ji (疾)
+- Relation: Younger half-brother of Qin King Hui (秦惠王); different mothers
+- Mother: Korean woman
+- Known for: Wit and wisdom; Qin people called him "Wisdom Bag" (智囊)
+- Career milestones:
+  - 8th year of King Hui: Granted rank of Right Geng (右更), led army to conquer Quwo
+  - 25th year of King Hui: Led army against Zhao, captured General Zhuang Bao, took Lin
+  - Following year: Helped Wei Zhang defeat Chu general Qu Gai, took Hanzhong
+  - Granted title: Lord Yan (严君)
+  - Under King Wu: Appointed Right Chancellor (右丞相)
+  - Under King Zhao: Even more respected
+- Death: 7th year of King Zhao, buried east of Zhangtai in Weinan (渭南章台之东)
+- Prophecy: Predicted that in 100 years, imperial palaces would flank his tomb. When Han dynasty rose, Changle Palace was to his east, Weiyang Palace to his west, and the armory directly above his grave
+- Qin proverb: "For strength, there is Ren Bi; for wisdom, there is Qiu Lizi"

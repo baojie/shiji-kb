@@ -1,0 +1,14 @@
+**Zou Yan (驺衍)**
+- Origin: Qi (齐)
+- Time: After Mencius
+- Major theories:
+  - Yin-yang and Five Elements (阴阳消息, 五德转移)
+  - Wrote over 100,000 words on cosmic cycles
+- **Geographical theory**:
+  - China is called Chi Xian Shen Zhou (赤县神州 - Red County Divine Province)
+  - China = 1/81 of the world
+  - China internally has 9 provinces (as arranged by Yu)
+  - Outside China, there are 8 other regions like Chi Xian Shen Zhou = the true "Nine Provinces"
+  - Each of these 9 regions surrounded by small ocean (裨海)
+  - All 9 regions together surrounded by Great Ocean (大瀛海)
+- Reception: Treated with great honor by rulers - King Hui of Liang welcomed him personally; King Zhao of Yan became his disciple

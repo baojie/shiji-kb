@@ -1,0 +1,1 @@
+The Xiongnu primarily raised horses, cattle, and sheep. Their unusual/extraordinary livestock included: camels (橐扆), donkeys (驴), mules (駃騠), wild horses (騊駼), and wild asses (驒騱). They migrated following water and grass, had no city walls or permanent settlements, and did not practice agriculture, though each group had their own designated territories.

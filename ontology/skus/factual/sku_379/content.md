@@ -1,0 +1,1 @@
+The Xiongnu claimed descent from Chunwei (淳维), a descendant of the Xia dynasty ruling house. Before the Tang and Yu eras, there were the Shanrong (山戎), Xianyun (獫狁), and Xunzhou (荤粥) peoples who lived in the northern barbarian lands. They moved with their livestock and had no fixed settlements.

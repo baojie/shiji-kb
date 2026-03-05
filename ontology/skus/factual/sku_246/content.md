@@ -1,0 +1,11 @@
+**Xun Qing (荀卿)**
+- Origin: Zhao (赵)
+- Age: Came to Qi at age 50 to study
+- Career:
+  - Three times served as Jijiu (祭酒 - libationer/elder) at Jixia Academy
+  - Slandered by people of Qi, left for Chu
+  - Appointed magistrate of Lanling (兰陵令) by Chunshen Jun
+  - After Chunshen Jun's death, lost position but remained in Lanling
+- Famous student: Li Si (李斯) who later became Chancellor of Qin
+- Works: Wrote tens of thousands of words on Confucian, Mohist, and Daoist teachings
+- Death: Died and buried in Lanling

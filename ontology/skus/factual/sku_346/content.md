@@ -1,0 +1,1 @@
+Liu Bi, at age 62, personally led his army. He mobilized all men between ages 14 (his youngest son's age) and 62 (his own age), raising over 200,000 troops. He also sent envoys to Minyue (闽越) and Dongyue (东越), with Dongyue sending troops to join. Liu Bi claimed his kingdom could field 500,000 elite soldiers, plus 300,000 from Nanyue allies.

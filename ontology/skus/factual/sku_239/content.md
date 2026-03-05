@@ -1,0 +1,11 @@
+**Gan Mao (甘茂)**
+- Origin: Xia Cai (下蔡)
+- Teacher: Studied under Mr. Shi Ju (史举先生) of Xia Cai, learned the arts of various schools
+- Career:
+  - Introduced to King Hui through Zhang Yi and Qiu Lizi
+  - Assisted Wei Zhang in conquering Hanzhong
+  - Under King Wu: Appointed Left Chancellor (左丞相)
+  - Led attack on Han, conquered Yiyang (宜阳) - killed 60,000
+  - Later fled Qin due to slander from Xiang Shou and Gongsun Shi
+- Exile: Fled to Qi, then to Wei where he died
+- Grandson: Gan Luo (甘罗)
