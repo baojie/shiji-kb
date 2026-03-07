@@ -14,10 +14,79 @@
 - 开发交互式可视化平台
 - 构建Neo4j知识图谱数据库
 - index页面展开小节目录、章节卡片高度可变
+- 找到史记事实的矛盾处、可疑处
 
 ---
 
-## [实体别名合并与语义消歧] - 2026-02-10
+## 数据校正与文档统一 ([e12f805](https://github.com/baojie/shiji-kb/commit/e12f805)) - 2026-03-08
+
+### 更改 (Changed)
+
+- 📊 **全项目数据统一**
+  - 统一实体统计为130章完整数据：12,527个独立实体，71,857次标注（原52章数据：5,282/24,249）
+  - 字数口径修正：576,915字（纯汉字），原"628,466字"为含标点但不含表格的错误统计
+  - 表卷字数从5,010更新为70,525（包含十表表格文字）
+  - 立传人物时代分布补充五帝/夏/商（约80人）和西周（约120人）两个缺失时期
+- 📖 **文档更新**
+  - `README.md`：更新实体统计、字数、五卷分布等核心数据
+  - `doc/史记统计分析.md`：全面校正统计数据，处理进度更新为100%，版本v1.2
+  - `doc/史记高级分析计划.md`：更新实体数量和进度信息
+
+---
+
+## SKU实体增补 ([85df920](https://github.com/baojie/shiji-kb/commit/85df920)) - 2026-03-05
+
+### 新增 (Added)
+
+- 🏷️ **Factual SKU 实体标注**
+  - 新增 `augment_sku_entities.py`：利用 `entity_index.json` 中 10,110 个实体（含别名，8,173 个≥2字名称）对 434 个 Factual SKU 内容进行文本匹配
+  - 为 394 个 SKU 生成 `entities.json`（覆盖率 90.8%），共 7,497 个实体标注，平均每个 SKU 19.0 个
+  - 每个 `entities.json` 包含按 11 类分组的实体列表、实体总数、top 5 高频实体
+  - 40 个未标注 SKU 为纯英文内容，无中文实体名可匹配
+- 📊 **SKU 索引更新**
+  - `skus_index.json` 新增 `entity_count` 和 `top_entities` 字段
+
+### 更改 (Changed)
+
+- 📖 **文档更新**
+  - `ontology/README.md` 新增实体标注章节，SKU Types 表格增加 `entities.json`
+  - `README.md` 新增 SKU 知识单元和实体增补相关内容
+
+---
+
+## 知识单元（SKU）体系 ([dc8c13d](https://github.com/baojie/shiji-kb/commit/dc8c13d)) - 2026-02-28
+
+### 新增 (Added)
+
+- 📦 **标准知识单元（SKU）**
+  - 由 anything2ontology 工具生成，含 434 个事实知识（Factual）、241 个技能知识（Procedural）、1 个关系知识（Relational）
+  - 事实知识：`header.md` + `content.md` 或 `content.json`，涵盖人物传记、诸侯国、军事、思想等 14 个主题
+  - 技能知识：`header.md` + `SKILL.md`，涵盖军事战略、治国理政、外交等 14 个主题
+  - 关系知识：标签体系（20 个顶层分类）、术语表（978 条）、实体关系（1,336 条三元组）
+- 📋 **知识索引文档**
+  - `ontology/facts_index.md`：434 个事实知识的中文分类索引
+  - `ontology/skills_index.md`：241 个技能知识的中文分类索引
+  - `ontology/relational_index.md`：关系知识概览
+  - `ontology/README.md`：知识体系总览和使用指南
+
+---
+
+## 时间线实体与年份消歧 ([59c3814](https://github.com/baojie/shiji-kb/commit/59c3814)) - 2026-02-25
+
+### 新增 (Added)
+
+- ⏰ **时间线实体**
+  - `build_year_map.py`：从历史年表中提取君主在位年份，构建公元纪年映射
+  - `year_ce_map.json`：叙事年份→公元年份映射（288 种年份格式）
+  - `reign_periods.json`：历代君主在位年份数据库
+  - `timeline.html`：公元纪年索引的时间线页面
+- 🎯 **年份消歧**
+  - 覆盖全部非年表章节，支持先秦早期索引和纪年别名
+  - 修复孝明皇帝归属、周赧王在位年、时长过滤等问题
+
+---
+
+## 实体别名合并与语义消歧 ([2580cfc](https://github.com/baojie/shiji-kb/commit/2580cfc)) - 2026-02-10
 
 ### 新增 (Added)
 
@@ -46,7 +115,7 @@
 
 ---
 
-## [命名实体索引系统] - 2026-02-09
+## 命名实体索引系统 ([f586a61](https://github.com/baojie/shiji-kb/commit/f586a61)) - 2026-02-09
 
 ### 新增 (Added)
 
@@ -82,7 +151,7 @@
 
 ---
 
-## [十表完整表格渲染管线](https://github.com/baojie/shiji-kb/commit/b77c59f) - 2026-02-09
+## 十表完整表格渲染管线 ([b77c59f](https://github.com/baojie/shiji-kb/commit/b77c59f)) - 2026-02-09
 
 ### 新增 (Added)
 
@@ -114,7 +183,7 @@
 
 ---
 
-## [项目文件结构整理](https://github.com/baojie/shiji-kb/commit/e5d8429) - 2026-02-08
+## 项目文件结构整理 ([e5d8429](https://github.com/baojie/shiji-kb/commit/e5d8429)) - 2026-02-08
 
 ### 更改 (Changed)
 
@@ -131,7 +200,7 @@
 
 ---
 
-## [HTML渲染修复](https://github.com/baojie/shiji-kb/commit/fbf6b4b) - 2026-02-08
+## HTML渲染修复 ([fbf6b4b](https://github.com/baojie/shiji-kb/commit/fbf6b4b)) - 2026-02-08
 
 ### 修复 (Fixed)
 
@@ -146,7 +215,7 @@
 
 ---
 
-## [全部130章小节划分](https://github.com/baojie/shiji-kb/commit/98d97a3) - 2026-02-08
+## 全部130章小节划分 ([98d97a3](https://github.com/baojie/shiji-kb/commit/98d97a3)) - 2026-02-08
 
 ### 新增 (Added)
 
@@ -157,7 +226,7 @@
 
 ---
 
-## [项目结构重构](https://github.com/baojie/shiji-kb/commit/2f8f0ad) - 2026-02-08
+## 项目结构重构 ([2f8f0ad](https://github.com/baojie/shiji-kb/commit/2f8f0ad)) - 2026-02-08
 
 ### 新增 (Added)
 - 📁 **项目结构大幅重构**
@@ -192,7 +261,7 @@
 
 ---
 
-## [知识图谱系统完善](https://github.com/baojie/shiji-kb/commit/863b6c3) - 2026-02-07
+## 知识图谱系统完善 ([863b6c3](https://github.com/baojie/shiji-kb/commit/863b6c3)) - 2026-02-07
 
 ### 新增 (Added)
 - 📊 **知识图谱系统完善**
@@ -213,7 +282,7 @@
 
 ---
 
-## [HTML展示系统完善](https://github.com/baojie/shiji-kb/commit/02508b4) - 2026-02-06
+## HTML展示系统完善 ([02508b4](https://github.com/baojie/shiji-kb/commit/02508b4)) - 2026-02-06
 
 ### 新增 (Added)
 - 🌐 **HTML展示系统完善**
@@ -236,7 +305,7 @@
 
 ---
 
-## [完整HTML生成系统](https://github.com/baojie/shiji-kb/commit/02508b4) - 2026-02-06
+## 完整HTML生成系统 ([02508b4](https://github.com/baojie/shiji-kb/commit/02508b4)) - 2026-02-06
 
 ### 新增 (Added)
 - 🏗️ **完整HTML生成系统**
@@ -256,7 +325,7 @@
 
 ---
 
-## [核心标注系统建立](https://github.com/baojie/shiji-kb/commit/73c7aed) - 2026-01-23
+## 核心标注系统建立 ([73c7aed](https://github.com/baojie/shiji-kb/commit/73c7aed)) - 2026-01-23
 
 ### 新增 (Added)
 - 📚 **核心标注系统建立**
@@ -280,7 +349,7 @@
 
 ---
 
-## [项目启动/RDF试验](https://github.com/baojie/shiji-kb/commit/256f6cc) - 2025-02至03
+## 项目启动/RDF试验 ([256f6cc](https://github.com/baojie/shiji-kb/commit/256f6cc)) - 2025-02至03
 
 ### 新增 (Added)
 - 🚀 **项目启动** (2025-02-04)
@@ -343,5 +412,5 @@
 
 ---
 
-**最后更新**: 2026-02-09
-**当前版本**: v0.6.0
+**最后更新**: 2026-03-08
+**当前版本**: v0.9.0
