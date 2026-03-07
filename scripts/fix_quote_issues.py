@@ -34,6 +34,8 @@ def regenerate_html(chapter_name):
         return False
 
     # 使用generate_all_chapters.py中的逻辑
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
     from render_shiji_html import markdown_to_html
 
     # 提取章节编号

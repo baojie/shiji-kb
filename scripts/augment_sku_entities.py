@@ -11,10 +11,11 @@ import os
 import re
 from collections import defaultdict
 
-ENTITY_INDEX = "entity_index.json"
-ALIAS_FILE = "entity_aliases.json"
-SKUS_INDEX = "ontology/skus/skus_index.json"
-FACTUAL_DIR = "ontology/skus/factual"
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ENTITY_INDEX = os.path.join(_PROJECT_ROOT, "kg", "entity_index.json")
+ALIAS_FILE = os.path.join(_PROJECT_ROOT, "kg", "entity_aliases.json")
+SKUS_INDEX = os.path.join(_PROJECT_ROOT, "ontology", "skus", "skus_index.json")
+FACTUAL_DIR = os.path.join(_PROJECT_ROOT, "ontology", "skus", "factual")
 
 # 实体类型的中文名，用于输出
 ENTITY_TYPE_NAMES = {
@@ -175,7 +176,7 @@ def main():
     for sku_info in factual_skus:
         sku_id = sku_info["sku_id"]
         source_chunk = sku_info.get("source_chunk", "")
-        sku_dir = os.path.join("ontology/skus/factual", sku_id)
+        sku_dir = os.path.join(FACTUAL_DIR, sku_id)
 
         if not os.path.isdir(sku_dir):
             skipped += 1

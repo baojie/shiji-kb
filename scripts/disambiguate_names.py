@@ -24,8 +24,9 @@ import json
 import sys
 from collections import defaultdict, Counter
 
-CHAPTER_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chapter_md')
-OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'disambiguation_map.json')
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CHAPTER_DIR = os.path.join(_PROJECT_ROOT, 'chapter_md')
+OUTPUT_FILE = os.path.join(_PROJECT_ROOT, 'kg', 'disambiguation_map.json')
 
 # Maximum length for a "full name" - anything longer is likely a regex false positive
 MAX_FULLNAME_LEN = 8

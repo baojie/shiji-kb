@@ -101,7 +101,7 @@ def _get_alias_reverse_map():
     if _alias_reverse_map is not None:
         return _alias_reverse_map
 
-    alias_file = Path(__file__).parent / 'entity_aliases.json'
+    alias_file = Path(__file__).parent / 'kg' / 'entity_aliases.json'
     _alias_reverse_map = {}
     if alias_file.exists():
         try:
@@ -125,7 +125,7 @@ def _get_disambiguation_map():
     if _disambiguation_map is not None:
         return _disambiguation_map
 
-    map_file = Path(__file__).parent / 'disambiguation_map.json'
+    map_file = Path(__file__).parent / 'kg' / 'disambiguation_map.json'
     _disambiguation_map = {}
     if map_file.exists():
         try:
@@ -142,7 +142,7 @@ def _get_year_ce_map():
     if _year_ce_map is not None:
         return _year_ce_map
 
-    map_file = Path(__file__).parent / 'year_ce_map.json'
+    map_file = Path(__file__).parent / 'kg' / 'year_ce_map.json'
     _year_ce_map = {}
     if map_file.exists():
         try:

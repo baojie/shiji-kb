@@ -20,8 +20,9 @@ import json
 from pathlib import Path
 from collections import defaultdict
 
-CHAPTER_DIR = Path('chapter_md')
-ALIAS_FILE = Path('entity_aliases.json')
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+CHAPTER_DIR = _PROJECT_ROOT / 'chapter_md'
+ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entity_aliases.json'
 PERSON_PATTERN = r'@([^@\n]+)@'
 
 # 标记符号，含这些字符的不是合法人名

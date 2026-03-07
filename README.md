@@ -234,13 +234,13 @@
 shiji-kb/
 ├── README.md                      # 项目说明
 ├── CHANGELOG.md                   # 更新日志
+├── TODO.md                        # 任务清单
 ├── render_shiji_html.py           # 核心：Markdown→HTML渲染器
 ├── generate_all_chapters.py       # 批量生成全部130章HTML
-├── build_entity_index.py          # 实体索引生成（索引页+JSON）
-├── disambiguate_names.py          # 歧义短名语义消歧脚本
-├── augment_sku_entities.py        # SKU实体增补脚本
-├── entity_aliases.json            # 实体别名合并配置（~570条）
+├── publish_to_docs.sh             # 发布到GitHub Pages
 ├── sections_data.json             # 章节小节数据
+│
+├── chapter_md/                    # 标注后的Markdown文件（130/130 ✅）
 │
 ├── docs/                          # GitHub Pages网站
 │   ├── index.html                # 首页（瀑布流卡片布局）
@@ -249,62 +249,47 @@ shiji-kb/
 │   ├── entities/                 # 实体索引页面（11类+总览）
 │   └── original_text/            # 130篇原始文本
 │
-├── chapter_md/                    # 标注后的Markdown文件
-│   ├── 001_五帝本纪.tagged.md   # 已标注
-│   ├── 002_夏本纪.tagged.md
-│   └── ...                       # 130/130全部完成 ✅
-│
 ├── kg/                           # 知识图谱数据
-│   ├── README.md                 # 知识图谱说明
+│   ├── entity_aliases.json       # 实体别名合并配置（~570条）
+│   ├── entity_index.json         # 实体索引数据（12,527条）
+│   ├── disambiguation_map.json   # 人名消歧映射
+│   ├── year_ce_map.json          # 年份→公元纪年映射
+│   ├── reign_periods.json        # 君主在位年份数据库
 │   ├── vocabularies/             # 实体分类词表（11类）
 │   ├── relations/                # 人物关系网络
 │   ├── genealogy/                # 帝王家谱
-│   ├── kg_build_vocabularies.py      # 词表生成脚本
-│   ├── kg_extract_all_relations.py   # 关系提取脚本
-│   ├── kg_extract_family_relations.py
-│   ├── kg_extract_imperial_genealogy.py
-│   └── kg_extract_flora_fauna.py
+│   ├── kg_build_vocabularies.py  # 词表生成脚本
+│   ├── kg_extract_all_relations.py
+│   └── ...                       # 其他KG提取脚本
+│
+├── ontology/                     # 标准知识单元（SKU）
+│   └── skus/                    # 434 Factual + 241 Procedural + 1 Relational
+│
+├── scripts/                      # 工具脚本
+│   ├── build_entity_index.py     # 实体索引生成
+│   ├── build_year_map.py         # 年份映射构建
+│   ├── disambiguate_names.py     # 歧义短名语义消歧
+│   ├── auto_detect_aliases.py    # 别名自动检测
+│   ├── augment_sku_entities.py   # SKU实体增补
+│   ├── lint_markdown.py          # Markdown标注格式检查
+│   ├── lint_html.py              # HTML输出格式检查
+│   ├── analyze_word_frequency.py # 词频统计分析
+│   └── ...                       # 其他辅助脚本
 │
 ├── doc/                          # 项目文档
-│   ├── TODO.md                   # 任务清单
-│   ├── FORMAT_SPECIFICATION.md   # 标注格式规范（含Lint规则）
-│   ├── ENTITY_TAGGING_SCHEME.md  # 实体标注规范
-│   ├── WORKFLOW.md               # 工作流程
-│   ├── LINT_GUIDE.md             # Lint使用指南
-│   ├── LINTER_COVERAGE.md        # Linter覆盖率报告
-│   ├── PARAGRAPH_NUMBERING_SUMMARY.md
-│   ├── GITHUB_PAGES_SETUP.md
-│   ├── PURPLE_NUMBERS.md         # Purple Numbers系统说明
 │   ├── 研究方法总则.md            # 研究方法体系
 │   ├── 史记高级分析计划.md        # 高级分析方案
 │   ├── 史记统计分析.md            # 统计数据报告
+│   ├── FORMAT_SPECIFICATION.md   # 标注格式规范
 │   └── ...                       # 其他技术文档
 │
-├── scripts/                      # 工具脚本
-│   ├── lint_markdown.py          # Markdown标注格式检查
-│   ├── lint_html.py              # HTML输出格式检查
-│   ├── validate_tagging.py       # 标注验证
-│   ├── extract_all_sections.py   # 批量提取章节小节
-│   ├── extract_sections.py       # 单章小节提取
-│   ├── update_index_with_sections.py # 更新索引页小节链接
-│   ├── add_section_ids_to_html.py    # 为HTML添加锚点ID
-│   ├── fix_quote_issues.py       # 引号格式修复
-│   ├── fix_verse_format.py       # 韵文格式修复
-│   ├── convert_quotes.py         # 引号转换
-│   ├── analyze_word_frequency.py # 词频统计分析
-│   ├── generate_auto_sections.py # 自动生成小节划分
-│   └── ...                       # 其他辅助脚本
-│
 ├── game/                         # 史记争霸游戏
-│   ├── index.html               # 游戏入口
-│   ├── game.js                  # 游戏逻辑
-│   ├── styles.css               # 游戏样式
-│   └── game_design.md           # 设计文档
 │
-├── temp/                         # 历史开发文件存档
+├── tables/                       # 十表数据（JSON+交互式HTML）
 │
-└── resources/                    # 资源文件
-    └── table_html/              # 十表独立主题HTML（Ocean Depths风格）
+├── resources/                    # 资源文件
+│
+└── temp/                         # 历史开发文件存档
 ```
 
 ---

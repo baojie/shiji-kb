@@ -22,10 +22,11 @@ from urllib.parse import quote
 from pypinyin import pinyin, Style
 
 # --- 配置 ---
-CHAPTER_DIR = Path('chapter_md')
-OUTPUT_DIR = Path('docs/entities')
-ALIAS_FILE = Path('entity_aliases.json')
-INDEX_JSON = Path('entity_index.json')
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+CHAPTER_DIR = _PROJECT_ROOT / 'chapter_md'
+OUTPUT_DIR = _PROJECT_ROOT / 'docs' / 'entities'
+ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entity_aliases.json'
+INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entity_index.json'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
 ENTITY_TYPES = [
@@ -373,7 +374,7 @@ def generate_landing_page(index):
 
     # 预加载编年索引统计（用于在时间卡片后插入）
     timeline_card = None
-    year_map_file = Path(__file__).parent / 'year_ce_map.json'
+    year_map_file = _PROJECT_ROOT / 'kg' / 'year_ce_map.json'
     if year_map_file.exists():
         try:
             with open(year_map_file, 'r', encoding='utf-8') as f:

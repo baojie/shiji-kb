@@ -113,8 +113,8 @@ echo ""
 
 # 检查HTML文件
 echo "8. 检查生成的HTML文件..."
-if [ -f "lint_html.py" ]; then
-    python3 lint_html.py docs/chapters/ > /tmp/lint_html_output.txt 2>&1
+if [ -f "scripts/lint_html.py" ]; then
+    python3 scripts/lint_html.py docs/chapters/ > /tmp/lint_html_output.txt 2>&1
     lint_exit_code=$?
 
     if [ $lint_exit_code -eq 0 ]; then
@@ -131,8 +131,8 @@ fi
 
 # 检查Index页面
 echo "9. 检查index.html..."
-if [ -f "lint_html.py" ] && [ -f "docs/index.html" ]; then
-    python3 lint_html.py docs/index.html > /tmp/lint_index_output.txt 2>&1
+if [ -f "scripts/lint_html.py" ] && [ -f "docs/index.html" ]; then
+    python3 scripts/lint_html.py docs/index.html > /tmp/lint_index_output.txt 2>&1
     index_lint_exit_code=$?
 
     if [ $index_lint_exit_code -eq 0 ]; then
@@ -145,8 +145,8 @@ fi
 
 # 检查实体索引页面
 echo "10. 检查实体索引页面..."
-if [ -f "lint_html.py" ] && [ -d "docs/entities" ]; then
-    python3 lint_html.py docs/entities/ > /tmp/lint_entity_output.txt 2>&1
+if [ -f "scripts/lint_html.py" ] && [ -d "docs/entities" ]; then
+    python3 scripts/lint_html.py docs/entities/ > /tmp/lint_entity_output.txt 2>&1
     entity_lint_exit_code=$?
 
     if [ $entity_lint_exit_code -eq 0 ]; then
