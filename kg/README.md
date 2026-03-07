@@ -9,7 +9,11 @@ kg/
 ├── vocabularies/    # 实体词汇表（人名、地名、官职等11类）
 ├── relations/       # 人物关系网络（父子、母子、君臣等）
 ├── genealogy/       # 帝王家谱（各朝代世系图）
-└── events/          # 历史事件索引（战争、改革、政变等）
+├── events/          # 历史事件索引（战争、改革、政变等）
+│   ├── {章节名}_事件索引.md  # 各章事件详细记录
+│   ├── progress.json         # 批处理进度
+│   └── events_summary.json   # 统计汇总
+└── ...
 ```
 
 ## 知识图谱构建脚本
@@ -82,6 +86,30 @@ python kg/kg_extract_imperial_genealogy.py
 ```bash
 python kg/kg_extract_flora_fauna.py
 ```
+
+### 6. 历史事件识别
+**脚本**: `scripts/extract_events.py`（API批处理） / Claude Code Agent（交互式）
+**验证**: `scripts/validate_events.py`
+**输出**: `kg/events/`
+**方法论**: `SKILL_事件识别.md`
+**功能**: 从已标注章节中识别和提取结构化历史事件
+
+```bash
+# API批处理方式
+python scripts/extract_events.py              # 处理所有未完成章节
+python scripts/extract_events.py 003 004 005  # 处理指定章节
+python scripts/extract_events.py --dry-run    # 预览
+
+# 验证与统计
+python scripts/validate_events.py             # 验证格式
+python scripts/validate_events.py --summary   # 生成汇总报告
+```
+
+事件索引结构：
+- **概览表格**：事件ID、名称、类型、时间、地点、人物、朝代
+- **详细记录**：事件描述、原文引用（保留实体标注）、段落位置
+- **事件链**：因果关系和时序关系的事件序列
+- **11种事件类型**：战争、继位、政治活动、政治改革、政治整顿、家族事件、建设、文化活动、经济活动、自然灾害、改革
 
 ## 数据格式
 
