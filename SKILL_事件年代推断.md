@@ -418,5 +418,31 @@
 |------|------|
 | `kg/chronology/data/中国历史大事年表.md` | 交叉验证的ground truth，684个年份条目 |
 | `kg/events/data/NNN_*_事件索引.md` | 130章事件索引文件 |
+| `kg/events/事件时间索引.md` | 全部3092事件的时间索引（Markdown格式） |
+| `docs/entities/event.html` | 事件时间索引网页（按历史分期分组，含搜索筛选） |
+| `kg/entities/scripts/build_entity_index.py` | 生成event.html的脚本（同时生成全部实体索引） |
 | `kg/events/scripts/write_inferred_years.py` | 批量推断年代脚本 |
 | `kg/events/scripts/fix_undated_known_events.py` | 修正已知事件年份 |
+| `kg/events/scripts/batch_fix_collapsed_dates.py` | 批量修正年代推断位置 |
+
+## event.html 生成流程
+
+事件时间索引页面（`docs/entities/event.html`）由 `kg/entities/scripts/build_entity_index.py` 生成：
+
+```bash
+python kg/entities/scripts/build_entity_index.py
+```
+
+**数据流**：
+1. 读取 `kg/events/data/*_事件索引.md`（130个文件）
+2. 解析每个文件的概览表格，提取事件名、类型、时间、人物、地点、段落位置
+3. 从时间字段提取公元年（精确纪年 `（公元前XXX年）` 和推断纪年 `[公元前XXX年]`/`[约公元前XXX年]`）
+4. 为无纪年事件推断近似日期（人物生卒年交集 → 章节内插值 → 章节时代兜底）
+5. 按历史分期分组，生成HTML页面
+
+**页面功能**：
+- 按历史分期（五帝→夏→商→西周→春秋→战国→秦→楚汉→西汉各帝）分组展示
+- 每个事件显示：事件编号、事件名（可点击跳转原文）、时间标签、类型标签、人物标签、地点标签
+- 精确纪年（深色标签）与推断纪年（浅色斜体标签）视觉区分
+- 支持文本搜索和事件类型筛选
+- 折叠/展开各历史分期

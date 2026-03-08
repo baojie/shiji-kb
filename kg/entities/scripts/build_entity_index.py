@@ -749,6 +749,7 @@ def generate_event_page(event_entries):
     lines.append('                     align-items: flex-start; padding: 6px 8px;')
     lines.append('                     border-bottom: 1px solid #f0ebe3; }')
     lines.append('      .event-entry:hover { background: #faf8f5; }')
+    lines.append('      .event-id { font-size: 0.75em; color: #999; font-family: monospace; }')
     lines.append('      .event-name { font-weight: 500; }')
     lines.append('      .event-name a { color: #3c2415; text-decoration: none; }')
     lines.append('      .event-name a:hover { text-decoration: underline; }')
@@ -835,13 +836,14 @@ def generate_event_page(event_entries):
 
             # 左侧：事件名 + 标签
             lines.append('    <div style="flex:1">')
-            # 事件名链接到章节段落
+            # 事件名链接到章节段落（含事件编号）
+            id_label = f'<span class="event-id">{esc_id}</span> ' if event_id else ''
             if ch_id:
                 anchor = f'#pn-{para_num}' if para_num else ''
-                lines.append(f'      <div class="event-name">'
+                lines.append(f'      <div class="event-name">{id_label}'
                              f'<a href="../chapters/{ch_id}.html{anchor}">{esc_name}</a></div>')
             else:
-                lines.append(f'      <div class="event-name">{esc_name}</div>')
+                lines.append(f'      <div class="event-name">{id_label}{esc_name}</div>')
 
             is_approximate = entry.get('ce_year_approximate', False)
             effective_year = ce_year or entry.get('ce_year_inferred')
