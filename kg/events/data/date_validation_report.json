@@ -1,0 +1,1212 @@
+{
+  "summary": {
+    "total_issues": 27,
+    "high": 26,
+    "medium": 1,
+    "chapters_scanned": 126
+  },
+  "issues": [
+    {
+      "type": "death_year_mismatch",
+      "chapter": "005",
+      "event_id": "005-103",
+      "event_name": "惠王卒武王立",
+      "current_year": 310,
+      "reference_year": 319,
+      "person": "惠王",
+      "diff": 9,
+      "detail": "005-103 惠王卒武王立：标注前310年，年表记载惠王死于前319年，偏差9年",
+      "severity": "medium"
+    },
+    {
+      "type": "known_event_mismatch",
+      "chapter": "006",
+      "event_id": "006-071",
+      "event_name": "焚书令",
+      "current_year": 213,
+      "reference_year": 179,
+      "keyword": "焚书",
+      "diff": 34,
+      "detail": "006-071 焚书令：标注前213年，年表记载焚书在前179年，偏差34年",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "023",
+      "detail": "6/6个推断事件指向同一年份（前177年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "025",
+      "detail": "6/7个推断事件指向同一年份（前1076年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "known_event_mismatch",
+      "chapter": "028",
+      "event_id": "028-020",
+      "event_name": "秦始皇封禅泰山",
+      "current_year": 219,
+      "reference_year": 111,
+      "keyword": "封禅泰山",
+      "diff": 108,
+      "detail": "028-020 秦始皇封禅泰山：标注前219年，年表记载封禅泰山在前111年，偏差108年",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "030",
+      "detail": "6/6个推断事件指向同一年份（前110年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "038",
+      "detail": "13/13个推断事件指向同一年份（前304年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "042",
+      "detail": "4/5个推断事件指向同一年份（前715年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "048",
+      "detail": "5/7个推断事件指向同一年份（前209年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "049",
+      "detail": "9/11个推断事件指向同一年份（前129年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "064",
+      "detail": "6/7个推断事件指向同一年份（前200年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "065",
+      "detail": "13/14个推断事件指向同一年份（前349年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "083",
+      "detail": "8/8个推断事件指向同一年份（前290年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "death_year_mismatch",
+      "chapter": "085",
+      "event_id": "085-011",
+      "event_name": "夏太后薨",
+      "current_year": 240,
+      "reference_year": 209,
+      "person": "始皇",
+      "diff": 31,
+      "detail": "085-011 夏太后薨：标注前240年，年表记载始皇死于前209年，偏差31年",
+      "severity": "high"
+    },
+    {
+      "type": "known_event_mismatch",
+      "chapter": "087",
+      "event_id": "087-005",
+      "event_name": "焚书议",
+      "current_year": 213,
+      "reference_year": 179,
+      "keyword": "焚书",
+      "diff": 34,
+      "detail": "087-005 焚书议：标注前213年，年表记载焚书在前179年，偏差34年",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "088",
+      "detail": "8/8个推断事件指向同一年份（前221年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "094",
+      "detail": "11/15个推断事件指向同一年份（前206年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "098",
+      "detail": "8/8个推断事件指向同一年份（前195年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "102",
+      "detail": "10/11个推断事件指向同一年份（前157年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "105",
+      "detail": "6/8个推断事件指向同一年份（前157年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "107",
+      "detail": "7/9个推断事件指向同一年份（前88年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "115",
+      "detail": "6/7个推断事件指向同一年份（前109年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "117",
+      "detail": "14/14个推断事件指向同一年份（前110年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "119",
+      "detail": "9/9个推断事件指向同一年份（前130年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "122",
+      "detail": "20/22个推断事件指向同一年份（前165年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "123",
+      "detail": "21/21个推断事件指向同一年份（前104年），疑似单锚点塌缩",
+      "severity": "high"
+    },
+    {
+      "type": "anchor_collapse",
+      "chapter": "127",
+      "detail": "5/5个推断事件指向同一年份（前130年），疑似单锚点塌缩",
+      "severity": "high"
+    }
+  ],
+  "chapter_stats": [
+    {
+      "chapter": "001",
+      "name": "001_五帝本纪",
+      "total_events": 2,
+      "dated_events": 2,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "002",
+      "name": "002_夏本纪",
+      "total_events": 18,
+      "dated_events": 18,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "003",
+      "name": "003_殷本纪",
+      "total_events": 41,
+      "dated_events": 41,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "004",
+      "name": "004_周本纪",
+      "total_events": 76,
+      "dated_events": 63,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "005",
+      "name": "005_秦本纪",
+      "total_events": 135,
+      "dated_events": 110,
+      "high_issues": 0,
+      "medium_issues": 1
+    },
+    {
+      "chapter": "006",
+      "name": "006_秦始皇本纪",
+      "total_events": 95,
+      "dated_events": 95,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "007",
+      "name": "007_项羽本纪",
+      "total_events": 66,
+      "dated_events": 66,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "008",
+      "name": "008_高祖本纪",
+      "total_events": 97,
+      "dated_events": 97,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "009",
+      "name": "009_吕太后本纪",
+      "total_events": 66,
+      "dated_events": 65,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "010",
+      "name": "010_孝文本纪",
+      "total_events": 45,
+      "dated_events": 44,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "011",
+      "name": "011_孝景本纪",
+      "total_events": 17,
+      "dated_events": 17,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "012",
+      "name": "012_孝武本纪",
+      "total_events": 66,
+      "dated_events": 66,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "013",
+      "name": "013_三代世表",
+      "total_events": 7,
+      "dated_events": 7,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "014",
+      "name": "014_十二诸侯年表",
+      "total_events": 8,
+      "dated_events": 8,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "015",
+      "name": "015_六国年表",
+      "total_events": 18,
+      "dated_events": 18,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "016",
+      "name": "016_秦楚之际月表",
+      "total_events": 12,
+      "dated_events": 12,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "018",
+      "name": "018_高祖功臣侯者年表",
+      "total_events": 9,
+      "dated_events": 9,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "022",
+      "name": "022_汉兴以来将相名臣年表",
+      "total_events": 2,
+      "dated_events": 2,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "023",
+      "name": "023_礼书",
+      "total_events": 6,
+      "dated_events": 6,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "024",
+      "name": "024_乐书",
+      "total_events": 4,
+      "dated_events": 4,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "025",
+      "name": "025_律书",
+      "total_events": 7,
+      "dated_events": 7,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "026",
+      "name": "026_历书",
+      "total_events": 2,
+      "dated_events": 2,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "027",
+      "name": "027_天官书",
+      "total_events": 2,
+      "dated_events": 2,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "028",
+      "name": "028_封禅书",
+      "total_events": 44,
+      "dated_events": 44,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "029",
+      "name": "029_河渠书",
+      "total_events": 13,
+      "dated_events": 13,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "030",
+      "name": "030_平准书",
+      "total_events": 6,
+      "dated_events": 6,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "031",
+      "name": "031_吴太伯世家",
+      "total_events": 29,
+      "dated_events": 27,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "032",
+      "name": "032_齐太公世家",
+      "total_events": 33,
+      "dated_events": 31,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "033",
+      "name": "033_鲁周公世家",
+      "total_events": 29,
+      "dated_events": 27,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "034",
+      "name": "034_燕召公世家",
+      "total_events": 15,
+      "dated_events": 15,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "035",
+      "name": "035_管蔡世家",
+      "total_events": 13,
+      "dated_events": 13,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "036",
+      "name": "036_陈杞世家",
+      "total_events": 12,
+      "dated_events": 12,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "037",
+      "name": "037_卫康叔世家",
+      "total_events": 20,
+      "dated_events": 20,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "038",
+      "name": "038_宋微子世家",
+      "total_events": 14,
+      "dated_events": 14,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "039",
+      "name": "039_晋世家",
+      "total_events": 39,
+      "dated_events": 39,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "040",
+      "name": "040_楚世家",
+      "total_events": 38,
+      "dated_events": 37,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "041",
+      "name": "041_越王句践世家",
+      "total_events": 18,
+      "dated_events": 18,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "042",
+      "name": "042_郑世家",
+      "total_events": 22,
+      "dated_events": 14,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "043",
+      "name": "043_赵世家",
+      "total_events": 28,
+      "dated_events": 24,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "044",
+      "name": "044_魏世家",
+      "total_events": 21,
+      "dated_events": 17,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "045",
+      "name": "045_韩世家",
+      "total_events": 15,
+      "dated_events": 15,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "046",
+      "name": "046_田敬仲完世家",
+      "total_events": 21,
+      "dated_events": 20,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "047",
+      "name": "047_孔子世家",
+      "total_events": 17,
+      "dated_events": 17,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "048",
+      "name": "048_陈涉世家",
+      "total_events": 12,
+      "dated_events": 9,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "049",
+      "name": "049_外戚世家",
+      "total_events": 11,
+      "dated_events": 11,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "050",
+      "name": "050_楚元王世家",
+      "total_events": 7,
+      "dated_events": 7,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "051",
+      "name": "051_荆燕世家",
+      "total_events": 15,
+      "dated_events": 15,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "052",
+      "name": "052_齐悼惠王世家",
+      "total_events": 26,
+      "dated_events": 25,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "053",
+      "name": "053_萧相国世家",
+      "total_events": 17,
+      "dated_events": 17,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "054",
+      "name": "054_曹相国世家",
+      "total_events": 16,
+      "dated_events": 8,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "055",
+      "name": "055_留侯世家",
+      "total_events": 23,
+      "dated_events": 23,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "056",
+      "name": "056_陈丞相世家",
+      "total_events": 27,
+      "dated_events": 27,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "057",
+      "name": "057_绛侯周勃世家",
+      "total_events": 22,
+      "dated_events": 22,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "058",
+      "name": "058_梁孝王世家",
+      "total_events": 24,
+      "dated_events": 24,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "059",
+      "name": "059_五宗世家",
+      "total_events": 19,
+      "dated_events": 19,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "060",
+      "name": "060_三王世家",
+      "total_events": 20,
+      "dated_events": 20,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "061",
+      "name": "061_伯夷列传",
+      "total_events": 1,
+      "dated_events": 1,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "062",
+      "name": "062_管晏列传",
+      "total_events": 11,
+      "dated_events": 11,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "063",
+      "name": "063_老子韩非列传",
+      "total_events": 9,
+      "dated_events": 9,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "064",
+      "name": "064_司马穰苴列传",
+      "total_events": 7,
+      "dated_events": 7,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "065",
+      "name": "065_孙子吴起列传",
+      "total_events": 14,
+      "dated_events": 14,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "066",
+      "name": "066_伍子胥列传",
+      "total_events": 22,
+      "dated_events": 22,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "067",
+      "name": "067_仲尼弟子列传",
+      "total_events": 15,
+      "dated_events": 15,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "068",
+      "name": "068_商君列传",
+      "total_events": 16,
+      "dated_events": 16,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "069",
+      "name": "069_苏秦列传",
+      "total_events": 19,
+      "dated_events": 19,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "070",
+      "name": "070_张仪列传",
+      "total_events": 23,
+      "dated_events": 23,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "071",
+      "name": "071_樗里子甘茂列传",
+      "total_events": 20,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "072",
+      "name": "072_穰侯列传",
+      "total_events": 13,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "073",
+      "name": "073_白起王翦列传",
+      "total_events": 18,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "074",
+      "name": "074_孟子荀卿列传",
+      "total_events": 10,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "075",
+      "name": "075_孟尝君列传",
+      "total_events": 18,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "076",
+      "name": "076_平原君虞卿列传",
+      "total_events": 14,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "077",
+      "name": "077_魏公子列传",
+      "total_events": 14,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "078",
+      "name": "078_春申君列传",
+      "total_events": 15,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "079",
+      "name": "079_范睢蔡泽列传",
+      "total_events": 19,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "080",
+      "name": "080_乐毅列传",
+      "total_events": 19,
+      "dated_events": 0,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "081",
+      "name": "081_廉颇蔺相如列传",
+      "total_events": 27,
+      "dated_events": 27,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "082",
+      "name": "082_田单列传",
+      "total_events": 8,
+      "dated_events": 8,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "083",
+      "name": "083_鲁仲连邹阳列传",
+      "total_events": 8,
+      "dated_events": 8,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "084",
+      "name": "084_屈原贾生列传",
+      "total_events": 13,
+      "dated_events": 13,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "085",
+      "name": "085_吕不韦列传",
+      "total_events": 13,
+      "dated_events": 13,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "086",
+      "name": "086_刺客列传",
+      "total_events": 17,
+      "dated_events": 17,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "087",
+      "name": "087_李斯列传",
+      "total_events": 19,
+      "dated_events": 19,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "088",
+      "name": "088_蒙恬列传",
+      "total_events": 11,
+      "dated_events": 11,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "089",
+      "name": "089_张耳陈馀列传",
+      "total_events": 22,
+      "dated_events": 22,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "090",
+      "name": "090_魏豹彭越列传",
+      "total_events": 8,
+      "dated_events": 7,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "091",
+      "name": "091_黥布列传",
+      "total_events": 23,
+      "dated_events": 23,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "092",
+      "name": "092_淮阴侯列传",
+      "total_events": 22,
+      "dated_events": 22,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "093",
+      "name": "093_韩信卢绾列传",
+      "total_events": 21,
+      "dated_events": 17,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "094",
+      "name": "094_田儋列传",
+      "total_events": 16,
+      "dated_events": 16,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "095",
+      "name": "095_樊郦滕灌列传",
+      "total_events": 24,
+      "dated_events": 24,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "096",
+      "name": "096_张丞相列传",
+      "total_events": 21,
+      "dated_events": 21,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "097",
+      "name": "097_郦生陆贾列传",
+      "total_events": 14,
+      "dated_events": 14,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "098",
+      "name": "098_傅靳蒯成列传",
+      "total_events": 11,
+      "dated_events": 11,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "099",
+      "name": "099_刘敬叔孙通列传",
+      "total_events": 13,
+      "dated_events": 13,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "100",
+      "name": "100_季布栾布列传",
+      "total_events": 10,
+      "dated_events": 10,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "101",
+      "name": "101_袁盎晁错列传",
+      "total_events": 18,
+      "dated_events": 18,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "102",
+      "name": "102_张释之冯唐列传",
+      "total_events": 11,
+      "dated_events": 11,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "103",
+      "name": "103_万石张叔列传",
+      "total_events": 17,
+      "dated_events": 15,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "104",
+      "name": "104_田叔列传",
+      "total_events": 13,
+      "dated_events": 13,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "105",
+      "name": "105_扁鹊仓公列传",
+      "total_events": 10,
+      "dated_events": 10,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "106",
+      "name": "106_吴王濞列传",
+      "total_events": 15,
+      "dated_events": 15,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "107",
+      "name": "107_魏其武安侯列传",
+      "total_events": 16,
+      "dated_events": 14,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "108",
+      "name": "108_韩长孺列传",
+      "total_events": 10,
+      "dated_events": 10,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "109",
+      "name": "109_李将军列传",
+      "total_events": 15,
+      "dated_events": 15,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "110",
+      "name": "110_匈奴列传",
+      "total_events": 33,
+      "dated_events": 33,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "111",
+      "name": "111_卫将军骠骑列传",
+      "total_events": 31,
+      "dated_events": 31,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "112",
+      "name": "112_平津侯主父列传",
+      "total_events": 21,
+      "dated_events": 20,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "113",
+      "name": "113_南越列传",
+      "total_events": 19,
+      "dated_events": 19,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "114",
+      "name": "114_东越列传",
+      "total_events": 14,
+      "dated_events": 14,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "115",
+      "name": "115_朝鲜列传",
+      "total_events": 13,
+      "dated_events": 13,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "116",
+      "name": "116_西南夷列传",
+      "total_events": 9,
+      "dated_events": 9,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "117",
+      "name": "117_司马相如列传",
+      "total_events": 14,
+      "dated_events": 14,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "118",
+      "name": "118_淮南衡山列传",
+      "total_events": 24,
+      "dated_events": 23,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "119",
+      "name": "119_循吏列传",
+      "total_events": 9,
+      "dated_events": 9,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "120",
+      "name": "120_汲郑列传",
+      "total_events": 20,
+      "dated_events": 20,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "121",
+      "name": "121_儒林列传",
+      "total_events": 22,
+      "dated_events": 22,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "122",
+      "name": "122_酷吏列传",
+      "total_events": 22,
+      "dated_events": 22,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "123",
+      "name": "123_大宛列传",
+      "total_events": 22,
+      "dated_events": 22,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "124",
+      "name": "124_游侠列传",
+      "total_events": 9,
+      "dated_events": 9,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "125",
+      "name": "125_佞幸列传",
+      "total_events": 8,
+      "dated_events": 8,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "126",
+      "name": "126_滑稽列传",
+      "total_events": 13,
+      "dated_events": 13,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "127",
+      "name": "127_日者列传",
+      "total_events": 5,
+      "dated_events": 5,
+      "high_issues": 1,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "128",
+      "name": "128_龟策列传",
+      "total_events": 2,
+      "dated_events": 2,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "129",
+      "name": "129_货殖列传",
+      "total_events": 13,
+      "dated_events": 12,
+      "high_issues": 0,
+      "medium_issues": 0
+    },
+    {
+      "chapter": "130",
+      "name": "130_太史公自序",
+      "total_events": 17,
+      "dated_events": 17,
+      "high_issues": 0,
+      "medium_issues": 0
+    }
+  ]
+}
