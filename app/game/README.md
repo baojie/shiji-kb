@@ -11,7 +11,7 @@
 
 ### 方法二：使用本地服务器
 ```bash
-cd /home/baojie/work/shiji-kb/game
+cd app/game
 python3 -m http.server 8000
 ```
 然后在浏览器中访问: `http://localhost:8000`
