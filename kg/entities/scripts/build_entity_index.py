@@ -167,35 +167,68 @@ def extract_events_from_index_files(event_dir):
     return results
 
 
+def _parse_ce_year(time_str):
+    """从时间字符串中提取公元年。返回 int 或 None。
+
+    示例: '%二世元年七月% （公元前209年）' → -209
+          '%汉元年四月% （公元前206年）' → -206
+          '-' → None
+    """
+    m = re.search(r'公元前(\d+)年', time_str)
+    if m:
+        return -int(m.group(1))
+    m = re.search(r'公元(\d+)年', time_str)
+    if m:
+        return int(m.group(1))
+    return None
+
+
+def _strip_entity_tags(text):
+    """去除实体标记符号，保留纯文本"""
+    return re.sub(r'[@=$%&^~*!?🌿]', '', text).strip()
+
+
+def _extract_people_list(people_str):
+    """从人物字段提取人名列表。'@项羽@、@刘邦@' → ['项羽', '刘邦']"""
+    names = re.findall(r'@([^@]+)@', people_str)
+    return names if names else [_strip_entity_tags(people_str)] if people_str.strip() not in ('', '-') else []
+
+
+def _extract_location_list(loc_str):
+    """从地点字段提取地名列表。'=长安=、=洛阳=' → ['长安', '洛阳']"""
+    places = re.findall(r'=([^=]+)=', loc_str)
+    return places if places else [_strip_entity_tags(loc_str)] if loc_str.strip() not in ('', '-') else []
+
+
 def build_event_index(event_dir):
-    """构建事件索引，格式与其他实体类型一致
+    """构建事件索引，保留完整元数据（时间、人物、地点）
 
     Returns:
         {event_name: {'aliases': [...], 'refs': [...], 'count': int,
-                      'event_type': str, 'event_id': str}}
+                      'event_type': str, 'event_id': str,
+                      'ce_year': int|None, 'time_str': str,
+                      'people': [str], 'locations': [str]}}
     """
     events = extract_events_from_index_files(event_dir)
     index = {}
 
     for name, etype, chapter_id, event_id, time_str, people, locations in events:
-        if name not in index:
-            index[name] = {
-                'aliases': set(),
-                'refs': [],
-                'count': 0,
-                'event_type': etype,
-                'event_id': event_id,
-            }
-        entry = index[name]
-        entry['aliases'].add(name)
-        # 用事件ID的序号部分作为"段落"引用（兼容现有refs格式）
-        entry['refs'].append((chapter_id, event_id))
-        entry['count'] += 1
+        # 同名事件用 event_id 区分（避免覆盖）
+        key = f"{name}|{event_id}" if name in index else name
+        if key in index:
+            key = f"{name}|{event_id}"
 
-    # 整理
-    for name, entry in index.items():
-        entry['refs'] = sorted(set(entry['refs']), key=lambda r: r[0])
-        entry['aliases'] = sorted(entry['aliases'])
+        index[key] = {
+            'aliases': [name],
+            'refs': [(chapter_id, event_id)],
+            'count': 1,
+            'event_type': etype,
+            'event_id': event_id,
+            'ce_year': _parse_ce_year(time_str),
+            'time_str': _strip_entity_tags(time_str) if time_str.strip() != '-' else '',
+            'people': _extract_people_list(people),
+            'locations': _extract_location_list(locations),
+        }
 
     return index
 
@@ -440,23 +473,55 @@ def _format_refs(refs):
     return ' <span class="ref-sep">|</span> '.join(parts)
 
 
+def _format_ce_year_label(ce_year):
+    """格式化公元年显示"""
+    if ce_year is None:
+        return '时间不详'
+    if ce_year < 0:
+        return f'前{-ce_year}年'
+    return f'{ce_year}年'
+
+
+def _ce_year_to_period(ce_year):
+    """将公元年映射到历史分期，用于时间轴分组"""
+    if ce_year is None:
+        return ('未知时期', 99999)
+    y = ce_year
+    if y <= -2100: return ('五帝时代（约前2700-前2100年）', -2700)
+    if y <= -1600: return ('夏朝（约前2100-前1600年）', -2100)
+    if y <= -1046: return ('商朝（约前1600-前1046年）', -1600)
+    if y <= -771:  return ('西周（前1046-前771年）', -1046)
+    if y <= -476:  return ('春秋（前770-前476年）', -770)
+    if y <= -221:  return ('战国（前475-前221年）', -475)
+    if y <= -206:  return ('秦朝（前221-前207年）', -221)
+    if y <= -87:   return ('西汉（前206-前87年）', -206)
+    return ('其他', y)
+
+
 def generate_event_page(event_entries):
-    """生成事件索引 HTML 页面，按事件类型分组"""
+    """生成事件索引 HTML 页面，以时间为主索引"""
     total_events = len(event_entries)
+    dated_count = sum(1 for e in event_entries.values() if e.get('ce_year') is not None)
 
-    # 按事件类型分组
-    grouped_by_type = defaultdict(list)
+    # 按时期分组
+    grouped_by_period = defaultdict(list)
     for name, entry in event_entries.items():
-        etype = entry.get('event_type', '其他')
-        grouped_by_type[etype].append((name, entry))
+        period_name, period_sort = _ce_year_to_period(entry.get('ce_year'))
+        # 显示名去掉 |event_id 后缀
+        display_name = name.split('|')[0]
+        grouped_by_period[period_name].append((display_name, entry, period_sort))
 
-    # 每组按章节排序
-    for etype in grouped_by_type:
-        grouped_by_type[etype].sort(key=lambda x: x[1]['event_id'])
+    # 每组内按CE年+事件ID排序
+    for period in grouped_by_period:
+        grouped_by_period[period].sort(
+            key=lambda x: (x[1].get('ce_year') or 99999, x[1].get('event_id', '')))
 
-    # 类型排序（按数量降序）
-    type_order = sorted(grouped_by_type.keys(),
-                        key=lambda t: len(grouped_by_type[t]), reverse=True)
+    # 时期按时间排序
+    period_order = sorted(grouped_by_period.keys(),
+                          key=lambda p: grouped_by_period[p][0][2])
+
+    # 收集所有事件类型用于筛选
+    all_types = sorted(set(e.get('event_type', '') for e in event_entries.values()))
 
     lines = []
     lines.append('<!DOCTYPE html>')
@@ -467,6 +532,27 @@ def generate_event_page(event_entries):
     lines.append('    <title>事件索引 - 史记知识库</title>')
     lines.append('    <link rel="stylesheet" href="../css/shiji-styles.css">')
     lines.append('    <link rel="stylesheet" href="../css/entity-index.css">')
+    lines.append('    <style>')
+    lines.append('      .event-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }')
+    lines.append('      .event-tag { font-size: 0.75em; padding: 1px 6px; border-radius: 3px;')
+    lines.append('                   display: inline-block; line-height: 1.5; }')
+    lines.append('      .tag-type { background: #f0e6d3; color: #8B4513; }')
+    lines.append('      .tag-person { background: #fdf2e9; color: #a0522d; }')
+    lines.append('      .tag-place { background: #fef9e7; color: #b8860b; }')
+    lines.append('      .tag-time { background: #e8f8f5; color: #008b8b; font-weight: bold; }')
+    lines.append('      .event-entry { display: flex; justify-content: space-between;')
+    lines.append('                     align-items: flex-start; padding: 6px 8px;')
+    lines.append('                     border-bottom: 1px solid #f0ebe3; }')
+    lines.append('      .event-entry:hover { background: #faf8f5; }')
+    lines.append('      .event-name { font-weight: 500; }')
+    lines.append('      .event-name a { color: #3c2415; text-decoration: none; }')
+    lines.append('      .event-name a:hover { text-decoration: underline; }')
+    lines.append('      .event-chapter { font-size: 0.8em; color: #888; white-space: nowrap; }')
+    lines.append('      .filter-bar { display: flex; gap: 8px; flex-wrap: wrap;')
+    lines.append('                    margin: 12px 0; align-items: center; }')
+    lines.append('      .filter-bar select { padding: 4px 8px; border: 1px solid #d4c5a9;')
+    lines.append('                           border-radius: 4px; background: #faf8f5; }')
+    lines.append('    </style>')
     lines.append('</head>')
     lines.append('<body>')
 
@@ -475,53 +561,98 @@ def generate_event_page(event_entries):
     lines.append('    <a href="index.html" class="nav-next">实体索引</a>')
     lines.append('</nav>')
 
-    lines.append('<h1>事件索引</h1>')
+    lines.append('<h1>事件时间索引</h1>')
     lines.append(f'<p class="index-stats">共 <strong>{total_events}</strong> 个事件，'
-                 f'<strong>{len(type_order)}</strong> 种类型</p>')
+                 f'<strong>{dated_count}</strong> 个有公元纪年，'
+                 f'跨越 <strong>{len(period_order) - (1 if "未知时期" in grouped_by_period else 0)}</strong> 个历史时期</p>')
 
-    # 搜索框
-    lines.append('<div class="entity-filter">')
-    lines.append('    <input type="text" id="filter-input" placeholder="搜索事件...">')
+    # 搜索 + 类型筛选
+    lines.append('<div class="filter-bar">')
+    lines.append('    <input type="text" id="filter-input" placeholder="搜索事件、人物、地点..."'
+                 ' style="flex:1; min-width:200px; padding:4px 8px; border:1px solid #d4c5a9;'
+                 ' border-radius:4px;">')
+    lines.append('    <select id="type-filter" onchange="filterEvents()">')
+    lines.append('      <option value="">全部类型</option>')
+    for t in all_types:
+        if t:
+            lines.append(f'      <option value="{html.escape(t)}">{html.escape(t)}</option>')
+    lines.append('    </select>')
     lines.append('</div>')
 
-    # 类型导航栏
+    # 时期导航栏
     lines.append('<div class="pinyin-nav">')
-    for etype in type_order:
-        count = len(grouped_by_type[etype])
-        lines.append(f'  <a href="#type-{etype}" class="pinyin-letter">'
-                     f'{etype}<span class="letter-count">{count}</span></a>')
+    for period in period_order:
+        count = len(grouped_by_period[period])
+        short = period.split('（')[0]  # 取括号前的简称
+        lines.append(f'  <a href="#period-{html.escape(short)}" class="pinyin-letter">'
+                     f'{html.escape(short)}<span class="letter-count">{count}</span></a>')
     lines.append('</div>')
 
-    # 事件列表（按类型分节）
+    # 事件列表（按时期分节）
     lines.append('<div class="entity-index">')
 
-    for etype in type_order:
-        group = grouped_by_type[etype]
-        lines.append(f'<div class="letter-section" id="type-{etype}">')
-        lines.append(f'  <h2 class="letter-heading">{etype}（{len(group)}）</h2>')
+    for period in period_order:
+        group = grouped_by_period[period]
+        short = period.split('（')[0]
+        lines.append(f'<div class="letter-section" id="period-{html.escape(short)}">')
+        lines.append(f'  <h2 class="letter-heading">{html.escape(period)}（{len(group)}）</h2>')
 
-        for name, entry in group:
+        for display_name, entry, _ in group:
             event_id = entry.get('event_id', '')
-            esc_name = html.escape(name)
-            chapter_id = event_id.split('-')[0] if '-' in event_id else ''
-            chapter_name = extract_chapter_title(
-                entry['refs'][0][0]) if entry['refs'] else ''
+            etype = entry.get('event_type', '')
+            ce_year = entry.get('ce_year')
+            people = entry.get('people', [])
+            locations = entry.get('locations', [])
+            ch_id = entry['refs'][0][0] if entry['refs'] else ''
+            ch_title = extract_chapter_title(ch_id) if ch_id else ''
 
-            lines.append(f'  <div class="entity-entry" id="event-{html.escape(event_id)}">')
-            lines.append('    <div class="entry-left">')
-            lines.append(f'      <span class="canonical-name event">{esc_name}</span>')
-            lines.append(f'      <span class="alias-list">{html.escape(event_id)}</span>')
+            esc_name = html.escape(display_name)
+            esc_id = html.escape(event_id)
+
+            lines.append(f'  <div class="event-entry" data-type="{html.escape(etype)}"'
+                         f' id="event-{esc_id}">')
+
+            # 左侧：事件名 + 标签
+            lines.append('    <div style="flex:1">')
+            # 事件名链接到章节
+            if ch_id:
+                lines.append(f'      <div class="event-name">'
+                             f'<a href="../chapters/{ch_id}.html">{esc_name}</a></div>')
+            else:
+                lines.append(f'      <div class="event-name">{esc_name}</div>')
+
+            # 标签行
+            lines.append('      <div class="event-tags">')
+            # 时间标签
+            if ce_year is not None:
+                lines.append(f'        <span class="event-tag tag-time">'
+                             f'{_format_ce_year_label(ce_year)}</span>')
+            # 类型标签
+            if etype:
+                lines.append(f'        <span class="event-tag tag-type">'
+                             f'{html.escape(etype)}</span>')
+            # 人物标签（最多显示4个）
+            for p in people[:4]:
+                lines.append(f'        <span class="event-tag tag-person">'
+                             f'{html.escape(p)}</span>')
+            if len(people) > 4:
+                lines.append(f'        <span class="event-tag tag-person">+{len(people)-4}</span>')
+            # 地点标签（最多显示2个）
+            for loc in locations[:2]:
+                lines.append(f'        <span class="event-tag tag-place">'
+                             f'{html.escape(loc)}</span>')
+            if len(locations) > 2:
+                lines.append(f'        <span class="event-tag tag-place">'
+                             f'+{len(locations)-2}</span>')
+            lines.append('      </div>')
+
             lines.append('    </div>')
 
-            # 右侧：章节链接
-            lines.append('    <div class="entry-right">')
-            if entry['refs']:
-                ch_id = entry['refs'][0][0]
-                ch_title = extract_chapter_title(ch_id)
-                lines.append(
-                    f'      <a href="../chapters/{ch_id}.html" '
-                    f'class="chapter-ref-name">{html.escape(ch_title)}</a>')
-            lines.append('    </div>')
+            # 右侧：章节名
+            if ch_title:
+                lines.append(f'    <div class="event-chapter">'
+                             f'<a href="../chapters/{ch_id}.html" '
+                             f'class="chapter-ref-name">{html.escape(ch_title)}</a></div>')
 
             lines.append('  </div>')
 
@@ -529,7 +660,26 @@ def generate_event_page(event_entries):
 
     lines.append('</div>')
 
-    lines.append('<script src="../js/entity-filter.js"></script>')
+    # 筛选脚本
+    lines.append('''<script>
+function filterEvents() {
+  const q = document.getElementById('filter-input').value.toLowerCase();
+  const typeFilter = document.getElementById('type-filter').value;
+  document.querySelectorAll('.event-entry').forEach(el => {
+    const text = el.textContent.toLowerCase();
+    const type = el.getAttribute('data-type') || '';
+    const matchText = !q || text.includes(q);
+    const matchType = !typeFilter || type === typeFilter;
+    el.style.display = (matchText && matchType) ? '' : 'none';
+  });
+  // 隐藏空的时期段
+  document.querySelectorAll('.letter-section').forEach(sec => {
+    const visible = sec.querySelectorAll('.event-entry:not([style*="display: none"])');
+    sec.style.display = visible.length > 0 ? '' : 'none';
+  });
+}
+document.getElementById('filter-input').addEventListener('input', filterEvents);
+</script>''')
 
     lines.append('<nav class="chapter-nav">')
     lines.append('    <a href="../index.html" class="nav-home">回到主页</a>')
