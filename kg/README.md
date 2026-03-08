@@ -1,185 +1,127 @@
 # 史记知识图谱 (Knowledge Graph)
 
-本目录存放史记知识图谱相关的输出数据，包括实体词汇表、关系网络、家谱图谱和事件索引。
+从《史记》130篇中提取的结构化知识，包括事件、实体、关系、家谱、纪年和词汇表。
 
 ## 目录结构
 
 ```
 kg/
-├── vocabularies/    # 实体词汇表（人名、地名、官职等11类）
-├── relations/       # 人物关系网络（父子、母子、君臣等）
-├── genealogy/       # 帝王家谱（各朝代世系图）
-├── events/          # 历史事件索引（战争、改革、政变等）
-│   ├── {章节名}_事件索引.md  # 各章事件详细记录
-│   ├── progress.json         # 批处理进度
-│   └── events_summary.json   # 统计汇总
-└── ...
+├── events/              # 历史事件
+│   ├── data/            # 130篇事件索引 + 事件关系数据
+│   │   ├── {NNN}_{章节名}_事件索引.md   # 各章事件（3092个）
+│   │   ├── event_relations.json         # 事件关系（4385条，8种类型）
+│   │   └── event_relations_summary.md   # 关系统计
+│   └── scripts/
+│       ├── extract_events.py            # 从标注文本提取事件
+│       ├── extract_event_relations.py   # 自动+LLM推理事件关系
+│       ├── annotate_ce_years.py         # 公元纪年标注
+│       ├── lint_ce_years.py             # 纪年质检（时序/已知年份）
+│       ├── validate_events.py           # 事件格式验证
+│       ├── build_year_map.py            # 年份消歧与公元映射
+│       └── build_metro_map_data.py      # 地铁图可视化数据
+│
+├── entities/            # 实体库
+│   ├── data/
+│   │   ├── entity_index.json            # 实体索引（人名/地名/官职等）
+│   │   ├── entity_aliases.json          # 实体别名表
+│   │   └── disambiguation_map.json      # 歧义消解映射
+│   └── scripts/
+│       ├── build_entity_index.py        # 构建实体索引
+│       ├── disambiguate_names.py        # 人名消歧
+│       ├── auto_detect_aliases.py       # 自动检测别名
+│       └── augment_sku_entities.py      # SKU实体增补
+│
+├── chronology/          # 纪年数据
+│   └── data/
+│       ├── reign_periods.json           # 君主在位年（年表解析）
+│       ├── year_ce_map.json             # 章节年份→公元映射
+│       └── 史记编年表.md                 # 编年对照表
+│
+├── genealogy/           # 帝王家谱
+│   ├── data/            # 各朝代世系图（五帝/夏/商/周/秦/汉）
+│   └── scripts/
+│       ├── extract_family_relations.py  # 家族关系提取
+│       └── extract_imperial_genealogy.py # 帝王世系构建
+│
+├── relations/           # 人物关系网络
+│   ├── data/            # 父子/母子/兄弟/君臣等关系
+│   └── scripts/
+│       └── extract_all_relations.py     # 全类型关系提取
+│
+├── vocabularies/        # 实体词汇表
+│   ├── data/            # 人名/地名/官职/时间/朝代等词表
+│   └── scripts/
+│       └── build_vocabularies.py        # 从标注文本提取词表
+│
+├── flora_fauna/         # 动植物实体
+│   ├── data/            # 标注指南与项目文档
+│   └── scripts/
+│       └── extract_flora_fauna.py       # 动植物实体提取
+│
+├── rdf/                 # RDF/本体数据
+│   ├── ontology.ttl     # 史记知识本体定义
+│   └── *.ttl            # RDF三元组数据
+│
+└── README.md
 ```
 
-## 知识图谱构建脚本
+## 数据规模
 
-所有知识图谱相关的Python脚本统一使用 `kg_` 前缀，位于 `kg/` 目录：
+| 知识类型 | 数量 |
+|---------|------|
+| 事件 | 3,092个（130篇×平均24个） |
+| 事件关系 | 4,385条（自动2,198 + LLM 2,187） |
+| 跨线换乘 | 1,876条（互见294/共人867/共地542/同期173） |
+| 公元纪年 | 782个事件有标注（前2700年～前87年） |
+| 事件类型 | 11种（战争/继位/政治/改革/家族/建设/文化/经济/灾害等） |
+| 关系类型 | 8种（延续/因果/包含/对立/互见/共人/共地/同期） |
 
-### 1. 实体词汇表构建
-**脚本**: `kg/kg_build_vocabularies.py`
-**输出**: `kg/vocabularies/`
-**功能**: 从标注文本中提取11类实体，生成分类词汇表
+## 事件关系类型
+
+| 类型 | 说明 | 来源 | 数量 |
+|------|------|------|------|
+| sequel | 时间延续，B是A的后续 | LLM | 1,623 |
+| co_person | 跨章事件共享≥2人物 | 自动 | 969 |
+| co_location | 跨章事件共享地点+人物 | 自动 | 705 |
+| causal | A是B的直接原因 | LLM | 407 |
+| cross_ref | 不同章节记述同一事件 | 自动 | 294 |
+| concurrent | 同年跨章事件共享人物 | 自动 | 230 |
+| part_of | A是B的子事件 | LLM | 107 |
+| opposition | 对立双方的行动 | LLM | 50 |
+
+## 实体标注体系
+
+文本中使用以下标注符号：
+
+| 符号 | 类型 | 示例 |
+|------|------|------|
+| `@name@` | 人名 | `@刘邦@` |
+| `=place=` | 地名 | `=长安=` |
+| `$title$` | 官职 | `$丞相$` |
+| `%time%` | 时间 | `%三年%` |
+| `&dynasty&` | 朝代 | `&汉&` |
+| `~group~` | 族群 | `~匈奴~` |
+
+## 常用操作
 
 ```bash
-python kg/kg_build_vocabularies.py
+# 事件
+python kg/events/scripts/lint_ce_years.py              # 纪年质检
+python kg/events/scripts/lint_ce_years.py 047           # 检查指定章节
+python kg/events/scripts/build_metro_map_data.py        # 生成地铁图数据
+
+# 实体
+python kg/entities/scripts/build_entity_index.py        # 重建实体索引
+python kg/entities/scripts/disambiguate_names.py        # 人名消歧
+
+# 词汇
+python kg/vocabularies/scripts/build_vocabularies.py    # 生成词表
 ```
 
-生成文件：
-- 人名词典.md
-- 地名词典.md
-- 官职词典.md
-- 时间词典.md
-- 朝代词典.md
-- 制度词典.md
-- 族群词典.md
-- 器物词典.md
-- 天文词典.md
-- 神话词典.md
-- 动植物词典.md
+## 可视化
 
-### 2. 人物关系提取
-**脚本**: `kg/kg_extract_all_relations.py`
-**输出**: `kg/relations/`
-**功能**: 提取所有人物间的关系（家族、政治、师徒等）
-
-```bash
-python kg/kg_extract_all_relations.py
-```
-
-### 3. 家族关系提取
-**脚本**: `kg/kg_extract_family_relations.py`
-**输出**: `kg/relations/`
-**功能**: 专门提取家族关系（父子、母子、兄弟、姻亲等）
-
-```bash
-python kg/kg_extract_family_relations.py
-```
-
-### 4. 帝王家谱构建
-**脚本**: `kg/kg_extract_imperial_genealogy.py`
-**输出**: `kg/genealogy/`
-**功能**: 构建各朝代帝王世系图
-
-```bash
-python kg/kg_extract_imperial_genealogy.py
-```
-
-生成文件：
-- 五帝朝帝王家谱.md
-- 夏朝帝王家谱.md
-- 商朝帝王家谱.md
-- 周朝帝王家谱.md
-- 秦朝帝王家谱.md
-- 汉朝帝王家谱.md
-- imperial_genealogy.json
-
-### 5. 动植物实体提取
-**脚本**: `kg/kg_extract_flora_fauna.py`
-**输出**: `kg/vocabularies/动植物词典.md`
-**功能**: 提取文本中的动植物实体
-
-```bash
-python kg/kg_extract_flora_fauna.py
-```
-
-### 6. 历史事件识别
-**脚本**: `scripts/extract_events.py`（API批处理） / Claude Code Agent（交互式）
-**验证**: `scripts/validate_events.py`
-**输出**: `kg/events/`
-**方法论**: `SKILL_事件识别.md`
-**功能**: 从已标注章节中识别和提取结构化历史事件
-
-```bash
-# API批处理方式
-python scripts/extract_events.py              # 处理所有未完成章节
-python scripts/extract_events.py 003 004 005  # 处理指定章节
-python scripts/extract_events.py --dry-run    # 预览
-
-# 验证与统计
-python scripts/validate_events.py             # 验证格式
-python scripts/validate_events.py --summary   # 生成汇总报告
-```
-
-事件索引结构：
-- **概览表格**：事件ID、名称、类型、时间、地点、人物、朝代
-- **详细记录**：事件描述、原文引用（保留实体标注）、段落位置
-- **事件链**：因果关系和时序关系的事件序列
-- **11种事件类型**：战争、继位、政治活动、政治改革、政治整顿、家族事件、建设、文化活动、经济活动、自然灾害、改革
-
-## 数据格式
-
-### 词汇表格式 (Markdown)
-```markdown
-# 人名词典
-
-## 统计信息
-- 总词条数: 1234
-- 高频人物 (出现>10次): 56人
-
-## 词条列表
-
-### 高频词条
-1. **刘邦** (356次)
-   - 别名: 汉高祖、沛公
-   - 相关章节: ...
-
-### 按首字母排序
-...
-```
-
-### 关系数据格式 (Markdown/JSON)
-```markdown
-# 父子关系
-
-## 刘邦 → 刘盈
-- 关系类型: 父子
-- 出处: 高祖本纪 [23]
-- 上下文: "太子盈，仁弱..."
-```
-
-### 家谱格式 (Markdown)
-```markdown
-# 汉朝帝王家谱
-
-## 世系图
-```
-刘邦 (汉高祖)
-├─ 刘盈 (汉惠帝)
-├─ 刘恒 (汉文帝)
-...
-```
-```
-
-## 使用场景
-
-1. **学术研究**: 人物关系分析、社会网络研究
-2. **可视化**: 构建交互式知识图谱界面
-3. **智能问答**: 支持"刘邦的儿子是谁"等问题
-4. **文本分析**: 实体统计、共现分析、网络中心性分析
-
-## 技术栈
-
-- **实体提取**: 基于规则的标注（@人名@, =地名= 等）
-- **关系抽取**: 模式匹配 + 语义分析
-- **数据格式**: Markdown (人类可读) + JSON (机器可读)
-- **可视化**: 计划使用 D3.js / Cytoscape.js
-
-## 未来计划
-
-- [ ] 完善事件索引系统
-- [ ] 构建完整的人物关系图谱
-- [ ] 添加时空信息（地理坐标、时间轴）
-- [ ] 开发交互式可视化界面
-- [ ] 支持图数据库（Neo4j）导入
-- [ ] 提供 SPARQL 查询接口
-
-## 相关文档
-
-- [实体标注方案](../ENTITY_TAGGING_SCHEME.md)
-- [动植物标注指南](../FLORA_FAUNA_TAGGING_GUIDE.md)
-- [项目README](../README.md)
+事件知识图谱以地铁路线图形式可视化，见 `app/metro/`：
+- 130条线路 = 130篇章节
+- 3,092个站点 = 3,092个事件
+- 换乘连线 = 跨章事件关系
+- 时间轴 = 公元前2700年 ~ 前87年

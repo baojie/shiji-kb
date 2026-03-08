@@ -35,10 +35,10 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
-EVENTS_DIR = _PROJECT_ROOT / "kg" / "events"
-OUTPUT_JSON = _PROJECT_ROOT / "kg" / "event_relations.json"
-OUTPUT_SUMMARY = _PROJECT_ROOT / "kg" / "event_relations_summary.md"
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+EVENTS_DIR = _PROJECT_ROOT / "kg" / "events" / "data"
+OUTPUT_JSON = _PROJECT_ROOT / "kg" / "events" / "data" / "event_relations.json"
+OUTPUT_SUMMARY = _PROJECT_ROOT / "kg" / "events" / "data" / "event_relations_summary.md"
 
 # ─── 事件解析 ───
 

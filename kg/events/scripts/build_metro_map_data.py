@@ -14,9 +14,9 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
-EVENTS_DIR = _PROJECT_ROOT / "kg" / "events"
-RELATIONS_FILE = _PROJECT_ROOT / "kg" / "event_relations.json"
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+EVENTS_DIR = _PROJECT_ROOT / "kg" / "events" / "data"
+RELATIONS_FILE = _PROJECT_ROOT / "kg" / "events" / "data" / "event_relations.json"
 OUTPUT_DIR = _PROJECT_ROOT / "app" / "metro" / "data"
 
 # ─── 章节分类与配色 ───

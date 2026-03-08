@@ -24,7 +24,7 @@ import json
 import sys
 from collections import defaultdict, Counter
 
-_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 CHAPTER_DIR = os.path.join(_PROJECT_ROOT, 'chapter_md')
 OUTPUT_FILE = os.path.join(_PROJECT_ROOT, 'kg', 'disambiguation_map.json')
 

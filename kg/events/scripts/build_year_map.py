@@ -16,11 +16,11 @@ import sys
 import glob
 from collections import defaultdict, OrderedDict
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 CHAPTER_DIR = os.path.join(BASE_DIR, 'chapter_md')
-REIGN_FILE = os.path.join(BASE_DIR, 'kg', 'reign_periods.json')
-OUTPUT_FILE = os.path.join(BASE_DIR, 'kg', 'year_ce_map.json')
-DISAMBIG_FILE = os.path.join(BASE_DIR, 'kg', 'disambiguation_map.json')
+REIGN_FILE = os.path.join(BASE_DIR, 'kg', 'chronology', 'data', 'reign_periods.json')
+OUTPUT_FILE = os.path.join(BASE_DIR, 'kg', 'chronology', 'data', 'year_ce_map.json')
+DISAMBIG_FILE = os.path.join(BASE_DIR, 'kg', 'entities', 'data', 'disambiguation_map.json')
 
 # ============================================================
 # Chinese numeral utilities

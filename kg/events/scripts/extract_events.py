@@ -20,10 +20,10 @@ import re
 from pathlib import Path
 from datetime import datetime
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 CHAPTER_DIR = _PROJECT_ROOT / "chapter_md"
-OUTPUT_DIR = _PROJECT_ROOT / "kg" / "events"
-PROGRESS_FILE = _PROJECT_ROOT / "kg" / "events" / "progress.json"
+OUTPUT_DIR = _PROJECT_ROOT / "kg" / "events" / "data"
+PROGRESS_FILE = _PROJECT_ROOT / "kg" / "events" / "data" / "progress.json"
 
 # 章节分类，影响提示词的微调
 CHAPTER_TYPES = {

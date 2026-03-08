@@ -22,7 +22,7 @@ from urllib.parse import quote
 from pypinyin import pinyin, Style
 
 # --- 配置 ---
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 CHAPTER_DIR = _PROJECT_ROOT / 'chapter_md'
 OUTPUT_DIR = _PROJECT_ROOT / 'docs' / 'entities'
 ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entity_aliases.json'

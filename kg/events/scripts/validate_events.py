@@ -16,8 +16,8 @@ import sys
 from pathlib import Path
 from collections import Counter
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
-EVENTS_DIR = _PROJECT_ROOT / "kg" / "events"
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+EVENTS_DIR = _PROJECT_ROOT / "kg" / "events" / "data"
 
 
 def validate_event_file(filepath):

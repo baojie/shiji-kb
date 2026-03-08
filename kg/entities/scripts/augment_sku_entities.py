@@ -11,9 +11,9 @@ import os
 import re
 from collections import defaultdict
 
-_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ENTITY_INDEX = os.path.join(_PROJECT_ROOT, "kg", "entity_index.json")
-ALIAS_FILE = os.path.join(_PROJECT_ROOT, "kg", "entity_aliases.json")
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+ENTITY_INDEX = os.path.join(_PROJECT_ROOT, "kg", "entities", "data", "entity_index.json")
+ALIAS_FILE = os.path.join(_PROJECT_ROOT, "kg", "entities", "data", "entity_aliases.json")
 SKUS_INDEX = os.path.join(_PROJECT_ROOT, "ontology", "skus", "skus_index.json")
 FACTUAL_DIR = os.path.join(_PROJECT_ROOT, "ontology", "skus", "factual")
 

@@ -19,10 +19,10 @@ import sys
 from pathlib import Path
 from collections import defaultdict
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
-EVENTS_DIR = _PROJECT_ROOT / "kg" / "events"
-REIGN_FILE = _PROJECT_ROOT / "kg" / "reign_periods.json"
-YEAR_CE_MAP_FILE = _PROJECT_ROOT / "kg" / "year_ce_map.json"
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+EVENTS_DIR = _PROJECT_ROOT / "kg" / "events" / "data"
+REIGN_FILE = _PROJECT_ROOT / "kg" / "chronology" / "data" / "reign_periods.json"
+YEAR_CE_MAP_FILE = _PROJECT_ROOT / "kg" / "chronology" / "data" / "year_ce_map.json"
 
 # ─── 中文数字工具 ───
 

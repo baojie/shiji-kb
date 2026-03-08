@@ -21,9 +21,9 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
-EVENTS_DIR = _PROJECT_ROOT / "kg" / "events"
-REIGN_FILE = _PROJECT_ROOT / "kg" / "reign_periods.json"
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+EVENTS_DIR = _PROJECT_ROOT / "kg" / "events" / "data"
+REIGN_FILE = _PROJECT_ROOT / "kg" / "chronology" / "data" / "reign_periods.json"
 
 # 已知关键事件年份（用于校验）
 KNOWN_DATES = {
