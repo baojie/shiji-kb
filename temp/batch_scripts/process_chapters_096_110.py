@@ -172,7 +172,7 @@ def main():
         print("\n请确保设置了 ANTHROPIC_API_KEY 环境变量")
         return 1
 
-    base_dir = Path("/home/baojie/work/shiji-kb")
+    base_dir = Path(".")
     input_dir = base_dir / "docs" / "original_text"
     output_dir = base_dir / "chapter_md"
     progress_file = base_dir / "progress_096_110.json"

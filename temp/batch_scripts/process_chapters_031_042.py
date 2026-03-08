@@ -163,7 +163,7 @@ def main():
     """主函数"""
 
     # 设置路径
-    BASE_DIR = Path("/home/baojie/work/shiji-kb")
+    BASE_DIR = Path(".")
     INPUT_DIR = BASE_DIR / "docs" / "original_text"
     OUTPUT_DIR = BASE_DIR / "chapter_md"
     PROGRESS_FILE = BASE_DIR / "progress_031_042.json"

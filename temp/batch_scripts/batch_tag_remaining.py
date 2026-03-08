@@ -85,8 +85,8 @@ def simple_tag_chapter(input_file, output_file):
 def batch_process_chapters(chapter_list):
     """批量处理章节列表"""
 
-    original_dir = Path('/home/baojie/work/shiji-kb/docs/original_text')
-    output_dir = Path('/home/baojie/work/shiji-kb/chapter_md')
+    original_dir = Path('docs/original_text')
+    output_dir = Path('chapter_md')
 
     success_count = 0
     total = len(chapter_list)
@@ -116,14 +116,14 @@ def batch_process_chapters(chapter_list):
 
 if __name__ == '__main__':
     # 获取完整的章节列表
-    original_dir = Path('/home/baojie/work/shiji-kb/docs/original_text')
+    original_dir = Path('docs/original_text')
     all_files = sorted(original_dir.glob('*.txt'))
 
     # 获取所有需要处理的章节号
     needed = []
     for f in all_files:
         chapter_name = f.stem  # 去掉.txt后缀
-        output_file = Path(f'/home/baojie/work/shiji-kb/chapter_md/{chapter_name}.tagged.md')
+        output_file = Path(f'chapter_md/{chapter_name}.tagged.md')
         if not output_file.exists():
             needed.append(chapter_name)
 

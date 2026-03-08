@@ -99,9 +99,9 @@ python3 scripts/process_chapters_111_130.py
 
 ### 输出位置
 ```
-输入: /home/baojie/work/shiji-kb/docs/original_text/[章节].txt
-输出: /home/baojie/work/shiji-kb/chapter_md/[章节].tagged.md
-进度: /home/baojie/work/shiji-kb/progress_111_130.json
+输入: docs/original_text/[章节].txt
+输出: chapter_md/[章节].tagged.md
+进度: progress_111_130.json
 ```
 
 ### 处理统计

@@ -163,7 +163,7 @@ python3 scripts/process_chapters_101_130_robust.py
 ### 最简单的方式
 
 ```bash
-cd /home/baojie/work/shiji-kb
+cd .
 ./scripts/start_processing.sh
 ```
 
@@ -174,7 +174,7 @@ cd /home/baojie/work/shiji-kb
 export ANTHROPIC_API_KEY="your_api_key_here"
 
 # 2. 运行处理脚本
-cd /home/baojie/work/shiji-kb
+cd .
 python3 scripts/process_chapters_101_130_robust.py
 
 # 3. 查看结果
@@ -402,7 +402,7 @@ cat progress_101_130.json
 ### 推荐命令
 
 ```bash
-cd /home/baojie/work/shiji-kb
+cd .
 ./scripts/start_processing.sh
 ```
 
@@ -410,7 +410,7 @@ cd /home/baojie/work/shiji-kb
 
 ```bash
 export ANTHROPIC_API_KEY="your_api_key_here"
-cd /home/baojie/work/shiji-kb
+cd .
 python3 scripts/process_chapters_101_130_robust.py
 ```
 
@@ -420,7 +420,7 @@ python3 scripts/process_chapters_101_130_robust.py
 
 ### 查看文档
 ```bash
-cd /home/baojie/work/shiji-kb
+cd .
 
 # 快速开始
 cat 批量处理_快速开始.md

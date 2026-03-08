@@ -10,7 +10,7 @@ from validate_tagging import validate_chapter
 
 def validate_multiple_chapters(chapter_numbers):
     """验证多个章节"""
-    base_dir = Path('/home/baojie/work/shiji-kb')
+    base_dir = Path('.')
 
     results = []
 

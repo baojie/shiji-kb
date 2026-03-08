@@ -27,8 +27,8 @@ CHAPTERS = [
     "110_匈奴列传"
 ]
 
-SOURCE_DIR = "/home/baojie/work/shiji-kb/docs/original_text"
-OUTPUT_DIR = "/home/baojie/work/shiji-kb/chapter_md"
+SOURCE_DIR = "docs/original_text"
+OUTPUT_DIR = "chapter_md"
 
 def process_chapter(chapter_name):
     """处理单个章节的实体标注"""

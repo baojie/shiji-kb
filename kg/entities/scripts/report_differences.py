@@ -33,7 +33,7 @@ def find_char_differences(str1, str2):
 
 
 if __name__ == '__main__':
-    base_dir = Path('/home/baojie/work/shiji-kb')
+    base_dir = Path('.')
     md_file = base_dir / 'chapter_md' / '005_秦本纪.tagged.md'
     txt_file = base_dir / 'chapter_numbered' / '005_秦本纪.txt'
 

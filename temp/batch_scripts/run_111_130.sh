@@ -19,7 +19,7 @@ if [ -f ~/.anthropic_key ]; then
 fi
 
 # 切换到项目目录
-cd /home/baojie/work/shiji-kb
+cd .
 
 # 运行处理脚本
 echo "=================================="

@@ -228,7 +228,7 @@ def main():
         print(f"❌ 无法初始化Anthropic客户端: {e}\n")
         return 1
 
-    base_dir = Path("/home/baojie/work/shiji-kb")
+    base_dir = Path(".")
     input_dir = base_dir / "docs" / "original_text"
     output_dir = base_dir / "chapter_md"
     progress_file = base_dir / "progress_096_110.json"

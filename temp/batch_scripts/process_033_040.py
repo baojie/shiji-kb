@@ -20,8 +20,8 @@ CHAPTERS = [
     ("040_楚世家", "楚世家"),
 ]
 
-SOURCE_DIR = "/home/baojie/work/shiji-kb/docs/original_text"
-OUTPUT_DIR = "/home/baojie/work/shiji-kb/chapter_md"
+SOURCE_DIR = "docs/original_text"
+OUTPUT_DIR = "chapter_md"
 
 
 def tag_entities(text):

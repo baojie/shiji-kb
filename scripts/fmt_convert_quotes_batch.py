@@ -41,7 +41,7 @@ def process_file(file_path):
 
 
 def main():
-    base_dir = Path('/home/baojie/work/shiji-kb')
+    base_dir = Path('.')
 
     # 处理章节 001-004
     chapters = [1, 2, 3, 4]

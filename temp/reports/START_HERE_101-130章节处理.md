@@ -7,7 +7,7 @@
 ## 🎯 30秒快速开始
 
 ```bash
-cd /home/baojie/work/shiji-kb
+cd .
 ./scripts/start_processing.sh
 ```
 
@@ -187,7 +187,7 @@ python3 scripts/process_chapters_101_130_robust.py
 ### 立即开始
 
 ```bash
-cd /home/baojie/work/shiji-kb
+cd .
 ./scripts/start_processing.sh
 ```
 

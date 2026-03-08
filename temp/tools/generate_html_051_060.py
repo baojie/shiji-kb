@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from render_shiji_html import markdown_to_html
 
-CHAPTER_MD_DIR = "/home/baojie/work/shiji-kb/chapter_md"
+CHAPTER_MD_DIR = "chapter_md"
 
 # 需要处理的章节列表
 CHAPTERS = [

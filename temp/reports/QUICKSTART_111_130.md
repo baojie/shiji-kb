@@ -7,7 +7,7 @@
 export ANTHROPIC_API_KEY='sk-ant-xxxxx'
 
 # 2. 运行处理脚本
-cd /home/baojie/work/shiji-kb
+cd .
 ./scripts/run_111_130.sh
 ```
 

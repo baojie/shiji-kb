@@ -34,7 +34,7 @@ def show_context(text, pos, context_len=50):
 
 
 if __name__ == '__main__':
-    base_dir = Path('/home/baojie/work/shiji-kb')
+    base_dir = Path('.')
     md_file = base_dir / 'chapter_md' / '005_秦本纪.tagged.md'
     txt_file = base_dir / 'chapter_numbered' / '005_秦本纪.txt'
 

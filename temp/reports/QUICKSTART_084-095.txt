@@ -11,14 +11,14 @@
 
 📁 文件位置
 ───────────────────────────────────────────────────────────────
-  输入目录: /home/baojie/work/shiji-kb/docs/original_text/
-  输出目录: /home/baojie/work/shiji-kb/chapter_md/
+  输入目录: docs/original_text/
+  输出目录: chapter_md/
   处理脚本: scripts/process_chapters_084_095.py
   启动脚本: scripts/start_processing_084_095.sh
 
 🚀 一键启动（推荐）
 ───────────────────────────────────────────────────────────────
-  cd /home/baojie/work/shiji-kb
+  cd .
   ./scripts/start_processing_084_095.sh
 
 ⚙️ 手动启动
@@ -27,7 +27,7 @@
      export ANTHROPIC_API_KEY="your_api_key"
 
   2. 运行处理脚本
-     cd /home/baojie/work/shiji-kb
+     cd .
      python3 scripts/process_chapters_084_095.py
 
 📝 待处理章节列表

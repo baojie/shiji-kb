@@ -138,8 +138,8 @@ def process_chapter(input_file, output_file):
     print(f"已完成: {output_file}")
 
 if __name__ == "__main__":
-    base_dir = "/home/baojie/work/shiji-kb/docs/original_text"
-    output_dir = "/home/baojie/work/shiji-kb/chapter_md"
+    base_dir = "docs/original_text"
+    output_dir = "chapter_md"
 
     chapters = [
         "088_蒙恬列传",

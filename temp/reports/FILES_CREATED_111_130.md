@@ -107,7 +107,7 @@
 
 ### 输入文件位置
 ```
-/home/baojie/work/shiji-kb/docs/original_text/
+docs/original_text/
 ├── 111_卫将军骠骑列传.txt
 ├── 112_平津侯主父列传.txt
 ├── ...
@@ -116,7 +116,7 @@
 
 ### 输出文件位置
 ```
-/home/baojie/work/shiji-kb/chapter_md/
+chapter_md/
 ├── 111_卫将军骠骑列传.tagged.md
 ├── 112_平津侯主父列传.tagged.md
 ├── ...
@@ -125,7 +125,7 @@
 
 ### 进度文件
 ```
-/home/baojie/work/shiji-kb/progress_111_130.json
+progress_111_130.json
 ```
 
 ## 标注示例

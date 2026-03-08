@@ -9,9 +9,9 @@ import os
 import re
 import json
 
-SOURCE_DIR = "/home/baojie/work/shiji-kb/docs/original_text"
-OUTPUT_DIR = "/home/baojie/work/shiji-kb/chapter_md"
-REFERENCE_FILE = "/home/baojie/work/shiji-kb/chapter_md/033_鲁周公世家.tagged.md"
+SOURCE_DIR = "docs/original_text"
+OUTPUT_DIR = "chapter_md"
+REFERENCE_FILE = "chapter_md/033_鲁周公世家.tagged.md"
 
 # 待处理章节列表
 CHAPTERS = [

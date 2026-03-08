@@ -10,8 +10,8 @@ import os
 from pathlib import Path
 
 # 配置路径
-ORIGINAL_TEXT_DIR = "/home/baojie/work/shiji-kb/docs/original_text"
-OUTPUT_DIR = "/home/baojie/work/shiji-kb/chapter_md"
+ORIGINAL_TEXT_DIR = "docs/original_text"
+OUTPUT_DIR = "chapter_md"
 
 # 需要处理的章节列表
 CHAPTERS = [

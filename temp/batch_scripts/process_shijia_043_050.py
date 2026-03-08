@@ -244,7 +244,7 @@ def main():
         client = anthropic.Anthropic(api_key=api_key)
         print("✅ 使用环境变量 ANTHROPIC_API_KEY")
 
-    base_dir = Path("/home/baojie/work/shiji-kb")
+    base_dir = Path(".")
     input_dir = base_dir / "docs" / "original_text"
     output_dir = base_dir / "chapter_md"
     progress_file = base_dir / "progress_043_050.json"

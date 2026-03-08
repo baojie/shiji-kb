@@ -70,7 +70,7 @@ def process_file(file_path):
 
 
 if __name__ == '__main__':
-    md_file = Path('/home/baojie/work/shiji-kb/chapter_md/005_秦本纪.tagged.md')
+    md_file = Path('chapter_md/005_秦本纪.tagged.md')
 
     if not md_file.exists():
         print(f"错误: 文件不存在: {md_file}")

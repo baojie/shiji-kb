@@ -88,5 +88,5 @@ def process_all_html_files(chapters_dir):
     print(f"\n处理完成：共更新 {updated_count}/{len(html_files)} 个文件")
 
 if __name__ == '__main__':
-    chapters_dir = '/home/baojie/work/shiji-kb/docs/chapters'
+    chapters_dir = 'docs/chapters'
     process_all_html_files(chapters_dir)

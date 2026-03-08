@@ -54,8 +54,8 @@ def process_chapter(input_file, output_file, chapter_num, chapter_name):
 
 def main():
     """主函数"""
-    original_dir = Path('/home/baojie/work/shiji-kb/docs/original_text')
-    output_dir = Path('/home/baojie/work/shiji-kb/chapter_md')
+    original_dir = Path('docs/original_text')
+    output_dir = Path('chapter_md')
 
     # 021-040章节列表
     chapters = [

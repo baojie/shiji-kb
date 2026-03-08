@@ -193,6 +193,6 @@ def process_file(input_file, output_file):
     print(f"标注完成！输出文件：{output_file}")
 
 if __name__ == '__main__':
-    input_file = '/home/baojie/work/shiji-kb/chapter_md/001_五帝本纪.md'
-    output_file = '/home/baojie/work/shiji-kb/chapter_md/001_五帝本纪.md'
+    input_file = 'chapter_md/001_五帝本纪.md'
+    output_file = 'chapter_md/001_五帝本纪.md'
     process_file(input_file, output_file)

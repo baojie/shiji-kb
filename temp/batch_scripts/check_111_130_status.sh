@@ -5,7 +5,7 @@ echo "======================================================================"
 echo "《史记》111-130列传章节处理状态检查"
 echo "======================================================================"
 
-BASE_DIR="/home/baojie/work/shiji-kb"
+BASE_DIR="."
 INPUT_DIR="$BASE_DIR/docs/original_text"
 OUTPUT_DIR="$BASE_DIR/chapter_md"
 PROGRESS_FILE="$BASE_DIR/progress_111_130.json"
