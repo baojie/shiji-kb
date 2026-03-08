@@ -128,8 +128,9 @@ def extract_events_from_index_files(event_dir):
             content = f.read()
             lines_list = content.split('\n')
 
-        # 第一遍：从详情段落提取 event_id → 段落位置 映射
+        # 第一遍：从详情段落提取 event_id → 段落位置/年代推断 映射
         para_map = {}  # event_id → paragraph_number
+        reasoning_map = {}  # event_id → 年代推断文本
         current_event_id = None
         for line in lines_list:
             stripped = line.strip()
@@ -142,6 +143,11 @@ def extract_events_from_index_files(event_dir):
                 m2 = re.search(r'\[([^\]]+)\]', stripped)
                 if m2:
                     para_map[current_event_id] = m2.group(1)
+            # 匹配 "- **年代推断**: ..."
+            if current_event_id and stripped.startswith('- **年代推断**'):
+                reasoning = stripped.replace('- **年代推断**:', '').replace('- **年代推断**：', '').strip()
+                if reasoning:
+                    reasoning_map[current_event_id] = reasoning
 
         # 第二遍：解析概览表格
         in_table = False
@@ -174,10 +180,11 @@ def extract_events_from_index_files(event_dir):
 
             clean_name = re.sub(r'[@=$%&^~*!?🌿]', '', event_name).strip()
             para_num = para_map.get(event_id, '')
+            reasoning = reasoning_map.get(event_id, '')
             if clean_name:
                 results.append((clean_name, event_type, chapter_id,
                                 event_id, time_str, people, locations,
-                                para_num))
+                                para_num, reasoning))
 
     return results
 
@@ -227,7 +234,7 @@ def build_event_index(event_dir):
     events = extract_events_from_index_files(event_dir)
     index = {}
 
-    for name, etype, chapter_id, event_id, time_str, people, locations, para_num in events:
+    for name, etype, chapter_id, event_id, time_str, people, locations, para_num, reasoning in events:
         # 同名事件用 event_id 区分（避免覆盖）
         key = f"{name}|{event_id}" if name in index else name
         if key in index:
@@ -244,6 +251,7 @@ def build_event_index(event_dir):
             'people': _extract_people_list(people),
             'locations': _extract_location_list(locations),
             'para_num': para_num,
+            'reasoning': reasoning,
         }
 
     return index
@@ -507,7 +515,7 @@ def _ce_year_to_period(ce_year):
     # ── 上古 ──
     if y <= -2100: return ('五帝时代（约前2700-前2100年）', -2700)
     if y <= -1600: return ('夏朝（约前2100-前1600年）', -2100)
-    if y <= -1046: return ('商朝（约前1600-前1046年）', -1600)
+    if y < -1046: return ('商朝（约前1600-前1046年）', -1600)
     # ── 西周 ──
     if y <= -771:  return ('西周（前1046-前771年）', -1046)
     # ── 春秋 ──
@@ -740,8 +748,10 @@ def generate_event_page(event_entries):
     lines.append('      .event-tag { font-size: 0.75em; padding: 1px 6px; border-radius: 3px;')
     lines.append('                   display: inline-block; line-height: 1.5; }')
     lines.append('      .tag-type { background: #f0e6d3; color: #8B4513; }')
-    lines.append('      .tag-person { background: #fdf2e9; color: #a0522d; }')
-    lines.append('      .tag-place { background: #fef9e7; color: #b8860b; }')
+    lines.append('      .tag-person { background: #fdf2e9; color: #a0522d; text-decoration: none; }')
+    lines.append('      a.tag-person:hover { background: #f5dcc8; }')
+    lines.append('      .tag-place { background: #fef9e7; color: #b8860b; text-decoration: none; }')
+    lines.append('      a.tag-place:hover { background: #faf0d0; }')
     lines.append('      .tag-time { background: #e8f8f5; color: #008b8b; font-weight: bold; }')
     lines.append('      .tag-time-approx { background: #f0f0e8; color: #6b8e6b;')
     lines.append('                         font-weight: normal; font-style: italic; }')
@@ -827,6 +837,7 @@ def generate_event_page(event_entries):
             ch_id = entry['refs'][0][0] if entry['refs'] else ''
             ch_title = extract_chapter_title(ch_id) if ch_id else ''
             para_num = entry.get('para_num', '')
+            reasoning = entry.get('reasoning', '')
 
             esc_name = html.escape(display_name)
             esc_id = html.escape(event_id)
@@ -836,39 +847,43 @@ def generate_event_page(event_entries):
 
             # 左侧：事件名 + 标签
             lines.append('    <div style="flex:1">')
-            # 事件名链接到章节段落（含事件编号）
-            id_label = f'<span class="event-id">{esc_id}</span> ' if event_id else ''
+            # 事件名链接到章节段落（编号在事件名后）
+            id_label = f' <span class="event-id">{esc_id}</span>' if event_id else ''
             if ch_id:
                 anchor = f'#pn-{para_num}' if para_num else ''
-                lines.append(f'      <div class="event-name">{id_label}'
-                             f'<a href="../chapters/{ch_id}.html{anchor}">{esc_name}</a></div>')
+                lines.append(f'      <div class="event-name">'
+                             f'<a href="../chapters/{ch_id}.html{anchor}">{esc_name}</a>{id_label}</div>')
             else:
-                lines.append(f'      <div class="event-name">{id_label}{esc_name}</div>')
+                lines.append(f'      <div class="event-name">{esc_name}{id_label}</div>')
 
             is_approximate = entry.get('ce_year_approximate', False)
             effective_year = ce_year or entry.get('ce_year_inferred')
 
             # 标签行
             lines.append('      <div class="event-tags">')
-            # 时间标签
+            # 时间标签（hover显示推理逻辑，无推断则显示原始时间）
             if effective_year is not None:
                 approx_class = ' tag-time-approx' if is_approximate else ''
-                lines.append(f'        <span class="event-tag tag-time{approx_class}">'
+                tooltip = reasoning or entry.get('time_str', '')
+                title_attr = f' title="{html.escape(tooltip)}"' if tooltip else ''
+                lines.append(f'        <span class="event-tag tag-time{approx_class}"{title_attr}>'
                              f'{_format_ce_year_label(effective_year, is_approximate)}</span>')
             # 类型标签
             if etype:
                 lines.append(f'        <span class="event-tag tag-type">'
                              f'{html.escape(etype)}</span>')
-            # 人物标签（最多显示4个）
+            # 人物标签（最多显示4个，链接到人名索引）
             for p in people[:4]:
-                lines.append(f'        <span class="event-tag tag-person">'
-                             f'{html.escape(p)}</span>')
+                esc_p = html.escape(p)
+                lines.append(f'        <a href="person.html#entity-{esc_p}" '
+                             f'class="event-tag tag-person">{esc_p}</a>')
             if len(people) > 4:
                 lines.append(f'        <span class="event-tag tag-person">+{len(people)-4}</span>')
-            # 地点标签（最多显示2个）
+            # 地点标签（最多显示2个，链接到地名索引）
             for loc in locations[:2]:
-                lines.append(f'        <span class="event-tag tag-place">'
-                             f'{html.escape(loc)}</span>')
+                esc_loc = html.escape(loc)
+                lines.append(f'        <a href="place.html#entity-{esc_loc}" '
+                             f'class="event-tag tag-place">{esc_loc}</a>')
             if len(locations) > 2:
                 lines.append(f'        <span class="event-tag tag-place">'
                              f'+{len(locations)-2}</span>')
