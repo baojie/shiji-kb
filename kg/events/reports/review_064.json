@@ -1,0 +1,31 @@
+{
+  "chapter_id": "064",
+  "chapter_name": "司马穰苴列传",
+  "total_events": 8,
+  "overview_events": 8,
+  "issues": [
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "6/8个事件指向前532年，疑似被单一锚点拉偏。涉及: 064-001, 064-002, 064-003, 064-004, 064-005...",
+      "year": -532,
+      "count": 6,
+      "event_ids": [
+        "064-001",
+        "064-002",
+        "064-003",
+        "064-004",
+        "064-005",
+        "064-006"
+      ]
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "单锚点塌缩疑似": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.479187"
+}

@@ -1,0 +1,35 @@
+{
+  "chapter_id": "029",
+  "chapter_name": "河渠书",
+  "total_events": 18,
+  "overview_events": 18,
+  "issues": [
+    {
+      "event_id": "029-004",
+      "check": "时间顺序异常",
+      "severity": "info",
+      "message": "'吴通三江五湖'(前500年)在'029-003'(前300年)之后，时间回跳200年"
+    },
+    {
+      "event_id": "029-007",
+      "check": "时间顺序异常",
+      "severity": "info",
+      "message": "'西门豹引漳溉邺'(前422年)在'029-006'(前256年)之后，时间回跳166年"
+    },
+    {
+      "event_id": "029-001",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'禹治黄河疏九川'标注前2150年，离群于本章核心范围前500年~前109年"
+    }
+  ],
+  "severity_counts": {
+    "info": 2,
+    "warning": 1
+  },
+  "check_counts": {
+    "时间顺序异常": 2,
+    "年份超出时代范围": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.420056"
+}

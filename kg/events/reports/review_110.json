@@ -1,0 +1,27 @@
+{
+  "chapter_id": "110",
+  "chapter_name": "匈奴列传",
+  "total_events": 34,
+  "overview_events": 34,
+  "issues": [
+    {
+      "event_id": "110-001",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'公刘失稷官变于西戎'标注前1600年，离群于本章核心范围前652年~前103年"
+    },
+    {
+      "event_id": "110-002",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'亶父避戎狄迁岐'标注前1200年，离群于本章核心范围前652年~前103年"
+    }
+  ],
+  "severity_counts": {
+    "warning": 2
+  },
+  "check_counts": {
+    "年份超出时代范围": 2
+  },
+  "reviewed_at": "2026-03-09T04:20:35.552519"
+}

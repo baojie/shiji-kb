@@ -1,0 +1,33 @@
+{
+  "chapter_id": "031",
+  "chapter_name": "吴太伯世家",
+  "total_events": 31,
+  "overview_events": 31,
+  "issues": [
+    {
+      "event_id": "031-001",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'太伯奔荆蛮'标注前1100年，离群于本章核心范围前585年~前484年"
+    },
+    {
+      "event_id": "031-002",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'太伯立句吴'标注前1100年，离群于本章核心范围前585年~前484年"
+    },
+    {
+      "event_id": "031-003",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'周武王封周章'标注前1046年，离群于本章核心范围前585年~前484年"
+    }
+  ],
+  "severity_counts": {
+    "warning": 3
+  },
+  "check_counts": {
+    "年份超出时代范围": 3
+  },
+  "reviewed_at": "2026-03-09T04:20:35.424380"
+}

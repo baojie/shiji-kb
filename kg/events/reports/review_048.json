@@ -1,0 +1,30 @@
+{
+  "chapter_id": "048",
+  "chapter_name": "陈涉世家",
+  "total_events": 13,
+  "overview_events": 13,
+  "issues": [
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "5/13个事件指向前209年，疑似被单一锚点拉偏。涉及: 048-003, 048-004, 048-006, 048-007, 048-008...",
+      "year": -209,
+      "count": 5,
+      "event_ids": [
+        "048-003",
+        "048-004",
+        "048-006",
+        "048-007",
+        "048-008"
+      ]
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "单锚点塌缩疑似": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.455111"
+}

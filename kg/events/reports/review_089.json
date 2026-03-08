@@ -1,0 +1,32 @@
+{
+  "chapter_id": "089",
+  "chapter_name": "张耳陈馀列传",
+  "total_events": 23,
+  "overview_events": 23,
+  "issues": [
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "7/23个事件指向前209年，疑似被单一锚点拉偏。涉及: 089-004, 089-005, 089-006, 089-007, 089-008...",
+      "year": -209,
+      "count": 7,
+      "event_ids": [
+        "089-004",
+        "089-005",
+        "089-006",
+        "089-007",
+        "089-008",
+        "089-009",
+        "089-010"
+      ]
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "单锚点塌缩疑似": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.518787"
+}

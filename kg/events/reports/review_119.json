@@ -1,0 +1,27 @@
+{
+  "chapter_id": "119",
+  "chapter_name": "循吏列传",
+  "total_events": 10,
+  "overview_events": 10,
+  "issues": [
+    {
+      "event_id": "119-009",
+      "check": "时间顺序异常",
+      "severity": "info",
+      "message": "'石奢纵父伏法'(前510年)在'119-008'(前400年)之后，时间回跳110年"
+    },
+    {
+      "event_id": "119-010",
+      "check": "时间顺序异常",
+      "severity": "info",
+      "message": "'李离过杀自刑'(前630年)在'119-009'(前510年)之后，时间回跳120年"
+    }
+  ],
+  "severity_counts": {
+    "info": 2
+  },
+  "check_counts": {
+    "时间顺序异常": 2
+  },
+  "reviewed_at": "2026-03-09T04:20:35.567149"
+}

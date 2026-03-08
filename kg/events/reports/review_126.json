@@ -1,0 +1,27 @@
+{
+  "chapter_id": "126",
+  "chapter_name": "滑稽列传",
+  "total_events": 14,
+  "overview_events": 14,
+  "issues": [
+    {
+      "event_id": "126-004",
+      "check": "时间顺序异常",
+      "severity": "info",
+      "message": "'优孟谏楚庄王葬马'(前600年)在'126-003'(前349年)之后，时间回跳251年"
+    },
+    {
+      "event_id": "126-013",
+      "check": "时间顺序异常",
+      "severity": "info",
+      "message": "'西门豹破河伯娶妇'(前400年)在'126-012'(前124年)之后，时间回跳276年"
+    }
+  ],
+  "severity_counts": {
+    "info": 2
+  },
+  "check_counts": {
+    "时间顺序异常": 2
+  },
+  "reviewed_at": "2026-03-09T04:20:35.578488"
+}

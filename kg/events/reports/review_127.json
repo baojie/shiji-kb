@@ -1,0 +1,47 @@
+{
+  "chapter_id": "127",
+  "chapter_name": "日者列传",
+  "total_events": 6,
+  "overview_events": 6,
+  "issues": [
+    {
+      "event_id": "127-002",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前130年，详情=前184年",
+      "overview_time": "[约公元前130年]",
+      "detail_time": "[约公元前184年]"
+    },
+    {
+      "event_id": "127-003",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前130年，详情=前184年",
+      "overview_time": "[约公元前130年]",
+      "detail_time": "[约公元前184年]"
+    },
+    {
+      "event_id": "127-004",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前130年，详情=前184年",
+      "overview_time": "[约公元前130年]",
+      "detail_time": "[约公元前184年]"
+    },
+    {
+      "event_id": "127-006",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前130年，详情=前184年",
+      "overview_time": "[约公元前130年]",
+      "detail_time": "[约公元前184年]"
+    }
+  ],
+  "severity_counts": {
+    "error": 4
+  },
+  "check_counts": {
+    "概览详情年份不一致": 4
+  },
+  "reviewed_at": "2026-03-09T04:20:35.579626"
+}

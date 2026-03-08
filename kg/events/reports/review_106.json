@@ -1,0 +1,114 @@
+{
+  "chapter_id": "106",
+  "chapter_name": "吴王濞列传",
+  "total_events": 16,
+  "overview_events": 16,
+  "issues": [
+    {
+      "event_id": "106-009",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前154年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前154年]"
+    },
+    {
+      "event_id": "106-010",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前154年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前154年]"
+    },
+    {
+      "event_id": "106-011",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前154年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前154年]"
+    },
+    {
+      "event_id": "106-012",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前154年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前154年]"
+    },
+    {
+      "event_id": "106-013",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前154年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前154年]"
+    },
+    {
+      "event_id": "106-014",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前154年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前154年]"
+    },
+    {
+      "event_id": "106-015",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前154年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前154年]"
+    },
+    {
+      "event_id": "106-016",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前154年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前154年]"
+    },
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "5/16个事件指向前196年，疑似被单一锚点拉偏。涉及: 106-002, 106-003, 106-004, 106-005, 106-006...",
+      "year": -196,
+      "count": 5,
+      "event_ids": [
+        "106-002",
+        "106-003",
+        "106-004",
+        "106-005",
+        "106-006"
+      ]
+    },
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "8/16个事件指向前154年，疑似被单一锚点拉偏。涉及: 106-009, 106-010, 106-011, 106-012, 106-013...",
+      "year": -154,
+      "count": 8,
+      "event_ids": [
+        "106-009",
+        "106-010",
+        "106-011",
+        "106-012",
+        "106-013",
+        "106-014",
+        "106-015",
+        "106-016"
+      ]
+    }
+  ],
+  "severity_counts": {
+    "error": 8,
+    "warning": 2
+  },
+  "check_counts": {
+    "概览详情年份不一致": 8,
+    "单锚点塌缩疑似": 2
+  },
+  "reviewed_at": "2026-03-09T04:20:35.545136"
+}

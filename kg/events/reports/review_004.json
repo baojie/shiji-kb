@@ -1,0 +1,80 @@
+{
+  "chapter_id": "004",
+  "chapter_name": "周本纪",
+  "total_events": 78,
+  "overview_events": 78,
+  "issues": [
+    {
+      "event_id": "004-028",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %四十馀年% [约公元前1042年-前996年]"
+    },
+    {
+      "event_id": "004-050",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %二年%至%四年% （公元前675年-前673年）"
+    },
+    {
+      "event_id": "004-052",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %三年%至%十七年% （公元前649年-前635年）"
+    },
+    {
+      "event_id": "004-059",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %元年%至%十七年% （公元前519年-前503年）"
+    },
+    {
+      "event_id": "004-067",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: @显王@%五年%至%四十四年% （公元前364年-前325年）"
+    },
+    {
+      "event_id": "004-039",
+      "check": "即位年份偏差",
+      "severity": "warning",
+      "message": "'宣王即位中兴'标注前827年，但周公即位年为前1042年，偏差215年",
+      "person": "周公",
+      "annotated_year": -827,
+      "expected_year": -1042
+    },
+    {
+      "event_id": "004-001",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'后稷诞生弃养'标注前2402年，离群于本章核心范围前1100年~前300年"
+    },
+    {
+      "event_id": "004-002",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'弃为农师受封'标注前2100年，离群于本章核心范围前1100年~前300年"
+    },
+    {
+      "event_id": "004-003",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'早期世系传承'标注前1600年，离群于本章核心范围前1100年~前300年"
+    },
+    {
+      "event_id": "004-004",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'公刘复业兴周'标注前1600年，离群于本章核心范围前1100年~前300年"
+    }
+  ],
+  "severity_counts": {
+    "warning": 10
+  },
+  "check_counts": {
+    "有纪年无公元年": 5,
+    "即位年份偏差": 1,
+    "年份超出时代范围": 4
+  },
+  "reviewed_at": "2026-03-09T04:20:35.362083"
+}

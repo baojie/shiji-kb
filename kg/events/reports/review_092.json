@@ -1,0 +1,21 @@
+{
+  "chapter_id": "092",
+  "chapter_name": "淮阴侯列传",
+  "total_events": 28,
+  "overview_events": 28,
+  "issues": [
+    {
+      "event_id": "092-002",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %数十日% [公元前209年以前]"
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "有纪年无公元年": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.523644"
+}

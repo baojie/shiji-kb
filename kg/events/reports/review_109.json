@@ -1,0 +1,99 @@
+{
+  "chapter_id": "109",
+  "chapter_name": "李将军列传",
+  "total_events": 16,
+  "overview_events": 16,
+  "issues": [
+    {
+      "event_id": "109-002",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前166年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前166年]"
+    },
+    {
+      "event_id": "109-003",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前141年，详情=前166年",
+      "overview_time": "$景帝$时 [约公元前141年]",
+      "detail_time": "$景帝$时 [约公元前166年]"
+    },
+    {
+      "event_id": "109-004",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前88年，详情=前166年",
+      "overview_time": "$武帝$初 [约公元前88年]",
+      "detail_time": "$武帝$初 [约公元前166年]"
+    },
+    {
+      "event_id": "109-005",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前88年，详情=前166年",
+      "overview_time": "$武帝$时 [约公元前88年]",
+      "detail_time": "$武帝$时 [约公元前166年]"
+    },
+    {
+      "event_id": "109-006",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前123年，详情=前166年",
+      "overview_time": "马邑后%四岁% [约公元前123年]",
+      "detail_time": "马邑后%四岁% [约公元前166年]"
+    },
+    {
+      "event_id": "109-007",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前123年，详情=前166年",
+      "overview_time": "[约公元前123年]",
+      "detail_time": "[约公元前166年]"
+    },
+    {
+      "event_id": "109-008",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前123年，详情=前166年",
+      "overview_time": "[约公元前123年]",
+      "detail_time": "[约公元前166年]"
+    },
+    {
+      "event_id": "109-009",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前123年，详情=前166年",
+      "overview_time": "[约公元前123年]",
+      "detail_time": "[约公元前166年]"
+    },
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "8/16个事件指向前166年，疑似被单一锚点拉偏。涉及: 109-002, 109-003, 109-004, 109-005, 109-006...",
+      "year": -166,
+      "count": 8,
+      "event_ids": [
+        "109-002",
+        "109-003",
+        "109-004",
+        "109-005",
+        "109-006",
+        "109-007",
+        "109-008",
+        "109-009"
+      ]
+    }
+  ],
+  "severity_counts": {
+    "error": 8,
+    "warning": 1
+  },
+  "check_counts": {
+    "概览详情年份不一致": 8,
+    "单锚点塌缩疑似": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.550092"
+}

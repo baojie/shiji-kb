@@ -1,0 +1,21 @@
+{
+  "chapter_id": "130",
+  "chapter_name": "太史公自序",
+  "total_events": 20,
+  "overview_events": 20,
+  "issues": [
+    {
+      "event_id": "130-001",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'颛顼命重黎司天地'标注前2476年，离群于本章核心范围前621年~前96年"
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "年份超出时代范围": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.584221"
+}

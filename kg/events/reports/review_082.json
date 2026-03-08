@@ -1,0 +1,30 @@
+{
+  "chapter_id": "082",
+  "chapter_name": "田单列传",
+  "total_events": 9,
+  "overview_events": 9,
+  "issues": [
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "5/9个事件指向前279年，疑似被单一锚点拉偏。涉及: 082-004, 082-005, 082-006, 082-007, 082-008...",
+      "year": -279,
+      "count": 5,
+      "event_ids": [
+        "082-004",
+        "082-005",
+        "082-006",
+        "082-007",
+        "082-008"
+      ]
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "单锚点塌缩疑似": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.508664"
+}

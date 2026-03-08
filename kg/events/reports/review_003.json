@@ -1,0 +1,21 @@
+{
+  "chapter_id": "003",
+  "chapter_name": "殷本纪",
+  "total_events": 42,
+  "overview_events": 42,
+  "issues": [
+    {
+      "event_id": "003-001",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'契佐禹封商'标注前2150年，离群于本章核心范围前1610年~前1047年"
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "年份超出时代范围": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.357626"
+}

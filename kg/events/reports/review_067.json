@@ -1,0 +1,31 @@
+{
+  "chapter_id": "067",
+  "chapter_name": "仲尼弟子列传",
+  "total_events": 20,
+  "overview_events": 20,
+  "issues": [
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "6/20个事件指向前484年，疑似被单一锚点拉偏。涉及: 067-006, 067-007, 067-008, 067-009, 067-010...",
+      "year": -484,
+      "count": 6,
+      "event_ids": [
+        "067-006",
+        "067-007",
+        "067-008",
+        "067-009",
+        "067-010",
+        "067-011"
+      ]
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "单锚点塌缩疑似": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.483885"
+}

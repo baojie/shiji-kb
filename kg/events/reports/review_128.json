@@ -1,0 +1,21 @@
+{
+  "chapter_id": "128",
+  "chapter_name": "龟策列传",
+  "total_events": 9,
+  "overview_events": 9,
+  "issues": [
+    {
+      "event_id": "128-007",
+      "check": "时间顺序异常",
+      "severity": "info",
+      "message": "'宋元王梦得神龟'(前530年)在'128-006'(前91年)之后，时间回跳439年"
+    }
+  ],
+  "severity_counts": {
+    "info": 1
+  },
+  "check_counts": {
+    "时间顺序异常": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.580924"
+}

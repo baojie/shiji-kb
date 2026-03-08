@@ -1,0 +1,28 @@
+{
+  "chapter_id": "033",
+  "chapter_name": "鲁周公世家",
+  "total_events": 30,
+  "overview_events": 30,
+  "issues": [
+    {
+      "event_id": "033-021",
+      "check": "概览详情精度不一致",
+      "severity": "warning",
+      "message": "概览精度=approx，详情精度=exact"
+    },
+    {
+      "event_id": "033-030",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'楚灭鲁'标注前256年，离群于本章核心范围前1042年~前479年"
+    }
+  ],
+  "severity_counts": {
+    "warning": 2
+  },
+  "check_counts": {
+    "概览详情精度不一致": 1,
+    "年份超出时代范围": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.428590"
+}

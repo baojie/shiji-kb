@@ -1,0 +1,187 @@
+{
+  "chapter_id": "121",
+  "chapter_name": "儒林列传",
+  "total_events": 23,
+  "overview_events": 23,
+  "issues": [
+    {
+      "event_id": "121-002",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前158年，详情=前209年",
+      "overview_time": "[约公元前158年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-003",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前158年，详情=前209年",
+      "overview_time": "[约公元前158年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-005",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前158年，详情=前209年",
+      "overview_time": "[约公元前158年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-006",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前158年，详情=前209年",
+      "overview_time": "[约公元前158年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-007",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前158年，详情=前209年",
+      "overview_time": "[约公元前158年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-009",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前159年，详情=前209年",
+      "overview_time": "[约公元前159年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-010",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前160年，详情=前209年",
+      "overview_time": "[约公元前160年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-011",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前161年，详情=前209年",
+      "overview_time": "[约公元前161年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-012",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前162年，详情=前209年",
+      "overview_time": "[约公元前162年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-013",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前163年，详情=前209年",
+      "overview_time": "[约公元前163年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-016",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前163年，详情=前209年",
+      "overview_time": "[约公元前163年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-017",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前161年，详情=前209年",
+      "overview_time": "[约公元前161年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-018",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前159年，详情=前209年",
+      "overview_time": "[约公元前159年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-019",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前157年，详情=前209年",
+      "overview_time": "[约公元前157年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-020",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前155年，详情=前209年",
+      "overview_time": "[约公元前155年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-021",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前153年，详情=前209年",
+      "overview_time": "[约公元前153年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "121-023",
+      "check": "概览详情年份不一致",
+      "severity": "error",
+      "message": "概览=前151年，详情=前209年",
+      "overview_time": "[约公元前151年]",
+      "detail_time": "[约公元前209年]"
+    },
+    {
+      "event_id": "ALL",
+      "check": "单锚点塌缩疑似",
+      "severity": "warning",
+      "message": "17/23个事件指向前209年，疑似被单一锚点拉偏。涉及: 121-002, 121-003, 121-005, 121-006, 121-007...",
+      "year": -209,
+      "count": 17,
+      "event_ids": [
+        "121-002",
+        "121-003",
+        "121-005",
+        "121-006",
+        "121-007",
+        "121-009",
+        "121-010",
+        "121-011",
+        "121-012",
+        "121-013",
+        "121-016",
+        "121-017",
+        "121-018",
+        "121-019",
+        "121-020",
+        "121-021",
+        "121-023"
+      ]
+    },
+    {
+      "event_id": "121-001",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'孔子修诗书礼乐'标注前515年，离群于本章核心范围前209年~前165年"
+    }
+  ],
+  "severity_counts": {
+    "error": 17,
+    "warning": 2
+  },
+  "check_counts": {
+    "概览详情年份不一致": 17,
+    "单锚点塌缩疑似": 1,
+    "年份超出时代范围": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.570735"
+}

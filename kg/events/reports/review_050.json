@@ -1,0 +1,21 @@
+{
+  "chapter_id": "050",
+  "chapter_name": "楚元王世家",
+  "total_events": 8,
+  "overview_events": 8,
+  "issues": [
+    {
+      "event_id": "050-007",
+      "check": "时间顺序异常",
+      "severity": "info",
+      "message": "'赵幽王之死'(前181年)在'050-006'(前68年)之后，时间回跳113年"
+    }
+  ],
+  "severity_counts": {
+    "info": 1
+  },
+  "check_counts": {
+    "时间顺序异常": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.457608"
+}

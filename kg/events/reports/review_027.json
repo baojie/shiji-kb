@@ -1,0 +1,40 @@
+{
+  "chapter_id": "027",
+  "chapter_name": "天官书",
+  "total_events": 19,
+  "overview_events": 19,
+  "issues": [
+    {
+      "event_id": "027-001",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %春秋%二百四十二年间 [约公元前722年-前481年]"
+    },
+    {
+      "event_id": "027-002",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %春秋% [约公元前722年-前481年]"
+    },
+    {
+      "event_id": "027-015",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %元光%、%元狩% （公元前134年-前117年）"
+    },
+    {
+      "event_id": "027-003",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'宋襄公时星陨如雨'标注前638年，离群于本章核心范围前232年~前108年"
+    }
+  ],
+  "severity_counts": {
+    "warning": 4
+  },
+  "check_counts": {
+    "有纪年无公元年": 3,
+    "年份超出时代范围": 1
+  },
+  "reviewed_at": "2026-03-09T04:20:35.415357"
+}
