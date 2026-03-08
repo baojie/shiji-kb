@@ -519,11 +519,9 @@ async function init() {
     chainIndex[c.target].push({ ...c, dir: 'in' });
   }
 
-  // Default: show 本纪 + 世家
-  for (const line of data.lines) {
-    if (line.group === '本纪' || line.group === '世家') {
-      visibleLines.add(line.id);
-    }
+  // Default: show first 3 chapters
+  for (const line of data.lines.slice(0, 3)) {
+    visibleLines.add(line.id);
   }
 
   buildSidebar();
