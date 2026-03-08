@@ -125,44 +125,59 @@ def extract_events_from_index_files(event_dir):
     for fpath in sorted(event_dir.glob('*_事件索引.md')):
         chapter_id = fpath.stem.replace('_事件索引', '')
         with open(fpath, 'r', encoding='utf-8') as f:
-            in_table = False
-            for line in f:
-                line = line.strip()
-                # 检测表格开始（表头行）
-                if line.startswith('| 事件ID'):
-                    in_table = True
-                    continue
-                # 跳过分隔行
-                if in_table and line.startswith('|---'):
-                    continue
-                # 表格结束
-                if in_table and not line.startswith('|'):
-                    in_table = False
-                    continue
-                if not in_table:
-                    continue
+            content = f.read()
+            lines_list = content.split('\n')
 
-                # 解析表格行
-                cols = [c.strip() for c in line.split('|')]
-                # cols[0]是空的（行首|之前），实际数据从cols[1]开始
-                if len(cols) < 7:
-                    continue
+        # 第一遍：从详情段落提取 event_id → 段落位置 映射
+        para_map = {}  # event_id → paragraph_number
+        current_event_id = None
+        for line in lines_list:
+            stripped = line.strip()
+            # 匹配 "### 001-001 黄帝诞生显灵"
+            m = re.match(r'^###\s+(\S+)\s+', stripped)
+            if m:
+                current_event_id = m.group(1)
+            # 匹配 "- **段落位置**: [1.2]"
+            if current_event_id and stripped.startswith('- **段落位置**'):
+                m2 = re.search(r'\[([^\]]+)\]', stripped)
+                if m2:
+                    para_map[current_event_id] = m2.group(1)
 
-                event_id = cols[1].strip()
-                event_name = cols[2].strip()
-                event_type = cols[3].strip()
-                time_str = cols[4].strip()
-                locations = cols[5].strip()
-                people = cols[6].strip()
+        # 第二遍：解析概览表格
+        in_table = False
+        for line in lines_list:
+            line = line.strip()
+            if line.startswith('| 事件ID'):
+                in_table = True
+                continue
+            if in_table and line.startswith('|---'):
+                continue
+            if in_table and not line.startswith('|'):
+                in_table = False
+                continue
+            if not in_table:
+                continue
 
-                if not event_name or not event_id:
-                    continue
+            cols = [c.strip() for c in line.split('|')]
+            if len(cols) < 7:
+                continue
 
-                # 去除实体标记以获取纯文本名称
-                clean_name = re.sub(r'[@=$%&^~*!?🌿]', '', event_name).strip()
-                if clean_name:
-                    results.append((clean_name, event_type, chapter_id,
-                                    event_id, time_str, people, locations))
+            event_id = cols[1].strip()
+            event_name = cols[2].strip()
+            event_type = cols[3].strip()
+            time_str = cols[4].strip()
+            locations = cols[5].strip()
+            people = cols[6].strip()
+
+            if not event_name or not event_id:
+                continue
+
+            clean_name = re.sub(r'[@=$%&^~*!?🌿]', '', event_name).strip()
+            para_num = para_map.get(event_id, '')
+            if clean_name:
+                results.append((clean_name, event_type, chapter_id,
+                                event_id, time_str, people, locations,
+                                para_num))
 
     return results
 
@@ -212,7 +227,7 @@ def build_event_index(event_dir):
     events = extract_events_from_index_files(event_dir)
     index = {}
 
-    for name, etype, chapter_id, event_id, time_str, people, locations in events:
+    for name, etype, chapter_id, event_id, time_str, people, locations, para_num in events:
         # 同名事件用 event_id 区分（避免覆盖）
         key = f"{name}|{event_id}" if name in index else name
         if key in index:
@@ -228,6 +243,7 @@ def build_event_index(event_dir):
             'time_str': _strip_entity_tags(time_str) if time_str.strip() != '-' else '',
             'people': _extract_people_list(people),
             'locations': _extract_location_list(locations),
+            'para_num': para_num,
         }
 
     return index
@@ -473,48 +489,235 @@ def _format_refs(refs):
     return ' <span class="ref-sep">|</span> '.join(parts)
 
 
-def _format_ce_year_label(ce_year):
+def _format_ce_year_label(ce_year, approximate=False):
     """格式化公元年显示"""
     if ce_year is None:
         return '时间不详'
+    prefix = '约' if approximate else ''
     if ce_year < 0:
-        return f'前{-ce_year}年'
-    return f'{ce_year}年'
+        return f'{prefix}前{-ce_year}年'
+    return f'{prefix}{ce_year}年'
 
 
 def _ce_year_to_period(ce_year):
-    """将公元年映射到历史分期，用于时间轴分组"""
+    """将公元年映射到历史分期（按君主/皇帝），用于时间轴分组"""
     if ce_year is None:
         return ('未知时期', 99999)
     y = ce_year
+    # ── 上古 ──
     if y <= -2100: return ('五帝时代（约前2700-前2100年）', -2700)
     if y <= -1600: return ('夏朝（约前2100-前1600年）', -2100)
     if y <= -1046: return ('商朝（约前1600-前1046年）', -1600)
+    # ── 西周 ──
     if y <= -771:  return ('西周（前1046-前771年）', -1046)
+    # ── 春秋 ──
     if y <= -476:  return ('春秋（前770-前476年）', -770)
+    # ── 战国 ──
     if y <= -221:  return ('战国（前475-前221年）', -475)
-    if y <= -206:  return ('秦朝（前221-前207年）', -221)
-    if y <= -87:   return ('西汉（前206-前87年）', -206)
+    # ── 秦朝（按皇帝）──
+    if y <= -210:  return ('秦始皇（前221-前210年）', -221)
+    if y <= -206:  return ('秦二世/子婴（前209-前207年）', -209)
+    # ── 楚汉之争 ──
+    if y <= -202:  return ('楚汉之争（前206-前202年）', -206)
+    # ── 西汉（按皇帝）──
+    if y <= -195:  return ('汉高祖（前202-前195年）', -202)
+    if y <= -188:  return ('汉惠帝（前194-前188年）', -194)
+    if y <= -180:  return ('吕后称制（前187-前180年）', -187)
+    if y <= -157:  return ('汉文帝（前179-前157年）', -179)
+    if y <= -141:  return ('汉景帝（前156-前141年）', -156)
+    if y <= -87:   return ('汉武帝（前140-前87年）', -140)
     return ('其他', y)
+
+
+# ─── 章节时代范围（用于完全无纪年事件的兜底推断）───
+CHAPTER_ERA = {
+    # 本纪
+    "001": -2500,  # 五帝
+    "002": -1900,  # 夏
+    "003": -1300,  # 殷
+    "004": -900,   # 周
+    "005": -900,   # 秦本纪（秦非子约前900年~秦王政）
+    "006": -230,   # 秦始皇
+    "007": -207,   # 项羽
+    "008": -205,   # 高祖
+    "009": -190,   # 吕太后
+    "010": -175,   # 孝文
+    "011": -155,   # 孝景
+    "012": -135,   # 孝武
+    # 表
+    "013": -1500, "014": -800, "015": -450, "016": -250,
+    "017": -200, "018": -200, "019": -200, "020": -200,
+    "021": -200, "022": -200,
+    # 书
+    "023": -300, "024": -300, "025": -300, "026": -300,
+    "027": -300, "028": -300, "029": -300, "030": -150,
+    # 世家
+    "031": -800, "032": -800, "033": -800, "034": -800,
+    "035": -1000, "036": -700, "037": -700, "038": -700,
+    "039": -650, "040": -700, "041": -500, "042": -700,
+    "043": -450, "044": -400, "045": -400, "046": -350,
+    "047": -520, "048": -209, "049": -200, "050": -200,
+    "051": -200, "052": -200, "053": -200, "054": -200,
+    "055": -210, "056": -210, "057": -200, "058": -170,
+    "059": -150, "060": -120,
+    # 列传
+    "061": -1050, "062": -200, "063": -200, "064": -200,
+    "065": -500, "066": -300, "067": -200, "068": -200,
+    "069": -334, "070": -330, "071": -350, "072": -300,
+    "073": -280, "074": -400, "075": -300, "076": -300,
+    "077": -300, "078": -300, "079": -270, "080": -284,
+    "081": -300, "082": -300, "083": -300, "084": -350,
+    "085": -250, "086": -250, "087": -250, "088": -250,
+    "089": -210, "090": -200, "091": -200, "092": -210,
+    "093": -210, "094": -200, "095": -200, "096": -200,
+    "097": -200, "098": -200, "099": -200, "100": -200,
+    "101": -200, "102": -180, "103": -170, "104": -170,
+    "105": -160, "106": -160, "107": -160, "108": -150,
+    "109": -150, "110": -200, "111": -130, "112": -130,
+    "113": -130, "114": -130, "115": -130, "116": -130,
+    "117": -140, "118": -140, "119": -130, "120": -130,
+    "121": -150, "122": -200, "123": -150, "124": -130,
+    "125": -130, "126": -130, "127": -130, "128": -130,
+    "129": -500, "130": -100,
+}
+
+
+def _load_person_lifespans():
+    """加载人物生卒年数据库"""
+    lifespan_file = Path(__file__).resolve().parent.parent / "data" / "person_lifespans.json"
+    if not lifespan_file.exists():
+        return {}
+    with open(lifespan_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data.get('persons', {})
+
+
+def _person_active_range(people_list, lifespans):
+    """根据事件人物列表，计算人物生存期的交集区间
+
+    Returns: (latest_birth, earliest_death) 或 (None, None)
+    """
+    ranges = []
+    for person in people_list:
+        if person in lifespans:
+            info = lifespans[person]
+            ranges.append((info['birth'], info['death']))
+    if not ranges:
+        return None, None
+    latest_birth = max(b for b, d in ranges)
+    earliest_death = min(d for b, d in ranges)
+    if latest_birth <= earliest_death:
+        return latest_birth, earliest_death
+    return None, None
+
+
+def infer_undated_events(event_entries):
+    """为没有 CE 年的事件推断近似日期
+
+    策略（优先级从高到低）：
+    1. 人物生卒年交集中点（最可靠）
+    2. 同章节相邻事件插值（用最近的已知日期）
+    3. 章节时代兜底（最粗略）
+
+    对已推断的日期，用人物生卒年做合理性检查和修正。
+    """
+    lifespans = _load_person_lifespans()
+
+    # 按章节分组
+    by_chapter = defaultdict(list)
+    for key, entry in event_entries.items():
+        ch_full = entry['refs'][0][0] if entry['refs'] else ''
+        ch_num = ch_full[:3] if ch_full else ''
+        event_id = entry.get('event_id', '')
+        by_chapter[ch_num].append((key, entry, event_id))
+
+    inferred_count = 0
+    person_refined = 0
+
+    for ch_id, events in by_chapter.items():
+        events.sort(key=lambda x: x[2])
+
+        # 收集已知 CE 年的位置
+        dated_positions = []
+        for i, (key, entry, eid) in enumerate(events):
+            if entry.get('ce_year') is not None:
+                dated_positions.append((i, entry['ce_year']))
+
+        for i, (key, entry, eid) in enumerate(events):
+            if entry.get('ce_year') is not None:
+                continue
+
+            inferred = None
+
+            # 策略1: 人物生卒年交集
+            people = entry.get('people', [])
+            if people and lifespans:
+                lb, ed = _person_active_range(people, lifespans)
+                if lb is not None and ed is not None:
+                    inferred = (lb + ed) // 2  # 取活跃期中点
+                    person_refined += 1
+
+            # 策略2: 章节内插值
+            if inferred is None and dated_positions:
+                prev_year = None
+                next_year = None
+                for pos, year in dated_positions:
+                    if pos <= i:
+                        prev_year = year
+                    if pos >= i and next_year is None:
+                        next_year = year
+
+                if prev_year is not None and next_year is not None:
+                    inferred = prev_year
+                elif prev_year is not None:
+                    inferred = prev_year
+                elif next_year is not None:
+                    inferred = next_year
+
+            # 策略3: 章节时代兜底
+            if inferred is None:
+                inferred = CHAPTER_ERA.get(ch_id)
+
+            if inferred is not None:
+                # 合理性检查：用人物生卒年约束
+                if people and lifespans:
+                    lb, ed = _person_active_range(people, lifespans)
+                    if lb is not None and ed is not None:
+                        if inferred < lb - 20:
+                            inferred = (lb + ed) // 2
+                            person_refined += 1
+                        elif inferred > ed + 20:
+                            inferred = (lb + ed) // 2
+                            person_refined += 1
+
+                entry['ce_year_inferred'] = inferred
+                entry['ce_year_approximate'] = True
+                inferred_count += 1
+
+    print(f"    其中 {person_refined} 个由人物生卒年约束/修正")
+    return inferred_count
 
 
 def generate_event_page(event_entries):
     """生成事件索引 HTML 页面，以时间为主索引"""
     total_events = len(event_entries)
     dated_count = sum(1 for e in event_entries.values() if e.get('ce_year') is not None)
+    inferred_count = sum(1 for e in event_entries.values()
+                         if e.get('ce_year') is None and e.get('ce_year_inferred') is not None)
 
-    # 按时期分组
+    # 按时期分组（优先用精确年，否则用推断年）
     grouped_by_period = defaultdict(list)
     for name, entry in event_entries.items():
-        period_name, period_sort = _ce_year_to_period(entry.get('ce_year'))
-        # 显示名去掉 |event_id 后缀
+        effective_year = entry.get('ce_year') or entry.get('ce_year_inferred')
+        period_name, period_sort = _ce_year_to_period(effective_year)
         display_name = name.split('|')[0]
         grouped_by_period[period_name].append((display_name, entry, period_sort))
 
-    # 每组内按CE年+事件ID排序
+    # 每组内按有效年+事件ID排序
     for period in grouped_by_period:
         grouped_by_period[period].sort(
-            key=lambda x: (x[1].get('ce_year') or 99999, x[1].get('event_id', '')))
+            key=lambda x: (x[1].get('ce_year') or x[1].get('ce_year_inferred') or 99999,
+                           x[1].get('event_id', '')))
 
     # 时期按时间排序
     period_order = sorted(grouped_by_period.keys(),
@@ -540,6 +743,8 @@ def generate_event_page(event_entries):
     lines.append('      .tag-person { background: #fdf2e9; color: #a0522d; }')
     lines.append('      .tag-place { background: #fef9e7; color: #b8860b; }')
     lines.append('      .tag-time { background: #e8f8f5; color: #008b8b; font-weight: bold; }')
+    lines.append('      .tag-time-approx { background: #f0f0e8; color: #6b8e6b;')
+    lines.append('                         font-weight: normal; font-style: italic; }')
     lines.append('      .event-entry { display: flex; justify-content: space-between;')
     lines.append('                     align-items: flex-start; padding: 6px 8px;')
     lines.append('                     border-bottom: 1px solid #f0ebe3; }')
@@ -552,6 +757,13 @@ def generate_event_page(event_entries):
     lines.append('                    margin: 12px 0; align-items: center; }')
     lines.append('      .filter-bar select { padding: 4px 8px; border: 1px solid #d4c5a9;')
     lines.append('                           border-radius: 4px; background: #faf8f5; }')
+    lines.append('      details.letter-section { margin-bottom: 4px; }')
+    lines.append('      details.letter-section > summary { cursor: pointer; user-select: none;')
+    lines.append('                                         list-style: none; }')
+    lines.append('      details.letter-section > summary::-webkit-details-marker { display: none; }')
+    lines.append('      details.letter-section > summary::before { content: "▶ "; font-size: 0.8em;')
+    lines.append('                                                  color: #999; }')
+    lines.append('      details.letter-section[open] > summary::before { content: "▼ "; }')
     lines.append('    </style>')
     lines.append('</head>')
     lines.append('<body>')
@@ -563,8 +775,14 @@ def generate_event_page(event_entries):
 
     lines.append('<h1>事件时间索引</h1>')
     lines.append(f'<p class="index-stats">共 <strong>{total_events}</strong> 个事件，'
-                 f'<strong>{dated_count}</strong> 个有公元纪年，'
-                 f'跨越 <strong>{len(period_order) - (1 if "未知时期" in grouped_by_period else 0)}</strong> 个历史时期</p>')
+                 f'<strong>{dated_count}</strong> 个有精确纪年，'
+                 f'<strong>{inferred_count}</strong> 个推断纪年，'
+                 f'跨越 <strong>{len(period_order) - (1 if "未知时期" in grouped_by_period else 0)}</strong> 个历史分期</p>')
+    lines.append('<p class="index-stats" style="font-size:0.85em; color:#666;">'
+                 '时间标签：'
+                 '<span class="event-tag tag-time" style="font-size:1em;">前260年</span> 精确纪年　'
+                 '<span class="event-tag tag-time tag-time-approx" style="font-size:1em;">约前260年</span> 推断纪年'
+                 '（据人物生卒年、相邻事件、章节时代推断）</p>')
 
     # 搜索 + 类型筛选
     lines.append('<div class="filter-bar">')
@@ -591,11 +809,13 @@ def generate_event_page(event_entries):
     # 事件列表（按时期分节）
     lines.append('<div class="entity-index">')
 
-    for period in period_order:
+    for pi, period in enumerate(period_order):
         group = grouped_by_period[period]
         short = period.split('（')[0]
-        lines.append(f'<div class="letter-section" id="period-{html.escape(short)}">')
-        lines.append(f'  <h2 class="letter-heading">{html.escape(period)}（{len(group)}）</h2>')
+        # 默认展开前3个分期（上古），其余折叠
+        open_attr = ' open' if pi < 3 else ''
+        lines.append(f'<details class="letter-section" id="period-{html.escape(short)}"{open_attr}>')
+        lines.append(f'  <summary class="letter-heading">{html.escape(period)}（{len(group)}）</summary>')
 
         for display_name, entry, _ in group:
             event_id = entry.get('event_id', '')
@@ -605,6 +825,7 @@ def generate_event_page(event_entries):
             locations = entry.get('locations', [])
             ch_id = entry['refs'][0][0] if entry['refs'] else ''
             ch_title = extract_chapter_title(ch_id) if ch_id else ''
+            para_num = entry.get('para_num', '')
 
             esc_name = html.escape(display_name)
             esc_id = html.escape(event_id)
@@ -614,19 +835,24 @@ def generate_event_page(event_entries):
 
             # 左侧：事件名 + 标签
             lines.append('    <div style="flex:1">')
-            # 事件名链接到章节
+            # 事件名链接到章节段落
             if ch_id:
+                anchor = f'#pn-{para_num}' if para_num else ''
                 lines.append(f'      <div class="event-name">'
-                             f'<a href="../chapters/{ch_id}.html">{esc_name}</a></div>')
+                             f'<a href="../chapters/{ch_id}.html{anchor}">{esc_name}</a></div>')
             else:
                 lines.append(f'      <div class="event-name">{esc_name}</div>')
+
+            is_approximate = entry.get('ce_year_approximate', False)
+            effective_year = ce_year or entry.get('ce_year_inferred')
 
             # 标签行
             lines.append('      <div class="event-tags">')
             # 时间标签
-            if ce_year is not None:
-                lines.append(f'        <span class="event-tag tag-time">'
-                             f'{_format_ce_year_label(ce_year)}</span>')
+            if effective_year is not None:
+                approx_class = ' tag-time-approx' if is_approximate else ''
+                lines.append(f'        <span class="event-tag tag-time{approx_class}">'
+                             f'{_format_ce_year_label(effective_year, is_approximate)}</span>')
             # 类型标签
             if etype:
                 lines.append(f'        <span class="event-tag tag-type">'
@@ -648,15 +874,17 @@ def generate_event_page(event_entries):
 
             lines.append('    </div>')
 
-            # 右侧：章节名
+            # 右侧：章节名 + 段落号
             if ch_title:
+                anchor = f'#pn-{para_num}' if para_num else ''
+                para_label = f' [{para_num}]' if para_num else ''
                 lines.append(f'    <div class="event-chapter">'
-                             f'<a href="../chapters/{ch_id}.html" '
-                             f'class="chapter-ref-name">{html.escape(ch_title)}</a></div>')
+                             f'<a href="../chapters/{ch_id}.html{anchor}" '
+                             f'class="chapter-ref-name">{html.escape(ch_title)}{para_label}</a></div>')
 
             lines.append('  </div>')
 
-        lines.append('</div>')
+        lines.append('</details>')
 
     lines.append('</div>')
 
@@ -672,10 +900,15 @@ function filterEvents() {
     const matchType = !typeFilter || type === typeFilter;
     el.style.display = (matchText && matchType) ? '' : 'none';
   });
-  // 隐藏空的时期段
-  document.querySelectorAll('.letter-section').forEach(sec => {
+  // 隐藏空的时期段，搜索时自动展开匹配的
+  document.querySelectorAll('details.letter-section').forEach(sec => {
     const visible = sec.querySelectorAll('.event-entry:not([style*="display: none"])');
-    sec.style.display = visible.length > 0 ? '' : 'none';
+    if (visible.length === 0) {
+      sec.style.display = 'none';
+    } else {
+      sec.style.display = '';
+      if (q || typeFilter) sec.open = true;
+    }
   });
 }
 document.getElementById('filter-input').addEventListener('input', filterEvents);
@@ -801,6 +1034,9 @@ def main():
 
     # 构建事件索引
     event_index = build_event_index(EVENT_DIR)
+    # 为无纪年事件推断近似日期
+    inferred = infer_undated_events(event_index)
+    print(f"  事件日期推断: {inferred} 个事件获得近似纪年")
     index['event'] = event_index
 
     # 统计
