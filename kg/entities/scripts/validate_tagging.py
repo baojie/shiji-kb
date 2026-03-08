@@ -176,7 +176,7 @@ def validate_chapter(md_path, txt_path):
 
 if __name__ == '__main__':
     # 测试 005 章
-    base_dir = Path(__file__).parent.parent
+    base_dir = Path(__file__).parent.parent.parent.parent
     md_file = base_dir / 'chapter_md' / '005_秦本纪.tagged.md'
     txt_file = base_dir / 'chapter_numbered' / '005_秦本纪.txt'
 

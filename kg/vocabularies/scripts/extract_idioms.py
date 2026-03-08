@@ -25,10 +25,10 @@ import re
 from pathlib import Path
 from datetime import datetime
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 CHAPTER_DIR = _PROJECT_ROOT / "chapter_md"
-OUTPUT_DIR = _PROJECT_ROOT / "kg" / "idioms"
-MERGED_FILE = _PROJECT_ROOT / "kg" / "史记成语典故.md"
+OUTPUT_DIR = _PROJECT_ROOT / "kg" / "vocabularies" / "data" / "idioms"
+MERGED_FILE = _PROJECT_ROOT / "kg" / "vocabularies" / "data" / "史记成语典故.md"
 PROGRESS_FILE = OUTPUT_DIR / "progress.json"
 
 # 章节分类
