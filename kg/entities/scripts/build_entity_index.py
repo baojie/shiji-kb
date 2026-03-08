@@ -25,8 +25,9 @@ from pypinyin import pinyin, Style
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 CHAPTER_DIR = _PROJECT_ROOT / 'chapter_md'
 OUTPUT_DIR = _PROJECT_ROOT / 'docs' / 'entities'
-ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entity_aliases.json'
-INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entity_index.json'
+ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_aliases.json'
+INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_index.json'
+EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
 ENTITY_TYPES = [
@@ -107,6 +108,96 @@ def extract_entities_from_file(file_path):
                         results.append((type_key, surface, chapter_id, current_para))
 
     return results
+
+
+def extract_events_from_index_files(event_dir):
+    """从事件索引文件中提取事件条目
+
+    解析每个 *_事件索引.md 的概览表，提取事件名称、类型、章节引用。
+
+    Returns:
+        list of (event_name, event_type, chapter_id, event_id, time_str, people, locations)
+    """
+    results = []
+    if not event_dir.exists():
+        return results
+
+    for fpath in sorted(event_dir.glob('*_事件索引.md')):
+        chapter_id = fpath.stem.replace('_事件索引', '')
+        with open(fpath, 'r', encoding='utf-8') as f:
+            in_table = False
+            for line in f:
+                line = line.strip()
+                # 检测表格开始（表头行）
+                if line.startswith('| 事件ID'):
+                    in_table = True
+                    continue
+                # 跳过分隔行
+                if in_table and line.startswith('|---'):
+                    continue
+                # 表格结束
+                if in_table and not line.startswith('|'):
+                    in_table = False
+                    continue
+                if not in_table:
+                    continue
+
+                # 解析表格行
+                cols = [c.strip() for c in line.split('|')]
+                # cols[0]是空的（行首|之前），实际数据从cols[1]开始
+                if len(cols) < 7:
+                    continue
+
+                event_id = cols[1].strip()
+                event_name = cols[2].strip()
+                event_type = cols[3].strip()
+                time_str = cols[4].strip()
+                locations = cols[5].strip()
+                people = cols[6].strip()
+
+                if not event_name or not event_id:
+                    continue
+
+                # 去除实体标记以获取纯文本名称
+                clean_name = re.sub(r'[@=$%&^~*!?🌿]', '', event_name).strip()
+                if clean_name:
+                    results.append((clean_name, event_type, chapter_id,
+                                    event_id, time_str, people, locations))
+
+    return results
+
+
+def build_event_index(event_dir):
+    """构建事件索引，格式与其他实体类型一致
+
+    Returns:
+        {event_name: {'aliases': [...], 'refs': [...], 'count': int,
+                      'event_type': str, 'event_id': str}}
+    """
+    events = extract_events_from_index_files(event_dir)
+    index = {}
+
+    for name, etype, chapter_id, event_id, time_str, people, locations in events:
+        if name not in index:
+            index[name] = {
+                'aliases': set(),
+                'refs': [],
+                'count': 0,
+                'event_type': etype,
+                'event_id': event_id,
+            }
+        entry = index[name]
+        entry['aliases'].add(name)
+        # 用事件ID的序号部分作为"段落"引用（兼容现有refs格式）
+        entry['refs'].append((chapter_id, event_id))
+        entry['count'] += 1
+
+    # 整理
+    for name, entry in index.items():
+        entry['refs'] = sorted(set(entry['refs']), key=lambda r: r[0])
+        entry['aliases'] = sorted(entry['aliases'])
+
+    return index
 
 
 def load_alias_map(alias_file):
@@ -349,6 +440,108 @@ def _format_refs(refs):
     return ' <span class="ref-sep">|</span> '.join(parts)
 
 
+def generate_event_page(event_entries):
+    """生成事件索引 HTML 页面，按事件类型分组"""
+    total_events = len(event_entries)
+
+    # 按事件类型分组
+    grouped_by_type = defaultdict(list)
+    for name, entry in event_entries.items():
+        etype = entry.get('event_type', '其他')
+        grouped_by_type[etype].append((name, entry))
+
+    # 每组按章节排序
+    for etype in grouped_by_type:
+        grouped_by_type[etype].sort(key=lambda x: x[1]['event_id'])
+
+    # 类型排序（按数量降序）
+    type_order = sorted(grouped_by_type.keys(),
+                        key=lambda t: len(grouped_by_type[t]), reverse=True)
+
+    lines = []
+    lines.append('<!DOCTYPE html>')
+    lines.append('<html lang="zh-CN">')
+    lines.append('<head>')
+    lines.append('    <meta charset="UTF-8">')
+    lines.append('    <meta name="viewport" content="width=device-width, initial-scale=1.0">')
+    lines.append('    <title>事件索引 - 史记知识库</title>')
+    lines.append('    <link rel="stylesheet" href="../css/shiji-styles.css">')
+    lines.append('    <link rel="stylesheet" href="../css/entity-index.css">')
+    lines.append('</head>')
+    lines.append('<body>')
+
+    lines.append('<nav class="chapter-nav">')
+    lines.append('    <a href="../index.html" class="nav-home">回到主页</a>')
+    lines.append('    <a href="index.html" class="nav-next">实体索引</a>')
+    lines.append('</nav>')
+
+    lines.append('<h1>事件索引</h1>')
+    lines.append(f'<p class="index-stats">共 <strong>{total_events}</strong> 个事件，'
+                 f'<strong>{len(type_order)}</strong> 种类型</p>')
+
+    # 搜索框
+    lines.append('<div class="entity-filter">')
+    lines.append('    <input type="text" id="filter-input" placeholder="搜索事件...">')
+    lines.append('</div>')
+
+    # 类型导航栏
+    lines.append('<div class="pinyin-nav">')
+    for etype in type_order:
+        count = len(grouped_by_type[etype])
+        lines.append(f'  <a href="#type-{etype}" class="pinyin-letter">'
+                     f'{etype}<span class="letter-count">{count}</span></a>')
+    lines.append('</div>')
+
+    # 事件列表（按类型分节）
+    lines.append('<div class="entity-index">')
+
+    for etype in type_order:
+        group = grouped_by_type[etype]
+        lines.append(f'<div class="letter-section" id="type-{etype}">')
+        lines.append(f'  <h2 class="letter-heading">{etype}（{len(group)}）</h2>')
+
+        for name, entry in group:
+            event_id = entry.get('event_id', '')
+            esc_name = html.escape(name)
+            chapter_id = event_id.split('-')[0] if '-' in event_id else ''
+            chapter_name = extract_chapter_title(
+                entry['refs'][0][0]) if entry['refs'] else ''
+
+            lines.append(f'  <div class="entity-entry" id="event-{html.escape(event_id)}">')
+            lines.append('    <div class="entry-left">')
+            lines.append(f'      <span class="canonical-name event">{esc_name}</span>')
+            lines.append(f'      <span class="alias-list">{html.escape(event_id)}</span>')
+            lines.append('    </div>')
+
+            # 右侧：章节链接
+            lines.append('    <div class="entry-right">')
+            if entry['refs']:
+                ch_id = entry['refs'][0][0]
+                ch_title = extract_chapter_title(ch_id)
+                lines.append(
+                    f'      <a href="../chapters/{ch_id}.html" '
+                    f'class="chapter-ref-name">{html.escape(ch_title)}</a>')
+            lines.append('    </div>')
+
+            lines.append('  </div>')
+
+        lines.append('</div>')
+
+    lines.append('</div>')
+
+    lines.append('<script src="../js/entity-filter.js"></script>')
+
+    lines.append('<nav class="chapter-nav">')
+    lines.append('    <a href="../index.html" class="nav-home">回到主页</a>')
+    lines.append('    <a href="index.html" class="nav-next">实体索引</a>')
+    lines.append('</nav>')
+
+    lines.append('</body>')
+    lines.append('</html>')
+
+    return '\n'.join(lines)
+
+
 def generate_landing_page(index):
     """生成实体索引总览页面"""
     lines = []
@@ -419,6 +612,18 @@ def generate_landing_page(index):
         if type_key == 'time' and timeline_card:
             lines.extend(timeline_card)
 
+    # 事件索引卡片
+    event_entries = index.get('event', {})
+    if event_entries:
+        event_count = len(event_entries)
+        # 统计事件类型数
+        event_types = set(e.get('event_type', '') for e in event_entries.values())
+        lines.append(f'  <a href="event.html" class="entity-type-card">')
+        lines.append(f'    <span class="type-label event">事件</span>')
+        lines.append(f'    <span class="type-count">{event_count} 个条目</span>')
+        lines.append(f'    <span class="type-total">{len(event_types)} 种类型</span>')
+        lines.append(f'  </a>')
+
     lines.append('</div>')
 
     lines.append('<nav class="chapter-nav">')
@@ -444,6 +649,10 @@ def main():
     # 构建索引
     index = build_index(CHAPTER_DIR, alias_map)
 
+    # 构建事件索引
+    event_index = build_event_index(EVENT_DIR)
+    index['event'] = event_index
+
     # 统计
     for type_key, _, _, label, _ in ENTITY_TYPES:
         entries = index[type_key]
@@ -451,6 +660,11 @@ def main():
         total = sum(e['count'] for e in entries.values())
         if count > 0:
             print(f"  {label}: {count} 个条目, {total} 次出现")
+
+    # 事件统计
+    event_count = len(event_index)
+    event_total = sum(e['count'] for e in event_index.values())
+    print(f"  事件: {event_count} 个条目, {event_total} 次出现")
 
     # 保存 JSON
     save_index_json(index, INDEX_JSON)
@@ -469,6 +683,14 @@ def main():
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(page_html)
         print(f"  生成: {output_path} ({len(entries)} 条)")
+
+    # 生成事件索引页
+    if event_index:
+        page_html = generate_event_page(event_index)
+        output_path = OUTPUT_DIR / 'event.html'
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(page_html)
+        print(f"  生成: {output_path} ({len(event_index)} 条)")
 
     # 生成总览页
     landing_html = generate_landing_page(index)
