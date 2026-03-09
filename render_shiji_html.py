@@ -101,7 +101,7 @@ def _get_alias_reverse_map():
     if _alias_reverse_map is not None:
         return _alias_reverse_map
 
-    alias_file = Path(__file__).parent / 'kg' / 'entity_aliases.json'
+    alias_file = Path(__file__).parent / 'kg' / 'entities' / 'data' / 'entity_aliases.json'
     _alias_reverse_map = {}
     if alias_file.exists():
         try:
@@ -125,7 +125,7 @@ def _get_disambiguation_map():
     if _disambiguation_map is not None:
         return _disambiguation_map
 
-    map_file = Path(__file__).parent / 'kg' / 'disambiguation_map.json'
+    map_file = Path(__file__).parent / 'kg' / 'entities' / 'data' / 'disambiguation_map.json'
     _disambiguation_map = {}
     if map_file.exists():
         try:
@@ -200,11 +200,11 @@ def _add_entity_links(text):
                     else:
                         tooltip = f'公元{ce_year}年（{ruler}{entity_text}）'
                     href = f"../entities/timeline.html#year-{ce_year}"
-                    return f'<a href="{href}" class="entity-link" title="{html_escape(tooltip)}">{full_span}</a>'
+                    return f'<a href="{href}" class="entity-link" target="_blank" title="{html_escape(tooltip)}">{full_span}</a>'
                 elif ruler_key:
                     tooltip = f'{ruler}{entity_text}'
                     href = f"../entities/timeline.html#ruler-{html_escape(ruler_key)}"
-                    return f'<a href="{href}" class="entity-link" title="{html_escape(tooltip)}">{full_span}</a>'
+                    return f'<a href="{href}" class="entity-link" target="_blank" title="{html_escape(tooltip)}">{full_span}</a>'
 
         # Step 1: 消歧（仅人名，章节级）
         resolved = entity_text
@@ -221,10 +221,15 @@ def _add_entity_links(text):
 
         href = f"../entities/{filename}#entity-{html_escape(canonical)}"
 
-        # 消歧后添加 tooltip 显示全名
+        # 消歧后：将内层span的title替换为"类型：全名"（浏览器显示最内层tooltip）
         if disambiguated:
-            return f'<a href="{href}" class="entity-link" title="{html_escape(resolved)}">{full_span}</a>'
-        return f'<a href="{href}" class="entity-link">{full_span}</a>'
+            # 提取原始类型标签（如"人名"）
+            title_match = re.search(r'title="([^"]*)"', full_span)
+            type_label = title_match.group(1) if title_match else ''
+            new_title = f'{type_label}：{html_escape(resolved)}' if type_label else html_escape(resolved)
+            span_with_tooltip = re.sub(r'title="[^"]*"', f'title="{new_title}"', full_span, count=1)
+            return f'<a href="{href}" class="entity-link" target="_blank">{span_with_tooltip}</a>'
+        return f'<a href="{href}" class="entity-link" target="_blank">{full_span}</a>'
 
     # 匹配最内层实体span: <span class="TYPE" title="LABEL">TEXT</span>
     # [^<]+ 确保只匹配不含子标签的最内层span
