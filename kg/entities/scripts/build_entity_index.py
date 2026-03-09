@@ -26,6 +26,7 @@ _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 CHAPTER_DIR = _PROJECT_ROOT / 'chapter_md'
 OUTPUT_DIR = _PROJECT_ROOT / 'docs' / 'entities'
 ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_aliases.json'
+DISAMBIG_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'disambiguation_map.json'
 INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_index.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
@@ -277,7 +278,15 @@ def load_alias_map(alias_file):
     return reverse_map
 
 
-def build_index(chapter_dir, alias_map):
+def load_disambiguation_map(disambig_file):
+    """加载消歧映射，返回 {chapter_num: {short_name: full_name}}"""
+    if not disambig_file.exists():
+        return {}
+    with open(disambig_file, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def build_index(chapter_dir, alias_map, disambig_map=None):
     """构建完整的实体索引
 
     Returns:
@@ -287,6 +296,8 @@ def build_index(chapter_dir, alias_map):
             'count': int
         }}}
     """
+    if disambig_map is None:
+        disambig_map = {}
     index = {t[0]: {} for t in ENTITY_TYPES}
 
     # 扫描所有文件
@@ -296,9 +307,17 @@ def build_index(chapter_dir, alias_map):
     for fpath in tagged_files:
         entities = extract_entities_from_file(fpath)
         for type_key, surface, chapter_id, para_num in entities:
+            # 消歧解析（仅人名，基于章节）
+            resolved = surface
+            if type_key == 'person' and disambig_map:
+                chapter_num = chapter_id[:3]
+                chapter_disambig = disambig_map.get(chapter_num, {})
+                if surface in chapter_disambig:
+                    resolved = chapter_disambig[surface]
+
             # 别名解析
             type_aliases = alias_map.get(type_key, {})
-            canonical = type_aliases.get(surface, surface)
+            canonical = type_aliases.get(resolved, resolved)
 
             # 初始化条目
             if canonical not in index[type_key]:
@@ -1046,8 +1065,13 @@ def main():
     alias_count = sum(len(v) for m in alias_map.values() for v in m.values())
     print(f"别名映射: {alias_count} 条")
 
+    # 加载消歧映射
+    disambig_map = load_disambiguation_map(DISAMBIG_FILE)
+    disambig_count = sum(len(v) for v in disambig_map.values())
+    print(f"消歧映射: {disambig_count} 条（{len(disambig_map)} 章）")
+
     # 构建索引
-    index = build_index(CHAPTER_DIR, alias_map)
+    index = build_index(CHAPTER_DIR, alias_map, disambig_map)
 
     # 构建事件索引
     event_index = build_event_index(EVENT_DIR)

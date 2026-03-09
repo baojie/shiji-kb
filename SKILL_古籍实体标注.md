@@ -172,16 +172,16 @@ def validate(tagged_md, original_txt):
     ↓ 加载 entity_aliases.json 做别名合并
 { type: { canonical_name: { aliases: [...], refs: [...] } } }
     ↓ 输出
-entity_index.json（4.1MB，12,527个实体）
+entity_index.json（4.1MB，11,069个实体）
 ```
 
 **产出数据规模（130篇）：**
 
 | 实体类型 | 实体数 | 出现次数 |
 |---------|--------|---------|
-| 人名 | 4,142 | 23,366 |
-| 地名 | 1,820 | 12,921 |
-| 官职 | 2,504 | ~9,197 |
+| 人名 | 3,797 | 27,577 |
+| 地名 | 1,880 | 13,413 |
+| 官职 | 1,418 | 9,690 |
 | 朝代 | 304 | — |
 | 时间 | 979 | — |
 | 制度 | 661 | — |
@@ -190,7 +190,7 @@ entity_index.json（4.1MB，12,527个实体）
 | 天文 | 283 | — |
 | 神话 | 250 | — |
 | 动植物 | 384 | — |
-| **合计** | **12,527** | **71,857** |
+| **合计** | **11,069** | **75,517** |
 
 ### 2.6 阶段5：消歧与增强
 
@@ -334,8 +334,8 @@ years  = load_json("year_ce_map.json")         # 叙事年→公元年
 
 | 文件 | 位置 | 大小 | 说明 |
 |------|------|------|------|
-| `entity_index.json` | kg/entities/data/ | 4.1MB | 12,527实体的全量索引 |
-| `entity_aliases.json` | kg/entities/data/ | 22KB | ~570条规范名→别名映射 |
+| `entity_index.json` | kg/entities/data/ | 4.1MB | 11,069实体的全量索引 |
+| `entity_aliases.json` | kg/entities/data/ | 22KB | 586条规范名→别名映射 |
 | `disambiguation_map.json` | kg/entities/data/ | 9.5KB | 按章节的人名消歧规则 |
 
 ---
@@ -418,4 +418,4 @@ years  = load_json("year_ce_map.json")         # 叙事年→公元年
 ---
 
 *本SKILL文档基于《史记》130篇×57万字的实体标注实践（2025-02 至 2026-03）提炼。*
-*实际投入：~70小时人工 + ~5.7亿Token AI处理，产出12,527个实体、71,857次标注。*
+*实际投入：~70小时人工 + ~5.7亿Token AI处理，产出11,069个实体、75,517次标注。*
