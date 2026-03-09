@@ -35340,34 +35340,41 @@
       "type": "sequel",
       "source": "114-011",
       "target": "114-012",
-      "reason": "余善自立后反汉称武帝",
+      "reason": "余善自立为王后阳从阴拒汉伐南越",
       "auto": false
     },
     {
       "type": "sequel",
       "source": "114-012",
       "target": "114-013",
-      "reason": "余善反汉后汉四路讨东越",
+      "reason": "余善阳从阴拒后反汉称武帝",
       "auto": false
     },
     {
       "type": "sequel",
       "source": "114-013",
       "target": "114-014",
-      "reason": "四路讨东越后余善被杀",
+      "reason": "余善反汉后汉四路讨东越",
       "auto": false
     },
     {
       "type": "sequel",
       "source": "114-014",
       "target": "114-015",
+      "reason": "四路讨东越后余善被杀",
+      "auto": false
+    },
+    {
+      "type": "sequel",
+      "source": "114-015",
+      "target": "114-016",
       "reason": "余善被杀后东越地遂虚",
       "auto": false
     },
     {
       "type": "opposition",
-      "source": "114-012",
-      "target": "114-013",
+      "source": "114-013",
+      "target": "114-014",
       "reason": "余善反汉与汉四路讨东越代表双方对立",
       "auto": false
     },

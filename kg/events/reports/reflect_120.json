@@ -1,0 +1,113 @@
+{
+  "chapter_id": "120",
+  "total_events": 21,
+  "corrections": [
+    {
+      "event_id": "120-001",
+      "event_name": "汲黯视东越还报",
+      "current_year": "[约公元前138年]",
+      "suggested_year": "（公元前138年）",
+      "reason": "年表前138年明确记载'闽越围东瓯，东瓯求救。武帝使严助会稽兵浮海往救'，汲黯视东越即此事，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-004",
+      "event_name": "汲黯面折天子",
+      "current_year": "[约公元前134年]",
+      "suggested_year": "[公元前134年]",
+      "reason": "年表前134年记载'举贤良、文学'，与原文'天子方招文学儒者'吻合，元光元年=前134年可精确换算，应去掉'约'",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-008",
+      "event_name": "汲黯言和亲匈奴",
+      "current_year": "[约公元前124年]",
+      "suggested_year": "（公元前124年）",
+      "reason": "年表前124年明确记载'借口右内史界中多贵臣、宗室，难治，非重臣不能胜任。荐黯为右内史'，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-010",
+      "event_name": "淮南王惮汲黯",
+      "current_year": "[约公元前122年]",
+      "suggested_year": "（公元前122年）",
+      "reason": "年表前122年明确记载'淮南王安、衡山王赐谋反案发，二王自杀'，淮南王谋反惮汲黯即此时，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-011",
+      "event_name": "汲黯言积薪后来居上",
+      "current_year": "[约公元前124年]",
+      "suggested_year": "[公元前124年]",
+      "reason": "公孙弘前124年为丞相，张汤同期升迁，'弘汤稍贵与黯同位'即指此时，可精确换算，应去掉'约'",
+      "confidence": "medium"
+    },
+    {
+      "event_id": "120-012",
+      "event_name": "汲黯谏浑邪降事",
+      "current_year": "[约公元前121年]",
+      "suggested_year": "（公元前121年）",
+      "reason": "年表前121年明确记载'匈奴浑邪王杀休屠王，率众降汉'，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-013",
+      "event_name": "汲黯坐法免官隐田园",
+      "current_year": "[约公元前119年]",
+      "suggested_year": "（公元前119年）",
+      "reason": "年表前119年明确记载'汲黯对时政多异议，是年免官'，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-014",
+      "event_name": "汲黯拜淮阳太守",
+      "current_year": "[约公元前118年]",
+      "suggested_year": "（公元前118年）",
+      "reason": "年表前118年明确记载'以汲黯为淮阳太守'，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-015",
+      "event_name": "汲黯言张汤之恶",
+      "current_year": "[约公元前118年]",
+      "suggested_year": "（公元前118年）",
+      "reason": "年表前118年明确记载'黯临行劝大行李息随时举发张汤之过'，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-016",
+      "event_name": "汲黯治淮阳卒",
+      "current_year": "[约公元前112年]",
+      "suggested_year": "（公元前112年）",
+      "reason": "年表前112年明确记载'汲黯在淮阳病死'，且前118年任淮阳太守'七岁而卒'=118-7+1=前112年吻合，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-019",
+      "event_name": "郑庄推毂贤士",
+      "current_year": "[约公元前129年]",
+      "suggested_year": "（公元前129年）",
+      "reason": "年表前129年明确记载'用大司农郑当时的建议'开漕渠，郑庄时任大农令推毂贤士当在此时，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "120-002",
+      "event_name": "汲黯矫制发粟济河南",
+      "current_year": "[约公元前131年]",
+      "suggested_year": "[公元前131年]",
+      "reason": "元光四年=前134-(4-1)=前131年，reign-year可精确换算，应去掉'约'",
+      "confidence": "medium"
+    },
+    {
+      "event_id": "120-007",
+      "event_name": "汲黯与张汤争",
+      "current_year": "[约公元前121年]",
+      "suggested_year": "[公元前121年]",
+      "reason": "年表前121年记载'廷尉张汤为御史大夫'，张汤以更定律令升御史大夫正是此年，可精确定位，应去掉'约'",
+      "confidence": "medium"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 8,
+  "notes": "本章21个事件年代标注整体合理，主要问题是确定性标注不足（错误模式7的批量表现）：13个事件可在年表中找到明确记载或通过reign-year精确换算，但均标注为[约公元前XXX年]而非精确纪年格式。无单锚点塌缩、帝王混淆等严重错误。"
+}

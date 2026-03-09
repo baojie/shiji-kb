@@ -852,7 +852,7 @@ def generate_event_page(event_entries):
             if ch_id:
                 anchor = f'#pn-{para_num}' if para_num else ''
                 lines.append(f'      <div class="event-name">'
-                             f'<a href="../chapters/{ch_id}.html{anchor}">{esc_name}</a>{id_label}</div>')
+                             f'<a href="../chapters/{ch_id}.html{anchor}" target="_blank">{esc_name}</a>{id_label}</div>')
             else:
                 lines.append(f'      <div class="event-name">{esc_name}{id_label}</div>')
 
@@ -876,14 +876,14 @@ def generate_event_page(event_entries):
             for p in people[:4]:
                 esc_p = html.escape(p)
                 lines.append(f'        <a href="person.html#entity-{esc_p}" '
-                             f'class="event-tag tag-person">{esc_p}</a>')
+                             f'target="_blank" class="event-tag tag-person">{esc_p}</a>')
             if len(people) > 4:
                 lines.append(f'        <span class="event-tag tag-person">+{len(people)-4}</span>')
             # 地点标签（最多显示2个，链接到地名索引）
             for loc in locations[:2]:
                 esc_loc = html.escape(loc)
                 lines.append(f'        <a href="place.html#entity-{esc_loc}" '
-                             f'class="event-tag tag-place">{esc_loc}</a>')
+                             f'target="_blank" class="event-tag tag-place">{esc_loc}</a>')
             if len(locations) > 2:
                 lines.append(f'        <span class="event-tag tag-place">'
                              f'+{len(locations)-2}</span>')
@@ -897,7 +897,7 @@ def generate_event_page(event_entries):
                 para_label = f' [{para_num}]' if para_num else ''
                 lines.append(f'    <div class="event-chapter">'
                              f'<a href="../chapters/{ch_id}.html{anchor}" '
-                             f'class="chapter-ref-name">{html.escape(ch_title)}{para_label}</a></div>')
+                             f'target="_blank" class="chapter-ref-name">{html.escape(ch_title)}{para_label}</a></div>')
 
             lines.append('  </div>')
 
