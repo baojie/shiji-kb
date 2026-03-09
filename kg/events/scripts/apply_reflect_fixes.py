@@ -46,7 +46,15 @@ def apply_fixes(chapter_id):
     with open(reflect_path, "r") as f:
         reflect = json.load(f)
 
-    corrections = {c["event_id"]: c for c in reflect.get("corrections", [])}
+    raw = reflect.get("corrections", [])
+    # 兼容多种字段名：suggested_year / corrected_time / new
+    for c in raw:
+        if "suggested_year" not in c:
+            if "corrected_time" in c:
+                c["suggested_year"] = c["corrected_time"]
+            elif "new" in c:
+                c["suggested_year"] = c["new"]
+    corrections = {c["event_id"]: c for c in raw if "suggested_year" in c}
     if not corrections:
         print(f"  {chapter_id}: 无修正项")
         return 0

@@ -1,0 +1,368 @@
+{
+  "chapter": "111_卫将军骠骑列传",
+  "total_events": 33,
+  "review_summary": {
+    "confirmed_correct": 25,
+    "needs_correction": 8,
+    "uncertain": 0
+  },
+  "events": [
+    {
+      "event_id": "111-001",
+      "event_name": "卫青家世出身",
+      "original_time": "[约公元前139年]",
+      "corrected_time": "[约公元前160年]",
+      "status": "needs_correction",
+      "error_type": "错误5：追叙事件误用当前时间",
+      "reasoning": "此事件叙述卫青出生及少年牧羊经历，属追叙段落。卫青生年约在前160年前后（建元二年=前139年时卫青已'壮'，即成年），不应用后文卫子夫入宫(前139年)作为锚点。卫青出生应在其约20岁前，即约前160年左右。"
+    },
+    {
+      "event_id": "111-002",
+      "event_name": "卫子夫得幸",
+      "original_time": "（公元前139年）",
+      "corrected_time": "（公元前139年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文明确记载建元二年春，建元元年=前140年，二年=前139年。年表前139年条亦记载'武帝在姐平阳公主家，得歌者卫子夫，入宫有宠'，完全吻合。精确纪年正确。"
+    },
+    {
+      "event_id": "111-003",
+      "event_name": "大长公主囚卫青",
+      "original_time": "[约公元前139年]",
+      "corrected_time": "[约公元前138年]",
+      "status": "needs_correction",
+      "error_type": "事件顺序推断修正",
+      "reasoning": "原文叙述顺序为：卫子夫入宫(前139年)→有身→大长公主闻之而囚卫青。从入宫到有身至少数月，此事件应在前139年之后不久，约前138年更合理。但因无精确纪年，取[约公元前138年]。不过考虑到卫子夫入宫即受宠有身可能在同年，[约公元前139年]也并非严重错误。存疑不改亦可。"
+    },
+    {
+      "event_id": "111-004",
+      "event_name": "卫氏贵幸",
+      "original_time": "[约公元前139年]",
+      "corrected_time": "[约公元前138年]",
+      "status": "needs_correction",
+      "error_type": "事件顺序推断修正",
+      "reasoning": "此事件紧接大长公主囚卫青之后，皇上闻之召卫青为建章监、侍中。应与111-003同期或稍后，约前138年。与111-003同理，[约公元前139年]也可接受。"
+    },
+    {
+      "event_id": "111-005",
+      "event_name": "初战匈奴出上谷",
+      "original_time": "（公元前130年）",
+      "corrected_time": "（公元前130年）",
+      "status": "correct_with_note",
+      "error_type": null,
+      "reasoning": "原文明确记载元光五年。元光元年=前134年，五年=前130年，换算正确。但年表将此战置于前129年(元光六年)条下，这是《史记》本传与《汉书》及年表之间的已知纪年分歧。按《史记》原文标注前130年是合理的。年表前129年条记'命卫青、公孙敖、公孙贺、李广四将军分道出击'，说明不同史料对此战年份有一年之差。事件索引以《史记》原文为准，保留前130年。"
+    },
+    {
+      "event_id": "111-006",
+      "event_name": "卫夫人立为皇后",
+      "original_time": "（公元前128年）",
+      "corrected_time": "（公元前128年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文明确记载元朔元年春。元朔元年=前128年。年表前128年条亦记'卫夫人生皇子据，遂立为皇后'，完全吻合。"
+    },
+    {
+      "event_id": "111-007",
+      "event_name": "卫青出雁门击匈奴",
+      "original_time": "（公元前128年）",
+      "corrected_time": "（公元前128年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元朔元年秋。元朔元年=前128年。年表前128年条记'卫青出雁门，李息出代，分道击匈奴。卫青军获胜'，完全吻合。"
+    },
+    {
+      "event_id": "111-008",
+      "event_name": "收河南地置朔方郡",
+      "original_time": "（公元前127年）",
+      "corrected_time": "（公元前127年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元朔二年。元朔元年=前128年，二年=前127年。年表前127年条记'遣卫青、李息出击，逐走白羊、楼烦王，取河南地（河套）……遂立朔方郡'，完全吻合。"
+    },
+    {
+      "event_id": "111-009",
+      "event_name": "卫青封长平侯",
+      "original_time": "（公元前127年）",
+      "corrected_time": "（公元前127年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "与收河南地同年（元朔二年=前127年），年表前127年条有记载。正确。"
+    },
+    {
+      "event_id": "111-010",
+      "event_name": "大破右贤王",
+      "original_time": "（公元前124年）",
+      "corrected_time": "（公元前124年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元朔五年春。元朔元年=前128年，五年=前124年。年表前124年条记'命卫青穄苏建、李沮、公孙贺、李蔡四将军出朔方……攻匈奴左贤王，大胜'。注意年表称攻击目标为'左贤王'而原文称'右贤王'，但时间一致。年表此处可能为笔误或不同角度的记载。"
+    },
+    {
+      "event_id": "111-011",
+      "event_name": "卫青拜大将军",
+      "original_time": "（公元前124年）",
+      "corrected_time": "（公元前124年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元朔五年。年表前124年条记'拜卫青为大将军'，完全吻合。"
+    },
+    {
+      "event_id": "111-012",
+      "event_name": "卫青三子封侯",
+      "original_time": "（公元前124年）",
+      "corrected_time": "（公元前124年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "与拜大将军同年（元朔五年=前124年）。正确。"
+    },
+    {
+      "event_id": "111-013",
+      "event_name": "大将军麾下诸将封侯",
+      "original_time": "（公元前124年）",
+      "corrected_time": "（公元前124年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "与拜大将军同年（元朔五年=前124年）。正确。"
+    },
+    {
+      "event_id": "111-014",
+      "event_name": "定襄之战",
+      "original_time": "（公元前123年）",
+      "corrected_time": "（公元前123年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元朔六年春。元朔元年=前128年，六年=前123年。年表前123年条记'大将军卫青率公孙敖、公孙贺、赵信、苏建、李广、李沮六将军兵出定襄击匈奴'，完全吻合。"
+    },
+    {
+      "event_id": "111-015",
+      "event_name": "赵信叛降匈奴",
+      "original_time": "（公元前123年）",
+      "corrected_time": "（公元前123年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "与定襄之战同年（元朔六年=前123年）。年表前123年条记'将军赵信败降匈奴。信本匈奴小王，降汉，封翕侯'，完全吻合。"
+    },
+    {
+      "event_id": "111-016",
+      "event_name": "苏建失军归案",
+      "original_time": "（公元前123年）",
+      "corrected_time": "（公元前123年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "与定襄之战同年（元朔六年=前123年）。年表前123年条记'将军苏建尽亡其军，逃回'，吻合。"
+    },
+    {
+      "event_id": "111-017",
+      "event_name": "霍去病初露锋芒",
+      "original_time": "（公元前123年）",
+      "corrected_time": "（公元前123年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "与定襄之战同年（元朔六年=前123年）。年表前123年条记'霍去病（卫青姊子）以功封冠军侯'，吻合。"
+    },
+    {
+      "event_id": "111-018",
+      "event_name": "霍去病封冠军侯",
+      "original_time": "（公元前123年）",
+      "corrected_time": "（公元前123年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "年表前123年条明确记载'霍去病（卫青姊子）以功封冠军侯'，完全吻合。"
+    },
+    {
+      "event_id": "111-019",
+      "event_name": "张骞封博望侯",
+      "original_time": "（公元前123年）",
+      "corrected_time": "（公元前123年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "年表前123年条明确记载'张骞以知水草处，使军得不乏，封博望侯'，完全吻合。"
+    },
+    {
+      "event_id": "111-020",
+      "event_name": "霍去病首次出陇西",
+      "original_time": "（公元前121年）",
+      "corrected_time": "（公元前121年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元狩二年春。元狩元年=前122年，二年=前121年。年表前121年条记'骠骑将军霍去病出陇西，深入击匈奴，俘获浑邪王子等，得休屠王祭天金人'，完全吻合。"
+    },
+    {
+      "event_id": "111-021",
+      "event_name": "祁连山大捷",
+      "original_time": "（公元前121年）",
+      "corrected_time": "（公元前121年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元狩二年夏。年表前121年条记'去病逾居延，至祁连山，大捷'，完全吻合。"
+    },
+    {
+      "event_id": "111-022",
+      "event_name": "浑邪王降汉",
+      "original_time": "（公元前121年）",
+      "corrected_time": "（公元前121年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元狩二年秋。年表前121年条记'匈奴浑邪王杀休屠王，率众降汉。霍去病以举兵迎浑邪王'，完全吻合。"
+    },
+    {
+      "event_id": "111-023",
+      "event_name": "安置降众设属国",
+      "original_time": "（公元前121年）",
+      "corrected_time": "（公元前121年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "与浑邪王降汉同年（元狩二年=前121年）。年表前121年条记'自此汉尽有从金城河西直至盐泽之地'，吻合。"
+    },
+    {
+      "event_id": "111-024",
+      "event_name": "漠北大战大将军出定襄",
+      "original_time": "（公元前119年）",
+      "corrected_time": "（公元前119年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元狩四年春。元狩元年=前122年，四年=前119年。年表前119年条记'乃命大将军卫青、骠骑将军霍去病大出兵击匈奴'，完全吻合。"
+    },
+    {
+      "event_id": "111-025",
+      "event_name": "大将军武刚车列营战单于",
+      "original_time": "（公元前119年）",
+      "corrected_time": "（公元前119年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "漠北大战的一部分（元狩四年=前119年）。年表前119年条记'卫青度漠，破单于兵，单于逃去'，吻合。"
+    },
+    {
+      "event_id": "111-026",
+      "event_name": "单于夜遁追击至窴颜山",
+      "original_time": "（公元前119年）",
+      "corrected_time": "（公元前119年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "漠北大战的一部分（元狩四年=前119年）。正确。"
+    },
+    {
+      "event_id": "111-027",
+      "event_name": "李广失道自杀",
+      "original_time": "（公元前119年）",
+      "corrected_time": "（公元前119年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "漠北大战的一部分（元狩四年=前119年）。年表前119年条记'前将军李广迷失道，被责令受审讯，广气愤自杀'，完全吻合。此为死亡事件，取去世年前119年，正确。"
+    },
+    {
+      "event_id": "111-028",
+      "event_name": "霍去病封狼居胥",
+      "original_time": "（公元前119年）",
+      "corrected_time": "（公元前119年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "漠北大战的一部分（元狩四年=前119年）。年表前119年条记'霍去病出代，右北平二千余里，封狼居胥山'，完全吻合。"
+    },
+    {
+      "event_id": "111-029",
+      "event_name": "大司马并立",
+      "original_time": "（公元前119年）",
+      "corrected_time": "（公元前119年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "漠北大战后置大司马，同年（元狩四年=前119年）。正确。"
+    },
+    {
+      "event_id": "111-030",
+      "event_name": "霍去病之死",
+      "original_time": "（公元前117年）",
+      "corrected_time": "（公元前117年）",
+      "status": "correct",
+      "error_type": null,
+      "reasoning": "原文记载元狩六年。元狩元年=前122年，六年=前117年。年表前117年条记'霍去病死（前140一）'，完全吻合。死亡事件取去世年，正确。"
+    },
+    {
+      "event_id": "111-031",
+      "event_name": "卫氏诸侯失侯",
+      "original_time": "[约公元前112年]",
+      "corrected_time": "（公元前112年）",
+      "status": "needs_correction",
+      "error_type": "错误7：确定性标注不足",
+      "reasoning": "年表前112年(元鼎五年)条记载'列侯奉命献金祭宗庙。以分量、成色不足被夺爵者一百零六人'，即酎金夺侯事件。原文'後五岁'指霍去病卒(前117年)后约五年，恰为前112年。年表明确记载此事件，应从[约公元前112年]升级为（公元前112年）。"
+    },
+    {
+      "event_id": "111-032",
+      "event_name": "大将军卫青去世",
+      "original_time": "[约公元前106年]",
+      "corrected_time": "（公元前106年）",
+      "status": "needs_correction",
+      "error_type": "错误7：确定性标注不足",
+      "reasoning": "年表前106年(元封五年)条明确记载'大将军卫青死'。原文'自大将军围单于之後十四年而卒'，围单于在前119年，119-14≈前105年，但按元狩四年(前119年)后第14年实为前106年（含首年）。年表明确记载，应从[约公元前106年]升级为（公元前106年）。此为死亡事件，取去世年，正确。"
+    },
+    {
+      "event_id": "111-033",
+      "event_name": "卫氏兴衰总结",
+      "original_time": "[约公元前106年]",
+      "corrected_time": "[约公元前103年]",
+      "status": "needs_correction",
+      "error_type": "复合总结段落单点标注",
+      "reasoning": "原文'凡二十四岁而五侯尽夺'，从卫青首封长平侯(前127年)算起，127-24+1=前104年或前103年（取决于含不含首年）。此事件是对卫氏整个封侯-失侯过程的总结，时间跨度为前127年至约前103年。标注为[约公元前106年]（卫青卒年）不够准确，因为'五侯尽夺'发生在卫青去世之后。最后一批失侯（酎金夺侯）在前112年，但原文说'凡二十四岁'暗示五侯全部丧失在前127-24=前103年前后。应标注为[约公元前103年]。"
+    }
+  ],
+  "correction_summary": [
+    {
+      "event_id": "111-001",
+      "event_name": "卫青家世出身",
+      "original": "[约公元前139年]",
+      "corrected": "[约公元前160年]",
+      "reason": "追叙出生及少年事件，不应用后文建元二年(前139年)作为锚点，卫青出生约在前160年"
+    },
+    {
+      "event_id": "111-003",
+      "event_name": "大长公主囚卫青",
+      "original": "[约公元前139年]",
+      "corrected": "[约公元前138年]",
+      "reason": "卫子夫入宫(前139年)后有身，大长公主闻之始囚卫青，时间应稍晚于前139年"
+    },
+    {
+      "event_id": "111-004",
+      "event_name": "卫氏贵幸",
+      "original": "[约公元前139年]",
+      "corrected": "[约公元前138年]",
+      "reason": "紧接大长公主囚卫青之后，皇上召卫青为建章监，应与111-003同期"
+    },
+    {
+      "event_id": "111-031",
+      "event_name": "卫氏诸侯失侯",
+      "original": "[约公元前112年]",
+      "corrected": "（公元前112年）",
+      "reason": "年表前112年条明确记载酎金夺侯事件，确定性标注不足，应升级"
+    },
+    {
+      "event_id": "111-032",
+      "event_name": "大将军卫青去世",
+      "original": "[约公元前106年]",
+      "corrected": "（公元前106年）",
+      "reason": "年表前106年条明确记载'大将军卫青死'，确定性标注不足，应升级"
+    },
+    {
+      "event_id": "111-033",
+      "event_name": "卫氏兴衰总结",
+      "original": "[约公元前106年]",
+      "corrected": "[约公元前103年]",
+      "reason": "原文'凡二十四岁而五侯尽夺'，从前127年算起应为约前103年，非卫青卒年前106年"
+    }
+  ],
+  "notes": {
+    "discrepancy_111_005": "111-005初战匈奴：《史记·卫将军骠骑列传》记为元光五年(前130年)，但《中国历史大事年表》将此战置于前129年(元光六年)条下。这是史记本传与其他史料间的已知纪年分歧。事件索引以《史记》原文为准，标注前130年。",
+    "overall_quality": "本章年代标注质量较高。33个事件中，25个(含精确纪年和合理推断)确认正确，6个需要修正（2个确定性升级、1个追叙误标、2个事件顺序微调、1个总结性事件年份修正），2个存疑但可接受。大部分事件有原文明确的年号纪年标记，换算结果与年表高度一致。",
+    "patterns_found": "未发现SKILL中尚未记录的新错误模式。本章存在的问题均属已知类型：追叙事件误用当前时间(错误5)、确定性标注不足(错误7)、复合总结段落单点标注(已有模式4)。"
+  },
+  "statistics": {
+    "total_events": 33,
+    "precise_dating_correct": 23,
+    "inferred_dating_correct": 2,
+    "needs_upgrade_to_precise": 2,
+    "needs_year_correction": 4,
+    "war_events": 15,
+    "political_events": 10,
+    "family_events": 8,
+    "time_span": "前160年—前103年"
+  }
+}
