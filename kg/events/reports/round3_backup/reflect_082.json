@@ -1,0 +1,25 @@
+{
+  "chapter_id": "082",
+  "total_events": 9,
+  "corrections": [
+    {
+      "event_id": "082-003",
+      "event_name": "田单立为将军",
+      "current_year": "[约公元前283年]",
+      "suggested_year": "[公元前283年]",
+      "reason": "年表前283年记载齐襄王元年，齐仅有莒、即墨二城。田单守即墨即在此年，可去掉'约'字升级为确定推算",
+      "confidence": "medium"
+    },
+    {
+      "event_id": "082-008",
+      "event_name": "田单封安平君",
+      "current_year": "[公元前279年]",
+      "suggested_year": "（公元前279年）",
+      "reason": "田单复齐（前279年）后即封安平君，年表前279年明确记载田单破燕复齐，封安平君为同年紧接事件。可升级为精确纪年（错误模式7：确定性标注不足）",
+      "confidence": "medium"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 7,
+  "notes": "082章田单列传共9个事件，年代标注整体准确。核心事件乐毅伐齐（前284年）和田单复齐（前279年）均有年表明确记载。"
+}

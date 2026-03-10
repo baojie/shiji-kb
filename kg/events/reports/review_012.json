@@ -3,8 +3,19 @@
   "chapter_name": "孝武本纪",
   "total_events": 70,
   "overview_events": 70,
-  "issues": [],
-  "severity_counts": {},
-  "check_counts": {},
-  "reviewed_at": "2026-03-09T04:20:35.396018"
+  "issues": [
+    {
+      "event_id": "012-005",
+      "check": "有纪年无公元年",
+      "severity": "warning",
+      "message": "时间字段含原文纪年但无公元年转换: %建元六年% （公元前135年—前134年）"
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "有纪年无公元年": 1
+  },
+  "reviewed_at": "2026-03-10T19:26:10.742325"
 }

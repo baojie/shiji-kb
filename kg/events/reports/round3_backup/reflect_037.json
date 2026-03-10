@@ -1,0 +1,113 @@
+{
+  "chapter_id": "037",
+  "total_events": 21,
+  "corrections": [
+    {
+      "event_id": "037-006",
+      "event_name": "武公佐周平戎",
+      "current_year": "前771年",
+      "suggested_year": "（公元前771年）",
+      "reason": "年表前771年明确记载犬戎杀幽王，裸年份格式不符合标注规范，应升级为精确纪年圆括号格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-007",
+      "event_name": "州吁弑桓公石碏除乱",
+      "current_year": "前719年",
+      "suggested_year": "（公元前719年）",
+      "reason": "年表前719年有记载，裸年份格式应升级为精确纪年圆括号格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-010",
+      "event_name": "惠公伐周",
+      "current_year": "前675年",
+      "suggested_year": "（公元前675年）",
+      "reason": "年表前675年有记载卫燕攻周，裸年份格式应升级为精确纪年圆括号格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-011",
+      "event_name": "懿公好鹤亡国",
+      "current_year": "前660年",
+      "suggested_year": "（公元前660年）",
+      "reason": "年表前660年明确记载狄攻卫懿公死，裸年份格式应升级为精确纪年圆括号格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-012",
+      "event_name": "齐桓公筑楚丘立文公",
+      "current_year": "前658年",
+      "suggested_year": "（公元前658年）",
+      "reason": "年表前658年有记载齐桓公率诸侯助卫迁楚丘，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-013",
+      "event_name": "晋文公伐卫分地",
+      "current_year": "前632年",
+      "suggested_year": "（公元前632年）",
+      "reason": "年表前632年有记载城濮之战及晋文公伐卫，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-014",
+      "event_name": "献公被逐殇公立",
+      "current_year": "前559年",
+      "suggested_year": "（公元前559年）",
+      "reason": "年表前559年有记载卫献公被逐，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-015",
+      "event_name": "晋纳献公复位",
+      "current_year": "前547年",
+      "suggested_year": "（公元前547年）",
+      "reason": "年表前547年有记载宁喜杀殇公纳献公，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-016",
+      "event_name": "灵公与蒯聩南子之乱",
+      "current_year": "前496年",
+      "suggested_year": "（公元前496年）",
+      "reason": "年表前496年有记载灵公三十九年蒯聩奔宋，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-017",
+      "event_name": "出公立父子争位",
+      "current_year": "前493年",
+      "suggested_year": "（公元前493年）",
+      "reason": "年表有灵公死年记载，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-018",
+      "event_name": "孔悝之乱子路之死",
+      "current_year": "前480年",
+      "suggested_year": "（公元前480年）",
+      "reason": "年表前480年有蒯聩入卫子路被杀记载，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-020",
+      "event_name": "卫降为侯为君",
+      "current_year": "前346年",
+      "suggested_year": "（公元前346年）",
+      "reason": "年表前346年有卫贬号为侯记载，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "037-021",
+      "event_name": "秦灭卫绝祀",
+      "current_year": "前209年",
+      "suggested_year": "（公元前209年）",
+      "reason": "年表前209年有秦二世废卫君角记载，裸年份应升级为精确纪年格式",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 8,
+  "notes": "037章卫康叔世家21个事件，年份数值均正确。主要问题是13个事件使用裸年份格式（无括号标记），需统一为精确纪年圆括号格式。属已知错误模式26（裸年份缺少确定性标记）。"
+}

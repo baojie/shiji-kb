@@ -1,0 +1,25 @@
+{
+  "chapter_id": "061",
+  "total_events": 7,
+  "corrections": [
+    {
+      "event_id": "061-005",
+      "event_name": "叩马而谏武王伐纣",
+      "current_year": "公元前1046年",
+      "suggested_year": "（公元前1046年）",
+      "reason": "裸年份缺少确定性标记，武王伐纣年表明确记载前1046年，应使用精确纪年圆括号格式",
+      "confidence": "high"
+    },
+    {
+      "event_id": "061-007",
+      "event_name": "颜渊穷困早夭",
+      "current_year": "[约公元前481年]",
+      "suggested_year": "（公元前481年）",
+      "reason": "颜回卒于鲁哀公十四年(前481年)，年表有明确记载，应升级为精确纪年",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 5,
+  "notes": "伯夷列传仅7事件，年代标注总体合理。两处需修正：061-005裸年份缺标记符号、061-007确定性标注不足应升级为精确纪年。"
+}

@@ -1,0 +1,15 @@
+{
+  "chapter_id": "050",
+  "corrections": [
+    {
+      "event_id": "050-005",
+      "current_year": "（公元前152年）",
+      "suggested_year": "（公元前151年）",
+      "reason": "文王于前154年即位，'立三年卒'按reign-year公式154-(3-1)=前152年。但详情推断说原标注用154-3=151存在off-by-one。按标准reign-year公式，文王卒=154-(3-1)=前152年应为正确。不过年表前151年条记载'楚文王死，安王道立'，以年表为准应为前151年",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 7,
+  "notes": "050楚元王世家8个事件，年代标注基本准确，仅050-005文王卒年可能存在off-by-one问题需以年表为准"
+}

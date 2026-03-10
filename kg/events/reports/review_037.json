@@ -3,8 +3,19 @@
   "chapter_name": "卫康叔世家",
   "total_events": 21,
   "overview_events": 21,
-  "issues": [],
-  "severity_counts": {},
-  "check_counts": {},
-  "reviewed_at": "2026-03-09T04:20:35.435159"
+  "issues": [
+    {
+      "event_id": "037-021",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'秦灭卫绝祀'标注前209年，离群于本章核心范围前1030年~前477年"
+    }
+  ],
+  "severity_counts": {
+    "warning": 1
+  },
+  "check_counts": {
+    "年份超出时代范围": 1
+  },
+  "reviewed_at": "2026-03-10T19:26:10.811577"
 }

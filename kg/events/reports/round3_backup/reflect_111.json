@@ -1,0 +1,25 @@
+{
+  "chapter_id": "111",
+  "total_events": 33,
+  "corrections": [
+    {
+      "event_id": "111-032",
+      "event_name": "大将军卫青去世",
+      "current_year": "[约公元前106年]",
+      "suggested_year": "（公元前106年）",
+      "reason": "年表明确记载卫青卒于元封五年(前106年)，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "111-033",
+      "event_name": "卫氏兴衰总结",
+      "current_year": "[约公元前106年]",
+      "suggested_year": "[约公元前103年]",
+      "reason": "原文凡二十四岁而五侯尽夺，从卫青首封长平侯前127年算起，127-24=前103年，此为五侯尽夺之年",
+      "confidence": "medium"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 31,
+  "notes": "本章年代标注质量很高，33个事件中绝大多数有明确reign-year标记，换算均正确。仅2处可改进。"
+}

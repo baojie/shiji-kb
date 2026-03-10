@@ -1,0 +1,65 @@
+{
+  "chapter_id": "067",
+  "total_events": 20,
+  "corrections": [
+    {
+      "event_id": "067-001",
+      "event_name": "颜回早夭孔子恸哭",
+      "current_year": "[公元前481年]",
+      "suggested_year": "（公元前481年）",
+      "reason": "年表前481年条明确记载孔丘弟子颜回死，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "067-002",
+      "event_name": "子路被设礼收为弟子",
+      "current_year": "[约公元前525年]",
+      "suggested_year": "[约公元前530年]",
+      "reason": "子路生于前542年，为孔子早期弟子，约12岁时拜师（约前530年），原标注前525年偏晚",
+      "confidence": "low"
+    },
+    {
+      "event_id": "067-004",
+      "event_name": "子路殉难卫国",
+      "current_year": "[公元前480年]",
+      "suggested_year": "（公元前480年）",
+      "reason": "年表前480年明载卫出公十三年蒯聩入卫子路死于此乱，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "067-005",
+      "event_name": "宰我参与田常之乱",
+      "current_year": "[公元前481年]",
+      "suggested_year": "（公元前481年）",
+      "reason": "年表前481年明载田常杀齐简公，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "067-011",
+      "event_name": "吴破齐临晋越灭吴",
+      "current_year": "[公元前484年]",
+      "suggested_year": "（公元前484年）",
+      "reason": "年表前484年明载艾陵之战吴大破齐师，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "067-013",
+      "event_name": "子夏居西河为魏文侯师",
+      "current_year": "[约公元前403年]",
+      "suggested_year": "（公元前403年）",
+      "reason": "年表前403年条载魏文侯师事子夏，可升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "067-014",
+      "event_name": "曾参传孝经",
+      "current_year": "[约公元前470年]",
+      "suggested_year": "[约公元前460年]",
+      "reason": "曾参生于前505年，孔子卒前479年后曾参传道著述，作孝经当在其壮年约40-50岁即前465-前455年间，取中值约前460年",
+      "confidence": "low"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 13,
+  "notes": "自动检查警告6/20事件指向前484年实为子贡外交系列事件的真实聚集（艾陵之战），非单锚点塌缩。7处修正中5处为升级精确纪年，2处为年份微调。"
+}

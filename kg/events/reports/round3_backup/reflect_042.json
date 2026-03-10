@@ -1,0 +1,36 @@
+{
+  "chapter_id": "042",
+  "corrections": [
+    {
+      "event_id": "042-005",
+      "current_year": "$庄公$%二十二年% （公元前722年）",
+      "suggested_year": "（公元前722年）",
+      "reason": "概览表有reign-year标记，年表前722年明确记载共叔段事件，年份正确无需修正，仅确认",
+      "confidence": "high"
+    },
+    {
+      "event_id": "042-009",
+      "current_year": "$厉公$%四年% （公元前697年）",
+      "suggested_year": "（公元前697年）",
+      "reason": "厉公元年为前701年（非前700年），四年=701-(4-1)=前698年，但年表将此事系于前697年。以年表前697年为准，当前标注正确",
+      "confidence": "high"
+    },
+    {
+      "event_id": "042-015",
+      "current_year": "$缪公$%元年春% （公元前627年）",
+      "suggested_year": "（公元前627年）",
+      "reason": "此处缪公指郑穆（缪）公，非秦穆公。年表前627年明确记载弦高退秦师，年份正确",
+      "confidence": "high"
+    },
+    {
+      "event_id": "042-022",
+      "current_year": "$声公$%五年% （公元前522年）",
+      "suggested_year": "（公元前522年）",
+      "reason": "子产卒公认在前522年（年表有载），但声公五年应为前496年非前522年。此处reign-year与事件年份矛盾，年份前522年以年表为准正确，reign-year标记可能有误（应为定公八年）",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 19,
+  "notes": "042郑世家23个事件，年代标注整体准确，reign-year换算正确，仅042-022子产卒存在reign-year与年份间的内在矛盾（以年表年份为准）"
+}

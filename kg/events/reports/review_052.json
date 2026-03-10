@@ -9,24 +9,13 @@
       "check": "缺少年代推断",
       "severity": "warning",
       "message": "详情缺少 **年代推断** 字段"
-    },
-    {
-      "event_id": "052-022",
-      "check": "崩逝年份偏差",
-      "severity": "error",
-      "message": "'齐厉王自杀国除'标注前202年，但主父偃卒年为前126年，偏差76年",
-      "person": "主父偃",
-      "annotated_year": -202,
-      "expected_year": -126
     }
   ],
   "severity_counts": {
-    "warning": 1,
-    "error": 1
+    "warning": 1
   },
   "check_counts": {
-    "缺少年代推断": 1,
-    "崩逝年份偏差": 1
+    "缺少年代推断": 1
   },
-  "reviewed_at": "2026-03-09T04:20:35.461143"
+  "reviewed_at": "2026-03-10T19:26:10.857008"
 }

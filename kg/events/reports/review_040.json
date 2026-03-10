@@ -5,187 +5,23 @@
   "overview_events": 40,
   "issues": [
     {
-      "event_id": "040-003",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前680年，详情=前597年",
-      "overview_time": "[约公元前680年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-004",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前680年，详情=前597年",
-      "overview_time": "[约公元前680年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-005",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前680年，详情=前597年",
-      "overview_time": "[约公元前680年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-006",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前680年，详情=前597年",
-      "overview_time": "[约公元前680年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-007",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前680年，详情=前597年",
-      "overview_time": "[约公元前680年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-009",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前672年，详情=前597年",
-      "overview_time": "[约公元前672年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-011",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前651年，详情=前597年",
-      "overview_time": "%冬%%十月%-%丁未% [约公元前651年]",
-      "detail_time": "%冬%%十月%-%丁未% [约公元前597年]"
-    },
-    {
-      "event_id": "040-012",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前638年，详情=前597年",
-      "overview_time": "[约公元前638年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-013",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前626年，详情=前597年",
-      "overview_time": "[约公元前626年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-014",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前613年，详情=前597年",
-      "overview_time": "[约公元前613年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-016",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前588年，详情=前597年",
-      "overview_time": "[约公元前588年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-017",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前579年，详情=前597年",
-      "overview_time": "[约公元前579年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-019",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前561年，详情=前597年",
-      "overview_time": "[约公元前561年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-020",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前552年，详情=前597年",
-      "overview_time": "[约公元前552年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-021",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前543年，详情=前597年",
-      "overview_time": "%夏%%五月%%癸丑% [约公元前543年]",
-      "detail_time": "%夏%%五月%%癸丑% [约公元前597年]"
-    },
-    {
-      "event_id": "040-022",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前534年，详情=前597年",
-      "overview_time": "[约公元前534年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-023",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前525年，详情=前597年",
-      "overview_time": "[约公元前525年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "040-024",
-      "check": "概览详情年份不一致",
-      "severity": "error",
-      "message": "概览=前516年，详情=前597年",
-      "overview_time": "[约公元前516年]",
-      "detail_time": "[约公元前597年]"
-    },
-    {
-      "event_id": "ALL",
-      "check": "单锚点塌缩疑似",
+      "event_id": "040-001",
+      "check": "年份超出时代范围",
       "severity": "warning",
-      "message": "20/40个事件指向前597年，疑似被单一锚点拉偏。涉及: 040-001, 040-002, 040-003, 040-004, 040-005...",
-      "year": -597,
-      "count": 20,
-      "event_ids": [
-        "040-001",
-        "040-002",
-        "040-003",
-        "040-004",
-        "040-005",
-        "040-006",
-        "040-007",
-        "040-009",
-        "040-011",
-        "040-012",
-        "040-013",
-        "040-014",
-        "040-016",
-        "040-017",
-        "040-019",
-        "040-020",
-        "040-021",
-        "040-022",
-        "040-023",
-        "040-024"
-      ]
+      "message": "'楚先祖与祝融之后'标注前2300年，离群于本章核心范围前690年~前278年"
+    },
+    {
+      "event_id": "040-002",
+      "check": "年份超出时代范围",
+      "severity": "warning",
+      "message": "'鬻熊事文王熊绎受封'标注前1040年，离群于本章核心范围前690年~前278年"
     }
   ],
   "severity_counts": {
-    "error": 18,
-    "warning": 1
+    "warning": 2
   },
   "check_counts": {
-    "概览详情年份不一致": 18,
-    "单锚点塌缩疑似": 1
+    "年份超出时代范围": 2
   },
-  "reviewed_at": "2026-03-09T04:20:35.441587"
+  "reviewed_at": "2026-03-10T19:26:10.821817"
 }

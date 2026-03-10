@@ -1,0 +1,33 @@
+{
+  "chapter_id": "063",
+  "total_events": 10,
+  "corrections": [
+    {
+      "event_id": "063-002",
+      "event_name": "孔子适周问礼于老子",
+      "current_year": "[约公元前535年]",
+      "suggested_year": "[约公元前518年]",
+      "reason": "前535年时孔子(前551年生)仅16岁，传统考证定在鲁昭公二十四年(前518年)前后更合理",
+      "confidence": "medium"
+    },
+    {
+      "event_id": "063-006",
+      "event_name": "申不害相韩",
+      "current_year": "[公元前355年]",
+      "suggested_year": "（公元前355年）",
+      "reason": "年表明确记载韩昭侯八年(前355年)用申不害为相，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "063-010",
+      "event_name": "韩非使秦被害",
+      "current_year": "[公元前233年]",
+      "suggested_year": "（公元前233年）",
+      "reason": "年表明确记载秦王政十四年(前233年)韩非入秦被迫自杀，应升级为精确纪年",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 7,
+  "notes": "老子韩非列传10事件，3处修正：孔子问礼年代前535→前518，两处确定性升级。"
+}

@@ -1,0 +1,25 @@
+{
+  "chapter_id": "073",
+  "total_events": 19,
+  "corrections": [
+    {
+      "event_id": "073-003",
+      "event_name": "白起攻魏拔六十一城",
+      "current_year": "（公元前292年）",
+      "suggested_year": "（公元前289年）",
+      "reason": "年表前289年条记载白起攻魏取六十一城，前292年仅取垣一城。本传将十五年至十八年征魏战功合叙为一事",
+      "confidence": "medium"
+    },
+    {
+      "event_id": "073-013",
+      "event_name": "王翦攻赵灭燕",
+      "current_year": "（公元前236—前228年）",
+      "suggested_year": "（公元前236—前226年）",
+      "reason": "事件含灭燕，年表前226年记载王翦破燕入蓟。始皇十九年=前228年仅灭赵，灭燕在二十一年=前226年",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 17,
+  "notes": "073章19个事件年代基本正确，2处修正：拔六十一城应为前289年、灭燕下限应至前226年"
+}

@@ -11,22 +11,10 @@
       "message": "详情缺少 **年代推断** 字段"
     },
     {
-      "event_id": "001-020",
-      "check": "有纪年无公元年",
-      "severity": "warning",
-      "message": "时间字段含原文纪年但无公元年转换: %九岁%"
-    },
-    {
       "event_id": "001-029",
       "check": "缺少年代推断",
       "severity": "warning",
       "message": "详情缺少 **年代推断** 字段"
-    },
-    {
-      "event_id": "001-029",
-      "check": "有纪年无公元年",
-      "severity": "warning",
-      "message": "时间字段含原文纪年但无公元年转换: %七十年%"
     },
     {
       "event_id": "001-045",
@@ -35,22 +23,10 @@
       "message": "详情缺少 **年代推断** 字段"
     },
     {
-      "event_id": "001-045",
-      "check": "有纪年无公元年",
-      "severity": "warning",
-      "message": "时间字段含原文纪年但无公元年转换: %二十年%"
-    },
-    {
       "event_id": "001-046",
       "check": "缺少年代推断",
       "severity": "warning",
       "message": "详情缺少 **年代推断** 字段"
-    },
-    {
-      "event_id": "001-046",
-      "check": "有纪年无公元年",
-      "severity": "warning",
-      "message": "时间字段含原文纪年但无公元年转换: %八年%"
     },
     {
       "event_id": "001-059",
@@ -59,85 +35,49 @@
       "message": "详情缺少 **年代推断** 字段"
     },
     {
+      "event_id": "001-060",
+      "check": "缺少年代推断",
+      "severity": "warning",
+      "message": "详情缺少 **年代推断** 字段"
+    },
+    {
+      "event_id": "001-061",
+      "check": "缺少年代推断",
+      "severity": "warning",
+      "message": "详情缺少 **年代推断** 字段"
+    },
+    {
+      "event_id": "001-064",
+      "check": "缺少年代推断",
+      "severity": "warning",
+      "message": "详情缺少 **年代推断** 字段"
+    },
+    {
+      "event_id": "001-046",
+      "check": "崩逝年份偏差",
+      "severity": "error",
+      "message": "'舜摄政八年尧崩'标注前2259年，但舜卒年为前2178年，偏差81年",
+      "person": "舜",
+      "annotated_year": -2259,
+      "expected_year": -2178
+    },
+    {
       "event_id": "001-059",
-      "check": "有纪年无公元年",
-      "severity": "warning",
-      "message": "时间字段含原文纪年但无公元年转换: %年五十八%"
-    },
-    {
-      "event_id": "001-060",
-      "check": "缺少年代推断",
-      "severity": "warning",
-      "message": "详情缺少 **年代推断** 字段"
-    },
-    {
-      "event_id": "001-060",
-      "check": "有纪年无公元年",
-      "severity": "warning",
-      "message": "时间字段含原文纪年但无公元年转换: %年六十一%"
-    },
-    {
-      "event_id": "001-061",
-      "check": "缺少年代推断",
-      "severity": "warning",
-      "message": "详情缺少 **年代推断** 字段"
-    },
-    {
-      "event_id": "001-061",
-      "check": "有纪年无公元年",
-      "severity": "warning",
-      "message": "时间字段含原文纪年但无公元年转换: %三十九年%"
-    },
-    {
-      "event_id": "001-064",
-      "check": "缺少年代推断",
-      "severity": "warning",
-      "message": "详情缺少 **年代推断** 字段"
-    },
-    {
-      "event_id": "001-064",
-      "check": "有纪年无公元年",
-      "severity": "warning",
-      "message": "时间字段含原文纪年但无公元年转换: %十七年%"
-    },
-    {
-      "event_id": "ALL",
-      "check": "单锚点塌缩疑似",
-      "severity": "warning",
-      "message": "20/66个事件指向前2230年，疑似被单一锚点拉偏。涉及: 001-032, 001-033, 001-034, 001-035, 001-036...",
-      "year": -2230,
-      "count": 20,
-      "event_ids": [
-        "001-032",
-        "001-033",
-        "001-034",
-        "001-035",
-        "001-036",
-        "001-037",
-        "001-039",
-        "001-040",
-        "001-042",
-        "001-043",
-        "001-047",
-        "001-048",
-        "001-049",
-        "001-050",
-        "001-051",
-        "001-052",
-        "001-053",
-        "001-054",
-        "001-055",
-        "001-056"
-      ]
+      "check": "崩逝年份偏差",
+      "severity": "error",
+      "message": "'舜五十八岁尧崩'标注前2259年，但舜卒年为前2178年，偏差81年",
+      "person": "舜",
+      "annotated_year": -2259,
+      "expected_year": -2178
     }
   ],
   "severity_counts": {
-    "warning": 17
+    "warning": 8,
+    "error": 2
   },
   "check_counts": {
     "缺少年代推断": 8,
-    "有纪年无公元年": 8,
-    "单锚点塌缩疑似": 1
+    "崩逝年份偏差": 2
   },
-  "reviewed_at": "2026-03-09T04:20:35.351627"
+  "reviewed_at": "2026-03-10T19:26:10.657442"
 }
