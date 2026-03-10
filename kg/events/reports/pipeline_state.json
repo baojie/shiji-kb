@@ -1,5 +1,83 @@
 {
-  "reviewed_chapters": {},
+  "reviewed_chapters": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "013",
+    "014",
+    "015",
+    "016",
+    "017",
+    "018",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "025",
+    "026",
+    "027",
+    "028",
+    "029",
+    "030",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "036",
+    "037",
+    "038",
+    "039",
+    "040",
+    "041",
+    "042",
+    "043",
+    "044",
+    "045",
+    "046",
+    "047",
+    "048",
+    "049",
+    "050",
+    "051",
+    "052",
+    "053",
+    "054",
+    "055",
+    "056",
+    "057",
+    "058",
+    "059",
+    "060",
+    "061",
+    "062",
+    "063",
+    "064",
+    "065",
+    "066",
+    "067",
+    "068",
+    "069",
+    "070",
+    "071",
+    "072",
+    "073",
+    "074",
+    "075",
+    "076",
+    "077"
+  ],
   "reflected_chapters": [
     "001",
     "002",
@@ -134,25 +212,120 @@
   ],
   "accumulated_findings": [
     {
-      "chapter_id": "004",
-      "pattern": "Claude反思修正",
-      "count": 3,
+      "chapter_id": "001",
+      "pattern": "缺少年代推断",
+      "count": 8,
+      "severity": "aggregate",
       "examples": [
-        "004-034",
-        "004-023",
-        "004-029"
+        "001-020",
+        "001-029",
+        "001-045",
+        "001-046",
+        "001-059"
+      ]
+    },
+    {
+      "chapter_id": "004",
+      "pattern": "有纪年无公元年",
+      "count": 5,
+      "severity": "aggregate",
+      "examples": [
+        "004-028",
+        "004-050",
+        "004-052",
+        "004-059",
+        "004-067"
+      ]
+    },
+    {
+      "chapter_id": "004",
+      "pattern": "年份超出时代范围",
+      "count": 4,
+      "severity": "aggregate",
+      "examples": [
+        "004-001",
+        "004-002",
+        "004-003",
+        "004-004"
       ]
     },
     {
       "chapter_id": "005",
-      "pattern": "Claude反思修正",
-      "count": 5,
+      "pattern": "缺少年代推断",
+      "count": 15,
+      "severity": "aggregate",
       "examples": [
-        "005-094",
-        "005-095",
-        "005-096",
-        "005-128",
-        "005-130"
+        "005-001",
+        "005-002",
+        "005-003",
+        "005-004",
+        "005-005"
+      ]
+    },
+    {
+      "chapter_id": "005",
+      "pattern": "有纪年无公元年",
+      "count": 5,
+      "severity": "aggregate",
+      "examples": [
+        "005-106",
+        "005-116",
+        "005-123",
+        "005-129",
+        "005-136"
+      ]
+    },
+    {
+      "chapter_id": "027",
+      "pattern": "有纪年无公元年",
+      "count": 3,
+      "severity": "aggregate",
+      "examples": [
+        "027-001",
+        "027-002",
+        "027-015"
+      ]
+    },
+    {
+      "chapter_id": "028",
+      "pattern": "年份超出时代范围",
+      "count": 3,
+      "severity": "aggregate",
+      "examples": [
+        "028-001",
+        "028-002",
+        "028-003"
+      ]
+    },
+    {
+      "chapter_id": "031",
+      "pattern": "年份超出时代范围",
+      "count": 3,
+      "severity": "aggregate",
+      "examples": [
+        "031-001",
+        "031-002",
+        "031-003"
+      ]
+    },
+    {
+      "chapter_id": "039",
+      "pattern": "年份超出时代范围",
+      "count": 3,
+      "severity": "aggregate",
+      "examples": [
+        "039-001",
+        "039-002",
+        "039-003"
+      ]
+    },
+    {
+      "chapter_id": "006",
+      "pattern": "Claude反思修正",
+      "count": 2,
+      "examples": [
+        "006-082",
+        "006-105"
       ]
     },
     {
@@ -160,7 +333,26 @@
       "pattern": "Claude反思修正",
       "count": 1,
       "examples": [
-        "008-082"
+        "008-044"
+      ]
+    },
+    {
+      "chapter_id": "009",
+      "pattern": "Claude反思修正",
+      "count": 2,
+      "examples": [
+        "009-003",
+        "009-015"
+      ]
+    },
+    {
+      "chapter_id": "010",
+      "pattern": "Claude反思修正",
+      "count": 3,
+      "examples": [
+        "010-042",
+        "010-043",
+        "010-034"
       ]
     },
     {
@@ -174,10 +366,9 @@
     {
       "chapter_id": "012",
       "pattern": "Claude反思修正",
-      "count": 2,
+      "count": 1,
       "examples": [
-        "012-005",
-        "012-014"
+        "012-005"
       ]
     },
     {
@@ -192,37 +383,19 @@
     {
       "chapter_id": "014",
       "pattern": "Claude反思修正",
-      "count": 3,
+      "count": 2,
       "examples": [
         "014-006",
-        "014-010",
-        "014-011"
+        "014-004"
       ]
     },
     {
       "chapter_id": "015",
       "pattern": "Claude反思修正",
-      "count": 3,
+      "count": 2,
       "examples": [
-        "015-029",
-        "015-033",
-        "015-001"
-      ]
-    },
-    {
-      "chapter_id": "016",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "016-019"
-      ]
-    },
-    {
-      "chapter_id": "017",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "017-011"
+        "015-008",
+        "015-004"
       ]
     },
     {
@@ -237,84 +410,23 @@
       ]
     },
     {
-      "chapter_id": "023",
+      "chapter_id": "028",
       "pattern": "Claude反思修正",
       "count": 2,
       "examples": [
-        "023-001",
-        "023-003"
-      ]
-    },
-    {
-      "chapter_id": "024",
-      "pattern": "Claude反思修正",
-      "count": 3,
-      "examples": [
-        "024-011",
-        "024-009",
-        "024-013"
-      ]
-    },
-    {
-      "chapter_id": "025",
-      "pattern": "Claude反思修正",
-      "count": 6,
-      "examples": [
-        "025-005",
-        "025-006",
-        "025-007",
-        "025-008",
-        "025-009"
-      ]
-    },
-    {
-      "chapter_id": "026",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "026-016"
-      ]
-    },
-    {
-      "chapter_id": "027",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "027-011"
-      ]
-    },
-    {
-      "chapter_id": "028",
-      "pattern": "Claude反思修正",
-      "count": 6,
-      "examples": [
-        "028-002",
-        "028-010",
-        "028-015",
-        "028-016",
-        "028-053"
-      ]
-    },
-    {
-      "chapter_id": "029",
-      "pattern": "Claude反思修正",
-      "count": 3,
-      "examples": [
-        "029-001",
-        "029-004",
-        "029-013"
+        "028-014",
+        "028-018"
       ]
     },
     {
       "chapter_id": "030",
       "pattern": "Claude反思修正",
-      "count": 8,
+      "count": 4,
       "examples": [
-        "030-001",
-        "030-005",
-        "030-007",
-        "030-008",
-        "030-012"
+        "030-025",
+        "030-028",
+        "030-030",
+        "030-033"
       ]
     },
     {
@@ -356,147 +468,26 @@
     {
       "chapter_id": "039",
       "pattern": "Claude反思修正",
-      "count": 2,
+      "count": 1,
       "examples": [
-        "039-033",
-        "039-018"
+        "039-033"
       ]
     },
     {
       "chapter_id": "040",
       "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "040-038"
-      ]
-    },
-    {
-      "chapter_id": "041",
-      "pattern": "Claude反思修正",
-      "count": 6,
-      "examples": [
-        "041-003",
-        "041-011",
-        "041-012",
-        "041-013",
-        "041-014"
-      ]
-    },
-    {
-      "chapter_id": "042",
-      "pattern": "Claude反思修正",
-      "count": 3,
-      "examples": [
-        "042-011",
-        "042-022",
-        "042-023"
-      ]
-    },
-    {
-      "chapter_id": "043",
-      "pattern": "Claude反思修正",
-      "count": 3,
-      "examples": [
-        "043-004",
-        "043-011",
-        "043-029"
-      ]
-    },
-    {
-      "chapter_id": "044",
-      "pattern": "Claude反思修正",
-      "count": 5,
-      "examples": [
-        "044-004",
-        "044-006",
-        "044-007",
-        "044-016",
-        "044-022"
-      ]
-    },
-    {
-      "chapter_id": "045",
-      "pattern": "Claude反思修正",
-      "count": 3,
-      "examples": [
-        "045-004",
-        "045-011",
-        "045-016"
-      ]
-    },
-    {
-      "chapter_id": "046",
-      "pattern": "Claude反思修正",
       "count": 2,
       "examples": [
-        "046-013",
-        "046-022"
+        "040-038",
+        "040-016"
       ]
     },
     {
-      "chapter_id": "047",
-      "pattern": "Claude反思修正",
-      "count": 3,
-      "examples": [
-        "047-008",
-        "047-009",
-        "047-018"
-      ]
-    },
-    {
-      "chapter_id": "050",
+      "chapter_id": "068",
       "pattern": "Claude反思修正",
       "count": 1,
       "examples": [
-        "050-005"
-      ]
-    },
-    {
-      "chapter_id": "052",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "052-010"
-      ]
-    },
-    {
-      "chapter_id": "055",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "055-022"
-      ]
-    },
-    {
-      "chapter_id": "057",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "057-020"
-      ]
-    },
-    {
-      "chapter_id": "059",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "059-018"
-      ]
-    },
-    {
-      "chapter_id": "063",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "063-008"
-      ]
-    },
-    {
-      "chapter_id": "065",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "065-012"
+        "068-011"
       ]
     },
     {
@@ -514,13 +505,11 @@
     {
       "chapter_id": "073",
       "pattern": "Claude反思修正",
-      "count": 5,
+      "count": 3,
       "examples": [
-        "073-003",
         "073-004",
         "073-013",
-        "073-017",
-        "073-019"
+        "073-017"
       ]
     },
     {
@@ -536,8 +525,10 @@
     {
       "chapter_id": "075",
       "pattern": "Claude反思修正",
-      "count": 3,
+      "count": 5,
       "examples": [
+        "075-003",
+        "075-004",
         "075-008",
         "075-010",
         "075-011"
@@ -546,9 +537,10 @@
     {
       "chapter_id": "076",
       "pattern": "Claude反思修正",
-      "count": 1,
+      "count": 2,
       "examples": [
-        "076-001"
+        "076-001",
+        "076-007"
       ]
     },
     {
@@ -560,218 +552,32 @@
       ]
     },
     {
-      "chapter_id": "086",
+      "chapter_id": "080",
       "pattern": "Claude反思修正",
       "count": 1,
       "examples": [
-        "086-001"
-      ]
-    },
-    {
-      "chapter_id": "090",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "090-010"
-      ]
-    },
-    {
-      "chapter_id": "093",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "093-016"
-      ]
-    },
-    {
-      "chapter_id": "095",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "095-023"
-      ]
-    },
-    {
-      "chapter_id": "098",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "098-009"
-      ]
-    },
-    {
-      "chapter_id": "100",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "100-003"
-      ]
-    },
-    {
-      "chapter_id": "102",
-      "pattern": "Claude反思修正",
-      "count": 2,
-      "examples": [
-        "102-002",
-        "102-004"
-      ]
-    },
-    {
-      "chapter_id": "103",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "103-018"
-      ]
-    },
-    {
-      "chapter_id": "104",
-      "pattern": "Claude反思修正",
-      "count": 5,
-      "examples": [
-        "104-002",
-        "104-006",
-        "104-010",
-        "104-013",
-        "104-014"
-      ]
-    },
-    {
-      "chapter_id": "106",
-      "pattern": "Claude反思修正",
-      "count": 2,
-      "examples": [
-        "106-002",
-        "106-003"
-      ]
-    },
-    {
-      "chapter_id": "109",
-      "pattern": "Claude反思修正",
-      "count": 3,
-      "examples": [
-        "109-003",
-        "109-009",
-        "109-011"
-      ]
-    },
-    {
-      "chapter_id": "110",
-      "pattern": "Claude反思修正",
-      "count": 2,
-      "examples": [
-        "110-004",
-        "110-028"
-      ]
-    },
-    {
-      "chapter_id": "111",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "111-033"
-      ]
-    },
-    {
-      "chapter_id": "116",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "116-015"
-      ]
-    },
-    {
-      "chapter_id": "118",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "118-025"
-      ]
-    },
-    {
-      "chapter_id": "119",
-      "pattern": "Claude反思修正",
-      "count": 2,
-      "examples": [
-        "119-004",
-        "119-005"
-      ]
-    },
-    {
-      "chapter_id": "121",
-      "pattern": "Claude反思修正",
-      "count": 3,
-      "examples": [
-        "121-006",
-        "121-019",
-        "121-023"
+        "080-013"
       ]
     },
     {
       "chapter_id": "122",
       "pattern": "Claude反思修正",
-      "count": 3,
+      "count": 1,
       "examples": [
-        "122-004",
-        "122-006",
         "122-012"
-      ]
-    },
-    {
-      "chapter_id": "123",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "123-012"
-      ]
-    },
-    {
-      "chapter_id": "124",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "124-001"
-      ]
-    },
-    {
-      "chapter_id": "128",
-      "pattern": "Claude反思修正",
-      "count": 2,
-      "examples": [
-        "128-007",
-        "128-008"
-      ]
-    },
-    {
-      "chapter_id": "129",
-      "pattern": "Claude反思修正",
-      "count": 1,
-      "examples": [
-        "129-009"
       ]
     },
     {
       "chapter_id": "130",
       "pattern": "Claude反思修正",
-      "count": 2,
+      "count": 1,
       "examples": [
-        "130-003",
-        "130-008"
+        "130-013"
       ]
     }
   ],
-  "new_error_patterns": [
-    {
-      "chapter_id": "004",
-      "pattern": "格式伪迹重复"
-    },
-    {
-      "chapter_id": "005",
-      "pattern": "脚本修正指令残留"
-    }
-  ],
-  "last_chapter": null,
-  "started_at": "2026-03-10T12:00:00.000000",
-  "round": 4,
-  "updated_at": "2026-03-10T19:36:01.927583"
+  "new_error_patterns": [],
+  "last_chapter": "077",
+  "started_at": "2026-03-10T23:40:41.217488",
+  "updated_at": "2026-03-10T23:41:06.778683"
 }
