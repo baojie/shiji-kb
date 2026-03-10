@@ -1,0 +1,33 @@
+{
+  "chapter_id": "075",
+  "total_events": 19,
+  "corrections": [
+    {
+      "event_id": "075-004",
+      "event_name": "田婴封于薛",
+      "current_year": "[公元前298年]",
+      "suggested_year": "（公元前298年）",
+      "reason": "确定性标注不足：齐湣王元年=前300年，即位三年=300-(3-1)=前298年，为reign-year精确换算，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "075-010",
+      "event_name": "孟尝君过赵灭一县",
+      "current_year": "[约公元前298年]",
+      "suggested_year": "[公元前298年]",
+      "reason": "确定性可提升：年表明确记载前298年孟尝君逃回齐国，经赵必在同年，可从近似推算升级为确定推算",
+      "confidence": "medium"
+    },
+    {
+      "event_id": "075-011",
+      "event_name": "孟尝君相齐任政",
+      "current_year": "[约公元前298年]",
+      "suggested_year": "[公元前298年]",
+      "reason": "确定性可提升：年表明确记载前298年孟尝君逃回齐国，归齐即任相，可从近似推算升级为确定推算",
+      "confidence": "medium"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 16,
+  "notes": "本章19个事件年代标注整体准确，3处确定性标注可提升；075-001和075-003年份虽正确但存在《史记》田齐威王/宣王系年混乱的已知学术争议"
+}

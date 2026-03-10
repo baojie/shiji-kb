@@ -1,0 +1,41 @@
+{
+  "chapter_id": "056",
+  "total_events": 28,
+  "corrections": [
+    {
+      "event_id": "056-005",
+      "event_name": "陈平从项羽击秦",
+      "current_year": "[约公元前208年]",
+      "suggested_year": "[约公元前207年]",
+      "reason": "项羽略地至河上约在前208年末至前207年间，陈平从项羽入关破秦在前207年（秦亡之年）更合理",
+      "confidence": "medium"
+    },
+    {
+      "event_id": "056-013",
+      "event_name": "封陈平为户牖侯",
+      "current_year": "[约公元前201年]",
+      "suggested_year": "（公元前201年）",
+      "reason": "高祖六年（前201年）正月封功臣，年表有载，应标精确纪年而非近似",
+      "confidence": "high"
+    },
+    {
+      "event_id": "056-015",
+      "event_name": "改封曲逆侯",
+      "current_year": "[约公元前200年]",
+      "suggested_year": "[公元前200年]",
+      "reason": "平城之围（前200年）后高帝南归途中改封，可从前200年精确推算，应改为确定推算标记",
+      "confidence": "high"
+    },
+    {
+      "event_id": "056-019",
+      "event_name": "陈平为郎中令",
+      "current_year": "[约公元前195年]",
+      "suggested_year": "[公元前195年]",
+      "reason": "高祖前195年四月崩，惠帝即位，吕太后即以陈平为郎中令，时间可精确推算",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 24,
+  "notes": "陈丞相世家年代标注整体较好，多数事件有年表交叉验证，主要问题是部分可精确推算的事件用了近似标记"
+}

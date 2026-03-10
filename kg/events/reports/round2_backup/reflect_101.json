@@ -1,0 +1,57 @@
+{
+  "chapter_id": "101",
+  "total_events": 21,
+  "corrections": [
+    {
+      "event_id": "101-001",
+      "event_name": "袁盎入仕为中郎",
+      "current_year": "[约公元前179年]",
+      "suggested_year": "（公元前179年）",
+      "reason": "年表前179年载文帝即位。袁盎于文帝即位后由兄荐为中郎，文帝即位年确定，可升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "101-004",
+      "event_name": "袁盎谏削淮南王",
+      "current_year": "[公元前174年]",
+      "suggested_year": "（公元前174年）",
+      "reason": "年表前174年明确记载淮南王长谋反被迁蜀。已为确定推算[公元前174年]，年表有载应升级为精确纪年（圆括号）",
+      "confidence": "high"
+    },
+    {
+      "event_id": "101-013",
+      "event_name": "晁错为内史穿庙垣门",
+      "current_year": "[公元前155年]",
+      "suggested_year": "（公元前155年）",
+      "reason": "年表前155年明确记载丞相申屠嘉死，晁错穿庙垣门为同一事件链。已为确定推算应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "101-015",
+      "event_name": "晁错父饮药而死",
+      "current_year": "[公元前154年]",
+      "suggested_year": "（公元前154年）",
+      "reason": "晁错父饮药死后十余日七国反（前154年），可精确定年为前154年。年表前154年载七国之乱，此事为同年事件，应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "101-018",
+      "event_name": "袁盎使吴脱险归梁",
+      "current_year": "[公元前154年]",
+      "suggested_year": "（公元前154年）",
+      "reason": "晁错被诛后袁盎使吴，为七国之乱同年（前154年）事件。年表有载应升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "101-021",
+      "event_name": "邓公为晁错辩护",
+      "current_year": "[公元前154年]",
+      "suggested_year": "（公元前154年）",
+      "reason": "邓公击吴楚军归来为晁错辩护，为七国之乱同年事件。年表前154年载七国之乱相关事件，应升级为精确纪年",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 15,
+  "notes": "二轮已修正全部年份偏差，本轮主要将6个确定推算[公元前XXX年]升级为精确纪年（公元前XXX年），属确定性标注不足问题"
+}

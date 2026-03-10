@@ -1,0 +1,33 @@
+{
+  "chapter_id": "103",
+  "total_events": 18,
+  "corrections": [
+    {
+      "event_id": "103-001",
+      "event_name": "石奋入仕高祖",
+      "current_year": "[公元前205年]",
+      "suggested_year": "（公元前205年）",
+      "reason": "年表前205年条记载汉王东进击楚过河内事。高祖过河内即此年，可升级为精确纪年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "103-013",
+      "event_name": "卫绾击吴楚封建陵侯",
+      "current_year": "（公元前151年）",
+      "suggested_year": "（公元前151年）",
+      "reason": "景帝前六年=156-(6-1)=前151年，换算正确。事件包含击吴楚（前154年）和封侯（前151年）两个时间点，以原文明确记载的封侯年为准。确认无误",
+      "confidence": "high"
+    },
+    {
+      "event_id": "103-018",
+      "event_name": "张欧以诚长者处官",
+      "current_year": "（公元前131年）",
+      "suggested_year": "（公元前131年）",
+      "reason": "二轮已从前125年修正为前131年。年表前131年明确记载'中尉张欧为御史大夫'，确认修正正确",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 17,
+  "notes": "二轮已修正103-018的年份偏差（从前125年改为前131年），本轮仅103-001可从确定推算升级为精确纪年，其余17个事件标注正确"
+}

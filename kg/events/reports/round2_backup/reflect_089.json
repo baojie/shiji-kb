@@ -1,0 +1,57 @@
+{
+  "chapter_id": "089",
+  "total_events": 23,
+  "corrections": [
+    {
+      "event_id": "089-011",
+      "event_name": "李良叛赵杀武臣",
+      "current_year": "[约公元前208年]",
+      "suggested_year": "（公元前208年）",
+      "reason": "年表前208年条明确记载'赵将张良反赵，袭邯郸，秦赵王武臣'（张良为李良之讹），属年表有载事件，应升级为精确纪年。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "089-012",
+      "event_name": "立赵歇为赵王",
+      "current_year": "[约公元前208年]",
+      "suggested_year": "（公元前208年）",
+      "reason": "年表前208年条记载'张耳、陈馀收兵击走张良（李良），立原赵国王族赵歇为赵王'，属年表有载事件，应升级为精确纪年。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "089-013",
+      "event_name": "巨鹿之围",
+      "current_year": "[约公元前208年]",
+      "suggested_year": "（公元前208年）",
+      "reason": "年表前208年条明确记载'章邯围巨鹿'，属年表有载事件，应升级为精确纪年。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "089-017",
+      "event_name": "陈馀袭常山张耳奔汉",
+      "current_year": "[约公元前205年]",
+      "suggested_year": "（公元前205年）",
+      "reason": "年表前205年条明确记载'陈馀袭破常山王张耳败，走汉'，属年表有载事件，应升级为精确纪年。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "089-019",
+      "event_name": "张耳立为赵王",
+      "current_year": "[约公元前203年]",
+      "suggested_year": "（公元前203年）",
+      "reason": "年表前203年（汉王四年）条明确记载'汉立张耳为赵王'，属年表有载事件，应升级为精确纪年。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "089-023",
+      "event_name": "张敖封宣平侯",
+      "current_year": "[约公元前198年]",
+      "suggested_year": "（公元前198年）",
+      "reason": "年表前198年（汉高祖九年）条明确记载'赵王张敖（张耳子，高祖婿）因赵臣贯高等谋害高祖事，降为宣平侯'，属年表有载事件，应升级为精确纪年。",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 17,
+  "notes": "089张耳陈馀列传第二轮审查：23个事件中17个确认无误。主要问题为确定性标注不足（错误模式7）：6个年表有明确记载的事件仍使用推断标注[约]或[]，应升级为精确纪年（）。无单锚点塌缩或其他严重系统性错误。"
+}

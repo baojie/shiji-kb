@@ -1,0 +1,72 @@
+{
+  "chapter_id": "100",
+  "total_events": 11,
+  "corrections": [
+    {
+      "event_id": "100-003",
+      "event_name": "季布谏击匈奴",
+      "current_year": "公元前192年",
+      "suggested_year": "[约公元前182年]",
+      "reason": "冒顿单于致书嫚吕后事，据《匈奴列传》明确记载在'高后时'。高后称制在前187年，冒顿书嫚吕后约在高后六年(前182年)前后。前192年为惠帝三年，吕后尚未独立主政，与事件背景不符，偏差约10年。",
+      "confidence": "medium"
+    },
+    {
+      "event_id": "100-001",
+      "event_name": "季布匿濮阳免死",
+      "current_year": "公元前202年",
+      "suggested_year": "（公元前202年）",
+      "reason": "确定性标注格式不足：项羽败亡于前202年为年表明确记载，应使用精确纪年圆括号格式（公元前XXX年）。当前为裸年份无标记。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "100-002",
+      "event_name": "季布拜郎中",
+      "current_year": "公元前202年",
+      "suggested_year": "（公元前202年）",
+      "reason": "同100-001，确定性标注格式应为（公元前XXX年）。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "100-007",
+      "event_name": "丁公不忠被诛",
+      "current_year": "公元前202年",
+      "suggested_year": "（公元前202年）",
+      "reason": "同上，确定性标注格式应统一为（公元前XXX年）。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "100-009",
+      "event_name": "栾布哭彭越",
+      "current_year": "公元前196年",
+      "suggested_year": "（公元前196年）",
+      "reason": "彭越被诛在高祖十一年(前196年)，年表有载，应使用精确纪年圆括号格式。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "100-010",
+      "event_name": "栾布封俞侯",
+      "current_year": "公元前154年",
+      "suggested_year": "（公元前154年）",
+      "reason": "七国之乱在景帝三年(前154年)，年表有载，应使用精确纪年圆括号格式。",
+      "confidence": "high"
+    },
+    {
+      "event_id": "100-011",
+      "event_name": "栾布立社燕齐",
+      "current_year": "公元前145年",
+      "suggested_year": "（公元前145年）",
+      "reason": "原文明确记载景帝中五年(前145年)薨，应使用精确纪年圆括号格式。",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [
+    {
+      "pattern_name": "裸年份缺少确定性标记",
+      "description": "部分事件的时间字段直接写'公元前XXX年'而不带任何标记符号（既不是圆括号也不是方括号），不符合三级标注规范。这些裸年份实际上都有明确依据，应使用（公元前XXX年）精确标注。",
+      "example": "100-001至100-011中有7个事件使用裸年份格式，应统一为（公元前XXX年）圆括号格式",
+      "detection": "检查时间字段中是否存在不带（）或[]标记的'公元前XXX年'格式"
+    }
+  ],
+  "confirmed_ok": 4,
+  "notes": "100章11事件年代基本准确，但存在大量裸年份格式问题（6处），另有100-003冒顿书嫚吕后年代偏差约10年需实质性修正。"
+}

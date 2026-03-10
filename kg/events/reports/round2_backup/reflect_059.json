@@ -1,0 +1,33 @@
+{
+  "chapter_id": "059",
+  "total_events": 21,
+  "corrections": [
+    {
+      "event_id": "059-004",
+      "event_name": "临江闵王荣废太子",
+      "current_year": "（公元前153年）",
+      "suggested_year": "（公元前150年）",
+      "reason": "原文'以孝景前四年为皇太子，四岁废'。前四年(前153年)是立太子时间，事件名为'废太子'，废太子在景帝前七年(前150年)，应以废太子年份为准",
+      "confidence": "high"
+    },
+    {
+      "event_id": "059-007",
+      "event_name": "江都易王非击吴",
+      "current_year": "（公元前155年）",
+      "suggested_year": "（公元前154年）",
+      "reason": "事件核心是'击吴'，吴楚七国之乱在景帝前三年(前154年)。封王虽在前二年(前155年)，但事件名称和主要内容是击吴，应标前154年",
+      "confidence": "high"
+    },
+    {
+      "event_id": "059-010",
+      "event_name": "胶西王端无男国除",
+      "current_year": "[约公元前108年]",
+      "suggested_year": "[公元前108年]",
+      "reason": "前三年(前154年)封王，立四十七年卒，前154-46=前108年。可精确推算，应改为确定推算标记",
+      "confidence": "high"
+    }
+  ],
+  "new_patterns": [],
+  "confirmed_ok": 18,
+  "notes": "五宗世家年代标注整体准确，多数事件有原文明确纪年。主要修正涉及事件名与标注年份对应关系及近似标记升级"
+}

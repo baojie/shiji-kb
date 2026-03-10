@@ -795,12 +795,15 @@ python kg/entities/scripts/build_entity_index.py
 
 
 
+
+
+
 <!-- PIPELINE_FINDINGS_START -->
 ## 前序章节累积发现
 
 以下是审查前序章节时发现的高频问题，请重点关注：
 
-- **Claude反思修正**：在 001, 003, 007, 004, 005, 010, 009, 002 中出现
+- **Claude反思修正**：在 001, 003, 004, 005, 010, 009, 008, 002 中出现
 
 <!-- PIPELINE_FINDINGS_END -->
 
