@@ -6,6 +6,78 @@
 
 ---
 
+## 跨章因果推理 + 关系统计全面更新 ([3a85dbe](https://github.com/baojie/shiji-kb/commit/3a85dbe)) - 2026-03-12
+
+### 新增 (Added)
+
+- 🔗 **跨章因果推理管线**
+  - 新增 `kg/relations/scripts/build_causal_relations.py`：LLM二次推理管线
+  - 以 cross_ref/co_person/co_location 为候选对（1,490对，过滤后1,457对）
+  - 8个Agent并行推理，每批约187对
+  - 确认因果关系338条，写入 `event_relations.json`（类型：cross_causal）
+  - 完整推理记录输出至 `kg/relations/causal_relations.json`（含no_causal记录）
+- 📊 **cross_causal 类型**：五种子类型
+  - background（背景条件）：138条
+  - prerequisite（必要前提）：100条
+  - direct_cause（直接原因）：96条
+  - trigger（导火索）：15条
+  - precedent（历史先例）：3条
+
+### 更改 (Changed)
+
+- 🔗 **event_relations.json**：7,314条 → 7,652条（新增338条 cross_causal）
+- 📖 **SKILL_事件关系发现.md** 重大更新
+  - 关系类型从8种扩展至9种（新增 cross_causal）
+  - 补充章内 causal 完整推理逻辑（四步判断流程 + 边界案例对照表）
+  - 新增 3.7节"跨章因果推理"：候选对筛选算法、LLM提示词结构、五条否定规则
+  - 更新工具链（新增 build_causal_relations.py）、执行顺序、统计数字
+- 📖 **全文档统计数字同步**：README.md、kg/README.md、SKILL_古籍事件提取与关系发现.md
+  - 7,314 → 7,652条，LLM 2,188 → 2,525条，8种 → 9种类型
+
+---
+
+## 地铁图功能优化 + 五帝本纪年代修正 ([ba19e4d](https://github.com/baojie/shiji-kb/commit/ba19e4d)) - 2026-03-12
+
+### 新增 (Added)
+
+- 🗺️ **地铁图交互优化**：搜索高亮、缩放平滑、实体链接、原文引用等体验改进
+- ⏱️ **001五帝本纪事件年代修正**：001-001~001-008 补充历史推断逻辑
+  - 001-001：传统纪年前2698年为黄帝历元年
+  - 001-002~001-008：阪泉/涿鹿战后叙事顺序推算，代际逆推（颛顼前2514年即位）
+
+---
+
+## 事件关系重算 + 十表事件抽取 ([e96d62e](https://github.com/baojie/shiji-kb/commit/e96d62e) / [45809c4](https://github.com/baojie/shiji-kb/commit/45809c4)) - 2026-03-11
+
+### 新增 (Added)
+
+- 📋 **十表事件补充提取**（013-022共10章）
+  - 补充226个事件至十表章节，平均每表22.6个事件
+  - 新建 `十表事件提取规划.md` 记录提取方法论
+  - 产出汇总表 `事件索引汇总.xlsx`
+- 🔗 **SKILL_事件关系发现.md**：从原多个SKILL合并为唯一权威文档
+  - 整合 `SKILL_古籍事件提取与关系发现.md`（算法细节）
+  - 整合 `SKILL_事件年代推断.md`（跨章定年）
+  - 整合 `SKILL_事件识别.md`（事件链）
+  - 整合 `SKILL_古籍知识图谱化.md`（实体三元组）
+
+### 更改 (Changed)
+
+- 🔗 **event_relations.json 全量重算**：3,185事件、7,314条关系
+  - concurrent从230条增至2,997条（CE年覆盖率98.7%后大幅增加）
+  - co_person 714→1,071条，co_location 455→737条
+
+---
+
+## 重建实体HTML索引 ([6d114e5](https://github.com/baojie/shiji-kb/commit/6d114e5)) - 2026-03-11
+
+### 更改 (Changed)
+
+- 🏷️ **docs/entities/event.html**：更新至3,186条事件（含十表补充事件）
+- 📦 **kg/entities/data/entity_index.json**：实体索引同步更新
+
+---
+
 ## [Unreleased]
 
 ### 新增 (Added)
