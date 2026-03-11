@@ -22,7 +22,7 @@ async function init() {
   const resp = await fetch('data/metro_map_data.json');
   data = await resp.json();
 
-  // Index
+  // Index stations
   for (const line of data.lines) {
     for (const s of line.stations) {
       stationIndex[s.id] = { ...s, lineId: line.id, lineColor: line.color, lineName: line.name };
@@ -33,6 +33,14 @@ async function init() {
     if (!chainIndex[c.target]) chainIndex[c.target] = [];
     chainIndex[c.source].push({ ...c, dir: 'out' });
     chainIndex[c.target].push({ ...c, dir: 'in' });
+  }
+
+  // Index cross_ref stations (for interchange halo markers)
+  window.crossRefStations = new Set();
+  for (const tr of data.transfers) {
+    if (tr.type === 'cross_ref') {
+      tr.events.forEach(eid => crossRefStations.add(eid));
+    }
   }
 
   // Default: show first 3 chapters
@@ -192,10 +200,13 @@ function renderOneLine(svg, line, y, idx) {
     s,
   }));
 
-  // Ensure minimum gap
+  // Ensure minimum gap: same-year events get a small gap (2 SVG units) so they stay
+  // physically close at any zoom level; different-year events get 8 to avoid overlap.
   for (let i = 1; i < positions.length; i++) {
-    if (positions[i].x - positions[i - 1].x < 8) {
-      positions[i].x = positions[i - 1].x + 8;
+    const sameYear = stations[i].x_pos !== null && stations[i].x_pos === stations[i - 1].x_pos;
+    const minGap = sameYear ? 2 : 8;
+    if (positions[i].x - positions[i - 1].x < minGap) {
+      positions[i].x = positions[i - 1].x + minGap;
     }
   }
 
@@ -264,6 +275,15 @@ function renderOneLine(svg, line, y, idx) {
       opacity: hasCE ? 1 : 0.5,
     }));
 
+    // Interchange halo: outer ring for cross_ref stations
+    if (crossRefStations && crossRefStations.has(p.s.id)) {
+      g.appendChild(svgEl('circle', {
+        cx: 0, cy: 0, r: LAYOUT.stationR + 2.5,
+        fill: 'none', stroke: line.color, 'stroke-width': 1,
+        class: 'interchange-halo', opacity: 0.6,
+      }));
+    }
+
     // Priority based on actual pixel gap to previous station
     const prevX = i > 0 ? positions[i - 1].x : -Infinity;
     const gap = p.x - prevX;
@@ -296,7 +316,7 @@ function renderOneLine(svg, line, y, idx) {
       g.appendChild(bt);
     }
 
-    g.addEventListener('mouseenter', (e) => showTooltip(e, p.s, line));
+    g.addEventListener('mouseenter', (e) => showTooltip(e, p.s));
     g.addEventListener('mouseleave', hideTooltip);
     g.addEventListener('click', () => showDetail(p.s, line));
     svg.appendChild(g);
@@ -312,36 +332,64 @@ function renderTransfers(svg, visLines) {
   const transferG = svgEl('g', { class: 'transfers-layer' });
 
   const typeStyle = {
-    cross_ref:  { stroke: '#555', width: 1.5, dash: '3 2', opacity: 0.5 },
-    co_person:  { stroke: '#457b9d', width: 0.8, dash: '2 3', opacity: 0.25 },
-    co_location:{ stroke: '#2a9d8f', width: 0.8, dash: '2 3', opacity: 0.2 },
-    concurrent: { stroke: '#e76f51', width: 0.8, dash: '2 3', opacity: 0.25 },
+    co_person:   { stroke: '#457b9d', width: 0.8, dash: '2 3', opacity: 0.25 },
+    co_location: { stroke: '#2a9d8f', width: 0.8, dash: '2 3', opacity: 0.2  },
+    concurrent:  { stroke: '#e76f51', width: 0.8, dash: '2 3', opacity: 0.25 },
   };
 
   for (const tr of data.transfers) {
-    const evts = tr.events.map(eid => stationIndex[eid]).filter(s => s && s._x !== undefined && visLineIds.has(s.lineId));
+    const evts = tr.events.map(eid => stationIndex[eid])
+      .filter(s => s && s._x !== undefined && visLineIds.has(s.lineId));
     if (evts.length < 2) continue;
 
     const [a, b] = evts;
-    const style = typeStyle[tr.type] || typeStyle.co_person;
 
-    transferG.appendChild(svgEl('line', {
-      x1: a._x, y1: a._y, x2: b._x, y2: b._y,
-      stroke: style.stroke, 'stroke-width': style.width,
-      'stroke-dasharray': style.dash, opacity: style.opacity,
-      class: 'transfer-line', 'data-type': tr.type || 'cross_ref',
-    }));
-
-    // Transfer markers only for cross_ref (same event, different chapters)
     if (tr.type === 'cross_ref') {
-      for (const s of evts) {
-        const c = svgEl('circle', {
-          cx: s._x, cy: s._y, r: 6, fill: '#fff', stroke: '#555', 'stroke-width': 2,
-          class: 'transfer-marker',
-        });
-        c.addEventListener('click', () => showDetail(s, { color: s.lineColor, name: s.lineName }));
-        transferG.appendChild(c);
+      // Metro-style interchange: vertical connector with tick marks at each end
+      const x1 = a._x, y1 = a._y, x2 = b._x, y2 = b._y;
+      const TICK = 3; // half-width of bracket tick
+
+      if (Math.abs(x1 - x2) < 4) {
+        // Same year: pure vertical bracket
+        const xm = (x1 + x2) / 2;
+        const yTop = Math.min(y1, y2), yBot = Math.max(y1, y2);
+        // Vertical spine
+        transferG.appendChild(svgEl('line', {
+          x1: xm, y1: yTop, x2: xm, y2: yBot,
+          stroke: '#666', 'stroke-width': 1.5,
+          class: 'transfer-line transfer-crossref', 'data-type': 'cross_ref',
+        }));
+        // Top tick
+        transferG.appendChild(svgEl('line', {
+          x1: xm - TICK, y1: yTop, x2: xm + TICK, y2: yTop,
+          stroke: '#666', 'stroke-width': 1.5,
+          class: 'transfer-line transfer-crossref', 'data-type': 'cross_ref',
+        }));
+        // Bottom tick
+        transferG.appendChild(svgEl('line', {
+          x1: xm - TICK, y1: yBot, x2: xm + TICK, y2: yBot,
+          stroke: '#666', 'stroke-width': 1.5,
+          class: 'transfer-line transfer-crossref', 'data-type': 'cross_ref',
+        }));
+      } else {
+        // Different years: diagonal line with end ticks
+        transferG.appendChild(svgEl('line', {
+          x1, y1, x2, y2,
+          stroke: '#888', 'stroke-width': 1, 'stroke-dasharray': '4 3',
+          class: 'transfer-line transfer-crossref', 'data-type': 'cross_ref',
+        }));
       }
+    } else {
+      // co_person / co_location / concurrent: thin dashed, hidden by default
+      const style = typeStyle[tr.type] || typeStyle.co_person;
+      const el = svgEl('line', {
+        x1: a._x, y1: a._y, x2: b._x, y2: b._y,
+        stroke: style.stroke, 'stroke-width': style.width,
+        'stroke-dasharray': style.dash, opacity: style.opacity,
+        class: 'transfer-line', 'data-type': tr.type,
+      });
+      el.style.display = 'none'; // hidden until zoom or toggle
+      transferG.appendChild(el);
     }
   }
 
@@ -479,7 +527,7 @@ document.getElementById('panelClose').addEventListener('click', () => {
 
 // ─── Tooltip ───
 
-function showTooltip(e, s, line) {
+function showTooltip(e, s) {
   const tt = document.getElementById('tooltip');
   const yr = s.year != null ? (s.year < 0 ? `前${-s.year}年` : `${s.year}年`) : '';
   tt.innerHTML = `<b>${s.name}</b><div class="tt-sub">${yr ? yr + ' | ' : ''}${s.type} | ${s.people.slice(0,2).join('、')}</div>`;
@@ -703,13 +751,20 @@ function updateLabelVisibility() {
     }
   });
 
-  // Transfer visibility: cross_ref always shown, others only when zoomed in
-  const showCoRelations = viewBox.w < 1500;
-  document.querySelectorAll('.transfer-line').forEach(el => {
-    const t = el.getAttribute('data-type');
-    if (t && t !== 'cross_ref') {
-      el.style.display = showCoRelations ? '' : 'none';
-    }
+  // Transfer visibility
+  // cross_ref: always shown; scale interchange halo with circle
+  const svgHalo = parseFloat(svgR) + 2.5;
+  document.querySelectorAll('.interchange-halo').forEach(c => {
+    c.setAttribute('r', (svgHalo).toFixed(2));
+    c.setAttribute('stroke-width', (1 / scale).toFixed(2));
+  });
+  // cross_ref connectors: always visible, scale stroke-width
+  document.querySelectorAll('.transfer-crossref').forEach(el => {
+    el.setAttribute('stroke-width', (1.5 / scale).toFixed(2));
+  });
+  // Other types: hidden by default (reserved for future toggle)
+  document.querySelectorAll('.transfer-line:not(.transfer-crossref)').forEach(el => {
+    el.style.display = 'none';
   });
 
   // Line badge: cap physical size at 20px so it doesn't grow infinitely when zoomed in

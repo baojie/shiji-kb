@@ -171,6 +171,11 @@
 
   .station:hover .station-dot { r: var(--hover-r, 7); }
 
+  .interchange-halo {
+    pointer-events: none;
+    transition: r 0.15s;
+  }
+
   .station-label {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 9px;
