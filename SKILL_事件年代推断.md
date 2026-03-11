@@ -292,6 +292,8 @@
 
 ### 逻辑5：跨章节交叉定位（~100例）
 
+> 跨章互见关系的完整发现算法和置信度分级，详见 [SKILL_事件关系发现.md](SKILL_事件关系发现.md) 第三节。
+
 同一事件在多个章节出现，取精确度最高的标注。
 
 **优先级**：本纪 > 年表 > 世家 > 列传
@@ -768,7 +770,7 @@
 |------|------|
 | `kg/chronology/data/中国历史大事年表.md` | 交叉验证的ground truth，684个年份条目 |
 | `kg/events/data/NNN_*_事件索引.md` | 130章事件索引文件 |
-| `kg/events/事件时间索引.md` | 全部3092事件的时间索引（Markdown格式） |
+| `kg/events/事件时间索引.md` | 全部3185事件的时间索引（Markdown格式） |
 | `docs/entities/event.html` | 事件时间索引网页（按历史分期分组，含搜索筛选） |
 | `kg/entities/scripts/build_entity_index.py` | 生成event.html的脚本（同时生成全部实体索引） |
 | `kg/events/scripts/write_inferred_years.py` | 批量推断年代脚本 |
