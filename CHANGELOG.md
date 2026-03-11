@@ -78,25 +78,6 @@
 
 ---
 
-## [Unreleased]
-
-### 新增 (Added)
-
-- 📁 **参考文献目录** (`ref/`)
-  - 新建 `ref/` 目录收集相关参考文献和类似项目
-  - 首条参考：周渊《高僧传》智能释读系统（https://texta.studio/gsz/）
-- 📖 **README Skills汇总**
-  - 在README中添加7个方法论SKILL文档的汇总表格
-
-### 计划中
-
-- 实施10大高级分析
-- 构建Neo4j知识图谱数据库
-- index页面展开小节目录、章节卡片高度可变
-- 找到史记事实的矛盾处、可疑处
-
----
-
 ## 五轮事件年代反思完成 ([fe34b65](https://github.com/baojie/shiji-kb/commit/fe34b65)) - 2026-03-11
 
 ### 新增 (Added)
