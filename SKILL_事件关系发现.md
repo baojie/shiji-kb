@@ -1,6 +1,6 @@
 # SKILL: 事件关系发现 — 从孤立事件到关系网络
 
-> 基于《史记》130篇3,185个事件、7,314条关系的实践提炼。整合全项目关系发现规则的唯一权威文档。
+> 基于《史记》130篇3,185个事件、7,652条关系的实践提炼。整合全项目关系发现规则的唯一权威文档。
 >
 > 合并来源：`SKILL_古籍事件提取与关系发现.md`（算法细节）、`SKILL_事件年代推断.md`（跨章定年）、`SKILL_事件识别.md`（事件链）、`SKILL_古籍知识图谱化.md`（实体三元组）。
 
@@ -13,7 +13,8 @@
 | 类型 | 方向 | 来源 | 数量 | 说明 |
 |------|------|------|------|------|
 | sequel | A→B | LLM | 1,623 | B是A的直接后续发展 |
-| causal | A→B | LLM | 407 | A是B的直接原因（A不发生则B不发生） |
+| causal | A→B | LLM | 407 | A是B的直接原因（章内，A不发生则B不发生） |
+| cross_causal | A→B | LLM | 352 | 跨章因果：含direct_cause/prerequisite/background/trigger/precedent五种子类型 |
 | part_of | 子→父 | LLM | 107 | A是B的子事件/组成环节 |
 | opposition | A↔B | LLM | 50 | 对立双方的行动 |
 | cross_ref | A↔B | 自动 | 294 | 不同章节记述同一事件 |
@@ -23,11 +24,12 @@
 
 ### 1.2 核心分工原则
 
-**章内关系用LLM，跨章关系用自动算法。**
+**章内语义关系用LLM，跨章结构关系用自动算法，跨章因果关系用LLM二次推理。**
 
-- LLM擅长理解叙事因果逻辑（sequel/causal/part_of/opposition）
+- LLM擅长理解叙事因果逻辑（sequel/causal/part_of/opposition + cross_causal）
 - 自动方法擅长跨文档实体匹配（cross_ref/co_person/co_location/concurrent）
-- 自动方法产出5,126条（含年代全覆盖后concurrent大幅增加），LLM产出2,188条（语义理解）
+- **第二轮LLM推理**：以自动关系的候选对为输入，专门挖掘跨章因果（cross_causal）
+- 自动方法产出5,126条（含年代全覆盖后concurrent大幅增加），LLM产出2,188条章内关系 + 352条跨章因果
 
 ---
 
@@ -333,6 +335,30 @@ JSON数组：[{{"type": "...", "source": "事件ID", "target": "事件ID", "reas
 | part_of | "A是B的一个环节吗？" | 四面楚歌 part_of 垓下之围 | 长平之战 part_of 秦灭六国（粒度差太大） |
 | opposition | "双方行动都有明确记述吗？" | 荥阳相持↔项羽拔荥阳 | 秦攻赵↔赵抵抗（赵方无具体记述） |
 
+**章内 causal 的完整推理逻辑**：
+
+causal 要求**严格充分因果**，推理时逐步检查：
+
+```
+① 时序检查：A 是否早于 B？（必要条件，时序颠倒直接否定）
+② 充分性检查：A 不发生，B 是否仍然可能发生？
+   - 若 B 有其他独立路径 → 降级为 sequel（时序关联）
+   - 若 B 完全依赖 A → 确认 causal
+③ 直接性检查：A 到 B 之间是否有跳跃的中间事件？
+   - 若中间有 3+ 个独立事件 → 降级为 sequel 链（分多段记录）
+   - 若直接相连或仅有一步过渡 → 确认 causal
+④ 章内限定：跨章因果不用 causal，改用 cross_causal（见 3.7）
+```
+
+**causal vs sequel 的边界判断**：
+
+| 情形 | 判断 | 理由 |
+| ------ | ------ | ------ |
+| 斩宋义 → 项羽拜上将军 | causal | 斩宋义是获得军权的直接原因 |
+| 垓下之战 → 项羽乌江自刎 | causal | 兵败是自刎的直接触发 |
+| 鸿门宴 → 刘邦汉中称王 | sequel | 鸿门宴不是称王的充分原因（项羽分封才是） |
+| 陈胜起义 → 垓下之战 | 不建立 | 跳跃太远，中间事件太多 |
+
 ### 3.3 事件链提取（LLM辅助）
 
 事件提取阶段同时要求LLM输出2-5条**因果链**，这些链直接成为sequel/causal关系的初始数据。
@@ -416,6 +442,147 @@ JSON数组：[{{"type": "...", "source": "事件ID", "target": "事件ID", "reas
 
 ---
 
+### 3.7 跨章因果推理（LLM二次推理）
+
+**目的**：自动关系（cross_ref/co_person/co_location）识别了跨章关联，但不判断因果。此步骤对这批候选对进行LLM推理，提取跨章因果链。
+
+**五种跨章因果子类型**：
+
+| 类型 | 定义 | 典型案例 |
+|------|------|---------|
+| direct_cause | A直接导致B发生（充分条件） | 田光荐荆轲自刎→荆轲刺秦王（conf 0.95） |
+| prerequisite | A是B得以发生的必要前提 | 萧何荐曹参→曹参入相（conf 0.95） |
+| background | A构成B的历史背景条件 | 吕氏封侯擅权→诸吕之乱平定（conf 0.80） |
+| trigger | A成为B的导火索（时间紧密相连） | 韩信袭齐→郦生被烹（conf 0.90） |
+| precedent | A为B提供历史先例或模板 | 孔子作春秋→左丘明作左氏春秋（conf 0.85） |
+
+**与章内causal的区别**：
+
+- 章内 `causal`：同一章内，A→B满足"A不发生则B不发生"（严格因果）
+- 跨章 `cross_causal`：不同章节，细分为5种强度，置信度0-1浮点
+
+**候选对筛选规则**：
+
+```python
+# 从 event_relations.json 中筛选候选对
+for r in relations:
+    src_ch = r['source'].split('-')[0]
+    tgt_ch = r['target'].split('-')[0]
+
+    if src_ch == tgt_ch: continue          # 排除章内（已由causal处理）
+    if r['type'] not in ('cross_ref', 'co_person', 'co_location'): continue
+
+    # 时序过滤：确保 source 年代早于 target
+    yr_src = events[r['source']]['year'] or 0
+    yr_tgt = events[r['target']]['year'] or 0
+
+    if r['type'] == 'cross_ref':
+        # cross_ref 双向，取时序较早的为 source
+        if yr_src > yr_tgt: src, tgt = tgt, src
+    else:
+        if yr_src == yr_tgt: continue       # 同年 co_person 不做因果推断
+        if yr_src > yr_tgt: src, tgt = tgt, src
+```
+
+**LLM推理提示词结构**：
+
+```
+分析事件A（源章节、年代、类型、人物、描述）与
+事件B（目标章节、年代、类型、人物、描述）之间是否存在因果关系。
+
+输出：
+{
+  "has_causal": true/false,
+  "causal_type": "direct_cause/prerequisite/background/trigger/precedent/no_causal",
+  "confidence": 0.0-1.0,
+  "reasoning": "1-2句说明因果逻辑"
+}
+```
+
+**判断原则（来自实践经验）**：
+
+1. **cross_ref ≠ 因果**：同一事件跨章重复记载（如"长平之战"同时在赵世家和六国年表），无论相似度多高，均为 `no_causal`。仅当A章描述起因、B章记录结果且时序不同时，才存在因果。
+
+2. **时序颠倒判 no_causal**：目标事件年代早于源事件，则无因果。
+
+3. **空描述判 no_causal**：共同描述字段为空时（部分十表事件），无法判断因果，默认 `no_causal`。
+
+4. **同期平行事件区分**：同年共人但各自独立的政治行动，判 `no_causal`，而非 background。
+
+5. **并行多链因果**：同一后果可能有多个前因（如诛吕事件有张辟彊献策→direct_cause，也有吕氏封侯擅权→background），两者同时成立，分别记录。
+
+**规模与效率**：
+
+| 指标 | 数值 |
+|------|------|
+| 候选对总数 | 1,490 |
+| 实际分析（过滤后） | 1,457 |
+| 确认因果 | 352（24.2%） |
+| 高置信度（≥0.8） | 177 |
+| 涉及章节 | 102 / 130 |
+| 推理方法 | 8 Agent 并行，每批 ~187 对 |
+
+**输出文件**：`kg/relations/causal_relations.json`
+
+```json
+{
+  "meta": {
+    "total_pairs_analyzed": 1457,
+    "causal_relations_found": 352,
+    "method": "llm_reasoning",
+    "model": "claude-sonnet-4-6",
+    "by_causal_type": {
+      "background": 138, "prerequisite": 100,
+      "direct_cause": 96, "trigger": 15, "precedent": 3
+    }
+  },
+  "relations": [
+    {
+      "source": "086-014",
+      "target": "006-034",
+      "source_name": "田光荐荆轲自刎",
+      "target_name": "荆轲刺秦王",
+      "source_chapter": "刺客列传",
+      "target_chapter": "秦始皇本纪",
+      "source_year": -228,
+      "causal_type": "direct_cause",
+      "confidence": 0.95,
+      "reasoning": "田光荐荆轲并自刎以激励其成行，直接促成荆轲接受刺秦任务",
+      "base_relation": "co_person"
+    }
+  ]
+}
+```
+
+**常见高质量跨章因果示例**：
+
+| 因果对 | 类型 | conf | 说明 |
+|--------|------|------|------|
+| 田光荐荆轲自刎→荆轲刺秦王 | direct_cause | 0.95 | 086→006 |
+| 赵高谮李斯→赵高杀李斯 | direct_cause | 0.95 | 087→006 |
+| 萧何荐曹参继相→曹参守成不变 | direct_cause | 0.95 | 053→054 |
+| 周勃诛吕安刘→文帝论功行赏 | direct_cause | 0.95 | 057→010 |
+| 刘敬献和亲之策→汉匈和亲始约 | direct_cause | 0.95 | 099→110 |
+| 吕氏封侯擅权→诸吕之乱平定 | background | 0.80 | 019→049 |
+| 窦太后崩→武帝推儒术 | direct_cause | 0.95 | 121→107 |
+| 专诸刺吴王僚→阖庐即位 | direct_cause | 0.95 | 066→031 |
+| 火牛阵破燕→田单复齐 | direct_cause | 0.95 | 082→046 |
+| 越王栖会稽→计然助越灭吴 | direct_cause | 0.90 | 031→129 |
+
+---
+
+- 表中事件名多为批次性描述（"元朔三年大批王子封侯"），与纪传事件名不相似
+- 表中事件人物标注少（批量事件不逐人列出），共人条件难满足
+
+**补充规则**：
+
+1. **年代精确匹配**：表中事件有精确公元年，与纪传中同年事件直接建立concurrent关系（降低共人门槛到0）
+2. **关键词匹配**：表中"封侯"/"国除"/"反"等关键词与纪传事件描述匹配
+3. **侯表-世家/列传对应**：侯名/人名直接查找对应章节
+4. **跨表同事件**：同一公元年+同类关键词（"酎金""七国""封"）→ cross_ref
+
+---
+
 ## 四、关系模式识别清单
 
 ### 4.1 必查的高频模式
@@ -479,13 +646,19 @@ JSON数组：[{{"type": "...", "source": "事件ID", "target": "事件ID", "reas
 步骤2：LLM推理章内关系
   对每章事件列表 → sequel / causal / part_of / opposition
 
-步骤3：补充十表特有关系（人工/半自动）
-  3a. 跨表同事件：按公元年+关键词匹配
-  3b. 制度因果链：按主题+时间递进串联
-  3c. 人物生命线：按人物倒排索引串联
-  3d. 表-纪互见补充：对自动发现遗漏的低相似度互见，用年代精确匹配补充
+步骤3：LLM推理跨章因果关系
+  python kg/relations/scripts/build_causal_relations.py
+  → 以步骤1的cross_ref/co_person/co_location为候选对输入
+  → 产出 cross_causal（352条，含5种子类型）
+  → 输出 kg/relations/causal_relations.json
 
-步骤4：合并去重
+步骤4：补充十表特有关系（人工/半自动）
+  4a. 跨表同事件：按公元年+关键词匹配
+  4b. 制度因果链：按主题+时间递进串联
+  4c. 人物生命线：按人物倒排索引串联
+  4d. 表-纪互见补充：对自动发现遗漏的低相似度互见，用年代精确匹配补充
+
+步骤5：合并去重
   按(source, target)去重，优先保留LLM结果（有reason字段）
 ```
 
@@ -509,9 +682,9 @@ JSON数组：[{{"type": "...", "source": "事件ID", "target": "事件ID", "reas
 {
   "metadata": {
     "total_events": 3185,
-    "total_relations": 7314,
+    "total_relations": 7652,
     "auto_relations": 5126,
-    "llm_relations": 2187
+    "llm_relations": 2525
   },
   "relations": [
     {
@@ -538,12 +711,13 @@ JSON数组：[{{"type": "...", "source": "事件ID", "target": "事件ID", "reas
 ```markdown
 | 类型 | 数量 | 占比 | 来源 |
 |------|------|------|------|
-| sequel | 1,624 | 22% | LLM |
-| co_person | 1,071 | 15% | 自动 |
+| concurrent | 2,997 | 39% | 自动 |
+| sequel | 1,624 | 21% | LLM |
+| co_person | 1,071 | 14% | 自动 |
 | co_location | 737 | 10% | 自动 |
-| causal | 407 | 6% | LLM |
+| causal | 407 | 5% | LLM |
+| cross_causal | 338 | 4% | LLM |
 | cross_ref | 321 | 4% | 自动 |
-| concurrent | 2,997 | 41% | 自动 |
 | part_of | 107 | 1% | LLM |
 | opposition | 50 | 1% | LLM |
 ```
@@ -642,12 +816,13 @@ def compute_x_pos(events):
 ```markdown
 | 类型 | 数量 | 占比 | 来源 |
 |------|------|------|------|
-| sequel | 1,624 | 22% | LLM |
-| co_person | 1,071 | 15% | 自动 |
+| concurrent | 2,997 | 39% | 自动 |
+| sequel | 1,624 | 21% | LLM |
+| co_person | 1,071 | 14% | 自动 |
 | co_location | 737 | 10% | 自动 |
-| causal | 407 | 6% | LLM |
+| causal | 407 | 5% | LLM |
+| cross_causal | 338 | 4% | LLM |
 | cross_ref | 321 | 4% | 自动 |
-| concurrent | 2,997 | 41% | 自动 |
 | part_of | 107 | 1% | LLM |
 | opposition | 50 | 1% | LLM |
 ```
@@ -708,7 +883,11 @@ def compute_x_pos(events):
 | `build_year_map.py` | 年份消歧映射 | 年表章节+tagged.md | year_ce_map.json |
 | `build_metro_map_data.py` | 生成地铁图数据 | 事件索引+关系 | metro_map_data.json |
 
-所有脚本位于 `kg/events/scripts/`。
+关系推理脚本位于 `kg/relations/scripts/`：
+
+| 脚本                          | 功能             | 输入                          | 输出                     |
+|-------------------------------|------------------|-------------------------------|--------------------------|
+| `build_causal_relations.py`   | LLM跨章因果推理  | event_relations.json+事件索引 | causal_relations.json    |
 
 **执行顺序**：
 
@@ -805,5 +984,5 @@ python kg/events/scripts/extract_event_relations.py --dry-run
 ---
 
 *本SKILL文档基于《史记》130篇事件关系发现实践（2025-02至2026-03）提炼。*
-*核心产出：3,185个事件、7,314条关系、1,876条跨章换乘、十表231事件参与458条跨章关系。*
+*核心产出：3,185个事件、7,652条关系、1,876条跨章换乘、十表231事件参与458条跨章关系。*
 *本文档为事件关系发现的唯一权威SKILL，整合了原分散在多个SKILL文档中的关系发现规则。*

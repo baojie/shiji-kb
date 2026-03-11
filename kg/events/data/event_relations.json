@@ -69249,6 +69249,3604 @@
       "target": "012-044",
       "reason": "封禅后诏令大赦",
       "auto": false
+    },
+    {
+      "type": "cross_causal",
+      "source": "006-003",
+      "target": "085-013",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "006-003记吕不韦为相（-249），085-013记吕不韦免相（-237）。吕不韦获任丞相是后来被免相的必要前提——必须先任相才有免相可言。但两者间隔十余年",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "吕不韦"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-008",
+      "target": "006-097",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "087-008记赵高说李斯立胡亥（-210），006-097记赵高杀李斯（约-208）。赵高通过说服李斯参与沙丘之谋掌握李斯把柄，为后来诛杀李斯构成历史背景，但",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "李斯",
+        "赵高"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-014",
+      "target": "006-097",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "087-014记赵高谮李斯（-208），006-097记赵高杀李斯。赵高向二世进谗言、设计令二世误解李斯，是赵高案治李斯并将其杀害的直接原因，构成direct_",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "李斯",
+        "赵高"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-015",
+      "target": "006-097",
+      "causal_subtype": "trigger",
+      "confidence": 0.8,
+      "reason": "087-015记李斯上书言赵高（-208），006-097记赵高杀李斯。李斯上书揭发赵高，导致二世反而告知赵高，使赵高抢先以案治李斯。李斯的上书成为赵高杀李斯的",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "李斯",
+        "赵高"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-010",
+      "target": "006-100",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.75,
+      "reason": "087-010记二世立赵高用事（-210），006-100记赵高弑二世（-207）。二世立胡亥后重用赵高为郎中令、使其专权，是赵高最终得以弑二世的根本原因，形成",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "赵高"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "057-018",
+      "target": "011-031",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.65,
+      "reason": "057-018记周亚夫为丞相，011-031记丞相周亚夫卒（任期结束或免职后死）。出任丞相是后来卒于任/免相后死的必要前提，但两者相距数年，且直接导致其死的原因",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "周亚夫"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "028-044",
+      "target": "012-034",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.8,
+      "reason": "028-044记栾大封五利将军（-113），012-034记诛五利将军（-112）。栾大获封为将军、受天子重用，其后因不能如期入海求仙、所言皆妄而被发觉，武帝乃",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "栾大"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "047-017",
+      "target": "014-005",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "047-017记孔子作春秋（-481），014-005记左丘明作左氏春秋（约-468）。《史记》明载左丘明因担心弟子各立异说、失去春秋真意，故依孔子史记详论其语",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "048-006",
+      "target": "089-012",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "武臣自立为赵王（-209年）后被杀，赵地无主，张耳陈馀才得以立赵歇为赵王（-208年）以延续赵国，前事构成后事的历史背景。",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "张耳",
+        "陈馀"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "053-015",
+      "target": "054-011",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "萧何病危时向惠帝推荐曹参继任（-193年），正是这一荐举直接促成了曹参得知萧何去世后入京为相，萧何荐举是曹参继相的直接原因。",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "曹参",
+        "萧何"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-024",
+      "target": "057-009",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "陈平主动让位、称病谢相（-179年），直接促成文帝以周勃为右丞相，陈平让位是周勃升任右丞相的直接原因。",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "周勃",
+        "文帝"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "088-010",
+      "target": "087-019",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "子婴曾谏胡亥勿杀蒙氏（-210年），可见其对赵高乱政的深刻认识，这一经历构成了他后来即位后设计诛杀赵高（-207年）的思想背景，但两事相距三年且经过胡亥暴政阶段",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "@子婴@",
+        "子婴"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "091-024",
+      "target": "118-002",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "英布（黥布）覆灭后（-196年），高帝立皇子长为淮南王接管其故地，英布灭亡直接导致皇子长得以就封淮南王。",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "长"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-018",
+      "target": "101-011",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "晁错受尚书于伏生（学习经学）是晁错日后上书言政、受孝文帝重用的必要前提，儒林列传与袁盎晁错列传均明确记载晁错学成后上书被重用，学习是被重用的前提条件。",
+      "base_relation": "cross_ref",
+      "shared_people": [
+        "伏生"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "001-044",
+      "target": "026-006",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "舜入大麓不迷（-2268年）是尧最终决定禅位给舜（-2255年）的必要前提，正是此次考验使尧认定舜足以授天下，前事是后事的必要条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "001-023",
+      "target": "026-006",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "尧以二女嫁舜（-2285年）是一系列考察舜的措施之一，为尧最终禅舜（-2255年）提供了必要的德行验证前提，属于prerequisite关系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "001-038",
+      "target": "026-006",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "尧以二女妻舜（考察德行，-2285年）是尧决定禅位于舜（-2255年）的必要前提之一，五帝本纪与历书的记载均指向这一考察-禅位的逻辑链条。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "001-021",
+      "target": "002-002",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "尧询问四岳传位（-2287年）与鲧治水九年失败（五帝本纪/夏本纪）属于同一时期的背景事件，尧考察接班人与同期治水问题并行，尧的执政背景为鲧治水提供了历史背景，但",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "026-006",
+      "target": "002-004",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "尧禅舜（-2255年）确立了禅让政治体制，这一体制和精神使舜后来也举禹续鲧业（-2090年），为后者提供历史背景和制度先例。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "003-042",
+      "target": "004-024",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "武庚叛乱平定后，周初动荡渐息，周公摄政得以稳固，为后来成王营建洛邑、迁殷遗民奠定了政治前提。叛乱的平定构成营洛定鼎的历史背景，但非直接因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "033-003",
+      "target": "004-024",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "周公摄政当国（033-003）是周公执政权力的来源，正是在周公摄政的权力基础上，成王才得以委托周公主持营建洛邑（004-024），摄政为营洛提供了必要的权力前提",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "003-042",
+      "target": "004-025",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "武庚叛乱平定后，周初政治格局稳定，周公/召公方能集中力量对外用兵。叛乱平定是成王伐东夷的历史背景条件，但非直接原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "033-003",
+      "target": "004-025",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.6,
+      "reason": "周公摄政当国提供了稳定的权力中枢，正是在周公辅政的权力框架下，召公为保、周公为师才得以组织对东夷的征伐，摄政是伐东夷的权力前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "003-042",
+      "target": "033-005",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "武庚叛乱平定后，周初政治稳定，正是在这一背景下周公得以主持营建成周洛邑、将殷遗民迁入，叛乱平定是营洛的历史背景条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "033-003",
+      "target": "003-042",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "周公摄政当国（033-003）与武庚叛乱平定（003-042）描述同一历史背景下的两件事：周公摄政引发管叔蔡叔疑虑，进而联合武庚叛乱，周公摄政为叛乱提供了直接导",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "004-022",
+      "target": "003-042",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "武王崩成王立（004-022）是武庚叛乱发生的直接前提：武王新崩、成王年幼、周公摄政，管叔蔡叔因此疑周公，联武庚作乱。成王继位是叛乱得以发生的必要条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "004-022",
+      "target": "033-005",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.65,
+      "reason": "武王崩成王立为成王时期所有政治活动的前提，包括营建洛邑，没有成王继位就没有成王七年的营洛计划。但这是宽泛的前提关系，非直接因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "033-003",
+      "target": "028-007",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "周公摄政当国使周公获得了主持国政的权力，正是以此权力地位，周公才能主持郊祀后稷配天、宗祀文王的礼制建设。摄政是郊祀活动得以推行的权力前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "004-022",
+      "target": "028-007",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.65,
+      "reason": "武王崩成王立是周公辅政时期所有活动的前提，包括郊祀配天礼制的建立。但这是宽泛的前提关系，周公郊祀是其主动施政举措，不直接由武王崩所导致。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "004-022",
+      "target": "033-003",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "武王崩成王立（004-022）直接导致了周公摄政当国（033-003）：正因武王崩后成王年少，周公才践阼摄政，两事件有明确的直接因果关系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "004-022",
+      "target": "033-006",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "武王崩成王立是整个周公摄政-还政这一政治过程的起点，成王继位引发了周公摄政，最终才有七年后的还政，是宽泛的背景条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "033-002",
+      "target": "004-022",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "周公代武王请命（前1044年武王一度有瘳）与武王崩成王立（前1043年）：周公祈命后武王有瘳但随后仍崩，两事件相连但无强因果，周公请命并未能阻止武王崩。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "004-044",
+      "target": "110-003",
+      "causal_subtype": "trigger",
+      "confidence": 0.85,
+      "reason": "烽火戏诸侯（004-044）导致诸侯不再信幽王的烽火信号，直接成为犬戎攻来时无人救援的导火索，与犬戎杀幽王西周灭亡（110-003）构成直接的trigger关系",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-005",
+      "target": "033-019",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "管仲相齐称霸是柯地之盟的宏观背景：正是管仲辅佐桓公称霸，桓公才对鲁有足够的压力，但柯地之盟（管仲归地给鲁）具体由曹沬劫齐桓公引发，属背景条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-005",
+      "target": "032-018",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "管仲相齐称霸为桓公伐楚至召陵的直接背景：正是管仲辅佐下齐国强大，桓公才有能力率诸侯南伐楚国，管仲称霸策略是此次军事行动的历史前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-005",
+      "target": "028-014",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "管仲相齐称霸是齐桓公欲封禅的直接前提：正因管仲辅佐使桓公九合诸侯、一匡天下，桓公才有封禅的资本和念头，称霸是封禅欲望的必要条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-004",
+      "target": "033-019",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "鲍叔荐管仲使管仲得以执政，正是在管仲的谋划下桓公才在柯地之盟后守信归还鲁侵地，鲍叔荐仲是柯地之盟守信结果的间接前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-004",
+      "target": "032-018",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "鲍叔荐管仲使管仲得以执政，管仲主导了桓公的称霸策略包括伐楚，鲍叔荐仲是桓公伐楚得以进行的间接前提条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-004",
+      "target": "028-014",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "鲍叔荐管仲使管仲得以执政并辅助桓公称霸，正是这一称霸局面使桓公有封禅之念，鲍叔荐仲是封禅之议的间接前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "086-003",
+      "target": "032-019",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "刺客列传\"齐归鲁侵地\"体现管仲守信原则使诸侯信附，这为后来葵丘之会桓公获天子礼遇奠定了诸侯信服的基础，属于间接背景条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-006",
+      "target": "032-019",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "管晏列传\"桓公伐楚责贡\"展示管仲辅桓公的外交智慧，这些成就的积累使桓公声威足以召开葵丘之会并获周天子礼遇，属历史背景条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-008",
+      "target": "032-019",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "管晏列传\"柯之会信曹沫\"中管仲守信使诸侯归附，直接积累了齐桓公的霸主信誉，这是葵丘之会获天子赐礼的重要背景条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-007",
+      "target": "032-019",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "管晏列传\"令燕修召公之政\"体现管仲外交手腕为齐树立威信，这是葵丘之会桓公霸主地位确立的背景积累之一。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-003",
+      "target": "032-019",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "管晏列传\"桓公即位管仲被囚\"是桓公-管仲霸业的起点，葵丘之会是这一霸业的顶峰，前者为后者的历史起点背景，无直接因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "032-013",
+      "target": "086-003",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "齐太公世家\"桓公任管仲为政\"为刺客列传\"齐归鲁侵地\"的前提：正是桓公任用管仲施政，管仲才在柯之会上谏止桓公悔约，并主导了归还鲁侵地的决策。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-003",
+      "target": "086-003",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "管晏列传\"桓公即位管仲被囚\"（前685年）是柯之会的远期背景：桓公即位后管仲被重用，才有柯之会上管仲谏守信的情节，前者为后者提供了人物关系背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "032-013",
+      "target": "062-006",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "齐太公世家\"桓公任管仲为政\"（前685年）是管晏列传\"桓公伐楚责贡\"（前656年）的前提：正是桓公任用管仲，管仲才能主导伐楚责贡的外交军事行动。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-001",
+      "target": "032-013",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "管晏列传\"管仲鲍叔早年交游\"是\"桓公任管仲为政\"的必要前提：正因鲍叔了解管仲的才能（早年交游所积累），才能在关键时刻力荐管仲于桓公，若无早年交游则无后来的荐举任",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "032-013",
+      "target": "062-008",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "齐太公世家\"桓公任管仲为政\"（前685年）是管晏列传\"柯之会信曹沫\"（前681年）的前提：正是管仲被任用执政，才有柯之会上管仲谏桓公守信的情节。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "032-013",
+      "target": "062-007",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "齐太公世家\"桓公任管仲为政\"是管晏列传\"令燕修召公之政\"的前提：正是管仲执政，才能在北征山戎时以政治手腕令燕修召公之政，执政是该外交策略得以实施的前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-003",
+      "target": "032-014",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "管晏列传\"桓公即位管仲被囚\"是柯地之盟的历史背景起点：桓公即位后任用管仲，管仲才在柯之盟上谏止悔约，属于远期背景条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "047-004",
+      "target": "033-026",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "孔子世家\"初适齐国\"（前517年，孔子游齐，景公问政晏婴阻之）为\"孔子行相事夹谷会\"（前500年）的背景：孔子与景公的早期接触让其了解齐政，夹谷之会孔子以礼制约",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "047-013",
+      "target": "067-006",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "孔子世家\"陈蔡绝粮\"（前489年）与仲尼弟子列传\"子贡一出五国有变\"（前484年）：陈蔡绝粮中子贡出使楚国成功，展示了子贡的外交才能，这一经历可能强化了孔子后来",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "047-006",
+      "target": "033-026",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "孔子世家\"出仕为政\"（孔子由中都宰升至大司寇，前501年）是\"孔子行相事夹谷会\"（前500年）的直接前提：孔子担任大司寇才具备相礼资格，出仕是行相的必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-009",
+      "target": "031-019",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "伍子胥列传\"吴伐楚拔舒禽二将\"（前512年）为\"阖庐伐楚入郢\"（前506年）的直接前提：阖庐立三年首次伐楚，积累了战争经验，孙武因此建议退兵积蓄实力，为九年后的",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "014-024",
+      "target": "005-044",
+      "causal_subtype": "trigger",
+      "confidence": 0.8,
+      "reason": "十二诸侯年表\"吴破楚入郢\"（前506年）直接触发了秦救楚败吴的事件：楚昭王奔秦乞援，秦发兵救楚，击退吴军，吴破楚是秦救楚的直接导火索。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-012",
+      "target": "005-044",
+      "causal_subtype": "trigger",
+      "confidence": 0.7,
+      "reason": "伍子胥列传\"伍子胥掘墓鞭尸\"是秦救楚的间接触发因素：申包胥因子胥鞭尸无道入秦哭庭，秦哀公感其诚，发兵救楚。掘墓鞭尸促成了申包胥入秦乞援。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "043-004",
+      "target": "039-026",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "赵世家\"赵盾专政\"（前621年）直接导致灵公的系列侈暴行为：赵盾专政使灵公不满，灵公派鉏麑刺赵盾、设甲酒宴欲杀之，最终激起赵穿弑灵公的结果。赵盾专政是灵公系列行",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "039-009",
+      "target": "128-004",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "晋世家\"献公伐骊戎得骊姬\"（前672年）直接导致了\"献公贪骊姬祸流五世\"的历史评价事件：正是献公伐骊戎得骊姬并宠幸之，才引发了骊姬之乱的连锁祸患，得骊姬是一切后",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "068-003",
+      "target": "005-070",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "商君列传\"三说孝公以霸道得用\"（前361年）是\"商鞅变法\"（前356年）的直接前提：孔鞅正是通过第三次以霸道说孝公得以获信任，才得到推行变法的机会，说服孝公是变",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "068-003",
+      "target": "005-081",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "商君列传\"三说孝公以霸道得用\"（前361年）与秦本纪\"孝公卒诛商鞅\"（前338年）：孔鞅得用执法严明，刑太子之师，宗室积怨，这构成孝公死后惠文君诛鞅的背景，但三",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "068-004",
+      "target": "005-081",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.8,
+      "reason": "商君列传\"变法论辩定令\"实施的变法中刑太子之师，宗室多怨，这直接导致孝公死后惠文君诛鞅：正是变法执法得罪宗室贵族，才有孝公卒后的清算，变法是诛鞅的直接原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-015",
+      "target": "006-095",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "李斯列传\"李斯上书言赵高\"（前208年）与秦始皇本纪\"赵高专权幽二世\"：李斯上书警示赵高之危险，反而被赵高利用并遭告发，加速了赵高专权的进程，为背景关系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-016",
+      "target": "006-095",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "李斯列传\"李斯下狱\"（前208年）与秦始皇本纪\"赵高专权幽二世\"：李斯下狱排除了赵高的最大政治对手，为赵高进一步专权提供了条件，属背景关系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-011",
+      "target": "006-095",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "李斯列传\"二世诛公子大臣\"（前209年）与秦始皇本纪\"赵高专权幽二世\"：二世诛公子大臣出于赵高建议，清除了异己，为赵高专权幽二世创造了条件，属背景关系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "024-004",
+      "target": "006-095",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "乐书\"秦二世纵欲声色\"与秦始皇本纪\"赵高专权幽二世\"：二世纵欲不理政事是赵高得以专权的直接背景，赵高正是利用二世沉溺声色而深居禁中专擅朝政，属backgroun",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-014",
+      "target": "006-095",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.75,
+      "reason": "李斯列传\"赵高谮李斯\"直接推进了赵高专权幽二世的进程：赵高设计令李斯在二世宴乐时求见使二世怒，并进谗言，使二世更加信赵高而疏大臣，直接促成了赵高劝二世居禁中不见",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-018",
+      "target": "005-150",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.8,
+      "reason": "李斯列传\"赵高杀二世\"（前207年）直接促成了秦本纪\"诸侯叛秦秦亡\"：赵高弑二世立子婴，子婴诛赵高，但诸侯已起兵，沛公破武关入关中，子婴降，秦亡。赵高杀二世是秦",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "024-004",
+      "target": "087-018",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "乐书\"秦二世纵欲声色\"（前209年）与李斯列传\"赵高杀二世\"（前207年）：二世纵欲声色、不理政事，使赵高得以把持朝政，最终赵高势力膨胀到敢于弑君，二世纵欲是赵",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-014",
+      "target": "006-088",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.75,
+      "reason": "李斯列传\"赵高谮李斯\"直接促成了\"二世诛公子大臣\"的进一步扩大：赵高利用谮李斯强化了对二世的控制，并持续煽动诛杀大臣宗室的行动，谮李斯是二世诛杀行动的直接推手之",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-015",
+      "target": "005-150",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "李斯列传\"李斯上书言赵高\"（前208年）与秦本纪\"诸侯叛秦秦亡\"（前207年）：李斯上书失败、下狱被杀，赵高专权加速了秦朝内部崩溃，但诸侯叛秦的直接原因是秦政暴",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-015",
+      "target": "006-099",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.65,
+      "reason": "李斯列传\"李斯上书言赵高\"的失败巩固了赵高对朝政的控制，使赵高有底气进行\"指鹿为马\"测试群臣：李斯上书失败后赵高彻底掌控局面，是指鹿为马事件发生的前提条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "024-004",
+      "target": "087-015",
+      "causal_subtype": "trigger",
+      "confidence": 0.7,
+      "reason": "乐书\"秦二世纵欲声色\"中李斯进谏二世被赵高驳回（赵高说乐各殊名），这一事件直接揭示了李斯与赵高的对立，成为李斯后来上书弹劾赵高的导火索，属trigger关系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-008",
+      "target": "024-004",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.75,
+      "reason": "李斯列传\"赵高说李斯立胡亥\"（前210年）直接导致了\"秦二世纵欲声色\"（前209年）：赵高立胡亥为帝，胡亥即为好声色的二世，沙丘之谋立胡亥是二世纵欲声色的必要前",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-016",
+      "target": "006-097",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "李斯列传\"李斯下狱\"直接导致了赵高杀李斯：李斯入狱后经赵高案治、榜掠自诬，最终被杀，下狱是被杀的直接前因，属direct_cause关系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "024-004",
+      "target": "006-097",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "乐书\"秦二世纵欲声色\"与秦始皇本纪\"赵高杀李斯\"：二世纵欲不理政事为赵高专权创造条件，进而使赵高得以杀李斯，属宏观背景条件，非直接因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-016",
+      "target": "005-150",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "李斯下狱是秦廷内乱（赵高专权）的组成部分，赵高独专朝政、无人制衡构成了秦朝迅速灭亡的背景条件，但并非直接触发诸侯叛秦的原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-011",
+      "target": "005-150",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "二世诛公子大臣造成秦廷人心惶惶、大臣离心，是秦朝衰亡的重要背景条件，间接助推诸侯反叛之势。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "024-004",
+      "target": "005-150",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "秦二世纵欲声色、不纳谏言是二世昏政的表现，构成秦亡的历史背景，但并非导致诸侯叛秦的直接原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-014",
+      "target": "005-150",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "赵高谮李斯使赵高独揽大权、朝廷腐败，构成秦朝灭亡的重要背景条件，但并非诸侯叛秦的直接触发因素。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-016",
+      "target": "006-099",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "李斯下狱后赵高排除了唯一能与之抗衡的大臣，为指鹿为马试探百官提供了必要前提——此前无人胆敢公然挑战赵高的权威。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-016",
+      "target": "006-100",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "李斯下狱并被杀后赵高无人制约，权势达到顶点，这是赵高最终敢于弑君的重要前提条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-011",
+      "target": "006-099",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "二世诛公子大臣使朝廷大臣噤若寒蝉、不敢直言，为赵高指鹿为马试验群臣创造了心理前提——大臣们已经习得了沉默与顺从。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-011",
+      "target": "006-100",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "二世大肆诛杀公子大臣是赵高专权的结果，这一过程中赵高权势日盛，构成赵高后来弑君的历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-014",
+      "target": "006-099",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "赵高谮李斯成功使二世完全信任赵高、猜疑大臣，这是赵高此后能够指鹿为马公然测试百官忠诚度的必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-014",
+      "target": "006-100",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "赵高谮李斯成功使赵高成为丞相、独揽朝政，这是赵高之后敢于弑君的权力基础，为弑二世创造了前提条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-004",
+      "target": "006-049",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "秦并天下后李斯身为丞相，其后李斯在廷议中提出废分封立郡县制，李斯为丞相是其能在朝廷主导议立郡县制讨论的前提条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-004",
+      "target": "006-071",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "秦并天下后李斯任丞相，后来正是以丞相身份提出焚书建议，李斯任丞相是其主导焚书令的权力前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-004",
+      "target": "006-045",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "秦并天下李斯为丞相与议定皇帝称号同年发生（前221年），李斯作为廷尉参与了议定帝号，两者为同一历史时刻，但议定帝号在先，顺序存疑，关系较弱。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "086-014",
+      "target": "006-034",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "田光荐荆轲并自刎以激励其成行，直接促成荆轲接受刺秦任务，是荆轲刺秦王的直接前因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "086-016",
+      "target": "006-034",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.9,
+      "reason": "易水送别是荆轲刺秦行动启程的直接前奏，表明荆轲已出发，为荆轲刺秦王的发生提供了必要条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "086-015",
+      "target": "006-034",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.92,
+      "reason": "樊於期献首为荆轲提供了接近秦王的信物，是荆轲刺秦成行的必要前提条件，没有樊首则无法入秦见王。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "048-008",
+      "target": "090-002",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "魏咎立为魏王是章邯围临济魏咎自焚的前提——魏咎立王后建立了魏国，章邯才有攻打临济围魏之事，没有立王就没有后来的围攻。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-005",
+      "target": "008-017",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "田荣拒绝出兵助楚赵，导致章邯少了重要掣肘，章邯得以集中兵力夜袭定陶，项梁因此兵败身死，有直接因果关系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-005",
+      "target": "093-001",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "张良说项梁立韩王成为韩王（前208年），正是后来韩王信（成）从沛公略韩地的制度前提——先有韩王之立，才有韩将从沛公作战。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-005",
+      "target": "006-094",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "田荣拒绝出兵助楚赵，使章邯得以专心击败项梁等叛军，直接促成了章邯连破叛军的军事成果，因果清晰。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-006",
+      "target": "091-004",
+      "causal_subtype": "trigger",
+      "confidence": 0.85,
+      "reason": "项梁渡江西征的消息引发了英布率部西渡投附，项梁的军事行动是英布归属项梁的直接触发因素。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-014",
+      "target": "008-031",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "项羽破秦解巨鹿确立了项羽在诸侯中的霸主地位，这是后来项羽能够主持分封诸侯的政治前提——无此军功则无此权威。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-021",
+      "target": "008-031",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "章邯降楚封王是项羽分封诸侯的重要组成部分，章邯之降楚为项羽奠定了分封秦降将的先例，两者有因果联系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-019",
+      "target": "008-031",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "章邯使人求约是章邯最终降楚的前奏，降楚后章邯被封王，这一过程是项羽分封诸侯中关于秦降将部分的必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-014",
+      "target": "006-098",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "项羽破秦解巨鹿战胜王离、数绝章邯甬道，直接导致章邯陷入进退两难、军心动摇，最终率兵降诸侯。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-013",
+      "target": "006-098",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "巨鹿之围是章邯降项羽的历史背景——正是巨鹿被围、王离被俘、秦军损耗殆尽，章邯才被迫寻求议降。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-019",
+      "target": "006-098",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "章邯使人求约（谈判求降）是章邯降项羽的直接前因，求约进而达成协议，导致章邯降楚。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-013",
+      "target": "007-020",
+      "causal_subtype": "trigger",
+      "confidence": 0.9,
+      "reason": "巨鹿之围使章邯陷入困境，陈馀趁此写信劝说章邯倒戈，巨鹿被围是陈馀遗书章邯的直接触发因素。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-019",
+      "target": "016-022",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.8,
+      "reason": "章邯使人求约是最终双方达成降约的直接前因，求约→谈判→降楚，有清晰因果链。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-017",
+      "target": "006-098",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "破釜沉舟渡河一战项羽大破秦军虏王离，是章邯最终降项羽的直接军事原因——秦军主力已溃，章邯无法继续抵抗。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-015",
+      "target": "008-018",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "项羽斩宋义后报命于怀王，怀王不得已正式任命项羽为上将军，这一权力变化使怀王遣将入关的决策框架发生了根本变化——以项羽替代宋义北救赵，同时令沛公西入关。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-006",
+      "target": "008-047",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "陈平惧诛亡楚归汉，正是其后能够为汉王献反间计离间楚君臣的前提——若陈平不叛楚归汉，便无后来的陈平离间计。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-008",
+      "target": "091-010",
+      "causal_subtype": "trigger",
+      "confidence": 0.85,
+      "reason": "项王伐齐征兵九江时英布称病不往，正是因为项王伐齐需要英布出兵这一军事要求触发了英布消极应对的行为。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-004",
+      "target": "007-040",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "田荣逐田假立田市，项羽分封时未分封田荣，田荣因此不满项羽分封不公，直接导致田荣反齐自立。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-003",
+      "target": "007-041",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "张耳陈馀从陈涉起兵（前209年）使两人积累了政治资本与军事势力，是陈馀后来击破常山（前205年）的历史背景，但中间经历了太多事件，联系较间接。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-007",
+      "target": "007-041",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "武臣称赵王（前209年）使张耳陈馀在赵建立根基，为陈馀后来击破常山提供了历史背景，但中间事变繁多，联系较间接。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "048-006",
+      "target": "089-017",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "武臣立为赵王使张耳封王、陈馀仅封侯，项羽分封后陈馀愤恨张耳封王、己独为侯的对比，正是武臣时代格局延续的结果，是陈馀袭常山的背景动机之源。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-017",
+      "target": "008-045",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "陈馀袭常山张耳奔汉，使张耳成为汉王的将领，后来汉王以张耳与韩信合击赵，张耳奔汉是韩信破赵战役的重要人事前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-017",
+      "target": "092-011",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "陈馀袭常山使张耳奔汉，后汉王以张耳配合韩信击赵，背水一战正是以张耳为将、韩信为帅的联合作战，陈馀袭常山是背水一战发生的重要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-012",
+      "target": "007-041",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "立赵歇为赵王（前208年）确立了赵国的王权格局，后来陈馀击破常山正是为了恢复赵歇的王位，两者有历史连贯性，但相距三年。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-012",
+      "target": "008-045",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "立赵歇为赵王（前208年）奠定了赵国的政治格局，韩信破赵（前204年）的打击对象正是赵王歇与陈馀，立赵歇为赵王是韩信破赵这一战役的历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-012",
+      "target": "092-011",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "立赵歇为赵王确立了赵国格局，背水一战的攻击对象即为赵王歇与陈馀，立赵歇是背水一战这一战役的历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-041",
+      "target": "089-018",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "陈馀击破常山张耳奔汉，使汉王能以张耳配合韩信击赵；陈馀自立为代王据赵，成为韩信破赵斩陈馀的直接对手，因果清晰。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-013",
+      "target": "007-041",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "巨鹿之围（前208年）中张耳陈馀因救援问题反目，这一裂痕为后来陈馀击破常山（前205年）的内在动机奠定了基础。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-015",
+      "target": "007-041",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "张耳陈馀反目（前207年，巨鹿后）是陈馀后来击破常山（前205年）的直接动机——两人决裂、积怨已深，项羽分封时又对陈馀不公，直接导致陈馀发兵击张耳。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-041",
+      "target": "092-011",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "陈馀击破常山使张耳归汉、陈馀自立为代王，为背水一战创造了双方对立的格局——汉以张耳为将助韩信击赵，陈馀为赵国实际领兵者，是背水一战发生的直接前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-013",
+      "target": "008-045",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "巨鹿之围（前208年）中张耳陈馀的分裂是后来韩信破赵（前204年）战役中张耳站汉、陈馀守赵的人事背景，有间接历史连贯性。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-015",
+      "target": "008-045",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "张耳陈馀反目（前207年）是张耳后来奔汉、成为韩信破赵战役中汉方将领的重要前因——若两人未决裂，张耳不会成为陈馀的对立面。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "048-004",
+      "target": "089-013",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "各地响应（前209年）中武臣、张耳、陈馀奉命北徇赵地，正是这一行动后建立赵国，进而引发了秦军攻赵的巨鹿之围（前208年），有一定历史连贯性。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-013",
+      "target": "092-011",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "巨鹿之围（前208年）中张耳陈馀决裂，为后来背水一战（前204年）中双方对立格局奠定了人事基础，有历史连贯性但非直接因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-015",
+      "target": "092-011",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "张耳陈馀反目（前207年）导致两人最终对立——张耳奔汉，陈馀守赵；这一决裂是背水一战中汉赵对决格局形成的重要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "008-083",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "张良献三杰之策（前205年）使黥布彭越韩信各立为王并最终来朝，张良的谋划是汉初诸王格局形成的重要前提，与后来诸王来朝有因果联系。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "098-009",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "张良献三杰之策使韩信（后称韩王信）等立为王，后韩王信叛降匈奴引发靳歙击代，有历史连贯性但间接程度较高。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "095-023",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "张良献三杰之策涉及韩信（后为韩王信）等，韩王信后叛汉引发灌婴击匈奴等行动，但中间经历太多变故，联系极为间接。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "008-055",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.8,
+      "reason": "张良献三杰之策使汉王使韩信击魏代齐赵，韩信破齐后自请为齐王，张良后来操印绶立韩信为齐王，前者的战略部署直接促成了立韩信为齐王。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-007",
+      "target": "018-012",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.65,
+      "reason": "张良劝沛公还军霸上（保持了刘邦的政治形象和军队实力），是刘邦最终得天下、大封功臣的重要历史前提之一，但相距六年，关系较间接。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "095-003",
+      "target": "018-012",
+      "causal_subtype": "precedent",
+      "confidence": 0.6,
+      "reason": "鸿门宴闯帐救主（前206年）是樊哙在高祖面前立下的重要战功之一，为高祖六年大封功臣时樊哙获封提供了功勋依据，有因果连贯性。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-028",
+      "target": "018-012",
+      "causal_subtype": "precedent",
+      "confidence": 0.6,
+      "reason": "樊哙闯帐救主是樊哙的著名功勋之一，为高祖六年封樊哙为舞阳侯提供了历史依据，有间接因果连贯性。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "092-017",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.8,
+      "reason": "张良献三杰之策使汉王遣韩信击魏代齐赵，正是韩信破齐后才有韩信自请为齐王的事件，张良策划是韩信自请齐王的直接历史前因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "090-004",
+      "target": "007-051",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "魏豹叛汉被韩信所虏后，汉王令魏豹守荥阳，楚军围急时周苛杀魏豹，两事件有直接因果链——魏豹被俘守荥阳直接导致其被周苛所杀。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "017-012",
+      "target": "092-014",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "初封异姓诸王（前206-202年）使韩信等先后封王，其中韩信封齐王时汉王夺其军另遣任务，初封格局为汉王夺韩信军提供了历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "017-012",
+      "target": "089-018",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "初封异姓诸王（前206-202年）中张耳封赵王，这一封王格局使后来韩信破赵斩陈馀后立张耳为赵王成为顺延，两者有历史连贯性。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "092-011",
+      "target": "008-052",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "背水一战使韩信麾下拥有大军驻扎赵地，正是这支军队被刘邦夺取调度。破赵胜利使韩信部队壮大，构成了刘邦夺其军权的背景前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "092-011",
+      "target": "007-052",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "背水一战破赵后，韩信军驻于北方，刘邦兵败成皋后北渡投奔韩信、张耳军，使得成皋争夺战中汉军能够复振。背水之战是成皋战局的间接背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "017-001",
+      "target": "033-011",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "周封五等诸侯（含封伯禽于鲁）直接导致伯禽赴鲁施政，三年后报政周公，因果逻辑清晰：封国行为是伯禽治鲁之前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "008-004",
+      "target": "092-027",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "刘邦娶吕后（前216年）是吕后成为皇后、拥有权力基础的前提，而正是吕后主导了诛杀韩信一事，因此娶吕后间接构成吕后诛韩信的历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "095-008",
+      "target": "056-022",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "高帝命陈平执樊哙一事使吕后对陈平产生疑虑，吕嬃因此持续谗陈平。陈平为自保而伪听立诸吕，这一决策的背景正是他在樊哙事件中的两难处境。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "008-004",
+      "target": "053-010",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "娶吕后是吕后取得政治权力的根本前提，吕后后来主导了萧何计诛淮阴侯事件。虽关系较间接，但吕后的政治地位源自与刘邦的婚姻。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "053-008",
+      "target": "054-012",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "萧何位次第一的评定确立了萧曹相承的政治格局，强化了曹参对萧何政策的尊重；萧规曹随的政治传承以此事件的精神为依据。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "053-008",
+      "target": "018-012",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "鄂君议萧何位次第一是汉六年大封功臣的配套行动之一，确认了萧何功劳最大，构成六年大封功臣格局的背景事件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "053-008",
+      "target": "018-003",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "萧何位次第一及其大封功臣的政策确立了诸功臣的封邑基础，是其子孙富厚的历史前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "054-001",
+      "target": "053-008",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "曹参初从沛公作战立下汗马之功，正是他功劳卓著才有后来众人认为他应居首位的评价；鄂君议萧何第一是对比曹参功绩展开的，曹参的军功是论功行封讨论的背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "053-015",
+      "target": "054-012",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "萧何临死前力荐曹参为继任相国，直接促成了曹参接任并实行萧规曹随的政策，因果关系明确。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "054-001",
+      "target": "018-012",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "曹参初从沛公建立战功是其日后被封列侯（六年大封功臣第一批，曹参封平阳侯）的必要前提，有军功才有封赏。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "054-001",
+      "target": "053-015",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "曹参早年从萧何共同辅佐刘邦起兵，二人由善而生隙，此关系背景直接解释了萧何临死时超越私怨推荐曹参的行为，构成历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "054-001",
+      "target": "053-007",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "曹参军功卓著使群臣认为其功最多，正是在此对比下鄂君才专门为萧何辩说，曹参的战功构成了论功行封萧何第一讨论的背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "053-004",
+      "target": "092-027",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "萧何收秦图书时顺便向汉王推荐了韩信，萧何与韩信的特殊关系（萧何月下追韩信）是日后萧何以计诛韩信的历史背景；没有萧何的推荐就没有韩信的功业，也就没有后来韩信谋反及",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "054-001",
+      "target": "018-003",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "曹参初从沛公建立军功，是其后代得以富厚的根本前提；没有开国之功，就没有封邑基础，子孙也无从富厚。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "057-008",
+      "target": "010-011",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "周勃诛吕安刘、立孝文帝，直接导致文帝即位后论功行赏，封赏周勃、陈平、灌婴等人，因果关系极为明确。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "057-008",
+      "target": "010-017",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "周勃诛吕安刘使其威望极高，担任右丞相，后因功高震主被劝免相，陈平卒后又复相，整个丞相职位更迭的背景即源于诛吕之功。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "057-008",
+      "target": "010-010",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "周勃诛吕立文帝直接导致文帝登基后的政治安排，包括封诸侯王、调任官员，周勃被任命为右丞相、灌婴为太尉等，因果关系清晰。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "057-008",
+      "target": "056-025",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "周勃诛吕功高使其出任右丞相，文帝即位后通过对话考验丞相能力，陈平对宰相职责的精彩论述正是在勃平政绩不佳的对比下凸显的；诛吕事件构成这一政治格局的背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "057-008",
+      "target": "010-016",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "周勃诛吕功高，担任右丞相，正因功高震主才有人劝其辞相；绛侯免相直接根源于诛吕安刘所带来的功高地位。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "057-008",
+      "target": "056-024",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "周勃诛吕功高，陈平认为诛吕之功不如勃，因此主动让右丞相于勃；此事是诛吕功绩分配的直接后续。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-023",
+      "target": "010-011",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "陈平诛吕立文帝直接导致文帝即位后论功行赏，陈平因此获益封三千户，是同一事件链上的直接结果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "052-010",
+      "target": "010-011",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "朱虚侯斩吕产是诛吕行动的核心环节，直接参与导致文帝即位论功行赏，朱虚侯等各得二千户赏赐。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "097-010",
+      "target": "095-024",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "陆贾策动陈平与绛侯结盟，使二人深相结交，这一政治联合是后来灌婴加入、诛吕立文帝行动成功的直接组织基础。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "095-024",
+      "target": "010-010",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "灌婴诛吕立文帝直接导致文帝即位后的政治安排，灌婴被任命为太尉，诸侯封立与官员调任均是诛吕成功的直接后续。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "009-021",
+      "target": "095-024",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "王陵廷争白马盟（前187年）后，陈平、绛侯表示他们在暗中保刘氏，这一政治立场是二人后来策划诛吕的思想背景，也体现了他们对吕氏势力的隐忍与蓄力。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-023",
+      "target": "010-017",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "陈平诛吕立文帝后担任丞相，其后勃夺周勃右丞相、陈平独相，陈平死后勃复相，整个相位变动链条的起点是诛吕事件所确立的政治格局。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-025",
+      "target": "010-017",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "陈平论宰相职责使文帝明了，周勃谢病请免，陈平独相；陈平独相后不久卒，文帝复以周勃为丞相，是这一政治格局演变的直接结果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-024",
+      "target": "010-017",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "陈平让右丞相于勃确立了勃居右平居左的格局，为后来周勃谢病（绛侯论宰相职责之后）、陈平独相、陈平卒后勃复相的演变提供了政治架构。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "097-010",
+      "target": "009-058",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "陆贾策动陈平与绛侯结盟后，二人密谋通过郦寄劝说吕禄交出兵权，郦寄说吕禄直接是陆贾策动结盟的行动结果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "009-021",
+      "target": "097-011",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "王陵廷争白马盟时陈平和绛侯以韬晦之策暗保刘氏，这一政治立场的积累最终促成了诛吕立文帝行动，构成其历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "097-011",
+      "target": "113-007",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "诛吕立文帝后，陈丞相荐陆贾为太中大夫再使南越，陆贾再使南越直接是文帝新政策的结果，因果关系明确。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-023",
+      "target": "010-010",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "陈平诛吕立文帝直接导致文帝即位后的政治安排，包括诸侯封立与官员调任（陈平徙左丞相、周勃为右丞相等），是同一政治事件的直接延续。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-023",
+      "target": "010-016",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "陈平诛吕立文帝使周勃功高位重，担任右丞相，因功高震主而被劝免相，绛侯免相是诛吕所带来的权力格局演变的结果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "052-010",
+      "target": "010-010",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "朱虚侯斩吕产是诛吕行动的关键一步，直接促成了文帝即位后的诸侯封立与官员调任，是同一政治事件的直接延续。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "052-010",
+      "target": "056-025",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "朱虚侯斩吕产使诛吕成功，进而文帝即位，周勃出任右丞相，在文帝考问丞相能力的对话中陈平才能发表宰相职责论述，构成间接背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "052-010",
+      "target": "010-016",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "朱虚侯斩吕产导致诛吕成功，周勃因诛吕功高出任右丞相，进而引发功高震主之忧，最终导致绛侯免相，是间接背景因果链。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "052-010",
+      "target": "056-024",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "朱虚侯斩吕产是诛吕行动的一部分，正因诛吕之功勃高于平，陈平才主动让右丞相于勃，构成背景因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "010-003",
+      "target": "056-025",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "群臣迎代王即位是文帝登基的前提，文帝即位后才能出现考问丞相职责之事，构成间接背景因果链。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "010-007",
+      "target": "056-025",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "群臣固请代王即位是文帝继位的直接过程，文帝即位是日后考问丞相职责的前提，构成背景因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "009-021",
+      "target": "056-020",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "王陵廷争后吕太后将王陵明升暗降为帝太傅，架空其相权，陈平因此升任右丞相，成为陈平为左丞相的直接原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "010-003",
+      "target": "056-024",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "群臣迎代王是文帝即位的过程，文帝即位后才有陈平让右丞相于勃之事，构成背景前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "010-007",
+      "target": "056-024",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "群臣固请代王即位是文帝继位的直接过程，文帝即位是陈平让右丞相于勃的前提，构成背景因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "017-012",
+      "target": "008-064",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "初封异姓诸王过程中，战后功臣封王格局为封诸侯王事件提供了直接背景；高祖称帝后重新整理封赏，是对此前陆续封王的正式确认和调整。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "017-012",
+      "target": "022-008",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "初封异姓诸王使韩信、彭越、英布成为拥兵一方的异姓王，正是这一封王格局导致了后来高祖剪除异姓王的必要性，封王是诛杀彭越、英布等人的前提条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-061",
+      "target": "008-064",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "垓下之围歼灭项羽，楚汉战争结束，正是在此胜利基础上刘邦称帝并大封诸侯王，因果关系清晰。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "008-064",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "张良献三杰之策促成韩信、彭越、英布的军事贡献，楚汉战争胜利后，正是这三人的功劳使他们得以受封为王，构成封诸侯王的前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "095-021",
+      "target": "008-060",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "灌婴从韩信定齐后，楚国东部兵力被打垮，龙且被杀，项羽侧翼暴露，使得垓下决战时楚军处于不利态势，构成垓下之战的背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-013",
+      "target": "008-060",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "韩信平定齐地后拥有强大兵力，随后从齐南下参与垓下决战，平齐是韩信能在垓下一战中率三十万大军出战的直接前提，构成背景因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-061",
+      "target": "022-008",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "垓下之围歼灭项羽结束楚汉战争，韩信、彭越等功臣在此战中大立战功，战后功高位显成为汉廷潜在威胁，构成后来诛杀淮阴侯彭越的历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "007-061",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "张良献三杰之策（韩信、彭越、英布）直接促成了三人合力击楚，垓下之围正是这三人与汉军联合围困项羽的结果，因果关系明确。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-056",
+      "target": "008-060",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "龙且败死使楚国失去最强将领，楚军精锐被歼，项羽东部防线崩溃，这直接削弱了楚国实力，是垓下之战楚军溃败的重要背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "022-008",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "张良献三杰之策使韩信、彭越、英布成为汉廷倚重的重要武将，战后他们功高位重，最终触发高祖削藩诛杀异姓王；三杰之策是其后被诛的历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "055-011",
+      "target": "017-013",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "张良献三杰之策使韩信、彭越、英布建立大功后各自封王，正因封王权重才有后来高祖逐步翦除异姓王的必要，三杰之策构成异姓王陆续被废的间接背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "017-013",
+      "target": "091-018",
+      "causal_subtype": "trigger",
+      "confidence": 0.9,
+      "reason": "高祖诛杀韩信和彭越（异姓王陆续被废的过程）直接触发了英布的恐惧，英布见彭越之醢大恐，随即聚兵防备，准备反叛，因果关系紧密。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-013",
+      "target": "018-012",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "韩信平齐自立齐王使曹参、灌婴立下大功，正是这些战功使他们得以被列入六年大封功臣第一批，构成必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-013",
+      "target": "018-003",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "韩信平齐战役中曹参、灌婴立下大功，被封高位，这是曹参、灌婴后代封邑富厚的历史根源，构成远期背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-066",
+      "target": "018-014",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "分尸封五侯是项羽自刎后将其遗体瓜分的封赏事件，七年封侯中吕马童、王翳、杨喜等人正是因此事立功而封侯，直接因果关系极为明确。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "092-015",
+      "target": "097-003",
+      "causal_subtype": "trigger",
+      "confidence": 0.9,
+      "reason": "韩信袭破齐历下军背信弃义，致使郦食其被烹杀；这一事件直接触发了郦食其游说齐国成果的毁灭，二者之间存在紧密的触发关系（实为郦生说齐在前，韩信破齐是后，此处sour",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "099-005",
+      "target": "110-012",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "刘敬献和亲之策，高帝采纳并遣刘敬使匈奴结约，汉匈和亲始约正是这一政策建议直接实施的结果，因果关系极为清晰。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "099-004",
+      "target": "110-012",
+      "causal_subtype": "trigger",
+      "confidence": 0.9,
+      "reason": "白登之围使高帝认识到不能与匈奴正面对抗，赦免刘敬后立即采纳其和亲之策，白登之围是汉匈和亲政策实施的直接导火索。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-025",
+      "target": "057-011",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "陈平论宰相职责后周勃谢病免相，就国于绛；正因功高就国之后，吏民疑惧、人告谋反，才有周勃遭诬下狱之事，构成直接背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-024",
+      "target": "057-011",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "陈平让右丞相于勃使周勃功高位显，后被劝就国，就国后遭人诬告谋反，整个过程是诛吕立文帝功高后的连锁效应。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "009-017",
+      "target": "017-015",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "张辟彊献策建议封吕台、吕产、吕禄为将控军，太后采纳，随后封吕氏为王，张辟彊之策直接推动了封吕氏为王的政治进程。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "009-017",
+      "target": "057-008",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "张辟彊献策安吕氏使诸吕掌握军权，这一权力格局最终导致吕后死后诸吕盘踞军中、威胁刘氏，是周勃不得入军门而需诛吕的直接背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "009-017",
+      "target": "049-002",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "张辟彊献策使诸吕得以领兵握权，为日后诸吕作乱埋下隐患，构成诸吕之乱平定事件的历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "009-017",
+      "target": "019-004",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "张辟彊献策建议封诸吕为将，直接促进了吕氏的封侯擅权格局，构成吕氏封侯擅权的前期背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "019-004",
+      "target": "057-008",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "吕氏封侯擅权使诸吕掌握南北军兵权，这是吕后死后诸吕试图继续把持权力、最终被周勃诛灭的直接原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "019-004",
+      "target": "049-002",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "吕氏封侯擅权使诸吕势力强大，高后死后诸吕作乱，大臣不得不起兵讨之；吕氏封侯擅权是诸吕之乱的直接历史前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "019-004",
+      "target": "009-052",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "吕氏封侯擅权是吕后临终前托军遗诏安排的背景：正因诸吕势大，吕后才托军于吕禄吕产，吕氏擅权格局构成遗诏安排的政治背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "028-031",
+      "target": "096-016",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "公孙臣言土德黄龙见于成纪、文帝召其为博士，张苍因对土德之说的否定被证伪，自知被黜，由此谢病请免，因果关系极为明确。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "026-013",
+      "target": "096-016",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "公孙臣上书言土德被张苍驳回，后黄龙见成纪证实公孙臣之说，张苍由此自知被黜，谢病请免，因果关系清晰。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-008",
+      "target": "107-007",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "窦太后崩（前135年）后，此前阻碍儒学推广的力量消失，田蚡立即大力延儒、黜黄老，公孙弘因此崛起。窦太后崩是武帝推行儒术的直接先决条件，儒林列传与魏其武安侯列传均",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "011-012",
+      "target": "017-017",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "七国之乱（前154年）使参与叛乱的齐系诸侯王被平灭，直接导致齐国被分为六国（或确认了此前文帝分封的格局）。七国之乱是齐地诸侯被消灭并使分封格局固化的必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "096-019",
+      "target": "106-005",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "申屠嘉与晁错的政治冲突（前155年）体现了晁错在景帝时期的权贵地位，这构成晁错建议削藩的背景，但晁错削藩建议的直接驱动力是其自身政治判断而非与申屠嘉的矛盾。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-012",
+      "target": "107-007",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "武帝迎申公入朝（前140年）正是推儒的具体行动，直接触发了窦太后的反弹——赵绾请无奏事东宫，太后大怒，免丞相太尉（魏其武安侯列传）。迎申公入朝是引发推儒受挫这一",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-007",
+      "target": "107-007",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "武帝崇儒招贤良（前140年）直接导致赵绾王臧得用、请立明堂、触怒窦太后，最终罢免丞相太尉（魏其武安侯列传）。武帝推儒是窦太后反击的直接原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-012",
+      "target": "028-036",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "武帝迎申公入朝（儒林列传，前140年）直接导致赵绾王臧得用、议立明堂，进而触怒窦太后，赵绾王臧自杀（封禅书）。两事有明确的事件链条。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-007",
+      "target": "028-036",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "武帝崇儒招贤良（儒林列传）直接促成赵绾王臧以文学为公卿，欲立明堂，触怒窦太后而被迫自杀（封禅书）。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-012",
+      "target": "012-004",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "武帝迎申公入朝（儒林列传）直接引发赵绾王臧的推儒举措，进而导致窦太后抑儒术（孝武本纪）、二人自杀。两章均记述同一因果链的不同环节。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-007",
+      "target": "012-004",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "武帝崇儒招贤良（儒林列传）是窦太后抑儒术（孝武本纪）的直接原因，武帝推儒引发了窦太后的强烈干预。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "112-011",
+      "target": "121-023",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "公孙弘阴害异己（前127年）的平津侯主父列传明言弘嫉董仲舒，将其迁往胶西；儒林列传公孙弘排挤董仲舒（前124年）正是前者的直接结果，两章记述了同一因果链的施因方",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "112-006",
+      "target": "120-011",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "公孙弘升迁左内史（前128年），其地位日益超越汲黯，这正是汲黯发出\"积薪后来居上\"感慨（前124年）的背景原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "112-006",
+      "target": "120-006",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "公孙弘升迁左内史（前128年），其地位与天子关系日益亲密，形成了天子对弘、黯待遇差异的背景，为天子不冠不见汲黯（前123年）提供了历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "125-002",
+      "target": "096-018",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "邓通梦推上天得宠（前177年）使邓通成为文帝宠臣，地位日益显赫，这正是申屠嘉斥邓通（前160年）事件的历史背景——正因邓通极度受宠才引发丞相的抗争。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "125-003",
+      "target": "096-018",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "邓通赐铜山铸钱（前175年）使邓通富可敌国，进一步强化其朝廷上的傲慢态度，为申屠嘉斥邓通（前160年）提供了直接历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "111-004",
+      "target": "110-019",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "卫氏贵幸（前139年）使卫青受到皇帝重用，得以以大中大夫身份晋升为将领，是卫青首出上谷击胡（匈奴列传）的必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "111-003",
+      "target": "110-019",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "大长公主囚卫青（前139年）反而使卫青获救后被皇帝重视擢升，为卫青后来出击匈奴（匈奴列传）提供了历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "111-004",
+      "target": "022-025",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "卫氏贵幸（前139年）使卫青升为大中大夫，获得领军资格，是元光六年卫青首出击匈奴（将相名臣年表）的必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "111-003",
+      "target": "022-025",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "大长公主囚卫青（前139年）后卫青因祸得福被皇帝重用，是卫青后来出击匈奴的历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "049-012",
+      "target": "111-017",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "外戚世家卫氏荣宠（前122年）记述卫青封侯、霍去病以军功得名，为卫将军骠骑列传霍去病初露锋芒提供了家族背景，霍去病因卫家地位才得早年领军机会。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "049-012",
+      "target": "111-029",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "卫氏荣宠（外戚世家）记载卫青、霍去病并列为大司马，与卫将军骠骑列传大司马并立内容相符，是同一事件的不同章节记载，属cross_ref，实质无新因果。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "049-012",
+      "target": "109-015",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "卫氏荣宠（外戚世家）中提到卫青封长平侯，这是李敢击伤卫青（李将军列传）的背景——正因卫青地位崇高，霍去病才不顾后果射杀李敢以替舅父报复。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "111-004",
+      "target": "022-030",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "卫氏贵幸（前139年）是卫青日后成为大将军、出定襄击单于（前119年漠北决战，将相名臣年表）的历史起点，提供了人才晋升的必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-022",
+      "target": "112-011",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "董仲舒灾异记获罪（前135年）使公孙弘获得打击竞争对手的机会和方式；儒林列传与平津侯主父列传均记公孙弘阴害董仲舒，前者为背景，二者有关联但后者的主体是公孙弘的政",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "130-001",
+      "target": "026-005",
+      "causal_subtype": "precedent",
+      "confidence": 0.8,
+      "reason": "太史公自序记颛顼命重黎司天地（约前2476年），历书记尧复立羲和之官（约前2318年），尧恢复重黎之官明确以颛顼旧制为先例，形成历史传承，属precedent关",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "030-009",
+      "target": "117-007",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "平准书对外扩张财政支出增加（前135年）记述唐蒙、司马相如开路西南夷造成巴蜀之民疲困，这正是司马相如被派遣作喻巴蜀檄文（前130年）以安抚民心的直接原因背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "030-009",
+      "target": "116-005",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "平准书记载对外扩张（前135年）导致财政和民力的消耗，这是置犍为郡（西南夷列传）这一行动的历史背景和政策驱动力。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "080-009",
+      "target": "082-001",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "乐毅列传燕惠王即位田单反间（前279年）记述燕惠王被田单反间计中，换将骑劫，这直接导致了田单列传燕破齐田单走安平后来的反攻局面，是田单复齐故事的背景条件。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "034-013",
+      "target": "082-001",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "燕召公世家惠王疑乐毅齐复国（前279年）记述了燕换将、齐复国的结果，田单列传燕破齐田单走安平是同一历史进程的不同阶段，前者为后者的背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "047-013",
+      "target": "121-002",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "孔子世家陈蔡绝粮（前489年）记述孔子周游列国遭围困的经历；孔子卒后，七十子散游诸侯（儒林列传，前479年起）正是此前困苦游历、弟子分散的直接延续。孔子困厄经历",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "043-013",
+      "target": "039-039",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "赵世家三家灭知伯（前453年）使韩赵魏三家主导晋国，最终促成周威烈王赐三家为诸侯（前403年），是三家为诸侯的直接历史前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "043-013",
+      "target": "044-007",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "三家灭知伯（前453年）确立了韩赵魏对晋国的主导地位，五十年后正式获封为诸侯（魏世家三家列为诸侯，前403年）。灭知伯是三家获封的直接历史原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "095-017",
+      "target": "110-012",
+      "causal_subtype": "background",
+      "confidence": 0.85,
+      "reason": "夏侯婴从击匈奴平城（樊郦滕灌列传）记述白登之围后高帝遣使厚遗阏氏；匈奴列传汉匈和亲始约则是白登之围后汉的政策回应。白登失败是和亲政策出台的直接历史背景。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "058-009",
+      "target": "083-008",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "梁王招延豪杰（前153年）引聚了羊胜、公孙诡、邹阳等人，正是这批人中羊胜、公孙诡嫉恨邹阳并谗之，导致邹阳下狱（前148年）。梁王招延豪杰是邹阳下狱事件的直接前提",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "083-008",
+      "target": "108-004",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "邹阳下狱（前148年）是梁国政治危机的组成部分，公孙诡羊胜势力的膨胀（刺杀袁盎等谋臣）最终引发了景帝的追责，韩安国因此入劝孝王出诡胜（韩长孺列传）。邹阳下狱是这",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "058-012",
+      "target": "108-004",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "梁王刺杀袁盎（前148年，梁孝王世家）直接导致景帝遣使捕诡胜，韩安国因此入见孝王泣谏令孝王出诡胜（韩长孺列传）。刺杀事件是韩安国说服孝王这一事件的直接触发原因。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "058-009",
+      "target": "108-004",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "梁王招延豪杰（前153年）使公孙诡羊胜等人聚于梁，才有后来公孙诡羊胜劝孝王求立太子、阴使刺杀袁盎等事，韩安国说孝王出诡胜（韩长孺列传）是由此引发的一系列事件中的",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-011",
+      "target": "097-003",
+      "causal_subtype": "trigger",
+      "confidence": 0.95,
+      "reason": "韩信袭齐破龙且（田儋列传，前203年）明载韩信得知郦生已说齐降汉仍发兵袭齐，齐王以为郦生欺己，大怒烹郦食其；但郦生说齐七十余城是发生在韩信袭齐之前的。郦生列传中",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "094-009",
+      "target": "097-003",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "田横收齐立田广（前205年）使田广、田横主政齐国，才使郦生得以赴齐游说（前203年）。田广在位是郦生说齐七十余城的必要前提。",
+      "base_relation": "co_person",
+      "shared_people": []
+    },
+    {
+      "type": "cross_causal",
+      "source": "031-026",
+      "target": "129-003",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "吴太伯世家越王栖会稽求和（前494年）是越国处于最困境的时刻，正是此困境促使勾践用范蠡、计然之策（货殖列传，前473年灭吴）。越王栖会稽是计然助越灭吴的直接历史",
+      "base_relation": "co_location",
+      "shared_people": [
+        "越王句践"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "087-008",
+      "target": "015-031",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "李斯列传赵高说李斯立胡亥（前210年）直接导致了六国年表始皇崩于沙丘胡亥即位、蒙恬被杀的结果。赵高李斯阴谋是胡亥登位的直接原因。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "胡亥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "068-017",
+      "target": "070-004",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "商君被杀车裂灭家（前338年）标志着秦惠王即位并清除旧势力，正是在秦惠王主政后，张仪才得以入秦拜相（前328年）。商君被杀是张仪相秦的历史前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "秦惠王"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "070-021",
+      "target": "071-005",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "张仪列传秦惠王卒武王立群臣谗仪（前311年）直接导致张仪在武王即位后被逐出秦国，武王立逐张仪（樗里子甘茂列传）正是这一因果链的结果端，但后者描述字段为空。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "张仪"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "079-004",
+      "target": "073-011",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "范睢入秦（前270年）后逐步推动\"远交近攻\"战略，其建言塑造了秦廷政治格局，此背景间接影响了后来白起与秦王的矛盾（白起拒命不攻邯郸），但非直接因果。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "秦昭王"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "070-023",
+      "target": "071-005",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "陈轸与张仪争宠（前328年）结果是张仪胜出成为秦相，为武王立后逐张仪（武王即位后逐张仪，前311年后）提供了前提——张仪在秦的高位正是此后被驱逐的对象。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "张仪"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "070-005",
+      "target": "071-005",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "司马错张仪争论伐蜀伐韩（前316年）中惠王从司马错，张仪失势的迹象显现；武王立后逐张仪（前311年后）是张仪在秦廷地位的终结，此为背景关联。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "张仪"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "079-008",
+      "target": "073-011",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "范睢说逐穰侯四贵（前266年）后，范睢成为秦国首席谋臣，后来范睢与白起的政治对立（白起不攻邯郸，范睢从中阻挠）正是此政治格局的延伸，构成背景性因果。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "秦昭王"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "079-008",
+      "target": "072-003",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "范睢说逐穰侯四贵（前266年）直接导致魏厓（穰侯）被逐出咸阳、封于陶，与穰侯拜秦相事件形成前因后果的关系——范睢建言是穰侯失位的直接原因。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "穰侯"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "085-010",
+      "target": "006-019",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "嫪毐之乱（前240年）导致太后被迁至雍，始皇随后迁逐太后，茅焦谏迎太后（006-019）正是嫪毐之乱后续政治处置的直接结果——没有太后被迁，就没有茅焦谏迎事件。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "太后"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "014-024",
+      "target": "031-021",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "吴破楚入郢（前506年）直接导致楚昭王出奔，而楚昭王复入郢（031-021）是吴军撤退后昭王回归的直接结果，构成明确的直接因果关系。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "楚昭王"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-011",
+      "target": "005-044",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "五战入郢破楚（066章，前506年）使楚国濒于亡国，申包胥赴秦求救，直接促成秦救楚败吴（005-044），吴入郢是秦发兵的直接原因。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "048-006",
+      "target": "089-011",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "武臣立为赵王（048章，前209年）是李良叛赵杀武臣（089章，前208年）的必要前提——武臣成为赵王才使李良的背叛具有政治意义，武臣称王是后来被杀的前提条件。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "武臣"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "085-004",
+      "target": "006-001",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "吕不韦献姬生政（085章，前259年）与始皇出生（006章）描述同一事件（秦始皇降生）的原因与结果：吕不韦献已孕之姬给子楚，直接导致始皇的出生，构成明确的直接因",
+      "base_relation": "co_location",
+      "shared_people": [
+        "吕不韦"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "083-002",
+      "target": "043-026",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "鲁仲连义不帝秦（083章，前258年）成功说服魏将不帝秦，坚定了赵国守城意志，为邯郸解围（043章）提供了士气支持，构成重要背景性因果。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "平原君"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "085-001",
+      "target": "006-001",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "吕不韦见子楚奇货可居（085章，前262年）是吕不韦资助子楚回国并献姬的起因，这一决策最终导致始皇出生（006章），奇货可居是整个连锁事件的起始前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "吕不韦"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "091-024",
+      "target": "118-009",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "立皇子长为淮南王（091章，前196年）是追尊淮南厉王（118章）的必要前提——长先成为淮南王才有此后的骄恣谋反被废绝食而死以及被追尊为厉王的后续事件。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "长"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "091-019",
+      "target": "018-018",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "贲赫告变（091章，前196年）直接导致英布出兵叛汉，而黥布反叛平定（018章）正是贲赫告变引发的连锁事件的结果，构成明确的直接因果关系。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "贲赫"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "091-024",
+      "target": "118-004",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "立皇子长为淮南王（前196年）是厉王骄恣拟天子（前177年，118-004）的必要前提——长先成为淮南王才有后来骄恣称制之事，封王是后续骄横行为的前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "长"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "091-024",
+      "target": "118-005",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "立皇子长为淮南王（前196年）是厉王谋反事发（118-005，约前172年）的必要前提，长被封王才有后来的谋反行动，封王是一系列骄恣谋反事件的起点。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "长"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "053-001",
+      "target": "008-009",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.6,
+      "reason": "萧何为沛主吏掾（053章，前220年）是萧何在沛县的任职背景，正是此背景使萧何能在前209年劝说沛令召刘季并参与起兵沛县（008-009），萧何的吏员身份是其发",
+      "base_relation": "co_location",
+      "shared_people": [
+        "萧何"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "053-001",
+      "target": "054-001",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "萧何为沛主吏掾（前220年）与曹参初从沛公（前209年）均在沛县，史记明言\"秦时萧何为主吏，曹参为狱掾\"，萧何为主吏是两人共事的背景，但不构成曹参从沛公的原因。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "萧何"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-013",
+      "target": "007-017",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "巨鹿之围（089章，前208-207年）是破釜沉舟渡河（007章）的直接前提——赵国被围告急才使项羽发兵救赵，赵国被困是项羽破釜沉舟行动的必要前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "王离"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-018",
+      "target": "006-098",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "诸侯膝行归附（007章）是项羽破秦大胜后的结果，章邯降项羽（006章）则稍早于诸侯归附，两事均是巨鹿大战后的政治结果，诸侯归附不是章邯降的原因，而是共同结果。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "项羽"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-014",
+      "target": "008-031",
+      "causal_subtype": "background",
+      "confidence": 0.55,
+      "reason": "怀王命宋义北救（007章，前208年）使项羽以次将出征，经巨鹿大战后项羽成为诸侯霸主，此后才有项羽分封诸侯（008章，前206年），怀王的战略布局是项羽崛起的历",
+      "base_relation": "co_location",
+      "shared_people": [
+        "项羽"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-009",
+      "target": "008-013",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.65,
+      "reason": "范增说立楚后（007章，前208年）促使项梁立楚怀王孙心为楚王，使项梁以正统楚将身份号召天下，此举使项梁声望大增，吸引沛公前往归附（008-013），构成重要前",
+      "base_relation": "co_location",
+      "shared_people": [
+        "项梁"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "089-013",
+      "target": "007-019",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "巨鹿之围（089章，前208-207年）是章邯使人求约（007章，前207年）的直接原因——章邯围困赵国、项羽不断击破秦军，使章邯被动求和，巨鹿之战的持续失利迫",
+      "base_relation": "co_location",
+      "shared_people": [
+        "章邯"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-035",
+      "target": "008-036",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "封王秦降将（007章，前206年项羽以章邯等为三秦王）直接导致还定三秦（008章）——汉王正是要打破项羽分封的三秦格局，封章邯为雍王是汉王还定三秦的直接作战对象",
+      "base_relation": "co_location",
+      "shared_people": [
+        "章邯"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-035",
+      "target": "008-042",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "封王秦降将（007章，前206年项羽立章邯为雍王都废丘）直接导致水灌废丘（008章）——汉军围攻废丘并引水灌城，目标正是雍王章邯的封都，构成直接因果。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "章邯"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "082-003",
+      "target": "034-013",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "田单立为将军（082章，前283年燕围即墨时）是惠王疑乐毅齐复国（034章）的重要前提——田单被推举为将是齐国复国的关键，燕惠王换将骑劫也是因为田单坚守的威胁，",
+      "base_relation": "co_location",
+      "shared_people": [
+        "田单"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "082-003",
+      "target": "046-020",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "田单立为将军（082章，前283年）是田单复齐（046章，前279年）的必要前提——田单被城中推举为将才有后来的火牛阵破燕、复齐七十余城的一系列军事行动。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "田单"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "082-003",
+      "target": "080-011",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "田单立为将军（082章）是田单破骑劫复齐城（080章乐毅列传）的必要前提，田单领将是后来击败骑劫的起点。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "田单"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "082-006",
+      "target": "046-020",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "火牛阵破燕（082章，前279年）直接导致田单复齐（046章）——火牛阵大败燕军、杀骑劫，使齐军得以追击复国，是田单复齐的决定性战役，构成明确直接因果。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "田单"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "082-005",
+      "target": "046-020",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "田单激怒齐军（082章）是田单复齐（046章）的重要前提——通过激励士气、实施反间计，为最终的火牛阵破燕奠定了心理和士气基础，是复齐战略的组成部分。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "田单"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "007-046",
+      "target": "049-003",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "荥阳重整旗鼓（007章，前205年）描述汉王彭城败后重整，期间曹参击虏魏豹，薄姬随之入汉宫（049章，前204年），汉军重振是薄姬入宫的历史背景，但重整旗鼓本身",
+      "base_relation": "co_location",
+      "shared_people": [
+        "汉王"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "090-004",
+      "target": "049-003",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "魏豹叛汉被杀（090章，前205年韩信击虏魏豹）直接导致薄姬入汉宫（049章，前204年）——魏豹被虏后薄姬被送入织室，汉王见其有色纳入后宫，魏豹败亡是薄姬改变",
+      "base_relation": "co_location",
+      "shared_people": [
+        "魏豹"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-009",
+      "target": "008-046",
+      "causal_subtype": "background",
+      "confidence": 0.6,
+      "reason": "陈平反间破楚（056章，前204年）与荥阳相持（008章，前204年）是同一时期（荥阳攻防战）的相关事件，反间计造成项王疑范增是荥阳僵持期间汉方主动出击的手段，",
+      "base_relation": "co_location",
+      "shared_people": [
+        "项羽"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-009",
+      "target": "096-005",
+      "causal_subtype": "background",
+      "confidence": 0.5,
+      "reason": "陈平反间破楚（056章，前204年）虽削弱了楚军指挥层，但项羽最终仍攻破荥阳，周苛守荥阳殉节（096章，前204年）。陈平反间计是荥阳攻防的背景，而非周苛殉节的",
+      "base_relation": "co_location",
+      "shared_people": [
+        "项羽"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-008",
+      "target": "007-048",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "陈平遭谗诸将（056章，前205年）中汉王最终信任陈平并重用之，这一信任关系是陈平得以实施反间计（007-048，前204年）的必要前提，没有被重用就没有后来反",
+      "base_relation": "co_location",
+      "shared_people": [
+        "陈平"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "056-008",
+      "target": "008-047",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.7,
+      "reason": "陈平遭谗诸将后汉王重用陈平（056章，前205年）是陈平后来实施离间楚国君臣（008章，前204年）的前提条件，陈平获得信任才得以施展其计谋。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "陈平"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "090-004",
+      "target": "096-005",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "魏豹叛汉被杀后被令守荥阳，正是在荥阳守御时周苛杀魏豹、楚破城后周苛殉节，魏豹事件构成周苛守荥阳殉节的前提背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "周苛"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "067-001",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "孔子修诗书礼乐是孔子办学育人的总体事业，颜回早夭是孔子弟子中的事件，孔子兴学是颜回成为弟子的前提，构成prerequisite关系。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "067-014",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "孔子修诗书礼乐并以孝道授曾参，是曾参传孝经的必要前提，孔子教化直接导致曾参的学术传承。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "129-005",
+      "target": "067-016",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "子贡结驷连骑聘诸侯（经济外交活动）与子贡相鲁卫终于齐（仕途）属于同一人物生涯不同侧面，前者构成后者的背景，子贡的财富与名望为其相鲁卫提供条件。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "子贡"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "067-018",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "孔子兴学修礼乐使众多弟子聚集，孔子没后弟子立有若为师正是这一师生关系的延续，孔子讲学是有若立为师后被退事件的前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "067-019",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "孔子修诗书礼乐期间传易于商瞿，孔子授易直接导致商瞿传易学，为direct_cause关系。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "097-002",
+      "target": "095-010",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "郦生下陈留后沛公据陈留，郦商在陈留以四千人属沛公，郦生取陈留为郦商加入提供了地点背景，构成background关系。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "沛公"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "097-001",
+      "target": "095-010",
+      "causal_subtype": "background",
+      "confidence": 0.65,
+      "reason": "郦生初见沛公带来陈留攻略机会，其弟郦商随后以四千人归附，郦生的投效为郦商从军提供了背景，但属间接关联。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "沛公"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "084-003",
+      "target": "040-034",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.92,
+      "reason": "张仪欺楚绝齐（前313年）使楚与齐绝交孤立，随后楚兴兵伐秦遭遇丹阳蓝田大败（同年），张仪欺骗楚国直接导致楚秦之战失败，为direct_cause。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "怀王"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "092-024",
+      "target": "090-010",
+      "causal_subtype": "background",
+      "confidence": 0.72,
+      "reason": "韩信贬为淮阴侯（前201年）体现了高帝削弱异姓王的政策方向，彭越被诬谋反夷族（前196年）是这一政策延续，韩信事件构成彭越被杀的历史背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "高帝"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-004",
+      "target": "032-020",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "鲍叔荐管仲使管仲得以相齐，是管仲日后掌权并临终谏用人的必要前提，无鲍叔举荐则无管仲相齐，无相齐则无管仲病逝谏用人。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "管仲"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "129-002",
+      "target": "032-020",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "管仲设轻重九府使桓公称霸，是管仲临终谏用人事件的历史背景，管仲执政霸业奠定了其晚年进谏的权威与立场。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "桓公"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-003",
+      "target": "032-020",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "桓公即位管仲被囚、鲍叔荐举使管仲得相齐，是管仲日后执政并临终谏用人的历史前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "桓公",
+        "管仲"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-002",
+      "target": "032-020",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "管仲事公子纠到鲍叔荐举到相齐，形成完整的历史前提链，管仲事公子纠是其最终相齐谏桓公的历史起点。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "管仲"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-005",
+      "target": "032-020",
+      "causal_subtype": "background",
+      "confidence": 0.82,
+      "reason": "管仲相齐称霸的辉煌政治生涯，是管仲病逝谏用人的直接背景，临终以治国经验谏桓公勿用三子，管仲执政成就赋予此谏言权威。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "管仲"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-005",
+      "target": "032-021",
+      "causal_subtype": "background",
+      "confidence": 0.72,
+      "reason": "管仲相齐称霸后管仲死去桓公不用其谏，近用易牙等三子，直接导致桓公死后三子争权、五子争立的混乱，构成background关系。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "齐桓公"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "067-005",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.75,
+      "reason": "孔子兴学使宰我成为弟子，宰我参与田常之乱是其个人行为，孔子办学是宰我成为临菑大夫的前提，但宰我参与田常之乱属弟子个人抉择，非孔子直接导致。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "067-006",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.88,
+      "reason": "孔子修诗书礼乐兴学培养了子贡，并亲派子贡出使游说，直接导致子贡一出五国有变，孔子是此事件的发起者。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "023-003",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "孔子修诗书礼乐兴学育人，孔子没后弟子四散正是其讲学育人成果的直接结果，无孔子则无七十子散游诸侯之事。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "仲尼"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "032-013",
+      "target": "062-009",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "桓公任管仲为政（前685年）直接导致管仲执政并最终卒后齐遵其政（前645年），无任命管仲则无其政治遗产延续，为直接因果。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "管仲"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-002",
+      "target": "032-013",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.88,
+      "reason": "管仲事公子纠失败被囚，鲍叔荐举，桓公召用管仲为政，管仲事公子纠是其后来被荐相齐的历史前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "管仲"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "032-012",
+      "target": "062-009",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "小白入齐为桓公（前685年）是管仲被任用的前提，无桓公即位则无管仲相齐，也就无管仲遵政至卒，构成prerequisite。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "管仲"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "112-013",
+      "target": "052-022",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "主父偃游学四方后入仕，后以齐相治齐揭发齐王与姊乱，直接导致齐厉王惧罪自杀国除，主父偃是此事件的直接推动者。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "主父偃"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "126-001",
+      "target": "064-008",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "淳于髡讽谏使齐威王振作图治，威王振兴后追论司马兵法，淳于髡讽谏成功激励威王构成后者追论兵法的历史背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "齐威王"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "064-001",
+      "target": "032-024",
+      "causal_subtype": "background",
+      "confidence": 0.72,
+      "reason": "晋燕侵齐齐师败绩（景公时）使齐国军事形势危急，景公因此召穰苴为将，此背景下崔杼弑庄公发生于庄公时期，时序有误，两者实际属于不同时期不同事件，关联为弱。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "晏婴"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-002",
+      "target": "032-012",
+      "causal_subtype": "background",
+      "confidence": 0.8,
+      "reason": "管仲事公子纠期间曾射中小白带钩，小白诈死先入齐为桓公，管仲事纠与小白争位是小白入齐为桓公的直接背景，两者处于同一争位竞争事件中。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "管仲"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "112-013",
+      "target": "052-021",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.88,
+      "reason": "主父偃游学四方后得天子宠幸，言齐临菑宜亲弟爱子才得王，并揭发齐王与姊乱，天子拜其为齐相治齐，游学经历使其得以发迹进而治齐，构成direct_cause。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "主父偃"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "062-005",
+      "target": "032-022",
+      "causal_subtype": "background",
+      "confidence": 0.72,
+      "reason": "管仲相齐称霸后，管仲死去桓公不听其遗嘱，任用易牙等三子专权，导致桓公身后无人棺殓，尸蟲出户，管仲执政失败遗留的权力真空是桓公死后惨状的背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "齐桓公"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "093-005",
+      "target": "095-023",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.88,
+      "reason": "韩王信降匈奴引起汉匈之间的军事冲突，直接导致灌婴等汉将出击反击匈奴及叛军，韩王信叛降是灌婴击匈奴平叛的直接起因。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "韩信"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "093-004",
+      "target": "095-023",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "韩王信徙治马邑后被匈奴围攻、疑其二心而降，徙治马邑是韩王信接触匈奴并最终降匈奴导致灌婴平叛的必要前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "韩信"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "051-010",
+      "target": "052-011",
+      "causal_subtype": "background",
+      "confidence": 0.7,
+      "reason": "田生游说封刘泽为琅邪王（前181年），刘泽得封后在大臣议立新帝时与大臣共同选择代王，田生游说行动使刘泽得封、构成其参与拥立代王的背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "刘泽"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "067-003",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.82,
+      "reason": "孔子修诗书礼乐兴学育人使子路成为弟子，是子路为蒲大夫的历史前提，无孔子门下学习则子路不能跻身卫国政界。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "067-004",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.82,
+      "reason": "孔子修诗书礼乐兴学培养了子路，并形成了子路的义利观（食其食者不避其难），是子路殉难卫国精神动力的思想前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "121-001",
+      "target": "023-002",
+      "causal_subtype": "background",
+      "confidence": 0.78,
+      "reason": "孔子修诗书礼乐并周游诸侯游卫，是孔子在卫国提倡正名礼制的活动背景，孔子修礼的总体事业构成其在卫正名的背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "仲尼",
+        "孔子"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "031-018",
+      "target": "066-017",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "阖庐即位后任伍子胥为行人参与国事，是伍子胥在吴国掌握话语权、得以谏勿许越平的必要前提，无阖庐任用则无伍子胥谏越事。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-007",
+      "target": "031-018",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.95,
+      "reason": "专诸刺吴王僚（前515年）直接导致公子光自立为阖庐（前514年），专诸刺僚是阖庐即位的直接因，为direct_cause。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-005",
+      "target": "031-018",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.82,
+      "reason": "伍员奔吴后结识公子光，进专诸之计，是阖庐即位谋划的关键前提，伍子胥奔吴并参与密谋是阖庐弑僚自立的必要条件。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "031-018",
+      "target": "066-018",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.82,
+      "reason": "阖庐即位任用伍子胥，是伍子胥日后在吴廷反复进谏越为腹心之疾的前提，无阖庐即位授权则无伍子胥进谏。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "031-018",
+      "target": "066-020",
+      "causal_subtype": "background",
+      "confidence": 0.78,
+      "reason": "阖庐即位任伍子胥参与国政，开启了伍子胥在吴的政治生涯，是伍子胥最终被夫差赐死的历史起点，构成远因背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "031-018",
+      "target": "066-015",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.85,
+      "reason": "阖庐即位后积极经营吴国，最终兴兵伐越，阖庐即位是阖庐伤于姑苏之战的前提，无阖庐为王则无伐越之举。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "031-018",
+      "target": "066-021",
+      "causal_subtype": "background",
+      "confidence": 0.72,
+      "reason": "阖庐即位开启吴国强盛时代，但其子夫差不听伍子胥之谏轻越，阖庐即位是吴兴盛与最终亡于越的历史起点，构成远因背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-017",
+      "target": "031-028",
+      "causal_subtype": "background",
+      "confidence": 0.78,
+      "reason": "伍子胥谏勿许越平不被采纳，反而加深与太宰嚭的矛盾，构成其后被赐死的重要背景，反复进谏不听是被赐死的远因之一。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-007",
+      "target": "031-028",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.8,
+      "reason": "专诸刺吴王僚使公子光得立为阖庐，伍子胥由此在吴国获得重用，阖庐即位后的政治格局最终导致夫差时期伍子胥被赐死，专诸刺僚是整个链条的历史前提。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-005",
+      "target": "031-028",
+      "causal_subtype": "prerequisite",
+      "confidence": 0.82,
+      "reason": "伍员奔吴进专诸于公子光，推动阖庐即位并得到重用，是其最终在吴国政治中进谏不听、被夫差赐死这一历史进程的起点。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-008",
+      "target": "031-028",
+      "causal_subtype": "background",
+      "confidence": 0.78,
+      "reason": "阖庐立召伍员谋国使伍子胥深度介入吴国政治，此后其多次进谏不被采纳、遭嚭谗害，阖庐任用是伍子胥被赐死的历史背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "066-015",
+      "target": "031-028",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "阖庐伤于姑苏之战死后（前496年），夫差继位立誓报仇，对越仇恨心态使其后来在越求和时偏信太宰嚭而排斥伍子胥进谏，构成伍子胥被赐死的背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "031-028",
+      "target": "066-021",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.9,
+      "reason": "伍子胥被赐死（前484年）后，吴王失去清醒谋臣制衡，大会诸侯于黄池之际越王句践趁机袭吴，直接导致吴亡于越（前473年），伍子胥之预言应验，赐死是吴亡的重要直接原",
+      "base_relation": "co_location",
+      "shared_people": [
+        "伍子胥"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "070-003",
+      "target": "069-014",
+      "causal_subtype": "direct_cause",
+      "confidence": 0.85,
+      "reason": "苏秦激张仪入秦，张仪入秦为秦效力，而苏秦在赵被封武安君、六国合纵使秦不敢窥函谷十五年，苏秦激张仪入秦与封武安君秦不敢窥函谷是同一战略布局，苏秦以张仪为秦制造正当",
+      "base_relation": "co_location",
+      "shared_people": [
+        "苏秦"
+      ]
+    },
+    {
+      "type": "cross_causal",
+      "source": "114-011",
+      "target": "113-010",
+      "causal_subtype": "background",
+      "confidence": 0.75,
+      "reason": "余善窃自立为东越王（前135年），其兄弟郢曾发动攻击南越，余善杀郢降汉被封，东越政局不稳构成其后闽越再度攻南越汉兴师讨伐的历史背景。",
+      "base_relation": "co_location",
+      "shared_people": [
+        "馀善"
+      ]
     }
-  ]
+  ],
+  "metadata": {
+    "total_relations": 7652
+  }
 }
