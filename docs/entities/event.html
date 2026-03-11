@@ -46,22 +46,31 @@
     <a href="index.html" class="nav-next">实体索引</a>
 </nav>
 <h1>事件时间索引</h1>
-<p class="index-stats">共 <strong>3093</strong> 个事件，<strong>3019</strong> 个有精确纪年，<strong>74</strong> 个推断纪年，跨越 <strong>16</strong> 个历史分期</p>
+<p class="index-stats">共 <strong>3186</strong> 个事件，<strong>3108</strong> 个有精确纪年，<strong>78</strong> 个推断纪年，跨越 <strong>16</strong> 个历史分期</p>
 <p class="index-stats" style="font-size:0.85em; color:#666;">时间标签：<span class="event-tag tag-time" style="font-size:1em;">前260年</span> 精确纪年　<span class="event-tag tag-time tag-time-approx" style="font-size:1em;">约前260年</span> 推断纪年（据人物生卒年、相邻事件、章节时代推断）</p>
 <div class="filter-bar">
     <input type="text" id="filter-input" placeholder="搜索事件、人物、地点..." style="flex:1; min-width:200px; padding:4px 8px; border:1px solid #d4c5a9; border-radius:4px;">
     <select id="type-filter" onchange="filterEvents()">
       <option value="">全部类型</option>
+      <option value="---------">---------</option>
+      <option value="会盟">会盟</option>
+      <option value="内战">内战</option>
       <option value="册封">册封</option>
+      <option value="分封">分封</option>
+      <option value="史论">史论</option>
+      <option value="司法事件">司法事件</option>
+      <option value="学术论述">学术论述</option>
       <option value="家族事件">家族事件</option>
       <option value="封爵">封爵</option>
       <option value="建设">建设</option>
+      <option value="弑君">弑君</option>
       <option value="战争">战争</option>
       <option value="改革">改革</option>
       <option value="政治改革">政治改革</option>
       <option value="政治整顿">政治整顿</option>
       <option value="政治活动">政治活动</option>
       <option value="文化活动">文化活动</option>
+      <option value="朝代更替">朝代更替</option>
       <option value="经济活动">经济活动</option>
       <option value="继位">继位</option>
       <option value="自然灾害">自然灾害</option>
@@ -69,21 +78,21 @@
 </div>
 <div class="pinyin-nav">
   <a href="#period-五帝时代" class="pinyin-letter">五帝时代<span class="letter-count">90</span></a>
-  <a href="#period-夏朝" class="pinyin-letter">夏朝<span class="letter-count">61</span></a>
+  <a href="#period-夏朝" class="pinyin-letter">夏朝<span class="letter-count">62</span></a>
   <a href="#period-商朝" class="pinyin-letter">商朝<span class="letter-count">56</span></a>
-  <a href="#period-西周" class="pinyin-letter">西周<span class="letter-count">130</span></a>
-  <a href="#period-春秋" class="pinyin-letter">春秋<span class="letter-count">409</span></a>
-  <a href="#period-战国" class="pinyin-letter">战国<span class="letter-count">713</span></a>
+  <a href="#period-西周" class="pinyin-letter">西周<span class="letter-count">134</span></a>
+  <a href="#period-春秋" class="pinyin-letter">春秋<span class="letter-count">420</span></a>
+  <a href="#period-战国" class="pinyin-letter">战国<span class="letter-count">715</span></a>
   <a href="#period-秦始皇" class="pinyin-letter">秦始皇<span class="letter-count">88</span></a>
-  <a href="#period-秦二世/子婴" class="pinyin-letter">秦二世/子婴<span class="letter-count">215</span></a>
-  <a href="#period-楚汉之争" class="pinyin-letter">楚汉之争<span class="letter-count">167</span></a>
-  <a href="#period-汉高祖" class="pinyin-letter">汉高祖<span class="letter-count">165</span></a>
+  <a href="#period-秦二世/子婴" class="pinyin-letter">秦二世/子婴<span class="letter-count">221</span></a>
+  <a href="#period-楚汉之争" class="pinyin-letter">楚汉之争<span class="letter-count">170</span></a>
+  <a href="#period-汉高祖" class="pinyin-letter">汉高祖<span class="letter-count">175</span></a>
   <a href="#period-汉惠帝" class="pinyin-letter">汉惠帝<span class="letter-count">46</span></a>
-  <a href="#period-吕后称制" class="pinyin-letter">吕后称制<span class="letter-count">95</span></a>
-  <a href="#period-汉文帝" class="pinyin-letter">汉文帝<span class="letter-count">176</span></a>
-  <a href="#period-汉景帝" class="pinyin-letter">汉景帝<span class="letter-count">183</span></a>
-  <a href="#period-汉武帝" class="pinyin-letter">汉武帝<span class="letter-count">491</span></a>
-  <a href="#period-其他" class="pinyin-letter">其他<span class="letter-count">8</span></a>
+  <a href="#period-吕后称制" class="pinyin-letter">吕后称制<span class="letter-count">99</span></a>
+  <a href="#period-汉文帝" class="pinyin-letter">汉文帝<span class="letter-count">180</span></a>
+  <a href="#period-汉景帝" class="pinyin-letter">汉景帝<span class="letter-count">190</span></a>
+  <a href="#period-汉武帝" class="pinyin-letter">汉武帝<span class="letter-count">526</span></a>
+  <a href="#period-其他" class="pinyin-letter">其他<span class="letter-count">14</span></a>
 </div>
 <div class="entity-index">
 <details class="letter-section" id="period-五帝时代" open>
@@ -1219,7 +1228,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-夏朝" open>
-  <summary class="letter-heading">夏朝（约前2100-前1600年）（61）</summary>
+  <summary class="letter-heading">夏朝（约前2100-前1600年）（62）</summary>
   <div class="event-entry" data-type="政治整顿" id="event-002-003">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/002_夏本纪.html#pn-1.2" target="_blank">鲧被诛于羽山</a> <span class="event-id">002-003</span></div>
@@ -1935,6 +1944,17 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/004_周本纪.html#pn-3.1" target="_blank" class="chapter-ref-name">周本纪 [3.1]</a></div>
+  </div>
+  <div class="event-entry" data-type="朝代更替" id="event-013-017">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/013_三代世表.html#pn-4.3" target="_blank">契后十余世至汤王天下</a> <span class="event-id">013-017</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="商汤灭夏的传统年代约在前1600年。夏商周断代工程推定商朝始于约前1600年。因古史纪年不精确，使用[约]标注。">前1600年</span>
+        <span class="event-tag tag-type">朝代更替</span>
+        <a href="person.html#entity-汤" target="_blank" class="event-tag tag-person">汤</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/013_三代世表.html#pn-4.3" target="_blank" class="chapter-ref-name">三代世表 [4.3]</a></div>
   </div>
   <div class="event-entry" data-type="战争" id="event-025-004">
     <div style="flex:1">
@@ -2703,7 +2723,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-西周">
-  <summary class="letter-heading">西周（前1046-前771年）（130）</summary>
+  <summary class="letter-heading">西周（前1046-前771年）（134）</summary>
   <div class="event-entry" data-type="政治活动" id="event-002-045">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/002_夏本纪.html#pn-26" target="_blank">周封夏后于杞</a> <span class="event-id">002-045</span></div>
@@ -2812,6 +2832,28 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/013_三代世表.html#pn-9.4" target="_blank" class="chapter-ref-name">三代世表 [9.4]</a></div>
+  </div>
+  <div class="event-entry" data-type="朝代更替" id="event-013-018">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/013_三代世表.html#pn-4.4" target="_blank">后稷后千岁至文王有天下</a> <span class="event-id">013-018</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="文王虽未亲自灭商，但武王克殷（前1046年）继承的是文王奠定的基业。年表前1046年条有明确记载武王克殷，使用精确标注。">前1046年</span>
+        <span class="event-tag tag-type">朝代更替</span>
+        <a href="person.html#entity-文王" target="_blank" class="event-tag tag-person">文王</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/013_三代世表.html#pn-4.4" target="_blank" class="chapter-ref-name">三代世表 [4.4]</a></div>
+  </div>
+  <div class="event-entry" data-type="学术论述" id="event-013-019">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/013_三代世表.html#pn-2.1" target="_blank">黄帝以来皆有年数</a> <span class="event-id">013-019</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time tag-time-approx" title="这是太史公的史论，讨论的是纪年方法问题，无特定事件时间。">约前1046年</span>
+        <span class="event-tag tag-type">学术论述</span>
+        <a href="person.html#entity-太史公" target="_blank" class="event-tag tag-person">太史公</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/013_三代世表.html#pn-2.1" target="_blank" class="chapter-ref-name">三代世表 [2.1]</a></div>
   </div>
   <div class="event-entry" data-type="政治活动" id="event-017-001">
     <div style="flex:1">
@@ -4335,6 +4377,32 @@
     </div>
     <div class="event-chapter"><a href="../chapters/005_秦本纪.html#pn-6.3" target="_blank" class="chapter-ref-name">秦本纪 [6.3]</a></div>
   </div>
+  <div class="event-entry" data-type="战争" id="event-014-013">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">幽王为犬戎所杀</a> <span class="event-id">014-013</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前771年条明确记载&quot;幽王为犬戎所杀&quot;，精确纪年">前771年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-幽王" target="_blank" class="event-tag tag-person">幽王</a>
+        <a href="place.html#entity-镐京" target="_blank" class="event-tag tag-place">镐京</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
+  </div>
+  <div class="event-entry" data-type="内战" id="event-014-014">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">曲沃代翼</a> <span class="event-id">014-014</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time tag-time-approx" title="年表前745年和前679年（实际灭晋在前678年）均有明确记载，精确纪年">约前771年</span>
+        <span class="event-tag tag-type">内战</span>
+        <a href="person.html#entity-曲沃桓叔成师" target="_blank" class="event-tag tag-person">曲沃桓叔成师</a>
+        <a href="person.html#entity-曲沃武公" target="_blank" class="event-tag tag-person">曲沃武公</a>
+        <a href="place.html#entity-曲沃" target="_blank" class="event-tag tag-place">曲沃</a>
+        <a href="place.html#entity-翼" target="_blank" class="event-tag tag-place">翼</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
+  </div>
   <div class="event-entry" data-type="战争" id="event-015-001">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/015_六国年表.html#pn-1.1" target="_blank">犬戎败幽王周东迁</a> <span class="event-id">015-001</span></div>
@@ -4408,7 +4476,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-春秋">
-  <summary class="letter-heading">春秋（前770-前476年）（409）</summary>
+  <summary class="letter-heading">春秋（前770-前476年）（420）</summary>
   <div class="event-entry" data-type="政治活动" id="event-004-046">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/004_周本纪.html#pn-38" target="_blank">平王东迁</a> <span class="event-id">004-046</span></div>
@@ -4592,6 +4660,17 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/039_晋世家.html#pn-9.11-16.18" target="_blank" class="chapter-ref-name">晋世家 [9.11-16.18]</a></div>
+  </div>
+  <div class="event-entry" data-type="继位" id="event-014-015">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">楚武王始称王</a> <span class="event-id">014-015</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前740年楚列记载&quot;武王立&quot;，精确纪年">前740年</span>
+        <span class="event-tag tag-type">继位</span>
+        <a href="person.html#entity-楚武王" target="_blank" class="event-tag tag-person">楚武王</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
   </div>
   <div class="event-entry" data-type="政治活动" id="event-038-009">
     <div style="flex:1">
@@ -5005,6 +5084,19 @@
     </div>
     <div class="event-chapter"><a href="../chapters/062_管晏列传.html#pn-1" target="_blank" class="chapter-ref-name">管晏列传 [1]</a></div>
   </div>
+  <div class="event-entry" data-type="继位" id="event-014-016">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">齐桓公即位</a> <span class="event-id">014-016</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前685年明确记载齐桓公元年，精确纪年">前685年</span>
+        <span class="event-tag tag-type">继位</span>
+        <a href="person.html#entity-齐桓公小白" target="_blank" class="event-tag tag-person">齐桓公小白</a>
+        <a href="person.html#entity-管仲" target="_blank" class="event-tag tag-person">管仲</a>
+        <a href="place.html#entity-齐" target="_blank" class="event-tag tag-place">齐</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-023-001">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/023_礼书.html#pn-3.1" target="_blank">周衰礼废乐坏</a> <span class="event-id">023-001</span></div>
@@ -5252,6 +5344,18 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/004_周本纪.html#pn-43" target="_blank" class="chapter-ref-name">周本纪 [43]</a></div>
+  </div>
+  <div class="event-entry" data-type="会盟" id="event-014-017">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">齐桓公始霸会诸侯于鄄</a> <span class="event-id">014-017</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前679年齐列记载&quot;始霸，会诸侯于鄄&quot;，精确纪年">前679年</span>
+        <span class="event-tag tag-type">会盟</span>
+        <a href="person.html#entity-齐桓公" target="_blank" class="event-tag tag-person">齐桓公</a>
+        <a href="place.html#entity-鄄" target="_blank" class="event-tag tag-place">鄄</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
   </div>
   <div class="event-entry" data-type="政治活动" id="event-032-015">
     <div style="flex:1">
@@ -5797,6 +5901,18 @@
     </div>
     <div class="event-chapter"><a href="../chapters/005_秦本纪.html#pn-14.3" target="_blank" class="chapter-ref-name">秦本纪 [14.3]</a></div>
   </div>
+  <div class="event-entry" data-type="会盟" id="event-014-018">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">葵丘之会</a> <span class="event-id">014-018</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前651年明确记载葵丘之会，精确纪年">前651年</span>
+        <span class="event-tag tag-type">会盟</span>
+        <a href="person.html#entity-齐桓公" target="_blank" class="event-tag tag-person">齐桓公</a>
+        <a href="place.html#entity-葵丘" target="_blank" class="event-tag tag-place">葵丘</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-028-014">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/028_封禅书.html#pn-13" target="_blank">齐桓公欲封禅管仲谏止</a> <span class="event-id">028-014</span></div>
@@ -6082,6 +6198,18 @@
     </div>
     <div class="event-chapter"><a href="../chapters/038_宋微子世家.html#pn-27.38" target="_blank" class="chapter-ref-name">宋微子世家 [27.38]</a></div>
   </div>
+  <div class="event-entry" data-type="继位" id="event-014-019">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">晋文公即位</a> <span class="event-id">014-019</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前636年明确记载晋文公元年，精确纪年">前636年</span>
+        <span class="event-tag tag-type">继位</span>
+        <a href="person.html#entity-晋文公重耳" target="_blank" class="event-tag tag-person">晋文公重耳</a>
+        <a href="place.html#entity-晋" target="_blank" class="event-tag tag-place">晋</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
+  </div>
   <div class="event-entry" data-type="继位" id="event-039-019">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/039_晋世家.html#pn-53.60" target="_blank">文公入晋即位</a> <span class="event-id">039-019</span></div>
@@ -6173,6 +6301,19 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/004_周本纪.html#pn-47" target="_blank" class="chapter-ref-name">周本纪 [47]</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-014-020">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">城濮之战</a> <span class="event-id">014-020</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前632年明确记载城濮之战，精确纪年">前632年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-晋文公" target="_blank" class="event-tag tag-person">晋文公</a>
+        <a href="person.html#entity-楚子玉" target="_blank" class="event-tag tag-person">楚子玉</a>
+        <a href="place.html#entity-城濮" target="_blank" class="event-tag tag-place">城濮</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
   </div>
   <div class="event-entry" data-type="战争" id="event-025-005">
     <div style="flex:1">
@@ -6309,6 +6450,19 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/005_秦本纪.html#pn-28" target="_blank" class="chapter-ref-name">秦本纪 [28]</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-014-021">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">崤之战</a> <span class="event-id">014-021</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前627年明确记载殽之战，精确纪年">前627年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-晋襄公" target="_blank" class="event-tag tag-person">晋襄公</a>
+        <a href="person.html#entity-秦穆公" target="_blank" class="event-tag tag-person">秦穆公</a>
+        <a href="place.html#entity-殽" target="_blank" class="event-tag tag-place">殽</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
   </div>
   <div class="event-entry" data-type="战争" id="event-039-024">
     <div style="flex:1">
@@ -6506,6 +6660,18 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/004_周本纪.html#pn-50" target="_blank" class="chapter-ref-name">周本纪 [50]</a></div>
+  </div>
+  <div class="event-entry" data-type="继位" id="event-014-022">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">楚庄王即位</a> <span class="event-id">014-022</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前613年明确记载楚庄王元年，精确纪年。前597年楚围郑、败晋为庄王霸业高峰">前613年</span>
+        <span class="event-tag tag-type">继位</span>
+        <a href="person.html#entity-楚庄王侣" target="_blank" class="event-tag tag-person">楚庄王侣</a>
+        <a href="place.html#entity-楚" target="_blank" class="event-tag tag-place">楚</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
   </div>
   <div class="event-entry" data-type="继位" id="event-038-015">
     <div style="flex:1">
@@ -7206,6 +7372,18 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/063_老子韩非列传.html#pn-1" target="_blank" class="chapter-ref-name">老子韩非列传 [1]</a></div>
+  </div>
+  <div class="event-entry" data-type="弑君" id="event-014-023">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">崔杼弑齐庄公</a> <span class="event-id">014-023</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前548年齐列明确记载崔杼弑庄公，精确纪年">前548年</span>
+        <span class="event-tag tag-type">弑君</span>
+        <a href="person.html#entity-崔杼" target="_blank" class="event-tag tag-person">崔杼</a>
+        <a href="place.html#entity-齐" target="_blank" class="event-tag tag-place">齐</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
   </div>
   <div class="event-entry" data-type="继位" id="event-032-024">
     <div style="flex:1">
@@ -8284,6 +8462,18 @@
     </div>
     <div class="event-chapter"><a href="../chapters/005_秦本纪.html#pn-38.4" target="_blank" class="chapter-ref-name">秦本纪 [38.4]</a></div>
   </div>
+  <div class="event-entry" data-type="战争" id="event-014-024">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">吴破楚入郢</a> <span class="event-id">014-024</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前506年明确记载吴入郢，精确纪年">前506年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-伍子胥" target="_blank" class="event-tag tag-person">伍子胥</a>
+        <a href="place.html#entity-郢" target="_blank" class="event-tag tag-place">郢</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
+  </div>
   <div class="event-entry" data-type="战争" id="event-031-019">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/031_吴太伯世家.html#pn-27.3-27.7" target="_blank">阖庐伐楚入郢</a> <span class="event-id">031-019</span></div>
@@ -8719,6 +8909,17 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/105_扁鹊仓公列传.html#pn-1.2" target="_blank" class="chapter-ref-name">扁鹊仓公列传 [1.2]</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-014-025">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/014_十二诸侯年表.html" target="_blank">吴伐越阖闾死</a> <span class="event-id">014-025</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="年表前496年明确记载阖闾伐越死，精确纪年">前496年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-阖闾" target="_blank" class="event-tag tag-person">阖闾</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/014_十二诸侯年表.html" target="_blank" class="chapter-ref-name">十二诸侯年表</a></div>
   </div>
   <div class="event-entry" data-type="战争" id="event-031-023">
     <div style="flex:1">
@@ -9704,7 +9905,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-战国">
-  <summary class="letter-heading">战国（前475-前221年）（713）</summary>
+  <summary class="letter-heading">战国（前475-前221年）（715）</summary>
   <div class="event-entry" data-type="文化活动" id="event-023-003">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/023_礼书.html#pn-3.6" target="_blank">仲尼没后弟子散落</a> <span class="event-id">023-003</span></div>
@@ -10777,6 +10978,17 @@
     </div>
     <div class="event-chapter"><a href="../chapters/005_秦本纪.html#pn-47" target="_blank" class="chapter-ref-name">秦本纪 [47]</a></div>
   </div>
+  <div class="event-entry" data-type="继位" id="event-015-035">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/015_六国年表.html" target="_blank">秦献公元年</a> <span class="event-id">015-035</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="六国年表前385年条记载&quot;庶长改迎灵公太子，立为献公&quot;，前384年条记载&quot;秦献公元年&quot;。取元年前384年为精确标注。">前384年</span>
+        <span class="event-tag tag-type">继位</span>
+        <a href="person.html#entity-献公" target="_blank" class="event-tag tag-person">献公</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/015_六国年表.html" target="_blank" class="chapter-ref-name">六国年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-028-018">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/028_封禅书.html#pn-17" target="_blank">周太史儋预言秦霸</a> <span class="event-id">028-018</span></div>
@@ -11518,6 +11730,21 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/005_秦本纪.html#pn-53" target="_blank" class="chapter-ref-name">秦本纪 [53]</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-015-034">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/015_六国年表.html" target="_blank">马陵之战齐败魏</a> <span class="event-id">015-034</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="六国年表前341年条明确记载马陵之战，魏栏&quot;齐虏我太子申，杀将军庞涓&quot;，齐栏&quot;败魏马陵&quot;">前341年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-田忌" target="_blank" class="event-tag tag-person">田忌</a>
+        <a href="person.html#entity-田婴" target="_blank" class="event-tag tag-person">田婴</a>
+        <a href="person.html#entity-孙子" target="_blank" class="event-tag tag-person">孙子</a>
+        <a href="person.html#entity-庞涓" target="_blank" class="event-tag tag-person">庞涓</a>
+        <a href="place.html#entity-马陵" target="_blank" class="event-tag tag-place">马陵</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/015_六国年表.html" target="_blank" class="chapter-ref-name">六国年表</a></div>
   </div>
   <div class="event-entry" data-type="战争" id="event-044-012">
     <div style="flex:1">
@@ -19694,7 +19921,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-秦二世/子婴">
-  <summary class="letter-heading">秦二世/子婴（前209-前207年）（215）</summary>
+  <summary class="letter-heading">秦二世/子婴（前209-前207年）（221）</summary>
   <div class="event-entry" data-type="建设" id="event-006-085">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/006_秦始皇本纪.html#pn-86.1" target="_blank">始皇陵下葬</a> <span class="event-id">006-085</span></div>
@@ -19949,6 +20176,29 @@
         <span class="event-tag tag-type">继位</span>
         <a href="person.html#entity-武臣" target="_blank" class="event-tag tag-person">武臣</a>
         <a href="place.html#entity-邯郸" target="_blank" class="event-tag tag-place">邯郸</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
+  </div>
+  <div class="event-entry" data-type="继位" id="event-016-020">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/016_秦楚之际月表.html" target="_blank">韩广自立为燕王</a> <span class="event-id">016-020</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载二世元年九月，即公元前209年">前209年</span>
+        <span class="event-tag tag-type">继位</span>
+        <a href="person.html#entity-韩广" target="_blank" class="event-tag tag-person">韩广</a>
+        <a href="place.html#entity-蓟" target="_blank" class="event-tag tag-place">蓟</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
+  </div>
+  <div class="event-entry" data-type="继位" id="event-016-021">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/016_秦楚之际月表.html" target="_blank">田儋复齐自立为王</a> <span class="event-id">016-021</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载二世元年九月，即公元前209年">前209年</span>
+        <span class="event-tag tag-type">继位</span>
+        <a href="person.html#entity-田儋" target="_blank" class="event-tag tag-person">田儋</a>
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
@@ -21491,6 +21741,19 @@
     </div>
     <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
   </div>
+  <div class="event-entry" data-type="战争" id="event-016-022">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/016_秦楚之际月表.html" target="_blank">章邯降项羽</a> <span class="event-id">016-022</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载二世三年七月，即公元前207年">前207年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-章邯" target="_blank" class="event-tag tag-person">章邯</a>
+        <a href="person.html#entity-项羽" target="_blank" class="event-tag tag-person">项羽</a>
+        <a href="place.html#entity-殷虚" target="_blank" class="event-tag tag-place">殷虚</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
+  </div>
   <div class="event-entry" data-type="战争" id="event-027-009">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/027_天官书.html#pn-119" target="_blank">项羽救钜鹿枉矢西流</a> <span class="event-id">027-009</span></div>
@@ -22164,6 +22427,43 @@
     </div>
     <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-016-023">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/016_秦楚之际月表.html" target="_blank">诸侯罢戏下各就国</a> <span class="event-id">016-023</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载汉元年四月，即公元前206年">前206年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-项羽" target="_blank" class="event-tag tag-person">项羽</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-016-024">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/016_秦楚之际月表.html" target="_blank">田荣反楚自立齐王</a> <span class="event-id">016-024</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载汉元年五月起，即公元前206年">前206年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-田荣" target="_blank" class="event-tag tag-person">田荣</a>
+        <a href="place.html#entity-临菑" target="_blank" class="event-tag tag-place">临菑</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-017-012">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">初封异姓诸王</a> <span class="event-id">017-012</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中明确记载各异姓王初封年份">前206年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-韩信" target="_blank" class="event-tag tag-person">韩信</a>
+        <a href="person.html#entity-英布" target="_blank" class="event-tag tag-person">英布</a>
+        <a href="person.html#entity-张耳" target="_blank" class="event-tag tag-person">张耳</a>
+        <a href="person.html#entity-吴芮" target="_blank" class="event-tag tag-person">吴芮</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-022-001">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">萧何守汉中为丞相</a> <span class="event-id">022-001</span></div>
@@ -22526,7 +22826,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-楚汉之争">
-  <summary class="letter-heading">楚汉之争（前206-前202年）（167）</summary>
+  <summary class="letter-heading">楚汉之争（前206-前202年）（170）</summary>
   <div class="event-entry" data-type="政治整顿" id="event-007-038">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/007_项羽本纪.html#pn-104.1" target="_blank">阴杀义帝于江中</a> <span class="event-id">007-038</span></div>
@@ -23970,6 +24270,18 @@
     </div>
     <div class="event-chapter"><a href="../chapters/098_傅靳蒯成列传.html#pn-1.2" target="_blank" class="chapter-ref-name">傅靳蒯成列传 [1.2]</a></div>
   </div>
+  <div class="event-entry" data-type="---------" id="event---------">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">---------</a> <span class="event-id">--------</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time tag-time-approx" title="------">约前202年</span>
+        <span class="event-tag tag-type">---------</span>
+        <a href="person.html#entity----------" target="_blank" class="event-tag tag-person">---------</a>
+        <a href="place.html#entity-------" target="_blank" class="event-tag tag-place">------</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
+  </div>
   <div class="event-entry" data-type="战争" id="event-007-060">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/007_项羽本纪.html#pn-160.1" target="_blank">追击项羽至固陵</a> <span class="event-id">007-060</span></div>
@@ -24275,11 +24587,37 @@
     </div>
     <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
   </div>
+  <div class="event-entry" data-type="战争" id="event-016-025">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/016_秦楚之际月表.html" target="_blank">垓下之围</a> <span class="event-id">016-025</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载汉五年十二月，即公元前202年">前202年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-韩信" target="_blank" class="event-tag tag-person">韩信</a>
+        <a href="person.html#entity-项羽" target="_blank" class="event-tag tag-person">项羽</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/016_秦楚之际月表.html" target="_blank" class="chapter-ref-name">秦楚之际月表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治整顿" id="event-017-013">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">异姓王陆续被废</a> <span class="event-id">017-013</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中明确记载各异姓王被废年份">前202年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+        <a href="person.html#entity-韩信" target="_blank" class="event-tag tag-person">韩信</a>
+        <a href="person.html#entity-彭越" target="_blank" class="event-tag tag-person">彭越</a>
+        <a href="person.html#entity-英布" target="_blank" class="event-tag tag-person">英布</a>
+        <a href="person.html#entity-卢绾" target="_blank" class="event-tag tag-person">卢绾</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-019-001">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html#pn-1.2" target="_blank">长沙王全禅五世</a> <span class="event-id">019-001</span></div>
       <div class="event-tags">
-        <span class="event-tag tag-time" title="时间字段存在双重标注：&#x27;[约—前157年]&#x27;和&#x27;（公元前202年—前157年）&#x27;并列。年表前202年条记载封吴芮为长沙王，前157年条记载长沙王吴著死无子国除，两端均有年表确认，应使用精确标注（）。且第一个标注&#x27;[约—前157年]&#x27;格式不完整（缺起始年）。建议统一为单一精确标注（公元前202年—前157年）">前202年</span>
+        <span class="event-tag tag-time" title="年表前202年条记载封吴芮为长沙王，前157年条记载长沙王吴著死无子国除，两端均有年表确认，使用精确标注（）">前202年</span>
         <span class="event-tag tag-type">政治活动</span>
         <a href="place.html#entity-长沙" target="_blank" class="event-tag tag-place">长沙</a>
       </div>
@@ -24301,7 +24639,7 @@
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">建长乐未央宫筑长安城</a> <span class="event-id">019-008</span></div>
       <div class="event-tags">
-        <span class="event-tag tag-time" title="时间字段存在双重标注：&#x27;[约—前190年]&#x27;和&#x27;（公元前202年—前190年）&#x27;并列。年表前202年条记载长乐宫始修，前190年有筑长安城记载，两端均有年表确认。应统一为精确标注。第一个标注&#x27;[约—前190年]&#x27;格式不完整（缺起始年）。建议统一为（公元前202年—前190年）">前202年</span>
+        <span class="event-tag tag-time" title="年表前202年条记载长乐宫始修，前190年有筑长安城记载，两端均有年表确认，使用精确标注（）">前202年</span>
         <span class="event-tag tag-type">建设</span>
         <a href="person.html#entity-阳成延" target="_blank" class="event-tag tag-person">阳成延</a>
         <a href="place.html#entity-长安" target="_blank" class="event-tag tag-place">长安</a>
@@ -24730,7 +25068,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-汉高祖">
-  <summary class="letter-heading">汉高祖（前202-前195年）（165）</summary>
+  <summary class="letter-heading">汉高祖（前202-前195年）（175）</summary>
   <div class="event-entry" data-type="家族事件" id="event-008-071">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/008_高祖本纪.html#pn-62" target="_blank">尊太公为太上皇</a> <span class="event-id">008-071</span></div>
@@ -24808,6 +25146,19 @@
     </div>
     <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html#pn-2.3" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表 [2.3]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-017-014">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">高祖封同姓子弟为王</a> <span class="event-id">017-014</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中前201年（高祖六年）条明确记载">前201年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-刘交" target="_blank" class="event-tag tag-person">刘交</a>
+        <a href="person.html#entity-刘肥" target="_blank" class="event-tag tag-person">刘肥</a>
+        <a href="person.html#entity-刘贾" target="_blank" class="event-tag tag-person">刘贾</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-018-001">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html#pn-1.1" target="_blank">封爵之誓河山之盟</a> <span class="event-id">018-001</span></div>
@@ -24850,6 +25201,36 @@
         <span class="event-tag tag-time" title="萧何封酂侯在高祖六年（前201年）大封功臣时。据《中国历史大事年表》前198年（高祖九年）&quot;以丞相萧何为相国&quot;。原标注前197年系插值错误，混淆了封侯与任相国的时间">前201年</span>
         <span class="event-tag tag-type">政治活动</span>
         <a href="person.html#entity-萧何" target="_blank" class="event-tag tag-person">萧何</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-018-012">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">六年大封功臣第一批</a> <span class="event-id">018-012</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;高祖十二&quot;列明确记载&quot;六年正月丙午&quot;等日期，高祖六年即公元前201年">前201年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-张良" target="_blank" class="event-tag tag-person">张良</a>
+        <a href="person.html#entity-萧何" target="_blank" class="event-tag tag-person">萧何</a>
+        <a href="person.html#entity-曹参" target="_blank" class="event-tag tag-person">曹参</a>
+        <a href="person.html#entity-周勃" target="_blank" class="event-tag tag-person">周勃</a>
+        <span class="event-tag tag-person">+2</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-018-013">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">六年大封功臣后续批次</a> <span class="event-id">018-013</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;高祖十二&quot;列明确记载各封侯日期，均在高祖六年（前201年）内">前201年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-雍齿" target="_blank" class="event-tag tag-person">雍齿</a>
+        <a href="person.html#entity-陈武" target="_blank" class="event-tag tag-person">陈武</a>
+        <a href="person.html#entity-王陵" target="_blank" class="event-tag tag-person">王陵</a>
+        <a href="person.html#entity-审食其" target="_blank" class="event-tag tag-person">审食其</a>
+        <span class="event-tag tag-person">+1</span>
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
@@ -25199,6 +25580,20 @@
     </div>
     <div class="event-chapter"><a href="../chapters/008_高祖本纪.html#pn-68" target="_blank" class="chapter-ref-name">高祖本纪 [68]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-018-014">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">七年封侯</a> <span class="event-id">018-014</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;高祖十二&quot;列明确记载&quot;七年&quot;各日期，高祖七年即公元前200年">前200年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-刘它" target="_blank" class="event-tag tag-person">刘它</a>
+        <a href="person.html#entity-华寄" target="_blank" class="event-tag tag-person">华寄</a>
+        <a href="person.html#entity-吕马童" target="_blank" class="event-tag tag-person">吕马童</a>
+        <a href="person.html#entity-杨喜" target="_blank" class="event-tag tag-person">杨喜</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
   <div class="event-entry" data-type="战争" id="event-022-005">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">匈奴围平城</a> <span class="event-id">022-005</span></div>
@@ -25504,6 +25899,32 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/121_儒林列传.html#pn-3" target="_blank" class="chapter-ref-name">儒林列传 [3]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-018-015">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">八年封侯</a> <span class="event-id">018-015</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;高祖十二&quot;列明确记载&quot;八年&quot;各日期，高祖八年即公元前199年">前199年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-赵将夜" target="_blank" class="event-tag tag-person">赵将夜</a>
+        <a href="person.html#entity-卫胠" target="_blank" class="event-tag tag-person">卫胠</a>
+        <a href="person.html#entity-陈错" target="_blank" class="event-tag tag-person">陈错</a>
+        <a href="person.html#entity-刘仲" target="_blank" class="event-tag tag-person">刘仲</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治整顿" id="event-018-019">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">刘仲弃国废为侯</a> <span class="event-id">018-019</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;高祖十二&quot;列明确记载&quot;八年九月丙子&quot;，高祖八年即公元前199年">前199年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+        <a href="person.html#entity-刘仲" target="_blank" class="event-tag tag-person">刘仲</a>
+        <a href="place.html#entity-代" target="_blank" class="event-tag tag-place">代</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
   </div>
   <div class="event-entry" data-type="改革" id="event-030-002">
     <div style="flex:1">
@@ -25937,6 +26358,33 @@
         <span class="event-tag tag-type">政治整顿</span>
         <a href="person.html#entity-韩信" target="_blank" class="event-tag tag-person">韩信</a>
         <a href="place.html#entity-关中" target="_blank" class="event-tag tag-place">关中</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-018-016">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">十一年平叛封功臣</a> <span class="event-id">018-016</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;高祖十二&quot;列明确记载&quot;十一年&quot;各日期，高祖十一年即公元前196年。此批封侯集中在平定陈豨、韩信之乱后">前196年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-张相如" target="_blank" class="event-tag tag-person">张相如</a>
+        <a href="person.html#entity-陶舍" target="_blank" class="event-tag tag-person">陶舍</a>
+        <a href="person.html#entity-栾说" target="_blank" class="event-tag tag-person">栾说</a>
+        <a href="person.html#entity-刘泽" target="_blank" class="event-tag tag-person">刘泽</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-018-018">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">黥布反叛平定</a> <span class="event-id">018-018</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="据《中国历史大事年表》前196年（高祖十一年）七月&quot;淮南王黥布反&quot;，前195年（高祖十二年）击破黥布。表体十二年大批因&quot;击布&quot;封侯可为旁证">前196年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-黥布" target="_blank" class="event-tag tag-person">黥布</a>
+        <a href="person.html#entity-贲赫" target="_blank" class="event-tag tag-person">贲赫</a>
+        <a href="place.html#entity-淮南" target="_blank" class="event-tag tag-place">淮南</a>
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
@@ -26525,6 +26973,33 @@
     </div>
     <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html#pn-2.2" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表 [2.2]</a></div>
   </div>
+  <div class="event-entry" data-type="战争" id="event-017-020">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">燕王卢绾反降匈奴</a> <span class="event-id">017-020</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中前195年（高祖十二年）条记载新燕王刘建即位，即卢绾已被废">前195年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-卢绾" target="_blank" class="event-tag tag-person">卢绾</a>
+        <a href="place.html#entity-蓟" target="_blank" class="event-tag tag-place">蓟</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-018-017">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">十二年平叛封功臣</a> <span class="event-id">018-017</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;高祖十二&quot;列明确记载&quot;十二年&quot;各日期，高祖十二年即公元前195年。此批封侯集中在平定黥布之乱后">前195年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-单父圣" target="_blank" class="event-tag tag-person">单父圣</a>
+        <a href="person.html#entity-黄极中" target="_blank" class="event-tag tag-person">黄极中</a>
+        <a href="person.html#entity-周聚" target="_blank" class="event-tag tag-person">周聚</a>
+        <a href="person.html#entity-灵常" target="_blank" class="event-tag tag-person">灵常</a>
+        <span class="event-tag tag-person">+1</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
   <div class="event-entry" data-type="继位" id="event-022-009">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">高祖崩葬长陵</a> <span class="event-id">022-009</span></div>
@@ -26848,7 +27323,7 @@
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html#pn-3.1" target="_blank">惠景间追修遗功</a> <span class="event-id">019-003</span></div>
       <div class="event-tags">
-        <span class="event-tag tag-time" title="时间字段存在多重标注冗余（模式33）：三个并列标注中&#x27;[约—前141年]&#x27;重复出现两次，且&#x27;%五十载%&#x27;是文本描述而非纪年标记。应统一为单一标注。惠帝元年=前194年（年表确认），景帝后三年=前141年（景帝崩年），两端均可精确换算。建议清理为[公元前194年—前141年]">前194年</span>
+        <span class="event-tag tag-time" title="惠帝元年=前194年（年表确认），景帝后三年=前141年（景帝崩年），两端均可精确换算，但因是概括性描述而非精确纪年事件，使用推算标注[]">前194年</span>
         <span class="event-tag tag-type">政治活动</span>
       </div>
     </div>
@@ -27363,7 +27838,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-吕后称制">
-  <summary class="letter-heading">吕后称制（前187-前180年）（95）</summary>
+  <summary class="letter-heading">吕后称制（前187-前180年）（99）</summary>
   <div class="event-entry" data-type="政治活动" id="event-009-020">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/009_吕太后本纪.html#pn-12.1" target="_blank">太后称制议封吕王</a> <span class="event-id">009-020</span></div>
@@ -27464,14 +27939,41 @@
     </div>
     <div class="event-chapter"><a href="../chapters/009_吕太后本纪.html#pn-16.2" target="_blank" class="chapter-ref-name">吕太后本纪 [16.2]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-017-015">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">高后封吕氏为王</a> <span class="event-id">017-015</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中前187年（高后元年）条明确记载">前187年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-吕台" target="_blank" class="event-tag tag-person">吕台</a>
+        <a href="person.html#entity-吕产" target="_blank" class="event-tag tag-person">吕产</a>
+        <a href="person.html#entity-吕禄" target="_blank" class="event-tag tag-person">吕禄</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-019-004">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">吕氏封侯擅权</a> <span class="event-id">019-004</span></div>
       <div class="event-tags">
-        <span class="event-tag tag-time" title="时间字段存在多重标注冗余：&#x27;%高后时%&#x27;是纪年标记、&#x27;[约—前180年]&#x27;是不完整的推算标注、&#x27;（公元前187年—前180年）&#x27;是精确区间标注，三者并列。年表前187年条记载封吕台为吕王，前180年条记载诸吕被灭，两端均有年表确认。应统一为单一精确标注（公元前187年—前180年）">前187年</span>
+        <span class="event-tag tag-time" title="年表前187年条记载封吕台为吕王，前180年条记载诸吕被灭，两端均有年表确认，使用精确标注（）">前187年</span>
         <span class="event-tag tag-type">政治活动</span>
         <a href="person.html#entity-吕产" target="_blank" class="event-tag tag-person">吕产</a>
         <a href="person.html#entity-吕禄" target="_blank" class="event-tag tag-person">吕禄</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-019-009">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">高后元年批封惠帝子及遗功臣</a> <span class="event-id">019-009</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="高后元年即公元前187年，年表明确记载&quot;元年四月&quot;各日期">前187年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-吕产" target="_blank" class="event-tag tag-person">吕产</a>
+        <a href="person.html#entity-吕朝" target="_blank" class="event-tag tag-person">吕朝</a>
+        <a href="person.html#entity-吕武" target="_blank" class="event-tag tag-person">吕武</a>
+        <a href="person.html#entity-齐受" target="_blank" class="event-tag tag-person">齐受</a>
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
@@ -27658,6 +28160,19 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/009_吕太后本纪.html#pn-21.4" target="_blank" class="chapter-ref-name">吕太后本纪 [21.4]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-019-010">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">高后四年吕氏大量封侯</a> <span class="event-id">019-010</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="高后四年即公元前184年，年表丙申日与甲寅日记载明确">前184年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-朱通" target="_blank" class="event-tag tag-person">朱通</a>
+        <a href="person.html#entity-王恬开" target="_blank" class="event-tag tag-person">王恬开</a>
+        <a href="person.html#entity-徐厉" target="_blank" class="event-tag tag-person">徐厉</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
   </div>
   <div class="event-entry" data-type="继位" id="event-009-037">
     <div style="flex:1">
@@ -28279,6 +28794,20 @@
     </div>
     <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
   </div>
+  <div class="event-entry" data-type="政治整顿" id="event-019-011">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">诛吕后吕侯国除</a> <span class="event-id">019-011</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="高后八年即公元前180年，年表明确记载&quot;八年&quot;诛吕事件">前180年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+        <a href="person.html#entity-吕产" target="_blank" class="event-tag tag-person">吕产</a>
+        <a href="person.html#entity-吕种" target="_blank" class="event-tag tag-person">吕种</a>
+        <a href="person.html#entity-吕胜" target="_blank" class="event-tag tag-person">吕胜</a>
+        <a href="person.html#entity-吕忿" target="_blank" class="event-tag tag-person">吕忿</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治整顿" id="event-022-011">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">吕后擅权大臣共诛之</a> <span class="event-id">022-011</span></div>
@@ -28521,7 +29050,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-汉文帝">
-  <summary class="letter-heading">汉文帝（前179-前157年）（176）</summary>
+  <summary class="letter-heading">汉文帝（前179-前157年）（180）</summary>
   <div class="event-entry" data-type="政治活动" id="event-010-010">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/010_孝文本纪.html#pn-9.1" target="_blank">诸侯封立与官员调任</a> <span class="event-id">010-010</span></div>
@@ -28639,6 +29168,19 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-019-012">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">文帝初从代来功臣封侯</a> <span class="event-id">019-012</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="孝文元年即公元前179年，年表明确记载各封侯日期">前179年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-薄昭" target="_blank" class="event-tag tag-person">薄昭</a>
+        <a href="person.html#entity-宋昌" target="_blank" class="event-tag tag-person">宋昌</a>
+        <a href="person.html#entity-刘揭" target="_blank" class="event-tag tag-person">刘揭</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
   </div>
   <div class="event-entry" data-type="政治改革" id="event-023-006">
     <div style="flex:1">
@@ -28922,6 +29464,18 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/010_孝文本纪.html#pn-21" target="_blank" class="chapter-ref-name">孝文本纪 [21]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-017-016">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">文帝分封子弟为王</a> <span class="event-id">017-016</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中前178年（文帝二年）条明确记载">前178年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-刘参" target="_blank" class="event-tag tag-person">刘参</a>
+        <a href="person.html#entity-刘武" target="_blank" class="event-tag tag-person">刘武</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
   </div>
   <div class="event-entry" data-type="政治改革" id="event-022-012">
     <div style="flex:1">
@@ -30314,6 +30868,22 @@
     </div>
     <div class="event-chapter"><a href="../chapters/010_孝文本纪.html#pn-33.5" target="_blank" class="chapter-ref-name">孝文本纪 [33.5]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-017-017">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">齐国一分为六</a> <span class="event-id">017-017</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中前164年（文帝十六年）条明确记载">前164年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-将闾" target="_blank" class="event-tag tag-person">将闾</a>
+        <a href="person.html#entity-志" target="_blank" class="event-tag tag-person">志</a>
+        <a href="person.html#entity-辟光" target="_blank" class="event-tag tag-person">辟光</a>
+        <a href="person.html#entity-贤" target="_blank" class="event-tag tag-person">贤</a>
+        <span class="event-tag tag-person">+2</span>
+        <a href="place.html#entity-临菑" target="_blank" class="event-tag tag-place">临菑</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
+  </div>
   <div class="event-entry" data-type="文化活动" id="event-028-033">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/028_封禅书.html#pn-48" target="_blank">新垣平建渭阳五帝庙</a> <span class="event-id">028-033</span></div>
@@ -30649,6 +31219,17 @@
     </div>
     <div class="event-chapter"><a href="../chapters/011_孝景本纪.html#pn-1.1" target="_blank" class="chapter-ref-name">孝景本纪 [1.1]</a></div>
   </div>
+  <div class="event-entry" data-type="继位" id="event-022-017">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">文帝崩景帝即位</a> <span class="event-id">022-017</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载文帝后七年，即公元前157年">前157年</span>
+        <span class="event-tag tag-type">继位</span>
+        <a href="place.html#entity-霸陵" target="_blank" class="event-tag tag-place">霸陵</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="家族事件" id="event-049-007">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/049_外戚世家.html#pn-7" target="_blank">王太后入宫</a> <span class="event-id">049-007</span></div>
@@ -30674,7 +31255,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-汉景帝">
-  <summary class="letter-heading">汉景帝（前156-前141年）（183）</summary>
+  <summary class="letter-heading">汉景帝（前156-前141年）（190）</summary>
   <div class="event-entry" data-type="文化活动" id="event-010-046">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/010_孝文本纪.html#pn-43.1" target="_blank">追颂文帝昭德之舞</a> <span class="event-id">010-046</span></div>
@@ -31088,6 +31669,16 @@
     </div>
     <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
   </div>
+  <div class="event-entry" data-type="政治整顿" id="event-017-019">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">七国之乱诸侯国除</a> <span class="event-id">017-019</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中前154年（景帝三年）条明确记载">前154年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
+  </div>
   <div class="event-entry" data-type="战争" id="event-019-007">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html#pn-3.1" target="_blank">吴楚七国之乱功臣封侯</a> <span class="event-id">019-007</span></div>
@@ -31097,6 +31688,32 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html#pn-3.1" target="_blank" class="chapter-ref-name">惠景间侯者年表 [3.1]</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-019-013">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">景帝三年平吴楚封功臣</a> <span class="event-id">019-013</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="景帝三年即公元前154年，封侯日期延续至景帝六年（前151年）。魏其侯封于三年六月，余者封于六年四月">前154年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-窦婴" target="_blank" class="event-tag tag-person">窦婴</a>
+        <a href="person.html#entity-栾布" target="_blank" class="event-tag tag-person">栾布</a>
+        <a href="person.html#entity-卫绾" target="_blank" class="event-tag tag-person">卫绾</a>
+        <a href="person.html#entity-程嘉" target="_blank" class="event-tag tag-person">程嘉</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-022-018">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">吴楚七国反</a> <span class="event-id">022-018</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载景帝三年，即公元前154年">前154年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-周亚夫" target="_blank" class="event-tag tag-person">周亚夫</a>
+        <a href="person.html#entity-窦婴" target="_blank" class="event-tag tag-person">窦婴</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="政治整顿" id="event-023-008">
     <div style="flex:1">
@@ -31856,6 +32473,17 @@
     </div>
     <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html#pn-3.3" target="_blank" class="chapter-ref-name">高祖功臣侯者年表 [3.3]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-019">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">条侯亚夫为丞相</a> <span class="event-id">022-019</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载景帝七年，即公元前150年">前150年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-周亚夫" target="_blank" class="event-tag tag-person">周亚夫</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-049-008">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/049_外戚世家.html#pn-9" target="_blank">栗姬失宠废太子</a> <span class="event-id">049-008</span></div>
@@ -32083,6 +32711,16 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/011_孝景本纪.html#pn-15.2" target="_blank" class="chapter-ref-name">孝景本纪 [15.2]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-019-014">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">景帝中年间封侯批次</a> <span class="event-id">019-014</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="景帝中二年=前148年，中三年=前147年，中五年=前145年，均据年表推算">前148年</span>
+        <span class="event-tag tag-type">政治活动</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
   </div>
   <div class="event-entry" data-type="改革" id="event-030-007">
     <div style="flex:1">
@@ -32548,6 +33186,16 @@
     </div>
     <div class="event-chapter"><a href="../chapters/011_孝景本纪.html#pn-21.4" target="_blank" class="chapter-ref-name">孝景本纪 [21.4]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-020">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">梁孝王薨分梁五国</a> <span class="event-id">022-020</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载景帝中六年，即公元前144年">前144年</span>
+        <span class="event-tag tag-type">政治活动</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-057-021">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/057_绛侯周勃世家.html#pn-19" target="_blank">景帝赐食无箸试探</a> <span class="event-id">057-021</span></div>
@@ -32886,6 +33534,16 @@
     </div>
     <div class="event-chapter"><a href="../chapters/012_孝武本纪.html#pn-2" target="_blank" class="chapter-ref-name">孝武本纪 [2]</a></div>
   </div>
+  <div class="event-entry" data-type="继位" id="event-022-021">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">景帝崩武帝即位</a> <span class="event-id">022-021</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载景帝后三年，即公元前141年">前141年</span>
+        <span class="event-tag tag-type">继位</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="继位" id="event-107-005">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/107_魏其武安侯列传.html#pn-2.1" target="_blank">田蚡封武安侯</a> <span class="event-id">107-005</span></div>
@@ -32901,7 +33559,7 @@
   </div>
 </details>
 <details class="letter-section" id="period-汉武帝">
-  <summary class="letter-heading">汉武帝（前140-前87年）（491）</summary>
+  <summary class="letter-heading">汉武帝（前140-前87年）（526）</summary>
   <div class="event-entry" data-type="政治改革" id="event-012-003">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/012_孝武本纪.html#pn-3.1" target="_blank">招贤良议封禅</a> <span class="event-id">012-003</span></div>
@@ -32914,6 +33572,18 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/012_孝武本纪.html#pn-3.1" target="_blank" class="chapter-ref-name">孝武本纪 [3.1]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-022">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">武帝建元窦婴田蚡秉政</a> <span class="event-id">022-022</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载建元元年，即公元前140年">前140年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-窦婴" target="_blank" class="event-tag tag-person">窦婴</a>
+        <a href="person.html#entity-田蚡" target="_blank" class="event-tag tag-person">田蚡</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="文化活动" id="event-028-035">
     <div style="flex:1">
@@ -33810,6 +34480,20 @@
     </div>
     <div class="event-chapter"><a href="../chapters/020_建元以来侯者年表.html#pn-1.1" target="_blank" class="chapter-ref-name">建元以来侯者年表 [1.1]</a></div>
   </div>
+  <div class="event-entry" data-type="战争" id="event-022-023">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">马邑伏击匈奴不合</a> <span class="event-id">022-023</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元光二年，即公元前133年">前133年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-韩安国" target="_blank" class="event-tag tag-person">韩安国</a>
+        <a href="person.html#entity-李广" target="_blank" class="event-tag tag-person">李广</a>
+        <a href="person.html#entity-王恢" target="_blank" class="event-tag tag-person">王恢</a>
+        <a href="place.html#entity-马邑" target="_blank" class="event-tag tag-place">马邑</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="文化活动" id="event-028-038">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/028_封禅书.html#pn-60" target="_blank">李少君以祠灶穀道见上</a> <span class="event-id">028-038</span></div>
@@ -33938,6 +34622,17 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/110_匈奴列传.html#pn-24.1" target="_blank" class="chapter-ref-name">匈奴列传 [24.1]</a></div>
+  </div>
+  <div class="event-entry" data-type="自然灾害" id="event-022-024">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">河决瓠子</a> <span class="event-id">022-024</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元光三年，即公元前132年">前132年</span>
+        <span class="event-tag tag-type">自然灾害</span>
+        <a href="place.html#entity-瓠子" target="_blank" class="event-tag tag-place">瓠子</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="自然灾害" id="event-029-010">
     <div style="flex:1">
@@ -34206,6 +34901,33 @@
     </div>
     <div class="event-chapter"><a href="../chapters/130_太史公自序.html#pn-2.2" target="_blank" class="chapter-ref-name">太史公自序 [2.2]</a></div>
   </div>
+  <div class="event-entry" data-type="分封" id="event-021-004">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">推恩令前长沙楚王子封侯</a> <span class="event-id">021-004</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;元光&quot;列明确标注年份，元光五年=前130年，元光六年=前129年">前129年</span>
+        <span class="event-tag tag-type">分封</span>
+        <a href="person.html#entity-刘苍" target="_blank" class="event-tag tag-person">刘苍</a>
+        <a href="person.html#entity-刘成" target="_blank" class="event-tag tag-person">刘成</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-022-025">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">卫青首出击匈奴</a> <span class="event-id">022-025</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元光六年，即公元前129年">前129年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-卫青" target="_blank" class="event-tag tag-person">卫青</a>
+        <a href="person.html#entity-李广" target="_blank" class="event-tag tag-person">李广</a>
+        <a href="person.html#entity-公孙敖" target="_blank" class="event-tag tag-person">公孙敖</a>
+        <a href="person.html#entity-公孙贺" target="_blank" class="event-tag tag-person">公孙贺</a>
+        <a href="place.html#entity-上谷" target="_blank" class="event-tag tag-place">上谷</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="战争" id="event-027-016">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/027_天官书.html#pn-120" target="_blank">京师师四出诛夷狄数十年</a> <span class="event-id">027-016</span></div>
@@ -34334,6 +35056,18 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/123_大宛列传.html#pn-1" target="_blank" class="chapter-ref-name">大宛列传 [1]</a></div>
+  </div>
+  <div class="event-entry" data-type="分封" id="event-021-005">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">元朔元年江都鲁共王子封侯</a> <span class="event-id">021-005</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;元朔&quot;列明确标注&quot;元年&quot;，元朔元年=前128年">前128年</span>
+        <span class="event-tag tag-type">分封</span>
+        <a href="person.html#entity-刘择" target="_blank" class="event-tag tag-person">刘择</a>
+        <a href="person.html#entity-刘胥" target="_blank" class="event-tag tag-person">刘胥</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
   </div>
   <div class="event-entry" data-type="家族事件" id="event-051-015">
     <div style="flex:1">
@@ -34554,6 +35288,40 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="分封" id="event-021-006">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">元朔二年首批王子封侯</a> <span class="event-id">021-006</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="元朔二年=前127年，与推恩令诏书（021-001）同年，交叉验证一致">前127年</span>
+        <span class="event-tag tag-type">分封</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="分封" id="event-021-012">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">中山靖王子分批封侯</a> <span class="event-id">021-012</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="各封侯年份由表中纪年明确：元朔二年=前127年，元朔三年=前126年，元朔四年=前125年，元朔五年=前124年">前127年</span>
+        <span class="event-tag tag-type">分封</span>
+        <a href="person.html#entity-刘贞" target="_blank" class="event-tag tag-person">刘贞</a>
+        <a href="place.html#entity-中山" target="_blank" class="event-tag tag-place">中山</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-022-026">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">卫青取河南地</a> <span class="event-id">022-026</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元朔二年，即公元前127年">前127年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-卫青" target="_blank" class="event-tag tag-person">卫青</a>
+        <a href="place.html#entity-高阙" target="_blank" class="event-tag tag-place">高阙</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="战争" id="event-030-011">
     <div style="flex:1">
@@ -34800,6 +35568,28 @@
     </div>
     <div class="event-chapter"><a href="../chapters/124_游侠列传.html#pn-12" target="_blank" class="chapter-ref-name">游侠列传 [12]</a></div>
   </div>
+  <div class="event-entry" data-type="分封" id="event-021-007">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">元朔三年大批王子封侯</a> <span class="event-id">021-007</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="元朔三年=前126年，表中纪年明确">前126年</span>
+        <span class="event-tag tag-type">分封</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="司法事件" id="event-021-014">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">王子侯坐罪个案</a> <span class="event-id">021-014</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="各案年份由表中纪年推算：兹侯元朔三年国除（前126年）、有利侯元狩元年国除（前122年）、东平侯元狩三年国除（前120年）、建成侯元狩六年国除（前117年）、宜成侯子太初元年国除（前104年）">前126年</span>
+        <span class="event-tag tag-type">司法事件</span>
+        <a href="person.html#entity-刘明" target="_blank" class="event-tag tag-person">刘明</a>
+        <a href="person.html#entity-刘钉" target="_blank" class="event-tag tag-person">刘钉</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
   <div class="event-entry" data-type="建设" id="event-029-013">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/029_河渠书.html#pn-8" target="_blank">河东渠田工程失败</a> <span class="event-id">029-013</span></div>
@@ -34947,6 +35737,16 @@
     </div>
     <div class="event-chapter"><a href="../chapters/130_太史公自序.html#pn-10.1" target="_blank" class="chapter-ref-name">太史公自序 [10.1]</a></div>
   </div>
+  <div class="event-entry" data-type="分封" id="event-021-008">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">元朔四年王子封侯</a> <span class="event-id">021-008</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="元朔四年=前125年，表中纪年明确">前125年</span>
+        <span class="event-tag tag-type">分封</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
   <div class="event-entry" data-type="家族事件" id="event-113-012">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/113_南越列传.html#pn-5" target="_blank">文王胡称病不入见而薨</a> <span class="event-id">113-012</span></div>
@@ -35035,6 +35835,44 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/020_建元以来侯者年表.html" target="_blank" class="chapter-ref-name">建元以来侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-020-013">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/020_建元以来侯者年表.html" target="_blank">丞相封侯制度化</a> <span class="event-id">020-013</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="公孙弘元朔五年（前124年）首开丞相封侯先河，至田千秋征和四年（前89年），跨度35年">前124年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-公孙弘" target="_blank" class="event-tag tag-person">公孙弘</a>
+        <a href="person.html#entity-石庆" target="_blank" class="event-tag tag-person">石庆</a>
+        <a href="person.html#entity-公孙贺" target="_blank" class="event-tag tag-person">公孙贺</a>
+        <a href="person.html#entity-田千秋" target="_blank" class="event-tag tag-person">田千秋</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/020_建元以来侯者年表.html" target="_blank" class="chapter-ref-name">建元以来侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="分封" id="event-021-009">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">元朔五年王子封侯</a> <span class="event-id">021-009</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="元朔五年=前124年，元朔六年=前123年，表中纪年明确">前124年</span>
+        <span class="event-tag tag-type">分封</span>
+        <a href="person.html#entity-刘贞" target="_blank" class="event-tag tag-person">刘贞</a>
+        <a href="person.html#entity-刘买" target="_blank" class="event-tag tag-person">刘买</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-022-027">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">卫青击右贤王公孙弘为丞相</a> <span class="event-id">022-027</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元朔五年，即公元前124年">前124年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-卫青" target="_blank" class="event-tag tag-person">卫青</a>
+        <a href="person.html#entity-公孙弘" target="_blank" class="event-tag tag-person">公孙弘</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="政治整顿" id="event-030-015">
     <div style="flex:1">
@@ -35519,6 +36357,38 @@
     </div>
     <div class="event-chapter"><a href="../chapters/123_大宛列传.html#pn-13" target="_blank" class="chapter-ref-name">大宛列传 [13]</a></div>
   </div>
+  <div class="event-entry" data-type="政治整顿" id="event-017-018">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank">淮南王安谋反被诛</a> <span class="event-id">017-018</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中前122年（元狩元年）条明确记载">前122年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+        <a href="person.html#entity-刘安" target="_blank" class="event-tag tag-person">刘安</a>
+        <a href="place.html#entity-寿春" target="_blank" class="event-tag tag-place">寿春</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/017_汉兴以来诸侯王年表.html" target="_blank" class="chapter-ref-name">汉兴以来诸侯王年表</a></div>
+  </div>
+  <div class="event-entry" data-type="分封" id="event-021-010">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">元狩元年城阳顷王子大批封侯</a> <span class="event-id">021-010</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="元狩元年=前122年，表中纪年明确">前122年</span>
+        <span class="event-tag tag-type">分封</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治整顿" id="event-022-028">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">淮南衡山王谋反自杀</a> <span class="event-id">022-028</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元狩元年，即公元前122年">前122年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="文化活动" id="event-024-009">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/024_乐书.html#pn-7.1" target="_blank">得神马作太一之歌</a> <span class="event-id">024-009</span></div>
@@ -35728,6 +36598,20 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/020_建元以来侯者年表.html" target="_blank" class="chapter-ref-name">建元以来侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-022-029">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">霍去病击匈奴至祁连</a> <span class="event-id">022-029</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元狩二年，即公元前121年">前121年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-霍去病" target="_blank" class="event-tag tag-person">霍去病</a>
+        <a href="person.html#entity-张骞" target="_blank" class="event-tag tag-person">张骞</a>
+        <a href="person.html#entity-李广" target="_blank" class="event-tag tag-person">李广</a>
+        <a href="place.html#entity-祁连" target="_blank" class="event-tag tag-place">祁连</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="政治活动" id="event-030-017">
     <div style="flex:1">
@@ -36126,6 +37010,33 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/012_孝武本纪.html#pn-13.7" target="_blank" class="chapter-ref-name">孝武本纪 [13.7]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-020-015">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/020_建元以来侯者年表.html" target="_blank">漠北大战功臣封侯</a> <span class="event-id">020-015</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中明确记载&quot;四年六月丁卯&quot;封侯，即元狩四年（公元前119年）六月丁卯日">前119年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-路博德" target="_blank" class="event-tag tag-person">路博德</a>
+        <a href="person.html#entity-复陆支" target="_blank" class="event-tag tag-person">复陆支</a>
+        <a href="person.html#entity-卫山" target="_blank" class="event-tag tag-person">卫山</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/020_建元以来侯者年表.html" target="_blank" class="chapter-ref-name">建元以来侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-022-030">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">卫青出定襄击单于</a> <span class="event-id">022-030</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元狩四年，即公元前119年">前119年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-卫青" target="_blank" class="event-tag tag-person">卫青</a>
+        <a href="person.html#entity-李广" target="_blank" class="event-tag tag-person">李广</a>
+        <a href="person.html#entity-公孙贺" target="_blank" class="event-tag tag-person">公孙贺</a>
+        <a href="place.html#entity-定襄" target="_blank" class="event-tag tag-place">定襄</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="政治整顿" id="event-028-041">
     <div style="flex:1">
@@ -36701,6 +37612,29 @@
     </div>
     <div class="event-chapter"><a href="../chapters/122_酷吏列传.html#pn-27" target="_blank" class="chapter-ref-name">酷吏列传 [27]</a></div>
   </div>
+  <div class="event-entry" data-type="分封" id="event-021-011">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">元鼎元年胶东康王子封侯</a> <span class="event-id">021-011</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;元鼎&quot;列明确标注&quot;元年&quot;，元鼎元年=前116年">前116年</span>
+        <span class="event-tag tag-type">分封</span>
+        <a href="person.html#entity-刘建" target="_blank" class="event-tag tag-person">刘建</a>
+        <a href="person.html#entity-刘昌" target="_blank" class="event-tag tag-person">刘昌</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="史论" id="event-021-015">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html#pn-1" target="_blank">太史公论推恩令</a> <span class="event-id">021-015</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time tag-time-approx" title="序言和赞辞为太史公论述，无具体纪年">约前116年</span>
+        <span class="event-tag tag-type">史论</span>
+        <a href="person.html#entity-司马迁" target="_blank" class="event-tag tag-person">司马迁</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html#pn-1" target="_blank" class="chapter-ref-name">建元已来王子侯者年表 [1]</a></div>
+  </div>
   <div class="event-entry" data-type="政治整顿" id="event-058-023">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/058_梁孝王世家.html#pn-20" target="_blank">济东王剽杀人</a> <span class="event-id">058-023</span></div>
@@ -37190,6 +38124,36 @@
     </div>
     <div class="event-chapter"><a href="../chapters/012_孝武本纪.html#pn-25.3" target="_blank" class="chapter-ref-name">孝武本纪 [25.3]</a></div>
   </div>
+  <div class="event-entry" data-type="政治整顿" id="event-018-020">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank">酎金坐罪大量国除</a> <span class="event-id">018-020</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表头&quot;建元至元封六年&quot;列明确记载&quot;元鼎五年&quot;坐酎金国除，元鼎五年即公元前112年">前112年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html" target="_blank" class="chapter-ref-name">高祖功臣侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治整顿" id="event-019-015">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/019_惠景间侯者年表.html" target="_blank">酎金坐罪国除</a> <span class="event-id">019-015</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="元鼎五年即公元前112年，年表明确记载各侯国因酎金国除">前112年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/019_惠景间侯者年表.html" target="_blank" class="chapter-ref-name">惠景间侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治整顿" id="event-020-014">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/020_建元以来侯者年表.html" target="_blank">酎金坐罪国除</a> <span class="event-id">020-014</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中明确记载&quot;元鼎五年&quot;坐酎金国除，即公元前112年。与《史记》其他篇章及《汉书》所载元鼎五年大规模酎金夺爵事件吻合">前112年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/020_建元以来侯者年表.html" target="_blank" class="chapter-ref-name">建元以来侯者年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治整顿" id="event-021-003">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">酎金坐罪大量国除</a> <span class="event-id">021-003</span></div>
@@ -37199,6 +38163,28 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="政治整顿" id="event-021-013">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank">酎金国除56侯详情</a> <span class="event-id">021-013</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="元鼎五年=前112年，与021-003一致。《中国历史大事年表》记载当年&quot;列侯献金不足被夺爵者一百零六人&quot;，本表56人为其中王子侯部分">前112年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/021_建元已来王子侯者年表.html" target="_blank" class="chapter-ref-name">建元已来王子侯者年表</a></div>
+  </div>
+  <div class="event-entry" data-type="战争" id="event-022-031">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">南越反伐南越东越</a> <span class="event-id">022-031</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载元鼎五年，即公元前112年">前112年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-路博德" target="_blank" class="event-tag tag-person">路博德</a>
+        <a href="person.html#entity-杨仆" target="_blank" class="event-tag tag-person">杨仆</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="政治整顿" id="event-028-048">
     <div style="flex:1">
@@ -37349,6 +38335,19 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/012_孝武本纪.html#pn-38.1" target="_blank" class="chapter-ref-name">孝武本纪 [38.1]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-020-011">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/020_建元以来侯者年表.html" target="_blank">南越平定封功臣</a> <span class="event-id">020-011</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中南越相关条目封侯时间集中在元鼎六年三月至七月及元封元年，即公元前111年至前110年">前111年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-杨仆" target="_blank" class="event-tag tag-person">杨仆</a>
+        <a href="person.html#entity-路博德" target="_blank" class="event-tag tag-person">路博德</a>
+        <a href="place.html#entity-番禺" target="_blank" class="event-tag tag-place">番禺</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/020_建元以来侯者年表.html" target="_blank" class="chapter-ref-name">建元以来侯者年表</a></div>
   </div>
   <div class="event-entry" data-type="自然灾害" id="event-027-017">
     <div style="flex:1">
@@ -38010,6 +39009,19 @@
     </div>
     <div class="event-chapter"><a href="../chapters/122_酷吏列传.html#pn-40" target="_blank" class="chapter-ref-name">酷吏列传 [40]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-020-012">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/020_建元以来侯者年表.html" target="_blank">平朝鲜封功臣</a> <span class="event-id">020-012</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="表中朝鲜相关条目封侯时间集中在元封三年（前108年）四月至六月">前108年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-韩阴" target="_blank" class="event-tag tag-person">韩阴</a>
+        <a href="person.html#entity-参" target="_blank" class="event-tag tag-person">参</a>
+        <a href="place.html#entity-朝鲜" target="_blank" class="event-tag tag-place">朝鲜</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/020_建元以来侯者年表.html" target="_blank" class="chapter-ref-name">建元以来侯者年表</a></div>
+  </div>
   <div class="event-entry" data-type="战争" id="event-027-018">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/027_天官书.html#pn-120" target="_blank">朝鲜拔星茀河戍</a> <span class="event-id">027-018</span></div>
@@ -38378,7 +39390,6 @@
       <div class="event-tags">
         <span class="event-tag tag-time" title="太史公编五帝世表是司马迁写作《史记》的具体活动。太初元年（前104年）始作太史公书，年表前104年条有明确记载。此为写作时间的确定推算，应从[约]升级为确定推算[公元前104年]。另外地点字段&quot;=共和=&quot;有误，共和是年表中的纪年概念而非地点，应修正。">前104年</span>
         <span class="event-tag tag-type">文化活动</span>
-        <a href="place.html#entity-共和" target="_blank" class="event-tag tag-place">共和</a>
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/013_三代世表.html#pn-2.4" target="_blank" class="chapter-ref-name">三代世表 [2.4]</a></div>
@@ -38392,6 +39403,16 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/018_高祖功臣侯者年表.html#pn-3.5" target="_blank" class="chapter-ref-name">高祖功臣侯者年表 [3.5]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治改革" id="event-022-032">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">太初改历以正月为岁首</a> <span class="event-id">022-032</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载太初元年，即公元前104年">前104年</span>
+        <span class="event-tag tag-type">政治改革</span>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="改革" id="event-023-010">
     <div style="flex:1">
@@ -38788,6 +39809,18 @@
     </div>
     <div class="event-chapter"><a href="../chapters/012_孝武本纪.html#pn-52.8" target="_blank" class="chapter-ref-name">孝武本纪 [52.8]</a></div>
   </div>
+  <div class="event-entry" data-type="战争" id="event-022-033">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">贰师将军出击匈奴</a> <span class="event-id">022-033</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载天汉四年，即公元前97年">前97年</span>
+        <span class="event-tag tag-type">战争</span>
+        <a href="person.html#entity-李广利" target="_blank" class="event-tag tag-person">李广利</a>
+        <a href="place.html#entity-朔方" target="_blank" class="event-tag tag-place">朔方</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治整顿" id="event-125-009">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/125_佞幸列传.html#pn-6" target="_blank">李延年骄恣被诛</a> <span class="event-id">125-009</span></div>
@@ -38837,6 +39870,18 @@
     </div>
     <div class="event-chapter"><a href="../chapters/005_秦本纪.html#pn-69" target="_blank" class="chapter-ref-name">秦本纪 [69]</a></div>
   </div>
+  <div class="event-entry" data-type="政治整顿" id="event-022-034">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">巫蛊之祸太子发兵</a> <span class="event-id">022-034</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载征和二年，即公元前91年">前91年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+        <a href="person.html#entity-江充" target="_blank" class="event-tag tag-person">江充</a>
+        <a href="person.html#entity-刘屈牦" target="_blank" class="event-tag tag-person">刘屈牦</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-104-013">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/104_田叔列传.html#pn-4.5" target="_blank">田仁纵太子诛死</a> <span class="event-id">104-013</span></div>
@@ -38880,6 +39925,18 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/130_太史公自序.html#pn-149.4" target="_blank" class="chapter-ref-name">太史公自序 [149.4]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-035">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">贰师降胡田千秋为丞相</a> <span class="event-id">022-035</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载征和三年，即公元前90年">前90年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-李广利" target="_blank" class="event-tag tag-person">李广利</a>
+        <a href="person.html#entity-田千秋" target="_blank" class="event-tag tag-person">田千秋</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="战争" id="event-110-034">
     <div style="flex:1">
@@ -38929,9 +39986,22 @@
     </div>
     <div class="event-chapter"><a href="../chapters/013_三代世表.html#pn-9.8" target="_blank" class="chapter-ref-name">三代世表 [9.8]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-036">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">霍光为大将军辅政</a> <span class="event-id">022-036</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载后元二年，即公元前87年">前87年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-霍光" target="_blank" class="event-tag tag-person">霍光</a>
+        <a href="person.html#entity-金日磾" target="_blank" class="event-tag tag-person">金日磾</a>
+        <a href="person.html#entity-上官桀" target="_blank" class="event-tag tag-person">上官桀</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
 </details>
 <details class="letter-section" id="period-其他">
-  <summary class="letter-heading">其他（8）</summary>
+  <summary class="letter-heading">其他（14）</summary>
   <div class="event-entry" data-type="政治整顿" id="event-060-018">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/060_三王世家.html" target="_blank">燕王旦谋反自杀</a> <span class="event-id">060-018</span></div>
@@ -38968,6 +40038,17 @@
     </div>
     <div class="event-chapter"><a href="../chapters/096_张丞相列传.html#pn-9.1" target="_blank" class="chapter-ref-name">张丞相列传 [9.1]</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-037">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">霍光卒宣帝亲政</a> <span class="event-id">022-037</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载地节二年，即公元前68年">前68年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-霍光" target="_blank" class="event-tag tag-person">霍光</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-050-006">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/050_楚元王世家.html#pn-4.1" target="_blank">楚王纯谋反国除</a> <span class="event-id">050-006</span></div>
@@ -38990,6 +40071,17 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/060_三王世家.html" target="_blank" class="chapter-ref-name">三王世家</a></div>
+  </div>
+  <div class="event-entry" data-type="政治整顿" id="event-022-038">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">霍禹腰斩霍氏族灭</a> <span class="event-id">022-038</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载地节四年，即公元前66年">前66年</span>
+        <span class="event-tag tag-type">政治整顿</span>
+        <a href="person.html#entity-霍禹" target="_blank" class="event-tag tag-person">霍禹</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
   <div class="event-entry" data-type="政治改革" id="event-096-021">
     <div style="flex:1">
@@ -39016,6 +40108,17 @@
     </div>
     <div class="event-chapter"><a href="../chapters/060_三王世家.html" target="_blank" class="chapter-ref-name">三王世家</a></div>
   </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-039">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">匡衡为丞相</a> <span class="event-id">022-039</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载建昭三年，即公元前36年">前36年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-匡衡" target="_blank" class="event-tag tag-person">匡衡</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
   <div class="event-entry" data-type="政治活动" id="event-096-022">
     <div style="flex:1">
       <div class="event-name"><a href="../chapters/096_张丞相列传.html#pn-11.2" target="_blank">匡衡读书为相</a> <span class="event-id">096-022</span></div>
@@ -39027,6 +40130,39 @@
       </div>
     </div>
     <div class="event-chapter"><a href="../chapters/096_张丞相列传.html#pn-11.2" target="_blank" class="chapter-ref-name">张丞相列传 [11.2]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-040">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">王凤为大司马大将军</a> <span class="event-id">022-040</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载竟宁元年，即公元前33年">前33年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-王凤" target="_blank" class="event-tag tag-person">王凤</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
+  </div>
+  <div class="event-entry" data-type="学术论述" id="event-013-020">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/013_三代世表.html#pn-4.1" target="_blank">褚先生论天命与信疑</a> <span class="event-id">013-020</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="褚先生（褚少孙）为汉成帝时期（前32—前7年）博士，活跃于约前32年前后。此为学术讨论的大致时间，使用[约]标注。">前32年</span>
+        <span class="event-tag tag-type">学术论述</span>
+        <a href="person.html#entity-张夫子" target="_blank" class="event-tag tag-person">张夫子</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/013_三代世表.html#pn-4.1" target="_blank" class="chapter-ref-name">三代世表 [4.1]</a></div>
+  </div>
+  <div class="event-entry" data-type="政治活动" id="event-022-041">
+    <div style="flex:1">
+      <div class="event-name"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank">王商为丞相</a> <span class="event-id">022-041</span></div>
+      <div class="event-tags">
+        <span class="event-tag tag-time" title="原文记载建始四年，即公元前29年">前29年</span>
+        <span class="event-tag tag-type">政治活动</span>
+        <a href="person.html#entity-王商" target="_blank" class="event-tag tag-person">王商</a>
+      </div>
+    </div>
+    <div class="event-chapter"><a href="../chapters/022_汉兴以来将相名臣年表.html" target="_blank" class="chapter-ref-name">汉兴以来将相名臣年表</a></div>
   </div>
 </details>
 </div>
