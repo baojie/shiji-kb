@@ -17,11 +17,11 @@ def validate_multiple_chapters(chapter_numbers):
     for num in chapter_numbers:
         # 构建文件路径
         md_file = base_dir / 'chapter_md' / f'{num:03d}_*.tagged.md'
-        txt_file = base_dir / 'chapter_numbered' / f'{num:03d}_*.txt'
+        txt_file = base_dir / 'archive/chapter_numbered' / f'{num:03d}_*.txt'
 
         # 使用glob查找文件
         md_files = list(base_dir.glob(f'chapter_md/{num:03d}_*.tagged.md'))
-        txt_files = list(base_dir.glob(f'chapter_numbered/{num:03d}_*.txt'))
+        txt_files = list(base_dir.glob(f'archive/chapter_numbered/{num:03d}_*.txt'))
 
         if not md_files:
             print(f"\n⚠️  章节 {num:03d}: MD文件不存在")

@@ -6,6 +6,42 @@
 
 ---
 
+## 文档目录重构 + 新增SKILL_年份消歧 ([769377f](https://github.com/baojie/shiji-kb/commit/769377f)) - 2026-03-12
+
+### 重构 (Refactored)
+
+- 📁 **doc/ 目录重组为6个主题子目录**
+  - `doc/spec/`：标注格式规范、实体标注方案、段落编号规范、紫色编号设计、校验工具使用指南、校验覆盖范围
+  - `doc/workflow/`：开发工作流程、GitHub页面部署
+  - `doc/methodology/`：研究方法总则、史记Markdown转化逻辑、史记文本处理过程、史记语法高亮创造过程
+  - `doc/analysis/`：史记统计分析、史记高级分析计划、词频统计表/结果
+  - `doc/events/`：五轮事件年代反思总结、事件年代反思创造过程详解
+  - `doc/entities/`：实体消歧别名反思报告、史记君主列表整理过程、小节划分完成报告、表格结构化计划
+- 🔤 **8个英文文档名统一改为中文**
+  - `FORMAT_SPECIFICATION.md` → `标注格式规范.md`
+  - `ENTITY_TAGGING_SCHEME.md` → `实体标注方案.md`
+  - `PARAGRAPH_NUMBERING_SUMMARY.md` → `段落编号规范.md`
+  - `PURPLE_NUMBERS.md` → `紫色编号设计.md`
+  - `LINT_GUIDE.md` → `校验工具使用指南.md`
+  - `LINTER_COVERAGE.md` → `校验覆盖范围.md`
+  - `WORKFLOW.md` → `开发工作流程.md`
+  - `GITHUB_PAGES_SETUP.md` → `GitHub页面部署.md`
+- 📦 **`doc/shiji-styles.css` 移至项目根级 `css/shiji-styles.css`**（源码资产，非文档）
+- 🗑️ **删除 `doc/disambiguation.md`**（内容拆分：人名部分已由 SKILL_实体消歧.md 覆盖，年份部分提升为新SKILL）
+- 🔗 **57个文件中的路径引用全部同步更新**
+
+### 新增 (Added)
+
+- 📖 **`SKILL_年份消歧.md`**：在位纪年→公元年三阶段消歧管线方法论（380位君主，1,498条映射，预过滤+5级策略+编年索引）
+- 📊 **`doc/analysis/未标注实体分析报告.md`**：44万字未标注文本的实体类型分析，发现典籍书名/礼仪/刑法/思想等4类新可标注实体，设计对应标注语法（《》`+` `#` `|`）
+- 🔄 **`doc/workflow/开发工作流程.md` 全面重写**：从1.0版（仅覆盖HTML生成）升级为覆盖完整管线（文本标注→实体系统→事件系统→年代系统→HTML发布→质量检查）
+
+### 更新 (Changed)
+
+- README：doc/ 目录树更新为子目录结构，SKILL 表新增年份消歧行，SKILL 计数 7→8
+
+---
+
 ## 跨章因果推理 + 关系统计全面更新 ([3a85dbe](https://github.com/baojie/shiji-kb/commit/3a85dbe)) - 2026-03-12
 
 ### 新增 (Added)

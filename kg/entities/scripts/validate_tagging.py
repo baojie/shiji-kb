@@ -178,7 +178,7 @@ if __name__ == '__main__':
     # 测试 005 章
     base_dir = Path(__file__).parent.parent.parent.parent
     md_file = base_dir / 'chapter_md' / '005_秦本纪.tagged.md'
-    txt_file = base_dir / 'chapter_numbered' / '005_秦本纪.txt'
+    txt_file = base_dir / 'archive/chapter_numbered' / '005_秦本纪.txt'
 
     if not md_file.exists():
         print(f"错误: MD 文件不存在: {md_file}")
