@@ -26,7 +26,7 @@ ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entity_aliases.json'
 PERSON_PATTERN = r'@([^@\n]+)@'
 
 # 标记符号，含这些字符的不是合法人名
-INVALID_CHARS = set('$&=%~*!?🌿〘〙〚〛，。、；：""''（）《》【】·')
+INVALID_CHARS = set('$&=%~*!?〘〙〚〛，。、；：""''（）《》【】·')
 
 # 通用称谓/职衔，不能作为别名（太泛泛，在不同章节指不同人）
 GENERIC_TITLES = {

@@ -19,7 +19,6 @@
 - !天文! -> <span class="astronomy">天文</span>
 - 〚神话〛 -> <span class="mythical">神话</span>
 - 〘动植物〙 -> <span class="flora-fauna">动植物</span>
-- 🌿动植物🌿 -> <span class="flora-fauna">动植物</span>  (legacy, 数据迁移中)
 """
 
 import re
@@ -46,11 +45,9 @@ ENTITY_PATTERNS = [
     (r'&([^&<>"]+)&', r'<span class="dynasty" title="朝代/氏族">\1</span>'),     # 朝代
     (r'\^([^<>^"]+)\^', r'<span class="institution" title="制度">\1</span>'),  # 制度
     (r'~([^~<>"]+)~', r'<span class="tribe" title="族群">\1</span>'),       # 族群
-    (r'〘([^〘〙<>"]+)〙', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物（新符号）
-    (r'🌿([^🌿<>"]+)🌿', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物（legacy）
+    (r'〘([^〘〙<>"]+)〙', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物
     (r'!([^!<>"]+)!', r'<span class="astronomy" title="天文/历法">\1</span>'),   # 天文
-    (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话（〚〛）
-    (r'\?([^?<>"]+)\?', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话（legacy ?，数据迁移中）
+    (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话
     (r'@([^@<>"]+)@', r'<span class="person" title="人名">\1</span>'),      # 人名（最后处理，常为内层）
 ]
 
@@ -263,8 +260,8 @@ def convert_entities(text):
 
     # 安全网：清理残留的标注符号
     # 1. 紧邻<span>标签的裸字符（嵌套标注残留）
-    text = re.sub(r'[\$@\^~\*!?🌿〘〙〚〛](?=<span[\s>])', '', text)
-    text = re.sub(r'(?<=</span>)[\$@\^~\*!?🌿〘〙〚〛]', '', text)
+    text = re.sub(r'[\$@\^~\*!〘〙〚〛](?=<span[\s>])', '', text)
+    text = re.sub(r'(?<=</span>)[\$@\^~\*!〘〙〚〛]', '', text)
     # 2. 清除残留的 $ 和 @（源数据中未配对的标注符号）
     #    这两个字符在古汉语中不出现，且不在生成的HTML属性中，可安全清除
     #    注意：不能清除 % = & ，因为它们在HTML中有合法用途

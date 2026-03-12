@@ -118,9 +118,8 @@ def clean_entity_tags(text):
     text = re.sub(r'!([^!]+)!', r'\1', text)
     # ?神话?
     text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
-    # 〘动植物〙（新符号）/ 🌿动植物🌿（legacy）
+    # 〘动植物〙
     text = re.sub(r'〘([^〘〙]+)〙', r'\1', text)
-    text = re.sub(r'🌿([^🌿]+)🌿', r'\1', text)
     # $标题/职位$
     text = re.sub(r'\$([^$]+)\$', r'\1', text)
 

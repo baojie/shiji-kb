@@ -153,7 +153,7 @@ def parse_all_events_from_files():
 
             events.append({
                 'event_id': event_id,
-                'name': re.sub(r'[@=$%&^~*!?〘〙〚〛🌿]', '', event_name).strip(),
+                'name': re.sub(r'[@=$%&^~*!?〘〙〚〛]', '', event_name).strip(),
                 'chapter_id': chapter_id,
                 'ch_num': ch_num,
                 'ce_year': ce_year,

@@ -309,7 +309,6 @@ entity_index.json（4.1MB，11,069个实体）
 ENTITY_PATTERNS = [
     (r'\*\*(.+?)\*\*', 'bold'),        # 1. 粗体必须先于 *器物*
     (r'〘(.+?)〙', 'flora-fauna'),      # 2. 动植物（新CJK符号）
-    (r'🌿(.+?)🌿', 'flora-fauna'),     # 3. 动植物（legacy emoji，数据迁移中）
     (r'\^(.+?)\^', 'institution'),      # 3. 制度
     (r'\$(.+?)\$', 'official'),         # 4. 官职
     (r'=(.+?)=', 'place'),             # 5. 地名

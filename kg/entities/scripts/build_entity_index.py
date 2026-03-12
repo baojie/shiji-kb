@@ -43,7 +43,6 @@ ENTITY_TYPES = [
     ('astronomy',   r'!([^!\n]+)!',            'astronomy',   '天文',     'astronomy.html'),
     ('mythical',    r'〚([^〚〛\n]+)〛',          'mythical',    '神话',     'mythical.html'),
     ('flora-fauna', r'〘([^〘〙\n]+)〙',       'flora-fauna', '动植物',   'flora-fauna.html'),  # 新符号
-    ('flora-fauna', r'🌿([^🌿\n]+)🌿',        'flora-fauna', '动植物',   'flora-fauna.html'),  # legacy
 ]
 
 # 段落编号模式
@@ -180,7 +179,7 @@ def extract_events_from_index_files(event_dir):
             if not event_name or not event_id:
                 continue
 
-            clean_name = re.sub(r'[@=$%&^~*!?〘〙〚〛🌿]', '', event_name).strip()
+            clean_name = re.sub(r'[@=$%&^~*!?〘〙〚〛]', '', event_name).strip()
             para_num = para_map.get(event_id, '')
             reasoning = reasoning_map.get(event_id, '')
             if clean_name:
@@ -209,7 +208,7 @@ def _parse_ce_year(time_str):
 
 def _strip_entity_tags(text):
     """去除实体标记符号，保留纯文本"""
-    return re.sub(r'[@=$%&^~*!?〘〙〚〛🌿]', '', text).strip()
+    return re.sub(r'[@=$%&^~*!?〘〙〚〛]', '', text).strip()
 
 
 def _extract_people_list(people_str):

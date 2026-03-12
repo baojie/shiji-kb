@@ -71,7 +71,7 @@ class MarkdownLinter:
                     )
 
                 # 检查是否包含其他标注符号
-                if any(char in content for char in '@=#%&^~*!?🌿〘〙$'):
+                if any(char in content for char in '@=#%&^~*!〘〙〚〛$'):
                     self.warnings.append(
                         f"第{self._get_line_num(match.start())}行: "
                         f"{entity_type}标注可能嵌套了其他标注: {match.group(0)[:30]}..."

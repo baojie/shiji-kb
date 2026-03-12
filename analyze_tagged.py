@@ -25,8 +25,7 @@ ANNOTATION_TYPES = [
     ('~', '~', 'Ethnic Group 族群'),
     ('*', '*', 'Artifact 器物'),
     ('!', '!', 'Astronomy 天文'),
-    ('?', '?', 'Mythology 神话'),
-    ('🌿', '🌿', 'Flora/Fauna 动植物'),  # TODO: 已迁移至 〘...〙，等待数据文件批量替换后删除此行
+    ('〚', '〛', 'Mythology 神话'),
     ('〘', '〙', 'Flora/Fauna 动植物'),
 ]
 
@@ -66,13 +65,9 @@ def extract_annotated_spans(text):
     spans = []
 
     for open_m, close_m, label in ANNOTATION_TYPES:
-        if open_m == '🌿':
-            # legacy emoji markers (data migration pending)
-            pattern = r'🌿(.*?)🌿'
-        else:
-            om = re.escape(open_m)
-            cm = re.escape(close_m)
-            pattern = om + r'(.*?)' + cm
+        om = re.escape(open_m)
+        cm = re.escape(close_m)
+        pattern = om + r'(.*?)' + cm
 
         for m in re.finditer(pattern, text):
             inner = m.group(1)
@@ -85,12 +80,7 @@ def remove_all_annotations(text):
     Remove annotation markers AND their contents from the text.
     Returns the stripped text.
     """
-    # Legacy Flora/Fauna emoji (data migration pending → 〘...〙)
-    text = re.sub(r'🌿.*?🌿', '', text)
-
     for open_m, close_m, label in ANNOTATION_TYPES:
-        if open_m == '🌿':
-            continue  # already handled above
         om = re.escape(open_m)
         cm = re.escape(close_m)
         text = re.sub(om + r'.*?' + cm, '', text)

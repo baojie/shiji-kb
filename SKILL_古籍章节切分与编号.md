@@ -205,7 +205,7 @@ def split_by_chapter(full_text):
 ```python
 def clean_title(title):
     """去除标题中的实体标记"""
-    for ch in ['@', '=', '$', '%', '&', '^', '~', '*', '!', '?', '🌿', '#']:
+    for ch in ['@', '=', '$', '%', '&', '^', '~', '*', '!', '〘', '〙', '〚', '〛', '#']:
         title = title.replace(ch, '')
     return title.strip()
 ```

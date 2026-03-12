@@ -14,7 +14,7 @@ import json
 def extract_plain_text(tagged_md_file):
     """
     从标注的Markdown文件中提取纯文本
-    去除所有标注符号：@人名@, =地名=, $官职$, %时间%, &朝代&, ^制度^, ~族群~, *器物*, !天文!, ?神话?, 〘动植物〙 (旧: 🌿动植物🌿)
+    去除所有标注符号：@人名@, =地名=, $官职$, %时间%, &朝代&, ^制度^, ~族群~, *器物*, !天文!, 〚神话〛, 〘动植物〙
     去除段落编号：[1.1], [2.3]等
     去除标题：#开头的行
     """
@@ -50,8 +50,6 @@ def extract_plain_text(tagged_md_file):
     text = re.sub(r'!([^!]+)!', r'\1', text)
     # ?神话?
     text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
-    # 🌿动植物🌿 (legacy emoji标注)
-    text = re.sub(r'🌿([^🌿]+)🌿', r'\1', text)
     # 〘动植物〙 (新CJK符号)
     text = re.sub(r'〘([^〘〙]+)〙', r'\1', text)
     # $标题/职位$ (另一种标注)
