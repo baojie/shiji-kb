@@ -17,8 +17,9 @@
 - ~族群~ -> <span class="tribe">族群</span>
 - *器物* -> <span class="artifact">器物</span>
 - !天文! -> <span class="astronomy">天文</span>
-- ?神话? -> <span class="mythical">神话</span>
-- 🌿动植物🌿 -> <span class="flora-fauna">动植物</span>
+- 〚神话〛 -> <span class="mythical">神话</span>
+- 〘动植物〙 -> <span class="flora-fauna">动植物</span>
+- 🌿动植物🌿 -> <span class="flora-fauna">动植物</span>  (legacy, 数据迁移中)
 """
 
 import re
@@ -45,9 +46,11 @@ ENTITY_PATTERNS = [
     (r'&([^&<>"]+)&', r'<span class="dynasty" title="朝代/氏族">\1</span>'),     # 朝代
     (r'\^([^<>^"]+)\^', r'<span class="institution" title="制度">\1</span>'),  # 制度
     (r'~([^~<>"]+)~', r'<span class="tribe" title="族群">\1</span>'),       # 族群
-    (r'🌿([^🌿<>"]+)🌿', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物
+    (r'〘([^〘〙<>"]+)〙', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物（新符号）
+    (r'🌿([^🌿<>"]+)🌿', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物（legacy）
     (r'!([^!<>"]+)!', r'<span class="astronomy" title="天文/历法">\1</span>'),   # 天文
-    (r'\?([^?<>"]+)\?', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话
+    (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话（〚〛）
+    (r'\?([^?<>"]+)\?', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话（legacy ?，数据迁移中）
     (r'@([^@<>"]+)@', r'<span class="person" title="人名">\1</span>'),      # 人名（最后处理，常为内层）
 ]
 
@@ -260,8 +263,8 @@ def convert_entities(text):
 
     # 安全网：清理残留的标注符号
     # 1. 紧邻<span>标签的裸字符（嵌套标注残留）
-    text = re.sub(r'[\$@\^~\*!?🌿](?=<span[\s>])', '', text)
-    text = re.sub(r'(?<=</span>)[\$@\^~\*!?🌿]', '', text)
+    text = re.sub(r'[\$@\^~\*!?🌿〘〙〚〛](?=<span[\s>])', '', text)
+    text = re.sub(r'(?<=</span>)[\$@\^~\*!?🌿〘〙〚〛]', '', text)
     # 2. 清除残留的 $ 和 @（源数据中未配对的标注符号）
     #    这两个字符在古汉语中不出现，且不在生成的HTML属性中，可安全清除
     #    注意：不能清除 % = & ，因为它们在HTML中有合法用途
@@ -318,7 +321,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
     
     # 确定CSS文件路径
     if css_file is None:
-        css_file = md_path.parent.parent / 'doc' / 'shiji-styles.css'
+        css_file = md_path.parent.parent / 'docs' / 'css' / 'shiji-styles.css'
     
     # 读取Markdown内容
     with open(md_path, 'r', encoding='utf-8') as f:
@@ -744,9 +747,29 @@ if __name__ == '__main__':
         print("用法: python render_shiji_html.py <markdown文件> [输出文件] [css文件]")
         print("示例: python render_shiji_html.py chapter_md/001_五帝本纪.md")
         sys.exit(1)
-    
+
     md_file = sys.argv[1]
     output_file = sys.argv[2] if len(sys.argv) > 2 else None
     css_file = sys.argv[3] if len(sys.argv) > 3 else None
-    
-    markdown_to_html(md_file, output_file, css_file)
+
+    # 自动推断前后章导航（避免单章渲染时丢失导航链接）
+    # 扫描同目录下按文件名排序的所有 .tagged.md 文件
+    from pathlib import Path as _Path
+    _md_path = _Path(md_file)
+    _siblings = sorted(_md_path.parent.glob('*.tagged.md'))
+    _prev_chapter = None
+    _next_chapter = None
+    if len(_siblings) > 1:
+        try:
+            _idx = _siblings.index(_md_path.resolve())
+        except ValueError:
+            _idx = next((i for i, p in enumerate(_siblings) if p.name == _md_path.name), -1)
+        if _idx > 0:
+            _prev_name = _siblings[_idx - 1].stem.replace('.tagged', '')
+            _prev_chapter = f'{_prev_name}.html'
+        if _idx >= 0 and _idx < len(_siblings) - 1:
+            _next_name = _siblings[_idx + 1].stem.replace('.tagged', '')
+            _next_chapter = f'{_next_name}.html'
+
+    markdown_to_html(md_file, output_file, css_file,
+                     prev_chapter=_prev_chapter, next_chapter=_next_chapter)

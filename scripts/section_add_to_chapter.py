@@ -28,8 +28,9 @@ def clean_text(text):
     text = re.sub(r'~([^~]+)~', r'\1', text)
     text = re.sub(r'\*([^*]+)\*', r'\1', text)
     text = re.sub(r'!([^!]+)!', r'\1', text)
-    text = re.sub(r'\?([^?]+)\?', r'\1', text)
-    text = re.sub(r'🌿([^🌿]+)🌿', r'\1', text)
+    text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
+    text = re.sub(r'〘([^〘〙]+)〙', r'\1', text)  # 动植物（新符号）
+    text = re.sub(r'🌿([^🌿]+)🌿', r'\1', text)  # 动植物（legacy）
     text = re.sub(r'\$([^$]+)\$', r'\1', text)
     return text
 

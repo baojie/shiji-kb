@@ -98,7 +98,7 @@ def parse_events():
 
             # 提取人物
             people = re.findall(r'@([^@]+)@', people_str)
-            clean_name = re.sub(r'[@=$%&^~*!?🌿]', '', event_name).strip()
+            clean_name = re.sub(r'[@=$%&^~*!?〘〙〚〛🌿]', '', event_name).strip()
 
             events.append({
                 'event_id': event_id,

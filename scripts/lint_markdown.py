@@ -39,8 +39,8 @@ class MarkdownLinter:
             '族群': r'~([^~]+)~',
             '器物': r'\*([^*]+)\*',
             '天文': r'!([^!]+)!',
-            '神话': r'\?([^?]+)\?',
-            '动植物': r'🌿([^🌿]+)🌿',
+            '神话': r'〚([^〚〛]+)〛',
+            '动植物': r'〘([^〘〙]+)〙',
             '标题/职位': r'\$([^$]+)\$'
         }
 
@@ -71,7 +71,7 @@ class MarkdownLinter:
                     )
 
                 # 检查是否包含其他标注符号
-                if any(char in content for char in '@=#%&^~*!?🌿$'):
+                if any(char in content for char in '@=#%&^~*!?🌿〘〙$'):
                     self.warnings.append(
                         f"第{self._get_line_num(match.start())}行: "
                         f"{entity_type}标注可能嵌套了其他标注: {match.group(0)[:30]}..."

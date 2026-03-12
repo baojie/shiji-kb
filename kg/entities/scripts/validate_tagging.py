@@ -38,9 +38,11 @@ def remove_all_tags(text):
     # ~tribe~ - 部落
     text = re.sub(r'~([^~]+)~', r'\1', text)
     # ?deity? - 神灵
-    text = re.sub(r'\?([^?]+)\?', r'\1', text)
-    # 🌿animal🌿 - 动植物
+    text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
+    # 🌿animal🌿 - 动植物 (legacy，数据迁移中)
     text = re.sub(r'🌿([^🌿]+)🌿', r'\1', text)
+    # 〘animal〙 - 动植物 (新符号)
+    text = re.sub(r'〘([^〘〙]+)〙', r'\1', text)
     # !event! - 天象
     text = re.sub(r'!([^!]+)!', r'\1', text)
 
