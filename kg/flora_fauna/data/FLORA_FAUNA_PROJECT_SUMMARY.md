@@ -14,7 +14,7 @@
 - **样式**: 森林绿色 (#228B22)，加粗
 - **文件**:
   - [render_shiji_html.py](render_shiji_html.py) - 添加正则表达式模式
-  - [doc/shiji-styles.css](doc/shiji-styles.css) - 添加样式定义
+  - [css/shiji-styles.css](css/shiji-styles.css) - 添加样式定义
 
 #### 1.2 HTML优化
 - 提取CSS到独立文件: `docs/css/chapter-nav.css`
@@ -53,7 +53,7 @@
   - 统计摘要和重要发现
 
 #### 3.2 完整实体方案
-- [ENTITY_TAGGING_SCHEME.md](ENTITY_TAGGING_SCHEME.md)
+- [实体标注方案.md](实体标注方案.md)
   - 现有11种实体类型文档
   - 建议新增6种实体类型（方位、颜色、自然现象、数字、德行、材料）
   - 技术实现代码和CSS样式
@@ -170,7 +170,7 @@ shiji-kb/
 │   └── chapters/                 # 生成的HTML文件
 ├── chapter_md/                   # Markdown源文件
 ├── FLORA_FAUNA_TAGGING_GUIDE.md  # 动植物标注指南
-├── ENTITY_TAGGING_SCHEME.md      # 完整实体标注方案
+├── 实体标注方案.md         # 完整实体标注方案
 └── README.md                     # 项目说明
 ```
 

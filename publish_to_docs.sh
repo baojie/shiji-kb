@@ -29,7 +29,7 @@ mkdir -p docs/entities
 
 # 复制 CSS 文件
 echo "2. 复制 CSS 样式文件..."
-cp doc/shiji-styles.css docs/css/
+cp css/shiji-styles.css docs/css/
 cp docs/css/chapter-nav.css docs/css/ 2>/dev/null || echo "   chapter-nav.css 已存在"
 cp docs/css/entity-index.css docs/css/ 2>/dev/null || echo "   entity-index.css 已存在"
 

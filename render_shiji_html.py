@@ -295,7 +295,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
     Args:
         md_file: 输入的Markdown文件路径
         output_file: 输出的HTML文件路径（可选，默认为同名.html）
-        css_file: CSS文件路径（可选，默认为doc/shiji-styles.css）
+        css_file: CSS文件路径（可选，默认为css/shiji-styles.css）
         prev_chapter: 上一章的文件名（可选）
         next_chapter: 下一章的文件名（可选）
         original_text_file: 原文txt文件的路径（可选）
@@ -694,7 +694,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         purple_numbers_js = os.path.relpath(str(Path(css_file).parent.parent / 'js' / 'purple-numbers.js'), output_path.parent)
     except Exception:
         # 如果失败，使用简单的相对路径（假设标准目录结构）
-        css_href = "../doc/shiji-styles.css"
+        css_href = "../css/shiji-styles.css"
         chapter_nav_css = "../css/chapter-nav.css"
         purple_numbers_js = "../js/purple-numbers.js"
 

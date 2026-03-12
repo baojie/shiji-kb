@@ -311,9 +311,9 @@ print(f"共发生{len(uprisings)}次起义")
 
 ## 参考文档
 
-- [表格结构化计划](../doc/表格结构化计划.md) - 详细实施方案
+- [表格结构化计划](../doc/entities/表格结构化计划.md) - 详细实施方案
 - [项目README](../README.md) - 总体项目说明
-- [实体标注规范](../doc/ENTITY_TAGGING_SCHEME.md) - 实体标准
+- [实体标注规范](../doc/spec/实体标注方案.md) - 实体标准
 
 ---
 

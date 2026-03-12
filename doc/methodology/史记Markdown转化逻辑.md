@@ -159,7 +159,7 @@ python generate_all_chapters.py
 [1] @黄帝@居=轩辕之丘=，娶於&西陵&之女。$天子$受命，%元年%始。
 ```
 
-渲染器会把上行转换为相应的 `<span class="...">` 标签，由 `doc/shiji-styles.css` 控制视觉样式。
+渲染器会把上行转换为相应的 `<span class="...">` 标签，由 `css/shiji-styles.css` 控制视觉样式。
 
 #### 对话引号的自动识别与样式
 

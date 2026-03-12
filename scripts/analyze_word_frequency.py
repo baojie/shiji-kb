@@ -133,14 +133,14 @@ def main():
     }
 
     # 保存为JSON
-    output_file = 'doc/词频统计结果.json'
+    output_file = 'doc/analysis/词频统计结果.json'
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"✅ JSON结果已保存到：{output_file}")
 
     # 生成Markdown格式的统计表
     md_output = generate_markdown_report(results)
-    md_file = 'doc/词频统计表.md'
+    md_file = 'doc/analysis/词频统计表.md'
     with open(md_file, 'w', encoding='utf-8') as f:
         f.write(md_output)
     print(f"✅ Markdown报告已保存到：{md_file}")
