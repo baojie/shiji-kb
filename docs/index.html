@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>史记知识库 - 命名实体标注版</title>
+    <title>史记知识库 - AI驱动的历史知识图谱</title>
     <link rel="stylesheet" href="css/shiji-styles.css">
     <style>
         body {
@@ -247,7 +247,7 @@
     </style>
 </head>
 <body>
-    <h1>📜 史记知识库 - 命名实体标注版</h1>
+    <h1>📜 史记知识库 - AI驱动的历史知识图谱</h1>
 
     <div class="intro collapsed">
         <h2 onclick="toggleIntro()">
@@ -255,7 +255,9 @@
             <span class="toggle-arrow">▼</span>
         </h2>
         <div class="intro-content">
-            <p>本项目是《史记》全130章的命名实体标注知识库。采用11类实体标注系统，对所有人名、地名、官职、朝代、器物等关键信息进行了精细标注，并使用Biblical-style段落编号系统（Purple Numbers），便于引用和学术研究。</p>
+            <p>本项目用 AI Agent 将《史记》全130章转化为结构化知识图谱。采用11类实体标注系统（人名、地名、官职、时间、朝代、制度、族群、器物、天文、神话、动植物），精细标注全文约58万字；建立了Biblical-style段落编号体系（Purple Numbers）、3,185个事件索引（含公元纪年和7,652条事件关系）、11类实体索引（11,000+词条，别名合并，语义消歧），以及130条线路的事件地铁图可视化。</p>
+
+            <p style="color: #888; font-size: 0.85em; margin-top: 8px;">⚠️ 本项目由AI辅助生成，标注和知识提取中不可避免地存在错误和疏漏，正在持续修正中。如发现问题欢迎提交 Issue。</p>
 
             <h3>✨ 标注类型</h3>
             <div class="entity-tags">
@@ -275,16 +277,15 @@
             <h3>🔢 Purple Numbers 段落编号</h3>
             <p>每个段落都有唯一的编号（如 [0], [1], [1.1], [2.3.1]），可点击复制链接，精确引用到具体段落，便于学术讨论和知识管理。</p>
 
-            <h3>🚀 未来开发规划</h3>
-            <p>本项目将持续增补完善，计划开发以下功能：</p>
+            <h3>🚀 已完成 / 计划中</h3>
             <ul style="line-height: 1.8; color: #555;">
-                <li><strong>📌 事件标识</strong>：标注重大历史事件（战争、改革、政变等），建立事件索引</li>
-                <li><strong>🔗 人物关系链接</strong>：为人物间的关系建立超链接（师承、姻亲、君臣等），可视化人际网络</li>
-                <li><strong>📊 表格补全和现代化</strong>：将史记十表转换为可交互的现代化表格，支持排序、筛选、检索</li>
-                <li><strong>📑 分类实体索引</strong>：<a href="entities/index.html" style="color: #8B0000;">已上线！点击进入</a> — 按类别浏览实体索引（人名、地名、官职等），正文实体可点击跳转</li>
-                <li><strong>📝 三家注标注</strong>：整合裴骃《集解》、司马贞《索隐》、张守节《正义》的注释</li>
-                <li><strong>⏱️ 时间年表阅读</strong>：提供时间轴视图，按年代浏览历史事件的发生顺序</li>
-                <li><strong>🕸️ 知识图谱浏览</strong>：构建史记知识图谱，支持图形化浏览人物、地点、事件的关联网络</li>
+                <li>✅ <strong>实体标注</strong>：11类 × 130章 × 75,517次标注，符号体系全面升级至 CJK 标点（〘〙〚〛）</li>
+                <li>✅ <strong>事件索引</strong>：3,185个事件，11类事件类型，98.7%覆盖公元纪年（五轮Agent反思审查，~2,119处修正）</li>
+                <li>✅ <strong>事件关系</strong>：7,652条关系（9种类型），事件地铁图130条线路可视化</li>
+                <li>✅ <strong>分类实体索引</strong>：<a href="entities/index.html" style="color: #8B0000;">已上线</a> — 11类索引，别名合并（586条），语义消歧（644处）</li>
+                <li>📌 <strong>三家注标注</strong>：整合裴骃《集解》、司马贞《索隐》、张守节《正义》（计划中）</li>
+                <li>📊 <strong>十表交互化</strong>：十篇年表已渲染，待开发交互式查询（计划中）</li>
+                <li>🕸️ <strong>知识图谱数据库</strong>：导入 Neo4j，支持图形化浏览（计划中）</li>
             </ul>
         </div>
     </div>
@@ -1510,10 +1511,10 @@
     </div>
 
     <footer>
-        <p><strong>史记知识库</strong> | 命名实体标注版 | 11类实体 × 130章 × Purple Numbers</p>
+        <p><strong>史记知识库</strong> | AI驱动的历史知识图谱 | 11类实体 × 130章 × 3,185事件 × Purple Numbers</p>
         <p style="color: #999; font-size: 0.9em; margin-top: 10px;">
-            基于《史记》原文进行命名实体标注，采用Biblical-style段落编号系统<br>
-            便于学术引用、知识管理和数字人文研究
+            基于《史记》原文进行命名实体标注与知识图谱化，采用Biblical-style段落编号系统<br>
+            便于学术引用、知识管理和数字人文研究 | 最后更新：2026-03-13
         </p>
     </footer>
 

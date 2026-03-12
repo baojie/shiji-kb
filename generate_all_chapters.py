@@ -287,7 +287,7 @@ def generate_all_chapters():
     print("=" * 60)
     try:
         result = subprocess.run(
-            ['python3', 'scripts/build_entity_index.py'],
+            ['python3', 'kg/entities/scripts/build_entity_index.py'],
             capture_output=True, text=True, timeout=120
         )
         if result.returncode == 0:
@@ -298,7 +298,7 @@ def generate_all_chapters():
         else:
             print(f"⚠️  实体索引生成失败: {result.stderr}")
     except FileNotFoundError:
-        print("ℹ️  跳过实体索引生成（scripts/build_entity_index.py未找到）")
+        print("ℹ️  跳过实体索引生成（kg/entities/scripts/build_entity_index.py未找到）")
     except Exception as e:
         print(f"ℹ️  实体索引生成遇到问题: {e}")
 
