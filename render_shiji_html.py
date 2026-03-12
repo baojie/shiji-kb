@@ -330,6 +330,9 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
     # 预处理：将Markdown表格块转换为HTML
     # 检测连续的 | ... | 行，转换为 <table class="shiji-table">
+    # 全局行号计数器（跨表格累计，保证同一章内 anchor ID 唯一）
+    _row_pn_counter = [0]
+
     def _convert_md_tables(text):
         """将Markdown表格语法转换为HTML表格"""
         lines = text.split('\n')
@@ -357,6 +360,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
         输出为单行HTML（无换行），确保主循环将其视为 <div> 开头的块级元素，
         不会被 is_plain_text() 误判为段落文本。
+        每个数据行自动添加 Purple Number 锚点列（行首），便于精确引用。
         """
         def parse_row(line):
             """解析 | cell1 | cell2 | ... | 为单元格列表"""
@@ -375,17 +379,43 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
             data_start = 2
 
         parts = ['<div class="shiji-table-wrapper">', '<table class="shiji-table">']
-        # 表头（对表头也做实体转换，以支持 &朝代& 等标记）
+        # 表头：行号列（空白）+ 原始列；表头不做实体标注渲染（年号/国名等不应被标注样式干扰）
+        # 只做标注符号剥离（去掉 @=&^~*!$%〘〙〚〛 包裹符），保留纯文字
+        _annotation_strip = re.compile(
+            r'[@=\$%&\^~\*!]([^@=\$%&\^~\*!\n]{1,30}?)[@=\$%&\^~\*!]'
+            r'|〘([^〘〙\n]{1,30}?)〙'
+            r'|〚([^〚〛\n]{1,30}?)〛'
+        )
+        def strip_annotations(text):
+            return _annotation_strip.sub(lambda m: m.group(1) or m.group(2) or m.group(3), text)
+
         parts.append('<thead><tr>')
+        parts.append('<th class="row-pn-col"></th>')
         for h in headers:
-            parts.append(f'<th>{convert_entities(h)}</th>')
+            parts.append(f'<th>{strip_annotations(h)}</th>')
         parts.append('</tr></thead>')
-        # 数据行（对单元格内容做实体转换）
+        # 数据行：从第一列读取 [rN] 标记并转为 Purple Number 锚点
+        # 若无 [rN]，则自动生成（兜底，保证向后兼容）
         parts.append('<tbody>')
         for idx, row_line in enumerate(table_lines[data_start:]):
             row_class = 'even' if idx % 2 == 0 else 'odd'
             cells = parse_row(row_line)
+            # 从第一列提取 [rN] 标记
+            pn = None
+            if cells:
+                rn_match = re.match(r'^\s*\[r(\d+)\]\s*', cells[0])
+                if rn_match:
+                    pn = rn_match.group(1)
+                    cells[0] = cells[0][rn_match.end():]
+            if pn is None:
+                _row_pn_counter[0] += 1
+                pn = str(_row_pn_counter[0])
+            pn_anchor = (
+                f'<a href="#pn-r{pn}" id="pn-r{pn}" '
+                f'class="para-num" title="点击复制链接">{pn}</a>'
+            )
             parts.append(f'<tr class="{row_class}">')
+            parts.append(f'<td class="row-pn-col">{pn_anchor}</td>')
             for cell in cells:
                 parts.append(f'<td>{convert_entities(cell)}</td>')
             parts.append('</tr>')
@@ -768,5 +798,16 @@ if __name__ == '__main__':
             _next_name = _siblings[_idx + 1].stem.replace('.tagged', '')
             _next_chapter = f'{_next_name}.html'
 
+    # 自动推断原文链接（相对于输出 HTML 文件的路径）
+    # 标准结构：chapter_md/NNN_章名.tagged.md → docs/original_text/NNN_章名.txt
+    _stem = _md_path.stem.replace('.tagged', '')
+    _output_path = _Path(output_file) if output_file else _Path('docs/chapters') / f'{_stem}.html'
+    _original_txt = _output_path.parent.parent / 'original_text' / f'{_stem}.txt'
+    _original_text_file = None
+    if _original_txt.exists():
+        import os as _os
+        _original_text_file = _os.path.relpath(str(_original_txt), str(_output_path.parent))
+
     markdown_to_html(md_file, output_file, css_file,
-                     prev_chapter=_prev_chapter, next_chapter=_next_chapter)
+                     prev_chapter=_prev_chapter, next_chapter=_next_chapter,
+                     original_text_file=_original_text_file)

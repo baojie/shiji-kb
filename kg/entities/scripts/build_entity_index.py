@@ -139,11 +139,11 @@ def extract_events_from_index_files(event_dir):
             m = re.match(r'^###\s+(\S+)\s+', stripped)
             if m:
                 current_event_id = m.group(1)
-            # 匹配 "- **段落位置**: [1.2]"
+            # 匹配 "- **段落位置**: [1.2]" 或 "- **段落位置**: r5"
             if current_event_id and stripped.startswith('- **段落位置**'):
-                m2 = re.search(r'\[([^\]]+)\]', stripped)
+                m2 = re.search(r'\[([^\]]+)\]|(r\d+)', stripped)
                 if m2:
-                    para_map[current_event_id] = m2.group(1)
+                    para_map[current_event_id] = m2.group(1) or m2.group(2)
             # 匹配 "- **年代推断**: ..."
             if current_event_id and stripped.startswith('- **年代推断**'):
                 reasoning = stripped.replace('- **年代推断**:', '').replace('- **年代推断**：', '').strip()
