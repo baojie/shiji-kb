@@ -6,6 +6,53 @@
 
 ---
 
+## 实体体系扩展至15类 ([f5c09dc](https://github.com/baojie/shiji-kb/commit/f5c09dc) / [de37940](https://github.com/baojie/shiji-kb/commit/de37940) / [60d6484](https://github.com/baojie/shiji-kb/commit/60d6484)) - 2026-03-13
+
+### 新增 (Added)
+
+- 📚 **4类新实体类型**（v1.1扩展）
+  - `《X》` 典籍：古籍书名（48词条，162次）
+  - `〈X〉` 礼仪：礼仪制度、宗庙祭祀（24词条，112次）
+  - `【X】` 刑法：刑罚、法律条文（37词条，331次）
+  - `〔X〕` 思想：哲学概念、文体体裁（52词条，1,832次）
+- 🏷️ **4类实体HTML索引页**：`docs/entities/book/ritual/legal/concept.html`
+
+### 更改 (Changed)
+
+- 🔄 **历史标注订正**
+  - `ch130`：70处书名从 `^制度^` 迁移至 `《典籍》`（春秋22/六经5/诗书4/史记2等）
+  - `ch084`：`^离骚^`(6处)/`天问`等书名修正为 `《》`
+  - 全书14章39处 `^本纪^` 统一改为 `〔本纪〕`（与已有`〔世家〕`保持一致）
+- 📖 **SKILL_古籍实体标注.md**：全面升级为v1.1（15类符号表、AI提示词、数据规模表、渲染顺序）
+- 📊 **实体总量**：11,069词条/75,517次 → 11,606词条/100,261次（+537词条，+24,744次标注）
+- 🔧 **`build_entity_index.py`**：ENTITY_TYPES 增加4个新类型，HTML生成纯数字time过滤
+- 📖 **`kg/entities/scripts/tag_new_entity_types.py`**：BOOK_WORDS +13词（楚辞/诸子/韩非子篇目），CONCEPT_WORDS +8词（礼义廉耻/大一统等）
+- 📝 **README.md**：实体统计、词表、标注规则表、进展日志全面更新
+- 📝 **TODO.md**：重新整理，删除已完成项详细注释，按优先级分5层组织
+
+---
+
+## 标注符号迁移完成 + 十表Purple Numbers ([4ff4f49](https://github.com/baojie/shiji-kb/commit/4ff4f49) / [a93d04c](https://github.com/baojie/shiji-kb/commit/a93d04c) / [54eea01](https://github.com/baojie/shiji-kb/commit/54eea01)) - 2026-03-12~13
+
+### 更改 (Changed)
+
+- 🔣 **神话符号迁移**：`?X?` → `〚X〛`（全书130章批量替换）
+- 🔣 **动植物符号清理**：清理残留的 `🌿X🌿` emoji格式，统一为 `〘X〙`
+- 📑 **十表 Purple Numbers**：013-022 十篇年表 MD 行号标记、HTML锚点、事件链接全部打通
+- 🔗 **关系数据重生成**：反映符号迁移后的 `all_relations.csv/json`
+
+---
+
+## 未标注实体分析 + 词性分析 ([d5d5946](https://github.com/baojie/shiji-kb/commit/d5d5946) / [7940a11](https://github.com/baojie/shiji-kb/commit/7940a11)) - 2026-03-12~13
+
+### 新增 (Added)
+
+- 📊 **词性分析**：130章488,674字未标注文本的字级分析，量化拆解可标注/不可标注成分
+- 📊 **未标注实体分析报告第六节**：候选实体实测统计，支撑4类新实体类型决策
+- 📝 **`SKILL_三家注标注.md`**：《史记》三家注语义化方法论（数据结构、音韵注、书名、渲染设计）
+
+---
+
 ## 文档目录重构 + 新增SKILL_年份消歧 ([769377f](https://github.com/baojie/shiji-kb/commit/769377f)) - 2026-03-12
 
 ### 重构 (Refactored)
