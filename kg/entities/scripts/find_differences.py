@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     grouped_paragraphs = {}
     for i, para in enumerate(paragraphs, 1):
-        if para.startswith('#') or para.startswith('> [!NOTE]'):
+        if para.startswith('#') or para.startswith(':::'):
             continue
 
         para_num = extract_paragraph_number(para)

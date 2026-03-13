@@ -55,7 +55,7 @@ if __name__ == '__main__':
     paragraphs = get_paragraphs_from_md(md_file)
     md_paragraphs = {}
     for i, para in enumerate(paragraphs, 1):
-        if para.startswith('#') or para.startswith('> [!NOTE]'):
+        if para.startswith('#') or para.startswith(':::'):
             continue
         para_num = extract_paragraph_number(para)
         if para_num:

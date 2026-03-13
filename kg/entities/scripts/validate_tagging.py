@@ -18,7 +18,7 @@ def remove_all_tags(text):
 
     # 去除引用块标记和前导 >
     text = re.sub(r'^>\s*', '', text, flags=re.MULTILINE)
-    text = re.sub(r'^\[!NOTE\]\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^:::.*$', '', text, flags=re.MULTILINE)
 
     # 去除各种语义标签（按出现频率优化顺序）
     # @person@ - 人物
@@ -116,7 +116,7 @@ def validate_chapter(md_path, txt_path):
             continue
 
         # 跳过引用块的标记行
-        if para.startswith('> [!NOTE]'):
+        if para.startswith(':::'):
             continue
 
         # 提取段落编号

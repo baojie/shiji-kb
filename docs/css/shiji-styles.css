@@ -324,7 +324,7 @@ p > .para-num:only-child {
     font-size: 1em;  /* 继承列字号，不再额外缩小 */
 }
 
-/* NOTE框 */
+/* 语义标注块（::: fenced div） */
 .note-box {
     background-color: #fffef0;
     border: 1px solid #e6e0c0;
@@ -336,4 +336,31 @@ p > .para-num:only-child {
 .note-box h4 {
     color: #8B7500;
     margin-top: 0;
+}
+
+/* 太史公曰 */
+.note-太史公曰 {
+    border-left: 3px solid #8B7500;
+}
+
+/* 赞（韵文） */
+.note-赞 {
+    border-left: 3px solid #a0522d;
+    background-color: #fefcf5;
+    font-style: italic;
+}
+.note-赞 p {
+    line-height: 2.0;
+    white-space: pre-line;
+}
+
+/* 诗歌 */
+.note-诗歌 {
+    border-left: 3px solid #6b8e23;
+    background-color: #fcfef5;
+    font-style: italic;
+}
+.note-诗歌 p {
+    line-height: 2.0;
+    white-space: pre-line;
 }

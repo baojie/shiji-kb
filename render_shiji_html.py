@@ -506,97 +506,60 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
             flush_para()
             line = '<hr>'
 
-        # 引用块 或 NOTE 块
+        # ::: fenced div（语义标注块）
+        elif line.startswith(':::'):
+            flush_para()
+            stripped = line.strip()
+            if in_note:
+                # 关闭 ::: — 结束语义块
+                if in_list:
+                    html_lines.append('</ul>')
+                    in_list = False
+                html_lines.append('</div>')
+                in_note = False
+            else:
+                # 开启 ::: [tag] — 开始语义块
+                tag = stripped[3:].strip()
+                # 清理实体标注符号以生成 CSS class
+                clean_tag = re.sub(r'[〖〗〔〕^@&=;~]', '', tag) if tag else ''
+                classes = 'note-box'
+                if clean_tag:
+                    classes += f' note-{clean_tag}'
+                if tag:
+                    html_lines.append(f'<div class="{classes}" title="{html_escape(tag)}">')
+                else:
+                    html_lines.append(f'<div class="{classes}">')
+                in_note = True
+            continue
+
+        # 引用块（blockquote）
         elif line.startswith('> '):
             flush_para()
-            # NOTE 块语法:
-            #   开始:  > [!NOTE] 或 > [!NOTE tag]
-            #   显式结束: > [!ENDNOTE]
-            m_start = re.match(r'^>\s*\[!NOTE(?:\s*[: ]\s*(?P<tag>[\w-]+))?\]\s*(?P<rest>.*)$', line)
-            m_end = re.match(r'^>\s*\[!ENDNOTE\]\s*$', line)
-            if m_end:
-                if in_note:
-                    html_lines.append('</div>')
-                    in_note = False
-                # if not in_note, ignore stray END marker
-                continue
-            if m_start:
-                # 关闭普通 blockquote 若打开
-                if in_blockquote:
-                    html_lines.append('</blockquote>')
-                    in_blockquote = False
-                tag = m_start.group('tag')
-                rest = m_start.group('rest') or ''
-                classes = 'note-box'
-                if tag:
-                    # add semantic class
-                    classes += f' note-{tag}'
-                html_lines.append(f'<div class="{classes}">')
-                heading = 'NOTE'
-                if tag:
-                    heading = f'{heading} — {tag}'
-                html_lines.append(f'<h4>{heading}</h4>')
-                in_note = True
-                if rest:
-                    html_lines.append(f'<p>{rest}</p>')
-                continue
+            if not in_blockquote:
+                html_lines.append('<blockquote>')
+                in_blockquote = True
+            content = line[2:]
+            if content.strip().startswith('- '):
+                if not in_list:
+                    html_lines.append('<ul>')
+                    in_list = True
+                html_lines.append(f'<li>{content.strip()[2:]}</li>')
             else:
-                if in_note:
-                    # 如果正在 note 中但遇到普通引用行
-                    content = line[2:]
-                    if content.strip().startswith('- '):
-                        # 这是列表项
-                        if not in_list:
-                            html_lines.append('<ul>')
-                            in_list = True
-                        html_lines.append(f'<li>{content.strip()[2:]}</li>')
-                    else:
-                        # 关闭列表（如果有）
-                        if in_list:
-                            html_lines.append('</ul>')
-                            in_list = False
-                        # 把它当作 note 内段落
-                        html_lines.append(f'<p>{content}</p>')
-                    continue
-                if not in_blockquote:
-                    html_lines.append('<blockquote>')
-                    in_blockquote = True
-                # 在 blockquote 中，检查是否是列表项
-                content = line[2:]
-                if content.strip().startswith('- '):
-                    # 这是列表项
-                    if not in_list:
-                        html_lines.append('<ul>')
-                        in_list = True
-                    html_lines.append(f'<li>{content.strip()[2:]}</li>')
+                if in_list:
+                    html_lines.append('</ul>')
+                    in_list = False
+                content = re.sub(r'^\s*\[NOTE\]\s*', '', content)
+                if content.strip():
+                    html_lines.append(content + '<br>')
                 else:
-                    # 关闭列表（如果有）
-                    if in_list:
-                        html_lines.append('</ul>')
-                        in_list = False
-                    # 普通内容，添加 <br> 以保持诗歌格式
-                    # 去掉 [NOTE] 标记（非 [!NOTE] 格式的注释标签）
-                    content = re.sub(r'^\s*\[NOTE\]\s*', '', content)
-                    if content.strip():  # 非空行
-                        html_lines.append(content + '<br>')
-                    else:
-                        html_lines.append('')
-                continue
+                    html_lines.append('')
+            continue
         elif in_blockquote and not line.startswith('>'):
-            # 关闭列表（如果有）
             if in_list:
                 html_lines.append('</ul>')
                 in_list = False
             html_lines.append('</blockquote>')
             in_blockquote = False
-        elif in_note and not line.startswith('>'):
-            # 结束 note 区块
-            # 关闭列表（如果有）
-            if in_list:
-                html_lines.append('</ul>')
-                in_list = False
-            html_lines.append('</div>')
-            in_note = False
 
         # 列表
         elif line.strip().startswith('- '):

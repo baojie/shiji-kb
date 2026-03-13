@@ -237,7 +237,94 @@ p > .para-num:only-child {
     margin-bottom: 0.3em;
 }
 
-/* NOTE框 */
+/* 史记年表样式 - 突破 body max-width 限制，占满视口宽度 */
+/* wrapper 同时限制高度并启用双向滚动，使 thead sticky 生效 */
+.shiji-table-wrapper {
+    overflow: auto;
+    width: 100vw;
+    max-height: 85vh;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: 1px solid #d0c8a0;
+    border-bottom: 1px solid #d0c8a0;
+    box-shadow: 0 1px 4px rgba(90, 74, 42, 0.08);
+}
+
+.shiji-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85em;
+    line-height: 1.7;
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+}
+
+.shiji-table th {
+    background-color: #5a4a2a;
+    color: #f5f0e0;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #4a3c1e;
+    text-align: center;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    font-size: 0.95em;
+    letter-spacing: 0.05em;
+}
+
+.shiji-table td {
+    padding: 6px 10px;
+    border: 1px solid #e0dcc8;
+    text-align: left;
+    vertical-align: top;
+    color: #2c2c2c;
+}
+
+.shiji-table tr.even td {
+    background-color: #fdfdf8;
+}
+
+.shiji-table tr.odd td {
+    background-color: #f5f0e0;
+}
+
+.shiji-table tbody tr:hover td {
+    background-color: #ede8d4;
+    transition: background-color 0.15s ease;
+}
+
+.shiji-table td:nth-child(2) {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #5a4a2a;
+    background-color: rgba(90, 74, 42, 0.06);
+    text-align: center;
+    border-right: 2px solid #d0c8a0;
+}
+
+/* 表格行号列（Purple Number for table rows） */
+.row-pn-col {
+    width: 2em;
+    min-width: 2em;
+    text-align: right;
+    padding-right: 6px !important;
+    color: #C8A8FF;
+    font-size: 0.75em;
+    font-family: Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    border-right: 1px solid #e0d8c0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.row-pn-col .para-num {
+    font-size: 1em;  /* 继承列字号，不再额外缩小 */
+}
+
+/* 语义标注块（::: fenced div） */
 .note-box {
     background-color: #fffef0;
     border: 1px solid #e6e0c0;
@@ -249,4 +336,31 @@ p > .para-num:only-child {
 .note-box h4 {
     color: #8B7500;
     margin-top: 0;
+}
+
+/* 太史公曰 */
+.note-太史公曰 {
+    border-left: 3px solid #8B7500;
+}
+
+/* 赞（韵文） */
+.note-赞 {
+    border-left: 3px solid #a0522d;
+    background-color: #fefcf5;
+    font-style: italic;
+}
+.note-赞 p {
+    line-height: 2.0;
+    white-space: pre-line;
+}
+
+/* 诗歌 */
+.note-诗歌 {
+    border-left: 3px solid #6b8e23;
+    background-color: #fcfef5;
+    font-style: italic;
+}
+.note-诗歌 p {
+    line-height: 2.0;
+    white-space: pre-line;
 }
