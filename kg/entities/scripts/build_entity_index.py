@@ -42,7 +42,12 @@ ENTITY_TYPES = [
     ('artifact',    r'\*\*[^*]+\*\*|(?<!\*)\*([^*\n]+)\*(?!\*)', 'artifact', '器物', 'artifact.html'),
     ('astronomy',   r'!([^!\n]+)!',            'astronomy',   '天文',     'astronomy.html'),
     ('mythical',    r'〚([^〚〛\n]+)〛',          'mythical',    '神话',     'mythical.html'),
-    ('flora-fauna', r'〘([^〘〙\n]+)〙',       'flora-fauna', '动植物',   'flora-fauna.html'),  # 新符号
+    ('flora-fauna', r'〘([^〘〙\n]+)〙',       'flora-fauna', '动植物',   'flora-fauna.html'),
+    # 新4类实体（2026-03-13 扩展）
+    ('book',        r'《([^《》\n]+)》',         'book',        '典籍',     'book.html'),
+    ('ritual',      r'〈([^〈〉\n]+)〉',         'ritual',      '礼仪',     'ritual.html'),
+    ('legal',       r'【([^【】\n]+)】',          'legal',       '刑法',     'legal.html'),
+    ('concept',     r'〔([^〔〕\n]+)〕',         'concept',     '思想',     'concept.html'),
 ]
 
 # 段落编号模式
