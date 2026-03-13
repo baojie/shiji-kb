@@ -327,12 +327,12 @@ def find_state_tags_nearby(content, pos, window=100):
     context = content[start:end]
 
     found_states = []
-    for m in re.finditer(r'&([^&\n]+)&', context):
+    for m in re.finditer(r'〖&([^〖〗\n]+)〗', context):
         state = m.group(1)
         if state in ALL_STATES_SET:
             found_states.append(state)
 
-    for m in re.finditer(r'@([^@\n]+)@', context):
+    for m in re.finditer(r'〖@([^〖〗\n]+)〗', context):
         person = m.group(1)
         if len(person) >= 2 and is_valid_person_name(person):
             first_char = person[0]
@@ -343,8 +343,8 @@ def find_state_tags_nearby(content, pos, window=100):
 
 
 def find_cooccurring_fullnames(content, short_name):
-    """Find full names containing the short name in @tags@ in the same chapter."""
-    pattern = r'@([^@\n]*' + re.escape(short_name) + r'[^@\n]*)@'
+    """Find full names containing the short name in 〖@tags〗 in the same chapter."""
+    pattern = r'〖@([^〖〗\n]*' + re.escape(short_name) + r'[^〖〗\n]*)〗'
     matches = set()
     for m in re.finditer(pattern, content):
         full = m.group(1)
@@ -354,9 +354,9 @@ def find_cooccurring_fullnames(content, short_name):
 
 
 def find_preceding_state_prefix(content, pos):
-    """Check for &state& immediately before @tag@."""
-    pre_context = content[max(0, pos - 10):pos]
-    m = re.search(r'&([^&]+)&$', pre_context)
+    """Check for 〖&state〗 immediately before 〖@tag〗."""
+    pre_context = content[max(0, pos - 15):pos]
+    m = re.search(r'〖&([^〖〗]+)〗$', pre_context)
     if m and m.group(1) in ALL_STATES_SET:
         return m.group(1)
     return None
@@ -399,17 +399,17 @@ def disambiguate():
         # Pre-compute co-occurring full names
         cooccur_cache = {}
         for short_name in ambiguous_names:
-            if '@' + short_name + '@' in content:
+            if '〖@' + short_name + '〗' in content:
                 cooccur_cache[short_name] = find_cooccurring_fullnames(content, short_name)
 
         chapter_resolved = 0
 
         for short_name in ambiguous_names:
-            tag_str = '@' + short_name + '@'
+            tag_str = '〖@' + short_name + '〗'
             if tag_str not in content:
                 continue
 
-            tag_pattern = '@' + re.escape(short_name) + '@'
+            tag_pattern = r'〖@' + re.escape(short_name) + r'〗'
 
             for m in re.finditer(tag_pattern, content):
                 pos = m.start()

@@ -31,23 +31,24 @@ INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_index.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
+# v2.0: 9类对称符号改为 〖TYPE content〗 格式（2026-03-13）
 ENTITY_TYPES = [
-    ('person',      r'@([^@\n]+)@',           'person',      '人名',     'person.html'),
-    ('place',       r'=([^=\n]+)=',            'place',       '地名',     'place.html'),
-    ('official',    r'\$([^$\n]+)\$',          'official',    '官职',     'official.html'),
-    ('time',        r'%([^%\n]+)%',            'time',        '时间',     'time.html'),
-    ('dynasty',     r'&([^&\n]+)&',            'dynasty',     '朝代',     'dynasty.html'),
-    ('institution', r'\^([^\^\n]+)\^',         'institution', '制度',     'institution.html'),
-    ('tribe',       r'~([^~\n]+)~',            'tribe',       '族群',     'tribe.html'),
-    ('artifact',    r'\*\*[^*]+\*\*|(?<!\*)\*([^*\n]+)\*(?!\*)', 'artifact', '器物', 'artifact.html'),
-    ('astronomy',   r'!([^!\n]+)!',            'astronomy',   '天文',     'astronomy.html'),
-    ('mythical',    r'〚([^〚〛\n]+)〛',          'mythical',    '神话',     'mythical.html'),
-    ('flora-fauna', r'〘([^〘〙\n]+)〙',       'flora-fauna', '动植物',   'flora-fauna.html'),
-    # 新4类实体（2026-03-13 扩展）
-    ('book',        r'《([^《》\n]+)》',         'book',        '典籍',     'book.html'),
-    ('ritual',      r'〈([^〈〉\n]+)〉',         'ritual',      '礼仪',     'ritual.html'),
-    ('legal',       r'【([^【】\n]+)】',          'legal',       '刑法',     'legal.html'),
-    ('concept',     r'〔([^〔〕\n]+)〕',         'concept',     '思想',     'concept.html'),
+    ('person',      r'〖@([^〖〗\n]+)〗',  'person',      '人名',     'person.html'),
+    ('place',       r'〖=([^〖〗\n]+)〗',  'place',       '地名',     'place.html'),
+    ('official',    r'〖;([^〖〗\n]+)〗', 'official',    '官职',     'official.html'),
+    ('time',        r'〖%([^〖〗\n]+)〗',  'time',        '时间',     'time.html'),
+    ('dynasty',     r'〖&([^〖〗\n]+)〗',  'dynasty',     '朝代',     'dynasty.html'),
+    ('institution', r'〖\^([^〖〗\n]+)〗', 'institution', '制度',     'institution.html'),
+    ('tribe',       r'〖~([^〖〗\n]+)〗',  'tribe',       '族群',     'tribe.html'),
+    ('artifact',    r'〖\*([^〖〗\n]+)〗', 'artifact',    '器物',     'artifact.html'),
+    ('astronomy',   r'〖!([^〖〗\n]+)〗',  'astronomy',   '天文',     'astronomy.html'),
+    # 6类非对称格式（不变）
+    ('mythical',    r'〚([^〚〛\n]+)〛',   'mythical',    '神话',     'mythical.html'),
+    ('flora-fauna', r'〘([^〘〙\n]+)〙',   'flora-fauna', '动植物',   'flora-fauna.html'),
+    ('book',        r'《([^《》\n]+)》',   'book',        '典籍',     'book.html'),
+    ('ritual',      r'〈([^〈〉\n]+)〉',   'ritual',      '礼仪',     'ritual.html'),
+    ('legal',       r'【([^【】\n]+)】',    'legal',       '刑法',     'legal.html'),
+    ('concept',     r'〔([^〔〕\n]+)〕',   'concept',     '思想',     'concept.html'),
 ]
 
 # 段落编号模式

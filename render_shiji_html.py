@@ -32,31 +32,30 @@ import json
 from pathlib import Path
 from html import escape as html_escape
 
-# 实体类型映射
-# 注意：顺序至关重要！外层标记必须先于内层标记处理。
-# 人名 @..@ 最常作为内层标注（如 $@安国君@$、$太子@安国君@$），
-# 因此 @人名@ 放在最后，确保外层标记先转为<span>，内层再在其中匹配。
-# 重要：** 必须在 * 之前处理，以避免冲突
+# 实体类型映射（v2.0，2026-03-13）
+# 新格式：9类对称符号改为 〖TYPE content〗 统一包裹
+#   〖 开头，第一字符为类型标记，〗 结尾，无嵌套歧义
+# 6类已有非对称CJK括号（〚〛/〘〙/《》/〈〉/【】/〔〕）格式不变
 # 排除 " 字符以避免匹配HTML属性
 ENTITY_PATTERNS = [
-    # ** 和 * 必须最先处理：韵文中 **粗体** 常包含实体标注（如 **...^制度^...**）
-    (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),           # 加粗（必须在单*之前）
-    (r'\*([^*<>"]+)\*', r'<span class="artifact" title="器物/书名">\1</span>'),  # 器物/礼器/书名
-    # 实体标注：外层标记先于内层处理
-    (r'\$([^$<>"]+)\$', r'<span class="official" title="官职">\1</span>'),  # 官职（常包裹人名）
-    (r'=([^=<>"]+)=', r'<span class="place" title="地名">\1</span>'),       # 地名
-    (r'%([^%<>"]+)%', r'<span class="time" title="时间">\1</span>'),        # 时间
-    (r'&([^&<>"]+)&', r'<span class="dynasty" title="朝代/氏族">\1</span>'),     # 朝代
-    (r'\^([^<>^"]+)\^', r'<span class="institution" title="制度">\1</span>'),  # 制度
-    (r'~([^~<>"]+)~', r'<span class="tribe" title="族群">\1</span>'),       # 族群
-    (r'〘([^〘〙<>"]+)〙', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物
-    (r'!([^!<>"]+)!', r'<span class="astronomy" title="天文/历法">\1</span>'),   # 天文
-    (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话
-    (r'《([^《》<>"]+)》', r'<span class="book" title="典籍">\1</span>'),          # 典籍
-    (r'〈([^〈〉<>"]+)〉', r'<span class="ritual" title="礼仪">\1</span>'),         # 礼仪
-    (r'【([^【】<>"]+)】', r'<span class="legal" title="刑法">\1</span>'),          # 刑法
-    (r'〔([^〔〕<>"]+)〕', r'<span class="concept" title="思想">\1</span>'),        # 思想
-    (r'@([^@<>"]+)@', r'<span class="person" title="人名">\1</span>'),      # 人名（最后处理，常为内层）
+    (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),                               # 粗体（不变）
+    # 9类新格式：〖TYPE content〗
+    (r'〖\*([^〖〗<>"]+)〗', r'<span class="artifact" title="器物">\1</span>'),     # 器物
+    (r'〖;([^〖〗<>"]+)〗',  r'<span class="official" title="官职">\1</span>'),    # 官职
+    (r'〖=([^〖〗<>"]+)〗',  r'<span class="place" title="地名">\1</span>'),       # 地名
+    (r'〖%([^〖〗<>"]+)〗',  r'<span class="time" title="时间">\1</span>'),        # 时间
+    (r'〖&([^〖〗<>"]+)〗',  r'<span class="dynasty" title="朝代/氏族">\1</span>'), # 朝代
+    (r'〖\^([^〖〗<>"]+)〗', r'<span class="institution" title="制度">\1</span>'),  # 制度
+    (r'〖~([^〖〗<>"]+)〗',  r'<span class="tribe" title="族群">\1</span>'),       # 族群
+    (r'〖!([^〖〗<>"]+)〗',  r'<span class="astronomy" title="天文/历法">\1</span>'), # 天文
+    (r'〖@([^〖〗<>"]+)〗',  r'<span class="person" title="人名">\1</span>'),      # 人名
+    # 6类不变
+    (r'〘([^〘〙<>"]+)〙', r'<span class="flora-fauna" title="动植物">\1</span>'),
+    (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),
+    (r'《([^《》<>"]+)》', r'<span class="book" title="典籍">\1</span>'),
+    (r'〈([^〈〉<>"]+)〉', r'<span class="ritual" title="礼仪">\1</span>'),
+    (r'【([^【】<>"]+)】', r'<span class="legal" title="刑法">\1</span>'),
+    (r'〔([^〔〕<>"]+)〕', r'<span class="concept" title="思想">\1</span>'),
 ]
 
 # 引号内容模式（用于对话）
@@ -270,14 +269,13 @@ def convert_entities(text):
     for pattern, replacement in ENTITY_PATTERNS:
         text = re.sub(pattern, replacement, text)
 
-    # 安全网：清理残留的标注符号
-    # 1. 紧邻<span>标签的裸字符（嵌套标注残留）
-    text = re.sub(r'[\$@\^~\*!〘〙〚〛](?=<span[\s>])', '', text)
-    text = re.sub(r'(?<=</span>)[\$@\^~\*!〘〙〚〛]', '', text)
-    # 2. 清除残留的 $ 和 @（源数据中未配对的标注符号）
-    #    这两个字符在古汉语中不出现，且不在生成的HTML属性中，可安全清除
-    #    注意：不能清除 % = & ，因为它们在HTML中有合法用途
-    text = text.replace('$', '').replace('@', '')
+    # 安全网：清理残留的标注符号（新格式下理论上不应出现）
+    # 1. 紧邻<span>标签的裸 〖〗 字符
+    text = re.sub(r'〖(?=<span[\s>])', '', text)
+    text = re.sub(r'(?<=</span>)〗', '', text)
+    # 2. 兼容旧格式残留（防万一）
+    text = re.sub(r'[;\^~\*!〘〙〚〛](?=<span[\s>])', '', text)
+    text = re.sub(r'(?<=</span>)[;\^~\*!〘〙〚〛]', '', text)
 
     # 最后处理段落编号（PN - Purple Numbers）
     # 将 [编号] 转换为可点击的锚点链接
@@ -394,7 +392,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         # 表头：行号列（空白）+ 原始列；表头不做实体标注渲染（年号/国名等不应被标注样式干扰）
         # 只做标注符号剥离（去掉 @=&^~*!$%〘〙〚〛 包裹符），保留纯文字
         _annotation_strip = re.compile(
-            r'[@=\$%&\^~\*!]([^@=\$%&\^~\*!\n]{1,30}?)[@=\$%&\^~\*!]'
+            r'[@=;%&\^~\*!]([^@=;%&\^~\*!\n]{1,30}?)[@=;%&\^~\*!]'
             r'|〘([^〘〙\n]{1,30}?)〙'
             r'|〚([^〚〛\n]{1,30}?)〛'
         )
