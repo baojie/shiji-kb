@@ -1099,11 +1099,20 @@ def main():
     # 创建输出目录
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
+    # 纯汉字数字过滤（time类）：避免"三"/"七十"等数字条目污染HTML索引
+    import re as _re
+    _NUMERAL_RE = _re.compile(r'^[零一二三四五六七八九十百千万亿两]+$')
+
     # 生成各类型页面
     for type_key, _, css_class, label, filename in ENTITY_TYPES:
         entries = index[type_key]
         if not entries:
             continue
+
+        # time类：过滤纯汉字数字条目（保留在JSON中，仅不在HTML中展示）
+        if type_key == 'time':
+            entries = {k: v for k, v in entries.items()
+                       if not _NUMERAL_RE.match(k)}
 
         page_html = generate_type_page(type_key, css_class, label, filename, entries)
         output_path = OUTPUT_DIR / filename
