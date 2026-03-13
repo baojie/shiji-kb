@@ -985,7 +985,7 @@ def generate_landing_page(index):
     lines.append('</nav>')
 
     lines.append('<h1>命名实体索引</h1>')
-    lines.append('<p>史记全文命名实体索引，按实体类型分类。点击类型名称进入详细索引页面。</p>')
+    lines.append('<p>史记全文命名实体索引，按实体类型分类，各类型按出现次数降序排列。点击类型名称进入详细索引页面。</p>')
 
     lines.append('<div class="entity-type-grid">')
 
@@ -1018,14 +1018,18 @@ def generate_landing_page(index):
         except Exception:
             pass
 
+    # 收集各类型统计，按出现次数降序排列
+    type_stats = []
     for type_key, _, css_class, label, filename in ENTITY_TYPES:
         entries = index.get(type_key, {})
         count = len(entries)
         total = sum(e['count'] for e in entries.values())
-
         if count == 0:
             continue
+        type_stats.append((type_key, css_class, label, filename, count, total))
+    type_stats.sort(key=lambda x: x[5], reverse=True)
 
+    for type_key, css_class, label, filename, count, total in type_stats:
         lines.append(f'  <a href="{filename}" class="entity-type-card">')
         lines.append(f'    <span class="type-label {css_class}">{label}</span>')
         lines.append(f'    <span class="type-count">{count} 个条目</span>')
