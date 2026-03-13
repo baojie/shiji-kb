@@ -45,8 +45,8 @@ ENTITY_PATTERNS = [
     (r'〖;([^〖〗<>"]+)〗',  r'<span class="official" title="官职">\1</span>'),    # 官职
     (r'〖=([^〖〗<>"]+)〗',  r'<span class="place" title="地名">\1</span>'),       # 地名
     (r'〖%([^〖〗<>"]+)〗',  r'<span class="time" title="时间">\1</span>'),        # 时间
-    (r'〖&([^〖〗<>"]+)〗',  r'<span class="dynasty" title="朝代/氏族">\1</span>'), # 朝代
-    (r"〖'([^〖〗<>\"]+)〗", r'<span class="feudal-state" title="封国">\1</span>'), # 封国
+    (r'〖&([^〖〗<>"]+)〗',  r'<span class="dynasty" title="氏族">\1</span>'),      # 氏族
+    (r"〖'([^〖〗<>\"]+)〗", r'<span class="feudal-state" title="邦国">\1</span>'), # 邦国
     (r'〖\^([^〖〗<>"]+)〗', r'<span class="institution" title="制度">\1</span>'),  # 制度
     (r'〖~([^〖〗<>"]+)〗',  r'<span class="tribe" title="族群">\1</span>'),       # 族群
     (r'〖!([^〖〗<>"]+)〗',  r'<span class="astronomy" title="天文/历法">\1</span>'), # 天文

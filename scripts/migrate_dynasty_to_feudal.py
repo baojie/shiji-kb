@@ -227,7 +227,7 @@ def check_remaining():
         feudal_count += len(re.findall(r"〖'[^〖〗]+〗", content))
         dynasty_count += len(re.findall(r'〖&[^〖〗]+〗', content))
 
-    print(f"\n当前统计: 〖&朝代〗={dynasty_count}, 〖'封国〗={feudal_count}, 合计={dynasty_count+feudal_count}")
+    print(f"\n当前统计: 〖&氏族〗={dynasty_count}, 〖'邦国〗={feudal_count}, 合计={dynasty_count+feudal_count}")
 
 
 def main():
