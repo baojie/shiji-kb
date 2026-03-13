@@ -19,6 +19,10 @@
 - !天文! -> <span class="astronomy">天文</span>
 - 〚神话〛 -> <span class="mythical">神话</span>
 - 〘动植物〙 -> <span class="flora-fauna">动植物</span>
+- 《典籍》 -> <span class="book">典籍</span>
+- 〈礼仪〉 -> <span class="ritual">礼仪</span>
+- 【刑法】 -> <span class="legal">刑法</span>
+- 〔思想〕 -> <span class="concept">思想</span>
 """
 
 import re
@@ -48,6 +52,10 @@ ENTITY_PATTERNS = [
     (r'〘([^〘〙<>"]+)〙', r'<span class="flora-fauna" title="动植物">\1</span>'),  # 动植物
     (r'!([^!<>"]+)!', r'<span class="astronomy" title="天文/历法">\1</span>'),   # 天文
     (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),  # 神话
+    (r'《([^《》<>"]+)》', r'<span class="book" title="典籍">\1</span>'),          # 典籍
+    (r'〈([^〈〉<>"]+)〉', r'<span class="ritual" title="礼仪">\1</span>'),         # 礼仪
+    (r'【([^【】<>"]+)】', r'<span class="legal" title="刑法">\1</span>'),          # 刑法
+    (r'〔([^〔〕<>"]+)〕', r'<span class="concept" title="思想">\1</span>'),        # 思想
     (r'@([^@<>"]+)@', r'<span class="person" title="人名">\1</span>'),      # 人名（最后处理，常为内层）
 ]
 
@@ -82,6 +90,10 @@ _ENTITY_TYPE_FILES = {
     'astronomy': 'astronomy.html',
     'mythical': 'mythical.html',
     'flora-fauna': 'flora-fauna.html',
+    'book': 'book.html',
+    'ritual': 'ritual.html',
+    'legal': 'legal.html',
+    'concept': 'concept.html',
 }
 
 # 别名映射缓存（模块级，只加载一次）
@@ -676,7 +688,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
     # 后处理：展平嵌套的同类 span 标签
     # 例如: <span class="person"><span class="person">名字</span></span> -> <span class="person">名字</span>
-    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'artifact', 'astronomy', 'mythical', 'quoted']:
+    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'artifact', 'astronomy', 'mythical', 'quoted', 'book', 'ritual', 'legal', 'concept']:
         # 匹配嵌套的同类 span 并展平
         pattern = rf'<span class="{entity_class}">(<span class="{entity_class}">.*?</span>)</span>'
         while re.search(pattern, html_body):

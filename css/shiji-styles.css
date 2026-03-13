@@ -100,6 +100,34 @@ p {
     cursor: help;
 }
 
+/* 典籍样式 */
+.book {
+    color: #4B0082;
+    font-style: italic;
+    cursor: help;
+}
+
+/* 礼仪样式 */
+.ritual {
+    color: #8B6914;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* 刑法样式 */
+.legal {
+    color: #8B0000;
+    background-color: rgba(139, 0, 0, 0.06);
+    cursor: help;
+}
+
+/* 思想样式 */
+.concept {
+    color: #2F4F4F;
+    border-bottom: 1px dotted #2F4F4F;
+    cursor: help;
+}
+
 /* 引号内容样式（对话） */
 /* 视觉设计：克制优雅的对话标记
  * - 斜体：区分对话与叙述
