@@ -31,13 +31,14 @@ INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_index.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
-# v2.0: 9类对称符号改为 〖TYPE content〗 格式（2026-03-13）
+# v2.1: 10类对称符号改为 〖TYPE content〗 格式
 ENTITY_TYPES = [
     ('person',      r'〖@([^〖〗\n]+)〗',  'person',      '人名',     'person.html'),
     ('place',       r'〖=([^〖〗\n]+)〗',  'place',       '地名',     'place.html'),
     ('official',    r'〖;([^〖〗\n]+)〗', 'official',    '官职',     'official.html'),
     ('time',        r'〖%([^〖〗\n]+)〗',  'time',        '时间',     'time.html'),
     ('dynasty',     r'〖&([^〖〗\n]+)〗',  'dynasty',     '朝代',     'dynasty.html'),
+    ('feudal-state', r'〖\$([^〖〗\n]+)〗', 'feudal-state', '封国',   'feudal-state.html'),
     ('institution', r'〖\^([^〖〗\n]+)〗', 'institution', '制度',     'institution.html'),
     ('tribe',       r'〖~([^〖〗\n]+)〗',  'tribe',       '族群',     'tribe.html'),
     ('artifact',    r'〖\*([^〖〗\n]+)〗', 'artifact',    '器物',     'artifact.html'),

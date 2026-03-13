@@ -6,6 +6,40 @@
 
 ---
 
+## 语义区块全面升级 ([f2e2195](https://github.com/baojie/shiji-kb/commit/f2e2195)) - 2026-03-13
+
+### 新增 (Added)
+
+- 📝 **SKILL_区块与韵文处理.md**：新增方法论文档，涵盖 fenced div 语法、太史公曰/赞/诗歌/引文等区块类型处理规范
+
+### 更改 (Changed)
+
+- 🔄 **语义区块迁移至 ::: fenced div 格式**：全书130篇从 `<h4>` 标题改为 `::: 类型` 围栏块语法
+  - 区块渲染改为 title 属性（tooltip），赞/诗歌块保持硬换行（`white-space: pre-line`）
+  - 83个章节自动补全 `::: 太史公曰` / `::: 赞` 标注
+  - 修复区块跨节、孤立 `:::` 标记等格式问题
+- 📖 **SKILL_古籍文本语义化.md**：重构，整合 fenced div 区块处理内容
+- 🔧 **fmt_fix_verse.py / fmt_fix_zan.py**：适配 fenced div 格式
+- 🎨 **shiji-styles.css**：新增 fenced div 区块渲染样式（tooltip、pre-line 等）
+- 🔄 **重新生成全部130篇HTML**
+
+---
+
+## v2.0实体标注符号迁移 ([b76caeb](https://github.com/baojie/shiji-kb/commit/b76caeb)) - 2026-03-13
+
+### 更改 (Changed)
+
+- 🔣 **实体标注符号全面迁移至〖〗格式**（v2.0）
+  - 人名 `@X@` → `〖@X〗`，地名 `=X=` → `〖=X〗`，官职 `$X$` → `〖;X〗`（符号同时从 `$` 改为 `;`）
+  - 时间 `%X%` → `〖%X〗`，朝代 `&X&` → `〖&X〗`，制度 `^X^` → `〖^X〗`
+  - 族群 `~X~` → `〖~X〗`，器物 `*X*` → `〖*X〗`，天文 `!X!` → `〖!X〗`
+  - 全书130篇批量迁移，消除标注符号与 Markdown 语法冲突
+- 📖 **SKILL_古籍实体标注.md**：升级至 v2.0，更新符号表和迁移说明
+- 🔧 **render_shiji_html.py**：适配〖〗新格式解析
+- 📊 **实体索引重建**：v2.0格式下 11,854词条 / 96,591次标注
+
+---
+
 ## 实体体系扩展至15类 ([f5c09dc](https://github.com/baojie/shiji-kb/commit/f5c09dc) / [de37940](https://github.com/baojie/shiji-kb/commit/de37940) / [60d6484](https://github.com/baojie/shiji-kb/commit/60d6484)) - 2026-03-13
 
 ### 新增 (Added)
@@ -685,5 +719,5 @@
 
 ---
 
-**最后更新**: 2026-03-11
+**最后更新**: 2026-03-13
 **当前版本**: v0.9.0

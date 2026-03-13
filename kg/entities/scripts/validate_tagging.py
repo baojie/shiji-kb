@@ -20,29 +20,26 @@ def remove_all_tags(text):
     text = re.sub(r'^>\s*', '', text, flags=re.MULTILINE)
     text = re.sub(r'^:::.*$', '', text, flags=re.MULTILINE)
 
-    # 去除各种语义标签（按出现频率优化顺序）
-    # @person@ - 人物
+    # 去除各种语义标签
+    # v2.0+ 统一格式：〖TYPE content〗（10类对称符号：@=;%&$^~*!）
+    text = re.sub(r'〖[@=;%&$^~*!]([^〖〗]+)〗', r'\1', text)
+    # v1.0 旧格式（兼容）
     text = re.sub(r'@([^@]+)@', r'\1', text)
-    # &state& - 国家/组织
     text = re.sub(r'&([^&]+)&', r'\1', text)
-    # =place= - 地点
     text = re.sub(r'=([^=]+)=', r'\1', text)
-    # $position$ - 职位
     text = re.sub(r'\$([^$]+)\$', r'\1', text)
-    # %time% - 时间
     text = re.sub(r'%([^%]+)%', r'\1', text)
-    # *object* - 物品
     text = re.sub(r'\*([^*]+)\*', r'\1', text)
-    # ^concept^ - 概念 (修正：不能用 ^，要用 \^)
     text = re.sub(r'\^([^\^]+)\^', r'\1', text)
-    # ~tribe~ - 部落
     text = re.sub(r'~([^~]+)~', r'\1', text)
-    # ?deity? - 神灵
-    text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
-    # 〘animal〙 - 动植物 (新符号)
-    text = re.sub(r'〘([^〘〙]+)〙', r'\1', text)
-    # !event! - 天象
     text = re.sub(r'!([^!]+)!', r'\1', text)
+    # 6类非对称CJK括号
+    text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
+    text = re.sub(r'〘([^〘〙]+)〙', r'\1', text)
+    text = re.sub(r'《([^《》]+)》', r'\1', text)
+    text = re.sub(r'〈([^〈〉]+)〉', r'\1', text)
+    text = re.sub(r'【([^【】]+)】', r'\1', text)
+    text = re.sub(r'〔([^〔〕]+)〕', r'\1', text)
 
     return text.strip()
 

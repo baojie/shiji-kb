@@ -13,6 +13,7 @@
 - $官职$ -> <span class="official">官职</span>
 - %时间% -> <span class="time">时间</span>
 - &朝代& -> <span class="dynasty">朝代</span>
+- $封国$ -> <span class="feudal-state">封国</span>
 - ^制度^ -> <span class="institution">制度</span>
 - ~族群~ -> <span class="tribe">族群</span>
 - *器物* -> <span class="artifact">器物</span>
@@ -32,19 +33,20 @@ import json
 from pathlib import Path
 from html import escape as html_escape
 
-# 实体类型映射（v2.0，2026-03-13）
-# 新格式：9类对称符号改为 〖TYPE content〗 统一包裹
+# 实体类型映射（v2.1，2026-03-13）
+# 新格式：10类对称符号改为 〖TYPE content〗 统一包裹
 #   〖 开头，第一字符为类型标记，〗 结尾，无嵌套歧义
 # 6类已有非对称CJK括号（〚〛/〘〙/《》/〈〉/【】/〔〕）格式不变
 # 排除 " 字符以避免匹配HTML属性
 ENTITY_PATTERNS = [
     (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),                               # 粗体（不变）
-    # 9类新格式：〖TYPE content〗
+    # 10类新格式：〖TYPE content〗
     (r'〖\*([^〖〗<>"]+)〗', r'<span class="artifact" title="器物">\1</span>'),     # 器物
     (r'〖;([^〖〗<>"]+)〗',  r'<span class="official" title="官职">\1</span>'),    # 官职
     (r'〖=([^〖〗<>"]+)〗',  r'<span class="place" title="地名">\1</span>'),       # 地名
     (r'〖%([^〖〗<>"]+)〗',  r'<span class="time" title="时间">\1</span>'),        # 时间
     (r'〖&([^〖〗<>"]+)〗',  r'<span class="dynasty" title="朝代/氏族">\1</span>'), # 朝代
+    (r'〖\$([^〖〗<>"]+)〗', r'<span class="feudal-state" title="封国">\1</span>'), # 封国
     (r'〖\^([^〖〗<>"]+)〗', r'<span class="institution" title="制度">\1</span>'),  # 制度
     (r'〖~([^〖〗<>"]+)〗',  r'<span class="tribe" title="族群">\1</span>'),       # 族群
     (r'〖!([^〖〗<>"]+)〗',  r'<span class="astronomy" title="天文/历法">\1</span>'), # 天文
@@ -83,6 +85,7 @@ _ENTITY_TYPE_FILES = {
     'official': 'official.html',
     'time': 'time.html',
     'dynasty': 'dynasty.html',
+    'feudal-state': 'feudal-state.html',
     'institution': 'institution.html',
     'tribe': 'tribe.html',
     'artifact': 'artifact.html',
