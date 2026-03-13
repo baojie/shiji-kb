@@ -38,7 +38,7 @@ ENTITY_TYPES = [
     ('official',    r'〖;([^〖〗\n]+)〗', 'official',    '官职',     'official.html'),
     ('time',        r'〖%([^〖〗\n]+)〗',  'time',        '时间',     'time.html'),
     ('dynasty',     r'〖&([^〖〗\n]+)〗',  'dynasty',     '朝代',     'dynasty.html'),
-    ('feudal-state', r'〖\$([^〖〗\n]+)〗', 'feudal-state', '封国',   'feudal-state.html'),
+    ('feudal-state', r"〖'([^〖〗\n]+)〗", 'feudal-state', '封国',   'feudal-state.html'),
     ('institution', r'〖\^([^〖〗\n]+)〗', 'institution', '制度',     'institution.html'),
     ('tribe',       r'〖~([^〖〗\n]+)〗',  'tribe',       '族群',     'tribe.html'),
     ('artifact',    r'〖\*([^〖〗\n]+)〗', 'artifact',    '器物',     'artifact.html'),

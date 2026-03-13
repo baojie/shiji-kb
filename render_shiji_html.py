@@ -13,7 +13,7 @@
 - $官职$ -> <span class="official">官职</span>
 - %时间% -> <span class="time">时间</span>
 - &朝代& -> <span class="dynasty">朝代</span>
-- $封国$ -> <span class="feudal-state">封国</span>
+- '封国 -> <span class="feudal-state">封国</span>
 - ^制度^ -> <span class="institution">制度</span>
 - ~族群~ -> <span class="tribe">族群</span>
 - *器物* -> <span class="artifact">器物</span>
@@ -46,7 +46,7 @@ ENTITY_PATTERNS = [
     (r'〖=([^〖〗<>"]+)〗',  r'<span class="place" title="地名">\1</span>'),       # 地名
     (r'〖%([^〖〗<>"]+)〗',  r'<span class="time" title="时间">\1</span>'),        # 时间
     (r'〖&([^〖〗<>"]+)〗',  r'<span class="dynasty" title="朝代/氏族">\1</span>'), # 朝代
-    (r'〖\$([^〖〗<>"]+)〗', r'<span class="feudal-state" title="封国">\1</span>'), # 封国
+    (r"〖'([^〖〗<>\"]+)〗", r'<span class="feudal-state" title="封国">\1</span>'), # 封国
     (r'〖\^([^〖〗<>"]+)〗', r'<span class="institution" title="制度">\1</span>'),  # 制度
     (r'〖~([^〖〗<>"]+)〗',  r'<span class="tribe" title="族群">\1</span>'),       # 族群
     (r'〖!([^〖〗<>"]+)〗',  r'<span class="astronomy" title="天文/历法">\1</span>'), # 天文
@@ -277,8 +277,8 @@ def convert_entities(text):
     text = re.sub(r'〖(?=<span[\s>])', '', text)
     text = re.sub(r'(?<=</span>)〗', '', text)
     # 2. 兼容旧格式残留（防万一）
-    text = re.sub(r'[;\^~\*!〘〙〚〛](?=<span[\s>])', '', text)
-    text = re.sub(r'(?<=</span>)[;\^~\*!〘〙〚〛]', '', text)
+    text = re.sub(r"[;\^~\*!'〘〙〚〛](?=<span[\s>])", '', text)
+    text = re.sub(r"(?<=</span>)[;\^~\*!'〘〙〚〛]", '', text)
 
     # 最后处理段落编号（PN - Purple Numbers）
     # 将 [编号] 转换为可点击的锚点链接

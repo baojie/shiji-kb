@@ -60,7 +60,7 @@ def migrate_always_feudal(dry_run=False, chapter_num=None):
 
         for name in always_feudal:
             old = f'〖&{name}〗'
-            new = f'〖${name}〗'
+            new = f"〖'{name}〗"
             count = content.count(old)
             if count > 0:
                 content = content.replace(old, new)
@@ -179,7 +179,7 @@ def apply_patch(patch_file):
         content = fpath.read_text(encoding='utf-8')
         for entity, _ in changes:
             old = f'〖&{entity}〗'
-            new = f'〖${entity}〗'
+            new = f"〖'{entity}〗"
             # 逐个替换（按行号匹配更精确，但简单场景下全替换也可接受）
             content = content.replace(old, new)
 
@@ -224,10 +224,10 @@ def check_remaining():
     dynasty_count = 0
     for fpath in files:
         content = fpath.read_text(encoding='utf-8')
-        feudal_count += len(re.findall(r'〖\$[^〖〗]+〗', content))
+        feudal_count += len(re.findall(r"〖'[^〖〗]+〗", content))
         dynasty_count += len(re.findall(r'〖&[^〖〗]+〗', content))
 
-    print(f"\n当前统计: 〖&朝代〗={dynasty_count}, 〖$封国〗={feudal_count}, 合计={dynasty_count+feudal_count}")
+    print(f"\n当前统计: 〖&朝代〗={dynasty_count}, 〖'封国〗={feudal_count}, 合计={dynasty_count+feudal_count}")
 
 
 def main():
