@@ -41,6 +41,7 @@ ENTITY_TYPES = [
     ('feudal-state', r"〖'([^〖〗\n]+)〗", 'feudal-state', '邦国',   'feudal-state.html'),
     ('institution', r'〖\^([^〖〗\n]+)〗', 'institution', '制度',     'institution.html'),
     ('tribe',       r'〖~([^〖〗\n]+)〗',  'tribe',       '族群',     'tribe.html'),
+    ('identity',    r'〖#([^〖〗\n]+)〗',  'identity',    '身份',     'identity.html'),
     ('artifact',    r'〖\*([^〖〗\n]+)〗', 'artifact',    '器物',     'artifact.html'),
     ('astronomy',   r'〖!([^〖〗\n]+)〗',  'astronomy',   '天文',     'astronomy.html'),
     # 6类非对称格式（不变）

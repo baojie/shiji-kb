@@ -94,7 +94,7 @@ kg/
 
 ## 实体标注体系
 
-文本中使用以下标注符号（v2.2，16类，2026-03-14）：
+文本中使用以下标注符号（v2.2，17类，2026-03-14）：
 
 | 符号 | 类型 | 示例 |
 |------|------|------|
@@ -104,6 +104,7 @@ kg/
 | `〖%time〗` | 时间 | `〖%三年〗` |
 | `〖'state〗` | 邦国 | `〖'汉〗`、`〖'齐〗` |
 | `〖&clan〗` | 氏族 | `〖&刘氏〗`、`〖&嬴氏〗` |
+| `〖#role〗` | 身份 | `〖#天子〗`、`〖#诸侯〗`、`〖#兄弟〗` |
 | `〖^inst〗` | 制度 | `〖^郡县制〗` |
 | `〖~group〗` | 族群 | `〖~匈奴〗`、`〖~三苗〗` |
 | `〖*artifact〗` | 器物 | `〖*宝鼎〗` |
@@ -140,7 +141,7 @@ python kg/events/scripts/build_metro_map_data.py        # 生成地铁图数据
 
 # 实体索引（含事件索引页）
 python kg/entities/scripts/build_entity_index.py        # 重建全部实体索引
-# → 输出：docs/entities/*.html（16类实体 + event.html事件时间索引 + index.html总览）
+# → 输出：docs/entities/*.html（17类实体 + event.html事件时间索引 + index.html总览）
 # → 输出：kg/entities/data/entity_index.json
 # event.html 数据来源：kg/events/data/*_事件索引.md（130个文件）
 # event.html 功能：按历史分期分组、事件编号显示、时间/类型/人物/地点标签、搜索筛选
