@@ -195,7 +195,7 @@ def extract_events_from_index_files(event_dir):
             if not event_name or not event_id:
                 continue
 
-            clean_name = re.sub(r'[@=$%&^~*!?〘〙〚〛]', '', event_name).strip()
+            clean_name = re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕〘〙]', '', event_name).strip()
             para_num = para_map.get(event_id, '')
             reasoning = reasoning_map.get(event_id, '')
             if clean_name:
@@ -223,25 +223,23 @@ def _parse_ce_year(time_str):
 
 
 def _strip_entity_tags(text):
-    """去除实体标记符号，保留纯文本。
-    事件索引文件仍使用v1格式（@人名@、=地名= 等），同时也可能含v2.1的〖+〗等。
-    """
-    return re.sub(r'[@=$%&^~*!?〖〗〘〙〚〛+]', '', text).strip()
+    """去除实体标记符号，保留纯文本（v2.1格式：〖TYPE content〗）。"""
+    return re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕〘〙]', '', text).strip()
 
 
 def _extract_people_list(people_str):
-    """从人物字段提取人名列表。'@项羽@、@刘邦@' → ['项羽', '刘邦']
-    事件索引文件仍使用v1格式。
+    """从人物字段提取人名列表。'〖@项羽〗、〖@刘邦〗' → ['项羽', '刘邦']
+    v2.1格式：〖@人名〗。
     """
-    names = re.findall(r'@([^@]+)@', people_str)
+    names = re.findall(r'〖@([^〖〗\n]+)〗', people_str)
     return names if names else [_strip_entity_tags(people_str)] if people_str.strip() not in ('', '-') else []
 
 
 def _extract_location_list(loc_str):
-    """从地点字段提取地名列表。'=长安=、=洛阳=' → ['长安', '洛阳']
-    事件索引文件仍使用v1格式。
+    """从地点字段提取地名列表。'〖=长安〗、〖=洛阳〗' → ['长安', '洛阳']
+    v2.1格式：〖=地名〗。
     """
-    places = re.findall(r'=([^=]+)=', loc_str)
+    places = re.findall(r'〖=([^〖〗\n]+)〗', loc_str)
     return places if places else [_strip_entity_tags(loc_str)] if loc_str.strip() not in ('', '-') else []
 
 

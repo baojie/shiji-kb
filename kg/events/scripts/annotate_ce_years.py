@@ -228,8 +228,8 @@ def resolve_ruler(name, chapter_id, rulers, aliases):
     if not name:
         return None
 
-    # 清理标记符号（事件索引文件仍使用v1格式）
-    name = re.sub(r'[@$&%]', '', name).strip()
+    # 清理标记符号（v2.1格式：〖TYPE content〗）
+    name = re.sub(r'[〖〗@;%&\'^~\*!#\+]', '', name).strip()
     if not name:
         return None
 
@@ -284,9 +284,9 @@ def parse_time_field(time_str):
     # 去除已有的公元标注（防止重复标注）
     time_str = re.sub(r'（公元[前]?\d+年.*?）', '', time_str).strip()
 
-    # 事件索引文件仍使用v1格式（@人名@、%时间%、&氏族& 等）
-    # 格式1: &年号&%X年%
-    era_match = re.search(r'&([^&]+)&.*?%([^%]*?年[^%]*)%', time_str)
+    # v2.1格式：〖&年号〗〖%时间〗 等
+    # 格式1: 〖&年号〗〖%X年〗
+    era_match = re.search(r'〖&([^〖〗\n]+)〗.*?〖%([^〖〗\n]*?年[^〖〗\n]*)〗', time_str)
     if era_match:
         era_name = era_match.group(1)
         year_text = era_match.group(2)
@@ -296,8 +296,8 @@ def parse_time_field(time_str):
             results.append((None, year_num, era_name))
             return results
 
-    # 格式2: 更元%X年%
-    geng_match = re.search(r'更元.*?%([^%]*?年[^%]*)%', time_str)
+    # 格式2: 更元〖%X年〗
+    geng_match = re.search(r'更元.*?〖%([^〖〗\n]*?年[^〖〗\n]*)〗', time_str)
     if geng_match:
         year_text = geng_match.group(1)
         year_cn = re.search(r'([元一二三四五六七八九十百]+)年', year_text)
@@ -306,21 +306,21 @@ def parse_time_field(time_str):
             results.append((None, year_num, '更元'))
             return results
 
-    # 格式3: %汉X年% 或 %二世X年%
-    han_match = re.search(r'%汉([元一二三四五六七八九十百]+)年', time_str)
+    # 格式3: 〖%汉X年〗 或 〖%二世X年〗
+    han_match = re.search(r'〖%汉([元一二三四五六七八九十百]+)年', time_str)
     if han_match:
         year_num = cn_to_int(han_match.group(1))
         results.append(('高皇帝', year_num, None))
         return results
 
-    ershi_match = re.search(r'%二世([元一二三四五六七八九十百]+)年', time_str)
+    ershi_match = re.search(r'〖%二世([元一二三四五六七八九十百]+)年', time_str)
     if ershi_match:
         year_num = cn_to_int(ershi_match.group(1))
         results.append(('秦二世', year_num, None))
         return results
 
-    # 格式4: @ruler@%X年% 或 $ruler$%X年%
-    ruler_match = re.search(r'[@$]([^@$]+)[@$].*?%([^%]*?年[^%]*)%', time_str)
+    # 格式4: 〖@ruler〗〖%X年〗 或 〖;ruler〗〖%X年〗
+    ruler_match = re.search(r'〖[@;]([^〖〗\n]+)〗.*?〖%([^〖〗\n]*?年[^〖〗\n]*)〗', time_str)
     if ruler_match:
         ruler_name = ruler_match.group(1)
         year_text = ruler_match.group(2)
@@ -329,8 +329,8 @@ def parse_time_field(time_str):
             year_num = cn_to_int(year_cn.group(1))
             results.append((ruler_name, year_num, None))
 
-            # 检查是否有范围（至%X年%）
-            range_match = re.search(r'至.*?%([^%]*?年[^%]*)%', time_str)
+            # 检查是否有范围（至〖%X年〗）
+            range_match = re.search(r'至.*?〖%([^〖〗\n]*?年[^〖〗\n]*)〗', time_str)
             if range_match:
                 year_text2 = range_match.group(1)
                 year_cn2 = re.search(r'([元一二三四五六七八九十百]+)年', year_text2)
@@ -339,9 +339,9 @@ def parse_time_field(time_str):
                     results.append((ruler_name, year_num2, None))
             return results
 
-    # 格式5a: %prefix+X年...% （如 %高祖十一年春%、%建元六年%、%秦昭王四十八年%）
+    # 格式5a: 〖%prefix+X年...〗 （如 〖%高祖十一年春〗、〖%建元六年〗、〖%秦昭王四十八年〗）
     inline_match = re.search(
-        r'%([^%]*?)([^\d%@$&一二三四五六七八九十百]{2,}?)([元一二三四五六七八九十百]+)年',
+        r'〖%([^〖〗\n]*?)([^\d〖〗@;&一二三四五六七八九十百]{2,}?)([元一二三四五六七八九十百]+)年',
         time_str
     )
     if inline_match:
@@ -352,8 +352,8 @@ def parse_time_field(time_str):
             results.append((prefix, year_num, prefix))
             return results
 
-    # 格式5: 纯 %X年% （无ruler标注）
-    year_matches = re.findall(r'%([^%]*?([元一二三四五六七八九十百]+)年[^%]*)%', time_str)
+    # 格式5: 纯 〖%X年〗 （无ruler标注）
+    year_matches = re.findall(r'〖%([^〖〗\n]*?([元一二三四五六七八九十百]+)年[^〖〗\n]*)〗', time_str)
     if year_matches:
         # 取第一个（主年份）
         year_cn_str = year_matches[0][1]
@@ -369,7 +369,7 @@ def parse_time_field(time_str):
         return results
 
     # 格式6: 描述性文本中尝试提取（如"秦惠王八年"）
-    desc_match = re.search(r'([^\s@$%&]+?)([元一二三四五六七八九十百]+)年', time_str)
+    desc_match = re.search(r'([^\s〖〗@;%&]+?)([元一二三四五六七八九十百]+)年', time_str)
     if desc_match:
         ruler_name = desc_match.group(1)
         year_num = cn_to_int(desc_match.group(2))
@@ -377,8 +377,8 @@ def parse_time_field(time_str):
             results.append((ruler_name, year_num, None))
             return results
 
-    # 格式7: @ruler@卒 / @ruler@死后 -> 取末年
-    death_match = re.search(r'[@$]([^@$]+)[@$].*?[卒崩死]', time_str)
+    # 格式7: 〖@ruler〗卒 / 〖;ruler〗死后 -> 取末年
+    death_match = re.search(r'〖[@;]([^〖〗\n]+)〗.*?[卒崩死]', time_str)
     if death_match:
         results.append((death_match.group(1), -1, None))  # -1 表示取末年
         return results
@@ -568,8 +568,8 @@ def extract_people(lines, start_idx):
     """从事件详细记录中提取主要人物"""
     for i in range(start_idx, min(start_idx + 12, len(lines))):
         if '**主要人物**' in lines[i]:
-            # 提取 @name@ 标注的人名
-            names = re.findall(r'@([^@]+)@', lines[i])
+            # 提取 〖@name〗 标注的人名
+            names = re.findall(r'〖@([^〖〗\n]+)〗', lines[i])
             return names
     return []
 
@@ -657,9 +657,9 @@ def process_event_file(filepath, rulers, eras, aliases, year_ce_map,
                 rulers, eras, aliases, year_ce_map
             )
 
-            # 如果有明确的 @ruler@ 标注（非内联），更新上下文
+            # 如果有明确的 〖@ruler〗 标注（非内联），更新上下文
             ruler_name = parsed[0][0] if parsed else None
-            has_explicit_ruler = ruler_name and re.search(r'[@$]', time_str)
+            has_explicit_ruler = ruler_name and re.search(r'〖[@;]', time_str)
             if has_explicit_ruler and ce_year is not None:
                 resolved = resolve_ruler(ruler_name, chapter_id, rulers, aliases)
                 if resolved:

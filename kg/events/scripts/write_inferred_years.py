@@ -149,12 +149,12 @@ def parse_all_events_from_files():
                 if m2 and ce_year is None:
                     ce_year = -int(m2.group(1))
 
-            # 事件索引文件仍使用v1格式
-            people = re.findall(r'@([^@]+)@', people_str)
+            # v2.1格式：〖@人名〗
+            people = re.findall(r'〖@([^〖〗\n]+)〗', people_str)
 
             events.append({
                 'event_id': event_id,
-                'name': re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', event_name).strip(),
+                'name': re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕]', '', event_name).strip(),
                 'chapter_id': chapter_id,
                 'ch_num': ch_num,
                 'ce_year': ce_year,

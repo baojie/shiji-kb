@@ -78,16 +78,16 @@ def parse_event_file(filepath):
             if ce_match:
                 ce_year = int(ce_match.group(1))
 
-        # 事件索引文件仍使用v1格式
+        # v2.1格式：〖=地名〗、〖@人名〗、〖;官职〗、〖&氏族〗
         # 提取地点标签
-        locations = re.findall(r"=([^=]+)=", location_field)
+        locations = re.findall(r"〖=([^〖〗\n]+)〗", location_field)
 
-        # 提取人物标签（@人物@ 和 $人物$）
-        people = re.findall(r"@([^@]+)@", people_field)
-        people += re.findall(r"\$([^$]+)\$", people_field)
+        # 提取人物标签（〖@人物〗 和 〖;人物〗）
+        people = re.findall(r"〖@([^〖〗\n]+)〗", people_field)
+        people += re.findall(r"〖;([^〖〗\n]+)〗", people_field)
 
         # 提取朝代标签
-        dynasties = re.findall(r"&([^&]+)&", dynasty_field)
+        dynasties = re.findall(r"〖&([^〖〗\n]+)〗", dynasty_field)
 
         events.append({
             "id": event_id,

@@ -2,8 +2,8 @@
 """
 批量修正事件索引中"单锚点塌缩"导致的年份错误。
 
-注意：本脚本处理事件索引文件（kg/events/data/），这些文件使用 v1 格式
-（@person@, %time%），与章节文件的 v2.1 〖TYPE content〗 格式不同。
+注意：本脚本处理事件索引文件（kg/events/data/），这些文件使用 v2.1 格式
+（〖@person〗, 〖%time〗 等 〖TYPE content〗 格式）。
 
 修正策略：
 1. 读取 reign_periods.json 和 person_lifespans.json
@@ -109,12 +109,12 @@ def parse_event_details(content):
             continue
 
         if current_id:
-            # 人物
-            persons = re.findall(r"@(\w+?)@", line)
+            # 人物（v2.1格式：〖@人名〗）
+            persons = re.findall(r"〖@([^〖〗\n]+)〗", line)
             current["persons"].extend(persons)
 
-            # 时间线索（%N年% 格式）
-            for th in re.finditer(r"%(.+?)%", line):
+            # 时间线索（〖%N年〗 格式）
+            for th in re.finditer(r"〖%([^〖〗\n]+)〗", line):
                 current["time_hints"].append(th.group(1))
 
             # 描述
@@ -238,7 +238,7 @@ def parse_overview_table(content):
                 year_bce = int(inferred.group(1))
                 year_type = "inferred"
 
-        persons = re.findall(r"@(\w+?)@", m.group(0))
+        persons = re.findall(r"〖@([^〖〗\n]+)〗", m.group(0))
 
         events.append({
             "id": event_id,

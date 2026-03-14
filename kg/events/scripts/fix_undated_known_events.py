@@ -139,8 +139,8 @@ def scan_and_fix():
                         continue
 
                     # 检查事件名是否匹配已知事件
-                    # 事件索引文件仍使用v1格式
-                    clean_name = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', current_name)
+                    # v2.1格式：〖TYPE content〗
+                    clean_name = re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕]', '', current_name)
                     matched_year = None
                     matched_reason = None
 
@@ -180,7 +180,7 @@ def cross_chapter_check(fixes):
             content = f.read()
         for m in re.finditer(r'^### (\d{3}-\d{3})\s+(.+)', content, re.MULTILINE):
             eid = m.group(1)
-            name = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', m.group(2).strip())
+            name = re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕]', '', m.group(2).strip())
 
             # 查找该事件的时间
             pos = m.end()

@@ -83,17 +83,17 @@ def extract_ruler_from_event(event_name, people, chapter_id):
     # 如 "文公东迁", "缪公用百里傒", "景公卒哀公立"
     rulers_in_name = []
 
-    # 从事件名中提取君主名（去掉标签符号后，事件索引文件仍使用v1格式）
-    clean_name = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', event_name)
+    # 从事件名中提取君主名（去掉标签符号后，v2.1格式）
+    clean_name = re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕]', '', event_name)
 
     # 匹配 X公/X王/X侯/X帝 等模式
     m = re.findall(r'([\u4e00-\u9fff]{1,3}(?:公|王|侯|帝|后|伯))', clean_name)
     if m:
         rulers_in_name.extend(m)
 
-    # 从人物列表中提取（事件索引文件仍使用v1格式）
+    # 从人物列表中提取（v2.1格式）
     for p in people:
-        clean_p = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', p)
+        clean_p = re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕]', '', p)
         if re.match(r'.+(?:公|王|侯|帝|后)$', clean_p):
             rulers_in_name.append(clean_p)
 
@@ -103,7 +103,7 @@ def extract_ruler_from_event(event_name, people, chapter_id):
 def extract_regnal_year(time_str):
     """从时间字段提取纪年数字"""
     # 匹配 %N年% 或 %元年%
-    m = re.search(r'%([元一二三四五六七八九十百廿卅]+年)%', time_str)
+    m = re.search(r'〖%([元一二三四五六七八九十百廿卅]+年)〗', time_str)
     if m:
         year_cn = m.group(1).replace('年', '')
         return cn_to_int(year_cn)
@@ -199,9 +199,9 @@ def parse_all_events():
                 if m:
                     ce_year = int(m.group(1))
 
-            # 事件索引文件仍使用v1格式
-            people = re.findall(r'@([^@]+)@', people_str)
-            clean_name = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', event_name).strip()
+            # v2.1格式：〖@人名〗
+            people = re.findall(r'〖@([^〖〗\n]+)〗', people_str)
+            clean_name = re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕]', '', event_name).strip()
 
             events.append({
                 'event_id': event_id,
