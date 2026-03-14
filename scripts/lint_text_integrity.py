@@ -72,7 +72,10 @@ def strip_markup(text: str) -> str:
     # 1. Markdown 标题行（不在原文中）
     text = re.sub(r'^#{1,6}.*$', '', text, flags=re.MULTILINE)
 
-    # 2. ::: 围栏块标记行（太史公曰 / 赞诗等）
+    # 2. ## 标题 区块（标注标题行 + 下方内容行，不在原文中）
+    text = re.sub(r'^## 标题\n[^\n]*\n?', '', text, flags=re.MULTILINE)
+
+    # 3. ::: 围栏块标记行（太史公曰 / 赞诗等）
     text = re.sub(r'^:::.*$', '', text, flags=re.MULTILINE)
 
     # 3. 行首引用符 "> "
