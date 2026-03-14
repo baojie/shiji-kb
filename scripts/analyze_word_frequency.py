@@ -14,7 +14,7 @@ import json
 def extract_plain_text(tagged_md_file):
     """
     从标注的Markdown文件中提取纯文本
-    去除所有标注符号：@人名@, =地名=, $官职$, %时间%, &朝代&, ^制度^, ~族群~, *器物*, !天文!, 〚神话〛, 〖+生物〗
+    去除所有标注符号：〖@人名〗, 〖=地名〗, 〖;官职〗, 〖%时间〗 等17种v2.1格式
     去除段落编号：[1.1], [2.3]等
     去除标题：#开头的行
     """
@@ -29,31 +29,15 @@ def extract_plain_text(tagged_md_file):
     # 移除段落编号 [X.Y]
     text = re.sub(r'\[\d+(?:\.\d+)?\]', '', text)
 
-    # 移除实体标注符号
-    # @人名@
-    text = re.sub(r'@([^@]+)@', r'\1', text)
-    # =地名=
-    text = re.sub(r'=([^=]+)=', r'\1', text)
-    # #官职#
-    text = re.sub(r'#([^#]+)#', r'\1', text)
-    # %时间%
-    text = re.sub(r'%([^%]+)%', r'\1', text)
-    # &朝代&
-    text = re.sub(r'&([^&]+)&', r'\1', text)
-    # ^制度^
-    text = re.sub(r'\^([^^]+)\^', r'\1', text)
-    # ~族群~
-    text = re.sub(r'~([^~]+)~', r'\1', text)
-    # *器物*
-    text = re.sub(r'\*([^*]+)\*', r'\1', text)
-    # !天文!
-    text = re.sub(r'!([^!]+)!', r'\1', text)
-    # ?神话?
-    text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
-    # 〖+生物〗 (新CJK符号)
-    text = re.sub(r'〖+([^〖+〗]+)〗', r'\1', text)
-    # $标题/职位$ (另一种标注)
-    text = re.sub(r'\$([^$]+)\$', r'\1', text)
+    # 移除所有v2.1实体标注符号
+    # 〖TYPE content〗 格式（12种对称类型）
+    text = re.sub(r'〖[@=;%&\'^~\*!#\+][^〖〗\n]+?〗', lambda m: re.sub(r'^〖.', '', m.group()).rstrip('〗'), text)
+    # 5种非对称类型
+    text = re.sub(r'〚([^〚〛\n]+)〛', r'\1', text)
+    text = re.sub(r'《([^《》\n]+)》', r'\1', text)
+    text = re.sub(r'〈([^〈〉\n]+)〉', r'\1', text)
+    text = re.sub(r'【([^【】\n]+)】', r'\1', text)
+    text = re.sub(r'〔([^〔〕\n]+)〕', r'\1', text)
 
     # 移除引号标记 > 开头的行
     text = re.sub(r'^>\s*', '', text, flags=re.MULTILINE)

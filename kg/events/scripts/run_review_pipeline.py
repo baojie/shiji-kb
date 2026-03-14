@@ -260,7 +260,7 @@ def check_missing_fields(parsed):
             })
         # 时间字段有原文纪年但无公元年
         time_str = evt.get("时间", "")
-        if time_str and "%" in time_str:
+        if time_str and "〖%" in time_str:
             year, _ = extract_year_bce(time_str)
             if year is None:
                 issues.append({

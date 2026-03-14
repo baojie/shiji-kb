@@ -98,10 +98,10 @@ def load_all_events_with_text():
             if ce_m:
                 ce = -int(ce_m.group(1))
 
-            people = re.findall(r"@([^@]+)@", m.group(6))
-            people += re.findall(r"\$([^$]+)\$", m.group(6))
-            locs = re.findall(r"=([^=]+)=", m.group(5))
-            dynasties = re.findall(r"&([^&]+)&", m.group(7))
+            people = re.findall(r"〖@([^〖〗\n]+)〗", m.group(6))
+            people += re.findall(r"〖;([^〖〗\n]+)〗", m.group(6))
+            locs = re.findall(r"〖=([^〖〗\n]+)〗", m.group(5))
+            dynasties = re.findall(r"〖&([^〖〗\n]+)〗", m.group(7))
 
             all_events[eid] = {
                 "id": eid,

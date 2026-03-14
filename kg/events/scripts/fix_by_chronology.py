@@ -2,8 +2,8 @@
 """
 用《中国历史大事年表》交叉修正事件索引中的年份标注。
 
-注意：本脚本处理事件索引文件（kg/events/data/），这些文件使用 v1 格式
-（@person@, $official$, %time%），与章节文件的 v2.1 〖TYPE content〗 格式不同。
+注意：本脚本处理事件索引文件（kg/events/data/），这些文件使用 v2.1 格式
+（〖@person〗, 〖;official〗, 〖%time〗 等 〖TYPE content〗 格式）。
 
 策略：
 1. 从年表提取：人物→活跃年份列表、特征事件→年份
@@ -187,9 +187,9 @@ def parse_overview_table(content):
         if inferred and year_bce is None:
             year_bce = int(inferred.group(1))
             year_type = "inferred"
-        persons = re.findall(r"@(\w+?)@", m.group(0))
-        # 也提取$人名$格式
-        persons += re.findall(r"\$(\w+?)\$", m.group(0))
+        persons = re.findall(r"〖@([^〖〗\n]+)〗", m.group(0))
+        # 也提取〖;人名〗格式（官职/称号中的人名）
+        persons += re.findall(r"〖;([^〖〗\n]+)〗", m.group(0))
         # 去重
         persons = list(dict.fromkeys(persons))
         events.append({

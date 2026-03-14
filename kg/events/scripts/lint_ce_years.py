@@ -160,8 +160,8 @@ def suggest_fix(issue, reign_periods):
     time_raw = event["time_raw"]
 
     # 提取纪年信息
-    ruler_match = re.search(r"\$([^$]+)\$", time_raw)
-    year_match = re.search(r"%([^%]+)%", time_raw)
+    ruler_match = re.search(r"〖;([^〖〗\n]+)〗", time_raw)
+    year_match = re.search(r"〖%([^〖〗\n]+)〗", time_raw)
 
     if ruler_match and year_match:
         ruler_name = ruler_match.group(1)
