@@ -84,7 +84,7 @@ def extract_ruler_from_event(event_name, people, chapter_id):
     rulers_in_name = []
 
     # 从事件名中提取君主名（去掉标签符号后）
-    clean_name = re.sub(r'[@=$%&^~*!?〘〙〚〛]', '', event_name)
+    clean_name = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', event_name)
 
     # 匹配 X公/X王/X侯/X帝 等模式
     m = re.findall(r'([\u4e00-\u9fff]{1,3}(?:公|王|侯|帝|后|伯))', clean_name)
@@ -93,7 +93,7 @@ def extract_ruler_from_event(event_name, people, chapter_id):
 
     # 从人物列表中提取
     for p in people:
-        clean_p = re.sub(r'[@=$%&^~*!?〘〙〚〛]', '', p)
+        clean_p = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', p)
         if re.match(r'.+(?:公|王|侯|帝|后)$', clean_p):
             rulers_in_name.append(clean_p)
 
@@ -200,7 +200,7 @@ def parse_all_events():
                     ce_year = int(m.group(1))
 
             people = re.findall(r'@([^@]+)@', people_str)
-            clean_name = re.sub(r'[@=$%&^~*!?〘〙〚〛]', '', event_name).strip()
+            clean_name = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', event_name).strip()
 
             events.append({
                 'event_id': event_id,

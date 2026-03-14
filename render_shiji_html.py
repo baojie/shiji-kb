@@ -19,7 +19,7 @@
 - *器物* -> <span class="artifact">器物</span>
 - !天文! -> <span class="astronomy">天文</span>
 - 〚神话〛 -> <span class="mythical">神话</span>
-- 〘动植物〙 -> <span class="flora-fauna">动植物</span>
+- 〖+生物〗 -> <span class="biology">生物</span>
 - 《典籍》 -> <span class="book">典籍</span>
 - 〈礼仪〉 -> <span class="ritual">礼仪</span>
 - 【刑法】 -> <span class="legal">刑法</span>
@@ -36,7 +36,7 @@ from html import escape as html_escape
 # 实体类型映射（v2.1，2026-03-13）
 # 新格式：10类对称符号改为 〖TYPE content〗 统一包裹
 #   〖 开头，第一字符为类型标记，〗 结尾，无嵌套歧义
-# 6类已有非对称CJK括号（〚〛/〘〙/《》/〈〉/【】/〔〕）格式不变
+# 5类已有非对称CJK括号（〚〛/《》/〈〉/【】/〔〕）格式不变
 # 排除 " 字符以避免匹配HTML属性
 ENTITY_PATTERNS = [
     (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),                               # 粗体（不变）
@@ -52,8 +52,8 @@ ENTITY_PATTERNS = [
     (r'〖#([^〖〗<>"]+)〗',  r'<span class="identity" title="身份">\1</span>'),     # 身份
     (r'〖!([^〖〗<>"]+)〗',  r'<span class="astronomy" title="天文/历法">\1</span>'), # 天文
     (r'〖@([^〖〗<>"]+)〗',  r'<span class="person" title="人名">\1</span>'),      # 人名
-    # 6类不变
-    (r'〘([^〘〙<>"]+)〙', r'<span class="flora-fauna" title="动植物">\1</span>'),
+    (r'〖\+([^〖〗<>"]+)〗', r'<span class="biology" title="生物">\1</span>'),      # 生物
+    # 5类不变
     (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),
     (r'《([^《》<>"]+)》', r'<span class="book" title="典籍">\1</span>'),
     (r'〈([^〈〉<>"]+)〉', r'<span class="ritual" title="礼仪">\1</span>'),
@@ -93,7 +93,7 @@ _ENTITY_TYPE_FILES = {
     'artifact': 'artifact.html',
     'astronomy': 'astronomy.html',
     'mythical': 'mythical.html',
-    'flora-fauna': 'flora-fauna.html',
+    'biology': 'biology.html',
     'book': 'book.html',
     'ritual': 'ritual.html',
     'legal': 'legal.html',
@@ -279,8 +279,8 @@ def convert_entities(text):
     text = re.sub(r'〖(?=<span[\s>])', '', text)
     text = re.sub(r'(?<=</span>)〗', '', text)
     # 2. 兼容旧格式残留（防万一）
-    text = re.sub(r"[;\^~\*!'〘〙〚〛](?=<span[\s>])", '', text)
-    text = re.sub(r"(?<=</span>)[;\^~\*!'〘〙〚〛]", '', text)
+    text = re.sub(r"[;\^~\*!'〚〛](?=<span[\s>])", '', text)
+    text = re.sub(r"(?<=</span>)[;\^~\*!'〚〛]", '', text)
 
     # 最后处理段落编号（PN - Purple Numbers）
     # 将 [编号] 转换为可点击的锚点链接
@@ -395,14 +395,13 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
         parts = ['<div class="shiji-table-wrapper">', '<table class="shiji-table">']
         # 表头：行号列（空白）+ 原始列；表头不做实体标注渲染（年号/国名等不应被标注样式干扰）
-        # 只做标注符号剥离（去掉 @=&^~*!$%〘〙〚〛 包裹符），保留纯文字
+        # 只做标注符号剥离（去掉 @=&^~*!$%〚〛 包裹符），保留纯文字
         _annotation_strip = re.compile(
             r'[@=;%&\^~\*!]([^@=;%&\^~\*!\n]{1,30}?)[@=;%&\^~\*!]'
-            r'|〘([^〘〙\n]{1,30}?)〙'
             r'|〚([^〚〛\n]{1,30}?)〛'
         )
         def strip_annotations(text):
-            return _annotation_strip.sub(lambda m: m.group(1) or m.group(2) or m.group(3), text)
+            return _annotation_strip.sub(lambda m: m.group(1) or m.group(2), text)
 
         parts.append('<thead><tr>')
         parts.append('<th class="row-pn-col"></th>')

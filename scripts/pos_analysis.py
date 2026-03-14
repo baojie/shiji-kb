@@ -157,7 +157,7 @@ MEASURE_CHARS = frozenset([
 # ─── 标注符号移除 ─────────────────────────────────────────────────────────────
 
 ANNOTATION_PATTERNS = [
-    r'〘(.*?)〙',    # 动植物（新CJK符号，U+3018/3019）
+    r'〖+(.*?)〗',    # 生物（新CJK符号，U+3018/3019）
     r'@(.*?)@',     # 人名
     r'=(.*?)=',     # 地名
     r'\$(.*?)\$',   # 官职
@@ -173,8 +173,8 @@ ANNOTATION_PATTERNS = [
 
 def remove_all_annotations(text):
     """移除所有标注符号，保留标注内容（注意：保留内容用于分析）"""
-    # 动植物（新旧符号均处理）
-    text = re.sub(r'〘.*?〙', '', text)
+    # 生物（新旧符号均处理）
+    text = re.sub(r'〖+.*?〗', '', text)
     for pat in ANNOTATION_PATTERNS[2:]:
         text = re.sub(pat, '', text)
     return text

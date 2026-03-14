@@ -35,7 +35,7 @@ def remove_all_tags(text):
     text = re.sub(r'!([^!]+)!', r'\1', text)
     # 6类非对称CJK括号
     text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
-    text = re.sub(r'〘([^〘〙]+)〙', r'\1', text)
+    text = re.sub(r'〖+([^〖+〗]+)〗', r'\1', text)
     text = re.sub(r'《([^《》]+)》', r'\1', text)
     text = re.sub(r'〈([^〈〉]+)〉', r'\1', text)
     text = re.sub(r'【([^【】]+)】', r'\1', text)

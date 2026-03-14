@@ -92,7 +92,7 @@ class HTMLLinter:
             'artifact',         # 器物/书名
             'astronomy',        # 天文
             'mythical',         # 神话
-            'flora-fauna'       # 动植物
+            'biology'       # 生物
         }
 
         # 查找所有带class的span标签

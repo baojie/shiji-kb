@@ -56,10 +56,10 @@ kg/
 │   └── scripts/
 │       └── build_vocabularies.py        # 从标注文本提取词表
 │
-├── flora_fauna/         # 动植物实体
+├── biology/         # 生物实体
 │   ├── data/            # 标注指南与项目文档
 │   └── scripts/
-│       └── extract_flora_fauna.py       # 动植物实体提取
+│       └── extract_biology.py       # 生物实体提取
 │
 ├── rdf/                 # RDF/本体数据
 │   ├── ontology.ttl     # 史记知识本体定义
@@ -110,7 +110,7 @@ kg/
 | `〖*artifact〗` | 器物 | `〖*宝鼎〗` |
 | `〖!astro〗` | 天文 | `〖!岁星〗` |
 | `〚myth〛` | 神话 | `〚黄帝〛` |
-| `〘flora〙` | 动植物 | `〘龙〙` |
+| `〖+flora〗` | 生物 | `〖+龙〗` |
 | `《book》` | 典籍 | `《春秋》` |
 | `〈ritual〉` | 礼仪 | `〈宗庙〉` |
 | `【legal】` | 刑法 | `【腰斩】` |

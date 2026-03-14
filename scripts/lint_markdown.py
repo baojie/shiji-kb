@@ -43,7 +43,7 @@ class MarkdownLinter:
             '天文': r'〖!([^〖〗]+)〗',
             # 6类非对称CJK括号
             '神话': r'〚([^〚〛]+)〛',
-            '动植物': r'〘([^〘〙]+)〙',
+            '生物': r'〖+([^〖+〗]+)〗',
             '典籍': r'《([^《》]+)》',
             '礼仪': r'〈([^〈〉]+)〉',
             '刑法': r'【([^【】]+)】',
@@ -77,7 +77,7 @@ class MarkdownLinter:
                     )
 
                 # 检查是否包含其他标注符号
-                if any(char in content for char in '@=#%&^~*!〘〙〚〛$'):
+                if any(char in content for char in '@=#%&^~*!〖+〗〚〛$'):
                     self.warnings.append(
                         f"第{self._get_line_num(match.start())}行: "
                         f"{entity_type}标注可能嵌套了其他标注: {match.group(0)[:30]}..."

@@ -29,7 +29,7 @@ ENTITY_TYPE_NAMES = {
     "artifact": "器物",
     "astronomy": "天文",
     "mythical": "神话",
-    "flora-fauna": "动植物",
+    "biology": "生物",
 }
 
 

@@ -119,7 +119,7 @@ def extract_bce_year(cell_text):
 def strip_entity_tags(text):
     """Remove entity tags like @name@, &state&, $title$ from text."""
     text = re.sub(r'[@&$^~!?]', '', text)
-    text = text.replace('〘', '').replace('〙', '')
+    text = text.replace('〖+', '').replace('〗', '')
     return text
 
 

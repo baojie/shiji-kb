@@ -32,7 +32,7 @@ TEN_TABLE_CHAPTERS = [
 def strip_annotations(text: str) -> str:
     """去除标注符号，获取纯文字内容"""
     text = re.sub(r'[@=\$%&\^~\*!]([^@=\$%&\^~\*!\n]{0,40}?)[@=\$%&\^~\*!]', r'\1', text)
-    text = re.sub(r'〘([^〘〙\n]{0,40}?)〙', r'\1', text)
+    text = re.sub(r'〖+([^〖+〗\n]{0,40}?)〗', r'\1', text)
     text = re.sub(r'〚([^〚〛\n]{0,40}?)〛', r'\1', text)
     return text
 

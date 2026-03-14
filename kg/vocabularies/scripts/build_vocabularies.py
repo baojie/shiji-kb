@@ -22,7 +22,7 @@ ENTITY_PATTERNS = {
     '器物': (r'\*([^\*]+)\*', '*'),
     '天文': (r'!([^!]+)!', '!'),
     '神话': (r'〚([^〚〛]+)〛', '〚'),
-    '动植物': (r'〘([^〘〙]+)〙', '〘'),
+    '生物': (r'〖+([^〖+〗]+)〗', '〖+'),
 }
 
 class VocabularyBuilder:
@@ -109,7 +109,7 @@ class VocabularyBuilder:
             '器物': '08_器物词表.md',
             '天文': '09_天文词表.md',
             '神话': '10_神话词表.md',
-            '动植物': '11_动植物词表.md',
+            '生物': '11_生物词表.md',
         }
 
         output_file = output_dir / filename_map[category]
@@ -206,7 +206,7 @@ class VocabularyBuilder:
                 '器物': '08_器物词表.md',
                 '天文': '09_天文词表.md',
                 '神话': '10_神话词表.md',
-                '动植物': '11_动植物词表.md',
+                '生物': '11_生物词表.md',
             }
 
             for i, (category, (_, marker)) in enumerate(ENTITY_PATTERNS.items(), 1):

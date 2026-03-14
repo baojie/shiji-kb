@@ -44,7 +44,7 @@ TYPE_TO_SYMBOL = {
     'artifact':  ('*', '*'),
     'astronomy': ('!', '!'),
     'mythical':  ('〚', '〛'),
-    'flora-fauna': ('〘', '〙'),
+    'biology': ('〖+', '〗'),
 }
 
 # 中文类型名（用于 TSV 输出）
@@ -52,14 +52,14 @@ TYPE_ZH = {
     'person': '人名', 'place': '地名', 'official': '官职',
     'time': '时间', 'dynasty': '朝代', 'institution': '制度',
     'tribe': '族群', 'artifact': '器物', 'astronomy': '天文',
-    'mythical': '神话', 'flora-fauna': '动植物',
+    'mythical': '神话', 'biology': '生物',
 }
 
 # 已有标注的检测正则
 ALL_ANNOT_RE = re.compile(
     r'@[^@\n]+?@|=[^=\n]+?=|\$[^\$\n]+?\$|%[^%\n]+?%|&[^&\n]+?&'
     r'|\^[^\^\n]+?\^|~[^~\n]+?~|\*[^\*\n]+?\*|![^!\n]+?!'
-    r'|〚[^〛\n]+?〛|〘[^〙\n]+?〙'
+    r'|〚[^〛\n]+?〛'
 )
 
 PLACEHOLDER = '░'

@@ -49,7 +49,7 @@ _ASTRO_KEYWORDS = {
     '客星','妖星','天象','天文','星象','星官','日食','月食',
 }
 
-# 动植物〘〙 后缀
+# 生物〖+〗 后缀
 _FLORA_FAUNA_SUFFIXES = frozenset('草木花树鸟鱼虫兽蛇龙鹿虎豹狼熊鹤鹰鸠鸽燕雁鸳鸯')
 
 # 礼仪〈〉
@@ -121,7 +121,7 @@ def _rule_classify(word: str) -> str:
     # 后缀规则
     if len(word) >= 2:
         last = word[-1]
-        if last in _FLORA_FAUNA_SUFFIXES: return '动植物〘〙'
+        if last in _FLORA_FAUNA_SUFFIXES: return '生物〖+〗'
         if last in _TRIBE_SUFFIXES:       return '族群~'
         if last in _PLACE_SUFFIXES:       return '地名='
         if last in _OFFICIAL_SUFFIXES:    return '官职$'
