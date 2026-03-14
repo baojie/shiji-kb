@@ -78,6 +78,7 @@ def parse_event_file(filepath):
             if ce_match:
                 ce_year = int(ce_match.group(1))
 
+        # 事件索引文件仍使用v1格式
         # 提取地点标签
         locations = re.findall(r"=([^=]+)=", location_field)
 

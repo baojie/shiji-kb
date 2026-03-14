@@ -14,19 +14,26 @@ from collections import Counter, defaultdict
 TAGGED_DIR = "/home/baojie/work/shiji-kb/chapter_md"
 PATTERN = os.path.join(TAGGED_DIR, "*.tagged.md")
 
-# annotation markers  (open_marker, close_marker, label)
+# annotation markers  (regex_pattern, label)
+# v2.1 format: 〖X content〗 for symmetric types, special brackets for asymmetric
 ANNOTATION_TYPES = [
-    ('@', '@', 'Person 人名'),
-    ('=', '=', 'Place 地名'),
-    ('$', '$', 'Official Title 官职'),
-    ('%', '%', 'Time 时间'),
-    ('&', '&', 'Dynasty 朝代'),
-    ('^', '^', 'Institution 制度'),
-    ('~', '~', 'Ethnic Group 族群'),
-    ('*', '*', 'Artifact 器物'),
-    ('!', '!', 'Astronomy 天文'),
-    ('〚', '〛', 'Mythology 神话'),
-    ('〖+', '〗', 'Flora/Fauna 生物'),
+    (r'〖@([^〖〗\n]+)〗', 'Person 人名'),
+    (r'〖=([^〖〗\n]+)〗', 'Place 地名'),
+    (r'〖;([^〖〗\n]+)〗', 'Official Title 官职'),
+    (r'〖%([^〖〗\n]+)〗', 'Time 时间'),
+    (r'〖&([^〖〗\n]+)〗', 'Dynasty 朝代'),
+    (r'〖\^([^〖〗\n]+)〗', 'Institution 制度'),
+    (r'〖~([^〖〗\n]+)〗', 'Ethnic Group 族群'),
+    (r'〖\*([^〖〗\n]+)〗', 'Artifact 器物'),
+    (r'〖!([^〖〗\n]+)〗', 'Astronomy 天文'),
+    (r'〖#([^〖〗\n]+)〗', 'Identity 身份'),
+    (r'〖\+([^〖〗\n]+)〗', 'Flora/Fauna 生物'),
+    (r"〖'([^〖〗\n]+)〗", 'Feudal State 邦国'),
+    (r'〚([^〚〛\n]+)〛', 'Mythology 神话'),
+    (r'《([^《》\n]+)》', 'Classical Text 典籍'),
+    (r'〈([^〈〉\n]+)〉', 'Ritual 礼仪'),
+    (r'【([^【】\n]+)】', 'Law 刑法'),
+    (r'〔([^〔〕\n]+)〕', 'Philosophy 思想'),
 ]
 
 # ─── helpers ──────────────────────────────────────────────────────────────────
@@ -64,28 +71,31 @@ def extract_annotated_spans(text):
     """
     spans = []
 
-    for open_m, close_m, label in ANNOTATION_TYPES:
-        om = re.escape(open_m)
-        cm = re.escape(close_m)
-        pattern = om + r'(.*?)' + cm
-
+    for pattern, label in ANNOTATION_TYPES:
         for m in re.finditer(pattern, text):
             inner = m.group(1)
             spans.append((label, inner))
 
     return spans
 
+
+# Regex to match ALL v2.1 annotation types (for stripping/masking)
+ALL_ANNOT_RE = re.compile(
+    r'〖[@=;%&\'^~\*!#\+][^〖〗\n]+?〗'
+    r'|〚[^〛\n]+?〛'
+    r'|《[^》\n]+?》'
+    r'|〈[^〉\n]+?〉'
+    r'|【[^】\n]+?】'
+    r'|〔[^〕\n]+?〕'
+)
+
+
 def remove_all_annotations(text):
     """
     Remove annotation markers AND their contents from the text.
     Returns the stripped text.
     """
-    for open_m, close_m, label in ANNOTATION_TYPES:
-        om = re.escape(open_m)
-        cm = re.escape(close_m)
-        text = re.sub(om + r'.*?' + cm, '', text)
-
-    return text
+    return ALL_ANNOT_RE.sub('', text)
 
 # ─── candidate entity detection in unannotated text ──────────────────────────
 

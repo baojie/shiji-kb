@@ -170,7 +170,7 @@ def parse_event_index(path):
                 year_bce = int(inferred.group(1))
                 year_type = "inferred"
 
-        # 提取人物（@人名@格式）
+        # 提取人物（事件索引文件仍使用v1格式：@人名@）
         persons = re.findall(r"@(\w+?)@", m.group(0))
 
         # 判断是否为死亡事件

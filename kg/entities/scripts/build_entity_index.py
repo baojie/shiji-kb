@@ -3,6 +3,14 @@
 """
 从标注的史记章节中构建命名实体索引
 
+按规范实体（canonical entity）统计：加载 entity_aliases.json 做别名合并，
+同一实体的不同称谓（如沛公/汉王/高祖/高帝）合并为一个条目（刘邦）。
+
+与 build_vocabularies.py 的区别：
+  - 本脚本：实体目录视角，做别名合并，条目数较少
+  - vocabularies：词汇表视角，按表面形式统计，不做合并，词条数较多
+  因此 entity_index 的条目数 ≤ 词表的词条数（人名差异最大）
+
 功能：
 1. 扫描 chapter_md/*.tagged.md，提取所有实体及其段落引用
 2. 读取 entity_aliases.json 进行别名合并
@@ -215,18 +223,24 @@ def _parse_ce_year(time_str):
 
 
 def _strip_entity_tags(text):
-    """去除实体标记符号，保留纯文本"""
-    return re.sub(r'[@=$%&^~*!?〘〙〚〛]', '', text).strip()
+    """去除实体标记符号，保留纯文本。
+    事件索引文件仍使用v1格式（@人名@、=地名= 等），同时也可能含v2.1的〖+〗等。
+    """
+    return re.sub(r'[@=$%&^~*!?〖〗〘〙〚〛+]', '', text).strip()
 
 
 def _extract_people_list(people_str):
-    """从人物字段提取人名列表。'@项羽@、@刘邦@' → ['项羽', '刘邦']"""
+    """从人物字段提取人名列表。'@项羽@、@刘邦@' → ['项羽', '刘邦']
+    事件索引文件仍使用v1格式。
+    """
     names = re.findall(r'@([^@]+)@', people_str)
     return names if names else [_strip_entity_tags(people_str)] if people_str.strip() not in ('', '-') else []
 
 
 def _extract_location_list(loc_str):
-    """从地点字段提取地名列表。'=长安=、=洛阳=' → ['长安', '洛阳']"""
+    """从地点字段提取地名列表。'=长安=、=洛阳=' → ['长安', '洛阳']
+    事件索引文件仍使用v1格式。
+    """
     places = re.findall(r'=([^=]+)=', loc_str)
     return places if places else [_strip_entity_tags(loc_str)] if loc_str.strip() not in ('', '-') else []
 

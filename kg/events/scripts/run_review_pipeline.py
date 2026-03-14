@@ -333,7 +333,7 @@ def check_death_event_dates(parsed, persons):
         if year is None:
             continue
 
-        # 查找涉及人物
+        # 查找涉及人物（事件索引文件仍使用v1格式）
         persons_str = evt.get("主要人物", "") or ""
         person_names = re.findall(r"@(.+?)@", persons_str)
 
@@ -371,7 +371,7 @@ def check_succession_dates(parsed, rulers):
         if year is None:
             continue
 
-        # 查找涉及人物
+        # 查找涉及人物（事件索引文件仍使用v1格式）
         persons_str = evt.get("主要人物", "") or ""
         person_names = re.findall(r"@(.+?)@", persons_str)
 

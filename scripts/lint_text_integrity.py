@@ -3,17 +3,18 @@
 """
 lint_text_integrity.py — 标注文本完整性检查
 
-去除所有语义标注符号后，与 docs/original_text/ 中的原文比对，
-逐一列出不一致，并保存到 logs/lint_text_integrity.txt。
+去除全部语义标注符号后，与 docs/original_text/ 中的原文逐字比对，
+列出不一致处并保存到 logs/lint_text_integrity.txt。
 
 用法:
     python scripts/lint_text_integrity.py              # 检查全部130章
     python scripts/lint_text_integrity.py 033 034      # 检查指定章节
-    python scripts/lint_text_integrity.py --all-punct  # 也列出标点差异
+    python scripts/lint_text_integrity.py --all        # 包含标点/编码差异
 
-差异分类:
-    【实质差异】汉字字符被增加/删除/替换（需要修复）
-    【标点差异】全角标点→半角标点的系统性转换（通常为标注规范，可忽略）
+差异分类（自动过滤）:
+    【实质差异】— 汉字字符被增加/删除/改写，必须修复
+    【标点规范化】— 全角↔半角标点（，→, 等），标注规范，可忽略
+    【编码规范化】— PUA私用区字符→标准Unicode，可忽略
 """
 
 import re
@@ -22,53 +23,90 @@ import difflib
 from pathlib import Path
 from datetime import datetime
 
-# ──────────────────────────────────────────────
-# 全角↔半角等价标点对（视为"标点差异"，不作为实质错误）
-# ──────────────────────────────────────────────
-_PAIRS = [
-    ('，', ','), ('。', '.'), ('；', ';'), ('：', ':'),
-    ('！', '!'), ('？', '?'), ('（', '('), ('）', ')'),
-    ('"', '"'), ('"', '"'), (''', "'"), (''', "'"),
-    ('「', '"'), ('」', '"'), ('『', '"'), ('』', '"'),
-    ('——', '--'), ('…', '...'), ('·', '·'),
-    # 同形异码变体
-    ('巿', '市'),   # U+5DFF vs U+5E02（市字不同字形）
-]
-PUNCT_TRIVIAL: set[tuple[str, str]] = set()
-for a, b in _PAIRS:
-    PUNCT_TRIVIAL.add((a, b))
-    PUNCT_TRIVIAL.add((b, a))
-    PUNCT_TRIVIAL.add((a, a))
-    PUNCT_TRIVIAL.add((b, b))
+# ── 预处理规范化映射 ──────────────────────────────────────
+# 对原文和标注各自做同样的规范化，然后比较规范化结果。
+# 差异 = 规范化后仍存在 → 实质差异。
+# 差异 = 规范化后消失   → 标点/编码规范化，可忽略。
 
-# 实体标注类型字符前缀
-ENTITY_PREFIXES = r'[#@=;$%&^\~*!\'+]'
+_NORM_TABLE = str.maketrans({
+    # 全角→半角标点
+    '\uff0c': ',',   # ，
+    '\u3002': '.',   # 。
+    '\uff1b': ';',   # ；
+    '\uff1a': ':',   # ：
+    '\uff01': '!',   # ！
+    '\uff1f': '?',   # ？
+    '\uff08': '(',   # （
+    '\uff09': ')',   # ）
+    '\u3001': ',',   # 、（顿号→逗号）
+    '\u3000': ' ',   # 全角空格
+    # 各式引号 → ASCII 双引号
+    '\u201c': '"',   # "
+    '\u201d': '"',   # "
+    '\u300c': '"',   # 「
+    '\u300d': '"',   # 」
+    '\u300e': '"',   # 『
+    '\u300f': '"',   # 』
+    # 各式单引号 → ASCII 单引号
+    '\u2018': "'",   # '
+    '\u2019': "'",   # '
+    # 破折号
+    '\u2014': '-',   # —（单em dash）
+    # 省略号
+    '\u2026': '.',   # …
+    # 字形变体
+    '\u5dff': '\u5e02',  # 巿 → 市
+    # 通假/异体字对（史记文本常见）
+    '\u4e8e': '\u65bc',  # 于 → 於（同一用法，异体）
+    '\u4e0e': '\u8207',  # 与 → 與（繁简变体）
+    '\u4e3a': '\u70ba',  # 为 → 為（繁简变体）
+})
 
+def _norm(text: str) -> str:
+    """规范化标点/编码，消除等价变体差异。"""
+    # 基本映射
+    text = text.translate(_NORM_TABLE)
+    # 连续短横线（——→--, ---等）折叠为单横线
+    text = re.sub(r'-{2,}', '-', text)
+    # 表格符号 | 是结构性添加（年表章节），不影响文本内容
+    text = text.replace('|', '')
+    # 行内标记 [r1] [r2] 等行标
+    text = re.sub(r'\[r\d+\]', '', text)
+    # PUA私用区字符：两侧都去掉，避免影响对齐
+    text = re.sub(r'[\ue000-\uf8ff]', '', text)
+    return text
+
+# ── 实体标注前缀字符 ──────────────────────────────────────
+_ENTITY_PFX = r'[#@=;$%&^\~*!\'+]'
+
+
+# ═══════════════════════════════════════════════════════════
+# 标注去除
+# ═══════════════════════════════════════════════════════════
 
 def strip_markup(text: str) -> str:
     """去除全部语义标注符号，保留实体内容本身。"""
 
-    # 1. Markdown 标题行（不在原文中）：# / ## / ###
+    # 1. Markdown 标题行（不在原文中）
     text = re.sub(r'^#{1,6}.*$', '', text, flags=re.MULTILINE)
 
-    # 2. ::: 围栏块标记行
+    # 2. ::: 围栏块标记行（太史公曰 / 赞诗等）
     text = re.sub(r'^:::.*$', '', text, flags=re.MULTILINE)
 
     # 3. 行首引用符 "> "
     text = re.sub(r'^>\s?', '', text, flags=re.MULTILINE)
 
-    # 4. 行首列表符 "- "（仅行首单横杠+空格）
+    # 4. 行首列表符 "- "
     text = re.sub(r'^-\s', '', text, flags=re.MULTILINE)
 
-    # 5. 段落编号 "[1]" "[1.1]" 等（行首）
+    # 5. 段落编号 [1] [1.1] [1.1.2] 等
     text = re.sub(r'^\[\d+(?:\.\d+)*\]\s*', '', text, flags=re.MULTILINE)
 
-    # 6. 实体标注括号，保留内容：〖TYPE content〗 → content
-    text = re.sub(rf'〖{ENTITY_PREFIXES}([^〖〗]*)〗', r'\1', text)
-    # 剩余未识别 〖...〗
-    text = re.sub(r'〖[^〗]*〗', '', text)
+    # 6. 实体标注括号 → 保留内容
+    text = re.sub(rf'〖{_ENTITY_PFX}([^〖〗]*)〗', r'\1', text)
+    text = re.sub(r'〖[^〗]*〗', '', text)   # 剩余残留
 
-    # 7. 六类对称括号，保留内容
+    # 7. 六类对称括号 → 保留内容
     text = re.sub(r'〘([^〘〙]*)〙', r'\1', text)
     text = re.sub(r'〚([^〚〛]*)〛', r'\1', text)
     text = re.sub(r'《([^《》]*)》', r'\1', text)
@@ -79,15 +117,22 @@ def strip_markup(text: str) -> str:
     # 8. 粗体 **content** → content
     text = re.sub(r'\*\*([^*]*)\*\*', r'\1', text)
 
+    # 9. Markdown 分隔线（--- 等）
+    text = re.sub(r'^-{3,}\s*$', '', text, flags=re.MULTILINE)
+
     return text
 
 
 def to_flat(text: str) -> str:
-    """压平为无空白字符序列（用于逐字比对）。"""
+    """去除全部空白，返回单一字符序列（用于逐字比对）。"""
     return re.sub(r'\s+', '', text)
 
 
-def context(flat: str, pos: int, half: int = 20) -> str:
+# ═══════════════════════════════════════════════════════════
+# 差异分类
+# ═══════════════════════════════════════════════════════════
+
+def _ctx(flat: str, pos: int, half: int = 22) -> str:
     lo = max(0, pos - half)
     hi = min(len(flat), pos + half)
     pre = '…' if lo > 0 else ''
@@ -95,63 +140,102 @@ def context(flat: str, pos: int, half: int = 20) -> str:
     return f'{pre}{flat[lo:hi]}{suf}'
 
 
-def is_punct_diff(orig: str, tagged: str) -> bool:
-    """判断差异是否属于纯标点规范化（可忽略）。"""
-    return (orig, tagged) in PUNCT_TRIVIAL
-
-
-def compare_texts(orig_flat: str, tagged_flat: str) -> tuple[list, list]:
+def compare_texts(orig_flat: str, tagged_flat: str) -> dict:
     """
-    比对两段平铺文本，返回 (实质差异列表, 标点差异列表)。
+    比对两段原始平铺文本。
+    策略：对比规范化版本找出实质差异，再从原始版本取上下文。
+
+    返回 {'real': [...], 'punct': [...], 'encoding': [...]}
+    每项: {tag, orig, tagged, orig_ctx, tagged_ctx}
     """
-    sm = difflib.SequenceMatcher(None, orig_flat, tagged_flat, autojunk=False)
-    real, punct = [], []
-    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+    # 1. 用规范化版本找实质差异（已消除标点/编码变体）
+    orig_norm   = _norm(orig_flat)
+    tagged_norm = _norm(tagged_flat)
+
+    # 收集规范化后仍存在的差异（实质差异）的位置映射
+    # 同时用 orig_flat 做上下文
+    real_diffs = []
+
+    sm_norm = difflib.SequenceMatcher(None, orig_norm, tagged_norm, autojunk=False)
+    for tag, i1, i2, j1, j2 in sm_norm.get_opcodes():
         if tag == 'equal':
             continue
-        d = {
+        orig_s   = orig_norm[i1:i2]
+        tagged_s = tagged_norm[j1:j2]
+        real_diffs.append({
             'tag':        tag,
-            'orig':       orig_flat[i1:i2],
-            'tagged':     tagged_flat[j1:j2],
-            'orig_ctx':   context(orig_flat, i1),
-            'tagged_ctx': context(tagged_flat, j1),
-        }
-        if is_punct_diff(d['orig'], d['tagged']):
-            punct.append(d)
-        else:
-            real.append(d)
-    return real, punct
+            'orig':       orig_s,
+            'tagged':     tagged_s,
+            'orig_ctx':   _ctx(orig_norm, i1),
+            'tagged_ctx': _ctx(tagged_norm, j1),
+        })
 
+    # 2. 计算标点/编码差异总数（严格比对 - 规范化比对 = 变体差异）
+    sm_raw = difflib.SequenceMatcher(None, orig_flat, tagged_flat, autojunk=False)
+    raw_count = sum(1 for t, *_ in sm_raw.get_opcodes() if t != 'equal')
 
-TAG_ZH = {'replace': '替换', 'insert': '插入（标注多字）', 'delete': '删除（标注少字）'}
-
-
-def fmt_diff(d: dict, idx: int) -> str:
-    label = TAG_ZH.get(d['tag'], d['tag'])
-    orig_s   = repr(d['orig'])   if d['orig']   else '（无）'
-    tagged_s = repr(d['tagged']) if d['tagged'] else '（无）'
-    return (
-        f"  [{idx}] {label}\n"
-        f"      原文  : {orig_s}\n"
-        f"      标注  : {tagged_s}\n"
-        f"      原文上下文: {d['orig_ctx']}\n"
-        f"      标注上下文: {d['tagged_ctx']}"
+    # PUA差异（编码）
+    encoding_count = sum(
+        1 for t, i1, i2, j1, j2 in
+        difflib.SequenceMatcher(None, orig_flat, tagged_flat, autojunk=False).get_opcodes()
+        if t != 'equal' and any(0xE000 <= ord(c) <= 0xF8FF for c in orig_flat[i1:i2])
     )
 
+    total_variant = raw_count - len(real_diffs) - encoding_count
+
+    return {
+        'real':          real_diffs,
+        'punct_count':   max(0, total_variant),
+        'encoding_count': encoding_count,
+    }
+
+
+# ═══════════════════════════════════════════════════════════
+# 章节检查
+# ═══════════════════════════════════════════════════════════
 
 def check_chapter(cid: str, orig_dir: Path, tagged_dir: Path):
     orig_files   = sorted(orig_dir.glob(f'{cid}_*.txt'))
     tagged_files = sorted(tagged_dir.glob(f'{cid}_*.tagged.md'))
     if not orig_files:
-        return cid, [], [], '找不到原文文件'
+        return cid, None, '找不到原文文件'
     if not tagged_files:
-        return cid, [], [], '找不到标注文件'
+        return cid, None, '找不到标注文件'
 
-    name = orig_files[0].stem
-    orig_flat   = to_flat(orig_files[0].read_text('utf-8'))
+    name        = orig_files[0].stem
+    orig_text   = orig_files[0].read_text('utf-8')
+    # 原文第一行是章节标题（与tagged的markdown标题对应，去除后再比对）
+    orig_lines  = orig_text.splitlines(keepends=True)
+    if orig_lines and not orig_lines[0].strip().startswith('\u300a'):
+        # 若第一行不是书名号包裹的内容，则视为标题行，跳过
+        orig_text = ''.join(orig_lines[1:]) if len(orig_lines) > 1 else ''
+    orig_flat   = to_flat(orig_text)
     tagged_flat = to_flat(strip_markup(tagged_files[0].read_text('utf-8')))
-    real, punct = compare_texts(orig_flat, tagged_flat)
-    return name, real, punct, None
+    result      = compare_texts(orig_flat, tagged_flat)
+    return name, result, None
+
+
+# ═══════════════════════════════════════════════════════════
+# 报告生成
+# ═══════════════════════════════════════════════════════════
+
+_TAG_ZH = {
+    'replace': '替换',
+    'insert':  '插入（标注多字）',
+    'delete':  '删除（标注少字）',
+}
+
+def fmt_diff(d: dict, idx: int) -> str:
+    label    = _TAG_ZH.get(d['tag'], d['tag'])
+    orig_s   = repr(d['orig'])   if d['orig']   else '（空）'
+    tagged_s = repr(d['tagged']) if d['tagged'] else '（空）'
+    return (
+        f"  [{idx}] {label}\n"
+        f"      原文  : {orig_s}\n"
+        f"      标注  : {tagged_s}\n"
+        f"      原文上下文 : {d['orig_ctx']}\n"
+        f"      标注上下文 : {d['tagged_ctx']}"
+    )
 
 
 def main():
@@ -161,9 +245,9 @@ def main():
     log_dir    = root / 'logs'
     log_dir.mkdir(exist_ok=True)
 
-    args = sys.argv[1:]
-    show_punct = '--all-punct' in args
-    args = [a for a in args if not a.startswith('--')]
+    args     = sys.argv[1:]
+    show_all = '--all' in args
+    args     = [a for a in args if not a.startswith('--')]
 
     if args:
         chapter_ids = [a.zfill(3) for a in args]
@@ -172,70 +256,78 @@ def main():
 
     results = []
     for cid in chapter_ids:
-        name, real, punct, err = check_chapter(cid, orig_dir, tagged_dir)
-        results.append((name, real, punct, err))
+        name, result, err = check_chapter(cid, orig_dir, tagged_dir)
+        results.append((name, result, err))
         if err:
-            print(f'  {name}: ⚠ {err}')
-        elif real:
-            print(f'  {name}: {len(real)}处实质差异  {len(punct)}处标点规范化')
+            print(f'  {name or cid}: ⚠ {err}')
         else:
-            print(f'  {name}: ✓  {len(punct)}处标点规范化')
+            nr = len(result['real'])
+            np = result['punct_count']
+            ne = result['encoding_count']
+            mark = '✓' if nr == 0 else '✗'
+            print(f'  {mark} {name}: {nr}处实质差异  {np}处标点  {ne}处编码')
 
-    # ── 生成报告 ──
+    # ── 报告 ──
     ts    = datetime.now().strftime('%Y-%m-%d %H:%M')
     lines = [
         '# 标注文本完整性检查报告',
         f'# 生成时间: {ts}',
-        f'# 检查章节数: {len(results)}',
+        f'# 检查章节: {len(results)} 章',
         '',
-        '说明：',
-        '  【实质差异】= 汉字字符被增加/删除/替换，需要修复',
-        '  【标点差异】= 全角↔半角等价转换（，→, 等），通常为标注规范，可忽略',
+        '分类说明:',
+        '  【实质差异】= 汉字字符增/删/改，需要人工修复',
+        '  【标点规范化】= 全角↔半角等价转换（，→, 等），可忽略',
+        '  【编码规范化】= 原文PUA私用字符→标准Unicode，可忽略',
         '',
+        '─' * 50,
     ]
 
-    total_real = total_punct = prob = 0
+    total_real = total_punct = total_enc = prob_chapters = 0
 
-    for name, real, punct, err in results:
+    for name, result, err in results:
         if err:
-            lines.append(f'=== {name} ===  ⚠ {err}')
+            lines += ['', f'=== {name or "?"} ===  ⚠ {err}']
             continue
-        if not real and not show_punct:
-            continue   # 仅标点差异时跳过（除非 --all-punct）
 
-        prob += 1 if real else 0
-        total_real  += len(real)
-        total_punct += len(punct)
+        nr = len(result['real'])
+        np = result['punct_count']
+        ne = result['encoding_count']
+        total_real  += nr
+        total_punct += np
+        total_enc   += ne
+        if nr:
+            prob_chapters += 1
 
-        lines.append('')
-        lines.append(f'=== {name} ===')
-        if real:
-            lines.append(f'  ■ 实质差异 {len(real)} 处：')
-            for i, d in enumerate(real, 1):
+        if nr == 0 and not show_all:
+            continue
+
+        lines += ['', f'=== {name} ===  实质:{nr}  标点:{np}  编码:{ne}']
+
+        if nr:
+            lines.append(f'  ■ 实质差异 {nr} 处：')
+            for i, d in enumerate(result['real'], 1):
                 lines.append(fmt_diff(d, i))
-        if show_punct and punct:
-            lines.append(f'  □ 标点差异 {len(punct)} 处（仅列前20）：')
-            for i, d in enumerate(punct[:20], 1):
-                lines.append(fmt_diff(d, i))
+
         lines.append('')
 
     lines += [
-        '────────────────────────────────────────',
-        f'汇总：',
-        f'  检查章节: {len(results)} 章',
-        f'  有实质差异: {prob} 章，共 {total_real} 处',
-        f'  标点规范化: {total_punct} 处（全角↔半角，通常可忽略）',
+        '─' * 50,
+        '汇总:',
+        f'  检查章节    : {len(results)} 章',
+        f'  有实质差异  : {prob_chapters} 章，共 {total_real} 处  ← 需要修复',
+        f'  标点规范化  : {total_punct} 处  ← 可忽略',
+        f'  编码规范化  : {total_enc} 处  ← 可忽略',
         '',
-        '差异类型：',
-        '  插入（标注多字）— 标注时擅自加字，需删除',
-        '  删除（标注少字）— 标注时丢字，需补回',
-        '  替换           — 原文字符被改写，需核对',
+        '差异类型说明:',
+        '  插入（标注多字）— 标注时擅自加字，应删除多余字符',
+        '  删除（标注少字）— 标注时丢失字符，应补回',
+        '  替换            — 字符被改写，需核对是字形变体还是错误',
     ]
 
     out = log_dir / 'lint_text_integrity.txt'
     out.write_text('\n'.join(lines), encoding='utf-8')
-    print(f'\n报告已保存：{out}')
-    print(f'汇总：{prob}/{len(results)} 章有实质差异，共 {total_real} 处；标点规范化 {total_punct} 处')
+    print(f'\n报告已保存: {out}')
+    print(f'汇总: {prob_chapters}/{len(results)} 章有实质差异，共 {total_real} 处')
 
 
 if __name__ == '__main__':

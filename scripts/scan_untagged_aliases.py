@@ -32,19 +32,25 @@ CHAPTER_DIR = Path('chapter_md')
 PATCH_DIR   = Path('doc/analysis/patch')
 ENTITY_INDEX = Path('kg/entities/data/entity_index.json')
 
-# 实体类型 → 标注符号
+# 实体类型 → 标注符号（v2.1 格式）
 TYPE_TO_SYMBOL = {
-    'person':    ('@', '@'),
-    'place':     ('=', '='),
-    'official':  ('$', '$'),
-    'time':      ('%', '%'),
-    'dynasty':   ('&', '&'),
-    'institution': ('^', '^'),
-    'tribe':     ('~', '~'),
-    'artifact':  ('*', '*'),
-    'astronomy': ('!', '!'),
-    'mythical':  ('〚', '〛'),
-    'biology': ('〖+', '〗'),
+    'person':      ('〖@', '〗'),
+    'place':       ('〖=', '〗'),
+    'official':    ('〖;', '〗'),
+    'time':        ('〖%', '〗'),
+    'dynasty':     ('〖&', '〗'),
+    'institution': ('〖^', '〗'),
+    'tribe':       ('〖~', '〗'),
+    'artifact':    ('〖*', '〗'),
+    'astronomy':   ('〖!', '〗'),
+    'identity':    ('〖#', '〗'),
+    'biology':     ('〖+', '〗'),
+    'feudal-state': ("〖'", '〗'),
+    'mythical':    ('〚', '〛'),
+    'book':        ('《', '》'),
+    'ritual':      ('〈', '〉'),
+    'legal':       ('【', '】'),
+    'concept':     ('〔', '〕'),
 }
 
 # 中文类型名（用于 TSV 输出）
@@ -52,14 +58,19 @@ TYPE_ZH = {
     'person': '人名', 'place': '地名', 'official': '官职',
     'time': '时间', 'dynasty': '朝代', 'institution': '制度',
     'tribe': '族群', 'artifact': '器物', 'astronomy': '天文',
-    'mythical': '神话', 'biology': '生物',
+    'identity': '身份', 'biology': '生物', 'feudal-state': '邦国',
+    'mythical': '神话', 'book': '典籍', 'ritual': '礼仪',
+    'legal': '刑法', 'concept': '思想',
 }
 
-# 已有标注的检测正则
+# 已有标注的检测正则（v2.1 格式，覆盖全部17种类型）
 ALL_ANNOT_RE = re.compile(
-    r'@[^@\n]+?@|=[^=\n]+?=|\$[^\$\n]+?\$|%[^%\n]+?%|&[^&\n]+?&'
-    r'|\^[^\^\n]+?\^|~[^~\n]+?~|\*[^\*\n]+?\*|![^!\n]+?!'
+    r'〖[@=;%&\'^~\*!#\+][^〖〗\n]+?〗'
     r'|〚[^〛\n]+?〛'
+    r'|《[^》\n]+?》'
+    r'|〈[^〉\n]+?〉'
+    r'|【[^】\n]+?】'
+    r'|〔[^〕\n]+?〕'
 )
 
 PLACEHOLDER = '░'

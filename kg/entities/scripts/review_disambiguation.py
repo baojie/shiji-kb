@@ -56,19 +56,19 @@ SKIP_NAMES = {
 # 已知的常见误标模式（字在特定语境中非人名）
 FALSE_POSITIVE_PATTERNS = [
     # (name, context_pattern, explanation)
-    ('象', r'以.{0,2}@象@天', '象=动词"效法"，非人名'),
-    ('益', r'皆@益@笃', '益=副词"更加"，非人名'),
-    ('益', r'@益@盛', '益=副词"更加"，非人名'),
-    ('益', r'@益@强', '益=副词"更加"，非人名'),
-    ('益', r'@益@弱', '益=副词"更加"，非人名'),
-    ('益', r'日@益@', '益=副词"更加"，非人名'),
+    ('象', r'以.{0,2}〖@象〗天', '象=动词"效法"，非人名'),
+    ('益', r'皆〖@益〗笃', '益=副词"更加"，非人名'),
+    ('益', r'〖@益〗盛', '益=副词"更加"，非人名'),
+    ('益', r'〖@益〗强', '益=副词"更加"，非人名'),
+    ('益', r'〖@益〗弱', '益=副词"更加"，非人名'),
+    ('益', r'日〖@益〗', '益=副词"更加"，非人名'),
 ]
 
 
 def extract_person_tags(text):
-    """提取所有@人名@标记及其位置"""
+    """提取所有〖@人名〗标记及其位置（v2.1格式）"""
     results = []
-    for m in re.finditer(r'@([^@\n]+)@', text):
+    for m in re.finditer(r'〖@([^〖〗\n]+)〗', text):
         results.append((m.group(1), m.start(), m.end()))
     return results
 
@@ -205,7 +205,7 @@ def format_report(result):
         issues.append(f"缺失消歧：{', '.join(r['missing_disambig'])}")
     if r['false_positives']:
         for name, line, ctx, explain in r['false_positives']:
-            issues.append(f"误标(L{line})：@{name}@ — {explain}")
+            issues.append(f"误标(L{line})：〖@{name}〗 — {explain}")
     if r['phantom_entries']:
         for name, full in r['phantom_entries']:
             issues.append(f"幽灵条目：{name}→{full}（文本中无此标记）")

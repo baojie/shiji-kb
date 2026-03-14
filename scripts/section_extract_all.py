@@ -97,31 +97,15 @@ def extract_sections_from_chapter(md_file):
 
 
 def clean_entity_tags(text):
-    """移除实体标注符号"""
-    # @人名@
-    text = re.sub(r'@([^@]+)@', r'\1', text)
-    # =地名=
-    text = re.sub(r'=([^=]+)=', r'\1', text)
-    # #官职#
-    text = re.sub(r'#([^#]+)#', r'\1', text)
-    # %时间%
-    text = re.sub(r'%([^%]+)%', r'\1', text)
-    # &朝代&
-    text = re.sub(r'&([^&]+)&', r'\1', text)
-    # ^制度^
-    text = re.sub(r'\^([^^]+)\^', r'\1', text)
-    # ~族群~
-    text = re.sub(r'~([^~]+)~', r'\1', text)
-    # *器物*
-    text = re.sub(r'\*([^*]+)\*', r'\1', text)
-    # !天文!
-    text = re.sub(r'!([^!]+)!', r'\1', text)
-    # ?神话?
-    text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
-    # 〖+生物〗
-    text = re.sub(r'〖+([^〖+〗]+)〗', r'\1', text)
-    # $标题/职位$
-    text = re.sub(r'\$([^$]+)\$', r'\1', text)
+    """移除实体标注符号（v2.1 格式）"""
+    # 12种对称类型：〖X content〗 → content
+    text = re.sub(r'〖[@=;%&\'^~\*!#\+]([^〖〗\n]+?)〗', r'\1', text)
+    # 5种非对称类型
+    text = re.sub(r'〚([^〚〛\n]+)〛', r'\1', text)
+    text = re.sub(r'《([^《》\n]+)》', r'\1', text)
+    text = re.sub(r'〈([^〈〉\n]+)〉', r'\1', text)
+    text = re.sub(r'【([^【】\n]+)】', r'\1', text)
+    text = re.sub(r'〔([^〔〕\n]+)〕', r'\1', text)
 
     return text.strip()
 

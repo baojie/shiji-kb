@@ -122,7 +122,7 @@ def parse_all_events():
                 if m:
                     ce_year = int(m.group(1))
 
-            # 提取人物
+            # 提取人物（事件索引文件仍使用v1格式）
             people = re.findall(r'@([^@]+)@', people_str)
             clean_name = re.sub(r'[@=$%&^~*!?〖+〗〚〛]', '', event_name).strip()
 

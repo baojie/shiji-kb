@@ -20,26 +20,15 @@ def remove_all_tags(text):
     text = re.sub(r'^>\s*', '', text, flags=re.MULTILINE)
     text = re.sub(r'^:::.*$', '', text, flags=re.MULTILINE)
 
-    # 去除各种语义标签
-    # v2.0+ 统一格式：〖TYPE content〗（10类对称符号：@=;%&$^~*!）
-    text = re.sub(r'〖[@=;%&$^~*!]([^〖〗]+)〗', r'\1', text)
-    # v1.0 旧格式（兼容）
-    text = re.sub(r'@([^@]+)@', r'\1', text)
-    text = re.sub(r'&([^&]+)&', r'\1', text)
-    text = re.sub(r'=([^=]+)=', r'\1', text)
-    text = re.sub(r'\$([^$]+)\$', r'\1', text)
-    text = re.sub(r'%([^%]+)%', r'\1', text)
-    text = re.sub(r'\*([^*]+)\*', r'\1', text)
-    text = re.sub(r'\^([^\^]+)\^', r'\1', text)
-    text = re.sub(r'~([^~]+)~', r'\1', text)
-    text = re.sub(r'!([^!]+)!', r'\1', text)
-    # 6类非对称CJK括号
-    text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
-    text = re.sub(r'〖+([^〖+〗]+)〗', r'\1', text)
-    text = re.sub(r'《([^《》]+)》', r'\1', text)
-    text = re.sub(r'〈([^〈〉]+)〉', r'\1', text)
-    text = re.sub(r'【([^【】]+)】', r'\1', text)
-    text = re.sub(r'〔([^〔〕]+)〕', r'\1', text)
+    # 去除各种语义标签（v2.1 格式）
+    # 12种对称类型：〖X content〗 → content
+    text = re.sub(r'〖[@=;%&\'^~\*!#\+]([^〖〗\n]+?)〗', r'\1', text)
+    # 5种非对称CJK括号
+    text = re.sub(r'〚([^〚〛\n]+)〛', r'\1', text)
+    text = re.sub(r'《([^《》\n]+)》', r'\1', text)
+    text = re.sub(r'〈([^〈〉\n]+)〉', r'\1', text)
+    text = re.sub(r'【([^【】\n]+)】', r'\1', text)
+    text = re.sub(r'〔([^〔〕\n]+)〕', r'\1', text)
 
     return text.strip()
 

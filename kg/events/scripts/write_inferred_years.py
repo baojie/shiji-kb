@@ -149,6 +149,7 @@ def parse_all_events_from_files():
                 if m2 and ce_year is None:
                     ce_year = -int(m2.group(1))
 
+            # 事件索引文件仍使用v1格式
             people = re.findall(r'@([^@]+)@', people_str)
 
             events.append({

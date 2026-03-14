@@ -2,6 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 从标注的史记章节中提取分类词表
+
+按表面形式（surface form）统计：每个不同写法独立成为词条。
+例如"沛公"、"汉王"、"高祖"各为独立词条。
+
+与 build_entity_index.py 的区别：
+  - 本脚本：词汇表视角，按表面形式统计，不做别名合并
+  - entity_index：实体目录视角，加载 entity_aliases.json 做别名合并
+  因此本脚本的词条数 ≥ entity_index 的条目数（人名差异最大）
 """
 
 import os
@@ -10,20 +18,47 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List, Tuple
 
-# 定义11类实体的标记模式
+# 定义实体的标记模式（v2.1 新格式：〖TYPE content〗 + 5类非对称括号）
 ENTITY_PATTERNS = {
-    '人名': (r'@([^@]+)@', '@'),
-    '地名': (r'=([^=]+)=', '='),
-    '官职': (r'\$([^\$]+)\$', '$'),
-    '时间': (r'%([^%]+)%', '%'),
-    '朝代': (r'&([^&]+)&', '&'),
-    '制度': (r'\^([^\^]+)\^', '^'),
-    '族群': (r'~([^~]+)~', '~'),
-    '器物': (r'\*([^\*]+)\*', '*'),
-    '天文': (r'!([^!]+)!', '!'),
-    '神话': (r'〚([^〚〛]+)〛', '〚'),
-    '生物': (r'〖+([^〖+〗]+)〗', '〖+'),
+    '人名': (r'〖@([^〖〗\n]+)〗', '〖@〗'),
+    '地名': (r'〖=([^〖〗\n]+)〗', '〖=〗'),
+    '官职': (r'〖;([^〖〗\n]+)〗', '〖;〗'),
+    '时间': (r'〖%([^〖〗\n]+)〗', '〖%〗'),
+    '朝代': (r'〖&([^〖〗\n]+)〗', '〖&〗'),
+    '制度': (r'〖\^([^〖〗\n]+)〗', '〖^〗'),
+    '族群': (r'〖~([^〖〗\n]+)〗', '〖~〗'),
+    '器物': (r'〖\*([^〖〗\n]+)〗', '〖*〗'),
+    '天文': (r'〖!([^〖〗\n]+)〗', '〖!〗'),
+    '身份': (r'〖#([^〖〗\n]+)〗', '〖#〗'),
+    '生物': (r'〖\+([^〖〗\n]+)〗', '〖+〗'),
+    '神话': (r'〚([^〚〛\n]+)〛', '〚〛'),
+    '典籍': (r'《([^《》\n]+)》', '《》'),
+    '礼仪': (r'〈([^〈〉\n]+)〉', '〈〉'),
+    '刑法': (r'【([^【】\n]+)】', '【】'),
+    '思想': (r'〔([^〔〕\n]+)〕', '〔〕'),
+    '邦国': (r"〖'([^〖〗\n]+)〗", "〖'〗"),
 }
+
+FILENAME_MAP = {
+    '人名': '01_人名词表.md',
+    '地名': '02_地名词表.md',
+    '官职': '03_官职词表.md',
+    '时间': '04_时间词表.md',
+    '朝代': '05_朝代词表.md',
+    '制度': '06_制度词表.md',
+    '族群': '07_族群词表.md',
+    '器物': '08_器物词表.md',
+    '天文': '09_天文词表.md',
+    '身份': '10_身份词表.md',
+    '生物': '11_生物词表.md',
+    '神话': '12_神话词表.md',
+    '典籍': '13_典籍词表.md',
+    '礼仪': '14_礼仪词表.md',
+    '刑法': '15_刑法词表.md',
+    '思想': '16_思想词表.md',
+    '邦国': '17_邦国词表.md',
+}
+
 
 class VocabularyBuilder:
     def __init__(self, chapter_dir: str):
@@ -98,19 +133,7 @@ class VocabularyBuilder:
                                reverse=True)
 
         # 生成文件名
-        filename_map = {
-            '人名': '01_人名词表.md',
-            '地名': '02_地名词表.md',
-            '官职': '03_官职词表.md',
-            '时间': '04_时间词表.md',
-            '朝代': '05_朝代词表.md',
-            '制度': '06_制度词表.md',
-            '族群': '07_族群词表.md',
-            '器物': '08_器物词表.md',
-            '天文': '09_天文词表.md',
-            '神话': '10_神话词表.md',
-            '生物': '11_生物词表.md',
-        }
+        filename_map = FILENAME_MAP
 
         output_file = output_dir / filename_map[category]
 
@@ -118,7 +141,14 @@ class VocabularyBuilder:
             # 写入标题和说明
             marker = ENTITY_PATTERNS[category][1]
             f.write(f"# 史记{category}词表\n\n")
-            f.write(f"> 标记符号：`{marker}词条{marker}`  \n")
+            # marker 格式如 '〖@〗'、'〚〛'、'《》' — 拆分为前后缀显示
+            if len(marker) == 3 and marker[0] == '〖':
+                marker_display = f"{marker[:2]}词条{marker[2]}"
+            elif len(marker) == 2:
+                marker_display = f"{marker[0]}词条{marker[1]}"
+            else:
+                marker_display = f"{marker}词条"
+            f.write(f"> 标记符号：`{marker_display}`  \n")
             f.write(f"> 词条总数：**{len(sorted_entries)}**  \n")
             f.write(f"> 总出现次数：**{sum(len(contexts) for _, contexts in sorted_entries)}**  \n")
             f.write(f"> 数据来源：{len(list(self.chapter_dir.glob('*.tagged.md')))} 个已标注章节\n\n")
@@ -148,9 +178,14 @@ class VocabularyBuilder:
                         break
 
                 for chapter, context in unique_contexts:
-                    # 高亮当前词条
-                    highlighted = context.replace(f'{marker}{entity}{marker}',
-                                                 f'**{marker}{entity}{marker}**')
+                    # 高亮当前词条：构建实际标注文本并加粗
+                    if len(marker) == 3 and marker[0] == '〖':
+                        tagged = f'{marker[:2]}{entity}{marker[2]}'
+                    elif len(marker) == 2:
+                        tagged = f'{marker[0]}{entity}{marker[1]}'
+                    else:
+                        tagged = entity
+                    highlighted = context.replace(tagged, f'**{tagged}**')
                     f.write(f"- 【{chapter}】{highlighted}\n")
 
                 f.write("\n")
@@ -177,7 +212,7 @@ class VocabularyBuilder:
 
         with open(index_file, 'w', encoding='utf-8') as f:
             f.write("# 史记分类词表索引\n\n")
-            f.write("> 本词表从《史记》已标注章节中自动提取，包含11类实体词汇。\n\n")
+            f.write(f"> 本词表从《史记》已标注章节中自动提取，包含{len(ENTITY_PATTERNS)}类实体词汇。\n\n")
 
             # 统计信息
             total_entries = sum(len(vocab) for vocab in self.vocabularies.values())
@@ -195,19 +230,7 @@ class VocabularyBuilder:
             f.write("| 序号 | 类别 | 标记 | 词条数 | 文件 |\n")
             f.write("|------|------|------|--------|------|\n")
 
-            filename_map = {
-                '人名': '01_人名词表.md',
-                '地名': '02_地名词表.md',
-                '官职': '03_官职词表.md',
-                '时间': '04_时间词表.md',
-                '朝代': '05_朝代词表.md',
-                '制度': '06_制度词表.md',
-                '族群': '07_族群词表.md',
-                '器物': '08_器物词表.md',
-                '天文': '09_天文词表.md',
-                '神话': '10_神话词表.md',
-                '生物': '11_生物词表.md',
-            }
+            filename_map = FILENAME_MAP
 
             for i, (category, (_, marker)) in enumerate(ENTITY_PATTERNS.items(), 1):
                 count = len(self.vocabularies[category])
@@ -224,7 +247,13 @@ class VocabularyBuilder:
             f.write("## 标注规则\n\n")
             f.write("实体标注使用特定符号标记：\n\n")
             for category, (_, marker) in ENTITY_PATTERNS.items():
-                f.write(f"- **{category}**：`{marker}词条{marker}`\n")
+                if len(marker) == 3 and marker[0] == '〖':
+                    display = f"{marker[:2]}词条{marker[2]}"
+                elif len(marker) == 2:
+                    display = f"{marker[0]}词条{marker[1]}"
+                else:
+                    display = f"{marker}词条"
+                f.write(f"- **{category}**：`{display}`\n")
 
         print(f"\n  索引文件: README.md")
 

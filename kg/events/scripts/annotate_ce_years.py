@@ -228,7 +228,7 @@ def resolve_ruler(name, chapter_id, rulers, aliases):
     if not name:
         return None
 
-    # 清理标记符号
+    # 清理标记符号（事件索引文件仍使用v1格式）
     name = re.sub(r'[@$&%]', '', name).strip()
     if not name:
         return None
@@ -284,6 +284,7 @@ def parse_time_field(time_str):
     # 去除已有的公元标注（防止重复标注）
     time_str = re.sub(r'（公元[前]?\d+年.*?）', '', time_str).strip()
 
+    # 事件索引文件仍使用v1格式（@人名@、%时间%、&氏族& 等）
     # 格式1: &年号&%X年%
     era_match = re.search(r'&([^&]+)&.*?%([^%]*?年[^%]*)%', time_str)
     if era_match:

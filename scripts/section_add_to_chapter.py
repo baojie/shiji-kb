@@ -18,19 +18,15 @@ def read_chapter(md_file):
 
 
 def clean_text(text):
-    """清理实体标注符号"""
-    text = re.sub(r'@([^@]+)@', r'\1', text)
-    text = re.sub(r'=([^=]+)=', r'\1', text)
-    text = re.sub(r'#([^#]+)#', r'\1', text)
-    text = re.sub(r'%([^%]+)%', r'\1', text)
-    text = re.sub(r'&([^&]+)&', r'\1', text)
-    text = re.sub(r'\^([^^]+)\^', r'\1', text)
-    text = re.sub(r'~([^~]+)~', r'\1', text)
-    text = re.sub(r'\*([^*]+)\*', r'\1', text)
-    text = re.sub(r'!([^!]+)!', r'\1', text)
-    text = re.sub(r'〚([^〚〛]+)〛', r'\1', text)
-    text = re.sub(r'〖+([^〖+〗]+)〗', r'\1', text)  # 生物（新符号）
-    text = re.sub(r'\$([^$]+)\$', r'\1', text)
+    """清理实体标注符号（v2.1 格式）"""
+    # 12种对称类型：〖X content〗 → content
+    text = re.sub(r'〖[@=;%&\'^~\*!#\+]([^〖〗\n]+?)〗', r'\1', text)
+    # 5种非对称类型
+    text = re.sub(r'〚([^〚〛\n]+)〛', r'\1', text)
+    text = re.sub(r'《([^《》\n]+)》', r'\1', text)
+    text = re.sub(r'〈([^〈〉\n]+)〉', r'\1', text)
+    text = re.sub(r'【([^【】\n]+)】', r'\1', text)
+    text = re.sub(r'〔([^〔〕\n]+)〕', r'\1', text)
     return text
 
 

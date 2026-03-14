@@ -2,6 +2,9 @@
 """
 批量修正事件索引中"单锚点塌缩"导致的年份错误。
 
+注意：本脚本处理事件索引文件（kg/events/data/），这些文件使用 v1 格式
+（@person@, %time%），与章节文件的 v2.1 〖TYPE content〗 格式不同。
+
 修正策略：
 1. 读取 reign_periods.json 和 person_lifespans.json
 2. 对每个事件，通过事件中的人物和原文线索推断合理年份

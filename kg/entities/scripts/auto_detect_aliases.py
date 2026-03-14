@@ -23,10 +23,10 @@ from collections import defaultdict
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 CHAPTER_DIR = _PROJECT_ROOT / 'chapter_md'
 ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entity_aliases.json'
-PERSON_PATTERN = r'@([^@\n]+)@'
+PERSON_PATTERN = r'〖@([^〖〗\n]+)〗'
 
 # 标记符号，含这些字符的不是合法人名
-INVALID_CHARS = set('$&=%~*!?〖+〗〚〛，。、；：""''（）《》【】·')
+INVALID_CHARS = set('〖〗〚〛，。、；：""''（）《》【】〈〉〔〕·@=;%&^~*!#+\'')
 
 # 通用称谓/职衔，不能作为别名（太泛泛，在不同章节指不同人）
 GENERIC_TITLES = {

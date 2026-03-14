@@ -117,9 +117,17 @@ def extract_bce_year(cell_text):
 
 
 def strip_entity_tags(text):
-    """Remove entity tags like @name@, &state&, $title$ from text."""
+    """Remove entity tags from text.
+    v2.1 格式: 〖@人名〗 〖=地名〗 〖;官职〗 〖%时间〗 〖&氏族〗 etc.
+    先去除〖TYPE...〗的括号和类型前缀，再清除残留的v1符号。
+    """
+    # v2.1: 去除 〖X...〗 括号（保留内容）
+    text = re.sub(r'〖[@=;%&^~*!?+]', '', text)
+    text = text.replace('〗', '')
+    # v2.1: 去除〚...〛（神话类型）
+    text = text.replace('〚', '').replace('〛', '')
+    # 清除可能残留的v1符号
     text = re.sub(r'[@&$^~!?]', '', text)
-    text = text.replace('〖+', '').replace('〗', '')
     return text
 
 
@@ -629,10 +637,10 @@ def save_reign_periods(data):
 # Phase 2: Year entity scanning and disambiguation
 # ============================================================
 
-# Pattern to match year entities in tagged.md: %X年%
+# Pattern to match year entities in tagged.md (v2.1 格式): 〖%X年〗
 # X = Chinese numeral (元, 二, 三, ..., 四十八, etc.)
-# Exclude: durations (%十馀年%), ages (%十岁%), months (%五月%), seasons (%春%)
-YEAR_ENTITY_RE = re.compile(rf'%({CN_NUM_PAT}年)%')
+# Exclude: durations, ages, months, seasons
+YEAR_ENTITY_RE = re.compile(rf'〖%({CN_NUM_PAT}年)〗')
 
 # Patterns that are NOT calendar years (durations, ages, etc.)
 NOT_CALENDAR_YEAR_PATS = [
@@ -647,10 +655,10 @@ NOT_CALENDAR_YEAR_PATS = [
 # Paragraph number pattern
 PARA_NUM_RE = re.compile(r'^\[([0-9]+(?:\.[0-9]+)*)\]')
 
-# Person entity pattern (for finding nearby ruler mentions)
-# Also match $title$ since many rulers are tagged as titles (e.g., $武公$, $庄公$)
-PERSON_RE = re.compile(r'@([^@\n]+)@')
-TITLE_RE = re.compile(r'\$([^$\n]+)\$')
+# Person entity pattern (for finding nearby ruler mentions in chapter tagged.md)
+# v2.1 格式: 〖@人名〗 和 〖;官职〗（原v1的 $title$ 现为官职类）
+PERSON_RE = re.compile(r'〖@([^〖〗\n]+)〗')
+TITLE_RE = re.compile(r'〖;([^〖〗\n]+)〗')
 
 # Section header with ruler name
 SECTION_HEADER_RE = re.compile(r'^##+ (.+)')
@@ -717,8 +725,8 @@ def load_person_disambig():
 
 def find_nearby_rulers(text, year_pos, max_dist=60):
     """Find all person/title entities before the year position (within max_dist).
-    Searches both @person@ and $title$ patterns since rulers may be tagged as either.
-    Returns list of (name, tag_type) tuples, ordered nearest-first.
+    Searches v2.1 patterns: 〖@person〗 and 〖;title〗.
+    Returns list of names, ordered nearest-first.
     """
     search_start = max(0, year_pos - max_dist)
     before_text = text[search_start:year_pos]
@@ -893,7 +901,7 @@ def disambiguate_years(reign_data):
                     stats['skipped_duration'] += 1
                     continue
 
-                # Check if this contains an era name: %建元六年%, %太初元年%
+                # Check if this contains an era name: 〖%建元六年〗, 〖%太初元年〗
                 era_match = None
                 for era_name, era_start in era_to_start.items():
                     if surface.startswith(era_name):

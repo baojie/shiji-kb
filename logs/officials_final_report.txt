@@ -1,0 +1,270 @@
+# 生成时间: 2026-03-14 11:51
+================================================================================
+OFFICIAL TITLES (官职) CATEGORY ANALYSIS REPORT
+================================================================================
+
+## EXECUTIVE SUMMARY
+
+Total entries in 'official' category: 2,306
+Entries with count >= 5: 524 
+Entries with count >= 10: 296
+Entries with count >= 20: 164
+Total occurrences (count >= 5): 14,961
+
+Entity_aliases.json status: The 'official' section exists but is EMPTY {}
+
+================================================================================
+SECTION 1: CRITICAL ISSUES IDENTIFIED
+================================================================================
+
+### 1.1 NON-TITLE ENTRIES (should be removed from 'official' category)
+These are NOT official titles - they are temporal/generic markers:
+
+  元年              1,497 occurrences  [CRITICAL - Year one/inaugural year marker]
+  人臣                52 occurrences   [Generic: people/subjects - not a title]
+  上                 36 occurrences   [Generic: upper/above - not a title]
+  臣                 16 occurrences   [Generic: subject/official - not a specific title]
+
+RECOMMENDATION: Move these to a 'temporal' or 'generic' category, or mark as metadata.
+
+### 1.2 PERSON NAMES (specific individuals, not generic titles)
+These are tagged as titles but refer to specific named individuals:
+
+High frequency person names (likely misclassified):
+  高祖             158 occurrences   [Emperor name - should be 'person']
+  太史公            76 occurrences   [Sima Qian specifically - should be 'person']
+  沛公              92 occurrences   [Liu Bang's specific title before becoming Emperor - borderline]
+  二世              45 occurrences   [Qin Er Shi - specific emperor name]
+  武帝              33 occurrences   [Emperor Wu - specific person]
+  孝惠             32 occurrences   [Liu Hui - specific person]
+  项王              32 occurrences   [Xiang Yu - specific person name]
+  义帝              29 occurrences   [义帝 - specific emperor]
+  侯生              28 occurrences   [Named individual "Hou Sheng" - clearly a person]
+  景帝              27 occurrences   [Specific emperor]
+  子楚              27 occurrences   [Specific person: Zhu Chu]
+  始皇              25 occurrences   [Qin Shi Huang - specific emperor]
+  胡亥              23 occurrences   [Qin Er Shi's name - specific person]
+  孝文帝            22 occurrences   [Specific emperor]
+  孝文              22 occurrences   [Specific emperor (variant)]
+
+RECOMMENDATION: Review and reclassify as 'person' category. These are specific 
+individuals, not generic official titles.
+
+================================================================================
+SECTION 2: VARIANT FORMS & ALIAS CANDIDATES
+================================================================================
+
+The entity_aliases.json 'official' section is currently EMPTY. The following 
+groups should have aliases defined:
+
+### 2.1 PRIME MINISTER (丞相) VARIANTS
+Total: 491 occurrences
+  丞相               430
+  右丞相             24  → should alias to 丞相
+  左丞相             20  → should alias to 丞相
+  韦丞相             10  → should alias to 丞相 (or person name?)
+  魏丞相              7  → should alias to 丞相 (or person name?)
+
+### 2.2 MARQUIS/NOBLE (侯) VARIANTS
+Total: 1,061 occurrences (largest category!)
+Generic:
+  侯                235
+  列侯              104  → should alias to 侯
+
+Specific named marquises (appear to be actual people with their honorific titles):
+  哀侯               48
+  应侯               47
+  辟阳侯             38
+  康侯               37
+  晋侯               34
+  夷侯               31
+  绛侯               29
+  [37 more specific marquis titles with count < 30]
+
+Note: Many specific "侯" entries (哀侯, 应侯, etc.) may be person names + titles
+rather than generic titles. Need review of usage in context.
+
+### 2.3 GENERAL/MILITARY (将军) VARIANTS
+Total: 764 occurrences
+Base:
+  将军              286
+  大将军            180  → could alias to 将军
+  骠骑将军           51
+  车骑将军           38
+  左将军             34
+  右将军             31
+  上将军             23
+  卫将军             21
+  前将军             17
+  贰师将军           14
+  楼船将军           14  → or person name (楼船 + 将军)
+  游击将军           10
+  [8 more variants with count < 10]
+
+Specific person + title combinations:
+  大将军青            7  → "General Qing" - should be person + title
+  灌将军              5  → person name "Guan" + 将军
+  文成将军            5  → person name + 将军?
+
+### 2.4 INSPECTOR/MAGISTRATE (尉) VARIANTS
+Total: 481 occurrences
+  太尉              125
+  都尉               90
+  中尉               75
+  廷尉               63
+  校尉               44
+  卫尉               31
+  尉                 20
+  尉史               11
+  骑都尉              8
+  尉他                8  → person name "Zhao Tuo" - should be person
+  主爵都尉            6
+
+### 2.5 RANK/OFFICIAL (大夫) VARIANTS
+Total: 599 occurrences
+  大夫              239
+  御史大夫          190
+  中大夫             31
+  大司马             30
+  大臣               30
+  士大夫             20
+  太中大夫           18
+  上大夫             11
+  五大夫             10
+  光禄大夫           10
+  大司农              5
+  卿大夫              5
+
+### 2.6 RULER/KING (王) VARIANTS
+Total: 2,509 occurrences (LARGEST GROUP!)
+Base:
+  王                559
+  王子              217  → could alias to 王
+  先王               88
+  今王               49
+
+Specific reigns/rulers (likely person names):
+  汉王              132  → Liu Bang's title
+  吴王              128  → Various rulers of Wu
+  赵王               94  → Various rulers of Zhao
+  楚王               89  → Various rulers of Chu
+  齐王               73  → Various rulers of Qi
+  淮南王             72
+  成王               53
+  怀王               48
+  代王               47
+  陈王               30
+  厉王               29
+  惠王               28
+  [43 more king variants with count < 28]
+
+Many "X王" entries are generic state rulers, but some (like 吴王, 赵王) may 
+refer to specific historical individuals and should be reviewed.
+
+================================================================================
+SECTION 3: DUPLICATE ANALYSIS
+================================================================================
+
+3.1 No direct character-for-character duplicates found at >= 5 count level.
+
+3.2 Functional duplicates (same role, different naming):
+  - 丞相 vs 相国 vs 相: all refer to prime minister role
+    丞相: 430,  相国: 129,  相: 120
+    Suggestion: Create alias mappings or consolidate
+
+  - 太尉 (military supreme) vs 大将军 (grand general) - different roles,
+    but both are top military positions
+    太尉: 125,  大将军: 180
+
+3.3 Prefix/suffix variants properly captured in 将军/尉/侯 groups above.
+
+================================================================================
+SECTION 4: ANNOTATION STYLE IN TAGGED FILES
+================================================================================
+
+Sampled from:
+  006_秦始皇本纪.tagged.md
+  008_高祖本纪.tagged.md
+  022_汉兴以来将相名臣年表.tagged.md
+
+Format: 〖;TITLE〗
+
+Examples of correct usage:
+  〖@吕不韦〗为〖;相〗 (person-as-title)
+  〖@李斯〗为〖;舍人〗 (person-as-subordinate)
+  〖;将军〗〖@蒙骜〗 (title-then-person)
+  〖;高祖〗为人 (person name tagged as title - potentially inconsistent)
+  〖;丞相〗〖@萧何〗 (title-then-person-name)
+  〖;太尉〗〖@周勃〗 (standard title-person)
+  〖;皇帝〗 (state title)
+  〖;御史大夫〗 (office title)
+
+OBSERVATIONS:
+- Some person names are tagged as 〖;...〗 (e.g., 〖;高祖〗, 〖;太史公〗) which
+  explains their appearance in the official category
+- Most official titles are used as expected (before person names or standalone)
+- Mixed usage: both 〖;相〗 and 〖;丞相〗 appear, suggesting incomplete normalization
+
+================================================================================
+SECTION 5: DATA QUALITY ISSUES
+================================================================================
+
+5.1 Ambiguous entries (person + title mixed):
+  - Some entries like 〖;高祖〗, 〖;沛公〗, 〖;太史公〗 are person-name+context,
+    not generic titles
+  - Need review: should these be in 'person' or 'official' category?
+
+5.2 Missing alias definitions:
+  - entity_aliases.json has empty 'official' section
+  - Variants like left/right officials, specific marquises not aliased
+  - Recommendation: populate with consolidation rules
+
+5.3 Granularity mismatch:
+  - Generic 侯/王/将军 mixed with specific marked nobility
+  - Some entries like "哀侯", "应侯" may be proper names with titles
+  - versus truly generic office titles like "御史大夫"
+
+================================================================================
+SECTION 6: RECOMMENDATIONS
+================================================================================
+
+IMMEDIATE ACTIONS:
+1. Remove or reclassify: 元年 (1,497), 人臣 (52), 上 (36), 臣 (16)
+   These are not titles and skew the statistics significantly.
+
+2. Populate entity_aliases.json with 'official' section:
+   - Consolidate 丞相 variants (左/右/韦/魏 variants → 丞相)
+   - Consolidate 将军 variants (left/right/special variants)
+   - Consider consolidating 尉 variants
+
+3. Review and reclassify person names:
+   - 高祖, 太史公, 二世, 武帝, 孝惠, 项王, 义帝, 始皇, 胡亥
+   - These should either be moved to 'person' category or have their tags
+     reviewed in the actual text files
+
+FUTURE ANALYSIS:
+4. Determine if specific "侯" entries (哀侯, 应侯, etc.) are:
+   a) Generic title forms (then should alias to 侯)
+   b) Person names with honorific (then should be person + title annotation)
+
+5. Similar review needed for "X王" entries with varying frequency
+
+6. Clarify the distinction between:
+   - Generic titles: 丞相, 将军, 侯, 太尉, 御史大夫
+   - Context-specific titles: 汉王, 吴王, 沛公 (these refer to specific people)
+
+================================================================================
+APPENDIX: FULL SORTED LIST (count >= 5)
+================================================================================
+
+[See attached detailed_analysis_output.txt for complete 524-entry list]
+
+Key breakdown by count range:
+  count >= 1,000:  1 entry (元年)
+  count 500-999:   2 entries (天子, 王)
+  count 100-499:   7 entries (丞相, 太子, 将军, 大夫, 侯, 单于, 御史大夫)
+  count 50-99:     10 entries
+  count 20-49:     50 entries
+  count 10-19:     163 entries
+  count 5-9:       276 entries
+

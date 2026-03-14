@@ -156,28 +156,20 @@ MEASURE_CHARS = frozenset([
 
 # ─── 标注符号移除 ─────────────────────────────────────────────────────────────
 
-ANNOTATION_PATTERNS = [
-    r'〖+(.*?)〗',    # 生物（新CJK符号，U+3018/3019）
-    r'@(.*?)@',     # 人名
-    r'=(.*?)=',     # 地名
-    r'\$(.*?)\$',   # 官职
-    r'%(.*?)%',     # 时间
-    r'&(.*?)&',     # 朝代
-    r'\^(.*?)\^',   # 制度
-    r'~(.*?)~',     # 族群
-    r'\*(.*?)\*',   # 器物
-    r'!(.*?)!',     # 天文
-    r'〚(.*?)〛',   # 神话
-]
+# v2.1 标注格式：统一移除正则
+ALL_ANNOT_RE = re.compile(
+    r'〖[@=;%&\'^~\*!#\+][^〖〗\n]+?〗'
+    r'|〚[^〛\n]+?〛'
+    r'|《[^》\n]+?》'
+    r'|〈[^〉\n]+?〉'
+    r'|【[^】\n]+?】'
+    r'|〔[^〕\n]+?〕'
+)
 
 
 def remove_all_annotations(text):
-    """移除所有标注符号，保留标注内容（注意：保留内容用于分析）"""
-    # 生物（新旧符号均处理）
-    text = re.sub(r'〖+.*?〗', '', text)
-    for pat in ANNOTATION_PATTERNS[2:]:
-        text = re.sub(pat, '', text)
-    return text
+    """移除所有标注符号及其内容"""
+    return ALL_ANNOT_RE.sub('', text)
 
 
 def strip_markdown_structure(text):

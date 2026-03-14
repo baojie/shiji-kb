@@ -2,6 +2,9 @@
 """
 用《中国历史大事年表》交叉修正事件索引中的年份标注。
 
+注意：本脚本处理事件索引文件（kg/events/data/），这些文件使用 v1 格式
+（@person@, $official$, %time%），与章节文件的 v2.1 〖TYPE content〗 格式不同。
+
 策略：
 1. 从年表提取：人物→活跃年份列表、特征事件→年份
 2. 从person_lifespans.json获取人物生卒年
