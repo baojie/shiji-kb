@@ -12,6 +12,35 @@ body {
     margin-bottom: 1em;
 }
 
+/* 实体类型定义说明框 */
+.entity-type-desc {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6em;
+    background: #f8f5e8;
+    border-left: 4px solid #b8a86a;
+    border-radius: 0 6px 6px 0;
+    padding: 0.75em 1em;
+    margin-bottom: 1.2em;
+    flex-wrap: wrap;
+}
+.entity-type-desc .type-label {
+    font-size: 0.85em;
+    flex-shrink: 0;
+}
+.entity-type-desc .type-marker {
+    font-family: monospace;
+    font-size: 0.85em;
+    color: #888;
+    flex-shrink: 0;
+}
+.entity-type-desc p {
+    margin: 0;
+    color: #444;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
 /* 搜索过滤框 */
 .entity-filter {
     position: sticky;
