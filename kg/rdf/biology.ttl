@@ -1,0 +1,212 @@
+@prefix : <http://memect.cn/baojie/ontologies/2025/1/shiji/> .
+@prefix bio: <http://memect.cn/baojie/ontologies/2025/1/shiji/biology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Shiji Biology Taxonomy
+# 388 species from Records of the Grand Historian
+# Source: kg/biology/data/biology_wordlist.json
+# Tag format: 〖+X〗
+
+# -- Top level --
+
+bio:生物 a owl:Class ;
+    rdfs:label "生物"@zh, "Living Thing"@en .
+
+# -- Level 1: Animal / Plant / Collective --
+
+bio:动物 a owl:Class ;
+    rdfs:subClassOf bio:生物 ;
+    rdfs:label "动物"@zh, "Animal"@en .
+
+bio:植物 a owl:Class ;
+    rdfs:subClassOf bio:生物 ;
+    rdfs:label "植物"@zh, "Plant"@en .
+
+bio:生物集合 a owl:Class ;
+    rdfs:subClassOf bio:生物 ;
+    rdfs:label "生物集合"@zh, "Collective Term"@en ;
+    rdfs:comment "Cross-category terms: 六畜, 五穀, 鸟兽"@en .
+
+# -- Level 2: Animal subtypes --
+
+bio:家畜 a owl:Class ;
+    rdfs:subClassOf bio:动物 ;
+    rdfs:label "家畜"@zh, "Domestic Animal"@en .
+
+bio:野兽 a owl:Class ;
+    rdfs:subClassOf bio:动物 ;
+    rdfs:label "野兽"@zh, "Wild Beast"@en .
+
+bio:鸟类 a owl:Class ;
+    rdfs:subClassOf bio:动物 ;
+    rdfs:label "鸟类"@zh, "Bird"@en .
+
+bio:鱼类水族 a owl:Class ;
+    rdfs:subClassOf bio:动物 ;
+    rdfs:label "鱼类水族"@zh, "Fish and Aquatic"@en .
+
+bio:虫类 a owl:Class ;
+    rdfs:subClassOf bio:动物 ;
+    rdfs:label "虫类"@zh, "Insect"@en .
+
+bio:神话动物 a owl:Class ;
+    rdfs:subClassOf bio:动物 ;
+    rdfs:label "神话动物"@zh, "Mythical Animal"@en .
+
+# -- Level 2: Plant subtypes --
+
+bio:穀物 a owl:Class ;
+    rdfs:subClassOf bio:植物 ;
+    rdfs:label "穀物"@zh, "Grain"@en .
+
+bio:树木 a owl:Class ;
+    rdfs:subClassOf bio:植物 ;
+    rdfs:label "树木"@zh, "Tree"@en .
+
+bio:草本花卉 a owl:Class ;
+    rdfs:subClassOf bio:植物 ;
+    rdfs:label "草本花卉"@zh, "Herb and Flower"@en .
+
+bio:果蔬 a owl:Class ;
+    rdfs:subClassOf bio:植物 ;
+    rdfs:label "果蔬"@zh, "Fruit and Vegetable"@en .
+
+# -- Level 3: Domestic animal subtypes --
+
+bio:马属 a owl:Class ;
+    rdfs:subClassOf bio:家畜 ;
+    rdfs:label "马属"@zh, "Equine"@en .
+
+bio:牛属 a owl:Class ;
+    rdfs:subClassOf bio:家畜 ;
+    rdfs:label "牛属"@zh, "Bovine"@en .
+
+bio:羊属 a owl:Class ;
+    rdfs:subClassOf bio:家畜 ;
+    rdfs:label "羊属"@zh, "Ovine"@en .
+
+bio:犬属 a owl:Class ;
+    rdfs:subClassOf bio:家畜 ;
+    rdfs:label "犬属"@zh, "Canine"@en .
+
+bio:禽属 a owl:Class ;
+    rdfs:subClassOf bio:家畜 ;
+    rdfs:label "禽属"@zh, "Poultry"@en .
+
+bio:猪属 a owl:Class ;
+    rdfs:subClassOf bio:家畜 ;
+    rdfs:label "猪属"@zh, "Swine"@en .
+
+# -- Instances: Domestic - Equine --
+
+bio:马 a bio:马属 ; rdfs:label "马"@zh ; :count 102 .
+bio:驹 a bio:马属 ; rdfs:label "驹"@zh ; :count 9 .
+bio:骥 a bio:马属 ; rdfs:label "骥"@zh ; :count 5 .
+bio:驴 a bio:马属 ; rdfs:label "驴"@zh ; :count 3 .
+bio:骐骥 a bio:马属 ; rdfs:label "骐骥"@zh ; :count 3 .
+bio:騊駼 a bio:马属 ; rdfs:label "騊駼"@zh ; :count 3 .
+bio:騄耳 a bio:马属 ; rdfs:label "騄耳"@zh ; :count 3 .
+
+# -- Instances: Domestic - Bovine / Ovine / Canine / Poultry / Swine --
+
+bio:牛 a bio:牛属 ; rdfs:label "牛"@zh ; :count 36 .
+bio:羊 a bio:羊属 ; rdfs:label "羊"@zh ; :count 26 .
+bio:狗 a bio:犬属 ; rdfs:label "狗"@zh ; :count 32 .
+bio:犬 a bio:犬属 ; rdfs:label "犬"@zh ; :count 4 .
+bio:鸡 a bio:禽属 ; rdfs:label "鸡"@zh ; :count 8 .
+bio:彘 a bio:猪属 ; rdfs:label "彘"@zh ; :count 5 .
+bio:豕 a bio:猪属 ; rdfs:label "豕"@zh ; :count 2 .
+
+# -- Instances: Wild Beast --
+
+bio:虎 a bio:野兽 ; rdfs:label "虎"@zh ; :count 23 .
+bio:鹿 a bio:野兽 ; rdfs:label "鹿"@zh ; :count 19 .
+bio:熊 a bio:野兽 ; rdfs:label "熊"@zh ; :count 8 .
+bio:兔 a bio:野兽 ; rdfs:label "兔"@zh ; :count 8 .
+bio:罴 a bio:野兽 ; rdfs:label "罴"@zh ; :count 6 .
+bio:白鹿 a bio:野兽 ; rdfs:label "白鹿"@zh ; :count 6 .
+bio:狐 a bio:野兽 ; rdfs:label "狐"@zh ; :count 6 .
+bio:鼠 a bio:野兽 ; rdfs:label "鼠"@zh ; :count 6 .
+bio:狼 a bio:野兽 ; rdfs:label "狼"@zh ; :count 5 .
+bio:豹 a bio:野兽 ; rdfs:label "豹"@zh ; :count 5 .
+bio:麋 a bio:野兽 ; rdfs:label "麋"@zh ; :count 4 .
+
+# -- Instances: Bird --
+
+bio:鸟 a bio:鸟类 ; rdfs:label "鸟"@zh ; :count 19 .
+bio:雉 a bio:鸟类 ; rdfs:label "雉"@zh ; :count 6 .
+bio:鸿鹄 a bio:鸟类 ; rdfs:label "鸿鹄"@zh ; :count 4 .
+
+# -- Instances: Aquatic --
+
+bio:鱼 a bio:鱼类水族 ; rdfs:label "鱼"@zh ; :count 33 .
+bio:鳖 a bio:鱼类水族 ; rdfs:label "鳖"@zh ; :count 3 .
+bio:鼋 a bio:鱼类水族 ; rdfs:label "鼋"@zh ; :count 2 .
+
+# -- Instances: Insect --
+
+bio:蝗 a bio:虫类 ; rdfs:label "蝗"@zh ; :count 3 .
+bio:蛇 a bio:虫类 ; rdfs:label "蛇"@zh ; :count 4 .
+bio:蜂 a bio:虫类 ; rdfs:label "蜂"@zh ; :count 2 .
+
+# -- Instances: Mythical Animal --
+
+bio:龙 a bio:神话动物 ; rdfs:label "龙"@zh ; :count 9 .
+bio:凤皇 a bio:神话动物 ; rdfs:label "凤皇"@zh ; :count 6 .
+bio:一角兽 a bio:神话动物 ; rdfs:label "一角兽"@zh ; :count 5 .
+bio:黄龙 a bio:神话动物 ; rdfs:label "黄龙"@zh ; :count 4 .
+bio:麒麟 a bio:神话动物 ; rdfs:label "麒麟"@zh ; :count 2 .
+bio:穷奇 a bio:神话动物 ; rdfs:label "穷奇"@zh ; :count 2 .
+
+# -- Instances: Grain --
+
+bio:稻 a bio:穀物 ; rdfs:label "稻"@zh ; :count 4 .
+bio:黍 a bio:穀物 ; rdfs:label "黍"@zh ; :count 3 .
+bio:稷 a bio:穀物 ; rdfs:label "稷"@zh ; :count 3 .
+bio:菽 a bio:穀物 ; rdfs:label "菽"@zh ; :count 3 .
+bio:麻 a bio:穀物 ; rdfs:label "麻"@zh ; :count 3 .
+bio:禾 a bio:穀物 ; rdfs:label "禾"@zh ; :count 4 .
+
+# -- Instances: Tree --
+
+bio:桑 a bio:树木 ; rdfs:label "桑"@zh ; :count 7 .
+bio:竹 a bio:树木 ; rdfs:label "竹"@zh ; :count 7 .
+bio:松 a bio:树木 ; rdfs:label "松"@zh ; :count 5 .
+bio:柏 a bio:树木 ; rdfs:label "柏"@zh ; :count 3 .
+bio:桃 a bio:树木 ; rdfs:label "桃"@zh ; :count 3 .
+bio:木 a bio:树木 ; rdfs:label "木"@zh ; :count 23 .
+bio:树 a bio:树木 ; rdfs:label "树"@zh ; :count 17 .
+
+# -- Instances: Herb --
+
+bio:兰 a bio:草本花卉 ; rdfs:label "兰"@zh ; :count 9 .
+bio:蒲陶 a bio:草本花卉 ; rdfs:label "蒲陶"@zh ; :count 5 .
+bio:芝 a bio:草本花卉 ; rdfs:label "芝"@zh ; :count 4 .
+bio:椒 a bio:草本花卉 ; rdfs:label "椒"@zh ; :count 2 .
+bio:射干 a bio:草本花卉 ; rdfs:label "射干"@zh ; :count 3 .
+bio:苜蓿 a bio:草本花卉 ; rdfs:label "苜蓿"@zh ; :count 3 .
+bio:木兰 a bio:草本花卉 ; rdfs:label "木兰"@zh ; :count 3 .
+
+# -- Instances: Fruit and Vegetable --
+
+bio:橘 a bio:果蔬 ; rdfs:label "橘"@zh ; :count 3 .
+bio:枣栗 a bio:果蔬 ; rdfs:label "枣栗"@zh ; :count 3 .
+bio:樱桃 a bio:果蔬 ; rdfs:label "樱桃"@zh ; :count 3 .
+
+# -- Instances: Collective --
+
+bio:百穀 a bio:生物集合 ; rdfs:label "百穀"@zh ; :count 9 .
+bio:草木 a bio:生物集合 ; rdfs:label "草木"@zh ; :count 14 .
+bio:鸟兽 a bio:生物集合 ; rdfs:label "鸟兽"@zh ; :count 10 .
+bio:六畜 a bio:生物集合 ; rdfs:label "六畜"@zh ; :count 4 .
+bio:五穀 a bio:生物集合 ; rdfs:label "五穀"@zh ; :count 2 .
+bio:禽兽 a bio:生物集合 ; rdfs:label "禽兽"@zh ; :count 6 .
+bio:桑麻 a bio:生物集合 ; rdfs:label "桑麻"@zh ; :count 5 .
+
+# -- Property --
+
+:count a owl:DatatypeProperty ;
+    rdfs:label "出现次数"@zh, "occurrence count"@en ;
+    rdfs:range xsd:integer .

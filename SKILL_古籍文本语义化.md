@@ -21,7 +21,7 @@ archive/chapter_numbered/NNN_*.txt
   └── 小节划分（H2/H3 标题）
   │
   ▼（内容标注 ← 本文档）
-  ├── 11类实体 Token 标注
+  ├── 18类实体 Token 标注
   ├── 对话格式化
   ├── 语义区块（→ SKILL_区块与韵文处理）
   └── 语义增强（并列结构等）
@@ -220,6 +220,6 @@ chapter_md/NNN_*.tagged.md
 > 另见：
 > - [SKILL_区块与韵文处理.md](SKILL_区块与韵文处理.md) — 语义区块、太史公曰/赞标注、韵文检测
 > - [SKILL_古籍章节切分与编号.md](SKILL_古籍章节切分与编号.md) — 篇章拆分、Purple Numbers、小节划分
-> - [SKILL_古籍实体标注.md](SKILL_古籍实体标注.md) — 11类实体标注规范详情
+> - [SKILL_古籍实体标注.md](SKILL_古籍实体标注.md) — 18类实体标注规范详情
 > - [SKILL_实体消歧.md](SKILL_实体消歧.md) — 人名消歧方法论
 > - [doc/spec/标注格式规范.md](doc/spec/标注格式规范.md) — Lint 工具与完整语法规则

@@ -361,13 +361,13 @@ tagged_text: "一本作\"轩辕之野\"。"   ← 不标注
 2. 对每条 notes[i]：
    a. 判断是否为纯音韵注（正则：仅含"音X"/"X反"/"X切"）
       → 是：tagged_text = text（原样复制）
-   b. 调用 LLM 进行实体标注（Prompt 指定11类 Token + 书名规则）
+   b. 调用 LLM 进行实体标注（Prompt 指定18类 Token + 书名规则）
    c. 写回 tagged_text
 3. 输出更新后的 JSON
 ```
 
 **LLM Prompt 要点**：
-- 提供与主文本相同的11类实体标注规范
+- 提供与主文本相同的18类实体标注规范
 - 额外规则：书名用 `^书名^`（含《》）；音韵注不标注
 - 提供2-3条注疏标注示例（few-shot）
 - 要求输出仅为 `tagged_text` 字符串，不含解释
@@ -401,7 +401,7 @@ tagged_text: "一本作\"轩辕之野\"。"   ← 不标注
 ---
 
 > 另见：
-> - [SKILL_古籍文本语义化.md](SKILL_古籍文本语义化.md) — 主文本标注规范（11类实体 Token、对话拆分、NOTE 块）
-> - [SKILL_古籍实体标注.md](SKILL_古籍实体标注.md) — 11类实体标注规范详情
+> - [SKILL_古籍文本语义化.md](SKILL_古籍文本语义化.md) — 主文本标注规范（18类实体 Token、对话拆分、NOTE 块）
+> - [SKILL_古籍实体标注.md](SKILL_古籍实体标注.md) — 18类实体标注规范详情
 > - [SKILL_古籍章节切分与编号.md](SKILL_古籍章节切分与编号.md) — Purple Numbers 系统
 > - [doc/spec/标注格式规范.md](doc/spec/标注格式规范.md) — Lint 工具与完整语法规则
