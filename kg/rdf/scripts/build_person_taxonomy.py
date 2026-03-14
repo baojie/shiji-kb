@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
 """
-从分类数据生成人物本体的分类树(taxonomy.md)和RDF(person.ttl)
+[已废弃] 人物本体专用生成器（基于 pickle 输入）
 
-输入：/tmp/person_classified_final10.pkl（pickle格式的分类数据）
-输出：
-  - kg/rdf/person_taxonomy.md — 可读的层级分类树
-  - kg/rdf/person.ttl — OWL/RDF本体
+本脚本已被通用版本 build_taxonomy.py 取代。
+新用法（输入 TTL，输出分类树 MD）：
+  python kg/rdf/scripts/build_taxonomy.py kg/rdf/person.ttl
+  python kg/rdf/scripts/build_taxonomy.py kg/rdf/biology.ttl
 
-用法：
-  python kg/rdf/scripts/build_person_taxonomy.py
-
-注意：分类数据由多轮反思迭代产生（见SKILL_实体到本体管线.md），
-本脚本只负责从分类结果生成输出文件。
+保留本文件仅供参考旧的 SUB_ZH 映射逻辑。
 """
 
 import pickle
