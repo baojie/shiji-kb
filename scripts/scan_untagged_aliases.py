@@ -46,6 +46,7 @@ TYPE_TO_SYMBOL = {
     'identity':    ('〖#', '〗'),
     'biology':     ('〖+', '〗'),
     'feudal-state': ("〖'", '〗'),
+    'quantity':    ('〖$', '〗'),
     'mythical':    ('〚', '〛'),
     'book':        ('《', '》'),
     'ritual':      ('〈', '〉'),
@@ -59,13 +60,13 @@ TYPE_ZH = {
     'time': '时间', 'dynasty': '朝代', 'institution': '制度',
     'tribe': '族群', 'artifact': '器物', 'astronomy': '天文',
     'identity': '身份', 'biology': '生物', 'feudal-state': '邦国',
-    'mythical': '神话', 'book': '典籍', 'ritual': '礼仪',
+    'quantity': '数量', 'mythical': '神话', 'book': '典籍', 'ritual': '礼仪',
     'legal': '刑法', 'concept': '思想',
 }
 
 # 已有标注的检测正则（v2.1 格式，覆盖全部17种类型）
 ALL_ANNOT_RE = re.compile(
-    r'〖[@=;%&\'^~\*!#\+][^〖〗\n]+?〗'
+    r'〖[@=;%&\'^~\*!#\+\$][^〖〗\n]+?〗'
     r'|〚[^〛\n]+?〛'
     r'|《[^》\n]+?》'
     r'|〈[^〉\n]+?〉'

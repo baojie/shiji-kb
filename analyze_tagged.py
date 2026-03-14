@@ -28,6 +28,7 @@ ANNOTATION_TYPES = [
     (r'〖!([^〖〗\n]+)〗', 'Astronomy 天文'),
     (r'〖#([^〖〗\n]+)〗', 'Identity 身份'),
     (r'〖\+([^〖〗\n]+)〗', 'Flora/Fauna 生物'),
+    (r'〖\$([^〖〗\n]+)〗', 'Quantity 数量'),
     (r"〖'([^〖〗\n]+)〗", 'Feudal State 邦国'),
     (r'〚([^〚〛\n]+)〛', 'Mythology 神话'),
     (r'《([^《》\n]+)》', 'Classical Text 典籍'),
@@ -81,7 +82,7 @@ def extract_annotated_spans(text):
 
 # Regex to match ALL v2.1 annotation types (for stripping/masking)
 ALL_ANNOT_RE = re.compile(
-    r'〖[@=;%&\'^~\*!#\+][^〖〗\n]+?〗'
+    r'〖[@=;%&\'^~\*!#\+\$][^〖〗\n]+?〗'
     r'|〚[^〛\n]+?〛'
     r'|《[^》\n]+?》'
     r'|〈[^〉\n]+?〉'

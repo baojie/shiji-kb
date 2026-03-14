@@ -53,6 +53,7 @@ ENTITY_PATTERNS = [
     (r'〖!([^〖〗<>"]+)〗',  r'<span class="astronomy" title="天文/历法">\1</span>'), # 天文
     (r'〖@([^〖〗<>"]+)〗',  r'<span class="person" title="人名">\1</span>'),      # 人名
     (r'〖\+([^〖〗<>"]+)〗', r'<span class="biology" title="生物">\1</span>'),      # 生物
+    (r'〖\$([^〖〗<>"]+)〗', r'<span class="quantity" title="数量">\1</span>'),    # 数量
     # 5类不变
     (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),
     (r'《([^《》<>"]+)》', r'<span class="book" title="典籍">\1</span>'),
@@ -98,6 +99,7 @@ _ENTITY_TYPE_FILES = {
     'ritual': 'ritual.html',
     'legal': 'legal.html',
     'concept': 'concept.html',
+    'quantity': 'quantity.html',
 }
 
 # 别名映射缓存（模块级，只加载一次）
@@ -653,7 +655,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
     # 后处理：展平嵌套的同类 span 标签
     # 例如: <span class="person"><span class="person">名字</span></span> -> <span class="person">名字</span>
-    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'identity', 'artifact', 'astronomy', 'mythical', 'quoted', 'book', 'ritual', 'legal', 'concept']:
+    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'identity', 'artifact', 'astronomy', 'mythical', 'quoted', 'book', 'ritual', 'legal', 'concept', 'quantity']:
         # 匹配嵌套的同类 span 并展平
         pattern = rf'<span class="{entity_class}">(<span class="{entity_class}">.*?</span>)</span>'
         while re.search(pattern, html_body):

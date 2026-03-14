@@ -53,6 +53,7 @@ ENTITY_TYPES = [
     ('artifact',    r'〖\*([^〖〗\n]+)〗', 'artifact',    '器物',     'artifact.html'),
     ('astronomy',   r'〖!([^〖〗\n]+)〗',  'astronomy',   '天文',     'astronomy.html'),
     ('biology',     r'〖\+([^〖〗\n]+)〗',  'biology',     '生物',     'biology.html'),
+    ('quantity',    r'〖\$([^〖〗\n]+)〗', 'quantity',    '数量',     'quantity.html'),
     # 5类非对称格式（不变）
     ('mythical',    r'〚([^〚〛\n]+)〛',   'mythical',    '神话',     'mythical.html'),
     ('book',        r'《([^《》\n]+)》',   'book',        '典籍',     'book.html'),

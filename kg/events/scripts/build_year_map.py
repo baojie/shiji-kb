@@ -122,7 +122,7 @@ def strip_entity_tags(text):
     先去除〖TYPE...〗的括号和类型前缀，再清除残留的v1符号。
     """
     # v2.1: 去除 〖X...〗 括号（保留内容）
-    text = re.sub(r'〖[@=;%&^~*!?+]', '', text)
+    text = re.sub(r'〖[@=;%&^~*!?+$]', '', text)
     text = text.replace('〗', '')
     # v2.1: 去除〚...〛（神话类型）
     text = text.replace('〚', '').replace('〛', '')
