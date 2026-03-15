@@ -6,6 +6,27 @@
 
 ---
 
+## 通用分类树生成器 + 人物本体过程文档 - 2026-03-15
+
+### 新增 (Added)
+
+- `kg/rdf/scripts/build_taxonomy.py` — 通用 TTL→分类树 MD 生成器
+  - 输入任意 OWL/RDF Turtle 文件，输出可读的层级分类树 Markdown
+  - 自动解析 owl:Class / rdfs:subClassOf / rdfs:label / :count
+  - 支持 `--order`（根子类排序）、`--unit`（计数单位自动推断）、`--max-show`（实例显示上限）
+  - 人物（130类/1821实例）和生物（20类/70实例）均验证通过
+- `doc/methodology/人物本体构建过程.md` — 人物本体构建全过程详细记录
+- `kg/rdf/biology_taxonomy.md` — 生物分类树（从 biology.ttl 自动生成）
+
+### 更改 (Changed)
+
+- `kg/rdf/scripts/build_person_taxonomy.py` 标记为已废弃，由通用版 build_taxonomy.py 取代
+- `SKILL_实体到本体管线.md` — 更新方法论，补充反思流程和类命名原则
+- `kg/rdf/person.ttl` — 人物本体修正（帝王朝代/外邦汉人/吴楚国王等分类错误）
+- `kg/rdf/person_taxonomy.md` — 从 TTL 重新生成
+
+---
+
 ## v2.3 新增「身份」实体类型 - 2026-03-14
 
 ### 新增 (Added)
