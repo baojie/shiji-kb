@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>右侧注释原型 — 五帝本纪</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Noto Serif SC", "Source Han Serif", "SimSun", serif;
+            background: #faf8f0;
+            color: #2c2c2c;
+            line-height: 2.0;
+            font-size: 18px;
+        }
+
+        .page {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* ── 左栏：原文 ── */
+        .main-text {
+            padding: 40px 48px 60px 48px;
+            border-right: 1px solid #d4c9a8;
+        }
+
+        .main-text h1 {
+            font-size: 1.6em;
+            color: #8B4513;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+        }
+
+        .main-text h2 {
+            font-size: 1.2em;
+            color: #8B4513;
+            margin: 28px 0 12px;
+        }
+
+        .main-text p {
+            margin: 12px 0;
+            font-size: 1.05em;
+            text-indent: 0;
+        }
+
+        .para-num {
+            font-size: 0.75em;
+            color: #999;
+            margin-right: 4px;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+
+        /* 实体高亮 */
+        .person { color: #1a5fb4; }
+        .place { color: #26a269; }
+        .official { color: #c64600; }
+        .clan { color: #8B4513; }
+        .mythical { color: #9141ac; font-style: italic; }
+        .artifact { color: #b5835a; }
+        .tribe { color: #613583; }
+        .biology { color: #2ec27e; font-style: italic; }
+
+        /* ── 语义开关控件 ── */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: #faf8f0;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0d8cc;
+        }
+        .toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border: 1px solid #c0a060;
+            border-radius: 4px;
+            background: #fff9e6;
+            cursor: pointer;
+            font-size: 0.8em;
+            color: #8B4513;
+            user-select: none;
+            font-family: sans-serif;
+        }
+        .toggle-btn:hover { background: #f5ecd0; }
+        .toggle-btn.off { background: #f0ece4; color: #999; border-color: #d0d0d0; }
+        .toggle-indicator {
+            display: inline-block;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: #26a269;
+        }
+        .toggle-btn.off .toggle-indicator { background: #ccc; }
+
+        /* 关闭语义排版时的样式 — 用 !important 确保覆盖 */
+        .main-text.semantic-off .causal,
+        .main-text.semantic-off .escalation,
+        .main-text.semantic-off .summary-line,
+        .main-text.semantic-off .contrast {
+            display: block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: none !important;
+            border: none !important;
+            border-left: none !important;
+            font-size: inherit !important;
+            color: inherit !important;
+            grid-template-columns: none !important;
+        }
+        .main-text.semantic-off .cause,
+        .main-text.semantic-off .effect {
+            display: inline !important;
+            padding: 0 !important;
+            padding-left: 0 !important;
+            border: none !important;
+            border-left: none !important;
+            margin: 0 !important;
+            margin-left: 0 !important;
+            font-size: inherit !important;
+            color: inherit !important;
+        }
+        .main-text.semantic-off .effect::before { content: none !important; }
+        .main-text.semantic-off .escalation {
+            margin: 0 !important;
+            margin-left: 0 !important;
+            padding: 0 !important;
+            padding-left: 0 !important;
+            border: none !important;
+            border-left: none !important;
+            color: inherit !important;
+            font-size: inherit !important;
+        }
+        .main-text.semantic-off .escalation::before { content: none !important; }
+        .main-text.semantic-off .contrast { display: block !important; }
+        .main-text.semantic-off .contrast > div { display: inline !important; }
+        .main-text.semantic-off .contrast > div::after { content: " "; }
+
+        /* ── 关系连线 SVG ── */
+        .rel-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+            display: none;
+        }
+        .rel-svg.visible { display: block; }
+        .main-text { position: relative; }
+
+        /* ── 语义关系排版 ── */
+
+        /* 因果：原因正常，结果缩进+左边线 */
+        .causal { margin: 8px 0; }
+        .cause { color: #2a1f14; }
+        .effect {
+            padding-left: 1.5em;
+            color: #5a4a3a;
+            font-size: 0.95em;
+            border-left: 2px solid #d4c5a9;
+            margin-left: 0.2em;
+            margin-top: 2px;
+        }
+
+        /* 并列/时序：横排 */
+        .parallel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 20px;
+            margin: 6px 0;
+        }
+        .parallel .item { white-space: nowrap; }
+
+        /* 递进 */
+        .escalation {
+            margin: 4px 0 4px 1.5em;
+            color: #3a2a1a;
+            font-size: 0.95em;
+            border-left: 2px solid #c8a882;
+            padding-left: 0.8em;
+        }
+
+        /* 总结句 */
+        .summary-line {
+            margin-top: 8px;
+            padding: 5px 12px;
+            background: #f3ede3;
+            border-left: 3px solid #c8a882;
+            font-size: 0.95em;
+            color: #5a3a1a;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* 对举（正反/对比） */
+        .contrast {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 24px;
+            margin: 6px 0;
+        }
+        .contrast .pos { color: #2a5a1a; }
+        .contrast .neg { color: #8a3a1a; }
+
+        /* 注释锚点高亮 */
+        .note-anchor {
+            border-bottom: 2px dashed #c0a060;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .note-anchor:hover {
+            background: #fff3d0;
+            border-bottom-color: #8B4513;
+        }
+        .note-anchor.active {
+            background: #ffe8a0;
+            border-bottom: 2px solid #8B4513;
+            animation: pulse-bg 1.5s ease-in-out;
+        }
+        @keyframes pulse-bg {
+            0% { background: #ffd060; }
+            100% { background: #ffe8a0; }
+        }
+
+        /* ── 右栏：注释 ── */
+        .notes-panel {
+            padding: 40px 20px 60px 20px;
+            background: #f5f0e4;
+            font-size: 0.88em;
+            line-height: 1.7;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        .notes-panel h3 {
+            font-size: 0.9em;
+            color: #8B4513;
+            margin-bottom: 16px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #c0a060;
+        }
+
+        .note-group {
+            margin-bottom: 20px;
+            padding: 10px 12px;
+            background: #fffdf5;
+            border-radius: 6px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .note-group:hover {
+            box-shadow: 0 1px 8px rgba(0,0,0,0.12);
+            transform: translateX(-2px);
+        }
+        .note-group.active {
+            box-shadow: 0 2px 12px rgba(139,69,19,0.25);
+            transform: translateX(-4px);
+            animation: pulse-note 1.5s ease-in-out;
+        }
+        @keyframes pulse-note {
+            0% { box-shadow: 0 0 20px rgba(139,69,19,0.4); }
+            100% { box-shadow: 0 2px 12px rgba(139,69,19,0.25); }
+        }
+
+        .note-group .note-ref {
+            font-size: 0.78em;
+            color: #888;
+            margin-bottom: 4px;
+            font-family: sans-serif;
+        }
+
+        .note-item {
+            margin: 6px 0;
+            padding-left: 0;
+        }
+
+        /* 三家注 badge */
+        .badge {
+            display: inline-block;
+            font-size: 0.75em;
+            padding: 1px 6px;
+            border-radius: 3px;
+            margin-right: 4px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        .badge-jijie {
+            background: #d0f0d0;
+            color: #1a6e1a;
+            border-left-color: #1a6e1a;
+        }
+        .badge-suoyin {
+            background: #ffe8cc;
+            color: #b45309;
+            border-left-color: #b45309;
+        }
+        .badge-zhengyi {
+            background: #d0e0ff;
+            color: #1a4fb4;
+            border-left-color: #1a4fb4;
+        }
+
+        .note-group.jijie { border-left-color: #1a6e1a; }
+        .note-group.suoyin { border-left-color: #b45309; }
+        .note-group.zhengyi { border-left-color: #1a4fb4; }
+        .note-group.mixed { border-left-color: #8B4513; }
+
+        .note-text {
+            color: #444;
+        }
+        .note-text .book-title {
+            font-style: italic;
+        }
+
+        /* ── 移动端 ── */
+        @media (max-width: 860px) {
+            .page {
+                grid-template-columns: 1fr;
+            }
+            .notes-panel {
+                position: relative;
+                height: auto;
+                border-top: 2px solid #c0a060;
+            }
+            .main-text {
+                border-right: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <!-- ════ 左栏：原文 ════ -->
+    <div class="main-text semantic-off">
+        <h1>五帝本纪</h1>
+
+        <div class="toolbar">
+            <button class="toggle-btn off" id="toggleSemantic" onclick="toggleSemantic()">
+                <span class="toggle-indicator"></span>
+                语义排版
+            </button>
+            <button class="toggle-btn off" id="toggleLines" onclick="toggleLines()">
+                <span class="toggle-indicator"></span>
+                关系连线
+            </button>
+        </div>
+        <svg id="relSvg" class="rel-svg"></svg>
+
+        <h2>黄帝 · 兴起与征讨</h2>
+
+        <p>
+            <a class="para-num" id="pn-1">1</a>
+            <span class="note-anchor" data-note="n1"><span class="person">黄帝</span>者</span>，<span class="note-anchor" data-note="n1b"><span class="clan">少典</span>之子</span>，姓<span class="person">公孙</span>，名曰<span class="person">轩辕</span>。<span class="note-anchor" data-note="n1c">生而<span class="mythical">神灵</span></span>，弱而能言，幼而徇齐，长而敦敏，成而聪明。
+        </p>
+
+        <p>
+            <a class="para-num" id="pn-1.1">1.1</a>
+            <span class="note-anchor" data-note="n1_1a"><span class="clan">神农氏</span>世衰</span>：
+        </p>
+        <div class="causal" style="margin-left:2em;" data-rel-id="c1">
+            <div class="cause" data-rel-id="c1a">诸侯相侵伐，暴虐百姓，而<span class="clan">神农氏</span>弗能征。</div>
+            <div class="effect" data-rel-id="c1b" data-rel-from="c1a" data-rel-type="causal" data-rel-anchor="tail"><span class="person">轩辕</span>乃习用<span class="artifact">干戈</span>，以征不享，诸侯咸来宾从。</div>
+        </div>
+        <div class="causal" style="margin-left:2em;" data-rel-id="c2">
+            <div class="cause" data-rel-id="c2a"><span class="note-anchor" data-note="n1_1b"><span class="person">蚩尤</span>最为暴</span>，莫能伐。<span class="person">炎帝</span>欲侵陵诸侯，</div>
+            <div class="effect" data-rel-id="c2b" data-rel-from="c2a" data-rel-type="causal" data-rel-anchor="tail">诸侯咸归<span class="person">轩辕</span>。</div>
+        </div>
+        <div class="escalation" data-rel-id="e1" data-rel-from="c2b" data-rel-type="escalation" data-rel-anchor="head">
+            <span class="person">轩辕</span>乃修德振兵，治五气，蓺五种，抚万民，度四方，
+        </div>
+        <p style="margin-left:2em;" data-rel-id="e1r" data-rel-from="e1" data-rel-type="sequel" data-rel-anchor="head">
+            教<span class="biology">熊</span><span class="biology">罴</span><span class="biology">貔貅</span><span class="biology">貙</span><span class="biology">虎</span>，以与<span class="person">炎帝</span>战於<span class="note-anchor" data-note="n1_1c"><span class="place">阪泉之野</span></span>。三战，然後得其志。
+        </p>
+
+        <p>
+            <a class="para-num" id="pn-1.2">1.2</a>
+        </p>
+        <div class="causal" style="margin-left:2em;" data-rel-id="c3">
+            <div class="cause" data-rel-id="c3a"><span class="person">蚩尤</span>作乱，不用帝命。</div>
+            <div class="effect" data-rel-id="c3b" data-rel-from="c3a" data-rel-type="causal" data-rel-anchor="tail"><span class="person">黄帝</span>乃徵师诸侯，与<span class="person">蚩尤</span>战於<span class="note-anchor" data-note="n1_2a"><span class="place">涿鹿之野</span></span>，遂禽杀<span class="person">蚩尤</span>。</div>
+        </div>
+
+        <p>
+            <a class="para-num" id="pn-1.3">1.3</a>
+        </p>
+        <div class="summary-line" data-rel-id="s1" data-rel-from="c3b" data-rel-type="summary" data-rel-anchor="head">
+            诸侯咸尊<span class="person">轩辕</span>为<span class="official">天子</span>，代<span class="clan">神农氏</span>，是为<span class="person">黄帝</span>。
+        </div>
+        <p style="margin-left:2em; margin-top:6px;">
+            天下有不顺者，<span class="person">黄帝</span>从而征之，平者去之，披山通道，未尝宁居。
+        </p>
+
+        <h2>疆域与治理</h2>
+
+        <p>
+            <a class="para-num" id="pn-2">2</a>
+        </p>
+        <ul style="margin-left:2em; list-style:none; padding:0;">
+            <li>东至于<span class="place">海</span>，登<span class="place">丸山</span>，及<span class="place">岱宗</span>。</li>
+            <li>西至于<span class="place">空桐</span>，登<span class="place">鸡头</span>。</li>
+            <li>南至于<span class="place">江</span>，登<span class="place">熊</span>、<span class="place">湘</span>。</li>
+            <li>北逐<span class="tribe">荤粥</span>，合符<span class="note-anchor" data-note="n2a"><span class="place">釜山</span></span>，而邑于<span class="note-anchor" data-note="n2b"><span class="place">涿鹿之阿</span></span>。</li>
+        </ul>
+
+        <p>
+            <a class="para-num" id="pn-3">3</a>
+            迁徙往来无常处，以师兵为营卫。官名皆以云命，为<span class="official">云师</span>。置<span class="official">左右大监</span>，监于万国。万国和，而<span class="mythical">鬼神</span><span class="place">山川</span>封禅与为多焉。获<span class="artifact">宝鼎</span>，迎日推筴。举<span class="person">风后</span>、<span class="person">力牧</span>、<span class="person">常先</span>、<span class="person">大鸿</span>以治民。
+        </p>
+
+        <p>
+            <a class="para-num" id="pn-4">4</a>
+            <span class="person">黄帝</span>二十五子，其得姓者十四人。
+        </p>
+
+        <h2>后裔与世系</h2>
+
+        <p>
+            <a class="para-num" id="pn-4.1">4.1</a>
+            <span class="note-anchor" data-note="n4_1"><span class="person">黄帝</span>居<span class="place">轩辕之丘</span></span>，而娶於<span class="place">西陵</span>之女，是为<span class="person">嫘祖</span>。<span class="person">嫘祖</span>为<span class="person">黄帝</span>正妃，生二子，其後皆有天下：
+        </p>
+        <div class="parallel" style="margin-left:2em;">
+            <span class="item">其一曰<span class="person">玄嚣</span>，是为<span class="person">青阳</span>，降居<span class="place">江水</span>；</span>
+            <span class="item">其二曰<span class="person">昌意</span>，降居<span class="place">若水</span>。</span>
+        </div>
+        <p style="margin-left:2em; margin-top:4px;">
+            <span class="person">昌意</span>娶<span class="clan">蜀山氏</span>女，曰<span class="person">昌仆</span>，生<span class="person">高阳</span>，<span class="person">高阳</span>有圣德焉。
+        </p>
+
+        <p>
+            <a class="para-num" id="pn-4.2">4.2</a>
+        </p>
+        <div class="causal" style="margin-left:2em;" data-rel-id="c4">
+            <div class="cause" data-rel-id="c4a"><span class="person">黄帝</span>崩，葬<span class="place">桥山</span>。</div>
+            <div class="effect" data-rel-id="c4b" data-rel-from="c4a" data-rel-type="causal" data-rel-anchor="tail">其孙<span class="person">昌意</span>之子<span class="person">高阳</span>立，是为<span class="person">帝颛顼</span>也。</div>
+        </div>
+
+        <hr style="border:none; border-top:1px solid #e0d8cc; margin:24px 0;">
+
+        <h2>帝颛顼</h2>
+
+        <p>
+            <a class="para-num" id="pn-5">5</a>
+            <span class="note-anchor" data-note="n5"><span class="person">帝颛顼高阳</span>者</span>，<span class="person">黄帝</span>之孙而<span class="person">昌意</span>之子也。静渊以有谋，疏通而知事；养材以任地，载时以象天，依<span class="mythical">鬼神</span>以制义，治气以教化，絜诚以祭祀。
+        </p>
+        <ul style="margin-left:2em; list-style:none; padding:0;">
+            <li>北至于<span class="place">幽陵</span>，</li>
+            <li>南至于<span class="place">交阯</span>，</li>
+            <li>西至于<span class="place">流沙</span>，</li>
+            <li>东至于<span class="place">蟠木</span>。</li>
+        </ul>
+        <div class="summary-line">
+            动静之物，大小之神，日月所照，莫不砥属。
+        </div>
+
+        <p>
+            <a class="para-num" id="pn-6">6</a>
+        </p>
+        <div class="causal" style="margin-left:2em;" data-rel-id="c5">
+            <div class="cause" data-rel-id="c5a"><span class="person">帝颛顼</span>生子曰<span class="person">穷蝉</span>。<span class="person">颛顼</span>崩，</div>
+            <div class="effect" data-rel-id="c5b" data-rel-from="c5a" data-rel-type="causal" data-rel-anchor="tail">而<span class="person">玄嚣</span>之孙<span class="person">高辛</span>立，是为<span class="person">帝喾</span>。</div>
+        </div>
+
+        <hr style="border:none; border-top:1px solid #e0d8cc; margin:24px 0;">
+
+        <h2>帝喾</h2>
+
+        <p>
+            <a class="para-num" id="pn-7">7</a>
+            <span class="person">帝喾高辛</span>者，<span class="person">黄帝</span>之曾孙也。<span class="person">高辛</span>父曰<span class="person">蟜极</span>，<span class="person">蟜极</span>父曰<span class="person">玄嚣</span>，<span class="person">玄嚣</span>父曰<span class="person">黄帝</span>。自<span class="person">玄嚣</span>与<span class="person">蟜极</span>皆不得在位，至<span class="person">高辛</span>即帝位。<span class="person">高辛</span>於<span class="person">颛顼</span>为族子。
+        </p>
+
+        <p>
+            <a class="para-num" id="pn-8">8</a>
+            <span class="person">高辛</span>生而<span class="mythical">神灵</span>，自言其名。普施利物，不於其身。聪以知远，明以察微。顺天之义，知民之急。仁而威，惠而信，脩身而天下服。
+        </p>
+        <ul style="margin-left:2em; list-style:none; padding:0;">
+            <li>取地之财而节用之，</li>
+            <li>抚教万民而利诲之，</li>
+            <li>历日月而迎送之，</li>
+            <li>明<span class="mythical">鬼神</span>而敬事之。</li>
+        </ul>
+        <p style="margin-top:6px;">
+            其色郁郁，其德嶷嶷。其动也时，其服也士。<span class="person">帝喾</span>溉执中而遍天下，日月所照，风雨所至，莫不从服。
+        </p>
+
+        <p>
+            <a class="para-num" id="pn-9">9</a>
+        </p>
+        <div class="causal" style="margin-left:2em;" data-rel-id="c6">
+            <div class="cause" data-rel-id="c6a"><span class="person">帝喾</span>娶<span class="clan">陈锋氏</span>女，生<span class="person">放勋</span>。娶<span class="clan">娵訾氏</span>女，生<span class="person">挚</span>。<span class="person">帝喾</span>崩，而<span class="person">挚</span>代立。</div>
+            <div class="effect" data-rel-id="c6b" data-rel-from="c6a" data-rel-type="causal" data-rel-anchor="tail"><span class="person">帝挚</span>立，不善，而弟<span class="person">放勋</span>立，是为<span class="person">帝尧</span>。</div>
+        </div>
+
+    </div>
+
+    <!-- ════ 右栏：注释 ════ -->
+    <div class="notes-panel">
+        <h3>三家注</h3>
+
+        <!-- [1] 黄帝者 -->
+        <div class="note-group mixed" id="n1" data-para="1">
+            <div class="note-ref">▸ [1] 黄帝者</div>
+            <div class="note-item">
+                <span class="badge badge-jijie">集解</span>
+                <span class="note-text"><span class="person">徐廣</span>曰：「號<span class="place">有熊</span>。」</span>
+            </div>
+            <div class="note-item">
+                <span class="badge badge-suoyin">索隱</span>
+                <span class="note-text">案：有土德之瑞，土色黃，故稱<span class="person">黃帝</span>，猶<span class="person">神農</span>以火德王而稱<span class="person">炎帝</span>然也。此以<span class="person">黃帝</span>為五帝之首，蓋依<span class="book-title">《大戴禮》</span><span class="book-title">《五帝德》</span>。</span>
+            </div>
+            <div class="note-item">
+                <span class="badge badge-zhengyi">正義</span>
+                <span class="note-text"><span class="book-title">《輿地志》</span>云：「<span class="place">涿鹿</span>本名<span class="place">彭城</span>，<span class="person">黃帝</span>初都，遷<span class="place">有熊</span>也。」案：<span class="person">黃帝</span><span class="place">有熊</span>國君，乃<span class="person">少典</span>國君之次子也。</span>
+            </div>
+        </div>
+
+        <!-- [1] 少典之子 -->
+        <div class="note-group mixed" id="n1b" data-para="1">
+            <div class="note-ref">▸ [1] 少典之子</div>
+            <div class="note-item">
+                <span class="badge badge-jijie">集解</span>
+                <span class="note-text"><span class="person">譙周</span>曰：「<span class="place">有熊</span>國君，<span class="person">少典</span>之子也。」<span class="person">皇甫謐</span>曰：「<span class="place">有熊</span>，今<span class="place">河南新鄭</span>是也。」</span>
+            </div>
+            <div class="note-item">
+                <span class="badge badge-suoyin">索隱</span>
+                <span class="note-text"><span class="person">少典</span>者，諸侯國號，非人名也。又案：<span class="book-title">《國語》</span>云「<span class="person">少典</span>娶<span class="clan">有蟜氏</span>女，生<span class="person">黃帝</span>、<span class="person">炎帝</span>」。然則<span class="person">炎帝</span>亦<span class="person">少典</span>之子。<span class="person">炎</span><span class="person">黃</span>二帝雖則相承，如<span class="book-title">《帝王代紀》</span>中間凡隔八帝，五百餘年。</span>
+            </div>
+        </div>
+
+        <!-- [1] 生而神灵 -->
+        <div class="note-group suoyin" id="n1c" data-para="1">
+            <div class="note-ref">▸ [1] 生而神靈</div>
+            <div class="note-item">
+                <span class="badge badge-suoyin">索隱</span>
+                <span class="note-text">蓋未合能言之時而<span class="person">黃帝</span>即言，言盖稱其年幼而疾速也。所以為神異也。</span>
+            </div>
+        </div>
+
+        <!-- [1.1] 神农氏世衰 -->
+        <div class="note-group zhengyi" id="n1_1a" data-para="1.1">
+            <div class="note-ref">▸ [1.1] 神農氏世衰</div>
+            <div class="note-item">
+                <span class="badge badge-zhengyi">正義</span>
+                <span class="note-text"><span class="clan">神農氏</span>末世，即<span class="person">炎帝榆罔</span>之時也。</span>
+            </div>
+        </div>
+
+        <!-- [1.1] 蚩尤最为暴 -->
+        <div class="note-group jijie" id="n1_1b" data-para="1.1">
+            <div class="note-ref">▸ [1.1] 蚩尤最為暴</div>
+            <div class="note-item">
+                <span class="badge badge-jijie">集解</span>
+                <span class="note-text"><span class="person">應劭</span>曰：「<span class="person">蚩尤</span>，古天子。」</span>
+            </div>
+            <div class="note-item">
+                <span class="badge badge-suoyin">索隱</span>
+                <span class="note-text">案：<span class="person">蚩尤</span>姜姓，<span class="person">炎帝</span>之裔也。</span>
+            </div>
+        </div>
+
+        <!-- [1.1] 阪泉之野 -->
+        <div class="note-group zhengyi" id="n1_1c" data-para="1.1">
+            <div class="note-ref">▸ [1.1] 阪泉之野</div>
+            <div class="note-item">
+                <span class="badge badge-zhengyi">正義</span>
+                <span class="note-text"><span class="place">阪泉</span>，今<span class="place">媯州懷戎縣</span>阪泉鄉也。<span class="book-title">《括地志》</span>云：「<span class="place">阪泉</span>，今名<span class="place">黃帝泉</span>，在<span class="place">媯州懷戎縣</span>東五十六里。出五里至<span class="place">涿鹿</span>東北與<span class="place">涿水</span>合。」</span>
+            </div>
+        </div>
+
+        <!-- [1.2] 涿鹿之野 -->
+        <div class="note-group mixed" id="n1_2a" data-para="1.2">
+            <div class="note-ref">▸ [1.2] 涿鹿之野</div>
+            <div class="note-item">
+                <span class="badge badge-jijie">集解</span>
+                <span class="note-text"><span class="person">服虔</span>曰：「<span class="place">涿鹿</span>，山名，在<span class="place">涿郡</span>。」</span>
+            </div>
+            <div class="note-item">
+                <span class="badge badge-zhengyi">正義</span>
+                <span class="note-text"><span class="book-title">《括地志》</span>云：「<span class="place">涿鹿故城</span>在<span class="place">媯州懷戎縣</span>西南三十餘里，本<span class="person">黃帝</span>所都也。」</span>
+            </div>
+        </div>
+
+        <!-- [2] 釜山 -->
+        <div class="note-group zhengyi" id="n2a" data-para="2">
+            <div class="note-ref">▸ [2] 釜山</div>
+            <div class="note-item">
+                <span class="badge badge-zhengyi">正義</span>
+                <span class="note-text"><span class="book-title">《括地志》</span>云：「<span class="place">釜山</span>在<span class="place">媯州懷戎縣</span>北三里。」</span>
+            </div>
+        </div>
+
+        <!-- [2] 涿鹿之阿 -->
+        <div class="note-group suoyin" id="n2b" data-para="2">
+            <div class="note-ref">▸ [2] 涿鹿之阿</div>
+            <div class="note-item">
+                <span class="badge badge-suoyin">索隱</span>
+                <span class="note-text">阿者，曲阜也。<span class="place">涿鹿</span>之山有阿谷，可以隱居。</span>
+            </div>
+        </div>
+
+        <!-- [4.1] 黄帝居轩辕之丘 -->
+        <div class="note-group zhengyi" id="n4_1" data-para="4.1">
+            <div class="note-ref">▸ [4.1] 黄帝居轩辕之丘</div>
+            <div class="note-item">
+                <span class="badge badge-zhengyi">正義</span>
+                <span class="note-text"><span class="person">皇甫謐</span>云：「居<span class="place">轩辕之丘</span>，因以為名，又以為號。」在<span class="place">上邽城</span>東七十里<span class="place">軒轅谷</span>。</span>
+            </div>
+        </div>
+
+        <!-- [5] 帝颛顼高阳者 -->
+        <div class="note-group mixed" id="n5" data-para="5">
+            <div class="note-ref">▸ [5] 帝顓頊高陽者</div>
+            <div class="note-item">
+                <span class="badge badge-jijie">集解</span>
+                <span class="note-text"><span class="person">韋昭</span>曰：「<span class="place">高陽</span>，所興之地。」</span>
+            </div>
+            <div class="note-item">
+                <span class="badge badge-suoyin">索隱</span>
+                <span class="note-text"><span class="person">宋衷</span>曰：「顓頊名。<span class="place">高陽</span>，所居地名。」</span>
+            </div>
+            <div class="note-item">
+                <span class="badge badge-zhengyi">正義</span>
+                <span class="note-text"><span class="person">顓頊</span>都<span class="place">帝丘</span>，今<span class="place">濮州濮陽縣</span>。<span class="book-title">《帝王世紀》</span>云：「在位七十八年，年九十八。」</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+// 语义排版开关
+function toggleSemantic() {
+    const btn = document.getElementById('toggleSemantic');
+    const main = document.querySelector('.main-text');
+    const isOff = main.classList.toggle('semantic-off');
+    btn.classList.toggle('off', isOff);
+    if (document.getElementById('relSvg').classList.contains('visible')) drawLines();
+}
+
+// 关系连线开关
+function toggleLines() {
+    const btn = document.getElementById('toggleLines');
+    const svg = document.getElementById('relSvg');
+    const isOff = !svg.classList.toggle('visible');
+    btn.classList.toggle('off', isOff);
+    if (!isOff) drawLines();
+}
+
+// 关系类型→颜色/线型
+const REL_STYLES = {
+    causal:     { color: '#c05020', label: '因', dash: '' },
+    escalation: { color: '#8a6a00', label: '递', dash: '6,3' },
+    sequel:     { color: '#1a5fb4', label: '续', dash: '4,4' },
+    summary:    { color: '#26a269', label: '总', dash: '' },
+    parallel:   { color: '#613583', label: '并', dash: '2,4' },
+};
+
+function drawLines() {
+    const svg = document.getElementById('relSvg');
+    const main = document.querySelector('.main-text');
+    const mainRect = main.getBoundingClientRect();
+
+    // 调整SVG尺寸
+    svg.style.height = main.scrollHeight + 'px';
+    svg.setAttribute('viewBox', `0 0 ${main.offsetWidth} ${main.scrollHeight}`);
+    svg.innerHTML = '';
+
+    // 箭头marker定义
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    for (const [type, style] of Object.entries(REL_STYLES)) {
+        const marker = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+        marker.setAttribute('id', `arrow-${type}`);
+        marker.setAttribute('viewBox', '0 0 10 10');
+        marker.setAttribute('refX', '10');
+        marker.setAttribute('refY', '5');
+        marker.setAttribute('markerWidth', '6');
+        marker.setAttribute('markerHeight', '6');
+        marker.setAttribute('orient', 'auto-start-reverse');
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', 'M 0 0 L 10 5 L 0 10 z');
+        path.setAttribute('fill', style.color);
+        marker.appendChild(path);
+        defs.appendChild(marker);
+    }
+    svg.appendChild(defs);
+
+    // 找所有有 data-rel-from 的元素
+    const targets = main.querySelectorAll('[data-rel-from]');
+
+    // 用Range精确定位文本首/尾字符位置
+    function getTextEndPos(el) {
+        const range = document.createRange();
+        const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+        let lastText = null;
+        while (walker.nextNode()) lastText = walker.currentNode;
+        if (lastText && lastText.length > 0) {
+            range.setStart(lastText, Math.max(0, lastText.length - 1));
+            range.setEnd(lastText, lastText.length);
+            const r = range.getBoundingClientRect();
+            return { x: r.right - mainRect.left, y: r.top - mainRect.top + r.height / 2 };
+        }
+        const r = el.getBoundingClientRect();
+        return { x: r.right - mainRect.left - 10, y: r.top - mainRect.top + r.height / 2 };
+    }
+
+    function getTextStartPos(el) {
+        const range = document.createRange();
+        const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+        const firstText = walker.nextNode();
+        if (firstText && firstText.length > 0) {
+            range.setStart(firstText, 0);
+            range.setEnd(firstText, 1);
+            const r = range.getBoundingClientRect();
+            return { x: r.left - mainRect.left, y: r.top - mainRect.top + r.height / 2 };
+        }
+        const r = el.getBoundingClientRect();
+        return { x: r.left - mainRect.left + 10, y: r.top - mainRect.top + r.height / 2 };
+    }
+
+    targets.forEach((target) => {
+        const fromId = target.dataset.relFrom;
+        const relType = target.dataset.relType || 'causal';
+        const anchor = target.dataset.relAnchor || 'tail'; // 'head' or 'tail'
+        const source = main.querySelector(`[data-rel-id="${fromId}"]`);
+        if (!source) return;
+
+        const style = REL_STYLES[relType] || REL_STYLES.causal;
+
+        if (anchor === 'tail') {
+            // ── 尾连尾：句子末尾用右侧折线树连接 ──
+            const p1 = getTextEndPos(source);
+            const p2 = getTextEndPos(target);
+            p1.y += 5;  // 起点偏低，避免与上一段终点重叠
+            p2.y -= 5;  // 终点偏高，避免与下一段起点重叠
+            const xOut = Math.max(p1.x, p2.x) + 16;
+
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d',
+                `M ${p1.x} ${p1.y} L ${xOut} ${p1.y} L ${xOut} ${p2.y} L ${p2.x} ${p2.y}`);
+            path.setAttribute('stroke', style.color);
+            path.setAttribute('stroke-width', '1.2');
+            path.setAttribute('fill', 'none');
+            path.setAttribute('opacity', '0.45');
+            path.setAttribute('stroke-dasharray', '4,3');
+            path.setAttribute('marker-end', `url(#arrow-${relType})`);
+            svg.appendChild(path);
+
+            // 标签在折线竖段中点
+            const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            text.setAttribute('x', xOut + 4);
+            text.setAttribute('y', (p1.y + p2.y) / 2 + 4);
+            text.setAttribute('font-size', '10');
+            text.setAttribute('fill', style.color);
+            text.setAttribute('font-family', 'sans-serif');
+            text.setAttribute('opacity', '0.7');
+            text.textContent = style.label;
+            svg.appendChild(text);
+
+        } else {
+            // ── 头连头：左侧短弧线+箭头 ──
+            const srcRect = source.getBoundingClientRect();
+            const tgtRect = target.getBoundingClientRect();
+            const xLeft = Math.min(srcRect.left, tgtRect.left) - mainRect.left;
+            const y1 = srcRect.top - mainRect.top + srcRect.height / 2 + 5;  // 起点偏低
+            const y2 = tgtRect.top - mainRect.top + tgtRect.height / 2 - 5;  // 终点偏高
+            const bulge = 18; // 弧线向左凸出的距离
+
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d',
+                `M ${xLeft - 2} ${y1} C ${xLeft - bulge} ${y1}, ${xLeft - bulge} ${y2}, ${xLeft - 2} ${y2}`);
+            path.setAttribute('stroke', style.color);
+            path.setAttribute('stroke-width', '1.2');
+            path.setAttribute('fill', 'none');
+            path.setAttribute('opacity', '0.5');
+            path.setAttribute('stroke-dasharray', '4,3');
+            path.setAttribute('marker-end', `url(#arrow-${relType})`);
+            svg.appendChild(path);
+
+            // 标签在弧线中点
+            const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            text.setAttribute('x', xLeft - bulge - 3);
+            text.setAttribute('y', (y1 + y2) / 2 + 4);
+            text.setAttribute('font-size', '10');
+            text.setAttribute('fill', style.color);
+            text.setAttribute('font-family', 'sans-serif');
+            text.setAttribute('text-anchor', 'end');
+            text.setAttribute('opacity', '0.7');
+            text.textContent = style.label;
+            svg.appendChild(text);
+        }
+
+        // 两端小圆点
+        const p1 = anchor === 'tail' ? getTextEndPos(source) : getTextStartPos(source);
+        const p2 = anchor === 'tail' ? getTextEndPos(target) : getTextStartPos(target);
+        for (const p of [p1, p2]) {
+            const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            dot.setAttribute('cx', p.x);
+            dot.setAttribute('cy', p.y);
+            dot.setAttribute('r', '2.5');
+            dot.setAttribute('fill', style.color);
+            dot.setAttribute('opacity', '0.5');
+            svg.appendChild(dot);
+        }
+    });
+}
+
+// 窗口resize时重绘
+window.addEventListener('resize', () => {
+    if (document.getElementById('relSvg').classList.contains('visible')) drawLines();
+});
+
+// ── 注释关联系统 ──
+
+// 连线SVG（跨两栏的overlay）
+const connSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+connSvg.id = 'connSvg';
+connSvg.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:50;';
+document.body.appendChild(connSvg);
+
+function clearActive() {
+    document.querySelectorAll('.note-anchor.active').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('.note-group.active').forEach(n => n.classList.remove('active'));
+    connSvg.innerHTML = '';
+}
+
+function drawConnLine(anchor, noteEl) {
+    connSvg.innerHTML = '';
+    const ar = anchor.getBoundingClientRect();
+    const nr = noteEl.getBoundingClientRect();
+
+    // 检查两个元素是否都在视口内可见
+    if (ar.width === 0 || nr.width === 0) return;
+    if (nr.top > window.innerHeight || nr.bottom < 0) return;
+
+    // 从锚点右边缘到注释左边缘画贝塞尔曲线
+    const x1 = ar.right;
+    const y1 = ar.top + ar.height / 2;
+    const x2 = nr.left;
+    const y2 = nr.top + nr.height / 2;
+
+    // 安全检查：坐标应在合理范围内
+    if (x2 <= x1 || Math.abs(y2 - y1) > window.innerHeight) return;
+
+    const cx1 = x1 + (x2 - x1) * 0.4;
+    const cx2 = x1 + (x2 - x1) * 0.6;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M ${x1} ${y1} C ${cx1} ${y1}, ${cx2} ${y2}, ${x2} ${y2}`);
+    path.setAttribute('stroke', '#8B4513');
+    path.setAttribute('stroke-width', '1.5');
+    path.setAttribute('fill', 'none');
+    path.setAttribute('opacity', '0.4');
+    path.setAttribute('stroke-dasharray', '4,3');
+    connSvg.appendChild(path);
+
+    // 两端小圆点
+    for (const [cx, cy] of [[x1, y1], [x2, y2]]) {
+        const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        dot.setAttribute('cx', cx);
+        dot.setAttribute('cy', cy);
+        dot.setAttribute('r', '3');
+        dot.setAttribute('fill', '#8B4513');
+        dot.setAttribute('opacity', '0.5');
+        connSvg.appendChild(dot);
+    }
+}
+
+function activatePair(anchor, noteEl) {
+    clearActive();
+    anchor.classList.add('active');
+    noteEl.classList.add('active');
+    drawConnLine(anchor, noteEl);
+}
+
+// 锁定状态（click后锁定，不随mouseleave消失）
+let locked = false;
+
+// 左侧锚点：hover预览 + click锁定
+document.querySelectorAll('.note-anchor').forEach(anchor => {
+    anchor.addEventListener('mouseenter', () => {
+        if (locked) return;
+        const noteEl = document.getElementById(anchor.dataset.note);
+        if (!noteEl) return;
+        activatePair(anchor, noteEl);
+        noteEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // 滚动结束后重绘连线
+        setTimeout(() => { if (!locked) drawConnLine(anchor, noteEl); }, 350);
+    });
+
+    anchor.addEventListener('mouseleave', () => {
+        if (locked) return;
+        clearActive();
+    });
+
+    anchor.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const noteEl = document.getElementById(anchor.dataset.note);
+        if (!noteEl) return;
+        locked = true;
+        activatePair(anchor, noteEl);
+        noteEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => drawConnLine(anchor, noteEl), 350);
+    });
+});
+
+// 右侧注释：hover预览 + click锁定
+document.querySelectorAll('.note-group').forEach(note => {
+    note.addEventListener('mouseenter', () => {
+        if (locked) return;
+        const anchor = document.querySelector(`.note-anchor[data-note="${note.id}"]`);
+        if (!anchor) return;
+        activatePair(anchor, note);
+    });
+
+    note.addEventListener('mouseleave', () => {
+        if (locked) return;
+        clearActive();
+    });
+
+    note.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const anchor = document.querySelector(`.note-anchor[data-note="${note.id}"]`);
+        if (!anchor) return;
+        locked = true;
+        activatePair(anchor, note);
+        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => drawConnLine(anchor, note), 350);
+    });
+});
+
+// 任何滚动时重绘锁定的连线
+let scrollTimer;
+function onScroll() {
+    if (!locked) return;
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+        const activeAnchor = document.querySelector('.note-anchor.active');
+        const activeNote = document.querySelector('.note-group.active');
+        if (activeAnchor && activeNote) drawConnLine(activeAnchor, activeNote);
+    }, 50);
+}
+document.querySelector('.notes-panel').addEventListener('scroll', onScroll);
+window.addEventListener('scroll', onScroll);
+
+// 点击空白区域解除锁定并清除
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.note-anchor') && !e.target.closest('.note-group')) {
+        locked = false;
+        clearActive();
+    }
+});
+</script>
+
+</body>
+</html>
