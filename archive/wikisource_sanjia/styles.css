@@ -1,0 +1,89 @@
+/* 维基文库《史记》样式 */
+body {
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    line-height: 2.0;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdf8;
+    color: #2c2c2c;
+}
+h1, h2 { color: #8B0000; }
+h2 { border-left: 4px solid #8B4513; padding-left: 12px; margin-top: 2em; }
+h3 { color: #8B4513; margin-top: 1.5em; }
+p { margin: 1.5em 0; }
+a { color: #3366cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+/* 维基链接（实体标注） */
+a.extiw, a[rel="mw:WikiLink/Interwiki"] {
+    color: #3366cc;
+    border-bottom: 1px dotted #3366cc;
+}
+/* 导航 */
+.chapter-nav {
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9em;
+}
+.chapter-nav a { margin: 0 10px; }
+/* 目录页 */
+.toc-grid { column-count: 2; column-gap: 2em; }
+.toc-section { break-inside: avoid; margin-bottom: 1em; }
+.toc-section h3 { margin: 0.5em 0 0.3em; }
+.toc-section ul { list-style: none; padding-left: 1em; margin: 0; }
+.toc-section li { margin: 0.2em 0; }
+/* 表格 */
+table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: #f5f0e0; }
+/* 引用 */
+blockquote { border-left: 3px solid #ccc; margin: 1em 0; padding-left: 1em; }
+dl { margin: 0.5em 0; }
+dd { margin-left: 2em; }
+
+/* 三家注样式 */
+/* 集解标签 */
+span[style*="background-color: green"] {
+    background-color: #2e7d32 !important;
+    color: white !important;
+    font-size: 0.8em;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+/* 集解内容 */
+span[style*="color:green"] { color: #2e7d32 !important; font-size: 0.95em; }
+/* 索隐标签 */
+span[style*="background-color: deepPink"] {
+    background-color: #c2185b !important;
+    color: white !important;
+    font-size: 0.8em;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+/* 索隐内容 */
+span[style*="color:deeppink"] { color: #c2185b !important; font-size: 0.95em; }
+/* 正义标签 */
+span[style*="background-color: #966"] {
+    background-color: #996666 !important;
+    color: white !important;
+    font-size: 0.8em;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+/* 人名下划线 */
+span[style*="text-decoration: underline"][style*="text-decoration-style: solid"] {
+    text-decoration: underline !important;
+    text-decoration-color: #8B4513 !important;
+    text-underline-offset: 3px !important;
+}
+/* 书名波浪线 */
+span[style*="text-decoration-style: wavy"] {
+    text-decoration: underline wavy !important;
+    text-decoration-color: #4B0082 !important;
+    text-underline-offset: 3px !important;
+}
