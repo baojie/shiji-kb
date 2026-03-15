@@ -20,6 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.pa
 CHAPTER_DIR = os.path.join(BASE_DIR, 'chapter_md')
 REIGN_FILE = os.path.join(BASE_DIR, 'kg', 'chronology', 'data', 'reign_periods.json')
 OUTPUT_FILE = os.path.join(BASE_DIR, 'kg', 'chronology', 'data', 'year_ce_map.json')
+YEAR_STATE_FILE = os.path.join(BASE_DIR, 'kg', 'chronology', 'data', 'year_state_map.json')
 DISAMBIG_FILE = os.path.join(BASE_DIR, 'kg', 'entities', 'data', 'disambiguation_map.json')
 
 # ============================================================
@@ -245,6 +246,11 @@ def _parse_table_by_rows(filepath_glob, start_bce, states, state_col_offset,
     current_ruler = {}    # {state: normalized_name}
     current_start_bce = {}  # {state: bce when ruler's first row appeared}
     year_state = {}  # {ce_year: {state: (ruler_display, year_num)}}
+    # Track consecutive fully-empty rows per state (no ruler_raw AND no year_num).
+    # When a state disappears from the table (extinct), its cells stay blank indefinitely.
+    # After EXTINCT_THRESHOLD consecutive blank rows, stop recording that state.
+    empty_streak = {}   # {state: count of consecutive (None, None) rows}
+    EXTINCT_THRESHOLD = 5  # 5 blank years → treat as extinct
 
     with open(filepath, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -299,7 +305,6 @@ def _parse_table_by_rows(filepath_glob, start_bce, states, state_col_offset,
                 # New ruler appeared (may include starting year_num)
                 name = normalize_ruler_name(ruler_raw, state)
                 if name:
-                    # ruler_start_bce: if year_num given, ruler started that many years before this row
                     ruler_start_bce = bce + (year_num - 1 if year_num else 0)
 
                     # End previous ruler
@@ -311,14 +316,31 @@ def _parse_table_by_rows(filepath_glob, start_bce, states, state_col_offset,
                     rulers[name] = {'state': state, 'start_bce': ruler_start_bce}
                     current_ruler[state] = name
                     current_start_bce[state] = ruler_start_bce
+                    empty_streak[state] = 0
 
-            # Compute reign year for this BCE year
+            # Track extinction via consecutive fully-blank cells (for end_bce estimation)
+            if ruler_raw is None and year_num is None:
+                streak = empty_streak.get(state, 0) + 1
+                empty_streak[state] = streak
+                if streak >= EXTINCT_THRESHOLD and state in current_ruler:
+                    prev = current_ruler[state]
+                    if prev in rulers and 'end_bce' not in rulers[prev]:
+                        rulers[prev]['end_bce'] = bce + EXTINCT_THRESHOLD
+                    del current_ruler[state]
+                # CRITICAL: do NOT infer reign year from blank cells —
+                # active states always show explicit year numbers; blank = extinct
+                continue
+            else:
+                empty_streak[state] = 0
+
+            # Add to year_state only when cell has explicit data
             if state in current_ruler:
-                r_start = current_start_bce.get(state, bce)
-                actual_year = r_start - bce + 1
-                if year_num is not None and ruler_raw is None:
-                    # Continuation cell with explicit year number — trust it
-                    actual_year = year_num
+                if year_num is not None:
+                    # Continuation cell with explicit year number — use it directly
+                    actual_year = year_num if ruler_raw is None else (current_start_bce.get(state, bce) - bce + 1)
+                else:
+                    # New ruler with no year stated (treat as year 1)
+                    actual_year = 1
                 entry[state] = (current_ruler[state], actual_year)
 
         if entry:
@@ -340,14 +362,6 @@ def parse_table_014():
         end_bce_default=425, chapter_tag='014_十二诸侯年表'
     )
     return rulers, year_state
-                    current_ruler[state] = name
-
-    # Set end years for last rulers (end of table = ~478 BCE)
-    for state, name in current_ruler.items():
-        if name in rulers and 'end_bce' not in rulers[name]:
-            rulers[name]['end_bce'] = 478  # approximate
-
-    return rulers
 
 
 # ============================================================
@@ -355,70 +369,18 @@ def parse_table_014():
 # ============================================================
 
 TABLE_015_STATES = ['周', '秦', '魏', '韩', '赵', '楚', '燕', '齐']
-TABLE_015_STATE_START_COL = 1  # columns: 公元前, 周, 秦, ...
+TABLE_015_STATE_START_COL = 1  # columns: [anchor], 周, 秦, ...
+
 
 def parse_table_015():
-    """Parse 六国年表 to extract reign periods."""
-    filepath = None
-    for f in glob.glob(os.path.join(CHAPTER_DIR, '015_*.tagged.md')):
-        filepath = f
-        break
-    if not filepath:
-        print("Warning: 015_六国年表 not found")
-        return {}
-
-    rulers = {}
-    current_ruler = {}
-
-    with open(filepath, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
-
-    in_table = False
-    for line in lines:
-        if line.strip().startswith('| 公元前'):
-            in_table = True
-            continue
-        if line.strip().startswith('| ---'):
-            continue
-        if not in_table or not line.strip().startswith('|'):
-            if in_table and not line.strip().startswith('|'):
-                in_table = False
-            continue
-
-        cells = parse_table_row(line)
-        if not cells or len(cells) < TABLE_015_STATE_START_COL + 1:
-            continue
-
-        bce = extract_bce_year(cells[0])
-        if bce is None:
-            continue
-
-        for i, state in enumerate(TABLE_015_STATES):
-            col_idx = TABLE_015_STATE_START_COL + i
-            if col_idx >= len(cells):
-                break
-
-            cell = cells[col_idx]
-            ruler_raw, year_num = parse_cell_ruler_year(cell)
-
-            if ruler_raw is not None and year_num is not None:
-                name = normalize_ruler_name(ruler_raw, state)
-                if name:
-                    start_bce = bce + year_num - 1
-
-                    if state in current_ruler:
-                        prev_name = current_ruler[state]
-                        if prev_name in rulers:
-                            rulers[prev_name]['end_bce'] = start_bce
-
-                    rulers[name] = {'state': state, 'start_bce': start_bce}
-                    current_ruler[state] = name
-
-    for state, name in current_ruler.items():
-        if name in rulers and 'end_bce' not in rulers[name]:
-            rulers[name]['end_bce'] = 207
-
-    return rulers
+    """Parse 六国年表 (476–145 BCE) to extract reign periods and year→state map.
+    START_BCE=476: 周元王元年=476 BCE（经验证：秦二十六年=r256=476-256+1=221 BCE=秦并天下 ✓）
+    """
+    rulers, year_state = _parse_table_by_rows(
+        '015_*.tagged.md', 476, TABLE_015_STATES, TABLE_015_STATE_START_COL,
+        end_bce_default=207, chapter_tag='015_六国年表'
+    )
+    return rulers, year_state
 
 
 # ============================================================
@@ -444,25 +406,34 @@ def parse_table_022():
     with open(filepath, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
+    # 022 table starts at r1 = 高皇帝元年 = 206 BCE
+    START_BCE_022 = 206
+    row_num = 0
+
     in_table = False
     for line in lines:
-        if line.strip().startswith('| 公元前'):
-            in_table = True
-            continue
-        if line.strip().startswith('| ---'):
-            continue
-        if not in_table or not line.strip().startswith('|'):
-            if in_table and not line.strip().startswith('|'):
+        stripped = line.strip()
+        if not stripped.startswith('|'):
+            if in_table:
                 in_table = False
+            continue
+
+        # Detect table header: contains 纪年
+        if not in_table:
+            if '纪年' in stripped:
+                in_table = True
+                row_num = 0
+                continue
             continue
 
         cells = parse_table_row(line)
         if not cells or len(cells) < 2:
             continue
-
-        bce = extract_bce_year(cells[0])
-        if bce is None:
+        if cells[0].strip().startswith('---'):
             continue
+
+        row_num += 1
+        bce = START_BCE_022 - row_num + 1  # 206, 205, 204, ...
 
         jinian = strip_entity_tags(cells[1]).strip()
 
@@ -581,6 +552,24 @@ MANUAL_RULERS = {
     '鲁厉公': {'state': '鲁', 'start_bce': 922, 'end_bce': 886},     # 37年
     '鲁献公': {'state': '鲁', 'start_bce': 885, 'end_bce': 855},     # 32年（一说50年）
 
+    # ── 鲁国晚期（014表结束后，476-249 BCE，据史记鲁周公世家在位年数前推） ──
+    # 注：014表数据在BCE477(哀公18年)结束，哀公实际在位27年至BCE468
+    # 各君在位年数据自史记·鲁周公世家，从哀公末年(BCE468)顺序推算
+    '鲁哀公': {'state': '鲁', 'start_bce': 494, 'end_bce': 468},     # 27年（覆盖014表哀公18年后）
+    '鲁悼公': {'state': '鲁', 'start_bce': 467, 'end_bce': 431},     # 37年
+    '鲁元公': {'state': '鲁', 'start_bce': 430, 'end_bce': 410},     # 21年
+    '鲁穆公': {'state': '鲁', 'start_bce': 409, 'end_bce': 377},     # 33年
+    '鲁共公': {'state': '鲁', 'start_bce': 376, 'end_bce': 355},     # 22年
+    '鲁康公': {'state': '鲁', 'start_bce': 354, 'end_bce': 346},     # 9年
+    '鲁景公': {'state': '鲁', 'start_bce': 345, 'end_bce': 317},     # 29年
+    '鲁平公': {'state': '鲁', 'start_bce': 316, 'end_bce': 296},     # 21年
+    '鲁文公': {'state': '鲁', 'start_bce': 295, 'end_bce': 273},     # 23年
+    '鲁顷公': {'state': '鲁', 'start_bce': 272, 'end_bce': 249},     # 24年（楚灭鲁约249-256 BCE有争议）
+
+    # ── 卫国桓公（年代可推算，解决管蔡世家中的年份误归属） ──
+    # 卫桓公35年=鲁隐公元年=BCE722，故卫桓公元年=BCE756，55年=BCE702
+    '卫桓公': {'state': '卫', 'start_bce': 756, 'end_bce': 702},     # 55年（史记卫康叔世家）
+
     # ── 齐国早期（由齐武公850BCE向前推算） ──
     '齐献公': {'state': '齐', 'start_bce': 859, 'end_bce': 851},     # 9年
 
@@ -631,21 +620,25 @@ def extract_reign_periods():
     """Extract reign periods from all tables and combine."""
     print("=== Phase 1: Extracting reign periods ===")
 
-    # Parse tables
-    rulers_014 = parse_table_014()
-    print(f"  Table 014: {len(rulers_014)} rulers extracted")
+    # Parse tables (014/015 now return (rulers, year_state) tuples)
+    rulers_014, year_state_014 = parse_table_014()
+    print(f"  Table 014: {len(rulers_014)} rulers, {len(year_state_014)} years extracted")
 
-    rulers_015 = parse_table_015()
-    print(f"  Table 015: {len(rulers_015)} rulers extracted")
+    rulers_015, year_state_015 = parse_table_015()
+    print(f"  Table 015: {len(rulers_015)} rulers, {len(year_state_015)} years extracted")
 
     rulers_022, eras_022 = parse_table_022()
     print(f"  Table 022: {len(rulers_022)} rulers, {len(eras_022)} eras extracted")
 
-    # Combine rulers (015 overrides 014 for overlapping entries,
-    # since 015 covers later period with better names)
+    # Build merged year_state_map (015 overrides 014 for overlapping years)
+    year_state_map = {}
+    year_state_map.update(year_state_014)
+    year_state_map.update(year_state_015)  # 015 takes precedence for 476-425 overlap
+
+    # Combine rulers (015 overrides 014 for overlapping entries)
     all_rulers = {}
     all_rulers.update(rulers_014)
-    all_rulers.update(rulers_015)  # Later table takes precedence
+    all_rulers.update(rulers_015)
     all_rulers.update(rulers_022)
     all_rulers.update(MANUAL_RULERS)
 
@@ -677,8 +670,8 @@ def extract_reign_periods():
         'aliases': aliases,
     }
 
-    print(f"  Total: {len(all_rulers)} rulers, {len(eras_022)} eras")
-    return result
+    print(f"  Total: {len(all_rulers)} rulers, {len(eras_022)} eras, {len(year_state_map)} years in state map")
+    return result, year_state_map
 
 
 def save_reign_periods(data):
@@ -694,6 +687,28 @@ def save_reign_periods(data):
     with open(REIGN_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"  Saved to {REIGN_FILE}")
+
+
+def save_year_state_map(year_state_map):
+    """Save {ce_year: {state: [ruler, reign_year]}} to JSON."""
+    # JSON keys must be strings
+    out = {str(k): v for k, v in sorted(year_state_map.items())}
+    with open(YEAR_STATE_FILE, 'w', encoding='utf-8') as f:
+        json.dump(out, f, ensure_ascii=False, indent=2)
+    print(f"  Saved year_state_map to {YEAR_STATE_FILE} ({len(out)} years)")
+
+
+def load_year_state_map():
+    """Load year_state_map.json → {ce_year_int: {state: (ruler, reign_year)}}."""
+    if not os.path.exists(YEAR_STATE_FILE):
+        return {}
+    with open(YEAR_STATE_FILE, encoding='utf-8') as f:
+        raw = json.load(f)
+    result = {}
+    for k, v in raw.items():
+        ce = int(k)
+        result[ce] = {state: (entry[0], entry[1]) for state, entry in v.items()}
+    return result
 
 
 # ============================================================
@@ -1329,7 +1344,7 @@ def load_event_index_years():
     return result
 
 
-def generate_timeline(year_map, reign_data=None, event_year_map=None):
+def generate_timeline(year_map, reign_data=None, event_year_map=None, year_state_map=None):
     """Generate timeline.html — CE-year indexed page.
     Handles both CE-year entries and ruler_key entries (pre-841 BCE).
     """
@@ -1426,6 +1441,16 @@ def generate_timeline(year_map, reign_data=None, event_year_map=None):
                      f'先秦早期<span class="letter-count">{total_ruler_keys}</span></a>')
     lines.append('</div>')
 
+    # Fixed state order for grid alignment (Spring&Autumn + Warring States)
+    ALL_STATES_ORDER = [
+        '周', '鲁', '齐', '晋',   # Row 1
+        '秦', '楚', '宋', '卫',   # Row 2
+        '陈', '蔡', '曹', '郑',   # Row 3
+        '燕', '吴', '魏', '韩',   # Row 4
+        '赵',                      # Row 5 (Warring States tail)
+    ]
+    GRID_COLS = 4
+
     # Year entries grouped by century
     lines.append('<div class="entity-index timeline-index">')
 
@@ -1439,37 +1464,54 @@ def generate_timeline(year_map, reign_data=None, event_year_map=None):
             year_display = format_bce_year(ce_year)
             year_anchor = f'year-{ce_year}'
 
-            # Compute reign year aliases from all concurrent rulers
-            if reign_data:
-                alias_list = compute_reign_aliases(reign_data, ce_year)
-            else:
-                alias_list = []
-            # Fallback: use rulers from references if no reign_data
-            if not alias_list:
-                rulers_at_year = set(r for _, _, _, r in refs)
-                alias_list = sorted(rulers_at_year)
-            ruler_str = '、'.join(alias_list)
-
-            lines.append(f'  <div class="entity-entry timeline-entry" id="{year_anchor}">')
-
-            # Left: year + ruler
-            lines.append('    <div class="entry-left">')
-            lines.append(f'      <span class="canonical-name time">{html_mod.escape(year_display)}</span>')
-            if ruler_str:
-                lines.append(f'      <span class="alias-list">{html_mod.escape(ruler_str)}</span>')
             event_count = len(by_year_events.get(ce_year, []))
             count_parts = []
             if refs:
                 count_parts.append(f'{len(refs)}引用')
             if event_count:
                 count_parts.append(f'{event_count}事件')
-            lines.append(f'      <span class="entry-count">({", ".join(count_parts)})</span>')
+
+            lines.append(f'  <div class="entity-entry timeline-entry" id="{year_anchor}">')
+
+            # Col 1: year + counts
+            lines.append('    <div class="entry-year">')
+            lines.append(f'      <span class="canonical-name time">{html_mod.escape(year_display)}</span>')
+            if count_parts:
+                lines.append(f'      <span class="entry-count">({", ".join(count_parts)})</span>')
             lines.append('    </div>')
 
-            # Right: chapter references with paragraph excerpts
-            lines.append('    <div class="entry-right">')
+            # Col 2: state grid (from year_state_map if available, else compact alias list)
+            lines.append('    <div class="entry-states">')
+            state_entries = (year_state_map or {}).get(ce_year, {})
+            if state_entries:
+                lines.append('      <div class="state-grid">')
+                for state in ALL_STATES_ORDER:
+                    if state in state_entries:
+                        ruler, yr = state_entries[state]
+                        yr_cn = int_to_cn(yr) if yr else ''
+                        lines.append(
+                            f'        <div class="state-cell">'
+                            f'<span class="state-label">{html_mod.escape(state)}</span>'
+                            f'<span class="state-year">{html_mod.escape(ruler)}{yr_cn}年</span>'
+                            f'</div>'
+                        )
+                    else:
+                        lines.append('        <div class="state-cell empty"></div>')
+                lines.append('      </div>')
+            else:
+                # Fallback: compute from reign_data
+                fallback_aliases = compute_reign_aliases(reign_data, ce_year) if reign_data else []
+                if not fallback_aliases:
+                    fallback_aliases = sorted(set(r for _, _, _, r in refs))
+                if fallback_aliases:
+                    lines.append(
+                        f'      <span class="alias-list">{html_mod.escape("　".join(fallback_aliases))}</span>'
+                    )
+            lines.append('    </div>')
 
-            # Group refs by chapter
+            # Col 3: text refs + events
+            lines.append('    <div class="entry-refs">')
+
             refs_by_chapter = defaultdict(list)
             for ch_id, para_id, surface, ruler in refs:
                 refs_by_chapter[ch_id].append((para_id, surface, ruler))
@@ -1477,21 +1519,17 @@ def generate_timeline(year_map, reign_data=None, event_year_map=None):
             ref_parts = []
             for ch_id in sorted(refs_by_chapter.keys()):
                 ch_title, ch_stem = chapter_names.get(ch_id, (ch_id, ch_id))
-                ch_name = html_mod.escape(ch_title)
                 ch_refs = refs_by_chapter[ch_id]
-
-                ch_link = f'<a href="../chapters/{ch_stem}.html" class="chapter-ref-name">{ch_name}</a>'
-                para_links = []
-                for para_id, surface, ruler in ch_refs:
-                    para_links.append(
-                        f'<a href="../chapters/{ch_stem}.html#pn-{para_id}" class="para-ref">{para_id}</a>'
-                    )
+                ch_link = f'<a href="../chapters/{ch_stem}.html" class="chapter-ref-name">{html_mod.escape(ch_title)}</a>'
+                para_links = [
+                    f'<a href="../chapters/{ch_stem}.html#pn-{para_id}" class="para-ref">{para_id}</a>'
+                    for para_id, surface, ruler in ch_refs
+                ]
                 ref_parts.append(f'{ch_link} {", ".join(para_links)}')
 
             if ref_parts:
                 lines.append('      <div class="text-refs">' + ' <span class="ref-sep">|</span> '.join(ref_parts) + '</div>')
 
-            # Event list for this year
             events_this_year = by_year_events.get(ce_year, [])
             if events_this_year:
                 lines.append('      <ul class="event-list">')
@@ -1507,7 +1545,6 @@ def generate_timeline(year_map, reign_data=None, event_year_map=None):
                 lines.append('      </ul>')
 
             lines.append('    </div>')
-
             lines.append('  </div>')
 
         lines.append('</div>')
@@ -1610,24 +1647,26 @@ document.addEventListener('DOMContentLoaded', function() {
 def main():
     if '--extract-reigns' in sys.argv:
         # Phase 1 only
-        reign_data = extract_reign_periods()
+        reign_data, year_state_map = extract_reign_periods()
         save_reign_periods(reign_data)
+        save_year_state_map(year_state_map)
         return
 
     # Full pipeline
-    # Phase 1: Extract reign periods
-    reign_data = extract_reign_periods()
+    # Phase 1: Extract reign periods + year_state_map from ten tables
+    reign_data, year_state_map = extract_reign_periods()
     save_reign_periods(reign_data)
+    save_year_state_map(year_state_map)
 
-    # Phase 2: Disambiguate years
+    # Phase 2: Disambiguate years (now has many more rulers to disambiguate with)
     year_map = disambiguate_years(reign_data)
     save_year_map(year_map)
 
     # Phase 3: Load event index years
     event_year_map = load_event_index_years()
 
-    # Phase 4: Generate timeline.html
-    generate_timeline(year_map, reign_data, event_year_map)
+    # Phase 4: Generate timeline.html (pass year_state_map for comprehensive ruler display)
+    generate_timeline(year_map, reign_data, event_year_map, year_state_map)
 
 
 if __name__ == '__main__':

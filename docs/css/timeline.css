@@ -1,14 +1,36 @@
 /* 编年索引页面样式 - timeline.html 专用 */
 
-/* 年份条目左侧需要更宽 */
-.timeline-index .entry-left {
-    flex: 0 0 200px;
+/* ── 三列布局 ── */
+.timeline-index .timeline-entry {
+    display: grid;
+    grid-template-columns: 130px 360px 1fr;
+    grid-template-areas: "year states refs";
+    align-items: start;
+    gap: 0 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0ece4;
+}
+
+/* Col 1: 年份 + 计数 */
+.timeline-index .entry-year {
+    grid-area: year;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 2px;
 }
 
 /* 年份名称用暗青色 */
-.timeline-index .canonical-name.time {
+.timeline-index .entry-year .canonical-name.time {
     color: #008B8B;
     font-style: italic;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+.timeline-index .entry-count {
+    font-size: 0.78em;
+    color: #aaa;
 }
 
 /* 世纪标题用暗青色 */
@@ -17,23 +39,77 @@
     border-left-color: #008B8B;
 }
 
+/* ── Col 2: 诸侯国纪年网格 ── */
+.timeline-index .entry-states {
+    grid-area: states;
+}
+
+.timeline-index .state-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px 4px;
+    font-size: 0.8em;
+    line-height: 1.6;
+}
+
+/* 每个诸侯国单元格 */
+.timeline-index .state-cell {
+    display: flex;
+    gap: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.timeline-index .state-cell.empty {
+    /* placeholder: keeps grid alignment, invisible */
+    visibility: hidden;
+}
+
+/* 国名标签（小灰色） */
+.timeline-index .state-label {
+    color: #aaa;
+    font-size: 0.88em;
+    flex-shrink: 0;
+    min-width: 1em;
+}
+
+/* 君主纪年 */
+.timeline-index .state-year {
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* fallback: 无网格数据时的紧凑别名 */
+.timeline-index .alias-list {
+    font-size: 0.82em;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ── Col 3: 文本引用 + 事件 ── */
+.timeline-index .entry-refs {
+    grid-area: refs;
+    font-size: 0.88em;
+}
+
 /* 文本引用行 */
 .timeline-index .text-refs {
-    margin-bottom: 0.3em;
-    font-size: 0.9em;
+    margin-bottom: 0.25em;
+    color: #444;
 }
 
 /* 事件列表 */
 .timeline-index .event-list {
-    margin: 0.2em 0 0 0;
-    padding-left: 1.2em;
+    margin: 0;
+    padding-left: 1.1em;
     list-style: disc;
-    font-size: 0.9em;
     color: #555;
 }
 
 .timeline-index .event-item {
-    margin: 0.1em 0;
+    margin: 0;
+    line-height: 1.5;
 }
 
 .timeline-index .event-ref {
@@ -46,14 +122,28 @@
 }
 
 .timeline-index .event-id {
-    color: #888;
-    font-size: 0.85em;
-    margin-right: 0.3em;
+    color: #bbb;
+    font-size: 0.82em;
+    margin-right: 0.2em;
 }
 
 .timeline-index .approx-mark {
-    color: #aaa;
+    color: #ccc;
     font-style: italic;
-    margin-right: 0.2em;
+    margin-right: 0.15em;
     cursor: help;
+}
+
+/* ── 响应式：窄屏单列 ── */
+@media (max-width: 900px) {
+    .timeline-index .timeline-entry {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "year"
+            "states"
+            "refs";
+    }
+    .timeline-index .state-grid {
+        grid-template-columns: 1fr;
+    }
 }

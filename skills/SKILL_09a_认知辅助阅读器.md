@@ -196,6 +196,15 @@ bash publish_to_docs.sh
 | `kg/entities/data/disambiguation_map.json` | 消歧映射 |
 | `kg/year_ce_map.json` | 年份→公元纪年映射 |
 
+### 时间轴与可视化（04c 输出的应用层展现）
+
+| 文件 | 说明 | 数据来源 |
+|------|------|---------|
+| `docs/entities/timeline.html` | 编年索引：835年×（十表诸侯纪年+文本引用+事件） | `build_year_map.py` 四阶段输出 |
+| `docs/css/timeline.css` | 时间轴样式 | — |
+| `app/metro/index.html` | 史记事件地铁图 | 04c 事件索引（3185站，横轴=公元纪年，每章一线） |
+| `app/metro/data/metro_map_data.json` | 地铁图数据 | `kg/events/scripts/build_metro_map_data.py` 生成 |
+
 ---
 
 ## 九、上游依赖

@@ -168,11 +168,12 @@
 > 例："皆贤妇人"中若 `〖;妇人〗` 标注有误，正确操作是去掉标注符号还原为"妇人"，而不是删掉"妇人"二字。
 
 1. **应用修正**：将 B/C 中所有修正应用到 `chapter_md/NNN_章名.tagged.md`
-2. **格式验证（必须执行）**：运行 lint，确认无格式错误
+2. **完整性验证（必须执行）**：运行完整性 lint，确认原文字符无损
    ```bash
-   python scripts/lint_markdown.py chapter_md/NNN_*.tagged.md
+   python scripts/lint_text_integrity.py chapter_md/NNN_*.tagged.md
    ```
-   若 lint 报错，修复后再继续。
+   结果须为 `✓ 0处实质差异`。若有实质差异，说明原文字符被意外修改，立即排查修复。
+   （`scripts/lint_markdown.py` 检查标注格式，`lint_text_integrity.py` 检查原文完整性，两者用途不同。）
 3. **写反思报告**：修正统计和特有发现写入 `doc/entities/按章实体反思报告.md`
 4. **写回 SKILL**：D 中的新规律写入 SKILL_03c §三或 SKILL_03a 对应小节
 5. **消歧补录**（可选）：若发现同章多个同名同字人物、省称对应不明确，记录到 `kg/entities/data/disambiguation_map.json`
@@ -184,8 +185,9 @@
 
 | 工具 | 用途 |
 |------|------|
-| `scripts/lint_markdown.py` | 格式语法检查（未闭合/空标注） |
-| `kg/entities/scripts/validate_tagging.py` | 验证标注未改变原文 |
+| `scripts/lint_text_integrity.py` | **原文完整性验证**（实质差异=0 才通过） |
+| `scripts/lint_markdown.py` | 标注格式检查（未闭合/空标注） |
+| `kg/entities/scripts/validate_tagging.py` | 旧式原文验证（已被 lint_text_integrity 替代） |
 | `scripts/apply_reflect_fixes.py` | 批量应用修正JSON |
 | `grep -n '〘' chapter_md/NNN_*.tagged.md` | 扫描旧格式生物标注 |
 

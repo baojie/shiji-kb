@@ -764,18 +764,73 @@
 | 修正错误 | ~400+ 事件 |
 | 新增标注（071-080原无标注） | 161 事件 |
 
-## 参考文件
+## 参考文件与输出产物
+
+### 输入参考
 
 | 文件 | 用途 |
 |------|------|
 | `kg/chronology/data/中国历史大事年表.md` | 交叉验证的ground truth，684个年份条目 |
-| `kg/events/data/NNN_*_事件索引.md` | 130章事件索引文件 |
-| `kg/events/事件时间索引.md` | 全部3185事件的时间索引（Markdown格式） |
+| `kg/chronology/data/史记编年表.md` | 《史记》编年大纲（上古→西汉），本工序的汇总输出，反向用作整体校验 |
+| `kg/entities/data/person_lifespans.json` | 人物生卒年（外部来源），用于无纪年事件的近似定位 |
+
+### 核心数据输出
+
+| 文件 | 说明 |
+|------|------|
+| `kg/events/data/NNN_*_事件索引.md` | 130章事件索引，每条事件含公元纪年标注 |
+| `kg/events/事件时间索引.md` | 全部3185事件的时间索引（Markdown汇总格式） |
+| `kg/chronology/data/史记编年表.md` | 编年大纲：将事件索引按年代重组为传统年表格式 |
+
+### 可视化输出（→ 09 应用层）
+
+| 文件 | 说明 |
+|------|------|
 | `docs/entities/event.html` | 事件时间索引网页（按历史分期分组，含搜索筛选） |
+| `docs/entities/timeline.html` + `docs/css/timeline.css` | 编年索引：每年显示十表诸侯纪年 + 文本引用 + 事件列表 |
+| `app/metro/` | 史记事件地铁图（130章×3185站，横轴为公元纪年） |
 | `kg/entities/scripts/build_entity_index.py` | 生成event.html的脚本（同时生成全部实体索引） |
 | `kg/events/scripts/write_inferred_years.py` | 批量推断年代脚本 |
 | `kg/events/scripts/fix_undated_known_events.py` | 修正已知事件年份 |
 | `kg/events/scripts/batch_fix_collapsed_dates.py` | 批量修正年代推断位置 |
+
+### 编年索引 timeline.html 生成流程
+
+```bash
+python kg/events/scripts/build_year_map.py
+```
+
+完整四阶段管线：
+
+1. **Phase 1 — 解析十表 → reign_periods + year_state_map**
+   - `parse_table_014()`：十二诸侯年表（014），841–425 BCE，14国君主 × 417行
+   - `parse_table_015()`：六国年表（015），475–145 BCE，8国君主 × 331行
+   - `parse_table_022()`：将相名臣年表（022），206 BCE–20 CE，帝号+年号
+   - 核心解析器 `_parse_table_by_rows()`：行号计数法（r1=起始年，逐行-1）
+   - 输出 `kg/chronology/data/reign_periods.json`（~382君主）
+   - 输出 `kg/chronology/data/year_state_map.json`（635年，每年→所有在位君主）
+
+2. **Phase 2 — 年份消歧 → year_ce_map**
+   - 扫描130章 tagged.md 中 `〖%X年〗` 标记
+   - 用 reign_periods 消歧为公元纪年（Mapped: 2127，Unresolved: 134）
+   - 输出 `kg/chronology/data/year_ce_map.json`
+
+3. **Phase 3 — 事件索引年份 → event_year_map**
+   - `load_event_index_years()`：解析130章事件索引 `kg/events/data/`
+   - 提取时间字段的公元纪年（精确/推算/近似/区间）
+   - 输出：3077个带纪年的事件
+
+4. **Phase 4 — 生成 timeline.html**
+   - 合并 year_ce_map + event_year_map（文本引用 + 事件）
+   - 用 year_state_map 为每年显示所有诸侯国君主纪年（>4国则折叠展示）
+   - 总计：835个年份，1956次文本引用，3077个事件
+
+**解析器设计要点**：
+- 十表无 `| 公元前` 列，用**行号计数法**（不是从单元格读年份）
+- r1 = 起始BCE年，每行 -1 年
+- 表格触发：检测含 ≥3 个诸侯国名的 `|` 行
+- 新君主识别：`元年` 或 `RulerNameX年` 格式
+- 续位格式：纯数字（year_num 续计）或空格（inherit）
 
 ## event.html 生成流程
 
