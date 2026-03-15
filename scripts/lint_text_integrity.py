@@ -354,7 +354,11 @@ def main():
         '  替换            — 字符被改写，需核对是字形变体还是错误',
     ]
 
-    out = log_dir / 'lint_text_integrity.txt'
+    if args:
+        suffix = '_' + '_'.join(a.zfill(3) for a in args)
+    else:
+        suffix = ''
+    out = log_dir / f'lint_text_integrity{suffix}.txt'
     out.write_text('\n'.join(lines), encoding='utf-8')
     print(f'\n报告已保存: {out}')
     print(f'汇总: {prob_chapters}/{len(results)} 章有实质差异，共 {total_real} 处')
