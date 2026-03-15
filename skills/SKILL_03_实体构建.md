@@ -8,4 +8,5 @@
 |------|------|------|
 | 03a | SKILL_03a_实体标注.md | 17类实体NER标注（LLM驱动） |
 | 03b | SKILL_03b_实体消歧.md | 同名异人/异名同人消歧 |
-| 03c | SKILL_03c_渲染与发布.md | HTML渲染 + 实体索引 + GitHub Pages发布 |
+| 03c | SKILL_03c_实体标注反思.md | 按章/按类型多轮反思审查 |
+| 03d | SKILL_03d_渲染与发布.md | HTML渲染 + 实体索引 + GitHub Pages发布 |

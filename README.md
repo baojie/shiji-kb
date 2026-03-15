@@ -111,7 +111,8 @@ shiji-kb/
 | 实体 | [03 实体构建](skills/SKILL_03_实体构建.md) | 阶段总览 |
 | | [03a 实体标注](skills/SKILL_03a_实体标注.md) | 18类实体NER（v2.5） |
 | | [03b 实体消歧](skills/SKILL_03b_实体消歧.md) | 4层启发式（3,797人名，644处消歧） |
-| | [03c 渲染与发布](skills/SKILL_03c_渲染与发布.md) | HTML渲染衔接（详见09a） |
+| | [03c 实体标注反思](skills/SKILL_03c_实体标注反思.md) | 按章/按类型多轮反思审查 |
+| | [03d 渲染与发布](skills/SKILL_03d_渲染与发布.md) | HTML渲染衔接（详见09a） |
 | 事件 | [04a 事件识别](skills/SKILL_04a_事件识别.md) | 事件Schema/类型/提取 |
 | | [04b 十表事件处理](skills/SKILL_04b_十表事件处理.md) | 十表专用补充 |
 | | [04c 事件年代推断](skills/SKILL_04c_事件年代推断.md) | 分层纪年解析 |
