@@ -1,6 +1,6 @@
-# SKILL 05a: 渲染与发布 — 从标注文本到可交互HTML
+# SKILL 03c: 渲染与发布 — 标注文本输出为HTML
 
-> 将 `chapter_md/*.tagged.md` 标注文本渲染为带语法高亮的HTML页面，并发布到 GitHub Pages。
+> 将标注完成的 `chapter_md/*.tagged.md` 输出为可发布的HTML。本SKILL仅描述从实体构建阶段到输出的衔接；渲染器、配色、交互等详细设计见 **SKILL 09a 认知辅助阅读器**。
 
 ---
 
@@ -8,7 +8,7 @@
 
 ```
 标注文本 (chapter_md/*.tagged.md)
-    ↓ 渲染（本SKILL）
+    ↓ 渲染（SKILL 09a）
 HTML页面 (docs/chapters/*.html)
     ↓ 发布
 GitHub Pages
@@ -18,52 +18,35 @@ GitHub Pages
 
 ---
 
-## 二、渲染器
-
-### 核心逻辑
-
-`render_shiji_html.py` — 有序正则替换，将Token标记转为HTML span：
-
-```python
-ENTITY_PATTERNS = [
-    (r'\*\*(.+?)\*\*', 'bold'),      # 粗体先于*器物*
-    (r'\^(.+?)\^', 'institution'),
-    ...
-    (r'@(.+?)@', 'person'),           # 人名最后（常作内层）
-]
-```
-
-**处理顺序**：`**粗体**` → 外层标记 → 内层标记 → `@人名@`（最后）
-
-### 段落锚点
-
-段落编号 `[1.1]` 渲染为可点击锚点，生成永久链接 `#pn-1.1`。
-
----
-
-## 三、CSS样式
-
-- **配色**：深沉暗色系，低透明度背景
-- **字体**：思源宋体（Noto Serif SC），行高2.0
-- **对话**：斜体 + 极淡褐色底色 + 虚线边界
-- **表格**：全视口宽度、sticky表头、交替行背景
-
----
-
-## 四、实体索引页
-
-```
-扫描 tagged.md → 正则提取实体 → 别名合并 → 拼音排序 → 生成HTML索引页
-```
-
-每类实体生成独立索引页，条目含出现次数、章节分布、别名列表。
-
----
-
-## 五、发布
+## 二、快速命令
 
 ```bash
-python render_shiji_html.py          # 渲染全部章节
-python generate_all_chapters.py      # 批量生成
-bash publish_to_docs.sh              # 发布到 GitHub Pages
+# 渲染单章
+python render_shiji_html.py chapter_md/001_五帝本纪.tagged.md
+
+# 批量生成全部130章
+python generate_all_chapters.py
+
+# 完整发布流水线（生成 + 路径修复 + lint检查）
+bash publish_to_docs.sh
 ```
+
+---
+
+## 三、质量检查
+
+```bash
+# HTML格式检查
+python scripts/lint_html.py docs/chapters/
+
+# Markdown标注格式检查
+python scripts/lint_markdown.py chapter_md/001_五帝本纪.tagged.md
+```
+
+---
+
+## 四、详细设计
+
+渲染器实现、18类实体配色、段落结构语义化、交互功能、实体索引页、发布流水线等详见：
+
+→ **[SKILL 09a 认知辅助阅读器](SKILL_09a_认知辅助阅读器.md)**
