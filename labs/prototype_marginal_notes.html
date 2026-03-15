@@ -66,6 +66,34 @@
         .artifact { color: #b5835a; }
         .tribe { color: #613583; }
         .biology { color: #2ec27e; font-style: italic; }
+        .concept { color: #7a6a00; }
+        .celestial { color: #5b4fa0; }
+        .timeref { color: #888; font-size: 0.92em; }
+        .action { color: #c05080; }
+
+        /* 句子高亮动画 */
+        @keyframes sentFlash {
+            0%   { background: #ffe066; }
+            100% { background: transparent; }
+        }
+        .sent-highlight {
+            animation: sentFlash 1.8s ease-out forwards;
+            border-radius: 2px;
+        }
+
+        /* 缩进块（::: 围栏） */
+        .block-indent {
+            margin-left: 2em;
+            padding-left: 0.8em;
+            border-left: 2px solid #e0d0b0;
+        }
+
+        /* 赋/赞引文 */
+        p.citation {
+            margin: 4px 0 4px 2em;
+            color: #5a4a3a;
+            font-style: italic;
+        }
 
         /* ── 语义开关控件 ── */
         .toolbar {
@@ -96,6 +124,7 @@
         }
         .toggle-btn:hover { background: #f5ecd0; }
         .toggle-btn.off { background: #f0ece4; color: #999; border-color: #d0d0d0; }
+        .toggle-btn:disabled { background: #f0ece4; color: #ccc; border-color: #e0e0e0; cursor: not-allowed; }
         .toggle-indicator {
             display: inline-block;
             width: 10px; height: 10px;
@@ -103,6 +132,35 @@
             background: #26a269;
         }
         .toggle-btn.off .toggle-indicator { background: #ccc; }
+
+        /* 关闭语法高亮时的样式 */
+        .main-text.highlight-off .person,
+        .main-text.highlight-off .place,
+        .main-text.highlight-off .official,
+        .main-text.highlight-off .clan,
+        .main-text.highlight-off .mythical,
+        .main-text.highlight-off .artifact,
+        .main-text.highlight-off .tribe,
+        .main-text.highlight-off .biology,
+        .main-text.highlight-off .concept,
+        .main-text.highlight-off .celestial,
+        .main-text.highlight-off .timeref,
+        .main-text.highlight-off .action {
+            color: inherit !important;
+            font-style: inherit !important;
+            font-size: inherit !important;
+        }
+        .notes-panel.highlight-off .person,
+        .notes-panel.highlight-off .place,
+        .notes-panel.highlight-off .official,
+        .notes-panel.highlight-off .clan,
+        .notes-panel.highlight-off .mythical,
+        .notes-panel.highlight-off .artifact,
+        .notes-panel.highlight-off .tribe,
+        .notes-panel.highlight-off .biology {
+            color: inherit !important;
+            font-style: inherit !important;
+        }
 
         /* 关闭语义排版时的样式 — 用 !important 确保覆盖 */
         .main-text.semantic-off .causal,
@@ -328,6 +386,76 @@
             font-style: italic;
         }
 
+        /* ── 注释模式切换 ── */
+        .mode-switch {
+            display: inline-flex;
+            border: 1px solid #c0a060;
+            border-radius: 4px;
+            overflow: hidden;
+            font-size: 0.8em;
+            font-family: sans-serif;
+        }
+        .mode-switch button {
+            padding: 4px 10px;
+            background: #fff9e6;
+            border: none;
+            cursor: pointer;
+            color: #999;
+            border-right: 1px solid #c0a060;
+        }
+        .mode-switch button:last-child { border-right: none; }
+        .mode-switch button.active {
+            background: #8B4513;
+            color: #fff;
+        }
+        .mode-switch button:hover:not(.active) { background: #f5ecd0; }
+
+        /* 弹窗模式：隐藏右栏，扩展左栏 */
+        .page.popup-mode {
+            grid-template-columns: 1fr;
+            max-width: 900px;
+        }
+        .page.popup-mode .notes-panel { display: none; }
+        .page.popup-mode .main-text { border-right: none; }
+
+        /* 浮动注释弹窗 */
+        #notePopup {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            max-width: 420px;
+            min-width: 260px;
+            background: #fffdf5;
+            border: 1px solid #c0a060;
+            border-radius: 8px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            padding: 14px 16px 12px;
+            font-size: 0.85em;
+            line-height: 1.7;
+            pointer-events: auto;
+        }
+        #notePopup.visible { display: block; }
+        #notePopup .popup-title {
+            font-size: 0.78em;
+            color: #8B4513;
+            font-weight: bold;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0d0b0;
+            font-family: sans-serif;
+        }
+        #notePopup .popup-close {
+            float: right;
+            cursor: pointer;
+            color: #aaa;
+            font-size: 1.1em;
+            line-height: 1;
+            padding: 0 2px;
+            font-family: sans-serif;
+        }
+        #notePopup .popup-close:hover { color: #8B4513; }
+        #notePopup .note-item { margin: 5px 0; }
+
         /* ── 移动端 ── */
         @media (max-width: 860px) {
             .page {
@@ -357,302 +485,107 @@
                 <span class="toggle-indicator"></span>
                 语义排版
             </button>
-            <button class="toggle-btn off" id="toggleLines" onclick="toggleLines()">
+            <button class="toggle-btn off" id="toggleLines" onclick="toggleLines()" disabled>
                 <span class="toggle-indicator"></span>
                 关系连线
             </button>
+            <button class="toggle-btn" id="toggleHighlight" onclick="toggleHighlight()">
+                <span class="toggle-indicator"></span>
+                语法高亮
+            </button>
+            <span style="flex:1"></span>
+            <div class="mode-switch">
+                <button id="modeSidebar" class="active" onclick="setNoteMode('sidebar')">侧栏</button>
+                <button id="modePopup" onclick="setNoteMode('popup')">弹窗</button>
+            </div>
+        </div>
+
+        <!-- 弹窗容器 -->
+        <div id="notePopup">
+            <div class="popup-title" id="popupTitle">
+                <span class="popup-close" onclick="closePopup()">✕</span>
+                <span id="popupRef"></span>
+            </div>
+            <div id="popupBody"></div>
         </div>
         <svg id="relSvg" class="rel-svg"></svg>
 
-        <h2>黄帝 · 兴起与征讨</h2>
-
-        <p>
-            <a class="para-num" id="pn-1">1</a>
-            <span class="note-anchor" data-note="n1"><span class="person">黄帝</span>者</span>，<span class="note-anchor" data-note="n1b"><span class="clan">少典</span>之子</span>，姓<span class="person">公孙</span>，名曰<span class="person">轩辕</span>。<span class="note-anchor" data-note="n1c">生而<span class="mythical">神灵</span></span>，弱而能言，幼而徇齐，长而敦敏，成而聪明。
-        </p>
-
-        <p>
-            <a class="para-num" id="pn-1.1">1.1</a>
-            <span class="note-anchor" data-note="n1_1a"><span class="clan">神农氏</span>世衰</span>：
-        </p>
-        <div class="causal" style="margin-left:2em;" data-rel-id="c1">
-            <div class="cause" data-rel-id="c1a">诸侯相侵伐，暴虐百姓，而<span class="clan">神农氏</span>弗能征。</div>
-            <div class="effect" data-rel-id="c1b" data-rel-from="c1a" data-rel-type="causal" data-rel-anchor="tail"><span class="person">轩辕</span>乃习用<span class="artifact">干戈</span>，以征不享，诸侯咸来宾从。</div>
-        </div>
-        <div class="causal" style="margin-left:2em;" data-rel-id="c2">
-            <div class="cause" data-rel-id="c2a"><span class="note-anchor" data-note="n1_1b"><span class="person">蚩尤</span>最为暴</span>，莫能伐。<span class="person">炎帝</span>欲侵陵诸侯，</div>
-            <div class="effect" data-rel-id="c2b" data-rel-from="c2a" data-rel-type="causal" data-rel-anchor="tail">诸侯咸归<span class="person">轩辕</span>。</div>
-        </div>
-        <div class="escalation" data-rel-id="e1" data-rel-from="c2b" data-rel-type="escalation" data-rel-anchor="head">
-            <span class="person">轩辕</span>乃修德振兵，治五气，蓺五种，抚万民，度四方，
-        </div>
-        <p style="margin-left:2em;" data-rel-id="e1r" data-rel-from="e1" data-rel-type="sequel" data-rel-anchor="head">
-            教<span class="biology">熊</span><span class="biology">罴</span><span class="biology">貔貅</span><span class="biology">貙</span><span class="biology">虎</span>，以与<span class="person">炎帝</span>战於<span class="note-anchor" data-note="n1_1c"><span class="place">阪泉之野</span></span>。三战，然後得其志。
-        </p>
-
-        <p>
-            <a class="para-num" id="pn-1.2">1.2</a>
-        </p>
-        <div class="causal" style="margin-left:2em;" data-rel-id="c3">
-            <div class="cause" data-rel-id="c3a"><span class="person">蚩尤</span>作乱，不用帝命。</div>
-            <div class="effect" data-rel-id="c3b" data-rel-from="c3a" data-rel-type="causal" data-rel-anchor="tail"><span class="person">黄帝</span>乃徵师诸侯，与<span class="person">蚩尤</span>战於<span class="note-anchor" data-note="n1_2a"><span class="place">涿鹿之野</span></span>，遂禽杀<span class="person">蚩尤</span>。</div>
-        </div>
-
-        <p>
-            <a class="para-num" id="pn-1.3">1.3</a>
-        </p>
-        <div class="summary-line" data-rel-id="s1" data-rel-from="c3b" data-rel-type="summary" data-rel-anchor="head">
-            诸侯咸尊<span class="person">轩辕</span>为<span class="official">天子</span>，代<span class="clan">神农氏</span>，是为<span class="person">黄帝</span>。
-        </div>
-        <p style="margin-left:2em; margin-top:6px;">
-            天下有不顺者，<span class="person">黄帝</span>从而征之，平者去之，披山通道，未尝宁居。
-        </p>
-
-        <h2>疆域与治理</h2>
-
-        <p>
-            <a class="para-num" id="pn-2">2</a>
-        </p>
-        <ul style="margin-left:2em; list-style:none; padding:0;">
-            <li>东至于<span class="place">海</span>，登<span class="place">丸山</span>，及<span class="place">岱宗</span>。</li>
-            <li>西至于<span class="place">空桐</span>，登<span class="place">鸡头</span>。</li>
-            <li>南至于<span class="place">江</span>，登<span class="place">熊</span>、<span class="place">湘</span>。</li>
-            <li>北逐<span class="tribe">荤粥</span>，合符<span class="note-anchor" data-note="n2a"><span class="place">釜山</span></span>，而邑于<span class="note-anchor" data-note="n2b"><span class="place">涿鹿之阿</span></span>。</li>
-        </ul>
-
-        <p>
-            <a class="para-num" id="pn-3">3</a>
-            迁徙往来无常处，以师兵为营卫。官名皆以云命，为<span class="official">云师</span>。置<span class="official">左右大监</span>，监于万国。万国和，而<span class="mythical">鬼神</span><span class="place">山川</span>封禅与为多焉。获<span class="artifact">宝鼎</span>，迎日推筴。举<span class="person">风后</span>、<span class="person">力牧</span>、<span class="person">常先</span>、<span class="person">大鸿</span>以治民。
-        </p>
-
-        <p>
-            <a class="para-num" id="pn-4">4</a>
-            <span class="person">黄帝</span>二十五子，其得姓者十四人。
-        </p>
-
-        <h2>后裔与世系</h2>
-
-        <p>
-            <a class="para-num" id="pn-4.1">4.1</a>
-            <span class="note-anchor" data-note="n4_1"><span class="person">黄帝</span>居<span class="place">轩辕之丘</span></span>，而娶於<span class="place">西陵</span>之女，是为<span class="person">嫘祖</span>。<span class="person">嫘祖</span>为<span class="person">黄帝</span>正妃，生二子，其後皆有天下：
-        </p>
-        <div class="parallel" style="margin-left:2em;">
-            <span class="item">其一曰<span class="person">玄嚣</span>，是为<span class="person">青阳</span>，降居<span class="place">江水</span>；</span>
-            <span class="item">其二曰<span class="person">昌意</span>，降居<span class="place">若水</span>。</span>
-        </div>
-        <p style="margin-left:2em; margin-top:4px;">
-            <span class="person">昌意</span>娶<span class="clan">蜀山氏</span>女，曰<span class="person">昌仆</span>，生<span class="person">高阳</span>，<span class="person">高阳</span>有圣德焉。
-        </p>
-
-        <p>
-            <a class="para-num" id="pn-4.2">4.2</a>
-        </p>
-        <div class="causal" style="margin-left:2em;" data-rel-id="c4">
-            <div class="cause" data-rel-id="c4a"><span class="person">黄帝</span>崩，葬<span class="place">桥山</span>。</div>
-            <div class="effect" data-rel-id="c4b" data-rel-from="c4a" data-rel-type="causal" data-rel-anchor="tail">其孙<span class="person">昌意</span>之子<span class="person">高阳</span>立，是为<span class="person">帝颛顼</span>也。</div>
-        </div>
-
-        <hr style="border:none; border-top:1px solid #e0d8cc; margin:24px 0;">
-
-        <h2>帝颛顼</h2>
-
-        <p>
-            <a class="para-num" id="pn-5">5</a>
-            <span class="note-anchor" data-note="n5"><span class="person">帝颛顼高阳</span>者</span>，<span class="person">黄帝</span>之孙而<span class="person">昌意</span>之子也。静渊以有谋，疏通而知事；养材以任地，载时以象天，依<span class="mythical">鬼神</span>以制义，治气以教化，絜诚以祭祀。
-        </p>
-        <ul style="margin-left:2em; list-style:none; padding:0;">
-            <li>北至于<span class="place">幽陵</span>，</li>
-            <li>南至于<span class="place">交阯</span>，</li>
-            <li>西至于<span class="place">流沙</span>，</li>
-            <li>东至于<span class="place">蟠木</span>。</li>
-        </ul>
-        <div class="summary-line">
-            动静之物，大小之神，日月所照，莫不砥属。
-        </div>
-
-        <p>
-            <a class="para-num" id="pn-6">6</a>
-        </p>
-        <div class="causal" style="margin-left:2em;" data-rel-id="c5">
-            <div class="cause" data-rel-id="c5a"><span class="person">帝颛顼</span>生子曰<span class="person">穷蝉</span>。<span class="person">颛顼</span>崩，</div>
-            <div class="effect" data-rel-id="c5b" data-rel-from="c5a" data-rel-type="causal" data-rel-anchor="tail">而<span class="person">玄嚣</span>之孙<span class="person">高辛</span>立，是为<span class="person">帝喾</span>。</div>
-        </div>
-
-        <hr style="border:none; border-top:1px solid #e0d8cc; margin:24px 0;">
-
-        <h2>帝喾</h2>
-
-        <p>
-            <a class="para-num" id="pn-7">7</a>
-            <span class="person">帝喾高辛</span>者，<span class="person">黄帝</span>之曾孙也。<span class="person">高辛</span>父曰<span class="person">蟜极</span>，<span class="person">蟜极</span>父曰<span class="person">玄嚣</span>，<span class="person">玄嚣</span>父曰<span class="person">黄帝</span>。自<span class="person">玄嚣</span>与<span class="person">蟜极</span>皆不得在位，至<span class="person">高辛</span>即帝位。<span class="person">高辛</span>於<span class="person">颛顼</span>为族子。
-        </p>
-
-        <p>
-            <a class="para-num" id="pn-8">8</a>
-            <span class="person">高辛</span>生而<span class="mythical">神灵</span>，自言其名。普施利物，不於其身。聪以知远，明以察微。顺天之义，知民之急。仁而威，惠而信，脩身而天下服。
-        </p>
-        <ul style="margin-left:2em; list-style:none; padding:0;">
-            <li>取地之财而节用之，</li>
-            <li>抚教万民而利诲之，</li>
-            <li>历日月而迎送之，</li>
-            <li>明<span class="mythical">鬼神</span>而敬事之。</li>
-        </ul>
-        <p style="margin-top:6px;">
-            其色郁郁，其德嶷嶷。其动也时，其服也士。<span class="person">帝喾</span>溉执中而遍天下，日月所照，风雨所至，莫不从服。
-        </p>
-
-        <p>
-            <a class="para-num" id="pn-9">9</a>
-        </p>
-        <div class="causal" style="margin-left:2em;" data-rel-id="c6">
-            <div class="cause" data-rel-id="c6a"><span class="person">帝喾</span>娶<span class="clan">陈锋氏</span>女，生<span class="person">放勋</span>。娶<span class="clan">娵訾氏</span>女，生<span class="person">挚</span>。<span class="person">帝喾</span>崩，而<span class="person">挚</span>代立。</div>
-            <div class="effect" data-rel-id="c6b" data-rel-from="c6a" data-rel-type="causal" data-rel-anchor="tail"><span class="person">帝挚</span>立，不善，而弟<span class="person">放勋</span>立，是为<span class="person">帝尧</span>。</div>
-        </div>
+        <div id="mainContent"></div>
 
     </div>
 
     <!-- ════ 右栏：注释 ════ -->
-    <div class="notes-panel">
-        <h3>三家注</h3>
-
-        <!-- [1] 黄帝者 -->
-        <div class="note-group mixed" id="n1" data-para="1">
-            <div class="note-ref">▸ [1] 黄帝者</div>
-            <div class="note-item">
-                <span class="badge badge-jijie">集解</span>
-                <span class="note-text"><span class="person">徐廣</span>曰：「號<span class="place">有熊</span>。」</span>
-            </div>
-            <div class="note-item">
-                <span class="badge badge-suoyin">索隱</span>
-                <span class="note-text">案：有土德之瑞，土色黃，故稱<span class="person">黃帝</span>，猶<span class="person">神農</span>以火德王而稱<span class="person">炎帝</span>然也。此以<span class="person">黃帝</span>為五帝之首，蓋依<span class="book-title">《大戴禮》</span><span class="book-title">《五帝德》</span>。</span>
-            </div>
-            <div class="note-item">
-                <span class="badge badge-zhengyi">正義</span>
-                <span class="note-text"><span class="book-title">《輿地志》</span>云：「<span class="place">涿鹿</span>本名<span class="place">彭城</span>，<span class="person">黃帝</span>初都，遷<span class="place">有熊</span>也。」案：<span class="person">黃帝</span><span class="place">有熊</span>國君，乃<span class="person">少典</span>國君之次子也。</span>
-            </div>
-        </div>
-
-        <!-- [1] 少典之子 -->
-        <div class="note-group mixed" id="n1b" data-para="1">
-            <div class="note-ref">▸ [1] 少典之子</div>
-            <div class="note-item">
-                <span class="badge badge-jijie">集解</span>
-                <span class="note-text"><span class="person">譙周</span>曰：「<span class="place">有熊</span>國君，<span class="person">少典</span>之子也。」<span class="person">皇甫謐</span>曰：「<span class="place">有熊</span>，今<span class="place">河南新鄭</span>是也。」</span>
-            </div>
-            <div class="note-item">
-                <span class="badge badge-suoyin">索隱</span>
-                <span class="note-text"><span class="person">少典</span>者，諸侯國號，非人名也。又案：<span class="book-title">《國語》</span>云「<span class="person">少典</span>娶<span class="clan">有蟜氏</span>女，生<span class="person">黃帝</span>、<span class="person">炎帝</span>」。然則<span class="person">炎帝</span>亦<span class="person">少典</span>之子。<span class="person">炎</span><span class="person">黃</span>二帝雖則相承，如<span class="book-title">《帝王代紀》</span>中間凡隔八帝，五百餘年。</span>
-            </div>
-        </div>
-
-        <!-- [1] 生而神灵 -->
-        <div class="note-group suoyin" id="n1c" data-para="1">
-            <div class="note-ref">▸ [1] 生而神靈</div>
-            <div class="note-item">
-                <span class="badge badge-suoyin">索隱</span>
-                <span class="note-text">蓋未合能言之時而<span class="person">黃帝</span>即言，言盖稱其年幼而疾速也。所以為神異也。</span>
-            </div>
-        </div>
-
-        <!-- [1.1] 神农氏世衰 -->
-        <div class="note-group zhengyi" id="n1_1a" data-para="1.1">
-            <div class="note-ref">▸ [1.1] 神農氏世衰</div>
-            <div class="note-item">
-                <span class="badge badge-zhengyi">正義</span>
-                <span class="note-text"><span class="clan">神農氏</span>末世，即<span class="person">炎帝榆罔</span>之時也。</span>
-            </div>
-        </div>
-
-        <!-- [1.1] 蚩尤最为暴 -->
-        <div class="note-group jijie" id="n1_1b" data-para="1.1">
-            <div class="note-ref">▸ [1.1] 蚩尤最為暴</div>
-            <div class="note-item">
-                <span class="badge badge-jijie">集解</span>
-                <span class="note-text"><span class="person">應劭</span>曰：「<span class="person">蚩尤</span>，古天子。」</span>
-            </div>
-            <div class="note-item">
-                <span class="badge badge-suoyin">索隱</span>
-                <span class="note-text">案：<span class="person">蚩尤</span>姜姓，<span class="person">炎帝</span>之裔也。</span>
-            </div>
-        </div>
-
-        <!-- [1.1] 阪泉之野 -->
-        <div class="note-group zhengyi" id="n1_1c" data-para="1.1">
-            <div class="note-ref">▸ [1.1] 阪泉之野</div>
-            <div class="note-item">
-                <span class="badge badge-zhengyi">正義</span>
-                <span class="note-text"><span class="place">阪泉</span>，今<span class="place">媯州懷戎縣</span>阪泉鄉也。<span class="book-title">《括地志》</span>云：「<span class="place">阪泉</span>，今名<span class="place">黃帝泉</span>，在<span class="place">媯州懷戎縣</span>東五十六里。出五里至<span class="place">涿鹿</span>東北與<span class="place">涿水</span>合。」</span>
-            </div>
-        </div>
-
-        <!-- [1.2] 涿鹿之野 -->
-        <div class="note-group mixed" id="n1_2a" data-para="1.2">
-            <div class="note-ref">▸ [1.2] 涿鹿之野</div>
-            <div class="note-item">
-                <span class="badge badge-jijie">集解</span>
-                <span class="note-text"><span class="person">服虔</span>曰：「<span class="place">涿鹿</span>，山名，在<span class="place">涿郡</span>。」</span>
-            </div>
-            <div class="note-item">
-                <span class="badge badge-zhengyi">正義</span>
-                <span class="note-text"><span class="book-title">《括地志》</span>云：「<span class="place">涿鹿故城</span>在<span class="place">媯州懷戎縣</span>西南三十餘里，本<span class="person">黃帝</span>所都也。」</span>
-            </div>
-        </div>
-
-        <!-- [2] 釜山 -->
-        <div class="note-group zhengyi" id="n2a" data-para="2">
-            <div class="note-ref">▸ [2] 釜山</div>
-            <div class="note-item">
-                <span class="badge badge-zhengyi">正義</span>
-                <span class="note-text"><span class="book-title">《括地志》</span>云：「<span class="place">釜山</span>在<span class="place">媯州懷戎縣</span>北三里。」</span>
-            </div>
-        </div>
-
-        <!-- [2] 涿鹿之阿 -->
-        <div class="note-group suoyin" id="n2b" data-para="2">
-            <div class="note-ref">▸ [2] 涿鹿之阿</div>
-            <div class="note-item">
-                <span class="badge badge-suoyin">索隱</span>
-                <span class="note-text">阿者，曲阜也。<span class="place">涿鹿</span>之山有阿谷，可以隱居。</span>
-            </div>
-        </div>
-
-        <!-- [4.1] 黄帝居轩辕之丘 -->
-        <div class="note-group zhengyi" id="n4_1" data-para="4.1">
-            <div class="note-ref">▸ [4.1] 黄帝居轩辕之丘</div>
-            <div class="note-item">
-                <span class="badge badge-zhengyi">正義</span>
-                <span class="note-text"><span class="person">皇甫謐</span>云：「居<span class="place">轩辕之丘</span>，因以為名，又以為號。」在<span class="place">上邽城</span>東七十里<span class="place">軒轅谷</span>。</span>
-            </div>
-        </div>
-
-        <!-- [5] 帝颛顼高阳者 -->
-        <div class="note-group mixed" id="n5" data-para="5">
-            <div class="note-ref">▸ [5] 帝顓頊高陽者</div>
-            <div class="note-item">
-                <span class="badge badge-jijie">集解</span>
-                <span class="note-text"><span class="person">韋昭</span>曰：「<span class="place">高陽</span>，所興之地。」</span>
-            </div>
-            <div class="note-item">
-                <span class="badge badge-suoyin">索隱</span>
-                <span class="note-text"><span class="person">宋衷</span>曰：「顓頊名。<span class="place">高陽</span>，所居地名。」</span>
-            </div>
-            <div class="note-item">
-                <span class="badge badge-zhengyi">正義</span>
-                <span class="note-text"><span class="person">顓頊</span>都<span class="place">帝丘</span>，今<span class="place">濮州濮陽縣</span>。<span class="book-title">《帝王世紀》</span>云：「在位七十八年，年九十八。」</span>
-            </div>
-        </div>
-
-    </div>
+    <div class="notes-panel" id="notesPanel"></div>
 </div>
-
 <script>
+let noteMode = 'sidebar';
+
+function setNoteMode(mode) {
+    noteMode = mode;
+    document.querySelector('.page').classList.toggle('popup-mode', mode === 'popup');
+    document.getElementById('modeSidebar').classList.toggle('active', mode === 'sidebar');
+    document.getElementById('modePopup').classList.toggle('active', mode === 'popup');
+    closePopup();
+    clearActive();
+    if (document.getElementById('relSvg').classList.contains('visible')) drawLines();
+}
+
+function closePopup() {
+    document.getElementById('notePopup').classList.remove('visible');
+    document.querySelectorAll('.note-anchor.active').forEach(a => a.classList.remove('active'));
+}
+
+function showPopup(anchor, noteEl) {
+    cancelPopupClose();
+    const popup = document.getElementById('notePopup');
+    const ref = noteEl.querySelector('.note-ref');
+    document.getElementById('popupRef').textContent = ref ? ref.textContent : '';
+
+    // 克隆注释内容（去掉 note-ref 行）
+    const body = document.getElementById('popupBody');
+    body.innerHTML = '';
+    noteEl.querySelectorAll('.note-item').forEach(item => {
+        body.appendChild(item.cloneNode(true));
+    });
+
+    // 先加 visible 以便量尺寸，再定位
+    const ar = anchor.getBoundingClientRect();
+    popup.classList.add('visible');
+    const pw = popup.offsetWidth || 320;
+    const ph = popup.offsetHeight || 120;
+    let left = ar.right + 8;
+    let top = ar.bottom + 4;
+    if (left + pw > window.innerWidth - 12) left = ar.left - pw - 8;
+    if (top + ph > window.innerHeight - 12) top = Math.max(8, ar.top - ph - 4);
+    popup.style.left = Math.max(8, left) + 'px';
+    popup.style.top = top + 'px';
+}
+
 // 语义排版开关
 function toggleSemantic() {
     const btn = document.getElementById('toggleSemantic');
+    const linesBtn = document.getElementById('toggleLines');
     const main = document.querySelector('.main-text');
     const isOff = main.classList.toggle('semantic-off');
     btn.classList.toggle('off', isOff);
-    if (document.getElementById('relSvg').classList.contains('visible')) drawLines();
+    // 语义排版关闭时，禁用关系连线并自动关闭
+    linesBtn.disabled = isOff;
+    if (isOff) {
+        document.getElementById('relSvg').classList.remove('visible');
+        linesBtn.classList.add('off');
+    } else {
+        if (document.getElementById('relSvg').classList.contains('visible')) drawLines();
+    }
+}
+
+// 语法高亮开关
+function toggleHighlight() {
+    const btn = document.getElementById('toggleHighlight');
+    const main = document.querySelector('.main-text');
+    const notes = document.querySelector('.notes-panel');
+    const isOff = main.classList.toggle('highlight-off');
+    notes.classList.toggle('highlight-off', isOff);
+    btn.classList.toggle('off', isOff);
 }
 
 // 关系连线开关
@@ -893,80 +826,325 @@ function activatePair(anchor, noteEl) {
 // 锁定状态（click后锁定，不随mouseleave消失）
 let locked = false;
 
-// 左侧锚点：hover预览 + click锁定
-document.querySelectorAll('.note-anchor').forEach(anchor => {
-    anchor.addEventListener('mouseenter', () => {
-        if (locked) return;
-        const noteEl = document.getElementById(anchor.dataset.note);
-        if (!noteEl) return;
-        activatePair(anchor, noteEl);
-        noteEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // 滚动结束后重绘连线
-        setTimeout(() => { if (!locked) drawConnLine(anchor, noteEl); }, 350);
-    });
-
-    anchor.addEventListener('mouseleave', () => {
-        if (locked) return;
-        clearActive();
-    });
-
-    anchor.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const noteEl = document.getElementById(anchor.dataset.note);
-        if (!noteEl) return;
-        locked = true;
-        activatePair(anchor, noteEl);
-        noteEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setTimeout(() => drawConnLine(anchor, noteEl), 350);
-    });
-});
-
-// 右侧注释：hover预览 + click锁定
-document.querySelectorAll('.note-group').forEach(note => {
-    note.addEventListener('mouseenter', () => {
-        if (locked) return;
-        const anchor = document.querySelector(`.note-anchor[data-note="${note.id}"]`);
-        if (!anchor) return;
-        activatePair(anchor, note);
-    });
-
-    note.addEventListener('mouseleave', () => {
-        if (locked) return;
-        clearActive();
-    });
-
-    note.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const anchor = document.querySelector(`.note-anchor[data-note="${note.id}"]`);
-        if (!anchor) return;
-        locked = true;
-        activatePair(anchor, note);
-        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(() => drawConnLine(anchor, note), 350);
-    });
-});
-
-// 任何滚动时重绘锁定的连线
-let scrollTimer;
-function onScroll() {
-    if (!locked) return;
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(() => {
-        const activeAnchor = document.querySelector('.note-anchor.active');
-        const activeNote = document.querySelector('.note-group.active');
-        if (activeAnchor && activeNote) drawConnLine(activeAnchor, activeNote);
-    }, 50);
+// 弹窗自动关闭计时器
+let popupCloseTimer = null;
+function schedulePopupClose() {
+    cancelPopupClose();
+    popupCloseTimer = setTimeout(() => closePopup(), 2000);
 }
-document.querySelector('.notes-panel').addEventListener('scroll', onScroll);
+function cancelPopupClose() {
+    if (popupCloseTimer) { clearTimeout(popupCloseTimer); popupCloseTimer = null; }
+}
+
+// 弹窗：鼠标进入取消关闭，离开重新计时
+document.getElementById('notePopup').addEventListener('mouseenter', cancelPopupClose);
+document.getElementById('notePopup').addEventListener('mouseleave', schedulePopupClose);
+
+
+function bindNoteInteractions() {
+    // 左侧锚点：hover预览 + click锁定
+    document.querySelectorAll('.note-anchor').forEach(anchor => {
+        anchor.addEventListener('mouseenter', () => {
+            if (noteMode === 'popup') {
+                const noteEl = document.getElementById(anchor.dataset.note);
+                if (!noteEl) return;
+                showPopup(anchor, noteEl);
+                anchor.classList.add('active');
+                return;
+            }
+            if (locked) return;
+            const noteEl = document.getElementById(anchor.dataset.note);
+            if (!noteEl) return;
+            activatePair(anchor, noteEl);
+            noteEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => { if (!locked) drawConnLine(anchor, noteEl); }, 350);
+        });
+
+        anchor.addEventListener('mouseleave', () => {
+            if (noteMode === 'popup') { schedulePopupClose(); return; }
+            if (locked) return;
+            clearActive();
+        });
+
+        anchor.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const noteEl = document.getElementById(anchor.dataset.note);
+            if (!noteEl) return;
+            if (noteMode === 'popup') {
+                showPopup(anchor, noteEl);
+                document.querySelectorAll('.note-anchor.active').forEach(a => a.classList.remove('active'));
+                anchor.classList.add('active');
+                return;
+            }
+            locked = true;
+            activatePair(anchor, noteEl);
+            noteEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => drawConnLine(anchor, noteEl), 350);
+        });
+    });
+
+    // 右侧注释：hover预览 + click锁定
+    document.querySelectorAll('.note-group').forEach(note => {
+        note.addEventListener('mouseenter', () => {
+            if (locked) return;
+            const anchor = document.querySelector(`.note-anchor[data-note="${note.id}"]`);
+            if (!anchor) return;
+            activatePair(anchor, note);
+        });
+
+        note.addEventListener('mouseleave', () => {
+            if (locked) return;
+            clearActive();
+        });
+
+        note.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const anchor = document.querySelector(`.note-anchor[data-note="${note.id}"]`);
+            // 优先用 sentence_id 跳转
+            const sid = note.dataset.sid;
+            if (anchor) {
+                locked = true;
+                activatePair(anchor, note);
+                anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => drawConnLine(anchor, note), 350);
+            } else if (sid) {
+                // 没有精确锚点时，跳到对应句子
+                note.classList.add('active');
+                scrollToSentence(sid);
+            }
+        });
+    });
+
+    // 任何滚动时重绘锁定的连线
+    let scrollTimer;
+    function onScroll() {
+        if (!locked) return;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+            const activeAnchor = document.querySelector('.note-anchor.active');
+            const activeNote = document.querySelector('.note-group.active');
+            if (activeAnchor && activeNote) drawConnLine(activeAnchor, activeNote);
+        }, 50);
+    }
+    document.querySelector('.notes-panel').addEventListener('scroll', onScroll);
+}
+
 window.addEventListener('scroll', onScroll);
 
 // 点击空白区域解除锁定并清除
 document.addEventListener('click', (e) => {
+    if (noteMode === 'popup') {
+        if (!e.target.closest('.note-anchor') && !e.target.closest('#notePopup')) {
+            closePopup();
+            document.querySelectorAll('.note-anchor.active').forEach(a => a.classList.remove('active'));
+        }
+        return;
+    }
     if (!e.target.closest('.note-anchor') && !e.target.closest('.note-group')) {
         locked = false;
         clearActive();
     }
 });
+</script>
+<script>
+// ── 内联数据 ──
+const SENTENCES = {"chapter": "001_五帝本纪", "sentences": [{"id": "s001", "text": "黄帝者，少典之子，姓公孙，名曰轩辕。"}, {"id": "s002", "text": "生而神灵，弱而能言，幼而徇齐，长而敦敏，成而聪明。"}, {"id": "s003", "text": "轩辕之时，神农氏世衰。"}, {"id": "s004", "text": "诸侯相侵伐，暴虐百姓，而神农氏弗能征。"}, {"id": "s005", "text": "於是轩辕乃习用干戈，以征不享，诸侯咸来宾从。"}, {"id": "s006", "text": "而蚩尤最为暴，莫能伐。"}, {"id": "s007", "text": "炎帝欲侵陵诸侯，诸侯咸归轩辕。"}, {"id": "s008", "text": "轩辕乃修德振兵，治五气，蓺五种，抚万民，度四方，教熊罴貔貅貙虎，以与炎帝战於阪泉之野。"}, {"id": "s009", "text": "三战，然後得其志。"}, {"id": "s010", "text": "蚩尤作乱，不用帝命。"}, {"id": "s011", "text": "於是黄帝乃徵师诸侯，与蚩尤战於涿鹿之野，遂禽杀蚩尤。"}, {"id": "s012", "text": "而诸侯咸尊轩辕为天子，代神农氏，是为黄帝。"}, {"id": "s013", "text": "天下有不顺者，黄帝从而征之，平者去之，披山通道，未尝宁居。"}, {"id": "s014", "text": "东至于海，登丸山，及岱宗。"}, {"id": "s015", "text": "西至于空桐，登鸡头。"}, {"id": "s016", "text": "南至于江，登熊、湘。"}, {"id": "s017", "text": "北逐荤粥，合符釜山，而邑于涿鹿之阿。"}, {"id": "s018", "text": "迁徙往来无常处，以师兵为营卫。"}, {"id": "s019", "text": "官名皆以云命，为云师。"}, {"id": "s020", "text": "置左右大监，监于万国。"}, {"id": "s021", "text": "万国和，而鬼神山川封禅与为多焉。"}, {"id": "s022", "text": "获宝鼎，迎日推筴。"}, {"id": "s023", "text": "举风后、力牧、常先、大鸿以治民。"}, {"id": "s024", "text": "顺天地之纪，幽明之占，死生之说，存亡之难。"}, {"id": "s025", "text": "时播百穀草木，淳化鸟兽蟲蛾，旁罗日月星辰水波土石金玉，劳勤心力耳目，节用水火材物。"}, {"id": "s026", "text": "有土德之瑞，故号黄帝。"}, {"id": "s027", "text": "黄帝二十五子，其得姓者十四人。"}, {"id": "s028", "text": "黄帝居轩辕之丘，而娶於西陵之女，是为嫘祖。"}, {"id": "s029", "text": "嫘祖为黄帝正妃，生二子，其後皆有天下：其一曰玄嚣，是为青阳，青阳降居江水；其二曰昌意，降居若水。"}, {"id": "s030", "text": "昌意娶蜀山氏女，曰昌仆，生高阳，高阳有圣德焉。"}, {"id": "s031", "text": "黄帝崩，葬桥山。"}, {"id": "s032", "text": "其孙昌意之子高阳立，是为帝颛顼也。"}, {"id": "s033", "text": "帝颛顼高阳者，黄帝之孙而昌意之子也。"}, {"id": "s034", "text": "静渊以有谋，疏通而知事；养材以任地，载时以象天，依鬼神以制义，治气以教化，絜诚以祭祀。"}, {"id": "s035", "text": "北至于幽陵，南至于交阯，西至于流沙，东至于蟠木。"}, {"id": "s036", "text": "动静之物，大小之神，日月所照，莫不砥属。"}, {"id": "s037", "text": "帝颛顼生子曰穷蝉。"}, {"id": "s038", "text": "颛顼崩，而玄嚣之孙高辛立，是为帝喾。"}, {"id": "s039", "text": "帝喾高辛者，黄帝之曾孙也。"}, {"id": "s040", "text": "高辛父曰蟜极，蟜极父曰玄嚣，玄嚣父曰黄帝。"}, {"id": "s041", "text": "自玄嚣与蟜极皆不得在位，至高辛即帝位。"}, {"id": "s042", "text": "高辛於颛顼为族子。"}, {"id": "s043", "text": "高辛生而神灵，自言其名。"}, {"id": "s044", "text": "普施利物，不於其身。"}, {"id": "s045", "text": "聪以知远，明以察微。"}, {"id": "s046", "text": "顺天之义，知民之急。"}, {"id": "s047", "text": "仁而威，惠而信，脩身而天下服。"}, {"id": "s048", "text": "取地之财而节用之，抚教万民而利诲之，历日月而迎送之，明鬼神而敬事之。"}, {"id": "s049", "text": "其色郁郁，其德嶷嶷。"}, {"id": "s050", "text": "其动也时，其服也士。"}, {"id": "s051", "text": "帝喾溉执中而遍天下，日月所照，风雨所至，莫不从服。"}, {"id": "s052", "text": "帝喾娶陈锋氏女，生放勋。"}, {"id": "s053", "text": "娶娵訾氏女，生挚。"}, {"id": "s054", "text": "帝喾崩，而挚代立。"}, {"id": "s055", "text": "帝挚立，不善，而弟放勋立，是为帝尧。"}, {"id": "s056", "text": "帝尧者，放勋。"}, {"id": "s057", "text": "其仁如天，其知如神。"}, {"id": "s058", "text": "就之如日，望之如云。"}, {"id": "s059", "text": "富而不骄，贵而不舒。"}, {"id": "s060", "text": "黄收纯衣，彤车乘白马。"}, {"id": "s061", "text": "能明驯德，以亲九族。"}, {"id": "s062", "text": "九族既睦，便章百姓。"}, {"id": "s063", "text": "百姓昭明，合和万国。"}, {"id": "s064", "text": "乃命羲、和，敬顺昊天，数法日月星辰，敬授民时。"}, {"id": "s065", "text": "分命羲仲，居郁夷，曰旸谷。"}, {"id": "s066", "text": "敬道日出，便程东作。"}, {"id": "s067", "text": "日中，星鸟，以殷中春。"}, {"id": "s068", "text": "其民析，鸟兽字微。"}, {"id": "s069", "text": "申命羲叔，居南交。"}, {"id": "s070", "text": "便程南为，敬致。"}, {"id": "s071", "text": "日永，星火，以正中夏。"}, {"id": "s072", "text": "其民因，鸟兽希革。"}, {"id": "s073", "text": "申命和仲，居西土，曰昧谷。"}, {"id": "s074", "text": "敬道日入，便程西成。"}, {"id": "s075", "text": "夜中，星虚，以正中秋。"}, {"id": "s076", "text": "其民夷易，鸟兽毛毨。"}, {"id": "s077", "text": "申命和叔；居北方，曰幽都。"}, {"id": "s078", "text": "便在伏物。"}, {"id": "s079", "text": "日短，星昴，以正中冬。"}, {"id": "s080", "text": "其民燠，鸟兽氄毛。"}, {"id": "s081", "text": "岁三百六十六日，以闰月正四时。"}, {"id": "s082", "text": "信饬百官，众功皆兴。"}, {"id": "s083", "text": "尧曰：“谁可顺此事？"}, {"id": "s084", "text": "”放齐曰：“嗣子丹硃开明。"}, {"id": "s085", "text": "”尧曰：“吁！"}, {"id": "s086", "text": "顽凶，不用。"}, {"id": "s087", "text": "”尧又曰：“谁可者？"}, {"id": "s088", "text": "”讙兜曰：“共工旁聚布功，可用。"}, {"id": "s089", "text": "”尧曰：“共工善言，其用僻，似恭漫天，不可。"}, {"id": "s090", "text": "”尧又曰：“嗟，四岳，汤汤洪水滔天，浩浩怀山襄陵，下民其忧，有能使治者？"}, {"id": "s091", "text": "”皆曰鲧可。"}, {"id": "s092", "text": "尧曰：“鲧负命毁族，不可。"}, {"id": "s093", "text": "”岳曰：“异哉，试不可用而已。"}, {"id": "s094", "text": "”尧於是听岳用鲧。"}, {"id": "s095", "text": "九岁，功用不成。"}, {"id": "s096", "text": "尧曰：“嗟！"}, {"id": "s097", "text": "四岳：朕在位七十载，汝能庸命，践朕位？"}, {"id": "s098", "text": "”岳应曰：“鄙德忝帝位。"}, {"id": "s099", "text": "”尧曰：“悉举贵戚及疏远隐匿者。"}, {"id": "s100", "text": "”众皆言於尧曰：“有矜在民间，曰虞舜。"}, {"id": "s101", "text": "”尧曰：“然，朕闻之。"}, {"id": "s102", "text": "其何如？"}, {"id": "s103", "text": "”岳曰：“盲者子。"}, {"id": "s104", "text": "父顽，母嚚，弟傲，能和以孝，烝烝治，不至奸。"}, {"id": "s105", "text": "”尧曰：“吾其试哉。"}, {"id": "s106", "text": "”於是尧妻之二女，观其德於二女。"}, {"id": "s107", "text": "舜饬下二女於妫汭，如妇礼。"}, {"id": "s108", "text": "尧善之，乃使舜慎和五典，五典能从。"}, {"id": "s109", "text": "乃遍入百官，百官时序。"}, {"id": "s110", "text": "宾於四门，四门穆穆，诸侯远方宾客皆敬。"}, {"id": "s111", "text": "尧使舜入山林川泽，暴风雷雨，舜行不迷。"}, {"id": "s112", "text": "尧以为圣，召舜曰：“女谋事至而言可绩，三年矣。"}, {"id": "s113", "text": "女登帝位。"}, {"id": "s114", "text": "”舜让於德不怿。"}, {"id": "s115", "text": "正月上日，舜受终於文祖。"}, {"id": "s116", "text": "文祖者，尧大祖也。"}, {"id": "s117", "text": "於是帝尧老，命舜摄行天子之政，以观天命。"}, {"id": "s118", "text": "舜乃在璿玑玉衡，以齐七政。"}, {"id": "s119", "text": "遂类于上帝，禋于六宗，望于山川，辩于群神。"}, {"id": "s120", "text": "揖五瑞，择吉月日，见四岳诸牧，班瑞。"}, {"id": "s121", "text": "岁二月，东巡狩，至於岱宗，祡，望秩於山川。"}, {"id": "s122", "text": "遂见东方君长，合时月正日，同律度量衡，脩五礼五玉三帛二生一死为挚，如五器，卒乃复。"}, {"id": "s123", "text": "五月，南巡狩；八月，西巡狩；十一月，北巡狩：皆如初。"}, {"id": "s124", "text": "归，至于祖祢庙，用特牛礼。"}, {"id": "s125", "text": "五岁一巡狩，群后四朝。"}, {"id": "s126", "text": "遍告以言，明试以功，车服以庸。"}, {"id": "s127", "text": "肇十有二州，决川。"}, {"id": "s128", "text": "象以典刑，流宥五刑，鞭作官刑，扑作教刑，金作赎刑。"}, {"id": "s129", "text": "眚灾过，赦；怙终贼，刑。"}, {"id": "s130", "text": "钦哉，钦哉，惟刑之静哉！"}, {"id": "s131", "text": "讙兜进言共工，尧曰不可而试之工师，共工果淫辟。"}, {"id": "s132", "text": "四岳举鲧治鸿水，尧以为不可，岳彊请试之，试之而无功，故百姓不便。"}, {"id": "s133", "text": "三苗在江淮、荆州数为乱。"}, {"id": "s134", "text": "於是舜归而言於帝，请流共工於幽陵，以变北狄；放驩兜於崇山，以变南蛮；迁三苗於三危，以变西戎；殛鲧於羽山，以变东夷：四罪而天下咸服。"}, {"id": "s135", "text": "尧立七十年得舜，二十年而老，令舜摄行天子之政，荐之於天。"}, {"id": "s136", "text": "尧辟位凡二十八年而崩。"}, {"id": "s137", "text": "百姓悲哀，如丧父母。"}, {"id": "s138", "text": "三年，四方莫举乐，以思尧。"}, {"id": "s139", "text": "尧知子丹硃之不肖，不足授天下，於是乃权授舜。"}, {"id": "s140", "text": "授舜，则天下得其利而丹硃病；授丹硃，则天下病而丹硃得其利。"}, {"id": "s141", "text": "尧曰“终不以天下之病而利一人”，而卒授舜以天下。"}, {"id": "s142", "text": "尧崩，三年之丧毕，舜让辟丹硃於南河之南。"}, {"id": "s143", "text": "诸侯朝觐者不之丹硃而之舜，狱讼者不之丹硃而之舜，讴歌者不讴歌丹硃而讴歌舜。"}, {"id": "s144", "text": "舜曰“天也”，夫而後之中国践天子位焉，是为帝舜。"}, {"id": "s145", "text": "虞舜者，名曰重华。"}, {"id": "s146", "text": "重华父曰瞽叟，瞽叟父曰桥牛，桥牛父曰句望，句望父曰敬康，敬康父曰穷蝉，穷蝉父曰帝颛顼，颛顼父曰昌意：以至舜七世矣。"}, {"id": "s147", "text": "自从穷蝉以至帝舜，皆微为庶人。"}, {"id": "s148", "text": "舜父瞽叟盲，而舜母死，瞽叟更娶妻而生象，象傲。"}, {"id": "s149", "text": "瞽叟爱後妻子，常欲杀舜，舜避逃；及有小过，则受罪。"}, {"id": "s150", "text": "顺事父及後母与弟，日以笃谨，匪有解。"}, {"id": "s151", "text": "舜，冀州之人也。"}, {"id": "s152", "text": "舜耕历山，渔雷泽，陶河滨，作什器於寿丘，就时於负夏。"}, {"id": "s153", "text": "舜父瞽叟顽，母嚚，弟象傲，皆欲杀舜。"}, {"id": "s154", "text": "舜顺適不失子道，兄弟孝慈。"}, {"id": "s155", "text": "欲杀，不可得；即求，尝在侧。"}, {"id": "s156", "text": "舜年二十以孝闻。"}, {"id": "s157", "text": "三十而帝尧问可用者，四岳咸荐虞舜，曰可。"}, {"id": "s158", "text": "於是尧乃以二女妻舜以观其内，使九男与处以观其外。"}, {"id": "s159", "text": "舜居妫汭，内行弥谨。"}, {"id": "s160", "text": "尧二女不敢以贵骄事舜亲戚，甚有妇道。"}, {"id": "s161", "text": "尧九男皆益笃。"}, {"id": "s162", "text": "舜耕历山，历山之人皆让畔；渔雷泽，雷泽上人皆让居；陶河滨，河滨器皆不苦窳。"}, {"id": "s163", "text": "一年而所居成聚，二年成邑，三年成都。"}, {"id": "s164", "text": "尧乃赐舜絺衣，与琴，为筑仓廪，予牛羊。"}, {"id": "s165", "text": "瞽叟尚复欲杀之，使舜上涂廪，瞽叟从下纵火焚廪。"}, {"id": "s166", "text": "舜乃以两笠自扞而下，去，得不死。"}, {"id": "s167", "text": "後瞽叟又使舜穿井，舜穿井为匿空旁出。"}, {"id": "s168", "text": "舜既入深，瞽叟与象共下土实井，舜从匿空出，去。"}, {"id": "s169", "text": "瞽叟、象喜，以舜为已死。"}, {"id": "s170", "text": "象曰“本谋者象。"}, {"id": "s171", "text": "”象与其父母分，於是曰：“舜妻尧二女，与琴，象取之。"}, {"id": "s172", "text": "牛羊仓廪予父母。"}, {"id": "s173", "text": "”象乃止舜宫居，鼓其琴。"}, {"id": "s174", "text": "舜往见之。"}, {"id": "s175", "text": "象鄂不怿，曰：“我思舜正郁陶！"}, {"id": "s176", "text": "”舜曰：“然，尔其庶矣！"}, {"id": "s177", "text": "”舜复事瞽叟爱弟弥谨。"}, {"id": "s178", "text": "於是尧乃试舜五典百官，皆治。"}, {"id": "s179", "text": "昔高阳氏有才子八人，世得其利，谓之“八恺”。"}, {"id": "s180", "text": "高辛氏有才子八人，世谓之“八元”。"}, {"id": "s181", "text": "此十六族者，世济其美，不陨其名。"}, {"id": "s182", "text": "至於尧，尧未能举。"}, {"id": "s183", "text": "舜举八恺，使主后土，以揆百事，莫不时序。"}, {"id": "s184", "text": "举八元，使布五教于四方，父义，母慈，兄友，弟恭，子孝，内平外成。"}, {"id": "s185", "text": "昔帝鸿氏有不才子，掩义隐贼，好行凶慝，天下谓之浑沌。"}, {"id": "s186", "text": "少暤氏有不才子，毁信恶忠，崇饰恶言，天下谓之穷奇。"}, {"id": "s187", "text": "颛顼氏有不才子，不可教训，不知话言，天下谓之檮杌。"}, {"id": "s188", "text": "此三族世忧之。"}, {"id": "s189", "text": "至于尧，尧未能去。"}, {"id": "s190", "text": "缙云氏有不才子，贪于饮食，冒于货贿，天下谓之饕餮。"}, {"id": "s191", "text": "天下恶之，比之三凶。"}, {"id": "s192", "text": "舜宾於四门，乃流四凶族，迁于四裔，以御螭魅，於是四门辟，言毋凶人也。"}, {"id": "s193", "text": "舜入于大麓，烈风雷雨不迷，尧乃知舜之足授天下。"}, {"id": "s194", "text": "尧老，使舜摄行天子政，巡狩。"}, {"id": "s195", "text": "舜得举用事二十年，而尧使摄政。"}, {"id": "s196", "text": "摄政八年而尧崩。"}, {"id": "s197", "text": "三年丧毕，让丹硃，天下归舜。"}, {"id": "s198", "text": "而禹、皋陶、契、后稷、伯夷、夔、龙、倕、益、彭祖自尧时而皆举用，未有分职。"}, {"id": "s199", "text": "於是舜乃至於文祖，谋于四岳，辟四门，明通四方耳目，命十二牧论帝德，行厚德，远佞人，则蛮夷率服。"}, {"id": "s200", "text": "舜谓四岳曰：“有能奋庸美尧之事者，使居官相事？"}, {"id": "s201", "text": "”皆曰：“伯禹为司空，可美帝功。"}, {"id": "s202", "text": "”舜曰：“嗟，然！"}, {"id": "s203", "text": "禹，汝平水土，维是勉哉。"}, {"id": "s204", "text": "”禹拜稽首，让於稷、契与皋陶。"}, {"id": "s205", "text": "舜曰：“然，往矣。"}, {"id": "s206", "text": "”舜曰：“弃，黎民始饥，汝后稷播时百穀。"}, {"id": "s207", "text": "”舜曰：“契，百姓不亲，五品不驯，汝为司徒，而敬敷五教，在宽。"}, {"id": "s208", "text": "”舜曰：“皋陶，蛮夷猾夏，寇贼奸轨，汝作士，五刑有服，五服三就；五流有度，五度三居：维明能信。"}, {"id": "s209", "text": "”舜曰：“谁能驯予工？"}, {"id": "s210", "text": "”皆曰垂可。"}, {"id": "s211", "text": "於是以垂为共工。"}, {"id": "s212", "text": "舜曰：“谁能驯予上下草木鸟兽？"}, {"id": "s213", "text": "”皆曰益可。"}, {"id": "s214", "text": "於是以益为朕虞。"}, {"id": "s215", "text": "益拜稽首，让于诸臣硃虎、熊罴。"}, {"id": "s216", "text": "舜曰：“往矣，汝谐。"}, {"id": "s217", "text": "”遂以硃虎、熊罴为佐。"}, {"id": "s218", "text": "舜曰：“嗟！"}, {"id": "s219", "text": "四岳，有能典朕三礼？"}, {"id": "s220", "text": "”皆曰伯夷可。"}, {"id": "s221", "text": "舜曰：“嗟！"}, {"id": "s222", "text": "伯夷，以汝为秩宗，夙夜维敬，直哉维静絜。"}, {"id": "s223", "text": "”伯夷让夔、龙。"}, {"id": "s224", "text": "舜曰：“然。"}, {"id": "s225", "text": "以夔为典乐，教稺子，直而温，宽而栗，刚而毋虐，简而毋傲；诗言意，歌长言，声依永，律和声，八音能谐，毋相夺伦，神人以和。"}, {"id": "s226", "text": "”夔曰：“於！"}, {"id": "s227", "text": "予击石拊石，百兽率舞。"}, {"id": "s228", "text": "”舜曰：“龙，朕畏忌谗说殄伪，振惊朕众，命汝为纳言，夙夜出入朕命，惟信。"}, {"id": "s229", "text": "”舜曰：“嗟！"}, {"id": "s230", "text": "女二十有二人，敬哉，惟时相天事。"}, {"id": "s231", "text": "”三岁一考功，三考绌陟，远近众功咸兴。"}, {"id": "s232", "text": "分北三苗。"}, {"id": "s233", "text": "此二十二人咸成厥功：皋陶为大理，平，民各伏得其实；伯夷主礼，上下咸让；垂主工师，百工致功；益主虞，山泽辟；弃主稷，百穀时茂；契主司徒，百姓亲和；龙主宾客，远人至；十二牧行而九州莫敢辟违；唯禹之功为大，披九山，通九泽，决九河，定九州，各以其职来贡，不失厥宜。"}, {"id": "s234", "text": "方五千里，至于荒服。"}, {"id": "s235", "text": "南抚交阯、北发，西戎、析枝、渠廋、氐、羌，北山戎、发、息慎，东长、鸟夷，四海之内咸戴帝舜之功。"}, {"id": "s236", "text": "於是禹乃兴九招之乐，致异物，凤皇来翔。"}, {"id": "s237", "text": "天下明德皆自虞帝始。"}, {"id": "s238", "text": "舜年二十以孝闻，年三十尧举之，年五十摄行天子事，年五十八尧崩，年六十一代尧践帝位。"}, {"id": "s239", "text": "践帝位三十九年，南巡狩，崩於苍梧之野。"}, {"id": "s240", "text": "葬於江南九疑，是为零陵。"}, {"id": "s241", "text": "舜之践帝位，载天子旗，往朝父瞽叟，夔夔唯谨，如子道。"}, {"id": "s242", "text": "封弟象为诸侯。"}, {"id": "s243", "text": "舜子商均亦不肖，舜乃豫荐禹於天。"}, {"id": "s244", "text": "十七年而崩。"}, {"id": "s245", "text": "三年丧毕，禹亦乃让舜子，如舜让尧子。"}, {"id": "s246", "text": "诸侯归之，然後禹践天子位。"}, {"id": "s247", "text": "尧子丹硃，舜子商均，皆有疆土，以奉先祀。"}, {"id": "s248", "text": "服其服，礼乐如之。"}, {"id": "s249", "text": "以客见天子，天子弗臣，示不敢专也。"}, {"id": "s250", "text": "自黄帝至舜、禹，皆同姓而异其国号，以章明德。"}, {"id": "s251", "text": "故黄帝为有熊，帝颛顼为高阳，帝喾为高辛，帝尧为陶唐，帝舜为有虞。"}, {"id": "s252", "text": "帝禹为夏后而别氏，姓姒氏。"}, {"id": "s253", "text": "契为商，姓子氏。"}, {"id": "s254", "text": "弃为周，姓姬氏。"}, {"id": "s255", "text": "太史公曰：学者多称五帝，尚矣。"}, {"id": "s256", "text": "然尚书独载尧以来；而百家言黄帝，其文不雅驯，荐绅先生难言之。"}, {"id": "s257", "text": "孔子所传宰予问五帝德及帝系姓，儒者或不传。"}, {"id": "s258", "text": "余尝西至空桐，北过涿鹿，东渐於海，南浮江淮矣，至长老皆各往往称黄帝、尧、舜之处，风教固殊焉，总之不离古文者近是。"}, {"id": "s259", "text": "予观春秋、国语，其发明五帝德、帝系姓章矣，顾弟弗深考，其所表见皆不虚。"}, {"id": "s260", "text": "书缺有间矣，其轶乃时时见於他说。"}, {"id": "s261", "text": "非好学深思，心知其意，固难为浅见寡闻道也。"}, {"id": "s262", "text": "余并论次，择其言尤雅者，故著为本纪书首。"}, {"id": "s263", "text": "帝出少典，居于轩丘。"}, {"id": "s264", "text": "既代炎历，遂禽蚩尤。"}, {"id": "s265", "text": "高阳嗣位，静深有谋。"}, {"id": "s266", "text": "小大远近，莫不怀柔。"}, {"id": "s267", "text": "爰洎帝喾，列圣同休。"}, {"id": "s268", "text": "帝挚之弟，其号放勋。"}, {"id": "s269", "text": "就之如日，望之如云。"}, {"id": "s270", "text": "郁夷东作，昧谷西曛。"}, {"id": "s271", "text": "明扬仄陋，玄德升闻。"}, {"id": "s272", "text": "能让天下，贤哉二君！"}]};
+const SEMANTIC = {"blocks": [{"t": "h2", "text": "黄帝"}, {"t": "h3", "text": "兴起与征讨"}, {"t": "p", "id": "1", "note": "n1", "html": "<span class=\"note-anchor\" data-note=\"n1\"><span class=\"person\">黄帝</span>者，</span><span class=\"note-anchor\" data-note=\"n1b\"><span class=\"person\">少典</span>之子，</span>姓<span class=\"person\">公孙</span>，名曰<span class=\"person\">轩辕</span>。<span class=\"note-anchor\" data-note=\"n1c\">生而<span class=\"mythical\">神灵</span>，</span>弱而能言，幼而徇齐，长而敦敏，成而聪明。"}, {"t": "causal", "rid": "c1", "cause": {"rid": "c1a", "html": "<span class=\"note-anchor\" data-note=\"n1_1a\"><span class=\"clan\">神农氏</span>世衰。</span><span class=\"official\">诸侯</span>相侵伐，暴虐百姓，而<span class=\"clan\">神农氏</span>弗能征。"}, "effect": {"rid": "c1b", "from": "c1a", "html": "於是<span class=\"person\">轩辕</span>乃习用<span class=\"artifact\">干戈</span>，以征不享，诸侯咸来宾从。"}}, {"t": "causal", "rid": "c2", "id": "1.1", "indent": true, "cause": {"rid": "c2a", "html": "而<span class=\"note-anchor\" data-note=\"n1_1b\"><span class=\"person\">蚩尤</span>最为暴，</span>莫能伐。<span class=\"person\">炎帝</span>欲侵陵诸侯，诸侯咸归<span class=\"person\">轩辕</span>。"}, "effect": {"rid": "c2b", "from": "c2a", "html": "<span class=\"person\">轩辕</span>乃修德振兵，治五气，蓺五种，抚万民，度四方，教<span class=\"biology\">熊</span><span class=\"biology\">罴</span><span class=\"biology\">貔貅</span><span class=\"biology\">貙</span><span class=\"biology\">虎</span>，以与<span class=\"person\">炎帝</span>战於<span class=\"note-anchor\" data-note=\"n1_1c\"><span class=\"place\">阪泉之野</span></span>。三战，然後得其志。"}}, {"t": "causal", "rid": "c3", "id": "1.2", "indent": true, "cause": {"rid": "c3a", "html": "<span class=\"person\">蚩尤</span>作乱，不用帝命。"}, "effect": {"rid": "c3b", "from": "c3a", "html": "於是<span class=\"person\">黄帝</span>乃徵师诸侯，与<span class=\"person\">蚩尤</span>战於<span class=\"note-anchor\" data-note=\"n1_2a\"><span class=\"place\">涿鹿之野</span></span>，遂禽杀<span class=\"person\">蚩尤</span>。"}}, {"t": "causal", "rid": "c4", "id": "1.3", "indent": true, "cause": {"rid": "c4a", "html": "而诸侯咸尊<span class=\"person\">轩辕</span>为<span class=\"official\">天子</span>，代<span class=\"clan\">神农氏</span>，是为<span class=\"person\">黄帝</span>。"}, "effect": {"rid": "c4b", "from": "c4a", "html": "<span class=\"concept\">天下</span>有不顺者，<span class=\"person\">黄帝</span>从而征之，平者去之，披山通道，未尝宁居。"}}, {"t": "h3", "text": "疆域与治理"}, {"t": "list", "id": "2", "indent": true, "items": ["东至于<span class=\"place\">海</span>，登<span class=\"place\">丸山</span>，及<span class=\"place\">岱宗</span>。", "西至于<span class=\"place\">空桐</span>，登<span class=\"place\">鸡头</span>。", "南至于<span class=\"place\">江</span>，登<span class=\"place\">熊</span>、<span class=\"place\">湘</span>。", "北逐<span class=\"tribe\">荤粥</span>，合符<span class=\"note-anchor\" data-note=\"n2a\"><span class=\"place\">釜山</span></span>，而邑于<span class=\"note-anchor\" data-note=\"n2b\"><span class=\"place\">涿鹿之阿</span></span>。"]}, {"t": "p", "id": "3", "html": "迁徙往来无常处，以师兵为营卫。官名皆以云命，为<span class=\"official\">云师</span>。置<span class=\"official\">左右大监</span>，监于万国。万国和，而<span class=\"mythical\">鬼神</span><span class=\"place\">山川</span><span class=\"concept\">封禅</span>与为多焉。获<span class=\"artifact\">宝鼎</span>，迎日推筴。举<span class=\"person\">风后</span>、<span class=\"person\">力牧</span>、<span class=\"person\">常先</span>、<span class=\"person\">大鸿</span>以治民。顺<span class=\"celestial\">天地</span>之纪，幽明之占，死生之说，存亡之难。时播<span class=\"biology\">百穀</span><span class=\"biology\">草木</span>，淳化<span class=\"biology\">鸟兽</span><span class=\"biology\">蟲蛾</span>，旁罗<span class=\"celestial\">日月星辰</span>水波土石<span class=\"artifact\">金玉</span>，劳勤心力耳目，节用水火材物。有<span class=\"concept\">土德</span>之瑞，故号<span class=\"person\">黄帝</span>。"}, {"t": "p", "id": "4", "html": "<span class=\"person\">黄帝</span>二十五子，其得姓者十四人。"}, {"t": "h3", "text": "后裔与世系"}, {"t": "p", "id": "4.1", "note": "n4_1", "html": "<span class=\"note-anchor\" data-note=\"n4_1\"><span class=\"person\">黄帝</span>居<span class=\"place\">轩辕之丘</span>，</span>而娶於<span class=\"place\">西陵</span>之女，是为<span class=\"person\">嫘祖</span>。<span class=\"person\">嫘祖</span>为<span class=\"person\">黄帝</span>正妃，生二子，其後皆有<span class=\"concept\">天下</span>："}, {"t": "list", "indent": true, "items": ["其一曰<span class=\"person\">玄嚣</span>，是为<span class=\"person\">青阳</span>，<span class=\"person\">青阳</span>降居<span class=\"place\">江水</span>；", "其二曰<span class=\"person\">昌意</span>，降居<span class=\"place\">若水</span>。<span class=\"person\">昌意</span>娶<span class=\"clan\">蜀山氏</span>女，曰<span class=\"person\">昌仆</span>，生<span class=\"person\">高阳</span>，<span class=\"person\">高阳</span>有<span class=\"concept\">圣德</span>焉。"]}, {"t": "causal", "rid": "c5", "id": "4.2", "cause": {"rid": "c5a", "html": "<span class=\"person\">黄帝</span>崩，葬<span class=\"place\">桥山</span>。"}, "effect": {"rid": "c5b", "from": "c5a", "html": "其孙<span class=\"person\">昌意</span>之子<span class=\"person\">高阳</span>立，是为<span class=\"person\">帝颛顼</span>也。"}}, {"t": "hr"}, {"t": "h2", "text": "帝颛顼"}, {"t": "p", "id": "5", "note": "n5", "html": "<span class=\"note-anchor\" data-note=\"n5\"><span class=\"person\">帝颛顼高阳</span>者，<span class=\"person\">黄帝</span>之孙而<span class=\"person\">昌意</span>之子也。</span>静渊以有谋，疏通而知事；养材以任地，载时以象天，依<span class=\"mythical\">鬼神</span>以制义，治气以教化，絜诚以<span class=\"concept\">祭祀</span>。"}, {"t": "list", "indent": true, "items": ["北至于<span class=\"place\">幽陵</span>，", "南至于<span class=\"place\">交阯</span>，", "西至于<span class=\"place\">流沙</span>，", "东至于<span class=\"place\">蟠木</span>。"]}, {"t": "p", "id": "5.1", "indent": true, "html": "<span class=\"concept\">动静</span>之物，大小之神，<span class=\"concept\">日月</span>所照，莫不砥属。"}, {"t": "causal", "rid": "c6", "id": "6", "cause": {"rid": "c6a", "html": "<span class=\"person\">帝颛顼</span>生子曰<span class=\"person\">穷蝉</span>。<span class=\"person\">颛顼</span>崩，"}, "effect": {"rid": "c6b", "from": "c6a", "html": "而<span class=\"person\">玄嚣</span>之孙<span class=\"person\">高辛</span>立，是为<span class=\"person\">帝喾</span>。"}}, {"t": "hr"}, {"t": "h2", "text": "帝喾"}, {"t": "p", "id": "7", "html": "<span class=\"person\">帝喾高辛</span>者，<span class=\"person\">黄帝</span>之曾孙也。<span class=\"person\">高辛</span>父曰<span class=\"person\">蟜极</span>，<span class=\"person\">蟜极</span>父曰<span class=\"person\">玄嚣</span>，<span class=\"person\">玄嚣</span>父曰<span class=\"person\">黄帝</span>。自<span class=\"person\">玄嚣</span>与<span class=\"person\">蟜极</span>皆不得在位，至<span class=\"person\">高辛</span>即帝位。<span class=\"person\">高辛</span>於<span class=\"person\">颛顼</span>为族子。"}, {"t": "p", "id": "8", "html": "<span class=\"person\">高辛</span>生而<span class=\"mythical\">神灵</span>，自言其名。普施利物，不於其身。聪以知远，明以察微。顺天之义，知民之急。仁而威，惠而信，脩身而<span class=\"concept\">天下</span>服。"}, {"t": "list", "indent": true, "items": ["取地之财而节用之，", "抚教万民而利诲之，", "历<span class=\"concept\">日月</span>而迎送之，", "明<span class=\"mythical\">鬼神</span>而敬事之。"]}, {"t": "p", "id": "8.1", "indent": true, "html": "其色郁郁，其德嶷嶷。其动也时，其服也<span class=\"official\">士</span>。<span class=\"person\">帝喾</span>溉执中而遍<span class=\"concept\">天下</span>，<span class=\"concept\">日月</span>所照，风雨所至，莫不从服。"}, {"t": "causal", "rid": "c7", "id": "9", "cause": {"rid": "c7a", "html": "<span class=\"person\">帝喾</span>娶<span class=\"clan\">陈锋氏</span>女，生<span class=\"person\">放勋</span>。娶<span class=\"clan\">娵訾氏</span>女，生<span class=\"person\">挚</span>。<span class=\"person\">帝喾</span>崩，而<span class=\"person\">挚</span>代立。<span class=\"person\">帝挚</span>立，不善，"}, "effect": {"rid": "c7b", "from": "c7a", "html": "而弟<span class=\"person\">放勋</span>立，是为<span class=\"person\">帝尧</span>。"}}, {"t": "hr"}, {"t": "h2", "text": "帝尧"}, {"t": "h3", "text": "钦明文思"}, {"t": "p", "id": "10", "html": "<span class=\"person\">帝尧</span>者，<span class=\"person\">放勋</span>。其仁如天，其知如神。就之如日，望之如云。富而不骄，贵而不舒。黄收纯衣，彤车乘<span class=\"place\">白马</span>。能明驯德，以亲九族。九族既睦，便章百姓。百姓<span class=\"person\">昭明</span>，合和万国。"}, {"t": "h3", "text": "历法与农时"}, {"t": "p", "id": "11", "html": "乃命<span class=\"person\">羲</span>、<span class=\"person\">和</span>，敬顺<span class=\"place\">昊天</span>，数法<span class=\"celestial\">日月星辰</span>，敬授民时。"}, {"t": "list", "indent": true, "items": ["[11.1] 分命<span class=\"person\">羲仲</span>，居<span class=\"place\">郁夷</span>，曰<span class=\"place\">旸谷</span>。敬道日出，便程东作。<span class=\"celestial\">日中</span>，<span class=\"celestial\">星鸟</span>，以殷<span class=\"celestial\">中春</span>。其民析，<span class=\"biology\">鸟兽</span>字微。", "[11.2] 申命<span class=\"person\">羲叔</span>，居<span class=\"place\">南交</span>。便程南为，敬致。<span class=\"celestial\">日永</span>，<span class=\"celestial\">星火</span>，以正<span class=\"celestial\">中夏</span>。其民因，<span class=\"biology\">鸟兽</span>希革。", "[11.3] 申命<span class=\"person\">和仲</span>，居<span class=\"place\">西土</span>，曰<span class=\"place\">昧谷</span>。敬道日入，便程西成。<span class=\"celestial\">夜中</span>，<span class=\"celestial\">星虚</span>，以正<span class=\"celestial\">中秋</span>。其民夷易，<span class=\"biology\">鸟兽</span>毛毨。", "[11.4] 申命<span class=\"person\">和叔</span>；居<span class=\"place\">北方</span>，曰<span class=\"place\">幽都</span>。便在伏物。<span class=\"celestial\">日短</span>，<span class=\"celestial\">星昴</span>，以正<span class=\"celestial\">中冬</span>。其民燠，<span class=\"biology\">鸟兽</span>氄毛。"]}, {"t": "p", "id": "11.5", "html": "岁三百六<span class=\"timeref\">十六日</span>，以<span class=\"celestial\">闰月</span>正<span class=\"timeref\">四时</span>。信饬百官，众功皆兴。"}, {"t": "h3", "text": "禅让之始"}, {"t": "dialogue", "id": "12", "indent": true, "lines": [{"id": "12.1", "html": "<span class=\"person\">尧</span>曰：「谁可顺此事？」"}, {"id": "12.2", "html": "<span class=\"person\">放齐</span>曰：「嗣子<span class=\"person\">丹硃</span>开明。」"}, {"id": "12.3", "html": "<span class=\"person\">尧</span>曰：「吁！顽凶，不用。」"}, {"id": "12.4", "html": "尧又曰：「谁可者？」"}, {"id": "12.5", "html": "<span class=\"person\">讙兜</span>曰：「<span class=\"person\">共工</span>旁聚布功，可用。」"}, {"id": "12.6", "html": "<span class=\"person\">尧</span>曰：「<span class=\"person\">共工</span>善言，其用僻，似恭漫天，不可。」"}, {"id": "12.7", "html": "尧又曰：「嗟，<span class=\"official\">四岳</span>，汤汤洪水滔天，浩浩怀山<span class=\"place\">襄陵</span>，下民其忧，有能使治者？」"}, {"id": "12.8", "html": "皆曰<span class=\"person\">鲧</span>可。"}, {"id": "12.9", "html": "<span class=\"person\">尧</span>曰：「<span class=\"person\">鲧</span>负命毁族，不可。」"}, {"id": "12.10", "html": "<span class=\"official\">岳</span>曰：「异哉，试不可用而已。」"}, {"id": "12.11", "html": "<span class=\"person\">尧</span>於是听岳用<span class=\"person\">鲧</span>。<span class=\"timeref\">九岁</span>，功用不成。"}]}, {"t": "dialogue", "id": "13", "indent": true, "lines": [{"id": "13.1", "html": "<span class=\"person\">尧</span>曰：「嗟！<span class=\"official\">四岳</span>：朕在位七十载，汝能庸命，践朕位？」"}, {"id": "13.2", "html": "<span class=\"official\">岳</span>应曰：「鄙德忝帝位。」"}, {"id": "13.3", "html": "<span class=\"person\">尧</span>曰：「悉举贵戚及疏远隐匿者。」"}, {"id": "13.4", "html": "众皆言於<span class=\"person\">尧</span>曰：「有矜在民间，曰<span class=\"person\">虞舜</span>。」"}, {"id": "13.5", "html": "<span class=\"person\">尧</span>曰：「然，朕闻之。其何如？」"}, {"id": "13.6", "html": "<span class=\"official\">岳</span>曰：「盲者子。父顽，母嚚，弟傲，能和以孝，烝烝治，不至奸。」"}, {"id": "13.7", "html": "<span class=\"person\">尧</span>曰：「吾其试哉。」"}]}, {"t": "p", "id": "13.8", "html": "於是尧妻之二女，观其德於二女。<span class=\"person\">舜</span>饬下二女於<span class=\"place\">妫汭</span>，如妇礼。尧善之，乃使<span class=\"person\">舜</span>慎和<span class=\"concept\">五典</span>，<span class=\"concept\">五典</span>能从。乃遍入百官，百官时序。宾於四门，四门穆穆，诸侯远方宾客皆敬。<span class=\"person\">尧</span>使<span class=\"person\">舜</span>入山林川泽，暴<span class=\"artifact\">风雷</span>雨，<span class=\"person\">舜</span>行不迷。<span class=\"person\">尧</span>以为圣，召<span class=\"person\">舜</span>曰：「女谋事至而言可绩，<span class=\"timeref\">三年</span>矣。女登帝位。」<span class=\"person\">舜</span>让於德不怿。<span class=\"timeref\">正月上日</span>，<span class=\"person\">舜</span>受终於<span class=\"place\">文祖</span>。<span class=\"place\">文祖</span>者，尧大祖也。"}, {"t": "hr"}, {"t": "h2", "text": "帝舜"}, {"t": "h3", "text": "摄政与礼法"}, {"t": "p", "id": "14", "html": "於是<span class=\"person\">帝尧</span>老，命<span class=\"person\">舜</span>摄行<span class=\"official\">天子</span>之政，以观<span class=\"concept\">天命</span>。<span class=\"person\">舜</span>乃在<span class=\"artifact\">璿玑玉衡</span>，以齐<span class=\"celestial\">七政</span>。遂类于<span class=\"mythical\">上帝</span>，禋于<span class=\"concept\">六宗</span>，望于<span class=\"place\">山川</span>，辩于群神。揖<span class=\"artifact\">五瑞</span>，择吉月日，见<span class=\"official\">四岳</span>诸牧，班瑞。"}, {"t": "p", "id": "14.1", "html": "<span class=\"timeref\">岁二月</span>，东<span class=\"concept\">巡狩</span>，至於<span class=\"place\">岱宗</span>，祡，望秩於<span class=\"place\">山川</span>。遂见<span class=\"place\">东方</span><span class=\"official\">君长</span>，合时月正日，同律度量衡，脩<span class=\"concept\">五礼</span>五玉三帛二生一死为<span class=\"person\">挚</span>，如<span class=\"artifact\">五器</span>，卒乃复。<span class=\"timeref\">五月</span>，南<span class=\"concept\">巡狩</span>；<span class=\"timeref\">八月</span>，西<span class=\"concept\">巡狩</span>；<span class=\"timeref\">十一月</span>，北<span class=\"concept\">巡狩</span>：皆如初。归，至于祖祢庙，用<span class=\"biology\">特牛</span>礼。"}, {"t": "p", "id": "14.2", "html": "<span class=\"timeref\">五岁</span>一<span class=\"concept\">巡狩</span>，群后四朝。遍告以言，明试以功，车服以庸。肇十有二州，决川。象以<span class=\"concept\">典刑</span>，<span class=\"concept\">流宥五刑</span>，鞭作<span class=\"concept\">官刑</span>，扑作<span class=\"concept\">教刑</span>，金作<span class=\"concept\">赎刑</span>。眚灾过，赦；怙终贼，刑。钦哉，钦哉，惟刑之静哉！"}, {"t": "h3", "text": "惩办四罪"}, {"t": "causal", "rid": "c8", "id": "15", "cause": {"rid": "c8a", "html": "<span class=\"person\">讙兜</span>进言<span class=\"person\">共工</span>，<span class=\"person\">尧</span>曰不可而试之<span class=\"official\">工师</span>，<span class=\"person\">共工</span>果淫辟。<span class=\"official\">四岳</span>举<span class=\"person\">鲧</span>治鸿水，<span class=\"person\">尧</span>以为不可，<span class=\"official\">岳</span>彊请试之，试之而无功，故百姓不便。<span class=\"tribe\">三苗</span>在<span class=\"place\">江淮</span>、<span class=\"place\">荆州</span>数为乱。"}, "effect": {"rid": "c8b", "from": "c8a", "html": "於是<span class=\"person\">舜</span>归而言於帝，"}}, {"t": "list", "indent": true, "items": ["[15.1] 请流<span class=\"person\">共工</span>於<span class=\"place\">幽陵</span>，以变<span class=\"tribe\">北狄</span>；", "[15.2] 放<span class=\"person\">驩兜</span>於<span class=\"place\">崇山</span>，以变<span class=\"tribe\">南蛮</span>；", "[15.3] 迁<span class=\"tribe\">三苗</span>於<span class=\"place\">三危</span>，以变<span class=\"tribe\">西戎</span>；", "[15.4] 殛<span class=\"person\">鲧</span>於<span class=\"place\">羽山</span>，以变<span class=\"tribe\">东夷</span>："]}, {"t": "summary", "rid": "s1", "from": "c8b", "id": "15.5", "anchor": "head", "html": "四罪而<span class=\"concept\">天下</span>咸服。"}, {"t": "p", "id": "16", "html": "尧立<span class=\"timeref\">七十年</span>得<span class=\"person\">舜</span>，<span class=\"timeref\">二十年</span>而老，令<span class=\"person\">舜</span>摄行<span class=\"official\">天子</span>之政，荐之於天。尧辟位凡<span class=\"timeref\">二十八年</span>而崩。百姓悲哀，如丧父母。<span class=\"timeref\">三年</span>，四方莫举乐，以思尧。"}, {"t": "causal", "rid": "c9", "id": "16.1", "indent": true, "cause": {"rid": "c9a", "html": "<span class=\"person\">尧</span>知子<span class=\"person\">丹硃</span>之不肖，不足授<span class=\"concept\">天下</span>，"}, "effect": {"rid": "c9b", "from": "c9a", "html": "於是乃权授<span class=\"person\">舜</span>。授<span class=\"person\">舜</span>，则<span class=\"concept\">天下</span>得其利而<span class=\"person\">丹硃</span>病；授<span class=\"person\">丹硃</span>，则<span class=\"concept\">天下</span>病而<span class=\"person\">丹硃</span>得其利。<span class=\"person\">尧</span>曰「终不以<span class=\"concept\">天下</span>之病而利一人」，而卒授<span class=\"person\">舜</span>以<span class=\"concept\">天下</span>。"}}, {"t": "causal", "rid": "c10", "id": "16.2", "indent": true, "cause": {"rid": "c10a", "html": "<span class=\"person\">尧</span>崩，<span class=\"timeref\">三年</span>之丧毕，<span class=\"person\">舜</span>让辟<span class=\"person\">丹硃</span>於<span class=\"place\">南河之南</span>。诸侯<span class=\"action\">朝觐</span>者不之<span class=\"person\">丹硃</span>而之<span class=\"person\">舜</span>，狱讼者不之<span class=\"person\">丹硃</span>而之<span class=\"person\">舜</span>，讴歌者不讴歌<span class=\"person\">丹硃</span>而讴歌<span class=\"person\">舜</span>。"}, "effect": {"rid": "c10b", "from": "c10a", "html": "<span class=\"person\">舜</span>曰「天也」，夫而後之<span class=\"place\">中国</span>践<span class=\"official\">天子</span>位焉，是为<span class=\"person\">帝舜</span>。"}}, {"t": "h3", "text": "德行与磨难"}, {"t": "p", "id": "17", "html": "<span class=\"person\">虞舜</span>者，名曰<span class=\"person\">重华</span>。<span class=\"person\">重华</span>父曰<span class=\"person\">瞽叟</span>，<span class=\"person\">瞽叟</span>父曰<span class=\"person\">桥牛</span>，<span class=\"person\">桥牛</span>父曰<span class=\"person\">句望</span>，<span class=\"person\">句望</span>父曰<span class=\"person\">敬康</span>，<span class=\"person\">敬康</span>父曰<span class=\"person\">穷蝉</span>，<span class=\"person\">穷蝉</span>父曰<span class=\"person\">帝颛顼</span>，<span class=\"person\">颛顼</span>父曰<span class=\"person\">昌意</span>：以至<span class=\"person\">舜</span><span class=\"timeref\">七世</span>矣。自从<span class=\"person\">穷蝉</span>以至<span class=\"person\">帝舜</span>，皆微为庶人。"}, {"t": "causal", "rid": "c11", "id": "18", "cause": {"rid": "c11a", "html": "<span class=\"person\">舜</span>父<span class=\"person\">瞽叟</span>盲，而<span class=\"person\">舜</span>母死，<span class=\"person\">瞽叟</span>更娶妻而生<span class=\"person\">象</span>，<span class=\"person\">象</span>傲。<span class=\"person\">瞽叟</span>爱後妻子，常欲杀<span class=\"person\">舜</span>，<span class=\"person\">舜</span>避逃；及有小过，则受罪。"}, "effect": {"rid": "c11b", "from": "c11a", "html": "顺事父及後母与弟，日以笃谨，匪有解。"}}, {"t": "p", "id": "19", "html": "<span class=\"person\">舜</span>，<span class=\"place\">冀州</span>之人也。<span class=\"person\">舜</span>耕<span class=\"place\">历山</span>，渔<span class=\"place\">雷泽</span>，陶<span class=\"place\">河滨</span>，作什器於<span class=\"place\">寿丘</span>，就时於<span class=\"place\">负夏</span>。<span class=\"person\">舜</span>父<span class=\"person\">瞽叟</span>顽，母嚚，弟<span class=\"person\">象</span>傲，皆欲杀<span class=\"person\">舜</span>。<span class=\"person\">舜</span>顺適不失子道，兄弟孝慈。欲杀，不可得；即求，尝在侧。"}, {"t": "block", "blocks": [{"t": "p", "id": "20", "html": "<span class=\"person\">舜</span><span class=\"timeref\">年二十</span>以孝闻。三十而<span class=\"person\">帝尧</span>问可用者，<span class=\"official\">四岳</span>咸荐<span class=\"person\">虞舜</span>，曰可。於是<span class=\"person\">尧</span>乃以二女妻<span class=\"person\">舜</span>以观其内，使九男与处以观其外。<span class=\"person\">舜</span>居<span class=\"place\">妫汭</span>，内行弥谨。尧二女不敢以贵骄事<span class=\"person\">舜</span>亲戚，甚有妇道。尧九男皆益笃。<span class=\"person\">舜</span>耕<span class=\"place\">历山</span>，<span class=\"place\">历山</span>之人皆让畔；渔<span class=\"place\">雷泽</span>，<span class=\"place\">雷泽</span>上人皆让居；陶<span class=\"place\">河滨</span>，<span class=\"place\">河滨</span>器皆不苦窳。<span class=\"timeref\">一年</span>而所居成聚，<span class=\"timeref\">二年</span>成邑，<span class=\"timeref\">三年</span><span class=\"place\">成都</span>。<span class=\"person\">尧</span>乃赐<span class=\"person\">舜</span>絺衣，与琴，为筑仓廪，予<span class=\"biology\">牛羊</span>。"}, {"t": "causal", "rid": "c12", "id": "20.1", "indent": true, "cause": {"rid": "c12a", "html": "<span class=\"person\">瞽叟</span>尚复欲杀之，使<span class=\"person\">舜</span>上涂廪，<span class=\"person\">瞽叟</span>从下纵火焚廪。"}, "effect": {"rid": "c12b", "from": "c12a", "html": "<span class=\"person\">舜</span>乃以两笠自扞而下，去，得不死。"}}, {"t": "causal", "rid": "c13", "id": "20.2", "indent": true, "cause": {"rid": "c13a", "html": "後<span class=\"person\">瞽叟</span>又使<span class=\"person\">舜</span>穿井，<span class=\"person\">舜</span>穿井为匿空旁出。<span class=\"person\">舜</span>既入深，<span class=\"person\">瞽叟</span>与<span class=\"person\">象</span>共下土实井，"}, "effect": {"rid": "c13b", "from": "c13a", "html": "<span class=\"person\">舜</span>从匿空出，去。<span class=\"person\">瞽叟</span>、象喜，以<span class=\"person\">舜</span>为已死。"}}, {"t": "dialogue", "id": "20.2d", "indent": true, "lines": [{"id": "20.2d.1", "html": "<span class=\"person\">象</span>曰「本谋者象。」"}, {"id": "20.2d.2", "html": "<span class=\"person\">象</span>与其父母分，於是曰：「<span class=\"person\">舜</span>妻尧二女，与琴，象取之。<span class=\"biology\">牛羊</span>仓廪予父母。」"}, {"id": "20.2d.3", "html": "象乃止<span class=\"person\">舜</span>宫居，鼓其琴。<span class=\"person\">舜</span>往见之。"}, {"id": "20.2d.4", "html": "<span class=\"person\">象</span>鄂不怿，曰：「我思<span class=\"person\">舜</span>正郁陶！」"}, {"id": "20.2d.5", "html": "<span class=\"person\">舜</span>曰：「然，尔其庶矣！」"}]}, {"t": "p", "id": "20.3", "html": "<span class=\"person\">舜</span>复事<span class=\"person\">瞽叟</span>爱弟弥谨。於是<span class=\"person\">尧</span>乃试<span class=\"person\">舜</span><span class=\"concept\">五典</span>百官，皆治。"}]}, {"t": "h2", "text": "举贤任能"}, {"t": "h3", "text": "举贤任能"}, {"t": "causal", "rid": "c14", "id": "21", "cause": {"rid": "c14a", "html": "昔<span class=\"clan\">高阳氏</span>有才子八人，世得其利，谓之「<span class=\"person\">八恺</span>」。<span class=\"clan\">高辛氏</span>有才子八人，世谓之「<span class=\"person\">八元</span>」。此十六族者，世济其美，不陨其名。至於<span class=\"person\">尧</span>，尧未能举。"}, "effect": {"rid": "c14b", "from": "c14a", "html": "<span class=\"person\">舜</span>举<span class=\"person\">八恺</span>，使主后土，以揆百事，莫不时序。举<span class=\"person\">八元</span>，使布<span class=\"concept\">五教</span>于四方，父义，母慈，兄友，弟恭，子孝，内平外成。"}}, {"t": "list", "id": "22", "items": ["[22.1] 昔<span class=\"clan\">帝鸿氏</span>有不才子，掩义隐贼，好行凶慝，<span class=\"concept\">天下</span>谓之<span class=\"person\">浑沌</span>。", "[22.2] <span class=\"clan\">少暤氏</span>有不才子，毁信恶忠，崇饰恶言，<span class=\"concept\">天下</span>谓之<span class=\"person\">穷奇</span>。", "[22.3] <span class=\"clan\">颛顼氏</span>有不才子，不可教训，不知话言，<span class=\"concept\">天下</span>谓之<span class=\"person\">檮杌</span>。", "[22.4] 此三族世忧之。至于尧，尧未能去。", "[22.5] <span class=\"clan\">缙云氏</span>有不才子，贪于饮食，冒于货贿，<span class=\"concept\">天下</span>谓之<span class=\"person\">饕餮</span>。"]}, {"t": "causal", "rid": "c15", "id": "22.6", "indent": true, "cause": {"rid": "c15a", "html": "<span class=\"concept\">天下</span>恶之，比之<span class=\"person\">三凶</span>。"}, "effect": {"rid": "c15b", "from": "c15a", "html": "<span class=\"person\">舜</span>宾於四门，乃流<span class=\"person\">四凶族</span>，迁于四裔，以御螭魅，於是四门辟，言毋凶人也。"}}, {"t": "causal", "rid": "c16", "id": "23", "cause": {"rid": "c16a", "html": "<span class=\"person\">舜</span>入于<span class=\"place\">大麓</span>，烈<span class=\"artifact\">风雷</span>雨不迷，<span class=\"person\">尧</span>乃知<span class=\"person\">舜</span>之足授<span class=\"concept\">天下</span>。"}, "effect": {"rid": "c16b", "from": "c16a", "html": "<span class=\"person\">尧</span>老，使<span class=\"person\">舜</span>摄行<span class=\"official\">天子</span>政，<span class=\"concept\">巡狩</span>。<span class=\"person\">舜</span>得举用事<span class=\"timeref\">二十年</span>，而<span class=\"person\">尧</span>使摄政。摄政<span class=\"timeref\">八年</span>而<span class=\"person\">尧</span>崩。<span class=\"timeref\">三年</span>丧毕，让<span class=\"person\">丹硃</span>，<span class=\"concept\">天下</span>归<span class=\"person\">舜</span>。"}}, {"t": "p", "id": "23.1", "html": "而<span class=\"person\">禹</span>、<span class=\"person\">皋陶</span>、<span class=\"person\">契</span>、<span class=\"person\">后稷</span>、<span class=\"person\">伯夷</span>、<span class=\"person\">夔</span>、<span class=\"person\">龙</span>、<span class=\"person\">倕</span>、<span class=\"person\">益</span>、<span class=\"person\">彭祖</span>自<span class=\"person\">尧</span>时而皆举用，未有分职。於是<span class=\"person\">舜</span>乃至於<span class=\"place\">文祖</span>，谋于<span class=\"official\">四岳</span>，辟四门，明通四方耳目，命<span class=\"official\">十二牧</span>论帝德，行厚德，远佞人，则<span class=\"tribe\">蛮夷</span>率服。"}, {"t": "p", "id": "23.2", "html": "<span class=\"person\">舜</span>谓<span class=\"official\">四岳</span>曰：「有能奋庸美<span class=\"person\">尧</span>之事者，使居官相事？」"}, {"t": "list", "indent": true, "items": ["[23.2.1] 皆曰：「<span class=\"person\">伯禹</span>为<span class=\"official\">司空</span>，可美帝功。」<span class=\"person\">舜</span>曰：「嗟，然！<span class=\"person\">禹</span>，汝平水土，维是勉哉。」<span class=\"person\">禹</span>拜稽首，让於<span class=\"official\">稷</span>、<span class=\"person\">契</span>与<span class=\"person\">皋陶</span>。<span class=\"person\">舜</span>曰：「然，往矣。」", "[23.2.2] <span class=\"person\">舜</span>曰：「<span class=\"person\">弃</span>，黎民始饥，汝<span class=\"person\">后稷</span>播时<span class=\"biology\">百穀</span>。」", "[23.2.3] <span class=\"person\">舜</span>曰：「<span class=\"person\">契</span>，百姓不亲，<span class=\"concept\">五品</span>不驯，汝为<span class=\"official\">司徒</span>，而敬敷<span class=\"concept\">五教</span>，在宽。」", "[23.2.4] <span class=\"person\">舜</span>曰：「<span class=\"person\">皋陶</span>，<span class=\"tribe\">蛮夷</span>猾夏，寇贼奸轨，汝作<span class=\"official\">士</span>，<span class=\"concept\">五刑</span>有服，<span class=\"concept\">五服</span>三就；五流有度，五度三居：维明能信。」", "[23.2.5] <span class=\"person\">舜</span>曰：「谁能驯予工？」皆曰<span class=\"person\">垂</span>可。於是以<span class=\"person\">垂</span>为<span class=\"person\">共工</span>。", "[23.2.6] <span class=\"person\">舜</span>曰：「谁能驯予上下<span class=\"biology\">草木</span><span class=\"biology\">鸟兽</span>？」皆曰<span class=\"person\">益</span>可。於是以<span class=\"person\">益</span>为<span class=\"official\">朕虞</span>。<span class=\"person\">益</span>拜稽首，让于诸臣<span class=\"person\">硃虎</span>、<span class=\"person\">熊罴</span>。<span class=\"person\">舜</span>曰：「往矣，汝谐。」遂以<span class=\"person\">硃虎</span>、<span class=\"person\">熊罴</span>为佐。", "[23.2.7] <span class=\"person\">舜</span>曰：「嗟！<span class=\"official\">四岳</span>，有能典朕<span class=\"concept\">三礼</span>？」皆曰<span class=\"person\">伯夷</span>可。<span class=\"person\">舜</span>曰：「嗟！<span class=\"person\">伯夷</span>，以汝为<span class=\"official\">秩宗</span>，夙夜维敬，直哉维静絜。」<span class=\"person\">伯夷</span>让<span class=\"person\">夔</span>、<span class=\"person\">龙</span>。", "[23.2.8] <span class=\"person\">舜</span>曰：「然。以<span class=\"person\">夔</span>为<span class=\"official\">典乐</span>，教稺子，直而温，宽而栗，刚而毋虐，简而毋傲；诗言意，歌长言，声依永，律和声，<span class=\"concept\">八音</span>能谐，毋相夺伦，<span class=\"mythical\">神人</span>以和。」<span class=\"person\">夔</span>曰：「於！予击石拊石，<span class=\"biology\">百兽</span>率舞。」", "[23.2.9] <span class=\"person\">舜</span>曰：「<span class=\"person\">龙</span>，朕畏忌谗说殄伪，振惊朕众，命汝为<span class=\"official\">纳言</span>，夙夜出入朕命，惟信。」"]}, {"t": "p", "id": "23.3", "html": "<span class=\"person\">舜</span>曰：「嗟！女二十有<span class=\"timeref\">二人</span>，敬哉，惟时相天事。」<span class=\"timeref\">三岁</span>一考功，三考绌陟，远近众功咸兴。分北<span class=\"tribe\">三苗</span>。"}, {"t": "p", "id": "24", "html": "此二十<span class=\"timeref\">二人</span>咸成厥功："}, {"t": "list", "indent": true, "items": ["[24.1] <span class=\"person\">皋陶</span>为<span class=\"official\">大理</span>，平，民各伏得其实；", "[24.2] <span class=\"person\">伯夷</span>主礼，上下咸让；", "[24.3] <span class=\"person\">垂</span>主<span class=\"official\">工师</span>，百工致功；", "[24.4] <span class=\"person\">益</span>主<span class=\"official\">虞</span>，山泽辟；", "[24.5] <span class=\"person\">弃</span>主<span class=\"official\">稷</span>，<span class=\"biology\">百穀</span>时茂；", "[24.6] <span class=\"person\">契</span>主<span class=\"official\">司徒</span>，百姓亲和；", "[24.7] <span class=\"person\">龙</span>主宾客，远人至；", "[24.8] <span class=\"official\">十二牧</span>行而<span class=\"place\">九州</span>莫敢辟违；", "[24.9] 唯<span class=\"person\">禹</span>之功为大，披九山，通九泽，决<span class=\"place\">九河</span>，定<span class=\"place\">九州</span>，各以其职来贡，不失厥宜。方<span class=\"timeref\">五千里</span>，至于<span class=\"concept\">荒服</span>。南抚<span class=\"place\">交阯</span>、<span class=\"tribe\">北发</span>，<span class=\"tribe\">西戎</span>、<span class=\"tribe\">析枝</span>、<span class=\"tribe\">渠廋</span>、<span class=\"tribe\">氐</span>、<span class=\"tribe\">羌</span>，北<span class=\"tribe\">山戎</span>、<span class=\"tribe\">发</span>、<span class=\"tribe\">息慎</span>，东长、<span class=\"tribe\">鸟夷</span>，四<span class=\"place\">海</span>之内咸戴<span class=\"person\">帝舜</span>之功。於是<span class=\"person\">禹</span>乃兴九招之乐，致异物，<span class=\"biology\">凤皇</span>来翔。<span class=\"concept\">天下</span>明德皆自<span class=\"person\">虞帝</span>始。"]}, {"t": "p", "id": "25", "html": "<span class=\"person\">舜</span><span class=\"timeref\">年二十</span>以孝闻，<span class=\"timeref\">年三十</span><span class=\"person\">尧</span>举之，<span class=\"timeref\">年五十</span>摄行<span class=\"official\">天子</span>事，<span class=\"timeref\">年五十八</span><span class=\"person\">尧</span>崩，<span class=\"timeref\">年六十一</span>代尧践帝位。践帝位<span class=\"timeref\">三十九年</span>，南<span class=\"concept\">巡狩</span>，崩於<span class=\"place\">苍梧之野</span>。葬於<span class=\"place\">江南九疑</span>，是为<span class=\"place\">零陵</span>。"}, {"t": "p", "id": "25.1", "html": "<span class=\"person\">舜</span>之践帝位，载<span class=\"official\">天子</span>旗，往朝父<span class=\"person\">瞽叟</span>，<span class=\"person\">夔</span><span class=\"person\">夔</span>唯谨，如子道。封弟<span class=\"person\">象</span>为诸侯。<span class=\"person\">舜</span>子<span class=\"person\">商均</span>亦不肖，<span class=\"person\">舜</span>乃豫荐<span class=\"person\">禹</span>於天。<span class=\"timeref\">十七年</span>而崩。<span class=\"timeref\">三年</span>丧毕，<span class=\"person\">禹</span>亦乃让<span class=\"person\">舜</span>子，如<span class=\"person\">舜</span>让<span class=\"person\">尧</span>子。诸侯归之，然後<span class=\"person\">禹</span>践<span class=\"official\">天子</span>位。"}, {"t": "p", "id": "25.2", "html": "尧子<span class=\"person\">丹硃</span>，<span class=\"person\">舜</span>子<span class=\"person\">商均</span>，皆有疆土，以奉先祀。服其服，<span class=\"concept\">礼乐</span>如之。以客见<span class=\"official\">天子</span>，<span class=\"official\">天子</span>弗臣，示不敢专也。"}, {"t": "hr"}, {"t": "h2", "text": "总结：五帝世系"}, {"t": "p", "id": "26", "html": "自<span class=\"person\">黄帝</span>至<span class=\"person\">舜</span>、<span class=\"person\">禹</span>，皆同姓而异其国号，以章明德。"}, {"t": "list", "indent": true, "items": ["故<span class=\"person\">黄帝</span>为<span class=\"clan\">有熊</span>，", "<span class=\"person\">帝颛顼</span>为<span class=\"clan\">高阳</span>，", "<span class=\"person\">帝喾</span>为<span class=\"clan\">高辛</span>，", "<span class=\"person\">帝尧</span>为<span class=\"clan\">陶唐</span>，", "<span class=\"person\">帝舜</span>为<span class=\"clan\">有虞</span>。", "<span class=\"person\">帝禹</span>为<span class=\"clan\">夏后</span>而别氏，姓<span class=\"clan\">姒氏</span>。", "<span class=\"person\">契</span>为<span class=\"clan\">商</span>，姓<span class=\"clan\">子氏</span>。", "<span class=\"person\">弃</span>为<span class=\"clan\">周</span>，姓<span class=\"clan\">姬氏</span>。"]}, {"t": "hr"}, {"t": "h2", "text": "太史公曰"}, {"t": "p", "id": "27", "html": "<span class=\"person\">太史公</span>曰：学者多称<span class=\"clan\">五帝</span>，尚矣。然《尚书》独载<span class=\"person\">尧</span>以来；而<span class=\"concept\">百家</span>言<span class=\"person\">黄帝</span>，其文不雅驯，荐绅先生难言之。<span class=\"person\">孔子</span>所传<span class=\"person\">宰予</span>问<span class=\"clan\">五帝</span>德及帝系姓，<span class=\"concept\">儒者</span>或不传。余尝西至<span class=\"place\">空桐</span>，北过<span class=\"place\">涿鹿</span>，东渐於<span class=\"place\">海</span>，南浮<span class=\"place\">江淮</span>矣，至长老皆各往往称<span class=\"person\">黄帝</span>、<span class=\"person\">尧</span>、<span class=\"person\">舜</span>之处，风教固殊焉，总之不离古文者近是。予观《春秋》、《国语》，其<span class=\"tribe\">发</span>明<span class=\"clan\">五帝</span>德、帝系姓章矣，顾弟弗深考，其所表见皆不虚。书缺有间矣，其轶乃时时见於他说。非好学深思，心知其意，固难为浅见寡闻道也。余并论次，择其言尤雅者，故著为<span class=\"concept\">本纪</span>书首。"}, {"t": "h3", "text": "赞"}, {"t": "cite", "id": "28", "html": "帝出<span class=\"person\">少典</span>，居于<span class=\"place\">轩丘</span>。既代炎历，遂禽<span class=\"person\">蚩尤</span>。<span class=\"person\">高阳</span>嗣位，静深有谋。小大远近，莫不怀柔。爰洎<span class=\"person\">帝喾</span>，列圣同休。<span class=\"person\">帝挚</span>之弟，其号<span class=\"person\">放勋</span>。就之如日，望之如云。<span class=\"place\">郁夷</span>东作，<span class=\"place\">昧谷</span>西曛。明扬仄陋，玄德升闻。能让<span class=\"concept\">天下</span>，贤哉<span class=\"timeref\">二君</span>！"}]};
+const NOTES_RAW = {"chapter":"001_五帝本纪","notes":[{"id":"n001","anchor_text":"","items":[{"source":"jijie","label":"集解","text":"凡是徐氏義，稱徐姓名以別之。餘者悉是駰注解，并集眾家義。"},{"source":"suoyin","label":"索隱","text":"紀者，記也。本其事而記之，故曰本紀。又紀，理也，絲縷有紀。而帝王書稱紀者，言爲後代綱紀也。"},{"source":"zhengyi","label":"正義","text":"鄭玄注《中候勅省圖》云：「德合五帝坐星者，稱帝。」又《坤靈圖》云：「德配天地，在正不在私，曰帝。」案：太史公依《世本》、《大戴禮》，以黃帝、顓頊、帝嚳、唐堯、虞舜爲五帝。譙周、應劭、宋均皆同。而孔安國《尚書序》，皇甫謐《帝王世紀》，孫氏注《世本》，並以伏犧、神農、黃帝爲三皇，少昊、顓頊、高辛、唐、虞爲五帝。裴松之《史目》云「天子稱本紀，諸侯曰世家」。本者，繫其本系，故曰本；紀者，理也，統理眾事，繫之年月，名之曰紀；第者，次序之目；一者，舉數之由：故曰《五帝本紀第一》。　《禮》云：「動則左史書之，言則右史書之。」《正義》云：「左陽，故記動。右陰，故記言。言爲《尚書》，事爲《春秋》。」案：春秋時置左右史，故云《史記》也。"}],"sentence_id":null},{"id":"n002","anchor_text":"黃帝者，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「號有熊。」"},{"source":"suoyin","label":"索隱","text":"案：有土德之瑞，土色黃，故稱黃帝，猶神農火德王而稱炎帝然也。此以黃帝爲五帝之首，蓋依《大戴禮五帝德》。又譙周、宋均亦以爲然。而孔安國、皇甫謐《帝王代紀》及孫氏注《系本》並以伏犧、神農、黃帝爲三皇，少昊、高陽、高辛、唐、虞爲五帝。注「號有熊」者，以其本是有熊國君之子故也。亦號軒轅氏。皇甫謐云：「居軒轅之丘，因以爲名，又以爲號。」又據《左傳》，亦號帝鴻氏也。"},{"source":"zhengyi","label":"正義","text":"《輿地志》云：「涿鹿本名彭城，黃帝初都，遷有熊也。」案：黃帝有熊國君，乃少典國君之次子，號曰有熊氏，又曰縉雲氏，又曰帝鴻氏，亦曰帝軒氏。母曰附寶，之祁野，見大電繞北斗樞星，感而懷孕，二十四月而生黃帝於壽丘。壽丘在魯東門之北，今在兗州曲阜縣東北六里。生日角龍顏，有景雲之瑞，以土德王，故曰黃帝。封泰山，禪亭亭。亭亭在牟陰。"}],"sentence_id":"s001"},{"id":"n003","anchor_text":"少典之子，","items":[{"source":"jijie","label":"集解","text":"譙周曰：「有熊國君，少典之子也。」皇甫謐曰：「有熊，今河南新鄭是也。」"},{"source":"suoyin","label":"索隱","text":"少典者，諸侯國號，非人名也。又案：《國語》云「少典娶有蟜氏女，生黃帝、炎帝」。然則炎帝亦少典之子。炎黃二帝雖則相承，如《帝王代紀》中閒凡隔八帝，五百餘年。若以少典是其父名，豈黃帝經五百餘年而始代炎帝後爲天子乎？何其年之長也！又案：《秦本紀》云「顓頊氏之裔孫曰女脩，吞玄鳥之卵而生大業，大業娶少典氏而生柏翳」。明少典是國號，非人名也。黃帝即少典氏後代之子孫，賈逵亦謂然，故《左傳》「高陽氏有才子八人」，亦謂其後代子孫而稱爲子是也。譙周字允南，蜀人，魏散騎常侍徵，不拜。此注所引者，是其人所著《古史考》之說也。皇甫謐字士安，晉人，號玄晏先生。今所引者，是其所作《帝王代紀》也。"}],"sentence_id":"s001"},{"id":"n004","anchor_text":"姓公孫，名曰軒轅。","items":[{"source":"suoyin","label":"索隱","text":"案：皇甫謐云「黃帝生於壽丘，長於姬水，因以爲姓。居軒轅之丘，因以爲名，又以爲號」。是本姓公孫，長居姬水，因改姓姬。"}],"sentence_id":"s001"},{"id":"n005","anchor_text":"生而神靈，弱而能言，","items":[{"source":"suoyin","label":"索隱","text":"弱謂幼弱時也。蓋未合能言之時而黃帝即言，所以爲神異也。潘岳有《哀弱子》篇，其子未七旬曰弱。"},{"source":"zhengyi","label":"正義","text":"言神異也。《易》曰「陰陽不測之謂神」，《書》云「人惟萬物之靈」，故謂之神靈也。"}],"sentence_id":"s002"},{"id":"n006","anchor_text":"幼而徇齊，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「《墨子》曰『年踰十五，則聰明心慮無不徇通矣』。」駰案：徇，疾；齊，速也。言聖德幼而疾速也。"},{"source":"suoyin","label":"索隱","text":"斯文未是。今案：徇，齊，皆德也。《書》曰「聰明齊聖」，《左傳》曰「子雖齊聖」，謂聖德齊肅也。又案：《孔子家語》及《大戴禮》並作「叡齊」，一本作「慧齊」。叡，慧，皆智也。太史公採《大戴禮》而爲此紀，今彼文無作「徇」者。《史記》舊本亦有作「濬齊」。蓋古字假借「徇」爲「濬」，濬，深也，義亦並通。《爾雅》「齊」「速」俱訓爲疾。《尚書大傳》曰「多聞而齊給」。鄭注云「齊，疾也」。今裴氏注云徇亦訓疾，未見所出。或當讀「徇」爲「迅」，迅於《爾雅》與齊俱訓疾，則迅濬雖異字，而音同也。又《爾雅》曰「宣，徇，遍也。濬，通也」。是「遍」之與「通」義亦相近。言黃帝幼而才智周徧，且辯給也。故《墨子》亦云「年踰五十，則聰明心慮不徇通矣」。俗本作「十五」，非是。案：謂年老踰五十不聰明，何得云「十五」？"}],"sentence_id":"s002"},{"id":"n007","anchor_text":"長而敦敏，成而聰明。","items":[{"source":"zhengyi","label":"正義","text":"成謂二十冠，成人也。聰明，聞見明辯也。此以上至「軒轅」，皆《大戴禮》文。"}],"sentence_id":"s002"},{"id":"n008","anchor_text":"軒轅之時，神農氏世衰。","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「《易》稱庖犧氏沒，神農氏作，是爲炎帝。」班固曰：「教民耕農，故號曰神農。」"},{"source":"suoyin","label":"索隱","text":"世衰，謂神農氏後代子孫道德衰薄，非指炎帝之身，即班固所謂「參盧」，皇甫謐所云「帝榆罔」是也。"},{"source":"zhengyi","label":"正義","text":"《帝王世紀》云：「神農氏，姜姓也。母曰任姒，有蟜氏女，登爲少典妃，遊華陽，有神龍首，感生炎帝。人身牛首，長於姜水。有聖德，以火德王，故號炎帝。初都陳，又徙魯。又曰魁隗氏，又曰連山氏，又曰列山氏。」《括地志》云：「厲山在隨州隨縣北百里，山東有石穴。（曰）〔昔〕神農生於厲鄉，所謂列山氏也。春秋時爲厲國。」"}],"sentence_id":"s003"},{"id":"n009","anchor_text":"氏弗能征。於是軒轅乃習用干戈，以征不享，","items":[{"source":"suoyin","label":"索隱","text":"謂用干戈以征諸侯之不朝享者。本或作「亭」，亭訓直，以征諸侯之不直者。"}],"sentence_id":"s005"},{"id":"n010","anchor_text":"諸侯咸來賓從。而蚩尤最爲暴，莫能伐。","items":[{"source":"jijie","label":"集解","text":"應劭曰：「蚩尤，古天子。」瓚曰：「《孔子三朝記》曰『蚩尤，庶人之貪者』。」"},{"source":"suoyin","label":"索隱","text":"案：此紀云「諸侯相侵伐，蚩尤最爲暴」，則蚩尤非爲天子也。又《管子》曰「蚩尤受盧山之金而作五兵」，明非庶人，蓋諸侯號也。劉向《別錄》云「孔子見魯哀公問政，比三朝，退而爲此記，故曰《三朝》。凡七篇，並入《大戴記》」。今此注見《用兵篇》也。"},{"source":"zhengyi","label":"正義","text":"《龍魚河圖》云：「黃帝攝政，有蚩尤兄弟八十一人，並獸身人語，銅頭鐵額，食沙石子，造立兵仗刀戟大弩，威振天下，誅殺無道，不慈仁。萬民欲令黃帝行天子事，黃帝以仁義不能禁止蚩尤，乃仰天而歎。天遣玄女下授黃帝兵信神符，制伏蚩尤，帝因使之主兵，以制八方。蚩尤沒後，天下復擾亂，黃帝遂畫蚩尤形像以威天下，天下咸謂蚩尤不死，八方萬邦皆爲弭服。」《山海經》云：「黃帝令應龍攻蚩尤。蚩尤請風伯、雨師以從，大風雨。黃帝乃下天女曰『魃』，以止雨。雨止，遂殺蚩尤。」孔安國曰「九黎君號蚩尤」是也。"}],"sentence_id":"s006"},{"id":"n011","anchor_text":"侵陵諸侯，諸侯咸歸軒轅。軒轅乃修德振兵，","items":[{"source":"zhengyi","label":"正義","text":"振，整也。"}],"sentence_id":"s007"},{"id":"n012","anchor_text":"治五氣，","items":[{"source":"jijie","label":"集解","text":"王肅曰：「五行之氣。」"},{"source":"suoyin","label":"索隱","text":"謂春甲乙木氣，夏丙丁火氣之屬，是五氣也。"}],"sentence_id":"s008"},{"id":"n013","anchor_text":"蓺五種，","items":[{"source":"jijie","label":"集解","text":"駰案：蓺，樹也。《詩》云「蓺之荏菽」。《周禮》曰「榖宜五種」。鄭玄曰「五種，黍、稷、菽、麥、稻也」。"},{"source":"suoyin","label":"索隱","text":"藝，種也，樹也。五種即五穀也，音朱用反。此注所引見《詩大雅生民》之篇。《爾雅》云「荏菽，戎菽」也，郭璞曰「今之胡豆」，鄭氏曰「豆之大者」是也。"},{"source":"zhengyi","label":"正義","text":"蓺音魚曳反。種音腫。"}],"sentence_id":"s008"},{"id":"n014","anchor_text":"撫萬民，度四方，","items":[{"source":"jijie","label":"集解","text":"王肅曰：「度四方而安撫之。」"},{"source":"zhengyi","label":"正義","text":"度音徒洛反。"}],"sentence_id":"s008"},{"id":"n015","anchor_text":"教熊羆貔貅貙虎，","items":[{"source":"suoyin","label":"索隱","text":"《書》云「如虎如貔」，《爾雅》云「貔，白狐」，《禮》曰「前有摯獸，則載貔貅」是也。《爾雅》又曰「貙獌似貍」。此六者猛獸，可以教戰。《周禮》有服不氏，掌教擾猛獸。即古服牛乘馬，亦其類也。"},{"source":"zhengyi","label":"正義","text":"熊音雄。羆音碑。膍音毗。貅音休。貙音丑于反。羆如熊，黃白色。郭璞云：「貔，執夷，虎屬也。」案：言教士卒習戰，以猛獸之名名之，用威敵也。"}],"sentence_id":"s008"},{"id":"n016","anchor_text":"以與炎帝戰於阪泉之野。","items":[{"source":"jijie","label":"集解","text":"服虔曰：「阪泉，地名。」皇甫謐曰：「在上谷。」"},{"source":"zhengyi","label":"正義","text":"阪音白板反。《括地志》云：「阪泉，今名黃帝泉，在嬀州懷戎縣東五十六里。出五里至涿鹿東北，與涿水合。又有涿鹿故城，在嬀州東南五十里，本黃帝所都也。《晉太康地里志》云『涿鹿城東一里有阪泉，上有黃帝祠』。」案：阪泉之野則平野之地也。"}],"sentence_id":"s008"},{"id":"n017","anchor_text":"三戰，然後得其志。","items":[{"source":"zhengyi","label":"正義","text":"謂黃帝克炎帝之後。"}],"sentence_id":"s009"},{"id":"n018","anchor_text":"蚩尤作亂，不用帝命。","items":[{"source":"zhengyi","label":"正義","text":"言蚩尤不用黃帝之命也。"}],"sentence_id":"s010"},{"id":"n019","anchor_text":"於是黃帝乃徵師諸侯，與蚩尤戰於涿鹿之野，","items":[{"source":"jijie","label":"集解","text":"服虔曰：「涿鹿，山名，在涿郡。」張晏曰：「涿鹿在上谷。」"},{"source":"suoyin","label":"索隱","text":"或作「濁鹿」，古今字異耳。案：《地理志》上谷有涿鹿縣，然則服虔云「在涿郡」者，誤也。"}],"sentence_id":"s011"},{"id":"n020","anchor_text":"遂禽殺蚩尤。","items":[{"source":"jijie","label":"集解","text":"《皇覽》曰：「蚩尤冢在東平郡壽張縣闞鄉城中，高七丈，民常十月祀之。有赤氣出，如匹絳帛，民名爲蚩尤旗。肩髀冢在山陽郡鉅野縣重聚，大小與闞冢等。傳言黃帝與蚩尤戰於涿鹿之野，黃帝殺之，身體異處，故別葬之。」"},{"source":"suoyin","label":"索隱","text":"案：皇甫謐云「黃帝使應龍殺蚩尤于凶黎之谷」。或曰，黃帝斬蚩尤于中冀，因名其地曰「絕轡之野。」注「皇覽」，書名也。記先代冢墓之處，宜皇王之省覽，故日《皇覽》。是魏人王象、繆襲等所撰也。"}],"sentence_id":"s011"},{"id":"n021","anchor_text":"。天下有不順者，黃帝從而征之，平者去之，","items":[{"source":"zhengyi","label":"正義","text":"平服者即去之。"}],"sentence_id":"s013"},{"id":"n022","anchor_text":"披山通道，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「披，他本亦作『陂』。字蓋當音詖，陂者旁其邊之謂也。披語誠合今世，然古今不必同也。」"},{"source":"suoyin","label":"索隱","text":"披音如字，謂披山林草木而行以通道也。徐廣音詖，恐稍紆也。"}],"sentence_id":"s013"},{"id":"n023","anchor_text":"東至于海，登丸山，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「丸，一作『凡』。」駰案：《地理志》曰丸山在郎邪朱虛縣。"},{"source":"suoyin","label":"索隱","text":"注「丸，一作『凡』」，凡音扶嚴反。"},{"source":"zhengyi","label":"正義","text":"丸音桓。《括地志》云：「丸山即丹山，在青州臨朐縣界朱虛故縣西北二十里，丹水出焉。」丸音紈。守節案：《地志》唯有凡山，蓋凡山丸山是一山耳。諸處字誤，或「丸」或「凡」也。《漢書郊祀志》云「禪丸山」，顏師古云「在朱虛」，亦與《括地志》相合，明丸山是也。"}],"sentence_id":"s014"},{"id":"n024","anchor_text":"及岱宗。","items":[{"source":"zhengyi","label":"正義","text":"泰山，東岳也。在兗州博城縣西北三十里也。"}],"sentence_id":"s014"},{"id":"n025","anchor_text":"西至于空桐，","items":[{"source":"jijie","label":"集解","text":"應劭曰：「山名。」韋昭曰：「在隴右。」"}],"sentence_id":"s015"},{"id":"n026","anchor_text":"登雞頭。","items":[{"source":"suoyin","label":"索隱","text":"山名也。後漢王孟塞雞頭道，在隴西。一曰崆峒山之別名。"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「空桐山在肅州福祿縣東南六十里。《抱朴子內篇》云『黃帝西見中黃子，受九品之方，過空桐，從廣成子受自然之經』，即此山。」《括地志》又云：「笄頭山一名崆峒山，在原州平高縣西百里，《禹貢》涇水所出。《輿地志》云或即雞頭山也。酈元云蓋大隴山異名也。《莊子》云廣成子學道崆峒山，黃帝問道於廣成子，蓋在此。」案：二處崆峒皆云黃帝登之，未詳孰是。"}],"sentence_id":"s015"},{"id":"n027","anchor_text":"南至于江，登熊、湘。","items":[{"source":"jijie","label":"集解","text":"《封禪書》曰：「南伐至于召陵，登熊山。」《地理志》曰湘山在長沙益陽縣。"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「熊耳山在商州上洛縣西十里，齊桓公登之以望江漢也。湘山一名艑山，在岳州巴陵縣南十八里也。」"}],"sentence_id":"s016"},{"id":"n028","anchor_text":"北逐葷粥，","items":[{"source":"jijie","label":"集解","text":"《匈奴傳》曰：「唐虞以上有山戎、獫狁、葷粥，居于北蠻。」"},{"source":"suoyin","label":"索隱","text":"匈奴別名也。唐虞已上曰山戎，亦曰熏粥，夏曰淳維，殷曰鬼方，周曰玁狁，漢曰匈奴。"},{"source":"zhengyi","label":"正義","text":"葷音薰。粥音育。"}],"sentence_id":"s017"},{"id":"n029","anchor_text":"合符釜山，","items":[{"source":"suoyin","label":"索隱","text":"合諸侯符契圭瑞，而朝之於釜山，猶禹會諸侯於塗山然也。又案：郭子橫《洞冥記》稱東方朔云「東海大明之墟有釜山，山出瑞雲，應王者之符命」，如堯時有赤雲之祥之類。蓋黃帝黃雲之瑞，故曰「合符應於釜山」也。"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「釜山在嬀州懷戎縣北三里，山上有舜廟。」"}],"sentence_id":"s017"},{"id":"n030","anchor_text":"而邑于涿鹿之阿。","items":[{"source":"zhengyi","label":"正義","text":"廣平曰阿。涿鹿，山名，已見上。涿鹿故城在山下，即黃帝所都之邑於山下平地。"}],"sentence_id":"s017"},{"id":"n031","anchor_text":"遷徙往來無常處，以師兵爲營衞。","items":[{"source":"zhengyi","label":"正義","text":"環繞軍兵爲營以自衛，若轅門即其遺象。"}],"sentence_id":"s018"},{"id":"n032","anchor_text":"官名皆以雲命，爲雲師。","items":[{"source":"jijie","label":"集解","text":"應劭曰：「黃帝受命，有雲瑞，故以雲紀事也。春官爲青雲，夏官爲縉雲，秋官爲白雲，冬官爲黑雲，中官爲黃雲。」張晏曰：「黃帝有景雲之應，因以名師與官。」"}],"sentence_id":"s019"},{"id":"n033","anchor_text":"置左右大監，監于萬國。","items":[{"source":"zhengyi","label":"正義","text":"監，上監去聲，下監平聲。若周邵分陝也。"}],"sentence_id":"s020"},{"id":"n034","anchor_text":"萬國和，而鬼神山川封禪與爲多焉。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「多，一作『朋』。」"},{"source":"suoyin","label":"索隱","text":"與音羊汝反。與猶許也。言萬國和同，而鬼神山川封禪祭祀之事，自古以來帝皇之中，推許黃帝以爲多。多猶大也。"}],"sentence_id":"s021"},{"id":"n035","anchor_text":"獲寶鼎，迎日推筴。","items":[{"source":"jijie","label":"集解","text":"晉灼曰：「策，數也，迎數之也。」瓚曰：「日月朔望未來而推之，故曰迎日。」"},{"source":"suoyin","label":"索隱","text":"《封禪書》曰「黃帝得寶鼎神策」，下云「於是推策迎日」，則神策者，神蓍也。黃帝得蓍以推筭曆數，於是逆知節氣日辰之將來，故曰推策迎日也。"},{"source":"zhengyi","label":"正義","text":"筴音策。迎，逆也。黃帝受神筴，命大撓造甲子，容成造曆是也。"}],"sentence_id":"s022"},{"id":"n036","anchor_text":"舉風后、力牧、常先、大鴻","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「風后，黃帝三公也。」班固曰：「力牧，黃帝相也。」大鴻，見《封禪書》。"},{"source":"zhengyi","label":"正義","text":"舉，任用。四人皆帝臣也。《帝王世紀》云：「黃帝夢大風吹天下之塵垢皆去，又夢人執千鈞之弩，驅羊萬羣。帝寤而歎曰：『風爲號令，執政者也。垢去土，后在也。天下豈有姓風名后者哉？夫千鈞之弩，異力者也。驅羊數萬羣，能牧民爲善者也，天下豈有姓力名牧者哉？』於是依二占而求之，得風后於海隅，登以爲相。得力牧於大澤，進以爲將。黃帝因著《占夢經》十一卷。」《藝文志》云：「《風后兵法》十三篇，圖二卷，《孤虛》二十卷，《力牧兵法》十五篇。」鄭玄云：「風后，黃帝之三公也。」案：黃帝仰天地置列侯眾官，以風后配上台，天老配中台，五聖配下台，謂之三公也。《封禪書》云「鬼臾區號大鴻，黃帝大臣也。死葬雍，故鴻冢是」。《藝文志》云「鬼容區兵法三篇」也。"}],"sentence_id":"s023"},{"id":"n037","anchor_text":"以治民。順天地之紀，","items":[{"source":"zhengyi","label":"正義","text":"言黃帝順天地陰陽四時之紀也。"}],"sentence_id":"s024"},{"id":"n038","anchor_text":"幽明之占，","items":[{"source":"zhengyi","label":"正義","text":"幽，陰；明，陽也。占，數也。言陰陽五行，黃帝占數而知之。此文見《大戴禮》。"}],"sentence_id":"s024"},{"id":"n039","anchor_text":"死生之說，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「一云『幽明之數，合死生之說』。」"},{"source":"zhengyi","label":"正義","text":"說謂儀制也。民之生死。此謂作儀制禮則之說。"}],"sentence_id":"s024"},{"id":"n040","anchor_text":"存亡之難。","items":[{"source":"suoyin","label":"索隱","text":"存亡猶安危也。《易》曰「危者安其位，亡者保其存」是也。難猶說也。凡事是非未盡，假以往來之詞，則曰難。又上文有「死生之說」，故此云「存亡之難」，所以韓非著書有說林、說難也。"},{"source":"zhengyi","label":"正義","text":"難音乃憚反。存亡猶生死也。黃帝之前，未有衣裳屋宇。及黃帝造屋宇，制衣服，營殯葬，萬民故免存亡之難。"}],"sentence_id":"s024"},{"id":"n041","anchor_text":"時播百穀草木，","items":[{"source":"jijie","label":"集解","text":"王肅曰：「時，是也。」"},{"source":"suoyin","label":"索隱","text":"爲一句。"},{"source":"zhengyi","label":"正義","text":"言順四時之所宜而布種百穀草木也。"}],"sentence_id":"s025"},{"id":"n042","anchor_text":"淳化鳥獸蟲蛾，","items":[{"source":"suoyin","label":"索隱","text":"爲一句。蛾音牛綺反。一作「豸」。（豸）言淳化廣被及之。"},{"source":"zhengyi","label":"正義","text":"蛾音魚起反。又音豸，豸音直氏反。蟻，蚍蜉也。《爾雅》曰：「有足曰蟲，無足曰豸。」"}],"sentence_id":"s025"},{"id":"n043","anchor_text":"旁羅日月星辰水波","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「一作『沃』。」"}],"sentence_id":"s025"},{"id":"n044","anchor_text":"土石金玉，","items":[{"source":"suoyin","label":"索隱","text":"旁，非一方。羅，廣布也。今案：《大戴禮》作「歷離」。離即羅也。言帝德旁羅日月星辰水波，及至土石金玉。謂日月揚光，海水不波，山不藏珍，皆是帝德廣被也。"},{"source":"zhengyi","label":"正義","text":"旁羅猶遍布也。日月，陰陽時節也。星，二十八宿也。辰，日月所會也。水波，瀾漪也。言天不異災，土無別害，水少波浪，山出珍寶。"}],"sentence_id":"s025"},{"id":"n045","anchor_text":"勞勤心力耳目，節用水火材物。","items":[{"source":"zhengyi","label":"正義","text":"節，時節也。水，陂障決洩也。火，山野禁放也。材，木也。物，事也。言黃帝教民，江湖陂澤山林原隰皆收採禁捕以時，用之有節，令得其利也。《大戴禮》云「宰我問於孔子曰：『予聞榮伊曰黃帝三百年。請問黃帝者人耶？何以至三百年？。』」孔子曰：『勞勤心力耳目，節用水火材物，生而民得其利百年，死而民畏其神百年，亡而民用其教百年，故曰三百年也。』」"}],"sentence_id":"s025"},{"id":"n046","anchor_text":"有土德之瑞，故號黃帝。","items":[{"source":"suoyin","label":"索隱","text":"炎帝火，黃帝土代之，即「黃龍地螾見」是也。螾，土精，大五六圍，長十餘丈。螾音引。"},{"source":"zhengyi","label":"正義","text":"螾音以刃反。"}],"sentence_id":"s026"},{"id":"n047","anchor_text":"黃帝二十五子，其得姓者十四人。","items":[{"source":"suoyin","label":"索隱","text":"舊解破四爲三，言得姓十三人耳。今案：《國語》胥臣云「黃帝之子二十五宗，其得姓者十四人，爲十二姓，姬、酉、祁、己、滕、葴、任、荀、僖、姞、儇、衣是也。唯青陽與夷鼓同己姓」。又云「青陽與蒼林爲姬姓」。是則十四人爲十二姓，其文甚明。唯姬姓再稱青陽與蒼林，蓋《國語》文誤，所以致令前儒共疑。其姬姓青陽當爲玄囂，是帝嚳祖本與黃帝同姬姓。其《國語》上文青陽，即是少昊金天氏爲己姓者耳。既理在不疑，無煩破四爲三。"}],"sentence_id":"s027"},{"id":"n048","anchor_text":"黃帝居軒轅之丘，","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「受國於有熊，居軒轅之丘，故因以爲名，又以爲號。《山海經》曰『在窮山之際，西射之南』。」張晏曰：「作軒冕之服，故謂之軒轅。」"}],"sentence_id":"s028"},{"id":"n049","anchor_text":"而娶於西陵之女，","items":[{"source":"zhengyi","label":"正義","text":"西陵，國名也。"}],"sentence_id":"s028"},{"id":"n050","anchor_text":"是爲嫘祖。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「祖，一作『俎』。嫘，力追反。」"},{"source":"suoyin","label":"索隱","text":"一曰雷祖，音力堆反。"},{"source":"zhengyi","label":"正義","text":"一作「傫」。"}],"sentence_id":"s028"},{"id":"n051","anchor_text":"嫘祖爲黃帝正妃，","items":[{"source":"suoyin","label":"索隱","text":"案：黃帝立四妃，象后妃四星。皇甫謐云：「元妃西陵氏女，曰累祖，生昌意。次妃方雷氏女，曰女節，生青陽。次妃彤魚氏女，生夷鼓，一名蒼林。次妃嫫母，班在三人之下。」案：《國語》夷鼓、蒼林是二人。又案：《漢書古今人表》彤魚氏生夷鼓，嫫母生蒼林，不得如謐所說。太史公乃據《大戴禮》，以累祖生昌意及玄囂，玄囂即青陽也。皇甫謐以青陽爲少昊，乃方雷氏所生，是其所見異也。"}],"sentence_id":"s029"},{"id":"n052","anchor_text":"子，其後皆有天下：其一曰玄囂，是爲青陽，","items":[{"source":"suoyin","label":"索隱","text":"玄囂，帝嚳之祖。案：皇甫謐及宋衷皆云玄囂青陽即少昊也。今此紀下云「玄囂不得在帝位」，則太史公意青陽非少昊明矣。而此又云「玄囂是爲青陽」，當是誤也。謂二人皆黃帝子，並列其名，所以前史因誤以玄囂青陽爲一人耳。宋衷又云：「玄囂青陽是爲少昊，繼黃帝立者，而史不敍，蓋少昊金德王，非五運之次，故敍五帝不數之也。」"}],"sentence_id":"s029"},{"id":"n053","anchor_text":"青陽降居江水；","items":[{"source":"zhengyi","label":"正義","text":"《括地志》云：「安陽故城在豫州新息縣西南八十里。應劭云古江國也。《地理志》亦云安陽古江國也。」"}],"sentence_id":"s029"},{"id":"n054","anchor_text":"其二曰昌意，降居若水。","items":[{"source":"suoyin","label":"索隱","text":"降，下也。言帝子爲諸侯，降居江水、〔若水〕。江水、若水皆在蜀，即所封國也。《水經》曰「水出旄牛徼外，東南至故關爲若水，南過邛都，又東北至朱提縣爲盧江水」，是蜀有此二水也。"}],"sentence_id":"s029"},{"id":"n055","anchor_text":"蜀山氏女，曰昌僕，生高陽，高陽有聖悳焉。","items":[{"source":"zhengyi","label":"正義","text":"華陽國志及《十三州志》云：「蜀之先肇於人皇之際。黃帝爲子昌意娶蜀山氏，後子孫因封焉。帝顓頊高陽氏，黃帝之孫，昌意之子，母曰昌僕，亦謂之女樞。」《河圖》云：「瑤光如蜺貫月，正白，感女樞於幽房之宮，生顓頊，首戴干戈，有德文也。」"}],"sentence_id":"s030"},{"id":"n056","anchor_text":"黃帝崩，","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「在位百年而崩，年百一十一歲。」"},{"source":"suoyin","label":"索隱","text":"案：《大戴禮》「宰我問孔子曰：『榮伊言黃帝三百年，請問黃帝何人也？抑非人也？何以至三百年乎？』對曰：『生而人得其利百年，死而人畏其神百年，亡而人用其教百年。』」則士安之說略可憑矣。"},{"source":"zhengyi","label":"正義","text":"《列仙傳》云：「軒轅自擇亡日與羣臣辭。還葬橋山，山崩，棺空，唯有劍舄在棺焉。」"}],"sentence_id":"s031"},{"id":"n057","anchor_text":"葬橋山。","items":[{"source":"jijie","label":"集解","text":"《皇覽》曰：「黃帝冢在上郡橋山。」"},{"source":"suoyin","label":"索隱","text":"《地理志》橋山在上郡陽周縣，山有黃帝冢也。"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「黃帝陵在寧州羅川縣東八十里子午山。《地理志》云上郡陽周縣橋山南有黃帝冢。」案：陽周，隋改爲羅川。《爾雅》云山銳而高曰橋也。」"}],"sentence_id":"s031"},{"id":"n058","anchor_text":"帝顓頊高陽者，","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「都帝丘，今東郡濮陽是也。」"},{"source":"suoyin","label":"索隱","text":"宋衷云：「顓頊，名；高陽，有天下號也。」張晏云：「高陽者，所興地名也。」"}],"sentence_id":"s033"},{"id":"n059","anchor_text":"也。靜淵以有謀，疏通而知事；養材以任地，","items":[{"source":"suoyin","label":"索隱","text":"言能養材物以任地。《大戴禮》作「養財」。"}],"sentence_id":"s034"},{"id":"n060","anchor_text":"載時","items":[{"source":"suoyin","label":"索隱","text":"載，行也。言行四時以象天。《大戴禮》作「履時以象天」。履亦踐而行也。"}],"sentence_id":"s034"},{"id":"n061","anchor_text":"以象天，依鬼神以制義，","items":[{"source":"suoyin","label":"索隱","text":"鬼神聰明正直，當盡心敬事，因制尊卑之義，故《禮》曰「降于祖廟之謂仁義」是也。"},{"source":"zhengyi","label":"正義","text":"鬼之靈者曰神也。鬼神謂山川之神也。能興雲致雨，潤養萬物也，故己依馮之剬義也。剬，古制字。"}],"sentence_id":"s034"},{"id":"n062","anchor_text":"治氣","items":[{"source":"suoyin","label":"索隱","text":"謂理四時五行之氣以教化萬人也。"}],"sentence_id":"s034"},{"id":"n063","anchor_text":"以教化，絜誠以祭祀。北至于幽陵，","items":[{"source":"zhengyi","label":"正義","text":"幽州也。"}],"sentence_id":"s034"},{"id":"n064","anchor_text":"南至于交阯，","items":[{"source":"zhengyi","label":"正義","text":"阯音止，交州也。"}],"sentence_id":"s035"},{"id":"n065","anchor_text":"西至于流沙，","items":[{"source":"jijie","label":"集解","text":"《地理志》曰流沙在張掖居延縣。"},{"source":"zhengyi","label":"正義","text":"濟，渡也。《括地志》云：「居延海南，甘州張掖縣東北千六十四里是。」"}],"sentence_id":"s035"},{"id":"n066","anchor_text":"東至于蟠木。","items":[{"source":"jijie","label":"集解","text":"海外經曰：「東海中有山焉，名曰度索。上有大桃樹，屈蟠三千里。東北有門，名曰鬼門，萬鬼所聚也。天帝使神人守之，一名神荼，一名鬱壘，主閱領萬鬼。若害人之鬼，以葦索縛之，射以桃弧，投虎食也。」"}],"sentence_id":"s035"},{"id":"n067","anchor_text":"動靜之物，","items":[{"source":"zhengyi","label":"正義","text":"動物謂鳥獸之類，靜物謂草木之類。"}],"sentence_id":"s036"},{"id":"n068","anchor_text":"大小之神，","items":[{"source":"zhengyi","label":"正義","text":"大謂五嶽、四瀆，小謂丘陵墳衍。"}],"sentence_id":"s036"},{"id":"n069","anchor_text":"日月所照，莫不砥屬。","items":[{"source":"jijie","label":"集解","text":"王肅曰：「砥，平也。四遠皆平而來服屬。」"},{"source":"suoyin","label":"索隱","text":"依王肅音止蜀，據《大戴禮》作「砥礪」也。"}],"sentence_id":"s036"},{"id":"n070","anchor_text":"帝顓頊生子曰窮蟬。","items":[{"source":"suoyin","label":"索隱","text":"《系本》作「窮係」。宋衷云：「一云窮係，謚也。」"},{"source":"zhengyi","label":"正義","text":"帝舜之高祖也。"}],"sentence_id":"s037"},{"id":"n071","anchor_text":"顓頊崩，","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「在位七十八年，年九十八。」《皇覽》曰：「顓頊冢在東郡濮陽頓丘城門外廣陽里中。頓丘者城門，名頓丘道。」"},{"source":"suoyin","label":"索隱","text":"皇甫謐云：「據左氏，歲在鶉火而崩，葬東郡。」又《山海經》曰：「顓頊葬鮒魚山之陽，九嬪葬其陰。」"}],"sentence_id":"s038"},{"id":"n072","anchor_text":"帝嚳高辛者，","items":[{"source":"jijie","label":"集解","text":"張晏曰：「少昊以前，天下之號象其德。顓頊以來，天下之號因其名。高陽、高辛皆所興之地名；顓頊與嚳皆以字爲號：上古質故也。」"},{"source":"suoyin","label":"索隱","text":"宋衷曰：「高辛地名，因以爲號。嚳，名也。」皇甫謐云：「帝嚳名夋也。」"},{"source":"zhengyi","label":"正義","text":"《帝王紀》云：「俈母無聞焉。」"}],"sentence_id":"s039"},{"id":"n073","anchor_text":"黃帝之曾孫也。高辛父曰蟜極，","items":[{"source":"zhengyi","label":"正義","text":"蟜音居兆反。本作「橋」，音同。又巨遙反。帝堯之祖也。"}],"sentence_id":"s039"},{"id":"n074","anchor_text":"。自玄囂與蟜極皆不得在位，至高辛即帝位。","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「都亳，今河南偃師是。」"}],"sentence_id":"s041"},{"id":"n075","anchor_text":"高辛生而神靈，自言其名。","items":[{"source":"zhengyi","label":"正義","text":"《帝王紀》云：「帝俈高辛，姬姓也。其母生見其神異，自言其名曰岌。齠齔有聖德，年十五而佐顓頊，三十登位，都亳，以人事紀官也。」"}],"sentence_id":"s043"},{"id":"n076","anchor_text":"用之，撫教萬民而利誨之，曆日月而迎送之，","items":[{"source":"zhengyi","label":"正義","text":"言作曆弦、望、晦、朔，日月未至而迎之，過而送之，上「迎日推策」是也。"}],"sentence_id":"s048"},{"id":"n077","anchor_text":"明鬼神而敬事之。","items":[{"source":"zhengyi","label":"正義","text":"天神曰神，人神曰鬼。又云聖人之精氣謂之神，賢人之精氣謂之鬼。言明識鬼神而敬事也。"}],"sentence_id":"s048"},{"id":"n078","anchor_text":"其色郁郁，其德嶷嶷。","items":[{"source":"suoyin","label":"索隱","text":"郁郁猶穆穆也。嶷嶷，德高也。今案：《大戴禮》「郁」作「神」，「嶷」作「俟」。"}],"sentence_id":"s049"},{"id":"n079","anchor_text":"其動也時，其服也士。","items":[{"source":"suoyin","label":"索隱","text":"舉動應天時，衣服服士服，言其公且廉也。"}],"sentence_id":"s050"},{"id":"n080","anchor_text":"帝嚳溉執中而徧天下，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「古『既』字作水旁。『徧』字一作『尹』。」"},{"source":"suoyin","label":"索隱","text":"即《尚書》「允執厥中」是也。"},{"source":"zhengyi","label":"正義","text":"溉音既。言帝俈治民，若水之溉灌，平等而執中正，徧於天下也。"}],"sentence_id":"s051"},{"id":"n081","anchor_text":"日月所照，風雨所至，莫不從服。","items":[{"source":"zhengyi","label":"正義","text":"以上大戴文也。"}],"sentence_id":"s051"},{"id":"n082","anchor_text":"帝嚳娶陳鋒氏女，","items":[{"source":"suoyin","label":"索隱","text":"鋒音峯。案：《系本》作「陳酆氏」。皇甫謐云「陳鋒氏女曰慶都」。慶都，名也。"},{"source":"zhengyi","label":"正義","text":"鋒音峯。又作「豐」。《帝王紀》云「帝俈有四妃，卜其子皆有天下。元妃有邰氏女，曰姜嫄，生后稷。次妃有娀氏女，曰簡狄，生卨，次妃陳豐氏女，曰慶都，生放勛。次妃娵訾氏女，曰常儀，生帝摯」也。"}],"sentence_id":"s052"},{"id":"n083","anchor_text":"生放勳。","items":[{"source":"zhengyi","label":"正義","text":"放音方往反。勳亦作「勛」，音許云反。言堯能放上代之功，故曰放勛。謚堯。姓伊祁氏。《帝王紀》云：「帝堯陶唐氏，祁姓也。母慶都，十四月生堯。」"}],"sentence_id":"s052"},{"id":"n084","anchor_text":"娶娵訾氏女，生摯。","items":[{"source":"suoyin","label":"索隱","text":"案：皇甫謐云「女名常宜」也。"},{"source":"zhengyi","label":"正義","text":"娵，足須反。訾，紫移反。"}],"sentence_id":"s053"},{"id":"n085","anchor_text":"帝嚳崩，","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「在位七十年，年百五歲。」《皇覽》曰：「帝嚳冢在東郡濮陽頓丘城南臺陰野中。」"}],"sentence_id":"s054"},{"id":"n086","anchor_text":"而摯代立。帝摯立，不善（崩），","items":[{"source":"suoyin","label":"索隱","text":"古本作「不著」，音張慮反。俗本作「不善」。不善謂微弱，不著猶不著明。衛宏云：「摯立九年而唐侯德盛，因禪位焉。」"},{"source":"zhengyi","label":"正義","text":"《帝王紀》云：「帝摯之母於四人中班最在下，而摯於兄弟最長，得登帝位。封異母弟放勛爲唐侯。摯在位九年，政微弱，而唐侯德盛，諸侯歸之，摯服其義，乃率羣臣造唐而致禪。唐侯自知有天命，乃受帝禪，乃封摯於高辛。」今定州唐縣也。"}],"sentence_id":"s054"},{"id":"n087","anchor_text":"帝堯者，","items":[{"source":"jijie","label":"集解","text":"謚法曰：「翼善傳聖曰堯。」"},{"source":"suoyin","label":"索隱","text":"堯，謚也。放勳，名。帝嚳之子，姓伊祁氏。案：皇甫謐云「堯初生時，其母在三阿之南，寄於伊長孺之家，故從母所居爲姓也」。"},{"source":"zhengyi","label":"正義","text":"徐廣云：「號陶唐。」《帝王紀》云：「堯都平陽，於詩爲唐國。」徐才宗國都城記云：「唐國，帝堯之裔子所封。其北，帝夏禹都，漢曰太原郡，在古冀州太行恆山之西。其南有晉水。」《括地志》云：「今晉州所理平陽故城是也。平陽河水一名晉水也。」"}],"sentence_id":"s056"},{"id":"n088","anchor_text":"放勳。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「號陶唐。」皇甫謐曰：「堯以甲申歲生，甲辰即帝位，甲午徵舜，甲寅舜代行天子事，辛巳崩，年百一十八，在位九十八年。」"}],"sentence_id":"s052"},{"id":"n089","anchor_text":"其仁如天，","items":[{"source":"suoyin","label":"索隱","text":"如天之函養也。"}],"sentence_id":"s057"},{"id":"n090","anchor_text":"其知如神。","items":[{"source":"suoyin","label":"索隱","text":"如神之微妙也。"}],"sentence_id":"s057"},{"id":"n091","anchor_text":"就之如日，","items":[{"source":"suoyin","label":"索隱","text":"如日之照臨，人咸依就之，若葵藿傾心以向日也。"}],"sentence_id":"s058"},{"id":"n092","anchor_text":"望之如雲。","items":[{"source":"suoyin","label":"索隱","text":"如雲之覆渥，言德化廣大而浸潤生人，人咸仰望之，故曰如百穀之仰膏雨也。"}],"sentence_id":"s058"},{"id":"n093","anchor_text":"富而不驕，貴而不舒。","items":[{"source":"suoyin","label":"索隱","text":"舒猶慢也。《大戴禮》作「不豫」。"}],"sentence_id":"s059"},{"id":"n094","anchor_text":"黃收純衣，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「純，一作『䊷』。」駰案：太古冠冕圖云「夏名冕曰收」。《禮記》曰「野夫黃冠」。鄭玄曰「純衣，士之祭服」。"},{"source":"suoyin","label":"索隱","text":"收，冕名。其色黃，故曰黃收，象古質素也。純，讀曰緇。"}],"sentence_id":"s060"},{"id":"n095","anchor_text":"彤車乘白馬。能明馴德，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「馴，古訓字。」"},{"source":"suoyin","label":"索隱","text":"《史記》「馴」字徐廣皆讀曰訓。訓，順也。言聖德能順人也。案：《尚書》作「俊德」，孔安國云「能明用俊德之士」，與此文意別也。"}],"sentence_id":"s060"},{"id":"n096","anchor_text":"以親九族。九族既睦，便章百姓。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「下云『便程東作』，然則訓平爲便也。」駰案：《尚書》並作「平」字。孔安國曰「百姓，百官」。鄭玄曰「百姓，羣臣之父子兄弟」。"},{"source":"suoyin","label":"索隱","text":"《古文尚書》作「平」，此文蓋讀「平」爲浦耕反。平既訓便，因作「便章」。其今文作「辯章」。古「平」字亦作「便」，音婢緣反。便則訓辯，遂爲辯章。鄒誕生本亦同也。"}],"sentence_id":"s062"},{"id":"n097","anchor_text":"乃命羲、和，","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「重黎之後，羲氏、和氏世掌天地之官。」"},{"source":"zhengyi","label":"正義","text":"呂刑傳云：「重即羲，黎即和，雖別爲氏族，而出自重黎也。」案：聖人不獨治，必須賢輔，乃命相天地之官，若《周禮》天官卿、地官卿也。"}],"sentence_id":"s064"},{"id":"n098","anchor_text":"敬順昊天，","items":[{"source":"zhengyi","label":"正義","text":"敬猶恭勤也。元氣昊然廣大，故云昊天。釋天云：「春爲蒼天，夏爲昊天，秋爲旻天，冬爲上天。」而獨言昊天者，以堯能敬天，大，故以昊大言之。"}],"sentence_id":"s064"},{"id":"n099","anchor_text":"數法","items":[{"source":"suoyin","label":"索隱","text":"《尚書》作「曆象日月」，則此言「數法」，是訓「曆象」二字，謂命羲和以曆數之法觀察日月星辰之早晚，以敬授人時也。"}],"sentence_id":"s064"},{"id":"n100","anchor_text":"日月星辰，","items":[{"source":"zhengyi","label":"正義","text":"曆數之法，日之甲乙，月之大小，昏明遞中之星，日月所會之辰，定其天數，以爲一歲之曆。"}],"sentence_id":"s025"},{"id":"n101","anchor_text":"敬授民時。","items":[{"source":"zhengyi","label":"正義","text":"《尚書》考靈耀云：「主春者，張昏中，可以種稷。主夏者，火昏中，可以種黍菽。主秋者，虛昏中，可以種麥。主冬者，昴昏中，可以收斂也。」天子視四星之中，知民緩急，故云敬授民時也。"}],"sentence_id":"s064"},{"id":"n102","anchor_text":"分命羲仲，居郁夷，曰暘谷。","items":[{"source":"jijie","label":"集解","text":"《尚書》作「嵎夷」。孔安國曰：「東表之地稱嵎夷。日出於暘谷。羲仲，治東方之官。」"},{"source":"suoyin","label":"索隱","text":"舊本作「湯谷」，今並依《尚書》字。案：《淮南子》曰「日出湯谷，浴於咸池」，則湯谷亦有他證明矣。又下曰「昧谷」，徐廣云「一作『柳』」，柳亦日入處地名。太史公博採經記而爲此史，廣記異聞，不必皆依《尚書》。蓋郁夷亦地之別名也。"},{"source":"zhengyi","label":"正義","text":"郁音隅。陽或作「暘」。《禹貢》青州云：「嵎夷既略。」案：嵎夷，青州也。堯命羲仲理東方青州嵎夷之地，日所出處，名曰陽明之谷。羲仲主東方之官，若《周禮》春官卿。"}],"sentence_id":"s065"},{"id":"n103","anchor_text":"敬道日出，便程東作。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「敬道出日，平均次序東作之事，以務農也。」"},{"source":"suoyin","label":"索隱","text":"劉伯莊傳皆依古史作平秩音。然《尚書大傳》曰「辯秩東作」，則是訓秩爲程，言便課其作程者也。"},{"source":"zhengyi","label":"正義","text":"道音導。便，程，並如字，後同。導，訓也。三春主東，故言日出。耕作在春，故言東作。命羲仲恭勤道訓萬民東作之事，使有程期。"}],"sentence_id":"s066"},{"id":"n104","anchor_text":"日中，星鳥，以殷中春。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「日中謂春分之日也。鳥，南方朱鳥七宿也。殷，正也。春分之昏，鳥星畢見，以正仲春之氣節。轉以推孟、季，則可知也。」"},{"source":"zhengyi","label":"正義","text":"下「中」音仲，夏、秋、冬並同。"}],"sentence_id":"s067"},{"id":"n105","anchor_text":"其民析，鳥獸字微。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「春事既起，丁壯就功，言其民老壯分析也。」乳化曰字。《尚書》「微」作「尾」字。說（文）云「尾，交接也」。"}],"sentence_id":"s068"},{"id":"n106","anchor_text":"申命羲叔，居南交。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「夏與春交，此治南方之官也。」"},{"source":"suoyin","label":"索隱","text":"孔注未是。然則冬與秋交，何故下無其文？且東嵎夷，西昧谷，北幽都，三方皆言地，而夏獨不言地，乃云與春交，斯不例之甚也。然南方地有名交阯者，或古文略舉一字名地，南交則是交阯不疑也。"},{"source":"zhengyi","label":"正義","text":"羲叔主南方官，若《周禮》夏官卿也。"}],"sentence_id":"s069"},{"id":"n107","anchor_text":"便程南爲，敬致。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「爲，化也。平序分南方化育之事，敬行其教，以致其功也。」"},{"source":"suoyin","label":"索隱","text":"爲依字讀。春言東作，夏言南爲，皆是耕作營爲勸農之事。孔安國強讀爲「訛」字，雖則訓化，解釋亦甚紆回也。"},{"source":"zhengyi","label":"正義","text":"爲音于僞反。命羲叔宜恭勤民事。致其種殖，使有程期也。"}],"sentence_id":"s070"},{"id":"n108","anchor_text":"日永，星火，以正中夏。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「永，長也，謂夏至之日。火，蒼龍之中星，舉中則七星見可知也，以正中夏之〔氣〕節。」馬融、王肅謂日長晝漏六十刻，鄭玄曰五十五刻。"}],"sentence_id":"s071"},{"id":"n109","anchor_text":"其民因，鳥獸希革。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「因，謂老弱因就在田之丁壯以助農也。夏時鳥獸毛羽希少改易也。革，改也。」"}],"sentence_id":"s072"},{"id":"n110","anchor_text":"申命和仲，","items":[{"source":"zhengyi","label":"正義","text":"和仲主西方之官，若《周禮》秋官卿也。"}],"sentence_id":"s073"},{"id":"n111","anchor_text":"居西土，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「一無『土』字。以爲西者，今天水之西縣也。」駰案：鄭玄曰「西者，隴西之西，今人謂之兌山」。"}],"sentence_id":"s073"},{"id":"n112","anchor_text":"曰昧谷。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「一作『柳谷』。」駰案：孔安國曰「日入于谷而天下冥，故曰昧谷。此居治西方之官，掌秋天之政也」。"}],"sentence_id":"s073"},{"id":"n113","anchor_text":"敬道日入，便程西成。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「秋，西方，萬物成也。」"}],"sentence_id":"s074"},{"id":"n114","anchor_text":"夜中，星虛，","items":[{"source":"suoyin","label":"索隱","text":"虛，舊依字讀，而鄒誕生音墟。案：虛星主墳墓，鄒氏或得其理。"}],"sentence_id":"s075"},{"id":"n115","anchor_text":"以正中秋。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「春言日，秋言夜，互相備也。虛，玄武之中星。亦言七星皆以秋分日見，以正三秋也。」"}],"sentence_id":"s075"},{"id":"n116","anchor_text":"其民夷易，鳥獸毛毨。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「夷，平也。老壯者在田，與夏平也。毨，理也。毛更生（曰）整理。」"}],"sentence_id":"s076"},{"id":"n117","anchor_text":"申命和叔；居北方，曰幽都。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「北稱幽都，謂所聚也。」"},{"source":"suoyin","label":"索隱","text":"《山海經》曰「北海之內有山名幽都」，蓋是也。"},{"source":"zhengyi","label":"正義","text":"案：北方幽州，陰聚之地，命和叔居理之。北方之官，若《周禮》冬官卿。"}],"sentence_id":"s077"},{"id":"n118","anchor_text":"便在伏物。","items":[{"source":"suoyin","label":"索隱","text":"使和叔察北方藏伏之物，謂人畜積聚等冬皆藏伏。尸子亦曰「北方者，伏方也」。《尚書》作「平在朔易」。今案：大傳云「便在伏物」，太史公據之而書。"}],"sentence_id":"s078"},{"id":"n119","anchor_text":"日短，星昴，以正中冬。","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「日短，冬至之日也。昴，白虎之中星。亦以七星並見，以正冬節也。」馬融、王肅謂日短晝漏四十刻。鄭玄曰四十五刻，失之。"}],"sentence_id":"s079"},{"id":"n120","anchor_text":"其民燠，鳥獸氄毛。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「氄音茸。」駰案：孔安國曰「民入室處，鳥獸皆生氄毳細毛以自溫也」。"}],"sentence_id":"s080"},{"id":"n121","anchor_text":"歲三百六十六日，以閏月正四時。","items":[{"source":"suoyin","label":"索隱","text":"夫周天三百六十五度四分度之一，是天度數也。而日行遲，一歲一周天；月行疾，一月一周天。日一日行一度，月一日行十三度十九分度之七。至二十九日半強，月行天一帀，又逐及日而與會。一年十二會，是爲十二月。每月二十九日過半。年分出小月六，是每歲餘六日。又大歲三百六十六日，小歲三百五十五日，舉全數云六十六日。其實一歲唯餘十一日弱。未滿三歲，已成一月，則置閏。若三年不置閏，則正月爲二月。九年差三月，則以春爲夏。十七年差六月，則四時皆反。以此四時不正，歲不成矣。故傳曰「歸餘於終，事則不悖」是也。"}],"sentence_id":"s081"},{"id":"n122","anchor_text":"信飭","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「古『勅』字。」"}],"sentence_id":"s047"},{"id":"n123","anchor_text":"堯曰：「誰可順此事？」","items":[{"source":"zhengyi","label":"正義","text":"言將登用之嗣位也。"}],"sentence_id":"s083"},{"id":"n124","anchor_text":"放齊曰：「嗣子丹朱開明。」","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「放齊，臣名。」"},{"source":"zhengyi","label":"正義","text":"放音方往反。鄭玄云：「帝堯胤嗣之子，名曰丹朱，開明也。」案：開，解而達也。《帝王紀》云：「堯娶散宜氏女，曰女皇，生丹朱。」汲冢紀年云：「后稷放帝子丹朱。」范汪荊州記云：「丹水縣在丹川，堯子朱之所封也。」《括地志》云：「丹水故城在鄧州內鄉縣西南百三十里。丹水故爲縣。」"}],"sentence_id":"s084"},{"id":"n125","anchor_text":"堯曰：「吁！頑凶，不用。」","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「吁，疑怪之辭。」"},{"source":"zhengyi","label":"正義","text":"《左傳》云：「口不道忠信之言爲嚚，心不則德義之經爲頑。」凶，訟也。言丹朱心既頑嚚，又好爭訟，不可用之。"}],"sentence_id":"s086"},{"id":"n126","anchor_text":"可者？」讙兜曰：「共工旁聚布功，可用。」","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「讙兜，臣名。」鄭玄曰：「共工，水官名。」"},{"source":"zhengyi","label":"正義","text":"兜音斗侯反。"}],"sentence_id":"s088"},{"id":"n127","anchor_text":"：「共工善言，其用僻，似恭漫天，不可。」","items":[{"source":"zhengyi","label":"正義","text":"漫音莫干反。共工善爲言語，用意邪僻也。似於恭敬，罪惡漫天，不可用也。"}],"sentence_id":"s089"},{"id":"n128","anchor_text":"堯又曰：「嗟，四嶽，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「四嶽，四時官，主方嶽之事。」"},{"source":"zhengyi","label":"正義","text":"嗟嘆鴻水，問四嶽誰能理也。孔安國云：「四嶽，即上羲和四子也。分掌四嶽之諸侯，故稱焉。」"}],"sentence_id":"s090"},{"id":"n129","anchor_text":"湯湯洪水滔天，浩浩懷山襄陵，","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「懷，包；襄，上也。」"},{"source":"zhengyi","label":"正義","text":"湯音商，今讀如字。蕩蕩，廣平之貌。言水奔突有所滌除，地上之物爲水漂流蕩蕩然。案：懷，藏，包裹之義，故懷爲包。釋言以襄爲駕，駕乘牛馬皆在上也。言水襄上乘陵，浩浩盛大，勢若漫天。"}],"sentence_id":"s090"},{"id":"n130","anchor_text":"下民其憂，有能使治者？」皆曰鯀可。","items":[{"source":"jijie","label":"集解","text":"馬融曰：「鯀，臣名，禹父。」"}],"sentence_id":"s090"},{"id":"n131","anchor_text":"堯曰：「鯀負命毀族，不可。」","items":[{"source":"zhengyi","label":"正義","text":"負音佩，依字通。負，違也。族，類也。鯀性很戾，違負教命，毀敗善類，不可用也。《詩》云「貪人敗類」也。"}],"sentence_id":"s092"},{"id":"n132","anchor_text":"嶽曰：「异哉，試不可用而已。」","items":[{"source":"zhengyi","label":"正義","text":"异音異。孔安國云：「异，已；已，退也。言餘人盡已，唯鯀可試，無成乃退。」"}],"sentence_id":"s093"},{"id":"n133","anchor_text":"堯於是聽嶽用鯀。九歲，功用不成。","items":[{"source":"zhengyi","label":"正義","text":"《爾雅》釋天云：「載，歲也。夏曰祀，周曰年，唐、虞曰載。」李巡云：「各自紀事，示不相襲也。」孫炎云：「歲，取歲星行一次也。祀，取四時祭祀一訖也。年，取禾穀一熟也。載，取萬物終更始也。載者，年之別名，故以載爲年也。」案：功用不成，水害不息，故放退也。至明年得舜，乃殛之羽山，而用其子禹也。"}],"sentence_id":"s094"},{"id":"n134","anchor_text":"四嶽：朕在位七十載，汝能庸命，踐朕位？」","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「言汝諸侯之中有能順事用天命者，入處我位，統治天子之事者乎？」"},{"source":"zhengyi","label":"正義","text":"孔安國云：「堯年十六，以唐侯升爲天子，在位七十載，時八十六，老將求代也。」"}],"sentence_id":"s097"},{"id":"n135","anchor_text":"嶽應曰：「鄙悳忝帝位。」","items":[{"source":"zhengyi","label":"正義","text":"四嶽皆云，鄙俚無德，若便行天子事，是辱帝位。言己等不堪也。"}],"sentence_id":"s098"},{"id":"n136","anchor_text":"」眾皆言於堯曰：「有矜在民閒，曰虞舜。」","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「無妻曰矜。」"},{"source":"zhengyi","label":"正義","text":"矜，古頑反。"}],"sentence_id":"s100"},{"id":"n137","anchor_text":"母嚚，弟傲，能和以孝，烝烝治，不至姦。」","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「不至於姦惡。」"},{"source":"zhengyi","label":"正義","text":"烝，之升反，進也。言父頑，母嚚，弟傲，舜皆和以孝，進之於善，不至於姦惡也。"}],"sentence_id":"s104"},{"id":"n138","anchor_text":"堯曰：「吾其試哉。」","items":[{"source":"zhengyi","label":"正義","text":"欲以二女試舜，觀其理家之道也。"}],"sentence_id":"s105"},{"id":"n139","anchor_text":"於是堯妻之二女，","items":[{"source":"zhengyi","label":"正義","text":"妻音七計反。二女，娥皇、女英也。娥皇無子，女英生商均。舜升天子，娥皇爲后，女英爲妃。"}],"sentence_id":"s106"},{"id":"n140","anchor_text":"觀其德於二女。","items":[{"source":"zhengyi","label":"正義","text":"視其爲德行於二女，以理家而觀國也。"}],"sentence_id":"s106"},{"id":"n141","anchor_text":"舜飭下二女於嬀汭，","items":[{"source":"jijie","label":"集解","text":"孔安國曰：「舜所居嬀水之汭。」"},{"source":"suoyin","label":"索隱","text":"《列女傳》云二女長曰娥皇，次曰女英。《系本》作「女瑩」。《大戴禮》作「女匽」。皇甫謐云：「嬀水在河東虞鄉縣歷山西。汭，水涯也，猶洛汭、渭汭然也。」"},{"source":"zhengyi","label":"正義","text":"飭音勑。下音胡亞反。汭音芮。舜能整齊二女以義理，下二女之心於嬀汭，使行婦道於虞氏也。《括地志》云：「嬀汭水源出蒲州河東南山。許慎云：『水涯曰汭。』案：地記云『河東郡青山東山中有二泉，下南流者嬀水，北流者汭水。二水異源，合流出谷，西注河。嬀水北曰汭也』。又云『河東縣二里故蒲坂城，舜所都也。城中有舜廟，城外有舜宅及二妃壇』。」"}],"sentence_id":"s107"},{"id":"n142","anchor_text":"如婦禮。堯善之，乃使舜慎和五典，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「五典，五教也。蓋試以司徒之職。」"}],"sentence_id":"s108"},{"id":"n143","anchor_text":"。賓於四門，四門穆穆，諸侯遠方賓客皆敬。","items":[{"source":"jijie","label":"集解","text":"馬融曰：「四門，四方之門。諸侯羣臣朝者，舜賓迎之，皆有美德也。」"}],"sentence_id":"s110"},{"id":"n144","anchor_text":"堯使舜入山林","items":[{"source":"suoyin","label":"索隱","text":"《尚書》云「納于大麓」，穀梁傳云「林屬於山曰麓」，是山足曰麓，故此以爲入山林不迷。孔氏以麓訓錄，言令舜大錄萬幾之政，與此不同。"}],"sentence_id":"s111"},{"id":"n145","anchor_text":"聖，召舜曰：「女謀事至而言可績，三年矣。","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「三年者，賓四門之後三年也。」"}],"sentence_id":"s112"},{"id":"n146","anchor_text":"女登帝位。」舜讓於德不懌。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「音亦。《今文尚書》作『不怡』。怡，懌也。」"},{"source":"suoyin","label":"索隱","text":"古文作「不嗣」，今文作「不怡」，怡即懌也。謂辭讓於德不堪，所以心意不悅懌也。俗本作「澤」，誤爾，亦當爲「懌」。"}],"sentence_id":"s114"},{"id":"n147","anchor_text":"正月上日，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「上日，朔日也。」"},{"source":"zhengyi","label":"正義","text":"鄭玄云：「帝王易代，莫不改正。堯正建丑，舜正建子，此時未改，故依堯正月上日也。」"}],"sentence_id":"s115"},{"id":"n148","anchor_text":"舜受終於文祖。文祖者，堯大祖也。","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「文祖者，五府之大名，猶周之明堂。」"},{"source":"suoyin","label":"索隱","text":"《尚書》帝命驗曰：「五府，五帝之廟。蒼曰靈府，赤曰文祖，黃曰神斗，白曰顯紀，黑曰玄矩。唐虞謂之五府，夏謂世室，殷謂重屋，周謂明堂，皆祀五帝之所也。」"},{"source":"zhengyi","label":"正義","text":"舜受堯終帝之事於文祖也。《尚書》帝命驗云：「帝者承天立五府，以尊天重象也。五府者，黃曰神斗。」注云：「唐虞謂之天府，夏謂之世室，殷謂之重屋，周謂之明堂，皆祀五帝之所也。文祖者，赤帝熛怒之府，名曰文祖。火精光明，文章之祖，故謂之文祖。周曰明堂。神斗者，黃帝含樞紐之府，名曰神斗。斗，主也。土精澄靜，四行之主，故謂之神斗。周曰太室。顯紀者，白帝招拒之府，名顯紀。紀，法也。金精斷割萬物，故謂之顯紀。周曰總章。玄矩者，黑帝汁光紀之府，名曰玄矩。矩，法也。水精玄味，能權輕重，故謂之玄矩。周曰玄堂。靈府者，蒼帝靈威仰之府，名曰靈府。周曰青陽。」"}],"sentence_id":"s115"},{"id":"n149","anchor_text":"政，以觀天命。舜乃在璿璣玉衡，以齊七政。","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「璿璣，玉衡，渾天儀也。七政，日月五星也。」"},{"source":"zhengyi","label":"正義","text":"說文云：「璿，赤玉也。」案：舜雖受堯命，猶不自安，更以璿璣玉衡以正天文。璣爲運轉，衡爲橫簫，運璣使動於下，以衡望之，是王者正天文器也，觀其齊與不齊。今七政齊，則己受禪爲是。蔡邕云：「玉衡長八尺，孔徑一寸，下端望之，以視星宿，並縣璣以象天，而以衡望之，轉璣窺衡，以知星宿。璣徑八尺，圓周二丈五尺而強也。」鄭玄云：「運轉者爲璣，持正者爲衡。」《尚書大傳》云：「政者，齊中也。謂春秋冬夏天文地理人道，所以爲政也，道正而萬事順成，故天道政之大也。」"}],"sentence_id":"s118"},{"id":"n150","anchor_text":"遂類于上帝，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「禮祭上帝于圜丘。」"},{"source":"zhengyi","label":"正義","text":"五經異義云：「非時祭天謂之類，言以事類告也。時舜告攝，非常祭也。」王制云：「天子將出，類于上帝。」鄭玄云：「昊天上帝謂天皇大帝，北辰之星。」"}],"sentence_id":"s119"},{"id":"n151","anchor_text":"禋于六宗，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「六宗，星、辰、司中、司命、風師、雨師也。」駰案：六宗義眾矣。愚謂鄭說爲長。"},{"source":"zhengyi","label":"正義","text":"周語云「精意以享曰禋」也。孫炎云：「禋，絜敬之祭也。」　案：星，五緯星也。辰，日月所會十二次也。司中、司命，文昌第五、第四星也。風師，箕星也。雨師，畢星也。孔安國云：「四時寒暑也，日月星也，水旱也。」禮祭法云：「埋少牢於大昭，祭時也。禳祈於坎壇，祭寒暑也。王宮，祭日也。夜明，祭月也。幽禜，祭星。雩禜，祭水旱也。」司馬彪《續漢書》云：「安帝立六宗，祀於洛陽城西北亥地，禮比大社。魏因之。至晉初，荀顗言新祀，以六宗之神諸家說不同，乃廢之也。」"}],"sentence_id":"s119"},{"id":"n152","anchor_text":"望于山川，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「名山大川。」"},{"source":"zhengyi","label":"正義","text":"望者，遙望而祭山川也。山川，五嶽、四瀆也。《爾雅》云：「梁山，晉望也。」"}],"sentence_id":"s119"},{"id":"n153","anchor_text":"辯于羣神。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「辯音班。」駰案：鄭玄曰「羣神若丘陵墳衍」。"},{"source":"zhengyi","label":"正義","text":"辯音遍。謂祭羣神也。"}],"sentence_id":"s119"},{"id":"n154","anchor_text":"揖五瑞，擇吉月日，見四嶽諸牧，班瑞。","items":[{"source":"jijie","label":"集解","text":"馬融曰：「揖，斂也。五瑞，公侯伯子男所執，以爲瑞信也。堯將禪舜，使羣牧斂之，使舜親往班之。」"},{"source":"zhengyi","label":"正義","text":"揖音集。《周禮》典瑞云：「王執鎮圭，尺二寸。公執桓圭，九寸。侯執信圭，七寸。伯執躬圭，五寸。子執穀璧，男執蒲璧，皆五寸。言五瑞者，王不在中也。」孔文祥云：「宋末，會稽修禹廟，於廟庭山土中得五等圭璧百餘枚，形與《周禮》同，皆短小。此即禹會諸侯於會稽，執以禮山神而埋之。其璧今猶有在也。」"}],"sentence_id":"s120"},{"id":"n155","anchor_text":"歲二月，東巡狩，至於岱宗，祡，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「舜受終後五年之二月。」鄭玄曰：「建卯之月也。祡祭東嶽者，考績。祡，燎也。」"},{"source":"zhengyi","label":"正義","text":"案：既班瑞羣后即東巡者，守土之諸侯會岱宗之嶽，焚柴告至也。王者巡狩，以諸侯自專一國，威福任己，恐其壅遏上命，澤不下流，故巡行問人疾苦也。風俗通云：「太，山之尊者，一曰岱宗，始也，長也，萬物之始，陰陽交代，故爲五嶽之長也。」案：二月，仲月也。仲，中也，言得其中也。"}],"sentence_id":"s121"},{"id":"n156","anchor_text":"望秩於山川。","items":[{"source":"zhengyi","label":"正義","text":"乃以秩望祭東方諸侯境內之名山大川也。言秩者，五嶽視三公，四瀆視諸侯。"}],"sentence_id":"s121"},{"id":"n157","anchor_text":"遂見東方君長，合時月正日，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「協正四時之月數及日名，備有失誤。」"},{"source":"zhengyi","label":"正義","text":"既見東方君長，乃合同四時氣節，月之大小，日之甲乙，使齊一也。《周禮》：「太史掌正歲年以序事，頒正朔於邦國。」則節氣晦朔皆天子頒之。猶恐諸侯國異，或不齊同，因巡狩合正之。"}],"sentence_id":"s122"},{"id":"n158","anchor_text":"同律度量衡，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「律，音律；度，丈尺；量，斗斛；衡，斤兩也。」"},{"source":"zhengyi","label":"正義","text":"律之十二律，度之丈尺，量之斗斛，衡之斤兩，皆使天下相同，無制度長短輕重異也。漢《律曆志》云：「《虞書》云『同律度量衡』，所以齊遠近，立民信也。律有十二，陽六爲律，陰六爲呂。律以統氣類物，一曰黃鍾，二曰太蔟，三曰姑洗，四曰蕤賓，五曰夷則，六曰無射。呂以旅陽宣氣，一曰林鍾，二曰南呂，三曰應鍾，四曰大呂，五曰夾鍾，六曰中呂。度者，分、寸、尺、丈、引也，所以度長短也。本起黃鍾之管長，以子穀秬黍中者一黍爲一分，十分爲一寸，十寸爲尺，十尺爲丈，十丈爲引，而五度審矣。量者，龠、合、升、斗、斛也，所以量多少也。本起黃鍾之龠，以子穀秬黍中者千有二百實爲一龠，合龠爲合，十合爲升，十升爲斗，十斗爲斛，而五量嘉矣。衡權者，銖、兩、斤、鈞、石也，所以稱物輕重也。本起於黃鍾之重，一龠容千二百黍，重十二銖，二十四銖爲兩，十六兩爲斤，三十斤爲鈞，四鈞爲石，而五權謹矣。衡，平也。權，重也。」"}],"sentence_id":"s122"},{"id":"n159","anchor_text":"脩五禮","items":[{"source":"jijie","label":"集解","text":"馬融曰：「吉、凶、賓、軍、嘉也。」"},{"source":"zhengyi","label":"正義","text":"《周禮》「以吉禮事邦國之鬼神祇，以凶禮哀邦國之憂，以賓禮親邦國，以軍禮同邦國，以嘉禮親萬民」也。《尚書堯典》云「類于上帝」，吉禮也；「如喪考妣」，凶禮也；「羣后四朝」，賓禮也；大禹謨云「汝徂征」，軍禮也；《堯典》云「女于時」，嘉禮也。女音女慮反。"}],"sentence_id":"s122"},{"id":"n160","anchor_text":"五玉","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「即五瑞也。執之曰瑞，陳列曰玉。」"}],"sentence_id":"s122"},{"id":"n161","anchor_text":"三帛","items":[{"source":"jijie","label":"集解","text":"馬融曰：「三孤所執也。」鄭玄曰：「帛，所以薦玉也。必三者，高陽氏後用赤繒，高辛氏後用黑繒，其餘諸侯皆用白繒。」"},{"source":"zhengyi","label":"正義","text":"孔安國云：「諸侯世子執纁，公之孤執玄，附庸之君執黃也。」案：三統紀推伏羲爲天統，色尚赤。神農爲地統，色尚黑。黃帝爲人統，色尚白。少昊，黃帝子，亦尚白。故高陽氏又天統，亦尚亦。堯爲人統，故用白。"}],"sentence_id":"s122"},{"id":"n162","anchor_text":"二生","items":[{"source":"zhengyi","label":"正義","text":"羔、鴈也。鄭玄注《周禮》大宗伯云：「羔，小羊也，取其羣不失其類也。鴈，取其候時而行也。卿執羔，大夫執鴈。」案：羔、鴈性馴，可生爲贄。"}],"sentence_id":"s122"},{"id":"n163","anchor_text":"一死","items":[{"source":"zhengyi","label":"正義","text":"雉也。馬融云：「一死雉，士所執也。」案：不可生爲贄，故死。雉，取其守介死不失節也。"}],"sentence_id":"s122"},{"id":"n164","anchor_text":"爲摯，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「摯：二生，羔、鴈，卿大夫所執；一死，雉，士所執。」"},{"source":"zhengyi","label":"正義","text":"摯音至。贄，執也。鄭玄云：「贄之言至，所以自致也。」韋昭云：「贄，六贄：孤執皮帛，卿執羔，大夫執鴈，士執雉，庶人執鶩，工商執雞也。」"}],"sentence_id":"s122"},{"id":"n165","anchor_text":"如五器，卒乃復。","items":[{"source":"jijie","label":"集解","text":"馬融曰：「五器，上五玉。五玉禮終則還之，三帛已下不還也。」"},{"source":"zhengyi","label":"正義","text":"卒音子律反。復音伏。"}],"sentence_id":"s122"},{"id":"n166","anchor_text":"十一月，北巡狩：皆如初。歸，至于祖禰廟，","items":[{"source":"zhengyi","label":"正義","text":"禰音乃禮反。何休云：「生曰父，死曰考，廟曰禰。」"}],"sentence_id":"s123"},{"id":"n167","anchor_text":"用特牛禮。五歲一巡狩，羣后四朝。","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「巡狩之年，諸侯見於方嶽之下。其閒四年，四方諸侯分來朝於京師也。」"}],"sentence_id":"s125"},{"id":"n168","anchor_text":"徧告以言，","items":[{"source":"zhengyi","label":"正義","text":"徧音遍。言遍告天子治理之言也。"}],"sentence_id":"s126"},{"id":"n169","anchor_text":"明試以功，車服以庸。","items":[{"source":"zhengyi","label":"正義","text":"孔安國云：「功成則錫車服，以表顯其能用也。」"}],"sentence_id":"s126"},{"id":"n170","anchor_text":"肇十有二州，決川。","items":[{"source":"jijie","label":"集解","text":"馬融曰：「禹平水土，置九州。舜以冀州之北廣大，分置并州。燕、齊遼遠，分燕置幽州，分齊爲營州。於是爲十二州也。」鄭玄曰：「更爲之定界，濬水害也。」"}],"sentence_id":"s127"},{"id":"n171","anchor_text":"象以典刑，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「言咎繇制五常之刑，無犯之者，但有其象，無其人也。」"},{"source":"zhengyi","label":"正義","text":"孔安國云：「象，法也。法用常刑，用不越法也。」"}],"sentence_id":"s128"},{"id":"n172","anchor_text":"流宥五刑，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「流，放；宥，寬也。一曰幼少，二曰老耄，三曰蠢愚。五刑，墨、劓、剕、宮、大辟。」"},{"source":"zhengyi","label":"正義","text":"孔安國云：「以流放之法寬五刑也。」鄭玄云：「三宥，一曰弗識，二曰過失，三曰遺忘也。」"}],"sentence_id":"s128"},{"id":"n173","anchor_text":"鞭作官刑，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「爲辨治官事者爲刑。」"}],"sentence_id":"s128"},{"id":"n174","anchor_text":"扑作教刑，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「扑，檟楚也。扑爲教官爲刑者。」"}],"sentence_id":"s128"},{"id":"n175","anchor_text":"金作贖刑。","items":[{"source":"jijie","label":"集解","text":"馬融曰：「金，黃金也。意善功惡，使出金贖罪，坐不戒慎者。」"}],"sentence_id":"s128"},{"id":"n176","anchor_text":"眚烖過，赦；","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「眚烖，爲人作患害者也。過失，雖有害則赦之。」"}],"sentence_id":"s129"},{"id":"n177","anchor_text":"怙終","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「一作『眾』。」"}],"sentence_id":"s129"},{"id":"n178","anchor_text":"賊，刑。","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「怙其姦邪，終身以爲殘賊，則用刑之。」"}],"sentence_id":"s129"},{"id":"n179","anchor_text":"欽哉，欽哉，惟刑之靜哉！","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「今文云『惟刑之謐哉』。《爾雅》曰『謐，靜也』。」"},{"source":"suoyin","label":"索隱","text":"注「惟形之謐哉」，案：古文作「恤哉」，且今文是伏生口誦，卹謐聲近，遂作「謐」也。"}],"sentence_id":"s130"},{"id":"n180","anchor_text":"讙兜進言共工，","items":[{"source":"zhengyi","label":"正義","text":"讙兜，渾沌也。共工，窮奇也。鯀，檮杌也。三苗，饕餮也。《左傳》云「舜臣堯，流四凶，投諸四裔，以禦魑魅」也。"}],"sentence_id":"s131"},{"id":"n181","anchor_text":"堯曰不可而試之工師，","items":[{"source":"zhengyi","label":"正義","text":"工師，若今大匠卿也。"}],"sentence_id":"s131"},{"id":"n182","anchor_text":"共工果淫辟。","items":[{"source":"zhengyi","label":"正義","text":"匹亦反。"}],"sentence_id":"s131"},{"id":"n183","anchor_text":"嶽彊請試之，試之而無功，故百姓不便。三苗","items":[{"source":"jijie","label":"集解","text":"馬融曰：「國名也。」"},{"source":"zhengyi","label":"正義","text":"《左傳》云自古諸侯不用王命，虞有三苗，夏有觀扈。孔安國云：「縉雲氏之後爲諸侯，號饕餮也。」吳起云：「三苗之國，左洞庭而右彭蠡。」案：洞庭，湖名，在岳州巴陵西南一里，南與青草湖連。彭蠡，湖名，在江州潯陽縣東南五十二里。以天子在北，故洞庭在西爲左，彭蠡在東爲右。今江州、鄂州、岳州，三苗之地也。"}],"sentence_id":"s132"},{"id":"n184","anchor_text":"在江淮、荊州","items":[{"source":"zhengyi","label":"正義","text":"淮，讀曰匯，音胡罪反，今彭蠡湖也。本屬荊州。《尚書》云「南入于江，東匯澤爲彭蠡」是也。"}],"sentence_id":"s133"},{"id":"n185","anchor_text":"爲亂。於是舜歸而言於帝，請流共工於幽陵，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「北裔也。」"},{"source":"zhengyi","label":"正義","text":"《尚書》及《大戴禮》皆作「幽州」。《括地志》云：「故龔城在檀州燕樂縣界。故老傳云舜流共工幽州，居此城。」《神異經》云：「西北荒有人焉，人面，朱髴，蛇身，人手足，而食五穀禽獸，頑愚，名曰共工。」"}],"sentence_id":"s134"},{"id":"n186","anchor_text":"以變北狄；","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「變，一作『燮』。」"},{"source":"suoyin","label":"索隱","text":"變謂變其形及衣服，同於夷狄也。徐廣云作「燮」。燮，和也。"},{"source":"zhengyi","label":"正義","text":"言四凶流四裔，各於四夷放共工等爲中國之風俗也。"}],"sentence_id":"s134"},{"id":"n187","anchor_text":"放驩兜於崇山，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「南裔也。」"},{"source":"zhengyi","label":"正義","text":"《神異經》云：「南方荒中有人焉，人面鳥喙而有翼，兩手足扶翼而行，食海中魚，爲人很惡，不畏風雨禽獸，犯死乃休，名曰驩兜也。」"}],"sentence_id":"s134"},{"id":"n188","anchor_text":"以變南蠻；遷三苗於三危，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「西裔也。」"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「三危山有三峯，故曰三危，俗亦名卑羽山，在沙州敦煌縣東南三十里。」《神異經》云：「西荒中有人焉，面目手足皆人形，而胳下有翼不能飛，爲人饕餮，淫逸無理，名曰苗民。」又《山海經》云大荒北經「黑水之北，有人有翼，名曰苗民」也。"}],"sentence_id":"s134"},{"id":"n189","anchor_text":"以變西戎；殛鯀於羽山，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「殛，誅也。羽山，東裔也。」"},{"source":"zhengyi","label":"正義","text":"殛音紀力反。孔安國云：「殛，竄，放，流，皆誅也。」《括地志》云：「羽山在沂州臨沂縣界。」《神異經》云：「東方有人焉，人形而身多毛，自解水土，知通塞，爲人自用，欲爲欲息，皆（曰）云是鯀也。」"}],"sentence_id":"s134"},{"id":"n190","anchor_text":"子之政，薦之於天。堯辟位凡二十八年而崩。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「堯在位凡九十八年。」駰案：《皇覽》曰「堯冢在濟陰城陽。劉向曰『堯葬濟陰，丘壠皆小』。呂氏春秋曰『堯葬穀林』。」皇甫謐曰「穀林即城陽。堯都平陽，於詩爲唐國」。"},{"source":"zhengyi","label":"正義","text":"皇甫謐云：「堯即位九十八年，通舜攝二十八年也，凡年百一十七歲。」孔安國云：「堯壽百一十六歲。」《括地志》云：「堯陵在濮州雷澤縣西三里。郭緣生述征記云『城陽縣東有堯冢，亦曰堯陵，有碑』是也。」《括地志》云：「雷澤縣本漢城陽縣也。」"}],"sentence_id":"s135"},{"id":"n191","anchor_text":"百姓悲哀，如喪父母。三年，四方莫舉樂，","items":[{"source":"zhengyi","label":"正義","text":"《尚書》「三載，四海遏密八音」是也。"}],"sentence_id":"s137"},{"id":"n192","anchor_text":"以思堯。堯知子丹朱之不肖，","items":[{"source":"suoyin","label":"索隱","text":"鄭玄云：「肖，似也。不似，言不如父也。」皇甫謐云：「堯娶散宜氏之女，曰女皇，生丹朱。又有庶子九人，皆不肖也。」"}],"sentence_id":"s139"},{"id":"n193","anchor_text":"不足授天下，於是乃權授舜。","items":[{"source":"suoyin","label":"索隱","text":"父子繼立，常道也。求賢而禪，權道也。權者，反常而合道。"},{"source":"zhengyi","label":"正義","text":"五帝官天下，老則禪賢，故權試舜也。"}],"sentence_id":"s139"},{"id":"n194","anchor_text":"堯崩，三年之喪畢，舜讓辟丹朱於南河之南。","items":[{"source":"jijie","label":"集解","text":"劉熙曰：「南河，九河之最在南者。」"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「故堯城在濮州鄄城縣東北十五里。竹《書》云昔堯德衰，爲舜所囚也。又有偃朱故城，在縣西北十五里。竹《書》云舜囚堯，復偃塞丹朱，使不與父相見也。」案濮州北臨漯，大川也。河在堯都之南，故曰南河，《禹貢》「至于南河」是也。其偃朱城所居，即「舜讓避丹朱於南河之南」處也。"}],"sentence_id":"s142"},{"id":"n195","anchor_text":"。舜曰「天也」，夫而後之中國踐天子位焉，","items":[{"source":"jijie","label":"集解","text":"劉熙曰：「天子之位不可曠年，於是遂反，格于文祖而當帝位。帝王所都爲中，故曰中國。」"}],"sentence_id":"s144"},{"id":"n196","anchor_text":"虞舜者，","items":[{"source":"jijie","label":"集解","text":"謚法曰：「仁聖盛明曰舜。」"},{"source":"suoyin","label":"索隱","text":"虞，國名，在河東大陽縣。舜，謚也。皇甫謐云「舜字都君」也。"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「故虞城在陝州河北縣東北五十里虞山之上。酈元《注水經》云幹橋東北有虞城，堯以女嬪于虞之地也。又宋州虞城大襄國所封之邑，杜預云舜後諸侯也。又越州餘姚縣，顧野王云舜後支庶所封之地。舜姚姓，故云餘姚。縣西七十里有漢上虞故縣。會稽舊記云舜上虞人，去虞三十里有姚丘，即舜所生也。周處風土記云舜東夷之人，生姚丘。」《括地志》又云：「姚墟在濮州雷澤縣東十三里。孝經援神契云舜生於姚墟。」案：二所未詳也。"}],"sentence_id":"s145"},{"id":"n197","anchor_text":"名曰重華。","items":[{"source":"jijie","label":"集解","text":"徐廣曰﹕「皇甫謐云『舜以堯之二十一年甲子生，三十一年甲午徵用，七十九年壬午即真，百歲癸卯崩』。」"},{"source":"zhengyi","label":"正義","text":"《尚書》云﹕「重華協於帝。」孔安國云。「華謂文德也，言其光文重合於堯。」瞽叟姓嬀。妻曰握登，見大虹意感而生舜於姚墟，故姓姚。目重瞳子，故曰重華。字都君。龍顏，大口，黑色，身長六尺一寸。"}],"sentence_id":"s145"},{"id":"n198","anchor_text":"重華父曰瞽叟，","items":[{"source":"zhengyi","label":"正義","text":"先后反。孔安國云﹕「無目曰瞽。舜父有目不能分別好惡，故時人謂之瞽，配字曰『叟』。叟，無目之稱也。」"}],"sentence_id":"s146"},{"id":"n199","anchor_text":"瞽叟父曰橋牛，","items":[{"source":"zhengyi","label":"正義","text":"橋又音嬌。"}],"sentence_id":"s146"},{"id":"n200","anchor_text":"橋牛父曰句望，","items":[{"source":"zhengyi","label":"正義","text":"句，古侯反。望音亡。"}],"sentence_id":"s146"},{"id":"n201","anchor_text":"舜父瞽叟盲，而舜母","items":[{"source":"suoyin","label":"索隱","text":"皇甫謐云：「舜母名握登，生舜於姚墟，因姓姚氏也。」"}],"sentence_id":"s148"},{"id":"n202","anchor_text":"舜，冀州之人也。","items":[{"source":"zhengyi","label":"正義","text":"蒲州河東縣本屬冀州。宋永初山川記云：「蒲坂城中有舜廟，城外有舜宅及二妃檀。」《括地志》云：「嬀州有嬀水，源出城中。耆舊傳云即舜釐降二女於嬀汭之所。外城中有舜井，城北有歷山，山上有舜廟，未詳。」案：嬀州亦冀州城是也。"}],"sentence_id":"s151"},{"id":"n203","anchor_text":"舜耕歷山，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「在河東。」"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「蒲州河東縣雷首山，一名中條山，亦名歷山，亦名首陽山，亦名蒲山，亦名襄山，亦名甘棗山，亦名猪山，亦名狗頭山，亦名薄山，亦名吳山。此山西起雷首山，東至吳坂，凡十一名，隨州縣分之。歷山南有舜井。」又云：「越州餘姚縣有歷山舜井，濮州雷澤縣有歷山舜井，二所又有姚墟，云生舜處也。及嬀州歷山舜井，皆云舜所耕處，未詳也。」"}],"sentence_id":"s152"},{"id":"n204","anchor_text":"漁雷澤，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「雷夏，兗州澤，今屬濟陰。」"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「雷夏澤在濮州雷澤縣郭外西北。《山海經》云雷澤有雷神，龍身人頭，鼓其腹則雷也。」"}],"sentence_id":"s152"},{"id":"n205","anchor_text":"陶河濱，","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「濟陰定陶西南陶丘亭是也。」"},{"source":"zhengyi","label":"正義","text":"案：於曹州濱河作瓦器也。《括地志》云：「陶城在蒲州河東縣北三十里，即舜所都也。南去歷山不遠。或耕或陶，所在則可，何必定陶方得爲陶也？舜之陶也，斯或一焉。」"}],"sentence_id":"s152"},{"id":"n206","anchor_text":"作什器於壽丘，","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「在魯東門之北。」"},{"source":"suoyin","label":"索隱","text":"什器，什，數也。蓋人家常用之器非一，故以十爲數，猶今云「什物」也。壽丘，地名，黃帝生處。"},{"source":"zhengyi","label":"正義","text":"壽音受。顏師古云：「軍法，伍人爲伍，二伍爲什，則共器物，故謂生生之具爲什器，亦猶從軍及作役者十人爲火，共畜調度也。」"}],"sentence_id":"s152"},{"id":"n207","anchor_text":"就時於負夏。","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「負夏，衞地。」"},{"source":"suoyin","label":"索隱","text":"就時猶逐時，若言乘時射利也。《尚書大傳》曰「販於頓丘，就時負夏」，孟子曰「遷于負夏」是也。"}],"sentence_id":"s152"},{"id":"n208","anchor_text":"舜年二十以孝聞。三十而帝堯問可用者，","items":[{"source":"zhengyi","label":"正義","text":"可用，謂可爲天子也。"}],"sentence_id":"s157"},{"id":"n209","anchor_text":"汭，內行彌謹。堯二女不敢以貴驕事舜親戚，","items":[{"source":"zhengyi","label":"正義","text":"二女不敢以帝女驕慢舜之親戚。親戚，謂父瞽叟，後母弟象，妹顆手等也。顆音苦果反。"}],"sentence_id":"s160"},{"id":"n210","anchor_text":"甚有婦道。堯九男皆益篤。","items":[{"source":"zhengyi","label":"正義","text":"篤，惇也。非唯二女恭勤婦道，九男事舜皆益惇厚謹敬也。"}],"sentence_id":"s161"},{"id":"n211","anchor_text":"舜耕歷山，歷山之人皆讓畔；","items":[{"source":"zhengyi","label":"正義","text":"韓非子「歷山之農相侵略，舜往耕，朞年，耕者讓畔」也。"}],"sentence_id":"s162"},{"id":"n212","anchor_text":"雷澤上人皆讓居；陶河濱，河濱器皆不苦窳。","items":[{"source":"jijie","label":"集解","text":"《史記音隱》曰：「音游甫反。」駰謂寙，病也。"},{"source":"zhengyi","label":"正義","text":"苦，讀如盬，音古。盬，麤也。寙音庾。"}],"sentence_id":"s162"},{"id":"n213","anchor_text":"一年而所居成聚，","items":[{"source":"zhengyi","label":"正義","text":"聚，在喻反，謂村落也。"}],"sentence_id":"s163"},{"id":"n214","anchor_text":"二年成邑，三年成都。","items":[{"source":"zhengyi","label":"正義","text":"《周禮》郊野法云「九夫爲井，四井爲邑，四邑爲丘，四丘爲甸，四甸爲縣，四縣爲都」也。"}],"sentence_id":"s163"},{"id":"n215","anchor_text":"堯乃賜舜絺衣，","items":[{"source":"zhengyi","label":"正義","text":"絺，勑遲反，細葛布衣也。鄒氏音竹几反。"}],"sentence_id":"s164"},{"id":"n216","anchor_text":"火焚廩。舜乃以兩笠自扞而下，去，得不死。","items":[{"source":"suoyin","label":"索隱","text":"言以笠自扞己身，有似鳥張翅而輕下，得不損傷。皇甫謐云「兩繖」，繖，笠類。《列女傳》云「二女教舜鳥工上廩」是也。"},{"source":"zhengyi","label":"正義","text":"通史云：「瞽叟使舜滌廩，舜告堯二女，女曰：『時其焚汝，鵲汝衣裳，鳥工往。』舜既登廩，得免去也。」"}],"sentence_id":"s166"},{"id":"n217","anchor_text":"後瞽叟又使舜穿井，舜穿井爲匿空","items":[{"source":"suoyin","label":"索隱","text":"音孔。《列女傳》所謂「龍工入井」是也。"}],"sentence_id":"s167"},{"id":"n218","anchor_text":"旁出。","items":[{"source":"zhengyi","label":"正義","text":"言舜潛匿穿孔旁，從他井而出也。通史云：「舜穿井，又告二女。二女曰：『去汝裳衣。龍工往。』入井，瞽叟與象下土實井，舜從他井出去也。」《括地志》云：「舜井在嬀州懷戎縣西外城中。其西又有一井，耆舊傳云並舜井也，舜自中出。《帝王紀》云河東有舜井，未詳也。」"}],"sentence_id":"s167"},{"id":"n219","anchor_text":"舜既入深，瞽叟與象共下土實井，","items":[{"source":"suoyin","label":"索隱","text":"亦作「填井」。"}],"sentence_id":"s168"},{"id":"n220","anchor_text":"舜從匿空出，去。","items":[{"source":"jijie","label":"集解","text":"劉熙曰：「舜以權謀自免，亦大聖有神人之助也。」"}],"sentence_id":"s168"},{"id":"n221","anchor_text":"爲已死。象曰「本謀者象。」象與其父母分，","items":[{"source":"zhengyi","label":"正義","text":"扶問反。"}],"sentence_id":"s171"},{"id":"n222","anchor_text":"象取之。牛羊倉廩予父母。」象乃止舜宮居，","items":[{"source":"zhengyi","label":"正義","text":"宮即室也。《爾雅》云「室謂之宮」。《禮》云「命士已上，父子異宮」也。"}],"sentence_id":"s164"},{"id":"n223","anchor_text":"我思舜正鬱陶！」舜曰：「然，爾其庶矣！」","items":[{"source":"suoyin","label":"索隱","text":"言汝猶當庶幾於友悌之情義也。如孟子取《尚書》文，又云「惟茲臣庶，女其于予治」，蓋欲令象共我理臣庶也。"}],"sentence_id":"s175"},{"id":"n224","anchor_text":"昔高陽氏有才子八人，","items":[{"source":"jijie","label":"集解","text":"名見《左傳》。"}],"sentence_id":"s179"},{"id":"n225","anchor_text":"世得其利，謂之「八愷」。","items":[{"source":"jijie","label":"集解","text":"賈逵曰：「愷，和也。」"},{"source":"suoyin","label":"索隱","text":"《左傳》史克對魯宣公曰：「昔高陽氏有才子八人，倉舒、隤皚、檮戭、大臨、尨降、庭堅、仲容、叔達。」"}],"sentence_id":"s179"},{"id":"n226","anchor_text":"昔高陽氏有才子八人，","items":[{"source":"jijie","label":"集解","text":"名見《左傳》。"}],"sentence_id":"s179"},{"id":"n227","anchor_text":"世謂之「八元」。","items":[{"source":"jijie","label":"集解","text":"賈逵曰：「元，善也。」"},{"source":"suoyin","label":"索隱","text":"《左傳》：「高辛氏有才子八人，伯奮、仲堪、叔獻、季仲、伯虎、仲熊、叔豹、季貍。」"}],"sentence_id":"s180"},{"id":"n228","anchor_text":"此十六族者，世濟其美，","items":[{"source":"suoyin","label":"索隱","text":"謂元、愷各有親族，故稱族也。濟，成也，言後代成前代也。"}],"sentence_id":"s181"},{"id":"n229","anchor_text":"。至於堯，堯未能舉。舜舉八愷，使主后土，","items":[{"source":"jijie","label":"集解","text":"王肅曰：「君治九土之宜。」杜預曰：「后土地官。」"},{"source":"suoyin","label":"索隱","text":"主土。禹爲司空，司空主土，則禹在八愷之中。"},{"source":"zhengyi","label":"正義","text":"春秋《正義》云：「后，君也。天曰皇天，地曰后土。」"}],"sentence_id":"s183"},{"id":"n230","anchor_text":"以揆百事，莫不時序。","items":[{"source":"zhengyi","label":"正義","text":"言禹度九土之宜，無不以時得其次序也。"}],"sentence_id":"s183"},{"id":"n231","anchor_text":"舉八元，使布五教于四方，","items":[{"source":"suoyin","label":"索隱","text":"契爲司徒，司徒敷五教，則契在八元之數。"}],"sentence_id":"s184"},{"id":"n232","anchor_text":"父義，母慈，兄友，弟恭，子孝，內平外成。","items":[{"source":"zhengyi","label":"正義","text":"杜預云：「內諸夏，外夷狄也。」案：契作五常之教，諸夏太平，夷狄向化也。"}],"sentence_id":"s184"},{"id":"n233","anchor_text":"昔帝鴻氏有不才子，","items":[{"source":"jijie","label":"集解","text":"賈逵曰：「帝鴻，黃帝也。不才子，其苗裔讙兜也。」"}],"sentence_id":"s185"},{"id":"n234","anchor_text":"掩義隱賊，好行凶慝，天下謂之渾沌。","items":[{"source":"zhengyi","label":"正義","text":"慝，惡也。一本云「天下之民，謂之渾沌」。渾沌即讙兜也。言掩義事，陰爲賊害，而好凶惡，故謂之渾沌也。杜預云：「渾沌，不開通之貌。」《神異經》云：「崑崙西有獸焉，其狀如犬，長毛，四足，似羆而無爪，有目而不見，行不開，有兩耳而不聞，有人知性，有腹無五藏，有腸直而不旋，食徑過。人有德行而往扺觸之，有凶德則往依憑之。名渾沌。」又莊子云：「南海之帝爲儵，北海之帝爲忽，中央之帝爲渾沌。儵、忽乃相遇於渾沌之地，渾沌待之甚善。儵與忽謀欲報渾沌之德，曰：『人皆有七竅以視聽食息，此獨無有，嘗試鑿之。』日鑿一竅，七日而渾沌死。」案：言讙兜性似，故號之也。"}],"sentence_id":"s185"},{"id":"n235","anchor_text":"少暤氏","items":[{"source":"jijie","label":"集解","text":"服虔曰：「金天氏帝號。」"}],"sentence_id":"s186"},{"id":"n236","anchor_text":"才子，毀信惡忠，崇飾惡言，天下謂之窮奇。","items":[{"source":"jijie","label":"集解","text":"服虔曰：「謂共工氏也。其行窮而好奇。」"},{"source":"zhengyi","label":"正義","text":"謂共工。言毀敗信行，惡其忠直，有惡言語，高粉飾之，故謂之窮奇。案常行終必窮極，好諂諛奇異於人也。《神異經》云：「西北有獸，其狀似虎，有翼能飛，便勦食人，知人言語，聞人鬬輒食直者，聞人忠信輒食其鼻，聞人惡逆不善輒殺獸往饋之，名曰窮奇。」案：言共工性似，故號之也。"}],"sentence_id":"s186"},{"id":"n237","anchor_text":"才子，不可教訓，不知話言，天下謂之檮杌。","items":[{"source":"jijie","label":"集解","text":"賈逵曰：「檮杌，頑凶無疇匹之貌，謂鯀也。」"},{"source":"zhengyi","label":"正義","text":"檮音道刀反。杌音五骨反。謂鯀也。凶頑不可教訓，不從詔令，故謂之檮杌。案：言無疇匹，言自縱恣也。《神異經》云：「西方荒中有獸焉，其狀如虎而大，毛長二尺，人面，虎足，豬口牙，尾長一丈八尺，攪亂荒中，名檮杌。一名傲很，一名難訓。」案：言鯀性似，故號之也。"}],"sentence_id":"s187"},{"id":"n238","anchor_text":"此三族世憂之。至于堯，堯未能去。縉雲氏","items":[{"source":"jijie","label":"集解","text":"賈逵曰：「縉雲氏，姜姓也，炎帝之苗裔，當黃帝時任縉雲之官也。」"},{"source":"zhengyi","label":"正義","text":"今括州縉雲縣，蓋其所封也。《字書》云縉，赤繒也。"}],"sentence_id":"s188"},{"id":"n239","anchor_text":"才子，貪于飲食，冒于貨賄，天下謂之饕餮。","items":[{"source":"zhengyi","label":"正義","text":"謂三苗也。言貪飲食，冒貨賄，故謂之饕餮。《神異經》云：「西南有人焉，身多毛，頭上戴豕，性很惡，好息，積財而不用，善奪人穀物。強者奪老弱者，畏羣而擊單，名饕餮。」言三苗性似，故號之。"}],"sentence_id":"s190"},{"id":"n240","anchor_text":"天下惡之，比之三凶。","items":[{"source":"jijie","label":"集解","text":"杜預曰：「非帝子孫，故別之以比三凶也。」"},{"source":"zhengyi","label":"正義","text":"此以上四處皆《左傳》文。或本有並文次相類四凶，故書之，恐本錯脫耳。"}],"sentence_id":"s191"},{"id":"n241","anchor_text":"舜賓於四門，","items":[{"source":"zhengyi","label":"正義","text":"杜預云：「闢四門，達四聰，以賓禮眾賢也。」"}],"sentence_id":"s192"},{"id":"n242","anchor_text":"乃流四凶族，遷于四裔，","items":[{"source":"jijie","label":"集解","text":"賈逵曰：「四裔之地，去王城四千里。」"}],"sentence_id":"s192"},{"id":"n243","anchor_text":"以御螭魅，","items":[{"source":"jijie","label":"集解","text":"服虔曰：「螭魅，人面獸身，四足，好惑人，山林異氣所生，以爲人害。」"},{"source":"zhengyi","label":"正義","text":"御音魚呂反。螭音丑知反。魅音媚。案：御魑魅，恐更有邪諂之人，故流放四凶以禦之也。故下云「無凶人」也。"}],"sentence_id":"s192"},{"id":"n244","anchor_text":"三年喪畢，讓丹朱，天下歸舜。而禹、皋陶、","items":[{"source":"zhengyi","label":"正義","text":"高姚二音。"}],"sentence_id":"s197"},{"id":"n245","anchor_text":"契、后稷、伯夷、夔、龍、倕、益、彭祖","items":[{"source":"suoyin","label":"索隱","text":"彭祖即陸終氏之第三子，籛鏗之後，後爲大彭，亦稱彭祖。"},{"source":"zhengyi","label":"正義","text":"皋陶字庭堅。英六二國是其後也。契音薛，殷之祖也。伯夷，齊太公之祖也。夔，巨龜反，樂官也。倕音垂，亦作「垂」，內言之官也。益，伯翳也，即秦、趙之祖。彭祖自堯時舉用，歷夏、殷封於大彭。"}],"sentence_id":"s198"},{"id":"n246","anchor_text":"自堯時而皆舉用，未有分職。","items":[{"source":"zhengyi","label":"正義","text":"分音符問反，又如字。分謂封疆爵土也。"}],"sentence_id":"s198"},{"id":"n247","anchor_text":"方耳目，命十二牧論帝德，行厚德，遠佞人，","items":[{"source":"zhengyi","label":"正義","text":"舜命十二牧論帝堯之德，又敦之於民，遠離邪佞之人。言能如此，則夷狄亦服從也。"}],"sentence_id":"s199"},{"id":"n248","anchor_text":"則蠻夷率服。舜謂四嶽曰：「有能奮庸","items":[{"source":"jijie","label":"集解","text":"馬融曰：「奮，明；庸，功也。」"}],"sentence_id":"s200"},{"id":"n249","anchor_text":"，讓於稷、契與皋陶。舜曰：「然，往矣。」","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「然其舉得其人。汝往居此官，不聽其所讓也。」"}],"sentence_id":"s204"},{"id":"n250","anchor_text":"舜曰：「弃，黎民始飢，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「《今文尚書》作『祖飢』。祖，始也。」"},{"source":"suoyin","label":"索隱","text":"古文作「阻飢」。孔氏以爲阻，難也。祖阻聲相近，未知誰得。"}],"sentence_id":"s206"},{"id":"n251","anchor_text":"汝后稷播時百穀。」","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「時，讀曰蒔。」"},{"source":"zhengyi","label":"正義","text":"稷，農官也。播時謂順四時而種百穀。"}],"sentence_id":"s206"},{"id":"n252","anchor_text":"舜曰：「契，百姓不親，五品不馴，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「五品，父、母、兄、弟、子也。」王肅曰：「五品，五常也。」"},{"source":"zhengyi","label":"正義","text":"馴音訓。"}],"sentence_id":"s207"},{"id":"n253","anchor_text":"汝爲司徒，而敬敷五教，在寬。」","items":[{"source":"jijie","label":"集解","text":"馬融曰：「五品之教。」"}],"sentence_id":"s207"},{"id":"n254","anchor_text":"舜曰：「皋陶，蠻夷猾夏，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「猾夏，侵亂中國也。」"}],"sentence_id":"s208"},{"id":"n255","anchor_text":"寇賊姦軌，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「由內爲姦，起外爲軌。」"},{"source":"zhengyi","label":"正義","text":"亦作「宄」。"}],"sentence_id":"s208"},{"id":"n256","anchor_text":"汝作士，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「獄官之長。」"},{"source":"zhengyi","label":"正義","text":"案：若大理卿也。"}],"sentence_id":"s208"},{"id":"n257","anchor_text":"五刑有服，五服三就；","items":[{"source":"jijie","label":"集解","text":"馬融曰：「五刑，墨、劓、剕、宮、大辟。三就，謂大罪陳諸原野，次罪於市朝，同族適甸師氏。既服五刑，當就三處。」"},{"source":"zhengyi","label":"正義","text":"孔安國云：「服，從也，言得輕重之中正也。」案：墨，點鑿其額，涅以墨。劓，截鼻也。剕，刖足也。宮，淫刑也，男子割勢，婦人幽閉也。大辟，死刑也。"}],"sentence_id":"s208"},{"id":"n258","anchor_text":"五流有度，","items":[{"source":"zhengyi","label":"正義","text":"度音徒洛反。《尚書》作「宅」。孔安國云「五刑之流，各有所居」也。"}],"sentence_id":"s208"},{"id":"n259","anchor_text":"五度三居：","items":[{"source":"zhengyi","label":"正義","text":"案：謂度其遠近，爲三等之居也。"}],"sentence_id":"s208"},{"id":"n260","anchor_text":"維明能信。」","items":[{"source":"jijie","label":"集解","text":"馬融曰：「謂在八議，君不忍刑，宥之以遠。五等之差亦有三等之居：大罪投四裔，次九州之外，次中國之外。當明其罪，能使信服之。」"}],"sentence_id":"s208"},{"id":"n261","anchor_text":"舜曰：「誰能馴予工？」","items":[{"source":"jijie","label":"集解","text":"馬融曰：「謂主百工之官也。」"}],"sentence_id":"s209"},{"id":"n262","anchor_text":"皆曰垂可。於是以垂爲共工。","items":[{"source":"jijie","label":"集解","text":"馬融曰：「爲司空，共理百工之事。」"}],"sentence_id":"s211"},{"id":"n263","anchor_text":"舜曰：「誰能馴予上下","items":[{"source":"jijie","label":"集解","text":"馬融曰：「上謂原，下謂隰。」"}],"sentence_id":"s212"},{"id":"n264","anchor_text":"草木鳥獸？」皆曰益可。於是以益爲朕虞。","items":[{"source":"jijie","label":"集解","text":"馬融曰：「虞，掌山澤之官名。」"}],"sentence_id":"s214"},{"id":"n265","anchor_text":"益拜稽首，讓于諸臣朱虎、熊羆。","items":[{"source":"suoyin","label":"索隱","text":"即高辛氏之子伯虎、仲熊也。"},{"source":"zhengyi","label":"正義","text":"孔安國云：「朱虎，熊羆，二臣名。垂、益所讓四人，皆在元凱之中也。」"}],"sentence_id":"s215"},{"id":"n266","anchor_text":"曰：「往矣，汝諧。」遂以朱虎、熊羆爲佐。","items":[{"source":"zhengyi","label":"正義","text":"爲益之佐也。"}],"sentence_id":"s217"},{"id":"n267","anchor_text":"舜曰：「嗟！四嶽，有能典朕三禮？」","items":[{"source":"jijie","label":"集解","text":"馬融曰：「三禮，天神、地祇、人鬼之禮也。」鄭玄曰：「天事、地事、人事之禮。」"}],"sentence_id":"s219"},{"id":"n268","anchor_text":"曰伯夷可。舜曰：「嗟！伯夷，以汝爲秩宗，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「主次秩尊卑。」"},{"source":"zhengyi","label":"正義","text":"若太常也。《漢書百官表》云「王莽改太常曰秩宗」，依古也。孔安國云：「秩，序；宗，尊也。主郊廟之官也。」"}],"sentence_id":"s222"},{"id":"n269","anchor_text":"夙夜維敬，直哉維靜絜。」","items":[{"source":"zhengyi","label":"正義","text":"靜，清也。絜，明也。孔安國云：「職典禮，施政教，使正直而清明。」"}],"sentence_id":"s222"},{"id":"n270","anchor_text":"伯夷讓夔、龍。舜曰：「然。","items":[{"source":"zhengyi","label":"正義","text":"孔安國云：「然其推賢，不許其讓也。」"}],"sentence_id":"s223"},{"id":"n271","anchor_text":"以夔爲典樂，教稺子，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「國子也。」案：《尚書》作「冑子」，稺冑聲相近。"},{"source":"zhengyi","label":"正義","text":"稺，冑雉反。孔安國云：「冑，長也。謂元子以下，至卿大夫子弟，以歌詩蹈之舞之，教長國子中和祗庸孝友。」"}],"sentence_id":"s225"},{"id":"n272","anchor_text":"直而溫，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「正直而色溫和。」"}],"sentence_id":"s225"},{"id":"n273","anchor_text":"寬而栗，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「寬大而謹敬戰栗也。」"}],"sentence_id":"s225"},{"id":"n274","anchor_text":"剛而毋虐，簡而毋傲；","items":[{"source":"zhengyi","label":"正義","text":"孔安國云：「剛失之虐，簡失之傲，教之以防其失也。」"}],"sentence_id":"s225"},{"id":"n275","anchor_text":"詩言意，歌長言，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「歌，所以長言詩之意也。」"},{"source":"zhengyi","label":"正義","text":"孔安國云：「詩言志以導其心，歌詠其義以長其言也。」"}],"sentence_id":"s225"},{"id":"n276","anchor_text":"聲依永，律和聲，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「聲之曲折又依長言，聲中律乃爲和也。」"},{"source":"zhengyi","label":"正義","text":"孔安國云：「聲，五聲，宮、商、角、徵、羽也。律謂六律六呂，十二月之音氣也。當依聲律和樂也。」"}],"sentence_id":"s225"},{"id":"n277","anchor_text":"八音能諧，毋相奪倫，神人以和。」","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「祖考來格，羣后德讓，其一隅也。」"},{"source":"zhengyi","label":"正義","text":"八音，金、石、絲、竹、匏、土、革、木也。孔安國云：「倫，理也。八音能諧，理不錯奪，則神人咸和，命夔使勉也。」"}],"sentence_id":"s225"},{"id":"n278","anchor_text":"夔曰：「於！予擊石拊石，百獸率舞。」","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「百獸，服不氏所養者也。率舞，言音和也。」"},{"source":"zhengyi","label":"正義","text":"於音烏。孔安國云：「石磬，音之清者。拊亦擊也。舉清者和，則其餘皆從矣。樂感百獸，使相率而舞，則神人和可知也。」案：磬，一片黑石也。不音福尤反。周《禮》云「夏官有服不氏，掌服猛獸，下士一人，徒四人」。鄭玄云「服不服之獸也」。"}],"sentence_id":"s227"},{"id":"n279","anchor_text":"舜曰：「龍，朕畏忌讒說殄僞，振驚朕眾，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「一云『齊說殄行，振驚眾』。」駰案：鄭玄曰「所謂色取仁而行違，是驚動我之眾臣，使之疑惑」。"},{"source":"zhengyi","label":"正義","text":"僞音危睡反。言畏惡利口讒說之人，兼殄絕姦僞人黨，恐其驚動我眾，使龍遏絕之，出入其命惟信實也。此「僞」字太史公變《尚書》文也。《尚書》僞字作「行」，音下孟反。言己畏忌有利口讒說之人，殄絕無德行之官也。"}],"sentence_id":"s228"},{"id":"n280","anchor_text":"命汝爲納言，夙夜出入朕命，惟信。」","items":[{"source":"zhengyi","label":"正義","text":"孔安國云：「納言，喉舌之官也。聽下言納於上，受上言宣於下，必信也。」"}],"sentence_id":"s228"},{"id":"n281","anchor_text":"舜曰：「嗟！女二十有二人，","items":[{"source":"jijie","label":"集解","text":"馬融曰：「稷、契、皋陶皆居官久，有成功，但述而美之，無所復勅。禹及垂已下皆初命，凡六人，與上十二牧四嶽，凡二十二人。」鄭玄曰：「皆格于文祖時所勅命也。」"}],"sentence_id":"s230"},{"id":"n282","anchor_text":"敬哉，惟時相天事。」","items":[{"source":"zhengyi","label":"正義","text":"相，視也。舜命二十二人各敬行其職，惟在順時，視天所宜而行事也。"}],"sentence_id":"s230"},{"id":"n283","anchor_text":"考功，三考絀陟，遠近眾功咸興。分北三苗。","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「所竄三苗爲西裔諸侯者猶爲惡，乃復分析流之。」"}],"sentence_id":"s231"},{"id":"n284","anchor_text":"此二十二人咸成厥功：皋陶爲大理，平，","items":[{"source":"zhengyi","label":"正義","text":"皋陶作士，正平天下罪惡也。"}],"sentence_id":"s233"},{"id":"n285","anchor_text":"伏得其實；伯夷主禮，上下咸讓；垂主工師，","items":[{"source":"zhengyi","label":"正義","text":"工師，若今大匠卿也。"}],"sentence_id":"s233"},{"id":"n286","anchor_text":"百工致功；益主虞，山澤辟；","items":[{"source":"zhengyi","label":"正義","text":"婢亦反，開也。"}],"sentence_id":"s233"},{"id":"n287","anchor_text":"主賓客，遠人至；十二牧行而九州莫敢辟違；","items":[{"source":"zhengyi","label":"正義","text":"禹九州之民無敢辟違舜十二牧也。"}],"sentence_id":"s233"},{"id":"n288","anchor_text":"唯禹之功爲大，披九山，","items":[{"source":"zhengyi","label":"正義","text":"披音皮義反。謂傍其山邊以通。"}],"sentence_id":"s233"},{"id":"n289","anchor_text":"宜。方五千里，至于荒服。南撫交阯、北發，","items":[{"source":"suoyin","label":"索隱","text":"一句。"}],"sentence_id":"s234"},{"id":"n290","anchor_text":"宜。方五千里，至于荒服。南撫交阯、北發，","items":[{"source":"suoyin","label":"索隱","text":"一句。"}],"sentence_id":"s234"},{"id":"n291","anchor_text":"北山戎、發、息慎，","items":[{"source":"jijie","label":"集解","text":"鄭玄曰：「息慎，或謂之肅慎，東北夷。」"}],"sentence_id":"s235"},{"id":"n292","anchor_text":"東長、鳥夷，","items":[{"source":"suoyin","label":"索隱","text":"此言帝舜之德皆撫及四方夷人，故先以「撫」字總之。北發當云「北戶」，南方有地名北戶。又案《漢書》，北發是北方國名，今以北發爲南方之國，誤也。此文省略，四夷之名錯亂。「西戎」上少一「西」字，「山戎」下少一「北」字，「長」字下少一「夷」字。長夷也，鳥夷也，其意宜然。今案：《大戴禮》亦云「長夷」，則長是夷號。又云「鮮支、渠搜」，則鮮支當此析枝也。鮮析音相近。鄒氏、劉氏云「息並音肅」，非也。且夷狄之名，古書不必皆同，今讀如字也。"},{"source":"zhengyi","label":"正義","text":"注「鳥」或作「島」。《括地志》云：「百濟國西南海中有大島十五所，皆置邑，有人居，屬百濟。又倭國西南大海中島居凡百餘小國，在京南萬三千五百里。」案：武后改倭國爲日本國。"}],"sentence_id":"s235"},{"id":"n293","anchor_text":"四海之內","items":[{"source":"zhengyi","label":"正義","text":"《爾雅》云：「九夷八狄七戎六蠻謂之四海。」"}],"sentence_id":"s235"},{"id":"n294","anchor_text":"咸戴帝舜之功。於是禹乃興九招之樂，","items":[{"source":"suoyin","label":"索隱","text":"招音韶，即舜樂簫韶。九成，故曰九招。"}],"sentence_id":"s236"},{"id":"n295","anchor_text":"子事，年五十八堯崩，年六十一代堯踐帝位。","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「舜所都，或言蒲阪，或言平陽，或言潘。潘，今上谷也。」"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「平陽，今晉州城是也。潘，今嬀州城是也。蒲阪，今蒲州南二里河東縣界蒲阪故城是也。」"}],"sentence_id":"s238"},{"id":"n296","anchor_text":"，崩於蒼梧之野。葬於江南九疑，是爲零陵。","items":[{"source":"jijie","label":"集解","text":"《皇覽》曰：「舜冢在零陵營浦縣。其山九谿皆相似，故曰九疑。傳曰『舜葬蒼梧，象爲之耕』。《禮記》曰『舜葬蒼梧，二妃不從』。《山海經》曰『蒼梧山，帝舜葬于陽，丹朱葬于陰』。」皇甫謐曰：「或曰二妃葬衡山。」"}],"sentence_id":"s240"},{"id":"n297","anchor_text":"踐帝位，載天子旗，往朝父瞽叟，夔夔唯謹，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「和敬貌。」"}],"sentence_id":"s241"},{"id":"n298","anchor_text":"如子道。封弟象爲諸侯。","items":[{"source":"jijie","label":"集解","text":"孟子曰：「封之有庳。」音鼻。"},{"source":"zhengyi","label":"正義","text":"《帝王紀》云：「舜弟象封於有鼻。」《括地志》云：「鼻亭神在營道縣北六十里。故老傳云，舜葬九疑，象來至此，後人立祠，名爲鼻亭神。《輿地志》云零陵郡應陽縣東有山，山有象廟。王隱《晉書》云本泉陵縣，北部東五里有鼻墟，象所封也。」"}],"sentence_id":"s242"},{"id":"n299","anchor_text":"舜子商均亦不肖，","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「娥皇無子，女英生商均。」"},{"source":"zhengyi","label":"正義","text":"譙周云：「以虞封舜子，今宋州虞城縣。」《括地志》云：「虞國，舜後所封邑也。或云封舜子均於商，故號商均也。」"}],"sentence_id":"s243"},{"id":"n300","anchor_text":"舜乃豫薦禹於天。","items":[{"source":"suoyin","label":"索隱","text":"謂告天使之攝位也。"}],"sentence_id":"s243"},{"id":"n301","anchor_text":"十七年而崩。三年喪畢，禹亦乃讓舜子，","items":[{"source":"zhengyi","label":"正義","text":"《括地志》云：「禹居洛州陽城者，避商均，非時久居也。」"}],"sentence_id":"s245"},{"id":"n302","anchor_text":"踐天子位。堯子丹朱，舜子商均，皆有疆土，","items":[{"source":"jijie","label":"集解","text":"譙周曰：「以唐封堯之子，以虞封舜之子。」"},{"source":"suoyin","label":"索隱","text":"《漢書律曆志》云封堯子朱於丹淵爲諸侯。商均封虞，在梁國，今虞城縣也。"},{"source":"zhengyi","label":"正義","text":"《括地志》云：「定州唐縣，堯後所封。宋州虞城縣，舜後所封也。」"}],"sentence_id":"s247"},{"id":"n303","anchor_text":"以奉先祀。服其服，禮樂如之。以客見天子，","items":[{"source":"zhengyi","label":"正義","text":"爲天子之賓客也。"}],"sentence_id":"s248"},{"id":"n304","anchor_text":"帝至舜、禹，皆同姓而異其國號，以章明德。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「外傳曰『黃帝二十五子，其得姓者十四人』。虞翻云『以德爲氏姓』。又虞說以凡有二十五人，其二人同姓姬，又十一人爲十一姓，酉、祁、已、滕、葴、任、荀、釐、姞、儇、衣是也，餘十二姓德薄不紀錄。」"},{"source":"zhengyi","label":"正義","text":"釐音力其反。姞音其吉反。儇音在宣反。"}],"sentence_id":"s250"},{"id":"n305","anchor_text":"，帝顓頊爲高陽，帝嚳爲高辛，帝堯爲陶唐，","items":[{"source":"jijie","label":"集解","text":"韋昭曰：「陶唐皆國名，猶湯稱殷商矣。」張晏曰：「堯爲唐侯，國於中山，唐縣是也。」"}],"sentence_id":"s251"},{"id":"n306","anchor_text":"帝舜爲有虞。","items":[{"source":"jijie","label":"集解","text":"皇甫謐曰：「舜嬪于虞，因以爲氏，今河東大陽西山上虞城是也。」"}],"sentence_id":"s251"},{"id":"n307","anchor_text":"禹爲夏后而別氏，姓姒氏。契爲商，姓子氏。","items":[{"source":"suoyin","label":"索隱","text":"禮緯曰：「禹母脩己吞薏苡而生禹，因姓姒氏。」而契姓子氏者，亦以其母吞乙子而生。"}],"sentence_id":"s252"},{"id":"n308","anchor_text":"弃爲周，姓姬氏。","items":[{"source":"jijie","label":"集解","text":"鄭玄駮許慎五經異義曰：「《春秋左傳》『無駭卒，羽父請謚與族。公問族於眾仲，眾仲對曰：「天子建德，因生以賜姓，胙之土而命之氏。諸侯以字爲氏，因以爲族。官有世功，則有官族，邑亦如之。」公命以字爲展氏』。以此言之，天子賜姓命氏，諸侯命族。族者，氏之別名也。姓者，所以統繫百世，使不別也。氏者，所以別子孫之所出。故《世本》之篇，言姓則在上，言氏則在下也。」"}],"sentence_id":"s254"},{"id":"n309","anchor_text":"太史公曰：","items":[{"source":"zhengyi","label":"正義","text":"太史公，司馬遷自謂也。自敍傳云「太史公曰先人有言」，又云「太史公曰余聞之董生」，又云「太史公遭李陵之禍」。明太史公，司馬遷自號也。遷爲太史公官，題贊首也。虞憙云：「古者主天官者皆上公，非獨遷。」"}],"sentence_id":"s255"},{"id":"n310","anchor_text":"學者多稱五帝，尚矣。","items":[{"source":"suoyin","label":"索隱","text":"尚，上也，言久遠也。然「尚矣」文出《大戴禮》。"}],"sentence_id":"s255"},{"id":"n311","anchor_text":"》獨載堯以來；而百家言黃帝，其文不雅馴，","items":[{"source":"zhengyi","label":"正義","text":"馴，訓也。謂百家之言皆非典雅之訓。"}],"sentence_id":"s256"},{"id":"n312","anchor_text":"薦紳先生難言之。","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「薦紳即縉紳也，古字假借。」"}],"sentence_id":"s256"},{"id":"n313","anchor_text":"孔子所傳宰予問《五帝德》及帝繫姓，","items":[{"source":"zhengyi","label":"正義","text":"繫音奚計反。"}],"sentence_id":"s257"},{"id":"n314","anchor_text":"儒者或不傳。","items":[{"source":"suoyin","label":"索隱","text":"《五帝德》、帝繫姓皆《大戴禮》及《孔子家語》篇名。以二者皆非正經，故漢時儒者以爲非聖人之言，故多不傳學也。"}],"sentence_id":"s257"},{"id":"n315","anchor_text":"余嘗西至空桐，","items":[{"source":"zhengyi","label":"正義","text":"余，太史公自稱也。嘗，曾也。空桐山在原州平高縣西百里，黃帝問道於廣成子處。"}],"sentence_id":"s258"},{"id":"n316","anchor_text":"北過涿鹿，","items":[{"source":"zhengyi","label":"正義","text":"涿鹿山在嬀州東南五十里，山側有涿鹿城，即黃帝、堯、舜之都也。"}],"sentence_id":"s017"},{"id":"n317","anchor_text":"舜之處，風教固殊焉，總之不離古文者近是。","items":[{"source":"suoyin","label":"索隱","text":"古文即帝德、帝系二書也。近是聖人之說。"}],"sentence_id":"s258"},{"id":"n318","anchor_text":"《國語》，其發明《五帝德》、帝繫姓章矣，","items":[{"source":"suoyin","label":"索隱","text":"太史公言己以春秋、《國語》古書博加考驗，益以發明《五帝德》等說甚章著也。"}],"sentence_id":"s259"},{"id":"n319","anchor_text":"顧弟弗深考，","items":[{"source":"jijie","label":"集解","text":"徐廣曰：「弟，但也。《史記》、《漢書》見此者非一。又左思蜀都賦曰『弟如滇池』，而不詳者多以爲字誤。學者安可不博觀乎？」"},{"source":"zhengyi","label":"正義","text":"顧，念也。弟，且也。太史公言博考古文，擇其言表見之不虛，甚章著矣，思念亦且不須更深考論。"}],"sentence_id":"s259"},{"id":"n320","anchor_text":"其所表見皆不虛。","items":[{"source":"suoyin","label":"索隱","text":"言帝德、帝系所有表見者皆不爲虛妄也。"}],"sentence_id":"s259"},{"id":"n321","anchor_text":"書缺有閒矣，","items":[{"source":"zhengyi","label":"正義","text":"言《古文尚書》缺失其閒多矣，而無說黃帝之語。"}],"sentence_id":"s260"},{"id":"n322","anchor_text":"其軼乃時時見於他說。","items":[{"source":"suoyin","label":"索隱","text":"言古典殘缺有年載，故曰「有閒」。然皇帝遺事散軼，乃時時旁見於他記說，即帝德、帝系等說也。故己今採案而備論黃帝已來事耳。"}],"sentence_id":"s260"},{"id":"n323","anchor_text":"余并論次，擇其言尤雅者，故著爲本紀書首。","items":[{"source":"zhengyi","label":"正義","text":"太史公據古文并諸子百家論次，擇其言語典雅者，故著爲《五帝本紀》，在《史記》百三十篇書之首。"}],"sentence_id":"s262"}]};
+
+// ── Block 渲染器 ──
+function renderBlock(b) {
+  const eid = id => id ? `pn-${id.replace(/\./g, '-')}` : null;
+  const paraNum = id => id ? `<a class="para-num" id="${eid(id)}">${id}</a> ` : '';
+  const indentStyle = b.indent ? ' style="margin-left:2em;"' : '';
+
+  switch(b.t) {
+    case 'h2': return `<h2>${b.text}</h2>`;
+    case 'h3': return `<h3>${b.text}</h3>`;
+    case 'hr': return '<hr style="border:none;border-top:1px solid #e0d8cc;margin:28px 0;">';
+    case 'p': {
+      let inner = b.html;
+      return `<p${indentStyle}>${paraNum(b.id)}${inner}</p>`;
+    }
+    case 'causal': {
+      const paraLine = b.id ? `<p>${paraNum(b.id)}</p>` : '';
+      const ind = b.indent !== false ? ' style="margin-left:2em;"' : '';
+      return `${paraLine}<div class="causal"${ind} data-rel-id="${b.rid}">\n        <div class="cause" data-rel-id="${b.cause.rid}">${b.cause.html}</div>\n        <div class="effect" data-rel-id="${b.effect.rid}" data-rel-from="${b.cause.rid}" data-rel-type="causal" data-rel-anchor="tail">${b.effect.html}</div>\n      </div>`;
+    }
+    case 'escalation':
+      return `<div class="escalation" data-rel-id="${b.rid}" data-rel-from="${b.from}" data-rel-type="escalation" data-rel-anchor="${b.anchor||'head'}">${b.html}</div>`;
+    case 'sequel':
+      return `<p${indentStyle} data-rel-id="${b.rid}" data-rel-from="${b.from}" data-rel-type="sequel" data-rel-anchor="${b.anchor||'head'}">${b.html}</p>`;
+    case 'summary':
+      return `<div class="summary-line" data-rel-id="${b.rid||''}" ${b.from ? `data-rel-from="${b.from}" data-rel-type="summary" data-rel-anchor="${b.anchor||'head'}"` : ''}>${b.html}</div>`;
+    case 'list': {
+      const items = (b.items||[]).map(it => `<li>${it}</li>`).join('');
+      return `<ul${indentStyle} style="list-style:none;padding:0;">${items}</ul>`;
+    }
+    case 'parallel': {
+      const items = (b.items||[]).map(it => `<span class="item">${it}</span>`).join(' ');
+      return `<div class="parallel"${indentStyle}>${items}</div>`;
+    }
+    case 'dialogue': {
+      const hdr = b.id ? `<p>${paraNum(b.id)}</p>` : '';
+      const dlines = (b.lines||[]).map(l =>
+        `<li>${paraNum(l.id)}${l.html}</li>`
+      ).join('');
+      return `${hdr}<ul${indentStyle} style="list-style:none;padding:0;">${dlines}</ul>`;
+    }
+    case 'continuation':
+      return `<p${indentStyle}>${b.html}</p>`;
+    case 'cite':
+      return `<p class="citation">${b.html}</p>`;
+    case 'block': {
+      const inner = (b.blocks||[]).map(renderBlock).join('');
+      return `<div class="block-indent">${inner}</div>`;
+    }
+    default: return '';
+  }
+}
+
+function renderAllBlocks(blocks) {
+  return blocks.map(renderBlock).join('\n');
+}
+
+// ── 注释面板渲染 ──
+function renderNotes(notes) {
+  const BADGE = {
+    jijie:   {label:'集解', cls:'badge-jijie'},
+    suoyin:  {label:'索隱', cls:'badge-suoyin'},
+    zhengyi: {label:'正義', cls:'badge-zhengyi'},
+  };
+  let html = '<h3>三家注 <span style="font-size:0.8em;color:#aaa;font-weight:normal;">(' + notes.length + '条)</span></h3>';
+  for (const note of notes) {
+    if (!note.items || !note.items.length) continue;
+    const srcs = note.items.map(i => i.source);
+    const grpCls = srcs.length === 1 ? srcs[0] : 'mixed';
+    const itemsHtml = note.items.map(it => {
+      const b = BADGE[it.source] || {label:it.source, cls:''};
+      return `<div class="note-item"><span class="badge ${b.cls}">${b.label}</span><span class="note-text">${it.text}</span></div>`;
+    }).join('');
+    const ref = note.anchor_text ? note.anchor_text.slice(0, 20) : note.id;
+    const sidAttr = note.sentence_id ? ` data-sid="${note.sentence_id}"` : '';
+    html += `<div class="note-group ${grpCls}" id="${note.id}"${sidAttr} data-anchor="${(note.anchor_text||'').slice(0,12).replace(/"/g,'&quot;')}">\n      <div class="note-ref">&#9658; ${ref}</div>\n      ${itemsHtml}\n    </div>`;
+  }
+  return html;
+}
+
+// ── 注释锚点文字匹配 ──
+function matchAnchors(notes) {
+  const main = document.getElementById('mainContent');
+  for (const note of notes) {
+    const raw = (note.anchor_text || '').trim();
+    const key = raw.replace(/[，。：；！？、""''「」（）【】〖〗〔〕〈〉，。：；、]/g, '').slice(0, 8);
+    if (key.length < 2) continue;
+    if (main.querySelector(`[data-note="${note.id}"]`)) continue;
+
+    const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {
+      acceptNode: n => n.parentElement.closest('.note-anchor') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    });
+    let found = false;
+    while (!found && walker.nextNode()) {
+      const tn = walker.currentNode;
+      const idx = tn.textContent.indexOf(key);
+      if (idx < 0) continue;
+      try {
+        const range = document.createRange();
+        range.setStart(tn, idx);
+        range.setEnd(tn, idx + key.length);
+        const span = document.createElement('span');
+        span.className = 'note-anchor';
+        span.dataset.note = note.id;
+        range.surroundContents(span);
+        found = true;
+      } catch(e) { /* range spans elements, skip */ }
+    }
+  }
+}
+
+// ── 初始化 ──
+// 旧式锚点 ID → 新注释面板 ID 的硬编码映射表
+// （旧ID来自 semantic JSON，新ID来自 001-notes.json，按 anchor_text 匹配预计算）
+const LEGACY_ID_MAP = {
+  'n1':    'n002',
+  'n1b':   'n003',
+  'n1c':   'n005',
+  'n1_1a': 'n008',
+  'n1_1b': 'n010',
+  'n1_1c': 'n016',
+  'n1_2a': 'n019',
+  'n2a':   'n029',
+  'n2b':   'n030',
+  'n4_1':  'n048',
+  'n5':    'n058',
+};
+
+function remapLegacyAnchors() {
+  document.querySelectorAll('.note-anchor[data-note]').forEach(el => {
+    const oldId = el.dataset.note;
+    if (LEGACY_ID_MAP[oldId]) el.dataset.note = LEGACY_ID_MAP[oldId];
+  });
+}
+
+// ── 句子编号：在正文文本节点中，按 。！？ 切分，给每段加 data-sid ──
+function addSentenceIds() {
+  const main = document.getElementById('mainContent');
+  // 建立 sentence文本 → sid 的查找表（简体，去首尾标点）
+  const sidMap = new Map(); // text_key → sid
+  for (const s of SENTENCES.sentences) {
+    const key = s.text.replace(/[。！？，、：；\s]/g, '').slice(0, 10);
+    if (key) sidMap.set(key, s.id);
+  }
+
+  // 遍历所有文本节点，找到包含句末标点的节点，按 。！？ 拆分并包裹 span
+  const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => n.parentElement.closest('h1,h2,h3') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+  });
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+  let globalSidIdx = 0;
+  for (const tn of textNodes) {
+    if (!/[。！？]/.test(tn.textContent)) continue;
+    // 按 。！？ 拆分（保留标点在片段末尾）
+    const parts = tn.textContent.split(/(?<=[。！？])/);
+    if (parts.length <= 1) continue;
+    const frag = document.createDocumentFragment();
+    for (const part of parts) {
+      if (!part) continue;
+      const key = part.replace(/[。！？，、：；\s]/g, '').slice(0, 10);
+      const sid = sidMap.get(key) || `sx${++globalSidIdx}`;
+      const span = document.createElement('span');
+      span.dataset.sid = sid;
+      span.textContent = part;
+      frag.appendChild(span);
+    }
+    tn.parentNode.replaceChild(frag, tn);
+  }
+}
+
+// ── 注释点击：用 sentence_id 定位正文 ──
+// note-group click 时，优先用 sentence_id 跳转，其次用 note-anchor
+function scrollToSentence(sid) {
+  if (!sid) return false;
+  const el = document.querySelector(`[data-sid="${sid}"]`);
+  if (!el) return false;
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  el.classList.add('sent-highlight');
+  setTimeout(() => el.classList.remove('sent-highlight'), 1800);
+  return true;
+}
+
+function initReader() {
+  document.getElementById('mainContent').innerHTML = renderAllBlocks(SEMANTIC.blocks);
+  document.getElementById('notesPanel').innerHTML = renderNotes(NOTES_RAW.notes);
+  addSentenceIds();
+  matchAnchors(NOTES_RAW.notes);
+  remapLegacyAnchors();
+  bindNoteInteractions();
+}
+
+document.addEventListener('DOMContentLoaded', initReader);
 </script>
 
 </body>
