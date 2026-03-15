@@ -80,6 +80,16 @@ def is_valid_entity(surface):
     return True
 
 
+def parse_inline_disambig(raw_surface):
+    """解析内联消歧语法：'台|吕台' → (display='台', canonical='吕台')
+    无 | 时返回 (surface, surface)。
+    """
+    if '|' in raw_surface:
+        parts = raw_surface.split('|', 1)
+        return parts[0].strip(), parts[1].strip()
+    return raw_surface, raw_surface
+
+
 # 章节标题提取（用于显示友好名称）
 def extract_chapter_title(chapter_id):
     """从章节ID提取显示标题，如 '007_项羽本纪' → '项羽本纪'"""
@@ -113,17 +123,18 @@ def extract_entities_from_file(file_path):
             # 器物类型需要特殊处理：跳过 **粗体**
             if type_key == 'artifact':
                 for m in re.finditer(pattern, line):
-                    surface = m.group(1)
-                    if surface is None:
+                    raw = m.group(1)
+                    if raw is None:
                         continue  # **粗体** 匹配，跳过
-                    surface = surface.strip()
-                    if surface and is_valid_entity(surface):
-                        results.append((type_key, surface, chapter_id, current_para))
+                    display, canonical = parse_inline_disambig(raw.strip())
+                    if canonical and is_valid_entity(canonical):
+                        results.append((type_key, canonical, chapter_id, current_para))
             else:
                 for m in re.finditer(pattern, line):
-                    surface = m.group(1).strip()
-                    if surface and is_valid_entity(surface):
-                        results.append((type_key, surface, chapter_id, current_para))
+                    raw = m.group(1).strip()
+                    display, canonical = parse_inline_disambig(raw)
+                    if canonical and is_valid_entity(canonical):
+                        results.append((type_key, canonical, chapter_id, current_para))
 
     return results
 
@@ -229,10 +240,11 @@ def _strip_entity_tags(text):
 
 
 def _extract_people_list(people_str):
-    """从人物字段提取人名列表。'〖@项羽〗、〖@刘邦〗' → ['项羽', '刘邦']
-    v2.1格式：〖@人名〗。
+    """从人物字段提取人名列表。'〖@项羽〗、〖@台|吕台〗' → ['项羽', '吕台']
+    v2.1格式：〖@人名〗，v2.2扩展：〖@短名|全名〗。
     """
-    names = re.findall(r'〖@([^〖〗\n]+)〗', people_str)
+    raw_names = re.findall(r'〖@([^〖〗\n]+)〗', people_str)
+    names = [parse_inline_disambig(n)[1] for n in raw_names]
     return names if names else [_strip_entity_tags(people_str)] if people_str.strip() not in ('', '-') else []
 
 

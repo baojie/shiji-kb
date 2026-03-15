@@ -51,6 +51,7 @@ ENTITY_PATTERNS = [
     (r'〖~([^〖〗<>"]+)〗',  r'<span class="tribe" title="族群">\1</span>'),       # 族群
     (r'〖#([^〖〗<>"]+)〗',  r'<span class="identity" title="身份">\1</span>'),     # 身份
     (r'〖!([^〖〗<>"]+)〗',  r'<span class="astronomy" title="天文/历法">\1</span>'), # 天文
+    (r'〖@([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="person" title="人名：\2" data-canonical="\2">\1</span>'),  # 人名（消歧：显示|全名）
     (r'〖@([^〖〗<>"]+)〗',  r'<span class="person" title="人名">\1</span>'),      # 人名
     (r'〖\+([^〖〗<>"]+)〗', r'<span class="biology" title="生物">\1</span>'),      # 生物
     (r'〖\$([^〖〗<>"]+)〗', r'<span class="quantity" title="数量">\1</span>'),    # 数量
@@ -224,10 +225,16 @@ def _add_entity_links(text):
                     href = f"../entities/timeline.html#ruler-{html_escape(ruler_key)}"
                     return f'<a href="{href}" class="entity-link" target="_blank" title="{html_escape(tooltip)}">{full_span}</a>'
 
-        # Step 1: 消歧（仅人名，章节级）
-        resolved = entity_text
-        disambiguated = False
-        if css_class == 'person' and chapter_id:
+        # Step 0: 内联消歧（data-canonical 属性，来自 〖@台|吕台〗 语法）
+        inline_canonical = None
+        canonical_match = re.search(r'data-canonical="([^"]+)"', full_span)
+        if canonical_match:
+            inline_canonical = canonical_match.group(1)
+
+        # Step 1: 消歧（仅人名，章节级）— 内联消歧优先
+        resolved = inline_canonical or entity_text
+        disambiguated = inline_canonical is not None
+        if not disambiguated and css_class == 'person' and chapter_id:
             chapter_disambig = disambig_map.get(chapter_id, {})
             if entity_text in chapter_disambig:
                 resolved = chapter_disambig[entity_text]
@@ -249,10 +256,10 @@ def _add_entity_links(text):
             return f'<a href="{href}" class="entity-link" target="_blank">{span_with_tooltip}</a>'
         return f'<a href="{href}" class="entity-link" target="_blank">{full_span}</a>'
 
-    # 匹配最内层实体span: <span class="TYPE" title="LABEL">TEXT</span>
+    # 匹配最内层实体span: <span class="TYPE" title="LABEL" [data-canonical="X"]>TEXT</span>
     # [^<]+ 确保只匹配不含子标签的最内层span
     text = re.sub(
-        r'<span class="([^"]+)" title="[^"]*">([^<]+)</span>',
+        r'<span class="([^"]+)" title="[^"]*"(?: data-canonical="[^"]*")?>([^<]+)</span>',
         _entity_link_replacer,
         text
     )
