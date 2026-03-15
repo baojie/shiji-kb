@@ -16,3 +16,44 @@
     color: #008B8B;
     border-left-color: #008B8B;
 }
+
+/* 文本引用行 */
+.timeline-index .text-refs {
+    margin-bottom: 0.3em;
+    font-size: 0.9em;
+}
+
+/* 事件列表 */
+.timeline-index .event-list {
+    margin: 0.2em 0 0 0;
+    padding-left: 1.2em;
+    list-style: disc;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.timeline-index .event-item {
+    margin: 0.1em 0;
+}
+
+.timeline-index .event-ref {
+    color: #4682B4;
+    text-decoration: none;
+}
+
+.timeline-index .event-ref:hover {
+    text-decoration: underline;
+}
+
+.timeline-index .event-id {
+    color: #888;
+    font-size: 0.85em;
+    margin-right: 0.3em;
+}
+
+.timeline-index .approx-mark {
+    color: #aaa;
+    font-style: italic;
+    margin-right: 0.2em;
+    cursor: help;
+}

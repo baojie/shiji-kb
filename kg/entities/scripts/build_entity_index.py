@@ -1036,7 +1036,7 @@ def generate_landing_page(index):
 
     # 预加载编年索引统计（用于在时间卡片后插入）
     timeline_card = None
-    year_map_file = _PROJECT_ROOT / 'kg' / 'year_ce_map.json'
+    year_map_file = _PROJECT_ROOT / 'kg' / 'chronology' / 'data' / 'year_ce_map.json'
     if year_map_file.exists():
         try:
             with open(year_map_file, 'r', encoding='utf-8') as f:
@@ -1181,6 +1181,21 @@ def main():
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(page_html)
         print(f"  生成: {output_path} ({len(event_index)} 条)")
+
+    # 生成编年索引（timeline.html）
+    year_map_file = _PROJECT_ROOT / 'kg' / 'chronology' / 'data' / 'year_ce_map.json'
+    if year_map_file.exists():
+        import importlib.util, sys as _sys
+        _bym_path = _PROJECT_ROOT / 'kg' / 'events' / 'scripts' / 'build_year_map.py'
+        _spec = importlib.util.spec_from_file_location('build_year_map', _bym_path)
+        _bym = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(_bym)
+        with open(year_map_file, 'r', encoding='utf-8') as f:
+            _year_map = json.load(f)
+        _bym.generate_timeline(_year_map)
+        print(f"  生成: {OUTPUT_DIR / 'timeline.html'}")
+    else:
+        print(f"  跳过 timeline.html（year_ce_map.json 不存在，请先运行 build_year_map.py）")
 
     # 生成总览页
     landing_html = generate_landing_page(index)

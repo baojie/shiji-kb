@@ -220,63 +220,126 @@ def parse_cell_ruler_year(cell_text):
     return None, None
 
 
-def parse_table_014():
-    """Parse 十二诸侯年表 to extract reign periods."""
+def _parse_table_by_rows(filepath_glob, start_bce, states, state_col_offset,
+                         end_bce_default, chapter_tag):
+    """Generic row-counting parser for 十表 style tables.
+
+    The tables in 014/015 have no 'BCE year' column — instead, row r1 corresponds
+    to `start_bce` and each subsequent row decrements by 1 year.
+
+    Table detection: look for a '|' header row that contains state/dynasty names.
+
+    Returns:
+        rulers: {normalized_name: {state, start_bce, end_bce}}
+        year_state: {ce_year: {state: (ruler_display, reign_year_num)}}
+    """
     filepath = None
-    for f in glob.glob(os.path.join(CHAPTER_DIR, '014_*.tagged.md')):
+    for f in glob.glob(os.path.join(CHAPTER_DIR, filepath_glob)):
         filepath = f
         break
     if not filepath:
-        print("Warning: 014_十二诸侯年表 not found")
-        return {}
+        print(f"Warning: {chapter_tag} not found")
+        return {}, {}
 
-    rulers = {}  # {normalized_name: {state, start_bce, end_bce}}
-    current_ruler = {}  # {state: normalized_name}
+    rulers = {}
+    current_ruler = {}    # {state: normalized_name}
+    current_start_bce = {}  # {state: bce when ruler's first row appeared}
+    year_state = {}  # {ce_year: {state: (ruler_display, year_num)}}
 
     with open(filepath, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     in_table = False
+    row_num = 0
+
     for line in lines:
-        if line.strip().startswith('| 公元前'):
-            in_table = True
-            continue
-        if line.strip().startswith('| ---'):
-            continue
-        if not in_table or not line.strip().startswith('|'):
-            if in_table and not line.strip().startswith('|'):
+        stripped = line.strip()
+        if not stripped.startswith('|'):
+            if in_table:
                 in_table = False
             continue
 
+        # Detect table header: a | row containing multiple state names
+        if not in_table:
+            # Check if this looks like a state-column header (≥3 state names present)
+            if sum(1 for s in states if s in stripped) >= 3:
+                in_table = True
+                row_num = 0
+                continue  # skip header row
+            continue
+
         cells = parse_table_row(line)
-        if not cells or len(cells) < TABLE_014_STATE_START_COL + len(TABLE_014_STATES):
+        if not cells:
             continue
 
-        bce = extract_bce_year(cells[0])
-        if bce is None:
+        # Skip separator row
+        if cells[0].strip().startswith('---') or cells[0].strip().startswith('-'):
             continue
 
-        for i, state in enumerate(TABLE_014_STATES):
-            col_idx = TABLE_014_STATE_START_COL + i
+        # Skip empty rows (all cells empty)
+        if all(not c.strip() for c in cells):
+            continue
+
+        row_num += 1
+        bce = start_bce - row_num + 1
+        if bce < end_bce_default - 50:  # safety: stop well past expected end
+            break
+        ce_year = -bce
+
+        entry = {}
+        for i, state in enumerate(states):
+            col_idx = state_col_offset + i
             if col_idx >= len(cells):
                 break
 
             cell = cells[col_idx]
             ruler_raw, year_num = parse_cell_ruler_year(cell)
 
-            if ruler_raw is not None and year_num is not None:
-                # New ruler entry or first-row entry
+            if ruler_raw is not None:
+                # New ruler appeared (may include starting year_num)
                 name = normalize_ruler_name(ruler_raw, state)
                 if name:
-                    start_bce = bce + year_num - 1
+                    # ruler_start_bce: if year_num given, ruler started that many years before this row
+                    ruler_start_bce = bce + (year_num - 1 if year_num else 0)
 
-                    # End previous ruler for this state
+                    # End previous ruler
                     if state in current_ruler:
-                        prev_name = current_ruler[state]
-                        if prev_name in rulers:
-                            rulers[prev_name]['end_bce'] = bce + year_num - 1  # last year was previous year
+                        prev = current_ruler[state]
+                        if prev in rulers and 'end_bce' not in rulers[prev]:
+                            rulers[prev]['end_bce'] = ruler_start_bce
 
-                    rulers[name] = {'state': state, 'start_bce': start_bce}
+                    rulers[name] = {'state': state, 'start_bce': ruler_start_bce}
+                    current_ruler[state] = name
+                    current_start_bce[state] = ruler_start_bce
+
+            # Compute reign year for this BCE year
+            if state in current_ruler:
+                r_start = current_start_bce.get(state, bce)
+                actual_year = r_start - bce + 1
+                if year_num is not None and ruler_raw is None:
+                    # Continuation cell with explicit year number — trust it
+                    actual_year = year_num
+                entry[state] = (current_ruler[state], actual_year)
+
+        if entry:
+            year_state[ce_year] = entry
+
+    # Close out last rulers
+    last_bce = start_bce - row_num + 1
+    for state, name in current_ruler.items():
+        if name in rulers and 'end_bce' not in rulers[name]:
+            rulers[name]['end_bce'] = end_bce_default
+
+    return rulers, year_state
+
+
+def parse_table_014():
+    """Parse 十二诸侯年表 (841–425 BCE) to extract reign periods and year→state map."""
+    rulers, year_state = _parse_table_by_rows(
+        '014_*.tagged.md', 841, TABLE_014_STATES, TABLE_014_STATE_START_COL,
+        end_bce_default=425, chapter_tag='014_十二诸侯年表'
+    )
+    return rulers, year_state
                     current_ruler[state] = name
 
     # Set end years for last rulers (end of table = ~478 BCE)
@@ -1186,7 +1249,87 @@ def compute_reign_aliases(reign_data, ce_year):
     return [a[1] for a in aliases]
 
 
-def generate_timeline(year_map, reign_data=None):
+def load_event_index_years():
+    """Parse all event index files and return {ce_year: [(event_id, event_name, ch_id, is_approx), ...]}.
+
+    Handles time field formats:
+    - （公元前XXX年）      exact
+    - [公元前XXX年]        inferred
+    - [约公元前XXX年]      approximate
+    - [公元前X—前Y年]      range (use first year)
+    - [公元X年]            CE positive year (rare)
+    """
+    event_dir = os.path.join(BASE_DIR, 'kg', 'events', 'data')
+    result = defaultdict(list)
+
+    # Regex patterns to extract CE year from time field
+    # Exact: （公元前XXX年）
+    pat_exact = re.compile(r'（公元前(\d+)年）')
+    # Inferred: [公元前XXX年]
+    pat_infer = re.compile(r'\[(?:约)?公元前(\d+)年\]')
+    # Range: [公元前X—前Y年] or [公元前X年—前Y年]
+    pat_range = re.compile(r'\[(?:约)?公元前(\d+)[^]]*?—[^]]*?\]')
+    # Positive CE: （公元X年）or [公元X年]
+    pat_ce = re.compile(r'[（\[]公元(\d+)年[）\]]')
+
+    for fname in sorted(os.listdir(event_dir)):
+        if not fname.endswith('_事件索引.md'):
+            continue
+        ch_id = fname[:3]  # e.g. '005'
+        fpath = os.path.join(event_dir, fname)
+        with open(fpath, encoding='utf-8') as f:
+            for line in f:
+                if not line.startswith('|'):
+                    continue
+                parts = [p.strip() for p in line.split('|')]
+                # Table row: | 事件ID | 事件名称 | 事件类型 | 时间 | ...
+                if len(parts) < 6:
+                    continue
+                event_id = parts[1]
+                if not re.match(r'\d{3}-\d+', event_id):
+                    continue  # skip header/separator
+                event_name = parts[2]
+                time_field = parts[4]
+
+                # Strip entity tags for clean display
+                event_name_clean = re.sub(r'〖[@=;#%&\'\^~\*!\+\$]([^〗]+)〗', r'\1', event_name)
+                event_name_clean = re.sub(r'[〚《〈【〔]([^〛》〉】〕]+)[〛》〉】〕]', r'\1', event_name_clean)
+
+                # Extract CE year
+                ce_years = []
+                is_approx = False
+
+                m = pat_exact.search(time_field)
+                if m:
+                    ce_years.append(-int(m.group(1)))
+
+                m = pat_infer.search(time_field)
+                if m:
+                    if '约' in time_field:
+                        is_approx = True
+                    ce_years.append(-int(m.group(1)))
+
+                if not ce_years:
+                    m = pat_range.search(time_field)
+                    if m:
+                        is_approx = True
+                        ce_years.append(-int(m.group(1)))
+
+                if not ce_years:
+                    m = pat_ce.search(time_field)
+                    if m:
+                        ce_years.append(int(m.group(1)))
+
+                for ce_year in ce_years:
+                    result[ce_year].append((event_id, event_name_clean, ch_id, is_approx))
+
+    total_years = len(result)
+    total_events = sum(len(v) for v in result.values())
+    print(f"  Event index: {total_years} distinct years, {total_events} events with CE years")
+    return result
+
+
+def generate_timeline(year_map, reign_data=None, event_year_map=None):
     """Generate timeline.html — CE-year indexed page.
     Handles both CE-year entries and ruler_key entries (pre-841 BCE).
     """
@@ -1197,8 +1340,14 @@ def generate_timeline(year_map, reign_data=None):
     # Aggregate references:
     # CE-year entries → by_year {ce_year: [...]}
     # ruler_key entries → by_ruler_key {ruler_key: [...]}
+    # event data → by_year_events {ce_year: [(event_id, event_name, ch_id, is_approx), ...]}
     by_year = defaultdict(list)
     by_ruler_key = defaultdict(list)
+    by_year_events = defaultdict(list)
+
+    if event_year_map:
+        for ce_year, events in event_year_map.items():
+            by_year_events[ce_year].extend(events)
 
     for chapter_id, paras in year_map.items():
         for para_id, entries in paras.items():
@@ -1212,13 +1361,16 @@ def generate_timeline(year_map, reign_data=None):
                     by_ruler_key[rk].append((chapter_id, para_id, surface, ruler))
 
     # Sort by CE year (ascending = earliest BCE first)
-    sorted_years = sorted(by_year.keys())
+    # Union of text-reference years and event years
+    all_years = set(by_year.keys()) | set(by_year_events.keys())
+    sorted_years = sorted(all_years)
 
     total_years = len(sorted_years)
     total_refs = sum(len(refs) for refs in by_year.values())
+    total_events_with_year = sum(len(evs) for evs in by_year_events.values())
     total_ruler_keys = len(by_ruler_key)
     total_ruler_refs = sum(len(refs) for refs in by_ruler_key.values())
-    print(f"  {total_years} distinct CE years, {total_refs} references")
+    print(f"  {total_years} distinct CE years, {total_refs} text references, {total_events_with_year} events")
     if total_ruler_keys:
         print(f"  {total_ruler_keys} ruler+year entries (pre-table era), {total_ruler_refs} references")
 
@@ -1254,7 +1406,8 @@ def generate_timeline(year_map, reign_data=None):
 
     lines.append('<h1>编年索引</h1>')
     lines.append(f'<p class="index-stats">共 <strong>{total_years}</strong> 个年份，'
-                 f'<strong>{total_refs}</strong> 次引用</p>')
+                 f'<strong>{total_refs}</strong> 次文本引用，'
+                 f'<strong>{total_events_with_year}</strong> 个事件</p>')
 
     # Search filter
     lines.append('<div class="entity-filter">')
@@ -1304,7 +1457,13 @@ def generate_timeline(year_map, reign_data=None):
             lines.append(f'      <span class="canonical-name time">{html_mod.escape(year_display)}</span>')
             if ruler_str:
                 lines.append(f'      <span class="alias-list">{html_mod.escape(ruler_str)}</span>')
-            lines.append(f'      <span class="entry-count">({len(refs)})</span>')
+            event_count = len(by_year_events.get(ce_year, []))
+            count_parts = []
+            if refs:
+                count_parts.append(f'{len(refs)}引用')
+            if event_count:
+                count_parts.append(f'{event_count}事件')
+            lines.append(f'      <span class="entry-count">({", ".join(count_parts)})</span>')
             lines.append('    </div>')
 
             # Right: chapter references with paragraph excerpts
@@ -1329,7 +1488,24 @@ def generate_timeline(year_map, reign_data=None):
                     )
                 ref_parts.append(f'{ch_link} {", ".join(para_links)}')
 
-            lines.append('      ' + ' <span class="ref-sep">|</span> '.join(ref_parts))
+            if ref_parts:
+                lines.append('      <div class="text-refs">' + ' <span class="ref-sep">|</span> '.join(ref_parts) + '</div>')
+
+            # Event list for this year
+            events_this_year = by_year_events.get(ce_year, [])
+            if events_this_year:
+                lines.append('      <ul class="event-list">')
+                for ev_id, ev_name, ev_ch_id, ev_approx in sorted(events_this_year, key=lambda x: x[0]):
+                    _, ch_stem = chapter_names.get(ev_ch_id, (ev_ch_id, ev_ch_id))
+                    approx_mark = '<span class="approx-mark" title="近似年代">~</span>' if ev_approx else ''
+                    lines.append(
+                        f'        <li class="event-item">{approx_mark}'
+                        f'<a href="event.html#event-{html_mod.escape(ev_id)}" class="event-ref">'
+                        f'<span class="event-id">{html_mod.escape(ev_id)}</span> '
+                        f'{html_mod.escape(ev_name)}</a></li>'
+                    )
+                lines.append('      </ul>')
+
             lines.append('    </div>')
 
             lines.append('  </div>')
@@ -1447,8 +1623,11 @@ def main():
     year_map = disambiguate_years(reign_data)
     save_year_map(year_map)
 
-    # Phase 3: Generate timeline.html
-    generate_timeline(year_map, reign_data)
+    # Phase 3: Load event index years
+    event_year_map = load_event_index_years()
+
+    # Phase 4: Generate timeline.html
+    generate_timeline(year_map, reign_data, event_year_map)
 
 
 if __name__ == '__main__':
