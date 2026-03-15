@@ -103,10 +103,13 @@ shiji-kb/
 | 校勘 | [01 古籍校勘](skills/SKILL_01_古籍校勘.md) | 底本校正，生成定本 |
 | 结构 | [02 结构分析](skills/SKILL_02_结构分析.md) | Token vs XML设计决策 |
 | | [02a 章节切分与编号](skills/SKILL_02a_章节切分与编号.md) | Purple Numbers + 段落修复 + 小节划分 |
-| | [02b 区块与韵文处理](skills/SKILL_02b_区块与韵文处理.md) | 太史公曰/赞/诗歌围栏块 |
-| | [02c 三家注标注](skills/SKILL_02c_三家注标注.md) | 集解/索隐/正义 + 维基文库数据源（8大价值） |
+| | [02b 区块与韵文处理](skills/SKILL_02b_区块与韵文处理.md) | 太史公曰/赞/诗歌围栏块 + 对话分析 |
+| | [02c 三家注标注](skills/SKILL_02c_三家注标注.md) | 集解/索隐/正义注释层 |
+| | [02d 结构语义分析](skills/SKILL_02d_结构语义分析.md) | 句间/段间/章间语义关系 + 注释对齐 + 排版映射 |
+| | [02e 词法分析](skills/SKILL_02e_词法分析.md) | 字级词性标注、遗漏实体发现 |
+| | [02f 文本统计](skills/SKILL_02f_文本统计.md) | 字数/句长/词频/实体密度/五体对比 |
 | 实体 | [03 实体构建](skills/SKILL_03_实体构建.md) | 阶段总览 |
-| | [03a 实体标注](skills/SKILL_03a_实体标注.md) | 18类实体NER（v2.5，含常见错误+候选扩展类型） |
+| | [03a 实体标注](skills/SKILL_03a_实体标注.md) | 18类实体NER（v2.5） |
 | | [03b 实体消歧](skills/SKILL_03b_实体消歧.md) | 4层启发式（3,797人名，644处消歧） |
 | | [03c 渲染与发布](skills/SKILL_03c_渲染与发布.md) | HTML渲染衔接（详见09a） |
 | 事件 | [04a 事件识别](skills/SKILL_04a_事件识别.md) | 事件Schema/类型/提取 |
@@ -114,8 +117,8 @@ shiji-kb/
 | | [04c 事件年代推断](skills/SKILL_04c_事件年代推断.md) | 分层纪年解析 |
 | | [04d 事件年代审查](skills/SKILL_04d_事件年代审查.md) | Agent反思审查工作流 |
 | | [04e 年份消歧](skills/SKILL_04e_年份消歧.md) | 在位纪年→公元年（380君主，1,498映射） |
-| 关系 | [05a 事件关系发现](skills/SKILL_05a_事件关系发现.md) | 9种关系类型（7,652条） |
-| | [05b 关系抽取](skills/SKILL_05b_关系抽取.md) | 实体三元组SPO抽取 |
+| 关系 | [05a 事件关系发现](skills/SKILL_05a_事件关系发现.md) | 9种事件关系（7,652条） |
+| | [05b 实体关系构建](skills/SKILL_05b_实体关系构建.md) | 人物关系（家族/政治/社会）+ 家谱 + SPO三元组 |
 | 本体 | [06a 实体到本体](skills/SKILL_06a_实体到本体.md) | 词表→分类树→OWL/RDF + 人物本体实战案例 |
 | 推理 | [07 逻辑推理](skills/SKILL_07_逻辑推理.md) | 分类推理/时间推理/矛盾检测 |
 | SKU | [08 SKU构造](skills/SKILL_08_SKU构造.md) | Factual/Procedural/Relational知识单元 |
