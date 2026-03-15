@@ -35,7 +35,7 @@ RDF图谱
 
 ### 2.2 事件间关系
 
-详见 SKILL_10_事件关系发现.md（9种：sequel/causal/cross_ref/co_person 等）
+详见 SKILL_05a_事件关系发现.md（9种：sequel/causal/cross_ref/co_person 等）
 
 ---
 

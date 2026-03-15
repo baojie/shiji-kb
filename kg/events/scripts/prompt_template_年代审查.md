@@ -7,7 +7,7 @@
 本模板和SKILL文件构成一个**滚动改进**的循环：
 
 1. **审查章节 N** → 按模板生成提示词 → agent执行审查
-2. **agent发现新问题** → 更新 `SKILL_事件年代推断.md`（新增错误模式或推断策略）
+2. **agent发现新问题** → 更新 `SKILL_04c_事件年代推断.md`（新增错误模式或推断策略）
 3. **审查下一章 N+1** → 提示词第一步读取已更新的SKILL → 自动获得前序章节的经验
 4. **如需调整模板本身**（如新增检查项、修改工作流程），手动编辑本文件或 `generate_review_prompts.py`，然后重新生成后续章节的提示词
 
@@ -58,7 +58,7 @@ python kg/events/scripts/generate_review_prompts.py 001 005 009 130
 ## 输入文件
 
 1. **事件索引**（待审查和修改）：`kg/events/data/{chapter_id}_{chapter_name}_事件索引.md`
-2. **审查规则**（必须先读取）：`SKILL_事件年代推断.md`
+2. **审查规则**（必须先读取）：`SKILL_04c_事件年代推断.md`
 3. **人物生卒年参考**：`kg/entities/data/person_lifespans.json`
 4. **君主在位年参考**：`kg/chronology/data/reign_periods.json`
 5. **年表参考**（可交叉验证）：`kg/chronology/data/中国历史大事年表.md`
@@ -66,7 +66,7 @@ python kg/events/scripts/generate_review_prompts.py 001 005 009 130
 ## 工作流程
 
 ### 第一步：读取规则
-先完整读取 `SKILL_事件年代推断.md`，理解所有推断策略和常见错误模式。
+先完整读取 `SKILL_04c_事件年代推断.md`，理解所有推断策略和常见错误模式。
 （注意：SKILL文件会随审查迭代不断更新，每次都要读取最新版本。）
 
 ### 第二步：建立时代框架
@@ -97,7 +97,7 @@ python kg/events/scripts/generate_review_prompts.py 001 005 009 130
 完成所有修改后，输出审查报告（含修改汇总表、统计、存疑事件）。
 
 ### 第七步：反思SKILL
-审查中如发现**新的**错误模式或推断逻辑（不在SKILL已有错误模式中），追加到 `SKILL_事件年代推断.md` 的"常见错误模式"部分。
+审查中如发现**新的**错误模式或推断逻辑（不在SKILL已有错误模式中），追加到 `SKILL_04c_事件年代推断.md` 的"常见错误模式"部分。
 
 如无新发现，不要修改SKILL文件。不要重复添加已有模式。
 

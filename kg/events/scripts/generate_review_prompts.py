@@ -204,7 +204,7 @@ ERA_FRAMEWORKS = {
 
     "秦末楚汉": """本章涉及秦末楚汉之际（约前209年-前202年），事件密集且年份精确。
 关键锚点：大泽乡起义（前209年）、巨鹿之战（前207年）、鸿门宴（前206年）、垓下之战（前202年）。
-参照 `SKILL_事件年代推断.md` 中策略0的已知事件精确定年表。""",
+参照 `SKILL_04c_事件年代推断.md` 中策略0的已知事件精确定年表。""",
 
     "秦末楚汉/西汉初": """本章横跨秦末到西汉建立（约前209年-前195年）。
 参照策略0已知事件表和 `reign_periods.json` 中汉高祖年号。""",
@@ -461,7 +461,7 @@ def generate_prompt(chapter_id, chapter_name):
 ## 输入文件
 
 1. **事件索引**（待审查和修改）：`kg/events/data/{chapter_id}_{chapter_name}_事件索引.md`
-2. **审查规则**（必须先读取）：`SKILL_事件年代推断.md`
+2. **审查规则**（必须先读取）：`SKILL_04c_事件年代推断.md`
 3. **人物生卒年参考**：`kg/entities/data/person_lifespans.json`
 4. **君主在位年参考**：`kg/chronology/data/reign_periods.json`
 5. **年表参考**（可交叉验证）：`kg/chronology/data/中国历史大事年表.md`
@@ -469,7 +469,7 @@ def generate_prompt(chapter_id, chapter_name):
 ## 工作流程
 
 ### 第一步：读取规则
-先完整读取 `SKILL_事件年代推断.md`，理解所有推断策略和35类错误模式。
+先完整读取 `SKILL_04c_事件年代推断.md`，理解所有推断策略和35类错误模式。
 
 ### 第二步：建立时代框架
 {era_framework}
@@ -522,7 +522,7 @@ def generate_prompt(chapter_id, chapter_name):
 ```
 
 ### 第八步：反思SKILL
-审查中如发现**新的**错误模式或推断逻辑（不在SKILL现有35类错误模式中），追加到 `SKILL_事件年代推断.md` 的"常见错误模式"部分。
+审查中如发现**新的**错误模式或推断逻辑（不在SKILL现有35类错误模式中），追加到 `SKILL_04c_事件年代推断.md` 的"常见错误模式"部分。
 
 如无新发现，不要修改SKILL文件。不要重复添加已有模式。
 

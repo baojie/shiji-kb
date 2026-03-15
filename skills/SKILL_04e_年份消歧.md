@@ -202,4 +202,4 @@ build_year_map.py  →  reign_periods.json + year_ce_map.json + timeline.html
 generate_all_chapters.py  →  渲染所有章节HTML（读取上述元数据）
 ```
 
-> 另见：[SKILL_实体消歧.md](SKILL_实体消歧.md) — 人名消歧的完整方法论
+> 另见：[SKILL_03b_实体消歧.md](SKILL_03b_实体消歧.md) — 人名消歧的完整方法论

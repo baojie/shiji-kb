@@ -434,7 +434,7 @@ python scripts/lint_markdown.py chapter_md/092_淮阴侯列传.tagged.md
 
 **修复工具**：`fmt_split_dialogues.py` — 在"X曰:"边界处自动拆分。
 
-详细规则与示例见 [SKILL_古籍文本语义化.md §五](SKILL_古籍文本语义化.md)。
+详细规则与示例见 [SKILL_02a_章节切分与编号.md §五](SKILL_02a_章节切分与编号.md)。
 
 #### 8.2.1 嵌套引号的拆分规则
 

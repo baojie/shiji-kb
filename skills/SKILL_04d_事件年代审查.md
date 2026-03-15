@@ -68,11 +68,11 @@
 ```
 事件索引(.md)
     ↓ parse
-review提示词(.md)  ←── SKILL_事件年代推断.md（累积的错误模式+推理逻辑）
+review提示词(.md)  ←── SKILL_04c_事件年代推断.md（累积的错误模式+推理逻辑）
     ↓ Agent反思
 reflect结果(.json)  →  corrections[] + new_patterns[]
     ↓ --ingest
-    ├── SKILL_事件年代推断.md  ← 追加new_patterns
+    ├── SKILL_04c_事件年代推断.md  ← 追加new_patterns
     ├── pipeline_state.json    ← 更新进度
     └── 下一章提示词(.md)      ← 包含新学到的模式
     ↓ apply_reflect_fixes.py
@@ -158,7 +158,7 @@ Agent收到提示词后，对每个事件执行：
 
 **new_patterns[]**：
 - 本章发现的、SKILL中尚未记录的新错误模式
-- 会被 `--ingest` 追加到 `SKILL_事件年代推断.md`
+- 会被 `--ingest` 追加到 `SKILL_04c_事件年代推断.md`
 
 ---
 
@@ -172,7 +172,7 @@ python kg/events/scripts/run_review_pipeline.py --ingest NNN /tmp/reflect_NNN.js
 
 执行：
 1. 解析JSON，验证格式
-2. 将 `new_patterns` 追加到 `SKILL_事件年代推断.md`
+2. 将 `new_patterns` 追加到 `SKILL_04c_事件年代推断.md`
 3. 更新 `pipeline_state.json`（进度、累积统计）
 4. 生成下一章提示词（自动包含新学到的模式）
 
@@ -279,7 +279,7 @@ python kg/events/scripts/run_review_pipeline.py 001-130
 
 | 文件 | 用途 |
 |------|------|
-| `SKILL_事件年代推断.md` | 累积的错误模式和推理逻辑（Agent反思的知识库） |
+| `SKILL_04c_事件年代推断.md` | 累积的错误模式和推理逻辑（Agent反思的知识库） |
 | `kg/events/data/NNN_*_事件索引.md` | 130章事件索引（审查对象） |
 | `kg/events/prompts/review_NNN.md` | 130章预生成的审查提示词 |
 | `kg/events/reports/review_NNN.json` | 自动检测结果 |

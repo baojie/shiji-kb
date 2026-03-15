@@ -5,7 +5,7 @@
 功能：
 1. 逐章用 Claude 反思年代标注（基于 review 提示词 + SKILL 规则）
 2. 辅以自动检测（格式/一致性/范围/锚点塌缩等）
-3. 累积发现的新错误模式，用新发现更新 SKILL_事件年代推断.md
+3. 累积发现的新错误模式，用新发现更新 SKILL_04c_事件年代推断.md
 4. 用累积知识更新下一章的 review 提示词
 5. 生成每章审查报告 + 总汇报告
 
@@ -50,7 +50,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.pa
 EVENTS_DIR = os.path.join(BASE_DIR, "kg", "events", "data")
 REPORTS_DIR = os.path.join(BASE_DIR, "kg", "events", "reports")
 PROMPTS_DIR = os.path.join(BASE_DIR, "kg", "events", "prompts")
-SKILL_PATH = os.path.join(BASE_DIR, "SKILL_事件年代推断.md")
+SKILL_PATH = os.path.join(BASE_DIR, "skills", "SKILL_04c_事件年代推断.md")
 LIFESPANS_PATH = os.path.join(BASE_DIR, "kg", "entities", "data", "person_lifespans.json")
 REIGN_PATH = os.path.join(BASE_DIR, "kg", "chronology", "data", "reign_periods.json")
 STATE_PATH = os.path.join(REPORTS_DIR, "pipeline_state.json")
