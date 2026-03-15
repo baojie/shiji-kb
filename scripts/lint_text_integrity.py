@@ -23,6 +23,26 @@ import difflib
 from pathlib import Path
 from datetime import datetime
 
+
+# ── 白名单：已确认的正确校勘 ─────────────────────────────
+def _load_whitelist(path: Path) -> dict[str, list[tuple[str, str]]]:
+    """读取 lint_whitelist.txt，返回 {章节号: [(orig, tagged), ...]}"""
+    wl: dict[str, list[tuple[str, str]]] = {}
+    if not path.exists():
+        return wl
+    for line in path.read_text('utf-8').splitlines():
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+        parts = line.split('\t')
+        if len(parts) < 3:
+            continue
+        cid = parts[0].zfill(3)
+        orig = parts[1]
+        tagged = parts[2]
+        wl.setdefault(cid, []).append((orig, tagged))
+    return wl
+
 # ── 预处理规范化映射 ──────────────────────────────────────
 # 对原文和标注各自做同样的规范化，然后比较规范化结果。
 # 差异 = 规范化后仍存在 → 实质差异。
@@ -81,8 +101,8 @@ def strip_markup(text: str) -> str:
     # 3. 行首引用符 "> "
     text = re.sub(r'^>\s?', '', text, flags=re.MULTILINE)
 
-    # 4. 行首列表符 "- "
-    text = re.sub(r'^-\s', '', text, flags=re.MULTILINE)
+    # 4. 行首列表符 "- "（含缩进子列表 "  - "）
+    text = re.sub(r'^\s*-\s', '', text, flags=re.MULTILINE)
 
     # 5. 段落编号 [1] [1.1] [1.1.2] 等
     text = re.sub(r'^\[\d+(?:\.\d+)*\]\s*', '', text, flags=re.MULTILINE)
@@ -223,12 +243,22 @@ def fmt_diff(d: dict, idx: int) -> str:
     )
 
 
+def _is_whitelisted(d: dict, wl_entries: list[tuple[str, str]]) -> bool:
+    """检查一个差异条目是否匹配白名单"""
+    for wl_orig, wl_tagged in wl_entries:
+        if d['orig'] == wl_orig and d['tagged'] == wl_tagged:
+            return True
+    return False
+
+
 def main():
     root       = Path('.')
     orig_dir   = root / 'docs' / 'original_text'
     tagged_dir = root / 'chapter_md'
     log_dir    = root / 'logs'
     log_dir.mkdir(exist_ok=True)
+
+    whitelist = _load_whitelist(root / 'scripts' / 'lint_whitelist.txt')
 
     args     = sys.argv[1:]
     show_all = '--all' in args
@@ -246,11 +276,15 @@ def main():
         if err:
             print(f'  {name or cid}: ⚠ {err}')
         else:
-            nr = len(result['real'])
+            wl_entries = whitelist.get(cid, [])
+            nr_raw = len(result['real'])
+            nr = sum(1 for d in result['real'] if not _is_whitelisted(d, wl_entries))
+            n_wl = nr_raw - nr
             np = result['punct_count']
             ne = result['encoding_count']
             mark = '✓' if nr == 0 else '✗'
-            print(f'  {mark} {name}: {nr}处实质差异  {np}处标点  {ne}处编码')
+            wl_note = f'  校勘:{n_wl}' if n_wl else ''
+            print(f'  {mark} {name}: {nr}处实质差异  {np}处标点  {ne}处编码{wl_note}')
 
     # ── 报告 ──
     ts    = datetime.now().strftime('%Y-%m-%d %H:%M')
@@ -274,7 +308,17 @@ def main():
             lines += ['', f'=== {name or "?"} ===  ⚠ {err}']
             continue
 
-        nr = len(result['real'])
+        cid = name[:3]
+        wl_entries = whitelist.get(cid, [])
+        real_diffs = result['real']
+        if wl_entries:
+            whitelisted = [d for d in real_diffs if _is_whitelisted(d, wl_entries)]
+            real_diffs = [d for d in real_diffs if not _is_whitelisted(d, wl_entries)]
+            n_wl = len(whitelisted)
+        else:
+            n_wl = 0
+
+        nr = len(real_diffs)
         np = result['punct_count']
         ne = result['encoding_count']
         total_real  += nr
@@ -286,11 +330,12 @@ def main():
         if nr == 0 and not show_all:
             continue
 
-        lines += ['', f'=== {name} ===  实质:{nr}  标点:{np}  编码:{ne}']
+        wl_note = f'  校勘:{n_wl}' if n_wl else ''
+        lines += ['', f'=== {name} ===  实质:{nr}  标点:{np}  编码:{ne}{wl_note}']
 
         if nr:
             lines.append(f'  ■ 实质差异 {nr} 处：')
-            for i, d in enumerate(result['real'], 1):
+            for i, d in enumerate(real_diffs, 1):
                 lines.append(fmt_diff(d, i))
 
         lines.append('')
