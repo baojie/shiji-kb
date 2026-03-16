@@ -259,7 +259,7 @@
             <span class="toggle-arrow">▼</span>
         </h2>
         <div class="intro-content">
-            <p>本项目用 AI Agent 将《史记》全130章转化为结构化知识图谱。采用11类实体标注系统（人名、地名、官职、时间、朝代、制度、族群、器物、天文、神话、动植物），精细标注全文约58万字；建立了Biblical-style段落编号体系（Purple Numbers）、3,185个事件索引（含公元纪年和7,652条事件关系）、11类实体索引（11,000+词条，别名合并，语义消歧），以及130条线路的事件地铁图可视化。</p>
+            <p>本项目用 AI Agent 将《史记》全130章转化为结构化知识图谱。采用18类实体标注系统（人名、地名、官职、身份、时间、氏族、邦国、制度、族群、器物、天文、神话、生物、典籍、礼仪、刑法、思想、数量），精细标注全文约58万字；建立了Biblical-style段落编号体系（Purple Numbers）、3,198个事件索引（含公元纪年和7,652条事件关系）、18类实体索引（11,992条目，别名合并，语义消歧），以及130条线路的事件地铁图可视化。</p>
 
             <p style="color: #888; font-size: 0.85em; margin-top: 8px;">⚠️ 本项目由AI辅助生成，标注和知识提取中不可避免地存在错误和疏漏，正在持续修正中。如发现问题欢迎提交 Issue。</p>
 
@@ -268,14 +268,21 @@
                 <span class="person">人名</span>
                 <span class="place">地名</span>
                 <span class="official">官职</span>
+                <span class="identity">身份</span>
                 <span class="time">时间</span>
-                <span class="dynasty">朝代/氏族</span>
+                <span class="dynasty">氏族</span>
+                <span class="feudal-state">邦国</span>
                 <span class="institution">制度</span>
                 <span class="tribe">族群</span>
-                <span class="artifact">器物/书名</span>
+                <span class="artifact">器物</span>
                 <span class="astronomy">天文</span>
                 <span class="mythical">神话</span>
                 <span class="biology">生物</span>
+                <span class="book">典籍</span>
+                <span class="ritual">礼仪</span>
+                <span class="legal">刑法</span>
+                <span class="concept">思想</span>
+                <span class="quantity">数量</span>
             </div>
 
             <h3>🔢 Purple Numbers 段落编号</h3>
@@ -283,10 +290,10 @@
 
             <h3>🚀 已完成 / 计划中</h3>
             <ul style="line-height: 1.8; color: #555;">
-                <li>✅ <strong>实体标注</strong>：11类 × 130章 × 75,517次标注，符号体系全面升级至 CJK 标点（〘〙〚〛）</li>
-                <li>✅ <strong>事件索引</strong>：3,185个事件，11类事件类型，98.7%覆盖公元纪年（五轮Agent反思审查，~2,119处修正）</li>
+                <li>✅ <strong>实体标注</strong>：18类 × 130章 × 102,851次标注，v2.8统一〖TYPE X〗格式</li>
+                <li>✅ <strong>事件索引</strong>：3,198个事件，11类事件类型，98.7%覆盖公元纪年（五轮Agent反思审查，~2,119处修正）</li>
                 <li>✅ <strong>事件关系</strong>：7,652条关系（9种类型），事件地铁图130条线路可视化</li>
-                <li>✅ <strong>分类实体索引</strong>：<a href="entities/index.html" style="color: #8B0000;">已上线</a> — 11类索引，别名合并（586条），语义消歧（644处）</li>
+                <li>✅ <strong>分类实体索引</strong>：<a href="entities/index.html" style="color: #8B0000;">已上线</a> — 18类索引（11,992条目），别名合并（595条），语义消歧（644处）</li>
                 <li>📌 <strong>三家注标注</strong>：整合裴骃《集解》、司马贞《索隐》、张守节《正义》（计划中）</li>
                 <li>📊 <strong>十表交互化</strong>：十篇年表已渲染，待开发交互式查询（计划中）</li>
                 <li>🕸️ <strong>知识图谱数据库</strong>：导入 Neo4j，支持图形化浏览（计划中）</li>
@@ -1515,7 +1522,7 @@
     </div>
 
     <footer>
-        <p><strong>史记知识库</strong> | AI驱动的历史知识图谱 | 11类实体 × 130章 × 3,185事件 × Purple Numbers</p>
+        <p><strong>史记知识库</strong> | AI驱动的历史知识图谱 | 18类实体 × 130章 × 3,198事件 × Purple Numbers</p>
         <p style="color: #999; font-size: 0.9em; margin-top: 10px;">
             基于《史记》原文进行命名实体标注与知识图谱化，采用Biblical-style段落编号系统<br>
             便于学术引用、知识管理和数字人文研究 | 最后更新：2026-03-13
