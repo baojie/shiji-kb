@@ -30,8 +30,8 @@ def extract_plain_text(tagged_md_file):
     # 移除段落编号 [X.Y]
     text = re.sub(r'\[\d+(?:\.\d+)?\]', '', text)
 
-    # 移除所有v2.1实体标注符号
-    # 〖TYPE content〗 格式（12种对称类型）
+    # 移除所有v2.7实体标注符号
+    # 〖TYPE content〗 格式（14种类型：@=;%&^~*!?+'#$），支持内联消歧 〖TYPE 显示名|规范名〗
     text = re.sub(r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_][^〖〗\n]+?〗', lambda m: re.sub(r'^〖.', '', m.group()).rstrip('〗'), text)
 
     # 移除引号标记 > 开头的行
