@@ -14,7 +14,8 @@ import json
 def extract_plain_text(tagged_md_file):
     """
     从标注的Markdown文件中提取纯文本
-    去除所有标注符号：〖@人名〗, 〖=地名〗, 〖;官职〗, 〖%时间〗 等17种v2.1格式
+    去除所有标注符号：〖@人名〗, 〖=地名〗, 〖;官职〗, 〖%时间〗 等14种v2.7格式
+    支持内联消歧语法：〖TYPE 显示名|规范名〗
     去除段落编号：[1.1], [2.3]等
     去除标题：#开头的行
     """
@@ -31,13 +32,7 @@ def extract_plain_text(tagged_md_file):
 
     # 移除所有v2.1实体标注符号
     # 〖TYPE content〗 格式（12种对称类型）
-    text = re.sub(r'〖[@=;%&\'^~\*!#\+][^〖〗\n]+?〗', lambda m: re.sub(r'^〖.', '', m.group()).rstrip('〗'), text)
-    # 5种非对称类型
-    text = re.sub(r'〚([^〚〛\n]+)〛', r'\1', text)
-    text = re.sub(r'《([^《》\n]+)》', r'\1', text)
-    text = re.sub(r'〈([^〈〉\n]+)〉', r'\1', text)
-    text = re.sub(r'【([^【】\n]+)】', r'\1', text)
-    text = re.sub(r'〔([^〔〕\n]+)〕', r'\1', text)
+    text = re.sub(r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_][^〖〗\n]+?〗', lambda m: re.sub(r'^〖.', '', m.group()).rstrip('〗'), text)
 
     # 移除引号标记 > 开头的行
     text = re.sub(r'^>\s*', '', text, flags=re.MULTILINE)

@@ -35,7 +35,7 @@ docs/chapters/*.html
 1. **粗体** `**text**` → `<strong>`（最先处理，优先级最高）
 2. **内联消歧（所有实体类型）** `〖TYPE 显示名|规范名〗` → `<span class="TYPE" title="类型：规范名" data-canonical="规范名">显示名</span>`（v2.7：13类均支持，优先于普通匹配）
 3. **13类〖TYPE〗标记** → `<span class="TYPE" title="类型名">`
-4. **5类CJK括号标记**（〚〛/《》/〈〉/【】/〔〕）→ 对应 `<span>`
+4. **5类新格式标记**（〖?〗/〖{〗/〖:〗/〖[〗/〖_〗）→ 对应 `<span>`
 5. **引号** → `<span class="quoted">`（对话标识）
 6. **段落编号** `[N.N]` → `<a class="para-num">` 可点击锚点
 7. **实体链接** → 后处理包裹 `<a>` 指向实体索引页（内联消歧的 `data-canonical` 优先于 disambiguation_map）

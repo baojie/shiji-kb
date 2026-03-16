@@ -47,7 +47,7 @@ KIN_RULES = {
     '人父':   (None, None),
 }
 
-TAGGED = re.compile(r'〖[^〗]*〗|〚[^〛]*〛|〖+[^〗]*〗|《[^》]*》|〈[^〉]*〉|【[^】]*】|〔[^〕]*〕')
+TAGGED = re.compile(r'〖[^〗]*〗')
 
 
 def tag_line(line: str, word: str, prefix_re, suffix_re) -> str:

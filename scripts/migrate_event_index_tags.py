@@ -13,7 +13,7 @@ v1 → v2.1 映射：
   &X&    → 〖&X〗   朝代
   ^X^    → 〖^X〗   制度
   ~X~    → 〖~X〗   族群
-  *X*    → 〖*X〗   器物（需区分markdown粗体**X**）
+  *X*    → 〖•X〗   器物（需区分markdown粗体**X**）
   !X!    → 〖!X〗   天文
 
 嵌套模式处理：
@@ -124,10 +124,10 @@ def migrate_tilde(text):
 
 
 def migrate_asterisk(text):
-    """*X* → 〖*X〗 器物（排除markdown粗体 **X**）"""
+    """*X* → 〖•X〗 器物（排除markdown粗体 **X**）"""
     def replace(m):
         stats['*X*'] += 1
-        return f'〖*{m.group(1)}〗'
+        return f'〖•{m.group(1)}〗'
     # (?<!〖) 防止匹配已转换标注; (?<!\*)/(?!\*) 排除markdown粗体
     return re.sub(r'(?<!〖)(?<!\*)\*([^*\n]{1,12})\*(?!\*)', replace, text)
 

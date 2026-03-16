@@ -123,10 +123,9 @@ def strip_entity_tags(text):
     先去除〖TYPE...〗的括号和类型前缀，再清除残留的v1符号。
     """
     # v2.1: 去除 〖X...〗 括号（保留内容）
-    text = re.sub(r'〖[@=;%&^~*!?+$]', '', text)
+    text = re.sub(r'〖[@=;%&^~•!?+$\?\{\:\[\_]', '', text)
     text = text.replace('〗', '')
-    # v2.1: 去除〚...〛（神话类型）
-    text = text.replace('〚', '').replace('〛', '')
+    # v2.8: 神话已迁移为〖?〗，通过下方统一〖〗剥离
     # 清除可能残留的v1符号
     text = re.sub(r'[@&$^~!?]', '', text)
     return text
@@ -1307,8 +1306,9 @@ def load_event_index_years():
                 time_field = parts[4]
 
                 # Strip entity tags for clean display
-                event_name_clean = re.sub(r'〖[@=;#%&\'\^~\*!\+\$]([^〗]+)〗', r'\1', event_name)
-                event_name_clean = re.sub(r'[〚《〈【〔]([^〛》〉】〕]+)[〛》〉】〕]', r'\1', event_name_clean)
+                event_name_clean = re.sub(r'〖[@=;#%&\'\^~•!\+\$\?\{\:\[\_]([^〗]+)〗', r'\1', event_name)
+                # 旧括号格式兼容（v2.8前已迁移，保留兼容）
+                event_name_clean = re.sub(r'〖[^〗]+〗', lambda m: m.group(0).split('|')[0].lstrip('〖').lstrip('@=;%&^\'~•!#\+?{:\[_$'), event_name_clean)
 
                 # Extract CE year
                 ce_years = []

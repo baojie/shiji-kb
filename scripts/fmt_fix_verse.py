@@ -10,8 +10,8 @@ from pathlib import Path
 
 def strip_tags(text):
     """去除实体标注符号，返回纯文本"""
-    text = re.sub(r'[〖〗〖+〗〚〛〔〕]', '', text)
-    text = re.sub(r'[;@&=^~!%*#]', '', text)
+    text = re.sub(r'[〖〗]', '', text)
+    text = re.sub(r'[;@&=^~!%•#\?\{\:\[\_]', '', text)
     return text
 
 

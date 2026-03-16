@@ -91,7 +91,7 @@ def _norm(text: str) -> str:
     return text
 
 # ── 实体标注前缀字符 ──────────────────────────────────────
-_ENTITY_PFX = r'[#@=;$%&^\~*!\'+]'
+_ENTITY_PFX = r'[#@=;$%&^\~•!\'+?{:\[_]'
 
 
 # ═══════════════════════════════════════════════════════════
@@ -123,13 +123,8 @@ def strip_markup(text: str) -> str:
     text = re.sub(rf'〖{_ENTITY_PFX}([^〖〗|]*)(?:\|[^〖〗]*)?〗', r'\1', text)
     text = re.sub(r'〖[^〗]*〗', '', text)   # 剩余残留
 
-    # 7. 六类对称括号 → 保留内容
+    # 7. 旧格式残留括号（已迁移至〖TYPE〗，仅保留〘〙兼容）
     text = re.sub(r'〘([^〘〙]*)〙', r'\1', text)
-    text = re.sub(r'〚([^〚〛]*)〛', r'\1', text)
-    text = re.sub(r'《([^《》]*)》', r'\1', text)
-    text = re.sub(r'〈([^〈〉]*)〉', r'\1', text)
-    text = re.sub(r'【([^【】]*)】', r'\1', text)
-    text = re.sub(r'〔([^〔〕]*)〕', r'\1', text)
 
     # 8. 粗体 **content** → content
     text = re.sub(r'\*\*([^*]*)\*\*', r'\1', text)

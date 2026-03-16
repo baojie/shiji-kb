@@ -24,17 +24,17 @@ ANNOTATION_TYPES = [
     (r'〖&([^〖〗\n]+)〗', 'Dynasty 朝代'),
     (r'〖\^([^〖〗\n]+)〗', 'Institution 制度'),
     (r'〖~([^〖〗\n]+)〗', 'Ethnic Group 族群'),
-    (r'〖\*([^〖〗\n]+)〗', 'Artifact 器物'),
+    (r'〖•([^〖〗\n]+)〗', 'Artifact 器物'),
     (r'〖!([^〖〗\n]+)〗', 'Astronomy 天文'),
     (r'〖#([^〖〗\n]+)〗', 'Identity 身份'),
     (r'〖\+([^〖〗\n]+)〗', 'Flora/Fauna 生物'),
     (r'〖\$([^〖〗\n]+)〗', 'Quantity 数量'),
     (r"〖'([^〖〗\n]+)〗", 'Feudal State 邦国'),
-    (r'〚([^〚〛\n]+)〛', 'Mythology 神话'),
-    (r'《([^《》\n]+)》', 'Classical Text 典籍'),
-    (r'〈([^〈〉\n]+)〉', 'Ritual 礼仪'),
-    (r'【([^【】\n]+)】', 'Law 刑法'),
-    (r'〔([^〔〕\n]+)〕', 'Philosophy 思想'),
+    (r'〖\?([^〖〗\n]+)〗', 'Mythology 神话'),
+    (r'〖\{([^〖〗\n]+)〗', 'Classical Text 典籍'),
+    (r'〖:([^〖〗\n]+)〗', 'Ritual 礼仪'),
+    (r'〖\[([^〖〗\n]+)〗', 'Law 刑法'),
+    (r'〖_([^〖〗\n]+)〗', 'Philosophy 思想'),
 ]
 
 # ─── helpers ──────────────────────────────────────────────────────────────────
@@ -82,12 +82,7 @@ def extract_annotated_spans(text):
 
 # Regex to match ALL v2.1 annotation types (for stripping/masking)
 ALL_ANNOT_RE = re.compile(
-    r'〖[@=;%&\'^~\*!#\+\$][^〖〗\n]+?〗'
-    r'|〚[^〛\n]+?〛'
-    r'|《[^》\n]+?》'
-    r'|〈[^〉\n]+?〉'
-    r'|【[^】\n]+?】'
-    r'|〔[^〕\n]+?〕'
+    r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_][^〖〗\n]+?〗'
 )
 
 
@@ -102,7 +97,7 @@ def remove_all_annotations(text):
 
 # Classical book/text titles (典籍/书名) – fixed list of known patterns
 CLASSICAL_BOOKS_PATTERN = re.compile(
-    r'[《〈][^》〉]{1,20}[》〉]'
+    r'〖\{[^〗]{1,20}〗'
 )
 
 # Numbers + measure words (数量词)

@@ -4,7 +4,7 @@
 新4类实体标注脚本
 
 对史记130章未标注文字中，扫描并建议标注：
-  典籍《》  礼仪〈〉  刑法【】  思想〔〕
+  典籍〖{〗  礼仪〖:〗  刑法〖[〗  思想〖_〗
 
 逻辑：
   1. 加载各类实体词表（来自 infer_entity_type.py）
@@ -88,17 +88,15 @@ CONCEPT_WORDS = {
 
 # 类型名 → 词表 + 符号
 TYPE_CONF = {
-    '典籍': {'words': BOOK_WORDS,    'open': '《', 'close': '》'},
-    '礼仪': {'words': RITUAL_WORDS,  'open': '〈', 'close': '〉'},
-    '刑法': {'words': LEGAL_WORDS,   'open': '【', 'close': '】'},
-    '思想': {'words': CONCEPT_WORDS, 'open': '〔', 'close': '〕'},
+    '典籍': {'words': BOOK_WORDS,    'open': '〖{', 'close': '〗'},
+    '礼仪': {'words': RITUAL_WORDS,  'open': '〖:', 'close': '〗'},
+    '刑法': {'words': LEGAL_WORDS,   'open': '〖[', 'close': '〗'},
+    '思想': {'words': CONCEPT_WORDS, 'open': '〖_', 'close': '〗'},
 }
 
 # ── 已有标注的检测正则（含新4类）──────────────────────────────────────────────
 ALL_ANNOT_RE = re.compile(
-    r'〖[@=;%&\'^~\*!#\+\$][^〖〗\n]+?〗'
-    r'|〚[^〛\n]+?〛'
-    r'|《[^》\n]+?》|〈[^〉\n]+?〉|【[^】\n]+?】|〔[^〕\n]+?〕'
+    r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_][^〖〗\n]+?〗'
 )
 
 PLACEHOLDER = '░'

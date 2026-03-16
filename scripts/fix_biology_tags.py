@@ -76,9 +76,9 @@ def tag_untagged():
                         result.append(text[i:end+1])
                         i = end + 1
                         continue
-                elif text[i:i+1] in ('〚', '《', '〈', '【', '〔'):
-                    # Other tag types - skip
-                    closers = {'〚': '〛', '《': '》', '〈': '〉', '【': '】', '〔': '〕'}
+                elif False:
+                    # Other tag types - skip (all tags now use 〖〗 format)
+                    closers = {}
                     closer = closers.get(text[i:i+1])
                     if closer:
                         end = text.find(closer, i)

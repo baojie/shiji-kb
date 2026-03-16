@@ -9,8 +9,8 @@
 用法（作为模块导入）：
     from scripts.infer_entity_type import infer, load_dict
     d = load_dict()
-    print(infer('封禅', d))   # → '礼仪〈〉'
-    print(infer('弃市', d))   # → '刑法【】'
+    print(infer('封禅', d))   # → '礼仪〖:〗'
+    print(infer('弃市', d))   # → '刑法〖[〗'
     print(infer('未知词', d)) # → ''
 
 用法（命令行）：
@@ -109,13 +109,13 @@ _ARTIFACT_KEYWORDS = {
 
 def _rule_classify(word: str) -> str:
     """基于规则的分类（不查 TSV）"""
-    if word in _BOOK_WORDS:       return '典籍《》'
-    if word in _RITUAL_WORDS:     return '礼仪〈〉'
-    if word in _LEGAL_WORDS:      return '刑法【】'
-    if word in _CONCEPT_WORDS:    return '思想〔〕'
-    if word in _MYTH_KEYWORDS:    return '神话〚〛'
+    if word in _BOOK_WORDS:       return '典籍〖{〗'
+    if word in _RITUAL_WORDS:     return '礼仪〖:〗'
+    if word in _LEGAL_WORDS:      return '刑法〖[〗'
+    if word in _CONCEPT_WORDS:    return '思想〖_〗'
+    if word in _MYTH_KEYWORDS:    return '神话〖?〗'
     if word in _ASTRO_KEYWORDS:   return '天文!'
-    if word in _ARTIFACT_KEYWORDS: return '器物*'
+    if word in _ARTIFACT_KEYWORDS: return '器物•'
     if word in _OFFICIAL_KEYWORDS: return '官职$'
 
     # 后缀规则

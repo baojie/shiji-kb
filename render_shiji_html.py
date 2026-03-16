@@ -16,14 +16,14 @@
 - '封国 -> <span class="feudal-state">封国</span>
 - ^制度^ -> <span class="institution">制度</span>
 - ~族群~ -> <span class="tribe">族群</span>
-- *器物* -> <span class="artifact">器物</span>
-- !天文! -> <span class="astronomy">天文</span>
-- 〚神话〛 -> <span class="mythical">神话</span>
+- 〖•器物〗 -> <span class="artifact">器物</span>
+- 〖!天文〗 -> <span class="astronomy">天文</span>
+- 〖?神话〗 -> <span class="mythical">神话</span>
 - 〖+生物〗 -> <span class="biology">生物</span>
-- 《典籍》 -> <span class="book">典籍</span>
-- 〈礼仪〉 -> <span class="ritual">礼仪</span>
-- 【刑法】 -> <span class="legal">刑法</span>
-- 〔思想〕 -> <span class="concept">思想</span>
+- 〖{典籍〗 -> <span class="book">典籍</span>
+- 〖:礼仪〗 -> <span class="ritual">礼仪</span>
+- 〖[刑法〗 -> <span class="legal">刑法</span>
+- 〖_思想〗 -> <span class="concept">思想</span>
 """
 
 import re
@@ -36,13 +36,13 @@ from html import escape as html_escape
 # 实体类型映射（v2.1，2026-03-13）
 # 新格式：10类对称符号改为 〖TYPE content〗 统一包裹
 #   〖 开头，第一字符为类型标记，〗 结尾，无嵌套歧义
-# 5类已有非对称CJK括号（〚〛/《》/〈〉/【】/〔〕）格式不变
+# 5类已迁移为〖TYPE〗格式（v2.8）：神话〖?〗/典籍〖{〗/礼仪〖:〗/刑法〖[〗/思想〖_〗
 # 排除 " 字符以避免匹配HTML属性
 ENTITY_PATTERNS = [
     (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),                               # 粗体（不变）
     # 10类新格式：〖TYPE content〗
-    (r'〖\*([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="artifact"     title="器物：\2"       data-canonical="\2">\1</span>'),  # 器物（消歧）
-    (r'〖\*([^〖〗<>"]+)〗', r'<span class="artifact" title="器物">\1</span>'),     # 器物
+    (r'〖•([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="artifact"     title="器物：\2"       data-canonical="\2">\1</span>'),  # 器物（消歧）
+    (r'〖•([^〖〗<>"]+)〗', r'<span class="artifact" title="器物">\1</span>'),     # 器物
     (r'〖;([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="official"    title="官职：\2"       data-canonical="\2">\1</span>'),  # 官职（消歧）
     (r'〖;([^〖〗<>"]+)〗',  r'<span class="official" title="官职">\1</span>'),    # 官职
     (r'〖=([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="place"       title="地名：\2"       data-canonical="\2">\1</span>'),  # 地名（消歧）
@@ -67,12 +67,23 @@ ENTITY_PATTERNS = [
     (r'〖\+([^〖〗<>"]+)〗', r'<span class="biology" title="生物">\1</span>'),      # 生物
     (r'〖\$([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="quantity"    title="数量：\2"       data-canonical="\2">\1</span>'),  # 数量（消歧）
     (r'〖\$([^〖〗<>"]+)〗', r'<span class="quantity" title="数量">\1</span>'),    # 数量
-    # 5类不变
-    (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),
-    (r'《([^《》<>"]+)》', r'<span class="book" title="典籍">\1</span>'),
-    (r'〈([^〈〉<>"]+)〉', r'<span class="ritual" title="礼仪">\1</span>'),
-    (r'【([^【】<>"]+)】', r'<span class="legal" title="刑法">\1</span>'),
-    (r'〔([^〔〕<>"]+)〕', r'<span class="concept" title="思想">\1</span>'),
+    # 5类新格式（v2.8）
+    (r'〖\?([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="mythical"    title="神话：\2"       data-canonical="\2">\1</span>'),  # 神话（消歧）
+    (r'〖\?([^〖〗<>"]+)〗', r'<span class="mythical" title="神话/传说">\1</span>'),
+    (r'〖\{([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="book"        title="典籍：\2"       data-canonical="\2">\1</span>'),  # 典籍（消歧）
+    (r'〖\{([^〖〗<>"]+)〗', r'<span class="book" title="典籍">\1</span>'),
+    (r'〖:([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="ritual"      title="礼仪：\2"       data-canonical="\2">\1</span>'),  # 礼仪（消歧）
+    (r'〖:([^〖〗<>"]+)〗', r'<span class="ritual" title="礼仪">\1</span>'),
+    (r'〖\[([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="legal"       title="刑法：\2"       data-canonical="\2">\1</span>'),  # 刑法（消歧）
+    (r'〖\[([^〖〗<>"]+)〗', r'<span class="legal" title="刑法">\1</span>'),
+    (r'〖_([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="concept"     title="思想：\2"       data-canonical="\2">\1</span>'),  # 思想（消歧）
+    (r'〖_([^〖〗<>"]+)〗', r'<span class="concept" title="思想">\1</span>'),
+    # 旧格式兼容（v2.8前）
+    (r'〖\?([^〖〗<>"]+)〗', r'<span class="mythical" title="神话/传说">\1</span>'),
+    (r'〖\{([^〖〗<>"]+)〗', r'<span class="book" title="典籍">\1</span>'),
+    (r'〖:([^〖〗<>"]+)〗', r'<span class="ritual" title="礼仪">\1</span>'),
+    (r'〖\[([^〖〗<>"]+)〗', r'<span class="legal" title="刑法">\1</span>'),
+    (r'〖_([^〖〗<>"]+)〗', r'<span class="concept" title="思想">\1</span>'),
 ]
 
 # 引号内容模式（用于对话）
@@ -300,8 +311,8 @@ def convert_entities(text):
     text = re.sub(r'〖(?=<span[\s>])', '', text)
     text = re.sub(r'(?<=</span>)〗', '', text)
     # 2. 兼容旧格式残留（防万一）
-    text = re.sub(r"[;\^~\*!'〚〛](?=<span[\s>])", '', text)
-    text = re.sub(r"(?<=</span>)[;\^~\*!'〚〛]", '', text)
+    text = re.sub(r"[;\^~•!'_](?=<span[\s>])", '', text)
+    text = re.sub(r"(?<=</span>)[;\^~•!'_]", '', text)
 
     # 最后处理段落编号（PN - Purple Numbers）
     # 将 [编号] 转换为可点击的锚点链接
@@ -416,13 +427,12 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
         parts = ['<div class="shiji-table-wrapper">', '<table class="shiji-table">']
         # 表头：行号列（空白）+ 原始列；表头不做实体标注渲染（年号/国名等不应被标注样式干扰）
-        # 只做标注符号剥离（去掉 @=&^~*!$%〚〛 包裹符），保留纯文字
+        # 只做标注符号剥离（去掉 〖TYPE〗 包裹符），保留纯文字
         _annotation_strip = re.compile(
-            r'[@=;%&\^~\*!]([^@=;%&\^~\*!\n]{1,30}?)[@=;%&\^~\*!]'
-            r'|〚([^〚〛\n]{1,30}?)〛'
+            r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_]([^〖〗\n]{1,30}?)〗'
         )
         def strip_annotations(text):
-            return _annotation_strip.sub(lambda m: m.group(1) or m.group(2), text)
+            return _annotation_strip.sub(lambda m: m.group(1), text)
 
         parts.append('<thead><tr>')
         parts.append('<th class="row-pn-col"></th>')

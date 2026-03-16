@@ -30,12 +30,7 @@ WORDLIST_FILE = PROJECT_ROOT / 'kg' / 'quantity' / 'data' / 'quantity_wordlist.j
 
 # 已有标注的检测正则（覆盖全部18种）
 ALL_ANNOT_RE = re.compile(
-    r'〖[@=;%&\'^~\*!#\+\$][^〖〗\n]+?〗'
-    r'|〚[^〛\n]+?〛'
-    r'|《[^》\n]+?》'
-    r'|〈[^〉\n]+?〉'
-    r'|【[^】\n]+?】'
-    r'|〔[^〕\n]+?〕'
+    r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_][^〖〗\n]+?〗'
 )
 
 NUM_PREFIX_CHARS = set('零一二三四五六七八九十百千万亿两数几')

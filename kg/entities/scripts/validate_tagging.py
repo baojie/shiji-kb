@@ -56,12 +56,13 @@ def remove_all_tags(text):
     text = text.replace('〖', '').replace('〗', '')
 
     # 去除5种非对称CJK括号格式的标记符号（保留content）
-    text = re.sub(r'〚([^〚〛\n]+)〛', r'\1', text)   # 神话
     text = re.sub(r'〘([^〘〙\n]+)〙', r'\1', text)   # 生物（旧格式，兼容）
-    text = re.sub(r'《([^《》\n]+)》', r'\1', text)   # 典籍
-    text = re.sub(r'〈([^〈〉\n]+)〉', r'\1', text)   # 礼仪
-    text = re.sub(r'【([^【】\n]+)】', r'\1', text)   # 刑法
-    text = re.sub(r'〔([^〔〕\n]+)〕', r'\1', text)   # 思想
+    # 旧括号格式（v2.8前）兼容保留
+    text = re.sub(r'〖\?([^〖〗\n]+)〗', r'\1', text)  # 神话
+    text = re.sub(r'〖\{([^〖〗\n]+)〗', r'\1', text)  # 典籍
+    text = re.sub(r'〖:([^〖〗\n]+)〗', r'\1', text)   # 礼仪
+    text = re.sub(r'〖\[([^〖〗\n]+)〗', r'\1', text)  # 刑法
+    text = re.sub(r'〖_([^〖〗\n]+)〗', r'\1', text)   # 思想
 
     return text.strip()
 

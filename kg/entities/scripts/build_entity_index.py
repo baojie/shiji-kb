@@ -50,16 +50,16 @@ ENTITY_TYPES = [
     ('institution', r'〖\^([^〖〗\n]+)〗', 'institution', '制度',     'institution.html'),
     ('tribe',       r'〖~([^〖〗\n]+)〗',  'tribe',       '族群',     'tribe.html'),
     ('identity',    r'〖#([^〖〗\n]+)〗',  'identity',    '身份',     'identity.html'),
-    ('artifact',    r'〖\*([^〖〗\n]+)〗', 'artifact',    '器物',     'artifact.html'),
+    ('artifact',    r'〖•([^〖〗\n]+)〗',  'artifact',    '器物',     'artifact.html'),
     ('astronomy',   r'〖!([^〖〗\n]+)〗',  'astronomy',   '天文',     'astronomy.html'),
     ('biology',     r'〖\+([^〖〗\n]+)〗',  'biology',     '生物',     'biology.html'),
     ('quantity',    r'〖\$([^〖〗\n]+)〗', 'quantity',    '数量',     'quantity.html'),
     # 5类非对称格式（不变）
-    ('mythical',    r'〚([^〚〛\n]+)〛',   'mythical',    '神话',     'mythical.html'),
-    ('book',        r'《([^《》\n]+)》',   'book',        '典籍',     'book.html'),
-    ('ritual',      r'〈([^〈〉\n]+)〉',   'ritual',      '礼仪',     'ritual.html'),
-    ('legal',       r'【([^【】\n]+)】',    'legal',       '刑法',     'legal.html'),
-    ('concept',     r'〔([^〔〕\n]+)〕',   'concept',     '思想',     'concept.html'),
+    ('mythical',    r'〖\?([^〖〗\n]+)〗',  'mythical',    '神话',     'mythical.html'),
+    ('book',        r'〖\{([^〖〗\n]+)〗',  'book',        '典籍',     'book.html'),
+    ('ritual',      r'〖:([^〖〗\n]+)〗',   'ritual',      '礼仪',     'ritual.html'),
+    ('legal',       r'〖\[([^〖〗\n]+)〗',  'legal',       '刑法',     'legal.html'),
+    ('concept',     r'〖_([^〖〗\n]+)〗',   'concept',     '思想',     'concept.html'),
 ]
 
 # 段落编号模式
@@ -207,7 +207,7 @@ def extract_events_from_index_files(event_dir):
             if not event_name or not event_id:
                 continue
 
-            clean_name = re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕〘〙]', '', event_name).strip()
+            clean_name = re.sub(r'[〖〗@=;%&\'^~•!#\+\?\{\:\[\_〘〙]', '', event_name).strip()
             para_num = para_map.get(event_id, '')
             reasoning = reasoning_map.get(event_id, '')
             if clean_name:
@@ -236,7 +236,7 @@ def _parse_ce_year(time_str):
 
 def _strip_entity_tags(text):
     """去除实体标记符号，保留纯文本（v2.1格式：〖TYPE content〗）。"""
-    return re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕〘〙]', '', text).strip()
+    return re.sub(r'[〖〗@=;%&\'^~•!#\+\?\{\:\[\_〘〙]', '', text).strip()
 
 
 def _extract_people_list(people_str):
@@ -421,14 +421,14 @@ ENTITY_DESCRIPTIONS = {
     'dynasty':      ('氏族', '〖&〗', '史记中出现的以血缘为纽带的宗族、氏族和姓氏群体，包括王族（刘氏、吕氏、嬴氏）、先秦贵族世家（华氏、祁氏、羊舌氏）及各类古代氏族（夏后氏、有扈氏）。'),
     'tribe':        ('族群', '〖~〗', '史记中出现的以族裔或文化认同为纽带的群体，主要包括汉族以外的各族（匈奴、戎、狄、夷、越、羌等）及其部落联盟，也包括"诸夏"等文化共同体概念。'),
     'institution':  ('制度', '〖^〗', '史记中出现的政治、经济、军事制度及礼制规范，包括封建制、郡县制、井田制、察举制等国家体制，以及各类法规、惯例和仪典规程。'),
-    'artifact':     ('器物', '〖*〗', '史记中出现的具体物品，包括礼器（鼎、玉璧）、兵器、车马器、宫室建筑、货币及珍宝异物等有形器物。'),
+    'artifact':     ('器物', '〖•〗', '史记中出现的具体物品，包括礼器（鼎、玉璧）、兵器、车马器、宫室建筑、货币及珍宝异物等有形器物。'),
     'astronomy':    ('天文', '〖!〗', '史记中出现的天文历法概念，包括星官（岁星、荧惑、太白）、天象（日食、彗星、云气）、历法术语（朔望、节气）及占星占候用语。'),
-    'mythical':     ('神话', '〚〛', '史记中出现的神话传说人物与神祇，包括三皇五帝中的神话形象、山海经式的神灵、各地祭祀的神明及传说中的异兽。'),
+    'mythical':     ('神话', '〖?〗', '史记中出现的神话传说人物与神祇，包括三皇五帝中的神话形象、山海经式的神灵、各地祭祀的神明及传说中的异兽。'),
     'biology':      ('生物', '〖+〗', '史记中出现的动物、植物及农作物名称，包括家畜、野兽、鸟类、鱼类，以及粮食作物、草木药材等。'),
-    'book':         ('典籍', '《》', '史记中引用或提及的书籍、文献与著作，包括六经、诸子百家著作、史书档案及各类官方文书。'),
-    'ritual':       ('礼仪', '〈〉', '史记中出现的礼仪名称，包括冠婚丧祭、朝聘燕享、封禅郊祀等国家典礼与社会礼制。'),
-    'legal':        ('刑法', '【】', '史记中出现的刑罚名称与法律术语，包括五刑（墨、劓、刖、宫、大辟）、连坐、族诛等刑罚制度及具体罪名。'),
-    'concept':      ('思想', '〔〕', '史记中出现的思想、学说与哲学概念，包括儒家仁义、道家无为、法家刑名等各家学说核心术语及价值观念。'),
+    'book':         ('典籍', '〖{〗', '史记中引用或提及的书籍、文献与著作，包括六经、诸子百家著作、史书档案及各类官方文书。'),
+    'ritual':       ('礼仪', '〖:〗', '史记中出现的礼仪名称，包括冠婚丧祭、朝聘燕享、封禅郊祀等国家典礼与社会礼制。'),
+    'legal':        ('刑法', '〖[〗', '史记中出现的刑罚名称与法律术语，包括五刑（墨、劓、刖、宫、大辟）、连坐、族诛等刑罚制度及具体罪名。'),
+    'concept':      ('思想', '〖_〗', '史记中出现的思想、学说与哲学概念，包括儒家仁义、道家无为、法家刑名等各家学说核心术语及价值观念。'),
 }
 
 

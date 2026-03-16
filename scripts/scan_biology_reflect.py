@@ -38,23 +38,18 @@ ALL_PATTERNS = {
     'institution': re.compile(r'〖\^([^〖〗\n]+)〗'),
     'tribe': re.compile(r'〖~([^〖〗\n]+)〗'),
     'identity': re.compile(r'〖#([^〖〗\n]+)〗'),
-    'artifact': re.compile(r'〖\*([^〖〗\n]+)〗'),
+    'artifact': re.compile(r'〖•([^〖〗\n]+)〗'),
     'astronomy': re.compile(r'〖!([^〖〗\n]+)〗'),
     'quantity': re.compile(r'〖\$([^〖〗\n]+)〗'),
     'biology': BIO_PATTERN,
-    'mythical': re.compile(r'〚([^〚〛\n]+)〛'),
-    'book': re.compile(r'《([^《》\n]+)》'),
-    'concept': re.compile(r'〔([^〔〕\n]+)〕'),
+    'mythical': re.compile(r'〖\?([^〖〗\n]+)〗'),
+    'book': re.compile(r'〖\{([^〖〗\n]+)〗'),
+    'concept': re.compile(r'〖_([^〖〗\n]+)〗'),
 }
 
 # 掩码用正则
 ALL_ANNOT_RE = re.compile(
-    r'〖[@=;%&\'^~\*!#\+\$][^〖〗\n]+?〗'
-    r'|〚[^〛\n]+?〛'
-    r'|《[^》\n]+?》'
-    r'|〈[^〉\n]+?〉'
-    r'|【[^】\n]+?】'
-    r'|〔[^〕\n]+?〕'
+    r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_][^〖〗\n]+?〗'
 )
 PLACEHOLDER = '░'
 

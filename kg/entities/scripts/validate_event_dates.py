@@ -98,7 +98,7 @@ def parse_events():
 
             # 提取人物（v2.1格式：〖@人名〗）
             people = re.findall(r'〖@([^〖〗\n]+)〗', people_str)
-            clean_name = re.sub(r'[〖〗@=;%&\'^~\*!#\+〚〛《》〈〉【】〔〕]', '', event_name).strip()
+            clean_name = re.sub(r'[〖〗@=;%&\'^~•!#\+\?\{\:\[\_]', '', event_name).strip()
 
             events.append({
                 'event_id': event_id,

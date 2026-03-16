@@ -197,7 +197,7 @@ Each round converges. Event date reflection showed this clearly:
 | Generic role → official | State + title (no posthumous name) = can refer to multiple people | `〖;吴王〗` (King of Wu) |
 | Formal appointment → official | Court-appointed positions | `〖;丞相〗` (Chancellor) |
 | Social role → identity | Non-appointed social status | `〖#天子〗` (Son of Heaven) |
-| Tag integrity | One tag = one entity, no crossing punctuation | ✓ `〖*驷马〗`  ✗ `〖*驷〗马〖*，迎...〗` |
+| Tag integrity | One tag = one entity, no crossing punctuation | ✓ `〖•驷马〗`  ✗ `〖•驷〗马〖•，迎...〗` |
 
 These principles emerged from debugging misclassifications -- they were not designed in advance.
 

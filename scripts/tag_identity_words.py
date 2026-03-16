@@ -40,7 +40,7 @@ IDENTITY_RULES = {
 }
 
 # 已标注区域正则（〖...〗 或 〚〛 等所有类型）
-TAGGED = re.compile(r'〖[^〗]*〗|〚[^〛]*〛|〖+[^〗]*〗|《[^》]*》|〈[^〉]*〉|【[^】]*】|〔[^〕]*〕')
+TAGGED = re.compile(r'〖[^〗]*〗')
 
 
 def tag_line(line: str, word: str, prefix_re, suffix_re) -> str:
