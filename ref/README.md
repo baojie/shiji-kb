@@ -1,4 +1,4 @@
-# 参考文献
+8# 参考文献
 
 本目录收集与史记知识库项目相关的参考文献、类似项目和技术资源。
 
@@ -77,3 +77,4 @@
 ## More
 
 * https://cnkgraph.com/
+https://mp.weixin.qq.com/s/lD6n_mYvGuZ8HhYuLG22Aw
