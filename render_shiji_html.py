@@ -555,15 +555,23 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
             else:
                 # 开启 ::: [tag] — 开始语义块
                 tag = stripped[3:].strip()
-                # 清理实体标注符号以生成 CSS class
-                clean_tag = re.sub(r'[〖〗〔〕^@&=;~]', '', tag) if tag else ''
-                classes = 'note-box'
-                if clean_tag:
-                    classes += f' note-{clean_tag}'
-                if tag:
-                    html_lines.append(f'<div class="{classes}" title="{html_escape(tag)}">')
+                # 短标签（如"太史公曰""赞"）作为class/title；长文本作为内容
+                if len(tag) <= 20 and '〖' not in tag:
+                    # 短标签：用作CSS class和title
+                    clean_tag = re.sub(r'[〖〗〔〕^@&=;~]', '', tag) if tag else ''
+                    classes = 'note-box'
+                    if clean_tag:
+                        classes += f' note-{clean_tag}'
+                    if tag:
+                        html_lines.append(f'<div class="{classes}" title="{html_escape(tag)}">')
+                    else:
+                        html_lines.append(f'<div class="{classes}">')
                 else:
-                    html_lines.append(f'<div class="{classes}">')
+                    # 长文本/含实体标注：作为div内容渲染
+                    html_lines.append('<div class="note-box">')
+                    if tag:
+                        # 将tag内容作为段落文本处理（实体标注会在后续渲染中处理）
+                        para_buffer.append(tag)
                 in_note = True
             continue
 
