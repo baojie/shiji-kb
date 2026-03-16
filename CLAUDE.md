@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-《史记》知识库：用AI Agent将《史记》130篇转化为结构化知识图谱。核心产出包括语义标注文本、18类实体索引（12,380词条）、3,185个事件索引、7,652条事件关系、事件地铁图可视化，以及11个可复用方法论SKILL文档。
+《史记》知识库：用AI Agent将《史记》130篇转化为结构化知识图谱。
 
 ## 项目约定
 
