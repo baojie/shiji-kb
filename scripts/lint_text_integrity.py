@@ -119,8 +119,8 @@ def strip_markup(text: str) -> str:
     # 5. 段落编号 [1] [1.1] [1.1.2] 等
     text = re.sub(r'^\[\d+(?:\.\d+)*\]\s*', '', text, flags=re.MULTILINE)
 
-    # 6. 实体标注括号 → 保留内容
-    text = re.sub(rf'〖{_ENTITY_PFX}([^〖〗]*)〗', r'\1', text)
+    # 6. 实体标注括号 → 保留内容（支持内联消歧 〖@台|吕台〗 → 台）
+    text = re.sub(rf'〖{_ENTITY_PFX}([^〖〗|]*)(?:\|[^〖〗]*)?〗', r'\1', text)
     text = re.sub(r'〖[^〗]*〗', '', text)   # 剩余残留
 
     # 7. 六类对称括号 → 保留内容

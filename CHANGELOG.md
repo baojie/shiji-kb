@@ -6,6 +6,28 @@
 
 ---
 
+## 内联消歧语法 v2.7：扩展到所有实体类型（未提交） - 2026-03-16
+
+### 新增 (Added)
+
+- `scripts/test_inline_disambig.py` — 内联消歧语法端到端测试脚本（15项断言：strip_markup/remove_all_tags/convert_entities，全部通过）
+
+### 修复 (Fixed)
+
+- `scripts/lint_text_integrity.py` — `strip_markup()` 修复 `|` 残留 bug：`〖@台|吕台〗` → 原来错误脱标为 `台|吕台`，现在正确输出 `台`
+- `kg/entities/scripts/validate_tagging.py` — `remove_all_tags()` 同上修复
+- `scripts/lint_markdown.py` — 生物类型 pattern 中 `〖+` 里的 `+` 被误解为正则量词，修正为 `〖\+`
+
+### 更改 (Changed)
+
+- `render_shiji_html.py` — 新增12条非人名类型消歧 pattern（器物/官职/地名/时间/氏族/邦国/制度/族群/身份/天文/生物/数量），全部13种 `〖TYPE〗` 类型均支持 `〖TYPE 显示名|规范名〗` 语法，渲染输出 `data-canonical` 属性
+- `skills/SKILL_03a_实体标注.md` — v2.7 节：内联消歧扩展到13种类型，含完整示例表
+- `skills/SKILL_03b_实体消歧.md` — 内联消歧节：补充非人名消歧示例和各类型典型场景
+- `skills/SKILL_09a_认知辅助阅读器.md` — 渲染管线更新："内联消歧人名" → "内联消歧（所有实体类型）"
+- `doc/spec/标注格式规范.md` — 内联消歧格式节：列出13种类型的示例表（v2.7）
+
+---
+
 ## 事实发现 SKILL + 姓氏推理规划（未提交） - 2026-03-16
 
 ### 新增 (Added)

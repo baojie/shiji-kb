@@ -41,19 +41,31 @@ from html import escape as html_escape
 ENTITY_PATTERNS = [
     (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),                               # 粗体（不变）
     # 10类新格式：〖TYPE content〗
+    (r'〖\*([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="artifact"     title="器物：\2"       data-canonical="\2">\1</span>'),  # 器物（消歧）
     (r'〖\*([^〖〗<>"]+)〗', r'<span class="artifact" title="器物">\1</span>'),     # 器物
+    (r'〖;([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="official"    title="官职：\2"       data-canonical="\2">\1</span>'),  # 官职（消歧）
     (r'〖;([^〖〗<>"]+)〗',  r'<span class="official" title="官职">\1</span>'),    # 官职
+    (r'〖=([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="place"       title="地名：\2"       data-canonical="\2">\1</span>'),  # 地名（消歧）
     (r'〖=([^〖〗<>"]+)〗',  r'<span class="place" title="地名">\1</span>'),       # 地名
+    (r'〖%([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="time"        title="时间：\2"       data-canonical="\2">\1</span>'),  # 时间（消歧）
     (r'〖%([^〖〗<>"]+)〗',  r'<span class="time" title="时间">\1</span>'),        # 时间
+    (r'〖&([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="dynasty"     title="氏族：\2"       data-canonical="\2">\1</span>'),  # 氏族（消歧）
     (r'〖&([^〖〗<>"]+)〗',  r'<span class="dynasty" title="氏族">\1</span>'),      # 氏族
+    (r"〖'([^〖〗<>\"|]+)\|([^〖〗<>\"]+)〗", r'<span class="feudal-state" title="邦国：\2"     data-canonical="\2">\1</span>'),  # 邦国（消歧）
     (r"〖'([^〖〗<>\"]+)〗", r'<span class="feudal-state" title="邦国">\1</span>'), # 邦国
+    (r'〖\^([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="institution" title="制度：\2"       data-canonical="\2">\1</span>'),  # 制度（消歧）
     (r'〖\^([^〖〗<>"]+)〗', r'<span class="institution" title="制度">\1</span>'),  # 制度
+    (r'〖~([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="tribe"       title="族群：\2"       data-canonical="\2">\1</span>'),  # 族群（消歧）
     (r'〖~([^〖〗<>"]+)〗',  r'<span class="tribe" title="族群">\1</span>'),       # 族群
+    (r'〖#([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="identity"    title="身份：\2"       data-canonical="\2">\1</span>'),  # 身份（消歧）
     (r'〖#([^〖〗<>"]+)〗',  r'<span class="identity" title="身份">\1</span>'),     # 身份
+    (r'〖!([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="astronomy"   title="天文/历法：\2"  data-canonical="\2">\1</span>'),  # 天文（消歧）
     (r'〖!([^〖〗<>"]+)〗',  r'<span class="astronomy" title="天文/历法">\1</span>'), # 天文
-    (r'〖@([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="person" title="人名：\2" data-canonical="\2">\1</span>'),  # 人名（消歧：显示|全名）
+    (r'〖@([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="person"      title="人名：\2"       data-canonical="\2">\1</span>'),  # 人名（消歧：显示|全名）
     (r'〖@([^〖〗<>"]+)〗',  r'<span class="person" title="人名">\1</span>'),      # 人名
+    (r'〖\+([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="biology"     title="生物：\2"       data-canonical="\2">\1</span>'),  # 生物（消歧）
     (r'〖\+([^〖〗<>"]+)〗', r'<span class="biology" title="生物">\1</span>'),      # 生物
+    (r'〖\$([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="quantity"    title="数量：\2"       data-canonical="\2">\1</span>'),  # 数量（消歧）
     (r'〖\$([^〖〗<>"]+)〗', r'<span class="quantity" title="数量">\1</span>'),    # 数量
     # 5类不变
     (r'〚([^〚〛<>"]+)〛', r'<span class="mythical" title="神话/传说">\1</span>'),
