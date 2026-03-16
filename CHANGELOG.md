@@ -6,118 +6,199 @@
 
 ---
 
-## 通用分类树生成器 + 人物本体过程文档 - 2026-03-15
+## 事实发现 SKILL + 姓氏推理规划（未提交） - 2026-03-16
 
 ### 新增 (Added)
 
-- `kg/rdf/scripts/build_taxonomy.py` — 通用 TTL→分类树 MD 生成器
-  - 输入任意 OWL/RDF Turtle 文件，输出可读的层级分类树 Markdown
-  - 自动解析 owl:Class / rdfs:subClassOf / rdfs:label / :count
-  - 支持 `--order`（根子类排序）、`--unit`（计数单位自动推断）、`--max-show`（实例显示上限）
+- `skills/SKILL_05c_事实发现.md` — 原子事实三元组抽取工作流
+  - 事实定义：1–3个三元组，独立于事件（叙事单元）和关系（持久结构）
+  - SPO 全用汉字，不设谓词 schema；ctx（context）对象承载时间/地点/场合等背景条件，可扩展任意汉字键值
+  - 规模估算：全库约 70,000–120,000 条事实，十表密度最高
+  - 多轮抽取：规则→句法框架→LLM→验证去重
+- `skills/SKILL_07b_姓氏推理.md` — 先秦人物姓/氏推理工作流（多轮迭代：直接提取→邦国推理→氏族推理→父系传播→验证；7条推理规则 R1–R7）
+- `doc/spec/姓氏制度.md` — 先秦姓氏制度背景规范（姓/氏区分、氏的三大来源、主要姓族对照表、数据模型）
+- `kg/entities/scripts/prompt_template_姓氏推理.md` — 姓氏推理 Agent 提示词模板（参数化 round/scope/input_files，含三个调用示例）
+
+### 更改 (Changed)
+
+- `skills/SKILL_05_关系构建.md` — 子工序索引表增加 05c 条目
+- `skills/SKILL_07_逻辑推理.md` — 子工序索引表增加 07b 条目
+- `TODO.md` — 姓氏推理提升为近期优先；事实发现整理入数据与内容
+
+---
+
+## 实体反思：内联消歧语法 + 006-010章标注修正 ([a788c574](https://github.com/baojie/shiji-kb/commit/a788c574)) - 2026-03-16
+
+### 新增 (Added)
+
+- **内联消歧语法**：标注中可直接指定消歧目标，形如 `〖@张良|韩相张良〗`，无需依赖外部 aliases 文件
+- 006-010章（秦始皇/项羽/高祖/吕太后/孝文本纪）实体反思完成，消歧修正与别名补充
+
+---
+
+## 纪年系统重建 + 实体索引更新 ([cebce93a](https://github.com/baojie/shiji-kb/commit/cebce93a) / [fbe735a4](https://github.com/baojie/shiji-kb/commit/fbe735a4) / [39660102](https://github.com/baojie/shiji-kb/commit/39660102)) - 2026-03-15
+
+### 更改 (Changed)
+
+- **纪年系统**：重建在位纪年→公元年映射，timeline数据大幅扩充（历代君主在位年可视化）
+- **SKILL文档**：年份消歧、年代推断相关 SKILL 同步更新
+- **实体索引**：年表数据重建，全量HTML重新生成
+
+---
+
+## 多章标注修正 + lint系统扩展 ([c5386c0e](https://github.com/baojie/shiji-kb/commit/c5386c0e) / [9cc85ae7](https://github.com/baojie/shiji-kb/commit/9cc85ae7) / [ed3c45f8](https://github.com/baojie/shiji-kb/commit/ed3c45f8) / [3275308c](https://github.com/baojie/shiji-kb/commit/3275308c) / [b03600dd](https://github.com/baojie/shiji-kb/commit/b03600dd)) - 2026-03-15
+
+### 更改 (Changed)
+
+- **30章批量标注修正**（两轮）：消歧修正、符号格式统一
+- **lint系统扩展**：新增检测规则，130章实质差异归零（lint完整性修复）
+- **001-003章修正**：五帝本纪标签错误修复、殷本纪标注修正
+
+---
+
+## 实体反思 SKILL 重构 ([9508de3f](https://github.com/baojie/shiji-kb/commit/9508de3f) / [28266b41](https://github.com/baojie/shiji-kb/commit/28266b41) / [4dc02f54](https://github.com/baojie/shiji-kb/commit/4dc02f54)) - 2026-03-15
+
+### 新增 (Added)
+
+- **新增 SKILL_02d/02e/02f/05b**：扩展实体标注和事件分析方法论体系
+- **实体反思SKILL补充**：段落内一致性缺失模式检测
+
+### 更改 (Changed)
+
+- `SKILL_03c` 拆分为"按章反思"和"按类型反思"两个独立文档，责任边界更清晰
+- 001/002章配套标注修正
+- **研究方法总则** 同步更新
+
+---
+
+## v3.0/v3.1 SKILL体系重组 + 维基三家注 ([47fd9259](https://github.com/baojie/shiji-kb/commit/47fd9259) / [2b947ff4](https://github.com/baojie/shiji-kb/commit/2b947ff4) / [0b9a17ee](https://github.com/baojie/shiji-kb/commit/0b9a17ee) / [fdc5eaff](https://github.com/baojie/shiji-kb/commit/fdc5eaff) / [da71305c](https://github.com/baojie/shiji-kb/commit/da71305c)) - 2026-03-15
+
+### 新增 (Added)
+
+- **维基文库史记全文 + 三家注 epub 提取**：提取为 HTML，供校勘和注释标注使用
+- **SKILL体系增强**：新增阅读器/游戏化 SKILL，合并 methodology 文档到 SKILL 体系，三Agent并行规划方案
+
+### 更改 (Changed)
+
+- **SKILL文档重组（v3.0）**：扁平命名结构迁移至 `skills/` 目录下分层编号体系（SKILL_XX_名称.md）；校勘修复
+- **v3.1 标注文本校勘**：与维基文库版对照，540→386处差异（-154处修正）
+
+---
+
+## 通用分类树生成器 + v2.9 人物本体 ([298d3d1f](https://github.com/baojie/shiji-kb/commit/298d3d1f) / [798f4371](https://github.com/baojie/shiji-kb/commit/798f4371)) - 2026-03-15
+
+### 新增 (Added)
+
+- `kg/rdf/scripts/build_taxonomy.py` — **通用 TTL→分类树 MD 生成器**，替代人物专用脚本
+  - 输入任意 OWL/RDF Turtle 文件，自动解析 owl:Class / rdfs:subClassOf / rdfs:label / :count
+  - 支持 `--order` / `--unit` / `--max-show` 参数
   - 人物（130类/1821实例）和生物（20类/70实例）均验证通过
-- `doc/methodology/人物本体构建过程.md` — 人物本体构建全过程详细记录
 - `kg/rdf/biology_taxonomy.md` — 生物分类树（从 biology.ttl 自动生成）
+- `doc/methodology/人物本体构建过程.md` — 人物本体构建全过程详细记录
 
 ### 更改 (Changed)
 
-- `kg/rdf/scripts/build_person_taxonomy.py` 标记为已废弃，由通用版 build_taxonomy.py 取代
-- `SKILL_实体到本体管线.md` — 更新方法论，补充反思流程和类命名原则
-- `kg/rdf/person.ttl` — 人物本体修正（帝王朝代/外邦汉人/吴楚国王等分类错误）
-- `kg/rdf/person_taxonomy.md` — 从 TTL 重新生成
+- **v2.9 人物本体+生物本体**：本体分类错误修正（帝王朝代/外邦汉人/吴楚国王等）；新增生物本体；Agentic Ontology 方法论整理
+- `kg/rdf/scripts/build_person_taxonomy.py` 标记为已废弃
 
 ---
 
-## v2.3 新增「身份」实体类型 - 2026-03-14
+## Labs实验 + 文档整理 ([71bbf0c6](https://github.com/baojie/shiji-kb/commit/71bbf0c6) / [2294a7d9](https://github.com/baojie/shiji-kb/commit/2294a7d9) / [1eead04a](https://github.com/baojie/shiji-kb/commit/1eead04a) / [6ebca4ee](https://github.com/baojie/shiji-kb/commit/6ebca4ee) / [6cc97cdc](https://github.com/baojie/shiji-kb/commit/6cc97cdc)) - 2026-03-15
 
 ### 新增 (Added)
 
-**第17类实体：身份 `〖#〗`**
-
-- 新增身份实体类型（identity），标记符号 `〖#X〗`，CSS class `.identity`（橄榄绿 #6B8E23 + dashed 下划线）
-- Phase 1: 从官职（official）中迁移 33 种通用身份词（天子/太子/太后/夫人/皇帝/皇后/公主/诸侯/列侯/功臣/宦者/贵人/美人 等），共 2,159 处
-- Phase 2: 上下文审查迁移 8 处（帝太后/公侯/周天子）
-- Phase 3: 全文扫描新增 21 种未标注身份词（寡人/宾客/子弟/父老/父兄/长者/壮士/人主/先帝/妇人/布衣/侯王/王侯 等），76 处
-- 封国→人名修正：24 种人名实体（赵王/秦王/魏文侯/西楚霸王等）从封国迁移至人名，120 处
-- 分类原则：身份 = 非正式任命的社会角色/地位/血缘关系（天子/外戚/食客）；官职 = 朝廷正式册封的职位（丞相/太尉/御史大夫）
-- 具体人名引用（吕太后/平阳公主/窦皇后等）保留为 official/person，不迁移
-
-**迁移工具**
-
-- `scripts/migrate_official_to_identity.py` — 三阶段迁移脚本（Phase 1 自动替换 / Phase 2 上下文审查 / Phase 3 新词扫描）
-- `kg/entities/data/identity_wordlist.json` — 身份词表（always_identity / context_dependent / new_candidates / exclude）
+- `labs/` 目录：实验性内容统一归档（弋射说楚王排版实验、001章结构化数据等）
+- **语义排版实验**：用五帝本纪做句间逻辑关系可视化原型（弹窗自动关闭交互修复）
+- **逻辑推理案例**：SKILL_07 补充具体推理示例
 
 ### 更改 (Changed)
 
-- 官职实体从 2,288 条减少至 2,298 条（-35 种迁移至身份，+45 种新识别）；出现次数 16,428→14,170
-- 封国实体从 161 种减少至 137 种（24 种人名迁移至 person）
-- 实体索引页新增身份类型卡片（54 条目，2,235 次出现）
-- 重新生成全部 130 章 HTML 和实体索引页
+- **README精简**：过时文档链接清理，目录结构更新
+- 文档路径引用同步更新
 
 ---
 
-## v2.2 实体分类深度修正 - 2026-03-14
+## v2.2 实体体系深度重构 ([73cfbf16](https://github.com/baojie/shiji-kb/commit/73cfbf16) / [d5967cdc](https://github.com/baojie/shiji-kb/commit/d5967cdc) / [1e6cf8e1](https://github.com/baojie/shiji-kb/commit/1e6cf8e1) / [4baba997](https://github.com/baojie/shiji-kb/commit/4baba997) / [53d9b987](https://github.com/baojie/shiji-kb/commit/53d9b987) / [7f768628](https://github.com/baojie/shiji-kb/commit/7f768628)) - 2026-03-14
 
 ### 更改 (Changed)
 
-**1. 族群/氏族/邦国 重新分类（195处）**
+**1. 邦国/氏族/族群 三层分类体系确立**
 
-- 🔄 **族群→氏族（31种）**：姜姓/姜氏/华氏/薄氏/陈氏/祁氏/羊舌氏/卫氏/妫/妫氏/向氏/季氏/武族/缪族/戴族/庄族/桓族/有缗/乌氏/荤粥氏/釐姓，及重复词条合并（刘氏/吕氏/姜/姬氏/嬴/嬴姓/子姓/窦氏/赵氏/魏氏）
-- 🔄 **族群→邦国（14种）**：秦/周/齐/燕/赵/楚/三晋/虞/芮/大吴/滇国/朝鲜/大夏/蜀
-- 🔄 **族群→官职（9种）**：单于/宛王/乌孙王/月氏王/戎王/大月氏王/楼兰王/安息王/橡王
-- 🔄 **族群→人名（6种）**：蔡女/卫女/陈女/鲁女/翟婢/黑姑
-- 🔄 **族群→地名（3种）**：亳/戎州/闽中
-- 🔄 **氏族→邦国（1种）**：豕韦
-- 🔄 **氏族→官职（1种）**：襄王
-- 🔄 **氏族→地名（1种）**：滇蜀
-- 🔄 **氏族→人名（1种）**：怀
-- 📊 结果：族群 231→168条，氏族 101→117条，邦国 156→161条，官职 2300→2306条
+- 🔄 **族群→氏族/邦国/官职/人名/地名**（195处）：31种氏族、14种邦国、9种族群君主称谓等重新归类
+- 📊 结果：族群 231→168条，氏族 101→117条，邦国 156→161条
+- 🔤 **三层分类原则**：邦国 `〖'〗`（政治体）/ 氏族 `〖&〗`（血缘宗族）/ 族群 `〖~〗`（文化族裔）
 
-**分类原则（确立三层体系）**：
-- **邦国** `〖'〗`：有组织的政治体（统一王朝 + 列国 + 外邦政权），强调主权/领土属性
-- **氏族** `〖&〗`：以血缘为纽带的宗族/姓氏群体（刘氏/嬴氏/华氏），强调血统传承
-- **族群** `〖~〗`：以族裔/文化认同为纽带的群体（匈奴/戎/狄/越/羌），强调文化/族裔属性
+**2. 官职深度反思（2290处）**
 
----
+- 🔄 **官职→时间（1497处）**：`〖;元年〗` → `〖%元年〗`
+- 🔄 **官职→人名（17种，793处）**：高祖/沛公/汉王/太史公/项王/二世/武帝等皇帝专称归入人名
 
-**2. 人名分类深度修正（908处）**
+**3. 地名深度反思（60处）**
 
-- 🗑️ **错误标注修正**：移除 `〖@而以〗`（54处）——"而以"为连词，非人名
-- 🔄 **人名→官职（15种，854处）**：以下泛称职衔移出人名类
-  - 通用称谓：夫人/王子/太后/太子/公主/舍人/列侯
-  - 国君泛称：吴王/楚王/齐王/赵王/晋侯/哀侯/夷侯/康侯
-- 📖 **同义词表新增（4组）**：
-  - `孝景` → `汉景帝`（吸收67次，汉景帝 93→160次）
-  - `亚父` → `范增`（吸收12次，范增 13→25次）
-  - `李将军` → `李广`（吸收9次，李广 22→31次）
-  - `萧相国` → `萧何`（吸收2次，萧何 42→44次）
+- 删除错误标注（无穷29处）、地名→时间/天文/器物/人名重分类；新增5组别名
+
+**4. 身份类型恢复扩充**
+
+- `〖#X〗` 身份实体类型恢复并扩充（4,297次标注）
+- 实体索引页增加所有类型定义说明框
 
 ---
 
-**3. 官职类别深度反思（2290处）**
+## v2.4 实体类型重命名（动植物→生物） ([963e49bb](https://github.com/baojie/shiji-kb/commit/963e49bb)) - 2026-03-14
 
-- 🔄 **官职→时间（1497处）**：`〖;元年〗` → `〖%元年〗`——「元年」是纪年时间词，非官职
-- 🔄 **官职→人名（17种，793处）**：以下皇帝/人物专称移出官职类，归入人名
-  - 汉高祖相关：高祖(158)/沛公(92)/汉王(132)
-  - 其他：太史公(76)/项王(32)/二世(45)/武帝(33)/景帝(27)/孝惠(32)/义帝(29)/子楚(27)/始皇(25)/孝文帝(22)/孝文(22)/侯生(28)/尉他(8)/灌将军(5)
-- 📊 结果：官职 2306→2288条，人名 3538→3539条
+### 更改 (Changed)
 
----
-
-**4. 地名类别深度反思（60处）**
-
-- 🗑️ **删除错误标注（29处）**：`〖=无穷〗` — 「无穷」是副词「无穷无尽」，非地名
-- 🔄 **地名→时间（7处）**：`〖=共和〗` → `〖%共和〗`——共和行政年号（前841年）
-- 🔄 **地名→天文（9处）**：`〖=太阴〗`(7)/`〖=昊天〗`(2) → `〖!〗`——阴阳/宇宙概念
-- 🔄 **地名→器物（11处）**：`〖=九鼎〗`(9)/`〖=衽席〗`(2) → `〖*〗`——礼器和卧具
-- 🔄 **地名→人名（4处）**：`〖=沛公〗` → `〖@沛公〗`——沛公是刘邦称号非地名
-- 📖 **地名别名新增（5组）**：雒阳=洛阳、雒邑=洛邑、临菑=临淄、泰山=(太山/岱宗/岱)、郦山=骊山
-- 📊 结果：地名 1872→1858条，器物 →924条，天文 →257条
+- `flora-fauna` 类型重命名为 `biology`，标记符号 `〘〙` → `〖+〗`，全书批量替换
+- 配套系统性实体反思
 
 ---
 
-**5. 实体索引页新增类型定义**
+## v2.5 标注完整性检查 ([f5b17c0f](https://github.com/baojie/shiji-kb/commit/f5b17c0f)) - 2026-03-14
 
-- 📝 **16类实体索引页** 开头均加入类型定义说明框，含标记符号和文字定义
+### 新增 (Added)
+
+- **lint脚本**：标注格式完整性检查，检测未闭合标签、符号残留等问题
+- **实体词表**：配合lint建立基准词表
+- 批量章节修复
+
+---
+
+## v2.6 实体深度清理 ([8c43461a](https://github.com/baojie/shiji-kb/commit/8c43461a) / [a1ea0950](https://github.com/baojie/shiji-kb/commit/a1ea0950)) - 2026-03-14
+
+### 更改 (Changed)
+
+- 身份类型进一步修正，国谥号人名重分类，旧格式标注（`@X@` / `$X$` / `%X%`）彻底消除
+- `v2.6.1`：脚本正则表达式更新，适配旧格式→`〖TYPE X〗`批量转换
+
+---
+
+## v2.7 标注残留修复 ([c3e9b28a](https://github.com/baojie/shiji-kb/commit/c3e9b28a) / [88240e17](https://github.com/baojie/shiji-kb/commit/88240e17)) - 2026-03-14
+
+### 更改 (Changed)
+
+- **`validate_tagging.py` 重写**：更健壮的标注校验逻辑
+- 单星号/双星号残留器物标注补全（25章）
+- 001章「唯」字恢复（误删修复）
+
+---
+
+## v2.8 嵌套标签修复 + 数量实体 ([7f28fd6c](https://github.com/baojie/shiji-kb/commit/7f28fd6c)) - 2026-03-14
+
+### 更改 (Changed)
+
+- 嵌套实体标签修复（`〖@X〖;Y〗〗` 类型的解析问题）
+- 跨句标注清理
+- 数量实体标注补充
+- 事件关系数据重建（反映标注修正后的最新实体）
+
+---
+
+## 排版实验 + 文档整理 ([17554cae](https://github.com/baojie/shiji-kb/commit/17554cae) / [f9db9c20](https://github.com/baojie/shiji-kb/commit/f9db9c20)) - 2026-03-14
+
+### 新增 (Added)
+
+- `doc/spec/排版实验_弋射说楚王.html` — 句间逻辑关系可视化排版实验原型
+- `kg/` 下全部9个子目录 README 文档
 
 ---
 
@@ -834,5 +915,5 @@
 
 ---
 
-**最后更新**: 2026-03-13
+**最后更新**: 2026-03-16
 **当前版本**: v0.9.0
