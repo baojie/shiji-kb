@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专项索引 - 史记知识库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Source Han Serif SC", "Noto Serif SC", serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #fdfaf6 0%, #f5f1ec 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b4513;
+            font-size: 3em;
+            margin-bottom: 15px;
+            border-bottom: 4px double #8b4513;
+            padding-bottom: 25px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.2em;
+        }
+
+        .nav {
+            background: #f5f5f5;
+            padding: 15px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .nav a {
+            color: #8b4513;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .special-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .special-card {
+            background: linear-gradient(135deg, #fff 0%, #fdfaf6 100%);
+            border: 2px solid #8b4513;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .special-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.2);
+        }
+
+        .special-card h2 {
+            color: #8b4513;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .special-card .count {
+            text-align: center;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .special-card .description {
+            color: #555;
+            line-height: 1.8;
+            text-indent: 2em;
+        }
+
+        .special-card a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #8b4513;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border: 1px solid #8b4513;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .special-card a:hover {
+            background: #8b4513;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .special-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>专项索引</h1>
+        <div class="subtitle">史记知识库专项内容汇总</div>
+
+        <div class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="../chapters/">章节目录</a>
+            <a href="../entities/">实体索引</a>
+        </div>
+
+        <div class="special-grid">
+            <!-- 太史公曰 -->
+            <div class="special-card">
+                <h2>太史公曰</h2>
+                <div class="count">共125篇</div>
+                <div class="description">
+                    太史公司马迁在各篇章末的评论文字，表达了他对历史人物、事件的独特见解和评价，是理解《史记》思想内涵的重要窗口。
+                </div>
+                <a href="taishigongyue.html">查看详情 →</a>
+            </div>
+
+            <!-- 预留：赞 -->
+            <div class="special-card" style="opacity: 0.6;">
+                <h2>赞</h2>
+                <div class="count">敬请期待</div>
+                <div class="description">
+                    司马迁以诗歌形式对历史人物和事件的歌颂与评价，文字简练，意蕴深远。
+                </div>
+                <a href="#" style="pointer-events: none; opacity: 0.5;">即将推出</a>
+            </div>
+
+            <!-- 预留：书信 -->
+            <div class="special-card" style="opacity: 0.6;">
+                <h2>书信</h2>
+                <div class="count">敬请期待</div>
+                <div class="description">
+                    史记中收录的历史书信文献，展现了古代政治、军事、文化交流的真实面貌。
+                </div>
+                <a href="#" style="pointer-events: none; opacity: 0.5;">即将推出</a>
+            </div>
+
+            <!-- 预留：其他专项 -->
+            <div class="special-card" style="opacity: 0.6;">
+                <h2>更多专项</h2>
+                <div class="count">持续更新中</div>
+                <div class="description">
+                    我们将持续提取和整理史记中的各类专项内容，敬请期待。
+                </div>
+                <a href="#" style="pointer-events: none; opacity: 0.5;">敬请期待</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            史记知识库 · 专项索引 · 让经典触手可及
+        </div>
+    </div>
+</body>
+</html>
