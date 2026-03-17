@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>史记韵文集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Source Han Serif SC", "Noto Serif SC", serif;
+            line-height: 2;
+            color: #333;
+            background-color: #fdfaf6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b4513;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 3px double #8b4513;
+            padding-bottom: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .nav {
+            background: #f5f5f5;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .nav a {
+            color: #8b4513;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .nav a.pdf {
+            color: #c00;
+            font-weight: bold;
+        }
+
+        .type-section {
+            margin-bottom: 60px;
+        }
+
+        .type-header {
+            font-size: 2em;
+            color: #8b4513;
+            margin-bottom: 10px;
+            border-left: 5px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .type-desc {
+            color: #666;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            font-style: italic;
+        }
+
+        .yunwen-item {
+            margin-bottom: 50px;
+            border-left: 3px solid #d4a373;
+            padding-left: 20px;
+        }
+
+        .item-title {
+            font-size: 1.5em;
+            color: #8b4513;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .item-subtitle {
+            font-size: 0.9em;
+            color: #999;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .item-subtitle a {
+            color: #999;
+        }
+
+        .item-subtitle a:hover {
+            color: #8b4513;
+            text-decoration: underline;
+        }
+
+        .item-content {
+            line-height: 2.5;
+            color: #444;
+        }
+
+        .item-content.verse {
+            /* 诗歌样式：左对齐，每行独立 */
+            text-align: left;
+            line-height: 1.8;
+            padding-left: 2em;
+            font-size: 1.05em;
+            white-space: pre-wrap; /* 保留空格和换行 */
+            text-indent: 0; /* 取消首行缩进 */
+        }
+
+        .item-content.prose {
+            /* 散文样式：两端对齐，首行缩进 */
+            text-align: justify;
+            text-indent: 2em;
+            line-height: 2.2;
+        }
+
+        .entity {
+            font-weight: 500;
+            border-bottom: 1px dotted;
+            cursor: help;
+        }
+
+        .entity.person { color: #c00; border-bottom-color: #c00; }
+        .entity.place { color: #080; border-bottom-color: #080; }
+        .entity.office { color: #660; border-bottom-color: #660; }
+        .entity.time { color: #06c; border-bottom-color: #06c; }
+        .entity.object { color: #c0c; border-bottom-color: #c0c; }
+        .entity.book { color: #900; border-bottom-color: #900; }
+        .entity.clan { color: #c60; border-bottom-color: #c60; }
+        .entity.state { color: #009; border-bottom-color: #009; }
+        .entity.event { color: #690; border-bottom-color: #690; }
+        .entity.identity { color: #939; border-bottom-color: #939; }
+        .entity.biology { color: #060; border-bottom-color: #060; }
+        .entity.myth { color: #939; border-bottom-color: #939; }
+        .entity.title { color: #960; border-bottom-color: #960; }
+        .entity.concept { color: #069; border-bottom-color: #069; }
+        .entity.measure { color: #666; border-bottom-color: #666; }
+        .entity.position { color: #093; border-bottom-color: #093; }
+        .entity.artifact { color: #c6c; border-bottom-color: #c6c; }
+        .entity.other { color: #999; border-bottom-color: #999; }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>史记韵文集</h1>
+        <div class="subtitle">史记中共有 96 篇韵文作品</div>
+
+        <div class="nav">
+            <a href="../index.html">← 返回首页</a>
+            <a href="special_index.html">专项索引</a>
+            <a href="yunwen.pdf" class="pdf">📥 下载PDF</a>
+        </div>
+
+
+        <div class="type-section" id="type-赞">
+            <div class="type-header">赞（80篇）</div>
+            <div class="type-desc">司马迁以诗歌形式对历史人物和事件的歌颂与评价</div>
+
+
+            <div class="yunwen-item" id="chapter-002">
+                <div class="item-title">
+                    夏本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/002_夏本纪.html" style="text-decoration: none; color: #999;">
+                        002 夏本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">尧</span>遭鸿水，黎人阻饥。<br>
+<span class="entity person" title="人名">禹</span>勤沟洫，手足胼胝。<br>
+言乘<span class="entity object" title="器物">四载</span>，动履<span class="entity time" title="时间">四时</span>。<br>
+娶妻有日，过门不私。<br>
+九土既理，<span class="entity object" title="器物">玄圭</span>锡兹。<br>
+<span class="entity person" title="人名">帝启</span>嗣立，<span class="entity clan" title="氏族">有扈</span>违命。<br>
+<span class="entity book" title="典籍">五子之歌</span>，<span class="entity person" title="人名">太康</span>失政。<br>
+<span class="entity person" title="人名">羿</span><span class="entity person" title="人名">浞</span>斯侮，<span class="entity state" title="邦国">夏室</span>不竞。<br>
+降于<span class="entity person" title="人名">孔甲</span>，扰龙乖性。<br>
+嗟彼<span class="entity place" title="地名">鸣条</span>，其终不令！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-003">
+                <div class="item-title">
+                    殷本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/003_殷本纪.html" style="text-decoration: none; color: #999;">
+                        003 殷本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">简狄</span>吞乙，是为<span class="entity state" title="邦国">殷</span>祖。<br>
+玄王启商，<span class="entity person" title="人名">伊尹</span>负俎。<br>
+上开三面，下献九主。<br>
+旋师<span class="entity place" title="地名">泰卷</span>，继相<span class="entity person" title="人名">臣扈</span>。<br>
+迁嚣圮耿，不常厥土。<br>
+<span class="entity person" title="人名">武乙</span>无道，祸因射天。<br>
+<span class="entity person" title="人名">帝辛</span>淫乱，拒谏贼贤。<br>
+<span class="entity person" title="人名">九侯</span>见醢，<span class="entity artifact" title="古物">砲格</span>兴焉。<br>
+<span class="entity object" title="器物">黄钺</span>斯杖，白旗是悬。<br>
+哀哉琼室，<span class="entity state" title="邦国">殷</span>祀用迁！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-004">
+                <div class="item-title">
+                    周本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/004_周本纪.html" style="text-decoration: none; color: #999;">
+                        004 周本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity title" title="称号">后稷</span>居<span class="entity place" title="地名">邰</span>，<span class="entity person" title="人名">太王</span>作<span class="entity state" title="邦国">周</span>。<br>
+丹开雀录，火降乌流。<br>
+三分既有，八百不谋。<br>
+<span class="entity myth" title="神话">苍兕</span>誓众，<span class="entity biology" title="生物">白鱼</span>入舟。<br>
+<span class="entity title" title="称号">太师</span>抱<span class="entity object" title="器物">乐器</span>，<span class="entity person" title="人名">箕子</span>拘囚。<br>
+<span class="entity person" title="人名">成|周成王</span><span class="entity person" title="人名">康|周康王</span>之日，政简刑措。<br>
+南巡不还，西服莫附。<br>
+<span class="entity office" title="官职">共和</span>之後，王室多故。<br>
+檿弧兴谣，龙漦作蠹。<br>
+<span class="entity person" title="人名">穨|子穨</span><span class="entity person" title="人名">带|叔带</span>荏祸，实倾<span class="entity state" title="邦国">周</span>祚。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-005">
+                <div class="item-title">
+                    秦本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/005_秦本纪.html" style="text-decoration: none; color: #999;">
+                        005 秦本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">柏翳</span>佐<span class="entity person" title="人名">舜</span>，<span class="entity object" title="器物">皁斿</span>是旌。<br>
+<span class="entity person" title="人名">蜚廉</span>事<span class="entity person" title="人名">纣</span>，<span class="entity object" title="器物">石椁</span>斯营。<br>
+<span class="entity person" title="人名">造父</span>善驭，封之<span class="entity place" title="地名">赵城</span>。<br>
+<span class="entity person" title="人名">非子</span>息<span class="entity biology" title="生物">马</span>，厥号<span class="entity person" title="人名">秦嬴</span>。<br>
+<span class="entity office" title="官职">礼乐射御</span>，<span class="entity place" title="地名">西垂</span>有声。<br>
+<span class="entity person" title="人名">襄公</span>救<span class="entity state" title="邦国">周</span>，始命列国。<br>
+金祠<span class="entity myth" title="神话">白帝</span>，龙祚<span class="entity other" title="其他标注">水德</span>。<br>
+祥应<span class="entity object" title="器物">陈宝</span>，妖除丰特。<br>
+<span class="entity person" title="人名">里奚</span>致霸，<span class="entity person" title="人名">卫鞅</span>任刻。<br>
+厥後吞并，卒成凶慝。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-006">
+                <div class="item-title">
+                    秦始皇本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/006_秦始皇本纪.html" style="text-decoration: none; color: #999;">
+                        006 秦始皇本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity office" title="官职">六国</span>陵替，<span class="entity state" title="邦国">二周</span>沦亡。<br>
+并一<span class="entity other" title="其他标注">天下</span>，号为<span class="entity person" title="人名">始皇</span>。<br>
+<span class="entity place" title="地名">阿房</span>云构，<span class="entity object" title="器物">金狄</span>成行。<br>
+南游勒石，东瞰浮梁。<br>
+<span class="entity place" title="地名">滈池</span>见遗，<span class="entity place" title="地名">沙丘</span>告丧。<br>
+<span class="entity person" title="人名">二世</span>矫制，<span class="entity person" title="人名">赵高</span>是与。<br>
+诈因指<span class="entity biology" title="生物">鹿</span>，灾生噬<span class="entity biology" title="生物">虎</span>。<br>
+<span class="entity person" title="人名">子婴</span>见推，恩报君父。<br>
+下乏中佐，上乃庸主。<br>
+欲振穨纲，云谁克补。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-007">
+                <div class="item-title">
+                    项羽本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/007_项羽本纪.html" style="text-decoration: none; color: #999;">
+                        007 项羽本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    亡<span class="entity state" title="邦国">秦</span><span class="entity biology" title="生物">鹿</span>走，伪<span class="entity state" title="邦国">楚</span><span class="entity biology" title="生物">狐</span>鸣。<br>
+云郁<span class="entity place" title="地名">沛谷</span>，<span class="entity object" title="器物">剑</span>挺<span class="entity place" title="地名">吴城</span>。<br>
+勋开<span class="entity place" title="地名">鲁甸</span>，势合<span class="entity place" title="地名">砀</span>兵。<br>
+<span class="entity title" title="称号">卿子</span>无罪，<span class="entity person" title="人名">亚父</span>推诚。<br>
+始救<span class="entity person" title="人名">赵歇</span>，终诛<span class="entity person" title="人名">子婴</span>。<br>
+违约王<span class="entity state" title="邦国">汉</span>，背关怀<span class="entity state" title="邦国">楚</span>。<br>
+常迁上游，臣迫故主。<br>
+<span class="entity place" title="地名">灵壁</span>大振，<span class="entity place" title="地名">成皋</span>久拒。<br>
+战非无功，天实不与。<br>
+嗟彼盖代，卒为凶竖。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-008">
+                <div class="item-title">
+                    高祖本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/008_高祖本纪.html" style="text-decoration: none; color: #999;">
+                        008 高祖本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">高祖</span>初起，始自徒中。<br>
+言从<span class="entity place" title="地名">泗</span>上，即号<span class="entity person" title="人名">沛公</span>。<br>
+啸命<span class="entity title" title="称号">豪杰</span>，奋发材雄。<br>
+彤云郁<span class="entity place" title="地名">砀</span>，<span class="entity myth" title="神话">素灵</span>告<span class="entity place" title="地名">丰</span>。<br>
+<span class="entity myth" title="神话">龙</span>变<span class="entity concept" title="概念">星</span>聚，蛇分径空。<br>
+<span class="entity clan" title="氏族">项氏</span>主命，负约弃功。<br>
+王我<span class="entity place" title="地名">巴蜀</span>，实愤于衷。<br>
+<span class="entity place" title="地名">三秦</span>既北，五兵遂东。<br>
+<span class="entity place" title="地名">氾水</span>即位，<span class="entity place" title="地名">咸阳</span>筑宫。<br>
+威加四海，还歌大风。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-009">
+                <div class="item-title">
+                    吕太后本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/009_吕太后本纪.html" style="text-decoration: none; color: #999;">
+                        009 吕太后本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity office" title="官职">刑罚</span>罕用，罪人是希。<br>
+民务稼穑，衣食滋殖。<br>
+<span class="entity person" title="人名">高祖</span>犹微，<span class="entity clan" title="氏族">吕氏</span>作妃。<br>
+及正轩掖，潜用福威。<br>
+志怀安忍，性挟猜疑。<br>
+置鸩<span class="entity title" title="称号">齐悼</span>，残彘<span class="entity person" title="人名">戚姬</span>。<br>
+<span class="entity person" title="人名">孝惠</span>崩殒，其哭不悲。<br>
+诸<span class="entity clan" title="氏族">吕</span>用事，<span class="entity other" title="其他标注">天下</span>示私。<br>
+<span class="entity identity" title="身份">大臣</span>菹醢，支孽芟夷。<br>
+祸盈斯验，<span class="entity biology" title="生物">苍狗</span>为菑。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-010">
+                <div class="item-title">
+                    孝文本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/010_孝文本纪.html" style="text-decoration: none; color: #999;">
+                        010 孝文本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">孝文</span>在<span class="entity state" title="邦国">代</span>，兆遇大横。<br>
+<span class="entity person" title="人名">宋昌</span>建册，<span class="entity title" title="称号">绛侯</span>奉迎。<br>
+南面而让，<span class="entity other" title="其他标注">天下</span>归诚。<br>
+务农先籍，布德偃兵。<br>
+除帑削谤，政简刑清。<br>
+<span class="entity object" title="器物">綈衣</span>率俗，<span class="entity object" title="器物">露台</span>罢营。<br>
+<span class="entity office" title="官职">法</span>宽<span class="entity person" title="人名">张武</span>，狱恤<span class="entity person" title="人名">缇萦</span>。<br>
+<span class="entity place" title="地名">霸陵</span>如故，千年颂声。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-011">
+                <div class="item-title">
+                    孝景本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/011_孝景本纪.html" style="text-decoration: none; color: #999;">
+                        011 孝景本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">景帝</span>即位，因脩静默。<br>
+勉人於农，率下以德。<br>
+<span class="entity office" title="官职">制度</span>斯创，<span class="entity office" title="官职">礼法</span>可则。<br>
+一朝<span class="entity state" title="邦国">吴</span><span class="entity state" title="邦国">楚</span>，乍起凶慝。<br>
+提局成衅，拒轮致惑。<br>
+<span class="entity person" title="人名">晁错</span>虽诛，<span class="entity state" title="邦国">梁</span>城未克。<br>
+<span class="entity title" title="称号">条侯</span>出将，追奔逐北。<br>
+坐见枭黥，立翦牟贼。<br>
+如何<span class="entity title" title="称号">太尉</span>，後卒<span class="entity artifact" title="古物">下狱</span>。<br>
+惜哉<span class="entity identity" title="身份">明君</span>，斯功不录！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-012">
+                <div class="item-title">
+                    孝武本纪之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/012_孝武本纪.html" style="text-decoration: none; color: #999;">
+                        012 孝武本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">孝武</span>纂极，四海承平。<br>
+志尚奢丽，尤敬<span class="entity myth" title="神话">神明</span>。<br>
+坛开八道，接通<span class="entity measure" title="度量">五城</span>。<br>
+朝亲<span class="entity title" title="称号">五利</span>，夕拜<span class="entity title" title="称号">文成</span>。<br>
+祭非祀典，巡乖卜征。<br>
+登<span class="entity place" title="地名">嵩</span>勒<span class="entity place" title="地名">岱</span>，望景传声。<br>
+迎年祀日，改历定正。<br>
+疲秏中土，事彼边兵。<br>
+日不暇给，人无聊生。<br>
+俯观<span class="entity person" title="人名">嬴政</span>，几欲齐衡。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-013">
+                <div class="item-title">
+                    三代世表之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/013_三代世表.html" style="text-decoration: none; color: #999;">
+                        013 三代世表
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity myth" title="神话">高辛</span>之胤，大启祯祥。<br>
+<span class="entity person" title="人名">脩己</span>吞<span class="entity biology" title="生物">薏</span>，<span class="entity place" title="地名">石纽</span>兴王。<br>
+<span class="entity other" title="其他标注">天命</span><span class="entity myth" title="神话">玄鸟</span>，<span class="entity person" title="人名">简狄</span>生<span class="entity state" title="邦国">商</span>。<br>
+<span class="entity person" title="人名">姜嫄</span>履<span class="entity identity" title="身份">迹</span>，祚流<span class="entity place" title="地名">岐昌</span>。<br>
+俱膺历运，互有兴亡。<br>
+风馀<span class="entity person" title="人名">周召</span>，刑措<span class="entity person" title="人名">成康</span>。<br>
+出<span class="entity place" title="地名">彘</span>之後，<span class="entity identity" title="身份">诸侯</span>日彊。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-018">
+                <div class="item-title">
+                    高祖功臣侯者年表之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/018_高祖功臣侯者年表.html" style="text-decoration: none; color: #999;">
+                        018 高祖功臣侯者年表
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity other" title="其他标注">圣贤</span>影响，风云潜契。<br>
+<span class="entity person" title="人名">高祖</span>应箓，<span class="entity identity" title="身份">功臣</span>命世。<br>
+起<span class="entity place" title="地名">沛</span>入<span class="entity state" title="邦国">秦</span>，凭谋仗计。<br>
+纪勋书爵，<span class="entity place" title="地名">河</span>盟<span class="entity place" title="地名">山</span>誓。<br>
+<span class="entity person" title="人名">萧</span><span class="entity person" title="人名">曹</span>轻重，<span class="entity person" title="人名">绛</span><span class="entity person" title="人名">灌</span>权势。<br>
+咸就封国，或萌罪戾。<br>
+仁贤者祀，昏虐者替。<br>
+永监前修，良惭固蒂。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-020">
+                <div class="item-title">
+                    建元以来侯者年表之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/020_建元以来侯者年表.html" style="text-decoration: none; color: #999;">
+                        020 建元以来侯者年表
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity title" title="称号">孝武</span>之代，<span class="entity other" title="其他标注">天下</span>多虞。<br>
+南讨<span class="entity place" title="地名">瓯越</span>，北击<span class="entity title" title="称号">单于</span>。<br>
+<span class="entity place" title="地名">长平</span>鞠旅，<span class="entity title" title="称号">冠军</span>前驱。<br>
+<span class="entity place" title="地名">术阳</span>衔璧，<span class="entity place" title="地名">临蔡</span>破禺。<br>
+<span class="entity title" title="称号">博陆</span><span class="entity title" title="称号">上宰</span>，<span class="entity title" title="称号">平津</span>巨儒。<br>
+<span class="entity object" title="器物">金章</span>且佩，<span class="entity object" title="器物">紫绶</span>行纡。<br>
+<span class="entity title" title="称号">昭帝</span>已後，勋宠不殊。<br>
+惜哉绝笔，<span class="entity title" title="称号">褚氏</span>补诸。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-021">
+                <div class="item-title">
+                    建元已来王子侯者年表之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/021_建元已来王子侯者年表.html" style="text-decoration: none; color: #999;">
+                        021 建元已来王子侯者年表
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity state" title="邦国">汉</span>世之初，矫枉过正。<br>
+欲大本枝，先封同姓。<br>
+<span class="entity time" title="时间">建元</span>已后，籓翰克盛。<br>
+<span class="entity person" title="人名">主父偃</span>上言，<span class="entity office" title="官职">推恩</span>下令。<br>
+<span class="entity state" title="邦国">长沙</span><span class="entity identity" title="身份">王</span>、<span class="entity state" title="邦国">济北</span><span class="entity identity" title="身份">王</span>、<span class="entity state" title="邦国">中山</span><span class="entity identity" title="身份">王</span>、<span class="entity state" title="邦国">赵</span><span class="entity identity" title="身份">敬王</span>。<br>
+分邑广封，振振在咏。<br>
+扞城御侮，晔晔辉映。<br>
+百足不僵，一人有庆。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-022">
+                <div class="item-title">
+                    汉兴以来将相名臣年表之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/022_汉兴以来将相名臣年表.html" style="text-decoration: none; color: #999;">
+                        022 汉兴以来将相名臣年表
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity time" title="时间">建元</span>以来，侯<span class="entity identity" title="身份">功臣</span>表见矣。<br>
+编次<span class="entity identity" title="身份">将相</span><span class="entity title" title="称号">名臣</span>，年表颇详。<br>
+前代<span class="entity title" title="称号">丞相</span>、<span class="entity title" title="称号">御史大夫</span>、<span class="entity title" title="称号">太尉</span>，功勋卓著。<br>
+后世为法，万古流芳。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-026">
+                <div class="item-title">
+                    历书之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/026_历书.html" style="text-decoration: none; color: #999;">
+                        026 历书
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    历数之兴，其来尚矣。<br>
+<span class="entity person" title="人名">重</span><span class="entity person" title="人名">黎</span>是司，<span class="entity myth" title="神话">容成</span>斯纪。<br>
+推步<span class="entity concept" title="概念">天象</span>，消息<span class="entity identity" title="身份">母子</span>。<br>
+<span class="entity office" title="官职">五胜</span>轮环，<span class="entity office" title="官职">三正</span>互起。<br>
+<span class="entity time" title="时间">孟陬</span>贞岁，畴人顺轨。<br>
+敬授之方，履端为美。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-027">
+                <div class="item-title">
+                    天官书之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/027_天官书.html" style="text-decoration: none; color: #999;">
+                        027 天官书
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    夫天运，三<span class="entity time" title="时间">十岁</span>一小变，<span class="entity time" title="时间">百年</span>中变，<span class="entity time" title="时间">五百载</span>大变；三大变一纪，三纪而大备：此其大数也。为国者必贵三五。上下各<span class="entity time" title="时间">千岁</span>，然後<span class="entity other" title="其他标注">天人</span>之际续备。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-029">
+                <div class="item-title">
+                    河渠书之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/029_河渠书.html" style="text-decoration: none; color: #999;">
+                        029 河渠书
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    水之利害，自古而然。<br>
+<span class="entity person" title="人名">禹</span>疏沟洫，随山濬川。<br>
+爰洎後世，非无<span class="entity other" title="其他标注">圣贤</span>。<br>
+<span class="entity place" title="地名">鸿沟</span>既划，龙骨斯穿。<br>
+填阏攸垦，黎蒸有年。<br>
+<span class="entity place" title="地名">宣房</span>在咏，<span class="entity state" title="邦国">梁</span><span class="entity state" title="邦国">楚</span>获全。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-030">
+                <div class="item-title">
+                    平准书之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/030_平准书.html" style="text-decoration: none; color: #999;">
+                        030 平准书
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity office" title="官职">平准</span>之立，通货<span class="entity other" title="其他标注">天下</span>。<br>
+既入县官，或振华夏。<br>
+其名刀布，其文龙马。<br>
+增算<span class="entity office" title="官职">告缗</span>，裒多益寡。<br>
+<span class="entity person" title="人名">弘羊</span>心计，<span class="entity person" title="人名">卜式</span><span class="entity title" title="称号">长者</span>。<br>
+都内充殷，取赡郊野。<br>
+三十世家
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-031">
+                <div class="item-title">
+                    吴太伯世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/031_吴太伯世家.html" style="text-decoration: none; color: #999;">
+                        031 吴太伯世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">太伯</span>作<span class="entity place" title="地名">吴</span>，高让雄图。<br>
+<span class="entity person" title="人名">周章</span>受国，别封於<span class="entity place" title="地名">虞</span>。<br>
+<span class="entity person" title="人名">寿梦</span>初霸，始用<span class="entity object" title="器物">兵车</span>。<br>
+三子递立，<span class="entity place" title="地名">延陵</span>不居。<br>
+<span class="entity person" title="人名">光</span>既篡位，是称<span class="entity person" title="人名">阖闾</span>。<br>
+<span class="entity person" title="人名">王僚</span>见<span class="entity artifact" title="古物">杀</span>，贼由<span class="entity person" title="人名">专诸</span>。<br>
+<span class="entity person" title="人名">夫差</span>轻<span class="entity state" title="邦国">越</span>，取败<span class="entity place" title="地名">姑苏</span>。<br>
+<span class="entity place" title="地名">甬东</span>之耻，空惭<span class="entity person" title="人名">伍胥</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-032">
+                <div class="item-title">
+                    齐太公世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/032_齐太公世家.html" style="text-decoration: none; color: #999;">
+                        032 齐太公世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">太公</span>佐<span class="entity state" title="邦国">周</span>，实秉阴谋。<br>
+既表<span class="entity place" title="地名">东海</span>，乃居<span class="entity place" title="地名">营丘</span>。<br>
+<span class="entity person" title="人名">小白</span>致霸，九合<span class="entity identity" title="身份">诸侯</span>。<br>
+及溺内宠，衅锺蟲流。<br>
+<span class="entity person" title="人名">庄公</span>失德，<span class="entity person" title="人名">崔杼</span>作仇。<br>
+<span class="entity person" title="人名">陈氏</span>专政，厚货轻收。<br>
+<span class="entity person" title="人名">悼</span>、<span class="entity person" title="人名">简</span>遘祸，<span class="entity person" title="人名">田</span>、<span class="entity person" title="人名">阚</span>非俦。<br>
+沨沨馀烈，一变何由？
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-035">
+                <div class="item-title">
+                    管蔡世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/035_管蔡世家.html" style="text-decoration: none; color: #999;">
+                        035 管蔡世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">武王</span>之弟，<span class="entity state" title="邦国">管</span>、<span class="entity state" title="邦国">蔡</span>及<span class="entity state" title="邦国">霍</span>。<br>
+<span class="entity person" title="人名">周公</span>居<span class="entity title" title="称号">相</span>，流言是作。<br>
+狼跋致艰，<span class="entity book" title="典籍">鸱鸮</span>讨恶。<br>
+<span class="entity person" title="人名">胡</span>能改行，克复其爵。<br>
+<span class="entity person" title="人名">献舞</span><span class="entity artifact" title="古物">执</span><span class="entity state" title="邦国">楚</span>，遇<span class="entity state" title="邦国">息</span>礼薄。<br>
+<span class="entity person" title="人名">穆侯</span><span class="entity artifact" title="古物">虏</span><span class="entity state" title="邦国">齐</span>，荡舟乖谑。<br>
+<span class="entity state" title="邦国">曹</span><span class="entity person" title="人名">共</span>轻<span class="entity state" title="邦国">晋</span>，<span class="entity person" title="人名">负羁</span>先觉。<br>
+<span class="entity person" title="人名">伯阳</span>梦社，祚倾<span class="entity person" title="人名">振铎</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-036">
+                <div class="item-title">
+                    陈杞世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/036_陈杞世家.html" style="text-decoration: none; color: #999;">
+                        036 陈杞世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    盛德之祀，必及<span class="entity time" title="时间">百世</span>。<br>
+<span class="entity person" title="人名">舜</span>、<span class="entity person" title="人名">禹</span>馀烈，<span class="entity state" title="邦国">陈</span>、<span class="entity state" title="邦国">杞</span>是继。<br>
+<span class="entity person" title="人名">妫满</span>受封，<span class="entity person" title="人名">东楼</span>纂系。<br>
+<span class="entity person" title="人名">阏路</span>篡逆，<span class="entity person" title="人名">夏姬</span>淫嬖。<br>
+二国衰微，或兴或替。<br>
+前并後虏，皆亡<span class="entity person" title="人名">楚惠</span>。<br>
+<span class="entity person" title="人名">句践</span>勃兴，<span class="entity person" title="人名">田和</span>吞噬。<br>
+蝉联<span class="entity position" title="方位">血食</span>，岂其<span class="entity identity" title="身份">苗裔</span>？
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-037">
+                <div class="item-title">
+                    卫康叔世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/037_卫康叔世家.html" style="text-decoration: none; color: #999;">
+                        037 卫康叔世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity title" title="称号">司寇</span>受封，<span class="entity office" title="官职">梓材</span>有作。<br>
+成锡厥<span class="entity object" title="器物">器</span>，<span class="entity event" title="事件">夷</span>加其爵。<br>
+暨<span class="entity title" title="称号">武</span>能脩，从<span class="entity title" title="称号">文</span>始约。<br>
+诗美归燕，传矜<span class="entity person" title="人名">石碏</span>。<br>
+皮冠射<span class="entity biology" title="生物">鸿</span>，乘<span class="entity object" title="器物">轩</span>使穀。<br>
+<span class="entity title" title="称号">宣</span>纵淫嬖，衅生<span class="entity person" title="人名">伋</span>、<span class="entity person" title="人名">朔</span>。<br>
+<span class="entity person" title="人名">蒯聩</span>得罪，<span class="entity title" title="称号">出公</span>行恶。<br>
+<span class="entity state" title="邦国">卫</span>祚日衰，失於<span class="entity title" title="称号">君角</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-038">
+                <div class="item-title">
+                    宋微子世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/038_宋微子世家.html" style="text-decoration: none; color: #999;">
+                        038 宋微子世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity state" title="邦国">殷</span>有三仁，<span class="entity person" title="人名">微</span>、<span class="entity person" title="人名">箕</span><span class="entity person" title="人名">纣</span>亲。<br>
+一囚一去，不顾其身。<br>
+颂美有客，书称作宾。<br>
+卒传冢嗣，或叙彝伦。<br>
+<span class="entity title" title="称号">微仲</span>之後，世载忠勤。<br>
+<span class="entity title" title="称号">穆</span>亦能让，实为知人。<br>
+伤<span class="entity place" title="地名">泓</span>之役，有<span class="entity title" title="称号">君</span>无<span class="entity title" title="称号">臣</span>。<br>
+<span class="entity person" title="人名">偃</span>号"桀<span class="entity state" title="邦国">宋</span>"，<span class="entity myth" title="神话">天</span>之弃<span class="entity state" title="邦国">殷</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-039">
+                <div class="item-title">
+                    晋世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/039_晋世家.html" style="text-decoration: none; color: #999;">
+                        039 晋世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity other" title="其他标注">天命</span><span class="entity person" title="人名">叔虞</span>，卒封於<span class="entity state" title="邦国">唐</span>。<br>
+<span class="entity object" title="器物">桐珪</span>既削，<span class="entity place" title="地名">河</span>、<span class="entity place" title="地名">汾</span>是荒。<br>
+<span class="entity person" title="人名">文侯</span>虽嗣，<span class="entity place" title="地名">曲沃</span>日彊。<br>
+未知本末，祚倾<span class="entity person" title="人名">桓</span><span class="entity person" title="人名">庄</span>。<br>
+<span class="entity person" title="人名">献公</span>昏惑，<span class="entity identity" title="身份">太子</span>罹殃。<br>
+<span class="entity person" title="人名">重耳</span>致霸，朝<span class="entity state" title="邦国">周</span><span class="entity place" title="地名">河阳</span>。<br>
+<span class="entity person" title="人名">灵</span>既丧德，<span class="entity person" title="人名">厉</span>亦无防。<br>
+四<span class="entity title" title="称号">卿</span>侵侮。<span class="entity state" title="邦国">晋</span>祚遽亡。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-041">
+                <div class="item-title">
+                    越王句践世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/041_越王句践世家.html" style="text-decoration: none; color: #999;">
+                        041 越王句践世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity state" title="邦国">越</span>祖<span class="entity title" title="称号">少康</span>，至于<span class="entity person" title="人名">允常</span>。<br>
+其子始霸，与<span class="entity state" title="邦国">吴</span>争彊。<br>
+<span class="entity place" title="地名">槜李</span>之役，<span class="entity person" title="人名">阖闾</span>见<span class="entity artifact" title="古物">伤</span>。<br>
+<span class="entity place" title="地名">会稽</span>之耻，<span class="entity person" title="人名">句践</span>欲当。<br>
+<span class="entity person" title="人名">种</span>诱以利，<span class="entity person" title="人名">蠡</span>悉其良。<br>
+折<span class="entity office" title="官职">节</span>下士，致<span class="entity object" title="器物">胆</span>思尝。<br>
+卒<span class="entity artifact" title="古物">复雠</span>寇，遂<span class="entity artifact" title="古物">殄</span>大邦。<br>
+後不量力，<span class="entity artifact" title="古物">灭</span>於<span class="entity title" title="称号">无彊</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-042">
+                <div class="item-title">
+                    郑世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/042_郑世家.html" style="text-decoration: none; color: #999;">
+                        042 郑世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity title" title="称号">厉王</span>之子，得封於<span class="entity state" title="邦国">郑</span>。<br>
+代职<span class="entity title" title="称号">司徒</span>，<span class="entity object" title="器物">缁衣</span>在咏。<br>
+<span class="entity state" title="邦国">虢</span>、<span class="entity state" title="邦国">郐</span>献邑，<span class="entity person" title="人名">祭祝</span>专命。<br>
+<span class="entity title" title="称号">庄</span>既犯王，<span class="entity title" title="称号">厉</span>亦奔命。<br>
+居<span class="entity place" title="地名">栎</span>克入，梦<span class="entity biology" title="生物">兰</span>毓庆。<br>
+<span class="entity person" title="人名">伯服</span>生<span class="entity artifact" title="古物">囚</span>，<span class="entity person" title="人名">叔瞻</span>尸聘。<br>
+<span class="entity title" title="称号">釐</span>、<span class="entity title" title="称号">简</span>之後，公室不竞。<br>
+<span class="entity place" title="地名">负黍</span>虽还，<span class="entity person" title="人名">韩哀</span>日盛。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-044">
+                <div class="item-title">
+                    魏世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/044_魏世家.html" style="text-decoration: none; color: #999;">
+                        044 魏世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">毕公</span>之苗，因国为姓。<br>
+大名始赏，盈数自正。<br>
+胤裔繁昌，系载忠正。<br>
+<span class="entity person" title="人名">杨干</span><span class="entity artifact" title="古物">就戮</span>，<span class="entity person" title="人名">智</span>氏奔命。<br>
+<span class="entity title" title="称号">文</span>始建侯，<span class="entity title" title="称号">武</span>实彊盛。<br>
+<span class="entity place" title="地名">大梁</span>东徙，<span class="entity place" title="地名">长安</span>北侦。<br>
+<span class="entity person" title="人名">卯</span>既无功，<span class="entity person" title="人名">卬</span>亦外聘。<br>
+<span class="entity title" title="称号">王假</span>削弱，<span class="entity artifact" title="古物">虏</span>於<span class="entity state" title="邦国">秦</span>政。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-045">
+                <div class="item-title">
+                    韩世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/045_韩世家.html" style="text-decoration: none; color: #999;">
+                        045 韩世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity clan" title="氏族">韩</span>氏之先，实宗<span class="entity state" title="邦国">周</span><span class="entity title" title="称号">武</span>。<br>
+事微国小，<span class="entity book" title="典籍">{春秋</span>无语。<br>
+後裔事<span class="entity state" title="邦国">晋</span>，<span class="entity place" title="地名">韩原</span>是处。<br>
+<span class="entity clan" title="氏族">赵</span>孤克立，<span class="entity person" title="人名">智伯</span>可取。<br>
+既徙<span class="entity place" title="地名">平阳</span>，又侵<span class="entity place" title="地名">负黍</span>。<br>
+<span class="entity person" title="人名">景</span><span class="entity state" title="邦国">赵</span>俱侯，<span class="entity title" title="称号">惠</span>又僭主。<br>
+<span class="entity state" title="邦国">秦</span><span class="entity artifact" title="古物">败</span><span class="entity place" title="地名">脩鱼</span>，<span class="entity state" title="邦国">魏</span>会<span class="entity place" title="地名">区鼠</span>。<br>
+<span class="entity person" title="人名">韩非</span>虽使，不禁<span class="entity biology" title="生物">狼虎</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-046">
+                <div class="item-title">
+                    田敬仲完世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/046_田敬仲完世家.html" style="text-decoration: none; color: #999;">
+                        046 田敬仲完世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity title" title="称号">田完</span>避难，奔于大<span class="entity clan" title="氏族">姜</span>；始辞羁旅，终然<span class="entity myth" title="神话">凤皇</span>。<br>
+物莫两盛，代五其昌。<br>
+<span class="entity time" title="时间">二君</span>比犯，<span class="entity office" title="官职">三晋</span>争强。<br>
+<span class="entity title" title="称号">和</span>始擅命，<span class="entity title" title="称号">威</span>遂称王。<br>
+祭急<span class="entity state" title="邦国">燕</span>、<span class="entity state" title="邦国">赵</span>，弟列<span class="entity title" title="称号">康</span>、<span class="entity title" title="称号">庄</span>。<br>
+<span class="entity state" title="邦国">秦</span>假东帝，<span class="entity state" title="邦国">莒</span>立<span class="entity person" title="人名">法章</span>。<br>
+<span class="entity title" title="称号">王建</span>失国，<span class="entity biology" title="生物">松</span><span class="entity biology" title="生物">柏</span>苍苍。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-048">
+                <div class="item-title">
+                    陈涉世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/048_陈涉世家.html" style="text-decoration: none; color: #999;">
+                        048 陈涉世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity other" title="其他标注">天下</span>匈匈，海内乏主，掎<span class="entity biology" title="生物">鹿</span>争捷，瞻<span class="entity biology" title="生物">乌</span>爰处。<br>
+<span class="entity person" title="人名">陈胜</span>首事，厥号<span class="entity state" title="邦国">张楚</span>。<br>
+鬼怪是凭，<span class="entity biology" title="生物">鸿鹄</span>自许。<br>
+<span class="entity person" title="人名">葛婴</span>东下，<span class="entity person" title="人名">周文</span>西拒。<br>
+始亲<span class="entity person" title="人名">硃房</span>，又任<span class="entity person" title="人名">胡武</span>。<br>
+夥颐见<span class="entity artifact" title="古物">杀</span>，腹心不与。<br>
+<span class="entity person" title="人名">庄贾</span>何人，反噬<span class="entity place" title="地名">城父</span>！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-049">
+                <div class="item-title">
+                    外戚世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/049_外戚世家.html" style="text-decoration: none; color: #999;">
+                        049 外戚世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity book" title="典籍">{礼</span>贵<span class="entity identity" title="身份">夫妇</span>，<span class="entity book" title="典籍">{易</span>叙<span class="entity myth" title="神话">乾坤</span>。<br>
+配阳成化，比<span class="entity myth" title="神话">月</span>居尊。<br>
+<span class="entity place" title="地名">河洲</span>降淑，天曜垂轩。<br>
+德著<span class="entity myth" title="神话">任</span>、<span class="entity myth" title="神话">姒</span>，庆流<span class="entity myth" title="神话">娀</span>、<span class="entity myth" title="神话">嫄</span>。<br>
+逮我炎历，斯道克存。<br>
+<span class="entity title" title="称号">吕</span>权大宝，<span class="entity title" title="称号">窦</span>喜玄言。<br>
+自兹已降，立嬖以恩。<br>
+内无常<span class="entity person" title="人名">主</span>，後嗣不繁。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-050">
+                <div class="item-title">
+                    楚元王世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/050_楚元王世家.html" style="text-decoration: none; color: #999;">
+                        050 楚元王世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity state" title="邦国">汉</span>封同姓，<span class="entity state" title="邦国">楚</span>有令名。<br>
+既<span class="entity artifact" title="古物">灭</span><span class="entity person" title="人名">韩信</span>，王於<span class="entity place" title="地名">彭城</span>。<br>
+<span class="entity person" title="人名">穆生</span>置<span class="entity object" title="器物">醴</span>，<span class="entity person" title="人名">韦孟</span>作程。<br>
+<span class="entity person" title="人名">王戊</span>弃德，与<span class="entity state" title="邦国">吴</span>连兵。<br>
+<span class="entity identity" title="身份">太后</span>命<span class="entity person" title="人名">礼</span>，为<span class="entity state" title="邦国">楚</span>罪轻。<br>
+<span class="entity person" title="人名">文</span><span class="entity person" title="人名">襄</span>继立，世挺才英。<br>
+如何<span class="entity person" title="人名">赵遂</span>，代殒厥声！兴亡之兆，所任宜明。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-051">
+                <div class="item-title">
+                    荆燕世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/051_荆燕世家.html" style="text-decoration: none; color: #999;">
+                        051 荆燕世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">刘贾</span>初从，首定三<span class="entity state" title="邦国">秦</span>。<br>
+既渡<span class="entity place" title="地名">白马津</span>，遂围<span class="entity place" title="地名">寿春</span>。<br>
+始迎<span class="entity person" title="人名">黥布</span>，绝间<span class="entity person" title="人名">周殷</span>。<br>
+赏功胙士，与<span class="entity place" title="地名">楚</span>为邻。<br>
+<span class="entity place" title="地名">营陵</span>始爵，勋由<span class="entity artifact" title="古物">击</span><span class="entity person" title="人名">陈豨</span>。<br>
+<span class="entity person" title="人名">田生</span>游说，受赐<span class="entity measure" title="度量">千斤</span>。<br>
+权激<span class="entity clan" title="氏族">诸吕</span>，事发荣身。<br>
+徙封传嗣，亡於<span class="entity person" title="人名">郢人</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-052">
+                <div class="item-title">
+                    齐悼惠王世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/052_齐悼惠王世家.html" style="text-decoration: none; color: #999;">
+                        052 齐悼惠王世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity state" title="邦国">汉</span>矫<span class="entity state" title="邦国">秦</span>制，树屏自彊。<br>
+表海大国，悉封<span class="entity place" title="地名">齐</span>王。<br>
+<span class="entity person" title="人名">吕后</span>肆怒，乃献<span class="entity place" title="地名">城阳</span>。<br>
+哀<span class="entity title" title="称号">王</span>嗣立，其力不量。<br>
+<span class="entity title" title="称号">硃虚</span>仕<span class="entity state" title="邦国">汉</span>，功大策长。<br>
+东牟受赏，称乱贻殃。<br>
+<span class="entity place" title="地名">胶东</span>、<span class="entity place" title="地名">济北</span>，<span class="entity person" title="人名">雄渠</span>，<span class="entity person" title="人名">辟光</span>。<br>
+<span class="entity place" title="地名">齐</span>虽<span class="entity state" title="邦国">七国</span>，<span class="entity office" title="官职">忠孝</span>者昌。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-053">
+                <div class="item-title">
+                    萧相国世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/053_萧相国世家.html" style="text-decoration: none; color: #999;">
+                        053 萧相国世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">萧何</span>为吏，文而无害。<br>
+及佐兴<span class="entity title" title="称号">王</span>，举宗从<span class="entity place" title="地名">沛</span>。<br>
+<span class="entity place" title="地名">关中</span>既守，转输是赖。<br>
+<span class="entity state" title="邦国">汉</span><span class="entity object" title="器物">军</span>屡疲，<span class="entity state" title="邦国">秦</span><span class="entity object" title="器物">兵</span>必会。<br>
+约<span class="entity office" title="官职">法</span>可久，收<span class="entity object" title="器物">图</span>可大。<br>
+指兽发踪，其功实最。<br>
+政称画一，居乃非泰。<br>
+继绝宠勤，式旌砺<span class="entity object" title="器物">带</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-054">
+                <div class="item-title">
+                    曹相国世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/054_曹相国世家.html" style="text-decoration: none; color: #999;">
+                        054 曹相国世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">曹参</span>初起，为<span class="entity place" title="地名">沛</span>豪吏。<br>
+始从<span class="entity title" title="称号">中涓</span>，先<span class="entity artifact" title="古物">围</span><span class="entity place" title="地名">善置</span>。<br>
+<span class="entity office" title="官职">执珪</span>执<span class="entity object" title="器物">帛</span>，<span class="entity artifact" title="古物">攻</span>城<span class="entity artifact" title="古物">略</span>地。<br>
+<span class="entity place" title="地名">衍氏</span>既<span class="entity artifact" title="古物">诛</span>，<span class="entity place" title="地名">昆阳</span>失位。<br>
+北<span class="entity artifact" title="古物">禽</span><span class="entity person" title="人名">夏说</span>，东<span class="entity artifact" title="古物">讨</span><span class="entity person" title="人名">田溉</span>。<br>
+剖<span class="entity object" title="器物">符</span>定封，功无与二。<br>
+市狱勿扰，清净不事。<br>
+尚主<span class="entity place" title="地名">平阳</span>，<span class="entity place" title="地名">代</span>享其利。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-055">
+                <div class="item-title">
+                    留侯世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/055_留侯世家.html" style="text-decoration: none; color: #999;">
+                        055 留侯世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    留<span class="entity title" title="称号">侯</span>倜傥，志怀愤惋。<br>
+五<span class="entity place" title="地名">代</span>相<span class="entity place" title="地名">韩</span>，一朝归<span class="entity state" title="邦国">汉</span>。<br>
+进履宜假，运筹神算。<br>
+<span class="entity place" title="地名">横阳</span>既立，<span class="entity person" title="人名">申徒</span>作扞。<br>
+<span class="entity place" title="地名">灞上</span>扶危，<span class="entity place" title="地名">固陵</span>静乱。<br>
+人称三杰，辩推八难。<br>
+赤<span class="entity biology" title="生物">松</span>原游，白驹难绊。<br>
+嗟彼雄略，曾非魁岸。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-056">
+                <div class="item-title">
+                    陈丞相世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/056_陈丞相世家.html" style="text-decoration: none; color: #999;">
+                        056 陈丞相世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity place" title="地名">曲逆</span>穷巷，门多<span class="entity identity" title="身份">长者</span>。<br>
+宰肉先均，佐丧後罢。<br>
+魏<span class="entity place" title="地名">楚</span>更用，腹心难假。<br>
+弃<span class="entity object" title="器物">印</span>封<span class="entity object" title="器物">金</span>，刺<span class="entity object" title="器物">船</span>露裸。<br>
+间行归<span class="entity state" title="邦国">汉</span>，委质麾下。<br>
+<span class="entity place" title="地名">荥阳</span>计全，<span class="entity place" title="地名">平城</span>围解。<br>
+推陵让勃，裒多益寡。<br>
+应变合权，克定宗社。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-057">
+                <div class="item-title">
+                    绛侯周勃世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/057_绛侯周勃世家.html" style="text-decoration: none; color: #999;">
+                        057 绛侯周勃世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    绛<span class="entity title" title="称号">侯</span>佐<span class="entity state" title="邦国">汉</span>，质厚敦笃。<br>
+始击<span class="entity place" title="地名">砀</span>东，亦围<span class="entity place" title="地名">尸北</span>。<br>
+所攻必取，所讨咸克。<br>
+<span class="entity person" title="人名">陈豨</span><span class="entity artifact" title="古物">伏诛</span>，<span class="entity person" title="人名">臧荼</span><span class="entity artifact" title="古物">破</span>国。<br>
+事居送往，推功伏德。<br>
+<span class="entity identity" title="身份">列侯</span>还第，<span class="entity title" title="称号">太尉</span><span class="entity artifact" title="古物">下狱</span>。<br>
+继相条<span class="entity title" title="称号">侯</span>，绍封<span class="entity place" title="地名">平曲</span>。<br>
+惜哉贤将，<span class="entity identity" title="身份">父子</span><span class="entity place" title="地名">代</span>辱！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-059">
+                <div class="item-title">
+                    五宗世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/059_五宗世家.html" style="text-decoration: none; color: #999;">
+                        059 五宗世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    景十三子，五<span class="entity identity" title="身份">宗亲</span>睦。<br>
+<span class="entity person" title="人名">栗姬</span>既废，<span class="entity place" title="地名">临江</span>折轴。<br>
+阏于早薨，<span class="entity place" title="地名">河间</span><span class="entity object" title="器物">儒服</span>。<br>
+馀好宫苑，端事驰逐。<br>
+<span class="entity place" title="地名">江都</span>有才，<span class="entity place" title="地名">中山</span>禔福。<br>
+<span class="entity place" title="地名">长沙</span>地小，<span class="entity place" title="地名">胶东</span>造镞。<br>
+仁贤者<span class="entity place" title="地名">代</span>，浡乱者族。<br>
+<span class="entity person" title="人名">兒姁</span>四<span class="entity title" title="称号">王</span>，<span class="entity office" title="官职">分封</span>为六。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-060">
+                <div class="item-title">
+                    三王世家之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/060_三王世家.html" style="text-decoration: none; color: #999;">
+                        060 三王世家
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    三王封系，旧史烂然。<br>
+褚氏後补，册书存焉。<br>
+去病建议，青翟上言。<br>
+天子冲挹，志在急贤。<br>
+太常具礼，请立齐燕，闳国负海，旦社惟玄。<br>
+宵人不迩，荤粥远边。<br>
+明哉监戒，式防厥愆。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-062">
+                <div class="item-title">
+                    管晏列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/062_管晏列传.html" style="text-decoration: none; color: #999;">
+                        062 管晏列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">夷吾</span>成霸，平仲称贤。<br>
+粟乃实廪，豆不掩肩。<br>
+转祸为福，危言获全。<br>
+孔赖左衽，史忻执<span class="entity object" title="器物">鞭</span>。<br>
+成<span class="entity book" title="典籍">{礼</span>而去，人望存焉。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-063">
+                <div class="item-title">
+                    老子韩非列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/063_老子韩非列传.html" style="text-decoration: none; color: #999;">
+                        063 老子韩非列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">伯阳</span>立教，清净<span class="entity other" title="其他标注">无为</span>。<br>
+<span class="entity other" title="其他标注">道</span>尊东<span class="entity state" title="邦国">鲁</span>，迹窜<span class="entity place" title="地名">西垂</span>。<br>
+庄蒙栩栩，申害卑卑。<br>
+<span class="entity office" title="官职">刑名</span>有<span class="entity other" title="其他标注">术</span>，<span class="entity book" title="典籍">说难</span>极知。<br>
+悲彼<span class="entity person" title="人名">周</span>防，终亡<span class="entity person" title="人名">李斯</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-064">
+                <div class="item-title">
+                    司马穰苴列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/064_司马穰苴列传.html" style="text-decoration: none; color: #999;">
+                        064 司马穰苴列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity place" title="地名">燕</span><span class="entity artifact" title="古物">侵</span><span class="entity place" title="地名">河上</span>，<span class="entity place" title="地名">齐</span>师<span class="entity artifact" title="古物">败</span>绩。<br>
+<span class="entity person" title="人名">婴</span>荐<span class="entity person" title="人名">穰苴</span>，武能威敌。<br>
+<span class="entity artifact" title="古物">斩</span><span class="entity person" title="人名">贾</span>以徇，<span class="entity office" title="官职">三军</span>惊惕。<br>
+我卒既彊，彼寇退壁。<br>
+法行<span class="entity title" title="称号">司马</span>，实赖宗戚。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-065">
+                <div class="item-title">
+                    孙子吴起列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/065_孙子吴起列传.html" style="text-decoration: none; color: #999;">
+                        065 孙子吴起列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">孙子</span><span class="entity office" title="官职">兵法</span>，一<span class="entity book" title="典籍">十三篇</span>。<br>
+<span class="entity identity" title="身份">美人</span>既<span class="entity artifact" title="古物">斩</span>，良<span class="entity title" title="称号">将</span>得焉。<br>
+其<span class="entity person" title="人名">孙膑</span>脚，筹策<span class="entity person" title="人名">庞涓</span>。<br>
+<span class="entity person" title="人名">吴起</span>相<span class="entity place" title="地名">魏</span>，<span class="entity place" title="地名">西河</span>称贤；惨礉事<span class="entity place" title="地名">楚</span>，死後留权。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-066">
+                <div class="item-title">
+                    伍子胥列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/066_伍子胥列传.html" style="text-decoration: none; color: #999;">
+                        066 伍子胥列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    谗人罔极，交乱四国。<br>
+嗟彼<span class="entity clan" title="氏族">伍氏</span>，被兹凶慝！<span class="entity person" title="人名">员</span>独忍诟，志复冤毒。<br>
+霸<span class="entity place" title="地名">吴</span>起师，<span class="entity artifact" title="古物">伐</span><span class="entity place" title="地名">楚</span>逐北。<br>
+<span class="entity artifact" title="古物">鞭</span>尸雪耻，抉眼弃<span class="entity other" title="其他标注">德</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-067">
+                <div class="item-title">
+                    仲尼弟子列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/067_仲尼弟子列传.html" style="text-decoration: none; color: #999;">
+                        067 仲尼弟子列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    教兴<span class="entity place" title="地名">阙里</span>，道在郰乡。<br>
+异能就列，秀士升堂。<br>
+依仁游艺，合志同方。<br>
+将师宫尹，<span class="entity object" title="器物">俎豆</span>琳琅。<br>
+惜哉不霸，空臣素王！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-068">
+                <div class="item-title">
+                    商君列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/068_商君列传.html" style="text-decoration: none; color: #999;">
+                        068 商君列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">卫鞅</span>入<span class="entity other" title="其他标注">'秦</span>，<span class="entity person" title="人名">景监</span>是因。<br>
+<span class="entity other" title="其他标注">王道</span>不用，<span class="entity other" title="其他标注">霸术</span>见亲。<br>
+<span class="entity office" title="官职">政</span>必改革，<span class="entity office" title="官职">礼</span>岂因循。<br>
+既欺<span class="entity other" title="其他标注">'魏</span>将，亦怨<span class="entity other" title="其他标注">'秦</span>人。<br>
+如何作<span class="entity office" title="官职">法</span>，逆旅不宾！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-069">
+                <div class="item-title">
+                    苏秦列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/069_苏秦列传.html" style="text-decoration: none; color: #999;">
+                        069 苏秦列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">季子</span><span class="entity place" title="地名">周</span>人，师事<span class="entity place" title="地名">鬼谷</span>。<br>
+揣摩既就，阴<span class="entity object" title="器物">符</span>伏读。<br>
+<span class="entity office" title="官职">合从</span>离衡，佩<span class="entity object" title="器物">印</span>者六。<br>
+<span class="entity title" title="称号">天王</span>除道，家人扶服。<br>
+贤哉<span class="entity place" title="地名">代</span>、厉，继荣党族。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-070">
+                <div class="item-title">
+                    张仪列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/070_张仪列传.html" style="text-decoration: none; color: #999;">
+                        070 张仪列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">仪</span>未遭时，频被困辱。<br>
+及相<span class="entity place" title="地名">秦</span>惠，先<span class="entity place" title="地名">韩</span>後蜀。<br>
+<span class="entity office" title="官职">连衡</span>齐<span class="entity place" title="地名">魏</span>，倾危诳惑。<br>
+<span class="entity place" title="地名">陈</span>轸挟权，<span class="entity person" title="人名">犀首</span>骋欲。<br>
+如何三<span class="entity place" title="地名">晋</span>，继有斯德。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-071">
+                <div class="item-title">
+                    樗里子甘茂列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/071_樗里子甘茂列传.html" style="text-decoration: none; color: #999;">
+                        071 樗里子甘茂列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    严君名疾，厥号"智囊"。<br>
+既亲且重，称兵外攘。<br>
+<span class="entity person" title="人名">甘茂</span>并相，初佐<span class="entity person" title="人名">魏章</span>。<br>
+始推<span class="entity person" title="人名">向寿</span>，乃<span class="entity artifact" title="古物">攻</span><span class="entity place" title="地名">宜阳</span>。<br>
+<span class="entity person" title="人名">甘罗</span>妙岁，卒起<span class="entity person" title="人名">张唐</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-072">
+                <div class="item-title">
+                    穰侯列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/072_穰侯列传.html" style="text-decoration: none; color: #999;">
+                        072 穰侯列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">穰侯</span>智识，应变无方。<br>
+内倚太后，外辅<span class="entity person" title="人名">昭王</span>。<br>
+四登相位，再列封疆。<br>
+摧<span class="entity state" title="邦国">齐</span>挠<span class="entity state" title="邦国">楚</span>，<span class="entity artifact" title="古物">破</span><span class="entity state" title="邦国">魏</span><span class="entity artifact" title="古物">围</span>梁。<br>
+一夫开说，忧愤而亡。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-073">
+                <div class="item-title">
+                    白起王翦列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/073_白起王翦列传.html" style="text-decoration: none; color: #999;">
+                        073 白起王翦列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">白起</span>、<span class="entity person" title="人名">王翦</span>，俱善用兵。<br>
+递为<span class="entity place" title="地名">秦</span>将，<span class="entity artifact" title="古物">拔</span><span class="entity state" title="邦国">齐</span><span class="entity artifact" title="古物">破</span>荆。<br>
+<span class="entity state" title="邦国">赵</span>任<span class="entity object" title="器物">马</span>服，<span class="entity place" title="地名">长平</span>遂<span class="entity artifact" title="古物">阬</span>。<br>
+<span class="entity state" title="邦国">楚</span><span class="entity artifact" title="古物">陷</span><span class="entity person" title="人名">李信</span>，<span class="entity place" title="地名">灞上</span>卒行。<br>
+<span class="entity person" title="人名">贲</span>、<span class="entity person" title="人名">离</span>继出，三<span class="entity place" title="地名">代</span>无名。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-075">
+                <div class="item-title">
+                    孟尝君列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/075_孟尝君列传.html" style="text-decoration: none; color: #999;">
+                        075 孟尝君列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    靖郭之子，<span class="entity person" title="人名">威王</span>之孙。<br>
+既彊其国，实高其门。<br>
+好客喜士，见重<span class="entity person" title="人名">平原</span>。<br>
+<span class="entity time" title="时间">鸡鸣</span>狗盗，<span class="entity place" title="地名">魏</span>子、冯暖。<br>
+如何承睫，<span class="entity place" title="地名">薛</span>县徒存！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-076">
+                <div class="item-title">
+                    平原君虞卿列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/076_平原君虞卿列传.html" style="text-decoration: none; color: #999;">
+                        076 平原君虞卿列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    翩翩公子，<span class="entity other" title="其他标注">天下</span>奇器。<br>
+笑姬从戮，<span class="entity title" title="称号">义士</span>增气。<br>
+兵解<span class="entity person" title="人名">李同</span>，盟定<span class="entity person" title="人名">毛遂</span>。<br>
+<span class="entity person" title="人名">虞卿</span>蹑蹻，受赏料事。<br>
+及困<span class="entity place" title="地名">魏</span>齐，著书见意。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-077">
+                <div class="item-title">
+                    魏公子列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/077_魏公子列传.html" style="text-decoration: none; color: #999;">
+                        077 魏公子列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity place" title="地名">信陵</span>下<span class="entity identity" title="身份">士</span>，邻国相倾。<br>
+以<span class="entity person" title="人名">公子</span>故，不敢<span class="entity artifact" title="古物">加兵</span>。<br>
+颇知<span class="entity person" title="人名">硃亥</span>，尽<span class="entity book" title="典籍">礼</span><span class="entity person" title="人名">侯嬴</span>。<br>
+遂<span class="entity artifact" title="古物">卻</span><span class="entity person" title="人名">晋鄙</span>，终辞<span class="entity state" title="邦国">赵</span>城。<br>
+<span class="entity person" title="人名">毛</span>、<span class="entity person" title="人名">薛</span>见重，万古希声。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-078">
+                <div class="item-title">
+                    春申君列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/078_春申君列传.html" style="text-decoration: none; color: #999;">
+                        078 春申君列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">黄歇</span>辩智，权略<span class="entity place" title="地名">秦</span>、<span class="entity place" title="地名">楚</span>。<br>
+<span class="entity identity" title="身份">太子</span>获归，身作宰辅。<br>
+珠炫<span class="entity place" title="地名">赵</span>客，邑开<span class="entity place" title="地名">吴</span>土。<br>
+<span class="entity person" title="人名">烈王</span>寡胤，<span class="entity person" title="人名">李园</span>献女。<br>
+无妄成灾，<span class="entity person" title="人名">硃英</span>徒语。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-079">
+                <div class="item-title">
+                    范睢蔡泽列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/079_范睢蔡泽列传.html" style="text-decoration: none; color: #999;">
+                        079 范睢蔡泽列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity title" title="称号">应侯</span>始困，讬载而西，说行计立，贵平宠稽。<br>
+倚<span class="entity place" title="地名">秦</span>市<span class="entity place" title="地名">赵</span>，卒报<span class="entity place" title="地名">魏</span>齐。<br>
+纲成辩智，<span class="entity person" title="人名">范睢</span>招携。<br>
+势利倾夺，一言成蹊。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-080">
+                <div class="item-title">
+                    乐毅列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/080_乐毅列传.html" style="text-decoration: none; color: #999;">
+                        080 乐毅列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    昌国忠谠，<span class="entity identity" title="身份">人臣</span>所无。<br>
+连兵五国，<span class="entity place" title="地名">济西</span>为墟。<br>
+<span class="entity place" title="地名">燕</span>王受间，空闻报书。<br>
+<span class="entity title" title="称号">义士</span>慷慨，<span class="entity other" title="其他标注">明君</span>轼闾。<br>
+间、乘继将，芳规不渝。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-081">
+                <div class="item-title">
+                    廉颇蔺相如列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/081_廉颇蔺相如列传.html" style="text-decoration: none; color: #999;">
+                        081 廉颇蔺相如列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    清梠凛凛，壮气熊熊。<br>
+各竭诚义，递为雌雄。<br>
+<span class="entity object" title="器物">和璧</span>聘返，<span class="entity place" title="地名">渑池</span>好通。<br>
+负<span class="entity biology" title="生物">荆</span>知惧，屈节推工。<br>
+安边定策，<span class="entity person" title="人名">廉颇</span>、<span class="entity person" title="人名">李牧</span>之功。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-082">
+                <div class="item-title">
+                    田单列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/082_田单列传.html" style="text-decoration: none; color: #999;">
+                        082 田单列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity office" title="官职">军法</span>以正，实尚奇兵。<br>
+断<span class="entity object" title="器物">轴</span>自免，反间先行。<br>
+群<span class="entity biology" title="生物">鸟</span>或众，五<span class="entity biology" title="生物">牛</span>扬<span class="entity object" title="器物">旌</span>。<br>
+卒破<span class="entity person" title="人名">骑劫</span>，皆复<span class="entity state" title="邦国">齐</span>城。<br>
+<span class="entity title" title="称号">襄王</span>嗣位，乃封<span class="entity title" title="称号">安平</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-083">
+                <div class="item-title">
+                    鲁仲连邹阳列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/083_鲁仲连邹阳列传.html" style="text-decoration: none; color: #999;">
+                        083 鲁仲连邹阳列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">鲁连</span>达士，高才远致。<br>
+释难解纷，辞禄肆志。<br>
+<span class="entity state" title="邦国">齐</span>将挫辩，<span class="entity state" title="邦国">燕</span>军沮气。<br>
+<span class="entity person" title="人名">邹子</span>遇谗，见诋狱吏。<br>
+慷慨献说，时王所器。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-089">
+                <div class="item-title">
+                    张耳陈馀列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/089_张耳陈馀列传.html" style="text-decoration: none; color: #999;">
+                        089 张耳陈馀列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">张耳</span>、<span class="entity person" title="人名">陈馀</span>，<span class="entity other" title="其他标注">天下</span><span class="entity identity" title="身份">豪俊</span>。忘年羁旅，刎颈相信。<span class="entity person" title="人名">耳</span>围<span class="entity place" title="地名">钜鹿</span>，<span class="entity person" title="人名">馀</span>兵不进。<span class="entity person" title="人名">张</span>既望深，<span class="entity person" title="人名">陈</span>乃去<span class="entity object" title="器物">印</span>。势利倾夺，隙末成衅。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-090">
+                <div class="item-title">
+                    魏豹彭越列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/090_魏豹彭越列传.html" style="text-decoration: none; color: #999;">
+                        090 魏豹彭越列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">魏咎</span><span class="entity identity" title="身份">兄弟</span>，因时而<span class="entity artifact" title="古物">王</span>。<span class="entity person" title="人名">豹</span>後属<span class="entity state" title="邦国">楚</span>，其国遂<span class="entity artifact" title="古物">亡</span>。<span class="entity person" title="人名">仲</span>起<span class="entity place" title="地名">昌邑</span>，归<span class="entity state" title="邦国">汉</span><span class="entity place" title="地名">外黄</span>。往来声援，再续军<span class="entity object" title="器物">粮</span>。徵<span class="entity object" title="器物">兵</span>不往，<span class="entity artifact" title="古物">菹醢</span>何伤。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-091">
+                <div class="item-title">
+                    黥布列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/091_黥布列传.html" style="text-decoration: none; color: #999;">
+                        091 黥布列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity state" title="邦国">九江</span>初筮，当刑而王。既免徒中，聚盗<span class="entity place" title="地名">江</span>上。再雄<span class="entity state" title="邦国">楚</span>卒，频<span class="entity artifact" title="古物">破</span><span class="entity state" title="邦国">秦</span>将。病为<span class="entity person" title="人名">羽</span>疑，归受<span class="entity state" title="邦国">汉</span>杖。<span class="entity person" title="人名">贲赫</span>见毁，卒致无妄。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-093">
+                <div class="item-title">
+                    韩信卢绾列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/093_韩信卢绾列传.html" style="text-decoration: none; color: #999;">
+                        093 韩信卢绾列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity state" title="邦国">韩</span><span class="entity title" title="称号">襄</span>遗孽，始从<span class="entity place" title="地名">汉中</span>。<span class="entity office" title="官职">剖符</span>南面，徙邑北通。<span class="entity person" title="人名">穨当</span>归国，<span class="entity place" title="地名">龙雒</span>有功。<span class="entity person" title="人名">卢绾</span>亲爱，群臣莫同。旧<span class="entity state" title="邦国">燕</span>是王，<span class="entity event" title="事件">东胡</span>计穷。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-094">
+                <div class="item-title">
+                    田儋列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/094_田儋列传.html" style="text-decoration: none; color: #999;">
+                        094 田儋列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity state" title="邦国">秦</span><span class="entity clan" title="氏族">项</span>之际，<span class="entity other" title="其他标注">天下</span>交兵。<span class="entity office" title="官职">六国</span>树党，自置豪英。<span class="entity person" title="人名">田儋</span>殒寇，立<span class="entity person" title="人名">市</span>相<span class="entity person" title="人名">荣</span>。<span class="entity state" title="邦国">楚</span>封王<span class="entity person" title="人名">假</span>，<span class="entity state" title="邦国">齐</span>破<span class="entity person" title="人名">郦生</span>。<span class="entity identity" title="身份">兄弟</span>更王，海岛传声。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-095">
+                <div class="item-title">
+                    樊郦滕灌列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/095_樊郦滕灌列传.html" style="text-decoration: none; color: #999;">
+                        095 樊郦滕灌列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity other" title="其他标注">圣贤</span>影响，云蒸龙变。屠<span class="entity biology" title="生物">狗</span>贩缯，攻城野战。扶义西上，受封南面。<span class="entity person" title="人名">郦况</span>卖交，<span class="entity place" title="地名">舞阳</span>内援。<span class="entity title" title="称号">滕</span><span class="entity person" title="人名">灌</span>更王，奕叶繁衍。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-096">
+                <div class="item-title">
+                    张丞相列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/096_张丞相列传.html" style="text-decoration: none; color: #999;">
+                        096 张丞相列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">张苍</span><span class="entity title" title="称号">主计</span>，<span class="entity other" title="其他标注">天下</span>作程。<br>
+<span class="entity person" title="人名">孙臣</span>始绌，<span class="entity state" title="邦国">秦</span>历尚行。<br>
+<span class="entity title" title="称号">御史</span>亚相，<span class="entity title" title="称号">相国</span><span class="entity person" title="人名">阿衡</span>。<br>
+<span class="entity person" title="人名">申屠</span>面折，<span class="entity person" title="人名">周子</span>廷争。<br>
+其他娖々，无所发明。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-097">
+                <div class="item-title">
+                    郦生陆贾列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/097_郦生陆贾列传.html" style="text-decoration: none; color: #999;">
+                        097 郦生陆贾列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity title" title="称号">广野</span>大度，始冠<span class="entity object" title="器物">侧注</span>。<br>
+踵门长揖，深器重遇。<br>
+说<span class="entity state" title="邦国">齐</span><span class="entity place" title="地名">历下</span>，趣<span class="entity object" title="器物">鼎</span>何惧。<br>
+<span class="entity person" title="人名">陆贾</span>使<span class="entity state" title="邦国">越</span>，<span class="entity title" title="称号">尉佗</span>慑怖，相说国安，书成主悟。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-098">
+                <div class="item-title">
+                    傅靳蒯成列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/098_傅靳蒯成列传.html" style="text-decoration: none; color: #999;">
+                        098 傅靳蒯成列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity title" title="称号">阳陵</span>、<span class="entity title" title="称号">信武</span>，结发从<span class="entity state" title="邦国">汉</span>。<br>
+动叶人谋，功实天赞。<br>
+定<span class="entity state" title="邦国">齐</span>破<span class="entity title" title="称号">项</span>，我军常冠，<span class="entity title" title="称号">蒯成</span>委质，夷险不乱。<br>
+<span class="entity title" title="称号">主上</span>称忠，<span class="entity identity" title="身份">人臣</span>鸧腕。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-099">
+                <div class="item-title">
+                    刘敬叔孙通列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/099_刘敬叔孙通列传.html" style="text-decoration: none; color: #999;">
+                        099 刘敬叔孙通列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    厦藉众幹，<span class="entity object" title="器物">裘</span>非一<span class="entity biology" title="生物">狐</span>。<br>
+委辂献说，釂蕝陈书。<br>
+<span class="entity identity" title="身份">皇帝</span>始贵，<span class="entity object" title="器物">车驾</span>西都。<br>
+既安<span class="entity identity" title="身份">太子</span>，又和<span class="entity event" title="事件">匈奴</span>。<br>
+<span class="entity title" title="称号">奉春</span>、<span class="entity title" title="称号">稷嗣</span>，其功可图。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-100">
+                <div class="item-title">
+                    季布栾布列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/100_季布栾布列传.html" style="text-decoration: none; color: #999;">
+                        100 季布栾布列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">季布</span>、<span class="entity person" title="人名">季心</span>，有声<span class="entity state" title="邦国">梁</span>、<span class="entity state" title="邦国">楚</span>。<br>
+<span class="entity object" title="器物">百金</span>然诺，十万致距。<br>
+出守<span class="entity place" title="地名">河东</span>，股肱是与。<br>
+<span class="entity person" title="人名">栾布</span>哭<span class="entity person" title="人名">越</span>，犯禁见虏。<br>
+赴<span class="entity object" title="器物">鼎</span>非冤，诚知所处。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-101">
+                <div class="item-title">
+                    袁盎晁错列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/101_袁盎晁错列传.html" style="text-decoration: none; color: #999;">
+                        101 袁盎晁错列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">袁丝</span>公直，亦多附会。<br>
+揽辔见重，卻席翳赖。<br>
+<span class="entity person" title="人名">朝错</span>建策，屡陈利害。<br>
+尊主卑臣，家危国泰。<br>
+悲彼二子，名立身败！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-110">
+                <div class="item-title">
+                    匈奴列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/110_匈奴列传.html" style="text-decoration: none; color: #999;">
+                        110 匈奴列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity event" title="事件">獫狁</span>、<span class="entity event" title="事件">薰粥</span>，居于<span class="entity place" title="地名">北边</span>。<br>
+既称<span class="entity state" title="邦国">夏</span>裔，式憬<span class="entity state" title="邦国">周</span>篇。<br>
+颇随畜牧，屡扰尘烟。<br>
+爰自<span class="entity person" title="人名">冒顿</span>，尤聚控弦。<br>
+虽空帑藏，未尽中权。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-117">
+                <div class="item-title">
+                    司马相如列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/117_司马相如列传.html" style="text-decoration: none; color: #999;">
+                        117 司马相如列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">相如</span>纵诞，窃赀<span class="entity person" title="人名">卓</span>氏。<br>
+其学无方，其才足倚。<br>
+<span class="entity book" title="典籍">子虚</span>过吒，<span class="entity book" title="典籍">上林</span>非侈。<br>
+四马还<span class="entity place" title="地名">邛</span>，<span class="entity object" title="器物">百金</span>献伎。<br>
+惜哉<span class="entity office" title="官职">封禅</span>，遗文卓尔。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-121">
+                <div class="item-title">
+                    儒林列传之赞
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/121_儒林列传.html" style="text-decoration: none; color: #999;">
+                        121 儒林列传
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <span class="entity person" title="人名">孔氏</span>之衰，经书绪乱。<br>
+言诸六学，始自<span class="entity state" title="邦国">炎汉</span>。<br>
+著令立官，四方鸧腕。<br>
+曲台坏壁，书<span class="entity book" title="典籍">礼</span>之冠。<br>
+传<span class="entity book" title="典籍">易</span>言<span class="entity book" title="典籍">诗</span>，云蒸雾散。<br>
+兴化致理，鸿猷克赞。
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="type-section" id="type-诗歌">
+            <div class="type-header">诗歌（11篇）</div>
+            <div class="type-desc">史记中收录的诗歌作品</div>
+
+
+            <div class="yunwen-item" id="chapter-006">
+                <div class="item-title">
+                    秦始皇本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/006_秦始皇本纪.html" style="text-decoration: none; color: #999;">
+                        006 秦始皇本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <strong><span class="entity identity" title="身份">皇帝</span>临位，作制明<span class="entity office" title="官职">法</span>，臣下脩饬。</strong><br>
+<strong><span class="entity time" title="时间">二十有六年</span>，初并天下，罔不宾服。</strong><br>
+<strong>亲巡远方黎民，登兹<span class="entity place" title="地名">泰山</span>，周览东极。</strong><br>
+<strong>从臣思迹，本原事业，祗诵功德。</strong><br>
+<strong>治道运行，诸产得宜，皆有<span class="entity office" title="官职">法式</span>。</strong><br>
+<strong>大义休明，垂于後世，顺承勿革。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>躬圣，既平天下，不懈於治。</strong><br>
+<strong>夙兴夜寐，建设长利，专隆教诲。</strong><br>
+<strong>训经宣达，远近毕理，咸承圣志。</strong><br>
+<strong>贵贱分明，男女礼顺，慎遵职事。</strong><br>
+<strong>昭隔内外，靡不清净，施于後嗣。</strong><br>
+<strong>化及无穷，遵奉遗诏，永承重戒。</strong>
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-006">
+                <div class="item-title">
+                    秦始皇本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/006_秦始皇本纪.html" style="text-decoration: none; color: #999;">
+                        006 秦始皇本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <strong>维<span class="entity time" title="时间">二十八年</span>，<span class="entity identity" title="身份">皇帝</span>作始。</strong><br>
+<strong>端平<span class="entity office" title="官职">法度</span>，万物之纪。</strong><br>
+<strong>以明人事，合同<span class="entity identity" title="身份">父子</span>。</strong><br>
+<strong>圣智<span class="entity other" title="其他标注">仁义</span>，显白道理。</strong><br>
+<strong>东抚东土，以省卒士。</strong><br>
+<strong>事已大毕，乃临于海。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>之功，劝劳本事。</strong><br>
+<strong>上农除末，黔首是富。</strong><br>
+<strong>普天之下，抟心揖志。</strong><br>
+<strong><span class="entity office" title="官职">器械</span>一量，同书文字。</strong><br>
+<strong>日月所照，舟舆所载。</strong><br>
+<strong>皆终其命，莫不得意。</strong><br>
+<strong>应时动事，是维<span class="entity identity" title="身份">皇帝</span>。</strong><br>
+<strong>匡饬异俗，陵水经地。</strong><br>
+<strong>忧恤黔首，朝夕不懈。</strong><br>
+<strong>除疑定<span class="entity office" title="官职">法</span>，咸知所辟。</strong><br>
+<strong><span class="entity title" title="称号">方伯</span>分职，诸治经易。</strong><br>
+<strong>举错必当，莫不如画。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>之明，临察四方。</strong><br>
+<strong>尊卑贵贱，不逾次行。</strong><br>
+<strong>奸邪不容，皆务贞良。</strong><br>
+<strong>细大尽力，莫敢怠荒。</strong><br>
+<strong>远迩辟隐，专务肃庄。</strong><br>
+<strong>端直敦忠，事业有常。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>之德，存定四极。</strong><br>
+<strong>诛乱除害，兴利致福。</strong><br>
+<strong>节事以时，诸产繁殖。</strong><br>
+<strong>黔首安宁，不用兵革。</strong><br>
+<strong>六亲相保，终无寇贼。</strong><br>
+<strong>驩欣奉教，尽知<span class="entity office" title="官职">法式</span>。</strong><br>
+<strong>六合之内，<span class="entity identity" title="身份">皇帝</span>之土。</strong><br>
+<strong>西涉<span class="entity place" title="地名">流沙</span>，南尽<span class="entity place" title="地名">北户</span>。</strong><br>
+<strong>东有<span class="entity place" title="地名">东海</span>，北过<span class="entity place" title="地名">大夏</span>。</strong><br>
+<strong>人迹所至，无不臣者。</strong><br>
+<strong>功盖五帝，泽及<span class="entity biology" title="生物">牛</span><span class="entity biology" title="生物">马</span>。</strong><br>
+<strong>莫不受德，各安其宇。</strong>
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-006">
+                <div class="item-title">
+                    秦始皇本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/006_秦始皇本纪.html" style="text-decoration: none; color: #999;">
+                        006 秦始皇本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <strong>维<span class="entity time" title="时间">二十九年</span>，时在中春，阳和方起。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>东游，巡登<span class="entity place" title="地名">之罘</span>，临照于海。</strong><br>
+<strong>从臣嘉观，原念休烈，追诵本始。</strong><br>
+<strong>大圣作治，建定<span class="entity office" title="官职">法度</span>，显箸纲纪。</strong><br>
+<strong>外教<span class="entity identity" title="身份">诸侯</span>，光施文惠，明以义理。</strong><br>
+<strong>六国回辟，贪戾无厌，虐杀不已。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>哀众，遂发讨师，奋扬武德。</strong><br>
+<strong>义诛信行，威燀旁达，莫不宾服。</strong><br>
+<strong>烹灭彊暴，振救黔首，周定四极。</strong><br>
+<strong>普施明<span class="entity office" title="官职">法</span>，经纬天下，永为仪则。</strong><br>
+<strong>大矣哉！宇县之中，承顺圣意。</strong><br>
+<strong>群臣诵功，请刻于石，表垂于常式。</strong>
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-006">
+                <div class="item-title">
+                    秦始皇本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/006_秦始皇本纪.html" style="text-decoration: none; color: #999;">
+                        006 秦始皇本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <strong>维<span class="entity time" title="时间">二十九年</span>，<span class="entity identity" title="身份">皇帝</span>春游，览省远方。</strong><br>
+<strong>逮于海隅，遂登<span class="entity place" title="地名">之罘</span>，昭临朝阳。</strong><br>
+<strong>观望广丽，从臣咸念，原道至明。</strong><br>
+<strong>圣<span class="entity office" title="官职">法</span>初兴，清理疆内，外诛暴彊。</strong><br>
+<strong>武威旁暢，振动四极，禽灭六王。</strong><br>
+<strong>阐并天下，甾害绝息，永偃<span class="entity object" title="器物">戎兵</span>。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>明德，经理宇内，视听不怠。</strong><br>
+<strong>作立大义，昭设<span class="entity object" title="器物">备器</span>，咸有<span class="entity object" title="器物">章旗</span>。</strong><br>
+<strong>职臣遵分，各知所行，事无嫌疑。</strong><br>
+<strong>黔首改化，远迩同度，临古绝尤。</strong><br>
+<strong>常职既定，後嗣循业，长承圣治。</strong><br>
+<strong>群臣嘉德，祗诵圣烈，请刻<span class="entity place" title="地名">之罘</span>。</strong>
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-006">
+                <div class="item-title">
+                    秦始皇本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/006_秦始皇本纪.html" style="text-decoration: none; color: #999;">
+                        006 秦始皇本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <strong>遂兴师旅，诛戮无道，为逆灭息。</strong><br>
+<strong>武殄暴逆，文复无罪，庶心咸服。</strong><br>
+<strong>惠论功劳，赏及<span class="entity biology" title="生物">牛</span><span class="entity biology" title="生物">马</span>，恩肥土域。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>奋威，德并<span class="entity identity" title="身份">诸侯</span>，初一泰平。</strong><br>
+<strong>堕坏城郭，决通川防，夷去险阻。</strong><br>
+<strong>地势既定，黎庶无繇，天下咸抚。</strong><br>
+<strong>男乐其畴，女修其业，事各有序。</strong><br>
+<strong>惠被诸产，久并来田，莫不安所。</strong><br>
+<strong>群臣诵烈，请刻此石，垂著仪矩。</strong>
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-006">
+                <div class="item-title">
+                    秦始皇本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/006_秦始皇本纪.html" style="text-decoration: none; color: #999;">
+                        006 秦始皇本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    <strong><span class="entity identity" title="身份">皇帝</span>休烈，平一宇内，德惠脩长。</strong><br>
+<strong><span class="entity time" title="时间">三十有七年</span>，亲巡天下，周览远方。</strong><br>
+<strong>遂登<span class="entity place" title="地名">会稽</span>，宣省习俗，黔首斋庄。</strong><br>
+<strong>群臣诵功，本原事迹，追首高明。</strong><br>
+<strong><span class="entity state" title="邦国">秦</span>圣临国，始定刑名，显陈旧章。</strong><br>
+<strong>初平<span class="entity office" title="官职">法式</span>，审别职任，以立恆常。</strong><br>
+<strong>六王专倍，贪戾泬猛，率众自彊。</strong><br>
+<strong>暴虐恣行，负力而骄，数动<span class="entity object" title="器物">甲兵</span>。</strong><br>
+<strong>阴通间使，以事合从，行为辟方。</strong><br>
+<strong>内饰诈谋，外来侵边，遂起祸殃。</strong><br>
+<strong>义威诛之，殄熄暴悖，乱贼灭亡。</strong><br>
+<strong>圣德广密，六合之中，被泽无疆。</strong><br>
+<strong><span class="entity identity" title="身份">皇帝</span>并宇，兼听万事，远近毕清。</strong><br>
+<strong>运理群物，考验事实，各载其名。</strong><br>
+<strong>贵贱并通，善否陈前，靡有隐情。</strong><br>
+<strong>饰省宣义，有子而嫁，倍死不贞。</strong><br>
+<strong>防隔内外，禁止淫泆，男女絜诚。</strong><br>
+<strong>夫为寄豭，杀之无罪，男秉义程。</strong><br>
+<strong>妻为逃嫁，子不得母，咸化廉清。</strong><br>
+<strong>大治濯俗，天下承风，蒙被休经。</strong><br>
+<strong>皆遵度轨，和安敦勉，莫不顺令。</strong><br>
+<strong>黔首脩絜，人乐同则，嘉保太平。</strong><br>
+<strong>後敬奉<span class="entity office" title="官职">法</span>，常治无极，舆舟不倾。</strong><br>
+<strong>从臣诵烈，请刻此石，光垂休铭。</strong>
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-007">
+                <div class="item-title">
+                    项羽本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/007_项羽本纪.html" style="text-decoration: none; color: #999;">
+                        007 项羽本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    "力拔山兮气盖世，时不利兮<span class="entity biology" title="生物">骓</span>不逝。<span class="entity biology" title="生物">骓</span>不逝兮可柰何，<span class="entity person" title="人名">虞</span>兮<span class="entity person" title="人名">虞</span>兮柰若何！"
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-008">
+                <div class="item-title">
+                    高祖本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/008_高祖本纪.html" style="text-decoration: none; color: #999;">
+                        008 高祖本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    "大风起兮云飞扬，威加海内兮归故乡，安得猛士兮守四方！"
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-009">
+                <div class="item-title">
+                    吕太后本纪诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/009_吕太后本纪.html" style="text-decoration: none; color: #999;">
+                        009 吕太后本纪
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    "诸<span class="entity clan" title="氏族">吕</span>用事兮<span class="entity clan" title="氏族">刘氏</span>危，迫胁<span class="entity title" title="称号">王侯</span>兮彊授我妃。我妃既妒兮诬我以恶，谗女乱国兮上曾不寤。我无<span class="entity identity" title="身份">忠臣</span>兮何故弃国？自决中野兮<span class="entity concept" title="概念">苍天</span>举直！于嗟不可悔兮宁蚤自财。为王而饿死兮谁者怜之！<span class="entity clan" title="氏族">吕氏</span>绝理兮讬天报仇。"
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-024">
+                <div class="item-title">
+                    乐书诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/024_乐书.html" style="text-decoration: none; color: #999;">
+                        024 乐书
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    "<span class="entity concept" title="概念">太一</span>贡兮天<span class="entity biology" title="生物">马</span>下，霑赤汗兮沫流赭。骋容与兮跇<span class="entity measure" title="度量">万里</span>，今安匹兮<span class="entity biology" title="生物">龙</span>为友。"
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-024">
+                <div class="item-title">
+                    乐书诗
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/024_乐书.html" style="text-decoration: none; color: #999;">
+                        024 乐书
+                    </a>
+                </div>
+                <div class="item-content verse">
+                    "天<span class="entity biology" title="生物">马</span>来兮从<span class="entity place" title="地名">西极</span>，经<span class="entity measure" title="度量">万里</span>兮归有德。承灵威兮降外国，涉<span class="entity place" title="地名">流沙</span>兮<span class="entity event" title="事件">四夷</span>服。"
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="type-section" id="type-赋">
+            <div class="type-header">赋（5篇）</div>
+            <div class="type-desc">史记中收录的赋体文学作品</div>
+
+
+            <div class="yunwen-item" id="chapter-084">
+                <div class="item-title">
+                    屈原贾生列传赋
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/084_屈原贾生列传.html" style="text-decoration: none; color: #999;">
+                        084 屈原贾生列传
+                    </a>
+                </div>
+                <div class="item-content prose">
+                    乃作<span class="entity book" title="典籍">怀沙</span>之赋。其辞曰：<br><br>
+陶陶<span class="entity time" title="时间">孟夏</span>兮，<span class="entity biology" title="生物">草木</span>莽莽。伤怀永哀兮，汩徂<span class="entity place" title="地名">南土</span>。眴兮窈窈，孔静幽墨。冤结纡轸兮，离愍之长鞠；抚情效志兮，俯诎以自抑。<br><br>
+刓方以为圜兮，常度未替；易初本由兮，<span class="entity other" title="其他标注">君子</span>所鄙。章画职墨兮，前度未改；内直质重兮，<span class="entity identity" title="身份">大人</span>所盛。巧匠不斫兮，孰察其揆正？玄文幽处兮，矇谓之不章；<span class="entity person" title="人名">离娄</span>微睇兮，瞽以为无明。变白而为黑兮，倒上以为下。<span class="entity biology" title="生物">凤皇</span>在<span class="entity object" title="器物">笯</span>兮，<span class="entity biology" title="生物">鸡</span><span class="entity biology" title="生物">雉</span>翔舞。同糅<span class="entity object" title="器物">玉</span>石兮，一而相量。夫党人之鄙妒兮，羌不知吾所臧。任重载盛兮，陷滞而不济；怀<span class="entity object" title="器物">瑾</span>握<span class="entity object" title="器物">瑜</span>兮，穷不得余所示。邑<span class="entity biology" title="生物">犬</span>群吠兮，吠所怪也；诽<span class="entity person" title="人名">骏</span>疑<span class="entity myth" title="神话">桀</span>兮，固庸态也。文质疏内兮，众不知吾之异采；材朴委积兮，莫知余之所有。重仁袭义兮，谨厚以为丰；<span class="entity myth" title="神话">重华</span>不可牾兮，孰知余之从容！古固有不并兮，岂知其故也？<span class="entity myth" title="神话">汤</span><span class="entity myth" title="神话">禹</span>久远兮，邈不可慕也。惩违改忿兮，抑心而自彊；离湣而不迁兮，原志之有象。进路北次兮，日昧昧其将暮；含忧虞哀兮，限之以大故。<br><br>
+乱曰：浩浩<span class="entity place" title="地名">沅</span>、<span class="entity place" title="地名">湘</span>兮，分流<span class="entity place" title="地名">汨</span>兮。脩路幽拂兮，道远忽兮。曾唫恆悲兮，永叹慨兮。世既莫吾知兮，<span class="entity other" title="其他标注">人心</span>不可谓兮。怀情抱质兮，独无匹兮。<span class="entity person" title="人名">伯乐</span>既殁兮，<span class="entity biology" title="生物">骥</span>将焉程兮？人生禀命兮，各有所错兮。定心广志，馀何畏惧兮？曾伤爰哀，永叹喟兮。世溷不吾知，心不可谓兮。知死不可让兮，原勿爱兮。明以告<span class="entity other" title="其他标注">君子</span>兮，吾将以为类兮。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-084">
+                <div class="item-title">
+                    屈原贾生列传赋
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/084_屈原贾生列传.html" style="text-decoration: none; color: #999;">
+                        084 屈原贾生列传
+                    </a>
+                </div>
+                <div class="item-content prose">
+                    <span class="entity person" title="人名">贾生</span>既辞往行，闻<span class="entity place" title="地名">长沙</span>卑湿，自以寿不得长，又以適去，意不自得。及渡<span class="entity place" title="地名">湘水</span>，为赋以吊<span class="entity person" title="人名">屈原</span>。其辞曰：<br><br>
+共承嘉惠兮，俟罪<span class="entity place" title="地名">长沙</span>。侧闻<span class="entity person" title="人名">屈原</span>兮，自沈<span class="entity place" title="地名">汨罗</span>。造讬<span class="entity place" title="地名">湘</span>流兮，敬吊先生。遭世罔极兮，乃陨厥身。呜呼哀哉，逢时不祥！<span class="entity biology" title="生物">鸾</span><span class="entity biology" title="生物">凤</span>伏窜兮，<span class="entity biology" title="生物">鸱</span><span class="entity biology" title="生物">枭</span>翱翔。阘茸尊显兮，谗谀得志；贤圣逆曳兮，方正倒植。世谓<span class="entity person" title="人名">伯夷</span>贪兮，谓<span class="entity person" title="人名">盗跖</span>廉；<span class="entity object" title="器物">莫邪</span>为顿兮，<span class="entity object" title="器物">铅刀</span>为銛。于嗟嚜嚜兮，生之无故！斡弃<span class="entity object" title="器物">周鼎</span>兮宝<span class="entity object" title="器物">康瓠</span>，腾驾罢<span class="entity biology" title="生物">牛</span>兮骖蹇<span class="entity biology" title="生物">驴</span>，<span class="entity biology" title="生物">骥</span>垂两耳兮服<span class="entity object" title="器物">盐车</span>。<span class="entity object" title="器物">章甫</span>荐<span class="entity object" title="器物">屦</span>兮，渐不可久；嗟苦先生兮，独离此咎！<br><br>
+讯曰：已矣，国其莫我知，独堙郁兮其谁语？<span class="entity biology" title="生物">凤</span>漂漂其高遰兮，夫固自缩而远去。袭<span class="entity place" title="地名">九渊</span>之<span class="entity myth" title="神话">神龙</span>兮，沕深潜以自珍。弥融爚以隐处兮，夫岂从<span class="entity biology" title="生物">螘</span>与<span class="entity biology" title="生物">蛭</span><span class="entity biology" title="生物">螾</span>？所贵<span class="entity other" title="其他标注">圣人</span>之神德兮，远浊世而自藏。使<span class="entity biology" title="生物">骐骥</span>可得系羁兮，岂云异夫<span class="entity biology" title="生物">犬</span><span class="entity biology" title="生物">羊</span>！般纷纷其离此尤兮，亦夫子之辜也！瞝<span class="entity place" title="地名">九州</span>而相君兮，何必怀此都也？<span class="entity biology" title="生物">凤皇</span>翔于千仞之上兮，览德军而下之；见细德之险兮，摇增翮逝而去之。彼寻常之汙渎兮，岂能容吞舟之<span class="entity biology" title="生物">鱼</span>！横<span class="entity place" title="地名">江湖</span>之<span class="entity biology" title="生物">鳣</span><span class="entity biology" title="生物">鲟</span>兮，固将制於<span class="entity biology" title="生物">蚁</span><span class="entity biology" title="生物">蝼</span>。
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-084">
+                <div class="item-title">
+                    屈原贾生列传赋
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/084_屈原贾生列传.html" style="text-decoration: none; color: #999;">
+                        084 屈原贾生列传
+                    </a>
+                </div>
+                <div class="item-content prose">
+                    <span class="entity person" title="人名">贾生</span>为<span class="entity title" title="称号">长沙王太傅</span><span class="entity time" title="时间">三年</span>，有<span class="entity biology" title="生物">鸮</span>飞入<span class="entity person" title="人名">贾生</span>舍，止于坐隅。<span class="entity state" title="邦国">楚</span>人命<span class="entity biology" title="生物">鸮</span>曰"服"。<span class="entity person" title="人名">贾生</span>既以適居<span class="entity place" title="地名">长沙</span>，<span class="entity place" title="地名">长沙</span>卑湿，自以为寿不得长，伤悼之，乃为赋以自广。其辞曰：<br><br>
+<span class="entity time" title="时间">单阏之岁</span>兮，<span class="entity time" title="时间">四月孟夏</span>，<span class="entity time" title="时间">庚子日</span>施兮，服集予舍，止于坐隅，貌甚间暇。异物来集兮，私怪其故，发书占之兮，筴言其度。曰"野<span class="entity biology" title="生物">鸟</span>入处兮，主人将去"。请问于服兮："予去何之？吉乎告我，凶言其菑。淹数之度兮，语予其期。"服乃叹息，举首奋翼，口不能言，请对以意。<br><br>
+万物<span class="entity other" title="其他标注">变化</span>兮，固无休息。斡流而迁兮，或推而还。形气转续兮，<span class="entity other" title="其他标注">变化</span>而嬗。沕穆无穷兮，胡可胜言！祸兮福所倚，福兮祸所伏；忧喜聚门兮，<span class="entity other" title="其他标注">吉凶</span>同域。彼<span class="entity state" title="邦国">吴</span>彊大兮，<span class="entity person" title="人名">夫差</span>以败；<span class="entity state" title="邦国">越</span>栖<span class="entity place" title="地名">会稽</span>兮，<span class="entity person" title="人名">句践</span>霸世。<span class="entity person" title="人名">李斯</span>游<span class="entity person" title="人名">遂成</span>兮，卒被<span class="entity artifact" title="古物">五刑</span>；<span class="entity person" title="人名">傅说</span>胥靡兮，乃相<span class="entity title" title="称号">武丁</span>。夫祸之与福兮，何异纠纆。命不可说兮，孰知其极？水激则旱兮，<span class="entity object" title="器物">矢</span>激则远。万物回薄兮，振荡相转。云蒸雨降兮，错缪相纷。大专槃物兮，坱轧无垠。天不可与虑兮，道不可与谋。迟数有命兮，恶识其时？<br><br>
+且夫<span class="entity concept" title="概念">天地</span>为<span class="entity object" title="器物">炉</span>兮，造化为工；<span class="entity office" title="官职">阴阳</span>为<span class="entity object" title="器物">炭</span>兮，万物为<span class="entity object" title="器物">铜</span>。合散消息兮，安有常则；千变万化兮，未始有极。忽然为人兮，何足控抟；化为异物兮，又何足患！小知自私兮，贱彼贵我；通人大观兮，物无不可。<span class="entity identity" title="身份">贪夫</span>徇财兮，<span class="entity identity" title="身份">烈士</span>徇名；夸者死权兮，品庶冯生。述迫之徒兮，或趋西东；大人不曲兮，亿变齐同。<span class="entity identity" title="身份">拘士</span>系俗兮，羖如囚拘；<span class="entity identity" title="身份">至人</span>遗物兮，独与<span class="entity other" title="其他标注">道</span>俱。<span class="entity identity" title="身份">众人</span>或或兮，好恶积意；<span class="entity identity" title="身份">真人</span>淡漠兮，独与<span class="entity other" title="其他标注">道</span>息。释知遗形兮，超然自丧；寥廓忽荒兮，与<span class="entity other" title="其他标注">道</span>翱翔。乘流则逝兮，得坻则止；纵躯委命兮，不私与己。其生若浮兮，其死若休；澹乎若深渊之静，氾乎若不系之<span class="entity object" title="器物">舟</span>。不以生故自宝兮，养空而浮；<span class="entity identity" title="身份">德人</span>无累兮，知命不忧。细故粦兮，何足以疑！
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-117">
+                <div class="item-title">
+                    司马相如列传赋
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/117_司马相如列传.html" style="text-decoration: none; color: #999;">
+                        117 司马相如列传
+                    </a>
+                </div>
+                <div class="item-content prose">
+                    居久之，<span class="entity place" title="地名">蜀</span>人<span class="entity person" title="人名">杨得意</span>为<span class="entity title" title="称号">狗监</span>，侍上。上读<span class="entity book" title="典籍">子虚赋</span>而善之，曰："朕独不得与此人同时哉！"<span class="entity person" title="人名">得意</span>曰："臣邑人<span class="entity person" title="人名">司马相如</span>自言为此赋。"上惊，乃召问<span class="entity person" title="人名">相如</span>。<span class="entity person" title="人名">相如</span>曰："有是。然此乃<span class="entity identity" title="身份">诸侯</span>之事，未足观也。请为<span class="entity identity" title="身份">天子</span>游猎赋，赋成奏之。"上许，令<span class="entity title" title="称号">尚书</span>给<span class="entity object" title="器物">笔札</span>。<span class="entity person" title="人名">相如</span>以"<span class="entity person" title="人名">子虚</span>"，虚言也，为<span class="entity state" title="邦国">楚</span>称；"<span class="entity person" title="人名">乌有先生</span>"者，乌有此事也，为<span class="entity state" title="邦国">齐</span>难；"<span class="entity person" title="人名">无是公</span>"者，无是人也，明<span class="entity identity" title="身份">天子</span>之义。故空藉此<span class="entity measure" title="度量">三人</span>为辞，以推<span class="entity identity" title="身份">天子</span><span class="entity identity" title="身份">诸侯</span>之<span class="entity office" title="官职">苑囿</span>。其卒章归之於节俭，因以风谏。奏之<span class="entity identity" title="身份">天子</span>，<span class="entity identity" title="身份">天子</span>大说。其辞曰：<br><br>
+<span class="entity state" title="邦国">楚</span>使<span class="entity person" title="人名">子虚</span>使於<span class="entity state" title="邦国">齐</span>，<span class="entity state" title="邦国">齐</span>王悉发境内之士，备<span class="entity title" title="称号">车骑</span>之众，与使者出田。田罢，<span class="entity person" title="人名">子虚</span>过詑<span class="entity person" title="人名">乌有先生</span>，而<span class="entity person" title="人名">无是公</span>在焉。坐定，<span class="entity person" title="人名">乌有先生</span>问曰："<span class="entity time" title="时间">今日</span>田乐乎？"<span class="entity person" title="人名">子虚</span>曰："乐。""获多乎？"曰："少。""然则何乐？"曰："仆乐<span class="entity state" title="邦国">齐</span>王之欲夸仆以<span class="entity title" title="称号">车骑</span>之众，而仆对以<span class="entity place" title="地名">云梦</span>之事也。"曰："可得闻乎？"<br><br>
+<span class="entity person" title="人名">子虚</span>曰："可。王驾车<span class="entity place" title="地名">千乘</span>，选徒<span class="entity measure" title="度量">万骑</span>，田於海滨。列卒满泽，罘罔弥山，揜<span class="entity biology" title="生物">兔</span>辚<span class="entity biology" title="生物">鹿</span>，射<span class="entity biology" title="生物">麋</span>脚<span class="entity biology" title="生物">麟</span>。鹜於<span class="entity place" title="地名">盐浦</span>，割鲜染轮。射中获多，矜而自功。顾谓仆曰：'<span class="entity state" title="邦国">楚</span>亦有<span class="entity person" title="人名">平原</span>广泽游猎之地饶乐若此者乎？<span class="entity state" title="邦国">楚</span>王之猎何与<span class="entity identity" title="身份">寡人</span>？'<br><br>
+仆下车对曰：'臣，<span class="entity state" title="邦国">楚</span>国之鄙人也，幸得宿卫<span class="entity time" title="时间">十有馀年</span>，时从出游，游於後园，览於有无，然犹未能遍睹也，又恶足以言其外泽者乎！'<br><br>
+<span class="entity state" title="邦国">齐</span>王曰：'虽然，略以子之所闻见而言之。'<br><br>
+"仆对曰：'唯唯。臣闻<span class="entity state" title="邦国">楚</span>有七泽，尝见其一，未睹其馀也。臣之所见，盖特其小小者耳，名曰<span class="entity place" title="地名">云梦</span>。<span class="entity place" title="地名">云梦</span>者，方九<span class="entity person" title="人名">百里</span>，其中有山焉。其山则盘纡岪郁，隆崇嵂崒；岑岩参差，<span class="entity concept" title="概念">日月</span>蔽亏；交错纠纷，上干青云；罢池陂纮，下属<span class="entity place" title="地名">江</span>河。其土则丹青赭垩，雌黄白附，锡碧金银，众色炫燿，照烂龙鳞。其石则<span class="entity object" title="器物">赤玉</span><span class="entity object" title="器物">玫瑰</span>，<span class="entity object" title="器物">琳</span><span class="entity object" title="器物">渼</span><span class="entity object" title="器物">琨</span><span class="entity object" title="器物">珸</span>，<span class="entity object" title="器物">瑊玏</span><span class="entity object" title="器物">玄厉</span>，<span class="entity object" title="器物">萩石</span><span class="entity object" title="器物">武夫</span>。其东则有<span class="entity biology" title="生物">蕙圃</span><span class="entity biology" title="生物">衡兰</span>，<span class="entity biology" title="生物">芷</span><span class="entity biology" title="生物">若</span><span class="entity biology" title="生物">射干</span>，<span class="entity biology" title="生物">穹穷</span><span class="entity biology" title="生物">昌蒲</span>，<span class="entity biology" title="生物">江离</span><span class="entity biology" title="生物">麋芜</span>，<span class="entity biology" title="生物">诸蔗</span><span class="entity biology" title="生物">猼且</span>。其南则有平原广泽，登降纮靡，案衍坛曼，缘以大江，限以巫山。其高燥则生<span class="entity biology" title="生物">葴</span><span class="entity biology" title="生物">蓇</span><span class="entity biology" title="生物">苞荔</span>，<span class="entity biology" title="生物">薛</span><span class="entity biology" title="生物">莎</span><span class="entity biology" title="生物">青薠</span>。其卑湿则生<span class="entity biology" title="生物">藏莨</span><span class="entity biology" title="生物">蒹葭</span>，<span class="entity biology" title="生物">东蔷</span><span class="entity biology" title="生物">雕胡</span>，<span class="entity biology" title="生物">莲藕</span><span class="entity biology" title="生物">菰芦</span>，<span class="entity biology" title="生物">菴{艹闾}</span><span class="entity biology" title="生物">轩芋</span>，物居之，不可胜图。其西则有涌泉清池，激水推移；外发<span class="entity biology" title="生物">芙蓉</span><span class="entity biology" title="生物">菱华</span>，内隐<span class="entity object" title="器物">钜石</span><span class="entity object" title="器物">白沙</span>。其中则有<span class="entity biology" title="生物">神龟</span><span class="entity biology" title="生物">蛟</span><span class="entity biology" title="生物">鼍</span>，<span class="entity biology" title="生物">玳瑁</span><span class="entity biology" title="生物">鳖</span><span class="entity biology" title="生物">鼋</span>。其北则有阴林巨树，<span class="entity biology" title="生物">楩</span><span class="entity biology" title="生物">棻</span><span class="entity biology" title="生物">豫章</span>，<span class="entity biology" title="生物">桂</span><span class="entity biology" title="生物">椒</span><span class="entity biology" title="生物">木兰</span>，<span class="entity biology" title="生物">离硃</span><span class="entity biology" title="生物">杨</span>，<span class="entity biology" title="生物">楂</span><span class="entity biology" title="生物">梸</span><span class="entity biology" title="生物">甹栗</span>，<span class="entity biology" title="生物">橘</span><span class="entity biology" title="生物">柚</span>芬芳。其上则有<span class="entity biology" title="生物">赤猿</span><span class="entity biology" title="生物">蠷蝚</span>，<span class="entity biology" title="生物">鹓雏</span><span class="entity biology" title="生物">孔鸾</span>，腾远<span class="entity biology" title="生物">射干</span>。其下则有<span class="entity biology" title="生物">白虎</span><span class="entity biology" title="生物">玄豹</span>，<span class="entity biology" title="生物">蟃蜒</span><span class="entity biology" title="生物">貙豻</span>，<span class="entity biology" title="生物">兕</span><span class="entity biology" title="生物">象</span><span class="entity biology" title="生物">野犀</span>，<span class="entity biology" title="生物">穷奇</span><span class="entity biology" title="生物">獌狿</span>。<br><br>
+"'於是乃使<span class="entity person" title="人名">专诸</span>之伦，手格此兽。<span class="entity state" title="邦国">楚</span>王乃驾驯驳之驷，乘<span class="entity object" title="器物">雕玉</span>之舆，靡<span class="entity object" title="器物">鱼须</span>之桡旃，曳<span class="entity object" title="器物">明月</span>之<span class="entity object" title="器物">珠旗</span>，建<span class="entity object" title="器物">干将</span>之<span class="entity object" title="器物">雄戟</span>，左<span class="entity object" title="器物">乌嗥</span>之<span class="entity object" title="器物">雕弓</span>，右<span class="entity object" title="器物">夏服</span>之<span class="entity object" title="器物">劲箭</span>；<span class="entity person" title="人名">阳子</span>骖乘，<span class="entity person" title="人名">纤阿</span>为御；案节未舒，即陵狡兽，辚<span class="entity biology" title="生物">邛邛</span>，槅距虚，轶<span class="entity biology" title="生物">野马</span>而湜<span class="entity biology" title="生物">騊駼</span>，乘遗风而射游<span class="entity biology" title="生物">骐</span>；儵眒凄浰，雷动熛至，<span class="entity concept" title="概念">星</span>流<span class="entity concept" title="概念">霆</span>击，弓不虚发，中必决眦，洞胸达腋，绝乎心系，获若雨兽，揜草蔽地。於是<span class="entity state" title="邦国">楚</span>王乃弭节裴回，翱翔容与，览乎阴林，观<span class="entity identity" title="身份">壮士</span>之暴怒，与<span class="entity object" title="器物">猛兽</span>之恐惧，徼受诎，殚睹物之变态。<br><br>
+"'於是<span class="entity state" title="邦国">郑</span>女<span class="entity person" title="人名">曼姬</span>，被阿锡，揄纻缟，櫜纤罗，垂雾縠；襞积褰绉，纡徐委曲，郁桡谿谷；衯衯裶裶，扬袘恤削，蜚纤垂髾；扶与猗靡，吸呷萃蔡，下摩<span class="entity biology" title="生物">兰</span><span class="entity biology" title="生物">蕙</span>，上拂<span class="entity object" title="器物">羽盖</span>，错<span class="entity biology" title="生物">翡翠</span>之威蕤，缪绕<span class="entity object" title="器物">玉绥</span>；缥乎忽忽，若<span class="entity myth" title="神话">神仙</span>之仿佛。<br><br>
+"'於是乃相与獠於<span class="entity biology" title="生物">蕙圃</span>，媻珊勃窣上<span class="entity object" title="器物">金隄</span>，揜<span class="entity biology" title="生物">翡翠</span>，射<span class="entity biology" title="生物">鵕璘</span>，微矰出，纤缴施，弋<span class="entity biology" title="生物">白鹄</span>，连<span class="entity biology" title="生物">驾鹅</span>，双<span class="entity biology" title="生物">鸧</span>下，<span class="entity biology" title="生物">玄鹤</span>加。怠而後发，游於清池；浮<span class="entity object" title="器物">文鹢</span>，扬<span class="entity object" title="器物">桂枻</span>，张<span class="entity object" title="器物">翠帷</span>，建<span class="entity object" title="器物">羽盖</span>，罔<span class="entity biology" title="生物">玳瑁</span>，钓<span class="entity biology" title="生物">紫贝</span>；摐<span class="entity object" title="器物">金鼓</span>，吹鸣籁，榜人歌，声流喝，<span class="entity biology" title="生物">水蟲</span>骇，波鸿沸，涌泉起，奔扬会，礧石相击，硠硠潏潏，若<span class="entity concept" title="概念">雷霆</span>之声，闻乎数<span class="entity person" title="人名">百里</span>之外。<br><br>
+"'将息獠者，击<span class="entity object" title="器物">灵鼓</span>，起烽燧，车案行，骑就队，纚乎淫淫，班乎裔裔。於是<span class="entity state" title="邦国">楚</span>王乃登<span class="entity place" title="地名">阳云</span>之<span class="entity object" title="器物">台</span>，泊乎<span class="entity other" title="其他标注">无为</span>，澹乎自持，勺药之和具而後御之。不若大王<span class="entity time" title="时间">终日</span>驰骋而不下舆，脟割轮淬，自以为娱。臣窃观之，<span class="entity state" title="邦国">齐</span>殆不如。'<br><br>
+於是王默然无以应仆也。"<br><br>
+<span class="entity person" title="人名">乌有先生</span>曰："是何言之过也！足下不远<span class="entity measure" title="度量">千里</span>，来况<span class="entity state" title="邦国">齐</span>国，王悉发境内之士，而备<span class="entity title" title="称号">车骑</span>之众，以出田，乃欲戮力致获，以娱左右也，何名为夸哉！问<span class="entity state" title="邦国">楚</span>地之有无者，原闻大国之风烈，先生之馀论也。今足下不称<span class="entity state" title="邦国">楚</span>王之德厚，而盛推<span class="entity place" title="地名">云梦</span>以为高，奢言淫乐而显侈靡，窃为足下不取也。必若所言，固非<span class="entity state" title="邦国">楚</span>国之美也。有而言之，是章君之恶；无而言之，是害足下之信。章君之恶而伤私义，二者无一可，而先生行之，必且轻於<span class="entity state" title="邦国">齐</span>而累於<span class="entity state" title="邦国">楚</span>矣。且<span class="entity state" title="邦国">齐</span>东陼巨海，南有<span class="entity place" title="地名">琅邪</span>，观乎<span class="entity place" title="地名">成山</span>，射乎<span class="entity place" title="地名">之罘</span>，浮<span class="entity place" title="地名">勃澥</span>，游<span class="entity place" title="地名">孟诸</span>，邪与<span class="entity event" title="事件">肃慎</span>为邻，右以<span class="entity place" title="地名">汤谷</span>为界，<span class="entity time" title="时间">秋</span>田乎<span class="entity place" title="地名">青丘</span>，傍徨乎海外，吞若<span class="entity place" title="地名">云梦</span>者八九，其於胸中曾不蒂芥。若乃俶傥瑰伟，异方殊类，珍怪<span class="entity biology" title="生物">鸟兽</span>，万端鳞萃，充仞其中者，不可胜记，<span class="entity myth" title="神话">禹</span>不能名，<span class="entity myth" title="神话">契</span>不能计。然在<span class="entity identity" title="身份">诸侯</span>之位，不敢言游戏之乐，<span class="entity office" title="官职">苑囿</span>之大；先生又见客，是以王辞而不复，何为无用应哉！"
+                </div>
+            </div>
+
+
+            <div class="yunwen-item" id="chapter-117">
+                <div class="item-title">
+                    司马相如列传赋
+                </div>
+                <div class="item-subtitle">
+                    <a href="../chapters/117_司马相如列传.html" style="text-decoration: none; color: #999;">
+                        117 司马相如列传
+                    </a>
+                </div>
+                <div class="item-content prose">
+                    <span class="entity person" title="人名">相如</span>拜为<span class="entity title" title="称号">孝文园令</span>。<span class="entity identity" title="身份">天子</span>既美<span class="entity book" title="典籍">子虚</span>之事，<span class="entity person" title="人名">相如</span>见上好<span class="entity myth" title="神话">仙道</span>，因曰："<span class="entity place" title="地名">上林</span>之事未足美也，尚有靡者。臣尝为<span class="entity book" title="典籍">大人赋</span>，未就，请具而奏之。"<span class="entity person" title="人名">相如</span>以为列仙之传居山泽间，形容甚癯，此非<span class="entity identity" title="身份">帝王</span>之仙意也，乃遂就<span class="entity book" title="典籍">大人赋</span>。其辞曰：<br><br>
+世有<span class="entity myth" title="神话">大人</span>兮，在于<span class="entity place" title="地名">中州</span>。宅弥<span class="entity measure" title="度量">万里</span>兮，曾不足以少留。悲世俗之迫隘兮，朅轻举而远游。垂绛幡之素蜺兮，载<span class="entity concept" title="概念">云气</span>而上浮。建格泽之长竿兮，总光耀之采旄。垂<span class="entity concept" title="概念">旬始</span>以为幓兮，抴<span class="entity concept" title="概念">彗星</span>而为髾。掉指桥以偃蹇兮，又旖旎以<span class="entity concept" title="概念">招摇</span>。览欃枪以为旌兮，靡屈<span class="entity concept" title="概念">虹</span>而为绸。红杳渺以眩湣兮，猋风涌而云浮。驾<span class="entity myth" title="神话">应龙</span><span class="entity object" title="器物">象舆</span>之蠖略逶丽兮，骖<span class="entity biology" title="生物">赤螭</span><span class="entity biology" title="生物">青虬</span>之鞮蟉蜿蜒。低卬夭蟜据以骄骜兮，诎折隆穷蠼以连卷沛艾赳螑仡以佁儗兮，放散畔岸骧以孱颜。跮踱輵辖容以委丽兮，绸缪偃蹇怵鞨以梁倚。纠蓼叫奡蹋以艐路兮，蔑蒙踊跃腾而狂趡。莅飒卉翕熛至电过兮，焕然雾除，霍然云消。<br><br>
+邪绝<span class="entity place" title="地名">少阳</span>而登<span class="entity concept" title="概念">太阴</span>兮，与<span class="entity myth" title="神话">真人</span>乎相求。互折窈窕以右转兮，横厉飞泉以<span class="entity concept" title="概念">正东</span>。悉徵<span class="entity myth" title="神话">灵圉</span>而选之兮，部乘众神於<span class="entity object" title="器物">瑶光</span>。使<span class="entity myth" title="神话">五帝</span>先导兮，反<span class="entity myth" title="神话">太一</span>而从<span class="entity myth" title="神话">陵阳</span>。左<span class="entity myth" title="神话">玄冥</span>而右<span class="entity myth" title="神话">含雷</span>兮，前<span class="entity myth" title="神话">陆离</span>而後<span class="entity myth" title="神话">潏湟</span>。厮征<span class="entity myth" title="神话">伯侨</span>而役<span class="entity myth" title="神话">羡门</span>兮，属<span class="entity myth" title="神话">岐伯</span>使<span class="entity myth" title="神话">尚方</span>。<span class="entity myth" title="神话">祝融</span>惊而跸御兮，清雰气而後行。屯余车其<span class="entity measure" title="度量">万乘</span>兮，綷云盖而树<span class="entity object" title="器物">华旗</span>。使<span class="entity myth" title="神话">句芒</span>其<span class="entity title" title="称号">将行</span>兮，吾欲往乎南嬉。<br><br>
+历<span class="entity myth" title="神话">唐尧</span>於<span class="entity place" title="地名">崇山</span>兮，过<span class="entity myth" title="神话">虞舜</span>於<span class="entity place" title="地名">九疑</span>。纷湛湛其差错兮，杂遝胶葛以方驰。骚扰冲苁其相纷挐兮，滂濞泱轧洒以林离。钻罗列聚丛以茏茸兮，衍曼流烂坛以<span class="entity myth" title="神话">陆离</span>。径入<span class="entity myth" title="神话">雷室</span>之砰磷郁律兮，洞出<span class="entity place" title="地名">鬼谷</span>之嚬礨嵬靺。遍览八纮而观四荒兮，朅渡<span class="entity place" title="地名">九江</span>而越<span class="entity place" title="地名">五河</span>。经营炎火而浮<span class="entity place" title="地名">弱水</span>兮，杭绝浮渚而涉<span class="entity place" title="地名">流沙</span>。<span class="entity person" title="人名">奄息</span>总极氾滥水嬉兮，使<span class="entity myth" title="神话">灵娲</span>鼓<span class="entity object" title="器物">瑟</span>而舞<span class="entity myth" title="神话">冯夷</span>。时若々将混浊兮，召<span class="entity myth" title="神话">屏翳</span>诛<span class="entity myth" title="神话">风伯</span>而刑<span class="entity myth" title="神话">雨师</span>。西望<span class="entity place" title="地名">昆仑</span>之轧沕洸忽兮，直径驰乎<span class="entity place" title="地名">三危</span>。排<span class="entity myth" title="神话">阊阖</span>而入<span class="entity myth" title="神话">帝宫</span>兮，载<span class="entity myth" title="神话">玉女</span>而与之归。舒阆风而摇集兮，亢乌腾而一止。低回<span class="entity place" title="地名">阴山</span>翔以纡曲兮，吾乃今目睹<span class="entity myth" title="神话">西王母</span>鱇然白首。载胜而穴处兮，亦幸有<span class="entity myth" title="神话">三足乌</span>为之使。必长生若此而不死兮，虽济<span class="entity time" title="时间">万世</span>不足以喜。<br><br>
+回车朅来兮，绝道<span class="entity place" title="地名">不周</span>，会食<span class="entity place" title="地名">幽都</span>。呼吸沆瀣餐朝霞，噍咀<span class="entity biology" title="生物">芝</span>英兮叽<span class="entity biology" title="生物">琼华</span>。嬐侵浔而高纵兮，纷鸿涌而上厉。贯<span class="entity place" title="地名">列缺</span>之倒景兮，涉<span class="entity myth" title="神话">丰隆</span>之滂沛。驰游道而脩降兮，骛遗雾而远逝。迫区中之隘陕兮，舒节出乎北垠。遗屯骑於<span class="entity place" title="地名">玄阙</span>兮，轶先驱於<span class="entity place" title="地名">寒门</span>。下峥嵘而无地兮，上寥廓而无天。视眩眠而无见兮，听惝恍而无闻。乘虚无而上假兮，超无友而独存。<br><br>
+<span class="entity person" title="人名">相如</span>既奏<span class="entity book" title="典籍">大人</span>之颂，<span class="entity identity" title="身份">天子</span>大说，飘飘有凌云之气，似游<span class="entity concept" title="概念">天地</span>之间意。
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            <p>史记知识库 | 韵文专项索引</p>
+            <p>数据提取自《史记》标注版本</p>
+        </div>
+    </div>
+</body>
+</html>
