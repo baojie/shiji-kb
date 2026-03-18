@@ -10317,9 +10317,9 @@
         "ce_year": -295
       },
       "十四年": {
-        "ruler": "秦昭襄王",
-        "method": "nearby_ruler_corrected",
-        "ce_year": -293
+        "ruler": "魏哀王",
+        "method": "sequential",
+        "ce_year": -305
       },
       "十六年": {
         "ruler": "周成王",
@@ -12253,6 +12253,20 @@
         "method": "raw_nearby",
         "ruler_key": "予三年"
       }
+    },
+    "45": {
+      "三年": {
+        "ruler": "夫差",
+        "method": "raw_nearby",
+        "ruler_key": "夫差三年"
+      }
+    },
+    "46": {
+      "十年": {
+        "ruler": "子贡",
+        "method": "raw_nearby",
+        "ruler_key": "子贡十年"
+      }
     }
   },
   "068": {
@@ -12271,10 +12285,20 @@
       }
     },
     "9": {
+      "十年": {
+        "ruler": "君",
+        "method": "raw_nearby",
+        "ruler_key": "君十年"
+      },
       "七年": {
         "ruler": "缪公",
         "method": "raw_nearby",
         "ruler_key": "缪公七年"
+      },
+      "八年": {
+        "ruler": "公子虔",
+        "method": "raw_nearby",
+        "ruler_key": "公子虔八年"
       }
     }
   },
@@ -13077,6 +13101,15 @@
         "ruler": "孝景",
         "method": "nearby_ruler",
         "ce_year": -152
+      }
+    }
+  },
+  "101": {
+    "5.6": {
+      "三年": {
+        "ruler": "太后",
+        "method": "raw_nearby",
+        "ruler_key": "太后三年"
       }
     }
   },
