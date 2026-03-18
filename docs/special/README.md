@@ -37,13 +37,26 @@
   - [chengyu.pdf](chengyu.pdf) - PDF打印版（2.95MB）
 - **访问**：[在线查看](chengyu.html) | [下载PDF](chengyu.pdf)
 
+### 4. 战争事件
+
+- **描述**：史记中记载的所有战争事件（多源融合）
+- **数量**：736个战争，覆盖103章（多源战争16个）
+- **时间跨度**：前2690年（阪泉之战）— 前119年（漠北之战）
+- **文件**：
+  - [../../data/wars.json](../../data/wars.json) - 结构化数据（专项索引格式）
+  - [../../data/wars.md](../../data/wars.md) - Markdown格式
+  - [../../kg/events/data/wars.json](../../kg/events/data/wars.json) - 完整数据（2.5MB，含交战双方、伤亡等）
+  - [wars.html](wars.html) - HTML渲染页面
+  - wars.pdf - PDF打印版（待生成）
+- **访问**：[在线查看](wars.html) | 下载PDF（待生成）
+
 ## 规划中的专项
 
-### 4. 书信
+### 5. 书信
 
 史记中收录的历史书信文献。
 
-### 5. 其他
+### 6. 其他
 
 持续提取和整理史记中的各类专项内容。
 
