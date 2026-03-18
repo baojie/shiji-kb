@@ -1,0 +1,484 @@
+/* 史记命名实体样式表 v5.0 */
+/*
+ * 基于《实体渲染规划 v5.0》
+ * 设计理念：
+ * 1. 7色语义分组：褐(空间叙事) 青(时间) 紫(政治) 蓝(社会) 墨绿(文化) 橙褐(物质) 海绿(数量)
+ * 2. 统一淡黄底色：rgba(255, 248, 220, 0.6) 用于所有实体
+ * 3. 下划线辅助区分：实线(高频核心) 虚线(中频) 点线(抽象) 波浪线(书籍) 无(底色已足够)
+ * 4. 动词鲜明突出：红/蓝/金/绿鲜明底色 + 加粗 + 白色文字
+ */
+
+/* ======================================== 基础样式 ======================================== */
+
+body {
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+    line-height: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdf8;
+    color: #2c2c2c;
+}
+
+p {
+    margin: 2em 0;
+}
+
+/* ======================================== 第一组：褐色 - 空间叙事要素 ======================================== */
+
+/* 人名 〖@人名〗 - 实线（高频核心实体） */
+.person {
+    color: #8B4513;                          /* 褐色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px solid rgba(139, 69, 19, 0.4);  /* 实线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 地名 〖^地名〗 - 虚线（中频，次级重要） */
+.place {
+    color: #8B4513;                          /* 褐色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.4);  /* 虚线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 官职 〖;官职〗 - 实线（高频）或虚线（中频），目前统一实线 */
+.official {
+    color: #8B4513;                          /* 褐色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px solid rgba(139, 69, 19, 0.4);  /* 实线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* ======================================== 第二组：青色 - 时间维度（独立） ======================================== */
+
+/* 时间 〖#时间〗 - 点线（抽象的时间概念） */
+.time {
+    color: #008B8B;                          /* 深青色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dotted rgba(0, 139, 139, 0.4);  /* 点线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* ======================================== 第三组：紫色 - 政治组织 ======================================== */
+
+/* 朝代 〖$朝代〗 - 实线（核心政治实体） */
+.dynasty {
+    color: #9370DB;                          /* 中紫色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px solid rgba(147, 112, 219, 0.4);  /* 实线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 封国 〖&封国〗 - 实线（核心政治实体） */
+.feudal-state {
+    color: #9370DB;                          /* 紫色（统一为紫色） */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px solid rgba(147, 112, 219, 0.4);  /* 实线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 族群 〖%族群〗 - 虚线（次级政治实体） */
+.tribe {
+    color: #9370DB;                          /* 紫色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dashed rgba(147, 112, 219, 0.4);  /* 虚线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* ======================================== 第四组：蓝色 - 社会制度 ======================================== */
+
+/* 制度 〖~制度〗 - 实线（核心制度）或虚线，目前统一实线 */
+.institution {
+    color: #4682B4;                          /* 钢青色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px solid rgba(70, 130, 180, 0.4);  /* 实线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 刑法 〖/刑法〗 - 虚线 */
+.legal {
+    color: #4682B4;                          /* 钢青色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dashed rgba(70, 130, 180, 0.4);  /* 虚线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 礼仪 〖*礼仪〗 - 点线（抽象礼制概念） */
+.ritual {
+    color: #4682B4;                          /* 钢青色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dotted rgba(70, 130, 180, 0.4);  /* 点线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 身份 〖_身份〗 - 无下划线（背景色已足够识别） */
+.identity {
+    color: #4682B4;                          /* 钢青色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* ======================================== 第五组：墨绿 - 文化思想 ======================================== */
+
+/* 典籍 〖!典籍〗 - 波浪线（传统书名线） */
+.book {
+    color: #2F4F4F;                          /* 深石板灰 */
+    background-color: rgba(255, 248, 220, 0.6);
+    text-decoration: underline wavy rgba(47, 79, 79, 0.5);  /* 波浪线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    font-style: italic;
+    cursor: help;
+}
+
+/* 思想 〖?思想〗 - 点线（抽象思想概念） */
+.concept {
+    color: #2F4F4F;                          /* 深石板灰 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dotted rgba(47, 79, 79, 0.4);  /* 点线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* ======================================== 第六组：橙褐 - 物质世界 ======================================== */
+
+/* 器物 〖=器物〗 - 虚线 */
+.artifact {
+    color: #CD853F;                          /* 秘鲁色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dashed rgba(205, 133, 63, 0.4);  /* 虚线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 生物 〖+生物〗 - 点线 */
+.biology {
+    color: #CD853F;                          /* 秘鲁色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dotted rgba(205, 133, 63, 0.4);  /* 点线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 天文 〖!天文〗 - 点线（抽象天象） */
+.astronomy {
+    color: #CD853F;                          /* 秘鲁色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px dotted rgba(205, 133, 63, 0.4);  /* 点线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* 神话 〖:神话〗 - 波浪线（神话传说，类似书籍） */
+.mythical {
+    color: #CD853F;                          /* 秘鲁色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    text-decoration: underline wavy rgba(205, 133, 63, 0.4);  /* 波浪线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: help;
+}
+
+/* ======================================== 第七组：海绿 - 数量度量（独立） ======================================== */
+
+/* 数量 〖数量〗 - 等宽字体 + 实线（IDE数字风格） */
+.quantity {
+    color: #2E8B57;                          /* 海洋绿 */
+    background-color: rgba(255, 248, 220, 0.6);
+    border-bottom: 1px solid rgba(46, 139, 87, 0.4);  /* 实线 */
+    padding: 0 2px;
+    border-radius: 2px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;  /* 等宽字体 */
+    font-weight: 500;
+    cursor: help;
+}
+
+/* ======================================== 动词样式（v4.0） ======================================== */
+
+/* 军事动词 ⟦◈伐⟧ - 鲜明红底 + 白字加粗 */
+.verb-military {
+    color: white;
+    background-color: #dc3545;   /* Bootstrap danger 红色 */
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: help;
+}
+
+/* 刑罚动词 ⟦◉杀⟧ - 鲜明蓝底 + 白字加粗 */
+.verb-penalty {
+    color: white;
+    background-color: #007bff;   /* Bootstrap primary 蓝色 */
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: help;
+}
+
+/* 政治动词 ⟦○立⟧ - 鲜明金底 + 深色字加粗（金底配深色） */
+.verb-political {
+    color: #333;
+    background-color: #ffc107;   /* Bootstrap warning 金色 */
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: help;
+}
+
+/* 经济动词 ⟦◇赐⟧ - 鲜明绿底 + 白字加粗 */
+.verb-economic {
+    color: white;
+    background-color: #28a745;   /* Bootstrap success 绿色 */
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: help;
+}
+
+/* ======================================== 引号内容（对话） ======================================== */
+
+.quoted {
+    font-style: italic;
+    background-color: rgba(139, 69, 19, 0.03);
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.3);
+    padding: 0 2px;
+}
+
+/* ======================================== 章节标题 ======================================== */
+
+h1 {
+    color: #8B0000;
+    border-bottom: 3px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #8B4513;
+    border-left: 5px solid #8B4513;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #B8860B;
+    margin-top: 30px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 40px 0;
+}
+
+/* ======================================== 引用和列表 ======================================== */
+
+blockquote {
+    border: none;
+    margin: 0.2em 0;
+    padding: 0;
+    padding-left: 2em;
+    background: none;
+    font-style: italic;
+}
+
+.dialogue {
+    display: block;
+    padding-left: 2em;
+}
+
+ul, ol {
+    line-height: 2;
+    list-style: none;
+    padding-left: 2em;
+    margin: 1em 0;
+}
+
+ul li, ol li {
+    margin: 0;
+}
+
+/* ======================================== Purple Numbers（段落编号） ======================================== */
+
+.para-num {
+    display: inline;
+    color: #C8A8FF;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+    font-style: normal;
+    margin-right: 0.5em;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.para-num:hover {
+    color: #9370DB;
+    text-decoration: underline;
+}
+
+p:has(> .para-num:only-child) {
+    margin: 0.5em 0;
+}
+
+p > .para-num:only-child {
+    display: inline-block;
+    margin-bottom: 0.3em;
+}
+
+/* ======================================== 史记年表样式 ======================================== */
+
+.shiji-table-wrapper {
+    overflow: auto;
+    width: 100vw;
+    max-height: 85vh;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: 1px solid #d0c8a0;
+    border-bottom: 1px solid #d0c8a0;
+    box-shadow: 0 1px 4px rgba(90, 74, 42, 0.08);
+}
+
+.shiji-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85em;
+    line-height: 1.7;
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+}
+
+.shiji-table th {
+    background-color: #5a4a2a;
+    color: #f5f0e0;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #4a3c1e;
+    text-align: center;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    font-size: 0.95em;
+    letter-spacing: 0.05em;
+}
+
+.shiji-table td {
+    padding: 6px 10px;
+    border: 1px solid #e0dcc8;
+    text-align: left;
+    vertical-align: top;
+    color: #2c2c2c;
+}
+
+.shiji-table tr.even td {
+    background-color: #fdfdf8;
+}
+
+.shiji-table tr.odd td {
+    background-color: #f5f0e0;
+}
+
+.shiji-table tbody tr:hover td {
+    background-color: #ede8d4;
+    transition: background-color 0.15s ease;
+}
+
+.shiji-table td:nth-child(2) {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #5a4a2a;
+    background-color: rgba(90, 74, 42, 0.06);
+    text-align: center;
+    border-right: 2px solid #d0c8a0;
+}
+
+.row-pn-col {
+    width: 2em;
+    min-width: 2em;
+    text-align: right;
+    padding-right: 6px !important;
+    color: #C8A8FF;
+    font-size: 0.75em;
+    font-family: Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    border-right: 1px solid #e0d8c0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.row-pn-col .para-num {
+    font-size: 1em;
+}
+
+/* ======================================== 语义标注块 ======================================== */
+
+.note-box {
+    background-color: #fffef0;
+    border: 1px solid #e6e0c0;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.note-box h4 {
+    color: #8B7500;
+    margin-top: 0;
+}
+
+.note-太史公曰 {
+    border-left: 3px solid #8B7500;
+}
+
+.note-赞 {
+    border-left: 3px solid #a0522d;
+    background-color: #fefcf5;
+    font-style: italic;
+}
+
+.note-赞 p {
+    line-height: 2.0;
+    white-space: pre-line;
+}
+
+.note-诗歌 {
+    border-left: 3px solid #6b8e23;
+    background-color: #fcfef5;
+    font-style: italic;
+}
+
+.note-诗歌 p {
+    line-height: 2.0;
+    white-space: pre-line;
+}

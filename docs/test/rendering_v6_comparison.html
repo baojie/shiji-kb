@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实体渲染方案 v5.0 vs v6.0 对比测试</title>
+    <style>
+        body {
+            font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+            line-height: 2.5;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fdfdf8;
+            color: #2c2c2c;
+        }
+
+        h1 {
+            color: #8B0000;
+            border-bottom: 3px solid #8B0000;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #8B4513;
+            margin-top: 40px;
+            border-left: 5px solid #8B4513;
+            padding-left: 15px;
+        }
+
+        .comparison-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .version-panel {
+            padding: 20px;
+            border: 2px solid #e6e0c0;
+            border-radius: 8px;
+            background-color: #fffef0;
+        }
+
+        .version-panel h3 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .test-text {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            line-height: 2.5;
+        }
+
+        .legend {
+            background-color: #f0f8ff;
+            border: 1px solid #b0d4f1;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .legend h4 {
+            margin-top: 0;
+            color: #4682B4;
+        }
+
+        .legend-item {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            font-size: 0.9em;
+        }
+
+        /* ==================== v5.0 样式 ==================== */
+
+        /* 人名 - 褐色+实线 */
+        .v5-person {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(139, 69, 19, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 地名 - 褐色+虚线 */
+        .v5-place {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dashed rgba(139, 69, 19, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 官职 - 褐色+实线+加粗 */
+        .v5-official {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(139, 69, 19, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+
+        /* 时间 - 青色+点线 */
+        .v5-time {
+            color: #008B8B;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dotted rgba(0, 139, 139, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 朝代 - 紫色+实线 */
+        .v5-dynasty {
+            color: #9370DB;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(147, 112, 219, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 封国 - 紫色+实线 */
+        .v5-feudal-state {
+            color: #9370DB;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(147, 112, 219, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 族群 - 紫色+虚线 */
+        .v5-tribe {
+            color: #9370DB;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dashed rgba(147, 112, 219, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 制度 - 蓝色+实线 */
+        .v5-institution {
+            color: #4682B4;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(70, 130, 180, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 刑法 - 蓝色+虚线 */
+        .v5-legal {
+            color: #4682B4;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dashed rgba(70, 130, 180, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 礼仪 - 蓝色+点线 */
+        .v5-ritual {
+            color: #4682B4;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dotted rgba(70, 130, 180, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 身份 - 蓝色+无线 */
+        .v5-identity {
+            color: #4682B4;
+            background-color: rgba(255, 248, 220, 0.6);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 典籍 - 墨绿+波浪线 */
+        .v5-book {
+            color: #2F4F4F;
+            background-color: rgba(255, 248, 220, 0.6);
+            text-decoration: underline wavy rgba(47, 79, 79, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+            font-style: italic;
+        }
+
+        /* 思想 - 墨绿+点线 */
+        .v5-concept {
+            color: #2F4F4F;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dotted rgba(47, 79, 79, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 器物 - 橙褐+虚线 */
+        .v5-artifact {
+            color: #CD853F;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dashed rgba(205, 133, 63, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 生物 - 橙褐+点线 */
+        .v5-biology {
+            color: #CD853F;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dotted rgba(205, 133, 63, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 神话 - 橙褐+波浪线 */
+        .v5-mythical {
+            color: #CD853F;
+            background-color: rgba(255, 248, 220, 0.6);
+            text-decoration: underline wavy rgba(205, 133, 63, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 数量 - 海绿+实线+等宽 */
+        .v5-quantity {
+            color: #2E8B57;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(46, 139, 87, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-weight: 500;
+        }
+
+        /* ==================== v6.0 增强样式 ==================== */
+
+        /* 人名（帝王）- 深红+淡金底+粗双线+加粗 */
+        .v6-person-emperor {
+            color: #8B0000;
+            background-color: rgba(255, 250, 205, 0.7);
+            border-bottom: 3px double rgba(139, 0, 0, 0.6);
+            padding: 0 4px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        /* 人名（重要）- 褐色+淡黄底+中粗实线 */
+        .v6-person-major {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 2px solid rgba(139, 69, 19, 0.5);
+            padding: 0 3px;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+
+        /* 人名（普通）- 褐色+淡黄底+细实线 */
+        .v6-person {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(139, 69, 19, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 地名 - 赭褐+淡黄底+彩色细虚线 */
+        .v6-place {
+            color: #A0522D;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dashed rgba(160, 82, 45, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 官职 - 褐色+淡黄底+细虚线 */
+        .v6-official {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dashed rgba(139, 69, 19, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+
+        /* 时间（重大）- 青色+淡金底+中粗实线 */
+        .v6-time-major {
+            color: #008B8B;
+            background-color: rgba(255, 250, 205, 0.7);
+            border-bottom: 2px solid rgba(0, 139, 139, 0.6);
+            padding: 0 3px;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+
+        /* 时间（普通）- 青色+极淡黄底+细点线 */
+        .v6-time {
+            color: #008B8B;
+            background-color: rgba(255, 252, 240, 0.5);
+            border-bottom: 1px dotted rgba(0, 139, 139, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 朝代 - 紫色+淡黄底+彩色中粗实线 */
+        .v6-dynasty {
+            color: #9370DB;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 2px solid rgba(147, 112, 219, 0.6);
+            padding: 0 3px;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+
+        /* 封国 - 紫色+淡黄底+彩色细实线 */
+        .v6-feudal-state {
+            color: #9370DB;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(147, 112, 219, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 族群 - 紫色+淡黄底+彩色细虚线 */
+        .v6-tribe {
+            color: #9370DB;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dashed rgba(147, 112, 219, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 制度 - 蓝色+极淡黄底+彩色细实线 */
+        .v6-institution {
+            color: #4682B4;
+            background-color: rgba(255, 252, 240, 0.5);
+            border-bottom: 1px solid rgba(70, 130, 180, 0.4);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 刑法 - 蓝色+淡黄底+彩色细虚线 */
+        .v6-legal {
+            color: #4682B4;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px dashed rgba(70, 130, 180, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 礼仪 - 蓝色+极淡黄底+彩色细点线 */
+        .v6-ritual {
+            color: #4682B4;
+            background-color: rgba(255, 252, 240, 0.5);
+            border-bottom: 1px dotted rgba(70, 130, 180, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 身份 - 蓝色+极淡黄底+无线 */
+        .v6-identity {
+            color: #4682B4;
+            background-color: rgba(255, 252, 240, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 典籍 - 墨绿+淡黄底+粗波浪线+偏移 */
+        .v6-book {
+            color: #2F4F4F;
+            background-color: rgba(255, 248, 220, 0.6);
+            text-decoration: underline wavy rgba(47, 79, 79, 0.6);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 2px;
+            padding: 0 2px;
+            border-radius: 2px;
+            font-style: italic;
+        }
+
+        /* 思想 - 墨绿+极淡黄底+彩色细点线 */
+        .v6-concept {
+            color: #2F4F4F;
+            background-color: rgba(255, 252, 240, 0.5);
+            border-bottom: 1px dotted rgba(47, 79, 79, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 器物 - 橙褐+极淡黄底+彩色细虚线 */
+        .v6-artifact {
+            color: #CD853F;
+            background-color: rgba(255, 252, 240, 0.5);
+            border-bottom: 1px dashed rgba(205, 133, 63, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 生物 - 橙褐+极淡黄底+彩色细点线 */
+        .v6-biology {
+            color: #CD853F;
+            background-color: rgba(255, 252, 240, 0.5);
+            border-bottom: 1px dotted rgba(205, 133, 63, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 神话 - 橙褐+淡黄底+彩色粗波浪线+偏移 */
+        .v6-mythical {
+            color: #CD853F;
+            background-color: rgba(255, 248, 220, 0.6);
+            text-decoration: underline wavy rgba(205, 133, 63, 0.6);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 2px;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 数量 - 海绿+淡黄底+彩色细实线+等宽 */
+        .v6-quantity {
+            color: #2E8B57;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(46, 139, 87, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-weight: 500;
+        }
+
+        /* 重大历史事件 - 深红+淡金底+渐变线+加粗 */
+        .v6-event-major {
+            color: #8B0000;
+            background-color: rgba(255, 250, 205, 0.8);
+            background-image: linear-gradient(to right, rgba(139, 0, 0, 0.3), rgba(255, 193, 7, 0.3));
+            background-position: 0 100%;
+            background-size: 100% 2px;
+            background-repeat: no-repeat;
+            padding: 0 4px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background-color: #fffacd;
+            border-left: 4px solid #ffd700;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>实体渲染方案对比：v5.0 vs v6.0 增强版</h1>
+
+    <div class="legend">
+        <h4>v6.0 主要改进点</h4>
+        <div>
+            <strong>1. 底色分层：</strong>
+            <span class="legend-item" style="background: rgba(255, 250, 205, 0.7); padding: 2px 8px; border-radius: 3px;">第1层（核心）淡金底</span>
+            <span class="legend-item" style="background: rgba(255, 248, 220, 0.6); padding: 2px 8px; border-radius: 3px;">第2层（常规）淡黄底</span>
+            <span class="legend-item" style="background: rgba(255, 252, 240, 0.5); padding: 2px 8px; border-radius: 3px;">第3层（次要）极淡黄底</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <strong>2. 下划线增强：</strong>彩色匹配、粗细分级、双线、渐变线
+        </div>
+        <div style="margin-top: 10px;">
+            <strong>3. 特殊标识：</strong>帝王人物、重大历史事件
+        </div>
+    </div>
+
+    <h2>测试一：鸿门宴片段</h2>
+    <div class="comparison-wrapper">
+        <div class="version-panel">
+            <h3>v5.0 当前版本</h3>
+            <div class="test-text">
+                <span class="v5-time">楚汉之际</span>，
+                <span class="v5-person">项羽</span>率
+                <span class="v5-tribe">楚</span>军驻
+                <span class="v5-place">鸿门</span>，
+                <span class="v5-person">刘邦</span>驻
+                <span class="v5-place">霸上</span>。
+                <span class="v5-person">范增</span>献计曰："
+                <span class="v5-person">沛公</span>居
+                <span class="v5-place">山东</span>时，贪财好色，今入
+                <span class="v5-place">关</span>，财物无所取，妇女无所幸，此其志不在小。"乃使
+                <span class="v5-person">项庄</span>舞剑，意在
+                <span class="v5-person">沛公</span>。
+                <span class="v5-person">项伯</span>亦拔剑起舞，常以身翼蔽
+                <span class="v5-person">沛公</span>。
+                <span class="v5-person">樊哙</span>闯帐，
+                <span class="v5-person">项王</span>赐之
+                <span class="v5-quantity">卮酒</span>、
+                <span class="v5-quantity">彘肩</span>。
+            </div>
+        </div>
+
+        <div class="version-panel">
+            <h3>v6.0 增强版</h3>
+            <div class="test-text">
+                <span class="v6-time-major">楚汉之际</span>，
+                <span class="v6-person-emperor">项羽</span>率
+                <span class="v6-tribe">楚</span>军驻
+                <span class="v6-place">鸿门</span>，
+                <span class="v6-person-emperor">刘邦</span>驻
+                <span class="v6-place">霸上</span>。
+                <span class="v6-person-major">范增</span>献计曰："
+                <span class="v6-person">沛公</span>居
+                <span class="v6-place">山东</span>时，贪财好色，今入
+                <span class="v6-place">关</span>，财物无所取，妇女无所幸，此其志不在小。"乃使
+                <span class="v6-person">项庄</span>舞剑，意在
+                <span class="v6-person">沛公</span>。
+                <span class="v6-person">项伯</span>亦拔剑起舞，常以身翼蔽
+                <span class="v6-person">沛公</span>。
+                <span class="v6-person-major">樊哙</span>闯帐，
+                <span class="v6-person">项王</span>赐之
+                <span class="v6-quantity">卮酒</span>、
+                <span class="v6-quantity">彘肩</span>。
+            </div>
+            <div class="highlight-box">
+                <strong>v6.0 改进：</strong>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li>项羽、刘邦：深红+淡金底+粗双线（帝王）</li>
+                    <li>"楚汉之际"：淡金底+中粗实线（重大历史节点）</li>
+                    <li>范增、樊哙：中粗实线（重要人物）</li>
+                    <li>地名：彩色虚线（与文字颜色匹配）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>测试二：秦始皇统一六国</h2>
+    <div class="comparison-wrapper">
+        <div class="version-panel">
+            <h3>v5.0 当前版本</h3>
+            <div class="test-text">
+                <span class="v5-person">秦始皇</span>
+                <span class="v5-official">帝</span>，
+                <span class="v5-dynasty">秦</span>之
+                <span class="v5-identity">君主</span>也。
+                <span class="v5-time">秦王政二十六年</span>，灭
+                <span class="v5-feudal-state">齐</span>，天下统一。置
+                <span class="v5-quantity">三十六郡</span>，更名
+                <span class="v5-official">民</span>曰"
+                <span class="v5-identity">黔首</span>"。收天下兵，聚之
+                <span class="v5-place">咸阳</span>，销以为
+                <span class="v5-artifact">钟鐻</span>、
+                <span class="v5-artifact">金人十二</span>。行
+                <span class="v5-institution">郡县制</span>，废
+                <span class="v5-institution">分封制</span>。书同文，车同轨。统一
+                <span class="v5-artifact">度量衡</span>。
+            </div>
+        </div>
+
+        <div class="version-panel">
+            <h3>v6.0 增强版</h3>
+            <div class="test-text">
+                <span class="v6-person-emperor">秦始皇</span>
+                <span class="v6-official">帝</span>，
+                <span class="v6-dynasty">秦</span>之
+                <span class="v6-identity">君主</span>也。
+                <span class="v6-time-major">秦王政二十六年</span>，灭
+                <span class="v6-feudal-state">齐</span>，
+                <span class="v6-event-major">天下统一</span>。置
+                <span class="v6-quantity">三十六郡</span>，更名
+                <span class="v6-official">民</span>曰"
+                <span class="v6-identity">黔首</span>"。收天下兵，聚之
+                <span class="v6-place">咸阳</span>，销以为
+                <span class="v6-artifact">钟鐻</span>、
+                <span class="v6-artifact">金人十二</span>。行
+                <span class="v6-institution">郡县制</span>，废
+                <span class="v6-institution">分封制</span>。
+                <span class="v6-event-major">书同文</span>，
+                <span class="v6-event-major">车同轨</span>。统一
+                <span class="v6-artifact">度量衡</span>。
+            </div>
+            <div class="highlight-box">
+                <strong>v6.0 改进：</strong>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li>秦始皇：深红+淡金底+粗双线（帝王标识）</li>
+                    <li>"秦王政二十六年"：淡金底+中粗实线（重大历史时间）</li>
+                    <li>"天下统一""书同文""车同轨"：渐变下划线（重大事件）</li>
+                    <li>朝代"秦"：中粗实线（突出政治重要性）</li>
+                    <li>制度：极淡黄底+细实线（添加下划线）</li>
+                    <li>器物：极淡黄底+彩色细虚线（添加下划线）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>测试三：孔子与儒学</h2>
+    <div class="comparison-wrapper">
+        <div class="version-panel">
+            <h3>v5.0 当前版本</h3>
+            <div class="test-text">
+                <span class="v5-person">孔子</span>者，
+                <span class="v5-feudal-state">鲁</span>之
+                <span class="v5-identity">布衣</span>也。生于
+                <span class="v5-place">曲阜</span>，删
+                <span class="v5-book">《诗》</span>
+                <span class="v5-book">《书》</span>，定
+                <span class="v5-book">《礼》</span>
+                <span class="v5-book">《乐》</span>，赞
+                <span class="v5-book">《周易》</span>，作
+                <span class="v5-book">《春秋》</span>。弟子
+                <span class="v5-quantity">三千</span>，身通六艺者
+                <span class="v5-quantity">七十二人</span>。倡"
+                <span class="v5-concept">仁</span>"、"
+                <span class="v5-concept">礼</span>"之道，行
+                <span class="v5-concept">有教无类</span>。后世尊为"
+                <span class="v5-identity">至圣先师</span>"。
+            </div>
+        </div>
+
+        <div class="version-panel">
+            <h3>v6.0 增强版</h3>
+            <div class="test-text">
+                <span class="v6-person-major">孔子</span>者，
+                <span class="v6-feudal-state">鲁</span>之
+                <span class="v6-identity">布衣</span>也。生于
+                <span class="v6-place">曲阜</span>，删
+                <span class="v6-book">《诗》</span>
+                <span class="v6-book">《书》</span>，定
+                <span class="v6-book">《礼》</span>
+                <span class="v6-book">《乐》</span>，赞
+                <span class="v6-book">《周易》</span>，作
+                <span class="v6-book">《春秋》</span>。弟子
+                <span class="v6-quantity">三千</span>，身通六艺者
+                <span class="v6-quantity">七十二人</span>。倡"
+                <span class="v6-concept">仁</span>"、"
+                <span class="v6-concept">礼</span>"之道，行
+                <span class="v6-concept">有教无类</span>。后世尊为"
+                <span class="v6-identity">至圣先师</span>"。
+            </div>
+            <div class="highlight-box">
+                <strong>v6.0 改进：</strong>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li>孔子：中粗实线（重要人物）</li>
+                    <li>典籍《诗》《书》等：粗波浪线+偏移2px（更醒目）</li>
+                    <li>思想概念：极淡黄底+彩色细点线</li>
+                    <li>身份：极淡黄底（更淡雅）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>测试四：综合实体展示</h2>
+    <div class="comparison-wrapper">
+        <div class="version-panel">
+            <h3>v5.0 当前版本</h3>
+            <div class="test-text">
+                <p><strong>空间叙事：</strong>
+                    <span class="v5-person">李斯</span>
+                    <span class="v5-place">咸阳</span>
+                    <span class="v5-official">丞相</span>
+                </p>
+                <p><strong>时间维度：</strong>
+                    <span class="v5-time">秦始皇三十七年</span>
+                </p>
+                <p><strong>政治组织：</strong>
+                    <span class="v5-dynasty">秦</span>
+                    <span class="v5-feudal-state">楚</span>
+                    <span class="v5-tribe">匈奴</span>
+                </p>
+                <p><strong>社会制度：</strong>
+                    <span class="v5-institution">郡县制</span>
+                    <span class="v5-legal">连坐法</span>
+                    <span class="v5-ritual">封禅</span>
+                    <span class="v5-identity">士大夫</span>
+                </p>
+                <p><strong>文化思想：</strong>
+                    <span class="v5-book">《史记》</span>
+                    <span class="v5-concept">天人合一</span>
+                </p>
+                <p><strong>物质世界：</strong>
+                    <span class="v5-artifact">和氏璧</span>
+                    <span class="v5-biology">麒麟</span>
+                    <span class="v5-mythical">夸父</span>
+                </p>
+                <p><strong>数量度量：</strong>
+                    <span class="v5-quantity">三千里</span>
+                    <span class="v5-quantity">八百诸侯</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="version-panel">
+            <h3>v6.0 增强版</h3>
+            <div class="test-text">
+                <p><strong>空间叙事：</strong>
+                    <span class="v6-person-major">李斯</span>
+                    <span class="v6-place">咸阳</span>
+                    <span class="v6-official">丞相</span>
+                </p>
+                <p><strong>时间维度：</strong>
+                    <span class="v6-time-major">秦始皇三十七年</span>
+                </p>
+                <p><strong>政治组织：</strong>
+                    <span class="v6-dynasty">秦</span>
+                    <span class="v6-feudal-state">楚</span>
+                    <span class="v6-tribe">匈奴</span>
+                </p>
+                <p><strong>社会制度：</strong>
+                    <span class="v6-institution">郡县制</span>
+                    <span class="v6-legal">连坐法</span>
+                    <span class="v6-ritual">封禅</span>
+                    <span class="v6-identity">士大夫</span>
+                </p>
+                <p><strong>文化思想：</strong>
+                    <span class="v6-book">《史记》</span>
+                    <span class="v6-concept">天人合一</span>
+                </p>
+                <p><strong>物质世界：</strong>
+                    <span class="v6-artifact">和氏璧</span>
+                    <span class="v6-biology">麒麟</span>
+                    <span class="v6-mythical">夸父</span>
+                </p>
+                <p><strong>数量度量：</strong>
+                    <span class="v6-quantity">三千里</span>
+                    <span class="v6-quantity">八百诸侯</span>
+                </p>
+            </div>
+            <div class="highlight-box">
+                <strong>v6.0 视觉层次对比：</strong>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li>第1层（淡金底）：重大时间节点</li>
+                    <li>第2层（淡黄底）：人名、地名、朝代、典籍、神话、数量</li>
+                    <li>第3层（极淡黄底）：制度、礼仪、身份、器物、生物、思想</li>
+                    <li>下划线彩色：与文字颜色匹配，视觉更和谐</li>
+                    <li>波浪线加粗：典籍《史记》、神话"夸父"更醒目</li>
+                    <li>朝代加粗：从1px升级到2px</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>v6.0 核心改进总结</h2>
+    <div style="background-color: #f0ffe0; border: 2px solid #90ee90; border-radius: 8px; padding: 20px; margin: 30px 0;">
+        <h3 style="margin-top: 0; color: #228B22;">立即可实施的改进（无需标注变更）</h3>
+        <ol style="line-height: 2;">
+            <li><strong>下划线彩色化</strong>：下划线颜色与文字颜色匹配，视觉更和谐统一</li>
+            <li><strong>波浪线增强</strong>：典籍、神话的波浪线从1px加粗到2px，偏移2px</li>
+            <li><strong>朝代突出</strong>：朝代下划线从1px升级到2px，强调政治重要性</li>
+            <li><strong>器物添线</strong>：器物从无下划线改为彩色细虚线</li>
+            <li><strong>制度添线</strong>：制度从无下划线改为彩色细实线</li>
+            <li><strong>底色微调</strong>：次要实体（制度、礼仪、身份、器物等）使用更淡的底色</li>
+        </ol>
+
+        <h3 style="margin-top: 30px; color: #FF8C00;">需要标注支持的增强（可选，未来实施）</h3>
+        <ol style="line-height: 2;">
+            <li><strong>帝王标识</strong>：深红色+淡金底+粗双线，需标注 <code>〖@帝:秦始皇〗</code></li>
+            <li><strong>重要人物</strong>：中粗实线，需标注 <code>〖@重:李斯〗</code></li>
+            <li><strong>重大时间</strong>：淡金底+中粗实线，需标注 <code>〖#重:秦统一六国〗</code></li>
+            <li><strong>重大事件</strong>：渐变下划线，需标注 <code>〖◆事:焚书坑儒〗</code></li>
+        </ol>
+    </div>
+
+    <div style="margin-top: 60px; padding: 20px; background-color: #fff8dc; border-left: 4px solid #daa520;">
+        <h3 style="margin-top: 0; color: #b8860b;">推荐实施策略</h3>
+        <p style="line-height: 2;">
+            <strong>方案B：部分实施v6.0（推荐）</strong><br>
+            先实施无需标注变更的6项改进，效果立竿见影。<br>
+            帝王标识、重大事件等高级功能留待未来，根据用户反馈决定是否实施。
+        </p>
+        <p style="line-height: 2; color: #666;">
+            这样可以在不增加标注工作量的前提下，显著提升视觉效果和阅读体验。
+        </p>
+    </div>
+
+</body>
+</html>

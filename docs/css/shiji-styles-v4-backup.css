@@ -1,0 +1,473 @@
+/* 史记命名实体样式表 */
+
+/* 基础样式 */
+body {
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+    line-height: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdf8;
+    color: #2c2c2c;
+}
+
+/* 段落间距 */
+p {
+    margin: 2em 0;
+}
+
+/* ========================================
+   名词实体样式（v4.0重构）
+   设计理念：
+   1. 统一底色 - 所有实体共享淡黄色背景，与动词的红/暗红背景区分
+   2. 颜色区分类型 - 保留不同实体类型的文字颜色
+   3. 去除装饰 - 移除下划线、斜体等，保持简洁
+   4. 视觉层级 - 实体（背景淡雅）vs 动词（背景鲜明+加粗）
+   ======================================== */
+
+/* 人名样式 〖@人名〗 */
+.person {
+    color: #8B4513;              /* 褐色 */
+    background-color: rgba(255, 248, 220, 0.6);  /* 统一淡黄底色 */
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 地名样式 〖=地名〗 */
+.place {
+    color: #B8860B;              /* 深金色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 官职样式 〖;官职〗 */
+.official {
+    color: #8B0000;              /* 暗红色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 时间/纪年样式 〖#时间〗 */
+.time {
+    color: #008B8B;              /* 深青色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 朝代/氏族/国号样式 〖%朝代〗 */
+.dynasty {
+    color: #9370DB;              /* 中紫色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 封国样式 〖'封国〗 */
+.feudal-state {
+    color: #B266B2;              /* 梅红色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 制度/典章样式 〖&制度〗 */
+.institution {
+    color: #4682B4;              /* 钢青色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 族群/部落样式 〖^族群〗 */
+.tribe {
+    color: #2F4F4F;              /* 深灰绿 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 器物样式 〖~器物〗 */
+.artifact {
+    color: #CD853F;              /* 秘鲁棕 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 天文/历法样式 〖•天文〗 */
+.astronomy {
+    color: #483D8B;              /* 深岩蓝 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 传说生物/神话样式 〖!神话〗 */
+.mythical {
+    color: #8B008B;              /* 深品红 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 生物样式 〖+生物〗 */
+.biology {
+    color: #228B22;              /* 森林绿 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 典籍样式 〖$典籍〗 */
+.book {
+    color: #4B0082;              /* 靛蓝色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-style: italic;
+    cursor: default;
+}
+
+/* 礼仪样式 〖?礼仪〗 */
+.ritual {
+    color: #8B6914;              /* 深金杆 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 刑法样式 〖[刑法〗 */
+.legal {
+    color: #8B0000;              /* 暗红色 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 思想样式 〖〔思想〗 */
+.concept {
+    color: #2F4F4F;              /* 深灰绿 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 数量样式 〖:数量〗 */
+.quantity {
+    color: #2E8B57;              /* 海洋绿 */
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* ========================================
+   动词实体样式（v3.0新增）
+   设计理念：动词是历史叙事的核心动作，样式需要：
+   1. 醒目但不喧宾夺主（与名词实体视觉层级一致）
+   2. 类型区分明确（颜色+背景+边框组合）
+   3. 保持阅读流畅性（避免过度装饰）
+   ======================================== */
+
+/* 军事动词样式 ⟦◈伐⟧ */
+.verb-military {
+    color: #DC143C;              /* 深红色 - 战争与冲突 */
+    background-color: rgba(220, 20, 60, 0.08);  /* 淡红背景 */
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 600;            /* 加粗强调军事行动 */
+    cursor: default;
+}
+
+/* 刑罚动词样式 ⟦◉杀⟧ */
+.verb-penalty {
+    color: #8B0000;              /* 暗红色 - 刑罚与惩处 */
+    background-color: rgba(139, 0, 0, 0.06);    /* 淡暗红背景 */
+    border-bottom: 1px solid rgba(139, 0, 0, 0.3);  /* 底部边框强调 */
+    padding: 0 2px;
+    font-weight: 600;
+    cursor: default;
+}
+
+/* 政治动词样式 ⟦○立⟧（预留，未来扩展） */
+.verb-political {
+    color: #4169E1;              /* 皇家蓝 - 政治与外交 */
+    background-color: rgba(65, 105, 225, 0.06);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 经济动词样式 ⟦◇赐⟧（预留，未来扩展） */
+.verb-economic {
+    color: #DAA520;              /* 金杆色 - 经济与财货 */
+    background-color: rgba(218, 165, 32, 0.06);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 引号内容样式（对话） */
+/* 视觉设计：克制优雅的对话标记
+ * - 斜体：区分对话与叙述
+ * - 淡褐色背景：极淡的底色（透明度0.03），不干扰阅读
+ * - 底部虚线：褐色虚线（透明度0.3），提供清晰但不突兀的视觉边界
+ * - 适度内边距：左右各2px，保持文字呼吸感
+ */
+.quoted {
+    font-style: italic;
+    background-color: rgba(139, 69, 19, 0.03);
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.3);
+    padding: 0 2px;
+}
+
+/* 章节标题 */
+h1 {
+    color: #8B0000;
+    border-bottom: 3px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #8B4513;
+    border-left: 5px solid #8B4513;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #B8860B;
+    margin-top: 30px;
+}
+
+/* 分隔线 */
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 40px 0;
+}
+
+/* 引用块（对话） - 缩进两个汉字 */
+blockquote {
+    border: none;
+    margin: 0.2em 0;
+    padding: 0;
+    padding-left: 2em;
+    background: none;
+    font-style: italic;
+}
+
+/* 长对话缩进 - 段内较长引号内容另起一行，缩进两个汉字 */
+.dialogue {
+    display: block;
+    padding-left: 2em;
+}
+
+/* 列表样式 - 古籍风格，去除项目符号，仅缩进 */
+ul, ol {
+    line-height: 2;
+    list-style: none;
+    padding-left: 2em;
+    margin: 1em 0;
+}
+
+ul li, ol li {
+    margin: 0;
+}
+
+/* 段落编号 (PN - Purple Numbers) - 致敬 Doug Engelbart
+ * Purple Numbers 是 Doug Engelbart 在 1960 年代提出的概念，
+ * 用于为文档中的每个段落分配唯一的、可引用的编号。
+ * 这一创新使得超文本链接和精确引用成为可能，
+ * 是现代互联网和知识管理系统的重要基础。
+ *
+ * 参考 Eugene Eric Kim 的实现 (https://eekim.com/software/purple/purple.html)
+ * 使用淡紫色，字体较小，显示在段落开头。
+ * 点击 PN 可复制带锚点的完整 URL，便于分享和引用。
+ */
+.para-num {
+    display: inline;
+    color: #C8A8FF;  /* 淡紫色 - 参考 Purple 原始实现 */
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.75em;  /* x-small */
+    font-weight: bold;
+    font-style: normal;
+    margin-right: 0.5em;  /* 开头位置，右边距 */
+    text-decoration: none;
+    vertical-align: baseline;
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;  /* 显示为可点击 */
+    transition: color 0.2s ease;
+}
+
+/* 段落编号悬停效果 */
+.para-num:hover {
+    color: #9370DB;  /* 深一点的紫色 */
+    text-decoration: underline;
+}
+
+/* 当段落编号独立成段时（段落只包含编号），显示为块级元素 */
+p:has(> .para-num:only-child) {
+    margin: 0.5em 0;
+}
+
+p > .para-num:only-child {
+    display: inline-block;
+    margin-bottom: 0.3em;
+}
+
+/* 史记年表样式 - 突破 body max-width 限制，占满视口宽度 */
+/* wrapper 同时限制高度并启用双向滚动，使 thead sticky 生效 */
+.shiji-table-wrapper {
+    overflow: auto;
+    width: 100vw;
+    max-height: 85vh;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: 1px solid #d0c8a0;
+    border-bottom: 1px solid #d0c8a0;
+    box-shadow: 0 1px 4px rgba(90, 74, 42, 0.08);
+}
+
+.shiji-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85em;
+    line-height: 1.7;
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+}
+
+.shiji-table th {
+    background-color: #5a4a2a;
+    color: #f5f0e0;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #4a3c1e;
+    text-align: center;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    font-size: 0.95em;
+    letter-spacing: 0.05em;
+}
+
+.shiji-table td {
+    padding: 6px 10px;
+    border: 1px solid #e0dcc8;
+    text-align: left;
+    vertical-align: top;
+    color: #2c2c2c;
+}
+
+.shiji-table tr.even td {
+    background-color: #fdfdf8;
+}
+
+.shiji-table tr.odd td {
+    background-color: #f5f0e0;
+}
+
+.shiji-table tbody tr:hover td {
+    background-color: #ede8d4;
+    transition: background-color 0.15s ease;
+}
+
+.shiji-table td:nth-child(2) {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #5a4a2a;
+    background-color: rgba(90, 74, 42, 0.06);
+    text-align: center;
+    border-right: 2px solid #d0c8a0;
+}
+
+/* 表格行号列（Purple Number for table rows） */
+.row-pn-col {
+    width: 2em;
+    min-width: 2em;
+    text-align: right;
+    padding-right: 6px !important;
+    color: #C8A8FF;
+    font-size: 0.75em;
+    font-family: Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    border-right: 1px solid #e0d8c0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.row-pn-col .para-num {
+    font-size: 1em;  /* 继承列字号，不再额外缩小 */
+}
+
+/* 语义标注块（::: fenced div） */
+.note-box {
+    background-color: #fffef0;
+    border: 1px solid #e6e0c0;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.note-box h4 {
+    color: #8B7500;
+    margin-top: 0;
+}
+
+/* 太史公曰 */
+.note-太史公曰 {
+    border-left: 3px solid #8B7500;
+}
+
+/* 赞（韵文） */
+.note-赞 {
+    border-left: 3px solid #a0522d;
+    background-color: #fefcf5;
+    font-style: italic;
+}
+.note-赞 p {
+    line-height: 2.0;
+    white-space: pre-line;
+}
+
+/* 诗歌 */
+.note-诗歌 {
+    border-left: 3px solid #6b8e23;
+    background-color: #fcfef5;
+    font-style: italic;
+}
+.note-诗歌 p {
+    line-height: 2.0;
+    white-space: pre-line;
+}

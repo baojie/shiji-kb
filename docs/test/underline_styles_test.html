@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下划线样式测试 - 史记知识库</title>
+    <style>
+        body {
+            font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+            line-height: 2.5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fdfdf8;
+            color: #2c2c2c;
+        }
+
+        h1 {
+            color: #8B0000;
+            border-bottom: 3px solid #8B0000;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #8B4513;
+            margin-top: 40px;
+            border-left: 5px solid #8B4513;
+            padding-left: 15px;
+        }
+
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fffef0;
+            border: 1px solid #e6e0c0;
+            border-radius: 5px;
+        }
+
+        .test-item {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: white;
+            border-left: 3px solid #ddd;
+            padding-left: 15px;
+        }
+
+        .label {
+            display: inline-block;
+            width: 200px;
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .demo {
+            background-color: rgba(255, 248, 220, 0.6);
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+
+        /* ========== 1. text-decoration 基础样式 ========== */
+        .td-solid {
+            text-decoration: underline solid;
+        }
+
+        .td-double {
+            text-decoration: underline double;
+        }
+
+        .td-dotted {
+            text-decoration: underline dotted;
+        }
+
+        .td-dashed {
+            text-decoration: underline dashed;
+        }
+
+        .td-wavy {
+            text-decoration: underline wavy;
+        }
+
+        /* ========== 2. text-decoration 颜色变化 ========== */
+        .td-color-red {
+            text-decoration: underline solid red;
+        }
+
+        .td-color-blue {
+            text-decoration: underline wavy rgba(70, 130, 180, 0.6);
+        }
+
+        .td-color-green {
+            text-decoration: underline double rgba(46, 139, 87, 0.6);
+        }
+
+        /* ========== 3. text-decoration 粗细控制 ========== */
+        .td-thin {
+            text-decoration: underline solid;
+            text-decoration-thickness: 1px;
+        }
+
+        .td-medium {
+            text-decoration: underline solid;
+            text-decoration-thickness: 2px;
+        }
+
+        .td-thick {
+            text-decoration: underline solid;
+            text-decoration-thickness: 3px;
+        }
+
+        .td-from-font {
+            text-decoration: underline solid;
+            text-decoration-thickness: from-font;
+        }
+
+        /* ========== 4. text-underline-offset 偏移控制 ========== */
+        .td-offset-0 {
+            text-decoration: underline solid;
+            text-underline-offset: 0;
+        }
+
+        .td-offset-2 {
+            text-decoration: underline solid;
+            text-underline-offset: 2px;
+        }
+
+        .td-offset-5 {
+            text-decoration: underline solid;
+            text-underline-offset: 5px;
+        }
+
+        .td-offset-8 {
+            text-decoration: underline solid;
+            text-underline-offset: 8px;
+        }
+
+        /* ========== 5. border-bottom 样式 ========== */
+        .bb-solid {
+            border-bottom: 1px solid rgba(139, 69, 19, 0.4);
+        }
+
+        .bb-dashed {
+            border-bottom: 1px dashed rgba(139, 69, 19, 0.4);
+        }
+
+        .bb-dotted {
+            border-bottom: 1px dotted rgba(139, 69, 19, 0.4);
+        }
+
+        .bb-double {
+            border-bottom: 3px double rgba(139, 69, 19, 0.4);
+        }
+
+        .bb-groove {
+            border-bottom: 3px groove rgba(139, 69, 19, 0.6);
+        }
+
+        .bb-ridge {
+            border-bottom: 3px ridge rgba(139, 69, 19, 0.6);
+        }
+
+        .bb-inset {
+            border-bottom: 3px inset rgba(139, 69, 19, 0.6);
+        }
+
+        .bb-outset {
+            border-bottom: 3px outset rgba(139, 69, 19, 0.6);
+        }
+
+        /* ========== 6. border-bottom 粗细变化 ========== */
+        .bb-thin {
+            border-bottom: 1px solid rgba(139, 69, 19, 0.4);
+        }
+
+        .bb-medium {
+            border-bottom: 2px solid rgba(139, 69, 19, 0.5);
+        }
+
+        .bb-thick {
+            border-bottom: 3px solid rgba(139, 69, 19, 0.6);
+        }
+
+        .bb-very-thick {
+            border-bottom: 5px solid rgba(139, 69, 19, 0.7);
+        }
+
+        /* ========== 7. 组合样式：多色 ========== */
+        .combo-red {
+            text-decoration: underline solid;
+            text-decoration-color: rgba(220, 53, 69, 0.6);
+            text-decoration-thickness: 2px;
+        }
+
+        .combo-blue {
+            text-decoration: underline wavy;
+            text-decoration-color: rgba(70, 130, 180, 0.6);
+            text-decoration-thickness: 2px;
+        }
+
+        .combo-purple {
+            text-decoration: underline double;
+            text-decoration-color: rgba(147, 112, 219, 0.6);
+            text-decoration-thickness: 2px;
+        }
+
+        /* ========== 8. 渐变下划线（background实现） ========== */
+        .gradient-1 {
+            background-image: linear-gradient(to right, #8B4513, #CD853F);
+            background-position: 0 100%;
+            background-size: 100% 2px;
+            background-repeat: no-repeat;
+        }
+
+        .gradient-2 {
+            background-image: linear-gradient(to right, #dc3545, #ffc107);
+            background-position: 0 100%;
+            background-size: 100% 2px;
+            background-repeat: no-repeat;
+        }
+
+        .gradient-3 {
+            background-image: linear-gradient(to right, #4682B4, #9370DB, #CD853F);
+            background-position: 0 100%;
+            background-size: 100% 3px;
+            background-repeat: no-repeat;
+        }
+
+        /* ========== 9. 动画下划线 ========== */
+        .animated-1 {
+            background-image: linear-gradient(#8B4513, #8B4513);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size 0.3s;
+        }
+
+        .animated-1:hover {
+            background-size: 100% 2px;
+        }
+
+        .animated-2 {
+            position: relative;
+        }
+
+        .animated-2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #dc3545;
+            transition: width 0.3s;
+        }
+
+        .animated-2:hover::after {
+            width: 100%;
+        }
+
+        /* ========== 10. text-decoration-line 其他选项 ========== */
+        .tl-overline {
+            text-decoration: overline solid;
+        }
+
+        .tl-line-through {
+            text-decoration: line-through solid;
+        }
+
+        .tl-underline-overline {
+            text-decoration: underline overline solid;
+        }
+
+        .tl-all {
+            text-decoration: underline overline line-through solid;
+        }
+
+        /* ========== 11. 复杂组合效果 ========== */
+        .complex-1 {
+            text-decoration: underline wavy rgba(220, 53, 69, 0.5);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+        }
+
+        .complex-2 {
+            border-bottom: 2px double rgba(147, 112, 219, 0.6);
+            padding-bottom: 2px;
+        }
+
+        .complex-3 {
+            background-image: linear-gradient(90deg, #8B4513 0%, #CD853F 50%, #8B4513 100%);
+            background-position: 0 100%;
+            background-size: 100% 2px;
+            background-repeat: no-repeat;
+            text-decoration: none;
+        }
+
+        /* ========== 12. 史记实体风格应用示例 ========== */
+        .emperor {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.8);
+            border-bottom: 3px double rgba(139, 0, 0, 0.6);
+            padding: 0 4px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        .major-person {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 2px solid rgba(139, 69, 19, 0.5);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .minor-person {
+            color: #8B4513;
+            background-color: rgba(255, 248, 220, 0.6);
+            border-bottom: 1px solid rgba(139, 69, 19, 0.3);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .important-event {
+            color: #8B0000;
+            background-color: rgba(255, 248, 220, 0.7);
+            background-image: linear-gradient(to right, rgba(139, 0, 0, 0.4), rgba(255, 193, 7, 0.4));
+            background-position: 0 100%;
+            background-size: 100% 2px;
+            background-repeat: no-repeat;
+            padding: 0 4px;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <h1>下划线样式测试页面</h1>
+    <p style="color: #666; font-size: 0.95em;">
+        本页面展示各种CSS下划线装饰效果，供《史记》知识库实体标注样式选择参考。
+    </p>
+
+    <h2>1. text-decoration 基础样式</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">solid (实线):</span>
+            <span class="demo td-solid">秦始皇统一六国</span>
+        </div>
+        <div class="test-item">
+            <span class="label">double (双线):</span>
+            <span class="demo td-double">秦始皇统一六国</span>
+        </div>
+        <div class="test-item">
+            <span class="label">dotted (点线):</span>
+            <span class="demo td-dotted">秦始皇统一六国</span>
+        </div>
+        <div class="test-item">
+            <span class="label">dashed (虚线):</span>
+            <span class="demo td-dashed">秦始皇统一六国</span>
+        </div>
+        <div class="test-item">
+            <span class="label">wavy (波浪线):</span>
+            <span class="demo td-wavy">秦始皇统一六国</span>
+        </div>
+    </div>
+
+    <h2>2. text-decoration 颜色变化</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">红色实线:</span>
+            <span class="demo td-color-red">项羽破釜沉舟</span>
+        </div>
+        <div class="test-item">
+            <span class="label">蓝色波浪线:</span>
+            <span class="demo td-color-blue">项羽破釜沉舟</span>
+        </div>
+        <div class="test-item">
+            <span class="label">绿色双线:</span>
+            <span class="demo td-color-green">项羽破釜沉舟</span>
+        </div>
+    </div>
+
+    <h2>3. text-decoration-thickness 粗细控制</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">1px 细线:</span>
+            <span class="demo td-thin">刘邦约法三章</span>
+        </div>
+        <div class="test-item">
+            <span class="label">2px 中线:</span>
+            <span class="demo td-medium">刘邦约法三章</span>
+        </div>
+        <div class="test-item">
+            <span class="label">3px 粗线:</span>
+            <span class="demo td-thick">刘邦约法三章</span>
+        </div>
+        <div class="test-item">
+            <span class="label">from-font 字体定义:</span>
+            <span class="demo td-from-font">刘邦约法三章</span>
+        </div>
+    </div>
+
+    <h2>4. text-underline-offset 偏移控制</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">偏移 0px:</span>
+            <span class="demo td-offset-0">韩信背水一战</span>
+        </div>
+        <div class="test-item">
+            <span class="label">偏移 2px:</span>
+            <span class="demo td-offset-2">韩信背水一战</span>
+        </div>
+        <div class="test-item">
+            <span class="label">偏移 5px:</span>
+            <span class="demo td-offset-5">韩信背水一战</span>
+        </div>
+        <div class="test-item">
+            <span class="label">偏移 8px:</span>
+            <span class="demo td-offset-8">韩信背水一战</span>
+        </div>
+    </div>
+
+    <h2>5. border-bottom 样式</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">solid (实线):</span>
+            <span class="demo bb-solid">张良运筹帷幄</span>
+        </div>
+        <div class="test-item">
+            <span class="label">dashed (虚线):</span>
+            <span class="demo bb-dashed">张良运筹帷幄</span>
+        </div>
+        <div class="test-item">
+            <span class="label">dotted (点线):</span>
+            <span class="demo bb-dotted">张良运筹帷幄</span>
+        </div>
+        <div class="test-item">
+            <span class="label">double (双线):</span>
+            <span class="demo bb-double">张良运筹帷幄</span>
+        </div>
+        <div class="test-item">
+            <span class="label">groove (凹槽3D):</span>
+            <span class="demo bb-groove">张良运筹帷幄</span>
+        </div>
+        <div class="test-item">
+            <span class="label">ridge (凸起3D):</span>
+            <span class="demo bb-ridge">张良运筹帷幄</span>
+        </div>
+        <div class="test-item">
+            <span class="label">inset (嵌入3D):</span>
+            <span class="demo bb-inset">张良运筹帷幄</span>
+        </div>
+        <div class="test-item">
+            <span class="label">outset (突出3D):</span>
+            <span class="demo bb-outset">张良运筹帷幄</span>
+        </div>
+    </div>
+
+    <h2>6. border-bottom 粗细变化</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">1px 细边框:</span>
+            <span class="demo bb-thin">萧何月下追韩信</span>
+        </div>
+        <div class="test-item">
+            <span class="label">2px 中边框:</span>
+            <span class="demo bb-medium">萧何月下追韩信</span>
+        </div>
+        <div class="test-item">
+            <span class="label">3px 粗边框:</span>
+            <span class="demo bb-thick">萧何月下追韩信</span>
+        </div>
+        <div class="test-item">
+            <span class="label">5px 很粗边框:</span>
+            <span class="demo bb-very-thick">萧何月下追韩信</span>
+        </div>
+    </div>
+
+    <h2>7. 组合样式：颜色+粗细</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">红色粗实线:</span>
+            <span class="demo combo-red">鸿门宴</span>
+        </div>
+        <div class="test-item">
+            <span class="label">蓝色粗波浪:</span>
+            <span class="demo combo-blue">鸿门宴</span>
+        </div>
+        <div class="test-item">
+            <span class="label">紫色粗双线:</span>
+            <span class="demo combo-purple">鸿门宴</span>
+        </div>
+    </div>
+
+    <h2>8. 渐变下划线（background实现）</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">褐色→橙褐渐变:</span>
+            <span class="demo gradient-1">司马迁著史记</span>
+        </div>
+        <div class="test-item">
+            <span class="label">红色→金色渐变:</span>
+            <span class="demo gradient-2">司马迁著史记</span>
+        </div>
+        <div class="test-item">
+            <span class="label">蓝→紫→橙三色渐变:</span>
+            <span class="demo gradient-3">司马迁著史记</span>
+        </div>
+    </div>
+
+    <h2>9. 动画下划线（悬停查看效果）</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">从左展开（悬停）:</span>
+            <span class="demo animated-1">陈胜吴广起义</span>
+        </div>
+        <div class="test-item">
+            <span class="label">伪元素展开（悬停）:</span>
+            <span class="demo animated-2">陈胜吴广起义</span>
+        </div>
+    </div>
+
+    <h2>10. text-decoration-line 其他选项</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">overline (上划线):</span>
+            <span class="demo tl-overline">廉颇蔺相如列传</span>
+        </div>
+        <div class="test-item">
+            <span class="label">line-through (删除线):</span>
+            <span class="demo tl-line-through">廉颇蔺相如列传</span>
+        </div>
+        <div class="test-item">
+            <span class="label">上划+下划:</span>
+            <span class="demo tl-underline-overline">廉颇蔺相如列传</span>
+        </div>
+        <div class="test-item">
+            <span class="label">三线组合:</span>
+            <span class="demo tl-all">廉颇蔺相如列传</span>
+        </div>
+    </div>
+
+    <h2>11. 复杂组合效果</h2>
+    <div class="test-section">
+        <div class="test-item">
+            <span class="label">波浪+粗细+偏移:</span>
+            <span class="demo complex-1">屈原投汨罗江</span>
+        </div>
+        <div class="test-item">
+            <span class="label">双线边框+间距:</span>
+            <span class="demo complex-2">屈原投汨罗江</span>
+        </div>
+        <div class="test-item">
+            <span class="label">双向渐变背景:</span>
+            <span class="demo complex-3">屈原投汨罗江</span>
+        </div>
+    </div>
+
+    <h2>12. 史记实体风格应用示例</h2>
+    <div class="test-section">
+        <p style="line-height: 2.5;">
+            <span class="emperor">秦始皇</span>（帝王专用：粗双线）于
+            <span class="major-person">咸阳</span>统一六国，命
+            <span class="major-person">李斯</span>（重要人物：中粗实线）为丞相，
+            <span class="minor-person">赵高</span>（次要人物：细实线）为中车府令。
+            <span class="important-event">焚书坑儒</span>（重大事件：渐变线）是其重要政策。
+        </p>
+        <p style="color: #666; font-size: 0.9em; margin-top: 20px;">
+            <strong>说明：</strong>不同粗细和样式的下划线可以表示人物的重要程度和类型层级。
+        </p>
+    </div>
+
+    <div style="margin-top: 60px; padding: 20px; background-color: #f0f8ff; border-left: 4px solid #4682B4;">
+        <h3 style="margin-top: 0; color: #4682B4;">浏览器兼容性说明</h3>
+        <ul style="line-height: 1.8; color: #555;">
+            <li><code>text-decoration-thickness</code> 和 <code>text-underline-offset</code> 在现代浏览器中支持良好</li>
+            <li><code>wavy</code> 波浪线在 Firefox 和 Chrome 现代版本中支持</li>
+            <li>3D边框效果（groove/ridge/inset/outset）在不同浏览器中渲染可能有差异</li>
+            <li>渐变下划线通过 <code>background-image</code> 实现，兼容性最好</li>
+            <li>建议优先使用 <code>border-bottom</code> 或 <code>text-decoration</code> 的基础样式</li>
+        </ul>
+    </div>
+
+</body>
+</html>

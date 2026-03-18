@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实体渲染测试页面 - 史记知识库</title>
+    <link rel="stylesheet" href="../css/shiji-styles.css">
+    <style>
+        body {
+            font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #faf9f7;
+            line-height: 2;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #5a6c7d;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .color-group {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .color-label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .example-text {
+            font-size: 18px;
+            line-height: 2.2;
+            margin: 15px 0;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 5px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .verb-section {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .note {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>实体渲染测试页面 v5.0</h1>
+
+    <div class="note">
+        <strong>测试说明：</strong>本页面用于测试和验证《史记》知识库中所有实体类型的渲染效果。配色方案基于
+        <a href="../../doc/spec/实体渲染规划.md">实体渲染规划 v5.0</a>。
+    </div>
+
+    <!-- 统计卡片 -->
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number">18</div>
+            <div class="stat-label">实体类型</div>
+        </div>
+        <div class="stat-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <div class="stat-number">7</div>
+            <div class="stat-label">配色分组</div>
+        </div>
+        <div class="stat-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <div class="stat-number">5</div>
+            <div class="stat-label">下划线样式</div>
+        </div>
+        <div class="stat-card" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+            <div class="stat-number">4</div>
+            <div class="stat-label">动词类型</div>
+        </div>
+    </div>
+
+    <!-- 第一组：褐色 - 空间叙事要素 -->
+    <div class="section">
+        <h2>第一组：褐色 (#8B4513) - 空间叙事要素</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #8B4513;"></div>
+                <span>褐色文字 + 淡黄底色 + 不同下划线</span>
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>人名 <code>〖@人名〗</code> - 实线</h3>
+            <div class="example-text">
+                <span class="person" title="人名">项羽</span>本名<span class="person" title="人名">项籍</span>，
+                <span class="person" title="人名">楚</span>将<span class="person" title="人名">项燕</span>之<span class="identity" title="身份">孙</span>也。
+                <span class="person" title="人名">刘邦</span>与<span class="person" title="人名">张良</span>、<span class="person" title="人名">韩信</span>谋天下。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>地名 <code>〖^地名〗</code> - 虚线</h3>
+            <div class="example-text">
+                <span class="person" title="人名">项羽</span>起兵于<span class="place" title="地名">江东</span>，
+                破<span class="feudal-state" title="封国">秦</span>于<span class="place" title="地名">巨鹿</span>，
+                都<span class="place" title="地名">彭城</span>，最终败于<span class="place" title="地名">垓下</span>。
+                <span class="place" title="地名">长安</span>与<span class="place" title="地名">洛阳</span>为两都。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>官职 <code>〖;官职〗</code> - 实线（高频）/ 虚线（中频）</h3>
+            <div class="example-text">
+                <span class="person" title="人名">萧何</span>为<span class="official" title="官职">丞相</span>，
+                <span class="person" title="人名">张良</span>封<span class="official" title="官职">留侯</span>，
+                <span class="person" title="人名">韩信</span>拜<span class="official" title="官职">大将军</span>。
+                <span class="official" title="官职">太尉</span>、<span class="official" title="官职">御史大夫</span>与<span class="official" title="官职">丞相</span>为三公。
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二组：青色 - 时间维度 -->
+    <div class="section">
+        <h2>第二组：青色 (#008B8B) - 时间维度（独立）</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #008B8B;"></div>
+                <span>深青色文字 + 淡黄底色 + 点线</span>
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>时间 <code>〖#时间〗</code> - 点线</h3>
+            <div class="example-text">
+                <span class="time" title="时间">周</span><span class="official" title="官职">武王</span><span class="time" title="时间">十一年</span>，
+                <span class="official" title="官职">武王</span><span class="verb-military" title="军事动词">伐</span><span class="feudal-state" title="封国">商纣</span>。
+                <span class="time" title="时间">春秋</span>时期，<span class="time" title="时间">战国</span>之世，
+                <span class="feudal-state" title="封国">秦</span>于<span class="time" title="时间">秦始皇二十六年</span>一统天下。
+            </div>
+        </div>
+    </div>
+
+    <!-- 第三组：紫色 - 政治组织 -->
+    <div class="section">
+        <h2>第三组：紫色 (#9370DB) - 政治组织</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #9370DB;"></div>
+                <span>紫色文字 + 淡黄底色 + 实线/虚线</span>
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>朝代 <code>〖$朝代〗</code> - 实线</h3>
+            <div class="example-text">
+                <span class="dynasty" title="朝代">夏</span>、<span class="dynasty" title="朝代">商</span>、<span class="dynasty" title="朝代">周</span>三代，
+                <span class="dynasty" title="朝代">秦</span>并天下，<span class="dynasty" title="朝代">汉</span>兴四百年。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>封国 <code>〖&封国〗</code> - 实线</h3>
+            <div class="example-text">
+                <span class="feudal-state" title="封国">齐</span>、<span class="feudal-state" title="封国">楚</span>、
+                <span class="feudal-state" title="封国">燕</span>、<span class="feudal-state" title="封国">赵</span>、
+                <span class="feudal-state" title="封国">韩</span>、<span class="feudal-state" title="封国">魏</span>为六国，
+                <span class="feudal-state" title="封国">秦</span>灭之而一统。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>族群 <code>〖%族群〗</code> - 虚线</h3>
+            <div class="example-text">
+                <span class="tribe" title="族群">匈奴</span>居于北方，<span class="tribe" title="族群">百越</span>处南疆，
+                <span class="tribe" title="族群">东胡</span>在东，<span class="tribe" title="族群">西羌</span>据西。
+                <span class="dynasty" title="朝代">汉</span>与<span class="tribe" title="族群">匈奴</span>和亲。
+            </div>
+        </div>
+    </div>
+
+    <!-- 第四组：蓝色 - 社会制度 -->
+    <div class="section">
+        <h2>第四组：蓝色 (#4682B4) - 社会制度</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #4682B4;"></div>
+                <span>钢青色文字 + 淡黄底色 + 多样下划线</span>
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>制度 <code>〖~制度〗</code> - 实线（核心）/ 虚线</h3>
+            <div class="example-text">
+                <span class="dynasty" title="朝代">秦</span>行<span class="institution" title="制度">郡县制</span>，
+                废<span class="institution" title="制度">分封制</span>，
+                设<span class="institution" title="制度">三公九卿</span>，
+                统一<span class="institution" title="制度">度量衡</span>。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>刑法 <code>〖/刑法〗</code> - 虚线</h3>
+            <div class="example-text">
+                <span class="legal" title="刑法">连坐法</span>严苛，<span class="legal" title="刑法">夷三族</span>酷烈，
+                犯<span class="legal" title="刑法">诽谤罪</span>者处<span class="legal" title="刑法">腰斩</span>。
+                <span class="dynasty" title="朝代">汉</span>除<span class="legal" title="刑法">肉刑</span>。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>礼仪 <code>〖*礼仪〗</code> - 点线</h3>
+            <div class="example-text">
+                行<span class="ritual" title="礼仪">三跪九叩</span>之礼，
+                举<span class="ritual" title="礼仪">封禅</span>大典，
+                设<span class="ritual" title="礼仪">太牢</span>祭祀，
+                守<span class="ritual" title="礼仪">丧服</span>三年。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>身份 <code>〖_身份〗</code> - 无下划线</h3>
+            <div class="example-text">
+                <span class="identity" title="身份">天子</span>居九重，<span class="identity" title="身份">诸侯</span>据一方，
+                <span class="identity" title="身份">卿相</span>治国政，<span class="identity" title="身份">士</span>人读书，
+                <span class="identity" title="身份">农</span>耕田野，<span class="identity" title="身份">工</span>造器物，
+                <span class="identity" title="身份">商</span>行贾贸易。
+            </div>
+        </div>
+    </div>
+
+    <!-- 第五组：墨绿 - 文化思想 -->
+    <div class="section">
+        <h2>第五组：墨绿 (#2F4F4F) - 文化思想</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #2F4F4F;"></div>
+                <span>深石板灰文字 + 淡黄底色 + 波浪线/点线</span>
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>典籍 <code>〖!典籍〗</code> - 波浪线（传统书名线）</h3>
+            <div class="example-text">
+                <span class="person" title="人名">孔子</span>作<span class="book" title="典籍">春秋</span>，
+                删定<span class="book" title="典籍">诗经</span>、<span class="book" title="典籍">尚书</span>，
+                述<span class="book" title="典籍">周易</span>，序<span class="book" title="典籍">礼记</span>。
+                <span class="person" title="人名">司马迁</span>撰<span class="book" title="典籍">史记</span>。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>思想 <code>〖?思想〗</code> - 点线</h3>
+            <div class="example-text">
+                <span class="person" title="人名">孔子</span>倡<span class="concept" title="思想">仁义</span>，
+                <span class="person" title="人名">孟子</span>言<span class="concept" title="思想">王道</span>，
+                <span class="person" title="人名">荀子</span>主<span class="concept" title="思想">性恶论</span>，
+                <span class="person" title="人名">韩非</span>尚<span class="concept" title="思想">法治</span>。
+                <span class="dynasty" title="朝代">汉</span>立<span class="concept" title="思想">儒学</span>为正统。
+            </div>
+        </div>
+    </div>
+
+    <!-- 第六组：橙褐 - 物质世界 -->
+    <div class="section">
+        <h2>第六组：橙褐 (#CD853F) - 物质世界</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #CD853F;"></div>
+                <span>秘鲁色文字 + 淡黄底色 + 多样下划线</span>
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>器物 <code>〖=器物〗</code> - 虚线</h3>
+            <div class="example-text">
+                <span class="person" title="人名">秦始皇</span>铸<span class="artifact" title="器物">十二金人</span>，
+                造<span class="artifact" title="器物">阿房宫</span>，
+                作<span class="artifact" title="器物">长城</span>，
+                收天下<span class="artifact" title="器物">兵器</span>。
+                <span class="artifact" title="器物">九鼎</span>传国。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>生物 <code>〖+生物〗</code> - 点线</h3>
+            <div class="example-text">
+                <span class="official" title="官职">武王</span>乘<span class="biology" title="生物">白马</span>，
+                <span class="person" title="人名">项羽</span>骑<span class="biology" title="生物">乌骓</span>，
+                见<span class="biology" title="生物">白虎</span>、<span class="biology" title="生物">青龙</span>之瑞，
+                献<span class="biology" title="生物">灵芝</span>、<span class="biology" title="生物">嘉禾</span>之祥。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>天文 <code>〖%天文〗</code> - 点线</h3>
+            <div class="example-text">
+                观<span class="astronomy" title="天文">五星聚</span>于东方，
+                见<span class="astronomy" title="天文">荧惑</span>守心，
+                <span class="astronomy" title="天文">太白</span>经天，
+                <span class="astronomy" title="天文">岁星</span>失行，
+                占<span class="astronomy" title="天文">北斗</span>以知吉凶。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>神话 <code>〖:神话〗</code> - 无下划线（底色已足够）</h3>
+            <div class="example-text">
+                <span class="mythical" title="神话">黄帝</span>战<span class="mythical" title="神话">蚩尤</span>于<span class="place" title="地名">涿鹿</span>，
+                <span class="mythical" title="神话">女娲</span>补天，<span class="mythical" title="神话">共工</span>触<span class="mythical" title="神话">不周山</span>，
+                <span class="mythical" title="神话">大禹</span>治水，<span class="mythical" title="神话">后羿</span>射日。
+            </div>
+        </div>
+    </div>
+
+    <!-- 第七组：海绿 - 数量度量 -->
+    <div class="section">
+        <h2>第七组：海绿 (#2E8B57) - 数量度量（独立）</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #2E8B57;"></div>
+                <span>海洋绿文字 + 淡黄底色 + 等宽字体 + 实线</span>
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>数量 <code>〖数量〗</code> - 等宽字体 + 实线</h3>
+            <div class="example-text">
+                <span class="feudal-state" title="封国">秦</span>有<span class="quantity" title="数量">带甲百万</span>，
+                <span class="person" title="人名">项羽</span>破<span class="feudal-state" title="封国">秦</span>军<span class="quantity" title="数量">二十万</span>于<span class="place" title="地名">巨鹿</span>，
+                坑<span class="feudal-state" title="封国">赵</span>卒<span class="quantity" title="数量">四十万</span>于<span class="place" title="地名">长平</span>。
+                <span class="place" title="地名">咸阳</span>宫室<span class="quantity" title="数量">三百</span>所，
+                收<span class="identity" title="身份">天下</span>财货<span class="quantity" title="数量">亿万</span>计。
+            </div>
+        </div>
+    </div>
+
+    <!-- 动词渲染测试 -->
+    <div class="section verb-section">
+        <h2>动词渲染测试（v3.0）</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #c82333; font-weight: bold; color: white; text-align: center; line-height: 20px;">◈</div>
+                <span>军事动词（红底加粗）</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #0056b3; font-weight: bold; color: white; text-align: center; line-height: 20px;">◉</div>
+                <span>刑罚动词（蓝底加粗）</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #d39e00; font-weight: bold; color: white; text-align: center; line-height: 20px;">○</div>
+                <span>政治动词（金底加粗）</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #218838; font-weight: bold; color: white; text-align: center; line-height: 20px;">◇</div>
+                <span>经济动词（绿底加粗）</span>
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>军事动词 <code><span class="verb-military" title="军事动词">动词</span></code></h3>
+            <div class="example-text">
+                <span class="person" title="人名">项羽</span><span class="verb-military" title="军事动词">破</span><span class="feudal-state" title="封国">秦</span>军于<span class="place" title="地名">巨鹿</span>，
+                <span class="verb-military" title="军事动词">围</span><span class="place" title="地名">荥阳</span>，
+                <span class="verb-military" title="军事动词">攻</span><span class="place" title="地名">彭城</span>，
+                <span class="person" title="人名">韩信</span><span class="verb-military" title="军事动词">击</span><span class="feudal-state" title="封国">赵</span>于<span class="place" title="地名">井陉</span>，
+                <span class="verb-military" title="军事动词">灭</span><span class="feudal-state" title="封国">齐</span>。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>刑罚动词 <code><span class="verb-penalty" title="刑罚动词">动词</span></code></h3>
+            <div class="example-text">
+                <span class="person" title="人名">秦始皇</span><span class="verb-penalty" title="刑罚动词">诛</span><span class="person" title="人名">嫪毐</span>，
+                <span class="verb-penalty" title="刑罚动词">族</span>其三族，
+                <span class="person" title="人名">赵高</span><span class="verb-penalty" title="刑罚动词">杀</span><span class="person" title="人名">李斯</span>，
+                <span class="verb-penalty" title="刑罚动词">夷</span>其家。
+                <span class="person" title="人名">吕后</span><span class="verb-penalty" title="刑罚动词">戮</span><span class="person" title="人名">戚夫人</span>。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>政治动词 <code><span class="verb-political" title="政治动词">动词</span></code></h3>
+            <div class="example-text">
+                <span class="official" title="官职">武王</span><span class="verb-political" title="政治动词">伐</span><span class="feudal-state" title="封国">纣</span>而<span class="verb-political" title="政治动词">立</span><span class="dynasty" title="朝代">周</span>，
+                <span class="person" title="人名">刘邦</span><span class="verb-political" title="政治动词">即</span><span class="official" title="官职">皇帝</span>位，
+                <span class="verb-political" title="政治动词">封</span><span class="person" title="人名">韩信</span>为<span class="official" title="官职">齐王</span>，
+                <span class="verb-political" title="政治动词">废</span><span class="official" title="官职">太子</span><span class="person" title="人名">扶苏</span>。
+            </div>
+        </div>
+
+        <div class="color-group">
+            <h3>经济动词 <code><span class="verb-economic" title="经济动词">动词</span></code></h3>
+            <div class="example-text">
+                <span class="feudal-state" title="封国">秦</span><span class="verb-economic" title="经济动词">收</span>天下兵器，
+                <span class="verb-economic" title="经济动词">铸</span><span class="artifact" title="器物">十二金人</span>，
+                <span class="identity" title="身份">商贾</span><span class="verb-economic" title="经济动词">贩</span>货物于<span class="identity" title="身份">诸侯</span>间，
+                <span class="official" title="官职">平准令</span><span class="verb-economic" title="经济动词">平</span>物价。
+            </div>
+        </div>
+    </div>
+
+    <!-- 对比表格 -->
+    <div class="section">
+        <h2>实体 vs 动词 对比</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>背景色</th>
+                    <th>文字色</th>
+                    <th>字重</th>
+                    <th>特殊样式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>名词实体</strong></td>
+                    <td>统一淡黄 rgba(255, 248, 220, 0.6)</td>
+                    <td>7种语义色</td>
+                    <td>normal</td>
+                    <td>5种下划线组合</td>
+                </tr>
+                <tr>
+                    <td><strong>动词标注</strong></td>
+                    <td>4种鲜明底色（红/蓝/金/绿）</td>
+                    <td>白色</td>
+                    <td>bold</td>
+                    <td>无下划线</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <strong>设计理念：</strong>
+            <ul>
+                <li><strong>名词实体</strong>：淡雅底色 + 语义化颜色分组 + 下划线辅助 → 适合长文阅读，不喧宾夺主</li>
+                <li><strong>动词标注</strong>：鲜明底色 + 加粗字体 → 突出历史动作，快速定位事件关键节点</li>
+                <li><strong>视觉层次</strong>：动词（强）> 实体（柔），符合叙事文本的信息结构</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 综合测试段落 -->
+    <div class="section">
+        <h2>综合测试：经典段落渲染</h2>
+
+        <h3>段落一：鸿门宴</h3>
+        <div class="example-text">
+            <span class="time" title="时间">汉元年</span><span class="time" title="时间">十月</span>，
+            <span class="person" title="人名">沛公</span><span class="verb-military" title="军事动词">攻</span><span class="place" title="地名">咸阳</span>。
+            <span class="person" title="人名">项羽</span>闻之大怒，
+            <span class="verb-military" title="军事动词">进</span>兵<span class="place" title="地名">鸿门</span>，
+            欲<span class="verb-military" title="军事动词">击</span><span class="person" title="人名">沛公</span>。
+            <span class="person" title="人名">项伯</span>夜驰<span class="verb-political" title="政治动词">告</span><span class="person" title="人名">张良</span>，
+            <span class="person" title="人名">良</span>乃<span class="verb-political" title="政治动词">见</span><span class="person" title="人名">沛公</span>。
+            翌日，<span class="person" title="人名">沛公</span>从<span class="quantity" title="数量">百余骑</span><span class="verb-political" title="政治动词">谒</span><span class="person" title="人名">项羽</span>于<span class="place" title="地名">鸿门</span>。
+            <span class="person" title="人名">范增</span>数目<span class="person" title="人名">项王</span>，
+            举<span class="artifact" title="器物">玉玦</span>示之者<span class="quantity" title="数量">三</span>。
+            <span class="person" title="人名">项庄</span><span class="verb-political" title="政治动词">请</span>舞剑，
+            <span class="person" title="人名">项伯</span>亦<span class="verb-political" title="政治动词">起</span>舞，常以身翼蔽<span class="person" title="人名">沛公</span>。
+            <span class="person" title="人名">张良</span><span class="verb-political" title="政治动词">出</span>，召<span class="person" title="人名">樊哙</span>。
+            <span class="person" title="人名">樊哙</span><span class="verb-political" title="政治动词">闯</span>入，
+            <span class="person" title="人名">项王</span><span class="verb-political" title="政治动词">赐</span>之<span class="artifact" title="器物">酒</span>。
+            坐须臾，<span class="person" title="人名">沛公</span><span class="verb-political" title="政治动词">起</span>如厕，
+            因<span class="verb-political" title="政治动词">脱</span>身独去，
+            从<span class="place" title="地名">郦山</span>下道走<span class="place" title="地名">芷阳</span>间行。
+            <span class="person" title="人名">项王</span>终<span class="verb-penalty" title="刑罚动词">杀</span><span class="feudal-state" title="封国">秦</span><span class="official" title="官职">降王</span><span class="person" title="人名">子婴</span>，
+            <span class="verb-military" title="军事动词">烧</span><span class="artifact" title="器物">秦宫室</span>，火<span class="time" title="时间">三月</span>不灭。
+        </div>
+
+        <h3>段落二：垓下之围</h3>
+        <div class="example-text">
+            <span class="time" title="时间">五年</span>，
+            <span class="person" title="人名">高祖</span>与<span class="identity" title="身份">诸侯</span>兵<span class="verb-military" title="军事动词">围</span><span class="person" title="人名">项羽</span>于<span class="place" title="地名">垓下</span>。
+            <span class="person" title="人名">项羽</span>兵<span class="quantity" title="数量">十万</span>，
+            粮尽。
+            <span class="dynasty" title="朝代">汉</span>军及<span class="identity" title="身份">诸侯</span>兵<span class="verb-military" title="军事动词">围</span>之数重。
+            夜闻<span class="dynasty" title="朝代">汉</span>军四面皆<span class="feudal-state" title="封国">楚</span>歌，
+            <span class="person" title="人名">项羽</span>乃大惊曰：
+            "<span class="dynasty" title="朝代">汉</span>皆已得<span class="feudal-state" title="封国">楚</span>乎？
+            是何<span class="feudal-state" title="封国">楚</span>人之多也！"
+            <span class="person" title="人名">项王</span>则夜<span class="verb-political" title="政治动词">起</span>，
+            饮于帐中。
+            有<span class="identity" title="身份">美人</span>名<span class="person" title="人名">虞</span>，
+            常幸从；
+            <span class="biology" title="生物">骏马</span>名<span class="biology" title="生物">骓</span>，
+            常骑之。
+            于是<span class="person" title="人名">项王</span>乃悲歌慷慨，
+            <span class="verb-political" title="政治动词">歌</span>曰：
+            "力拔山兮气盖世，
+            时不利兮<span class="biology" title="生物">骓</span>不逝。
+            <span class="biology" title="生物">骓</span>不逝兮可奈何，
+            <span class="person" title="人名">虞</span>兮<span class="person" title="人名">虞</span>兮奈若何！"
+            于是<span class="person" title="人名">项王</span>乃<span class="verb-political" title="政治动词">上</span><span class="biology" title="生物">马</span>，
+            麾下<span class="identity" title="身份">壮士</span><span class="quantity" title="数量">八百余人</span><span class="verb-political" title="政治动词">从</span>。
+            直夜<span class="verb-military" title="军事动词">溃</span><span class="place" title="地名">围</span>南出，
+            <span class="verb-military" title="军事动词">驰</span>走。
+            平明，<span class="dynasty" title="朝代">汉</span>军乃觉之，
+            <span class="verb-political" title="政治动词">令</span><span class="official" title="官职">骑将</span><span class="person" title="人名">灌婴</span>以<span class="quantity" title="数量">五千骑</span><span class="verb-military" title="军事动词">追</span>之。
+            <span class="person" title="人名">项王</span><span class="verb-military" title="军事动词">渡</span><span class="place" title="地名">淮</span>，
+            <span class="identity" title="身份">骑</span>能属者<span class="quantity" title="数量">百余人</span>耳。
+            <span class="person" title="人名">项王</span>至<span class="place" title="地名">阴陵</span>，
+            <span class="verb-political" title="政治动词">迷</span>失道。
+            至<span class="place" title="地名">东城</span>，
+            乃有<span class="quantity" title="数量">二十八骑</span>。
+            <span class="dynasty" title="朝代">汉</span><span class="identity" title="身份">骑</span><span class="verb-military" title="军事动词">追</span>者<span class="quantity" title="数量">数千人</span>。
+            <span class="person" title="人名">项王</span><span class="verb-penalty" title="刑罚动词">自刎</span>而<span class="verb-penalty" title="刑罚动词">死</span>。
+        </div>
+    </div>
+
+    <!-- 技术信息 -->
+    <div class="section">
+        <h2>技术信息</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>实体类型</th>
+                    <th>符号</th>
+                    <th>CSS类名</th>
+                    <th>配色</th>
+                    <th>下划线</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>人名</td><td><code>〖@〗</code></td><td>.person</td><td>#8B4513</td><td>solid</td></tr>
+                <tr><td>地名</td><td><code>〖^〗</code></td><td>.place</td><td>#8B4513</td><td>dashed</td></tr>
+                <tr><td>官职</td><td><code>〖;〗</code></td><td>.official</td><td>#8B4513</td><td>solid/dashed</td></tr>
+                <tr><td>时间</td><td><code>〖#〗</code></td><td>.time</td><td>#008B8B</td><td>dotted</td></tr>
+                <tr><td>朝代</td><td><code>〖$〗</code></td><td>.dynasty</td><td>#9370DB</td><td>solid</td></tr>
+                <tr><td>封国</td><td><code>〖&〗</code></td><td>.feudal-state</td><td>#9370DB</td><td>solid</td></tr>
+                <tr><td>族群</td><td><code>〖%〗</code></td><td>.tribe</td><td>#9370DB</td><td>dashed</td></tr>
+                <tr><td>制度</td><td><code>〖~〗</code></td><td>.institution</td><td>#4682B4</td><td>solid/dashed</td></tr>
+                <tr><td>刑法</td><td><code>〖/〗</code></td><td>.legal</td><td>#4682B4</td><td>dashed</td></tr>
+                <tr><td>礼仪</td><td><code>〖*〗</code></td><td>.ritual</td><td>#4682B4</td><td>dotted</td></tr>
+                <tr><td>身份</td><td><code>〖_〗</code></td><td>.identity</td><td>#4682B4</td><td>none</td></tr>
+                <tr><td>典籍</td><td><code>〖!〗</code></td><td>.book</td><td>#2F4F4F</td><td>wavy</td></tr>
+                <tr><td>思想</td><td><code>〖?〗</code></td><td>.concept</td><td>#2F4F4F</td><td>dotted</td></tr>
+                <tr><td>器物</td><td><code>〖=〗</code></td><td>.artifact</td><td>#CD853F</td><td>dashed</td></tr>
+                <tr><td>生物</td><td><code>〖+〗</code></td><td>.biology</td><td>#CD853F</td><td>dotted</td></tr>
+                <tr><td>天文</td><td><code>〖%〗</code></td><td>.astronomy</td><td>#CD853F</td><td>dotted</td></tr>
+                <tr><td>神话</td><td><code>〖:〗</code></td><td>.mythical</td><td>#CD853F</td><td>none</td></tr>
+                <tr><td>数量</td><td><code>〖〗</code></td><td>.quantity</td><td>#2E8B57</td><td>solid+monospace</td></tr>
+            </tbody>
+        </table>
+
+        <h3 style="margin-top: 30px;">动词类型</h3>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>动词类型</th>
+                    <th>符号</th>
+                    <th>CSS类名</th>
+                    <th>背景色</th>
+                    <th>示例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>军事动词</td><td><code>⟦◈〗</code></td><td>.verb-military</td><td>#dc3545</td><td>伐、攻、击、破</td></tr>
+                <tr><td>刑罚动词</td><td><code>⟦◉〗</code></td><td>.verb-punishment</td><td>#007bff</td><td>杀、诛、斩、族</td></tr>
+                <tr><td>政治动词</td><td><code>⟦○〗</code></td><td>.verb-political</td><td>#ffc107</td><td>立、封、废、即</td></tr>
+                <tr><td>经济动词</td><td><code>⟦◇〗</code></td><td>.verb-economic</td><td>#28a745</td><td>收、铸、贩、平</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 页脚 -->
+    <div style="text-align: center; margin-top: 60px; padding: 30px; border-top: 2px solid #ddd; color: #666;">
+        <p><strong>史记知识库</strong> · 实体渲染测试页面 v5.0</p>
+        <p>基于 <a href="../../doc/spec/实体渲染规划.md">实体渲染规划 v5.0</a> 和
+        <a href="../../doc/spec/动词渲染规则.md">动词渲染规则 v4.0</a></p>
+        <p style="font-size: 0.9em; margin-top: 10px;">
+            生成时间: 2026-03-19 |
+            <a href="../index.html">返回首页</a> |
+            <a href="../entities/index.html">实体索引</a>
+        </p>
+    </div>
+</body>
+</html>
