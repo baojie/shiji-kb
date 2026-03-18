@@ -271,11 +271,16 @@ hr {
 /* 引用块（对话） - 缩进两个汉字 */
 blockquote {
     border: none;
-    margin: 0.2em 0;
+    margin: 0.5em 0;  /* 稍微增加上下边距，避免与段落贴太紧 */
     padding: 0;
     padding-left: 2em;
     background: none;
     font-style: italic;
+}
+
+/* 当段落以"曰："结尾且后接blockquote时，减小段落下边距 */
+p:has(+ blockquote) {
+    margin-bottom: 0.5em;  /* 减小"曰："后的空白 */
 }
 
 /* 长对话缩进 - 段内较长引号内容另起一行，缩进两个汉字 */
