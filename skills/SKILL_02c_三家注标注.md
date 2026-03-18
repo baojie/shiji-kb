@@ -592,7 +592,7 @@ for para in soup.find_all('p'):
 2. 对每条 notes[i]：
    a. 判断是否为纯音韵注（正则：仅含"音X"/"X反"/"X切"）
       → 是：tagged_text = text（原样复制）
-   b. 调用 LLM 进行实体标注（Prompt 指定17类 Token + 书名规则）
+   b. 调用 LLM 进行实体标注（Prompt 指定18类 Token + 书名规则）
    c. 写回 tagged_text
 3. 输出更新后的 JSON
 ```
