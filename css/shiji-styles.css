@@ -21,32 +21,32 @@ p {
     color: #8B4513;
     text-decoration: underline;
     text-decoration-color: #8B451380;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
     font-weight: 500;
-    cursor: help;
+    cursor: default;
 }
 
 /* 地名样式 */
 .place {
     color: #B8860B;
-    text-decoration: underline;
+    text-decoration: underline double;  /* 双线区分地名和人名 */
     text-decoration-color: #B8860B80;
-    text-underline-offset: 2px;
-    cursor: help;
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
+    cursor: default;
 }
 
 /* 官职样式 */
 .official {
     color: #8B0000;
     font-weight: 500;
-    cursor: help;
+    cursor: default;
 }
 
 /* 时间/纪年样式 */
 .time {
     color: #008B8B;
     font-style: italic;
-    cursor: help;
+    cursor: default;
 }
 
 /* 朝代/氏族/国号样式 */
@@ -55,91 +55,160 @@ p {
     background-color: #F0E6FF;
     padding: 0 3px;
     border-radius: 2px;
-    cursor: help;
+    cursor: default;
 }
 
 /* 封国样式 */
 .feudal-state {
     color: #B266B2;
-    border-bottom: 1px solid #B266B280;
-    cursor: help;
+    text-decoration: underline solid #B266B280;  /* v5.3: 改用text-decoration避免与背景重叠 */
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
+    cursor: default;
 }
 
 /* 制度/典章样式 */
 .institution {
     color: #4682B4;
     font-weight: 500;
-    cursor: help;
+    cursor: default;
 }
 
 /* 族群/部落样式 */
 .tribe {
     color: #2F4F4F;
     font-weight: 500;
-    cursor: help;
+    cursor: default;
 }
 
 /* 器物样式 */
 .artifact {
     color: #CD853F;
     font-weight: 500;
-    cursor: help;
+    cursor: default;
 }
 
 /* 天文/历法样式 */
 .astronomy {
     color: #483D8B;
     font-style: italic;
-    cursor: help;
+    cursor: default;
 }
 
 /* 传说生物/神话样式 */
 .mythical {
     color: #8B008B;
     font-weight: 500;
-    cursor: help;
+    cursor: default;
 }
 
 /* 生物样式 */
 .biology {
     color: #228B22;
     font-weight: 500;
-    cursor: help;
+    cursor: default;
 }
 
 /* 典籍样式 */
 .book {
     color: #4B0082;
     font-style: italic;
-    cursor: help;
+    cursor: default;
 }
 
 /* 礼仪样式 */
 .ritual {
     color: #8B6914;
     font-weight: 500;
-    cursor: help;
+    cursor: default;
 }
 
 /* 刑法样式 */
 .legal {
     color: #8B0000;
     background-color: rgba(139, 0, 0, 0.06);
-    cursor: help;
+    cursor: default;
 }
 
 /* 思想样式 */
 .concept {
     color: #2F4F4F;
-    border-bottom: 1px dotted #2F4F4F;
-    cursor: help;
+    text-decoration: underline dotted #2F4F4F;  /* v5.3: 改用text-decoration避免与背景重叠 */
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
+    cursor: default;
 }
 
 /* 数量样式 */
 .quantity {
     color: #2E8B57;
     font-weight: 500;
-    cursor: help;
+    cursor: default;
+}
+
+/* 实体链接样式 - v5.3.2: 移除链接默认下划线，避免与实体自身的text-decoration重叠 */
+a.entity-link {
+    text-decoration: none;  /* 移除链接默认下划线 */
+    color: inherit;         /* 继承实体颜色 */
+}
+
+a.entity-link:hover {
+    opacity: 0.8;           /* 悬停时略微透明，提供视觉反馈 */
+}
+
+/* ======================================== 动词标注样式 v5.1 ======================================== */
+/* v5.1: 改用半透明背景，深色文字 + 加粗，提升可读性 */
+
+/* 军事动词 ⟦◈动词⟧ */
+.verb-military {
+    color: #DC143C;  /* 深红色文字 */
+    background-color: rgba(220, 20, 60, 0.12);  /* 半透明红色背景 */
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 刑罚动词 ⟦◉动词⟧ */
+.verb-penalty {
+    color: #0056b3;  /* 深蓝色文字 */
+    background-color: rgba(0, 86, 179, 0.10);  /* 半透明蓝色背景 */
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 政治动词 ⟦○动词⟧ */
+.verb-political {
+    color: #B8860B;  /* 金色文字 */
+    background-color: rgba(184, 134, 11, 0.12);  /* 半透明金色背景 */
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 经济动词 ⟦◇动词⟧ */
+.verb-economic {
+    color: #228B22;  /* 深绿色文字 */
+    background-color: rgba(34, 139, 34, 0.15);  /* 半透明绿色背景 */
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 身份标注 〖#身份〗 */
+.identity {
+    color: #4169E1;  /* 皇室蓝 */
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 事件标注（事件名、事件链接等） */
+.event {
+    color: #8B4513;  /* 褐色 */
+    font-weight: 500;
+    cursor: default;
 }
 
 /* 引号内容样式（对话） */
