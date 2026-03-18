@@ -79,8 +79,8 @@ ENTITY_PATTERNS = [
     # 5类新格式（v2.8）
     (r'〖\?([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="mythical"    title="神话：\2"       data-canonical="\2">\1</span>'),  # 神话（消歧）
     (r'〖\?([^〖〗<>"]+)〗', r'<span class="mythical" title="神话/传说">\1</span>'),
-    (r'〖\{([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="book"        title="典籍：\2"       data-canonical="\2">\1</span>'),  # 典籍（消歧）
-    (r'〖\{([^〖〗<>"]+)〗', r'<span class="book" title="典籍">\1</span>'),
+    (r'〖\{([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="book"        title="典籍：\2"       data-canonical="\2">《\1》</span>'),  # 典籍（消歧）
+    (r'〖\{([^〖〗<>"]+)〗', r'<span class="book" title="典籍">《\1》</span>'),
     (r'〖:([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="ritual"      title="礼仪：\2"       data-canonical="\2">\1</span>'),  # 礼仪（消歧）
     (r'〖:([^〖〗<>"]+)〗', r'<span class="ritual" title="礼仪">\1</span>'),
     (r'〖\[([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="legal"       title="刑法：\2"       data-canonical="\2">\1</span>'),  # 刑法（消歧）
@@ -89,7 +89,7 @@ ENTITY_PATTERNS = [
     (r'〖_([^〖〗<>"]+)〗', r'<span class="concept" title="思想">\1</span>'),
     # 旧格式兼容（v2.8前）
     (r'〖\?([^〖〗<>"]+)〗', r'<span class="mythical" title="神话/传说">\1</span>'),
-    (r'〖\{([^〖〗<>"]+)〗', r'<span class="book" title="典籍">\1</span>'),
+    (r'〖\{([^〖〗<>"]+)〗', r'<span class="book" title="典籍">《\1》</span>'),
     (r'〖:([^〖〗<>"]+)〗', r'<span class="ritual" title="礼仪">\1</span>'),
     (r'〖\[([^〖〗<>"]+)〗', r'<span class="legal" title="刑法">\1</span>'),
     (r'〖_([^〖〗<>"]+)〗', r'<span class="concept" title="思想">\1</span>'),

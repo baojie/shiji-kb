@@ -1,6 +1,14 @@
-/* 史记命名实体样式表 v5.3.2 + offset 3px */
-/* 最后更新: 2026-03-19 02:25 */
+/* 史记命名实体样式表 v5.4 (融合v5.3.3 + v6.0方案B改进) */
+/* 最后更新: 2026-03-19 13:45 */
 /* 如果你在浏览器开发者工具中看到这行注释，说明CSS已加载 */
+/*
+ * v5.4 改进（基于v5.3.3）：
+ * 1. 典籍：添加波浪线 (wavy 2px) + 偏移3px
+ * 2. 神话：添加波浪线 (wavy 2px) + 偏移3px
+ * 3. 朝代：下划线加粗到2px
+ * 4. 思想：下划线加粗到2px + 改进颜色透明度
+ * 5. 保持v5.3的text-decoration风格和整体配色
+ */
 
 /* 基础样式 */
 body {
@@ -54,9 +62,9 @@ p {
 /* 朝代/氏族/国号样式 */
 .dynasty {
     color: #9370DB;
-    background-color: #F0E6FF;
-    padding: 0 3px;
-    border-radius: 2px;
+    text-decoration: underline solid #9370DB80;  /* v5.3.3: 改用text-decoration避免与背景重叠 */
+    text-decoration-thickness: 2px;  /* v5.4: 加粗下划线 */
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
     cursor: default;
 }
 
@@ -99,6 +107,9 @@ p {
 /* 传说生物/神话样式 */
 .mythical {
     color: #8B008B;
+    text-decoration: underline wavy #8B008B80;  /* v5.4: 添加波浪线 */
+    text-decoration-thickness: 2px;  /* v5.4: 加粗波浪线 */
+    text-underline-offset: 3px;  /* v5.4: 下移 */
     font-weight: 500;
     cursor: default;
 }
@@ -113,6 +124,9 @@ p {
 /* 典籍样式 */
 .book {
     color: #4B0082;
+    text-decoration: underline wavy #4B008280;  /* v5.4: 添加波浪线 */
+    text-decoration-thickness: 2px;  /* v5.4: 加粗波浪线 */
+    text-underline-offset: 3px;  /* v5.4: 下移 */
     font-style: italic;
     cursor: default;
 }
@@ -134,7 +148,8 @@ p {
 /* 思想样式 */
 .concept {
     color: #2F4F4F;
-    text-decoration: underline dotted #2F4F4F;  /* v5.3: 改用text-decoration避免与背景重叠 */
+    text-decoration: underline dotted #2F4F4F80;  /* v5.4: 改进颜色透明度 */
+    text-decoration-thickness: 2px;  /* v5.4: 加粗点线 */
     text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
     cursor: default;
 }
