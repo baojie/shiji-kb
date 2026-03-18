@@ -102,6 +102,16 @@ def generate_html(json_path, output_path):
     # 统计定位成功数
     located_count = sum(1 for item in chengyu_data if item.get('context'))
 
+    # 生成成语索引（按拼音首字母分组）
+    chengyu_index = []
+    for item in chengyu_data:
+        chengyu_index.append({
+            'name': item['chengyu'],
+            'meaning': item.get('meaning', ''),
+            'chapter': item['chapter_title'],
+            'id': f"cy_{item['chapter_num']}_{chengyu_data.index(item)}"
+        })
+
     # 生成HTML
     html = '''<!DOCTYPE html>
 <html lang="zh">
@@ -265,6 +275,100 @@ def generate_html(json_path, output_path):
         .entity.artifact { color: #c6c; border-bottom-color: #c6c; }
         .entity.other { color: #999; border-bottom-color: #999; }
 
+        /* 搜索框样式 */
+        .search-box {
+            background: #fff8f0;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border: 2px solid #d4a373;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: inherit;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #8b4513;
+            box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
+        }
+
+        .search-stats {
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* 索引样式 */
+        .index-section {
+            background: #fafafa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .index-header {
+            font-size: 1.3em;
+            color: #8b4513;
+            margin-bottom: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .index-header:hover {
+            color: #a0522d;
+        }
+
+        .index-content {
+            display: none;
+            columns: 3;
+            column-gap: 20px;
+        }
+
+        .index-content.show {
+            display: block;
+        }
+
+        .index-item {
+            break-inside: avoid;
+            margin-bottom: 8px;
+            padding: 5px 0;
+        }
+
+        .index-item a {
+            color: #8b4513;
+            text-decoration: none;
+            display: block;
+        }
+
+        .index-item a:hover {
+            color: #c00;
+            text-decoration: underline;
+        }
+
+        .index-item .chapter-label {
+            color: #999;
+            font-size: 0.85em;
+            margin-left: 5px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .highlight-match {
+            background: yellow;
+            font-weight: bold;
+        }
+
         .footer {
             text-align: center;
             margin-top: 50px;
@@ -281,6 +385,9 @@ def generate_html(json_path, output_path):
             h1 {
                 font-size: 1.8em;
             }
+            .index-content {
+                columns: 1;
+            }
         }
     </style>
 </head>
@@ -295,9 +402,32 @@ def generate_html(json_path, output_path):
             <a href="chengyu.pdf" class="pdf">📥 下载PDF</a>
         </div>
 
+        <!-- 搜索框 -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索成语、释义或出处...（如：破釜沉舟、项羽、决心）" />
+            <div class="search-stats" id="searchStats"></div>
+        </div>
+
+        <!-- 成语索引 -->
+        <div class="index-section">
+            <div class="index-header" onclick="toggleIndex()">📑 成语索引（点击展开/收起）</div>
+            <div class="index-content" id="indexContent">
+'''
+
+    # 生成索引列表
+    for item in chengyu_index:
+        html += f'''                <div class="index-item">
+                    <a href="#{item['id']}">{item['name']}<span class="chapter-label">{item['chapter']}</span></a>
+                </div>
+'''
+
+    html += '''            </div>
+        </div>
+
 '''
 
     # 按章节顺序输出
+    item_index = 0
     for chapter_key in sorted(by_chapter.keys()):
         items = by_chapter[chapter_key]
         chapter_num, chapter_title = chapter_key.split('_', 1)
@@ -313,9 +443,11 @@ def generate_html(json_path, output_path):
             meaning = item['meaning']
             context = item.get('context', '')
             paragraph = item.get('paragraph', '')
+            item_id = f"cy_{chapter_num}_{item_index}"
+            item_index += 1
 
             html += f'''
-            <div class="chengyu-item">
+            <div class="chengyu-item" id="{item_id}" data-chengyu="{chengyu}" data-meaning="{meaning}" data-chapter="{chapter_title}">
                 <div class="item-title">{chengyu}</div>
                 <div class="item-meaning">{meaning}</div>
 '''
@@ -346,6 +478,102 @@ def generate_html(json_path, output_path):
             <p>数据提取自《史记》标注版本</p>
         </div>
     </div>
+
+    <script>
+        // 搜索功能
+        const searchInput = document.getElementById('searchInput');
+        const searchStats = document.getElementById('searchStats');
+        const chengyuItems = document.querySelectorAll('.chengyu-item');
+        const chapterSections = document.querySelectorAll('.chapter-section');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+
+            if (!query) {
+                // 清空搜索，显示所有
+                chengyuItems.forEach(item => item.classList.remove('hidden'));
+                chapterSections.forEach(section => section.classList.remove('hidden'));
+                searchStats.textContent = '';
+                return;
+            }
+
+            let matchCount = 0;
+            const visibleChapters = new Set();
+
+            // 搜索每个成语项
+            chengyuItems.forEach(item => {
+                const chengyu = item.dataset.chengyu.toLowerCase();
+                const meaning = item.dataset.meaning.toLowerCase();
+                const chapter = item.dataset.chapter.toLowerCase();
+                const text = item.textContent.toLowerCase();
+
+                if (chengyu.includes(query) ||
+                    meaning.includes(query) ||
+                    chapter.includes(query) ||
+                    text.includes(query)) {
+                    item.classList.remove('hidden');
+                    matchCount++;
+                    // 记录该成语所在章节应该显示
+                    const chapterSection = item.closest('.chapter-section');
+                    if (chapterSection) {
+                        visibleChapters.add(chapterSection.id);
+                    }
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+
+            // 隐藏没有匹配项的章节
+            chapterSections.forEach(section => {
+                if (visibleChapters.has(section.id)) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+
+            // 更新统计信息
+            if (matchCount === 0) {
+                searchStats.textContent = '未找到匹配结果';
+                searchStats.style.color = '#c00';
+            } else {
+                searchStats.textContent = `找到 ${matchCount} 条匹配结果`;
+                searchStats.style.color = '#060';
+            }
+        });
+
+        // 索引展开/收起
+        function toggleIndex() {
+            const indexContent = document.getElementById('indexContent');
+            indexContent.classList.toggle('show');
+        }
+
+        // 点击索引链接后滚动到对应位置
+        document.querySelectorAll('.index-item a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // 高亮效果
+                    targetElement.style.backgroundColor = '#fff8dc';
+                    setTimeout(() => {
+                        targetElement.style.backgroundColor = '';
+                    }, 2000);
+                }
+            });
+        });
+
+        // 快捷键支持：Ctrl+F 或 Command+F 聚焦搜索框
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+                e.preventDefault();
+                searchInput.focus();
+                searchInput.select();
+            }
+        });
+    </script>
 </body>
 </html>
 '''
