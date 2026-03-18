@@ -40,6 +40,15 @@ from html import escape as html_escape
 # 排除 " 字符以避免匹配HTML属性
 ENTITY_PATTERNS = [
     (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),                               # 粗体（不变）
+    # 动词标注（v3.0，优先处理以避免被名词模式匹配）
+    (r'⟦◈([^⟦⟧|]+)\|([^⟦⟧]+)⟧', r'<span class="verb-military" title="军事动词：\2" data-canonical="\2">\1</span>'),  # 军事动词（消歧）
+    (r'⟦◈([^⟦⟧]+)⟧', r'<span class="verb-military" title="军事动词">\1</span>'),                                        # 军事动词
+    (r'⟦◉([^⟦⟧|]+)\|([^⟦⟧]+)⟧', r'<span class="verb-penalty" title="刑罚动词：\2" data-canonical="\2">\1</span>'),   # 刑罚动词（消歧）
+    (r'⟦◉([^⟦⟧]+)⟧', r'<span class="verb-penalty" title="刑罚动词">\1</span>'),                                         # 刑罚动词
+    (r'⟦○([^⟦⟧|]+)\|([^⟦⟧]+)⟧', r'<span class="verb-political" title="政治动词：\2" data-canonical="\2">\1</span>'), # 政治动词（消歧，预留）
+    (r'⟦○([^⟦⟧]+)⟧', r'<span class="verb-political" title="政治动词">\1</span>'),                                       # 政治动词（预留）
+    (r'⟦◇([^⟦⟧|]+)\|([^⟦⟧]+)⟧', r'<span class="verb-economic" title="经济动词：\2" data-canonical="\2">\1</span>'),  # 经济动词（消歧，预留）
+    (r'⟦◇([^⟦⟧]+)⟧', r'<span class="verb-economic" title="经济动词">\1</span>'),                                        # 经济动词（预留）
     # 10类新格式：〖TYPE content〗
     (r'〖•([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="artifact"     title="器物：\2"       data-canonical="\2">\1</span>'),  # 器物（消歧）
     (r'〖•([^〖〗<>"]+)〗', r'<span class="artifact" title="器物">\1</span>'),     # 器物
@@ -427,12 +436,14 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
         parts = ['<div class="shiji-table-wrapper">', '<table class="shiji-table">']
         # 表头：行号列（空白）+ 原始列；表头不做实体标注渲染（年号/国名等不应被标注样式干扰）
-        # 只做标注符号剥离（去掉 〖TYPE〗 包裹符），保留纯文字
+        # 只做标注符号剥离（去掉 〖TYPE〗 和 ⟦TYPE⟧ 包裹符），保留纯文字
         _annotation_strip = re.compile(
-            r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_]([^〖〗\n]{1,30}?)〗'
+            r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_]([^〖〗\n]{1,30}?)〗|⟦[◈◉○◇]([^⟦⟧\n]{1,30}?)⟧'
         )
         def strip_annotations(text):
-            return _annotation_strip.sub(lambda m: m.group(1), text)
+            # 匹配两种格式：〖TYPE内容〗 或 ⟦TYPE动词⟧
+            # group(1) 为名词实体内容，group(2) 为动词内容
+            return _annotation_strip.sub(lambda m: m.group(1) if m.group(1) else m.group(2), text)
 
         parts.append('<thead><tr>')
         parts.append('<th class="row-pn-col"></th>')
@@ -692,7 +703,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 
     # 后处理：展平嵌套的同类 span 标签
     # 例如: <span class="person"><span class="person">名字</span></span> -> <span class="person">名字</span>
-    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'identity', 'artifact', 'astronomy', 'mythical', 'quoted', 'book', 'ritual', 'legal', 'concept', 'quantity']:
+    for entity_class in ['person', 'place', 'official', 'time', 'dynasty', 'institution', 'tribe', 'identity', 'artifact', 'astronomy', 'mythical', 'quoted', 'book', 'ritual', 'legal', 'concept', 'quantity', 'verb-military', 'verb-penalty', 'verb-political', 'verb-economic']:
         # 匹配嵌套的同类 span 并展平
         pattern = rf'<span class="{entity_class}">(<span class="{entity_class}">.*?</span>)</span>'
         while re.search(pattern, html_body):

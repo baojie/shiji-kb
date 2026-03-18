@@ -25,23 +25,34 @@ from collections import defaultdict, Counter
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 CHAPTER_DIR = BASE_DIR / 'chapter_md'
 
-# 动词词表（来自 verb_taxonomy.md）
+# 动词词表（来自 verb_taxonomy.md v3.1）
 MILITARY_VERBS = {
-    # 进攻类
+    # 进攻类 (5)
     '伐', '攻', '击', '袭', '侵',
-    # 交战类
-    '战', '破', '败', '灭', '围', '下', '拔',
-    # 机动类
-    '救', '取', '定', '降', '走', '禽'
+    # 交战类 (10)
+    '战', '破', '败', '灭', '围', '下', '拔', '克', '屠', '射',
+    # 俘获类 (3)
+    '虏', '捕', '获',
+    # 追击类 (2)
+    '追', '逐',
+    # 机动类 (7)
+    '救', '取', '定', '降', '走', '禽', '奔', '收'
 }
 
 PENALTY_VERBS = {
-    # 处决类
-    '杀', '诛', '斩', '弑', '族', '戮', '刺',
-    # 处罚类
+    # 处决类 (13)
+    '杀', '诛', '斩', '弑', '族', '戮', '刺', '夷', '阬', '烹', '亨', '僇', '劫',
+    # 处罚类 (5)
     '废', '囚', '执', '笞', '刑',
-    # 其他类
+    # 赦免类 (2)
+    '赦', '绝',
+    # 其他类 (3)
     '反', '亡', '死'
+}
+
+POLITICAL_VERBS = {
+    # 册封类 (2)
+    '封', '立'
 }
 
 # 刑罚制度名词（2字及以上）
@@ -55,7 +66,7 @@ PENALTY_NOUNS = {
     '系狱', '下狱', '三族', '三族之罪', '夺爵', '没入'
 }
 
-ALL_VERBS = MILITARY_VERBS | PENALTY_VERBS
+ALL_VERBS = MILITARY_VERBS | PENALTY_VERBS | POLITICAL_VERBS
 
 
 def extract_old_format_verbs(text):

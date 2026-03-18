@@ -5,9 +5,10 @@
 功能：将旧格式〖[verb〗迁移到新格式⟦TYPE动词⟧
 
 迁移规则：
-1. 军事动词(17个): 〖[伐〗 → ⟦◈伐⟧
-2. 刑罚动词(15个): 〖[杀〗 → ⟦◉杀⟧
-3. 刑罚制度名词(2字+): 〖[斩首〗 保持不变
+1. 军事动词(27个): 〖[伐〗 → ⟦◈伐⟧
+2. 刑罚动词(23个): 〖[杀〗 → ⟦◉杀⟧
+3. 政治动词(2个): 〖[封〗 → ⟦○封⟧
+4. 刑罚制度名词(2字+): 〖[斩首〗 保持不变
 
 用法：
   python migrate_verb_tags.py --dry-run                    # 预览迁移
@@ -16,6 +17,7 @@
   python migrate_verb_tags.py --all --backup               # 迁移前备份
   python migrate_verb_tags.py --type military              # 仅迁移军事动词
   python migrate_verb_tags.py --type penalty               # 仅迁移刑罚动词
+  python migrate_verb_tags.py --type politics              # 仅迁移政治动词
 """
 
 import re
@@ -32,7 +34,7 @@ BACKUP_DIR = BASE_DIR / 'backups' / f'verb_migration_{datetime.now().strftime("%
 
 # 导入词表
 from query_verbs_by_type import (
-    MILITARY_VERBS, PENALTY_VERBS, PENALTY_NOUNS
+    MILITARY_VERBS, PENALTY_VERBS, POLITICAL_VERBS, PENALTY_NOUNS
 )
 
 
@@ -58,6 +60,7 @@ def migrate_verbs(text, verb_type='all'):
     changes = {
         'military': [],
         'penalty': [],
+        'politics': [],
         'unchanged': []
     }
 
@@ -98,6 +101,16 @@ def migrate_verbs(text, verb_type='all'):
             })
             return new_tag
 
+        elif verb in POLITICAL_VERBS and verb_type in ['politics', 'all']:
+            # 政治动词
+            new_tag = f'⟦○{verb}⟧' if not disambig else f'⟦○{verb}|{disambig}⟧'
+            changes['politics'].append({
+                'old': full_match,
+                'new': new_tag,
+                'verb': verb
+            })
+            return new_tag
+
         else:
             # 刑罚制度名词或其他，保持不变
             changes['unchanged'].append({
@@ -123,7 +136,7 @@ def migrate_chapter(chapter_file, verb_type='all', dry_run=False, backup=True):
     migrated_text, changes = migrate_verbs(original_text, verb_type)
 
     # 统计变化
-    total_changes = len(changes['military']) + len(changes['penalty'])
+    total_changes = len(changes['military']) + len(changes['penalty']) + len(changes['politics'])
 
     result = {
         'chapter': chapter_file.stem,
@@ -172,6 +185,7 @@ def generate_migration_report(results, output_file=None):
     success_chapters = sum(1 for r in results if r['success'])
     total_military = sum(len(r['changes']['military']) for r in results)
     total_penalty = sum(len(r['changes']['penalty']) for r in results)
+    total_politics = sum(len(r['changes']['politics']) for r in results)
     total_unchanged = sum(r['unchanged'] for r in results)
 
     report_lines.append(f"\n## 总体统计\n")
@@ -179,18 +193,22 @@ def generate_migration_report(results, output_file=None):
     report_lines.append(f"成功迁移: {success_chapters}")
     report_lines.append(f"军事动词: {total_military} 处")
     report_lines.append(f"刑罚动词: {total_penalty} 处")
+    report_lines.append(f"政治动词: {total_politics} 处")
     report_lines.append(f"保持不变: {total_unchanged} 处")
-    report_lines.append(f"总迁移数: {total_military + total_penalty} 处")
+    report_lines.append(f"总迁移数: {total_military + total_penalty + total_politics} 处")
 
     # 词频统计
     military_counter = Counter()
     penalty_counter = Counter()
+    politics_counter = Counter()
 
     for result in results:
         for change in result['changes']['military']:
             military_counter[change['verb']] += 1
         for change in result['changes']['penalty']:
             penalty_counter[change['verb']] += 1
+        for change in result['changes']['politics']:
+            politics_counter[change['verb']] += 1
 
     if military_counter:
         report_lines.append(f"\n## 军事动词迁移统计\n")
@@ -208,23 +226,32 @@ def generate_migration_report(results, output_file=None):
             report_lines.append(f"{verb:<8} {count:>10} ⟦◉{verb}⟧")
         report_lines.append(f"\n小计: {sum(penalty_counter.values())} 处")
 
+    if politics_counter:
+        report_lines.append(f"\n## 政治动词迁移统计\n")
+        report_lines.append(f"{'动词':<8} {'迁移次数':>10} {'新格式':<15}")
+        report_lines.append("-" * 40)
+        for verb, count in politics_counter.most_common():
+            report_lines.append(f"{verb:<8} {count:>10} ⟦○{verb}⟧")
+        report_lines.append(f"\n小计: {sum(politics_counter.values())} 处")
+
     # 章节详情（显示有变更的前20章）
     changed_results = [r for r in results if r['total_changes'] > 0]
     changed_results.sort(key=lambda x: x['total_changes'], reverse=True)
 
     if changed_results:
         report_lines.append(f"\n## 章节迁移详情 (Top 20)\n")
-        report_lines.append(f"{'章节':<35} {'军事':>6} {'刑罚':>6} {'总计':>6} {'状态':<10}")
-        report_lines.append("-" * 70)
+        report_lines.append(f"{'章节':<35} {'军事':>6} {'刑罚':>6} {'政治':>6} {'总计':>6} {'状态':<10}")
+        report_lines.append("-" * 78)
 
         for result in changed_results[:20]:
             chapter = result['chapter']
             mil_count = len(result['changes']['military'])
             pen_count = len(result['changes']['penalty'])
+            pol_count = len(result['changes']['politics'])
             total = result['total_changes']
             status = '✅ 成功' if result['success'] else '❌ 失败'
 
-            report_lines.append(f"{chapter:<35} {mil_count:>6} {pen_count:>6} {total:>6} {status:<10}")
+            report_lines.append(f"{chapter:<35} {mil_count:>6} {pen_count:>6} {pol_count:>6} {total:>6} {status:<10}")
 
     # 保持不变的内容统计
     unchanged_samples = []
@@ -264,7 +291,7 @@ def main():
                         help='迁移指定章节（如 040）')
     parser.add_argument('--all', action='store_true',
                         help='迁移所有章节')
-    parser.add_argument('--type', choices=['military', 'penalty', 'all'],
+    parser.add_argument('--type', choices=['military', 'penalty', 'politics', 'all'],
                         default='all',
                         help='迁移类型（默认: all）')
     parser.add_argument('--dry-run', action='store_true',
