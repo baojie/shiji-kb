@@ -363,8 +363,8 @@ def generate_pdf_from_html(html_path, pdf_path):
 def main():
     # 设置路径
     project_root = Path(__file__).parent.parent
-    output_dir = project_root / "doc"
-    output_dir.mkdir(exist_ok=True)
+    output_dir = project_root / "publication" / "meta-skill-book"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     output_html = output_dir / "大规模知识库构造元技能方法论.html"
     output_pdf = output_dir / "大规模知识库构造元技能方法论.pdf"

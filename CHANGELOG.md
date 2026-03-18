@@ -6,6 +6,43 @@
 
 ---
 
+## 出版物：元技能方法论PDF - 2026-03-18
+
+### 新增 (Added)
+
+- **元技能方法论PDF合集**（`publication/meta-skill-book/`）：
+  - 新增 `大规模知识库构造元技能方法论.pdf` (2.6MB)
+    - 合并14个元技能Markdown文档为单一PDF
+    - 包含封面、目录、完整内容（约150页）
+    - 作者信息：鲍捷 (baojie@gmail.com, 微信 baojie_xigua, GitHub @baojie)
+    - 副标题：以史记知识库为例
+  - 新增 `大规模知识库构造元技能方法论_摘要.md`
+    - 提供280/230/50字三个版本摘要
+    - 强调方法论通用性（法律文书/医学文献/企业档案等）
+  - 新增 `大规模知识库构造元技能方法论.html` (中间HTML文件)
+  - 新增 `README.md` (目录说明)
+
+- **PDF生成工具**：
+  - 新增 `scripts/generate_meta_skills_pdf.py`
+    - 自动合并14个元技能Markdown文档
+    - 使用WeasyPrint生成专业排版PDF
+    - 支持表格、代码块、列表等Markdown格式
+    - 可重复使用，输出到 `publication/meta-skill-book/`
+
+- **网站修复**：
+  - 新增 `docs/chapters/index.html` (重定向页面)
+    - 解决 `/chapters/` 目录404问题
+    - 自动跳转到主页章节列表
+
+### 更改 (Changed)
+
+- **README.md 更新**：
+  - 核心成果表格新增"元技能方法论"条目
+  - 目录结构新增 `publication/` 目录
+  - 添加PDF下载链接
+
+---
+
 ## 项目整理：目录重组与文档更新 - 2026-03-18
 
 ### 更改 (Changed)
