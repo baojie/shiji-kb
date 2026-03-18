@@ -235,8 +235,12 @@ def _parse_ce_year(time_str):
 
 
 def _strip_entity_tags(text):
-    """去除实体标记符号，保留纯文本（v2.1格式：〖TYPE content〗）。"""
-    return re.sub(r'[〖〗@=;%&\'^~•!#\+\?\{\:\[\_〘〙]', '', text).strip()
+    """去除实体标记符号，保留纯文本（v3.0：名词〖TYPE〗 + 动词⟦TYPE⟧）。"""
+    # 去除动词标注符号 ⟦◈◉○◇⟧
+    text = re.sub(r'[⟦⟧◈◉○◇]', '', text)
+    # 去除名词实体标注符号 〖@=;%&'^~•!#\+\?\{\:\[\_〗
+    text = re.sub(r'[〖〗@=;%&\'^~•!#\+\?\{\:\[\_〘〙]', '', text)
+    return text.strip()
 
 
 def _extract_people_list(people_str):

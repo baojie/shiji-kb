@@ -46,23 +46,23 @@ def remove_all_tags(text):
     text = re.sub(r'^>\s*', '', text, flags=re.MULTILINE)
     text = re.sub(r'^:::.*$', '', text, flags=re.MULTILINE)
 
-    # 去除13种〖TYPE content〗格式的标记符号（保留content）
-    # 类型标记字符: @ = ; # % & ' ^ ~ * ! + $
-    text = re.sub(r'〖[@=;#%&\'^~\*!\+\$]([^〖〗\n|]+?)(?:\|[^〖〗\n]*)?〗', r'\1', text)
+    # 去除动词标注符号（v3.0新增）
+    # ⟦TYPE动词⟧ 格式（4种类型：◈◉○◇），支持内联消歧 ⟦TYPE动词|消歧说明⟧
+    text = re.sub(r'⟦[◈◉○◇]([^⟦⟧\n|]+?)(?:\|[^⟦⟧\n]*)?⟧', r'\1', text)
+
+    # 去除18种〖TYPE content〗格式的标记符号（保留content）
+    # 类型标记字符: @ = ; # % & ' ^ ~ • ! + $ ? { : [ _
+    text = re.sub(r'〖[@=;#%&\'^~•!\+\$\?\{:\[_]([^〖〗\n|]+?)(?:\|[^〖〗\n]*)?〗', r'\1', text)
     # 兜底：去除无类型前缀的〖content〗（早期不规范标注遗留，可能含逗号等）
     text = re.sub(r'〖([^〖〗\n]+)〗', r'\1', text)
     # 清理可能残留的空〖〗对和单独的〖〗字符
     text = text.replace('〖〗', '')
     text = text.replace('〖', '').replace('〗', '')
+    # 清理可能残留的动词标注符号
+    text = text.replace('⟦', '').replace('⟧', '')
 
-    # 去除5种非对称CJK括号格式的标记符号（保留content）
+    # 去除旧格式括号（兼容）
     text = re.sub(r'〘([^〘〙\n]+)〙', r'\1', text)   # 生物（旧格式，兼容）
-    # 旧括号格式（v2.8前）兼容保留
-    text = re.sub(r'〖\?([^〖〗\n]+)〗', r'\1', text)  # 神话
-    text = re.sub(r'〖\{([^〖〗\n]+)〗', r'\1', text)  # 典籍
-    text = re.sub(r'〖:([^〖〗\n]+)〗', r'\1', text)   # 礼仪
-    text = re.sub(r'〖\[([^〖〗\n]+)〗', r'\1', text)  # 刑法
-    text = re.sub(r'〖_([^〖〗\n]+)〗', r'\1', text)   # 思想
 
     return text.strip()
 
