@@ -10,7 +10,7 @@
 
 ### 新增 (Added)
 
-- **元技能方法论PDF合集**（`publication/meta-skill-book/`）：
+- **元技能方法论PDF合集**（`doc/publications/meta-skill-book/`）：
   - 新增 `大规模知识库构造元技能方法论.pdf` (2.6MB)
     - 合并14个元技能Markdown文档为单一PDF
     - 包含封面、目录、完整内容（约150页）
@@ -23,11 +23,11 @@
   - 新增 `README.md` (目录说明)
 
 - **PDF生成工具**：
-  - 新增 `scripts/generate_meta_skills_pdf.py`
+  - 新增 `doc/publications/meta-skill-book/generate_meta_skills_pdf.py`
     - 自动合并14个元技能Markdown文档
     - 使用WeasyPrint生成专业排版PDF
     - 支持表格、代码块、列表等Markdown格式
-    - 可重复使用，输出到 `publication/meta-skill-book/`
+    - 输出到当前目录（与PDF文档放在一起）
 
 - **网站修复**：
   - 新增 `docs/chapters/index.html` (重定向页面)

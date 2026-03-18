@@ -70,10 +70,11 @@
 
 ## 生成工具
 
-使用 `scripts/generate_meta_skills_pdf.py` 自动生成本PDF，可重复执行：
+使用 `generate_meta_skills_pdf.py` 自动生成本PDF，可重复执行：
 
 ```bash
-python3 scripts/generate_meta_skills_pdf.py
+cd doc/publications/meta-skill-book
+python3 generate_meta_skills_pdf.py
 ```
 
 ---

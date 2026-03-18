@@ -11,7 +11,7 @@ from weasyprint import HTML, CSS
 
 def read_meta_skill_files():
     """读取14个元技能Markdown文件"""
-    skills_dir = Path(__file__).parent.parent / "skills"
+    skills_dir = Path(__file__).parent.parent.parent.parent / "skills"
 
     # 按编号顺序读取
     files = sorted(skills_dir.glob("00-META-*.md"))
@@ -362,8 +362,8 @@ def generate_pdf_from_html(html_path, pdf_path):
 
 def main():
     # 设置路径
-    project_root = Path(__file__).parent.parent
-    output_dir = project_root / "publication" / "meta-skill-book"
+    project_root = Path(__file__).parent.parent.parent.parent
+    output_dir = Path(__file__).parent
     output_dir.mkdir(parents=True, exist_ok=True)
 
     output_html = output_dir / "大规模知识库构造元技能方法论.html"
