@@ -346,7 +346,9 @@ def generate_html(json_path, output_path):
 
 def main():
     project_root = Path(__file__).parent.parent
-    json_path = project_root / "docs/special/yunwen.json"
+    # 从data/目录读取JSON
+    json_path = project_root / "data/yunwen.json"
+    # 保存HTML到docs/special/
     output_path = project_root / "docs/special/yunwen.html"
 
     if not json_path.exists():

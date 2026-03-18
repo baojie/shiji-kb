@@ -52,8 +52,10 @@ def extract_taishigongyue(chapter_file):
 
 
 def main():
-    chapter_dir = Path(__file__).parent.parent / "chapter_md"
-    output_dir = Path(__file__).parent.parent / "docs" / "special"
+    project_root = Path(__file__).parent.parent
+    chapter_dir = project_root / "chapter_md"
+    # 中间文件保存在根目录的data/下
+    output_dir = project_root / "data"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print("正在提取太史公曰...")

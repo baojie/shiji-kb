@@ -206,8 +206,10 @@ def generate_html(taishigongyue_list):
 
 
 def main():
-    # 读取JSON数据
-    json_file = Path(__file__).parent.parent / "docs" / "special" / "taishigongyue.json"
+    project_root = Path(__file__).parent.parent
+
+    # 从data/目录读取JSON数据
+    json_file = project_root / "data" / "taishigongyue.json"
 
     with open(json_file, 'r', encoding='utf-8') as f:
         taishigongyue_list = json.load(f)
@@ -217,8 +219,8 @@ def main():
     # 生成HTML
     html_content = generate_html(taishigongyue_list)
 
-    # 保存HTML
-    html_file = Path(__file__).parent.parent / "docs" / "special" / "taishigongyue.html"
+    # 保存HTML到docs/special/
+    html_file = project_root / "docs" / "special" / "taishigongyue.html"
     html_file.write_text(html_content, encoding='utf-8')
 
     print(f"✅ HTML已生成: {html_file}")

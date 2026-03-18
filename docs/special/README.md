@@ -9,23 +9,41 @@
 - **描述**：太史公司马迁在各篇章末的评论文字
 - **数量**：125篇（96.2%覆盖率，130章中5章无此内容）
 - **文件**：
-  - [taishigongyue.json](taishigongyue.json) - 结构化数据（65KB）
-  - [taishigongyue.md](taishigongyue.md) - Markdown格式（58KB）
+  - [../../data/taishigongyue.json](../../data/taishigongyue.json) - 结构化数据（65KB）
+  - [../../data/taishigongyue.md](../../data/taishigongyue.md) - Markdown格式（58KB）
   - [taishigongyue.html](taishigongyue.html) - HTML渲染页面（165KB）
   - [taishigongyue.pdf](taishigongyue.pdf) - PDF打印版（2.2MB）
 - **访问**：[在线查看](taishigongyue.html) | [下载PDF](taishigongyue.pdf)
 
+### 2. 韵文集
+
+- **描述**：史记中的诗歌体裁作品
+- **数量**：96篇（赞80篇、诗歌11篇、赋5篇），覆盖82章
+- **文件**：
+  - [../../data/yunwen.json](../../data/yunwen.json) - 结构化数据（67KB）
+  - [../../data/yunwen.md](../../data/yunwen.md) - Markdown格式（60KB）
+  - [yunwen.html](yunwen.html) - HTML渲染页面（159KB）
+  - [yunwen.pdf](yunwen.pdf) - PDF打印版（1.95MB）
+- **访问**：[在线查看](yunwen.html) | [下载PDF](yunwen.pdf)
+
+### 3. 成语典故
+
+- **描述**：从史记中提取的成语、典故及经典名句
+- **数量**：351条，覆盖72章（定位原文134条，38%）
+- **文件**：
+  - [../../data/chengyu.json](../../data/chengyu.json) - 结构化数据（130KB）
+  - [../../data/chengyu.md](../../data/chengyu.md) - Markdown格式（120KB）
+  - [chengyu.html](chengyu.html) - HTML渲染页面（280KB）
+  - [chengyu.pdf](chengyu.pdf) - PDF打印版（2.95MB）
+- **访问**：[在线查看](chengyu.html) | [下载PDF](chengyu.pdf)
+
 ## 规划中的专项
 
-### 2. 赞
-
-司马迁以诗歌形式对历史人物和事件的歌颂与评价。
-
-### 3. 书信
+### 4. 书信
 
 史记中收录的历史书信文献。
 
-### 4. 其他
+### 5. 其他
 
 持续提取和整理史记中的各类专项内容。
 
