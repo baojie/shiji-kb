@@ -81,7 +81,7 @@ def generate_section_links_html(chapter_name, sections, max_display=8):
     return html
 
 
-def save_sections_data(data, output_file='sections_data.json'):
+def save_sections_data(data, output_file='kg/structure/data/sections_data.json'):
     """保存提取的段落数据"""
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

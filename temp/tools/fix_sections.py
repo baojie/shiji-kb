@@ -9,7 +9,7 @@ import json
 import os
 
 def main():
-    data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sections_data.json')
+    data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '../../kg/structure/data/sections_data.json')
     with open(data_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 

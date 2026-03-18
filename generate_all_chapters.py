@@ -197,7 +197,7 @@ def generate_all_chapters():
     print("=" * 60)
     try:
         result = subprocess.run(
-            ['python3', 'scripts/disambiguate_names.py'],
+            ['python3', 'kg/entities/scripts/disambiguate_names.py'],
             capture_output=True, text=True, timeout=120
         )
         if result.returncode == 0:
@@ -207,7 +207,7 @@ def generate_all_chapters():
         else:
             print(f"⚠️  消歧映射生成失败: {result.stderr}")
     except FileNotFoundError:
-        print("ℹ️  跳过消歧映射生成（scripts/disambiguate_names.py未找到）")
+        print("ℹ️  跳过消歧映射生成（kg/entities/scripts/disambiguate_names.py未找到）")
     except Exception as e:
         print(f"ℹ️  消歧映射生成遇到问题: {e}")
 
@@ -216,7 +216,7 @@ def generate_all_chapters():
     print("=" * 60)
     try:
         result = subprocess.run(
-            ['python3', 'scripts/build_year_map.py'],
+            ['python3', 'kg/events/scripts/build_year_map.py'],
             capture_output=True, text=True, timeout=120
         )
         if result.returncode == 0:
@@ -226,7 +226,7 @@ def generate_all_chapters():
         else:
             print(f"⚠️  年份映射生成失败: {result.stderr}")
     except FileNotFoundError:
-        print("ℹ️  跳过年份映射生成（scripts/build_year_map.py未找到）")
+        print("ℹ️  跳过年份映射生成（kg/events/scripts/build_year_map.py未找到）")
     except Exception as e:
         print(f"ℹ️  年份映射生成遇到问题: {e}")
 

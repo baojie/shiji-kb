@@ -65,6 +65,11 @@ kg/
 │   └── data/
 │       └── quantity_wordlist.json          # 数量词表（军队/距离/度量/金额）
 │
+├── structure/           # 文本结构
+│   ├── data/
+│   │   └── sections_data.json            # 130篇章节小节数据（约1500个小节）
+│   └── README.md
+│
 ├── rdf/                 # RDF/本体数据
 │   ├── ontology.ttl     # 史记知识本体定义
 │   └── *.ttl            # RDF三元组数据

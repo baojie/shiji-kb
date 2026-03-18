@@ -8,7 +8,7 @@ from pathlib import Path
 
 def load_sections_data():
     """加载小节数据"""
-    with open('sections_data.json', 'r', encoding='utf-8') as f:
+    with open('kg/structure/data/sections_data.json', 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def generate_section_links(chapter_name, sections_data):

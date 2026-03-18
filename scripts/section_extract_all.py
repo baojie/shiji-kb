@@ -162,7 +162,7 @@ def main():
             print(f"  ⚠️  未找到小节")
 
     # 保存为JSON
-    output_file = 'sections_data.json'
+    output_file = 'kg/structure/data/sections_data.json'
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(sections_data, f, ensure_ascii=False, indent=2)
 

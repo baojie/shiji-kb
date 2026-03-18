@@ -18,7 +18,7 @@ from pathlib import Path
 def get_chapters_without_sections():
     """获取没有小节的章节列表"""
     # 读取现有小节数据
-    with open('sections_data.json', 'r', encoding='utf-8') as f:
+    with open('kg/structure/data/sections_data.json', 'r', encoding='utf-8') as f:
         sections_data = json.load(f)
 
     # 获取所有章节

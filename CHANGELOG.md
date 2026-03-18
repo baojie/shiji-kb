@@ -6,6 +6,33 @@
 
 ---
 
+## 项目整理：目录重组与文档更新 - 2026-03-18
+
+### 更改 (Changed)
+
+- **目录结构重组**：
+  - 移动 `sections_data.json` → `kg/structure/data/sections_data.json`
+  - 创建 `kg/structure/` 目录存放文本结构元数据
+  - 更新6个相关脚本的路径引用（scripts/section_*.py, temp/tools/fix_sections*.py）
+
+- **文档完善**：
+  - 新增 `kg/structure/README.md` — 文本结构数据说明（约1500个小节，110章）
+  - 更新 `kg/README.md` — 添加structure目录条目
+  - 更新 `generate_all_chapters.py` — 修正消歧/年份映射脚本路径
+    - `scripts/disambiguate_names.py` → `kg/entities/scripts/disambiguate_names.py`
+    - `scripts/build_year_map.py` → `kg/events/scripts/build_year_map.py`
+
+- **IDEA 文档更新**：
+  - 新增 Koselleck概念史方法论到 `ref/IDEA.md`
+  - 核心思路：概念版本化、语义关系层、概念-人物-文本三角结构
+  - 应用到《史记》：已有2,072次 `〖_思想/概念〗` 标注可扩展为"语义演化地图"
+
+### 修复 (Fixed)
+
+- 修正HTML生成管线中预处理脚本路径错误（之前会跳过消歧和年份映射步骤）
+
+---
+
 ## 第一轮实体反思：全书130章修正1913处（已提交） - 2026-03-17
 
 ### 修复 (Fixed)
