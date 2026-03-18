@@ -12253,20 +12253,6 @@
         "method": "raw_nearby",
         "ruler_key": "予三年"
       }
-    },
-    "45": {
-      "三年": {
-        "ruler": "夫差",
-        "method": "raw_nearby",
-        "ruler_key": "夫差三年"
-      }
-    },
-    "46": {
-      "十年": {
-        "ruler": "子贡",
-        "method": "raw_nearby",
-        "ruler_key": "子贡十年"
-      }
     }
   },
   "068": {
@@ -12289,11 +12275,6 @@
         "ruler": "缪公",
         "method": "raw_nearby",
         "ruler_key": "缪公七年"
-      },
-      "八年": {
-        "ruler": "公子虔",
-        "method": "raw_nearby",
-        "ruler_key": "公子虔八年"
       }
     }
   },
@@ -12927,7 +12908,7 @@
       },
       "六年": {
         "ruler": "高皇帝",
-        "method": "nearby_ruler",
+        "method": "sequential",
         "ce_year": -201
       }
     },
@@ -13345,15 +13326,6 @@
         "ruler": "摇",
         "method": "raw_nearby",
         "ruler_key": "摇五年"
-      }
-    }
-  },
-  "117": {
-    "15": {
-      "八年": {
-        "ruler": "司马相如",
-        "method": "raw_nearby",
-        "ruler_key": "司马相如八年"
       }
     }
   },
