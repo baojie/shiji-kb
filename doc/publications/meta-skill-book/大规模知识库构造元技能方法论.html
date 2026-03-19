@@ -79,6 +79,19 @@
             page-break-before: auto;
         }
 
+        /* 优化区块分页 */
+        pre, blockquote, table {
+            page-break-inside: auto;
+            orphans: 3;
+            widows: 3;
+        }
+
+        /* 允许代码块在页面间分割 */
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
         h1 {
             font-size: 22pt;
             color: #8B4513;
@@ -130,7 +143,7 @@
             width: 100%;
             border-collapse: collapse;
             margin: 15pt 0;
-            page-break-inside: avoid;
+            page-break-inside: auto;
         }
 
         th, td {
@@ -158,7 +171,7 @@
             padding: 12pt;
             border-radius: 5pt;
             overflow-x: auto;
-            page-break-inside: avoid;
+            page-break-inside: auto;
         }
 
         pre code {
@@ -198,7 +211,7 @@
             <p style="margin-top: 60pt; font-size: 14pt;"><strong>作者：鲍捷</strong></p>
             <p style="margin-top: 20pt; font-size: 11pt;">
                 电子邮件：baojie@gmail.com<br>
-                微信：baojie_xigua<br>
+                微信：baojiexigua<br>
                 GitHub: @baojie
             </p>
             <p style="margin-top: 30pt; font-size: 10pt; color: #666;">
@@ -215,13 +228,13 @@
     <div class="toc">
         <h2>目录</h2>
         <ul>
-            <li><a href="#00-META-00_好东西都是总结出来的">META: 好东西都是总结出来的 — 元技能的元技能</a></li><li><a href="#00-META-01_反思">META: 反思 — Agent驱动的质量审查通用方法论</a></li><li><a href="#00-META-02_迭代工作流">META: 迭代工作流 — 从冷启动到收敛的执行策略</a></li><li><a href="#00-META-03_冷启动">META: 冷启动 — 从零开始构建AI驱动工序的方法论</a></li><li><a href="#00-META-04_柳叶刀方法">META: 柳叶刀方法 — 精细分解与混合解决方案</a></li><li><a href="#00-META-05_知识作为上下文压缩">META: 知识作为上下文压缩 — KG的价值论证</a></li><li><a href="#00-META-06_SKILL优化与演化">META: SKILL优化与演化 — 方法论文档的持续改进</a></li><li><a href="#00-META-07_可读性">META: 可读性 — 人类优先的数据格式设计</a></li><li><a href="#00-META-08_标注体系设计">META: 标注体系设计 — 语义标记符号的工程化设计原则</a></li><li><a href="#00-META-09_Agent提示词工程">META: Agent提示词工程 — 方法论驱动的AI任务设计</a></li><li><a href="#00-META-10_质量控制">META: 质量控制 — 自动化质检体系与工具链设计</a></li><li><a href="#00-META-11_数据体感培养">META: 数据体感培养 — 直接观察数据的十层体系</a></li><li><a href="#00-META-12_数据融合">META: 数据融合 — 多源数据对齐与消歧</a></li><li><a href="#00-META-13_技能迁移">META: 技能迁移 — SKILL跨项目复用方法论</a></li>
+            <li><a href="#00-META-00_好东西都是总结出来的">元技能00: 好东西都是总结出来的 — 元技能的元技能</a></li><li><a href="#00-META-01_反思">元技能01: 反思 — Agent驱动的质量审查通用方法论</a></li><li><a href="#00-META-02_迭代工作流">元技能02: 迭代工作流 — 从冷启动到收敛的执行策略</a></li><li><a href="#00-META-03_冷启动">元技能03: 冷启动 — 从零开始构建AI驱动工序的方法论</a></li><li><a href="#00-META-04_柳叶刀方法">元技能04: 柳叶刀方法 — 精细分解与混合解决方案</a></li><li><a href="#00-META-05_知识作为上下文压缩">元技能05: 知识作为上下文压缩 — KG的价值论证</a></li><li><a href="#00-META-06_SKILL优化与演化">元技能06: SKILL优化与演化 — 方法论文档的持续改进</a></li><li><a href="#00-META-07_可读性">元技能07: 可读性 — 人类优先的数据格式设计</a></li><li><a href="#00-META-08_标注体系设计">元技能08: 标注体系设计 — 语义标记符号的工程化设计原则</a></li><li><a href="#00-META-09_Agent提示词工程">元技能09: Agent提示词工程 — 方法论驱动的AI任务设计</a></li><li><a href="#00-META-10_质量控制">元技能10: 质量控制 — 自动化质检体系与工具链设计</a></li><li><a href="#00-META-11_数据体感培养">元技能11: 数据体感培养 — 直接观察数据的十层体系</a></li><li><a href="#00-META-12_数据融合">元技能12: 数据融合 — 多源数据对齐与消歧</a></li><li><a href="#00-META-13_技能迁移">元技能13: 技能迁移 — SKILL跨项目复用方法论</a></li>
         </ul>
     </div>
 
     
     <section class="meta-skill" id="00-META-00_好东西都是总结出来的">
-        <h1 id="meta">META: 好东西都是总结出来的 — 元技能的元技能</h1>
+        <h1 id="00">元技能00: 好东西都是总结出来的 — 元技能的元技能</h1>
 <blockquote>
 <p><strong>定位</strong>：所有元技能的元技能，贯穿冷启动、迭代、反思、质量控制、柳叶刀方法等所有工序的核心哲学。</p>
 </blockquote>
@@ -1947,7 +1960,7 @@ Lean Semantic Web ← 基于总结（本体从数据中&quot;长&quot;出来）
     </section>
     
     <section class="meta-skill" id="00-META-01_反思">
-        <h1 id="meta-agent">META: 反思 — Agent驱动的质量审查通用方法论</h1>
+        <h1 id="01-agent">元技能01: 反思 — Agent驱动的质量审查通用方法论</h1>
 <blockquote>
 <p><strong>元技能定位</strong>：适用于实体标注、事件提取、关系构建、本体分类等所有需要AI生成内容质量审查的工序。本文档提炼项目中所有反思实践的共性方法，指导新工序设计。</p>
 </blockquote>
@@ -2553,7 +2566,7 @@ Lean Semantic Web ← 基于总结（本体从数据中&quot;长&quot;出来）
     </section>
     
     <section class="meta-skill" id="00-META-02_迭代工作流">
-        <h1 id="meta">META: 迭代工作流 — 从冷启动到收敛的执行策略</h1>
+        <h1 id="02">元技能02: 迭代工作流 — 从冷启动到收敛的执行策略</h1>
 <blockquote>
 <p><strong>元技能定位</strong>：指导如何设计"先粗后精"的迭代执行策略，适用于所有需要质量逐步提升的工序（标注、提取、审查、推理等）。</p>
 </blockquote>
@@ -3695,7 +3708,7 @@ Day 10: 发现需要统计分析 → 开发 `stats_entity.py`（1小时）
     </section>
     
     <section class="meta-skill" id="00-META-03_冷启动">
-        <h1 id="meta-ai">META: 冷启动 — 从零开始构建AI驱动工序的方法论</h1>
+        <h1 id="03-ai">元技能03: 冷启动 — 从零开始构建AI驱动工序的方法论</h1>
 <blockquote>
 <p><strong>元技能定位</strong>：指导如何在没有先验知识、没有训练数据、没有成熟SKILL文档的情况下，快速启动一个新的AI驱动工序。适用于所有需要"从零到一"的创新性任务。</p>
 </blockquote>
@@ -4584,7 +4597,7 @@ analyze_pilot(&quot;pilot_results/&quot;, &quot;manual_annotations/&quot;)
     </section>
     
     <section class="meta-skill" id="00-META-04_柳叶刀方法">
-        <h1 id="meta">META: 柳叶刀方法 — 精细分解与混合解决方案</h1>
+        <h1 id="04">元技能04: 柳叶刀方法 — 精细分解与混合解决方案</h1>
 <hr />
 <h2 id="_1">一、核心思想</h2>
 <p><strong>柳叶刀方法</strong>（The Lancet Method）是一种将复杂AI任务进行<strong>精细分解</strong>、并针对每个子问题选择<strong>最优解决方案</strong>（大模型/规则/代码）的知识工程方法论。</p>
@@ -5370,7 +5383,7 @@ for task in tasks:
     </section>
     
     <section class="meta-skill" id="00-META-05_知识作为上下文压缩">
-        <h1 id="meta-kg">META: 知识作为上下文压缩 — KG的价值论证</h1>
+        <h1 id="05-kg">元技能05: 知识作为上下文压缩 — KG的价值论证</h1>
 <hr />
 <h2 id="_1">一、核心思想</h2>
 <blockquote>
@@ -6499,7 +6512,7 @@ Agent验证:
     </section>
     
     <section class="meta-skill" id="00-META-06_SKILL优化与演化">
-        <h1 id="meta-skill">META: SKILL优化与演化 — 方法论文档的持续改进</h1>
+        <h1 id="06-skill">元技能06: SKILL优化与演化 — 方法论文档的持续改进</h1>
 <hr />
 <h2 id="_1">一、核心思想</h2>
 <blockquote>
@@ -7802,7 +7815,7 @@ def extract_rules_from_reflection_logs(log_files):
     </section>
     
     <section class="meta-skill" id="00-META-07_可读性">
-        <h1 id="meta">META: 可读性 — 人类优先的数据格式设计</h1>
+        <h1 id="07">元技能07: 可读性 — 人类优先的数据格式设计</h1>
 <hr />
 <h2 id="_1">一、核心思想</h2>
 <blockquote>
@@ -8762,7 +8775,7 @@ if name_similarity(event_a['name'], event_b['name']) &gt;= 0.6:
     </section>
     
     <section class="meta-skill" id="00-META-08_标注体系设计">
-        <h1 id="meta">META: 标注体系设计 — 语义标记符号的工程化设计原则</h1>
+        <h1 id="08">元技能08: 标注体系设计 — 语义标记符号的工程化设计原则</h1>
 <blockquote>
 <p><strong>元技能定位</strong>：指导如何为古籍/文档设计语义标注体系（Token标记、类型分类、消歧规则），适用于任何需要对原文进行非破坏性语义标注的项目。</p>
 </blockquote>
@@ -9678,7 +9691,7 @@ grep -oh '〖@[^〗]*刘邦[^〗]*〗' chapter_md/*.tagged.md | sort | uniq -c
     </section>
     
     <section class="meta-skill" id="00-META-09_Agent提示词工程">
-        <h1 id="meta-agent-ai">META: Agent提示词工程 — 方法论驱动的AI任务设计</h1>
+        <h1 id="09-agent-ai">元技能09: Agent提示词工程 — 方法论驱动的AI任务设计</h1>
 <blockquote>
 <p><strong>元技能定位</strong>：指导如何设计高质量的Agent提示词，使Claude Agent能够自主完成复杂任务。与具体数据类型无关，适用于所有需要Agent执行的工序（实体标注、事件提取、关系发现、质量审查等）。</p>
 </blockquote>
@@ -10406,7 +10419,7 @@ JSON数组，SPO三元组：
     </section>
     
     <section class="meta-skill" id="00-META-10_质量控制">
-        <h1 id="meta">META: 质量控制 — 自动化质检体系与工具链设计</h1>
+        <h1 id="10">元技能10: 质量控制 — 自动化质检体系与工具链设计</h1>
 <blockquote>
 <p><strong>元技能定位</strong>：指导所有工序设计lint/validate工具，构建自动化质量保障体系。质量控制是反思（META_反思.md）的前置环节，为Agent提供可自动执行的检测规则。</p>
 </blockquote>
@@ -11225,7 +11238,7 @@ def test_valid_text():
     </section>
     
     <section class="meta-skill" id="00-META-11_数据体感培养">
-        <h1 id="meta">META: 数据体感培养 — 直接观察数据的十层体系</h1>
+        <h1 id="11">元技能11: 数据体感培养 — 直接观察数据的十层体系</h1>
 <hr />
 <h2 id="_1">一、核心思想</h2>
 <blockquote>
@@ -12339,7 +12352,7 @@ python scripts/find_unmarked_animals.py
     </section>
     
     <section class="meta-skill" id="00-META-12_数据融合">
-        <h1 id="meta">META: 数据融合 — 多源数据对齐与消歧</h1>
+        <h1 id="12">元技能12: 数据融合 — 多源数据对齐与消歧</h1>
 <hr />
 <h2 id="_1">一、核心思想</h2>
 <blockquote>
@@ -13997,7 +14010,7 @@ casualties = [
     </section>
     
     <section class="meta-skill" id="00-META-13_技能迁移">
-        <h1 id="meta-skill">META: 技能迁移 — SKILL跨项目复用方法论</h1>
+        <h1 id="13-skill">元技能13: 技能迁移 — SKILL跨项目复用方法论</h1>
 <hr />
 <h2 id="_1">一、核心思想</h2>
 <blockquote>

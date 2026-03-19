@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-生成元技能文档PDF合集
-将14个元技能Markdown文档合并为单个HTML，然后生成PDF
+生成管线技能文档PDF合集
+将SKILL 00-09系列Markdown文档合并为单个HTML，然后生成PDF
 """
 
 import sys
@@ -9,14 +9,21 @@ from pathlib import Path
 import markdown
 from weasyprint import HTML, CSS
 
-def read_meta_skill_files():
-    """读取14个元技能Markdown文件"""
+def read_pipeline_skill_files():
+    """读取SKILL 00-09系列文件（管线技能）"""
     skills_dir = Path(__file__).parent.parent.parent.parent / "skills"
 
-    # 按编号顺序读取
-    files = sorted(skills_dir.glob("00-META-*.md"))
+    # 读取SKILL_00到SKILL_09的所有文件
+    files = []
+    for i in range(10):  # 0-9
+        pattern = f"SKILL_{i:02d}*.md"
+        matched_files = sorted(skills_dir.glob(pattern))
+        files.extend(matched_files)
 
-    print(f"找到 {len(files)} 个元技能文档:")
+    # 按文件名排序
+    files.sort(key=lambda x: x.name)
+
+    print(f"找到 {len(files)} 个管线技能文档:")
     for f in files:
         print(f"  - {f.name}")
 
@@ -38,7 +45,7 @@ def markdown_to_html_content(md_text, title):
 
     # 包裹在section中，添加页面分隔
     return f'''
-    <section class="meta-skill" id="{title}">
+    <section class="pipeline-skill" id="{title}">
         {html_content}
     </section>
     '''
@@ -79,7 +86,7 @@ def generate_combined_html(skill_files, output_html):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大规模知识库构造元技能方法论 - 以史记知识库为例</title>
+    <title>史记知识库构造管线技能手册</title>
     <style>
         body {{
             font-family: "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
@@ -99,7 +106,7 @@ def generate_combined_html(skill_files, output_html):
 
         .cover h1 {{
             font-size: 32pt;
-            color: #8B4513;
+            color: #2C5F8D;
             margin-bottom: 20pt;
         }}
 
@@ -121,8 +128,8 @@ def generate_combined_html(skill_files, output_html):
 
         .toc h2 {{
             font-size: 20pt;
-            color: #8B4513;
-            border-bottom: 2px solid #8B4513;
+            color: #2C5F8D;
+            border-bottom: 2px solid #2C5F8D;
             padding-bottom: 10pt;
             margin-bottom: 20pt;
         }}
@@ -143,15 +150,15 @@ def generate_combined_html(skill_files, output_html):
         }}
 
         .toc a:hover {{
-            color: #8B4513;
+            color: #2C5F8D;
         }}
 
-        .meta-skill {{
+        .pipeline-skill {{
             page-break-before: always;
             padding: 40px;
         }}
 
-        .meta-skill:first-of-type {{
+        .pipeline-skill:first-of-type {{
             page-break-before: auto;
         }}
 
@@ -170,8 +177,8 @@ def generate_combined_html(skill_files, output_html):
 
         h1 {{
             font-size: 22pt;
-            color: #8B4513;
-            border-bottom: 3px solid #8B4513;
+            color: #2C5F8D;
+            border-bottom: 3px solid #2C5F8D;
             padding-bottom: 10pt;
             margin-top: 0;
             margin-bottom: 20pt;
@@ -180,7 +187,7 @@ def generate_combined_html(skill_files, output_html):
 
         h2 {{
             font-size: 16pt;
-            color: #A0522D;
+            color: #4682B4;
             margin-top: 20pt;
             margin-bottom: 12pt;
             page-break-after: avoid;
@@ -231,7 +238,7 @@ def generate_combined_html(skill_files, output_html):
         th {{
             background-color: #f5f5f5;
             font-weight: bold;
-            color: #8B4513;
+            color: #2C5F8D;
         }}
 
         code {{
@@ -256,7 +263,7 @@ def generate_combined_html(skill_files, output_html):
         }}
 
         blockquote {{
-            border-left: 4px solid #d4af37;
+            border-left: 4px solid #4682B4;
             padding-left: 15pt;
             margin: 15pt 0;
             color: #666;
@@ -270,19 +277,19 @@ def generate_combined_html(skill_files, output_html):
         }}
 
         a {{
-            color: #8B4513;
+            color: #2C5F8D;
             text-decoration: none;
         }}
 
         strong {{
-            color: #8B4513;
+            color: #2C5F8D;
         }}
     </style>
 </head>
 <body>
     <div class="cover">
-        <h1>大规模知识库构造元技能方法论</h1>
-        <div class="subtitle">以史记知识库为例</div>
+        <h1>史记知识库构造管线技能手册</h1>
+        <div class="subtitle">SKILL 00-09 技术规范与实践指南</div>
         <div class="info">
             <p style="margin-top: 60pt; font-size: 14pt;"><strong>作者：鲍捷</strong></p>
             <p style="margin-top: 20pt; font-size: 11pt;">
@@ -292,12 +299,12 @@ def generate_combined_html(skill_files, output_html):
             </p>
             <p style="margin-top: 30pt; font-size: 10pt; color: #666;">
                 文档在线目录：<br>
-                <a href="https://github.com/baojie/shiji-kb/tree/main/skills" style="color: #8B4513;">
+                <a href="https://github.com/baojie/shiji-kb/tree/main/skills" style="color: #2C5F8D;">
                     github.com/baojie/shiji-kb/tree/main/skills
                 </a>
             </p>
-            <p style="margin-top: 40pt; color: #999;">生成日期：2026-03-18</p>
-            <p style="margin-top: 10pt; font-size: 10pt; color: #999;">14个核心元技能 · 可复用 · 可迁移</p>
+            <p style="margin-top: 40pt; color: #999;">生成日期：2026-03-19</p>
+            <p style="margin-top: 10pt; font-size: 10pt; color: #999;">完整知识库构造管线 · 从文本到知识图谱</p>
         </div>
     </div>
 
@@ -331,7 +338,7 @@ def generate_pdf_from_html(html_path, pdf_path):
             margin: 2.5cm 2cm;
 
             @top-center {
-                content: "大规模知识库构造元技能方法论";
+                content: "史记知识库构造管线技能手册";
                 font-size: 9pt;
                 color: #999;
             }
@@ -379,18 +386,19 @@ def main():
     output_dir = Path(__file__).parent
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    output_html = output_dir / "大规模知识库构造元技能方法论.html"
-    output_pdf = output_dir / "大规模知识库构造元技能方法论.pdf"
+    output_html = output_dir / "史记知识库构造管线技能手册.html"
+    output_pdf = output_dir / "史记知识库构造管线技能手册.pdf"
 
     print("=" * 60)
-    print("史记知识库 - 元技能文档PDF生成器")
+    print("史记知识库 - 管线技能文档PDF生成器")
     print("=" * 60)
 
     # 读取文件
-    skill_files = read_meta_skill_files()
+    skill_files = read_pipeline_skill_files()
 
-    if len(skill_files) != 14:
-        print(f"\n⚠️  警告: 找到 {len(skill_files)} 个文档，预期为14个")
+    if len(skill_files) == 0:
+        print("\n✗ 错误: 未找到任何SKILL文档")
+        return 1
 
     # 生成HTML
     generate_combined_html(skill_files, output_html)

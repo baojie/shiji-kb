@@ -4,7 +4,7 @@
 
 **作者**：鲍捷
 - 电子邮件：baojie@gmail.com
-- 微信：baojie_xigua
+- 微信：baojiexigua
 - GitHub: @baojie
 
 **文档在线目录**：https://github.com/baojie/shiji-kb/tree/main/skills
