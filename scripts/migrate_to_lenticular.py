@@ -38,7 +38,7 @@ from pathlib import Path
 # ─── 项目路径 ───
 PROJECT_ROOT = Path(__file__).parent.parent
 CHAPTER_DIR = PROJECT_ROOT / 'chapter_md'
-BACKUP_DIR = PROJECT_ROOT / 'chapter_md_backup'
+BACKUP_DIR = PROJECT_ROOT / 'backups/chapter_md_before_lenticular_migration'
 
 # ─── 9类对称符号定义 ───
 # 顺序：从右到左替换时不影响结果，但影响嵌套的"外层优先"判定
