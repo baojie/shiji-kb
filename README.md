@@ -154,7 +154,7 @@ shiji-kb/
 欢迎各种形式的贡献：知识图谱完善、代码改进、学术讨论、可视化设计、Bug报告。
 
 - GitHub Issues：<https://github.com/baojie/shiji-kb/issues>
-- 微信：baojie_xigua
+- 微信：baojiexigua
 
 **许可证**：标注数据采用 [CC BY-NC-SA 4.0](LICENSE)，分析脚本采用 MIT License。《史记》原文为公有领域作品。
 
