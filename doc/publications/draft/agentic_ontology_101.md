@@ -1,3 +1,8 @@
+---
+status: draft
+platforms: []
+---
+
 # Agentic Ontology 101: A Guide to Building Your First Knowledge Graph with AI
 
 **Jie Bao, with Claude (Anthropic)**
