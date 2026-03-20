@@ -423,3 +423,10 @@ shiji-kb/
 ---
 
 **项目维护者**：[baojie](https://github.com/baojie) · **最后更新**：2026-03-20
+
+## 赞助一杯咖啡
+
+如果你觉得这个项目有意义，欢迎支持我继续做下去。数额随意，不用超过一杯咖啡钱。
+
+<img width="201" height="277" alt="赞助一杯咖啡" src="https://github.com/user-attachments/assets/8c5be66f-3927-47a3-9d3a-0c247e43726b" />
+
