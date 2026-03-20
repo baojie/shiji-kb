@@ -1,0 +1,565 @@
+/* 史记命名实体样式表 v5.4 (融合v5.3.3 + v6.0方案B改进) */
+/* 最后更新: 2026-03-19 13:45 */
+/* 如果你在浏览器开发者工具中看到这行注释，说明CSS已加载 */
+/*
+ * v5.4 改进（基于v5.3.3）：
+ * 1. 典籍：添加波浪线 (wavy 2px) + 偏移3px
+ * 2. 神话：添加波浪线 (wavy 2px) + 偏移3px
+ * 3. 朝代：下划线加粗到2px
+ * 4. 思想：下划线加粗到2px + 改进颜色透明度
+ * 5. 保持v5.3的text-decoration风格和整体配色
+ */
+
+/* 基础样式 */
+body {
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+    line-height: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdf8;
+    color: #2c2c2c;
+}
+
+/* 段落间距 */
+p {
+    margin: 2em 0;
+}
+
+/* 人名样式 */
+.person {
+    color: #A0522D;  /* 沙褐色，更鲜明 */
+    text-decoration: underline;
+    text-decoration-color: #A0522D80;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
+    font-weight: 600;
+    cursor: default;
+}
+
+/* 地名样式 */
+.place {
+    color: #B8860B;
+    text-decoration: underline double;  /* 双线区分地名和人名 */
+    text-decoration-color: #B8860B80;
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
+    cursor: default;
+}
+
+/* 官职样式 - 技术文章中用于身份/角色（程序员、博士等） */
+.official {
+    color: #D2691E;  /* 巧克力色 */
+    font-weight: 600;
+    background-color: rgba(210, 105, 30, 0.08);
+    padding: 0 2px;
+    cursor: default;
+}
+
+/* 时间/纪年样式 - 技术文章中用于组织名 */
+.time {
+    color: #20B2AA;  /* 浅海绿色 */
+    font-style: italic;
+    font-weight: 600;
+    background-color: rgba(32, 178, 170, 0.08);
+    padding: 0 2px;
+    cursor: default;
+}
+
+/* 朝代/氏族/国号样式 - 技术文章中用于时间表达 */
+.dynasty {
+    color: #9370DB;  /* 中紫色 */
+    text-decoration: underline solid #9370DB80;  /* v5.3.3: 改用text-decoration避免与背景重叠 */
+    text-decoration-thickness: 2px;  /* v5.4: 加粗下划线 */
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
+    font-weight: 600;
+    background-color: rgba(147, 112, 219, 0.06);
+    padding: 0 2px;
+    cursor: default;
+}
+
+/* 封国样式 */
+.feudal-state {
+    color: #B266B2;
+    text-decoration: underline solid #B266B280;  /* v5.3: 改用text-decoration避免与背景重叠 */
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
+    cursor: default;
+}
+
+/* 制度/典章样式 - 技术文章中用于工具名（Claude、IDE等） */
+.institution {
+    color: #FF6B35;  /* 橙红色，突出工具名 */
+    font-weight: 600;
+    background-color: rgba(255, 107, 53, 0.10);
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 族群/部落样式 */
+.tribe {
+    color: #2F4F4F;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 器物样式 */
+.artifact {
+    color: #CD853F;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 天文/历法样式 */
+.astronomy {
+    color: #483D8B;
+    font-style: italic;
+    cursor: default;
+}
+
+/* 传说生物/神话样式 */
+.mythical {
+    color: #8B008B;
+    text-decoration: underline wavy #8B008B80;  /* v5.4: 添加波浪线 */
+    text-decoration-thickness: 2px;  /* v5.4: 加粗波浪线 */
+    text-underline-offset: 3px;  /* v5.4: 下移 */
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 生物样式 */
+.biology {
+    color: #228B22;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 典籍样式 */
+.book {
+    color: #6A0DAD;  /* 鲜艳的紫罗兰色 */
+    text-decoration: underline wavy #6A0DAD80;  /* v5.4: 添加波浪线 */
+    text-decoration-thickness: 2px;  /* v5.4: 加粗波浪线 */
+    text-underline-offset: 3px;  /* v5.4: 下移 */
+    
+    font-weight: 600;
+    background-color: rgba(106, 13, 173, 0.06);
+    padding: 0 2px;
+    cursor: default;
+}
+
+/* 礼仪样式 */
+.ritual {
+    color: #8B6914;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 刑法样式 */
+.legal {
+    color: #8B0000;
+    background-color: rgba(139, 0, 0, 0.06);
+    cursor: default;
+}
+
+/* 思想样式 */
+.concept {
+    color: #2F4F4F;
+    text-decoration: underline dotted #2F4F4F80;  /* v5.4: 改进颜色透明度 */
+    text-decoration-thickness: 2px;  /* v5.4: 加粗点线 */
+    text-underline-offset: 3px;  /* 增加下划线与文字的距离 */
+    cursor: default;
+}
+
+/* 数量样式 */
+.quantity {
+    color: #006400;  /* 深绿色 */
+    font-weight: 600;
+    font-style: italic;
+    background-color: rgba(0, 100, 0, 0.06);
+    padding: 0 2px;
+    cursor: default;
+}
+
+/* 术语样式（技术文章） - 蓝色系，类似代码关键字 */
+.terminology {
+    color: #0066CC;
+    font-weight: 600;
+    background-color: rgba(0, 102, 204, 0.12);
+    padding: 0 4px;
+    border-radius: 3px;
+    cursor: default;
+}
+
+/* 方法论样式（技术文章） - 紫红色系，突出显示 */
+.methodology {
+    color: #C71585;  /* 深粉红色 */
+    font-weight: 700;
+    background-color: rgba(199, 21, 133, 0.12);
+    padding: 0 4px;
+    border-radius: 3px;
+    text-decoration: underline double #C7158580;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    cursor: default;
+}
+
+/* 实体链接样式 - v5.3.2: 移除链接默认下划线，避免与实体自身的text-decoration重叠 */
+a.entity-link {
+    text-decoration: none;  /* 移除链接默认下划线 */
+    color: inherit;         /* 继承实体颜色 */
+}
+
+a.entity-link:hover {
+    opacity: 0.8;           /* 悬停时略微透明，提供视觉反馈 */
+}
+
+/* ======================================== 动词标注样式 v5.1 ======================================== */
+/* v5.1: 改用半透明背景，深色文字 + 加粗，提升可读性 */
+
+/* 军事动词 ⟦◈动词⟧ */
+.verb-military {
+    color: #DC143C;  /* 深红色文字 */
+    background-color: rgba(220, 20, 60, 0.12);  /* 半透明红色背景 */
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 刑罚动词 ⟦◉动词⟧ */
+.verb-penalty {
+    color: #0056b3;  /* 深蓝色文字 */
+    background-color: rgba(0, 86, 179, 0.10);  /* 半透明蓝色背景 */
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 政治动词 ⟦○动词⟧ */
+.verb-political {
+    color: #B8860B;  /* 金色文字 */
+    background-color: rgba(184, 134, 11, 0.12);  /* 半透明金色背景 */
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 经济动词 ⟦◇动词⟧ */
+.verb-economic {
+    color: #228B22;  /* 深绿色文字 */
+    background-color: rgba(34, 139, 34, 0.15);  /* 半透明绿色背景 */
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}
+
+/* 身份标注 〖#身份〗 */
+.identity {
+    color: #4169E1;  /* 皇室蓝 */
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 事件标注（事件名、事件链接等） */
+.event {
+    color: #8B4513;  /* 褐色 */
+    font-weight: 500;
+    cursor: default;
+}
+
+/* 引号内容样式（对话） */
+/* 视觉设计：克制优雅的对话标记
+ * - 斜体：区分对话与叙述
+ * - 淡褐色背景：极淡的底色（透明度0.03），不干扰阅读
+ * - 底部虚线：褐色虚线（透明度0.3），提供清晰但不突兀的视觉边界
+ * - 适度内边距：左右各2px，保持文字呼吸感
+ */
+.quoted {
+    font-style: italic;
+    background-color: rgba(139, 69, 19, 0.03);
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.3);
+    padding: 0 2px;
+}
+
+/* 章节标题 */
+h1 {
+    color: #8B0000;
+    border-bottom: 3px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #8B4513;
+    border-left: 5px solid #8B4513;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #B8860B;
+    margin-top: 30px;
+}
+
+/* 分隔线 */
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 40px 0;
+}
+
+/* 引用块（对话） - 缩进两个汉字 */
+blockquote {
+    border: none;
+    margin: 0.5em 0;  /* 稍微增加上下边距，避免与段落贴太紧 */
+    padding: 0;
+    padding-left: 2em;
+    background: none;
+    font-style: italic;
+}
+
+/* 当段落以"曰："结尾且后接blockquote时，减小段落下边距 */
+p:has(+ blockquote) {
+    margin-bottom: 0.5em;  /* 减小"曰："后的空白 */
+}
+
+/* 长对话缩进 - 段内较长引号内容另起一行，缩进两个汉字 */
+.dialogue {
+    display: block;
+    padding-left: 2em;
+}
+
+/* 列表样式 - 古籍风格，去除项目符号，仅缩进 */
+ul, ol {
+    line-height: 2;
+    list-style: none;
+    padding-left: 2em;
+    margin: 1em 0;
+}
+
+ul li, ol li {
+    margin: 0;
+}
+
+/* 段落编号 (PN - Purple Numbers) - 致敬 Doug Engelbart
+ * Purple Numbers 是 Doug Engelbart 在 1960 年代提出的概念，
+ * 用于为文档中的每个段落分配唯一的、可引用的编号。
+ * 这一创新使得超文本链接和精确引用成为可能，
+ * 是现代互联网和知识管理系统的重要基础。
+ *
+ * 参考 Eugene Eric Kim 的实现 (https://eekim.com/software/purple/purple.html)
+ * 使用淡紫色，字体较小，显示在段落开头。
+ * 点击 PN 可复制带锚点的完整 URL，便于分享和引用。
+ */
+.para-num {
+    display: inline;
+    color: #C8A8FF;  /* 淡紫色 - 参考 Purple 原始实现 */
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.75em;  /* x-small */
+    font-weight: bold;
+    font-style: normal;
+    margin-right: 0.5em;  /* 开头位置，右边距 */
+    text-decoration: none;
+    vertical-align: baseline;
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;  /* 显示为可点击 */
+    transition: color 0.2s ease;
+}
+
+/* 段落编号悬停效果 */
+.para-num:hover {
+    color: #9370DB;  /* 深一点的紫色 */
+    text-decoration: underline;
+}
+
+/* 当段落编号独立成段时（段落只包含编号），显示为块级元素 */
+p:has(> .para-num:only-child) {
+    margin: 0.5em 0;
+}
+
+p > .para-num:only-child {
+    display: inline-block;
+    margin-bottom: 0.3em;
+}
+
+/* 史记年表样式 - 突破 body max-width 限制，占满视口宽度 */
+/* wrapper 同时限制高度并启用双向滚动，使 thead sticky 生效 */
+.shiji-table-wrapper {
+    overflow: auto;
+    width: 100vw;
+    max-height: 85vh;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: 1px solid #d0c8a0;
+    border-bottom: 1px solid #d0c8a0;
+    box-shadow: 0 1px 4px rgba(90, 74, 42, 0.08);
+}
+
+.shiji-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85em;
+    line-height: 1.7;
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+}
+
+.shiji-table th {
+    background-color: #5a4a2a;
+    color: #f5f0e0;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #4a3c1e;
+    text-align: center;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    font-size: 0.95em;
+    letter-spacing: 0.05em;
+}
+
+.shiji-table td {
+    padding: 6px 10px;
+    border: 1px solid #e0dcc8;
+    text-align: left;
+    vertical-align: top;
+    color: #2c2c2c;
+}
+
+.shiji-table tr.even td {
+    background-color: #fdfdf8;
+}
+
+.shiji-table tr.odd td {
+    background-color: #f5f0e0;
+}
+
+.shiji-table tbody tr:hover td {
+    background-color: #ede8d4;
+    transition: background-color 0.15s ease;
+}
+
+.shiji-table td:nth-child(2) {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #5a4a2a;
+    background-color: rgba(90, 74, 42, 0.06);
+    text-align: center;
+    border-right: 2px solid #d0c8a0;
+}
+
+/* 表格行号列（Purple Number for table rows） */
+.row-pn-col {
+    width: 2em;
+    min-width: 2em;
+    text-align: right;
+    padding-right: 6px !important;
+    color: #C8A8FF;
+    font-size: 0.75em;
+    font-family: Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    border-right: 1px solid #e0d8c0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.row-pn-col .para-num {
+    font-size: 1em;  /* 继承列字号，不再额外缩小 */
+}
+
+/* 语义标注块（::: fenced div） */
+.note-box {
+    background-color: #fffef0;
+    border: 1px solid #e6e0c0;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.note-box h4 {
+    color: #8B7500;
+    margin-top: 0;
+}
+
+/* 太史公曰 */
+.note-太史公曰 {
+    border-left: 3px solid #8B7500;
+}
+
+/* 赞（韵文） */
+.note-赞 {
+    border-left: 3px solid #a0522d;
+    background-color: #fefcf5;
+    font-style: italic;
+}
+.note-赞 p {
+    line-height: 2.0;
+    white-space: pre-line;
+}
+
+/* 诗歌 */
+.note-诗歌 {
+    border-left: 3px solid #6b8e23;
+    background-color: #fcfef5;
+    font-style: italic;
+}
+.note-诗歌 p {
+    line-height: 2.0;
+    white-space: pre-line;
+}
+
+/* ======================================== 技术文章动词标注样式 v6.0 ======================================== */
+/* 基于知识工程工作流的4类动词分类 */
+
+/* 构建动词 ⟦◆构造⟧ - 知识创造 */
+.verb-construct {
+    color: #FF6B35;  /* 橙色 */
+    background-color: rgba(255, 107, 53, 0.15);
+    font-weight: 700;
+    padding: 0 4px;
+    border-radius: 3px;
+    cursor: default;
+}
+
+/* 处理动词 ⟦◇处理⟧ - 数据加工 */
+.verb-process {
+    color: #0066CC;  /* 蓝色 */
+    background-color: rgba(0, 102, 204, 0.15);
+    font-weight: 700;
+    padding: 0 4px;
+    border-radius: 3px;
+    cursor: default;
+}
+
+/* 推理动词 ⟦◎推理⟧ - 逻辑分析 */
+.verb-reason {
+    color: #9370DB;  /* 紫色 */
+    background-color: rgba(147, 112, 219, 0.15);
+    font-weight: 700;
+    padding: 0 4px;
+    border-radius: 3px;
+    cursor: default;
+}
+
+/* 应用动词 ⟦◈应用⟧ - 实际应用 */
+.verb-apply {
+    color: #228B22;  /* 绿色 */
+    background-color: rgba(34, 139, 34, 0.15);
+    font-weight: 700;
+    padding: 0 4px;
+    border-radius: 3px;
+    cursor: default;
+}
+
+/* 职业样式（技术文章） - 现代职业 */
+.profession {
+    color: #8B4789;  /* 紫红色 */
+    font-weight: 600;
+    background-color: rgba(139, 71, 137, 0.10);
+    padding: 0 3px;
+    border-radius: 2px;
+    cursor: default;
+}

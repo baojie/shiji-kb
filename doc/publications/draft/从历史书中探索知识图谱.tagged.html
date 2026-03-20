@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>从历史书中探索知识图谱</title>
+    <link rel="stylesheet" href="kg-tech-article-styles.css">
+    <link rel="stylesheet" href="../../../docs/css/chapter-nav.css">
+    <script src="../../../docs/js/purple-numbers.js"></script>
+</head>
+<body>
+<nav class="chapter-nav">
+    <a href="../../../docs/index.html" class="nav-home">回到主页</a>
+</nav>
+<h1>从历史书中<span class="verb-process" title="处理动词">探索</span><a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a></h1>
+<div class="article-meta">
+    <span class="article-date">2026年03月19日</span>
+</div>
+
+<h2>一、项目缘起：从<a href="../entities/terminology.html#entity-语法高亮" class="entity-link" target="_blank"><span class="terminology" title="术语">语法高亮</span></a>到知识重构</h2>
+
+<h3>1.1 为什么要<span class="verb-construct" title="构建动词">做</span>《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》知识库</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">首先感谢<a href="../entities/person.html#entity-永启" class="entity-link" target="_blank"><span class="person" title="人名">永启</span></a>的热情介绍。</span>
+<span class="sentence-indent-0">我已经有<a href="../entities/dynasty.html#entity-一年多" class="entity-link" target="_blank"><span class="dynasty" title="氏族">一年多</span></a>没有来跟大家汇报了。</span>
+<span class="sentence-indent-0">从<a href="../entities/dynasty.html#entity-两年前" class="entity-link" target="_blank"><span class="dynasty" title="氏族">两年前</span></a>开始，我就退居二线，现在公司的全部领导层都是<a href="../entities/dynasty.html#entity-90后" class="entity-link" target="_blank"><span class="dynasty" title="氏族">90后</span></a>和<a href="../entities/dynasty.html#entity-00后" class="entity-link" target="_blank"><span class="dynasty" title="氏族">00后</span></a>，像我这样的<a href="../entities/dynasty.html#entity-70后" class="entity-link" target="_blank"><span class="dynasty" title="氏族">70后</span></a>已经回到自己应该做的事情上。</span>
+<span class="sentence-indent-1">所以我现在是<a href="../entities/time.html#entity-文因互联" class="entity-link" target="_blank"><span class="time" title="时间">文因互联</span></a>的一位普通<a href="../entities/profession.html#entity-工程师" class="entity-link" target="_blank"><span class="profession" title="职业">工程师</span></a>，也很感谢公司给了我很多自由，让我有时间去<span class="verb-process" title="处理动词">探索</span>一些纯粹个人兴趣的事情。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">我今天跟大家汇报的东西，一开始是一个完全不务正业的项目。</span>
+<span class="sentence-indent-1">因为我非常热爱历史，但在阅读过程中，我感觉传统的历史书特别难读。</span>
+<span class="sentence-indent-0">光《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》我家里就有<a href="../entities/quantity.html#entity-8个" class="entity-link" target="_blank"><span class="quantity" title="数量">8个</span></a>不同的版本，但没有<a href="../entities/quantity.html#entity-1个" class="entity-link" target="_blank"><span class="quantity" title="数量">1个</span></a>版本让我觉得满意，所以我之前就有了<a href="../entities/quantity.html#entity-1个" class="entity-link" target="_blank"><span class="quantity" title="数量">1个</span></a>想法：为什么不能<span class="verb-construct" title="构建动词">做</span><a href="../entities/quantity.html#entity-1个" class="entity-link" target="_blank"><span class="quantity" title="数量">1个</span></a>让我自己很满意的《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》呢？</span>
+</p>
+
+<h3>1.2 程序员的<a href="../entities/terminology.html#entity-语法高亮" class="entity-link" target="_blank"><span class="terminology" title="术语">语法高亮</span></a>启发</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">我的初衷是这样的：我们<a href="../entities/profession.html#entity-程序员" class="entity-link" target="_blank"><span class="profession" title="职业">程序员</span></a><span class="verb-construct" title="构建动词">写</span>代码都有<a href="../entities/terminology.html#entity-语法高亮" class="entity-link" target="_blank"><span class="terminology" title="术语">语法高亮</span></a>。</span>
+<span class="sentence-indent-0">在我十几岁刚开始编程的时候（<a href="../entities/dynasty.html#entity-90年代中期" class="entity-link" target="_blank"><span class="dynasty" title="氏族">90年代中期</span></a>），那时候还没有<a href="../entities/terminology.html#entity-语法高亮" class="entity-link" target="_blank"><span class="terminology" title="术语">语法高亮</span></a>。</span>
+<span class="sentence-indent-0">但后来上大学之后，基本上所有的编程环境都是<a href="../entities/terminology.html#entity-语法高亮" class="entity-link" target="_blank"><span class="terminology" title="术语">语法高亮</span></a>。</span>
+<span class="sentence-indent-1">如果让一个<a href="../entities/profession.html#entity-程序员" class="entity-link" target="_blank"><span class="profession" title="职业">程序员</span></a>去读没有彩色的程序，我相信任何人都不能接受。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">那么为什么普通人现在还能接受没有彩色的文本呢？</span>
+<span class="sentence-indent-0">我相信如果去问<a href="../entities/dynasty.html#entity-20年之后" class="entity-link" target="_blank"><span class="dynasty" title="氏族">20年之后</span></a>的年轻人，他们会觉得：<span class="dialogue quoted">"爸爸，你那个时候读的书全是黑白的吗？</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">为什么普通人没有享受到<a href="../entities/profession.html#entity-程序员" class="entity-link" target="_blank"><span class="profession" title="职业">程序员</span></a>享受的这种高效认知辅助工具？</span>
+<span class="sentence-indent-1">因为我们以前没有那么好的<a href="../entities/terminology.html#entity-人工智能" class="entity-link" target="_blank"><span class="terminology" title="术语">人工智能</span></a>工具来帮我们做这件事情。</span>
+<span class="sentence-indent-0">这是一个非常小的初衷，但在做这件事情的过程中，我<span class="verb-process" title="处理动词">发现</span>越做越大，有了越来越有趣的结果。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">今天跟大家分享一下，为什么这个完全不务正业的东西，最后反而真的<span class="verb-construct" title="构建动词">做成</span>了一个挺有意义的工作。</span>
+</p>
+
+<h2>二、核心成果：从文本到<a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a></h2>
+
+<h3>2.1 数据规模统计</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》的正文是<a href="../entities/quantity.html#entity-52万字" class="entity-link" target="_blank"><span class="quantity" title="数量">52万字</span></a>，后来诸先生给他加了一些标注注释等等，最后变成<a href="../entities/quantity.html#entity-57万字" class="entity-link" target="_blank"><span class="quantity" title="数量">57万字</span></a>。</span>
+</p>
+
+<p>在<a href="../entities/quantity.html#entity-57万字" class="entity-link" target="_blank"><span class="quantity" title="数量">57万字</span></a>里面，我们<span class="verb-process" title="处理动词">识别</span>出来了：</p>
+<ul>
+<li><a href="../entities/quantity.html#entity-15，000个" class="entity-link" target="_blank"><span class="quantity" title="数量">15，000个</span></a><a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a></li>
+<li><a href="../entities/quantity.html#entity-10万多个" class="entity-link" target="_blank"><span class="quantity" title="数量">10万多个</span></a>标注</li>
+<li><a href="../entities/quantity.html#entity-3，000多个" class="entity-link" target="_blank"><span class="quantity" title="数量">3，000多个</span></a><a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a></li>
+<li><a href="../entities/quantity.html#entity-7，600个" class="entity-link" target="_blank"><span class="quantity" title="数量">7，600个</span></a><a href="../entities/terminology.html#entity-关系" class="entity-link" target="_blank"><span class="terminology" title="术语">关系</span></a>（<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>之间）</li>
+</ul>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">但这只是挂一漏万，把这里面最核心的<a href="../entities/terminology.html#entity-语义结构" class="entity-link" target="_blank"><span class="terminology" title="术语">语义结构</span></a><span class="verb-process" title="处理动词">提取</span>出来。</span>
+<span class="sentence-indent-0">在这之上我们做了很多工作。</span>
+<span class="sentence-indent-0">从最基础的<a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a><span class="verb-construct" title="构建动词">建模</span>开始：<a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>有<a href="../entities/terminology.html#entity-属性" class="entity-link" target="_blank"><span class="terminology" title="术语">属性</span></a>、有<a href="../entities/terminology.html#entity-关系" class="entity-link" target="_blank"><span class="terminology" title="术语">关系</span></a>，还有各种特殊的<a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>类型，比如人物、地名、职位、<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>等等。</span>
+<span class="sentence-indent-0"><a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>之间有<a href="../entities/terminology.html#entity-关系" class="entity-link" target="_blank"><span class="terminology" title="术语">关系</span></a>，人物之间也有<a href="../entities/terminology.html#entity-关系" class="entity-link" target="_blank"><span class="terminology" title="术语">关系</span></a>。</span>
+<span class="sentence-indent-0">对于<a href="../entities/quantity.html#entity-15，000个" class="entity-link" target="_blank"><span class="quantity" title="数量">15，000个</span></a><a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>，肯定需要进行<a href="../entities/terminology.html#entity-概念分类" class="entity-link" target="_blank"><span class="terminology" title="术语">概念分类</span></a>，所以我们又进行了<a href="../entities/terminology.html#entity-本体" class="entity-link" target="_blank"><span class="terminology" title="术语">本体</span></a><span class="verb-construct" title="构建动词">构造</span>，这都是非常经典的<a href="../entities/terminology.html#entity-知识工程" class="entity-link" target="_blank"><span class="terminology" title="术语">知识工程</span></a>工作。</span>
+</p>
+
+<h3>2.2 效率对比：<a href="../entities/terminology.html#entity-AI" class="entity-link" target="_blank"><span class="terminology" title="术语">AI</span></a>时代的<a href="../entities/terminology.html#entity-知识工程" class="entity-link" target="_blank"><span class="terminology" title="术语">知识工程</span></a></h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">考虑到我个人花在这个问题上的时间，前前后后大概也就<a href="../entities/quantity.html#entity-70个小时" class="entity-link" target="_blank"><span class="quantity" title="数量">70个小时</span></a>，就能<span class="verb-construct" title="构建动词">构造</span>出一个包含<a href="../entities/quantity.html#entity-1万多个" class="entity-link" target="_blank"><span class="quantity" title="数量">1万多个</span></a><a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>的非常丰富的<a href="../entities/terminology.html#entity-本体" class="entity-link" target="_blank"><span class="terminology" title="术语">本体</span></a>。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">相比之下，<a href="../entities/dynasty.html#entity-20年前" class="entity-link" target="_blank"><span class="dynasty" title="氏族">20年前</span></a>我还在读<a href="../entities/profession.html#entity-博士" class="entity-link" target="_blank"><span class="profession" title="职业">博士</span></a>的时候，<a href="../entities/dynasty.html#entity-2006年" class="entity-link" target="_blank"><span class="dynasty" title="氏族">2006年</span></a>的暑假，我花了<a href="../entities/dynasty.html#entity-三个月" class="entity-link" target="_blank"><span class="dynasty" title="氏族">三个月</span></a>的时间<span class="verb-construct" title="构建动词">构造</span>了一个可能是世界上第一个猪肉质量评估<a href="../entities/terminology.html#entity-本体" class="entity-link" target="_blank"><span class="terminology" title="术语">本体</span></a>，那个<a href="../entities/terminology.html#entity-本体" class="entity-link" target="_blank"><span class="terminology" title="术语">本体</span></a>包含<a href="../entities/quantity.html#entity-400个" class="entity-link" target="_blank"><span class="quantity" title="数量">400个</span></a><a href="../entities/terminology.html#entity-类" class="entity-link" target="_blank"><span class="terminology" title="术语">类</span></a>，花了我整整<a href="../entities/dynasty.html#entity-3个月" class="entity-link" target="_blank"><span class="dynasty" title="氏族">3个月</span></a>的时间。</span>
+<span class="sentence-indent-0">那个时候我们的<a href="../entities/terminology.html#entity-知识库" class="entity-link" target="_blank"><span class="terminology" title="术语">知识库</span></a>编辑工具叫<a href="../entities/institution.html#entity-Protégé" class="entity-link" target="_blank"><span class="institution" title="制度">Protégé</span></a>，是<a href="../entities/time.html#entity-斯坦福大学" class="entity-link" target="_blank"><span class="time" title="时间">斯坦福大学</span></a><span class="verb-construct" title="构建动词">开发</span>的一个<a href="../entities/terminology.html#entity-本体编辑器" class="entity-link" target="_blank"><span class="terminology" title="术语">本体编辑器</span></a>。</span>
+<span class="sentence-indent-0">但我在做整个<a href="../entities/terminology.html#entity-知识库" class="entity-link" target="_blank"><span class="terminology" title="术语">知识库</span></a>开发的过程中，没有<span class="verb-apply" title="应用动词">用</span>到任何一个<a href="../entities/terminology.html#entity-本体编辑器" class="entity-link" target="_blank"><span class="terminology" title="术语">本体编辑器</span></a>，因为现在我们<span class="verb-process" title="处理动词">发现</span>，<a href="../entities/institution.html#entity-IDE" class="entity-link" target="_blank"><span class="institution" title="制度">IDE</span></a>加上任何一个强大的<a href="../entities/terminology.html#entity-AI" class="entity-link" target="_blank"><span class="terminology" title="术语">AI</span></a>，就是最好的<a href="../entities/terminology.html#entity-本体编辑器" class="entity-link" target="_blank"><span class="terminology" title="术语">本体编辑器</span></a>了，或者说可以是任何一种知识结构的编辑器。</span>
+<span class="sentence-indent-1">所以你不再需要一个特殊的编辑器，这个结论可以推而广之。</span>
+</p>
+
+<h3>2.3 <a href="../entities/terminology.html#entity-AI" class="entity-link" target="_blank"><span class="terminology" title="术语">AI</span></a>依赖的现实</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">在做这件事情的过程中，我<span class="verb-process" title="处理动词">发现</span>如果现在离开<a href="../entities/institution.html#entity-Claude" class="entity-link" target="_blank"><span class="institution" title="制度">Claude</span></a>，我基本上什么都干不了了。</span>
+<span class="sentence-indent-0">我现在所有的工作都是在<a href="../entities/institution.html#entity-Claude" class="entity-link" target="_blank"><span class="institution" title="制度">Claude</span></a>的辅助下<span class="verb-apply" title="应用动词">完成</span>的，我所有的<a href="../entities/institution.html#entity-Word" class="entity-link" target="_blank"><span class="institution" title="制度">Word</span></a>文档、所有的<a href="../entities/institution.html#entity-PPT" class="entity-link" target="_blank"><span class="institution" title="制度">PPT</span></a>，包括今天这个<a href="../entities/institution.html#entity-PPT" class="entity-link" target="_blank"><span class="institution" title="制度">PPT</span></a>也都是<a href="../entities/institution.html#entity-Claude" class="entity-link" target="_blank"><span class="institution" title="制度">Claude</span></a>帮我<span class="verb-construct" title="构建动词">写</span>的，我大概花了<a href="../entities/dynasty.html#entity-30分钟" class="entity-link" target="_blank"><span class="dynasty" title="氏族">30分钟</span></a>的时间。</span>
+<span class="sentence-indent-0">我花了非常多的时间导出我所有的数据，然后<span class="verb-process" title="处理动词">发现</span><a href="../entities/terminology.html#entity-AI" class="entity-link" target="_blank"><span class="terminology" title="术语">AI</span></a>基本上可以取代我们桌面案头工作的几乎全部环节。</span>
+<span class="sentence-indent-0">我已经找不到任何事情是<a href="../entities/institution.html#entity-Claude" class="entity-link" target="_blank"><span class="institution" title="制度">Claude</span></a>不能帮我干的。</span>
+<span class="sentence-indent-0">但这么做的一个代价是：有时候我的梯子挂掉了，或者<a href="../entities/institution.html#entity-Claude" class="entity-link" target="_blank"><span class="institution" title="制度">Claude</span></a>被封掉了，我突然<span class="verb-process" title="处理动词">发现</span>我的大脑就已经被摘除了，什么都干不了。</span>
+</p>
+
+<h2>三、实际应用：多维度的知识呈现</h2>
+
+<h3>3.1 <a href="../entities/terminology.html#entity-语法高亮" class="entity-link" target="_blank"><span class="terminology" title="术语">语法高亮</span></a>阅读器</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">我们的核心工作是把《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》的<a href="../entities/terminology.html#entity-知识库" class="entity-link" target="_blank"><span class="terminology" title="术语">知识库</span></a><span class="verb-construct" title="构建动词">开发</span>出来，然后在上面<span class="verb-construct" title="构建动词">搭建</span>了一些小规模的应用。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">左边就是我最大的初衷：<a href="../entities/terminology.html#entity-语法高亮" class="entity-link" target="_blank"><span class="terminology" title="术语">语法高亮</span></a>阅读器。</span>
+<span class="sentence-indent-0">我可以把《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》当中所有句子的动词、名词和句子之间的结构，让<a href="../entities/terminology.html#entity-AI" class="entity-link" target="_blank"><span class="terminology" title="术语">AI</span></a>帮我<span class="verb-process" title="处理动词">分析</span>。</span>
+<span class="sentence-indent-1">因为我们从小学中学的时候，学语文最重要的就是要把一个段落<span class="verb-process" title="处理动词">拆分</span>成主要的句子。</span>
+<span class="sentence-indent-1">如果一个句子有排比结构、层级结构、因果结构，我们是用大脑来做这些<span class="verb-process" title="处理动词">分析</span>。</span>
+<span class="sentence-indent-0">现在我是直接用<a href="../entities/terminology.html#entity-AI" class="entity-link" target="_blank"><span class="terminology" title="术语">AI</span></a>帮我把所有底层的这些<a href="../entities/terminology.html#entity-语义结构" class="entity-link" target="_blank"><span class="terminology" title="术语">语义结构</span></a>都<span class="verb-process" title="处理动词">分解</span>出来了。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">可以说，当我习惯了这种阅读方式之后，再去阅读那种完全线性的黑白文字，我自己现在已经无法忍受了。</span>
+<span class="sentence-indent-0">这是一个单行道。</span>
+<span class="sentence-indent-1">所以有很多书我以前一直都没能读完，太难懂了，比如《<a href="../entities/book.html#entity-红楼梦" class="entity-link" target="_blank"><span class="book" title="典籍">红楼梦</span></a>》我一直都没能读完，因为人物太多、<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>太复杂。</span>
+<span class="sentence-indent-0">我下一步准备把《<a href="../entities/book.html#entity-红楼梦" class="entity-link" target="_blank"><span class="book" title="典籍">红楼梦</span></a>》也按这种方式重新做一遍。</span>
+</p>
+
+<h3>3.2 <a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a>可视化与查询</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-1">还做了各种<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>的可视化，还有<a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a>的查询，以及在这之上的一些更深层次的东西。</span>
+</p>
+
+<h3>3.3 从书到App：<a href="../entities/methodology.html#entity-PDF to Skill" class="entity-link" target="_blank"><span class="methodology" title="方法论">PDF to Skill</span></a></h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-1">因为我们最近还在做另外一件非常有趣的事情：你把任何一本书给我，我把它<span class="verb-process" title="处理动词">转换</span>成一个<a href="../entities/institution.html#entity-APP" class="entity-link" target="_blank"><span class="institution" title="制度">APP</span></a>。</span>
+<span class="sentence-indent-0">一开始我们想的都是挺正经的应用，比如把<a href="../entities/time.html#entity-上交所" class="entity-link" target="_blank"><span class="time" title="时间">上交所</span></a>的《<a href="../entities/book.html#entity-46号文" class="entity-link" target="_blank"><span class="book" title="典籍">46号文</span></a>》、《<a href="../entities/book.html#entity-42号文" class="entity-link" target="_blank"><span class="book" title="典籍">42号文</span></a>》、《<a href="../entities/book.html#entity-43号文" class="entity-link" target="_blank"><span class="book" title="典籍">43号文</span></a>》<span class="verb-process" title="处理动词">转换</span>成一个科创板审核<a href="../entities/institution.html#entity-APP" class="entity-link" target="_blank"><span class="institution" title="制度">APP</span></a>，或者把《<a href="../entities/book.html#entity-财务粉饰面对面" class="entity-link" target="_blank"><span class="book" title="典籍">财务粉饰面对面</span></a>》这本书<span class="verb-process" title="处理动词">转换</span>成一个财务报表造假发现应用。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">以前我们要用人工来做这些事情，需要很多<a href="../entities/profession.html#entity-业务经理" class="entity-link" target="_blank"><span class="profession" title="职业">业务经理</span></a>去读这些文件，然后再把它<span class="verb-construct" title="构建动词">写成</span>规则。</span>
+<span class="sentence-indent-0">我们在给<a href="../entities/time.html#entity-北交所" class="entity-link" target="_blank"><span class="time" title="时间">北交所</span></a>做<a href="../entities/institution.html#entity-利器系统" class="entity-link" target="_blank"><span class="institution" title="制度">利器系统</span></a>的时候，他们给了我们<a href="../entities/quantity.html#entity-100多兆" class="entity-link" target="_blank"><span class="quantity" title="数量">100多兆</span></a>的文件，我们的<a href="../entities/profession.html#entity-业务经理" class="entity-link" target="_blank"><span class="profession" title="职业">业务经理</span></a>们有<a href="../entities/quantity.html#entity-五六个人" class="entity-link" target="_blank"><span class="quantity" title="数量">五六个人</span></a>读了<a href="../entities/dynasty.html#entity-三个月" class="entity-link" target="_blank"><span class="dynasty" title="氏族">三个月</span></a>才能读完，然后<span class="verb-process" title="处理动词">整理</span>出来了<a href="../entities/quantity.html#entity-几千条" class="entity-link" target="_blank"><span class="quantity" title="数量">几千条</span></a>规则。</span>
+<span class="sentence-indent-1">所以我们就想把这件事情<span class="verb-apply" title="应用动词">自动化</span>。</span>
+<span class="sentence-indent-0">当然我们<span class="verb-process" title="处理动词">探索</span>了很多错误的技术方案，到了今年才算是<span class="verb-process" title="处理动词">找到</span>了一个相对有效的方案。</span>
+<span class="sentence-indent-0">现在基本上你丢任何东西给我，那个规则自己就出来了。</span>
+<span class="sentence-indent-0">总结起来，现在的每一条规则都是一个<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>了，所以我们首先<span class="verb-construct" title="构建动词">构造</span>了一个叫<a href="../entities/methodology.html#entity-PDF to Skill" class="entity-link" target="_blank"><span class="methodology" title="方法论">PDF to Skill</span></a>这样一个工具。</span>
+</p>
+
+<h3>3.4 有趣的应用案例</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">然后我就跟同学们说，我们能不能<span class="verb-construct" title="构建动词">做</span>更多有趣的应用。</span>
+</p>
+
+<ul>
+<li><strong>梦想男神生成器</strong>：其中一个女生做了一个<span class="quoted">"我梦想中的男神长什么样"</span>的应用。她怎么做的呢？她就<span class="verb-process" title="处理动词">丢</span>了一本《<a href="../entities/book.html#entity-相面书" class="entity-link" target="_blank"><span class="book" title="典籍">相面书</span></a>》（看相的书），然后<span class="verb-process" title="处理动词">出来</span>了一个应用。我描述一下我的<a href="../entities/terminology.html#entity-生辰八字" class="entity-link" target="_blank"><span class="terminology" title="术语">生辰八字</span></a>、我的<a href="../entities/terminology.html#entity-星座" class="entity-link" target="_blank"><span class="terminology" title="术语">星座</span></a>，它就可以<span class="verb-construct" title="构建动词">画</span>出来我的男神长什么样。</li>
+</ul>
+
+<ul>
+<li><strong>观鸟App</strong>：还有一个同学喜欢看鸟，他就把一本《<a href="../entities/book.html#entity-观鸟图鉴" class="entity-link" target="_blank"><span class="book" title="典籍">观鸟图鉴</span></a>》<span class="verb-process" title="处理动词">丢</span>进去了，然后就<span class="verb-process" title="处理动词">出来</span>了一个观鸟的<a href="../entities/institution.html#entity-App" class="entity-link" target="_blank"><span class="institution" title="制度">App</span></a>，那是我们目前最有趣的一个观鸟<a href="../entities/terminology.html#entity-游戏" class="entity-link" target="_blank"><span class="terminology" title="术语">游戏</span></a>。</li>
+</ul>
+
+<ul>
+<li><strong>侦探游戏生成器</strong>：还有一个同学喜欢<a href="../entities/terminology.html#entity-桌游" class="entity-link" target="_blank"><span class="terminology" title="术语">桌游</span></a>，各种侦探<a href="../entities/terminology.html#entity-游戏" class="entity-link" target="_blank"><span class="terminology" title="术语">游戏</span></a>。他就找了一本《<a href="../entities/book.html#entity-侦探小说写作指南" class="entity-link" target="_blank"><span class="book" title="典籍">侦探小说写作指南</span></a>》，<span class="verb-process" title="处理动词">丢</span>进去以后，它就可以<span class="verb-construct" title="构建动词">生成</span>无限多的各种侦探<a href="../entities/terminology.html#entity-游戏" class="entity-link" target="_blank"><span class="terminology" title="术语">游戏</span></a>。</li>
+</ul>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">现在我们做了<a href="../entities/quantity.html#entity-1200个" class="entity-link" target="_blank"><span class="quantity" title="数量">1200个</span></a>这样的应用，《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》是其中一个。</span>
+<span class="sentence-indent-0">我们每天平均要做好几百个（<a href="../entities/quantity.html#entity-200-500个" class="entity-link" target="_blank"><span class="quantity" title="数量">200-500个</span></a>之间）这样的<a href="../entities/terminology.html#entity-游戏" class="entity-link" target="_blank"><span class="terminology" title="术语">游戏</span></a>和<a href="../entities/institution.html#entity-APP" class="entity-link" target="_blank"><span class="institution" title="制度">APP</span></a>。</span>
+<span class="sentence-indent-0">比如说最近还有一个我们现在最火的应用，我完全想不到，就叫<strong>机修指南</strong>，这是目前我们访问量最高的一个应用，就是把一本手册<span class="verb-process" title="处理动词">转换</span>成一个指南。</span>
+<span class="sentence-indent-1">还有一个是叫<strong>妇科圣手</strong>，是把一个<a href="../entities/profession.html#entity-妇科医生" class="entity-link" target="_blank"><span class="profession" title="职业">妇科医生</span></a>的《<a href="../entities/book.html#entity-妇科教科书" class="entity-link" target="_blank"><span class="book" title="典籍">妇科教科书</span></a>》放进去，然后病人在里边咨询非常多的东西。</span>
+</p>
+
+<h3>3.5 《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》的<a href="../entities/quantity.html#entity-241项" class="entity-link" target="_blank"><span class="quantity" title="数量">241项</span></a>历史<a href="../entities/terminology.html#entity-技能" class="entity-link" target="_blank"><span class="terminology" title="术语">技能</span></a></h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">我把自己的<a href="../entities/terminology.html#entity-知识库" class="entity-link" target="_blank"><span class="terminology" title="术语">知识库</span></a>放进去，然后把《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》放进去，<span class="verb-construct" title="构建动词">构造</span>出来了<a href="../entities/quantity.html#entity-241项" class="entity-link" target="_blank"><span class="quantity" title="数量">241项</span></a>历史<a href="../entities/terminology.html#entity-技能" class="entity-link" target="_blank"><span class="terminology" title="术语">技能</span></a>，基本上就是跟打仗、经济、管理国家、管理一个家庭相关的所有这些东西。</span>
+<span class="sentence-indent-0">后面我自己也搞了个小<a href="../entities/institution.html#entity-App" class="entity-link" target="_blank"><span class="institution" title="制度">App</span></a>，我的<a href="../entities/institution.html#entity-App" class="entity-link" target="_blank"><span class="institution" title="制度">App</span></a>比<a href="../entities/dynasty.html#entity-00后" class="entity-link" target="_blank"><span class="dynasty" title="氏族">00后</span></a>那帮人做的差远了，他们做得真棒。</span>
+<span class="sentence-indent-0">但我做所有这些事情，其实<strong>我一行代码都没有写</strong>，我所有的这些工作都是用<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>来<span class="verb-apply" title="应用动词">完成</span>的。</span>
+</p>
+
+<h2>四、技术架构：<a href="../entities/methodology.html#entity-四层语义模型" class="entity-link" target="_blank"><span class="methodology" title="方法论">四层语义模型</span></a></h2>
+
+<h3>4.1 知识处理的复杂流程</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">整个<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>的过程是不断增长的，因为一开始我<span class="verb-construct" title="构建动词">写</span>了一个<a href="../entities/terminology.html#entity-规范文件" class="entity-link" target="_blank"><span class="terminology" title="术语">规范文件</span></a>，就是一个<a href="../entities/terminology.html#entity-Spec" class="entity-link" target="_blank"><span class="terminology" title="术语">Spec</span></a>。</span>
+<span class="sentence-indent-1">也不是我写的，是用机器帮我写的，我就跟它对话，然后它写。</span>
+<span class="sentence-indent-0">可能一开始就<a href="../entities/quantity.html#entity-200行" class="entity-link" target="_blank"><span class="quantity" title="数量">200行</span></a>，然后越写越多。</span>
+<span class="sentence-indent-1">因为你做这件事情——把一本书<span class="verb-process" title="处理动词">转换</span>成一个<a href="../entities/terminology.html#entity-知识库" class="entity-link" target="_blank"><span class="terminology" title="术语">知识库</span></a>——其实是个很复杂的流程。</span>
+<span class="sentence-indent-0">比如说<a href="../entities/terminology.html#entity-版本" class="entity-link" target="_blank"><span class="terminology" title="术语">版本</span></a>问题，我到底是用<a href="../entities/time.html#entity-中华书局" class="entity-link" target="_blank"><span class="time" title="时间">中华书局</span></a>版还是维基文库版，其实有很多差距，所以我要进行<a href="../entities/terminology.html#entity-校勘" class="entity-link" target="_blank"><span class="terminology" title="术语">校勘</span></a>。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">然后第二步我要进行<a href="../entities/terminology.html#entity-结构分析" class="entity-link" target="_blank"><span class="terminology" title="术语">结构分析</span></a>，就是我要把一本书<span class="verb-process" title="处理动词">拆分</span>。</span>
+<span class="sentence-indent-0">《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》<a href="../entities/quantity.html#entity-130章" class="entity-link" target="_blank"><span class="quantity" title="数量">130章</span></a>那是没问题的，但章里面要分小节，然后我处理的时候要给每一个小节加上一个标号。</span>
+<span class="sentence-indent-0">然后它里面还有各种各样的韵文，什么太史公曰、赞，还有大段大段的引用文字，其实都是要进行<a href="../entities/terminology.html#entity-结构分析" class="entity-link" target="_blank"><span class="terminology" title="术语">结构分析</span></a>的。</span>
+</p>
+
+<h3>4.2 <a href="../entities/terminology.html#entity-实体识别" class="entity-link" target="_blank"><span class="terminology" title="术语">实体识别</span></a>与多轮反思</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">把这些一点一点拆开来之后，下面就要进行<a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a><span class="verb-construct" title="构建动词">构建</span>了，有<a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>的<span class="verb-process" title="处理动词">发现</span>、<a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>的<a href="../entities/terminology.html#entity-消歧" class="entity-link" target="_blank"><span class="terminology" title="术语">消歧</span></a>。</span>
+<span class="sentence-indent-0">特别是在这个过程中，很多事情不是一下子就能做成的，要<span class="verb-reason" title="推理动词">反思</span>很多轮。</span>
+<span class="sentence-indent-0">比如说<a href="../entities/place.html#entity-秦国" class="entity-link" target="_blank"><span class="place" title="地名">秦国</span></a>有一个〖；大将〗叫<a href="../entities/person.html#entity-白起" class="entity-link" target="_blank"><span class="person" title="人名">白起</span></a>，我们在第一轮标注的时候把<span class="quoted">"白"</span><span class="verb-process" title="处理动词">标注</span>成了<a href="../entities/person.html#entity-白起" class="entity-link" target="_blank"><span class="person" title="人名">白起</span></a>，机器自动标的。</span>
+<span class="sentence-indent-0">但是后来我们有了更多知识之后，因为我把所有的人名字拿出来先做了一个人名字表，然后又对每一个人做了一个生卒年表。</span>
+<span class="sentence-indent-0">有了这些知识之后，我让它再<span class="verb-reason" title="推理动词">反思</span>一轮，结果它在下一轮就<span class="verb-process" title="处理动词">发现</span>：<span class="dialogue quoted">"噢，这个<a href="../entities/person.html#entity-公子白" class="entity-link" target="_blank"><span class="person" title="人名">公子白</span></a>是生活在<a href="../entities/dynasty.html#entity-公元前4世纪" class="entity-link" target="_blank"><span class="dynasty" title="氏族">公元前4世纪</span></a>的人，而<a href="../entities/person.html#entity-白起" class="entity-link" target="_blank"><span class="person" title="人名">白起</span></a>是<a href="../entities/dynasty.html#entity-公元前3世纪" class="entity-link" target="_blank"><span class="dynasty" title="氏族">公元前3世纪</span></a>的人，这肯定不是同一个人。</span>
+<span class="sentence-indent-0">"</span>所以它就把第二次标注的时候，把<a href="../entities/person.html#entity-公子白" class="entity-link" target="_blank"><span class="person" title="人名">公子白</span></a>的那个<span class="quoted">"白"</span>字<span class="verb-process" title="处理动词">标注</span>成了<a href="../entities/person.html#entity-公子白" class="entity-link" target="_blank"><span class="person" title="人名">公子白</span></a>而不是<a href="../entities/person.html#entity-白起" class="entity-link" target="_blank"><span class="person" title="人名">白起</span></a>。</span>
+<span class="sentence-indent-1">所以这个过程要经过<strong>很多轮的<span class="verb-reason" title="推理动词">反思</span></strong>。</span>
+</p>
+
+<h3>4.3 <a href="../entities/terminology.html#entity-事件抽取" class="entity-link" target="_blank"><span class="terminology" title="术语">事件抽取</span></a>与<a href="../entities/terminology.html#entity-时间推理" class="entity-link" target="_blank"><span class="terminology" title="术语">时间推理</span></a></h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">后面差不多整个过程都是类似的。</span>
+<span class="sentence-indent-0"><a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>当中有一种特殊的<a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>叫<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>，因为《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》是关于历史的，最后我们<span class="verb-process" title="处理动词">抽取</span>出了<a href="../entities/quantity.html#entity-3000多个" class="entity-link" target="_blank"><span class="quantity" title="数量">3000多个</span></a><a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>。</span>
+<span class="sentence-indent-0"><a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>里最难的地方就是要<span class="verb-reason" title="推理动词">确定</span>每一个<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>发生在哪一年。</span>
+<span class="sentence-indent-1">因为《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》中直接标注了哪件事情发生在哪一年的只有<a href="../entities/quantity.html#entity-700多例" class="entity-link" target="_blank"><span class="quantity" title="数量">700多例</span></a>，其他的<a href="../entities/quantity.html#entity-2000多例" class="entity-link" target="_blank"><span class="quantity" title="数量">2000多例</span></a>都要靠我们用<span class="verb-reason" title="推理动词">推理</span>手段把它<span class="verb-reason" title="推理动词">推理</span>出来，所以我们前后做了<a href="../entities/quantity.html#entity-5轮" class="entity-link" target="_blank"><span class="quantity" title="数量">5轮</span></a><span class="verb-reason" title="推理动词">推理</span>，基本上把这<a href="../entities/quantity.html#entity-3000多个" class="entity-link" target="_blank"><span class="quantity" title="数量">3000多个</span></a>时间全都<span class="verb-reason" title="推理动词">推理</span>出来。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">特别是《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》里还有表格，《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》里有<a href="../entities/quantity.html#entity-10张" class="entity-link" target="_blank"><span class="quantity" title="数量">10张</span></a>年表，那里面也有<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>，从那里面<span class="verb-process" title="处理动词">抽选</span>出了<a href="../entities/quantity.html#entity-800多个" class="entity-link" target="_blank"><span class="quantity" title="数量">800多个</span></a><a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>，跟正文里出现的<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>也要对齐。</span>
+<span class="sentence-indent-0">很多<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>在不同的来源要进行融合，所以有很多这些审查的工作。</span>
+<span class="sentence-indent-0">类似的还有<a href="../entities/terminology.html#entity-关系" class="entity-link" target="_blank"><span class="terminology" title="术语">关系</span></a><span class="verb-construct" title="构建动词">构造</span>、<a href="../entities/terminology.html#entity-本体" class="entity-link" target="_blank"><span class="terminology" title="术语">本体</span></a><span class="verb-construct" title="构建动词">构造</span>等等，就不详细说了。</span>
+</p>
+
+<h3>4.4 <a href="../entities/methodology.html#entity-四层语义结构" class="entity-link" target="_blank"><span class="methodology" title="方法论">四层语义结构</span></a>理论</h3>
+
+<p>整个过程，我们整体上来说，底层的理论基础就是叫<a href="../entities/methodology.html#entity-四层语义结构" class="entity-link" target="_blank"><span class="methodology" title="方法论">四层语义结构</span></a>：</p>
+
+<p><strong>第一层：<a href="../entities/terminology.html#entity-结构语义" class="entity-link" target="_blank"><span class="terminology" title="术语">结构语义</span></a></strong></p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">就是我们要把文字<span class="verb-process" title="处理动词">切分</span>成段落、<span class="verb-process" title="处理动词">切分</span>成句子，然后在每一层面上都要去<span class="verb-reason" title="推理动词">理解</span>文本单元之间的<a href="../entities/terminology.html#entity-语义结构" class="entity-link" target="_blank"><span class="terminology" title="术语">语义结构</span></a>是什么。</span>
+<span class="sentence-indent-0">比如说我们把所有的太史公曰（<a href="../entities/quantity.html#entity-130章" class="entity-link" target="_blank"><span class="quantity" title="数量">130章</span></a>里面其实有<a href="../entities/quantity.html#entity-125个" class="entity-link" target="_blank"><span class="quantity" title="数量">125个</span></a>太史公曰）全部<span class="verb-process" title="处理动词">提取</span>进去，所以这就是对每一个区块要给它做标签，还有就是每个句子之间<span class="verb-process" title="处理动词">发现</span><a href="../entities/terminology.html#entity-关系" class="entity-link" target="_blank"><span class="terminology" title="术语">关系</span></a>，因为这样帮助我们<span class="verb-construct" title="构建动词">构造</span>阅读器。</span>
+</p>
+
+<p><strong>第二层：<a href="../entities/terminology.html#entity-图谱语义" class="entity-link" target="_blank"><span class="terminology" title="术语">图谱语义</span></a></strong></p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">在句子之上，我们<span class="verb-process" title="处理动词">找到</span>人物、地点、<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>等等，我们一共<span class="verb-construct" title="构建动词">定义</span>了<a href="../entities/quantity.html#entity-18种" class="entity-link" target="_blank"><span class="quantity" title="数量">18种</span></a>不同的<a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>，到这个级别，我们传统意义上的<a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a>就<span class="verb-construct" title="构建动词">构造</span>好了。</span>
+</p>
+
+<p><strong>第三层：<a href="../entities/terminology.html#entity-知识语义" class="entity-link" target="_blank"><span class="terminology" title="术语">知识语义</span></a></strong></p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">大家可能说：<a href="../entities/person.html#entity-鲍" class="entity-link" target="_blank"><span class="person" title="人名">鲍</span></a>同学，<a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a>不一定有知识。</span>
+<span class="sentence-indent-0">那不是<a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a>没有知识，我们传统意义上的<a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a>是只有图谱没有知识的。</span>
+<span class="sentence-indent-0">你要有知识的话，首先你得有<a href="../entities/terminology.html#entity-分类体系" class="entity-link" target="_blank"><span class="terminology" title="术语">分类体系</span></a>，你得有<a href="../entities/terminology.html#entity-推理规则" class="entity-link" target="_blank"><span class="terminology" title="术语">推理规则</span></a>，你还得有我们后来自己<span class="verb-construct" title="构建动词">定义</span>的一个词叫<a href="../entities/terminology.html#entity-标准知识单元" class="entity-link" target="_blank"><span class="terminology" title="术语">标准知识单元</span></a>，这是从电商里学来的。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">这里叫<a href="../entities/terminology.html#entity-标准知识单元" class="entity-link" target="_blank"><span class="terminology" title="术语">标准知识单元</span></a>（Standard Knowledge Unit， SKU），因为我们会<span class="verb-process" title="处理动词">发现</span>知识传播的时候有一个颗粒度。</span>
+<span class="sentence-indent-0">一个<a href="../entities/terminology.html#entity-三元组" class="entity-link" target="_blank"><span class="terminology" title="术语">三元组</span></a>在传统图谱上面的颗粒度是一个<a href="../entities/terminology.html#entity-三元组" class="entity-link" target="_blank"><span class="terminology" title="术语">三元组</span></a>，这个颗粒度太小了。</span>
+<span class="sentence-indent-0">但是如果你把一整章或者一整段的东西都放在一起，这又太大了。</span>
+<span class="sentence-indent-1">所以比如说一个<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>，其实它就是一个很合适的颗粒度。</span>
+<span class="sentence-indent-0">我们有<a href="../entities/quantity.html#entity-3000多个" class="entity-link" target="_blank"><span class="quantity" title="数量">3000多个</span></a><a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>，所以这就是一个<a href="../entities/terminology.html#entity-知识单元" class="entity-link" target="_blank"><span class="terminology" title="术语">知识单元</span></a>。</span>
+<span class="sentence-indent-0">又比如说一个人的完整的家庭关系，这也是一个<a href="../entities/terminology.html#entity-知识单元" class="entity-link" target="_blank"><span class="terminology" title="术语">知识单元</span></a>。</span>
+<span class="sentence-indent-1">所以我们会把知识再<span class="verb-process" title="处理动词">包装</span>一层，就相当于我们给知识装上了集装箱，然后按集装箱的元数据来进行知识分发。</span>
+</p>
+
+<p><strong>第四层：<a href="../entities/terminology.html#entity-应用语义" class="entity-link" target="_blank"><span class="terminology" title="术语">应用语义</span></a></strong></p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">最上面一层就是<a href="../entities/terminology.html#entity-应用语义" class="entity-link" target="_blank"><span class="terminology" title="术语">应用语义</span></a>，就是各种<a href="../entities/terminology.html#entity-历史推理" class="entity-link" target="_blank"><span class="terminology" title="术语">历史推理</span></a>，比如说年代的<span class="verb-reason" title="推理动词">推理</span>、人物的<span class="verb-reason" title="推理动词">推理</span>、历史矛盾的<span class="verb-reason" title="推理动词">推理</span>等等。</span>
+<span class="sentence-indent-0">但我最终想做的、真的正在做的一个叫<a href="../entities/terminology.html#entity-历史叙事的重构" class="entity-link" target="_blank"><span class="terminology" title="术语">历史叙事的重构</span></a>，比如说刚才那个历史<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>罗生门就是我正在做的一个早期的尝试。</span>
+</p>
+
+<h2>五、方法论：<a href="../entities/methodology.html#entity-元技能（Meta-Skills）" class="entity-link" target="_blank"><span class="methodology" title="方法论">元技能（Meta-Skills）</span></a>体系</h2>
+
+<h3>5.1 <a href="../entities/quantity.html#entity-27个" class="entity-link" target="_blank"><span class="quantity" title="数量">27个</span></a>管线<a href="../entities/terminology.html#entity-Skills" class="entity-link" target="_blank"><span class="terminology" title="术语">Skills</span></a></h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">我们具体怎么做？</span>
+<span class="sentence-indent-0">其实就是我们<span class="verb-construct" title="构建动词">设计</span>了大概到目前为止（今天早上）是<a href="../entities/quantity.html#entity-26个27个" class="entity-link" target="_blank"><span class="quantity" title="数量">26个27个</span></a><a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>。</span>
+<span class="sentence-indent-0">注意，所有这些<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>是怎么<span class="verb-construct" title="构建动词">造</span>出来的：<strong>没有一个<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>是我手写的</strong>，因为我在处理的每一步过程中，都留下了大量的<a href="../entities/terminology.html#entity-日志" class="entity-link" target="_blank"><span class="terminology" title="术语">日志</span></a>，所以每一个中间环节都有<a href="../entities/terminology.html#entity-日志" class="entity-link" target="_blank"><span class="terminology" title="术语">日志</span></a>、都有错误，这些<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>都是从这些<a href="../entities/terminology.html#entity-日志" class="entity-link" target="_blank"><span class="terminology" title="术语">日志</span></a>当中<span class="verb-reason" title="推理动词">总结</span>出来的。</span>
+</p>
+
+<p>所以基本上我们每一个<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>都会包括这样的核心规范：</p>
+<ul>
+<li>你的输入输出是什么</li>
+<li>你怎么做标注</li>
+<li>你怎么做<a href="../entities/terminology.html#entity-质检" class="entity-link" target="_blank"><span class="terminology" title="术语">质检</span></a>（<a href="../entities/terminology.html#entity-质检" class="entity-link" target="_blank"><span class="terminology" title="术语">质检</span></a>极其重要，真正的业余玩家和专业选手之间的区别，其实就在于<a href="../entities/terminology.html#entity-质检" class="entity-link" target="_blank"><span class="terminology" title="术语">质检</span></a>工具怎么<span class="verb-construct" title="构建动词">设计</span>）</li>
+<li>然后你要做很多轮，要做<a href="../entities/terminology.html#entity-多轮反思" class="entity-link" target="_blank"><span class="terminology" title="术语">多轮反思</span></a></li>
+</ul>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">比如说对于任何一种有动词标注或者<a href="../entities/terminology.html#entity-实体" class="entity-link" target="_blank"><span class="terminology" title="术语">实体</span></a>标注，你都要先<span class="verb-construct" title="构建动词">做</span>按章标注，然后再<span class="verb-construct" title="构建动词">做</span>按类型标注，再跨章一次性标注。</span>
+<span class="sentence-indent-1">如果做<a href="../entities/quantity.html#entity-一轮" class="entity-link" target="_blank"><span class="quantity" title="数量">一轮</span></a>不够，你可能做<a href="../entities/quantity.html#entity-两轮" class="entity-link" target="_blank"><span class="quantity" title="数量">两轮</span></a>、<a href="../entities/quantity.html#entity-3轮" class="entity-link" target="_blank"><span class="quantity" title="数量">3轮</span></a>、<a href="../entities/quantity.html#entity-5轮" class="entity-link" target="_blank"><span class="quantity" title="数量">5轮</span></a>慢慢做。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-1">还有就是在这个过程中不能完全依靠<a href="../entities/terminology.html#entity-大模型" class="entity-link" target="_blank"><span class="terminology" title="术语">大模型</span></a>来做，后面还有很多规则要去做。</span>
+</p>
+
+<h3>5.2 <a href="../entities/methodology.html#entity-OTF+JIT+Bootstrap" class="entity-link" target="_blank"><span class="methodology" title="方法论">OTF+JIT+Bootstrap</span></a>三原则</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">大家可能很好奇这<a href="../entities/quantity.html#entity-20多个" class="entity-link" target="_blank"><span class="quantity" title="数量">20多个</span></a><a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>怎么<span class="verb-construct" title="构建动词">设计</span>出来的？</span>
+<span class="sentence-indent-0">它也是这些<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>本身，最后是由其他一组<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a><span class="verb-construct" title="构建动词">做</span>出来的，所以我们<span class="verb-reason" title="推理动词">总结</span>出来了叫<a href="../entities/methodology.html#entity-元Skill" class="entity-link" target="_blank"><span class="methodology" title="方法论">元Skill</span></a>（<a href="../entities/terminology.html#entity-Meta Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Meta Skill</span></a>）来做这件事情。</span>
+</p>
+
+<p><strong>第一个：<a href="../entities/methodology.html#entity-On the Fly" class="entity-link" target="_blank"><span class="methodology" title="方法论">On the Fly</span></a>（及时总结原则）</strong></p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">我们不是立即开始<span class="verb-construct" title="构建动词">设计</span>，在做的过程中我们不断地改，我们<span class="verb-process" title="处理动词">记录</span><a href="../entities/terminology.html#entity-日志" class="entity-link" target="_blank"><span class="terminology" title="术语">日志</span></a>，然后不断地改。</span>
+</p>
+
+<p><strong>第二：<a href="../entities/methodology.html#entity-Just in Time" class="entity-link" target="_blank"><span class="methodology" title="方法论">Just in Time</span></a>（实时交付）</strong></p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">就是实时<span class="verb-apply" title="应用动词">交付</span>，从来不是说先去想清楚怎么做，而是先做一个最小可用的版本，然后不断地去<span class="verb-apply" title="应用动词">迭代</span>它。</span>
+</p>
+
+<p><strong>第三：<a href="../entities/methodology.html#entity-Bootstrap" class="entity-link" target="_blank"><span class="methodology" title="方法论">Bootstrap</span></a>（自举）</strong></p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">最后你要自举。</span>
+<span class="sentence-indent-0">就是我们不依靠任何人、不依靠任何专家，所有的知识都是<a href="../entities/terminology.html#entity-AI" class="entity-link" target="_blank"><span class="terminology" title="术语">AI</span></a>自己<span class="verb-process" title="处理动词">发现</span>、自己<span class="verb-process" title="处理动词">积累</span>的，只是人类在某些时候给它一些对错的<span class="verb-reason" title="推理动词">判断</span>。</span>
+<span class="sentence-indent-1">所以让知识自动增值，这就是我们最核心的一个原则，叫<strong>好东西都是<span class="verb-reason" title="推理动词">总结</span>出来的</strong>。</span>
+</p>
+
+<h3>5.3 <a href="../entities/quantity.html#entity-14个" class="entity-link" target="_blank"><span class="quantity" title="数量">14个</span></a><a href="../entities/methodology.html#entity-元技能" class="entity-link" target="_blank"><span class="methodology" title="方法论">元技能</span></a>总结</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">后来我们<span class="verb-reason" title="推理动词">总结</span>了<a href="../entities/quantity.html#entity-14个" class="entity-link" target="_blank"><span class="quantity" title="数量">14个</span></a><a href="../entities/methodology.html#entity-元技能" class="entity-link" target="_blank"><span class="methodology" title="方法论">元技能</span></a>，就是系统地讲到底怎么做这种反思。</span>
+<span class="sentence-indent-0">在我的网站上有一本书，一共有<a href="../entities/quantity.html#entity-400多页" class="entity-link" target="_blank"><span class="quantity" title="数量">400多页</span></a>就是讲这个，欢迎大家回头到我<a href="../entities/institution.html#entity-GitHub" class="entity-link" target="_blank"><span class="institution" title="制度">GitHub</span></a>上去下载。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">这里面比如说<a href="../entities/terminology.html#entity-反思" class="entity-link" target="_blank"><span class="terminology" title="术语">反思</span></a>就是一种常见算法，在任何一个上下文上面我们都需要<span class="verb-reason" title="推理动词">反思</span>。</span>
+<span class="sentence-indent-1">还有<a href="../entities/terminology.html#entity-多样的方法" class="entity-link" target="_blank"><span class="terminology" title="术语">多样的方法</span></a>是指我们每一个工序其实都需要多种方法的综合混用，所以并不是说我们有了<a href="../entities/terminology.html#entity-大模型" class="entity-link" target="_blank"><span class="terminology" title="术语">大模型</span></a>之后就完全依靠<a href="../entities/terminology.html#entity-大模型" class="entity-link" target="_blank"><span class="terminology" title="术语">大模型</span></a>，因为归根结底我们要<strong>省钱</strong>。</span>
+<span class="sentence-indent-0">我到目前为止在这件事情上大概花了<a href="../entities/quantity.html#entity-1万块钱" class="entity-link" target="_blank"><span class="quantity" title="数量">1万块钱</span></a>，但未来我们一定是可以把这个成本降下来。</span>
+<span class="sentence-indent-1">如果我们不用这一整套规范方法的话，我觉得<a href="../entities/quantity.html#entity-几十万" class="entity-link" target="_blank"><span class="quantity" title="数量">几十万</span></a>都打不住做同样的工作。</span>
+</p>
+
+<h2>六、深层推理：历史谜团的探索</h2>
+
+<h3>6.1 复杂的<a href="../entities/terminology.html#entity-逻辑推理" class="entity-link" target="_blank"><span class="terminology" title="术语">逻辑推理</span></a>任务</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">最后就是要进行各种各样的<a href="../entities/terminology.html#entity-逻辑推理" class="entity-link" target="_blank"><span class="terminology" title="术语">逻辑推理</span></a>，比如说刚才提到了人物生卒年份<span class="verb-reason" title="推理动词">推理</span>，因为在《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》当中，你要把每一个人出生和死亡的哪一年精确地<span class="verb-process" title="处理动词">发现</span>出来，其实是很难的事情。</span>
+<span class="sentence-indent-1">因为绝大多数人物的生卒年份《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》上是没有说的，但是你要根据他跟其他人的互动来<span class="verb-reason" title="推理动词">判断</span>他的出生和死亡到底在哪一个区段之内，这就是一个<span class="verb-reason" title="推理动词">推理</span>过程。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">又比如说每一个人的<a href="../entities/terminology.html#entity-姓氏" class="entity-link" target="_blank"><span class="terminology" title="术语">姓氏</span></a>，因为在<a href="../entities/terminology.html#entity-先秦" class="entity-link" target="_blank"><span class="terminology" title="术语">先秦</span></a>的<a href="../entities/terminology.html#entity-文献" class="entity-link" target="_blank"><span class="terminology" title="术语">文献</span></a>当中，人基本上都只是说一个<a href="../entities/terminology.html#entity-单名" class="entity-link" target="_blank"><span class="terminology" title="术语">单名</span></a>，他不会说姓、不会说氏，因为<a href="../entities/terminology.html#entity-先秦" class="entity-link" target="_blank"><span class="terminology" title="术语">先秦</span></a>时代姓和氏是不一样的。</span>
+<span class="sentence-indent-1">所以对《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》当中的<a href="../entities/quantity.html#entity-4000多个" class="entity-link" target="_blank"><span class="quantity" title="数量">4000多个</span></a>人物，你想让他<span class="verb-reason" title="推理动词">知道</span>每一处上下文情况下他到底姓什么、属于哪个氏族，其实是一件很麻烦的事情。</span>
+<span class="sentence-indent-0">我到目前为止做了<a href="../entities/quantity.html#entity-1800个人" class="entity-link" target="_blank"><span class="quantity" title="数量">1800个人</span></a>，其他还有<a href="../entities/quantity.html#entity-2000多个人" class="entity-link" target="_blank"><span class="quantity" title="数量">2000多个人</span></a>还没做，这也是一个很复杂的<a href="../entities/terminology.html#entity-逻辑推理" class="entity-link" target="_blank"><span class="terminology" title="术语">逻辑推理</span></a>过程。</span>
+</p>
+
+<h3>6.2 历史<a href="../entities/terminology.html#entity-事件" class="entity-link" target="_blank"><span class="terminology" title="术语">事件</span></a>罗生门</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">但后面还有更多的<a href="../entities/terminology.html#entity-逻辑推理" class="entity-link" target="_blank"><span class="terminology" title="术语">逻辑推理</span></a>过程，比如我正在做的一件事情叫<a href="../entities/terminology.html#entity-事件罗生门" class="entity-link" target="_blank"><span class="terminology" title="术语">事件罗生门</span></a>。</span>
+<span class="sentence-indent-1">因为同一件事情，比如说<span class="quoted">"鸿门宴"</span>，在几个不同的章节当中都会<span class="verb-process" title="处理动词">出现</span>，但是它的描述不完全一样。</span>
+<span class="sentence-indent-0">同一场战役，往往会在人物本传当中偏向这个人、给这个人说好话，但是到了另外一个人传记里面，就知道了：<span class="quoted">"原来其实是那个样子的。</span>
+<span class="sentence-indent-0">"</span>所以它是有矛盾的。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">你把所有这些矛盾<span class="verb-process" title="处理动词">汇总</span>在一起，你会<span class="verb-process" title="处理动词">发现</span>这里面有一些事情是我们可以<span class="verb-process" title="处理动词">发现</span>不合理的地方，甚至背后会有一些秘密。</span>
+</p>
+
+<h3>6.3 <a href="../entities/person.html#entity-秦始皇帝" class="entity-link" target="_blank"><span class="person" title="人名">秦始皇</span></a>的配偶之谜</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">比如说每一个君主应该是有配偶的，这个是没毛病的常识，但<a href="../entities/person.html#entity-秦始皇帝" class="entity-link" target="_blank"><span class="person" title="人名">秦始皇</span></a>没有配偶，我们就<span class="verb-process" title="处理动词">发现</span>这里有一个非常反常的事情。</span>
+<span class="sentence-indent-0">那背后到底有什么原因呢？</span>
+<span class="sentence-indent-0">他为什么没有配偶？</span>
+<span class="sentence-indent-0">我们要继续再<span class="verb-reason" title="推理动词">推</span>，就是他的后族集团、后宫里面到底有来自哪个国家的女人，以及根据王族的这些事迹来<span class="verb-reason" title="推理动词">推断</span>他们跟哪个国家是有关系的。</span>
+<span class="sentence-indent-1">因为我们至少有一个常识，就是<strong>王族同姓不婚</strong>。</span>
+<span class="sentence-indent-1">所以说<a href="../entities/person.html#entity-秦始皇帝" class="entity-link" target="_blank"><span class="person" title="人名">秦始皇</span></a>的配偶一定来自于异姓诸侯国，那我们就可以<span class="verb-reason" title="推理动词">推断</span>反正只有<a href="../entities/quantity.html#entity-6个" class="entity-link" target="_blank"><span class="quantity" title="数量">6个</span></a>选择，到底是哪一个，这就是非常有趣的一些<span class="verb-reason" title="推理动词">推理</span>工作。</span>
+</p>
+
+<h2>七、跨领域应用：方法论的迁移</h2>
+
+<h3>7.1 金融领域的应用</h3>
+
+<p class="sentence-layout">
+<span class="sentence-indent-1">而且这一整套<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>其实是可以<span class="verb-apply" title="应用动词">用</span>在其他的场景上面的，虽然我只是在《<a href="../entities/book.html#entity-史记" class="entity-link" target="_blank"><span class="book" title="典籍">史记</span></a>》上做，但是在我们的群里面有非常多的网友们拿它来<span class="verb-process" title="处理动词">处理</span>《<a href="../entities/book.html#entity-唐诗" class="entity-link" target="_blank"><span class="book" title="典籍">唐诗</span></a>》、<span class="verb-process" title="处理动词">处理</span>《<a href="../entities/book.html#entity-资治通鉴" class="entity-link" target="_blank"><span class="book" title="典籍">资治通鉴</span></a>》，还有人拿它<span class="verb-process" title="处理动词">处理</span>手册，因为它是一套跨领域的<a href="../entities/terminology.html#entity-技能" class="entity-link" target="_blank"><span class="terminology" title="术语">技能</span></a>，尤其是这中间的语言<a href="../entities/terminology.html#entity-技能" class="entity-link" target="_blank"><span class="terminology" title="术语">技能</span></a>，所以你自己拿出来就可以用。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">我们也实验了，我这套方法论<span class="verb-apply" title="应用动词">用</span>在我们金融语料上面，调<a href="../entities/quantity.html#entity-4大类" class="entity-link" target="_blank"><span class="quantity" title="数量">4大类</span></a>参数很快就能跑出来，所以我们也把这套东西放在我们自己的产品里面了。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">这是我们金融公告<span class="verb-process" title="处理动词">抽取</span>的<a href="../entities/terminology.html#entity-Skill" class="entity-link" target="_blank"><span class="terminology" title="术语">Skill</span></a>，这是其中的一个小应用。</span>
+<span class="sentence-indent-0">其中一个产品正在做<a href="../entities/terminology.html#entity-异常波动逻辑分析" class="entity-link" target="_blank"><span class="terminology" title="术语">异常波动逻辑分析</span></a>，这也是它自动做的。</span>
+</p>
+
+<h3>7.2 其他领域的探索</h3>
+
+<p>其他应用场景包括：</p>
+<ul>
+<li>《<a href="../entities/book.html#entity-唐诗" class="entity-link" target="_blank"><span class="book" title="典籍">唐诗</span></a>》<span class="verb-process" title="处理动词">处理</span></li>
+<li>《<a href="../entities/book.html#entity-资治通鉴" class="entity-link" target="_blank"><span class="book" title="典籍">资治通鉴</span></a>》知识化</li>
+<li>技术手册结构化</li>
+<li>财务报表审核</li>
+<li>科创板审核<span class="verb-apply" title="应用动词">应用</span></li>
+</ul>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">所有的资源都在这一页上面，下面有网址大家可以自己去看。</span>
+</p>
+
+<h2>八、总结与展望</h2>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0">虽然这是一个非常微小的工作，但我相信现在这种可能性，我们有一个坚定的信心，就是<strong>非常大规模的<a href="../entities/terminology.html#entity-知识图谱" class="entity-link" target="_blank"><span class="terminology" title="术语">知识图谱</span></a>的<span class="verb-construct" title="构建动词">构造</span>，是不用人写代码就可以<span class="verb-apply" title="应用动词">完成</span>的</strong>。</span>
+</p>
+
+<p class="sentence-layout">
+<span class="sentence-indent-0"><strong>好东西都是<span class="verb-reason" title="推理动词">总结</span>出来的</strong>。</span>
+</p>
+
+<nav class="chapter-nav">
+    <a href="../../../docs/index.html" class="nav-home">回到主页</a>
+</nav>
+</body>
+</html>

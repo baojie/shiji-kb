@@ -296,7 +296,7 @@ Task analysis
 
 #### 5.2 Example: Event Relation Extraction
 
-**Task:** Extract 7,637 relations among 3,185 events (507万 possible pairs).
+**Task:** Extract 7,637 relations among 3,185 events (5.07 million possible pairs).
 
 **Decomposition by relation type:**
 
@@ -316,7 +316,7 @@ Task analysis
 
 | Approach | Precision | Recall | Cost | Time |
 |----------|-----------|--------|------|------|
-| Pure LLM (all 507万 pairs) | 87% | 92% | $41,000 | 11 hours |
+| Pure LLM (all 5.07M pairs) | 87% | 92% | $41,000 | 11 hours |
 | Pure Rules (deterministic only) | 95% | 68% | $50 | 5 minutes |
 | **Hybrid (4 auto + 5 LLM)** | **94%** | **89%** | **$380** | **1 hour** |
 
@@ -553,7 +553,7 @@ Each layer builds on the previous. No graph semantics without structural semanti
 
 **Rule 5 (new): Classification Principles Emerge from Edge Cases**
 - Don't define classes from theory. Debug misclassifications, extract the decision rules.
-- *Example:* "齐桓公 = specific person (person type)" vs. "吴王 = generic role (official type)" distinction emerged from edge case analysis.
+- *Example:* "Duke Huan of Qi = specific person (person type)" vs. "King of Wu = generic role (official type)" distinction emerged from edge case analysis.
 
 **Rule 6 (new): Separate Source from Interpretation**
 - Never modify the original text to add metadata
@@ -661,7 +661,7 @@ Meta-SKILL applied to new domain → Domain SKILL auto-generated → System self
 
 *Shiji proof:* The 54 SKILL files (14 meta + 40 pipeline) are the project's most valuable output — more reusable than the 15,190 entities or 3,197 events. These SKILLs can guide the next project (*Book of Han*, *Zizhi Tongjian*) with 80-90% method reuse.
 
-### 16. Scaling: From 60万 Characters to 40亿 Characters
+### 16. Scaling: From 600K Characters to 4B Characters
 
 **Cost model (optimized, post-learning curve):**
 
