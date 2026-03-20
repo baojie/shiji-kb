@@ -112,7 +112,8 @@ AI会自动找到并使用这个SKILL。
 ### 查看完整示例
 
 - [示例01：乔布斯列传](examples/example-01-jobs.md) - 人物传记
-- [示例03：shiji-kb记](examples/example-03-shiji-kb-full.md) - 项目介绍（完整教学版）
+- [示例02：shiji-kb记](examples/example-02-shiji-kb-full.md) - 项目介绍（完整教学版）
+- [示例03：葛底斯堡演讲](examples/example-03-gettysburg.md) - 经典演讲（政治文献）
 - [示例04：论Skill之道](examples/example-04-skill-concept.md) - 技术概念解释
 
 ---
@@ -149,7 +150,8 @@ labs/sima-qian-style/
 ├── SKILL-核心特征.md              # 太史公文笔核心特征（8大维度）
 └── examples/
     ├── example-01-jobs.md        # 示例：乔布斯列传（人物传记）
-    ├── example-03-shiji-kb-full.md  # 示例：shiji-kb记（项目介绍·完整版）
+    ├── example-02-shiji-kb-full.md  # 示例：shiji-kb记（项目介绍·完整版）
+    ├── example-03-gettysburg.md  # 示例：葛底斯堡演讲（经典演讲）
     └── example-04-skill-concept.md  # 示例：论Skill之道（技术概念）
 ```
 
@@ -287,7 +289,8 @@ labs/sima-qian-style/
 ### 3. 查看完整示例
 
 - [example-01-jobs.md](examples/example-01-jobs.md) - 乔布斯列传（人物传记体）
-- [example-03-shiji-kb-full.md](examples/example-03-shiji-kb-full.md) - shiji-kb记（项目介绍，333字完整版）
+- [example-02-shiji-kb-full.md](examples/example-02-shiji-kb-full.md) - shiji-kb记（项目介绍，333字完整版）
+- [example-03-gettysburg.md](examples/example-03-gettysburg.md) - 葛底斯堡演讲（经典政治演讲，272字）
 - [example-04-skill-concept.md](examples/example-04-skill-concept.md) - 论Skill之道（技术概念论说）
 
 每个示例都包含：
