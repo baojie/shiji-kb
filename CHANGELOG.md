@@ -6,6 +6,257 @@
 
 ---
 
+## 参与指南文档 - 2026-03-20
+
+### 新增 (Added)
+
+- **参与指南** (`docs/help/CONTRIBUTING.md`)：
+  - Pull Request 参与流程（6步）
+  - Issue 和 Discussion 反馈渠道说明
+  - 常见贡献类型和注意事项
+
+---
+
+## 溯源推理分析实验 ([4ebda328](https://github.com/baojie/shiji-kb/commit/4ebda328)) - 2026-03-20
+
+### 新增 (Added)
+
+- **溯源推理SKILL** (`skills/SKILL_07d_溯源推理.md`)：
+  - 完整的历史记录溯源推理方法论
+  - 包含信息源分类、可信度评估、证据链追踪
+  - 系统化处理"太史公怎么知道"问题
+
+- **溯源推理案例分析** (`labs/`)：
+  - 鸿门宴传播链分析：从刘邦方一度证据到多层验证
+  - 荆轲刺秦传播链分析：从秦宫近卫到多方记录交叉验证
+  - 十大故事传播链综合分析报告
+  - 可视化数据输出 (JSON格式)
+
+---
+
+## 技术文章与工作日志 ([6360679d](https://github.com/baojie/shiji-kb/commit/6360679d) / [03685329](https://github.com/baojie/shiji-kb/commit/03685329) / [e96938bc](https://github.com/baojie/shiji-kb/commit/e96938bc) / [ac7e41c4](https://github.com/baojie/shiji-kb/commit/ac7e41c4)) - 2026-03-19~20
+
+### 新增 (Added)
+
+- **技术文章** (`doc/publications/从历史书中探索知识图谱/`)：
+  - 完整技术文章（3500字）：介绍史记知识库项目方法论
+  - HTML渲染版本：使用项目CSS样式系统
+  - 渲染工具脚本
+
+- **每日工作日志**：
+  - `doc/logs/2026-03-19-20.md`：包含微信群通知摘要
+  - `doc/logs/2026-03-18-19.md`
+
+---
+
+## 文档重构与归档整理 ([cc4d3d43](https://github.com/baojie/shiji-kb/commit/cc4d3d43) / [c4c568cc](https://github.com/baojie/shiji-kb/commit/c4c568cc) / [172feaf4](https://github.com/baojie/shiji-kb/commit/172feaf4) / [4c863aca](https://github.com/baojie/shiji-kb/commit/4c863aca)) - 2026-03-19
+
+### 更改 (Changed)
+
+- **文档重构**：
+  - 主页与出版物目录全面更新
+  - SKILL编号规范化与PDF书籍优化
+  - 文件夹重组：整合文档和数据目录
+
+- **归档文件整理**：
+  - 繁简体标识与脚本添加
+  - 临时文件夹整理：合并 `tmp/` 到 `temp/` 并完善忽略规则
+
+- **SKILL审阅**：
+  - 审阅 `SKILL_00-META-00_好东西都是总结出来的.md`
+
+---
+
+## 实体标注大规模修复 ([4c96f109](https://github.com/baojie/shiji-kb/commit/4c96f109) / [99af56d6](https://github.com/baojie/shiji-kb/commit/99af56d6) / [602c1f94](https://github.com/baojie/shiji-kb/commit/602c1f94) / [feb5a516](https://github.com/baojie/shiji-kb/commit/feb5a516)) - 2026-03-18~19
+
+### 修复 (Fixed)
+
+- **身份标注符号语义漂移修复**：
+  - 全局修正8,774处 `〖#X〗` 错误标注
+  - 问题根源：`#` 符号从"身份"语义漂移为"数量"
+  - 受影响实体：数量(5,481)、身份(3,277)、其他(16)
+  - 修复策略：基于实体词表重新分类
+
+- **实体边界错误修复**：
+  - 综合反思与修复：75处边界切分错误
+  - 涉及人名、地名、官职等多类实体嵌套问题
+
+- **SKU本体分类修复**：
+  - 修复时间与数量实体标注混淆 (Issue #1)
+
+### 新增 (Added)
+
+- **修复报告文档**：
+  - `doc/entities/身份标注修复报告.md`
+  - `doc/entities/实体渲染规划.md`
+  - `doc/entities/实体边界错误修复报告.md`
+
+- **工具脚本**：
+  - 身份标注修复脚本
+  - 动词自动标注脚本
+
+---
+
+## 动词标注体系完成 ([cca73582](https://github.com/baojie/shiji-kb/commit/cca73582) / [4ed5cc45](https://github.com/baojie/shiji-kb/commit/4ed5cc45) / [53667d0a](https://github.com/baojie/shiji-kb/commit/53667d0a)) - 2026-03-18~19
+
+### 新增 (Added)
+
+- **动词标注完成**：
+  - 完成 002-130 全部章节的动词标注
+  - 覆盖全书主要动作动词
+
+- **规范升级 v3.2 → v3.3**：
+  - 补充遗漏动词"禽"(v3.2)
+  - v3.3 重大扩展：新增大量动词分类
+
+### 更改 (Changed)
+
+- **文档完善**：
+  - 新增动词标注 v3.2/v3.3 迁移与扩展报告
+  - 动词报告归入 `predicate/` 目录
+
+---
+
+## 动词标注格式清理 ([5278645d](https://github.com/baojie/shiji-kb/commit/5278645d) / [47bc8ad9](https://github.com/baojie/shiji-kb/commit/47bc8ad9) / [e43a3317](https://github.com/baojie/shiji-kb/commit/e43a3317) / [5359bf7a](https://github.com/baojie/shiji-kb/commit/5359bf7a)) - 2026-03-18
+
+### 修复 (Fixed)
+
+- **动词格式错误清理**：
+  - 清理新旧格式混合问题
+  - 执行 v3.2 动词标注清理（19章节）
+  - 动词标注迁移 v3.1：67章节更新
+
+### 新增 (Added)
+
+- **工具增强**：
+  - 动词格式混合错误批量修复脚本
+  - 动词标注质量管理工具链
+  - 动词标注工具链完善
+
+---
+
+## CSS样式优化与HTML重建 ([b1ed7930](https://github.com/baojie/shiji-kb/commit/b1ed7930) / [557609d7](https://github.com/baojie/shiji-kb/commit/557609d7) / [9a21080b](https://github.com/baojie/shiji-kb/commit/9a21080b) / [d387ec1f](https://github.com/baojie/shiji-kb/commit/d387ec1f) / [aad56029](https://github.com/baojie/shiji-kb/commit/aad56029)) - 2026-03-18
+
+### 更改 (Changed)
+
+- **CSS修复**：
+  - 减小"曰:"后引用块的上方空白（v5.4版本）
+  - 实体标注光标从 `help` 改为 `default`
+
+- **HTML重新生成**：
+  - 应用身份标注修复更新
+  - 应用CSS和格式修复更新
+  - 文档更新：CSS版本说明
+
+---
+
+## 动词分类体系与统计 ([4536fd58](https://github.com/baojie/shiji-kb/commit/4536fd58) / [01391269](https://github.com/baojie/shiji-kb/commit/01391269) / [f187e340](https://github.com/baojie/shiji-kb/commit/f187e340) / [0c41c864](https://github.com/baojie/shiji-kb/commit/0c41c864) / [7c5ab02b](https://github.com/baojie/shiji-kb/commit/7c5ab02b) / [cfb2a51d](https://github.com/baojie/shiji-kb/commit/cfb2a51d)) - 2026-03-17~18
+
+### 新增 (Added)
+
+- **动词标注体系升级**：
+  - 旧格式迁移至新分类标签
+  - 知识图谱工具增强：动词分类体系与验证脚本
+  - 工具脚本维护与v3.1迁移报告
+
+- **汉字标注覆盖率统计**：
+  - 新增汉字标注覆盖率统计报告
+  - 量化标注进度和覆盖范围
+
+---
+
+## 第二轮实体反思 ([08a4c5bb](https://github.com/baojie/shiji-kb/commit/08a4c5bb) / [0cd03a76](https://github.com/baojie/shiji-kb/commit/0cd03a76) / [9962ead7](https://github.com/baojie/shiji-kb/commit/9962ead7) / [62d663e6](https://github.com/baojie/shiji-kb/commit/62d663e6)) - 2026-03-17~18
+
+### 更改 (Changed)
+
+- **第二轮实体反思批量处理完成**：
+  - 93章标注修正及增删字审查
+  - 更新 `SKILL_03c` 根据反思结果
+
+### 新增 (Added)
+
+- **每日工作日志系统**：
+  - 新增每日工作日志自动生成系统
+  - 系统化记录项目进展
+
+---
+
+## 专项索引系统 ([849d8ac1](https://github.com/baojie/shiji-kb/commit/849d8ac1) / [cf9f4f5c](https://github.com/baojie/shiji-kb/commit/cf9f4f5c) / [5ef38163](https://github.com/baojie/shiji-kb/commit/5ef38163) / [eb97490a](https://github.com/baojie/shiji-kb/commit/eb97490a) / [49b57157](https://github.com/baojie/shiji-kb/commit/49b57157)) - 2026-03-17
+
+### 新增 (Added)
+
+- **区块标签系统**：
+  - 太史公曰专项索引与多格式输出
+  - 太史公曰PDF导出功能
+
+- **韵文专项索引**：
+  - 96篇赞/诗歌/赋完整收录
+  - 多格式输出支持
+
+- **成语专项索引**：
+  - 完整提取与多格式输出
+  - 增强HTML交互功能
+
+---
+
+## 战争事件识别与文档更新 ([42e5fab6](https://github.com/baojie/shiji-kb/commit/42e5fab6) / [6ed84601](https://github.com/baojie/shiji-kb/commit/6ed84601) / [054d2944](https://github.com/baojie/shiji-kb/commit/054d2944)) - 2026-03-17
+
+### 新增 (Added)
+
+- **战争事件识别系统** (`SKILL_05e`)：
+  - 完整实现战争事件识别方法论
+  - 系统化识别军事冲突、战役、战斗等
+
+- **工作日志更新**：
+  - 2026-03-17工作日志：完整记录第一轮反思与区块系统
+
+### 更改 (Changed)
+
+- **文档数据更新**：
+  - 更新skill文档统计数据与标注格式至最新状态
+
+---
+
+## 人名实体深度反思与消歧 ([05f6e9a7](https://github.com/baojie/shiji-kb/commit/05f6e9a7) / [4a4255bf](https://github.com/baojie/shiji-kb/commit/4a4255bf) / [edc9821e](https://github.com/baojie/shiji-kb/commit/edc9821e) / [b468df8c](https://github.com/baojie/shiji-kb/commit/b468df8c) / [9037f7cb](https://github.com/baojie/shiji-kb/commit/9037f7cb)) - 2026-03-15~16
+
+### 更改 (Changed)
+
+- **人名实体跨章反思**：
+  - 615处修正（邦国/氏族/动词/边界损坏）
+
+- **章节级反思**：
+  - 012章反思：59处修正，新增3条SKILL规律
+  - 011章第二次反思：补充汉姓规则，新增32处修正
+
+- **单字人名消歧反思**：
+  - 001-010章第二轮，修正39处+文本修复
+
+### 新增 (Added)
+
+- **姓氏推理首轮**：
+  - 八轮迭代覆盖2053/3630人物（56.6%）
+  - 系统化推理先秦人物姓氏
+
+---
+
+## v2.8格式统一与十表结构化 ([650aa7d3](https://github.com/baojie/shiji-kb/commit/650aa7d3) / [d6e2b667](https://github.com/baojie/shiji-kb/commit/d6e2b667)) - 2026-03-15~16
+
+### 更改 (Changed)
+
+- **v2.8格式统一**：
+  - 18类实体全部迁移为〖TYPE X〗格式
+  - 重新生成HTML
+
+### 新增 (Added)
+
+- **十表结构化**：
+  - 修复013三代世表
+  - 生成全表JSON/CSV
+  - 新增SKILL_02g
+  - 补充事件发现
+
+---
+
 ## 出版物：元技能方法论PDF - 2026-03-18
 
 ### 新增 (Added)
@@ -70,9 +321,12 @@
 
 ---
 
-## 第一轮实体反思：全书130章修正1913处（已提交） - 2026-03-17
+## 第一轮实体反思：全书130章修正1913处 ([38b082c6](https://github.com/baojie/shiji-kb/commit/38b082c6) / [7c329904](https://github.com/baojie/shiji-kb/commit/7c329904) / [67e2c639](https://github.com/baojie/shiji-kb/commit/67e2c639) / [d5d8e3ee](https://github.com/baojie/shiji-kb/commit/d5d8e3ee) / [1b35876f](https://github.com/baojie/shiji-kb/commit/1b35876f) / [5b7ad5a5](https://github.com/baojie/shiji-kb/commit/5b7ad5a5)) - 2026-03-16~17
 
 ### 修复 (Fixed)
+
+- **HTML渲染修复**：
+  - 修复注释块渲染bug：长文本不再塞入div属性
 
 - **章节标注质量提升**：对013-130章（118章）执行按章反思，修正标注错误约756处
   - 013 三代世表：20处（制度→典籍/思想，官职→身份，庙号消歧）
@@ -97,6 +351,11 @@
 - `scripts/batch_reflect_031_120.py` — 批量反思处理脚本
 
 ### 更改 (Changed)
+
+- **文档和HTML更新**：
+  - 更新文档和HTML：第一轮实体反思完成
+  - 重建HTML/实体索引，更新反思文档和SKILL规则
+  - 更新全部实体统计文档：15,190词条/102,851次标注
 
 - `skills/SKILL_03c_按章反思.md` — 新增4条反思规律
   - 庙号/谥号的消歧标注（013章首发现）
