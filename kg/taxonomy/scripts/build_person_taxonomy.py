@@ -4,8 +4,8 @@
 
 本脚本已被通用版本 build_taxonomy.py 取代。
 新用法（输入 TTL，输出分类树 MD）：
-  python kg/rdf/scripts/build_taxonomy.py kg/rdf/person.ttl
-  python kg/rdf/scripts/build_taxonomy.py kg/rdf/biology.ttl
+  python kg/taxonomy/scripts/build_taxonomy.py kg/taxonomy/person.ttl
+  python kg/taxonomy/scripts/build_taxonomy.py kg/taxonomy/biology.ttl
 
 保留本文件仅供参考旧的 SUB_ZH 映射逻辑。
 """
@@ -15,8 +15,8 @@ from collections import defaultdict
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
-OUTPUT_TAXONOMY = PROJECT_ROOT / 'kg' / 'rdf' / 'person_taxonomy.md'
-OUTPUT_TTL = PROJECT_ROOT / 'kg' / 'rdf' / 'person.ttl'
+OUTPUT_TAXONOMY = PROJECT_ROOT / 'kg' / 'taxonomy' / 'person_taxonomy.md'
+OUTPUT_TTL = PROJECT_ROOT / 'kg' / 'taxonomy' / 'person.ttl'
 INPUT_PKL = Path('/tmp/person_classified_final10.pkl')
 
 # ── Sub-class label mapping ──

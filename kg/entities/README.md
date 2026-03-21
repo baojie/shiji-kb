@@ -19,9 +19,10 @@
 | 文件 | 说明 |
 |------|------|
 | `biology_wordlist.json` | 生物实体词表（〖+〗标注） |
-| `biology_taxonomy.md` | 生物分类树 |
 | `FLORA_FAUNA_TAGGING_GUIDE.md` | 动植物标注指南 |
 | `FLORA_FAUNA_PROJECT_SUMMARY.md` | 生物标注项目总结 |
+
+**注**：生物分类树已移至 [kg/taxonomy/biology_taxonomy.md](../taxonomy/biology_taxonomy.md)
 
 ## 与词表的区别
 

@@ -6,11 +6,11 @@
 输出：*_taxonomy.md（可读的层级分类树）
 
 用法：
-  python kg/rdf/scripts/build_taxonomy.py kg/rdf/person.ttl
-  python kg/rdf/scripts/build_taxonomy.py kg/rdf/biology.ttl
-  python kg/rdf/scripts/build_taxonomy.py kg/rdf/person.ttl -o kg/rdf/person_taxonomy.md
-  python kg/rdf/scripts/build_taxonomy.py kg/rdf/person.ttl --unit 人
-  python kg/rdf/scripts/build_taxonomy.py kg/rdf/person.ttl --max-show 30
+  python kg/taxonomy/scripts/build_taxonomy.py kg/taxonomy/person.ttl
+  python kg/taxonomy/scripts/build_taxonomy.py kg/taxonomy/biology.ttl
+  python kg/taxonomy/scripts/build_taxonomy.py kg/taxonomy/person.ttl -o kg/taxonomy/person_taxonomy.md
+  python kg/taxonomy/scripts/build_taxonomy.py kg/taxonomy/person.ttl --unit 人
+  python kg/taxonomy/scripts/build_taxonomy.py kg/taxonomy/person.ttl --max-show 30
 
 TTL 本身是权威数据源，本脚本从中解析：
   - 类层次（owl:Class + rdfs:subClassOf）
