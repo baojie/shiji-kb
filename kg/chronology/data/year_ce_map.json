@@ -1,103 +1,4 @@
 {
-  "001": {
-    "13.8": {
-      "三年": {
-        "ruler": "舜",
-        "method": "raw_nearby",
-        "ruler_key": "舜三年"
-      }
-    },
-    "16": {
-      "二十年": {
-        "ruler": "舜",
-        "method": "raw_nearby",
-        "ruler_key": "舜二十年"
-      },
-      "三年": {
-        "ruler": "尧",
-        "method": "raw_nearby",
-        "ruler_key": "尧三年"
-      }
-    },
-    "16.2": {
-      "三年": {
-        "ruler": "尧",
-        "method": "raw_nearby",
-        "ruler_key": "尧三年"
-      }
-    },
-    "20": {
-      "一年": {
-        "ruler": "舜",
-        "method": "raw_nearby",
-        "ruler_key": "舜一年"
-      }
-    },
-    "23": {
-      "二十年": {
-        "ruler": "舜",
-        "method": "raw_nearby",
-        "ruler_key": "舜二十年"
-      },
-      "八年": {
-        "ruler": "尧",
-        "method": "raw_nearby",
-        "ruler_key": "尧八年"
-      },
-      "三年": {
-        "ruler": "尧",
-        "method": "raw_nearby",
-        "ruler_key": "尧三年"
-      }
-    },
-    "25": {
-      "三十九年": {
-        "ruler": "尧",
-        "method": "raw_nearby",
-        "ruler_key": "尧三十九年"
-      }
-    },
-    "25.1": {
-      "十七年": {
-        "ruler": "禹",
-        "method": "raw_nearby",
-        "ruler_key": "禹十七年"
-      },
-      "三年": {
-        "ruler": "禹",
-        "method": "raw_nearby",
-        "ruler_key": "禹三年"
-      }
-    }
-  },
-  "002": {
-    "1.1": {
-      "九年": {
-        "ruler": "鲧",
-        "method": "raw_nearby",
-        "ruler_key": "鲧九年"
-      }
-    },
-    "19": {
-      "十七年": {
-        "ruler": "禹",
-        "method": "raw_nearby",
-        "ruler_key": "禹十七年"
-      },
-      "三年": {
-        "ruler": "帝舜",
-        "method": "raw_nearby",
-        "ruler_key": "帝舜三年"
-      }
-    },
-    "21": {
-      "三年": {
-        "ruler": "益",
-        "method": "raw_nearby",
-        "ruler_key": "益三年"
-      }
-    }
-  },
   "003": {
     "10": {
       "三年": {
@@ -139,25 +40,6 @@
     }
   },
   "004": {
-    "11": {
-      "五十年": {
-        "ruler": "周文王",
-        "method": "nearby_ruler",
-        "ce_year": -1050
-      },
-      "十年": {
-        "ruler": "周文王",
-        "method": "nearby_ruler",
-        "ce_year": -1090
-      }
-    },
-    "13": {
-      "九年": {
-        "ruler": "周文王",
-        "method": "sequential",
-        "ce_year": -1091
-      }
-    },
     "19": {
       "二年": {
         "ruler": "周武王",
@@ -165,42 +47,11 @@
         "ce_year": -1048
       }
     },
-    "21": {
-      "三年": {
-        "ruler": "周公",
-        "method": "nearby_ruler",
-        "ce_year": -1040
-      },
-      "七年": {
-        "ruler": "周公",
-        "method": "nearby_ruler",
-        "ce_year": -1036
-      }
-    },
-    "27": {
-      "一年": {
-        "ruler": "康公",
-        "method": "raw_nearby",
-        "ruler_key": "康公一年"
-      }
-    },
-    "29": {
-      "三十年": {
-        "ruler": "周厉王",
-        "method": "nearby_ruler",
-        "ce_year": -848
-      }
-    },
     "30": {
       "三十四年": {
         "ruler": "周厉王",
         "method": "sequential",
         "ce_year": -844
-      },
-      "三年": {
-        "ruler": "周厉王",
-        "method": "sequential",
-        "ce_year": -875
       }
     },
     "32": {
@@ -217,28 +68,11 @@
         "ce_year": -789
       }
     },
-    "35": {
-      "四十六年": {
-        "ruler": "周宣王",
-        "method": "sequential",
-        "ce_year": -782
-      },
-      "二年": {
-        "ruler": "周幽王",
-        "method": "nearby_ruler",
-        "ce_year": -780
-      },
-      "十年": {
-        "ruler": "周幽王",
-        "method": "sequential",
-        "ce_year": -772
-      }
-    },
     "36.1": {
       "三年": {
-        "ruler": "周幽王",
+        "ruler": "周宣王",
         "method": "sequential",
-        "ce_year": -779
+        "ce_year": -825
       }
     },
     "36.2": {
@@ -2091,18 +1925,11 @@
         "ce_year": -247
       }
     },
-    "68.1": {
-      "五十一年": {
-        "ruler": "秦始皇帝",
-        "method": "nearby_ruler",
-        "ruler_key": "秦始皇帝五十一年"
-      }
-    },
     "68.2": {
       "三年": {
-        "ruler": "秦始皇帝",
+        "ruler": "秦庄襄王",
         "method": "sequential",
-        "ce_year": -244
+        "ce_year": -247
       }
     }
   },
@@ -8228,9 +8055,9 @@
         "ce_year": -298
       },
       "二年": {
-        "ruler": "秦昭襄王",
-        "method": "nearby_ruler",
-        "ce_year": -305
+        "ruler": "楚顷襄王",
+        "method": "sequential",
+        "ce_year": -297
       },
       "三年": {
         "ruler": "楚顷襄王",
