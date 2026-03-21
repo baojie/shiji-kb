@@ -1,3 +1,9 @@
+---
+name: skill-03d
+title: 渲染与发布
+description: 标注文本输出为HTML
+---
+
 # SKILL 03d: 渲染与发布 — 标注文本输出为HTML
 
 > 将标注完成的 `chapter_md/*.tagged.md` 输出为可发布的HTML。本SKILL仅描述从实体构建阶段到输出的衔接；渲染器、配色、交互等详细设计见 **SKILL 09a 认知辅助阅读器**。

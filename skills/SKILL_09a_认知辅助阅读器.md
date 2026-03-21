@@ -1,3 +1,9 @@
+---
+name: skill-09a
+title: 认知辅助阅读器
+description: 语法高亮 + 结构语义化
+---
+
 # SKILL 09a: 认知辅助阅读器 — 语法高亮 + 结构语义化
 
 > 将标注Markdown渲染为带语法高亮的HTML阅读器，借鉴IDE代码高亮思路降低古文阅读认知负担。

@@ -1,3 +1,9 @@
+---
+name: skill-04a
+title: 古籍历史事件识别
+description: 古籍历史事件识别
+---
+
 # SKILL 04a: 古籍历史事件识别
 
 ## 1. 任务定义

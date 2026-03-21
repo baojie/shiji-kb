@@ -1,3 +1,9 @@
+---
+name: skill-04c
+title: 事件年代推断
+description: 事件年代推断
+---
+
 # SKILL 04c: 事件年代推断
 
 ## 任务定义

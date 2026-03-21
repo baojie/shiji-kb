@@ -1,3 +1,9 @@
+---
+name: skill-04f
+title: 动词标注
+description: 动词标注
+---
+
 # SKILL 04f: 动词标注
 
 **编号**: SKILL_04f

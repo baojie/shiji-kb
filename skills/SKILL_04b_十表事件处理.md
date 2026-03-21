@@ -1,3 +1,9 @@
+---
+name: skill-04b
+title: 十表事件处理
+description: 十表事件处理
+---
+
 # SKILL 04b: 十表事件处理
 
 ## 适用范围

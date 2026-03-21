@@ -1,3 +1,9 @@
+---
+name: skill-08
+title: SKU构造
+description: 从结构化知识到知识单元
+---
+
 # SKILL 08: SKU构造 — 从结构化知识到知识单元
 
 > 将实体、事件、关系、本体等结构化知识封装为可独立分发的知识单元（SKU, Stock Keeping Unit），面向不同用途和受众。
