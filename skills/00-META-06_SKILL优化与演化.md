@@ -1428,6 +1428,36 @@ def check_skill_convergence(history):
 - [ ] 有导航地图(快速定位)
 - [ ] 有交叉引用(链接到相关SKILL)
 
+**命名与组织规范**:
+- [ ] **一级SKILL**: `SKILL_NN_中文名.md` (如 `SKILL_03_实体构建.md`)
+  - 编号：两位数字（00-99）
+  - 位置：`skills/` 根目录
+  - 用途：顶层任务/阶段划分
+- [ ] **二级SKILL**: `SKILL_NNx_中文名.md` (如 `SKILL_03a_实体标注.md`)
+  - 编号：数字+小写字母（03a, 03b, 03c...）
+  - 位置：`skills/` 根目录
+  - 用途：一级SKILL的子任务
+- [ ] **三级SKILL**: `SKILL-NNx-英文名.md` (如 `SKILL-03c-rules.md`)
+  - 编号：数字+小写字母+英文名（用短横线连接）
+  - 位置：`skills/references/` 子目录
+  - 用途：二级SKILL的支撑文档/规则库/工具集
+- [ ] **元数据完整**（三级SKILL必须，二级SKILL推荐）:
+  ```yaml
+  ---
+  name: SKILL-identifier
+  description: 触发时机 + 功能说明（要详细且有推动性）
+  compatibility: 依赖工具（可选）
+  ---
+  ```
+- [ ] **多领域/多框架组织**:
+  ```
+  SKILL_NNx_任务名.md           ← 主流程 + 选择逻辑
+  references/
+    ├── SKILL-NNx-variant1.md   ← 变体1
+    ├── SKILL-NNx-variant2.md   ← 变体2
+    └── SKILL-NNx-variant3.md   ← 变体3
+  ```
+
 **可维护性**:
 - [ ] 有版本历史(记录演化轨迹)
 - [ ] 有变更日志(v1→v2改了什么?)
