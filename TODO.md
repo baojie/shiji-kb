@@ -45,6 +45,12 @@
   - 每轮检查：遗漏（单字省称、泛称词）/ 消歧（同名异人）/ 别名（称谓映射）
   - 输出 corrections JSON → 写回 tagged.md → 重新生成索引，多轮迭代至收敛
 
+- [ ] **为每个SKILL添加frontmatter元数据**：确保所有SKILL文档包含统一的YAML frontmatter
+  - 必需字段：`name`（SKILL标识符）、`description`（触发时机+功能说明）
+  - 可选字段：`compatibility`（依赖工具）、`version`、`author`
+  - 优先级：主要SKILL（SKILL_03系列、SKILL_07系列）优先，辅助SKILL其次
+  - 参考示例：SKILL_03c已有完整frontmatter，可作为模板
+
 ---
 
 ## 🎨 阅读体验

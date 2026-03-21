@@ -25,7 +25,7 @@
     │   关系网络 + SPO三元组 + 原子事实 (kg/relations/, kg/facts/)
     │
     ├──▼ 06 本体构建
-    │   OWL/RDF 分类本体 (kg/rdf/)
+    │   OWL/RDF 分类本体 (kg/taxonomy/)
     │
     ▼ 07 逻辑推理
 推断知识 (矛盾检测 / 生卒年推断 / 姓氏推理)
