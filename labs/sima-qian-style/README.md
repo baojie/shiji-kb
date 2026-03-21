@@ -16,28 +16,26 @@
 [把你的现代文字粘贴在这里]
 ```
 
-AI会自动读取 `SKILL-太史公曰.md` 并执行三步转换。
+AI会自动读取 `SKILL.md` 并执行三步转换。
 
 ---
 
 ### 方法二：安装到Claude Skills目录（通用方法）
 
-**第1步**：复制SKILL文件到配置目录
+**第1步**：复制整个目录到配置目录
 
-将以下4个文件复制到你的Claude Skills目录：
 ```bash
 # Claude Code配置目录通常在：
-~/.config/claude-code/skills/sima-qian-style/
+cp -r labs/sima-qian-style ~/.config/claude-code/skills/
 
 # 或者 Codex 配置目录：
-~/.codex/skills/sima-qian-style/
+cp -r labs/sima-qian-style ~/.codex/skills/
 ```
 
-需要复制的文件：
-- `SKILL-太史公曰.md` （主SKILL）
-- `SKILL-白话转文言.md` （基础层）
-- `SKILL-现代名词古化.md` （子技能）
-- `SKILL-核心特征.md` （参考文档）
+目录结构：
+- `SKILL.md` （主SKILL，包含YAML元数据）
+- `references/` （子技能，按需加载）
+- `evals/` （示例）
 
 **第2步**：重启AI或刷新技能列表
 
@@ -53,36 +51,21 @@ AI会自动找到并使用这个SKILL。
 
 ### 方法三：手动粘贴SKILL（适合其他AI）
 
-如果你使用的AI不支持SKILL文件（如网页版ChatGPT），需要手动提供4个SKILL：
+如果你使用的AI不支持SKILL文件（如网页版ChatGPT），需要手动提供主SKILL：
 
-**第1步**：依次打开并复制以下SKILL内容，按顺序粘贴给AI
+**第1步**：打开并复制 [SKILL.md](SKILL.md) 全文
 
-1. [SKILL-现代名词古化.md](SKILL-现代名词古化.md) - 第0步（现代词古化词典）
-2. [SKILL-白话转文言.md](SKILL-白话转文言.md) - 第1步（文言化规则）
-3. [SKILL-核心特征.md](SKILL-核心特征.md) - 参考（太史公风格特征）
-4. [SKILL-太史公曰.md](SKILL-太史公曰.md) - 主SKILL（调用前三个）
+**第2步**：粘贴给AI并说明你的需求
 
-**提示词模板**：
 ```
-以下是4个SKILL文档，请按照它们的指引工作：
+【SKILL：太史公文笔风格】
+[粘贴 SKILL.md 全文]
 
-【SKILL 1：现代名词古化】
-[粘贴 SKILL-现代名词古化.md 全文]
-
-【SKILL 2：白话转文言】
-[粘贴 SKILL-白话转文言.md 全文]
-
-【SKILL 3：核心特征】
-[粘贴 SKILL-核心特征.md 全文]
-
-【SKILL 4：太史公曰（主SKILL）】
-[粘贴 SKILL-太史公曰.md 全文]
-
-请用这些SKILL改写下面这段话：
+请用这个SKILL改写下面这段话：
 [你的现代文字]
 ```
 
-**注意**：因为4个文件内容较多，建议优先使用方法一或方法二。
+**注意**：SKILL.md 会在需要时自动引用 `references/` 中的子技能文档。
 
 ---
 
@@ -111,10 +94,10 @@ AI会自动找到并使用这个SKILL。
 
 ### 查看完整示例
 
-- [示例01：乔布斯列传](examples/example-01-jobs.md) - 人物传记
-- [示例02：shiji-kb记](examples/example-02-shiji-kb-full.md) - 项目介绍（完整教学版）
-- [示例03：葛底斯堡演讲](examples/example-03-gettysburg.md) - 经典演讲（政治文献）
-- [示例04：论Skill之道](examples/example-04-skill-concept.md) - 技术概念解释
+- [示例01：乔布斯列传](evals/example-01-jobs.md) - 人物传记
+- [示例02：shiji-kb记](evals/example-02-shiji-kb-full.md) - 项目介绍（完整教学版）
+- [示例03：葛底斯堡演讲](evals/example-03-gettysburg.md) - 经典演讲（政治文献）
+- [示例04：论Skill之道](evals/example-04-skill-concept.md) - 技术概念解释
 
 ---
 
@@ -139,20 +122,21 @@ AI会自动找到并使用这个SKILL。
    - ❌ 不模拟司马迁的历史观点
    - ✅ 只学习形式特征
 
-## 目录结构
+## 目录结构（标准Claude Skill架构）
 
 ```
-labs/sima-qian-style/
-├── README.md                      # 本文档
-├── SKILL-太史公曰.md              # 太史公文风SKILL（高级层）
-├── SKILL-白话转文言.md            # 白话转文言SKILL（基础层）
-├── SKILL-现代名词古化.md          # 现代名词古化SKILL（子技能）
-├── SKILL-核心特征.md              # 太史公文笔核心特征（8大维度）
-└── examples/
-    ├── example-01-jobs.md        # 示例：乔布斯列传（人物传记）
-    ├── example-02-shiji-kb-full.md  # 示例：shiji-kb记（项目介绍·完整版）
-    ├── example-03-gettysburg.md  # 示例：葛底斯堡演讲（经典演讲）
-    └── example-04-skill-concept.md  # 示例：论Skill之道（技术概念）
+sima-qian-style/
+├── SKILL.md                       # 主SKILL（包含YAML frontmatter）
+├── references/                    # 子技能（按需加载）
+│   ├── modern-terms.md           # 现代名词古化词典
+│   ├── classical-chinese.md      # 白话转文言规则
+│   └── style-features.md         # 太史公文笔特征
+├── evals/                         # 测试用例/示例
+│   ├── example-01-jobs.md        # 乔布斯列传
+│   ├── example-02-shiji-kb-full.md  # shiji-kb记
+│   ├── example-03-gettysburg.md  # 葛底斯堡演讲
+│   └── example-04-skill-concept.md  # 论Skill之道
+└── README.md                      # 本文档
 ```
 
 ## 技能分层
@@ -166,7 +150,7 @@ labs/sima-qian-style/
                  │
                  ▼
 ┌─────────────────────────────────────────────────┐
-│  第0层：SKILL-现代名词古化.md                    │
+│  第0层：references/modern-terms.md               │
 │  ├─ 学术类词典（知识图谱→知识经纬）              │
 │  ├─ 科技类词典（AI Agent→智能体）                │
 │  ├─ 管理类词典（项目→事）                        │
@@ -175,7 +159,7 @@ labs/sima-qian-style/
                  │ 半古化白话
                  ▼
 ┌─────────────────────────────────────────────────┐
-│  第1层：SKILL-白话转文言.md                      │
+│  第1层：references/classical-chinese.md          │
 │  ├─ 虚词转换（的地得→删除）                      │
 │  ├─ 动词转换（是有→为具）                        │
 │  ├─ 代词转换（我你他→余汝其）                    │
@@ -185,7 +169,7 @@ labs/sima-qian-style/
                  │ 标准文言文
                  ▼
 ┌─────────────────────────────────────────────────┐
-│  第2层：SKILL-太史公曰.md                        │
+│  第2层：SKILL.md + references/style-features.md  │
 │  ├─ 开篇定式（X者，Y也）                         │
 │  ├─ 列举式（其所为有二）                         │
 │  ├─ 层递并列、设问自答                           │
@@ -202,10 +186,10 @@ labs/sima-qian-style/
 本项目采用**三层技能架构**：
 
 ### 第0层：现代名词古化（子技能）
-- **文件**：`SKILL-现代名词古化.md`
+- **文件**：`references/modern-terms.md`
 - **功能**：现代学术/科技/管理名词 → 古代汉语表达
 - **内容**：7大类名词词典（学术、科技、管理、时间、抽象、教育、具体物品）、组合词处理规则
-- **调用者**：被`SKILL-白话转文言.md`调用（第0步）
+- **调用者**：被 `references/classical-chinese.md` 调用（第0步）
 - **独立使用**：可单独用于专有名词的古化翻译
 
 **典型转换**：
@@ -215,10 +199,10 @@ labs/sima-qian-style/
 - 结构化知识 → 条理之学
 
 ### 第1层：白话转文言（基础层）
-- **文件**：`SKILL-白话转文言.md`
+- **文件**：`references/classical-chinese.md`
 - **功能**：现代汉语 → 文言文（完整转换）
 - **内容**：9大类转换规则（含调用现代名词古化）、5大句式、自检清单
-- **依赖**：调用`SKILL-现代名词古化.md`（第0步）
+- **依赖**：调用 `references/modern-terms.md`（第0步）
 - **独立使用**：可单独用于文言文翻译
 
 **转换顺序**：
@@ -226,16 +210,16 @@ labs/sima-qian-style/
 2. 第1-8步：虚词、动词、代词、连词、副词、量词、数字、时间表达转换
 
 ### 第2层：太史公曰（高级层）
-- **文件**：`SKILL-太史公曰.md`
+- **文件**：`SKILL.md` + `references/style-features.md`
 - **功能**：文言文 → 太史公文风
-- **依赖**：调用`SKILL-白话转文言.md`（含现代名词古化）作为第一步
+- **依赖**：调用 `references/classical-chinese.md`（含现代名词古化）作为第一步
 - **内容**：太史公特有句式、修辞、人物刻画技法
 
-**应用技法**：开篇定式、列举式、层递并列、设问自答、先抑后扬、白描、跳跃剪辑
+**应用技法**：开篇定式、列举式、层递并列、设问自答、先抑后扬、白描、对话动作穿插、跳跃剪辑
 
 ## 核心特征（8大维度）
 
-详见 [SKILL-核心特征.md](SKILL-核心特征.md)：
+详见 [references/style-features.md](references/style-features.md)：
 
 1. **句法结构**: 开篇定式、简短断言、层递并列、因果承转
 2. **叙事节奏**: 白描手法、对话精准截取、跳跃式剪辑
@@ -253,15 +237,15 @@ labs/sima-qian-style/
 ```
 现代白话文
     ↓
-【第0步】现代名词古化（SKILL-现代名词古化.md）
+【第0步】现代名词古化（references/modern-terms.md）
     ↓
 半古化白话（名词已古化，句式仍现代）
     ↓
-【第1步】白话转文言（SKILL-白话转文言.md）
+【第1步】白话转文言（references/classical-chinese.md）
     ↓
 标准文言文（无现代痕迹）
     ↓
-【第2步】太史公文风（SKILL-太史公曰.md）
+【第2步】太史公文风（SKILL.md）
     ↓
 太史公风格成文
 ```
@@ -269,29 +253,29 @@ labs/sima-qian-style/
 ### 1. 作为 AI 写作技能
 
 **选项A：一步到位**（推荐）
-- 直接使用 [SKILL-太史公曰.md](SKILL-太史公曰.md)
-- 会自动调用完整三层架构
+- 直接使用 [SKILL.md](SKILL.md)
+- 会自动调用完整三层架构（自动读取 `references/`）
 - 触发词："用太史公文笔写XXX"
 
 **选项B：分步执行**（教学用）
-1. 先用 [SKILL-现代名词古化.md](SKILL-现代名词古化.md) 处理专有名词
-2. 再用 [SKILL-白话转文言.md](SKILL-白话转文言.md) 转为文言
-3. 最后用 [SKILL-太史公曰.md](SKILL-太史公曰.md) 应用风格
+1. 先用 [references/modern-terms.md](references/modern-terms.md) 处理专有名词
+2. 再用 [references/classical-chinese.md](references/classical-chinese.md) 转为文言
+3. 最后用 [SKILL.md](SKILL.md) 应用风格
 
 **选项C：单独使用基础层**
-- 只用 [SKILL-白话转文言.md](SKILL-白话转文言.md)（含现代名词古化）
+- 只用 [references/classical-chinese.md](references/classical-chinese.md)（含现代名词古化）
 - 适合需要标准文言文但不需要太史公风格的场景
 
 ### 2. 作为写作参考
 
-阅读 [SKILL-核心特征.md](SKILL-核心特征.md)，学习具体句式和修辞技巧，手工润色文章。
+阅读 [references/style-features.md](references/style-features.md)，学习具体句式和修辞技巧，手工润色文章。
 
 ### 3. 查看完整示例
 
-- [example-01-jobs.md](examples/example-01-jobs.md) - 乔布斯列传（人物传记体）
-- [example-02-shiji-kb-full.md](examples/example-02-shiji-kb-full.md) - shiji-kb记（项目介绍，333字完整版）
-- [example-03-gettysburg.md](examples/example-03-gettysburg.md) - 葛底斯堡演讲（经典政治演讲，272字）
-- [example-04-skill-concept.md](examples/example-04-skill-concept.md) - 论Skill之道（技术概念论说）
+- [evals/example-01-jobs.md](evals/example-01-jobs.md) - 乔布斯列传（人物传记体）
+- [evals/example-02-shiji-kb-full.md](evals/example-02-shiji-kb-full.md) - shiji-kb记（项目介绍，333字完整版）
+- [evals/example-03-gettysburg.md](evals/example-03-gettysburg.md) - 葛底斯堡演讲（经典政治演讲，272字）
+- [evals/example-04-skill-concept.md](evals/example-04-skill-concept.md) - 论Skill之道（技术概念论说）
 
 每个示例都包含：
 - 完整的三步转换流程
