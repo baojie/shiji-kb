@@ -5,7 +5,7 @@
 
 ## 功能概述
 
-`render_tech_article.py` 是专门用于渲染技术文章的Markdown到HTML转换器，基于史记渲染器修改，专用于 `doc/publications/` 下的技术文章。
+`render_tech_article.py` 是专门用于渲染技术文章的Markdown到HTML转换器，基于史记渲染器修改，专用于 `resources/publications/` 下的技术文章。
 
 ## 已实现功能
 
@@ -93,7 +93,7 @@ python render_tech_article.py <markdown文件> [输出文件] [css文件]
 
 ### 示例
 ```bash
-python render_tech_article.py doc/publications/draft/从历史书中探索知识图谱.tagged.md
+python render_tech_article.py resources/publications/draft/从历史书中探索知识图谱.tagged.md
 ```
 
 ### 参数说明
@@ -201,7 +201,7 @@ p.sentence-layout {
 
 ```bash
 # 1. 渲染技术文章
-python render_tech_article.py doc/publications/draft/从历史书中探索知识图谱.tagged.md
+python render_tech_article.py resources/publications/draft/从历史书中探索知识图谱.tagged.md
 
 # 2. 在浏览器中打开生成的HTML
 # 检查：

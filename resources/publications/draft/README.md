@@ -24,7 +24,7 @@
 ## 渲染命令
 
 ```bash
-python render_tech_article.py doc/publications/draft/从历史书中探索知识图谱.tagged.md
+python render_tech_article.py resources/publications/draft/从历史书中探索知识图谱.tagged.md
 ```
 
 ## CSS样式

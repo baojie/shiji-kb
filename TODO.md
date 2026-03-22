@@ -1,14 +1,31 @@
 # 史记知识库 TODO
 
-> 最后更新：2026-03-20
+> 最后更新：2026-03-21
 
 ---
 
-## ✅ 最新完成 (2026-03-20)
+## ✅ 最新完成 (2026-03-21)
+
+- [x] **为所有SKILL添加YAML frontmatter**：批量为41个SKILL文件添加元数据
+  - ✅ frontmatter包含：name（kebab-case）、title、description三个字段
+  - ✅ 开发 `add_skill_frontmatter.py` 批量处理脚本
+  - 📄 文档：所有 `skills/SKILL_*.md` 文件已更新
+
+- [x] **司马迁文风研究实验**：三层SKILL架构完整实现
+  - ✅ 4个SKILL文件（太史公曰、白话转文言、现代名词古化、核心特征）
+  - ✅ 4个完整示例（乔布斯列传、shiji-kb记、葛底斯堡演讲、Skill概念）
+  - 📄 文档：[labs/sima-qian-style/](labs/sima-qian-style/)
+
+- [x] **溯源推理分析实验**：历史事件传播链分析
+  - ✅ 十大故事案例分析（鸿门宴、荆轲刺秦等）
+  - 📄 文档：[skills/SKILL_07d_溯源推理.md](skills/SKILL_07d_溯源推理.md) / [labs/source-inference/](labs/source-inference/)
+
+- [x] **参与指南文档**：完整的社区参与流程
+  - 📄 文档：[resources/help/CONTRIBUTING.md](resources/help/CONTRIBUTING.md)
 
 - [x] **技术文章《从历史书中探索知识图谱》**：14页PDF完整记录
-  - 📄 文档：[从历史书中探索知识图谱.pdf](doc/publications/draft/从历史书中探索知识图谱.pdf)
-- 
+  - 📄 文档：[从历史书中探索知识图谱.pdf](resources/publications/draft/从历史书中探索知识图谱.pdf)
+
 ---
 
 ## ✅ 历史完成 (2026-03-18)
@@ -44,12 +61,6 @@
 - [ ] **实体标注反思管线**：参照事件年代反思管线，建立实体标注质量审查工作流
   - 每轮检查：遗漏（单字省称、泛称词）/ 消歧（同名异人）/ 别名（称谓映射）
   - 输出 corrections JSON → 写回 tagged.md → 重新生成索引，多轮迭代至收敛
-
-- [ ] **为每个SKILL添加frontmatter元数据**：确保所有SKILL文档包含统一的YAML frontmatter
-  - 必需字段：`name`（SKILL标识符）、`description`（触发时机+功能说明）
-  - 可选字段：`compatibility`（依赖工具）、`version`、`author`
-  - 优先级：主要SKILL（SKILL_03系列、SKILL_07系列）优先，辅助SKILL其次
-  - 参考示例：SKILL_03c已有完整frontmatter，可作为模板
 
 ---
 

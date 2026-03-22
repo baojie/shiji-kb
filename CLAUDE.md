@@ -89,20 +89,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 新增 (Added)
 
-- **功能名称** ([主要链接]) ([commit_id](github_commit_url))
-  - 核心特性概括（1行）
-  - 次要说明（可选，1行）
+- **功能名称**：简短描述 ([commit_id])
 
 ### 修复 (Fixed)
 
-- **问题名称** ([commit_id](github_commit_url))：简短说明+关键数字
+- **问题名称**：简短说明+关键数字 ([commit_id]) ([Issue #N](github_issue_url))
 
 ### 更改 (Changed)
 
-- **模块名称** ([commit_id](github_commit_url))：变更概括
+- **模块名称**：变更概括 ([commit_id])
+
+### 项目维护 (Maintenance)
+
+- 文档重构 ([commit_id])
+- 目录整理 ([commit_id])
+- 每日工作日志 ([commit_id])
 
 **详细工作日志**: [`logs/daily/YYYY-MM-DD.md`](logs/daily/YYYY-MM-DD.md)
+
+[commit_id]: https://github.com/baojie/shiji-kb/commit/commit_id
 ```
+
+**重要规范**：
+1. **引用式链接**：使用 `[commit_id]` 格式，在条目末尾统一定义链接
+2. **Issue链接**：提到Issue时必须链接到GitHub Issue页面，格式：`([Issue #N](https://github.com/baojie/shiji-kb/issues/N))`
+3. **项目维护分类**：将非功能开发内容归入"项目维护 (Maintenance)"区
+   - ✅ **应归入项目维护**：文档重构、README更新、每日工作日志、SKILL审阅、HTML/索引重建、实体统计更新、参与指南
+   - ❌ **不应归入项目维护**：目录/代码重构、工具脚本开发、数据统计工具、CSS样式修复、文件夹重组（这些应归入 Added/Changed/Fixed）
+4. **简洁原则**：每项只保留核心信息，删除详细说明，详情见每日工作日志
 
 ### Commit链接格式
 

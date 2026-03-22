@@ -5,7 +5,7 @@
 将简洁标记的技术文章Markdown转换为带CSS样式的HTML
 支持句子级排版、语义缩进等技术文章特定功能
 
-基于史记渲染器修改，专用于 doc/publications/ 下的技术文章
+基于史记渲染器修改，专用于 resources/publications/ 下的技术文章
 
 标记语法：
 - @人名@ -> <span class="person">人名</span>

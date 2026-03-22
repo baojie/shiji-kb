@@ -4,7 +4,7 @@
 
 ## 📖 [在线语法加亮阅读访问 →](https://baojie.github.io/shiji-kb)
 
-**许可证**: [CC BY-NC-SA 4.0](LICENSE) （知识共享 版权归属-相同方式共享 4.0 国际 公共许可证），简称为 CC BY-NC-SA 4.0。 此许可允许再利用者以任何媒介或格式分发、重新混合、改编和基于该材料进行创作，但仅限于非商业用途，并且必须注明创作者。
+**许可证**: [CC BY-NC-SA 4.0](LICENSE) - 署名-非商业性使用-相同方式共享
 
 ---
 
@@ -52,21 +52,21 @@
 
 **核心转变**：2001年的难点是"设计本体"，2026年的难点是"反思/进化AI提取的本体"。本体不再是专家预先设计的蓝图，而是从数据中生长出来、由人类修剪和校准的有机结构。
 
-> 详见方法论对标文档：[Agentic Ontology 101](doc/publications/agentic_ontology_101.md)（英文，对标Noy & McGuinness 2001经典）
+> 详见方法论对标文档：[Agentic Ontology 101](resources/publications/draft/agentic_ontology_101.md)（英文，对标Noy & McGuinness 2001经典）
 
 ### 📚 可复用方法论：从一部书到整个文库
 
 **14个元技能（Meta-Skills）** - 通用知识工程方法论
 - OTF+JIT+Bootstrap、反思循环、冷启动、柳叶刀方法、质量控制……
-- → **[下载PDF合集（425页，2.35MB）](doc/publications/meta-skill-book/大规模知识库构造元技能方法论.pdf)**
+- → **[下载PDF合集（425页，2.35MB）](resources/publications/meta-skill-book/大规模知识库构造元技能方法论.pdf)**
 
 **40个管线技能（Pipeline Skills）** - 古籍处理完整技术栈
 - 校勘→结构分析→实体构建→事件构建→关系构建→本体构建→逻辑推理→SKU→应用
-- → **[下载PDF合集（438页，3.01MB）](doc/publications/pipeline-skills-book/史记知识库构造管线技能手册.pdf)**
+- → **[下载PDF合集（438页，3.01MB）](resources/publications/pipeline-skills-book/史记知识库构造管线技能手册.pdf)**
 
 **技术文章** - 方法论实战解读
 - 《从历史书中探索知识图谱》（2026-03-19）：项目缘起、核心成果、技术架构、元技能体系的完整呈现
-- → **[下载PDF（14页，1.5MB）](doc/publications/draft/从历史书中探索知识图谱.pdf)**
+- → **[下载PDF（14页，1.5MB）](resources/publications/draft/从历史书中探索知识图谱.pdf)**
 
 **为什么是SKILL而非代码？**
 
@@ -96,7 +96,7 @@
 
 **原文 → 专名标注 → 语法高亮 → 语义排版 → 关系连线**
 
-[查看完整演进过程](doc/publications/史记语法高亮创造过程.md) | [语义排版技术细节](doc/publications/史记阅读器重构与语义排版.md)
+[查看完整演进过程](resources/publications/notes/史记语法高亮创造过程.md) | [语义排版技术细节](resources/publications/draft/史记阅读器重构与语义排版.md)
 
 ### 在线Demo
 
@@ -132,20 +132,6 @@
 | **方法论** | 14元技能+40管线技能 | 2本PDF合集（共863页） |
 | **技术文章** | 1篇，14页PDF | 《从历史书中探索知识图谱》（2026-03-19） |
 
-### 质量收敛实证（以事件年代审查为例）
-
-AI初始标注准确率约90%。通过结构化反思循环，质量螺旋上升：
-
-| 轮次 | 修正数 | 涉及章节 | 收敛趋势 |
-|------|--------|---------|---------|
-| 第1轮 | 1,010 | 118/130 | ████████████ |
-| 第2轮 | 431 | 105/130 | █████ |
-| 第3轮 | 465 | 70/130 | █████ |
-| 第4轮 | 167 | 68/130 | ██ |
-| 第5轮 | 46 | 28/130 | █ |
-
-**关键认识**：90%准确率的AI标注 + 迭代反思，比99%准确率的人工标注更有价值——速度快100倍，可以快速收敛。
-
 ### 标注质量里程碑
 
 - ✅ **2026-03-17**：第一轮实体反思，全书130章系统审查，修正1,913处标注错误，原文完整性100%验证通过
@@ -176,7 +162,7 @@ AI初始标注准确率约90%。通过结构化反思循环，质量螺旋上升
 4. **应用语义**（第4层）：历史真相是什么？有哪些矛盾？能发现什么规律？
    - 矛盾检测、规律归纳、交互式探索、洞见挖掘
 
-详见：[研究方法总则](doc/methodology/研究方法总则.md) | [项目初衷、愿景与未来方向](doc/publications/项目初衷、愿景与未来方向.md)
+详见：[研究方法总则](doc/methodology/研究方法总则.md) | [项目初衷、愿景与未来方向](resources/publications/notes/项目初衷、愿景与未来方向.md)
 
 ### 九步管线（Agent驱动，可并行）
 
@@ -235,7 +221,7 @@ AI初始标注准确率约90%。通过结构化反思循环，质量螺旋上升
 
 ### 应用场景
 
-详见：[史记阅读器重构与语义排版](doc/publications/史记阅读器重构与语义排版.md)
+详见：[史记阅读器重构与语义排版](resources/publications/draft/史记阅读器重构与语义排版.md)
 
 - **文艺二次创造**：历史小说/电影/短剧素材引擎（马伯庸式写作模式工业化）
 - **游戏化**：SKU→技能卡，事件→剧情，实体→角色。一个知识库支撑一百款不同游戏
@@ -268,33 +254,7 @@ python generate_all_chapters.py
 
 ## 目录结构
 
-详见：[PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)（完整文件树）
-
-```
-shiji-kb/
-├── chapter_md/                # 标注后的Markdown文件（130篇）
-├── docs/                      # GitHub Pages网站
-│   ├── chapters/              #   HTML格式章节
-│   ├── entities/              #   实体索引页面（18类）
-│   └── css/shiji-styles.css   #   语法高亮样式
-├── kg/                        # 知识图谱
-│   ├── events/                #   事件（3,197个）+ 关系（7,637条）
-│   ├── entities/              #   实体索引 + 别名/消歧
-│   ├── chronology/            #   纪年（君主在位年 + 公元映射）
-│   └── rdf/                   #   RDF/本体
-├── ontology/skus/             # 知识单元（SKU）
-├── skills/                    # 方法论Skills（54个）
-│   ├── 00-META-*.md           #   元技能（14个）
-│   └── SKILL_*.md             #   管线技能（40个）
-├── doc/publications/          # 出版物
-│   ├── meta-skill-book/       #   元技能方法论PDF（425页）
-│   └── pipeline-skills-book/  #   管线技能手册PDF（438页）
-├── app/                       # 交互式应用
-│   ├── metro/                 #   史记地铁图
-│   └── game/                  #   史记争霸游戏
-├── render_shiji_html.py       # Markdown→HTML渲染器
-└── generate_all_chapters.py   # 批量生成全部章节
-```
+完整目录树和详细说明见：[PROJECT_STRUCTURE.md](resources/help/PROJECT_STRUCTURE.md)
 
 ---
 
@@ -322,6 +282,8 @@ shiji-kb/
 - 学术讨论（方法论反馈、应用场景探索）
 - 可视化设计（阅读器UI改进、数据可视化）
 - Bug报告和功能建议
+
+**参与指南**: [resources/help/CONTRIBUTING.md](resources/help/CONTRIBUTING.md) - 详细的贡献流程和规范
 
 **GitHub Issues**: <https://github.com/baojie/shiji-kb/issues>
 
@@ -444,7 +406,7 @@ shiji-kb/
 
 ---
 
-**项目维护者**：[baojie](https://github.com/baojie) · **最后更新**：2026-03-20
+**项目维护者**：[baojie](https://github.com/baojie) · **最后更新**：2026-03-21
 
 ## 赞助一杯咖啡
 

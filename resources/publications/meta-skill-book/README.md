@@ -73,7 +73,7 @@
 使用 `generate_meta_skills_pdf.py` 自动生成本PDF，可重复执行：
 
 ```bash
-cd doc/publications/meta-skill-book
+cd resources/publications/meta-skill-book
 python3 generate_meta_skills_pdf.py
 ```
 

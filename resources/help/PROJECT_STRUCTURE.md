@@ -85,21 +85,22 @@ shiji-kb/
 │   ├── 00-META-01_反思.md
 │   └── ...                    # 14个元技能
 │
-├── doc/publications/          # 出版物与文档
-│   ├── meta-skill-book/       # 元技能方法论PDF（2.6MB，425页）
-│   │   ├── 大规模知识库构造元技能方法论.pdf
-│   │   ├── generate_meta_skills_pdf.py
-│   │   └── README.md
-│   ├── pipeline-skills-book/  # 管线技能手册PDF（3.0MB，438页）
-│   │   ├── 史记知识库构造管线技能手册.pdf
-│   │   ├── generate_pipeline_skills_pdf.py
-│   │   └── README.md
-│   ├── 公众号文章/            # 公众号系列文章
-│   ├── 项目初衷、愿景与未来方向.md
-│   ├── agentic_ontology_101.md
-│   ├── 史记语法高亮创造过程.md
-│   ├── 史记阅读器重构与语义排版.md
-│   └── ...
+├── resources/                 # 静态参考资料
+│   ├── publications/          # 出版物（论文、书籍、演讲）
+│   │   ├── meta-skill-book/   # 元技能方法论PDF（2.6MB，425页）
+│   │   │   ├── 大规模知识库构造元技能方法论.pdf
+│   │   │   ├── generate_meta_skills_pdf.py
+│   │   │   └── README.md
+│   │   ├── pipeline-skills-book/  # 管线技能手册PDF（3.0MB，438页）
+│   │   │   ├── 史记知识库构造管线技能手册.pdf
+│   │   │   ├── generate_pipeline_skills_pdf.py
+│   │   │   └── README.md
+│   │   ├── draft/             # 技术文章草稿
+│   │   ├── notes/             # 写作笔记
+│   │   ├── talks/             # 演讲材料
+│   │   └── 公众号文章/        # 公众号系列文章
+│   ├── references/            # 外部参考文献
+│   └── help/                  # 写作指南、使用帮助
 │
 ├── scripts/                   # 通用工具脚本
 │   ├── validation/            # 数据验证脚本
@@ -201,11 +202,13 @@ GitHub Pages托管的在线阅读器，包含：
 #### app/game/ - 史记争霸游戏
 基于知识图谱的历史策略游戏（开发中）
 
-### 7. doc/publications/ - 出版物
-包含两本PDF手册和系列文章：
-- **大规模知识库构造元技能方法论.pdf** (2.6MB, 425页)
-- **史记知识库构造管线技能手册.pdf** (3.0MB, 438页)
-- 系列文章和公众号推文
+### 7. resources/ - 静态参考资料
+包含两本PDF手册、技术文章和外部参考资料：
+- **publications/meta-skill-book/** - 大规模知识库构造元技能方法论.pdf (2.6MB, 425页)
+- **publications/pipeline-skills-book/** - 史记知识库构造管线技能手册.pdf (3.0MB, 438页)
+- **publications/draft/** - 技术文章（《从历史书中探索知识图谱》等）
+- **publications/notes/** - 写作笔记和项目愿景文档
+- **references/** - 外部参考文献和研究资料
 
 ## 数据规模总览
 
@@ -259,11 +262,11 @@ python generate_all_chapters.py
 ### 4. 生成PDF手册
 ```bash
 # 元技能方法论
-cd doc/publications/meta-skill-book
+cd resources/publications/meta-skill-book
 python3 generate_meta_skills_pdf.py
 
 # 管线技能手册
-cd doc/publications/pipeline-skills-book
+cd resources/publications/pipeline-skills-book
 python3 generate_pipeline_skills_pdf.py
 ```
 
