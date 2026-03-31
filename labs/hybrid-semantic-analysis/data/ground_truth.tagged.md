@@ -1,1 +1,0 @@
-〖PERSON 项籍|项羽〗者,〖PLACE 下相〗人也,字〖PERSON 羽〗。初起时,年二十四。其季父〖PERSON 项梁〗,〖PERSON 梁〗父即〖OFFICE 楚将〗〖PERSON 项燕〗,为〖OFFICE 秦将〗〖PERSON 王翦〗所戮者也。〖PERSON 项氏〗世世为〖OFFICE 楚将〗,封于〖PLACE 项〗,故姓〖PERSON 项氏〗。〖PERSON 项籍〗少时,学书不成,去学剑,又不成。〖PERSON 项梁〗怒之。〖PERSON 籍〗曰:"书足以记名姓而已。剑一人敌,不足学,学万人敌。"于是〖PERSON 项梁〗乃教〖PERSON 籍〗兵法,〖PERSON 籍〗大喜,略知其意,又不肯竟学。

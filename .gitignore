@@ -1,18 +1,6 @@
-.idea/
-*.pyc
+logs/
+*.db
+*.db-shm
+*.db-wal
 __pycache__/
-
-# Local Netlify folder
-.netlify
-private/
-.claude/settings.json
-logs/lint*.txt
-logs/lint*.md
-logs/lint_text_integrity_chapter_md/
-
-# Event extraction intermediate files
-kg/events/tmp/
-subprocess
-
-# Temporary working directory
-temp/
+*.pyc
