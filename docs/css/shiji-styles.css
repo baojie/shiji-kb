@@ -711,31 +711,69 @@ body.syntax-highlight-off .verb-economic {
 /* 段落合并模式 - 关闭智能分段时的样式 */
 /* 当关闭智能分段时，将共享顶级编号的段落合并显示 */
 
-/* 1. 将所有子段落（包含小数点的编号）改为行内显示 */
-body.merge-paragraphs p[id*="."] {
-    display: inline;
-    margin: 0;
+/* 1. 子段落（p和li）改为行内显示，与前面内容连续 */
+body.merge-paragraphs p.sub-paragraph,
+body.merge-paragraphs li.sub-paragraph {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;  /* 移除列表项标记 */
 }
 
-/* 2. 隐藏所有子段落的编号链接 */
-body.merge-paragraphs p[id*="."] .para-num {
-    display: none;
+/* 2. 隐藏子段落的编号链接 */
+body.merge-paragraphs .sub-paragraph .para-num {
+    display: none !important;
 }
 
-/* 3. 顶级段落（不包含小数点的编号）保持块级显示 */
-body.merge-paragraphs p[id^="pn-"]:not([id*="."]) {
-    display: block;
-    margin: 2em 0;
+/* 3. 顶级段落保持块级显示，有段落间距 */
+body.merge-paragraphs p.top-paragraph {
+    display: block !important;
+    margin: 2em 0 !important;
 }
 
 /* 4. 顶级段落的编号保持可见 */
-body.merge-paragraphs p[id^="pn-"]:not([id*="."]) .para-num {
-    display: inline;
+body.merge-paragraphs .top-paragraph .para-num {
+    display: inline !important;
 }
 
-/* 5. 列表项在合并模式下保持原样 */
-body.merge-paragraphs ul,
-body.merge-paragraphs li {
-    display: block;
-    margin: inherit;
+/* 5. 包含子段落的ul列表也改为行内显示，以便内容连续 */
+body.merge-paragraphs ul.has-sub-paragraph {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+/* 6. 消除顶级段落后的ul之间的空白 */
+body.merge-paragraphs p.top-paragraph + ul.has-sub-paragraph {
+    margin-left: 0 !important;
+}
+
+/* 7. 消除ul后的子段落p之间的空白 */
+body.merge-paragraphs ul.has-sub-paragraph + p.sub-paragraph {
+    margin-left: 0 !important;
+}
+
+/* 8. 顶级段落内的br标签也应该被隐藏或转为空格 */
+body.merge-paragraphs p.top-paragraph br,
+body.merge-paragraphs p.sub-paragraph br,
+body.merge-paragraphs li.sub-paragraph br {
+    display: none !important;
+}
+
+/* 9. 段落内的所有子元素都应该是行内显示 */
+body.merge-paragraphs p.top-paragraph > *,
+body.merge-paragraphs p.sub-paragraph > *,
+body.merge-paragraphs li.sub-paragraph > * {
+    display: inline !important;
+}
+
+/* 10. 移除对话和引用的特殊样式（缩进、换行等） */
+body.merge-paragraphs .quoted,
+body.merge-paragraphs .dialogue {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-indent: 0 !important;
+    padding-left: 0 !important;
 }

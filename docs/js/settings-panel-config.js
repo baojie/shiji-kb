@@ -34,6 +34,15 @@
             onChange: function(enabled) {
                 updateTraditionalChinese(enabled);
             }
+        },
+        {
+            id: 'smart-paragraph',
+            label: '智能分段',
+            storageKey: 'shiji-smart-paragraph',
+            defaultValue: true,  // 默认开启
+            onChange: function(enabled) {
+                updateSmartParagraph(enabled);
+            }
         }
     ];
 
@@ -130,6 +139,185 @@
             }
         } else {
             console.warn('[settings-panel] ShijiConverter 未加载');
+        }
+    }
+
+    /**
+     * 更新智能分段
+     * 当关闭时，按pn合并段落，所有共享顶级编号的段落合并成一个段落显示
+     *
+     * 新逻辑：从每个顶级段落开始，收集后面所有非顶级段落的内容，
+     * 将它们的文本内容追加到顶级段落中，然后隐藏这些子段落元素
+     *
+     * 例如：11, 11.1, 11.2, 11.3, 11.4, 11.5 都合并到段落11中
+     */
+    function updateSmartParagraph(enabled) {
+        if (enabled) {
+            // 恢复：显示所有被隐藏的元素，清除标记
+            document.querySelectorAll('[data-merged-content]').forEach(elem => {
+                const originalContent = elem.getAttribute('data-original-content');
+                if (originalContent) {
+                    elem.innerHTML = originalContent;
+                    elem.removeAttribute('data-original-content');
+                    elem.removeAttribute('data-merged-content');
+                }
+            });
+
+            document.querySelectorAll('[data-hidden-by-merge]').forEach(elem => {
+                elem.style.display = '';
+                elem.removeAttribute('data-hidden-by-merge');
+            });
+
+            // 恢复对话和引用元素的样式
+            document.querySelectorAll('.quoted, .dialogue').forEach(elem => {
+                elem.style.display = '';
+                elem.style.margin = '';
+                elem.style.padding = '';
+                elem.style.textIndent = '';
+                elem.style.paddingLeft = '';
+            });
+
+            document.body.classList.remove('merge-paragraphs');
+        } else {
+            document.body.classList.add('merge-paragraphs');
+
+            // 获取所有段落、列表项和引用块，按DOM顺序
+            const allElements = Array.from(document.querySelectorAll('p, li, ul, blockquote'));
+
+            // 识别顶级段落
+            const topLevelElements = [];
+            allElements.forEach(elem => {
+                const paraNum = elem.querySelector('a.para-num');
+                if (paraNum && paraNum.id && paraNum.id.startsWith('pn-')) {
+                    const numPart = paraNum.id.substring(3);
+                    if (!numPart.includes('.')) {
+                        // 这是顶级段落
+                        topLevelElements.push({
+                            element: elem,
+                            topLevelNum: numPart
+                        });
+                    }
+                }
+            });
+
+            // 对每个顶级段落，收集并合并其后的所有子段落
+            topLevelElements.forEach((topLevel, index) => {
+                const topElem = topLevel.element;
+                const topNum = topLevel.topLevelNum;
+
+                // 保存原始内容
+                topElem.setAttribute('data-original-content', topElem.innerHTML);
+                topElem.setAttribute('data-merged-content', 'true');
+
+                // 查找下一个顶级段落的位置
+                const nextTopElem = index < topLevelElements.length - 1
+                    ? topLevelElements[index + 1].element
+                    : null;
+
+                // 收集当前顶级段落和下一个顶级段落之间的所有内容
+                let currentElem = topElem.nextElementSibling;
+                const contentParts = []; // 存储要合并的内容
+
+                while (currentElem && currentElem !== nextTopElem) {
+                    // 跳过h2, h3等标题，以及hr分隔线
+                    if (currentElem.tagName.match(/^H[1-6]$/) || currentElem.tagName === 'HR') {
+                        break; // 遇到标题或分隔线，停止收集
+                    }
+
+                    let shouldCollect = false;
+                    let hasParaNum = false;
+
+                    // 如果是UL，检查其中的li是否有段落编号
+                    if (currentElem.tagName === 'UL') {
+                        const lis = currentElem.querySelectorAll('li');
+                        let hasMatchingLi = false;
+
+                        lis.forEach(li => {
+                            const liParaNum = li.querySelector('a.para-num');
+                            if (liParaNum && liParaNum.id && liParaNum.id.startsWith('pn-')) {
+                                hasParaNum = true;
+                                const liNumPart = liParaNum.id.substring(3);
+                                const liTopNum = liNumPart.split('.')[0];
+
+                                if (liTopNum === topNum) {
+                                    hasMatchingLi = true;
+                                    // 隐藏编号，收集文本，同时移除br标签
+                                    let content = li.innerHTML.replace(/<a[^>]*class="para-num"[^>]*>.*?<\/a>\s*/g, '');
+                                    content = content.replace(/<br\s*\/?>/gi, '');
+                                    contentParts.push(content);
+                                }
+                            } else {
+                                // li没有段落编号，收集其内容
+                                let content = li.innerHTML.replace(/<br\s*\/?>/gi, '');
+                                contentParts.push(content);
+                            }
+                        });
+
+                        // 如果ul有匹配的li，或者ul的li都没有编号（说明是列表内容），则隐藏
+                        if (hasMatchingLi || !hasParaNum) {
+                            shouldCollect = true;
+                            currentElem.style.display = 'none';
+                            currentElem.setAttribute('data-hidden-by-merge', 'true');
+                        }
+                    } else if (currentElem.tagName === 'P' || currentElem.tagName === 'LI' || currentElem.tagName === 'BLOCKQUOTE') {
+                        // 检查P、LI或BLOCKQUOTE是否有段落编号
+                        const paraNum = currentElem.querySelector('a.para-num');
+                        if (paraNum && paraNum.id && paraNum.id.startsWith('pn-')) {
+                            hasParaNum = true;
+                            const numPart = paraNum.id.substring(3);
+                            const elemTopNum = numPart.split('.')[0];
+
+                            // 如果属于当前顶级编号
+                            if (elemTopNum === topNum) {
+                                shouldCollect = true;
+                                // 隐藏编号，收集文本，同时移除br标签
+                                let content = currentElem.innerHTML.replace(/<a[^>]*class="para-num"[^>]*>.*?<\/a>\s*/g, '');
+                                content = content.replace(/<br\s*\/?>/gi, '');
+                                contentParts.push(content);
+                                // 隐藏元素
+                                currentElem.style.display = 'none';
+                                currentElem.setAttribute('data-hidden-by-merge', 'true');
+                            } else {
+                                // 属于不同的顶级编号，停止收集
+                                break;
+                            }
+                        } else {
+                            // 没有段落编号的P或BLOCKQUOTE，收集其内容
+                            shouldCollect = true;
+                            let content = currentElem.innerHTML.replace(/<br\s*\/?>/gi, '');
+                            contentParts.push(content);
+                            currentElem.style.display = 'none';
+                            currentElem.setAttribute('data-hidden-by-merge', 'true');
+                        }
+                    }
+
+                    currentElem = currentElem.nextElementSibling;
+                }
+
+                // 将收集的内容追加到顶级段落
+                if (contentParts.length > 0) {
+                    topElem.innerHTML += contentParts.join('');
+                }
+
+                // 移除顶级段落内部的所有<br>标签，使内容连续显示
+                topElem.innerHTML = topElem.innerHTML.replace(/<br\s*\/?>/gi, '');
+
+                // 将顶级段落内的所有块级元素改为行内元素
+                topElem.querySelectorAll('ul, ol, li, div, p, blockquote').forEach(blockElem => {
+                    blockElem.style.display = 'inline';
+                    blockElem.style.margin = '0';
+                    blockElem.style.padding = '0';
+                });
+
+                // 移除对话和引用的特殊样式（缩进、换行等）
+                topElem.querySelectorAll('.quoted, .dialogue').forEach(elem => {
+                    elem.style.display = 'inline';
+                    elem.style.margin = '0';
+                    elem.style.padding = '0';
+                    elem.style.textIndent = '0';
+                    elem.style.paddingLeft = '0';
+                });
+            });
         }
     }
 

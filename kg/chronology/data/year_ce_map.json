@@ -3960,9 +3960,9 @@
     },
     "16.1": {
       "元年": {
-        "ruler": "釐公",
-        "method": "raw_nearby",
-        "ruler_key": "釐公元年"
+        "ruler": "鲁庄公",
+        "method": "section_ruler",
+        "ce_year": -693
       }
     },
     "16.2": {
@@ -9393,9 +9393,9 @@
     },
     "34.1": {
       "元年": {
-        "ruler": "幽缪王迁",
-        "method": "raw_nearby",
-        "ruler_key": "幽缪王迁元年"
+        "ruler": "赵悼襄王",
+        "method": "section_ruler",
+        "ce_year": -244
       },
       "二年": {
         "ruler": "赵悼襄王",
@@ -9963,9 +9963,9 @@
     },
     "19.1": {
       "元年": {
-        "ruler": "安釐王",
-        "method": "raw_nearby",
-        "ruler_key": "安釐王元年"
+        "ruler": "魏昭王",
+        "method": "section_ruler",
+        "ce_year": -295
       },
       "二年": {
         "ruler": "魏昭王",
@@ -10069,9 +10069,9 @@
     },
     "26.2": {
       "元年": {
-        "ruler": "王假",
-        "method": "raw_nearby",
-        "ruler_key": "王假元年"
+        "ruler": "魏昭王",
+        "method": "section_ruler",
+        "ce_year": -295
       }
     },
     "26.3": {
@@ -10142,45 +10142,45 @@
     },
     "5.1": {
       "元年": {
-        "ruler": "景侯虔",
-        "method": "raw_nearby",
-        "ruler_key": "景侯虔元年"
+        "ruler": "韩景侯",
+        "method": "section_ruler",
+        "ce_year": -408
       },
       "二年": {
-        "ruler": "韩武子",
+        "ruler": "韩景侯",
         "method": "sequential",
-        "ce_year": -423
+        "ce_year": -407
       }
     },
     "5.2": {
       "六年": {
-        "ruler": "韩武子",
+        "ruler": "韩景侯",
         "method": "sequential",
-        "ce_year": -419
+        "ce_year": -403
       }
     },
     "5.3": {
       "九年": {
-        "ruler": "韩武子",
+        "ruler": "韩景侯",
         "method": "sequential",
-        "ce_year": -416
+        "ce_year": -400
       }
     },
     "6.1": {
       "三年": {
-        "ruler": "韩武子",
+        "ruler": "韩景侯",
         "method": "sequential",
-        "ce_year": -422
+        "ce_year": -406
       },
       "九年": {
-        "ruler": "韩武子",
+        "ruler": "韩景侯",
         "method": "sequential",
-        "ce_year": -416
+        "ce_year": -400
       },
       "十三年": {
-        "ruler": "韩武子",
+        "ruler": "韩景侯",
         "method": "sequential",
-        "ce_year": -412
+        "ce_year": -396
       }
     },
     "7.1": {
@@ -12182,6 +12182,15 @@
         "ruler": "孝景",
         "method": "nearby_ruler",
         "ce_year": -152
+      }
+    }
+  },
+  "102": {
+    "0": {
+      "七年": {
+        "ruler": "孝景",
+        "method": "sequential",
+        "ce_year": -150
       }
     }
   },

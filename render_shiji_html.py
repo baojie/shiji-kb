@@ -758,13 +758,13 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         css_href = os.path.relpath(css_file, output_path.parent)
         # 计算chapter-nav.css的相对路径
         chapter_nav_css = os.path.relpath(str(Path(css_file).parent / 'chapter-nav.css'), output_path.parent)
-        # 计算purple-numbers.js的相对路径
-        purple_numbers_js = os.path.relpath(str(Path(css_file).parent.parent / 'js' / 'purple-numbers.js'), output_path.parent)
+        # 计算shiji-imports.js的相对路径（统一脚本导入）
+        shiji_imports_js = os.path.relpath(str(Path(css_file).parent.parent / 'js' / 'shiji-imports.js'), output_path.parent)
     except Exception:
         # 如果失败，使用简单的相对路径（假设标准目录结构）
         css_href = "../css/shiji-styles.css"
         chapter_nav_css = "../css/chapter-nav.css"
-        purple_numbers_js = "../js/purple-numbers.js"
+        shiji_imports_js = "../js/shiji-imports.js"
 
     # 生成导航栏HTML
     # 计算主页链接：如果输出在 docs/chapters/ 下则用 ../index.html
@@ -789,8 +789,7 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
     <title>{md_path.stem.replace('.tagged', '')}</title>
     <link rel="stylesheet" href="{css_href}">
     <link rel="stylesheet" href="{chapter_nav_css}">
-    <script src="{purple_numbers_js}"></script>
-    <script defer src="../js/heading-pinyin.js"></script>
+    <script src="{shiji_imports_js}"></script>
 </head>
 <body>
 <!-- 浮动配置按钮 -->
@@ -802,7 +801,6 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
 {nav_html}
 {html_body}
 {nav_html}
-<script src="../js/settings-panel-config.js"></script>
 </body>
 </html>
 """
