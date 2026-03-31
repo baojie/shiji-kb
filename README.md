@@ -2,7 +2,8 @@
 
 > 两千年来我们读《史记》，现在让机器帮我们"看见"隐藏的知识网络。
 
-**在线阅读**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **许可证**: [CC BY-NC-SA 4.0](LICENSE)
+**在线阅读**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
+**许可证**: [CC BY-NC-SA 4.0](LICENSE)
 
 ---
 
@@ -29,7 +30,7 @@
 
 ### 在线阅读器
 
-**首页**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb)
+**首页**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
 
 **精选章节**:
 - [五帝本纪](https://baojie.github.io/shiji-kb/chapters/001_五帝本纪.html) - 上古神话与帝王传说

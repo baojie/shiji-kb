@@ -555,12 +555,44 @@ p > .para-num:only-child {
     padding: 0;
 }
 
+/* 浮动报错按钮 - 定位在设置按钮下方 */
+#report-issue-button {
+    position: fixed;
+    top: 67px;  /* 设置按钮下方 40px */
+    right: calc(50% - 450px + 20px);  /* 与设置按钮对齐 */
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    padding: 0;
+}
+
+#report-issue-button:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+#report-issue-button:active {
+    transform: scale(0.95);
+}
+
 /* 在小屏幕上回退到右侧定位 */
 @media (max-width: 960px) {
     #settings-toggle {
         right: 20px;
     }
     #settings-panel {
+        right: 20px;
+    }
+    #report-issue-button {
         right: 20px;
     }
 }
@@ -674,4 +706,36 @@ body.syntax-highlight-off .verb-economic {
     border-bottom: none !important;
     padding: 0 !important;
     border-radius: 0 !important;
+}
+
+/* 段落合并模式 - 关闭智能分段时的样式 */
+/* 当关闭智能分段时，将共享顶级编号的段落合并显示 */
+
+/* 1. 将所有子段落（包含小数点的编号）改为行内显示 */
+body.merge-paragraphs p[id*="."] {
+    display: inline;
+    margin: 0;
+}
+
+/* 2. 隐藏所有子段落的编号链接 */
+body.merge-paragraphs p[id*="."] .para-num {
+    display: none;
+}
+
+/* 3. 顶级段落（不包含小数点的编号）保持块级显示 */
+body.merge-paragraphs p[id^="pn-"]:not([id*="."]) {
+    display: block;
+    margin: 2em 0;
+}
+
+/* 4. 顶级段落的编号保持可见 */
+body.merge-paragraphs p[id^="pn-"]:not([id*="."]) .para-num {
+    display: inline;
+}
+
+/* 5. 列表项在合并模式下保持原样 */
+body.merge-paragraphs ul,
+body.merge-paragraphs li {
+    display: block;
+    margin: inherit;
 }

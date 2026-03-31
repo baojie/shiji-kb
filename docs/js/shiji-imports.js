@@ -75,7 +75,10 @@
             '../js/simp-trad-converter.js',
 
             // 配置面板（最后加载，依赖转换器）
-            '../js/settings-panel-config.js'
+            '../js/settings-panel-config.js',
+
+            // 报错按钮（独立功能，无依赖）
+            '../js/report-issue-button.js'
 
             // 未来添加的脚本在这里追加
         ]
