@@ -17,7 +17,7 @@ shiji-kb/
 │   ├── references/                       # 知识参考资料（不直接用于校勘）
 │   └── legacy/                           # 历史版本归档
 │
-├── collation/                            # 校勘工作区（SKILL_01b 产出）
+├── curation/                            # 校勘工作区（SKILL_01b 产出）
 │   ├── simplified/                       # 校勘本-简体（标准底本）
 │   ├── traditional/                      # 校勘本-繁体（平行版本）
 │   ├── mapping/                          # 繁简字级映射文件
@@ -77,10 +77,10 @@ archive/legacy/
 
 **用途**：保留历史版本，便于回溯
 
-#### collation/ （校勘工作区）
+#### curation/ （校勘工作区）
 
 ```
-collation/
+curation/
 ├── simplified/                   # 校勘本-简体
 │   ├── 001_五帝本纪.txt
 │   └── ...
@@ -139,16 +139,16 @@ chapters/
 【阶段1：多版本互校】SKILL_01b
 archive/sources/*
   → 对比校勘
-  → collation/simplified/ + collation/traditional/
-  → 生成 collation/mapping/ + collation/reports/
+  → curation/simplified/ + curation/traditional/
+  → 生成 curation/mapping/ + curation/reports/
 
 【阶段2：底本改进】SKILL_01c（新增）
-collation/simplified/ + collation/traditional/
+curation/simplified/ + curation/traditional/
   → 标点归一化
   → 段落整合修复
   → 其他文本规范化
   → final/simplified/ + final/traditional/
-  → 更新 collation/mapping/ （基于文本变化）
+  → 更新 curation/mapping/ （基于文本变化）
 
 【阶段3：语义分析】SKILL_03a等
 final/simplified/
@@ -156,7 +156,7 @@ final/simplified/
   → chapters/*.tagged.md
 
 【阶段4：繁体渲染】（未来）
-chapters/*.tagged.md + collation/mapping/
+chapters/*.tagged.md + curation/mapping/
   → 应用繁简映射
   → chapters/*.traditional.tagged.md 或 HTML
 ```
@@ -183,7 +183,7 @@ chapters/*.tagged.md + collation/mapping/
 | 右单引号 | '（U+2019） | '（U+0027） |
 
 **操作**：
-- 扫描 `collation/simplified/` 和 `collation/traditional/`
+- 扫描 `curation/simplified/` 和 `curation/traditional/`
 - 将所有半角标点转换为对应的全角标点
 - 记录到 `final/improvements/punctuation.md`
 
@@ -233,7 +233,7 @@ chapters/*.tagged.md + collation/mapping/
 
 ### 4.2 映射文件格式
 
-**文件路径**：`collation/mapping/NNN.json`
+**文件路径**：`curation/mapping/NNN.json`
 
 ```json
 {
@@ -386,12 +386,12 @@ python scripts/mapping/update_mapping.py 001
 # ✓ 尝试匹配旧映射（基于上下文）
 #   - 001-001 "其后裔" → 找到，位置从27变为29（前面插入了2字）
 #   - 001-002 "季历立" → 找到，位置不变
-# ✓ 生成新映射 collation/mapping/001.json
-# ✓ 备份旧映射 collation/mapping/001.v1.json
-# ✓ 更新变更日志 collation/mapping/001.changelog.md
+# ✓ 生成新映射 curation/mapping/001.json
+# ✓ 备份旧映射 curation/mapping/001.v1.json
+# ✓ 更新变更日志 curation/mapping/001.changelog.md
 ```
 
-**变更日志示例** (`collation/mapping/001.changelog.md`):
+**变更日志示例** (`curation/mapping/001.changelog.md`):
 
 ```markdown
 # 001_五帝本纪 映射变更日志
@@ -410,7 +410,7 @@ python scripts/mapping/update_mapping.py 001
 
 ## v1 (2026-03-28 10:00)
 
-**初始版本**: 从 collation/simplified + collation/traditional 生成
+**初始版本**: 从 curation/simplified + curation/traditional 生成
 ```
 
 ### 4.6 映射失效处理
@@ -478,8 +478,8 @@ scripts/migration/
 
 **功能**：
 - 将当前 `archive/chapter/` 迁移到 `archive/sources/chapter/`
-- 将当前 `collation_base/` 迁移到 `collation/simplified/`
-- 将当前 `collation_reports/` 迁移到 `collation/reports/`
+- 将当前 `curation_base/` 迁移到 `curation/simplified/`
+- 将当前 `logs/curation/reports/` 迁移到 `curation/reports/`
 - 备份旧目录到 `archive/legacy/`
 
 ### 5.2 繁简映射工具
@@ -517,7 +517,7 @@ python scripts/mapping/update_mapping.py 001 --force
 python scripts/mapping/apply_mapping.py \
   --input chapters/001_五帝本纪.tagged.md \
   --output chapters/001_五帝本纪.traditional.tagged.md \
-  --mapping collation/mapping/001.json
+  --mapping curation/mapping/001.json
 ```
 
 ### 5.3 底本改进工具
@@ -531,13 +531,13 @@ scripts/improvements/
 
 **使用流程**：
 ```bash
-# 从 collation/simplified 生成 final/simplified
-python scripts/improvements/normalize_punctuation.py --input collation/simplified --output final/simplified
+# 从 curation/simplified 生成 final/simplified
+python scripts/improvements/normalize_punctuation.py --input curation/simplified --output final/simplified
 python scripts/improvements/fix_paragraphs.py --input final/simplified --output final/simplified
 python scripts/improvements/normalize_text.py --input final/simplified --output final/simplified
 
 # 同步处理繁体版本
-python scripts/improvements/normalize_punctuation.py --input collation/traditional --output final/traditional
+python scripts/improvements/normalize_punctuation.py --input curation/traditional --output final/traditional
 python scripts/improvements/fix_paragraphs.py --input final/traditional --output final/traditional
 python scripts/improvements/normalize_text.py --input final/traditional --output final/traditional
 

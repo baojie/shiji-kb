@@ -680,7 +680,7 @@ python scripts/create_v3_final.py
 参考 [`docs/SPEC_directory_restructure.md`](../docs/SPEC_directory_restructure.md)：
 
 1. **字级映射系统**
-   - 生成 `collation/mapping/NNN.json`
+   - 生成 `curation/mapping/NNN.json`
    - 基于上下文的精确字符映射
 
 2. **预生成繁体HTML**

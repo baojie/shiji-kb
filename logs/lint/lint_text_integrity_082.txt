@@ -1,0 +1,19 @@
+  docs/original_text/082_田单列传.txt: ⚠ 找不到原文文件
+  chapter_md/082_田单列传.tagged.md: ⚠ 找不到原文文件
+Traceback (most recent call last):
+  File "/home/baojie/work/knowledge/shiji-kb/scripts/lint_text_integrity.py", line 477, in <module>
+    main()
+    ~~~~^^
+  File "/home/baojie/work/knowledge/shiji-kb/scripts/lint_text_integrity.py", line 468, in main
+    out.write_text('\n'.join(lines), encoding='utf-8')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 557, in write_text
+    return PathBase.write_text(self, data, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 651, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'logs/lint_text_integrity_docs/original_text/082_田单列传.txt_chapter_md/082_田单列传.tagged.md.txt'

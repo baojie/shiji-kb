@@ -15,6 +15,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - commit时只提交用户已暂存（git add）的文件，不得擅自 `git add -A` 或 `git add .` 添加未暂存的文件。
 - commit message不要自动加版本号（如v3.1），版本号由用户决定。
 
+## 文件组织与目录结构
+
+**重要**：创建新文件时，必须遵循 [`skills/SKILL_10e_文件组织与目录结构.md`](skills/SKILL_10e_文件组织与目录结构.md) 中定义的规范。
+
+### 核心规则（摘要）
+
+- **`docs/`** - 仅存放已定稿、可公开的文档（会同步到GitHub Pages）
+- **`labs/`** - 所有实验性、草稿性内容（原型、调研、规划文档）
+- **`data/`** - 核心数据资产（标注文件、词表、原始文本）
+- **`scripts/`** - 稳定的、可复用的自动化脚本
+- **`logs/`** - 工作日志与运行记录
+- **`skills/`** - 项目规范与方法论文档
+
+### 判断标准
+
+创建新文件前，使用决策树：
+1. 是否面向外部用户且已定稿？→ `docs/`
+2. 是否实验性/草稿性质？→ `labs/`（原型→`labs/prototypes/`，调研→`labs/research/`，规划→`labs/planning/`）
+3. 是否核心数据资产？→ `data/`
+4. 是否可复用脚本？→ `scripts/`
+5. 是否工作记录？→ `logs/daily/`
+6. 是否项目规范？→ `skills/`
+
+详细的分类说明、常见错误示例、文件流转路径等，请参考 [`SKILL_10e_文件组织与目录结构`](skills/SKILL_10e_文件组织与目录结构.md)。
+
 ## 每日工作日志规范
 
 **重要**：生成或更新每日工作日志时，必须使用 [`skills/SKILL_10b_每日工作日志维护.md`](skills/SKILL_10b_每日工作日志维护.md) 中定义的SKILL规范。

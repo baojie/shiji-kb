@@ -50,8 +50,8 @@
 **任务清单**：
 - [ ] **目录结构迁移**：执行 `docs/SPEC_directory_restructure.md` 中定义的新目录结构
   - 迁移 `archive/chapter/` → `archive/sources/chapter/`
-  - 迁移 `collation_base/` → `collation/simplified/`
-  - 迁移 `collation_reports/` → `collation/reports/`
+  - 迁移 `curation_base/` → `curation/simplified/`
+  - 迁移 `logs/curation/reports/` → `curation/reports/`
   - 创建 `archive/references/`（参考资料）
   - 创建 `final/`（底本终稿目录）
   - 备份旧目录到 `archive/legacy/`
@@ -62,7 +62,7 @@
   - 开发 `scripts/mapping/apply_mapping.py`（简体标注→繁体渲染）
   - 开发 `scripts/mapping/validate_mapping.py`（验证映射完整性）
 
-- [ ] **底本改进流程**：从 collation/ 生成 final/
+- [ ] **底本改进流程**：从 curation/ 生成 final/
   - 开发 `scripts/improvements/normalize_punctuation.py`（标点全角归一化）
   - 开发 `scripts/improvements/fix_paragraphs.py`（段落整合）
   - 开发 `scripts/improvements/normalize_text.py`（空格/换行符/BOM规范化）

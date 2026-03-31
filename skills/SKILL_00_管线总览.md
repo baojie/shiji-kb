@@ -184,6 +184,7 @@ description: 《史记》知识库全流程概览,从原始文本到知识应用
 |              | 10b    | SKILL_10b_每日工作日志维护.md | 工作日划分（7:00分界）、微信通知、太史公曰、改动意义分析 |
 |              | 10c    | SKILL_10c_Git提交规范.md    | Git提交消息格式、原子提交、Pre-commit Hook处理、分支策略 |
 |              | 10d    | SKILL_10d_CHANGELOG编写规范.md | CHANGELOG格式、详略原则、Commit/Issue链接、分类体系 |
+|              | 10e    | SKILL_10e_文件组织与目录结构.md | 目录职责分离、文件决策树、logs/子目录规范、术语统一 |
 
 ---
 
