@@ -13,80 +13,52 @@
 
 ### 新增 (Added)
 
-- **配置面板功能** ([#17], [68e9c8cb])
-  - 新增右上角齿轮图标按钮，点击打开配置面板
-  - 实现语法高亮开关，持久化保存用户偏好（localStorage）
-  - 批量更新131个章节HTML文件，自动注入配置面板
-  - 透明无边框按钮设计，内容区相对定位（响应式布局）
-  - 覆盖23种实体类型的样式重置（19个名词+4个动词）
+- **130章文本完整性修复完成** ([bd72b76e], [6ed59b01], [b60113e6])
+  - 修复48章累计消除800+处实质差异
+  - 完成率从66.9%提升至91.5%
+  - 包含：错误最多的10章（282处）、中等错误30章（518处）、质量提升7章（401处）
 
-- **社区反馈管理** ([#85])
-  - 新建 `resources/community/` 目录，记录社区通信
-  - 完整记录北京大学考古学生试用反馈（赵冬梅教授课堂）
-  - 6点建议对应6个Issue：1个已完成（#17），3个新建（#87, #88, #89），2个增补（#41, #60）
+- **拼音标注功能** ([1c6dc689])
+  - 新增拼音标注开关
+  - 构造特殊读音词库，解决多音字问题
 
-### 项目管理 (Project Management)
+- **语义高亮开关** ([#17], [68e9c8cb])
+  - 新增配置面板（右上角齿轮图标）
+  - 实现23类实体样式一键切换
+  - 批量更新131个章节HTML文件
 
-- **北大考古学生反馈处理** ([#85])
-  - 新建Issue #87: 文本版本体系（版本信息、注释、异文集成）
-  - 新建Issue #88: 图文对照（原始典籍页面与数字文本并列）
-  - 新建Issue #89: 官制词典（辅助理解复杂官制体系）
-  - 增补Issue #41: 模糊搜索改进（扩展至地名、官职、典故）
-  - 增补Issue #60: 问题驱动数据库（史料溯源、作者意图分析）
-  - 更新TODO.md和README.md，添加社区反馈章节
+- **表格校勘规范** ([#35], [8f358377], [b51aa0a7])
+  - 新增SKILL文档，规范年表/世家类章节校勘
+  - 确立维基文库为校对底本
 
-- **Issue分类体系完善** ([#1], [#2], [#4], [#22], [#29], [#30], [#31], [#32], [#33])
-  - 为9个未分类的closed issue添加标签（符合SKILL_10a七类标签体系）
-  - 分类分布：REF-参考(6个)、BUG-缺陷报告(2个)、FEAT-功能建议(1个)、QA-提问(1个)
-  - 达成100%分类覆盖：30个issue全部分类完成
+### 更改 (Changed)
 
-- **REF参考资源集成** ([`resources/references/README.md`](resources/references/README.md)) ([#4], [#22], [#24], [#30], [#31], [#32])
-  - 新增17-z.com（经典与技术融合平台）
-  - 为已集成的5个REF issue添加状态说明
-  - 完善技术工具与框架章节（NLP工具、大语言模型、API）
-  - 新增项目相关问题记录章节（Issue #1修复记录）
+- **HTML展示层全面更新** ([be91df1d])
+  - 重新生成130章HTML及实体索引
+  - 反映最新校勘成果
 
-### 修复 (Fixed)
-
-- **标注完整性校验优化** ([`scripts/lint_text_integrity.py`](scripts/lint_text_integrity.py))
-  - 修复引号内空格的误报问题
-  - 支持识别"「 "等引号内合法空格模式
-
-- **标注文本修正** ([`chapter_md/`](chapter_md/))
-  - 004_周本纪：删除错误添加的空格（2处）
-  - 007_项羽本纪：删除错误添加的空格（2处）
+- **规律库扩展** ([b60113e6])
+  - 新增3条标注规律（A71/A72/B4）
+  - 规律库更新至72条
 
 ### 文档 (Documentation)
 
-- **SKILL_01a标注完整性维护更新** ([`skills/SKILL_01a_标注完整性维护.md`](skills/SKILL_01a_标注完整性维护.md))
-  - 新增"引号内空格"合法模式说明
-  - 完善lint工具使用指南
-
-- **SKILL_10a简化优化** ([`skills/SKILL_10a_TODO和Issue管理.md`](skills/SKILL_10a_TODO和Issue管理.md))
-  - 删除通用gh命令说明、Issue统计、常见问题等通用内容（113行，约20%）
-  - 精简567行→454行，聚焦本项目特有的七类标签体系和REF处理流程
-  - 新增"本项目特定规范"章节，强调史记项目特殊要求
+- **README核心数据验证** ([a0fdb95b])
+  - 内容优化，数据准确性验证
 
 **详细工作日志**: [`logs/daily/2026-03-30.md`](logs/daily/2026-03-30.md)
 
-[#1]: https://github.com/baojie/shiji-kb/issues/1
-[#2]: https://github.com/baojie/shiji-kb/issues/2
-[#4]: https://github.com/baojie/shiji-kb/issues/4
-[#17]: https://github.com/baojie/shiji-kb/issues/17
-[#22]: https://github.com/baojie/shiji-kb/issues/22
-[#24]: https://github.com/baojie/shiji-kb/issues/24
-[#29]: https://github.com/baojie/shiji-kb/issues/29
-[#30]: https://github.com/baojie/shiji-kb/issues/30
-[#31]: https://github.com/baojie/shiji-kb/issues/31
-[#32]: https://github.com/baojie/shiji-kb/issues/32
-[#33]: https://github.com/baojie/shiji-kb/issues/33
-[#41]: https://github.com/baojie/shiji-kb/issues/41
-[#60]: https://github.com/baojie/shiji-kb/issues/60
-[#85]: https://github.com/baojie/shiji-kb/issues/85
-[#87]: https://github.com/baojie/shiji-kb/issues/87
-[#88]: https://github.com/baojie/shiji-kb/issues/88
-[#89]: https://github.com/baojie/shiji-kb/issues/89
+[1c6dc689]: https://github.com/baojie/shiji-kb/commit/1c6dc689
+[a0fdb95b]: https://github.com/baojie/shiji-kb/commit/a0fdb95b
 [68e9c8cb]: https://github.com/baojie/shiji-kb/commit/68e9c8cb
+[8f358377]: https://github.com/baojie/shiji-kb/commit/8f358377
+[be91df1d]: https://github.com/baojie/shiji-kb/commit/be91df1d
+[b51aa0a7]: https://github.com/baojie/shiji-kb/commit/b51aa0a7
+[6ed59b01]: https://github.com/baojie/shiji-kb/commit/6ed59b01
+[bd72b76e]: https://github.com/baojie/shiji-kb/commit/bd72b76e
+[b60113e6]: https://github.com/baojie/shiji-kb/commit/b60113e6
+[#17]: https://github.com/baojie/shiji-kb/issues/17
+[#35]: https://github.com/baojie/shiji-kb/issues/35
 
 ---
 
@@ -94,19 +66,56 @@
 
 ### 新增 (Added)
 
-- **多版本互校完成001-004章节** ([`collation_reports/`](collation_reports/)) ([66d77fa7])
-  - 标准底本校勘：筴→策、暐→檋、饹→奔等9处字符修正
-  - 派生文件同步：更新4个派生系统×4个章节=16个文件
-  - 4份校对报告（001-004章，共968行）
+- **SKILL_10项目管理体系** ([ccd9bc55])
+  - 建立五件套规范：TODO/Issue管理、每日日志、Git提交、CHANGELOG编写
+  - 新增SKILL_10/10a/10b/10c/10d共5个文档（2500+行）
 
-- **SKILL_01b v1.1** ([`skills/SKILL_01b_多版本互校底本.md`](skills/SKILL_01b_多版本互校底本.md)) ([66d77fa7])
-  - 新增第9章"派生文件同步更新规范"（基于001-004实践形成SOP）
-  - 标准操作流程：校对→应用→同步→验证→更新报告
-  - 提供批量处理工具设计方案（适用于005-130章节）
+- **SKILL_01标注规范扩展** ([ad898a77], [71adacfd])
+  - 新增SKILL_01a标注完整性维护技能
+  - 完善SKILL_01b多版本互校底本（补充脱字与内证校勘案例）
+
+- **30个工作日志改动意义分析** ([58d42ecf])
+  - 为全部30个工作日志添加"改动意义"章节
+  - 新增INDEX.md索引导航
+
+- **001-004章多版本互校** ([66d77fa7])
+  - 标准底本校勘：筴→策、暐→檋、饹→奔等9处字符修正
+  - 派生文件同步：44章全流程更新
+
+### 修复 (Fixed)
+
+- **标注错误修复** ([0834c21d], [d0a7fc40], [ab788033], [87356d8e], [52e10476])
+  - 修复8个章节标注错误30+处（嵌套标注/地名误标/动词遗漏等）
+  - 在SKILL和Script两层禁止嵌套标注 ([649c8d32])
+
+### 更改 (Changed)
+
+- **校对基准统一** ([ccd9bc55])
+  - 从docs/original_text切换到archive/chapter目录
+  - 完善SKILL索引，明确标准底本位置
+
+### 项目维护 (Maintenance)
+
+- **REF类Issues整合** ([ccd9bc55])
+  - 整合GitHub上6个REF类Issue到参考资源库
+  - 完善resources/references/README.md导航
+
+- **目录重构规范** ([ad898a77])
+  - 新增SPEC_directory_restructure.md文档
 
 **详细工作日志**: [`logs/daily/2026-03-29.md`](logs/daily/2026-03-29.md)
 
+[58d42ecf]: https://github.com/baojie/shiji-kb/commit/58d42ecf
+[ccd9bc55]: https://github.com/baojie/shiji-kb/commit/ccd9bc55
+[ad898a77]: https://github.com/baojie/shiji-kb/commit/ad898a77
+[71adacfd]: https://github.com/baojie/shiji-kb/commit/71adacfd
 [66d77fa7]: https://github.com/baojie/shiji-kb/commit/66d77fa7
+[649c8d32]: https://github.com/baojie/shiji-kb/commit/649c8d32
+[0834c21d]: https://github.com/baojie/shiji-kb/commit/0834c21d
+[d0a7fc40]: https://github.com/baojie/shiji-kb/commit/d0a7fc40
+[ab788033]: https://github.com/baojie/shiji-kb/commit/ab788033
+[87356d8e]: https://github.com/baojie/shiji-kb/commit/87356d8e
+[52e10476]: https://github.com/baojie/shiji-kb/commit/52e10476
 
 ---
 
