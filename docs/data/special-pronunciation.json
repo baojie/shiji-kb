@@ -1,7 +1,7 @@
 {
   "$schema": "特殊读音词表 v2.0",
-  "description": "史记特殊读音词汇（人工整理 + 史记正义提取）- v3.0 全面使用固定词组替代单字词条",
-  "version": "3.0.2",
+  "description": "史记特殊读音词汇（人工整理 + 史记正义提取）- v3.1 删除高风险姓氏单字，用姓名组合替代",
+  "version": "3.1",
   "lastUpdated": "2026-03-31",
   "note": "合并人工整理词表和史记正义提取词表，来自正义的词条在note中标注",
   "entries": [
@@ -211,15 +211,6 @@
       "note": "皇帝姐妹，'长'读zhǎng（上声）"
     },
     {
-      "text": "於是",
-      "pinyin": [
-        "yú",
-        "shì"
-      ],
-      "context": "连词",
-      "note": "于是，'於'读yú（阳平），不读wū"
-    },
-    {
       "text": "为丞相",
       "pinyin": [
         "wéi",
@@ -248,6 +239,45 @@
       ],
       "context": "动词",
       "note": "担任将军，'将'读jiàng（去声）"
+    },
+    {
+      "text": "华父督",
+      "pinyin": [
+        "huà",
+        "fǔ",
+        "dū"
+      ],
+      "context": "人名",
+      "note": "宋国人，华父氏"
+    },
+    {
+      "text": "华无伤",
+      "pinyin": [
+        "huà",
+        "wú",
+        "shāng"
+      ],
+      "context": "人名",
+      "note": "左司马，华姓"
+    },
+    {
+      "text": "单穆公",
+      "pinyin": [
+        "shàn",
+        "mù",
+        "gōng"
+      ],
+      "context": "人名",
+      "note": "单姓穆公，周朝卿士"
+    },
+    {
+      "text": "於是",
+      "pinyin": [
+        "yú",
+        "shì"
+      ],
+      "context": "连词",
+      "note": "于是，'於'读yú（阳平），不读wū"
     },
     {
       "text": "冒顿",
@@ -1438,52 +1468,112 @@
       "note": "五行学说，'行'读xíng（阳平）"
     },
     {
-      "text": "华",
+      "text": "华元",
       "pinyin": [
-        "huà"
+        "huà",
+        "yuán"
       ],
-      "context": "姓氏或地名",
-      "note": "华姓读huà"
+      "context": "人名",
+      "note": "宋国大夫，华姓"
     },
     {
-      "text": "解",
+      "text": "华督",
       "pinyin": [
-        "xiè"
+        "huà",
+        "dū"
       ],
-      "context": "姓氏",
-      "note": "姓解读xiè"
+      "context": "人名",
+      "note": "宋国人，华姓"
     },
     {
-      "text": "区",
+      "text": "华氏",
       "pinyin": [
-        "ōu"
+        "huà",
+        "shì"
       ],
       "context": "姓氏",
-      "note": "姓区读ōu"
+      "note": "华姓氏族"
     },
     {
-      "text": "仇",
+      "text": "解狐",
       "pinyin": [
-        "qiú"
+        "xiè",
+        "hú"
       ],
-      "context": "姓氏",
-      "note": "姓仇读qiú"
+      "context": "人名",
+      "note": "晋国贤人，解姓"
     },
     {
-      "text": "种",
+      "text": "解扬",
       "pinyin": [
-        "chóng"
+        "xiè",
+        "yáng"
       ],
-      "context": "姓氏",
-      "note": "姓种读chóng"
+      "context": "人名",
+      "note": "晋国使者，解姓"
     },
     {
-      "text": "尉",
+      "text": "仇液",
       "pinyin": [
-        "yù"
+        "qiú",
+        "yè"
       ],
-      "context": "姓氏",
-      "note": "尉迟、尉姓读yù"
+      "context": "人名",
+      "note": "仇姓人物"
+    },
+    {
+      "text": "仇犹",
+      "pinyin": [
+        "qiú",
+        "yóu"
+      ],
+      "context": "地名/国名",
+      "note": "仇犹国"
+    },
+    {
+      "text": "盖公",
+      "pinyin": [
+        "gě",
+        "gōng"
+      ],
+      "context": "人名",
+      "note": "齐人盖公，黄老学派"
+    },
+    {
+      "text": "盖侯",
+      "pinyin": [
+        "gě",
+        "hóu"
+      ],
+      "context": "爵位/人名",
+      "note": "盖姓侯爵"
+    },
+    {
+      "text": "单父",
+      "pinyin": [
+        "shàn",
+        "fǔ"
+      ],
+      "context": "地名",
+      "note": "单父县，在今山东单县"
+    },
+    {
+      "text": "单伯",
+      "pinyin": [
+        "shàn",
+        "bó"
+      ],
+      "context": "人名",
+      "note": "单伯，周朝卿士，单姓"
+    },
+    {
+      "text": "尉氏",
+      "pinyin": [
+        "yù",
+        "shì"
+      ],
+      "context": "地名/姓氏",
+      "note": "尉氏县（今河南），或尉姓氏族"
     },
     {
       "text": "缪",
@@ -1494,28 +1584,12 @@
       "note": "姓缪读miào，不读móu"
     },
     {
-      "text": "盖",
-      "pinyin": [
-        "gě"
-      ],
-      "context": "姓氏",
-      "note": "姓盖读gě，不读gài"
-    },
-    {
       "text": "於",
       "pinyin": [
         "yú"
       ],
       "context": "介词",
       "note": "介词，相当于'在'、'到'、'对于'，读yú（阳平），不读wū。此为例外单字词条，因默认拼音库错误标注为wū"
-    },
-    {
-      "text": "单",
-      "pinyin": [
-        "shàn"
-      ],
-      "context": "姓氏",
-      "note": "姓单读shàn，不同于'单于'的chán"
     }
   ]
 }
