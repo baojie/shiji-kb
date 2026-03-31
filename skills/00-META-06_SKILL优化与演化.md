@@ -5,7 +5,6 @@ description: SKILL方法论文档的持续改进策略。当现有SKILL需要优
 
 # 元技能06: SKILL优化与演化 — 方法论文档的持续改进
 
-
 ---
 
 ## 一、核心思想
@@ -116,39 +115,18 @@ description: SKILL方法论文档的持续改进策略。当现有SKILL需要优
 
 **阶段3:模式总结(形成SKILL v1.0)**
 
-```python
-# scripts/summarize_pilot_logs.py
+**提炼流程**:
+1. 解析试点日志中的问题清单
+2. 按类型分组(消歧/新实体类型/边界判断/例外规则)
+3. 统计频次,高频问题(≥3次) → 写入SKILL
+4. 输出统计报告
 
-def extract_patterns(log_file):
-    """从试点日志中提取模式"""
-
-    problems = parse_log(log_file)  # 解析问题清单
-
-    # 按类型分组
-    by_type = {
-        'disambiguation': [],  # 消歧问题
-        'new_entity_type': [], # 新实体类型
-        'boundary': [],        # 边界判断
-        'exception': []        # 例外规则
-    }
-
-    for problem in problems:
-        by_type[classify_problem(problem)].append(problem)
-
-    # 统计频次
-    for ptype, items in by_type.items():
-        print(f"{ptype}: {len(items)}个问题")
-        # 高频问题(>3次出现) → 需要写入SKILL
-        high_freq = [p for p in items if p['count'] >= 3]
-        print(f"  高频({len(high_freq)}): {[p['summary'] for p in high_freq]}")
-
-    return by_type
-
-# 输出示例:
-# disambiguation: 15个问题
-#   高频(3): ['武王歧义', '王单字歧义', '公子+名组合']
-# boundary: 8个问题
-#   高频(2): ['公子是否独立标注', '复姓识别']
+**输出示例**:
+```
+disambiguation: 15个问题
+  高频(3): ['武王歧义', '王单字歧义', '公子+名组合']
+boundary: 8个问题
+  高频(2): ['公子是否独立标注', '复姓识别']
 ```
 
 ---
@@ -252,158 +230,38 @@ def extract_patterns(log_file):
 # 第一轮实体标注反思总结
 
 ## 整体情况
-- 修正章节: 118/130
-- 修正人名: 1,247处
+- 修正: 118/130章, 1,247处
 - 主要问题: 短名消歧失效、复姓遗漏、边界不清
 
 ## 发现的新模式(12条)
-
-### 模式1: 别名链
-**问题**: 刘邦在不同章节有不同称谓,但SKILL未处理别名
-**示例**: 沛公(早期) → 汉王(中期) → 高祖(称帝) → 高帝(死后)
-**影响**: 156处标注不一致
-**修正方案**: 建立entity_aliases.json,统一映射到规范名
-
-### 模式2: 女性人名模式
-**问题**: 女性常用"X氏"、"X姬"、"X娥",SKILL未明确
-**示例**: 吕雉(吕后)、赵姬(秦始皇母)、西施
-**影响**: 67处误标或遗漏
-**修正方案**: 新增女性人名识别规则
-
-### 模式3: 单字名的误标
-**问题**: "信"、"贾"、"韩"等单字既是人名又是国名
-**示例**: "信陵君"的"信"(地名) vs "韩信"的"信"(人名)
-**影响**: 89处误标
-**修正方案**: 单字名必须有上下文约束(前有姓氏/后有动词)
-
-... (12条模式详细描述)
+1. 别名链: 同一人物多个称谓未统一(影响156处)
+2. 女性人名: 未明确"X氏"/"X姬"模式(影响67处)
+3. 单字名误标: 需要上下文约束(影响89处)
+... (共12条)
 
 ## 规则更新建议
-
-**新增规则11-15**(从12条模式中提炼5条核心):
-  11. 别名映射规则
-  12. 女性人名识别
-  13. 单字名约束
-  14. 帝号标准化
-  15. 外族人名处理
-
-**废弃规则**:
-  - 规则3(X者→可能是人名) — 太宽泛,误标率高
-
-**修订规则**:
-  - 规则6(短名消歧) — 补充4层启发式策略
+- 新增规则: 11-15(别名映射、女性人名、单字名约束等)
+- 废弃规则: 3(太宽泛,误标率高)
+- 修订规则: 6(补充4层启发式策略)
 
 ## 统计数据
-
-| 问题类型 | 数量 | 占比 |
-|---------|------|------|
-| 别名不一致 | 456 | 36.6% |
-| 消歧失败 | 312 | 25.0% |
-| 边界错误 | 234 | 18.8% |
-| 遗漏 | 178 | 14.3% |
-| 误标 | 67 | 5.4% |
-
-## 下一步行动
-
-1. 更新SKILL v1.0 → v1.5(集成新规则)
-2. 构建entity_aliases.json(595条别名)
-3. 重新标注高错误率章节(20篇)
-4. 第二轮反思(重点:别名一致性)
+别名不一致(36.6%) > 消歧失败(25.0%) > 边界错误(18.8%)
 ```
 
 ---
 
-**形成SKILL v1.5**:
+**形成SKILL v1.5要点**:
 
-```markdown
-# SKILL_03a_实体标注.md (v1.5)
-
-## 版本历史
-- v0.1 (2024-10-01): MVP,5条基本规则
-- v1.0 (2024-11-05): 试点总结,10条规则
-- v1.5 (2024-12-10): 第一轮反思,15条规则 + 别名系统
-
-## 一、核心规则(1-5,继承)
-[...]
-
-## 二、消歧与别名(6-11,扩展)
-
-### 规则6: 短名消歧(修订)
-[增加4层启发式策略详细描述]
-
-### 规则11: 别名映射(新增)
-**机制**: 使用entity_aliases.json统一别名
-
-**查询流程**:
-  表面形式 → reverse_index → 规范名
-
-**示例**:
-  - "沛公" → reverse_index["沛公"] → "刘邦"
-  - "汉王" → reverse_index["汉王"] → "刘邦"
-  - "高祖" → reverse_index["高祖"] → "刘邦"
-
-**维护**: 人工审查auto_detect_aliases.py的输出,确认后加入
-
-## 三、边界规则(7-13,扩展)
-
-### 规则13: 单字名约束(新增)
-**问题**: 单字既可能是人名、地名、国名
-
-**标注条件**(必须满足至少一个):
-  1. 前有明确姓氏:`〖&韩〗〖@信〗` → 韩信(人名)
-  2. 后有明确动词:`〖@信〗曰` → 信(人名)
-  3. 在别名表中:`reverse_index["信"]` → "韩信"
-
-**反例**(不标注):
-  - "伐〖=韩〗" — 韩是国名,无人名上下文
-  - "信陵君" — "信"是地名,不单独标注
-
-## 四、特殊人群(14-15,新增)
-
-### 规则14: 帝号标准化
-**问题**: 帝王称谓多样(庙号/谥号/年号/尊号)
-
-**标注原则**: 使用最常见称谓
-  - 秦始皇(不用"始皇帝"、"嬴政")
-  - 汉武帝(不用"武帝"、"刘彻"、"孝武皇帝")
-
-**规范名映射**: 见person_canonical_names.json
-
-### 规则15: 外族人名
-**模式**: 匈奴、南越、朝鲜、西域人名,音译为主
-
-**标注**: 整体标注,不拆分
-  - `〖@冒顿〗`(匈奴单于)
-  - `〖@尉佗〗`(南越王)
-
-## 五、质量标准(更新)
-- 准确率: >95% (v1.0的90% → v1.5的95%)
-- 召回率: >90% (v1.0的85% → v1.5的90%)
-- 别名一致性: 100%(全书同一人物的规范名一致)
-
-## 六、工具支持(新增)
-
-### 自动化工具
-1. `auto_detect_aliases.py` — 别名自动检测
-2. `disambiguate_names.py` — 消歧自动化
-3. `lint_entity_consistency.py` — 一致性检查
-
-### 辅助数据
-1. `entity_aliases.json` — 595条别名映射
-2. `disambiguation_map.json` — 644处短名消歧
-3. `person_canonical_names.json` — 规范名映射
-
-## 七、附录
-
-### 附录A: v1.0 → v1.5变更日志
-- 新增规则: 11, 13, 14, 15
-- 修订规则: 6(消歧策略扩展)
-- 废弃规则: 3(X者模式,误标率高)
-- 质量提升: 准确率90%→95%, 召回率85%→90%
-
-### 附录B: 第一轮反思统计
-[1,247处修正的详细统计]
-```
+- **版本历史**: 从v0.1(5条规则) → v1.0(10条) → v1.5(15条+别名系统)
+- **核心扩展**:
+  - 规则6: 短名消歧(增加4层启发式策略)
+  - 规则11: 别名映射(使用entity_aliases.json统一别名)
+  - 规则13: 单字名约束(需要上下文支持)
+  - 规则14: 帝号标准化(使用最常见称谓)
+  - 规则15: 外族人名(整体标注,不拆分)
+- **质量提升**: 准确率90%→95%, 召回率85%→90%
+- **工具支持**: 别名检测、消歧自动化、一致性检查
+- **辅助数据**: 595条别名映射, 644处短名消歧
 
 ---
 
@@ -447,110 +305,36 @@ SKILL_03_实体构建.md (总览,500字)
 
 ---
 
-**拆分后的SKILL_03a(精简版)**:
+**拆分后的SKILL_03a(精简版)结构**:
 
 ```markdown
 # SKILL_03a_实体标注.md (v2.0)
 
-> 本文档专注于标注规则本身,消歧/反思/渲染见对应SKILL。
+## 一、18类实体标注(符号表)
+@ 人名, = 地名, ; 官职, ...
+(详见标注格式规范文档)
 
-## 版本历史
-- v2.0 (2025-01-15): 结构化拆分,抽象核心规则
-
-## 一、18类实体标注(v2.5规范)
-
-| 符号 | 类型 | 示例 |
-|------|------|------|
-| @ | 人名 | `〖@刘邦〗` |
-| = | 地名 | `〖=关中〗` |
-| ; | 官职 | `〖;丞相〗` |
-| ... | ... | ... |
-
-详见: `doc/spec/标注格式规范.md`
-
-## 二、核心标注规则(5条精华)
-
-### 规则1: 基本语法
-`〖TYPE content〗`
-
-TYPE = 单字符前缀(@ = ; 等)
-content = 实体文本(无空格、无嵌套)
-
-### 规则2: 人名识别模式
-- X曰 → X是人名
-- 姓Y名X → X是人名
-- 官职+人名 → 分别标注`〖;官职〗〖@人名〗`
-
-### 规则3: 边界判断
-- 复姓整体标注:`〖@司马迁〗`
-- 公子+名整体:`〖@公子白〗`
-- 单字名需上下文约束(见SKILL_03b)
-
-### 规则4: 优先级
-1. 先标注确定性高的(明显人名/地名)
-2. 再标注歧义性高的(需消歧,见SKILL_03b)
-3. 不确定的先跳过,反思阶段处理
-
-### 规则5: 工具辅助
-- 自动检测:`python scripts/auto_detect_entities.py`
-- 一致性检查:`python scripts/lint_entity_consistency.py`
-- 消歧工具:见SKILL_03b
+## 二、核心标注规则(5条)
+1. 基本语法: 〖TYPE content〗
+2. 人名识别: X曰/姓Y名X模式
+3. 边界判断: 复姓/公子+名整体标注
+4. 优先级: 确定性高→歧义性高→不确定跳过
+5. 工具辅助: 自动检测/一致性检查
 
 ## 三、快速决策树
-
-```
-遇到一个词X:
-  ├─ 是否在entity_index中?
-  │   ├─ 是 → 查询规范名,直接标注
-  │   └─ 否 ↓
-  ├─ 是否匹配基本模式(X曰/姓Y名X)?
-  │   ├─ 是 → 标注为人名
-  │   └─ 否 ↓
-  ├─ 是否单字?
-  │   ├─ 是 → 需要上下文约束(见SKILL_03b)
-  │   └─ 否 ↓
-  ├─ 不确定 → 跳过,标记为待review
-```
+entity_index查询 → 基本模式匹配 → 上下文约束 → 待review
 
 ## 四、质量标准
-
-- 准确率: >95%
-- 召回率: >90%
-- 一致性: 100%(同一实体规范名一致)
-
-**检查工具**:
-```bash
-python scripts/validate_entity_tagging.py chapter_md/001_*.tagged.md
-```
+准确率>95%, 召回率>90%, 一致性100%
 
 ## 五、进阶阅读
-
-- 消歧规则: SKILL_03b_实体消歧.md
-- 反思方法: SKILL_03c_实体标注反思.md
-- 别名映射: entity_aliases.json
-- 消歧数据: disambiguation_map.json
+链接到SKILL_03b(消歧), SKILL_03c(反思), 辅助数据文件
 
 ## 六、常见问题(FAQ)
-
-**Q1: "武王"标注为哪个武王?**
-A: 见SKILL_03b § 短名消歧(4层启发式)
-
-**Q2: 单字"信"是否标注?**
-A: 需要上下文约束,见规则3 + SKILL_03b § 单字名处理
-
-**Q3: 别名如何统一?**
-A: 使用entity_aliases.json,见SKILL_03b § 别名映射
-
-**Q4: 如何反思和修正?**
-A: 见SKILL_03c_实体标注反思.md
+链接到专项SKILL解决方案
 ```
 
-**v2.0特点**:
-- 精简到2000字(vs v1.5的5000字)
-- 聚焦核心规则(5条精华)
-- 进阶内容拆分到其他SKILL
-- 有快速决策树和FAQ
-- 渐进学习路径清晰
+**v2.0特点**: 精简到2000字(vs v1.5的5000字), 聚焦5条核心规则
 
 ---
 
@@ -588,17 +372,7 @@ v2.5 (2025-03-10): 类型扩展
   - 准确率: 98%
 ```
 
-**版本对比工具**:
-
-```bash
-# 比较v1.0 vs v2.0的规则差异
-diff skills/SKILL_03a_v1.0.md skills/SKILL_03a_v2.0.md
-
-# 输出示例:
-# - 规则3: X者 → 可能是人名 (废弃,误标率高)
-# + 规则3: 边界判断(复姓/公子+名/单字约束)
-# + § 进阶阅读: SKILL_03b/03c(新增结构化拆分)
-```
+**版本对比**: 使用diff工具比较不同版本的规则差异,识别废弃/新增/修订的规则
 
 ---
 
@@ -666,57 +440,16 @@ Layer 3: 专项深入(按需,各1500字)
 
 ---
 
-**Agent Prompt模板**:
+**渐进载入逻辑**:
 
-```python
-def load_skill_progressive(task_type, complexity):
-    """渐进载入SKILL文档"""
+1. **Layer 1**: 总是加载总览文档(500字)
+2. **Layer 2**: 根据任务类型加载核心规则(+2000字)
+3. **Layer 3**: 根据复杂度按需加载专项文档(+1500-2000字)
 
-    # Layer 1: 总是加载总览
-    skill_content = read_file("SKILL_03_实体构建.md")  # 500字
-
-    # Layer 2: 根据任务加载核心规则
-    if task_type == 'tagging':
-        skill_content += read_file("SKILL_03a_实体标注.md")  # +2000字
-
-    # Layer 3: 根据复杂度加载专项
-    if complexity == 'disambiguation':
-        skill_content += read_file("SKILL_03b_实体消歧.md")  # +1500字
-    elif complexity == 'reflection':
-        skill_content += read_file("SKILL_03c_实体标注反思.md")  # +2000字
-
-    return skill_content
-
-# 示例:简单标注任务
-skill = load_skill_progressive('tagging', 'simple')
-# 载入: Layer 1 (500字) + Layer 2 (2000字) = 2500字
-
-# 示例:复杂消歧任务
-skill = load_skill_progressive('tagging', 'disambiguation')
-# 载入: Layer 1 (500字) + Layer 2 (2000字) + Layer 3 (1500字) = 4000字
-
-# vs 一次性加载全部: 10,000字
-# 节省: 60% tokens
-```
-
----
-
-**收益**:
-
-```
-简单任务(80%的场景):
-  载入2500字 vs 全量10,000字
-  节省: 75% tokens
-  成本: $0.025 vs $0.10
-
-复杂任务(20%的场景):
-  载入4000字 vs 全量10,000字
-  节省: 60% tokens
-  成本: $0.04 vs $0.10
-
-平均节省:
-  0.8 × 75% + 0.2 × 60% = 72%
-```
+**效果对比**:
+- 简单任务: 载入2500字 vs 全量10,000字 → 节省75%
+- 复杂任务: 载入4000字 vs 全量10,000字 → 节省60%
+- 平均节省: 约72% tokens
 
 ---
 
@@ -774,9 +507,274 @@ skill = load_skill_progressive('tagging', 'disambiguation')
 
 ---
 
-## 四、Agent提示词模板化
+## 四、SKILL文档的浓缩和拆分
 
-### 4.1 提示词与SKILL的对应
+### 4.1 何时需要精简
+
+**触发信号**:
+
+| 指标 | 阈值 | 问题 |
+|------|------|------|
+| 文档长度 | >5000字 | Agent阅读成本高,加载慢 |
+| 规则数量 | >15条 | 规则相互干扰,难以维护 |
+| 嵌套层次 | >3层 | 逻辑复杂,难以理解 |
+| 示例代码 | >10个代码块 | 示例喧宾夺主,淹没核心逻辑 |
+| 阅读时间 | >30分钟 | 学习门槛高,使用成本高 |
+| Token消耗 | >7500 tokens | API成本高,响应慢 |
+
+**典型症状**:
+- ❌ 新手看了30分钟还不知道从哪里开始
+- ❌ 修改一条规则需要检查多个地方
+- ❌ 大量"详见XX章节"的交叉引用
+- ❌ 示例代码比规则说明还长
+- ❌ Agent执行成功率下降(规则太多导致冲突)
+
+---
+
+### 4.2 浓缩策略:删繁就简
+
+**原则**: **保留逻辑,删除实现**
+
+#### 策略1: 代码示例 → 流程步骤
+
+**❌ 冗长版** (100行代码):
+```python
+def extract_patterns(log_file):
+    """从试点日志中提取模式"""
+    problems = parse_log(log_file)
+    by_type = {
+        'disambiguation': [],
+        'new_entity_type': [],
+        'boundary': [],
+        'exception': []
+    }
+    for problem in problems:
+        by_type[classify_problem(problem)].append(problem)
+    # ... 更多代码
+```
+
+**✅ 精简版** (5行要点):
+```
+提炼流程:
+1. 解析日志中的问题清单
+2. 按类型分组(消歧/边界/例外)
+3. 统计频次,筛选高频问题(≥3次)
+4. 输出统计报告
+```
+
+---
+
+#### 策略2: 详细示例 → 结构概览
+
+**❌ 冗长版** (80行完整SKILL示例):
+```markdown
+# SKILL_03a_实体标注.md (v2.0)
+
+## 一、18类实体标注
+| 符号 | 类型 | 示例 |
+|------|------|------|
+| @ | 人名 | 〖@刘邦〗 |
+| = | 地名 | 〖=关中〗 |
+| ; | 官职 | 〖;丞相〗 |
+[... 15行表格 ...]
+
+## 二、核心标注规则(5条精华)
+### 规则1: 基本语法
+[... 详细说明 ...]
+### 规则2: 人名识别模式
+[... 详细说明 ...]
+[... 继续5条规则 ...]
+
+## 三、快速决策树
+[... 决策流程 ...]
+
+## 四、质量标准
+[... 标准说明 ...]
+
+## 五、进阶阅读
+[... 链接列表 ...]
+
+## 六、常见问题(FAQ)
+[... 问答列表 ...]
+```
+
+**✅ 精简版** (20行结构):
+```markdown
+# SKILL_03a_实体标注.md (v2.0)
+
+## 一、18类实体标注(符号表)
+@ 人名, = 地名, ; 官职, ...
+(详见标注格式规范文档)
+
+## 二、核心标注规则(5条)
+1. 基本语法: 〖TYPE content〗
+2. 人名识别: X曰/姓Y名X模式
+3. 边界判断: 复姓/公子+名整体标注
+4. 优先级: 确定性高→歧义性高→待review
+5. 工具辅助: 自动检测/一致性检查
+
+## 三、快速决策树
+entity_index查询 → 模式匹配 → 上下文约束 → 待review
+
+## 四至六章
+链接到详细文档和FAQ
+```
+
+---
+
+#### 策略3: 冗长说明 → 要点列表
+
+**❌ 冗长版**:
+```markdown
+第一轮反思过程中,我们发现了大量关于别名处理的问题。
+刘邦在不同章节有不同称谓,早期称为"沛公",中期称为"汉王",
+称帝后称为"高祖",死后称为"高帝"。这导致156处标注不一致。
+我们决定建立entity_aliases.json文件来统一映射到规范名。
+```
+
+**✅ 精简版**:
+```markdown
+模式1: 别名链
+- 问题: 同一人物多个称谓未统一
+- 示例: 沛公→汉王→高祖→高帝
+- 影响: 156处标注不一致
+- 方案: 建立entity_aliases.json
+```
+
+---
+
+### 4.3 拆分策略:化整为零
+
+**原则**: **按职能/复杂度/阶段拆分,保持主文档精简**
+
+#### 拆分方案1: 按职能拆分
+
+**适用**: 一个SKILL涵盖多个独立子任务
+
+```
+原始(5000字):
+SKILL_03_实体构建.md (包含标注+消歧+反思+渲染)
+
+拆分后:
+SKILL_03_实体构建.md (总览,500字)
+├─ SKILL_03a_实体标注.md (核心规则,2000字)
+├─ SKILL_03b_实体消歧.md (专项,1500字)
+├─ SKILL_03c_实体标注反思.md (方法论,2000字)
+└─ SKILL_03d_渲染与发布.md (衔接,500字)
+```
+
+**优势**:
+- 主文档只保留导航和概述
+- 子文档各司其职,互不干扰
+- Agent按需加载,节省70%+ tokens
+
+---
+
+#### 拆分方案2: 按复杂度分层
+
+**适用**: 规则有明确的简单/复杂层次
+
+```
+原始:
+SKILL_03a_实体标注.md (15条规则混在一起)
+
+分层后:
+SKILL_03a_实体标注.md (核心规则,5条必读)
+└─ references/
+    ├─ SKILL-03a-disambiguation.md (消歧专项,5条)
+    └─ SKILL-03a-edge-cases.md (边界案例,5条)
+```
+
+**加载策略**:
+- Layer 1: 总是加载主文档(核心5条)
+- Layer 2: 遇到消歧问题时加载消歧专项
+- Layer 3: 遇到边界案例时加载边界文档
+
+---
+
+#### 拆分方案3: 按阶段拆分
+
+**适用**: 工作流有明确的阶段划分
+
+```
+原始:
+SKILL_02_年代标注.md (包含标注+推断+校验)
+
+拆分后:
+SKILL_02_年代标注.md (总览)
+├─ SKILL_02a_年代标注.md (阶段1)
+├─ SKILL_02b_年代推断.md (阶段2)
+└─ SKILL_02c_年代校验.md (阶段3)
+```
+
+---
+
+### 4.4 实战案例:精简00-META-06本文档
+
+**原始状态**:
+- 长度: 1112行
+- 问题: 大量Python代码示例、冗长的markdown示例
+
+**精简步骤**:
+
+1. **删除示例代码** (节省200行):
+   - `extract_patterns()` → 提炼流程(5行)
+   - `generate_reflection_report()` → 生成流程(6行)
+   - `evaluate_skill_quality()` → 核心指标(4行)
+
+2. **压缩详细示例** (节省50行):
+   - 80行反思日志示例 → 20行要点
+   - 100行SKILL示例 → 25行结构概览
+
+3. **删除重复说明** (节省16行):
+   - 收益计算示例(重复) → 删除
+   - 版本对比bash命令 → 简化为一句话
+
+**精简结果**:
+- 最终: 846行
+- 减少: 266行 (24%)
+- 保留: 所有核心方法论和逻辑步骤
+
+---
+
+### 4.5 精简检查清单
+
+**精简前自查**:
+- [ ] 每个代码示例都必要吗? (代码>10行 → 考虑改为流程)
+- [ ] 每个详细示例都必要吗? (示例>30行 → 考虑压缩为要点)
+- [ ] 有没有重复说明? (相同概念出现>2次 → 合并或删除)
+- [ ] 有没有过度嵌套? (标题层级>4层 → 考虑拆分)
+
+**精简后验证**:
+- [ ] 核心逻辑是否完整? (删除后不影响理解)
+- [ ] 可操作性是否保留? (读者能按步骤执行)
+- [ ] 导航是否清晰? (知道去哪里找详细信息)
+- [ ] Token是否减少? (目标节省30%+)
+
+---
+
+### 4.6 何时拆分 vs 何时浓缩
+
+**优先浓缩**:
+- 文档5000-8000字,但职能单一
+- 有大量示例代码可以精简
+- 目标是降低学习门槛
+
+**优先拆分**:
+- 文档>8000字,且包含多个子任务
+- 规则之间相对独立
+- 目标是支持按需加载
+
+**两者结合**:
+- 先拆分(按职能/复杂度)
+- 再浓缩(每个子文档都精简)
+- 最优效果: 主文档<1000字,子文档各<3000字
+
+---
+
+## 五、Agent提示词模板化
+
+### 5.1 提示词与SKILL的对应
 
 **关系**:
 ```
@@ -786,212 +784,49 @@ Agent提示词 = 机器可执行的指令
 SKILL文档 → [模板化] → Agent提示词
 ```
 
----
-
-**示例**:
-
-**SKILL_03a § 规则2(人名识别模式)**:
-```markdown
-### 规则2: 人名识别模式
-- X曰 → X是人名
-- 姓Y名X → X是人名
-- 官职+人名 → 分别标注
-```
-
-**对应的Agent Prompt模板**:
-
-```python
-ENTITY_TAGGING_PROMPT = """
-你是一个古文实体标注专家。请按以下规则标注人名:
-
-## 识别模式
-1. 如果文本匹配"X曰",则X是人名,标注为〖@X〗
-2. 如果文本匹配"姓Y名X",则X是人名,标注为〖@X〗
-3. 如果文本匹配"官职+人名",分别标注:〖;官职〗〖@人名〗
-
-## 示例
-输入: 刘邦曰:"天下..."
-输出: 〖@刘邦〗曰:"天下..."
-
-输入: 丞相李斯
-输出: 〖;丞相〗〖@李斯〗
-
-## 任务
-请标注以下文本中的人名:
-
-{text}
-"""
-```
+**核心原则**:
+- SKILL定义规则和模式
+- Prompt将规则转化为可执行指令
+- 两者版本同步更新
 
 ---
 
-### 4.2 模板参数化
+### 5.2 模板参数化
 
-**可变部分抽离为参数**:
-
-```python
-# 模板定义
-ENTITY_TAGGING_PROMPT_TEMPLATE = """
-你是一个古文实体标注专家。请按以下规则标注{entity_type}:
-
-## 识别模式
-{patterns}
-
-## 示例
-{examples}
-
-## 边界规则
-{boundary_rules}
-
-## 任务
-请标注以下文本中的{entity_type}:
-
-{text}
-"""
-
-# 参数配置
-ENTITY_TYPE_CONFIGS = {
-    'person': {
-        'entity_type': '人名',
-        'patterns': [
-            '如果文本匹配"X曰",则X是人名',
-            '如果文本匹配"姓Y名X",则X是人名'
-        ],
-        'examples': [
-            '输入: 刘邦曰 → 输出: 〖@刘邦〗曰'
-        ],
-        'boundary_rules': [
-            '复姓整体标注:〖@司马迁〗',
-            '单字名需上下文约束'
-        ]
-    },
-    'place': {
-        'entity_type': '地名',
-        'patterns': [
-            '如果X在地名词表中,标注为〖=X〗',
-            '如果文本匹配"X郡"、"X县",则X是地名'
-        ],
-        # ...
-    }
-}
-
-# 动态生成prompt
-def generate_prompt(entity_type, text):
-    config = ENTITY_TYPE_CONFIGS[entity_type]
-    return ENTITY_TAGGING_PROMPT_TEMPLATE.format(
-        entity_type=config['entity_type'],
-        patterns='\n'.join(config['patterns']),
-        examples='\n'.join(config['examples']),
-        boundary_rules='\n'.join(config['boundary_rules']),
-        text=text
-    )
-```
+**设计要点**:
+1. 可变部分抽离为参数(实体类型、规则列表、示例等)
+2. 使用配置文件管理不同实体类型的规则
+3. 动态生成适配不同任务的prompt
 
 ---
 
-### 4.3 提示词版本管理
+### 5.3 提示词版本管理
 
 **与SKILL同步版本**:
-
-```python
-# prompts/entity_tagging_v2.0.py
-
-"""
-Entity Tagging Prompt Template v2.0
-
-对应SKILL: SKILL_03a v2.0
-更新日期: 2025-01-15
-变更: 精简为5条核心规则,拆分消歧到SKILL_03b
-"""
-
-ENTITY_TAGGING_PROMPT_V2_0 = """
-[模板内容]
-"""
-
-# 版本历史
-PROMPT_VERSION_HISTORY = {
-    'v1.0': {
-        'date': '2024-11-05',
-        'skill_version': 'SKILL_03a v1.0',
-        'rules_count': 10,
-        'avg_tokens': 1500
-    },
-    'v1.5': {
-        'date': '2024-12-10',
-        'skill_version': 'SKILL_03a v1.5',
-        'rules_count': 15,
-        'avg_tokens': 2200
-    },
-    'v2.0': {
-        'date': '2025-01-15',
-        'skill_version': 'SKILL_03a v2.0',
-        'rules_count': 5,  # 精简
-        'avg_tokens': 800  # 渐进载入
-    }
-}
-```
+- 每个SKILL版本对应一个prompt版本
+- 记录版本历史(日期、对应SKILL、规则数量、平均tokens)
+- 支持版本对比和回溯
 
 ---
 
-### 4.4 A/B测试与迭代
+### 5.4 A/B测试与迭代
 
-**测试不同prompt版本的效果**:
+**测试流程**:
+1. 准备测试数据集
+2. 对比不同版本prompt的效果(准确率、召回率、成本)
+3. 统计分析,选择最优版本
+4. 记录测试结果,指导下一轮优化
 
-```python
-# tests/test_prompt_versions.py
-
-def ab_test_prompts(test_data, prompt_v1, prompt_v2):
-    """对比两个prompt版本的效果"""
-
-    results = {
-        'v1': {'precision': [], 'recall': [], 'cost': []},
-        'v2': {'precision': [], 'recall': [], 'cost': []}
-    }
-
-    for sample in test_data:
-        # 测试v1
-        output_v1 = run_agent(prompt_v1, sample['text'])
-        results['v1']['precision'].append(
-            evaluate_precision(output_v1, sample['gold'])
-        )
-        results['v1']['cost'].append(count_tokens(prompt_v1))
-
-        # 测试v2
-        output_v2 = run_agent(prompt_v2, sample['text'])
-        results['v2']['precision'].append(
-            evaluate_precision(output_v2, sample['gold'])
-        )
-        results['v2']['cost'].append(count_tokens(prompt_v2))
-
-    # 统计对比
-    print("## A/B测试结果\n")
-    for version in ['v1', 'v2']:
-        print(f"### Prompt {version}")
-        print(f"- 准确率: {np.mean(results[version]['precision']):.2%}")
-        print(f"- 召回率: {np.mean(results[version]['recall']):.2%}")
-        print(f"- 平均成本: {np.mean(results[version]['cost'])} tokens")
-
-# 输出示例:
-# ## A/B测试结果
-#
-# ### Prompt v1.5
-# - 准确率: 95.3%
-# - 召回率: 89.7%
-# - 平均成本: 2200 tokens
-#
-# ### Prompt v2.0
-# - 准确率: 97.1% (+1.8%)
-# - 召回率: 91.2% (+1.5%)
-# - 平均成本: 800 tokens (-64%)
-#
-# 结论: v2.0在质量和成本上都优于v1.5,采纳v2.0
-```
+**关键指标**:
+- 准确率/召回率(质量)
+- Token消耗(成本)
+- 提升幅度(改进效果)
 
 ---
 
-## 五、反思日志的系统化
+## 六、反思日志的系统化
 
-### 5.1 日志结构标准化
+### 6.1 日志结构标准化
 
 **统一模板**:
 
@@ -1061,324 +896,122 @@ def ab_test_prompts(test_data, prompt_v1, prompt_v2):
 
 ---
 
-### 5.2 日志自动生成
+### 6.2 日志自动生成
 
-```python
-# scripts/generate_reflection_report.py
+**生成流程**:
+1. 加载标准化模板
+2. 统计修正数据(总数、涉及章节、问题类型分布、平均置信度)
+3. 提取模式摘要(名称、问题描述、示例、影响范围、频次)
+4. 生成规则更新建议
+5. 渲染并保存报告
 
-def generate_reflection_report(round_num, corrections, patterns):
-    """自动生成反思报告"""
+---
 
-    template = load_template("templates/reflection_report.md")
+### 6.3 从日志到SKILL的自动提炼
 
-    # 统计数据
-    stats = {
-        'total_corrections': len(corrections),
-        'affected_chapters': len(set(c['chapter'] for c in corrections)),
-        'problem_types': Counter(c['type'] for c in corrections),
-        'avg_confidence': np.mean([c['confidence'] for c in corrections])
-    }
+**提炼流程**:
+1. 从多轮反思日志中解析所有模式
+2. 按频次统计,筛选高频模式(≥3次出现)
+3. 为每个高频模式生成规则草稿
+4. 确定置信度(≥5次为high,否则为medium)
+5. 输出规则草稿文档,供人工审核
 
-    # 提取模式
-    patterns_summary = []
-    for pattern in patterns:
-        patterns_summary.append({
-            'name': pattern['name'],
-            'problem': pattern['description'],
-            'examples': pattern['examples'][:3],  # Top 3示例
-            'impact': pattern['affected_count'],
-            'frequency': pattern['occurrences']
-        })
+**输出示例**:
+```markdown
+## 新规则草稿(从反思日志提炼)
 
-    # 规则更新建议
-    rule_updates = suggest_rule_updates(patterns)
-
-    # 渲染模板
-    report = template.format(
-        round_num=round_num,
-        date_start=corrections[0]['date'],
-        date_end=corrections[-1]['date'],
-        stats=stats,
-        patterns=patterns_summary,
-        rule_updates=rule_updates,
-        top_cases=select_top_cases(corrections, n=10)
-    )
-
-    # 保存
-    output_path = f"doc/reflection/round{round_num}_summary.md"
-    with open(output_path, 'w') as f:
-        f.write(report)
-
-    print(f"反思报告已生成: {output_path}")
+### 规则候选1: 别名链处理
+**来源**: 第1/2/3轮反思日志(频次:5)
+**问题**: 同一人物在不同章节有不同称谓
+**解决方案**: 建立entity_aliases.json,统一映射到规范名
+**置信度**: high(频次≥5)
+**建议**: 加入SKILL_03a v1.5作为规则11
 ```
 
 ---
 
-### 5.3 从日志到SKILL的自动提炼
+## 七、质量度量与收敛判断
 
-```python
-# scripts/extract_rules_from_logs.py
+### 7.1 SKILL质量指标
 
-def extract_rules_from_reflection_logs(log_files):
-    """从多轮反思日志中提取规则"""
+**核心指标**:
 
-    all_patterns = []
+1. **规则覆盖率**: 测试案例被规则覆盖的比例
+2. **规则冲突率**: 规则之间冲突的比例
+3. **文档可读性**: 字数、规则数量、平均规则长度、嵌套深度
+4. **Agent执行成功率**: Agent使用SKILL完成任务的成功率
 
-    for log_file in log_files:
-        patterns = parse_patterns_from_log(log_file)
-        all_patterns.extend(patterns)
-
-    # 按频次排序
-    pattern_freq = Counter(p['name'] for p in all_patterns)
-
-    # 高频模式(≥3次出现) → 转化为规则
-    frequent_patterns = [
-        p for p in pattern_freq.items() if p[1] >= 3
-    ]
-
-    # 生成规则草稿
-    rules_draft = []
-    for pattern_name, freq in frequent_patterns:
-        pattern_details = [p for p in all_patterns if p['name'] == pattern_name][0]
-
-        rule_draft = {
-            'rule_name': pattern_name,
-            'description': pattern_details['problem'],
-            'solution': pattern_details['修正方案'],
-            'examples': pattern_details['examples'],
-            'frequency': freq,
-            'confidence': 'high' if freq >= 5 else 'medium'
-        }
-
-        rules_draft.append(rule_draft)
-
-    # 输出为Markdown
-    output_rules_to_markdown(rules_draft, "doc/drafts/new_rules_draft.md")
-
-    return rules_draft
-
-# 输出示例(doc/drafts/new_rules_draft.md):
-# ## 新规则草稿(从反思日志提炼)
-#
-# ### 规则候选1: 别名链处理
-# **来源**: 第1/2/3轮反思日志(频次:5)
-# **问题**: 同一人物在不同章节有不同称谓
-# **解决方案**: 建立entity_aliases.json,统一映射到规范名
-# **示例**:
-#   - 沛公 → 刘邦
-#   - 汉王 → 刘邦
-#   - 高祖 → 刘邦
-# **置信度**: high(频次≥5)
-#
-# **建议**: 加入SKILL_03a v1.5作为规则11
+**评估示例**:
+```
+coverage: 92%          (规则覆盖率)
+conflict_rate: 3%      (规则冲突率)
+readability:
+  - word_count: 2340
+  - rule_count: 15
+  - avg_rule_length: 156
+  - nesting_depth: 2
+agent_success_rate: 95% (Agent执行成功率)
 ```
 
 ---
 
-## 六、质量度量与收敛判断
+### 7.2 收敛判断标准
 
-### 6.1 SKILL质量指标
+**判断依据**(连续3轮满足以下条件):
 
-```python
-def evaluate_skill_quality(skill_doc, test_data):
-    """评估SKILL文档质量"""
+1. **新模式发现减少**: 每轮新发现<5个模式
+2. **修正数量递减**: 修正数量持续下降
+3. **准确率稳定**: 标准差<1%
+4. **规则数量稳定**: 规则数量不再变化
 
-    metrics = {}
+**演化示例**:
+```
+第1轮: 新模式25, 修正1247, 准确率90%, 规则10
+第2轮: 新模式12, 修正456, 准确率93%, 规则13
+第3轮: 新模式8, 修正234, 准确率95%, 规则15
+第4轮: 新模式4, 修正89, 准确率96%, 规则15
+第5轮: 新模式2, 修正34, 准确率96.5%, 规则15
 
-    # 指标1: 规则覆盖率
-    total_cases = len(test_data)
-    covered_cases = sum(
-        1 for case in test_data
-        if case_covered_by_skill(case, skill_doc)
-    )
-    metrics['coverage'] = covered_cases / total_cases
-
-    # 指标2: 规则冲突率
-    rules = extract_rules(skill_doc)
-    conflicts = detect_rule_conflicts(rules)
-    metrics['conflict_rate'] = len(conflicts) / len(rules)
-
-    # 指标3: 文档可读性
-    metrics['readability'] = {
-        'word_count': count_words(skill_doc),
-        'rule_count': len(rules),
-        'avg_rule_length': np.mean([len(r) for r in rules]),
-        'nesting_depth': max_nesting_depth(skill_doc)
-    }
-
-    # 指标4: Agent执行成功率
-    success_count = 0
-    for case in test_data:
-        output = run_agent_with_skill(skill_doc, case['input'])
-        if evaluate(output, case['gold']):
-            success_count += 1
-    metrics['agent_success_rate'] = success_count / total_cases
-
-    return metrics
-
-# 输出示例:
-# {
-#   'coverage': 0.92,  # 92%案例被规则覆盖
-#   'conflict_rate': 0.03,  # 3%规则有冲突
-#   'readability': {
-#       'word_count': 2340,
-#       'rule_count': 15,
-#       'avg_rule_length': 156,
-#       'nesting_depth': 2
-#   },
-#   'agent_success_rate': 0.95  # 95%案例Agent执行成功
-# }
+→ 收敛判断: True
+→ 结论: SKILL已收敛,可以发布v2.0
 ```
 
 ---
 
-### 6.2 收敛判断标准
+## 八、跨项目SKILL迁移的优化
 
-**何时停止迭代?**
-
-```python
-def check_skill_convergence(history):
-    """判断SKILL是否收敛"""
-
-    # 标准1: 新发现模式减少
-    recent_patterns = [h['new_patterns'] for h in history[-3:]]
-    if all(p < 5 for p in recent_patterns):
-        print("✓ 新模式发现减少(<5/轮)")
-
-    # 标准2: 修正数量递减
-    recent_corrections = [h['corrections'] for h in history[-3:]]
-    if is_decreasing(recent_corrections):
-        print("✓ 修正数量递减")
-
-    # 标准3: 准确率稳定
-    recent_accuracy = [h['accuracy'] for h in history[-3:]]
-    if np.std(recent_accuracy) < 0.01:  # 标准差<1%
-        print("✓ 准确率稳定")
-
-    # 标准4: 规则数量稳定
-    recent_rule_counts = [h['rule_count'] for h in history[-3:]]
-    if len(set(recent_rule_counts)) == 1:  # 连续3轮规则数不变
-        print("✓ 规则数量稳定")
-
-    # 综合判断
-    converged = (
-        all(p < 5 for p in recent_patterns) and
-        is_decreasing(recent_corrections) and
-        np.std(recent_accuracy) < 0.01 and
-        len(set(recent_rule_counts)) == 1
-    )
-
-    return converged
-
-# 示例:
-# 第1轮: 新模式25, 修正1247, 准确率90%, 规则10
-# 第2轮: 新模式12, 修正456, 准确率93%, 规则13
-# 第3轮: 新模式8, 修正234, 准确率95%, 规则15
-# 第4轮: 新模式4, 修正89, 准确率96%, 规则15
-# 第5轮: 新模式2, 修正34, 准确率96.5%, 规则15
-#
-# check_skill_convergence(history) → True
-# 结论: SKILL已收敛,可以发布v2.0
-```
-
----
-
-## 七、跨项目SKILL迁移的优化
-
-### 7.1 SKILL的可迁移性设计
+### 8.1 SKILL的可迁移性设计
 
 **设计原则**:
 
-```
-高可迁移性规则:
-  - 通用模式(文言文共性)
-  - 抽象方法(不依赖具体数据)
-  - 参数化配置(朝代/文体可替换)
+**高可迁移性规则**:
+- 通用模式(文言文共性)
+- 抽象方法(不依赖具体数据)
+- 参数化配置(朝代/文体可替换)
 
-低可迁移性规则:
-  - 项目特定(史记特有人名)
-  - 硬编码数据(章节映射)
-  - 临时解决方案(workaround)
-```
+**低可迁移性规则**:
+- 项目特定(史记特有人名)
+- 硬编码数据(章节映射)
+- 临时解决方案(workaround)
 
----
-
-**标记可迁移性**:
-
-```markdown
-# SKILL_03a_实体标注.md
-
-## 二、核心标注规则
-
-### 规则2: 人名识别模式
-**可迁移性**: ★★★★★ (通用)
-**适用范围**: 所有文言文
-
-- X曰 → X是人名
-- 姓Y名X → X是人名
-
-### 规则6: 短名消歧
-**可迁移性**: ★★★★☆ (高度通用,需调整参数)
-**适用范围**: 纪传体史书
-
-**迁移说明**:
-  - 4层启发式策略通用
-  - CHAPTER_STATE映射需根据目标史书调整
-  - 示例:汉书需更新为100+章的映射
-
-### 规则11: 别名映射
-**可迁移性**: ★★★☆☆ (中等,需重建数据)
-**适用范围**: 任何有人物别名的文本
-
-**迁移说明**:
-  - 映射机制通用
-  - entity_aliases.json需为目标史书重新构建
-  - 示例:汉书需建立新的别名表(预计800+条)
-```
+**标记方式**: 用★评级(1-5星)标注每条规则的可迁移性和适用范围
 
 ---
 
-### 7.2 SKILL差异文档
+### 8.2 SKILL差异文档
 
 **迁移时生成差异清单**:
 
-```markdown
-# doc/transfer/史记SKILL→汉书SKILL差异清单.md
+按复用度分类:
+- **直接复用**(80%): 完全通用的元方法论
+- **需要调整**(15%): 需要修改参数或配置
+- **需要重建**(5%): 依赖项目特定数据
 
-## 一、直接复用(80%)
-
-| SKILL | 复用度 | 说明 |
-|-------|--------|------|
-| 00-META_反思.md | 100% | 完全通用 |
-| 00-META_质量控制.md | 100% | 完全通用 |
-| SKILL_03a_实体标注.md(核心规则1-5) | 95% | 微调示例 |
-
-## 二、需要调整(15%)
-
-| SKILL | 复用度 | 调整内容 |
-|-------|--------|---------|
-| SKILL_03b_实体消歧.md | 70% | CHAPTER_STATE映射(120章) |
-| SKILL_04c_事件年代推断.md | 60% | 年号体系(汉代年号) |
-
-## 三、需要重建(5%)
-
-| 数据文件 | 复用度 | 说明 |
-|---------|--------|------|
-| entity_aliases.json | 20% | 部分重叠人物(刘邦/项羽等),其余需重建 |
-| disambiguation_map.json | 10% | 章节不同,需重新构建 |
-
-## 四、新增内容
-
-| 类型 | 说明 |
-|------|------|
-| 年号解析 | 汉代大量使用年号纪年,史记时代较少 |
-| 表格文献 | 汉书的"表"为二维矩阵,史记为时间线 |
-| 西汉官制 | 三公九卿体系,需扩展官职词表 |
-```
+记录新增内容需求(如新的年号体系、官制词表等)
 
 ---
 
-## 八、总结
+## 九、总结
 
 ### 核心要点
 
