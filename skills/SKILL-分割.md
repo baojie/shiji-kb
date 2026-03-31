@@ -55,3 +55,4 @@ last_updated: 2026-03-30
 ```
 
 # 禁止规则区
+- [v1.0] start 和 end 不得小于 line_start_idx，禁止从0重新开始计数。
