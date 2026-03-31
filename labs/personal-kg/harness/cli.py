@@ -87,31 +87,66 @@ def cmd_test_model(args: argparse.Namespace) -> None:
     model = LocalModel(config)
     result = model.test_connection()
     if result["ok"]:
-        print(f"✓ Model OK: {result['response'][:100]}")
+        print(f"✓ LLM OK: {result['response'][:100]}")
     else:
-        print(f"✗ Model FAILED: {result['error']}", file=sys.stderr)
+        print(f"✗ LLM FAILED: {result['error']}", file=sys.stderr)
         sys.exit(1)
+
+
+def cmd_test_asr(args: argparse.Namespace) -> None:
+    from harness.asr import ASRClient
+    from harness.model import load_config
+
+    config = load_config(PROJECT_ROOT / "harness" / "config.yaml")
+    client = ASRClient.from_config(config)
+
+    health = client.health()
+    if not health.get("ok"):
+        print(f"✗ ASR health check FAILED: {health}", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"✓ ASR OK")
+    print(f"  provider : {health.get('provider')}")
+    print(f"  model    : {health.get('sensevoice_model') or health.get('whisper_model')}")
+    print(f"  device   : {health.get('device')}")
+    print(f"  endpoint : {client.endpoint}")
+
+    if args.file:
+        src = Path(args.file)
+        print(f"\nTranscribing {src.name} ...")
+        utterances = client.transcribe(src)
+        print(f"Got {len(utterances)} utterances:")
+        for u in utterances[:5]:
+            spk = u.get("speaker", "")
+            ts = f"{u.get('start', 0):.1f}s-{u.get('end', 0):.1f}s"
+            print(f"  [{spk} {ts}] {u['text'][:60]}")
+        if len(utterances) > 5:
+            print(f"  ... (+{len(utterances)-5} more)")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(prog="personal-kg", description="Personal Recording KG")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    p = sub.add_parser("process", help="Process a txt file into the knowledge graph")
-    p.add_argument("file", help="Path to input .txt file")
+    p = sub.add_parser("process", help="Process a .txt or audio file into the knowledge graph")
+    p.add_argument("file", help="Path to input file (.txt, .wav, .mp3, .m4a ...)")
 
     q = sub.add_parser("query", help="Run a SQL query on the knowledge graph")
     q.add_argument("sql", help="SQL statement")
 
     sub.add_parser("status", help="Show knowledge graph statistics")
-    sub.add_parser("test-model", help="Test connection to local model")
+    sub.add_parser("test-model", help="Test connection to local LLM")
+
+    ta = sub.add_parser("test-asr", help="Test connection to ASR service")
+    ta.add_argument("file", nargs="?", help="Optional audio file to do a live transcription test")
 
     args = parser.parse_args()
     {
-        "process": cmd_process,
-        "query": cmd_query,
-        "status": cmd_status,
+        "process":    cmd_process,
+        "query":      cmd_query,
+        "status":     cmd_status,
         "test-model": cmd_test_model,
+        "test-asr":   cmd_test_asr,
     }[args.cmd](args)
 
 

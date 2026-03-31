@@ -28,7 +28,10 @@ CREATE TABLE IF NOT EXISTS utterances (
     session_id   INTEGER NOT NULL REFERENCES sessions(id),
     seq          INTEGER NOT NULL,
     text         TEXT NOT NULL,
-    cleaned_text TEXT
+    cleaned_text TEXT,
+    ts_start     REAL,   -- audio timestamp seconds (from ASR)
+    ts_end       REAL,
+    speaker_id   TEXT    -- raw speaker label from ASR e.g. "spk_0"
 );
 
 CREATE TABLE IF NOT EXISTS segments (
@@ -114,10 +117,27 @@ def get_conn(db_path: str | Path) -> sqlite3.Connection:
     return conn
 
 
+def _migrate(conn: sqlite3.Connection) -> None:
+    """Add columns introduced after initial schema (idempotent)."""
+    existing = {
+        row[1]
+        for row in conn.execute("PRAGMA table_info(utterances)").fetchall()
+    }
+    for col, definition in [
+        ("ts_start",   "REAL"),
+        ("ts_end",     "REAL"),
+        ("speaker_id", "TEXT"),
+    ]:
+        if col not in existing:
+            conn.execute(f"ALTER TABLE utterances ADD COLUMN {col} {definition}")
+    conn.commit()
+
+
 def init_db(db_path: str | Path) -> None:
-    """Create all tables (idempotent)."""
+    """Create all tables and apply migrations (idempotent)."""
     with get_conn(db_path) as conn:
         conn.executescript(_DDL)
+        _migrate(conn)
 
 
 # ---------------------------------------------------------------------------
@@ -143,13 +163,28 @@ def update_session_status(conn: sqlite3.Connection, session_id: int, status: str
 # ---------------------------------------------------------------------------
 
 def insert_utterances(
-    conn: sqlite3.Connection, session_id: int, lines: list[str]
+    conn: sqlite3.Connection,
+    session_id: int,
+    lines: list[str] | list[dict],
 ) -> list[int]:
+    """
+    Accept either plain strings or ASR dicts:
+        {"text": "...", "start": 0.0, "end": 2.5, "speaker": "spk_0"}
+    """
     ids = []
-    for seq, text in enumerate(lines):
+    for seq, item in enumerate(lines):
+        if isinstance(item, dict):
+            text = item.get("text", "")
+            ts_start = item.get("start")
+            ts_end = item.get("end")
+            speaker_id = item.get("speaker")
+        else:
+            text, ts_start, ts_end, speaker_id = str(item), None, None, None
+
         cur = conn.execute(
-            "INSERT INTO utterances(session_id, seq, text) VALUES (?,?,?)",
-            (session_id, seq, text),
+            "INSERT INTO utterances(session_id, seq, text, ts_start, ts_end, speaker_id)"
+            " VALUES (?,?,?,?,?,?)",
+            (session_id, seq, text, ts_start, ts_end, speaker_id),
         )
         ids.append(cur.lastrowid)
     conn.commit()

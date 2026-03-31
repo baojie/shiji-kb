@@ -1,4 +1,4 @@
-"""Main processing pipeline: txt file → knowledge graph."""
+"""Main processing pipeline: audio/txt file → knowledge graph."""
 from __future__ import annotations
 
 import hashlib
@@ -8,6 +8,7 @@ import time
 from pathlib import Path
 from typing import Any
 
+from .asr import ASRClient, is_audio_file
 from .db import (
     get_cleaned_lines,
     get_segments,
@@ -200,15 +201,28 @@ def _step_track_persons(
 ) -> None:
     t0 = time.perf_counter()
 
-    # 收集所有 person 实体
+    # 收集所有 person 实体，附带 ASR speaker_id 提示（如果有）
     all_persons: list[dict] = []
     for seg_id, entities in seg_entities.items():
+        # 查这个 segment 里出现过哪些 speaker_id
+        asr_speakers = list({
+            r["speaker_id"]
+            for r in conn.execute(
+                "SELECT DISTINCT u.speaker_id FROM utterances u"
+                " JOIN segments s ON s.session_id=u.session_id"
+                " AND u.seq BETWEEN s.start_seq AND s.end_seq"
+                " WHERE s.id=? AND u.speaker_id IS NOT NULL",
+                (seg_id,),
+            ).fetchall()
+            if r["speaker_id"]
+        })
         for ent in entities:
             if ent.get("type") == "person":
                 all_persons.append({
                     "name": ent["name"],
                     "segment_id": seg_id,
                     "context": ent.get("evidence", ""),
+                    "asr_speakers": asr_speakers,  # 提示：该段涉及哪些 ASR 说话人
                 })
 
     if not all_persons:
@@ -299,14 +313,34 @@ def process_file(
     log = _setup_log("pipeline")
     model = LocalModel(config)
 
-    lines = [l for l in source_file.read_text(encoding="utf-8").splitlines()]
+    # Step 0 — transcribe if input is audio
+    asr_utterances: list[dict] | None = None
+    if is_audio_file(source_file):
+        if not pipe_cfg.get("asr", {}).get("enabled", True):
+            raise ValueError(f"Audio input given but asr.enabled=false in config: {source_file}")
+        log.info("Step0 ASR: transcribing %s", source_file.name)
+        t0 = time.perf_counter()
+        try:
+            asr_client = ASRClient.from_config(config)
+            asr_utterances = asr_client.transcribe(source_file)
+            log.info("Step0 ASR: %d utterances in %.1fs", len(asr_utterances), time.perf_counter() - t0)
+        except Exception as exc:
+            log.error("Step0 ASR failed: %s", exc)
+            raise
+
+    # Lines for downstream steps: plain text
+    if asr_utterances is not None:
+        lines: list[str] = [u["text"] for u in asr_utterances]
+    else:
+        lines = [l for l in source_file.read_text(encoding="utf-8").splitlines()]
+
     log.info("Processing %s: %d lines", source_file.name, len(lines))
 
     with get_conn(db_path) as conn:
         session_id = insert_session(conn, str(source_file))
 
-        # Step 1 — insert raw utterances
-        insert_utterances(conn, session_id, lines)
+        # Step 1 — insert raw utterances (with ASR metadata if available)
+        insert_utterances(conn, session_id, asr_utterances if asr_utterances is not None else lines)
 
         errors: list[str] = []
 
