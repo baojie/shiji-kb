@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五帝本纪 - 三家注侧边栏（动态连线）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Serif SC', 'Source Han Serif SC', serif;
+            background: #faf8f0;
+            color: #3d3326;
+            line-height: 2;
+        }
+        .page {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            max-width: 1600px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* 左栏：正文 */
+        .main-content {
+            padding: 40px 60px 60px 40px;
+            border-right: 1px solid #d4c9a8;
+            position: relative;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #8B4513;
+            text-align: center;
+            border-bottom: 2px solid #e0d8cc;
+            padding-bottom: 20px;
+        }
+        .text-body {
+            font-size: 1.15em;
+            line-height: 2.2;
+        }
+        .text-body p {
+            margin-bottom: 1.5em;
+            text-indent: 2em;
+        }
+
+        /* 注释锚点 - 不同颜色 */
+        .note-anchor {
+            display: inline-block;
+            font-size: 0.75em;
+            vertical-align: super;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 2px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            transition: all 0.3s;
+            position: relative;
+            border: 1.5px solid;
+        }
+
+        /* 使用10种不同颜色的循环 */
+        .note-anchor[data-color="0"] { color: #c0504d; border-color: #c0504d; background: #fff5f5; }
+        .note-anchor[data-color="1"] { color: #1a5fb4; border-color: #1a5fb4; background: #f0f7ff; }
+        .note-anchor[data-color="2"] { color: #26a269; border-color: #26a269; background: #f0fff5; }
+        .note-anchor[data-color="3"] { color: #9141ac; border-color: #9141ac; background: #faf0ff; }
+        .note-anchor[data-color="4"] { color: #c64600; border-color: #c64600; background: #fff5f0; }
+        .note-anchor[data-color="5"] { color: #5b4fa0; border-color: #5b4fa0; background: #f5f0ff; }
+        .note-anchor[data-color="6"] { color: #2ec27e; border-color: #2ec27e; background: #f0fff8; }
+        .note-anchor[data-color="7"] { color: #c05080; border-color: #c05080; background: #fff0f8; }
+        .note-anchor[data-color="8"] { color: #7a6a00; border-color: #7a6a00; background: #fffdf0; }
+        .note-anchor[data-color="9"] { color: #613583; border-color: #613583; background: #faf0f8; }
+
+        .note-anchor:hover {
+            transform: scale(1.2);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        .note-anchor.active {
+            background: #ffd700 !important;
+            color: #8B4513 !important;
+            border-color: #ffd700 !important;
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+        }
+
+        /* SVG连线层 */
+        #connectionSvg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* 右栏：侧边栏 */
+        .sidebar {
+            background: white;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+        .sidebar h2 {
+            font-size: 1.3em;
+            color: #8B4513;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0d8cc;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 100;
+        }
+        .notes-list {
+            padding-top: 10px;
+        }
+        .note-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f9f7f0;
+            border-radius: 5px;
+            border-left: 4px solid #c0a060;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .note-item:hover {
+            background: #fff8dc;
+            border-left-color: #ffd700;
+            transform: translateX(-3px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .note-item.active {
+            background: #fff8dc;
+            border-left-color: #ffd700;
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+        }
+        .note-number {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-right: 8px;
+            min-width: 24px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            border: 1.5px solid;
+        }
+
+        /* 侧边栏注释编号对应颜色 */
+        .note-item[data-color="0"] .note-number { color: #c0504d; border-color: #c0504d; background: #fff5f5; }
+        .note-item[data-color="1"] .note-number { color: #1a5fb4; border-color: #1a5fb4; background: #f0f7ff; }
+        .note-item[data-color="2"] .note-number { color: #26a269; border-color: #26a269; background: #f0fff5; }
+        .note-item[data-color="3"] .note-number { color: #9141ac; border-color: #9141ac; background: #faf0ff; }
+        .note-item[data-color="4"] .note-number { color: #c64600; border-color: #c64600; background: #fff5f0; }
+        .note-item[data-color="5"] .note-number { color: #5b4fa0; border-color: #5b4fa0; background: #f5f0ff; }
+        .note-item[data-color="6"] .note-number { color: #2ec27e; border-color: #2ec27e; background: #f0fff8; }
+        .note-item[data-color="7"] .note-number { color: #c05080; border-color: #c05080; background: #fff0f8; }
+        .note-item[data-color="8"] .note-number { color: #7a6a00; border-color: #7a6a00; background: #fffdf0; }
+        .note-item[data-color="9"] .note-number { color: #613583; border-color: #613583; background: #faf0f8; }
+        .note-context {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .note-context .anchor {
+            color: #8B4513;
+            font-weight: bold;
+            font-style: normal;
+        }
+        .note-content {
+            margin-top: 8px;
+        }
+        .note-entry {
+            margin-bottom: 10px;
+        }
+        .note-source {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 8px;
+            margin-bottom: 5px;
+        }
+        .jijie {
+            background: #26a269;
+            color: white;
+        }
+        .suoyin {
+            background: #ff1493;
+            color: white;
+        }
+        .zhengyi {
+            background: #966;
+            color: white;
+        }
+        .note-text {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: #555;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* 控制面板 */
+        .control-panel {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 248, 240, 0.95);
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .control-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .control-row:last-child {
+            margin-bottom: 0;
+        }
+        .control-label {
+            font-size: 0.9em;
+            color: #8B4513;
+            font-weight: bold;
+            min-width: 80px;
+        }
+        .toggle-btn {
+            padding: 4px 12px;
+            border: 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: bold;
+            transition: all 0.2s;
+            background: white;
+        }
+        .toggle-btn.connection-toggle {
+            border-color: #8B4513;
+            color: #8B4513;
+        }
+        .toggle-btn.connection-toggle.active {
+            background: #8B4513;
+            color: white;
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 4px 12px;
+            border: 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: bold;
+            transition: all 0.2s;
+            background: white;
+        }
+        .filter-btn.all-filter {
+            border-color: #8B4513;
+            color: #8B4513;
+        }
+        .filter-btn.all-filter.active {
+            background: #8B4513;
+            color: white;
+        }
+        .filter-btn.jijie-filter {
+            border-color: #26a269;
+            color: #26a269;
+        }
+        .filter-btn.jijie-filter.active {
+            background: #26a269;
+            color: white;
+        }
+        .filter-btn.suoyin-filter {
+            border-color: #ff1493;
+            color: #ff1493;
+        }
+        .filter-btn.suoyin-filter.active {
+            background: #ff1493;
+            color: white;
+        }
+        .filter-btn.zhengyi-filter {
+            border-color: #966;
+            color: #966;
+        }
+        .filter-btn.zhengyi-filter.active {
+            background: #966;
+            color: white;
+        }
+
+        /* 隐藏样式 */
+        .note-entry.hidden {
+            display: none;
+        }
+        .note-item.hidden {
+            display: none;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .page {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: static;
+                max-height: none;
+            }
+            #connectionSvg {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="main-content">
+            <div class="control-panel">
+                <div class="control-row">
+                    <span class="control-label">动态连线:</span>
+                    <button class="toggle-btn connection-toggle active" onclick="toggleConnections()">
+                        <span id="connectionStatus">显示</span>
+                    </button>
+                </div>
+                <div class="control-row">
+                    <span class="control-label">注释筛选:</span>
+                    <div class="filter-buttons">
+                        <button class="filter-btn all-filter active" onclick="filterNotes('all')">全部</button>
+                        <button class="filter-btn jijie-filter" onclick="filterNotes('jijie')">集解</button>
+                        <button class="filter-btn suoyin-filter" onclick="filterNotes('suoyin')">索隐</button>
+                        <button class="filter-btn zhengyi-filter" onclick="filterNotes('zhengyi')">正义</button>
+                    </div>
+                </div>
+            </div>
+
+            <h1>五帝本纪</h1>
+            <div class="text-body" id="textBody">
+                <!-- 内容将由JavaScript动态生成 -->
+            </div>
+
+            <!-- SVG连线层 -->
+            <svg id="connectionSvg"></svg>
+        </div>
+
+        <div class="sidebar">
+            <h2>三家注</h2>
+            <div class="notes-list" id="notesList">
+                <!-- 注释将由JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let notesData = [];
+        let originalText = '';
+        let currentFilter = 'all';
+        let showConnections = true;
+        let activeNoteId = null;
+
+        // 加载数据
+        async function loadData() {
+            try {
+                const [notesResponse, textResponse] = await Promise.all([
+                    fetch('../../data/notes/001-notes.json'),
+                    fetch('../../docs/original_text/001_五帝本纪.txt')
+                ]);
+
+                if (!notesResponse.ok || !textResponse.ok) {
+                    throw new Error('加载失败');
+                }
+
+                const data = await notesResponse.json();
+                notesData = data.notes;
+                originalText = await textResponse.text();
+
+                renderContent();
+            } catch (error) {
+                console.error('加载失败:', error);
+                document.getElementById('textBody').innerHTML =
+                    '<p style="color: #c0504d;">内容加载失败，请确保已启动本地服务器</p>';
+            }
+        }
+
+        function renderContent() {
+            // 渲染正文（简化版，只显示前几段）
+            const paragraphs = originalText.split('\n').filter(p => p.trim()).slice(1, 6);
+            const textBody = document.getElementById('textBody');
+
+            let noteCounter = 1;
+            let html = '';
+
+            // 为每个段落匹配注释
+            paragraphs.forEach((para, idx) => {
+                let paraHtml = para;
+                let paraNotes = [];
+
+                // 找到这个段落的注释（改进的匹配逻辑）
+                notesData.slice(0, 20).forEach(note => {  // 只处理前20条注释作为示例
+                    let matched = false;
+
+                    // 方法1: 尝试匹配before_context
+                    if (note.before_context && para.includes(note.before_context)) {
+                        matched = true;
+                    }
+
+                    // 方法2: 尝试匹配anchor_text
+                    if (!matched && note.anchor_text && para.includes(note.anchor_text)) {
+                        matched = true;
+                    }
+
+                    // 方法3: 尝试匹配after_context
+                    if (!matched && note.after_context && para.includes(note.after_context)) {
+                        matched = true;
+                    }
+
+                    if (matched) {
+                        const noteNum = noteCounter++;
+                        paraNotes.push({ note, noteNum });
+                    }
+                });
+
+                // 按位置排序（从后往前插入，避免位置偏移）
+                paraNotes.sort((a, b) => {
+                    const posA = paraHtml.indexOf(a.note.anchor_text || a.note.before_context || a.note.after_context);
+                    const posB = paraHtml.indexOf(b.note.anchor_text || b.note.before_context || b.note.after_context);
+                    return posB - posA;
+                });
+
+                // 插入注释标记
+                paraNotes.forEach(({ note, noteNum }) => {
+                    // 优先使用anchor_text定位
+                    let anchor = note.anchor_text;
+                    if (!anchor || !paraHtml.includes(anchor)) {
+                        anchor = note.before_context;
+                    }
+                    if (!anchor || !paraHtml.includes(anchor)) {
+                        anchor = note.after_context;
+                    }
+
+                    if (anchor && paraHtml.includes(anchor)) {
+                        const pos = paraHtml.indexOf(anchor) + anchor.length;
+                        const colorIndex = (noteNum - 1) % 10;  // 使用10种颜色循环
+                        paraHtml = paraHtml.substring(0, pos) +
+                            `<span class="note-anchor" data-note="${noteNum}" data-note-id="${note.id}" data-color="${colorIndex}">[${noteNum}]</span>` +
+                            paraHtml.substring(pos);
+                    }
+                });
+
+                html += `<p>${paraHtml}</p>`;
+            });
+
+            textBody.innerHTML = html;
+
+            const totalAnchors = document.querySelectorAll('.note-anchor').length;
+            console.log('正文渲染完成，共插入', totalAnchors, '个锚点');
+
+            // 渲染侧边栏注释
+            renderNotes();
+
+            // 添加交互事件
+            addInteractions();
+        }
+
+        function renderNotes() {
+            const notesList = document.getElementById('notesList');
+            const anchors = document.querySelectorAll('.note-anchor');
+
+            let html = '';
+            anchors.forEach(anchor => {
+                const noteNum = anchor.dataset.note;
+                const noteId = anchor.dataset.noteId;
+                const colorIndex = anchor.dataset.color;
+                const note = notesData.find(n => n.id === noteId);
+
+                if (!note) return;
+
+                html += `<div class="note-item" data-note="${noteNum}" data-note-id="${noteId}" data-color="${colorIndex}">`;
+                html += `<span class="note-number">[${noteNum}]</span>`;
+
+                if (note.before_context || note.after_context) {
+                    html += '<div class="note-context">';
+                    if (note.before_context) html += `<span>${note.before_context}</span>`;
+                    if (note.anchor_text) html += `<span class="anchor">${note.anchor_text}</span>`;
+                    if (note.after_context) html += `<span>${note.after_context}</span>`;
+                    html += '</div>';
+                }
+
+                html += '<div class="note-content">';
+                note.items.forEach(item => {
+                    html += `<div class="note-entry" data-source="${item.source}">`;
+                    html += `<span class="note-source ${item.source}">${item.label}</span>`;
+                    html += `<span class="note-text">${item.text}</span>`;
+                    html += '</div>';
+                });
+                html += '</div>';
+                html += '</div>';
+            });
+
+            notesList.innerHTML = html;
+        }
+
+        function addInteractions() {
+            const anchors = document.querySelectorAll('.note-anchor');
+            const noteItems = document.querySelectorAll('.note-item');
+
+            // 锚点悬停/点击
+            anchors.forEach(anchor => {
+                anchor.addEventListener('mouseenter', function() {
+                    const noteNum = this.dataset.note;
+                    highlightPair(noteNum, true);
+                });
+
+                anchor.addEventListener('mouseleave', function() {
+                    if (!activeNoteId) {
+                        clearHighlights();
+                    }
+                });
+
+                anchor.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const noteNum = this.dataset.note;
+                    const noteId = this.dataset.noteId;
+
+                    if (activeNoteId === noteId) {
+                        activeNoteId = null;
+                        clearHighlights();
+                    } else {
+                        activeNoteId = noteId;
+                        highlightPair(noteNum, false);
+
+                        // 滚动到注释
+                        const noteItem = document.querySelector(`.note-item[data-note="${noteNum}"]`);
+                        if (noteItem) {
+                            noteItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                });
+            });
+
+            // 注释悬停/点击
+            noteItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    const noteNum = this.dataset.note;
+                    highlightPair(noteNum, true);
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    if (!activeNoteId) {
+                        clearHighlights();
+                    }
+                });
+
+                item.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const noteNum = this.dataset.note;
+                    const noteId = this.dataset.noteId;
+
+                    if (activeNoteId === noteId) {
+                        activeNoteId = null;
+                        clearHighlights();
+                    } else {
+                        activeNoteId = noteId;
+                        highlightPair(noteNum, false);
+
+                        // 滚动到锚点
+                        const anchor = document.querySelector(`.note-anchor[data-note="${noteNum}"]`);
+                        if (anchor) {
+                            anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                });
+            });
+
+            // 点击页面其他地方取消激活
+            document.addEventListener('click', function() {
+                activeNoteId = null;
+                clearHighlights();
+            });
+        }
+
+        function highlightPair(noteNum, isHover) {
+            clearHighlights();
+
+            const anchor = document.querySelector(`.note-anchor[data-note="${noteNum}"]`);
+            const noteItem = document.querySelector(`.note-item[data-note="${noteNum}"]`);
+
+            if (anchor && noteItem) {
+                anchor.classList.add('active');
+                noteItem.classList.add('active');
+
+                if (showConnections) {
+                    drawConnection(anchor, noteItem);
+                }
+            }
+        }
+
+        function clearHighlights() {
+            document.querySelectorAll('.note-anchor.active').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.note-item.active').forEach(el => el.classList.remove('active'));
+            clearConnections();
+        }
+
+        function drawConnection(anchor, noteItem) {
+            const svg = document.getElementById('connectionSvg');
+            const mainContent = document.querySelector('.main-content');
+            const mainRect = mainContent.getBoundingClientRect();
+
+            // 更新SVG尺寸
+            svg.style.height = mainContent.scrollHeight + 'px';
+            svg.setAttribute('viewBox', `0 0 ${mainContent.offsetWidth} ${mainContent.scrollHeight}`);
+
+            // 获取锚点位置（相对于主内容区）
+            const anchorRect = anchor.getBoundingClientRect();
+            const x1 = anchorRect.right - mainRect.left;
+            const y1 = anchorRect.top - mainRect.top + anchorRect.height / 2 + mainContent.scrollTop;
+
+            // 获取注释位置（相对于主内容区）
+            const noteRect = noteItem.getBoundingClientRect();
+            const x2 = mainContent.offsetWidth - 10;
+            const y2 = noteRect.top - mainRect.top + noteRect.height / 2 + mainContent.scrollTop;
+
+            // 根据锚点颜色选择连线颜色
+            const colorIndex = anchor.dataset.color;
+            const colors = ['#c0504d', '#1a5fb4', '#26a269', '#9141ac', '#c64600',
+                          '#5b4fa0', '#2ec27e', '#c05080', '#7a6a00', '#613583'];
+            const strokeColor = colors[colorIndex] || '#ffd700';
+
+            // 创建曲线路径
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            const controlX = (x1 + x2) / 2 + 50;
+            const d = `M ${x1} ${y1} Q ${controlX} ${y1}, ${controlX} ${(y1 + y2) / 2} T ${x2} ${y2}`;
+
+            path.setAttribute('d', d);
+            path.setAttribute('stroke', strokeColor);
+            path.setAttribute('stroke-width', '2.5');
+            path.setAttribute('fill', 'none');
+            path.setAttribute('opacity', '0.7');
+            path.setAttribute('stroke-dasharray', '5,3');
+
+            // 添加箭头（使用对应颜色）
+            const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+            const markerId = `arrowhead-${colorIndex}`;
+            const marker = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+            marker.setAttribute('id', markerId);
+            marker.setAttribute('markerWidth', '10');
+            marker.setAttribute('markerHeight', '10');
+            marker.setAttribute('refX', '5');
+            marker.setAttribute('refY', '3');
+            marker.setAttribute('orient', 'auto');
+            const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+            polygon.setAttribute('points', '0 0, 10 3, 0 6');
+            polygon.setAttribute('fill', strokeColor);
+            marker.appendChild(polygon);
+            defs.appendChild(marker);
+            svg.appendChild(defs);
+
+            path.setAttribute('marker-end', `url(#${markerId})`);
+            svg.appendChild(path);
+        }
+
+        function clearConnections() {
+            const svg = document.getElementById('connectionSvg');
+            svg.innerHTML = '';
+        }
+
+        function toggleConnections() {
+            showConnections = !showConnections;
+            const btn = document.querySelector('.connection-toggle');
+            const status = document.getElementById('connectionStatus');
+
+            if (showConnections) {
+                btn.classList.add('active');
+                status.textContent = '显示';
+            } else {
+                btn.classList.remove('active');
+                status.textContent = '隐藏';
+                clearConnections();
+            }
+        }
+
+        function filterNotes(type) {
+            currentFilter = type;
+
+            // 更新按钮状态
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.filter-btn.${type === 'all' ? 'all-filter' : type + '-filter'}`).classList.add('active');
+
+            // 筛选注释条目
+            document.querySelectorAll('.note-entry').forEach(entry => {
+                const source = entry.getAttribute('data-source');
+                if (type === 'all' || source === type) {
+                    entry.classList.remove('hidden');
+                } else {
+                    entry.classList.add('hidden');
+                }
+            });
+
+            // 隐藏没有可见注释的note-item
+            document.querySelectorAll('.note-item').forEach(item => {
+                const visibleEntries = item.querySelectorAll('.note-entry:not(.hidden)');
+                if (visibleEntries.length === 0) {
+                    item.classList.add('hidden');
+                } else {
+                    item.classList.remove('hidden');
+                }
+            });
+        }
+
+        // 页面加载时执行
+        loadData();
+    </script>
+</body>
+</html>

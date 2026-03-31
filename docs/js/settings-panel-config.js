@@ -177,6 +177,16 @@
                 elem.style.paddingLeft = '';
             });
 
+            // 恢复孤立子段落的<br>标签
+            document.querySelectorAll('[data-br-removed]').forEach(elem => {
+                const originalContent = elem.getAttribute('data-original-br-content');
+                if (originalContent) {
+                    elem.innerHTML = originalContent;
+                    elem.removeAttribute('data-original-br-content');
+                    elem.removeAttribute('data-br-removed');
+                }
+            });
+
             document.body.classList.remove('merge-paragraphs');
         } else {
             document.body.classList.add('merge-paragraphs');
@@ -270,9 +280,9 @@
                             // 如果属于当前顶级编号
                             if (elemTopNum === topNum) {
                                 shouldCollect = true;
-                                // 隐藏编号，收集文本，同时移除br标签
+                                // 隐藏编号，收集文本，同时移除br标签和换行符
                                 let content = currentElem.innerHTML.replace(/<a[^>]*class="para-num"[^>]*>.*?<\/a>\s*/g, '');
-                                content = content.replace(/<br\s*\/?>/gi, '');
+                                content = content.replace(/<br\s*\/?>\s*/gi, ' ');
                                 contentParts.push(content);
                                 // 隐藏元素
                                 currentElem.style.display = 'none';
@@ -284,7 +294,7 @@
                         } else {
                             // 没有段落编号的P或BLOCKQUOTE，收集其内容
                             shouldCollect = true;
-                            let content = currentElem.innerHTML.replace(/<br\s*\/?>/gi, '');
+                            let content = currentElem.innerHTML.replace(/<br\s*\/?>\s*/gi, ' ');
                             contentParts.push(content);
                             currentElem.style.display = 'none';
                             currentElem.setAttribute('data-hidden-by-merge', 'true');
@@ -299,8 +309,8 @@
                     topElem.innerHTML += contentParts.join('');
                 }
 
-                // 移除顶级段落内部的所有<br>标签，使内容连续显示
-                topElem.innerHTML = topElem.innerHTML.replace(/<br\s*\/?>/gi, '');
+                // 移除顶级段落内部的所有<br>标签和紧随其后的换行符，使内容连续显示
+                topElem.innerHTML = topElem.innerHTML.replace(/<br\s*\/?>\s*/gi, ' ');
 
                 // 将顶级段落内的所有块级元素改为行内元素
                 topElem.querySelectorAll('ul, ol, li, div, p, blockquote').forEach(blockElem => {
@@ -318,13 +328,47 @@
                     elem.style.paddingLeft = '0';
                 });
             });
+
+            // 兜底处理：对于所有未被合并的子段落（孤立子段落，没有对应的顶级段落）
+            // 也要移除其中的<br>标签，使其显示为连续文本
+            document.querySelectorAll('p[id^="pn-"], blockquote[id^="pn-"]').forEach(elem => {
+                // 跳过已经被合并处理的元素
+                if (!elem.hasAttribute('data-merged-content') && !elem.hasAttribute('data-hidden-by-merge')) {
+                    if (elem.innerHTML.includes('<br')) {
+                        // 保存原始内容以便恢复
+                        elem.setAttribute('data-original-br-content', elem.innerHTML);
+                        // 移除<br>标签和换行符
+                        elem.innerHTML = elem.innerHTML.replace(/<br\s*\/?>\s*/gi, ' ');
+                        // 标记为已处理
+                        elem.setAttribute('data-br-removed', 'true');
+                    }
+                }
+            });
         }
+    }
+
+    /**
+     * 清理所有<br>标签后面的换行符
+     * 防止在启用white-space: pre-line的元素中出现双重换行
+     */
+    function cleanupBrTags() {
+        // 查找所有可能包含<br>标签的元素
+        document.querySelectorAll('p, blockquote, div').forEach(elem => {
+            // 只处理包含<br>标签的元素
+            if (elem.innerHTML.includes('<br')) {
+                // 移除<br>标签后的换行符和空白字符，但保留<br>标签本身
+                elem.innerHTML = elem.innerHTML.replace(/(<br\s*\/?>)\s+/gi, '$1');
+            }
+        });
     }
 
     /**
      * 初始化配置面板
      */
     function init() {
+        // 清理<br>标签后的换行符
+        cleanupBrTags();
+
         // 生成配置面板HTML
         generateSettingsPanel();
 

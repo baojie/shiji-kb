@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五帝本纪 - 三家注行下展示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Serif SC', 'Source Han Serif SC', serif;
+            background: #faf8f0;
+            color: #3d3326;
+            line-height: 2;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #8B4513;
+            text-align: center;
+            border-bottom: 3px solid #e0d8cc;
+            padding-bottom: 20px;
+        }
+
+        /* 段落样式 */
+        .paragraph-block {
+            background: white;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .paragraph-text {
+            font-size: 1.2em;
+            line-height: 2.2;
+            text-indent: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* 注释锚点 - 上标编号 */
+        .note-anchor {
+            display: inline-block;
+            color: #c0504d;
+            font-size: 0.7em;
+            vertical-align: super;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 2px;
+            padding: 0 3px;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+        .note-anchor:hover {
+            background: #fff3cd;
+            color: #8B4513;
+        }
+        .note-anchor.highlighted {
+            background: #ffd700;
+            color: #8B4513;
+        }
+
+        /* 注释区域 */
+        .notes-section {
+            border-top: 2px solid #e0d8cc;
+            padding-top: 20px;
+            margin-top: 10px;
+        }
+        .note-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f7f0;
+            border-radius: 5px;
+            border-left: 4px solid #c0a060;
+        }
+        .note-item.highlighted {
+            background: #fff8dc;
+            border-left-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+        .note-number {
+            display: inline-block;
+            color: #c0504d;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-right: 8px;
+            min-width: 20px;
+        }
+        .note-context {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .note-context .anchor {
+            color: #8B4513;
+            font-weight: bold;
+            font-style: normal;
+        }
+        .note-content {
+            margin-top: 8px;
+        }
+        .note-entry {
+            margin-bottom: 12px;
+            padding-left: 20px;
+        }
+        .note-source {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 8px;
+            margin-bottom: 5px;
+        }
+        .jijie {
+            background: #26a269;
+            color: white;
+        }
+        .suoyin {
+            background: #ff1493;
+            color: white;
+        }
+        .zhengyi {
+            background: #966;
+            color: white;
+        }
+        .note-text {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: #555;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* 控制面板 */
+        .control-panel {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 248, 240, 0.95);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .control-panel h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: #8B4513;
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 5px 15px;
+            border: 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .filter-btn.jijie-filter {
+            border-color: #26a269;
+            color: #26a269;
+            background: white;
+        }
+        .filter-btn.jijie-filter.active {
+            background: #26a269;
+            color: white;
+        }
+        .filter-btn.suoyin-filter {
+            border-color: #ff1493;
+            color: #ff1493;
+            background: white;
+        }
+        .filter-btn.suoyin-filter.active {
+            background: #ff1493;
+            color: white;
+        }
+        .filter-btn.zhengyi-filter {
+            border-color: #966;
+            color: #966;
+            background: white;
+        }
+        .filter-btn.zhengyi-filter.active {
+            background: #966;
+            color: white;
+        }
+        .filter-btn.all-filter {
+            border-color: #8B4513;
+            color: #8B4513;
+            background: white;
+        }
+        .filter-btn.all-filter.active {
+            background: #8B4513;
+            color: white;
+        }
+
+        /* 隐藏样式 */
+        .note-entry.hidden {
+            display: none;
+        }
+        .note-item.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="control-panel">
+            <h3>注释筛选</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn all-filter active" onclick="filterNotes('all')">全部显示</button>
+                <button class="filter-btn jijie-filter" onclick="filterNotes('jijie')">仅集解</button>
+                <button class="filter-btn suoyin-filter" onclick="filterNotes('suoyin')">仅索隐</button>
+                <button class="filter-btn zhengyi-filter" onclick="filterNotes('zhengyi')">仅正义</button>
+            </div>
+        </div>
+
+        <h1>五帝本纪</h1>
+
+        <div id="content">
+            <!-- 内容将由JavaScript动态生成 -->
+        </div>
+    </div>
+
+    <script>
+        let currentFilter = 'all';
+
+        // 加载数据并渲染
+        async function loadAndRender() {
+            try {
+                console.log('开始加载数据...');
+
+                const notesResponse = await fetch('../../data/notes/001-notes.json');
+                console.log('notes响应状态:', notesResponse.status);
+                if (!notesResponse.ok) {
+                    throw new Error(`加载notes失败: ${notesResponse.status}`);
+                }
+                const data = await notesResponse.json();
+                console.log('notes加载成功，共', data.notes.length, '条注释');
+
+                // 加载原文
+                const textResponse = await fetch('../../docs/original_text/001_五帝本纪.txt');
+                console.log('原文响应状态:', textResponse.status);
+                if (!textResponse.ok) {
+                    throw new Error(`加载原文失败: ${textResponse.status}`);
+                }
+                const originalText = await textResponse.text();
+                console.log('原文加载成功，长度:', originalText.length);
+
+                renderContent(originalText, data.notes);
+            } catch (error) {
+                console.error('加载失败:', error);
+                document.getElementById('content').innerHTML =
+                    `<div style="color: #999; text-align: center; padding: 40px;">
+                        <p style="color: #c0504d; font-size: 1.2em; margin-bottom: 10px;">内容加载失败</p>
+                        <p style="font-size: 0.9em;">错误信息: ${error.message}</p>
+                        <p style="font-size: 0.9em; margin-top: 20px;">
+                            请确保已启动本地服务器：<br>
+                            <code style="background: #f0f0f0; padding: 5px 10px; border-radius: 3px;">./labs/prototypes/serve.sh</code>
+                        </p>
+                    </div>`;
+            }
+        }
+
+        function renderContent(originalText, notes) {
+            const container = document.getElementById('content');
+
+            // 将原文按段落分割
+            const paragraphs = originalText.split('\n').filter(p => p.trim());
+            console.log('段落总数:', paragraphs.length);
+            console.log('注释总数:', notes.length);
+
+            // 构建段落和注释的HTML
+            let html = '';
+            let noteCounter = 1;
+            let matchedNotesCount = 0;
+
+            // 为每个段落创建一个block
+            paragraphs.forEach((paragraph, pIndex) => {
+                if (pIndex === 0) {
+                    // 跳过标题
+                    return;
+                }
+
+                let paragraphHtml = paragraph;
+                let paragraphNotes = [];
+
+                // 找到这个段落中的所有注释位置
+                notes.forEach(note => {
+                    // 跳过没有定位信息的注释
+                    if (!note.before_context && !note.after_context && !note.anchor_text) return;
+
+                    let matched = false;
+                    let position = -1;
+
+                    // 方法1: 尝试匹配完整的context
+                    if (note.before_context && note.after_context) {
+                        const fullContext = note.before_context + note.after_context;
+                        if (paragraph.includes(fullContext)) {
+                            matched = true;
+                            position = paragraph.indexOf(fullContext);
+                        }
+                    }
+
+                    // 方法2: 尝试匹配before_context
+                    if (!matched && note.before_context && paragraph.includes(note.before_context)) {
+                        matched = true;
+                        position = paragraph.indexOf(note.before_context);
+                    }
+
+                    // 方法3: 尝试匹配anchor_text
+                    if (!matched && note.anchor_text && paragraph.includes(note.anchor_text)) {
+                        matched = true;
+                        position = paragraph.indexOf(note.anchor_text);
+                    }
+
+                    // 方法4: 尝试匹配after_context（最不精确）
+                    if (!matched && note.after_context && paragraph.includes(note.after_context)) {
+                        matched = true;
+                        position = paragraph.indexOf(note.after_context);
+                    }
+
+                    if (matched) {
+                        paragraphNotes.push({
+                            note: note,
+                            number: noteCounter++,
+                            position: position
+                        });
+                        matchedNotesCount++;
+                    }
+                });
+
+                // 按位置排序（从后往前，避免替换位置错乱）
+                paragraphNotes.sort((a, b) => b.position - a.position);
+
+                // 在正文中插入注释编号（从后往前，避免位置偏移）
+                paragraphNotes.forEach(item => {
+                    let insertText = `<span class="note-anchor" data-note="${item.number}">[${item.number}]</span>`;
+                    let insertPosition = -1;
+
+                    // 优先使用anchor_text定位
+                    if (item.note.anchor_text && paragraphHtml.includes(item.note.anchor_text)) {
+                        const anchorPos = paragraphHtml.lastIndexOf(item.note.anchor_text);
+                        insertPosition = anchorPos + item.note.anchor_text.length;
+                    }
+                    // 其次使用before_context
+                    else if (item.note.before_context && paragraphHtml.includes(item.note.before_context)) {
+                        const beforePos = paragraphHtml.lastIndexOf(item.note.before_context);
+                        insertPosition = beforePos + item.note.before_context.length;
+                    }
+
+                    if (insertPosition !== -1) {
+                        paragraphHtml =
+                            paragraphHtml.substring(0, insertPosition) +
+                            insertText +
+                            paragraphHtml.substring(insertPosition);
+                    }
+                });
+
+                // 如果该段落有注释，创建完整的段落块
+                if (paragraphNotes.length > 0) {
+                    html += '<div class="paragraph-block">';
+                    html += `<div class="paragraph-text">${paragraphHtml}</div>`;
+                    html += '<div class="notes-section">';
+
+                    // 恢复正序
+                    paragraphNotes.reverse();
+
+                    paragraphNotes.forEach(item => {
+                        const note = item.note;
+                        html += `<div class="note-item" data-note="${item.number}">`;
+                        html += `<span class="note-number">[${item.number}]</span>`;
+
+                        if (note.before_context || note.after_context) {
+                            html += '<div class="note-context">';
+                            if (note.before_context) html += `<span>${note.before_context}</span>`;
+                            if (note.anchor_text) html += `<span class="anchor">${note.anchor_text}</span>`;
+                            if (note.after_context) html += `<span>${note.after_context}</span>`;
+                            html += '</div>';
+                        }
+
+                        html += '<div class="note-content">';
+                        note.items.forEach(item => {
+                            html += `<div class="note-entry" data-source="${item.source}">`;
+                            html += `<span class="note-source ${item.source}">${item.label}</span>`;
+                            html += `<span class="note-text">${item.text}</span>`;
+                            html += '</div>';
+                        });
+                        html += '</div>';
+                        html += '</div>';
+                    });
+
+                    html += '</div>';
+                    html += '</div>';
+                } else {
+                    // 没有注释的段落
+                    html += `<div class="paragraph-block"><div class="paragraph-text">${paragraphHtml}</div></div>`;
+                }
+            });
+
+            container.innerHTML = html;
+            console.log('渲染完成，共匹配', matchedNotesCount, '条注释');
+
+            // 添加点击事件
+            addClickEvents();
+        }
+
+        function addClickEvents() {
+            // 点击anchor高亮对应的note
+            document.querySelectorAll('.note-anchor').forEach(anchor => {
+                anchor.addEventListener('click', function() {
+                    const noteNum = this.getAttribute('data-note');
+
+                    // 移除所有高亮
+                    document.querySelectorAll('.note-anchor.highlighted').forEach(el =>
+                        el.classList.remove('highlighted'));
+                    document.querySelectorAll('.note-item.highlighted').forEach(el =>
+                        el.classList.remove('highlighted'));
+
+                    // 添加高亮
+                    this.classList.add('highlighted');
+                    const noteItem = document.querySelector(`.note-item[data-note="${noteNum}"]`);
+                    if (noteItem) {
+                        noteItem.classList.add('highlighted');
+                        noteItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            });
+
+            // 点击note编号高亮对应的anchor
+            document.querySelectorAll('.note-number').forEach(num => {
+                num.addEventListener('click', function() {
+                    const noteNum = this.parentElement.getAttribute('data-note');
+
+                    // 移除所有高亮
+                    document.querySelectorAll('.note-anchor.highlighted').forEach(el =>
+                        el.classList.remove('highlighted'));
+                    document.querySelectorAll('.note-item.highlighted').forEach(el =>
+                        el.classList.remove('highlighted'));
+
+                    // 添加高亮
+                    this.parentElement.classList.add('highlighted');
+                    const anchor = document.querySelector(`.note-anchor[data-note="${noteNum}"]`);
+                    if (anchor) {
+                        anchor.classList.add('highlighted');
+                        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            });
+        }
+
+        function filterNotes(type) {
+            currentFilter = type;
+
+            // 更新按钮状态
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.filter-btn.${type === 'all' ? 'all-filter' : type + '-filter'}`).classList.add('active');
+
+            // 显示/隐藏注释
+            document.querySelectorAll('.note-entry').forEach(entry => {
+                const source = entry.getAttribute('data-source');
+                if (type === 'all' || source === type) {
+                    entry.classList.remove('hidden');
+                } else {
+                    entry.classList.add('hidden');
+                }
+            });
+
+            // 隐藏没有可见注释的note-item
+            document.querySelectorAll('.note-item').forEach(item => {
+                const visibleEntries = item.querySelectorAll('.note-entry:not(.hidden)');
+                if (visibleEntries.length === 0) {
+                    item.classList.add('hidden');
+                } else {
+                    item.classList.remove('hidden');
+                }
+            });
+        }
+
+        // 页面加载时执行
+        loadAndRender();
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五帝本纪 - 三家注侧边栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Serif SC', 'Source Han Serif SC', serif;
+            background: #faf8f0;
+            color: #3d3326;
+            line-height: 2;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 40px;
+            padding: 40px 20px;
+        }
+        .main-content {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #8B4513;
+            text-align: center;
+            border-bottom: 2px solid #e0d8cc;
+            padding-bottom: 20px;
+        }
+        .text-body {
+            font-size: 1.1em;
+            text-indent: 2em;
+        }
+        .text-body p {
+            margin-bottom: 1.5em;
+        }
+
+        /* 侧边栏样式 */
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            font-size: 1.3em;
+            color: #8B4513;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 2px solid #e0d8cc;
+        }
+        .notes-list {
+            background: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .note-item {
+            padding: 20px;
+            border-bottom: 1px solid #f0ece4;
+        }
+        .note-item:last-child {
+            border-bottom: none;
+        }
+        .note-anchor {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .note-content {
+            margin-top: 10px;
+        }
+        .note-source {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 8px;
+            margin-bottom: 5px;
+        }
+        .jijie {
+            background: #26a269;
+            color: white;
+        }
+        .suoyin {
+            background: #ff1493;
+            color: white;
+        }
+        .zhengyi {
+            background: #966;
+            color: white;
+        }
+        .note-text {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* 滚动条样式 */
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .sidebar::-webkit-scrollbar-track {
+            background: #f0ece4;
+            border-radius: 4px;
+        }
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #c0a060;
+            border-radius: 4px;
+        }
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #a08050;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: static;
+                max-height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>五帝本纪</h1>
+            <div class="text-body">
+                <p>黄帝者，少典之子，姓公孙，名曰轩辕。生而神灵，弱而能言，幼而徇齐，长而敦敏，成而聪明。轩辕之时，神农氏世衰。诸侯相侵伐，暴虐百姓，而神农氏弗能征。於是轩辕乃习用干戈，以征不享，诸侯咸来宾从。而蚩尤最为暴，莫能伐。炎帝欲侵陵诸侯，诸侯咸归轩辕。轩辕乃修德振兵，治五气，蓺五种，抚万民，度四方，教熊罴貔貅貙虎，以与炎帝战於阪泉之野。三战，然後得其志。蚩尤作乱，不用帝命。於是黄帝乃徵师诸侯，与蚩尤战於涿鹿之野，遂禽杀蚩尤。而诸侯咸尊轩辕为天子，代神农氏，是为黄帝。天下有不顺者，黄帝从而征之，平者去之，披山通道，未尝宁居。</p>
+                <p>东至于海，登丸山，及岱宗。西至于空桐，登鸡头。南至于江，登熊、湘。北逐荤粥，合符釜山，而邑于涿鹿之阿。迁徙往来无常处，以师兵为营卫。官名皆以云命，为云师。置左右大监，监于万国。万国和，而鬼神山川封禅与为多焉。获宝鼎，迎日推策。举风后、力牧、常先、大鸿以治民。顺天地之纪，幽明之占，死生之说，存亡之难。时播百穀草木，淳化鸟兽蟲蛾，旁罗日月星辰水波土石金玉，劳勤心力耳目，节用水火材物。有土德之瑞，故号黄帝。</p>
+                <p>黄帝二十五子，其得姓者十四人。</p>
+                <p>黄帝居轩辕之丘，而娶於西陵之女，是为嫘祖。嫘祖为黄帝正妃，生二子，其後皆有天下：其一曰玄嚣，是为青阳，青阳降居江水；其二曰昌意，降居若水。昌意娶蜀山氏女，曰昌仆，生高阳，高阳有圣德焉。黄帝崩，葬桥山。其孙昌意之子高阳立，是为帝颛顼也。</p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h2>三家注</h2>
+            <div class="notes-list" id="notesList">
+                <!-- 注释将由JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 加载三家注数据
+        async function loadNotes() {
+            try {
+                const response = await fetch('../../data/notes/001-notes.json');
+                const data = await response.json();
+                displayNotes(data.notes);
+            } catch (error) {
+                console.error('加载注释失败:', error);
+                document.getElementById('notesList').innerHTML =
+                    '<div style="padding: 20px; color: #999;">注释加载失败</div>';
+            }
+        }
+
+        function displayNotes(notes) {
+            const container = document.getElementById('notesList');
+
+            // 只显示前20条注释作为示例
+            const displayNotes = notes.slice(0, 20);
+
+            container.innerHTML = displayNotes.map(note => {
+                // 构建context提示
+                let contextHtml = '';
+                if (note.before_context || note.after_context) {
+                    contextHtml = `
+                        <div class="note-anchor">
+                            ${note.before_context ? `<span style="color: #999;">${note.before_context}</span>` : ''}
+                            ${note.anchor_text ? `<span style="color: #8B4513; font-weight: bold;">${note.anchor_text}</span>` : ''}
+                            ${note.after_context ? `<span style="color: #999;">${note.after_context}</span>` : ''}
+                        </div>
+                    `;
+                } else if (note.anchor_text) {
+                    contextHtml = `<div class="note-anchor">📍 ${note.anchor_text}</div>`;
+                }
+
+                return `
+                    <div class="note-item">
+                        ${contextHtml}
+                        <div class="note-content">
+                            ${note.items.map(item => `
+                                <div style="margin-bottom: 15px;">
+                                    <span class="note-source ${item.source}">${item.label}</span>
+                                    <div class="note-text">${item.text}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 页面加载时加载注释
+        loadNotes();
+    </script>
+</body>
+</html>
