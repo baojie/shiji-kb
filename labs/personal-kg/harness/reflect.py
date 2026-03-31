@@ -117,10 +117,14 @@ def reflect_session(
                 round_errors += len(errors)
                 accumulated_errors.extend(errors)
 
-                # Re-extract with current (possibly updated) SKILL
+                # Re-extract with error hints appended to input
+                error_hints = "；".join(e.get("detail", "") for e in errors if e.get("detail"))
+                re_input = {"text": text}
+                if error_hints:
+                    re_input["correction_hints"] = f"上次提取有以下错误，请修正：{error_hints}"
                 try:
                     re_result = model.chat_json(
-                        json.dumps({"text": text}, ensure_ascii=False),
+                        json.dumps(re_input, ensure_ascii=False),
                         system=extract_skill,
                     )
                 except Exception as exc:

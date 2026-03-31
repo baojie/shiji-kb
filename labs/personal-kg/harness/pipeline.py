@@ -74,16 +74,18 @@ def _step_clean(
             system=skill,
         )
         if isinstance(result, dict) and "cleaned" in result:
-            cleaned.extend(result["cleaned"])
+            batch_cleaned = result["cleaned"]
+            if len(batch_cleaned) == len(batch):
+                cleaned.extend(batch_cleaned)
+            else:
+                # 行数不匹配：逐行对齐，多余丢弃，不足用原文补
+                log.warning("Clean batch %d line count mismatch (%d vs %d), aligning",
+                            i // batch_size, len(batch_cleaned), len(batch))
+                for j in range(len(batch)):
+                    cleaned.append(batch_cleaned[j] if j < len(batch_cleaned) else batch[j])
         else:
             log.warning("Clean batch %d parse failed, using originals", i // batch_size)
             cleaned.extend(batch)
-
-    # 如果行数对不上，用原文兜底
-    if len(cleaned) != len(lines):
-        log.warning("Cleaned line count mismatch (%d vs %d), using originals",
-                    len(cleaned), len(lines))
-        cleaned = lines[:]
 
     update_cleaned(conn, session_id, cleaned)
     log.info("Step2 clean: %d lines, %.1fs", len(lines), time.perf_counter() - t0)
@@ -118,8 +120,16 @@ def _step_segment(
 
         if isinstance(result, dict) and "segments" in result:
             for seg in result["segments"]:
-                start = int(seg.get("start", i))
-                end = int(seg.get("end", i + len(batch) - 1))
+                raw_start = int(seg.get("start", 0))
+                raw_end = int(seg.get("end", len(batch) - 1))
+                # 模型可能返回相对索引（从0开始）或绝对索引
+                # 如果 start < i，说明是相对索引，需要加偏移
+                if raw_start < i:
+                    raw_start += i
+                    raw_end += i
+                # 安全边界：不超过总行数
+                start = max(i, min(raw_start, len(lines) - 1))
+                end = max(start, min(raw_end, len(lines) - 1))
                 label = seg.get("topic_hint", "")
                 sid = insert_segment(conn, session_id, seg_idx, start, end, label)
                 segment_ids.append(sid)
@@ -262,6 +272,12 @@ def _step_track_persons(
 # Step 5 — Build relations (rule-based, no model call)
 # ---------------------------------------------------------------------------
 
+# 过滤过于泛化的实体名（不进入关系表）
+_NOISE_NAMES = {"他", "她", "它", "他们", "她们", "客户", "同事", "财务", "朋友",
+                "说", "问", "做", "看", "听", "改", "想", "走", "坐", "站",
+                "吃", "喝", "写", "跑", "叫", "算", "排队", "叫住"}
+
+
 def _step_relations(
     session_id: int,
     seg_entities: dict[int, list[dict]],
@@ -271,8 +287,11 @@ def _step_relations(
     t0 = time.perf_counter()
     total = 0
     for seg_id, entities in seg_entities.items():
-        persons = [e["name"] for e in entities if e.get("type") == "person"]
-        activities = [e["name"] for e in entities if e.get("type") == "activity"]
+        persons = [e["name"] for e in entities
+                   if e.get("type") == "person" and e["name"] not in _NOISE_NAMES]
+        activities = [e["name"] for e in entities
+                      if e.get("type") == "activity" and e["name"] not in _NOISE_NAMES
+                      and len(e["name"]) >= 2]
 
         # 人物共同出现
         for i in range(len(persons)):

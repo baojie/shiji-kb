@@ -20,7 +20,7 @@ pipeline:
     enabled: true            # 音频文件自动触发，txt 文件跳过
   clean:
     enabled: true
-    batch_size: 30          # 每批行数，2B模型上下文有限
+    batch_size: 15          # 每批行数，2B模型较小批次更稳定
   segment:
     enabled: true
     max_lines_per_segment: 30
