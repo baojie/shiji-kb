@@ -133,7 +133,30 @@ def main():
         rules = [l.strip() for l in content.splitlines() if l.strip().startswith("- [v")]
         w(f"  {md.name:<30} {md.stat().st_size} bytes  {len(rules)} 禁止规则")
 
-    # ── 最新会话的错误日志（如有）────────────────────────
+    # ── emotion 全量（方便检查质量）───────────────────────
+    w("")
+    w("=== emotion 实体（全部）===")
+    rows = q(conn,
+        "SELECT e.name, em.context FROM entity_mentions em"
+        " JOIN entities e ON e.id=em.entity_id"
+        " WHERE e.type='emotion'"
+        " AND em.segment_id IN (SELECT id FROM segments WHERE session_id=(SELECT MAX(id) FROM sessions))")
+    for r in rows:
+        w(f"  {r['name']:<12} | {(r['context'] or '')[:50]}")
+
+    # ── decision/question 重叠检查 ───────────────────────
+    w("")
+    w("=== decision 与 question 重叠（同名实体）===")
+    rows = q(conn,
+        "SELECT d.name FROM entities d JOIN entities q"
+        " ON d.name=q.name AND d.type='decision' AND q.type='question'")
+    if rows:
+        for r in rows:
+            w(f"  ⚠ 重叠: {r['name']}")
+    else:
+        w("  (无重叠)")
+
+    # ── 最新 session evidence 样本 ─────────────────────
     w("")
     w("=== 最新 session 的实体 evidence 样本（随机10条）===")
     rows = q(conn,

@@ -227,11 +227,17 @@ def _step_extract(
 
         seg_entities[seg["id"]] = entities
 
-        # 写入DB
+        # 写入DB（过滤低质量实体）
         for ent in entities:
             etype = ent.get("type", "")
             ename = ent.get("name", "").strip()
             if not etype or not ename:
+                continue
+            # activity 过短（≤2字）很可能是原子动词，直接丢弃
+            if etype == "activity" and len(ename) <= 2:
+                continue
+            # person "我" 是第一人称叙述者，不入库
+            if etype == "person" and ename in {"我", "本人", "自己"}:
                 continue
             entity_id = upsert_entity(conn, ename, etype)
             insert_entity_mention(conn, entity_id, seg["id"], ent.get("evidence", ""))
