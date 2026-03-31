@@ -141,7 +141,9 @@ def reflect_session(
                         ename = ent.get("name", "").strip()
                         if not etype or not ename:
                             continue
-                        eid = upsert_entity(conn, ename, etype)
+                        # increment=False: 反思重新提取不累加 mention_count
+                        # 只有真正新出现的实体（INSERT 路径）才会从 1 开始计数
+                        eid = upsert_entity(conn, ename, etype, increment=False)
                         insert_entity_mention(conn, eid, seg["id"], ent.get("evidence", ""))
                     conn.commit()  # 确保每个修复的segment立即持久化
                     round_fixed += 1

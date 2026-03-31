@@ -254,18 +254,21 @@ def upsert_entity(
     name: str,
     etype: str,
     canonical_name: str | None = None,
+    *,
+    increment: bool = True,
 ) -> int:
     now = _now()
     existing = conn.execute(
         "SELECT id FROM entities WHERE name=? AND type=?", (name, etype)
     ).fetchone()
     if existing:
-        conn.execute(
-            "UPDATE entities SET mention_count=mention_count+1, last_seen=?"
-            " WHERE id=?",
-            (now, existing["id"]),
-        )
-        conn.commit()
+        if increment:
+            conn.execute(
+                "UPDATE entities SET mention_count=mention_count+1, last_seen=?"
+                " WHERE id=?",
+                (now, existing["id"]),
+            )
+            conn.commit()
         return existing["id"]
     cur = conn.execute(
         "INSERT INTO entities(name,type,canonical_name,first_seen,last_seen)"

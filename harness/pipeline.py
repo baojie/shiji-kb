@@ -94,6 +94,63 @@ def _step_clean(
 # Step 3 — Segment
 # ---------------------------------------------------------------------------
 
+def _normalize_segments(
+    raw_segs: list[dict],
+    batch_start: int,
+    batch_end: int,
+    log: logging.Logger,
+) -> list[tuple[int, int, str]]:
+    """
+    把模型返回的段列表规范化为不重叠、覆盖 [batch_start, batch_end] 的区间列表。
+    返回 [(start, end, label), ...]
+    """
+    result: list[tuple[int, int, str]] = []
+    seen_starts: set[int] = set()
+
+    for seg in raw_segs:
+        raw_start = int(seg.get("start", 0))
+        raw_end = int(seg.get("end", batch_end))
+        label = seg.get("topic_hint", "")
+
+        # 相对索引修正
+        if raw_start < batch_start:
+            raw_start += batch_start
+            raw_end += batch_start
+
+        # 边界钳制
+        start = max(batch_start, min(raw_start, batch_end))
+        end = max(start, min(raw_end, batch_end))
+
+        # 过滤重复起点（模型把多段压在同一行的情况）
+        if start in seen_starts:
+            log.warning("Duplicate segment start=%d, skipping", start)
+            continue
+        seen_starts.add(start)
+        result.append((start, end, label))
+
+    if not result:
+        return [(batch_start, batch_end, "未分段")]
+
+    # 排序
+    result.sort(key=lambda x: x[0])
+
+    # 填补空隙：若相邻段之间有行没被覆盖，用前一段的 end 延伸
+    merged: list[tuple[int, int, str]] = [result[0]]
+    for start, end, label in result[1:]:
+        prev_start, prev_end, prev_label = merged[-1]
+        if start > prev_end + 1:
+            # 有空隙，把前一段延伸到 start-1
+            merged[-1] = (prev_start, start - 1, prev_label)
+        merged.append((start, end, label))
+
+    # 确保最后一段覆盖到 batch_end
+    if merged[-1][1] < batch_end:
+        s, _, lbl = merged[-1]
+        merged[-1] = (s, batch_end, lbl)
+
+    return merged
+
+
 def _step_segment(
     session_id: int,
     lines: list[str],
@@ -108,39 +165,27 @@ def _step_segment(
     segment_ids: list[int] = []
     seg_idx = 0
 
-    # 分批送给模型，每批 max_lines 行
     i = 0
     while i < len(lines):
         batch = lines[i: i + max_lines]
+        batch_end = i + len(batch) - 1
         payload = json.dumps(
             {"lines": batch, "line_start_idx": i}, ensure_ascii=False
         )
         result = model.chat_json(payload, system=skill)
 
         if isinstance(result, dict) and "segments" in result:
-            for seg in result["segments"]:
-                raw_start = int(seg.get("start", 0))
-                raw_end = int(seg.get("end", len(batch) - 1))
-                # 模型可能返回相对索引（从0开始）或绝对索引
-                # 如果 start < i，说明是相对索引，需要加偏移
-                if raw_start < i:
-                    raw_start += i
-                    raw_end += i
-                # 安全边界：不超过总行数
-                start = max(i, min(raw_start, len(lines) - 1))
-                end = max(start, min(raw_end, len(lines) - 1))
-                label = seg.get("topic_hint", "")
-                sid = insert_segment(conn, session_id, seg_idx, start, end, label)
-                segment_ids.append(sid)
-                seg_idx += 1
-            # 下一批从当前批次末尾继续
-            i += len(batch)
+            segs = _normalize_segments(result["segments"], i, batch_end, log)
         else:
             log.warning("Segment batch at line %d parse failed, using full batch", i)
-            sid = insert_segment(conn, session_id, seg_idx, i, i + len(batch) - 1, "未分段")
+            segs = [(i, batch_end, "未分段")]
+
+        for start, end, label in segs:
+            sid = insert_segment(conn, session_id, seg_idx, start, end, label)
             segment_ids.append(sid)
             seg_idx += 1
-            i += len(batch)
+
+        i += len(batch)
 
     log.info("Step3 segment: %d segments, %.1fs", len(segment_ids), time.perf_counter() - t0)
     return segment_ids
