@@ -253,7 +253,7 @@ function convertNode(node, toTraditional) {
 | **异体字选择差异** | `"击"` OpenCC转`"擊"`，维基用`"撃"` | ❌ 不应加入 |
 | **文本版本差异** | `"九年"` vs `"一年"` | ❌ 不应加入 |
 
-### 3.2 三次尝试的完整历程
+### 3.2 五次尝试的完整历程
 
 #### 尝试1：自动逐字比对（失败）
 
@@ -386,6 +386,95 @@ def extract_variants_fuzzy():
 - ✅ **无单字规则**：避免过度匹配
 - ✅ **100%覆盖率**：修复所有183个真实错误
 - ✅ **文件重命名**：`custom-variants.json` → `s2t-custom-variants.json`（明确用途）
+
+---
+
+#### 尝试5：词频统计+OpenCC验证（正在进行 → v4.0）
+
+**日期**：2026-04-01
+
+**动机**：v3.0虽然修复了183个错误，但覆盖面仍有限（仅36条规则）。需要系统性地对**全部130章的所有词汇**进行完整覆盖。
+
+**方法**：
+
+1. **全文分词与词频统计**（[`scripts/build_complete_word_variants.py`](../scripts/build_complete_word_variants.py)）
+   ```
+   步骤1：对全部130章进行分词（jieba）
+   步骤2：统计所有词的出现频率
+   步骤3：对出现≥1次的词，提取其繁体形式
+          （方法：与archive/史記正文.繁体.txt对照）
+   步骤4：筛选出繁体≠简体的词
+   ```
+
+2. **结果**：
+   - 总词数（含重复）：190,119词
+   - 唯一词数：65,916词
+   - 成功映射：38,884词
+   - **繁简不同（需要转换）：10,028词**
+
+3. **OpenCC转换验证**（[`scripts/validate_opencc_conversion.py`](../scripts/validate_opencc_conversion.py)）
+   ```python
+   对10,028个词逐一验证：
+   - 用OpenCC（s2t）转换简体词
+   - 对比OpenCC结果与期望繁体
+   - 记录转换错误的词条
+   ```
+
+4. **验证结果**：
+   - **转换正确**：8,865词（88%）
+   - **转换错误**：1,163词（11%）⚠️
+
+   **错误类型分布**：
+
+   | 错误类型 | 数量 | 占比 | 示例 |
+   |---------|------|------|------|
+   | **為→爲** | 983词 | 84.5% | 以为→期望"以為"，OpenCC给"以爲" |
+   | **其他** | 111词 | 9.5% | 齐栗、游孙、扑师武等 |
+   | **于→於** | 38词 | 3.3% | 迁于→期望"遷于"，OpenCC给"遷於" |
+   | **辟→闢** | 15词 | 1.3% | 尧辟位→期望"堯辟位"，OpenCC给"堯闢位" |
+   | **咸→鹹** | 4词 | 0.3% | 咸归→期望"咸歸"，OpenCC给"鹹歸"（误转为食盐） |
+   | **采→採** | 4词 | 0.3% | 采有国→期望"采有國"，OpenCC给"採有國" |
+   | **余→餘** | 4词 | 0.3% | 余欲观→期望"余欲觀"，OpenCC给"餘欲觀" |
+   | **干→乾/幹** | 4词 | 0.3% | 杨干→期望"楊干"，OpenCC给"楊乾/楊幹" |
+
+**关键发现**：
+
+1. **"為"字异体问题是主要问题**（84.5%）
+   - OpenCC将"为"转为"爲"，但维基文库使用"為"
+   - 这是OpenCC默认配置与维基文库编辑偏好的差异
+   - 涉及983个词，如"以为"、"为帝"、"最为"等
+
+2. **"于"字转换问题**（3.3%）
+   - OpenCC倾向将"于"转为"於"
+   - 在人名/地名中应保持"于"
+   - 例："迁于"应为"遷于"而非"遷於"
+
+3. **专有名词误转**（1.9%）
+   - "咸"（都、皆）误转为"鹹"（食盐）
+   - "采"（采邑）误转为"採"（采摘）
+   - "余"（第一人称）误转为"餘"（剩余）
+   - "辟"（让位）误转为"闢"（开辟）
+
+**生成文件**：
+- [`doc/analysis/word/01_all_words.txt`](../doc/analysis/word/01_all_words.txt) - 全部分词结果（1.4M）
+- [`doc/analysis/word/02_word_frequency.json`](../doc/analysis/word/02_word_frequency.json) - 词频统计（1.1M）
+- [`doc/analysis/word/03_word_variants_raw.json`](../doc/analysis/word/03_word_variants_raw.json) - 原始映射（6.0M）
+- [`doc/analysis/word/04_s2t_variants_final.json`](../doc/analysis/word/04_s2t_variants_final.json) - 10,028个繁简词对（243K）
+- [`doc/analysis/word/05_opencc_validation.json`](../doc/analysis/word/05_opencc_validation.json) - 完整验证结果（1.5M）
+- [`doc/analysis/word/06_need_custom_variants.json`](../doc/analysis/word/06_need_custom_variants.json) - 1,163个需补充词条（29K）
+- [`doc/analysis/word/06_need_custom_variants.md`](../doc/analysis/word/06_need_custom_variants.md) - 可读格式（39K）
+
+**下一步**：
+1. 分析1,163个转换错误词条
+2. 判断哪些属于"OpenCC缺陷"，哪些属于"编辑偏好差异"
+3. 构建v4.0词表（预计100-200条新规则）
+4. 重点处理"為/爲"异体字选择问题
+
+**方法论价值**：
+- ✅ **系统性覆盖**：不依赖人工发现，穷尽所有词汇
+- ✅ **数据驱动**：基于全文65,916个唯一词的完整统计
+- ✅ **可验证**：每个转换错误都有明确的"期望值"和"OpenCC结果"对比
+- ✅ **可扩展**：同样方法可应用于其他古籍
 
 ---
 
@@ -711,6 +800,12 @@ python scripts/create_v3_final.py
    - [`doc/spec/繁简映射数据.json`](../doc/spec/繁简映射数据.json) - 机器可读的映射数据
    - [`doc/spec/真实错误分析.json`](../doc/spec/真实错误分析.json) - 183个错误详细数据
 
+4. **v4.0词频分析**（2026-04-01）：
+   - [`doc/analysis/word/04_s2t_variants_final.json`](../doc/analysis/word/04_s2t_variants_final.json) - 10,028个繁简词对
+   - [`doc/analysis/word/05_opencc_validation.json`](../doc/analysis/word/05_opencc_validation.json) - OpenCC验证结果
+   - [`doc/analysis/word/06_need_custom_variants.json`](../doc/analysis/word/06_need_custom_variants.json) - 1,163个OpenCC转换错误词条
+   - [`doc/analysis/word/06_need_custom_variants.md`](../doc/analysis/word/06_need_custom_variants.md) - 可读格式
+
 ### 8.2 技术文档
 
 - [OpenCC.js 文档](https://github.com/nk2028/opencc-js)
@@ -750,9 +845,11 @@ python scripts/create_v3_final.py
 **核心文件**：
 - `docs/js/simp-trad-converter.js` - 繁简转换核心
 - `docs/data/s2t-custom-variants.json` - 自定义词表 v3.0
-- `scripts/analyze_simp_trad_mapping.py` - 统计分析工具
-- `scripts/find_actual_errors.py` - 错误识别工具
-- `scripts/create_v3_final.py` - 词表生成工具
+- `scripts/analyze_simp_trad_mapping.py` - 统计分析工具（v3.0）
+- `scripts/find_actual_errors.py` - 错误识别工具（v3.0）
+- `scripts/create_v3_final.py` - 词表生成工具（v3.0）
+- `scripts/build_complete_word_variants.py` - 词频统计与映射构建（v4.0）
+- `scripts/validate_opencc_conversion.py` - OpenCC转换验证（v4.0）
 - `doc/spec/custom-variants更新日志.md` - 版本变更记录
 
 **归档文件**：
@@ -773,16 +870,21 @@ python scripts/create_v3_final.py
 
 ### 10.2 成功的做法
 
-| 尝试 | 方法 | 规则数 | 成功原因 |
-|-----|------|-------|---------|
+| 尝试 | 方法 | 规则数/数据量 | 成功原因 |
+|-----|------|--------------|---------|
 | 尝试2 | 手动构建 | 32条 | 聚焦核心问题，精准解决 |
 | 尝试4 | 统计分析+精确错误识别 | 36条 | 基于577K字符统计，精确定位183个真实错误 |
+| 尝试5 | 词频统计+OpenCC验证 | 10,028词，发现1,163个错误 | 系统性覆盖全部词汇，穷尽OpenCC转换问题 |
 
-### 10.3 三个关键认识
+### 10.3 四个关键认识
 
 1. **文本版本差异** ≠ 繁简转换差异（尝试1的教训）
 2. **异体字选择差异** ≠ OpenCC缺陷（尝试3的教训）
 3. **维基文库不适合作为繁简词库的构建来源**
+4. **"為/爲"异体字差异是主要问题**（尝试5的发现）
+   - OpenCC与维基文库在"為/爲"选择上有系统性差异
+   - 占所有转换错误的84.5%（983/1,163）
+   - 需要判断是否作为"编辑偏好"而接受
 
 ### 10.4 方法论启示
 
@@ -797,7 +899,7 @@ python scripts/create_v3_final.py
 ---
 
 **创建日期**：2026-03-31
-**版本**：v2.0（融合SKILL_01f）
+**版本**：v2.1
 **作者**：Claude Code
-**最后更新**：2026-03-31
-**核心价值**：繁简词库构造方法论 + 失败案例分析 + v3.0最终解决方案
+**最后更新**：2026-04-01
+**核心价值**：繁简词库构造方法论 + 失败案例分析 + v3.0解决方案 + v4.0词频驱动方法
