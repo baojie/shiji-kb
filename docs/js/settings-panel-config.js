@@ -25,6 +25,15 @@
             onChange: function(enabled) {
                 updatePinyinDisplay(enabled);
             }
+        },
+        {
+            id: 'traditional-chinese',
+            label: '繁体显示',
+            storageKey: 'shiji-traditional-chinese',
+            defaultValue: false,  // 默认关闭（简体）
+            onChange: function(enabled) {
+                updateTraditionalChinese(enabled);
+            }
         }
     ];
 
@@ -104,6 +113,23 @@
             document.body.classList.remove('pinyin-off');
         } else {
             document.body.classList.add('pinyin-off');
+        }
+    }
+
+    /**
+     * 更新繁简体显示
+     */
+    function updateTraditionalChinese(enabled) {
+        // 繁简转换功能由 simp-trad-converter.js 实现
+        // 这里只是触发事件，让转换器知道需要切换
+        if (window.ShijiConverter) {
+            if (enabled) {
+                window.ShijiConverter.convertToTraditional();
+            } else {
+                window.ShijiConverter.convertToSimplified();
+            }
+        } else {
+            console.warn('[settings-panel] ShijiConverter 未加载');
         }
     }
 
