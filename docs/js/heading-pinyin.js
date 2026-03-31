@@ -55,17 +55,86 @@
   }
 
   /**
+   * 使用正则模式匹配特殊读音
+   * @param {string} text - 完整文本
+   * @param {number} startIndex - 开始位置
+   * @param {Function} pinyinFn - 拼音函数
+   * @returns {Object|null} 匹配结果 {text, pinyin, length, note} 或 null
+   */
+  function matchPattern(text, startIndex, pinyinFn) {
+    const substr = text.substring(startIndex);
+
+    // 模式1: 数词 + [余/馀] + 骑 (量词用法，读jì)
+    // 例如: 十骑、百骑、千骑、万骑、数十骑、十余骑
+    const qiPattern = /^([0-9一二三四五六七八九十百千万数]+[余馀]?)骑/;
+    const qiMatch = substr.match(qiPattern);
+    if (qiMatch) {
+      const fullText = qiMatch[0];  // 例如: "十骑"
+      const numText = qiMatch[1];   // 例如: "十"
+
+      try {
+        // 获取数词部分的拼音
+        const numPinyin = pinyinFn(numText, { type: 'array', toneType: 'symbol' });
+
+        return {
+          text: fullText,
+          pinyin: [...numPinyin, 'jì'],
+          length: fullText.length,
+          note: '量词用法：数词+骑，读jì（去声）'
+        };
+      } catch (e) {
+        console.warn('[heading-pinyin] 模式匹配失败:', e);
+      }
+    }
+
+    // 模式2: 数词 + [余/馀] + 乘 (量词用法，读shèng)
+    // 例如: 千乘、万乘、百乘
+    const chengPattern = /^([0-9一二三四五六七八九十百千万数]+[余馀]?)乘/;
+    const chengMatch = substr.match(chengPattern);
+    if (chengMatch) {
+      const fullText = chengMatch[0];
+      const numText = chengMatch[1];
+
+      try {
+        const numPinyin = pinyinFn(numText, { type: 'array', toneType: 'symbol' });
+
+        return {
+          text: fullText,
+          pinyin: [...numPinyin, 'shèng'],
+          length: fullText.length,
+          note: '量词用法：数词+乘，读shèng（去声）'
+        };
+      } catch (e) {
+        console.warn('[heading-pinyin] 模式匹配失败:', e);
+      }
+    }
+
+    return null;
+  }
+
+  /**
    * 检查从指定位置开始是否匹配特殊读音词
    * @param {string} text - 完整文本
    * @param {number} startIndex - 开始位置
-   * @returns {Object|null} 匹配结果 {text, pinyin, length} 或 null
+   * @param {Function} pinyinFn - 拼音函数（用于模式匹配）
+   * @returns {Object|null} 匹配结果 {text, pinyin, length, note} 或 null
    */
-  function matchSpecialPronunciation(text, startIndex) {
+  function matchSpecialPronunciation(text, startIndex, pinyinFn) {
     if (!specialPronunciations) {
       console.warn('[heading-pinyin] specialPronunciations 未加载');
       return null;
     }
 
+    // 优先尝试正则模式匹配
+    if (pinyinFn) {
+      const patternMatch = matchPattern(text, startIndex, pinyinFn);
+      if (patternMatch) {
+        console.log('[heading-pinyin] 模式匹配成功:', patternMatch.text, '->', patternMatch.pinyin.join(' '));
+        return patternMatch;
+      }
+    }
+
+    // 然后尝试词表精确匹配
     for (let entry of specialPronunciations) {
       const len = entry.text.length;
       if (startIndex + len <= text.length) {
@@ -113,8 +182,8 @@
             currentText = "";
           }
 
-          // 尝试匹配特殊读音词
-          const specialMatch = matchSpecialPronunciation(text, i);
+          // 尝试匹配特殊读音词（包括正则模式）
+          const specialMatch = matchSpecialPronunciation(text, i, pinyinFn);
 
           if (specialMatch) {
             // 找到特殊读音词，为整个词创建ruby标注

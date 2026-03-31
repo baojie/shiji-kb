@@ -1,7 +1,7 @@
 {
   "$schema": "特殊读音词表 v2.0",
-  "description": "史记特殊读音词汇（人工整理 + 史记正义提取）",
-  "version": "2.4",
+  "description": "史记特殊读音词汇（人工整理 + 史记正义提取）- v3.0 全面使用固定词组替代单字词条",
+  "version": "3.0.1",
   "lastUpdated": "2026-03-31",
   "note": "合并人工整理词表和史记正义提取词表，来自正义的词条在note中标注",
   "entries": [
@@ -17,6 +17,50 @@
       "note": "完整称号的特殊读音"
     },
     {
+      "text": "车骑将军",
+      "pinyin": [
+        "chē",
+        "jì",
+        "jiàng",
+        "jūn"
+      ],
+      "context": "官职",
+      "note": "汉代将军号，'车骑'指车兵和骑兵，'骑'读jì"
+    },
+    {
+      "text": "澹台灭明",
+      "pinyin": [
+        "tán",
+        "tái",
+        "miè",
+        "míng"
+      ],
+      "context": "人名",
+      "note": "孔子弟子，字子羽，复姓澹台"
+    },
+    {
+      "text": "殽函之固",
+      "pinyin": [
+        "xiáo",
+        "hán",
+        "zhī",
+        "gù"
+      ],
+      "context": "地名",
+      "note": "殽函险固，'殽'读xiáo"
+    },
+    {
+      "text": "骠骑将军",
+      "pinyin": [
+        "piào",
+        "qí",
+        "jiàng",
+        "jūn"
+      ],
+      "context": "官职",
+      "note": "官职名，'将'读jiàng（去声）"
+    },
+    {
       "text": "郦食其",
       "pinyin": [
         "lì",
@@ -25,6 +69,185 @@
       ],
       "context": "人名",
       "note": "汉初谋士，'食'在人名中读yì，'其'读jī"
+    },
+    {
+      "text": "骑都尉",
+      "pinyin": [
+        "jì",
+        "dū",
+        "wèi"
+      ],
+      "context": "官职",
+      "note": "'骑都尉'是汉代武官名，统领骑兵部队，'骑'读jì（去声）"
+    },
+    {
+      "text": "骑将军",
+      "pinyin": [
+        "jì",
+        "jiàng",
+        "jūn"
+      ],
+      "context": "官职",
+      "note": "'骑将军'是汉代将军号，如'骠骑将军'，'骑'读jì（去声）"
+    },
+    {
+      "text": "骑常侍",
+      "pinyin": [
+        "jì",
+        "cháng",
+        "shì"
+      ],
+      "context": "官职",
+      "note": "'骑常侍'是汉代侍从官名，'骑'读jì（去声）"
+    },
+    {
+      "text": "夏侯婴",
+      "pinyin": [
+        "xià",
+        "hóu",
+        "yīng"
+      ],
+      "context": "人名",
+      "note": "汉初大臣，复姓夏侯"
+    },
+    {
+      "text": "叔孙通",
+      "pinyin": [
+        "shū",
+        "sūn",
+        "tōng"
+      ],
+      "context": "人名",
+      "note": "汉初制礼大臣，复姓叔孙"
+    },
+    {
+      "text": "申屠嘉",
+      "pinyin": [
+        "shēn",
+        "tú",
+        "jiā"
+      ],
+      "context": "人名",
+      "note": "汉文帝时丞相，复姓申屠"
+    },
+    {
+      "text": "端木赐",
+      "pinyin": [
+        "duān",
+        "mù",
+        "cì"
+      ],
+      "context": "人名",
+      "note": "孔子弟子子贡，复姓端木"
+    },
+    {
+      "text": "西门豹",
+      "pinyin": [
+        "xī",
+        "mén",
+        "bào"
+      ],
+      "context": "人名",
+      "note": "战国魏人，复姓西门，治邺有功"
+    },
+    {
+      "text": "百里奚",
+      "pinyin": [
+        "bǎi",
+        "lǐ",
+        "xī"
+      ],
+      "context": "人名",
+      "note": "秦穆公贤臣，复姓百里"
+    },
+    {
+      "text": "淳于髠",
+      "pinyin": [
+        "chún",
+        "yú",
+        "kūn"
+      ],
+      "context": "人名",
+      "note": "齐国辩士，复姓淳于，见《史记·滑稽列传》"
+    },
+    {
+      "text": "东方朔",
+      "pinyin": [
+        "dōng",
+        "fāng",
+        "shuò"
+      ],
+      "context": "人名",
+      "note": "汉武帝时文学家，复姓东方"
+    },
+    {
+      "text": "王天下",
+      "pinyin": [
+        "wàng",
+        "tiān",
+        "xià"
+      ],
+      "context": "动词",
+      "note": "称王天下，动词，'王'读wàng（去声）"
+    },
+    {
+      "text": "共伯和",
+      "pinyin": [
+        "gòng",
+        "bó",
+        "hé"
+      ],
+      "context": "人名",
+      "note": "人名，'共'读gòng（去声）"
+    },
+    {
+      "text": "长公主",
+      "pinyin": [
+        "zhǎng",
+        "gōng",
+        "zhǔ"
+      ],
+      "context": "名词",
+      "note": "皇帝姐妹，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "於是",
+      "pinyin": [
+        "yú",
+        "shì"
+      ],
+      "context": "连词",
+      "note": "于是，'於'读yú（阳平），不读wū"
+    },
+    {
+      "text": "为丞相",
+      "pinyin": [
+        "wéi",
+        "chéng",
+        "xiàng"
+      ],
+      "context": "动词",
+      "note": "担任丞相，'相'读xiàng（去声）"
+    },
+    {
+      "text": "大将军",
+      "pinyin": [
+        "dà",
+        "jiàng",
+        "jūn"
+      ],
+      "context": "官职",
+      "note": "官职名，'将'读jiàng（去声）"
+    },
+    {
+      "text": "为将军",
+      "pinyin": [
+        "wéi",
+        "jiàng",
+        "jūn"
+      ],
+      "context": "动词",
+      "note": "担任将军，'将'读jiàng（去声）"
     },
     {
       "text": "冒顿",
@@ -342,12 +565,877 @@
       "note": "战国魏将，'乐'姓读yuè"
     },
     {
-      "text": "员",
+      "text": "骑劫",
       "pinyin": [
+        "jì",
+        "jié"
+      ],
+      "context": "人名",
+      "note": "战国时燕将，'骑'作姓氏读jì"
+    },
+    {
+      "text": "骑士",
+      "pinyin": [
+        "jì",
+        "shì"
+      ],
+      "context": "名词",
+      "note": "'骑士'指骑兵，'骑'读jì（去声）作名词"
+    },
+    {
+      "text": "骑郎",
+      "pinyin": [
+        "jì",
+        "láng"
+      ],
+      "context": "官职",
+      "note": "'骑郎'是汉代官名，'骑'读jì"
+    },
+    {
+      "text": "骑将",
+      "pinyin": [
+        "jì",
+        "jiàng"
+      ],
+      "context": "军职",
+      "note": "'骑将'指骑兵将领，'骑'读jì"
+    },
+    {
+      "text": "轻骑",
+      "pinyin": [
+        "qīng",
+        "jì"
+      ],
+      "context": "名词",
+      "note": "'轻骑'指轻装骑兵，'骑'读jì"
+    },
+    {
+      "text": "胡骑",
+      "pinyin": [
+        "hú",
+        "jì"
+      ],
+      "context": "名词",
+      "note": "'胡骑'指匈奴骑兵，'骑'读jì"
+    },
+    {
+      "text": "楚骑",
+      "pinyin": [
+        "chǔ",
+        "jì"
+      ],
+      "context": "名词",
+      "note": "'楚骑'指楚国骑兵，'骑'读jì"
+    },
+    {
+      "text": "汉骑",
+      "pinyin": [
+        "hàn",
+        "jì"
+      ],
+      "context": "名词",
+      "note": "'汉骑'指汉朝骑兵，'骑'读jì"
+    },
+    {
+      "text": "精骑",
+      "pinyin": [
+        "jīng",
+        "jì"
+      ],
+      "context": "名词",
+      "note": "'精骑'指精锐骑兵，'骑'读jì"
+    },
+    {
+      "text": "屯骑",
+      "pinyin": [
+        "tún",
+        "jì"
+      ],
+      "context": "名词",
+      "note": "'屯骑'指驻守的骑兵，'骑'读jì"
+    },
+    {
+      "text": "候骑",
+      "pinyin": [
+        "hòu",
+        "jì"
+      ],
+      "context": "名词",
+      "note": "'候骑'指侦察骑兵，'骑'读jì"
+    },
+    {
+      "text": "月氏",
+      "pinyin": [
+        "yuè",
+        "zhī"
+      ],
+      "context": "西域古国名",
+      "note": "[史记正义] '氏音支'，月氏国名，在葱岭之西，后被匈奴击败西迁"
+    },
+    {
+      "text": "头曼",
+      "pinyin": [
+        "tóu",
+        "mán"
+      ],
+      "context": "匈奴单于名",
+      "note": "[史记集解] 韦昭注：'头曼音瞒'，匈奴单于，冒顿之父"
+    },
+    {
+      "text": "荥阳",
+      "pinyin": [
+        "xíng",
+        "yáng"
+      ],
+      "context": "地名",
+      "note": "古县名，在今河南，'荥'读xíng不读yíng"
+    },
+    {
+      "text": "涿郡",
+      "pinyin": [
+        "zhuō",
+        "jùn"
+      ],
+      "context": "地名",
+      "note": "古郡名，'涿'读zhuō"
+    },
+    {
+      "text": "邯郸",
+      "pinyin": [
+        "hán",
+        "dān"
+      ],
+      "context": "地名",
+      "note": "赵国都城，'邯'读hán，'郸'读dān"
+    },
+    {
+      "text": "嫘祖",
+      "pinyin": [
+        "léi",
+        "zǔ"
+      ],
+      "context": "人名",
+      "note": "[史记索隐] 黄帝妻，一曰雷祖，'嫘'读léi"
+    },
+    {
+      "text": "荤粥",
+      "pinyin": [
+        "xūn",
+        "yù"
+      ],
+      "context": "族名",
+      "note": "[史记索隐] 匈奴别名，唐虞时称荤粥，'荤'读xūn，'粥'读yù"
+    },
+    {
+      "text": "列传",
+      "pinyin": [
+        "liè",
+        "zhuàn"
+      ],
+      "context": "史书体裁",
+      "note": "《史记》体例，为人物作传记，'传'读zhuàn（去声）"
+    },
+    {
+      "text": "世家",
+      "pinyin": [
+        "shì",
+        "jiā"
+      ],
+      "context": "史书体裁",
+      "note": "《史记》体例，记诸侯王国，'家'读jiā（平声）"
+    },
+    {
+      "text": "游说",
+      "pinyin": [
+        "yóu",
+        "shuì"
+      ],
+      "context": "动词",
+      "note": "周游游说诸侯，'说'读shuì（去声）"
+    },
+    {
+      "text": "大说",
+      "pinyin": [
+        "dà",
+        "yuè"
+      ],
+      "context": "动词",
+      "note": "大为高兴，'说'通'悦'读yuè（去声）"
+    },
+    {
+      "text": "离间",
+      "pinyin": [
+        "lí",
+        "jiàn"
+      ],
+      "context": "动词",
+      "note": "挑拨离间，'间'读jiàn（去声）"
+    },
+    {
+      "text": "反间",
+      "pinyin": [
+        "fǎn",
+        "jiàn"
+      ],
+      "context": "名词",
+      "note": "反间计，用敌方间谍反为我用，'间'读jiàn（去声）"
+    },
+    {
+      "text": "间谍",
+      "pinyin": [
+        "jiàn",
+        "dié"
+      ],
+      "context": "名词",
+      "note": "从事秘密侦察的人，'间'读jiàn（去声）"
+    },
+    {
+      "text": "朝廷",
+      "pinyin": [
+        "cháo",
+        "tíng"
+      ],
+      "context": "名词",
+      "note": "君主接见群臣议政之处，'朝'读cháo（阳平）"
+    },
+    {
+      "text": "朝见",
+      "pinyin": [
+        "cháo",
+        "jiàn"
+      ],
+      "context": "动词",
+      "note": "诸侯朝见天子，'朝'读cháo（阳平）"
+    },
+    {
+      "text": "朝聘",
+      "pinyin": [
+        "cháo",
+        "pìn"
+      ],
+      "context": "动词",
+      "note": "诸侯朝聘天子，'朝'读cháo（阳平）"
+    },
+    {
+      "text": "更名",
+      "pinyin": [
+        "gēng",
+        "míng"
+      ],
+      "context": "动词",
+      "note": "改换名字，'更'读gēng（平声）"
+    },
+    {
+      "text": "更始",
+      "pinyin": [
+        "gēng",
+        "shǐ"
+      ],
+      "context": "动词",
+      "note": "重新开始，'更'读gēng（平声）"
+    },
+    {
+      "text": "更定",
+      "pinyin": [
+        "gēng",
+        "dìng"
+      ],
+      "context": "动词",
+      "note": "改定、重新制定，'更'读gēng（平声）"
+    },
+    {
+      "text": "殷商",
+      "pinyin": [
+        "yīn",
+        "shāng"
+      ],
+      "context": "朝代名",
+      "note": "商朝，因盘庚迁殷后又称殷商，'殷'读yīn（阴平）"
+    },
+    {
+      "text": "殷墟",
+      "pinyin": [
+        "yīn",
+        "xū"
+      ],
+      "context": "地名",
+      "note": "商朝都城遗址，在今河南安阳，'殷'读yīn（阴平）"
+    },
+    {
+      "text": "数次",
+      "pinyin": [
+        "shuò",
+        "cì"
+      ],
+      "context": "副词",
+      "note": "屡次、多次，'数'读shuò（去声）"
+    },
+    {
+      "text": "数年",
+      "pinyin": [
+        "shuò",
+        "nián"
+      ],
+      "context": "副词",
+      "note": "屡年、多年，'数'读shuò（去声）"
+    },
+    {
+      "text": "数月",
+      "pinyin": [
+        "shuò",
+        "yuè"
+      ],
+      "context": "副词",
+      "note": "屡月、多月，'数'读shuò（去声）"
+    },
+    {
+      "text": "长者",
+      "pinyin": [
+        "zhǎng",
+        "zhě"
+      ],
+      "context": "名词",
+      "note": "年长或德高之人，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "长子",
+      "pinyin": [
+        "zhǎng",
+        "zǐ"
+      ],
+      "context": "名词",
+      "note": "年龄最大的儿子，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "长安",
+      "pinyin": [
+        "cháng",
+        "ān"
+      ],
+      "context": "地名",
+      "note": "汉都长安，在今西安，'长'读cháng（阳平）"
+    },
+    {
+      "text": "长久",
+      "pinyin": [
+        "cháng",
+        "jiǔ"
+      ],
+      "context": "形容词",
+      "note": "时间久远，'长'读cháng（阳平）"
+    },
+    {
+      "text": "年长",
+      "pinyin": [
+        "nián",
+        "zhǎng"
+      ],
+      "context": "动词",
+      "note": "年龄增长，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "音乐",
+      "pinyin": [
+        "yīn",
+        "yuè"
+      ],
+      "context": "名词",
+      "note": "音乐、乐曲，'乐'读yuè（去声）"
+    },
+    {
+      "text": "乐工",
+      "pinyin": [
+        "yuè",
+        "gōng"
+      ],
+      "context": "名词",
+      "note": "演奏音乐的工匠，'乐'读yuè（去声）"
+    },
+    {
+      "text": "乐师",
+      "pinyin": [
+        "yuè",
+        "shī"
+      ],
+      "context": "名词",
+      "note": "音乐教师或演奏者，'乐'读yuè（去声）"
+    },
+    {
+      "text": "安乐",
+      "pinyin": [
+        "ān",
+        "lè"
+      ],
+      "context": "形容词",
+      "note": "安宁快乐，'乐'读lè（去声）"
+    },
+    {
+      "text": "少年",
+      "pinyin": [
+        "shào",
+        "nián"
+      ],
+      "context": "名词",
+      "note": "年少、年轻，'少'读shào（去声）"
+    },
+    {
+      "text": "少府",
+      "pinyin": [
+        "shào",
+        "fǔ"
+      ],
+      "context": "官职",
+      "note": "汉代官名，掌山海池泽收入，'少'读shào（去声）"
+    },
+    {
+      "text": "少傅",
+      "pinyin": [
+        "shào",
+        "fù"
+      ],
+      "context": "官职",
+      "note": "辅导太子的官职，'少'读shào（去声）"
+    },
+    {
+      "text": "千乘",
+      "pinyin": [
+        "qiān",
+        "shèng"
+      ],
+      "context": "名词",
+      "note": "千辆战车，'乘'读shèng（去声）作量词"
+    },
+    {
+      "text": "万乘",
+      "pinyin": [
+        "wàn",
+        "shèng"
+      ],
+      "context": "名词",
+      "note": "万辆战车，指天子，'乘'读shèng（去声）作量词"
+    },
+    {
+      "text": "投降",
+      "pinyin": [
+        "tóu",
+        "xiáng"
+      ],
+      "context": "动词",
+      "note": "归降、降服，'降'读xiáng（阳平）"
+    },
+    {
+      "text": "降伏",
+      "pinyin": [
+        "xiáng",
+        "fú"
+      ],
+      "context": "动词",
+      "note": "归顺、降服，'降'读xiáng（阳平）"
+    },
+    {
+      "text": "好学",
+      "pinyin": [
+        "hào",
+        "xué"
+      ],
+      "context": "动词",
+      "note": "喜爱学习，'好'读hào（去声）"
+    },
+    {
+      "text": "好色",
+      "pinyin": [
+        "hào",
+        "sè"
+      ],
+      "context": "动词",
+      "note": "喜爱美色，'好'读hào（去声）"
+    },
+    {
+      "text": "好战",
+      "pinyin": [
+        "hào",
+        "zhàn"
+      ],
+      "context": "动词",
+      "note": "喜爱战争，'好'读hào（去声）"
+    },
+    {
+      "text": "都城",
+      "pinyin": [
+        "dū",
+        "chéng"
+      ],
+      "context": "名词",
+      "note": "国都、首都，'都'读dū（阴平）"
+    },
+    {
+      "text": "都尉",
+      "pinyin": [
+        "dū",
+        "wèi"
+      ],
+      "context": "官职",
+      "note": "汉代武官名，掌管军事，'都'读dū（阴平）"
+    },
+    {
+      "text": "率众",
+      "pinyin": [
+        "shuài",
+        "zhòng"
+      ],
+      "context": "动词",
+      "note": "率领众人，'率'读shuài（去声）"
+    },
+    {
+      "text": "统率",
+      "pinyin": [
+        "tǒng",
+        "shuài"
+      ],
+      "context": "动词",
+      "note": "统领率领，'率'读shuài（去声）"
+    },
+    {
+      "text": "率领",
+      "pinyin": [
+        "shuài",
+        "lǐng"
+      ],
+      "context": "动词",
+      "note": "带领、引领，'率'读shuài（去声）"
+    },
+    {
+      "text": "称王",
+      "pinyin": [
+        "chēng",
+        "wàng"
+      ],
+      "context": "动词",
+      "note": "称王，动词，'王'读wàng（去声）"
+    },
+    {
+      "text": "为王",
+      "pinyin": [
+        "wéi",
+        "wàng"
+      ],
+      "context": "动词",
+      "note": "为王、作王，动词，'王'读wàng（去声）"
+    },
+    {
+      "text": "欲王",
+      "pinyin": [
+        "yù",
+        "wàng"
+      ],
+      "context": "动词",
+      "note": "欲称王，动词，'王'读wàng（去声）"
+    },
+    {
+      "text": "立王",
+      "pinyin": [
+        "lì",
+        "wàng"
+      ],
+      "context": "动词",
+      "note": "立为王，动词，'王'读wàng（去声）"
+    },
+    {
+      "text": "射中",
+      "pinyin": [
+        "shè",
+        "zhòng"
+      ],
+      "context": "动词",
+      "note": "射中目标，动词，'中'读zhòng（去声）"
+    },
+    {
+      "text": "中计",
+      "pinyin": [
+        "zhòng",
+        "jì"
+      ],
+      "context": "动词",
+      "note": "中了计策，动词，'中'读zhòng（去声）"
+    },
+    {
+      "text": "中伏",
+      "pinyin": [
+        "zhòng",
+        "fú"
+      ],
+      "context": "动词",
+      "note": "中了埋伏，动词，'中'读zhòng（去声）"
+    },
+    {
+      "text": "少子",
+      "pinyin": [
+        "shào",
+        "zǐ"
+      ],
+      "context": "名词",
+      "note": "年幼的儿子，'少'读shào（去声）"
+    },
+    {
+      "text": "少主",
+      "pinyin": [
+        "shào",
+        "zhǔ"
+      ],
+      "context": "名词",
+      "note": "年幼的君主，'少'读shào（去声）"
+    },
+    {
+      "text": "少公",
+      "pinyin": [
+        "shào",
+        "gōng"
+      ],
+      "context": "名词",
+      "note": "年幼的公子，'少'读shào（去声）"
+    },
+    {
+      "text": "年少",
+      "pinyin": [
+        "nián",
+        "shào"
+      ],
+      "context": "形容词",
+      "note": "年纪轻，'少'读shào（去声）"
+    },
+    {
+      "text": "少时",
+      "pinyin": [
+        "shào",
+        "shí"
+      ],
+      "context": "名词",
+      "note": "年轻时、年少时，'少'读shào（去声）"
+    },
+    {
+      "text": "伍员",
+      "pinyin": [
+        "wǔ",
         "yùn"
       ],
-      "context": "姓氏",
-      "note": "伍子胥名员，读yùn"
+      "context": "人名",
+      "note": "伍子胥名员，读yùn（上声）"
+    },
+    {
+      "text": "殽函",
+      "pinyin": [
+        "xiáo",
+        "hán"
+      ],
+      "context": "地名",
+      "note": "殽山和函谷关，'殽'读xiáo"
+    },
+    {
+      "text": "鄢郢",
+      "pinyin": [
+        "yān",
+        "yǐng"
+      ],
+      "context": "地名",
+      "note": "楚国都城鄢郢，'鄢'读yān"
+    },
+    {
+      "text": "鄢陵",
+      "pinyin": [
+        "yān",
+        "líng"
+      ],
+      "context": "地名",
+      "note": "地名鄢陵，'鄢'读yān"
+    },
+    {
+      "text": "共王",
+      "pinyin": [
+        "gòng",
+        "wáng"
+      ],
+      "context": "人名",
+      "note": "周共王等，'共'读gòng（去声）"
+    },
+    {
+      "text": "共公",
+      "pinyin": [
+        "gòng",
+        "gōng"
+      ],
+      "context": "人名",
+      "note": "楚共公等，'共'读gòng（去声）"
+    },
+    {
+      "text": "共伯",
+      "pinyin": [
+        "gòng",
+        "bó"
+      ],
+      "context": "人名",
+      "note": "共伯和，'共'读gòng（去声）"
+    },
+    {
+      "text": "共工",
+      "pinyin": [
+        "gòng",
+        "gōng"
+      ],
+      "context": "人名",
+      "note": "古代人名，'共'读gòng（去声）"
+    },
+    {
+      "text": "戏下",
+      "pinyin": [
+        "xī",
+        "xià"
+      ],
+      "context": "地名",
+      "note": "地名戏下，'戏'读xī不读xì"
+    },
+    {
+      "text": "长史",
+      "pinyin": [
+        "zhǎng",
+        "shǐ"
+      ],
+      "context": "官职",
+      "note": "官职名，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "庶长",
+      "pinyin": [
+        "shù",
+        "zhǎng"
+      ],
+      "context": "官职",
+      "note": "秦国官职，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "长平",
+      "pinyin": [
+        "zhǎng",
+        "píng"
+      ],
+      "context": "地名",
+      "note": "地名长平，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "长城",
+      "pinyin": [
+        "zhǎng",
+        "chéng"
+      ],
+      "context": "名词",
+      "note": "长城，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "长沙",
+      "pinyin": [
+        "zhǎng",
+        "shā"
+      ],
+      "context": "地名",
+      "note": "地名长沙，'长'读zhǎng（上声）"
+    },
+    {
+      "text": "丞相",
+      "pinyin": [
+        "chéng",
+        "xiàng"
+      ],
+      "context": "官职",
+      "note": "官职名，'相'读xiàng（去声）"
+    },
+    {
+      "text": "相国",
+      "pinyin": [
+        "xiàng",
+        "guó"
+      ],
+      "context": "官职",
+      "note": "官职名，'相'读xiàng（去声）"
+    },
+    {
+      "text": "将相",
+      "pinyin": [
+        "jiàng",
+        "xiàng"
+      ],
+      "context": "名词",
+      "note": "将军与宰相，'相'读xiàng（去声）"
+    },
+    {
+      "text": "为相",
+      "pinyin": [
+        "wéi",
+        "xiàng"
+      ],
+      "context": "动词",
+      "note": "担任宰相，'相'读xiàng（去声）"
+    },
+    {
+      "text": "相秦",
+      "pinyin": [
+        "xiàng",
+        "qín"
+      ],
+      "context": "动词",
+      "note": "在秦国为相，'相'读xiàng（去声）"
+    },
+    {
+      "text": "将军",
+      "pinyin": [
+        "jiàng",
+        "jūn"
+      ],
+      "context": "官职",
+      "note": "官职名，'将'读jiàng（去声）"
+    },
+    {
+      "text": "大将",
+      "pinyin": [
+        "dà",
+        "jiàng"
+      ],
+      "context": "官职",
+      "note": "大将、主将，'将'读jiàng（去声）"
+    },
+    {
+      "text": "为将",
+      "pinyin": [
+        "wéi",
+        "jiàng"
+      ],
+      "context": "动词",
+      "note": "担任将领，'将'读jiàng（去声）"
+    },
+    {
+      "text": "秦将",
+      "pinyin": [
+        "qín",
+        "jiàng"
+      ],
+      "context": "名词",
+      "note": "秦国将领，'将'读jiàng（去声）"
+    },
+    {
+      "text": "中行",
+      "pinyin": [
+        "zhōng",
+        "háng"
+      ],
+      "context": "名词/人名",
+      "note": "中行氏、中行说，'行'读háng（阳平）"
+    },
+    {
+      "text": "五行",
+      "pinyin": [
+        "wǔ",
+        "xíng"
+      ],
+      "context": "名词",
+      "note": "五行学说，'行'读xíng（阳平）"
     },
     {
       "text": "华",
@@ -398,102 +1486,6 @@
       "note": "尉迟、尉姓读yù"
     },
     {
-      "text": "殽",
-      "pinyin": [
-        "xiáo"
-      ],
-      "context": "地名",
-      "note": "[史记正义] 殽山，秦晋战于殽"
-    },
-    {
-      "text": "鄢",
-      "pinyin": [
-        "yān"
-      ],
-      "context": "地名",
-      "note": "[史记正义] 楚都鄢郢的鄢"
-    },
-    {
-      "text": "共",
-      "pinyin": [
-        "gòng"
-      ],
-      "context": "地名或国名",
-      "note": "[史记正义] 共伯和、共城，读gòng"
-    },
-    {
-      "text": "戏",
-      "pinyin": [
-        "xī"
-      ],
-      "context": "地名",
-      "note": "[史记正义] 戏水、戏戎，读xī不读xì"
-    },
-    {
-      "text": "为",
-      "pinyin": [
-        "wèi"
-      ],
-      "context": "动词",
-      "note": "[史记正义] 作为、成为义时读wèi（去声）"
-    },
-    {
-      "text": "长",
-      "pinyin": [
-        "zhǎng"
-      ],
-      "context": "动词或名词",
-      "note": "[史记正义] 生长、年长义时读zhǎng（上声）"
-    },
-    {
-      "text": "相",
-      "pinyin": [
-        "xiàng"
-      ],
-      "context": "名词",
-      "note": "[史记正义] 宰相、丞相读xiàng（去声）"
-    },
-    {
-      "text": "将",
-      "pinyin": [
-        "jiàng"
-      ],
-      "context": "名词",
-      "note": "[史记正义] 将军、大将读jiàng（去声）"
-    },
-    {
-      "text": "行",
-      "pinyin": [
-        "háng"
-      ],
-      "context": "名词",
-      "note": "[史记正义] 行列、道路义时读háng"
-    },
-    {
-      "text": "骑",
-      "pinyin": [
-        "jì"
-      ],
-      "context": "动词",
-      "note": "[史记正义] 跨骑义时读jì（去声）"
-    },
-    {
-      "text": "中",
-      "pinyin": [
-        "zhòng"
-      ],
-      "context": "动词",
-      "note": "[史记正义] 中试、射中义时读zhòng（去声）"
-    },
-    {
-      "text": "王",
-      "pinyin": [
-        "wàng"
-      ],
-      "context": "动词",
-      "note": "[史记正义] 称王、为王义时读wàng（去声）"
-    },
-    {
       "text": "缪",
       "pinyin": [
         "miào"
@@ -516,160 +1508,6 @@
       ],
       "context": "姓氏",
       "note": "姓单读shàn，不同于'单于'的chán"
-    },
-    {
-      "text": "月氏",
-      "pinyin": [
-        "yuè",
-        "zhī"
-      ],
-      "context": "西域古国名",
-      "note": "[史记正义] '氏音支'，月氏国名，在葱岭之西，后被匈奴击败西迁"
-    },
-    {
-      "text": "头曼",
-      "pinyin": [
-        "tóu",
-        "mán"
-      ],
-      "context": "匈奴单于名",
-      "note": "[史记集解] 韦昭注：'头曼音瞒'，匈奴单于，冒顿之父"
-    },
-    {
-      "text": "夏侯婴",
-      "pinyin": [
-        "xià",
-        "hóu",
-        "yīng"
-      ],
-      "context": "人名",
-      "note": "汉初大臣，复姓夏侯"
-    },
-    {
-      "text": "叔孙通",
-      "pinyin": [
-        "shū",
-        "sūn",
-        "tōng"
-      ],
-      "context": "人名",
-      "note": "汉初制礼大臣，复姓叔孙"
-    },
-    {
-      "text": "申屠嘉",
-      "pinyin": [
-        "shēn",
-        "tú",
-        "jiā"
-      ],
-      "context": "人名",
-      "note": "汉文帝时丞相，复姓申屠"
-    },
-    {
-      "text": "端木赐",
-      "pinyin": [
-        "duān",
-        "mù",
-        "cì"
-      ],
-      "context": "人名",
-      "note": "孔子弟子子贡，复姓端木"
-    },
-    {
-      "text": "西门豹",
-      "pinyin": [
-        "xī",
-        "mén",
-        "bào"
-      ],
-      "context": "人名",
-      "note": "战国魏人，复姓西门，治邺有功"
-    },
-    {
-      "text": "百里奚",
-      "pinyin": [
-        "bǎi",
-        "lǐ",
-        "xī"
-      ],
-      "context": "人名",
-      "note": "秦穆公贤臣，复姓百里"
-    },
-    {
-      "text": "淳于髠",
-      "pinyin": [
-        "chún",
-        "yú",
-        "kūn"
-      ],
-      "context": "人名",
-      "note": "齐国辩士，复姓淳于，见《史记·滑稽列传》"
-    },
-    {
-      "text": "东方朔",
-      "pinyin": [
-        "dōng",
-        "fāng",
-        "shuò"
-      ],
-      "context": "人名",
-      "note": "汉武帝时文学家，复姓东方"
-    },
-    {
-      "text": "荥阳",
-      "pinyin": [
-        "xíng",
-        "yáng"
-      ],
-      "context": "地名",
-      "note": "古县名，在今河南，'荥'读xíng不读yíng"
-    },
-    {
-      "text": "涿郡",
-      "pinyin": [
-        "zhuō",
-        "jùn"
-      ],
-      "context": "地名",
-      "note": "古郡名，'涿'读zhuō"
-    },
-    {
-      "text": "邯郸",
-      "pinyin": [
-        "hán",
-        "dān"
-      ],
-      "context": "地名",
-      "note": "赵国都城，'邯'读hán，'郸'读dān"
-    },
-    {
-      "text": "嫘祖",
-      "pinyin": [
-        "léi",
-        "zǔ"
-      ],
-      "context": "人名",
-      "note": "[史记索隐] 黄帝妻，一曰雷祖，'嫘'读léi"
-    },
-    {
-      "text": "澹台灭明",
-      "pinyin": [
-        "tán",
-        "tái",
-        "miè",
-        "míng"
-      ],
-      "context": "人名",
-      "note": "孔子弟子，字子羽，复姓澹台"
-    },
-    {
-      "text": "荤粥",
-      "pinyin": [
-        "xūn",
-        "yù"
-      ],
-      "context": "族名",
-      "note": "[史记索隐] 匈奴别名，唐虞时称荤粥，'荤'读xūn，'粥'读yù"
     }
   ]
 }
