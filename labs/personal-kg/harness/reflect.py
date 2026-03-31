@@ -10,7 +10,7 @@ from typing import Any
 
 from .db import get_conn, get_segments, log_reflection, upsert_entity, insert_entity_mention
 from .model import LocalModel, load_config
-from .pipeline import load_skill
+from .pipeline import load_skill, _setup_log
 from .skill_patch import patch_skill
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -58,19 +58,31 @@ def reflect_session(
 
     if max_rounds is None:
         max_rounds = int(pipe_cfg.get("reflect", {}).get("max_rounds", 3))
+    max_rounds = max(1, max_rounds)  # 至少1轮
 
     model = LocalModel(config)
     reflect_skill = load_skill("SKILL-反思", skills_dir)
     extract_skill = load_skill("SKILL-实体提取", skills_dir)
 
-    log = logging.getLogger("reflect")
+    log = _setup_log("reflect")
 
     total_fixed = 0
+    round_num = 0
     all_remaining: list[dict] = []
-    accumulated_errors: list[dict] = []  # for SKILL patching
+    accumulated_errors: list[dict] = []
 
     with get_conn(db_path) as conn:
         segments = get_segments(conn, session_id)
+
+        if not segments:
+            log.info("Session %d has no segments, skipping reflection", session_id)
+            return {
+                "session_id": session_id,
+                "rounds_run": 0,
+                "total_fixed": 0,
+                "remaining_errors": [],
+                "skill_patched": False,
+            }
 
         for round_num in range(1, max_rounds + 1):
             round_errors = 0
@@ -78,13 +90,21 @@ def reflect_session(
             log.info("Reflect round %d/%d for session %d", round_num, max_rounds, session_id)
 
             for seg in segments:
-                text, entities = _get_segment_text_and_entities(conn, session_id, seg)
+                try:
+                    text, entities = _get_segment_text_and_entities(conn, session_id, seg)
+                except Exception as exc:
+                    log.warning("Failed to load segment %d: %s", seg["seg_idx"], exc)
+                    continue
                 if not text:
                     continue
 
                 # Ask model to reflect
-                payload = json.dumps({"text": text, "entities": entities}, ensure_ascii=False)
-                result = model.chat_json(payload, system=reflect_skill)
+                try:
+                    payload = json.dumps({"text": text, "entities": entities}, ensure_ascii=False)
+                    result = model.chat_json(payload, system=reflect_skill)
+                except Exception as exc:
+                    log.warning("Reflect model call failed for segment %d: %s", seg["seg_idx"], exc)
+                    continue
 
                 if not isinstance(result, dict) or "pass" not in result:
                     log.warning("Reflect parse failed for segment %d", seg["seg_idx"])
@@ -98,17 +118,19 @@ def reflect_session(
                 accumulated_errors.extend(errors)
 
                 # Re-extract with current (possibly updated) SKILL
-                re_result = model.chat_json(
-                    json.dumps({"text": text}, ensure_ascii=False),
-                    system=extract_skill,
-                )
+                try:
+                    re_result = model.chat_json(
+                        json.dumps({"text": text}, ensure_ascii=False),
+                        system=extract_skill,
+                    )
+                except Exception as exc:
+                    log.warning("Re-extract model call failed for segment %d: %s", seg["seg_idx"], exc)
+                    continue
 
                 if isinstance(re_result, dict) and "entities" in re_result:
-                    # Clear old mentions for this segment
                     conn.execute(
                         "DELETE FROM entity_mentions WHERE segment_id=?", (seg["id"],)
                     )
-                    # Insert new ones
                     for ent in re_result["entities"]:
                         etype = ent.get("type", "")
                         ename = ent.get("name", "").strip()
@@ -116,6 +138,7 @@ def reflect_session(
                             continue
                         eid = upsert_entity(conn, ename, etype)
                         insert_entity_mention(conn, eid, seg["id"], ent.get("evidence", ""))
+                    conn.commit()  # 确保每个修复的segment立即持久化
                     round_fixed += 1
                     total_fixed += 1
 
@@ -150,9 +173,9 @@ def reflect_session(
 
     return {
         "session_id": session_id,
-        "rounds_run": min(round_num, max_rounds),
+        "rounds_run": round_num,
         "total_fixed": total_fixed,
-        "remaining_errors": all_remaining[:20],  # cap for readability
+        "remaining_errors": all_remaining[:20],
         "skill_patched": bool(accumulated_errors),
     }
 
