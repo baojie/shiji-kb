@@ -171,6 +171,152 @@ python scripts/generate_cost_report.py --start 2026-03-01 --end 2026-03-31
 python scripts/generate_cost_report.py --period monthly --output logs/cost_reports/
 ```
 
+### 3. Token 使用统计装饰器
+
+**脚本路径**：`scripts/token_tracker.py`
+
+**功能**：
+- 为任何 Python 函数添加 Token 使用统计
+- 自动捕获函数执行期间的 Claude API 调用
+- 打印详细的 Token 使用报告
+- 可选择保存统计日志到文件
+
+**使用方法**：
+
+```python
+from scripts.token_tracker import track_tokens
+
+# 基本用法：只打印统计信息
+@track_tokens()
+def my_function():
+    # 你的代码
+    pass
+
+# 带日志记录：统计信息会保存到文件
+@track_tokens(log_to_file=True)
+def process_data():
+    # 你的代码
+    pass
+
+# 自定义日志目录
+@track_tokens(log_to_file=True, log_dir="logs/my_custom_logs")
+def another_function():
+    # 你的代码
+    pass
+
+# 不打印统计，只保存到文件
+@track_tokens(print_stats=False, log_to_file=True)
+def silent_tracking():
+    # 你的代码
+    pass
+```
+
+**测试方法**：
+
+```bash
+# 运行测试脚本（包含 Hello World 示例）
+python scripts/test_token_tracker.py
+```
+
+**输出示例**：
+
+```
+============================================================
+📊 Token 使用统计
+============================================================
+⏱️  执行时间: 12.34 秒
+💬 消息数: 5
+
+📦 Token 使用量:
+   输入:              8,523
+   输出:              1,245
+   缓存创建:         15,678
+   缓存读取:         45,234
+   ──────────────────────────────
+   总计:             25,446
+
+💰 成本分析:
+   输入成本:           $0.0256
+   输出成本:           $0.0187
+   缓存创建成本:       $0.0588
+   缓存读取成本:       $0.0136
+   ───────────────────────────────────
+   总成本:             $0.1167
+
+🤖 模型使用:
+   sonnet-4-5:
+      消息: 5 | Token: 25,446 | 成本: $0.1167
+============================================================
+```
+
+**日志文件格式**：
+
+日志保存在 `logs/cost_reports/session_logs/token_usage_YYYYMMDD_HHMMSS.json`：
+
+```json
+{
+  "timestamp": "2026-04-02T00:20:55.058224",
+  "function": "my_function",
+  "stats": {
+    "messages": 5,
+    "tokens": {
+      "input": 8523,
+      "output": 1245,
+      "cache_creation": 15678,
+      "cache_read": 45234,
+      "total": 25446
+    },
+    "cost": {
+      "input": 0.0256,
+      "output": 0.0187,
+      "cache_creation": 0.0588,
+      "cache_read": 0.0136,
+      "total": 0.1167
+    },
+    "by_model": {
+      "claude-sonnet-4-5-20250929": {
+        "messages": 5,
+        "tokens": 25446,
+        "cost": 0.1167
+      }
+    }
+  }
+}
+```
+
+**适用场景**：
+
+1. **脚本开发阶段**：了解不同实现方案的成本差异
+2. **批量处理任务**：统计处理大量数据时的 Token 消耗
+3. **成本优化**：对比优化前后的成本变化
+4. **实验追踪**：记录每次实验的资源使用情况
+
+**重要说明**：
+
+装饰器统计的是**本地 Claude Code 对话记录**中的 Token 使用量：
+
+- ✅ **会统计**：函数执行期间通过 Claude Code 的交互、调用 Claude API 的操作
+- ❌ **不统计**：纯 Python 代码执行、不涉及 AI 的本地计算
+- 📌 **测试脚本**（`test_token_tracker.py`、`example_token_tracking.py`）Token 为 0 是**正常的**，因为它们只是演示装饰器用法，不涉及真实的 AI 调用
+
+**真实应用场景示例**：
+```python
+# 场景：调用 Claude API 进行文本标注
+@track_tokens(log_to_file=True)
+def annotate_with_claude_api(text):
+    # 使用 Anthropic SDK 或类似工具调用 API
+    # 这里会产生真实的 Token 消耗
+    response = client.messages.create(...)
+    return response
+
+# 场景：在 Claude Code 会话中执行的交互式任务
+@track_tokens(log_to_file=True)
+def interactive_analysis():
+    # 如果在此函数执行期间与 Claude Code 有交互
+    # 装饰器会捕获这些交互产生的 Token
+    pass
+```
+
 ## 操作流程
 
 ### 日常统计
@@ -344,6 +490,45 @@ mv logs/cost_reports/monthly_report_$(date +%Y%m).md \
    - 相似任务合并处理
    - 减少对话切换
 
+## 日志维护
+
+### 清理测试日志
+
+测试和示例脚本会产生大量 Token 为 0 的日志文件，建议定期清理：
+
+```bash
+# 预览将要删除的文件
+python scripts/cleanup_zero_token_logs.py
+
+# 实际删除
+python scripts/cleanup_zero_token_logs.py --execute
+
+# 保留最近 30 天的文件（即使 Token 为 0）
+python scripts/cleanup_zero_token_logs.py --execute --keep-days 30
+```
+
+**清理策略建议**：
+- 开发阶段：每周清理一次测试日志
+- 生产环境：保留最近 30-90 天的真实日志
+- 归档重要日志：将高成本会话的日志单独归档
+
+### 日志分析
+
+```bash
+# 查看所有日志文件
+ls -lh logs/cost_reports/session_logs/
+
+# 统计总成本（需要 jq）
+cat logs/cost_reports/session_logs/*.json | \
+  jq '.stats.cost.total' | \
+  awk '{sum+=$1} END {print "Total: $" sum}'
+
+# 查找高成本会话
+cat logs/cost_reports/session_logs/*.json | \
+  jq -r '"\(.function): $\(.stats.cost.total)"' | \
+  sort -t'$' -k2 -rn | head -10
+```
+
 ## 常见问题
 
 ### Q1：为什么缓存成本反而增加了总成本？
@@ -408,19 +593,31 @@ scp -r ~/.claude/projects/-home-baojie-work-knowledge-shiji-kb/ \
 ### 脚本文件
 
 - `scripts/analyze_claude_token_usage.py` - 基础统计脚本
-- `scripts/generate_cost_report.py` - 报告生成脚本（待创建）
+- `scripts/generate_cost_report.py` - 报告生成脚本
+- `scripts/token_tracker.py` - Token 使用统计装饰器
+- `scripts/test_token_tracker.py` - 装饰器测试脚本（Hello World）
+- `scripts/example_token_tracking.py` - 装饰器实际应用示例
+- `scripts/demo_real_token_tracking.py` - 真实场景演示（说明如何捕获真实 Token）
+- `scripts/test_real_api_call.py` - 真实 API 调用示例（需要 Anthropic SDK）
+- `scripts/cleanup_zero_token_logs.py` - 清理 Token 为 0 的测试日志
+- `scripts/TOKEN_TRACKER_QUICKSTART.md` - 快速入门指南
+- `scripts/WHY_TOKEN_ZERO.md` - 为什么测试日志 Token 为 0？（重要说明）
 
 ### 报告目录
 
 ```
 logs/cost_reports/
-├── archive/           # 历史报告归档
+├── archive/              # 历史报告归档
 │   ├── 2026/
 │   │   ├── 03/
 │   │   │   ├── weekly_report_202610.md
 │   │   │   ├── weekly_report_202611.md
 │   │   │   └── monthly_report_202603.md
 │   │   └── 04/
+│   └── ...
+├── session_logs/         # 会话级别的 Token 统计日志
+│   ├── token_usage_20260402_001234.json
+│   ├── token_usage_20260402_005678.json
 │   └── ...
 ├── weekly_report_latest.md
 └── monthly_report_latest.md

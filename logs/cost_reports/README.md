@@ -1,200 +1,217 @@
-# Claude Code 成本报告目录
+# Claude Code 成本统计脚本使用说明
 
-本目录存储史记知识库项目的 Claude Code Token 使用量统计和成本分析报告。
+本目录包含用于统计 Claude Code Token 使用量和成本的脚本。
 
-## ⚙️ 首次使用配置
+## 🚀 快速开始
 
-在生成报告前，需要配置项目路径（包含用户隐私信息，不会提交到 Git）：
+### 1. 首次配置
 
-```bash
-# 1. 复制示例配置文件
-cp .claude_cost_config.example.json .claude_cost_config.json
+成本统计脚本需要读取本地的 Claude Code 对话记录，这些记录存储在：
 
-# 2. 编辑配置文件，修改 claude_project_paths 为你的实际路径
-nano .claude_cost_config.json
-
-# 3. 运行统计脚本
-python scripts/analyze_claude_token_usage.py
+```
+~/.claude/projects/<项目路径>/
 ```
 
-配置文件示例：
+由于路径中包含用户名等隐私信息，我们使用配置文件来管理这些路径。
+
+**步骤**：
+
+```bash
+# 1. 进入项目根目录
+cd /path/to/shiji-kb
+
+# 2. 复制示例配置文件
+cp .claude_cost_config.example.json .claude_cost_config.json
+
+# 3. 编辑配置文件
+nano .claude_cost_config.json
+```
+
+**配置文件示例**：
+
 ```json
 {
   "claude_project_paths": [
-    "-home-username-work-project-name"
-  ]
+    "-home-yourname-work-shiji-kb",
+    "-home-yourname-work-knowledge-shiji-kb"
+  ],
+  "pricing": {
+    "claude-sonnet-4-5-20250929": {
+      "input": 3.0,
+      "output": 15.0,
+      "cache_creation": 3.75,
+      "cache_read": 0.30
+    }
+  }
 }
 ```
 
-## 📊 报告类型
+**如何找到你的项目路径**：
 
-### 1. 总体统计报告
-
-**文件**：`total_report_latest.txt`
-
-**内容**：
-- 所有时间的累计统计
-- 按模型分类统计
-- 最近30天的每日统计
-
-**更新方法**：
 ```bash
-python scripts/analyze_claude_token_usage.py > logs/cost_reports/total_report_latest.txt
+# 查看所有 Claude 项目
+ls ~/.claude/projects/
+
+# 找到包含你项目名的目录
+ls ~/.claude/projects/ | grep shiji
 ```
 
-### 2. 定期报告（周报/月报）
+### 2. 运行统计
 
-**文件格式**：
-- 周报：`weekly_report_YYYYWW.md`（如 `weekly_report_202613.md`）
-- 月报：`monthly_report_YYYYMM.md`（如 `monthly_report_202603.md`）
-- 自定义：`report_YYYYMMDD_YYYYMMDD.md`
-
-**内容**：
-- 指定时间段的统计数据
-- 成本明细表格
-- 模型使用分布
-- 每日趋势
-- 分析与建议
-
-**生成方法**：
 ```bash
-# 生成本周报告
-python scripts/generate_cost_report.py --period weekly --output logs/cost_reports/
+# 查看总体统计
+python scripts/analyze_claude_token_usage.py
 
-# 生成本月报告
+# 生成月报
 python scripts/generate_cost_report.py --period monthly --output logs/cost_reports/
+
+# 或使用快捷脚本
+bash scripts/monthly_cost_report.sh
+```
+
+## 📁 配置文件说明
+
+### `.claude_cost_config.json`（私有配置）
+
+- **位置**：项目根目录
+- **用途**：存储用户特定的项目路径和价格配置
+- **隐私**：已加入 `.gitignore`，不会提交到 Git
+- **必需**：首次使用前必须创建
+
+### `.claude_cost_config.example.json`（示例配置）
+
+- **位置**：项目根目录
+- **用途**：作为配置模板，会提交到 Git
+- **内容**：使用示例路径，不包含真实用户信息
+
+## 🔒 隐私保护
+
+### 为什么需要配置文件？
+
+Claude Code 的对话记录路径通常包含：
+- 用户名（如 `/home/username/`）
+- 项目路径（可能暴露目录结构）
+
+将这些路径硬编码在脚本中会：
+1. 泄露用户隐私
+2. 使脚本无法在其他机器上使用
+3. 在 Git 历史中永久保存敏感信息
+
+### 配置文件的保护机制
+
+1. **`.gitignore`**：`.claude_cost_config.json` 已加入忽略列表
+2. **示例文件**：提供 `.example.json` 作为模板
+3. **脚本检查**：脚本会检查配置文件是否存在，不存在则提示创建
+
+## 📊 脚本说明
+
+### `analyze_claude_token_usage.py`
+
+**功能**：基础统计脚本
+
+- 扫描所有对话记录
+- 统计 Token 使用量
+- 计算成本
+- 按模型和日期分组
+
+**使用**：
+```bash
+python scripts/analyze_claude_token_usage.py
+```
+
+### `generate_cost_report.py`
+
+**功能**：生成格式化报告（周报/月报）
+
+**使用**：
+```bash
+# 生成周报
+python scripts/generate_cost_report.py --period weekly
+
+# 生成月报
+python scripts/generate_cost_report.py --period monthly
 
 # 生成指定时间段报告
-python scripts/generate_cost_report.py --start 2026-03-01 --end 2026-03-31 --output logs/cost_reports/
+python scripts/generate_cost_report.py --start 2026-03-01 --end 2026-03-31
 ```
 
-## 📈 项目累计统计（截至 2026-04-01）
+### `token_tracker.py`
 
-> ⚠️ **统计范围说明**：本统计仅包含当前机器上的 Claude Code 对话记录。如果在其他机器上也使用过 Claude Code 工作，实际成本会更高。
+**功能**：Token 使用统计装饰器
 
-| 指标 | 数值 |
-|------|------|
-| **对话数** | 173 个 |
-| **消息数** | 96,751 条 |
-| **Token 总计** | 268.59M (不含缓存读取) |
-| **总成本** | **$2,352.39** (当前机器) |
+- 为任何 Python 函数添加 Token 统计
+- 自动捕获函数执行期间的 API 调用
+- 打印详细的使用报告
+- 可选保存到日志文件
 
-### 成本分解
+**使用**：
+```python
+from scripts.token_tracker import track_tokens
 
-| 项目 | Token 数 | 单价 | 成本 |
-|------|----------|------|------|
-| 输入 | 3.49M | $3/MTok | $10.48 |
-| 输出 | 11.08M | $15/MTok | $166.23 |
-| 缓存创建 | 254.02M | $3.75/MTok | $952.57 |
-| 缓存读取 | 4077.05M | $0.30/MTok | $1,223.11 |
-| **总计** | - | - | **$2,352.39** |
+@track_tokens()
+def my_function():
+    # 你的代码
+    pass
 
-### 模型使用分布
+@track_tokens(log_to_file=True)
+def process_data():
+    # 会保存统计日志到 logs/cost_reports/session_logs/
+    pass
+```
 
-| 模型 | 消息数 | 占比 | 成本占比 |
-|------|--------|------|---------|
-| Sonnet 4.5 | 27,395 | 56.4% | 76.3% |
-| Opus 4.6 | 10,528 | 21.7% | 14.8% |
-| Sonnet 4.6 | 6,850 | 14.1% | 8.7% |
-| Haiku 4.5 | 247 | 0.5% | 0.1% |
-
-## 📅 定期报告流程
-
-### 每周一（周报）
-
+**测试**：
 ```bash
-# 1. 生成上周报告
-python scripts/generate_cost_report.py --period weekly --output logs/cost_reports/
-
-# 2. 检查报告内容
-cat logs/cost_reports/weekly_report_$(date -d "last monday" +%Y%W).md
-
-# 3. 如需要，添加分析和建议（手动编辑）
+python scripts/test_token_tracker.py
 ```
 
-### 每月1日（月报）
+### `weekly_cost_report.sh` / `monthly_cost_report.sh`
 
+**功能**：快捷脚本
+
+**使用**：
 ```bash
-# 1. 生成上月报告
-python scripts/generate_cost_report.py --period monthly --output logs/cost_reports/
-
-# 2. 生成总体统计
-python scripts/analyze_claude_token_usage.py > logs/cost_reports/total_report_latest.txt
-
-# 3. 归档历史报告
-mkdir -p logs/cost_reports/archive/$(date -d "last month" +%Y)/
-mv logs/cost_reports/monthly_report_$(date -d "last month" +%Y%m).md \
-   logs/cost_reports/archive/$(date -d "last month" +%Y)/
+bash scripts/weekly_cost_report.sh
+bash scripts/monthly_cost_report.sh
 ```
 
-## 💡 成本优化建议
+## 🔧 多机器统计
 
-### 当前发现
+如果你在多台机器上工作，需要在每台机器上：
 
-1. **缓存策略问题**
-   - 缓存总成本（$2,175.68）高于无缓存成本（$938.76）
-   - 增加了 131.7% 的额外成本
-   - 原因：提示词变化频繁，缓存命中率不理想
+1. 配置各自的 `.claude_cost_config.json`
+2. 运行统计脚本
+3. 手动汇总结果
 
-2. **模型使用**
-   - Sonnet 4.5 是主力模型（76.3%成本）
-   - Opus 4.6 用于复杂任务（14.8%成本）
-   - Haiku 4.5 使用较少（仅0.1%成本）
+或者，将所有机器的对话记录文件复制到一台机器上统一统计。
 
-### 优化方向
+详细说明请参考：[`skills/SKILL_10g_项目成本统计.md`](../skills/SKILL_10g_项目成本统计.md)
 
-1. **评估缓存策略**
-   - 考虑关闭部分频繁变化的提示词缓存
-   - 增加单次对话的工作量，提高缓存利用率
-   - 定期清理过期缓存
+## ❓ 常见问题
 
-2. **优化提示词**
-   - 精简 CLAUDE.md 和 SKILL 文档长度
-   - 使用 `.claudeignore` 排除不必要的大文件
-   - 避免重复发送大文件内容
+### Q: 配置文件丢失了怎么办？
 
-3. **合理选择模型**
-   - 简单任务：使用 Haiku（$1/MTok input）
-   - 中等任务：使用 Sonnet（$3/MTok input）
-   - 复杂任务：使用 Opus（$15/MTok input）
-
-4. **减少输出成本**
-   - 使用更精确的指令，减少冗长输出
-   - 避免要求详细解释性输出
-   - 分步执行大任务
-
-## 🔗 相关文档
-
-- [SKILL_10g_项目成本统计.md](../../skills/SKILL_10g_项目成本统计.md) - 完整的成本统计方法论
-- [scripts/analyze_claude_token_usage.py](../../scripts/analyze_claude_token_usage.py) - 基础统计脚本
-- [scripts/generate_cost_report.py](../../scripts/generate_cost_report.py) - 报告生成脚本
-
-## 📝 报告文件列表
-
-### 当前报告
-
-- `total_report_latest.txt` - 最新的总体统计报告
-- `report_20260101_20260401.md` - 2026年1-4月完整报告
-- `total_cost_report_20260401.txt` - 2026-04-01 快照报告
-
-### 历史报告归档
-
-```
-archive/
-├── 2026/
-│   ├── 03/
-│   │   ├── weekly_report_202610.md
-│   │   ├── weekly_report_202611.md
-│   │   └── monthly_report_202603.md
-│   └── 04/
-│       └── ...
-└── ...
+A: 重新从示例文件复制：
+```bash
+cp .claude_cost_config.example.json .claude_cost_config.json
 ```
 
----
+### Q: 如何添加新的项目路径？
 
-**维护说明**：
-- 每周一生成周报
-- 每月1日生成月报并归档
-- 重大成本变化时生成专项报告
-- 定期更新本 README 的累计统计数据
+A: 编辑 `.claude_cost_config.json`，在 `claude_project_paths` 数组中添加新路径。
+
+### Q: 价格更新了怎么办？
+
+A: 编辑 `.claude_cost_config.json` 的 `pricing` 部分，更新对应模型的价格。
+
+### Q: 脚本报错"配置文件不存在"？
+
+A: 运行：
+```bash
+cp .claude_cost_config.example.json .claude_cost_config.json
+nano .claude_cost_config.json
+```
+
+## 📚 相关文档
+
+- [SKILL_10g_项目成本统计.md](../skills/SKILL_10g_项目成本统计.md) - 完整方法论
+- [logs/cost_reports/README.md](../logs/cost_reports/README.md) - 报告目录说明
