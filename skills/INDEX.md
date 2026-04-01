@@ -188,6 +188,7 @@
 | 10d | [SKILL_10d_CHANGELOG编写规范.md](SKILL_10d_CHANGELOG编写规范.md) | CHANGELOG格式、详略原则、Commit/Issue链接 |
 | 10e | [SKILL_10e_文件组织与目录结构.md](SKILL_10e_文件组织与目录结构.md) | 项目目录结构规范、文件分类决策树、流转路径 |
 | 10f | [SKILL_10f_Skill的提炼与转化.md](SKILL_10f_Skill的提炼与转化.md) | Skill工程化规范、质量检查、脚本关联 |
+| 10g | [SKILL_10g_项目成本统计.md](SKILL_10g_项目成本统计.md) | Claude Code Token使用量统计、成本分析、定期报告生成 |
 
 **PDF合集下载**：[史记知识库构造管线技能手册.pdf](../resources/publications/pipeline-skills-book/史记知识库构造管线技能手册.pdf)
 （截至2026-03-31，438页，3.01MB，包含11个一级SKILL + 66个二级SKILL）
@@ -241,14 +242,14 @@
 
 **截至2026-04-01**：
 - **元技能**：14个
-- **管线技能**：77个（含子SKILL）
+- **管线技能**：78个（含子SKILL）
   - 一级SKILL（总览）：11个
-  - 二级SKILL（专项）：66个
+  - 二级SKILL（专项）：67个
 - **参考文档**：2个（三级SKILL结构）
 - **草稿文档**：5个（待完善）
 - **归档文档**：1个（失败案例）
 
-**总计**：98个SKILL文档（不含草稿和归档）
+**总计**：99个SKILL文档（不含草稿和归档）
 
 ---
 
