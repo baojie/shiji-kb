@@ -181,7 +181,7 @@
 **其他质量保障**：
 - ✅ CSS渲染升级v5.4：身份标注符号语义修复（8,774处）
 - ✅ 文本完整性验证：原文与标注文件逐字相同，100%通过
-- 📊 详见 [doc/events/](doc/events/) | [doc/entities/](doc/entities/) | [CSS版本历史](doc/spec/CSS版本历史_v5.4.md)
+- 📊 详见 [doc/events/](doc/events/) | [doc/entities/](doc/entities/) | [CSS版本历史](doc/spec/RENDER_CSS历史v5.4.md)
 
 ---
 

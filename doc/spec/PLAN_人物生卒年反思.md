@@ -354,9 +354,9 @@ python kg/entities/scripts/build_shihao_index.py --use-lifespans-v2
 ## 相关文档
 
 - **方法论SKILL**：[SKILL_07a_人物生卒年推断.md](../../skills/SKILL_07a_人物生卒年推断.md)
-- **姓氏制度**：[doc/spec/姓氏制度.md](姓氏制度.md)（亲属关系推断）
+- **姓氏制度**：[doc/spec/PLAN_姓氏制度.md](姓氏制度.md)（亲属关系推断）
 - **事件年代反思**：[kg/events/reports/](../../kg/events/reports/)（参考流程）
-- **谥号索引需求**：[doc/spec/谥号索引需求说明.md](谥号索引需求说明.md)
+- **谥号索引需求**：[doc/spec/PLAN_谥号索引需求.md](谥号索引需求说明.md)
 
 ---
 

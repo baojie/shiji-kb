@@ -359,7 +359,7 @@ python generate_all_chapters.py
 
 #### 4.4 维护文档
 
-详细说明见 `doc/spec/特殊读音词表维护说明.md`
+详细说明见 `doc/pronunciation/特殊读音词表维护说明.md`
 
 ### 5. 用户控制
 

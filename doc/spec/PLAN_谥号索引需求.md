@@ -411,7 +411,7 @@
   - `kg/entities/data/shihao_index.json`
 
 - 参考文档：
-  - `doc/spec/谥号索引需求说明.md`（本文档）
+  - `doc/spec/PLAN_谥号索引需求.md`（本文档）
 
 ## 参考资料
 

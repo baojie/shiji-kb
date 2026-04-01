@@ -60,7 +60,7 @@
 - ⚠️ 量词用法（十骑、百骑）暂未全覆盖（30+种变化）
 
 ### 相关文档
-[doc/spec/骑字多音规则说明.md](骑字多音规则说明.md)
+[doc/spec/ANALYSIS_骑字多音规则.md](骑字多音规则说明.md)
 
 ## 三、高频多音字系统性调查
 
@@ -438,8 +438,8 @@ function matchPattern(text, index) {
 |------|------|------|------|
 | SKILL文档 | `skills/SKILL_01d_正音与拼音标注.md` | v2.1 | 含多音字方法论 |
 | 特殊读音词表 | `docs/data/special-pronunciation.json` | v2.7 | 107个词条 |
-| 骑字案例 | `doc/spec/骑字多音规则说明.md` | v1.0 | 详细案例研究 |
-| 本文档 | `doc/spec/多音字处理方案总结.md` | v2.0 | 系统性总结（含63字分析） |
+| 骑字案例 | `doc/spec/ANALYSIS_骑字多音规则.md` | v1.0 | 详细案例研究 |
+| 本文档 | `doc/spec/ANALYSIS_多音字处理.md` | v2.0 | 系统性总结（含63字分析） |
 | 拼音脚本 | `docs/js/heading-pinyin.js` | - | 前端实现 |
 
 ### 8.2 数据来源
