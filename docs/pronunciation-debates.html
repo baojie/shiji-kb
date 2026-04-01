@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>读音争议 - 史记知识库</title>
+    <link rel="stylesheet" href="css/shiji-styles.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 1.05em;
+            color: #555;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .debate-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            transition: box-shadow 0.2s;
+        }
+
+        .debate-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .debate-item h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.3em;
+        }
+
+        .term {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+
+        .context {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .conclusion {
+            background: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .conclusion strong {
+            color: #27ae60;
+        }
+
+        .readings {
+            margin: 15px 0;
+        }
+
+        .readings-label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .reading-row {
+            display: flex;
+            margin: 8px 0;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .reading-type {
+            width: 100px;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .reading-value {
+            flex: 1;
+            font-family: "Courier New", monospace;
+            color: #2c3e50;
+        }
+
+        .adopted {
+            background: #e8f5e9;
+            border-left: 3px solid #27ae60;
+        }
+
+        .adopted .reading-type {
+            color: #27ae60;
+        }
+
+        .discussion-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.95em;
+            transition: background 0.2s;
+        }
+
+        .discussion-link:hover {
+            background: #2980b9;
+        }
+
+        .discussion-link::before {
+            content: "💬 ";
+        }
+
+        .nav-links {
+            margin-bottom: 20px;
+        }
+
+        .nav-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .principles {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 40px;
+        }
+
+        .principles h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .principles ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .principles li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html">← 返回首页</a>
+        </div>
+
+        <h1>史记读音争议</h1>
+
+        <div class="intro">
+            <p>史记中部分专有名词的读音在学术界存在争议。本页面记录本知识库采用的读音标准。</p>
+            <p>详细的文献考证和学术讨论请见各项链接的 GitHub Discussion。</p>
+        </div>
+
+        <h2>争议读音列表</h2>
+
+        <!-- 身毒 -->
+        <div class="debate-item">
+            <h3>
+                <span class="term">身毒</span>
+                <span class="context">（古代对印度的称呼）</span>
+            </h3>
+
+            <div class="readings">
+                <div class="readings-label">争议读音：</div>
+                <div class="reading-row adopted">
+                    <div class="reading-type">✓ 本库采用</div>
+                    <div class="reading-value">shēn dú（身毒）</div>
+                </div>
+                <div class="reading-row">
+                    <div class="reading-type">争议读音</div>
+                    <div class="reading-value">yuán dú（捐毒）</div>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <strong>采用理由</strong>：《史记索隐》《史记正义》明确注音为 shēn dú，这是汉代对梵文 Sindhu（信度河）的音译，应遵循古音。"捐毒"是另一种音译方式，但不是主流。
+            </div>
+
+            <a href="https://github.com/baojie/shiji-kb/discussions/93" class="discussion-link" target="_blank">查看详细考证和讨论</a>
+        </div>
+
+        <!-- 月氏 -->
+        <div class="debate-item">
+            <h3>
+                <span class="term">月氏</span>
+                <span class="context">（古代西域民族，后建立贵霜帝国）</span>
+            </h3>
+
+            <div class="readings">
+                <div class="readings-label">争议读音：</div>
+                <div class="reading-row adopted">
+                    <div class="reading-type">✓ 本库采用</div>
+                    <div class="reading-value">yuè zhī（月支）</div>
+                </div>
+                <div class="reading-row">
+                    <div class="reading-type">争议读音</div>
+                    <div class="reading-value">ròu zhī（肉支）</div>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <strong>采用理由</strong>：《史记索隐》《史记正义》明确注音"氏音支"，唐代以前史书普遍读 yuè zhī。这是对民族名称的音译，应保留古音。学术界主流观点（余太山等）也支持此读音。
+            </div>
+
+            <a href="https://github.com/baojie/shiji-kb/discussions/94" class="discussion-link" target="_blank">查看详细考证和讨论</a>
+        </div>
+
+        <div class="principles">
+            <h3>读音标注原则</h3>
+            <p>本知识库在标注读音时，遵循以下原则：</p>
+            <ol>
+                <li><strong>尊重古注</strong>：优先采用《史记集解》《史记索隐》《史记正义》三家注的注音</li>
+                <li><strong>学术共识</strong>：参考现代学术界主流观点和考证成果</li>
+                <li><strong>音译原则</strong>：对于外来民族、地名等音译词，保留古代读音</li>
+                <li><strong>公开透明</strong>：所有争议读音的详细考证在 GitHub Discussions 公开讨论</li>
+            </ol>
+        </div>
+
+        <p style="margin-top: 30px; color: #666; text-align: center;">
+            如您对读音标注有不同见解，欢迎在相应的 Discussion 中参与讨论，<br>
+            或通过 <a href="https://github.com/baojie/shiji-kb/issues" style="color: #3498db;">GitHub Issues</a> 提出新的读音问题。
+        </p>
+
+        <div class="nav-links" style="margin-top: 40px;">
+            <a href="index.html">← 返回首页</a>
+        </div>
+    </div>
+</body>
+</html>

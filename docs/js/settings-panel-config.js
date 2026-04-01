@@ -20,6 +20,7 @@
         {
             id: 'pinyin-display',
             label: '拼音注释',
+            labelHTML: '拼音注释 <a href="../pronunciation-debates.html" target="_blank" style="font-size: 0.85em; color: #3498db; text-decoration: none; margin-left: 4px;" title="查看读音争议说明">[?]</a>',
             storageKey: 'shiji-pinyin-display',
             defaultValue: false,  // 默认关闭
             onChange: function(enabled) {
@@ -83,7 +84,12 @@
             checkbox.checked = isEnabled;
 
             const span = document.createElement('span');
-            span.textContent = config.label;
+            // 如果有 labelHTML 字段，使用 innerHTML；否则使用 textContent
+            if (config.labelHTML) {
+                span.innerHTML = config.labelHTML;
+            } else {
+                span.textContent = config.label;
+            }
 
             label.appendChild(checkbox);
             label.appendChild(span);
