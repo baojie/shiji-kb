@@ -404,7 +404,7 @@ python scripts/render_blocks_html.py --input=taishigongyue.json
 
 - **设计文档**: [doc/BLOCK_TAG_SYSTEM.md](../doc/BLOCK_TAG_SYSTEM.md) — 区块标签系统完整设计
 - **专项索引**: [docs/special/README.md](../docs/special/README.md) — 专项索引说明
-- **渲染规范**: [SKILL_03d_渲染与发布.md](SKILL_03d_渲染与发布.md) — HTML渲染规则
+- **渲染规范**: [SKILL_03d_HTML渲染与结构语义表现.md](SKILL_03d_渲染与发布.md) — HTML渲染规则
 
 ---
 

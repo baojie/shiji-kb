@@ -660,7 +660,7 @@ python scripts/lint_markdown.py chapter_md/*.tagged.md
 3. SKILL_03e：按类型反思（系统性误标）
 4. SKILL_03c：按章反思（精细化修正）
 5. SKILL_03b：实体消歧
-6. SKILL_03d：渲染与发布
+6. SKILL_03d：HTML渲染与结构语义表现
 
 ---
 
