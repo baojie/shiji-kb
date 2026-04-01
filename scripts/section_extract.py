@@ -7,26 +7,24 @@
 import re
 from pathlib import Path
 import json
+import urllib.parse
 
 def extract_sections_from_chapter(md_file):
-    """从markdown文件中提取主要段落（一级段落）"""
+    """从markdown文件中提取主要段落（二级标题）"""
     sections = []
 
     try:
         with open(md_file, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        # 匹配一级段落：## [数字] 标题
-        # 匹配格式：## [0] 标题 或 ## [1] 标题 等
-        pattern = r'^## \[(\d+)\] (.+)$'
+        # 匹配二级标题：## 标题
+        pattern = r'^## (.+)$'
 
         for line in content.split('\n'):
             match = re.match(pattern, line.strip())
             if match:
-                num = match.group(1)
-                title = match.group(2)
+                title = match.group(1).strip()
                 sections.append({
-                    'num': num,
                     'title': title
                 })
 
@@ -58,7 +56,32 @@ def process_all_chapters():
     return result
 
 
-def generate_section_links_html(chapter_name, sections, max_display=8):
+def generate_heading_id(text):
+    """从标题文本生成URL安全的锚点ID（与render_shiji_html.py保持一致）"""
+    # 移除〖TYPE content|canonical〗标注，保留content（消歧格式）
+    clean_text = re.sub(r'〖[^〗]*?\|([^〗|]+)〗', r'\1', text)
+    # 移除〖TYPE content〗标注，保留content（普通格式）
+    clean_text = re.sub(r'〖[^〗]+?〗', lambda m: m.group(0)[2:-1], clean_text)
+    # 移除⟦TYPE content⟧标注（动词），保留content
+    clean_text = re.sub(r'⟦[^⟧]+?⟧', lambda m: m.group(0)[2:-1], clean_text)
+    # 移除HTML标签
+    clean_text = re.sub(r'<[^>]+>', '', clean_text)
+    # URL编码（中文会被编码）
+    return urllib.parse.quote(clean_text.strip())
+
+
+def clean_entity_markers(text):
+    """移除文本中的实体标注符号，用于显示"""
+    # 移除〖TYPE content|canonical〗标注，保留content（消歧格式）
+    clean = re.sub(r'〖[^〗]*?\|([^〗|]+)〗', r'\1', text)
+    # 移除〖TYPE content〗标注，保留content（普通格式）
+    clean = re.sub(r'〖[^〗]+?〗', lambda m: m.group(0)[2:-1], clean)
+    # 移除⟦TYPE content⟧标注（动词），保留content
+    clean = re.sub(r'⟦[^⟧]+?⟧', lambda m: m.group(0)[2:-1], clean)
+    return clean.strip()
+
+
+def generate_section_links_html(chapter_name, sections, max_display=10):
     """为一个章节生成小节链接的HTML"""
 
     if not sections:
@@ -69,9 +92,13 @@ def generate_section_links_html(chapter_name, sections, max_display=8):
     has_more = len(sections) > max_display
 
     links = []
-    for section in display_sections:
-        # 生成链接，格式：chapters/章节名.tagged.html#pn-段落号
-        link = f'<a href="chapters/{chapter_name}.tagged.html#pn-{section["num"]}">[{section["num"]}] {section["title"]}</a>'
+    for i, section in enumerate(display_sections):
+        title = section["title"]
+        # 生成与HTML文件中相同的锚点ID
+        heading_id = generate_heading_id(title)
+        # 清理显示文本中的实体标注
+        display_title = clean_entity_markers(title)
+        link = f'<a href="chapters/{chapter_name}.html#{heading_id}">{display_title}</a>'
         links.append(link)
 
     if has_more:
