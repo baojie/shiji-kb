@@ -32,6 +32,7 @@ import os
 import json
 from pathlib import Path
 from html import escape as html_escape
+import urllib.parse
 
 # 实体类型映射（v2.1，2026-03-13）
 # 新格式：10类对称符号改为 〖TYPE content〗 统一包裹
@@ -208,6 +209,27 @@ def set_chapter_context(chapter_id):
     """设置当前章节ID，供消歧映射使用"""
     global _current_chapter_id
     _current_chapter_id = chapter_id
+
+
+def generate_heading_id(text):
+    """从标题文本生成URL安全的锚点ID
+
+    策略：
+    1. 移除实体标注符号（如 〖@人名〗 → 人名, 〖~璧〗 → 璧）
+    2. 移除HTML标签（如果有）
+    3. URL编码中文和特殊字符
+    """
+    # 移除〖TYPE content|canonical〗标注，保留content（消歧格式）
+    clean_text = re.sub(r'〖[^〗]*?\|([^〗|]+)〗', r'\1', text)
+    # 移除〖TYPE content〗标注，保留content（普通格式）
+    # TYPE是单个字符，如@~%^等
+    clean_text = re.sub(r'〖[^〗]+?〗', lambda m: m.group(0)[2:-1], clean_text)
+    # 移除⟦TYPE content⟧标注（动词），保留content
+    clean_text = re.sub(r'⟦[^⟧]+?⟧', lambda m: m.group(0)[2:-1], clean_text)
+    # 移除HTML标签
+    clean_text = re.sub(r'<[^>]+>', '', clean_text)
+    # URL编码（中文会被编码）
+    return urllib.parse.quote(clean_text.strip())
 
 
 def _add_entity_links(text):
@@ -508,6 +530,18 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
             flush_para()
             html_lines.append(line)
             continue
+
+        # 检查是否为空段落（只有编号，无内容）
+        # 格式：行首为 [数字] 或 [数字.数字]，后面只有空白或换行
+        empty_para_match = re.match(r'^\[(\d+(?:\.\d+)*)\]\s*$', line.strip())
+        if empty_para_match:
+            flush_para()
+            pn = empty_para_match.group(1)
+            pn_id = f"pn-{pn}"
+            # 渲染为空div，带有段落编号锚点
+            html_lines.append(f'<div id="{pn_id}" class="empty-para"><a href="#{pn_id}" class="para-num" title="点击复制链接">{pn}</a></div>')
+            continue
+
         # 转换实体标记
         line = convert_entities(line)
 
@@ -539,7 +573,10 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
             line = line.replace('id="pn-', 'id="section-').replace('href="#pn-', 'href="#section-')
         elif line.startswith('## '):
             flush_para()
-            line = f'<h2>{line[3:]}</h2>'
+            heading_text = line[3:]
+            # 生成锚点ID
+            heading_id = generate_heading_id(heading_text)
+            line = f'<h2 id="{heading_id}">{heading_text}</h2>'
             # 将 h2 中的 pn- 替换为 section-
             line = line.replace('id="pn-', 'id="section-').replace('href="#pn-', 'href="#section-')
         elif line.startswith('### '):

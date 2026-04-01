@@ -21,7 +21,7 @@ def main():
     v2_variants = json.loads(v2_file.read_text(encoding='utf-8'))
 
     # 加载新规则
-    new_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/新增词库规则v3.0.json')
+    new_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/DATA_新增词库规则v3.0.json')
     new_variants = json.loads(new_file.read_text(encoding='utf-8'))
 
     print("="*80)

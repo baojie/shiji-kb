@@ -15,7 +15,7 @@ def main():
     print(f"v2.0词库: {len(v2_variants)} 条规则")
 
     # 加载新规则
-    new_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/新增词库规则v3.0.json')
+    new_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/DATA_新增词库规则v3.0.json')
     new_variants = json.loads(new_file.read_text(encoding='utf-8'))
     print(f"新规则: {len(new_variants)} 条")
 

@@ -248,7 +248,7 @@ def main():
     print(f"\n共生成 {len(custom_variants)} 条规则")
 
     # 保存结果
-    output_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/真实错误分析.json')
+    output_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/DATA_真实错误分析.json')
     output_data = {
         'total_errors': total_count,
         'errors_by_char': {char: len(errors) for char, errors in all_errors.items()},
@@ -272,7 +272,7 @@ def main():
     print(f"\n详细分析已保存到: {output_file}")
 
     # 保存词库规则
-    variants_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/新增词库规则v3.0.json')
+    variants_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/DATA_新增词库规则v3.0.json')
     variants_file.write_text(json.dumps(custom_variants, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f"词库规则已保存到: {variants_file}")
 

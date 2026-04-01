@@ -23,7 +23,7 @@ def apply_custom_variants(text, variants_dict):
 
 def main():
     # 加载错误分析数据
-    errors_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/真实错误分析.json')
+    errors_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/DATA_真实错误分析.json')
     errors_data = json.loads(errors_file.read_text(encoding='utf-8'))
 
     # 加载v3.0词库

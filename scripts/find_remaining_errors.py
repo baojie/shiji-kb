@@ -27,7 +27,7 @@ def load_custom_variants():
 
 def load_mapping_data():
     """加载繁简映射数据"""
-    data_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/繁简映射数据.json')
+    data_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/DATA_繁简映射.json')
     return json.loads(data_file.read_text(encoding='utf-8'))
 
 def extract_context(text, pos, context_len=10):
@@ -233,7 +233,7 @@ def main():
 
     # 保存建议
     if all_suggestions:
-        output_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/低频字符词库规则建议.json')
+        output_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/DATA_低频字符词库规则.json')
         output_file.write_text(json.dumps(all_suggestions, ensure_ascii=False, indent=2), encoding='utf-8')
         print(f"\n规则建议已保存到: {output_file}")
 

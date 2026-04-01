@@ -100,7 +100,7 @@ def main():
     print("="*80)
 
     # 保存扩展规则
-    output_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/单字扩展为词组规则.json')
+    output_file = Path('/home/baojie/work/knowledge/shiji-kb/doc/spec/DATA_单字扩展词组规则.json')
     output_file.write_text(json.dumps(new_phrase_rules, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f"\n已保存到: {output_file}")
 
