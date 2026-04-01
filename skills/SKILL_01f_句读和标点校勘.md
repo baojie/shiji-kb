@@ -643,9 +643,10 @@ python scripts/punctuation/extract_all_versions.py 001
 #### 验证工具
 - `scripts/lint_symbol_conflicts.py` - 符号冲突检测（标点、标注、Markdown）
   - 检查：半角标点、直角引号、标点在标注内、Markdown在标注内、嵌套标注、标注跨标点
+  - 智能过滤：自动忽略紫色编号中的半角句号（如 `[23.2.1]`）、标注语法中的半角符号
   - 输出：检查报告（按文件和严重程度分组）
   - 用法：`python scripts/lint_symbol_conflicts.py chapter_md/*.md --report logs/symbol_conflicts.txt`
-  - **状态**：✅ 已实现（基于 SKILL_01g）
+  - **状态**：✅ 已实现（基于 SKILL_01g，2026-04-02 更新：忽略紫色编号中的半角句号）
 
 - `scripts/punctuation/lint_punctuation.py` - 标点规则检查 ⚠️ 待开发
   - 检查：引号成对、句子长度、换行符类型
@@ -658,6 +659,35 @@ python scripts/punctuation/extract_all_versions.py 001
   - 输出：可疑位置列表
   - 用法：`python scripts/punctuation/validate_punctuation.py curation_base/初稿.txt`
   - **状态**：❌ 未开发
+
+#### 修复工具
+- `scripts/fix_halfwidth_quotes.py` - 半角引号修复（智能判断左右引号）
+  - 功能：将半角引号 `"` 替换为全角 `"` 或 `"`，半角单引号 `'` 替换为全角 `'` 或 `'`
+  - 智能判断：根据上下文自动判断是左引号还是右引号
+  - 用法：`python scripts/fix_halfwidth_quotes.py`
+  - **状态**：✅ 已实现
+
+- `scripts/fix_misplaced_fullwidth_quotes.py` - 全角引号左右修正
+  - 功能：修正错误的全角引号（将错误的左引号 `"` 改为右引号 `"`）
+  - 用法：`python scripts/fix_misplaced_fullwidth_quotes.py`
+  - **状态**：✅ 已实现
+
+- `scripts/fix_all_halfwidth_symbols.py` - 半角标点符号批量修复
+  - 功能：修复半角句号 `.`、冒号 `:`、逗号 `,` 为全角
+  - 智能保留：自动保留紫色编号中的半角句号（如 `[23.2.1]`）、数字中的小数点和千分位
+  - 用法：`python scripts/fix_all_halfwidth_symbols.py`
+  - **状态**：✅ 已实现
+
+- `scripts/fix_square_quotes.py` - 直角引号修复
+  - 功能：将直角引号 `「」` 替换为弯引号 `""`，`『』` 替换为 `''`
+  - 用法：`python scripts/fix_square_quotes.py`
+  - **状态**：✅ 已实现
+
+- `scripts/fix_nested_annotations.py` - 嵌套标注修复
+  - 功能：展平嵌套的标注符号（如 `〖#〖#文本〗〗` → `〖#文本〗`）
+  - 智能规则：无前后缀时保留外层类型，有前后缀时合并所有内容
+  - 用法：`python scripts/fix_nested_annotations.py`
+  - **状态**：✅ 已实现
 
 #### 对照工具 ⚠️ 待开发
 - `scripts/punctuation/compare_punctuation.py` - 多版本标点对比
@@ -780,7 +810,147 @@ python scripts/punctuation/reflect_punctuation.py chapter_md/001_*.tagged.md
 # 第五步：人工决策（根据AI建议修正）
 ```
 
-#### 示例3：批量处理（多章节）
+#### 示例3：批量修复半角符号（实际案例）
+
+```bash
+# 背景：发现 logs/symbol_conflicts_20260401.txt 报告有 15675 处半角符号问题
+
+# 第一步：检测半角符号问题
+python scripts/lint_symbol_conflicts.py chapter_md/*.tagged.md \
+  --check-types halfwidth \
+  --report logs/symbol_conflicts_before.txt
+
+# 输出示例：
+# 检查文件: 130 个
+# 发现问题: 15675 处
+#   - 半角引号 ": 994 处
+#   - 半角引号 ': 13961 处
+#   - 半角冒号 :: 2006 处
+#   - 半角句号 .: 7 处
+#   - 半角逗号 ,: 7 处
+
+# 第二步：修复半角引号（双引号和单引号）
+python scripts/fix_halfwidth_quotes.py
+
+# 输出示例：
+# 📁 找到 130 个文件
+# ✅ 001_五帝本纪.tagged.md
+#    修复 34 处半角引号
+#    - 行95: 2处（双引号2，单引号0）
+#    ...
+# 📊 修复完成:
+#    - 修复文件数: 125
+#    - 修复引号数: 14955
+
+# 第三步：修正全角引号左右（第二步可能产生的错误）
+python scripts/fix_misplaced_fullwidth_quotes.py
+
+# 输出示例：
+# ✅ 001_五帝本纪.tagged.md
+#    修改前: 左引号=54, 右引号=28
+#    修改后: 左引号=41, 右引号=41
+#    修改了 11 行，转换 13 个引号
+# 📊 修复完成:
+#    - 修复文件数: 18
+#    - 转换引号数: 400 (左引号→右引号)
+
+# 第四步：修复其他半角标点符号
+python scripts/fix_all_halfwidth_symbols.py
+
+# 输出示例：
+# ✅ 010_孝文本纪.tagged.md
+#    修复 150 处半角符号
+#    - 冒号 150 处
+# 📊 修复完成:
+#    - 修复文件数: 127
+#    - 修复符号总数: 2020
+#      · 句号: 7 处
+#      · 冒号: 2006 处
+#      · 逗号: 7 处
+
+# 第五步：修复直角引号
+python scripts/fix_square_quotes.py
+
+# 输出示例：
+# ✅ 085_吕不韦列传.tagged.md
+#    修复 12 处直角引号
+# 📊 修复完成:
+#    - 修复文件数: 7
+#    - 修复引号数: 57
+
+# 第六步：修复嵌套标注
+python scripts/fix_nested_annotations.py
+
+# 输出示例：
+# ✅ 085_吕不韦列传.tagged.md
+#    修复 31 处嵌套标注
+#    - 〖#〖#〗〗: 16处
+#    - 〖;〖#〗〗: 14处
+# 📊 修复完成:
+#    - 修复文件数: 22
+#    - 修复总数: 253
+
+# 第七步：验证修复结果（完整检查）
+python scripts/lint_symbol_conflicts.py chapter_md/*.tagged.md \
+  --report logs/symbol_conflicts_after.txt
+
+# 输出示例：
+# 检查文件: 130 个
+# 发现问题: 0 处
+#   - 半角标点: 0 处
+#   - 直角引号: 0 处
+#   - 嵌套标注: 0 处
+
+# 第八步：使用 git diff 检查修改
+git diff chapter_md/001_五帝本纪.tagged.md | head -50
+
+# 第九步：如无问题，暂存并提交变更
+git add chapter_md/*.tagged.md
+git commit -m "修复所有符号冲突：半角符号、直角引号、嵌套标注
+
+- 修复半角引号（双引号和单引号）14955处
+- 修正全角引号左右400处
+- 修复半角标点符号（句号、冒号、逗号）2020处
+- 修复直角引号（「」『』）57处
+- 修复嵌套标注253处
+- 保留紫色编号中的半角句号（如 [23.2.1]）
+- 保留标注语法中的半角符号（@、;、#等）
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>"
+```
+
+**修复脚本的智能特性**：
+
+1. **智能判断左右引号** (`fix_halfwidth_quotes.py`、`fix_misplaced_fullwidth_quotes.py`)：
+   - 根据后一个字符优先判断（右引号特征更明确）
+   - 句号、问号、逗号等标点后的引号 → 右引号 `"` 或 `'`
+   - 冒号、空格、标注符号后的引号 → 左引号 `"` 或 `'`
+   - 使用配对状态跟踪（第一个为左，第二个为右）
+
+2. **智能保留合法的半角符号** (`fix_all_halfwidth_symbols.py`)：
+   - 紫色编号中的句号：`[23.2.1]` → 保留 `.`
+   - 标注语法中的符号：`〖@人名〗` → 保留 `@`
+   - 数字中的小数点：`3.14` → 保留 `.`
+   - 时间格式中的冒号：`12:30` → 保留 `:`
+   - 数字千分位：`1,000` → 保留 `,`
+
+3. **Unicode精确处理** (`fix_square_quotes.py`)：
+   - 使用显式Unicode码点 `chr(0x201C)` 而非字符串字面量
+   - 避免编码问题导致的半角字符错误
+
+4. **智能展平嵌套标注** (`fix_nested_annotations.py`)：
+   - 规则1：无前后缀时保留外层类型（`〖^〖_仁义〗〗` → `〖^仁义〗`）
+   - 规则2：有前后缀时合并内容（`〖@司〖~马〗季主〗` → `〖@司马季主〗`）
+   - 迭代处理多层嵌套（最多10轮）
+
+5. **批量处理与统计**：
+   - 自动处理所有 `.tagged.md` 文件
+   - 提供详细的修复统计（按文件、按模式）
+   - 按文件显示修复行号和数量
+
+#### 示例4：批量处理（多章节）
 
 ```bash
 # 批量断句（全部130章）
