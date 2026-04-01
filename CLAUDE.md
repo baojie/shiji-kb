@@ -15,6 +15,61 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - commit时只提交用户已暂存（git add）的文件，不得擅自 `git add -A` 或 `git add .` 添加未暂存的文件。
 - commit message不要自动加版本号（如v3.1），版本号由用户决定。
 
+## Git代码版本管理规范
+
+**⚠️ 重要：必须严格遵守 [`skills/SKILL_10c_Git代码版本管理规范.md`](skills/SKILL_10c_Git代码版本管理规范.md)**
+
+### 核心要求（摘要）
+
+#### 禁止事项
+
+❌ **绝对禁止**（除非用户明确授权）：
+
+1. **严禁使用 `git checkout <commit> -- <file>` 恢复文件**
+   - 会覆盖工作区所有未提交的修改，无法撤销
+   - 可能破坏其他进程（IDE、脚本）正在修改的内容
+   - 在多人协作时会覆盖他人的工作成果
+   - 被覆盖的修改无法恢复，造成工作损失
+
+2. 不要自动commit（必须用户明确要求）
+3. 不要擅自 `git add -A` 或 `git add .` 添加未暂存文件
+4. 不要跳过pre-commit hooks（除非用户明确要求）
+5. 不要force push到main/master分支
+
+#### 正确做法
+
+**文件恢复的安全方案**：
+
+1. **方案1**：查看差异，手动编辑修复（推荐）
+   ```bash
+   git diff <commit> -- <file>  # 查看差异
+   # 根据diff结果手动编辑文件
+   ```
+
+2. **方案2**：编写脚本比较差异（批量修复推荐）
+   ```python
+   # 读取旧版本内容，只提取需要修复的部分
+   old_content = subprocess.run(['git', 'show', 'commit:file'],
+                                capture_output=True, text=True).stdout
+   # 比较并只修复需要的部分（如编号）
+   ```
+
+3. **方案3**：使用stash保护现有修改（完全恢复时）
+   ```bash
+   git stash push -m "临时保存" -- <file>
+   git show <commit>:<file> > <file>
+   # 验证无误后：git stash drop
+   ```
+
+**提交前必做**：
+
+1. 运行 `git status` 查看暂存区内容
+2. 运行 `git diff --cached` 查看具体改动
+3. 运行 `git log --oneline -10` 了解commit message风格
+4. 使用HEREDOC格式编写commit message
+
+详细规范请参考 [`SKILL_10c_Git代码版本管理规范`](skills/SKILL_10c_Git代码版本管理规范.md)。
+
 ## 文件组织与目录结构
 
 **重要**：创建新文件时，必须遵循 [`skills/SKILL_10e_文件组织与目录结构.md`](skills/SKILL_10e_文件组织与目录结构.md) 中定义的规范。

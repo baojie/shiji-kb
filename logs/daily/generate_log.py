@@ -13,12 +13,13 @@
 
 时间范围：
 - YYYY-MM-DD.md 对应的时间范围是：
-  (YYYY-MM-DD-1) 07:00:00 至 (YYYY-MM-DD) 07:00:00
+  (YYYY-MM-DD) 07:00:00 至 (YYYY-MM-DD+1) 07:00:00
 
 示例：
-- 2026-03-17.md 包含：2026-03-16 07:00 ~ 2026-03-17 07:00 的提交
-- 如果你在 2026-03-17 凌晨2点提交，会计入 2026-03-17.md
-- 如果你在 2026-03-17 早上8点提交，会计入 2026-03-18.md
+- 2026-03-31.md 包含：2026-03-31 07:00 ~ 2026-04-01 07:00 的提交
+- 如果你在 2026-03-31 早上8点提交，会计入 2026-03-31.md
+- 如果你在 2026-04-01 凌晨2点提交，会计入 2026-03-31.md
+- 如果你在 2026-04-01 早上8点提交，会计入 2026-04-01.md
 """
 
 import subprocess
@@ -32,13 +33,13 @@ def get_git_commits(date_str):
     """获取指定日期的git提交记录
 
     注意：工作日的划分以早上7:00为界
-    - 某日的工作日志包含：前一天 07:00 到 当天 07:00 的提交
-    - 例如：2026-03-17.md 包含 2026-03-16 07:00 ~ 2026-03-17 07:00 的提交
+    - 某日的工作日志包含：当天 07:00 到 次日 07:00 的提交
+    - 例如：2026-03-31.md 包含 2026-03-31 07:00 ~ 2026-04-01 07:00 的提交
     """
     # 获取当天的开始和结束时间（以早上7点为界）
     date = datetime.strptime(date_str, "%Y-%m-%d")
-    start = (date - timedelta(days=1)).strftime("%Y-%m-%d 07:00:00")
-    end = date.strftime("%Y-%m-%d 07:00:00")
+    start = date.strftime("%Y-%m-%d 07:00:00")
+    end = (date + timedelta(days=1)).strftime("%Y-%m-%d 07:00:00")
 
     cmd = [
         "git", "log",
@@ -191,7 +192,7 @@ def main():
     log_file.write_text(content, encoding='utf-8')
     print(f"✅ 日志已生成: {log_file}")
     print(f"\n提交统计: {len(commits)}次")
-    print(f"时间范围: {(datetime.strptime(date_str, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')} 07:00 ~ {date_str} 07:00")
+    print(f"时间范围: {date_str} 07:00 ~ {(datetime.strptime(date_str, '%Y-%m-%d') + timedelta(days=1)).strftime('%Y-%m-%d')} 07:00")
     print(f"\n💡 使用AI生成微信通知：python summarize_for_wechat.py {date_str}")
 
 
