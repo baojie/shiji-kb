@@ -1,0 +1,24 @@
+HTML重新生成报告
+生成时间: 2026-04-01 15:11
+
+任务：重新生成所有130章的HTML文件
+
+结果：
+- 成功生成: 130个文件
+- 失败: 0个文件
+- 输出目录: docs/chapters/
+- 渲染脚本: render_shiji_html.py
+
+验证：
+- 所有文件时间戳: 2026-04-01 15:11
+- 比lint报告更新 (lint: 2026-04-01 14:47)
+
+生成方式：
+使用批量Python脚本，为每个 chapter_md/*.tagged.md 文件
+调用 render_shiji_html.py，指定输出路径为 docs/chapters/
+
+相关文件：
+- Purple Numbers lint报告: logs/pn_lint_20260401.txt
+- SKILL文档更新: skills/SKILL_02a_章节切分与编号.md
+- 新lint脚本: scripts/lint_purple_numbers.py
+- SKILL_10c更新: skills/SKILL_10c_Git代码版本管理规范.md

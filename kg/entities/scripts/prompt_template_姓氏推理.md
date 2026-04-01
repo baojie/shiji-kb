@@ -28,7 +28,7 @@
 ### Step 1：读取已有知识
 
 1. 读取推理规则：`skills/SKILL_07b_姓氏推理.md`
-2. 读取背景规范：`doc/spec/姓氏制度.md`
+2. 读取背景规范：`doc/spec/PLAN_姓氏制度.md`
 3. 读取已有数据：`kg/entities/data/person_xingshi.json`（已确认的姓氏记录）
 4. 读取姓族索引：`kg/entities/data/xing_index.json`
 5. 读取本次处理的章节或人物列表：{input_files}

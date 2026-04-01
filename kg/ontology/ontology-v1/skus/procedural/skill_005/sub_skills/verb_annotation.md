@@ -487,10 +487,10 @@ python kg/entities/scripts/migrate_verb_tags.py --all --report migration_report.
 
 ## 参考文档
 
-1. **[动词标注规范](../../../../doc/spec/动词标注规范.md)** - 完整的语法规范和分类体系
-2. **[动词渲染规则](../../../../doc/spec/动词渲染规则.md)** - HTML渲染和CSS样式规则
+1. **[动词标注规范](../../../../doc/spec/SPEC_动词标注.md)** - 完整的语法规范和分类体系
+2. **[动词渲染规则](../../../../doc/spec/RENDER_动词规则.md)** - HTML渲染和CSS样式规则
 3. **[动词分类体系](../../../../kg/entities/data/verb_taxonomy.md)** - 详细的动词词表
-4. **[标注格式规范](../../../../doc/spec/标注格式规范.md)** - 整体标注格式要求
+4. **[标注格式规范](../../../../doc/spec/SPEC_标注格式.md)** - 整体标注格式要求
 5. **[动词标注迁移报告](../../../../doc/entities/动词标注迁移报告_v3.0.md)** - v3.0迁移实施报告
 
 ---
