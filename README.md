@@ -53,7 +53,7 @@
 
 **原文 → 专名标注 → 语法高亮 → 语义排版 → 关系连线**
 
-[查看完整演进过程](resources/publications/notes/史记语法高亮创造过程.md) | [语义排版技术细节](resources/publications/draft/史记阅读器重构与语义排版.md)
+[查看完整演进过程](resources/publications/notes/史记语法高亮创造过程.md) | [语义排版技术细节](resources/publications/draft/2026-03-16_史记阅读器重构与语义排版/史记阅读器重构与语义排版.md)
 
 ---
 
@@ -71,7 +71,7 @@
 
 **核心转变**：2001年的难点是"设计本体"，2026年的难点是"反思/进化AI提取的本体"。本体不再是专家预先设计的蓝图，而是从数据中生长出来、由人类修剪和校准的有机结构。
 
-> 详见方法论对标文档：[Agentic Ontology 101](resources/publications/draft/agentic_ontology_101.md)（英文，对标Noy & McGuinness 2001经典）
+> 详见方法论对标文档：[Agentic Ontology 101](resources/publications/draft/2026-03-20_agentic_ontology_101/agentic_ontology_101.md)（英文，对标Noy & McGuinness 2001经典）
 
 ### 📚 可复用方法论：从一部书到整个文库
 
@@ -89,7 +89,7 @@
 
 **技术文章** - 方法论实战解读
 - 《从历史书中探索知识图谱》（2026-03-19）：项目缘起、核心成果、技术架构、元技能体系的完整呈现
-- → **[下载PDF（14页，1.5MB）](resources/publications/draft/从历史书中探索知识图谱.pdf)**
+- → **[下载PDF（14页，1.5MB）](resources/publications/draft/2026-03-19_从历史书中探索知识图谱/从历史书中探索知识图谱.pdf)**
 
 **为什么是SKILL而非代码？**
 
@@ -139,7 +139,7 @@
 
 ### 应用场景
 
-详见：[史记阅读器重构与语义排版](resources/publications/draft/史记阅读器重构与语义排版.md)
+详见：[史记阅读器重构与语义排版](resources/publications/draft/2026-03-16_史记阅读器重构与语义排版/史记阅读器重构与语义排版.md)
 
 - **文艺二次创造**：历史小说/电影/短剧素材引擎，快速检索人物关系、事件脉络、场景细节
   - 播客案例：[EP02 AI侦探：荆轲死了，秦始皇不说，那谁说的](https://www.xiaoyuzhoufm.com/episode/69c40294852cf1b8bbe08cf7) - 从知识图谱到音频叙事的创作实践

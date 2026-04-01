@@ -11173,9 +11173,9 @@ python kg/entities/scripts/migrate_verb_tags.py --all --report report.md
 <h2 id="_13">参考文档</h2>
 <h3 id="_14">规范文档</h3>
 <ol>
-<li><strong><a href="../doc/spec/动词标注规范.md">动词标注规范</a></strong> - 完整的语法规范和分类体系</li>
-<li><strong><a href="../doc/spec/动词渲染规则.md">动词渲染规则</a></strong> - HTML渲染和CSS样式</li>
-<li><strong><a href="../doc/spec/标注格式规范.md">标注格式规范</a></strong> - 整体标注格式</li>
+<li><strong><a href="../doc/spec/SPEC_动词标注.md">动词标注规范</a></strong> - 完整的语法规范和分类体系</li>
+<li><strong><a href="../doc/spec/RENDER_动词规则.md">动词渲染规则</a></strong> - HTML渲染和CSS样式</li>
+<li><strong><a href="../doc/spec/SPEC_标注格式.md">标注格式规范</a></strong> - 整体标注格式</li>
 </ol>
 <h3 id="_15">数据文档</h3>
 <ol start="4">
@@ -17209,7 +17209,7 @@ Step 4：亲属关系交叉约束
 <blockquote>
 <p>从《史记》文本推断先秦人物的姓/氏/名/字，建立传承记录，辅助消歧和阅读注释。</p>
 </blockquote>
-<p>背景与数据模型见：<a href="../doc/spec/姓氏制度.md">doc/spec/姓氏制度.md</a></p>
+<p>背景与数据模型见：<a href="../doc/spec/PLAN_姓氏制度.md">doc/spec/PLAN_姓氏制度.md</a></p>
 <hr />
 <h2 id="_1">一、总体思路：多轮迭代</h2>
 <p>姓氏推理是一个<strong>传播问题</strong>：有明确记载的人是种子，通过邦国、氏族、父系三条路径向未知人物扩散。每轮迭代都会新增已知条目，从而解锁更多下一轮的推理。</p>
@@ -18113,8 +18113,8 @@ bash publish_to_docs.sh              # 完整发布流水线
 <h2 id="_4">三、视觉设计</h2>
 <h3 id="31-18">3.1 实体渲染（18类名词实体）</h3>
 <p><strong>设计文档</strong>:<br />
-- <a href="../../doc/spec/实体渲染规划.md">实体渲染规划 v5.0</a> - v5.0设计方案<br />
-- <a href="../../doc/spec/CSS版本历史_v5.4.md">CSS版本历史 v5.4</a> - v5.4版本演进<br />
+- <a href="../../doc/spec/RENDER_实体规划.md">实体渲染规划 v5.0</a> - v5.0设计方案<br />
+- <a href="../../doc/spec/RENDER_CSS历史v5.4.md">CSS版本历史 v5.4</a> - v5.4版本演进<br />
 - <a href="../../doc/更新日志_2026-03-19_CSS_v5.4.md">更新日志 2026-03-19</a> - v5.4发布说明</p>
 <p><strong>核心理念</strong>（v5.4）：<br />
 - <strong>text-decoration风格</strong> + 下划线组合（实线/虚线/点线/波浪线/无）<br />
@@ -18296,7 +18296,7 @@ bash publish_to_docs.sh              # 完整发布流水线
 - <strong>波浪线应用</strong>：典籍(传统书名号延续)、神话(虚构性标识)<br />
 - <strong>tooltip提示</strong>：悬停显示实体类型名，消歧后显示全名</p>
 <h3 id="32-4">3.2 动词渲染（4类动词实体）</h3>
-<p><strong>设计文档</strong>: <a href="../../doc/spec/动词渲染规则.md">动词渲染规则 v4.0</a></p>
+<p><strong>设计文档</strong>: <a href="../../doc/spec/RENDER_动词规则.md">动词渲染规则 v4.0</a></p>
 <p><strong>核心理念</strong>：<br />
 - <strong>鲜明背景色</strong> - 红/蓝/金独立背景，与实体淡黄底明确区分<br />
 - <strong>统一加粗</strong> - font-weight:600/500，视觉强调<br />
@@ -18629,8 +18629,8 @@ bash publish_to_docs.sh              # 完整发布流水线
 <ol>
 <li><strong>HTML渲染</strong>：<code>render_shiji_html.py</code>（见 §二 渲染管线）</li>
 <li><strong>CSS样式设计</strong>：<br />
-   - 实体渲染：见 §三.1 + <a href="../../doc/spec/实体渲染规划.md">实体渲染规划 v5.0</a><br />
-   - 动词渲染：见 §三.2 + <a href="../../doc/spec/动词渲染规则.md">动词渲染规则 v4.0</a></li>
+   - 实体渲染：见 §三.1 + <a href="../../doc/spec/RENDER_实体规划.md">实体渲染规划 v5.0</a><br />
+   - 动词渲染：见 §三.2 + <a href="../../doc/spec/RENDER_动词规则.md">动词渲染规则 v4.0</a></li>
 <li><strong>批量生成</strong>：<code>generate_all_chapters.py</code>（见 §二 批量生成）</li>
 <li><strong>发布流水线</strong>：<code>publish_to_docs.sh</code>（见 §七 发布流水线）</li>
 <li><strong>质量检查</strong>：<code>scripts/lint_html.py</code>（见 §七 步骤6）</li>

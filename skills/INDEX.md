@@ -278,7 +278,7 @@
   - [大规模知识库构造元技能方法论.pdf](../resources/publications/meta-skill-book/)（425页）
   - [史记知识库构造管线技能手册.pdf](../resources/publications/pipeline-skills-book/)（438页）
 - **技术文章**：
-  - [从历史书中探索知识图谱](../resources/publications/draft/从历史书中探索知识图谱.pdf)（14页）
+  - [从历史书中探索知识图谱](../resources/publications/draft/2026-03-19_从历史书中探索知识图谱/从历史书中探索知识图谱.pdf)（14页）
 - **SKILL系统更新规划**：
   - [SKILL系统更新规划_2026-03-31.md](../doc/methodology/SKILL系统更新规划_2026-03-31.md)
 

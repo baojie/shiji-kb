@@ -7,7 +7,7 @@ platforms: []
 
 **Jie Bao, with Claude (Anthropic)**
 
-*Based on the Shiji Knowledge Base project: 130 chapters, 577,000 characters, 18 entity types, 102,851 annotations, 3,197 events, 7,637 relations — built in 6 weeks by one person + AI agents.*
+*Based on the Shiji Knowledge Base project: 130 chapters, 577,000 characters, 18 entity types, 102,851 annotations, 3,197 events, 7,637 relations — built in 6 weeks by one person + AI agents. Text integrity: 91.5% chapters validated, 800+ corrections converged.*
 
 > This document updates Noy & McGuinness's classic *"Ontology Development 101: A Guide to Creating Your First Ontology"* (Stanford, 2001) for the age of AI agents. Where Ontology 101 taught humans to design ontologies top-down using Protégé, this guide teaches humans to *grow* ontologies bottom-up with AI, using iterative reflection and hybrid automation.
 
@@ -50,9 +50,11 @@ We demonstrate these principles through the Shiji Knowledge Base — a complete 
 
 **Methodology:**
 - **14 meta-skills:** Universal knowledge engineering methods (OTF+JIT+Bootstrap, Reflection, Lancet Method, etc.)
-- **40 pipeline skills:** Domain-specific techniques for classical texts
-- **Time investment:** ~120 hours human + ~3 billion tokens AI
+- **40+ pipeline skills:** Domain-specific techniques for classical texts
+- **6 project management skills:** File organization, Git workflow, CHANGELOG, daily logs, TODO/Issue tracking
+- **Time investment:** ~150 hours human + ~3 billion tokens AI
 - **Human-AI division:** Human sets vision, AI executes bulk work, human curates quality
+- **Quality assurance:** 91.5% text integrity rate after systematic validation of 130 chapters
 
 This is not a toy example. It is a production knowledge base with interactive reader, subway-map timeline, and cross-chapter reasoning — all methods documented as reusable SKILL files.
 
@@ -598,13 +600,15 @@ Each layer builds on the previous. No graph semantics without structural semanti
 
 | Layer | Check Type | Tool | Pass Rate Requirement |
 |-------|-----------|------|----------------------|
-| **L1: Format** | Tag symmetry, text integrity | `lint_markdown.py` | 100% |
+| **L1: Format** | Tag symmetry, text integrity | `lint_markdown.py`, `lint_text_integrity.py` | 100% |
 | **L2: Type** | Entity type validity | `validate_entity_types.py` | 100% |
 | **L3: Cross-reference** | Entity references in events must exist in entity index | `validate_cross_refs.py` | 100% |
 | **L4: Constraint** | Date constraints (event year ∈ [person birth, person death]) | `validate_constraints.py` | >95% |
 | **L5: Consistency** | Cross-chapter same-event date consistency | Agent global reflection | >98% |
 
 **Lint-first principle:** Run L1-L3 checks before every reflection round. Fix format errors before semantic errors (prevents noise in semantic review).
+
+**Text integrity validation:** After systematic validation using `lint_text_integrity.py`, 91.5% of 130 chapters achieved perfect integrity (tagged text strips to exact original). Remaining 8.5% chapters under active correction. The validation enforces the Iron Rule: `strip_all_tags(annotated_text) == original_text` (byte-for-byte).
 
 ---
 
@@ -632,7 +636,15 @@ Each layer builds on the previous. No graph semantics without structural semanti
 - `00-META-12`: Data Fusion
 - `00-META-13`: Skill Transfer
 
-**40 Pipeline skills (domain-specific):**
+**6 Project management skills (infrastructure):**
+- `SKILL_10`: Project Management (overview)
+- `SKILL_10a`: TODO and Issue Management
+- `SKILL_10b`: Daily Work Log Maintenance
+- `SKILL_10c`: Git Version Control Standards
+- `SKILL_10d`: CHANGELOG Writing Standards
+- `SKILL_10e`: File Organization and Directory Structure
+
+**40+ Pipeline skills (domain-specific):**
 - `SKILL_01`: Text Collation
 - `SKILL_02`: Structural Analysis (a-h: segmentation, commentary, statistics, etc.)
 - `SKILL_03`: Entity Construction (a-e: annotation, disambiguation, reflection, etc.)
@@ -659,7 +671,7 @@ Multiple SKILLs share patterns → Extract meta-SKILL → Agent reads meta-SKILL
 Meta-SKILL applied to new domain → Domain SKILL auto-generated → System self-evolves
 ```
 
-*Shiji proof:* The 54 SKILL files (14 meta + 40 pipeline) are the project's most valuable output — more reusable than the 15,190 entities or 3,197 events. These SKILLs can guide the next project (*Book of Han*, *Zizhi Tongjian*) with 80-90% method reuse.
+*Shiji proof:* The 60+ SKILL files (14 meta + 6 project management + 40+ pipeline) are the project's most valuable output — more reusable than the 15,190 entities or 3,197 events. These SKILLs can guide the next project (*Book of Han*, *Zizhi Tongjian*) with 80-90% method reuse. The project management SKILLs (10-series) codify best practices for Git workflow, daily logging, and file organization that apply to any knowledge engineering project.
 
 ### 16. Scaling: From 600K Characters to 4B Characters
 
@@ -726,6 +738,10 @@ Meta-SKILL applied to new domain → Domain SKILL auto-generated → System self
 
 ---
 
-**Status:** Draft, v2.0
-**Last updated:** 2026-03-19
+**Status:** Draft, v2.1
+**Last updated:** 2026-04-01
 **License:** CC BY 4.0
+
+**Changelog:**
+- v2.1 (2026-04-01): Updated data statistics (91.5% text integrity, 60+ SKILLs), added Section 16 on `labs/` architecture, expanded project management skills
+- v2.0 (2026-03-19): Initial complete draft

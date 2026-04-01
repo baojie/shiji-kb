@@ -6922,7 +6922,7 @@ def extract_patterns(log_file):
 | ; | 官职 | `〖;丞相〗` |
 | ... | ... | ... |
 
-详见: `doc/spec/标注格式规范.md`
+详见: `doc/spec/SPEC_标注格式.md`
 
 ## 二、核心标注规则(5条精华)
 
@@ -8178,7 +8178,7 @@ def extract_rules_from_reflection_logs(log_files):
 - Doug Engelbart(鼠标发明者)提出Purple Numbers概念<br />
 - 为文档的每个段落分配唯一、稳定、可引用的编号<br />
 - 目标:精确定位和引用文档的任意部分</p>
-<p><strong>本项目实现</strong>:<code>doc/spec/紫色编号设计.md</code></p>
+<p><strong>本项目实现</strong>:<code>doc/spec/SPEC_紫色编号设计.md</code></p>
 <hr />
 <h4 id="_8">设计方案</h4>
 <p><strong>HTML渲染时自动添加段落编号</strong>:</p>
@@ -14044,7 +14044,7 @@ cp -r skills/ ../hanshu-kb/skills/
 cp -r scripts/lint_*.py ../hanshu-kb/scripts/
 
 # 3. 复制标注规范
-cp doc/spec/标注格式规范.md ../hanshu-kb/doc/spec/
+cp doc/spec/SPEC_标注格式.md ../hanshu-kb/doc/spec/
 
 # 4. 开始标注试点(冷启动)
 # → 预期: 80%规则直接可用,20%需调整
@@ -14199,7 +14199,7 @@ EVENT_TYPE_WEIGHTS_HANSHU = {
 cp -r ../shiji-kb/skills/ skills/
 
 # 2. 复制标注规范
-cp ../shiji-kb/doc/spec/标注格式规范.md doc/spec/
+cp ../shiji-kb/doc/spec/SPEC_标注格式.md doc/spec/
 
 # 3. 对试点章节进行标注(使用现有18类Token)
 # 试点1: 高帝纪上.txt → 高帝纪上.tagged.md
@@ -14487,7 +14487,7 @@ cp skills/SKILL_03a_实体标注.md skills/SKILL_03a_实体标注_汉书版.md
 # 手动或脚本编辑,加入&quot;汉书特有场景&quot;章节
 
 # 更新标注规范
-vim doc/spec/标注格式规范_v3.0.md  # 新增〖*年号〗类型
+vim doc/spec/SPEC_标注格式_v3.0.md  # 新增〖*年号〗类型
 
 # 扩展词表
 python scripts/augment_vocabulary.py \

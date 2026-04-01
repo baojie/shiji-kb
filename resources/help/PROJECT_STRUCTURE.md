@@ -317,7 +317,7 @@ python3 generate_pipeline_skills_pdf.py
 - [README.md](README.md) - 项目主页
 - [CLAUDE.md](CLAUDE.md) - Claude Code 工作指南
 - [doc/spec/实体标注规范_v2.5.md](doc/spec/实体标注规范_v2.5.md) - 实体标注详细规范
-- [doc/spec/CSS版本历史_v5.4.md](doc/spec/CSS版本历史_v5.4.md) - CSS渲染系统版本历史
+- [doc/spec/RENDER_CSS历史v5.4.md](doc/spec/RENDER_CSS历史v5.4.md) - CSS渲染系统版本历史
 
 ---
 
