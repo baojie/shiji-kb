@@ -236,3 +236,47 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 详细的格式规范、示例对比、质量检查清单等，请参考 [`SKILL_10d_CHANGELOG编写规范`](skills/SKILL_10d_CHANGELOG编写规范.md)。
 
+
+
+## Skill的提炼与转化
+
+**重要**：编写、更新或重构Skill时，必须遵循 [`skills/SKILL_10f_Skill的提炼与转化.md`](skills/SKILL_10f_Skill的提炼与转化.md) 中定义的工程化规范。
+
+### 核心原则（摘要）
+
+- **简练**：Skill不是Spec，核心内容控制在200-500行
+- **工程化**：每个Skill关联具体的脚本/工具，提供可执行的检查清单
+- **可维护**：定期Lint检查，及时清理过时内容
+
+### Skill标准结构
+
+每个Skill必须包含：
+1. **YAML frontmatter**（name, title, description）
+2. **快速开始章节**（何时使用、核心步骤、成功标准）
+3. **工具与脚本章节**（关联脚本列表、使用示例）
+4. **检查清单章节**（执行前/中/后验证）
+
+### Skill质量检查
+
+使用以下命令检查Skill质量：
+
+```bash
+# 检查单个Skill
+python scripts/lint_skills.py skills/SKILL_XX.md
+
+# 检查所有Skill
+python scripts/lint_skills.py --all
+
+# 生成月度质量报告
+python scripts/lint_skills.py --report monthly
+```
+
+### Skill与脚本关联
+
+- **Skill是流程规范**：定义做什么、怎么做、检查什么
+- **脚本是工具**：自动化Skill中的可编程步骤
+- 每个Skill应关联至少1个可运行的脚本
+- 脚本按功能分组：`validation/`（校验）、`generation/`（生成）、`conversion/`（转换）、`reflection/`（反思）
+
+详细的Skill编写规范、脚本分解策略、质量标准等，请参考 [`SKILL_10f_Skill的提炼与转化`](skills/SKILL_10f_Skill的提炼与转化.md)。
+
