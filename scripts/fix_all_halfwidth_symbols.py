@@ -11,11 +11,43 @@
 from pathlib import Path
 
 
+def is_inside_tag(text: str, position: int) -> bool:
+    """
+    检查给定位置是否在标注符号内部
+
+    标注符号格式：〖TYPE content〗 或 ⟦TYPE content⟧
+
+    Args:
+        text: 完整文本
+        position: 要检查的位置索引
+
+    Returns:
+        True 如果在标注内部，False 否则
+    """
+    # 从position向前查找最近的标注开始符号
+    last_open_square = text.rfind('〖', 0, position)
+    last_open_round = text.rfind('⟦', 0, position)
+    last_open = max(last_open_square, last_open_round)
+
+    # 从position向前查找最近的标注结束符号
+    last_close_square = text.rfind('〗', 0, position)
+    last_close_round = text.rfind('⟧', 0, position)
+    last_close = max(last_close_square, last_close_round)
+
+    # 如果找到了开始符号，且在结束符号之后（或没有结束符号），则在标注内
+    if last_open != -1 and last_open > last_close:
+        return True
+
+    return False
+
+
 def fix_halfwidth_symbols(line: str) -> str:
     """
     替换半角标点符号为全角符号
 
-    注意：不替换数字中的小数点和时间格式中的冒号
+    注意：
+    1. 不替换数字中的小数点和时间格式中的冒号
+    2. **不替换标注符号（〖〗⟦⟧）内部的符号**
     """
     # 定义替换映射
     replacements = {
@@ -26,6 +58,12 @@ def fix_halfwidth_symbols(line: str) -> str:
 
     result = []
     for i, char in enumerate(line):
+        # ⚠️ 关键修复：检查是否在标注内部
+        if is_inside_tag(line, i):
+            # 标注内部保持原样，不进行替换
+            result.append(char)
+            continue
+
         if char == '.':
             # 检查是否是小数点（前后都是数字）
             prev_char = line[i-1] if i > 0 else ''
@@ -38,10 +76,15 @@ def fix_halfwidth_symbols(line: str) -> str:
                 result.append('。')
 
         elif char == ':':
+            # 检查是否是Markdown容器语法 ::: (三个连续冒号)
+            # 向前看2个字符，向后看2个字符
+            prev2 = line[max(0, i-2):i]
+            next2 = line[i+1:min(len(line), i+3)]
+            # 如果是 ::: 的一部分，保持原样
+            if prev2 == '::' or next2 == '::' or (i > 0 and line[i-1] == ':' and i < len(line) - 1 and line[i+1] == ':'):
+                result.append(char)
             # 检查是否是时间格式（如 12:30）
-            prev_char = line[i-1] if i > 0 else ''
-            next_char = line[i+1] if i < len(line) - 1 else ''
-            if prev_char.isdigit() and next_char.isdigit():
+            elif line[i-1:i].isdigit() if i > 0 else False and (line[i+1:i+2].isdigit() if i < len(line) - 1 else False):
                 # 保留时间冒号
                 result.append(char)
             else:
