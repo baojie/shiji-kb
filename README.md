@@ -81,11 +81,12 @@
 
 **14个元技能（Meta-Skills）** - 通用知识工程方法论
 - OTF+JIT+Bootstrap、反思循环、冷启动、柳叶刀方法、质量控制、SKILL优化与演化……
-- → **[下载PDF合集（425页，2.35MB）](resources/publications/meta-skill-book/大规模知识库构造元技能方法论.pdf)**
+- → **[下载PDF合集](resources/publications/meta-skill-book/大规模知识库构造元技能方法论.pdf)**（发布日期：2026-03-18，425页，2.35MB，包含14个元技能）
 
-**56个管线技能（Pipeline Skills）** - 古籍处理完整技术栈
-- 校勘→结构分析→实体构建→事件构建→关系构建→本体构建→逻辑推理→SKU→应用→项目管理
-- → **[下载PDF合集（438页，3.01MB）](resources/publications/pipeline-skills-book/史记知识库构造管线技能手册.pdf)**
+**77个管线技能（Pipeline Skills）** - 古籍处理完整技术栈
+- 校勘→结构分析→实体构建→事件构建→关系构建→本体构建→逻辑推理→知识库管驭→应用→项目管理
+- → **[下载PDF合集](resources/publications/pipeline-skills-book/史记知识库构造管线技能手册.pdf)**（发布日期：2026-03-19，438页，3.01MB，包含40个管线SKILL）
+- 注：当前SKILL体系已扩展至77个，PDF为2026-03-19版本快照
 
 **技术文章** - 方法论实战解读
 - 《从历史书中探索知识图谱》（2026-03-19）：项目缘起、核心成果、技术架构、元技能体系的完整呈现

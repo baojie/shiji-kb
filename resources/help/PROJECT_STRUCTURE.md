@@ -87,11 +87,11 @@ shiji-kb/
 │
 ├── resources/                 # 静态参考资料
 │   ├── publications/          # 出版物（论文、书籍、演讲）
-│   │   ├── meta-skill-book/   # 元技能方法论PDF（2.6MB，425页）
+│   │   ├── meta-skill-book/   # 元技能方法论PDF（2026-03-18，2.35MB，425页，14个元技能）
 │   │   │   ├── 大规模知识库构造元技能方法论.pdf
 │   │   │   ├── generate_meta_skills_pdf.py
 │   │   │   └── README.md
-│   │   ├── pipeline-skills-book/  # 管线技能手册PDF（3.0MB，438页）
+│   │   ├── pipeline-skills-book/  # 管线技能手册PDF（2026-03-19，3.01MB，438页，40个SKILL）
 │   │   │   ├── 史记知识库构造管线技能手册.pdf
 │   │   │   ├── generate_pipeline_skills_pdf.py
 │   │   │   └── README.md
@@ -204,8 +204,8 @@ GitHub Pages托管的在线阅读器，包含：
 
 ### 7. resources/ - 静态参考资料
 包含两本PDF手册、技术文章和外部参考资料：
-- **publications/meta-skill-book/** - 大规模知识库构造元技能方法论.pdf (2.6MB, 425页)
-- **publications/pipeline-skills-book/** - 史记知识库构造管线技能手册.pdf (3.0MB, 438页)
+- **publications/meta-skill-book/** - 大规模知识库构造元技能方法论.pdf (2026-03-18，2.35MB，425页，14个元技能)
+- **publications/pipeline-skills-book/** - 史记知识库构造管线技能手册.pdf (2026-03-19，3.01MB，438页，40个SKILL)
 - **publications/draft/** - 技术文章（《从历史书中探索知识图谱》等）
 - **publications/notes/** - 写作笔记和项目愿景文档
 - **references/** - 外部参考文献和研究资料
