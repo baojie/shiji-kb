@@ -1,0 +1,97 @@
+Purple Numbers 编号检查报告摘要
+生成时间: 2026-04-01
+
+检查文件数: 130
+有问题的文件数: 79
+问题总数: 2708
+
+有问题的文件列表:
+  - 002_夏本纪.tagged.md: 2个问题
+  - 004_周本纪.tagged.md: 6个问题
+  - 006_秦始皇本纪.tagged.md: 143个问题
+  - 007_项羽本纪.tagged.md: 191个问题
+  - 008_高祖本纪.tagged.md: 91个问题
+  - 009_吕太后本纪.tagged.md: 54个问题
+  - 010_孝文本纪.tagged.md: 44个问题
+  - 011_孝景本纪.tagged.md: 29个问题
+  - 012_孝武本纪.tagged.md: 53个问题
+  - 013_三代世表.tagged.md: 9个问题
+  - 014_十二诸侯年表.tagged.md: 6个问题
+  - 015_六国年表.tagged.md: 8个问题
+  - 016_秦楚之际月表.tagged.md: 3个问题
+  - 017_汉兴以来诸侯王年表.tagged.md: 4个问题
+  - 018_高祖功臣侯者年表.tagged.md: 4个问题
+  - 019_惠景间侯者年表.tagged.md: 3个问题
+  - 020_建元以来侯者年表.tagged.md: 2个问题
+  - 023_礼书.tagged.md: 27个问题
+  - 024_乐书.tagged.md: 18个问题
+  - 025_律书.tagged.md: 23个问题
+  - 026_历书.tagged.md: 22个问题
+  - 027_天官书.tagged.md: 1个问题
+  - 028_封禅书.tagged.md: 1个问题
+  - 031_吴太伯世家.tagged.md: 42个问题
+  - 033_鲁周公世家.tagged.md: 52个问题
+  - 034_燕召公世家.tagged.md: 48个问题
+  - 035_管蔡世家.tagged.md: 41个问题
+  - 036_陈杞世家.tagged.md: 31个问题
+  - 037_卫康叔世家.tagged.md: 76个问题
+  - 038_宋微子世家.tagged.md: 75个问题
+  - 039_晋世家.tagged.md: 131个问题
+  - 040_楚世家.tagged.md: 98个问题
+  - 041_越王句践世家.tagged.md: 29个问题
+  - 042_郑世家.tagged.md: 45个问题
+  - 043_赵世家.tagged.md: 72个问题
+  - 044_魏世家.tagged.md: 56个问题
+  - 045_韩世家.tagged.md: 42个问题
+  - 046_田敬仲完世家.tagged.md: 56个问题
+  - 047_孔子世家.tagged.md: 76个问题
+  - 048_陈涉世家.tagged.md: 36个问题
+  - 049_外戚世家.tagged.md: 38个问题
+  - 050_楚元王世家.tagged.md: 18个问题
+  - 061_伯夷列传.tagged.md: 1个问题
+  - 081_廉颇蔺相如列传.tagged.md: 29个问题
+  - 082_田单列传.tagged.md: 11个问题
+  - 083_鲁仲连邹阳列传.tagged.md: 15个问题
+  - 084_屈原贾生列传.tagged.md: 34个问题
+  - 085_吕不韦列传.tagged.md: 34个问题
+  - 086_刺客列传.tagged.md: 42个问题
+  - 087_李斯列传.tagged.md: 44个问题
+  - 088_蒙恬列传.tagged.md: 22个问题
+  - 092_淮阴侯列传.tagged.md: 32个问题
+  - 096_张丞相列传.tagged.md: 26个问题
+  - 097_郦生陆贾列传.tagged.md: 22个问题
+  - 098_傅靳蒯成列传.tagged.md: 10个问题
+  - 099_刘敬叔孙通列传.tagged.md: 18个问题
+  - 100_季布栾布列传.tagged.md: 22个问题
+  - 101_袁盎晁错列传.tagged.md: 25个问题
+  - 102_张释之冯唐列传.tagged.md: 1个问题
+  - 103_万石张叔列传.tagged.md: 1个问题
+  - 104_田叔列传.tagged.md: 1个问题
+  - 105_扁鹊仓公列传.tagged.md: 1个问题
+  - 106_吴王濞列传.tagged.md: 1个问题
+  - 107_魏其武安侯列传.tagged.md: 1个问题
+  - 108_韩长孺列传.tagged.md: 1个问题
+  - 109_李将军列传.tagged.md: 1个问题
+  - 110_匈奴列传.tagged.md: 94个问题
+  - 111_卫将军骠骑列传.tagged.md: 56个问题
+  - 112_平津侯主父列传.tagged.md: 46个问题
+  - 121_儒林列传.tagged.md: 1个问题
+  - 122_酷吏列传.tagged.md: 1个问题
+  - 123_大宛列传.tagged.md: 1个问题
+  - 124_游侠列传.tagged.md: 1个问题
+  - 125_佞幸列传.tagged.md: 1个问题
+  - 126_滑稽列传.tagged.md: 1个问题
+  - 127_日者列传.tagged.md: 1个问题
+  - 128_龟策列传.tagged.md: 1个问题
+  - 129_货殖列传.tagged.md: 1个问题
+  - 130_太史公自序.tagged.md: 302个问题
+
+修复建议:
+  1. 格式错误: 手动修改为标准格式 [N] 或 [N.N]
+  2. 连续性错误: 检查是否遗漏段落或编号错误
+  3. 父子关系错误: python scripts/fix_missing_parent_pn.py
+  4. 标题编号错误: python scripts/fix_heading_numbers.py
+  5. 重复编号: 手动检查并重新编号
+  6. 篇名编号错误: 手动确认第一段是否为篇名
+
+完整报告: logs/pn_lint_20260401.txt

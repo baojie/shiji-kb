@@ -116,7 +116,7 @@ git commit -m "更新人物姓氏数据"
 
 ## 相关文档
 
-- [姓氏制度规范](../../../../doc/spec/姓氏制度.md)
+- [姓氏制度规范](../../../../doc/spec/PLAN_姓氏制度.md)
 - [SKILL 07b: 姓氏推理](../../../../skills/SKILL_07b_姓氏推理.md)
 - [提示词模板](../../../../kg/entities/scripts/prompt_template_姓氏推理.md)
 
