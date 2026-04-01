@@ -2,14 +2,14 @@
 
 > 完整的史记知识库SKILL体系索引，包含元技能（Meta-Skills）和管线技能（Pipeline Skills）
 
-**最后更新**：2026-03-31
+**最后更新**：2026-04-01
 
 ---
 
 ## 导航
 
 - [元技能（Meta-Skills）](#元技能meta-skills) - 14个通用方法论
-- [管线技能（Pipeline Skills）](#管线技能pipeline-skills) - 56个专项技能
+- [管线技能（Pipeline Skills）](#管线技能pipeline-skills) - 58个专项技能
   - [00 管线总览](#00-管线总览)
   - [01 古籍校勘](#01-古籍校勘)
   - [02 结构分析](#02-结构分析)
@@ -18,7 +18,7 @@
   - [05 关系构建](#05-关系构建)
   - [06 本体构造和知识库管理](#06-本体构造和知识库管理)
   - [07 逻辑推理](#07-逻辑推理)
-  - [08 SKU构造](#08-sku构造)
+  - [08 知识库管驭](#08-知识库管驭)
   - [09 应用构造](#09-应用构造)
   - [10 项目管理](#10-项目管理)
 - [参考文档（References）](#参考文档references) - 3个支撑文档
@@ -48,7 +48,8 @@
 | 00-M12 | [00-META-12_数据融合.md](00-META-12_数据融合.md) | 多源数据对齐/消歧/去重 | 字符串→实体→事件→SKU |
 | 00-M13 | [00-META-13_技能迁移.md](00-META-13_技能迁移.md) | SKILL跨项目迁移方法论 | 史记→汉书→通鉴 |
 
-**PDF合集下载**：[大规模知识库构造元技能方法论.pdf](../resources/publications/meta-skill-book/大规模知识库构造元技能方法论.pdf)（425页，2.35MB）
+**PDF合集下载**：[大规模知识库构造元技能方法论.pdf](../resources/publications/meta-skill-book/大规模知识库构造元技能方法论.pdf)
+（截至2026-03-31，425页，2.35MB，包含14个元技能）
 
 ---
 
@@ -71,7 +72,9 @@
 | 01b | [SKILL_01b_多版本互校底本.md](SKILL_01b_多版本互校底本.md) | 多版本对照校勘方法论 |
 | 01c | [SKILL_01c_表格校勘规范.md](SKILL_01c_表格校勘规范.md) | 年表/世家类章节的表格校勘规范 |
 | 01d | [SKILL_01d_正音与拼音标注.md](SKILL_01d_正音与拼音标注.md) | 古音标注与拼音处理 |
-| 01e | [SKILL_01e_繁简体处理.md](SKILL_01e_繁简体处理.md) | 繁简转换与阅读界面功能 |
+| 01e | [SKILL_01e_繁简体处理.md](SKILL_01e_繁简体处理.md) | 繁简转换与异体字统一（归入校勘工序） |
+| 01f | [SKILL_01f_句读和标点校勘.md](SKILL_01f_句读和标点校勘.md) | 句读断句、标点符号规范、质量控制（最前置工序） |
+| 01g | [SKILL_01g_标注符号集合原则.md](SKILL_01g_标注符号集合原则.md) | 标点/标注/Markdown符号完全分离原则 |
 
 ### 02 结构分析
 
@@ -129,6 +132,9 @@
 |------|------|------|
 | 06 | [SKILL_06_本体构造和知识库管理.md](SKILL_06_本体构造和知识库管理.md) | 阶段总览 |
 | 06a | [SKILL_06a_实体到本体.md](SKILL_06a_实体到本体.md) | 实体词表 → 分类树 → OWL/RDF |
+| 06b | [SKILL_06b_属性关系约束构建.md](SKILL_06b_属性关系约束构建.md) | 属性/关系/约束定义、OWL properties和constraints（规划） |
+| 06c | [SKILL_06c_规则构建.md](SKILL_06c_规则构建.md) | 领域规则/推理规则/验证规则（规划） |
+| 06d | [SKILL_06d_推理机构建.md](SKILL_06d_推理机构建.md) | 本体/规则推理、约束检查、冲突检测（规划） |
 
 ### 07 逻辑推理
 
@@ -142,11 +148,15 @@
 | 07e | [SKILL_07e_真实性推理.md](SKILL_07e_真实性推理.md) | 历史记载真实性推理方法论 |
 | 07f | [SKILL_07f_历史专著方法提炼.md](SKILL_07f_历史专著方法提炼.md) | 从历史学专著中提炼研究方法论 |
 
-### 08 SKU构造
+### 08 知识库管驭
 
 | 编号 | 文件 | 说明 |
 |------|------|------|
-| 08 | [SKILL_08_SKU构造.md](SKILL_08_SKU构造.md) | Factual/Procedural/Relational知识单元 |
+| 08 | [SKILL_08_知识库管驭.md](SKILL_08_知识库管驭.md) | 知识库工程化管理（粒度/覆盖度/成本/质量） |
+| 08a | [SKILL_08a_知识颗粒度管理.md](SKILL_08a_知识颗粒度管理.md) | SKU标准知识单元设计（Factual/Procedural/Relational）（规划） |
+| 08b | [SKILL_08b_知识覆盖度评估.md](SKILL_08b_知识覆盖度评估.md) | 覆盖度评估、测试样本构建、缺口识别（规划） |
+| 08c | [SKILL_08c_成本管控和Token节约.md](SKILL_08c_成本管控和Token节约.md) | LLM成本优化、Token节约策略（规划） |
+| 08d | [SKILL_08d_正确性评估.md](SKILL_08d_正确性评估.md) | 质量评估方法、正确性指标体系（规划） |
 
 ### 09 应用构造
 
@@ -155,6 +165,17 @@
 | 09 | [SKILL_09_应用构造.md](SKILL_09_应用构造.md) | 阶段总览 |
 | 09a | [SKILL_09a_语法高亮辅助阅读.md](SKILL_09a_语法高亮辅助阅读.md) | 语法高亮渲染 + 实体配色 + 段落锚点 + 发布 |
 | 09b | [SKILL_09b_知识库游戏化.md](SKILL_09b_知识库游戏化.md) | 知识库→游戏：SKU→技能卡、事件→剧情 |
+| 09c | [SKILL_09c_个性化阅读支持.md](SKILL_09c_个性化阅读支持.md) | 语法高亮/繁简/拼音/Purple Numbers个性化阅读 |
+| 09d | [SKILL_09d_语义搜索和探索.md](SKILL_09d_语义搜索和探索.md) | 基于知识图谱的语义搜索和知识探索（规划） |
+| 09e | [SKILL_09e_故事创作.md](SKILL_09e_故事创作.md) | 公众号文章/博客/剧本/小说创作（规划） |
+| 09f | [SKILL_09f_音频创作.md](SKILL_09f_音频创作.md) | AI朗读/播客/有声书/音频课程（规划） |
+| 09g | [SKILL_09g_视频创作.md](SKILL_09g_视频创作.md) | 短视频/中长视频/纪录片/电影（规划） |
+| 09h | [SKILL_09h_图片与漫画创作.md](SKILL_09h_图片与漫画创作.md) | 插图/头像/四格漫画/长篇漫画/表情包（规划） |
+| 09i | [SKILL_09i_信息图与可视化.md](SKILL_09i_信息图与可视化.md) | 信息图/交互图表/时间线/关系网络/地理可视化（规划） |
+| 09j | [SKILL_09j_历史地图.md](SKILL_09j_历史地图.md) | 静态/交互/时空/3D地图、专题地图（规划） |
+| 09k | [SKILL_09k_专业文献写作.md](SKILL_09k_专业文献写作.md) | 学术论文/研究报告/专著章节/百科条目（规划） |
+| 09l | [SKILL_09l_考古辅助.md](SKILL_09l_考古辅助.md) | 出土文本校勘/考古报告对照/文物推理/断代（规划） |
+| 09m | [SKILL_09m_排版和电子书构造.md](SKILL_09m_排版和电子书构造.md) | 古籍专业排版、PDF/EPUB生成、紫色编号锚点（规划） |
 
 ### 10 项目管理
 
@@ -163,10 +184,13 @@
 | 10 | [SKILL_10_项目管理.md](SKILL_10_项目管理.md) | 阶段总览（Issue/TODO/日志/Git/CHANGELOG） |
 | 10a | [SKILL_10a_TODO和Issue管理.md](SKILL_10a_TODO和Issue管理.md) | 7类Issue分类、TODO任务对应、批量管理脚本 |
 | 10b | [SKILL_10b_每日工作日志维护.md](SKILL_10b_每日工作日志维护.md) | 工作日划分、微信通知、太史公曰、改动意义分析 |
-| 10c | [SKILL_10c_Git提交规范.md](SKILL_10c_Git提交规范.md) | Git提交消息格式、原子提交、Pre-commit Hook处理 |
+| 10c | [SKILL_10c_Git代码版本管理规范.md](SKILL_10c_Git代码版本管理规范.md) | Git提交消息格式、原子提交、Pre-commit Hook处理、分支策略 |
 | 10d | [SKILL_10d_CHANGELOG编写规范.md](SKILL_10d_CHANGELOG编写规范.md) | CHANGELOG格式、详略原则、Commit/Issue链接 |
+| 10e | [SKILL_10e_文件组织与目录结构.md](SKILL_10e_文件组织与目录结构.md) | 项目目录结构规范、文件分类决策树、流转路径 |
+| 10f | [SKILL_10f_Skill的提炼与转化.md](SKILL_10f_Skill的提炼与转化.md) | Skill工程化规范、质量检查、脚本关联 |
 
-**PDF合集下载**：[史记知识库构造管线技能手册.pdf](../resources/publications/pipeline-skills-book/史记知识库构造管线技能手册.pdf)（438页，3.01MB）
+**PDF合集下载**：[史记知识库构造管线技能手册.pdf](../resources/publications/pipeline-skills-book/史记知识库构造管线技能手册.pdf)
+（截至2026-03-31，438页，3.01MB，包含11个一级SKILL + 66个二级SKILL）
 
 ---
 
@@ -177,7 +201,7 @@
 | 文件 | 说明 | 关联SKILL |
 |------|------|----------|
 | [SKILL-03c-rules.md](references/SKILL-03c-rules.md) | 72条按章反思规律库 | SKILL_03c |
-| [RULE_繁简词表完整构造规则.md](references/RULE_繁简词表完整构造规则.md) | 繁简词表完整构造规则 | SKILL_01e |
+| [SKILL-01e-rules-繁简词表构造规则.md](references/SKILL-01e-rules-繁简词表构造规则.md) | 繁简词表完整构造规则 | SKILL_01e |
 
 ---
 
@@ -215,16 +239,16 @@
 
 ## 统计数据
 
-**截至2026-03-31**：
+**截至2026-04-01**：
 - **元技能**：14个
-- **管线技能**：56个（含子SKILL）
-  - 一级SKILL（总览）：10个
-  - 二级SKILL（专项）：46个
+- **管线技能**：77个（含子SKILL）
+  - 一级SKILL（总览）：11个
+  - 二级SKILL（专项）：66个
 - **参考文档**：2个（三级SKILL结构）
 - **草稿文档**：5个（待完善）
 - **归档文档**：1个（失败案例）
 
-**总计**：78个SKILL文档（不含草稿和归档）
+**总计**：98个SKILL文档（不含草稿和归档）
 
 ---
 
