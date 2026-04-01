@@ -296,8 +296,8 @@ class PurpleNumberLinter:
                 i += 1
                 continue
 
-            # 跳过markdown分隔线（--- 或 *** 或 ___）
-            if line in ['---', '***', '___']:
+            # 跳过markdown分隔线（--- 或 *** 或 ___）和custom block标记（:::）
+            if line in ['---', '***', '___', ':::']:
                 i += 1
                 continue
 
