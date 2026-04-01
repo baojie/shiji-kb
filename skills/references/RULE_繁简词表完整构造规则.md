@@ -474,7 +474,7 @@ def regression_test():
 
 ### 5.2 规律文档
 
-**输出**：[`doc/spec/繁简转换规律总结.md`](../../doc/spec/繁简转换规律总结.md)
+**输出**：[`doc/spec/ANALYSIS_繁简映射总结.md`](../../doc/spec/ANALYSIS_繁简映射总结.md)
 
 内容包括：
 1. **字符级规律**（87个一对多字符的转换规律）
@@ -484,7 +484,7 @@ def regression_test():
 
 ### 5.3 覆盖率报告
 
-**输出**：[`doc/spec/v4.0覆盖率报告.md`](../../doc/spec/v4.0覆盖率报告.md)
+**输出**：见 `CHANGELOG_custom-variants.md` 或相关分析文档
 
 ```markdown
 # v4.0 覆盖率报告
@@ -600,8 +600,8 @@ v4.0的规律可直接应用于：
 ### 9.2 技术文档
 
 - [OpenCC 文档](https://github.com/BYVoid/OpenCC)
-- [繁简映射统计报告](../../doc/spec/繁简映射统计报告.md)
-- [OpenCC错误率分析](../../doc/spec/OpenCC错误率分析.md)
+- [繁简映射统计报告](../../doc/spec/ANALYSIS_繁简映射统计.md)
+- [OpenCC错误率分析](../../doc/spec/ANALYSIS_OpenCC错误率.md)
 
 ---
 

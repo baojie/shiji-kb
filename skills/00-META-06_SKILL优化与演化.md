@@ -160,7 +160,7 @@ boundary: 8个问题
   - ✅ `〖@司马迁〗`
   - ❌ `〖@司马〗〖@迁〗`
 
-**复姓列表**: 见`doc/spec/复姓表.md`(38个常见复姓)
+**复姓数据**: 见[SKILL_07b_姓氏推理.md](SKILL_07b_姓氏推理.md)中的复姓列表和`kg/entities/data/person_xingshi.json`中的姓氏数据
 
 ## 三、边界规则(从试点总结)
 

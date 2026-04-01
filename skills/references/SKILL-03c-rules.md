@@ -1157,7 +1157,7 @@ python /tmp/fix_prince_kings.py chapter_md/NNN_*.tagged.md
 
 **规范依据**：
 
-根据`doc/spec/动词标注规范.md`（v3.3版）：
+根据`doc/spec/SPEC_动词标注.md`（v3.3版）：
 - **动词标注**：必须使用`⟦TYPE动词⟧`（数学双方括号 U+27E6/U+27E7）
 - **实体标注**：必须使用`〖TYPE内容〗`（白色龟甲括号 U+3016/3017）
 - **动词TYPE符号**：

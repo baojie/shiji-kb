@@ -131,7 +131,7 @@ function convertToTraditional(text, dict) {
 
 **相关文档**：
 - [SKILL_01d 拼音标注规范](SKILL_01d_拼音标注.md)
-- [多音字处理方案总结](../doc/spec/多音字处理方案总结.md)
+- [多音字处理方案总结](../doc/spec/ANALYSIS_多音字处理.md)
 
 ### 2.4 智能分段开关
 

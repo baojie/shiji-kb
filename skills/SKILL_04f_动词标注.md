@@ -472,9 +472,9 @@ python kg/entities/scripts/migrate_verb_tags.py --all --report report.md
 
 ### 规范文档
 
-1. **[动词标注规范](../doc/spec/动词标注规范.md)** - 完整的语法规范和分类体系
-2. **[动词渲染规则](../doc/spec/动词渲染规则.md)** - HTML渲染和CSS样式
-3. **[标注格式规范](../doc/spec/标注格式规范.md)** - 整体标注格式
+1. **[动词标注规范](../doc/spec/SPEC_动词标注.md)** - 完整的语法规范和分类体系
+2. **[动词渲染规则](../doc/spec/RENDER_动词规则.md)** - HTML渲染和CSS样式
+3. **[标注格式规范](../doc/spec/SPEC_标注格式.md)** - 整体标注格式
 
 ### 数据文档
 

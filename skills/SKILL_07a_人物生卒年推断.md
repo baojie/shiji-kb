@@ -175,7 +175,7 @@ Step 4：亲属关系交叉约束
 python kg/entities/scripts/build_shihao_index.py --use-lifespans-v2
 ```
 
-**详细规划**：见 [doc/spec/人物生卒年反思流程.md](../doc/spec/人物生卒年反思流程.md) 和 [doc/spec/谥号索引需求说明.md](../doc/spec/谥号索引需求说明.md)
+**详细规划**：见 [doc/spec/PLAN_人物生卒年反思.md](../doc/spec/PLAN_人物生卒年反思.md) 和 [doc/spec/PLAN_谥号索引需求.md](../doc/spec/PLAN_谥号索引需求.md)
 
 ---
 

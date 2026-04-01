@@ -350,12 +350,12 @@ def detect_rule_conflicts():
 
 ### 6.1 核心文档
 
-1. **SPEC文档**：[`doc/spec/繁简体词库构造方案.md`](../doc/spec/繁简体词库构造方案.md)
+1. **SPEC文档**：[`doc/spec/ANALYSIS_繁简体词库构造.md`](../doc/spec/ANALYSIS_繁简体词库构造.md)
    - 记录三次尝试的完整过程
    - 技术实现细节
    - 应用与测试方法
 
-2. **对比分析**：[`doc/spec/繁简词库对比分析.md`](../doc/spec/繁简词库对比分析.md)
+2. **对比分析**：[`doc/spec/ANALYSIS_繁简词库对比.md`](../doc/spec/ANALYSIS_繁简词库对比.md)
    - 手动词库（32条）vs 自动提取（48条）详细对比
    - OpenCC验证表
    - 合并建议（已放弃）

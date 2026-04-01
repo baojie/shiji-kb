@@ -79,7 +79,7 @@ docs/special/chengyu.pdf   # PDF文档（8.4MB）
 **通用词表(General Glossary)**（优先级：最高）
 - **规模**：1-1.5万条
 - **状态**：✅ 已规划（2026-03-31）
-- **文档**：[doc/spec/通用词表构建计划.md](../doc/spec/通用词表构建计划.md)
+- **文档**：[doc/spec/PLAN_通用词表构建.md](../doc/spec/PLAN_通用词表构建.md)
 - **Issue**：#90
 - **定位**：全局索引，为实体消歧(03b)提供基础数据
 - **时间**：6周
@@ -116,7 +116,7 @@ docs/special/chengyu.pdf   # PDF文档（8.4MB）
 ### 3.2 官职词表(Official Titles Glossary)构建（已规划 📋）
 
 **状态**：✅ 已规划（2026-03-31）
-**文档**：[doc/spec/官职词表构建计划.md](../doc/spec/官职词表构建计划.md)
+**文档**：[doc/spec/PLAN_官职词表构建.md](../doc/spec/PLAN_官职词表构建.md)
 **Issue**：#89（北京大学考古学生反馈）
 **规模**：500-1000条
 **时间**：8周

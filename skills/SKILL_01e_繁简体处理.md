@@ -788,17 +788,17 @@ python scripts/create_v3_final.py
 
 ### 8.1 核心文档
 
-1. **更新日志**：[`doc/spec/custom-variants更新日志.md`](../doc/spec/custom-variants更新日志.md)
+1. **更新日志**：[`doc/spec/CHANGELOG_custom-variants.md`](../doc/spec/CHANGELOG_custom-variants.md)
    - v1.0 → v2.0 → v3.0 完整变更记录
 
 2. **统计报告**：
-   - [`doc/spec/繁简映射统计报告.md`](../doc/spec/繁简映射统计报告.md) - 87个一对多字符完整列表
-   - [`doc/spec/繁简映射分析总结.md`](../doc/spec/繁简映射分析总结.md) - 深度分析和建议
-   - [`doc/spec/OpenCC错误率分析.md`](../doc/spec/OpenCC错误率分析.md) - 错误率2.56%统计
+   - [`doc/spec/ANALYSIS_繁简映射统计.md`](../doc/spec/ANALYSIS_繁简映射统计.md) - 87个一对多字符完整列表
+   - [`doc/spec/ANALYSIS_繁简映射总结.md`](../doc/spec/ANALYSIS_繁简映射总结.md) - 深度分析和建议
+   - [`doc/spec/ANALYSIS_OpenCC错误率.md`](../doc/spec/ANALYSIS_OpenCC错误率.md) - 错误率2.56%统计
 
 3. **数据文件**：
-   - [`doc/spec/繁简映射数据.json`](../doc/spec/繁简映射数据.json) - 机器可读的映射数据
-   - [`doc/spec/真实错误分析.json`](../doc/spec/真实错误分析.json) - 183个错误详细数据
+   - [`doc/spec/DATA_繁简映射.json`](../doc/spec/DATA_繁简映射.json) - 机器可读的映射数据
+   - [`doc/spec/DATA_真实错误分析.json`](../doc/spec/DATA_真实错误分析.json) - 183个错误详细数据
 
 4. **v4.0词频分析**（2026-04-01）：
    - [`doc/analysis/word/04_s2t_variants_final.json`](../doc/analysis/word/04_s2t_variants_final.json) - 10,028个繁简词对
@@ -850,7 +850,7 @@ python scripts/create_v3_final.py
 - `scripts/create_v3_final.py` - 词表生成工具（v3.0）
 - `scripts/build_complete_word_variants.py` - 词频统计与映射构建（v4.0）
 - `scripts/validate_opencc_conversion.py` - OpenCC转换验证（v4.0）
-- `doc/spec/custom-variants更新日志.md` - 版本变更记录
+- `doc/spec/CHANGELOG_custom-variants.md` - 版本变更记录
 
 **归档文件**：
 - `docs/data/archive/custom-variants-v1.json` - v1.0词表（32条）
