@@ -11,6 +11,7 @@ Purple Numbers（段落编号）完整性检查工具
 4. 标题编号检查：二级和三级标题不应包含编号
 5. 重复编号检查：同一章内不允许重复编号
 6. 篇名编号检查：第一个编号必须是[0]
+7. 段落编号缺失检查：前后有空行的自然段必须有PN编号（标题和bullet list后第一段除外）
 
 使用方法：
     python scripts/lint_purple_numbers.py                    # 检查所有章节
@@ -48,6 +49,7 @@ class PurpleNumberLinter:
         self._check_heading_numbers(lines)
         self._check_duplicates(paragraph_numbers)
         self._check_title_number(lines)
+        self._check_missing_pn(lines)
 
         return self.issues
 
@@ -242,6 +244,107 @@ class PurpleNumberLinter:
                     })
                 break  # 只检查第一个一级标题
 
+    def _check_missing_pn(self, lines):
+        """检查缺失的段落编号（前后有空行的自然段必须有PN编号）"""
+        pn_pattern = r'^\[(\d+(?:\.\d+)*)\]'
+        in_table = False
+
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+
+            # 跳过空行
+            if not line:
+                i += 1
+                continue
+
+            # 检测表格开始和结束
+            # Markdown表格行：以 | 开头或包含多个 | (至少2个)
+            # 排除标注内的消歧语法 〖TYPE 显示名|规范名〗
+            is_table_line = False
+            if '|' in line:
+                # 简单判断：如果行以 | 开头，或者包含至少2个 | 且不在标注内
+                if line.startswith('|'):
+                    is_table_line = True
+                else:
+                    # 移除标注标记后再检查 | 的数量
+                    line_without_annotations = re.sub(r'〖[^〗]+〗', '', line)
+                    line_without_annotations = re.sub(r'⟦[^⟧]+⟧', '', line_without_annotations)
+                    if line_without_annotations.count('|') >= 2:
+                        is_table_line = True
+
+            if is_table_line:
+                in_table = True
+                i += 1
+                continue
+            elif in_table:
+                # 如果前一行是表格，当前行不是表格，则表格结束
+                in_table = False
+
+            # 跳过表格内容
+            if in_table:
+                i += 1
+                continue
+
+            # 跳过标题行（以 # 开头）
+            if line.startswith('#'):
+                i += 1
+                continue
+
+            # 跳过引用块（以 > 开头）
+            if line.startswith('>'):
+                i += 1
+                continue
+
+            # 跳过markdown分隔线（--- 或 *** 或 ___）
+            if line in ['---', '***', '___']:
+                i += 1
+                continue
+
+            # 这是一个非空的内容行
+            # 检查是否前面有空行（或是文件开头）
+            has_prev_empty = (i == 0 or not lines[i-1].strip())
+
+            # 检查是否后面有空行（或是文件结尾）
+            has_next_empty = (i >= len(lines) - 1 or not lines[i+1].strip())
+
+            # 如果前后都有空行，这是一个独立段落
+            if has_prev_empty and has_next_empty:
+                # 检查前一个非空行是否是标题或bullet list
+                is_after_header_or_list = False
+                j = i - 1
+                while j >= 0:
+                    prev_line = lines[j].strip()
+                    if prev_line:
+                        # 标题行
+                        if prev_line.startswith('#'):
+                            is_after_header_or_list = True
+                        # Bullet list 项（以 - 或 * 或 + 或数字. 开头）
+                        elif (prev_line.startswith('- ') or
+                              prev_line.startswith('* ') or
+                              prev_line.startswith('+ ') or
+                              re.match(r'^\d+\.\s', prev_line)):
+                            is_after_header_or_list = True
+                        break
+                    j -= 1
+
+                # 标题或bullet list后的第一个段落不需要PN编号
+                if is_after_header_or_list:
+                    i += 1
+                    continue
+
+                # 检查是否有PN编号
+                if not re.match(pn_pattern, line):
+                    # 截取前50个字符作为预览
+                    preview = line[:50] + ('...' if len(line) > 50 else '')
+                    self.issues['missing_pn'].append({
+                        'line': i + 1,
+                        'content': preview,
+                        'reason': '前后有空行的独立段落缺少PN编号'
+                    })
+
+            i += 1
+
 
 def print_report(file_name, issues, verbose=False):
     """打印检查报告"""
@@ -315,6 +418,15 @@ def print_report(file_name, issues, verbose=False):
             print(f"    → {err['reason']}")
             print()
 
+    # 7. 缺失段落编号
+    if issues['missing_pn']:
+        print(f"\n▸ 缺失段落编号 ({len(issues['missing_pn'])}处)")
+        print('-'*80)
+        for err in issues['missing_pn']:
+            print(f"  行 {err['line']}: {err['content']}")
+            print(f"    → {err['reason']}")
+            print()
+
     return total_issues
 
 
@@ -380,6 +492,7 @@ def main():
         print("  4. 标题编号错误: python scripts/fix_heading_numbers.py")
         print("  5. 重复编号: 手动检查并重新编号")
         print("  6. 篇名编号错误: 手动确认第一段是否为篇名")
+        print("  7. 缺失段落编号: 为前后有空行的独立段落添加PN编号")
         print()
         return 1
     else:
