@@ -535,9 +535,319 @@ python scripts/generation/generate_report.py
 
 ---
 
-## 六、工作流程
+## 六、Skill精简与拆分
 
-### 6.1 新建Skill
+### 6.1 何时需要精简
+
+**触发条件**（满足任一即需精简）：
+
+- [ ] Skill文件超过800行
+- [ ] 代码示例超过200行（>15%篇幅）
+- [ ] 详细配置说明超过100行
+- [ ] 扩展FAQ或学术资源超过50行
+- [ ] 用户反馈"太长，找不到重点"
+
+### 6.2 精简诊断
+
+**步骤1：内容分布分析**
+
+使用脚本分析各章节行数和代码占比：
+
+```python
+import re
+
+def analyze_skill_content(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    sections = {}
+    current_section = "header"
+    code_block = False
+    code_lines = 0
+
+    for i, line in enumerate(lines, 1):
+        if line.strip().startswith('```'):
+            code_block = not code_block
+        if code_block:
+            code_lines += 1
+            sections.setdefault(current_section, {'total': 0, 'code': 0})
+            sections[current_section]['code'] += 1
+
+        if line.startswith('##'):
+            current_section = line.strip('#').strip()
+            sections.setdefault(current_section, {'total': 0, 'code': 0})
+
+        sections.setdefault(current_section, {'total': 0, 'code': 0})
+        sections[current_section]['total'] += 1
+
+    print(f"总行数: {len(lines)}")
+    print(f"代码行数: {code_lines} ({code_lines/len(lines)*100:.1f}%)\n")
+
+    for section, stats in sorted(sections.items(), key=lambda x: x[1]['total'], reverse=True):
+        print(f"{section[:50]:50s} | 总: {stats['total']:4d} | 代码: {stats['code']:4d}")
+```
+
+**步骤2：识别可拆分内容**
+
+| 内容类型 | 判断标准 | 处理方式 |
+|---------|---------|---------|
+| **代码示例** | >20行的完整函数 | → `references/SKILL_XX_code_examples.md` |
+| **背景知识** | 理论、历史、方案对比 | → `references/SKILL_XX_background.md` |
+| **详细配置** | 环境setup、工具配置 | → `references/SKILL_XX_background.md` |
+| **扩展FAQ** | 深入讨论、多案例对比 | → `references/SKILL_XX_background.md` |
+| **模板** | 提示词、文档模板 | → `references/SKILL_XX_templates.md` |
+| **详细规则** | 大型词表、映射表 | → `references/SKILL_XX_rules.md` |
+
+### 6.3 拆分流程
+
+**步骤1：备份原文件**
+
+```bash
+cp skills/SKILL_XX.md skills/SKILL_XX.md.backup
+```
+
+**步骤2：创建拆分文档**
+
+在 `skills/references/` 目录创建扁平结构的拆分文档：
+
+```bash
+# 创建代码示例文档
+touch skills/references/SKILL_XX_code_examples.md
+
+# 创建背景信息文档
+touch skills/references/SKILL_XX_background.md
+```
+
+**命名规范**：
+- `SKILL_{ID}_{suffix}.md`
+- 常用后缀：`code_examples`, `background`, `templates`, `rules`
+- **扁平结构**：直接放在 `references/` 下，不建子目录
+
+**步骤3：编写拆分文档结构**
+
+```markdown
+# SKILL XX - 代码示例参考
+
+本文档包含 SKILL_XX 中提到的详细代码示例。
+
+## 目录
+
+- [功能A代码](#功能a代码)
+- [功能B代码](#功能b代码)
+
+---
+
+## 功能A代码
+
+### Python实现
+
+\```python
+# 详细代码
+\```
+
+---
+
+## 相关文档
+
+- [SKILL_XX.md](../SKILL_XX.md) - 主文档
+- [SKILL_XX_background.md](./SKILL_XX_background.md) - 背景信息
+```
+
+**步骤4：精简主文档**
+
+**4.1 删除详细代码，保留引用**
+
+```markdown
+<!-- 精简前 -->
+### API使用方法
+
+\```python
+import requests
+
+def call_api(text: str) -> str:
+    """调用API"""
+    url = "https://example.com/api"
+    payload = {"text": text}
+    response = requests.post(url, json=payload)
+    return response.json()["result"]
+\```
+
+<!-- 精简后 -->
+### API使用方法
+
+**技术方案**：推荐使用XX API - 准确率92-99%
+
+**代码示例**：参见 [references/SKILL_XX_code_examples.md - API调用](./references/SKILL_XX_code_examples.md#api调用)
+```
+
+**4.2 精简冗长输出，保留关键行**
+
+```markdown
+<!-- 精简前 -->
+# 输出示例：
+# 📁 找到 130 个文件
+# ✅ 001_文件.md
+#    修复 34 处错误
+#    - 行95: 2处
+#    - 行102: 5处
+#    ... (省略100行)
+# 📊 修复完成: 修复文件数 125, 修复总数 14955
+
+<!-- 精简后 -->
+# 输出示例：
+# ✅ 001_文件.md
+#    修复 34 处错误
+# 📊 修复完成: 125个文件，14955处
+```
+
+**4.3 压缩FAQ，链接到详细说明**
+
+```markdown
+<!-- 精简前 -->
+### Q: 详细问题？
+
+**答案**：详细回答...
+
+**配置示例**：
+\```json
+{ "config": "value" }
+\```
+... (省略40行)
+
+<!-- 精简后 -->
+### Q: 详细问题？
+
+**答案**：简短回答（1-2句）
+
+**详细说明**：参见 [references/SKILL_XX_background.md - 详细问题](./references/SKILL_XX_background.md#详细问题)
+```
+
+**步骤5：更新链接**
+
+确保所有拆分文档之间的链接正确：
+
+```markdown
+# 主文档 → references
+[references/SKILL_XX_code_examples.md](./references/SKILL_XX_code_examples.md)
+
+# references → 主文档
+[SKILL_XX.md](../SKILL_XX.md)
+
+# references之间互相引用
+[SKILL_XX_background.md](./SKILL_XX_background.md)
+```
+
+**步骤6：验证完整性**
+
+```bash
+# 1. 检查行数减少
+wc -l skills/SKILL_XX.md.backup skills/SKILL_XX.md
+
+# 2. 检查章节结构完整
+grep "^## " skills/SKILL_XX.md
+
+# 3. 检查引用链接数量
+grep -c "references/SKILL_XX_" skills/SKILL_XX.md
+
+# 4. 验证核心内容未丢失
+required_sections=("快速开始" "核心步骤" "成功标准")
+for section in "${required_sections[@]}"; do
+    grep -q "$section" skills/SKILL_XX.md || echo "Missing: $section"
+done
+```
+
+### 6.4 拆分质量标准
+
+**主文档要求**：
+
+- [ ] **长度**：控制在600-700行以内
+- [ ] **结构完整**：快速开始、规范、流程、工具、示例、FAQ、相关文档
+- [ ] **代码少**：Python代码块≤3个（仅配置示例）
+- [ ] **链接充足**：至少10处引用到references文档
+- [ ] **自包含**：不查阅references也能理解核心规范
+
+**拆分文档要求**：
+
+- [ ] **独立性**：可以单独阅读，不依赖主文档上下文
+- [ ] **完整性**：包含标题、目录、章节、相关文档链接
+- [ ] **互链性**：与主文档、其他拆分文档互相链接
+- [ ] **命名规范**：遵循 `SKILL_{ID}_{suffix}.md`
+- [ ] **位置规范**：放在 `skills/references/` 目录，扁平结构
+
+### 6.5 常见错误与避免
+
+**错误1：过度拆分**
+
+❌ **症状**：主文档变成目录索引，失去自包含性
+
+✅ **避免**：
+- 保留核心规范表格（如标点符号对照表）
+- 保留基本原则和判断标准
+- 保留简洁的工作流程（5-10行命令）
+
+**错误2：目录结构混乱**
+
+❌ **错误**：
+```
+✗ skills/SKILL_01f/code_examples.md
+✗ labs/references/SKILL_01f/code_examples.md
+```
+
+✅ **正确**：
+```
+✓ skills/references/SKILL_01f_code_examples.md
+```
+
+**错误3：内容重复**
+
+❌ **症状**：同一内容在主文档和references都有
+
+✅ **避免**：
+- 主文档：简短回答 + 链接
+- References：详细说明
+- 绝对不要两处都保留完整内容
+
+### 6.6 实际案例：SKILL_01f
+
+**拆分前分析**：
+```
+总行数: 1297
+代码行数: 564 (43.5%)
+
+各章节行数分布（Top 5）:
+示例3：批量修复半角符号      140行 (107行代码)
+Q7: Windows换行符问题        51行
+2.1a 换行符规范             47行
+4.2 反思提示词模板           43行
+3.2 gj.cool API使用         42行
+```
+
+**拆分决策**：
+| 内容 | 行数 | 决策 | 去向 |
+|-----|------|------|------|
+| gj.cool API代码 | 29行 | 移除 | code_examples.md |
+| 本地模型代码 | 32行 | 移除 | code_examples.md |
+| 反思提示词 | 23行 | 移除 | code_examples.md |
+| Windows换行符FAQ | 51行 | 移除 | background.md |
+| gj.cool准确率评估 | 16行 | 移除 | background.md |
+| 示例3详细输出 | 107行 | 精简到40行 | 主文档保留关键步骤 |
+
+**拆分结果**：
+```
+✓ 主文档：1297行 → 475行（减少63.4%）
+✓ code_examples.md：250行（代码示例 + 模板）
+✓ background.md：331行（背景 + 扩展FAQ + 学术资源）
+✓ 引用链接：14处
+✓ 核心章节：9个，全部保留
+```
+
+**详细方法论**：参见 `logs/skill_splitting_methodology_20260402.md`
+
+---
+
+## 七、工作流程
+
+### 7.1 新建Skill
 
 ```bash
 # 1. 使用模板创建
@@ -564,7 +874,7 @@ git add skills/SKILL_XX_新功能.md scripts/xxx/
 git commit -m "新增SKILL XX: 新功能"
 ```
 
-### 6.2 重构Skill
+### 7.2 重构Skill
 
 ```bash
 # 1. 评估现有Skill
@@ -591,7 +901,7 @@ git add skills/SKILL_03a_实体标注.md scripts/ docs/
 git commit -m "重构SKILL 03a: 精简至350行，新增3个关联脚本"
 ```
 
-### 6.3 废弃Skill
+### 7.3 废弃Skill
 
 ```bash
 # 1. 确认废弃原因
@@ -616,7 +926,7 @@ git commit -m "废弃SKILL XX: 已被SKILL YY替代"
 
 ---
 
-## 七、检查清单
+## 八、检查清单
 
 ### Skill编写检查
 
@@ -650,7 +960,7 @@ git commit -m "废弃SKILL XX: 已被SKILL YY替代"
 
 ---
 
-## 八、示例：脚本分解
+## 九、示例：脚本分解
 
 ### 示例1：大型标注脚本拆分
 
@@ -712,7 +1022,7 @@ python scripts/generation/annotation_report.py chapter_md/001*.tagged.md
 
 ---
 
-## 九、FAQ
+## 十、FAQ
 
 ### Q1: 什么时候需要创建新Skill？
 
@@ -757,7 +1067,7 @@ python scripts/generation/annotation_report.py chapter_md/001*.tagged.md
 
 ---
 
-## 附录：Skill模板
+## 十一、附录：Skill模板
 
 详见 `skills/templates/SKILL_template.md`
 
