@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
 分析 Claude Code 对话记录中的 token 使用情况
+
+详细文档：skills/SKILL_10g_项目成本与时间统计.md
+快速入门：scripts/TOKEN_TRACKER_QUICKSTART.md
 """
 
 import json

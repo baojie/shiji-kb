@@ -438,7 +438,7 @@ python generate_all_chapters.py
 
 **Claude Code** (Anthropic)
 - 主力模型：Claude Sonnet 4.5 / Opus 4.6
-- 累计消耗：~30亿tokens，约120小时人机协作（截至2026-03-19）
+- 累计消耗：~55亿tokens，约120小时人机协作（截至2026-04-02）
 - 分工：AI负责大规模标注、代码开发、文档生成；人负责愿景、审美、质量把控、任务调度
 
 ### 致谢

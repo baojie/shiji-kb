@@ -6,6 +6,9 @@ Usage:
     python scripts/generate_cost_report.py --period weekly
     python scripts/generate_cost_report.py --period monthly
     python scripts/generate_cost_report.py --start 2026-03-01 --end 2026-03-31
+
+详细文档：skills/SKILL_10g_项目成本与时间统计.md
+快速入门：scripts/TOKEN_TRACKER_QUICKSTART.md
 """
 
 import json
