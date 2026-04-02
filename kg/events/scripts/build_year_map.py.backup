@@ -751,10 +751,6 @@ CHAPTER_STATE = {
     '041': '越', '042': '郑', '043': '赵', '044': '魏', '045': '韩',
     '046': '齐',  # 田敬仲完世家 (田齐=齐)
     '047': '孔', '048': '陈', '049': '楚',
-    # 汉朝诸侯王/功臣世家 (050-060)
-    '050': '楚', '051': '燕', '052': '齐', '053': '汉', '054': '汉',
-    '055': '汉', '056': '汉', '057': '汉', '058': '梁', '059': '汉',
-    '060': '汉',  # 三王世家
 }
 
 # State aliases: some chapters use a different state name than reign_periods
@@ -804,11 +800,10 @@ def load_person_disambig():
         return json.load(f)
 
 
-def find_nearby_rulers(text, year_pos, max_dist=120):
+def find_nearby_rulers(text, year_pos, max_dist=60):
     """Find all person/title entities before the year position (within max_dist).
     Searches v2.1 patterns: 〖@person〗 and 〖;title〗.
     Returns list of names, ordered nearest-first.
-    Default distance increased from 60 to 120 characters to catch more context.
     """
     search_start = max(0, year_pos - max_dist)
     before_text = text[search_start:year_pos]
@@ -901,160 +896,6 @@ def calc_ce_year(start_bce, year_num):
     return -bce
 
 
-def load_year_state_map():
-    """Load year_state_map.json which contains CE year → state info mappings."""
-    year_state_path = os.path.join(os.path.dirname(OUTPUT_FILE), 'year_state_map.json')
-    if not os.path.exists(year_state_path):
-        return {}
-    with open(year_state_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-
-def build_row_to_year_map(year_state_map):
-    """Build mapping from [rX] row numbers to CE years.
-
-    For table chapters (014/015), each row [r1], [r2], ... corresponds to
-    consecutive CE years in chronological order.
-
-    Returns: {row_num: ce_year} e.g., {1: -841, 2: -840, ...}
-    """
-    # Sort years chronologically
-    years = sorted([int(y) for y in year_state_map.keys()])
-
-    # Build row→year mapping: [r1]=first year, [r2]=second year, etc.
-    row_to_year = {}
-    for row_num, ce_year in enumerate(years, start=1):
-        row_to_year[row_num] = ce_year
-
-    return row_to_year
-
-
-def process_table_chapter(filepath, chapter_id, row_to_year, year_state_map):
-    """Process table chapters (014/015/018/019/020/021/022) where each row = 1 CE year.
-
-    In table chapters:
-    - Each row [rX] corresponds to one CE year
-    - Each column is a state (周/鲁/齐/晋/...)
-    - Cell content is the reign year number for that state's current ruler
-    - We extract year numbers from cells and map them to the row's CE year
-
-    Returns:
-        year_map: {para_id: {surface_text: {ce_year, ruler, method}}}
-        stats: Counter of methods used
-    """
-    import re
-    from collections import Counter
-
-    year_map = {}
-    stats = Counter()
-
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-        lines = content.split('\n')
-
-    # Parse table header to get column → state mapping
-    header_line = None
-    for line in lines:
-        if line.strip().startswith('|') and ('〖\'周〗' in line or '〖\'鲁〗' in line):
-            header_line = line
-            break
-
-    if not header_line:
-        return year_map, stats
-
-    # Extract state names from header (skip first two columns: row_id and 年)
-    cells = [c.strip() for c in header_line.split('|')]
-    state_cols = []
-    for cell in cells[2:]:  # Skip first two columns
-        if not cell or cell == '---':
-            continue
-        # Extract state name from tags like 〖'周〗
-        m = re.search(r'〖[\'"][^〗]+〗', cell)
-        if m:
-            state = m.group(0).strip('〖〗\'\"')
-            state_cols.append(state)
-        elif cell:
-            state_cols.append(cell)
-
-    # Process table rows
-    for line in lines:
-        # Match table rows: |  [r123]  |  ...
-        m = re.match(r'^\|\s+\[r(\d+)\]\s+\|', line)
-        if not m:
-            continue
-
-        row_num = int(m.group(1))
-        # Use [rXX] as paragraph ID for table rows
-        current_para = f'r{row_num}'
-
-        # Look up CE year for this row
-        if row_num not in row_to_year:
-            continue
-
-        ce_year = row_to_year[row_num]
-
-        # Split line into cells
-        cells = [c.strip() for c in line.split('|')]
-        if len(cells) < 3:
-            continue
-
-        # Skip first two cells (row_id and 年 column)
-        data_cells = cells[2:]
-
-        # Get ruler info for this CE year from year_state_map
-        year_info = year_state_map.get(str(ce_year), {})
-
-        # Extract year numbers from each cell
-        # Pattern matches: 元年, 二, 三, 十, 十一, 二十, 二十三, etc.
-        # But NOT complex text, only simple reign year numbers
-        year_pattern = re.compile(r'\b(元年|[一二三四五六七八九十百]+)\b')
-
-        for cell_idx, cell in enumerate(data_cells):
-            if cell_idx >= len(state_cols):
-                break
-
-            state = state_cols[cell_idx]
-
-            # Get ruler for this state and year
-            ruler_info = year_info.get(state)
-            if not ruler_info:
-                continue
-
-            ruler_key, reign_year = ruler_info
-
-            # Find all year mentions in this cell
-            for m in year_pattern.finditer(cell):
-                year_text = m.group(1)
-
-                # Skip if inside tags or not a valid year format
-                if '月' in year_text or '日' in year_text:
-                    continue
-
-                # Check if this text is inside a tag (skip if so)
-                start_pos = m.start()
-                # Look backward for unclosed 〖
-                text_before = cell[:start_pos]
-                open_tags = text_before.count('〖')
-                close_tags = text_before.count('〗')
-                if open_tags > close_tags:
-                    # Inside a tag, skip
-                    continue
-
-                # Store mapping
-                if current_para not in year_map:
-                    year_map[current_para] = {}
-
-                year_map[current_para][year_text] = {
-                    'ce_year': ce_year,
-                    'ruler': ruler_key,
-                    'method': 'table_row'
-                }
-
-                stats['table_row'] += 1
-
-    return year_map, stats
-
-
 def disambiguate_years(reign_data):
     """Scan all tagged.md files and disambiguate year entities."""
     print("\n=== Phase 2: Year disambiguation ===")
@@ -1065,34 +906,17 @@ def disambiguate_years(reign_data):
     year_map = {}  # {chapter_id: {para_id: {surface: {ce_year, ruler, method}}}}
     stats = defaultdict(int)
 
-    # Load year_state_map for table chapter processing
-    year_state_map = load_year_state_map()
-    row_to_year = build_row_to_year_map(year_state_map) if year_state_map else {}
-
     md_files = sorted(glob.glob(os.path.join(CHAPTER_DIR, '*.tagged.md')))
     print(f"  Scanning {len(md_files)} files...")
-
-    # Only 014/015 have year_state_map data and use row-based mapping
-    # 022/018/019/020/021 are Han dynasty tables without year_state_map
-    # They should be processed with regular text disambiguation logic
-    TABLE_CHAPTERS = {'014', '015'}
 
     for filepath in md_files:
         filename = os.path.basename(filepath)
         chapter_id = filename[:3]
 
-        # Handle table chapters with special parser
-        if chapter_id in TABLE_CHAPTERS and row_to_year:
-            chapter_year_map, chapter_stats = process_table_chapter(
-                filepath, chapter_id, row_to_year, year_state_map
-            )
-            if chapter_year_map:
-                year_map[chapter_id] = chapter_year_map
-                for method, count in chapter_stats.items():
-                    stats[method] += count
+        # Skip table chapters (they already have BCE years)
+        if chapter_id in ('013', '014', '015', '016', '017', '018', '019', '020', '021', '022'):
             continue
 
-        # Process regular text chapters (existing logic below)
         chapter_state = CHAPTER_STATE.get(chapter_id, '')
         # Resolve state aliases (e.g., 田→齐)
         lookup_state = STATE_ALIASES.get(chapter_state, chapter_state) if chapter_state else ''
@@ -1328,7 +1152,7 @@ def disambiguate_years(reign_data):
                                     'out_of_range_recovered'))
     print(f"\n  SUMMARY:")
     print(f"    Mapped: {total_mapped}")
-    for method in ['table_row', 'era_name', 'nearby_ruler', 'sequential', 'section_ruler', 'raw_nearby']:
+    for method in ['era_name', 'nearby_ruler', 'sequential', 'section_ruler', 'raw_nearby']:
         if stats[method]:
             print(f"      {method}: {stats[method]}")
     if stats['out_of_range_recovered']:
