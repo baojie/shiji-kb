@@ -1,0 +1,314 @@
+{
+  "set_id": "set01_person_basic",
+  "set_name": "人物基本信息答案集",
+  "version": "1.0",
+  "created_date": "2026-04-02",
+  "total_answers": 20,
+  "answers": [
+    {
+      "question_id": "Q001",
+      "answer": "仲尼",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "047_孔子世家",
+          "location": "chapter_start",
+          "quote": "孔子生鲁昌平乡陬邑。其先宋人也，曰孔防叔。防叔生伯夏，伯夏生叔梁纥。纥与颜氏女野合而生孔子，祷於尼丘得孔子。鲁襄公二十二年而孔子生。生而首上圩顶，故因名曰丘云。字仲尼，姓孔氏。"
+        }
+      ],
+      "explanation": "孔子名丘，字仲尼。史记明确记载'字仲尼，姓孔氏'",
+      "related_entities": ["@孔子"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q002",
+      "answer": "下相",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "007_项羽本纪",
+          "location": "chapter_start",
+          "quote": "项籍者，下相人也，字羽。"
+        }
+      ],
+      "explanation": "项羽，本名项籍，字羽，籍贯为下相（今江苏宿迁）",
+      "related_entities": ["@项羽", "=下相"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q003",
+      "answer": "沛丰邑",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "008_高祖本纪",
+          "location": "chapter_start",
+          "quote": "高祖，沛丰邑中阳里人，姓刘氏，字季。"
+        }
+      ],
+      "explanation": "刘邦，字季，出生于沛郡丰邑中阳里（今江苏丰县）",
+      "related_entities": ["@刘邦", "@高祖", "=沛", "=丰邑"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q004",
+      "answer": "淮阴",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "092_淮阴侯列传",
+          "location": "chapter_start",
+          "quote": "淮阴侯韩信者，淮阴人也。"
+        }
+      ],
+      "explanation": "韩信，淮阴人（今江苏淮安），故称淮阴侯",
+      "related_entities": ["@韩信", "=淮阴"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q005",
+      "answer": "楚国上蔡",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "087_李斯列传",
+          "location": "chapter_start",
+          "quote": "李斯者，楚上蔡人也。"
+        }
+      ],
+      "explanation": "李斯是楚国上蔡（今河南上蔡）人",
+      "related_entities": ["@李斯", "=楚", "=上蔡"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q006",
+      "answer": "司马谈",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "130_太史公自序",
+          "location": "chapter_start",
+          "quote": "太史公曰：先人有言：'自周公卒五百岁而有孔子。孔子卒后至于今五百岁，有能绍明世，正易传，继春秋，本诗书礼乐之际？'意在斯乎！意在斯乎！小子何敢让焉。...太史公学天官於唐都，受易於杨何，习道论於黄子。太史公仕於建元元封之间，愍学者之不达其意而师悖，乃论六家之要指。"
+        }
+      ],
+      "explanation": "司马迁的父亲是司马谈，曾任太史令，也被尊称为太史公",
+      "related_entities": ["@司马迁", "@司马谈", ";太史公"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q007",
+      "answer": "王娡（王美人）",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "012_孝武本纪",
+          "location": "chapter_start",
+          "quote": "孝武皇帝者，孝景中子也。母曰王太后。"
+        },
+        {
+          "chapter": "049_外戚世家",
+          "location": "mid_chapter",
+          "quote": "孝景王皇后，武帝母也。父王仲，槐里人也。母臧儿，故燕王臧荼孙也。...臧儿卜筮之，曰两女皆当贵。...王夫人入宫，生男，是为武帝。"
+        }
+      ],
+      "explanation": "汉武帝刘彻的母亲是王娡，初为王夫人，后为王皇后（太后）。她原本已嫁，后被母亲臧儿送入宫中",
+      "related_entities": ["@汉武帝", "@刘彻", "@王娡", ";王太后"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q008",
+      "answer": "嬴政（赵政）",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "006_秦始皇本纪",
+          "location": "chapter_start",
+          "quote": "秦始皇帝者，秦庄襄王子也。庄襄王为秦质子於赵，见吕不韦姬，悦而取之，生始皇。以秦昭王四十八年正月生於邯郸。及生，名为政，姓赵氏。"
+        }
+      ],
+      "explanation": "秦始皇名政，姓嬴氏，因生于赵国邯郸，故又称赵政",
+      "related_entities": ["@秦始皇", "@嬴政", "@赵政"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q009",
+      "answer": "丞相（秦国相国）",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "085_吕不韦列传",
+          "location": "mid_chapter",
+          "quote": "子楚立，是为庄襄王。庄襄王元年，以吕不韦为丞相，封为文信侯，食河南洛阳十万户。"
+        }
+      ],
+      "explanation": "吕不韦在秦庄襄王时期担任丞相，封文信侯，食邑十万户",
+      "related_entities": ["@吕不韦", ";丞相", ";文信侯"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q010",
+      "answer": "黄石公",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "055_留侯世家",
+          "location": "early_chapter",
+          "quote": "良尝闲从容步游下邳圯上，有一老父，衣褐，至良所，直堕其履圯下，顾谓良曰：'孺子，下取履！'...老父曰：'孺子可教矣。后五日平明，与我会此。'...老父出一编书，曰：'读此则为王者师矣。后十年兴。十三年孺子见我济北，谷城山下黄石即我矣。'遂去，无他言，不复见。旦日视其书，乃《太公兵法》也。"
+        }
+      ],
+      "explanation": "张良在下邳圯桥遇黄石公，黄石公授以《太公兵法》",
+      "related_entities": ["@张良", "@黄石公", "^太公兵法"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q011",
+      "answer": "齐桓公",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "062_管晏列传",
+          "location": "chapter_content",
+          "quote": "管仲既任政相齐，以区区之齐在海滨，通货积财，富国强兵，与俗同好恶。故其称曰：'仓廪实而知礼节，衣食足而知荣辱，上服度则六亲固。'...九合诸侯，一匡天下，管仲之谋也。"
+        }
+      ],
+      "explanation": "管仲辅佐齐桓公，使齐国成为春秋五霸之首，'九合诸侯，一匡天下'",
+      "related_entities": ["@管仲", "@齐桓公", "#霸业"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q012",
+      "answer": "善于用兵，战功赫赫，尤以长平之战闻名",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "073_白起王翦列传",
+          "location": "chapter_content",
+          "quote": "白起者，郿人也。善用兵，事秦昭王。...秦昭王四十七年，秦使左庶长王龁攻韩，取上党。上党民走赵。赵军长平，以按据上党民。四月，龁因攻赵。赵使廉颇将。...秦王闻，使白起代王龁。...前后斩首虏四十五万人。赵人大震。"
+        }
+      ],
+      "explanation": "白起善用兵，战功显赫，长平之战坑杀赵军四十五万，被称为'战神'、'人屠'",
+      "related_entities": ["@白起", "#长平之战"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q013",
+      "answer": "周朝守藏室之史（管理典籍的史官）",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "063_老子韩非列传",
+          "location": "chapter_start",
+          "quote": "老子者，楚苦县厉乡曲仁里人也，姓李氏，名耳，字聃，周守藏室之史也。"
+        }
+      ],
+      "explanation": "老子本名李耳，字聃，担任周朝守藏室之史，负责管理王室典籍",
+      "related_entities": ["@老子", "@李耳", ";守藏室之史"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q014",
+      "answer": "卫国人，在秦国变法",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "068_商君列传",
+          "location": "chapter_start",
+          "quote": "商君者，卫之诸庶孽公子也，名鞅，姓公孙氏，其祖本姓姬氏。...入秦，因孝公宠臣景监以求见孝公。...孝公既用卫鞅，鞅欲变法，恐天下议己。"
+        }
+      ],
+      "explanation": "商鞅，本名公孙鞅（卫鞅），卫国贵族后裔，后入秦国主持变法，被封于商，故称商鞅",
+      "related_entities": ["@商鞅", "@卫鞅", "@公孙鞅", "=卫", "=秦", "#变法"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q015",
+      "answer": "涉",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "048_陈涉世家",
+          "location": "chapter_start",
+          "quote": "陈涉者，阳城人也，字涉。"
+        }
+      ],
+      "explanation": "陈胜，字涉，阳城人，史记中常以'陈涉'并称",
+      "related_entities": ["@陈胜", "@陈涉"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q016",
+      "answer": "楚王同姓，屈氏",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "084_屈原贾生列传",
+          "location": "chapter_start",
+          "quote": "屈原者，名平，楚之同姓也。为楚怀王左徒。"
+        }
+      ],
+      "explanation": "屈原名平，与楚王同姓（芈姓），屈氏是楚国王族的一支",
+      "related_entities": ["@屈原", "@屈平", "=楚", "&芈姓"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q017",
+      "answer": "二十三年",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "010_孝文本纪",
+          "location": "chapter_end",
+          "quote": "二十三年，帝崩於未央宫。遗诏：'...'"
+        }
+      ],
+      "explanation": "汉文帝刘恒在位二十三年，是汉朝有为之君，与其子汉景帝开创'文景之治'",
+      "related_entities": ["@汉文帝", "@刘恒", "#文景之治"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q018",
+      "answer": "太史公称赞伯夷叔齐为贤人，虽然饿死，但坚守节义，令人感佩",
+      "answer_type": "long_text",
+      "sources": [
+        {
+          "chapter": "061_伯夷列传",
+          "location": "taishigongyue",
+          "quote": "太史公曰：学者载籍极博，犹考信於六艺。诗书虽缺，然虞夏之文可知也。...余登箕山，其上盖有许由冢云。孔子序列古之仁圣贤人，如吴太伯、伯夷之伦，详矣。...或曰：'天道无亲，常与善人。'若伯夷、叔齐，可谓善人者非邪？积仁洁行如此而饿死！...余甚惑焉，傥所谓天道，是邪非邪？"
+        }
+      ],
+      "explanation": "太史公对伯夷叔齐充满敬意，同时也对'天道'提出质疑：如此贤人却饿死首阳山，天道何在？体现了司马迁深刻的历史思考",
+      "related_entities": ["@伯夷", "@叔齐", ";太史公"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q019",
+      "answer": "赵国名将",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "081_廉颇蔺相如列传",
+          "location": "chapter_start",
+          "quote": "廉颇者，赵之良将也。"
+        }
+      ],
+      "explanation": "廉颇是赵国著名将领，与蔺相如齐名，'将相和'的故事流传至今",
+      "related_entities": ["@廉颇", "=赵", ";将军"],
+      "confidence": "high"
+    },
+    {
+      "question_id": "Q020",
+      "answer": "完璧归赵、渑池会",
+      "answer_type": "short_text",
+      "sources": [
+        {
+          "chapter": "081_廉颇蔺相如列传",
+          "location": "chapter_content",
+          "quote": "赵惠文王时，得楚和氏璧。秦昭王闻之，使人遗赵王书，愿以十五城请易璧。...蔺相如者，赵人也，为赵宦者令缪贤舍人。...缪贤曰：'臣舍人蔺相如可使。'...相如奉璧西入秦。...相如度秦王虽斋，决负约不偿城，乃使其从者衣褐，怀其璧，从径道亡，归璧于赵。...秦亦不以城予赵，赵亦终不予秦璧。...秦王饮酒酣，曰：'寡人窃闻赵王好音，请奏瑟。'赵王鼓瑟。秦御史前书曰：'某年月日，秦王与赵王会饮，令赵王鼓瑟。'蔺相如前曰：'赵王窃闻秦王善为秦声，请奉盆缻秦王，以相娱乐。'"
+        }
+      ],
+      "explanation": "蔺相如因'完璧归赵'和'渑池会'两次维护赵国尊严而被重用，官拜上卿",
+      "related_entities": ["@蔺相如", "#完璧归赵", "#渑池会"],
+      "confidence": "high"
+    }
+  ]
+}

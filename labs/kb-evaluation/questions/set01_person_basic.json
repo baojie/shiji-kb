@@ -1,0 +1,210 @@
+{
+  "set_id": "set01_person_basic",
+  "set_name": "人物基本信息",
+  "version": "1.0",
+  "created_date": "2026-04-02",
+  "total_questions": 20,
+  "description": "测试对史记人物基本信息的掌握，包括姓名、字号、籍贯、家世、生卒年等",
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "孔子的字是什么？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_name",
+      "subcategory": "字号",
+      "target_chapters": ["047"],
+      "keywords": ["孔子", "字", "仲尼"]
+    },
+    {
+      "id": "Q002",
+      "question": "项羽的籍贯是哪里？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_origin",
+      "subcategory": "籍贯",
+      "target_chapters": ["007"],
+      "keywords": ["项羽", "籍贯", "下相"]
+    },
+    {
+      "id": "Q003",
+      "question": "刘邦出生于哪个地方？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_origin",
+      "subcategory": "籍贯",
+      "target_chapters": ["008"],
+      "keywords": ["刘邦", "高祖", "沛", "丰"]
+    },
+    {
+      "id": "Q004",
+      "question": "韩信的家乡在哪里？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_origin",
+      "subcategory": "籍贯",
+      "target_chapters": ["092"],
+      "keywords": ["韩信", "淮阴"]
+    },
+    {
+      "id": "Q005",
+      "question": "李斯是哪国人？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_origin",
+      "subcategory": "籍贯",
+      "target_chapters": ["087"],
+      "keywords": ["李斯", "楚", "上蔡"]
+    },
+    {
+      "id": "Q006",
+      "question": "司马迁的父亲是谁？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_family",
+      "subcategory": "父亲",
+      "target_chapters": ["130"],
+      "keywords": ["司马迁", "司马谈", "太史公"]
+    },
+    {
+      "id": "Q007",
+      "question": "汉武帝刘彻的母亲是谁？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_family",
+      "subcategory": "母亲",
+      "target_chapters": ["012", "049"],
+      "keywords": ["汉武帝", "刘彻", "王娡", "王美人"]
+    },
+    {
+      "id": "Q008",
+      "question": "秦始皇的名字是什么？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_name",
+      "subcategory": "名",
+      "target_chapters": ["006"],
+      "keywords": ["秦始皇", "嬴政", "赵政"]
+    },
+    {
+      "id": "Q009",
+      "question": "吕不韦担任过什么官职？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_position",
+      "subcategory": "官职",
+      "target_chapters": ["085"],
+      "keywords": ["吕不韦", "丞相", "秦"]
+    },
+    {
+      "id": "Q010",
+      "question": "张良最初跟随哪位老师学习兵法？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_teacher",
+      "subcategory": "师承",
+      "target_chapters": ["055"],
+      "keywords": ["张良", "黄石公", "太公兵法"]
+    },
+    {
+      "id": "Q011",
+      "question": "管仲曾经辅佐哪位国君成就霸业？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_achievement",
+      "subcategory": "主要成就",
+      "target_chapters": ["062"],
+      "keywords": ["管仲", "齐桓公", "霸业"]
+    },
+    {
+      "id": "Q012",
+      "question": "白起因何闻名？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_achievement",
+      "subcategory": "主要成就",
+      "target_chapters": ["073"],
+      "keywords": ["白起", "战神", "长平之战"]
+    },
+    {
+      "id": "Q013",
+      "question": "老子的主要身份是什么？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_position",
+      "subcategory": "职业身份",
+      "target_chapters": ["063"],
+      "keywords": ["老子", "守藏室之史", "周"]
+    },
+    {
+      "id": "Q014",
+      "question": "商鞅是哪国人，后来在哪国变法？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_origin",
+      "subcategory": "籍贯与活动",
+      "target_chapters": ["068"],
+      "keywords": ["商鞅", "卫", "秦", "变法"]
+    },
+    {
+      "id": "Q015",
+      "question": "陈胜的字是什么？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_name",
+      "subcategory": "字号",
+      "target_chapters": ["048"],
+      "keywords": ["陈胜", "涉", "字"]
+    },
+    {
+      "id": "Q016",
+      "question": "屈原属于哪个家族？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_family",
+      "subcategory": "家族",
+      "target_chapters": ["084"],
+      "keywords": ["屈原", "屈氏", "楚王族"]
+    },
+    {
+      "id": "Q017",
+      "question": "汉文帝刘恒在位多少年？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_time",
+      "subcategory": "在位年数",
+      "target_chapters": ["010"],
+      "keywords": ["汉文帝", "刘恒", "在位", "二十三年"]
+    },
+    {
+      "id": "Q018",
+      "question": "太史公如何评价伯夷叔齐？",
+      "type": "evaluative",
+      "difficulty": "medium",
+      "category": "person_basic_evaluation",
+      "subcategory": "太史公评价",
+      "target_chapters": ["061"],
+      "keywords": ["伯夷", "叔齐", "太史公曰", "贤人"]
+    },
+    {
+      "id": "Q019",
+      "question": "廉颇以什么身份闻名于世？",
+      "type": "factual",
+      "difficulty": "easy",
+      "category": "person_basic_position",
+      "subcategory": "职业身份",
+      "target_chapters": ["081"],
+      "keywords": ["廉颇", "将军", "赵"]
+    },
+    {
+      "id": "Q020",
+      "question": "蔺相如因何事而被重用？",
+      "type": "factual",
+      "difficulty": "medium",
+      "category": "person_basic_achievement",
+      "subcategory": "主要成就",
+      "target_chapters": ["081"],
+      "keywords": ["蔺相如", "完璧归赵", "渑池会"]
+    }
+  ]
+}
