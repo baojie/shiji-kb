@@ -1,4 +1,4 @@
-/* 史记命名实体样式表 v5.4 (融合v5.3.3 + v6.0方案B改进) */
+/* 史记命名实体样式表 v5.5 (融合v5.3.3 + v6.0方案B改进) */
 /* 最后更新: 2026-03-19 13:45 */
 /* 如果你在浏览器开发者工具中看到这行注释，说明CSS已加载 */
 /*
@@ -555,11 +555,11 @@ p > .para-num:only-child {
     padding: 0;
 }
 
-/* 浮动报错按钮 - 定位在设置按钮下方 */
+/* 浮动报错按钮 - 定位在设置按钮左侧 */
 #report-issue-button {
     position: fixed;
-    top: 67px;  /* 设置按钮下方 40px */
-    right: calc(50% - 450px + 20px);  /* 与设置按钮对齐 */
+    top: 27px;  /* 与设置按钮同一行 */
+    right: calc(50% - 450px + 60px);  /* 在设置按钮左侧 40px */
     width: 32px;
     height: 32px;
     border: none;
@@ -593,7 +593,7 @@ p > .para-num:only-child {
         right: 20px;
     }
     #report-issue-button {
-        right: 20px;
+        right: 60px;  /* 在设置按钮左侧 40px */
     }
 }
 
