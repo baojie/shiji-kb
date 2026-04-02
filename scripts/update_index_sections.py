@@ -42,24 +42,46 @@ def generate_section_links_html(chapter_name, sections, max_display=10):
     if not sections:
         return ""
 
-    # 限制显示的小节数量
+    # 总是显示前面的小节
     display_sections = sections[:max_display]
-    has_more = len(sections) > max_display
+    hidden_sections = sections[max_display:] if len(sections) > max_display else []
 
     links = []
+
+    # 前10个小节，直接显示
     for section in display_sections:
         title = section["title"]
-        # 生成与HTML文件中相同的锚点ID
         heading_id = generate_heading_id(title)
-        # 清理显示文本中的实体标注
         display_title = clean_entity_markers(title)
         link = f'<a href="chapters/{chapter_name}.html#{heading_id}">{display_title}</a>'
         links.append(link)
 
-    if has_more:
-        links.append(f'<span class="section-more">... 共{len(sections)}节</span>')
+    # 如果有更多小节，创建可折叠区域
+    if hidden_sections:
+        # 前10个小节的HTML
+        visible_html = ' · '.join(links)
 
-    return ' · '.join(links)
+        # 隐藏小节的HTML
+        hidden_links = []
+        for section in hidden_sections:
+            title = section["title"]
+            heading_id = generate_heading_id(title)
+            display_title = clean_entity_markers(title)
+            link = f'<a href="chapters/{chapter_name}.html#{heading_id}">{display_title}</a>'
+            hidden_links.append(link)
+
+        hidden_html = ' · '.join(hidden_links)
+
+        # 折叠切换按钮和隐藏区域
+        toggle_html = f'''<div class="section-toggle" onclick="toggleSections(this)">
+            <span class="toggle-icon">▶</span>
+            <span class="toggle-text">显示全部 {len(sections)} 节</span>
+        </div>
+        <div class="section-links collapsed">{hidden_html}</div>'''
+
+        return visible_html + toggle_html
+    else:
+        return ' · '.join(links)
 
 
 def update_index_html(index_file='docs/index.html', sections_file='kg/structure/data/sections_data.json'):
@@ -81,9 +103,9 @@ def update_index_html(index_file='docs/index.html', sections_file='kg/structure/
     # 匹配格式：
     # <a href="chapters/NNN_章节名.html">章节名</a>
     # </div>
-    # <div class="chapter-desc">原有描述</div>
+    # <div class="chapter-desc">原有描述（可能包含<a>标签等）</div>
 
-    pattern = r'(<a href="chapters/(\d+_[^"]+)\.html">[^<]+</a>\s*</div>\s*<div class="chapter-desc">)[^<]*(</div>)'
+    pattern = r'(<a href="chapters/(\d+_[^"]+)\.html">[^<]+</a>\s*</div>\s*<div class="chapter-desc">).*?(</div>)'
 
     def replace_func(match):
         full_match = match.group(0)
