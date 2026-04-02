@@ -6,9 +6,32 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 《史记》知识库：用AI Agent将《史记》130篇转化为结构化知识图谱。
 
+## ⚠️ 铁律：绝对禁止 `git checkout` 恢复文件
+
+**无论任何情况，都严禁使用以下命令**：
+
+```bash
+# ❌ 绝对禁止！会立即覆盖工作区文件，造成不可逆的数据丢失！
+git checkout <commit> -- <file>
+git checkout -- <file>
+git restore <file>  # 同样危险
+```
+
+**历史教训**：
+- 2026-04-01：使用 `git checkout` 恢复69个文件，险些丢失所有正在进行的修改
+- 2026-04-02：再次使用 `git checkout` 恢复053-080章节，覆盖了数小时的工作成果
+  - 丢失了64个章节的PN修复（批量脚本处理结果）
+  - 丢失了081-083的16处人名简称修复（精心手动修复）
+  - 导致用户极度愤怒："你他妈的又git checkout，fuck！！！！"
+
+**正确做法**：使用 `git diff` 查看差异后手动修复，或使用 `git stash` 保护现有工作。
+
+---
+
 ## 项目约定
 
 - 不要自动 commit。只在用户明确要求时才执行 git commit。
+- **🚨 用户说"commit"时，只执行commit，不要做任何其他git操作（不要git add，不要git reset，不要git status等）**
 - 反思流程全自动。每章的 Agent 反思循环不需要用户逐步确认，直接执行完整流程。
 - 对话和输出以中文为主。
 - 当用户在对话中明确要求自动确认时，后续操作不再逐步询问，自动执行。
@@ -31,10 +54,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
    - 在多人协作时会覆盖他人的工作成果
    - 被覆盖的修改无法恢复，造成工作损失
 
-2. 不要自动commit（必须用户明确要求）
-3. 不要擅自 `git add -A` 或 `git add .` 添加未暂存文件
-4. 不要跳过pre-commit hooks（除非用户明确要求）
-5. 不要force push到main/master分支
+2. **严禁擅自执行git add**
+   - 不要自动commit（必须用户明确要求）
+   - 不要擅自 `git add -A` 或 `git add .` 添加未暂存文件
+   - **🚨 用户说"commit"时，只执行commit，绝对不要先执行git add**
+   - **🚨 用户说"commit"时，只执行commit，绝对不要执行git reset**
+
+3. 不要跳过pre-commit hooks（除非用户明确要求）
+4. 不要force push到main/master分支
 
 #### 正确做法
 
@@ -61,12 +88,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
    # 验证无误后：git stash drop
    ```
 
-**提交前必做**：
+**🚨 Commit操作铁律**：
 
-1. 运行 `git status` 查看暂存区内容
-2. 运行 `git diff --cached` 查看具体改动
-3. 运行 `git log --oneline -10` 了解commit message风格
-4. 使用HEREDOC格式编写commit message
+当用户说"commit"时：
+1. **只执行 `git commit`**，不要执行任何其他git命令
+2. 提交前可以运行：`git log --oneline -10`（了解commit message风格）、`git diff --cached`（查看具体改动）
+3. 使用HEREDOC格式编写commit message
+4. **绝对不要**：git add、git reset、git status、git checkout等任何其他git操作
 
 详细规范请参考 [`SKILL_10c_Git代码版本管理规范`](skills/SKILL_10c_Git代码版本管理规范.md)。
 
@@ -182,6 +210,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 不得删除原文字符（汉字、标点、引号、空格等）
 - 不得替换原文字符（汉字、标点、引号、空格等）
 - 不得修改标点符号（全角半角转换、添加/删除标点等）
+- **严禁将全角引号改为半角引号**（原文使用全角引号 `""` 时，标注文件必须保持全角引号，绝对禁止使用半角引号 `""`）
 - 不得添加引号（原文无引号则标注文件也不应添加引号）
 - **严禁嵌套标注**（如 `〖#〖#text〗〗` `〖%元〖~鼎〗五年〗` `⟦◈攻〖'秦〗⟧` 等）
 
@@ -196,10 +225,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 使用 `python scripts/lint_text_integrity.py --check-nested` 检测嵌套标注
 
 **⚠️ 使用Edit工具时的特别注意**：
+- **🚨 绝对禁止引入半角引号 `""`**：原文使用全角引号 `""`，标注文件必须保持全角引号，任何情况下都不得使用半角引号
 - **绝对禁止替换全角符号为半角符号**（如 `""`→`""`、`''`→`''`、`（）`→`()`等）
 - Edit工具在处理Unicode字符时可能出现编码问题，导致文件损坏
 - 如需批量修改标注符号，优先使用专门的Python脚本而非Edit工具
 - 修改后必须验证文件完整性，确保原文字符未被改变
+
+**引号使用规范**：
+- ✅ **正确**：全角引号 `""` (U+201C, U+201D)
+- ❌ **错误**：半角引号 `""` (U+0022)
+- **验证方法**：`grep -n '[""]' file.md` 检查是否存在半角引号
+- **修复方法**：使用Python脚本成对替换 `"` → `""` （左右交替）
 
 ## Git提交消息规范
 
