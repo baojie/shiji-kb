@@ -195,8 +195,13 @@ class HTMLLinter:
         js_pattern = r'<script\s+src="([^"]+)"'
         js_links = re.findall(js_pattern, self.content)
 
-        if '../js/purple-numbers.js' not in js_links:
-            self.warnings.append("缺少purple-numbers.js引用")
+        # purple-numbers.js 可以直接引用，也可以通过 shiji-imports.js 动态加载
+        has_purple_numbers = (
+            '../js/purple-numbers.js' in js_links or
+            '../js/shiji-imports.js' in js_links
+        )
+        if not has_purple_numbers:
+            self.warnings.append("缺少purple-numbers.js引用（直接引用或通过shiji-imports.js）")
 
         # 检查错误的JS路径
         bad_js_paths = re.findall(r'src="\.\./(docs/js/[^"]+)"', self.content)
