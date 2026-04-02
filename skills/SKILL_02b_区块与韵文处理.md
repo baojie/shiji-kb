@@ -165,10 +165,10 @@ def verse_score(line):
 ### 5.1 修复流程（推荐顺序）
 
 ```
-1. fmt_fix_zan.py        — 赞块编号合并（多个 [X.Y] → 保留第一个）
-2. fmt_fix_verse.py      — 赞块内韵文换行（单行多句 → 每句独立）
-3. fix_zan_prose_v3.py   — 散文/韵文分离（从赞移回太史公曰）
-4. fix_block_sections.py — 区块不跨节（在标题前自动关闭）
+1. fmt_fix_zan.py         — 赞块编号合并（多个 [X.Y] → 保留第一个）
+2. fix_zan_linebreaks.py  — 赞块韵文换行（智能区分韵文/散文，每句独立）
+3. fix_zan_prose_v3.py    — 散文/韵文分离（从赞移回太史公曰）
+4. fix_block_sections.py  — 区块不跨节（在标题前自动关闭）
 5. auto_tag_taishigong.py — 自动补全缺失的 ::: 标注
 ```
 
@@ -177,10 +177,16 @@ def verse_score(line):
 | 脚本                     | 位置       | 功能                                              |
 | ------------------------ | ---------- | ------------------------------------------------- |
 | `fmt_fix_zan.py`         | `scripts/` | 赞块内多个段落编号合并为一个                      |
-| `fmt_fix_verse.py`       | `scripts/` | 赞块内单行多句拆分为每句一行                      |
+| `fix_zan_linebreaks.py`  | `scripts/` | 赞块内单行多句拆分为每句一行（智能区分韵文/散文） |
 | `fix_zan_prose_v3.py`    | `/tmp/`    | 散文从赞块移至太史公曰（verse_score 评分）        |
 | `fix_block_sections.py`  | `/tmp/`    | 自动关闭跨 `##`/`###` 的区块                      |
 | `auto_tag_taishigong.py` | `/tmp/`    | 批量为缺失标注的章节补 `::: 太史公曰` 和 `::: 赞` |
+
+**关键改进**（2026-04-02）:
+- `fix_zan_linebreaks.py` 替代旧版 `fmt_fix_verse.py`
+- 新增韵文/散文智能判断（基于句子平均长度）
+- 散文块（如027天官书）自动跳过，避免误修
+- 支持 `--check` 模式验证问题，`--all` 批量修复
 
 ### 5.3 审计检查
 
