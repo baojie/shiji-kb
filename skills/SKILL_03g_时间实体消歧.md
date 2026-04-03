@@ -199,6 +199,66 @@ for each chapter:
 
 **关键函数**: `generate_timeline_html()`
 
+#### 数据来源
+
+timeline.html **每次完全重新生成**，综合三个数据源：
+
+1. **year_ce_map.json** (Phase 2输出)
+   - 6655条年份→公元年映射
+   - 来自消歧结果
+
+2. **event_year_map** (从事件索引提取)
+   - 3082个事件的公元年
+   - 来自 `kg/events/007_事件索引.json`
+
+3. **year_state_map.json** (Phase 1输出)
+   - 635年的诸侯国君主信息
+   - 用于显示每年各国君主
+
+#### 更新机制
+
+**重要**: timeline.html的更新是**重建式**，不是**追加式**
+
+```python
+def generate_timeline(year_map, reign_data, event_year_map, year_state_map):
+    """每次运行都完全重新生成timeline.html"""
+    # 1. 聚合所有年份引用
+    by_year = defaultdict(list)  # 从year_ce_map收集
+    by_year_events = defaultdict(list)  # 从event_year_map收集
+
+    # 2. 生成HTML
+    with open(TIMELINE_FILE, 'w') as f:  # 'w'模式会覆盖旧文件
+        f.write(html_content)
+```
+
+**执行流程**:
+```
+运行 build_year_map.py
+  ↓
+Phase 1: extract_reign_periods() → year_state_map.json
+  ↓
+Phase 2: disambiguate_years() → year_ce_map.json (重新生成)
+  ↓
+Phase 3: load_event_index_years() → event_year_map
+  ↓
+Phase 4: generate_timeline() → timeline.html (完全覆盖)
+```
+
+**数据安全性**:
+- ✅ year_ce_map.json 已commit到git（可恢复）
+- ✅ timeline.html 从year_ce_map.json重建（可重现）
+- ⚠️ 如果year_ce_map.json丢失，timeline.html也会丢失所有数据
+
+**不会丢失数据的条件**:
+1. year_ce_map.json已commit
+2. 脚本逻辑没有破坏性修改
+3. 原始tagged.md文件没有被错误修改
+
+**会丢失数据的情况**:
+1. 删除year_ce_map.json后运行脚本
+2. 修改脚本导致消歧失败
+3. 删除tagged.md中的年份/人物标注
+
 ## 年表章节处理
 
 ### 适用章节
@@ -381,13 +441,78 @@ STATE_ALIASES = {  # 国家别名
 }
 ```
 
+### 数据安全最佳实践
+
+**修改脚本前的保护措施**:
+
+```bash
+# 1. 备份关键数据文件
+cp kg/chronology/data/year_ce_map.json \
+   kg/chronology/data/year_ce_map.json.v1.0.backup
+
+# 2. 记录当前覆盖率（baseline）
+python -c "
+import json
+with open('kg/chronology/data/year_ce_map.json', 'r') as f:
+    data = json.load(f)
+total = sum(sum(len(p) for p in ch.values()) for ch in data.values())
+print(f'Baseline: {total} 条映射')
+" > baseline_coverage.txt
+
+# 3. 在git分支上修改（推荐）
+git checkout -b optimize-year-disambiguation
+```
+
+**运行脚本后的验证**:
+
+```bash
+# 1. 检查新覆盖率
+python -c "
+import json
+with open('kg/chronology/data/year_ce_map.json', 'r') as f:
+    data = json.load(f)
+total = sum(sum(len(p) for p in ch.values()) for ch in data.values())
+print(f'当前: {total} 条映射')
+"
+
+# 2. 如果覆盖率显著下降，立即恢复
+git diff kg/chronology/data/year_ce_map.json  # 检查差异
+git checkout kg/chronology/data/year_ce_map.json  # 恢复
+
+# 3. 或从备份恢复
+cp kg/chronology/data/year_ce_map.json.v1.0.backup \
+   kg/chronology/data/year_ce_map.json
+```
+
+**版本管理建议**:
+
+1. **重大版本标记**: 在milestone版本创建带tag的备份
+   ```bash
+   cp year_ce_map.json year_ce_map.json.v1.0
+   git tag -a v1.0-year-disambiguation -m "76.87% coverage milestone"
+   ```
+
+2. **定期commit**: 每次显著改进都commit
+   ```bash
+   git add kg/chronology/data/year_ce_map.json
+   git commit -m "优化nearby_ruler: 覆盖率76.8%→76.87%"
+   ```
+
+3. **分支开发**: 重大修改在分支上进行
+   ```bash
+   git checkout -b feature/han-dynasty-tables
+   # 修改和测试
+   git checkout main && git merge feature/han-dynasty-tables
+   ```
+
 ## 执行清单
 
 ### 执行前
 
 - [ ] 确认`chapter_md/*.tagged.md`存在且包含`〖%〗`标注
 - [ ] 确认`kg/relations/rulers.json`存在（656君主）
-- [ ] 备份现有`year_ce_map.json`（如有）
+- [ ] 备份现有`year_ce_map.json`（如有重要版本）
+- [ ] 记录当前覆盖率作为baseline
 
 ### 执行中
 
