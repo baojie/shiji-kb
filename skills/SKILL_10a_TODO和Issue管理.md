@@ -603,6 +603,26 @@ print(json.dumps(todos, indent=2, ensure_ascii=False))
 2. **关闭Issue前确保所有相关TODO已completed**
 3. **标注类Issue的TODO必须包含验证步骤**
 
+### 7.3 用户术语约定
+
+**重要**：用户使用"TODO"一词时，具体含义取决于上下文：
+
+| 用户说法 | 实际含义 | 对应操作 |
+|---------|---------|---------|
+| "写入TODO" | 写入TODO.md文件 | 编辑 `TODO.md` 文件，添加任务条目 |
+| "加入TODO" | 写入TODO.md文件 | 编辑 `TODO.md` 文件，添加任务条目 |
+| "添加到TODO" | 写入TODO.md文件 | 编辑 `TODO.md` 文件，添加任务条目 |
+| "使用TodoWrite工具" | 创建临时追踪任务 | 使用 `TodoWrite` 工具创建会话级TODO列表 |
+
+**关键区别**：
+- **TODO.md文件**：持久化的项目任务列表，git跟踪，面向项目管理
+- **TodoWrite工具**：会话级临时任务跟踪，不持久化，面向当前工作流程
+
+**最佳实践**：
+1. 当用户说"写入TODO"/"加入TODO"时，默认操作 `TODO.md` 文件
+2. 只有明确说"使用TodoWrite工具"时，才调用 `TodoWrite` 工具
+3. 对话结束后，TodoWrite工具的内容会消失，TODO.md文件的内容会保留
+
 ---
 
 ## 八、TODO文件整理规范
