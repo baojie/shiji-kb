@@ -1,11 +1,52 @@
 # 史记知识库 TODO
 
-> 最后更新：2026-03-30 (新增#85北大考古学生反馈相关issues)
+> 最后更新：2026-04-03 (新增CHANGELOG commit ID审查任务)
 >
 > **重要说明**：
 > - 本文件保留核心开发任务和执行中的流程任务
 > - 功能建议类任务已迁移至 [GitHub Issues](https://github.com/baojie/shiji-kb/issues)
 > - Issue管理规范见 [SKILL_10a](skills/SKILL_10a_TODO和Issue管理.md)
+
+---
+
+## 📊 文档维护任务
+
+### CHANGELOG commit ID 完整性审查与补充
+
+**发现日期**: 2026-04-03
+
+**问题描述**：
+- 审查发现CHANGELOG.md中存在大量commit ID遗漏
+- 总计30个日期需要补充commit ID，涉及400+个commits未被记录
+- 最严重的日期：2026-03-18 (36个)、2026-03-29 (23个)、2026-02-07 (22个)
+
+**受影响日期**（按缺失数量排序）：
+1. 2026-03-18: 缺少 36个 commits
+2. 2026-03-29: 缺少 23个 commits
+3. 2026-02-07: 缺少 22个 commits
+4. 2026-03-15: 缺少 21个 commits
+5. 2026-03-08: 缺少 21个 commits
+6. 2026-03-31: 缺少 20个 commits
+7. 2026-02-08: 缺少 20个 commits
+8. 2026-03-24: 缺少 19个 commits
+9. 2026-03-21: 缺少 19个 commits
+10. 2026-03-14: 缺少 18个 commits
+11. 其他20个日期: 缺少 3-13个 commits
+
+**处理策略**（待决定）：
+- **选项A**: 保持现状 - CHANGELOG作为高层次总结，不必包含每个commit ID
+- **选项B**: 重点补充 - 只为重要日期（2026-03至04月）补充commit ID
+- **选项C**: 自动化重建 - 编写脚本从git历史自动生成完整的CHANGELOG
+
+**审查工具**：
+- 脚本位置：`scripts/audit_changelog_commits.py`
+- 使用方法：`python scripts/audit_changelog_commits.py`
+- 功能：检查CHANGELOG.md中每个日期是否包含了所有对应的git commits
+- 输出：显示每个日期缺失的commit ID列表
+
+**优先级**: 低（不影响项目功能）
+
+**决策人**: @baojie
 
 ---
 
@@ -226,6 +267,25 @@
 - [ ] **实体标注反思管线**：参照事件年代反思管线，建立实体标注质量审查工作流
   - 每轮检查：遗漏（单字省称、泛称词）/ 消歧（同名异人）/ 别名（称谓映射）
   - 输出 corrections JSON → 写回 tagged.md → 重新生成索引，多轮迭代至收敛
+
+- [ ] **年份时间消歧语法标注**：将year_ce_map.json中的6655条年份→公元年映射写回到130章markdown文件
+  - 前提：当前year_ce_map.json已包含76.87%覆盖率的年份消歧结果
+  - 目标：在原文中添加消歧语法标注（如 `〖%元年|-201〗`）
+  - 方法：编写脚本读取year_ce_map.json，定位到对应章节/段落/文本，插入消歧标注
+  - 验证：确保标注后的文本仍符合标注铁律（不改变原文字符）
+  - 详见：[SKILL_03g_时间实体消歧.md](skills/SKILL_03g_时间实体消歧.md)
+
+- [ ] **PN映射表更新派生产物溯源**：基于已建立的PN映射表（data/pn_mapping_complete.json），更新所有派生产物中的PN引用
+  - 前提：已完成PN规范化（commit 6b20e096 → 74032d6），建立了1322条映射（覆盖73章）
+  - 优先范围：
+    - [ ] 更新 docs/entities/timeline.html 中的375处PN引用（44.2%已匹配，28.4%需更新）
+    - [ ] 更新 kg/events/ 相关文件中的PN溯源引用
+    - [ ] 检查并更新其他包含PN引用的派生文件（索引页面、关系图谱等）
+  - 工具脚本：
+    - `scripts/update_timeline_pn.py` - 自动更新timeline.html
+    - `scripts/verify_timeline_pn_content.py` - 验证更新正确性
+  - 验证标准：所有PN引用指向的内容与原文匹配（100%内容一致性）
+  - 数据源：[data/pn_mapping_complete.json](data/pn_mapping_complete.json) / [README](data/PN_MAPPING_README.md)
 
 
 

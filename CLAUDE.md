@@ -37,6 +37,7 @@ git restore <file>  # 同样危险
 - 当用户在对话中明确要求自动确认时，后续操作不再逐步询问，自动执行。
 - commit时只提交用户已暂存（git add）的文件，不得擅自 `git add -A` 或 `git add .` 添加未暂存的文件。
 - commit message不要自动加版本号（如v3.1），版本号由用户决定。
+- **🚨 TODO术语约定**：用户说"写入TODO"/"加入TODO"时，指的是编辑 `TODO.md` 文件，而非使用 `TodoWrite` 工具。详见 [`SKILL_10a_TODO和Issue管理.md`](skills/SKILL_10a_TODO和Issue管理.md) §7.3。
 
 ## Git代码版本管理规范
 
