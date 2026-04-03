@@ -20,6 +20,7 @@
 ├── data/              # 核心数据资产（结构化知识）
 ├── docs/              # 公开文档（GitHub Pages等）
 ├── labs/              # 实验性工作（研究、原型、探索）
+├── resources/         # 静态参考资料（出版物、演讲、草稿）
 ├── scripts/           # 自动化脚本与工具
 ├── logs/              # 运行日志与工作记录
 ├── archive/           # 历史存档（已废弃但保留）
@@ -115,6 +116,48 @@ labs/
 - 原型确定采用 → 移至 `docs/` 或项目主代码
 - 实验结论形成规范 → 编写为 `skills/SKILL_XX.md`
 - 方案被否决 → 移至 `archive/`
+
+---
+
+#### `resources/` - 静态参考资料
+
+**用途**：存放出版物、演讲、技术文章草稿、外部参考文献等静态资料
+
+**子目录示例**：
+```
+resources/
+├── draft/             # 技术文章草稿（未发布的文章）
+├── publications/      # 已发布的出版物
+│   ├── meta-skill-book/      # 元技能方法论手册
+│   ├── pipeline-skills-book/ # 管线技能手册
+│   ├── talks/                # 演讲材料（PPT/PDF）
+│   └── 公众号文章/           # 公众号系列文章
+├── references/        # 外部参考文献（论文、书籍）
+├── community/         # 社区贡献内容
+└── help/              # 写作指南、贡献指南
+```
+
+**存放内容**：
+- **`draft/`**：技术文章草稿、博客文章、待发布的内容
+- **`publications/`**：已发布的PDF手册、论文、演讲材料
+- **`references/`**：外部参考文献、研究资料
+- **`community/`**：社区贡献的内容、用户案例
+- **`help/`**：项目贡献指南、写作风格指南
+
+**典型场景**：
+- "我写了一篇介绍项目的技术文章" → `resources/draft/YYYY-MM-DD_文章标题.md`
+- "制作了演讲PPT" → `resources/publications/talks/`
+- "收集了相关论文" → `resources/references/`
+- "生成了技能手册PDF" → `resources/publications/meta-skill-book/`
+
+**与其他目录的区别**：
+- 与 `docs/` 的区别：`docs/` 是面向用户的在线文档（GitHub Pages），`resources/` 是离线资料和出版物
+- 与 `labs/` 的区别：`labs/` 是实验性工作，`resources/draft/` 是准备发表的文章草稿
+- 与 `logs/` 的区别：`logs/` 是工作记录，`resources/draft/` 是对外传播的内容
+
+**何时移动文件**：
+- 草稿完成 → 从 `resources/draft/` 发布到外部平台或移至 `resources/publications/`
+- 实验性调研 → 从 `labs/research/` 整理为正式文章后放入 `resources/draft/`
 
 ---
 
@@ -215,6 +258,11 @@ archive/
 │  ├─ 已定稿、可公开 → docs/
 │  └─ 草稿、待审阅 → labs/planning/
 │
+├─ 是技术文章或对外传播内容？
+│  ├─ 草稿阶段 → resources/draft/
+│  ├─ 已发布 → resources/publications/
+│  └─ 演讲材料 → resources/publications/talks/
+│
 ├─ 是实验性工作？
 │  ├─ 功能原型 → labs/prototypes/
 │  ├─ 技术调研 → labs/research/
@@ -282,6 +330,25 @@ labs/experiments/
 
 ---
 
+### ❌ 错误示例4：把技术文章草稿放在 `labs/writing/`
+
+```
+labs/writing/
+└── 2026-04-03_史记知识库介绍.md  # 错误！应该放在 resources/draft/
+```
+
+**纠正**：
+```
+resources/draft/
+└── 2026-04-03_史记知识库介绍.md
+```
+
+**原因**：
+- `labs/` 用于实验性工作（技术调研、原型开发）
+- `resources/draft/` 用于对外传播的内容草稿（技术文章、博客、演讲）
+
+---
+
 ## 特殊文件的位置
 
 ### 项目根目录文件
@@ -309,6 +376,7 @@ labs/experiments/
 
 - `data/` - 核心数据资产
 - `docs/` - 公开文档
+- `resources/` - 静态参考资料（包括 draft/ 和 publications/）
 - `scripts/` - 稳定脚本
 - `skills/` - 规范文档
 - `labs/` - 实验性工作（选择性）
