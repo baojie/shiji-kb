@@ -3,7 +3,7 @@
 ## 版本信息
 - **创建日期**: 2026-03-31
 - **最后更新**: 2026-03-31
-- **相关SKILL**: SKILL_01d 正音与拼音标注 v2.1
+- **相关SKILL**: [SKILL_01d 正音与拼音标注](../SKILL_01d_正音与拼音标注.md) v2.1
 - **特殊读音词表**: v2.7（107词条）
 
 ## 一、核心问题与基础统计
@@ -60,7 +60,7 @@
 - ⚠️ 量词用法（十骑、百骑）暂未全覆盖（30+种变化）
 
 ### 相关文档
-[doc/spec/ANALYSIS_骑字多音规则.md](骑字多音规则说明.md)
+详细案例分析见原 `doc/spec/ANALYSIS_骑字多音规则.md`
 
 ## 三、高频多音字系统性调查
 
@@ -235,7 +235,7 @@ function matchPattern(text, startIndex) {
   const pattern = /^([0-9一二三四五六七八九十百千万]+[余馀]?)骑/;
   const substr = text.substring(startIndex);
   const match = substr.match(pattern);
-  
+
   if (match) {
     const numText = match[1];
     const numPinyin = pinyinFn(numText, { type: 'array' });
@@ -407,8 +407,8 @@ function matchPattern(text, index) {
 - ✅ 处理策略：4级策略矩阵建立
 
 **核心文档**：
-1. ✅ 骑字多音规则说明.md（案例研究）
-2. ✅ 多音字处理方案总结.md（本文档，系统性总结）
+1. ✅ 骑字多音规则说明（案例研究）
+2. ✅ 多音字处理方案总结（本文档，系统性总结）
 3. ✅ SKILL_01d v2.1（方法论）
 
 **数据分析**：
@@ -436,10 +436,10 @@ function matchPattern(text, index) {
 
 | 文件 | 路径 | 版本 | 说明 |
 |------|------|------|------|
-| SKILL文档 | `skills/SKILL_01d_正音与拼音标注.md` | v2.1 | 含多音字方法论 |
+| SKILL文档 | [SKILL_01d_正音与拼音标注](../SKILL_01d_正音与拼音标注.md) | v2.1 | 含多音字方法论 |
 | 特殊读音词表 | `docs/data/special-pronunciation.json` | v2.7 | 107个词条 |
-| 骑字案例 | `doc/spec/ANALYSIS_骑字多音规则.md` | v1.0 | 详细案例研究 |
-| 本文档 | `doc/spec/ANALYSIS_多音字处理.md` | v2.0 | 系统性总结（含63字分析） |
+| 骑字案例 | 原 `doc/spec/ANALYSIS_骑字多音规则.md` | v1.0 | 详细案例研究 |
+| 本文档 | `skills/references/SKILL_01d5_多音字处理分析.md` | v2.0 | 系统性总结（含63字分析） |
 | 拼音脚本 | `docs/js/heading-pinyin.js` | - | 前端实现 |
 
 ### 8.2 数据来源

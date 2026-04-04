@@ -324,6 +324,8 @@ node scripts/test_pinyin_pro.js
 - [SKILL_01d2_史记正义提取方法](./references/SKILL_01d2_史记正义提取方法.md) - 从《史记正义》提取特殊读音的方法论、工具、质量检查
 - [SKILL_01d3_技术实现细节](./references/SKILL_01d3_技术实现细节.md) - 前端Ruby标注、性能优化、故障排除
 - [SKILL_01d4_拼音标注质量规范v3.0](./references/SKILL_01d4_拼音标注质量规范v3.0.md) - 质量评估体系、设计哲学、优化路线图、数据统计（v3.0完整规范）
+- [SKILL_01d5_多音字处理分析](./references/SKILL_01d5_多音字处理分析.md) - 63个多音字系统性调查、处理策略、版本演进（v2.7状态与路线图）
+- [SKILL_01d6_拼音注释功能规范](./references/SKILL_01d6_拼音注释功能规范.md) - 拼音注释功能的前端实现规范、交互设计、技术细节
 
 ### 数据与索引
 
