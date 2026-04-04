@@ -9,7 +9,7 @@ kg/
 ├── events/              # 历史事件
 │   ├── data/            # 130篇事件索引 + 事件关系数据
 │   │   ├── {NNN}_{章节名}_事件索引.md   # 各章事件（3185个）
-│   │   ├── event_relations.json         # 事件关系（7652条，9种类型）
+│   │   ├── event_relations.json         # 事件关系（7637条，9种类型）
 │   │   └── event_relations_summary.md   # 关系统计
 │   └── scripts/
 │       ├── extract_events.py            # 从标注文本提取事件
@@ -21,18 +21,34 @@ kg/
 │       ├── generate_review_prompts.py   # 批量生成审查提示词
 │       ├── validate_events.py           # 事件格式验证
 │       ├── build_year_map.py            # 年份消歧与公元映射
-│       └── build_metro_map_data.py      # 地铁图可视化数据
+│       ├── build_metro_map_data.py      # 地铁图可视化数据
+│       ├── agent_review_batch.sh        # 批量年代审查脚本
+│       ├── batch_fix_collapsed_dates.py # 批量修复折叠日期
+│       ├── cross_validate_dates.py      # 跨章节年代交叉验证
+│       ├── extract_wars.py              # 提取战争事件
+│       ├── fix_by_chronology.py         # 基于编年表修正年代
+│       ├── fix_undated_known_events.py  # 修复已知事件的缺失年代
+│       └── write_inferred_years.py      # 写入推断的年份
 │
 ├── entities/            # 实体库
 │   ├── data/
 │   │   ├── entity_index.json            # 实体索引（人名/地名/官职等）
 │   │   ├── entity_aliases.json          # 实体别名表
-│   │   └── disambiguation_map.json      # 歧义消解映射
+│   │   ├── disambiguation_map.json      # 歧义消解映射
+│   │   ├── verb_index.json              # 动词索引（军事/刑罚/政治/经济）
+│   │   ├── verb_taxonomy.md             # 动词分类体系
+│   │   ├── biology/                     # 生物实体数据
+│   │   └── ...                          # 其他实体数据文件
 │   └── scripts/
 │       ├── build_entity_index.py        # 构建实体索引
 │       ├── disambiguate_names.py        # 人名消歧
 │       ├── auto_detect_aliases.py       # 自动检测别名
-│       └── augment_sku_entities.py      # SKU实体增补
+│       ├── augment_sku_entities.py      # SKU实体增补
+│       ├── build_verb_index.py          # 构建动词索引
+│       ├── query_verbs_by_type.py       # 按类型查询动词
+│       ├── validate_verb_tagging.py     # 验证动词标注
+│       ├── auto_annotate_verbs.py       # 自动标注动词
+│       └── migrate_verb_tags.py         # 迁移动词标注格式
 │
 ├── chronology/          # 纪年数据
 │   └── data/
@@ -52,14 +68,9 @@ kg/
 │       └── extract_all_relations.py     # 全类型关系提取
 │
 ├── vocabularies/        # 实体词汇表
-│   ├── data/            # 人名/地名/官职/时间/朝代等词表
+│   ├── data/            # 人名/地名/官职/时间/朝代等词表（11个MD文件）
 │   └── scripts/
 │       └── build_vocabularies.py        # 从标注文本提取词表
-│
-├── biology/         # 生物实体
-│   ├── data/            # 标注指南与项目文档
-│   └── scripts/
-│       └── extract_biology.py       # 生物实体提取
 │
 ├── quantity/            # 数量实体
 │   └── data/
@@ -70,10 +81,36 @@ kg/
 │   │   └── sections_data.json            # 130篇章节小节数据（约1500个小节）
 │   └── README.md
 │
-├── rdf/                 # RDF/本体数据
-│   ├── ontology.ttl     # 史记知识本体定义
-│   └── *.ttl            # RDF三元组数据
+├── taxonomy/            # 实体分类树
+│   ├── data/
+│   │   └── person_classified.json       # 人物分类中间数据
+│   ├── person.ttl       # 人物分类本体（130类/1821实例）
+│   ├── biology.ttl      # 生物分类本体（20类/70实例）
+│   ├── person_taxonomy.md    # 人物分类树
+│   ├── biology_taxonomy.md   # 生物分类树
+│   └── scripts/
+│       └── build_taxonomy.py            # 分类树生成器
 │
+├── ontology/            # 知识本体定义
+│   ├── ontology-v1/     # SKU知识单元（675个）
+│   ├── ontology-v2/     # 第二版本体设计
+│   └── README.md
+│
+├── common-sense/        # 史记常识库
+│   ├── README.md        # 常识规则（10大类，用于反常推理）
+│   ├── INDEX.md         # 常识索引
+│   └── extracted_knowledge_2026-03-26.md
+│
+├── facts/               # 知识事实库
+│   ├── data/            # 结构化事实数据
+│   ├── markdown/        # 事实Markdown文档
+│   └── scripts/         # 事实提取脚本
+│
+├── rdf-hello-world/     # RDF/OWL入门示例
+│   └── ...              # 示例本体文件
+│
+├── entity_index.json    # 实体索引（5MB，根目录）
+├── disambiguation_map.json  # 歧义消解映射（根目录）
 └── README.md
 ```
 
@@ -82,22 +119,23 @@ kg/
 | 知识类型 | 数量 |
 |---------|------|
 | 事件 | 3,185个（130篇×平均24.5个） |
-| 事件关系 | 7,652条（自动5,126 + LLM 2,525） |
-| 跨线换乘 | 1,876条（互见294/共人867/共地542/同期173） |
+| 事件关系 | 7,637条（自动5,111 + LLM 2,526） |
+| 跨线换乘 | 2,111条（并发2,990/互见320/共人1,064/共地737） |
 | 公元纪年 | 3,051个事件有标注（98.7%覆盖，前2700年～前87年，经五轮反思修正约2,100处） |
 | 事件类型 | 11种（战争/继位/政治/改革/家族/建设/文化/经济/灾害等） |
-| 关系类型 | 9种（延续/因果/跨章因果/包含/对立/互见/共人/共地/同期） |
+| 关系类型 | 9种（延续/因果/跨章因果/包含/对立/并发/互见/共人/共地） |
 
 ## 事件关系类型
 
 | 类型 | 说明 | 来源 | 数量 |
 |------|------|------|------|
-| sequel | 时间延续，B是A的后续 | LLM | 1,623 |
-| co_person | 跨章事件共享≥2人物 | 自动 | 969 |
-| co_location | 跨章事件共享地点+人物 | 自动 | 705 |
+| concurrent | 同年跨章事件共享人物 | 自动 | 2,990 |
+| sequel | 时间延续，B是A的后续 | LLM | 1,624 |
+| co_person | 跨章事件共享≥2人物 | 自动 | 1,064 |
+| co_location | 跨章事件共享地点+人物 | 自动 | 737 |
 | causal | A是B的直接原因 | LLM | 407 |
-| cross_ref | 不同章节记述同一事件 | 自动 | 294 |
-| concurrent | 同年跨章事件共享人物 | 自动 | 230 |
+| cross_causal | 跨章节因果关系 | LLM | 338 |
+| cross_ref | 不同章节记述同一事件 | 自动 | 320 |
 | part_of | A是B的子事件 | LLM | 107 |
 | opposition | 对立双方的行动 | LLM | 50 |
 
@@ -142,13 +180,32 @@ kg/
 **支持消歧**：`⟦TYPE动词|消歧说明⟧`，如 `⟦◈败|击败⟧`
 
 **现状**：
-- 当前文本中约6,000处动词仍使用旧格式 `〖[verb〗`
 - 词表已定义，工具已就绪，迁移工作待实施
 - 详见：[动词分类体系文档](entities/data/verb_taxonomy.md)
 
 **区分原则**：
 - 刑罚动词（单字）：`⟦◉杀⟧` `⟦◉诛⟧`
 - 刑罚制度（多字名词）：`〖[腰斩〗` `〖[夷三族〗`（保留原标注）
+
+## 实体标注按章反思管线
+
+实体标注经过三轮Agent自动化按章反思审查：
+
+| 轮次 | 修正数 | 有修正章数 | 新模式发现 | 主要修正类型 |
+|------|--------|---------|---------|-----------|
+| 第一轮 | ~1,913 | 127/130 | 40+条 | 官职→身份/时长去标注/制度→思想/制度→典籍/制度→刑法 |
+| 第二轮 | ~9,955 | 127/130 | 10条 | 旧格式残留/身份类遗漏/刑法动词遗漏/人名省称遗漏/器物类遗漏 |
+| 第三轮 | ~890 | 72/130 | 1条(A70) | 时长消歧标注/文本完整性修复/动词格式保护 |
+| **合计** | **~12,758** | **130** | **51+条** | |
+
+**平均修正密度**: 98.1处/章
+
+**关键规律**:
+- 规律A70（第三轮新增）：严禁修改动词标注格式 `⟦◈⟧`/`⟦◉⟧` ↔ `〖[〗`
+- 规律A8：时长消歧标注 `〖%X年|时长〗`（第三轮系统性修正）
+- "上"字判断：传记中"上"100%指皇帝 → 身份类`〖#〗`
+
+详见：[第一轮报告](../doc/entities/第一轮按章实体反思/第一轮按章实体反思报告.md) · [第二轮报告](../doc/entities/第二轮按章实体反思/第二轮按章实体反思报告.md) · [第三轮报告](../doc/entities/第三轮按章实体反思/第三轮反思总体完成报告_20260324.md) · [SKILL文档](../skills/SKILL_03c_按章反思.md)
 
 ## 年代反思审查管线
 
@@ -173,10 +230,14 @@ python kg/events/scripts/lint_ce_years.py              # 纪年质检
 python kg/events/scripts/lint_ce_years.py 047           # 检查指定章节
 python kg/events/scripts/build_metro_map_data.py        # 生成地铁图数据
 
-# 实体索引（含事件索引页）
+# 实体索引（含事件索引页 + 动词关系页）
 python kg/entities/scripts/build_entity_index.py        # 重建全部实体索引
-# → 输出：docs/entities/*.html（18类实体 + event.html事件时间索引 + index.html总览）
-# → 输出：kg/entities/data/entity_index.json
+# → 输出：docs/entities/*.html（20个HTML文件）
+#   - 18类实体页面（person.html、place.html等）
+#   - event.html（事件时间索引）
+#   - relations.html、relations-military.html、relations-penalty.html（动词关系页）
+#   - index.html（总览）
+# → 输出：kg/entity_index.json（根目录，5MB）
 # event.html 数据来源：kg/events/data/*_事件索引.md（130个文件）
 # event.html 功能：按历史分期分组、事件编号显示、时间/类型/人物/地点标签、搜索筛选
 
