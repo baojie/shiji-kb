@@ -27,7 +27,7 @@ https://github.com/yourusername/shiji-kb/discussions/1
 https://github.com/yourusername/shiji-kb/discussions/2
 ```
 
-然后更新 `docs/pronunciation-debates.html` 中的链接：
+然后更新 `pronunciation-debates.html` 中的链接：
 
 **第225行**（身毒）：
 ```html
@@ -67,7 +67,7 @@ https://github.com/yourusername/shiji-kb/discussions/2
 
 1. 在本目录创建新的 `.md` 文件（如 `03_某词读音考证.md`）
 2. 参考现有文件的结构编写内容
-3. 在 `docs/pronunciation-debates.html` 中添加新条目
+3. 在 `pronunciation-debates.html` 中添加新条目
 4. 创建 GitHub Discussion 后更新链接
 5. 更新本 README 文件
 

@@ -329,8 +329,8 @@ node scripts/test_pinyin_pro.js
 
 ### 数据与索引
 
-- [`docs/pronunciation/多音字完整索引.md`](../docs/pronunciation/多音字完整索引.md) - 156个多音字的统计分析
-- [`docs/pronunciation/上下文分析工作流程说明.md`](../docs/pronunciation/上下文分析工作流程说明.md) - v4.0工作流程完整说明
+- [`doc/pronunciation/多音字完整索引.md`](../doc/pronunciation/多音字完整索引.md) - 156个多音字的统计分析
+- [`doc/pronunciation/上下文分析工作流程说明.md`](../doc/pronunciation/上下文分析工作流程说明.md) - v4.0工作流程完整说明
 
 ### 相关Skill
 

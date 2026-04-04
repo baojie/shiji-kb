@@ -20,7 +20,7 @@
         {
             id: 'pinyin-display',
             label: '拼音注释',
-            labelHTML: '拼音注释 <a href="../pronunciation-debates.html" target="_blank" style="font-size: 0.85em; color: #3498db; text-decoration: none; margin-left: 4px;" title="查看读音争议说明">[?]</a>',
+            labelHTML: '拼音注释 <a href="../github-discussions/pronunciation-debates.html" target="_blank" style="font-size: 0.85em; color: #3498db; text-decoration: none; margin-left: 4px;" title="查看读音争议说明">[?]</a>',
             storageKey: 'shiji-pinyin-display',
             defaultValue: false,  // 默认关闭
             onChange: function(enabled) {
