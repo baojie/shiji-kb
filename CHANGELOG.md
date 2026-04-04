@@ -9,6 +9,53 @@
 
 ---
 
+## 2026-04-05
+
+重组目录结构：迁移archive/到corpus/archive/并建立路径常量管理，更新110+ SKILL文档和17个Python脚本，完善项目目录结构文档。
+
+### 改进 (Changed)
+
+- **目录结构重组**
+  - 迁移`archive/`到`corpus/archive/`（390个文件）
+  - 统一语料管理：corpus/作为所有文本资源的顶层目录
+  - 保持Git历史：使用`git mv`迁移，保留完整提交记录
+- **路径常量管理**
+  - 创建`scripts/config.py` (293行)：集中管理所有项目路径常量
+  - 提供辅助函数：get_chapter_file()、get_chapter_md_file()、validate_project_structure()
+  - 支持自测和验证功能
+- **文档同步更新**
+  - 更新110+ SKILL文档中的路径引用（`archive/chapter` → `corpus/archive/chapter`）
+  - 更新17个Python脚本中的路径引用
+  - 排除历史文档：doc/reports/、doc/entities/、logs/、CHANGELOG.md、TODO.md
+  - 更新README.md、CLAUDE.md、corpus/README.md
+- **工作流程文档扩充**
+  - `doc/workflow/开发工作流程.md`更新至2026-04-05版本
+  - 新增"脚本工具速查"章节（232个Python脚本分类）
+  - 新增"项目管理"章节（Issue/TODO/日志/Git/CHANGELOG/文件组织/Skill工程化）
+  - 扩展目录章节：从11个增至13个，从485行扩充至1038行
+
+### 修复 (Fixed)
+
+- **脚本路径修复**
+  - 修复`scripts/lint_text_integrity.py`第344行硬编码路径
+  - 验证所有脚本正常工作：lint、validate通过测试
+
+### 技术亮点 (Technical Highlights)
+
+- **迁移规划先行**：创建详细迁移计划文档（`labs/planning/archive_to_corpus_migration.md`，709行）
+- **批量处理**：使用sed批量替换路径引用，提高效率
+- **质量保障**：迁移后验证所有关键脚本，确保功能完整
+- **历史保护**：明确排除历史文档，避免修改已归档的报告
+
+### 数据统计 (Quality Metrics)
+
+- 文件变更：409个（391个重命名，18个修改/新建）
+- 路径引用更新：200+处
+- 新增管理文档：1个（迁移规划）
+- 新增配置模块：1个（scripts/config.py）
+
+---
+
 ## 2026-04-04
 
 **详细工作日志**: [logs/daily/2026-04-04.md](logs/daily/2026-04-04.md)
