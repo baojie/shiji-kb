@@ -2,7 +2,7 @@
  * 在 h1 / h2 / h3、正文 <p>、<blockquote>、列表项 <li> 上插入汉语拼音（带声调）。
  * 使用 <ruby> 标注实现拼音和汉字的精确对齐。
  * 支持特殊读音词表，优先匹配特殊读音。
- * 依赖：pinyin-pro（jsDelivr +esm）。需联网。
+ * 依赖：pinyin-pro（优先本地，降级CDN）。
  */
 (function () {
   const polyCache = new Map();
@@ -328,23 +328,26 @@
     // 先加载特殊读音词表
     await loadSpecialPronunciations();
 
-    // 加载拼音库
+    // 加载拼音库（优先本地，降级CDN）
     let pinyinFn;
-    const cdnUrls = [
+    const urls = [
+      "../libs/pinyin-pro.min.js",  // 本地版本（优先）
       "https://cdn.jsdelivr.net/npm/pinyin-pro@3.28.0/+esm",
       "https://cdn.jsdelivr.net/npm/pinyin-pro@3.21.0/+esm",
       "https://esm.sh/pinyin-pro@3.28.0",
     ];
     let lastErr;
-    for (let u = 0; u < cdnUrls.length; u++) {
+    for (let u = 0; u < urls.length; u++) {
       try {
-        const mod = await import(cdnUrls[u]);
+        const mod = await import(urls[u]);
         pinyinFn = mod.pinyin;
         if (typeof pinyinFn === "function") {
+          console.log(`[heading-pinyin] 拼音库已加载: ${urls[u]}`);
           break;
         }
       } catch (e) {
         lastErr = e;
+        console.debug(`[heading-pinyin] 尝试加载 ${urls[u]} 失败，继续尝试下一个URL`);
       }
     }
     if (typeof pinyinFn !== "function") {

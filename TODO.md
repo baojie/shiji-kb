@@ -237,6 +237,44 @@
 
 > **说明**：阅读体验、数据与内容、工程与架构、未来探索等功能建议已迁移到 [GitHub Issues](https://github.com/baojie/shiji-kb/issues)
 
+### 多音字分析任务
+
+**背景**: 已完成25个高频/中频多音字的基础统计，其中6个已完成详细分析，19个草稿待审核。
+
+- [ ] **【优先级1 - 最高】完成高频多音字分析（9个）**
+  - 目标：完成出现次数>1000次的多音字详细分析
+  - 范围：王(8,209)、为(7,386)、与(2,660)、使(2,444)、将(2,417)、相(2,076)、行(1,495)、长(1,121)、数(1,021)
+  - 草稿文件：已自动生成于 `docs/pronunciation/*.draft.md`
+  - 工作量：每个字需2-4小时人工审核（读音分类、频率统计、词表方案、例句补充）
+  - 产出：正式分析文档 `docs/pronunciation/*.md`（参考已完成的6个文档）
+  - 参考：[ALL_STATISTICS.md](docs/pronunciation/ALL_STATISTICS.md)
+
+- [ ] **【优先级2 - 高】补充特殊读音词表**
+  - 目标：为高频但词表覆盖不足的多音字补充词条
+  - 范围：
+    - 使(2,444次) - 0条 → 补充"使者"等
+    - 间(454次) - 0条 → 补充"离间"、"反间"等
+    - 好(359次) - 0条 → 补充"好学"、"好色"、"好战"等
+    - 与(2,660次) - 1条 → 补充更多词条
+    - 为(7,386次) - 1条 → 补充更多词条
+  - 预计新增词条：20-30条
+  - 产出：更新 `docs/data/special-pronunciation.json`（v3.8 → v3.9+）
+
+- [ ] **【优先级3 - 中】扩展到更多多音字**
+  - 目标：统计并分析中低频多音字（出现次数<1000但>50次）
+  - 范围：过、还、重、应、便、宿、处、差、殷、系、解、种、称、从、冠、当、度、分、复、供、假、禁、觉、落、没、蒙、难、宁、强、塞、舍、胜、识、恶、要、曾、正、只、属等50+个
+  - 方法：使用 `scripts/analyze_polyphone_statistics.py` 批量生成草稿
+  - 产出：草稿文档 + 统计报告
+
+**工具脚本**:
+- `scripts/analyze_polyphone_statistics.py` - 自动化统计分析
+- `scripts/polyphone_list.py` - 多音字列表定义
+
+**参考文档**:
+- [docs/pronunciation/ALL_STATISTICS.md](docs/pronunciation/ALL_STATISTICS.md) - 完整统计概览
+- [docs/pronunciation/README.md](docs/pronunciation/README.md) - 索引和规范
+- [skills/SKILL_01d_拼音标注规范.md](skills/SKILL_01d_拼音标注规范.md) - 设计原则
+
 ### 常规优先任务
 
 - [ ] **人物生卒年反思**：四轮反思推断人物生卒年区间（span格式），记录证据链和置信度（详见 [SKILL_07a](skills/SKILL_07a_人物生卒年推断.md) / [spec](doc/spec/PLAN_人物生卒年反思.md)）

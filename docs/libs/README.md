@@ -22,6 +22,7 @@
 | 库名称 | 版本 | 大小 | 用途 | 更新日期 |
 |--------|------|------|------|----------|
 | OpenCC.js | 1.0.5 | 1.1MB | 繁简转换 | 2026-03-31 |
+| pinyin-pro | 3.28.0 | 316KB | 汉语拼音标注 | 2026-04-04 |
 
 ## 加载机制
 
@@ -49,6 +50,10 @@
 # OpenCC.js
 cd docs/libs
 curl -L -o opencc.min.js https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.min.js
+
+# pinyin-pro
+cd docs/libs
+curl -L -o pinyin-pro.min.js https://cdn.jsdelivr.net/npm/pinyin-pro@3.28.0/+esm
 ```
 
 ### 验证完整性
@@ -64,6 +69,7 @@ sha256sum opencc.min.js
 即使本地文件存在，系统仍然配置了CDN后备URL：
 
 - **OpenCC.js**: https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.min.js
+- **pinyin-pro**: https://cdn.jsdelivr.net/npm/pinyin-pro@3.28.0/+esm
 
 这确保了在本地文件损坏或缺失时，系统仍能正常工作。
 
@@ -83,3 +89,7 @@ sha256sum opencc.min.js
 - **OpenCC.js**: Apache License 2.0
   - 项目地址: https://github.com/nk2028/opencc-js
   - 许可证: https://github.com/nk2028/opencc-js/blob/master/LICENSE
+
+- **pinyin-pro**: MIT License
+  - 项目地址: https://github.com/zh-lx/pinyin-pro
+  - 许可证: https://github.com/zh-lx/pinyin-pro/blob/main/LICENSE
