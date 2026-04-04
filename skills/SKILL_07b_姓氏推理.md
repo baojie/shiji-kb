@@ -216,7 +216,7 @@ confidence = high（有族属记载时）
 |------|------|
 | 实体标注文本 | `chapter_md/` 各章 |
 | 现有人物实体索引 | `kg/entities/data/entity_index.json` |
-| 邦国归属关系 | `kg/entities/data/entity_index.json`（`〖'邦国〗`类型）|
+| 邦国归属关系 | `kg/entities/data/entity_index.json`（`〖◆邦国〗`类型）|
 | 氏族归属关系 | `kg/entities/data/entity_index.json`（`〖&氏族〗`类型）|
 | 父系关系 | `kg/relations/` 实体关系索引 |
 | 姓族索引 | `kg/entities/data/xing_index.json` |
@@ -260,7 +260,7 @@ confidence = high（有族属记载时）
 
 | 上游 | 本工序 | 下游 |
 |------|--------|------|
-| 03a 实体标注（〖@人名〗〖&氏族〗〖'邦国〗） | 姓氏推理（多轮迭代） | 03b 实体消歧（姓氏辅助区分同名人物） |
+| 03a 实体标注（〖@人名〗〖&氏族〗〖◆邦国〗） | 姓氏推理（多轮迭代） | 03b 实体消歧（姓氏辅助区分同名人物） |
 | 05b 实体关系（父子/家族关系） | 父系传播（R4/R5） | 07 矛盾检测（"同姓"一致性核验） |
 | — | 子类型标注 | 09a 认知辅助阅读器（悬浮注释） |
 

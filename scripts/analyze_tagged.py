@@ -29,7 +29,7 @@ ANNOTATION_TYPES = [
     (r'〖#([^〖〗\n]+)〗', 'Identity 身份'),
     (r'〖\+([^〖〗\n]+)〗', 'Flora/Fauna 生物'),
     (r'〖\$([^〖〗\n]+)〗', 'Quantity 数量'),
-    (r"〖'([^〖〗\n]+)〗", 'Feudal State 邦国'),
+    (r"〖◆([^〖〗\n]+)〗", 'Feudal State 邦国'),
     (r'〖\?([^〖〗\n]+)〗', 'Mythology 神话'),
     (r'〖\{([^〖〗\n]+)〗', 'Classical Text 典籍'),
     (r'〖:([^〖〗\n]+)〗', 'Ritual 礼仪'),

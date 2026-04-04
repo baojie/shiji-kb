@@ -45,7 +45,7 @@ TYPE_TO_SYMBOL = {
     'astronomy':   ('〖!', '〗'),
     'identity':    ('〖#', '〗'),
     'biology':     ('〖+', '〗'),
-    'feudal-state': ("〖'", '〗'),
+    'feudal-state': ("〖◆", '〗'),
     'quantity':    ('〖$', '〗'),
     'mythical':    ('〖?', '〗'),
     'book':        ('〖{', '〗'),

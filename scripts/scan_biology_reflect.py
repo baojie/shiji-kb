@@ -34,7 +34,7 @@ ALL_PATTERNS = {
     'official': re.compile(r'〖;([^〖〗\n]+)〗'),
     'time': re.compile(r'〖%([^〖〗\n]+)〗'),
     'dynasty': re.compile(r'〖&([^〖〗\n]+)〗'),
-    'feudal-state': re.compile(r"〖'([^〖〗\n]+)〗"),
+    'feudal-state': re.compile(r'〖◆([^〖〗\n]+)〗'),
     'institution': re.compile(r'〖\^([^〖〗\n]+)〗'),
     'tribe': re.compile(r'〖~([^〖〗\n]+)〗'),
     'identity': re.compile(r'〖#([^〖〗\n]+)〗'),

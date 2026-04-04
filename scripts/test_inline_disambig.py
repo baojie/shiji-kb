@@ -84,7 +84,7 @@ def test_convert_entities():
         ('〖@台|吕台〗',     'person',       '吕台'),
         ('〖=沛|沛县〗',     'place',        '沛县'),
         ('〖;守|郡守〗',     'official',     '郡守'),
-        ("〖'汉|大汉〗",     'feudal-state', '大汉'),
+        ("〖◆汉|大汉〗",     'feudal-state', '大汉'),
         ('〖&芈|芈姓〗',     'dynasty',      '芈姓'),
         ('〖^郡县|郡县制〗', 'institution',  '郡县制'),
         ('〖~胡|匈奴〗',     'tribe',        '匈奴'),

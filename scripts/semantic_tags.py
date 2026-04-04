@@ -156,7 +156,7 @@ def remove_semantic_tags(text: str, normalize_legacy: bool = False, strip_markdo
     text = re.sub(r'〘([^〘〙]*)〙', r'\1', text)
 
     # 清理残留的未闭合标签符号
-    text = text.replace('〖', '').replace('〗', '')
+    text = text.replace('〖◆, '').replace('〗', '')
     text = text.replace('⟦', '').replace('⟧', '')
     text = text.replace('〘', '').replace('〙', '')
 
@@ -227,7 +227,7 @@ def render_tags_to_html(text: str, normalize_legacy: bool = True) -> str:
     )
 
     # 清理不完整或未闭合的标签（源数据问题）
-    text = text.replace('〖', '').replace('〗', '')
+    text = text.replace('〖◆, '').replace('〗', '')
 
     return text
 

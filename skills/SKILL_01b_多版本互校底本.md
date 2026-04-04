@@ -618,7 +618,7 @@ corpus/archive/chapter/           ← 原始底本（不可变，校对基准）
    - `docs/original_text/`: （独立维护，不强制同步）
 
 3. **标注符号铁律**
-   - `chapter_md/` 中的标注符号（`〖@〗` `〖'〗` `⟦◈⟧` 等）绝对不可修改
+   - `chapter_md/` 中的标注符号（`〖@〗` `〖◆〗` `⟦◈⟧` 等）绝对不可修改
    - 只替换标注符号内外的原文汉字
    - 标注的消歧语法 `〖TYPE 显示名|规范名〗` 不改变显示文本
 
@@ -739,7 +739,7 @@ sed -i 's/克饹/克奔/g' chapter_md/004_周本纪.tagged.md
 
 **标注符号说明**:
 - `〖@人名〗`: 人物标注
-- `〖'国名〗`: 国家/政权标注
+- `〖◆国名〗`: 国家/政权标注
 - `〖=地名〗`: 地理位置标注
 - `〖•物品〗`: 物品/器物标注
 - `⟦◈动词⟧`: 关键动作标注
@@ -913,15 +913,15 @@ done
 
 # 标注文件（注意：004章节标注文件中有更多"饹"字）
 sed -i 's/而饹〖~戎狄〗/而奔〖~戎狄〗/g' chapter_md/004_周本纪.tagged.md
-sed -i 's/而饹〖'\''周〗/而奔〖'\''周〗/g' chapter_md/004_周本纪.tagged.md
+sed -i 's/而饹〖◆\''周〗/而奔〖◆\''周〗/g' chapter_md/004_周本纪.tagged.md
 sed -i 's/克饹/克奔/g' chapter_md/004_周本纪.tagged.md
 sed -i 's/女饹之/女奔之/g' chapter_md/004_周本纪.tagged.md
-sed -i 's/〖@王子克〗饹〖'\''燕〗/〖@王子克〗奔〖'\''燕〗/g' chapter_md/004_周本纪.tagged.md
-sed -i 's/〖@叔带〗饹〖'\''齐〗/〖@叔带〗奔〖'\''齐〗/g' chapter_md/004_周本纪.tagged.md
+sed -i 's/〖@王子克〗饹〖◆\''燕〗/〖@王子克〗奔〖◆\''燕〗/g' chapter_md/004_周本纪.tagged.md
+sed -i 's/〖@叔带〗饹〖◆\''齐〗/〖@叔带〗奔〖◆\''齐〗/g' chapter_md/004_周本纪.tagged.md
 sed -i 's/〖@惠王〗饹〖=温〗/〖@惠王〗奔〖=温〗/g' chapter_md/004_周本纪.tagged.md
-sed -i 's/出饹〖'\''郑〗/出奔〖'\''郑〗/g' chapter_md/004_周本纪.tagged.md
-sed -i 's/〖@敬王〗饹于〖'\''晋〗/〖@敬王〗奔于〖'\''晋〗/g' chapter_md/004_周本纪.tagged.md
-sed -i 's/〖'\''周〗君饹〖'\''秦〗/〖'\''周〗君奔〖'\''秦〗/g' chapter_md/004_周本纪.tagged.md
+sed -i 's/出饹〖◆\''郑〗/出奔〖◆\''郑〗/g' chapter_md/004_周本纪.tagged.md
+sed -i 's/〖@敬王〗饹于〖◆\''晋〗/〖@敬王〗奔于〖◆\''晋〗/g' chapter_md/004_周本纪.tagged.md
+sed -i 's/〖◆\''周〗君饹〖◆\''秦〗/〖◆\''周〗君奔〖◆\''秦〗/g' chapter_md/004_周本纪.tagged.md
 ```
 
 #### 验证结果
