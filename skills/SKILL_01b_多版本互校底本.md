@@ -32,7 +32,7 @@
 
 | 版本简称 | 文件路径 | 字体 | 特点 | 优先级 |
 |---------|---------|------|------|-------|
-| **简体底本** | `archive/chapter/*.txt` | 简体 | 分章130篇，无注释 | ⭐⭐⭐⭐⭐ |
+| **简体底本** | `corpus/archive/chapter/*.txt` | 简体 | 分章130篇，无注释 | ⭐⭐⭐⭐⭐ |
 | **维基正文** | `corpus/shiji/wikisource_shiji/*.html` | 繁体 | 维基文库，有超链接标注 | ⭐⭐⭐⭐ |
 | **四库版** | `corpus/shiji/史记四库.txt` | 简体 | 四库全书版本 | ⭐⭐⭐⭐ |
 | **繁体正文** | `corpus/shiji/史記正文.繁体.txt` | 繁体 | 纯文本，无注释 | ⭐⭐⭐⭐ |
@@ -41,7 +41,7 @@
 
 ### 版本选择建议
 
-**推荐底本**: `archive/chapter/*.txt` (简体分章版)
+**推荐底本**: `corpus/archive/chapter/*.txt` (简体分章版)
 **理由**:
 - ✅ 已按130篇分章，便于逐章校对
 - ✅ 简体字，符合当前项目标注文件格式
@@ -77,9 +77,9 @@
 
 | 路径 | 说明 | 为什么不算"其他版本" |
 |------|------|---------------------|
-| `archive/chapter/*.txt` | 项目标准底本 | 这是校对的**基准本身** |
-| `archive/chapter_improved/*.txt` | 改进版（保留空行） | 基于同一底本，只是格式调整 |
-| `archive/chapter_numbered/*.txt` | 编号版（带段落号） | 基于同一底本，只是添加编号 |
+| `corpus/archive/chapter/*.txt` | 项目标准底本 | 这是校对的**基准本身** |
+| `corpus/archive/chapter_improved/*.txt` | 改进版（保留空行） | 基于同一底本，只是格式调整 |
+| `corpus/archive/chapter_numbered/*.txt` | 编号版（带段落号） | 基于同一底本，只是添加编号 |
 | `docs/original_text/*.txt` | 工作定本 | 基于同一底本的工作副本 |
 | `chapter_md/*.tagged.md` | 标注文件 | 基于同一底本添加知识标注 |
 
@@ -92,7 +92,7 @@
 用户问："这个字在其他版本中是什么？"
 
 ✅ 正确理解：查看三家注版本、四库版本、维基版本等
-❌ 错误理解：查看 archive/chapter_improved/ 或 docs/original_text/
+❌ 错误理解：查看 corpus/archive/chapter_improved/ 或 docs/original_text/
                 （这些都是同一底本，字应该一样）
 ```
 
@@ -103,7 +103,7 @@
 ### 阶段1: 准备工作
 
 1. **提取分章文本**
-   - 底本: 已有 `archive/chapter/NNN_篇名.txt`
+   - 底本: 已有 `corpus/archive/chapter/NNN_篇名.txt`
    - 参校本: 需从整本中提取对应章节
 
 2. **繁简转换**
@@ -121,7 +121,7 @@
 
 ```python
 # 伪代码示例
-底本文本 = 读取("archive/chapter/001_五帝本纪.txt")
+底本文本 = 读取("corpus/archive/chapter/001_五帝本纪.txt")
 参校本A = 读取("wikisource_shiji/001_五帝本纪.html") |> 提取纯文本 |> 繁转简
 参校本B = 读取("史记四库.txt") |> 提取第001章
 参校本C = 读取("wikisource_sanjia/001_五帝本纪.html") |> 提取正文 |> 繁转简
@@ -181,7 +181,7 @@ logs/curation/reports/001_五帝本纪_校对报告.md
 ```markdown
 # 《史记·{篇名}》多版本校对报告
 
-**底本**: archive/chapter/{NNN}_{篇名}.txt
+**底本**: corpus/archive/chapter/{NNN}_{篇名}.txt
 **参校本**:
 - A: corpus/shiji/wikisource_shiji/{NNN}_{篇名}.html (维基正文·繁体)
 - B: corpus/shiji/史记四库.txt 第{NNN}章 (四库全书·简体)
@@ -293,7 +293,7 @@ logs/curation/reports/001_五帝本纪_校对报告.md
 
 ## 四、定本文本
 
-经过校对,本章定本采用底本 `archive/chapter/001_五帝本纪.txt`,仅做如下改动:
+经过校对,本章定本采用底本 `corpus/archive/chapter/001_五帝本纪.txt`,仅做如下改动:
 
 | 位置 | 原文 | 改为 | 理由 |
 |------|------|------|------|
@@ -378,7 +378,7 @@ curation_scripts/          # 校对辅助脚本
 
 1. **只匹配需要修改的汉字**：
    ```
-   示例：修改 archive/chapter/002_夏本纪.txt
+   示例：修改 corpus/archive/chapter/002_夏本纪.txt
 
    ✅ 正确做法：只选择需要修改的字
    查找内容: "山行乘暐"
@@ -422,7 +422,7 @@ curation_scripts/          # 校对辅助脚本
 
 4. **一旦发现标点被误改，立即回退**：
    ```bash
-   git checkout HEAD -- archive/chapter/NNN_篇名.txt
+   git checkout HEAD -- corpus/archive/chapter/NNN_篇名.txt
    ```
 
 #### 文本替换操作准则（AI助手专用）
@@ -442,8 +442,8 @@ AI助手在进行自动化文本替换时，必须遵守以下规则：
 **验证方法**：
 ```bash
 # 提取修改前后的标点符号Unicode编码对比
-git show HEAD:archive/chapter/002_夏本纪.txt | sed -n '21p' | od -An -tx1 > /tmp/old.hex
-sed -n '21p' archive/chapter/002_夏本纪.txt | od -An -tx1 > /tmp/new.hex
+git show HEAD:corpus/archive/chapter/002_夏本纪.txt | sed -n '21p' | od -An -tx1 > /tmp/old.hex
+sed -n '21p' corpus/archive/chapter/002_夏本纪.txt | od -An -tx1 > /tmp/new.hex
 diff /tmp/old.hex /tmp/new.hex
 # 应该只有汉字字节变化，标点字节不变
 ```
@@ -584,25 +584,25 @@ def align_texts(text1, text2):
 
 ### 派生文件体系
 
-《史记》知识库项目中，`archive/chapter/` 作为标准底本，衍生出以下派生文件系统：
+《史记》知识库项目中，`corpus/archive/chapter/` 作为标准底本，衍生出以下派生文件系统：
 
 ```
-archive/chapter/           ← 原始底本（不可变，校对基准）
+corpus/archive/chapter/           ← 原始底本（不可变，校对基准）
 ├── NNN_篇名.txt
 │
-派生文件系统（从archive/chapter同步更新）：
-├── archive/chapter_improved/   ← 改进版 (保留空行格式)
-├── archive/chapter_numbered/   ← 编号版 (带[N]段落编号)
+派生文件系统（从corpus/archive/chapter同步更新）：
+├── corpus/archive/chapter_improved/   ← 改进版 (保留空行格式)
+├── corpus/archive/chapter_numbered/   ← 编号版 (带[N]段落编号)
 └── chapter_md/                 ← 标注文件 (带〖@〗等标记)
 │
 独立工作定本（供其他工序使用）：
-└── docs/original_text/         ← 工作定本（可能与archive/chapter有差异）
+└── docs/original_text/         ← 工作定本（可能与corpus/archive/chapter有差异）
 ```
 
 **重要说明**：
-- `archive/chapter/` 是lint完整性检查的唯一基准
+- `corpus/archive/chapter/` 是lint完整性检查的唯一基准
 - `docs/original_text/` 是历史遗留的工作定本，供渲染等工序使用
-- 标注文件必须与 `archive/chapter/` 完全一致
+- 标注文件必须与 `corpus/archive/chapter/` 完全一致
 
 ### 同步更新原则
 
@@ -612,8 +612,8 @@ archive/chapter/           ← 原始底本（不可变，校对基准）
    - 不增删空行、不修改编号、不改变标注符号
 
 2. **格式特征保持**
-   - `archive/chapter_improved/`: 保留段落间空行
-   - `archive/chapter_numbered/`: 保留 `[N]` 编号格式
+   - `corpus/archive/chapter_improved/`: 保留段落间空行
+   - `corpus/archive/chapter_numbered/`: 保留 `[N]` 编号格式
    - `chapter_md/`: 保留所有 `〖TYPE 〗` 标注符号
    - `docs/original_text/`: （独立维护，不强制同步）
 
@@ -629,7 +629,7 @@ archive/chapter/           ← 原始底本（不可变，校对基准）
 #### 步骤1: 完成校对并生成报告
 
 ```bash
-# 1. 对 archive/chapter/NNN_篇名.txt 进行多版本互校
+# 1. 对 corpus/archive/chapter/NNN_篇名.txt 进行多版本互校
 # 2. 生成校对报告: logs/curation/reports/NNN_篇名_校对报告.md
 # 3. 报告中列出所有字符变更（如：筴→策, 暐→檋, 饹→奔）
 ```
@@ -640,7 +640,7 @@ archive/chapter/           ← 原始底本（不可变，校对基准）
 #### 步骤2: 应用校对结果到标准底本
 
 ```bash
-# 修改 archive/chapter/NNN_篇名.txt
+# 修改 corpus/archive/chapter/NNN_篇名.txt
 # 严格按照校对报告中的"建议改动"逐字修改
 ```
 
@@ -653,7 +653,7 @@ archive/chapter/           ← 原始底本（不可变，校对基准）
 
 按以下**顺序**依次更新各派生文件：
 
-##### 3.1 更新 `archive/chapter_improved/`
+##### 3.1 更新 `corpus/archive/chapter_improved/`
 
 **目标**: 保留段落间空行，只替换字符
 
@@ -661,41 +661,41 @@ archive/chapter/           ← 原始底本（不可变，校对基准）
 ```bash
 # 使用 sed 或文本编辑器精确替换
 # 示例：002_夏本纪.txt 的"暐→檋"
-sed -i 's/乘暐/乘檋/g' archive/chapter_improved/002_夏本纪.txt
+sed -i 's/乘暐/乘檋/g' corpus/archive/chapter_improved/002_夏本纪.txt
 
 # ⚠️ 绝对不要使用 cp 覆盖！会破坏空行格式
-# ❌ cp archive/chapter/002_夏本纪.txt archive/chapter_improved/
+# ❌ cp corpus/archive/chapter/002_夏本纪.txt corpus/archive/chapter_improved/
 ```
 
 **验证方法**:
 ```bash
 # 检查行数是否保持不变
-wc -l archive/chapter_improved/NNN_篇名.txt
+wc -l corpus/archive/chapter_improved/NNN_篇名.txt
 
 # 检查关键字符是否替换成功
-grep -n "替换后的字" archive/chapter_improved/NNN_篇名.txt
+grep -n "替换后的字" corpus/archive/chapter_improved/NNN_篇名.txt
 ```
 
-##### 3.2 更新 `archive/chapter_numbered/`
+##### 3.2 更新 `corpus/archive/chapter_numbered/`
 
 **目标**: 保留 `[N]` 段落编号，只替换字符
 
 **操作方法**:
 ```bash
 # 注意：包含编号的字符串需要精确匹配
-sed -i 's/季？/季历/g' archive/chapter_numbered/004_周本纪.txt
+sed -i 's/季？/季历/g' corpus/archive/chapter_numbered/004_周本纪.txt
 
 # 如果需要跨行修复（如"伯冏"断行问题），需要特殊处理
-sed -i ':a;N;$!ba;s/乃命伯\n申诫/乃命伯冏申诫/g' archive/chapter_numbered/004_周本纪.txt
+sed -i ':a;N;$!ba;s/乃命伯\n申诫/乃命伯冏申诫/g' corpus/archive/chapter_numbered/004_周本纪.txt
 ```
 
 **验证方法**:
 ```bash
 # 检查编号格式是否完整
-grep -E "^\[" archive/chapter_numbered/NNN_篇名.txt | head -5
+grep -E "^\[" corpus/archive/chapter_numbered/NNN_篇名.txt | head -5
 
 # 检查替换是否成功
-grep "替换后的字" archive/chapter_numbered/NNN_篇名.txt
+grep "替换后的字" corpus/archive/chapter_numbered/NNN_篇名.txt
 ```
 
 ##### 3.3 更新 `docs/original_text/`
@@ -765,7 +765,7 @@ grep "原字符" chapter_md/NNN_篇名.tagged.md
 **4.1 字符替换验证**:
 ```bash
 # 示例：验证 002_夏本纪.txt 的"暐→檋"替换
-for dir in archive/chapter archive/chapter_improved archive/chapter_numbered docs/original_text; do
+for dir in corpus/archive/chapter corpus/archive/chapter_improved corpus/archive/chapter_numbered docs/original_text; do
   echo "【${dir}】"
   grep -c "乘檋" "${dir}/002_夏本纪.txt" 2>/dev/null || echo "  未找到"
 done
@@ -778,12 +778,12 @@ grep -c "乘〖•檋〗" chapter_md/002_夏本纪.tagged.md
 **4.2 格式完整性验证**:
 ```bash
 # 行数对比（improved和numbered应该相等，original_text较少）
-wc -l archive/chapter_improved/NNN_篇名.txt \
-     archive/chapter_numbered/NNN_篇名.txt \
+wc -l corpus/archive/chapter_improved/NNN_篇名.txt \
+     corpus/archive/chapter_numbered/NNN_篇名.txt \
      docs/original_text/NNN_篇名.txt
 
 # 编号完整性检查
-grep -E "^\[" archive/chapter_numbered/NNN_篇名.txt | wc -l
+grep -E "^\[" corpus/archive/chapter_numbered/NNN_篇名.txt | wc -l
 # 应该与章节段落数一致
 
 # 标注完整性检查
@@ -794,10 +794,10 @@ python scripts/lint_text_integrity.py chapter_md/NNN_篇名.tagged.md
 **4.3 Git Diff 审查**:
 ```bash
 # 查看变更统计（应该只有字符替换，无行数变化）
-git diff --stat archive/chapter_improved/NNN_篇名.txt
+git diff --stat corpus/archive/chapter_improved/NNN_篇名.txt
 
 # 查看实际变更内容
-git diff archive/chapter_improved/NNN_篇名.txt | grep -E "^[-+]"
+git diff corpus/archive/chapter_improved/NNN_篇名.txt | grep -E "^[-+]"
 
 # 验证只改了汉字，没改标点
 git diff chapter_md/NNN_篇名.tagged.md | grep -E "^[-+]" | head -10
@@ -810,7 +810,7 @@ git diff chapter_md/NNN_篇名.tagged.md | grep -E "^[-+]" | head -10
 ```markdown
 ## 四、定本文本
 
-经过校对,本章定本采用底本 `archive/chapter/NNN_篇名.txt`,做如下改动:
+经过校对,本章定本采用底本 `corpus/archive/chapter/NNN_篇名.txt`,做如下改动:
 
 | 位置 | 原文 | 改为 | 理由 |
 |------|------|------|------|
@@ -838,44 +838,44 @@ git diff chapter_md/NNN_篇名.tagged.md | grep -E "^[-+]" | head -10
 **001_五帝本纪**:
 ```bash
 # 1. 标准底本
-sed -i 's/推筴/推策/g' archive/chapter/001_五帝本纪.txt
+sed -i 's/推筴/推策/g' corpus/archive/chapter/001_五帝本纪.txt
 
 # 2. 派生文件系统
-sed -i 's/推筴/推策/g' archive/chapter_improved/001_五帝本纪.txt
-sed -i 's/推筴/推策/g' archive/chapter_numbered/001_五帝本纪.txt
+sed -i 's/推筴/推策/g' corpus/archive/chapter_improved/001_五帝本纪.txt
+sed -i 's/推筴/推策/g' corpus/archive/chapter_numbered/001_五帝本纪.txt
 sed -i 's/推筴/推策/g' docs/original_text/001_五帝本纪.txt
 sed -i 's/推筴/推策/g' chapter_md/001_五帝本纪.tagged.md
 
 # 3. 验证
-grep -c "推策" archive/chapter_improved/001_五帝本纪.txt  # 应返回 1
-wc -l archive/chapter_improved/001_五帝本纪.txt          # 应返回 57
+grep -c "推策" corpus/archive/chapter_improved/001_五帝本纪.txt  # 应返回 1
+wc -l corpus/archive/chapter_improved/001_五帝本纪.txt          # 应返回 57
 ```
 
 **002_夏本纪**:
 ```bash
 # 注意：002章节有2处需要替换
-sed -i 's/乘暐/乘檋/g' archive/chapter/002_夏本纪.txt
-sed -i 's/乘暐/乘檋/g' archive/chapter_improved/002_夏本纪.txt
-sed -i 's/乘暐/乘檋/g' archive/chapter_numbered/002_夏本纪.txt
+sed -i 's/乘暐/乘檋/g' corpus/archive/chapter/002_夏本纪.txt
+sed -i 's/乘暐/乘檋/g' corpus/archive/chapter_improved/002_夏本纪.txt
+sed -i 's/乘暐/乘檋/g' corpus/archive/chapter_numbered/002_夏本纪.txt
 sed -i 's/乘暐/乘檋/g' docs/original_text/002_夏本纪.txt
 
 # 标注文件需要保留标注符号
 sed -i 's/乘〖•暐〗/乘〖•檋〗/g' chapter_md/002_夏本纪.tagged.md
 
 # 验证
-grep -c "乘檋" archive/chapter_improved/002_夏本纪.txt  # 应返回 2
+grep -c "乘檋" corpus/archive/chapter_improved/002_夏本纪.txt  # 应返回 2
 grep -c "乘〖•檋〗" chapter_md/002_夏本纪.tagged.md      # 应返回 2
 ```
 
 **003_殷本纪**:
 ```bash
 # 两个不同的字符替换
-sed -i 's/桀饹於鸣条/桀奔於鸣条/g' archive/chapter/003_殷本纪.txt
-sed -i 's/鄂侯争之彊/鄂侯争之强/g' archive/chapter/003_殷本纪.txt
+sed -i 's/桀饹於鸣条/桀奔於鸣条/g' corpus/archive/chapter/003_殷本纪.txt
+sed -i 's/鄂侯争之彊/鄂侯争之强/g' corpus/archive/chapter/003_殷本纪.txt
 
 # 派生文件同步（所有目录）
-for file in archive/chapter_improved/003_殷本纪.txt \
-            archive/chapter_numbered/003_殷本纪.txt \
+for file in corpus/archive/chapter_improved/003_殷本纪.txt \
+            corpus/archive/chapter_numbered/003_殷本纪.txt \
             docs/original_text/003_殷本纪.txt; do
   sed -i 's/桀饹於鸣条/桀奔於鸣条/g' "$file"
   sed -i 's/鄂侯争之彊/鄂侯争之强/g' "$file"
@@ -889,19 +889,19 @@ sed -i 's/争之彊/争之强/g' chapter_md/003_殷本纪.tagged.md
 **004_周本纪** (最复杂):
 ```bash
 # 004章节有多处"饹→奔"，需要根据上下文精确替换
-sed -i 's/而饹戎狄之间/而奔戎狄之间/g' archive/chapter/004_周本纪.txt
-sed -i 's/而饹周/而奔周/g' archive/chapter/004_周本纪.txt
-sed -i 's/克饹/克奔/g' archive/chapter/004_周本纪.txt
-sed -i 's/女饹之/女奔之/g' archive/chapter/004_周本纪.txt
-sed -i 's/饹於襃/奔於襃/g' archive/chapter/004_周本纪.txt
-sed -i 's/季？/季历/g' archive/chapter/004_周本纪.txt
+sed -i 's/而饹戎狄之间/而奔戎狄之间/g' corpus/archive/chapter/004_周本纪.txt
+sed -i 's/而饹周/而奔周/g' corpus/archive/chapter/004_周本纪.txt
+sed -i 's/克饹/克奔/g' corpus/archive/chapter/004_周本纪.txt
+sed -i 's/女饹之/女奔之/g' corpus/archive/chapter/004_周本纪.txt
+sed -i 's/饹於襃/奔於襃/g' corpus/archive/chapter/004_周本纪.txt
+sed -i 's/季？/季历/g' corpus/archive/chapter/004_周本纪.txt
 
 # 修复"伯冏"断行问题
-sed -i 's/乃命伯申诫太仆国之政，作命。/乃命伯冏申诫太仆国之政，作冏命。/g' archive/chapter/004_周本纪.txt
+sed -i 's/乃命伯申诫太仆国之政，作命。/乃命伯冏申诫太仆国之政，作冏命。/g' corpus/archive/chapter/004_周本纪.txt
 
 # 派生文件同步（示例）
-for file in archive/chapter_improved/004_周本纪.txt \
-            archive/chapter_numbered/004_周本纪.txt \
+for file in corpus/archive/chapter_improved/004_周本纪.txt \
+            corpus/archive/chapter_numbered/004_周本纪.txt \
             docs/original_text/004_周本纪.txt; do
   sed -i 's/而饹戎狄之间/而奔戎狄之间/g' "$file"
   sed -i 's/而饹周/而奔周/g' "$file"
@@ -929,18 +929,18 @@ sed -i 's/〖'\''周〗君饹〖'\''秦〗/〖'\''周〗君奔〖'\''秦〗/g' c
 **变更统计**:
 ```bash
 $ git diff --stat
- archive/chapter/001_五帝本纪.txt          |  2 +-
- archive/chapter/002_夏本纪.txt            |  4 ++--
- archive/chapter/003_殷本纪.txt            |  4 ++--
- archive/chapter/004_周本纪.txt            | 30 ++++++++++++-----------
- archive/chapter_improved/001_五帝本纪.txt |  2 +-
- archive/chapter_improved/002_夏本纪.txt   |  4 ++--
- archive/chapter_improved/003_殷本纪.txt   |  4 ++--
- archive/chapter_improved/004_周本纪.txt   | 14 +++++------
- archive/chapter_numbered/001_五帝本纪.txt |  2 +-
- archive/chapter_numbered/002_夏本纪.txt   |  4 ++--
- archive/chapter_numbered/003_殷本纪.txt   |  4 ++--
- archive/chapter_numbered/004_周本纪.txt   | 14 +++++------
+ corpus/archive/chapter/001_五帝本纪.txt          |  2 +-
+ corpus/archive/chapter/002_夏本纪.txt            |  4 ++--
+ corpus/archive/chapter/003_殷本纪.txt            |  4 ++--
+ corpus/archive/chapter/004_周本纪.txt            | 30 ++++++++++++-----------
+ corpus/archive/chapter_improved/001_五帝本纪.txt |  2 +-
+ corpus/archive/chapter_improved/002_夏本纪.txt   |  4 ++--
+ corpus/archive/chapter_improved/003_殷本纪.txt   |  4 ++--
+ corpus/archive/chapter_improved/004_周本纪.txt   | 14 +++++------
+ corpus/archive/chapter_numbered/001_五帝本纪.txt |  2 +-
+ corpus/archive/chapter_numbered/002_夏本纪.txt   |  4 ++--
+ corpus/archive/chapter_numbered/003_殷本纪.txt   |  4 ++--
+ corpus/archive/chapter_numbered/004_周本纪.txt   | 14 +++++------
  chapter_md/001_五帝本纪.tagged.md         |  2 +-
  chapter_md/002_夏本纪.tagged.md           |  6 ++---
  chapter_md/003_殷本纪.tagged.md           |  4 ++--
@@ -981,7 +981,7 @@ $ git diff --stat
 - 采用三家注版本，补上"免"字
 - 修改：`丞相周亚夫` → `丞相周亚夫免`
 
-**同步文件**：5个（archive/chapter、chapter_improved、chapter_numbered、docs/original_text、chapter_md）
+**同步文件**：5个（corpus/archive/chapter、chapter_improved、chapter_numbered、docs/original_text、chapter_md）
 
 **验证结果**：✅ 完整性检查通过（0处实质差异）
 
@@ -1076,7 +1076,7 @@ $ git diff --stat
 2. 数字化OCR错误
 3. 繁简转换失误
 
-**同步文件**：5个（archive/chapter、chapter_improved、chapter_numbered、docs/original_text、chapter_md）
+**同步文件**：5个（corpus/archive/chapter、chapter_improved、chapter_numbered、docs/original_text、chapter_md）
 
 **验证结果**：✅ 所有文件已同步修正，完整性检查通过
 
@@ -1191,7 +1191,7 @@ CHAPTER_NUM=$1
 REPORT_FILE="logs/curation/reports/${CHAPTER_NUM}_*.md"
 
 # 1. 从校对报告中提取所有字符替换规则
-# 2. 应用到 archive/chapter/
+# 2. 应用到 corpus/archive/chapter/
 # 3. 同步到所有派生文件系统
 # 4. 自动验证
 
@@ -1203,9 +1203,9 @@ REPORT_FILE="logs/curation/reports/${CHAPTER_NUM}_*.md"
 每完成一个章节的派生文件同步后，必须检查以下项目：
 
 - [ ] 校对报告已生成并审核
-- [ ] `archive/chapter/` 标准底本已修改
-- [ ] `archive/chapter_improved/` 格式保持（空行数不变）
-- [ ] `archive/chapter_numbered/` 编号完整（编号数量不变）
+- [ ] `corpus/archive/chapter/` 标准底本已修改
+- [ ] `corpus/archive/chapter_improved/` 格式保持（空行数不变）
+- [ ] `corpus/archive/chapter_numbered/` 编号完整（编号数量不变）
 - [ ] `docs/original_text/` 紧凑格式保持
 - [ ] `chapter_md/` 标注符号完整（左右括号数量相等）
 - [ ] Git diff 显示只有字符替换，无格式变化

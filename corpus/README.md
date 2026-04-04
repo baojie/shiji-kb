@@ -6,9 +6,30 @@
 
 ```
 corpus/
+├── archive/       # 文本处理历史阶段（底本与派生版本）
 ├── shiji/         # 史记相关语料（各种版本）
 └── other/         # 其他古籍语料（先秦两汉典籍、现代研究）
 ```
+
+---
+
+## archive/ - 文本处理历史阶段
+
+存放《史记》原始文本从获取到标注就绪的各处理阶段中间产物，供溯源参考。
+
+### 目录说明（3个子目录，390个文件，约6MB）
+
+| 子目录 | 内容 | 文件数 | 说明 |
+|--------|------|--------|------|
+| `chapter/` | 按章分割的纯文本（无格式） | 130 | **项目标准底本**，lint基准 |
+| `chapter_improved/` | 改进版（保留段落空行） | 130 | 基于chapter/，格式优化 |
+| `chapter_numbered/` | 编号版（带[N]段落号） | 130 | 基于chapter/，添加编号 |
+
+**核心用途**：
+- `chapter/` 作为标准底本，是 `lint_text_integrity.py` 的验证基准
+- `chapter_improved/` 和 `chapter_numbered/` 是派生版本，用于不同工序
+- 所有文件均为**只读归档**，不应直接修改
+- 详见 [archive/README.md](archive/README.md)
 
 ---
 
@@ -103,10 +124,10 @@ corpus/
 
 - [SKILL_01b_多版本互校底本](../skills/SKILL_01b_多版本互校底本.md)
 - [SPEC_目录结构与工作流程](../doc/spec/SPEC_目录结构与工作流程.md)
-- [archive/README.md](../archive/README.md) - 历史版本说明
+- [archive/README.md](archive/README.md) - 文本处理历史阶段说明
 
 ---
 
 **最后更新**: 2026-04-05
-**文件总数**: 30个文件
-**总容量**: 约120MB
+**文件总数**: 420个文件（archive/: 390, shiji/: 13, other/: 17）
+**总容量**: 约126MB

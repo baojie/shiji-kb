@@ -102,7 +102,7 @@ def main():
     parser = argparse.ArgumentParser(description='修复缺失的父段落编号')
     parser.add_argument('--dry-run', action='store_true', help='只检查不修改文件')
     parser.add_argument('--dir', choices=['chapter_md', 'archive'], default='chapter_md',
-                        help='选择处理的目录：chapter_md（默认）或 archive/chapter_numbered')
+                        help='选择处理的目录：chapter_md（默认）或 corpus/archive/chapter_numbered')
     parser.add_argument('chapters', nargs='*', help='指定章节编号（如 004 006），不指定则处理全部')
     args = parser.parse_args()
 
@@ -111,7 +111,7 @@ def main():
         file_pattern = '*.tagged.md'
         chapter_pattern = lambda num: f"{num}_*.tagged.md"
     else:  # archive
-        target_dir = Path('archive/chapter_numbered')
+        target_dir = Path('corpus/archive/chapter_numbered')
         file_pattern = '*.txt'
         chapter_pattern = lambda num: f"{num}_*.txt"
 

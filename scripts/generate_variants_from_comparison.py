@@ -3,7 +3,7 @@
 通过逐字比较简体底本和维基文库繁体版本，生成 custom-variants.json
 
 工作流程：
-1. 加载简体底本（archive/chapter/*.txt）
+1. 加载简体底本（corpus/archive/chapter/*.txt）
 2. 加载维基文库繁体HTML，提取纯文本
 3. 使用OpenCC标准转换简体→繁体
 4. 逐字比较OpenCC结果和维基文库文本
@@ -38,7 +38,7 @@ except ImportError:
 
 def load_simplified_text(chapter_num):
     """加载简体底本"""
-    files = list(Path("archive/chapter").glob(f"{chapter_num:03d}_*.txt"))
+    files = list(Path("corpus/archive/chapter").glob(f"{chapter_num:03d}_*.txt"))
     if not files:
         return None
 

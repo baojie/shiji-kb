@@ -3,7 +3,7 @@
 修正"衤复道"→"複道"的全局性错误
 
 同步修改：
-1. archive/chapter_numbered/ (4个文件)
+1. corpus/archive/chapter_numbered/ (4个文件)
 2. chapter_md/*.tagged.md (4个文件)
 """
 
@@ -12,10 +12,10 @@ from pathlib import Path
 
 # 定义需要修改的文件
 FILES_NUMBERED = [
-    "archive/chapter_numbered/006_秦始皇本纪.txt",
-    "archive/chapter_numbered/012_孝武本纪.txt",
-    "archive/chapter_numbered/028_封禅书.txt",
-    "archive/chapter_numbered/099_刘敬叔孙通列传.txt",
+    "corpus/archive/chapter_numbered/006_秦始皇本纪.txt",
+    "corpus/archive/chapter_numbered/012_孝武本纪.txt",
+    "corpus/archive/chapter_numbered/028_封禅书.txt",
+    "corpus/archive/chapter_numbered/099_刘敬叔孙通列传.txt",
 ]
 
 FILES_TAGGED = [
@@ -69,7 +69,7 @@ def main():
     total_count = 0
     total_char_diff = 0
 
-    print("\n📁 修改 archive/chapter_numbered/")
+    print("\n📁 修改 corpus/archive/chapter_numbered/")
     print("-" * 60)
     for file in FILES_NUMBERED:
         count, diff = fix_file(file)

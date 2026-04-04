@@ -3,7 +3,7 @@
 """
 lint_text_integrity.py — 标注文本完整性检查
 
-去除全部语义标注符号后，与 archive/chapter/ 中的原文底本逐字比对，
+去除全部语义标注符号后，与 corpus/archive/chapter/ 中的原文底本逐字比对，
 列出不一致处并保存到 logs/lint_text_integrity.txt。
 
 用法:
@@ -341,7 +341,7 @@ def _is_whitelisted(d: dict, wl_entries: list[tuple[str, str]]) -> bool:
 
 def main():
     root       = Path('.')
-    orig_dir   = root / 'archive' / 'chapter'
+    orig_dir   = root / 'corpus' / 'archive' / 'chapter'
     tagged_dir = root / 'chapter_md'
     log_dir    = root / 'logs'
     log_dir.mkdir(exist_ok=True)

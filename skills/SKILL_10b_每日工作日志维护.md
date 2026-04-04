@@ -241,7 +241,7 @@ python logs/daily/generate_log.py YYYY-MM-DD
 · 为29个工作日志补充"改动意义"章节
 · 禁止嵌套标注规范（SKILL和Script双层防护）
 · 新增SKILL_01a标注完整性维护技能
-· 校对基准统一到archive/chapter目录
+· 校对基准统一到corpus/archive/chapter目录
 · 提交23次代码
 
 为什么做这些事？

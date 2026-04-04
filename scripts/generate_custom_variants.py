@@ -27,8 +27,8 @@ except ImportError:
 
 def load_simplified_text(chapter_num):
     """加载简体文本"""
-    chapter_file = Path(f"archive/chapter/{chapter_num:03d}_*.txt")
-    files = list(Path("archive/chapter").glob(f"{chapter_num:03d}_*.txt"))
+    chapter_file = Path(f"corpus/archive/chapter/{chapter_num:03d}_*.txt")
+    files = list(Path("corpus/archive/chapter").glob(f"{chapter_num:03d}_*.txt"))
     if not files:
         return None
 

@@ -15,7 +15,7 @@ description: 《史记》知识库全流程概览,从原始文本到知识应用
 ### 1.1 九大技术阶段（01-09）
 
 ```
-原始底本 (archive/chapter/)
+原始底本 (corpus/archive/chapter/)
     │  ← 不可变，校对基准
     │
     ▼ 01 校勘 & 标注
@@ -26,8 +26,8 @@ description: 《史记》知识库全流程概览,从原始文本到知识应用
     │  ├─ 正音与拼音标注 (SKILL_01d) → 特殊读音标注
     │  ├─ 符号规范 (SKILL_01g) → 标点/标注/Markdown符号分离
     │  └─ 同步更新派生文件系统:
-    │      ├─ archive/chapter_improved/ (保留空行)
-    │      ├─ archive/chapter_numbered/ (保留段落编号)
+    │      ├─ corpus/archive/chapter_improved/ (保留空行)
+    │      ├─ corpus/archive/chapter_numbered/ (保留段落编号)
     │      └─ chapter_md/*.tagged.md (标注文本)
     │
 标注文本 (chapter_md/*.tagged.md)
