@@ -33,7 +33,7 @@ from collections import defaultdict
 PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 EVENTS_DIR = PROJECT_ROOT / "kg" / "events" / "data"
 OUTPUT_DIR = PROJECT_ROOT / "kg" / "events" / "data"
-CHAPTER_MD_DIR = PROJECT_ROOT / "chapter_md"
+BASE_COPY = PROJECT_ROOT / "chapter_md"  # 工作底本目录
 
 # 临时文件目录
 TMP_DIR = PROJECT_ROOT / "kg" / "events" / "tmp"

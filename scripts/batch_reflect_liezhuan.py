@@ -11,8 +11,9 @@ from pathlib import Path
 from typing import List, Dict, Tuple
 
 # 配置
-CHAPTER_MD_DIR = Path("/home/baojie/work/shiji-kb/chapter_md")
-REPORT_DIR = Path("/home/baojie/work/shiji-kb/reflection_reports")
+PROJECT_ROOT = Path(__file__).parent.parent
+BASE_COPY = PROJECT_ROOT / "chapter_md"  # 工作底本目录
+REPORT_DIR = PROJECT_ROOT / "reflection_reports"
 
 # 高频遗漏模式（基于032章经验）
 PATTERNS = {
@@ -66,7 +67,7 @@ class ChapterReflector:
         """加载章节文件"""
         # 查找章节文件
         pattern = f"{self.chapter_num:03d}_*.tagged.md"
-        files = list(CHAPTER_MD_DIR.glob(pattern))
+        files = list(BASE_COPY.glob(pattern))
 
         if not files:
             print(f"❌ 未找到章节 {self.chapter_num:03d}")

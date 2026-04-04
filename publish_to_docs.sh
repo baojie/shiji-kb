@@ -27,25 +27,17 @@ mkdir -p docs/css
 mkdir -p docs/js
 mkdir -p docs/entities
 
-# 复制 CSS 文件
-echo "2. 复制 CSS 样式文件..."
-cp css/shiji-styles.css docs/css/
-cp docs/css/chapter-nav.css docs/css/ 2>/dev/null || echo "   chapter-nav.css 已存在"
-cp docs/css/entity-index.css docs/css/ 2>/dev/null || echo "   entity-index.css 已存在"
-
-# 复制 JS 文件
-echo "3. 复制 JavaScript 文件..."
-cp docs/js/purple-numbers.js docs/js/ 2>/dev/null || echo "   purple-numbers.js 已存在"
-cp docs/js/entity-filter.js docs/js/ 2>/dev/null || echo "   entity-filter.js 已存在"
+# CSS 和 JS 文件已在 docs/ 目录中，无需复制
+echo "2. 跳过 CSS/JS 复制（文件已在 docs/ 目录）..."
 
 # 生成所有章节HTML（带 .tagged.html 后缀）
 # 注意：generate_all_chapters.py 已添加保护机制，
 #       不会覆盖已存在的详细设计版 index.html
-echo "4. 生成所有章节HTML文件..."
+echo "3. 生成所有章节HTML文件..."
 python generate_all_chapters.py
 
 # 在 docs/chapters/ 中重命名文件：移除 .tagged 后缀
-echo "5. 移除文件名中的 .tagged 后缀..."
+echo "4. 移除文件名中的 .tagged 后缀..."
 cd docs/chapters
 renamed_count=0
 for file in *.tagged.html; do
@@ -59,7 +51,7 @@ echo "   已重命名 $renamed_count 个文件"
 cd ../..
 
 # 修复 HTML 文件中的 CSS 路径和原文链接路径
-echo "6. 修复 HTML 文件中的路径引用..."
+echo "5. 修复 HTML 文件中的路径引用..."
 cd docs/chapters
 for file in *.html; do
     # 将任何绝对路径或相对路径改为标准的相对路径
@@ -78,7 +70,7 @@ done
 cd ../..
 
 # 更新索引页面中的链接（移除 .tagged 后缀）
-echo "7. 更新索引页面中的链接..."
+echo "6. 更新索引页面中的链接..."
 if [ -f "docs/index.html" ]; then
     sed -i 's|\.tagged\.html|.html|g' docs/index.html
     echo "   已更新 index.html 中的章节链接"
@@ -86,7 +78,7 @@ fi
 
 # 确保 .nojekyll 文件存在
 if [ ! -f "docs/.nojekyll" ]; then
-    echo "8. 创建 .nojekyll 文件..."
+    echo "7. 创建 .nojekyll 文件..."
     touch docs/.nojekyll
 fi
 
@@ -112,7 +104,7 @@ echo "=========================================="
 echo ""
 
 # 检查HTML文件
-echo "8. 检查生成的HTML文件..."
+echo "检查生成的HTML文件..."
 if [ -f "scripts/lint_html.py" ]; then
     python3 scripts/lint_html.py docs/chapters/ > /tmp/lint_html_output.txt 2>&1
     lint_exit_code=$?
@@ -130,7 +122,7 @@ else
 fi
 
 # 检查Index页面
-echo "9. 检查index.html..."
+echo "检查index.html..."
 if [ -f "scripts/lint_html.py" ] && [ -f "docs/index.html" ]; then
     python3 scripts/lint_html.py docs/index.html > /tmp/lint_index_output.txt 2>&1
     index_lint_exit_code=$?
@@ -144,7 +136,7 @@ if [ -f "scripts/lint_html.py" ] && [ -f "docs/index.html" ]; then
 fi
 
 # 检查实体索引页面
-echo "10. 检查实体索引页面..."
+echo "检查实体索引页面..."
 if [ -f "scripts/lint_html.py" ] && [ -d "docs/entities" ]; then
     python3 scripts/lint_html.py docs/entities/ > /tmp/lint_entity_output.txt 2>&1
     entity_lint_exit_code=$?

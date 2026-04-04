@@ -538,12 +538,12 @@ CHAPTER_IMPROVED_DIR = ARCHIVE_ROOT / 'chapter_improved'
 CHAPTER_NUMBERED_DIR = ARCHIVE_ROOT / 'chapter_numbered'
 
 # 工作目录
-CHAPTER_MD_DIR = PROJECT_ROOT / 'chapter_md'
+BASE_COPY = PROJECT_ROOT / 'chapter_md'
 ```
 
 然后所有脚本import使用：
 ```python
-from scripts.config import CHAPTER_DIR, CHAPTER_MD_DIR
+from scripts.config import CHAPTER_DIR, BASE_COPY
 ```
 
 ### 9.2 SKILL文档路径变量

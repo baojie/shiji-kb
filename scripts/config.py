@@ -46,8 +46,8 @@ OTHER_ROOT = CORPUS_ROOT / 'other'
 # 工作目录
 # ============================================================================
 
-# chapter_md/ - 当前工作目录（130个标注文件）
-CHAPTER_MD_DIR = PROJECT_ROOT / 'chapter_md'
+# chapter_md/ - 当前工作底本（130个标注文件，Base Copy）
+BASE_COPY = PROJECT_ROOT / 'chapter_md'
 
 # docs/original_text/ - 独立工作定本
 DOCS_ORIGINAL_TEXT_DIR = PROJECT_ROOT / 'docs' / 'original_text'
@@ -200,7 +200,7 @@ def get_chapter_md_file(chapter_num: int) -> Path:
         PosixPath('/path/to/chapter_md/001_五帝本纪.tagged.md')
     """
     pattern = f"{chapter_num:03d}_*.tagged.md"
-    matches = list(CHAPTER_MD_DIR.glob(pattern))
+    matches = list(BASE_COPY.glob(pattern))
 
     if not matches:
         raise FileNotFoundError(
@@ -242,7 +242,7 @@ def validate_project_structure():
     critical_dirs = [
         CORPUS_ROOT,
         CHAPTER_DIR,
-        CHAPTER_MD_DIR,
+        BASE_COPY,
         DOCS_ROOT,
         SCRIPTS_ROOT,
     ]
@@ -273,7 +273,7 @@ if __name__ == '__main__':
     print(f"  项目根目录: {PROJECT_ROOT}")
     print(f"  语料库根目录: {CORPUS_ROOT}")
     print(f"  标准底本: {CHAPTER_DIR}")
-    print(f"  标注文件: {CHAPTER_MD_DIR}")
+    print(f"  工作底本: {BASE_COPY}")
     print(f"  数据目录: {DATA_ROOT}")
     print(f"  文档目录: {DOCS_ROOT}")
     print(f"  脚本目录: {SCRIPTS_ROOT}")

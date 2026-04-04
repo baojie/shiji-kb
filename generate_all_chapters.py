@@ -17,6 +17,22 @@ from pathlib import Path
 from render_shiji_html import markdown_to_html
 import re
 import subprocess
+import sys
+
+# 导入项目路径配置
+sys.path.insert(0, str(Path(__file__).parent / 'scripts'))
+from config import (
+    PROJECT_ROOT,
+    BASE_COPY,             # 工作底本目录 (chapter_md/)
+    CHAPTER_DIR,           # 原始文本目录 (corpus/archive/chapter)
+    DOCS_ROOT,             # 发布根目录
+    DOCS_CHAPTERS_DIR,     # 章节HTML输出目录
+)
+
+# 本脚本特定的路径常量
+DOCS_CSS_DIR = DOCS_ROOT / 'css'              # CSS文件目录
+DOCS_JS_DIR = DOCS_ROOT / 'js'                # JavaScript文件目录
+DOCS_INDEX_HTML = DOCS_ROOT / 'index.html'    # 索引页面路径
 
 
 def extract_chapter_title(md_file):
@@ -35,13 +51,16 @@ def extract_chapter_title(md_file):
     return md_file.stem.replace('.tagged', '')
 
 
-def generate_index_html(chapters, output_file='docs/index.html'):
+def generate_index_html(chapters, output_file=None):
     """生成索引页面 HTML
 
     注意：如果已存在详细设计的index.html（包含chapter-card样式），
     则跳过生成，避免覆盖精心设计的版本。
     如需重新生成简单版本，请先删除或重命名现有的index.html
     """
+    if output_file is None:
+        output_file = DOCS_INDEX_HTML
+
     print(f"\n生成索引页面: {output_file}")
 
     # 检查是否已存在详细设计的index.html
@@ -178,9 +197,10 @@ def generate_index_html(chapters, output_file='docs/index.html'):
 
 def generate_all_chapters():
     """生成所有章节的HTML文件"""
-    input_dir = Path('chapter_md')
-    output_dir = Path('docs/chapters')  # 修改输出目录到docs/chapters
-    css_file = Path('docs/css/shiji-styles.css')
+    # 使用路径常量
+    input_dir = BASE_COPY
+    output_dir = DOCS_CHAPTERS_DIR
+    css_file = DOCS_CSS_DIR / 'shiji-styles.css'
 
     # 确保输出目录存在
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -309,7 +329,7 @@ def generate_all_chapters():
 
     try:
         result = subprocess.run(
-            ['python3', 'scripts/lint_html.py', 'docs/chapters/'],
+            ['python3', 'scripts/lint_html.py', str(DOCS_CHAPTERS_DIR)],
             capture_output=True,
             text=True,
             timeout=60
