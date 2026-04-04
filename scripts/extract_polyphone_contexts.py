@@ -23,7 +23,7 @@ import argparse
 class PolyphoneContextExtractor:
     """多音字上下文提取器"""
 
-    def __init__(self, text_file: str = "archive/史记.简体.txt"):
+    def __init__(self, text_file: str = "corpus/shiji/史记.简体.txt"):
         """初始化"""
         self.text_file = Path(text_file)
         if not self.text_file.exists():

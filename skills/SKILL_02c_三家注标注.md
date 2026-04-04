@@ -291,7 +291,7 @@ tagged_text: "一本作\"轩辕之野\"。"   ← 不标注
 
 ### 6.1 已有资源
 
-维基文库三家注版（`archive/wikisource_sanjia/`）已从 epub 提取为130卷独立 HTML，包含丰富的内联标注：
+维基文库三家注版（`corpus/shiji/wikisource_sanjia/`）已从 epub 提取为130卷独立 HTML，包含丰富的内联标注：
 
 | 标注样式 | 全书数量 | 实体类型 | HTML特征 |
 |----------|---------|---------|---------|
@@ -407,7 +407,7 @@ tagged_text: "一本作\"轩辕之野\"。"   ← 不标注
 ### 6.3 利用策略
 
 ```
-archive/wikisource_sanjia/*.html
+corpus/shiji/wikisource_sanjia/*.html
   │
   ▼ Step 1：提取标注实体
   ├── 实线下划线 → 按地名特征字分离人名/地名
@@ -436,7 +436,7 @@ archive/wikisource_sanjia/*.html
 ## 七、工作流程
 
 ```
-维基文库三家注 HTML（archive/wikisource_sanjia/）
+维基文库三家注 HTML（corpus/shiji/wikisource_sanjia/）
   │
   ▼ 第一步：parse_sanjia_html.py
   ├── 解析 <p> 结构：<small> 前文本 = target_phrase，<small> 内 = 注文

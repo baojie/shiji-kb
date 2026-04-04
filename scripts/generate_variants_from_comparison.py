@@ -71,7 +71,7 @@ def extract_text_from_html(html_content):
 
 def load_wikisource_text(chapter_num):
     """加载维基文库繁体HTML，提取纯文本"""
-    files = list(Path("archive/wikisource_shiji").glob(f"{chapter_num:03d}_*.html"))
+    files = list(Path("corpus/shiji/wikisource_shiji").glob(f"{chapter_num:03d}_*.html"))
     if not files:
         return None
 

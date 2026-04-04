@@ -38,8 +38,8 @@ def load_simplified_text(chapter_num):
 
 def load_wikisource_text(chapter_num):
     """加载维基文库繁体HTML，提取纯文本"""
-    html_file = Path(f"archive/wikisource_shiji/{chapter_num:03d}_*.html")
-    files = list(Path("archive/wikisource_shiji").glob(f"{chapter_num:03d}_*.html"))
+    html_file = Path(f"corpus/shiji/wikisource_shiji/{chapter_num:03d}_*.html")
+    files = list(Path("corpus/shiji/wikisource_shiji").glob(f"{chapter_num:03d}_*.html"))
     if not files:
         return None
 

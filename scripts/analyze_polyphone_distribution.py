@@ -16,7 +16,7 @@ from pathlib import Path
 from pypinyin import pinyin, Style
 
 # 史记文本路径
-SHIJI_TEXT = Path("archive/史记.简体.txt")
+SHIJI_TEXT = Path("corpus/shiji/史记.简体.txt")
 SPECIAL_PRONUNCIATION = Path("docs/data/special-pronunciation.json")
 
 # 重点分析的多音字列表（基于之前的调查）

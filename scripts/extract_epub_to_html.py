@@ -6,8 +6,8 @@
     python scripts/extract_epub_to_html.py
 
 输出：
-    archive/wikisource_shiji/         — 史记130卷（每卷1个HTML）
-    archive/wikisource_sanjia/        — 三家注130卷（每卷1个HTML）
+    corpus/shiji/wikisource_shiji/    — 史记130卷（每卷1个HTML）
+    corpus/shiji/wikisource_sanjia/   — 三家注130卷（每卷1个HTML）
     各目录下生成 index.html 目录页
 """
 
@@ -350,21 +350,21 @@ def extract_epub(epub_path, output_dir, is_sanjia=False):
 
 
 def main():
-    base = Path(__file__).parent.parent / 'archive'
+    base = Path(__file__).parent.parent / 'corpus' / 'shiji'
 
     # 史記
-    shiji_epub = base / '史記.epub'
+    shiji_epub = base / '史記.繁体.epub'
     if shiji_epub.exists():
         print(f'\n=== 提取《史記》===')
         n = extract_epub(shiji_epub, base / 'wikisource_shiji', is_sanjia=False)
-        print(f'完成：{n} 卷 → archive/wikisource_shiji/')
+        print(f'完成：{n} 卷 → corpus/shiji/wikisource_shiji/')
 
     # 三家注
-    sanjia_epub = base / '史記三家註.epub'
+    sanjia_epub = base / '史記三家註.繁体.epub'
     if sanjia_epub.exists():
         print(f'\n=== 提取《史記三家註》===')
         n = extract_epub(sanjia_epub, base / 'wikisource_sanjia', is_sanjia=True)
-        print(f'完成：{n} 卷 → archive/wikisource_sanjia/')
+        print(f'完成：{n} 卷 → corpus/shiji/wikisource_sanjia/')
 
 
 if __name__ == '__main__':

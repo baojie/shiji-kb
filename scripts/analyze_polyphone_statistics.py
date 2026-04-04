@@ -221,7 +221,7 @@ class PolyphoneAnalyzer:
 - **主要读音**: {' / '.join(pinyin_variants)}
 - **分析日期**: 自动生成
 - **分析人**: analyze_polyphone_statistics.py
-- **数据来源**: `archive/史记.简体.txt`
+- **数据来源**: `corpus/shiji/史记.简体.txt`
 
 ## 出现次数统计
 
@@ -259,10 +259,10 @@ class PolyphoneAnalyzer:
 
 ```bash
 # 提取所有上下文（用于人工分类）
-grep -o ".{{5}}{char}.{{5}}" archive/史记.简体.txt > /tmp/{char}_contexts.txt
+grep -o ".{{5}}{char}.{{5}}" corpus/shiji/史记.简体.txt > /tmp/{char}_contexts.txt
 
 # 统计特定词组
-grep -o "{char}X" archive/史记.简体.txt | sort | uniq -c | sort -rn
+grep -o "{char}X" corpus/shiji/史记.简体.txt | sort | uniq -c | sort -rn
 ```
 """
 
@@ -298,7 +298,7 @@ def main():
     output_file = sys.argv[2] if len(sys.argv) > 2 else None
 
     # 分析
-    analyzer = PolyphoneAnalyzer('archive/史记.简体.txt')
+    analyzer = PolyphoneAnalyzer('corpus/shiji/史记.简体.txt')
     report = analyzer.generate_report(char, output_file)
 
     if not output_file:
@@ -321,7 +321,7 @@ def batch_analyze_all():
     pending = high_priority - analyzed
 
     # 批量分析
-    analyzer = PolyphoneAnalyzer('archive/史记.简体.txt')
+    analyzer = PolyphoneAnalyzer('corpus/shiji/史记.简体.txt')
     results = analyzer.batch_analyze(list(pending))
 
     print(f"\n批量分析完成！共分析 {len(results)} 个多音字。")
@@ -355,7 +355,7 @@ def batch_analyze_medium():
     pending = medium_freq - already_done
 
     # 批量分析
-    analyzer = PolyphoneAnalyzer('archive/史记.简体.txt')
+    analyzer = PolyphoneAnalyzer('corpus/shiji/史记.简体.txt')
 
     # 先统计出现次数，过滤掉出现次数<50的
     char_counts = {}
@@ -401,7 +401,7 @@ def batch_analyze_low():
     pending = low_freq_chars - already_analyzed_files
 
     # 批量分析
-    analyzer = PolyphoneAnalyzer('archive/史记.简体.txt')
+    analyzer = PolyphoneAnalyzer('corpus/shiji/史记.简体.txt')
 
     # 统计所有字符的出现次数
     char_counts = {}

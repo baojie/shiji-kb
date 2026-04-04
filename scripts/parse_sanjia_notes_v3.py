@@ -146,7 +146,7 @@ def extract_notes_from_html(html_path):
 
 def main():
     # 输入和输出目录
-    input_dir = Path('archive/wikisource_sanjia')
+    input_dir = Path('corpus/shiji/wikisource_sanjia')
     output_dir = Path('data/notes')
     output_dir.mkdir(parents=True, exist_ok=True)
 

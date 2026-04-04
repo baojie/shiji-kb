@@ -43,14 +43,18 @@ chapter_md/  （项目根目录，当前工作目录）
 
 ## 维基文库参考版本
 
-从维基文库 epub 提取的繁体 HTML 版本，可作为校勘参考和标注学习素材。
+**已迁移至 `corpus/shiji/`**（2026-04-05）
 
-| 目录 | 内容 | 文件数 | 来源 |
-|------|------|--------|------|
-| `wikisource_shiji/` | 史记130卷（繁体） | 130 + index.html | [維基文庫·史記](https://zh.wikisource.org/wiki/史記) |
-| `wikisource_sanjia/` | 史记三家注130卷（繁体） | 130 + index.html | [維基文庫·史記三家註](https://zh.wikisource.org/wiki/史記三家註) |
-| `史記.epub` | 维基文库 epub 原始文件 | 1 | 维基文库 |
-| `史記三家註.epub` | 维基文库 epub 原始文件 | 1 | 维基文库 |
+从维基文库 epub 提取的繁体 HTML 版本，现已移至 `corpus/shiji/` 目录：
+
+| 原路径 | 新路径 | 内容 |
+|--------|--------|------|
+| `archive/wikisource_shiji/` | `corpus/shiji/wikisource_shiji/` | 史记130卷（繁体） |
+| `archive/wikisource_sanjia/` | `corpus/shiji/wikisource_sanjia/` | 史记三家注130卷（繁体） |
+| `archive/史記.epub` | `corpus/shiji/史記.繁体.epub` | 维基文库 epub 原始文件 |
+| `archive/史記三家註.epub` | `corpus/shiji/史記三家註.繁体.epub` | 维基文库 epub 原始文件 |
+
+详见 [corpus/README.md](../corpus/README.md)。
 
 ### 标注特点
 

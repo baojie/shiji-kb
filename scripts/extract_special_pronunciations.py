@@ -9,8 +9,8 @@ from collections import defaultdict
 from typing import Dict, List, Tuple
 
 # 文件路径
-NOTES_FILE = 'archive/史记集解三家注索隐正义.txt'
-ORIGINAL_FILE = 'archive/史记.简体.txt'
+NOTES_FILE = 'corpus/shiji/史记集解三家注索隐正义.txt'
+ORIGINAL_FILE = 'corpus/shiji/史记.简体.txt'
 
 def extract_pronunciations(content: str) -> List[Dict]:
     """提取各种读音注释"""

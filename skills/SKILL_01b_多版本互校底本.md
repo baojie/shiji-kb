@@ -33,11 +33,11 @@
 | 版本简称 | 文件路径 | 字体 | 特点 | 优先级 |
 |---------|---------|------|------|-------|
 | **简体底本** | `archive/chapter/*.txt` | 简体 | 分章130篇，无注释 | ⭐⭐⭐⭐⭐ |
-| **维基正文** | `archive/wikisource_shiji/*.html` | 繁体 | 维基文库，有超链接标注 | ⭐⭐⭐⭐ |
-| **四库版** | `archive/史记四库.txt` | 简体 | 四库全书版本 | ⭐⭐⭐⭐ |
-| **繁体正文** | `archive/史記正文.繁体.txt` | 繁体 | 纯文本，无注释 | ⭐⭐⭐⭐ |
-| **维基三家注** | `archive/wikisource_sanjia/*.html` | 繁体 | 含集解/索隐/正义，有校勘标记 | ⭐⭐⭐ |
-| **三家注合本** | `archive/史记集解三家注索隐正义.txt` | 简体 | 正文与注释混排 | ⭐⭐⭐ |
+| **维基正文** | `corpus/shiji/wikisource_shiji/*.html` | 繁体 | 维基文库，有超链接标注 | ⭐⭐⭐⭐ |
+| **四库版** | `corpus/shiji/史记四库.txt` | 简体 | 四库全书版本 | ⭐⭐⭐⭐ |
+| **繁体正文** | `corpus/shiji/史記正文.繁体.txt` | 繁体 | 纯文本，无注释 | ⭐⭐⭐⭐ |
+| **维基三家注** | `corpus/shiji/wikisource_sanjia/*.html` | 繁体 | 含集解/索隐/正义，有校勘标记 | ⭐⭐⭐ |
+| **三家注合本** | `corpus/shiji/史记集解三家注索隐正义.txt` | 简体 | 正文与注释混排 | ⭐⭐⭐ |
 
 ### 版本选择建议
 
@@ -49,9 +49,9 @@
 - ✅ 已有段落编号体系(`chapter_numbered/`)可参照
 
 **主要参校本**:
-1. `archive/wikisource_shiji/` - 繁体权威版本
-2. `archive/史记四库.txt` - 四库全书版本
-3. `archive/wikisource_sanjia/` - 三家注版本(可参考校勘记)
+1. `corpus/shiji/wikisource_shiji/` - 繁体权威版本
+2. `corpus/shiji/史记四库.txt` - 四库全书版本
+3. `corpus/shiji/wikisource_sanjia/` - 三家注版本(可参考校勘记)
 
 ### 校对参考版本定义 ⚠️
 
@@ -63,12 +63,12 @@
 
 | 版本 | 路径 | 说明 |
 |------|------|------|
-| **三家注繁体版** | `archive/史記三家注.繁体.txt` | 含集解/索隐/正义校勘记 |
-| **三家注合本** | `archive/史记集解三家注索隐正义.txt` | 简体版，正文与注释混排 |
-| **维基三家注** | `archive/wikisource_sanjia/*.html` | 繁体，有校勘标记 |
-| **维基正文** | `archive/wikisource_shiji/*.html` | 繁体权威版本 |
-| **四库版** | `archive/史记四库.txt` | 四库全书版本 |
-| **繁体正文** | `archive/史記正文.繁体.txt` | 繁体纯文本 |
+| **三家注繁体版** | `corpus/shiji/史記三家注.繁体.txt` | 含集解/索隐/正义校勘记 |
+| **三家注合本** | `corpus/shiji/史记集解三家注索隐正义.txt` | 简体版，正文与注释混排 |
+| **维基三家注** | `corpus/shiji/wikisource_sanjia/*.html` | 繁体，有校勘标记 |
+| **维基正文** | `corpus/shiji/wikisource_shiji/*.html` | 繁体权威版本 |
+| **四库版** | `corpus/shiji/史记四库.txt` | 四库全书版本 |
+| **繁体正文** | `corpus/shiji/史記正文.繁体.txt` | 繁体纯文本 |
 | **外部资源** | ctext.org、中华书局本等 | 在线或纸质权威版本 |
 
 #### 不包括的版本（项目内部同底本派生文件）
@@ -183,9 +183,9 @@ logs/curation/reports/001_五帝本纪_校对报告.md
 
 **底本**: archive/chapter/{NNN}_{篇名}.txt
 **参校本**:
-- A: archive/wikisource_shiji/{NNN}_{篇名}.html (维基正文·繁体)
-- B: archive/史记四库.txt 第{NNN}章 (四库全书·简体)
-- C: archive/wikisource_sanjia/{NNN}_{篇名}.html (维基三家注·繁体)
+- A: corpus/shiji/wikisource_shiji/{NNN}_{篇名}.html (维基正文·繁体)
+- B: corpus/shiji/史记四库.txt 第{NNN}章 (四库全书·简体)
+- C: corpus/shiji/wikisource_sanjia/{NNN}_{篇名}.html (维基三家注·繁体)
 
 **校对日期**: YYYY-MM-DD
 **校对者**: Claude / 人工审核者

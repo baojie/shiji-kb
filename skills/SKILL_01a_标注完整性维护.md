@@ -182,7 +182,7 @@ _NORM_TABLE = {
    - `〖{五子之歌〗，〖@太康〗失政。` ✗
 
 3. 参照维基文库版本（辅助验证）：
-   - `archive/wikisource_shiji/002_夏本紀.html`: 正文为`作五子之歌`，但太史公论中无此句（维基版本太史公论不完整）
+   - `corpus/shiji/wikisource_shiji/002_夏本紀.html`: 正文为`作五子之歌`，但太史公论中无此句（维基版本太史公论不完整）
    - 确认：原始底本正确
 
 **修复**：
@@ -273,10 +273,10 @@ grep -n "关键词" archive/chapter/NNN_篇名.txt
 | 版本 | 路径 | 用途 |
 |------|------|------|
 | **简体底本** | `archive/chapter/*.txt` | 当前基准 |
-| **繁体正文** | `archive/史記正文.繁体.txt` | 繁体对照 |
-| **维基正文** | `archive/wikisource_shiji/*.html` | 权威繁体版 |
-| **四库版** | `archive/史记四库.txt` | 简体对照 |
-| **维基三家注** | `archive/wikisource_sanjia/*.html` | 含校勘记 |
+| **繁体正文** | `corpus/shiji/史記正文.繁体.txt` | 繁体对照 |
+| **维基正文** | `corpus/shiji/wikisource_shiji/*.html` | 权威繁体版 |
+| **四库版** | `corpus/shiji/史记四库.txt` | 简体对照 |
+| **维基三家注** | `corpus/shiji/wikisource_sanjia/*.html` | 含校勘记 |
 
 **示例：007_项羽本纪 "坑/阬" 疑惑**
 
@@ -374,7 +374,7 @@ python scripts/lint_text_integrity.py 004
 | 优先级 | 资源 | 路径 | 说明 |
 |-------|------|------|-----|
 | 1 | **原始底本（archive/chapter）** | `archive/chapter/*.txt` | **主参照**：lint校验基准，标注文件必须与之逐字相同 |
-| 2 | **维基文库史记** | `archive/wikisource_shiji/*.html` | 繁体，基于中华书局本，校勘质量高，用于疑难处参照 |
+| 2 | **维基文库史记** | `corpus/shiji/wikisource_shiji/*.html` | 繁体，基于中华书局本，校勘质量高，用于疑难处参照 |
 | 3 | **其他数字化版本** | ctext.org, 国学网 | 在线查阅，辅助参照 |
 | 4 | **中华书局点校本** | 实体书/PDF | 权威终极参照 |
 
@@ -392,10 +392,10 @@ python scripts/lint_text_integrity.py 004
 grep "五子" archive/chapter/002_夏本纪.txt
 
 # 查找维基文库版本（辅助参照）
-grep -o "五子[^<]*歌" archive/wikisource_shiji/002_夏本紀.html
+grep -o "五子[^<]*歌" corpus/shiji/wikisource_shiji/002_夏本紀.html
 
 # 查看完整上下文（-C10 = 上下各10行）
-grep -C10 "五子" archive/wikisource_shiji/002_夏本紀.html
+grep -C10 "五子" corpus/shiji/wikisource_shiji/002_夏本紀.html
 ```
 
 ### 5.3 HTML提取技巧
@@ -404,7 +404,7 @@ grep -C10 "五子" archive/wikisource_shiji/002_夏本紀.html
 
 ```bash
 # 提取纯文本（去除HTML标签）
-sed 's/<[^>]*>//g' archive/wikisource_shiji/002_夏本紀.html | grep "五子"
+sed 's/<[^>]*>//g' corpus/shiji/wikisource_shiji/002_夏本紀.html | grep "五子"
 ```
 
 ---
@@ -452,7 +452,7 @@ sed 's/<[^>]*>//g' archive/wikisource_shiji/002_夏本紀.html | grep "五子"
 要求：
 1. 读取lint报告中的差异详情
 2. 对比 archive/chapter/{章节号}_{章节名}.txt 原始底本（**主参照**）
-3. 参照 archive/wikisource_shiji/{章节号}_{章节名}.html 维基版本（辅助参照）
+3. 参照 corpus/shiji/wikisource_shiji/{章节号}_{章节名}.html 维基版本（辅助参照）
 4. 逐处分析差异，判断是标注错误还是正确校勘
 5. 修复标注错误（恢复原始底本字符）
 6. 正确校勘添加到 scripts/lint_whitelist.txt

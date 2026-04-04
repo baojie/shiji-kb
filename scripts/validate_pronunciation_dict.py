@@ -14,7 +14,7 @@ from pypinyin import pinyin, Style
 from collections import Counter, defaultdict
 
 # 文件路径
-SHIJI_TEXT = Path("archive/史记.简体.txt")
+SHIJI_TEXT = Path("corpus/shiji/史记.简体.txt")
 DICT_FILE = Path("docs/data/special-pronunciation.json")
 
 def load_data():
