@@ -17,10 +17,12 @@
 | 文档 | 路径 | 说明 |
 |------|------|------|
 | 拼音注释功能规范 | `doc/spec/SPEC_拼音注释功能.md` | 拼音功能的完整技术规范 |
-| **特殊读音词表维护说明** | [`docs/pronunciation/特殊读音词表维护说明.md`](../docs/pronunciation/特殊读音词表维护说明.md) | **⭐ 新版词表维护工作流程（基于上下文分析）** |
-| 正义版词表说明 | `doc/pronunciation/特殊读音词表_正义版_说明.md` | 从正义提取词表的说明文档（旧版） |
+| **上下文分析工作流程说明** | [`docs/pronunciation/上下文分析工作流程说明.md`](../docs/pronunciation/上下文分析工作流程说明.md) | **⭐ v4.0 新版工作流程（基于上下文分析）** |
+| 特殊读音词表维护说明 | `doc/pronunciation/特殊读音词表维护说明.md` | v2.0 词表维护指南（旧版） |
+| 正义版词表说明 | `doc/pronunciation/特殊读音词表_正义版_说明.md` | 从正义提取词表的说明文档 |
 | 正义提取结果 | `doc/pronunciation/特殊读音注释提取结果.md` | 完整提取结果（694行） |
-| 多音字完整索引 | [`docs/pronunciation/INDEX_POLYPHONE_CHARS.md`](../docs/pronunciation/INDEX_POLYPHONE_CHARS.md) | 156个多音字的统计分析索引 |
+| 多音字完整索引 | [`docs/pronunciation/多音字完整索引.md`](../docs/pronunciation/多音字完整索引.md) | 156个多音字的统计分析索引 |
+| 多音字统计总览 | [`docs/pronunciation/多音字统计总览.md`](../docs/pronunciation/多音字统计总览.md) | 频率分布与类型统计 |
 
 ### 数据文件 (Data)
 
@@ -1150,7 +1152,7 @@ v3.0 通过固定词组策略大幅提升了准确率，但仍存在以下问题
 
 ### 新方案：两步上下文分析法
 
-详见：[**特殊读音词表维护说明.md**](../docs/pronunciation/特殊读音词表维护说明.md)
+详见：[**上下文分析工作流程说明.md**](../docs/pronunciation/上下文分析工作流程说明.md)
 
 #### 核心思路
 
