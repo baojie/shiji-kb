@@ -161,7 +161,7 @@ grep -E "[^,。]+[，。].*反[，。]" shiji_zhengyi.txt
 python scripts/verify_in_shiji.py "阏与"
 
 # 统计出现次数
-grep -c "阏与" archive/史记*.txt
+grep -c "阏与" corpus/shiji/史记*.txt
 ```
 
 **判断标准**：

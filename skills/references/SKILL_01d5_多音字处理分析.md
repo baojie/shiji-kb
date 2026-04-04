@@ -446,7 +446,7 @@ function matchPattern(text, index) {
 
 | 资源 | 路径/链接 | 说明 |
 |------|----------|------|
-| 史记原文 | `archive/史记.简体.txt` | 510,690字，4,722个不重复汉字 |
+| 史记原文 | `corpus/shiji/史记.简体.txt` | 510,690字，4,722个不重复汉字 |
 | pinyin-pro | https://github.com/zh-lx/pinyin-pro | 拼音生成库 |
 | 用户反馈 | Issue #25 | 拼音功能相关 |
 
@@ -454,10 +454,10 @@ function matchPattern(text, index) {
 
 ```bash
 # 统计某字在史记中的频率
-grep -o "某字" archive/史记.简体.txt | wc -l
+grep -o "某字" corpus/shiji/史记.简体.txt | wc -l
 
 # 查看某词的上下文
-grep "某词" archive/史记.简体.txt | head -20
+grep "某词" corpus/shiji/史记.简体.txt | head -20
 
 # 验证JSON格式
 python3 -m json.tool docs/data/special-pronunciation.json > /dev/null
