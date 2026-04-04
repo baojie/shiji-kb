@@ -531,6 +531,20 @@ SKILL_01 古籍校勘 (archive/chapter/*.txt 原始底本校正)
 
 ---
 
+## 相关文档
+
+### References（详细资料）
+
+- [SKILL_01a1_标注格式规范](./references/SKILL_01a1_标注格式规范.md) - Markdown/HTML完整格式规范、实体标注详细说明、Purple Numbers规范、质量检查标准
+
+### 相关Skill
+
+- [SKILL_01_古籍校勘](./SKILL_01_古籍校勘.md)
+- [SKILL_01g_标注符号集合原则](./SKILL_01g_标注符号集合原则.md)
+- [SKILL_10f_Skill的提炼与转化](./SKILL_10f_Skill的提炼与转化.md)
+
+---
+
 ## 结语
 
 **标注完整性维护是知识图谱质量的基石。** 305处实质差异看似繁多，但系统性修复后，将确保全部130章的标注文本100%忠实于原文定本，为后续所有工作提供可靠基础。

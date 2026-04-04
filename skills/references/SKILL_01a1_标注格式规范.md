@@ -803,10 +803,10 @@ tribe, artifact, astronomy, mythical, biology
 
 ## 参考文档
 
-- [实体标注方案.md](doc/spec/PLAN_实体标注.md) - 实体标注详细方案
-- [紫色编号设计.md](doc/spec/SPEC_紫色编号设计.md) - Purple Numbers设计说明
-- [校验工具使用指南.md](校验工具使用指南.md) - Lint工具使用指南
-- [开发工作流程.md](../workflow/开发工作流程.md) - 开发工作流程
+- [SKILL_01a_标注完整性维护](../SKILL_01a_标注完整性维护.md) - 标注完整性检查方法
+- [实体标注方案](../../doc/spec/PLAN_实体标注.md) - 实体标注详细方案
+- [紫色编号设计](../../doc/spec/SPEC_紫色编号设计.md) - Purple Numbers设计说明
+- [开发工作流程](../../workflow/开发工作流程.md) - 开发工作流程
 
 ---
 
