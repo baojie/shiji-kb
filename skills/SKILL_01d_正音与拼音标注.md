@@ -323,6 +323,7 @@ node scripts/test_pinyin_pro.js
 - [SKILL_01d1_词表设计原则详解](./references/SKILL_01d1_词表设计原则详解.md) - 特殊读音词表v3.0设计原则、版本演化、案例详解
 - [SKILL_01d2_史记正义提取方法](./references/SKILL_01d2_史记正义提取方法.md) - 从《史记正义》提取特殊读音的方法论、工具、质量检查
 - [SKILL_01d3_技术实现细节](./references/SKILL_01d3_技术实现细节.md) - 前端Ruby标注、性能优化、故障排除
+- [SKILL_01d4_拼音标注质量规范v3.0](./references/SKILL_01d4_拼音标注质量规范v3.0.md) - 质量评估体系、设计哲学、优化路线图、数据统计（v3.0完整规范）
 
 ### 数据与索引
 

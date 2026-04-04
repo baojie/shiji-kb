@@ -6,9 +6,9 @@
 - **日期**: 2026-03-31
 - **适用范围**: 史记知识库拼音标注系统
 - **相关文件**:
-  - [docs/data/special-pronunciation.json](../data/special-pronunciation.json)
-  - [docs/js/heading-pinyin.js](../js/heading-pinyin.js)
-  - [skills/SKILL_01d_正音与拼音标注.md](../../skills/SKILL_01d_正音与拼音标注.md)
+  - [docs/data/special-pronunciation.json](../../docs/data/special-pronunciation.json)
+  - [docs/js/heading-pinyin.js](../../docs/js/heading-pinyin.js)
+  - [SKILL_01d_正音与拼音标注.md](../SKILL_01d_正音与拼音标注.md)
 
 ---
 
@@ -586,7 +586,7 @@ v3.0 (当前)              v3.1 (短期)           v3.2 (中期)            v4.0
 
 ### 6.1 数据文件：special-pronunciation.json
 
-**位置**: [docs/data/special-pronunciation.json](../data/special-pronunciation.json)
+**位置**: [docs/data/special-pronunciation.json](../../docs/data/special-pronunciation.json)
 
 **版本**: 3.0
 
@@ -622,7 +622,7 @@ data['entries'].sort(key=lambda x: len(x['text']), reverse=True)
 
 ### 6.2 前端脚本：heading-pinyin.js
 
-**位置**: [docs/js/heading-pinyin.js](../js/heading-pinyin.js)
+**位置**: [docs/js/heading-pinyin.js](../../docs/js/heading-pinyin.js)
 
 **版本**: 2.1
 
@@ -937,10 +937,10 @@ assert("百乘" → ["bǎi", "shèng"]);           // ✅ 通过
 
 ### 8.1 相关文档
 
-1. [SKILL_01d_正音与拼音标注.md](../../skills/SKILL_01d_正音与拼音标注.md) - 拼音标注SKILL文档
-2. [SKILL_00_管线总览.md](../../skills/SKILL_00_管线总览.md) - 项目核心原则
-3. [特殊读音词表 v3.0](../data/special-pronunciation.json) - 数据文件
-4. [heading-pinyin.js v2.1](../js/heading-pinyin.js) - 前端实现
+1. [SKILL_01d_正音与拼音标注.md](../SKILL_01d_正音与拼音标注.md) - 拼音标注SKILL文档
+2. [SKILL_00_管线总览.md](../SKILL_00_管线总览.md) - 项目核心原则
+3. [特殊读音词表 v3.0](../../docs/data/special-pronunciation.json) - 数据文件
+4. [heading-pinyin.js v2.1](../../docs/js/heading-pinyin.js) - 前端实现
 
 ### 8.2 技术参考
 
