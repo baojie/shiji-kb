@@ -1,0 +1,86 @@
+{
+  "chapter": "019_惠景间侯者年表",
+  "name": "惠景间侯者年表基础结构",
+  "description": "惠景间侯者的封爵、传承与国除模式",
+  "table_dimensions": {
+    "primary_dimension": "侯爵（93个侯国）",
+    "secondary_dimension": "时间（惠帝→高后→文帝→景帝→武帝初期）",
+    "time_span": "惠帝元年至建元六年（前194-前135），59年",
+    "data_points": ["封侯原因", "户数", "传承代数", "国除原因"]
+  },
+  "coverage": {
+    "total_marquises": 93,
+    "time_periods": {
+      "惠帝7年": "前194-前188",
+      "高后8年": "前187-前180",
+      "文帝23年": "前179-前157",
+      "景帝16年": "前156-前141",
+      "建元至元封": "前140-前110"
+    },
+    "survival_rate": {
+      "description": "侯爵存续率随时间下降",
+      "to_jingdi": "约30个存续",
+      "to_wudi": "约10个存续"
+    }
+  },
+  "key_categories": {
+    "吕氏侯": {
+      "count": 13,
+      "fate": "吕后死后全部诛除",
+      "examples": ["扶柳侯吕平", "郊侯吕产", "沛侯吕种"]
+    },
+    "功臣后代": {
+      "count": 20,
+      "特点": "追封高祖时功臣遗功",
+      "examples": ["平定侯齐受", "博成侯冯无择"]
+    },
+    "宗室外戚": {
+      "count": 15,
+      "特点": "帝后兄弟子侄",
+      "examples": ["轵侯薄昭（文帝舅）", "章武侯窦广国（景帝后弟）"]
+    },
+    "平叛功臣": {
+      "count": 12,
+      "background": "七国之乱（前154）",
+      "examples": ["魏其侯窦婴", "俞侯栾布"]
+    },
+    "归降异族": {
+      "count": 18,
+      "特点": "匈奴降王",
+      "examples": ["弓高侯韩颓当", "襄成侯韩婴"]
+    }
+  },
+  "extinction_reasons": {
+    "坐法": {
+      "count": "约50%",
+      "categories": ["谋反", "酎金（祭祀金不足）", "不敬", "不法"]
+    },
+    "无后": {
+      "count": "约25%",
+      "description": "薨亡无子嗣"
+    },
+    "吕氏事": {
+      "count": 13,
+      "description": "吕后死后，吕氏集团被诛"
+    },
+    "改封": {
+      "count": "约10%",
+      "description": "升为王或改封他国"
+    }
+  },
+  "special_insights": {
+    "长沙王世系": {
+      "description": "唯一异姓侯国传五世",
+      "reason": "功臣非同姓，唯独长沙全，禅五世，以无嗣绝，竟无过"
+    },
+    "传承规律": {
+      "average_generations": 2.3,
+      "max_generations": 5,
+      "survival_factors": ["无政治错误", "有子嗣", "低调守法"]
+    }
+  },
+  "sources": {
+    "primary": "chapter_md/019_惠景间侯者年表.tagged.md",
+    "related_chapters": ["008_高祖本纪", "010_孝文本纪", "011_孝景本纪"]
+  }
+}

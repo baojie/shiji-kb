@@ -1,0 +1,51 @@
+# SKU 映射 — 吕太后本纪
+
+本文件将《史记·吕太后本纪》的所有标准知识单元（SKU）映射到其使用场景。
+
+---
+
+## 事实性知识
+
+- **[factual] skus/facts/fact_001.json/md**
+  - **描述**：（待补充）
+  - **使用场景**：（待补充）
+
+- **[factual] skus/facts/fact_002.json/md**
+  - **描述**：（待补充）
+  - **使用场景**：（待补充）
+
+- **[factual] skus/facts/fact_003.json/md**
+  - **描述**：（待补充）
+  - **使用场景**：（待补充）
+
+- **[factual] skus/facts/fact_004.json/md**
+  - **描述**：（待补充）
+  - **使用场景**：（待补充）
+
+- **[factual] skus/facts/fact_005.json/md**
+  - **描述**：（待补充）
+  - **使用场景**：（待补充）
+
+- **[factual] skus/facts/fact_006.json/md**
+  - **描述**：（待补充）
+  - **使用场景**：（待补充）
+
+## 程序性知识
+
+- **[procedural] skus/skills/skill_001.md**
+  - **描述**：（待补充）
+  - **使用场景**：（待补充）
+
+- **[procedural] skus/skills/skill_002.md**
+  - **描述**：（待补充）
+  - **使用场景**：（待补充）
+
+---
+
+**本章SKU统计**：
+- 事实性知识单元（facts）：6个
+- 程序性知识单元（skills）：2个
+- 总计：8个SKU
+
+**版本**：v1.0  
+**创建日期**：2026-04-05

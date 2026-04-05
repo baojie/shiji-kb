@@ -1,0 +1,98 @@
+{
+  "name": "seven-kingdoms-rebellion-timeline",
+  "description": "七国之乱完整时间线（孝景三年）",
+  "timeline": [
+    {
+      "stage": "削藩触发",
+      "time": "孝景三年之前",
+      "events": [
+        {
+          "event": "晁错建议削藩",
+          "description": "晁错刻削诸侯，认为诸侯太盛",
+          "background": "汉兴，孝文施大德，天下怀安，至孝景不复忧异姓"
+        }
+      ]
+    },
+    {
+      "stage": "七王叛乱",
+      "time": "孝景三年",
+      "events": [
+        {
+          "event": "七王同时起兵西向",
+          "participants": [
+            {"title": "吴王", "name": "刘濞", "state": "吴"},
+            {"title": "楚王", "name": "刘戊", "state": "楚"},
+            {"title": "赵王", "name": "刘遂", "state": "赵"},
+            {"title": "胶西王", "name": "刘卬", "state": "胶西"},
+            {"title": "济南王", "name": "刘辟光", "state": "济南"},
+            {"title": "菑川王", "name": "刘贤", "state": "菑川"},
+            {"title": "胶东王", "name": "刘雄渠", "state": "胶东"}
+          ],
+          "action": "发兵西乡（向西进军）"
+        },
+        {
+          "event": "天子诛晁错",
+          "description": "天子为诛晁错以谢诸侯",
+          "purpose": "试图平息叛乱"
+        },
+        {
+          "event": "遣袁盎谕告",
+          "description": "遣袁盎谕告七王",
+          "result": "不止（叛军继续进攻）"
+        },
+        {
+          "event": "七王围攻梁国",
+          "description": "叛军遂西围梁",
+          "target": "梁国（孝景弟梁孝王刘武）"
+        }
+      ]
+    },
+    {
+      "stage": "朝廷平叛",
+      "time": "孝景三年",
+      "events": [
+        {
+          "event": "派遣大将军平叛",
+          "commanders": [
+            {"title": "大将军", "name": "窦婴"},
+            {"title": "太尉", "name": "周亚夫"}
+          ],
+          "action": "将兵诛之"
+        },
+        {
+          "event": "平叛成功",
+          "time": "孝景三年六月乙亥",
+          "result": "七国之乱平定"
+        }
+      ]
+    },
+    {
+      "stage": "善后处理",
+      "time": "孝景三年六月乙亥",
+      "events": [
+        {
+          "event": "赦免相关人员",
+          "description": "赦亡军及楚元王子艺等与谋反者"
+        },
+        {
+          "event": "封赏功臣",
+          "rewards": [
+            {"name": "窦婴", "title": "魏其侯"}
+          ]
+        },
+        {
+          "event": "重新分封诸侯",
+          "description": "立楚元王子平陆侯礼为楚王",
+          "purpose": "重建秩序"
+        }
+      ]
+    }
+  ],
+  "duration": "数月（三年初至六月）",
+  "outcome": {
+    "military": "叛乱平定，七王国家被重组",
+    "political": "削藩目标实现，诸侯权力削弱",
+    "casualties": "晁错冤死，七王败亡"
+  },
+  "historical_significance": "西汉削藩的关键转折点，中央集权的重大胜利"
+}

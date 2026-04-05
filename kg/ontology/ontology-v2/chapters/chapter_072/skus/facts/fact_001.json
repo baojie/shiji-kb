@@ -1,0 +1,57 @@
+{
+  "fact_id": "072_001",
+  "title": "秦昭王时期外戚权力结构",
+  "type": "political_structure",
+  "description": "宣太后及其家族在秦昭王时期的权力网络",
+  "entities": {
+    "core_figure": {
+      "name": "宣太后",
+      "identity": "秦昭王母亲",
+      "origin": "楚国羋氏",
+      "status": "临朝称制"
+    },
+    "family_members": [
+      {
+        "name": "魏冉（穰侯）",
+        "relationship": "异父长弟",
+        "position": "相国、将军",
+        "封地": ["穰", "陶"],
+        "power": "四次为相，富于王室"
+      },
+      {
+        "name": "羋戎",
+        "relationship": "同父弟",
+        "title": "华阳君"
+      },
+      {
+        "name": "高陵君",
+        "relationship": "昭王同母弟"
+      },
+      {
+        "name": "泾阳君",
+        "relationship": "昭王同母弟",
+        "role": "曾质于齐"
+      }
+    ]
+  },
+  "power_dynamics": {
+    "establishment": "武王卒后，魏厓力立昭王，诛季君之乱，逐武王后，威振秦国",
+    "governance": "昭王少，宣太后自治，任魏厓为政",
+    "peak": "穰侯封四岁，攻魏献河东方四百里，拔魏河内，取城大小六十余",
+    "decline": "范雎说昭王，指出外戚专权，昭王悟而免相国，令属皆出关就封邑"
+  },
+  "key_metrics": {
+    "tenure_as_chancellor": "四次为相",
+    "military_achievements": [
+      "举白起，伐韩魏，败之伊阙，斩首二十四万",
+      "攻魏献河东方四百里",
+      "取楚宛、叶",
+      "围大梁",
+      "华阳之战斩首十万"
+    ],
+    "wealth": "富于王室，出关辎车千乘有余"
+  },
+  "historical_significance": "外戚专权的典型案例，展示战国时期母后临朝与外戚权力的结构特征",
+  "source": "史记·穰侯列传",
+  "related_concepts": ["外戚政治", "母后临朝", "权力制衡", "范雎远交近攻"]
+}
