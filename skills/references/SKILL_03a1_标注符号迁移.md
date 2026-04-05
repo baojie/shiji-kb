@@ -151,6 +151,18 @@ find . -type f ! -path "*/backups/*" ! -path "*/.git/*" -exec grep -l "〖'" {} 
 4. ⚠️  **渲染功能回归**：符号更新可能导致HTML渲染失败
    - **应对**：迁移后必须测试至少3个章节的HTML生成
 
+5. ⚠️  **实体索引构建脚本遗漏**：`kg/entities/scripts/build_entity_index.py` 中的正则模式容易被忽略
+   - **现象**：迁移后邦国实体从索引页面中消失（2026-04-05发现）
+   - **检查点**：
+     - `ENTITY_TYPES` 列表中的正则表达式（第49行）
+     - `ENTITY_DESCRIPTIONS` 字典中的标记符号说明（第424行）
+   - **应对**：迁移后必须运行 `python kg/entities/scripts/build_entity_index.py` 并检查索引页面
+
+6. ⚠️  **词表文件遗漏**：`kg/vocabularies/*.md` 中嵌入了大量实体标注示例
+   - **现象**：词表中包含27,972处旧符号（2026-04-05发现）
+   - **影响范围**：18个词表文件 + README.md
+   - **应对**：编写专门脚本批量处理词表文件（参考 `scripts/fix_vocabularies_feudal_symbol.py`）
+
 ---
 
 ## 迁移脚本标准模板
@@ -213,14 +225,24 @@ python scripts/migrate_symbol.py chapter_md/*.tagged.md
 
 ## 检查清单模板
 
+### 文件修改清单
 - [ ] 核心标注文件 (`chapter_md/*.tagged.md`)
 - [ ] 文档和规范 (`SKILL_03a`, `README`等)
 - [ ] 派生数据文件 (JSON, `logs/`)
 - [ ] 渲染脚本 (`render_shiji_html.py`等)
+- [ ] 实体索引构建脚本 (`kg/entities/scripts/build_entity_index.py`)
+- [ ] 词表文件 (`kg/vocabularies/*.md`)
+
+### 验证清单
 - [ ] 文本完整性验证 (`lint_text_integrity.py`)
-- [ ] 渲染功能测试 (生成HTML验证)
+- [ ] 重新构建实体索引 (`python kg/entities/scripts/build_entity_index.py`)
+- [ ] 检查实体索引页面 (`docs/entities/index.html` 和各类型索引页)
+- [ ] 渲染功能测试 (生成HTML验证，至少3个章节)
 - [ ] 全局残留检查 (`find + grep`)
 
 ---
 
-*本文档基于邦国符号迁移实战（2026-04-05），4个commit，174 files，21,462+ replacements。*
+## 更新历史
+
+- **2026-04-05**：初版，基于邦国符号迁移实战（4个commit，174 files，21,462+ replacements）
+- **2026-04-05**：补充风险点5和6（实体索引构建脚本和词表文件遗漏），新增验证清单

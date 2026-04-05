@@ -955,7 +955,7 @@ def process_table_chapter(filepath, chapter_id, row_to_year, year_state_map):
     # Parse table header to get column → state mapping
     header_line = None
     for line in lines:
-        if line.strip().startswith('|') and ('〖\'周〗' in line or '〖\'鲁〗' in line):
+        if line.strip().startswith('|') and ('〖◆周〗' in line or '〖◆鲁〗' in line):
             header_line = line
             break
 
@@ -968,10 +968,10 @@ def process_table_chapter(filepath, chapter_id, row_to_year, year_state_map):
     for cell in cells[2:]:  # Skip first two columns
         if not cell or cell == '---':
             continue
-        # Extract state name from tags like 〖'周〗
-        m = re.search(r'〖[\'"][^〗]+〗', cell)
+        # Extract state name from tags like 〖◆周〗
+        m = re.search(r'〖[◆"][^〗]+〗', cell)
         if m:
-            state = m.group(0).strip('〖〗\'\"')
+            state = m.group(0).strip('〖〗◆\"')
             state_cols.append(state)
         elif cell:
             state_cols.append(cell)
@@ -1482,9 +1482,9 @@ def load_event_index_years():
                 time_field = parts[4]
 
                 # Strip entity tags for clean display
-                event_name_clean = re.sub(r'〖[@=;#%&\'\^~•!\+\$\?\{\:\[\_]([^〗]+)〗', r'\1', event_name)
+                event_name_clean = re.sub(r'〖[@=;#%&◆\^~•!\+\$\?\{\:\[\_]([^〗]+)〗', r'\1', event_name)
                 # 旧括号格式兼容（v2.8前已迁移，保留兼容）
-                event_name_clean = re.sub(r'〖[^〗]+〗', lambda m: m.group(0).split('|')[0].lstrip('〖').lstrip('@=;%&^\'~•!#\+?{:\[_$'), event_name_clean)
+                event_name_clean = re.sub(r'〖[^〗]+〗', lambda m: m.group(0).split('|')[0].lstrip('〖').lstrip('@=;%&^◆~•!#\+?{:\[_$'), event_name_clean)
 
                 # Extract CE year
                 ce_years = []
