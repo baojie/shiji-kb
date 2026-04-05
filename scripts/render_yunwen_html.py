@@ -46,11 +46,11 @@ def format_yunwen_content(content, yunwen_type):
 
     # 根据类型决定分行方式
     if yunwen_type in ['赞', '诗歌']:
-        # 诗歌类：每行独立，用<br>分隔
-        return '<br>\n'.join(formatted_lines)
+        # 诗歌类：每行独立，用<br>分隔（不要换行符，避免white-space: pre-wrap时出现缩进）
+        return '<br>'.join(formatted_lines)
     else:
         # 赋类：段落式，用双<br>分隔
-        return '<br><br>\n'.join(formatted_lines)
+        return '<br><br>'.join(formatted_lines)
 
 def generate_html(json_path, output_path):
     """生成HTML页面"""

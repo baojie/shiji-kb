@@ -4,13 +4,25 @@
 
 定义史记知识库中使用的语义标签标准，并提供统一的处理函数。
 
-标签标准（当前版本）：
-- 〖@人名〗 - 人名
-- 〖%时间〗 - 时间表达
-- 〖#地名〗 - 地名
-- 〖$官职〗 - 官职
-- 〖&战争〗 - 战争/事件名
-- 〖;人名〗 - 上文已提及的人名
+标签标准（v2.5，18类实体）：
+- 〖@人名〗 - 历史人物、传说人物
+- 〖=地名〗 - 城邑、山川、国名
+- 〖;官职〗 - 正式任命的职衔、封号
+- 〖#身份〗 - 社会角色、地位、血缘关系
+- 〖%时间〗 - 年号纪年、月份
+- 〖&氏族〗 - 宗族、家族、姓氏集团
+- 〖◆邦国〗 - 统一王朝、诸侯国、外邦政权
+- 〖^制度〗 - 典章制度、礼法规范
+- 〖~族群〗 - 民族、部落
+- 〖•器物〗 - 礼器、兵器
+- 〖!天文〗 - 星象、历法
+- 〖?神话〗 - 传说、神话事件
+- 〖+生物〗 - 名词性生物
+- 〖{典籍〗 - 古籍书名
+- 〖:礼仪〗 - 礼仪制度、宗庙祭祀
+- 〖[刑法〗 - 刑罚、法律条文
+- 〖_思想〗 - 哲学概念、文体体裁
+- 〖$数量〗 - 非时间性计量（军队/距离/重量/金额）
 
 消歧格式：
 - 〖@显示名|规范名〗 - 当显示名与规范名不同时使用
@@ -25,6 +37,7 @@
 - render_tags_to_html(text) - 转换为HTML高亮显示
 
 更新历史：
+- 2026-04-05: 更新为完整的18类实体标注系统（v2.5）
 - 2026-04-03: 同步lint_text_integrity.py中的最新标注去除逻辑，支持消歧语法
 """
 
@@ -32,34 +45,36 @@ import re
 from typing import Dict, Tuple
 
 
-# 标准语义标签定义
+# 标准语义标签定义（v2.5，18类实体完整系统）
+# CSS类名与颜色与 render_shiji_html.py 和 docs/css/shiji-styles-v6.css 保持一致
 SEMANTIC_TAG_TYPES = {
-    '@': ('person', '人名', '#c00'),
-    '%': ('time', '时间', '#06c'),
-    '#': ('place', '地名', '#080'),
-    '$': ('office', '官职', '#660'),
-    '&': ('war', '战争', '#690'),
-    ';': ('ref', '上文提及', '#999'),
+    '@': ('person', '人名', '#8B4513'),          # 褐色
+    '=': ('place', '地名', '#A0522D'),           # 赭褐色
+    ';': ('official', '官职', '#8B4513'),        # 褐色
+    '#': ('identity', '身份', '#4682B4'),        # 钢青色
+    '%': ('time', '时间', '#008B8B'),            # 深青色
+    '&': ('dynasty', '氏族', '#9370DB'),         # 紫色（氏族使用dynasty类）
+    '◆': ('feudal-state', '邦国', '#9370DB'),   # 紫色
+    '^': ('institution', '制度', '#4682B4'),     # 钢青色
+    '~': ('tribe', '族群', '#9370DB'),           # 紫色
+    '•': ('artifact', '器物', '#CD853F'),        # 秘鲁色（橙褐）
+    '!': ('astronomy', '天文', '#CD853F'),       # 秘鲁色（橙褐）
+    '?': ('mythical', '神话', '#CD853F'),        # 秘鲁色（橙褐）
+    '+': ('biology', '生物', '#CD853F'),         # 秘鲁色（橙褐）
+    '{': ('book', '典籍', '#2F4F4F'),            # 深石板灰（墨绿）
+    ':': ('ritual', '礼仪', '#4682B4'),          # 钢青色
+    '[': ('legal', '刑法', '#4682B4'),           # 钢青色
+    '_': ('concept', '思想', '#2F4F4F'),         # 深石板灰（墨绿）
+    '$': ('quantity', '数量', '#2E8B57'),        # 海洋绿
 }
 
 
-# 旧版标签映射（用于兼容旧数据）
-LEGACY_TAG_MAPPING = {
-    '=': '#',  # 旧版地名 -> 新版地名
-    '^': '$',  # 旧版官职 -> 新版官职
-    '•': '~',  # 旧版器物（暂时映射为其他）
-    '{': '~',  # 旧版典籍（暂时映射为其他）
-    "'": '~',  # 旧版邦国（暂时映射为其他）
-    '~': '&',  # 旧版事件 -> 新版战争
-    '?': '~',  # 旧版神话（暂时映射为其他）
-    '!': '~',  # 旧版概念（暂时映射为其他）
-    ':': '~',  # 旧版方位（暂时映射为其他）
-    '[': '~',  # 旧版古物（暂时映射为其他）
-    '+': '~',  # 旧版生物（暂时映射为其他）
-}
+# 旧版标签映射（已废弃，v2.5已全面统一为18类标准）
+# 保留此定义仅用于历史兼容性参考
+LEGACY_TAG_MAPPING = {}
 
-# 实体标注前缀字符（所有支持的类型标记）
-_ENTITY_PFX = r'[#@=;$%&^\~•!\'+?{:\[_]'
+# 实体标注前缀字符（所有支持的18类标记）
+_ENTITY_PFX = r'[@=;#%&◆^\~•!\'+?{:\[_$]'
 
 
 def strip_markup(text: str) -> str:
@@ -156,7 +171,7 @@ def remove_semantic_tags(text: str, normalize_legacy: bool = False, strip_markdo
     text = re.sub(r'〘([^〘〙]*)〙', r'\1', text)
 
     # 清理残留的未闭合标签符号
-    text = text.replace('〖◆, '').replace('〗', '')
+    text = text.replace('〖◆', '').replace('〗', '')
     text = text.replace('⟦', '').replace('⟧', '')
     text = text.replace('〘', '').replace('〙', '')
 
@@ -185,103 +200,109 @@ def normalize_legacy_tags(text: str) -> str:
     return text
 
 
-def render_tags_to_html(text: str, normalize_legacy: bool = True) -> str:
+def render_tags_to_html(text: str, normalize_legacy: bool = False) -> str:
     """
     将语义标签转换为HTML span标签（保留标注，用于高亮显示）
 
     参数:
         text: 包含语义标签的文本
-        normalize_legacy: 是否先将旧版标签转换为新标准
+        normalize_legacy: 已废弃，保留仅为兼容性（v2.5已统一标准）
 
     返回:
         转换后的HTML文本
 
     示例:
-        "〖@武王〗" -> '<span class="entity person" title="人名">武王</span>'
+        "〖@武王〗" -> '<span class="person" title="人名">武王</span>'
+        "〖@台|吕台〗" -> '<span class="person" title="人名">台</span>'
+        "〖◆汉〗" -> '<span class="feudal-state" title="邦国">汉</span>'
+
+    注意:
+        CSS类名与 docs/css/shiji-styles-v6.css 保持一致，
+        直接使用类名（如 "person"），不添加 "entity" 前缀
     """
     if not text:
         return text
 
-    # 先规范化旧版标签
-    if normalize_legacy:
-        text = normalize_legacy_tags(text)
-
-    # 处理消歧格式: 〖TYPE显示名|规范名〗 -> HTML（显示名）
+    # 处理消歧格式: 〖TYPE显示名|规范名〗 -> HTML（只显示"显示名"）
     for marker, (css_class, title, color) in SEMANTIC_TAG_TYPES.items():
-        # 消歧格式
+        # 消歧格式（优先处理）
         pattern = f'〖{re.escape(marker)}\\s*([^|〗]+)\\|[^〗]+〗'
-        replacement = f'<span class="entity {css_class}" title="{title}">\\1</span>'
+        replacement = f'<span class="{css_class}" title="{title}">\\1</span>'
         text = re.sub(pattern, replacement, text)
 
     # 处理普通格式: 〖TYPE文本〗 -> HTML
     for marker, (css_class, title, color) in SEMANTIC_TAG_TYPES.items():
         pattern = f'〖{re.escape(marker)}\\s*([^〗]+)〗'
-        replacement = f'<span class="entity {css_class}" title="{title}">\\1</span>'
+        replacement = f'<span class="{css_class}" title="{title}">\\1</span>'
         text = re.sub(pattern, replacement, text)
 
-    # 处理其他未识别的标签（如 〖~xxx〗）
-    text = re.sub(
-        r'〖[~_\\]([^〗]+)〗',
-        r'<span class="entity other" title="其他标注">\1</span>',
-        text
-    )
+    # 处理动词标注（保留显示，不高亮）
+    text = re.sub(r'⟦[◈◉○◇]([^⟦⟧|]*)(?:\|[^⟦⟧]*)?⟧', r'\1', text)
 
-    # 清理不完整或未闭合的标签（源数据问题）
-    text = text.replace('〖◆, '').replace('〗', '')
+    # 清理残留的未闭合标签符号
+    text = text.replace('〗', '').replace('⟦', '').replace('⟧', '')
 
     return text
 
 
+def get_entity_css_path() -> str:
+    """
+    返回统一的CSS文件路径（相对于项目根目录）
+
+    所有HTML生成脚本应该使用 docs/css/shiji-styles-v6.css
+    而不是自己生成CSS样式
+
+    返回:
+        CSS文件的相对路径
+    """
+    return 'docs/css/shiji-styles-v6.css'
+
+
 def get_entity_css_styles() -> str:
     """
-    返回实体标注的统一CSS样式
+    返回实体标注的统一CSS样式（已废弃）
 
-    可在HTML页面的<style>标签中使用
+    ⚠️ 废弃警告：不要使用此函数生成内联CSS
+    应该使用 get_entity_css_path() 获取外部CSS文件路径
+    并在HTML中通过 <link> 标签引用 docs/css/shiji-styles-v6.css
+
+    保留此函数仅为向后兼容，返回简化的基础样式
     """
     css = """
-        /* 语义标签实体样式 */
+        /* ⚠️ 警告：应使用外部CSS文件 docs/css/shiji-styles-v6.css */
+        /* 以下为简化样式，仅用于测试 */
         .entity {
-            font-weight: 500;
-            border-bottom: 1px dotted;
-            cursor: help;
+            padding: 0 2px;
+            border-radius: 2px;
+            cursor: default;
         }
 """
 
     for marker, (css_class, title, color) in SEMANTIC_TAG_TYPES.items():
         css += f"""
-        .entity.{css_class} {{
+        .{css_class} {{
             color: {color};
-            border-bottom-color: {color};
+            border-bottom: 1px solid {color};
         }}
-"""
-
-    css += """
-        .entity.other {
-            color: #999;
-            border-bottom-color: #999;
-        }
 """
 
     return css
 
 
-def extract_entities(text: str, normalize_legacy: bool = True) -> Dict[str, list]:
+def extract_entities(text: str, normalize_legacy: bool = False) -> Dict[str, list]:
     """
     从文本中提取所有实体
 
     参数:
         text: 包含语义标签的文本
-        normalize_legacy: 是否先规范化旧版标签
+        normalize_legacy: 已废弃，保留仅为兼容性（v2.5已统一标准）
 
     返回:
         按类型分组的实体列表
-        例如: {'person': ['武王', '纣'], 'place': ['朝歌']}
+        例如: {'person': ['武王', '纣'], 'place': ['朝歌'], 'state': ['汉', '楚']}
     """
     if not text:
         return {}
-
-    if normalize_legacy:
-        text = normalize_legacy_tags(text)
 
     entities = {}
 
@@ -329,17 +350,27 @@ def test_markup_removal():
     """
     test_cases = [
         # (输入, 期望输出, 描述)
-        ('〖@武王〗伐〖#纣〗', '武王伐纣', '基本名词标注'),
-        ('〖@姬发|周武王〗伐商', '姬发伐商', '名词消歧：保留显示名'),
-        ('⟦◈伐|征伐⟧商', '伐商', '动词消歧：保留显示动词'),
-        ('〖@台|吕台〗为将', '台为将', '人名简称消歧'),
+        ('〖@武王〗伐〖@纣〗', '武王伐纣', '基本人名标注'),
+        ('〖@姬发|周武王〗伐商', '姬发伐商', '人名消歧：保留显示名'),
+        ('〖=长安〗城', '长安城', '地名标注'),
+        ('〖;丞相〗上奏', '丞相上奏', '官职标注'),
+        ('〖#天子〗驾崩', '天子驾崩', '身份标注'),
         ('〖%元〗年', '元年', '时间标注'),
-        ('〖#长安〗城', '长安城', '地名标注'),
-        ('〖$丞相〗', '丞相', '官职标注'),
-        ('〖&长平之战〗', '长平之战', '事件标注'),
-        ('〖;信〗', '信', '上文提及人名'),
-        ('⟦◈攻⟧城', '攻城', '动词基本标注'),
-        ('〖@樊哙|樊哙〗⟦◈从|跟随⟧〖@高祖〗', '樊哙从高祖', '混合标注'),
+        ('〖&嬴氏〗后裔', '嬴氏后裔', '氏族标注'),
+        ('〖◆汉〗灭〖◆秦〗', '汉灭秦', '邦国标注'),
+        ('〖^郡县制〗', '郡县制', '制度标注'),
+        ('〖~匈奴〗入侵', '匈奴入侵', '族群标注'),
+        ('〖•九鼎〗', '九鼎', '器物标注'),
+        ('〖!岁星〗出现', '岁星出现', '天文标注'),
+        ('〖?黄帝〗传说', '黄帝传说', '神话标注'),
+        ('〖+龙〗飞', '龙飞', '生物标注'),
+        ('〖{春秋〗记载', '春秋记载', '典籍标注'),
+        ('〖:祭祀〗礼仪', '祭祀礼仪', '礼仪标注'),
+        ('〖[腰斩〗之刑', '腰斩之刑', '刑法标注'),
+        ('〖_仁义〗思想', '仁义思想', '思想标注'),
+        ('〖$三万人〗', '三万人', '数量标注'),
+        ('⟦◈伐|征伐⟧商', '伐商', '动词消歧'),
+        ('〖@樊哙〗⟦◈从⟧〖@高祖〗', '樊哙从高祖', '混合标注'),
     ]
 
     print('=' * 60)

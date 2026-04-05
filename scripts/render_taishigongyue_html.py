@@ -9,7 +9,7 @@ import sys
 
 # 导入统一的语义标签处理模块
 sys.path.insert(0, str(Path(__file__).parent))
-from semantic_tags import render_tags_to_html, get_entity_css_styles
+from semantic_tags import render_tags_to_html, get_entity_css_path
 
 
 def clean_markdown_tags(text):
@@ -33,7 +33,9 @@ def generate_html(taishigongyue_list):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>太史公曰 - 史记专项索引</title>
+    <link rel="stylesheet" href="../css/shiji-styles-v6.css">
     <style>
+        /* 页面布局专用样式（不涉及实体标注） */
         * {
             margin: 0;
             padding: 0;
@@ -41,10 +43,6 @@ def generate_html(taishigongyue_list):
         }
 
         body {
-            font-family: "Source Han Serif SC", "Noto Serif SC", serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #fdfaf6;
             padding: 20px;
         }
 
@@ -107,21 +105,6 @@ def generate_html(taishigongyue_list):
             line-height: 2;
             color: #444;
         }
-
-        /* 使用统一的实体标注样式 */
-        .entity {
-            font-weight: 500;
-            border-bottom: 1px dotted;
-            cursor: help;
-        }
-
-        .entity.person { color: #c00; border-bottom-color: #c00; }
-        .entity.time { color: #06c; border-bottom-color: #06c; }
-        .entity.place { color: #080; border-bottom-color: #080; }
-        .entity.office { color: #660; border-bottom-color: #660; }
-        .entity.war { color: #690; border-bottom-color: #690; }
-        .entity.ref { color: #999; border-bottom-color: #999; }
-        .entity.other { color: #999; border-bottom-color: #999; }
 
         .footer {
             text-align: center;
@@ -187,7 +170,9 @@ def main():
     project_root = Path(__file__).parent.parent
 
     # 从data/目录读取JSON数据
-    json_file = project_root / "data" / "taishigongyue.json"
+    data_dir = project_root / "data"
+    json_file = data_dir / "taishigongyue.json"
+    md_file = data_dir / "taishigongyue.md"
 
     with open(json_file, 'r', encoding='utf-8') as f:
         taishigongyue_list = json.load(f)
@@ -197,11 +182,93 @@ def main():
     # 生成HTML
     html_content = generate_html(taishigongyue_list)
 
-    # 保存HTML到docs/special/
-    html_file = project_root / "docs" / "special" / "taishigongyue.html"
-    html_file.write_text(html_content, encoding='utf-8')
+    # 发布到docs/special/目录
+    special_dir = project_root / "docs" / "special"
+    special_dir.mkdir(parents=True, exist_ok=True)
 
+    # 保存HTML
+    html_file = special_dir / "taishigongyue.html"
+    html_file.write_text(html_content, encoding='utf-8')
     print(f"✅ HTML已生成: {html_file}")
+
+    # 复制MD和JSON文件到docs/special/
+    import shutil
+    shutil.copy2(json_file, special_dir / "taishigongyue.json")
+    print(f"✅ JSON已复制: {special_dir / 'taishigongyue.json'}")
+
+    shutil.copy2(md_file, special_dir / "taishigongyue.md")
+    print(f"✅ MD已复制: {special_dir / 'taishigongyue.md'}")
+
+    # 自动生成PDF
+    try:
+        from weasyprint import HTML, CSS
+
+        pdf_path = special_dir / "taishigongyue.pdf"
+        print(f"正在生成PDF: {pdf_path}")
+
+        # 添加PDF专用CSS样式
+        pdf_css = CSS(string='''
+            @page {
+                size: A4;
+                margin: 2.5cm 2cm;
+
+                @top-center {
+                    content: "史记·太史公曰";
+                    font-size: 10pt;
+                    color: #666;
+                }
+
+                @bottom-center {
+                    content: counter(page);
+                    font-size: 10pt;
+                    color: #666;
+                }
+            }
+
+            body {
+                font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+                font-size: 12pt;
+                line-height: 1.8;
+            }
+
+            h1 {
+                font-size: 24pt;
+                page-break-after: avoid;
+            }
+
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 30pt;
+            }
+
+            .section-title {
+                font-size: 16pt;
+                page-break-after: avoid;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            a {
+                color: #8b4513;
+                text-decoration: none;
+            }
+        ''')
+
+        HTML(filename=str(html_file)).write_pdf(
+            str(pdf_path),
+            stylesheets=[pdf_css]
+        )
+
+        file_size = pdf_path.stat().st_size / 1024 / 1024
+        print(f"✅ PDF已生成: {pdf_path} ({file_size:.2f} MB)")
+
+    except ImportError:
+        print("⚠️  WeasyPrint未安装，跳过PDF生成")
+        print("   安装命令: pip install weasyprint")
+    except Exception as e:
+        print(f"⚠️  PDF生成失败: {e}")
 
 
 if __name__ == "__main__":
