@@ -1208,7 +1208,24 @@ def main():
         _spec.loader.exec_module(_bym)
         with open(year_map_file, 'r', encoding='utf-8') as f:
             _year_map = json.load(f)
-        _bym.generate_timeline(_year_map)
+
+        # Load additional data for timeline generation
+        _reign_file = _PROJECT_ROOT / 'kg' / 'chronology' / 'data' / 'reign_periods.json'
+        _reign_data = None
+        if _reign_file.exists():
+            with open(_reign_file, 'r', encoding='utf-8') as f:
+                _reign_data = json.load(f)
+
+        _year_state_file = _PROJECT_ROOT / 'kg' / 'chronology' / 'data' / 'year_state_map.json'
+        _year_state_map = None
+        if _year_state_file.exists():
+            with open(_year_state_file, 'r', encoding='utf-8') as f:
+                _year_state_map = json.load(f)
+
+        # Load event index years for event count
+        _event_year_map = _bym.load_event_index_years()
+
+        _bym.generate_timeline(_year_map, _reign_data, _event_year_map, _year_state_map)
         print(f"  生成: {OUTPUT_DIR / 'timeline.html'}")
     else:
         print(f"  跳过 timeline.html（year_ce_map.json 不存在，请先运行 build_year_map.py）")
