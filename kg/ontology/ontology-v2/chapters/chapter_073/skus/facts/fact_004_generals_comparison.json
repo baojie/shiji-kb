@@ -1,0 +1,142 @@
+{
+  "name": "generals-comparison",
+  "description": "白起与王翦的全面对比",
+  "type": "structured_comparison",
+  "generals": [
+    {
+      "name": "白起",
+      "title": "武安君",
+      "origin": "郿人",
+      "served_king": "秦昭王",
+      "career_highlights": {
+        "campaigns": [
+          {
+            "year": "昭王十四年",
+            "battle": "伊阙之战",
+            "achievement": "斩首二十四万，虏公孙喜，拔五城"
+          },
+          {
+            "year": "昭王二十一年左右",
+            "battle": "攻楚",
+            "achievement": "拔鄢、邓五城"
+          },
+          {
+            "year": "次年",
+            "battle": "拔郢",
+            "achievement": "烧夷陵，东至竟陵，楚王走徙陈"
+          },
+          {
+            "year": "昭王三十四年",
+            "battle": "华阳之战",
+            "achievement": "走芒卯，虏三晋将，斩首十三万，沈赵卒二万于河"
+          },
+          {
+            "year": "昭王四十七至四十八年",
+            "battle": "长平之战",
+            "achievement": "坑杀赵降卒四十万，前后斩首虏四十五万"
+          }
+        ],
+        "total_achievement": "战胜攻取七十余城，南定鄢郢汉中，北禽赵括"
+      },
+      "military_style": {
+        "strength": "料敌合变，出奇无穷，声震天下",
+        "tactics": ["诱敌深入", "断敌粮道", "坚决歼灭"]
+      },
+      "political_wisdom": {
+        "strength": "战略眼光准确（预见邯郸难攻）",
+        "weakness": "不能救患于应侯，不懂政治平衡",
+        "fatal_flaw": "拒命称病，与权臣结隙"
+      },
+      "ending": {
+        "cause": "拒绝攻邯郸，怏怏不服",
+        "method": "赐剑自裁于杜邮",
+        "time": "秦昭王五十年十一月",
+        "self_reflection": "长平之战，赵卒降者数十万人，我诈而尽阬之，是足以死",
+        "public_sentiment": "死而非其罪，秦人怜之，乡邑皆祭祀焉"
+      },
+      "moral_burden": "坑杀降卒成为道德负担，临死自认罪当"
+    },
+    {
+      "name": "王翦",
+      "title": "秦将",
+      "origin": "频阳东乡人",
+      "served_king": "秦始皇",
+      "career_highlights": {
+        "campaigns": [
+          {
+            "year": "始皇十一年",
+            "battle": "攻赵阏与",
+            "achievement": "破之，拔九城"
+          },
+          {
+            "year": "始皇十八年",
+            "battle": "攻赵",
+            "achievement": "岁馀拔赵，赵王降，尽定赵地为郡"
+          },
+          {
+            "year": "次年",
+            "battle": "攻燕",
+            "achievement": "燕王喜走辽东，定燕蓟"
+          },
+          {
+            "year": "始皇二十三年（推测）",
+            "battle": "代李信击楚",
+            "achievement": "坚壁持久，至蕲南杀项燕，虏荆王负刍，平楚地为郡县"
+          }
+        ],
+        "total_achievement": "灭赵、燕、楚三国，子王贲灭魏、齐，功为六国之最",
+        "family_achievement": "始皇二十六年尽并天下，王氏、蒙氏功为多"
+      },
+      "military_style": {
+        "strength": "持重坚壁，养士待机，一击必杀",
+        "tactics": ["坚壁不战", "养精蓄锐", "待敌松懈", "追击歼灭"]
+      },
+      "political_wisdom": {
+        "strength": "深知始皇'怚而不信人'，请田自坚消除猜忌",
+        "strategy": "示弱求财，以贪财形象换取信任",
+        "execution": "出发前请田，至关后再请五次，反复强调为子孙业",
+        "weakness": "偷合取容，以至筊身（太史公批评）"
+      },
+      "ending": {
+        "personal": "得以善终",
+        "family": "子王贲继续灭魏齐，孙王离为将",
+        "后代结局": "秦二世时王翦、王贲皆已死，孙王离围赵于钜鹿，被项羽虏",
+        "curse": "为将三世者必败（客人预言应验）"
+      },
+      "contrast_with_baiqi": "能辅秦灭六国，但不能辅秦建德固其根本"
+    }
+  ],
+  "key_differences": {
+    "military": {
+      "baiqi": "出奇制胜，歼灭战大师",
+      "wangjian": "持重稳健，养士待时"
+    },
+    "political": {
+      "baiqi": "直言拒命，与权臣结隙",
+      "wangjian": "示弱自保，请田消疑"
+    },
+    "fate": {
+      "baiqi": "功高被杀，无后",
+      "wangjian": "善终，子孙三代为将"
+    },
+    "moral": {
+      "baiqi": "坑杀降卒，临死自认罪",
+      "wangjian": "无明显道德负担记载"
+    }
+  },
+  "taishigong_comment": {
+    "proverb": "尺有所短，寸有所长",
+    "baiqi": "料敌合变，出奇无穷，声震天下，然不能救患於应侯",
+    "wangjian": "为秦将，夷六国，当是时翦为宿将，始皇师之，然不能辅秦建德，固其根本，偷合取容，以至筊身",
+    "wangli": "及孙王离为项羽所虏，不亦宜乎！彼各有所短也"
+  },
+  "historical_patterns": {
+    "功臣宿命": "白起功高震主被杀，王翦自污求全",
+    "三代诅咒": "为将三世者必败（王离应验）",
+    "秦之暴虐": "坑杀降卒（白起）、始皇不信（王翦），暴秦之根在制度"
+  },
+  "source": {
+    "chapter": "073",
+    "title": "白起王翦列传"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "fact_001",
+  "title": "李斯生平时间线",
+  "type": "timeline",
+  "description": "李斯从楚国小吏到秦朝丞相，最终被腰斩的完整人生轨迹",
+  "stages": [
+    {
+      "stage": "1. 早年求学期（楚国上蔡 → 荀子门下）",
+      "time": "年少时期",
+      "location": "楚国上蔡 → 学于荀卿",
+      "role": "郡小吏 → 荀子弟子",
+      "key_events": [
+        {
+          "event": "厕鼠与仓鼠观察",
+          "description": "见厕中鼠惊恐，仓中鼠安逸，感悟'人之贤不肖譬如鼠矣，在所自处耳'",
+          "significance": "形成了李斯的人生哲学：环境决定命运"
+        },
+        {
+          "event": "从荀卿学帝王之术",
+          "description": "系统学习法家思想与治国方略",
+          "significance": "奠定政治理论基础"
+        },
+        {
+          "event": "辞荀卿入秦",
+          "description": "认为楚王不足事，六国皆弱，唯秦王欲吞天下，'此布衣驰骛之时而游说者之秋也'",
+          "significance": "展现政治眼光与野心"
+        }
+      ],
+      "character_trait": "善于观察、富有野心、现实主义"
+    },
+    {
+      "stage": "2. 入秦崛起期（客卿 → 长史）",
+      "time": "庄襄王卒后，秦王政初年",
+      "location": "秦国咸阳",
+      "role": "吕不韦舍人 → 郎 → 长史 → 客卿",
+      "key_events": [
+        {
+          "event": "求为吕不韦舍人",
+          "description": "通过吕不韦接近秦王",
+          "significance": "借助权臣平台"
+        },
+        {
+          "event": "说秦王灭六国",
+          "description": "分析秦自孝公以来六世乘胜，现在是'万世之一时'，建议用金玉游说、利剑刺杀离间诸侯",
+          "significance": "提出系统性灭国战略，获得秦王信任"
+        },
+        {
+          "event": "拜为长史",
+          "description": "秦王采纳计谋，派谋士赍金玉游说诸侯，可下者厚遗，不肯者刺杀",
+          "significance": "成为秦王核心智囊"
+        },
+        {
+          "event": "拜为客卿",
+          "description": "因功升为客卿（外国人担任的高级官职）",
+          "significance": "跻身秦国高层"
+        }
+      ],
+      "character_trait": "善于游说、战略眼光、手段果断"
+    }
+  ],
+  "key_statistics": {
+    "total_career_span": "约40年（从入秦到死）",
+    "as_prime_minister": "30余年",
+    "peak_power_period": "始皇帝时期（前221-前210，约11年）",
+    "decline_period": "二世时期（前209-前208，约1年）"
+  },
+  "source": "史记·李斯列传第二十七",
+  "extracted_by": "a2o-lite",
+  "extraction_date": "2026-04-05"
+}
