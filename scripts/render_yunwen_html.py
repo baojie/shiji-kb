@@ -74,6 +74,7 @@ def generate_html(json_path, output_path):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>史记韵文集</title>
+    <link rel="stylesheet" href="../css/shiji-styles-v6.css">
     <style>
         * {
             margin: 0;
@@ -133,6 +134,77 @@ def generate_html(json_path, output_path):
         .nav a.pdf {
             color: #c00;
             font-weight: bold;
+        }
+
+        .toc {
+            background: #f9f9f9;
+            padding: 20px 30px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            border-left: 4px solid #8b4513;
+        }
+
+        .toc h2 {
+            font-size: 1.5em;
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .toc li:before {
+            content: "📖";
+            position: absolute;
+            left: 0;
+            margin-right: 8px;  /* 图标右边距 */
+        }
+
+        .toc a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .toc a:hover {
+            color: #8b4513;
+            text-decoration: underline;
+        }
+
+        /* 子目录样式（诗歌和赋的篇名） */
+        .toc-sub {
+            list-style: none;
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .toc-sub li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            font-size: 0.95em;
+        }
+
+        .toc-sub li:before {
+            content: "•";
+            color: #999;
+            font-size: 1.2em;
+        }
+
+        .toc-sub a {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .toc-sub a:hover {
+            color: #8b4513;
         }
 
         .type-section {
@@ -205,20 +277,7 @@ def generate_html(json_path, output_path):
             line-height: 2.2;
         }
 
-        /* 使用统一的实体标注样式 */
-        .entity {
-            font-weight: 500;
-            border-bottom: 1px dotted;
-            cursor: help;
-        }
-
-        .entity.person { color: #c00; border-bottom-color: #c00; }
-        .entity.time { color: #06c; border-bottom-color: #06c; }
-        .entity.place { color: #080; border-bottom-color: #080; }
-        .entity.office { color: #660; border-bottom-color: #660; }
-        .entity.war { color: #690; border-bottom-color: #690; }
-        .entity.ref { color: #999; border-bottom-color: #999; }
-        .entity.other { color: #999; border-bottom-color: #999; }
+        /* 实体标注样式继承自 shiji-styles-v6.css */
 
         .footer {
             text-align: center;
@@ -252,8 +311,43 @@ def generate_html(json_path, output_path):
 
 '''
 
-    # 按类型输出
+    # 生成目录
     type_order = ['赞', '诗歌', '赋']
+    html += '''
+        <div class="toc">
+            <h2>目录</h2>
+            <ul>
+'''
+
+    # 为每篇韵文分配唯一ID
+    for idx, item in enumerate(yunwen_data):
+        item['_unique_id'] = f"yunwen-{idx}"
+
+    for yunwen_type in type_order:
+        if yunwen_type not in by_type:
+            continue
+        items = by_type[yunwen_type]
+
+        # 赞只显示类型和数量，诗歌和赋显示具体篇名
+        if yunwen_type == '赞':
+            html += f'                <li><a href="#type-{yunwen_type}">{yunwen_type}（{len(items)}篇）</a></li>\n'
+        else:
+            # 诗歌和赋：显示具体篇名
+            html += f'                <li><a href="#type-{yunwen_type}">{yunwen_type}（{len(items)}篇）</a>\n'
+            html += '                    <ul class="toc-sub">\n'
+            for item in items:
+                unique_id = item['_unique_id']
+                title = item.get('title', item['chapter_title'])
+                html += f'                        <li><a href="#{unique_id}">{title}</a></li>\n'
+            html += '                    </ul>\n'
+            html += '                </li>\n'
+
+    html += '''            </ul>
+        </div>
+
+'''
+
+    # 按类型输出内容
     for yunwen_type in type_order:
         if yunwen_type not in by_type:
             continue
@@ -267,6 +361,7 @@ def generate_html(json_path, output_path):
 '''
 
         for item in items:
+            unique_id = item['_unique_id']
             chapter_num = item['chapter_num']
             chapter_title = item['chapter_title']
             yunwen_title = item.get('title', chapter_title)
@@ -276,7 +371,7 @@ def generate_html(json_path, output_path):
             content_class = 'verse' if yunwen_type in ['赞', '诗歌'] else 'prose'
 
             html += f'''
-            <div class="yunwen-item" id="chapter-{chapter_num}">
+            <div class="yunwen-item" id="{unique_id}">
                 <div class="item-title">
                     {yunwen_title}
                 </div>
@@ -285,9 +380,7 @@ def generate_html(json_path, output_path):
                         {chapter_num} {chapter_title}
                     </a>
                 </div>
-                <div class="item-content {content_class}">
-                    {content}
-                </div>
+                <div class="item-content {content_class}">{content}</div>
             </div>
 
 '''
@@ -312,17 +405,114 @@ def generate_html(json_path, output_path):
 
 def main():
     project_root = Path(__file__).parent.parent
-    # 从data/目录读取JSON
-    json_path = project_root / "data/yunwen.json"
-    # 保存HTML到docs/special/
-    output_path = project_root / "docs/special/yunwen.html"
 
-    if not json_path.exists():
-        print(f"错误: JSON文件不存在: {json_path}")
+    # 从data/目录读取JSON和MD
+    data_dir = project_root / "data"
+    json_file = data_dir / "yunwen.json"
+    md_file = data_dir / "yunwen.md"
+
+    if not json_file.exists():
+        print(f"错误: JSON文件不存在: {json_file}")
         print("请先运行 extract_yunwen.py")
         return 1
 
-    generate_html(json_path, output_path)
+    # 发布到docs/special/目录
+    special_dir = project_root / "docs" / "special"
+    special_dir.mkdir(parents=True, exist_ok=True)
+
+    # 生成HTML
+    html_file = special_dir / "yunwen.html"
+    generate_html(json_file, html_file)
+
+    # 复制MD和JSON文件到docs/special/
+    import shutil
+    shutil.copy2(json_file, special_dir / "yunwen.json")
+    print(f"✅ JSON已复制: {special_dir / 'yunwen.json'}")
+
+    shutil.copy2(md_file, special_dir / "yunwen.md")
+    print(f"✅ MD已复制: {special_dir / 'yunwen.md'}")
+
+    # 自动生成PDF
+    try:
+        from weasyprint import HTML, CSS
+
+        pdf_path = special_dir / "yunwen.pdf"
+        print(f"正在生成PDF: {pdf_path}")
+
+        # 添加PDF专用CSS样式
+        pdf_css = CSS(string='''
+            @page {
+                size: A4;
+                margin: 2.5cm 2cm;
+
+                @top-center {
+                    content: "史记·韵文集";
+                    font-size: 10pt;
+                    color: #666;
+                }
+
+                @bottom-center {
+                    content: counter(page);
+                    font-size: 10pt;
+                    color: #666;
+                }
+            }
+
+            body {
+                font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+                font-size: 12pt;
+                line-height: 1.8;
+            }
+
+            h1 {
+                font-size: 24pt;
+                page-break-after: avoid;
+            }
+
+            .type-section {
+                page-break-inside: avoid;
+                margin-bottom: 30pt;
+            }
+
+            .type-header {
+                font-size: 18pt;
+                page-break-after: avoid;
+            }
+
+            .yunwen-item {
+                page-break-inside: avoid;
+                margin-bottom: 20pt;
+            }
+
+            .item-title {
+                font-size: 14pt;
+                page-break-after: avoid;
+            }
+
+            .nav, .toc {
+                display: none;
+            }
+
+            a {
+                color: #8b4513;
+                text-decoration: none;
+            }
+        ''')
+
+        HTML(filename=str(html_file)).write_pdf(
+            str(pdf_path),
+            stylesheets=[pdf_css]
+        )
+
+        file_size = pdf_path.stat().st_size / 1024 / 1024
+        print(f"✅ PDF已生成: {pdf_path} ({file_size:.2f} MB)")
+
+    except ImportError:
+        print("⚠️  WeasyPrint未安装，跳过PDF生成")
+        print("   安装命令: pip install weasyprint")
+    except Exception as e:
+        print(f"⚠️  PDF生成失败: {e}")
+
     return 0
 
 if __name__ == "__main__":

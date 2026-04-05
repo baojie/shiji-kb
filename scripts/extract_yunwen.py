@@ -15,21 +15,73 @@ YUNWEN_TYPES = {
     '赋': '史记中收录的赋体文学作品'
 }
 
+# 加载手工标题映射
+def load_manual_titles():
+    """加载手工确定的诗歌和赋标题"""
+    titles_file = Path(__file__).parent.parent / 'data' / 'yunwen_titles.json'
+    if titles_file.exists():
+        with open(titles_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            # 过滤掉注释字段
+            return {k: v for k, v in data.items() if not k.startswith('_')}
+    return {}
+
+MANUAL_TITLES = load_manual_titles()
+
 def extract_title_from_context(content, match_start, yunwen_type):
     """从韵文前的上下文中提取标题"""
-    # 获取区块前的100个字符
+    # 获取区块前的200个字符
     start_pos = max(0, match_start - 200)
     context = content[start_pos:match_start]
 
+    # 🔥 优先提取 Markdown 标题（## 标题）
+    md_title_match = re.search(r'##\s+(.+?)$', context, re.MULTILINE)
+    if md_title_match:
+        title = md_title_match.group(1).strip()
+        # 清理可能的标点符号
+        title = title.rstrip('，。、；：')
+        return title
+
     # 尝试从前文提取标题线索
-    title_patterns = [
+    if yunwen_type == '诗歌':
+        # 刻石诗歌：提取地名
+        title_patterns = [
+            r'刻(?:所立)?石於?〖[=]+([^〗]+)〗',  # 刻石于泰山
+            r'登(?:于)?〖[=]+([^〗]+)〗[^。，]*刻石',  # 登泰山，刻石
+            r'至〖[=]+([^〗]+)〗[^。，]*刻石',  # 至之罘，刻石
+            r'刻〖[=]+([^〗]+)〗石',  # 刻泰山石
+        ]
+        for pattern in title_patterns:
+            m = re.search(pattern, context)
+            if m:
+                place = m.group(1).strip()
+                return place + '刻石'
+
+    elif yunwen_type == '赋':
+        # 赋的标题模式
+        title_patterns = [
+            r'作〖[^〗]*〗?([^〖〗]+赋)〗?[，。]',  # 作《离骚赋》
+            r'([^〖〗]+赋)[，。]',  # 《上林赋》，
+            r'〖[•~]([^〗]+)〗',  # 〖~离骚〗
+        ]
+        for pattern in title_patterns:
+            m = re.search(pattern, context)
+            if m:
+                title = m.group(1).strip()
+                # 清理标点
+                title = title.rstrip('，。、；：')
+                if '赋' in title or '骚' in title:
+                    return title
+
+    # 通用模式（适用所有类型）
+    generic_patterns = [
         r'刻(?:所立)?石[，。](?:其)?(?:辞|文)曰',  # 刻石文字
         r'立石刻[，。](?:颂|铭|曰)',  # 立石刻
         r'(?:作|为)([^。，]+)[，。](?:其)?(?:辞|文)曰',  # 作XX，其辞曰
         r'(?:登|至|过)([^。，]+)[，。]刻石',  # 登XX，刻石
     ]
 
-    for pattern in title_patterns:
+    for pattern in generic_patterns:
         m = re.search(pattern, context)
         if m:
             # 提取地名或事件
@@ -54,6 +106,7 @@ def extract_yunwen_blocks(chapter_file):
 
     # 匹配 ::: 韵文类型 ... ::: 格式
     for yunwen_type in YUNWEN_TYPES.keys():
+        # 精确匹配（如 ::: 赞）
         pattern = rf'^::: {re.escape(yunwen_type)}$(.*?)^:::$'
         matches = re.finditer(pattern, content, re.MULTILINE | re.DOTALL)
 
@@ -63,6 +116,18 @@ def extract_yunwen_blocks(chapter_file):
                 # 尝试从上下文提取标题
                 title = extract_title_from_context(content, match.start(), yunwen_type)
                 blocks.append((yunwen_type, block_content, title))
+
+        # 对于"赞"类型，额外支持变体标记（如 ::: 太史公赞）
+        if yunwen_type == '赞':
+            variant_pattern = r'^::: (?:太史公赞|褚先生赞|后人赞辞|.*赞语)$(.*?)^:::$'
+            variant_matches = re.finditer(variant_pattern, content, re.MULTILINE | re.DOTALL)
+
+            for match in variant_matches:
+                block_content = match.group(1).strip()
+                if block_content:
+                    # 尝试从上下文提取标题
+                    title = extract_title_from_context(content, match.start(), yunwen_type)
+                    blocks.append((yunwen_type, block_content, title))
 
     return blocks
 
@@ -92,9 +157,20 @@ def main():
         # 提取韵文区块
         blocks = extract_yunwen_blocks(chapter_file)
 
+        # 用于统计每种类型的韵文序号
+        type_counter = {}
+
         for yunwen_type, content, title in blocks:
-            # 如果没有提取到标题，使用默认标题
-            if not title:
+            # 统计该类型韵文在本章的序号
+            type_counter[yunwen_type] = type_counter.get(yunwen_type, 0) + 1
+            seq_num = type_counter[yunwen_type]
+
+            # 🔥 优先使用手工映射的标题
+            manual_key = f"{chapter_num}_{yunwen_type}_{seq_num}"
+            if manual_key in MANUAL_TITLES:
+                title = MANUAL_TITLES[manual_key]
+            # 如果没有手工映射，且自动提取也没有标题，使用默认标题
+            elif not title:
                 if yunwen_type == '赞':
                     title = f"{chapter_title}之赞"
                 elif yunwen_type == '诗歌':
