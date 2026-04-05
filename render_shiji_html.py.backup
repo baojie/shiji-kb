@@ -45,10 +45,6 @@ from pathlib import Path
 from html import escape as html_escape
 import urllib.parse
 
-# ========================================
-# 配置与常量定义
-# ========================================
-
 # 实体类型映射（v3.0，2026-03）
 # 名词实体（18类）：〖TYPE content〗 格式，TYPE为单字符标记（@=;%&◆^~#•!?+{:[]_$）
 # 动词实体（4类）：⟦TYPE content⟧ 格式，TYPE为圆形符号（◈◉○◇）
@@ -105,10 +101,7 @@ ENTITY_PATTERNS = [
     (r'〖_([^〖〗<>"]+)〗', r'<span class="concept" title="思想">\1</span>'),
 ]
 
-
-# ========================================
 # 引号内容模式（用于对话）
-# ========================================
 # 支持中文引号：""、''、「」、『』以及ASCII引号："、'
 # 注意：使用负向后顾确保不匹配HTML属性中的引号（如 class="quoted"）
 QUOTE_PATTERNS = [
@@ -121,17 +114,11 @@ QUOTE_PATTERNS = [
     (r'『([^』<>]+)』', r'<span class="quoted">『\1』</span>'),    # 日式双引号
 ]
 
-
-# ========================================
 # 段落编号模式
-# ========================================
 # 匹配 [数字] 或 [数字.数字] 或 [数字.数字.数字] 等格式
 PARAGRAPH_NUMBER_PATTERN = r'\[(\d+(?:\.\d+)*)\]'
 
-
-# ========================================
-# 实体索引链接配置
-# ========================================
+# --- 实体索引链接 ---
 # 实体类CSS类 → 索引页文件名
 _ENTITY_TYPE_FILES = {
     'person': 'person.html',
@@ -164,11 +151,6 @@ _year_ce_map = None
 _current_chapter_id = None
 # 当前段落ID（由 convert_entities 设置，供 _add_entity_links 使用）
 _current_para_id = None
-
-
-# ========================================
-# 辅助函数：数据加载
-# ========================================
 
 def _get_alias_reverse_map():
     """加载 entity_aliases.json，构建 {type: {surface → canonical}} 反向映射"""
@@ -345,11 +327,6 @@ def _add_entity_links(text):
     return text
 
 
-
-# ========================================
-# 核心转换函数
-# ========================================
-
 def convert_entities(text):
     """转换实体标记为HTML标签
 
@@ -392,11 +369,6 @@ def convert_entities(text):
 
     return text
 
-
-
-# ========================================
-# 主函数：Markdown转HTML
-# ========================================
 
 def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None, next_chapter=None, original_text_file=None):
     """
