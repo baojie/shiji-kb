@@ -2,6 +2,62 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+---
+
+# ⚠️⚠️⚠️ 会话启动强制检查清单 ⚠️⚠️⚠️
+
+**Claude必须在第一次响应前执行以下检查**：
+
+1. ✅ **读取本文件** (CLAUDE.md) - 了解项目规则和禁止行为
+2. ✅ **读取 `.claude/settings.json`** - 了解技术层面的禁止命令（虽然不强制生效，但必须遵守）
+3. ✅ **检查 `git status`** - 了解当前工作状态
+
+## ⛔ 绝对禁止的Git操作（CRITICAL）
+
+**无论任何情况，Claude都不得执行以下命令**：
+
+### 禁止自动Commit（最高优先级）
+```bash
+# ❌ 绝对禁止！任何形式的commit都不得自动执行！
+git commit
+git commit -m "..."
+git commit -am "..."
+git commit --amend
+git commit --no-verify
+```
+
+**🚨 当用户说"commit"或"提交"时的铁律**：
+- ✅ **只准备commit信息**：运行 `git log --oneline -10`、`git diff --cached` 了解上下文
+- ✅ **展示commit信息草稿**：以代码块形式展示给用户
+- ✅ **明确询问**："我已准备好以下commit信息，**您需要我执行commit吗？**（注意：我不应该自动执行）"
+- ❌ **绝不自动执行** `git commit` 命令
+
+### 禁止破坏性操作
+```bash
+# ❌ 绝对禁止！会覆盖工作区文件，造成数据丢失！
+git checkout <commit> -- <file>
+git checkout -- <file>
+git restore <file>
+git reset --hard
+
+# ❌ 绝对禁止！会批量添加未经审查的文件
+git add -A
+git add .
+git add --all
+
+# ❌ 绝对禁止！会强制推送，覆盖远程历史
+git push --force
+git push -f
+```
+
+**✅ 正确替代方案**：
+- 查看差异：`git diff <commit> -- <file>`
+- 手动编辑：根据diff结果用Edit工具修复
+- 脚本修复：编写Python脚本提取特定内容
+- 保护修改：`git stash` 后征求用户同意
+
+---
+
 ## 项目概述
 
 《史记》知识库：用AI Agent将《史记》130篇转化为结构化知识图谱。

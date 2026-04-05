@@ -7,15 +7,17 @@
 注意：本模块提供单个文件的转换功能。
 批量生成所有章节请使用：python generate_all_chapters.py
 
-标记语法：
-- @人名@ -> <span class="person">人名</span>
-- =地名= -> <span class="place">地名</span>
-- $官职$ -> <span class="official">官职</span>
-- %时间% -> <span class="time">时间</span>
-- &朝代& -> <span class="dynasty">朝代</span>
-- '封国 -> <span class="feudal-state">封国</span>
-- ^制度^ -> <span class="institution">制度</span>
-- ~族群~ -> <span class="tribe">族群</span>
+标记语法（v3.0，2026-03）：
+18类名词实体：
+- 〖@人名〗 -> <span class="person">人名</span>
+- 〖=地名〗 -> <span class="place">地名</span>
+- 〖;官职〗 -> <span class="official">官职</span>
+- 〖%时间〗 -> <span class="time">时间</span>
+- 〖&氏族〗 -> <span class="dynasty">氏族</span>
+- 〖◆邦国〗 -> <span class="feudal-state">邦国</span>
+- 〖^制度〗 -> <span class="institution">制度</span>
+- 〖~族群〗 -> <span class="tribe">族群</span>
+- 〖#身份〗 -> <span class="identity">身份</span>
 - 〖•器物〗 -> <span class="artifact">器物</span>
 - 〖!天文〗 -> <span class="astronomy">天文</span>
 - 〖?神话〗 -> <span class="mythical">神话</span>
@@ -24,6 +26,15 @@
 - 〖:礼仪〗 -> <span class="ritual">礼仪</span>
 - 〖[刑法〗 -> <span class="legal">刑法</span>
 - 〖_思想〗 -> <span class="concept">思想</span>
+- 〖$数量〗 -> <span class="quantity">数量</span>
+
+4类动词实体：
+- ⟦◈军事动词⟧ -> <span class="verb-military">军事动词</span>
+- ⟦◉刑罚动词⟧ -> <span class="verb-penalty">刑罚动词</span>
+- ⟦○政治动词⟧ -> <span class="verb-political">政治动词</span>（预留）
+- ⟦◇经济动词⟧ -> <span class="verb-economic">经济动词</span>（预留）
+
+消歧语法：〖TYPE 显示名|规范名〗 或 ⟦TYPE 显示名|规范名⟧
 """
 
 import re
@@ -34,10 +45,10 @@ from pathlib import Path
 from html import escape as html_escape
 import urllib.parse
 
-# 实体类型映射（v2.1，2026-03-13）
-# 新格式：10类对称符号改为 〖TYPE content〗 统一包裹
-#   〖 开头，第一字符为类型标记，〗 结尾，无嵌套歧义
-# 5类已迁移为〖TYPE〗格式（v2.8）：神话〖?〗/典籍〖{〗/礼仪〖:〗/刑法〖[〗/思想〖_〗
+# 实体类型映射（v3.0，2026-03）
+# 名词实体（18类）：〖TYPE content〗 格式，TYPE为单字符标记（@=;%&◆^~#•!?+{:[]_$）
+# 动词实体（4类）：⟦TYPE content⟧ 格式，TYPE为圆形符号（◈◉○◇）
+# 消歧语法：〖TYPE 显示名|规范名〗 或 ⟦TYPE 显示名|规范名⟧
 # 排除 " 字符以避免匹配HTML属性
 ENTITY_PATTERNS = [
     (r'\*\*([^*<>"]+)\*\*', r'<strong>\1</strong>'),                               # 粗体（不变）
@@ -87,12 +98,6 @@ ENTITY_PATTERNS = [
     (r'〖\[([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="legal"       title="刑法：\2"       data-canonical="\2">\1</span>'),  # 刑法（消歧）
     (r'〖\[([^〖〗<>"]+)〗', r'<span class="legal" title="刑法">\1</span>'),
     (r'〖_([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="concept"     title="思想：\2"       data-canonical="\2">\1</span>'),  # 思想（消歧）
-    (r'〖_([^〖〗<>"]+)〗', r'<span class="concept" title="思想">\1</span>'),
-    # 旧格式兼容（v2.8前）
-    (r'〖\?([^〖〗<>"]+)〗', r'<span class="mythical" title="神话/传说">\1</span>'),
-    (r'〖\{([^〖〗<>"]+)〗', r'<span class="book" title="典籍">《\1》</span>'),
-    (r'〖:([^〖〗<>"]+)〗', r'<span class="ritual" title="礼仪">\1</span>'),
-    (r'〖\[([^〖〗<>"]+)〗', r'<span class="legal" title="刑法">\1</span>'),
     (r'〖_([^〖〗<>"]+)〗', r'<span class="concept" title="思想">\1</span>'),
 ]
 
@@ -215,16 +220,18 @@ def generate_heading_id(text):
     """从标题文本生成URL安全的锚点ID
 
     策略：
-    1. 移除实体标注符号（如 〖@人名〗 → 人名, 〖~璧〗 → 璧）
-    2. 移除HTML标签（如果有）
-    3. URL编码中文和特殊字符
+    1. 移除实体标注符号（〖TYPE content〗 → content, ⟦TYPE content⟧ → content）
+    2. 消歧格式保留显示名（〖TYPE 显示名|规范名〗 → 显示名）
+    3. 移除HTML标签（如果有）
+    4. URL编码中文和特殊字符
     """
-    # 移除〖TYPE content|canonical〗标注，保留content（消歧格式）
+    # 移除〖TYPE content|canonical〗标注，保留显示名（消歧格式）
     clean_text = re.sub(r'〖[^〗]*?\|([^〗|]+)〗', r'\1', text)
     # 移除〖TYPE content〗标注，保留content（普通格式）
-    # TYPE是单个字符，如@~%^等
     clean_text = re.sub(r'〖[^〗]+?〗', lambda m: m.group(0)[2:-1], clean_text)
-    # 移除⟦TYPE content⟧标注（动词），保留content
+    # 移除⟦TYPE content|canonical⟧标注，保留显示名（消歧格式）
+    clean_text = re.sub(r'⟦[^⟧]*?\|([^⟧|]+)⟧', r'\1', clean_text)
+    # 移除⟦TYPE content⟧标注（动词），保留content（普通格式）
     clean_text = re.sub(r'⟦[^⟧]+?⟧', lambda m: m.group(0)[2:-1], clean_text)
     # 移除HTML标签
     clean_text = re.sub(r'<[^>]+>', '', clean_text)
@@ -337,13 +344,10 @@ def convert_entities(text):
     for pattern, replacement in ENTITY_PATTERNS:
         text = re.sub(pattern, replacement, text)
 
-    # 安全网：清理残留的标注符号（新格式下理论上不应出现）
-    # 1. 紧邻<span>标签的裸 〖〗 字符
-    text = re.sub(r'〖(?=<span[\s>])', '', text)
-    text = re.sub(r'(?<=</span>)〗', '', text)
-    # 2. 兼容旧格式残留（防万一）
-    text = re.sub(r"[;\^~•!'_](?=<span[\s>])", '', text)
-    text = re.sub(r"(?<=</span>)[;\^~•!'_]", '', text)
+    # 安全网：清理残留的标注符号（v3.0格式下理论上不应出现）
+    # 只清理紧邻<span>标签的裸 〖〗 或 ⟦⟧ 字符
+    text = re.sub(r'[〖⟦](?=<span[\s>])', '', text)
+    text = re.sub(r'(?<=</span>)[〗⟧]', '', text)
 
     # 最后处理段落编号（PN - Purple Numbers）
     # 将 [编号] 转换为可点击的锚点链接
@@ -459,8 +463,10 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         parts = ['<div class="shiji-table-wrapper">', '<table class="shiji-table">']
         # 表头：行号列（空白）+ 原始列；表头不做实体标注渲染（年号/国名等不应被标注样式干扰）
         # 只做标注符号剥离（去掉 〖TYPE〗 和 ⟦TYPE⟧ 包裹符），保留纯文字
+        # 18类名词实体符号：@=;%&◆^~#•!?+{:[]_$
+        # 4类动词实体符号：◈◉○◇
         _annotation_strip = re.compile(
-            r'〖[@=;%&\'^~•!#\+\$\?\{\:\[\_]([^〖〗\n]{1,30}?)〗|⟦[◈◉○◇]([^⟦⟧\n]{1,30}?)⟧'
+            r'〖[@=;%&◆\^~•!#\+\$\?\{\:\[\_]([^〖〗\n]{1,30}?)〗|⟦[◈◉○◇]([^⟦⟧\n]{1,30}?)⟧'
         )
         def strip_annotations(text):
             # 匹配两种格式：〖TYPE内容〗 或 ⟦TYPE动词⟧
@@ -615,9 +621,9 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
                 # 开启 ::: [tag] — 开始语义块
                 tag = stripped[3:].strip()
                 # 短标签（如"太史公曰""赞"）作为class/title；长文本作为内容
-                if len(tag) <= 20 and '〖' not in tag:
-                    # 短标签：用作CSS class和title
-                    clean_tag = re.sub(r'[〖〗〔〕^@&=;~]', '', tag) if tag else ''
+                if len(tag) <= 20 and '〖' not in tag and '⟦' not in tag:
+                    # 短标签：用作CSS class和title（去除标注符号）
+                    clean_tag = re.sub(r'[〖〗⟦⟧]', '', tag) if tag else ''
                     classes = 'note-box'
                     if clean_tag:
                         classes += f' note-{clean_tag}'
