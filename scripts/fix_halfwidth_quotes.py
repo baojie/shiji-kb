@@ -124,21 +124,57 @@ def fix_file(file_path: Path) -> tuple[int, list[str]]:
 
 
 def main():
-    """主函数：批量修复所有 tagged.md 文件"""
+    """主函数：批量修复所有 tagged.md 文件或指定章节"""
+    import sys
+
     chapter_md_dir = Path(__file__).parent.parent / 'chapter_md'
 
     if not chapter_md_dir.exists():
         print(f"❌ 目录不存在: {chapter_md_dir}")
         return
 
-    # 查找所有 .tagged.md 文件
-    tagged_files = sorted(chapter_md_dir.glob('*.tagged.md'))
+    # 检查命令行参数
+    if len(sys.argv) > 1:
+        # 处理单个章节
+        chapter_arg = sys.argv[1]
 
-    if not tagged_files:
-        print("❌ 未找到任何 .tagged.md 文件")
-        return
+        # 支持多种输入格式：024、024_乐书.tagged.md、chapter_md/024_乐书.tagged.md
+        if chapter_arg.isdigit():
+            # 纯数字：024 -> 024_*.tagged.md
+            pattern = f"{chapter_arg}_*.tagged.md"
+            tagged_files = sorted(chapter_md_dir.glob(pattern))
+        elif chapter_arg.endswith('.tagged.md'):
+            # 完整文件名
+            file_path = Path(chapter_arg)
+            if not file_path.is_absolute():
+                file_path = chapter_md_dir / file_path.name
+            tagged_files = [file_path] if file_path.exists() else []
+        else:
+            # 可能是部分文件名：024_乐书 -> 024_乐书.tagged.md
+            file_path = chapter_md_dir / f"{chapter_arg}.tagged.md"
+            if not file_path.exists():
+                file_path = chapter_md_dir / chapter_arg
+            tagged_files = [file_path] if file_path.exists() else []
 
-    print(f"📁 找到 {len(tagged_files)} 个文件")
+        if not tagged_files:
+            print(f"❌ 未找到文件: {chapter_arg}")
+            print(f"\n💡 支持的输入格式：")
+            print(f"   - 章节编号: 024")
+            print(f"   - 部分文件名: 024_乐书")
+            print(f"   - 完整文件名: 024_乐书.tagged.md")
+            return
+
+        print(f"📄 处理单个文件: {tagged_files[0].name}")
+    else:
+        # 批量处理所有文件
+        tagged_files = sorted(chapter_md_dir.glob('*.tagged.md'))
+
+        if not tagged_files:
+            print("❌ 未找到任何 .tagged.md 文件")
+            return
+
+        print(f"📁 找到 {len(tagged_files)} 个文件")
+
     print("=" * 60)
 
     total_files_fixed = 0
@@ -156,15 +192,25 @@ def main():
                 print(f"   - {change}")
             if len(changes) > 5:
                 print(f"   ... 还有 {len(changes) - 5} 处")
+        elif len(sys.argv) > 1:
+            # 单文件模式下，即使没有修复也显示信息
+            print(f"\n✅ {file_path.name}")
+            print(f"   无需修复（未检测到半角引号）")
 
     print("\n" + "=" * 60)
     print(f"📊 修复完成:")
     print(f"   - 修复文件数: {total_files_fixed}")
     print(f"   - 修复引号数: {total_quotes_fixed}")
-    print(f"\n💡 建议:")
-    print(f"   1. 运行验证脚本: python scripts/lint_symbol_conflicts.py")
-    print(f"   2. 使用 git diff 检查修改是否正确")
-    print(f"   3. 如无误，使用 git add 暂存变更")
+
+    if len(sys.argv) <= 1:
+        print(f"\n💡 建议:")
+        print(f"   1. 运行验证脚本: python scripts/lint_symbol_conflicts.py")
+        print(f"   2. 使用 git diff 检查修改是否正确")
+        print(f"   3. 如无误，使用 git add 暂存变更")
+    else:
+        print(f"\n💡 下一步:")
+        print(f"   1. 查看修改: git diff {tagged_files[0].relative_to(chapter_md_dir.parent)}")
+        print(f"   2. 验证完整性: python scripts/lint_text_integrity.py {tagged_files[0].relative_to(chapter_md_dir.parent)}")
 
 
 if __name__ == '__main__':
