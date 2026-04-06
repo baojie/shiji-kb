@@ -5,6 +5,8 @@
 **在线阅读**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
 **许可证**: [CC BY-NC-SA 4.0](LICENSE)
 
+学术文献请引用：鲍捷，史记知识库，2026，在线发布于https://github.com/baojie/shiji-kb
+
 ---
 
 ## 这是什么？
