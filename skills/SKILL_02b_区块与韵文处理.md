@@ -228,7 +228,7 @@ def verse_score(line):
 
 ### 4.4 韵文自动识别详细规则
 
-**详见子技能**: [SKILL_02b1_韵文识别规则.md](SKILL_02b1_韵文识别规则.md)
+**详见子技能**: [SKILL_02b1_韵文识别规则.md](references/SKILL_02b1_韵文识别规则.md)
 
 包含内容：
 - 赞/诗歌/赋的自动识别算法
@@ -687,7 +687,7 @@ python scripts/render_blocks_html.py --input=taishigongyue.json
 ---
 
 > 另见：
-> - [SKILL_02b1_韵文识别规则.md](SKILL_02b1_韵文识别规则.md) — 韵文自动识别与标题提取（子技能）
+> - [SKILL_02b1_韵文识别规则.md](references/SKILL_02b1_韵文识别规则.md) — 韵文自动识别与标题提取（子技能）
 > - [SKILL_02a_章节切分与编号.md](SKILL_02a_章节切分与编号.md) — 段落编号、对话拆分
 > - [SKILL_02d_结构语义分析.md](SKILL_02d_结构语义分析.md) — 句间/段间语义关系
 > - [SKILL_02e_词法分析.md](SKILL_02e_词法分析.md) — 字级词性标注

@@ -119,7 +119,7 @@ def extract_yunwen_blocks(chapter_file):
 
         # 对于"赞"类型，额外支持变体标记（如 ::: 太史公赞）
         if yunwen_type == '赞':
-            variant_pattern = r'^::: (?:太史公赞|褚先生赞|后人赞辞|.*赞语)$(.*?)^:::$'
+            variant_pattern = r'^::: (?:太史公赞|褚先生赞|后人赞辞|[^\n]*赞语)$(.*?)^:::$'
             variant_matches = re.finditer(variant_pattern, content, re.MULTILINE | re.DOTALL)
 
             for match in variant_matches:
