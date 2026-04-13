@@ -1,7 +1,18 @@
-/* 史记命名实体样式表 v5.5 (融合v5.3.3 + v6.0方案B改进) */
-/* 最后更新: 2026-03-19 13:45 */
+/* 史记命名实体样式表 v5.7 (全面优化版) */
+/* 最后更新: 2026-04-14 */
 /* 如果你在浏览器开发者工具中看到这行注释，说明CSS已加载 */
 /*
+ * v5.7 改进（2026-04-14）：
+ * 1. 神话样式：改为双下划线（double），区分于典籍的波浪线（wavy）
+ * 2. 动词样式：移除padding和border-radius，避免动词前后产生空隙，保持文字紧凑
+ *
+ * v5.6 改进（2026-04-14）：
+ * 1. 性能优化：平滑滚动、尊重用户运动偏好
+ * 2. 可访问性：高对比度模式支持、键盘导航焦点样式
+ * 3. 响应式设计：移动端行高和字号优化（768px/480px断点）
+ * 4. 视觉改进：对话样式微调、悬停效果优化
+ * 5. 打印支持：移除背景色，保留实体颜色
+ *
  * v5.4 改进（基于v5.3.3）：
  * 1. 典籍：添加波浪线 (wavy 2px) + 偏移3px
  * 2. 神话：添加波浪线 (wavy 2px) + 偏移3px
@@ -10,7 +21,27 @@
  * 5. 保持v5.3的text-decoration风格和整体配色
  */
 
-/* 基础样式 */
+/* ======================================== 性能优化 ======================================== */
+
+/* 平滑滚动 - 为Purple Numbers锚点跳转提供更好的体验 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 尊重用户的运动偏好设置 */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ======================================== 基础样式 ======================================== */
 body {
     font-family: "Noto Serif SC", "Source Han Serif SC", serif;
     line-height: 2;
@@ -107,8 +138,8 @@ p {
 /* 传说生物/神话样式 */
 .mythical {
     color: #8B008B;
-    text-decoration: underline wavy #8B008B80;  /* v5.4: 添加波浪线 */
-    text-decoration-thickness: 2px;  /* v5.4: 加粗波浪线 */
+    text-decoration: underline double #8B008B80;  /* v5.7: 改为双下划线，区分于典籍的波浪线 */
+    text-decoration-thickness: 1px;  /* v5.7: 双线无需加粗 */
     text-underline-offset: 3px;  /* v5.4: 下移 */
     font-weight: 500;
     cursor: default;
@@ -165,13 +196,15 @@ p {
 a.entity-link {
     text-decoration: none;  /* 移除链接默认下划线 */
     color: inherit;         /* 继承实体颜色 */
+    transition: opacity 0.2s ease;  /* v5.6: 添加过渡效果 */
 }
 
 a.entity-link:hover {
-    opacity: 0.8;           /* 悬停时略微透明，提供视觉反馈 */
+    opacity: 0.7;           /* v5.6: 悬停时略微透明，提供视觉反馈 */
 }
 
-/* ======================================== 动词标注样式 v5.1 ======================================== */
+/* ======================================== 动词标注样式 v5.7 ======================================== */
+/* v5.7: 移除padding和border-radius，避免动词前后产生空隙 */
 /* v5.1: 改用半透明背景，深色文字 + 加粗，提升可读性 */
 
 /* 军事动词 ⟦◈动词⟧ */
@@ -179,8 +212,6 @@ a.entity-link:hover {
     color: #DC143C;  /* 深红色文字 */
     background-color: rgba(220, 20, 60, 0.12);  /* 半透明红色背景 */
     font-weight: 600;
-    padding: 0 3px;
-    border-radius: 2px;
     cursor: default;
 }
 
@@ -189,8 +220,6 @@ a.entity-link:hover {
     color: #0056b3;  /* 深蓝色文字 */
     background-color: rgba(0, 86, 179, 0.10);  /* 半透明蓝色背景 */
     font-weight: 600;
-    padding: 0 3px;
-    border-radius: 2px;
     cursor: default;
 }
 
@@ -199,8 +228,6 @@ a.entity-link:hover {
     color: #B8860B;  /* 金色文字 */
     background-color: rgba(184, 134, 11, 0.12);  /* 半透明金色背景 */
     font-weight: 600;
-    padding: 0 3px;
-    border-radius: 2px;
     cursor: default;
 }
 
@@ -209,8 +236,6 @@ a.entity-link:hover {
     color: #228B22;  /* 深绿色文字 */
     background-color: rgba(34, 139, 34, 0.15);  /* 半透明绿色背景 */
     font-weight: 600;
-    padding: 0 3px;
-    border-radius: 2px;
     cursor: default;
 }
 
@@ -230,14 +255,14 @@ a.entity-link:hover {
 
 /* 引号内容样式（对话） */
 /* 视觉设计：克制优雅的对话标记
- * - 淡褐色背景：极淡的底色（透明度0.03），不干扰阅读
- * - 底部虚线：褐色虚线（透明度0.3），提供清晰但不突兀的视觉边界
- * - 适度内边距：左右各2px，保持文字呼吸感
+ * - 淡褐色背景：极淡的底色，不干扰阅读
+ * - 底部虚线：褐色虚线，提供清晰但不突兀的视觉边界
+ * - 适度内边距：保持文字呼吸感
  */
 .quoted {
-    background-color: rgba(139, 69, 19, 0.03);
-    border-bottom: 1px dashed rgba(139, 69, 19, 0.3);
-    padding: 0 2px;
+    background-color: rgba(139, 69, 19, 0.05);  /* v5.6: 稍微加深背景 */
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.4);  /* v5.6: 加深虚线 */
+    padding: 0 3px;  /* v5.6: 增加内边距 */
 }
 
 /* ======================================== 拼音注释样式（Ruby标注） ======================================== */
@@ -390,6 +415,12 @@ ul li, ol li {
 .para-num:hover {
     color: #9370DB;  /* 深一点的紫色 */
     text-decoration: underline;
+}
+
+/* v5.6: 段落编号键盘导航焦点样式 */
+.para-num:focus {
+    outline: 2px solid #9370DB;
+    outline-offset: 2px;
 }
 
 /* 当段落编号独立成段时（段落只包含编号），显示为块级元素 */
@@ -774,3 +805,285 @@ body.merge-paragraphs .dialogue {
     text-indent: 0 !important;
     padding-left: 0 !important;
 }
+
+/* ======================================== 响应式设计（移动端优化） ======================================== */
+
+/* 平板设备优化 */
+@media (max-width: 960px) {
+    body {
+        line-height: 1.9;
+    }
+
+    /* 拼音行高相应调整 */
+    body:not(.pinyin-off) p,
+    body:not(.pinyin-off) li,
+    body:not(.pinyin-off) blockquote {
+        line-height: 2.1;
+    }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    body {
+        line-height: 1.8;
+        font-size: 16px;  /* 移动端基础字号 */
+        padding: 15px;
+    }
+
+    /* 拼音行高也相应调整 */
+    body:not(.pinyin-off) p,
+    body:not(.pinyin-off) li,
+    body:not(.pinyin-off) blockquote {
+        line-height: 2.0;
+    }
+
+    /* 标题字号调整 */
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+
+    /* 史记年表优化 */
+    .shiji-table {
+        font-size: 0.75em;
+    }
+
+    .shiji-table th,
+    .shiji-table td {
+        padding: 4px 6px;
+    }
+
+    /* 段落间距调整 */
+    p {
+        margin: 1.5em 0;
+    }
+}
+
+/* 小屏幕手机优化 */
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .shiji-table {
+        font-size: 0.7em;
+    }
+
+    .shiji-table th,
+    .shiji-table td {
+        padding: 3px 4px;
+    }
+}
+
+/* ======================================== 可访问性改进 ======================================== */
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    /* 实体颜色加深，提高对比度 */
+    .person {
+        color: #6B3410;  /* 更深的褐色 */
+    }
+
+    .place {
+        color: #947000;  /* 更深的金色 */
+    }
+
+    .official {
+        color: #660000;  /* 更深的暗红 */
+    }
+
+    .time {
+        color: #006666;  /* 更深的青色 */
+    }
+
+    .dynasty {
+        color: #7B5CB8;  /* 更深的紫色 */
+    }
+
+    .feudal-state {
+        color: #8E4B8E;  /* 更深的紫红 */
+    }
+
+    .institution {
+        color: #36648B;  /* 更深的钢蓝 */
+    }
+
+    .tribe {
+        color: #1F3F3F;  /* 更深的暗灰绿 */
+    }
+
+    .artifact {
+        color: #A0662F;  /* 更深的土黄 */
+    }
+
+    .astronomy {
+        color: #342A6B;  /* 更深的深蓝紫 */
+    }
+
+    .mythical {
+        color: #6B006B;  /* 更深的洋红 */
+    }
+
+    .biology {
+        color: #186818;  /* 更深的森林绿 */
+    }
+
+    .book {
+        color: #380062;  /* 更深的靛蓝 */
+    }
+
+    .ritual {
+        color: #6B5010;  /* 更深的橄榄色 */
+    }
+
+    .legal {
+        color: #660000;  /* 更深的暗红 */
+        background-color: rgba(139, 0, 0, 0.10);  /* 加深背景 */
+    }
+
+    .concept {
+        color: #1F3F3F;  /* 更深的暗灰绿 */
+    }
+
+    .quantity {
+        color: #1F6B3F;  /* 更深的海绿 */
+    }
+
+    .identity {
+        color: #2F4FB8;  /* 更深的皇室蓝 */
+    }
+
+    .event {
+        color: #6B3410;  /* 更深的褐色 */
+    }
+
+    /* 动词背景加深 */
+    .verb-military {
+        color: #B8102E;
+        background-color: rgba(220, 20, 60, 0.18);
+    }
+
+    .verb-penalty {
+        color: #003D8F;
+        background-color: rgba(0, 86, 179, 0.15);
+    }
+
+    .verb-political {
+        color: #947000;
+        background-color: rgba(184, 134, 11, 0.18);
+    }
+
+    .verb-economic {
+        color: #186818;
+        background-color: rgba(34, 139, 34, 0.20);
+    }
+
+    /* 对话对比度增强 */
+    .quoted {
+        background-color: rgba(139, 69, 19, 0.08);
+        border-bottom: 1px dashed rgba(139, 69, 19, 0.6);
+    }
+}
+
+/* ======================================== 打印样式 ======================================== */
+
+@media print {
+    /* 隐藏交互元素 */
+    #settings-toggle,
+    #settings-panel,
+    #report-issue-button,
+    .chapter-nav,
+    nav {
+        display: none !important;
+    }
+
+    /* 优化页面布局 */
+    body {
+        background-color: white;
+        max-width: 100%;
+        margin: 0;
+        padding: 1cm;
+        font-size: 12pt;
+        line-height: 1.6;
+    }
+
+    /* 移除半透明背景节省墨水 */
+    .verb-military,
+    .verb-penalty,
+    .verb-political,
+    .verb-economic {
+        background-color: transparent !important;
+    }
+
+    .legal {
+        background-color: transparent !important;
+    }
+
+    .quoted {
+        background-color: transparent !important;
+    }
+
+    /* 标题优化 */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    h1 {
+        font-size: 18pt;
+    }
+
+    h2 {
+        font-size: 16pt;
+    }
+
+    h3 {
+        font-size: 14pt;
+    }
+
+    /* 避免段落跨页断开 */
+    p {
+        page-break-inside: avoid;
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* 表格打印优化 */
+    .shiji-table {
+        font-size: 9pt;
+        page-break-inside: avoid;
+    }
+
+    .shiji-table th {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .shiji-table td:nth-child(2) {
+        background-color: transparent !important;
+    }
+
+    /* Purple Numbers 打印样式 */
+    .para-num {
+        font-size: 8pt;
+    }
+
+    /* 链接打印样式 */
+    a.entity-link {
+        text-decoration: none;
+    }
+
+    a[href]:after {
+        content: none;  /* 不显示URL */
+    }
+}
+
