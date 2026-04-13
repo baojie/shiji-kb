@@ -241,16 +241,19 @@ def verse_score(line):
 
 ## 五、韵文提取与管理工作流
 
-### 5.1 当前工作流（2026-04-06）
+### 5.1 当前工作流（2026-04-14更新）
 
 **完整流程**：
 
 ```
 1. 深度检测   — detect_hidden_yunwen.py（verse_score算法）
 2. 添加标记   — wrap_zan_blocks.py（自动添加::: 赞标记）
-3. 提取韵文   — extract_yunwen.py（支持手工标题保护）
-4. 生成展示   — render_yunwen_html.py（HTML/PDF输出）
+3. 排版检查   — lint_zan_format.py + lint_zan_in_chapters.py（质量控制）
+4. 提取韵文   — extract_yunwen.py（支持手工标题保护）
+5. 生成展示   — render_yunwen_html.py（HTML/PDF输出）
 ```
+
+**⚠️ 重要**：排版检查（步骤3）是必需的质量控制步骤，详见 [SKILL_02b2_赞文排版质量控制](references/SKILL_02b2_赞文排版质量控制.md)。
 
 ### 5.2 核心脚本说明
 
@@ -304,7 +307,34 @@ done
 3. 确定赞内容结束（下一个 `##` 标题或文件结尾）
 4. 在起止位置插入 `::: 赞` 和 `:::`
 
-#### 3. extract_yunwen.py
+#### 3. lint_zan_format.py（排版质量控制）
+
+**功能**：检查赞文是否符合"每行8字（两个四字句）"规范
+
+**使用场景**：
+- 验证赞文排版格式
+- 检查半角标点问题
+- 确保HTML渲染硬换行正确
+
+**用法**：
+```bash
+# 检查所有章节的赞文格式
+python scripts/lint_zan_format.py
+
+# 输出示例：
+# 📄 043_赵世家.tagged.md:
+#   ❌ 赞文第1段第3行: 应为8字,实际16字
+#      原文: [21] 四字句A，四字句B；四字句C，四字句D。
+```
+
+**检查项**：
+1. 每行去除标注符号后是否恰好8个汉字
+2. 是否使用半角标点（绝对禁止）
+3. 消歧语法是否正确处理
+
+**详细规范**：参见 [SKILL_02b2_赞文排版质量控制](references/SKILL_02b2_赞文排版质量控制.md)
+
+#### 4. extract_yunwen.py
 
 **功能**：提取所有韵文，支持手工标题保护机制
 
@@ -333,7 +363,7 @@ python3 scripts/extract_yunwen.py
 手工映射 (yunwen_titles.json) > Markdown标题 > 上下文提取 > 默认标题
 ```
 
-#### 4. render_yunwen_html.py
+#### 5. render_yunwen_html.py
 
 **功能**：生成HTML和PDF展示页面
 
@@ -389,6 +419,10 @@ python3 scripts/render_yunwen_html.py
 **验证方法**：
 
 ```bash
+# 0. ⚠️ 排版格式检查（必须先执行）
+python scripts/lint_zan_format.py
+python scripts/lint_zan_in_chapters.py
+
 # 1. 检查提取数量
 jq 'group_by(.type) | map({type: .[0].type, count: length})' data/yunwen.json
 
@@ -401,6 +435,8 @@ jq -r '[.[].chapter_num] | unique | length' data/yunwen.json
 # 4. 验证标注完整性
 python scripts/lint_text_integrity.py chapter_md/*.tagged.md
 ```
+
+**⚠️ 重要**：排版格式检查（步骤0）必须最先执行，确保赞文符合"每行8字"规范，否则HTML渲染的硬换行效果会出错。详见 [SKILL_02b2_赞文排版质量控制](references/SKILL_02b2_赞文排版质量控制.md)。
 
 **人工抽查**：
 - 特殊章节（书类、年表）
@@ -687,7 +723,8 @@ python scripts/render_blocks_html.py --input=taishigongyue.json
 ---
 
 > 另见：
-> - [SKILL_02b1_韵文识别规则.md](references/SKILL_02b1_韵文识别规则.md) — 韵文自动识别与标题提取（子技能）
+> - [SKILL_02b1_韵文识别规则.md](references/SKILL_02b1_韵文识别规则.md) — 韵文自动识别与标题提取
+> - [SKILL_02b2_赞文排版质量控制.md](references/SKILL_02b2_赞文排版质量控制.md) — 赞文排版规范与格式检查
 > - [SKILL_02a_章节切分与编号.md](SKILL_02a_章节切分与编号.md) — 段落编号、对话拆分
 > - [SKILL_02d_结构语义分析.md](SKILL_02d_结构语义分析.md) — 句间/段间语义关系
 > - [SKILL_02e_词法分析.md](SKILL_02e_词法分析.md) — 字级词性标注
