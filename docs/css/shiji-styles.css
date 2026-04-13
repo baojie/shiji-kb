@@ -230,13 +230,11 @@ a.entity-link:hover {
 
 /* 引号内容样式（对话） */
 /* 视觉设计：克制优雅的对话标记
- * - 斜体：区分对话与叙述
  * - 淡褐色背景：极淡的底色（透明度0.03），不干扰阅读
  * - 底部虚线：褐色虚线（透明度0.3），提供清晰但不突兀的视觉边界
  * - 适度内边距：左右各2px，保持文字呼吸感
  */
 .quoted {
-    font-style: italic;
     background-color: rgba(139, 69, 19, 0.03);
     border-bottom: 1px dashed rgba(139, 69, 19, 0.3);
     padding: 0 2px;
@@ -338,7 +336,6 @@ blockquote {
     padding: 0;
     padding-left: 2em;
     background: none;
-    font-style: italic;
 }
 
 /* 当段落以"曰："结尾且后接blockquote时，减小段落下边距 */
