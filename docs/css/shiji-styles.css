@@ -618,10 +618,45 @@ p > .para-num:only-child {
         right: 20px;
     }
     #settings-panel {
-        right: 20px;
+        right: auto !important;  /* 强制移除右侧定位 */
+        left: 50% !important;  /* 水平居中 */
+        transform: translateX(-50%);  /* 水平居中偏移 */
+        width: auto;  /* 移除固定宽度 */
+        max-width: 400px;  /* 最大宽度限制 */
+        min-width: 280px;  /* 最小宽度 */
     }
     #report-issue-button {
         right: 60px;  /* 在设置按钮左侧 40px */
+    }
+}
+
+/* 在更小屏幕上优化显示 */
+@media (max-width: 480px) {
+    #settings-panel {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;  /* 保持水平居中 */
+        width: calc(100% - 20px) !important;  /* 左右各留10px边距 */
+        max-width: none !important;  /* 移除最大宽度限制 */
+        min-width: auto !important;  /* 移除最小宽度限制 */
+        top: 80px !important;  /* 固定从顶部80px开始 */
+        max-height: calc(100vh - 100px);  /* 最大高度，底部留20px */
+        overflow-y: auto;  /* 内容过多时滚动 */
+    }
+
+    #settings-panel.active {
+        animation: slideInMobile 0.2s ease-out;
+    }
+
+    @keyframes slideInMobile {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
     }
 }
 
@@ -666,8 +701,40 @@ p > .para-num:only-child {
     }
 }
 
+/* 配置面板关闭按钮 */
+#settings-panel-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: #f5f5f5;
+    color: #666;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+    padding: 0;
+    z-index: 1;
+}
+
+#settings-panel-close:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+#settings-panel-close:active {
+    transform: scale(0.9);
+}
+
 #settings-panel h3 {
     margin: 0 0 15px 0;
+    padding-right: 35px;  /* 为关闭按钮留出空间 */
     font-size: 16px;
     font-weight: 600;
     color: #2c2c2c;

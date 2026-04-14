@@ -91,6 +91,13 @@
         // 清空现有内容
         panel.innerHTML = '';
 
+        // 添加关闭按钮
+        const closeButton = document.createElement('button');
+        closeButton.id = 'settings-panel-close';
+        closeButton.innerHTML = '✕';
+        closeButton.setAttribute('aria-label', '关闭设置面板');
+        panel.appendChild(closeButton);
+
         // 添加标题
         const title = document.createElement('h3');
         title.textContent = '显示设置';
@@ -603,6 +610,7 @@
         // 设置面板切换逻辑
         const settingsToggle = document.getElementById('settings-toggle');
         const settingsPanel = document.getElementById('settings-panel');
+        const closeButton = document.getElementById('settings-panel-close');
 
         if (settingsToggle && settingsPanel) {
             // 切换面板显示/隐藏
@@ -610,6 +618,14 @@
                 e.stopPropagation();
                 settingsPanel.classList.toggle('active');
             });
+
+            // 关闭按钮点击事件
+            if (closeButton) {
+                closeButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    settingsPanel.classList.remove('active');
+                });
+            }
 
             // 点击面板外关闭
             document.addEventListener('click', function(e) {
