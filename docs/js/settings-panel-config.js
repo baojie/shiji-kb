@@ -410,8 +410,12 @@
                     const pnElement = document.getElementById(`pn-${pnNum}`);
 
                     if (pnElement) {
-                        // 找到PN段落的父元素（<p>或<blockquote>）
-                        let paraElement = pnElement.parentElement;
+                        // 找到PN段落容器：
+                        // - 若pnElement是<a>标签（id在内联锚点上），取其父元素（<p>/<li>等）
+                        // - 若pnElement已是块级元素（如empty-para <div>，id直接在块上），直接使用
+                        let paraElement = (pnElement.tagName === 'A')
+                            ? pnElement.parentElement
+                            : pnElement;
 
                         // 检查是否已经插入过翻译
                         let translationDiv = paraElement.nextElementSibling;
@@ -423,6 +427,8 @@
                             translationDiv = document.createElement('div');
                             translationDiv.className = 'modern-translation pinyin-off';  // pinyin-off确保不受拼音影响
                             translationDiv.setAttribute('data-pn', pnNum);
+
+                            // translation.text 已是预渲染的HTML（含<span class="person">等语义标注）
                             translationDiv.innerHTML = `<div class="translation-content">${translation.text}</div>`;
 
                             // 插入到原文段落后

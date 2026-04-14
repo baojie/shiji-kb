@@ -39,18 +39,25 @@ description: "史记章节按PN段落进行文言文到白话文的翻译规范"
 1. **准确性**：忠实原文含义，不增删内容
 2. **流畅性**：使用现代汉语表达，符合当代阅读习惯
 3. **简洁性**：保持史记简练风格，避免冗长
-4. **保留实体标注**：必须完整保留原文中的所有实体标注符号：
+4. **保留实体标注**：必须完整保留原文中的所有实体标注符号（18类）：
    - 人名：〖@人名〗
    - 地名：〖=地名〗
    - 官职：〖;官职〗
-   - 社群：〖#社群〗
+   - 时间：〖%时间〗
    - 氏族：〖&氏族〗
-   - 典籍：〖$典籍〗
-   - 事件：〖^事件〗
-   - 器物：〖~器物〗
-   - 植物：〖+植物〗
-   - 动物：〖*动物〗
-   - 动词：⟦◈动词⟧（攻击/政务/刑罚）、⟦◉动词⟧（死亡/叛乱）
+   - 邦国：〖◆邦国〗
+   - 制度：〖^制度〗
+   - 族群：〖~族群〗
+   - 器物：〖•器物〗
+   - 天文：〖!天文〗
+   - 神话：〖?神话〗
+   - 生物：〖+生物〗
+   - 身份：〖#身份〗
+   - 数量：〖$数量〗
+   - 典籍：〖{典籍〗
+   - 礼仪：〖:礼仪〗
+   - 刑法：〖[刑法〗
+   - 思想：〖_思想〗
    - 消歧：〖TYPE 显示名|规范名〗
 
 5. **段落标题**：为每个PN段落提炼一个简短标题（4-8字），概括段落主要内容
@@ -96,20 +103,29 @@ python scripts/verify_pn_completeness.py doc/translation/NNN_章节名_白话.md
 ```
 
 ### 4. 生成JSON输出文件
-将翻译结果保存为 `docs/translations/NNN.json`，供前端动态加载：
 
+**⚠️ 关键改进（2026-04-14）**：JSON生成时在Python端完成语义标注渲染，前端直接使用渲染后的HTML
+
+```bash
+# 使用统一脚本生成JSON（自动进行语义标注渲染）
+python scripts/generate_translation_json.py 001
+
+# 批量生成多个章节
+python scripts/generate_translation_json.py 001 002 003
+
+# 生成所有已有翻译
+python scripts/generate_translation_json.py --all
+```
+
+**生成的JSON格式**：
 ```json
 {
-  "chapter": "NNN",
-  "title": "章节名",
+  "chapter": "001",
+  "title": "五帝本纪",
   "translations": {
     "1": {
-      "title": "段落标题",
-      "text": "译文内容（保留实体标注）"
-    },
-    "1.1": {
-      "title": "子段落标题",
-      "text": "译文内容（保留实体标注）"
+      "title": "黄帝简介",
+      "text": "<span class=\"person\" title=\"人名\">黄帝</span>是<span class=\"person\" title=\"人名\">少典</span>的儿子..."
     }
   }
 }
@@ -118,8 +134,14 @@ python scripts/verify_pn_completeness.py doc/translation/NNN_章节名_白话.md
 **JSON格式要求**：
 - 章节编号使用三位数字（如"001"）
 - PN编号作为键（如"1", "1.1", "2.3"）
-- 每个PN包含title（段落标题）和text（译文内容）
-- 译文内容必须完整保留实体标注符号
+- 每个PN包含title（段落标题）和text（译文内容，**已渲染为HTML**）
+- **text字段包含完整的HTML标签**，实体标注已转换为 `<span class="类型">` 格式
+- 使用 `scripts/semantic_tags.py` 的 `render_tags_to_html()` 函数进行渲染
+
+**为什么在Python端渲染？**
+- **避免双重维护**：标注规范可能会进化，只在Python端维护渲染逻辑，避免Python和JavaScript双重实现
+- **性能优化**：预渲染减少前端计算负担
+- **一致性保证**：所有页面使用相同的渲染逻辑（由 `semantic_tags.py` 统一提供）
 
 ### 5. 前端显示机制
 白话翻译通过以下机制显示：
@@ -128,6 +150,43 @@ python scripts/verify_pn_completeness.py doc/translation/NNN_章节名_白话.md
 - 在每个PN段落后动态插入 `<div class="modern-translation">` 容器
 - 当"智能分段"启用时，子段落的翻译随原文段落同步折叠
 - 翻译内容不受"拼音注释"和"繁简转换"功能影响（添加`pinyin-off`类）
+
+### 6. 视觉设计规范（2026-04-14更新）
+
+**设计目标**：白话翻译必须在视觉上与文言文原文形成清晰对比
+
+**视觉对比方案**：
+
+| 维度 | 文言文原文 | 白话翻译 |
+|------|-----------|---------|
+| **字体** | 宋体（衬线） | 黑体（无衬线） |
+| **背景色** | `#fdfdf8` 米黄色 | `#f0f8ff` 淡蓝色 |
+| **边框色** | `#8B4513` 褐色 | `#4682B4` 钢青色 |
+| **文字色** | `#2c2c2c` 纯黑 | `#2c3e50` 深蓝灰 |
+| **字号** | 1em | 0.92em（略小）|
+| **风格** | 传统、庄重 | 现代、清新 |
+
+**CSS实现** (`docs/css/shiji-styles.css`):
+```css
+.modern-translation {
+    font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    background-color: #f0f8ff;
+    border-left: 4px solid #4682B4;
+    color: #2c3e50;
+    font-size: 0.92em;
+    line-height: 1.85;
+    /* 圆角和阴影增强"卡片"感 */
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+```
+
+**设计理念**：
+- **字体对比**：宋体（传统）vs 黑体（现代）是最直观的区分手段
+- **色调对比**：暖色（古典）vs 冷色（现代）营造不同阅读氛围
+- **实体标注**：白话翻译中的实体保持原文颜色体系，但字重增加（500）以适配黑体
+
+**测试页面**：`docs/test/test-translation-rendering.html` 包含视觉对比测试
 
 ---
 

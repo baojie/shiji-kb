@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白话翻译语义渲染测试</title>
+    <link rel="stylesheet" href="../css/shiji-styles.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+            background-color: #fdfdf8;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+        }
+        .test-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        /* 原文样式：宋体 + 米黄背景 */
+        .original-text {
+            background-color: #fdfdf8;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #8B4513;
+            font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+            line-height: 2;
+            color: #2c2c2c;
+        }
+        .explanation {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #fffbf0;
+            border-left: 3px solid #ffc107;
+        }
+        .visual-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .comparison-item {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        .comparison-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>白话翻译语义渲染测试</h1>
+    <p>测试目的：验证白话翻译的视觉区分效果和语义标注渲染</p>
+
+    <div class="test-section">
+        <div class="test-title">测试1: 视觉对比 - 原文 vs 白话</div>
+        <div class="visual-comparison">
+            <div class="comparison-item">
+                <div class="comparison-label">📜 文言文原文（宋体）</div>
+                <div class="original-text">
+                    <span class="person" title="人名">黄帝</span>者，<span class="person" title="人名">少典</span>之子，姓<span class="dynasty" title="氏族">公孙</span>，名曰<span class="person" title="人名">轩辕</span>。生而<span class="mythical" title="神话">神灵</span>，弱而能言。
+                </div>
+            </div>
+            <div class="comparison-item">
+                <div class="comparison-label">💬 白话翻译（黑体）</div>
+                <div class="modern-translation" style="display: block;">
+                    <span class="person" title="人名">黄帝</span>是<span class="person" title="人名">少典</span>的儿子，姓<span class="dynasty" title="氏族">公孙</span>，名叫<span class="person" title="人名">轩辕</span>。他生下来就有神奇的灵性，年幼时就能说话。
+                </div>
+            </div>
+        </div>
+        <div class="explanation">
+            <strong>视觉差异：</strong>
+            <ul style="margin: 8px 0; padding-left: 20px;">
+                <li><strong>字体</strong>：原文使用宋体（衬线字体），白话使用黑体（无衬线字体）</li>
+                <li><strong>背景</strong>：原文米黄色背景，白话淡蓝色背景（#f0f8ff AliceBlue）</li>
+                <li><strong>边框</strong>：原文褐色边框，白话钢青色边框（#4682B4）</li>
+                <li><strong>文字颜色</strong>：原文纯黑，白话深蓝灰（#2c3e50）</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <div class="test-title">测试2: 原文与白话对照（完整段落）</div>
+        <div class="original-text">
+            <span class="person" title="人名">轩辕</span>之时，<span class="dynasty" title="氏族">神农氏</span>世衰。<span class="identity" title="身份">诸侯</span>相侵伐，暴虐<span class="identity" title="身份">百姓</span>，而<span class="dynasty" title="氏族">神农氏</span>弗能征。於是<span class="person" title="人名">轩辕</span>乃习用<span class="artifact" title="器物">干戈</span>，以征不享，<span class="identity" title="身份">诸侯</span>咸来宾从。
+        </div>
+        <div class="modern-translation" style="display: block;">
+            <span class="person" title="人名">轩辕</span>的时候，<span class="dynasty" title="氏族">神农氏</span>的势力衰落了。<span class="identity" title="身份">诸侯</span>之间互相侵犯攻打，残暴地欺压<span class="identity" title="身份">百姓</span>，而<span class="dynasty" title="氏族">神农氏</span>无力征讨他们。于是<span class="person" title="人名">轩辕</span>就操练<span class="artifact" title="器物">干戈</span>武备，用武力征讨那些不来朝贡的诸侯，<span class="identity" title="身份">诸侯</span>都来归附臣服。
+        </div>
+        <div class="explanation">
+            <strong>说明：</strong>两种样式形成清晰对比，读者一眼就能区分原文和翻译。实体标注（人名、氏族、身份、器物等）在两者中都有语义高亮。
+        </div>
+    </div>
+
+    <div class="test-section">
+        <div class="test-title">测试3: 从JSON动态加载的翻译</div>
+        <div id="dynamic-translation" class="modern-translation" style="display: block;">
+            加载中...
+        </div>
+        <div class="explanation">
+            <strong>说明：</strong>这是从 <code>translations/001.json</code> 动态加载的内容，验证JSON中预渲染的HTML能正确显示。
+        </div>
+    </div>
+
+    <div class="test-section">
+        <div class="test-title">测试4: 多种实体类型渲染</div>
+        <div class="modern-translation" style="display: block;">
+            <span class="person" title="人名">蚩尤</span>作乱，不服从帝的命令。于是<span class="person" title="人名">黄帝</span>就征调<span class="identity" title="身份">诸侯</span>的军队，在<span class="place" title="地名">涿鹿之野</span>与<span class="person" title="蚩尤">蚩尤</span>交战，最终擒获并杀死了<span class="person" title="人名">蚩尤</span>。向东到达<span class="place" title="地名">海</span>边，登上<span class="place" title="地名">丸山</span>和<span class="place" title="地名">岱宗</span>。向北驱逐<span class="tribe" title="族群">荤粥</span>部族，在<span class="place" title="地名">釜山</span>会合诸侯符契。
+        </div>
+        <div class="explanation">
+            <strong>实体类型：</strong>
+            <ul style="margin: 8px 0; padding-left: 20px;">
+                <li><span class="person" title="人名">人名</span>（褐色下划线）</li>
+                <li><span class="place" title="地名">地名</span>（赭褐色双下划线）</li>
+                <li><span class="identity" title="身份">身份</span>（钢青色）</li>
+                <li><span class="tribe" title="族群">族群</span>（紫色）</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 测试3: 从JSON加载翻译
+        async function loadTranslation() {
+            try {
+                const response = await fetch('../translations/001.json');
+                if (!response.ok) {
+                    throw new Error('加载失败');
+                }
+                const data = await response.json();
+                const translation = data.translations['1'];
+
+                document.getElementById('dynamic-translation').innerHTML = translation.text;
+
+                console.log('✓ JSON加载成功');
+                console.log('翻译内容:', translation.text);
+            } catch (error) {
+                document.getElementById('dynamic-translation').innerHTML =
+                    '<span style="color:red">加载失败: ' + error.message + '</span>';
+                console.error('加载失败:', error);
+            }
+        }
+
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', loadTranslation);
+    </script>
+</body>
+</html>

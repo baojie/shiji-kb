@@ -1089,16 +1089,36 @@ body.merge-paragraphs .dialogue {
 
 /* ======================================== 白话翻译样式 ======================================== */
 
-/* 白话翻译容器 */
+/* 白话翻译容器
+ * 设计理念：
+ * 1. 字体：使用无衬线字体（思源黑体），与原文宋体形成对比
+ * 2. 背景：淡蓝色背景，区别于原文的米黄色背景
+ * 3. 边框：左侧蓝色边框，视觉上引导读者区分
+ * 4. 字号：略小于原文，避免喧宾夺主
+ */
 .modern-translation {
-    background-color: #f8f9fa;
-    border-left: 4px solid #6c757d;
-    padding: 12px 16px;
-    margin: 8px 0 16px 0;
-    border-radius: 4px;
-    font-size: 0.95em;
-    line-height: 1.8;
-    color: #495057;
+    /* 字体：使用无衬线字体（黑体），与原文宋体形成对比 */
+    font-family: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+
+    /* 背景：淡蓝色调，营造现代感 */
+    background-color: #f0f8ff;  /* AliceBlue - 淡雅的蓝色 */
+
+    /* 边框：左侧蓝色粗边框，视觉引导 */
+    border-left: 4px solid #4682B4;  /* SteelBlue - 钢青色 */
+
+    /* 间距与布局 */
+    padding: 14px 18px;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+
+    /* 文字样式 */
+    font-size: 0.92em;  /* 略小于原文 */
+    line-height: 1.85;   /* 行高适中，便于阅读 */
+    color: #2c3e50;      /* 深蓝灰色，区别于原文的纯黑 */
+
+    /* 阴影：轻微阴影增强层次感 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
     display: none;  /* 默认隐藏 */
 }
 
@@ -1107,9 +1127,34 @@ body.show-translation .modern-translation {
     display: block;
 }
 
+/* 白话译文标签（伪元素，不修改HTML） */
+.modern-translation::before {
+    content: "白话译文";
+    display: block;
+    font-size: 0.72em;
+    font-weight: 600;
+    color: #4682B4;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    opacity: 0.85;
+}
+
 /* 翻译内容 */
 .modern-translation .translation-content {
     /* 继承父容器样式 */
+}
+
+/* 白话翻译中的实体标注：调整颜色以适配淡蓝背景 */
+.modern-translation .person {
+    font-weight: 500;  /* 稍微加粗，增强可读性 */
+}
+
+.modern-translation .place {
+    font-weight: 500;
+}
+
+.modern-translation .dynasty {
+    font-weight: 500;
 }
 
 /* 智能分段模式下，隐藏子段落的翻译（随原文段落折叠） */
@@ -1120,9 +1165,19 @@ body.show-translation .modern-translation {
 /* 打印时的样式 */
 @media print {
     .modern-translation {
-        background-color: #f8f9fa;
-        border-left: 2px solid #6c757d;
+        background-color: #f0f8ff;
+        border-left: 2px solid #4682B4;
         page-break-inside: avoid;
+        box-shadow: none;  /* 打印时移除阴影 */
+    }
+}
+
+/* 移动端响应式优化 */
+@media (max-width: 768px) {
+    .modern-translation {
+        font-size: 0.9em;
+        padding: 12px 14px;
+        margin: 8px 0 16px 0;
     }
 }
 
