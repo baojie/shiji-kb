@@ -32233,6 +32233,11 @@
         "ruler": "楚康王",
         "method": "nearby_ruler",
         "ce_year": -557
+      },
+      "四年": {
+        "ruler": "楚康王",
+        "method": "nearby_ruler",
+        "ce_year": -556
       }
     },
     "38": {
@@ -34223,20 +34228,10 @@
       }
     },
     "3": {
-      "十一年": {
-        "ruler": "毕万",
-        "method": "raw_nearby",
-        "ruler_key": "毕万十一年"
-      },
       "二十一年": {
         "ruler": "晋献公",
         "method": "nearby_ruler",
         "ce_year": -656
-      },
-      "十九年": {
-        "ruler": "晋献公",
-        "method": "nearby_ruler",
-        "ce_year": -658
       }
     },
     "5": {
@@ -34249,11 +34244,6 @@
         "ruler": "悼公",
         "method": "raw_nearby",
         "ruler_key": "悼公十一年"
-      },
-      "八年": {
-        "ruler": "魏绛",
-        "method": "raw_nearby",
-        "ruler_key": "魏绛八年"
       }
     },
     "7": {
@@ -34779,13 +34769,6 @@
         "ce_year": -285
       }
     },
-    "66": {
-      "三年": {
-        "ruler": "魏昭王",
-        "method": "sequential",
-        "ce_year": -293
-      }
-    },
     "68": {
       "二十年": {
         "ruler": "魏昭王",
@@ -34922,12 +34905,12 @@
     "9": {
       "元年": {
         "ruler": "韩景侯",
-        "method": "section_ruler",
+        "method": "nearby_ruler",
         "ce_year": -408
       },
       "二年": {
         "ruler": "韩景侯",
-        "method": "sequential",
+        "method": "nearby_ruler",
         "ce_year": -407
       }
     },
@@ -35689,11 +35672,11 @@
         "ce_year": -201
       }
     },
-    "7.1": {
-      "二十六年": {
-        "ruler": "遂",
-        "method": "raw_nearby",
-        "ruler_key": "遂二十六年"
+    "6.1": {
+      "二年": {
+        "ruler": "孝文",
+        "method": "nearby_ruler",
+        "ce_year": -178
       }
     }
   },
