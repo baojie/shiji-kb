@@ -702,6 +702,32 @@ p > .para-num:only-child {
     color: #2c2c2c;
 }
 
+.setting-item.setting-slider {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    cursor: default;
+}
+
+.setting-slider-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #2c2c2c;
+}
+
+.setting-slider-value {
+    font-size: 13px;
+    color: #666;
+    font-variant-numeric: tabular-nums;
+}
+
+.setting-item.setting-slider input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
 /* 关闭语法高亮时的样式 - 覆盖所有实体类型 */
 body.syntax-highlight-off .person,
 body.syntax-highlight-off .place,

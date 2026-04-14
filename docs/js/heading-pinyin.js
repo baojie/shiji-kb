@@ -355,16 +355,17 @@
       return;
     }
 
-    // 处理标题
-    document.querySelectorAll("h1, h2, h3").forEach(function (el) {
-      addPinyinToElement(el, pinyinFn);
-    });
+    // 注意：不再处理 h1/h2/h3 标题以及 settings-panel 等 UI 容器，
+    // 拼音仅作用于文章正文（p / blockquote / li）。
 
     // 收集需要处理的正文元素
     const flowElements = [];
 
+    // 非正文容器：导航、设置面板、页眉页脚等 UI 区域不注拼音
+    const EXCLUDE_SELECTOR = "nav, #settings-panel, #settings-toggle, header, footer, aside, .settings-panel, .panel, .toolbar";
+
     function collectFlowElement(el) {
-      if (el.closest("nav")) {
+      if (el.closest(EXCLUDE_SELECTOR)) {
         return;
       }
       if (el.dataset.pinyinAdded) {

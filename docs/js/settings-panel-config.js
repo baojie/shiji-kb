@@ -54,8 +54,29 @@
             onChange: function(enabled) {
                 updateModernTranslation(enabled);
             }
+        },
+        {
+            type: 'slider',
+            id: 'font-size',
+            label: '字体大小',
+            storageKey: 'shiji-font-size',
+            defaultValue: 16,
+            min: 12,
+            max: 28,
+            step: 1,
+            unit: 'px',
+            onChange: function(value) {
+                updateFontSize(value);
+            }
         }
     ];
+
+    /**
+     * 更新字体大小（作用于 body，其他元素多用 em 相对单位）
+     */
+    function updateFontSize(value) {
+        document.body.style.fontSize = value + 'px';
+    }
 
     /**
      * 自动生成配置面板HTML
@@ -79,8 +100,48 @@
         const settingGroup = document.createElement('div');
         settingGroup.className = 'setting-group';
 
-        // 为每个配置项创建checkbox
+        // 为每个配置项创建控件
         SETTINGS_CONFIG.forEach(config => {
+            if (config.type === 'slider') {
+                const item = document.createElement('div');
+                item.className = 'setting-item setting-slider';
+
+                const savedRaw = localStorage.getItem(config.storageKey);
+                const value = savedRaw === null ? config.defaultValue : Number(savedRaw);
+
+                const labelRow = document.createElement('div');
+                labelRow.className = 'setting-slider-label';
+                const span = document.createElement('span');
+                span.textContent = config.label;
+                const valueSpan = document.createElement('span');
+                valueSpan.className = 'setting-slider-value';
+                valueSpan.textContent = value + (config.unit || '');
+                labelRow.appendChild(span);
+                labelRow.appendChild(valueSpan);
+
+                const slider = document.createElement('input');
+                slider.type = 'range';
+                slider.id = config.id;
+                slider.min = config.min;
+                slider.max = config.max;
+                slider.step = config.step || 1;
+                slider.value = value;
+
+                slider.addEventListener('input', function() {
+                    const v = Number(this.value);
+                    valueSpan.textContent = v + (config.unit || '');
+                    localStorage.setItem(config.storageKey, String(v));
+                    config.onChange(v);
+                });
+
+                item.appendChild(labelRow);
+                item.appendChild(slider);
+                settingGroup.appendChild(item);
+
+                config.onChange(value);
+                return;
+            }
+
             const label = document.createElement('label');
             label.className = 'setting-item';
 
