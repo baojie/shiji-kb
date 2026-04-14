@@ -134,6 +134,10 @@ python scripts/generate_translation_json.py --all
 **JSON格式要求**：
 - 章节编号使用三位数字（如"001"）
 - PN编号作为键（如"1", "1.1", "2.3"）
+- **范围键**：当多个连续子段落共享一条翻译时，使用 `"起始-结束"` 格式（如 `"12.1-12.3"`, `"12.4-12.6"`）
+  - 范围键的翻译覆盖该范围内所有子段落的内容
+  - 前端会以范围起始PN（`12.1`）为定位锚点，将翻译框插入包含这些`<li>`的`<ul>`之后
+  - 同一`<ul>`后的多个范围翻译按JSON键顺序依次追加
 - 每个PN包含title（段落标题）和text（译文内容，**已渲染为HTML**）
 - **text字段包含完整的HTML标签**，实体标注已转换为 `<span class="类型">` 格式
 - 使用 `scripts/semantic_tags.py` 的 `render_tags_to_html()` 函数进行渲染
@@ -147,7 +151,9 @@ python scripts/generate_translation_json.py --all
 白话翻译通过以下机制显示：
 - 翻译数据存储在 `docs/translations/NNN.json`
 - 用户点击"白话翻译"开关时，前端fetch对应JSON文件
-- 在每个PN段落后动态插入 `<div class="modern-translation">` 容器
+- 在每个PN段落后动态插入 `<div class="modern-translation" data-pn="键值">` 容器
+- **`<li>` 子段落处理**：HTML中部分子段落（如12.1-12.11）位于`<ul>/<ol>`内的`<li>`元素中，块级`<div>`无法合法插入列表内部。前端会先跳出到列表层级（`<ul>`），再将翻译框插在整个列表之后
+- **范围键**：JSON中的范围键（如`"12.1-12.3"`）以起始PN（`12.1`）为DOM定位锚点；同一列表后的多个范围翻译按键顺序追加，不会倒序
 - 当"智能分段"启用时，子段落的翻译随原文段落同步折叠
 - 翻译内容不受"拼音注释"和"繁简转换"功能影响（添加`pinyin-off`类）
 

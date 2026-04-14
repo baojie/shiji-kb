@@ -236,8 +236,26 @@ def render_tags_to_html(text: str, normalize_legacy: bool = False) -> str:
         replacement = f'<span class="{css_class}" title="{title}">\\1</span>'
         text = re.sub(pattern, replacement, text)
 
-    # 处理动词标注（保留显示，不高亮）
-    text = re.sub(r'⟦[◈◉○◇]([^⟦⟧|]*)(?:\|[^⟦⟧]*)?⟧', r'\1', text)
+    # 处理动词标注 → 渲染为 HTML span
+    VERB_TYPES = {
+        '◈': ('verb-military', '军事动词'),
+        '◉': ('verb-penalty', '刑罚动词'),
+        '○': ('verb-political', '政治动词'),
+        '◇': ('verb-economic', '经济动词'),
+    }
+    for marker, (css_class, title) in VERB_TYPES.items():
+        # ⟦◈动词⟧ 格式（含消歧 ⟦◈显示|规范⟧）
+        text = re.sub(
+            rf'⟦{re.escape(marker)}([^⟦⟧|]*)(?:\|[^⟦⟧]*)?⟧',
+            rf'<span class="{css_class}" title="{title}">\1</span>',
+            text
+        )
+        # 〖◉动词〗 格式（翻译文件中使用）
+        text = re.sub(
+            rf'〖{re.escape(marker)}\s*([^〖〗|]*)(?:\|[^〖〗]*)?〗',
+            rf'<span class="{css_class}" title="{title}">\1</span>',
+            text
+        )
 
     # 清理残留的未闭合标签符号
     text = text.replace('〗', '').replace('⟦', '').replace('⟧', '')

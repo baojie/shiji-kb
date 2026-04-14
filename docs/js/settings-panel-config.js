@@ -48,6 +48,7 @@
         {
             id: 'modern-translation',
             label: '白话翻译',
+            labelHTML: '白话翻译 <span style="font-size:0.8em;color:#999;font-weight:normal;">（实验，仅001章）</span>',
             storageKey: 'shiji-modern-translation',
             defaultValue: false,  // 默认关闭
             onChange: function(enabled) {
@@ -186,6 +187,15 @@
                     elem.style.display = '';
                 }
                 elem.removeAttribute('data-hidden-by-merge');
+            });
+
+            // 恢复合并过的顶级翻译框内容
+            document.querySelectorAll('.modern-translation[data-original-translation]').forEach(elem => {
+                const contentEl = elem.querySelector('.translation-content');
+                if (contentEl) {
+                    contentEl.innerHTML = elem.getAttribute('data-original-translation');
+                }
+                elem.removeAttribute('data-original-translation');
             });
 
             // 恢复对话和引用元素的样式
@@ -354,6 +364,31 @@
                     elem.style.textIndent = '0';
                     elem.style.paddingLeft = '0';
                 });
+
+                // 将子段落的白话翻译合并到顶级翻译框中
+                // topElem.nextElementSibling 是顶级段落的翻译框（若翻译已加载）
+                const topTransDiv = topElem.nextElementSibling;
+                if (topTransDiv && topTransDiv.classList.contains('modern-translation') &&
+                    !topTransDiv.hasAttribute('data-hidden-by-merge')) {
+                    const subTransParts = [];
+                    document.querySelectorAll('.modern-translation[data-pn]').forEach(subTrans => {
+                        const pn = subTrans.getAttribute('data-pn');
+                        // 匹配属于本顶级编号的子翻译，如 topNum="1" 匹配 "1.1", "1.2" ...
+                        if (pn && pn.startsWith(topNum + '.') && subTrans.hasAttribute('data-hidden-by-merge')) {
+                            const contentEl = subTrans.querySelector('.translation-content');
+                            if (contentEl) subTransParts.push(contentEl.innerHTML);
+                        }
+                    });
+                    if (subTransParts.length > 0) {
+                        const contentEl = topTransDiv.querySelector('.translation-content');
+                        if (contentEl) {
+                            // 保存原始内容以便恢复
+                            topTransDiv.setAttribute('data-original-translation', contentEl.innerHTML);
+                            // 追加子翻译内容
+                            contentEl.innerHTML += subTransParts.join('');
+                        }
+                    }
+                }
             });
 
             // 兜底处理：对于所有未被合并的子段落（孤立子段落，没有对应的顶级段落）
@@ -405,9 +440,15 @@
                 console.log(`[settings-panel] 已加载章节${chapterNum}的白话翻译`);
 
                 // 为每个PN段落插入翻译
-                Object.keys(translationData.translations).forEach(pnNum => {
-                    const translation = translationData.translations[pnNum];
-                    const pnElement = document.getElementById(`pn-${pnNum}`);
+                // 支持范围键（如 '12.1-12.3'）：取起始pn作为定位锚点
+                Object.keys(translationData.translations).forEach(pnKey => {
+                    const translation = translationData.translations[pnKey];
+
+                    // 解析范围键：'12.1-12.3' → startPn='12.1'，普通键直接使用
+                    const dashIdx = pnKey.indexOf('-');
+                    const startPn = (dashIdx > 0) ? pnKey.slice(0, dashIdx) : pnKey;
+
+                    const pnElement = document.getElementById(`pn-${startPn}`);
 
                     if (pnElement) {
                         // 找到PN段落容器：
@@ -417,22 +458,42 @@
                             ? pnElement.parentElement
                             : pnElement;
 
-                        // 检查是否已经插入过翻译
-                        let translationDiv = paraElement.nextElementSibling;
-                        if (translationDiv && translationDiv.classList.contains('modern-translation')) {
+                        // 检查是否已经插入过翻译（用 data-pn 精确匹配，避免位置判断偏差）
+                        let translationDiv = document.querySelector(`.modern-translation[data-pn="${pnKey}"]`);
+                        if (translationDiv) {
                             // 已存在，只需显示
                             translationDiv.style.display = 'block';
                         } else {
                             // 创建翻译容器
                             translationDiv = document.createElement('div');
                             translationDiv.className = 'modern-translation pinyin-off';  // pinyin-off确保不受拼音影响
-                            translationDiv.setAttribute('data-pn', pnNum);
+                            translationDiv.setAttribute('data-pn', pnKey);
 
                             // translation.text 已是预渲染的HTML（含<span class="person">等语义标注）
                             translationDiv.innerHTML = `<div class="translation-content">${translation.text}</div>`;
 
                             // 插入到原文段落后
-                            paraElement.parentNode.insertBefore(translationDiv, paraElement.nextSibling);
+                            // 若 paraElement 在 <ul>/<ol> 中（如 <li> 子段落），
+                            // 块级 <div> 不能插入列表内部，需先跳出到列表层级
+                            let insertAnchor = paraElement;
+                            while (insertAnchor.parentNode &&
+                                   (insertAnchor.parentNode.tagName === 'UL' ||
+                                    insertAnchor.parentNode.tagName === 'OL')) {
+                                insertAnchor = insertAnchor.parentNode;
+                            }
+                            // 再跳过后续紧跟的 <ul>/<ol>（如 empty-para 后的延续列表）
+                            let nextSib = insertAnchor.nextElementSibling;
+                            while (nextSib && (nextSib.tagName === 'UL' || nextSib.tagName === 'OL')) {
+                                insertAnchor = nextSib;
+                                nextSib = insertAnchor.nextElementSibling;
+                            }
+                            // 跳过已插入的翻译框，保持文档顺序（避免多个范围翻译倒序插入）
+                            while (nextSib && nextSib.classList &&
+                                   nextSib.classList.contains('modern-translation')) {
+                                insertAnchor = nextSib;
+                                nextSib = insertAnchor.nextElementSibling;
+                            }
+                            insertAnchor.parentNode.insertBefore(translationDiv, insertAnchor.nextSibling);
                         }
                     }
                 });

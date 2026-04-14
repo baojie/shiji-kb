@@ -146,6 +146,10 @@
             if (node.classList.contains('para-num')) {
                 return true;
             }
+            // 白话翻译保持简体（现代白话文无需繁化）
+            if (node.classList.contains('modern-translation')) {
+                return true;
+            }
         }
 
         return false;
@@ -168,9 +172,16 @@
         console.log('[converter] 开始转换为繁体...');
         const startTime = performance.now();
 
+        // 白话翻译保持简体：转换前保存内容，转换后恢复
+        const transElems = document.querySelectorAll('.modern-translation');
+        const savedHTML = new Map();
+        transElems.forEach(el => savedHTML.set(el, el.innerHTML));
+
         // 转换主内容区域
-        const mainContent = document.body;
-        convertNode(mainContent, true);
+        convertNode(document.body, true);
+
+        // 恢复白话翻译为简体
+        savedHTML.forEach((html, el) => { el.innerHTML = html; });
 
         currentMode = 'traditional';
         document.body.classList.add('traditional-mode');
@@ -191,9 +202,16 @@
         console.log('[converter] 恢复简体...');
         const startTime = performance.now();
 
+        // 白话翻译保持简体：转换前保存内容，转换后恢复
+        const transElems = document.querySelectorAll('.modern-translation');
+        const savedHTML = new Map();
+        transElems.forEach(el => savedHTML.set(el, el.innerHTML));
+
         // 恢复主内容区域
-        const mainContent = document.body;
-        convertNode(mainContent, false);
+        convertNode(document.body, false);
+
+        // 恢复白话翻译（防止 convertNode 误清缓存导致内容丢失）
+        savedHTML.forEach((html, el) => { el.innerHTML = html; });
 
         currentMode = 'simplified';
         document.body.classList.remove('traditional-mode');
