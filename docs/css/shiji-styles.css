@@ -1087,3 +1087,42 @@ body.merge-paragraphs .dialogue {
     }
 }
 
+/* ======================================== 白话翻译样式 ======================================== */
+
+/* 白话翻译容器 */
+.modern-translation {
+    background-color: #f8f9fa;
+    border-left: 4px solid #6c757d;
+    padding: 12px 16px;
+    margin: 8px 0 16px 0;
+    border-radius: 4px;
+    font-size: 0.95em;
+    line-height: 1.8;
+    color: #495057;
+    display: none;  /* 默认隐藏 */
+}
+
+/* 当启用白话翻译时显示 */
+body.show-translation .modern-translation {
+    display: block;
+}
+
+/* 翻译内容 */
+.modern-translation .translation-content {
+    /* 继承父容器样式 */
+}
+
+/* 智能分段模式下，隐藏子段落的翻译（随原文段落折叠） */
+.modern-translation[data-hidden-by-merge="true"] {
+    display: none !important;
+}
+
+/* 打印时的样式 */
+@media print {
+    .modern-translation {
+        background-color: #f8f9fa;
+        border-left: 2px solid #6c757d;
+        page-break-inside: avoid;
+    }
+}
+

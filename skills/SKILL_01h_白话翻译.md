@@ -95,24 +95,39 @@ python scripts/verify_entity_tags.py doc/translation/NNN_章节名_白话.md
 python scripts/verify_pn_completeness.py doc/translation/NNN_章节名_白话.md chapter_md/NNN_章节名.tagged.md
 ```
 
-### 4. 输出格式
-```markdown
-# 章节名 白话翻译
+### 4. 生成JSON输出文件
+将翻译结果保存为 `docs/translations/NNN.json`，供前端动态加载：
 
-## [1] 段落标题
-译文内容...
-
-## [1.1] 子段落标题
-译文内容...
-
----
-
-## 原文与译文对照
-### [1] 原文
-[原文]
-### [1] 译文
-[译文]
+```json
+{
+  "chapter": "NNN",
+  "title": "章节名",
+  "translations": {
+    "1": {
+      "title": "段落标题",
+      "text": "译文内容（保留实体标注）"
+    },
+    "1.1": {
+      "title": "子段落标题",
+      "text": "译文内容（保留实体标注）"
+    }
+  }
+}
 ```
+
+**JSON格式要求**：
+- 章节编号使用三位数字（如"001"）
+- PN编号作为键（如"1", "1.1", "2.3"）
+- 每个PN包含title（段落标题）和text（译文内容）
+- 译文内容必须完整保留实体标注符号
+
+### 5. 前端显示机制
+白话翻译通过以下机制显示：
+- 翻译数据存储在 `docs/translations/NNN.json`
+- 用户点击"白话翻译"开关时，前端fetch对应JSON文件
+- 在每个PN段落后动态插入 `<div class="modern-translation">` 容器
+- 当"智能分段"启用时，子段落的翻译随原文段落同步折叠
+- 翻译内容不受"拼音注释"和"繁简转换"功能影响（添加`pinyin-off`类）
 
 ---
 

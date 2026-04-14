@@ -179,7 +179,12 @@
             });
 
             document.querySelectorAll('[data-hidden-by-merge]').forEach(elem => {
-                elem.style.display = '';
+                // 对于白话翻译，需要根据开关状态决定是否显示
+                if (elem.classList.contains('modern-translation')) {
+                    elem.style.display = document.body.classList.contains('show-translation') ? 'block' : 'none';
+                } else {
+                    elem.style.display = '';
+                }
                 elem.removeAttribute('data-hidden-by-merge');
             });
 
@@ -302,6 +307,13 @@
                                 // 隐藏元素
                                 currentElem.style.display = 'none';
                                 currentElem.setAttribute('data-hidden-by-merge', 'true');
+
+                                // 同时隐藏对应的白话翻译
+                                const nextElem = currentElem.nextElementSibling;
+                                if (nextElem && nextElem.classList.contains('modern-translation')) {
+                                    nextElem.style.display = 'none';
+                                    nextElem.setAttribute('data-hidden-by-merge', 'true');
+                                }
                             } else {
                                 // 属于不同的顶级编号，停止收集
                                 break;
@@ -364,17 +376,73 @@
 
     /**
      * 更新白话翻译显示
-     * 当启用时，显示白话翻译内容；关闭时隐藏
+     * 当启用时，加载并显示白话翻译内容；关闭时隐藏
      * 注意：白话翻译不受拼音和繁简转换影响
      */
-    function updateModernTranslation(enabled) {
-        // TODO: 实现白话翻译显示/隐藏功能
-        // 当前为占位函数，等待翻译内容加载机制完善后实现
+    async function updateModernTranslation(enabled) {
         if (enabled) {
             document.body.classList.add('show-translation');
-            console.log('[settings-panel] 白话翻译已启用');
+
+            // 从页面URL获取章节编号
+            const pathMatch = window.location.pathname.match(/\/(\d{3})_/);
+            if (!pathMatch) {
+                console.warn('[settings-panel] 无法从URL提取章节编号');
+                return;
+            }
+
+            const chapterNum = pathMatch[1];
+            const translationUrl = `../translations/${chapterNum}.json`;
+
+            try {
+                // 加载翻译数据
+                const response = await fetch(translationUrl);
+                if (!response.ok) {
+                    console.log(`[settings-panel] 章节${chapterNum}暂无白话翻译`);
+                    return;
+                }
+
+                const translationData = await response.json();
+                console.log(`[settings-panel] 已加载章节${chapterNum}的白话翻译`);
+
+                // 为每个PN段落插入翻译
+                Object.keys(translationData.translations).forEach(pnNum => {
+                    const translation = translationData.translations[pnNum];
+                    const pnElement = document.getElementById(`pn-${pnNum}`);
+
+                    if (pnElement) {
+                        // 找到PN段落的父元素（<p>或<blockquote>）
+                        let paraElement = pnElement.parentElement;
+
+                        // 检查是否已经插入过翻译
+                        let translationDiv = paraElement.nextElementSibling;
+                        if (translationDiv && translationDiv.classList.contains('modern-translation')) {
+                            // 已存在，只需显示
+                            translationDiv.style.display = 'block';
+                        } else {
+                            // 创建翻译容器
+                            translationDiv = document.createElement('div');
+                            translationDiv.className = 'modern-translation pinyin-off';  // pinyin-off确保不受拼音影响
+                            translationDiv.setAttribute('data-pn', pnNum);
+                            translationDiv.innerHTML = `<div class="translation-content">${translation.text}</div>`;
+
+                            // 插入到原文段落后
+                            paraElement.parentNode.insertBefore(translationDiv, paraElement.nextSibling);
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error('[settings-panel] 加载白话翻译失败:', error);
+            }
+
         } else {
             document.body.classList.remove('show-translation');
+
+            // 隐藏所有翻译
+            document.querySelectorAll('.modern-translation').forEach(elem => {
+                elem.style.display = 'none';
+            });
+
             console.log('[settings-panel] 白话翻译已关闭');
         }
     }
