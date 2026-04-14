@@ -62,6 +62,15 @@ ENTITY_TYPES = [
     ('concept',     r'〖_([^〖〗\n]+)〗',   'concept',     '思想',     'concept.html'),
 ]
 
+# 动词类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
+# v3.0: 动词关系标注，⟦TYPE content⟧ 格式
+VERB_TYPES = [
+    ('verb-military',  r'⟦◈([^⟦⟧\n]+)⟧', 'verb-military',  '军事动词', 'verb-military.html'),
+    ('verb-penalty',   r'⟦◉([^⟦⟧\n]+)⟧', 'verb-penalty',   '刑罚动词', 'verb-penalty.html'),
+    ('verb-political', r'⟦○([^⟦⟧\n]+)⟧', 'verb-political', '政治动词', 'verb-political.html'),
+    ('verb-economic',  r'⟦◇([^⟦⟧\n]+)⟧', 'verb-economic',  '经济动词', 'verb-economic.html'),
+]
+
 # 段落编号模式
 PARA_NUM_PATTERN = r'\[(\d+(?:\.\d+)*)\]'
 
@@ -135,6 +144,14 @@ def extract_entities_from_file(file_path):
                     display, canonical = parse_inline_disambig(raw)
                     if canonical and is_valid_entity(canonical):
                         results.append((type_key, canonical, chapter_id, current_para))
+
+        # 提取各类动词
+        for type_key, pattern, css_class, label, _ in VERB_TYPES:
+            for m in re.finditer(pattern, line):
+                raw = m.group(1).strip()
+                display, canonical = parse_inline_disambig(raw)
+                if canonical and is_valid_entity(canonical):
+                    results.append((type_key, canonical, chapter_id, current_para))
 
     return results
 
@@ -335,7 +352,9 @@ def build_index(chapter_dir, alias_map, disambig_map=None):
     """
     if disambig_map is None:
         disambig_map = {}
+    # 初始化索引，包含实体类型和动词类型
     index = {t[0]: {} for t in ENTITY_TYPES}
+    index.update({t[0]: {} for t in VERB_TYPES})
 
     # 扫描所有文件
     tagged_files = sorted(chapter_dir.glob('*.tagged.md'))
@@ -433,6 +452,11 @@ ENTITY_DESCRIPTIONS = {
     'ritual':       ('礼仪', '〖:〗', '史记中出现的礼仪名称，包括冠婚丧祭、朝聘燕享、封禅郊祀等国家典礼与社会礼制。'),
     'legal':        ('刑法', '〖[〗', '史记中出现的刑罚名称与法律术语，包括五刑（墨、劓、刖、宫、大辟）、连坐、族诛等刑罚制度及具体罪名。'),
     'concept':      ('思想', '〖_〗', '史记中出现的思想、学说与哲学概念，包括儒家仁义、道家无为、法家刑名等各家学说核心术语及价值观念。'),
+    # 动词类型描述
+    'verb-military':  ('军事动词', '⟦◈⟧', '史记中表示军事行动的动词，包括征伐、攻击、防御、行军、布阵等战争相关动作。'),
+    'verb-penalty':   ('刑罚动词', '⟦◉⟧', '史记中表示刑罚处置的动词，包括诛杀、斩首、族灭、流放、囚禁等法律惩戒行为。'),
+    'verb-political': ('政治动词', '⟦○⟧', '史记中表示政治活动的动词，包括封赏、任命、朝见、结盟、废立等政治行为。'),
+    'verb-economic':  ('经济动词', '⟦◇⟧', '史记中表示经济活动的动词，包括赋税、贸易、赏赐、征收、分配等经济行为。'),
 }
 
 
@@ -1028,14 +1052,14 @@ document.getElementById('filter-input').addEventListener('input', filterEvents);
 
 
 def generate_landing_page(index):
-    """生成实体索引总览页面"""
+    """生成知识索引总览页面"""
     lines = []
     lines.append('<!DOCTYPE html>')
     lines.append('<html lang="zh-CN">')
     lines.append('<head>')
     lines.append('    <meta charset="UTF-8">')
     lines.append('    <meta name="viewport" content="width=device-width, initial-scale=1.0">')
-    lines.append('    <title>实体索引 - 史记知识库</title>')
+    lines.append('    <title>知识索引 - 史记知识库</title>')
     lines.append('    <link rel="stylesheet" href="../css/shiji-styles.css">')
     lines.append('    <link rel="stylesheet" href="../css/entity-index.css">')
     lines.append('</head>')
@@ -1045,8 +1069,8 @@ def generate_landing_page(index):
     lines.append('    <a href="../index.html" class="nav-home">回到主页</a>')
     lines.append('</nav>')
 
-    lines.append('<h1>命名实体索引</h1>')
-    lines.append('<p>史记全文命名实体索引，按实体类型分类，各类型按出现次数降序排列。点击类型名称进入详细索引页面。</p>')
+    lines.append('<h1>知识索引</h1>')
+    lines.append('<p>史记全文知识索引，包括命名实体索引和动词关系索引，按类型分类，各类型按出现次数降序排列。点击类型名称进入详细索引页面。</p>')
 
     lines.append('<div class="entity-type-grid">')
 
@@ -1115,6 +1139,31 @@ def generate_landing_page(index):
 
     lines.append('</div>')
 
+    # 动词关系索引区域
+    lines.append('<h2 style="margin-top: 40px;">动词关系索引</h2>')
+    lines.append('<p>史记全文动词关系索引，标注军事、刑罚、政治、经济等语义动词。</p>')
+    lines.append('<div class="entity-type-grid">')
+
+    # 收集动词类型统计
+    verb_stats = []
+    for type_key, _, css_class, label, filename in VERB_TYPES:
+        entries = index.get(type_key, {})
+        count = len(entries)
+        total = sum(e['count'] for e in entries.values())
+        if count == 0:
+            continue
+        verb_stats.append((type_key, css_class, label, filename, count, total))
+    verb_stats.sort(key=lambda x: x[5], reverse=True)
+
+    for type_key, css_class, label, filename, count, total in verb_stats:
+        lines.append(f'  <a href="{filename}" class="entity-type-card">')
+        lines.append(f'    <span class="type-label {css_class}">{label}</span>')
+        lines.append(f'    <span class="type-count">{count} 个条目</span>')
+        lines.append(f'    <span class="type-total">{total} 次出现</span>')
+        lines.append(f'  </a>')
+
+    lines.append('</div>')
+
     lines.append('<nav class="chapter-nav">')
     lines.append('    <a href="../index.html" class="nav-home">回到主页</a>')
     lines.append('</nav>')
@@ -1158,6 +1207,14 @@ def main():
         if count > 0:
             print(f"  {label}: {count} 个条目, {total} 次出现")
 
+    # 动词统计
+    for type_key, _, _, label, _ in VERB_TYPES:
+        entries = index[type_key]
+        count = len(entries)
+        total = sum(e['count'] for e in entries.values())
+        if count > 0:
+            print(f"  {label}: {count} 个条目, {total} 次出现")
+
     # 事件统计
     event_count = len(event_index)
     event_total = sum(e['count'] for e in event_index.values())
@@ -1183,6 +1240,18 @@ def main():
         if type_key == 'time':
             entries = {k: v for k, v in entries.items()
                        if not _NUMERAL_RE.match(k)}
+
+        page_html = generate_type_page(type_key, css_class, label, filename, entries)
+        output_path = OUTPUT_DIR / filename
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(page_html)
+        print(f"  生成: {output_path} ({len(entries)} 条)")
+
+    # 生成动词类型页面
+    for type_key, _, css_class, label, filename in VERB_TYPES:
+        entries = index[type_key]
+        if not entries:
+            continue
 
         page_html = generate_type_page(type_key, css_class, label, filename, entries)
         output_path = OUTPUT_DIR / filename
