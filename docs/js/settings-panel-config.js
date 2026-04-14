@@ -44,6 +44,15 @@
             onChange: function(enabled) {
                 updateSmartParagraph(enabled);
             }
+        },
+        {
+            id: 'modern-translation',
+            label: '白话翻译',
+            storageKey: 'shiji-modern-translation',
+            defaultValue: false,  // 默认关闭
+            onChange: function(enabled) {
+                updateModernTranslation(enabled);
+            }
         }
     ];
 
@@ -350,6 +359,23 @@
                     }
                 }
             });
+        }
+    }
+
+    /**
+     * 更新白话翻译显示
+     * 当启用时，显示白话翻译内容；关闭时隐藏
+     * 注意：白话翻译不受拼音和繁简转换影响
+     */
+    function updateModernTranslation(enabled) {
+        // TODO: 实现白话翻译显示/隐藏功能
+        // 当前为占位函数，等待翻译内容加载机制完善后实现
+        if (enabled) {
+            document.body.classList.add('show-translation');
+            console.log('[settings-panel] 白话翻译已启用');
+        } else {
+            document.body.classList.remove('show-translation');
+            console.log('[settings-panel] 白话翻译已关闭');
         }
     }
 
