@@ -279,43 +279,45 @@ p {
 
 /* ======================================== 动词样式（v4.0） ======================================== */
 
-/* 军事动词 ⟦◈伐⟧ - 鲜明红底 + 白字加粗 */
+/* 动词通用：浅色底 + 同色系深色字 + 下划底边，柔和但可辨 */
+
+/* 军事动词 ⟦◈伐⟧ - 浅红 */
 .verb-military {
-    color: white;
-    background-color: #dc3545;   /* Bootstrap danger 红色 */
-    padding: 1px 4px;
-    border-radius: 3px;
-    font-weight: 600;
+    color: #b02a37;
+    background-color: #fdecec;
+    border-bottom: 1.5px solid #dc3545;
+    padding: 0;
+    font-weight: 500;
     cursor: default;
 }
 
-/* 刑罚动词 ⟦◉杀⟧ - 鲜明蓝底 + 白字加粗 */
+/* 刑罚动词 ⟦◉杀⟧ - 浅蓝 */
 .verb-penalty {
-    color: white;
-    background-color: #007bff;   /* Bootstrap primary 蓝色 */
-    padding: 1px 4px;
-    border-radius: 3px;
-    font-weight: 600;
+    color: #0a58ca;
+    background-color: #eaf2fd;
+    border-bottom: 1.5px solid #3d8bfd;
+    padding: 0;
+    font-weight: 500;
     cursor: default;
 }
 
-/* 政治动词 ⟦○立⟧ - 鲜明金底 + 深色字加粗（金底配深色） */
+/* 政治动词 ⟦○立⟧ - 浅金 */
 .verb-political {
-    color: #333;
-    background-color: #ffc107;   /* Bootstrap warning 金色 */
-    padding: 1px 4px;
-    border-radius: 3px;
-    font-weight: 600;
+    color: #7a5a00;
+    background-color: #fff6d6;
+    border-bottom: 1.5px solid #d9a406;
+    padding: 0;
+    font-weight: 500;
     cursor: default;
 }
 
-/* 经济动词 ⟦◇赐⟧ - 鲜明绿底 + 白字加粗 */
+/* 经济动词 ⟦◇赐⟧ - 浅绿 */
 .verb-economic {
-    color: white;
-    background-color: #28a745;   /* Bootstrap success 绿色 */
-    padding: 1px 4px;
-    border-radius: 3px;
-    font-weight: 600;
+    color: #146c2e;
+    background-color: #e6f4ea;
+    border-bottom: 1.5px solid #28a745;
+    padding: 0;
+    font-weight: 500;
     cursor: default;
 }
 

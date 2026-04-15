@@ -209,33 +209,41 @@ a.entity-link:hover {
 
 /* 军事动词 ⟦◈动词⟧ */
 .verb-military {
-    color: #DC143C;  /* 深红色文字 */
-    background-color: rgba(220, 20, 60, 0.12);  /* 半透明红色背景 */
-    font-weight: 600;
+    color: #b02a37;
+    background-color: #fdecec;
+    border-bottom: 1.5px solid #dc3545;
+    padding: 0;
+    font-weight: 500;
     cursor: default;
 }
 
 /* 刑罚动词 ⟦◉动词⟧ */
 .verb-penalty {
-    color: #0056b3;  /* 深蓝色文字 */
-    background-color: rgba(0, 86, 179, 0.10);  /* 半透明蓝色背景 */
-    font-weight: 600;
+    color: #0a58ca;
+    background-color: #eaf2fd;
+    border-bottom: 1.5px solid #3d8bfd;
+    padding: 0;
+    font-weight: 500;
     cursor: default;
 }
 
 /* 政治动词 ⟦○动词⟧ */
 .verb-political {
-    color: #B8860B;  /* 金色文字 */
-    background-color: rgba(184, 134, 11, 0.12);  /* 半透明金色背景 */
-    font-weight: 600;
+    color: #7a5a00;
+    background-color: #fff6d6;
+    border-bottom: 1.5px solid #d9a406;
+    padding: 0;
+    font-weight: 500;
     cursor: default;
 }
 
 /* 经济动词 ⟦◇动词⟧ */
 .verb-economic {
-    color: #228B22;  /* 深绿色文字 */
-    background-color: rgba(34, 139, 34, 0.15);  /* 半透明绿色背景 */
-    font-weight: 600;
+    color: #146c2e;
+    background-color: #e6f4ea;
+    border-bottom: 1.5px solid #28a745;
+    padding: 0;
+    font-weight: 500;
     cursor: default;
 }
 
@@ -1060,25 +1068,29 @@ body.merge-paragraphs .dialogue {
         color: #6B3410;  /* 更深的褐色 */
     }
 
-    /* 动词背景加深 */
+    /* 动词：高对比模式下加深底色与边线 */
     .verb-military {
-        color: #B8102E;
-        background-color: rgba(220, 20, 60, 0.18);
+        color: #8a1f29;
+        background-color: #fbdcdc;
+        border-bottom-color: #b02a37;
     }
 
     .verb-penalty {
-        color: #003D8F;
-        background-color: rgba(0, 86, 179, 0.15);
+        color: #084298;
+        background-color: #dbe7fb;
+        border-bottom-color: #0a58ca;
     }
 
     .verb-political {
-        color: #947000;
-        background-color: rgba(184, 134, 11, 0.18);
+        color: #5f4700;
+        background-color: #ffecb0;
+        border-bottom-color: #b8860b;
     }
 
     .verb-economic {
-        color: #186818;
-        background-color: rgba(34, 139, 34, 0.20);
+        color: #0f5423;
+        background-color: #d4ecda;
+        border-bottom-color: #1e7e34;
     }
 
     /* 对话对比度增强 */
