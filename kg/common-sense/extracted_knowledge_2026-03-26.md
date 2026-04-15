@@ -673,7 +673,7 @@ def check_empress_dowager_power(has_power, has_three_elements):
 ### 项目内部
 - [kg/ontology/ontology-v1/](../../kg/ontology/ontology-v1/) - 675个SKU
 - [labs/source-inference/](../../labs/source-inference/) - 10个溯源案例
-- [kg/vocabularies/06_制度词表.md](../../kg/vocabularies/06_制度词表.md) - 672个制度术语
+- [kg/vocabularies/06_名物词表.md](../../kg/vocabularies/06_名物词表.md) - 672个制度术语
 - [skills/SKILL_07c_反常推理.md](../../skills/SKILL_07c_反常推理.md) - 反思迭代方法论
 
 ### 方法论

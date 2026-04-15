@@ -42,7 +42,7 @@
 | `lint_section_position.py` | 1次 | SKILL_02a_章节切分与编号.md | 终端输出/错误列表 |
 | `lint_skills.py` | 1次 | archive/SKILL_10f_Skill的提炼与转化_20260402.md | 终端输出/错误列表 |
 | `lint_symbol_conflicts.py` | 2次 | SKILL_01f_句读和标点校勘.md<br>SKILL_01g_标注符号集合原则.md | 终端输出/错误列表 |
-| **`lint_text_integrity.py`** | **15次** | 00-META-10_质量控制.md<br>SKILL_01_古籍校勘.md<br>SKILL_01a_标注完整性维护.md<br>SKILL_01b_多版本互校底本.md<br>SKILL_01c_表格校勘规范.md<br>SKILL_01d_正音与拼音标注.md<br>SKILL_01g_标注符号集合原则.md<br>SKILL_03a_实体标注.md<br>SKILL_03c_按章反思.md<br>SKILL_04f_动词标注.md<br>SKILL_10_项目管理.md<br>SKILL_10a_TODO和Issue管理.md<br>draft/META-SKILL-批量反思管线.md<br>references/SKILL-03c-rules.md<br>references/SKILL_10c1_禁止命令清单.md | 终端输出/错误列表 |
+| **`lint_text_integrity.py`** | **15次** | 00-META-10_质量控制.md<br>SKILL_01_古籍校勘.md<br>SKILL_01a_标注完整性维护.md<br>SKILL_01b_多版本互校底本.md<br>SKILL_01c_表格校勘规范.md<br>SKILL_01d_正音与拼音标注.md<br>SKILL_01g_标注符号集合原则.md<br>SKILL_03a_实体标注.md<br>SKILL_03c_按章反思.md<br>SKILL_04f_动词标注.md<br>SKILL_10_项目管理.md<br>SKILL_10a_TODO和Issue管理.md<br>draft/META-SKILL-批量反思管线.md<br>references/SKILL-03c1-rules.md<br>references/SKILL_10c1_禁止命令清单.md | 终端输出/错误列表 |
 
 ---
 
@@ -357,7 +357,7 @@ from scripts.config import CHAPTER_DIR, BASE_COPY, DATA_DIR
 | 脚本 | 被引用 | 引用者SKILL |
 |------|--------|-----------|
 | `build_year_map.py` | 4次 | SKILL_03g_时间实体消歧.md<br>SKILL_04_事件构建.md<br>SKILL_04c_事件年代推断.md<br>SKILL_05a_事件关系发现.md |
-| `migrate_verb_tags.py` | 4次 | SKILL_03c_按章反思.md<br>SKILL_04f_动词标注.md<br>references/SKILL-03c-rules.md<br>references/SKILL_02e1_动词标注规范.md |
+| `migrate_verb_tags.py` | 4次 | SKILL_03c_按章反思.md<br>SKILL_04f_动词标注.md<br>references/SKILL-03c1-rules.md<br>references/SKILL_02e1_动词标注规范.md |
 | `apply_reflect_fixes.py` | 3次 | 00-META-02_迭代工作流.md<br>SKILL_03e_按类型反思.md<br>SKILL_04d_事件年代审查.md |
 | `build_metro_map_data.py` | 3次 | 00-META-11_数据体感培养.md<br>SKILL_05a_事件关系发现.md<br>SKILL_09a_语法高亮辅助阅读.md |
 | `extract_events.py` | 3次 | SKILL_04_事件构建.md<br>SKILL_04a_事件识别.md<br>SKILL_05a_事件关系发现.md |
@@ -431,7 +431,7 @@ from scripts.config import CHAPTER_DIR, BASE_COPY, DATA_DIR
 | `fix_broken_tags.py` | 1次 | SKILL_03b_人名消歧.md |
 | `fix_by_pattern.py` | 1次 | 00-META-11_数据体感培养.md |
 | `fix_chapter_026_pn.py` | 1次 | references/SKILL_02a1_Purple_Numbers编号详细规范.md |
-| `fix_nested_legal.py` | 1次 | references/SKILL-03c-rules.md |
+| `fix_nested_legal.py` | 1次 | references/SKILL-03c1-rules.md |
 | `fix_undated_known_events.py` | 1次 | SKILL_04c_事件年代推断.md |
 | `fix_verb_nesting.py` | 1次 | references/SKILL_02e1_动词标注规范.md |
 | `generate_all_formats.py` | 1次 | SKILL_09m_排版和电子书构造.md |

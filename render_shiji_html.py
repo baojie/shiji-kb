@@ -78,8 +78,8 @@ ENTITY_PATTERNS = [
     (r'〖&([^〖〗<>"]+)〗',  r'<span class="dynasty" title="氏族">\1</span>'),      # 氏族
     (r'〖◆([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="feudal-state" title="邦国：\2"     data-canonical="\2">\1</span>'),  # 邦国（消歧）
     (r'〖◆([^〖〗<>"]+)〗', r'<span class="feudal-state" title="邦国">\1</span>'), # 邦国
-    (r'〖\^([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="institution" title="制度：\2"       data-canonical="\2">\1</span>'),  # 制度（消歧）
-    (r'〖\^([^〖〗<>"]+)〗', r'<span class="institution" title="制度">\1</span>'),  # 制度
+    (r'〖\^([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="institution" title="名物：\2"       data-canonical="\2">\1</span>'),  # 名物（消歧）
+    (r'〖\^([^〖〗<>"]+)〗', r'<span class="institution" title="名物">\1</span>'),  # 名物（含礼制/律历/医学）
     (r'〖~([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="tribe"       title="族群：\2"       data-canonical="\2">\1</span>'),  # 族群（消歧）
     (r'〖~([^〖〗<>"]+)〗',  r'<span class="tribe" title="族群">\1</span>'),       # 族群
     (r'〖#([^〖〗<>"|]+)\|([^〖〗<>"]+)〗',  r'<span class="identity"    title="身份：\2"       data-canonical="\2">\1</span>'),  # 身份（消歧）

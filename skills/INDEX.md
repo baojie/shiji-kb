@@ -202,7 +202,7 @@
 
 | 文件 | 说明 | 关联SKILL |
 |------|------|----------|
-| [SKILL-03c-rules.md](references/SKILL-03c-rules.md) | 72条按章反思规律库 | SKILL_03c |
+| [SKILL-03c1-rules.md](references/SKILL-03c1-rules.md) | 72条按章反思规律库 | SKILL_03c |
 | [SKILL-01e-rules-繁简词表构造规则.md](references/SKILL-01e-rules-繁简词表构造规则.md) | 繁简词表完整构造规则 | SKILL_01e |
 | [SKILL_05d1_rules.md](references/SKILL_05d1_rules.md) | 事实抽取四大核心原则（v1.0） | SKILL_05d |
 
@@ -276,7 +276,7 @@
   - 位置：skills/ 根目录
   - 用途：一级SKILL的子任务
 
-- **三级SKILL**：`SKILL-NNx-英文名.md`（如 SKILL-03c-rules.md）
+- **三级SKILL**：`SKILL-NNx-英文名.md`（如 SKILL-03c1-rules.md）
   - 编号：数字+小写字母+英文名（用短横线连接）
   - 位置：skills/references/ 子目录
   - 用途：二级SKILL的支撑文档/规则库/工具集

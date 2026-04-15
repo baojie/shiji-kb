@@ -8,7 +8,7 @@
 **最后更新**: 2026-03-26
 **数据来源**:
 - kg/ontology/ontology-v1/ (675个SKU)
-- kg/vocabularies/06_制度词表.md (672个制度术语)
+- kg/vocabularies/06_名物词表.md (672个制度术语)
 - kg/entities/data/ (15,190规范实体)
 - labs/source-inference/ (10个案例+30种推理方法)
 - resources/references/ (26部参考文献)
@@ -563,7 +563,7 @@
 | 数据源 | 路径 | 类型 | 规模 |
 |--------|------|------|------|
 | Ontology-v1 | `/kg/ontology/ontology-v1/` | SKU知识单元 | 675项 |
-| 制度词表 | `/kg/vocabularies/06_制度词表.md` | 制度术语 | 672项 |
+| 制度词表 | `/kg/vocabularies/06_名物词表.md` | 制度术语 | 672项 |
 | 实体库 | `/kg/entities/data/` | 规范实体 | 15,190条 |
 | 关系知识 | `/kg/ontology/ontology-v1/help/relational_index.md` | 三元组 | 1,336条 |
 | 案例库 | `/labs/source-inference/` | 推理案例 | 10个 |

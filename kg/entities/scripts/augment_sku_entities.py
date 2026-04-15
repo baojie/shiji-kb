@@ -24,7 +24,7 @@ ENTITY_TYPE_NAMES = {
     "official": "官职",
     "time": "时间",
     "dynasty": "朝代",
-    "institution": "制度",
+    "institution": "名物",
     "tribe": "族群",
     "artifact": "器物",
     "astronomy": "天文",
