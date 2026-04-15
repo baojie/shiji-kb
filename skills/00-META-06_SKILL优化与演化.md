@@ -1075,7 +1075,7 @@ agent_success_rate: 95% (Agent执行成功率)
   - 编号：数字+小写字母（03a, 03b, 03c...）
   - 位置：`skills/` 根目录
   - 用途：一级SKILL的子任务
-- [ ] **三级SKILL**: `SKILL-NNx-英文名.md` (如 `SKILL-03c1-rules.md`)
+- [ ] **三级SKILL**: `SKILL-NNx-英文名.md` (如 `SKILL_03c1-rules.md`)
   - 编号：数字+小写字母+英文名（用短横线连接）
   - 位置：`skills/references/` 子目录
   - 用途：二级SKILL的支撑文档/规则库/工具集

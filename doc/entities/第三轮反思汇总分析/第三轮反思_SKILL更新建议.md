@@ -1,11 +1,11 @@
 # 第三轮反思 · SKILL 更新建议与实施方案
 
 **日期**：2026-04-15
-**目标**：将第三轮 23 条新规律 + 5 条元规则补入 `SKILL-03c1-rules.md` 与 `SKILL_03c_按章反思.md`。
+**目标**：将第三轮 23 条新规律 + 5 条元规则补入 `SKILL_03c1-rules.md` 与 `SKILL_03c_按章反思.md`。
 
 ---
 
-## 1. SKILL-03c1-rules.md 更新
+## 1. SKILL_03c1-rules.md 更新
 
 ### 1.1 frontmatter
 ```yaml
@@ -43,7 +43,7 @@ lastUpdated: 2026-04-15
 ```markdown
 ## 领域专项检查清单
 
-按章节类型激活对应专项规律（详见 SKILL-03c1-rules.md D 分区）：
+按章节类型激活对应专项规律（详见 SKILL_03c1-rules.md D 分区）：
 
 | 章节类型 | 重点规律 |
 |---------|---------|
@@ -78,7 +78,7 @@ lastUpdated: 2026-04-15
 
 1. ✅ 创建本汇总目录 `doc/entities/第三轮反思汇总分析/`
 2. ✅ 完成 3 份汇总文档
-3. ⏳ 编辑 `skills/references/SKILL-03c1-rules.md`：追加 23 条规律 + 新分区
+3. ⏳ 编辑 `skills/references/SKILL_03c1-rules.md`：追加 23 条规律 + 新分区
 4. ⏳ 编辑 `skills/SKILL_03c_按章反思.md`：更新计数、领域专项清单、复合词原则
 5. ⏳ 提交（**等待用户明确指令后**）
 

@@ -153,7 +153,7 @@ for chapter in 001-130:
 
 - skills/references/SKILL_01a1_标注格式规范.md
 - skills/references/SKILL_01f_background.md
-- skills/references/SKILL-03c1-rules.md
+- skills/references/SKILL_03c1-rules.md
 - skills/references/SKILL_10c1_禁止命令清单.md
 - skills/references/SKILL_10f4_脚本分解示例.md
 
