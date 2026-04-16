@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>君号索引 - 史记知识库</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Source Han Serif SC", "Noto Serif SC", serif;
+            line-height: 1.8; color: #333;
+            background-color: #fdfaf6; padding: 20px;
+        }
+        .container {
+            max-width: 1100px; margin: 0 auto;
+            background: white; padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center; color: #8b0000;
+            font-size: 2.5em; margin-bottom: 10px;
+            border-bottom: 3px double #8b0000; padding-bottom: 20px;
+        }
+        .subtitle {
+            text-align: center; color: #666;
+            margin-bottom: 30px; font-size: 1.1em;
+        }
+        .nav {
+            background: #f5f5f5; padding: 12px;
+            margin-bottom: 30px; border-radius: 5px; text-align: center;
+        }
+        .nav a {
+            color: #8b4513; text-decoration: none;
+            margin: 0 15px; font-size: 1.05em;
+        }
+        .nav a:hover { text-decoration: underline; }
+        .stats {
+            background: #fff8dc; padding: 20px;
+            margin-bottom: 30px; border-radius: 5px;
+            border-left: 5px solid #8b0000;
+        }
+        .stats h3 { color: #8b0000; margin-bottom: 10px; }
+        .stats ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 24px; }
+        .stats li { font-size: 0.95em; }
+        .stats li strong { color: #8b0000; }
+
+        /* Filter bar */
+        .filter-bar {
+            margin-bottom: 25px; display: flex; flex-wrap: wrap;
+            gap: 8px; align-items: center;
+        }
+        .filter-bar label { font-weight: bold; color: #555; margin-right: 6px; }
+        .filter-btn {
+            padding: 6px 14px; border: 1px solid #c0b080;
+            border-radius: 4px; background: #fffef8; color: #555;
+            cursor: pointer; font-size: 0.9em; transition: all 0.2s;
+        }
+        .filter-btn:hover { background: #f8f0d8; }
+        .filter-btn.active {
+            background: #8b0000; color: white; border-color: #8b0000;
+        }
+        .search-box {
+            margin-left: auto; padding: 6px 12px;
+            border: 1px solid #c0b080; border-radius: 4px;
+            font-size: 0.95em; width: 200px;
+        }
+
+        /* Category sections */
+        .category {
+            margin-bottom: 2.5em; border: 1px solid #e6e0c0;
+            border-radius: 8px; background: #fffef8; overflow: hidden;
+        }
+        .cat-header {
+            padding: 14px 20px; cursor: pointer; user-select: none;
+            display: flex; align-items: center; justify-content: space-between;
+            background: linear-gradient(135deg, #f8f5e8, #fffef8);
+            border-bottom: 1px solid #e6e0c0;
+        }
+        .cat-header:hover { background: #f0ead0; }
+        .cat-title {
+            font-size: 1.4em; color: #8b0000; font-weight: bold;
+        }
+        .cat-count {
+            font-size: 0.9em; color: #888; margin-left: 12px;
+        }
+        .cat-toggle {
+            font-size: 0.7em; color: #999; transition: transform 0.3s;
+        }
+        .category.collapsed .cat-toggle { transform: rotate(-90deg); }
+        .cat-body { padding: 0; }
+        .category.collapsed .cat-body { display: none; }
+
+        /* Table */
+        table {
+            width: 100%; border-collapse: collapse;
+            font-size: 0.92em;
+        }
+        th {
+            background: #f8f5e8; color: #5a4a2a;
+            padding: 10px 12px; text-align: left;
+            border-bottom: 2px solid #d4c8a0;
+            font-size: 0.9em; white-space: nowrap;
+        }
+        td {
+            padding: 10px 12px; border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        tr:hover td { background: #fdfaf0; }
+        tr.hidden { display: none; }
+
+        .jun-title {
+            font-weight: bold; color: #8b0000; font-size: 1.05em;
+            white-space: nowrap;
+        }
+        .jun-name { color: #333; }
+        .jun-state {
+            display: inline-block; padding: 1px 8px;
+            border-radius: 3px; font-size: 0.85em;
+            white-space: nowrap;
+        }
+        .state-qin { background: #2c2c2c; color: #fff; }
+        .state-zhao { background: #c0392b; color: #fff; }
+        .state-qi { background: #2980b9; color: #fff; }
+        .state-wei { background: #8e44ad; color: #fff; }
+        .state-chu { background: #d35400; color: #fff; }
+        .state-yan { background: #1abc9c; color: #fff; }
+        .state-han { background: #f39c12; color: #fff; }
+        .state-han2 { background: #c0392b; color: #fff; }
+        .state-other { background: #7f8c8d; color: #fff; }
+        .jun-period { color: #777; font-size: 0.88em; white-space: nowrap; }
+        .jun-desc { color: #555; line-height: 1.6; }
+        .jun-chapter {
+            font-size: 0.85em; color: #8b4513;
+            white-space: nowrap;
+        }
+        .note-tag {
+            display: inline-block; font-size: 0.75em;
+            padding: 1px 5px; border-radius: 2px;
+            background: #e8e0c8; color: #6b5b3a;
+            margin-left: 4px;
+        }
+
+        /* Fengdi table */
+        .fengdi-section {
+            margin-top: 2.5em; border: 1px solid #e6e0c0;
+            border-radius: 8px; background: #fffef8; overflow: hidden;
+        }
+        .fengdi-section .cat-header {
+            background: linear-gradient(135deg, #e8f0e8, #f5faf5);
+            border-bottom: 1px solid #c0d8c0;
+        }
+        .fengdi-section .cat-title { color: #2d6a2d; }
+        .fengdi-section th {
+            background: #e8f0e8; color: #2d5a2d;
+            border-bottom: 2px solid #a0c8a0;
+        }
+        .fengdi-source {
+            font-size: 0.82em; color: #888; font-style: italic;
+        }
+
+        /* Tonghaoyiren */
+        .tonghao-section {
+            margin-top: 2.5em; border: 1px solid #d8d0e8;
+            border-radius: 8px; background: #faf8ff; overflow: hidden;
+        }
+        .tonghao-section .cat-header {
+            background: linear-gradient(135deg, #f0eaf8, #faf8ff);
+            border-bottom: 1px solid #d0c8e0;
+        }
+        .tonghao-section .cat-title { color: #5a2d8b; }
+        .tonghao-section th {
+            background: #f0eaf8; color: #4a2d6a;
+            border-bottom: 2px solid #c0a8d8;
+        }
+
+        .footer {
+            text-align: center; margin-top: 40px;
+            padding-top: 20px; border-top: 1px solid #ddd;
+            color: #999; font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 20px 15px; }
+            h1 { font-size: 1.8em; }
+            .filter-bar { flex-direction: column; align-items: stretch; }
+            .search-box { width: 100%; margin-left: 0; }
+            table { font-size: 0.82em; }
+            th, td { padding: 6px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>君号索引</h1>
+        <div class="subtitle">《史记》"XX君"封号总览 — 战国至汉初</div>
+
+        <div class="nav">
+            <a href="special_index.html">&larr; 专项索引</a>
+            <a href="../index.html">首页</a>
+            <a href="shihao.html">谥号索引</a>
+            <a href="xingshi.html">姓氏宗族</a>
+        </div>
+
+        <div class="stats">
+            <h3>统计概览</h3>
+            <ul>
+                <li><strong>85</strong> 条封号</li>
+                <li><strong>11</strong> 个分类</li>
+                <li><strong>23</strong> 条封地可考</li>
+                <li>覆盖 <strong>春秋</strong> &rarr; <strong>西汉中期</strong></li>
+                <li>核心时段 约前350年 &mdash; 前140年</li>
+            </ul>
+        </div>
+
+        <div class="filter-bar">
+            <label>筛选：</label>
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="cat-sigongzi">四公子</button>
+            <button class="filter-btn" data-filter="cat-qin">秦</button>
+            <button class="filter-btn" data-filter="cat-zhao">赵</button>
+            <button class="filter-btn" data-filter="cat-qi">齐</button>
+            <button class="filter-btn" data-filter="cat-yan">燕</button>
+            <button class="filter-btn" data-filter="cat-hanwei">韩魏</button>
+            <button class="filter-btn" data-filter="cat-wei2">卫</button>
+            <button class="filter-btn" data-filter="cat-qinmo">秦末</button>
+            <button class="filter-btn" data-filter="cat-han">汉代</button>
+            <button class="filter-btn" data-filter="cat-special">特殊</button>
+            <button class="filter-btn" data-filter="cat-border">边疆</button>
+            <input type="text" class="search-box" placeholder="搜索封号/人名..." id="searchInput">
+        </div>
+
+        <!-- 一、战国四公子 -->
+        <div class="category" data-cat="cat-sigongzi">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">一、战国四公子</span><span class="cat-count">4条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>邦国</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-孟尝君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">孟尝君</a></td><td class="jun-name">田文</td><td><span class="jun-state state-qi">齐</span></td><td class="jun-period">战国中期</td><td class="jun-desc">靖郭君田婴之子，食客三千，三任齐相</td><td class="jun-chapter"><a href="../chapters/075_孟尝君列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="075_孟尝君列传">075</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-平原君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">平原君</a></td><td class="jun-name">赵胜</td><td><span class="jun-state state-zhao">赵</span></td><td class="jun-period">战国中期</td><td class="jun-desc">赵惠文王弟，三任赵相，毛遂自荐</td><td class="jun-chapter"><a href="../chapters/076_平原君虞卿列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="076_平原君虞卿列传">076</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-信陵君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">信陵君</a></td><td class="jun-name">魏无忌</td><td><span class="jun-state state-wei">魏</span></td><td class="jun-period">战国中期</td><td class="jun-desc">魏昭王少子，窃符救赵，五国合纵攻秦</td><td class="jun-chapter"><a href="../chapters/077_魏公子列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="077_魏公子列传">077</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-春申君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">春申君</a></td><td class="jun-name">黄歇</td><td><span class="jun-state state-chu">楚</span></td><td class="jun-period">战国中后期</td><td class="jun-desc">楚考烈王令尹，封淮北十二县</td><td class="jun-chapter"><a href="../chapters/078_春申君列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="078_春申君列传">078</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 二、秦国封君 -->
+        <div class="category" data-cat="cat-qin">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">二、秦国封君</span><span class="cat-count">13条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-商君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">商君</a></td><td class="jun-name">商鞅（公孙鞅/卫鞅）</td><td class="jun-period">战国中期</td><td class="jun-desc">卫国人，入秦变法，封于商</td><td class="jun-chapter"><a href="../chapters/068_商君列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="068_商君列传">068</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-武安君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">武安君</a></td><td class="jun-name">白起</td><td class="jun-period">战国中后期</td><td class="jun-desc">秦国名将，长平之战坑杀赵卒四十万</td><td class="jun-chapter"><a href="../chapters/073_白起王翦列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="073_白起王翦列传">073</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-泾阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">泾阳君</a></td><td class="jun-name">嬴市（公子悝另说）</td><td class="jun-period">战国中期</td><td class="jun-desc">秦昭襄王母弟，宣太后之子。封泾阳（雍州泾阳县）</td><td class="jun-chapter"><a href="../chapters/072_穰侯列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="072_穰侯列传">072</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-高陵君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">高陵君</a></td><td class="jun-name">嬴显（公子市另说）</td><td class="jun-period">战国中期</td><td class="jun-desc">秦昭襄王弟</td><td class="jun-chapter"><a href="../chapters/072_穰侯列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="072_穰侯列传">072</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-华阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">华阳君</a></td><td class="jun-name">羋戎</td><td class="jun-period">战国中期</td><td class="jun-desc">宣太后同母弟。封华阳（洛州密县），后号新城君</td><td class="jun-chapter"><a href="../chapters/079_范睢蔡泽列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="079_范睢蔡泽列传">079</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-安国君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">安国君</a></td><td class="jun-name">嬴柱（后为秦孝文王）</td><td class="jun-period">战国后期</td><td class="jun-desc">秦昭襄王太子，即位三日而薨</td><td class="jun-chapter"><a href="../chapters/085_吕不韦列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="085_吕不韦列传">085</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-昌平君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">昌平君</a></td><td class="jun-name">不详 <span class="note-tag">索隐"史失其名"</span></td><td class="jun-period">战国末期</td><td class="jun-desc">楚公子，秦相，后徙郢，项燕立为荆王</td><td class="jun-chapter"><a href="../chapters/006_秦始皇本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="006_秦始皇本纪">006</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-昌文君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">昌文君</a></td><td class="jun-name">不详 <span class="note-tag">索隐"名亦不知"</span></td><td class="jun-period">战国末期</td><td class="jun-desc">与昌平君共发兵平嫪毐之乱</td><td class="jun-chapter"><a href="../chapters/006_秦始皇本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="006_秦始皇本纪">006</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-嬴疾" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">严君（樗里子）</a></td><td class="jun-name">嬴疾</td><td class="jun-period">战国中期</td><td class="jun-desc">秦惠文王异母弟，号樗里子</td><td class="jun-chapter"><a href="../chapters/071_樗里子甘茂列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="071_樗里子甘茂列传">071</a></td></tr>
+                    <tr><td class="jun-title">阳文君</td><td class="jun-name">不详</td><td class="jun-period">战国后期</td><td class="jun-desc">秦国封君</td><td class="jun-chapter"><a href="../chapters/071_樗里子甘茂列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="071_樗里子甘茂列传">071</a></td></tr>
+                    <tr><td class="jun-title">刚成君</td><td class="jun-name">不详</td><td class="jun-period">战国中期</td><td class="jun-desc">秦国封君，甘茂相关</td><td class="jun-chapter"><a href="../chapters/071_樗里子甘茂列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="071_樗里子甘茂列传">071</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-蔡泽" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">纲成君</a></td><td class="jun-name">蔡泽</td><td class="jun-period">战国后期</td><td class="jun-desc">燕人蔡泽，继范睢为秦相</td><td class="jun-chapter"><a href="../chapters/079_范睢蔡泽列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="079_范睢蔡泽列传">079</a></td></tr>
+                    <tr><td class="jun-title">叶阳君</td><td class="jun-name">不详</td><td class="jun-period">战国后期</td><td class="jun-desc">秦国封君</td><td class="jun-chapter"><a href="../chapters/079_范睢蔡泽列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="079_范睢蔡泽列传">079</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 三、赵国封君 -->
+        <div class="category" data-cat="cat-zhao">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">三、赵国封君</span><span class="cat-count">10条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-赵奢" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">马服君</a></td><td class="jun-name">赵奢</td><td class="jun-period">战国中期</td><td class="jun-desc">阏与之战大破秦军。封马服山（邯郸西北十里）</td><td class="jun-chapter"><a href="../chapters/081_廉颇蔺相如列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="081_廉颇蔺相如列传">081</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-信平君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">信平君</a></td><td class="jun-name">廉颇</td><td class="jun-period">战国中后期</td><td class="jun-desc">赵国名将，负荆请罪</td><td class="jun-chapter"><a href="../chapters/081_廉颇蔺相如列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="081_廉颇蔺相如列传">081</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-平阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">平阳君</a></td><td class="jun-name">赵豹</td><td class="jun-period">战国中后期</td><td class="jun-desc">赵国宗室，反对接受上党</td><td class="jun-chapter"><a href="../chapters/073_白起王翦列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="073_白起王翦列传">073</a></td></tr>
+                    <tr><td class="jun-title">代成君</td><td class="jun-name">不详</td><td class="jun-period">战国中期</td><td class="jun-desc">赵国封君</td><td class="jun-chapter"><a href="../chapters/043_赵世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="043_赵世家">043</a></td></tr>
+                    <tr><td class="jun-title">春平君</td><td class="jun-name">不详 <span class="note-tag">正义"太子即春平君"</span></td><td class="jun-period">战国后期</td><td class="jun-desc">赵太子，赵悼襄王时封君</td><td class="jun-chapter"><a href="../chapters/043_赵世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="043_赵世家">043</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-田单" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">安平君</a></td><td class="jun-name">田单</td><td class="jun-period">战国中后期</td><td class="jun-desc">齐国名将，火牛阵复齐，后入赵</td><td class="jun-chapter"><a href="../chapters/043_赵世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="043_赵世家">043</a></td></tr>
+                    <tr><td class="jun-title">番吾君</td><td class="jun-name">不详</td><td class="jun-period">战国后期</td><td class="jun-desc">封番吾（恒州房山县东二十里）</td><td class="jun-chapter"><a href="../chapters/043_赵世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="043_赵世家">043</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-乐乘" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">武襄君</a></td><td class="jun-name">乐乘</td><td class="jun-period">战国后期</td><td class="jun-desc">赵国将领</td><td class="jun-chapter"><a href="../chapters/080_乐毅列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="080_乐毅列传">080</a></td></tr>
+                    <tr><td class="jun-title">宣陵君</td><td class="jun-name">不详</td><td class="jun-period">战国后期</td><td class="jun-desc">赵国封君</td><td class="jun-chapter"><a href="../chapters/083_鲁仲连邹阳列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="083_鲁仲连邹阳列传">083</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-成蟜" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">长安君</a></td><td class="jun-name">成蟜（秦）/ 不详（赵）</td><td class="jun-period">战国后期</td><td class="jun-desc">秦：王弟成蟜；赵：赵太后少子（触龙说赵太后）。赵封地饶阳</td><td class="jun-chapter"><a href="../chapters/006_秦始皇本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="006_秦始皇本纪">006</a>、<a href="../chapters/043_赵世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="043_赵世家">043</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 四、齐国封君 -->
+        <div class="category" data-cat="cat-qi">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">四、齐国封君</span><span class="cat-count">2条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-靖郭君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">靖郭君</a></td><td class="jun-name">田婴</td><td class="jun-period">战国中期</td><td class="jun-desc">齐威王少子，孟尝君之父。冢在薛城</td><td class="jun-chapter"><a href="../chapters/075_孟尝君列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="075_孟尝君列传">075</a></td></tr>
+                    <tr><td class="jun-title">安阳君</td><td class="jun-name">田章</td><td class="jun-period">战国中期</td><td class="jun-desc">齐国封君</td><td class="jun-chapter"><a href="../chapters/046_田敬仲完世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="046_田敬仲完世家">046</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 五、燕国封君 -->
+        <div class="category" data-cat="cat-yan">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">五、燕国封君</span><span class="cat-count">3条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-昌国君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">昌国君</a></td><td class="jun-name">乐毅</td><td class="jun-period">战国中期</td><td class="jun-desc">率五国联军伐齐，下七十余城</td><td class="jun-chapter"><a href="../chapters/080_乐毅列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="080_乐毅列传">080</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-望诸君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">望诸君</a></td><td class="jun-name">乐毅</td><td class="jun-period">战国中后期</td><td class="jun-desc">乐毅奔赵后，赵封其为望诸君</td><td class="jun-chapter"><a href="../chapters/080_乐毅列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="080_乐毅列传">080</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-乐叔" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">华成君</a></td><td class="jun-name">乐叔</td><td class="jun-period">战国后期</td><td class="jun-desc">乐毅之子，燕国封君</td><td class="jun-chapter"><a href="../chapters/080_乐毅列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="080_乐毅列传">080</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 六、韩·魏及其他 -->
+        <div class="category" data-cat="cat-hanwei">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">六、韩·魏及其他</span><span class="cat-count">7条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>邦国</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-横阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">横阳君</a></td><td class="jun-name">公仲朋</td><td><span class="jun-state state-han">韩</span></td><td class="jun-period">战国中后期</td><td class="jun-desc">封横阳（宋城县西南三十里）</td><td class="jun-chapter"><a href="../chapters/045_韩世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="045_韩世家">045</a></td></tr>
+                    <tr><td class="jun-title">成陵君</td><td class="jun-name">不详</td><td><span class="jun-state state-wei">魏</span></td><td class="jun-period">战国后期</td><td class="jun-desc">魏国封君</td><td class="jun-chapter"><a href="../chapters/044_魏世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="044_魏世家">044</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-武安君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">武安君</a></td><td class="jun-name">苏秦</td><td><span class="jun-state state-zhao">赵</span></td><td class="jun-period">战国中期</td><td class="jun-desc">合纵六国，赵封其为武安君（与白起同号异人）</td><td class="jun-chapter"><a href="../chapters/069_苏秦列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="069_苏秦列传">069</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-华阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">华阳君</a></td><td class="jun-name">冯亭</td><td><span class="jun-state state-zhao">赵</span><span class="note-tag">原韩</span></td><td class="jun-period">战国中后期</td><td class="jun-desc">韩上党守，以上党降赵</td><td class="jun-chapter"><a href="../chapters/073_白起王翦列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="073_白起王翦列传">073</a></td></tr>
+                    <tr><td class="jun-title">中山君</td><td class="jun-name">不详</td><td><span class="jun-state state-other">中山</span></td><td class="jun-period">战国中期</td><td class="jun-desc">中山国封君，相魏</td><td class="jun-chapter"><a href="../chapters/044_魏世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="044_魏世家">044</a></td></tr>
+                    <tr><td class="jun-title">成君</td><td class="jun-name">不详</td><td><span class="jun-state state-other">东周</span></td><td class="jun-period">战国后期</td><td class="jun-desc">东周封君，周赧王所谓</td><td class="jun-chapter"><a href="../chapters/004_周本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="004_周本纪">004</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-魏咎" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">宁陵君</a></td><td class="jun-name">魏咎</td><td><span class="jun-state state-wei">魏</span></td><td class="jun-period">战国末期</td><td class="jun-desc">魏诸公子，秦灭魏后废</td><td class="jun-chapter"><a href="../chapters/090_魏豹彭越列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="090_魏豹彭越列传">090</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 七、卫国末代诸君 -->
+        <div class="category" data-cat="cat-wei2">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">七、卫国末代诸君</span><span class="cat-count">4条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <p style="padding:10px 12px 0;color:#777;font-size:0.9em;">卫国战国后期已降为封君，不再称"公"。</p>
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title">卫嗣君</td><td class="jun-name">不详</td><td class="jun-period">战国后期</td><td class="jun-desc">卫国末期诸君</td><td class="jun-chapter"><a href="../chapters/037_卫康叔世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="037_卫康叔世家">037</a></td></tr>
+                    <tr><td class="jun-title">卫怀君</td><td class="jun-name">不详</td><td class="jun-period">战国后期</td><td class="jun-desc">为魏所杀</td><td class="jun-chapter"><a href="../chapters/037_卫康叔世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="037_卫康叔世家">037</a></td></tr>
+                    <tr><td class="jun-title">卫元君</td><td class="jun-name">不详</td><td class="jun-period">战国末期</td><td class="jun-desc">魏所立，后徙居野王</td><td class="jun-chapter"><a href="../chapters/037_卫康叔世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="037_卫康叔世家">037</a></td></tr>
+                    <tr><td class="jun-title">卫君角</td><td class="jun-name">角</td><td class="jun-period">秦代</td><td class="jun-desc">卫国末代君主，秦二世时废为庶人</td><td class="jun-chapter"><a href="../chapters/037_卫康叔世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="037_卫康叔世家">037</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 八、秦末起义封君 -->
+        <div class="category" data-cat="cat-qinmo">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">八、秦末起义封君</span><span class="cat-count">14条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>所属</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-项梁" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">武信君</a></td><td class="jun-name">项梁</td><td><span class="jun-state state-chu">楚</span></td><td class="jun-desc">项羽叔父，立楚怀王后自号</td><td class="jun-chapter"><a href="../chapters/007_项羽本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="007_项羽本纪">007</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-当阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">当阳君</a></td><td class="jun-name">黥布（英布）</td><td><span class="jun-state state-chu">楚</span></td><td class="jun-desc">骊山刑徒出身，从项梁起兵。封当阳（南郡当阳县）</td><td class="jun-chapter"><a href="../chapters/007_项羽本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="007_项羽本纪">007</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-番君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">番君</a></td><td class="jun-name">吴芮</td><td><span class="jun-state state-chu">楚</span></td><td class="jun-desc">鄱阳令，秦末起兵，后封长沙王</td><td class="jun-chapter"><a href="../chapters/091_黥布列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="091_黥布列传">091</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-武平君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">武平君</a></td><td class="jun-name">畔</td><td><span class="jun-state state-other">陈胜</span></td><td class="jun-desc">陈胜部将</td><td class="jun-chapter"><a href="../chapters/048_陈涉世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="048_陈涉世家">048</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-甯陵君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">甯陵君</a></td><td class="jun-name">咎</td><td><span class="jun-state state-other">陈胜</span></td><td class="jun-desc">陈胜部将。封甯陵（宋州宁陵县）</td><td class="jun-chapter"><a href="../chapters/048_陈涉世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="048_陈涉世家">048</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-房君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">房君</a></td><td class="jun-name">蔡赐 <span class="note-tag">索隐"爵之於房"</span></td><td><span class="jun-state state-other">陈胜</span></td><td class="jun-desc">上蔡人，陈胜上柱国</td><td class="jun-chapter"><a href="../chapters/048_陈涉世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="048_陈涉世家">048</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-成安君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">成安君</a></td><td class="jun-name">陈馀</td><td><span class="jun-state state-zhao">赵</span></td><td class="jun-desc">与张耳为刎颈之交，后反目</td><td class="jun-chapter"><a href="../chapters/089_张耳陈馀列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="089_张耳陈馀列传">089</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-李左车" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">广武君</a></td><td class="jun-name">李左车</td><td><span class="jun-state state-zhao">赵</span></td><td class="jun-desc">韩信背水一战后降汉</td><td class="jun-chapter"><a href="../chapters/092_淮阴侯列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="092_淮阴侯列传">092</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-侯公" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">平国君</a></td><td class="jun-name">侯公 <span class="note-tag">楚汉春秋</span></td><td><span class="jun-state state-han2">汉</span></td><td class="jun-desc">说项羽归太公吕后，能和平邦国</td><td class="jun-chapter"><a href="../chapters/007_项羽本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="007_项羽本纪">007</a></td></tr>
+                    <tr><td class="jun-title">城阳君</td><td class="jun-name">不详</td><td><span class="jun-state state-zhao">赵</span></td><td class="jun-desc">秦末赵国封号</td><td class="jun-chapter"><a href="../chapters/089_张耳陈馀列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="089_张耳陈馀列传">089</a></td></tr>
+                    <tr><td class="jun-title">成都君</td><td class="jun-name">不详</td><td><span class="jun-state state-zhao">赵</span></td><td class="jun-desc">秦末赵国封号</td><td class="jun-chapter"><a href="../chapters/089_张耳陈馀列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="089_张耳陈馀列传">089</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-郦商" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">信成君</a></td><td class="jun-name">郦商 <span class="note-tag">沛公赐</span></td><td><span class="jun-state state-han2">汉</span></td><td class="jun-desc">高阳人，后封曲周侯</td><td class="jun-chapter"><a href="../chapters/095_樊郦滕灌列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="095_樊郦滕灌列传">095</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-仓海君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">仓海君</a></td><td class="jun-name">不详 <span class="note-tag">集解"或曰东夷君长"</span></td><td><span class="jun-state state-han">韩</span></td><td class="jun-desc">张良博浪沙刺秦时的资助者</td><td class="jun-chapter"><a href="../chapters/055_留侯世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="055_留侯世家">055</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-馀樊君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">馀樊君</a></td><td class="jun-name">不详</td><td><span class="jun-state state-chu">楚</span></td><td class="jun-desc">项梁部将，战死于栗</td><td class="jun-chapter"><a href="../chapters/007_项羽本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="007_项羽本纪">007</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 九、汉代封君 -->
+        <div class="category" data-cat="cat-han">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">九、汉代封君（非侯）</span><span class="cat-count">11条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-万石君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">万石君</a></td><td class="jun-name">石奋</td><td class="jun-period">西汉前期</td><td class="jun-desc">父子五人俸禄合万石</td><td class="jun-chapter"><a href="../chapters/103_万石张叔列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="103_万石张叔列传">103</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-叔孙通" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">奉春君</a></td><td class="jun-name">叔孙通</td><td class="jun-period">西汉初期</td><td class="jun-desc">为汉制礼仪</td><td class="jun-chapter"><a href="../chapters/099_刘敬叔孙通列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="099_刘敬叔孙通列传">099</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-广野君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">广野君</a></td><td class="jun-name">郦食其</td><td class="jun-period">秦末汉初</td><td class="jun-desc">刘邦谋士</td><td class="jun-chapter"><a href="../chapters/097_郦生陆贾列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="097_郦生陆贾列传">097</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-脩成君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">脩成君</a></td><td class="jun-name">金氏</td><td class="jun-period">西汉前期</td><td class="jun-desc">王太后之女</td><td class="jun-chapter"><a href="../chapters/052_齐悼惠王世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="052_齐悼惠王世家">052</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-鄂君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">鄂君</a></td><td class="jun-name">鄂千秋 <span class="note-tag">索隐"封安平侯"</span></td><td class="jun-period">西汉初期</td><td class="jun-desc">关内侯，论萧何功第一</td><td class="jun-chapter"><a href="../chapters/053_萧相国世家.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="053_萧相国世家">053</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-傅宽" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">共德君</a></td><td class="jun-name">傅宽 <span class="note-tag">汉王赐</span></td><td class="jun-period">西汉初期</td><td class="jun-desc">魏五大夫骑将，后封阳陵侯</td><td class="jun-chapter"><a href="../chapters/098_傅靳蒯成列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="098_傅靳蒯成列传">098</a></td></tr>
+                    <tr><td class="jun-title">临平君</td><td class="jun-name">不详</td><td class="jun-period">西汉初期</td><td class="jun-desc">汉初封号</td><td class="jun-chapter"><a href="../chapters/098_傅靳蒯成列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="098_傅靳蒯成列传">098</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-周子南君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">周子南君</a></td><td class="jun-name">姬嘉</td><td class="jun-period">西汉中期</td><td class="jun-desc">汉武帝封周后裔，三千户地方三十里</td><td class="jun-chapter"><a href="../chapters/004_周本纪.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="004_周本纪">004</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-阳陵君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">阳陵君</a></td><td class="jun-name">魏駟</td><td class="jun-period">西汉初期</td><td class="jun-desc">汉初封君，后封波陵康侯</td><td class="jun-chapter"><a href="../chapters/019_惠景间侯者年表.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="019_惠景间侯者年表">019</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-堂邑父" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">奉使君</a></td><td class="jun-name">堂邑父</td><td class="jun-period">西汉中期</td><td class="jun-desc">张骞副使，汉廷所授称号</td><td class="jun-chapter"><a href="../chapters/123_大宛列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="123_大宛列传">123</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-西门君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">西门君</a></td><td class="jun-name">西门豹</td><td class="jun-period">战国初期</td><td class="jun-desc">邺令，民间尊称（非正式封号）</td><td class="jun-chapter"><a href="../chapters/126_滑稽列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="126_滑稽列传">126</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 十、方士与特殊人物 -->
+        <div class="category" data-cat="cat-special">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">十、方士与特殊人物</span><span class="cat-count">1条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>本名</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-长桑君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">长桑君</a></td><td class="jun-name">不详</td><td class="jun-period">春秋战国之际</td><td class="jun-desc">传扁鹊医术的神秘人物</td><td class="jun-chapter"><a href="../chapters/105_扁鹊仓公列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="105_扁鹊仓公列传">105</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 十一、边疆民族首领 -->
+        <div class="category" data-cat="cat-border">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">十一、边疆民族首领</span><span class="cat-count">5条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>称谓</th><th>本名</th><th>所属</th><th>时代</th><th>说明</th><th>出处</th></tr>
+                    <tr><td class="jun-title">繇君</td><td class="jun-name">丑</td><td><span class="jun-state state-other">东越</span></td><td class="jun-period">西汉初期</td><td class="jun-desc">东越繇王部族首领</td><td class="jun-chapter"><a href="../chapters/114_东越列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="114_东越列传">114</a></td></tr>
+                    <tr><td class="jun-title">鄱君</td><td class="jun-name">不详</td><td><span class="jun-state state-other">东越</span></td><td class="jun-period">西汉初期</td><td class="jun-desc">鄱阳地区首领</td><td class="jun-chapter"><a href="../chapters/114_东越列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="114_东越列传">114</a></td></tr>
+                    <tr><td class="jun-title">闽君</td><td class="jun-name">不详</td><td><span class="jun-state state-other">闽越</span></td><td class="jun-period">西汉初期</td><td class="jun-desc">闽越部族首领</td><td class="jun-chapter"><a href="../chapters/114_东越列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="114_东越列传">114</a></td></tr>
+                    <tr><td class="jun-title">邛君</td><td class="jun-name">不详</td><td><span class="jun-state state-other">西南夷</span></td><td class="jun-period">西汉中期</td><td class="jun-desc">邛都部族首领</td><td class="jun-chapter"><a href="../chapters/116_西南夷列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="116_西南夷列传">116</a></td></tr>
+                    <tr><td class="jun-title">且兰君</td><td class="jun-name">不详</td><td><span class="jun-state state-other">西南夷</span></td><td class="jun-period">西汉中期</td><td class="jun-desc">且兰部族首领</td><td class="jun-chapter"><a href="../chapters/116_西南夷列传.html" style="color:#8b4513;text-decoration:none;border-bottom:1px dotted #c0a080;" title="116_西南夷列传">116</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 同号异人 -->
+        <div class="tonghao-section">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">同号异人</span><span class="cat-count">4组</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>人物一</th><th>人物二</th><th>说明</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-武安君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">武安君</a></td><td>白起（秦）</td><td>苏秦（赵）</td><td class="jun-desc">最著名的同号异人案例</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-华阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">华阳君</a></td><td>羋戎（秦外戚）</td><td>冯亭（韩上党守降赵）</td><td class="jun-desc">分属秦、赵</td></tr>
+                    <tr><td class="jun-title">昌国君/望诸君</td><td>乐毅（燕）</td><td>乐毅（赵）</td><td class="jun-desc">同一人先后获两国封号</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-成蟜" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">长安君</a></td><td>成蟜（秦）</td><td>不详（赵）</td><td class="jun-desc">秦赵各有一位长安君</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 封地考证 -->
+        <div class="fengdi-section">
+            <div class="cat-header" onclick="toggleCat(this)">
+                <span><span class="cat-title">封地考证（据三家注）</span><span class="cat-count">23条</span></span>
+                <span class="cat-toggle">&#9660;</span>
+            </div>
+            <div class="cat-body">
+                <table>
+                    <tr><th>封号</th><th>封地</th><th>今地（括地志等）</th><th>三家注出处</th></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-孟尝君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">孟尝君</a></td><td>薛</td><td>徐州滕县界</td><td class="fengdi-source">正义007、集解075</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-平原君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">平原君</a></td><td>东武城</td><td>&mdash;</td><td class="fengdi-source"><a href="../chapters/076_平原君虞卿列传.html" style="color:#888;text-decoration:none;border-bottom:1px dotted #ccc;">076</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-信陵君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">信陵君</a></td><td>信陵</td><td>不详（索隐"地理志无信陵"）</td><td class="fengdi-source">索隐077</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-春申君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">春申君</a></td><td>淮北十二县&rarr;吴</td><td>故吴墟（今苏州一带）</td><td class="fengdi-source"><a href="../chapters/078_春申君列传.html" style="color:#888;text-decoration:none;border-bottom:1px dotted #ccc;">078</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-商君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">商君</a></td><td>商</td><td>&mdash;</td><td class="fengdi-source">正义068</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-穰侯" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">穰侯（魏冉）</a></td><td>穰&rarr;陶</td><td>邓州穰县</td><td class="fengdi-source">正义005、索隐072</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-泾阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">泾阳君</a></td><td>泾阳</td><td>雍州泾阳县</td><td class="fengdi-source">正义069</td></tr>
+                    <tr><td class="jun-title">华阳君（羋戎）</td><td>华阳&rarr;新城</td><td>洛州密县华阳亭</td><td class="fengdi-source">索隐072</td></tr>
+                    <tr><td class="jun-title">华阳君（冯亭）</td><td>华阳</td><td>&mdash;</td><td class="fengdi-source"><a href="../chapters/073_白起王翦列传.html" style="color:#888;text-decoration:none;border-bottom:1px dotted #ccc;">073</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-赵奢" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">马服君</a></td><td>马服山</td><td>邯郸县西北十里</td><td class="fengdi-source">正义043</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-靖郭君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">靖郭君</a></td><td>薛</td><td>鲁国薛城</td><td class="fengdi-source">集解075</td></tr>
+                    <tr><td class="jun-title">长安君（赵）</td><td>长安&rarr;饶阳</td><td>瀛州饶阳县东二十里</td><td class="fengdi-source">正义043</td></tr>
+                    <tr><td class="jun-title">番吾君</td><td>番吾</td><td>恒州房山县东二十里</td><td class="fengdi-source">正义043</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-甯陵君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">甯陵君</a></td><td>甯陵</td><td>宋州宁陵县城</td><td class="fengdi-source">正义048</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-房君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">房君</a></td><td>房</td><td>&mdash;（索隐"房，邑也"）</td><td class="fengdi-source">索隐048</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-当阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">当阳君</a></td><td>当阳</td><td>南郡当阳县</td><td class="fengdi-source">正义091</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-仓海君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">仓海君</a></td><td>仓海</td><td>不详（集解"秦郡县无仓海"）</td><td class="fengdi-source">集解055</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-横阳君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">横阳君</a></td><td>横阳</td><td>宋城县西南三十里</td><td class="fengdi-source">索隐098</td></tr>
+                    <tr><td class="jun-title">叶阳君</td><td>叶阳</td><td>&mdash;</td><td class="fengdi-source"><a href="../chapters/005_秦本纪.html" style="color:#888;text-decoration:none;border-bottom:1px dotted #ccc;">005</a></td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-周子南君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">周子南君</a></td><td>周承休城</td><td>汝州梁县东北二十六里</td><td class="fengdi-source">正义004</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-望诸君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">望诸君</a></td><td>望诸（观津）</td><td>济阴定陶一带</td><td class="fengdi-source">周礼</td></tr>
+                    <tr><td class="jun-title"><a href="../entities/person.html#entity-广野君" style="color:#8b0000;text-decoration:none;border-bottom:1px dashed #c0a080;" title="查看实体页">广野君</a></td><td>广野</td><td>&mdash;</td><td class="fengdi-source">正义095</td></tr>
+                    <tr><td class="jun-title">泾阳君（池阳）</td><td>池阳</td><td>雍州泾阳县西北三里</td><td class="fengdi-source">正义098</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            史记知识库 &middot; 君号索引 &middot; 让经典触手可及
+        </div>
+    </div>
+
+    <script>
+        function toggleCat(header) {
+            header.closest('.category, .fengdi-section, .tonghao-section').classList.toggle('collapsed');
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.category').forEach(cat => {
+                    if (filter === 'all' || cat.dataset.cat === filter) {
+                        cat.style.display = '';
+                        cat.classList.remove('collapsed');
+                    } else {
+                        cat.style.display = 'none';
+                    }
+                });
+                // Always show tonghao and fengdi for "all"
+                document.querySelectorAll('.tonghao-section, .fengdi-section').forEach(s => {
+                    s.style.display = filter === 'all' ? '' : 'none';
+                });
+            });
+        });
+
+        // Search
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const q = this.value.trim().toLowerCase();
+            if (!q) {
+                document.querySelectorAll('.category, .tonghao-section, .fengdi-section').forEach(s => s.style.display = '');
+                document.querySelectorAll('tr').forEach(r => r.classList.remove('hidden'));
+                // Reset filter buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+                return;
+            }
+            document.querySelectorAll('.category, .tonghao-section, .fengdi-section').forEach(section => {
+                let hasMatch = false;
+                section.querySelectorAll('tbody tr, table tr:not(:first-child)').forEach(row => {
+                    if (row.querySelector('th')) return; // skip header
+                    const text = row.textContent.toLowerCase();
+                    if (text.includes(q)) {
+                        row.classList.remove('hidden');
+                        hasMatch = true;
+                    } else {
+                        row.classList.add('hidden');
+                    }
+                });
+                section.style.display = hasMatch ? '' : 'none';
+                if (hasMatch) section.classList.remove('collapsed');
+            });
+        });
+    </script>
+</body>
+</html>
