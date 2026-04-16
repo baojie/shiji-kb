@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全文检索 - 史记知识库</title>
+    <link rel="stylesheet" href="css/shiji-styles.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+            background-color: #faf8f0;
+        }
+        h1 {
+            text-align: center;
+            color: #8B4513;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+            font-size: 1.5em;
+        }
+        h1 a { color: #8B4513; text-decoration: none; }
+        h1 a:hover { color: #d4af37; }
+
+        .search-form {
+            position: relative;
+            max-width: 680px;
+            margin: 4px auto 18px;
+        }
+        #search-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 18px 12px 42px;
+            font-size: 16px;
+            color: #333;
+            background: #fffef0 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B4513' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>") no-repeat 14px center;
+            background-size: 18px 18px;
+            border: 1px solid #d4af37;
+            border-radius: 6px;
+            outline: none;
+            box-shadow: 0 1px 3px rgba(139, 69, 19, 0.08);
+        }
+        #search-input::placeholder { color: #a89166; font-size: 15px; }
+        #search-input:focus {
+            border-color: #8B4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.12);
+        }
+
+        .summary {
+            color: #666;
+            font-size: 14px;
+            margin: 12px 4px;
+        }
+        .summary strong { color: #8B4513; }
+
+        .hit {
+            display: block;
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            background: #fffef8;
+            border: 1px solid #e6d8b0;
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            transition: border-color .15s, box-shadow .15s;
+        }
+        .hit:hover {
+            border-left-color: #8B4513;
+            box-shadow: 0 2px 6px rgba(139, 69, 19, 0.08);
+        }
+        .hit .ch {
+            display: block;
+            font-size: 13px;
+            color: #8B4513;
+            margin-bottom: 4px;
+        }
+        .hit .ch strong { font-weight: 600; }
+        .hit .snip {
+            display: block;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+        }
+        .hit mark {
+            background: #fff3b0;
+            color: #8B0000;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .empty, .loading {
+            text-align: center;
+            color: #999;
+            padding: 40px 20px;
+            font-size: 15px;
+        }
+
+        .pagination {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin: 24px 0 40px;
+            flex-wrap: wrap;
+        }
+        .pagination a, .pagination span {
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 14px;
+            color: #8B4513;
+            background: #fffef0;
+            border: 1px solid #e6d8b0;
+            border-radius: 4px;
+            text-decoration: none;
+            min-width: 24px;
+            text-align: center;
+        }
+        .pagination a:hover {
+            background: #fff3cc;
+            border-color: #d4af37;
+        }
+        .pagination .current {
+            background: #8B4513;
+            color: white;
+            border-color: #8B4513;
+            font-weight: bold;
+        }
+        .pagination .disabled {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .nav-back {
+            display: inline-block;
+            font-size: 13px;
+            color: #8B4513;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .nav-back:hover { color: #d4af37; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="nav-back">← 返回首页</a>
+    <h1><a href="index.html">📜 史记知识库</a> · 全文检索</h1>
+
+    <form class="search-form" id="search-form">
+        <input type="search" id="search-input" placeholder="全文检索 (关键字以空格分隔)" autocomplete="off">
+    </form>
+
+    <div id="results"><div class="loading">正在加载索引…</div></div>
+
+    <script src="js/search.js" defer></script>
+    <script>
+    (function () {
+        const PER_PAGE = 50;
+        const input = document.getElementById('search-input');
+        const form = document.getElementById('search-form');
+        const resultsEl = document.getElementById('results');
+
+        function getQueryParam(name) {
+            const m = new RegExp('[?&]' + name + '=([^&#]*)').exec(window.location.search);
+            return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : '';
+        }
+
+        function getPage() {
+            const n = parseInt(getQueryParam('page'), 10);
+            return n > 0 ? n : 1;
+        }
+
+        function setUrl(query, page) {
+            const qs = 'q=' + encodeURIComponent(query) + (page > 1 ? '&page=' + page : '');
+            const url = window.location.pathname + '?' + qs;
+            window.history.replaceState(null, '', url);
+        }
+
+        function render(query, page) {
+            const S = window.ShijiSearch;
+            if (!S || !S.getData()) {
+                resultsEl.innerHTML = '<div class="loading">正在加载索引…</div>';
+                return;
+            }
+            const q = (query || '').trim();
+            if (!q) {
+                resultsEl.innerHTML = '<div class="empty">请输入关键字开始检索</div>';
+                return;
+            }
+
+            const r = S.searchAll(q);
+            if (!r.hits.length) {
+                resultsEl.innerHTML = '<div class="empty">未找到「' + S.escapeHtml(q) + '」</div>';
+                return;
+            }
+
+            const total = r.hits.length;
+            const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
+            if (page > totalPages) page = totalPages;
+            const start = (page - 1) * PER_PAGE;
+            const end = Math.min(total, start + PER_PAGE);
+
+            const data = S.getData();
+            const parts = [];
+            parts.push(
+                '<div class="summary">找到 <strong>' + total + '</strong> 个段落 · ' +
+                '第 ' + page + ' / ' + totalPages + ' 页 · ' +
+                '显示第 ' + (start + 1) + '–' + end + ' 条</div>'
+            );
+
+            for (let i = start; i < end; i++) {
+                const h = r.hits[i];
+                const ch = data.chapterMap[h.c];
+                if (!ch) continue;
+                const num = String(ch.n).padStart(3, '0');
+                const url = S.chapterUrl(ch, h.p);
+                parts.push(
+                    '<a class="hit" href="' + url + '">' +
+                      '<span class="ch"><strong>' + num + '·' + S.escapeHtml(ch.t) +
+                      '</strong> · 段落 ' + S.escapeHtml(h.p) + '</span>' +
+                      '<span class="snip">' + S.makeSnippet(h.x, r.tokens, 40) + '</span>' +
+                    '</a>'
+                );
+            }
+
+            // 分页
+            if (totalPages > 1) {
+                const pag = ['<div class="pagination">'];
+                const pageLink = function (p, label, extra) {
+                    const qs = '?q=' + encodeURIComponent(q) + (p > 1 ? '&page=' + p : '');
+                    return '<a href="' + qs + '"' + (extra || '') + '>' + label + '</a>';
+                };
+                if (page > 1) {
+                    pag.push(pageLink(1, '«'));
+                    pag.push(pageLink(page - 1, '‹'));
+                } else {
+                    pag.push('<span class="disabled">«</span>');
+                    pag.push('<span class="disabled">‹</span>');
+                }
+                const startPage = Math.max(1, page - 4);
+                const endPage = Math.min(totalPages, page + 4);
+                if (startPage > 1) pag.push('<span>…</span>');
+                for (let p = startPage; p <= endPage; p++) {
+                    if (p === page) pag.push('<span class="current">' + p + '</span>');
+                    else pag.push(pageLink(p, String(p)));
+                }
+                if (endPage < totalPages) pag.push('<span>…</span>');
+                if (page < totalPages) {
+                    pag.push(pageLink(page + 1, '›'));
+                    pag.push(pageLink(totalPages, '»'));
+                } else {
+                    pag.push('<span class="disabled">›</span>');
+                    pag.push('<span class="disabled">»</span>');
+                }
+                pag.push('</div>');
+                parts.push(pag.join(''));
+            }
+
+            resultsEl.innerHTML = parts.join('');
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+
+        function run() {
+            const q = input.value;
+            const page = getPage();
+            render(q, page);
+        }
+
+        // 提交表单时回到第一页
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const q = input.value.trim();
+            if (!q) return;
+            setUrl(q, 1);
+            render(q, 1);
+        });
+
+        // 首次加载：读取 URL 参数并执行搜索
+        const initialQuery = getQueryParam('q');
+        input.value = initialQuery;
+        input.focus();
+
+        function whenReady() {
+            const S = window.ShijiSearch;
+            if (!S) { setTimeout(whenReady, 30); return; }
+            S.loadIndex()
+                .then(function () { run(); })
+                .catch(function (err) {
+                    resultsEl.innerHTML = '<div class="empty">索引加载失败：' +
+                        (err && err.message || err) + '</div>';
+                });
+        }
+        whenReady();
+
+        // 支持浏览器前进/后退
+        window.addEventListener('popstate', function () {
+            const q = getQueryParam('q');
+            input.value = q;
+            render(q, getPage());
+        });
+    })();
+    </script>
+</body>
+</html>

@@ -15,44 +15,56 @@
         }
 
         h1 {
+            position: relative;
             text-align: center;
             color: #8B4513;
             border-bottom: 3px solid #8B4513;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+        }
+
+        .intro-toggle {
+            position: absolute;
+            right: 0;
+            bottom: 18px;
+            font-size: 13px;
+            font-weight: normal;
+            color: #8B4513;
+            background: #fff9e6;
+            border: 1px solid #e6d8b0;
+            border-radius: 4px;
+            padding: 5px 12px;
+            cursor: pointer;
+            line-height: 1.4;
+            -webkit-user-select: none;
+            user-select: none;
+            transition: background-color .15s, border-color .15s;
+        }
+        .intro-toggle:hover {
+            background: #fff3cc;
+            border-color: #d4af37;
+        }
+        .intro-toggle .toggle-arrow {
+            display: inline-block;
+            font-size: 0.85em;
+            margin-left: 4px;
+            transition: transform 0.25s ease;
+        }
+        .intro-toggle.expanded .toggle-arrow {
+            transform: rotate(180deg);
         }
 
         .intro {
             background-color: #fff9e6;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 5px solid #d4af37;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 14px 20px;
+            border-radius: 6px;
+            border-left: 4px solid #d4af37;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
         }
 
-        .intro h2 {
-            margin-top: 0;
-            color: #8B4513;
-            cursor: pointer;
-            -webkit-user-select: none;
-            user-select: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .intro h2:hover {
-            color: #d4af37;
-        }
-
-        .toggle-arrow {
-            font-size: 0.8em;
-            transition: transform 0.3s ease;
-        }
-
-        .intro.collapsed .toggle-arrow {
-            transform: rotate(-90deg);
+        .intro.collapsed {
+            display: none;
         }
 
         .intro-content {
@@ -97,7 +109,9 @@
             margin: 0;
             font-size: 1.6em;
             border: none;
+            border-left: none;
             padding: 0;
+            color: white;
         }
 
         .section-desc {
@@ -255,6 +269,99 @@
             padding-top: 30px;
             border-top: 2px solid #e6d8b0;
         }
+
+        /* 全文检索 */
+        .shiji-search {
+            position: relative;
+            max-width: 680px;
+            margin: 4px auto 18px;
+        }
+        #shiji-search-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 18px 12px 42px;
+            font-size: 16px;
+            color: #333;
+            background: #fffef0 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B4513' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>") no-repeat 14px center;
+            background-size: 18px 18px;
+            border: 1px solid #d4af37;
+            border-radius: 6px;
+            outline: none;
+            box-shadow: 0 1px 3px rgba(139, 69, 19, 0.08);
+            transition: border-color .2s, box-shadow .2s;
+        }
+        #shiji-search-input::placeholder { color: #a89166; font-size: 15px; }
+        #shiji-search-input:focus {
+            border-color: #8B4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.12);
+        }
+        .shiji-search-results {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: calc(100% + 4px);
+            max-height: 420px;
+            overflow-y: auto;
+            background: #fffef8;
+            border: 1px solid #e6d8b0;
+            border-radius: 4px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            z-index: 50;
+        }
+        .shiji-search-results .ss-summary {
+            padding: 6px 12px;
+            font-size: 12px;
+            color: #999;
+            border-bottom: 1px solid #f0e8cf;
+            background: #fbf7e6;
+        }
+        .shiji-search-results .ss-hint {
+            padding: 10px 12px;
+            font-size: 13px;
+            color: #999;
+        }
+        .shiji-search-results .ss-hit {
+            display: block;
+            padding: 8px 12px;
+            border-bottom: 1px solid #f2ebd4;
+            color: #333;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        .shiji-search-results .ss-hit:last-child { border-bottom: none; }
+        .shiji-search-results .ss-hit:hover { background: #fbf4df; }
+        .shiji-search-results .ss-ch {
+            display: block;
+            font-size: 12px;
+            color: #8B4513;
+            margin-bottom: 2px;
+        }
+        .shiji-search-results .ss-snip {
+            display: block;
+            font-size: 13px;
+            color: #555;
+        }
+        .shiji-search-results mark {
+            background: #fff3b0;
+            color: #8B0000;
+            padding: 0 1px;
+            border-radius: 2px;
+        }
+        .shiji-search-results .ss-more {
+            display: block;
+            padding: 10px 12px;
+            text-align: center;
+            font-size: 13px;
+            color: #8B4513;
+            text-decoration: none;
+            background: #fbf4df;
+            border-top: 1px solid #e6d8b0;
+        }
+        .shiji-search-results .ss-more:hover {
+            background: #f5e9c2;
+            color: #8B0000;
+        }
     </style>
 </head>
 <body>
@@ -262,15 +369,19 @@
       <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#8B4513;color:#faf8f0" aria-hidden="true"><path d="M0 0l115 115h15l12 27 108 108V0z"/><path d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16" fill="currentColor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 2 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-10 11-11 11 0 6-2 11-7 16-16 16-30 10-40 1 0 3-1 7-5 11l-12 11c-1 2 1 6 1 6z" fill="currentColor" class="octo-body"/></svg>
     </a>
     <style>.octo-arm,.octo-body:hover~.octo-arm{animation:wave .56s}@keyframes wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}</style>
-    <h1>📜 史记知识库 - AI驱动的历史知识图谱</h1>
+    <h1>
+        📜 史记知识库 - AI驱动的历史知识图谱
+        <button type="button" class="intro-toggle" onclick="toggleIntro()" aria-expanded="false" aria-controls="intro-panel">项目简介<span class="toggle-arrow">▼</span></button>
+    </h1>
 
-    <div class="intro collapsed">
-        <h2 onclick="toggleIntro()">
-            <span>🎯 项目简介</span>
-            <span class="toggle-arrow">▼</span>
-        </h2>
+    <div class="shiji-search" id="shiji-search">
+        <input type="search" id="shiji-search-input" placeholder="全文检索 (关键字以空格分隔)" autocomplete="off">
+        <div id="shiji-search-results" class="shiji-search-results" role="listbox"></div>
+    </div>
+
+    <div class="intro collapsed" id="intro-panel">
         <div class="intro-content">
-            <p>本项目用 AI Agent 将《史记》全130章转化为结构化知识图谱。采用18类实体标注系统（人名、地名、官职、身份、时间、氏族、邦国、制度、族群、器物、天文、神话、生物、典籍、礼仪、刑法、思想、数量），精细标注全文约58万字；建立了Biblical-style段落编号体系（Purple Numbers）、3,198个事件索引（含公元纪年和7,652条事件关系）、18类实体索引（14,297条目，别名合并，语义消歧），以及130条线路的事件地铁图可视化。</p>
+            <p>本项目用 AI Agent 将《史记》全130章转化为结构化知识图谱。采用18类实体标注系统（人名、地名、官职、身份、时间、氏族、邦国、制度、族群、器物、天文、神话、生物、典籍、礼仪、刑法、思想、数量），精细标注全文约57.7万字，累计123,106次标注；建立了Biblical-style段落编号体系（Purple Numbers，9,588个段落）、3,197个事件索引（含7,637条事件关系）、18类实体索引（14,186条目，591条别名合并，4,287处语义消歧），以及130条线路的事件地铁图可视化。</p>
 
             <p style="color: #888; font-size: 0.85em; margin-top: 8px;">⚠️ 本项目由AI辅助生成，标注和知识提取中不可避免地存在错误和疏漏，正在持续修正中。如发现问题欢迎提交 Issue。</p>
 
@@ -301,10 +412,10 @@
 
             <h3>🚀 已完成 / 计划中</h3>
             <ul style="line-height: 1.8; color: #555;">
-                <li>✅ <strong>实体标注</strong>：18类 × 130章 × 102,851次标注，v2.8统一〖TYPE X〗格式</li>
-                <li>✅ <strong>事件索引</strong>：3,198个事件，11类事件类型，98.7%覆盖公元纪年（五轮Agent反思审查，~2,119处修正）</li>
-                <li>✅ <strong>事件关系</strong>：7,652条关系（9种类型），事件地铁图130条线路可视化</li>
-                <li>✅ <strong>分类实体索引</strong>：<a href="entities/index.html" style="color: #8B0000;">已上线</a> — 18类索引（11,992条目），别名合并（595条），语义消歧（644处）</li>
+                <li>✅ <strong>实体标注</strong>：18类 × 130章 × 123,106次标注，统一〖TYPE X〗格式</li>
+                <li>✅ <strong>事件索引</strong>：3,197个事件，11类事件类型（多轮Agent反思审查修正）</li>
+                <li>✅ <strong>事件关系</strong>：7,637条关系（9种类型），事件地铁图130条线路可视化</li>
+                <li>✅ <strong>分类实体索引</strong>：<a href="entities/index.html" style="color: #8B0000;">已上线</a> — 18类索引（14,186条目），别名合并（591条），语义消歧（4,287处）</li>
                 <li>📌 <strong>三家注标注</strong>：整合裴骃《集解》、司马贞《索隐》、张守节《正义》（计划中）</li>
                 <li>📊 <strong>十表交互化</strong>：十篇年表已渲染，待开发交互式查询（计划中）</li>
                 <li>🕸️ <strong>知识图谱数据库</strong>：导入 Neo4j，支持图形化浏览（计划中）</li>
@@ -313,7 +424,7 @@
     </div>
 
     <!-- 实体索引和专项索引入口 -->
-    <div style="text-align: center; margin: 30px 0; display: flex; flex-direction: row; gap: 20px; justify-content: center;">
+    <div style="text-align: center; margin: 16px 0 30px; display: flex; flex-direction: row; gap: 20px; justify-content: center;">
         <a href="entities/index.html" style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #8B0000, #A0522D); color: white; text-decoration: none; border-radius: 6px; font-size: 1.1em; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;">📑 知识索引</a>
         <a href="special/special_index.html" style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #8B4513, #A0522D); color: white; text-decoration: none; border-radius: 6px; font-size: 1.1em; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;">📖 专项索引</a>
     </div>
@@ -1649,8 +1760,13 @@
 
     <script>
         function toggleIntro() {
-            const intro = document.querySelector('.intro');
-            intro.classList.toggle('collapsed');
+            const intro = document.getElementById('intro-panel');
+            const btn = document.querySelector('.intro-toggle');
+            const collapsed = intro.classList.toggle('collapsed');
+            if (btn) {
+                btn.classList.toggle('expanded', !collapsed);
+                btn.setAttribute('aria-expanded', String(!collapsed));
+            }
         }
 
         function toggleSections(toggleEl) {
@@ -1673,5 +1789,6 @@
             }
         }
     </script>
+    <script src="js/search.js" defer></script>
 </body>
 </html>
