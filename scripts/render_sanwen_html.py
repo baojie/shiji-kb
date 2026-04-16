@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""渲染散文集 HTML 页面（结构仿 render_yunwen_html.py）。"""
+"""渲染散文集 HTML 页面 — 按章节时间排序，类型作标签。"""
 
 import json
 import re
@@ -12,6 +12,16 @@ from semantic_tags import render_tags_to_html  # noqa: E402
 
 
 TYPE_ORDER = ["诏令", "奏疏", "书信", "檄文", "谏言", "策论", "议论"]
+
+TYPE_COLORS = {
+    "诏令": "#c0392b",
+    "奏疏": "#2980b9",
+    "书信": "#27ae60",
+    "檄文": "#e67e22",
+    "谏言": "#8e44ad",
+    "策论": "#d35400",
+    "议论": "#2c3e50",
+}
 
 
 def render_entity_tags(text: str) -> str:
@@ -45,14 +55,31 @@ def format_prose(content: str) -> str:
     return "".join(f"<p>{p}</p>" for p in paragraphs)
 
 
+def _plain_chars(content: str) -> int:
+    """去标注后的纯文本字数（只计汉字和标点）。"""
+    text = re.sub(r"[〖⟦][^〗⟧]*[〗⟧]", "", content)
+    text = re.sub(r"\[[\d.]+\]\s*", "", text)
+    text = re.sub(r"\s+", "", text)
+    return len(text)
+
+
 def generate_html(json_path: Path, output_path: Path) -> None:
     data = json.loads(json_path.read_text(encoding="utf-8"))
-    by_type: dict[str, list] = {}
-    for item in data:
-        by_type.setdefault(item["type"], []).append(item)
 
+    # 按章节号排序（已在 manifest 中排好）
     for idx, item in enumerate(data):
         item["_uid"] = f"sanwen-{idx}"
+        item["_chars"] = _plain_chars(item.get("content", ""))
+
+    # 统计各类型数量
+    by_type: dict[str, int] = {}
+    for item in data:
+        by_type[item["type"]] = by_type.get(item["type"], 0) + 1
+
+    type_badge_css = "\n".join(
+        f'    .badge-{t} {{ background:{c}; color:#fff; padding:2px 8px; border-radius:3px; font-size:.75em; margin-left:8px; vertical-align:middle; }}'
+        for t, c in TYPE_COLORS.items()
+    )
 
     head = f"""<!DOCTYPE html>
 <html lang="zh">
@@ -71,20 +98,16 @@ def generate_html(json_path: Path, output_path: Path) -> None:
     .nav a {{ color:#8b4513; text-decoration:none; margin-right:20px; }}
     .nav a:hover {{ text-decoration:underline; }}
     .nav a.pdf {{ color:#c00; font-weight:bold; }}
+    .type-summary {{ background:#f9f9f9; padding:15px 20px; margin-bottom:30px; border-radius:5px; border-left:4px solid #8b4513; }}
+    .type-summary span {{ margin-right:12px; }}
     .toc {{ background:#f9f9f9; padding:20px 30px; margin-bottom:40px; border-radius:5px; border-left:4px solid #8b4513; }}
     .toc h2 {{ font-size:1.5em; color:#8b4513; margin-bottom:15px; }}
     .toc ul {{ list-style:none; padding-left:0; }}
-    .toc > ul > li {{ margin-bottom:10px; padding-left:20px; position:relative; }}
-    .toc > ul > li:before {{ content:"📜"; position:absolute; left:0; margin-right:8px; }}
-    .toc a {{ color:#333; text-decoration:none; font-size:1.1em; }}
+    .toc > ul > li {{ margin-bottom:6px; padding-left:20px; position:relative; }}
+    .toc > ul > li:before {{ content:"📜"; position:absolute; left:0; }}
+    .toc a {{ color:#333; text-decoration:none; font-size:1.05em; }}
     .toc a:hover {{ color:#8b4513; text-decoration:underline; }}
-    .toc-sub {{ list-style:none; padding-left:22px; margin-top:6px; }}
-    .toc-sub li {{ margin-bottom:4px; padding-left:14px; font-size:.95em; position:relative; }}
-    .toc-sub li:before {{ content:"•"; color:#999; position:absolute; left:0; }}
-    .toc-sub a {{ font-size:.95em; color:#666; }}
-    .type-section {{ margin-bottom:60px; }}
-    .type-header {{ font-size:2em; color:#8b4513; margin-bottom:10px; border-left:5px solid #8b4513; padding-left:15px; }}
-    .type-desc {{ color:#666; margin-bottom:30px; padding-left:20px; font-style:italic; }}
+    .toc .ch-num {{ color:#999; font-size:.9em; }}
     .sanwen-item {{ margin-bottom:50px; border-left:3px solid #d4a373; padding-left:20px; }}
     .item-title {{ font-size:1.5em; color:#8b4513; margin-bottom:10px; font-weight:bold; }}
     .item-subtitle {{ font-size:.9em; color:#999; margin-bottom:14px; font-style:italic; }}
@@ -94,70 +117,75 @@ def generate_html(json_path: Path, output_path: Path) -> None:
     .item-content {{ line-height:2.2; color:#333; text-align:justify; }}
     .item-content p {{ margin:0 0 1em; }}
     .footer {{ text-align:center; margin-top:50px; padding-top:20px; border-top:1px solid #ddd; color:#999; font-size:.9em; }}
+{type_badge_css}
     @media (max-width:768px) {{ .container {{ padding:20px; }} h1 {{ font-size:1.8em; }} }}
   </style>
 </head>
 <body>
   <div class="container">
     <h1>史记散文集</h1>
-    <div class="subtitle">共收录 {len(data)} 篇散文（诏令、奏疏、书信、檄文、策论、议论）</div>
+    <div class="subtitle">共收录 {len(data)} 篇散文 · 按章节顺序排列</div>
     <div class="nav">
-      <a href="../index.html">← 返回首页</a>
+      <a href="../index.html">&larr; 返回首页</a>
       <a href="special_index.html">专项索引</a>
       <a href="sanwen.pdf" class="pdf">📥 下载PDF</a>
     </div>
 """
 
-    toc = ['    <div class="toc"><h2>目录</h2><ul>']
+    # 类型统计条
+    type_summary = '    <div class="type-summary">'
     for t in TYPE_ORDER:
-        items = by_type.get(t, [])
-        if not items:
-            continue
-        toc.append(f'      <li><a href="#type-{t}">{t}（{len(items)}篇）</a>')
-        toc.append('        <ul class="toc-sub">')
-        for it in items:
-            toc.append(
-                f'          <li><a href="#{it["_uid"]}">{it["title"]} '
-                f'<span style="color:#999">· {it["chapter_num"]} {it["chapter_title"]}</span></a></li>'
-            )
-        toc.append("        </ul>")
-        toc.append("      </li>")
+        cnt = by_type.get(t, 0)
+        if cnt:
+            color = TYPE_COLORS.get(t, "#666")
+            type_summary += f'<span class="badge-{t}">{t} {cnt}</span> '
+    type_summary += "</div>\n"
+
+    # 目录 — 按章节顺序
+    toc = ['    <div class="toc"><h2>目录</h2><ul>']
+    for it in data:
+        badge = f'<span class="badge-{it["type"]}">{it["type"]}</span>'
+        toc.append(
+            f'      <li><a href="#{it["_uid"]}">{it["title"]}</a>{badge} '
+            f'<span class="ch-num">{it["chapter_num"]} {it["chapter_title"]} · {it["_chars"]}字</span></li>'
+        )
     toc.append("    </ul></div>")
     toc_html = "\n".join(toc) + "\n"
 
+    # 正文 — 按章节顺序，不分类
     body_parts = []
-    for t in TYPE_ORDER:
-        items = by_type.get(t, [])
-        if not items:
-            continue
-        body_parts.append(f'    <div class="type-section" id="type-{t}">')
-        body_parts.append(f'      <div class="type-header">{t}（{len(items)}篇）</div>')
-        body_parts.append(f'      <div class="type-desc">{items[0]["type_desc"]}</div>')
-        for it in items:
-            content_html = format_prose(it["content"])
-            intro_html = f'<div class="item-intro">{render_entity_tags(it["intro"])}</div>' if it.get("intro") else ""
-            body_parts.append(f'''      <div class="sanwen-item" id="{it["_uid"]}">
-        <div class="item-title">{it["title"]}</div>
+    for it in data:
+        content_html = format_prose(it["content"])
+        intro_html = (
+            f'<div class="item-intro">{render_entity_tags(it["intro"])}</div>'
+            if it.get("intro")
+            else ""
+        )
+        badge = f'<span class="badge-{it["type"]}">{it["type"]}</span>'
+        body_parts.append(
+            f'''    <div class="sanwen-item" id="{it["_uid"]}">
+        <div class="item-title">{it["title"]}{badge}</div>
         <div class="item-subtitle">
           <a href="../chapters/{it["chapter_num"]}_{it["chapter_title"]}.html">{it["chapter_num"]} {it["chapter_title"]}</a>
-          · [{it["start_para"]}-{it["end_para"]}]
+          &middot; [{it["start_para"]}-{it["end_para"]}] &middot; {it["_chars"]}字
         </div>
         {intro_html}
         <div class="item-content">{content_html}</div>
-      </div>''')
-        body_parts.append("    </div>")
+      </div>'''
+        )
     body = "\n".join(body_parts)
 
-    tail = """
+    total_chars = sum(it["_chars"] for it in data)
+    tail = f"""
     <div class="footer">
       <p>史记知识库 | 散文专项索引</p>
-      <p>数据提取自《史记》标注版本</p>
+      <p>共 {len(data)} 篇 · {total_chars:,} 字</p>
     </div>
   </div>
 </body>
 </html>
 """
-    output_path.write_text(head + toc_html + body + tail, encoding="utf-8")
+    output_path.write_text(head + type_summary + toc_html + body + tail, encoding="utf-8")
     print(f"✓ HTML: {output_path}")
 
 
@@ -174,35 +202,25 @@ def main() -> int:
     html_file = special_dir / "sanwen.html"
     generate_html(json_file, html_file)
 
-    shutil.copy2(json_file, special_dir / "sanwen.json")
-    md_file = data_dir / "sanwen.md"
-    if md_file.exists():
-        shutil.copy2(md_file, special_dir / "sanwen.md")
+    # 复制 JSON/MD 到 docs
+    for ext in ("json", "md"):
+        src = data_dir / f"sanwen.{ext}"
+        dst = special_dir / f"sanwen.{ext}"
+        if src.exists():
+            shutil.copy2(src, dst)
     print(f"✓ JSON/MD → {special_dir}")
 
     # PDF
     try:
-        from weasyprint import HTML, CSS
-        pdf_path = special_dir / "sanwen.pdf"
-        pdf_css = CSS(string="""
-            @page { size: A4; margin: 2.5cm 2cm;
-                @top-center { content: "史记·散文集"; font-size: 10pt; color: #666; }
-                @bottom-center { content: counter(page); font-size: 10pt; color: #666; } }
-            body { font-family: "Noto Serif SC","Source Han Serif SC",serif; font-size: 12pt; line-height: 1.8; }
-            h1 { font-size: 24pt; page-break-after: avoid; }
-            .type-section { page-break-inside: avoid; margin-bottom: 30pt; }
-            .type-header { font-size: 18pt; page-break-after: avoid; }
-            .sanwen-item { page-break-inside: avoid; margin-bottom: 20pt; }
-            .item-title { font-size: 14pt; page-break-after: avoid; }
-            .nav, .toc { display: none; }
-            a { color: #8b4513; text-decoration: none; }
-        """)
-        HTML(filename=str(html_file)).write_pdf(str(pdf_path), stylesheets=[pdf_css])
-        print(f"✓ PDF: {pdf_path} ({pdf_path.stat().st_size/1024/1024:.2f} MB)")
+        from weasyprint import HTML
+
+        pdf_file = special_dir / "sanwen.pdf"
+        HTML(filename=str(html_file)).write_pdf(str(pdf_file))
+        mb = pdf_file.stat().st_size / 1024 / 1024
+        print(f"✓ PDF: {pdf_file} ({mb:.2f} MB)")
     except ImportError:
-        print("⚠️  WeasyPrint 未安装，跳过 PDF")
-    except Exception as e:
-        print(f"⚠️  PDF 失败: {e}")
+        print("⚠ weasyprint 未安装，跳过 PDF 生成")
+
     return 0
 
 
