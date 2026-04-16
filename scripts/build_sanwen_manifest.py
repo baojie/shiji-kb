@@ -27,6 +27,7 @@ TYPE_DESC = {
     "奏疏": "臣下上奏皇帝的疏议、上书、上言",
     "书信": "人物之间往来的书信、国书",
     "檄文": "声讨、宣谕性质的檄文",
+    "谏言": "臣下谏诤君主的政论性言辞",
     "策论": "对策、长篇建议、策士说辞",
     "议论": "长篇议论性散文（如过秦论）",
 }
@@ -132,6 +133,206 @@ MANUAL_ENTRIES = [
         "end_para": "14",
     },
     {
+        "chapter_num": "002",
+        "chapter_title": "夏本纪",
+        "type": "谏言",
+        "title": "皋陶谟",
+        "start_para": "17",
+        "end_para": "17.13",
+    },
+    {
+        "chapter_num": "004",
+        "chapter_title": "周本纪",
+        "type": "谏言",
+        "title": "祭公谋父谏穆王征犬戎",
+        "start_para": "25",
+        "end_para": "25",
+    },
+    {
+        "chapter_num": "004",
+        "chapter_title": "周本纪",
+        "type": "诏令",
+        "title": "穆王甫刑",
+        "start_para": "26",
+        "end_para": "26",
+    },
+    {
+        "chapter_num": "004",
+        "chapter_title": "周本纪",
+        "type": "谏言",
+        "title": "芮良夫谏厉王",
+        "start_para": "29",
+        "end_para": "29",
+    },
+    {
+        "chapter_num": "004",
+        "chapter_title": "周本纪",
+        "type": "谏言",
+        "title": "召公谏厉王止谤",
+        "start_para": "30",
+        "end_para": "30",
+    },
+    {
+        "chapter_num": "004",
+        "chapter_title": "周本纪",
+        "type": "议论",
+        "title": "伯阳甫论三川地震",
+        "start_para": "35",
+        "end_para": "35",
+    },
+    {
+        "chapter_num": "043",
+        "chapter_title": "赵世家",
+        "type": "策论",
+        "title": "赵武灵王胡服骑射论",
+        "start_para": "67",
+        "end_para": "67",
+    },
+    {
+        "chapter_num": "079",
+        "chapter_title": "范睢蔡泽列传",
+        "type": "策论",
+        "title": "蔡泽说范睢功成身退",
+        "start_para": "32",
+        "end_para": "32",
+    },
+    {
+        "chapter_num": "083",
+        "chapter_title": "鲁仲连邹阳列传",
+        "type": "策论",
+        "title": "鲁仲连论帝秦之害",
+        "start_para": "7.6",
+        "end_para": "7.6",
+    },
+    {
+        "chapter_num": "043",
+        "chapter_title": "赵世家",
+        "type": "谏言",
+        "title": "触龙说赵太后",
+        "start_para": "95",
+        "end_para": "95",
+    },
+    {
+        "chapter_num": "044",
+        "chapter_title": "魏世家",
+        "type": "谏言",
+        "title": "李克论相",
+        "start_para": "18",
+        "end_para": "18",
+    },
+    {
+        "chapter_num": "046",
+        "chapter_title": "田敬仲完世家",
+        "type": "谏言",
+        "title": "邹忌以琴喻治国",
+        "start_para": "14.1",
+        "end_para": "14.1",
+    },
+    {
+        "chapter_num": "046",
+        "chapter_title": "田敬仲完世家",
+        "type": "策论",
+        "title": "苏代谓田轸论齐楚救赵",
+        "start_para": "21.1",
+        "end_para": "21.1",
+    },
+    {
+        "chapter_num": "046",
+        "chapter_title": "田敬仲完世家",
+        "type": "谏言",
+        "title": "苏代谏齐王释帝号",
+        "start_para": "22.1",
+        "end_para": "22.1",
+    },
+    {
+        "chapter_num": "054",
+        "chapter_title": "曹相国世家",
+        "type": "谏言",
+        "title": "曹参论守法无为",
+        "start_para": "15",
+        "end_para": "15",
+    },
+    {
+        "chapter_num": "068",
+        "chapter_title": "商君列传",
+        "type": "策论",
+        "title": "商鞅变法三辩",
+        "start_para": "3",
+        "end_para": "3",
+    },
+    {
+        "chapter_num": "091",
+        "chapter_title": "黥布列传",
+        "type": "策论",
+        "title": "随何说黥布叛楚归汉",
+        "start_para": "7",
+        "end_para": "7",
+    },
+    {
+        "chapter_num": "092",
+        "chapter_title": "淮阴侯列传",
+        "type": "策论",
+        "title": "韩信论项羽汉王优劣",
+        "start_para": "6",
+        "end_para": "6",
+    },
+    {
+        "chapter_num": "099",
+        "chapter_title": "刘敬叔孙通列传",
+        "type": "谏言",
+        "title": "娄敬谏都关中",
+        "start_para": "2",
+        "end_para": "2",
+    },
+    {
+        "chapter_num": "102",
+        "chapter_title": "张释之冯唐列传",
+        "type": "谏言",
+        "title": "冯唐论将",
+        "start_para": "13",
+        "end_para": "13",
+    },
+    {
+        "chapter_num": "108",
+        "chapter_title": "韩长孺列传",
+        "type": "谏言",
+        "title": "韩安国谏梁王",
+        "start_para": "5",
+        "end_para": "5",
+    },
+    {
+        "chapter_num": "118",
+        "chapter_title": "淮南衡山列传",
+        "type": "谏言",
+        "title": "伍被谏淮南王不可反",
+        "start_para": "18.1",
+        "end_para": "18.1",
+    },
+    {
+        "chapter_num": "126",
+        "chapter_title": "滑稽列传",
+        "type": "谏言",
+        "title": "淳于髡讽谏齐威王",
+        "start_para": "5",
+        "end_para": "5",
+    },
+    {
+        "chapter_num": "130",
+        "chapter_title": "太史公自序",
+        "type": "议论",
+        "title": "司马谈论六家要旨",
+        "start_para": "7",
+        "end_para": "17",
+    },
+    {
+        "chapter_num": "130",
+        "chapter_title": "太史公自序",
+        "type": "议论",
+        "title": "司马迁论春秋与六经",
+        "start_para": "27",
+        "end_para": "35",
+    },
+    {
         "chapter_num": "092",
         "chapter_title": "淮阴侯列传",
         "type": "策论",
@@ -174,6 +375,7 @@ DROP = {
     ("088", "8"),     # 蒙毅辩解（对话）
     ("096", "14"),    # 张苍为相（叙事）
     ("103", "11"),    # 石庆事迹（叙事，误判为诏令）
+    ("107", "24"),    # 魏其灌夫之死（叙事，非独立散文）
     ("108", "12"),    # 韩安国晚年（叙事）
     ("112", "56"),    # 徐乐严安"俱上书"引入段（非文章本体）
     ("112", "102"),   # 主父偃被诛（叙事）
@@ -197,6 +399,9 @@ DROP = {
     ("109", "13"),    # 李广列传·生平（叙事）
     ("127", "38"),    # 日者列传·褚先生补述（叙事）
     ("128", "16"),    # 龟策列传·宋元王得龟（叙事）
+    ("130", "11"),    # 六家要旨·墨家（已合并为完整一篇）
+    ("130", "14"),    # 六家要旨·道家（已合并为完整一篇）
+    ("130", "28"),    # 论春秋与六经：scanner [28-31] 已由 MANUAL [27-35] 覆盖
     ("044", "57"),    # 魏世家·中旗之谏（短对话，非独立文章）
     ("112", "114"),   # 由 MANUAL_ENTRIES 中 112/108 覆盖，scanner 范围错误
     ("117", "13"),    # 由 MANUAL_ENTRIES 覆盖：剔除 [13] 大人赋intro 与 [15-16] 尾部叙事
@@ -209,6 +414,7 @@ END_OVERRIDE: dict[tuple[str, str], str] = {
     ("072", "8"): "8",    # 苏代书信本体，剔除 [9]+ 穰侯被免相后续叙事
     ("079", "15"): "17",  # 范睢说秦昭王：远交近攻·收韩·逐四贵三说
     ("040", "49"): "49",  # 叔向论子比不能立（仅保留[49]全篇说词）
+    ("038", "9"): "19",   # 箕子陈洪范完整九畴（含三德/稽疑/庶徵/五福六极）
     ("058", "27"): "27",  # 褚先生论梁王储位与春秋大义
     ("065", "11"): "11",  # 吴起论在德不在险
     ("055", "15"): "15",  # 张良借箸止封六国（原 [15-21] 混入封赏/都关中等叙事）
@@ -221,7 +427,7 @@ RENAME: dict[tuple[str, str], tuple[str, str | None]] = {
     ("007", "47.1"): ("陈馀遗章邯书", "书信"),
     ("010", "41.2"): ("汉文帝遗诏", None),
     ("028", "46"): ("汉文帝初祠五畤诏", None),
-    ("038", "9"): ("箕子陈洪范", "议论"),
+    ("038", "9"): ("箕子陈洪范", "谏言"),
     ("040", "83"): ("齐使遗楚王书", None),
     ("043", "81"): ("苏厉遗赵惠文王书", None),
     ("060", "1"): ("群臣请立皇子为王疏", "奏疏"),
@@ -252,9 +458,7 @@ RENAME: dict[tuple[str, str], tuple[str, str | None]] = {
     ("112", "70"): ("严安上书", None),
     ("117", "3"): ("司马相如谕巴蜀檄", None),
     ("117", "7"): ("司马相如谏猎疏", None),
-    ("130", "11"): ("司马谈论六家要旨·墨家", None),
-    ("130", "14"): ("司马谈论六家要旨·道家", None),
-    ("130", "28"): ("司马谈论六家要旨·儒家与六经", None),
+    # 130 六家要旨：三个拆散条目已由 MANUAL_ENTRIES 合并覆盖
     # —— scanner 自动发现后的标题优化 ——
     ("010", "28.5"): ("缇萦救父上书", None),
     ("010", "43.1"): ("汉景帝追尊文帝庙乐诏", None),

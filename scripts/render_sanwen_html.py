@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from semantic_tags import render_tags_to_html  # noqa: E402
 
 
-TYPE_ORDER = ["诏令", "奏疏", "书信", "檄文", "策论", "议论"]
+TYPE_ORDER = ["诏令", "奏疏", "书信", "檄文", "谏言", "策论", "议论"]
 
 
 def render_entity_tags(text: str) -> str:
