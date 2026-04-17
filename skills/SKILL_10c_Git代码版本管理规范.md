@@ -482,3 +482,4 @@ git reset --hard HEAD~1
 - Issue管理：`SKILL_10a_Issue管理.md`
 - 每日工作日志：`SKILL_10b_每日工作日志维护.md`
 - CHANGELOG维护：`SKILL_10d_CHANGELOG编写规范.md`
+- **事故复盘与恢复 playbook**：[`doc/incidents/2026-04-17_chapter_md_loss_and_recovery.md`](../doc/incidents/2026-04-17_chapter_md_loss_and_recovery.md)——50 章丢失后的完整恢复路径，主力工具 `scripts/git_restore_latest_blob.py`
