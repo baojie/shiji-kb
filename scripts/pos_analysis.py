@@ -254,21 +254,32 @@ def analyze_chapter(fpath):
         'adjective': 0,   # 形容词
         'number': 0,      # 数词
         'measure': 0,     # 量词
+        'ambiguous': 0,   # 歧义字（臣/君/子/夫/卿/公/王 等既虚既实）
         'candidate': 0,   # 候选实体（余下汉字，主要是名词类）
     }
 
     candidate_text_parts = []  # 用于n-gram提取
+    ambiguous_contexts = Counter()  # 歧义字 → 上下文 bigram/trigram
+    ambiguous_positions: list[tuple[str, int]] = []  # (字, 该字在 untagged 中的位置)
 
     current_candidate_run = []
 
-    for ch in untagged:
+    for idx, ch in enumerate(untagged):
         if not is_chinese_char(ch):
             if current_candidate_run:
                 candidate_text_parts.append(''.join(current_candidate_run))
                 current_candidate_run = []
             continue
 
-        if ch in FUNCTION_CHARS:
+        # 歧义字优先识别（不吞进 function/candidate）
+        if ch in AMBIGUOUS_CHARS:
+            counts['ambiguous'] += 1
+            ambiguous_positions.append((ch, idx))
+            # 歧义字切断候选 run（稳健起见，避免人名"王X"误串连）
+            if current_candidate_run:
+                candidate_text_parts.append(''.join(current_candidate_run))
+                current_candidate_run = []
+        elif ch in FUNCTION_CHARS:
             counts['function'] += 1
             if current_candidate_run:
                 candidate_text_parts.append(''.join(current_candidate_run))
@@ -297,6 +308,17 @@ def analyze_chapter(fpath):
             counts['candidate'] += 1
             current_candidate_run.append(ch)
 
+    # 歧义字上下文：抽每个歧义字位置的前后 2 字（含非汉字，保留标点但清洗换行）
+    for ch, idx in ambiguous_positions:
+        left = untagged[max(0, idx - 2): idx]
+        right = untagged[idx + 1: idx + 3]
+        snippet = (left + ch + right).replace('\n', '').replace('\r', '')
+        # 仅保留汉字周边 bigram（左邻+字 和 字+右邻），用于统计"与谁搭配"
+        if idx > 0 and is_chinese_char(untagged[idx - 1]):
+            ambiguous_contexts[untagged[idx - 1] + ch] += 1
+        if idx + 1 < len(untagged) and is_chinese_char(untagged[idx + 1]):
+            ambiguous_contexts[ch + untagged[idx + 1]] += 1
+
     if current_candidate_run:
         candidate_text_parts.append(''.join(current_candidate_run))
 
@@ -309,7 +331,9 @@ def analyze_chapter(fpath):
         if not is_chinese_char(ch):
             char_categories.append((ch, 'non_chinese'))
             continue
-        if ch in FUNCTION_CHARS:
+        if ch in AMBIGUOUS_CHARS:
+            char_categories.append((ch, 'ambiguous'))
+        elif ch in FUNCTION_CHARS:
             char_categories.append((ch, 'function'))
         elif ch in VERB_CHARS:
             char_categories.append((ch, 'verb'))
@@ -368,6 +392,9 @@ def analyze_chapter(fpath):
         'candidate_trigram_freq': dict(trigrams.most_common(50)),
         'lint_warnings': lint_warnings,
         'lint_warning_count': len(lint_warnings),
+        # 歧义字 lint（v2 新增）
+        'ambiguous_total': counts['ambiguous'],
+        'ambiguous_top_contexts': dict(ambiguous_contexts.most_common(30)),
     }
 
     for cat, cnt in counts.items():
@@ -378,6 +405,7 @@ def analyze_chapter(fpath):
             'adjective': '形容词（通常不是实体，但可修饰实体）',
             'number': '数词（通常不是实体，但复合词可能是度量单位）',
             'measure': '量词（通常不是实体，但"二千石"等可归入官职）',
+            'ambiguous': '歧义字（臣/君/子/夫/卿/公/王 等既虚既实），需结合上下文判断',
             'candidate': '候选实体（余下汉字，主要是名词/专名，需进一步筛选）',
         }
         result['breakdown'][cat] = {
@@ -413,12 +441,19 @@ def generate_summary_report(all_results):
         all_lint.update(r.get('lint_warnings', {}))
     top_lint = all_lint.most_common(50)
 
+    # 汇总歧义字上下文（v2 新增）
+    all_ambiguous = Counter()
+    for r in all_results:
+        all_ambiguous.update(r.get('ambiguous_top_contexts', {}))
+    top_ambiguous = all_ambiguous.most_common(60)
+
     def pct(n):
         return n / total_untagged * 100 if total_untagged > 0 else 0.0
 
     # 分类汇总
     definitely_not = global_counts['function']
     usually_not = global_counts['verb'] + global_counts['adjective'] + global_counts['number'] + global_counts['measure']
+    ambiguous_total = global_counts['ambiguous']
     candidates = global_counts['candidate']
 
     lines = [
@@ -442,6 +477,7 @@ def generate_summary_report(all_results):
         f"| 形容词 | {global_counts['adjective']:,} | {pct(global_counts['adjective']):.1f}% | 偶尔实体化（如贤者中的贤） |",
         f"| 数词 | {global_counts['number']:,} | {pct(global_counts['number']):.1f}% | 通常不独立成实体 |",
         f"| 量词 | {global_counts['measure']:,} | {pct(global_counts['measure']):.1f}% | 二千石等可归入官职类 |",
+        f"| 歧义字 | {ambiguous_total:,} | {pct(ambiguous_total):.1f}% | 臣/君/子/夫/卿/公/王 等既虚既实，见第六节 |",
         f"| **候选实体（名词类）** | **{candidates:,}** | **{pct(candidates):.1f}%** | 余下汉字，主要是名词/专名，需进一步筛选 |",
         "",
         "### 关键结论",
@@ -524,14 +560,47 @@ def generate_summary_report(all_results):
                 cat_label = "其他"
             lines.append(f"| {rank} | `{gram}` | {cnt:,} | 中间字`{mid}`被分类为{cat_label} |")
 
+    # ── 歧义字节：AMBIGUOUS_CHARS 在未标注文本中的出现上下文 ────────────────────
     lines += [
         "",
         "---",
         "",
-        "## 五、各章节词性分布一览（130章）",
+        "## 五、歧义字 Lint：臣/君/子/夫/卿/公/王",
         "",
-        "| 章节 | 未标注字数 | 虚词% | 动词% | 形容词% | 数量词% | 候选实体% | Lint警告数 |",
-        "|------|-----------|-------|-------|---------|---------|-----------|-----------|",
+        f"> **背景**：这类字既可作虚词（自称/尊称/代词）又可作实体核心（身份/官职/封号）。",
+        f"> 未标注文本中共出现 **{ambiguous_total:,}** 次。本节列出其高频左右邻字组合，",
+        "> 供人工判定：搭配词若为人名/地名/朝代，则应整体作身份或官职类实体。",
+        "",
+        "| 排名 | 字组合 | 频次 | 歧义字 | 邻字 | 可能类别 |",
+        "|------|-------|-----:|------|------|---------|",
+    ]
+    for rank, (gram, cnt) in enumerate(top_ambiguous[:60], 1):
+        if len(gram) != 2:
+            continue
+        ch_a, ch_b = gram[0], gram[1]
+        if ch_a in AMBIGUOUS_CHARS:
+            amb, nei = ch_a, ch_b
+        else:
+            amb, nei = ch_b, ch_a
+        # 粗略提示：邻字若是 VERB_CHARS 则倾向"作主语/宾语"（即实体），否则待判
+        if nei in VERB_CHARS:
+            hint = "邻动词 → 倾向身份/官职实体"
+        elif nei in FUNCTION_CHARS:
+            hint = "邻虚词 → 倾向代词/自称（非实体）"
+        elif nei in AMBIGUOUS_CHARS:
+            hint = "双歧义 → 需上下文"
+        else:
+            hint = "邻候选字 → 可能构成复合实体"
+        lines.append(f"| {rank} | `{gram}` | {cnt:,} | {amb} | {nei} | {hint} |")
+
+    lines += [
+        "",
+        "---",
+        "",
+        "## 六、各章节词性分布一览（130章）",
+        "",
+        "| 章节 | 未标注字数 | 虚词% | 动词% | 形容词% | 数量词% | 歧义% | 候选实体% | Lint警告数 |",
+        "|------|-----------|-------|-------|---------|---------|-------|-----------|-----------|",
     ]
 
     for r in sorted(all_results, key=lambda x: x['chapter_id']):
@@ -543,18 +612,19 @@ def generate_summary_report(all_results):
         vb_pct = bd['verb']['pct']
         adj_pct = bd['adjective']['pct']
         num_pct = bd['number']['pct'] + bd['measure']['pct']
+        amb_pct = bd.get('ambiguous', {}).get('pct', 0.0)
         cand_pct = bd['candidate']['pct']
         lint_cnt = r.get('lint_warning_count', 0)
         lines.append(
             f"| {r['chapter']} | {t:,} | {fn_pct:.1f}% | {vb_pct:.1f}% | "
-            f"{adj_pct:.1f}% | {num_pct:.1f}% | {cand_pct:.1f}% | {lint_cnt} |"
+            f"{adj_pct:.1f}% | {num_pct:.1f}% | {amb_pct:.1f}% | {cand_pct:.1f}% | {lint_cnt} |"
         )
 
     lines += [
         "",
         "---",
         "",
-        "## 六、实体类型与词性的关系",
+        "## 七、实体类型与词性的关系",
         "",
         "史记标注系统的实体**不都是名词**，按语法功能分三类：",
         "",
@@ -570,7 +640,7 @@ def generate_summary_report(all_results):
         "",
         "---",
         "",
-        "## 七、分析局限性",
+        "## 八、分析局限性",
         "",
         '1. **字级分析的精度**：文言文存在大量词类活用，如"王天下"中的王是动词而非名词。',
         "   字级词表无法识别活用，候选实体中有约10-15%实为动词活用。",
