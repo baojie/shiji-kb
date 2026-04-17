@@ -39,8 +39,8 @@ def format_prose(content: str) -> str:
                 paragraphs.append(" ".join(cur))
                 cur = []
             continue
-        # 段号提示保留在开头
-        m = re.match(r"^\[(\d+(?:\.\d+)*)\]\s*(.*)$", line)
+        # 段号提示保留在开头（兼容 markdown 列表前缀 "- [N.N]"）
+        m = re.match(r"^(?:-\s*)?\[(\d+(?:\.\d+)*)\]\s*(.*)$", line)
         if m:
             if cur:
                 paragraphs.append(" ".join(cur))
