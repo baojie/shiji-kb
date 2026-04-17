@@ -411,8 +411,9 @@ def generate_html(json_path, output_path):
     print(f'   关系类型: {len(relation_stats)}种')
 
 def main():
-    json_path = Path('/home/baojie/work/shiji-kb/kg/structure/data/paragraph_relations_001_enhanced.json')
-    output_path = Path('/home/baojie/work/shiji-kb/docs/special/structure.html')
+    root = Path(__file__).resolve().parent.parent
+    json_path = root / 'kg/structure/data/paragraph_relations_001_enhanced.json'
+    output_path = root / 'docs/special/structure.html'
 
     generate_html(json_path, output_path)
 

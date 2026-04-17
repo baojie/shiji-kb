@@ -476,7 +476,8 @@ def generate_report(data):
     return "\n".join(report)
 
 def main():
-    report_file = Path('/home/baojie/work/shiji-kb/doc/entities/第二轮按章实体反思报告.md')
+    root = Path(__file__).resolve().parent.parent
+    report_file = root / 'doc/entities/第二轮按章实体反思报告.md'
 
     print("正在解析报告...")
     data = parse_report(report_file)
@@ -491,7 +492,7 @@ def main():
     report = generate_report(data)
 
     # 输出报告
-    output_file = Path('/home/baojie/work/shiji-kb/doc/entities/第二轮反思_错误分类统计报告.md')
+    output_file = root / 'doc/entities/第二轮反思_错误分类统计报告.md'
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(report)
 
@@ -499,7 +500,7 @@ def main():
     print()
 
     # 保存JSON数据
-    json_file = Path('/home/baojie/work/shiji-kb/doc/entities/第二轮反思_统计数据.json')
+    json_file = root / 'doc/entities/第二轮反思_统计数据.json'
     with open(json_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 

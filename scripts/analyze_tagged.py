@@ -1,17 +1,31 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Analyze tagged markdown files in shiji-kb/chapter_md/
-Counts annotated vs unannotated Chinese characters and finds potential new entity types.
+Analyze tagged markdown files in chapter_md/.
+
+⚠️ 功能范围说明（2026-04-18 更新）：
+  本脚本的**字级覆盖率统计**功能已由 scripts/compute_annotation_coverage.py 取代
+  （后者使用更完整的 18 名词 + 4 动词正则，复用 semantic_tags.strip_markup，
+  输出 doc/analysis/汉字标注覆盖率统计报告_{YYYYMMDD}.md）。
+
+  本脚本的**独有功能**（仍可用）：
+  - n-gram 频次分析
+  - 候选实体模式匹配（礼仪/刑法/思想/度量衡等关键词词表）
+  - 字频统计
+
+  更新推荐：若需发现未标注候选实体，改用 scripts/find_candidate_entities.py
+  （更现代的接口，支持词表过滤与单章扫描）。
 """
 
 import os
 import re
 import glob
+from pathlib import Path
 from collections import Counter, defaultdict
 
 # ─── configuration ────────────────────────────────────────────────────────────
-TAGGED_DIR = "/home/baojie/work/shiji-kb/chapter_md"
+ROOT = Path(__file__).resolve().parent.parent
+TAGGED_DIR = str(ROOT / "chapter_md")
 PATTERN = os.path.join(TAGGED_DIR, "*.tagged.md")
 
 # annotation markers  (regex_pattern, label)

@@ -275,7 +275,8 @@ def analyze_relations(data: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 def main():
     # 读取原始数据
-    data_file = Path('/home/baojie/work/shiji-kb/kg/structure/data/paragraph_relations_001.json')
+    root = Path(__file__).resolve().parent.parent
+    data_file = root / 'kg/structure/data/paragraph_relations_001.json'
     with open(data_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -312,7 +313,7 @@ def main():
     # 保存增强版数据
     data['relations'] = unique_relations
 
-    output_file = Path('/home/baojie/work/shiji-kb/kg/structure/data/paragraph_relations_001_enhanced.json')
+    output_file = root / 'kg/structure/data/paragraph_relations_001_enhanced.json'
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
