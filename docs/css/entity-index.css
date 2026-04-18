@@ -368,15 +368,19 @@ h2 {
 /* ─── 地名分类（地段）样式 ─── */
 
 /* 中列：地段分类徽章容器（即使为空也保持固定宽度，确保右列左边对齐） */
-/* 支持多标签：栈式布局，多个 badge 纵向堆叠 */
+/* 支持多标签：每个徽章独占一行 */
 .entry-category {
-    flex: 0 0 80px;
-    width: 80px;
+    flex: 0 0 92px;
+    width: 92px;
     text-align: left;
     align-self: baseline;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
+}
+
+/* 每行一个徽章 + 右侧置信度 */
+.cat-line {
+    display: block;
+    margin-bottom: 2px;
+    white-space: nowrap;
 }
 /* 空容器也要占位：用不可见的 nbsp 撑出基线 */
 .entry-category:empty::before {
@@ -394,6 +398,12 @@ h2 {
     white-space: nowrap;
     font-weight: 500;
     letter-spacing: 0.5px;
+}
+
+/* 置信度 → 透明度映射（由 build 脚本写入 inline style: opacity: 0.40 + 0.60*conf）
+   高置信度徽章鲜明、低置信度徽章淡化。悬停显示 "置信度 X/100（越接近 100 越可靠）" tooltip */
+.place-category {
+    cursor: help;   /* 视觉提示可悬停 */
 }
 
 /* 不同地段配色（沿用古朴色系） */

@@ -37,6 +37,7 @@ ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_aliases.json'
 DISAMBIG_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'disambiguation_map.json'
 INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_index.json'
 PLACE_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'place_categories.json'
+PLACE_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'place_confidence.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
@@ -483,6 +484,17 @@ def _load_place_categories():
         return {}
 
 
+def _load_place_confidence():
+    """加载地名置信度 {name: {cat: conf}}。若文件不存在返回空字典。"""
+    if not PLACE_CONF_FILE.exists():
+        return {}
+    try:
+        with open(PLACE_CONF_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
 # 地段分类 -> CSS 修饰类（用于上色）
 PLACE_CATEGORY_CSS = {
     '水域': 'cat-river',    # 江河湖泊 + 海洋合并
@@ -512,6 +524,7 @@ def generate_type_page(type_key, css_class, label, filename, entries):
 
     # 地名专属：加载分类数据
     place_categories = _load_place_categories() if type_key == 'place' else {}
+    place_confidence = _load_place_confidence() if type_key == 'place' else {}
 
     # 按拼音首字母分组
     grouped_by_letter = defaultdict(list)
@@ -628,14 +641,32 @@ def generate_type_page(type_key, css_class, label, filename, entries):
             lines.append(f'      <span class="entry-count">({entry["count"]})</span>')
             lines.append('    </div>')
 
-            # 中列（地名专属）：地段分类徽章（支持多标签）
+            # 中列（地名专属）：地段分类徽章（支持多标签 + 置信度右下角）
             if type_key == 'place':
                 cats = place_categories.get(canonical, [])
+                conf_map = place_confidence.get(canonical, {})
                 if cats:
                     lines.append('    <div class="entry-category">')
                     for cat in cats:
                         cat_css = PLACE_CATEGORY_CSS.get(cat, 'cat-other')
-                        lines.append(f'      <span class="place-category {cat_css}">{html.escape(cat)}</span>')
+                        conf = conf_map.get(cat)
+                        if conf is not None:
+                            # 置信度 → 徽章透明度 (0.40 + 0.60 * conf, 范围 0.4-1.0)
+                            # 鼠标悬停显示"置信度 X/100（越接近 100 越可靠）"
+                            opacity = round(0.40 + 0.60 * conf, 2)
+                            conf_pct = int(round(conf * 100))
+                            tooltip = f'置信度 {conf_pct}（越接近 100 越可靠）'
+                            lines.append(
+                                f'      <div class="cat-line">'
+                                f'<span class="place-category {cat_css}" '
+                                f'data-conf="{conf:.2f}" '
+                                f'style="opacity:{opacity}" '
+                                f'title="{tooltip}">'
+                                f'{html.escape(cat)}</span>'
+                                f'</div>'
+                            )
+                        else:
+                            lines.append(f'      <div class="cat-line"><span class="place-category {cat_css}">{html.escape(cat)}</span></div>')
                     lines.append('    </div>')
                 else:
                     lines.append('    <div class="entry-category"></div>')
