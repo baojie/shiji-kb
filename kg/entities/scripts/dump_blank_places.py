@@ -5,8 +5,8 @@
 
 用法：
   python3 dump_blank_places.py [轮次号]
-  例：python3 dump_blank_places.py 2    # 输出 docs/entities/地名反思/第二轮_上下文.md
-默认（无参数）输出到 docs/entities/地名反思/待反思_上下文.md，
+  例：python3 dump_blank_places.py 2    # 输出 doc/entities/地名反思/第二轮_上下文.md
+默认（无参数）输出到 doc/entities/地名反思/待反思_上下文.md，
 人工完成一轮反思后再重命名为"第N轮_上下文.md"。
 
 格式：
@@ -14,7 +14,7 @@
   - 001_五帝本纪 pn-3: ...前15字...〖=NAME〗...后15字...
 
 输出同时打印 blanks 列表摘要。历史沉淀的反思报告见：
-  docs/entities/地名反思/
+  doc/entities/地名反思/
 """
 
 import json
@@ -27,7 +27,7 @@ _ROOT = Path(__file__).resolve().parent.parent.parent.parent
 INDEX_JSON = _ROOT / 'kg' / 'entities' / 'data' / 'entity_index.json'
 CATS_JSON = _ROOT / 'kg' / 'entities' / 'data' / 'place_categories.json'
 CHAPTER_DIR = _ROOT / 'chapter_md'
-REFLECT_DIR = _ROOT / 'docs' / 'entities' / '地名反思'
+REFLECT_DIR = _ROOT / 'doc' / 'entities' / '地名反思'
 
 _CHINESE_NUM = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十']
 

@@ -414,6 +414,7 @@ h2 {
 .place-category.cat-other    { background: #f4f2ec; color: #888; border-color: #e2ddcf; }
 .place-category.cat-mis      { background: #fdecea; color: #a03030; border-color: #f4c6c0; font-style: italic; }
 .place-category.cat-split    { background: #fff4d6; color: #8a6020; border-color: #f0dda0; }
+.place-category.cat-fiction  { background: #f0e8fa; color: #6a3a8a; border-color: #ddc8ee; font-style: italic; }
 
 /* 分类筛选栏 */
 .place-category-filter {
@@ -514,6 +515,8 @@ h2 {
 .cat-chip.cat-mis.active      { background: #a03030; color: #fdecea; }
 .cat-chip.cat-split           { background: #fff4d6; color: #8a6020; }
 .cat-chip.cat-split.active    { background: #8a6020; color: #fff4d6; }
+.cat-chip.cat-fiction         { background: #f0e8fa; color: #6a3a8a; }
+.cat-chip.cat-fiction.active  { background: #6a3a8a; color: #f0e8fa; }
 
 /* 被分类筛选隐藏的条目 */
 .entity-entry.cat-hidden {
