@@ -444,6 +444,8 @@ h2 {
 .place-category.cat-jiachen    { background: #f2e7d6; color: #6a4a20; border-color: #ddcba6; }
 .place-category.cat-generic    { background: #ebe8e0; color: #6a6050; border-color: #cfc9b8; }
 .place-category.cat-person-mis { background: #fde8e4; color: #8a3030; border-color: #f2cabe; font-style: italic; }
+.place-category.cat-identity-mis { background: #fce9f4; color: #8a3060; border-color: #f0c8dc; font-style: italic; }
+.place-category.cat-shihao-mis   { background: #f6e9e2; color: #8a5020; border-color: #e8d2c0; font-style: italic; }
 
 /* cat-chip 开关 — 官职类 */
 .cat-chip.cat-sangong          { background: #fbe4e4; color: #8b2a2a; }
@@ -480,6 +482,10 @@ h2 {
 .cat-chip.cat-generic.active   { background: #6a6050; color: #ebe8e0; }
 .cat-chip.cat-person-mis       { background: #fde8e4; color: #8a3030; }
 .cat-chip.cat-person-mis.active { background: #8a3030; color: #fde8e4; }
+.cat-chip.cat-identity-mis       { background: #fce9f4; color: #8a3060; }
+.cat-chip.cat-identity-mis.active { background: #8a3060; color: #fce9f4; }
+.cat-chip.cat-shihao-mis         { background: #f6e9e2; color: #8a5020; }
+.cat-chip.cat-shihao-mis.active  { background: #8a5020; color: #f6e9e2; }
 
 /* 分类筛选栏 */
 .place-category-filter {

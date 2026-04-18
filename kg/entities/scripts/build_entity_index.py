@@ -569,6 +569,9 @@ OFFICIAL_CATEGORY_CSS = {
     '泛称':   'cat-generic',
     '误标':   'cat-mis',  # 与地名共用（语义一致：非实体被误标）
     '人名误标': 'cat-person-mis',  # 具体某人被误标为官职（老上单于 / 太仓公 等）
+    '身份误标': 'cat-identity-mis',  # 本应用 identity 标签（〖#〗）被误标（太后/太子/布衣 等）
+    '谥号误标': 'cat-shihao-mis',   # 裸谥号被误标（哀/庄/宣/桀/纣/文/武 等）
+    '待拆分':  'cat-split',         # 官职+人名 复合体，源头需拆成两个实体（与地名 cat-split 共用样式）
 }
 
 
@@ -723,9 +726,9 @@ def generate_type_page(type_key, css_class, label, filename, entries):
                         cat_css = cat_css_map.get(cat, 'cat-other')
                         conf = conf_map.get(cat)
                         if conf is not None:
-                            # 置信度 → 徽章透明度 (0.40 + 0.60 * conf, 范围 0.4-1.0)
-                            # 鼠标悬停显示"置信度 X/100（越接近 100 越可靠）"
-                            opacity = round(0.40 + 0.60 * conf, 2)
+                            # 置信度 → 徽章透明度（置信度=透明度，低置信度徽章几乎不可见）
+                            # 0.0 → 完全透明（无证据），1.0 → 完全不透明（强证据）
+                            opacity = round(max(0.05, conf), 2)  # 下限 0.05 保留最细微可见
                             conf_pct = int(round(conf * 100))
                             tooltip = f'置信度 {conf_pct}（越接近 100 越可靠）'
                             lines.append(
