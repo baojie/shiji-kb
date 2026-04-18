@@ -36,6 +36,7 @@ OUTPUT_DIR = _PROJECT_ROOT / 'docs' / 'entities'
 ALIAS_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_aliases.json'
 DISAMBIG_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'disambiguation_map.json'
 INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_index.json'
+PLACE_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'place_categories.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
@@ -460,10 +461,56 @@ ENTITY_DESCRIPTIONS = {
 }
 
 
+def _load_place_categories():
+    """加载地名分类数据，返回 {name: [cat, cat, ...]}。
+    兼容旧格式（单字符串值）：自动包装成 [value]。"""
+    if not PLACE_CAT_FILE.exists():
+        return {}
+    try:
+        with open(PLACE_CAT_FILE, encoding='utf-8') as f:
+            data = json.load(f)
+        # 统一成 list 格式
+        out = {}
+        for k, v in data.items():
+            if isinstance(v, list):
+                out[k] = v
+            elif isinstance(v, str):
+                out[k] = [v] if v else []
+            else:
+                out[k] = []
+        return out
+    except Exception:
+        return {}
+
+
+# 地段分类 -> CSS 修饰类（用于上色）
+PLACE_CATEGORY_CSS = {
+    '水域': 'cat-river',    # 江河湖泊 + 海洋合并
+    '山脉': 'cat-mountain',
+    '原野': 'cat-plain',    # 之野 / 牧野（战场平野，非水体）
+    '关隘': 'cat-pass',
+    '区域': 'cat-region',
+    '国家': 'cat-nation',   # 外邦独立政权（大夏/大宛/朝鲜/南越等）
+    '州':   'cat-zhou',
+    '郡':   'cat-jun',
+    '县':   'cat-xian',
+    '城邑': 'cat-city',
+    '建筑': 'cat-building',
+    '陵墓': 'cat-tomb',
+    '乡里': 'cat-xiang',
+    '道桥': 'cat-road',
+    '误标': 'cat-mis',      # 实体索引误将非地名标为 place（修辞/典故/抽象）
+    '待拆分': 'cat-split',   # 两地名连写需要拆分（如 新丰鸿门）
+}
+
+
 def generate_type_page(type_key, css_class, label, filename, entries):
     """生成单个类型的索引 HTML 页面"""
     # 按拼音排序
     sorted_entries = sorted(entries.items(), key=lambda x: _get_pinyin_key(x[0]))
+
+    # 地名专属：加载分类数据
+    place_categories = _load_place_categories() if type_key == 'place' else {}
 
     # 按拼音首字母分组
     grouped_by_letter = defaultdict(list)
@@ -520,6 +567,33 @@ def generate_type_page(type_key, css_class, label, filename, entries):
         lines.append(f'  <a href="#letter-{letter}" class="pinyin-letter">{letter}<span class="letter-count">{count}</span></a>')
     lines.append('</div>')
 
+    # 地名专属：地段分类筛选栏（置于拼音导航下方）
+    if type_key == 'place' and place_categories:
+        # 计数：多标签时每个标签各计一次；未分类按条目计
+        cat_counts = defaultdict(int)
+        blank_count = 0
+        for canonical, _ in sorted_entries:
+            cats = place_categories.get(canonical, [])
+            if not cats:
+                blank_count += 1
+            else:
+                for c in cats:
+                    cat_counts[c] += 1
+        # 按条目数量降序（全部固定在首，未分类固定在尾）
+        named_cats = [(cat, n) for cat, n in cat_counts.items() if cat and n > 0]
+        named_cats.sort(key=lambda kv: (-kv[1], kv[0]))
+        lines.append('<div class="place-category-filter">')
+        lines.append('  <a href="#" class="cat-chip active" data-cat-filter="">全部'
+                     f'<span class="cat-count">{len(sorted_entries)}</span></a>')
+        for cat, n in named_cats:
+            css = PLACE_CATEGORY_CSS.get(cat, 'cat-other')
+            lines.append(f'  <a href="#" class="cat-chip {css}" data-cat-filter="{html.escape(cat)}">'
+                         f'{html.escape(cat)}<span class="cat-count">{n}</span></a>')
+        if blank_count > 0:
+            lines.append(f'  <a href="#" class="cat-chip cat-other" data-cat-filter="__blank__">未分类'
+                         f'<span class="cat-count">{blank_count}</span></a>')
+        lines.append('</div>')
+
     # 实体列表（按字母分节）
     lines.append('<div class="entity-index">')
 
@@ -533,7 +607,13 @@ def generate_type_page(type_key, css_class, label, filename, entries):
             esc_canonical = html.escape(canonical)
 
             # 主锚点
-            lines.append(f'  <div class="entity-entry" id="entity-{esc_canonical}">')
+            entry_extra_attrs = ''
+            if type_key == 'place':
+                cats = place_categories.get(canonical, [])
+                # data-category 存所有类别，用 | 分隔，便于 JS 多标签筛选
+                cats_str = '|'.join(cats)
+                entry_extra_attrs = f' data-category="{html.escape(cats_str)}"'
+            lines.append(f'  <div class="entity-entry" id="entity-{esc_canonical}"{entry_extra_attrs}>')
 
             # 左侧：名称 + 别名（别名锚点放在 entry-left 内部）
             lines.append('    <div class="entry-left">')
@@ -546,6 +626,18 @@ def generate_type_page(type_key, css_class, label, filename, entries):
                 lines.append(f'      <span class="alias-list">{alias_str}</span>')
             lines.append(f'      <span class="entry-count">({entry["count"]})</span>')
             lines.append('    </div>')
+
+            # 中列（地名专属）：地段分类徽章（支持多标签）
+            if type_key == 'place':
+                cats = place_categories.get(canonical, [])
+                if cats:
+                    lines.append('    <div class="entry-category">')
+                    for cat in cats:
+                        cat_css = PLACE_CATEGORY_CSS.get(cat, 'cat-other')
+                        lines.append(f'      <span class="place-category {cat_css}">{html.escape(cat)}</span>')
+                    lines.append('    </div>')
+                else:
+                    lines.append('    <div class="entry-category"></div>')
 
             # 右侧：章节引用
             lines.append('    <div class="entry-right">')
@@ -591,14 +683,18 @@ def _format_refs(refs):
         title = extract_chapter_title(chapter_id)
         esc_title = html.escape(title)
 
-        # 章节名链接到章节首页
-        chapter_link = f'<a href="../chapters/{chapter_id}.html" class="chapter-ref-name">{esc_title}</a>'
+        # 章节名链接到章节首页（新 tab 打开）
+        chapter_link = (
+            f'<a href="../chapters/{chapter_id}.html" class="chapter-ref-name" '
+            f'target="_blank" rel="noopener">{esc_title}</a>'
+        )
 
-        # 段落链接
+        # 段落链接（新 tab 打开）
         para_links = []
         for pn in paras:
             para_links.append(
-                f'<a href="../chapters/{chapter_id}.html#pn-{pn}" class="para-ref">{pn}</a>'
+                f'<a href="../chapters/{chapter_id}.html#pn-{pn}" class="para-ref" '
+                f'target="_blank" rel="noopener">{pn}</a>'
             )
 
         parts.append(f'{chapter_link} {", ".join(para_links)}')

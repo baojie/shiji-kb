@@ -364,3 +364,158 @@ h2 {
     margin: 0.3em 0;
     color: #555;
 }
+
+/* ─── 地名分类（地段）样式 ─── */
+
+/* 中列：地段分类徽章容器（即使为空也保持固定宽度，确保右列左边对齐） */
+/* 支持多标签：栈式布局，多个 badge 纵向堆叠 */
+.entry-category {
+    flex: 0 0 80px;
+    width: 80px;
+    text-align: left;
+    align-self: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+/* 空容器也要占位：用不可见的 nbsp 撑出基线 */
+.entry-category:empty::before {
+    content: "\00a0";
+    visibility: hidden;
+}
+
+/* 徽章本体 */
+.place-category {
+    display: inline-block;
+    font-size: 0.72em;
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* 不同地段配色（沿用古朴色系） */
+.place-category.cat-river    { background: #eaf4fa; color: #2f6b8e; border-color: #cfe3ef; }
+.place-category.cat-mountain { background: #ecf3e4; color: #4a6b2a; border-color: #d4e3c5; }
+.place-category.cat-plain    { background: #f5efd9; color: #7a6a2a; border-color: #e2d9b4; }
+.place-category.cat-pass     { background: #f8ece0; color: #8b4513; border-color: #e6d3b7; }
+.place-category.cat-region   { background: #f0ecf8; color: #5d4a8a; border-color: #dcd4ee; }
+.place-category.cat-nation   { background: #f4e6d8; color: #8a4a2a; border-color: #e6cfb3; }
+.place-category.cat-zhou     { background: #fdf0e0; color: #a0522d; border-color: #eeddc4; }
+.place-category.cat-jun      { background: #fcead0; color: #8b5a2b; border-color: #e8d7b0; }
+.place-category.cat-xian     { background: #fbf2d4; color: #7c6220; border-color: #ebdfb5; }
+.place-category.cat-city     { background: #fef3e8; color: #8b4513; border-color: #f0dcc4; }
+.place-category.cat-building { background: #f8e8e8; color: #8a3030; border-color: #eaced0; }
+.place-category.cat-tomb     { background: #ebe6e0; color: #555; border-color: #d4cdc2; }
+.place-category.cat-xiang    { background: #f0efe6; color: #6a5a2a; border-color: #d9d5bd; }
+.place-category.cat-road     { background: #eef0f4; color: #4a5a80; border-color: #d4d9e4; }
+.place-category.cat-other    { background: #f4f2ec; color: #888; border-color: #e2ddcf; }
+.place-category.cat-mis      { background: #fdecea; color: #a03030; border-color: #f4c6c0; font-style: italic; }
+.place-category.cat-split    { background: #fff4d6; color: #8a6020; border-color: #f0dda0; }
+
+/* 分类筛选栏 */
+.place-category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0.2em 0 1.2em;
+    padding-bottom: 0.8em;
+    border-bottom: 1px dashed #e6e0c0;
+}
+
+/*
+ * 开关按钮：尺寸与下方地段徽章保持一致；每类配色与徽章同步
+ *   - 弹起（默认）：徽章浅色底 + 深色字 + 淡底阴影
+ *   - 按下（.active）：反色（深色底 + 浅色字）+ 内陷阴影 + 整体下移 1px
+ */
+.cat-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: none;
+    background: #f4ecce;
+    font-size: 0.78em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #5a4a2a;
+    text-decoration: none;
+    box-shadow:
+        0 1px 0 rgba(90, 74, 42, 0.28),
+        0 2px 3px rgba(90, 74, 42, 0.14);
+    transition: transform 0.08s ease, box-shadow 0.1s ease, background 0.15s ease, color 0.15s ease;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    position: relative;
+    top: 0;
+}
+
+.cat-chip:active:not(.active) {
+    top: 1px;
+    margin-bottom: 1px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* 选中态：反色 + 下沉 + 内陷阴影 */
+.cat-chip.active {
+    top: 1px;
+    margin-bottom: 1px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.35);
+}
+
+.cat-chip .cat-count {
+    font-size: 0.88em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    opacity: 0.65;
+    margin-left: 2px;
+}
+
+/* "全部" 按钮（无 cat-* 修饰类）：中性棕系 */
+.cat-chip:not([class*="cat-"])        { background: #f4ecce; color: #5a4a2a; }
+.cat-chip:not([class*="cat-"]).active { background: #7a3c12; color: #fff8e8; }
+
+/* 各类配色：与下方徽章保持一致，按下时反色 */
+.cat-chip.cat-river           { background: #eaf4fa; color: #2f6b8e; }
+.cat-chip.cat-river.active    { background: #2f6b8e; color: #eaf4fa; }
+.cat-chip.cat-mountain        { background: #ecf3e4; color: #4a6b2a; }
+.cat-chip.cat-mountain.active { background: #4a6b2a; color: #ecf3e4; }
+.cat-chip.cat-plain           { background: #f5efd9; color: #7a6a2a; }
+.cat-chip.cat-plain.active    { background: #7a6a2a; color: #f5efd9; }
+.cat-chip.cat-pass            { background: #f8ece0; color: #8b4513; }
+.cat-chip.cat-pass.active     { background: #8b4513; color: #f8ece0; }
+.cat-chip.cat-region          { background: #f0ecf8; color: #5d4a8a; }
+.cat-chip.cat-region.active   { background: #5d4a8a; color: #f0ecf8; }
+.cat-chip.cat-nation          { background: #f4e6d8; color: #8a4a2a; }
+.cat-chip.cat-nation.active   { background: #8a4a2a; color: #f4e6d8; }
+.cat-chip.cat-zhou            { background: #fdf0e0; color: #a0522d; }
+.cat-chip.cat-zhou.active     { background: #a0522d; color: #fdf0e0; }
+.cat-chip.cat-jun             { background: #fcead0; color: #8b5a2b; }
+.cat-chip.cat-jun.active      { background: #8b5a2b; color: #fcead0; }
+.cat-chip.cat-xian            { background: #fbf2d4; color: #7c6220; }
+.cat-chip.cat-xian.active     { background: #7c6220; color: #fbf2d4; }
+.cat-chip.cat-city            { background: #fef3e8; color: #8b4513; }
+.cat-chip.cat-city.active     { background: #8b4513; color: #fef3e8; }
+.cat-chip.cat-building        { background: #f8e8e8; color: #8a3030; }
+.cat-chip.cat-building.active { background: #8a3030; color: #f8e8e8; }
+.cat-chip.cat-tomb            { background: #ebe6e0; color: #555555; }
+.cat-chip.cat-tomb.active     { background: #555555; color: #ebe6e0; }
+.cat-chip.cat-xiang           { background: #f0efe6; color: #6a5a2a; }
+.cat-chip.cat-xiang.active    { background: #6a5a2a; color: #f0efe6; }
+.cat-chip.cat-road            { background: #eef0f4; color: #4a5a80; }
+.cat-chip.cat-road.active     { background: #4a5a80; color: #eef0f4; }
+.cat-chip.cat-other           { background: #f4f2ec; color: #888888; }
+.cat-chip.cat-other.active    { background: #888888; color: #f4f2ec; }
+.cat-chip.cat-mis             { background: #fdecea; color: #a03030; }
+.cat-chip.cat-mis.active      { background: #a03030; color: #fdecea; }
+.cat-chip.cat-split           { background: #fff4d6; color: #8a6020; }
+.cat-chip.cat-split.active    { background: #8a6020; color: #fff4d6; }
+
+/* 被分类筛选隐藏的条目 */
+.entity-entry.cat-hidden {
+    display: none;
+}
