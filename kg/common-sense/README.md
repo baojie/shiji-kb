@@ -9,7 +9,7 @@
 **数据来源**:
 - kg/ontology/ontology-v1/ (675个SKU)
 - kg/vocabularies/06_名物词表.md (672个制度术语)
-- kg/entities/data/ (15,190规范实体)
+- kg/entities/data/ (15,331 规范实体：18类名词 + 4类动词)
 - labs/source-inference/ (10个案例+30种推理方法)
 - resources/references/ (26部参考文献)
 
@@ -564,7 +564,7 @@
 |--------|------|------|------|
 | Ontology-v1 | `/kg/ontology/ontology-v1/` | SKU知识单元 | 675项 |
 | 制度词表 | `/kg/vocabularies/06_名物词表.md` | 制度术语 | 672项 |
-| 实体库 | `/kg/entities/data/` | 规范实体 | 15,190条 |
+| 实体库 | `/kg/entities/data/` | 规范实体（18类名词 + 4类动词） | 15,331条 |
 | 关系知识 | `/kg/ontology/ontology-v1/help/relational_index.md` | 三元组 | 1,336条 |
 | 案例库 | `/labs/source-inference/` | 推理案例 | 10个 |
 | 李开元方法论 | `/labs/source-inference/README_李开元方法论总结.md` | 推理方法 | 30+种 |
