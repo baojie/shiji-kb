@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from semantic_tags import render_tags_to_html  # noqa: E402
+from semantic_tags import remove_semantic_tags, render_tags_to_html  # noqa: E402
 
 
 TYPE_ORDER = ["诏令", "奏疏", "书信", "檄文", "谏言", "策论", "议论"]
@@ -28,31 +28,9 @@ def render_entity_tags(text: str) -> str:
     return render_tags_to_html(text, normalize_legacy=True)
 
 
-def format_prose(content: str) -> str:
-    """处理散文：保留段号、每段一行、转换实体。"""
-    paragraphs = []
-    cur: list[str] = []
-    for raw in content.split("\n"):
-        line = raw.strip()
-        if not line:
-            if cur:
-                paragraphs.append(" ".join(cur))
-                cur = []
-            continue
-        # 段号提示保留在开头（兼容 markdown 列表前缀 "- [N.N]"）
-        m = re.match(r"^(?:-\s*)?\[(\d+(?:\.\d+)*)\]\s*(.*)$", line)
-        if m:
-            if cur:
-                paragraphs.append(" ".join(cur))
-                cur = []
-            rest = m.group(2)
-            if rest:
-                cur = [render_entity_tags(rest)]
-        else:
-            cur.append(render_entity_tags(line))
-    if cur:
-        paragraphs.append(" ".join(cur))
-    return "".join(f"<p>{p}</p>" for p in paragraphs)
+MAX_PARA_CHARS = 300  # 单段纯文本超过此阈值则按句末标点再切分
+
+_CLOSE_QUOTES = "”’」』)）"
 
 
 def _plain_chars(content: str) -> int:
@@ -61,6 +39,85 @@ def _plain_chars(content: str) -> int:
     text = re.sub(r"\[[\d.]+\]\s*", "", text)
     text = re.sub(r"\s+", "", text)
     return len(text)
+
+
+def _display_chars(text: str) -> int:
+    """显示文本长度（保留实体名、仅去除标注符号）。"""
+    t = remove_semantic_tags(text, normalize_legacy=True)
+    t = re.sub(r"\[[\d.]+\]\s*", "", t)
+    t = re.sub(r"\s+", "", t)
+    return len(t)
+
+
+_SENTENCE_END_RE = re.compile(rf"[。！？][{_CLOSE_QUOTES}]*")
+
+
+def _rescue_orphan_close_quotes(paragraphs: list[str]) -> list[str]:
+    """若段首为闭合引号/括号（源数据将 ” 单独放在 [N] 段号行的产物），挪回上一段末尾。"""
+    fixed: list[str] = []
+    for p in paragraphs:
+        stripped = p.lstrip()
+        if fixed and stripped and stripped[0] in _CLOSE_QUOTES:
+            i = 0
+            while i < len(stripped) and stripped[i] in _CLOSE_QUOTES:
+                i += 1
+            orphan, rest = stripped[:i], stripped[i:].lstrip()
+            fixed[-1] = fixed[-1] + orphan
+            if rest:
+                fixed.append(rest)
+        else:
+            fixed.append(p)
+    return fixed
+
+
+def _split_long_para(text: str, max_chars: int = MAX_PARA_CHARS) -> list[str]:
+    """超长段按句切分：每个 。！？ 结束的句子独立成段，后随闭合引号/括号一并归入本句。"""
+    if _display_chars(text) <= max_chars:
+        return [text]
+    parts: list[str] = []
+    last = 0
+    for m in _SENTENCE_END_RE.finditer(text):
+        end = m.end()
+        seg = text[last:end]
+        if seg.strip():
+            parts.append(seg)
+        last = end
+    tail = text[last:]
+    if tail.strip():
+        parts.append(tail)
+    return parts or [text]
+
+
+def format_prose(content: str) -> str:
+    """处理散文：保留段号、每段一行、转换实体；超长段按句末标点再分。"""
+    paragraphs_raw: list[str] = []
+    cur: list[str] = []
+    for raw in content.split("\n"):
+        line = raw.strip()
+        if not line:
+            if cur:
+                paragraphs_raw.append(" ".join(cur))
+                cur = []
+            continue
+        # 段号提示保留在开头（兼容 markdown 列表前缀 "- [N.N]"）
+        m = re.match(r"^(?:-\s*)?\[(\d+(?:\.\d+)*)\]\s*(.*)$", line)
+        if m:
+            if cur:
+                paragraphs_raw.append(" ".join(cur))
+                cur = []
+            rest = m.group(2)
+            if rest:
+                cur = [rest]
+        else:
+            cur.append(line)
+    if cur:
+        paragraphs_raw.append(" ".join(cur))
+
+    final_paras: list[str] = []
+    for p in paragraphs_raw:
+        final_paras.extend(_split_long_para(p))
+    final_paras = _rescue_orphan_close_quotes(final_paras)
+    return "".join(f"<p>{render_entity_tags(p)}</p>" for p in final_paras)
 
 
 def generate_html(json_path: Path, output_path: Path) -> None:
