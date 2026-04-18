@@ -314,8 +314,10 @@ def main():
     for j in jue_names:
         add(j, 'jue')
 
-    # 诸侯王相关
-    for name in ('诸侯王', '长乐卫尉', '长信卫尉', '长信詹事', '长信少府', '长乐少府'):
+    # 诸侯王相关 — 多宫卫尉属九卿级（与中央卫尉同级）；多宫少府/詹事属列卿
+    for name in ('长乐卫尉', '长信卫尉'):
+        add(name, 'jiuqing')
+    for name in ('诸侯王', '长信詹事', '长信少府', '长乐少府'):
         add(name, 'liqing')
 
     # 输出
