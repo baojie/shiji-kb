@@ -158,6 +158,8 @@
 | 08b | [SKILL_08b_知识覆盖度评估.md](SKILL_08b_知识覆盖度评估.md) | 覆盖度评估、测试样本构建、缺口识别（规划） |
 | 08c | [SKILL_08c_成本管控和Token节约.md](SKILL_08c_成本管控和Token节约.md) | LLM成本优化、Token节约策略（规划） |
 | 08d | [SKILL_08d_正确性评估.md](SKILL_08d_正确性评估.md) | 质量评估方法、正确性指标体系（规划） |
+| 08e | [SKILL_08e_表格数据反思迭代提取方法.md](SKILL_08e_表格数据反思迭代提取方法.md) | 表格数据反思迭代提取方法 |
+| 08f | [SKILL_08f_置信度函数设计.md](SKILL_08f_置信度函数设计.md) | 通用置信度函数设计：反思归纳→分层信号→阈值标定 |
 
 ### 09 应用构造
 
@@ -202,7 +204,7 @@
 
 | 文件 | 说明 | 关联SKILL |
 |------|------|----------|
-| [SKILL_03c1-rules.md](references/SKILL_03c1-rules.md) | 72条按章反思规律库 | SKILL_03c |
+| [SKILL_03c1-v2-rules.md](references/SKILL_03c1-v2-rules.md) | 按章反思规律库 v2（134 条，压缩版；v1 见 archive/SKILL_03c1-v1-rules.md） | SKILL_03c |
 | [SKILL-01e-rules-繁简词表构造规则.md](references/SKILL-01e-rules-繁简词表构造规则.md) | 繁简词表完整构造规则 | SKILL_01e |
 | [SKILL_05d1_rules.md](references/SKILL_05d1_rules.md) | 事实抽取四大核心原则（v1.0） | SKILL_05d |
 
