@@ -38,6 +38,8 @@ DISAMBIG_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'disambiguation_map
 INDEX_JSON = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'entity_index.json'
 PLACE_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'place_categories.json'
 PLACE_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'place_confidence.json'
+OFFICIAL_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'official_categories.json'
+OFFICIAL_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'official_confidence.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
@@ -495,6 +497,37 @@ def _load_place_confidence():
         return {}
 
 
+def _load_official_categories():
+    """加载官职分类数据，返回 {name: [cat, cat, ...]}。"""
+    if not OFFICIAL_CAT_FILE.exists():
+        return {}
+    try:
+        with open(OFFICIAL_CAT_FILE, encoding='utf-8') as f:
+            data = json.load(f)
+        out = {}
+        for k, v in data.items():
+            if isinstance(v, list):
+                out[k] = v
+            elif isinstance(v, str):
+                out[k] = [v] if v else []
+            else:
+                out[k] = []
+        return out
+    except Exception:
+        return {}
+
+
+def _load_official_confidence():
+    """加载官职置信度 {name: {cat: conf}}。若文件不存在返回空字典。"""
+    if not OFFICIAL_CONF_FILE.exists():
+        return {}
+    try:
+        with open(OFFICIAL_CONF_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
 # 地段分类 -> CSS 修饰类（用于上色）
 PLACE_CATEGORY_CSS = {
     '水域': 'cat-river',    # 江河湖泊 + 海洋合并
@@ -516,15 +549,54 @@ PLACE_CATEGORY_CSS = {
     '虚构': 'cat-fiction',   # 文学作品中的虚构地名（子虚赋/上林赋中的铺陈）
 }
 
+# 官职分类 -> CSS 修饰类（与 PLACE_CATEGORY_CSS 同 namespace 但 key 不冲突）
+OFFICIAL_CATEGORY_CSS = {
+    '三公':   'cat-sangong',
+    '九卿':   'cat-jiuqing',
+    '列卿':   'cat-liqing',
+    '郡国长吏': 'cat-junli',
+    '县乡吏':  'cat-xianli',
+    '军职':   'cat-military',
+    '爵位':   'cat-jue',
+    '王号':   'cat-wang-title',   # 避开地名的 cat-wang 无冲突命名（原本也无冲突）
+    '古爵':   'cat-guju',
+    '宫廷近侍': 'cat-palace',
+    '文学顾问': 'cat-wenxue',
+    '宗师宾傅': 'cat-shifu',
+    '外邦职':  'cat-foreign',
+    '上古官':  'cat-ancient',
+    '家臣':   'cat-jiachen',   # 大夫/卿的私属家臣（春秋战国）
+    '泛称':   'cat-generic',
+    '误标':   'cat-mis',  # 与地名共用（语义一致：非实体被误标）
+    '人名误标': 'cat-person-mis',  # 具体某人被误标为官职（老上单于 / 太仓公 等）
+}
+
 
 def generate_type_page(type_key, css_class, label, filename, entries):
     """生成单个类型的索引 HTML 页面"""
     # 按拼音排序
     sorted_entries = sorted(entries.items(), key=lambda x: _get_pinyin_key(x[0]))
 
-    # 地名专属：加载分类数据
+    # 分类数据（地名/官职）
     place_categories = _load_place_categories() if type_key == 'place' else {}
     place_confidence = _load_place_confidence() if type_key == 'place' else {}
+    official_categories = _load_official_categories() if type_key == 'official' else {}
+    official_confidence = _load_official_confidence() if type_key == 'official' else {}
+
+    # 根据 type_key 选择分类源；categorized_type 表示"有分类功能"的类型
+    if type_key == 'place':
+        cat_source = place_categories
+        conf_source = place_confidence
+        cat_css_map = PLACE_CATEGORY_CSS
+    elif type_key == 'official':
+        cat_source = official_categories
+        conf_source = official_confidence
+        cat_css_map = OFFICIAL_CATEGORY_CSS
+    else:
+        cat_source = {}
+        conf_source = {}
+        cat_css_map = {}
+    has_categories = bool(cat_source)
 
     # 按拼音首字母分组
     grouped_by_letter = defaultdict(list)
@@ -581,13 +653,13 @@ def generate_type_page(type_key, css_class, label, filename, entries):
         lines.append(f'  <a href="#letter-{letter}" class="pinyin-letter">{letter}<span class="letter-count">{count}</span></a>')
     lines.append('</div>')
 
-    # 地名专属：地段分类筛选栏（置于拼音导航下方）
-    if type_key == 'place' and place_categories:
+    # 分类筛选栏（地名/官职共用，置于拼音导航下方）
+    if has_categories:
         # 计数：多标签时每个标签各计一次；未分类按条目计
         cat_counts = defaultdict(int)
         blank_count = 0
         for canonical, _ in sorted_entries:
-            cats = place_categories.get(canonical, [])
+            cats = cat_source.get(canonical, [])
             if not cats:
                 blank_count += 1
             else:
@@ -600,7 +672,7 @@ def generate_type_page(type_key, css_class, label, filename, entries):
         lines.append('  <a href="#" class="cat-chip active" data-cat-filter="">全部'
                      f'<span class="cat-count">{len(sorted_entries)}</span></a>')
         for cat, n in named_cats:
-            css = PLACE_CATEGORY_CSS.get(cat, 'cat-other')
+            css = cat_css_map.get(cat, 'cat-other')
             lines.append(f'  <a href="#" class="cat-chip {css}" data-cat-filter="{html.escape(cat)}">'
                          f'{html.escape(cat)}<span class="cat-count">{n}</span></a>')
         if blank_count > 0:
@@ -622,8 +694,8 @@ def generate_type_page(type_key, css_class, label, filename, entries):
 
             # 主锚点
             entry_extra_attrs = ''
-            if type_key == 'place':
-                cats = place_categories.get(canonical, [])
+            if has_categories:
+                cats = cat_source.get(canonical, [])
                 # data-category 存所有类别，用 | 分隔，便于 JS 多标签筛选
                 cats_str = '|'.join(cats)
                 entry_extra_attrs = f' data-category="{html.escape(cats_str)}"'
@@ -641,14 +713,14 @@ def generate_type_page(type_key, css_class, label, filename, entries):
             lines.append(f'      <span class="entry-count">({entry["count"]})</span>')
             lines.append('    </div>')
 
-            # 中列（地名专属）：地段分类徽章（支持多标签 + 置信度右下角）
-            if type_key == 'place':
-                cats = place_categories.get(canonical, [])
-                conf_map = place_confidence.get(canonical, {})
+            # 中列（地名/官职）：分类徽章（支持多标签 + 置信度透明度）
+            if has_categories:
+                cats = cat_source.get(canonical, [])
+                conf_map = conf_source.get(canonical, {})
                 if cats:
                     lines.append('    <div class="entry-category">')
                     for cat in cats:
-                        cat_css = PLACE_CATEGORY_CSS.get(cat, 'cat-other')
+                        cat_css = cat_css_map.get(cat, 'cat-other')
                         conf = conf_map.get(cat)
                         if conf is not None:
                             # 置信度 → 徽章透明度 (0.40 + 0.60 * conf, 范围 0.4-1.0)

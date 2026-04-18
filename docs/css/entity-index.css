@@ -426,6 +426,61 @@ h2 {
 .place-category.cat-split    { background: #fff4d6; color: #8a6020; border-color: #f0dda0; }
 .place-category.cat-fiction  { background: #f0e8fa; color: #6a3a8a; border-color: #ddc8ee; font-style: italic; }
 
+/* 官职职类配色（cat-sangong 三公 / cat-jiuqing 九卿 / ...） */
+.place-category.cat-sangong    { background: #fbe4e4; color: #8b2a2a; border-color: #ecc2c2; }
+.place-category.cat-jiuqing    { background: #fdebd3; color: #8a5020; border-color: #f0d3a5; }
+.place-category.cat-liqing     { background: #fdf1dc; color: #8f6a2a; border-color: #edd7a8; }
+.place-category.cat-junli      { background: #ede5d0; color: #6a5020; border-color: #d8ccae; }
+.place-category.cat-xianli     { background: #f3efd8; color: #7a6a2a; border-color: #dbd3a0; }
+.place-category.cat-military   { background: #e1e7ef; color: #3a4a6b; border-color: #c4cde0; }
+.place-category.cat-jue        { background: #faf0c8; color: #846020; border-color: #e8d68c; }
+.place-category.cat-wang-title { background: #ebe2f5; color: #5a3a8a; border-color: #d2c2e8; }
+.place-category.cat-guju       { background: #ecefd7; color: #5a6028; border-color: #d3d8b4; }
+.place-category.cat-palace     { background: #fae1ea; color: #8a4060; border-color: #ebc6d3; }
+.place-category.cat-wenxue     { background: #dff0e4; color: #2f6a4a; border-color: #bfdcc6; }
+.place-category.cat-shifu      { background: #ece4f0; color: #5a4a7a; border-color: #d0c4dc; }
+.place-category.cat-foreign    { background: #d9ecee; color: #2f6060; border-color: #b8d8dc; }
+.place-category.cat-ancient    { background: #eee4cc; color: #6a4a2a; border-color: #d8c8a8; }
+.place-category.cat-jiachen    { background: #f2e7d6; color: #6a4a20; border-color: #ddcba6; }
+.place-category.cat-generic    { background: #ebe8e0; color: #6a6050; border-color: #cfc9b8; }
+.place-category.cat-person-mis { background: #fde8e4; color: #8a3030; border-color: #f2cabe; font-style: italic; }
+
+/* cat-chip 开关 — 官职类 */
+.cat-chip.cat-sangong          { background: #fbe4e4; color: #8b2a2a; }
+.cat-chip.cat-sangong.active   { background: #8b2a2a; color: #fbe4e4; }
+.cat-chip.cat-jiuqing          { background: #fdebd3; color: #8a5020; }
+.cat-chip.cat-jiuqing.active   { background: #8a5020; color: #fdebd3; }
+.cat-chip.cat-liqing           { background: #fdf1dc; color: #8f6a2a; }
+.cat-chip.cat-liqing.active    { background: #8f6a2a; color: #fdf1dc; }
+.cat-chip.cat-junli            { background: #ede5d0; color: #6a5020; }
+.cat-chip.cat-junli.active     { background: #6a5020; color: #ede5d0; }
+.cat-chip.cat-xianli           { background: #f3efd8; color: #7a6a2a; }
+.cat-chip.cat-xianli.active    { background: #7a6a2a; color: #f3efd8; }
+.cat-chip.cat-military         { background: #e1e7ef; color: #3a4a6b; }
+.cat-chip.cat-military.active  { background: #3a4a6b; color: #e1e7ef; }
+.cat-chip.cat-jue              { background: #faf0c8; color: #846020; }
+.cat-chip.cat-jue.active       { background: #846020; color: #faf0c8; }
+.cat-chip.cat-wang-title       { background: #ebe2f5; color: #5a3a8a; }
+.cat-chip.cat-wang-title.active { background: #5a3a8a; color: #ebe2f5; }
+.cat-chip.cat-guju             { background: #ecefd7; color: #5a6028; }
+.cat-chip.cat-guju.active      { background: #5a6028; color: #ecefd7; }
+.cat-chip.cat-palace           { background: #fae1ea; color: #8a4060; }
+.cat-chip.cat-palace.active    { background: #8a4060; color: #fae1ea; }
+.cat-chip.cat-wenxue           { background: #dff0e4; color: #2f6a4a; }
+.cat-chip.cat-wenxue.active    { background: #2f6a4a; color: #dff0e4; }
+.cat-chip.cat-shifu            { background: #ece4f0; color: #5a4a7a; }
+.cat-chip.cat-shifu.active     { background: #5a4a7a; color: #ece4f0; }
+.cat-chip.cat-foreign          { background: #d9ecee; color: #2f6060; }
+.cat-chip.cat-foreign.active   { background: #2f6060; color: #d9ecee; }
+.cat-chip.cat-ancient          { background: #eee4cc; color: #6a4a2a; }
+.cat-chip.cat-ancient.active   { background: #6a4a2a; color: #eee4cc; }
+.cat-chip.cat-jiachen          { background: #f2e7d6; color: #6a4a20; }
+.cat-chip.cat-jiachen.active   { background: #6a4a20; color: #f2e7d6; }
+.cat-chip.cat-generic          { background: #ebe8e0; color: #6a6050; }
+.cat-chip.cat-generic.active   { background: #6a6050; color: #ebe8e0; }
+.cat-chip.cat-person-mis       { background: #fde8e4; color: #8a3030; }
+.cat-chip.cat-person-mis.active { background: #8a3030; color: #fde8e4; }
+
 /* 分类筛选栏 */
 .place-category-filter {
     display: flex;
