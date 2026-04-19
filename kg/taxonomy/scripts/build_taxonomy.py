@@ -37,7 +37,7 @@ except ImportError:
     sys.exit(1)
 
 SHIJI = Namespace('http://memect.cn/baojie/ontologies/2025/1/shiji/')
-MAX_SHOW = 20
+MAX_SHOW = 999999
 
 
 # ════════════════════════════════════════════

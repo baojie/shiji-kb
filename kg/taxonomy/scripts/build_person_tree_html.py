@@ -27,7 +27,9 @@ OUT = ROOT / "docs" / "kg" / "person_tree.html"
 RE_CLASS = re.compile(
     r"^per:(\S+)\s+a\s+owl:Class\s*;\s*"
     r"(?:rdfs:subClassOf\s+per:(\S+)\s*;\s*)?"
-    r'rdfs:label\s+"([^"]+)"@zh\s*\.',
+    r'rdfs:label\s+"([^"]+)"@zh'
+    r'(?:\s*;\s*:order\s+(\d+))?'
+    r'\s*\.',
     re.MULTILINE,
 )
 
@@ -66,12 +68,14 @@ def parse_ttl(text: str):
     classes: dict[str, str] = {}
     parent: dict[str, str | None] = {}
     label: dict[str, str] = {}
+    order: dict[str, int] = {}   # 类在同级中的时序编号
 
     for m in RE_CLASS.finditer(text):
-        cid, pid, lbl = m.group(1), m.group(2), m.group(3)
+        cid, pid, lbl, ord_ = m.group(1), m.group(2), m.group(3), m.group(4)
         classes[cid] = lbl
         label[cid] = lbl
         parent[cid] = pid  # 可能为 None（根）
+        order[cid] = int(ord_) if ord_ else 99
 
     instances: dict[str, list[tuple[str, int]]] = defaultdict(list)
     for m in RE_INSTANCE.finditer(text):
@@ -83,7 +87,7 @@ def parse_ttl(text: str):
     for cid in instances:
         instances[cid].sort(key=lambda x: (-x[1], x[0]))
 
-    return classes, parent, label, instances
+    return classes, parent, label, instances, order
 
 
 def build_children(parent: dict[str, str | None]) -> dict[str, list[str]]:
@@ -136,21 +140,23 @@ def render_node(
     totals: dict[str, int],
     depth: int,
     branch_css: str,
+    order_map: dict[str, int] | None = None,
 ) -> str:
     lbl = html.escape(label_map[cid])
     sub_total = totals[cid]
     direct = len(instances.get(cid, []))
-    kids = sorted(
-        children.get(cid, []),
-        key=lambda c: (-totals[c], label_map[c]),
-    )
+    # 优先按 :order 排序，order 相同时按人数降序
+    def child_key(c):
+        o = order_map.get(c, 99) if order_map else 99
+        return (o, -totals[c], label_map[c])
+    kids = sorted(children.get(cid, []), key=child_key)
 
     # 计数标签：直接 vs 子树
     if kids:
         if direct > 0:
             cnt_html = (
                 f'<span class="cnt">{sub_total}<span class="cnt-sub"> 人</span></span>'
-                f'<span class="cnt-direct" title="本类直接实例">直 {direct}</span>'
+                f'<span class="cnt-direct" title="本类直接实例">本级 {direct}</span>'
             )
         else:
             cnt_html = f'<span class="cnt">{sub_total}<span class="cnt-sub"> 人</span></span>'
@@ -169,7 +175,7 @@ def render_node(
     if kids:
         parts.append('<div class="children">')
         for ch in kids:
-            parts.append(render_node(ch, label_map, children, instances, totals, depth + 1, branch_css))
+            parts.append(render_node(ch, label_map, children, instances, totals, depth + 1, branch_css, order_map))
         parts.append("</div>")
 
     # 再渲染本类的直接实例（叶子）
@@ -186,18 +192,16 @@ def render_top_branches(
     children: dict[str, list[str]],
     instances: dict[str, list[tuple[str, int]]],
     totals: dict[str, int],
+    order_map: dict[str, int] | None = None,
 ) -> str:
-    """把根节点 人物 下的 9 个一级分支按 TOP_ORDER 排序渲染。"""
+    """把根节点 人物 下的一级分支按 :order 排序渲染。"""
     top = children.get(root, [])
-    known = {label_map[c]: c for c in top}
-    ordered: list[str] = []
-    for name in TOP_ORDER:
-        if name in known:
-            ordered.append(known[name])
-    # 若有未在 TOP_ORDER 中的新分支，尾部追加
-    for c in top:
-        if c not in ordered:
-            ordered.append(c)
+    # 优先按 :order，其次按 TOP_ORDER，最后按人数
+    top_order_idx = {name: i for i, name in enumerate(TOP_ORDER)}
+    def top_key(c):
+        o = order_map.get(c, 99) if order_map else 99
+        return (o, top_order_idx.get(label_map[c], 99), -totals[c])
+    ordered = sorted(top, key=top_key)
 
     out = []
     for cid in ordered:
@@ -206,7 +210,10 @@ def render_top_branches(
         icon, _color, _bg, _key = meta
         css_key = f"br-{_key}"
         n = totals[cid]
-        kids = sorted(children.get(cid, []), key=lambda c: (-totals[c], label_map[c]))
+        def child_key(c):
+            o = order_map.get(c, 99) if order_map else 99
+            return (o, -totals[c], label_map[c])
+        kids = sorted(children.get(cid, []), key=child_key)
 
         out.append(f'<section class="top-branch {css_key}">')
         out.append(
@@ -218,7 +225,7 @@ def render_top_branches(
         )
         out.append('<div class="top-body">')
         for ch in kids:
-            out.append(render_node(ch, label_map, children, instances, totals, 0, css_key))
+            out.append(render_node(ch, label_map, children, instances, totals, 0, css_key, order_map))
         # 顶层分支自身若也有直接实例（如"外邦"下可能有未归子国的），同样展出
         if instances.get(cid):
             out.append(render_instances(instances[cid]))
@@ -271,6 +278,18 @@ def build_css() -> str:
             font-size: 0.95em;
         }}
         .back-link:hover {{ text-decoration: underline; }}
+
+        .auto-notice {{
+            background: #fff8e1;
+            border: 1px solid #f0c040;
+            border-left: 5px solid #e6a800;
+            border-radius: 6px;
+            padding: 10px 18px;
+            margin-bottom: 14px;
+            font-size: 0.92em;
+            color: #5a4000;
+        }}
+        .auto-notice b {{ color: #7a4f00; }}
 
         .intro {{
             background: #eef5f5;
@@ -589,6 +608,10 @@ def build_html(tree_html: str, stats: dict) -> str:
         Person Taxonomy — {stats['classes']} 类 · {stats['instances']} 人 · 数据源 <code>kg/taxonomy/person.ttl</code>
     </div>
 
+    <div class="auto-notice">
+        ⚠️ <b>本页面由 AI Agent 自动生成</b>，存在大量已知缺陷与错误（分类偏差、别名混淆、人物误标等），将通过持续反思循环逐步纠正，不代表最终结果。
+    </div>
+
     <div class="intro">
         《史记》<b>person 实体分类树</b>，按"<b>王室 · 臣 · 策士 · 诸子百家 · 社会人物 · 方术 · 外邦 · 虚构人物 · 疑似误标</b>"9 大分支组织，每类附子树实例数（<span class="cnt" style="margin:0 2px;">N 人</span>）与本类直接实例数（<span class="cnt-direct">直 N</span>）。叶节点展示人物芯片（数字 = 全文出现次数）。
         <br>
@@ -624,7 +647,7 @@ def build_html(tree_html: str, stats: dict) -> str:
 
 def main() -> None:
     text = TTL.read_text(encoding="utf-8")
-    classes, parent, label_map, instances = parse_ttl(text)
+    classes, parent, label_map, instances, order_map = parse_ttl(text)
 
     # 根：人物（无 parent 或 parent 不在 classes 中）
     roots = [cid for cid in classes if parent.get(cid) is None]
@@ -638,7 +661,7 @@ def main() -> None:
     children = build_children(parent)
     totals = compute_totals(root, children, instances)
 
-    tree_html = render_top_branches(root, label_map, children, instances, totals)
+    tree_html = render_top_branches(root, label_map, children, instances, totals, order_map)
 
     stats = {
         "classes": len(classes),
