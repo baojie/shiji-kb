@@ -40,6 +40,8 @@ PLACE_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'place_categories.
 PLACE_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'place_confidence.json'
 OFFICIAL_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'official_categories.json'
 OFFICIAL_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'official_confidence.json'
+PERSON_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'person_categories.json'
+PERSON_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'person_confidence.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
@@ -528,6 +530,37 @@ def _load_official_confidence():
         return {}
 
 
+def _load_person_categories():
+    """加载人名身份分类数据，返回 {name: [cat, ...]}。"""
+    if not PERSON_CAT_FILE.exists():
+        return {}
+    try:
+        with open(PERSON_CAT_FILE, encoding='utf-8') as f:
+            data = json.load(f)
+        out = {}
+        for k, v in data.items():
+            if isinstance(v, list):
+                out[k] = v
+            elif isinstance(v, str):
+                out[k] = [v] if v else []
+            else:
+                out[k] = []
+        return out
+    except Exception:
+        return {}
+
+
+def _load_person_confidence():
+    """加载人名置信度 {name: {cat: conf}}。若文件不存在返回空字典。"""
+    if not PERSON_CONF_FILE.exists():
+        return {}
+    try:
+        with open(PERSON_CONF_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
 # 地段分类 -> CSS 修饰类（用于上色）
 PLACE_CATEGORY_CSS = {
     '水域': 'cat-river',    # 江河湖泊 + 海洋合并
@@ -575,16 +608,41 @@ OFFICIAL_CATEGORY_CSS = {
 }
 
 
+# 人名身份分类 -> CSS 修饰类（与 SKILL_03j 对应）
+PERSON_CATEGORY_CSS = {
+    '帝王':    'cat-emperor',
+    '诸侯君主': 'cat-ruler',
+    '后妃':    'cat-consort',
+    '宗室':    'cat-prince',
+    '将相':    'cat-chancellor',
+    '谋臣策士': 'cat-strategist',
+    '学者文士': 'cat-scholar',
+    '地方官':  'cat-local',
+    '刺客游侠': 'cat-swordsman',
+    '近臣奇人': 'cat-courtier',
+    '货殖':    'cat-merchant',
+    '外邦':    'cat-foreign',
+    '上古神话': 'cat-mythical',
+    '家臣门客': 'cat-retainer',
+    '平民刑徒': 'cat-commoner',
+    '误标':    'cat-mis',
+    '待拆分':  'cat-split',
+    '虚构寓言': 'cat-fictional',
+}
+
+
 def generate_type_page(type_key, css_class, label, filename, entries):
     """生成单个类型的索引 HTML 页面"""
     # 按拼音排序
     sorted_entries = sorted(entries.items(), key=lambda x: _get_pinyin_key(x[0]))
 
-    # 分类数据（地名/官职）
+    # 分类数据（地名/官职/人名）
     place_categories = _load_place_categories() if type_key == 'place' else {}
     place_confidence = _load_place_confidence() if type_key == 'place' else {}
     official_categories = _load_official_categories() if type_key == 'official' else {}
     official_confidence = _load_official_confidence() if type_key == 'official' else {}
+    person_categories = _load_person_categories() if type_key == 'person' else {}
+    person_confidence = _load_person_confidence() if type_key == 'person' else {}
 
     # 根据 type_key 选择分类源；categorized_type 表示"有分类功能"的类型
     if type_key == 'place':
@@ -595,6 +653,10 @@ def generate_type_page(type_key, css_class, label, filename, entries):
         cat_source = official_categories
         conf_source = official_confidence
         cat_css_map = OFFICIAL_CATEGORY_CSS
+    elif type_key == 'person':
+        cat_source = person_categories
+        conf_source = person_confidence
+        cat_css_map = PERSON_CATEGORY_CSS
     else:
         cat_source = {}
         conf_source = {}
@@ -1016,6 +1078,155 @@ def infer_undated_events(event_entries):
 
     print(f"    其中 {person_refined} 个由人物生卒年约束/修正")
     return inferred_count
+
+
+def generate_person_page(alias_rows, person_cats, person_conf, total_canonicals):
+    """生成人名索引，4列结构：surface（显示名）| 标签 | canonical（规范名）| 出处。
+    alias_rows: [(surface, canonical, [cats], [(ch, para), ...])]
+    """
+    sorted_rows = sorted(alias_rows, key=lambda r: _get_pinyin_key(r[0]))
+
+    grouped = defaultdict(list)
+    for row in sorted_rows:
+        letter = _get_pinyin_initial(row[0])
+        grouped[letter].append(row)
+
+    letters = sorted(grouped.keys(), key=lambda x: (x == '#', x))
+
+    cat_counts = defaultdict(int)
+    blank_count = 0
+    for _, canonical, cats, _ in sorted_rows:
+        if not cats:
+            blank_count += 1
+        else:
+            for c in cats:
+                cat_counts[c] += 1
+
+    total_rows = len(sorted_rows)
+    lines = []
+    lines.append('<!DOCTYPE html>')
+    lines.append('<html lang="zh-CN">')
+    lines.append('<head>')
+    lines.append('    <meta charset="UTF-8">')
+    lines.append('    <meta name="viewport" content="width=device-width, initial-scale=1.0">')
+    lines.append('    <title>人名索引 - 史记知识库</title>')
+    lines.append('    <link rel="stylesheet" href="../css/shiji-styles.css">')
+    lines.append('    <link rel="stylesheet" href="../css/entity-index.css">')
+    lines.append('</head>')
+    lines.append('<body class="person-index">')
+    lines.append('<nav class="chapter-nav">')
+    lines.append('    <a href="../index.html" class="nav-home">回到主页</a>')
+    lines.append('    <a href="index.html" class="nav-next">实体索引</a>')
+    lines.append('</nav>')
+    lines.append('<h1>人名索引</h1>')
+    lines.append(f'<p class="index-stats">共 <strong>{total_rows}</strong> 个条目（含消歧），'
+                 f'<strong>{total_canonicals}</strong> 个规范人名</p>')
+
+    if 'person' in ENTITY_DESCRIPTIONS:
+        _, marker, desc = ENTITY_DESCRIPTIONS['person']
+        lines.append(f'<div class="entity-type-desc">'
+                     f'<span class="type-label person">人名</span>'
+                     f'<span class="type-marker">{marker}</span>'
+                     f'<p>{desc}</p>'
+                     f'</div>')
+
+    lines.append('<div class="entity-filter">')
+    lines.append('    <input type="text" id="filter-input" placeholder="搜索人名...">')
+    lines.append('</div>')
+
+    lines.append('<div class="pinyin-nav">')
+    for letter in letters:
+        count = len(grouped[letter])
+        lines.append(f'  <a href="#letter-{letter}" class="pinyin-letter">{letter}'
+                     f'<span class="letter-count">{count}</span></a>')
+    lines.append('</div>')
+
+    named_cats = [(cat, n) for cat, n in cat_counts.items() if cat and n > 0]
+    named_cats.sort(key=lambda kv: (-kv[1], kv[0]))
+    lines.append('<div class="place-category-filter">')
+    lines.append(f'  <a href="#" class="cat-chip active" data-cat-filter="">全部'
+                 f'<span class="cat-count">{total_rows}</span></a>')
+    for cat, n in named_cats:
+        css = PERSON_CATEGORY_CSS.get(cat, 'cat-other')
+        lines.append(f'  <a href="#" class="cat-chip {css}" data-cat-filter="{html.escape(cat)}">'
+                     f'{html.escape(cat)}<span class="cat-count">{n}</span></a>')
+    if blank_count > 0:
+        lines.append(f'  <a href="#" class="cat-chip cat-other" data-cat-filter="__blank__">未分类'
+                     f'<span class="cat-count">{blank_count}</span></a>')
+    lines.append('</div>')
+
+    lines.append('<div class="entity-index">')
+    for letter in letters:
+        group = grouped[letter]
+        lines.append(f'<div class="letter-section" id="letter-{letter}">')
+        lines.append(f'  <h2 class="letter-heading">{letter}</h2>')
+
+        for surface, canonical, cats, refs in group:
+            esc_surface = html.escape(surface)
+            esc_canonical = html.escape(canonical)
+            cats_str = '|'.join(cats)
+            lines.append(f'  <div class="entity-entry" id="entity-{esc_surface}"'
+                         f' data-category="{html.escape(cats_str)}">')
+
+            # 列1：显示名（surface）
+            lines.append('    <div class="entry-left">')
+            lines.append(f'      <span class="canonical-name person">{esc_surface}</span>')
+            lines.append('    </div>')
+
+            # 列2：规范名（canonical）
+            lines.append('    <div class="entry-canonical">')
+            if canonical != surface:
+                lines.append(f'      <span class="canonical-target">{esc_canonical}</span>')
+            lines.append('    </div>')
+
+            # 列3：身份标签
+            conf_map = person_conf.get(canonical, {})
+            if cats:
+                lines.append('    <div class="entry-category">')
+                for cat in cats:
+                    cat_css = PERSON_CATEGORY_CSS.get(cat, 'cat-other')
+                    conf = conf_map.get(cat)
+                    if conf is not None:
+                        opacity = round(max(0.05, conf), 2)
+                        conf_pct = int(round(conf * 100))
+                        tooltip = f'置信度 {conf_pct}（越接近 100 越可靠）'
+                        lines.append(
+                            f'      <div class="cat-line">'
+                            f'<span class="place-category {cat_css}" '
+                            f'data-conf="{conf:.2f}" '
+                            f'style="opacity:{opacity}" '
+                            f'title="{tooltip}">'
+                            f'{html.escape(cat)}</span>'
+                            f'</div>'
+                        )
+                    else:
+                        lines.append(f'      <div class="cat-line">'
+                                     f'<span class="place-category {cat_css}">'
+                                     f'{html.escape(cat)}</span></div>')
+                lines.append('    </div>')
+            else:
+                lines.append('    <div class="entry-category"></div>')
+
+            # 列4：出处
+            lines.append('    <div class="entry-right">')
+            real_refs = [(ch, p) for ch, p in refs if ch != 'legacy']
+            if real_refs:
+                refs_html = _format_refs(real_refs)
+                lines.append(f'      {refs_html}')
+            lines.append('    </div>')
+
+            lines.append('  </div>')
+        lines.append('</div>')
+
+    lines.append('</div>')
+    lines.append('<script src="../js/entity-filter.js"></script>')
+    lines.append('<nav class="chapter-nav">')
+    lines.append('    <a href="../index.html" class="nav-home">回到主页</a>')
+    lines.append('    <a href="index.html" class="nav-next">实体索引</a>')
+    lines.append('</nav>')
+    lines.append('</body>')
+    lines.append('</html>')
+    return '\n'.join(lines)
 
 
 def generate_event_page(event_entries):

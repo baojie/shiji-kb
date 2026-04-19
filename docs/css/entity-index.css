@@ -143,8 +143,24 @@ body {
 
 /* 左侧：名称 + 别名 */
 .entry-left {
-    flex: 0 0 160px;
+    flex: 0 0 140px;
     text-align: left;
+}
+
+/* 人名四列专用：规范名列 */
+.entry-canonical {
+    flex: 0 0 140px;
+    font-size: 0.9em;
+    color: #5a4a2a;
+    align-self: baseline;
+}
+.entry-canonical .canonical-target {
+    font-weight: 500;
+    color: #8B4513;
+}
+.entry-canonical:empty::before {
+    content: "—";
+    color: #ddd;
 }
 
 .canonical-name {
@@ -447,6 +463,23 @@ h2 {
 .place-category.cat-identity-mis { background: #fce9f4; color: #8a3060; border-color: #f0c8dc; font-style: italic; }
 .place-category.cat-shihao-mis   { background: #f6e9e2; color: #8a5020; border-color: #e8d2c0; font-style: italic; }
 
+/* 人名身份分类配色（帝王/诸侯君主/后妃/宗室/将相/...） */
+.place-category.cat-emperor    { background: #fdf0cc; color: #7a5010; border-color: #edda90; }
+.place-category.cat-ruler      { background: #ece2f5; color: #5a3a8a; border-color: #d4c0e8; }
+.place-category.cat-consort    { background: #fce8f0; color: #8a3060; border-color: #f0c8dc; }
+.place-category.cat-prince     { background: #e8ecf8; color: #3a4a8a; border-color: #c4cce0; }
+.place-category.cat-chancellor { background: #e4eaf4; color: #3a4a70; border-color: #c4cee0; }
+.place-category.cat-strategist { background: #e0f0ec; color: #2a5e54; border-color: #b8ddd6; }
+.place-category.cat-scholar    { background: #e8f0e0; color: #4a6028; border-color: #c4d8a8; }
+.place-category.cat-local      { background: #ede5d8; color: #6a4a2a; border-color: #d8ccae; }
+.place-category.cat-swordsman  { background: #e4e4ec; color: #3a3a5a; border-color: #c4c4d8; }
+.place-category.cat-courtier   { background: #fde8d0; color: #8a5020; border-color: #f0d0a8; }
+.place-category.cat-merchant   { background: #faf0c0; color: #7a6010; border-color: #e8d880; }
+.place-category.cat-mythical   { background: #e8f4f0; color: #2a6050; border-color: #bcdcd4; }
+.place-category.cat-retainer   { background: #f2e7d6; color: #6a4a20; border-color: #ddcba6; }
+.place-category.cat-commoner   { background: #ece9e0; color: #6a6050; border-color: #d0ccb8; }
+.place-category.cat-fictional  { background: #f0e8fa; color: #6a3a8a; border-color: #ddc8ee; font-style: italic; }
+
 /* cat-chip 开关 — 官职类 */
 .cat-chip.cat-sangong          { background: #fbe4e4; color: #8b2a2a; }
 .cat-chip.cat-sangong.active   { background: #8b2a2a; color: #fbe4e4; }
@@ -486,6 +519,38 @@ h2 {
 .cat-chip.cat-identity-mis.active { background: #8a3060; color: #fce9f4; }
 .cat-chip.cat-shihao-mis         { background: #f6e9e2; color: #8a5020; }
 .cat-chip.cat-shihao-mis.active  { background: #8a5020; color: #f6e9e2; }
+
+/* cat-chip 开关 — 人名身份类 */
+.cat-chip.cat-emperor          { background: #fdf0cc; color: #7a5010; }
+.cat-chip.cat-emperor.active   { background: #7a5010; color: #fdf0cc; }
+.cat-chip.cat-ruler            { background: #ece2f5; color: #5a3a8a; }
+.cat-chip.cat-ruler.active     { background: #5a3a8a; color: #ece2f5; }
+.cat-chip.cat-consort          { background: #fce8f0; color: #8a3060; }
+.cat-chip.cat-consort.active   { background: #8a3060; color: #fce8f0; }
+.cat-chip.cat-prince           { background: #e8ecf8; color: #3a4a8a; }
+.cat-chip.cat-prince.active    { background: #3a4a8a; color: #e8ecf8; }
+.cat-chip.cat-chancellor       { background: #e4eaf4; color: #3a4a70; }
+.cat-chip.cat-chancellor.active { background: #3a4a70; color: #e4eaf4; }
+.cat-chip.cat-strategist       { background: #e0f0ec; color: #2a5e54; }
+.cat-chip.cat-strategist.active { background: #2a5e54; color: #e0f0ec; }
+.cat-chip.cat-scholar          { background: #e8f0e0; color: #4a6028; }
+.cat-chip.cat-scholar.active   { background: #4a6028; color: #e8f0e0; }
+.cat-chip.cat-local            { background: #ede5d8; color: #6a4a2a; }
+.cat-chip.cat-local.active     { background: #6a4a2a; color: #ede5d8; }
+.cat-chip.cat-swordsman        { background: #e4e4ec; color: #3a3a5a; }
+.cat-chip.cat-swordsman.active { background: #3a3a5a; color: #e4e4ec; }
+.cat-chip.cat-courtier         { background: #fde8d0; color: #8a5020; }
+.cat-chip.cat-courtier.active  { background: #8a5020; color: #fde8d0; }
+.cat-chip.cat-merchant         { background: #faf0c0; color: #7a6010; }
+.cat-chip.cat-merchant.active  { background: #7a6010; color: #faf0c0; }
+.cat-chip.cat-mythical         { background: #e8f4f0; color: #2a6050; }
+.cat-chip.cat-mythical.active  { background: #2a6050; color: #e8f4f0; }
+.cat-chip.cat-retainer         { background: #f2e7d6; color: #6a4a20; }
+.cat-chip.cat-retainer.active  { background: #6a4a20; color: #f2e7d6; }
+.cat-chip.cat-commoner         { background: #ece9e0; color: #6a6050; }
+.cat-chip.cat-commoner.active  { background: #6a6050; color: #ece9e0; }
+.cat-chip.cat-fictional        { background: #f0e8fa; color: #6a3a8a; }
+.cat-chip.cat-fictional.active { background: #6a3a8a; color: #f0e8fa; }
 
 /* 分类筛选栏 */
 .place-category-filter {
@@ -592,4 +657,57 @@ h2 {
 /* 被分类筛选隐藏的条目 */
 .entity-entry.cat-hidden {
     display: none;
+}
+
+/* ─── 移动端适配 ─── */
+@media (max-width: 640px) {
+    /* 名称列 + 标签列（+ 人名规范名列）合并为左侧，出处列独占右侧
+       地名/官职：entry-left(行1) + entry-category(行2)
+       人名：     entry-left(行1) + entry-category(行2) + entry-canonical(行3)
+       grid-template-rows 声明 3 行，空行自动折叠为 0 高度，不影响地名/官职 */
+    .entity-entry {
+        display: grid;
+        grid-template-columns: minmax(0, max-content) 1fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 10px;
+        row-gap: 0;
+        align-items: start;
+    }
+
+    .entry-left {
+        grid-column: 1;
+        grid-row: 1;
+        flex: none;
+        width: auto;
+        min-width: 0;
+    }
+
+    /* 地名/官职：标签在行2 */
+    .entry-category {
+        grid-column: 1;
+        grid-row: 2;
+        flex: none;
+        width: auto;
+        padding-top: 2px;
+    }
+
+    /* 人名专用：规范名行2，标签行3（body.person-index 覆盖上方默认值） */
+    .entry-canonical {
+        grid-column: 1;
+        grid-row: 3;
+        flex: none;
+        width: auto;
+        padding-top: 2px;
+    }
+    body.person-index .entry-canonical { grid-row: 2; }
+    body.person-index .entry-category  { grid-row: 3; }
+
+    /* 出处列跨越全部显式行（-1 = 第4条网格线）；
+       地名/官职第3行为空，视觉上等同于跨2行 */
+    .entry-right {
+        grid-column: 2;
+        grid-row: 1 / -1;
+        align-self: start;
+        font-size: 0.78em;
+    }
 }
