@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物概念分类树 - 史记知识库</title>
+    <style>
+        body {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+            background-color: #faf8f0;
+            color: #222;
+            line-height: 1.65;
+        }
+        h1 {
+            text-align: center;
+            color: #2e5f5f;
+            border-bottom: 3px solid #2e5f5f;
+            padding-bottom: 12px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: #8B4513;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        .intro {
+            background: #eef5f5;
+            padding: 14px 20px;
+            border-radius: 6px;
+            border-left: 4px solid #4a7878;
+            margin-bottom: 20px;
+        }
+        .intro b { color: #2e5f5f; }
+        .intro code {
+            background: #fff;
+            padding: 1px 6px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        .legend {
+            background: #fff;
+            border: 1px solid #e0dcc5;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+            font-size: 0.92em;
+        }
+        .legend b { color: #2e5f5f; }
+        .legend ul { margin: 6px 0 0; padding-left: 22px; }
+
+        .tree {
+            border-left: 3px solid #4a7878;
+            padding: 4px 0 4px 22px;
+            margin-left: 10px;
+        }
+        .root {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2e5f5f;
+            margin: 8px 0 14px;
+        }
+        .branch {
+            margin-top: 20px;
+            font-size: 1.08em;
+            font-weight: bold;
+            color: #4a5a68;
+        }
+        .branch .count {
+            font-weight: normal;
+            font-size: 0.85em;
+            color: #888;
+            margin-left: 6px;
+        }
+        .cat-count {
+            margin-left: 6px;
+            font-size: 0.82em;
+            color: #2e5f5f;
+            font-weight: 600;
+        }
+        .branch-count {
+            margin-left: 4px;
+            font-size: 0.85em;
+            color: #4a7878;
+            font-weight: 600;
+        }
+        .root-count {
+            margin-left: 8px;
+            font-size: 0.7em;
+            font-weight: 500;
+            color: #4a7878;
+        }
+
+
+        .cat-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 12px 14px;
+            margin: 10px 0;
+            border: 1px solid #d8d2bf;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+        .cat-row.meta {
+            border-style: dashed;
+            background: #faf8f0;
+        }
+        .pri {
+            flex: 0 0 36px;
+            text-align: center;
+            font-weight: bold;
+            color: #888;
+            font-size: 1.05em;
+            padding-top: 2px;
+        }
+        .cat-body {
+            flex: 1;
+            min-width: 0;
+        }
+        .cat-header {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+        .cat-chip {
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 14px;
+            font-size: 0.95em;
+            font-weight: bold;
+            border: 1px solid transparent;
+        }
+        .cat-key {
+            font-size: 0.8em;
+            color: #888;
+            font-family: Menlo, Consolas, monospace;
+        }
+        .examples {
+            color: #444;
+            font-size: 0.93em;
+        }
+        .examples b { color: #2e5f5f; font-weight: normal; margin-right: 4px; }
+        .note {
+            margin-top: 4px;
+            color: #777;
+            font-size: 0.85em;
+            font-style: italic;
+        }
+
+        /* 16 类 CSS —— 照搬 SKILL_03j §一 */
+        .cat-emperor     { background: #fff0d9; color: #a15c10; border-color: #f2d8a4; }
+        .cat-ruler       { background: #fde6d6; color: #9a4a12; border-color: #f2c8a6; }
+        .cat-consort     { background: #fce4ec; color: #a03058; border-color: #f4bccd; }
+        .cat-prince      { background: #fff4dc; color: #8a6020; border-color: #f0dda0; }
+        .cat-chancellor  { background: #e4d6f2; color: #5c3a8a; border-color: #cbb6e0; }
+        .cat-strategist  { background: #e1e8f6; color: #304a82; border-color: #bac8e4; }
+        .cat-scholar     { background: #e3eedc; color: #355a22; border-color: #c3d7b4; }
+        .cat-local       { background: #e6ecf0; color: #3a4c5a; border-color: #c7d2dc; }
+        .cat-swordsman   { background: #f3dede; color: #8a2020; border-color: #e2b4b4; }
+        .cat-courtier    { background: #fbe7c8; color: #8a5a12; border-color: #ecc996; }
+        .cat-merchant    { background: #f0e6c8; color: #6a551c; border-color: #dccda0; }
+        .cat-foreign     { background: #d9ecee; color: #2f6060; border-color: #b8d8dc; }
+        .cat-mythical    { background: #ede4f2; color: #5a2f82; border-color: #d2c0e0; }
+        .cat-retainer    { background: #e8e4d8; color: #5c502a; border-color: #ccc5ad; }
+        .cat-commoner    { background: #e8e8e8; color: #404040; border-color: #c8c8c8; }
+
+        /* 元数据 3 类 */
+        .cat-mis         { background: #fdecea; color: #a03030; border-color: #f4c6c0; font-style: italic; }
+        .cat-split       { background: #fff4d6; color: #8a6020; border-color: #f0dda0; }
+        .cat-fictional   { background: #f5e8ff; color: #6a2f82; border-color: #d8b8ea; font-style: italic; }
+
+        .meta-block {
+            margin-top: 26px;
+            padding: 14px 18px;
+            border: 1px dashed #b6a978;
+            border-radius: 6px;
+            background: #fdfbef;
+        }
+        .meta-block h3 {
+            margin: 0 0 8px;
+            color: #8a6a20;
+            font-size: 1.05em;
+        }
+        .meta-block p {
+            margin: 0 0 10px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            margin-top: 36px;
+            padding-top: 14px;
+            border-top: 1px solid #e0dcc5;
+            color: #888;
+            font-size: 0.85em;
+        }
+        .footer code {
+            background: #fff;
+            padding: 1px 5px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← 返回知识图谱</a>
+    <h1>👤 人物概念分类树</h1>
+    <div class="subtitle">Person Identity Taxonomy — 16 类身份 + 3 类元数据，SKILL_03j §一</div>
+
+    <div class="intro">
+        这是《史记》<b>person 实体的身份分类概念树</b>，不是人物实例列表。树的每个叶节点代表一个身份类别，展示典型人物示例与专属配色。
+        分类按"<b>官职/身份高低</b>"优先级排序：<b>priority 数字越小 = 地位越高</b>；一人多类时主标取 priority 最小的类别。
+        <br><br>最新数据（2026-04-19）：已分类 <b>3118</b> 人，覆盖 <code>person_categories.json</code>。前 5 大类：将相（1155）、诸侯君主（791）、宗室（389）、帝王（219）、误标（159）。在<a href="../entities/person.html" style="color:#8B4513;">人名索引</a>可按类筛选实例。
+    </div>
+
+    <div class="legend">
+        <b>图例</b>
+        <ul>
+            <li><b>priority</b>：分类优先级数字（多标签时主标 = 最小值）</li>
+            <li><b>CSS 类名</b>：<code>cat-emperor</code> 等，与 <code>docs/css/entity-index.css</code> 对应，决定前端色块</li>
+            <li><b>典型示例</b>：每类列出 3-6 个代表人物</li>
+            <li><b>元数据类</b>（误标 / 待拆分 / 虚构寓言）无 priority，平行于 16 类主分类</li>
+        </ul>
+    </div>
+
+    <div class="root">🌳 《史记》人物身份分类 (16 主类 + 3 元数据类) <span class="count root-count">· 已分类 3118 人</span></div>
+
+    <div class="tree">
+        <div class="branch">I. 君主与宗室 <span class="count">(priority 1–4)</span> <span class="count branch-count">· 1515 人</span></div>
+
+        <div class="cat-row">
+            <div class="pri">1</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-emperor">帝王</span>
+                    <span class="cat-key">cat-emperor</span> <span class="count cat-count">(219 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>黄帝 · 夏禹 · 商汤 · 周武王 · 秦始皇 · 汉高祖 · 汉武帝</div>
+                <div class="note">本纪章主人公；rulers.json 类型 = 天子/皇帝</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">2</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-ruler">诸侯君主</span>
+                    <span class="cat-key">cat-ruler</span> <span class="count cat-count">(主标 791 · 共 821 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>齐桓公 · 晋文公 · 楚庄王 · 梁孝王 · 吴王濞 · 淮南王安</div>
+                <div class="note">世家章主人公；rulers.json 类型 = 诸侯王/汉诸侯王/诸侯侯君</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">3</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-consort">后妃</span>
+                    <span class="cat-key">cat-consort</span> <span class="count cat-count">(主标 116 · 共 119 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>褒姒 · 骊姬 · 吕后 · 卫皇后 · 窦太后 · 虞姬</div>
+                <div class="note">后缀启发式：X 夫人/姬/皇后/王后/太后</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">4</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-prince">宗室</span>
+                    <span class="cat-key">cat-prince</span> <span class="count cat-count">(主标 389 · 共 417 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>周公旦 · 信陵君 · 孟尝君 · 平原君 · 春申君 · 淮南王子 · 公子光</div>
+                <div class="note">后缀启发式：X 公子 / 公子 X / X 太子；"X君"中战国四公子类</div>
+            </div>
+        </div>
+
+        <div class="branch">II. 官僚与文人 <span class="count">(priority 5–8)</span> <span class="count branch-count">· 1299 人</span></div>
+
+        <div class="cat-row">
+            <div class="pri">5</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-chancellor">将相</span>
+                    <span class="cat-key">cat-chancellor</span> <span class="count cat-count">(主标 1155 · 共 1394 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>管仲 · 萧何 · 韩信 · 周勃 · 卫青 · 霍去病 · 公孙弘 · 霍光</div>
+                <div class="note">共现模式：为/拜 X 为 丞相/将军；"X侯"中汉代列侯多归此类</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">6</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-strategist">谋臣策士</span>
+                    <span class="cat-key">cat-strategist</span> <span class="count cat-count">(主标 38 · 共 62 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>苏秦 · 张仪 · 范雎 · 蔡泽 · 陈平 · 郦食其 · 蒯通</div>
+                <div class="note">纵横家、说客、谋主；商君兼谋臣+将相</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">7</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-scholar">学者文士</span>
+                    <span class="cat-key">cat-scholar</span> <span class="count cat-count">(主标 100 · 共 116 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>孔子 · 孟子 · 荀子 · 贾谊 · 董仲舒 · 司马相如 · 申公 · 伏生</div>
+                <div class="note">儒林列传主干；共现模式：博士 X / 以 X 为 博士</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">8</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-local">地方官</span>
+                    <span class="cat-key">cat-local</span> <span class="count cat-count">(主标 6 · 共 21 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>孙叔敖 · 子产 · 公仪休 · 郅都 · 义纵 · 王温舒</div>
+                <div class="note">循吏列传 + 酷吏列传合并；张汤兼将相（官至御史大夫）</div>
+            </div>
+        </div>
+
+        <div class="branch">III. 江湖与近臣 <span class="count">(priority 9–11)</span> <span class="count branch-count">· 77 人</span></div>
+
+        <div class="cat-row">
+            <div class="pri">9</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-swordsman">刺客游侠</span>
+                    <span class="cat-key">cat-swordsman</span> <span class="count cat-count">(主标 24 · 共 28 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>曹沫 · 专诸 · 豫让 · 聂政 · 荆轲 · 朱家 · 剧孟 · 郭解</div>
+                <div class="note">刺客列传 + 游侠列传合并</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">10</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-courtier">近臣奇人</span>
+                    <span class="cat-key">cat-courtier</span> <span class="count cat-count">(主标 42 · 共 57 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>邓通 · 韩嫣 · 李延年 · 淳于髡 · 东方朔 · 扁鹊 · 仓公 · 司马季主 · 卫平</div>
+                <div class="note">佞幸/滑稽/方士/医者/日者/龟策 六小类合并</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">11</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-merchant">货殖</span>
+                    <span class="cat-key">cat-merchant</span> <span class="count cat-count">(主标 11 · 共 16 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>范蠡 · 子贡 · 白圭 · 猗顿 · 乌氏倮 · 巴寡妇清 · 吕不韦 · 卓氏</div>
+                <div class="note">129 货殖列传主干；吕不韦兼货殖+将相</div>
+            </div>
+        </div>
+
+        <div class="branch">IV. 边陲与神话 <span class="count">(priority 12–13)</span> <span class="count branch-count">· 59 人</span></div>
+
+        <div class="cat-row">
+            <div class="pri">12</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-foreign">外邦</span>
+                    <span class="cat-key">cat-foreign</span> <span class="count cat-count">(主标 49 · 共 72 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>冒顿单于 · 老上单于 · 伊稚斜 · 赵佗 · 卫满 · 昆莫 · 闽越王</div>
+                <div class="note">110 匈奴 + 113-116 外邦四夷；后缀启发式：X 单于/贤王/昆邪王</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">13</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-mythical">上古神话</span>
+                    <span class="cat-key">cat-mythical</span> <span class="count cat-count">(主标 10 · 共 22 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>女娲 · 伏羲 · 共工 · 祝融 · 句芒 · 风后 · 蚩尤</div>
+                <div class="note">传说/神话人物；与帝王（黄帝/五帝）有交集，以帝王为主标</div>
+            </div>
+        </div>
+
+        <div class="branch">V. 底层与随从 <span class="count">(priority 14–15)</span> <span class="count branch-count">· 5 人</span></div>
+
+        <div class="cat-row">
+            <div class="pri">14</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-retainer">家臣门客</span>
+                    <span class="cat-key">cat-retainer</span> <span class="count cat-count">(主标 3 · 共 11 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>侯嬴 · 朱亥 · 毛遂 · 冯驩 · 唐雎 · 薛公</div>
+                <div class="note">战国四公子门下士；L5 并列传播常用</div>
+            </div>
+        </div>
+
+        <div class="cat-row">
+            <div class="pri">15</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-commoner">平民刑徒</span>
+                    <span class="cat-key">cat-commoner</span> <span class="count cat-count">(主标 2 · 共 15 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>陈胜 · 吴广 · 英布（骊山徒起家）</div>
+                <div class="note">起义者起家身份；后升为诸侯王者以诸侯君主为主标</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="meta-block">
+        <h3>🏷️ 元数据类（无 priority，平行于 16 主类）</h3>
+        <p>以下三类不是身份归属，而是条目本身的状态标注，用于审核与修订：</p>
+
+        <div class="cat-row meta">
+            <div class="pri">—</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-mis">误标</span>
+                    <span class="cat-key">cat-mis</span> <span class="count cat-count">(主标 159 · 共 390 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>象天（动词"效法天"）· 皆益笃（副词"更加"）· 日益（副词"逐渐"）</div>
+                <div class="note">非人名被误标为 person 的条目（动词 / 地名 / 官职片段）；来自单字人名假阳性</div>
+            </div>
+        </div>
+
+        <div class="cat-row meta">
+            <div class="pri">—</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-split">待拆分</span>
+                    <span class="cat-key">cat-split</span> <span class="count cat-count">(主标 2 · 共 9 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>丞相何 = 丞相 + 萧何 · 卫将军青 = 卫将军 + 卫青 · 淮阴侯韩信 = 淮阴侯 + 韩信</div>
+                <div class="note">官职 + 人名复合体；源头需重新标注</div>
+            </div>
+        </div>
+
+        <div class="cat-row meta">
+            <div class="pri">—</div>
+            <div class="cat-body">
+                <div class="cat-header">
+                    <span class="cat-chip cat-fictional">虚构寓言</span>
+                    <span class="cat-key">cat-fictional</span> <span class="count cat-count">(主标 2 · 共 3 人)</span>
+                </div>
+                <div class="examples"><b>典型：</b>寓言虚构人物（纵横策士口中的托名人物、寓言角色）</div>
+                <div class="note">作者以劝谏/修辞为目的塑造的角色，史实性存疑</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        规则来源：<code>skills/SKILL_03j_人名分类.md §一</code> · 实现：<code>kg/entities/scripts/classify_persons.py</code> · 维护：<code>skills/SKILL_06e_分类树总结.md</code> · CSS：<code>docs/css/entity-index.css</code> 的 <code>.cat-*</code> 系列<br>数据：<code>kg/entities/data/person_categories.json</code>（3118 人已分类） · 重生脚本：<code>kg/taxonomy/scripts/rebuild_person_tree_html.py</code> · 最后更新：2026-04-19
+    </div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识图谱 - 史记知识库</title>
+    <style>
+        body {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+            background-color: #faf8f0;
+            color: #222;
+        }
+        h1 {
+            text-align: center;
+            color: #2e5f5f;
+            border-bottom: 3px solid #2e5f5f;
+            padding-bottom: 12px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 24px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 16px;
+            color: #8B4513;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .intro {
+            background: #eef5f5;
+            padding: 14px 20px;
+            border-radius: 6px;
+            border-left: 4px solid #4a7878;
+            margin-bottom: 28px;
+            line-height: 1.75;
+            color: #334;
+        }
+        .intro b { color: #2e5f5f; }
+        .intro a, .section-hint a { color: #8B4513; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #d8d2bf;
+            border-radius: 8px;
+            padding: 16px 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.15s, box-shadow 0.15s;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .card.ready {
+            border-color: #4a7878;
+            background: #fbfdfd;
+        }
+        .card.ready:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(46,95,95,0.18);
+        }
+        .card.pending {
+            opacity: 0.72;
+            background: #f6f5ef;
+        }
+        .card-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #2e5f5f;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card.pending .card-title { color: #6a6455; }
+        .card-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .card-title a:hover { text-decoration: underline; }
+        .status {
+            font-size: 0.78em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+        }
+        .status.ready   { background: #d4efdf; color: #1d6b3a; }
+        .status.pending { background: #eee7d0; color: #8a6a20; }
+        .card-meta {
+            font-size: 0.85em;
+            color: #777;
+        }
+        .card-desc {
+            font-size: 0.92em;
+            color: #555;
+            line-height: 1.55;
+        }
+        .card-skill {
+            font-size: 0.82em;
+            color: #8B4513;
+            margin-top: 4px;
+        }
+        .section-hint {
+            margin: 30px 0 12px;
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← 返回首页</a>
+    <h1>🌐 知识图谱</h1>
+    <div class="subtitle">Knowledge Graphs &amp; Taxonomies — 史记结构化知识的图谱化视图</div>
+
+    <div class="intro">
+        <b>知识图谱</b> 与"知识索引/专项索引"互补：索引是<b>扁平列表</b>（按类别/首字母/年代列出实体），图谱是<b>分类树 / 关系网络 / 时间线</b>。目前仅<b>人物概念分类树</b>已上线，其余候选正在规划与实现中。
+        <br>
+        已在<a href="../special/special_index.html">专项索引</a>中呈现的"君主世系 / 家族谱系 / 官职体系"等不在此页重复列出。
+    </div>
+
+    <div class="grid">
+        <div class="card ready">
+            <div class="card-title">
+                <a href="person_tree.html">👤 人物概念分类树</a>
+                <span class="status ready">✅ 已上线</span>
+            </div>
+            <div class="card-meta">16 类 + 3 元数据类</div>
+            <div class="card-desc">按"官职/身份高低"优先级排序的 person 实体身份分类体系（帝王 / 诸侯君主 / 后妃 / 宗室 / 将相 / 谋臣策士 / 学者文士 / ... / 平民刑徒），含 误标 / 待拆分 / 虚构寓言 三类元数据。</div>
+            <div class="card-skill">来源：SKILL_03j §一</div>
+        </div>
+
+        <div class="card pending">
+            <div class="card-title">
+                🗺️ 地名地段分类树
+                <span class="status pending">🕑 coming soon</span>
+            </div>
+            <div class="card-meta">14 类</div>
+            <div class="card-desc">place 实体按地理属性的分类体系（都城 / 邦国 / 郡县 / 山川 / 关隘 / 宫室 / ...）。分类数据与 CSS 已存在，待从 SKILL_03h 规则整理为树状图。</div>
+            <div class="card-skill">来源：SKILL_03h</div>
+        </div>
+
+        <div class="card pending">
+            <div class="card-title">
+                🏛️ 官职职类分类树
+                <span class="status pending">🕑 coming soon</span>
+            </div>
+            <div class="card-meta">21 类（由 18 类细分而来）</div>
+            <div class="card-desc">official 实体按职类的分类体系（三公 / 九卿 / 诸侯国官 / 军职 / 宫官 / 郡县官 / ...）。分类迭代已进行到第六轮反思，待树状图展示。</div>
+            <div class="card-skill">来源：SKILL_03i</div>
+        </div>
+
+        <div class="card pending">
+            <div class="card-title">
+                🌿 生物分类树
+                <span class="status pending">🕑 coming soon</span>
+            </div>
+            <div class="card-meta">20 类 / 约 70 实例</div>
+            <div class="card-desc">《史记》出现的动植物与祥瑞神兽分类（兽 / 禽 / 鱼虫 / 草木 / 麟凤龟龙 / ...），来源 biology.ttl 本体。</div>
+            <div class="card-skill">数据源：biology.ttl</div>
+        </div>
+
+        <div class="card pending">
+            <div class="card-title">
+                ⚔️ 动词语义分类树
+                <span class="status pending">🕑 coming soon</span>
+            </div>
+            <div class="card-meta">4 大类</div>
+            <div class="card-desc">4 类动词标注（军事 ○ / 政治 ◆ / 礼仪 ◇ / 人事 ⟡）的二级语义分类与典型搭配。</div>
+            <div class="card-skill">数据源：verb 标注</div>
+        </div>
+
+        <div class="card pending">
+            <div class="card-title">
+                🔗 事件关系网络
+                <span class="status pending">🕑 coming soon</span>
+            </div>
+            <div class="card-meta">7,652 条关系 / 9 种类型</div>
+            <div class="card-desc">3,197 个事件之间的因果 / 承接 / 并列 / 对立 / ... 九种关系网络，支持交互式图谱浏览与关系类型筛选。</div>
+            <div class="card-skill">数据源：event_relations.json</div>
+        </div>
+
+        <div class="card pending">
+            <div class="card-title">
+                🚇 时间线地铁图
+                <span class="status pending">🕑 coming soon</span>
+            </div>
+            <div class="card-meta">3,185 事件</div>
+            <div class="card-desc">以"地铁线路"隐喻呈现多国/多人物平行时间线：横轴为时间、纵轴为线路（邦国/家族/人物），交汇点即跨线事件。</div>
+            <div class="card-skill">规划中</div>
+        </div>
+
+        <div class="card pending">
+            <div class="card-title">
+                📚 史记常识规则库
+                <span class="status pending">🕑 coming soon</span>
+            </div>
+            <div class="card-meta">10 大类</div>
+            <div class="card-desc">《史记》阅读/标注中沉淀下的"历史常识性规则"（称谓 / 官职 / 地理 / 礼制 / 军事 / ...），供 Agent 与读者共同参考。</div>
+            <div class="card-skill">规划中</div>
+        </div>
+
+        <div class="card pending">
+            <div class="card-title">
+                🧩 SKU 知识单元本体
+                <span class="status pending">🕑 coming soon</span>
+            </div>
+            <div class="card-meta">675 单元</div>
+            <div class="card-desc">将《史记》切分为可独立引用的"知识单元"（SKU），每单元带类型 / 主题 / 时代 / 关联实体等结构化属性。</div>
+            <div class="card-skill">规划中</div>
+        </div>
+    </div>
+
+    <div class="section-hint">
+        已在<a href="../special/special_index.html">专项索引</a>中呈现的：君主世系 · 家族谱系 · 官职体系 · 度量衡 · 年表 · ...
+    </div>
+</body>
+</html>
