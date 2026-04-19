@@ -319,7 +319,12 @@ def build_event_index(event_dir):
 
 
 def load_alias_map(alias_file):
-    """加载别名映射，返回 {type_key: {surface_form: canonical_name}}"""
+    """加载别名映射，返回 {type_key: {surface_form: canonical_name}}
+
+    兼容两种格式：
+      旧格式：{entity_type: {canonical: [alias, ...]}}
+      新格式：{entity_type: [{surface, canonical, refs, ...}, ...]}
+    """
     if not alias_file.exists():
         return {}
 
@@ -329,11 +334,22 @@ def load_alias_map(alias_file):
     reverse_map = {}
     for entity_type, mappings in raw.items():
         reverse_map[entity_type] = {}
-        for canonical, aliases in mappings.items():
-            reverse_map[entity_type][canonical] = canonical
-            for alias in aliases:
-                if alias:  # 跳过空别名
-                    reverse_map[entity_type][alias] = canonical
+        if isinstance(mappings, list):
+            # 新格式：列表中每项含 surface 和 canonical 字段
+            for item in mappings:
+                surface = item.get('surface', '')
+                canonical = item.get('canonical', '')
+                if canonical:
+                    reverse_map[entity_type][canonical] = canonical
+                if surface and canonical:
+                    reverse_map[entity_type][surface] = canonical
+        else:
+            # 旧格式：{canonical: [alias, ...]}
+            for canonical, aliases in mappings.items():
+                reverse_map[entity_type][canonical] = canonical
+                for alias in aliases:
+                    if alias:
+                        reverse_map[entity_type][alias] = canonical
 
     return reverse_map
 

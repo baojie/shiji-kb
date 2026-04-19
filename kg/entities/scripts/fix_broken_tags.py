@@ -28,10 +28,19 @@ def load_known_entities():
         with open(alias_path) as f:
             data = json.load(f)
         for entity_type, groups in data.items():
-            for canonical, aliases in groups.items():
-                names.add(canonical)
-                for a in aliases:
-                    names.add(a)
+            if isinstance(groups, list):
+                # 新格式：[{surface, canonical, ...}]
+                for item in groups:
+                    if item.get('canonical'):
+                        names.add(item['canonical'])
+                    if item.get('surface'):
+                        names.add(item['surface'])
+            else:
+                # 旧格式：{canonical: [alias, ...]}
+                for canonical, aliases in groups.items():
+                    names.add(canonical)
+                    for a in aliases:
+                        names.add(a)
     return names
 
 # === Layer 1: $@X@Y@$ 模式 ===

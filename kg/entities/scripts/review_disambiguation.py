@@ -32,18 +32,32 @@ def load_ruler_db():
 
 
 def load_alias_maps():
-    """加载别名数据，构建双向映射"""
+    """加载别名数据，构建双向映射。兼容新旧两种格式：
+    旧格式：{canonical: [alias, ...]}
+    新格式：[{surface, canonical, refs, ...}]
+    """
     aliases = json.loads(ALIAS_PATH.read_text())
     person_aliases = aliases.get('person', {})
-    # canonical → [aliases]
     canon_to_aliases = {}
-    # any_name → canonical
     name_to_canon = {}
-    for canon, alias_list in person_aliases.items():
-        canon_to_aliases[canon] = alias_list
-        name_to_canon[canon] = canon
-        for alias in alias_list:
-            name_to_canon[alias] = canon
+    if isinstance(person_aliases, list):
+        # 新格式
+        for item in person_aliases:
+            canon = item.get('canonical', '')
+            surface = item.get('surface', '')
+            if canon:
+                name_to_canon[canon] = canon
+                canon_to_aliases.setdefault(canon, [])
+            if surface and canon and surface != canon:
+                name_to_canon[surface] = canon
+                canon_to_aliases[canon].append(surface)
+    else:
+        # 旧格式
+        for canon, alias_list in person_aliases.items():
+            canon_to_aliases[canon] = alias_list
+            name_to_canon[canon] = canon
+            for alias in alias_list:
+                name_to_canon[alias] = canon
     return canon_to_aliases, name_to_canon
 
 
