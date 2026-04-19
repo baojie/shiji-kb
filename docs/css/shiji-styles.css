@@ -247,6 +247,31 @@ a.entity-link:hover {
     cursor: default;
 }
 
+/* 修辞标注 〘※成语〙 — 朱批圈点：每字下方红点 */
+.idiom {
+    background-image: radial-gradient(circle, #C0272D 2px, transparent 2.5px);
+    background-size: 1em 0.5em;
+    background-repeat: repeat-x;
+    background-position: 0.5em 100%;
+    padding-bottom: 6px;
+    cursor: help;
+}
+
+.idiom:hover {
+    background-image: radial-gradient(circle, #E03030 2.5px, transparent 3px);
+}
+
+body.syntax-highlight-off .idiom {
+    background-image: none;
+    padding-bottom: 0;
+}
+
+@media (prefers-contrast: high) {
+    .idiom {
+        background-image: radial-gradient(circle, #8B0000 2.5px, transparent 3px);
+    }
+}
+
 /* 身份标注 〖#身份〗 */
 .identity {
     color: #4169E1;  /* 皇室蓝 */

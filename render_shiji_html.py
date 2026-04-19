@@ -65,6 +65,9 @@ ENTITY_PATTERNS = [
     (r'⟦○([^⟦⟧]+)⟧', r'<span class="verb-political" title="政治动词">\1</span>'),                                       # 政治动词（预留）
     (r'⟦◇([^⟦⟧|]+)\|([^⟦⟧]+)⟧', r'<span class="verb-economic" title="经济动词：\2" data-canonical="\2">\1</span>'),  # 经济动词（消歧，预留）
     (r'⟦◇([^⟦⟧]+)⟧', r'<span class="verb-economic" title="经济动词">\1</span>'),                                        # 经济动词（预留）
+    # 修辞层：〘※成语〙
+    (r'〘※([^〘〙|]+)\|([^〘〙]+)〙', r'<span class="idiom" title="成语 → \2">\1</span>'),  # 成语（消歧）
+    (r'〘※([^〘〙]+)〙', r'<span class="idiom" title="成语">\1</span>'),                    # 成语
     # 10类新格式：〖TYPE content〗
     (r'〖•([^〖〗<>"|]+)\|([^〖〗<>"]+)〗', r'<span class="artifact"     title="器物：\2"       data-canonical="\2">\1</span>'),  # 器物（消歧）
     (r'〖•([^〖〗<>"]+)〗', r'<span class="artifact" title="器物">\1</span>'),     # 器物
