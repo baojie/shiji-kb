@@ -117,7 +117,7 @@ ENTITY_PATTERNS = [
 QUOTE_PATTERNS = [
     (r'[\u201c]([^\u201d<>]+)[\u201d]', r'<span class="quoted">"\1"</span>'),      # 中文双引号 " "
     (r'(?<!class=)[\u0022]([^\u0022<>]+)[\u0022]', r'<span class="quoted">"\1"</span>'),      # ASCII双引号 " " (排除HTML属性)
-    (r'[\u2018]([^\u2019<>]+)[\u2019]', r'<span class="quoted">\'\1\'</span>'),    # 中文单引号 ' '
+    (r'[\u2018]([^\u2019<>]+)[\u2019]', "<span class=\"quoted\">'\\1'</span>"),    # 中文单引号 ' '
     # ASCII单引号：不处理，因为容易与嵌套引号冲突
     # (r'[\u0027]([^\u0027<>]+)[\u0027]', r'<span class="quoted">\'\1\'</span>'),    # ASCII单引号 ' '
     (r'「([^」<>]+)」', r'<span class="quoted">「\1」</span>'),    # 日式单引号

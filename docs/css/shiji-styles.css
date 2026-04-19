@@ -247,29 +247,23 @@ a.entity-link:hover {
     cursor: default;
 }
 
-/* 修辞标注 〘※成语〙 — 朱批圈点：每字下方红点 */
+/* 修辞标注 〘※成语〙 — 朱批圈点：红色点状下划线 */
 .idiom {
-    background-image: radial-gradient(circle, #C0272D 2px, transparent 2.5px);
-    background-size: 1em 0.5em;
-    background-repeat: repeat-x;
-    background-position: 0.5em 100%;
-    padding-bottom: 6px;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #C0272D;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
     cursor: help;
 }
 
 .idiom:hover {
-    background-image: radial-gradient(circle, #E03030 2.5px, transparent 3px);
+    text-decoration-color: #E03030;
+    text-decoration-thickness: 2.5px;
 }
 
 body.syntax-highlight-off .idiom {
-    background-image: none;
-    padding-bottom: 0;
-}
-
-@media (prefers-contrast: high) {
-    .idiom {
-        background-image: radial-gradient(circle, #8B0000 2.5px, transparent 3px);
-    }
+    text-decoration: none;
 }
 
 /* 身份标注 〖#身份〗 */
