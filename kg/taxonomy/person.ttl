@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# 史记人物本体 — 1825人
+# 史记人物本体 — 1828人
 
 per:人物 a owl:Class ; rdfs:label "人物"@zh .
 
@@ -243,6 +243,15 @@ per:帝辛 a per:商 ; rdfs:label "帝辛"@zh ; :count 4 .
 per:周元王 a per:周 ; rdfs:label "周元王"@zh ; :count 4 .
 per:周显王 a per:周 ; rdfs:label "周显王"@zh ; :count 4 .
 per:帝不降 a per:夏 ; rdfs:label "帝不降"@zh ; :count 3 .
+per:少康 a per:夏 ; rdfs:label "少康"@zh ; :count 8 .
+per:后帝相 a per:夏 ; rdfs:label "后帝相"@zh ; :count 5 .
+per:帝槐 a per:夏 ; rdfs:label "帝槐"@zh ; :count 3 .
+per:帝芒 a per:夏 ; rdfs:label "帝芒"@zh ; :count 3 .
+per:帝泄 a per:夏 ; rdfs:label "帝泄"@zh ; :count 3 .
+per:帝扃 a per:夏 ; rdfs:label "帝扃"@zh ; :count 3 .
+per:帝廑 a per:夏 ; rdfs:label "帝廑"@zh ; :count 3 .
+per:帝皋 a per:夏 ; rdfs:label "帝皋"@zh ; :count 3 .
+per:帝发 a per:夏 ; rdfs:label "帝发"@zh ; :count 3 .
 per:帝中壬 a per:商 ; rdfs:label "帝中壬"@zh ; :count 3 .
 per:帝沃丁 a per:商 ; rdfs:label "帝沃丁"@zh ; :count 3 .
 per:帝太庚 a per:商 ; rdfs:label "帝太庚"@zh ; :count 3 .
@@ -1113,8 +1122,7 @@ per:灌仲孺 a per:文景武朝臣 ; rdfs:label "灌仲孺"@zh ; :count 5 .
 per:聂翁壹 a per:文景武朝臣 ; rdfs:label "聂翁壹"@zh ; :count 5 .
 per:李离 a per:春秋 ; rdfs:label "李离"@zh ; :count 5 .
 per:翟公 a per:文景武朝臣 ; rdfs:label "翟公"@zh ; :count 5 .
-per:夏后帝启 a per:夏代 ; rdfs:label "夏后帝启"@zh ; :count 4 .
-per:后帝相 a per:夏代 ; rdfs:label "后帝相"@zh ; :count 4 .
+per:夏后帝启 a per:夏 ; rdfs:label "夏后帝启"@zh ; :count 4 .
 per:傅说 a per:商代名臣 ; rdfs:label "傅说"@zh ; :count 4 .
 per:祖己 a per:商代 ; rdfs:label "祖己"@zh ; :count 4 .
 per:崇侯虎 a per:西周 ; rdfs:label "崇侯虎"@zh ; :count 4 .
@@ -1264,7 +1272,7 @@ per:魏尚 a per:文景朝臣 ; rdfs:label "魏尚"@zh ; :count 4 .
 per:张叔 a per:文景武朝臣 ; rdfs:label "张叔"@zh ; :count 4 .
 per:炎帝 a per:汉中后 ; rdfs:label "炎帝"@zh ; :count 3 .
 per:玄嚣 a per:五帝时代 ; rdfs:label "玄嚣"@zh ; :count 3 .
-per:夏桀 a per:夏代 ; rdfs:label "夏桀"@zh ; :count 3 .
+per:夏桀 a per:夏 ; rdfs:label "夏桀"@zh ; :count 14 .
 per:祖甲 a per:商代 ; rdfs:label "祖甲"@zh ; :count 3 .
 per:商容 a per:商代 ; rdfs:label "商容"@zh ; :count 3 .
 per:差弗 a per:西周 ; rdfs:label "差弗"@zh ; :count 3 .
