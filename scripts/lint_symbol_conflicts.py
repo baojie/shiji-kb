@@ -36,10 +36,11 @@ class SymbolConflictLinter:
     def check_halfwidth_punctuation(self, text: str, line_num: int = 0) -> List[Dict]:
         """检测半角标点符号"""
         issues = []
-        # 先移除所有标注符号（〖TYPE content〗 和 ⟦TYPE content⟧）
-        # 这样标注内部的类型标记符号（如 〖@name〗 中的 @）不会被误判为半角标点
+        # 先移除所有标注符号（〖TYPE content〗、⟦TYPE content⟧、〘※成语〙）
+        # 这样标注内部的类型标记符号不会被误判为半角标点
         text_without_annotations = re.sub(r'〖[#@=;$%&\'^~•!\'+?{:\[_][^〗]*〗', '', text)
         text_without_annotations = re.sub(r'⟦[◈◉○◇][^⟧]*⟧', '', text_without_annotations)
+        text_without_annotations = re.sub(r'〘※[^〘〙]*〙', '', text_without_annotations)
         # 移除紫色编号（段落编号）：[N] 或 [N.N] 或 [N.N.N] 等任意层级
         # 正则说明：\[ 后跟一个数字，然后是 0 个或多个 ".数字" 的组合，最后是 \]
         text_without_annotations = re.sub(r'\[\d+(?:\.\d+)*\]', '', text_without_annotations)

@@ -50,8 +50,9 @@ def strip_markup(text: str) -> str:
     # 名词实体 〖@X〗 / 〖@X|Y〗 → X
     text = re.sub(rf'〖{_ENTITY_PFX}([^〖〗|]*)(?:\|[^〖〗]*)?〗', r'\1', text)
     text = re.sub(r'〖[^〗]*〗', '', text)
-    # 旧格式残留
-    text = re.sub(r'〘([^〘〙]*)〙', r'\1', text)
+    # 修辞标注 〘※成语〙 / 〘※shiji|modern〙 → shiji原文形式
+    text = re.sub(r'〘※([^〘〙|]+)(?:\|[^〘〙]*)?〙', r'\1', text)
+    text = re.sub(r'〘[^〘〙]*〙', '', text)
     # **bold**
     text = re.sub(r'\*\*([^*]*)\*\*', r'\1', text)
     # --- 分隔线

@@ -151,16 +151,35 @@ last_updated: 2026-04-20
 
 ---
 
-## 五、检查清单
+## 五、工具与脚本
+
+| 脚本 | 功能 |
+|------|------|
+| `scripts/annotate_chengyu.py` | 批量为章节添加成语标注（基于词表） |
+| `scripts/extract_chengyu_tagged.py` | 从已标注文件提取成语数据 → `data/chengyu.json` |
+| `scripts/render_chengyu_html.py` | 渲染 `docs/special/chengyu.html` 成语索引页 |
+
+**批量标注流程**：
+```bash
+python scripts/annotate_chengyu.py       # 标注001-129章
+python scripts/extract_chengyu_tagged.py # 重新提取数据
+python scripts/render_chengyu_html.py    # 生成HTML索引
+python generate_all_chapters.py          # 重新生成章节HTML
+```
+
+---
+
+## 六、检查清单
 
 - [ ] 标注前确认未被 `〖〗` 或 `⟦⟧` 占用
 - [ ] 成语边界完整（四字成语不拆分）
 - [ ] 使用 `※` 符号（U+203B），非 `*` 或 `＊`
 - [ ] 括号为 `〘〙`（U+3018/3019），非 `【】` 或 `⟦⟧`
+- [ ] 运行 `python scripts/lint_text_integrity.py <章节号>` 验证文本未被改动
 
 ---
 
-## 六、关联文档
+## 七、关联文档
 
 - [SKILL_01g 标注符号集合原则](SKILL_01g_标注符号集合原则.md) — 三层括号框架定义
 - [SKILL_03a 实体标注](SKILL_03a_实体标注.md) — 实体层优先级规则

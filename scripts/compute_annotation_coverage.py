@@ -47,6 +47,8 @@ NOUN_PFX = "".join(re.escape(c) for c in NOUN_TYPES)
 NOUN_RE = re.compile(rf"〖([{NOUN_PFX}])\s*([^〖〗|]*)(?:\|[^〖〗]*)?〗")
 VERB_PFX = "".join(re.escape(c) for c in VERB_TYPES)
 VERB_RE = re.compile(rf"⟦([{VERB_PFX}])([^⟦⟧|]*)(?:\|[^⟦⟧]*)?⟧")
+# 修辞层 〘※成语〙 / 〘※shiji|modern〙
+RHETORIC_RE = re.compile(r"〘※([^〘〙|]+)(?:\|[^〘〙]*)?〙")
 
 
 def count_cjk(text: str) -> int:
@@ -71,6 +73,12 @@ def analyze_chapter(path: Path) -> dict:
         n = count_cjk(content)
         type_chars[VERB_TYPES[marker]] += n
         type_tokens[VERB_TYPES[marker]] += 1
+        annotated_cjk += n
+    for m in RHETORIC_RE.finditer(raw):
+        content = m.group(1)
+        n = count_cjk(content)
+        type_chars["成语"] += n
+        type_tokens["成语"] += 1
         annotated_cjk += n
 
     # 再去 Markdown 结构和所有标注，得到纯原文

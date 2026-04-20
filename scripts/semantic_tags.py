@@ -114,8 +114,9 @@ def strip_markup(text: str) -> str:
     text = re.sub(rf'〖{_ENTITY_PFX}([^〖〗|]*)(?:\|[^〖〗]*)?〗', r'\1', text)
     text = re.sub(r'〖[^〗]*〗', '', text)   # 剩余残留
 
-    # 7. 旧格式残留括号（已迁移至〖TYPE〗，仅保留〘〙兼容）
-    text = re.sub(r'〘([^〘〙]*)〙', r'\1', text)
+    # 7. 修辞标注括号 〘※成语〙 / 〘※shiji|modern〙 → shiji原文形式
+    text = re.sub(r'〘※([^〘〙|]+)(?:\|[^〘〙]*)?〙', r'\1', text)
+    text = re.sub(r'〘[^〘〙]*〙', '', text)  # 其他残留形式
 
     # 8. 粗体 **content** -> content
     text = re.sub(r'\*\*([^*]*)\*\*', r'\1', text)
@@ -167,8 +168,9 @@ def remove_semantic_tags(text: str, normalize_legacy: bool = False, strip_markdo
     # 清理剩余残留标注
     text = re.sub(r'〖[^〗]*〗', '', text)
 
-    # 旧格式残留括号（已迁移至〖TYPE〗，仅保留〘〙兼容）
-    text = re.sub(r'〘([^〘〙]*)〙', r'\1', text)
+    # 修辞标注括号 〘※成语〙 → shiji原文形式
+    text = re.sub(r'〘※([^〘〙|]+)(?:\|[^〘〙]*)?〙', r'\1', text)
+    text = re.sub(r'〘[^〘〙]*〙', '', text)
 
     # 清理残留的未闭合标签符号
     text = text.replace('〖◆', '').replace('〗', '')
