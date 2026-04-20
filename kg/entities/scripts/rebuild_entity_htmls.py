@@ -14,39 +14,6 @@ from pathlib import Path
 import build_entity_index as bei
 
 
-def _build_person_rows(alias_file, index):
-    """从 entity_aliases.json 和 entity_index 构建 person 四列数据。
-
-    返回 [(surface, canonical, [cats], [(ch, para), ...])]
-    """
-    person_cats = bei._load_person_categories()
-    person_conf = bei._load_person_confidence()
-
-    rows = []
-    covered_canonicals = set()
-
-    # 来自 entity_aliases.json 的消歧条目
-    if alias_file.exists():
-        with open(alias_file, encoding='utf-8') as f:
-            aliases_data = json.load(f)
-        for entry in aliases_data.get('person', []):
-            surface = entry['surface']
-            canonical = entry['canonical']
-            refs = [tuple(r) for r in entry.get('refs', [])]
-            cats = person_cats.get(canonical, [])
-            covered_canonicals.add(canonical)
-            rows.append((surface, canonical, cats, refs))
-
-    # entity_index 中未被 alias 覆盖的规范人名（surface == canonical）
-    for canonical, entry in index.items():
-        if canonical not in covered_canonicals:
-            refs = [tuple(r) for r in entry.get('refs', [])]
-            cats = person_cats.get(canonical, [])
-            rows.append((canonical, canonical, cats, refs))
-
-    return rows, person_cats, person_conf
-
-
 def main():
     with open(bei.INDEX_JSON, encoding='utf-8') as f:
         index = json.load(f)
@@ -60,9 +27,10 @@ def main():
             continue
 
         if type_key == 'person':
-            rows, person_cats, person_conf = _build_person_rows(bei.ALIAS_FILE, entries)
+            rows, person_cats, person_conf = bei.build_person_rows(bei.ALIAS_FILE, entries)
             page_html = bei.generate_person_page(rows, person_cats, person_conf, len(entries))
             out = bei.OUTPUT_DIR / filename
+            bei._assert_person_html_four_columns(page_html, out)
             out.write_text(page_html, encoding='utf-8')
             print(f'已重建: {out} ({len(rows)} 条，{len(entries)} 个规范人名)')
             continue

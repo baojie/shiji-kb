@@ -1096,8 +1096,57 @@ def infer_undated_events(event_entries):
     return inferred_count
 
 
+def build_person_rows(alias_file, entries):
+    """从 entity_aliases.json 和已构建的 person entries 构建 4 列数据。
+
+    返回 (rows, person_cats, person_conf)
+      rows: [(surface, canonical, [cats], [(ch, para), ...])]
+
+    规则：
+      1) 来自 entity_aliases.json 的每条 {surface, canonical} 一行
+      2) entries 中未被 alias 覆盖的规范人名 → surface == canonical 一行
+    """
+    person_cats = _load_person_categories()
+    person_conf = _load_person_confidence()
+
+    rows = []
+    covered_canonicals = set()
+
+    if alias_file.exists():
+        with open(alias_file, encoding='utf-8') as f:
+            aliases_data = json.load(f)
+        for entry in aliases_data.get('person', []):
+            surface = entry.get('surface', '')
+            canonical = entry.get('canonical', '')
+            if not surface or not canonical:
+                continue
+            refs = [tuple(r) for r in entry.get('refs', [])]
+            cats = person_cats.get(canonical, [])
+            covered_canonicals.add(canonical)
+            rows.append((surface, canonical, cats, refs))
+
+    for canonical, entry in entries.items():
+        if canonical in covered_canonicals:
+            continue
+        refs = [tuple(r) for r in entry.get('refs', [])]
+        cats = person_cats.get(canonical, [])
+        rows.append((canonical, canonical, cats, refs))
+
+    return rows, person_cats, person_conf
+
+
+def _assert_person_html_four_columns(html_text, output_path):
+    """断言 person.html 已写入 4 列结构。缺 entry-canonical 列直接抛错，
+    避免把 3 列退化版本静默写入磁盘。"""
+    if 'entry-canonical' not in html_text:
+        raise RuntimeError(
+            f"person.html 生成失败：缺少 entry-canonical 列，疑似被 generate_type_page "
+            f"（3 列模板）覆盖。应调用 generate_person_page。输出路径：{output_path}"
+        )
+
+
 def generate_person_page(alias_rows, person_cats, person_conf, total_canonicals):
-    """生成人名索引，4列结构：surface（显示名）| 标签 | canonical（规范名）| 出处。
+    """生成人名索引，4列结构：surface（显示名）| 规范名 | 标签 | 出处。
     alias_rows: [(surface, canonical, [cats], [(ch, para), ...])]
     """
     sorted_rows = sorted(alias_rows, key=lambda r: _get_pinyin_key(r[0]))
@@ -1664,6 +1713,17 @@ def main():
     for type_key, _, css_class, label, filename in ENTITY_TYPES:
         entries = index[type_key]
         if not entries:
+            continue
+
+        # person：使用 4 列模板（surface | canonical | 标签 | 出处）
+        if type_key == 'person':
+            rows, person_cats, person_conf = build_person_rows(ALIAS_FILE, entries)
+            page_html = generate_person_page(rows, person_cats, person_conf, len(entries))
+            output_path = OUTPUT_DIR / filename
+            _assert_person_html_four_columns(page_html, output_path)
+            with open(output_path, 'w', encoding='utf-8') as f:
+                f.write(page_html)
+            print(f"  生成: {output_path} ({len(rows)} 条，{len(entries)} 个规范人名)")
             continue
 
         # time类：过滤纯汉字数字条目（保留在JSON中，仅不在HTML中展示）

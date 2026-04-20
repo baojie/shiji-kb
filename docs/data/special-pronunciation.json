@@ -1,7 +1,7 @@
 {
-  "version": "3.12",
-  "description": "Special pronunciation dictionary for Shiji (Records of the Grand Historian). Only contains entries that pinyin-pro cannot handle correctly. v3.12: Removed 称王 (pinyin-pro correctly outputs chēng wáng), kept 王天下 and 欲王 (动词wàng).",
-  "lastUpdate": "2026-04-04",
+  "version": "3.13",
+  "description": "Special pronunciation dictionary for Shiji (Records of the Grand Historian). Only contains entries that pinyin-pro cannot handle correctly. v3.13: Added 汤汤（shāngshāng，水势浩大貌）.",
+  "lastUpdate": "2026-04-20",
   "entries": [
     {
       "text": "车骑",
@@ -1183,6 +1183,15 @@
       ],
       "context": "名词",
       "note": "众将领，'将'读jiàng（去声），名词"
+    },
+    {
+      "text": "汤汤",
+      "pinyin": [
+        "shāng",
+        "shāng"
+      ],
+      "context": "形容词叠字",
+      "note": "水势浩大、水流湍急貌，读shāngshāng，见'汤汤洪水滔天'（五帝本纪）"
     }
   ]
 }
