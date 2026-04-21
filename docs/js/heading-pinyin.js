@@ -415,9 +415,101 @@
     }
   }
 
+  // ========================================================================
+  // Hash 锚点修正：等所有异步渲染（拼音注、三家注、繁简、白话等）停下来后，
+  // 重新 scrollIntoView 到初始 hash。相当于"自动刷新一下"的效果。
+  // 用 MutationObserver 监测 body 子树变化，debounce 600ms 视为稳定。
+  // ========================================================================
+  const initialHash = window.location.hash;
+  let userScrolled = false;
+  function markUserScrolled() { userScrolled = true; }
+  window.addEventListener("wheel", markUserScrolled, { passive: true, once: true });
+  window.addEventListener("touchmove", markUserScrolled, { passive: true, once: true });
+  window.addEventListener("keydown", function (e) {
+    const keys = ["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " ", "Spacebar"];
+    if (keys.indexOf(e.key) !== -1) userScrolled = true;
+  }, { once: true });
+
+  function scrollToInitialHash() {
+    if (userScrolled) return;
+    if (!initialHash || initialHash.length <= 1) return;
+    // 用户若已通过点击链接跳到别处，不要把他拽回初始锚点
+    if (window.location.hash !== initialHash) return;
+    try {
+      const id = decodeURIComponent(initialHash.slice(1));
+      const target = document.getElementById(id);
+      if (target) {
+        const before = Math.round(window.scrollY);
+        // 用 instant 强制瞬间定位，避免与 CSS scroll-behavior: smooth 配合时
+        // 出现一段多余的滚动动画
+        target.scrollIntoView({ behavior: "instant", block: "start" });
+        const after = Math.round(window.scrollY);
+        console.log(`[hash-scroll-fix] ${id}: scrollY ${before} → ${after}`);
+      } else {
+        console.warn(`[hash-scroll-fix] 找不到目标元素: ${id}`);
+      }
+    } catch (e) {
+      console.warn("[hash-scroll-fix] 重定位失败:", e);
+    }
+  }
+
+  function installHashScrollFix() {
+    if (!initialHash || initialHash.length <= 1) return;
+    if (!document.body || typeof MutationObserver === "undefined") {
+      // 降级：简单延时后对齐一次
+      setTimeout(scrollToInitialHash, 1500);
+      return;
+    }
+
+    // 多次对齐策略：观察窗口内，每次 DOM 静默 DEBOUNCE_MS 就再对齐一次。
+    // 这样即使白话翻译/三家注等异步 fetch 在拼音处理之后才注入内容，
+    // 也能被捕获并重新对齐。
+    const DEBOUNCE_MS = 500;    // DOM 静默多久视为"稳定一次"
+    const MAX_WAIT_MS = 10000;  // 观察总时长上限
+    let debounceTimer = null;
+    let stopped = false;
+
+    function stop() {
+      if (stopped) return;
+      stopped = true;
+      observer.disconnect();
+      clearTimeout(debounceTimer);
+    }
+
+    function tick() {
+      if (stopped) return;
+      if (userScrolled) { stop(); return; }
+      scrollToInitialHash();
+    }
+
+    const observer = new MutationObserver(function () {
+      if (stopped) return;
+      if (userScrolled) { stop(); return; }
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(tick, DEBOUNCE_MS);
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+
+    // 启动时也排一次：万一页面本身就没什么变化，也能对齐
+    debounceTimer = setTimeout(tick, DEBOUNCE_MS);
+    // 到上限后停止监听（最后再对齐一次）
+    setTimeout(function () {
+      if (!stopped) { tick(); stop(); }
+    }, MAX_WAIT_MS);
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("DOMContentLoaded", function () {
+      init();
+      installHashScrollFix();
+    });
   } else {
     init();
+    installHashScrollFix();
   }
 })();

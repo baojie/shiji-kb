@@ -436,6 +436,8 @@ ul li, ol li {
     font-variant-numeric: tabular-nums;
     cursor: pointer;  /* 显示为可点击 */
     transition: color 0.2s ease;
+    /* 跳转到 #pn-X 时，在视口顶端留出呼吸空间，避免 PN 紧贴顶边难以辨认 */
+    scroll-margin-top: 80px;
 }
 
 /* 段落编号悬停效果 */
