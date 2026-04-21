@@ -76,9 +76,23 @@ if [ -f "docs/index.html" ]; then
     echo "   已更新 index.html 中的章节链接"
 fi
 
+# 构建搜索索引（全文检索 + 别名模糊搜索）
+# 详见 doc/spec/SPEC_搜索系统.md
+echo "7. 构建搜索索引..."
+if [ -f "scripts/build_search_index.py" ]; then
+    python3 scripts/build_search_index.py | sed 's/^/   /'
+else
+    echo "   ⚠️  scripts/build_search_index.py 未找到，跳过全文索引"
+fi
+if [ -f "scripts/build_alias_index.py" ]; then
+    python3 scripts/build_alias_index.py | sed 's/^/   /'
+else
+    echo "   ⚠️  scripts/build_alias_index.py 未找到，跳过别名索引"
+fi
+
 # 确保 .nojekyll 文件存在
 if [ ! -f "docs/.nojekyll" ]; then
-    echo "7. 创建 .nojekyll 文件..."
+    echo "8. 创建 .nojekyll 文件..."
     touch docs/.nojekyll
 fi
 

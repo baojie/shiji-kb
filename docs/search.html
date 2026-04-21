@@ -48,12 +48,54 @@
             box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.12);
         }
 
+        .search-options {
+            max-width: 680px;
+            margin: -10px auto 14px;
+            font-size: 13px;
+            color: #8B4513;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .search-options input[type=checkbox] {
+            accent-color: #8B4513;
+            cursor: pointer;
+        }
+        .search-options label {
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .search-options .hint {
+            color: #a89166;
+            font-size: 12px;
+        }
+
         .summary {
             color: #666;
             font-size: 14px;
             margin: 12px 4px;
         }
         .summary strong { color: #8B4513; }
+
+        .expanded-info {
+            font-size: 13px;
+            color: #666;
+            background: #fff8dc;
+            border-left: 3px solid #d4af37;
+            padding: 6px 12px;
+            margin: 4px 4px 12px;
+            border-radius: 3px;
+            line-height: 1.7;
+        }
+        .expanded-info strong { color: #8B4513; }
+        .expanded-info code {
+            background: #fff3b0;
+            color: #5a3010;
+            padding: 0 4px;
+            border-radius: 2px;
+            font-family: inherit;
+        }
 
         .hit {
             display: block;
@@ -150,6 +192,12 @@
         <input type="search" id="search-input" placeholder="全文检索 (关键字以空格分隔)" autocomplete="off">
     </form>
 
+    <div class="search-options">
+        <input type="checkbox" id="fuzzy-toggle">
+        <label for="fuzzy-toggle">包含别名</label>
+        <span class="hint">· 搜"黄帝"也匹配"轩辕"，搜"楚"也匹配"荆"</span>
+    </div>
+
     <div id="results"><div class="loading">正在加载索引…</div></div>
 
     <script src="js/search.js" defer></script>
@@ -158,6 +206,7 @@
         const PER_PAGE = 50;
         const input = document.getElementById('search-input');
         const form = document.getElementById('search-form');
+        const fuzzyToggle = document.getElementById('fuzzy-toggle');
         const resultsEl = document.getElementById('results');
 
         function getQueryParam(name) {
@@ -170,13 +219,42 @@
             return n > 0 ? n : 1;
         }
 
-        function setUrl(query, page) {
-            const qs = 'q=' + encodeURIComponent(query) + (page > 1 ? '&page=' + page : '');
-            const url = window.location.pathname + '?' + qs;
+        function isFuzzy() {
+            return fuzzyToggle.checked;
+        }
+
+        function setUrl(query, page, fuzzy) {
+            const parts = ['q=' + encodeURIComponent(query)];
+            if (page > 1) parts.push('page=' + page);
+            if (fuzzy) parts.push('fuzzy=1');
+            const url = window.location.pathname + '?' + parts.join('&');
             window.history.replaceState(null, '', url);
         }
 
-        function render(query, page) {
+        function renderExpanded(r) {
+            // 仅在模糊模式下、且至少有一个 token 被真正展开时显示
+            if (!r || !r.expanded) return '';
+            const items = [];
+            const keys = Object.keys(r.expanded);
+            for (let i = 0; i < keys.length; i++) {
+                const k = keys[i];
+                const variants = r.expanded[k];
+                if (variants.length <= 1) continue;
+                const others = variants.filter(function (v) { return v !== k; });
+                if (!others.length) continue;
+                items.push(
+                    '<code>' + window.ShijiSearch.escapeHtml(k) + '</code> = {' +
+                    variants.map(function (v) {
+                        return window.ShijiSearch.escapeHtml(v);
+                    }).join(', ') + '}'
+                );
+            }
+            if (!items.length) return '';
+            return '<div class="expanded-info"><strong>已展开别名：</strong>' +
+                items.join(' · ') + '</div>';
+        }
+
+        function render(query, page, fuzzy) {
             const S = window.ShijiSearch;
             if (!S || !S.getData()) {
                 resultsEl.innerHTML = '<div class="loading">正在加载索引…</div>';
@@ -188,9 +266,11 @@
                 return;
             }
 
-            const r = S.searchAll(q);
+            const r = S.searchAll(q, { fuzzy: !!fuzzy });
             if (!r.hits.length) {
-                resultsEl.innerHTML = '<div class="empty">未找到「' + S.escapeHtml(q) + '」</div>';
+                resultsEl.innerHTML =
+                    renderExpanded(r) +
+                    '<div class="empty">未找到「' + S.escapeHtml(q) + '」</div>';
                 return;
             }
 
@@ -202,6 +282,8 @@
 
             const data = S.getData();
             const parts = [];
+            const expandedHtml = renderExpanded(r);
+            if (expandedHtml) parts.push(expandedHtml);
             parts.push(
                 '<div class="summary">找到 <strong>' + total + '</strong> 个段落 · ' +
                 '第 ' + page + ' / ' + totalPages + ' 页 · ' +
@@ -227,7 +309,10 @@
             if (totalPages > 1) {
                 const pag = ['<div class="pagination">'];
                 const pageLink = function (p, label, extra) {
-                    const qs = '?q=' + encodeURIComponent(q) + (p > 1 ? '&page=' + p : '');
+                    const qsParts = ['q=' + encodeURIComponent(q)];
+                    if (p > 1) qsParts.push('page=' + p);
+                    if (fuzzy) qsParts.push('fuzzy=1');
+                    const qs = '?' + qsParts.join('&');
                     return '<a href="' + qs + '"' + (extra || '') + '>' + label + '</a>';
                 };
                 if (page > 1) {
@@ -263,7 +348,7 @@
         function run() {
             const q = input.value;
             const page = getPage();
-            render(q, page);
+            render(q, page, isFuzzy());
         }
 
         // 提交表单时回到第一页
@@ -271,19 +356,44 @@
             e.preventDefault();
             const q = input.value.trim();
             if (!q) return;
-            setUrl(q, 1);
-            render(q, 1);
+            const fuzzy = isFuzzy();
+            setUrl(q, 1, fuzzy);
+            ensureAliasLoaded(fuzzy).then(function () { render(q, 1, fuzzy); });
         });
+
+        // 切换 fuzzy 复选框：懒加载别名索引、立即重跑
+        fuzzyToggle.addEventListener('change', function () {
+            const q = input.value.trim();
+            const fuzzy = isFuzzy();
+            setUrl(q, 1, fuzzy);
+            if (!q) return;
+            ensureAliasLoaded(fuzzy).then(function () { render(q, 1, fuzzy); });
+        });
+
+        function ensureAliasLoaded(fuzzy) {
+            const S = window.ShijiSearch;
+            if (!fuzzy || (S.getAliasData && S.getAliasData())) {
+                return Promise.resolve();
+            }
+            return S.loadAliasIndex().catch(function (err) {
+                console.warn('别名索引加载失败:', err);
+            });
+        }
 
         // 首次加载：读取 URL 参数并执行搜索
         const initialQuery = getQueryParam('q');
+        const initialFuzzy = getQueryParam('fuzzy') === '1';
         input.value = initialQuery;
+        fuzzyToggle.checked = initialFuzzy;
         input.focus();
 
         function whenReady() {
             const S = window.ShijiSearch;
             if (!S) { setTimeout(whenReady, 30); return; }
-            S.loadIndex()
+            Promise.all([
+                S.loadIndex(),
+                initialFuzzy ? ensureAliasLoaded(true) : Promise.resolve(),
+            ])
                 .then(function () { run(); })
                 .catch(function (err) {
                     resultsEl.innerHTML = '<div class="empty">索引加载失败：' +
@@ -295,8 +405,10 @@
         // 支持浏览器前进/后退
         window.addEventListener('popstate', function () {
             const q = getQueryParam('q');
+            const fuzzy = getQueryParam('fuzzy') === '1';
             input.value = q;
-            render(q, getPage());
+            fuzzyToggle.checked = fuzzy;
+            ensureAliasLoaded(fuzzy).then(function () { render(q, getPage(), fuzzy); });
         });
     })();
     </script>

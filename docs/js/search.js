@@ -25,15 +25,18 @@
   let indexPromise = null;
   let data = null;
 
-  function indexUrl() {
+  let aliasPromise = null;
+  let aliasData = null;
+
+  function baseUrl(name) {
     // 支持从子目录页面加载（例如 search.html 在 docs/ 根目录）
     const base = (typeof window !== 'undefined' && window.ShijiSearchBase) || '';
-    return (base ? base.replace(/\/$/, '') + '/' : '') + 'data/search-index.json';
+    return (base ? base.replace(/\/$/, '') + '/' : '') + 'data/' + name;
   }
 
   function loadIndex() {
     if (!indexPromise) {
-      indexPromise = fetch(indexUrl())
+      indexPromise = fetch(baseUrl('search-index.json'))
         .then(function (r) {
           if (!r.ok) throw new Error('HTTP ' + r.status);
           return r.json();
@@ -50,23 +53,84 @@
     return indexPromise;
   }
 
+  function loadAliasIndex() {
+    if (!aliasPromise) {
+      aliasPromise = fetch(baseUrl('alias-index.json'))
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function (j) {
+          aliasData = j;
+          return aliasData;
+        });
+    }
+    return aliasPromise;
+  }
+
   // ── 搜索（返回全部命中，不截断）──────────────────────
-  function searchAll(query) {
+  // opts.fuzzy=true 时，每个 token 用别名索引展开为变体组，
+  // 语义变为 "OR 于组内 / AND 于组间"。需已 loadAliasIndex()。
+  function expandTokens(tokens, fuzzy) {
+    const expanded = {};
+    const groups = [];
+    const variants = (fuzzy && aliasData && aliasData.variants) || null;
+    for (let i = 0; i < tokens.length; i++) {
+      const t = tokens[i];
+      let group;
+      if (variants && Object.prototype.hasOwnProperty.call(variants, t)) {
+        group = variants[t].slice();
+      } else {
+        group = [t];
+      }
+      expanded[t] = group;
+      groups.push(group);
+    }
+    return { groups: groups, expanded: expanded };
+  }
+
+  function searchAll(query, opts) {
+    opts = opts || {};
     const tokens = tokenize(query);
-    if (!tokens.length || !data) return { hits: [], tokens: [] };
-    const lowered = tokens.map(function (t) { return t.toLowerCase(); });
+    const empty = { hits: [], tokens: [], groups: [], expanded: {}, allVariants: [] };
+    if (!tokens.length || !data) return empty;
+
+    const exp = expandTokens(tokens, !!opts.fuzzy);
+    const loweredGroups = exp.groups.map(function (g) {
+      return g.map(function (s) { return s.toLowerCase(); });
+    });
+    const allVariants = [];
+    const seen = {};
+    for (let i = 0; i < exp.groups.length; i++) {
+      for (let j = 0; j < exp.groups[i].length; j++) {
+        const v = exp.groups[i][j];
+        if (!seen[v]) { seen[v] = 1; allVariants.push(v); }
+      }
+    }
+
     const entries = data.entries;
     const hits = [];
     for (let i = 0; i < entries.length; i++) {
       const e = entries[i];
       const hay = e.x.toLowerCase();
       let ok = true;
-      for (let j = 0; j < lowered.length; j++) {
-        if (hay.indexOf(lowered[j]) === -1) { ok = false; break; }
+      for (let j = 0; j < loweredGroups.length; j++) {
+        const group = loweredGroups[j];
+        let hit = false;
+        for (let k = 0; k < group.length; k++) {
+          if (hay.indexOf(group[k]) !== -1) { hit = true; break; }
+        }
+        if (!hit) { ok = false; break; }
       }
       if (ok) hits.push(e);
     }
-    return { hits: hits, tokens: tokens };
+    return {
+      hits: hits,
+      tokens: allVariants,   // 供 makeSnippet 高亮；模糊模式下含全部变体
+      groups: exp.groups,
+      expanded: exp.expanded,
+      allVariants: allVariants,
+    };
   }
 
   // ── 片段生成 + 高亮 ──────────────────────────────────
@@ -111,12 +175,14 @@
   // ── 导出 API ────────────────────────────────────────
   window.ShijiSearch = {
     loadIndex: loadIndex,
+    loadAliasIndex: loadAliasIndex,
     searchAll: searchAll,
     makeSnippet: makeSnippet,
     chapterUrl: chapterUrl,
     searchPageUrl: searchPageUrl,
     escapeHtml: escapeHtml,
     getData: function () { return data; },
+    getAliasData: function () { return aliasData; },
   };
 
   // ── 首页下拉行为（仅当相关 DOM 存在时激活）──────────
