@@ -202,21 +202,27 @@ def normalize_legacy_tags(text: str) -> str:
     return text
 
 
-def render_tags_to_html(text: str, normalize_legacy: bool = False) -> str:
+def render_tags_to_html(text: str, normalize_legacy: bool = False, prefer_canonical: bool = False) -> str:
     """
     将语义标签转换为HTML span标签（保留标注，用于高亮显示）
 
     参数:
         text: 包含语义标签的文本
         normalize_legacy: 已废弃，保留仅为兼容性（v2.5已统一标准）
+        prefer_canonical: 白话模式。消歧格式 〖T 显示|规范〗 显示"规范"而非"显示"。
+                          title 属性附加"规范：X"以便 hover 查看来源映射。
+                          默认 False（文言模式，保留原显示）。
 
     返回:
         转换后的HTML文本
 
-    示例:
+    示例（文言模式 prefer_canonical=False）:
         "〖@武王〗" -> '<span class="person" title="人名">武王</span>'
         "〖@台|吕台〗" -> '<span class="person" title="人名">台</span>'
         "〖◆汉〗" -> '<span class="feudal-state" title="邦国">汉</span>'
+
+    示例（白话模式 prefer_canonical=True）:
+        "〖@项羽|项籍〗" -> '<span class="person" title="人名·规范：项籍">项籍</span>'
 
     注意:
         CSS类名与 docs/css/shiji-styles-v6.css 保持一致，
@@ -225,12 +231,24 @@ def render_tags_to_html(text: str, normalize_legacy: bool = False) -> str:
     if not text:
         return text
 
-    # 处理消歧格式: 〖TYPE显示名|规范名〗 -> HTML（只显示"显示名"）
+    # 处理消歧格式: 〖TYPE显示名|规范名〗 -> HTML
+    # - 文言模式（默认）：显示 "显示名"（\1）
+    # - 白话模式（prefer_canonical=True）：显示 "显示名（规范名）"（若两者相同则只显示一次）
     for marker, (css_class, title, color) in SEMANTIC_TAG_TYPES.items():
-        # 消歧格式（优先处理）
-        pattern = f'〖{re.escape(marker)}\\s*([^|〗]+)\\|[^〗]+〗'
-        replacement = f'<span class="{css_class}" title="{title}">\\1</span>'
-        text = re.sub(pattern, replacement, text)
+        pattern = f'〖{re.escape(marker)}\\s*([^|〗]+)\\|([^〗]+)〗'
+        if prefer_canonical:
+            def _canonical_repl(m, _cls=css_class, _tt=title):
+                surface = m.group(1).strip()
+                canonical = m.group(2).strip()
+                if surface == canonical:
+                    inner = canonical
+                else:
+                    inner = f'{surface}（{canonical}）'
+                return f'<span class="{_cls}" title="{_tt}·规范：{canonical}">{inner}</span>'
+            text = re.sub(pattern, _canonical_repl, text)
+        else:
+            replacement = f'<span class="{css_class}" title="{title}">\\1</span>'
+            text = re.sub(pattern, replacement, text)
 
     # 处理普通格式: 〖TYPE文本〗 -> HTML
     for marker, (css_class, title, color) in SEMANTIC_TAG_TYPES.items():

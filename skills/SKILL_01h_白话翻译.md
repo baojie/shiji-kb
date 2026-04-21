@@ -60,7 +60,15 @@ description: "史记章节按PN段落进行文言文到白话文的翻译规范"
    - 思想：〖_思想〗
    - 消歧：〖TYPE 显示名|规范名〗
 
-5. **段落标题**：为每个PN段落提炼一个简短标题（4-8字），概括段落主要内容
+5. **消歧语法（白话上下文）**：
+   - **继承原文消歧**：原文 `.tagged.md` 中凡有 `|` 消歧的实体，白话译文必须保留 `|规范名` 部分
+   - **surface 可随白话改写**：白话中实体的显示名可替换为更通用的形式（如文言"籍"→白话"项羽"），但规范名保持不变
+     - 例：文言 `〖@籍|项籍〗` → 白话 `〖@项羽|项籍〗`（surface 改，规范不动）
+     - 例：文言 `〖@阿父|齐桓公〗` → 白话 `〖@齐桓公|齐桓公〗`（surface 规范化）
+   - **原文未消歧时不擅自添加**：若原文是 `〖@桓公〗`（无 `|`），白话保持 `〖@桓公〗`；只有原文已经做了消歧的，才继承
+   - **渲染规则**：白话 HTML 渲染时应优先显示**规范名**（`|` 右侧），文言渲染保持显示**显示名**（`|` 左侧）——详见 `scripts/semantic_tags.py` 的白话渲染模式
+
+6. **段落标题**：为每个PN段落提炼一个简短标题（4-8字），概括段落主要内容
 
 **输出格式**：
 ## [X] 段落标题
@@ -193,6 +201,51 @@ python scripts/generate_translation_json.py --all
 - **实体标注**：白话翻译中的实体保持原文颜色体系，但字重增加（500）以适配黑体
 
 **测试页面**：`docs/test/test-translation-rendering.html` 包含视觉对比测试
+
+---
+
+## 消歧语法（白话上下文）
+
+### 核心规则
+
+1. **继承不漏**：源文件 `chapter_md/NNN.tagged.md` 中凡有 `|` 消歧的实体，白话必须保留 `|规范名`
+2. **surface 可变**：白话显示名可改（如"籍"→"项羽"），规范名保持不变
+3. **不擅自添加**：源无 `|` 时白话也不加
+4. **渲染显示 surface（规范名）**：`generate_translation_json.py` 调用 `render_tags_to_html(..., prefer_canonical=True)`
+   - `〖@羽|项羽〗` → `<span title="人名·规范：项羽">羽（项羽）</span>`
+   - surface 与 canonical 相同时只显示一次，如 `〖@项籍|项籍〗` → `项籍`
+   - 未消歧的实体如 `〖@项籍〗` → 保持显示 `项籍`（无括号）
+
+### 演化更新机制
+
+当源 `.tagged.md` 新增或修改消歧后，运行同步脚本保持译文一致：
+
+```bash
+# 审核所有章节（只报告不修改）
+python scripts/sync_translation_disambig.py --all
+
+# 审核并自动同步（将源的新增消歧批量应用到译文）
+python scripts/sync_translation_disambig.py --all --apply
+
+# 单章操作
+python scripts/sync_translation_disambig.py 002
+python scripts/sync_translation_disambig.py 002 --apply
+```
+
+脚本逻辑（`scripts/sync_translation_disambig.py`）：
+
+- **收集源映射**：从源文件抽取所有 `〖T surface|canonical〗`，构建 `{marker: {surface: canonical}}`
+- **审核译文**：对每个译文实体
+  - 若已有 `|canonical`：验证 canonical 在源规范池中
+  - 若无 `|` 但 surface 是源已知映射：建议补齐
+- **apply 模式**：对"建议补齐"项做全文替换 `〖T surface〗` → `〖T surface|canonical〗`
+
+### 注意事项
+
+- 同步脚本的 `--apply` 做**全文替换**，所以同一文件内同一表面形式的实体都会被统一
+- 若译者使用了"规范名即 surface"的形式（如 `〖@项籍|项籍〗`），脚本不会警告——规范名一致即可
+- "未知规范名"类警告需要人工审核——通常是译者自创的消歧（如 〖[活埋|坑〗）在源中不存在
+- 运行顺序：每次修改源 `tagged.md` 的消歧 → `sync_translation_disambig.py --all --apply` → `generate_translation_json.py --all`
 
 ---
 

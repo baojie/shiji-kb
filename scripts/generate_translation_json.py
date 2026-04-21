@@ -83,7 +83,9 @@ def parse_translation_markdown(md_path: Path) -> dict:
             text = ' '.join(text.split())
 
         # 关键：使用semantic_tags模块进行HTML渲染
-        text_html = render_tags_to_html(text)
+        # prefer_canonical=True：白话上下文，消歧格式 〖@籍|项籍〗 显示"项籍"（规范名）
+        # 详见 SKILL_01h §消歧语法（白话上下文）
+        text_html = render_tags_to_html(text, prefer_canonical=True)
 
         translations[pn_num] = {
             "title": title,
