@@ -18,17 +18,17 @@
 
 **阶段一：句读 + 排版（已完成 2026-04-22）**：
 - ✅ 方法论沉淀：[SKILL_01i OCR影印古籍句读排版](skills/SKILL_01i_OCR影印古籍句读排版.md)
-- ✅ 项目经验沉淀：[SKILL_10i OCR古籍整理项目经验](skills/SKILL_10i_OCR古籍整理项目经验.md)
 - ✅ 全书十卷 + 提要 + 总论完整句读与 Markdown 排版：[corpus/shiji/读史记十表.md](corpus/shiji/读史记十表.md)
 - ✅ OCR 可疑字全书扫描报告（"防"字 13 种语义 + 零星单字）：[logs/curation/reports/读史记十表_OCR可疑字.md](logs/curation/reports/读史记十表_OCR可疑字.md)
+- ✅ 项目复盘：[logs/curation/reports/读史记十表_整理复盘.md](logs/curation/reports/读史记十表_整理复盘.md)
 
 **阶段二：多版本互校订正 + 工具化（待启动）**：
 - [ ] 找到《读史记十表》点校本或其他四库翻印本，逐条订正 OCR 可疑字
 - [ ] 表格正文从影印 PDF 还原（OCR 丢失的年表列）
-- [ ] 工具化：`scripts/curation/verify_ocr_preserve.py`（字符完整性）、`clean_ocr_raw.py`（阶段 1 清洗）
+- [ ] 工具化：`scripts/curation/verify_ocr_preserve.py`（字符完整性）、`clean_ocr_raw.py`（阶段 1 清洗）、`fix_quotes_scoped.py`（作用域栈引号修复）
 - [ ] HTML 渲染器接入（让 `.md` 出现在站内目录）
 
-**关联 Skill**：SKILL_01i（方法论）/ SKILL_10i（项目经验）/ 01f（句读规范）/ 01b（互校订正）
+**关联 Skill**：SKILL_01i（方法论，含 OCR 错字归纳/作用域栈算法/LLM 偏差前置提示）/ 01f（标点规范主文档）/ 01b（互校订正）
 
 ---
 
@@ -255,15 +255,16 @@
 ### 2026-04-22（二）：《读史记十表》OCR 整理阶段一完成
 
 **阶段一一次性交付**：
-- OCR 影印古籍方法论沉淀为 [SKILL_01i](skills/SKILL_01i_OCR影印古籍句读排版.md)
-- 项目经验沉淀为 [SKILL_10i](skills/SKILL_10i_OCR古籍整理项目经验.md)
+- OCR 影印古籍方法论沉淀为 [SKILL_01i](skills/SKILL_01i_OCR影印古籍句读排版.md)（含"防"字 13 种语义、引号作用域栈算法、LLM 偏差前置提示）
 - 《读史记十表》全书十卷 + 提要 + 总论完整句读与 Markdown 排版
-- OCR 可疑字全书扫描（"防"字 13 种语义 + 零星单字）
-- SKILL_01 主文档更新，新增 01i 引用
+- OCR 可疑字全书扫描
+- 项目复盘（时间线、未完成事项）
+- SKILL_01 主文档更新，新增 01i 引用；01i 与 01f 边界表更新
 
 **产物**：
 - [corpus/shiji/读史记十表.md](corpus/shiji/读史记十表.md)（10 万字级完整整理）
 - [logs/curation/reports/读史记十表_OCR可疑字.md](logs/curation/reports/读史记十表_OCR可疑字.md)
+- [logs/curation/reports/读史记十表_整理复盘.md](logs/curation/reports/读史记十表_整理复盘.md)
 
 ### 2026-04-22（一）：白话翻译与三家注落地
 
