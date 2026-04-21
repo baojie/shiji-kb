@@ -42,6 +42,8 @@ OFFICIAL_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'official_categ
 OFFICIAL_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'official_confidence.json'
 PERSON_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'person_categories.json'
 PERSON_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'person_confidence.json'
+FEUDAL_STATE_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'feudal_state_categories.json'
+FEUDAL_STATE_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'feudal_state_confidence.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
@@ -577,6 +579,37 @@ def _load_person_confidence():
         return {}
 
 
+def _load_feudal_state_categories():
+    """加载邦国分类数据，返回 {name: [cat, ...]}。"""
+    if not FEUDAL_STATE_CAT_FILE.exists():
+        return {}
+    try:
+        with open(FEUDAL_STATE_CAT_FILE, encoding='utf-8') as f:
+            data = json.load(f)
+        out = {}
+        for k, v in data.items():
+            if isinstance(v, list):
+                out[k] = v
+            elif isinstance(v, str):
+                out[k] = [v] if v else []
+            else:
+                out[k] = []
+        return out
+    except Exception:
+        return {}
+
+
+def _load_feudal_state_confidence():
+    """加载邦国置信度 {name: {cat: conf}}。若文件不存在返回空字典。"""
+    if not FEUDAL_STATE_CONF_FILE.exists():
+        return {}
+    try:
+        with open(FEUDAL_STATE_CONF_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
 # 地段分类 -> CSS 修饰类（用于上色）
 PLACE_CATEGORY_CSS = {
     '水域': 'cat-river',    # 江河湖泊 + 海洋合并
@@ -624,6 +657,23 @@ OFFICIAL_CATEGORY_CSS = {
 }
 
 
+# 邦国国类分类 -> CSS 修饰类（与 SKILL_03k 对应）
+FEUDAL_STATE_CATEGORY_CSS = {
+    '上古方国':   'cat-ancient-state',
+    '朝代':      'cat-dynasty',
+    '周代诸侯':   'cat-zhou-vassal',
+    '秦末列国':   'cat-qin-end',
+    '汉诸侯王国': 'cat-han-vassal',
+    '汉侯国':    'cat-han-marquis',
+    '外邦':      'cat-foreign',
+    '合称':      'cat-collective',
+    '泛称':      'cat-generic',
+    '部族误标':   'cat-tribe-mis',
+    '地名误标':   'cat-place-mis',
+    '待拆分':     'cat-split',
+}
+
+
 # 人名身份分类 -> CSS 修饰类（与 SKILL_03j 对应）
 PERSON_CATEGORY_CSS = {
     '帝王':    'cat-emperor',
@@ -648,17 +698,30 @@ PERSON_CATEGORY_CSS = {
 
 
 def generate_type_page(type_key, css_class, label, filename, entries):
-    """生成单个类型的索引 HTML 页面"""
+    """生成单个类型的索引 HTML 页面（3 列通用模板）。
+
+    ⚠️ 严禁对 type_key == 'person' 调用本函数——person.html 必须经由
+    generate_person_page 生成 4 列结构（surface | 规范名 | 标签 | 出处）。
+    历史教训：2026-04-20 commit 21abcf33 修复了 person.html 被本函数覆盖为 3 列的退化。
+    """
+    if type_key == 'person':
+        raise RuntimeError(
+            "generate_type_page 不得用于 person 类型。请改用 generate_person_page。"
+            "详见 _assert_person_html_four_columns 的说明。"
+        )
+
     # 按拼音排序
     sorted_entries = sorted(entries.items(), key=lambda x: _get_pinyin_key(x[0]))
 
-    # 分类数据（地名/官职/人名）
+    # 分类数据（地名/官职/人名/邦国）
     place_categories = _load_place_categories() if type_key == 'place' else {}
     place_confidence = _load_place_confidence() if type_key == 'place' else {}
     official_categories = _load_official_categories() if type_key == 'official' else {}
     official_confidence = _load_official_confidence() if type_key == 'official' else {}
     person_categories = _load_person_categories() if type_key == 'person' else {}
     person_confidence = _load_person_confidence() if type_key == 'person' else {}
+    feudal_state_categories = _load_feudal_state_categories() if type_key == 'feudal-state' else {}
+    feudal_state_confidence = _load_feudal_state_confidence() if type_key == 'feudal-state' else {}
 
     # 根据 type_key 选择分类源；categorized_type 表示"有分类功能"的类型
     if type_key == 'place':
@@ -673,6 +736,10 @@ def generate_type_page(type_key, css_class, label, filename, entries):
         cat_source = person_categories
         conf_source = person_confidence
         cat_css_map = PERSON_CATEGORY_CSS
+    elif type_key == 'feudal-state':
+        cat_source = feudal_state_categories
+        conf_source = feudal_state_confidence
+        cat_css_map = FEUDAL_STATE_CATEGORY_CSS
     else:
         cat_source = {}
         conf_source = {}
@@ -1136,13 +1203,44 @@ def build_person_rows(alias_file, entries):
 
 
 def _assert_person_html_four_columns(html_text, output_path):
-    """断言 person.html 已写入 4 列结构。缺 entry-canonical 列直接抛错，
-    避免把 3 列退化版本静默写入磁盘。"""
+    """断言 person.html 已写入 4 列结构，防止 3 列退化版本被静默写入磁盘。
+
+    历史教训（2026-04-20 commit 21abcf33）：
+      build_entity_index.main() 循环 ENTITY_TYPES 时曾对 person 走通用 generate_type_page，
+      覆盖了 generate_person_page 写入的 4 列版本。本守卫在写盘前强制校验。
+
+    校验点：
+      1) 必须存在 'entry-canonical' 字符串（基础结构）
+      2) entry-canonical 列数 == entity-entry 行数（每行都有规范名列，不漏）
+      3) entity-entry 行数 >= 5000（下限防止空/截断写入；当前约 5948）
+    """
+    n_entry = html_text.count('class="entity-entry"')
+    n_canon = html_text.count('class="entry-canonical"')
+
     if 'entry-canonical' not in html_text:
         raise RuntimeError(
             f"person.html 生成失败：缺少 entry-canonical 列，疑似被 generate_type_page "
             f"（3 列模板）覆盖。应调用 generate_person_page。输出路径：{output_path}"
         )
+    if n_canon != n_entry:
+        raise RuntimeError(
+            f"person.html 列完整性校验失败：entity-entry={n_entry} 行，"
+            f"entry-canonical={n_canon} 列，不一致（缺 {n_entry - n_canon} 行规范名列）。"
+            f"输出路径：{output_path}"
+        )
+    if n_entry < 5000:
+        raise RuntimeError(
+            f"person.html 条目数异常偏少：仅 {n_entry} 行 (<5000)，疑似空写入或截断。"
+            f"输出路径：{output_path}"
+        )
+
+
+def write_person_html(page_html, output_path):
+    """唯一写入入口：校验后写盘。所有生成 person.html 的代码路径都必须调用本函数，
+    不得直接 open(output_path, 'w').write(...)。"""
+    _assert_person_html_four_columns(page_html, output_path)
+    from pathlib import Path as _Path
+    _Path(output_path).write_text(page_html, encoding='utf-8')
 
 
 def generate_person_page(alias_rows, person_cats, person_conf, total_canonicals):
@@ -1716,13 +1814,12 @@ def main():
             continue
 
         # person：使用 4 列模板（surface | canonical | 标签 | 出处）
+        # 必须经由 write_person_html（含完整性校验），不得直接 open/write
         if type_key == 'person':
             rows, person_cats, person_conf = build_person_rows(ALIAS_FILE, entries)
             page_html = generate_person_page(rows, person_cats, person_conf, len(entries))
             output_path = OUTPUT_DIR / filename
-            _assert_person_html_four_columns(page_html, output_path)
-            with open(output_path, 'w', encoding='utf-8') as f:
-                f.write(page_html)
+            write_person_html(page_html, output_path)
             print(f"  生成: {output_path} ({len(rows)} 条，{len(entries)} 个规范人名)")
             continue
 

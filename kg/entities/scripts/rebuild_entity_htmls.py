@@ -30,8 +30,8 @@ def main():
             rows, person_cats, person_conf = bei.build_person_rows(bei.ALIAS_FILE, entries)
             page_html = bei.generate_person_page(rows, person_cats, person_conf, len(entries))
             out = bei.OUTPUT_DIR / filename
-            bei._assert_person_html_four_columns(page_html, out)
-            out.write_text(page_html, encoding='utf-8')
+            # 统一写入入口：含 4 列结构 + 行列数一致性 + 最低条目数三重校验
+            bei.write_person_html(page_html, out)
             print(f'已重建: {out} ({len(rows)} 条，{len(entries)} 个规范人名)')
             continue
 
