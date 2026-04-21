@@ -52,13 +52,14 @@ description: 按类型反思的总入口，分两个子 skill：03e1（跨类型
 
 详见 [SKILL_03e1 §六](references/SKILL_03e1_跨类型迁移.md#六已知存量错误-todo)。
 
-### 03e2 按类型反思纠错 — 已完成的三条工作流
+### 03e2 按类型反思纠错 — 已完成/进行中的工作流
 
 | 实体 | Skill | 主要误标类型 |
 |-----|------|----------|
 | 地名 place | [SKILL_03h](SKILL_03h_地名地段分类.md) | 诊断 A：29 条误标剔除 + 20 处复合拆分；诊断 B：R6 发现 9 条 cohort |
 | 官职 official | [SKILL_03i](SKILL_03i_官职分类.md) | 诊断 C：新增 5 个 mis 子类（person/identity/shihao/split/mis） |
-| 人名 person | [SKILL_03j](SKILL_03j_人名分类.md) + [SKILL_06e](SKILL_06e_概念分类树构建.md) | 诊断 B：白名单扩 200+ 条，未分类 2642→1319 |
+| 人名 person | [SKILL_03j](SKILL_03j_人名分类.md) + [SKILL_06e](SKILL_06e_概念分类树构建.md) | 诊断 B：白名单扩 500+ 条 + 姓氏前缀规则（姬/熊/姒/嬴）+ L4.5 章节兜底 + alias-only 补全，未分类 2642→**0**（2026-04-22 清零）|
+| 邦国 feudal-state | [SKILL_03k](SKILL_03k_邦国分类.md) | 11 类体系（上古/朝代/周代诸侯/秦末/汉王国/汉侯国/外邦/合称/3 条 mis）；`朝代 cat-dynasty` 与 `合称 cat-collective` 为合法子类；**侯国也算邦国** → `cat-han-marquis`；真·误标仅 tribe-mis/place-mis/split 三条。**首轮 2026-04-22 落地：204 条 100% 分类，12 条误标候选反向触发 03e1** |
 
 ### 03e2 按类型反思纠错 — 候选下一个
 

@@ -464,6 +464,17 @@ h2 {
 .place-category.cat-identity-mis { background: #fce9f4; color: #8a3060; border-color: #f0c8dc; font-style: italic; }
 .place-category.cat-shihao-mis   { background: #f6e9e2; color: #8a5020; border-color: #e8d2c0; font-style: italic; }
 
+/* 邦国国类分类配色（上古方国/朝代/周代诸侯/秦末列国/汉诸侯王国/外邦/合称/...） */
+.place-category.cat-ancient-state { background: #eee4cc; color: #6a4a2a; border-color: #d8c8a8; }
+.place-category.cat-dynasty       { background: #f4dfc8; color: #7a3a10; border-color: #e6c6a0; }
+.place-category.cat-zhou-vassal   { background: #fdf0e0; color: #a0522d; border-color: #eeddc4; }
+.place-category.cat-qin-end       { background: #efdccc; color: #6a3a20; border-color: #dcc2a8; }
+.place-category.cat-han-vassal    { background: #fbe4e4; color: #8b2a2a; border-color: #ecc2c2; }
+.place-category.cat-han-marquis   { background: #fce5d4; color: #8a4520; border-color: #f0ccb0; }
+.place-category.cat-collective    { background: #ede0ee; color: #5a3070; border-color: #d4c0da; }
+.place-category.cat-tribe-mis     { background: #fde8e0; color: #8a3a10; border-color: #f0c8b0; font-style: italic; }
+.place-category.cat-place-mis     { background: #fff0d8; color: #8a5020; border-color: #f0d8a0; font-style: italic; }
+
 /* 人名身份分类配色（帝王/诸侯君主/后妃/宗室/将相/...） */
 .place-category.cat-emperor    { background: #fdf0cc; color: #7a5010; border-color: #edda90; }
 .place-category.cat-ruler      { background: #ece2f5; color: #5a3a8a; border-color: #d4c0e8; }
@@ -554,6 +565,26 @@ h2 {
 .cat-chip.cat-commoner.active  { background: #6a6050; color: #ece9e0; }
 .cat-chip.cat-fictional        { background: #f0e8fa; color: #6a3a8a; }
 .cat-chip.cat-fictional.active { background: #6a3a8a; color: #f0e8fa; }
+
+/* cat-chip 开关 — 邦国国类（SKILL_03k） */
+.cat-chip.cat-ancient-state        { background: #eee4cc; color: #6a4a2a; }
+.cat-chip.cat-ancient-state.active { background: #6a4a2a; color: #eee4cc; }
+.cat-chip.cat-dynasty              { background: #f4dfc8; color: #7a3a10; }
+.cat-chip.cat-dynasty.active       { background: #7a3a10; color: #f4dfc8; }
+.cat-chip.cat-zhou-vassal          { background: #fdf0e0; color: #a0522d; }
+.cat-chip.cat-zhou-vassal.active   { background: #a0522d; color: #fdf0e0; }
+.cat-chip.cat-qin-end              { background: #efdccc; color: #6a3a20; }
+.cat-chip.cat-qin-end.active       { background: #6a3a20; color: #efdccc; }
+.cat-chip.cat-han-vassal           { background: #fbe4e4; color: #8b2a2a; }
+.cat-chip.cat-han-vassal.active    { background: #8b2a2a; color: #fbe4e4; }
+.cat-chip.cat-han-marquis          { background: #fce5d4; color: #8a4520; }
+.cat-chip.cat-han-marquis.active   { background: #8a4520; color: #fce5d4; }
+.cat-chip.cat-collective           { background: #ede0ee; color: #5a3070; }
+.cat-chip.cat-collective.active    { background: #5a3070; color: #ede0ee; }
+.cat-chip.cat-tribe-mis            { background: #fde8e0; color: #8a3a10; }
+.cat-chip.cat-tribe-mis.active     { background: #8a3a10; color: #fde8e0; }
+.cat-chip.cat-place-mis            { background: #fff0d8; color: #8a5020; }
+.cat-chip.cat-place-mis.active     { background: #8a5020; color: #fff0d8; }
 
 /* 分类筛选栏 */
 .place-category-filter {
