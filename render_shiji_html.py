@@ -476,13 +476,42 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         每个数据行自动添加 Purple Number 锚点列（行首），便于精确引用。
         """
         def parse_row(line):
-            """解析 | cell1 | cell2 | ... | 为单元格列表"""
+            """解析 | cell1 | cell2 | ... | 为单元格列表
+
+            括号感知：不在 〖…〗 或 ⟦…⟧ 内的 | 才视为列分隔符，
+            避免消歧语法 〖TYPE 显示名|规范名〗 被误切成两列。
+            """
             stripped = line.strip()
             if stripped.startswith('|'):
                 stripped = stripped[1:]
             if stripped.endswith('|'):
                 stripped = stripped[:-1]
-            return [cell.strip() for cell in stripped.split('|')]
+            cells = []
+            buf = []
+            lenticular = 0   # 〖 〗
+            dbracket = 0     # ⟦ ⟧
+            for ch in stripped:
+                if ch == '〖':
+                    lenticular += 1
+                    buf.append(ch)
+                elif ch == '〗':
+                    if lenticular > 0:
+                        lenticular -= 1
+                    buf.append(ch)
+                elif ch == '⟦':
+                    dbracket += 1
+                    buf.append(ch)
+                elif ch == '⟧':
+                    if dbracket > 0:
+                        dbracket -= 1
+                    buf.append(ch)
+                elif ch == '|' and lenticular == 0 and dbracket == 0:
+                    cells.append(''.join(buf).strip())
+                    buf = []
+                else:
+                    buf.append(ch)
+            cells.append(''.join(buf).strip())
+            return cells
 
         # 第一行为表头
         headers = parse_row(table_lines[0])
@@ -502,7 +531,13 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         def strip_annotations(text):
             # 匹配两种格式：〖TYPE内容〗 或 ⟦TYPE动词⟧
             # group(1) 为名词实体内容，group(2) 为动词内容
-            return _annotation_strip.sub(lambda m: m.group(1) if m.group(1) else m.group(2), text)
+            # 消歧形式 "显示名|规范名" 只保留显示名
+            def _replace(m):
+                content = m.group(1) if m.group(1) else m.group(2)
+                if '|' in content:
+                    content = content.split('|', 1)[0]
+                return content
+            return _annotation_strip.sub(_replace, text)
 
         parts.append('<thead><tr>')
         parts.append('<th class="row-pn-col"></th>')

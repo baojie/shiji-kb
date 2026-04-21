@@ -359,23 +359,27 @@ p > .para-num:only-child {
 /* ======================================== 史记年表样式 ======================================== */
 
 .shiji-table-wrapper {
-    overflow: auto;
-    width: 100vw;
+    overflow-x: auto;
     max-height: 85vh;
+    width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-top: 2em;
     margin-bottom: 2em;
     border-top: 1px solid #d0c8a0;
     border-bottom: 1px solid #d0c8a0;
     box-shadow: 0 1px 4px rgba(90, 74, 42, 0.08);
+    text-align: center;
 }
 
 .shiji-table {
     border-collapse: collapse;
-    width: 100%;
+    display: inline-table;
+    max-width: 100%;
+    margin: 0 auto;
     font-size: 0.85em;
     line-height: 1.7;
     font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+    text-align: left;
 }
 
 .shiji-table th {
