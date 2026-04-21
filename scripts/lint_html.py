@@ -303,7 +303,7 @@ def main():
     if path.is_file():
         files = [path]
     elif path.is_dir():
-        files = sorted(path.glob('*.html'))
+        files = sorted(f for f in path.glob('*.html') if re.match(r'\d{3}_', f.name))
     else:
         print(f"错误: 路径不存在: {path}")
         sys.exit(1)
