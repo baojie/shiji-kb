@@ -277,8 +277,23 @@ def render_tags_to_html(text: str, normalize_legacy: bool = False, prefer_canoni
             text
         )
 
+    # 处理成语标注 〘※成语〙 或消歧 〘※shiji|modern〙 → <span class="idiom">
+    # 文言模式：显示 shiji 形式（\1）
+    # 白话模式：若有 modern 则显示 modern（surface（modern）），否则显示 shiji
+    def _idiom_repl(m):
+        shiji = m.group(1).strip()
+        modern = (m.group(2) or '').strip()
+        if prefer_canonical and modern:
+            if shiji == modern:
+                inner = modern
+            else:
+                inner = f'{shiji}（{modern}）'
+            return f'<span class="idiom" title="成语·现代：{modern}">{inner}</span>'
+        return f'<span class="idiom" title="成语">{shiji}</span>'
+    text = re.sub(r'〘※([^〘〙|]+)(?:\|([^〘〙]+))?〙', _idiom_repl, text)
+
     # 清理残留的未闭合标签符号
-    text = text.replace('〗', '').replace('⟦', '').replace('⟧', '')
+    text = text.replace('〗', '').replace('⟦', '').replace('⟧', '').replace('〘', '').replace('〙', '')
 
     return text
 

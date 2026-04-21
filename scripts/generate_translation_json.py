@@ -63,8 +63,9 @@ def parse_translation_markdown(md_path: Path) -> dict:
     translations = {}
 
     # 匹配格式: ## [PN编号] 段落标题\n\n译文内容
+    # 标题可选（部分章节如 027 只有 ## [N] 无标题）
     # 支持多行译文（包括列表项），直到下一个 ## 或文件结束
-    pattern = r'## \[([^\]]+)\] (.+?)\n\n((?:(?!^##).)+)'
+    pattern = r'## \[([^\]]+)\][ \t]*([^\n]*)\n+((?:(?!^##).)+)'
     matches = re.finditer(pattern, main_content, re.MULTILINE | re.DOTALL)
 
     for match in matches:

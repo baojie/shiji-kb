@@ -1,5 +1,506 @@
 {
   "chapter": "027",
   "title": "天官书",
-  "translations": {}
+  "translations": {
+    "1": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">中宫</span>的<span class=\"astronomy\" title=\"天文\">天极星</span>，其中最明亮的那一颗，是<span class=\"astronomy\" title=\"天文\">太一</span>神常居之处；旁边的<span class=\"astronomy\" title=\"天文\">三星</span>是<span class=\"institution\" title=\"名物\">三公</span>，或说是天帝之子所属。后面弯曲的四颗星，末端最大的一颗是正妃，其余<span class=\"astronomy\" title=\"天文\">三星</span>是后宫的属星。环绕着拱卫它们的十二颗星，是藩臣。整个星区都叫做<span class=\"astronomy\" title=\"天文\">紫宫</span>。"
+    },
+    "2": {
+      "title": "",
+      "text": "前列正对着<span class=\"astronomy\" title=\"天文\">斗</span>口的<span class=\"astronomy\" title=\"天文\">三星</span>，顺着北端而尖锐，若隐若现，叫做<span class=\"astronomy\" title=\"天文\">阴德</span>，也叫<span class=\"astronomy\" title=\"天文\">天一</span>。<span class=\"astronomy\" title=\"天文\">紫宫</span>左边的<span class=\"astronomy\" title=\"天文\">三星</span>叫<span class=\"astronomy\" title=\"天文\">天枪</span>，右边的<span class=\"astronomy\" title=\"天文\">五星</span>叫<span class=\"astronomy\" title=\"天文\">天棓</span>，后面六颗星横跨<span class=\"astronomy\" title=\"天文·规范：汉\">银河（汉）</span>直抵<span class=\"astronomy\" title=\"天文\">营室</span>，叫做<span class=\"astronomy\" title=\"天文\">阁道</span>。"
+    },
+    "3": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">北斗</span><span class=\"astronomy\" title=\"天文\">七星</span>，就是《尚书》所谓\"<span class=\"astronomy\" title=\"天文\">旋</span>、<span class=\"astronomy\" title=\"天文\">玑</span>、<span class=\"astronomy\" title=\"天文\">玉衡</span>以齐<span class=\"astronomy\" title=\"天文\">七政</span>\"。斗杓连接<span class=\"astronomy\" title=\"天文\">龙角</span>，衡星居中于<span class=\"astronomy\" title=\"天文\">南斗</span>，魁星枕着<span class=\"astronomy\" title=\"天文\">参首</span>。黄昏时用来定方位的是杓，杓所指代的区域，自<span class=\"place\" title=\"地名\">华</span>山以西南；<span class=\"time\" title=\"时间\">夜半</span>用来定方位的是衡，衡所指代的是中州<span class=\"place\" title=\"地名\">黄河</span>、<span class=\"place\" title=\"地名\">济水</span>之间；平旦（清晨）用来定方位的是魁，魁所指代的是<span class=\"place\" title=\"地名\">海岱</span>以东北地区。<span class=\"astronomy\" title=\"天文\">斗</span>是天帝的车，运行于中央，监临控制四方。划分<span class=\"institution\" title=\"名物\">阴阳</span>，建立<span class=\"time\" title=\"时间\">四时</span>，调和<span class=\"institution\" title=\"名物\">五行</span>，推移节气，确定各种纪度，都与<span class=\"astronomy\" title=\"天文\">斗</span>相关。"
+    },
+    "4": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">斗</span>魁之上顶戴的六颗星叫<span class=\"astronomy\" title=\"天文\">文昌宫</span>：一曰<span class=\"official\" title=\"官职\">上将</span>，二曰<span class=\"official\" title=\"官职\">次将</span>，三曰<span class=\"official\" title=\"官职\">贵相</span>，四曰<span class=\"official\" title=\"官职\">司命</span>，五曰<span class=\"official\" title=\"官职\">司中</span>，六曰<span class=\"official\" title=\"官职\">司禄</span>。 在<span class=\"astronomy\" title=\"天文\">斗</span>魁中间，是关押<span class=\"identity\" title=\"身份\">贵人</span>的牢狱。 斗魁下方六颗星，两两相邻的，叫做<span class=\"astronomy\" title=\"天文·规范：三台\">三能（三台）</span>。 <span class=\"astronomy\" title=\"天文\">三能</span>颜色整齐，则君臣和睦；颜色不齐，则是乖戾之象。 辅星明亮接近北斗，则辅臣亲近强势；辅星黯淡疏远，则辅臣疏弱。"
+    },
+    "5": {
+      "title": "",
+      "text": "斗杓末端有两颗星：内侧一颗为矛，叫<span class=\"astronomy\" title=\"天文\">招摇</span>；外侧一颗为盾，叫<span class=\"astronomy\" title=\"天文\">天锋</span>。有弯曲成圆形的十五颗星，归属于杓，叫贱人之牢。牢中星多则囚犯多，星空则开释放出。"
+    },
+    "6": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">天一</span>、<span class=\"astronomy\" title=\"天文\">枪</span>、<span class=\"astronomy\" title=\"天文\">棓</span>、矛、盾动摇，芒角变大，就会有兵乱兴起。"
+    },
+    "7": {
+      "title": "",
+      "text": "<span class=\"place\" title=\"地名\">东宫</span>是<span class=\"mythical\" title=\"神话\">苍龙</span>，包括<span class=\"astronomy\" title=\"天文\">房</span>、<span class=\"astronomy\" title=\"天文\">心</span>。 <span class=\"astronomy\" title=\"天文\">心</span>为<span class=\"place\" title=\"地名\">明堂</span>，大星是<span class=\"official\" title=\"官职\">天王</span>，前后的星是天王之子的属星。 子星不可与<span class=\"astronomy\" title=\"天文\">心</span>大星成一直线，若成直线则<span class=\"official\" title=\"官职\">天王</span>失策。 <span class=\"astronomy\" title=\"天文\">房</span>是府库，叫做<span class=\"astronomy\" title=\"天文\">天驷</span>。 <span class=\"astronomy\" title=\"天文\">房</span>的阴侧，是右骖之位。 旁边有两颗星叫衿；北面一颗星叫辖。 东北弯曲的十二颗星叫旗。 旗中四颗星是<span class=\"astronomy\" title=\"天文\">天市</span>；中间六颗星叫<span class=\"astronomy\" title=\"天文\">市楼</span>。 市中星多则货物充实；星空则耗尽。 <span class=\"astronomy\" title=\"天文\">房</span>南边众星叫骑官。"
+    },
+    "8": {
+      "title": "",
+      "text": "左<span class=\"astronomy\" title=\"天文\">角</span>星主李（法官），右<span class=\"astronomy\" title=\"天文\">角</span>星主将。 大<span class=\"astronomy\" title=\"天文\">角</span>是<span class=\"official\" title=\"官职\">天王</span>的帝廷。 其两旁各有<span class=\"astronomy\" title=\"天文\">三星</span>，如鼎足般弯曲排列，叫做<span class=\"astronomy\" title=\"天文\">摄提</span>。 <span class=\"astronomy\" title=\"天文\">摄提</span>正对着<span class=\"astronomy\" title=\"天文\">斗</span>杓所指的方向，用来确定时节，所以叫\"<span class=\"astronomy\" title=\"天文\">摄提格</span>\"。 <span class=\"astronomy\" title=\"天文\">亢</span>为疏远的宗庙，主管疾病。 其南北两颗大星，叫做<span class=\"astronomy\" title=\"天文\">南门</span>。 <span class=\"astronomy\" title=\"天文\">氐</span>为天根，主管瘟疫。"
+    },
+    "9": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">尾</span>为九子，象征君臣；若星相斥绝，则君臣不和。<span class=\"astronomy\" title=\"天文\">箕</span>为敖客，主口舌。"
+    },
+    "10": {
+      "title": "",
+      "text": "火星（荧惑）侵犯守在<span class=\"astronomy\" title=\"天文\">角</span>，则有战争。如果侵犯<span class=\"astronomy\" title=\"天文\">房</span>、<span class=\"astronomy\" title=\"天文\">心</span>，则<span class=\"official\" title=\"官职\">王者</span>厌恶之。"
+    },
+    "11": {
+      "title": "",
+      "text": "南宫是朱鸟，对应权、衡二星。衡，是<span class=\"astronomy\" title=\"天文\">太微</span>，为<span class=\"astronomy\" title=\"天文\">三光</span>的朝廷。拱卫它的十二星是藩臣：西面，是将；东面，是相；南面四颗星，是执法；中间，是端门；门两侧，是掖门。门内六颗星，是<span class=\"identity\" title=\"身份\">诸侯</span>。其中内部的<span class=\"astronomy\" title=\"天文\">五星</span>，是<span class=\"person\" title=\"人名\">五帝</span>的座位。后面聚集的十五颗星，茂盛蔚然，叫做<span class=\"astronomy\" title=\"天文\">郎位</span>；旁边一颗大星，是将军之位。月亮、<span class=\"astronomy\" title=\"天文\">五星</span>顺向进入，依轨道运行，掌管其出没，所守之处，<span class=\"identity\" title=\"身份\">天子</span>所要诛戮的方向。如果逆向进入，或不依轨道，就以所犯之星来占命；在中座形成一定形态，都是群下合谋造成。金星、火星尤其严重。朝廷藩屏西边有五颗散星，叫做<span class=\"astronomy\" title=\"天文\">少微</span>，代表<span class=\"identity\" title=\"身份\">士大夫</span>。权，是<span class=\"astronomy\" title=\"天文\">轩辕</span>星。<span class=\"astronomy\" title=\"天文\">轩辕</span>是<span class=\"astronomy\" title=\"天文\">黄龙</span>之体。前面的大星，象征女主；旁边的小星，是御者和后宫属星。月亮、<span class=\"astronomy\" title=\"天文\">五星</span>守犯的占验，与衡星相同。"
+    },
+    "12": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">东井</span>主管水事。其西边弯曲的星叫<span class=\"astronomy\" title=\"天文\">钺</span>。<span class=\"astronomy\" title=\"天文\">钺</span>北边是<span class=\"astronomy\" title=\"天文\">北河</span>，南边是<span class=\"astronomy\" title=\"天文\">南河</span>；<span class=\"astronomy\" title=\"天文\">两河</span>、<span class=\"astronomy\" title=\"天文\">天阙</span>之间是关梁。<span class=\"astronomy\" title=\"天文\">舆鬼</span>，主管鬼祠之事；其中白色的是质（刑台）。火星守在<span class=\"astronomy\" title=\"天文\">南北河</span>，则有兵乱兴起，五谷歉收。所以德行成形于衡星，观仪成形于潢星，损伤成形于钺星，灾祸成形于井星，诛戮成形于质星。"
+    },
+    "13": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">柳</span>为鸟嘴，主管木草。<span class=\"astronomy\" title=\"天文\">七星</span>为颈，是员官，主管急事。<span class=\"astronomy\" title=\"天文\">张</span>为嗉囊，为厨房，主管招待宾客。<span class=\"astronomy\" title=\"天文\">翼</span>为翅膀，主管远方来客。"
+    },
+    "14": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">轸</span>为车，主管风。其旁有一颗小星，叫<span class=\"astronomy\" title=\"天文\">长沙</span>，不宜明亮；若明亮得与四星等同，或者<span class=\"astronomy\" title=\"天文\">五星</span>进入<span class=\"astronomy\" title=\"天文\">轸</span>中，则兵乱大起。<span class=\"astronomy\" title=\"天文\">轸</span>南众星叫<span class=\"astronomy\" title=\"天文\">天库楼</span>；库有五车之星。车星的芒角变多，或者不完整，则<span class=\"artifact\" title=\"器物\">车马</span>无处可用。"
+    },
+    "15": {
+      "title": "",
+      "text": "西宫是<span class=\"astronomy\" title=\"天文\">咸池</span>，叫做<span class=\"astronomy\" title=\"天文\">天五潢</span>。<span class=\"astronomy\" title=\"天文\">五潢</span>是<span class=\"person\" title=\"人名\">五帝</span>之车舍。火星进入，则旱；金星进入，则兵；水星进入，则水。其中有<span class=\"astronomy\" title=\"天文\">三柱</span>；柱不完整，则兵乱兴起。"
+    },
+    "16": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">奎</span>叫<span class=\"biology\" title=\"生物·规范：封豕\">野猪（封豕）</span>，主沟渎。<span class=\"astronomy\" title=\"天文\">娄</span>主聚众。<span class=\"astronomy\" title=\"天文\">胃</span>为天仓。其南众星叫<span class=\"astronomy\" title=\"天文\">廥积</span>。"
+    },
+    "17": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">昴</span>叫髦头，是胡人星，主白衣丧会。<span class=\"astronomy\" title=\"天文\">毕</span>叫罕车，主边地兵事，主弋猎。其大星旁有小星叫<span class=\"astronomy\" title=\"天文\">附耳</span>。<span class=\"astronomy\" title=\"天文\">附耳</span>摇动，则有谗乱之臣在旁。<span class=\"astronomy\" title=\"天文\">昴</span>、<span class=\"astronomy\" title=\"天文\">毕</span>之间是<span class=\"astronomy\" title=\"天文\">天街</span>。其北阴面，是阴国；南阳面，是阳国。"
+    },
+    "18": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">参</span>为<span class=\"mythical\" title=\"神话\">白虎</span>。 <span class=\"astronomy\" title=\"天文\">三星</span>成一直线的，是<span class=\"artifact\" title=\"器物\">衡石</span>。 其下有<span class=\"astronomy\" title=\"天文\">三星</span>，尖锐，叫做<span class=\"astronomy\" title=\"天文\">罚</span>，主斩艾杀伐之事。 其外四颗星，是左右肩股。 小的<span class=\"astronomy\" title=\"天文\">三星</span>位于角隅，叫做<span class=\"astronomy\" title=\"天文\">觜觿</span>，是虎首，主管保卫行旅之事。 其南有四颗星，叫<span class=\"astronomy\" title=\"天文\">天厕</span>。 厕下一颗星，叫<span class=\"astronomy\" title=\"天文·规范：天屎\">天矢（天屎）</span>。 <span class=\"astronomy\" title=\"天文\">矢</span>色黄则吉；青、白、黑色则凶。 其西有弯曲的九颗星，分三处排列：一叫<span class=\"astronomy\" title=\"天文\">天旗</span>，二叫<span class=\"astronomy\" title=\"天文\">天苑</span>，三叫<span class=\"astronomy\" title=\"天文\">九游</span>。 其东有大星叫<span class=\"astronomy\" title=\"天文\">狼</span>。 <span class=\"astronomy\" title=\"天文\">狼</span>角变色，则盗贼多。 其下有四颗星叫<span class=\"astronomy\" title=\"天文\">弧</span>，直指<span class=\"astronomy\" title=\"天文\">狼</span>。 <span class=\"astronomy\" title=\"天文\">狼</span>靠近地平线有一颗大星，叫<span class=\"astronomy\" title=\"天文\">南极老人</span>。 <span class=\"astronomy\" title=\"天文\">老人</span>星出现，则治世安定；不见，则兵乱兴起。 常常在<span class=\"time\" title=\"时间\">秋分</span>时节到<span class=\"place\" title=\"地名\">南郊</span>观测它。"
+    },
+    "19": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">附耳</span>进入<span class=\"astronomy\" title=\"天文\">毕</span>中，则兵乱兴起。"
+    },
+    "20": {
+      "title": "",
+      "text": "<span class=\"place\" title=\"地名\">北宫</span>是玄武，包括<span class=\"astronomy\" title=\"天文\">虚</span>、<span class=\"astronomy\" title=\"天文\">危</span>。<span class=\"astronomy\" title=\"天文\">危</span>为盖屋（屋顶）；<span class=\"astronomy\" title=\"天文\">虚</span>主哭泣之事。"
+    },
+    "21": {
+      "title": "",
+      "text": "其南有众星，叫<span class=\"astronomy\" title=\"天文\">羽林天军</span>。 军西是<span class=\"astronomy\" title=\"天文\">垒</span>，或叫<span class=\"astronomy\" title=\"天文\">钺</span>。 旁边有一大星为<span class=\"astronomy\" title=\"天文\">北落</span>。 <span class=\"astronomy\" title=\"天文\">北落</span>若隐若现，军星动摇芒角稀少，以及<span class=\"astronomy\" title=\"天文\">五星</span>侵犯<span class=\"astronomy\" title=\"天文\">北落</span>，进入军星，则有军兴。 火星、金星、水星尤其严重：火星，军有忧；水星，有水患；木星、土星，则军吉。 <span class=\"astronomy\" title=\"天文\">危</span>东六颗星，两两相邻，叫<span class=\"astronomy\" title=\"天文\">司空</span>。"
+    },
+    "22": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">营室</span>是<span class=\"place\" title=\"地名\">清庙</span>，又叫离宫、<span class=\"astronomy\" title=\"天文\">阁道</span>。 <span class=\"astronomy\" title=\"天文·规范：汉\">银河（汉）</span>中四颗星，叫<span class=\"astronomy\" title=\"天文\">天驷</span>。 旁边一颗星，叫<span class=\"astronomy\" title=\"天文\">王良</span>。 <span class=\"astronomy\" title=\"天文\">王良</span>策马的时候，则<span class=\"official\" title=\"官职\">车骑</span>遍野。 旁有八颗星，横断<span class=\"astronomy\" title=\"天文·规范：汉\">银河（汉）</span>，叫<span class=\"astronomy\" title=\"天文\">天潢</span>。 <span class=\"astronomy\" title=\"天文\">天潢</span>旁边，是<span class=\"astronomy\" title=\"天文\">江星</span>。 <span class=\"astronomy\" title=\"天文\">江星</span>动，则有人涉水遇险。"
+    },
+    "23": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">杵</span>、<span class=\"astronomy\" title=\"天文\">臼</span>四颗星，在<span class=\"astronomy\" title=\"天文\">危</span>南。<span class=\"astronomy\" title=\"天文\">匏瓜</span>，有青黑色的星守犯它，则<span class=\"biology\" title=\"生物\">鱼盐</span>价贵。"
+    },
+    "24": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">南斗</span>为庙，其北是<span class=\"astronomy\" title=\"天文\">建星</span>。 <span class=\"astronomy\" title=\"天文\">建星</span>，是旗。 <span class=\"astronomy\" title=\"天文\">牵牛</span>主<span class=\"institution\" title=\"名物\">牺牲</span>。 其北是<span class=\"astronomy\" title=\"天文\">河鼓</span>。 <span class=\"astronomy\" title=\"天文\">河鼓</span>的大星，是<span class=\"official\" title=\"官职\">上将</span>；左右两星，是<span class=\"official\" title=\"官职\">左右将</span>。 <span class=\"astronomy\" title=\"天文\">婺女</span>，其北是<span class=\"astronomy\" title=\"天文\">织女</span>。 <span class=\"astronomy\" title=\"天文\">织女</span>，是天帝的孙女。"
+    },
+    "25": {
+      "title": "",
+      "text": "观察日月的运行来推算<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>的顺逆。 岁星位居东方<span class=\"institution\" title=\"名物\">木</span>德，主<span class=\"time\" title=\"时间\">春</span>，日为甲乙。 义有失者，惩罚从<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>出。 <span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>运行有超前或落后，可根据其所居星宿判定相关国家的命运。 岁星所在的国不可<span class=\"legal\" title=\"刑法\">伐</span>，但可以用来讨伐他国。 岁星超越应居星宿而前进叫赢，退居前一宿叫缩。 赢，其国有兵而不复返；缩，其国有忧，将领要<span class=\"legal\" title=\"刑法\">亡</span>，国家倾败。 岁星所在，<span class=\"astronomy\" title=\"天文\">五星</span>都跟随而聚于一宿之内，其下的国可以凭借道义取得<span class=\"concept\" title=\"思想\">天下</span>。"
+    },
+    "26": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">摄提格</span>岁：岁阴左行在寅，<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>右转居丑。<span class=\"time\" title=\"时间\">正月</span>，与<span class=\"astronomy\" title=\"天文\">斗</span>、<span class=\"astronomy\" title=\"天文\">牵牛</span>在清晨出现于东方，名叫监德。颜色苍苍而有光。若失次，相应的变化出现在<span class=\"astronomy\" title=\"天文\">柳</span>。岁早则水，岁晚则旱。"
+    },
+    "27": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>出现后，向东行十二度，<span class=\"time\" title=\"时间·规范：时长\">百天（时长）</span>后停止，然后逆行；逆行八度，经过<span class=\"time\" title=\"时间·规范：时长\">百天（时长）</span>，再恢复东行。一年行三十度又十六分度之七，每天行十二分度之一，<span class=\"time\" title=\"时间·规范：时长\">十二年（时长）</span>绕天一周。常于清晨在东方出现，黄昏在西方没入。"
+    },
+    "28": {
+      "title": "",
+      "text": "单阏岁：岁阴在卯，岁星居子。于<span class=\"time\" title=\"时间\">二月</span>与<span class=\"astronomy\" title=\"天文\">婺女</span>、<span class=\"astronomy\" title=\"天文\">虚</span>、<span class=\"astronomy\" title=\"天文\">危</span>晨出，叫降入。大而有光。若失次，应现于<span class=\"astronomy\" title=\"天文\">张</span>。其岁大水。"
+    },
+    "29": {
+      "title": "",
+      "text": "执徐岁：岁阴在辰，岁星居亥。于<span class=\"time\" title=\"时间\">三月</span>与<span class=\"astronomy\" title=\"天文\">营室</span>、<span class=\"astronomy\" title=\"天文\">东壁</span>晨出，叫青章。青青甚为鲜明。若失次，应现于<span class=\"astronomy\" title=\"天文\">轸</span>。岁早则旱，岁晚则水。"
+    },
+    "30": {
+      "title": "",
+      "text": "大荒骆岁：岁阴在巳，岁星居戌。于<span class=\"time\" title=\"时间\">四月</span>与<span class=\"astronomy\" title=\"天文\">奎</span>、<span class=\"astronomy\" title=\"天文\">娄</span>晨出，叫跰踵。熊熊赤色，有光。若失次，应现于<span class=\"astronomy\" title=\"天文\">亢</span>。"
+    },
+    "31": {
+      "title": "",
+      "text": "敦牂岁：岁阴在午，岁星居酉。 于<span class=\"time\" title=\"时间\">五月</span>与<span class=\"astronomy\" title=\"天文\">胃</span>、<span class=\"astronomy\" title=\"天文\">昴</span>、<span class=\"astronomy\" title=\"天文\">毕</span>晨出，叫开明。 炎炎有光。 宜偃兵止武；唯利公王，不利治兵。 若失次，应现于<span class=\"astronomy\" title=\"天文\">房</span>。 岁早则旱，岁晚则水。"
+    },
+    "32": {
+      "title": "",
+      "text": "叶洽岁：岁阴在未，岁星居申。于<span class=\"time\" title=\"时间\">六月</span>与<span class=\"astronomy\" title=\"天文\">觜觿</span>、<span class=\"astronomy\" title=\"天文\">参</span>晨出，叫长列。昭昭有光。利于行兵。若失次，应现于<span class=\"astronomy\" title=\"天文\">箕</span>。"
+    },
+    "33": {
+      "title": "",
+      "text": "涒滩岁：岁阴在申，岁星居未。于<span class=\"time\" title=\"时间\">七月</span>与<span class=\"astronomy\" title=\"天文\">东井</span>、<span class=\"astronomy\" title=\"天文\">舆鬼</span>晨出，叫大音。昭昭白色。若失次，应现于<span class=\"astronomy\" title=\"天文\">牵牛</span>。"
+    },
+    "34": {
+      "title": "",
+      "text": "作鄂岁：岁阴在酉，岁星居午。 于<span class=\"time\" title=\"时间\">八月</span>与<span class=\"astronomy\" title=\"天文\">柳</span>、<span class=\"astronomy\" title=\"天文\">七星</span>、<span class=\"astronomy\" title=\"天文\">张</span>晨出，叫长王。 光芒闪烁。 其国昌盛，五谷丰熟。 若失次，应现于<span class=\"astronomy\" title=\"天文\">危</span>。 有旱象反昌盛，有女性丧事，百姓患疾。"
+    },
+    "35": {
+      "title": "",
+      "text": "阉茂岁：岁阴在戌，岁星居巳。于<span class=\"time\" title=\"时间\">九月</span>与<span class=\"astronomy\" title=\"天文\">翼</span>、<span class=\"astronomy\" title=\"天文\">轸</span>晨出，叫天睢。白色大明。若失次，应现于<span class=\"astronomy\" title=\"天文\">东壁</span>。岁水，有女丧。"
+    },
+    "36": {
+      "title": "",
+      "text": "大渊献岁：岁阴在亥，岁星居辰。于<span class=\"time\" title=\"时间\">十月</span>与<span class=\"astronomy\" title=\"天文\">角</span>、<span class=\"astronomy\" title=\"天文\">亢</span>晨出，叫大章。苍苍然，星光好像跳跃一般，而阴出于清晨，这叫做\"正平\"。若兴起军旅，其将帅必定勇武；其国有德，将领有四海。若失次，应现于<span class=\"astronomy\" title=\"天文\">娄</span>。"
+    },
+    "37": {
+      "title": "",
+      "text": "困敦岁：岁阴在子，岁星居卯。于<span class=\"time\" title=\"时间\">十一月</span>与<span class=\"astronomy\" title=\"天文\">氐</span>、<span class=\"astronomy\" title=\"天文\">房</span>、<span class=\"astronomy\" title=\"天文\">心</span>晨出，叫天泉。玄色甚明。<span class=\"place\" title=\"地名\">长江</span>池其昌，不利起兵。若失次，应现于昴。"
+    },
+    "38": {
+      "title": "",
+      "text": "赤奋若岁：岁阴在丑，岁星居寅，于<span class=\"time\" title=\"时间\">十二月</span>与<span class=\"astronomy\" title=\"天文\">尾</span>、<span class=\"astronomy\" title=\"天文\">箕</span>晨出，叫天皓。黫然黑色甚明。若失次，应现于<span class=\"astronomy\" title=\"天文\">参</span>。"
+    },
+    "39": {
+      "title": "",
+      "text": "应居而不居，已居之又左右摇动，不应离去而离去，与他星相会，其国凶。居留长久，其国有深厚德行。其角动摇，忽大忽小，或颜色多变，则<span class=\"official\" title=\"官职\">人主</span>有忧。"
+    },
+    "40": {
+      "title": "",
+      "text": "岁星失次舍而向下运行，前进而到东北，经<span class=\"time\" title=\"时间\">三月</span>产生<span class=\"astronomy\" title=\"天文\">天棓</span>，长<span class=\"quantity\" title=\"数量\">四丈</span>，末端尖锐；前进而到东南，经<span class=\"time\" title=\"时间\">三月</span>生<span class=\"astronomy\" title=\"天文\">彗星</span>，长<span class=\"quantity\" title=\"数量\">二丈</span>，类似扫帚。后退而到西北，经<span class=\"time\" title=\"时间\">三月</span>生<span class=\"astronomy\" title=\"天文\">天欃</span>，长<span class=\"quantity\" title=\"数量\">四丈</span>，末端尖锐。后退而到西南，经<span class=\"time\" title=\"时间\">三月</span>生<span class=\"astronomy\" title=\"天文\">天枪</span>，长<span class=\"quantity\" title=\"数量\">数丈</span>，两头尖锐。谨慎观察其所显现<span class=\"verb-political\" title=\"政治动词\">之国</span>，不可举事用兵。岁星出现时如浮如沉，其国有土功；如沉如浮，其地<span class=\"legal\" title=\"刑法\">亡</span>。色赤而有角，其所在国昌盛。面对其角而<span class=\"legal\" title=\"刑法\">战</span>者，不能取胜。星色赤黄而沉，所在地方大丰收。色青白而赤灰，所在地有忧患。<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>进入月中，其地有驱逐宰相之事；与<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>相<span class=\"legal\" title=\"刑法\">斗</span>，其地有军队被<span class=\"legal\" title=\"刑法\">破</span>。"
+    },
+    "41": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>又叫<span class=\"astronomy\" title=\"天文\">摄提</span>，或叫<span class=\"astronomy\" title=\"天文\">重华</span>，或叫<span class=\"astronomy\" title=\"天文\">应星</span>，或叫<span class=\"astronomy\" title=\"天文\">纪星</span>。<span class=\"astronomy\" title=\"天文\">营室</span>是<span class=\"place\" title=\"地名\">清庙</span>，是<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>的庙。"
+    },
+    "42": {
+      "title": "",
+      "text": "观察刚气来推断<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>的位置。 荧惑位居南方<span class=\"institution\" title=\"名物\">火</span>德，主<span class=\"time\" title=\"时间\">夏</span>，日为丙、丁。 礼有失，惩罚从<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>出，即<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>失行就是。 荧惑出现则有兵，入伏则兵散。 以其所居星宿来占命相关国家。 <span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>代表勃乱、残贼、疾病、丧事、饥荒、兵祸。 反道（逆行）达两宿以上，又居留下来，则<span class=\"time\" title=\"时间\">三月</span>有殃，<span class=\"time\" title=\"时间\">五月</span>受兵灾，<span class=\"time\" title=\"时间\">七月</span>失去一半土地，<span class=\"time\" title=\"时间\">九月</span>失去大半土地。 若与其他星一同出入，则其国绝祀。 若荧惑居留，灾殃随之而来，即便灾大也会减小；若久而至，则小灾也会变大。 其在南方应<span class=\"identity\" title=\"身份\">丈夫</span>之事，在北方应女子丧事。 若角动绕环，或忽前忽后、左右摇摆，则灾殃更大。 与他星相斗，光芒互相逮及，则为害；不相逮，则不为害。 <span class=\"astronomy\" title=\"天文\">五星</span>都随之聚于一宿之内，其下之国可以用礼取得<span class=\"concept\" title=\"思想\">天下</span>。"
+    },
+    "43": {
+      "title": "",
+      "text": "按其运行法则，出现后向东行十六宿而止；逆行二宿；六十日后复东行，从所止之处起再行<span class=\"quantity\" title=\"数量\">数十</span>宿，<span class=\"time\" title=\"时间\">十月</span>入于西方；伏行<span class=\"time\" title=\"时间\">五月</span>，出于东方。若在西方出现叫\"反明\"，主命者厌恶之。东行急时，<span class=\"time\" title=\"时间\">一天</span>行一度半。"
+    },
+    "44": {
+      "title": "",
+      "text": "其东、西、南、北方向运行急疾。兵各聚于其下；若用兵<span class=\"legal\" title=\"刑法\">战</span>，顺之则胜，逆之则败。<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>跟从<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>，军有忧；若离开太白，军则退却。荧惑出太白之阴，则有分军；行于其阳，则有偏将出<span class=\"legal\" title=\"刑法\">战</span>。当其正常运行时，<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>追及，则军<span class=\"legal\" title=\"刑法\">破</span>将<span class=\"legal\" title=\"刑法\">杀</span>。其入守侵犯<span class=\"astronomy\" title=\"天文\">太微</span>、<span class=\"astronomy\" title=\"天文\">轩辕</span>、<span class=\"astronomy\" title=\"天文\">营室</span>，主命者厌恶之。<span class=\"astronomy\" title=\"天文\">心</span>为<span class=\"place\" title=\"地名\">明堂</span>，是<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>的庙。要谨慎观候此象。"
+    },
+    "45": {
+      "title": "",
+      "text": "按<span class=\"astronomy\" title=\"天文·规范：斗\">北斗（斗）</span>之会的次序来确定<span class=\"astronomy\" title=\"天文·规范：填星\">土星（填星）</span>的位置。填星居中央<span class=\"institution\" title=\"名物\">土</span>德，主<span class=\"time\" title=\"时间\">季夏</span>，日为戊、己，对应<span class=\"person\" title=\"人名\">黄帝</span>，主德，是女主之象。每年填守一宿，其所在之国吉。不应居而居，或已离去又复还、还归而居之，其国得土，不然得女。若应居而不居，已居又向西东离去，其国失土，不然失女，不可举事用兵。居留长久，其国福厚；轻易离去，福薄。"
+    },
+    "46": {
+      "title": "",
+      "text": "填星一名叫<span class=\"astronomy\" title=\"天文\">地侯</span>，主岁。每年行十度又百十二分度之五，每日行二十八分度之一，二十<span class=\"time\" title=\"时间·规范：时长\">八年（时长）</span>周天一周。其所居处，<span class=\"astronomy\" title=\"天文\">五星</span>都随之聚于一宿，其下○之国可以重礼取得<span class=\"concept\" title=\"思想\">天下</span>。若礼、德、义、<span class=\"legal\" title=\"刑法\">杀</span>、刑尽失，则<span class=\"astronomy\" title=\"天文·规范：填星\">土星（填星）</span>为之动摇。"
+    },
+    "47": {
+      "title": "",
+      "text": "赢（前进过度），则王者不宁；缩（后退），则有军不能返。<span class=\"astronomy\" title=\"天文·规范：填星\">土星（填星）</span>色黄，有九道芒角，音属<span class=\"institution\" title=\"名物\">黄锺</span>宫。失次而上行二<span class=\"time\" title=\"时间·规范：时长\">三宿（时长）</span>叫赢，主命之事不成，不然就大水。失次下行二<span class=\"time\" title=\"时间·规范：时长\">三宿（时长）</span>叫缩，则有后妃之戚，当年不复原，不然天裂或地动。"
+    },
+    "48": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">斗</span>为文<span class=\"place\" title=\"地名\">太室</span>，是<span class=\"astronomy\" title=\"天文·规范：填星\">土星（填星）</span>之庙，<span class=\"identity\" title=\"身份\">天子</span>之星。"
+    },
+    "49": {
+      "title": "",
+      "text": "木星与土星相合，为内乱。饥荒，主君勿用战，否则败；与水合则变谋而更事；与火合为旱；与金合则为白衣之会于<span class=\"place\" title=\"地名\">若水</span>。金星在南叫牝牡，五谷丰熟；金星在北，岁偏歉收。火星与水合为焠（淬），与金合为铄，主丧事，都不可举事，用兵大败。土主忧，主孽卿；大饥，战败，为<span class=\"official\" title=\"官职\">北军</span>，军被困，举事大败。土与水合，主丰收但阻滞，有军队被覆灭，其国不可举事。出，失地；入，得地。与金合为疾病，为内兵，失地。<span class=\"astronomy\" title=\"天文\">三星</span>若合，其宿所主之地国内外有兵有丧，改立公王。四星合，兵乱丧事并起，<span class=\"concept\" title=\"思想\">君子</span>忧，小人流亡。<span class=\"astronomy\" title=\"天文\">五星</span>合，这叫易行，有德者受庆，改<span class=\"verb-political\" title=\"政治动词\">立</span><span class=\"identity\" title=\"身份\">大人</span>，拥有四方，<span class=\"identity\" title=\"身份\">子孙</span>繁昌；无德者受殃乃至灭亡。<span class=\"astronomy\" title=\"天文\">五星</span>都大，事亦大；都小，事亦小。"
+    },
+    "50": {
+      "title": "",
+      "text": "早出的叫赢，赢者为客（外军）。晚出的叫缩，缩者为主人（本军）。必定有天象应验于斗星。同在一宿叫合。相互陵犯叫斗，相距在<span class=\"quantity\" title=\"数量\">七寸</span>以内必然相斗。"
+    },
+    "51": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">五星</span>颜色白而圆，主丧旱；赤而圆，则中不平，为兵；青而圆，为忧水；黑而圆，为疾病，多死亡；黄而圆，则吉。赤角犯我城，黄角地之争，白角哭泣之声，青角有兵忧，黑角则水。大意：运行穷兵之所终。<span class=\"astronomy\" title=\"天文\">五星</span>同色，<span class=\"concept\" title=\"思想\">天下</span>偃兵，<span class=\"identity\" title=\"身份\">百姓</span>安宁昌盛。<span class=\"time\" title=\"时间\">春</span>有风<span class=\"time\" title=\"时间\">秋</span>有雨，<span class=\"time\" title=\"时间\">冬</span>有寒<span class=\"time\" title=\"时间\">夏</span>有暑，动摇皆以此为准。"
+    },
+    "52": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文·规范：填星\">土星（填星）</span>出现后经<span class=\"time\" title=\"时间\">百二十天</span>而逆行西行，西行<span class=\"time\" title=\"时间\">百二十天</span>反向东行。一共见<span class=\"time\" title=\"时间\">三百三十天</span>而入伏，入伏<span class=\"time\" title=\"时间\">三十天</span>后复出东方。太岁在甲寅时，<span class=\"astronomy\" title=\"天文·规范：镇星\">土星（镇星）</span>在<span class=\"astronomy\" title=\"天文\">东壁</span>，故居于<span class=\"astronomy\" title=\"天文\">营室</span>。"
+    },
+    "53": {
+      "title": "",
+      "text": "观察日行来确定<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>的位置。太白居西方，主<span class=\"time\" title=\"时间\">秋</span>，日为庚、辛，主<span class=\"legal\" title=\"刑法\">杀</span>。<span class=\"legal\" title=\"刑法\">杀</span>有失，惩罚从<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>出。<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>失行，根据其所居星宿来占命相关国。其出行十八宿二百四<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>而入伏。入东方，伏行十一宿百三<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>；入西方，伏行三宿<span class=\"time\" title=\"时间\">十六天</span>而出。应出而不出，应入而不入，这叫失舍，不是有军队被<span class=\"legal\" title=\"刑法\">破</span>，必是国君之位被<span class=\"legal\" title=\"刑法\">篡</span>。"
+    },
+    "54": {
+      "title": "",
+      "text": "其纪年的上元，以<span class=\"astronomy\" title=\"天文\">摄提格</span>之岁为起点，与<span class=\"astronomy\" title=\"天文\">营室</span>在清晨东方出现，到<span class=\"astronomy\" title=\"天文\">角</span>宿而入伏；与<span class=\"astronomy\" title=\"天文\">营室</span>黄昏在西方出现，到<span class=\"astronomy\" title=\"天文\">角</span>而入；与<span class=\"astronomy\" title=\"天文\">角</span>晨出，到<span class=\"astronomy\" title=\"天文\">毕</span>入；与<span class=\"astronomy\" title=\"天文\">角</span>夕出，到<span class=\"astronomy\" title=\"天文\">毕</span>入；与<span class=\"astronomy\" title=\"天文\">毕</span>晨出，到<span class=\"astronomy\" title=\"天文\">箕</span>入；与<span class=\"astronomy\" title=\"天文\">毕</span>夕出，到<span class=\"astronomy\" title=\"天文\">箕</span>入；与<span class=\"astronomy\" title=\"天文\">箕</span>晨出，到<span class=\"astronomy\" title=\"天文\">柳</span>入；与<span class=\"astronomy\" title=\"天文\">箕</span>夕出，到<span class=\"astronomy\" title=\"天文\">柳</span>入；与<span class=\"astronomy\" title=\"天文\">柳</span>晨出，到<span class=\"astronomy\" title=\"天文\">营室</span>入；与<span class=\"astronomy\" title=\"天文\">柳</span>夕出，到<span class=\"astronomy\" title=\"天文\">营室</span>入。 凡东西方出入各五次，共为<span class=\"time\" title=\"时间·规范：时长\">八年（时长）</span>二百二<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，然后复与<span class=\"astronomy\" title=\"天文\">营室</span>晨出于东方。 大致来说，太白一年绕天一周。 其初出东方时，行缓慢，每天行半度，一百二<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，必定逆行一两宿；到极点后反向，东行，每天行一度半，一百二<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>而入伏。 其位低，靠近日，叫<span class=\"astronomy\" title=\"天文\">明星</span>，为柔；高，远日，叫<span class=\"astronomy\" title=\"天文\">大嚣</span>，为刚。 其初出西方时，行急速，每天行一度半，百二<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>；到极点后行缓慢，每天行半度，百二<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，清晨入伏，必定逆行一两宿而入。 其位低，靠近日，叫<span class=\"astronomy\" title=\"天文\">大白</span>，为柔；高，远日，叫<span class=\"astronomy\" title=\"天文\">大相</span>，为刚。 出现于辰、戌，没入于丑、未。"
+    },
+    "55": {
+      "title": "",
+      "text": "应出而不出，不应入而入，<span class=\"concept\" title=\"思想\">天下</span>偃兵，兵在外者回师。不应出而出，应入而不入，则下起兵，有国<span class=\"legal\" title=\"刑法\">破</span>。其按期而出，其国昌盛。其出于东为东方，入于东为北方；出于西为西方，入于西为南方。居留长久的方位，那个方向有利；短暂的方位，那个方向凶。"
+    },
+    "56": {
+      "title": "",
+      "text": "太白出于西方而行至东方，正西<span class=\"feudal-state\" title=\"邦国\">西国</span>吉。出于东方而行至西方，正东<span class=\"feudal-state\" title=\"邦国\">东国</span>吉。太白不应经天；若经天，则<span class=\"concept\" title=\"思想\">天下</span>政权变革。"
+    },
+    "57": {
+      "title": "",
+      "text": "太白小而有芒角动摇，则兵起。初出时大，后来小，则兵弱；初出时小，后来大，则兵强。出于高处，用兵深入则吉，浅则凶；出于低处，则浅入吉，深入凶。日在南方时金居其南，日在北方时金居其北，叫赢，<span class=\"identity\" title=\"身份\">侯王</span>不宁，用兵进则吉退则凶。日在南方时金居其北，日在北方时金居其南，叫缩，<span class=\"identity\" title=\"身份\">侯王</span>有忧，用兵退则吉进则凶。用兵象效<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>：<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>行急，则兵疾行；行迟，则迟行。有芒角，敢<span class=\"legal\" title=\"刑法\">战</span>。动摇躁动，兵亦躁动。圆形而安静，兵亦安静。顺着角所指方向，吉；反之，皆凶。太白出则出兵，入则入兵。赤角，有<span class=\"legal\" title=\"刑法\">战</span>；白角，有丧；黑而圆有角，忧，有水事；青而圆小角，忧，有木事；黄而圆和缓之角，有土事，有丰年。其已出<span class=\"time\" title=\"时间\">三天</span>而复微入，入后<span class=\"time\" title=\"时间\">三天</span>再盛出，这叫\"耎\"，其下国有军<span class=\"legal\" title=\"刑法\">败</span>、将北逃。其已入<span class=\"time\" title=\"时间\">三天</span>又复微出，出<span class=\"time\" title=\"时间\">三天</span>又盛入，其下国有忧；军队虽有粮食兵革，却被他人所用；士卒虽众，将领却被人<span class=\"legal\" title=\"刑法\">虏</span>。太白出西方而失行，外国<span class=\"legal\" title=\"刑法\">败</span>；出东方而失行，<span class=\"place\" title=\"地名\">中国</span><span class=\"legal\" title=\"刑法\">败</span>。其色圆大黄而润泽，可行好事；其圆大赤色，兵盛但不<span class=\"legal\" title=\"刑法\">战</span>。"
+    },
+    "58": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>白色，可比<span class=\"astronomy\" title=\"天文\">狼</span>星；赤色，比<span class=\"astronomy\" title=\"天文\">心</span>星；黄色，比<span class=\"astronomy\" title=\"天文\">参</span>左肩；苍色，比<span class=\"astronomy\" title=\"天文\">参</span>右肩；黑色，比<span class=\"astronomy\" title=\"天文\">奎</span>大星。<span class=\"astronomy\" title=\"天文\">五星</span>都跟随<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>而聚于一宿，其下之国可以用兵平定<span class=\"concept\" title=\"思想\">天下</span>。居于实（星多之处），有所得；居于虚，无所得。行态胜过颜色，颜色胜过位置，有位胜于无位，有色胜于无色，运行完备则全胜。出现后停留在桑榆之间，其下之国有疾患。上行急速，未尽其日已超过参天，则对冲国有疾患。上了又下，下了又上，有反叛之将。其入月中，将领被<span class=\"legal\" title=\"刑法\">僇</span>戮。金、木相合，有光，其下<span class=\"legal\" title=\"刑法\">战</span>；不合，则兵虽起却不相<span class=\"legal\" title=\"刑法\">斗</span>；若合而相毁，则野有军<span class=\"legal\" title=\"刑法\">破</span>。出西方，昏时出于阴面，阴方之兵强；暮食时出，小弱；<span class=\"time\" title=\"时间\">夜半</span>出，中弱；<span class=\"time\" title=\"时间\">鸡鸣</span>出，大弱：这叫阴陷于阳。其在东方，乘黎明出于阳面，阳方之兵强；<span class=\"time\" title=\"时间\">鸡鸣</span>出，小弱；<span class=\"time\" title=\"时间\">夜半</span>出，中弱；昏时出，大弱：这叫阳陷于阴。<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>伏的时候出兵，兵有殃。其出于卯之南，则南胜北方；出于卯之北，则北胜南方；正在卯，<span class=\"feudal-state\" title=\"邦国\">东国</span>利。出于酉之北，则北胜南方；出于酉之南，则南胜北方；正在酉，<span class=\"feudal-state\" title=\"邦国\">西国</span>胜。"
+    },
+    "59": {
+      "title": "",
+      "text": "太白与<span class=\"astronomy\" title=\"天文\">列星</span>相犯，则小<span class=\"legal\" title=\"刑法\">战</span>；与<span class=\"astronomy\" title=\"天文\">五星</span>相犯，则大<span class=\"legal\" title=\"刑法\">战</span>。彼此相犯时，<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>出其南，<span class=\"feudal-state\" title=\"邦国\">南国</span><span class=\"legal\" title=\"刑法\">败</span>；出其北，<span class=\"feudal-state\" title=\"邦国\">北国</span><span class=\"legal\" title=\"刑法\">败</span>。行疾，主武；不行，主文。色白五芒，早出则为<span class=\"astronomy\" title=\"天文\">月蚀</span>之兆，晚出则为<span class=\"astronomy\" title=\"天文\">天夭</span>及<span class=\"astronomy\" title=\"天文\">彗星</span>之兆，将有发兵事发生。出东方为德，举事要左（往）迎之，吉。出西方为刑，举事要右（离）背之，吉。反之皆凶。<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>光明显现出景影，<span class=\"legal\" title=\"刑法\">战</span>必胜。白昼出现而经天，这叫\"争明\"，强国削弱，小国变强，女主昌盛。"
+    },
+    "60": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">亢</span>为疏庙，是<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>之庙。<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>代表<span class=\"identity\" title=\"身份\">大臣</span>，其号为<span class=\"official\" title=\"官职\">上公</span>。其他名号有<span class=\"astronomy\" title=\"天文\">殷星</span>、<span class=\"astronomy\" title=\"天文\">太正</span>、<span class=\"astronomy\" title=\"天文\">营星</span>、<span class=\"astronomy\" title=\"天文\">观星</span>、<span class=\"astronomy\" title=\"天文\">宫星</span>、<span class=\"astronomy\" title=\"天文\">明星</span>、<span class=\"astronomy\" title=\"天文\">大衰</span>、<span class=\"astronomy\" title=\"天文\">大泽</span>、<span class=\"astronomy\" title=\"天文\">终星</span>、<span class=\"astronomy\" title=\"天文\">大相</span>、<span class=\"astronomy\" title=\"天文\">天浩</span>、<span class=\"astronomy\" title=\"天文\">序星</span>、<span class=\"astronomy\" title=\"天文\">月纬</span>。<span class=\"official\" title=\"官职\">大司马</span>位要谨慎观候此星。"
+    },
+    "61": {
+      "title": "",
+      "text": "观察<span class=\"astronomy\" title=\"天文\">日辰</span>之会来确定<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>的位置。辰星位居北方<span class=\"institution\" title=\"名物\">水</span>德，是<span class=\"astronomy\" title=\"天文\">太阴</span>之精华，主<span class=\"time\" title=\"时间\">冬</span>，日为壬、癸。刑有失，惩罚从<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>出，以其宿位占命相关国家。"
+    },
+    "62": {
+      "title": "",
+      "text": "辰星用以正<span class=\"time\" title=\"时间\">四时</span>：<span class=\"time\" title=\"时间\">仲春</span><span class=\"time\" title=\"时间\">春分</span>，黄昏时出现于<span class=\"astronomy\" title=\"天文\">奎</span>、<span class=\"astronomy\" title=\"天文\">娄</span>、<span class=\"astronomy\" title=\"天文\">胃</span>东五宿之郊野，应<span class=\"feudal-state\" title=\"邦国\">齐</span>；<span class=\"time\" title=\"时间\">仲夏</span><span class=\"time\" title=\"时间\">夏至</span>，黄昏时出现于<span class=\"astronomy\" title=\"天文\">东井</span>、<span class=\"astronomy\" title=\"天文\">舆鬼</span>、<span class=\"astronomy\" title=\"天文\">柳</span>东七宿之郊，应<span class=\"feudal-state\" title=\"邦国\">楚</span>；<span class=\"time\" title=\"时间\">仲秋</span><span class=\"time\" title=\"时间\">秋分</span>，黄昏时出现于<span class=\"astronomy\" title=\"天文\">角</span>、<span class=\"astronomy\" title=\"天文\">亢</span>、<span class=\"astronomy\" title=\"天文\">氐</span>、<span class=\"astronomy\" title=\"天文\">房</span>东四宿之郊，应<span class=\"place\" title=\"地名\">汉水</span>；<span class=\"time\" title=\"时间\">仲冬</span><span class=\"time\" title=\"时间\">冬至</span>，清晨出现于东方，与<span class=\"astronomy\" title=\"天文\">尾</span>、<span class=\"astronomy\" title=\"天文\">箕</span>、<span class=\"astronomy\" title=\"天文\">斗</span>、<span class=\"astronomy\" title=\"天文\">牵牛</span>同西行，应<span class=\"place\" title=\"地名\">中国</span>。其出入常在辰、戌、丑、未。"
+    },
+    "63": {
+      "title": "",
+      "text": "辰星早出，主<span class=\"astronomy\" title=\"天文\">月蚀</span>；晚出，主<span class=\"astronomy\" title=\"天文\">彗星</span>及<span class=\"astronomy\" title=\"天文\">天夭</span>。其时当出现却不出现，叫失期，追兵在外不能<span class=\"legal\" title=\"刑法\">战</span>。一时不出，其时不和；<span class=\"time\" title=\"时间\">四时</span>不出，<span class=\"concept\" title=\"思想\">天下</span>大饥。其按期而出，色白为旱，黄为<span class=\"artifact\" title=\"器物\">五穀</span>丰熟，赤为兵，黑为水。出东方，大而白，有兵在外，兵解。常在东方，若赤色，<span class=\"place\" title=\"地名\">中国</span>胜；若在西方而赤，则外国利。若外无兵而色赤，则兵起。其与<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>俱出东方，都赤而有角，则外国大<span class=\"legal\" title=\"刑法\">败</span>，<span class=\"place\" title=\"地名\">中国</span>胜；其与<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>俱出西方，都赤而有角，则外国利。<span class=\"astronomy\" title=\"天文\">五星</span>分布于天之中，若积聚于东方，则<span class=\"place\" title=\"地名\">中国</span>利；积聚于西方，则用兵的外国利。<span class=\"astronomy\" title=\"天文\">五星</span>都跟随<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>而聚于一宿，其所居之国可以用法度取得<span class=\"concept\" title=\"思想\">天下</span>。<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>不出，则<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>为客；其出，则<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>为主。出而与<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>不相随从，则其野虽有军不相<span class=\"legal\" title=\"刑法\">战</span>。辰星出东方，太白出西方；或辰星出西方，太白出东方，叫\"格\"，其野虽有兵不<span class=\"legal\" title=\"刑法\">战</span>。失其时而出，则当寒反温，当温反寒。应出不出，这叫<span class=\"legal\" title=\"刑法\">击</span>卒，兵大起。其入<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>中而上出，则军<span class=\"legal\" title=\"刑法\">破</span>将<span class=\"legal\" title=\"刑法\">杀</span>，客军胜；下出，则客<span class=\"legal\" title=\"刑法\">亡</span>地。<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>来抵<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>，<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>不离开，则将领死。从正旗上出，则军<span class=\"legal\" title=\"刑法\">破</span>将<span class=\"legal\" title=\"刑法\">杀</span>，客胜；下出，则客<span class=\"legal\" title=\"刑法\">亡</span>地。观其旗所指方向，以命将<span class=\"legal\" title=\"刑法\">破</span>军。其绕环<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>，若与太白<span class=\"legal\" title=\"刑法\">斗</span>，则大<span class=\"legal\" title=\"刑法\">战</span>，客胜。\"兔\"过<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>，间隔可容一剑，则小<span class=\"legal\" title=\"刑法\">战</span>，客胜。兔居<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>前，军罢；出<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>左，小<span class=\"legal\" title=\"刑法\">战</span>；摩擦<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>，则有<span class=\"quantity\" title=\"数量\">数万人</span><span class=\"legal\" title=\"刑法\">战</span>，主人之吏死；出<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>右，距离<span class=\"quantity\" title=\"数量\">三尺</span>，军急促相约<span class=\"legal\" title=\"刑法\">战</span>。青角，兵忧；黑角，水。赤行穷兵之所终。"
+    },
+    "64": {
+      "title": "",
+      "text": "\"兔\"有七个名号：<span class=\"astronomy\" title=\"天文\">小正</span>、<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>、<span class=\"astronomy\" title=\"天文\">天欃</span>、<span class=\"astronomy\" title=\"天文\">安周星</span>、<span class=\"astronomy\" title=\"天文\">细爽</span>、<span class=\"astronomy\" title=\"天文\">栖星</span>、<span class=\"astronomy\" title=\"天文\">钩星</span>。其色黄而小，出现而容易变位，则<span class=\"concept\" title=\"思想\">天下</span>的文治变乱而不善。兔有<span class=\"institution\" title=\"名物\">五色</span>之变：青圆为忧，白圆为丧，赤圆中不平，黑圆为吉。赤角犯我城，黄角地之争，白角号泣之声。"
+    },
+    "65": {
+      "title": "",
+      "text": "其出东方，行四宿四<span class=\"time\" title=\"时间\">十八天</span>，所用之数为二<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，而复入于东方；其出西方，行四宿四<span class=\"time\" title=\"时间\">十八天</span>，所用之数为二<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，而复入于西方。其一候之星宿是<span class=\"astronomy\" title=\"天文\">营室</span>、<span class=\"astronomy\" title=\"天文\">角</span>、<span class=\"astronomy\" title=\"天文\">毕</span>、<span class=\"astronomy\" title=\"天文\">箕</span>、<span class=\"astronomy\" title=\"天文\">柳</span>。若出于<span class=\"astronomy\" title=\"天文\">房</span>、<span class=\"astronomy\" title=\"天文\">心</span>之间，则地动。"
+    },
+    "66": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>的颜色变化：<span class=\"time\" title=\"时间\">春</span>，青黄色；<span class=\"time\" title=\"时间\">夏</span>，赤白色；<span class=\"time\" title=\"时间\">秋</span>，青白色，而岁丰熟；<span class=\"time\" title=\"时间\">冬</span>，黄色而不明亮。 若变色异常，该时节就不昌盛。 <span class=\"time\" title=\"时间\">春</span>不见，则大风，<span class=\"time\" title=\"时间\">秋</span>季不结实。 <span class=\"time\" title=\"时间\">夏</span>不见，有六<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>之旱，<span class=\"astronomy\" title=\"天文\">月蚀</span>。 <span class=\"time\" title=\"时间\">秋</span>不见，有兵乱，<span class=\"time\" title=\"时间\">春</span>季不生。 <span class=\"time\" title=\"时间\">冬</span>不见，阴雨六<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，有流亡之邑，<span class=\"time\" title=\"时间\">夏</span>季不生长。"
+    },
+    "67": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">角</span>、<span class=\"astronomy\" title=\"天文\">亢</span>、<span class=\"astronomy\" title=\"天文\">氐</span>，对应<span class=\"place\" title=\"地名\">兗州</span>。 <span class=\"astronomy\" title=\"天文\">房</span>、<span class=\"astronomy\" title=\"天文\">心</span>，对应<span class=\"place\" title=\"地名\">豫州</span>。 <span class=\"astronomy\" title=\"天文\">尾</span>、<span class=\"astronomy\" title=\"天文\">箕</span>，对应<span class=\"place\" title=\"地名\">幽州</span>。 <span class=\"astronomy\" title=\"天文\">斗</span>，对应<span class=\"place\" title=\"地名\">长江</span>、<span class=\"place\" title=\"地名\">湖</span>。 <span class=\"astronomy\" title=\"天文\">牵牛</span>、<span class=\"astronomy\" title=\"天文\">婺女</span>，对应<span class=\"place\" title=\"地名\">杨州</span>。 <span class=\"astronomy\" title=\"天文\">虚</span>、<span class=\"astronomy\" title=\"天文\">危</span>，对应<span class=\"place\" title=\"地名\">青州</span>。 <span class=\"astronomy\" title=\"天文\">营室</span>至<span class=\"astronomy\" title=\"天文\">东壁</span>，对应<span class=\"place\" title=\"地名\">并州</span>。 <span class=\"astronomy\" title=\"天文\">奎</span>、<span class=\"astronomy\" title=\"天文\">娄</span>、<span class=\"astronomy\" title=\"天文\">胃</span>，对应<span class=\"place\" title=\"地名\">徐州</span>。 <span class=\"astronomy\" title=\"天文\">昴</span>、<span class=\"astronomy\" title=\"天文\">毕</span>，对应<span class=\"place\" title=\"地名\">冀州</span>。 <span class=\"astronomy\" title=\"天文\">觜觿</span>、<span class=\"astronomy\" title=\"天文\">参</span>，对应<span class=\"place\" title=\"地名\">益州</span>。 <span class=\"astronomy\" title=\"天文\">东井</span>、<span class=\"astronomy\" title=\"天文\">舆鬼</span>，对应<span class=\"place\" title=\"地名\">雍州</span>。 <span class=\"astronomy\" title=\"天文\">柳</span>、<span class=\"astronomy\" title=\"天文\">七星</span>、<span class=\"astronomy\" title=\"天文\">张</span>，对应<span class=\"place\" title=\"地名\">三河</span>。 <span class=\"astronomy\" title=\"天文\">翼</span>、<span class=\"astronomy\" title=\"天文\">轸</span>，对应<span class=\"place\" title=\"地名\">荆州</span>。"
+    },
+    "68": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">七星</span>为员官，是<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>之庙，<span class=\"tribe\" title=\"族群\">蛮夷</span>之星。"
+    },
+    "69": {
+      "title": "",
+      "text": "两军对阵时，若有<span class=\"astronomy\" title=\"天文\">日晕</span>：晕对等，则双方力量相当；日晕厚长大的一方，能胜；薄短小者，无胜。重重抱晕大<span class=\"legal\" title=\"刑法\">破</span>无抗。抱形为和谐，背形为不和、分离相去。直形为<span class=\"verb-political\" title=\"政治动词\">自立</span>，<span class=\"verb-political\" title=\"政治动词\">立</span><span class=\"identity\" title=\"身份\">侯王</span>；此象主<span class=\"legal\" title=\"刑法\">杀</span>将。负且戴形，有喜事。围晕在中，中方胜；在外，外方胜。青外赤中，则以和平方式相离；赤外青中，则以恶意相离。晕气先到而后去，则驻军方胜。先到先去，前利后受害；后到后去，前受害后利；后到先去，前后皆受害，驻军不胜。见而即去，发作急疾，虽胜无功。见半日以上，功大。白虹屈而短，上下尖锐，下方有大流血。<span class=\"astronomy\" title=\"天文\">日晕</span>制胜的期限，近为三<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，远为六<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>。"
+    },
+    "70": {
+      "title": "",
+      "text": "日食时，所食的方位不利；食之所生，则为所利的方位；若食得益尽，则关乎主位。以所直方位及太阳所宿之位，加上日辰时辰，用以占命相关之国。"
+    },
+    "71": {
+      "title": "",
+      "text": "月行中道，则安宁和平。 行阴间，多水，阴事。 月外北<span class=\"quantity\" title=\"数量\">三尺</span>，为阴星。 北<span class=\"quantity\" title=\"数量\">三尺</span>，为<span class=\"astronomy\" title=\"天文\">太阴</span>，大水，兵。 行阳间，君主骄纵。 阳星，多暴狱。 <span class=\"institution\" title=\"名物\">太阳</span>位，大旱丧事。 <span class=\"astronomy\" title=\"天文\">角</span>、<span class=\"astronomy\" title=\"天文\">天门</span>处，<span class=\"time\" title=\"时间\">十月</span>行则应<span class=\"time\" title=\"时间\">四月</span>之象，<span class=\"time\" title=\"时间\">十一月</span>应<span class=\"time\" title=\"时间\">五月</span>，<span class=\"time\" title=\"时间\">十二月</span>应<span class=\"time\" title=\"时间\">六月</span>，水发，近<span class=\"quantity\" title=\"数量\">三尺</span>，远<span class=\"quantity\" title=\"数量\">五尺</span>。 若犯四辅，辅臣被诛。 行<span class=\"astronomy\" title=\"天文\">南北河</span>，以<span class=\"institution\" title=\"名物\">阴阳</span>而论，旱、水、兵、丧。"
+    },
+    "72": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">月蚀</span><span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>，其宿所主之地，有饥荒或灭亡。蚀<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>则生乱，蚀<span class=\"astronomy\" title=\"天文·规范：填星\">土星（填星）</span>则下犯上，蚀<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>则强国战败，蚀<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>则女人作乱。蚀大<span class=\"astronomy\" title=\"天文\">角</span>，主命者恶之；蚀<span class=\"astronomy\" title=\"天文\">心</span>，则为内贼作乱；蚀<span class=\"astronomy\" title=\"天文\">列星</span>，其宿所主之地有忧患。"
+    },
+    "73": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">月食</span>起始之日，间隔<span class=\"time\" title=\"时间\">五月</span>的有六次，<span class=\"time\" title=\"时间\">六月</span>的有五次，再<span class=\"time\" title=\"时间\">五月</span>的六次，<span class=\"time\" title=\"时间\">六月</span>的一次，再<span class=\"time\" title=\"时间\">五月</span>的五次，共计一百一十<span class=\"time\" title=\"时间\">三月</span>而复始。 故<span class=\"astronomy\" title=\"天文\">月蚀</span>是常见之事；<span class=\"astronomy\" title=\"天文\">日蚀</span>则是不善之兆。 甲、乙日，四海之外，<span class=\"astronomy\" title=\"天文\">日月</span>不占。 丙、丁日，主<span class=\"place\" title=\"地名\">长江</span>、<span class=\"place\" title=\"地名\">淮河</span>、<span class=\"place\" title=\"地名\">海岱</span>地区。 戊、己日，主<span class=\"place\" title=\"地名\">中州</span>、<span class=\"place\" title=\"地名\">黄河</span>、<span class=\"place\" title=\"地名\">济水</span>地区。 庚、辛日，主<span class=\"place\" title=\"地名\">华山</span>以西。 壬、癸日，主<span class=\"place\" title=\"地名\">恆山</span>以北。 <span class=\"astronomy\" title=\"天文\">日蚀</span>，应于国君；<span class=\"astronomy\" title=\"天文\">月蚀</span>，应于<span class=\"identity\" title=\"身份\">将相</span>。"
+    },
+    "74": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">国皇星</span>，大而赤色，形状类似<span class=\"astronomy\" title=\"天文\">南极</span>老人星。所出现之处，其下起兵，兵强；其相冲方向则不利。"
+    },
+    "75": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">昭明星</span>，大而白色，无角，忽上忽下。所出之国，有兵乱兴起，多变故。"
+    },
+    "76": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">五残星</span>，出于正东东方之野。其星形状类似<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>，离地约<span class=\"quantity\" title=\"数量\">六丈</span>。"
+    },
+    "77": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">大贼星</span>，出于正南南方之野。星离地约<span class=\"quantity\" title=\"数量\">六丈</span>，大而赤色，多动，有光。"
+    },
+    "78": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">司危星</span>，出于正西西方之野。星离地约<span class=\"quantity\" title=\"数量\">六丈</span>，大而白色，类似<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>。"
+    },
+    "79": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">狱汉星</span>，出于正北北方之野。星离地约<span class=\"quantity\" title=\"数量\">六丈</span>，大而赤色，多动，细察中间有青色。此四野之星所出，若出非其方，其下有兵，相冲方向则不利。"
+    },
+    "80": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">四填星</span>，出于四隅，离地约<span class=\"quantity\" title=\"数量\">四丈</span>。"
+    },
+    "81": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">地维咸光</span>，也出于四隅，离地约<span class=\"quantity\" title=\"数量\">三丈</span>，好像月亮初升。所见之处，下有乱；乱者亡，有德者昌。"
+    },
+    "82": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">烛星</span>，形状像<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>，出现时不运行。见则即灭。所照之处，城邑有乱。"
+    },
+    "83": {
+      "title": "",
+      "text": "像星非星，像云非云的天象，叫做<span class=\"astronomy\" title=\"天文\">归邪</span>。<span class=\"astronomy\" title=\"天文\">归邪</span>出现，必有归降之国。"
+    },
+    "84": {
+      "title": "",
+      "text": "星，是<span class=\"institution\" title=\"名物\">金</span>的散气，本源于<span class=\"institution\" title=\"名物\">火</span>。星多，国家吉；星少则凶。"
+    },
+    "85": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文·规范：汉\">银河（汉）</span>，也是<span class=\"institution\" title=\"名物\">金</span>的散气，其本源于<span class=\"institution\" title=\"名物\">水</span>。<span class=\"astronomy\" title=\"天文\">汉</span>中星多，则多水；星少则旱，这是大致规律。"
+    },
+    "86": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">天鼓</span>，发出像雷又非雷的声音，声在地下，下及于地。其声传到之处，兵乱在其下发生。"
+    },
+    "87": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">天狗</span>，形状像大<span class=\"astronomy\" title=\"天文\">流星</span>，有声音，坠下至地，类似狗。所落之处，望之如火光炎炎冲天。其下圆如<span class=\"quantity\" title=\"数量\">数顷</span>田之地，上尖者则带黄色，主<span class=\"quantity\" title=\"数量\">千里</span>之内军<span class=\"legal\" title=\"刑法\">破</span>将<span class=\"legal\" title=\"刑法\">杀</span>。"
+    },
+    "88": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">格泽星</span>，形状如炎火。黄白色，从地起而向上。下大，上尖。其见，则不种而有收获；不有土功，必有大害。"
+    },
+    "89": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">蚩尤之旗</span>，类似彗星而后曲，像旗帜。见则<span class=\"official\" title=\"官职\">王者</span><span class=\"legal\" title=\"刑法\">征</span><span class=\"legal\" title=\"刑法\">伐</span>四方。"
+    },
+    "90": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">旬始</span>，出于<span class=\"astronomy\" title=\"天文\">北斗</span>旁边，形状如<span class=\"biology\" title=\"生物\">雄鸡</span>。其怒时，呈青黑色，像伏着的<span class=\"biology\" title=\"生物\">鳖</span>。"
+    },
+    "91": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">枉矢</span>，类似大<span class=\"astronomy\" title=\"天文\">流星</span>，运行时呈苍黑色，望之好像有毛羽。"
+    },
+    "92": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">长庚</span>，像一匹布悬于天空。此星出现，兵乱兴起。"
+    },
+    "93": {
+      "title": "",
+      "text": "星坠落到地上，就变成石头。<span class=\"place\" title=\"地名\">黄河</span>、<span class=\"place\" title=\"地名\">济水</span>之间，时常有<span class=\"astronomy\" title=\"天文\">坠星</span>。"
+    },
+    "94": {
+      "title": "",
+      "text": "天空精明而显现<span class=\"astronomy\" title=\"天文\">景星</span>。<span class=\"astronomy\" title=\"天文\">景星</span>是德星。其形状无常，常出于有道<span class=\"verb-political\" title=\"政治动词\">之国</span>。"
+    },
+    "95": {
+      "title": "",
+      "text": "观望<span class=\"astronomy\" title=\"天文\">云气</span>之法：仰而望之，可见<span class=\"quantity\" title=\"数量\">三四百里</span>；平视望之，在桑榆树梢之上，<span class=\"quantity\" title=\"数量\">千馀</span>至<span class=\"quantity\" title=\"数量\">二千里</span>；登高望之，下接地面的可达<span class=\"quantity\" title=\"数量\">三千里</span>。<span class=\"astronomy\" title=\"天文\">云气</span>上方有兽形者，主胜。"
+    },
+    "96": {
+      "title": "",
+      "text": "自<span class=\"place\" title=\"地名\">华</span>山以南，云气下黑上赤。<span class=\"place\" title=\"地名\">嵩高</span>、<span class=\"place\" title=\"地名\">三河</span>之郊，云气纯赤。<span class=\"place\" title=\"地名\">恆山</span>以北，云气下黑下青。<span class=\"place\" title=\"地名\">勃</span>、<span class=\"place\" title=\"地名\">碣</span>、<span class=\"place\" title=\"地名\">海</span>、<span class=\"place\" title=\"地名\">岱</span>之间，云气都是黑色。<span class=\"place\" title=\"地名\">长江</span>、<span class=\"place\" title=\"地名\">淮河</span>之间，云气都是白色。"
+    },
+    "97": {
+      "title": "",
+      "text": "徒役之气白色。 土功之气黄色。 兵车之气忽高忽下，时聚时散。 骑兵之气低而分布。 士卒之气凝聚。 前低后高的气，行速疾；前方后高的气，方尖锐；后尖而低的，是退却之气。 气平的，行动徐缓。 前高后低的，不止而要返回。 气相遇时，低的胜高的，尖的胜方的。 气来低而沿着车通路径的，不过三四日，距离五六里即可见。 气高<span class=\"quantity\" title=\"数量\">七八尺</span>来的，不过<span class=\"time\" title=\"时间\">五六天</span>，距<span class=\"quantity\" title=\"数量\">十馀里</span>可见。 气高丈馀至<span class=\"quantity\" title=\"数量\">二丈</span>来的，不过三四<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，距<span class=\"quantity\" title=\"数量\">五六十里</span>可见。"
+    },
+    "98": {
+      "title": "",
+      "text": "稍显<span class=\"astronomy\" title=\"天文\">云</span>气精白的，将领悍，士卒怯。 其大根而前端远绝的，必将作战。 青白色，前端低的，战胜；前端赤而仰的，战不胜。 <span class=\"astronomy\" title=\"天文\">阵云</span>像立起的墙。 <span class=\"astronomy\" title=\"天文\">杼云</span>像织杼。 <span class=\"astronomy\" title=\"天文\">轴云</span>凝聚两端尖锐。 <span class=\"astronomy\" title=\"天文\">杓云</span>像绳索的，横亘于天前，有的半天。 有的类似阙旗之形。 <span class=\"astronomy\" title=\"天文\">钩云</span>弯曲如钩。 凡见此类<span class=\"astronomy\" title=\"天文\">云</span>气，要结合<span class=\"institution\" title=\"名物\">五色</span>来占验。 若泽润凝密，显现打动人心，乃有占验；兵必起，合其所直之方。"
+    },
+    "99": {
+      "title": "",
+      "text": "<span class=\"person\" title=\"人名\">王朔</span>所观候的，取决于日旁之气。日旁的<span class=\"astronomy\" title=\"天文\">云气</span>，象征<span class=\"official\" title=\"官职\">人主</span>。都根据其形状来占验。"
+    },
+    "100": {
+      "title": "",
+      "text": "所以<span class=\"tribe\" title=\"族群\">北夷</span>的气像群畜穹庐，<span class=\"tribe\" title=\"族群\">南夷</span>的气像舟船幡旗。大水之处、<span class=\"legal\" title=\"刑法\">败</span>军战场、<span class=\"legal\" title=\"刑法\">破</span>国之墟、下有积钱之处、金宝之上，都有气，不可不察。海边<span class=\"biology\" title=\"生物\">蜄</span>气，形状像楼台；广野之气，形成宫阙之状。<span class=\"astronomy\" title=\"天文\">云气</span>各自象效其<span class=\"place\" title=\"地名\">山川</span>人民所聚积之物。"
+    },
+    "101": {
+      "title": "",
+      "text": "所以观候息秏（兴衰）的人，进入国邑，观察封疆田畴是否治理得好，城郭室屋门户是否润泽，然后观察<span class=\"artifact\" title=\"器物\">车</span>服畜产的精华。实而息的，吉；虚而秏的，凶。"
+    },
+    "102": {
+      "title": "",
+      "text": "像烟非烟，像云非云，郁郁纷纷，萧索轮囷的，这叫<span class=\"astronomy\" title=\"天文\">卿云</span>。<span class=\"astronomy\" title=\"天文\">卿云</span>，是喜气。像雾非雾，能沾湿<span class=\"artifact\" title=\"器物\">衣冠</span>却不濡湿，出现则其地将被甲奔走。"
+    },
+    "103": {
+      "title": "",
+      "text": "雷电、虹霓、霹雳、夜明，是<span class=\"institution\" title=\"名物\">阳气</span>动的表现，<span class=\"time\" title=\"时间\">春</span><span class=\"time\" title=\"时间\">夏</span>则发作，<span class=\"time\" title=\"时间\">秋</span><span class=\"time\" title=\"时间\">冬</span>则收藏，所以候气者都要观察。"
+    },
+    "104": {
+      "title": "",
+      "text": "天开悬物，地动裂绝。山崩与山徙，川塞与谷垘；水澹荡、<span class=\"mythical\" title=\"神话·规范：地增高\">地长（地增高）</span>，都是征象。城郭门闾，闺臬枯朽；宫庙邸第，人民所处。歌谣风俗、车服，观察人民的饮食。<span class=\"artifact\" title=\"器物\">五穀</span><span class=\"biology\" title=\"生物\">草木</span>，观其所属。仓府厩库，四通之路。<span class=\"biology\" title=\"生物\">六畜</span><span class=\"artifact\" title=\"器物\">禽兽</span>，所产所去所就；<span class=\"biology\" title=\"生物\">鱼鳖</span><span class=\"biology\" title=\"生物\">鸟鼠</span>，观其所处。鬼哭或鬼呼，其人遭遇异事。怪异传言，其应诚然。"
+    },
+    "105": {
+      "title": "",
+      "text": "凡候一岁的美恶，谨慎观候岁始。 岁始有时在<span class=\"time\" title=\"时间\">冬至</span>日，生气开始萌发。 腊<span class=\"time\" title=\"时间\">第二天</span>，民众终岁相聚饮食，发动<span class=\"institution\" title=\"名物\">阳气</span>，故叫\"初岁\"。 <span class=\"time\" title=\"时间\">正月</span>旦，是<span class=\"official\" title=\"官职\">王者</span><span class=\"institution\" title=\"名物\">岁首</span>；<span class=\"time\" title=\"时间\">立春</span>日，是<span class=\"time\" title=\"时间\">四时</span>之始。 这四个开始，是观候的关键日子。"
+    },
+    "106": {
+      "title": "",
+      "text": "<span class=\"place\" title=\"地名\">汉水</span>人<span class=\"person\" title=\"人名\">魏鲜</span>汇集于腊日<span class=\"time\" title=\"时间\">正月</span>旦（元旦）来判断八风。风从南方来，大旱；西南来，小旱；西方来，有兵；西北来，<span class=\"biology\" title=\"生物\">戎菽</span>丰收，有小雨，促进兵事；北方来，为中等年景；东北来，为上等年景；东方来，大水；东南来，民有疾疫，岁恶。所以八风各与其相冲之风对验，课验多者为胜。多胜少，久胜亟，疾胜徐。旦至早饭时，为麦；早饭至日昳，为稷；昳至哺时，为黍；哺至下哺，为菽；下哺至日入，为麻。希望<span class=\"time\" title=\"时间\">整天</span>有云、有风、有日。日光正当其时的，禾深而多实；无云有风有日，正当其时，浅而多实；有云风而无日，正当其时，深而少实；有日而无云、无风，正当其时，稼则有败。如一食顷（一顿饭工夫），小败；煮熟五斗米顷，大败。然后若风又起，又有云，稼也恢复起来。各按其时，用云色占该种何种作物。若下雨雪或寒冷，岁恶。"
+    },
+    "107": {
+      "title": "",
+      "text": "这一日光明之时，听都邑人民的声音。声属宫调，则岁善吉；商调，则有兵；徵调，旱；羽调，水；角调，岁恶。"
+    },
+    "108": {
+      "title": "",
+      "text": "或从<span class=\"time\" title=\"时间\">正月</span>旦开始顺次数雨日。每<span class=\"astronomy\" title=\"天文\">日食</span>一升雨，到七升为极限；超过则不占。数到<span class=\"time\" title=\"时间\">十二天</span>，日数直应其月份，占水旱情况。若占其环<span class=\"quantity\" title=\"数量\">千里</span>之内，则为<span class=\"concept\" title=\"思想\">天下</span>候占，在整个<span class=\"time\" title=\"时间\">正月</span>之内。月所离列宿、日、风、云，占其国家情况。然必须察太岁所在。在金位，丰收；水位，毁损；木位，饥荒；火位，旱。这是大致规律。"
+    },
+    "109": {
+      "title": "",
+      "text": "<span class=\"time\" title=\"时间\">正月</span>上甲日，风从东方来，宜蚕；风从西方来，或清晨有黄云，岁恶。"
+    },
+    "110": {
+      "title": "",
+      "text": "<span class=\"time\" title=\"时间\">冬至</span>昼短至极，悬挂土炭以测量，炭动，鹿解角，兰根生出，泉水跳跃，大略以此来知日至，主要靠测量日晷之景。<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>所在之处，<span class=\"artifact\" title=\"器物\">五穀</span>逢丰昌。其相冲之处，岁有殃灾。"
+    },
+    "111": {
+      "title": "",
+      "text": "<span class=\"person\" title=\"人名\">太史公</span>说：自从人类产生以来，历代君主何曾不观测<span class=\"astronomy\" title=\"天文\">日月</span><span class=\"astronomy\" title=\"天文\">星辰</span>？到了<span class=\"quantity\" title=\"数量\">五家</span>、<span class=\"time\" title=\"时间\">三代</span>，承续并阐明其义，内有<span class=\"artifact\" title=\"器物\">冠带</span>之民，外有<span class=\"tribe\" title=\"族群\">夷狄</span>，将<span class=\"place\" title=\"地名\">中国</span>分为十二州，仰观天象，俯察地理。天有<span class=\"astronomy\" title=\"天文\">日月</span>，地有<span class=\"institution\" title=\"名物\">阴阳</span>。天有<span class=\"astronomy\" title=\"天文\">五星</span>，地有<span class=\"institution\" title=\"名物\">五行</span>。天有列宿，地有州域。<span class=\"astronomy\" title=\"天文\">三光</span>是<span class=\"institution\" title=\"名物\">阴阳</span>的精华，气本在地，而<span class=\"concept\" title=\"思想\">圣人</span>统领治理它。"
+    },
+    "112": {
+      "title": "",
+      "text": "从幽王、厉王以上，已很久远了。所见的天变，各国都在自己的地域中记录，各家占验物怪，以配合时事应验，其文图典籍禨祥之说并不统一规范。因此<span class=\"person\" title=\"人名\">孔子</span>论述<span class=\"institution\" title=\"名物\">六经</span>，只记异事而不作解说。至于<span class=\"concept\" title=\"思想\">天道</span>命数，不轻易传授；传给可传之人，不必明说；告诉不可传之人，虽言之也不明。"
+    },
+    "113": {
+      "title": "",
+      "text": "古来传授天数的人：<span class=\"person\" title=\"人名\">高辛</span>之前，是<span class=\"person\" title=\"人名\">重</span>、<span class=\"person\" title=\"人名\">黎</span>；<span class=\"person\" title=\"人名·规范：唐眛\">唐（唐眛）</span>、<span class=\"person\" title=\"人名\">虞</span>时代，是<span class=\"person\" title=\"人名\">羲</span>、<span class=\"person\" title=\"人名\">和</span>；<span class=\"person\" title=\"人名\">夏</span>代，是<span class=\"person\" title=\"人名\">昆吾</span>；<span class=\"person\" title=\"人名\">殷商</span>，是<span class=\"person\" title=\"人名\">巫咸</span>；<span class=\"person\" title=\"人名\">周室</span>，是<span class=\"person\" title=\"人名\">史佚</span>、<span class=\"person\" title=\"人名\">苌弘</span>；<span class=\"feudal-state\" title=\"邦国\">宋</span>国，是<span class=\"person\" title=\"人名\">子韦</span>；<span class=\"feudal-state\" title=\"邦国\">郑</span>国则是<span class=\"person\" title=\"人名\">裨灶</span>；在<span class=\"feudal-state\" title=\"邦国\">齐</span>，是<span class=\"person\" title=\"人名\">甘公</span>；<span class=\"feudal-state\" title=\"邦国\">楚</span>，是<span class=\"person\" title=\"人名\">唐眛</span>；<span class=\"feudal-state\" title=\"邦国\">赵</span>，是<span class=\"person\" title=\"人名\">尹皋</span>；<span class=\"feudal-state\" title=\"邦国\">魏</span>，是<span class=\"person\" title=\"人名\">石申</span>。"
+    },
+    "114": {
+      "title": "",
+      "text": "天道运行，三<span class=\"time\" title=\"时间·规范：时长\">十年（时长）</span>一小变，<span class=\"time\" title=\"时间·规范：时长\">百年（时长）</span>中变，<span class=\"time\" title=\"时间·规范：时长\">五百载（时长）</span>大变；三大变为一纪，三纪为大备：这是大致的数目。治国者必定要重视三十年和五百年的周期。上下各<span class=\"time\" title=\"时间·规范：时长\">千年（时长）</span>观察，然后<span class=\"concept\" title=\"思想\">天人</span>之际的规律才算完备。"
+    },
+    "115": {
+      "title": "",
+      "text": "<span class=\"person\" title=\"人名\">太史公</span>推究古代天变，没有可以考证到今天的。大略来说，<span class=\"time\" title=\"时间\">春秋</span><span class=\"time\" title=\"时间·规范：时长\">二百四十二年（时长）</span>之间，<span class=\"astronomy\" title=\"天文\">日蚀</span>三十六次，<span class=\"astronomy\" title=\"天文\">彗星</span>三次出现，<span class=\"person\" title=\"人名\">宋襄公</span>时有星陨如雨。<span class=\"identity\" title=\"身份\">天子</span>式微，<span class=\"identity\" title=\"身份\">诸侯</span>以武力为政，<span class=\"institution\" title=\"名物\">五伯</span>相继兴起，轮流主持号令。自此之后，众暴寡，大并小。<span class=\"feudal-state\" title=\"邦国\">秦</span>、<span class=\"feudal-state\" title=\"邦国\">楚</span>、<span class=\"feudal-state\" title=\"邦国\">吴</span>、<span class=\"feudal-state\" title=\"邦国\">越</span>，本是<span class=\"tribe\" title=\"族群\">夷狄</span>，成为强霸。<span class=\"dynasty\" title=\"氏族\">田氏</span><span class=\"legal\" title=\"刑法\">篡</span><span class=\"feudal-state\" title=\"邦国\">齐</span>，<span class=\"quantity\" title=\"数量\">三家</span><span class=\"legal\" title=\"刑法\">分</span><span class=\"feudal-state\" title=\"邦国\">晋</span>，并立为<span class=\"feudal-state\" title=\"邦国\">战国</span>。竞相<span class=\"legal\" title=\"刑法\">攻</span>取，兵革更迭而起，城邑屡遭<span class=\"legal\" title=\"刑法\">屠</span>戮，因此饥馑疾疫、焦苦不堪，君臣共担忧患，对于祯祥、<span class=\"astronomy\" title=\"天文\">星气</span>的察验尤其紧迫。近世的十二<span class=\"identity\" title=\"身份\">诸侯</span><span class=\"feudal-state\" title=\"邦国\">七国</span>相继称王，主张纵横之说者接踵而至。而<span class=\"person\" title=\"人名·规范：尹皋\">皋（尹皋）</span>、<span class=\"person\" title=\"人名·规范：唐眛\">唐（唐眛）</span>、<span class=\"person\" title=\"人名·规范：甘公\">甘（甘公）</span>、<span class=\"person\" title=\"人名·规范：石申\">石（石申）</span>等根据时务论述各自的<span class=\"institution\" title=\"名物\">书传</span>，所以其占验繁杂如米盐混杂。"
+    },
+    "116": {
+      "title": "",
+      "text": "<span class=\"astronomy\" title=\"天文\">二十八舍</span>主管十二州，<span class=\"astronomy\" title=\"天文\">斗</span>柄兼领其事，由来已久。<span class=\"feudal-state\" title=\"邦国\">秦</span>之疆域，占候在<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>，占验于<span class=\"astronomy\" title=\"天文\">狼</span>、<span class=\"astronomy\" title=\"天文\">弧</span>。<span class=\"feudal-state\" title=\"邦国\">吴</span>、<span class=\"feudal-state\" title=\"邦国\">楚</span>之疆域，占候在<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>，占验于鸟衡。<span class=\"feudal-state\" title=\"邦国\">燕</span>、<span class=\"feudal-state\" title=\"邦国\">齐</span>之疆，占候在<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>，占验于<span class=\"astronomy\" title=\"天文\">虚</span>、<span class=\"astronomy\" title=\"天文\">危</span>。<span class=\"feudal-state\" title=\"邦国\">宋</span>、<span class=\"feudal-state\" title=\"邦国\">郑</span>之疆，占候在<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>，占验于<span class=\"astronomy\" title=\"天文\">房</span>、<span class=\"astronomy\" title=\"天文\">心</span>。<span class=\"feudal-state\" title=\"邦国\">晋</span>之疆，也占候在<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>，占验于<span class=\"astronomy\" title=\"天文\">参</span>、罚。"
+    },
+    "117": {
+      "title": "",
+      "text": "到<span class=\"feudal-state\" title=\"邦国\">秦</span>兼并三<span class=\"feudal-state\" title=\"邦国\">晋</span>、<span class=\"feudal-state\" title=\"邦国\">燕</span>、<span class=\"feudal-state\" title=\"邦国\">代</span>，从<span class=\"place\" title=\"地名\">河山</span>以南即为<span class=\"place\" title=\"地名\">中国</span>。<span class=\"place\" title=\"地名\">中国</span>在四海之内位居东南方，属阳；阳则对应日、<span class=\"astronomy\" title=\"天文·规范：岁星\">木星（岁星）</span>、<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>、<span class=\"astronomy\" title=\"天文·规范：填星\">土星（填星）</span>；占于街南，由<span class=\"astronomy\" title=\"天文\">毕</span>星主之。其西北则为<span class=\"tribe\" title=\"族群\">胡</span>、<span class=\"tribe\" title=\"族群\">貉</span>、<span class=\"tribe\" title=\"族群\">月氏</span>等穿<span class=\"artifact\" title=\"器物\">旃裘</span>、挽弓的民族，属阴；阴则对应月、<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>、<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>；占于街北，由<span class=\"astronomy\" title=\"天文\">昴</span>星主之。所以<span class=\"place\" title=\"地名\">中国</span><span class=\"place\" title=\"地名\">山川</span>东北流向，其大纲之首在<span class=\"place\" title=\"地名\">陇</span>、<span class=\"place\" title=\"地名\">蜀</span>，尾部没于<span class=\"place\" title=\"地名\">勃</span>、<span class=\"place\" title=\"地名\">碣</span>。因此<span class=\"feudal-state\" title=\"邦国\">秦</span>、<span class=\"feudal-state\" title=\"邦国\">晋</span>好用兵，也占<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>，<span class=\"astronomy\" title=\"天文·规范：太白\">金星（太白）</span>主<span class=\"place\" title=\"地名\">中国</span>；而<span class=\"tribe\" title=\"族群\">胡</span>、<span class=\"tribe\" title=\"族群\">貉</span>屡次侵扰掠夺，单独占<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>，<span class=\"astronomy\" title=\"天文·规范：辰星\">水星（辰星）</span>出入躁疾，常主<span class=\"tribe\" title=\"族群\">夷狄</span>之事：这是大致规律。它们更换为客主。<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>为孛（乱），在外则理兵，在内则理政。所以说\"虽有明<span class=\"identity\" title=\"身份\">天子</span>，必观<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>所在\"。诸侯更强盛，时有菑异之记，没有可记录的。"
+    },
+    "118": {
+      "title": "",
+      "text": "<span class=\"person\" title=\"人名\">秦始皇</span>的时候，<span class=\"time\" title=\"时间·规范：时长\">十五年（时长）</span>之间<span class=\"astronomy\" title=\"天文\">彗星</span>出现四次，最长的八<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>，长的几乎横贯全天。其后<span class=\"feudal-state\" title=\"邦国\">秦</span>便用兵<span class=\"legal\" title=\"刑法\">灭</span>了六王，兼并<span class=\"place\" title=\"地名\">中国</span>，对外<span class=\"legal\" title=\"刑法\">攘</span>逐<span class=\"tribe\" title=\"族群\">四夷</span>，死人如乱麻。因此<span class=\"feudal-state\" title=\"邦国\">张楚</span>等相继兴起，<span class=\"time\" title=\"时间·规范：时长\">三十年（时长）</span>之间兵乱相互交叠，不可胜数。自<span class=\"person\" title=\"人名\">蚩尤</span>以来，未曾有过这样的情形。"
+    },
+    "119": {
+      "title": "",
+      "text": "<span class=\"person\" title=\"人名\">项羽</span><span class=\"legal\" title=\"刑法\">救</span><span class=\"place\" title=\"地名\">钜鹿</span>，<span class=\"astronomy\" title=\"天文\">枉矢</span>向西流去，<span class=\"place\" title=\"地名\">山东</span>便<span class=\"institution\" title=\"名物\">合从</span><span class=\"identity\" title=\"身份\">诸侯</span>，西向<span class=\"legal\" title=\"刑法\">坑</span>杀<span class=\"feudal-state\" title=\"邦国\">秦</span>人，<span class=\"legal\" title=\"刑法\">诛</span><span class=\"legal\" title=\"刑法\">屠</span><span class=\"place\" title=\"地名\">咸阳</span>。"
+    },
+    "120": {
+      "title": "",
+      "text": "<span class=\"feudal-state\" title=\"邦国\">汉</span>朝兴起的时候，<span class=\"astronomy\" title=\"天文\">五星</span>聚于<span class=\"astronomy\" title=\"天文\">东井</span>。<span class=\"place\" title=\"地名\">平城</span>之围时，<span class=\"astronomy\" title=\"天文\">月晕</span><span class=\"astronomy\" title=\"天文\">参</span>、<span class=\"astronomy\" title=\"天文\">毕</span>七重。<span class=\"dynasty\" title=\"氏族\">诸吕</span><span class=\"legal\" title=\"刑法\">作乱</span>时，有<span class=\"astronomy\" title=\"天文\">日蚀</span>，白昼昏暗。<span class=\"feudal-state\" title=\"邦国\">吴楚</span><span class=\"feudal-state\" title=\"邦国\">七国</span><span class=\"legal\" title=\"刑法\">叛</span><span class=\"legal\" title=\"刑法\">逆</span>时，<span class=\"astronomy\" title=\"天文\">彗星</span>长达<span class=\"quantity\" title=\"数量\">数丈</span>，<span class=\"astronomy\" title=\"天文\">天狗</span>经过<span class=\"place\" title=\"地名\">梁</span>野；到兵起时，便伏尸流血于其下。<span class=\"time\" title=\"时间\">元光</span>、<span class=\"time\" title=\"时间\">元狩</span>年间，<span class=\"astronomy\" title=\"天文\">蚩尤之旗</span>再次出现，长时横贯半天。此后<span class=\"place\" title=\"地名\">京师</span>军队四出，<span class=\"legal\" title=\"刑法\">诛</span>戮<span class=\"tribe\" title=\"族群\">夷狄</span>达<span class=\"time\" title=\"时间·规范：时长\">数十年（时长）</span>，而<span class=\"legal\" title=\"刑法\">伐</span><span class=\"tribe\" title=\"族群\">胡</span>尤其惨烈。<span class=\"feudal-state\" title=\"邦国\">越</span>灭亡时，<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>守<span class=\"astronomy\" title=\"天文\">斗</span>；<span class=\"feudal-state\" title=\"邦国\">朝鲜</span>被攻拔时，星茀于<span class=\"astronomy\" title=\"天文\">河戍</span>；兵<span class=\"legal\" title=\"刑法\">征</span><span class=\"feudal-state\" title=\"邦国\">大宛</span>时，星茀于<span class=\"astronomy\" title=\"天文\">招摇</span>：这都是显著的大事。至于细微的小变化，不可胜说。由此观之，没有不先有天象显现而应验随之的。"
+    },
+    "121": {
+      "title": "",
+      "text": "自从<span class=\"feudal-state\" title=\"邦国\">汉</span>朝负责天数的人：星象是<span class=\"person\" title=\"人名\">唐都</span>，气象是<span class=\"person\" title=\"人名\">王朔</span>，占岁是<span class=\"person\" title=\"人名\">魏鲜</span>。所以<span class=\"person\" title=\"人名·规范：甘公\">甘（甘公）</span>、<span class=\"person\" title=\"人名·规范：石申\">石（石申）</span>推算<span class=\"astronomy\" title=\"天文\">五星</span>之法，只有<span class=\"astronomy\" title=\"天文·规范：荧惑\">火星（荧惑）</span>有反逆行；其逆行所守之处，及其他星逆行、<span class=\"astronomy\" title=\"天文\">日月</span>薄蚀，都作为占验依据。"
+    },
+    "122": {
+      "title": "",
+      "text": "我观察<span class=\"institution\" title=\"名物\">史记</span>，考察行事，百年以来，<span class=\"astronomy\" title=\"天文\">五星</span>无有出现而不反逆行的，反逆行时，常常盛大而变色；<span class=\"astronomy\" title=\"天文\">日月</span>薄蚀，南北运行有时节可循：这是大致的规律。所以<span class=\"astronomy\" title=\"天文\">紫宫</span>、<span class=\"astronomy\" title=\"天文\">房心</span>、权衡、<span class=\"astronomy\" title=\"天文\">咸池</span>、<span class=\"astronomy\" title=\"天文\">虚危</span>等列宿部星，是天的<span class=\"institution\" title=\"名物\">五官</span>座位，为经（纬中的经），不移动，大小有差别，阔狭有定规。水、火、金、木、<span class=\"astronomy\" title=\"天文·规范：填星\">土星（填星）</span>，这<span class=\"astronomy\" title=\"天文\">五星</span>，是天的五佐，为纬，显见与伏匿有定时，所经行的赢缩有定度。"
+    },
+    "123": {
+      "title": "",
+      "text": "日变修德行，月变省刑罚，星变结和睦。凡天变，超过常度才加以占验。国君强大，有德者昌；器量小，饰诈者亡。<span class=\"person\" title=\"人名\">太上</span>修德，其次修政，其次修救，其次修禳，正下之下则什么都不修。常星（恒星）的变化少见，而<span class=\"astronomy\" title=\"天文·规范：日月五星\">三光（日月五星）</span>之占常用。<span class=\"astronomy\" title=\"天文\">日月</span>晕适、云、风，是天的客气，其发见也有大的运数。然而它们与政事俯仰相应，是最贴近人事的征兆。这五者（日变、月变、星变、晕适云风、客气），是天的感应。为天数者，必通三十年与五百年的周期。从古到今始终如一，深观时变，察其精粗，则<span class=\"institution\" title=\"名物\">天官</span>之学就完备了。"
+    },
+    "124": {
+      "title": "",
+      "text": "<span class=\"person\" title=\"人名\">苍帝</span>行德，<span class=\"astronomy\" title=\"天文\">天门</span>为之开启。 <span class=\"person\" title=\"人名\">赤帝</span>行德，<span class=\"astronomy\" title=\"天文\">天牢</span>为之空虚。 <span class=\"person\" title=\"人名\">黄帝</span>行德，<span class=\"astronomy\" title=\"天文\">天夭</span>为之起动。 风从西北来，必在庚、辛日。 一个<span class=\"time\" title=\"时间\">秋</span>季中，风至五次，<span class=\"legal\" title=\"刑法\">大赦</span>；三次，小<span class=\"verb-political\" title=\"政治动词\">赦</span>。 <span class=\"person\" title=\"人名\">白帝</span>行德，在<span class=\"time\" title=\"时间\">正月</span>二<span class=\"time\" title=\"时间·规范：时长\">十天（时长）</span>、二十<span class=\"time\" title=\"时间\">一天</span>，<span class=\"astronomy\" title=\"天文\">月晕</span>围合，常为<span class=\"legal\" title=\"刑法\">大赦</span>之载，这叫做有<span class=\"institution\" title=\"名物\">太阳</span>之象。 又一说：<span class=\"person\" title=\"人名\">白帝</span>行德，<span class=\"astronomy\" title=\"天文\">毕</span>、<span class=\"astronomy\" title=\"天文\">昴</span>为之围。 围三晚，德乃成；不满三晚，及围不合，则德不成。 又一说：以辰时围，不出其旬。 <span class=\"person\" title=\"人名\">黑帝</span>行德，<span class=\"astronomy\" title=\"天文\">天关</span>为之动。 天行德，<span class=\"identity\" title=\"身份\">天子</span>改元立新年；不德，则风雨破石。 <span class=\"astronomy\" title=\"天文\">三能</span>、<span class=\"astronomy\" title=\"天文\">三衡</span>，是<span class=\"astronomy\" title=\"天文\">天廷</span>。 客星出现在<span class=\"astronomy\" title=\"天文\">天廷</span>，则有奇异号令。"
+    },
+    "125": {
+      "title": "",
+      "text": "在天成象，有如影响。 观其文采察其变化，其来自往。 <span class=\"institution\" title=\"名物\">天官</span>之学既已写成，<span class=\"person\" title=\"人名\">太史</span>负责掌管。 <span class=\"astronomy\" title=\"天文\">云</span>物必记，<span class=\"astronomy\" title=\"天文\">星辰</span>可仰。 盈缩不失其度，应验毫无差爽。 至哉玄妙的监察，谁能网罗得尽！"
+    }
+  }
 }

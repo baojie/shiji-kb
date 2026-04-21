@@ -68,7 +68,15 @@ description: "史记章节按PN段落进行文言文到白话文的翻译规范"
    - **原文未消歧时不擅自添加**：若原文是 `〖@桓公〗`（无 `|`），白话保持 `〖@桓公〗`；只有原文已经做了消歧的，才继承
    - **渲染规则**：白话 HTML 渲染时应优先显示**规范名**（`|` 右侧），文言渲染保持显示**显示名**（`|` 左侧）——详见 `scripts/semantic_tags.py` 的白话渲染模式
 
-6. **段落标题**：为每个PN段落提炼一个简短标题（4-8字），概括段落主要内容
+6. **段落标题**：为每个PN段落提炼一个简短标题（4-8字），概括段落主要内容；若难提炼可留空（但 `## [X]` 头必须有）。JSON 生成器已容错（027 等仅 `## [N]` 无标题章节正常）。
+
+7. **空父级 PN 必须占位**：源 `[N]` 无内容但有子段 `[N.1]...` 时，白话仍必须写 `## [N] 本段` + "（本段内容在以下子段中。）"。否则前端翻译框无定位锚点。
+
+8. **严禁 `---` 行**：JSON 解析器按首个 `---` 切分文档；译文中**绝对不要**出现独立 `---` 行（历史教训：003 因此丢失 [34][35]）。
+
+9. **不要保留 `[0]`**：源中 `[0]` 是章节标题，HTML 页面已有 `<h1>`，白话译文不需要 `## [0]`；否则前端会多一块冗余翻译。
+
+10. **表章仅译散文**：013-022 表章只翻 `[N]`/`[N.M]` 数字编号，跳过 `[aN]`/`[rN]`/`[bN]` 等字母前缀表行。
 
 **输出格式**：
 ## [X] 段落标题
@@ -97,17 +105,31 @@ mkdir -p doc/translation
 
 ### 2. 翻译执行
 使用Task工具批量调用translation subagent：
-- 每次处理5-10个PN段落
-- 传入完整的原文内容和PN编号
-- 收集agent返回的译文
+- 小/中章（<500 行）：单 agent 全章翻译
+- 中大章（500-1000 行）：单 agent 但注意 stall
+- **超长章（>1000 行或 >400 PN）**：必须**分 part 并行**翻译（部分区间 [1-50]/[51-100]/... 各存入 `_partN.md`），完成后 shell 合并并 `scripts/generate_translation_json.py`。006/007/008/128/130 均用此模式。单 agent 强行翻一个超长章节会被 watchdog kill（stall 600s）。
+- 容错：API 配额用尽或内容过滤触发时重试，必要时缩小区间再分。
 
 ### 3. 质量检查
-```bash
-# 检查实体标注完整性
-python scripts/verify_entity_tags.py doc/translation/NNN_章节名_白话.md
 
-# 检查PN编号完整性
-python scripts/verify_pn_completeness.py doc/translation/NNN_章节名_白话.md chapter_md/NNN_章节名.tagged.md
+标准的三步校验（通常在 agent 内嵌 inline Python 即可）：
+
+```python
+import re
+src = open('chapter_md/NNN_章节名.tagged.md').read()
+tgt = open('doc/translation/NNN_章节名_白话.md').read()
+src_pns = sorted(set(re.findall(r'\[(\d+(?:\.\d+)*)\]', src)))
+src_pns = [p for p in src_pns if p != '0']
+tgt_pns = sorted(set(re.findall(r'^## \[(\d+(?:\.\d+)*)\]', tgt, re.M)))
+missing = [p for p in src_pns if p not in tgt_pns]
+extra = [p for p in tgt_pns if p not in src_pns]
+print(f'src={len(src_pns)} tgt={len(tgt_pns)} missing={missing[:5]} extra={extra[:5]}')
+```
+
+全库审核：
+```bash
+# 全库 PN/标注对齐、surface 消歧一致性审核
+python scripts/sync_translation_disambig.py --all
 ```
 
 ### 4. 生成JSON输出文件
@@ -249,6 +271,48 @@ python scripts/sync_translation_disambig.py 002 --apply
 
 ---
 
+## Surface 翻译（白话化古词）
+
+源 tagged.md 里某些 surface 是文言形式（"岁/馀/雒/江/河"等），白话译文应改为现代形式。脚本 `scripts/translate_surface.py` 集中维护这些规则：
+
+```bash
+# 审核（dry-run）
+python scripts/translate_surface.py --all
+
+# 应用
+python scripts/translate_surface.py --all --apply
+
+# 完后重跑 JSON
+python scripts/generate_translation_json.py --all
+```
+
+**已内置规则**：
+- **时间 `%`**：岁→年（|时长 语境）、岁馀→一年多、月馀→一个多月、十馀X→十多X、X日→X天、明日→第二天、终日→整天 等
+- **地名 `=`**：单字河流 江→长江 / 河→黄河 / 淮→淮河 / 济→济水 / 汉/洛/渭/泾/泗/沂→加"水"后缀；雒→洛（全部含雒地名）
+- **天文 `!`**：太白→金星|太白、荧惑→火星|荧惑、辰星→水星|辰星、岁星→木星|岁星、填星/镇星→土星
+- **典籍 `{`**：诗→诗经|诗、书→尚书|书、易→易经|易、礼→礼记|礼、乐→乐经|乐
+- **身份 `#`**：黔首→百姓|黔首、黎民→百姓|黎民、黎庶→百姓|黎庶、黔黎→百姓|黔黎
+
+**不翻译**（保留原貌）：
+- 官职/邦国/氏族/族群/器物/生物/数量/刑法/思想：或为专有名词，或现代仍用
+- 身份中 寡人/朕/孤/庶人/布衣：历史自称和语感不宜抹去
+- 制度 `^` 和 礼仪 `:`：史记专有制度名与礼节
+
+**扩展规则**：直接编辑 `translate_surface.py` 的 `EXACT_REPLACEMENTS` 或 `REGEX_RULES`，再 `--all --apply` 生效。
+
+**冗余括号自动清理**：脚本还会清理 `〖T X|Y〗（Z）` 中 Z∈{X,Y} 的冗余解释括号（防止渲染出 "X（Y）（Z）"）。
+
+---
+
+## 成语渲染
+
+`〘※成语〙` 或 `〘※shiji|modern〙` 在 `render_tags_to_html` 中渲染为 `<span class="idiom">`：
+- 文言模式：显示 shiji 形式
+- 白话模式（prefer_canonical=True）：若有 modern 显示 `shiji（modern）`；否则显示 shiji
+- CSS 类名 `idiom`（`docs/css/shiji-styles.css` L250 起）
+
+---
+
 ## 注意事项
 
 1. **实体标注是强制要求**：译文中必须完整保留原文的所有实体标注，这是知识图谱构建的基础
@@ -281,5 +345,6 @@ python scripts/sync_translation_disambig.py 002 --apply
 
 ---
 
-**最后更新**: 2026-04-14
-**关联文件**: `doc/translation/`, `chapter_md/*.tagged.md`
+**最后更新**: 2026-04-22（130 章白话翻译全库落地，增补消歧继承/surface 翻译/成语渲染/超长章分 part 等规范）
+**关联文件**: `doc/translation/`, `chapter_md/*.tagged.md`, `docs/translations/*.json`
+**关联脚本**: `scripts/generate_translation_json.py`, `scripts/semantic_tags.py`, `scripts/sync_translation_disambig.py`, `scripts/translate_surface.py`
