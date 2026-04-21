@@ -2,14 +2,14 @@
 
 > 完整的史记知识库SKILL体系索引，包含元技能（Meta-Skills）和管线技能（Pipeline Skills）
 
-**最后更新**：2026-04-03
+**最后更新**：2026-04-21
 
 ---
 
 ## 导航
 
 - [元技能（Meta-Skills）](#元技能meta-skills) - 14个通用方法论
-- [管线技能（Pipeline Skills）](#管线技能pipeline-skills) - 59个专项技能
+- [管线技能（Pipeline Skills）](#管线技能pipeline-skills) - 87个专项技能
   - [00 管线总览](#00-管线总览)
   - [01 古籍校勘](#01-古籍校勘)
   - [02 结构分析](#02-结构分析)
@@ -21,9 +21,9 @@
   - [08 知识库管驭](#08-知识库管驭)
   - [09 应用构造](#09-应用构造)
   - [10 项目管理](#10-项目管理)
-- [参考文档（References）](#参考文档references) - 3个支撑文档
+- [参考文档（References）](#参考文档references) - 28个支撑文档
 - [草稿文档（Drafts）](#草稿文档drafts) - 待完善的元技能
-- [归档文档（Archive）](#归档文档archive) - 1个历史文档
+- [归档文档（Archive）](#归档文档archive) - 3个历史文档
 
 ---
 
@@ -75,6 +75,7 @@
 | 01e | [SKILL_01e_繁简体处理.md](SKILL_01e_繁简体处理.md) | 繁简转换与异体字统一（归入校勘工序） |
 | 01f | [SKILL_01f_句读和标点校勘.md](SKILL_01f_句读和标点校勘.md) | 句读断句、标点符号规范、质量控制（最前置工序） |
 | 01g | [SKILL_01g_标注符号集合原则.md](SKILL_01g_标注符号集合原则.md) | 标点/标注/Markdown符号完全分离原则 |
+| 01h | [SKILL_01h_白话翻译.md](SKILL_01h_白话翻译.md) | 史记章节按PN段落进行文言文到白话文的翻译规范 |
 
 ### 02 结构分析
 
@@ -102,9 +103,14 @@
 | 03b | [SKILL_03b_人名消歧.md](SKILL_03b_人名消歧.md) | 同名异人/异名同人消歧 |
 | 03c | [SKILL_03c_按章反思.md](SKILL_03c_按章反思.md) | 按章反思审查，系统性误标修正 |
 | 03d | [SKILL_03d_渲染与发布.md](SKILL_03d_渲染与发布.md) | HTML渲染与结构语义表现（衔接SKILL 09a） |
-| 03e | [SKILL_03e_按类型反思.md](SKILL_03e_按类型反思.md) | 按实体类型反思审查，专项误标修正 |
+| 03e | [SKILL_03e_按类型反思.md](SKILL_03e_按类型反思.md) | 按类型反思总入口（路由到 03e1/03e2） |
+| 03e1 | [references/SKILL_03e1_跨类型迁移.md](references/SKILL_03e1_跨类型迁移.md) | 跨类型迁移：源头标错类的整体迁移（三阶段法 always/context/new_candidates） |
+| 03e2 | [references/SKILL_03e2_按类型反思纠错.md](references/SKILL_03e2_按类型反思纠错.md) | 按类型反思纠错：对一级实体类型做多轮反思+纠错（L1-L5 分层 + R1-R7 反思），子类设计为起点。方法论见 doc/entities/实体细分分类与纠错方法论.md |
 | 03f | [SKILL_03f_实体边界错误综合反思.md](SKILL_03f_实体边界错误综合反思.md) | 实体边界错误专项反思 |
 | 03g | [SKILL_03g_时间实体消歧.md](SKILL_03g_时间实体消歧.md) | 相对年份→公元年（76.8%覆盖率，6648条） |
+| 03h | [SKILL_03h_地名地段分类.md](SKILL_03h_地名地段分类.md) | place 实体"地段"二级分类（水域/山脉/城邑/郡/县/建筑…，14类） |
+| 03i | [SKILL_03i_官职分类.md](SKILL_03i_官职分类.md) | official 实体"职类"二级分类（三公/九卿/军职/爵位/王号…，21类） |
+| 03j | [SKILL_03j_人名分类.md](SKILL_03j_人名分类.md) | person 实体"身份类"二级分类（帝王/将相/谋臣/学者…，16类）+ alias 合并工作流 |
 
 ### 04 事件构建
 
@@ -138,6 +144,7 @@
 | 06b | [SKILL_06b_属性关系约束构建.md](SKILL_06b_属性关系约束构建.md) | 属性/关系/约束定义、OWL properties和constraints（规划） |
 | 06c | [SKILL_06c_规则构建.md](SKILL_06c_规则构建.md) | 领域规则/推理规则/验证规则（规划） |
 | 06d | [SKILL_06d_推理机构建.md](SKILL_06d_推理机构建.md) | 本体/规则推理、约束检查、冲突检测（规划） |
+| 06e | [SKILL_06e_概念分类树构建.md](SKILL_06e_概念分类树构建.md) | Bottom-Up 分类树构建、实例→归纳→TTL→MD、颗粒度动态调整 |
 
 ### 07 逻辑推理
 
@@ -193,7 +200,7 @@
 | 10d | [SKILL_10d_CHANGELOG编写规范.md](SKILL_10d_CHANGELOG编写规范.md) | CHANGELOG格式、详略原则、Commit/Issue链接 |
 | 10e | [SKILL_10e_文件组织与目录结构.md](SKILL_10e_文件组织与目录结构.md) | 项目目录结构规范、文件分类决策树、流转路径 |
 | 10f | [SKILL_10f_Skill的提炼与转化.md](SKILL_10f_Skill的提炼与转化.md) | Skill工程化规范、质量检查、脚本关联 |
-| 10g | [SKILL_10g_项目成本统计.md](SKILL_10g_项目成本统计.md) | Claude Code Token使用量统计、成本分析、定期报告生成 |
+| 10g | [SKILL_10g_项目成本与时间统计.md](SKILL_10g_项目成本与时间统计.md) | Token成本统计、用户时间投入统计、工作效率分析、定期报告生成 |
 
 **PDF合集下载**：[史记知识库构造管线技能手册.pdf](../resources/publications/pipeline-skills-book/史记知识库构造管线技能手册.pdf)
 （发布日期：2026-03-19，438页，3.01MB，包含40个管线SKILL）
@@ -202,13 +209,65 @@
 
 ## 参考文档（References）
 
-> 支撑主SKILL的详细规则库和数据表
+> 支撑主SKILL的详细规则库、方法论细节与数据表，按关联一级SKILL分组
+
+### 01 古籍校勘相关
 
 | 文件 | 说明 | 关联SKILL |
 |------|------|----------|
-| [SKILL_03c1-v2-rules.md](references/SKILL_03c1-v2-rules.md) | 按章反思规律库 v2（134 条，压缩版；v1 见 archive/SKILL_03c1-v1-rules.md） | SKILL_03c |
+| [SKILL_01a1_标注格式规范.md](references/SKILL_01a1_标注格式规范.md) | 史记知识库 Markdown 和 HTML 格式完整规范 | SKILL_01a |
+| [SKILL_01d1_词表设计原则详解.md](references/SKILL_01d1_词表设计原则详解.md) | 特殊读音词表设计原则、版本演化、典型案例分析 | SKILL_01d |
+| [SKILL_01d2_史记正义提取方法.md](references/SKILL_01d2_史记正义提取方法.md) | 从《史记正义》提取特殊读音的方法论与质检流程 | SKILL_01d |
+| [SKILL_01d3_技术实现细节.md](references/SKILL_01d3_技术实现细节.md) | 前端 Ruby 标注技术、性能优化、故障排除 | SKILL_01d |
+| [SKILL_01d4_拼音标注质量规范v3.0.md](references/SKILL_01d4_拼音标注质量规范v3.0.md) | 拼音标注质量规范与评估指标 v3.0 | SKILL_01d |
+| [SKILL_01d5_多音字处理分析.md](references/SKILL_01d5_多音字处理分析.md) | 多音字处理方案总结、基础统计与策略 | SKILL_01d |
+| [SKILL_01d6_拼音注释功能规范.md](references/SKILL_01d6_拼音注释功能规范.md) | HTML5 `<ruby>` 拼音注释功能完整规范 | SKILL_01d |
 | [SKILL-01e-rules-繁简词表构造规则.md](references/SKILL-01e-rules-繁简词表构造规则.md) | 繁简词表完整构造规则 | SKILL_01e |
+| [SKILL_01f_background.md](references/SKILL_01f_background.md) | 句读与标点校勘背景、换行配置、技术方案对比、FAQ | SKILL_01f |
+| [SKILL_01f_code_examples.md](references/SKILL_01f_code_examples.md) | gj.cool API / 本地模型断句 / 标点规范化代码示例 | SKILL_01f |
+
+### 02 结构分析相关
+
+| 文件 | 说明 | 关联SKILL |
+|------|------|----------|
+| [SKILL_02a1_Purple_Numbers编号详细规范.md](references/SKILL_02a1_Purple_Numbers编号详细规范.md) | PN 三级编号格式、父子关系、连续性规则 | SKILL_02a |
+| [SKILL_02a2_回车规则.md](references/SKILL_02a2_回车规则.md) | 标注文件段落内换行与合并规则 | SKILL_02a |
+| [SKILL_02b1_韵文识别规则.md](references/SKILL_02b1_韵文识别规则.md) | 赞/诗歌/赋自动识别与标题提取规则 | SKILL_02b |
+| [SKILL_02b2_散文识别规则.md](references/SKILL_02b2_散文识别规则.md) | 诏令/奏疏/书信/檄文/策论/议论识别 + manifest 维护 | SKILL_02b |
+| [SKILL_02b2_赞文排版质量控制.md](references/SKILL_02b2_赞文排版质量控制.md) | 赞文四言韵文排版规范、格式检查与自动修复 | SKILL_02b |
+| [SKILL_02e1_动词标注规范.md](references/SKILL_02e1_动词标注规范.md) | 动词标注完整语法规范、分类体系（v3.3） | SKILL_02e |
+
+### 03 实体构建相关
+
+| 文件 | 说明 | 关联SKILL |
+|------|------|----------|
+| [SKILL_03a1_标注符号迁移.md](references/SKILL_03a1_标注符号迁移.md) | 标注符号系统级迁移实战方法论 | SKILL_03a |
+| [SKILL_03c1-v2-rules.md](references/SKILL_03c1-v2-rules.md) | 按章反思规律库 v2（134 条，压缩版；v1 见 archive） | SKILL_03c |
+| [SKILL_03e1_跨类型迁移.md](references/SKILL_03e1_跨类型迁移.md) | 跨类型迁移：源头标错类的整体迁移（always/context/new_candidates 三阶段法） | SKILL_03e |
+| [SKILL_03e2_按类型反思纠错.md](references/SKILL_03e2_按类型反思纠错.md) | 按类型反思纠错：一级类型 L1-L5 分层 + R1-R7 多轮反思（方法论见 doc/entities/实体细分分类与纠错方法论.md） | SKILL_03e |
+
+### 04–05 事件与关系相关
+
+| 文件 | 说明 | 关联SKILL |
+|------|------|----------|
+| [SKILL_04f1-rules.md](references/SKILL_04f1-rules.md) | 动词标注规律库 V.1-V.8 + E 系列格式残留扫描 | SKILL_04f |
 | [SKILL_05d1_rules.md](references/SKILL_05d1_rules.md) | 事实抽取四大核心原则（v1.0） | SKILL_05d |
+
+### 08 知识库管驭相关
+
+| 文件 | 说明 | 关联SKILL |
+|------|------|----------|
+| [SKILL_08b1_标注完成情况统计.md](references/SKILL_08b1_标注完成情况统计.md) | 字级/实体级/章节级/专题级四类标注统计方法 | SKILL_08b |
+
+### 10 项目管理相关
+
+| 文件 | 说明 | 关联SKILL |
+|------|------|----------|
+| [SKILL_10c1_禁止命令清单.md](references/SKILL_10c1_禁止命令清单.md) | `.claude/settings.json` deny 列表分析与建议 | SKILL_10c |
+| [SKILL_10f1_模板库.md](references/SKILL_10f1_模板库.md) | Skill 标准结构模板库 | SKILL_10f |
+| [SKILL_10f2_精简拆分案例库.md](references/SKILL_10f2_精简拆分案例库.md) | Skill 超过 500 行的精简与拆分案例 | SKILL_10f |
+| [SKILL_10f3_更新维护指南.md](references/SKILL_10f3_更新维护指南.md) | Skill 更新触发条件、标准流程、验证方法 | SKILL_10f |
+| [SKILL_10f4_脚本分解示例.md](references/SKILL_10f4_脚本分解示例.md) | 大型脚本拆分为可复用小脚本的方法与案例 | SKILL_10f |
 
 ---
 
@@ -233,6 +292,8 @@
 | 文件 | 说明 | 归档原因 |
 |------|------|---------|
 | [SKILL_01f_繁简词库构造分析.md](archive/SKILL_01f_繁简词库构造分析.md) | 繁简体词库自动构造的方法论探索 | 三次尝试均失败，记录经验教训 |
+| [SKILL_03c1-v1-rules.md](archive/SKILL_03c1-v1-rules.md) | 按章反思规律库 v1（完整版） | 已压缩为 v2（见 references/SKILL_03c1-v2-rules.md） |
+| [SKILL_10f_Skill的提炼与转化_20260402.md](archive/SKILL_10f_Skill的提炼与转化_20260402.md) | Skill 工程化规范早期完整版 | 已精简拆分为 10f + 10f1/10f2/10f3/10f4 |
 
 ---
 
@@ -246,16 +307,16 @@
 
 ## 统计数据
 
-**截至2026-04-03**：
+**截至2026-04-21**：
 - **元技能**：14个
-- **管线技能**：78个（含子SKILL）
-  - 一级SKILL（总览）：11个
-  - 二级SKILL（专项）：67个
-- **参考文档**：3个（三级SKILL结构）
+- **管线技能**：87个（含子SKILL）
+  - 一级SKILL（总览）：11个（00-10）
+  - 二级SKILL（专项）：76个
+- **参考文档**：28个（三级SKILL，references/ 子目录）
 - **草稿文档**：5个（待完善）
-- **归档文档**：1个（失败案例）
+- **归档文档**：3个（失败案例 / 历史版本）
 
-**总计**：99个SKILL文档（不含草稿和归档）
+**总计**：129个SKILL文档（不含草稿和归档）
 
 ---
 
