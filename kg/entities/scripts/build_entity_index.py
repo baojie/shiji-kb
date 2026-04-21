@@ -608,13 +608,13 @@ OFFICIAL_CATEGORY_CSS = {
     '军职':   'cat-military',
     '爵位':   'cat-jue',
     '王号':   'cat-wang-title',   # 避开地名的 cat-wang 无冲突命名（原本也无冲突）
-    '古爵':   'cat-guju',
     '宫廷近侍': 'cat-palace',
     '文学顾问': 'cat-wenxue',
     '宗师宾傅': 'cat-shifu',
     '外邦职':  'cat-foreign',
     '上古官':  'cat-ancient',
     '家臣':   'cat-jiachen',   # 大夫/卿的私属家臣（春秋战国）
+    '级别':   'cat-jibie',     # 秩禄/位次通称（二千石/千石/长吏等非具体官职）
     '泛称':   'cat-generic',
     '误标':   'cat-mis',  # 与地名共用（语义一致：非实体被误标）
     '人名误标': 'cat-person-mis',  # 具体某人被误标为官职（老上单于 / 太仓公 等）

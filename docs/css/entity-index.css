@@ -458,6 +458,7 @@ h2 {
 .place-category.cat-foreign    { background: #d9ecee; color: #2f6060; border-color: #b8d8dc; }
 .place-category.cat-ancient    { background: #eee4cc; color: #6a4a2a; border-color: #d8c8a8; }
 .place-category.cat-jiachen    { background: #f2e7d6; color: #6a4a20; border-color: #ddcba6; }
+.place-category.cat-jibie      { background: #e6eef4; color: #2a5070; border-color: #c4d4e4; }
 .place-category.cat-generic    { background: #ebe8e0; color: #6a6050; border-color: #cfc9b8; }
 .place-category.cat-person-mis { background: #fde8e4; color: #8a3030; border-color: #f2cabe; font-style: italic; }
 .place-category.cat-identity-mis { background: #fce9f4; color: #8a3060; border-color: #f0c8dc; font-style: italic; }
@@ -511,6 +512,8 @@ h2 {
 .cat-chip.cat-ancient.active   { background: #6a4a2a; color: #eee4cc; }
 .cat-chip.cat-jiachen          { background: #f2e7d6; color: #6a4a20; }
 .cat-chip.cat-jiachen.active   { background: #6a4a20; color: #f2e7d6; }
+.cat-chip.cat-jibie            { background: #e6eef4; color: #2a5070; }
+.cat-chip.cat-jibie.active     { background: #2a5070; color: #e6eef4; }
 .cat-chip.cat-generic          { background: #ebe8e0; color: #6a6050; }
 .cat-chip.cat-generic.active   { background: #6a6050; color: #ebe8e0; }
 .cat-chip.cat-person-mis       { background: #fde8e4; color: #8a3030; }
