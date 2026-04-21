@@ -16,7 +16,66 @@ from pathlib import Path
 
 
 CHENGYU_PATTERN = re.compile(r'〘※([^〘〙|]+)(?:\|([^〘〙]+))?〙')
-PARA_NUM_PATTERN = re.compile(r'^\[(\d+(?:\.\d+)?)\]')
+PARA_NUM_PATTERN = re.compile(r'^\[(\d+(?:\.\d+)*)\]')
+
+# 句尾标点（强边界）
+SENTENCE_END = set('。！？；')
+# 较弱边界（仅用于兜底）
+SOFT_BREAK = set('，、')
+
+
+def strip_all_markup(text):
+    """去除所有实体/动词/成语标注，保留内部文字"""
+    t = text
+    # 成语 〘※X〙 / 〘※X|Y〙 → 取 shiji_form X
+    t = re.sub(r'〘※([^〘〙|]+)(?:\|[^〘〙]*)?〙', r'\1', t)
+    # 实体 〖?X〗 / 〖?X|Y〗 → 取 surface X
+    t = re.sub(r'〖.([^〖〗|]+)(?:\|[^〖〗]*)?〗', r'\1', t)
+    # 动词 ⟦?X⟧ → 取 X
+    t = re.sub(r'⟦.([^⟦⟧|]+)(?:\|[^⟦⟧]*)?⟧', r'\1', t)
+    return t
+
+
+def strip_paragraph_numbers(text):
+    """去除 [N]、[N.M]、[N.M.K] 段落编号"""
+    return re.sub(r'\[\d+(?:\.\d+)*\]\s*', '', text)
+
+
+def extract_sentence(content, pos, max_chars=200):
+    """
+    从 content 中位置 pos 附近抽取一整句：
+    - 向前扫描到最近的句尾标点（。！？；）或换行，作为起点
+    - 向后扫描到最近的句尾标点，作为终点
+    - 若超过 max_chars，回退到弱边界（，）
+    返回清洁后的字符串（已去标注 + 去段号）
+    """
+    N = len(content)
+
+    # 向前找起点
+    start = pos
+    while start > 0 and content[start - 1] not in SENTENCE_END and content[start - 1] != '\n':
+        start -= 1
+        if pos - start > max_chars:
+            break
+
+    # 向后找终点
+    end = pos
+    while end < N and content[end] not in SENTENCE_END and content[end] != '\n':
+        end += 1
+        if end - pos > max_chars:
+            break
+    # 包含该句末标点
+    if end < N and content[end] in SENTENCE_END:
+        end += 1
+
+    sentence = content[start:end]
+    sentence = strip_paragraph_numbers(sentence)
+    sentence = strip_all_markup(sentence)
+    # 去除引号等多余符号
+    sentence = sentence.replace('>', '').strip()
+    # 去除开头可能的 markdown 片段（如列表符号）
+    sentence = re.sub(r'^[\s\-:#>\*]+', '', sentence)
+    return sentence.strip()
 
 
 def get_chapter_title(chapter_num: str) -> str:
@@ -29,10 +88,12 @@ def get_chapter_title(chapter_num: str) -> str:
 
 
 def extract_context(content: str, pos: int, context_chars: int = 300) -> tuple[str, str]:
-    """Return (paragraph_num, context_text) around pos."""
-    # Find paragraph number by scanning backward
+    """
+    Return (paragraph_num, sentence_context) around pos.
+    sentence_context 是 pos 所在的那一句（去标注 + 去段号）。
+    """
+    # 段落号
     para_num = ''
-    line_start = content.rfind('\n', 0, pos)
     search_back = max(0, pos - 2000)
     chunk = content[search_back:pos]
     for line in reversed(chunk.split('\n')):
@@ -41,20 +102,9 @@ def extract_context(content: str, pos: int, context_chars: int = 300) -> tuple[s
             para_num = m.group(1)
             break
 
-    # Extract context: find the section around pos
-    start = max(0, pos - context_chars)
-    end = min(len(content), pos + context_chars)
-    # Extend to line boundaries
-    start = content.rfind('\n', 0, start)
-    start = 0 if start < 0 else start + 1
-    end_nl = content.find('\n', end)
-    end = end_nl if end_nl >= 0 else end
-
-    # Get 3-5 lines for context
-    lines = content[start:end].split('\n')
-    # Keep lines near pos
-    context = '\n'.join(lines[:8])
-    return para_num, context
+    # 抽取所在句子
+    sentence = extract_sentence(content, pos)
+    return para_num, sentence
 
 
 def parse_chengyu_md(md_file: Path) -> dict:

@@ -18,54 +18,94 @@ def render_entity_tags(text):
     """将实体标注转换为HTML span标签（使用统一标准）"""
     return render_tags_to_html(text, normalize_legacy=True)
 
-def highlight_chengyu_in_original(original_text, chengyu_name):
+def highlight_chengyu_in_original(original_text, chengyu_name, shiji_form=None):
     """
-    在原文中高亮（加粗）成语的关键字
+    在纯净文本中高亮（加粗）锚句关键字。
+    假定输入已是去标注 + 去段号的纯文本，不再包含〖〗等标记。
 
-    例如：成语"网开三面"，原文"汤出，见野张网四面…乃去其三面"
-    应该高亮"网"、"三面"、"四面"
+    优先级（长者先匹配）：
+    1. shiji_form 完整形（如消歧情形下的原文形式）
+    2. 成语本身完整形
+    3. 成语 2+2 拆分（例如"网开三面" → "网开"、"三面"）
+    4. 对复合成语（含"/"）逐项匹配
     """
-    # 先渲染实体标签
-    text = render_entity_tags(original_text)
+    import html
+    text = html.escape(original_text)
 
-    # 提取成语中的关键字（去掉斜杠、括号等）
     keywords = []
+    if shiji_form:
+        keywords.append(shiji_form)
+        # shiji_form 也按内部分句拆
+        for part in re.split(r'[，、；。]', shiji_form):
+            part = part.strip()
+            if len(part) >= 2:
+                keywords.append(part)
 
-    # 处理特殊成语名称（如"浑沌/穷奇/梼杌/饕餮"）
     if '/' in chengyu_name:
-        # 拆分每个成语
-        parts = chengyu_name.split('/')
-        keywords.extend(parts)
+        keywords.extend(chengyu_name.split('/'))
     else:
-        # 单个成语，提取2-4字的关键词
-        clean_name = chengyu_name.strip()
-        if len(clean_name) >= 4:
-            # 四字成语：尝试2+2拆分或完整
-            keywords.append(clean_name[:2])
-            keywords.append(clean_name[2:4])
-            keywords.append(clean_name)
-        elif len(clean_name) >= 2:
-            keywords.append(clean_name)
+        clean = chengyu_name.strip()
+        keywords.append(clean)
+        # 按内部标点分句
+        if re.search(r'[，、；。]', clean):
+            for part in re.split(r'[，、；。]', clean):
+                part = part.strip()
+                if len(part) >= 2:
+                    keywords.append(part)
+        elif len(clean) >= 4:
+            keywords.append(clean[:2])
+            keywords.append(clean[2:4])
 
-    # 对关键字按长度排序（长的优先，避免部分匹配）
-    keywords = sorted(set(keywords), key=len, reverse=True)
+    # 去重，按长度排序（长的先匹配）
+    seen = set()
+    unique = []
+    for k in keywords:
+        k = (k or '').strip()
+        if len(k) >= 2 and k not in seen:
+            seen.add(k)
+            unique.append(k)
+    unique.sort(key=len, reverse=True)
 
-    # 在文本中查找并加粗关键字
-    for keyword in keywords:
-        if len(keyword) >= 2:  # 至少2字
-            # 注意：不要匹配HTML标签内的文本
-            # 使用负向预查确保不在标签内
-            pattern = f'(?<!>)({re.escape(keyword)})(?![^<]*>)'
-            text = re.sub(pattern, r'<strong>\1</strong>', text)
+    for k in unique:
+        pattern = re.compile(f'(?<!<strong>)({re.escape(html.escape(k))})(?![^<]*</strong>)')
+        text = pattern.sub(r'<strong>\1</strong>', text, count=0)
 
     return text
 
 def generate_html(json_path, output_path):
     """生成HTML页面"""
 
-    # 读取JSON数据
+    # 读取JSON数据（标注过的成语）
     with open(json_path, 'r', encoding='utf-8') as f:
         chengyu_data = json.load(f)
+
+    # 每条加标记
+    for item in chengyu_data:
+        item['is_summarized'] = False
+
+    # 合并"总结性"条目（未标注但与原文相关的）
+    summarized_path = Path(json_path).parent / 'chengyu_summarized.json'
+    if summarized_path.exists():
+        with open(summarized_path, 'r', encoding='utf-8') as f:
+            summ_doc = json.load(f)
+        for e in summ_doc.get('entries', []):
+            chengyu_data.append({
+                'chapter_num': e['chapter_num'],
+                'chapter_title': e['chapter_title'],
+                'chengyu': e['chengyu'],
+                'shiji_form': '',
+                'original': e.get('original', ''),
+                'meaning': e.get('meaning', ''),
+                'context': e.get('context', ''),
+                'paragraph': e.get('paragraph') or '',
+                'annotated': False,
+                'is_summarized': True,
+                'verified': e.get('verified', ''),
+                'anchor': e.get('anchor') or '',
+            })
+
+    # 再次排序（按章节 + 成语名）
+    chengyu_data.sort(key=lambda x: (x['chapter_num'], 0 if not x.get('is_summarized') else 1, x['chengyu']))
 
     # 按章节分组
     by_chapter = {}
@@ -84,7 +124,7 @@ def generate_html(json_path, output_path):
         chengyu_index.append({
             'name': item['chengyu'],
             'meaning': item.get('meaning', ''),
-            'chapter': item['chapter_title'],
+            'chapter': f"{item['chapter_num']} {item['chapter_title']}",
             'id': f"cy_{item['chapter_num']}_{chengyu_data.index(item)}"
         })
 
@@ -212,6 +252,17 @@ def generate_html(json_path, output_path):
             margin-bottom: 10px;
         }
 
+        .pn-link {
+            color: #8b4513;
+            text-decoration: none;
+            border-bottom: 1px dotted #c9a56c;
+        }
+
+        .pn-link:hover {
+            color: #c00;
+            border-bottom-color: #c00;
+        }
+
         .item-context {
             line-height: 2.2;
             color: #555;
@@ -335,6 +386,39 @@ def generate_html(json_path, output_path):
             font-weight: bold;
         }
 
+        .chengyu-item.summarized {
+            border-left-color: #999;
+            background: #fcfbf9;
+        }
+
+        .summ-badge {
+            display: inline-block;
+            font-size: 0.6em;
+            padding: 2px 8px;
+            margin-left: 10px;
+            border-radius: 10px;
+            vertical-align: middle;
+            font-weight: normal;
+        }
+
+        .summ-verbatim {
+            background: #e8f4ea;
+            color: #4a7a4f;
+            border: 1px solid #a8c7ad;
+        }
+
+        .summ-partial {
+            background: #f4eee8;
+            color: #7a674a;
+            border: 1px solid #c7b4a8;
+        }
+
+        .summ-narrative {
+            background: #ede8f4;
+            color: #4f4a7a;
+            border: 1px solid #a8a8c7;
+        }
+
         .footer {
             text-align: center;
             margin-top: 50px;
@@ -412,27 +496,37 @@ def generate_html(json_path, output_path):
             item_id = f"cy_{chapter_num}_{item_index}"
             item_index += 1
 
+            summ_label = ''
+            if item.get('is_summarized'):
+                verified = item.get('verified', '')
+                badges = {
+                    'verbatim': '原文可证',
+                    'partial': '原文部分可证',
+                    'narrative': '叙事性总结',
+                }
+                summ_label = f' <span class="summ-badge summ-{verified}">总结 · {badges.get(verified, verified)}</span>'
+
             html += f'''
-            <div class="chengyu-item" id="{item_id}" data-chengyu="{chengyu}" data-meaning="{meaning}" data-chapter="{chapter_title}">
-                <div class="item-title">{chengyu}</div>
+            <div class="chengyu-item{' summarized' if item.get('is_summarized') else ''}" id="{item_id}" data-chengyu="{chengyu}" data-meaning="{meaning}" data-chapter="{chapter_title}">
+                <div class="item-title">{chengyu}{summ_label}</div>
                 <div class="item-meaning">{meaning}</div>
 '''
 
             if paragraph:
-                html += f'                <div class="item-meta">位置：第 {paragraph} 段</div>\n'
+                chap_filename = f"{chapter_num}_{chapter_title}.html"
+                link = f"../chapters/{chap_filename}#pn-{paragraph}"
+                html += f'                <div class="item-meta">位置：<a href="{link}" class="pn-link">{chapter_num} {chapter_title} · 第 {paragraph} 段</a></div>\n'
 
+            shiji_form = item.get('shiji_form') or item.get('anchor') or ''
             if context:
-                # 在长引文中高亮成语关键字
-                context_html = highlight_chengyu_in_original(context, chengyu)
-                html += f'''                <div class="item-context">
-                    {context_html}
-                </div>
+                context_html = highlight_chengyu_in_original(context, chengyu, shiji_form)
+                html += f'''                <div class="item-context">{context_html}</div>
 '''
             else:
-                # 无长引文时显示短引文
-                original = highlight_chengyu_in_original(item['original'], chengyu)
+                original = highlight_chengyu_in_original(item.get('original', ''), chengyu, shiji_form)
                 html += f'                <div class="item-original">{original}</div>\n'
-                html += '                <div class="no-context">（原文位置未定位）</div>\n'
+                if not item.get('is_summarized'):
+                    html += '                <div class="no-context">（原文位置未定位）</div>\n'
 
             html += '            </div>\n\n'
 
