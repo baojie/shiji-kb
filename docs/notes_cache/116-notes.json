@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "西南夷君长",
       "before_context": "西南夷君长",
-      "after_context": "以什数，夜郎最大；其西靡莫之属以什数，滇最大；自滇以北君长以...",
+      "after_context": "以什数，",
       "items": [
         {
           "source": "zhengyi",
@@ -17,9 +17,23 @@
     },
     {
       "id": "n002",
+      "anchor_text": "以什数，",
+      "before_context": "西南夷君长以什数，",
+      "after_context": "夜郎最大；",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "刘氏音所具反。邹氏音所主反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
       "anchor_text": "夜郎最大；",
       "before_context": "西南夷君长以什数，夜郎最大；",
-      "after_context": "其西靡莫之属以什数，滇最大；自滇以北君长以什数，邛都",
+      "after_context": "其西靡莫",
       "items": [
         {
           "source": "suoyin",
@@ -35,10 +49,24 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
+      "anchor_text": "其西靡莫",
+      "before_context": "西南夷君长以什数，夜郎最大；其西靡莫",
+      "after_context": "之属",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "夷邑名，滇与同姓。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "之属",
       "before_context": "西南夷君长以什数，夜郎最大；其西靡莫之属",
-      "after_context": "以什数，滇最大；自滇以北君长以什数，邛都",
+      "after_context": "以什数，滇最大；",
       "items": [
         {
           "source": "zhengyi",
@@ -49,10 +77,10 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n006",
       "anchor_text": "以什数，滇最大；",
       "before_context": "西南夷君长以什数，夜郎最大；其西靡莫之属以什数，滇最大；",
-      "after_context": "自滇以北君长以什数，邛都",
+      "after_context": "自滇以北君长以什数，邛都最大：此皆魋结，",
       "items": [
         {
           "source": "jijie",
@@ -73,24 +101,43 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
-      "anchor_text": "耕田，有邑聚。其外西自同师以东，",
-      "before_context": "...以什数，邛都最大：此皆魋结，耕田，有邑聚。其外西自同师以东，",
-      "after_context": "北至楪榆，名为嶲、昆明，皆编发，随畜迁徙，毋常处，毋君长，地...",
+      "id": "n007",
+      "anchor_text": "最大：此皆魋结，",
+      "before_context": "...之属以什数，滇最大；自滇以北君长以什数，邛都最大：此皆魋结，",
+      "after_context": "耕田，有邑聚。其外西自同师以东，",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "韦昭曰：「邑名也。」"
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "魋，《汉书》作「椎」，音直追反。结音计。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n008",
+      "anchor_text": "耕田，有邑聚。其外西自同师以东，",
+      "before_context": "...以什数，邛都最大：此皆魋结，耕田，有邑聚。其外西自同师以东，",
+      "after_context": "北至楪榆，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韦昭曰：「邑名也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "韦昭云邑名。《汉书》作「桐师」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
       "anchor_text": "北至楪榆，",
       "before_context": "...都最大：此皆魋结，耕田，有邑聚。其外西自同师以东，北至楪榆，",
-      "after_context": "名为嶲、昆明，皆编发，随畜迁徙，毋常处，毋君长，地方可数千里...",
+      "after_context": "名为嶲、昆明，",
       "items": [
         {
           "source": "jijie",
@@ -111,10 +158,10 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n010",
       "anchor_text": "名为嶲、昆明，",
       "before_context": "...结，耕田，有邑聚。其外西自同师以东，北至楪榆，名为嶲、昆明，",
-      "after_context": "皆编发，随畜迁徙，毋常处，毋君长，地方可数千里。自嶲以东北，...",
+      "after_context": "皆编发，随畜迁徙，",
       "items": [
         {
           "source": "jijie",
@@ -135,7 +182,7 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n011",
       "anchor_text": "皆编发，随畜迁徙，",
       "before_context": "...其外西自同师以东，北至楪榆，名为嶲、昆明，皆编发，随畜迁徙，",
       "after_context": "毋常处，毋君长，地方可数千里。自嶲以东北，君长以什数，徙、筰...",
@@ -149,10 +196,10 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n012",
       "anchor_text": "数千里。自嶲以东北，君长以什数，徙、筰都",
       "before_context": "...常处，毋君长，地方可数千里。自嶲以东北，君长以什数，徙、筰都",
-      "after_context": "最大；自筰以东北，君长以什数，冄駹最大。其俗或士箸，或移徙，...",
+      "after_context": "最大；自筰以东北，君长以什数，冄駹最大。",
       "items": [
         {
           "source": "jijie",
@@ -173,7 +220,7 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n013",
       "anchor_text": "最大；自筰以东北，君长以什数，冄駹最大。",
       "before_context": "...君长以什数，徙、筰都最大；自筰以东北，君长以什数，冄駹最大。",
       "after_context": "其俗或士箸，或移徙，在蜀之西。自冄駹以东北，君长以什数，白马...",
@@ -192,7 +239,7 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n014",
       "anchor_text": "西。自冄駹以东北，君长以什数，白马最大，",
       "before_context": "...士箸，或移徙，在蜀之西。自冄駹以东北，君长以什数，白马最大，",
       "after_context": "皆氐类也。此皆巴蜀西南外蛮夷也。",
@@ -211,10 +258,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n015",
       "anchor_text": "始楚威王时，使将军庄𫏋",
       "before_context": "始楚威王时，使将军庄𫏋",
-      "after_context": "将兵循江上，略巴、（",
+      "after_context": "将兵循江上，略巴、（蜀）黔中以西。庄𫏋者，故楚庄王苗裔也。𫏋...",
       "items": [
         {
           "source": "suoyin",
@@ -230,9 +277,9 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n016",
       "anchor_text": "方三百里，",
-      "before_context": "黔中以西。庄𫏋者，故楚庄王苗裔也。𫏋至滇池，（地）方三百里，",
+      "before_context": "...黔中以西。庄𫏋者，故楚庄王苗裔也。𫏋至滇池，（地）方三百里，",
       "after_context": "旁平地，肥饶数千里，以兵威定属楚。欲归报，会秦击夺楚巴、黔中...",
       "items": [
         {
@@ -249,7 +296,21 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n017",
+      "anchor_text": "其众王滇，变服，从其俗，以长之。秦时常頞",
+      "before_context": "...，道塞不通，因还，以其众王滇，变服，从其俗，以长之。秦时常頞",
+      "after_context": "略通五尺道，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "音案。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
       "anchor_text": "略通五尺道，",
       "before_context": "...因还，以其众王滇，变服，从其俗，以长之。秦时常頞略通五尺道，",
       "after_context": "诸此国颇置吏焉。十余岁，秦灭。及汉兴，皆弃此国而开蜀故徼。巴...",
@@ -268,7 +329,7 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n019",
       "anchor_text": "故徼。巴蜀民或窃出商贾，取其筰马、僰僮、",
       "before_context": "...汉兴，皆弃此国而开蜀故徼。巴蜀民或窃出商贾，取其筰马、僰僮、",
       "after_context": "髦牛，以此巴蜀殷富。",
@@ -287,10 +348,10 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n020",
       "anchor_text": "击东越，东越杀王郢以报。恢因兵威使番阳令",
       "before_context": "建元六年，大行王恢击东越，东越杀王郢以报。恢因兵威使番阳令",
-      "after_context": "唐蒙风指晓南越。南越食蒙蜀枸酱，蒙问所从来，曰「道西北牂柯，...",
+      "after_context": "唐蒙风指晓南越。南越食蒙蜀枸酱，",
       "items": [
         {
           "source": "zhengyi",
@@ -301,21 +362,26 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n021",
       "anchor_text": "唐蒙风指晓南越。南越食蒙蜀枸酱，",
       "before_context": "...杀王郢以报。恢因兵威使番阳令唐蒙风指晓南越。南越食蒙蜀枸酱，",
-      "after_context": "蒙问所从来，曰「道西北牂柯，牂柯江广数里，出番禺城下」。蒙归...",
+      "after_context": "蒙问所从来，曰「道西北牂柯，牂柯江",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「枸，一作『蒟』，音窭。」骃案：《汉书音义》曰「枸木似谷树，其叶如桑叶。用其叶作酱酢，美，蜀人以为珍味」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "蒟。案：晋灼音矩。刘德云「蒟树如桑，其椹长二三寸，味酢；取其实以为酱，美」。又云「蒟缘树而生，非木也。今蜀土家出蒟，实似桑椹，味辛似姜，不酢」。又云「取叶」。此注又云叶似桑叶，非也。广志云「色黑，味辛，下气消谷」。窭，求羽反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n022",
       "anchor_text": "蒙问所从来，曰「道西北牂柯，牂柯江",
       "before_context": "...指晓南越。南越食蒙蜀枸酱，蒙问所从来，曰「道西北牂柯，牂柯江",
       "after_context": "广数里，出番禺城下」。蒙归至长安，问蜀贾人，贾人曰：「独蜀出...",
@@ -329,7 +395,63 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n023",
+      "anchor_text": "之。乃拜蒙为郎中将，将千人，食重万余人，",
+      "before_context": "...为置吏，易甚。」上许之。乃拜蒙为郎中将，将千人，食重万余人，",
+      "after_context": "从巴蜀筰关入，遂见夜郎侯多同。蒙厚赐，喻以威德，约为置吏，使...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：食货辎重车也。音持用反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
+      "anchor_text": "为犍为郡。发巴蜀卒治道，自僰道指牂柯江。",
+      "before_context": "...且听蒙约。还报，乃以为犍为郡。发巴蜀卒治道，自僰道指牂柯江。",
+      "after_context": "蜀人司马相如亦言西夷邛、筰可置郡。使相如以郎中将往喻，皆如南...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "道牂柯江。崔浩云：「牂柯，系船杙也，以为地名。」道犹从也。《地理志》夜郎又有豚水，东至南海四会入海，此牂柯江。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "当是时，巴蜀四郡",
+      "before_context": "当是时，巴蜀四郡",
+      "after_context": "通西南夷道，戍转相𫗵。数岁，道不通，士罢饿离湿死者甚众；西南...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「汉中，巴郡，广汉，蜀郡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "。上罢西夷，独置南夷夜郎两县一都尉，",
+      "before_context": "...夷害，可且罢，专力事匈奴。上罢西夷，独置南夷夜郎两县一都尉，",
+      "after_context": "稍令犍为自葆就。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「元光六年，南夷始置邮亭。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "稍令犍为自葆就。",
       "before_context": "...力事匈奴。上罢西夷，独置南夷夜郎两县一都尉，稍令犍为自葆就。",
       "after_context": "",
@@ -343,7 +465,21 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n028",
+      "anchor_text": "骞使大夏来，言居大夏时见蜀布、邛竹、杖，",
+      "before_context": "及元狩元年，博望侯张骞使大夏来，言居大夏时见蜀布、邛竹、杖，",
+      "after_context": "使问所从来，曰「从东南身毒国，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韦昭曰：「邛县之竹，属蜀。」瓒曰：「邛，山名。此竹节高实中，可作杖。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "使问所从来，曰「从东南身毒国，",
       "before_context": "...，言居大夏时见蜀布、邛竹、杖，使问所从来，曰「从东南身毒国，",
       "after_context": "可数千里，得蜀贾人市」。或闻邛西可二千里有身毒国。骞因盛言大...",
@@ -352,12 +488,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「字或作『竺』。《汉书》直云『身毒』，《史记》一本作『干毒』。」骃案：《汉书音义》曰「一名『天竺』，则浮屠胡是也」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "身音捐，毒音笃。一本作「干毒」。《汉书音义》一名「天竺」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n030",
+      "anchor_text": "使闲出西夷西，指求身毒国。至滇，滇王尝羌",
+      "before_context": "...、柏始昌、吕越人等，使闲出西夷西，指求身毒国。至滇，滇王尝羌",
+      "after_context": "乃留，为求道西十余辈。岁余，皆闭昆明，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「尝，一作『赏』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
       "anchor_text": "乃留，为求道西十余辈。岁余，皆闭昆明，",
       "before_context": "...身毒国。至滇，滇王尝羌乃留，为求道西十余辈。岁余，皆闭昆明，",
       "after_context": "莫能通身毒国。",
@@ -376,15 +531,104 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n032",
+      "anchor_text": "至南越反，上使驰义侯因犍为发南夷兵。且兰",
+      "before_context": "及至南越反，上使驰义侯因犍为发南夷兵。且兰",
+      "after_context": "君恐远行，旁国虏其老弱，乃与其众反，杀使者及犍为太守。汉乃发...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "上音子余反。小国名也。后县，属牂柯。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "已破，汉八校尉不下，即引兵还，行诛头兰。",
+      "before_context": "...者八校尉击破之。会越已破，汉八校尉不下，即引兵还，行诛头兰。",
+      "after_context": "头兰，常隔滇道者也。已平头兰，遂平南夷为牂柯郡。夜郎侯始倚南...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "即且兰也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
+      "anchor_text": "为越嶲郡，筰都为沈犂郡，冄駹为汶山郡，",
+      "before_context": "...恐，请臣置吏。乃以邛都为越嶲郡，筰都为沈犂郡，冄駹为汶山郡，",
+      "after_context": "广汉西白马为武都郡。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "应劭曰：「今蜀郡岷江。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
+      "anchor_text": "王者，其众数万人，其旁东北有劳濅、靡莫，",
+      "before_context": "...兵威风喻滇王入朝。滇王者，其众数万人，其旁东北有劳濅、靡莫，",
+      "after_context": "皆同姓相扶，未肯听。劳濅、靡莫数侵犯使者吏卒。元封二年，天子...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "劳寝、靡莫。二国与滇王同姓。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
       "anchor_text": "端，见枸酱番禺，大夏杖、邛竹。西夷后揃，",
       "before_context": "...滇复为宠王。然南夷之端，见枸酱番禺，大夏杖、邛竹。西夷后揃，",
-      "after_context": "剽分二方，卒为七郡。",
+      "after_context": "剽分二方，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《汉书音义》曰：「音翦。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音剪。揃谓被分割也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "剽分二方，",
+      "before_context": "...。然南夷之端，见枸酱番禺，大夏杖、邛竹。西夷后揃，剽分二方，",
+      "after_context": "卒为七郡。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "剽音匹妙反。言西夷后被揃迫逐，遂剽居西南二方，各属郡县。剽亦分义。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
+      "anchor_text": "卒为七郡。",
+      "before_context": "...端，见枸酱番禺，大夏杖、邛竹。西夷后揃，剽分二方，卒为七郡。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「犍为、牂柯、越嶲、益州、武都、沈犂、汶山地也。」"
         }
       ],
       "sentence_id": null

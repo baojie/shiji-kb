@@ -3,9 +3,23 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "",
+      "before_context": "",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：序傳孟嘗君第十四，而此傳爲第十五，蓋後人差降之矣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "孟軻，騶人也。",
       "before_context": "孟軻，騶人也。",
-      "after_context": "受業子思之門人。道既通，游事齊宣王，宣王不能用。適梁，梁惠王...",
+      "after_context": "受業子思之門人。",
       "items": [
         {
           "source": "suoyin",
@@ -21,7 +35,35 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
+      "anchor_text": "受業子思之門人。",
+      "before_context": "孟軻，騶人也。受業子思之門人。",
+      "after_context": "道既通，游事齊宣王，宣王不能用。適梁，梁惠王不果所言，則見以...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "王劭以「人」爲衍字，則以軻親受業孔伋之門也。今言「門人」者，乃受業於子思之弟子也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
+      "anchor_text": "三代之德，是以所如者不合。退而與萬章之徒",
+      "before_context": "...，而孟軻乃述唐、虞、三代之德，是以所如者不合。退而與萬章之徒",
+      "after_context": "序詩書，述仲尼之意，作孟子七篇。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "孟子有萬章、公明高等，蓋並軻之門人也。萬，姓；章，名。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "序詩書，述仲尼之意，作孟子七篇。",
       "before_context": "...以所如者不合。退而與萬章之徒序詩書，述仲尼之意，作孟子七篇。",
       "after_context": "其後有騶子之屬。",
@@ -35,7 +77,7 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n006",
       "anchor_text": "齊有三騶子。",
       "before_context": "齊有三騶子。",
       "after_context": "其前騶忌，以鼓琴干威王，因及國政，封爲成侯而受相印，先孟子。",
@@ -49,7 +91,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n007",
       "anchor_text": "息而作怪迂之變，終始、大聖之篇十餘萬言。",
       "before_context": "...黎庶矣。乃深觀陰陽消息而作怪迂之變，終始、大聖之篇十餘萬言。",
       "after_context": "其語閎大不經，必先驗小物，推而大之，至於無垠。先序今以上至黃...",
@@ -63,7 +105,7 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n008",
       "anchor_text": "，學者所共術，大並世盛衰，",
       "before_context": "...而大之，至於無垠。先序今以上至黃帝，學者所共術，大並世盛衰，",
       "after_context": "因載其禨祥度制，推而遠之，至天地未生，窈冥不可考而原也。先列...",
@@ -74,6 +116,11 @@
           "text": "並，蒲浪反。"
         },
         {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言其大體隨代盛衰，觀時而說事。"
+        },
+        {
           "source": "zhengyi",
           "label": "正義",
           "text": "並，蒲浪反。言大並依時浮沉而說事。"
@@ -82,7 +129,7 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n009",
       "anchor_text": "言其大體隨代盛衰，觀時而說事。",
       "before_context": "集解並，蒲浪反。索隱言其大體隨代盛衰，觀時而說事。",
       "after_context": "",
@@ -96,7 +143,7 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n010",
       "anchor_text": "之所不能睹。稱引天地剖判以來，五德轉移，",
       "before_context": "...，因而推之，及海外人之所不能睹。稱引天地剖判以來，五德轉移，",
       "after_context": "治各有宜，而符應若茲。以爲儒者所謂中國者，於天下乃八十一分居...",
@@ -110,11 +157,16 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n011",
       "anchor_text": "所謂中國者，於天下乃八十一分居其一分耳。",
       "before_context": "...而符應若茲。以爲儒者所謂中國者，於天下乃八十一分居其一分耳。",
       "after_context": "中國名曰赤縣神州。赤縣神州內自有九州，禹之序九州是也，不得爲...",
       "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "桓寬、王充並以衍之所言迂怪虛妄，干惑六國之君，因納其異說，所謂「匹夫而營惑諸侯」者是也。"
+        },
         {
           "source": "zhengyi",
           "label": "正義",
@@ -124,7 +176,7 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n012",
       "anchor_text": "納其異說，所謂「匹夫而營惑諸侯」者是也。",
       "before_context": "...妄，干惑六國之君，因納其異說，所謂「匹夫而營惑諸侯」者是也。",
       "after_context": "",
@@ -138,7 +190,21 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n013",
+      "anchor_text": "神州者九，乃所謂九州也。於是有裨海環之，",
+      "before_context": "...爲州數。中國外如赤縣神州者九，乃所謂九州也。於是有裨海環之，",
+      "after_context": "人民禽獸莫能相通者，如一區中者，乃爲一州。如此者九，乃有大瀛...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "裨音脾。裨海，小海也。九州之外，更有大瀛海，故知此裨是小海也。且將有裨將，裨是小義也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
       "anchor_text": "如此者九，乃有大瀛海環其外，天地之際焉。",
       "before_context": "...一區中者，乃爲一州。如此者九，乃有大瀛海環其外，天地之際焉。",
       "after_context": "其術皆此類也。然要其歸，必止乎仁義節儉，君臣上下六親之施，始...",
@@ -152,10 +218,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n015",
       "anchor_text": "乎仁義節儉，君臣上下六親之施，始也濫耳。",
       "before_context": "...類也。然要其歸，必止乎仁義節儉，君臣上下六親之施，始也濫耳。",
-      "after_context": "王公大人初見其術，懼然顧化，其後不能行之。",
+      "after_context": "王公大人初見其術，懼然顧化，",
       "items": [
         {
           "source": "suoyin",
@@ -171,7 +237,21 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n016",
+      "anchor_text": "王公大人初見其術，懼然顧化，",
+      "before_context": "...儉，君臣上下六親之施，始也濫耳。王公大人初見其術，懼然顧化，",
+      "after_context": "其後不能行之。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "懼音劬。謂衍之術皆動人心，見者莫不懼然駐想，又內心留顧而已化之，謂欲從其術也。按：化者，是易常聞而貴異術也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "其後不能行之。",
       "before_context": "...親之施，始也濫耳。王公大人初見其術，懼然顧化，其後不能行之。",
       "after_context": "",
@@ -185,10 +265,24 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n018",
+      "anchor_text": "郊迎，執賓主之禮。適趙，平原君側行撇席。",
+      "before_context": "...子重於齊。適梁，惠王郊迎，執賓主之禮。適趙，平原君側行撇席。",
+      "after_context": "如燕，昭王擁彗先驅，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《字林》曰「襒音疋結反」。韋昭曰「敷蔑反」。張揖《三蒼訓詁》云「襒，拂也。謂側而行，以衣襒席爲敬，不敢正坐當賓主之禮也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
       "anchor_text": "如燕，昭王擁彗先驅，",
       "before_context": "...郊迎，執賓主之禮。適趙，平原君側行撇席。如燕，昭王擁彗先驅，",
-      "after_context": "請列弟子之座而受業，築碣石宮，身親往師之。作主運。其游諸侯見...",
+      "after_context": "請列弟子之座而受業，築碣石宮，",
       "items": [
         {
           "source": "suoyin",
@@ -199,10 +293,10 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n020",
       "anchor_text": "請列弟子之座而受業，築碣石宮，",
       "before_context": "...側行撇席。如燕，昭王擁彗先驅，請列弟子之座而受業，築碣石宮，",
-      "after_context": "身親往師之。作主運。其游諸侯見尊禮如此，豈與仲尼菜色陳蔡，孟...",
+      "after_context": "身親往師之。作主運。",
       "items": [
         {
           "source": "zhengyi",
@@ -213,10 +307,24 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n021",
+      "anchor_text": "身親往師之。作主運。",
+      "before_context": "...擁彗先驅，請列弟子之座而受業，築碣石宮，身親往師之。作主運。",
+      "after_context": "其游諸侯見尊禮如此，豈與仲尼菜色陳蔡，孟軻困於齊梁同乎哉！",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：劉向《別錄》云鄒子書有主運篇。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
       "anchor_text": "，豈與仲尼菜色陳蔡，孟軻困於齊梁同乎哉！",
       "before_context": "...。其游諸侯見尊禮如此，豈與仲尼菜色陳蔡，孟軻困於齊梁同乎哉！",
-      "after_context": "故武王以仁義伐紂而王，伯夷餓不食周粟；衞靈公問陳，而孔子",
+      "after_context": "故武王以仁義伐紂而王，伯夷餓不食周粟；衞靈公問陳，而孔子不答...",
       "items": [
         {
           "source": "suoyin",
@@ -232,10 +340,10 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n023",
       "anchor_text": "不答；梁惠王謀欲攻趙，孟軻稱大王去邠。",
       "before_context": "...粟；衞靈公問陳，而孔子不答；梁惠王謀欲攻趙，孟軻稱大王去邠。",
-      "after_context": "此豈有意阿世俗苟合而已哉！持方枘欲內圜鑿，其能入乎？或曰，伊...",
+      "after_context": "此豈有意阿世俗苟合而已哉！持方枘欲內圜鑿，",
       "items": [
         {
           "source": "suoyin",
@@ -251,10 +359,10 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n024",
       "anchor_text": "豈有意阿世俗苟合而已哉！持方枘欲內圜鑿，",
       "before_context": "...，孟軻稱大王去邠。此豈有意阿世俗苟合而已哉！持方枘欲內圜鑿，",
-      "after_context": "其能入乎？或曰，伊尹負鼎而勉湯以王，百里奚飯牛車下而繆公用霸...",
+      "after_context": "其能入乎？",
       "items": [
         {
           "source": "zhengyi",
@@ -265,9 +373,23 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n025",
+      "anchor_text": "其能入乎？",
+      "before_context": "...王去邠。此豈有意阿世俗苟合而已哉！持方枘欲內圜鑿，其能入乎？",
+      "after_context": "或曰，伊尹負鼎而勉湯以王，百里奚飯牛車下而繆公用霸，作先合，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：方枘是筍也，圜鑿是孔也。謂工人斲木，以方筍而內之圜孔，不可入也。故楚詞云「以方枘而內圜鑿，吾固知其齟齬而不入」是也。謂戰國之時，仲尼、孟軻以仁義干世主，猶方枘圜鑿然。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
       "anchor_text": "以王，百里奚飯牛車下而繆公用霸，作先合，",
-      "before_context": "或曰，伊尹負鼎而勉湯以王，百里奚飯牛車下而繆公用霸，作先合，",
+      "before_context": "...或曰，伊尹負鼎而勉湯以王，百里奚飯牛車下而繆公用霸，作先合，",
       "after_context": "然後引之大道。騶衍其言雖不軌，儻亦有牛鼎之意乎？",
       "items": [
         {
@@ -279,7 +401,7 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n027",
       "anchor_text": "大道。騶衍其言雖不軌，儻亦有牛鼎之意乎？",
       "before_context": "...霸，作先合，然後引之大道。騶衍其言雖不軌，儻亦有牛鼎之意乎？",
       "after_context": "",
@@ -298,7 +420,63 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n028",
+      "anchor_text": "自騶衍與齊之稷下先生，",
+      "before_context": "自騶衍與齊之稷下先生，",
+      "after_context": "如淳于髡、慎到、環淵、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "稷下，齊之城門也。或云稷下，山名。謂齊之學士集於稷門之下。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "于髡、慎到、環淵、",
+      "before_context": "自騶衍與齊之稷下先生，如淳于髡、慎到、環淵、",
+      "after_context": "接子、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：劉向《別錄》「環」作姓也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "接子、",
+      "before_context": "自騶衍與齊之稷下先生，如淳于髡、慎到、環淵、接子、",
+      "after_context": "田駢、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "古著書人之稱號。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "田駢、",
+      "before_context": "自騶衍與齊之稷下先生，如淳于髡、慎到、環淵、接子、田駢、",
+      "after_context": "騶奭之徒，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "步堅、步經反二音。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
       "anchor_text": "騶奭之徒，",
       "before_context": "...與齊之稷下先生，如淳于髡、慎到、環淵、接子、田駢、騶奭之徒，",
       "after_context": "各著書言治亂之事，以干世主，豈可勝道哉！",
@@ -312,7 +490,35 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n033",
+      "anchor_text": "先生來。寡人雖屏人，然私心在彼，有之。」",
+      "before_context": "...獻謳者，未及試，亦會先生來。寡人雖屏人，然私心在彼，有之。」",
+      "after_context": "後淳于髡見，壹語連三日三夜無倦。惠王欲以卿相位待之，髡因謝去...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂私心實在彼馬與謳也。有之，謂我實有此二事也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
+      "anchor_text": "德之術，因發明序其指意。故慎到著十二論，",
+      "before_context": "...淵，楚人。皆學黃老道德之術，因發明序其指意。故慎到著十二論，",
+      "after_context": "環淵著上下篇，而田駢、接子皆有所論焉。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「今慎子，劉向所定，有四十一篇。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
       "anchor_text": "于髡以下，皆命曰列大夫，爲開第康莊之衢，",
       "before_context": "於是齊王嘉之，自如淳于髡以下，皆命曰列大夫，爲開第康莊之衢，",
       "after_context": "高門大屋，尊寵之。覽天下諸侯賓客，言齊能致天下賢士也。",
@@ -331,10 +537,24 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n036",
+      "anchor_text": "荀卿，趙人。",
+      "before_context": "荀卿，趙人。",
+      "after_context": "年五十始來游學於齊。騶衍之術迂大而閎辯；奭也文具難施；淳于髡...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "名況。卿者，時人相尊而號爲卿也。仕齊爲祭酒，仕楚爲蘭陵令。後亦謂之孫卿子者，避漢宣帝諱改也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
       "anchor_text": "善言。故齊人頌曰：「談天衍，雕龍奭，炙轂",
       "before_context": "...淳于髡久與處，時有得善言。故齊人頌曰：「談天衍，雕龍奭，炙轂",
-      "after_context": "過髡。」田駢之屬皆已死齊襄王時，而荀卿最爲老師。齊尚脩列大夫...",
+      "after_context": "過髡。」",
       "items": [
         {
           "source": "jijie",
@@ -350,24 +570,57 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n038",
       "anchor_text": "過髡。」",
       "before_context": "...與處，時有得善言。故齊人頌曰：「談天衍，雕龍奭，炙轂過髡。」",
-      "after_context": "田駢之屬皆已死齊襄王時，而荀卿最爲老師。齊尚脩列大夫之缺，而...",
+      "after_context": "田駢之屬皆已死齊襄王時，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "劉向《別錄》曰：「騶衍之所言五德終始，天地廣大，盡言天事，故曰『談天』。騶奭脩衍之文，飾若雕鏤龍文，故曰『雕龍』。」《別錄》曰「過」字作「輠」。輠者，車之盛膏器也。炙之雖盡，猶有餘流者。言淳于髡智不盡如炙輠也。左思齊都賦注曰「言其多智難盡，如炙膏過之有潤澤也」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：劉向《別錄》「過」字作「輠」。輠，車之盛膏器也。炙之雖盡，猶有餘津，言髡智不盡如炙輠也。按：劉氏云「轂，衍字也」。今按：文稱「炙轂過」，則過是器名，音如字讀，謂盛脂之器名過。「過」與「鍋」字相近，蓋即脂器也。轂即車轂，過爲潤轂之物，則「轂」非衍字矣。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n039",
+      "anchor_text": "田駢之屬皆已死齊襄王時，",
+      "before_context": "...頌曰：「談天衍，雕龍奭，炙轂過髡。」田駢之屬皆已死齊襄王時，",
+      "after_context": "而荀卿最爲老師。齊尚脩列大夫之缺，而荀卿三爲祭酒焉。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按襄王名法章，湣王子，莒人所立者。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "師。齊尚脩列大夫之缺，而荀卿三爲祭酒焉。",
+      "before_context": "...襄王時，而荀卿最爲老師。齊尚脩列大夫之缺，而荀卿三爲祭酒焉。",
+      "after_context": "齊人或讒荀卿，荀卿乃適楚，而春申君以爲蘭陵令。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：禮食必祭先，飲酒亦然，必以席中之尊者一人當祭耳，後因以爲官名，故吳王濞爲劉氏祭酒是也。而卿三爲祭酒者，謂荀卿出入前後三度處列大夫康莊之位，而皆爲其所尊，故云「三爲祭酒」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
       "anchor_text": "讒荀卿，荀卿乃適楚，而春申君以爲蘭陵令。",
       "before_context": "...卿三爲祭酒焉。齊人或讒荀卿，荀卿乃適楚，而春申君以爲蘭陵令。",
-      "after_context": "春申君死而荀卿廢，因家蘭陵。李斯",
+      "after_context": "春申君死而荀卿廢，因家蘭陵。李斯嘗爲弟子，已而相秦。荀卿嫉濁...",
       "items": [
         {
           "source": "zhengyi",
@@ -378,10 +631,10 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n042",
       "anchor_text": "而趙亦有公孫龍",
       "before_context": "而趙亦有公孫龍",
-      "after_context": "爲堅白同異之辯，劇子之言；魏有李悝，盡地力之教；楚有尸子、長...",
+      "after_context": "爲堅白同異之辯，",
       "items": [
         {
           "source": "suoyin",
@@ -392,10 +645,10 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n043",
       "anchor_text": "爲堅白同異之辯，",
       "before_context": "而趙亦有公孫龍爲堅白同異之辯，",
-      "after_context": "劇子之言；魏有李悝，盡地力之教；楚有尸子、長盧；阿之吁子焉。",
+      "after_context": "劇子之言；",
       "items": [
         {
           "source": "jijie",
@@ -411,10 +664,10 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n044",
       "anchor_text": "劇子之言；",
       "before_context": "而趙亦有公孫龍爲堅白同異之辯，劇子之言；",
-      "after_context": "魏有李悝，盡地力之教；楚有尸子、長盧；阿之吁子焉。自如孟子至...",
+      "after_context": "魏有李悝，盡地力之教；",
       "items": [
         {
           "source": "jijie",
@@ -430,10 +683,10 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n045",
       "anchor_text": "魏有李悝，盡地力之教；",
       "before_context": "...趙亦有公孫龍爲堅白同異之辯，劇子之言；魏有李悝，盡地力之教；",
-      "after_context": "楚有尸子、長盧；阿之吁子焉。自如孟子至于吁子，世多有其書，故...",
+      "after_context": "楚有尸子、長盧；",
       "items": [
         {
           "source": "zhengyi",
@@ -444,10 +697,10 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n046",
       "anchor_text": "楚有尸子、長盧；",
       "before_context": "...白同異之辯，劇子之言；魏有李悝，盡地力之教；楚有尸子、長盧；",
-      "after_context": "阿之吁子焉。自如孟子至于吁子，世多有其書，故不論其傳云。",
+      "after_context": "阿之吁子焉。",
       "items": [
         {
           "source": "jijie",
@@ -468,9 +721,9 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n047",
       "anchor_text": "阿之吁子焉。",
-      "before_context": "劇子之言；魏有李悝，盡地力之教；楚有尸子、長盧；阿之吁子焉。",
+      "before_context": "...劇子之言；魏有李悝，盡地力之教；楚有尸子、長盧；阿之吁子焉。",
       "after_context": "自如孟子至于吁子，世多有其書，故不論其傳云。",
       "items": [
         {
@@ -492,15 +745,34 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n048",
       "anchor_text": "蓋墨翟，宋之大夫，善守禦，爲節用。",
       "before_context": "蓋墨翟，宋之大夫，善守禦，爲節用。",
-      "after_context": "或曰並孔子",
+      "after_context": "或曰並孔子時，或曰在其後。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "墨子曰：「公輸般爲雲梯之械成，將以攻宋。墨子聞之，至於郢，見公輸般。墨子解帶爲城，以牒爲械。公輸般九設攻城之機變，墨子九距之。公輸般之攻械盡，墨子之守固有餘。公輸般詘，而言曰：『吾知所以距子矣，吾不言。』墨子亦曰：『吾知子之所以距我者，吾不言。』楚王問其故。墨子曰：『公輸子之意不過欲殺臣，殺臣，宋莫能守，可攻也。然臣之弟子禽滑釐等三百人已持臣守國之器在宋城上而待楚寇矣，雖殺臣，不能絕也。』楚王曰：『善哉，吾請無攻宋城矣！』」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "注「爲雲梯之械」者，按梯者，構木瞰高也；雲者，言其昇高入雲，故曰雲梯。械者，器也。謂攻城之樓櫓也。注「墨子解帶爲城」者，謂墨子爲術，解身上革帶以爲城也。注「以牒爲械」者，按牒者，小木札也；械者，樓櫓等也。注「公輸般之攻械盡」者，劉氏云「械謂飛梯、撞車、飛石車弩之具」。詘音丘勿反。謂般技已盡，墨守有餘。禽滑釐者，墨子弟子之姓字也。釐音里。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
+      "anchor_text": "時，或曰在其後。",
+      "before_context": "蓋墨翟，宋之大夫，善守禦，爲節用。或曰並孔子時，或曰在其後。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《別錄》云「今按墨子書有文子，文子即子夏之弟子，問於墨子」。如此，則墨子在七十子之後也。"
         }
       ],
       "sentence_id": null

@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "大將軍衞青者，平陽人也。",
       "before_context": "大將軍衞青者，平陽人也。",
-      "after_context": "其父鄭季，爲吏，給事平陽侯家，與侯妾衞媼通，生青。青同母兄衞...",
+      "after_context": "其父鄭季，爲吏，給事平陽侯家，與侯妾衞媼通，",
       "items": [
         {
           "source": "zhengyi",
@@ -17,6 +17,20 @@
     },
     {
       "id": "n002",
+      "anchor_text": "鄭季，爲吏，給事平陽侯家，與侯妾衞媼通，",
+      "before_context": "...青者，平陽人也。其父鄭季，爲吏，給事平陽侯家，與侯妾衞媼通，",
+      "after_context": "生青。青同母兄衞長子，而姊衞子夫自平陽公主家得幸天子，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "衞，姓也。媼，婦人老少通稱。《漢書》曰與主家僮衞媼通。案：既云家僮，故非老。或者媼是老稱，後追稱媼耳。又外戚傳云「薄姬父與魏王宗女魏媼通」，則亦魏是媼姓。而小顏云「衞者，舉其夫姓也」。然案此云「侯妾衞媼」，似更無別夫也。下云「同母兄衞長子及姊子夫皆冒衞姓」，又似有夫。其所冒之姓爲父與母，皆未明也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
       "anchor_text": "衞長子，而姊衞子夫自平陽公主家得幸天子，",
       "before_context": "...媼通，生青。青同母兄衞長子，而姊衞子夫自平陽公主家得幸天子，",
       "after_context": "故冒姓爲衞氏。字仲卿。長子更字長君。長君母號爲衞媼。媼長女衞...",
@@ -25,29 +39,81 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「曹參曾孫平陽夷侯，時尚武帝姊平陽公主，生子襄。」"
-        }
-      ],
-      "sentence_id": null
-    },
-    {
-      "id": "n003",
-      "anchor_text": "侯家人，少時歸其父，其父使牧羊。先母之子",
-      "before_context": "青爲侯家人，少時歸其父，其父使牧羊。先母之子",
-      "after_context": "皆奴畜之，不以爲兄弟數。青嘗從入至甘泉居室，有一鉗徒相青曰：...",
-      "items": [
+        },
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "服虔曰：「先母，適妻也。青之適母。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：如淳云「本陽信長公主，爲平陽侯所尚，故稱平陽公主」。按徐廣云「夷侯，曹參曾孫，名襄」。又按系家及《功臣表》「時」或作「疇」，《漢書》作「壽」，並文字殘缺，故不同也。"
         }
       ],
       "sentence_id": null
     },
     {
       "id": "n004",
+      "anchor_text": "子更字長君。長君母號爲衞媼。媼長女衞孺，",
+      "before_context": "...姓爲衞氏。字仲卿。長子更字長君。長君母號爲衞媼。媼長女衞孺，",
+      "after_context": "次女少兒，次女即子夫。後子夫男弟步、廣",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云「君孺」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "次女少兒，次女即子夫。後子夫男弟步、廣",
+      "before_context": "...號爲衞媼。媼長女衞孺，次女少兒，次女即子夫。後子夫男弟步、廣",
+      "after_context": "皆冒衞氏。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「步，一作『少』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
+      "anchor_text": "侯家人，少時歸其父，其父使牧羊。先母之子",
+      "before_context": "青爲侯家人，少時歸其父，其父使牧羊。先母之子",
+      "after_context": "皆奴畜之，不以爲兄弟數。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「先母，適妻也。青之適母。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「民母」。服虔云「母，適妻也。青之適母」。顧氏云「鄭季本妻編於民戶之閒，故曰民母」。今本亦或作「民母」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
+      "anchor_text": "皆奴畜之，不以爲兄弟數。",
+      "before_context": "...人，少時歸其父，其父使牧羊。先母之子皆奴畜之，不以爲兄弟數。",
+      "after_context": "青嘗從入至甘泉居室，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音去聲。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
       "anchor_text": "青嘗從入至甘泉居室，",
       "before_context": "...使牧羊。先母之子皆奴畜之，不以爲兄弟數。青嘗從入至甘泉居室，",
-      "after_context": "有一鉗徒相青曰：「貴人也，官至封侯。」青笑曰：「人奴之生，得...",
+      "after_context": "有一鉗徒",
       "items": [
         {
           "source": "zhengyi",
@@ -58,7 +124,21 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n009",
+      "anchor_text": "有一鉗徒",
+      "before_context": "...先母之子皆奴畜之，不以爲兄弟數。青嘗從入至甘泉居室，有一鉗徒",
+      "after_context": "相青曰：「貴人也，官至封侯。」青笑曰：「人奴之生，得毋笞罵即...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「甘泉中徒所居也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
       "anchor_text": "子夫得入宮幸上。皇后，堂邑大長公主女也，",
       "before_context": "...主。建元二年春，青姊子夫得入宮幸上。皇后，堂邑大長公主女也，",
       "after_context": "無子，妒。大長公主聞衞子夫幸，有身，妒之，乃使人捕青。青時給...",
@@ -77,9 +157,79 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n011",
+      "anchor_text": "，有身，妒之，乃使人捕青。青時給事建章，",
+      "before_context": "...。大長公主聞衞子夫幸，有身，妒之，乃使人捕青。青時給事建章，",
+      "after_context": "未知名。大長公主執囚青，欲殺之。其友騎郎公孫敖與壯士往篡取之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：晉灼云「上林中宮名也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "，欲殺之。其友騎郎公孫敖與壯士往篡取之，",
+      "before_context": "...知名。大長公主執囚青，欲殺之。其友騎郎公孫敖與壯士往篡取之，",
+      "after_context": "以故得不死。上聞，乃召青爲建章監，侍中，及同母昆弟貴，賞賜數...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "篡猶劫也，奪也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
+      "anchor_text": "千金。孺爲太僕公孫賀妻。少兒故與陳掌通，",
+      "before_context": "...昆弟貴，賞賜數日閒累千金。孺爲太僕公孫賀妻。少兒故與陳掌通，",
+      "after_context": "上召貴掌。公孫敖由此益貴。子夫爲夫人。青爲大中大夫。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「陳平曾孫，名掌也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
+      "anchor_text": "元朔元年春，衞夫人有男，",
+      "before_context": "元朔元年春，衞夫人有男，",
+      "after_context": "立爲皇后。其秋，青爲車騎將軍，出雁門，三萬騎擊匈奴，斬首虜數...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "即衞太子據也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "之，出代；令車騎將軍青出雲中以西至高闕。",
+      "before_context": "...軍軍。漢令將軍李息擊之，出代；令車騎將軍青出雲中以西至高闕。",
+      "after_context": "遂略河南地，至于隴西，捕首虜數千，畜數十萬，走白羊、樓煩王。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：山名也。小顏云「一曰塞名，在朔方之北」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "地爲朔方郡。",
-      "before_context": "，捕首虜數千，畜數十萬，走白羊、樓煩王。遂以河南地爲朔方郡。",
+      "before_context": "...，捕首虜數千，畜數十萬，走白羊、樓煩王。遂以河南地爲朔方郡。",
       "after_context": "以三千八百戶封青爲長平侯。青校尉蘇建有功，以千一百戶封建爲平...",
       "items": [
         {
@@ -96,10 +246,10 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n017",
       "anchor_text": "，以千一百戶封建爲平陵侯。使建築朔方城。",
       "before_context": "...平侯。青校尉蘇建有功，以千一百戶封建爲平陵侯。使建築朔方城。",
-      "after_context": "青校尉張次公有功，封爲岸頭侯。天子曰：「匈奴",
+      "after_context": "青校尉張次公有功，封爲岸頭侯。",
       "items": [
         {
           "source": "zhengyi",
@@ -110,10 +260,10 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n018",
       "anchor_text": "青校尉張次公有功，封爲岸頭侯。",
       "before_context": "...戶封建爲平陵侯。使建築朔方城。青校尉張次公有功，封爲岸頭侯。",
-      "after_context": "天子曰：「匈奴",
+      "after_context": "天子曰：「匈奴逆天理，亂人倫，暴長虐老，以盜竊爲務，行詐諸蠻...",
       "items": [
         {
           "source": "suoyin",
@@ -129,9 +279,51 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n019",
+      "anchor_text": "竊爲務，行詐諸蠻夷，造謀藉兵，數爲邊害，",
+      "before_context": "...人倫，暴長虐老，以盜竊爲務，行詐諸蠻夷，造謀藉兵，數爲邊害，",
+      "after_context": "故興師遣將，以征厥罪。詩不云乎，『薄伐玁狁，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「從蠻夷借兵鈔邊也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "，",
+      "before_context": "...藉兵，數爲邊害，故興師遣將，以征厥罪。詩不云乎，『薄伐玁狁，",
+      "after_context": "至于太原』，『出車彭彭，城彼朔方』。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "薄伐獫狁。此小雅六月詩，美宣王北伐也。薄伐者，言逐出之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "至于太原』，『出車彭彭，城彼朔方』。",
+      "before_context": "...。詩不云乎，『薄伐玁狁，至于太原』，『出車彭彭，城彼朔方』。",
+      "after_context": "今車騎將軍青度西河",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "小雅出車之詩也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
       "anchor_text": "今車騎將軍青度西河",
-      "before_context": "玁狁，至于太原』，『出車彭彭，城彼朔方』。今車騎將軍青度西河",
+      "before_context": "...玁狁，至于太原』，『出車彭彭，城彼朔方』。今車騎將軍青度西河",
       "after_context": "至高闕，獲首虜二千三百級，車輜畜產畢收爲鹵，已封爲列侯，遂西...",
       "items": [
         {
@@ -143,24 +335,29 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n023",
       "anchor_text": "地，按榆谿舊塞，",
       "before_context": "...級，車輜畜產畢收爲鹵，已封爲列侯，遂西定河南地，按榆谿舊塞，",
-      "after_context": "絕梓領，梁北河，討蒲泥，破符離，斬輕銳之卒，捕伏聽者三千七十...",
+      "after_context": "絕梓領，梁北河，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「案，行也。榆谿，舊塞名。」或曰按，尋也。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按榆谷舊塞。如淳云：「按，行也，尋也。榆谷，舊塞名也。」案：水經云「上郡之北有諸次水，東經榆林塞爲榆谿」，是榆谷舊塞也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n024",
       "anchor_text": "絕梓領，梁北河，",
       "before_context": "...爲鹵，已封爲列侯，遂西定河南地，按榆谿舊塞，絕梓領，梁北河，",
-      "after_context": "討蒲泥，破符離，斬輕銳之卒，捕伏聽者三千七十一級，執訊獲醜，",
+      "after_context": "討蒲泥，破符離，",
       "items": [
         {
           "source": "jijie",
@@ -176,24 +373,43 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n025",
       "anchor_text": "討蒲泥，破符離，",
       "before_context": "...，遂西定河南地，按榆谿舊塞，絕梓領，梁北河，討蒲泥，破符離，",
-      "after_context": "斬輕銳之卒，捕伏聽者三千七十一級，執訊獲醜，驅馬牛羊百有餘萬...",
+      "after_context": "斬輕銳之卒，捕伏聽者三千七十一級，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「二王號。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "晉灼云：「二王號。」崔浩云：「漠北塞名。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n026",
+      "anchor_text": "斬輕銳之卒，捕伏聽者三千七十一級，",
+      "before_context": "...，梁北河，討蒲泥，破符離，斬輕銳之卒，捕伏聽者三千七十一級，",
+      "after_context": "執訊獲醜，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「伏於隱處，聽軍虛實。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "執訊獲醜，",
-      "before_context": "討蒲泥，破符離，斬輕銳之卒，捕伏聽者三千七十一級，執訊獲醜，",
-      "after_context": "驅馬牛羊百有餘萬，全甲兵而還，益封青三千戶。」其明年，匈奴",
+      "before_context": "...討蒲泥，破符離，斬輕銳之卒，捕伏聽者三千七十一級，執訊獲醜，",
+      "after_context": "驅馬牛羊百有餘萬，全甲兵而還，益封青三千戶。」其明年，匈奴入...",
       "items": [
         {
           "source": "zhengyi",
@@ -204,7 +420,63 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n028",
+      "anchor_text": "入殺代郡太守友，",
+      "before_context": "...萬，全甲兵而還，益封青三千戶。」其明年，匈奴入殺代郡太守友，",
+      "after_context": "入略鴈門千餘人。其明年，匈奴大入代、定襄、上郡，殺略漢數千人...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「友者，太守名也。姓共也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "，出高闕；衞尉蘇建爲游擊將軍，左內史李沮",
+      "before_context": "...令車騎將軍青將三萬騎，出高闕；衞尉蘇建爲游擊將軍，左內史李沮",
+      "after_context": "爲彊弩將軍，太僕公孫賀爲騎將軍，代相李蔡爲輕車將軍，皆領屬車...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「音俎。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "郭成等逐數百里，不及，得右賢裨王十餘人，",
+      "before_context": "...潰圍北去。漢輕騎校尉郭成等逐數百里，不及，得右賢裨王十餘人，",
+      "after_context": "眾男女萬五千餘人，畜數千百萬，於是引兵而還。至塞，天子使使者...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "裨王十人。賈逵云：「裨，益也。」小顏云：「裨王，小王也，若裨將然。音頻移反。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "軍，諸將皆以兵屬大將軍，大將軍立號而歸。",
+      "before_context": "...中拜車騎將軍青爲大將軍，諸將皆以兵屬大將軍，大將軍立號而歸。",
+      "after_context": "天子曰：「大將軍青躬率戎士，師大捷，獲匈奴王十有餘人，益封青...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：謂立大將軍之號令而歸。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
       "anchor_text": "人，益封青六千戶。」而封青子伉爲宜春侯，",
       "before_context": "...大捷，獲匈奴王十有餘人，益封青六千戶。」而封青子伉爲宜春侯，",
       "after_context": "青子不疑爲陰安侯，青子登爲發干侯。青固謝曰：「臣幸得待罪行閒...",
@@ -218,7 +490,7 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n033",
       "anchor_text": "功也。陛下幸已益封臣青。臣青子在𦇤緥中，",
       "before_context": "...大捷，皆諸校尉力戰之功也。陛下幸已益封臣青。臣青子在𦇤緥中，",
       "after_context": "未有勤勞，上幸列地封爲三侯，非臣待罪行閒所以勸士力戰之意也。...",
@@ -232,21 +504,68 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
-      "anchor_text": "都尉韓說從大將軍出窳渾，",
-      "before_context": "...，傅校獲王，以千五百戶封敖爲合騎侯。都尉韓說從大將軍出窳渾，",
-      "after_context": "至匈奴",
+      "id": "n034",
+      "anchor_text": "，常護軍，傅校獲王，",
+      "before_context": "...御史曰：「護軍都尉公孫敖三從大將軍擊匈奴，常護軍，傅校獲王，",
+      "after_context": "以千五百戶封敖爲合騎侯。",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「窳渾在朔方，音庾。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "顧祕監云：「傅，領也。五百人謂之校。」小顏云：「傅音附。言敖總護諸軍，每附部校，以致克捷而獲王也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n035",
+      "anchor_text": "以千五百戶封敖爲合騎侯。",
+      "before_context": "...三從大將軍擊匈奴，常護軍，傅校獲王，以千五百戶封敖爲合騎侯。",
+      "after_context": "都尉韓說從大將軍出窳渾，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：非邑地，而以戰功爲號。謂以軍合驃騎，故云「合騎」，若「冠軍」、「從驃」然也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "都尉韓說從大將軍出窳渾，",
+      "before_context": "...，傅校獲王，以千五百戶封敖爲合騎侯。都尉韓說從大將軍出窳渾，",
+      "after_context": "至匈奴右賢王庭，爲麾下搏戰獲王，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「窳渾在朔方，音庾。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音庾。服虔云「塞名」。徐廣云「在朔方」。《漢書》作「寘渾」，寘音田也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "右賢王庭，爲麾下搏戰獲王，",
+      "before_context": "...侯。都尉韓說從大將軍出窳渾，至匈奴右賢王庭，爲麾下搏戰獲王，",
+      "after_context": "以千三百戶封說爲龍頟侯。騎將軍公孫賀從大將軍獲王，以千三百戶...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "搏音博。搏，擊也。小顏同。今史、漢本多作「傳」，傳猶轉也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
       "anchor_text": "賀從大將軍獲王，以千三百戶封賀爲南窌侯。",
       "before_context": "...爲龍頟侯。騎將軍公孫賀從大將軍獲王，以千三百戶封賀爲南窌侯。",
       "after_context": "輕車將軍李蔡再從大將軍獲王，以千六百戶封蔡爲樂安侯。校尉李朔...",
@@ -255,15 +574,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「窌宜作『奅』，音匹孝反。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐音匹教反。韋昭云縣名。或作「窖」，音干校反。《字林》云「大」下「卯」與「穴」下「卯」並音匹孝反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n039",
+      "anchor_text": "身得亡去，自歸大將軍。大將軍問其罪正閎、",
+      "before_context": "...軍蘇建盡亡其軍，獨以身得亡去，自歸大將軍。大將軍問其罪正閎、",
+      "after_context": "長史安、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「正，軍正也。閎，名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
       "anchor_text": "長史安、",
       "before_context": "...亡其軍，獨以身得亡去，自歸大將軍。大將軍問其罪正閎、長史安、",
-      "after_context": "議郎周霸等：「建當云何？」霸曰：「自大將軍出，未嘗斬裨將。今...",
+      "after_context": "議郎周霸等：",
       "items": [
         {
           "source": "zhengyi",
@@ -274,7 +612,7 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n041",
       "anchor_text": "議郎周霸等：",
       "before_context": "...身得亡去，自歸大將軍。大將軍問其罪正閎、長史安、議郎周霸等：",
       "after_context": "「建當云何？」霸曰：「自大將軍出，未嘗斬裨將。今建弃軍，可斬...",
@@ -283,15 +621,118 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「儒生。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣云儒生也。案：《郊祀志》議封禪有周霸，故知也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n042",
+      "anchor_text": "可乎？」軍吏皆曰「善」。遂囚建詣行在所。",
+      "before_context": "...爲人臣不敢專權，不亦可乎？」軍吏皆曰「善」。遂囚建詣行在所。",
+      "after_context": "入塞罷兵。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蔡邕曰：「天子自謂所居曰『行在所』，言今雖在京師，行所至耳。巡狩天下，所奏事處皆爲宮。在長安則曰奏長安宮，在泰山，則曰奉高宮，唯當時所在。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
+      "anchor_text": "是歲也，大將軍姊子霍去病",
+      "before_context": "是歲也，大將軍姊子霍去病",
+      "after_context": "年十八，幸，爲天子侍中。善騎射，再從大將軍，受詔與壯士，爲剽...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「姊即少兒也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n044",
+      "anchor_text": "。善騎射，再從大將軍，受詔與壯士，爲剽姚",
+      "before_context": "...十八，幸，爲天子侍中。善騎射，再從大將軍，受詔與壯士，爲剽姚",
+      "after_context": "校尉，與輕勇騎八百直弃大軍數百里赴利，斬捕首虜過當。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音匹遙反，下音遙。大顏案荀悅漢紀作「票鷂」。票鷂，勁疾之貌也。上音頻妙反，下音弋召反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
+      "anchor_text": "騎八百直弃大軍數百里赴利，斬捕首虜過當。",
+      "before_context": "...，爲剽姚校尉，與輕勇騎八百直弃大軍數百里赴利，斬捕首虜過當。",
+      "after_context": "於是天子曰：「剽姚校尉去病斬首虜二千二十八級，及相國、當戶，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：小顏云「計其所將之人數，則捕首虜爲多，過於所當也。一云漢軍亡失者少，而殺獲匈奴數多，故曰過當也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n046",
+      "anchor_text": "二千二十八級，及相國、當戶，斬單于大父行",
+      "before_context": "...「剽姚校尉去病斬首虜二千二十八級，及相國、當戶，斬單于大父行",
+      "after_context": "籍若侯產，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "行音胡浪反。謂藉若侯是匈奴祖之行也。《漢書》云「藉若侯產，產即大父之名」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
+      "anchor_text": "籍若侯產，",
+      "before_context": "...去病斬首虜二千二十八級，及相國、當戶，斬單于大父行籍若侯產，",
+      "after_context": "生捕季父羅姑比，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「籍若，胡侯。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
+      "anchor_text": "生捕季父羅姑比，",
+      "before_context": "...十八級，及相國、當戶，斬單于大父行籍若侯產，生捕季父羅姑比，",
+      "after_context": "再冠軍，以千六百戶封去病爲冠軍侯。上谷太守郝賢四從大將軍，捕...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：顏氏云「羅姑比，單于季父名也」。小顏云「比，頻也」。案：下文既云「再冠軍」，無容更言頻也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "張騫從大將軍，以嘗使大夏，",
       "before_context": "張騫從大將軍，以嘗使大夏，",
-      "after_context": "留匈奴",
+      "after_context": "留匈奴中久，導軍，知善水草處，軍得以無飢渴，因前使絕國功，封...",
       "items": [
         {
           "source": "zhengyi",
@@ -302,10 +743,10 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n050",
       "anchor_text": "歲，元狩二年春，以冠軍侯去病爲驃騎將軍，",
       "before_context": "冠軍侯去病既侯三歲，元狩二年春，以冠軍侯去病爲驃騎將軍，",
-      "after_context": "將萬騎出隴西",
+      "after_context": "將萬騎出隴西，有功。天子曰：「驃騎將軍率戎士踰烏盭，",
       "items": [
         {
           "source": "jijie",
@@ -321,24 +762,85 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
-      "anchor_text": "歷五王國，輜重人眾懾慴",
-      "before_context": "...驃騎將軍率戎士踰烏盭，討遫濮，涉狐奴，歷五王國，輜重人眾懾慴",
-      "after_context": "者弗取，冀獲單于子。轉戰六日，過焉支山千有餘里，合短兵，殺折...",
+      "id": "n051",
+      "anchor_text": "，有功。天子曰：「驃騎將軍率戎士踰烏盭，",
+      "before_context": "...騎將軍，將萬騎出隴西，有功。天子曰：「驃騎將軍率戎士踰烏盭，",
+      "after_context": "討遫濮，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "文穎曰：「恐懼也。」"
+          "text": "《漢書音義》曰：「音戾，山名也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n052",
+      "anchor_text": "討遫濮，",
+      "before_context": "...將萬騎出隴西，有功。天子曰：「驃騎將軍率戎士踰烏盭，討遫濮，",
+      "after_context": "涉狐奴，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音速卜二音。崔浩云「匈奴部落名」。案：下有「遬濮王」，是國名也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
+      "anchor_text": "涉狐奴，",
+      "before_context": "...隴西，有功。天子曰：「驃騎將軍率戎士踰烏盭，討遫濮，涉狐奴，",
+      "after_context": "歷五王國，輜重人眾懾慴",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「水名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
+      "anchor_text": "歷五王國，輜重人眾懾慴",
+      "before_context": "...驃騎將軍率戎士踰烏盭，討遫濮，涉狐奴，歷五王國，輜重人眾懾慴",
+      "after_context": "者弗取，冀獲單于子。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「恐懼也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：說文云「讋，失氣也」。劉氏云「上式涉反，下之涉反」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n055",
+      "anchor_text": "者弗取，冀獲單于子。",
+      "before_context": "...，討遫濮，涉狐奴，歷五王國，輜重人眾懾慴者弗取，冀獲單于子。",
+      "after_context": "轉戰六日，過焉支山千有餘里，合短兵，殺折蘭王，斬盧胡王，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『與』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n056",
       "anchor_text": "山千有餘里，合短兵，殺折蘭王，斬盧胡王，",
       "before_context": "...子。轉戰六日，過焉支山千有餘里，合短兵，殺折蘭王，斬盧胡王，",
-      "after_context": "誅全甲，執渾邪王子及相國、都尉，首虜八千餘級，收休屠祭天金人...",
+      "after_context": "誅全甲，",
       "items": [
         {
           "source": "jijie",
@@ -354,10 +856,10 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n057",
       "anchor_text": "誅全甲，",
       "before_context": "...六日，過焉支山千有餘里，合短兵，殺折蘭王，斬盧胡王，誅全甲，",
-      "after_context": "執渾邪王子及相國、都尉，首虜八千餘級，收休屠祭天金人，益封去...",
+      "after_context": "執渾邪王子及相國、都尉，首虜八千餘級，收休屠祭天金人，",
       "items": [
         {
           "source": "jijie",
@@ -373,7 +875,7 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n058",
       "anchor_text": "國、都尉，首虜八千餘級，收休屠祭天金人，",
       "before_context": "...全甲，執渾邪王子及相國、都尉，首虜八千餘級，收休屠祭天金人，",
       "after_context": "益封去病二千戶。」",
@@ -382,12 +884,59 @@
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「祭天爲主。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：張嬰云「佛徒祠金人也」。如淳云「祭天以金人爲主也」。屠音儲。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n059",
+      "anchor_text": "山，捕首虜甚多。天子曰：「驃騎將軍踰居延",
+      "before_context": "...驃騎將軍踰居延至祁連山，捕首虜甚多。天子曰：「驃騎將軍踰居延",
+      "after_context": "遂過小月氏，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「水名也。」，"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n060",
+      "anchor_text": "遂過小月氏，",
+      "before_context": "...延至祁連山，捕首虜甚多。天子曰：「驃騎將軍踰居延遂過小月氏，",
+      "after_context": "攻祁連山，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「音支。」西域傳：「大月氏本居敦煌、祁連閒，餘衆保南山，遂號小月氏。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n061",
+      "anchor_text": "攻祁連山，",
+      "before_context": "...，捕首虜甚多。天子曰：「驃騎將軍踰居延遂過小月氏，攻祁連山，",
+      "after_context": "得酋涂王，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "小顏云：「即天山也。匈奴謂天〔爲〕祁連。」西河舊事謂白山，天山。祁連恐非即天山也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n062",
       "anchor_text": "得酋涂王，",
       "before_context": "...多。天子曰：「驃騎將軍踰居延遂過小月氏，攻祁連山，得酋涂王，",
       "after_context": "以衆降者二千五百人，斬首虜三萬二百級，獲五王，五王母，單于閼...",
@@ -396,15 +945,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "張晏曰：「胡王也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "酋音才由反。涂音徒。《漢書》云「揚武乎鱳得，得單于單桓、酋涂王」，此文省也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n063",
       "anchor_text": "，相國、將軍、當戶、都尉六十三人，師大率",
       "before_context": "...于閼氏、王子五十九人，相國、將軍、當戶、都尉六十三人，師大率",
-      "after_context": "減什三，益封去病五千戶。賜校尉從至小月氏爵左庶長。鷹擊司馬破...",
+      "after_context": "減什三，",
       "items": [
         {
           "source": "zhengyi",
@@ -415,10 +969,24 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n064",
+      "anchor_text": "減什三，",
+      "before_context": "...王子五十九人，相國、將軍、當戶、都尉六十三人，師大率減什三，",
+      "after_context": "益封去病五千戶。賜校尉從至小月氏爵左庶長。鷹擊司馬破奴再從驃...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《漢書》云「減什七」，不同也。小顏云「破匈奴之師，十減其七。一云漢兵亡失之數，下皆類此」。案：後說爲是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n065",
       "anchor_text": "爵左庶長。鷹擊司馬破奴再從驃騎將軍斬遬濮",
       "before_context": "...戶。賜校尉從至小月氏爵左庶長。鷹擊司馬破奴再從驃騎將軍斬遬濮",
-      "after_context": "王，捕稽沮王，千騎將得王、王母各一人，王子以下四十一人，捕虜...",
+      "after_context": "王，捕稽沮王，",
       "items": [
         {
           "source": "zhengyi",
@@ -429,24 +997,85 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
-      "anchor_text": "校尉句王高不識，",
-      "before_context": "...前行捕虜千四百人，以千五百戶封破奴爲從驃侯。校尉句王高不識，",
-      "after_context": "從驃騎將軍捕呼于屠王王子以下十一人，捕虜千七百六十八人，以千...",
+      "id": "n066",
+      "anchor_text": "王，捕稽沮王，",
+      "before_context": "...小月氏爵左庶長。鷹擊司馬破奴再從驃騎將軍斬遬濮王，捕稽沮王，",
+      "after_context": "千騎將得王、王母各一人，",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「句音鉤。匈奴以爲號。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "沮音子余反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n067",
+      "anchor_text": "千騎將得王、王母各一人，",
+      "before_context": "...破奴再從驃騎將軍斬遬濮王，捕稽沮王，千騎將得王、王母各一人，",
+      "after_context": "王子以下四十一人，捕虜三千三百三十人，前行捕虜千四百人，以千...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《漢書》云「右千騎將王」，然則此千騎將漢之將，屬趙破奴，得匈奴五王及王母也。或云右千騎將即匈奴王之名。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
+      "anchor_text": "捕虜千四百人，以千五百戶封破奴爲從驃侯。",
+      "before_context": "...三千三百三十人，前行捕虜千四百人，以千五百戶封破奴爲從驃侯。",
+      "after_context": "校尉句王高不識，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「從驃騎將軍有功，因以爲號。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n069",
+      "anchor_text": "校尉句王高不識，",
+      "before_context": "...前行捕虜千四百人，以千五百戶封破奴爲從驃侯。校尉句王高不識，",
+      "after_context": "從驃騎將軍捕呼于屠王",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「句音鉤。匈奴以爲號。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：二人並匈奴人也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
+      "anchor_text": "從驃騎將軍捕呼于屠王",
+      "before_context": "...千五百戶封破奴爲從驃侯。校尉句王高不識，從驃騎將軍捕呼于屠王",
+      "after_context": "王子以下十一人，捕虜千七百六十八人，以千一百戶封不識爲宜冠侯...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：三字共爲王號。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
       "anchor_text": "七百六十八人，以千一百戶封不識爲宜冠侯。",
       "before_context": "...子以下十一人，捕虜千七百六十八人，以千一百戶封不識爲宜冠侯。",
-      "after_context": "校尉僕多有功，封爲煇渠侯。」合騎侯敖坐行留不與驃騎會，當斬，...",
+      "after_context": "校尉僕多",
       "items": [
         {
           "source": "zhengyi",
@@ -457,10 +1086,108 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n072",
+      "anchor_text": "校尉僕多",
+      "before_context": "...一人，捕虜千七百六十八人，以千一百戶封不識爲宜冠侯。校尉僕多",
+      "after_context": "有功，封爲煇渠侯。」",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：漢《百官表》作「僕朋」，疑多是誤。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n073",
+      "anchor_text": "有功，封爲煇渠侯。」",
+      "before_context": "...八人，以千一百戶封不識爲宜冠侯。校尉僕多有功，封爲煇渠侯。」",
+      "after_context": "合騎侯敖坐行留不與驃騎會，當斬，贖爲庶人。諸宿將所將士馬兵亦...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "煇音暉。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n074",
+      "anchor_text": "宿將所將士馬兵亦不如驃騎，驃騎所將常選，",
+      "before_context": "...，當斬，贖爲庶人。諸宿將所將士馬兵亦不如驃騎，驃騎所將常選，",
+      "after_context": "然亦敢深入，常與壯騎先其大（將）軍，軍亦有天幸，未嘗困絕也。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音宣變反。謂驃騎常選擇取精兵。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n075",
+      "anchor_text": "幸，未嘗困絕也。然而諸宿將常坐留落不遇。",
+      "before_context": "...大（將）軍，軍亦有天幸，未嘗困絕也。然而諸宿將常坐留落不遇。",
+      "after_context": "由此驃騎日以親貴，比大將軍。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：謂遲留零落，不偶合也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n076",
+      "anchor_text": "。渾邪王與休屠王等謀欲降漢，使人先要邊。",
+      "before_context": "...單于怒，欲召誅渾邪王。渾邪王與休屠王等謀欲降漢，使人先要邊。",
+      "after_context": "是時大行李息將城河上，得渾邪王使，即馳傳以聞。天子聞之，於是...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：謂先於邊境要候漢人，言其欲降。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n077",
+      "anchor_text": "賞賜者數十巨萬。封渾邪王萬戶，爲漯陰侯。",
+      "before_context": "...。既至長安，天子所以賞賜者數十巨萬。封渾邪王萬戶，爲漯陰侯。",
+      "after_context": "封其裨王呼毒尼",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "漯音他合反。案《地理志》，縣名，在平原郡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n078",
+      "anchor_text": "封其裨王呼毒尼",
+      "before_context": "...子所以賞賜者數十巨萬。封渾邪王萬戶，爲漯陰侯。封其裨王呼毒尼",
+      "after_context": "爲下摩侯，鷹庇爲煇渠侯，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「胡王名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n079",
       "anchor_text": "爲下摩侯，鷹庇爲煇渠侯，",
       "before_context": "...渾邪王萬戶，爲漯陰侯。封其裨王呼毒尼爲下摩侯，鷹庇爲煇渠侯，",
-      "after_context": "禽棃爲河綦侯，大當戶銅離爲常樂侯。於是天子嘉驃騎之功曰：「驃...",
+      "after_context": "禽棃",
       "items": [
         {
           "source": "jijie",
@@ -481,35 +1208,45 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n080",
       "anchor_text": "禽棃",
       "before_context": "...王萬戶，爲漯陰侯。封其裨王呼毒尼爲下摩侯，鷹庇爲煇渠侯，禽棃",
-      "after_context": "爲河綦侯，大當戶銅離爲常樂侯。於是天子嘉驃騎之功曰：「驃騎將...",
+      "after_context": "爲河綦侯，大當戶銅離",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「禽，一作『鳥』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：表作「鳥棃」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n081",
       "anchor_text": "爲河綦侯，大當戶銅離",
       "before_context": "...其裨王呼毒尼爲下摩侯，鷹庇爲煇渠侯，禽棃爲河綦侯，大當戶銅離",
-      "after_context": "爲常樂侯。於是天子嘉驃騎之功曰：「驃騎將軍去病率師攻匈奴",
+      "after_context": "爲常樂侯。於是天子嘉驃騎之功曰：「驃騎將軍去病率師攻匈奴西域...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一作『稠離』也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣一作「稠離」，與《漢書功臣表》同。此文云「銅離」，文異也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n082",
       "anchor_text": "率以軍糧接食，并將控弦萬有餘人，誅獟駻，",
       "before_context": "...，王及厥衆萌咸相犇，率以軍糧接食，并將控弦萬有餘人，誅獟駻，",
       "after_context": "獲首虜八千餘級，降異國之王三十二人，戰士不離傷，十萬之衆咸懷...",
@@ -518,15 +1255,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「獟音欺譙反。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音丘昭反。說文作「趬」，行遮貌。遮，一作「疾」。駻音胡旦反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n083",
       "anchor_text": "咸懷集服，仍與之勞，爰及河塞，庶幾無患，",
       "before_context": "...戰士不離傷，十萬之衆咸懷集服，仍與之勞，爰及河塞，庶幾無患，",
-      "after_context": "幸既永綏矣。以千七百戶益封驃騎將軍。」減隴西",
+      "after_context": "幸既永綏矣。以千七百戶益封驃騎將軍。」減隴西、北地、上郡戍卒...",
       "items": [
         {
           "source": "zhengyi",
@@ -537,10 +1279,10 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n084",
       "anchor_text": "居頃之，乃分徙降者邊五郡故塞外，",
       "before_context": "居頃之，乃分徙降者邊五郡故塞外，",
-      "after_context": "而皆在河南",
+      "after_context": "而皆在河南，因其故俗，爲屬國。",
       "items": [
         {
           "source": "zhengyi",
@@ -551,10 +1293,10 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n085",
       "anchor_text": "，因其故俗，爲屬國。",
       "before_context": "...頃之，乃分徙降者邊五郡故塞外，而皆在河南，因其故俗，爲屬國。",
-      "after_context": "其明年，匈奴",
+      "after_context": "其明年，匈奴入右北平、定襄，殺略漢千餘人。",
       "items": [
         {
           "source": "zhengyi",
@@ -565,7 +1307,21 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n086",
+      "anchor_text": "趙信爲單于畫計，常以爲漢兵不能度幕輕留，",
+      "before_context": "...子與諸將議曰：「翕侯趙信爲單于畫計，常以爲漢兵不能度幕輕留，",
+      "after_context": "今大發士卒，其勢必得所欲。」是歲元狩四年也。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：幕即沙漠，古字少耳。輕留者，謂匈奴以漢軍不能至，故輕易留而不去也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
       "anchor_text": "將軍去病將各五萬騎，步兵轉者踵軍數十萬，",
       "before_context": "...，上令大將軍青、驃騎將軍去病將各五萬騎，步兵轉者踵軍數十萬，",
       "after_context": "而敢力戰深入之士皆屬驃騎。驃騎始爲出定襄，當單于。捕虜言單于...",
@@ -579,10 +1335,24 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n088",
+      "anchor_text": "餘里，見單于兵陳而待，於是大將軍令武剛車",
+      "before_context": "...而適值大將軍軍出塞千餘里，見單于兵陳而待，於是大將軍令武剛車",
+      "after_context": "自環爲營，而縱五千騎往當匈奴。匈奴亦縱可萬騎。會日且入，大風...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孫吳兵法曰：「有巾有蓋，謂之武剛車也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n089",
       "anchor_text": "相紛挐，",
       "before_context": "...乘六驘，壯騎可數百，直冒漢圍西北馳去。時已昏，漢匈奴相紛挐，",
-      "after_context": "殺傷大當。漢軍左校捕虜言單于未昏而去，漢軍因發輕騎夜追之，大...",
+      "after_context": "殺傷大當。",
       "items": [
         {
           "source": "zhengyi",
@@ -593,10 +1363,24 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n090",
+      "anchor_text": "殺傷大當。",
+      "before_context": "...騎可數百，直冒漢圍西北馳去。時已昏，漢匈奴相紛挐，殺傷大當。",
+      "after_context": "漢軍左校捕虜言單于未昏而去，漢軍因發輕騎夜追之，大將軍軍因隨...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "以言所殺傷大略相當。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n091",
       "anchor_text": "兵亦散走。遲明，",
       "before_context": "...，漢軍因發輕騎夜追之，大將軍軍因隨其後。匈奴兵亦散走。遲明，",
-      "after_context": "行二百餘里，不得單于，頗捕斬首虜萬餘級，遂至窴顏山趙信城，得",
+      "after_context": "行二百餘里，不得單于，頗捕斬首虜萬餘級，遂至窴顏山趙信城，",
       "items": [
         {
           "source": "jijie",
@@ -617,66 +1401,170 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n092",
+      "anchor_text": "于，頗捕斬首虜萬餘級，遂至窴顏山趙信城，",
+      "before_context": "...，行二百餘里，不得單于，頗捕斬首虜萬餘級，遂至窴顏山趙信城，",
+      "after_context": "得匈奴積粟食軍。軍留一日而還，悉燒其城餘粟以歸。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「窴音田。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n093",
+      "anchor_text": "眾失單于十餘日，右谷蠡",
+      "before_context": "是時匈奴眾失單于十餘日，右谷蠡",
+      "after_context": "王聞之，自立爲單于。單于後得其衆，右王乃去單于之號。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音祿；下音棃，又音離。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n094",
+      "anchor_text": "之士，",
+      "before_context": "...將軍。軍既還，天子曰：「驃騎將軍去病率師，躬將所獲葷粥之士，",
+      "after_context": "約輕齎，絕大幕，涉獲章渠，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「粥，一作『允』。」駰案：應劭曰「所降士有材力者」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n095",
       "anchor_text": "約輕齎，絕大幕，涉獲章渠，",
       "before_context": "...騎將軍去病率師，躬將所獲葷粥之士，約輕齎，絕大幕，涉獲章渠，",
-      "after_context": "以誅比車耆，轉擊左大將，斬獲旗鼓，歷涉離侯。濟弓閭，獲屯頭王...",
+      "after_context": "以誅比車耆，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「獲，一作『護』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "小顏云：「涉謂涉水也。章渠，單于之近臣，謂涉水而破獲之。」《漢書》云「涉獲單于章渠」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n096",
       "anchor_text": "以誅比車耆，",
       "before_context": "...師，躬將所獲葷粥之士，約輕齎，絕大幕，涉獲章渠，以誅比車耆，",
-      "after_context": "轉擊左大將，斬獲旗鼓，歷涉離侯。濟弓閭，獲屯頭王、韓王等三人...",
+      "after_context": "轉擊左大將，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「王號也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "比，必耳反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n097",
+      "anchor_text": "轉擊左大將，",
+      "before_context": "...葷粥之士，約輕齎，絕大幕，涉獲章渠，以誅比車耆，轉擊左大將，",
+      "after_context": "斬獲旗鼓，歷涉離侯。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《漢書》名雙。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n098",
+      "anchor_text": "斬獲旗鼓，歷涉離侯。",
+      "before_context": "...大幕，涉獲章渠，以誅比車耆，轉擊左大將，斬獲旗鼓，歷涉離侯。",
+      "after_context": "濟弓閭，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「度難侯」。小顏云「山名」。歷，度也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n099",
       "anchor_text": "濟弓閭，",
       "before_context": "...獲章渠，以誅比車耆，轉擊左大將，斬獲旗鼓，歷涉離侯。濟弓閭，",
-      "after_context": "獲屯頭王、韓王等三人，將軍、相國、當戶、都尉八十三人，封狼居...",
+      "after_context": "獲屯頭王、",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「水名也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "弓，包愷音穹，亦如字讀。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n100",
+      "anchor_text": "獲屯頭王、",
+      "before_context": "...誅比車耆，轉擊左大將，斬獲旗鼓，歷涉離侯。濟弓閭，獲屯頭王、",
+      "after_context": "韓王等三人，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「胡王號也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n101",
       "anchor_text": "韓王等三人，",
       "before_context": "...擊左大將，斬獲旗鼓，歷涉離侯。濟弓閭，獲屯頭王、韓王等三人，",
-      "after_context": "將軍、相國、當戶、都尉八十三人，封狼居胥山，禪於姑衍，登臨翰...",
+      "after_context": "將軍、相國、當戶、都尉八十三人，封狼居胥山，禪於姑衍，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「王，一作『藉』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《漢書》云「屯頭韓王等三人」。李奇曰「皆匈奴王號」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n102",
       "anchor_text": "戶、都尉八十三人，封狼居胥山，禪於姑衍，",
       "before_context": "...三人，將軍、相國、當戶、都尉八十三人，封狼居胥山，禪於姑衍，",
-      "after_context": "登臨翰海。執鹵獲醜七萬有四百四十三級，師率減什三，取食於敵，...",
+      "after_context": "登臨翰海。",
       "items": [
         {
           "source": "zhengyi",
@@ -687,24 +1575,43 @@
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n103",
       "anchor_text": "登臨翰海。",
       "before_context": "...、相國、當戶、都尉八十三人，封狼居胥山，禪於姑衍，登臨翰海。",
-      "after_context": "執鹵獲醜七萬有四百四十三級，師率減什三，取食於敵，逴行殊遠而...",
+      "after_context": "執鹵獲醜七萬有四百四十三級，師率減什三，取食於敵，逴",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "張晏曰：「登海邊山以望海也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：崔浩云「北海名，羣鳥之所解羽，故云翰海」。廣異志云「在沙漠北」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n104",
+      "anchor_text": "有四百四十三級，師率減什三，取食於敵，逴",
+      "before_context": "...臨翰海。執鹵獲醜七萬有四百四十三級，師率減什三，取食於敵，逴",
+      "after_context": "行殊遠而糧不絕，以五千八百戶益封驃騎將軍。」右北平太守路博德...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音與「卓」同。卓，遠也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n105",
       "anchor_text": "。」右北平太守路博德屬驃騎將軍，會與城，",
       "before_context": "...千八百戶益封驃騎將軍。」右北平太守路博德屬驃騎將軍，會與城，",
-      "after_context": "不失期，從至檮余山，斬首捕虜二千七百級，以千六百戶封博德爲符...",
+      "after_context": "不失期，從至檮余",
       "items": [
         {
           "source": "zhengyi",
@@ -715,21 +1622,124 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
-      "anchor_text": "封伊即靬爲衆利侯。從驃侯破奴、昌武侯安稽",
-      "before_context": "...支爲壯侯，以千八百戶封伊即靬爲衆利侯。從驃侯破奴、昌武侯安稽",
-      "after_context": "從驃騎有功，益封各三百戶。校尉敢得旗鼓，爲關內侯，食邑二百戶...",
+      "id": "n106",
+      "anchor_text": "不失期，從至檮余",
+      "before_context": "...將軍。」右北平太守路博德屬驃騎將軍，會與城，不失期，從至檮余",
+      "after_context": "山，斬首捕虜二千七百級，以千六百戶封博德爲符離侯。北地都尉邢...",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「姓趙，故匈奴王。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音桃徒二音。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n107",
+      "anchor_text": "，以千六百戶封博德爲符離侯。北地都尉邢山",
+      "before_context": "...，斬首捕虜二千七百級，以千六百戶封博德爲符離侯。北地都尉邢山",
+      "after_context": "從驃騎將軍獲王，以千二百戶封山爲義陽侯。故歸義因淳王復陸支、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『衞山』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n108",
+      "anchor_text": "二百戶封山爲義陽侯。故歸義因淳王復陸支、",
+      "before_context": "...從驃騎將軍獲王，以千二百戶封山爲義陽侯。故歸義因淳王復陸支、",
+      "after_context": "樓專王",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "復，劉氏音伏，小顏音福。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n109",
+      "anchor_text": "樓專王",
+      "before_context": "...將軍獲王，以千二百戶封山爲義陽侯。故歸義因淳王復陸支、樓專王",
+      "after_context": "伊即靬",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「剸」，並音專。小顏音之兗反也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n110",
+      "anchor_text": "伊即靬",
+      "before_context": "...王，以千二百戶封山爲義陽侯。故歸義因淳王復陸支、樓專王伊即靬",
+      "after_context": "皆從驃騎將軍有功，以千三百戶封復陸支爲壯侯，以千八百戶封伊即...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "九言反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n111",
+      "anchor_text": "封伊即靬爲衆利侯。從驃侯破奴、昌武侯安稽",
+      "before_context": "...支爲壯侯，以千八百戶封伊即靬爲衆利侯。從驃侯破奴、昌武侯安稽",
+      "after_context": "從驃騎有功，益封各三百戶。校尉敢",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「姓趙，故匈奴王。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "故匈奴王，姓趙也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n112",
+      "anchor_text": "從驃騎有功，益封各三百戶。校尉敢",
+      "before_context": "...利侯。從驃侯破奴、昌武侯安稽從驃騎有功，益封各三百戶。校尉敢",
+      "after_context": "得旗鼓，爲關內侯，食邑二百戶。校尉自爲",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "李廣子也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n113",
+      "anchor_text": "得旗鼓，爲關內侯，食邑二百戶。校尉自爲",
+      "before_context": "...，益封各三百戶。校尉敢得旗鼓，爲關內侯，食邑二百戶。校尉自爲",
+      "after_context": "爵大庶長。軍吏卒爲官，賞賜甚多。而大將軍不得益封，軍吏卒皆無...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：徐自爲也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n114",
       "anchor_text": "置大司馬位，大將軍、驃騎將軍皆爲大司馬。",
       "before_context": "...塞者不滿三萬匹。乃益置大司馬位，大將軍、驃騎將軍皆爲大司馬。",
       "after_context": "定令，令驃騎將軍秩祿與大將軍等。自是之後，大將軍青日退，而驃...",
@@ -738,12 +1748,45 @@
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「大將軍、驃騎將軍皆有大司馬之號也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：如淳云「本無大司馬，今新置耳」。案：前謂太尉，其官又省，今武帝始置此位，衞將軍、霍驃騎皆加此官。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n115",
+      "anchor_text": "驃騎將軍爲人少言不泄，",
+      "before_context": "驃騎將軍爲人少言不泄，",
+      "after_context": "有氣敢任。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：孔文祥云「謂質重少言，膽氣在中也。周仁『陰重不泄』，其行亦同也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n116",
+      "anchor_text": "有氣敢任。",
+      "before_context": "驃騎將軍爲人少言不泄，有氣敢任。",
+      "after_context": "天子嘗欲教之孫吳兵法，對曰：「顧方略何如耳，不至學古兵法。」...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂果敢任氣也。《漢書》作「往」，亦作「任」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n117",
       "anchor_text": "，卒乏糧，或不能自振，而驃騎尚穿域蹋鞠。",
       "before_context": "...而士有飢者。其在塞外，卒乏糧，或不能自振，而驃騎尚穿域蹋鞠。",
       "after_context": "事多此類。大將軍爲人仁善退讓，以和柔自媚於上，然天下未有稱也...",
@@ -767,10 +1810,10 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n118",
       "anchor_text": "三年，元狩六年而卒。天子悼之，發屬國玄甲",
       "before_context": "驃騎將軍自四年軍後三年，元狩六年而卒。天子悼之，發屬國玄甲",
-      "after_context": "軍，陳自長安至茂陵，爲冢象祁連山。謚之，并武與廣地曰景桓侯。",
+      "after_context": "軍，陳自長安至茂陵，爲冢象祁連山。",
       "items": [
         {
           "source": "zhengyi",
@@ -781,21 +1824,68 @@
       "sentence_id": null
     },
     {
-      "id": "n052",
-      "anchor_text": "謚之，并武與廣地曰景桓侯。",
-      "before_context": "軍，陳自長安至茂陵，爲冢象祁連山。謚之，并武與廣地曰景桓侯。",
-      "after_context": "子嬗代侯。嬗少，字子侯，上愛之，幸其壯而將之。居六歲，元封元...",
+      "id": "n119",
+      "anchor_text": "軍，陳自長安至茂陵，爲冢象祁連山。",
+      "before_context": "...而卒。天子悼之，發屬國玄甲軍，陳自長安至茂陵，爲冢象祁連山。",
+      "after_context": "謚之，并武與廣地曰景桓侯。",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "蘇林曰：「景，武謚也；桓，廣地謚也。」張晏曰：「《謚法》『布義行剛曰景，闢土服遠曰桓』。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：崔浩云「去病破昆邪於此山，故令爲冢象之以旌功也」。姚氏案：冢在茂陵東北，與衞青冢並。西者是青，東者是去病冢。上有豎石，前有石馬相對，又有石人也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n120",
+      "anchor_text": "謚之，并武與廣地曰景桓侯。",
+      "before_context": "...軍，陳自長安至茂陵，爲冢象祁連山。謚之，并武與廣地曰景桓侯。",
+      "after_context": "子嬗",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蘇林曰：「景，武謚也；桓，廣地謚也。」張晏曰：「《謚法》『布義行剛曰景，闢土服遠曰桓』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：景，桓，兩謚也。《謚法》「布義行剛曰景」，是武謚也；又曰「辟土服遠曰桓」，是廣地之謚也。以去病平生有武藝及廣邊地之功，故云「謚之并武與廣地曰景桓侯」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n121",
+      "anchor_text": "子嬗",
+      "before_context": "...陳自長安至茂陵，爲冢象祁連山。謚之，并武與廣地曰景桓侯。子嬗",
+      "after_context": "代侯。嬗少，字子侯，上愛之，幸其壯而將之。居六歲，元封元年，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音市戰反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n122",
+      "anchor_text": "二歲，冠軍侯國除。其後四年，大將軍青卒，",
+      "before_context": "...皆坐酎金失侯。失侯後二歲，冠軍侯國除。其後四年，大將軍青卒，",
+      "after_context": "謚爲烈侯。子伉代爲長平侯。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「元封五年。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n123",
       "anchor_text": "大將軍以其得尚平陽長公主",
       "before_context": "大將軍以其得尚平陽長公主",
       "after_context": "故，長平侯伉代侯。六歲，坐法失侯。",
@@ -809,10 +1899,38 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n124",
+      "anchor_text": "最",
+      "before_context": "最",
+      "after_context": "大將軍青，凡七出擊匈奴，斬捕首虜五萬餘級。一與單于戰，收河南...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂凡計也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n125",
+      "anchor_text": "軍侯者九人。其裨將及校尉已爲將者十四人。",
+      "before_context": "...。其校尉裨將以從大將軍侯者九人。其裨將及校尉已爲將者十四人。",
+      "after_context": "爲裨將者曰李廣，自有傳。無傳者曰：",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《漢書》云「爲特將者十五人」，蓋通李廣也。此李廣一人自有傳，若《漢書》則七人自有傳，八人附見。七人謂李廣、張騫、公孫賀、李蔡、曹襄、韓說、蘇建也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n126",
       "anchor_text": "將軍公孫賀。賀，義渠人，",
       "before_context": "將軍公孫賀。賀，義渠人，",
-      "after_context": "其先胡種。賀父渾邪，景帝時爲平曲侯，坐法失侯。賀，武帝爲太子...",
+      "after_context": "其先胡種。賀父渾邪，景帝時爲平曲侯，",
       "items": [
         {
           "source": "zhengyi",
@@ -823,7 +1941,77 @@
       "sentence_id": null
     },
     {
-      "id": "n055",
+      "id": "n127",
+      "anchor_text": "其先胡種。賀父渾邪，景帝時爲平曲侯，",
+      "before_context": "將軍公孫賀。賀，義渠人，其先胡種。賀父渾邪，景帝時爲平曲侯，",
+      "after_context": "坐法失侯。賀，武帝爲太子時舍人。武帝立八歲，以太僕爲輕車將軍...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「爲隴西太守。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n128",
+      "anchor_text": "襄，無功。後四歲，以坐酎金失侯。後八歲，",
+      "before_context": "...左將軍再從大將軍出定襄，無功。後四歲，以坐酎金失侯。後八歲，",
+      "after_context": "以浮沮",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「元鼎六年」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n129",
+      "anchor_text": "以浮沮",
+      "before_context": "...再從大將軍出定襄，無功。後四歲，以坐酎金失侯。後八歲，以浮沮",
+      "after_context": "將軍出五原二千餘里，無功。後八歲，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "沮音子餘反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n130",
+      "anchor_text": "將軍出五原二千餘里，無功。後八歲，",
+      "before_context": "...坐酎金失侯。後八歲，以浮沮將軍出五原二千餘里，無功。後八歲，",
+      "after_context": "以太僕爲丞相，封葛繹侯。賀七爲將軍，出擊匈奴無大功，而再侯，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「太初二年。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n131",
+      "anchor_text": "，而再侯，爲丞相。坐子敬聲與陽石公主姦，",
+      "before_context": "...將軍，出擊匈奴無大功，而再侯，爲丞相。坐子敬聲與陽石公主姦，",
+      "after_context": "爲巫蠱，族滅，無後。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「陽石，一云『德邑』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n132",
       "anchor_text": "將軍李息，郁郅人。",
       "before_context": "將軍李息，郁郅人。",
       "after_context": "事景帝。至武帝立八歲，爲材官將軍，軍馬邑；後六歲，爲將軍，出...",
@@ -847,7 +2035,49 @@
       "sentence_id": null
     },
     {
-      "id": "n056",
+      "id": "n133",
+      "anchor_text": "，以校尉從大將軍，無功。後十四歲，以因杅",
+      "before_context": "...斬，贖爲庶人。後二歲，以校尉從大將軍，無功。後十四歲，以因杅",
+      "after_context": "將軍築受降城。七歲，復以因杅將軍再出擊匈奴，至余吾，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音于。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n134",
+      "anchor_text": "，至余吾，",
+      "before_context": "...，以因杅將軍築受降城。七歲，復以因杅將軍再出擊匈奴，至余吾，",
+      "after_context": "亡士卒多，下吏，當斬，詐死，亡居民閒五六歲。後發覺，復繫。坐...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "余音餘，又音徐。案：水名，在朔方。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n135",
+      "anchor_text": "將軍李沮，",
+      "before_context": "將軍李沮，",
+      "after_context": "雲中人。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音「俎豆」之「俎」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n136",
       "anchor_text": "雲中人。",
       "before_context": "將軍李沮，雲中人。",
       "after_context": "事景帝。武帝立十七歲，以左內史爲彊弩將軍。後一歲，復爲彊弩將...",
@@ -861,7 +2091,7 @@
       "sentence_id": null
     },
     {
-      "id": "n057",
+      "id": "n137",
       "anchor_text": "將軍李蔡，成紀人也。",
       "before_context": "將軍李蔡，成紀人也。",
       "after_context": "事孝文帝、景帝、武帝。以輕車將軍從大將軍有功，封爲樂安侯。已...",
@@ -875,7 +2105,7 @@
       "sentence_id": null
     },
     {
-      "id": "n058",
+      "id": "n138",
       "anchor_text": "將軍趙食其，祋祤人也。",
       "before_context": "將軍趙食其，祋祤人也。",
       "after_context": "武帝立二十二歲，以主爵爲右將軍，從大將軍出定襄，迷失道，當斬...",
@@ -894,7 +2124,7 @@
       "sentence_id": null
     },
     {
-      "id": "n059",
+      "id": "n139",
       "anchor_text": "將軍荀彘，太原廣武人。以御見，",
       "before_context": "將軍荀彘，太原廣武人。以御見，",
       "after_context": "侍中，爲校尉，數從大將軍。以元封三年爲左將軍擊朝鮮，毋功。以...",
@@ -908,7 +2138,21 @@
       "sentence_id": null
     },
     {
-      "id": "n060",
+      "id": "n140",
+      "anchor_text": "，其四出以將軍，",
+      "before_context": "最驃騎將軍去病，凡六出擊匈奴，其四出以將軍，",
+      "after_context": "斬捕首虜十一萬餘級。及渾邪王以衆降數萬，遂開河西酒泉之地，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「再出以剽姚校尉也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n141",
       "anchor_text": "。及渾邪王以衆降數萬，遂開河西酒泉之地，",
       "before_context": "...，斬捕首虜十一萬餘級。及渾邪王以衆降數萬，遂開河西酒泉之地，",
       "after_context": "西方益少胡寇。四益封，凡萬五千一百戶。其校吏有功爲侯者凡六人...",
@@ -922,7 +2166,7 @@
       "sentence_id": null
     },
     {
-      "id": "n061",
+      "id": "n142",
       "anchor_text": "將軍路博德，平州人。",
       "before_context": "將軍路博德，平州人。",
       "after_context": "以右北平太守從驃騎將軍有功，爲符離侯。驃騎死後，博德以衞尉爲...",
@@ -936,15 +2180,85 @@
       "sentence_id": null
     },
     {
-      "id": "n062",
+      "id": "n143",
       "anchor_text": "將軍趙破奴，故九原人。",
       "before_context": "將軍趙破奴，故九原人。",
-      "after_context": "嘗亡入匈奴",
+      "after_context": "嘗亡入匈奴，已而歸漢，爲驃騎將軍司馬。出北地時有功，封爲從驃...",
       "items": [
         {
           "source": "zhengyi",
           "label": "正義",
           "text": "今勝州。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n144",
+      "anchor_text": "爲匈河將軍，攻胡至匈河水，無功。後二歲，",
+      "before_context": "...坐酎金失侯。後一歲，爲匈河將軍，攻胡至匈河水，無功。後二歲，",
+      "after_context": "擊虜樓蘭王，復封爲浞野侯。後六歲，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「元封二年。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n145",
+      "anchor_text": "擊虜樓蘭王，復封爲浞野侯。後六歲，",
+      "before_context": "...胡至匈河水，無功。後二歲，擊虜樓蘭王，復封爲浞野侯。後六歲，",
+      "after_context": "爲浚稽將軍，將二萬騎擊匈奴左賢王，左賢王與戰，兵八萬騎圍破奴...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「太初二年。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n146",
+      "anchor_text": "中十歲，復與其太子安國亡入漢。",
+      "before_context": "...奴生爲虜所得，遂沒其軍。居匈奴中十歲，復與其太子安國亡入漢。",
+      "after_context": "後坐巫蠱，族。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「以太初二年入匈奴，天漢元年亡歸，涉四年。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n147",
+      "anchor_text": "嘗責大將軍至尊重，而天下之賢大夫毋稱焉，",
+      "before_context": "...曰：蘇建語余曰：「吾嘗責大將軍至尊重，而天下之賢大夫毋稱焉，",
+      "after_context": "願將軍觀古名將所招選擇賢者，勉之哉。大將軍謝曰：『自魏其、武...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂不爲賢士大夫所稱譽。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n148",
+      "anchor_text": "肖者，人主之柄也。人臣奉法遵職而已，何與",
+      "before_context": "...親附士大夫，招賢絀不肖者，人主之柄也。人臣奉法遵職而已，何與",
+      "after_context": "招士！』」驃騎亦放此意，其爲將如此。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音預。"
         }
       ],
       "sentence_id": null

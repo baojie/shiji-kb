@@ -3,9 +3,23 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "韩之先与周同姓，",
+      "before_context": "韩之先与周同姓，",
+      "after_context": "姓姬氏。其后苗裔事晋，得封于韩原，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：左氏传云「邗、晋、应、韩，武之穆」，是武王之子，故诗称「韩侯出祖」，是有韩而先灭。今据此文，云「其后裔事晋，封于韩原，曰韩武子」，则武子本是韩侯之后，晋又封之于韩原，即今之冯翊韩城是也。然按《系本》及《左传》旧说，皆谓韩万是曲沃桓叔之子，即是晋之支庶。又《国语》叔向谓韩宣子能修武子之德，起再拜谢曰「自桓叔已下，嘉吾子之赐」，亦言桓叔是韩之祖也。今以韩侯之后别有桓叔，非关曲沃之桓叔，如此则与太史公之意亦有违。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "姓姬氏。其后苗裔事晋，得封于韩原，",
       "before_context": "韩之先与周同姓，姓姬氏。其后苗裔事晋，得封于韩原，",
-      "after_context": "曰韩武子。武子后三世有韩厥，从封姓为韩氏。",
+      "after_context": "曰韩武子。武子后三世",
       "items": [
         {
           "source": "zhengyi",
@@ -16,7 +30,21 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
+      "anchor_text": "曰韩武子。武子后三世",
+      "before_context": "...同姓，姓姬氏。其后苗裔事晋，得封于韩原，曰韩武子。武子后三世",
+      "after_context": "有韩厥，从封姓为韩氏。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《系本》云：「万生赇伯，赇伯生定伯简，简生舆，舆生献子厥。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
       "anchor_text": "，厥与郤克将兵八百乘伐齐，败齐顷公于鞍，",
       "before_context": "景公十一年，厥与郤克将兵八百乘伐齐，败齐顷公于鞍，",
       "after_context": "获逢丑父。于是晋作六卿，而韩厥在一卿之位，号为献子。",
@@ -30,7 +58,7 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n005",
       "anchor_text": "韩献子老。献子卒，子宣子代。宣字徙居州。",
       "before_context": "...公之（十）〔七〕年，韩献子老。献子卒，子宣子代。宣字徙居州。",
       "after_context": "",
@@ -49,7 +77,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n006",
       "anchor_text": "行氏。宣子卒，子贞子代立。贞子徙居平阳。",
       "before_context": "...子与赵简子侵伐范、中行氏。宣子卒，子贞子代立。贞子徙居平阳。",
       "after_context": "",
@@ -68,35 +96,115 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n007",
       "anchor_text": "贞子卒，子简子代。",
       "before_context": "贞子卒，子简子代。",
-      "after_context": "简子卒，子庄子代。庄子卒，子康子代。康子与赵襄子、魏桓子共败...",
+      "after_context": "简子卒，子庄子代。庄子卒，子康子",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「《史记》多无简子、庄子，而云贞子生康子。班氏亦同。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "徐广云：「《史记》多无简子、庄子，而云贞子生康子。班氏亦同。」按：《系本》有简子，名不信；庄子，名庚。赵系家亦有简子，名不佞。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n008",
+      "anchor_text": "简子卒，子庄子代。庄子卒，子康子",
+      "before_context": "贞子卒，子简子代。简子卒，子庄子代。庄子卒，子康子",
+      "after_context": "代。康子与赵襄子、魏桓子共败知伯，分其地，地益大，大于诸侯。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "名虎。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
+      "anchor_text": "康子卒，子武子",
+      "before_context": "康子卒，子武子",
+      "after_context": "代。武子二年，伐郑，杀其君幽公。十六年，武子卒，子景侯立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "名启章。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
+      "anchor_text": "，杀其君幽公。十六年，武子卒，子景侯立。",
+      "before_context": "...子代。武子二年，伐郑，杀其君幽公。十六年，武子卒，子景侯立。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "纪年及《系本》皆作「景子」，名处。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
+      "anchor_text": "九年，郑围我阳翟。景侯卒，子列侯取立。",
+      "before_context": "九年，郑围我阳翟。景侯卒，子列侯取立。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《系本》作「武侯」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
       "anchor_text": "列侯三年，聂政杀韩相侠累。",
       "before_context": "列侯三年，聂政杀韩相侠累。",
-      "after_context": "九年，秦伐我宜阳，取六邑。十三年，列侯卒，子文侯立。是岁魏文...",
+      "after_context": "九年，秦伐我宜阳，取六邑。十三年，列侯卒，子文侯立。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「六年救鲁也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《战国策》作「杀韩傀」，高诱曰「韩傀，侠侯累也」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n013",
+      "anchor_text": "宜阳，取六邑。十三年，列侯卒，子文侯立。",
+      "before_context": "...相侠累。九年，秦伐我宜阳，取六邑。十三年，列侯卒，子文侯立。",
+      "after_context": "是岁魏文侯卒。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：纪年无文侯，《系本》无列侯。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
       "anchor_text": "齐，至桑丘。郑反晋。九年，伐齐，至灵丘。",
       "before_context": "...城，执宋君。七年，伐齐，至桑丘。郑反晋。九年，伐齐，至灵丘。",
       "after_context": "十年，文侯卒，子哀侯立。",
@@ -110,10 +218,38 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n015",
+      "anchor_text": "，与赵、魏分晋国。二年，灭郑，因徙都郑。",
+      "before_context": "哀侯元年，与赵、魏分晋国。二年，灭郑，因徙都郑。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：纪年魏武侯二十一年，韩灭郑，哀侯入于郑。二十二年，晋桓公邑哀侯于郑。是韩既徙都，因改号曰郑，故《战国策》谓韩惠王曰郑惠王，犹魏徙大梁称梁王然也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
+      "anchor_text": "六年，韩严弑其君哀侯。而子懿侯立。",
+      "before_context": "六年，韩严弑其君哀侯。而子懿侯立。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：年表懿侯作「庄侯」。又纪年云「晋桓公邑哀侯于郑，韩山坚贼其君哀侯而立韩若山」。若山即懿侯也，则韩严为韩山坚也。而《战国策》又有韩仲子，名遂，又恐是韩严也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "懿侯二年，魏败我马陵。",
       "before_context": "懿侯二年，魏败我马陵。",
-      "after_context": "五年，与魏惠王会宅阳。九年，魏败我浍。十二年，懿侯卒，子昭侯...",
+      "after_context": "五年，与魏惠王会宅阳。",
       "items": [
         {
           "source": "zhengyi",
@@ -124,10 +260,10 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n018",
       "anchor_text": "五年，与魏惠王会宅阳。",
       "before_context": "懿侯二年，魏败我马陵。五年，与魏惠王会宅阳。",
-      "after_context": "九年，魏败我浍。十二年，懿侯卒，子昭侯立。",
+      "after_context": "九年，魏败我浍。",
       "items": [
         {
           "source": "zhengyi",
@@ -138,7 +274,7 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n019",
       "anchor_text": "九年，魏败我浍。",
       "before_context": "懿侯二年，魏败我马陵。五年，与魏惠王会宅阳。九年，魏败我浍。",
       "after_context": "十二年，懿侯卒，子昭侯立。",
@@ -157,7 +293,21 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n020",
+      "anchor_text": "昭侯元年，秦败我西山。二年，宋取我黄池。",
+      "before_context": "昭侯元年，秦败我西山。二年，宋取我黄池。",
+      "after_context": "魏取朱。六年，伐东周，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「在平丘。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
       "anchor_text": "魏取朱。六年，伐东周，",
       "before_context": "...侯元年，秦败我西山。二年，宋取我黄池。魏取朱。六年，伐东周，",
       "after_context": "取陵观、邢丘。",
@@ -171,7 +321,77 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n022",
+      "anchor_text": "十年，韩姬弑其君悼公。",
+      "before_context": "十年，韩姬弑其君悼公。",
+      "after_context": "十一年，昭侯如秦。二十二年，申不害死。二十四年，秦来拔我宜阳...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "纪年「姬」亦作「玘」，并音羊之反。姬是韩大夫，而王邵亦云不知悼公何君也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
+      "anchor_text": "二十五年，旱，作高门。屈宜臼",
+      "before_context": "二十五年，旱，作高门。屈宜臼",
+      "after_context": "曰：「昭侯不出此门。何也？不时。吾所谓时者，非时日也，人固有...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "许慎曰：「屈宜臼，楚大夫，在魏也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
+      "anchor_text": "恤民之急，而顾益奢，此谓『时绌举赢』。」",
+      "before_context": "...今年旱，昭侯不以此时恤民之急，而顾益奢，此谓『时绌举赢』。」",
+      "after_context": "二十六年，高门成，昭侯卒，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「时衰秏而作奢侈。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "二十六年，高门成，昭侯卒，",
+      "before_context": "...急，而顾益奢，此谓『时绌举赢』。」二十六年，高门成，昭侯卒，",
+      "after_context": "果不出此门。子宣惠王立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：纪年「郑昭侯武薨，次威侯立。威侯七年，与邯郸围襄陵。五月，梁惠王会威侯于巫沙。十月，郑宣王朝梁」，不见威侯之卒。下败韩举在威侯八年，而此系家即以为宣惠王之年。又上有杀悼公，悼公又不知是谁之谥。则韩微小，国史失代系，故此文及《系本》不同，盖亦不可复考。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "惠王五年，张仪相秦。八年，魏败我将韩举。",
+      "before_context": "宣惠王五年，张仪相秦。八年，魏败我将韩举。",
+      "after_context": "十一年，君号为王。与赵会区鼠。十四，秦伐败我鄢。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "韩举则是韩将不疑，而纪年云韩举，赵将，盖举先为赵将，后入韩。又纪年云其败当韩威王八年，是不同也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "君号为王。与赵会区鼠。十四，秦伐败我鄢。",
       "before_context": "...败我将韩举。十一年，君号为王。与赵会区鼠。十四，秦伐败我鄢。",
       "after_context": "",
@@ -190,10 +410,24 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n028",
+      "anchor_text": "十六年，秦败我修鱼，",
+      "before_context": "十六年，秦败我修鱼，",
+      "after_context": "虏得韩将𫠑、申差于浊泽。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "地名。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "虏得韩将𫠑、申差于浊泽。",
       "before_context": "十六年，秦败我修鱼，虏得韩将𫠑、申差于浊泽。",
-      "after_context": "韩氏急，公仲谓韩王曰：「与国非可恃也。今秦之欲伐楚久矣，王不...",
+      "after_context": "韩氏急，公仲",
       "items": [
         {
           "source": "jijie",
@@ -214,7 +448,119 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n030",
+      "anchor_text": "韩氏急，公仲",
+      "before_context": "十六年，秦败我修鱼，虏得韩将𫠑、申差于浊泽。韩氏急，公仲",
+      "after_context": "谓韩王曰：「与国非可恃也。今秦之欲伐楚久矣，王不如因张仪为和...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "韩相国，名侈。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "，具甲，与之南伐楚，此以一易二之计也。」",
+      "before_context": "...为和于秦，赂以一名都，具甲，与之南伐楚，此以一易二之计也。」",
+      "after_context": "韩王曰：「善。」乃警公仲之行，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "一，谓名都也。二，谓使不伐韩而又与之伐楚也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "韩王曰：「善。」乃警公仲之行，",
+      "before_context": "...之南伐楚，此以一易二之计也。」韩王曰：「善。」乃警公仲之行，",
+      "after_context": "将西购于秦。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "警，戒也。《战国策》作「衞」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "将西购于秦。",
+      "before_context": "...以一易二之计也。」韩王曰：「善。」乃警公仲之行，将西购于秦。",
+      "after_context": "楚王闻之大恐，召陈轸告之。陈轸曰：「秦之欲伐楚久矣，今又得韩...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《战国策》作「讲」。讲亦谋议，与购求意通。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
+      "anchor_text": "信王之救己也。纵韩不能听我，韩必德王也，",
+      "before_context": "...，多其车，重其币，使信王之救己也。纵韩不能听我，韩必德王也，",
+      "after_context": "必不为鴈行以来，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言韩王信楚之救，虽不能听待楚救至，折入于秦，犹德于楚也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
+      "anchor_text": "必不为鴈行以来，",
+      "before_context": "...，使信王之救己也。纵韩不能听我，韩必德王也，必不为鴈行以来，",
+      "after_context": "是秦韩不和也，兵虽至，楚不大病也。为能听我绝和于秦，秦必大怒...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言韩以楚必救己，己虽随秦来战，犹德于王，故不为鴈行而来，言不同心旅进也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "矣。愿大国遂肆志于秦，不谷将以楚殉韩。」",
+      "before_context": "...不谷国虽小，已悉发之矣。愿大国遂肆志于秦，不谷将以楚殉韩。」",
+      "after_context": "韩王闻之大说，乃止公仲之行。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "殉，从死也。言以死助韩。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "韩王闻之大说，乃止公仲之行。",
+      "before_context": "...国遂肆志于秦，不谷将以楚殉韩。」韩王闻之大说，乃止公仲之行。",
+      "after_context": "公仲曰：「不可。夫以实伐我者秦也，以虚名救我者楚也。王恃楚之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "止不令西之秦。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
       "anchor_text": "，大战，楚救不至韩。十九年，大破我岸门。",
       "before_context": "...。秦因大怒，益甲伐韩，大战，楚救不至韩。十九年，大破我岸门。",
       "after_context": "太子仓质于秦以和。",
@@ -233,7 +579,35 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n039",
+      "anchor_text": "二十一年，",
+      "before_context": "二十一年，",
+      "after_context": "与秦共攻楚，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「周王赧之三年也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "与秦共攻楚，",
+      "before_context": "二十一年，与秦共攻楚，",
+      "after_context": "败楚将屈丐，斩首八万于丹阳。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「围景痤也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
       "anchor_text": "败楚将屈丐，斩首八万于丹阳。",
       "before_context": "二十一年，与秦共攻楚，败楚将屈丐，斩首八万于丹阳。",
       "after_context": "是岁，宣惠王卒，太子仓立，是为襄王。",
@@ -252,7 +626,21 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n042",
+      "anchor_text": "是岁，宣惠王卒，太子仓立，是为襄王。",
+      "before_context": "...将屈丐，斩首八万于丹阳。是岁，宣惠王卒，太子仓立，是为襄王。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一云周赧王六年，韩襄哀王三年，张仪死。赧王九年，襄哀王六年，秦昭王立。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
       "anchor_text": "秋，秦使甘茂攻我宜阳。五年，秦拔我宜阳，",
       "before_context": "...，与秦武王会临晋。其秋，秦使甘茂攻我宜阳。五年，秦拔我宜阳，",
       "after_context": "斩首六万。秦武王卒。六年，秦复与我武遂。九年，秦复取我武遂。...",
@@ -266,7 +654,21 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n044",
+      "anchor_text": "年，秦复取我武遂。十年，太子婴朝秦而归。",
+      "before_context": "...年，秦复与我武遂。九年，秦复取我武遂。十年，太子婴朝秦而归。",
+      "after_context": "十一年，秦伐我，取穰。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「与秦会临晋，因至咸阳而还。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
       "anchor_text": "十一年，秦伐我，取穰。",
       "before_context": "...，秦复取我武遂。十年，太子婴朝秦而归。十一年，秦伐我，取穰。",
       "after_context": "与秦伐楚，败楚将唐眛。",
@@ -280,10 +682,10 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n046",
       "anchor_text": "，楚王欲内之甚。今楚兵十余万在方城之外，",
       "before_context": "...韩咎曰：「虮虱亡在楚，楚王欲内之甚。今楚兵十余万在方城之外，",
-      "after_context": "公何不令楚王筑万室之都雍氏之旁，韩必起兵以救之，公必将矣。公...",
+      "after_context": "公何不令楚王筑万室之都雍氏之旁，",
       "items": [
         {
           "source": "suoyin",
@@ -299,10 +701,38 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n047",
+      "anchor_text": "公何不令楚王筑万室之都雍氏之旁，",
+      "before_context": "...甚。今楚兵十余万在方城之外，公何不令楚王筑万室之都雍氏之旁，",
+      "after_context": "韩必起兵以救之，公必将矣。公因以韩楚之兵奉虮虱而内之，其听公...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「在阳翟。」正义《括地志》云：「故雍氏城在洛州阳翟县二十五里。故老云黄帝臣雍父作杵臼也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
+      "anchor_text": "楚围雍氏，",
+      "before_context": "楚围雍氏，",
+      "after_context": "韩求救于秦。秦未为发，使公孙昧入韩。公仲曰：「子以秦为且救韩...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「《秦本纪》惠王后元十三年，周赧王三年，楚怀王十七年，齐湣王十二年，皆云『楚围雍氏』。纪年于此亦说『楚景翠围雍氏。韩宣王卒，秦助韩共败楚屈丐』。又云『齐、宋围煮枣』。皆与《史记》年表及田完世家符同。然则此卷所云『襄王十二年，韩咎从其计』以上，是楚后围雍氏，赧王之十五年事也。又说『楚围雍氏』以下，是楚前围雍氏，赧王之三年事。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "？」对曰：「秦王之言曰『请道南郑、蓝田，",
       "before_context": "...：「子以秦为且救韩乎？」对曰：「秦王之言曰『请道南郑、蓝田，",
-      "after_context": "出兵于楚以待公』，殆不合矣。」公仲曰：「子以为果乎？」对曰：...",
+      "after_context": "出兵于楚以待公』，殆不合矣。」",
       "items": [
         {
           "source": "zhengyi",
@@ -313,10 +743,66 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n050",
+      "anchor_text": "出兵于楚以待公』，殆不合矣。」",
+      "before_context": "...「秦王之言曰『请道南郑、蓝田，出兵于楚以待公』，殆不合矣。」",
+      "after_context": "公仲曰：「子以为果乎？」对曰：「秦王必祖张仪之故智。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "殆不合于南郑。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
+      "anchor_text": "以为果乎？」对曰：「秦王必祖张仪之故智。",
+      "before_context": "...合矣。」公仲曰：「子以为果乎？」对曰：「秦王必祖张仪之故智。",
+      "after_context": "楚威王攻梁也，张仪谓秦王曰：『与楚攻魏，魏折而入于楚，韩固其...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「祖者，宗之习之谓也。故智，犹前时谋计也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n052",
+      "anchor_text": "韩固其与国也，是秦孤也。不如出兵以到之，",
+      "before_context": "...攻魏，魏折而入于楚，韩固其与国也，是秦孤也。不如出兵以到之，",
+      "after_context": "魏楚大战，秦取西河之外以归。』今其状阳言与韩，其实阴善楚。公...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "到，欺也，犹俗云「张到」。然《战国策》作「劲」，劲，强也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
+      "anchor_text": "楚战。楚阴得秦之不用也，必易与公相支也。",
+      "before_context": "...。公待秦而到，必轻与楚战。楚阴得秦之不用也，必易与公相支也。",
+      "after_context": "公战而胜楚，遂与公乘楚，施三川而归。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言楚阴知秦，不为公用，亦必易为公相支拒也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
       "anchor_text": "公战而胜楚，遂与公乘楚，施三川而归。",
       "before_context": "...不用也，必易与公相支也。公战而胜楚，遂与公乘楚，施三川而归。",
-      "after_context": "公战不胜楚，楚塞三川守之，公不能救也。窃为公患之。司马庚三反...",
+      "after_context": "公战不胜楚，楚塞三川守之，",
       "items": [
         {
           "source": "zhengyi",
@@ -327,10 +813,10 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n055",
       "anchor_text": "公战不胜楚，楚塞三川守之，",
       "before_context": "...战而胜楚，遂与公乘楚，施三川而归。公战不胜楚，楚塞三川守之，",
-      "after_context": "公不能救也。窃为公患之。司马庚三反于郢，甘茂与昭鱼遇于商于，...",
+      "after_context": "公不能救也。窃为公患之。司马庚",
       "items": [
         {
           "source": "zhengyi",
@@ -341,24 +827,57 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
-      "anchor_text": "三反于郢，甘茂与昭鱼",
-      "before_context": "...三川守之，公不能救也。窃为公患之。司马庚三反于郢，甘茂与昭鱼",
-      "after_context": "遇于商于，其言收玺，实类有约也。」公仲恐，曰：「然则柰何？」...",
+      "id": "n056",
+      "anchor_text": "公不能救也。窃为公患之。司马庚",
+      "before_context": "...归。公战不胜楚，楚塞三川守之，公不能救也。窃为公患之。司马庚",
+      "after_context": "三反于郢，甘茂与昭鱼",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐广曰：「楚相国。」"
+          "text": "徐广曰：「一作『唐』。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n057",
+      "anchor_text": "三反于郢，甘茂与昭鱼",
+      "before_context": "...三川守之，公不能救也。窃为公患之。司马庚三反于郢，甘茂与昭鱼",
+      "after_context": "遇于商于，其言收玺，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「楚相国。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《战国策》谓之昭䲣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
+      "anchor_text": "遇于商于，其言收玺，",
+      "before_context": "...。窃为公患之。司马庚三反于郢，甘茂与昭鱼遇于商于，其言收玺，",
+      "after_context": "实类有约也。」公仲恐，曰：「然则柰何？」曰：「公必先韩而后秦...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "刘氏云「诈言昭鱼来秦，欲得秦官之印玺」。收即取之义也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n059",
       "anchor_text": "？」曰：「公必先韩而后秦，先身而后张仪。",
       "before_context": "...仲恐，曰：「然则柰何？」曰：「公必先韩而后秦，先身而后张仪。",
-      "after_context": "公不如亟以国合于齐楚，齐楚必委国于公。公之所恶者张仪也，其实...",
+      "after_context": "公不如亟以国合于齐楚，齐楚必委国于公。公之所恶者张仪也，",
       "items": [
         {
           "source": "zhengyi",
@@ -369,7 +888,7 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n060",
       "anchor_text": "齐楚，齐楚必委国于公。公之所恶者张仪也，",
       "before_context": "...仪。公不如亟以国合于齐楚，齐楚必委国于公。公之所恶者张仪也，",
       "after_context": "其实犹不无秦也。」于是楚解雍氏围。",
@@ -383,7 +902,7 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n061",
       "anchor_text": "其实犹不无秦也。」于是楚解雍氏围。",
       "before_context": "...国于公。公之所恶者张仪也，其实犹不无秦也。」于是楚解雍氏围。",
       "after_context": "",
@@ -402,24 +921,43 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n062",
       "anchor_text": "苏代又谓秦太后弟芈戎",
       "before_context": "苏代又谓秦太后弟芈戎",
-      "after_context": "曰：「公叔伯婴恐秦楚之内虮虱也，公何不为韩求质子于楚？楚王听...",
+      "after_context": "曰：「公叔伯婴恐秦楚之内虮虱也，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「号新城君。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "芈，姓；戎，名。秦宣太后弟，号新城君。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n063",
+      "anchor_text": "曰：「公叔伯婴恐秦楚之内虮虱也，",
+      "before_context": "苏代又谓秦太后弟芈戎曰：「公叔伯婴恐秦楚之内虮虱也，",
+      "after_context": "公何不为韩求质子于楚？",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按《战国策》，公叔伯婴与虮虱及公子咎并是襄王子。然伯婴即太子婴，婴前死，故咎与虮虱又争立。此取《战国策》说，伯婴未立之先亦与虮虱争立，故事重而文倒也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n064",
       "anchor_text": "公何不为韩求质子于楚？",
       "before_context": "...弟芈戎曰：「公叔伯婴恐秦楚之内虮虱也，公何不为韩求质子于楚？",
-      "after_context": "楚王听入质子于韩，则公叔伯婴知秦楚之不以虮虱为事，必以韩合于...",
+      "after_context": "楚王听入质子于韩，",
       "items": [
         {
           "source": "suoyin",
@@ -435,7 +973,7 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n065",
       "anchor_text": "楚王听入质子于韩，",
       "before_context": "...婴恐秦楚之内虮虱也，公何不为韩求质子于楚？楚王听入质子于韩，",
       "after_context": "则公叔伯婴知秦楚之不以虮虱为事，必以韩合于秦楚。秦楚挟韩以窘...",
@@ -454,7 +992,21 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n066",
+      "anchor_text": "敢合于齐，是齐孤也。公又为秦求质子于楚，",
+      "before_context": "...楚挟韩以窘魏，魏氏不敢合于齐，是齐孤也。公又为秦求质子于楚，",
+      "after_context": "楚不听，怨结于韩。韩挟齐魏以围楚，楚必重公。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "令芈戎教秦，于楚索韩所送质子，令入之于秦也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
       "anchor_text": "听，怨结于韩。韩挟齐魏以围楚，楚必重公。",
       "before_context": "...为秦求质子于楚，楚不听，怨结于韩。韩挟齐魏以围楚，楚必重公。",
       "after_context": "公挟秦楚之重以积德于韩，公叔伯婴必以国待公。」于是虮虱竟不得...",
@@ -468,7 +1020,7 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n068",
       "anchor_text": "叔伯婴必以国待公。」于是虮虱竟不得归韩。",
       "before_context": "...楚之重以积德于韩，公叔伯婴必以国待公。」于是虮虱竟不得归韩。",
       "after_context": "韩立咎为太子。齐、魏王来。",
@@ -482,7 +1034,7 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n069",
       "anchor_text": "韩立咎为太子。齐、魏王来。",
       "before_context": "...必以国待公。」于是虮虱竟不得归韩。韩立咎为太子。齐、魏王来。",
       "after_context": "",
@@ -496,10 +1048,10 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n070",
       "anchor_text": "败我二十四万，虏喜伊阙。五年，秦拔我宛。",
       "before_context": "...孙喜率周、魏攻秦。秦败我二十四万，虏喜伊阙。五年，秦拔我宛。",
-      "after_context": "六年，与秦武遂地二百里。十年，秦败我师于夏山。十二年，与秦昭...",
+      "after_context": "六年，与秦武遂地二百里。",
       "items": [
         {
           "source": "zhengyi",
@@ -510,7 +1062,7 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n071",
       "anchor_text": "六年，与秦武遂地二百里。",
       "before_context": "...二十四万，虏喜伊阙。五年，秦拔我宛。六年，与秦武遂地二百里。",
       "after_context": "十年，秦败我师于夏山。十二年，与秦昭王会西周而佐秦攻齐。齐败...",
@@ -524,7 +1076,7 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n072",
       "anchor_text": "。十四年，与秦会两周闲。二十一年，使暴䳒",
       "before_context": "...攻齐。齐败，湣王出亡。十四年，与秦会两周闲。二十一年，使暴䳒",
       "after_context": "救魏，为秦所败，䳒走开封。",
@@ -538,10 +1090,10 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n073",
       "anchor_text": "。",
       "before_context": "二十三年，赵、魏攻我华阳。",
-      "after_context": "韩告急于秦，秦不救。韩相国谓陈筮曰：「事急，愿公虽病，为一宿...",
+      "after_context": "韩告急于秦，秦不救。韩相国谓陈筮",
       "items": [
         {
           "source": "zhengyi",
@@ -552,7 +1104,7 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n074",
       "anchor_text": "韩告急于秦，秦不救。韩相国谓陈筮",
       "before_context": "二十三年，赵、魏攻我华阳。韩告急于秦，秦不救。韩相国谓陈筮",
       "after_context": "曰：「事急，愿公虽病，为一宿之行。」陈筮见穰侯。穰侯曰：「事...",
@@ -561,15 +1113,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「一作『筌』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "徐广云一作「荃」。《战国策》作「田荼」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n075",
       "anchor_text": "惠王元年，伐燕。九年，秦拔我陉，城汾旁。",
       "before_context": "桓惠王元年，伐燕。九年，秦拔我陉，城汾旁。",
-      "after_context": "十年，秦击我于太行，我上党郡守以上党郡降赵。十四年，秦拔赵上...",
+      "after_context": "十年，秦击我于太行，",
       "items": [
         {
           "source": "zhengyi",
@@ -580,10 +1137,10 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n076",
       "anchor_text": "十年，秦击我于太行，",
       "before_context": "...惠王元年，伐燕。九年，秦拔我陉，城汾旁。十年，秦击我于太行，",
-      "after_context": "我上党郡守以上党郡降赵。十四年，秦拔赵上党，杀马服子卒四十余...",
+      "after_context": "我上党郡守以上党郡降赵。十四年，秦拔赵上党，",
       "items": [
         {
           "source": "zhengyi",
@@ -594,10 +1151,10 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n077",
       "anchor_text": "党郡守以上党郡降赵。十四年，秦拔赵上党，",
       "before_context": "...，秦击我于太行，我上党郡守以上党郡降赵。十四年，秦拔赵上党，",
-      "after_context": "杀马服子卒四十余万于长平。十七年，秦拔我阳城、负黍。二十二年...",
+      "after_context": "杀马服子卒四十余万于长平。十七年，秦拔我阳城、负黍。",
       "items": [
         {
           "source": "zhengyi",
@@ -608,7 +1165,7 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n078",
       "anchor_text": "十余万于长平。十七年，秦拔我阳城、负黍。",
       "before_context": "...赵上党，杀马服子卒四十余万于长平。十七年，秦拔我阳城、负黍。",
       "after_context": "二十二年，秦昭王卒。二十四年，秦拔我城皋、荥阳。二十六年，秦...",
@@ -627,7 +1184,7 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n079",
       "anchor_text": "，秦虏王安，尽入其地，为颍州郡。韩遂亡。",
       "before_context": "九年，秦虏王安，尽入其地，为颍州郡。韩遂亡。",
       "after_context": "",

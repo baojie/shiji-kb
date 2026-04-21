@@ -3,6 +3,20 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "蕭相國何者，沛豐人也。",
+      "before_context": "蕭相國何者，沛豐人也。",
+      "after_context": "以文無害",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：春秋緯「蕭何感昴精而生，典獄制律」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "以文無害",
       "before_context": "蕭相國何者，沛豐人也。以文無害",
       "after_context": "爲沛主吏掾。",
@@ -11,12 +25,45 @@
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「文無害，有文無所枉害也。律有無害都吏，如今言公平吏。一曰，無害者如言『無比』，陳留閒語也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：裴注已列數家，今更引二說。應劭云「雖爲文吏，而不刻害也」。韋昭云「爲有文理，無傷害也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
+      "anchor_text": "爲沛主吏掾。",
+      "before_context": "蕭相國何者，沛豐人也。以文無害爲沛主吏掾。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云「何爲主吏」。主吏，功曹也。又云「何爲沛掾」，是何爲功曹掾也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
+      "anchor_text": "高祖爲布衣時，何數以吏事護高祖。",
+      "before_context": "高祖爲布衣時，何數以吏事護高祖。",
+      "after_context": "高祖爲亭長，常左右之。高祖以吏繇咸陽，吏皆送奉錢三，何獨以五...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "說文云：「護，救視也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "，吏皆送奉錢三，何獨以五。",
       "before_context": "...祖爲亭長，常左右之。高祖以吏繇咸陽，吏皆送奉錢三，何獨以五。",
       "after_context": "",
@@ -25,40 +72,125 @@
           "source": "jijie",
           "label": "集解",
           "text": "李奇曰：「或三百，或五百也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "奉音扶用反。謂資俸之。如字讀，謂奉送之也。錢三百，謂他人三百，何獨五百也。劉氏云：「時有重者一當百，故有送錢三者。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n006",
       "anchor_text": "秦御史監郡者與從事，常辨之。",
       "before_context": "秦御史監郡者與從事，常辨之。",
-      "after_context": "何乃給泗水卒史事，第一。秦御史欲入言徵何，何固請，得毋行。",
+      "after_context": "何乃給泗水卒史",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "張晏曰：「何與共事修辨明，何素有方略也。」蘇林曰：「辟何與從事也。秦時無刺史，以御史監郡。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：何與御史從事常辨明，言稱職也。故張晏曰「何與共事修辨明，何素有方略」是也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n007",
       "anchor_text": "何乃給泗水卒史",
       "before_context": "秦御史監郡者與從事，常辨之。何乃給泗水卒史",
-      "after_context": "事，第一。秦御史欲入言徵何，何固請，得毋行。",
+      "after_context": "事，第一。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「沛縣有泗水亭。又秦以沛爲泗水郡。」駰按：文穎曰「何爲泗水郡卒史」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳按：律，郡卒史書佐各十人也。卒，祖忽反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n008",
+      "anchor_text": "事，第一。",
+      "before_context": "秦御史監郡者與從事，常辨之。何乃給泗水卒史事，第一。",
+      "after_context": "秦御史欲入言徵何，何固請，得毋行。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：謂課最居第一也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
+      "anchor_text": "及高祖起爲沛公，何常爲丞督事。",
+      "before_context": "及高祖起爲沛公，何常爲丞督事。",
+      "after_context": "沛公至咸陽，諸將皆爭走",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂高祖起沛，令何爲丞，常監督庶事也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
+      "anchor_text": "，諸將皆爭走",
+      "before_context": "及高祖起爲沛公，何常爲丞督事。沛公至咸陽，諸將皆爭走",
+      "after_context": "金帛財物之府分之，何獨先入收秦丞相御史律令圖書藏之。沛公爲漢...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音奏。奏者，趨向之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
+      "anchor_text": "事；即不及奏上，輒以便宜施行，上來以聞。",
+      "before_context": "...，輒奏上，可，許以從事；即不及奏上，輒以便宜施行，上來以聞。",
+      "after_context": "關中事計戶口轉漕",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「上來還，乃以所爲聞之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "關中事計戶口轉漕",
+      "before_context": "...以從事；即不及奏上，輒以便宜施行，上來以聞。關中事計戶口轉漕",
+      "after_context": "給軍，漢王數失軍遁去，何常興關中卒，輒補缺。上以此專屬任何關...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "轉，劉氏音張戀反。漕，水運。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
       "anchor_text": "功最盛，封爲酇侯，",
       "before_context": "...論功行封。羣臣爭功，歲餘功不決。高祖以蕭何功最盛，封爲酇侯，",
       "after_context": "所食邑多。功臣皆曰：「臣等身被堅執銳，多者百餘戰，少者數十合...",
@@ -67,28 +199,52 @@
           "source": "jijie",
           "label": "集解",
           "text": "文穎曰：「音贊。」瓚曰：「今南鄉酇縣也。孫檢曰『有二縣，音字多亂。其屬沛郡者音嵯，屬南陽者音讚』。按《茂陵書》，蕭何國在南陽，宜呼讚。今多呼嵯，嵯舊字作『䣜』，今皆作『酇』，所由亂也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鄒氏云：「屬沛郡音嵯，屬南陽音贊。」又臣瓚按《茂陵書》：「蕭何國在南陽，則字當音贊，今多呼爲嵯也。」注：「瓚曰今南鄉酇縣。」顧氏云：「南鄉，郡名也。太康《地理志》云『魏武帝建安中分南陽立南鄉郡，晉武帝又曰順陽郡也』。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n014",
       "anchor_text": "十創，攻城略地，功最多，宜第一。」上已橈",
       "before_context": "...：「平陽侯曹參身被七十創，攻城略地，功最多，宜第一。」上已橈",
-      "after_context": "功臣，多封蕭何",
+      "after_context": "功臣，多封蕭何，至位次未有以復難之，然心欲何第一。關內侯鄂君",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「橈，屈也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音女教反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n015",
+      "anchor_text": "次未有以復難之，然心欲何第一。關內侯鄂君",
+      "before_context": "...功臣，多封蕭何，至位次未有以復難之，然心欲何第一。關內侯鄂君",
+      "after_context": "進曰：「羣臣議皆誤。夫曹參雖有野戰略地之功，此特一時之事。夫...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按《功臣表》，鄂君即鄂千秋，封安平侯。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "。」於是因鄂君故所食關內侯邑封爲安平侯。",
-      "before_context": "功雖高，得鄂君乃益明。」於是因鄂君故所食關內侯邑封爲安平侯。",
+      "before_context": "...功雖高，得鄂君乃益明。」於是因鄂君故所食關內侯邑封爲安平侯。",
       "after_context": "是日，悉封何父子兄弟十餘人，皆有食邑。乃益封何二千戶，以帝嘗...",
       "items": [
         {
@@ -105,7 +261,21 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n017",
+      "anchor_text": "時何送我獨贏錢二也。",
+      "before_context": "...，皆有食邑。乃益封何二千戶，以帝嘗繇咸陽時何送我獨贏錢二也。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂人皆三，何獨五，所以爲贏二也。音盈。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
       "anchor_text": "，畏君傾動關中。今君胡不多買田地，賤貰貸",
       "before_context": "...民和。上所爲數問君者，畏君傾動關中。今君胡不多買田地，賤貰貸",
       "after_context": "以自汙？上心乃安。」於是相國從其計，上乃大說。",
@@ -119,7 +289,77 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n019",
+      "anchor_text": "上至，相國謁。上笑曰：「夫相國乃利民！」",
+      "before_context": "...賤彊買民田宅數千萬。上至，相國謁。上笑曰：「夫相國乃利民！」",
+      "after_context": "民所上書皆以與相國，曰：「君自謝民。」相國因爲民請曰：「長安...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂相國取人田宅以爲利，故云「乃利人」也。所以令相國自謝之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "地，弃，願令民得入田，毋收稾爲禽獸食。」",
+      "before_context": "...長安地狹，上林中多空地，弃，願令民得入田，毋收稾爲禽獸食。」",
+      "after_context": "上大怒曰：「相國多受賈人財物，乃爲請吾苑！」乃下相國廷尉，械...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "苗子還種田人，留槀入官。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "」乃下相國廷尉，械繫之。數日，王衞尉侍，",
+      "before_context": "...人財物，乃爲請吾苑！」乃下相國廷尉，械繫之。數日，王衞尉侍，",
+      "after_context": "前問曰：「相國何大罪，陛下繫之暴也？」上曰：「吾聞李斯相秦皇...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「百官公卿表衞尉王氏，無名字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
+      "anchor_text": "之分過，",
+      "before_context": "...時爲利，今乃利賈人之金乎？且秦以不聞其過亡天下，李斯之分過，",
+      "after_context": "又何足法哉。陛下何疑宰相之淺也。」",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：上文李斯歸惡而自予，是分過。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
+      "anchor_text": "又何足法哉。陛下何疑宰相之淺也。」",
+      "before_context": "...聞其過亡天下，李斯之分過，又何足法哉。陛下何疑宰相之淺也。」",
+      "after_context": "高帝不懌。是日，使使持節赦出相國。相國年老，素恭謹，入，徒跣...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「用意淺。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
       "anchor_text": "孝惠二年，相國何卒，",
       "before_context": "孝惠二年，相國何卒，",
       "after_context": "謚爲文終侯。",
@@ -133,6 +373,34 @@
           "source": "zhengyi",
           "label": "正義",
           "text": "《括地志》云：「蕭何墓在雍州咸陽縣東北三十七里。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "謚爲文終侯。",
+      "before_context": "孝惠二年，相國何卒，謚爲文終侯。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「《功臣表》蕭何以客初起從也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "：蕭相國何於秦時爲刀筆吏，錄錄未有奇節。",
+      "before_context": "太史公曰：蕭相國何於秦時爲刀筆吏，錄錄未有奇節。",
+      "after_context": "及漢興，依日月之末光，何謹守管籥，因民之疾（奉）〔秦〕法，順...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "錄音祿。"
         }
       ],
       "sentence_id": null

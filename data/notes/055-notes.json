@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "留侯",
       "before_context": "留侯",
-      "after_context": "張良",
+      "after_context": "張良者，",
       "items": [
         {
           "source": "suoyin",
@@ -22,9 +22,23 @@
     },
     {
       "id": "n002",
+      "anchor_text": "者，",
+      "before_context": "留侯張良者，",
+      "after_context": "其先韓人也。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云字子房。按：王符、皇甫謐並以良爲韓之公族，姬姓也。秦索賊急，乃改姓名。而韓先有張去疾乃張譴，恐非良之先代。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
       "anchor_text": "其先韓人也。",
       "before_context": "留侯張良者，其先韓人也。",
-      "after_context": "大父開地，相韓昭侯、宣惠王、襄哀王。父平，相釐王、悼惠王。悼...",
+      "after_context": "大父開地，",
       "items": [
         {
           "source": "suoyin",
@@ -40,10 +54,52 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
+      "anchor_text": "大父開地，",
+      "before_context": "留侯張良者，其先韓人也。大父開地，",
+      "after_context": "相韓昭侯、宣惠王、襄哀王。父平，相釐王、悼惠王。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「大父，祖父。開地，名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "、宣惠王、襄哀王。父平，相釐王、悼惠王。",
+      "before_context": "...。大父開地，相韓昭侯、宣惠王、襄哀王。父平，相釐王、悼惠王。",
+      "after_context": "悼惠王二十三年，平卒。卒二十歲，秦滅韓。良年少，未宦事韓。韓...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韓系家及《系本》作桓惠王。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
+      "anchor_text": "刺秦王，爲韓報仇，以大父、父五世相韓故。",
+      "before_context": "...死不葬，悉以家財求客刺秦王，爲韓報仇，以大父、父五世相韓故。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂大父及父相韓五王，故云五代。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
       "anchor_text": "良嘗學禮淮陽。",
       "before_context": "良嘗學禮淮陽。",
-      "after_context": "東見倉海君。得力士，爲鐵椎重百二十斤。秦皇帝東游，良與客狙擊...",
+      "after_context": "東見倉海君。",
       "items": [
         {
           "source": "zhengyi",
@@ -54,38 +110,48 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n008",
       "anchor_text": "東見倉海君。",
       "before_context": "良嘗學禮淮陽。東見倉海君。",
-      "after_context": "得力士，爲鐵椎重百二十斤。秦皇帝東游，良與客狙擊秦皇帝博浪沙...",
+      "after_context": "得力士，爲鐵椎重百二十斤。秦皇帝東游，良與客狙",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「秦郡縣無倉海。或曰東夷君長。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "姚察以武帝時東夷穢君降，爲倉海郡，或因以名，蓋得其近也。正義《漢書》武帝紀云「〔元朔〕元年，東夷穢君南閭等降，爲倉海郡，今貊穢國」，得之。太史公修史時已降爲郡，自書之。《括地志》云：「穢貊在高麗南，新羅北，東至大海西。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n009",
       "anchor_text": "，爲鐵椎重百二十斤。秦皇帝東游，良與客狙",
       "before_context": "...。東見倉海君。得力士，爲鐵椎重百二十斤。秦皇帝東游，良與客狙",
-      "after_context": "擊秦皇帝博浪沙中，誤中副車。秦皇帝大怒，大索天下，求賊甚急，...",
+      "after_context": "擊秦皇帝博浪沙中，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「狙，伺候也。」應劭曰：「狙，七預反，伺也。」徐廣曰：「伺候也，音千恕反。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：應劭云「狙，伺也。」一曰狙，伏伺也，音七豫反。謂狙之伺物，必伏而候之，故今云「狙候」是也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n010",
       "anchor_text": "擊秦皇帝博浪沙中，",
       "before_context": "...士，爲鐵椎重百二十斤。秦皇帝東游，良與客狙擊秦皇帝博浪沙中，",
-      "after_context": "誤中副車。秦皇帝大怒，大索天下，求賊甚急，爲張良",
+      "after_context": "誤中副車。",
       "items": [
         {
           "source": "suoyin",
@@ -101,21 +167,82 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
-      "anchor_text": "圯上，",
-      "before_context": "良嘗閒從容步游下邳圯上，",
-      "after_context": "有一老父，衣褐，至良所，直墮其履圯下，顧謂良曰：「孺子，下取...",
+      "id": "n011",
+      "anchor_text": "誤中副車。",
+      "before_context": "...重百二十斤。秦皇帝東游，良與客狙擊秦皇帝博浪沙中，誤中副車。",
+      "after_context": "秦皇帝大怒，大索天下，求賊甚急，爲張良故也。良乃更名姓，亡匿...",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「圯，橋也，東楚謂之圯。音怡。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：漢官儀天子屬車三十六乘。屬車即副車，而奉車郎御而從後。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n012",
+      "anchor_text": "良嘗閒從容",
+      "before_context": "良嘗閒從容",
+      "after_context": "步游下邳",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "嘗訓經也。閒，閑字也。從容，閒暇也。從容謂從任其容止，不矜莊也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
+      "anchor_text": "步游下邳",
+      "before_context": "良嘗閒從容步游下邳",
+      "after_context": "圯上，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "邳，被眉反。按：《地理志》下邳縣屬東海。又云邳在薛，後徙此。有上邳，故此曰下邳也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
+      "anchor_text": "圯上，",
+      "before_context": "良嘗閒從容步游下邳圯上，",
+      "after_context": "有一老父，衣褐，至良所，直墮其履圯下，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「圯，橋也，東楚謂之圯。音怡。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "李奇云「下邳人謂橋爲圯，音怡」。文穎曰「沂水上橋也」。應劭云「沂水之上也」。姚察見《史記》本有作土旁者，乃引今會稽東湖大橋名爲靈圯。圯亦音夷，理或然也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "有一老父，衣褐，至良所，直墮其履圯下，",
+      "before_context": "...嘗閒從容步游下邳圯上，有一老父，衣褐，至良所，直墮其履圯下，",
+      "after_context": "顧謂良曰：「孺子，下取履！」良鄂然，欲毆之。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "崔浩云「直猶故也」，亦恐不然。直言正也，謂至良所正墮其履也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "良曰：「孺子，下取履！」良鄂然，欲毆之。",
       "before_context": "...，直墮其履圯下，顧謂良曰：「孺子，下取履！」良鄂然，欲毆之。",
       "after_context": "爲其老，彊忍，下取履。父曰：「履我！」良業爲取履，因長跪履之...",
@@ -124,15 +251,62 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一云『良怒，欲罵之』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "毆音烏后反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n017",
+      "anchor_text": "父曰：「履我！」良業爲取履，因長跪履之。",
+      "before_context": "...其老，彊忍，下取履。父曰：「履我！」良業爲取履，因長跪履之。",
+      "after_context": "父以足受，笑而去。良殊大驚，隨目之。父去里所，復還，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "業猶本先也。謂良心先已爲取履，故遂跪而履之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
+      "anchor_text": "而去。良殊大驚，隨目之。父去里所，復還，",
+      "before_context": "...跪履之。父以足受，笑而去。良殊大驚，隨目之。父去里所，復還，",
+      "after_context": "曰：「孺子可教矣。後五日平明，與我會此。」良因怪之，跪曰：「...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一曰『爲其老，強忍，下取履，因進之。父以足受，笑而去。良殊大驚。父去里所，復還』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
+      "anchor_text": "頃，父亦來，喜曰：「當如是。」出一編書，",
+      "before_context": "...五日，良夜未半往。有頃，父亦來，喜曰：「當如是。」出一編書，",
+      "after_context": "曰：「讀此則爲王者師矣。後十年興。十三年孺子見我濟北，穀城山...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「編，一作『篇』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
       "anchor_text": "三年孺子見我濟北，穀城山下黃石即我矣。」",
       "before_context": "...者師矣。後十年興。十三年孺子見我濟北，穀城山下黃石即我矣。」",
-      "after_context": "遂去，無他言，不復見。旦日視其書，乃太公兵法也。良因異之，常...",
+      "after_context": "遂去，無他言，不復見。旦日視其書，乃太公兵法也。",
       "items": [
         {
           "source": "zhengyi",
@@ -143,7 +317,7 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n021",
       "anchor_text": "他言，不復見。旦日視其書，乃太公兵法也。",
       "before_context": "...石即我矣。」遂去，無他言，不復見。旦日視其書，乃太公兵法也。",
       "after_context": "良因異之，常習誦讀之。",
@@ -157,21 +331,180 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
-      "anchor_text": "邪？」沛公曰：「鯫生",
-      "before_context": "...曰：「爲將柰何？」良曰：「沛公誠欲倍項羽邪？」沛公曰：「鯫生",
-      "after_context": "教我距關無內諸侯，秦地可盡王，故聽之。」良曰：「沛公自度能卻",
+      "id": "n022",
+      "anchor_text": "人，略地下邳西，遂屬焉。沛公拜良爲廄將。",
+      "before_context": "...道遇沛公。沛公將數千人，略地下邳西，遂屬焉。沛公拜良爲廄將。",
+      "after_context": "良數以太公兵法說沛公，沛公善之，常用其策。良爲他人言，皆不省...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐廣曰：「呂靜曰鯫，魚也，音此垢反。」"
+          "text": "《漢書音義》曰：「官名。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n023",
+      "anchor_text": "爲他人言，皆不省。良曰：「沛公殆天授。」",
+      "before_context": "...公善之，常用其策。良爲他人言，皆不省。良曰：「沛公殆天授。」",
+      "after_context": "故遂從之，不去見景駒。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "殆訓近也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
+      "anchor_text": "使良求韓成，立以爲韓王。以良爲韓申徒，",
+      "before_context": "...立爲王，益樹黨。」項梁使良求韓成，立以爲韓王。以良爲韓申徒，",
+      "after_context": "與韓王將千餘人西略韓地，得數城，秦輒復取之，往來爲游兵潁川。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「即司徒耳，但語音訛轉，故字亦隨改。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "，西入武關。沛公欲以兵二萬人擊秦嶢下軍，",
+      "before_context": "...翟，與良俱南，攻下宛，西入武關。沛公欲以兵二萬人擊秦嶢下軍，",
+      "after_context": "良說曰：「秦兵尚彊，未可輕。臣聞其將屠者子，賈豎易動以利。願...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「嶢音堯。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "。願沛公且留壁，使人先行，爲五萬人具食，",
+      "before_context": "...屠者子，賈豎易動以利。願沛公且留壁，使人先行，爲五萬人具食，",
+      "after_context": "益爲張旗幟",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「五，一作『百』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
+      "anchor_text": "益爲張旗幟",
+      "before_context": "...豎易動以利。願沛公且留壁，使人先行，爲五萬人具食，益爲張旗幟",
+      "after_context": "諸山上，爲疑兵，令酈食其持重寶啗秦將。」秦將果畔，欲連和俱西...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音其試二音。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
+      "anchor_text": "欲叛耳，恐士卒不從。不從必危，不如因其解",
+      "before_context": "...之。良曰：「此獨其將欲叛耳，恐士卒不從。不從必危，不如因其解",
+      "after_context": "擊之。」沛公乃引兵擊秦軍，大破之。（遂）〔逐〕北至藍田，再戰...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂卒將離心而懈怠。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "諫沛公出舍，沛公不聽。",
+      "before_context": "...帳狗馬重寶婦女以千數，意欲留居之。樊噲諫沛公出舍，沛公不聽。",
+      "after_context": "良曰：「夫秦爲無道，故沛公得至此。夫爲天下除殘賊，宜縞素爲資...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一本『噲諫曰：「沛公欲有天下邪？將欲爲富家翁邪？」沛公曰：「吾欲有天下。」噲曰：「今臣從入秦宮，所觀宮室帷帳珠玉重寶鍾鼓之飾，奇物不可勝極，入其後宮，美人婦女以千數，此皆秦所以亡天下也。願沛公急還霸上，無留宮中。」沛公不聽』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "沛公得至此。夫爲天下除殘賊，宜縞素爲資。",
+      "before_context": "...曰：「夫秦爲無道，故沛公得至此。夫爲天下除殘賊，宜縞素爲資。",
+      "after_context": "今始入秦，即安其樂，此所謂『助桀爲虐』。且『忠言逆耳利於行，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「資，藉也。欲沛公反秦奢泰，服儉素以爲藉也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "。且『忠言逆耳利於行，毒藥苦口利於病』，",
+      "before_context": "...，此所謂『助桀爲虐』。且『忠言逆耳利於行，毒藥苦口利於病』，",
+      "after_context": "願沛公聽樊噲言。」沛公乃還軍霸上。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：此語見《孔子家語》。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "邪？」沛公曰：「鯫生",
+      "before_context": "...曰：「爲將柰何？」良曰：「沛公誠欲倍項羽邪？」沛公曰：「鯫生",
+      "after_context": "教我距關無內諸侯，秦地可盡王，故聽之。」良曰：「沛公自度能卻...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「呂靜曰鯫，魚也，音此垢反。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "呂靜云「鯫，魚也，謂小魚也，音此垢反」。臣瓚按：《楚漢春秋》鯫生本姓（解）〔鯫〕。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "項伯。漢王亦因令良厚遺項伯，使請漢中地。",
+      "before_context": "...溢，珠二斗，良具以獻項伯。漢王亦因令良厚遺項伯，使請漢中地。",
+      "after_context": "項王乃許之，遂得漢中地。漢王之國，良送至褒中，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「本但與巴蜀，故請漢中地。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "許之，遂得漢中地。漢王之國，良送至褒中，",
       "before_context": "...，使請漢中地。項王乃許之，遂得漢中地。漢王之國，良送至褒中，",
       "after_context": "遣良歸韓。良因說漢王曰：「王何不燒絕所過棧道，示天下無還心，...",
@@ -185,7 +518,49 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n035",
+      "anchor_text": "對曰：「臣請藉前箸爲大王籌之。」",
+      "before_context": "...矣。」漢王曰：「何哉？」張良對曰：「臣請藉前箸爲大王籌之。」",
+      "after_context": "曰：「昔者湯伐桀而封其後於杞者，度能制桀之死命也。今陛下能制...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「求借所食之箸用指畫也。或曰前世湯武箸明之事，以籌度今時之不若也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "。」「其不可二也。武王入殷，表商容之閭，",
+      "before_context": "...頭乎？」曰：「未能也。」「其不可二也。武王入殷，表商容之閭，",
+      "after_context": "釋箕子之拘，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：崔浩云「表者，標榜其里門也」。商容，紂時賢人也。《韓詩外傳》曰「商容執羽籥馮於馬徒，欲以化紂而不能，遂去，伏於太行山。武王欲以爲三公，固辭不受」。餘解在商紀。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "釋箕子之拘，",
+      "before_context": "...「未能也。」「其不可二也。武王入殷，表商容之閭，釋箕子之拘，",
+      "after_context": "封比干之墓。今陛下能封聖人之墓，表賢者之閭，式智者之門乎？」...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「釋，一作『式』。拘，一作『囚』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
       "anchor_text": "也。」「其不可四矣。殷事已畢，偃革爲軒，",
       "before_context": "...貧窮乎？」曰：「未能也。」「其不可四矣。殷事已畢，偃革爲軒，",
       "after_context": "倒置干戈，覆以虎皮，以示天下不復用兵。今陛下能偃武行文，不復...",
@@ -194,12 +569,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「革者，革車也；軒者，赤黻乘軒也。偃武備而治禮樂也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "蘇林云：「革者，兵車也；軒者，朱軒皮軒也。謂廢兵車而用乘車也。」說文云：「軒，曲周屏車。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n039",
+      "anchor_text": "「未能也。」「其不可六矣。放牛桃林之陰，",
+      "before_context": "...休馬無所用乎？」曰：「未能也。」「其不可六矣。放牛桃林之陰，",
+      "after_context": "以示不復輸積。今陛下能放牛不復輸積乎？」曰：「未能也。」「其...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：晉灼云「在弘農閺鄉南谷中」。應劭《十三州記》「弘農有桃丘聚，古桃林也」。《山海經》云「夸父之山，北有桃林，廣三百里」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
       "anchor_text": "八矣。且夫楚唯無彊，六國立者復橈而從之，",
       "before_context": "...與誰取天下乎？其不可八矣。且夫楚唯無彊，六國立者復橈而從之，",
       "after_context": "陛下焉得而臣之？誠用客之謀，陛下事去矣。」漢王輟食吐哺，罵曰...",
@@ -208,12 +602,73 @@
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「唯當使楚無彊，彊則六國弱從之。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：荀悅《漢紀》說此事云「獨可使楚無彊，若彊，則六國屈橈而從之」。又韋昭云「今無彊楚者，言六國立必復屈橈從楚」。是二說意同也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n041",
+      "anchor_text": "王輟食吐哺，罵曰：「豎儒，幾敗而公事！」",
+      "before_context": "...謀，陛下事去矣。」漢王輟食吐哺，罵曰：「豎儒，幾敗而公事！」",
+      "after_context": "令趣銷印。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "高祖罵酈生爲豎儒，謂此儒生豎子耳。幾音祈。幾者，殆近也。而公，高祖自謂也。《漢書》作「乃公」，乃亦汝也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
+      "anchor_text": "爭功不決，未得行封。上在雒陽南宮，從復道",
+      "before_context": "...臣二十餘人，其餘日夜爭功不決，未得行封。上在雒陽南宮，從復道",
+      "after_context": "望見諸將往往相與坐沙中語。上曰：「此何語？」留侯曰：「陛下不...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「復音複。上下有道，故謂之復道。」韋昭曰：「閣道。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
+      "anchor_text": "足徧封，此屬畏陛下不能盡封，恐又見疑平生",
+      "before_context": "...今軍吏計功，以天下不足徧封，此屬畏陛下不能盡封，恐又見疑平生",
+      "after_context": "過失及誅，故即相聚謀反耳。」上乃憂曰：「爲之柰何？」留侯曰：...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「多作『生平』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n044",
+      "anchor_text": "所共知，誰最甚者？」上曰：「雍齒與我故，",
+      "before_context": "...：「上平生所憎，羣臣所共知，誰最甚者？」上曰：「雍齒與我故，",
+      "after_context": "數嘗窘辱我。我欲殺之，爲其功多，故不忍。」留侯曰：「今急先封...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「未起時有故怨。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
       "anchor_text": "自堅矣。」於是上乃置酒，封雍齒爲什方侯，",
       "before_context": "...羣臣見雍齒封，則人人自堅矣。」於是上乃置酒，封雍齒爲什方侯，",
       "after_context": "而急趣丞相、御史定功行封。羣臣罷酒，皆喜曰：「雍齒尚爲侯，我...",
@@ -232,10 +687,10 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n046",
       "anchor_text": "四面受敵，此非用武之國也。夫關中左殽函，",
       "before_context": "...不過數百里，田地薄，四面受敵，此非用武之國也。夫關中左殽函，",
-      "after_context": "右隴蜀，沃野千里，南有巴蜀之饒，北有胡苑之利，阻三面而守，獨...",
+      "after_context": "右隴蜀，",
       "items": [
         {
           "source": "zhengyi",
@@ -246,10 +701,10 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n047",
       "anchor_text": "右隴蜀，",
       "before_context": "...里，田地薄，四面受敵，此非用武之國也。夫關中左殽函，右隴蜀，",
-      "after_context": "沃野千里，南有巴蜀之饒，北有胡苑之利，阻三面而守，獨以一面東...",
+      "after_context": "沃野千里，南有巴蜀之饒，北有胡苑之利，",
       "items": [
         {
           "source": "zhengyi",
@@ -260,7 +715,7 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n048",
       "anchor_text": "沃野千里，南有巴蜀之饒，北有胡苑之利，",
       "before_context": "...夫關中左殽函，右隴蜀，沃野千里，南有巴蜀之饒，北有胡苑之利，",
       "after_context": "阻三面而守，獨以一面東制諸侯。諸侯安定，河渭漕輓天下，西給京...",
@@ -279,7 +734,77 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n049",
+      "anchor_text": "，足以委輸。此所謂金城千里，天府之國也，",
+      "before_context": "...；諸侯有變，順流而下，足以委輸。此所謂金城千里，天府之國也，",
+      "after_context": "劉敬說是也。」於是高帝即日駕，西都關中。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：此言「謂」者，皆是依憑古語。言秦有四塞之國，如金城也。故《淮南子》云「雖有金城，非粟不守」。又蘇秦說秦惠王云「秦地勢形便，所謂天府」。是所憑也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n050",
+      "anchor_text": "劉敬說是也。」於是高帝即日駕，西都關中。",
+      "before_context": "...城千里，天府之國也，劉敬說是也。」於是高帝即日駕，西都關中。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《周禮》「二曰詢國遷」，乃爲大事。高祖即日西遷者，蓋謂其日即定計耳，非即日遂行也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
+      "anchor_text": "留侯從入關。留侯性多病，即道引不食穀，",
+      "before_context": "留侯從入關。留侯性多病，即道引不食穀，",
+      "after_context": "杜門不出歲餘。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「服辟穀之藥，而靜居行氣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n052",
+      "anchor_text": "以口舌爭也。顧上有不能致者，天下有四人。",
+      "before_context": "...計。」留侯曰：「此難以口舌爭也。顧上有不能致者，天下有四人。",
+      "after_context": "四人者年老矣，皆以爲上慢侮人，故逃匿山中，義不爲漢臣。然上高...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "四人，四晧也，謂東園公、綺里季、夏黃公、甪里先生。按：陳留志云「園公姓庾，字宣明，居園中，因以爲號。夏黃公姓崔名廣，字少通，齊人，隱居夏里修道，故號曰夏黃公。甪里先生，河內軹人，太伯之後，姓周名術，字元道，京師號曰霸上先生，一曰甪里先生」。又孔安國祕記作「祿里」。此皆王劭據崔氏、周氏系譜及陶元亮四八目而爲此說。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
+      "anchor_text": "爲盡力，其無功必矣。臣聞『母愛者子抱』，",
+      "before_context": "...異使羊將狼也，皆不肯爲盡力，其無功必矣。臣聞『母愛者子抱』，",
+      "after_context": "今戚夫人日夜待御，趙王如意常抱居前，上曰『終不使不肖子居愛子...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "此語出韓子。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
       "anchor_text": "天下猛將也，善用兵，今諸將皆陛下故等夷，",
       "before_context": "...閒爲上泣言：『黥布，天下猛將也，善用兵，今諸將皆陛下故等夷，",
       "after_context": "乃令太子將此屬，無異使羊將狼，莫肯爲用，且使布聞之，則鼓行而...",
@@ -288,12 +813,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「夷猶儕也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳云：「等夷，言等輩。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n055",
+      "anchor_text": "狼，莫肯爲用，且使布聞之，則鼓行而西耳。",
+      "before_context": "...子將此屬，無異使羊將狼，莫肯爲用，且使布聞之，則鼓行而西耳。",
+      "after_context": "上雖病，彊載輜車，臥而護之，諸將不敢不盡力。上雖苦，爲妻子自...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「鼓行而西，言無所畏也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n056",
       "anchor_text": "守，皆送至灞上。留侯病，自彊起，至曲郵，",
       "before_context": "...上自將兵而東，羣臣居守，皆送至灞上。留侯病，自彊起，至曲郵，",
       "after_context": "見上曰：「臣宜從，病甚。楚人剽疾，願上無與楚人爭鋒。」因說上...",
@@ -302,26 +846,176 @@
           "source": "jijie",
           "label": "集解",
           "text": "司馬彪曰：「長安縣東有曲郵聚。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "郵音尤。按：司馬彪《漢書》郡國志長安有曲郵聚。今在新豐西，俗謂之郵頭。《漢書》舊儀云「五里一郵，郵人居閒，相去二里半」。按：郵乃今之候也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n057",
+      "anchor_text": "臣等來耳。」上曰：「煩公幸卒調護太子。」",
+      "before_context": "...延頸欲爲太子死者，故臣等來耳。」上曰：「煩公幸卒調護太子。」",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「調護猶營護也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
       "anchor_text": "橫絕四海。橫絕四海，當可柰何！雖有矰繳，",
       "before_context": "...一舉千里。羽翮已就，橫絕四海。橫絕四海，當可柰何！雖有矰繳，",
-      "after_context": "尚安所施！」歌數闋，戚夫人噓唏流涕，上起去，罷酒。竟不易太子...",
+      "after_context": "尚安所施！」歌數闋，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韋昭曰：「繳，弋射也。其矢曰矰。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "馬融注《周禮》云：「矰者，繳繫短矢謂之矰。」一說云矰，一弦，可以仰高射，故云矰也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n059",
+      "anchor_text": "尚安所施！」歌數闋，",
+      "before_context": "...橫絕四海。橫絕四海，當可柰何！雖有矰繳，尚安所施！」歌數闋，",
+      "after_context": "戚夫人噓唏流涕，上起去，罷酒。竟不易太子者，留侯本招此四人之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音曲穴反，謂曲終也。說文曰：「闋，事〔已閉門〕也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n060",
+      "anchor_text": "留侯從上擊代，出奇計馬邑下，",
+      "before_context": "留侯從上擊代，出奇計馬邑下，",
+      "after_context": "及立蕭何相國，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一云『出奇計下馬邑』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n061",
+      "anchor_text": "相國，",
+      "before_context": "留侯從上擊代，出奇計馬邑下，及立蕭何相國，",
+      "after_context": "所與上從容言天下事甚衆，非天下所以存亡，故不著。留侯乃稱曰：...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「何時未爲相國，良勸高祖立之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n062",
+      "anchor_text": "之資，爲韓報讎彊秦，天下振動。今以三寸舌",
+      "before_context": "...韓，及韓滅，不愛萬金之資，爲韓報讎彊秦，天下振動。今以三寸舌",
+      "after_context": "爲帝者師，封萬戶，位列侯，此布衣之極，於良足矣。願弃人閒事，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《春秋緯》云：「舌在口，長三寸，象斗玉衡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n063",
+      "anchor_text": "衣之極，於良足矣。願弃人閒事，欲從赤松子",
+      "before_context": "...封萬戶，位列侯，此布衣之極，於良足矣。願弃人閒事，欲從赤松子",
+      "after_context": "游耳。」乃學辟",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《列仙傳》：「神農時雨師也，能入火自燒，崑崙山上隨風雨上下也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n064",
+      "anchor_text": "游耳。」乃學辟",
+      "before_context": "...，此布衣之極，於良足矣。願弃人閒事，欲從赤松子游耳。」乃學辟",
+      "after_context": "穀，道引輕身。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "賓亦反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n065",
+      "anchor_text": "穀，道引輕身。",
+      "before_context": "...於良足矣。願弃人閒事，欲從赤松子游耳。」乃學辟穀，道引輕身。",
+      "after_context": "會高帝崩，呂后德留侯，乃彊食之，曰：「人生一世閒，如白駒過隙...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一云『乃學道引，欲輕舉』也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n066",
+      "anchor_text": "後八年卒，謚爲文成侯。子不疑代侯。",
+      "before_context": "後八年卒，謚爲文成侯。子不疑代侯。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「文成侯立十六年卒，子不疑代立。十年，坐與門大夫吉謀殺故楚內史，當死，贖爲城旦，國除。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
+      "anchor_text": "帝過濟北，果見穀城山下黃石，取而葆祠之。",
+      "before_context": "...公書者，後十三年從高帝過濟北，果見穀城山下黃石，取而葆祠之。",
+      "after_context": "留侯死，并葬黃石（冢）。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「《史記》珍寶字皆作『葆』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
       "anchor_text": "。",
       "before_context": "...濟北，果見穀城山下黃石，取而葆祠之。留侯死，并葬黃石（冢）。",
       "after_context": "每上冢伏臘，祠黃石。",
@@ -335,15 +1029,62 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n069",
+      "anchor_text": "曰：學者多言無鬼神，然言有物。",
+      "before_context": "太史公曰：學者多言無鬼神，然言有物。",
+      "after_context": "至如留侯所見老父予書，亦可怪矣。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：物謂精怪及藥物也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
+      "anchor_text": "至如留侯所見老父予書，亦可怪矣。",
+      "before_context": "...：學者多言無鬼神，然言有物。至如留侯所見老父予書，亦可怪矣。",
+      "after_context": "高祖離困者數矣，而留侯常有功力焉，豈可謂非天乎？上曰：「夫運...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：詩緯云「風后，黃帝師，又化爲老子，以書授張良」。亦異說。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
       "anchor_text": "外，吾不如子房。」余以爲其人計魁梧奇偉，",
       "before_context": "...筴帷帳之中，決勝千里外，吾不如子房。」余以爲其人計魁梧奇偉，",
-      "after_context": "至見其圖，狀貌如婦人好女。蓋孔子",
+      "after_context": "至見其圖，狀貌如婦人好女。蓋孔子曰：「以貌取人，失之子羽。」",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「魁梧，丘虛壯大之意。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "蘇林云「梧音忤」。蕭該云「今讀爲吾，非也」。小顏云「言其可驚悟」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n072",
+      "anchor_text": "曰：「以貌取人，失之子羽。」",
+      "before_context": "...至見其圖，狀貌如婦人好女。蓋孔子曰：「以貌取人，失之子羽。」",
+      "after_context": "留侯亦云。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "子羽，澹臺滅明字也。仲尼弟子傳云「狀貌甚惡」。又韓子云「子羽有君子之容，而行不稱其貌」，與《史記》文相反。"
         }
       ],
       "sentence_id": null

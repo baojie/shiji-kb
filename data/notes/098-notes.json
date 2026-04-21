@@ -3,9 +3,23 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "陽陵侯",
+      "before_context": "陽陵侯",
+      "after_context": "傅寬，以魏五大夫騎將從，爲舍人，起橫陽。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《地理志》云馮翊陽陵縣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "傅寬，以魏五大夫騎將從，爲舍人，起橫陽。",
       "before_context": "陽陵侯傅寬，以魏五大夫騎將從，爲舍人，起橫陽。",
-      "after_context": "從攻安陽",
+      "after_context": "從攻安陽、",
       "items": [
         {
           "source": "suoyin",
@@ -21,10 +35,10 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
       "anchor_text": "、",
       "before_context": "陽陵侯傅寬，以魏五大夫騎將從，爲舍人，起橫陽。從攻安陽、",
-      "after_context": "杠里，擊趙賁軍於開封，及擊楊熊曲遇、陽武，斬首十二級，賜爵卿...",
+      "after_context": "杠里，擊趙賁軍於開封，及擊楊熊曲遇、",
       "items": [
         {
           "source": "zhengyi",
@@ -35,10 +49,10 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
       "anchor_text": "杠里，擊趙賁軍於開封，及擊楊熊曲遇、",
       "before_context": "...舍人，起橫陽。從攻安陽、杠里，擊趙賁軍於開封，及擊楊熊曲遇、",
-      "after_context": "陽武，斬首十二級，賜爵卿。從至霸上。沛公立爲漢王，漢王賜寬封...",
+      "after_context": "陽武，",
       "items": [
         {
           "source": "zhengyi",
@@ -49,7 +63,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n005",
       "anchor_text": "陽武，",
       "before_context": "...起橫陽。從攻安陽、杠里，擊趙賁軍於開封，及擊楊熊曲遇、陽武，",
       "after_context": "斬首十二級，賜爵卿。從至霸上。沛公立爲漢王，漢王賜寬封號共德...",
@@ -63,10 +77,24 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n006",
+      "anchor_text": "霸上。沛公立爲漢王，漢王賜寬封號共德君。",
+      "before_context": "...十二級，賜爵卿。從至霸上。沛公立爲漢王，漢王賜寬封號共德君。",
+      "after_context": "從入漢中，遷爲右騎將。從定三秦，賜食邑雕陰。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂美號耳，非地邑。共音恭。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
       "anchor_text": "漢中，遷爲右騎將。從定三秦，賜食邑雕陰。",
       "before_context": "...賜寬封號共德君。從入漢中，遷爲右騎將。從定三秦，賜食邑雕陰。",
-      "after_context": "從擊項籍，待懷，賜爵通德侯。從擊項冠、周蘭、龍且，所將卒斬騎...",
+      "after_context": "從擊項籍，待懷，",
       "items": [
         {
           "source": "jijie",
@@ -87,21 +115,68 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n008",
       "anchor_text": "從擊項籍，待懷，",
-      "before_context": "從入漢中，遷爲右騎將。從定三秦，賜食邑雕陰。從擊項籍，待懷，",
-      "after_context": "賜爵通德侯。從擊項冠、周蘭、龍且，所將卒斬騎將一人敖下，益食...",
+      "before_context": "...從入漢中，遷爲右騎將。從定三秦，賜食邑雕陰。從擊項籍，待懷，",
+      "after_context": "賜爵通德侯。從擊項冠、周蘭、龍且，所將卒斬騎將一人敖下，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「待高帝於懷。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：服虔云「待高祖於懷縣」。小顏案《地理志》，懷屬河內，今懷州也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n009",
+      "anchor_text": "項冠、周蘭、龍且，所將卒斬騎將一人敖下，",
+      "before_context": "...懷，賜爵通德侯。從擊項冠、周蘭、龍且，所將卒斬騎將一人敖下，",
+      "after_context": "益食邑。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「敖倉之下。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
+      "anchor_text": "屬淮陰，",
+      "before_context": "屬淮陰，",
+      "after_context": "擊破齊歷下軍，擊田解。屬相國參，殘博，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "張晏云：「信時爲相國，云『淮陰』者，終言之也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
+      "anchor_text": "擊破齊歷下軍，擊田解。屬相國參，殘博，",
+      "before_context": "屬淮陰，擊破齊歷下軍，擊田解。屬相國參，殘博，",
+      "after_context": "益食邑。因定齊地，剖符世世勿絕，封爲陽陵侯，二千六百戶，除前...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "博，太山縣也。顧祕監云：「屬曹參，以殘破博縣也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
       "anchor_text": "二千六百戶，除前所食。爲齊右丞相，備齊。",
       "before_context": "...世勿絕，封爲陽陵侯，二千六百戶，除前所食。爲齊右丞相，備齊。",
       "after_context": "五歲爲齊相國。",
@@ -120,7 +195,7 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n013",
       "anchor_text": "五歲爲齊相國。",
       "before_context": "...陵侯，二千六百戶，除前所食。爲齊右丞相，備齊。五歲爲齊相國。",
       "after_context": "",
@@ -134,7 +209,7 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n014",
       "anchor_text": "國代丞相噲擊豨。一月，徙爲代相國，將屯。",
       "before_context": "...陳豨，屬太尉勃，以相國代丞相噲擊豨。一月，徙爲代相國，將屯。",
       "after_context": "二歲，爲代丞相，將屯。",
@@ -143,15 +218,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「既爲相國，有警則將卒而屯守也。」案：律謂勒兵而守曰屯。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳云：「漢初諸王官屬如漢朝，故代有丞相。」案：孔文祥云「邊郡有屯兵，寬爲代相國兼領屯兵，後因置將屯將軍也」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n015",
+      "anchor_text": "信武侯靳歙，",
+      "before_context": "信武侯靳歙，",
+      "after_context": "以中涓從，起宛朐。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "歙音「翕然」之「翕」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "以中涓從，起宛朐。",
       "before_context": "信武侯靳歙，以中涓從，起宛朐。",
-      "after_context": "攻濟陽。破李由軍。擊秦軍亳南、開封東北，斬騎千人將一人，首五...",
+      "after_context": "攻濟陽。",
       "items": [
         {
           "source": "zhengyi",
@@ -162,10 +256,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n017",
       "anchor_text": "攻濟陽。",
       "before_context": "信武侯靳歙，以中涓從，起宛朐。攻濟陽。",
-      "after_context": "破李由軍。擊秦軍亳南、開封東北，斬騎千人將一人，首五十七級，...",
+      "after_context": "破李由軍。擊秦軍亳南、開封東北，斬騎千人將一人，",
       "items": [
         {
           "source": "zhengyi",
@@ -176,21 +270,68 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
-      "anchor_text": "丘，去擊反者王武等。略梁地，別將擊邢說軍",
-      "before_context": "彭城。漢軍敗還，保雍丘，去擊反者王武等。略梁地，別將擊邢說軍",
-      "after_context": "菑南，破之，身得說都尉二人，司馬、候十二人，降吏卒四千一百八...",
+      "id": "n018",
+      "anchor_text": "。擊秦軍亳南、開封東北，斬騎千人將一人，",
+      "before_context": "...朐。攻濟陽。破李由軍。擊秦軍亳南、開封東北，斬騎千人將一人，",
+      "after_context": "首五十七級，捕虜七十三人，賜爵封號臨平君。又戰藍田北，斬車司...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "張晏曰：「特起兵者也。說音悅。」"
+          "text": "徐廣曰：「將，一作『候』。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n019",
+      "anchor_text": "爵封號臨平君。又戰藍田北，斬車司馬二人，",
+      "before_context": "...級，捕虜七十三人，賜爵封號臨平君。又戰藍田北，斬車司馬二人，",
+      "after_context": "騎長一人，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「主官車。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "騎長一人，",
+      "before_context": "...十三人，賜爵封號臨平君。又戰藍田北，斬車司馬二人，騎長一人，",
+      "after_context": "首二十八級，捕虜五十七人。至霸上。沛公立爲漢王，賜歙爵建武侯...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「騎之長。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "丘，去擊反者王武等。略梁地，別將擊邢說軍",
+      "before_context": "...彭城。漢軍敗還，保雍丘，去擊反者王武等。略梁地，別將擊邢說軍",
+      "after_context": "菑南，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「特起兵者也。說音悅。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "邢，姓。說，名，音悅。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
       "anchor_text": "菑南，",
       "before_context": "...漢軍敗還，保雍丘，去擊反者王武等。略梁地，別將擊邢說軍菑南，",
       "after_context": "破之，身得說都尉二人，司馬、候十二人，降吏卒四千一百八十人。...",
@@ -199,29 +340,39 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「今曰考城。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音災。今爲考城，屬濟陰也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n023",
       "anchor_text": "別之河內，擊趙將賁郝軍",
       "before_context": "別之河內，擊趙將賁郝軍",
-      "after_context": "朝歌，破之，所將卒得騎將二人，車馬二百五十匹。從攻安陽",
+      "after_context": "朝歌，破之，所將卒得騎將二人，車馬二百五十匹。從攻安陽以東，...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "上音肥，下音釋。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「趙賁軍」。案：此在河北，非曹參、樊噲之所擊也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n024",
       "anchor_text": "降吏卒二千四百人。從攻下邯鄲。別下平陽，",
       "before_context": "...將司馬二人，候四人，降吏卒二千四百人。從攻下邯鄲。別下平陽，",
-      "after_context": "身斬守相，所將卒斬兵守、郡守各一人，降鄴。從攻朝歌、邯鄲，及...",
+      "after_context": "身斬守相，所將卒斬兵守、郡守各一人，",
       "items": [
         {
           "source": "jijie",
@@ -237,10 +388,38 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n025",
+      "anchor_text": "身斬守相，所將卒斬兵守、郡守各一人，",
+      "before_context": "...。從攻下邯鄲。別下平陽，身斬守相，所將卒斬兵守、郡守各一人，",
+      "after_context": "降鄴。從攻朝歌、邯鄲，及別擊破趙軍，降邯鄲郡六縣。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟康曰：「將兵郡守。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "朝歌、邯鄲，及別擊破趙軍，降邯鄲郡六縣。",
+      "before_context": "...守各一人，降鄴。從攻朝歌、邯鄲，及別擊破趙軍，降邯鄲郡六縣。",
+      "after_context": "還軍敖倉，破項籍軍成皋南，擊絕楚饟道，起滎陽至襄邑。破項冠軍...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「邯鄲，高帝改曰趙國。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "擊絕楚饟道，起滎陽至襄邑。破項冠軍魯下。",
       "before_context": "...倉，破項籍軍成皋南，擊絕楚饟道，起滎陽至襄邑。破項冠軍魯下。",
-      "after_context": "略地東至繒、郯、下邳，南至蘄、竹邑。擊項悍濟陽下。還擊項籍陳...",
+      "after_context": "略地東至繒、郯、下邳，",
       "items": [
         {
           "source": "zhengyi",
@@ -251,10 +430,10 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n028",
       "anchor_text": "略地東至繒、郯、下邳，",
       "before_context": "...絕楚饟道，起滎陽至襄邑。破項冠軍魯下。略地東至繒、郯、下邳，",
-      "after_context": "南至蘄、竹邑。擊項悍濟陽下。還擊項籍陳下，破之。別定江陵，降...",
+      "after_context": "南至蘄、竹邑。",
       "items": [
         {
           "source": "suoyin",
@@ -270,7 +449,77 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n029",
+      "anchor_text": "南至蘄、竹邑。",
+      "before_context": "...陽至襄邑。破項冠軍魯下。略地東至繒、郯、下邳，南至蘄、竹邑。",
+      "after_context": "擊項悍濟陽下。還擊項籍陳下，破之。別定江陵，降江陵柱國、大司...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "蘄，竹，二邑名。上音機。竹即竹邑。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "降江陵柱國、大司馬以下八人，身得江陵王，",
+      "before_context": "...下，破之。別定江陵，降江陵柱國、大司馬以下八人，身得江陵王，",
+      "after_context": "生致之雒陽，因定南郡。從至陳，取楚王信，剖符世世勿絕，定食四...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：孔文祥云「共敖子共尉」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "、齊、燕、楚車騎，別擊陳豨丞相敞，破之，",
+      "before_context": "...車騎將軍，并將梁、趙、齊、燕、楚車騎，別擊陳豨丞相敞，破之，",
+      "after_context": "因降曲逆。從擊黥布有功，益封定食五千三百戶。凡斬首九十級，虜...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "小顏云侯敞。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "三；得王、柱國各一人，二千石以下至五百石",
+      "before_context": "...定郡、國各一，縣二十三；得王、柱國各一人，二千石以下至五百石",
+      "after_context": "三十九人。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一本無此五字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "肅侯。子亭代侯。二十一年，坐事國人過律，",
+      "before_context": "高后五年，歙卒，謚爲肅侯。子亭代侯。二十一年，坐事國人過律，",
+      "after_context": "孝文後三年，奪侯，國除。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：劉氏云「事，役使也。謂使人違律數多也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "蒯成侯緤者，",
       "before_context": "蒯成侯緤者，",
       "after_context": "沛人也，姓周氏。常爲高祖參乘，以舍人從起沛。至霸上，西入蜀、...",
@@ -294,7 +543,7 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n035",
       "anchor_text": "至霸上，西入蜀、漢，還定三秦，食邑池陽。",
       "before_context": "...參乘，以舍人從起沛。至霸上，西入蜀、漢，還定三秦，食邑池陽。",
       "after_context": "東絕甬道，從出度平陰，遇淮陰侯兵襄國，軍乍利乍不利，終無離上...",
@@ -308,10 +557,24 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n036",
+      "anchor_text": "淮陰侯兵襄國，軍乍利乍不利，終無離上心。",
+      "before_context": "...甬道，從出度平陰，遇淮陰侯兵襄國，軍乍利乍不利，終無離上心。",
+      "after_context": "以緤爲信武侯，食邑三千三百戶。高祖十二年，以緤爲蒯成侯，除前...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「蒯成侯，表云遇淮陰侯軍襄國，楚漢約分鴻溝，以緤爲信武侯。戰不利，不敢離上。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
       "anchor_text": "至孝文五年，緤以壽終，謚爲貞侯。",
       "before_context": "至孝文五年，緤以壽終，謚爲貞侯。",
-      "after_context": "子昌代侯，有罪，國除。至孝景中二年，封緤子居代侯。至元鼎三年...",
+      "after_context": "子昌代侯，有罪，國除。至孝景中二年，封緤子居代侯。",
       "items": [
         {
           "source": "zhengyi",
@@ -322,7 +585,7 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n038",
       "anchor_text": "有罪，國除。至孝景中二年，封緤子居代侯。",
       "before_context": "...謚爲貞侯。子昌代侯，有罪，國除。至孝景中二年，封緤子居代侯。",
       "after_context": "至元鼎三年，居爲太常，有罪，國除。",
@@ -331,6 +594,53 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「表云『孝景中元年，封緤子應爲鄲侯，謚康。中二年，侯居立』。沛郡有鄆縣。鄆，一作『鄲』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鄲，蘇林音多，屬陳國。《地理志》云沛郡有鄲縣。案：此文云「子居」，表云「子應」，不同也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
+      "anchor_text": "曰：陽陵侯傅寬、信武侯靳歙皆高爵，",
+      "before_context": "太史公曰：陽陵侯傅寬、信武侯靳歙皆高爵，",
+      "after_context": "從高祖起山東，攻項籍，誅殺名將，破軍降城以十數，未嘗困辱，此...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一無『高』字。又一本『皆從高祖』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "嘗困辱，此亦天授也。蒯成侯周緤操心堅正，",
+      "before_context": "...，破軍降城以十數，未嘗困辱，此亦天授也。蒯成侯周緤操心堅正，",
+      "after_context": "身不見疑，上欲有所之，未嘗不垂涕，此有傷心者",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "操音倉高反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
+      "anchor_text": "見疑，上欲有所之，未嘗不垂涕，此有傷心者",
+      "before_context": "...侯周緤操心堅正，身不見疑，上欲有所之，未嘗不垂涕，此有傷心者",
+      "after_context": "然，可謂篤厚君子矣。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「此，一作『比』。」"
         }
       ],
       "sentence_id": null

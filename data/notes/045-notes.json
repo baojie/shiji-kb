@@ -3,9 +3,23 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "韓之先與周同姓，",
+      "before_context": "韓之先與周同姓，",
+      "after_context": "姓姬氏。其後苗裔事晉，得封於韓原，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：左氏傳云「邗、晉、應、韓，武之穆」，是武王之子，故詩稱「韓侯出祖」，是有韓而先滅。今據此文，云「其後裔事晉，封于韓原，曰韓武子」，則武子本是韓侯之後，晉又封之於韓原，即今之馮翊韓城是也。然按《系本》及《左傳》舊說，皆謂韓萬是曲沃桓叔之子，即是晉之支庶。又《國語》叔向謂韓宣子能修武子之德，起再拜謝曰「自桓叔已下，嘉吾子之賜」，亦言桓叔是韓之祖也。今以韓侯之後別有桓叔，非關曲沃之桓叔，如此則與太史公之意亦有違。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "姓姬氏。其後苗裔事晉，得封於韓原，",
       "before_context": "韓之先與周同姓，姓姬氏。其後苗裔事晉，得封於韓原，",
-      "after_context": "曰韓武子。武子後三世有韓厥，從封姓爲韓氏。",
+      "after_context": "曰韓武子。武子後三世",
       "items": [
         {
           "source": "zhengyi",
@@ -16,7 +30,21 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
+      "anchor_text": "曰韓武子。武子後三世",
+      "before_context": "...同姓，姓姬氏。其後苗裔事晉，得封於韓原，曰韓武子。武子後三世",
+      "after_context": "有韓厥，從封姓爲韓氏。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《系本》云：「萬生賕伯，賕伯生定伯簡，簡生輿，輿生獻子厥。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
       "anchor_text": "，厥與郤克將兵八百乘伐齊，敗齊頃公于鞍，",
       "before_context": "景公十一年，厥與郤克將兵八百乘伐齊，敗齊頃公于鞍，",
       "after_context": "獲逢丑父。於是晉作六卿，而韓厥在一卿之位，號爲獻子。",
@@ -30,7 +58,7 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n005",
       "anchor_text": "韓獻子老。獻子卒，子宣子代。宣字徙居州。",
       "before_context": "...公之（十）〔七〕年，韓獻子老。獻子卒，子宣子代。宣字徙居州。",
       "after_context": "",
@@ -49,7 +77,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n006",
       "anchor_text": "行氏。宣子卒，子貞子代立。貞子徙居平陽。",
       "before_context": "...子與趙簡子侵伐范、中行氏。宣子卒，子貞子代立。貞子徙居平陽。",
       "after_context": "",
@@ -68,35 +96,115 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n007",
       "anchor_text": "貞子卒，子簡子代。",
       "before_context": "貞子卒，子簡子代。",
-      "after_context": "簡子卒，子莊子代。莊子卒，子康子代。康子與趙襄子、魏桓子共敗...",
+      "after_context": "簡子卒，子莊子代。莊子卒，子康子",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「《史記》多無簡子、莊子，而云貞子生康子。班氏亦同。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣云：「《史記》多無簡子、莊子，而云貞子生康子。班氏亦同。」按：《系本》有簡子，名不信；莊子，名庚。趙系家亦有簡子，名不佞。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n008",
+      "anchor_text": "簡子卒，子莊子代。莊子卒，子康子",
+      "before_context": "貞子卒，子簡子代。簡子卒，子莊子代。莊子卒，子康子",
+      "after_context": "代。康子與趙襄子、魏桓子共敗知伯，分其地，地益大，大於諸侯。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "名虎。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
+      "anchor_text": "康子卒，子武子",
+      "before_context": "康子卒，子武子",
+      "after_context": "代。武子二年，伐鄭，殺其君幽公。十六年，武子卒，子景侯立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "名啟章。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
+      "anchor_text": "，殺其君幽公。十六年，武子卒，子景侯立。",
+      "before_context": "...子代。武子二年，伐鄭，殺其君幽公。十六年，武子卒，子景侯立。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "紀年及《系本》皆作「景子」，名處。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
+      "anchor_text": "九年，鄭圍我陽翟。景侯卒，子列侯取立。",
+      "before_context": "九年，鄭圍我陽翟。景侯卒，子列侯取立。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《系本》作「武侯」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
       "anchor_text": "列侯三年，聶政殺韓相俠累。",
       "before_context": "列侯三年，聶政殺韓相俠累。",
-      "after_context": "九年，秦伐我宜陽，取六邑。十三年，列侯卒，子文侯立。是歲魏文...",
+      "after_context": "九年，秦伐我宜陽，取六邑。十三年，列侯卒，子文侯立。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「六年救魯也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《戰國策》作「殺韓傀」，高誘曰「韓傀，俠侯累也」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n013",
+      "anchor_text": "宜陽，取六邑。十三年，列侯卒，子文侯立。",
+      "before_context": "...相俠累。九年，秦伐我宜陽，取六邑。十三年，列侯卒，子文侯立。",
+      "after_context": "是歲魏文侯卒。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：紀年無文侯，《系本》無列侯。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
       "anchor_text": "齊，至桑丘。鄭反晉。九年，伐齊，至靈丘。",
       "before_context": "...城，執宋君。七年，伐齊，至桑丘。鄭反晉。九年，伐齊，至靈丘。",
       "after_context": "十年，文侯卒，子哀侯立。",
@@ -110,10 +218,38 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n015",
+      "anchor_text": "，與趙、魏分晉國。二年，滅鄭，因徙都鄭。",
+      "before_context": "哀侯元年，與趙、魏分晉國。二年，滅鄭，因徙都鄭。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：紀年魏武侯二十一年，韓滅鄭，哀侯入于鄭。二十二年，晉桓公邑哀侯于鄭。是韓既徙都，因改號曰鄭，故《戰國策》謂韓惠王曰鄭惠王，猶魏徙大梁稱梁王然也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
+      "anchor_text": "六年，韓嚴弒其君哀侯。而子懿侯立。",
+      "before_context": "六年，韓嚴弒其君哀侯。而子懿侯立。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：年表懿侯作「莊侯」。又紀年云「晉桓公邑哀侯于鄭，韓山堅賊其君哀侯而立韓若山」。若山即懿侯也，則韓嚴爲韓山堅也。而《戰國策》又有韓仲子，名遂，又恐是韓嚴也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "懿侯二年，魏敗我馬陵。",
       "before_context": "懿侯二年，魏敗我馬陵。",
-      "after_context": "五年，與魏惠王會宅陽。九年，魏敗我澮。十二年，懿侯卒，子昭侯...",
+      "after_context": "五年，與魏惠王會宅陽。",
       "items": [
         {
           "source": "zhengyi",
@@ -124,10 +260,10 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n018",
       "anchor_text": "五年，與魏惠王會宅陽。",
       "before_context": "懿侯二年，魏敗我馬陵。五年，與魏惠王會宅陽。",
-      "after_context": "九年，魏敗我澮。十二年，懿侯卒，子昭侯立。",
+      "after_context": "九年，魏敗我澮。",
       "items": [
         {
           "source": "zhengyi",
@@ -138,7 +274,7 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n019",
       "anchor_text": "九年，魏敗我澮。",
       "before_context": "懿侯二年，魏敗我馬陵。五年，與魏惠王會宅陽。九年，魏敗我澮。",
       "after_context": "十二年，懿侯卒，子昭侯立。",
@@ -157,7 +293,21 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n020",
+      "anchor_text": "昭侯元年，秦敗我西山。二年，宋取我黃池。",
+      "before_context": "昭侯元年，秦敗我西山。二年，宋取我黃池。",
+      "after_context": "魏取朱。六年，伐東周，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「在平丘。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
       "anchor_text": "魏取朱。六年，伐東周，",
       "before_context": "...侯元年，秦敗我西山。二年，宋取我黃池。魏取朱。六年，伐東周，",
       "after_context": "取陵觀、邢丘。",
@@ -171,7 +321,77 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n022",
+      "anchor_text": "十年，韓姬弒其君悼公。",
+      "before_context": "十年，韓姬弒其君悼公。",
+      "after_context": "十一年，昭侯如秦。二十二年，申不害死。二十四年，秦來拔我宜陽...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "紀年「姬」亦作「玘」，並音羊之反。姬是韓大夫，而王邵亦云不知悼公何君也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
+      "anchor_text": "二十五年，旱，作高門。屈宜臼",
+      "before_context": "二十五年，旱，作高門。屈宜臼",
+      "after_context": "曰：「昭侯不出此門。何也？不時。吾所謂時者，非時日也，人固有...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "許慎曰：「屈宜臼，楚大夫，在魏也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
+      "anchor_text": "卹民之急，而顧益奢，此謂『時絀舉贏』。」",
+      "before_context": "...今年旱，昭侯不以此時卹民之急，而顧益奢，此謂『時絀舉贏』。」",
+      "after_context": "二十六年，高門成，昭侯卒，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「時衰秏而作奢侈。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "二十六年，高門成，昭侯卒，",
+      "before_context": "...急，而顧益奢，此謂『時絀舉贏』。」二十六年，高門成，昭侯卒，",
+      "after_context": "果不出此門。子宣惠王立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：紀年「鄭昭侯武薨，次威侯立。威侯七年，與邯鄲圍襄陵。五月，梁惠王會威侯于巫沙。十月，鄭宣王朝梁」，不見威侯之卒。下敗韓舉在威侯八年，而此系家即以爲宣惠王之年。又上有殺悼公，悼公又不知是誰之謚。則韓微小，國史失代系，故此文及《系本》不同，蓋亦不可復考。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "惠王五年，張儀相秦。八年，魏敗我將韓舉。",
+      "before_context": "宣惠王五年，張儀相秦。八年，魏敗我將韓舉。",
+      "after_context": "十一年，君號爲王。與趙會區鼠。十四，秦伐敗我鄢。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韓舉則是韓將不疑，而紀年云韓舉，趙將，蓋舉先爲趙將，後入韓。又紀年云其敗當韓威王八年，是不同也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "君號爲王。與趙會區鼠。十四，秦伐敗我鄢。",
       "before_context": "...敗我將韓舉。十一年，君號爲王。與趙會區鼠。十四，秦伐敗我鄢。",
       "after_context": "",
@@ -190,10 +410,24 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n028",
+      "anchor_text": "十六年，秦敗我脩魚，",
+      "before_context": "十六年，秦敗我脩魚，",
+      "after_context": "虜得韓將䱸、申差於濁澤。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "地名。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "虜得韓將䱸、申差於濁澤。",
       "before_context": "十六年，秦敗我脩魚，虜得韓將䱸、申差於濁澤。",
-      "after_context": "韓氏急，公仲謂韓王曰：「與國非可恃也。今秦之欲伐楚久矣，王不...",
+      "after_context": "韓氏急，公仲",
       "items": [
         {
           "source": "jijie",
@@ -214,7 +448,119 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n030",
+      "anchor_text": "韓氏急，公仲",
+      "before_context": "十六年，秦敗我脩魚，虜得韓將䱸、申差於濁澤。韓氏急，公仲",
+      "after_context": "謂韓王曰：「與國非可恃也。今秦之欲伐楚久矣，王不如因張儀爲和...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韓相國，名侈。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "，具甲，與之南伐楚，此以一易二之計也。」",
+      "before_context": "...爲和於秦，賂以一名都，具甲，與之南伐楚，此以一易二之計也。」",
+      "after_context": "韓王曰：「善。」乃警公仲之行，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "一，謂名都也。二，謂使不伐韓而又與之伐楚也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "韓王曰：「善。」乃警公仲之行，",
+      "before_context": "...之南伐楚，此以一易二之計也。」韓王曰：「善。」乃警公仲之行，",
+      "after_context": "將西購於秦。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "警，戒也。《戰國策》作「衞」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "將西購於秦。",
+      "before_context": "...以一易二之計也。」韓王曰：「善。」乃警公仲之行，將西購於秦。",
+      "after_context": "楚王聞之大恐，召陳軫告之。陳軫曰：「秦之欲伐楚久矣，今又得韓...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《戰國策》作「講」。講亦謀議，與購求意通。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
+      "anchor_text": "信王之救己也。縱韓不能聽我，韓必德王也，",
+      "before_context": "...，多其車，重其幣，使信王之救己也。縱韓不能聽我，韓必德王也，",
+      "after_context": "必不爲鴈行以來，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言韓王信楚之救，雖不能聽待楚救至，折入於秦，猶德於楚也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
+      "anchor_text": "必不爲鴈行以來，",
+      "before_context": "...，使信王之救己也。縱韓不能聽我，韓必德王也，必不爲鴈行以來，",
+      "after_context": "是秦韓不和也，兵雖至，楚不大病也。爲能聽我絕和於秦，秦必大怒...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言韓以楚必救己，己雖隨秦來戰，猶德於王，故不爲鴈行而來，言不同心旅進也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "矣。願大國遂肆志於秦，不穀將以楚殉韓。」",
+      "before_context": "...不穀國雖小，已悉發之矣。願大國遂肆志於秦，不穀將以楚殉韓。」",
+      "after_context": "韓王聞之大說，乃止公仲之行。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "殉，從死也。言以死助韓。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "韓王聞之大說，乃止公仲之行。",
+      "before_context": "...國遂肆志於秦，不穀將以楚殉韓。」韓王聞之大說，乃止公仲之行。",
+      "after_context": "公仲曰：「不可。夫以實伐我者秦也，以虛名救我者楚也。王恃楚之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "止不令西之秦。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
       "anchor_text": "，大戰，楚救不至韓。十九年，大破我岸門。",
       "before_context": "...。秦因大怒，益甲伐韓，大戰，楚救不至韓。十九年，大破我岸門。",
       "after_context": "太子倉質於秦以和。",
@@ -233,7 +579,35 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n039",
+      "anchor_text": "二十一年，",
+      "before_context": "二十一年，",
+      "after_context": "與秦共攻楚，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「周王赧之三年也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "與秦共攻楚，",
+      "before_context": "二十一年，與秦共攻楚，",
+      "after_context": "敗楚將屈丐，斬首八萬於丹陽。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「圍景痤也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
       "anchor_text": "敗楚將屈丐，斬首八萬於丹陽。",
       "before_context": "二十一年，與秦共攻楚，敗楚將屈丐，斬首八萬於丹陽。",
       "after_context": "是歲，宣惠王卒，太子倉立，是爲襄王。",
@@ -252,7 +626,21 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n042",
+      "anchor_text": "是歲，宣惠王卒，太子倉立，是爲襄王。",
+      "before_context": "...將屈丐，斬首八萬於丹陽。是歲，宣惠王卒，太子倉立，是爲襄王。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一云周赧王六年，韓襄哀王三年，張儀死。赧王九年，襄哀王六年，秦昭王立。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
       "anchor_text": "秋，秦使甘茂攻我宜陽。五年，秦拔我宜陽，",
       "before_context": "...，與秦武王會臨晉。其秋，秦使甘茂攻我宜陽。五年，秦拔我宜陽，",
       "after_context": "斬首六萬。秦武王卒。六年，秦復與我武遂。九年，秦復取我武遂。...",
@@ -266,7 +654,21 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n044",
+      "anchor_text": "年，秦復取我武遂。十年，太子嬰朝秦而歸。",
+      "before_context": "...年，秦復與我武遂。九年，秦復取我武遂。十年，太子嬰朝秦而歸。",
+      "after_context": "十一年，秦伐我，取穰。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「與秦會臨晉，因至咸陽而還。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
       "anchor_text": "十一年，秦伐我，取穰。",
       "before_context": "...，秦復取我武遂。十年，太子嬰朝秦而歸。十一年，秦伐我，取穰。",
       "after_context": "與秦伐楚，敗楚將唐眛。",
@@ -280,10 +682,10 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n046",
       "anchor_text": "，楚王欲內之甚。今楚兵十餘萬在方城之外，",
       "before_context": "...韓咎曰：「蟣蝨亡在楚，楚王欲內之甚。今楚兵十餘萬在方城之外，",
-      "after_context": "公何不令楚王築萬室之都雍氏之旁，韓必起兵以救之，公必將矣。公...",
+      "after_context": "公何不令楚王築萬室之都雍氏之旁，",
       "items": [
         {
           "source": "suoyin",
@@ -299,10 +701,38 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n047",
+      "anchor_text": "公何不令楚王築萬室之都雍氏之旁，",
+      "before_context": "...甚。今楚兵十餘萬在方城之外，公何不令楚王築萬室之都雍氏之旁，",
+      "after_context": "韓必起兵以救之，公必將矣。公因以韓楚之兵奉蟣蝨而內之，其聽公...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「在陽翟。」正義《括地志》云：「故雍氏城在洛州陽翟縣二十五里。故老云黃帝臣雍父作杵臼也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
+      "anchor_text": "楚圍雍氏，",
+      "before_context": "楚圍雍氏，",
+      "after_context": "韓求救於秦。秦未爲發，使公孫昧入韓。公仲曰：「子以秦爲且救韓...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「《秦本紀》惠王後元十三年，周赧王三年，楚懷王十七年，齊湣王十二年，皆云『楚圍雍氏』。紀年於此亦說『楚景翠圍雍氏。韓宣王卒，秦助韓共敗楚屈丐』。又云『齊、宋圍煮棗』。皆與《史記》年表及田完世家符同。然則此卷所云『襄王十二年，韓咎從其計』以上，是楚後圍雍氏，赧王之十五年事也。又說『楚圍雍氏』以下，是楚前圍雍氏，赧王之三年事。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "？」對曰：「秦王之言曰『請道南鄭、藍田，",
       "before_context": "...：「子以秦爲且救韓乎？」對曰：「秦王之言曰『請道南鄭、藍田，",
-      "after_context": "出兵於楚以待公』，殆不合矣。」公仲曰：「子以爲果乎？」對曰：...",
+      "after_context": "出兵於楚以待公』，殆不合矣。」",
       "items": [
         {
           "source": "zhengyi",
@@ -313,10 +743,66 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n050",
+      "anchor_text": "出兵於楚以待公』，殆不合矣。」",
+      "before_context": "...「秦王之言曰『請道南鄭、藍田，出兵於楚以待公』，殆不合矣。」",
+      "after_context": "公仲曰：「子以爲果乎？」對曰：「秦王必祖張儀之故智。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "殆不合於南鄭。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
+      "anchor_text": "以爲果乎？」對曰：「秦王必祖張儀之故智。",
+      "before_context": "...合矣。」公仲曰：「子以爲果乎？」對曰：「秦王必祖張儀之故智。",
+      "after_context": "楚威王攻梁也，張儀謂秦王曰：『與楚攻魏，魏折而入於楚，韓固其...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「祖者，宗之習之謂也。故智，猶前時謀計也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n052",
+      "anchor_text": "韓固其與國也，是秦孤也。不如出兵以到之，",
+      "before_context": "...攻魏，魏折而入於楚，韓固其與國也，是秦孤也。不如出兵以到之，",
+      "after_context": "魏楚大戰，秦取西河之外以歸。』今其狀陽言與韓，其實陰善楚。公...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "到，欺也，猶俗云「張到」。然《戰國策》作「勁」，勁，強也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
+      "anchor_text": "楚戰。楚陰得秦之不用也，必易與公相支也。",
+      "before_context": "...。公待秦而到，必輕與楚戰。楚陰得秦之不用也，必易與公相支也。",
+      "after_context": "公戰而勝楚，遂與公乘楚，施三川而歸。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言楚陰知秦，不爲公用，亦必易爲公相支拒也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
       "anchor_text": "公戰而勝楚，遂與公乘楚，施三川而歸。",
       "before_context": "...不用也，必易與公相支也。公戰而勝楚，遂與公乘楚，施三川而歸。",
-      "after_context": "公戰不勝楚，楚塞三川守之，公不能救也。竊爲公患之。司馬庚三反...",
+      "after_context": "公戰不勝楚，楚塞三川守之，",
       "items": [
         {
           "source": "zhengyi",
@@ -327,10 +813,10 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n055",
       "anchor_text": "公戰不勝楚，楚塞三川守之，",
       "before_context": "...戰而勝楚，遂與公乘楚，施三川而歸。公戰不勝楚，楚塞三川守之，",
-      "after_context": "公不能救也。竊爲公患之。司馬庚三反於郢，甘茂與昭魚遇於商於，...",
+      "after_context": "公不能救也。竊爲公患之。司馬庚",
       "items": [
         {
           "source": "zhengyi",
@@ -341,24 +827,57 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
-      "anchor_text": "三反於郢，甘茂與昭魚",
-      "before_context": "...三川守之，公不能救也。竊爲公患之。司馬庚三反於郢，甘茂與昭魚",
-      "after_context": "遇於商於，其言收璽，實類有約也。」公仲恐，曰：「然則柰何？」...",
+      "id": "n056",
+      "anchor_text": "公不能救也。竊爲公患之。司馬庚",
+      "before_context": "...歸。公戰不勝楚，楚塞三川守之，公不能救也。竊爲公患之。司馬庚",
+      "after_context": "三反於郢，甘茂與昭魚",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐廣曰：「楚相國。」"
+          "text": "徐廣曰：「一作『唐』。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n057",
+      "anchor_text": "三反於郢，甘茂與昭魚",
+      "before_context": "...三川守之，公不能救也。竊爲公患之。司馬庚三反於郢，甘茂與昭魚",
+      "after_context": "遇於商於，其言收璽，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「楚相國。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《戰國策》謂之昭䱷。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
+      "anchor_text": "遇於商於，其言收璽，",
+      "before_context": "...。竊爲公患之。司馬庚三反於郢，甘茂與昭魚遇於商於，其言收璽，",
+      "after_context": "實類有約也。」公仲恐，曰：「然則柰何？」曰：「公必先韓而後秦...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉氏云「詐言昭魚來秦，欲得秦官之印璽」。收即取之義也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n059",
       "anchor_text": "？」曰：「公必先韓而後秦，先身而後張儀。",
       "before_context": "...仲恐，曰：「然則柰何？」曰：「公必先韓而後秦，先身而後張儀。",
-      "after_context": "公不如亟以國合於齊楚，齊楚必委國於公。公之所惡者張儀也，其實...",
+      "after_context": "公不如亟以國合於齊楚，齊楚必委國於公。公之所惡者張儀也，",
       "items": [
         {
           "source": "zhengyi",
@@ -369,7 +888,7 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n060",
       "anchor_text": "齊楚，齊楚必委國於公。公之所惡者張儀也，",
       "before_context": "...儀。公不如亟以國合於齊楚，齊楚必委國於公。公之所惡者張儀也，",
       "after_context": "其實猶不無秦也。」於是楚解雍氏圍。",
@@ -383,7 +902,7 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n061",
       "anchor_text": "其實猶不無秦也。」於是楚解雍氏圍。",
       "before_context": "...國於公。公之所惡者張儀也，其實猶不無秦也。」於是楚解雍氏圍。",
       "after_context": "",
@@ -402,24 +921,43 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n062",
       "anchor_text": "蘇代又謂秦太后弟芈戎",
       "before_context": "蘇代又謂秦太后弟芈戎",
-      "after_context": "曰：「公叔伯嬰恐秦楚之內蟣蝨也，公何不爲韓求質子於楚？楚王聽...",
+      "after_context": "曰：「公叔伯嬰恐秦楚之內蟣蝨也，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「號新城君。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "芈，姓；戎，名。秦宣太后弟，號新城君。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n063",
+      "anchor_text": "曰：「公叔伯嬰恐秦楚之內蟣蝨也，",
+      "before_context": "蘇代又謂秦太后弟芈戎曰：「公叔伯嬰恐秦楚之內蟣蝨也，",
+      "after_context": "公何不爲韓求質子於楚？",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按《戰國策》，公叔伯嬰與蟣蝨及公子咎並是襄王子。然伯嬰即太子嬰，嬰前死，故咎與蟣蝨又爭立。此取《戰國策》說，伯嬰未立之先亦與蟣蝨爭立，故事重而文倒也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n064",
       "anchor_text": "公何不爲韓求質子於楚？",
       "before_context": "...弟芈戎曰：「公叔伯嬰恐秦楚之內蟣蝨也，公何不爲韓求質子於楚？",
-      "after_context": "楚王聽入質子於韓，則公叔伯嬰知秦楚之不以蟣蝨爲事，必以韓合於...",
+      "after_context": "楚王聽入質子於韓，",
       "items": [
         {
           "source": "suoyin",
@@ -435,7 +973,7 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n065",
       "anchor_text": "楚王聽入質子於韓，",
       "before_context": "...嬰恐秦楚之內蟣蝨也，公何不爲韓求質子於楚？楚王聽入質子於韓，",
       "after_context": "則公叔伯嬰知秦楚之不以蟣蝨爲事，必以韓合於秦楚。秦楚挾韓以窘...",
@@ -454,7 +992,21 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n066",
+      "anchor_text": "敢合於齊，是齊孤也。公又爲秦求質子於楚，",
+      "before_context": "...楚挾韓以窘魏，魏氏不敢合於齊，是齊孤也。公又爲秦求質子於楚，",
+      "after_context": "楚不聽，怨結於韓。韓挾齊魏以圍楚，楚必重公。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "令芈戎教秦，於楚索韓所送質子，令入之於秦也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
       "anchor_text": "聽，怨結於韓。韓挾齊魏以圍楚，楚必重公。",
       "before_context": "...爲秦求質子於楚，楚不聽，怨結於韓。韓挾齊魏以圍楚，楚必重公。",
       "after_context": "公挾秦楚之重以積德於韓，公叔伯嬰必以國待公。」於是蟣蝨竟不得...",
@@ -468,7 +1020,7 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n068",
       "anchor_text": "叔伯嬰必以國待公。」於是蟣蝨竟不得歸韓。",
       "before_context": "...楚之重以積德於韓，公叔伯嬰必以國待公。」於是蟣蝨竟不得歸韓。",
       "after_context": "韓立咎爲太子。齊、魏王來。",
@@ -482,7 +1034,7 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n069",
       "anchor_text": "韓立咎爲太子。齊、魏王來。",
       "before_context": "...必以國待公。」於是蟣蝨竟不得歸韓。韓立咎爲太子。齊、魏王來。",
       "after_context": "",
@@ -496,10 +1048,10 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n070",
       "anchor_text": "敗我二十四萬，虜喜伊闕。五年，秦拔我宛。",
       "before_context": "...孫喜率周、魏攻秦。秦敗我二十四萬，虜喜伊闕。五年，秦拔我宛。",
-      "after_context": "六年，與秦武遂地二百里。十年，秦敗我師于夏山。十二年，與秦昭...",
+      "after_context": "六年，與秦武遂地二百里。",
       "items": [
         {
           "source": "zhengyi",
@@ -510,7 +1062,7 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n071",
       "anchor_text": "六年，與秦武遂地二百里。",
       "before_context": "...二十四萬，虜喜伊闕。五年，秦拔我宛。六年，與秦武遂地二百里。",
       "after_context": "十年，秦敗我師于夏山。十二年，與秦昭王會西周而佐秦攻齊。齊敗...",
@@ -524,7 +1076,7 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n072",
       "anchor_text": "。十四年，與秦會兩周閒。二十一年，使暴䳒",
       "before_context": "...攻齊。齊敗，湣王出亡。十四年，與秦會兩周閒。二十一年，使暴䳒",
       "after_context": "救魏，爲秦所敗，䳒走開封。",
@@ -538,10 +1090,10 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n073",
       "anchor_text": "。",
       "before_context": "二十三年，趙、魏攻我華陽。",
-      "after_context": "韓告急於秦，秦不救。韓相國謂陳筮曰：「事急，願公雖病，爲一宿...",
+      "after_context": "韓告急於秦，秦不救。韓相國謂陳筮",
       "items": [
         {
           "source": "zhengyi",
@@ -552,7 +1104,7 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n074",
       "anchor_text": "韓告急於秦，秦不救。韓相國謂陳筮",
       "before_context": "二十三年，趙、魏攻我華陽。韓告急於秦，秦不救。韓相國謂陳筮",
       "after_context": "曰：「事急，願公雖病，爲一宿之行。」陳筮見穰侯。穰侯曰：「事...",
@@ -561,15 +1113,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一作『筌』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣云一作「荃」。《戰國策》作「田荼」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n075",
       "anchor_text": "惠王元年，伐燕。九年，秦拔我陘，城汾旁。",
       "before_context": "桓惠王元年，伐燕。九年，秦拔我陘，城汾旁。",
-      "after_context": "十年，秦擊我於太行，我上黨郡守以上黨郡降趙。十四年，秦拔趙上...",
+      "after_context": "十年，秦擊我於太行，",
       "items": [
         {
           "source": "zhengyi",
@@ -580,10 +1137,10 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n076",
       "anchor_text": "十年，秦擊我於太行，",
       "before_context": "...惠王元年，伐燕。九年，秦拔我陘，城汾旁。十年，秦擊我於太行，",
-      "after_context": "我上黨郡守以上黨郡降趙。十四年，秦拔趙上黨，殺馬服子卒四十餘...",
+      "after_context": "我上黨郡守以上黨郡降趙。十四年，秦拔趙上黨，",
       "items": [
         {
           "source": "zhengyi",
@@ -594,10 +1151,10 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n077",
       "anchor_text": "黨郡守以上黨郡降趙。十四年，秦拔趙上黨，",
       "before_context": "...，秦擊我於太行，我上黨郡守以上黨郡降趙。十四年，秦拔趙上黨，",
-      "after_context": "殺馬服子卒四十餘萬於長平。十七年，秦拔我陽城、負黍。二十二年...",
+      "after_context": "殺馬服子卒四十餘萬於長平。十七年，秦拔我陽城、負黍。",
       "items": [
         {
           "source": "zhengyi",
@@ -608,7 +1165,7 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n078",
       "anchor_text": "十餘萬於長平。十七年，秦拔我陽城、負黍。",
       "before_context": "...趙上黨，殺馬服子卒四十餘萬於長平。十七年，秦拔我陽城、負黍。",
       "after_context": "二十二年，秦昭王卒。二十四年，秦拔我城皋、滎陽。二十六年，秦...",
@@ -627,7 +1184,7 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n079",
       "anchor_text": "，秦虜王安，盡入其地，爲潁州郡。韓遂亡。",
       "before_context": "九年，秦虜王安，盡入其地，爲潁州郡。韓遂亡。",
       "after_context": "",

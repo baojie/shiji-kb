@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "平陽侯",
       "before_context": "平陽侯",
-      "after_context": "曹參",
+      "after_context": "曹參者，沛人也。",
       "items": [
         {
           "source": "zhengyi",
@@ -19,7 +19,7 @@
       "id": "n002",
       "anchor_text": "者，沛人也。",
       "before_context": "平陽侯曹參者，沛人也。",
-      "after_context": "秦時爲沛獄掾，而蕭何",
+      "after_context": "秦時爲沛獄掾，而蕭何爲主吏，居縣爲豪吏矣。",
       "items": [
         {
           "source": "jijie",
@@ -43,12 +43,17 @@
       "id": "n003",
       "anchor_text": "高祖爲沛公而初起也，參以中涓從。",
       "before_context": "高祖爲沛公而初起也，參以中涓從。",
-      "after_context": "將擊胡陵、方與，攻秦監公軍，大破之。東下薛，擊泗水守軍薛郭西...",
+      "after_context": "將擊胡陵、方與，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「中涓如中謁者。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "涓音古玄反。"
         }
       ],
       "sentence_id": null
@@ -57,7 +62,7 @@
       "id": "n004",
       "anchor_text": "將擊胡陵、方與，",
       "before_context": "高祖爲沛公而初起也，參以中涓從。將擊胡陵、方與，",
-      "after_context": "攻秦監公軍，大破之。東下薛，擊泗水守軍薛郭西。復攻胡陵，取之...",
+      "after_context": "攻秦監公軍，",
       "items": [
         {
           "source": "suoyin",
@@ -82,6 +87,11 @@
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「監，御史監郡者；公，名。秦一郡置守、尉、監三人。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按注，公者監之名，然本紀泗川監名平，則平是名，公爲相尊之稱也。"
         }
       ],
       "sentence_id": null
@@ -90,7 +100,7 @@
       "id": "n006",
       "anchor_text": "胡陵，取之。徙守方與。方與反爲魏，擊之。",
       "before_context": "...泗水守軍薛郭西。復攻胡陵，取之。徙守方與。方與反爲魏，擊之。",
-      "after_context": "豐反爲魏，攻之。賜爵七大夫。擊秦司馬𡰥軍碭東，破之，取碭、狐...",
+      "after_context": "豐反爲魏，",
       "items": [
         {
           "source": "zhengyi",
@@ -102,9 +112,23 @@
     },
     {
       "id": "n007",
+      "anchor_text": "豐反爲魏，",
+      "before_context": "...郭西。復攻胡陵，取之。徙守方與。方與反爲魏，擊之。豐反爲魏，",
+      "after_context": "攻之。賜爵七大夫。擊秦司馬𡰥",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "時雍齒守豐，爲魏反沛公。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
       "anchor_text": "攻之。賜爵七大夫。擊秦司馬𡰥",
       "before_context": "...與。方與反爲魏，擊之。豐反爲魏，攻之。賜爵七大夫。擊秦司馬𡰥",
-      "after_context": "軍碭東，破之，取碭、狐父、祁善置。又攻下邑以西，至虞，擊章邯...",
+      "after_context": "軍碭東，破之，取碭、狐父、",
       "items": [
         {
           "source": "zhengyi",
@@ -115,10 +139,10 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n009",
       "anchor_text": "軍碭東，破之，取碭、狐父、",
       "before_context": "...爲魏，攻之。賜爵七大夫。擊秦司馬𡰥軍碭東，破之，取碭、狐父、",
-      "after_context": "祁善置。又攻下邑以西，至虞，擊章邯車騎。攻爰戚及亢父，先登。...",
+      "after_context": "祁善置。",
       "items": [
         {
           "source": "jijie",
@@ -139,10 +163,10 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n010",
       "anchor_text": "祁善置。",
       "before_context": "...之。賜爵七大夫。擊秦司馬𡰥軍碭東，破之，取碭、狐父、祁善置。",
-      "after_context": "又攻下邑以西，至虞，擊章邯車騎。攻爰戚及亢父，先登。遷爲五大...",
+      "after_context": "又攻下邑以西，至虞，",
       "items": [
         {
           "source": "jijie",
@@ -163,10 +187,10 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n011",
       "anchor_text": "又攻下邑以西，至虞，",
       "before_context": "...司馬𡰥軍碭東，破之，取碭、狐父、祁善置。又攻下邑以西，至虞，",
-      "after_context": "擊章邯車騎。攻爰戚及亢父，先登。遷爲五大夫。北救阿，擊章邯軍...",
+      "after_context": "擊章邯車騎。攻爰戚",
       "items": [
         {
           "source": "suoyin",
@@ -182,10 +206,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n012",
       "anchor_text": "擊章邯車騎。攻爰戚",
       "before_context": "...，取碭、狐父、祁善置。又攻下邑以西，至虞，擊章邯車騎。攻爰戚",
-      "after_context": "及亢父，先登。遷爲五大夫。北救阿，擊章邯軍，陷陳，追至濮陽。...",
+      "after_context": "及亢父，",
       "items": [
         {
           "source": "jijie",
@@ -206,10 +230,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n013",
       "anchor_text": "及亢父，",
       "before_context": "...狐父、祁善置。又攻下邑以西，至虞，擊章邯車騎。攻爰戚及亢父，",
-      "after_context": "先登。遷爲五大夫。北救阿，擊章邯軍，陷陳，追至濮陽。攻定陶，...",
+      "after_context": "先登。遷爲五大夫。北救阿，",
       "items": [
         {
           "source": "suoyin",
@@ -225,10 +249,10 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n014",
       "anchor_text": "先登。遷爲五大夫。北救阿，",
       "before_context": "...，至虞，擊章邯車騎。攻爰戚及亢父，先登。遷爲五大夫。北救阿，",
-      "after_context": "擊章邯軍，陷陳，追至濮陽。攻定陶，取臨濟。南救雍丘。擊李由軍...",
+      "after_context": "擊章邯軍，陷陳，追至濮陽。攻定陶，取臨濟。",
       "items": [
         {
           "source": "suoyin",
@@ -244,7 +268,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n015",
       "anchor_text": "章邯軍，陷陳，追至濮陽。攻定陶，取臨濟。",
       "before_context": "...爲五大夫。北救阿，擊章邯軍，陷陳，追至濮陽。攻定陶，取臨濟。",
       "after_context": "南救雍丘。擊李由軍，破之，殺李由，虜秦候一人。秦將章邯破殺項...",
@@ -258,7 +282,35 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n016",
+      "anchor_text": "公爲碭郡長，將碭郡兵。於是乃封參爲執帛，",
+      "before_context": "...羽引而東。楚懷王以沛公爲碭郡長，將碭郡兵。於是乃封參爲執帛，",
+      "after_context": "號曰建成君。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「孤卿也。或曰楚官名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
+      "anchor_text": "號曰建成君。",
+      "before_context": "...懷王以沛公爲碭郡長，將碭郡兵。於是乃封參爲執帛，號曰建成君。",
+      "after_context": "遷爲戚公，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》建成縣屬沛郡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
       "anchor_text": "遷爲戚公，",
       "before_context": "...爲碭郡長，將碭郡兵。於是乃封參爲執帛，號曰建成君。遷爲戚公，",
       "after_context": "屬碭郡。",
@@ -277,10 +329,24 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n019",
+      "anchor_text": "其後從攻東郡尉軍，破之成武南。",
+      "before_context": "其後從攻東郡尉軍，破之成武南。",
+      "after_context": "擊王離軍成陽南，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》成武縣屬山陽。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
       "anchor_text": "擊王離軍成陽南，",
       "before_context": "其後從攻東郡尉軍，破之成武南。擊王離軍成陽南，",
-      "after_context": "復攻之杠里，大破之。追北，西至開封，擊趙賁軍，破之，圍趙賁開...",
+      "after_context": "復攻之杠里，大破之。追北，西至開封，擊趙賁",
       "items": [
         {
           "source": "suoyin",
@@ -296,10 +362,24 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n021",
+      "anchor_text": "攻之杠里，大破之。追北，西至開封，擊趙賁",
+      "before_context": "...。擊王離軍成陽南，復攻之杠里，大破之。追北，西至開封，擊趙賁",
+      "after_context": "軍，破之，圍趙賁開封城中。西擊秦將楊熊軍於曲遇，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音奔。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
       "anchor_text": "，圍趙賁開封城中。西擊秦將楊熊軍於曲遇，",
       "before_context": "...開封，擊趙賁軍，破之，圍趙賁開封城中。西擊秦將楊熊軍於曲遇，",
-      "after_context": "破之，虜秦司馬及御史各一人。遷爲執珪。從攻陽武，下轘轅、緱氏...",
+      "after_context": "破之，虜秦司馬及御史各一人。遷爲執珪。",
       "items": [
         {
           "source": "jijie",
@@ -320,10 +400,24 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n023",
+      "anchor_text": "破之，虜秦司馬及御史各一人。遷爲執珪。",
+      "before_context": "...西擊秦將楊熊軍於曲遇，破之，虜秦司馬及御史各一人。遷爲執珪。",
+      "after_context": "從攻陽武，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「侯伯執珪以朝，位比之。」如淳曰：「《呂氏春秋》『得伍員者位執珪』。古爵名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
       "anchor_text": "從攻陽武，",
       "before_context": "...熊軍於曲遇，破之，虜秦司馬及御史各一人。遷爲執珪。從攻陽武，",
-      "after_context": "下轘轅、緱氏，絕河津，還擊趙賁軍尸北，破之。從南攻犨，與南陽...",
+      "after_context": "下轘轅、緱氏，",
       "items": [
         {
           "source": "zhengyi",
@@ -334,10 +428,10 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n025",
       "anchor_text": "下轘轅、緱氏，",
       "before_context": "...之，虜秦司馬及御史各一人。遷爲執珪。從攻陽武，下轘轅、緱氏，",
-      "after_context": "絕河津，還擊趙賁軍尸北，破之。從南攻犨，與南陽守齮戰陽城郭東...",
+      "after_context": "絕河津，",
       "items": [
         {
           "source": "suoyin",
@@ -353,10 +447,10 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n026",
       "anchor_text": "絕河津，",
       "before_context": "...司馬及御史各一人。遷爲執珪。從攻陽武，下轘轅、緱氏，絕河津，",
-      "after_context": "還擊趙賁軍尸北，破之。從南攻犨，與南陽守齮戰陽城郭東，陷陳，",
+      "after_context": "還擊趙賁軍尸北，破之。",
       "items": [
         {
           "source": "zhengyi",
@@ -367,10 +461,10 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n027",
       "anchor_text": "還擊趙賁軍尸北，破之。",
       "before_context": "...執珪。從攻陽武，下轘轅、緱氏，絕河津，還擊趙賁軍尸北，破之。",
-      "after_context": "從南攻犨，與南陽守齮戰陽城郭東，陷陳，取宛，虜齮，盡定南陽郡...",
+      "after_context": "從南攻犨，與南陽守齮戰陽城郭東，",
       "items": [
         {
           "source": "jijie",
@@ -386,24 +480,29 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n028",
       "anchor_text": "從南攻犨，與南陽守齮戰陽城郭東，",
       "before_context": "...河津，還擊趙賁軍尸北，破之。從南攻犨，與南陽守齮戰陽城郭東，",
-      "after_context": "陷陳，取宛，虜齮，盡定南陽郡。從西攻武關、嶢關，取之。前攻秦...",
+      "after_context": "陷陳，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「今赭陽。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣云「陽城在南陽」，應劭云「今赭陽」。赭陽是南陽之縣。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n029",
       "anchor_text": "陷陳，",
-      "before_context": "還擊趙賁軍尸北，破之。從南攻犨，與南陽守齮戰陽城郭東，陷陳，",
-      "after_context": "取宛，虜齮，盡定南陽郡。從西攻武關、嶢關，取之。前攻秦軍藍田...",
+      "before_context": "...還擊趙賁軍尸北，破之。從南攻犨，與南陽守齮戰陽城郭東，陷陳，",
+      "after_context": "取宛，虜齮，盡定南陽郡。從西攻武關、嶢關，",
       "items": [
         {
           "source": "zhengyi",
@@ -414,10 +513,10 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n030",
       "anchor_text": "宛，虜齮，盡定南陽郡。從西攻武關、嶢關，",
       "before_context": "...戰陽城郭東，陷陳，取宛，虜齮，盡定南陽郡。從西攻武關、嶢關，",
-      "after_context": "取之。前攻秦軍藍田南，又夜擊其北，秦軍大破，遂至咸陽",
+      "after_context": "取之。前攻秦軍藍田南，",
       "items": [
         {
           "source": "zhengyi",
@@ -428,10 +527,10 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n031",
       "anchor_text": "取之。前攻秦軍藍田南，",
       "before_context": "...，虜齮，盡定南陽郡。從西攻武關、嶢關，取之。前攻秦軍藍田南，",
-      "after_context": "又夜擊其北，秦軍大破，遂至咸陽",
+      "after_context": "又夜擊其北，秦軍大破，遂至咸陽，滅秦。",
       "items": [
         {
           "source": "zhengyi",
@@ -442,10 +541,10 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n032",
       "anchor_text": "沛公爲漢王。漢王封參爲建成侯。從至漢中，",
       "before_context": "項羽至，以沛公爲漢王。漢王封參爲建成侯。從至漢中，",
-      "after_context": "遷爲將軍。從還定三秦，初攻下辯、故道、雍、斄。擊章平軍於好畤...",
+      "after_context": "遷爲將軍。從還定三秦，初攻下辯、故道、",
       "items": [
         {
           "source": "zhengyi",
@@ -456,10 +555,10 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n033",
       "anchor_text": "遷爲將軍。從還定三秦，初攻下辯、故道、",
       "before_context": "...參爲建成侯。從至漢中，遷爲將軍。從還定三秦，初攻下辯、故道、",
-      "after_context": "雍、斄。擊章平軍於好畤南，破之，圍好畤，取壤鄉。擊三秦軍壤東...",
+      "after_context": "雍、斄。",
       "items": [
         {
           "source": "suoyin",
@@ -475,10 +574,10 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n034",
       "anchor_text": "雍、斄。",
       "before_context": "...侯。從至漢中，遷爲將軍。從還定三秦，初攻下辯、故道、雍、斄。",
-      "after_context": "擊章平軍於好畤南，破之，圍好畤，取壤鄉。擊三秦軍壤東及高櫟，",
+      "after_context": "擊章平軍於好畤南，",
       "items": [
         {
           "source": "suoyin",
@@ -494,10 +593,10 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n035",
       "anchor_text": "擊章平軍於好畤南，",
       "before_context": "...將軍。從還定三秦，初攻下辯、故道、雍、斄。擊章平軍於好畤南，",
-      "after_context": "破之，圍好畤，取壤鄉。擊三秦軍壤東及高櫟，破之。復圍章平，章...",
+      "after_context": "破之，圍好畤，取壤鄉。",
       "items": [
         {
           "source": "zhengyi",
@@ -508,10 +607,24 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n036",
+      "anchor_text": "破之，圍好畤，取壤鄉。",
+      "before_context": "...下辯、故道、雍、斄。擊章平軍於好畤南，破之，圍好畤，取壤鄉。",
+      "after_context": "擊三秦軍壤東及高櫟，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「地名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
       "anchor_text": "擊三秦軍壤東及高櫟，",
-      "before_context": "擊章平軍於好畤南，破之，圍好畤，取壤鄉。擊三秦軍壤東及高櫟，",
-      "after_context": "破之。復圍章平，章平出好畤走。因擊趙賁、內史保軍，破之。東取",
+      "before_context": "...擊章平軍於好畤南，破之，圍好畤，取壤鄉。擊三秦軍壤東及高櫟，",
+      "after_context": "破之。復圍章平，章平出好畤走。因擊趙賁、內史保軍，破之。東取...",
       "items": [
         {
           "source": "suoyin",
@@ -527,10 +640,52 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n038",
+      "anchor_text": "，更名曰新城。",
+      "before_context": "...平出好畤走。因擊趙賁、內史保軍，破之。東取咸陽，更名曰新城。",
+      "after_context": "參將兵守景陵",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《漢書》高帝元年咸陽名新城，武帝改名曰渭城。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
+      "anchor_text": "參將兵守景陵",
+      "before_context": "...因擊趙賁、內史保軍，破之。東取咸陽，更名曰新城。參將兵守景陵",
+      "after_context": "二十日，三秦使章平等攻參，參出擊，大破之。賜食邑於寧秦。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「縣名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "平等攻參，參出擊，大破之。賜食邑於寧秦。",
+      "before_context": "...景陵二十日，三秦使章平等攻參，參出擊，大破之。賜食邑於寧秦。",
+      "after_context": "參以將軍引兵圍章邯於廢丘。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蘇林曰：「今華陰。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
       "anchor_text": "參以將軍引兵圍章邯於廢丘。",
       "before_context": "...參，參出擊，大破之。賜食邑於寧秦。參以將軍引兵圍章邯於廢丘。",
-      "after_context": "以中尉從漢王出臨晉關。至河內，下脩武，渡圍津，東擊龍且、項他...",
+      "after_context": "以中尉從漢王出臨晉關。",
       "items": [
         {
           "source": "zhengyi",
@@ -541,10 +696,10 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n042",
       "anchor_text": "以中尉從漢王出臨晉關。",
       "before_context": "...食邑於寧秦。參以將軍引兵圍章邯於廢丘。以中尉從漢王出臨晉關。",
-      "after_context": "至河內，下脩武，渡圍津，東擊龍且、項他定陶，破之。東取碭、蕭...",
+      "after_context": "至河內，下脩武，",
       "items": [
         {
           "source": "zhengyi",
@@ -555,10 +710,10 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n043",
       "anchor_text": "至河內，下脩武，",
       "before_context": "...將軍引兵圍章邯於廢丘。以中尉從漢王出臨晉關。至河內，下脩武，",
-      "after_context": "渡圍津，東擊龍且、項他定陶，破之。東取碭、蕭、彭城",
+      "after_context": "渡圍津，",
       "items": [
         {
           "source": "zhengyi",
@@ -569,20 +724,20 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n044",
       "anchor_text": "渡圍津，",
       "before_context": "...圍章邯於廢丘。以中尉從漢王出臨晉關。至河內，下脩武，渡圍津，",
-      "after_context": "東擊龍且、項他定陶，破之。東取碭、蕭、彭城",
+      "after_context": "東擊龍且、項他定陶，破之。東取碭、蕭、彭城。",
       "items": [
-        {
-          "source": "suoyin",
-          "label": "索隱",
-          "text": "顧氏按：水經注白馬津有韋鄉、韋津城。「圍」與「韋」同，古今字變爾。"
-        },
         {
           "source": "zhengyi",
           "label": "正義",
           "text": "徐廣曰：「東郡白馬有圍津。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "顧氏按：水經注白馬津有韋鄉、韋津城。「圍」與「韋」同，古今字變爾。"
         },
         {
           "source": "zhengyi",
@@ -593,10 +748,10 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n045",
       "anchor_text": "。",
       "before_context": "...下脩武，渡圍津，東擊龍且、項他定陶，破之。東取碭、蕭、彭城。",
-      "after_context": "擊項籍軍，漢軍大敗走。參以中尉圍取雍丘。王武反於〔",
+      "after_context": "擊項籍軍，漢軍大敗走。參以中尉圍取雍丘。王武反於〔外〕黃，",
       "items": [
         {
           "source": "zhengyi",
@@ -607,10 +762,52 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n046",
+      "anchor_text": "黃，",
+      "before_context": "...。擊項籍軍，漢軍大敗走。參以中尉圍取雍丘。王武反於〔外〕黃，",
+      "after_context": "程處反於燕，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「內黃縣有黃澤。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
+      "anchor_text": "程處反於燕，",
+      "before_context": "...漢軍大敗走。參以中尉圍取雍丘。王武反於〔外〕黃，程處反於燕，",
+      "after_context": "往擊，盡破之。柱天侯反於衍氏，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「東郡燕縣。」駰案：《漢書音義》曰「皆漢將」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
+      "anchor_text": "往擊，盡破之。柱天侯反於衍氏，",
+      "before_context": "...王武反於〔外〕黃，程處反於燕，往擊，盡破之。柱天侯反於衍氏，",
+      "after_context": "又進破取衍氏。擊羽嬰於昆陽，追至葉。還攻武彊，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "天柱侯不知其誰封。衍氏，魏邑。《地理志》云天柱在廬江潛縣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "取衍氏。擊羽嬰於昆陽，追至葉。還攻武彊，",
       "before_context": "...天侯反於衍氏，又進破取衍氏。擊羽嬰於昆陽，追至葉。還攻武彊，",
-      "after_context": "因至滎陽。參自漢中爲將軍中尉，從擊諸侯，及項羽",
+      "after_context": "因至滎陽。參自漢中爲將軍中尉，從",
       "items": [
         {
           "source": "jijie",
@@ -626,10 +823,38 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n050",
+      "anchor_text": "因至滎陽。參自漢中爲將軍中尉，從",
+      "before_context": "...嬰於昆陽，追至葉。還攻武彊，因至滎陽。參自漢中爲將軍中尉，從",
+      "after_context": "擊諸侯，及項羽敗，還至滎陽，凡二歲。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "才用反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
+      "anchor_text": "東攻魏將軍孫遫",
+      "before_context": "...入屯兵關中。月餘，魏王豹反，以假左丞相別與韓信東攻魏將軍孫遫",
+      "after_context": "軍東張，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音速。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n052",
       "anchor_text": "軍東張，",
       "before_context": "...中。月餘，魏王豹反，以假左丞相別與韓信東攻魏將軍孫遫軍東張，",
-      "after_context": "大破之。因攻安邑，得魏將王襄。擊魏王於曲陽，追至武垣，生得魏...",
+      "after_context": "大破之。因攻安邑，得魏將王襄。擊魏王於曲陽，",
       "items": [
         {
           "source": "jijie",
@@ -645,10 +870,10 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n053",
       "anchor_text": "之。因攻安邑，得魏將王襄。擊魏王於曲陽，",
       "before_context": "...將軍孫遫軍東張，大破之。因攻安邑，得魏將王襄。擊魏王於曲陽，",
-      "after_context": "追至武垣，生得魏王豹。取平陽，得魏王母妻子，盡定魏地，凡五十...",
+      "after_context": "追至武垣，",
       "items": [
         {
           "source": "zhengyi",
@@ -659,10 +884,10 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n054",
       "anchor_text": "追至武垣，",
       "before_context": "...東張，大破之。因攻安邑，得魏將王襄。擊魏王於曲陽，追至武垣，",
-      "after_context": "生得魏王豹。取平陽，得魏王母妻子，盡定魏地，凡五十二城。賜食...",
+      "after_context": "生得魏王豹。取平陽，",
       "items": [
         {
           "source": "jijie",
@@ -678,10 +903,10 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n055",
       "anchor_text": "生得魏王豹。取平陽，",
       "before_context": "...邑，得魏將王襄。擊魏王於曲陽，追至武垣，生得魏王豹。取平陽，",
-      "after_context": "得魏王母妻子，盡定魏地，凡五十二城。賜食邑平陽。因從韓信",
+      "after_context": "得魏王母妻子，盡定魏地，凡五十二城。賜食邑平陽。因從韓信擊趙...",
       "items": [
         {
           "source": "zhengyi",
@@ -692,24 +917,29 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n056",
       "anchor_text": "擊趙相國夏說軍於鄔東，",
       "before_context": "...魏地，凡五十二城。賜食邑平陽。因從韓信擊趙相國夏說軍於鄔東，",
-      "after_context": "大破之，斬夏說。韓信",
+      "after_context": "大破之，斬夏說。韓信與故常山王張耳引兵下井陘，擊成安君，而令...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「鄔縣在太原。音烏古反。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》鄔，太原縣名。音烏古反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n057",
       "anchor_text": "。還定濟北郡，攻著、漯陰、平原、鬲、盧。",
       "before_context": "...破齊歷下軍，遂取臨菑。還定濟北郡，攻著、漯陰、平原、鬲、盧。",
-      "after_context": "已而從韓信",
+      "after_context": "已而從韓信擊龍且軍於上假密，",
       "items": [
         {
           "source": "suoyin",
@@ -725,7 +955,7 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n058",
       "anchor_text": "擊龍且軍於上假密，",
       "before_context": "...北郡，攻著、漯陰、平原、鬲、盧。已而從韓信擊龍且軍於上假密，",
       "after_context": "大破之，斬龍且，虜其將軍周蘭。定齊，凡得七十餘縣。得故齊王田...",
@@ -734,12 +964,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "文穎曰：「或以爲高密。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》亦作「假密」。按：下定齊七十縣，則上假密非高密，亦是齊地，今闕。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n059",
       "anchor_text": "，大破之。南至蘄，還定竹邑、相、蕭、留。",
       "before_context": "...人，與高祖會擊黥布軍，大破之。南至蘄，還定竹邑、相、蕭、留。",
       "after_context": "",
@@ -758,7 +993,105 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n060",
+      "anchor_text": "二；得王二人，相三人，將軍六人，大莫敖、",
+      "before_context": "...凡下二國，縣一百二十二；得王二人，相三人，將軍六人，大莫敖、",
+      "after_context": "郡守、司馬、候、御史各一人。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「楚之卿號。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n061",
+      "anchor_text": "，今君擾之，姦人安所容也？吾是以先之。」",
+      "before_context": "...夫獄市者，所以并容也，今君擾之，姦人安所容也？吾是以先之。」",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「夫獄市兼受善惡，若窮極，姦人無所容竄；姦人無所容竄，久且爲亂。秦人極刑而天下畔，孝武峻法而獄繁，此其效也。老子曰『我無爲而民自化，我好靜而民自正』。參欲以道化其本，不欲擾其末。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n062",
+      "anchor_text": "夜飲醇酒。卿大夫已下吏及賓客見參不事事，",
+      "before_context": "...聲名者，輒斥去之。日夜飲醇酒。卿大夫已下吏及賓客見參不事事，",
+      "after_context": "來者皆欲有言。至者，參輒飲以醇酒，閒之，欲有所言，復飲之，醉...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「不事丞相之事。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n063",
+      "anchor_text": "欲有所言，復飲之，醉而後去，終莫得開說，",
+      "before_context": "...參輒飲以醇酒，閒之，欲有所言，復飲之，醉而後去，終莫得開說，",
+      "after_context": "以爲常。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「開謂有所啟白。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n064",
+      "anchor_text": "參子窋",
+      "before_context": "參子窋",
+      "after_context": "爲中大夫。惠帝怪相國不治事，以爲「豈少朕與」？",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音張律反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n065",
+      "anchor_text": "夫。惠帝怪相國不治事，以爲「豈少朕與」？",
+      "before_context": "參子窋爲中大夫。惠帝怪相國不治事，以爲「豈少朕與」？",
+      "after_context": "乃謂窋曰：「若歸，試私從容問而父曰：『高帝新弃羣臣，帝富於春...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：少者不足之詞，故胡亥亦云「丞相豈少我哉」。蓋帝以丞相豈不是嫌少於我哉。小顏以爲「我年少」，非也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n066",
+      "anchor_text": "請事，何以憂天下乎？』然無言吾告若也。」",
+      "before_context": "...，君爲相，日飲，無所請事，何以憂天下乎？』然無言吾告若也。」",
+      "after_context": "窋既洗沐歸，閒侍，自從其所諫參。參怒，而笞窋二百，曰：「趣入...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂惠帝語窋，無得言我告汝令諫汝父，當自云是己意也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
       "anchor_text": "也。」至朝時，惠帝讓參曰：「與窋胡治乎？",
       "before_context": "...侍，天下事非若所當言也。」至朝時，惠帝讓參曰：「與窋胡治乎？",
       "after_context": "乃者我使諫君也。」參免冠謝曰：「陛下自察聖武孰與高帝？」上曰...",
@@ -767,20 +1100,30 @@
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「猶言用窋爲治。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：胡，何也，言語參「何爲治窋」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n068",
       "anchor_text": "爲法，顜若畫一；",
       "before_context": "...年。卒，謚懿侯。子窋代侯。百姓歌之曰：「蕭何爲法，顜若畫一；",
-      "after_context": "曹參",
+      "after_context": "曹參代之，守而勿失。載其清淨，民以寧一。」",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「顜音古項反，一音較。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "覯，《漢書》作「講」，故文穎云「講，一作『較』」。按：訓直，又訓明，言法明直若畫一也。覯音講，亦作「覯」。小顏云「講，和也。畫一，言其法整齊也」。"
         }
       ],
       "sentence_id": null

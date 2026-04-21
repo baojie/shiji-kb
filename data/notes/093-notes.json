@@ -5,12 +5,17 @@
       "id": "n001",
       "anchor_text": "韓王信者，",
       "before_context": "韓王信者，",
-      "after_context": "故韓襄王孼孫也，長八尺五寸。及項梁",
+      "after_context": "故韓襄王孼孫也，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一云『信都』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《楚漢春秋》云韓王信都，恐謬也。諸書不言有韓信都。案：韓王信初爲韓司徒，後訛云「申徒」，因誤以爲韓王名耳。"
         }
       ],
       "sentence_id": null
@@ -19,12 +24,17 @@
       "id": "n002",
       "anchor_text": "故韓襄王孼孫也，",
       "before_context": "韓王信者，故韓襄王孼孫也，",
-      "after_context": "長八尺五寸。及項梁",
+      "after_context": "長八尺五寸。及項梁之立楚後懷王也，燕、齊、趙、魏皆已前王，唯...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "張晏曰：「孺子爲孼。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "張晏云「庶子爲孼子」。何休注公羊以爲「孼，賤子，猶之伐木有孼生也」。《漢書》晁錯云「孼子悼惠王」是也。"
         }
       ],
       "sentence_id": null
@@ -33,7 +43,7 @@
       "id": "n003",
       "anchor_text": "已前王，唯韓無有後，故立韓諸公子橫陽君成",
       "before_context": "...也，燕、齊、趙、魏皆已前王，唯韓無有後，故立韓諸公子橫陽君成",
-      "after_context": "爲韓王，欲以撫定韓故地。項梁",
+      "after_context": "爲韓王，",
       "items": [
         {
           "source": "zhengyi",
@@ -45,9 +55,23 @@
     },
     {
       "id": "n004",
+      "anchor_text": "爲韓王，",
+      "before_context": "...齊、趙、魏皆已前王，唯韓無有後，故立韓諸公子橫陽君成爲韓王，",
+      "after_context": "欲以撫定韓故地。項梁敗死定陶，成犇懷王。沛公引兵擊陽城，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「二年六月也。都陽翟。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "敗死定陶，成犇懷王。沛公引兵擊陽城，",
       "before_context": "...王，欲以撫定韓故地。項梁敗死定陶，成犇懷王。沛公引兵擊陽城，",
-      "after_context": "使張良",
+      "after_context": "使張良以韓司徒",
       "items": [
         {
           "source": "zhengyi",
@@ -58,10 +82,24 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n006",
+      "anchor_text": "以韓司徒",
+      "before_context": "...故地。項梁敗死定陶，成犇懷王。沛公引兵擊陽城，使張良以韓司徒",
+      "after_context": "降下韓故地，得信，以爲韓將，將其兵從沛公入武關。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「他本多作『申徒』，申與司聲相近，字由此錯亂耳。今有申徒，云是司徒之後，言司聲轉爲申。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
       "anchor_text": "居此，此左遷也。士卒皆山東人，跂而望歸，",
       "before_context": "...王諸將近地，而王獨遠居此，此左遷也。士卒皆山東人，跂而望歸，",
-      "after_context": "及其鋒東鄉，可以爭天下。」漢王還定三秦，迺許信爲韓王，先拜信...",
+      "after_context": "及其鋒東鄉，",
       "items": [
         {
           "source": "suoyin",
@@ -77,7 +115,7 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n008",
       "anchor_text": "及其鋒東鄉，",
       "before_context": "...而王獨遠居此，此左遷也。士卒皆山東人，跂而望歸，及其鋒東鄉，",
       "after_context": "可以爭天下。」漢王還定三秦，迺許信爲韓王，先拜信爲韓太尉，將...",
@@ -86,29 +124,39 @@
           "source": "jijie",
           "label": "集解",
           "text": "文穎曰：「鋒銳欲東向。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：姚氏云「軍中將士氣鋒」。韋昭曰「其氣鋒銳欲東也」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n009",
       "anchor_text": "韓王成以不從無功，不遣就國，更以爲列侯。",
       "before_context": "項籍之封諸王皆就國，韓王成以不從無功，不遣就國，更以爲列侯。",
-      "after_context": "及聞漢遣韓信",
+      "after_context": "及聞漢遣韓信略韓地，迺令故項籍游吳時吳令鄭昌",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「元年十一月，誅成。」駰案：《漢書》曰「封爲穰侯」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》穰縣屬南陽。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n010",
       "anchor_text": "略韓地，迺令故項籍游吳時吳令鄭昌",
       "before_context": "...國，更以爲列侯。及聞漢遣韓信略韓地，迺令故項籍游吳時吳令鄭昌",
-      "after_context": "爲韓王以距漢。漢二年，韓信",
+      "after_context": "爲韓王以距漢。漢二年，韓信略定韓十餘城。漢王至河南，韓信急擊...",
       "items": [
         {
           "source": "zhengyi",
@@ -119,10 +167,52 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n011",
+      "anchor_text": "爲韓王，",
+      "before_context": "...。漢王至河南，韓信急擊韓王昌陽城。昌降，漢王迺立韓信爲韓王，",
+      "after_context": "常將韓兵從。三年，漢王出滎陽，韓王信、周苛等守滎陽。及楚敗滎...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「二年十一月。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "明年春，",
+      "before_context": "明年春，",
+      "after_context": "上以韓信材武，所王北近鞏、洛，南迫宛、葉，東有淮陽，皆天下勁...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「即五年之二月。」駰案：《漢書》曰「六年春」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
+      "anchor_text": "北，備禦胡，都晉陽。信上書曰：「國被邊，",
+      "before_context": "...迺詔徙韓王信王太原以北，備禦胡，都晉陽。信上書曰：「國被邊，",
+      "after_context": "匈奴數入，晉陽",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「被音『被馬』〔之『被』〕也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
       "anchor_text": "數入，晉陽",
       "before_context": "...太原以北，備禦胡，都晉陽。信上書曰：「國被邊，匈奴數入，晉陽",
-      "after_context": "去塞遠，請治馬邑。」上許之，信乃徙治馬邑。秋，匈奴",
+      "after_context": "去塞遠，請治馬邑。」",
       "items": [
         {
           "source": "zhengyi",
@@ -133,10 +223,10 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n015",
       "anchor_text": "去塞遠，請治馬邑。」",
       "before_context": "...晉陽。信上書曰：「國被邊，匈奴數入，晉陽去塞遠，請治馬邑。」",
-      "after_context": "上許之，信乃徙治馬邑。秋，匈奴",
+      "after_context": "上許之，信乃徙治馬邑。秋，匈奴冒頓",
       "items": [
         {
           "source": "zhengyi",
@@ -147,10 +237,24 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n016",
+      "anchor_text": "冒頓",
+      "before_context": "...，晉陽去塞遠，請治馬邑。」上許之，信乃徙治馬邑。秋，匈奴冒頓",
+      "after_context": "大圍信，信數使使胡求和解。漢發兵救之，疑信數閒使，有二心，使...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音墨，又音莫報反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "七年冬，上自往擊，破信軍銅鞮，",
       "before_context": "七年冬，上自往擊，破信軍銅鞮，",
-      "after_context": "斬其將王喜。信亡走匈奴",
+      "after_context": "斬其將王喜。信亡走匈奴。（與）其與白土人",
       "items": [
         {
           "source": "zhengyi",
@@ -161,10 +265,24 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n018",
+      "anchor_text": "其與白土人",
+      "before_context": "...自往擊，破信軍銅鞮，斬其將王喜。信亡走匈奴。（與）其與白土人",
+      "after_context": "曼丘臣、王黃等立趙苗裔趙利爲王，復收信敗散兵，而與信及冒頓謀...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「白土，縣名，屬上郡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
       "anchor_text": "仗左右賢王將萬餘騎與王黃等屯廣武以南，",
       "before_context": "...與信及冒頓謀攻漢。匈奴仗左右賢王將萬餘騎與王黃等屯廣武以南，",
-      "after_context": "至晉陽，與漢兵戰，漢大破之，追至于離石，復破之。匈奴",
+      "after_context": "至晉陽，與漢兵戰，漢大破之，追至于離石，",
       "items": [
         {
           "source": "zhengyi",
@@ -175,10 +293,10 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n020",
       "anchor_text": "至晉陽，與漢兵戰，漢大破之，追至于離石，",
       "before_context": "...與王黃等屯廣武以南，至晉陽，與漢兵戰，漢大破之，追至于離石，",
-      "after_context": "復破之。匈奴",
+      "after_context": "復破之。匈奴復聚兵樓煩",
       "items": [
         {
           "source": "zhengyi",
@@ -189,10 +307,10 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n021",
       "anchor_text": "復聚兵樓煩",
       "before_context": "...晉陽，與漢兵戰，漢大破之，追至于離石，復破之。匈奴復聚兵樓煩",
-      "after_context": "西北，漢令車騎擊破匈奴",
+      "after_context": "西北，漢令車騎擊破匈奴。匈奴常敗走，漢乘勝追北，聞冒頓居代（...",
       "items": [
         {
           "source": "zhengyi",
@@ -203,10 +321,10 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n022",
       "anchor_text": "谷，",
       "before_context": "...令車騎擊破匈奴。匈奴常敗走，漢乘勝追北，聞冒頓居代（上）谷，",
-      "after_context": "高皇帝居晉陽，使人視冒頓，還報曰「可擊」。上遂至平城。上出白...",
+      "after_context": "高皇帝居晉陽，使人視冒頓，還報曰「可擊」。上遂至平城。",
       "items": [
         {
           "source": "zhengyi",
@@ -217,10 +335,10 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n023",
       "anchor_text": "使人視冒頓，還報曰「可擊」。上遂至平城。",
-      "before_context": "）谷，高皇帝居晉陽，使人視冒頓，還報曰「可擊」。上遂至平城。",
-      "after_context": "上出白登，匈奴",
+      "before_context": "...）谷，高皇帝居晉陽，使人視冒頓，還報曰「可擊」。上遂至平城。",
+      "after_context": "上出白登，",
       "items": [
         {
           "source": "zhengyi",
@@ -231,21 +349,26 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n024",
       "anchor_text": "上出白登，",
       "before_context": "...帝居晉陽，使人視冒頓，還報曰「可擊」。上遂至平城。上出白登，",
-      "after_context": "匈奴",
+      "after_context": "匈奴騎圍上，上乃使人厚遺閼氏。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「白登，臺名，去平城七里。」如淳曰：「平城旁之高地，若丘陵也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "姚氏案：北疆記「桑乾河北有白登山，冒頓圍漢高之所，今猶有壘壁。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n025",
       "anchor_text": "騎圍上，上乃使人厚遺閼氏。",
       "before_context": "...可擊」。上遂至平城。上出白登，匈奴騎圍上，上乃使人厚遺閼氏。",
       "after_context": "閼氏乃說冒頓曰：「今得漢地，猶不能居；且兩主不相戹。」居七日...",
@@ -259,10 +382,38 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n026",
+      "anchor_text": "胡不覺。護軍中尉陳平言上曰：「胡者全兵，",
+      "before_context": "...天大霧，漢使人往來，胡不覺。護軍中尉陳平言上曰：「胡者全兵，",
+      "after_context": "請令彊弩傅兩矢外嚮，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「言唯弓矛，無雜仗也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
+      "anchor_text": "請令彊弩傅兩矢外嚮，",
+      "before_context": "...胡不覺。護軍中尉陳平言上曰：「胡者全兵，請令彊弩傅兩矢外嚮，",
+      "after_context": "徐行出圍。」入平城，漢救兵亦到，胡騎遂解去。漢亦罷兵歸。韓信...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "傳音附。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
       "anchor_text": "豨。十一年春，故韓王信復與胡騎入居參合，",
       "before_context": "...年，信令王黃等說誤陳豨。十一年春，故韓王信復與胡騎入居參合，",
-      "after_context": "距漢。漢使柴將軍擊之，遺信書曰：「陛下寬仁，諸侯雖有畔亡，而...",
+      "after_context": "距漢。漢使柴將軍擊之，",
       "items": [
         {
           "source": "jijie",
@@ -278,7 +429,7 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n029",
       "anchor_text": "距漢。漢使柴將軍擊之，",
       "before_context": "...。十一年春，故韓王信復與胡騎入居參合，距漢。漢使柴將軍擊之，",
       "after_context": "遺信書曰：「陛下寬仁，諸侯雖有畔亡，而復歸，輒復故位號，不誅...",
@@ -287,15 +438,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "鄧展曰：「柴奇也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "應劭云柴武，鄧展云柴奇；晉灼云奇，武之子。應劭說爲得，此時奇未爲將。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n030",
+      "anchor_text": "之命，此三罪也。夫種、蠡無一罪，身死亡；",
+      "before_context": "...寇將兵，與將軍爭一旦之命，此三罪也。夫種、蠡無一罪，身死亡；",
+      "after_context": "今僕有三罪於陛下，而欲求活於世，此伍子胥所以僨於吳也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「大夫種、范蠡也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
       "anchor_text": "下，而欲求活於世，此伍子胥所以僨於吳也。",
       "before_context": "...死亡；今僕有三罪於陛下，而欲求活於世，此伍子胥所以僨於吳也。",
-      "after_context": "今僕亡匿山谷閒，旦暮乞貸蠻夷，僕之思歸，如痿人不忘起，盲者不...",
+      "after_context": "今僕亡匿山谷閒，旦暮乞貸蠻夷，僕之思歸，如痿人不忘起，",
       "items": [
         {
           "source": "suoyin",
@@ -311,10 +481,38 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n032",
+      "anchor_text": "，旦暮乞貸蠻夷，僕之思歸，如痿人不忘起，",
+      "before_context": "...吳也。今僕亡匿山谷閒，旦暮乞貸蠻夷，僕之思歸，如痿人不忘起，",
+      "after_context": "盲者不忘視也，勢不可耳。」遂戰。柴將軍屠參合，斬韓王信。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "痿，耳誰反。舊音耳睡反，於義爲疏。張揖云「痿不能起」，哀帝紀云「帝即位痿痺」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "，與太子俱；及至穨當城，",
+      "before_context": "信之入匈奴，與太子俱；及至穨當城，",
+      "after_context": "生子，因名曰穨當。韓太子亦生子，命曰嬰。至孝文十四年，穨當及...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「縣名。」韋昭曰：「在匈奴地。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "，穨當及嬰率其衆降漢。漢封穨當爲弓高侯，",
       "before_context": "...命曰嬰。至孝文十四年，穨當及嬰率其衆降漢。漢封穨當爲弓高侯，",
-      "after_context": "嬰爲襄城侯。吳楚軍時，弓高侯功冠諸將。傳子至孫，孫無子，失侯...",
+      "after_context": "嬰爲襄城侯。",
       "items": [
         {
           "source": "jijie",
@@ -335,7 +533,49 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n035",
+      "anchor_text": "嬰爲襄城侯。",
+      "before_context": "...文十四年，穨當及嬰率其衆降漢。漢封穨當爲弓高侯，嬰爲襄城侯。",
+      "after_context": "吳楚軍時，弓高侯功冠諸將。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：服虔云「縣名。《功臣表》屬魏郡」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "吳楚軍時，弓高侯功冠諸將。",
+      "before_context": "...漢。漢封穨當爲弓高侯，嬰爲襄城侯。吳楚軍時，弓高侯功冠諸將。",
+      "after_context": "傳子至孫，孫無子，失侯。嬰孫以不敬失侯。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「謚曰壯。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "傳子至孫，孫無子，失侯。嬰孫以不敬失侯。",
+      "before_context": "...時，弓高侯功冠諸將。傳子至孫，孫無子，失侯。嬰孫以不敬失侯。",
+      "after_context": "穨當孼孫韓嫣，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「表云嬰子澤之，元朔四年不敬國除。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
       "anchor_text": "穨當孼孫韓嫣，",
       "before_context": "...諸將。傳子至孫，孫無子，失侯。嬰孫以不敬失侯。穨當孼孫韓嫣，",
       "after_context": "貴幸，名富顯於當世。其弟說，再封，數稱將軍，卒爲案道侯。子代...",
@@ -344,12 +584,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「音『鄢陵』之『鄢』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音偃，又一言反，又休延反，並通。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n039",
+      "anchor_text": "弟說，再封，數稱將軍，卒爲案道侯。子代，",
+      "before_context": "...幸，名富顯於當世。其弟說，再封，數稱將軍，卒爲案道侯。子代，",
+      "after_context": "歲餘坐法死。後歲餘，說孫曾",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「名長君。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
       "anchor_text": "歲餘坐法死。後歲餘，說孫曾",
       "before_context": "...再封，數稱將軍，卒爲案道侯。子代，歲餘坐法死。後歲餘，說孫曾",
       "after_context": "拜爲龍頟侯，續說後。",
@@ -358,12 +617,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「長君之子也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣曰「長君之子」。案博物志，字季君也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n041",
       "anchor_text": "拜爲龍頟侯，續說後。",
       "before_context": "...案道侯。子代，歲餘坐法死。後歲餘，說孫曾拜爲龍頟侯，續說後。",
       "after_context": "",
@@ -382,7 +646,21 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n042",
+      "anchor_text": "親與高祖太上皇相愛，",
+      "before_context": "盧綰者，豐人也，與高祖同里。盧綰親與高祖太上皇相愛，",
+      "after_context": "及生男，高祖、盧綰同日生，里中持羊酒賀兩家。及高祖、盧綰壯，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「親謂父也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
       "anchor_text": "也。",
       "before_context": "...以事見禮，至其親幸，莫及盧綰。綰封爲長安侯。長安，故咸陽也。",
       "after_context": "",
@@ -396,7 +674,21 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n044",
+      "anchor_text": "別將，與劉賈擊臨江王共尉，",
+      "before_context": "漢五年冬，以破項籍，迺使盧綰別將，與劉賈擊臨江王共尉，",
+      "after_context": "破之。七月還，從擊燕王臧荼，臧荼降。高祖已定天下，諸侯非劉氏...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「共敖子。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
       "anchor_text": "，爲羣臣觖望。",
       "before_context": "...。高祖已定天下，諸侯非劉氏而王者七人。欲王盧綰，爲羣臣觖望。",
       "after_context": "及虜臧荼，迺下詔諸將相列侯，擇羣臣有功者以爲燕王。羣臣知上欲...",
@@ -405,15 +697,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「觖音『決別』之『決』。望猶怨也。」瓚曰：「觖謂相觖而怨望也。」韋昭曰：「觖猶冀也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "服虔音決。觖望猶怨望也。又音企。韋昭音冀。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n046",
+      "anchor_text": "閒，而陰使范齊之陳豨所，欲令久亡，",
+      "before_context": "...它人，脫勝家屬，使得爲匈奴閒，而陰使范齊之陳豨所，欲令久亡，",
+      "after_context": "連兵勿決。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「使陳豨久亡畔。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
       "anchor_text": "孫他之，",
       "before_context": "孝景中六年，盧綰孫他之，",
-      "after_context": "以東胡王降，封爲亞谷侯。",
+      "after_context": "以東胡王降，",
       "items": [
         {
           "source": "zhengyi",
@@ -424,7 +735,21 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n048",
+      "anchor_text": "以東胡王降，",
+      "before_context": "孝景中六年，盧綰孫他之，以東胡王降，",
+      "after_context": "封爲亞谷侯。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「爲東胡王來降也。漢紀東胡，烏丸也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "封爲亞谷侯。",
       "before_context": "孝景中六年，盧綰孫他之，以東胡王降，封爲亞谷侯。",
       "after_context": "",
@@ -443,10 +768,10 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n050",
       "anchor_text": "陳豨者，宛朐人也，",
       "before_context": "陳豨者，宛朐人也，",
-      "after_context": "不知始所以得從。及高祖七年冬，韓王信反，入匈奴",
+      "after_context": "不知始所以得從。及高祖七年冬，韓王信反，入匈奴，上至平城還，...",
       "items": [
         {
           "source": "suoyin",
@@ -462,7 +787,21 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n051",
+      "anchor_text": "，上至平城還，迺封豨爲列侯，",
+      "before_context": "...。及高祖七年冬，韓王信反，入匈奴，上至平城還，迺封豨爲列侯，",
+      "after_context": "以趙相國將監趙、代邊兵，邊兵皆屬焉。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「《功臣表》曰陳豨以特將將卒五百人，前元年從起宛朐，至霸上，爲侯，以游擊將軍別定代，已破臧荼，封豨爲陽夏侯。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n052",
       "anchor_text": "官舍皆滿。豨所以待賓客布衣交，皆出客下。",
       "before_context": "...客隨之者千餘乘，邯鄲官舍皆滿。豨所以待賓客布衣交，皆出客下。",
       "after_context": "豨還之代，周昌迺求入見。見上，具言豨賓客盛甚，擅兵於外數歲，...",
@@ -476,7 +815,7 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n053",
       "anchor_text": "連引豨。豨恐，陰令客通使王黃、曼丘臣所。",
       "before_context": "...代者財物諸不法事，多連引豨。豨恐，陰令客通使王黃、曼丘臣所。",
       "after_context": "及高祖十年七月，太上皇崩，使人召豨，豨稱病甚。九月，遂與王黃...",
@@ -490,10 +829,24 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n054",
+      "anchor_text": "豨反，邯鄲以北皆豨有，吾以羽檄徵天下兵，",
+      "before_context": "...上曰：「非若所知！陳豨反，邯鄲以北皆豨有，吾以羽檄徵天下兵，",
+      "after_context": "未有至者，今唯獨邯鄲中兵耳。吾胡愛四千戶封四人，不以慰趙子弟...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "魏武帝奏事曰：「今邊有小警，輒露檄插羽，飛羽檄之意也。」駰案：推其言，則以鳥羽插檄書，謂之羽檄，取其急速若飛鳥也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n055",
       "anchor_text": "年冬，漢兵擊斬陳豨將侯敞、王黃於曲逆下，",
       "before_context": "十一年冬，漢兵擊斬陳豨將侯敞、王黃於曲逆下，",
-      "after_context": "破豨將張春於聊城，斬首萬餘。太尉勃入定太原、代地。十二月，上...",
+      "after_context": "破豨將張春於聊城，",
       "items": [
         {
           "source": "zhengyi",
@@ -504,7 +857,7 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n056",
       "anchor_text": "破豨將張春於聊城，",
       "before_context": "...一年冬，漢兵擊斬陳豨將侯敞、王黃於曲逆下，破豨將張春於聊城，",
       "after_context": "斬首萬餘。太尉勃入定太原、代地。十二月，上自擊東垣，東垣不下...",
@@ -518,7 +871,21 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n057",
+      "anchor_text": "，趙迺從山南有之，遠。」迺立子恆爲代王，",
+      "before_context": "...。上曰：「代居常山北，趙迺從山南有之，遠。」迺立子恆爲代王，",
+      "after_context": "都中都，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「十一年正月。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
       "anchor_text": "都中都，",
       "before_context": "...「代居常山北，趙迺從山南有之，遠。」迺立子恆爲代王，都中都，",
       "after_context": "代、鴈門皆屬代。",
@@ -532,7 +899,7 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n059",
       "anchor_text": "軍卒追斬豨於靈丘。",
       "before_context": "高祖十二年冬，樊噲軍卒追斬豨於靈丘。",
       "after_context": "",

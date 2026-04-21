@@ -3,6 +3,34 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "郑桓公友者，周厉王少子而宣王庶弟也。",
+      "before_context": "郑桓公友者，周厉王少子而宣王庶弟也。",
+      "after_context": "宣王立二十二年，友初封于郑。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「年表云母弟。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
+      "anchor_text": "宣王立二十二年，友初封于郑。",
+      "before_context": "...公友者，周厉王少子而宣王庶弟也。宣王立二十二年，友初封于郑。",
+      "after_context": "封三十三岁，百姓皆便爱之。幽王以为司徒。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "郑，县名，属京兆。秦武公十一年「初县杜、郑」是也。又《系本》云「桓公居棫林，徙拾」。宋忠云「棫林与拾皆旧地名」，是封桓公乃名为郑耳。至秦之县郑，盖是郑武公东徙新郑之后，其旧郑乃是故都，故秦始县之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
       "anchor_text": "封三十三岁，百姓皆便爱之。幽王以为司徒。",
       "before_context": "...十二年，友初封于郑。封三十三岁，百姓皆便爱之。幽王以为司徒。",
       "after_context": "和集周民，周民皆说，河雒之闲，人便思之。为司徒一岁，幽王以褒...",
@@ -11,15 +39,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "韦昭曰：「幽王八年为司徒。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "韦昭据《国语》以幽王八年为司徒也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n004",
+      "anchor_text": "王室治多邪，诸侯或畔之。于是桓公问太史伯",
+      "before_context": "...一岁，幽王以褒后故，王室治多邪，诸侯或畔之。于是桓公问太史伯",
+      "after_context": "曰：「王室多故，予安逃死乎？」太史伯对曰：「独雒之东土，河济...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "虞翻曰：「周太史。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "。」公曰：「何以？」对曰：「地近虢、郐，",
       "before_context": "...之东土，河济之南可居。」公曰：「何以？」对曰：「地近虢、郐，",
-      "after_context": "虢、郐之君贪而好利，百姓不附。今公为司徒，民皆爱公，公诚请居...",
+      "after_context": "虢、郐之君贪而好利，",
       "items": [
         {
           "source": "jijie",
@@ -35,7 +82,35 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n006",
+      "anchor_text": "虢、郐之君贪而好利，",
+      "before_context": "...。」公曰：「何以？」对曰：「地近虢、郐，虢、郐之君贪而好利，",
+      "after_context": "百姓不附。今公为司徒，民皆爱公，公诚请居之，虢、郐之君见公方...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "郑语云「虢叔恃势，郐仲恃险，皆有骄侈，又加之以贪冒」是也。虢叔，文王弟。郐，妘姓之国也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
+      "anchor_text": "郑之利也。」公曰：「吾欲居西方，何如？」",
+      "before_context": "...周衰，楚必兴。兴，非郑之利也。」公曰：「吾欲居西方，何如？」",
+      "after_context": "对曰：「其民贪而好利，难久居。」公曰：「周衰，何国兴者？」对...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《国语》曰：「公曰『谢西之九州何如』。」韦昭云「谢，申伯之国。谢西有九州。二千五百家为州」。其说盖异此。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
       "anchor_text": "于天下。而周武王克纣后，成王封叔虞于唐，",
       "before_context": "...。及楚之先，皆尝有功于天下。而周武王克纣后，成王封叔虞于唐，",
       "after_context": "其地阻险，以此有德与周衰并，亦必兴矣。」桓公曰：「善。」于是...",
@@ -44,12 +119,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「晋世家曰唐叔虞，姓姬氏，字子于。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "唐者，古国，尧之后，其君曰叔虞。何以知然者？据此系家下文云「唐人之季代曰唐叔虞。当武王邑姜方动大叔，梦天命而子曰虞，与之唐。及生有文在手曰『虞』，遂以名之。及成王灭唐而国太叔，故因以称唐叔虞」。杜预亦曰「取唐君之名」是也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n009",
       "anchor_text": "卒言王，东徙其民雒东，而虢、郐果献十邑，",
       "before_context": "...桓公曰：「善。」于是卒言王，东徙其民雒东，而虢、郐果献十邑，",
       "after_context": "竟国之。",
@@ -58,12 +138,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "虞翻曰：「十邑谓虢、郐、鄢、蔽、补、丹、依、㽥、历、莘也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《国语》云：「太史伯曰『若克二邑，鄢、蔽、补、丹、依、㽥、历、莘君之土也』。」虞翻注皆依《国语》为说。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n010",
+      "anchor_text": "竟国之。",
+      "before_context": "...「善。」于是卒言王，东徙其民雒东，而虢、郐果献十邑，竟国之。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韦昭曰：「后武公竟取十邑地而居之，今河南新郑也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
       "anchor_text": "王于骊山下，并杀桓公。郑人共立其子掘突，",
       "before_context": "二岁，犬戎杀幽王于骊山下，并杀桓公。郑人共立其子掘突，",
       "after_context": "是为武公。",
@@ -77,7 +176,21 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n012",
+      "anchor_text": "是为武公。",
+      "before_context": "...，犬戎杀幽王于骊山下，并杀桓公。郑人共立其子掘突，是为武公。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谯周云「名突滑」，皆非也。盖古史失其名，太史公循旧失而妄记之耳。何以知其然者？按下文其孙昭公名忽，厉公名突，岂有孙与祖同名乎？当是旧史杂记昭厉忽突之名，遂误以掘突为武公之字耳。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
       "anchor_text": "武公十年，娶申侯女",
       "before_context": "武公十年，娶申侯女",
       "after_context": "为夫人，曰武姜。生太子寤生，生之难，及生，夫人弗爱。后生少子...",
@@ -91,10 +204,38 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n014",
+      "anchor_text": "人弗爱。后生少子叔段，段生易，夫人爱之。",
+      "before_context": "...生，生之难，及生，夫人弗爱。后生少子叔段，段生易，夫人爱之。",
+      "after_context": "二十七年，武公疾。夫人请公，欲立段为太子，公弗听。是岁，武公...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「年表云十四年生寤生，十七年生太叔段。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "庄公元年，封弟段于京，",
+      "before_context": "庄公元年，封弟段于京，",
+      "after_context": "号太叔。祭仲曰：「京大于国，非所以封庶也。」庄公曰：「武姜欲...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「京，郑都邑。」杜预曰：「今荥阳京县。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "兵伐段，段走。伐京，京人畔段，段出走鄢。",
       "before_context": "...，武姜为内应。庄公发兵伐段，段走。伐京，京人畔段，段出走鄢。",
-      "after_context": "鄢溃，段出奔共。于是庄公迁其母武姜于城颍，誓言曰：「不至黄泉...",
+      "after_context": "鄢溃，段出奔共。",
       "items": [
         {
           "source": "zhengyi",
@@ -105,10 +246,10 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n017",
       "anchor_text": "鄢溃，段出奔共。",
       "before_context": "...公发兵伐段，段走。伐京，京人畔段，段出走鄢。鄢溃，段出奔共。",
-      "after_context": "于是庄公迁其母武姜于城颍，誓言曰：「不至黄泉，毋相见也。」居...",
+      "after_context": "于是庄公迁其母武姜于城颍，",
       "items": [
         {
           "source": "jijie",
@@ -124,10 +265,10 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n018",
       "anchor_text": "于是庄公迁其母武姜于城颍，",
       "before_context": "...人畔段，段出走鄢。鄢溃，段出奔共。于是庄公迁其母武姜于城颍，",
-      "after_context": "誓言曰：「不至黄泉，毋相见也。」居岁余，已悔思母。颍谷之考叔",
+      "after_context": "誓言曰：「不至黄泉，",
       "items": [
         {
           "source": "jijie",
@@ -143,9 +284,23 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n019",
+      "anchor_text": "誓言曰：「不至黄泉，",
+      "before_context": "...溃，段出奔共。于是庄公迁其母武姜于城颍，誓言曰：「不至黄泉，",
+      "after_context": "毋相见也。」居岁余，已悔思母。颍谷之考叔",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「天玄地黄，泉在地中，故言黄泉。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
       "anchor_text": "毋相见也。」居岁余，已悔思母。颍谷之考叔",
-      "before_context": "誓言曰：「不至黄泉，毋相见也。」居岁余，已悔思母。颍谷之考叔",
+      "before_context": "...誓言曰：「不至黄泉，毋相见也。」居岁余，已悔思母。颍谷之考叔",
       "after_context": "有献于公，公赐食。考叔曰：「臣有母，请君食赐臣母。」庄公曰：...",
       "items": [
         {
@@ -162,7 +317,175 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n021",
+      "anchor_text": "，宋缪公卒，公子冯奔郑。郑侵周地，取禾。",
+      "before_context": "二十四年，宋缪公卒，公子冯奔郑。郑侵周地，取禾。",
+      "after_context": "二十五年，衞州吁弑其君桓公自立，与宋伐郑，以冯故也。二十七年...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "隐二年《左传》「郑武公、庄公为平王卿士。王贰于虢，及王崩，周人将畀虢公政。夏四月，郑祭足帅师取温之麦，秋又取成周之禾」是。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
+      "anchor_text": "七年，始朝周桓王。桓王怒其取禾，弗礼也。",
+      "before_context": "...伐郑，以冯故也。二十七年，始朝周桓王。桓王怒其取禾，弗礼也。",
+      "after_context": "二十九年，庄公怒周弗礼，与鲁易祊、许田。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "杜预曰：「桓王即位，周郑交恶，至是始朝，故言始也。」《左传》又曰：「周桓公言于王曰『我周之东迁，晋郑焉依。善郑以劝来者，犹惧不蔇，况不礼焉，郑不来矣』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
+      "anchor_text": "二十九年，庄公怒周弗礼，与鲁易祊、许田。",
+      "before_context": "...王怒其取禾，弗礼也。二十九年，庄公怒周弗礼，与鲁易祊、许田。",
+      "after_context": "三十三年，宋杀孔父。三十七年，庄公不朝周，周桓王率陈、蔡、虢...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "许田，近许之田，鲁朝宿之邑。祊者，郑所受助祭太山之汤沐邑。郑以天子不能巡守，故以祊易许田，各从其近。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
+      "anchor_text": "周桓王率陈、蔡、虢、衞伐郑。庄公与祭仲、",
+      "before_context": "...十七年，庄公不朝周，周桓王率陈、蔡、虢、衞伐郑。庄公与祭仲、",
+      "after_context": "高渠弥",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《左传》祭仲足，盖祭是邑，其人名仲字仲足，故传云祭封人仲足是也。此𦈡葛之战在鲁桓公五年。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "高渠弥",
+      "before_context": "...，庄公不朝周，周桓王率陈、蔡、虢、衞伐郑。庄公与祭仲、高渠弥",
+      "after_context": "发兵自救，王师大败。祝聸",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "一作「弥」，一作「眯」，并名卑反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "发兵自救，王师大败。祝聸",
+      "before_context": "...、蔡、虢、衞伐郑。庄公与祭仲、高渠弥发兵自救，王师大败。祝聸",
+      "after_context": "射中王臂。祝聸请从之，郑伯止之，曰：「犯长且难之，况敢陵天子...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《左传》作「祝耼」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
+      "anchor_text": "」时祭仲与俱，劝使取之，曰：「君多内宠，",
+      "before_context": "...「我小国，非齐敌也。」时祭仲与俱，劝使取之，曰：「君多内宠，",
+      "after_context": "太子无大援将不立，三公子皆君也。」所谓三公子者，太子忽，其弟...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「言庶子有宠者多。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
+      "anchor_text": "谓三公子者，太子忽，其弟突，次弟子亹也。",
+      "before_context": "...，三公子皆君也。」所谓三公子者，太子忽，其弟突，次弟子亹也。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "此文则数太子忽及突、子亹为三，而杜预云不数太子，以子突、子亹、子仪为三，盖得之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "庄公又娶宋雍氏女，",
+      "before_context": "庄公又娶宋雍氏女，",
+      "after_context": "生厉公突。雍氏有宠于宋。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「雍氏，黄帝之孙，姞姓之后，为宋大夫。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "生厉公突。雍氏有宠于宋。",
+      "before_context": "庄公又娶宋雍氏女，生厉公突。雍氏有宠于宋。",
+      "after_context": "宋庄公闻祭仲之立忽，乃使人诱召祭仲而执之，曰：「不立突，将死...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「为宋正卿，故曰有宠。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "专国政。厉公患之，阴使其壻雍纠欲杀祭仲。",
+      "before_context": "厉公四年，祭仲专国政。厉公患之，阴使其壻雍纠欲杀祭仲。",
+      "after_context": "纠妻，祭仲女也，知之，谓其母曰：「父与夫孰亲？」母曰：「父一...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「雍纠，郑大夫。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "夫孰亲？」母曰：「父一而已，人尽夫也。」",
+      "before_context": "...之，谓其母曰：「父与夫孰亲？」母曰：「父一而已，人尽夫也。」",
+      "after_context": "女乃告祭仲，祭仲反杀雍纠，戮之于市。厉公无柰祭仲何，怒纠曰：...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "杜预曰：「妇人在室则天父，出则天夫。女以为疑，故母以所生为本解之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
       "anchor_text": "及妇人，死固宜哉！」夏，厉公出居边邑栎。",
       "before_context": "...祭仲何，怒纠曰：「谋及妇人，死固宜哉！」夏，厉公出居边邑栎。",
       "after_context": "祭仲迎昭公忽，六月乙亥，复入郑，即位。",
@@ -171,12 +494,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "宋忠曰：「今颍川阳翟县。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：栎音历，即郑初得十邑之历也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n034",
       "anchor_text": "秋，郑厉公突因栎人杀其大夫单伯，",
       "before_context": "秋，郑厉公突因栎人杀其大夫单伯，",
       "after_context": "遂居之。诸侯闻厉公出奔，伐郑，弗克而去。宋颇予厉公兵，自守于...",
@@ -185,12 +513,213 @@
           "source": "jijie",
           "label": "集解",
           "text": "杜预曰：「郑守栎大夫也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "依《左传》作「檀伯」。檀伯，郑守栎大夫，事在桓十五年。此文误为「单伯」者，盖亦有所因也。按鲁庄公十四年，厉公自栎侵郑，事与周单伯会齐师伐宋相连，故误耳。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n035",
+      "anchor_text": "子亹元年七月，齐襄公会诸侯于首止，",
+      "before_context": "子亹元年七月，齐襄公会诸侯于首止，",
+      "after_context": "郑子亹往会，高渠弥相，从，祭仲称疾不行。所以然者，子亹自齐襄...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「首止，近郑之地。」杜预曰：「首止，衞地。陈留襄邑县东南有首乡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "侯，齐侯怒，遂伏甲而杀子亹。高渠弥亡归，",
+      "before_context": "...称疾。子亹至，不谢齐侯，齐侯怒，遂伏甲而杀子亹。高渠弥亡归，",
+      "after_context": "归与祭仲谋，召子亹弟公子婴于陈而立之，是为郑子。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "左氏云轘高渠弥。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "谋，召子亹弟公子婴于陈而立之，是为郑子。",
+      "before_context": "...高渠弥亡归，归与祭仲谋，召子亹弟公子婴于陈而立之，是为郑子。",
+      "after_context": "是岁，齐襄公使彭生醉拉杀鲁桓公。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《左传》以郑子名子仪，此云婴，盖别有所见。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
+      "anchor_text": "，故郑亡厉公突在栎者使人诱劫郑大夫甫假，",
+      "before_context": "十四年，故郑亡厉公突在栎者使人诱劫郑大夫甫假，",
+      "after_context": "要以求入。假曰：「舍我，我为君杀郑子而入君。」厉公与盟，乃舍...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《左传》作「傅瑕」。此本多假借，亦依字读。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
+      "anchor_text": "蛇死。居六年，厉公果复入。入而让其伯父原",
+      "before_context": "...外蛇鬬于郑南门中，内蛇死。居六年，厉公果复入。入而让其伯父原",
+      "after_context": "曰：「我亡国外居，伯父无意入我，亦甚矣。」原曰：「事君无二心...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《左传》谓之原繁。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "五年，燕、衞与周惠王弟穨伐王，",
+      "before_context": "五年，燕、衞与周惠王弟穨伐王，",
+      "after_context": "王出奔温，立弟穨为王。六年，惠王告急郑，厉公发兵击周王子穨，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "惠王，庄王孙，僖王子。子穨，庄王之妾王姚所生。事在庄十九年。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
+      "anchor_text": "秋，厉公卒，子文公踕",
+      "before_context": "秋，厉公卒，子文公踕",
+      "after_context": "立。厉公初立四岁，亡居栎，居栎十七岁，复入，立七岁，与亡凡二...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音在接反。《系本》云文公徙郑。宋忠云即新郑。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
+      "anchor_text": "二十四年，文公之贱妾曰燕姞，",
+      "before_context": "二十四年，文公之贱妾曰燕姞，",
+      "after_context": "梦天与之兰，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「姞，南燕姓。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
+      "anchor_text": "梦天与之兰，",
+      "before_context": "二十四年，文公之贱妾曰燕姞，梦天与之兰，",
+      "after_context": "曰：「余为伯鯈。余，尔祖也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「香草也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n044",
+      "anchor_text": "曰：「余为伯鯈。余，尔祖也。",
+      "before_context": "...，文公之贱妾曰燕姞，梦天与之兰，曰：「余为伯鯈。余，尔祖也。",
+      "after_context": "以是为而子，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「伯鯈，南燕祖。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
+      "anchor_text": "以是为而子，",
+      "before_context": "...曰燕姞，梦天与之兰，曰：「余为伯鯈。余，尔祖也。以是为而子，",
+      "after_context": "兰有国香。」以梦告文公，文公幸之，而予之草兰为符。遂生子，名...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "王肃曰：「以是兰也为汝子之名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n046",
+      "anchor_text": "郑入滑，滑听命，已而反与衞，于是郑伐滑。",
+      "before_context": "...，立，是为文公。秋，郑入滑，滑听命，已而反与衞，于是郑伐滑。",
+      "after_context": "周襄王使伯𤛟",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "僖二十四年《左传》「郑公子士泄、堵俞弥帅师伐滑」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
+      "anchor_text": "周襄王使伯𤛟",
+      "before_context": "...公。秋，郑入滑，滑听命，已而反与衞，于是郑伐滑。周襄王使伯𤛟",
+      "after_context": "请滑。郑文公怨惠王之亡在栎，而文公父厉公入之，而惠王不赐厉公...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音服。《左传》「王使伯服、游孙伯如郑请滑」。杜预云「二子周大夫」。知伯𤛟即伯服也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
+      "anchor_text": "，而文公父厉公入之，而惠王不赐厉公爵禄，",
+      "before_context": "...郑文公怨惠王之亡在栎，而文公父厉公入之，而惠王不赐厉公爵禄，",
+      "after_context": "又怨襄王之与衞滑，故不听襄王请而囚伯𤛟。王怒，与翟人伐郑，弗...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "此言爵禄，与左氏说异。《左传》云「郑伯享王，王以后之鞶鉴与之。虢公请器，王予之爵」。则爵酒器，是太史公与丘明说别也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "有三夫人，宠子五人，皆以罪蚤死。公怒，溉",
       "before_context": "...之无礼也。初，郑文公有三夫人，宠子五人，皆以罪蚤死。公怒，溉",
       "after_context": "逐群公子。子兰奔晋，从晋文公围郑。时兰事晋文公甚谨，爱幸之，...",
@@ -199,12 +728,199 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「一作『瑕』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音蔇。《左传》作「瑕」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n050",
+      "anchor_text": "之元妃，",
+      "before_context": "...欲入兰为太子，以告郑。郑大夫石癸曰：「吾闻姞姓乃后稷之元妃，",
+      "after_context": "其后当有兴者。子兰母，其后也。且夫人子尽已死，余庶子无如兰贤...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "杜预曰：「姞姓之女，为后稷妃。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
+      "anchor_text": "往年",
+      "before_context": "往年",
+      "after_context": "楚太子商臣弑其父成王代立。二十一年，与宋华元伐郑。华元杀羊食...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「缪公之二年。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n052",
+      "anchor_text": "年春，楚献鼋于灵公。子家、子公将朝灵公，",
+      "before_context": "灵公元年春，楚献鼋于灵公。子家、子公将朝灵公，",
+      "after_context": "子公之食指动，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「二子郑卿也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
+      "anchor_text": "子公之食指动，",
+      "before_context": "灵公元年春，楚献鼋于灵公。子家、子公将朝灵公，子公之食指动，",
+      "after_context": "谓子家曰：「佗日指动，必食异物。」及入，见灵公进鼋羹，子公笑...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「第二指。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
+      "anchor_text": "公。灵公召之，独弗予羹。子公怒，染其指，",
+      "before_context": "...灵公问其笑故，具告灵公。灵公召之，独弗予羹。子公怒，染其指，",
+      "after_context": "尝之而出。公怒，欲杀子公。子公与子家谋先。夏，弑灵公。郑人欲...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《左传》曰：「染指于鼎。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n055",
+      "anchor_text": "；必以顺，则公子坚长。」坚者，灵公庶弟，",
+      "before_context": "...「必以贤，则去疾不肖；必以顺，则公子坚长。」坚者，灵公庶弟，",
+      "after_context": "去疾之兄也。于是乃立子坚，是为襄公。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「年表云灵公庶兄。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n056",
+      "anchor_text": "，桓、武公，哀不忍绝其社稷，锡不毛之地，",
+      "before_context": "...。若君王不忘厉、宣王，桓、武公，哀不忍绝其社稷，锡不毛之地，",
+      "after_context": "使复得改事君王，孤之愿也，然非所敢望也。敢布腹心，惟命是听。...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "何休曰：「墝埆不生五谷曰不毛。谦不敢求肥饶。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n057",
+      "anchor_text": "，令宋趣降，三要乃许。于是楚登解扬楼车，",
+      "before_context": "...王厚赐与约，使反其言，令宋趣降，三要乃许。于是楚登解扬楼车，",
+      "after_context": "令呼宋。遂负楚约而致其晋君命曰：「晋方悉国兵以救宋，宋虽急，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「楼车所以窥望敌军，兵法所谓『云梯』也。」杜预曰：「楼车，车上望橹也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
+      "anchor_text": "臣能承命为信。受吾君命以出，有死无陨。」",
+      "before_context": "...曰：「君能制命为义，臣能承命为信。受吾君命以出，有死无陨。」",
+      "after_context": "庄王曰：「若之许我，已而背之，其信安在？」解扬曰：「所以许王...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「陨，坠也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n059",
+      "anchor_text": "十八年，襄公卒，子悼公㵒",
+      "before_context": "十八年，襄公卒，子悼公㵒",
+      "after_context": "立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "刘音秘。邹本一作「沸」，一作「弗」。《左传》作「费」，音扶味反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n060",
+      "anchor_text": "悼公元年，鄦公",
+      "before_context": "悼公元年，鄦公",
+      "after_context": "恶郑于楚，悼公使弟睔",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「鄦音许。许公，灵公也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n061",
+      "anchor_text": "恶郑于楚，悼公使弟睔",
+      "before_context": "悼公元年，鄦公恶郑于楚，悼公使弟睔",
+      "after_context": "于楚自讼。讼不直，楚囚睔。于是郑悼公来与晋平，遂亲。睔私于楚...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "公逊反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n062",
+      "anchor_text": "。四年春，郑患晋围，公子如乃立成公庶兄𦈡",
+      "before_context": "...」，执之。使栾书伐郑。四年春，郑患晋围，公子如乃立成公庶兄𦈡",
+      "after_context": "为君。其四月，晋闻郑立君，乃归成公。郑人闻成公归，亦杀君𦈡，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音须。邹氏云：「一作『𫄸』，音训。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n063",
       "anchor_text": "俱罢而去。十三年，晋悼公伐郑，兵于洧上。",
       "before_context": "...败，晋射伤楚共王目，俱罢而去。十三年，晋悼公伐郑，兵于洧上。",
       "after_context": "郑城守，晋亦去。",
@@ -223,10 +939,122 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n064",
+      "anchor_text": "十四年，成公卒，子恽",
+      "before_context": "十四年，成公卒，子恽",
+      "after_context": "立。是为厘公。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "纡纷反。《左传》作「髡顽」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n065",
+      "anchor_text": "厘公，厘公不礼。子驷怒，使厨人药杀厘公，",
+      "before_context": "厘公五年，郑相子驷朝厘公，厘公不礼。子驷怒，使厨人药杀厘公，",
+      "after_context": "赴诸侯曰「厘公暴病卒」。立厘公子嘉，嘉时年五岁，是为简公。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「年表云子驷使贼夜弑僖公。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n066",
+      "anchor_text": "九年，简公如晋请衞君还，而封子产以六邑。",
+      "before_context": "...之，而以子产为卿。十九年，简公如晋请衞君还，而封子产以六邑。",
+      "after_context": "子产让，受其三邑。二十二年，吴使延陵季子于郑，见子产如旧交，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「四井为邑。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
+      "anchor_text": "有二子，长曰阏伯，季曰实沈，居旷林，",
+      "before_context": "...，敢问？」对曰：「高辛氏有二子，长曰阏伯，季曰实沈，居旷林，",
+      "after_context": "不相能也，日操干戈以相征伐。后帝弗臧，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "贾逵曰：「旷，大也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
+      "anchor_text": "不相能也，日操干戈以相征伐。后帝弗臧，",
+      "before_context": "...伯，季曰实沈，居旷林，不相能也，日操干戈以相征伐。后帝弗臧，",
+      "after_context": "迁阏伯于商丘，主辰，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「后帝，尧也。臧，善也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n069",
+      "anchor_text": "迁阏伯于商丘，主辰，",
+      "before_context": "...，不相能也，日操干戈以相征伐。后帝弗臧，迁阏伯于商丘，主辰，",
+      "after_context": "商人是因，故辰为商星。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「商丘在漳南。」杜预曰：「商丘，宋地。」服虔曰：「辰，大火，主祀也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
+      "anchor_text": "商人是因，故辰为商星。",
+      "before_context": "...相征伐。后帝弗臧，迁阏伯于商丘，主辰，商人是因，故辰为商星。",
+      "after_context": "迁实沈于大夏，主参，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「商人，契之先，汤之始祖相土封阏伯之故地，因其故国而代之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
+      "anchor_text": "迁实沈于大夏，主参，",
+      "before_context": "...阏伯于商丘，主辰，商人是因，故辰为商星。迁实沈于大夏，主参，",
+      "after_context": "唐人是因，服事夏、商，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「大夏在汾浍之闲，主祀参星。」杜预曰：「大夏，今晋阳县。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n072",
       "anchor_text": "唐人是因，服事夏、商，",
       "before_context": "...是因，故辰为商星。迁实沈于大夏，主参，唐人是因，服事夏、商，",
-      "after_context": "其季世曰唐叔虞。当武王邑姜方娠大叔，梦帝谓己：『余命而子曰虞...",
+      "after_context": "其季世曰唐叔虞。",
       "items": [
         {
           "source": "jijie",
@@ -242,7 +1070,217 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n073",
+      "anchor_text": "其季世曰唐叔虞。",
+      "before_context": "...。迁实沈于大夏，主参，唐人是因，服事夏、商，其季世曰唐叔虞。",
+      "after_context": "当武王邑姜方娠大叔，梦帝谓己：",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "杜预曰：「唐人之季世，其君曰叔虞。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n074",
+      "anchor_text": "当武王邑姜方娠大叔，梦帝谓己：",
+      "before_context": "...，服事夏、商，其季世曰唐叔虞。当武王邑姜方娠大叔，梦帝谓己：",
+      "after_context": "『余命而子曰虞，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「帝，天也。己，武王也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n075",
+      "anchor_text": "『余命而子曰虞，",
+      "before_context": "...季世曰唐叔虞。当武王邑姜方娠大叔，梦帝谓己：『余命而子曰虞，",
+      "after_context": "乃与之唐，属之参而蕃育其子孙。』及生有文在其掌曰『虞』，遂以...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "杜预曰：「取唐君之名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n076",
+      "anchor_text": "命之。及成王灭唐而国大叔焉。故参为晋星。",
+      "before_context": "...在其掌曰『虞』，遂以命之。及成王灭唐而国大叔焉。故参为晋星。",
+      "after_context": "由是观之，则实沈，参神也。昔金天氏有裔子曰昧，为玄冥师，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「晋主祀参，参为晋星。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n077",
+      "anchor_text": "有裔子曰昧，为玄冥师，",
+      "before_context": "...星。由是观之，则实沈，参神也。昔金天氏有裔子曰昧，为玄冥师，",
+      "after_context": "生允格、台骀。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「金天，少暤也。玄冥，水官也。师，长也。昧为水官之长。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n078",
+      "anchor_text": "生允格、台骀。",
+      "before_context": "...则实沈，参神也。昔金天氏有裔子曰昧，为玄冥师，生允格、台骀。",
+      "after_context": "台骀能业其官，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「允格、台骀，兄弟也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n079",
+      "anchor_text": "台骀能业其官，",
+      "before_context": "...。昔金天氏有裔子曰昧，为玄冥师，生允格、台骀。台骀能业其官，",
+      "after_context": "宣汾、洮，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「修昧之职。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n080",
+      "anchor_text": "宣汾、洮，",
+      "before_context": "...有裔子曰昧，为玄冥师，生允格、台骀。台骀能业其官，宣汾、洮，",
+      "after_context": "障大泽，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「宣犹通也。汾、洮，二水名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
+      "anchor_text": "障大泽，",
+      "before_context": "...昧，为玄冥师，生允格、台骀。台骀能业其官，宣汾、洮，障大泽，",
+      "after_context": "以处太原。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「陂障其水也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n082",
+      "anchor_text": "以处太原。",
+      "before_context": "...师，生允格、台骀。台骀能业其官，宣汾、洮，障大泽，以处太原。",
+      "after_context": "帝用嘉之，国之汾川。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「太原，汾水名。」杜预曰：「太原，晋阳也，台骀之所居者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n083",
+      "anchor_text": "帝用嘉之，国之汾川。",
+      "before_context": "...骀能业其官，宣汾、洮，障大泽，以处太原。帝用嘉之，国之汾川。",
+      "after_context": "沈、姒、蓐、黄实守其祀。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「帝颛顼也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n084",
+      "anchor_text": "沈、姒、蓐、黄实守其祀。",
+      "before_context": "...大泽，以处太原。帝用嘉之，国之汾川。沈、姒、蓐、黄实守其祀。",
+      "after_context": "今晋主汾川而灭之。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「四国台骀之后也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n085",
+      "anchor_text": "今晋主汾川而灭之。",
+      "before_context": "...用嘉之，国之汾川。沈、姒、蓐、黄实守其祀。今晋主汾川而灭之。",
+      "after_context": "由是观之，则台骀，汾、洮神也。然是二者不害君身。山川之神，则...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「灭四国。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n086",
+      "anchor_text": "二者不害君身。山川之神，则水旱之菑禜之；",
+      "before_context": "...骀，汾、洮神也。然是二者不害君身。山川之神，则水旱之菑禜之；",
+      "after_context": "日月星辰之神，则雪霜风雨不时禜之；若君疾，饮食哀乐女色所生也...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「禜为营，攒用币也。若有水旱，则禜祭山川之神以祈福也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
+      "anchor_text": "公如晋。晋与郑谋，诛周乱臣，入敬王于周。",
+      "before_context": "十一年，定公如晋。晋与郑谋，诛周乱臣，入敬王于周。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "王避弟子朝之乱出居狄泉，在昭二十三年；至二十六年，晋、郑入之。经曰「天王入于成周」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n088",
       "anchor_text": "声公五年，郑相子产卒，",
       "before_context": "声公五年，郑相子产卒，",
       "after_context": "郑人皆哭泣，悲之如亡亲戚。子产者，郑成公少子也。为人仁爱人，...",
@@ -256,7 +1294,21 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n089",
+      "anchor_text": "为泣曰：「古之遗爱也！」",
+      "before_context": "...郑，与子产如兄弟云。及闻子产死，孔子为泣曰：「古之遗爱也！」",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "贾逵曰：「爱，惠也。」杜预曰：「子产见爱，有古人遗风也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n090",
       "anchor_text": "，告急于郑，郑救之。晋伐郑，败郑军于铁。",
       "before_context": "...年，晋范、中行氏反晋，告急于郑，郑救之。晋伐郑，败郑军于铁。",
       "after_context": "",
@@ -275,7 +1327,35 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n091",
+      "anchor_text": "三十七年，声公卒，子哀公易立。",
+      "before_context": "三十七年，声公卒，子哀公易立。",
+      "after_context": "哀公八年，郑人弑哀公而立声公弟丑，是为共公。共公三年，三晋灭...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "年表云三十八年。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n092",
+      "anchor_text": "伐郑，杀幽公。郑人立幽公弟骀，是为𦈡公。",
+      "before_context": "...立。幽公元年，韩武子伐郑，杀幽公。郑人立幽公弟骀，是为𦈡公。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "年表云郑立幽公子骀𦈡。或作「缭」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n093",
       "anchor_text": "十六年，郑伐韩，败韩兵于负黍。",
       "before_context": "十六年，郑伐韩，败韩兵于负黍。",
       "after_context": "二十年，韩、赵、魏列为诸侯。二十三年，郑围韩之阳翟。",
@@ -289,6 +1369,20 @@
           "source": "zhengyi",
           "label": "正义",
           "text": "《括地志》云：「负黍亭在洛州阳城县西南三十五里，故周邑也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n094",
+      "anchor_text": "党共弑𦈡公骀而立幽公弟乙为君，是为郑君。",
+      "before_context": "...子阳。二十七，子阳之党共弑𦈡公骀而立幽公弟乙为君，是为郑君。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一本云『立幽公弟乙阳为君，是为康公』。六国年表云立幽公子骀，又以郑君阳为郑康公乙。班固云『郑康公乙为韩所灭』。」"
         }
       ],
       "sentence_id": null

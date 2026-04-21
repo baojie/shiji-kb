@@ -57,26 +57,60 @@
 
     /**
      * 变体字符归一（用于匹配，不影响显示）：
-     * 章节文本保留部分传统字形（如 "於" "然後" "蟲"），notes 经 opencc t2s 成简体后为
-     * "于" "然后" "虫"，两侧不一致导致匹配失败。这里做 1:1 字符映射把双方归一到同一规范形，
+     * 章节文本保留部分传统字形，notes 经 opencc t2s 成简体后字形不同，
+     * 两侧不一致导致匹配失败。这里做 1:1 字符映射把双方归一到同一规范形，
      * 由于是字符级 1:1 映射，字符偏移量不变，indexOf 位置可直接套用回原文。
      *
-     * 映射原则：归并到简体常用字（多数情况）。
+     * 映射来自 scripts/analyze_unmatched.py 对全库未匹配样本的统计：
+     * "某字符 → 某字符" 若出现 ≥ 3 次且两字确为异体/常见讹变，则加入此表。
      */
     const VARIANT_MAP = {
         // 虚词/常用字：章节保留传统，notes t2s 成简体
-        '於': '于',
-        '後': '后',
-        '蟲': '虫',
+        '於': '于', '后': '后',
+        '後': '后', '蟲': '虫',
         '衛': '卫', '衞': '卫',
-        '擒': '禽',  // 章节 "擒杀" vs notes "禽杀"
-        '䇲': '策',
-        '䝙': '貙',
-        // 其他常见异体
-        '徧': '遍',
-        '悳': '德',
-        '辠': '罪',
-        '愬': '诉',
+        '擒': '禽',
+        '䇲': '策', '䝙': '貙',
+        '徧': '遍', '悳': '德', '辠': '罪', '愬': '诉',
+
+        // 高频异体字对（analyze_unmatched.py 发现）
+        '馀': '余',        // 115 次
+        '閒': '间', '閑': '间', '闲': '间',  // 57 次
+        '硃': '朱',        // 19
+        '適': '适',        // 18
+        '迺': '乃',        // 16
+        '穀': '谷',        // 15（仅地名/人名外）
+        '徵': '征',        // 13
+        '脩': '修',        // 13
+        '卻': '却',        // 10
+        '兒': '儿',        // 10
+        '愿': '原', '願': '原',  // 10（愿/原 两用）
+        '鴈': '雁',        // 9
+        '鍾': '锺', '錘': '锺', '钟': '锺',  // 9
+        '釐': '厘',        // 6
+        '氾': '泛',        // 5
+        '甯': '宁',        // 5
+        '旂': '旗',        // 5
+        '犂': '犁',        // 5
+        '鬬': '斗', '鬭': '斗', '鬥': '斗',  // 5
+        '鉅': '巨', '钜': '巨',               // 4
+        '蓺': '艺', '藝': '艺',               // 4
+        '靁': '雷',        // 4
+        '孼': '孽',        // 4
+        '襃': '褒',        // 4
+        '璿': '璇',        // 3
+        '麤': '粗',        // 3
+        '籓': '藩',        // 3
+        '袵': '衽',        // 3
+        '汙': '污',        // 3
+        '巂': '嶲',        // 3
+        '猨': '猿',        // 3
+        '犇': '奔',        // 7
+        '鄴': '邺',        // 2
+        '婿': '壻',        // 2
+        '祕': '秘',        // 2
+        '濰': '潍',        // 2
+        '砲': '炮',        // 2
     };
     function normalize(s) {
         if (!s) return '';
@@ -85,6 +119,19 @@
             out += VARIANT_MAP[ch] || ch;
         }
         return out;
+    }
+
+    /**
+     * 统计 needle 在 haystack 中出现次数（用于唯一性判断）。
+     */
+    function countOccurrences(haystack, needle) {
+        if (!needle) return 0;
+        let count = 0, idx = 0;
+        while ((idx = haystack.indexOf(needle, idx)) !== -1) {
+            count++;
+            idx += needle.length;
+        }
+        return count;
     }
 
     /**
@@ -168,6 +215,24 @@
         return text.replace(/^\s+/, '').replace(/\s+$/, '');
     }
 
+    /**
+     * 清理显示用 anchor_text：原始数据里 anchor 常为 before_context 的末尾截断，
+     * 有时起始字符是前一句的残尾（如 "夷，死人如乱麻..." — "夷" 是 "外攘四夷" 的末字）。
+     * 此处把起始 1–3 字符 + 子句标点 (，。；、) 的前缀剥掉，让 anchor 从子句边界起。
+     * 若剥掉后为空（说明 anchor 本身就是单个短词如 "者，"），保持原样。
+     */
+    function cleanAnchorForDisplay(s) {
+        if (!s) return s;
+        // 先去掉纯粹前导标点
+        s = s.replace(/^[，。；、、]+/, '');
+        // 再剥 "1–3 字 + 子句标点" 前缀（若仍有实质内容）
+        const m = s.match(/^[^，。；、]{1,3}[，。；、]/);
+        if (m && m[0].length < s.length) {
+            return s.substring(m[0].length);
+        }
+        return s;
+    }
+
     function escapeHtml(s) {
         if (s == null) return '';
         return String(s)
@@ -219,8 +284,9 @@
         let html = '';
         html += `<div class="sanjia-note" data-note-num="${num}">`;
         html += `<span class="sanjia-note-num">[${num}]</span>`;
-        if (note.anchor_text) {
-            html += `<span class="sanjia-note-anchor">${escapeHtml(note.anchor_text)}</span>`;
+        const displayAnchor = cleanAnchorForDisplay(note.anchor_text);
+        if (displayAnchor) {
+            html += `<span class="sanjia-note-anchor">${escapeHtml(displayAnchor)}</span>`;
         }
         html += `<div class="sanjia-note-items">`;
         (note.items || []).forEach(it => {
@@ -256,6 +322,13 @@
      *
      * 返回 [{note, matchPos, insertPos, paraInfo, localInsert}]，
      * paraInfo 指向 insertPos 所在的段落。
+     *
+     * 三层匹配 + 顺序约束回退：
+     *   1. 完整 before+after
+     *   2. 仅 before（≥4 字符）
+     *   3. 唯一后缀（6-20 字符，多义时用 after 消歧）
+     *   4. 顺序约束回退：note 在章内为序列号，其位置应介于前/后已匹配 note 之间。
+     *      在此区间内再尝试 anchor_text / 短后缀匹配；仍未命中则取区间中点（兜底）。
      */
     function matchNotesInChapter(chapter, notes) {
         const results = [];
@@ -292,8 +365,40 @@
                     insertPos = pos + beforeN.length;
                 }
             }
+            // 策略3：后缀回退 —— 章节个别字与 notes 有差异（错字/异体/版本分歧）时，
+            // 完整 before 不匹配，但末尾若干字符往往能命中。
+            // 要求命中次数严格唯一；若多次出现则用 after_context 首若干字辅助去重。
+            if (matchPos === -1 && beforeN && beforeN.length >= 6) {
+                const SUFFIX_LENS = [20, 16, 12, 10, 8, 6];
+                for (const sl of SUFFIX_LENS) {
+                    if (sl > beforeN.length) continue;
+                    const suf = beforeN.substring(beforeN.length - sl);
+                    const occ = countOccurrences(chapter.textNorm, suf);
+                    if (occ === 1) {
+                        const pos = chapter.textNorm.indexOf(suf);
+                        matchPos = pos;
+                        insertPos = pos + sl;
+                        break;
+                    }
+                    if (occ > 1 && afterN) {
+                        // 用 after 首若干字符消歧
+                        for (const al of [6, 4, 2, 1]) {
+                            if (al > afterN.length) continue;
+                            const combined = suf + afterN.substring(0, al);
+                            if (countOccurrences(chapter.textNorm, combined) === 1) {
+                                const pos = chapter.textNorm.indexOf(combined);
+                                matchPos = pos;
+                                insertPos = pos + sl;
+                                break;
+                            }
+                        }
+                        if (matchPos !== -1) break;
+                    }
+                }
+            }
             if (matchPos === -1) {
-                results.push({ note, idx, chapterLevel: true });
+                // 先搁置，稍后用顺序约束回退批量处理
+                results.push({ note, idx, pending: true });
                 return;
             }
 
@@ -306,7 +411,97 @@
             const localInsert = insertPos - paraInfo.start;
             results.push({ note, idx, matchPos, insertPos, paraInfo, localInsert });
         });
+
+        // 顺序约束回退：对 pending 项，用前后已定位 note 限定搜索窗口
+        fillPendingByOrder(results, chapter);
+
         return results;
+    }
+
+    /**
+     * 顺序约束回退。
+     *
+     * 假设：notes 数组中 note 的先后顺序与其在章内位置的先后顺序一致（原始维基文库抽取时按文序）。
+     * 对未匹配 note：
+     *   - 找到序列中前/后最近的 matched note 的 insertPos，得到搜索窗口 [prev, next]
+     *   - 在窗口内搜索 anchor_text（归一后）或短后缀（唯一匹配）
+     *   - 都失败则取窗口中点作为 insertPos（保底落在相邻段，至少出现在正文附近）
+     */
+    function fillPendingByOrder(results, chapter) {
+        // 先记录已匹配项的 idx→insertPos 映射
+        const matchedPos = new Map();
+        results.forEach(r => {
+            if (r.insertPos !== undefined && r.insertPos >= 0) {
+                matchedPos.set(r.idx, r.insertPos);
+            }
+        });
+
+        // 对每个 pending，按序查找前/后最近的 matched
+        results.forEach(r => {
+            if (!r.pending) return;
+            // 前向扫描
+            let prev = null;
+            for (let j = r.idx - 1; j >= 0; j--) {
+                if (matchedPos.has(j)) { prev = matchedPos.get(j); break; }
+            }
+            // 后向扫描
+            let next = null;
+            for (let j = r.idx + 1; j < results.length; j++) {
+                if (matchedPos.has(j)) { next = matchedPos.get(j); break; }
+            }
+            const lo = prev !== null ? prev : 0;
+            const hi = next !== null ? next : chapter.text.length;
+            if (hi <= lo) {
+                // 退化：直接用 lo 作为 insertPos
+                attachToPara(r, lo, chapter);
+                return;
+            }
+
+            const window = chapter.textNorm.substring(lo, hi);
+            const anchor = r.note.anchor_text || '';
+            const aN = normalize(anchor);
+            let localFound = -1;
+
+            // 3a. 在窗口内搜 anchor_text
+            if (aN && aN.length >= 2) {
+                const p = window.indexOf(aN);
+                if (p !== -1) localFound = p + aN.length;
+            }
+            // 3b. 在窗口内搜短后缀（非唯一也接受，因为已有窗口约束）
+            if (localFound === -1) {
+                const before = stripLeadingEllipsis(r.note.before_context);
+                const bN = normalize(before);
+                if (bN) {
+                    for (const sl of [12, 8, 6, 4, 3]) {
+                        if (sl > bN.length) continue;
+                        const suf = bN.substring(bN.length - sl);
+                        const p = window.indexOf(suf);
+                        if (p !== -1) { localFound = p + sl; break; }
+                    }
+                }
+            }
+
+            // 3c. 兜底：窗口中点
+            const insertPos = localFound !== -1 ? (lo + localFound) : Math.floor((lo + hi) / 2);
+            attachToPara(r, insertPos, chapter);
+            // 记录此次回退位置，供后续 pending 参考
+            matchedPos.set(r.idx, insertPos);
+        });
+    }
+
+    function attachToPara(r, insertPos, chapter) {
+        const paraInfo = findParaForOffset(chapter.paraRanges, insertPos);
+        if (!paraInfo) {
+            r.chapterLevel = true;
+            delete r.pending;
+            return;
+        }
+        r.matchPos = insertPos;
+        r.insertPos = insertPos;
+        r.paraInfo = paraInfo;
+        r.localInsert = insertPos - paraInfo.start;
+        r.fallback = true;
+        delete r.pending;
     }
 
     /**
@@ -440,8 +635,9 @@
 
     function renderNoteEntryPlain(note) {
         let html = '<div class="sanjia-note">';
-        if (note.anchor_text) {
-            html += `<span class="sanjia-note-anchor">${escapeHtml(note.anchor_text)}</span>`;
+        const displayAnchor = cleanAnchorForDisplay(note.anchor_text);
+        if (displayAnchor) {
+            html += `<span class="sanjia-note-anchor">${escapeHtml(displayAnchor)}</span>`;
         }
         html += '<div class="sanjia-note-items">';
         note.items.forEach(it => {

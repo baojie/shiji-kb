@@ -11,6 +11,11 @@
           "source": "jijie",
           "label": "集解",
           "text": "太史公自序曰「作今上本紀」，又其述事皆云「今上」，「今天子」，或有言「孝武帝」者，悉後人所定也。張晏曰：「武紀，褚先生補作也。褚先生名少孫，漢博士也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：褚先生補《史記》，合集武帝事以編年，今止取《封禪書》補之，信其才之薄也。又張晏云「褚先生潁川人，仕元成閒」。韋稜云「褚顗家傳褚少孫，梁相褚大弟之孫，宣帝代爲博士，寓居于沛，事大儒王式，號爲『先生』，續太史公書」。阮孝緒亦以爲然也。"
         }
       ],
       "sentence_id": null
@@ -19,7 +24,7 @@
       "id": "n002",
       "anchor_text": "孝武皇帝者，",
       "before_context": "孝武皇帝者，",
-      "after_context": "孝景中子也。母曰王太后。孝景四年，以皇子爲膠東王。孝景七年，...",
+      "after_context": "孝景中子也。",
       "items": [
         {
           "source": "jijie",
@@ -41,9 +46,51 @@
     },
     {
       "id": "n003",
+      "anchor_text": "孝景中子也。",
+      "before_context": "孝武皇帝者，孝景中子也。",
+      "after_context": "母曰王太后。孝景四年，以皇子爲膠東王。孝景七年，栗太子廢爲臨...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：景十三王傳廣川王已上皆是武帝兄，自河閒王德以至廣川，凡有八人，則武帝第九也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
+      "anchor_text": "子。孝景十六年崩，太子即位，爲孝武皇帝。",
+      "before_context": "...臨江王，以膠東王爲太子。孝景十六年崩，太子即位，爲孝武皇帝。",
+      "after_context": "孝武皇帝初即位，尤敬鬼神之祀。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「武帝以景帝元年生，七歲爲太子，爲太子十歲而景帝崩，時年十六矣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "元年，漢興已六十餘歲矣，",
+      "before_context": "元年，漢興已六十餘歲矣，",
+      "after_context": "天下乂安，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「六十七年，歲在辛丑。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
       "anchor_text": "天下乂安，",
       "before_context": "元年，漢興已六十餘歲矣，天下乂安，",
-      "after_context": "薦紳之屬皆望天子封禪改正度也。而上鄉儒術，招賢良，趙綰、王臧...",
+      "after_context": "薦紳",
       "items": [
         {
           "source": "zhengyi",
@@ -54,7 +101,49 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n007",
+      "anchor_text": "薦紳",
+      "before_context": "元年，漢興已六十餘歲矣，天下乂安，薦紳",
+      "after_context": "之屬皆望天子封禪改正度也。而上鄉儒術，招賢良，趙綰、王臧等以...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音搢。搢，挺也。言挺笏於紳帶之閒，事出禮內則。今作「薦」者，古字假借耳。《漢書》作「縉紳」，臣瓚云「縉，赤白色」，非也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
+      "anchor_text": "、王臧等以文學爲公卿，欲議古立明堂城南，",
+      "before_context": "...鄉儒術，招賢良，趙綰、王臧等以文學爲公卿，欲議古立明堂城南，",
+      "after_context": "以朝諸侯。草巡狩封禪改曆服色事未就。會竇太后治黃老言，不好儒...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "城南，長安城南門外也。案：《關中記》云明堂在長安城門外，杜門之西也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
+      "anchor_text": "黃老言，不好儒術，使人微得趙綰等姦利事，",
+      "before_context": "...色事未就。會竇太后治黃老言，不好儒術，使人微得趙綰等姦利事，",
+      "after_context": "召案綰、臧，綰、臧自殺，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「纖微伺察之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
       "anchor_text": "召案綰、臧，綰、臧自殺，",
       "before_context": "...言，不好儒術，使人微得趙綰等姦利事，召案綰、臧，綰、臧自殺，",
       "after_context": "諸所興爲者皆廢。",
@@ -68,10 +157,10 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n011",
       "anchor_text": "明年，上初至雍，郊見五畤。",
       "before_context": "明年，上初至雍，郊見五畤。",
-      "after_context": "後常三歲一郊。是時上求神君，舍之上林中蹏氏觀。神君者，長陵女...",
+      "after_context": "後常三歲一郊。是時上求神君，",
       "items": [
         {
           "source": "zhengyi",
@@ -82,10 +171,10 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n012",
       "anchor_text": "後常三歲一郊。是時上求神君，",
       "before_context": "明年，上初至雍，郊見五畤。後常三歲一郊。是時上求神君，",
-      "after_context": "舍之上林中蹏氏觀。神君者，長陵女子，以子死悲哀，故見神於先後...",
+      "after_context": "舍之上林中蹏氏觀。",
       "items": [
         {
           "source": "zhengyi",
@@ -96,35 +185,45 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n013",
       "anchor_text": "舍之上林中蹏氏觀。",
       "before_context": "...雍，郊見五畤。後常三歲一郊。是時上求神君，舍之上林中蹏氏觀。",
-      "after_context": "神君者，長陵女子，以子死悲哀，故見神於先後宛若。宛若祠之其室...",
+      "after_context": "神君者，長陵女子，以子死悲哀，故見神於先後宛若。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「蹏音蹄。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣音蹄，鄒誕音斯，又音蹄，觀名也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n014",
       "anchor_text": "長陵女子，以子死悲哀，故見神於先後宛若。",
       "before_context": "...林中蹏氏觀。神君者，長陵女子，以子死悲哀，故見神於先後宛若。",
-      "after_context": "宛若祠之其室，民多往祠。平原君往祠，其後子孫以尊顯。及武帝即...",
+      "after_context": "宛若祠之其室，民多往祠。平原君",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孟康曰：「產乳而死。兄弟妻相謂『先後』。宛若，字。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "先後，鄒誕音二字並去聲，即今妯娌也。孟康以兄弟妻相謂也。韋昭云先謂姒，後謂娣也。宛音冤。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n015",
       "anchor_text": "宛若祠之其室，民多往祠。平原君",
       "before_context": "...以子死悲哀，故見神於先後宛若。宛若祠之其室，民多往祠。平原君",
       "after_context": "往祠，其後子孫以尊顯。及武帝即位，則厚禮置祠之內中，聞其言，...",
@@ -133,15 +232,118 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「武帝外祖母也。」駰案：蔡邕曰「異姓婦人以恩澤封者曰君，儀比長公主」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：徐云武帝外祖母，則是臧兒也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n016",
+      "anchor_text": "是時而李少君亦以祠竈、",
+      "before_context": "是時而李少君亦以祠竈、",
+      "after_context": "穀道、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳云：「祠竈可以致福。」案：禮竈者，老婦之祭，盛於盆，尊於瓶。說文《周禮》以竈祠祝融。《淮南子》炎帝作火官，死爲竈神。司馬彪注莊子云髻，竈神也，如美女，衣赤。李弘範音詰也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
+      "anchor_text": "穀道、",
+      "before_context": "是時而李少君亦以祠竈、穀道、",
+      "after_context": "卻老方見上，上尊之。少君者，故深澤侯",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「食穀道引。或曰辟穀不食之道。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
+      "anchor_text": "卻老方見上，上尊之。少君者，故深澤侯",
+      "before_context": "...而李少君亦以祠竈、穀道、卻老方見上，上尊之。少君者，故深澤侯",
+      "after_context": "入以主方。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「姓趙，景帝時絕封。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
+      "anchor_text": "入以主方。",
+      "before_context": "...以祠竈、穀道、卻老方見上，上尊之。少君者，故深澤侯入以主方。",
+      "after_context": "匿其年及所生長，常自謂七十，能使物，卻老。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「進納於天子而主方。一云侯人主方。」駰案：如淳曰「侯家人主方藥者也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "其年及所生長，常自謂七十，能使物，卻老。",
+      "before_context": "...故深澤侯入以主方。匿其年及所生長，常自謂七十，能使物，卻老。",
+      "after_context": "其游以方徧諸侯。無妻子。人聞其能使物及不死，更饋遺之，常餘金...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「物，鬼物也。」瓚曰：「物，藥物也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "愈信，爭事之。少君資好方，善爲巧發奇中。",
+      "before_context": "...給，又不知其何所人，愈信，爭事之。少君資好方，善爲巧發奇中。",
+      "after_context": "嘗從武安侯",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「時時發言有所中也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
+      "anchor_text": "嘗從武安侯",
+      "before_context": "...其何所人，愈信，爭事之。少君資好方，善爲巧發奇中。嘗從武安侯",
+      "after_context": "飲，坐中有年九十餘老人，少君乃言與其大父游射處，老人爲兒時從...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "服虔云：「田蚡也。」韋昭云：「武安屬魏郡也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
       "anchor_text": "十年陳於柏寢。」",
       "before_context": "...上，上有故銅器，問少君。少君曰：「此器齊桓公十年陳於柏寢。」",
-      "after_context": "已而案其刻，果齊桓公",
+      "after_context": "已而案其刻，果齊桓公器。一宮盡駭，以少君爲神，數百歲人也。",
       "items": [
         {
           "source": "jijie",
@@ -157,7 +359,7 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n024",
       "anchor_text": "是也。臣嘗游海上，見安期生，",
       "before_context": "...僊者可見，見之以封禪則不死，黃帝是也。臣嘗游海上，見安期生，",
       "after_context": "食臣棗，大如瓜。安期生僊者，通蓬萊中，合則見人，不合則隱。」...",
@@ -176,10 +378,24 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n025",
+      "anchor_text": "求蓬萊安期生之屬，而事化丹沙諸藥齊爲黃金",
+      "before_context": "...親祠竈，而遣方士入海求蓬萊安期生之屬，而事化丹沙諸藥齊爲黃金",
+      "after_context": "矣。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "齊音劑。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
       "anchor_text": "居久之，李少君病死。",
       "before_context": "居久之，李少君病死。",
-      "after_context": "天子以爲化去不死也，而使黃錘史寬舒受其方。求蓬萊安期生莫能得...",
+      "after_context": "天子以爲化去不死也，而使黃錘",
       "items": [
         {
           "source": "zhengyi",
@@ -190,10 +406,10 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n027",
       "anchor_text": "天子以爲化去不死也，而使黃錘",
       "before_context": "居久之，李少君病死。天子以爲化去不死也，而使黃錘",
-      "after_context": "史寬舒受其方。求蓬萊安期生莫能得，而海上燕齊怪迂之方士多相效...",
+      "after_context": "史寬舒",
       "items": [
         {
           "source": "jijie",
@@ -209,7 +425,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n028",
       "anchor_text": "史寬舒",
       "before_context": "居久之，李少君病死。天子以爲化去不死也，而使黃錘史寬舒",
       "after_context": "受其方。求蓬萊安期生莫能得，而海上燕齊怪迂之方士多相效，更言...",
@@ -228,24 +444,43 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n029",
       "anchor_text": "亳人薄誘忌",
       "before_context": "亳人薄誘忌",
-      "after_context": "奏祠泰一方，曰：「天神貴者泰一，泰一佐曰五帝。古者天子以春秋...",
+      "after_context": "奏祠泰一方，曰：「天神貴者泰一，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一云亳人謬忌也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "亳，山陽縣名。姓謬，名忌，居亳，故下稱薄忌。此文則衍「薄」字，而「謬」又誤作「誘」矣。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n030",
+      "anchor_text": "奏祠泰一方，曰：「天神貴者泰一，",
+      "before_context": "亳人薄誘忌奏祠泰一方，曰：「天神貴者泰一，",
+      "after_context": "泰一佐曰五帝。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "天神貴者太一。案：樂汁微圖云「紫微宮北極天一太一」。宋均以爲天一、太一，北極之別名。春秋緯「紫宮，天皇曜魄寶之所理也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
       "anchor_text": "泰一佐曰五帝。",
       "before_context": "亳人薄誘忌奏祠泰一方，曰：「天神貴者泰一，泰一佐曰五帝。",
-      "after_context": "古者天子以春秋祭泰一東南郊，用太牢具，七日，爲壇開八通之鬼道...",
+      "after_context": "古者天子以春秋祭泰一東南郊，用太牢具，七日，",
       "items": [
         {
           "source": "suoyin",
@@ -261,10 +496,52 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n032",
+      "anchor_text": "天子以春秋祭泰一東南郊，用太牢具，七日，",
+      "before_context": "...，泰一佐曰五帝。古者天子以春秋祭泰一東南郊，用太牢具，七日，",
+      "after_context": "爲壇開八通之鬼道。」於是天子令太祝立其祠長安東南郊，常奉祠如...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一云日一太牢具，十日。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "用一梟破鏡；",
+      "before_context": "...。後人復有上書，言「古者天子常以春秋解祠，祠黃帝用一梟破鏡；",
+      "after_context": "冥羊",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟康曰：「梟，鳥名，食母。破鏡，獸名，食父。黃帝欲絕其類，使百物祠皆用之。破鏡如貙而虎眼。或云直用破鏡。」如淳曰：「漢使東郡送梟，五月五日爲梟羹以賜百官。以惡鳥，故食之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
+      "anchor_text": "冥羊",
+      "before_context": "...人復有上書，言「古者天子常以春秋解祠，祠黃帝用一梟破鏡；冥羊",
+      "after_context": "用羊；祠馬行",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「神名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
       "anchor_text": "用羊；祠馬行",
       "before_context": "...言「古者天子常以春秋解祠，祠黃帝用一梟破鏡；冥羊用羊；祠馬行",
-      "after_context": "用一青牡馬；泰一、皋山山君、地長用牛；武夷君用乾魚；陰陽使者",
+      "after_context": "用一青牡馬；泰一、皋山山君、地長",
       "items": [
         {
           "source": "zhengyi",
@@ -275,10 +552,10 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n036",
       "anchor_text": "用一青牡馬；泰一、皋山山君、地長",
-      "before_context": "用一梟破鏡；冥羊用羊；祠馬行用一青牡馬；泰一、皋山山君、地長",
-      "after_context": "用牛；武夷君用乾魚；陰陽使者以一牛」。令祠官領之如其方，而祠...",
+      "before_context": "...用一梟破鏡；冥羊用羊；祠馬行用一青牡馬；泰一、皋山山君、地長",
+      "after_context": "用牛；武夷君",
       "items": [
         {
           "source": "zhengyi",
@@ -289,10 +566,10 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n037",
       "anchor_text": "用牛；武夷君",
-      "before_context": "冥羊用羊；祠馬行用一青牡馬；泰一、皋山山君、地長用牛；武夷君",
-      "after_context": "用乾魚；陰陽使者以一牛」。令祠官領之如其方，而祠於忌泰一壇旁...",
+      "before_context": "...冥羊用羊；祠馬行用一青牡馬；泰一、皋山山君、地長用牛；武夷君",
+      "after_context": "用乾魚；陰陽使者",
       "items": [
         {
           "source": "zhengyi",
@@ -303,7 +580,35 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n038",
+      "anchor_text": "用乾魚；陰陽使者",
+      "before_context": "...用一青牡馬；泰一、皋山山君、地長用牛；武夷君用乾魚；陰陽使者",
+      "after_context": "以一牛」。令祠官領之如其方，而祠於忌泰一壇旁。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「陰陽之神也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
+      "anchor_text": "其後，天子苑有白鹿，以其皮爲幣，",
+      "before_context": "其後，天子苑有白鹿，以其皮爲幣，",
+      "after_context": "以發瑞應，造白金焉。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：食貨志皮幣以白鹿皮方尺，緣以繢，以薦璧，得以黃金一斤代之。又漢律皮幣率鹿皮方尺，直黃金一斤。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
       "anchor_text": "以發瑞應，造白金焉。",
       "before_context": "其後，天子苑有白鹿，以其皮爲幣，以發瑞應，造白金焉。",
       "after_context": "",
@@ -322,24 +627,29 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n041",
       "anchor_text": "其明年，郊雍，獲一角獸，若麃然。",
       "before_context": "其明年，郊雍，獲一角獸，若麃然。",
-      "after_context": "有司曰：「陛下肅祗郊祀，上帝報享，錫一角獸，蓋麟云。」於是以...",
+      "after_context": "有司曰：「陛下肅祗郊祀，上帝報享，錫一角獸，蓋麟云。」",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韋昭曰：「楚人謂麋爲麃。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "麃音步交反。韋昭曰「體若麕而一角，春秋所謂『有麕而角』是也。楚人謂麋爲麃」。又周書王會云麃者若鹿。《爾雅》云麋，大鹿也，牛尾一角。郭璞云漢武獲一角獸若麃，謂之麟是也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n042",
       "anchor_text": "肅祗郊祀，上帝報享，錫一角獸，蓋麟云。」",
       "before_context": "...麃然。有司曰：「陛下肅祗郊祀，上帝報享，錫一角獸，蓋麟云。」",
-      "after_context": "於是以薦五畤，畤加一牛以燎。賜諸侯白金，以風符應合于天地。",
+      "after_context": "於是以薦五畤，畤加一牛以燎。",
       "items": [
         {
           "source": "zhengyi",
@@ -350,7 +660,7 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n043",
       "anchor_text": "於是以薦五畤，畤加一牛以燎。",
       "before_context": "...，上帝報享，錫一角獸，蓋麟云。」於是以薦五畤，畤加一牛以燎。",
       "after_context": "賜諸侯白金，以風符應合于天地。",
@@ -364,10 +674,24 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n044",
+      "anchor_text": "賜諸侯白金，以風符應合于天地。",
+      "before_context": "...」於是以薦五畤，畤加一牛以燎。賜諸侯白金，以風符應合于天地。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「符瑞也。」瓚曰：「風示諸侯以此符瑞之應。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
       "anchor_text": "其明年，齊人少翁",
       "before_context": "其明年，齊人少翁",
-      "after_context": "以鬼神方見上。上有所幸王夫人，夫人卒，少翁以方術蓋夜致王夫人...",
+      "after_context": "以鬼神方見上。上有所幸王夫人，",
       "items": [
         {
           "source": "zhengyi",
@@ -378,7 +702,7 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n046",
       "anchor_text": "以鬼神方見上。上有所幸王夫人，",
       "before_context": "其明年，齊人少翁以鬼神方見上。上有所幸王夫人，",
       "after_context": "夫人卒，少翁以方術蓋夜致王夫人及竈鬼之貌云，天子自帷中望見焉...",
@@ -397,7 +721,21 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n047",
+      "anchor_text": "神，神物不至。」乃作畫雲氣車，及各以勝日",
+      "before_context": "...與神通，宮室被服不象神，神物不至。」乃作畫雲氣車，及各以勝日",
+      "after_context": "駕車辟惡鬼。又作甘泉宮，中爲臺室，畫天、地、泰一諸神，而置祭...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「如火勝金，用丙與丁日，不用庚辛。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
       "anchor_text": "歲餘，其方益衰，神不至。乃爲帛書以飯牛，",
       "before_context": "...而置祭具以致天神。居歲餘，其方益衰，神不至。乃爲帛書以飯牛，",
       "after_context": "詳弗知也，言此牛腹中有奇。殺而視之，得書，書言其怪，天子疑之...",
@@ -411,7 +749,7 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n049",
       "anchor_text": "書。於是誅文成將軍",
       "before_context": "...子疑之。有識其手書，問之人，果（爲）〔僞〕書。於是誅文成將軍",
       "after_context": "而隱之。",
@@ -425,7 +763,21 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n050",
+      "anchor_text": "其後則又作栢梁、",
+      "before_context": "其後則又作栢梁、",
+      "after_context": "銅柱、承露僊人掌",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "服虔云：「用梁百頭。」按：今字皆作「栢」。三輔故事云「臺高二十丈，用香栢爲殿，香聞十里」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
       "anchor_text": "銅柱、承露僊人掌",
       "before_context": "其後則又作栢梁、銅柱、承露僊人掌",
       "after_context": "之屬矣。",
@@ -434,26 +786,36 @@
           "source": "jijie",
           "label": "集解",
           "text": "蘇林曰：「仙人以手掌擎盤承甘露也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "三輔故事曰「建章宮承露盤高三十丈，大七圍，以銅爲之。上有仙人掌承露，和玉屑飲之」。故張衡賦曰「立脩莖之仙掌，承雲表之清露」是也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n052",
       "anchor_text": "文成死明年，天子病鼎湖",
       "before_context": "文成死明年，天子病鼎湖",
-      "after_context": "甚，巫醫無所不致，（",
+      "after_context": "甚，巫醫無所不致，（至）不愈。游水發根",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「在湖縣。」韋昭曰：「地名，近宜春。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：鼎湖，縣名，屬京兆，後屬弘農。昔黃帝採首陽山銅鑄鼎於湖，曰鼎湖，即今之湖城縣也。韋昭（云）以爲近宜春，亦甚疏也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n053",
       "anchor_text": "不愈。游水發根",
       "before_context": "文成死明年，天子病鼎湖甚，巫醫無所不致，（至）不愈。游水發根",
       "after_context": "乃言曰：「上郡有巫，病而鬼下之。」上召置祠之甘泉。及病，使人...",
@@ -462,12 +824,87 @@
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「游水，縣名。發根，人名姓。」晉灼曰：「《地理志》游水，水名，在臨淮淮浦也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "顏師古以游水姓，發根名。蓋或因水爲姓。服虔亦曰發根，人姓字。或曰發樹根者也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n054",
+      "anchor_text": "之。」上召置祠之甘泉。及病，使人問神君。",
+      "before_context": "...「上郡有巫，病而鬼下之。」上召置祠之甘泉。及病，使人問神君。",
+      "after_context": "神君言曰：「天子毋憂病。病少愈，強與我會甘泉。」於是病愈，遂...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「即病巫之神。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n055",
+      "anchor_text": "我會甘泉。」於是病愈，遂幸甘泉，病良已。",
+      "before_context": "...毋憂病。病少愈，強與我會甘泉。」於是病愈，遂幸甘泉，病良已。",
+      "after_context": "大赦天下，置壽宮神君。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟康曰：「良已，善已，謂愈也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n056",
+      "anchor_text": "大赦天下，置壽宮神君。",
+      "before_context": "...會甘泉。」於是病愈，遂幸甘泉，病良已。大赦天下，置壽宮神君。",
+      "after_context": "神君最貴者（大夫）〔太一〕，其佐曰大禁、司命之屬，皆從之。非...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「立此便宮也。」瓚曰：「宮，奉神之宮也。楚辭曰『蹇將澹兮壽宮』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n057",
+      "anchor_text": "帷中。時晝言，然常以夜。天子祓，然后入。",
+      "before_context": "...，來則風肅然也。居室帷中。時晝言，然常以夜。天子祓，然后入。",
+      "after_context": "因巫爲主人，關飲食。所欲者言行下。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「崇絜，自祓除然後入。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
+      "anchor_text": "因巫爲主人，關飲食。所欲者言行下。",
+      "before_context": "...然常以夜。天子祓，然后入。因巫爲主人，關飲食。所欲者言行下。",
+      "after_context": "又置壽宮、北宮，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「神所欲言，上輒爲下之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n059",
       "anchor_text": "又置壽宮、北宮，",
       "before_context": "...，然后入。因巫爲主人，關飲食。所欲者言行下。又置壽宮、北宮，",
       "after_context": "張羽旗，設供具，以禮神君。神君所言，上使人受書其言，命之曰「...",
@@ -481,7 +918,7 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n060",
       "anchor_text": "君所言，上使人受書其言，命之曰「畫法」。",
       "before_context": "...設供具，以禮神君。神君所言，上使人受書其言，命之曰「畫法」。",
       "after_context": "其所語，世俗之所知也，毋絕殊者，而天子獨喜。其事祕，世莫知也...",
@@ -500,7 +937,7 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n061",
       "anchor_text": "三年，有司言元宜以天瑞命，不宜以一二數。",
       "before_context": "其後三年，有司言元宜以天瑞命，不宜以一二數。",
       "after_context": "一元曰建元，二元以長星曰元光，三元以郊得一角獸曰元狩云。",
@@ -519,7 +956,21 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n062",
+      "anchor_text": "以長星曰元光，三元以郊得一角獸曰元狩云。",
+      "before_context": "...數。一元曰建元，二元以長星曰元光，三元以郊得一角獸曰元狩云。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「案諸紀元光後有元朔，元朔後得元狩。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n063",
       "anchor_text": "、",
       "before_context": "...曰：「今上帝朕親郊，而后土毋祀，則禮不答也。」有司與太史公、",
       "after_context": "祠官寬舒等議：「天地牲角繭栗。今陛下親祀后土，后土宜於澤中圜...",
@@ -528,12 +979,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "韋昭曰：「說者以談爲太史公，失之矣。《史記》稱遷爲太史公者，是外孫楊惲所稱。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云談，司馬遷之父也，說者以談爲太史公，失之矣。《史記》多稱太史公，遷外孫楊惲稱之也。姚察按：遷傳亦以談爲太史公，非惲所加。又按：虞喜志林云「古者主天官皆上公，自周至漢，其職轉卑，然朝會坐位猶居公上，尊天之道，其官屬仍以舊名，尊而稱公，公名當起於此」。故如淳云「太史公位在丞相上，天下郡國計書先上太史公，副上丞相」，其義是也。而桓譚新論以爲太史公造書，書成示東方朔，朔爲平定，因署其下。太史公者，皆朔所加之者也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n064",
       "anchor_text": "黃。」於是天子遂東，始立后土祠汾陰脽上，",
       "before_context": "...已祠盡瘞，而從祠衣上黃。」於是天子遂東，始立后土祠汾陰脽上，",
       "after_context": "如寬舒等議。上親望拜，如上帝禮。禮畢，天子遂至滎陽而還。過雒...",
@@ -542,12 +998,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「元鼎四年時也。」駰案：蘇林曰「脽音誰」。如淳曰「河之東岸特堆堀，長四五里，廣二里餘，高十餘丈，汾陰縣在脽之上，后土祠在縣西。汾在脽之北，西流與河合也」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "脽，丘。音誰。漢舊儀作「葵丘」者蓋河東人呼「誰」與「葵」同故耳。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n065",
       "anchor_text": "矣。",
       "before_context": "...周子南君，以奉先王祀焉。」是歲，天子始巡郡縣，侵尋於泰山矣。",
       "after_context": "",
@@ -556,26 +1017,78 @@
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「遂往之意也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "侵尋即侵淫也。故晉灼云「遂往之意也」。小顏云「浸淫漸染之義」。蓋尋淫聲相近，假借用耳。師古叔父游秦亦解《漢書》，故稱師古爲「小顏」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n066",
       "anchor_text": "其春，樂成侯",
       "before_context": "其春，樂成侯",
-      "after_context": "上書言欒大。欒大，膠東宮人，故嘗與文成將軍同師，已而爲膠東王...",
+      "after_context": "上書言欒大。欒大，膠東宮人，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「姓丁，名義。後與欒大俱誅也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「河閒縣。」按：《郊祀志》樂成侯登，而徐廣據表姓丁名義，未詳。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n067",
+      "anchor_text": "上書言欒大。欒大，膠東宮人，",
+      "before_context": "其春，樂成侯上書言欒大。欒大，膠東宮人，",
+      "after_context": "故嘗與文成將軍同師，已而爲膠東王尚方。而樂成侯姊爲康王后，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「王家人。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
+      "anchor_text": "，已而爲膠東王尚方。而樂成侯姊爲康王后，",
+      "before_context": "...，故嘗與文成將軍同師，已而爲膠東王尚方。而樂成侯姊爲康王后，",
+      "after_context": "毋子。康王死，他姬子立爲王。而康后有淫行，與王不相中（得），...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟康曰：「膠東王后也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n069",
+      "anchor_text": "疑。大言曰：「臣嘗往來海中，見安期、羨門",
+      "before_context": "...，而敢爲大言，處之不疑。大言曰：「臣嘗往來海中，見安期、羨門",
+      "after_context": "之屬。顧以爲臣賤，不信臣。又以爲康王諸侯耳，不足予方。臣數言...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「仙人。」應劭云：「名子喬。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
       "anchor_text": "，然后可致也。」於是上使先驗小方，鬬旗，",
       "before_context": "...尚肯邪不邪。致尊其使，然后可致也。」於是上使先驗小方，鬬旗，",
       "after_context": "旗自相觸擊。",
@@ -589,7 +1102,7 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n071",
       "anchor_text": "是時上方憂河決，而黃金不就，",
       "before_context": "是時上方憂河決，而黃金不就，",
       "after_context": "乃拜大爲五利將軍。居月餘，得四金印，佩天士將軍、地士將軍、大...",
@@ -603,10 +1116,10 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n072",
       "anchor_text": "疏九江，決四瀆。閒者河溢皋陸，隄繇不息。",
       "before_context": "...印。制詔御史：「昔禹疏九江，決四瀆。閒者河溢皋陸，隄繇不息。",
-      "after_context": "朕臨天下二十有八年，天若遺朕士而大通焉。乾稱『蜚龍』，『鴻漸...",
+      "after_context": "朕臨天下二十有八年，天若遺朕士而大通焉。",
       "items": [
         {
           "source": "zhengyi",
@@ -617,35 +1130,185 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n073",
       "anchor_text": "朕臨天下二十有八年，天若遺朕士而大通焉。",
       "before_context": "...河溢皋陸，隄繇不息。朕臨天下二十有八年，天若遺朕士而大通焉。",
-      "after_context": "乾稱『蜚龍』，『鴻漸于般』，意庶幾與焉。其以二千戶封地士將軍...",
+      "after_context": "乾稱『蜚龍』，『鴻漸于般』，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韋昭曰：「言欒大能通天意，故封樂通。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「言大能通天意，故封之樂通。」樂通在臨淮高平縣也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n074",
+      "anchor_text": "乾稱『蜚龍』，『鴻漸于般』，",
+      "before_context": "...二十有八年，天若遺朕士而大通焉。乾稱『蜚龍』，『鴻漸于般』，",
+      "after_context": "意庶幾與焉。其以二千戶封地士將軍大爲樂通侯。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "駰案：《漢書音義》曰「般，水涯堆也。漸，進也」。武帝云得欒大如鴻進于般，一舉千里，得道若飛龍在天。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n075",
+      "anchor_text": "與焉。其以二千戶封地士將軍大爲樂通侯。」",
+      "before_context": "...『鴻漸于般』，意庶幾與焉。其以二千戶封地士將軍大爲樂通侯。」",
+      "after_context": "賜列侯甲第，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「樂通，臨淮高平也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n076",
+      "anchor_text": "賜列侯甲第，",
+      "before_context": "...，意庶幾與焉。其以二千戶封地士將軍大爲樂通侯。」賜列侯甲第，",
+      "after_context": "僮千人。乘輿斥車馬",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「有甲乙第次，故曰第。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n077",
       "anchor_text": "僮千人。乘輿斥車馬",
       "before_context": "...二千戶封地士將軍大爲樂通侯。」賜列侯甲第，僮千人。乘輿斥車馬",
-      "after_context": "帷帳器物以充其家。又以衞長公主妻之，齎金萬斤，更名其邑曰當利...",
+      "after_context": "帷帳器物以充其家。又以衞長公主妻之，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「或云斥不用也。」韋昭曰：「嘗在服御。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "孟康云「斥不用之車馬」是也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n078",
+      "anchor_text": "帷帳器物以充其家。又以衞長公主妻之，",
+      "before_context": "...甲第，僮千人。乘輿斥車馬帷帳器物以充其家。又以衞長公主妻之，",
+      "after_context": "齎金萬斤，更名其邑曰當利公主。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟康曰：「衞太子妹。」如淳曰：「衞太子姊也。」蔡邕曰：「帝女曰公主，儀比諸侯。姊妹曰長公主，儀比諸侯王。」駰案：此帝女也，而云長公主，未詳。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n079",
+      "anchor_text": "齎金萬斤，更名其邑曰當利公主。",
+      "before_context": "...物以充其家。又以衞長公主妻之，齎金萬斤，更名其邑曰當利公主。",
+      "after_context": "天子親如五利之第。使者存問所給，連屬於道。自大主",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《地理志》云東萊有當利縣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n080",
+      "anchor_text": "五利之第。使者存問所給，連屬於道。自大主",
+      "before_context": "...曰當利公主。天子親如五利之第。使者存問所給，連屬於道。自大主",
+      "after_context": "將相以下，皆置酒其家，獻遺之。於是天子又刻玉印曰「天道將軍」...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「武帝姑也。」駰案：韋昭曰「竇太后之女也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
+      "anchor_text": "六印，貴振天下，而海上燕齊之閒，莫不搤捥",
+      "before_context": "...其師云。大見數月，佩六印，貴振天下，而海上燕齊之閒，莫不搤捥",
+      "after_context": "而自言有禁方，能神僊矣。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「滿手曰搤。」瓚曰：「搤，執持也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n082",
+      "anchor_text": "其夏六月中，汾陰巫錦",
+      "before_context": "其夏六月中，汾陰巫錦",
+      "after_context": "爲民祠魏脽后土營旁，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「錦，巫名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n083",
+      "anchor_text": "爲民祠魏脽后土營旁，",
+      "before_context": "其夏六月中，汾陰巫錦爲民祠魏脽后土營旁，",
+      "after_context": "見地如鉤狀，掊視",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「魏，故魏國也。脽，若丘之類。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n084",
+      "anchor_text": "見地如鉤狀，掊視",
+      "before_context": "其夏六月中，汾陰巫錦爲民祠魏脽后土營旁，見地如鉤狀，掊視",
+      "after_context": "得鼎。鼎大異於眾鼎，文鏤毋款識，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "說文：「掊，抱也。」音步溝切。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n085",
       "anchor_text": "得鼎。鼎大異於眾鼎，文鏤毋款識，",
       "before_context": "...脽后土營旁，見地如鉤狀，掊視得鼎。鼎大異於眾鼎，文鏤毋款識，",
       "after_context": "怪之，言吏。吏告河東太守勝，勝以聞。天子使使驗問巫錦得鼎無姦...",
@@ -654,57 +1317,133 @@
           "source": "jijie",
           "label": "集解",
           "text": "韋昭曰：「款，刻也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「款，刻也。」按：識猶表識也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n086",
+      "anchor_text": "詐，乃以禮祠，迎鼎至甘泉，從行，上薦之。",
+      "before_context": "...使使驗問巫錦得鼎無姦詐，乃以禮祠，迎鼎至甘泉，從行，上薦之。",
+      "after_context": "至中山，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「以鼎從行，上至甘泉，將薦之於天也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
       "anchor_text": "至中山，",
       "before_context": "...巫錦得鼎無姦詐，乃以禮祠，迎鼎至甘泉，從行，上薦之。至中山，",
-      "after_context": "晏溫，有黃雲蓋焉。有麃過，上自射之，因以祭云。至長安，公卿大...",
+      "after_context": "晏溫，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「河渠書鑿涇水自中山西。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "此山在馮翊谷口縣西，近九嵕山，土人呼爲中山。河渠書韓使水工鄭國說秦鑿涇水自中山西，即此山。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n088",
       "anchor_text": "晏溫，",
       "before_context": "...鼎無姦詐，乃以禮祠，迎鼎至甘泉，從行，上薦之。至中山，晏溫，",
-      "after_context": "有黃雲蓋焉。有麃過，上自射之，因以祭云。至長安，公卿大夫皆議...",
+      "after_context": "有黃雲蓋焉。有麃過，上自射之，因以祭云。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「三輔謂日出清濟爲晏。晏而溫也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳云：「三輔俗謂日出清濟爲晏。晏而溫，故曰晏溫。」許慎注《淮南子》云：「晏，無雲也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n089",
+      "anchor_text": "有黃雲蓋焉。有麃過，上自射之，因以祭云。",
+      "before_context": "...薦之。至中山，晏溫，有黃雲蓋焉。有麃過，上自射之，因以祭云。",
+      "after_context": "至長安，公卿大夫皆議請尊寶鼎。天子曰：「閒者河溢，歲數不登，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「上言從行薦之，或曰祭鼎（乎）〔也〕。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n090",
+      "anchor_text": "爲出哉？」有司皆曰：「聞昔大帝興神鼎一，",
+      "before_context": "...今年豐廡未有報，鼎曷爲出哉？」有司皆曰：「聞昔大帝興神鼎一，",
+      "after_context": "一者一統，天地萬物所繫終也。黃帝作寶鼎三，象天地人也。禹收九...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "顏師古以大帝即太昊伏犧氏，以在黃帝之前故也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n091",
       "anchor_text": "天地人也。禹收九牧之金，鑄九鼎，皆嘗鬺烹",
       "before_context": "...也。黃帝作寶鼎三，象天地人也。禹收九牧之金，鑄九鼎，皆嘗鬺烹",
-      "after_context": "上帝鬼神。遭聖則興，遷于夏商。周德衰，宋之社亡，鼎乃淪伏而不...",
+      "after_context": "上帝鬼神。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「烹，煮也。鬺音觴。皆嘗以烹牲牢而祭祀也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言鼎烹牲而饗嘗也。「鬺」字又作「觴」字，音殤。《漢書郊祀志》云鼎空足曰鬲，以象三德。鬲音歷。謂足中不實者名之也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n092",
+      "anchor_text": "上帝鬼神。",
+      "before_context": "...寶鼎三，象天地人也。禹收九牧之金，鑄九鼎，皆嘗鬺烹上帝鬼神。",
+      "after_context": "遭聖則興，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「以祭祀上帝。或曰嘗烹酌也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n093",
       "anchor_text": "遭聖則興，",
       "before_context": "...天地人也。禹收九牧之金，鑄九鼎，皆嘗鬺烹上帝鬼神。遭聖則興，",
-      "after_context": "遷于夏商。周德衰，宋之社亡，鼎乃淪伏而不見。頌云『自堂徂基，",
+      "after_context": "遷于夏商。周德衰，宋之社亡，",
       "items": [
         {
           "source": "zhengyi",
@@ -715,10 +1454,10 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n094",
       "anchor_text": "遷于夏商。周德衰，宋之社亡，",
       "before_context": "...鼎，皆嘗鬺烹上帝鬼神。遭聖則興，遷于夏商。周德衰，宋之社亡，",
-      "after_context": "鼎乃淪伏而不見。頌云『自堂徂基，自羊徂牛；鼐鼎及鼒，不虞不驁...",
+      "after_context": "鼎乃淪伏而不見。頌云『自堂徂基，",
       "items": [
         {
           "source": "zhengyi",
@@ -729,10 +1468,10 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n095",
       "anchor_text": "鼎乃淪伏而不見。頌云『自堂徂基，",
-      "before_context": "遷于夏商。周德衰，宋之社亡，鼎乃淪伏而不見。頌云『自堂徂基，",
-      "after_context": "自羊徂牛；鼐鼎及鼒，不虞不驁，胡考之休』。今鼎至甘泉，光潤龍...",
+      "before_context": "...遷于夏商。周德衰，宋之社亡，鼎乃淪伏而不見。頌云『自堂徂基，",
+      "after_context": "自羊徂牛；",
       "items": [
         {
           "source": "zhengyi",
@@ -743,10 +1482,10 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n096",
       "anchor_text": "自羊徂牛；",
       "before_context": "...周德衰，宋之社亡，鼎乃淪伏而不見。頌云『自堂徂基，自羊徂牛；",
-      "after_context": "鼐鼎及鼒，不虞不驁，胡考之休』。今鼎至甘泉，光潤龍變，承休無...",
+      "after_context": "鼐鼎及鼒，",
       "items": [
         {
           "source": "zhengyi",
@@ -757,7 +1496,105 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n097",
+      "anchor_text": "鼐鼎及鼒，",
+      "before_context": "...之社亡，鼎乃淪伏而不見。頌云『自堂徂基，自羊徂牛；鼐鼎及鼒，",
+      "after_context": "不虞不驁，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「《爾雅》曰鼎絕大謂之鼐，圜奄上謂之鼒。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n098",
+      "anchor_text": "不虞不驁，",
+      "before_context": "...乃淪伏而不見。頌云『自堂徂基，自羊徂牛；鼐鼎及鼒，不虞不驁，",
+      "after_context": "胡考之休』。今鼎至甘泉，光潤龍變，承休無疆。合茲中山，有黃白...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "毛傳云：「虞，譁也。」姚氏案：何承天云「虞」當爲「吳」，音洪霸反。又說文以「吳，一曰大言也」。此作「虞」者，與吳聲相近，故假借也。或者本文借此「虞」爲歡娛字故也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n099",
+      "anchor_text": "光潤龍變，承休無疆。合茲中山，有黃白雲降",
+      "before_context": "...之休』。今鼎至甘泉，光潤龍變，承休無疆。合茲中山，有黃白雲降",
+      "after_context": "蓋，若獸爲符，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「與中山所見黃雲之氣合也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n100",
+      "anchor_text": "蓋，若獸爲符，",
+      "before_context": "...甘泉，光潤龍變，承休無疆。合茲中山，有黃白雲降蓋，若獸爲符，",
+      "after_context": "路弓乘矢，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「雲若獸，在車蓋也。」晉灼曰：「蓋，辭也。或云符謂瑞應也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n101",
+      "anchor_text": "路弓乘矢，",
+      "before_context": "...龍變，承休無疆。合茲中山，有黃白雲降蓋，若獸爲符，路弓乘矢，",
+      "after_context": "集獲壇下，報祠大饗。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「路，大也。四矢爲乘。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n102",
+      "anchor_text": "集獲壇下，報祠大饗。",
+      "before_context": "...中山，有黃白雲降蓋，若獸爲符，路弓乘矢，集獲壇下，報祠大饗。",
+      "after_context": "惟受命而帝者心知其意",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一云大報享祠也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n103",
+      "anchor_text": "惟受命而帝者心知其意",
+      "before_context": "...若獸爲符，路弓乘矢，集獲壇下，報祠大饗。惟受命而帝者心知其意",
+      "after_context": "而合德焉。鼎宜見於祖禰，藏於帝廷，以合明應。」制曰：「可。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「高祖受命知之也。宜見鼎於其廟。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n104",
       "anchor_text": "入海求蓬萊者，",
       "before_context": "入海求蓬萊者，",
       "after_context": "言蓬萊不遠，而不能至者，殆不見其氣。上乃遣望氣佐侯其氣云。",
@@ -771,24 +1608,43 @@
       "sentence_id": null
     },
     {
-      "id": "n052",
-      "anchor_text": "。",
-      "before_context": "...。」卿有札《書》曰：「黃帝得寶鼎宛（侯）〔朐〕，問於鬼臾區。",
-      "after_context": "區對曰：『（",
+      "id": "n105",
+      "anchor_text": "其秋，上幸雍，",
+      "before_context": "其秋，上幸雍，",
+      "after_context": "且郊。或曰「五帝，泰一之佐也。宜立泰一而上親郊之」。上疑未定...",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "《漢書音義》曰：「區，黃帝時人。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上雍，以雍地形高，故云上。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n106",
+      "anchor_text": "。",
+      "before_context": "...。」卿有札《書》曰：「黃帝得寶鼎宛（侯）〔朐〕，問於鬼臾區。",
+      "after_context": "區對曰：『（黃）帝得寶鼎神筴，是歲己酉朔旦冬至，得天之紀，終...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「區，黃帝時人。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鄭氏云：「黃帝佐也。」李奇曰：「黃帝時諸侯。本作『申區』者，非；《藝文志》作『鬼容區』者也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n107",
       "anchor_text": "迎日推筴，後率二十歲",
       "before_context": "...朔旦冬至，得天之紀，終而復始。』於是黃帝迎日推筴，後率二十歲",
-      "after_context": "得朔旦冬至，凡二十推，三百八十年。黃帝",
+      "after_context": "得朔旦冬至，凡二十推，三百八十年。黃帝僊登于天。」卿因所忠欲...",
       "items": [
         {
           "source": "zhengyi",
@@ -799,10 +1655,24 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n108",
+      "anchor_text": "之。上大說，召問卿。對曰：「受此書申功，",
+      "before_context": "...何以爲！」卿因嬖人奏之。上大說，召問卿。對曰：「受此書申功，",
+      "after_context": "申功已死。」上曰：「申功何人也？」卿曰：「申功，齊人也。與安...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《封禪書》「功」字作「公」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n109",
       "anchor_text": "也。寶鼎出而與神通，封禪。封禪七十二王，",
       "before_context": "...聖者在高祖之孫且曾孫也。寶鼎出而與神通，封禪。封禪七十二王，",
-      "after_context": "唯黃帝",
+      "after_context": "唯黃帝得上泰山封』。申功曰：『漢主亦當上封，上封則能僊登天矣...",
       "items": [
         {
           "source": "zhengyi",
@@ -813,24 +1683,99 @@
       "sentence_id": null
     },
     {
-      "id": "n055",
-      "anchor_text": "門者，谷口也。",
-      "before_context": "...。其後於黃帝接萬靈明廷。明廷者，甘泉也。所謂寒門者，谷口也。",
-      "after_context": "黃帝",
+      "id": "n110",
+      "anchor_text": "時萬諸侯，而神靈之封居七千。",
+      "before_context": "...亦當上封，上封則能僊登天矣。黃帝時萬諸侯，而神靈之封居七千。",
+      "after_context": "天下名山八，而三在蠻夷，五在中國。中國華山、首山、太室、泰山...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "《漢書音義》曰：「黃帝仙於塞門也。」"
+          "text": "應劭曰：「黃帝時諸侯會封禪者七千人。」李奇曰：「說仙道得封者七千國。」張晏曰：「神靈之封謂山川之守。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n056",
+      "id": "n111",
+      "anchor_text": "號大鴻，死葬雍，故鴻冢是也。",
+      "before_context": "...通。黃帝郊雍上帝，宿三月。鬼臾區號大鴻，死葬雍，故鴻冢是也。",
+      "after_context": "其後於黃帝接萬靈明廷。明廷者，甘泉也。所謂寒",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蘇林曰：「今雍有鴻冢。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n112",
+      "anchor_text": "接萬靈明廷。明廷者，甘泉也。所謂寒",
+      "before_context": "...雍，故鴻冢是也。其後於黃帝接萬靈明廷。明廷者，甘泉也。所謂寒",
+      "after_context": "門者，谷口也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『塞』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n113",
+      "anchor_text": "門者，谷口也。",
+      "before_context": "...。其後於黃帝接萬靈明廷。明廷者，甘泉也。所謂寒門者，谷口也。",
+      "after_context": "黃帝釆首山銅，鑄鼎荊山下。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「黃帝仙於塞門也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "服虔云：「黃帝所仙之處也。」小顏云：「谷，中山之谷口，漢時爲縣，今呼爲冶谷，去甘泉八十里。盛夏凜然，故曰寒門谷口也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n114",
+      "anchor_text": "釆首山銅，鑄鼎荊山下。",
+      "before_context": "...廷者，甘泉也。所謂寒門者，谷口也。黃帝釆首山銅，鑄鼎荊山下。",
+      "after_context": "鼎既成，有龍垂胡䫇",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「《地理志》首山屬河東蒲阪，荊山在馮翊懷德縣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n115",
+      "anchor_text": "鼎既成，有龍垂胡䫇",
+      "before_context": "...寒門者，谷口也。黃帝釆首山銅，鑄鼎荊山下。鼎既成，有龍垂胡䫇",
+      "after_context": "下迎黃帝。黃帝上騎，羣臣後宮從上龍七十餘人，龍乃上去。餘小臣...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "顏師古云：「胡謂項下垂肉也；䫇，其毛也。故童謠曰『何當爲君鼓龍胡』是也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n116",
       "anchor_text": "去。餘小臣不得上，乃悉持龍䫇，龍䫇拔，墮",
       "before_context": "...上龍七十餘人，龍乃上去。餘小臣不得上，乃悉持龍䫇，龍䫇拔，墮",
-      "after_context": "黃帝",
+      "after_context": "黃帝之弓。百姓仰望黃帝既上天，乃抱其弓與龍胡䫇號。",
       "items": [
         {
           "source": "zhengyi",
@@ -841,10 +1786,10 @@
       "sentence_id": null
     },
     {
-      "id": "n057",
+      "id": "n117",
       "anchor_text": "既上天，乃抱其弓與龍胡䫇號。",
       "before_context": "...龍䫇拔，墮黃帝之弓。百姓仰望黃帝既上天，乃抱其弓與龍胡䫇號。",
-      "after_context": "故後世因名其處曰鼎湖，其弓曰烏號。』」於是天子曰：「嗟乎！吾...",
+      "after_context": "故後世因名其處曰鼎湖，",
       "items": [
         {
           "source": "zhengyi",
@@ -855,10 +1800,10 @@
       "sentence_id": null
     },
     {
-      "id": "n058",
+      "id": "n118",
       "anchor_text": "故後世因名其處曰鼎湖，",
       "before_context": "...姓仰望黃帝既上天，乃抱其弓與龍胡䫇號。故後世因名其處曰鼎湖，",
-      "after_context": "其弓曰烏號。』」於是天子曰：「嗟乎！吾誠得如黃帝",
+      "after_context": "其弓曰烏號。』」於是天子曰：「嗟乎！吾誠得如黃帝，吾視去妻子...",
       "items": [
         {
           "source": "zhengyi",
@@ -869,10 +1814,10 @@
       "sentence_id": null
     },
     {
-      "id": "n059",
+      "id": "n119",
       "anchor_text": "，",
       "before_context": "上遂郊雍，至隴西，西登空桐，",
-      "after_context": "幸甘泉。令祠官寬舒等具泰一祠壇，壇放薄忌泰一壇，壇三垓。五帝...",
+      "after_context": "幸甘泉。令祠官寬舒等具泰一祠壇，壇放薄忌泰一壇，壇三垓。",
       "items": [
         {
           "source": "zhengyi",
@@ -883,21 +1828,68 @@
       "sentence_id": null
     },
     {
-      "id": "n060",
+      "id": "n120",
       "anchor_text": "舒等具泰一祠壇，壇放薄忌泰一壇，壇三垓。",
       "before_context": "...桐，幸甘泉。令祠官寬舒等具泰一祠壇，壇放薄忌泰一壇，壇三垓。",
-      "after_context": "五帝壇環居其下，各如其方，黃帝",
+      "after_context": "五帝壇環居其下，各如其方，黃帝西南，除八通鬼道。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「垓，次也。」駰案：李奇曰「垓，重也。三重壇也」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "垓，重也。言爲三重壇也。鄒氏云一作「階」，言壇階三重。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n061",
+      "id": "n121",
+      "anchor_text": "西南，除八通鬼道。",
+      "before_context": "...壇，壇三垓。五帝壇環居其下，各如其方，黃帝西南，除八通鬼道。",
+      "after_context": "泰一所用，如雍一畤物，而加醴棗脯之屬，殺一犛牛以爲俎豆牢具。...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「坤位在未，黃帝從土位。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n122",
+      "anchor_text": "屬，殺一犛牛以爲俎豆牢具。而五帝獨有俎豆",
+      "before_context": "...一畤物，而加醴棗脯之屬，殺一犛牛以爲俎豆牢具。而五帝獨有俎豆",
+      "after_context": "醴進。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「無犛牛醴之屬。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n123",
+      "anchor_text": "醴進。",
+      "before_context": "...，而加醴棗脯之屬，殺一犛牛以爲俎豆牢具。而五帝獨有俎豆醴進。",
+      "after_context": "其下四方地，爲餟食",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音進。《漢書》作「進」。顏師古云：「具俎豆酒醴而進之。一曰進謂雜物之具，所以加禮也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n124",
       "anchor_text": "其下四方地，爲餟食",
       "before_context": "...殺一犛牛以爲俎豆牢具。而五帝獨有俎豆醴進。其下四方地，爲餟食",
       "after_context": "羣神從者及北斗云。已祠，胙餘皆燎之。其牛色白，鹿居其中，彘在...",
@@ -916,10 +1908,10 @@
       "sentence_id": null
     },
     {
-      "id": "n062",
+      "id": "n125",
       "anchor_text": "其牛色白，鹿居其中，彘在鹿中，水而洎之。",
       "before_context": "...。已祠，胙餘皆燎之。其牛色白，鹿居其中，彘在鹿中，水而洎之。",
-      "after_context": "祭日以牛，祭月以羊彘特。泰一祝宰則衣紫及繡。五帝各如其色，日...",
+      "after_context": "祭日以牛，祭月以羊彘特。",
       "items": [
         {
           "source": "jijie",
@@ -935,10 +1927,38 @@
       "sentence_id": null
     },
     {
-      "id": "n063",
+      "id": "n126",
+      "anchor_text": "祭日以牛，祭月以羊彘特。",
+      "before_context": "...色白，鹿居其中，彘在鹿中，水而洎之。祭日以牛，祭月以羊彘特。",
+      "after_context": "泰一祝宰則衣紫及繡。五帝各如其色，日赤，月白。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "特，一牲也。言若牛若羊若彘，止一特也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n127",
+      "anchor_text": "，昧爽，天子始郊拜泰一。朝朝日，夕夕月，",
+      "before_context": "十一月辛已朔旦冬至，昧爽，天子始郊拜泰一。朝朝日，夕夕月，",
+      "after_context": "則揖；而見泰一如雍禮。其贊饗曰：「天始以寶鼎神筴授皇帝，朔而...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「天子春朝日，秋夕月，拜日東門之外，朝日以朝，夕月以夕。」瓚曰：「漢儀郊泰一畤，皇帝平旦出竹宮，東向揖日，其夕西向揖月。便用郊日，不用春秋也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n128",
       "anchor_text": "上有光焉」。公卿言「皇帝始郊見泰一雲陽，",
       "before_context": "...旁烹炊具。有司云「祠上有光焉」。公卿言「皇帝始郊見泰一雲陽，",
-      "after_context": "有司奉瑄玉嘉牲薦饗。是夜有美光，及晝，黃氣上屬天。」太史公",
+      "after_context": "有司奉瑄玉",
       "items": [
         {
           "source": "zhengyi",
@@ -949,24 +1969,29 @@
       "sentence_id": null
     },
     {
-      "id": "n064",
+      "id": "n129",
       "anchor_text": "有司奉瑄玉",
       "before_context": "...有司云「祠上有光焉」。公卿言「皇帝始郊見泰一雲陽，有司奉瑄玉",
-      "after_context": "嘉牲薦饗。是夜有美光，及晝，黃氣上屬天。」太史公",
+      "after_context": "嘉牲薦饗。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孟康曰：「璧大六寸謂之瑄。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音宣，璧大六寸也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n065",
+      "id": "n130",
       "anchor_text": "嘉牲薦饗。",
       "before_context": "...上有光焉」。公卿言「皇帝始郊見泰一雲陽，有司奉瑄玉嘉牲薦饗。",
-      "after_context": "是夜有美光，及晝，黃氣上屬天。」太史公",
+      "after_context": "是夜有美光，及晝，黃氣上屬天。」太史公、祠官寬舒等曰：「神靈...",
       "items": [
         {
           "source": "zhengyi",
@@ -977,10 +2002,66 @@
       "sentence_id": null
     },
     {
-      "id": "n066",
+      "id": "n131",
+      "anchor_text": "等曰：「神靈之休，祐福兆祥，宜因此地光域",
+      "before_context": "...。」太史公、祠官寬舒等曰：「神靈之休，祐福兆祥，宜因此地光域",
+      "after_context": "立泰畤壇以明應。令太祝領，（祀）〔秋〕及臘閒祠。三歲天子一郊...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「地，一作『夜』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n132",
+      "anchor_text": "其秋，爲伐南越，告禱泰一，以牡",
+      "before_context": "其秋，爲伐南越，告禱泰一，以牡",
+      "after_context": "荊畫幡",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『牝』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n133",
+      "anchor_text": "荊畫幡",
+      "before_context": "其秋，爲伐南越，告禱泰一，以牡荊畫幡",
+      "after_context": "日月北斗登龍，以象天一三星，爲泰一鋒，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「荊之無子者，皆以絜齊之道也。」晉灼曰：「牡荊，節閒不相當者。」韋昭曰：「以牡荊爲柄者也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n134",
+      "anchor_text": "日月北斗登龍，以象天一三星，爲泰一鋒，",
+      "before_context": "...，告禱泰一，以牡荊畫幡日月北斗登龍，以象天一三星，爲泰一鋒，",
+      "after_context": "名曰「靈旗」。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「《天官書》曰天極星明者，泰一常居也。斗口三星曰天一。」駰案：晉灼曰「畫一星在後，三星在前爲太一鋒也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n135",
       "anchor_text": "名曰「靈旗」。",
       "before_context": "...牡荊畫幡日月北斗登龍，以象天一三星，爲泰一鋒，名曰「靈旗」。",
-      "after_context": "爲兵禱，則太史奉以指所伐國。而五利將軍使不敢入海，之泰山",
+      "after_context": "爲兵禱，",
       "items": [
         {
           "source": "zhengyi",
@@ -991,10 +2072,10 @@
       "sentence_id": null
     },
     {
-      "id": "n067",
+      "id": "n136",
       "anchor_text": "爲兵禱，",
-      "before_context": "日月北斗登龍，以象天一三星，爲泰一鋒，名曰「靈旗」。爲兵禱，",
-      "after_context": "則太史奉以指所伐國。而五利將軍使不敢入海，之泰山",
+      "before_context": "...日月北斗登龍，以象天一三星，爲泰一鋒，名曰「靈旗」。爲兵禱，",
+      "after_context": "則太史奉以指所伐國。",
       "items": [
         {
           "source": "zhengyi",
@@ -1005,10 +2086,10 @@
       "sentence_id": null
     },
     {
-      "id": "n068",
+      "id": "n137",
       "anchor_text": "則太史奉以指所伐國。",
       "before_context": "...一三星，爲泰一鋒，名曰「靈旗」。爲兵禱，則太史奉以指所伐國。",
-      "after_context": "而五利將軍使不敢入海，之泰山",
+      "after_context": "而五利將軍使不敢入海，之泰山祠。上使人微隨驗，實無所見。五利...",
       "items": [
         {
           "source": "zhengyi",
@@ -1019,7 +2100,7 @@
       "sentence_id": null
     },
     {
-      "id": "n069",
+      "id": "n138",
       "anchor_text": "妄言見其師，其方盡，多不讎。上乃誅五利。",
       "before_context": "...隨驗，實無所見。五利妄言見其師，其方盡，多不讎。上乃誅五利。",
       "after_context": "",
@@ -1033,7 +2114,7 @@
       "sentence_id": null
     },
     {
-      "id": "n070",
+      "id": "n139",
       "anchor_text": "其道非少寬假，神不來。言神事，事如迂誕，",
       "before_context": "...有求人主，人主求之。其道非少寬假，神不來。言神事，事如迂誕，",
       "after_context": "積以歲乃可致。」於是郡國各除道，繕治宮觀名山神祠所，以望幸矣...",
@@ -1047,7 +2128,7 @@
       "sentence_id": null
     },
     {
-      "id": "n071",
+      "id": "n140",
       "anchor_text": "樂，而神祇可得而禮。」或曰：「泰帝使素女",
       "before_context": "...曰：「古者祀天地皆有樂，而神祇可得而禮。」或曰：「泰帝使素女",
       "after_context": "鼓五十弦瑟，悲，帝禁不止，故破其瑟爲二十五弦。」於是塞南越，...",
@@ -1066,7 +2147,21 @@
       "sentence_id": null
     },
     {
-      "id": "n072",
+      "id": "n141",
+      "anchor_text": "一、后土，始用樂舞，益召歌兒，作二十五弦",
+      "before_context": "...」於是塞南越，禱祠泰一、后土，始用樂舞，益召歌兒，作二十五弦",
+      "after_context": "及箜篌瑟",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「瑟也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n142",
       "anchor_text": "及箜篌瑟",
       "before_context": "...南越，禱祠泰一、后土，始用樂舞，益召歌兒，作二十五弦及箜篌瑟",
       "after_context": "自此起。",
@@ -1075,15 +2170,48 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「應劭云武帝令樂人侯調始造箜篌。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "應劭云：「武帝始令樂人侯調作，聲均均然，命曰箜篌。侯，其姓也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n073",
+      "id": "n143",
+      "anchor_text": "其來年冬，上議曰：「古者先振兵澤旅，",
+      "before_context": "其來年冬，上議曰：「古者先振兵澤旅，",
+      "after_context": "然後封禪。」乃遂北巡朔方，勒兵十餘萬，還祭黃帝冢橋山，澤兵須...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「古『釋』字作『澤』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n144",
+      "anchor_text": "，澤兵須如。",
+      "before_context": "...封禪。」乃遂北巡朔方，勒兵十餘萬，還祭黃帝冢橋山，澤兵須如。",
+      "after_context": "上曰：「吾聞黃帝不死，今有冢，何也？」或對曰：「黃帝已僊上天...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「地名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n145",
       "anchor_text": "已僊上天，羣臣葬其衣冠。」即至甘泉，爲且",
       "before_context": "...也？」或對曰：「黃帝已僊上天，羣臣葬其衣冠。」即至甘泉，爲且",
-      "after_context": "用事泰山",
+      "after_context": "用事泰山，",
       "items": [
         {
           "source": "zhengyi",
@@ -1094,7 +2222,7 @@
       "sentence_id": null
     },
     {
-      "id": "n074",
+      "id": "n146",
       "anchor_text": "，",
       "before_context": "...曰：「黃帝已僊上天，羣臣葬其衣冠。」即至甘泉，爲且用事泰山，",
       "after_context": "先類祠泰一。",
@@ -1108,10 +2236,10 @@
       "sentence_id": null
     },
     {
-      "id": "n075",
+      "id": "n147",
       "anchor_text": "自得寶鼎，上與公卿諸生議封禪。",
       "before_context": "自得寶鼎，上與公卿諸生議封禪。",
-      "after_context": "封禪用希曠絕，莫知其儀禮，而羣儒采《封禪尚書",
+      "after_context": "封禪用希曠絕，莫知其儀禮，而羣儒采《封禪尚書》、周官、王制之...",
       "items": [
         {
           "source": "zhengyi",
@@ -1122,7 +2250,7 @@
       "sentence_id": null
     },
     {
-      "id": "n076",
+      "id": "n148",
       "anchor_text": "》、周官、王制之望祀射牛",
       "before_context": "...曠絕，莫知其儀禮，而羣儒采《封禪尚書》、周官、王制之望祀射牛",
       "after_context": "事。齊人丁公年九十餘，曰：「封者，合不死之名也。秦皇帝不得上...",
@@ -1131,12 +2259,87 @@
           "source": "jijie",
           "label": "集解",
           "text": "蘇林曰：「當祭廟，射其牲以除不祥。」瓚曰：「射牛，示親殺也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "天子射牛，示親祭也。事見《國語》。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n077",
+      "id": "n149",
+      "anchor_text": "封矣。」上於是乃令諸儒習射牛，草封禪儀。",
+      "before_context": "...，稍上即無風雨，遂上封矣。」上於是乃令諸儒習射牛，草封禪儀。",
+      "after_context": "數年，至且行。天子既聞公孫卿及方士之言，黃帝以上封禪，皆致怪...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "儀見應劭漢官儀也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n150",
+      "anchor_text": "以嘗接神僊人蓬萊士，高世比悳於九皇，",
+      "before_context": "...皆致怪物與神通，欲放黃帝以嘗接神僊人蓬萊士，高世比悳於九皇，",
+      "after_context": "而頗采儒術以文之。羣儒既以不能辯明封禪事，又牽拘於詩書古文而...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「三皇之前有人皇，九首。」韋昭曰：「上古人皇者九人也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n151",
+      "anchor_text": "「太常諸生行禮不如魯善」，周霸屬圖封事，",
+      "before_context": "...不與古同」，徐偃又曰「太常諸生行禮不如魯善」，周霸屬圖封事，",
+      "after_context": "於是上絀偃、霸，盡罷諸儒弗用。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「屬，會也。會諸儒圖封事。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n152",
+      "anchor_text": "三月，遂東幸緱氏，禮登中嶽",
+      "before_context": "三月，遂東幸緱氏，禮登中嶽",
+      "after_context": "太室。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「崧高山也，在潁川陽城縣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n153",
+      "anchor_text": "太室。",
+      "before_context": "三月，遂東幸緱氏，禮登中嶽太室。",
+      "after_context": "從官在山下聞若有言「萬歲」云。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「崧高山有太室、少室之山，山有石室，故以名之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n154",
       "anchor_text": "從官在山下聞若有言「萬歲」云。",
       "before_context": "...月，遂東幸緱氏，禮登中嶽太室。從官在山下聞若有言「萬歲」云。",
       "after_context": "問上，上不言；問下，下不言。於是以三百戶封太室奉祠，命曰崇高...",
@@ -1150,10 +2353,10 @@
       "sentence_id": null
     },
     {
-      "id": "n078",
+      "id": "n155",
       "anchor_text": "言。於是以三百戶封太室奉祠，命曰崇高邑。",
       "before_context": "...，上不言；問下，下不言。於是以三百戶封太室奉祠，命曰崇高邑。",
-      "after_context": "東上泰山",
+      "after_context": "東上泰山，山之草木葉未生，乃令人上石立之泰山顛。",
       "items": [
         {
           "source": "zhengyi",
@@ -1164,7 +2367,7 @@
       "sentence_id": null
     },
     {
-      "id": "n079",
+      "id": "n156",
       "anchor_text": "上遂東巡海上，行禮祠八神。",
       "before_context": "上遂東巡海上，行禮祠八神。",
       "after_context": "齊人之上疏言神怪奇方者以萬數，然無驗者。乃益發船，令言海中神...",
@@ -1173,12 +2376,129 @@
           "source": "jijie",
           "label": "集解",
           "text": "文穎曰：「武帝登泰山，祭太一，并祭名山於泰壇，西南開除八通鬼道，故言八神也。一曰八方之神。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "用事八神。案：韋昭云「八神謂天、地、陰、陽、日、月、星辰主、四時主之屬」。今案《郊祀志》，一曰天主，祠天齊；二曰地主，祠太山、梁父；三曰兵主，祠蚩尤；四曰陰主，祠三山；五曰陽主，祠之罘；六曰月主，祠東萊山；七曰日主，祠盛主；八曰四時主，祠琅邪也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n080",
+      "id": "n157",
+      "anchor_text": "羣臣有言見一老父牽狗，言「吾欲見巨公」，",
+      "before_context": "...其跡甚大，類禽獸云。羣臣有言見一老父牽狗，言「吾欲見巨公」，",
+      "after_context": "已忽不見。上既見大跡，未信，及羣臣有言老父，則大以爲僊人也。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書音義》曰：「巨公謂武帝。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n158",
+      "anchor_text": "信，及羣臣有言老父，則大以爲僊人也。宿留",
+      "before_context": "...不見。上既見大跡，未信，及羣臣有言老父，則大以爲僊人也。宿留",
+      "after_context": "海上，與方士傳車及閒使求僊人以千數。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音秀溜。宿留，遲待之意。若依字讀，則言宿而留，亦是有所待，並通也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n159",
+      "anchor_text": "玉牒書，書祕。禮畢，天子獨與侍中奉車子侯",
+      "before_context": "...尺，高九尺，其下則有玉牒書，書祕。禮畢，天子獨與侍中奉車子侯",
+      "after_context": "上泰山，亦有封。其事皆禁。明日，下陰道。丙辰，禪泰山下阯東北...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書百官表》曰：「奉車都尉掌乘輿車，武帝初置。」韋昭曰：「子侯，霍去病之子也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n160",
+      "anchor_text": "下阯東北肅然山，",
+      "before_context": "...亦有封。其事皆禁。明日，下陰道。丙辰，禪泰山下阯東北肅然山，",
+      "after_context": "如祭后土禮。天子皆親拜見，衣上黃而盡用樂焉。江淮閒一茅三脊",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「肅然，山名，在梁父。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n161",
+      "anchor_text": "親拜見，衣上黃而盡用樂焉。江淮閒一茅三脊",
+      "before_context": "...，如祭后土禮。天子皆親拜見，衣上黃而盡用樂焉。江淮閒一茅三脊",
+      "after_context": "爲神藉。五色土益雜封。縱遠方奇獸蜚禽及白雉諸物，頗以加祠。兕...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟康曰：「所謂靈茅也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n162",
+      "anchor_text": "天子從封禪還，坐明堂，",
+      "before_context": "天子從封禪還，坐明堂，",
+      "after_context": "羣臣更上壽。於是制詔御史：「朕以眇眇之身承至尊，兢兢焉懼弗任...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「天子初封泰山，山東北阯古時有明堂處，則此所坐者。明年秋，乃作明堂。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n163",
+      "anchor_text": "于禮樂。脩祀泰一，若有象景光，㞕如有望，",
+      "before_context": "...弗任。維德菲薄，不明于禮樂。脩祀泰一，若有象景光，㞕如有望，",
+      "after_context": "依依震於怪物，欲止不敢，遂登封泰山，至於梁父，而后禪肅然。自...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "瓚曰：「聞呼萬歲者三。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n164",
+      "anchor_text": "加年八十孤寡布帛二匹。復博、奉高、蛇丘、",
+      "before_context": "...賜民百戶牛一酒十石，加年八十孤寡布帛二匹。復博、奉高、蛇丘、",
+      "after_context": "歷城，毋出今年租稅。其赦天下，如乙卯赦令。行所過毋有復作。事...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「蛇音移。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n165",
       "anchor_text": "下。」",
       "before_context": "...五載一巡狩，用事泰山，諸侯有朝宿地。其令諸侯各治邸泰山下。」",
       "after_context": "",
@@ -1192,21 +2512,194 @@
       "sentence_id": null
     },
     {
-      "id": "n081",
-      "anchor_text": "還至瓠子，",
-      "before_context": "...。是歲旱。於是天子既出毋名，乃禱萬里沙，過祠泰山。還至瓠子，",
-      "after_context": "自臨塞決河，留二日，沈祠而去。使二卿將卒塞決河，河徙二渠，復...",
+      "id": "n166",
+      "anchor_text": "巡自遼西，歷北邊至九原。五月，返至甘泉。",
+      "before_context": "...，並海上，北至碣石，巡自遼西，歷北邊至九原。五月，返至甘泉。",
+      "after_context": "有司言寶鼎出爲元鼎，以今年爲元封元年。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "服虔曰：「瓠子，隄名。」蘇林曰：「在甄城以南，濮陽以北，廣百步，深五丈所。」瓚曰：「所決河名。」"
+          "text": "《漢書音義》曰：「周萬八千里也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n082",
+      "id": "n167",
+      "anchor_text": "其秋，有星茀于東井。",
+      "before_context": "其秋，有星茀于東井。",
+      "after_context": "後十餘日，有星茀于三能。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「秦分野也。後衞太子兵亂。茀音佩。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n168",
+      "anchor_text": "後十餘日，有星茀于三能。",
+      "before_context": "其秋，有星茀于東井。後十餘日，有星茀于三能。",
+      "after_context": "望氣王朔言：「候獨見其星出如瓠，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「三能，三公。後連坐誅之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n169",
+      "anchor_text": "望氣王朔言：「候獨見其星出如瓠，",
+      "before_context": "...井。後十餘日，有星茀于三能。望氣王朔言：「候獨見其星出如瓠，",
+      "after_context": "食頃復入焉。」有司言曰：「陛下建漢家封禪，天其報德星云。」",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "見星出如瓠。案：《郊祀志》云「填星出如瓠」，故顏師古以德星即鎮星也。今按：此紀唯言德星，則德星，歲星也。歲星所在有福，故曰德星也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n170",
+      "anchor_text": "贊饗曰：「德星昭衍，厥維休祥。壽星仍出，",
+      "before_context": "...帝，還，拜祝祠泰一。贊饗曰：「德星昭衍，厥維休祥。壽星仍出，",
+      "after_context": "淵耀光明。信星昭見，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "壽星，南極老人星也，見則天下理安，故言之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n171",
+      "anchor_text": "淵耀光明。信星昭見，",
+      "before_context": "...贊饗曰：「德星昭衍，厥維休祥。壽星仍出，淵耀光明。信星昭見，",
+      "after_context": "皇帝敬拜泰",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "信星，鎮星也。信屬土，土曰鎮星，則漢志爲德星也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n172",
+      "anchor_text": "皇帝敬拜泰",
+      "before_context": "...德星昭衍，厥維休祥。壽星仍出，淵耀光明。信星昭見，皇帝敬拜泰",
+      "after_context": "祝之饗。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一無此字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n173",
+      "anchor_text": "。是歲旱。於是天子既出毋名，乃禱萬里沙，",
+      "before_context": "...士求神怪采芝藥以千數。是歲旱。於是天子既出毋名，乃禱萬里沙，",
+      "after_context": "過祠泰山。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「萬里沙，神祠也，在東萊曲城。」孟康曰：「沙徑三百餘里。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n174",
+      "anchor_text": "。",
+      "before_context": "...芝藥以千數。是歲旱。於是天子既出毋名，乃禱萬里沙，過祠泰山。",
+      "after_context": "還至瓠子，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄧展曰：「泰山自東復有小泰山。」瓚曰：「即今之泰山。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n175",
+      "anchor_text": "還至瓠子，",
+      "before_context": "...。是歲旱。於是天子既出毋名，乃禱萬里沙，過祠泰山。還至瓠子，",
+      "after_context": "自臨塞決河，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「瓠子，隄名。」蘇林曰：「在甄城以南，濮陽以北，廣百步，深五丈所。」瓚曰：「所決河名。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "瓠子，決河名。蘇林曰：「在甄城南，濮陽北，廣百步，深五丈。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n176",
+      "anchor_text": "自臨塞決河，",
+      "before_context": "...是天子既出毋名，乃禱萬里沙，過祠泰山。還至瓠子，自臨塞決河，",
+      "after_context": "留二日，沈祠而去。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：河渠書武帝自臨塞決河，將軍已下皆負薪也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n177",
+      "anchor_text": "留二日，沈祠而去。",
+      "before_context": "...禱萬里沙，過祠泰山。還至瓠子，自臨塞決河，留二日，沈祠而去。",
+      "after_context": "使二卿將卒塞決河，河徙二渠，復禹之故跡焉。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：沈白馬祭河決，於是作瓠子歌，見河渠書。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n178",
+      "anchor_text": "是時既滅南越，越人勇之",
+      "before_context": "是時既滅南越，越人勇之",
+      "after_context": "乃言「越人俗信鬼，而其祠皆見鬼，數有效。昔東甌王敬鬼，壽至百...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「越地人名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n179",
       "anchor_text": "，安臺無壇，亦祠天神上帝百鬼，而以雞卜。",
       "before_context": "...」。乃令越巫立越祝祠，安臺無壇，亦祠天神上帝百鬼，而以雞卜。",
       "after_context": "上信之，越祠雞卜始用焉。",
@@ -1225,35 +2718,115 @@
       "sentence_id": null
     },
     {
-      "id": "n083",
+      "id": "n180",
+      "anchor_text": "常遽，以故不見。今陛下可爲觀，如緱氏城，",
+      "before_context": "...：「僊人可見，而上往常遽，以故不見。今陛下可爲觀，如緱氏城，",
+      "after_context": "置脯棗，神人宜可致。且僊人好樓居。」於是上令長安則作蜚廉桂觀...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「如猶比也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n181",
+      "anchor_text": "僊人好樓居。」於是上令長安則作蜚廉桂觀，",
+      "before_context": "...脯棗，神人宜可致。且僊人好樓居。」於是上令長安則作蜚廉桂觀，",
+      "after_context": "甘泉則作益延壽觀，使卿持節設具而候神人，乃作通天臺，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「飛廉神禽，能致風氣。」晉灼曰：「身如鹿，頭如雀，有角而蛇尾，文如豹文也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n182",
       "anchor_text": "壽觀，使卿持節設具而候神人，乃作通天臺，",
       "before_context": "...廉桂觀，甘泉則作益延壽觀，使卿持節設具而候神人，乃作通天臺，",
-      "after_context": "置祠具其下，將招來神僊之屬。於是甘泉更置前殿，始廣諸宮室。夏...",
+      "after_context": "置祠具其下，將招來神僊之屬。於是甘泉更置前殿，始廣諸宮室。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「在甘泉。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作通天臺於甘泉宮。案：《漢書》舊儀臺高三十丈，去長安二百里，望見長安城也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n084",
+      "id": "n183",
+      "anchor_text": "神僊之屬。於是甘泉更置前殿，始廣諸宮室。",
+      "before_context": "...，置祠具其下，將招來神僊之屬。於是甘泉更置前殿，始廣諸宮室。",
+      "after_context": "夏，有芝生殿防內中。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "姚氏案：「楊雄云甘泉本因秦離宮，既奢泰，武帝增通天臺、迎風宮，近則有洪崖、儲胥，遠則石關、封巒、鳷鵲、露寒、棠棃等觀，又有高華、溫德觀、曾成宮、白虎、走狗、天梯、瑤臺、仙人、弩法、相思觀。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n184",
       "anchor_text": "夏，有芝生殿防內中。",
       "before_context": "...神僊之屬。於是甘泉更置前殿，始廣諸宮室。夏，有芝生殿防內中。",
-      "after_context": "天子爲塞河，興通天臺，若有光云，乃下詔曰：「甘泉防生芝九莖，",
+      "after_context": "天子爲塞河，興通天臺，若有光云，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「元封二年也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "芝生殿房中。案：生芝九莖，於是作芝房歌。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n085",
+      "id": "n185",
+      "anchor_text": "天子爲塞河，興通天臺，若有光云，",
+      "before_context": "...諸宮室。夏，有芝生殿防內中。天子爲塞河，興通天臺，若有光云，",
+      "after_context": "乃下詔曰：「甘泉防生芝九莖，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「爲此作事而有光應。」瓚曰：「作通天臺也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n186",
+      "anchor_text": "乃下詔曰：「甘泉防生芝九莖，",
+      "before_context": "...天子爲塞河，興通天臺，若有光云，乃下詔曰：「甘泉防生芝九莖，",
+      "after_context": "赦天下，毋有復作。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「芝，芝草也，其葉相連。」如淳曰：「瑞應圖云王者敬事耆老，不失舊故，則芝草生。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n187",
       "anchor_text": "時封則天旱，乾封",
       "before_context": "其明年，伐朝鮮。夏，旱。公孫卿曰：「黃帝時封則天旱，乾封",
       "after_context": "三年。」上乃下詔曰：「天旱，意乾封乎？其令天下尊祠靈星焉。」",
@@ -1272,9 +2845,9 @@
       "sentence_id": null
     },
     {
-      "id": "n086",
+      "id": "n188",
       "anchor_text": "「天旱，意乾封乎？其令天下尊祠靈星焉。」",
-      "before_context": "三年。」上乃下詔曰：「天旱，意乾封乎？其令天下尊祠靈星焉。」",
+      "before_context": "...三年。」上乃下詔曰：「天旱，意乾封乎？其令天下尊祠靈星焉。」",
       "after_context": "",
       "items": [
         {
@@ -1286,7 +2859,175 @@
       "sentence_id": null
     },
     {
-      "id": "n087",
+      "id": "n189",
+      "anchor_text": "其明年，上郊雍，通回中道，巡之。",
+      "before_context": "其明年，上郊雍，通回中道，巡之。",
+      "after_context": "春，至鳴澤，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「在扶風汧縣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n190",
+      "anchor_text": "春，至鳴澤，",
+      "before_context": "其明年，上郊雍，通回中道，巡之。春，至鳴澤，",
+      "after_context": "從西河歸。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「鳴澤，澤名也，在涿郡遒縣北界。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n191",
+      "anchor_text": "其明年冬，上巡南郡，",
+      "before_context": "其明年冬，上巡南郡，",
+      "after_context": "至江陵而東。登禮潛之天柱山，號曰南嶽。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「元封五年。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n192",
+      "anchor_text": "至江陵而東。登禮潛之天柱山，號曰南嶽。",
+      "before_context": "其明年冬，上巡南郡，至江陵而東。登禮潛之天柱山，號曰南嶽。",
+      "after_context": "浮江，自尋陽出樅陽，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「潛縣屬廬江。南嶽，霍山也。」文穎曰：「天柱山在潛縣南，有祠。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n193",
+      "anchor_text": "浮江，自尋陽出樅陽，",
+      "before_context": "...，至江陵而東。登禮潛之天柱山，號曰南嶽。浮江，自尋陽出樅陽，",
+      "after_context": "過彭蠡，祀其名山川。北至琅邪，並海上。四月中，至奉高脩封焉。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《地理志》廬江有樅陽縣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n194",
+      "anchor_text": "欲治明堂奉高旁，未曉其制度。濟南人公玊帶",
+      "before_context": "...明堂處，處險不敞。上欲治明堂奉高旁，未曉其制度。濟南人公玊帶",
+      "after_context": "上黃帝時明堂圖。明堂圖中有一殿，四面無壁，以茅蓋，通水，圜宮...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "玊，或作「肅」。公玊，姓；帶，名。姚氏按：風俗通齊湣王臣有公玊冄，其後也，音語錄反。三輔決錄云杜陵有玊氏，音肅。說文以爲從玊，音「畜牧」之「畜」。今讀公玊與決錄音同。然二姓單複有異，單姓者肅，後漢司徒玊況是其後也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n195",
+      "anchor_text": "宮垣爲複道，上有樓，從西南入，命曰昆侖，",
+      "before_context": "...壁，以茅蓋，通水，圜宮垣爲複道，上有樓，從西南入，命曰昆侖，",
+      "after_context": "天子從之入，以拜祠上帝焉。於是上令奉高作明堂汶上，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "玊帶明堂圖中爲複道，有樓從西南入，名其道曰崑崙。言其似崑崙山之五城十二樓，故名之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n196",
+      "anchor_text": "，以拜祠上帝焉。於是上令奉高作明堂汶上，",
+      "before_context": "...命曰昆侖，天子從之入，以拜祠上帝焉。於是上令奉高作明堂汶上，",
+      "after_context": "如帶圖。及五年脩封，則祠泰一、五帝於明堂上坐，令高皇帝祠坐對...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「在元封二年秋。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n197",
+      "anchor_text": "，以十一月甲子朔旦冬至日祠上帝明堂，",
+      "before_context": "...曆者以本統。天子親至泰山，以十一月甲子朔旦冬至日祠上帝明堂，",
+      "after_context": "每脩封禪。其贊饗曰：「天增授皇帝泰元神筴，周而復始。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「常五年一脩耳。今適二年，故但祀明堂。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n198",
+      "anchor_text": "贊饗曰：「天增授皇帝泰元神筴，周而復始。",
+      "before_context": "...帝明堂，每脩封禪。其贊饗曰：「天增授皇帝泰元神筴，周而復始。",
+      "after_context": "皇帝敬拜泰一。」東至海上，考入海及方士求神者，莫驗，然益遣，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：薦饗之辭言天授皇帝泰元神筴，周而復始。又案：上黃帝得寶鼎神筴，則太古上皇創曆之號，故此云太元神筴，周而復始也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n199",
+      "anchor_text": "十一月乙酉，",
+      "before_context": "十一月乙酉，",
+      "after_context": "柏梁烖。十二月甲午朔，上親禪高里，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「二十二日也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n200",
+      "anchor_text": "柏梁烖。十二月甲午朔，上親禪高里，",
+      "before_context": "十一月乙酉，柏梁烖。十二月甲午朔，上親禪高里，",
+      "after_context": "祠后土。臨渤海，將以望祠蓬萊之屬，冀至殊庭焉。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "伏儼曰：「山名，在泰山下。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n201",
       "anchor_text": "。臨渤海，將以望祠蓬萊之屬，冀至殊庭焉。",
       "before_context": "...，上親禪高里，祠后土。臨渤海，將以望祠蓬萊之屬，冀至殊庭焉。",
       "after_context": "",
@@ -1295,15 +3036,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「蓬萊庭。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "冀，《漢書》作「幾」。幾，近也；冀，望也，亦通。服虔曰：「蓬萊中仙人。殊庭者，異也。言入仙人異域也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n088",
+      "id": "n202",
       "anchor_text": "上還，以柏梁烖故，朝受計甘泉。",
       "before_context": "上還，以柏梁烖故，朝受計甘泉。",
-      "after_context": "公孫卿曰：「黃帝",
+      "after_context": "公孫卿曰：「黃帝就青靈臺，十二日燒，",
       "items": [
         {
           "source": "zhengyi",
@@ -1314,10 +3060,24 @@
       "sentence_id": null
     },
     {
-      "id": "n089",
+      "id": "n203",
+      "anchor_text": "就青靈臺，十二日燒，",
+      "before_context": "...以柏梁烖故，朝受計甘泉。公孫卿曰：「黃帝就青靈臺，十二日燒，",
+      "after_context": "黃帝乃治明庭。明庭，甘泉也。」方士多言古帝王有都甘泉者。其後...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「日，一作『月』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n204",
       "anchor_text": "復起屋必以大，用勝服之。」於是作建章宮，",
       "before_context": "...乃曰：「越俗有火烖，復起屋必以大，用勝服之。」於是作建章宮，",
-      "after_context": "度爲千門萬戶。前殿度高未央，其東則鳳闕，高二十餘丈。其西則唐...",
+      "after_context": "度爲千門萬戶。前殿度高未央，其東則鳳闕，高二十餘丈。",
       "items": [
         {
           "source": "zhengyi",
@@ -1328,10 +3088,38 @@
       "sentence_id": null
     },
     {
-      "id": "n090",
+      "id": "n205",
+      "anchor_text": "。前殿度高未央，其東則鳳闕，高二十餘丈。",
+      "before_context": "...建章宮，度爲千門萬戶。前殿度高未央，其東則鳳闕，高二十餘丈。",
+      "after_context": "其西則唐中，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《三輔黃圖》云「武帝營建章，起鳳闕，高三十五丈」。《關中記》「一名別風，言別四方之風」。西京賦曰「閶闔之內，別風嶕嶢」也。三輔故事云「北有圜闕，高二十丈，上有銅鳳皇，故曰鳳闕也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n206",
+      "anchor_text": "其西則唐中，",
+      "before_context": "...千門萬戶。前殿度高未央，其東則鳳闕，高二十餘丈。其西則唐中，",
+      "after_context": "數十里虎圈。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳云：「《詩》云『中唐有甓』。鄭玄曰『唐，堂庭也』。《爾雅》以廟中路謂之唐。西京賦曰『前開唐中，彌望廣象』是也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n207",
       "anchor_text": "數十里虎圈。",
       "before_context": "...殿度高未央，其東則鳳闕，高二十餘丈。其西則唐中，數十里虎圈。",
-      "after_context": "其北治大池，漸臺高二十餘丈，名曰泰液池，中有蓬萊、方丈、瀛洲...",
+      "after_context": "其北治大池，漸臺",
       "items": [
         {
           "source": "zhengyi",
@@ -1342,10 +3130,10 @@
       "sentence_id": null
     },
     {
-      "id": "n091",
+      "id": "n208",
       "anchor_text": "其北治大池，漸臺",
       "before_context": "...則鳳闕，高二十餘丈。其西則唐中，數十里虎圈。其北治大池，漸臺",
-      "after_context": "高二十餘丈，名曰泰液池，中有蓬萊、方丈、瀛洲、壺梁，象海中神...",
+      "after_context": "高二十餘丈，名曰泰液",
       "items": [
         {
           "source": "zhengyi",
@@ -1356,10 +3144,10 @@
       "sentence_id": null
     },
     {
-      "id": "n092",
+      "id": "n209",
       "anchor_text": "高二十餘丈，名曰泰液",
-      "before_context": "其西則唐中，數十里虎圈。其北治大池，漸臺高二十餘丈，名曰泰液",
-      "after_context": "池，中有蓬萊、方丈、瀛洲、壺梁，象海中神山龜魚之屬。其南有玉...",
+      "before_context": "...其西則唐中，數十里虎圈。其北治大池，漸臺高二十餘丈，名曰泰液",
+      "after_context": "池，中有蓬萊、方丈、瀛洲、壺梁，象海中神山龜魚之屬。",
       "items": [
         {
           "source": "zhengyi",
@@ -1370,7 +3158,161 @@
       "sentence_id": null
     },
     {
-      "id": "n093",
+      "id": "n210",
+      "anchor_text": "、方丈、瀛洲、壺梁，象海中神山龜魚之屬。",
+      "before_context": "...名曰泰液池，中有蓬萊、方丈、瀛洲、壺梁，象海中神山龜魚之屬。",
+      "after_context": "其南有玉堂、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "三輔故事云：「殿北海池北岸有石魚，長二丈，廣五尺，西岸有石龜二枚，各長六尺。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n211",
+      "anchor_text": "其南有玉堂、",
+      "before_context": "...中有蓬萊、方丈、瀛洲、壺梁，象海中神山龜魚之屬。其南有玉堂、",
+      "after_context": "璧門、大鳥之屬。乃立神明臺、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "其南則玉堂。漢武故事「玉堂基與未央前殿等，去地十二丈」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n212",
+      "anchor_text": "璧門、大鳥之屬。乃立神明臺、",
+      "before_context": "...象海中神山龜魚之屬。其南有玉堂、璧門、大鳥之屬。乃立神明臺、",
+      "after_context": "井幹樓，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "漢宮闕疏云：「臺高五十丈，上有九宮，常置九天道士百人也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n213",
+      "anchor_text": "井幹樓，",
+      "before_context": "...山龜魚之屬。其南有玉堂、璧門、大鳥之屬。乃立神明臺、井幹樓，",
+      "after_context": "度五十餘丈，輦道相屬焉。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《關中記》「宮北有井幹臺，高五十丈，積木爲樓」。言築累萬木，轉相交架，如井幹。司馬彪注莊子云「井幹，井闌也」。又崔譔云「井以四邊爲幹，猶築牆之有楨幹」又諸本多作「幹」，一本作「榦」，音〔韓〕。說文云「幹，井橋」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n214",
+      "anchor_text": "夏，漢改曆，以正月爲歲首，而色上黃，官名",
+      "before_context": "夏，漢改曆，以正月爲歲首，而色上黃，官名",
+      "after_context": "更印章以五字。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一無『名』字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n215",
+      "anchor_text": "更印章以五字。",
+      "before_context": "夏，漢改曆，以正月爲歲首，而色上黃，官名更印章以五字。",
+      "after_context": "因爲太初元年。是歲，西伐大宛。蝗大起。丁夫人、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「漢據土德，土數五，故用五爲印文也。若丞相曰『丞相之印章』，諸卿及守相印文不足五字者，以『之』足也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n216",
+      "anchor_text": "初元年。是歲，西伐大宛。蝗大起。丁夫人、",
+      "before_context": "...更印章以五字。因爲太初元年。是歲，西伐大宛。蝗大起。丁夫人、",
+      "after_context": "雒陽虞初等以方祠詛匈奴、大宛焉。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「丁，姓；夫人，名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n217",
+      "anchor_text": "芳不備。乃命祠官進畤犢牢具，五色食所勝，",
+      "before_context": "...言雍五畤無牢熟具，芬芳不備。乃命祠官進畤犢牢具，五色食所勝，",
+      "after_context": "而以木禺馬",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟康曰：「若火勝金，則祠赤帝以白牡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n218",
+      "anchor_text": "而以木禺馬",
+      "before_context": "...牢熟具，芬芳不備。乃命祠官進畤犢牢具，五色食所勝，而以木禺馬",
+      "after_context": "代駒焉。獨五帝用駒，行親郊用駒。及諸名山川用駒者，悉以木禺馬...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "木耦馬。一音偶。孟云「寓寄龍形于木」。又姚氏云「寓，叚也。以言叚木龍馬一駟，非寄生龍馬形於木也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n219",
+      "anchor_text": "時爲五城十二樓，",
+      "before_context": "...巡海上，考神僊之屬，未有驗者。方士有言「黃帝時爲五城十二樓，",
+      "after_context": "以候神人於執期，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「崑崙玄圃五城十二樓，此仙人之所常居也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n220",
+      "anchor_text": "以候神人於執期，",
+      "before_context": "...屬，未有驗者。方士有言「黃帝時爲五城十二樓，以候神人於執期，",
+      "after_context": "命曰迎年」。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「執期，地名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n221",
       "anchor_text": "命曰迎年」。",
       "before_context": "...。方士有言「黃帝時爲五城十二樓，以候神人於執期，命曰迎年」。",
       "after_context": "上許作之如方，名曰明年。上親禮祠上帝，衣上黃焉。",
@@ -1384,10 +3326,24 @@
       "sentence_id": null
     },
     {
-      "id": "n094",
+      "id": "n222",
+      "anchor_text": "、封鉅、",
+      "before_context": "公玊帶曰：「黃帝時雖封泰山，然風后、封鉅、",
+      "after_context": "岐伯",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「封鉅，黃帝師。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n223",
       "anchor_text": "岐伯",
       "before_context": "公玊帶曰：「黃帝時雖封泰山，然風后、封鉅、岐伯",
-      "after_context": "令黃帝",
+      "after_context": "令黃帝封東泰山，",
       "items": [
         {
           "source": "zhengyi",
@@ -1398,15 +3354,90 @@
       "sentence_id": null
     },
     {
-      "id": "n095",
+      "id": "n224",
+      "anchor_text": "，",
+      "before_context": "...玊帶曰：「黃帝時雖封泰山，然風后、封鉅、岐伯令黃帝封東泰山，",
+      "after_context": "禪凡山",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「在琅邪朱虛縣，汶水所出。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n225",
+      "anchor_text": "禪凡山",
+      "before_context": "...：「黃帝時雖封泰山，然風后、封鉅、岐伯令黃帝封東泰山，禪凡山",
+      "after_context": "合符，然後不死焉。」天子既令設祠具，至東泰山，東泰山卑小，不...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「凡山亦在朱虛。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n226",
+      "anchor_text": "脩封，",
+      "before_context": "其後五年，復至泰山脩封，",
+      "after_context": "還過祭常山。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「天漢三年。李陵以天漢二年敗也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n227",
       "anchor_text": "及三一、冥羊、馬行、赤星，五，寬舒之祠官",
       "before_context": "...五年一脩封。薄忌泰一及三一、冥羊、馬行、赤星，五，寬舒之祠官",
-      "after_context": "以歲時致禮。凡六祠，皆太祝領之。至如八神諸神，明年、凡山他名...",
+      "after_context": "以歲時致禮。凡六祠，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "李奇曰：「祀名也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "赤星即上靈星祠也。靈星，龍左角，其色赤，故曰赤星。五者，太一也。三一也，冥羊也，馬行也，赤星也。凡五，並祠官寬舒領之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n228",
+      "anchor_text": "以歲時致禮。凡六祠，",
+      "before_context": "...及三一、冥羊、馬行、赤星，五，寬舒之祠官以歲時致禮。凡六祠，",
+      "after_context": "皆太祝領之。至如八神諸神，明年、凡山他名祠，行過則祀，去則已...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂五者之外有正太一后土祠，故六也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n229",
+      "anchor_text": "此之後，方士言祠神者彌眾，然其效可睹矣。",
+      "before_context": "...縻弗絕，冀遇其真。自此之後，方士言祠神者彌眾，然其效可睹矣。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「猶今人云『其事已可知矣』，皆不信之耳。又數本皆無『可』字。」"
         }
       ],
       "sentence_id": null

@@ -3,9 +3,23 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "阳陵侯",
+      "before_context": "阳陵侯",
+      "after_context": "傅宽，以魏五大夫骑将从，为舍人，起横阳。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《地理志》云冯翊阳陵县。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "傅宽，以魏五大夫骑将从，为舍人，起横阳。",
       "before_context": "阳陵侯傅宽，以魏五大夫骑将从，为舍人，起横阳。",
-      "after_context": "从攻安阳",
+      "after_context": "从攻安阳、",
       "items": [
         {
           "source": "suoyin",
@@ -21,10 +35,10 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
       "anchor_text": "、",
       "before_context": "阳陵侯傅宽，以魏五大夫骑将从，为舍人，起横阳。从攻安阳、",
-      "after_context": "杠里，击赵贲军于开封，及击杨熊曲遇、阳武，斩首十二级，赐爵卿...",
+      "after_context": "杠里，击赵贲军于开封，及击杨熊曲遇、",
       "items": [
         {
           "source": "zhengyi",
@@ -35,10 +49,10 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
       "anchor_text": "杠里，击赵贲军于开封，及击杨熊曲遇、",
       "before_context": "...舍人，起横阳。从攻安阳、杠里，击赵贲军于开封，及击杨熊曲遇、",
-      "after_context": "阳武，斩首十二级，赐爵卿。从至霸上。沛公立为汉王，汉王赐宽封...",
+      "after_context": "阳武，",
       "items": [
         {
           "source": "zhengyi",
@@ -49,7 +63,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n005",
       "anchor_text": "阳武，",
       "before_context": "...起横阳。从攻安阳、杠里，击赵贲军于开封，及击杨熊曲遇、阳武，",
       "after_context": "斩首十二级，赐爵卿。从至霸上。沛公立为汉王，汉王赐宽封号共德...",
@@ -63,10 +77,24 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n006",
+      "anchor_text": "霸上。沛公立为汉王，汉王赐宽封号共德君。",
+      "before_context": "...十二级，赐爵卿。从至霸上。沛公立为汉王，汉王赐宽封号共德君。",
+      "after_context": "从入汉中，迁为右骑将。从定三秦，赐食邑雕阴。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓美号耳，非地邑。共音恭。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
       "anchor_text": "汉中，迁为右骑将。从定三秦，赐食邑雕阴。",
       "before_context": "...赐宽封号共德君。从入汉中，迁为右骑将。从定三秦，赐食邑雕阴。",
-      "after_context": "从击项籍，待怀，赐爵通德侯。从击项冠、周兰、龙且，所将卒斩骑...",
+      "after_context": "从击项籍，待怀，",
       "items": [
         {
           "source": "jijie",
@@ -87,21 +115,68 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n008",
       "anchor_text": "从击项籍，待怀，",
-      "before_context": "从入汉中，迁为右骑将。从定三秦，赐食邑雕阴。从击项籍，待怀，",
-      "after_context": "赐爵通德侯。从击项冠、周兰、龙且，所将卒斩骑将一人敖下，益食...",
+      "before_context": "...从入汉中，迁为右骑将。从定三秦，赐食邑雕阴。从击项籍，待怀，",
+      "after_context": "赐爵通德侯。从击项冠、周兰、龙且，所将卒斩骑将一人敖下，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「待高帝于怀。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：服虔云「待高祖于怀县」。小颜案《地理志》，怀属河内，今怀州也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n009",
+      "anchor_text": "项冠、周兰、龙且，所将卒斩骑将一人敖下，",
+      "before_context": "...怀，赐爵通德侯。从击项冠、周兰、龙且，所将卒斩骑将一人敖下，",
+      "after_context": "益食邑。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「敖仓之下。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
+      "anchor_text": "属淮阴，",
+      "before_context": "属淮阴，",
+      "after_context": "击破齐历下军，击田解。属相国参，残博，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "张晏云：「信时为相国，云『淮阴』者，终言之也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
+      "anchor_text": "击破齐历下军，击田解。属相国参，残博，",
+      "before_context": "属淮阴，击破齐历下军，击田解。属相国参，残博，",
+      "after_context": "益食邑。因定齐地，剖符世世勿绝，封为阳陵侯，二千六百户，除前...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "博，太山县也。顾秘监云：「属曹参，以残破博县也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
       "anchor_text": "二千六百户，除前所食。为齐右丞相，备齐。",
       "before_context": "...世勿绝，封为阳陵侯，二千六百户，除前所食。为齐右丞相，备齐。",
       "after_context": "五岁为齐相国。",
@@ -120,7 +195,7 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n013",
       "anchor_text": "五岁为齐相国。",
       "before_context": "...陵侯，二千六百户，除前所食。为齐右丞相，备齐。五岁为齐相国。",
       "after_context": "",
@@ -134,7 +209,7 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n014",
       "anchor_text": "国代丞相哙击豨。一月，徙为代相国，将屯。",
       "before_context": "...陈豨，属太尉勃，以相国代丞相哙击豨。一月，徙为代相国，将屯。",
       "after_context": "二岁，为代丞相，将屯。",
@@ -143,15 +218,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「既为相国，有警则将卒而屯守也。」案：律谓勒兵而守曰屯。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "如淳云：「汉初诸王官属如汉朝，故代有丞相。」案：孔文祥云「边郡有屯兵，宽为代相国兼领屯兵，后因置将屯将军也」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n015",
+      "anchor_text": "信武侯靳歙，",
+      "before_context": "信武侯靳歙，",
+      "after_context": "以中涓从，起宛朐。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "歙音「翕然」之「翕」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "以中涓从，起宛朐。",
       "before_context": "信武侯靳歙，以中涓从，起宛朐。",
-      "after_context": "攻济阳。破李由军。击秦军亳南、开封东北，斩骑千人将一人，首五...",
+      "after_context": "攻济阳。",
       "items": [
         {
           "source": "zhengyi",
@@ -162,10 +256,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n017",
       "anchor_text": "攻济阳。",
       "before_context": "信武侯靳歙，以中涓从，起宛朐。攻济阳。",
-      "after_context": "破李由军。击秦军亳南、开封东北，斩骑千人将一人，首五十七级，...",
+      "after_context": "破李由军。击秦军亳南、开封东北，斩骑千人将一人，",
       "items": [
         {
           "source": "zhengyi",
@@ -176,21 +270,68 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
-      "anchor_text": "丘，去击反者王武等。略梁地，别将击邢说军",
-      "before_context": "彭城。汉军败还，保雍丘，去击反者王武等。略梁地，别将击邢说军",
-      "after_context": "菑南，破之，身得说都尉二人，司马、候十二人，降吏卒四千一百八...",
+      "id": "n018",
+      "anchor_text": "。击秦军亳南、开封东北，斩骑千人将一人，",
+      "before_context": "...朐。攻济阳。破李由军。击秦军亳南、开封东北，斩骑千人将一人，",
+      "after_context": "首五十七级，捕虏七十三人，赐爵封号临平君。又战蓝田北，斩车司...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "张晏曰：「特起兵者也。说音悦。」"
+          "text": "徐广曰：「将，一作『候』。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n019",
+      "anchor_text": "爵封号临平君。又战蓝田北，斩车司马二人，",
+      "before_context": "...级，捕虏七十三人，赐爵封号临平君。又战蓝田北，斩车司马二人，",
+      "after_context": "骑长一人，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "张晏曰：「主官车。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "骑长一人，",
+      "before_context": "...十三人，赐爵封号临平君。又战蓝田北，斩车司马二人，骑长一人，",
+      "after_context": "首二十八级，捕虏五十七人。至霸上。沛公立为汉王，赐歙爵建武侯...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "张晏曰：「骑之长。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "丘，去击反者王武等。略梁地，别将击邢说军",
+      "before_context": "...彭城。汉军败还，保雍丘，去击反者王武等。略梁地，别将击邢说军",
+      "after_context": "菑南，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "张晏曰：「特起兵者也。说音悦。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "邢，姓。说，名，音悦。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
       "anchor_text": "菑南，",
       "before_context": "...汉军败还，保雍丘，去击反者王武等。略梁地，别将击邢说军菑南，",
       "after_context": "破之，身得说都尉二人，司马、候十二人，降吏卒四千一百八十人。...",
@@ -199,29 +340,39 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「今曰考城。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "上音灾。今为考城，属济阴也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n023",
       "anchor_text": "别之河内，击赵将贲郝军",
       "before_context": "别之河内，击赵将贲郝军",
-      "after_context": "朝歌，破之，所将卒得骑将二人，车马二百五十匹。从攻安阳",
+      "after_context": "朝歌，破之，所将卒得骑将二人，车马二百五十匹。从攻安阳以东，...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "上音肥，下音释。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《汉书》作「赵贲军」。案：此在河北，非曹参、樊哙之所击也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n024",
       "anchor_text": "降吏卒二千四百人。从攻下邯郸。别下平阳，",
       "before_context": "...将司马二人，候四人，降吏卒二千四百人。从攻下邯郸。别下平阳，",
-      "after_context": "身斩守相，所将卒斩兵守、郡守各一人，降邺。从攻朝歌、邯郸，及...",
+      "after_context": "身斩守相，所将卒斩兵守、郡守各一人，",
       "items": [
         {
           "source": "jijie",
@@ -237,10 +388,38 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n025",
+      "anchor_text": "身斩守相，所将卒斩兵守、郡守各一人，",
+      "before_context": "...。从攻下邯郸。别下平阳，身斩守相，所将卒斩兵守、郡守各一人，",
+      "after_context": "降邺。从攻朝歌、邯郸，及别击破赵军，降邯郸郡六县。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟康曰：「将兵郡守。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "朝歌、邯郸，及别击破赵军，降邯郸郡六县。",
+      "before_context": "...守各一人，降邺。从攻朝歌、邯郸，及别击破赵军，降邯郸郡六县。",
+      "after_context": "还军敖仓，破项籍军成皋南，击绝楚𫗵道，起荥阳至襄邑。破项冠军...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「邯郸，高帝改曰赵国。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "击绝楚𫗵道，起荥阳至襄邑。破项冠军鲁下。",
       "before_context": "...仓，破项籍军成皋南，击绝楚𫗵道，起荥阳至襄邑。破项冠军鲁下。",
-      "after_context": "略地东至缯、郯、下邳，南至蕲、竹邑。击项悍济阳下。还击项籍陈...",
+      "after_context": "略地东至缯、郯、下邳，",
       "items": [
         {
           "source": "zhengyi",
@@ -251,10 +430,10 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n028",
       "anchor_text": "略地东至缯、郯、下邳，",
       "before_context": "...绝楚𫗵道，起荥阳至襄邑。破项冠军鲁下。略地东至缯、郯、下邳，",
-      "after_context": "南至蕲、竹邑。击项悍济阳下。还击项籍陈下，破之。别定江陵，降...",
+      "after_context": "南至蕲、竹邑。",
       "items": [
         {
           "source": "suoyin",
@@ -270,7 +449,77 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n029",
+      "anchor_text": "南至蕲、竹邑。",
+      "before_context": "...阳至襄邑。破项冠军鲁下。略地东至缯、郯、下邳，南至蕲、竹邑。",
+      "after_context": "击项悍济阳下。还击项籍陈下，破之。别定江陵，降江陵柱国、大司...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "蕲，竹，二邑名。上音机。竹即竹邑。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "降江陵柱国、大司马以下八人，身得江陵王，",
+      "before_context": "...下，破之。别定江陵，降江陵柱国、大司马以下八人，身得江陵王，",
+      "after_context": "生致之雒阳，因定南郡。从至陈，取楚王信，剖符世世勿绝，定食四...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：孔文祥云「共敖子共尉」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "、齐、燕、楚车骑，别击陈豨丞相敞，破之，",
+      "before_context": "...车骑将军，并将梁、赵、齐、燕、楚车骑，别击陈豨丞相敞，破之，",
+      "after_context": "因降曲逆。从击黥布有功，益封定食五千三百户。凡斩首九十级，虏...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "小颜云侯敞。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "三；得王、柱国各一人，二千石以下至五百石",
+      "before_context": "...定郡、国各一，县二十三；得王、柱国各一人，二千石以下至五百石",
+      "after_context": "三十九人。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一本无此五字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "肃侯。子亭代侯。二十一年，坐事国人过律，",
+      "before_context": "高后五年，歙卒，谥为肃侯。子亭代侯。二十一年，坐事国人过律，",
+      "after_context": "孝文后三年，夺侯，国除。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：刘氏云「事，役使也。谓使人违律数多也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "蒯成侯𫄬者，",
       "before_context": "蒯成侯𫄬者，",
       "after_context": "沛人也，姓周氏。常为高祖参乘，以舍人从起沛。至霸上，西入蜀、...",
@@ -294,7 +543,7 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n035",
       "anchor_text": "至霸上，西入蜀、汉，还定三秦，食邑池阳。",
       "before_context": "...参乘，以舍人从起沛。至霸上，西入蜀、汉，还定三秦，食邑池阳。",
       "after_context": "东绝甬道，从出度平阴，遇淮阴侯兵襄国，军乍利乍不利，终无离上...",
@@ -308,10 +557,24 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n036",
+      "anchor_text": "淮阴侯兵襄国，军乍利乍不利，终无离上心。",
+      "before_context": "...甬道，从出度平阴，遇淮阴侯兵襄国，军乍利乍不利，终无离上心。",
+      "after_context": "以𫄬为信武侯，食邑三千三百户。高祖十二年，以𫄬为蒯成侯，除前...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「蒯成侯，表云遇淮阴侯军襄国，楚汉约分鸿沟，以𫄬为信武侯。战不利，不敢离上。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
       "anchor_text": "至孝文五年，𫄬以寿终，谥为贞侯。",
       "before_context": "至孝文五年，𫄬以寿终，谥为贞侯。",
-      "after_context": "子昌代侯，有罪，国除。至孝景中二年，封𫄬子居代侯。至元鼎三年...",
+      "after_context": "子昌代侯，有罪，国除。至孝景中二年，封𫄬子居代侯。",
       "items": [
         {
           "source": "zhengyi",
@@ -322,7 +585,7 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n038",
       "anchor_text": "有罪，国除。至孝景中二年，封𫄬子居代侯。",
       "before_context": "...谥为贞侯。子昌代侯，有罪，国除。至孝景中二年，封𫄬子居代侯。",
       "after_context": "至元鼎三年，居为太常，有罪，国除。",
@@ -331,6 +594,53 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「表云『孝景中元年，封𫄬子应为郸侯，谥康。中二年，侯居立』。沛郡有郓县。郓，一作『郸』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "郸，苏林音多，属陈国。《地理志》云沛郡有郸县。案：此文云「子居」，表云「子应」，不同也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
+      "anchor_text": "曰：阳陵侯傅宽、信武侯靳歙皆高爵，",
+      "before_context": "太史公曰：阳陵侯傅宽、信武侯靳歙皆高爵，",
+      "after_context": "从高祖起山东，攻项籍，诛杀名将，破军降城以十数，未尝困辱，此...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一无『高』字。又一本『皆从高祖』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "尝困辱，此亦天授也。蒯成侯周𫄬操心坚正，",
+      "before_context": "...，破军降城以十数，未尝困辱，此亦天授也。蒯成侯周𫄬操心坚正，",
+      "after_context": "身不见疑，上欲有所之，未尝不垂涕，此有伤心者",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "操音仓高反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
+      "anchor_text": "见疑，上欲有所之，未尝不垂涕，此有伤心者",
+      "before_context": "...侯周𫄬操心坚正，身不见疑，上欲有所之，未尝不垂涕，此有伤心者",
+      "after_context": "然，可谓笃厚君子矣。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「此，一作『比』。」"
         }
       ],
       "sentence_id": null

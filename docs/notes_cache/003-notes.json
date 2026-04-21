@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "殷契，",
       "before_context": "殷契，",
-      "after_context": "母曰简狄，有娀氏之女，为帝喾",
+      "after_context": "母曰简狄，",
       "items": [
         {
           "source": "suoyin",
@@ -22,9 +22,23 @@
     },
     {
       "id": "n002",
+      "anchor_text": "母曰简狄，",
+      "before_context": "殷契，母曰简狄，",
+      "after_context": "有娀氏之女，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "旧本作「易」，易狄音同。又作「逷」，吐历反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
       "anchor_text": "有娀氏之女，",
       "before_context": "殷契，母曰简狄，有娀氏之女，",
-      "after_context": "为帝喾",
+      "after_context": "为帝喾次妃。三人行浴，见玄鸟堕其卵，简狄取吞之，因孕生契。",
       "items": [
         {
           "source": "jijie",
@@ -40,10 +54,24 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
+      "anchor_text": "浴，见玄鸟堕其卵，简狄取吞之，因孕生契。",
+      "before_context": "...，为帝喾次妃。三人行浴，见玄鸟堕其卵，简狄取吞之，因孕生契。",
+      "after_context": "契长而佐禹治水有功。帝舜乃命契曰：「百姓不亲，五品不训，汝为...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谯周云：「契生尧代，舜始举之，必非喾子。以其父微，故不著名。其母娀氏女，与宗妇三人浴于川，玄鸟遗卵，简狄吞之，则简狄非帝喾次妃明也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "汝为司徒而敬敷五教，五教在宽。」封于商，",
       "before_context": "...百姓不亲，五品不训，汝为司徒而敬敷五教，五教在宽。」封于商，",
-      "after_context": "赐姓子氏。契兴于唐、虞、大禹之际，功业著于百姓，百姓以平。",
+      "after_context": "赐姓子氏。",
       "items": [
         {
           "source": "jijie",
@@ -64,7 +92,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n006",
       "anchor_text": "赐姓子氏。",
       "before_context": "...五品不训，汝为司徒而敬敷五教，五教在宽。」封于商，赐姓子氏。",
       "after_context": "契兴于唐、虞、大禹之际，功业著于百姓，百姓以平。",
@@ -83,10 +111,10 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n007",
       "anchor_text": "契卒，子昭明立。昭明卒，子相土立。",
       "before_context": "契卒，子昭明立。昭明卒，子相土立。",
-      "after_context": "相土卒，子昌若立。昌若卒，子曹圉立。曹圉卒，子冥立。冥卒，子...",
+      "after_context": "相土卒，子昌若立。昌若卒，子曹圉立。",
       "items": [
         {
           "source": "jijie",
@@ -107,10 +135,24 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n008",
+      "anchor_text": "相土卒，子昌若立。昌若卒，子曹圉立。",
+      "before_context": "...明立。昭明卒，子相土立。相土卒，子昌若立。昌若卒，子曹圉立。",
+      "after_context": "曹圉卒，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《系本》作「粮圉」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
       "anchor_text": "曹圉卒，",
       "before_context": "...明卒，子相土立。相土卒，子昌若立。昌若卒，子曹圉立。曹圉卒，",
-      "after_context": "子冥立。冥卒，子振立。振卒，子微立。微卒，子报丁立。报丁卒，...",
+      "after_context": "子冥立。",
       "items": [
         {
           "source": "zhengyi",
@@ -121,21 +163,54 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n010",
       "anchor_text": "子冥立。",
       "before_context": "...相土立。相土卒，子昌若立。昌若卒，子曹圉立。曹圉卒，子冥立。",
-      "after_context": "冥卒，子振立。振卒，子微立。微卒，子报丁立。报丁卒，子报乙立...",
+      "after_context": "冥卒，子振立。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "宋忠曰：「冥为司空，勤其官事，死于水中，殷人郊之。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《礼记》曰「冥勤其官而水死」，殷人祖契而郊冥也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n011",
+      "anchor_text": "冥卒，子振立。",
+      "before_context": "...，子昌若立。昌若卒，子曹圉立。曹圉卒，子冥立。冥卒，子振立。",
+      "after_context": "振卒，子微立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《系本》作「核」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "振卒，子微立。",
+      "before_context": "...若卒，子曹圉立。曹圉卒，子冥立。冥卒，子振立。振卒，子微立。",
+      "after_context": "微卒，子报丁立。报丁卒，子报乙立。报乙卒，子报丙立。报丙卒，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "皇甫谧云：「微字上甲，其母以甲日生故也。」商家生子，以日为名，盖自微始。谯周以为死称庙主曰「甲」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
       "anchor_text": "。",
       "before_context": "...卒，子主壬立。主壬卒，子主癸立。主癸卒，子天乙立，是为成汤。",
       "after_context": "",
@@ -144,15 +219,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "张晏曰：「禹，汤，皆字也。二王去唐、虞之文，从高阳之质，故夏、殷之王皆以名为号。」《谥法》曰：「除虐去残曰汤。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "汤名履，《书》曰「予小子履」是也。又称天乙者，谯周云「夏、殷之礼，生称王，死称庙主，皆以帝名配之。天亦帝也，殷人尊汤，故曰天乙」。从契至汤凡十四代，故《国语》曰「玄王勤商，十四代兴」。玄王，契也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n014",
+      "anchor_text": "，自契至汤八迁。",
+      "before_context": "成汤，自契至汤八迁。",
+      "after_context": "汤始居亳，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「十四世凡八徙国都。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
       "anchor_text": "汤始居亳，",
       "before_context": "成汤，自契至汤八迁。汤始居亳，",
-      "after_context": "从先王居，作帝诰。",
+      "after_context": "从先王居，",
       "items": [
         {
           "source": "jijie",
@@ -168,7 +262,7 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n016",
       "anchor_text": "从先王居，",
       "before_context": "成汤，自契至汤八迁。汤始居亳，从先王居，",
       "after_context": "作帝诰。",
@@ -187,7 +281,63 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n017",
+      "anchor_text": "作帝诰。",
+      "before_context": "成汤，自契至汤八迁。汤始居亳，从先王居，作帝诰。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "一作「俈」。上云「从先王居」，故作帝俈。孔安国以为作诰告先王，言己来居亳也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
+      "anchor_text": "汤征诸侯。",
+      "before_context": "汤征诸侯。",
+      "after_context": "葛伯不祀，汤始伐之。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「为夏方伯，得专征伐。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
+      "anchor_text": "葛伯不祀，汤始伐之。",
+      "before_context": "汤征诸侯。葛伯不祀，汤始伐之。",
+      "after_context": "汤曰：「予有言：人视水见形，视民知治不。」伊尹曰：「明哉！言...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孟子曰：「汤居亳，与葛伯为邻。」《地理志》曰葛今梁国宁陵之葛乡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "伊尹名阿衡。",
+      "before_context": "伊尹名阿衡。",
+      "after_context": "阿衡欲奸汤而无由，乃为有莘氏媵臣，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "孙子兵书：「伊尹名挚。」孔安国亦曰「伊挚」。然解者以阿衡为官名。按：阿，倚也，衡，平也。言依倚而取平。《书》曰「惟嗣王弗惠于阿衡」，亦曰保衡，皆伊尹之官号，非名也。皇甫谧曰：「伊尹，力牧之后，生于空桑。」又吕氏春秋云：「有侁氏女采桑，得婴儿于空桑，母居伊水，命曰伊尹。」尹，正也，谓汤使之正天下。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
       "anchor_text": "阿衡欲奸汤而无由，乃为有莘氏媵臣，",
       "before_context": "伊尹名阿衡。阿衡欲奸汤而无由，乃为有莘氏媵臣，",
       "after_context": "负鼎俎，以滋味说汤，致于王道。或曰，伊尹处士，汤使人聘迎之，...",
@@ -206,7 +356,7 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n022",
       "anchor_text": "之，五反然后肯往从汤，言素王及九主之事。",
       "before_context": "...伊尹处士，汤使人聘迎之，五反然后肯往从汤，言素王及九主之事。",
       "after_context": "汤举任以国政。伊尹去汤适夏。既丑有夏，复归于亳。入自北门，遇...",
@@ -215,12 +365,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "刘向《别录》曰：「九主者，有法君、专君、授君、劳君、等君、寄君、破君、国君、三岁社君，凡九品，图画其形。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：素王者太素上皇，其道质素，故称素王。九主者，三皇、五帝及夏禹也。或曰，九主谓九皇也。然按注刘向所称九主，载之七录，名称甚奇，不知所凭据耳。法君，谓用法严急之君，若秦孝公及始皇等也。劳君，谓勤劳天下，若禹、稷等也。等君，等者平也，谓定等威，均禄赏，若高祖封功臣，侯雍齿也。授君，谓人君不能自理，而政归其臣，若燕王哙授子之，禹授益之比也。专君，谓专己独断，不任贤臣，若汉宣之比也。破君，谓轻敌致寇，国灭君死，若楚戊、吴濞等是也。寄君，谓人困于下，主骄于上，离析可待，故孟轲谓之「寄君」也。国君，国当为「固」，字之讹耳。固，谓完城郭，利甲兵，而不修德，若三苗、智伯之类也。三岁社君，谓在襁褓而主社稷，若周成王、汉昭、平等是也。又注本九主，谓法君、劳君、等君、专君、授君、破君、国君，以三岁社君为二，恐非。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n023",
+      "anchor_text": "亳。入自北门，遇女鸠、女房，作女鸠女房。",
+      "before_context": "...夏。既丑有夏，复归于亳。入自北门，遇女鸠、女房，作女鸠女房。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「鸠房二人，汤之贤臣也。二篇言所以丑夏而还之意也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
       "anchor_text": "是时，夏桀为虐政淫荒，而诸侯昆吾氏为乱。",
       "before_context": "当是时，夏桀为虐政淫荒，而诸侯昆吾氏为乱。",
       "after_context": "汤乃兴师率诸侯，伊尹从汤，汤自把钺以伐昆吾，遂伐桀。汤曰：「...",
@@ -234,10 +403,136 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n025",
+      "anchor_text": "曰：「格女众庶，来，女悉听朕言。匪台小子",
+      "before_context": "...以伐昆吾，遂伐桀。汤曰：「格女众庶，来，女悉听朕言。匪台小子",
+      "after_context": "敢行举乱，有夏多罪，予维闻女众言，夏氏有罪。予畏上帝，不敢不...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "马融曰：「台，我也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "闻女众言，夏氏有罪。予畏上帝，不敢不正。",
+      "before_context": "...举乱，有夏多罪，予维闻女众言，夏氏有罪。予畏上帝，不敢不正。",
+      "after_context": "今夏多罪，天命殛之。今女有众，女曰『我君不恤我众，舍我啬事而...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「不敢不正桀之罪而诛之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
+      "anchor_text": "，女曰『我君不恤我众，舍我啬事而割政』。",
+      "before_context": "...，天命殛之。今女有众，女曰『我君不恤我众，舍我啬事而割政』。",
+      "after_context": "女其曰『有罪，其柰何』？夏王率止众力，率夺夏国。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「夺民农功，而为割剥之政。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
+      "anchor_text": "有罪，其柰何』？夏王率止众力，率夺夏国。",
+      "before_context": "...事而割政』。女其曰『有罪，其柰何』？夏王率止众力，率夺夏国。",
+      "after_context": "有众率怠不和，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「桀之君臣相率遏止众力，使不得事农，相率割剥夏之邑居。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "有众率怠不和，",
+      "before_context": "...其曰『有罪，其柰何』？夏王率止众力，率夺夏国。有众率怠不和，",
+      "after_context": "曰『是日何时丧？予与女皆亡』！",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "马融曰：「众民相率怠惰，不和同。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "曰『是日何时丧？予与女皆亡』！",
+      "before_context": "...众力，率夺夏国。有众率怠不和，曰『是日何时丧？予与女皆亡』！",
+      "after_context": "夏德若兹，今朕必往。尔尚及予一人致天之罚，予其大理女。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《尚书大传》曰：「桀云『天之有日，犹吾之有民，日有亡哉，日亡吾亦亡矣』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "必往。尔尚及予一人致天之罚，予其大理女。",
+      "before_context": "...亡』！夏德若兹，今朕必往。尔尚及予一人致天之罚，予其大理女。",
+      "after_context": "女毋不信，朕不食言。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《尚书》「理」字作「赉」。郑玄曰：「赉，赐也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "女毋不信，朕不食言。",
+      "before_context": "...必往。尔尚及予一人致天之罚，予其大理女。女毋不信，朕不食言。",
+      "after_context": "女不从誓言，予则帑僇女，无有攸赦。」以告令师，作汤誓。于是汤...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《左传》云：「食言多矣，能无肥乎？」是谓妄言为食言。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "，作汤誓。于是汤曰「吾甚武」，号曰武王。",
+      "before_context": "...无有攸赦。」以告令师，作汤誓。于是汤曰「吾甚武」，号曰武王。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《诗》云：「武王载旆，有虔秉钺。」毛传曰：「武王，汤也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "桀败于有娀之虚，桀犇于鸣条，",
       "before_context": "桀败于有娀之虚，桀犇于鸣条，",
-      "after_context": "夏师败绩。汤遂伐三㚇，俘厥宝玉，义伯、仲伯作典宝。汤既胜夏，...",
+      "after_context": "夏师败绩。汤遂伐三㚇，俘厥宝玉，",
       "items": [
         {
           "source": "zhengyi",
@@ -248,10 +543,10 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n035",
       "anchor_text": "夏师败绩。汤遂伐三㚇，俘厥宝玉，",
       "before_context": "桀败于有娀之虚，桀犇于鸣条，夏师败绩。汤遂伐三㚇，俘厥宝玉，",
-      "after_context": "义伯、仲伯作典宝。汤既胜夏，欲迁其社，不可，作夏社。伊尹报。",
+      "after_context": "义伯、仲伯作典宝。",
       "items": [
         {
           "source": "jijie",
@@ -267,10 +562,66 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n036",
+      "anchor_text": "义伯、仲伯作典宝。",
+      "before_context": "...犇于鸣条，夏师败绩。汤遂伐三㚇，俘厥宝玉，义伯、仲伯作典宝。",
+      "after_context": "汤既胜夏，欲迁其社，不可，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「二臣作典宝一篇，言国之常宝也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "汤既胜夏，欲迁其社，不可，",
+      "before_context": "...三㚇，俘厥宝玉，义伯、仲伯作典宝。汤既胜夏，欲迁其社，不可，",
+      "after_context": "作夏社。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「欲变置社稷，而后世无及句龙者，故不可而止。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
+      "anchor_text": "作夏社。",
+      "before_context": "...厥宝玉，义伯、仲伯作典宝。汤既胜夏，欲迁其社，不可，作夏社。",
+      "after_context": "伊尹报。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「言夏社不可迁之义。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
+      "anchor_text": "伊尹报。",
+      "before_context": "...义伯、仲伯作典宝。汤既胜夏，欲迁其社，不可，作夏社。伊尹报。",
+      "after_context": "于是诸侯毕服，汤乃践天子位，平定海内。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一云『伊尹报政』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
       "anchor_text": "汤归至于泰卷陶，",
       "before_context": "汤归至于泰卷陶，",
-      "after_context": "中𤳹作诰。既绌夏命，还亳，作汤诰：「维三月，王自至于东郊。告...",
+      "after_context": "中𤳹作诰。",
       "items": [
         {
           "source": "jijie",
@@ -291,49 +642,120 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n041",
       "anchor_text": "中𤳹作诰。",
       "before_context": "汤归至于泰卷陶，中𤳹作诰。",
-      "after_context": "既绌夏命，还亳，作汤诰：「维三月，王自至于东郊。告诸侯群后：...",
+      "after_context": "既绌夏命，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安国曰：「仲虺，汤左相奚仲之后。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "仲虺二音。𤳹作「垒」，音如字，《尚书》又作「虺」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n042",
+      "anchor_text": "既绌夏命，",
+      "before_context": "汤归至于泰卷陶，中𤳹作诰。既绌夏命，",
+      "after_context": "还亳，作汤诰：「维三月，王自至于东郊。告诸侯群后：『毋不有功...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「绌其王命。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
       "anchor_text": "播，农殖百谷。三公咸有功于民，故后有立。",
       "before_context": "...，万民乃有居。后稷降播，农殖百谷。三公咸有功于民，故后有立。",
-      "after_context": "昔蚩尤",
+      "after_context": "昔蚩尤与其大夫作乱百姓，帝乃弗予，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「一作『土』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓禹、皋陶有功于人，建立其后，故云有立。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n044",
+      "anchor_text": "与其大夫作乱百姓，帝乃弗予，",
+      "before_context": "...三公咸有功于民，故后有立。昔蚩尤与其大夫作乱百姓，帝乃弗予，",
+      "after_context": "有状。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "音与。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
+      "anchor_text": "有状。",
+      "before_context": "...有功于民，故后有立。昔蚩尤与其大夫作乱百姓，帝乃弗予，有状。",
+      "after_context": "先王言不可不勉。』",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "帝，天也。谓蚩尤作乱，上天乃不佑之，是为弗与。有状，言其罪大而有形状，故黄帝灭之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n046",
+      "anchor_text": "先王言不可不勉。』",
+      "before_context": "...。昔蚩尤与其大夫作乱百姓，帝乃弗予，有状。先王言不可不勉。』",
+      "after_context": "曰：『不道，毋之在国，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "先王指黄帝、帝尧、帝舜等言。禹、咎繇以久劳于外，故后有立。及蚩尤作乱，天不佑之，乃致黄帝灭之。皆是先王赏有功，诛有罪，言今汝不可不勉。此汤诫其臣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
       "anchor_text": "曰：『不道，毋之在国，",
       "before_context": "...姓，帝乃弗予，有状。先王言不可不勉。』曰：『不道，毋之在国，",
-      "after_context": "女毋我怨。』」以令诸侯。伊尹作咸有一德，咎单作明居。",
+      "after_context": "女毋我怨。』」以令诸侯。伊尹作咸有一德，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「之，一作『政』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "不道犹无道也。又诫诸侯云，汝为不道，我则无令汝之在国。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n048",
       "anchor_text": "女毋我怨。』」以令诸侯。伊尹作咸有一德，",
       "before_context": "...：『不道，毋之在国，女毋我怨。』」以令诸侯。伊尹作咸有一德，",
       "after_context": "咎单作明居。",
@@ -342,12 +764,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "王肃曰：「言君臣皆有一德。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：《尚书》伊尹作咸有一德在太甲时，太史公记之于斯，谓成汤之日，其言又失次序。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n049",
+      "anchor_text": "咎单作明居。",
+      "before_context": "...之在国，女毋我怨。』」以令诸侯。伊尹作咸有一德，咎单作明居。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "马融曰：「咎单，汤司空也。明居民之法也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n050",
       "anchor_text": "汤崩，",
       "before_context": "汤崩，",
       "after_context": "太子太丁未立而卒，于是迺立太丁之弟外丙，是为帝外丙。帝外丙即...",
@@ -371,10 +812,10 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n051",
       "anchor_text": "丙。帝外丙即位三年，崩，立外丙之弟中壬，",
       "before_context": "...丁之弟外丙，是为帝外丙。帝外丙即位三年，崩，立外丙之弟中壬，",
-      "after_context": "是为帝中壬。帝中壬即位四年，崩，伊尹迺立太丁之子太甲。太甲，",
+      "after_context": "是为帝中壬。帝中壬即位四年，崩，伊尹迺立太丁之子太甲。",
       "items": [
         {
           "source": "zhengyi",
@@ -385,10 +826,10 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n052",
       "anchor_text": "中壬即位四年，崩，伊尹迺立太丁之子太甲。",
       "before_context": "...中壬，是为帝中壬。帝中壬即位四年，崩，伊尹迺立太丁之子太甲。",
-      "after_context": "太甲，成汤",
+      "after_context": "太甲，成汤适长孙也，是为帝太甲。帝太甲元年，伊尹作伊训，作肆...",
       "items": [
         {
           "source": "zhengyi",
@@ -399,7 +840,21 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n053",
+      "anchor_text": "帝太甲元年，伊尹作伊训，作肆命，作徂后。",
+      "before_context": "...长孙也，是为帝太甲。帝太甲元年，伊尹作伊训，作肆命，作徂后。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "郑玄曰：「肆命者，陈政教所当为也。徂后者，言汤之法度也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
       "anchor_text": "虐，不遵汤法，乱德，于是伊尹放之于桐宫。",
       "before_context": "...甲既立三年，不明，暴虐，不遵汤法，乱德，于是伊尹放之于桐宫。",
       "after_context": "三年，伊尹摄行政当国，以朝诸侯。",
@@ -418,7 +873,7 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n055",
       "anchor_text": "丁立。帝沃丁之时，伊尹卒。既葬伊尹于亳，",
       "before_context": "太宗崩，子沃丁立。帝沃丁之时，伊尹卒。既葬伊尹于亳，",
       "after_context": "咎单遂训伊尹事，作沃丁。",
@@ -437,7 +892,35 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n056",
+      "anchor_text": "庚立，是为帝太庚。帝太庚崩，子帝小甲立。",
+      "before_context": "沃丁崩，弟太庚立，是为帝太庚。帝太庚崩，子帝小甲立。",
+      "after_context": "帝小甲崩，弟雍己立，是为帝雍己。殷道衰，诸侯或不至。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「世表云帝小甲，太庚弟也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n057",
+      "anchor_text": "弟太戊立，是为帝太戊。帝太戊立伊陟为相。",
+      "before_context": "帝雍己崩，弟太戊立，是为帝太戊。帝太戊立伊陟为相。",
+      "after_context": "亳有祥桑谷共生于朝，一暮大拱。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「伊陟，伊尹之子。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
       "anchor_text": "亳有祥桑谷共生于朝，一暮大拱。",
       "before_context": "...是为帝太戊。帝太戊立伊陟为相。亳有祥桑谷共生于朝，一暮大拱。",
       "after_context": "帝太戊惧，问伊陟。伊陟曰：「臣闻妖不胜德，帝之政其有阙与？帝...",
@@ -446,15 +929,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "孔安国曰：「祥，妖怪也。二木合生，不恭之罚。」郑玄曰：「两手搤之曰拱。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "此云「一暮大拱」，《尚书大传》作「七日大拱」，与此不同。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n059",
+      "anchor_text": "？帝其修德。」太戊从之，而祥桑枯死而去。",
+      "before_context": "...胜德，帝之政其有阙与？帝其修德。」太戊从之，而祥桑枯死而去。",
+      "after_context": "伊陟赞言于巫咸。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "刘伯庄言枯死而消去不见，今以为由帝修德而妖祥遂去。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n060",
       "anchor_text": "伊陟赞言于巫咸。",
       "before_context": "...阙与？帝其修德。」太戊从之，而祥桑枯死而去。伊陟赞言于巫咸。",
-      "after_context": "巫咸治王家有成，作咸艾，作太戊。帝太戊赞伊陟于庙，言弗臣，伊...",
+      "after_context": "巫咸治王家有成，作咸艾，",
       "items": [
         {
           "source": "jijie",
@@ -470,10 +972,38 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n061",
+      "anchor_text": "巫咸治王家有成，作咸艾，",
+      "before_context": "...之，而祥桑枯死而去。伊陟赞言于巫咸。巫咸治王家有成，作咸艾，",
+      "after_context": "作太戊。帝太戊赞伊陟于庙，言弗臣，伊陟让，作原命。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "马融曰：「艾，治也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n062",
+      "anchor_text": "太戊赞伊陟于庙，言弗臣，伊陟让，作原命。",
+      "before_context": "...，作咸艾，作太戊。帝太戊赞伊陟于庙，言弗臣，伊陟让，作原命。",
+      "after_context": "殷复兴，诸侯归之，故称中宗。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "马融曰：「原，臣名也。命原以禹、汤之道我所修也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n063",
       "anchor_text": "中宗崩，子帝中丁立。帝中丁迁于隞。",
       "before_context": "中宗崩，子帝中丁立。帝中丁迁于隞。",
-      "after_context": "河亶甲居相。祖乙迁于邢。帝中丁崩，弟外壬立，是为帝外壬。仲丁...",
+      "after_context": "河亶甲居相。",
       "items": [
         {
           "source": "jijie",
@@ -494,10 +1024,10 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n064",
       "anchor_text": "河亶甲居相。",
       "before_context": "中宗崩，子帝中丁立。帝中丁迁于隞。河亶甲居相。",
-      "after_context": "祖乙迁于邢。帝中丁崩，弟外壬立，是为帝外壬。仲丁书阙不具。帝...",
+      "after_context": "祖乙迁于邢。",
       "items": [
         {
           "source": "jijie",
@@ -513,10 +1043,10 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n065",
       "anchor_text": "祖乙迁于邢。",
       "before_context": "中宗崩，子帝中丁立。帝中丁迁于隞。河亶甲居相。祖乙迁于邢。",
-      "after_context": "帝中丁崩，弟外壬立，是为帝外壬。仲丁书阙不具。帝外壬崩，弟河...",
+      "after_context": "帝中丁崩，弟外壬立，是为帝外壬。仲丁书阙不具。",
       "items": [
         {
           "source": "suoyin",
@@ -532,10 +1062,38 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n066",
+      "anchor_text": "崩，弟外壬立，是为帝外壬。仲丁书阙不具。",
+      "before_context": "...。祖乙迁于邢。帝中丁崩，弟外壬立，是为帝外壬。仲丁书阙不具。",
+      "after_context": "帝外壬崩，弟河亶甲立，是为帝河亶甲。河亶甲时，殷复衰。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "盖太史公知旧有仲丁书，今已遗阙不具也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
+      "anchor_text": "祖辛立。帝祖辛崩，弟沃甲立，是为帝沃甲。",
+      "before_context": "祖乙崩，子帝祖辛立。帝祖辛崩，弟沃甲立，是为帝沃甲。",
+      "after_context": "帝沃甲崩，立沃甲兄祖辛之子祖丁，是为帝祖丁。帝祖丁崩，立弟沃...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《系本》作「开甲」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
       "anchor_text": "之故居，迺五迁，无定处。",
       "before_context": "...时，殷已都河北，盘庚渡河，南复居成汤之故居，迺五迁，无定处。",
-      "after_context": "殷民咨胥皆怨，不欲徙。盘庚乃告谕诸侯大臣曰：「昔高后成汤",
+      "after_context": "殷民咨胥皆怨，不欲徙。",
       "items": [
         {
           "source": "jijie",
@@ -551,10 +1109,66 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n069",
+      "anchor_text": "殷民咨胥皆怨，不欲徙。",
+      "before_context": "...河，南复居成汤之故居，迺五迁，无定处。殷民咨胥皆怨，不欲徙。",
+      "after_context": "盘庚乃告谕诸侯大臣曰：「昔高后成汤与尔之先祖俱定天下，法则可...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「胥，相也。民不欲徙，皆咨嗟忧愁，相与怨其上也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
+      "anchor_text": "，南治亳，",
+      "before_context": "...俱定天下，法则可修。舍而弗勉，何以成德！」乃遂涉河，南治亳，",
+      "after_context": "行汤之政，然后百姓由宁，殷道复兴。诸侯来朝，以其遵成汤之德也...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "郑玄曰：「治于亳之殷地，商家自此徙，而改号曰殷亳。」皇甫谧曰：「今偃师是也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
+      "anchor_text": "辛立，殷复衰。百姓思盘庚，迺作盘庚三篇。",
+      "before_context": "...立，是为帝小辛。帝小辛立，殷复衰。百姓思盘庚，迺作盘庚三篇。",
+      "after_context": "帝小辛崩，弟小乙立，是为帝小乙。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《尚书》「盘庚将治亳，殷民咨胥怨，作盘庚」，此以盘庚崩，弟小辛立，百姓思之，乃作盘庚，由不见古文也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n072",
+      "anchor_text": "，而未得其佐。三年不言，政事决定于冢宰，",
+      "before_context": "...帝武丁即位，思复兴殷，而未得其佐。三年不言，政事决定于冢宰，",
+      "after_context": "以观国风。武丁夜梦得圣人，名曰说。以梦所见视群臣百吏，皆非也...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "郑玄曰：「冢宰，天官卿贰王事者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n073",
       "anchor_text": "也。于是迺使百工营求之野，得说于傅险中。",
       "before_context": "...所见视群臣百吏，皆非也。于是迺使百工营求之野，得说于傅险中。",
-      "after_context": "是时说为胥靡，筑于傅险。见于武丁，武丁曰是也。得而与之语，果...",
+      "after_context": "是时说为胥靡，筑于傅险。",
       "items": [
         {
           "source": "jijie",
@@ -575,10 +1189,24 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n074",
+      "anchor_text": "是时说为胥靡，筑于傅险。",
+      "before_context": "...于是迺使百工营求之野，得说于傅险中。是时说为胥靡，筑于傅险。",
+      "after_context": "见于武丁，武丁曰是也。得而与之语，果圣人，举以为相，殷国大治...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「傅氏之岩在虞虢之界，通道所经，有涧水坏道，常使胥靡刑人筑护此道。说贤而隐，代胥靡筑之，以供食也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n075",
       "anchor_text": "，明日，有飞雉登鼎耳而呴，",
       "before_context": "帝武丁祭成汤，明日，有飞雉登鼎耳而呴，",
-      "after_context": "武丁惧。祖己曰：「王勿忧，先修政事。」祖己乃训王曰：「唯天监...",
+      "after_context": "武丁惧。祖己曰：",
       "items": [
         {
           "source": "zhengyi",
@@ -589,21 +1217,54 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
-      "anchor_text": "命。民有不若德，不听罪，天既附命正厥德，",
-      "before_context": "...永，非天夭民，中绝其命。民有不若德，不听罪，天既附命正厥德，",
-      "after_context": "乃曰其奈何。呜呼！王嗣敬民，罔非天继，常祀毋礼于弃道。」武丁...",
+      "id": "n076",
+      "anchor_text": "武丁惧。祖己曰：",
+      "before_context": "帝武丁祭成汤，明日，有飞雉登鼎耳而呴，武丁惧。祖己曰：",
+      "after_context": "「王勿忧，先修政事。」祖己乃训王曰：「唯天监下典厥义，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "孔安国曰：「不顺德，言无义也。不服罪，不改修也。天以信命正其德，谓其有永有不永。」"
+          "text": "孔安国曰：「贤臣名。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n077",
+      "anchor_text": "政事。」祖己乃训王曰：「唯天监下典厥义，",
+      "before_context": "...己曰：「王勿忧，先修政事。」祖己乃训王曰：「唯天监下典厥义，",
+      "after_context": "降年有永有不永，非天夭民，中绝其命。民有不若德，不听罪，天既...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「言天视下民以义为常也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n078",
+      "anchor_text": "命。民有不若德，不听罪，天既附命正厥德，",
+      "before_context": "...永，非天夭民，中绝其命。民有不若德，不听罪，天既附命正厥德，",
+      "after_context": "乃曰其奈何。呜呼！王嗣敬民，罔非天继，常祀毋礼于弃道。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「不顺德，言无义也。不服罪，不改修也。天以信命正其德，谓其有永有不永。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "附，依《尚书》音孚。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n079",
       "anchor_text": "！王嗣敬民，罔非天继，常祀毋礼于弃道。」",
       "before_context": "...德，乃曰其奈何。呜呼！王嗣敬民，罔非天继，常祀毋礼于弃道。」",
       "after_context": "武丁修政行德，天下咸驩，殷道复兴。",
@@ -612,15 +1273,62 @@
           "source": "jijie",
           "label": "集解",
           "text": "孔安国曰：「王者主民，当敬民事。民事无非天所嗣常也。祭祀有常，不当特丰于近也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "祭祀有常，无为丰杀之礼于是以弃常道。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n080",
+      "anchor_text": "雉为德，立其庙为高宗，遂作高宗肜日及训。",
+      "before_context": "...立。祖己嘉武丁之以祥雉为德，立其庙为高宗，遂作高宗肜日及训。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「祭之明日又祭，殷曰肜，周曰绎。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
+      "anchor_text": "，弟祖甲立，是为帝甲。帝甲淫乱，殷复衰。",
+      "before_context": "帝祖庚崩，弟祖甲立，是为帝甲。帝甲淫乱，殷复衰。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《国语》云「帝甲乱之，七代而陨」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n082",
+      "anchor_text": "帝甲崩，子帝廪辛立。",
+      "before_context": "帝甲崩，子帝廪辛立。",
+      "after_context": "帝廪辛崩，弟庚丁立，是为帝庚丁。帝庚丁崩，子帝武乙立。殷复去...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《汉书古今人表》及《帝王代纪》皆作「冯辛」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n083",
       "anchor_text": "帝武乙无道，为偶人，",
       "before_context": "帝武乙无道，为偶人，",
-      "after_context": "谓之天神。与之博，令人为行。天神不胜，乃僇辱之。为革囊，盛血...",
+      "after_context": "谓之天神。与之博，令人为行。",
       "items": [
         {
           "source": "suoyin",
@@ -636,7 +1344,7 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n084",
       "anchor_text": "谓之天神。与之博，令人为行。",
       "before_context": "帝武乙无道，为偶人，谓之天神。与之博，令人为行。",
       "after_context": "天神不胜，乃僇辱之。为革囊，盛血，卬而射之，命曰「射天」。武...",
@@ -650,7 +1358,49 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n085",
+      "anchor_text": "帝乙长子曰微子启，",
+      "before_context": "帝乙长子曰微子启，",
+      "after_context": "启母贱，不得嗣。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "微，国号。爵为子。启，名也。《孔子家语》云「微」或作「魏」，读从微音。邹本亦然也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n086",
+      "anchor_text": "启母贱，不得嗣。",
+      "before_context": "帝乙长子曰微子启，启母贱，不得嗣。",
+      "after_context": "少子辛，辛母正后，辛为嗣。帝乙崩，子辛立，是为帝辛，天下谓之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "此以启与纣异母，而郑玄称为同母，依吕氏春秋，言母当生启时犹未正立，及生纣时始正为妃，故启大而庶，纣小而嫡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
+      "anchor_text": "。帝乙崩，子辛立，是为帝辛，天下谓之纣。",
+      "before_context": "...辛，辛母正后，辛为嗣。帝乙崩，子辛立，是为帝辛，天下谓之纣。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《谥法》曰：「残义损善曰纣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n088",
       "anchor_text": "资辨捷疾，闻见甚敏；材力过人，手格猛兽；",
       "before_context": "帝纣资辨捷疾，闻见甚敏；材力过人，手格猛兽；",
       "after_context": "知足以距谏，言足以饰非；矜人臣以能，高天下以声，以为皆出己之...",
@@ -664,7 +1414,7 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n089",
       "anchor_text": "皆出己之下。好酒淫乐，嬖于妇人。爱妲己，",
       "before_context": "...能，高天下以声，以为皆出己之下。好酒淫乐，嬖于妇人。爱妲己，",
       "after_context": "妲己之言是从。于是使师涓作新淫声，北里之舞，靡靡之乐。厚赋税...",
@@ -673,15 +1423,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "皇甫谧曰：「有苏氏美女。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《国语》有苏氏女，妲字己姓也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n090",
       "anchor_text": "北里之舞，靡靡之乐。厚赋税以实鹿台之钱，",
       "before_context": "...于是使师涓作新淫声，北里之舞，靡靡之乐。厚赋税以实鹿台之钱，",
-      "after_context": "而盈巨桥之粟。益收狗马奇物，充仞宫室。益广沙丘苑台，多取野兽...",
+      "after_context": "而盈巨桥之粟。",
       "items": [
         {
           "source": "jijie",
@@ -697,24 +1452,29 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n091",
       "anchor_text": "而盈巨桥之粟。",
       "before_context": "...淫声，北里之舞，靡靡之乐。厚赋税以实鹿台之钱，而盈巨桥之粟。",
-      "after_context": "益收狗马奇物，充仞宫室。益广沙丘苑台，多取野兽蜚鸟置其中。慢...",
+      "after_context": "益收狗马奇物，充仞宫室。益广沙丘苑台，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「巨桥，仓名。许慎曰巨鹿水之大桥也，有漕粟也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "邹诞生云：「巨，大；桥，器名也。纣厚赋税，故因器而大其名。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n092",
       "anchor_text": "益收狗马奇物，充仞宫室。益广沙丘苑台，",
       "before_context": "...台之钱，而盈巨桥之粟。益收狗马奇物，充仞宫室。益广沙丘苑台，",
-      "after_context": "多取野兽蜚鸟置其中。慢于鬼神。大冣乐戏于沙丘，以酒为池，县肉...",
+      "after_context": "多取野兽蜚鸟置其中。慢于鬼神。大冣乐戏于沙丘，",
       "items": [
         {
           "source": "jijie",
@@ -730,10 +1490,24 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n093",
+      "anchor_text": "兽蜚鸟置其中。慢于鬼神。大冣乐戏于沙丘，",
+      "before_context": "...益广沙丘苑台，多取野兽蜚鸟置其中。慢于鬼神。大冣乐戏于沙丘，",
+      "after_context": "以酒为池，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「冣，一作『聚』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n094",
       "anchor_text": "以酒为池，",
       "before_context": "...台，多取野兽蜚鸟置其中。慢于鬼神。大冣乐戏于沙丘，以酒为池，",
-      "after_context": "县肉为林，使男女倮相逐其闲，为长夜之饮。",
+      "after_context": "县肉为林，",
       "items": [
         {
           "source": "zhengyi",
@@ -744,10 +1518,10 @@
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n095",
       "anchor_text": "县肉为林，",
       "before_context": "...兽蜚鸟置其中。慢于鬼神。大冣乐戏于沙丘，以酒为池，县肉为林，",
-      "after_context": "使男女倮相逐其闲，为长夜之饮。",
+      "after_context": "使男女倮",
       "items": [
         {
           "source": "zhengyi",
@@ -758,7 +1532,7 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n096",
       "anchor_text": "使男女倮",
       "before_context": "...其中。慢于鬼神。大冣乐戏于沙丘，以酒为池，县肉为林，使男女倮",
       "after_context": "相逐其闲，为长夜之饮。",
@@ -772,24 +1546,29 @@
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n097",
       "anchor_text": "诸侯有畔者，于是纣乃重刑辟，有炮格之法。",
       "before_context": "百姓怨望而诸侯有畔者，于是纣乃重刑辟，有炮格之法。",
-      "after_context": "以西伯昌、九侯、鄂侯为三公。九侯有好女，入之纣。九侯女不憙淫...",
+      "after_context": "以西伯昌、九侯、",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《列女传》曰：「膏铜柱，下加之炭，令有罪者行焉，辄堕炭中，妲己笑，名曰炮格之刑。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "邹诞生云「格，一音阁」。又云「见蚁布铜斗，足废而死，于是为铜格，炊炭其下，使罪人步其上」，与《列女传》少异。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n098",
       "anchor_text": "以西伯昌、九侯、",
       "before_context": "...望而诸侯有畔者，于是纣乃重刑辟，有炮格之法。以西伯昌、九侯、",
-      "after_context": "鄂侯为三公。九侯有好女，入之纣。九侯女不憙淫，纣怒，杀之，而...",
+      "after_context": "鄂侯",
       "items": [
         {
           "source": "jijie",
@@ -810,7 +1589,35 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n099",
+      "anchor_text": "鄂侯",
+      "before_context": "...诸侯有畔者，于是纣乃重刑辟，有炮格之法。以西伯昌、九侯、鄂侯",
+      "after_context": "为三公。九侯有好女，入之纣。九侯女不憙淫，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『邘』，音于。野王县有邘城。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n100",
+      "anchor_text": "三公。九侯有好女，入之纣。九侯女不憙淫，",
+      "before_context": "...西伯昌、九侯、鄂侯为三公。九侯有好女，入之纣。九侯女不憙淫，",
+      "after_context": "纣怒，杀之，而醢九侯。鄂侯争之彊，辨之疾，并脯鄂侯。西伯昌闻...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一云『无不憙淫』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n101",
       "anchor_text": "窃叹。崇侯虎知之，以告纣，纣囚西伯羑里。",
       "before_context": "...脯鄂侯。西伯昌闻之，窃叹。崇侯虎知之，以告纣，纣囚西伯羑里。",
       "after_context": "西伯之臣闳夭之徒，求美女奇物善马以献纣，纣乃赦西伯。西伯出而...",
@@ -829,7 +1636,7 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n102",
       "anchor_text": "以献纣，纣乃赦西伯。西伯出而献洛西之地，",
       "before_context": "...之徒，求美女奇物善马以献纣，纣乃赦西伯。西伯出而献洛西之地，",
       "after_context": "以请除炮格之刑。纣乃许之，赐弓矢斧钺，使得征伐，为西伯。而用...",
@@ -843,10 +1650,10 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n103",
       "anchor_text": "矢斧钺，使得征伐，为西伯。而用费中为政。",
       "before_context": "...之刑。纣乃许之，赐弓矢斧钺，使得征伐，为西伯。而用费中为政。",
-      "after_context": "费中善谀，好利，殷人弗亲。纣又用恶来。恶来善毁谗，诸侯以此益...",
+      "after_context": "费中善谀，好利，殷人弗亲。纣又用恶来。",
       "items": [
         {
           "source": "zhengyi",
@@ -857,7 +1664,119 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n104",
+      "anchor_text": "费中善谀，好利，殷人弗亲。纣又用恶来。",
+      "before_context": "...为西伯。而用费中为政。费中善谀，好利，殷人弗亲。纣又用恶来。",
+      "after_context": "恶来善毁谗，诸侯以此益疏。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "秦之祖蜚廉子。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n105",
+      "anchor_text": "，百姓爱之，纣废之。及西伯伐饥国，灭之，",
+      "before_context": "...干谏，弗听。商容贤者，百姓爱之，纣废之。及西伯伐饥国，灭之，",
+      "after_context": "纣之臣祖伊",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「饥，一作『𨸔』，又作『耆』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n106",
+      "anchor_text": "纣之臣祖伊",
+      "before_context": "...。商容贤者，百姓爱之，纣废之。及西伯伐饥国，灭之，纣之臣祖伊",
+      "after_context": "闻之而咎周，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「祖己后，贤臣也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n107",
+      "anchor_text": "闻之而咎周，",
+      "before_context": "...百姓爱之，纣废之。及西伯伐饥国，灭之，纣之臣祖伊闻之而咎周，",
+      "after_context": "恐，奔告纣曰：「天既讫我殷命，假人元龟，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「咎，恶也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n108",
+      "anchor_text": "恐，奔告纣曰：「天既讫我殷命，假人元龟，",
+      "before_context": "...之臣祖伊闻之而咎周，恐，奔告纣曰：「天既讫我殷命，假人元龟，",
+      "after_context": "无敢知吉，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「元，一作『卜』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n109",
+      "anchor_text": "无敢知吉，",
+      "before_context": "...之而咎周，恐，奔告纣曰：「天既讫我殷命，假人元龟，无敢知吉，",
+      "after_context": "非先王不相我后人，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "马融曰：「元龟，大龟也，长尺二寸。」孔安国曰：「至人以人事观殷，大龟以神灵考之，皆无知吉者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n110",
+      "anchor_text": "非先王不相我后人，",
+      "before_context": "...纣曰：「天既讫我殷命，假人元龟，无敢知吉，非先王不相我后人，",
+      "after_context": "维王淫虐用自绝，故天弃我，不有安食，不虞知天性，不迪率典。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安国曰：「相，助也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n111",
+      "anchor_text": "天弃我，不有安食，不虞知天性，不迪率典。",
+      "before_context": "...，维王淫虐用自绝，故天弃我，不有安食，不虞知天性，不迪率典。",
+      "after_context": "今我民罔不欲丧，曰『天曷不降威，大命胡不至』？今王其柰何？」...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "郑玄曰：「王暴虐于民，使不得安食，逆乱阴阳，不度天性，傲很明德，不修教法者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n112",
       "anchor_text": "：「吾闻圣人心有七窍。」剖比干，观其心。",
       "before_context": "...。」迺强谏纣。纣怒曰：「吾闻圣人心有七窍。」剖比干，观其心。",
       "after_context": "箕子惧，乃详狂为奴，纣又囚之。殷之大师、少师乃持其祭乐器奔周...",
@@ -871,10 +1790,10 @@
       "sentence_id": null
     },
     {
-      "id": "n052",
+      "id": "n113",
       "anchor_text": "武王于是遂率诸侯伐纣。纣亦发兵距之牧野。",
       "before_context": "...乃持其祭乐器奔周。周武王于是遂率诸侯伐纣。纣亦发兵距之牧野。",
-      "after_context": "甲子日，纣兵败。纣走入，登鹿台，衣其宝玉衣，赴火而死。周武王...",
+      "after_context": "甲子日，纣兵败。纣走入，登鹿台，",
       "items": [
         {
           "source": "jijie",
@@ -890,10 +1809,24 @@
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n114",
+      "anchor_text": "甲子日，纣兵败。纣走入，登鹿台，",
+      "before_context": "...诸侯伐纣。纣亦发兵距之牧野。甲子日，纣兵败。纣走入，登鹿台，",
+      "after_context": "衣其宝玉衣，赴火而死。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「鹿，一作『廪』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n115",
       "anchor_text": "衣其宝玉衣，赴火而死。",
       "before_context": "...牧野。甲子日，纣兵败。纣走入，登鹿台，衣其宝玉衣，赴火而死。",
-      "after_context": "周武王遂斩纣头，县之〔",
+      "after_context": "周武王遂斩纣头，县之〔大〕白旗。杀妲己。释箕子之囚，封比干之...",
       "items": [
         {
           "source": "zhengyi",
@@ -904,7 +1837,49 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n116",
+      "anchor_text": "己。释箕子之囚，封比干之墓，表商容之闾。",
+      "before_context": "...县之〔大〕白旗。杀妲己。释箕子之囚，封比干之墓，表商容之闾。",
+      "after_context": "封纣子武庚、禄父，以续殷祀，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "皇甫谧云「商容与殷人观周军之入」，则以为人名。郑玄云：「商家典乐之官，知礼容，所以礼署称容台。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n117",
+      "anchor_text": "封纣子武庚、禄父，以续殷祀，",
+      "before_context": "...子之囚，封比干之墓，表商容之闾。封纣子武庚、禄父，以续殷祀，",
+      "after_context": "令修行盘庚之政。殷民大说。于是周武王为天子。其后世贬帝号，号...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "谯周曰：「殷凡三十一世，六百余年。」汲冢纪年曰：「汤灭夏以至于受二十九王，用岁四百九十六年也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n118",
+      "anchor_text": "于是周武王为天子。其后世贬帝号，号为王。",
+      "before_context": "...盘庚之政。殷民大说。于是周武王为天子。其后世贬帝号，号为王。",
+      "after_context": "而封殷后为诸侯，属周。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：夏、殷天子亦皆称帝，代以德薄不及五帝，始贬帝号，号之为王，故本纪皆帝，而后总曰「三王」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n119",
       "anchor_text": "而封殷后为诸侯，属周。",
       "before_context": "...是周武王为天子。其后世贬帝号，号为王。而封殷后为诸侯，属周。",
       "after_context": "",
@@ -913,6 +1888,48 @@
           "source": "zhengyi",
           "label": "正义",
           "text": "即武庚禄父也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n120",
+      "anchor_text": "、稚氏、",
+      "before_context": "...子姓，其后分封，以国为姓，有殷氏、来氏、宋氏、空桐氏、稚氏、",
+      "after_context": "北殷氏、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：《系本》子姓无稚氏。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n121",
+      "anchor_text": "北殷氏、",
+      "before_context": "...后分封，以国为姓，有殷氏、来氏、宋氏、空桐氏、稚氏、北殷氏、",
+      "after_context": "目夷氏。孔子曰，殷路车为善，而色尚白。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《系本》作「髦氏」，又有时氏、萧氏、黎氏。然北殷氏盖秦宁公所伐亳王，汤之后也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n122",
+      "anchor_text": "曰，殷路车为善，而色尚白。",
+      "before_context": "...空桐氏、稚氏、北殷氏、目夷氏。孔子曰，殷路车为善，而色尚白。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《论语》孔子曰「乘殷之辂」，《礼记》曰「殷人尚白」，太史公为赞，不取成文，遂作此语，亦疏略也。"
         }
       ],
       "sentence_id": null

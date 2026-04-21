@@ -11,6 +11,11 @@
           "source": "jijie",
           "label": "集解",
           "text": "张晏曰：「朝鲜有湿水、洌水、汕水，三水合为洌水，疑乐浪、朝鲜取名于此也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：朝音潮，直骄反。鲜音仙。以有汕水，故名也。汕一音讪。"
         }
       ],
       "sentence_id": null
@@ -19,7 +24,7 @@
       "id": "n002",
       "anchor_text": "朝鲜",
       "before_context": "朝鲜",
-      "after_context": "王满者，故燕人也。自始全燕时尝略属真番、朝鲜，为置吏，筑鄣塞...",
+      "after_context": "王满者，故燕人也。",
       "items": [
         {
           "source": "zhengyi",
@@ -31,23 +36,70 @@
     },
     {
       "id": "n003",
-      "anchor_text": "尝略属真番、",
-      "before_context": "朝鲜王满者，故燕人也。自始全燕时尝略属真番、",
-      "after_context": "朝鲜，为置吏，筑鄣塞。秦灭燕，属辽东外徼。汉兴，为其远难守，...",
+      "anchor_text": "王满者，故燕人也。",
+      "before_context": "朝鲜王满者，故燕人也。",
+      "after_context": "自始全燕时",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐广曰：「一作『莫』。辽东有番汗县。番音普寒反。」"
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案《汉书》，满，燕人，姓衞，击破朝鲜而自王之。"
         }
       ],
       "sentence_id": null
     },
     {
       "id": "n004",
+      "anchor_text": "自始全燕时",
+      "before_context": "朝鲜王满者，故燕人也。自始全燕时",
+      "after_context": "尝略属真番、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "始全燕时，谓六国燕方全盛之时。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "尝略属真番、",
+      "before_context": "朝鲜王满者，故燕人也。自始全燕时尝略属真番、",
+      "after_context": "朝鲜，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『莫』。辽东有番汗县。番音普寒反。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "徐氏据《地理志》而知也。番音潘，又音盘。汗音寒。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
+      "anchor_text": "朝鲜，",
+      "before_context": "朝鲜王满者，故燕人也。自始全燕时尝略属真番、朝鲜，",
+      "after_context": "为置吏，筑鄣塞。秦灭燕，属辽东外徼。汉兴，为其远难守，复修辽...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "如淳云：「燕尝略二国以属己也。」应劭云：「玄菟本真番国。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
       "anchor_text": "，为其远难守，复修辽东故塞，至𬇙水为界，",
       "before_context": "...燕，属辽东外徼。汉兴，为其远难守，复修辽东故塞，至𬇙水为界，",
-      "after_context": "属燕。燕王卢绾",
+      "after_context": "属燕。燕王卢绾反，入匈奴，满亡命，",
       "items": [
         {
           "source": "jijie",
@@ -68,7 +120,7 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n008",
       "anchor_text": "，满亡命，",
       "before_context": "...复修辽东故塞，至𬇙水为界，属燕。燕王卢绾反，入匈奴，满亡命，",
       "after_context": "聚党千余人，魋结蛮夷服而东走出塞，渡𬇙水，居秦故空地上下鄣，",
@@ -82,7 +134,21 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n009",
+      "anchor_text": "服而东走出塞，渡𬇙水，居秦故空地上下鄣，",
+      "before_context": "...聚党千余人，魋结蛮夷服而东走出塞，渡𬇙水，居秦故空地上下鄣，",
+      "after_context": "稍役属真番、朝鲜蛮夷及故燕、齐亡命者王之，都王险。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：《地理志》乐浪有云鄣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
       "anchor_text": "、朝鲜蛮夷及故燕、齐亡命者王之，都王险。",
       "before_context": "...地上下鄣，稍役属真番、朝鲜蛮夷及故燕、齐亡命者王之，都王险。",
       "after_context": "",
@@ -91,12 +157,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「昌黎有险渎县也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "韦昭云「古邑名」。徐广曰「昌黎有险渎县」。应劭注「《地理志》辽东险渎县，朝鲜王旧都」。臣瓒云「王险城在乐浪郡𬇙水之东」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n011",
+      "anchor_text": "以故满得兵威财物侵降其旁小邑，真番、临屯",
+      "before_context": "...禁止。以闻，上许之，以故满得兵威财物侵降其旁小邑，真番、临屯",
+      "after_context": "皆来服属，方数千里。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "东夷小国，后以为郡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
       "anchor_text": "皆来服属，方数千里。",
       "before_context": "...以故满得兵威财物侵降其旁小邑，真番、临屯皆来服属，方数千里。",
       "after_context": "",
@@ -110,7 +195,7 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n013",
       "anchor_text": "传子至孙右渠，",
       "before_context": "传子至孙右渠，",
       "after_context": "所诱汉亡人滋多，又未尝入见；真番旁众国欲上书见天子，又拥阏不...",
@@ -124,10 +209,38 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n014",
+      "anchor_text": "天子，又拥阏不通。元封二年，汉使涉何谯谕",
+      "before_context": "...；真番旁众国欲上书见天子，又拥阏不通。元封二年，汉使涉何谯谕",
+      "after_context": "右渠，终不肯奉诏。何去至界上，临𬇙水，使御刺杀送何者",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "说文云：「谯，让也。」谕，晓也。谯音才笑反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "奉诏。何去至界上，临𬇙水，使御刺杀送何者",
+      "before_context": "...涉何谯谕右渠，终不肯奉诏。何去至界上，临𬇙水，使御刺杀送何者",
+      "after_context": "朝鲜裨王长，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "即送何之御也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "朝鲜裨王长，",
       "before_context": "...，终不肯奉诏。何去至界上，临𬇙水，使御刺杀送何者朝鲜裨王长，",
-      "after_context": "即渡，驰入塞，遂归报天子曰「杀朝鲜将」。上为其名美，即不诘，...",
+      "after_context": "即渡，驰入塞，",
       "items": [
         {
           "source": "zhengyi",
@@ -138,10 +251,10 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n017",
       "anchor_text": "即渡，驰入塞，",
       "before_context": "...何去至界上，临𬇙水，使御刺杀送何者朝鲜裨王长，即渡，驰入塞，",
-      "after_context": "遂归报天子曰「杀朝鲜将」。上为其名美，即不诘，拜何为辽东东部...",
+      "after_context": "遂归报天子曰「杀朝鲜将」。上为其名美，",
       "items": [
         {
           "source": "zhengyi",
@@ -152,7 +265,21 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n018",
+      "anchor_text": "遂归报天子曰「杀朝鲜将」。上为其名美，",
+      "before_context": "...裨王长，即渡，驰入塞，遂归报天子曰「杀朝鲜将」。上为其名美，",
+      "after_context": "即不诘，拜何为辽东东部都尉。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "有杀将之美名。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
       "anchor_text": "即不诘，拜何为辽东东部都尉。",
       "before_context": "...天子曰「杀朝鲜将」。上为其名美，即不诘，拜何为辽东东部都尉。",
       "after_context": "朝鲜怨何，发兵袭攻杀何。",
@@ -166,7 +293,7 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n020",
       "anchor_text": "。朝鲜相路人、相韩阴、尼谿相参、将军王唊",
       "before_context": "...已并两军，即急击朝鲜。朝鲜相路人、相韩阴、尼谿相参、将军王唊",
       "after_context": "相与谋曰：「始欲降楼船，楼船今执，独左将军并将，战益急，恐不...",
@@ -175,68 +302,121 @@
           "source": "jijie",
           "label": "集解",
           "text": "《汉书音义》曰：「凡五人也。戎狄不知官纪，故皆称相。唊音颊。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "应劭云：「凡五人。戎狄不知官纪，故皆称相也。路人，渔阳县人。」如淳云：「相，其国宰相。路人，名也。唊音颊，一音协。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n021",
       "anchor_text": "臣成巳又反，复攻吏。左将军使右渠子长降、",
       "before_context": "...险城未下，故右渠之大臣成巳又反，复攻吏。左将军使右渠子长降、",
-      "after_context": "相路人之子最告谕其民，诛成巳，以故遂定朝鲜，为四郡。封参为𣶩...",
+      "after_context": "相路人之子最",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「表云『长路』。《汉书》表云『长䧄』，音各。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：《汉书》表云「长䧄」，音各。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n022",
+      "anchor_text": "相路人之子最",
+      "before_context": "...右渠之大臣成巳又反，复攻吏。左将军使右渠子长降、相路人之子最",
+      "after_context": "告谕其民，诛成巳，以故遂定朝鲜，为四郡。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "路人子也，名最。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
+      "anchor_text": "告谕其民，诛成巳，以故遂定朝鲜，为四郡。",
+      "before_context": "...子长降、相路人之子最告谕其民，诛成巳，以故遂定朝鲜，为四郡。",
+      "after_context": "封参为𣶩清侯，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "真番、临屯、乐浪、玄菟也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
       "anchor_text": "封参为𣶩清侯，",
       "before_context": "...之子最告谕其民，诛成巳，以故遂定朝鲜，为四郡。封参为𣶩清侯，",
-      "after_context": "阴为荻苴侯，唊为平州侯，长〔",
+      "after_context": "阴为荻苴侯，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韦昭曰：「属齐。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "参，𣶩清侯。韦昭云「县名，属齐」。顾氏𣶩音获。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n025",
       "anchor_text": "阴为荻苴侯，",
       "before_context": "...民，诛成巳，以故遂定朝鲜，为四郡。封参为𣶩清侯，阴为荻苴侯，",
-      "after_context": "唊为平州侯，长〔",
+      "after_context": "唊为平州侯",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韦昭曰：「属勃海。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "阴，荻苴侯。晋灼云「属勃海」。荻音狄，苴音子余反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n026",
       "anchor_text": "唊为平州侯",
       "before_context": "...，以故遂定朝鲜，为四郡。封参为𣶩清侯，阴为荻苴侯，唊为平州侯",
-      "after_context": "，长〔",
+      "after_context": "，长〔降〕为几侯。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韦昭曰：「属梁父。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "唊，平州侯。韦昭云「属梁父」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n027",
       "anchor_text": "为几侯。",
       "before_context": "...四郡。封参为𣶩清侯，阴为荻苴侯，唊为平州侯，长〔降〕为几侯。",
       "after_context": "最以父死颇有功，为温阳侯。",
@@ -245,12 +425,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "韦昭曰：「属河东。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "长，几侯。韦昭云「县名，属河东」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n028",
       "anchor_text": "最以父死颇有功，为温阳侯。",
       "before_context": "...苴侯，唊为平州侯，长〔降〕为几侯。最以父死颇有功，为温阳侯。",
       "after_context": "",
@@ -259,6 +444,39 @@
           "source": "jijie",
           "label": "集解",
           "text": "韦昭曰：「属齐。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "最，涅阳侯。韦昭云「属齐」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "相嫉，乖计，弃市。楼船将军亦坐兵至洌口，",
+      "before_context": "左将军征至，坐争功相嫉，乖计，弃市。楼船将军亦坐兵至洌口，",
+      "after_context": "当待左将军，擅先纵，失亡多，当诛，赎为庶人。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "苏林曰：「县名。度海先得之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "国以绝祀。涉何诬功，为兵发首。楼船将狭，",
+      "before_context": "太史公曰：右渠负固，国以绝祀。涉何诬功，为兵发首。楼船将狭，",
+      "after_context": "及难离咎。悔失番禺，乃反见疑。荀彘争劳，与遂皆诛。两军俱辱，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「言其所将卒狭少。」"
         }
       ],
       "sentence_id": null

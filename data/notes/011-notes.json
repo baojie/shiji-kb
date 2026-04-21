@@ -24,18 +24,65 @@
       "id": "n002",
       "anchor_text": "孫係爲武陵侯。",
       "before_context": "二年春，封故相國蕭何孫係爲武陵侯。",
-      "after_context": "男子二十而得傅。四月壬午，孝文太后崩。廣川、長沙",
+      "after_context": "男子二十而得傅。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "（徐廣曰：《漢書》亦作「係」。鄒誕生本作「傒」，音奚。又按：《漢書功臣表》及蕭何傳皆云孫嘉，疑其人有二名。）"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》亦作「係」，鄒誕生本作「傒」。又按：《漢書功臣表》及蕭何傳皆云封何孫嘉，疑其人有二名也。"
         }
       ],
       "sentence_id": null
     },
     {
       "id": "n003",
+      "anchor_text": "男子二十而得傅。",
+      "before_context": "二年春，封故相國蕭何孫係爲武陵侯。男子二十而得傅。",
+      "after_context": "四月壬午，孝文太后崩。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音附。荀悅云：「傅，正卒也。」小顏云舊法二十三而傅，今改也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
+      "anchor_text": "四月壬午，孝文太后崩。",
+      "before_context": "...相國蕭何孫係爲武陵侯。男子二十而得傅。四月壬午，孝文太后崩。",
+      "after_context": "廣川、長沙王皆之國。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "薄太后也。亦葬芷陽西，曰少陵也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "王皆之國。",
+      "before_context": "...。男子二十而得傅。四月壬午，孝文太后崩。廣川、長沙王皆之國。",
+      "after_context": "丞相申屠嘉卒。八月，以御史大夫開封陶青爲丞相。彗星出東北。秋...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "廣川王彭祖、長沙王發皆景帝子，遣就國也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
       "anchor_text": "封陶青爲丞相。彗星出東北。秋，衡山雨雹，",
       "before_context": "...。八月，以御史大夫開封陶青爲丞相。彗星出東北。秋，衡山雨雹，",
       "after_context": "大者五寸，深者二尺。熒惑逆行，守北辰。月出北辰閒。歲星逆行天...",
@@ -49,7 +96,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n007",
       "anchor_text": "歲星逆行天廷中。置南陵及內史、祋祤爲縣。",
       "before_context": "...守北辰。月出北辰閒。歲星逆行天廷中。置南陵及內史、祋祤爲縣。",
       "after_context": "",
@@ -58,29 +105,53 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「《地理志》云文帝七年置。」駰按：《地理志》、《百官表》南陵縣文帝置也。分內史爲左右，及祋祤爲縣，皆景帝二年，不得皆如徐所云。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鄒誕生祋音都會反，又音丁活反。祤音羽，又音詡。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n008",
+      "anchor_text": "三年正月乙巳，赦天下。長星出西方。天火",
+      "before_context": "三年正月乙巳，赦天下。長星出西方。天火",
+      "after_context": "燔雒陽東宮大殿城室。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「漢志無。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
       "anchor_text": "燔雒陽東宮大殿城室。",
       "before_context": "三年正月乙巳，赦天下。長星出西方。天火燔雒陽東宮大殿城室。",
-      "after_context": "吳王濞、楚王戊、趙王遂、膠西王卬、濟南王辟光、菑川王賢、膠東...",
+      "after_context": "吳王濞、",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「雒，一作『淮』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "雒陽《漢書》作「淮陽」。災，故徙王於魯也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n010",
       "anchor_text": "吳王濞、",
       "before_context": "...月乙巳，赦天下。長星出西方。天火燔雒陽東宮大殿城室。吳王濞、",
-      "after_context": "楚王戊、趙王遂、膠西王卬、濟南王辟光、菑川王賢、膠東王雄渠反...",
+      "after_context": "楚王戊、",
       "items": [
         {
           "source": "zhengyi",
@@ -91,10 +162,10 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n011",
       "anchor_text": "楚王戊、",
       "before_context": "...赦天下。長星出西方。天火燔雒陽東宮大殿城室。吳王濞、楚王戊、",
-      "after_context": "趙王遂、膠西王卬、濟南王辟光、菑川王賢、膠東王雄渠反，發兵西...",
+      "after_context": "趙王遂、",
       "items": [
         {
           "source": "zhengyi",
@@ -105,10 +176,10 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n012",
       "anchor_text": "趙王遂、",
       "before_context": "...長星出西方。天火燔雒陽東宮大殿城室。吳王濞、楚王戊、趙王遂、",
-      "after_context": "膠西王卬、濟南王辟光、菑川王賢、膠東王雄渠反，發兵西鄉。天子...",
+      "after_context": "膠西王卬、",
       "items": [
         {
           "source": "zhengyi",
@@ -119,10 +190,10 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n013",
       "anchor_text": "膠西王卬、",
       "before_context": "...。天火燔雒陽東宮大殿城室。吳王濞、楚王戊、趙王遂、膠西王卬、",
-      "after_context": "濟南王辟光、菑川王賢、膠東王雄渠反，發兵西鄉。天子爲誅晁錯，...",
+      "after_context": "濟南王辟光、",
       "items": [
         {
           "source": "zhengyi",
@@ -133,10 +204,10 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n014",
       "anchor_text": "濟南王辟光、",
       "before_context": "...東宮大殿城室。吳王濞、楚王戊、趙王遂、膠西王卬、濟南王辟光、",
-      "after_context": "菑川王賢、膠東王雄渠反，發兵西鄉。天子爲誅晁錯，遣袁盎諭告，...",
+      "after_context": "菑川王賢、",
       "items": [
         {
           "source": "zhengyi",
@@ -147,10 +218,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n015",
       "anchor_text": "菑川王賢、",
       "before_context": "...室。吳王濞、楚王戊、趙王遂、膠西王卬、濟南王辟光、菑川王賢、",
-      "after_context": "膠東王雄渠反，發兵西鄉。天子爲誅晁錯，遣袁盎諭告，不止，遂西...",
+      "after_context": "膠東王雄渠",
       "items": [
         {
           "source": "zhengyi",
@@ -161,10 +232,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n016",
       "anchor_text": "膠東王雄渠",
       "before_context": "...、楚王戊、趙王遂、膠西王卬、濟南王辟光、菑川王賢、膠東王雄渠",
-      "after_context": "反，發兵西鄉。天子爲誅晁錯，遣袁盎諭告，不止，遂西圍梁。上乃...",
+      "after_context": "反，發兵西鄉。天子爲誅晁錯，遣袁盎諭告，不止，遂西圍梁。",
       "items": [
         {
           "source": "zhengyi",
@@ -175,7 +246,7 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n017",
       "anchor_text": "子爲誅晁錯，遣袁盎諭告，不止，遂西圍梁。",
       "before_context": "...雄渠反，發兵西鄉。天子爲誅晁錯，遣袁盎諭告，不止，遂西圍梁。",
       "after_context": "上乃遣大將軍竇嬰、太尉周亞夫將兵誅之。六月乙亥。赦亡軍及楚元...",
@@ -189,10 +260,10 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n018",
       "anchor_text": "將兵誅之。六月乙亥。赦亡軍及楚元王子蓺等",
       "before_context": "...將軍竇嬰、太尉周亞夫將兵誅之。六月乙亥。赦亡軍及楚元王子蓺等",
-      "after_context": "與謀反者。封大將軍竇嬰爲魏其侯。立楚元王子平陸侯禮爲楚王。立...",
+      "after_context": "與謀反者。封大將軍竇嬰爲魏其侯。",
       "items": [
         {
           "source": "zhengyi",
@@ -203,10 +274,10 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n019",
       "anchor_text": "與謀反者。封大將軍竇嬰爲魏其侯。",
       "before_context": "...月乙亥。赦亡軍及楚元王子蓺等與謀反者。封大將軍竇嬰爲魏其侯。",
-      "after_context": "立楚元王子平陸侯禮爲楚王。立皇子端爲膠西王，子勝爲中山王。徙...",
+      "after_context": "立楚元王子平陸侯禮",
       "items": [
         {
           "source": "zhengyi",
@@ -217,10 +288,10 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n020",
       "anchor_text": "立楚元王子平陸侯禮",
       "before_context": "...元王子蓺等與謀反者。封大將軍竇嬰爲魏其侯。立楚元王子平陸侯禮",
-      "after_context": "爲楚王。立皇子端爲膠西王，子勝爲中山王。徙濟北王志爲菑川王，...",
+      "after_context": "爲楚王。立皇子端爲膠西王，子勝爲中山王。徙濟北王志",
       "items": [
         {
           "source": "suoyin",
@@ -236,10 +307,10 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n021",
       "anchor_text": "皇子端爲膠西王，子勝爲中山王。徙濟北王志",
       "before_context": "...子平陸侯禮爲楚王。立皇子端爲膠西王，子勝爲中山王。徙濟北王志",
-      "after_context": "爲菑川王，淮陽王餘爲魯王，汝南王非爲江都王。齊王將廬、燕王嘉",
+      "after_context": "爲菑川王，淮陽王餘",
       "items": [
         {
           "source": "zhengyi",
@@ -250,10 +321,10 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n022",
       "anchor_text": "爲菑川王，淮陽王餘",
       "before_context": "...立皇子端爲膠西王，子勝爲中山王。徙濟北王志爲菑川王，淮陽王餘",
-      "after_context": "爲魯王，汝南王非爲江都王。齊王將廬、燕王嘉皆薨。",
+      "after_context": "爲魯王，",
       "items": [
         {
           "source": "zhengyi",
@@ -264,10 +335,10 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n023",
       "anchor_text": "爲魯王，",
       "before_context": "...爲膠西王，子勝爲中山王。徙濟北王志爲菑川王，淮陽王餘爲魯王，",
-      "after_context": "汝南王非爲江都王。齊王將廬、燕王嘉皆薨。",
+      "after_context": "汝南王非",
       "items": [
         {
           "source": "zhengyi",
@@ -278,10 +349,10 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n024",
       "anchor_text": "汝南王非",
       "before_context": "...，子勝爲中山王。徙濟北王志爲菑川王，淮陽王餘爲魯王，汝南王非",
-      "after_context": "爲江都王。齊王將廬、燕王嘉皆薨。",
+      "after_context": "爲江都王。",
       "items": [
         {
           "source": "zhengyi",
@@ -292,10 +363,10 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n025",
       "anchor_text": "爲江都王。",
       "before_context": "...山王。徙濟北王志爲菑川王，淮陽王餘爲魯王，汝南王非爲江都王。",
-      "after_context": "齊王將廬、燕王嘉皆薨。",
+      "after_context": "齊王將廬、",
       "items": [
         {
           "source": "zhengyi",
@@ -306,10 +377,10 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n026",
       "anchor_text": "齊王將廬、",
       "before_context": "...北王志爲菑川王，淮陽王餘爲魯王，汝南王非爲江都王。齊王將廬、",
-      "after_context": "燕王嘉皆薨。",
+      "after_context": "燕王嘉",
       "items": [
         {
           "source": "suoyin",
@@ -325,10 +396,38 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n027",
+      "anchor_text": "燕王嘉",
+      "before_context": "...爲菑川王，淮陽王餘爲魯王，汝南王非爲江都王。齊王將廬、燕王嘉",
+      "after_context": "皆薨。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉澤之子。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
+      "anchor_text": "皆薨。",
+      "before_context": "...王，淮陽王餘爲魯王，汝南王非爲江都王。齊王將廬、燕王嘉皆薨。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「表云五年薨。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "陽爲陽陵。",
       "before_context": "...膠東王。六月甲戌，赦天下。後九月，更以（弋）〔易〕陽爲陽陵。",
-      "after_context": "復置津關，用傳出入。冬，以趙國爲邯鄲郡。",
+      "after_context": "復置津關，用傳出入。",
       "items": [
         {
           "source": "zhengyi",
@@ -339,7 +438,7 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n030",
       "anchor_text": "復置津關，用傳出入。",
       "before_context": "...天下。後九月，更以（弋）〔易〕陽爲陽陵。復置津關，用傳出入。",
       "after_context": "冬，以趙國爲邯鄲郡。",
@@ -348,15 +447,62 @@
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「文帝十二年，除關，無用傳，至此復置傳，以七國新反，備非常也。」張晏曰：「傳，信也，若今過所也。」如淳曰：「傳音『檄傳』之『傳』，兩行書繒帛，分持其一，出入關，合之乃得過，謂之傳。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "傳音丁戀反。如今之過所。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n031",
+      "anchor_text": "冬，以趙國爲邯鄲郡。",
+      "before_context": "...弋）〔易〕陽爲陽陵。復置津關，用傳出入。冬，以趙國爲邯鄲郡。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《地理志》趙國景帝以爲邯鄲郡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "五年三月，作陽陵、",
+      "before_context": "五年三月，作陽陵、",
+      "after_context": "渭橋。五月，募徙陽陵，予錢二十萬。江都大暴風從西方來，壞城十...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "景帝豫作壽陵也。按：趙系家趙肅侯十五年起壽陵，後代遂因之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "壞城十二丈。丁卯，封長公主子蟜爲隆慮侯。",
+      "before_context": "...江都大暴風從西方來，壞城十二丈。丁卯，封長公主子蟜爲隆慮侯。",
+      "after_context": "徙廣川王爲趙王。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音林閭。避殤帝諱改之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "綰爲建陵侯，",
       "before_context": "六年春，封中尉（趙）綰爲建陵侯，",
-      "after_context": "江都丞相嘉爲建平侯，隴西",
+      "after_context": "江都丞相嘉",
       "items": [
         {
           "source": "zhengyi",
@@ -367,10 +513,24 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n035",
+      "anchor_text": "江都丞相嘉",
+      "before_context": "六年春，封中尉（趙）綰爲建陵侯，江都丞相嘉",
+      "after_context": "爲建平侯，隴西太守渾邪爲平曲侯，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「姓程。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
       "anchor_text": "太守渾邪爲平曲侯，",
-      "before_context": "（趙）綰爲建陵侯，江都丞相嘉爲建平侯，隴西太守渾邪爲平曲侯，",
-      "after_context": "趙丞相嘉爲江陵侯，故將軍布爲鄃侯。梁楚二王皆薨。後九月，伐馳...",
+      "before_context": "...（趙）綰爲建陵侯，江都丞相嘉爲建平侯，隴西太守渾邪爲平曲侯，",
+      "after_context": "趙丞相嘉",
       "items": [
         {
           "source": "zhengyi",
@@ -381,7 +541,21 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n037",
+      "anchor_text": "趙丞相嘉",
+      "before_context": "...爲建陵侯，江都丞相嘉爲建平侯，隴西太守渾邪爲平曲侯，趙丞相嘉",
+      "after_context": "爲江陵侯，故將軍布爲鄃侯。梁楚二王皆薨。後九月，伐馳道樹，殖...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「姓蘇。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
       "anchor_text": "梁楚二王皆薨。後九月，伐馳道樹，殖蘭池。",
       "before_context": "...侯，故將軍布爲鄃侯。梁楚二王皆薨。後九月，伐馳道樹，殖蘭池。",
       "after_context": "",
@@ -400,10 +574,10 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n039",
       "anchor_text": "七年冬，廢栗太子爲臨江王。",
       "before_context": "七年冬，廢栗太子爲臨江王。",
-      "after_context": "十（",
+      "after_context": "十（二）〔一〕月晦，日有食之。春，免徒隸作陽陵者。丞相青免。...",
       "items": [
         {
           "source": "zhengyi",
@@ -414,10 +588,10 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n040",
       "anchor_text": "作陽陵者。丞相青免。二月乙巳，以太尉條侯",
       "before_context": "...日有食之。春，免徒隸作陽陵者。丞相青免。二月乙巳，以太尉條侯",
-      "after_context": "周亞夫爲丞相。四月乙巳，立膠東王太后爲皇后。丁巳，立膠東王爲...",
+      "after_context": "周亞夫爲丞相。四月乙巳，立膠東王太后爲皇后。",
       "items": [
         {
           "source": "zhengyi",
@@ -428,7 +602,49 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n041",
+      "anchor_text": "夫爲丞相。四月乙巳，立膠東王太后爲皇后。",
+      "before_context": "...乙巳，以太尉條侯周亞夫爲丞相。四月乙巳，立膠東王太后爲皇后。",
+      "after_context": "丁巳，立膠東王爲太子。名徹。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按系家，太后槐里人，父仲。兄信，封蓋侯。后故金氏妻女弟姁兒也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
+      "anchor_text": "中元年，封故御史大夫周苛",
+      "before_context": "中元年，封故御史大夫周苛",
+      "after_context": "孫平",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "周昌之兄。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
+      "anchor_text": "孫平",
+      "before_context": "中元年，封故御史大夫周苛孫平",
+      "after_context": "爲繩侯，故御史大夫周昌（子）〔孫〕左車爲安陽侯，四月乙巳，赦...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『應』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n044",
       "anchor_text": "立皇子越爲廣川王，子寄爲膠東王。封四侯。",
       "before_context": "...。即死中尉府中。夏，立皇子越爲廣川王，子寄爲膠東王。封四侯。",
       "after_context": "九月甲戌，日食。",
@@ -437,12 +653,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "文穎曰：「楚相張尚，太傅趙夷吾，趙相建德，內史王悍。此四人各諫其王，無使反，不聽，皆殺之，故封其子。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「張尚子當居，趙夷吾子周，建德子橫，王悍子弃也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n045",
       "anchor_text": "月，地動。九月戊戌晦，日食。軍東都門外。",
       "before_context": "...夫桃侯劉舍爲丞相。四月，地動。九月戊戌晦，日食。軍東都門外。",
       "after_context": "",
@@ -451,12 +672,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "按：《三輔黃圖》東出北頭第一門曰宣平門，外曰東都門。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《三輔黃圖》云東出北第一門曰宣平門，外曰東都門。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n046",
+      "anchor_text": "中四年三月，置德陽宮。",
+      "before_context": "中四年三月，置德陽宮。",
+      "after_context": "大蝗。秋，赦徒作陽陵者。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "瓚曰：「是景帝廟也，帝自作之，諱不言廟，故言宮。西京故事云景帝廟爲德陽宮。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
       "anchor_text": "爲常山王。封十侯。",
       "before_context": "中五年夏，立皇子舜爲常山王。封十侯。",
       "after_context": "六月丁巳，赦天下，賜爵一級。天下大潦。更命諸侯丞相曰相。秋，...",
@@ -470,10 +710,10 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n048",
       "anchor_text": "雍，郊見五帝。三月，雨雹。四月，梁孝王、",
       "before_context": "中六年二月己卯，行幸雍，郊見五帝。三月，雨雹。四月，梁孝王、",
-      "after_context": "城陽共王、汝南王皆薨。立梁孝王子明爲濟川王，子彭離爲濟東王，",
+      "after_context": "城陽共王、",
       "items": [
         {
           "source": "zhengyi",
@@ -484,10 +724,10 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n049",
       "anchor_text": "城陽共王、",
       "before_context": "...己卯，行幸雍，郊見五帝。三月，雨雹。四月，梁孝王、城陽共王、",
-      "after_context": "汝南王皆薨。立梁孝王子明爲濟川王，子彭離爲濟東王，子定爲山陽...",
+      "after_context": "汝南王皆薨。立梁孝王子明爲濟川王，",
       "items": [
         {
           "source": "zhengyi",
@@ -498,10 +738,10 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n050",
       "anchor_text": "汝南王皆薨。立梁孝王子明爲濟川王，",
       "before_context": "...。四月，梁孝王、城陽共王、汝南王皆薨。立梁孝王子明爲濟川王，",
-      "after_context": "子彭離爲濟東王，子定爲山陽王，子不識爲濟陰王。梁分爲五。封四...",
+      "after_context": "子彭離爲濟東王，",
       "items": [
         {
           "source": "zhengyi",
@@ -512,10 +752,10 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n051",
       "anchor_text": "子彭離爲濟東王，",
-      "before_context": "城陽共王、汝南王皆薨。立梁孝王子明爲濟川王，子彭離爲濟東王，",
-      "after_context": "子定爲山陽王，子不識爲濟陰王。梁分爲五。封四侯。更命廷尉爲大...",
+      "before_context": "...城陽共王、汝南王皆薨。立梁孝王子明爲濟川王，子彭離爲濟東王，",
+      "after_context": "子定爲山陽王，",
       "items": [
         {
           "source": "zhengyi",
@@ -526,10 +766,10 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n052",
       "anchor_text": "子定爲山陽王，",
       "before_context": "...王皆薨。立梁孝王子明爲濟川王，子彭離爲濟東王，子定爲山陽王，",
-      "after_context": "子不識爲濟陰王。梁分爲五。封四侯。更命廷尉爲大理，將作少府爲...",
+      "after_context": "子不識爲濟陰王。",
       "items": [
         {
           "source": "zhengyi",
@@ -540,7 +780,7 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n053",
       "anchor_text": "子不識爲濟陰王。",
       "before_context": "...子明爲濟川王，子彭離爲濟東王，子定爲山陽王，子不識爲濟陰王。",
       "after_context": "梁分爲五。封四侯。更命廷尉爲大理，將作少府爲將作大匠，主爵中...",
@@ -554,21 +794,152 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
-      "anchor_text": "大行爲行人，",
-      "before_context": "...爵中尉爲都尉，長信詹事爲長信少府，將行爲大長秋，大行爲行人，",
-      "after_context": "奉常爲太常，典客爲大行，治粟內史爲大農。以大內爲二千石，置左...",
+      "id": "n054",
+      "anchor_text": "理，將作少府爲將作大匠，主爵中尉爲都尉，",
+      "before_context": "...封四侯。更命廷尉爲大理，將作少府爲將作大匠，主爵中尉爲都尉，",
+      "after_context": "長信詹事",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "服虔曰：「天子死未有謚，稱大行。」晉灼曰：「禮有大行、小行，主謚官，故以此名之。」如淳曰：「不反之辭也。」瓚曰：「大行是官名，掌九儀之制，以賓諸侯。」"
+          "text": "《漢書百官表》曰：「主爵中尉，秦官，掌列侯。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n055",
+      "anchor_text": "長信詹事",
+      "before_context": "...更命廷尉爲大理，將作少府爲將作大匠，主爵中尉爲都尉，長信詹事",
+      "after_context": "爲長信少府，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書百官表》曰：「詹事，秦官，掌皇后太子家。」應劭曰：「詹，省也，給也。」瓚曰：「《茂陵書》詹事秩二千石。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n056",
+      "anchor_text": "爲長信少府，",
+      "before_context": "...理，將作少府爲將作大匠，主爵中尉爲都尉，長信詹事爲長信少府，",
+      "after_context": "將行爲大長秋，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「以太后所居宮爲名。長信宮則曰長信少府，長樂宮則曰長樂少府。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n057",
+      "anchor_text": "將行爲大長秋，",
+      "before_context": "...將作大匠，主爵中尉爲都尉，長信詹事爲長信少府，將行爲大長秋，",
+      "after_context": "大行爲行人，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書百官表》曰：「將行，秦官。」應劭曰：「長秋，皇后卿。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
+      "anchor_text": "大行爲行人，",
+      "before_context": "...爵中尉爲都尉，長信詹事爲長信少府，將行爲大長秋，大行爲行人，",
+      "after_context": "奉常爲太常，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「天子死未有謚，稱大行。」晉灼曰：「禮有大行、小行，主謚官，故以此名之。」如淳曰：「不反之辭也。」瓚曰：「大行是官名，掌九儀之制，以賓諸侯。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：鄭玄曰「命者五，謂公、侯、伯、子、男，爵者四，孤、卿、大夫、士，是九也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n059",
+      "anchor_text": "奉常爲太常，",
+      "before_context": "...，長信詹事爲長信少府，將行爲大長秋，大行爲行人，奉常爲太常，",
+      "after_context": "典客爲大行，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書百官表》曰：「奉常，秦官，掌宗廟禮儀。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n060",
+      "anchor_text": "典客爲大行，",
+      "before_context": "...長信少府，將行爲大長秋，大行爲行人，奉常爲太常，典客爲大行，",
+      "after_context": "治粟內史爲大農。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「大行，官名，秦時云典客，景帝初改云大行，後更名大鴻臚，武帝因而不改，故《漢書》景紀有大鴻臚。《百官表》又云武帝改名大鴻臚。鴻，聲也。臚，附皮。以言其掌四夷賓客，若皮臚之在外附於身也。復有大行令，故諸侯薨，大鴻臚奏謚，列侯薨，則大行奏誄」。按：此大行令即鴻臚之屬官也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n061",
+      "anchor_text": "治粟內史爲大農。",
+      "before_context": "...大長秋，大行爲行人，奉常爲太常，典客爲大行，治粟內史爲大農。",
+      "after_context": "以大內爲二千石，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書百官表》曰：「治粟內史，秦官，掌穀貨也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n062",
+      "anchor_text": "以大內爲二千石，",
+      "before_context": "...人，奉常爲太常，典客爲大行，治粟內史爲大農。以大內爲二千石，",
+      "after_context": "置左右內官，屬大內。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「大內，京師府藏。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n063",
+      "anchor_text": "置左右內官，屬大內。",
+      "before_context": "...爲大行，治粟內史爲大農。以大內爲二千石，置左右內官，屬大內。",
+      "after_context": "七月辛亥，日食。八月，匈奴入上郡。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "主天子之私財物曰少內。少內屬大內也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n064",
       "anchor_text": "後元年冬，更命中大夫令爲衞尉。",
       "before_context": "後元年冬，更命中大夫令爲衞尉。",
       "after_context": "三月丁酉，赦天下，賜爵一級，中二千石、諸侯相爵右庶長。四月，...",
@@ -582,10 +953,38 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n065",
+      "anchor_text": "、諸侯相爵右庶長。四月，大酺。五月丙戌，",
+      "before_context": "...，賜爵一級，中二千石、諸侯相爵右庶長。四月，大酺。五月丙戌，",
+      "after_context": "地動，其蚤食時復動。上庸地動二十二日，壞城垣。七月乙巳，日食...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「丙，一作『甲』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n066",
+      "anchor_text": "日食。丞相劉舍免。八月壬辰，以御史大夫綰",
+      "before_context": "...，壞城垣。七月乙巳，日食。丞相劉舍免。八月壬辰，以御史大夫綰",
+      "after_context": "爲丞相，封建陵侯。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "姓衞也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
       "anchor_text": "。",
       "before_context": "後二年正月，地一日三動。郅將軍擊匈奴。",
-      "after_context": "酺五日。令內史郡不得食馬粟，沒入縣官。令徒隸衣七緵布。止馬舂...",
+      "after_context": "酺五日。令內史郡不得食馬粟，沒入縣官。令徒隸衣七緵布。",
       "items": [
         {
           "source": "zhengyi",
@@ -596,10 +995,10 @@
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n068",
       "anchor_text": "郡不得食馬粟，沒入縣官。令徒隸衣七緵布。",
-      "before_context": "匈奴。酺五日。令內史郡不得食馬粟，沒入縣官。令徒隸衣七緵布。",
-      "after_context": "止馬舂。爲歲不登，禁天下食不造歲。省列侯遣之國。三月，匈奴",
+      "before_context": "...匈奴。酺五日。令內史郡不得食馬粟，沒入縣官。令徒隸衣七緵布。",
+      "after_context": "止馬舂。",
       "items": [
         {
           "source": "suoyin",
@@ -615,9 +1014,37 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n069",
+      "anchor_text": "止馬舂。",
+      "before_context": "...五日。令內史郡不得食馬粟，沒入縣官。令徒隸衣七緵布。止馬舂。",
+      "after_context": "爲歲不登，禁天下食不造歲。省列侯遣之國。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "止人爲馬舂粟，爲歲不登故也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
+      "anchor_text": "爲歲不登，禁天下食不造歲。省列侯遣之國。",
+      "before_context": "...隸衣七緵布。止馬舂。爲歲不登，禁天下食不造歲。省列侯遣之國。",
+      "after_context": "三月，匈奴入鴈門。十月，租長陵田。大旱。衡山國、河東、雲中郡",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「文紀遣列侯之國，今又省之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
       "anchor_text": "月，租長陵田。大旱。衡山國、河東、雲中郡",
-      "before_context": "三月，匈奴入鴈門。十月，租長陵田。大旱。衡山國、河東、雲中郡",
+      "before_context": "...三月，匈奴入鴈門。十月，租長陵田。大旱。衡山國、河東、雲中郡",
       "after_context": "民疫。",
       "items": [
         {
@@ -629,7 +1056,63 @@
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n072",
+      "anchor_text": "赤五日。十二月晦，䨓。",
+      "before_context": "後三年十月，日月皆（食）赤五日。十二月晦，䨓。",
+      "after_context": "日如紫。五星逆行守太微。月貫天廷中。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『雷』字，又作『圖』字，實所未詳。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n073",
+      "anchor_text": "日如紫。五星逆行守太微。月貫天廷中。",
+      "before_context": "...）赤五日。十二月晦，䨓。日如紫。五星逆行守太微。月貫天廷中。",
+      "after_context": "正月甲寅，皇太子冠。甲子，孝景皇帝崩。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "天廷即龍星右角也。按：石氏星傳曰「龍在左角曰天田，右角曰天廷」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n074",
+      "anchor_text": "正月甲寅，皇太子冠。甲子，孝景皇帝崩。",
+      "before_context": "...行守太微。月貫天廷中。正月甲寅，皇太子冠。甲子，孝景皇帝崩。",
+      "after_context": "遺詔賜諸侯王以下至民爲父後爵一級，天下戶百錢。出宮人歸其家，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "皇甫謐曰：「帝以孝惠七年生，年四十八。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n075",
+      "anchor_text": "其家，復無所與。太子即位，是爲孝武皇帝。",
+      "before_context": "...天下戶百錢。出宮人歸其家，復無所與。太子即位，是爲孝武皇帝。",
+      "after_context": "三月，封皇太后弟蚡",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書》云：「二月癸酉，帝葬陽陵。」皇甫謐曰：「陽陵山方百二十步，高十四丈，去長安四十五里。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n076",
       "anchor_text": "三月，封皇太后弟蚡",
       "before_context": "...歸其家，復無所與。太子即位，是爲孝武皇帝。三月，封皇太后弟蚡",
       "after_context": "爲武安侯，弟勝爲周陽侯。置陽陵。",
@@ -638,6 +1121,25 @@
           "source": "jijie",
           "label": "集解",
           "text": "蘇林曰：「蚡音鼢。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "蚡音扶粉反。按：外戚世家皇太后母臧氏初嬪王氏，生子信而寡，更嫁長陵田氏，生蚡及勝也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n077",
+      "anchor_text": "漸也。及主父偃言之，而諸侯以弱，卒以安。",
+      "before_context": "...侯太盛，而錯爲之不以漸也。及主父偃言之，而諸侯以弱，卒以安。",
+      "after_context": "安危之機，豈不以謀哉？",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "主父偃上言，今天子下推恩之令，令諸侯各得分邑其子弟，於是遂弱，卒以安也。"
         }
       ],
       "sentence_id": null

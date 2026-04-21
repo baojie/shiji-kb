@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "楚元王劉交者，",
       "before_context": "楚元王劉交者，",
-      "after_context": "高祖之同母少弟也，字游。",
+      "after_context": "高祖之同母",
       "items": [
         {
           "source": "zhengyi",
@@ -25,6 +25,11 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一作『父』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《漢書》作「同父」。言同父者，以明異母也。"
         }
       ],
       "sentence_id": null
@@ -33,18 +38,37 @@
       "id": "n003",
       "anchor_text": "始高祖微時，嘗辟事，時時與賓客過巨嫂食。",
       "before_context": "...人，長兄伯，伯蚤卒。始高祖微時，嘗辟事，時時與賓客過巨嫂食。",
-      "after_context": "嫂厭叔，叔與客來，嫂詳爲羹盡，櫟釜，賓客以故去。已而視釜中尚...",
+      "after_context": "嫂厭叔，叔與客來，嫂詳爲羹盡，櫟釜，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「《漢書》云丘嫂也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「丘」。應劭云「丘，姓也」。孟康云「丘，空也。兄亡，空有嫂也」。今此作「巨」，巨，大也，謂長嫂也。劉氏云「巨，一作『丘』。」"
         }
       ],
       "sentence_id": null
     },
     {
       "id": "n004",
+      "anchor_text": "嫂厭叔，叔與客來，嫂詳爲羹盡，櫟釜，",
+      "before_context": "...事，時時與賓客過巨嫂食。嫂厭叔，叔與客來，嫂詳爲羹盡，櫟釜，",
+      "after_context": "賓客以故去。已而視釜中尚有羹，高祖由此怨其嫂。及高祖爲帝，封...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "櫟音歷。謂以杓歷釜旁，使爲聲。《漢書》作「轑」，音勞。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "其母不長者耳。」於是乃封其子信爲羹頡侯。",
       "before_context": "...：「某非忘封之也，爲其母不長者耳。」於是乃封其子信爲羹頡侯。",
       "after_context": "而王次兄仲於代。",
@@ -68,10 +92,66 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n006",
+      "anchor_text": "而王次兄仲於代。",
+      "before_context": "...，爲其母不長者耳。」於是乃封其子信爲羹頡侯。而王次兄仲於代。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「次兄名喜，字仲，以六年立爲代王，其年罷。卒謚頃王。有子曰濞。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
+      "anchor_text": "。",
+      "before_context": "高祖六年，已禽楚王韓信於陳，乃以弟交爲楚王，都彭城。",
+      "after_context": "即位二十三年卒，子夷王郢立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云楚王王薛郡、東海、彭城三十六縣也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
+      "anchor_text": "即位二十三年卒，子夷王郢立。",
+      "before_context": "...信於陳，乃以弟交爲楚王，都彭城。即位二十三年卒，子夷王郢立。",
+      "after_context": "夷王四年卒，子王戊立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》名郢客。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
+      "anchor_text": "王戊立二十年，冬，坐爲薄太后服私姦，",
+      "before_context": "王戊立二十年，冬，坐爲薄太后服私姦，",
+      "after_context": "削東海郡。春，戊與吳王合謀反，其相張尚、太傅趙夷吾諫，不聽。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云「私姦服舍中」。姚察云「姦於服舍，非必宮中」。又按：集注服虔云「私姦中人」。蓋以罪重，故至削郡也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
       "anchor_text": "戊則殺尚、夷吾，起兵與吳西攻梁，破棘壁。",
       "before_context": "...太傅趙夷吾諫，不聽。戊則殺尚、夷吾，起兵與吳西攻梁，破棘壁。",
-      "after_context": "至昌邑南，與漢將周亞夫戰。漢絕吳楚糧道，士卒飢，吳王走，楚王...",
+      "after_context": "至昌邑南，",
       "items": [
         {
           "source": "zhengyi",
@@ -82,7 +162,7 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n011",
       "anchor_text": "至昌邑南，",
       "before_context": "...諫，不聽。戊則殺尚、夷吾，起兵與吳西攻梁，破棘壁。至昌邑南，",
       "after_context": "與漢將周亞夫戰。漢絕吳楚糧道，士卒飢，吳王走，楚王戊自殺，軍...",
@@ -96,7 +176,21 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n012",
+      "anchor_text": "漢已平吳楚，孝景帝欲以德侯子續吳，",
+      "before_context": "漢已平吳楚，孝景帝欲以德侯子續吳，",
+      "after_context": "以元王子禮續楚。竇太后曰：「吳王，老人也，宜爲宗室順善。今乃...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「德侯名廣，吳王濞之弟也。其父曰仲。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
       "anchor_text": "郡。",
       "before_context": "...，地節二年，中人上書告楚王謀反，王自殺，國除，入漢爲彭城郡。",
       "after_context": "",
@@ -120,7 +214,7 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n014",
       "anchor_text": "趙王劉遂者，",
       "before_context": "趙王劉遂者，",
       "after_context": "其父高祖中子，名友，謚曰「幽」。幽王以憂死，故爲「幽」。高后...",
@@ -134,10 +228,24 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n015",
+      "anchor_text": "孝文帝即位二年，立遂弟辟彊，",
+      "before_context": "孝文帝即位二年，立遂弟辟彊，",
+      "after_context": "取趙之河閒郡爲河閒王，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音壁強二音，又音闢疆。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "取趙之河閒郡爲河閒王，",
       "before_context": "孝文帝即位二年，立遂弟辟彊，取趙之河閒郡爲河閒王，",
-      "after_context": "（",
+      "after_context": "（以）〔是〕爲文王。立十三年卒，子哀王福立。一年卒，無子，絕...",
       "items": [
         {
           "source": "zhengyi",
@@ -148,7 +256,21 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n017",
+      "anchor_text": "郡。吳楚反，趙王遂與合謀起兵。其相建德、",
+      "before_context": "...鼂錯以適削趙王常山之郡。吳楚反，趙王遂與合謀起兵。其相建德、",
+      "after_context": "內史王悍諫，不聽。遂燒殺建德、王悍，發兵屯其西界，欲待吳與俱...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "建德，其相名，史先失姓也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
       "anchor_text": "引水灌趙城。趙城壞，趙王自殺，邯鄲遂降。",
       "before_context": "...欒布自破齊還，乃并兵引水灌趙城。趙城壞，趙王自殺，邯鄲遂降。",
       "after_context": "趙幽王絕後。",
@@ -162,7 +284,21 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n019",
+      "anchor_text": "將亡，賢人隱，亂臣貴。使楚王戊毋刑申公，",
+      "before_context": "...君子用而小人退。國之將亡，賢人隱，亂臣貴。使楚王戊毋刑申公，",
+      "after_context": "遵其言，趙任防與先生，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》申公名培，王戊胥靡之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
       "anchor_text": "遵其言，趙任防與先生，",
       "before_context": "...亡，賢人隱，亂臣貴。使楚王戊毋刑申公，遵其言，趙任防與先生，",
       "after_context": "豈有篡殺之謀，爲天下僇哉？賢人乎，賢人乎！非質有其內，惡能用...",
@@ -171,6 +307,11 @@
           "source": "jijie",
           "label": "集解",
           "text": "趙堯傳曰：「趙人防與公也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "此及《漢書》雖不見趙不用防與公，蓋當時猶知事迹，或別有所見，故太史公明引以結其贊。"
         }
       ],
       "sentence_id": null

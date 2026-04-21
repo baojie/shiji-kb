@@ -3,9 +3,23 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "，命南正重以司天，北正黎以司地。",
+      "before_context": "昔在顓頊，命南正重以司天，北正黎以司地。",
+      "after_context": "唐虞之際，紹重黎之後，使復典之，至于夏商，故重黎氏世序天地。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "南正重以司天，火正黎以司地。案：張晏云「南方，陽也。火，水配也。水爲陰，故命南正重司天，火正黎兼地職」。臣瓚以爲重黎氏是司天地之官，司地者宜曰北正，古文作「北」字，非也。揚雄、譙周並以爲然。案：《國語》「黎爲火正，以淳曜敦大，光照四海」，又幽通賦云「黎淳曜於高辛」，則「火正」爲是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "重黎氏世序天地。其在周，程伯休甫其後也。",
       "before_context": "...復典之，至于夏商，故重黎氏世序天地。其在周，程伯休甫其後也。",
-      "after_context": "當周宣王時，失其守而爲司馬氏。司馬氏世典周史。惠襄之閒，司馬...",
+      "after_context": "當周宣王時，失其守而爲司馬氏。",
       "items": [
         {
           "source": "jijie",
@@ -26,10 +40,10 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
       "anchor_text": "當周宣王時，失其守而爲司馬氏。",
       "before_context": "...天地。其在周，程伯休甫其後也。當周宣王時，失其守而爲司馬氏。",
-      "after_context": "司馬氏世典周史。惠襄之閒，司馬氏去周適晉。晉中軍隨會奔秦，而...",
+      "after_context": "司馬氏世典周史。",
       "items": [
         {
           "source": "zhengyi",
@@ -40,7 +54,49 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
+      "anchor_text": "司馬氏世典周史。",
+      "before_context": "...伯休甫其後也。當周宣王時，失其守而爲司馬氏。司馬氏世典周史。",
+      "after_context": "惠襄之閒，司馬氏去周適晉。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：司馬，夏官卿，不掌國史，自是先代兼爲史。衞宏云「司馬氏，周史佚之後」，不知何據。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "惠襄之閒，司馬氏去周適晉。",
+      "before_context": "...失其守而爲司馬氏。司馬氏世典周史。惠襄之閒，司馬氏去周適晉。",
+      "after_context": "晉中軍隨會奔秦，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「周惠王、襄王有子穨、叔帶之難，故司馬氏奔晉。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
+      "anchor_text": "晉中軍隨會奔秦，",
+      "before_context": "...。司馬氏世典周史。惠襄之閒，司馬氏去周適晉。晉中軍隨會奔秦，",
+      "after_context": "而司馬氏入少梁。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案左氏，隨會自晉奔秦，後乃奔魏，自魏還晉，故《漢書》云會奔秦魏也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
       "anchor_text": "而司馬氏入少梁。",
       "before_context": "...。惠襄之閒，司馬氏去周適晉。晉中軍隨會奔秦，而司馬氏入少梁。",
       "after_context": "",
@@ -59,10 +115,24 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n008",
+      "anchor_text": "在衞，或在趙，或在秦。其在衞者，相中山。",
+      "before_context": "...氏去周適晉，分散，或在衞，或在趙，或在秦。其在衞者，相中山。",
+      "after_context": "在趙者，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「名喜也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
       "anchor_text": "在趙者，",
       "before_context": "...晉，分散，或在衞，或在趙，或在秦。其在衞者，相中山。在趙者，",
-      "after_context": "以傳劍論顯，蒯聵其後也。在秦者名錯，與張儀爭論，於是惠王使錯...",
+      "after_context": "以傳劍論顯，",
       "items": [
         {
           "source": "suoyin",
@@ -78,21 +148,26 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n010",
       "anchor_text": "以傳劍論顯，",
       "before_context": "...在衞，或在趙，或在秦。其在衞者，相中山。在趙者，以傳劍論顯，",
-      "after_context": "蒯聵其後也。在秦者名錯，與張儀爭論，於是惠王使錯將伐蜀，遂拔...",
+      "after_context": "蒯聵",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「世善傳劍也。」蘇林曰：「傳手搏論而釋之。」晉灼曰：「《史記》吳起贊曰『非信仁廉勇，不能傳劍論兵書』也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "服虔云：「代善劍也。」按：解所以稱傳也。蘇林云傳作「搏」，言手搏論而釋之，所以知名也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n011",
       "anchor_text": "蒯聵",
       "before_context": "...，或在趙，或在秦。其在衞者，相中山。在趙者，以傳劍論顯，蒯聵",
       "after_context": "其後也。在秦者名錯，與張儀爭論，於是惠王使錯將伐蜀，遂拔，因...",
@@ -106,24 +181,71 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
-      "anchor_text": "錯孫靳，",
-      "before_context": "...錯，與張儀爭論，於是惠王使錯將伐蜀，遂拔，因而守之。錯孫靳，",
-      "after_context": "事武安君白起",
+      "id": "n012",
+      "anchor_text": "論，於是惠王使錯將伐蜀，遂拔，因而守之。",
+      "before_context": "...在秦者名錯，與張儀爭論，於是惠王使錯將伐蜀，遂拔，因而守之。",
+      "after_context": "錯孫靳，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐廣曰：「一作『蘄』。」"
+          "text": "蘇林曰：「守，郡守也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n013",
+      "anchor_text": "錯孫靳，",
+      "before_context": "...錯，與張儀爭論，於是惠王使錯將伐蜀，遂拔，因而守之。錯孫靳，",
+      "after_context": "事武安君白起。而少梁更名曰夏陽。靳與武安君阬趙長平軍，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『蘄』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音七各反，下音紀釁反。《漢書》作「蘄」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
+      "anchor_text": "而少梁更名曰夏陽。靳與武安君阬趙長平軍，",
+      "before_context": "...孫靳，事武安君白起。而少梁更名曰夏陽。靳與武安君阬趙長平軍，",
+      "after_context": "還而與之俱賜死杜郵，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「趙孝成時。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "還而與之俱賜死杜郵，",
+      "before_context": "...而少梁更名曰夏陽。靳與武安君阬趙長平軍，還而與之俱賜死杜郵，",
+      "after_context": "葬於華池。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "下音尤。李奇曰「地名，在咸陽西」。按三秦記，其地後改爲李里者也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "葬於華池。",
       "before_context": "...曰夏陽。靳與武安君阬趙長平軍，還而與之俱賜死杜郵，葬於華池。",
-      "after_context": "靳孫昌，昌爲秦主鐵官，當始皇之時。蒯聵玄孫卬爲武信君將而徇朝...",
+      "after_context": "靳孫昌，昌爲秦主鐵官，當始皇之時。蒯聵玄孫卬",
       "items": [
         {
           "source": "jijie",
@@ -144,24 +266,71 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
-      "anchor_text": "爲武信君將",
-      "before_context": "...華池。靳孫昌，昌爲秦主鐵官，當始皇之時。蒯聵玄孫卬爲武信君將",
-      "after_context": "而徇朝歌。諸侯之相王，王卬於殷。漢之伐楚，卬歸漢，以其地爲河...",
+      "id": "n017",
+      "anchor_text": "昌，昌爲秦主鐵官，當始皇之時。蒯聵玄孫卬",
+      "before_context": "...杜郵，葬於華池。靳孫昌，昌爲秦主鐵官，當始皇之時。蒯聵玄孫卬",
+      "after_context": "爲武信君將",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「張耳傳云武臣自號武信君。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：晉譙國司馬無忌作司馬氏《系本》，云蒯聵生昭豫，昭豫生憲，憲生卬。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n018",
+      "anchor_text": "爲武信君將",
+      "before_context": "...華池。靳孫昌，昌爲秦主鐵官，當始皇之時。蒯聵玄孫卬爲武信君將",
+      "after_context": "而徇朝歌。諸侯之相王，王卬於殷。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「張耳傳云武臣自號武信君。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案《漢書》，武臣號武信君。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
+      "anchor_text": "而徇朝歌。諸侯之相王，王卬於殷。",
+      "before_context": "...皇之時。蒯聵玄孫卬爲武信君將而徇朝歌。諸侯之相王，王卬於殷。",
+      "after_context": "漢之伐楚，卬歸漢，以其地爲河內郡。昌生無澤，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云項羽封卬爲殷王。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "伐楚，卬歸漢，以其地爲河內郡。昌生無澤，",
+      "before_context": "...相王，王卬於殷。漢之伐楚，卬歸漢，以其地爲河內郡。昌生無澤，",
+      "after_context": "無澤爲漢市長。無澤生喜，喜爲五大夫，卒，皆葬高門。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「毋擇」，並音亦也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
       "anchor_text": "長。無澤生喜，喜爲五大夫，卒，皆葬高門。",
       "before_context": "...昌生無澤，無澤爲漢市長。無澤生喜，喜爲五大夫，卒，皆葬高門。",
-      "after_context": "喜生談，談爲太史公",
+      "after_context": "喜生談，談爲太史公。",
       "items": [
         {
           "source": "jijie",
@@ -182,7 +351,7 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n022",
       "anchor_text": "。",
       "before_context": "...長。無澤生喜，喜爲五大夫，卒，皆葬高門。喜生談，談爲太史公。",
       "after_context": "",
@@ -206,10 +375,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n023",
       "anchor_text": "學天官於唐都，",
       "before_context": "太史公學天官於唐都，",
-      "after_context": "受易於楊何，習道論於黃子。太史公",
+      "after_context": "受易於楊何，",
       "items": [
         {
           "source": "zhengyi",
@@ -220,7 +389,35 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n024",
+      "anchor_text": "受易於楊何，",
+      "before_context": "太史公學天官於唐都，受易於楊何，",
+      "after_context": "習道論於黃子。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「菑川人。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "習道論於黃子。",
+      "before_context": "太史公學天官於唐都，受易於楊何，習道論於黃子。",
+      "after_context": "太史公仕於建元元封之閒，愍學者之不達其意而師悖，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「儒林傳曰黃生，好黃老之術。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
       "anchor_text": "於建元元封之閒，愍學者之不達其意而師悖，",
       "before_context": "...道論於黃子。太史公仕於建元元封之閒，愍學者之不達其意而師悖，",
       "after_context": "乃論六家之要指曰：",
@@ -234,7 +431,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n027",
       "anchor_text": "易大傳：",
       "before_context": "易大傳：",
       "after_context": "「天下一致而百慮，同歸而殊塗。」夫陰陽、儒、墨、名、法、道德...",
@@ -253,10 +450,24 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n028",
+      "anchor_text": "務爲治者也，直所從言之異路，有省不省耳。",
+      "before_context": "...墨、名、法、道德，此務爲治者也，直所從言之異路，有省不省耳。",
+      "after_context": "嘗竊觀陰陽之術，大祥",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：六家同歸於正，然所從之道殊塗，學或有傳習省察，或有不省者耳。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "嘗竊觀陰陽之術，大祥",
       "before_context": "...務爲治者也，直所從言之異路，有省不省耳。嘗竊觀陰陽之術，大祥",
-      "after_context": "而眾忌諱，使人拘而多所畏；然其序四時之大順，不可失也。儒者博...",
+      "after_context": "而眾忌諱，使人拘而多所畏；",
       "items": [
         {
           "source": "jijie",
@@ -277,7 +488,7 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n030",
       "anchor_text": "而眾忌諱，使人拘而多所畏；",
       "before_context": "...，有省不省耳。嘗竊觀陰陽之術，大祥而眾忌諱，使人拘而多所畏；",
       "after_context": "然其序四時之大順，不可失也。儒者博而寡要，勞而少功，是以其事...",
@@ -291,10 +502,10 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n031",
       "anchor_text": "父子之禮，列夫婦長幼之別，不可易也。墨者",
       "before_context": "...事難盡從；然其序君臣父子之禮，列夫婦長幼之別，不可易也。墨者",
-      "after_context": "儉而難遵，是以其事不可徧循；然其彊本節用，不可廢也。法家嚴而...",
+      "after_context": "儉而難遵，是以其事不可徧循；",
       "items": [
         {
           "source": "zhengyi",
@@ -305,10 +516,108 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n032",
+      "anchor_text": "儉而難遵，是以其事不可徧循；",
+      "before_context": "...，列夫婦長幼之別，不可易也。墨者儉而難遵，是以其事不可徧循；",
+      "after_context": "然其彊本節用，不可廢也。法家嚴而少恩；然其正君臣上下之分，不...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徧音遍。徧循，言難盡用也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
+      "anchor_text": "上下之分，不可改矣。名家使人儉而善失真；",
+      "before_context": "...嚴而少恩；然其正君臣上下之分，不可改矣。名家使人儉而善失真；",
+      "after_context": "然其正名實，不可不察也。道家使人精神專一，動合無形，贍足萬物...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：名家流出於禮官。古者名位不同，禮亦異數，孔子「必也正名乎」。案：名家知禮亦異數，是儉也；受命不受辭，或失其真也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
+      "anchor_text": "。道家使人精神專一，動合無形，贍足萬物。",
+      "before_context": "...其正名實，不可不察也。道家使人精神專一，動合無形，贍足萬物。",
+      "after_context": "其爲術也，因陰陽之大順，采儒墨之善，撮名法之要，與時遷移，應...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "贍音市豔反。《漢書》作「澹」，古今字異也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
+      "anchor_text": "如此則主勞而臣逸。至於大道之要，去健羨，",
+      "before_context": "...而臣和，主先而臣隨。如此則主勞而臣逸。至於大道之要，去健羨，",
+      "after_context": "絀聰明，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「『知雄守雌』，是去健也。『不見可欲，使心不亂』，是去羨也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "絀聰明，",
+      "before_context": "...主先而臣隨。如此則主勞而臣逸。至於大道之要，去健羨，絀聰明，",
+      "after_context": "釋此而任術。夫神大用則竭，形大勞則敝。形神騷動，欲與天地長久...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳曰：「『不尚賢』，『絕聖弃智』也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "夫陰陽四時、八位、十二度、二十四節",
+      "before_context": "夫陰陽四時、八位、十二度、二十四節",
+      "after_context": "各有教令，順之者昌，逆之者不死則亡，未必然也，故曰「使人拘而...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「八位，八卦位也。十二度，十二次也。二十四節，就中氣也。各有禁忌，謂日月也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
+      "anchor_text": "道，言其德行曰：「堂高三尺，",
+      "before_context": "墨者亦尚堯舜道，言其德行曰：「堂高三尺，",
+      "after_context": "土階三等，茅茨不翦，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：自此已下韓子之文，故稱「曰」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
       "anchor_text": "土階三等，茅茨不翦，",
       "before_context": "墨者亦尚堯舜道，言其德行曰：「堂高三尺，土階三等，茅茨不翦，",
-      "after_context": "采椽不刮。食土簋，啜土刑，糲粱之食，藜霍之羹。夏日葛衣，冬日...",
+      "after_context": "采椽不刮。",
       "items": [
         {
           "source": "zhengyi",
@@ -319,10 +628,10 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n040",
       "anchor_text": "采椽不刮。",
-      "before_context": "舜道，言其德行曰：「堂高三尺，土階三等，茅茨不翦，采椽不刮。",
-      "after_context": "食土簋，啜土刑，糲粱之食，藜霍之羹。夏日葛衣，冬日鹿裘。」其...",
+      "before_context": "...舜道，言其德行曰：「堂高三尺，土階三等，茅茨不翦，采椽不刮。",
+      "after_context": "食土簋，",
       "items": [
         {
           "source": "suoyin",
@@ -338,10 +647,24 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n041",
+      "anchor_text": "食土簋，",
+      "before_context": "...其德行曰：「堂高三尺，土階三等，茅茨不翦，采椽不刮。食土簋，",
+      "after_context": "啜土刑，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『塯』。」駰案：服虔曰「土簋，用土作此器」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
       "anchor_text": "啜土刑，",
       "before_context": "...：「堂高三尺，土階三等，茅茨不翦，采椽不刮。食土簋，啜土刑，",
-      "after_context": "糲粱之食，藜霍之羹。夏日葛衣，冬日鹿裘。」其送死，桐棺三寸，",
+      "after_context": "糲粱之食，",
       "items": [
         {
           "source": "zhengyi",
@@ -352,10 +675,10 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n043",
       "anchor_text": "糲粱之食，",
       "before_context": "...尺，土階三等，茅茨不翦，采椽不刮。食土簋，啜土刑，糲粱之食，",
-      "after_context": "藜霍之羹。夏日葛衣，冬日鹿裘。」其送死，桐棺三寸，舉音不盡其...",
+      "after_context": "藜霍之羹。",
       "items": [
         {
           "source": "jijie",
@@ -376,10 +699,10 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n044",
       "anchor_text": "藜霍之羹。",
       "before_context": "...等，茅茨不翦，采椽不刮。食土簋，啜土刑，糲粱之食，藜霍之羹。",
-      "after_context": "夏日葛衣，冬日鹿裘。」其送死，桐棺三寸，舉音不盡其哀。教喪禮...",
+      "after_context": "夏日葛衣，冬日鹿裘。」其送死，桐棺三寸，",
       "items": [
         {
           "source": "zhengyi",
@@ -390,9 +713,9 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n045",
       "anchor_text": "夏日葛衣，冬日鹿裘。」其送死，桐棺三寸，",
-      "before_context": "糲粱之食，藜霍之羹。夏日葛衣，冬日鹿裘。」其送死，桐棺三寸，",
+      "before_context": "...糲粱之食，藜霍之羹。夏日葛衣，冬日鹿裘。」其送死，桐棺三寸，",
       "after_context": "舉音不盡其哀。教喪禮，必以此爲萬民之率。使天下法若此，則尊卑...",
       "items": [
         {
@@ -404,10 +727,52 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n046",
+      "anchor_text": "不殊貴賤，一斷於法，則親親尊尊之恩絕矣。",
+      "before_context": "法家不別親疏，不殊貴賤，一斷於法，則親親尊尊之恩絕矣。",
+      "after_context": "可以行一時之計，而不可長用也，故曰「嚴而少恩」。若尊主卑臣，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：禮，親親父爲首，尊尊君爲首也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
+      "anchor_text": "名家苛察繳繞，",
+      "before_context": "名家苛察繳繞，",
+      "after_context": "使人不得反其意，專決於名而失人情，故曰「使人儉而善失真」。若...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「繳音近叫呼，謂煩也。」如淳曰：「繳繞猶纏繞，不通大體也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
+      "anchor_text": "人儉而善失真」。若夫控名責實，參伍不失，",
+      "before_context": "...名而失人情，故曰「使人儉而善失真」。若夫控名責實，參伍不失，",
+      "after_context": "此不可不察也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「引名責實，參錯交互，明知事情。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "道家無爲，又曰無不爲，",
       "before_context": "道家無爲，又曰無不爲，",
-      "after_context": "其實易行，其辭難知。其術以虛無爲本，以因循爲用。無成埶，無常...",
+      "after_context": "其實易行，",
       "items": [
         {
           "source": "zhengyi",
@@ -418,10 +783,10 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n050",
       "anchor_text": "其實易行，",
       "before_context": "道家無爲，又曰無不爲，其實易行，",
-      "after_context": "其辭難知。其術以虛無爲本，以因循爲用。無成埶，無常形，故能究...",
+      "after_context": "其辭難知。",
       "items": [
         {
           "source": "zhengyi",
@@ -432,10 +797,10 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n051",
       "anchor_text": "其辭難知。",
       "before_context": "道家無爲，又曰無不爲，其實易行，其辭難知。",
-      "after_context": "其術以虛無爲本，以因循爲用。無成埶，無常形，故能究萬物之情。...",
+      "after_context": "其術以虛無爲本，以因循爲用。",
       "items": [
         {
           "source": "zhengyi",
@@ -446,10 +811,10 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n052",
       "anchor_text": "其術以虛無爲本，以因循爲用。",
       "before_context": "...又曰無不爲，其實易行，其辭難知。其術以虛無爲本，以因循爲用。",
-      "after_context": "無成埶，無常形，故能究萬物之情。不爲物先，不爲物後，故能爲萬...",
+      "after_context": "無成埶，無常形，故能究萬物之情。不爲物先，不爲物後，",
       "items": [
         {
           "source": "zhengyi",
@@ -460,10 +825,24 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n053",
+      "anchor_text": "形，故能究萬物之情。不爲物先，不爲物後，",
+      "before_context": "...循爲用。無成埶，無常形，故能究萬物之情。不爲物先，不爲物後，",
+      "after_context": "故能爲萬物主。有法無法，因時爲業；",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「因物爲制。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
       "anchor_text": "故能爲萬物主。有法無法，因時爲業；",
       "before_context": "...之情。不爲物先，不爲物後，故能爲萬物主。有法無法，因時爲業；",
-      "after_context": "有度無度，因物與合。故曰「聖人不朽，時變是守。虛者道之常也，...",
+      "after_context": "有度無度，因物與合。",
       "items": [
         {
           "source": "zhengyi",
@@ -474,10 +853,10 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n055",
       "anchor_text": "有度無度，因物與合。",
       "before_context": "...物後，故能爲萬物主。有法無法，因時爲業；有度無度，因物與合。",
-      "after_context": "故曰「聖人不朽，時變是守。虛者道之常也，因者君之綱」也。羣臣...",
+      "after_context": "故曰「聖人不朽，時變是守。",
       "items": [
         {
           "source": "zhengyi",
@@ -488,10 +867,10 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n056",
       "anchor_text": "故曰「聖人不朽，時變是守。",
       "before_context": "...法，因時爲業；有度無度，因物與合。故曰「聖人不朽，時變是守。",
-      "after_context": "虛者道之常也，因者君之綱」也。羣臣並至，使各自明也。其實中其...",
+      "after_context": "虛者道之常也，因者君之綱」也。",
       "items": [
         {
           "source": "suoyin",
@@ -507,7 +886,7 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n057",
       "anchor_text": "虛者道之常也，因者君之綱」也。",
       "before_context": "...合。故曰「聖人不朽，時變是守。虛者道之常也，因者君之綱」也。",
       "after_context": "羣臣並至，使各自明也。其實中其聲者謂之端，實不中其聲者謂之窾...",
@@ -521,7 +900,7 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n058",
       "anchor_text": "其實中其聲者謂之端，實不中其聲者謂之窾。",
       "before_context": "...臣並至，使各自明也。其實中其聲者謂之端，實不中其聲者謂之窾。",
       "after_context": "窾言不聽，姦乃不生，賢不肖自分，白黑乃形。在所欲用耳，何事不...",
@@ -530,12 +909,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「音款，空也。」駰案：李奇曰「聲別名也」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "窾音款。《漢書》作「款」。款，空也。故申子云「款言無成」是也。聲者，名也。以言實不稱名，則謂之空，空有聲也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n059",
       "anchor_text": "所欲用耳，何事不成。乃合大道，混混冥冥。",
       "before_context": "...肖自分，白黑乃形。在所欲用耳，何事不成。乃合大道，混混冥冥。",
       "after_context": "光燿天下，復反無名。凡人所生者神也，所託者形也。神大用則竭，...",
@@ -549,10 +933,24 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n060",
+      "anchor_text": "。由是觀之，神者生之本也，形者生之具也。",
+      "before_context": "...不可復反，故聖人重之。由是觀之，神者生之本也，形者生之具也。",
+      "after_context": "不先定其神〔形〕，而曰「我有以治天下」，何由哉？",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「聲氣者，神也。枝體者，形也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n061",
       "anchor_text": "遷生龍門，",
       "before_context": "遷生龍門，",
-      "after_context": "耕牧河山之陽。年十歲則誦古文。二十而南游江、淮，上會稽，探禹...",
+      "after_context": "耕牧河山之陽。",
       "items": [
         {
           "source": "jijie",
@@ -568,10 +966,10 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n062",
       "anchor_text": "耕牧河山之陽。",
       "before_context": "遷生龍門，耕牧河山之陽。",
-      "after_context": "年十歲則誦古文。二十而南游江、淮，上會稽，探禹穴，闚九疑，浮...",
+      "after_context": "年十歲則誦古文。",
       "items": [
         {
           "source": "zhengyi",
@@ -582,10 +980,24 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n063",
+      "anchor_text": "年十歲則誦古文。",
+      "before_context": "遷生龍門，耕牧河山之陽。年十歲則誦古文。",
+      "after_context": "二十而南游江、淮，上會稽，探禹穴，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：遷及事伏生，是學誦《古文尚書》。劉氏以爲《左傳》、《國語》、《系本》等書，是亦名古文也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n064",
       "anchor_text": "二十而南游江、淮，上會稽，探禹穴，",
       "before_context": "...河山之陽。年十歲則誦古文。二十而南游江、淮，上會稽，探禹穴，",
-      "after_context": "闚九疑，浮於沅、湘；北涉汶、泗，講業齊、魯之都，觀孔子",
+      "after_context": "闚九疑，",
       "items": [
         {
           "source": "jijie",
@@ -606,10 +1018,10 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n065",
       "anchor_text": "闚九疑，",
       "before_context": "...。年十歲則誦古文。二十而南游江、淮，上會稽，探禹穴，闚九疑，",
-      "after_context": "浮於沅、湘；北涉汶、泗，講業齊、魯之都，觀孔子",
+      "after_context": "浮於沅、湘；",
       "items": [
         {
           "source": "suoyin",
@@ -625,10 +1037,10 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n066",
       "anchor_text": "浮於沅、湘；",
       "before_context": "...古文。二十而南游江、淮，上會稽，探禹穴，闚九疑，浮於沅、湘；",
-      "after_context": "北涉汶、泗，講業齊、魯之都，觀孔子",
+      "after_context": "北涉汶、泗，",
       "items": [
         {
           "source": "zhengyi",
@@ -639,10 +1051,10 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n067",
       "anchor_text": "北涉汶、泗，",
       "before_context": "...南游江、淮，上會稽，探禹穴，闚九疑，浮於沅、湘；北涉汶、泗，",
-      "after_context": "講業齊、魯之都，觀孔子",
+      "after_context": "講業齊、魯之都，觀孔子之遺風，鄉射鄒、嶧；戹困鄱、薛、",
       "items": [
         {
           "source": "zhengyi",
@@ -653,10 +1065,10 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n068",
       "anchor_text": "之遺風，鄉射鄒、嶧；戹困鄱、薛、",
       "before_context": "...、泗，講業齊、魯之都，觀孔子之遺風，鄉射鄒、嶧；戹困鄱、薛、",
-      "after_context": "彭城",
+      "after_context": "彭城，過梁、楚以歸。於是遷仕爲郎中，奉使西征巴、蜀以南，南略...",
       "items": [
         {
           "source": "jijie",
@@ -677,24 +1089,43 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
-      "anchor_text": "留滯周南，",
-      "before_context": "是歲天子始建漢家之封，而太史公留滯周南，",
-      "after_context": "不得與從事，故發憤且卒。而子遷適使反，見父於河洛之閒。太史公",
+      "id": "n069",
+      "anchor_text": "征巴、蜀以南，南略邛、笮、昆明，還報命。",
+      "before_context": "...是遷仕爲郎中，奉使西征巴、蜀以南，南略邛、笮、昆明，還報命。",
+      "after_context": "",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐廣曰：「摯虞曰古之周南，今之洛陽。」"
+          "text": "徐廣曰：「元鼎六年，平西南夷，以爲五郡。其明年，元封元年是也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n070",
+      "anchor_text": "留滯周南，",
+      "before_context": "是歲天子始建漢家之封，而太史公留滯周南，",
+      "after_context": "不得與從事，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「摯虞曰古之周南，今之洛陽。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "張晏云：「自陝已東，皆周南之地也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
       "anchor_text": "不得與從事，",
       "before_context": "是歲天子始建漢家之封，而太史公留滯周南，不得與從事，",
-      "after_context": "故發憤且卒。而子遷適使反，見父於河洛之閒。太史公",
+      "after_context": "故發憤且卒。而子遷適使反，見父於河洛之閒。太史公執遷手而泣曰...",
       "items": [
         {
           "source": "zhengyi",
@@ -705,21 +1136,68 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
-      "anchor_text": "》",
-      "before_context": "卒三歲而遷爲太史令，紬《史記》",
-      "after_context": "石室金匱之書。五年而當太初元年，十一月甲子朔旦冬至，天曆始改...",
+      "id": "n072",
+      "anchor_text": "，則學者至今則之。自獲麟以來四百有餘歲，",
+      "before_context": "...起廢，論詩書，作春秋，則學者至今則之。自獲麟以來四百有餘歲，",
+      "after_context": "而諸侯相兼，《史記》放絕。今漢興，海內一統，明主賢君忠臣死義...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐廣曰：「紬音抽。」"
+          "text": "駰案：年表魯哀公十四年獲麟，至漢元封元年三百七十一年。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n073",
+      "anchor_text": "卒三歲而遷爲太史令，",
+      "before_context": "卒三歲而遷爲太史令，",
+      "after_context": "紬《史記》",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "博物志：「太史令茂陵顯武里大夫司馬遷，年二十八，三年六月乙卯除，六百石。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n074",
+      "anchor_text": "》",
+      "before_context": "卒三歲而遷爲太史令，紬《史記》",
+      "after_context": "石室金匱之書。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「紬音抽。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳云：「抽徹舊書故事而次述之。」徐廣音抽。小顏云：「紬謂綴集之也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n075",
+      "anchor_text": "石室金匱之書。",
+      "before_context": "卒三歲而遷爲太史令，紬《史記》石室金匱之書。",
+      "after_context": "五年而當太初元年，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：石室、金匱皆國家藏書之處。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n076",
       "anchor_text": "五年而當太初元年，",
       "before_context": "...三歲而遷爲太史令，紬《史記》石室金匱之書。五年而當太初元年，",
       "after_context": "十一月甲子朔旦冬至，天曆始改，建於明堂，諸神受紀。",
@@ -738,7 +1216,7 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n077",
       "anchor_text": "朔旦冬至，天曆始改，建於明堂，諸神受紀。",
       "before_context": "...太初元年，十一月甲子朔旦冬至，天曆始改，建於明堂，諸神受紀。",
       "after_context": "",
@@ -747,15 +1225,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「封禪序曰『封禪則萬靈罔不禋祀』。」駰案：韋昭曰「告於百神，與天下更始，著紀於是」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "虞喜志林云：「改曆於明堂，班之於諸侯。諸侯羣神之主，故曰『諸神受紀』。」孟康云：「句芒、祝融之屬皆受瑞紀。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n078",
       "anchor_text": "曰：「先人有言：",
       "before_context": "太史公曰：「先人有言：",
-      "after_context": "『自周公卒五百歲而有孔子",
+      "after_context": "『自周公卒五百歲而有孔子。孔子卒後至於今五百歲，",
       "items": [
         {
           "source": "suoyin",
@@ -771,7 +1254,119 @@
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n079",
+      "anchor_text": "卒後至於今五百歲，",
+      "before_context": "...「先人有言：『自周公卒五百歲而有孔子。孔子卒後至於今五百歲，",
+      "after_context": "有能紹明世，正易傳，繼春秋，本詩書禮樂之際？』意在斯乎！意在...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：孟子稱堯舜至湯五百餘歲，湯至文王五百餘歲，文王至孔子五百餘歲。按：太史公略取於孟子，而楊雄、孫盛深所不然，所謂多見不知量也。以爲淳氣育才，豈有常數，五百之期，何異瞬息。是以上皇相次，或有萬齡爲閒，而唐堯、舜、禹比肩並列。降及周室，聖賢盈朝；孔子之沒，千載莫嗣，安在於千年五百乎？具述作者，蓋記注之志耳，豈聖人之倫哉。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n080",
+      "anchor_text": "？』意在斯乎！意在斯乎！小子何敢讓焉。」",
+      "before_context": "...春秋，本詩書禮樂之際？』意在斯乎！意在斯乎！小子何敢讓焉。」",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "讓，《漢書》作「攘」。晉灼云：「此古『讓』字，言己當述先人之業，何敢自嫌值五百歲而讓也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
+      "anchor_text": "上大夫壺遂",
+      "before_context": "上大夫壺遂",
+      "after_context": "曰：「昔孔子何爲而作春秋哉？」太史公曰：「余聞董生曰：",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：遂爲詹事，秩二千石，故爲上大夫也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n082",
+      "anchor_text": "曰：「余聞董生曰：",
+      "before_context": "...夫壺遂曰：「昔孔子何爲而作春秋哉？」太史公曰：「余聞董生曰：",
+      "after_context": "『周道衰廢，孔子爲魯司寇，諸侯害之，大夫壅之。孔子知言之不用...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「仲舒也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n083",
+      "anchor_text": "知言之不用，道之不行也，是非二百四十二年",
+      "before_context": "...害之，大夫壅之。孔子知言之不用，道之不行也，是非二百四十二年",
+      "after_context": "之中，以爲天下儀表，貶天子，退諸侯，討大夫，以達王事而已矣。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：是非謂褒貶諸侯之得失也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n084",
+      "anchor_text": "以達王事而已矣。』子曰：『我欲載之空言，",
+      "before_context": "...子，退諸侯，討大夫，以達王事而已矣。』子曰：『我欲載之空言，",
+      "after_context": "不如見之於行事之深切著明也。』",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：孔子之言見春秋緯，太史公引之以成說也。空言謂褒貶是非也。空立此文，而亂臣賊子懼也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n085",
+      "anchor_text": "不如見之於行事之深切著明也。』",
+      "before_context": "...已矣。』子曰：『我欲載之空言，不如見之於行事之深切著明也。』",
+      "after_context": "夫春秋，上明三王之道，下辨人事之紀，別嫌疑，明是非，定猶豫，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：孔子言我徒欲立空言，設褒貶，則不如附見於當時所因之事。人臣有僭侈篡逆，因就此筆削以褒貶，深切著明而書之，以爲將來之誡者也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n086",
+      "anchor_text": "之紀，別嫌疑，明是非，定猶豫，善善惡惡，",
+      "before_context": "...明三王之道，下辨人事之紀，別嫌疑，明是非，定猶豫，善善惡惡，",
+      "after_context": "賢賢賤不肖，存亡國，繼絕世，補敝起廢，王道之大者也。易著天地...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《公羊傳》曰「善善及其子孫，惡惡止其身」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
       "anchor_text": "正，莫近於春秋。春秋文成數萬，其指數千。",
       "before_context": "...秋以道義。撥亂世反之正，莫近於春秋。春秋文成數萬，其指數千。",
       "after_context": "萬物之散聚皆在春秋。春秋之中，弒君三十六，亡國五十二，諸侯奔...",
@@ -780,15 +1375,48 @@
           "source": "jijie",
           "label": "集解",
           "text": "張晏曰：「春秋萬八千字，當言『減』，而云『成數』，字誤也。」駰謂太史公此辭是述董生之言。董仲舒自治公羊春秋，公羊經傳凡有四萬四千餘字，故云「文成數萬」也。不得如張議，但論經萬八千字，便謂之誤。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：張晏曰「春秋萬八千字，此云『文成數萬』，字誤也」。裴駰以遷述仲舒所論公羊經傳，凡四萬四千，故云「數萬」，又非也。小顏云「史遷豈以《公羊傳》爲春秋乎」？又春秋經一萬八千，亦足稱數萬，非字之誤也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n088",
+      "anchor_text": "其社稷者不可勝數。察其所以，皆失其本已。",
+      "before_context": "...十二，諸侯奔走不得保其社稷者不可勝數。察其所以，皆失其本已。",
+      "after_context": "故《易》曰『失之豪釐，差以千里』。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：弒君亡國及奔走者，皆是失仁義之道本耳。已者，語終之辭也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n089",
+      "anchor_text": "》曰『失之豪釐，差以千里』。",
+      "before_context": "...數。察其所以，皆失其本已。故《易》曰『失之豪釐，差以千里』。",
+      "after_context": "故曰『臣弒君，子弒父，非一旦一夕之故也，其漸久矣』。故有國者...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一云『差以毫釐』，一云『繆以千里』。」駰案：今易無此語，易緯有之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n090",
       "anchor_text": "，死罪之名。其實皆以爲善，爲之不知其義，",
       "before_context": "...之義者，必陷篡弒之誅，死罪之名。其實皆以爲善，爲之不知其義，",
-      "after_context": "被之空言而不敢辭。夫不通禮義之旨，至於君不君，臣不臣，父不父...",
+      "after_context": "被之空言而不敢辭。",
       "items": [
         {
           "source": "zhengyi",
@@ -799,7 +1427,21 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n091",
+      "anchor_text": "被之空言而不敢辭。",
+      "before_context": "...誅，死罪之名。其實皆以爲善，爲之不知其義，被之空言而不敢辭。",
+      "after_context": "夫不通禮義之旨，至於君不君，臣不臣，父不父，子不子。夫君不君...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「趙盾不知討賊，而不敢辭其罪也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n092",
       "anchor_text": "，臣不臣，父不父，子不子。夫君不君則犯，",
       "before_context": "...禮義之旨，至於君不君，臣不臣，父不父，子不子。夫君不君則犯，",
       "after_context": "臣不臣則誅，父不父則無道，子不子則不孝。此四行者，天下之大過...",
@@ -813,10 +1455,24 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n093",
+      "anchor_text": "曰：「唯唯，否否，",
+      "before_context": "太史公曰：「唯唯，否否，",
+      "after_context": "不然。余聞之先人曰：『伏羲至純厚，作易八卦。堯舜之盛，《尚書...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晉灼曰：「唯唯，謙應也。否否，不通者也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n094",
       "anchor_text": "符瑞，封禪，改正朔，易服色，受命於穆清，",
       "before_context": "...興以來，至明天子，獲符瑞，封禪，改正朔，易服色，受命於穆清，",
-      "after_context": "澤流罔極，海外殊俗，重譯款塞，請來獻見者，不可勝道。臣下百官...",
+      "after_context": "澤流罔極，海外殊俗，重譯款塞，",
       "items": [
         {
           "source": "jijie",
@@ -832,7 +1488,7 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n095",
       "anchor_text": "澤流罔極，海外殊俗，重譯款塞，",
       "before_context": "...，改正朔，易服色，受命於穆清，澤流罔極，海外殊俗，重譯款塞，",
       "after_context": "請來獻見者，不可勝道。臣下百官力誦聖德，猶不能宣盡其意。且士...",
@@ -851,10 +1507,10 @@
       "sentence_id": null
     },
     {
-      "id": "n052",
+      "id": "n096",
       "anchor_text": "於是論次其文。七年",
       "before_context": "於是論次其文。七年",
-      "after_context": "而太史公",
+      "after_context": "而太史公遭李陵之禍，",
       "items": [
         {
           "source": "jijie",
@@ -870,7 +1526,7 @@
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n097",
       "anchor_text": "遭李陵之禍，",
       "before_context": "於是論次其文。七年而太史公遭李陵之禍，",
       "after_context": "幽於縲紲。乃喟然而歎曰：「是余之罪也夫！是余之罪也夫！身毀不...",
@@ -884,10 +1540,10 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n098",
       "anchor_text": "毀不用矣。」退而深惟曰：「夫詩書隱約者，",
       "before_context": "...夫！是余之罪也夫！身毀不用矣。」退而深惟曰：「夫詩書隱約者，",
-      "after_context": "欲遂其志之思也。昔西伯拘羑里，演周易；孔子",
+      "after_context": "欲遂其志之思也。昔西伯拘羑里",
       "items": [
         {
           "source": "suoyin",
@@ -903,7 +1559,21 @@
       "sentence_id": null
     },
     {
-      "id": "n055",
+      "id": "n099",
+      "anchor_text": "欲遂其志之思也。昔西伯拘羑里",
+      "before_context": "...。」退而深惟曰：「夫詩書隱約者，欲遂其志之思也。昔西伯拘羑里",
+      "after_context": "，演周易；孔子戹陳蔡，作春秋；屈原放逐，著離騷；左丘失明，厥...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「在湯陰。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n100",
       "anchor_text": "孫子臏腳，而論兵法；不韋遷蜀，世傳呂覽；",
       "before_context": "...失明，厥有《國語》；孫子臏腳，而論兵法；不韋遷蜀，世傳呂覽；",
       "after_context": "韓非囚秦，說難、孤憤；詩三百篇，大抵賢聖發憤之所爲作也。此人...",
@@ -917,24 +1587,71 @@
       "sentence_id": null
     },
     {
-      "id": "n056",
+      "id": "n101",
       "anchor_text": "，思來者。」於是卒述陶唐以來，至于麟止，",
       "before_context": "...得通其道也，故述往事，思來者。」於是卒述陶唐以來，至于麟止，",
-      "after_context": "自黃帝",
+      "after_context": "自黃帝始。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "張晏曰：「武帝獲麟，遷以爲述事之端。上紀黃帝，下至麟止，猶春秋止於獲麟也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "服虔云：「武帝至雍獲白麟，而鑄金作麟足形，故云『麟止』。遷作《史記》止於此，猶春秋終於獲麟然也。」《史記》以黃帝爲首，而云「述陶唐者」，案《五帝本紀》贊云「五帝尚矣，然《尚書》載堯以來。百家言黃帝，其文不雅馴」，故述黃帝爲本紀之首，而以《尚書》雅正，故稱「起於陶唐」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n057",
+      "id": "n102",
+      "anchor_text": "，法天則地，四聖遵序，",
+      "before_context": "維昔黃帝，法天則地，四聖遵序，",
+      "after_context": "各成法度；唐堯遜位，虞舜不台；",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「顓頊，帝嚳，堯，舜。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n103",
+      "anchor_text": "不台；",
+      "before_context": "維昔黃帝，法天則地，四聖遵序，各成法度；唐堯遜位，虞舜不台；",
+      "after_context": "厥美帝功，萬世載之。作《五帝本紀》",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "台音怡。悅也。或音胎，非也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n104",
+      "anchor_text": "》",
+      "before_context": "...法度；唐堯遜位，虞舜不台；厥美帝功，萬世載之。作《五帝本紀》",
+      "after_context": "第一。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "應劭云：「有本則紀，有家則代，有年則表，有名則傳。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n105",
       "anchor_text": "維契",
       "before_context": "維契",
-      "after_context": "作商，爰及成湯",
+      "after_context": "作商，爰及成湯；太甲居桐，德盛阿衡；武丁得說，乃稱高宗；帝辛...",
       "items": [
         {
           "source": "zhengyi",
@@ -945,10 +1662,10 @@
       "sentence_id": null
     },
     {
-      "id": "n058",
+      "id": "n106",
       "anchor_text": "維秦之先，伯翳佐禹；穆公思義，悼豪之旅；",
       "before_context": "維秦之先，伯翳佐禹；穆公思義，悼豪之旅；",
-      "after_context": "以人爲殉，詩歌黃鳥；昭襄業帝。作《秦本紀",
+      "after_context": "以人爲殉，詩歌黃鳥；昭襄業帝。作《秦本紀》第五。",
       "items": [
         {
           "source": "suoyin",
@@ -964,7 +1681,7 @@
       "sentence_id": null
     },
     {
-      "id": "n059",
+      "id": "n107",
       "anchor_text": "始皇既立，并兼六國，銷鋒鑄鐻，",
       "before_context": "始皇既立，并兼六國，銷鋒鑄鐻，",
       "after_context": "維偃干革，尊號稱帝，矜武任力；二世受運，子嬰降虜。作《始皇本...",
@@ -973,15 +1690,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「嚴安上書，銷其兵鑄以爲鍾鐻也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "下音巨。鐻，鐘也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n060",
+      "id": "n108",
+      "anchor_text": "業之，子羽接之；殺慶救趙，",
+      "before_context": "秦失其道，豪桀並擾；項梁業之，子羽接之；殺慶救趙，",
+      "after_context": "諸侯立之；誅嬰背懷，天下非之。作《項羽本紀》第七。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「宋義爲上將，號慶子冠軍。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n109",
       "anchor_text": "惠之早霣，",
       "before_context": "惠之早霣，",
-      "after_context": "諸呂不台；崇彊祿、產，諸侯謀之；殺隱幽友，大臣洞疑，遂及宗禍...",
+      "after_context": "諸呂不台；",
       "items": [
         {
           "source": "zhengyi",
@@ -992,24 +1728,57 @@
       "sentence_id": null
     },
     {
-      "id": "n061",
+      "id": "n110",
       "anchor_text": "諸呂不台；",
       "before_context": "惠之早霣，諸呂不台；",
-      "after_context": "崇彊祿、產，諸侯謀之；殺隱幽友，大臣洞疑，遂及宗禍。作《呂太...",
+      "after_context": "崇彊祿、產，諸侯謀之；殺隱幽友，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「無台輔之德也。一曰怡，懌也，不爲百姓所說。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣音胎，非也。案：一音怡，此贊本韻，則怡懌爲是。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n062",
+      "id": "n111",
+      "anchor_text": "崇彊祿、產，諸侯謀之；殺隱幽友，",
+      "before_context": "惠之早霣，諸呂不台；崇彊祿、產，諸侯謀之；殺隱幽友，",
+      "after_context": "大臣洞疑，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「趙隱王如意，趙幽王友。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n112",
+      "anchor_text": "大臣洞疑，",
+      "before_context": "...之早霣，諸呂不台；崇彊祿、產，諸侯謀之；殺隱幽友，大臣洞疑，",
+      "after_context": "遂及宗禍。作《呂太后本紀》第九。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：洞是洞達爲義，言所共疑也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n113",
       "anchor_text": "削，譜紀不明，有司靡踵，彊弱之原云以世。",
       "before_context": "...太初百年，諸侯廢立分削，譜紀不明，有司靡踵，彊弱之原云以世。",
-      "after_context": "作《漢興已來諸侯年表",
+      "after_context": "作《漢興已來諸侯年表》第五。",
       "items": [
         {
           "source": "jijie",
@@ -1030,10 +1799,66 @@
       "sentence_id": null
     },
     {
-      "id": "n063",
+      "id": "n114",
+      "anchor_text": "衞之音所從來久矣。人情之所感，遠俗則懷。",
+      "before_context": "...，則已好鄭衞之音，鄭衞之音所從來久矣。人情之所感，遠俗則懷。",
+      "after_context": "比樂書以述來古，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「樂者所以感和人情。人情既感，則遠方殊俗莫不懷柔向化也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n115",
+      "anchor_text": "比樂書以述來古，",
+      "before_context": "...，鄭衞之音所從來久矣。人情之所感，遠俗則懷。比樂書以述來古，",
+      "after_context": "作《樂書》第二。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：來古即古來也。言比樂書以述自古已來樂之興衰也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n116",
+      "anchor_text": "非兵不彊，",
+      "before_context": "非兵不彊，",
+      "after_context": "非德不昌，黃帝、湯、武以興，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：此律書之贊而云「非兵不強」者，則此「律書」即「兵書」也。古者師出以律，則凡出軍皆聽律聲，故云「聞聲效勝負，望敵知吉凶」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n117",
+      "anchor_text": "、湯、武以興，",
+      "before_context": "非兵不彊，非德不昌，黃帝、湯、武以興，",
+      "after_context": "桀、紂、二世以崩，可不慎歟？司馬法所從來尚矣，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "黃帝有版泉之師，湯、武有鳴條、牧野之戰而克桀、紂。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n118",
       "anchor_text": "、二世以崩，可不慎歟？司馬法所從來尚矣，",
-      "before_context": "、湯、武以興，桀、紂、二世以崩，可不慎歟？司馬法所從來尚矣，",
-      "after_context": "太公、孫、吳、王子能紹而明之，切近世，極人變。作《律書",
+      "before_context": "...、湯、武以興，桀、紂、二世以崩，可不慎歟？司馬法所從來尚矣，",
+      "after_context": "太公、孫、吳、王子",
       "items": [
         {
           "source": "zhengyi",
@@ -1044,10 +1869,24 @@
       "sentence_id": null
     },
     {
-      "id": "n064",
+      "id": "n119",
+      "anchor_text": "太公、孫、吳、王子",
+      "before_context": "...紂、二世以崩，可不慎歟？司馬法所從來尚矣，太公、孫、吳、王子",
+      "after_context": "能紹而明之，切近世，極人變。作《律書》第三。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「王子成甫。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n120",
       "anchor_text": "，曆居陽而治陰，律曆更相治，閒不容翲忽。",
       "before_context": "律居陰而治陽，曆居陽而治陰，律曆更相治，閒不容翲忽。",
-      "after_context": "五家之文怫異，維太初之元論。作《曆書",
+      "after_context": "五家之文怫異，",
       "items": [
         {
           "source": "suoyin",
@@ -1063,10 +1902,10 @@
       "sentence_id": null
     },
     {
-      "id": "n065",
+      "id": "n121",
       "anchor_text": "五家之文怫異，",
       "before_context": "...而治陽，曆居陽而治陰，律曆更相治，閒不容翲忽。五家之文怫異，",
-      "after_context": "維太初之元論。作《曆書",
+      "after_context": "維太初之元論。作《曆書》第四。",
       "items": [
         {
           "source": "suoyin",
@@ -1082,10 +1921,66 @@
       "sentence_id": null
     },
     {
-      "id": "n066",
+      "id": "n122",
+      "anchor_text": "》第四。",
+      "before_context": "...治，閒不容翲忽。五家之文怫異，維太初之元論。作《曆書》第四。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「論，一作『編』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n123",
+      "anchor_text": "受命而王，封禪之符罕",
+      "before_context": "受命而王，封禪之符罕",
+      "after_context": "用，用則萬靈罔不禋祀。追本諸神名山大川禮，作《封禪書》第六。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一云『答應』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n124",
+      "anchor_text": "維幣之行，",
+      "before_context": "維幣之行，",
+      "after_context": "以通農商；其極則玩巧，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "維獘之行。上獘音「幣帛」之「幣」，錢也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n125",
+      "anchor_text": "以通農商；其極則玩巧，",
+      "before_context": "維幣之行，以通農商；其極則玩巧，",
+      "after_context": "并兼茲殖，爭於機利，去本趨末。作《平準書》以觀事變，第八。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "杬巧，上五官反；下苦孝反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n126",
       "anchor_text": "申、呂肖矣，",
       "before_context": "申、呂肖矣，",
-      "after_context": "尚父側微，卒歸西伯，文武是師；功冠羣公，繆權于幽；番番黃髮，",
+      "after_context": "尚父側微，卒歸西伯，文武是師；功冠羣公，繆權于幽；",
       "items": [
         {
           "source": "jijie",
@@ -1106,10 +2001,10 @@
       "sentence_id": null
     },
     {
-      "id": "n067",
+      "id": "n127",
       "anchor_text": "卒歸西伯，文武是師；功冠羣公，繆權于幽；",
       "before_context": "...、呂肖矣，尚父側微，卒歸西伯，文武是師；功冠羣公，繆權于幽；",
-      "after_context": "番番黃髮，爰饗營丘。不背柯盟，桓公以昌，九合諸侯，霸功顯彰。...",
+      "after_context": "番番黃髮，",
       "items": [
         {
           "source": "jijie",
@@ -1130,10 +2025,80 @@
       "sentence_id": null
     },
     {
-      "id": "n068",
+      "id": "n128",
+      "anchor_text": "番番黃髮，",
+      "before_context": "...尚父側微，卒歸西伯，文武是師；功冠羣公，繆權于幽；番番黃髮，",
+      "after_context": "爰饗營丘。不背柯盟，桓公以昌，九合諸侯，霸功顯彰。田闞爭寵，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "番音婆。毛萇云「番番，威勇武貌」也。案：黃髮，言老人髮白而更黃也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n129",
+      "anchor_text": "九合諸侯，霸功顯彰。田闞爭寵，姜姓解亡。",
+      "before_context": "...不背柯盟，桓公以昌，九合諸侯，霸功顯彰。田闞爭寵，姜姓解亡。",
+      "after_context": "嘉父之謀，作《齊太公世家》第二。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「闞，一云『監』。解，一作『遷』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n130",
+      "anchor_text": "之禪，",
+      "before_context": "...叛之，於是召公率德，安集王室，以寧東土。燕（易）〔噲〕之禪，",
+      "after_context": "乃成禍亂。嘉甘棠之詩，作《燕世家》第四。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂王噲禪其相子之，後卒危亂也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n131",
+      "anchor_text": "將寧舊商；及旦攝政，二叔不饗；殺鮮放度，",
+      "before_context": "管蔡相武庚，將寧舊商；及旦攝政，二叔不饗；殺鮮放度，",
+      "after_context": "周公爲盟；大任十子，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：系家云管叔名鮮，蔡叔名度，霍叔名處也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n132",
+      "anchor_text": "周公爲盟；大任十子，",
+      "before_context": "...將寧舊商；及旦攝政，二叔不饗；殺鮮放度，周公爲盟；大任十子，",
+      "after_context": "周以宗彊。嘉仲悔過，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "太任，文王妃。十子，伯邑考、武王、管、蔡、霍、魯、衞、毛、耼、曹是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n133",
       "anchor_text": "周以宗彊。嘉仲悔過，",
       "before_context": "...二叔不饗；殺鮮放度，周公爲盟；大任十子，周以宗彊。嘉仲悔過，",
-      "after_context": "作《管蔡世家",
+      "after_context": "作《管蔡世家》第五。",
       "items": [
         {
           "source": "zhengyi",
@@ -1144,10 +2109,24 @@
       "sentence_id": null
     },
     {
-      "id": "n069",
+      "id": "n134",
+      "anchor_text": "申以商亂，酒材是告，及朔之生，衞頃不寧；",
+      "before_context": "收殷餘民，叔封始邑，申以商亂，酒材是告，及朔之生，衞頃不寧；",
+      "after_context": "南子惡蒯聵，子父易名。周德卑微，戰國既彊，衞以小弱，角獨後亡...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "衞頃公也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n135",
       "anchor_text": "反爲奴。武庚既死，周封微子。襄公傷於泓，",
       "before_context": "...箕子乎！正言不用，乃反爲奴。武庚既死，周封微子。襄公傷於泓，",
-      "after_context": "君子孰稱。景公謙德，熒惑退行。剔成暴虐，宋乃滅亡。嘉微子問太...",
+      "after_context": "君子孰稱。景公謙德，熒惑退行。剔成暴虐，",
       "items": [
         {
           "source": "zhengyi",
@@ -1158,21 +2137,26 @@
       "sentence_id": null
     },
     {
-      "id": "n070",
+      "id": "n136",
       "anchor_text": "君子孰稱。景公謙德，熒惑退行。剔成暴虐，",
       "before_context": "...封微子。襄公傷於泓，君子孰稱。景公謙德，熒惑退行。剔成暴虐，",
-      "after_context": "宋乃滅亡。嘉微子問太師，作《宋世家",
+      "after_context": "宋乃滅亡。嘉微子問太師，作《宋世家》第八。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一云『偃』，宋剔成君生偃。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音逷成。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n071",
+      "id": "n137",
       "anchor_text": "武王既崩，叔虞邑唐。君子譏名，",
       "before_context": "武王既崩，叔虞邑唐。君子譏名，",
       "after_context": "卒滅武公。驪姬之愛，亂者五世；重耳不得意，乃能成霸。六卿專權...",
@@ -1186,10 +2170,10 @@
       "sentence_id": null
     },
     {
-      "id": "n072",
+      "id": "n138",
       "anchor_text": "者五世；重耳不得意，乃能成霸。六卿專權，",
       "before_context": "...滅武公。驪姬之愛，亂者五世；重耳不得意，乃能成霸。六卿專權，",
-      "after_context": "晉國以秏。嘉文公錫珪鬯，作《晉世家",
+      "after_context": "晉國以秏。嘉文公錫珪鬯，作《晉世家》第九。",
       "items": [
         {
           "source": "zhengyi",
@@ -1200,7 +2184,7 @@
       "sentence_id": null
     },
     {
-      "id": "n073",
+      "id": "n139",
       "anchor_text": "周用熊繹，熊渠是續。莊王之賢，乃復國陳；",
       "before_context": "...殷之季世，粥子牒之。周用熊繹，熊渠是續。莊王之賢，乃復國陳；",
       "after_context": "既赦鄭伯，班師華元。懷王客死，蘭咎屈原；好諛信讒，楚并於秦。...",
@@ -1214,10 +2198,10 @@
       "sentence_id": null
     },
     {
-      "id": "n074",
+      "id": "n140",
       "anchor_text": "少康之子，實賓南海，",
       "before_context": "少康之子，實賓南海，",
-      "after_context": "文身斷髮，黿鱓與處，既守封禺，奉禹之祀。句踐困彼，乃用種、蠡...",
+      "after_context": "文身斷髮，黿鱓",
       "items": [
         {
           "source": "zhengyi",
@@ -1228,7 +2212,35 @@
       "sentence_id": null
     },
     {
-      "id": "n075",
+      "id": "n141",
+      "anchor_text": "文身斷髮，黿鱓",
+      "before_context": "少康之子，實賓南海，文身斷髮，黿鱓",
+      "after_context": "與處，既守封禺，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "蚖鱓、元鼉二音。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n142",
+      "anchor_text": "與處，既守封禺，",
+      "before_context": "少康之子，實賓南海，文身斷髮，黿鱓與處，既守封禺，",
+      "after_context": "奉禹之祀。句踐困彼，乃用種、蠡。嘉句踐夷蠻能脩其德，滅彊吳以...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「封禺山在武康縣南。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n143",
       "anchor_text": "維驥騄耳，乃章造父。趙夙事獻，衰續厥緒。",
       "before_context": "維驥騄耳，乃章造父。趙夙事獻，衰續厥緒。",
       "after_context": "佐文尊王，卒爲晉輔。襄子困辱，乃禽智伯。主父生縛，餓死探爵。...",
@@ -1242,10 +2254,10 @@
       "sentence_id": null
     },
     {
-      "id": "n076",
+      "id": "n144",
       "anchor_text": "、紂失其道而湯、武作，周失其道而春秋作。",
       "before_context": "桀、紂失其道而湯、武作，周失其道而春秋作。",
-      "after_context": "秦失其政，而陳涉",
+      "after_context": "秦失其政，而陳涉發迹，諸侯作難，風起雲蒸，卒亡秦族。天下之端...",
       "items": [
         {
           "source": "zhengyi",
@@ -1256,10 +2268,10 @@
       "sentence_id": null
     },
     {
-      "id": "n077",
+      "id": "n145",
       "anchor_text": "爲漢宗藩。戊溺於邪，禮復紹之。嘉游輔祖，",
       "before_context": "...爰都彭城，以彊淮泗，爲漢宗藩。戊溺於邪，禮復紹之。嘉游輔祖，",
-      "after_context": "作《楚元王世家",
+      "after_context": "作《楚元王世家》第二十。",
       "items": [
         {
           "source": "zhengyi",
@@ -1270,7 +2282,7 @@
       "sentence_id": null
     },
     {
-      "id": "n078",
+      "id": "n146",
       "anchor_text": "襲，喪其荊、吳。營陵激呂，乃王琅邪；怵午",
       "before_context": "...旅，劉賈是與；爲布所襲，喪其荊、吳。營陵激呂，乃王琅邪；怵午",
       "after_context": "信齊，往而不歸，遂西入關，遭立孝文，獲復王燕。天下未集，賈、...",
@@ -1284,10 +2296,10 @@
       "sentence_id": null
     },
     {
-      "id": "n079",
+      "id": "n147",
       "anchor_text": "填撫山西，",
       "before_context": "楚人圍我滎陽，相守三年；蕭何填撫山西，",
-      "after_context": "推計踵兵，給糧食不絕，使百姓愛漢，不樂爲楚。作《蕭相國世家",
+      "after_context": "推計踵兵，給糧食不絕，使百姓愛漢，不樂爲楚。作《蕭相國世家》...",
       "items": [
         {
           "source": "zhengyi",
@@ -1298,21 +2310,334 @@
       "sentence_id": null
     },
     {
-      "id": "n080",
-      "anchor_text": "能忍訽於魏齊，",
-      "before_context": "能忍訽於魏齊，",
-      "after_context": "而信威於彊秦，推賢讓位，二子有之。作《范睢蔡澤列傳",
+      "id": "n148",
+      "anchor_text": "秦所以東攘",
+      "before_context": "秦所以東攘",
+      "after_context": "雄諸侯，樗里、甘茂之策。作《樗里甘茂列傳》第十一。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐廣曰：「訽音逅。」"
+          "text": "徐廣曰：「一作『襄』。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n081",
+      "id": "n149",
+      "anchor_text": "苞河山，",
+      "before_context": "苞河山，",
+      "after_context": "圍大梁，使諸侯斂手而事秦者，魏冄之功。作《穰侯列傳》第十二。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「苞，一作『施』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n150",
+      "anchor_text": "，明禮義之統紀，絕惠王利端，列往世興衰。",
+      "before_context": "獵儒墨之遺文，明禮義之統紀，絕惠王利端，列往世興衰。",
+      "after_context": "作《孟子荀卿列傳》第十四。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『壞』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n151",
+      "anchor_text": "爭馮亭以權，",
+      "before_context": "爭馮亭以權，",
+      "after_context": "如楚以救邯鄲之圍，使其君復稱於諸侯。作《平原君虞卿列傳》第十...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「以，一作『反』。太史公譏平原曰『利令智昏』，故云爭馮亭反權。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n152",
+      "anchor_text": "能忍訽於魏齊，",
+      "before_context": "能忍訽於魏齊，",
+      "after_context": "而信威於彊秦，推賢讓位，二子有之。作《范睢蔡澤列傳》第十九。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「訽音逅。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "訽，火候反。訽，辱也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n153",
+      "anchor_text": "楚歸漢，漢用得大司馬殷，卒破子羽于垓下。",
+      "before_context": "以淮南叛楚歸漢，漢用得大司馬殷，卒破子羽于垓下。",
+      "after_context": "作《黥布列傳》第三十一。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「隄塘之名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n154",
+      "anchor_text": "》",
+      "before_context": "欲詳知秦楚之事，維周緤常從高祖，平定諸侯。作《傅靳蒯成列傳》",
+      "after_context": "第三十八。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "蒯成，上音裴，其字音從崩邑，又音浮。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n155",
+      "anchor_text": "維仲之省，",
+      "before_context": "維仲之省，",
+      "after_context": "厥濞王吳，遭漢初定，以填撫江淮之閒。作《吳王濞列傳》第四十六...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「吳王之王由父省。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n156",
+      "anchor_text": "吳之叛逆，甌人斬濞，",
+      "before_context": "吳之叛逆，甌人斬濞，",
+      "after_context": "葆守封禺",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「今之永寧，是東甌也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n157",
+      "anchor_text": "葆守封禺",
+      "before_context": "吳之叛逆，甌人斬濞，葆守封禺",
+      "after_context": "爲臣。作《東越列傳》第五十四。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音保。言東甌被越攻破之後，保封禺之山，今在武康縣也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n158",
+      "anchor_text": "亂遼閒，滿收其亡民，厥聚海東，以集真藩，",
+      "before_context": "燕丹散亂遼閒，滿收其亡民，厥聚海東，以集真藩，",
+      "after_context": "葆塞爲外臣。作《朝鮮列傳》第五十五。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『莫』。藩音普寒反。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n159",
+      "anchor_text": "浮說，長孺矜焉；好薦人，稱長者，壯有溉。",
+      "before_context": "...於朝廷，而羣臣莫敢言浮說，長孺矜焉；好薦人，稱長者，壯有溉。",
+      "after_context": "作《汲鄭列傳》第六十。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『慨』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n160",
+      "anchor_text": "救人於戹，振人不贍，仁者有乎；不既信，",
+      "before_context": "救人於戹，振人不贍，仁者有乎；不既信，",
+      "after_context": "不倍言，義者有取焉。作《游俠列傳》第六十四。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一云『不慨信』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n161",
+      "anchor_text": "齊、楚、秦、趙爲日者，各有俗",
+      "before_context": "齊、楚、秦、趙爲日者，各有俗",
+      "after_context": "所用。欲循",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：日者傳云「無以知諸國之俗」，今褚先生唯記司馬季主之事也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n162",
+      "anchor_text": "所用。欲循",
+      "before_context": "齊、楚、秦、趙爲日者，各有俗所用。欲循",
+      "after_context": "觀其大旨，作《日者列傳》第六十七。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『總』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n163",
+      "anchor_text": "》",
+      "before_context": "...王不同龜，四夷各異卜，然各以決吉凶。略闚其要，作《龜策列傳》",
+      "after_context": "第六十八。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "三王不同龜，四夷各異卜，其書既亡，無以紀其異。今褚少孫唯取太卜占龜之雜說，詞甚煩蕪，不能裁剪，妄皆穿鑿，此篇不才之甚也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n164",
+      "anchor_text": "秦撥去古文，焚滅詩書，故明堂石室金匱玉版",
+      "before_context": "...）〔絕〕業。周道廢，秦撥去古文，焚滅詩書，故明堂石室金匱玉版",
+      "after_context": "圖籍散亂。於是漢興，蕭何次律令，韓信申軍法，張蒼爲章程，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「刻玉版以爲文字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n165",
+      "anchor_text": "申軍法，張蒼爲章程，",
+      "before_context": "...玉版圖籍散亂。於是漢興，蕭何次律令，韓信申軍法，張蒼爲章程，",
+      "after_context": "叔孫通定禮儀，則文學彬彬稍進，詩書往往閒出矣。自曹參薦蓋公",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「章，曆數之章術也。程者，權衡丈尺斛斗之平法也。」瓚曰：「《茂陵書》『丞相爲工用程數其中』，言百工用材多少之量及制度之程品者是也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n166",
+      "anchor_text": "薦蓋公",
+      "before_context": "...，叔孫通定禮儀，則文學彬彬稍進，詩書往往閒出矣。自曹參薦蓋公",
+      "after_context": "言黃老，而賈生、晁錯明申、商，公孫弘以儒顯，百年之閒，天下遺...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "蓋，姓也，古合反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n167",
+      "anchor_text": "，至于周，復典之，故司馬氏世主天官。",
+      "before_context": "...維先人嘗掌斯事，顯於唐虞，至于周，復典之，故司馬氏世主天官。",
+      "after_context": "至於余乎，欽念哉！欽念哉！」罔羅天下放失舊聞，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：此天官非《周禮》冢宰天官，乃謂知天文星曆之事爲天官。且遷實黎之後，而黎氏後亦總稱重黎，以重本司天，故太史公代掌天官，蓋天官統太史之職。言史是歷代之職，恐非實事。然衞宏以爲司馬氏，周史佚之後，故太史談云「予之先人，周之太史」，蓋或得其實也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n168",
+      "anchor_text": "乎，欽念哉！欽念哉！」罔羅天下放失舊聞，",
+      "before_context": "...馬氏世主天官。至於余乎，欽念哉！欽念哉！」罔羅天下放失舊聞，",
+      "after_context": "王迹所興，原始察終，見盛觀衰，論考之行事，略推三代，錄秦漢，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：舊聞有遺失放逸者，網羅而考論之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n169",
+      "anchor_text": "二本紀，既科條之矣。並時異世，年差不明，",
+      "before_context": "...軒轅，下至于茲，著十二本紀，既科條之矣。並時異世，年差不明，",
+      "after_context": "作十表。禮樂損益，律曆改易，兵權山川鬼神，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：並時則年曆差殊，亦略言，難以明辯，故作表也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n170",
+      "anchor_text": "十表。禮樂損益，律曆改易，兵權山川鬼神，",
+      "before_context": "...時異世，年差不明，作十表。禮樂損益，律曆改易，兵權山川鬼神，",
+      "after_context": "天人之際，承敝通變，作八書。二十八宿環北辰，三十輻共一轂，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：兵權，即律書也。遷沒之後，亡，褚少孫以律書補之，今律書亦略言兵也。山川，即河渠書也；鬼神，《封禪書》也，故云山川鬼神也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n171",
       "anchor_text": "，作八書。二十八宿環北辰，三十輻共一轂，",
       "before_context": "...，天人之際，承敝通變，作八書。二十八宿環北辰，三十輻共一轂，",
       "after_context": "運行無窮，輔拂股肱之臣配焉，忠信行道，以奉主上，作三十世家。...",
@@ -1331,24 +2656,71 @@
       "sentence_id": null
     },
     {
-      "id": "n082",
-      "anchor_text": "序略，以拾遺補蓺，",
-      "before_context": "...十篇，五十二萬六千五百字，爲《太史公書》。序略，以拾遺補蓺，",
-      "after_context": "成一家之言，厥協六經異傳，整齊百家雜語，藏之名山，副在京師，",
+      "id": "n172",
+      "anchor_text": "主上，作三十世家。扶義俶儻，不令己失時，",
+      "before_context": "...配焉，忠信行道，以奉主上，作三十世家。扶義俶儻，不令己失時，",
+      "after_context": "立功名於天下，作七十列傳。凡百三十篇，五十二萬六千五百字，爲...",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "李奇曰：「六蓺也。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "己音紀。言扶義倜儻之士能立功名於當代，不後於時者也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n083",
+      "id": "n173",
+      "anchor_text": "》。",
+      "before_context": "...作七十列傳。凡百三十篇，五十二萬六千五百字，爲《太史公書》。",
+      "after_context": "序略，以拾遺補蓺，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：桓譚云「遷所著書成，以示東方朔，朔皆署曰『太史公』，則謂『太史公』是朔稱也。亦恐其說未盡。蓋遷自尊其父著述，稱之曰『公』。或云遷外孫楊惲所稱，事或當爾也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n174",
+      "anchor_text": "序略，以拾遺補蓺，",
+      "before_context": "...十篇，五十二萬六千五百字，爲《太史公書》。序略，以拾遺補蓺，",
+      "after_context": "成一家之言，厥協六經異傳，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「六蓺也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《漢書》作「補闕」，此云「蓺」，謂補六義之闕也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n175",
+      "anchor_text": "成一家之言，厥協六經異傳，",
+      "before_context": "...爲《太史公書》。序略，以拾遺補蓺，成一家之言，厥協六經異傳，",
+      "after_context": "整齊百家雜語，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "遷言以所撰取協於六經異傳諸家之說耳，謙不敢比經蓺也。異傳者，如子夏易傳、毛公詩及韓嬰外傳、伏生《尚書大傳》之流者也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n176",
       "anchor_text": "整齊百家雜語，",
       "before_context": "...。序略，以拾遺補蓺，成一家之言，厥協六經異傳，整齊百家雜語，",
-      "after_context": "藏之名山，副在京師，俟後世聖人君子。第七十。",
+      "after_context": "藏之名山，副在京師，",
       "items": [
         {
           "source": "zhengyi",
@@ -1359,7 +2731,49 @@
       "sentence_id": null
     },
     {
-      "id": "n084",
+      "id": "n177",
+      "anchor_text": "藏之名山，副在京師，",
+      "before_context": "...成一家之言，厥協六經異傳，整齊百家雜語，藏之名山，副在京師，",
+      "after_context": "俟後世聖人君子。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言正本藏之書府，副本留京師也。穆天子傳云「天子北征，至于羣玉之山，河平無險，四徹中繩，先王所謂策府」。郭璞云「古帝王藏策之府」。則此謂藏之名山是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n178",
+      "anchor_text": "俟後世聖人君子。",
+      "before_context": "...六經異傳，整齊百家雜語，藏之名山，副在京師，俟後世聖人君子。",
+      "after_context": "第七十。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "以俟後聖君子。此語出《公羊傳》。言夫子制春秋以俟後聖君子，亦有樂乎此也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n179",
+      "anchor_text": "第七十。",
+      "before_context": "...，整齊百家雜語，藏之名山，副在京師，俟後世聖人君子。第七十。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "駰案：衞宏《漢書舊儀注》曰「司馬遷作景帝本紀，極言其短及武帝過，武帝怒而削去之。後坐舉李陵，陵降匈奴，故下遷蠶室。有怨言，下獄死」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n180",
       "anchor_text": "以來至太初而訖，百三十篇。",
       "before_context": "太史公曰：余述歷黃帝以來至太初而訖，百三十篇。",
       "after_context": "",
@@ -1368,6 +2782,11 @@
           "source": "jijie",
           "label": "集解",
           "text": "駰案：《漢書音義》曰「十篇缺，有錄無書」。張晏曰「遷沒之後，亡景紀、武紀、禮書、樂書、律書、漢興已來將相年表、日者列傳、三王世家、龜策列傳、傅靳蒯列傳。元成之閒，褚先生補闕，作武帝紀，三王世家，龜策、日者列傳，言辭鄙陋，非遷本意也」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《漢書》曰「十篇有錄無書」。張晏曰「遷沒之後，亡景紀、武紀，禮書、樂書、兵書，將相表，三王世家，日者、龜策傳、傅靳等列傳也」。案：景紀取班書補之，武紀專取《封禪書》，禮書取荀卿禮論，樂取禮樂記，兵書亡，不補，略述律而言兵，遂分曆述以次之。三王系家空取其策文以緝此篇，何率略且重，非當也。日者不能記諸國之同異，而論司馬季主。龜策直太卜所得占龜兆雜說，而無筆削之功，何蕪鄙也。"
         }
       ],
       "sentence_id": null

@@ -3,34 +3,72 @@
   "notes": [
     {
       "id": "n001",
-      "anchor_text": "於時冰泮發蟄，百草奮興，秭鳺先滜。",
-      "before_context": "昔自在古，曆建正作於孟春。於時冰泮發蟄，百草奮興，秭鳺先滜。",
-      "after_context": "物迺歲具，生於東，次順四時，卒于冬分。時雞三號，卒明。撫十二",
+      "anchor_text": "昔自在古，曆建正作於孟春。",
+      "before_context": "昔自在古，曆建正作於孟春。",
+      "after_context": "於時冰泮發蟄，百草奮興，秭鳺先滜。",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「秭音姊，鳺音規，子鳺鳥也，一名鷤䳏。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：古曆者，謂黃帝調曆以前有上元太初曆等，皆以建寅爲正，謂之孟春也。及顓頊、夏禹亦以建寅爲正。唯黃帝及殷、周、魯並建子爲正。而秦正建亥，漢初因之。至武帝元封七年始改用太初曆，仍以周正建子爲十一月朔旦冬至，改元太初焉。今按：此文至於「十二月節」，皆出《大戴禮》虞史伯夷之辭也。"
         }
       ],
       "sentence_id": null
     },
     {
       "id": "n002",
-      "anchor_text": "時雞三號，卒明。",
-      "before_context": "...先滜。物迺歲具，生於東，次順四時，卒于冬分。時雞三號，卒明。",
-      "after_context": "撫十二〔",
+      "anchor_text": "於時冰泮發蟄，百草奮興，秭鳺先滜。",
+      "before_context": "昔自在古，曆建正作於孟春。於時冰泮發蟄，百草奮興，秭鳺先滜。",
+      "after_context": "物迺歲具，生於東，次順四時，卒于冬分。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐廣曰：「卒，一作『平』，又云卒，斯也。」"
+          "text": "徐廣曰：「秭音姊，鳺音規，子鳺鳥也，一名鷤䳏。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：徐廣云「秭音規」者，誤也，當云「秭音姊，鳺音規」，蓋遺失耳。言子鳺鳥春氣發動，則先出野澤而鳴也。又按：《大戴禮》作「瑞𨾚」，無釋，未測其旨，當是字體各有訛變耳。鷤音弟，䳏音桂。楚詞云「慮鷤䳏之先鳴，使夫百草爲之不芳」，解者以鷤䳏爲杜鵑。"
         }
       ],
       "sentence_id": null
     },
     {
       "id": "n003",
+      "anchor_text": "物迺歲具，生於東，次順四時，卒于冬分。",
+      "before_context": "...，百草奮興，秭鳺先滜。物迺歲具，生於東，次順四時，卒于冬分。",
+      "after_context": "時雞三號，卒明。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "卒，子律反。分，如字。卒，盡也。言建曆起孟春，盡季冬，則一歲事具也。冬盡之後，分爲來春，故云冬分也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
+      "anchor_text": "時雞三號，卒明。",
+      "before_context": "...先滜。物迺歲具，生於東，次順四時，卒于冬分。時雞三號，卒明。",
+      "after_context": "撫十二〔月〕節，卒于丑。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「卒，一作『平』，又云卒，斯也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "三號，三鳴也。言夜至雞三鳴則天曉，乃始爲正月一日，言異歲也。徐廣云卒，一作「平」，又作「斯」，於文皆便。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "節，卒于丑。",
       "before_context": "...次順四時，卒于冬分。時雞三號，卒明。撫十二〔月〕節，卒于丑。",
       "after_context": "日月成，故明也。明者孟也，幽者幼也，幽明者雌雄也。雌雄代興，...",
@@ -44,10 +82,52 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n006",
+      "anchor_text": "月歸於東，起明于西。正不率天，又不由人，",
+      "before_context": "...日歸于西，起明於東；月歸於東，起明于西。正不率天，又不由人，",
+      "after_context": "則凡事易壞而難成矣。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "正不率天，亦不由人。此文出《大戴禮》，是孔子稱周太史之詞。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
+      "anchor_text": "初，改正朔，易服色，推本天元，順承厥意。",
+      "before_context": "王者易姓受命，必慎始初，改正朔，易服色，推本天元，順承厥意。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言王者易姓而興，必當推本天之元氣行運所在，以定正朔，以承天意，故云承順厥意。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
+      "anchor_text": "考定星曆，",
+      "before_context": "太史公曰：神農以前尚矣。蓋黃帝考定星曆，",
+      "after_context": "建立五行，起消息，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《系本》及《律曆志》黃帝使羲和占日，常儀占月，臾區占星氣，伶倫造律呂，大橈作甲子，隸首作算數，容成綜此六術而著調曆也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
       "anchor_text": "建立五行，起消息，",
       "before_context": "太史公曰：神農以前尚矣。蓋黃帝考定星曆，建立五行，起消息，",
-      "after_context": "正閏餘，於是有天地神祇物類之官，是謂五官。各司其序，不相亂也...",
+      "after_context": "正閏餘，",
       "items": [
         {
           "source": "zhengyi",
@@ -58,10 +138,10 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n010",
       "anchor_text": "正閏餘，",
-      "before_context": "曰：神農以前尚矣。蓋黃帝考定星曆，建立五行，起消息，正閏餘，",
-      "after_context": "於是有天地神祇物類之官，是謂五官。各司其序，不相亂也。民是以...",
+      "before_context": "...曰：神農以前尚矣。蓋黃帝考定星曆，建立五行，起消息，正閏餘，",
+      "after_context": "於是有天地神祇物類之官，",
       "items": [
         {
           "source": "jijie",
@@ -77,9 +157,9 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n011",
       "anchor_text": "於是有天地神祇物類之官，",
-      "before_context": "考定星曆，建立五行，起消息，正閏餘，於是有天地神祇物類之官，",
+      "before_context": "...考定星曆，建立五行，起消息，正閏餘，於是有天地神祇物類之官，",
       "after_context": "是謂五官。各司其序，不相亂也。民是以能有信，神是以能有明德。...",
       "items": [
         {
@@ -91,21 +171,26 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n012",
       "anchor_text": "明德。民神異業，敬而不瀆，故神降之嘉生，",
       "before_context": "...以能有信，神是以能有明德。民神異業，敬而不瀆，故神降之嘉生，",
-      "after_context": "民以物享，災禍不生，所求不匱。",
+      "after_context": "民以物享，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「嘉穀也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "應劭云：「嘉穀也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n013",
       "anchor_text": "民以物享，",
       "before_context": "...神是以能有明德。民神異業，敬而不瀆，故神降之嘉生，民以物享，",
       "after_context": "災禍不生，所求不匱。",
@@ -119,7 +204,49 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n014",
+      "anchor_text": "亂德，",
+      "before_context": "少暤氏之衰也，九黎亂德，",
+      "after_context": "民神雜擾，不可放物，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「少暤時諸侯作亂者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "民神雜擾，不可放物，",
+      "before_context": "少暤氏之衰也，九黎亂德，民神雜擾，不可放物，",
+      "after_context": "禍菑薦至，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "於音昉，依也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
+      "anchor_text": "禍菑薦至，",
+      "before_context": "少暤氏之衰也，九黎亂德，民神雜擾，不可放物，禍菑薦至，",
+      "after_context": "莫盡其氣。顓頊受之，乃命南正重司天以屬神，命火正黎司地以屬民...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音在見反，古「荐」字，假借用耳。荐，集也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "命南正重司天以屬神，命火正黎司地以屬民，",
       "before_context": "...盡其氣。顓頊受之，乃命南正重司天以屬神，命火正黎司地以屬民，",
       "after_context": "使復舊常，無相侵瀆。",
@@ -128,15 +255,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「黎，陰官也。火數二；二，地數也：故火正司地以屬萬民。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《左傳》重爲句芒，木正；黎爲祝融，火正。此言「南」者，劉氏以爲「南」字誤，非也。蓋重黎二人元是木火之官，兼司天地職，而天是陽，南是陽位，故木亦是陽，所以木正爲南正也；而火是地正，亦稱北正者，火數二，二地數，地陰，主北方，故火正亦稱北正：爲此故也。臣瓚以爲古文「火」字似「北」，未爲深得也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n018",
       "anchor_text": "之德，",
       "before_context": "其後三苗服九黎之德，",
-      "after_context": "故二官咸廢所職，而閏餘乖次，孟陬殄滅，攝提無紀，曆數失序。堯",
+      "after_context": "故二官咸廢所職，而閏餘乖次，",
       "items": [
         {
           "source": "zhengyi",
@@ -147,38 +279,62 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n019",
+      "anchor_text": "故二官咸廢所職，而閏餘乖次，",
+      "before_context": "其後三苗服九黎之德，故二官咸廢所職，而閏餘乖次，",
+      "after_context": "孟陬殄滅，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「次，十二次也。史推曆失閏，則斗建與月名錯。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
       "anchor_text": "孟陬殄滅，",
       "before_context": "其後三苗服九黎之德，故二官咸廢所職，而閏餘乖次，孟陬殄滅，",
-      "after_context": "攝提無紀，曆數失序。堯",
+      "after_context": "攝提無紀，曆數失序。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「正月爲孟陬。閏餘乖錯，不與正歲相值，謂之殄滅。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：正月爲陬。陬音鄒，又作侯反。楚詞云「攝提貞乎孟陬」。言曆數乖誤，乃使孟陬殄滅，不得其正也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n021",
       "anchor_text": "攝提無紀，曆數失序。",
       "before_context": "...，故二官咸廢所職，而閏餘乖次，孟陬殄滅，攝提無紀，曆數失序。",
-      "after_context": "堯",
+      "after_context": "堯復遂重黎之後，不忘舊者，使復典之，而立羲和之官。明時正度，...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「攝提，星名，隨斗杓所指建十二月。若曆誤，春三月當指辰而指巳，是謂失序。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "攝提失方。按：《天官書》云「攝提三星，若鼎足句之，直斗杓所指，以建時節，故曰攝提格」。格，至也。言攝提隨月建至，故云格也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n022",
       "anchor_text": "，申戒文祖，",
       "before_context": "...度，則陰陽調，風雨節，茂氣至，民無夭疫。年耆禪舜，申戒文祖，",
-      "after_context": "云「天之曆數在爾躬」。舜",
+      "after_context": "云「天之曆數在爾躬」。",
       "items": [
         {
           "source": "jijie",
@@ -194,21 +350,138 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
-      "anchor_text": "故疇人子弟分散，",
-      "before_context": "...之後，周室微，陪臣執政，史不記時，君不告朔，故疇人子弟分散，",
-      "after_context": "或在諸夏，或在夷狄，是以其禨祥廢而不統。周襄王二十六年閏三月...",
+      "id": "n023",
+      "anchor_text": "云「天之曆數在爾躬」。",
+      "before_context": "...茂氣至，民無夭疫。年耆禪舜，申戒文祖，云「天之曆數在爾躬」。",
+      "after_context": "舜亦以命禹。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "如淳曰：「家業世世相傳爲疇。律，年二十三傅之疇官，各從其父學。」"
+          "text": "何晏曰：「曆數謂列次也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n024",
+      "anchor_text": "亦以命禹。",
+      "before_context": "...夭疫。年耆禪舜，申戒文祖，云「天之曆數在爾躬」。舜亦以命禹。",
+      "after_context": "由是觀之，王者所重也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「舜亦以堯命己之辭命禹也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "，周室微，陪臣執政，史不記時，君不告朔，",
+      "before_context": "幽、厲之後，周室微，陪臣執政，史不記時，君不告朔，",
+      "after_context": "故疇人子弟分散，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「禮，人君每月告朔於廟，有祭，謂之朝享。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "故疇人子弟分散，",
+      "before_context": "...之後，周室微，陪臣執政，史不記時，君不告朔，故疇人子弟分散，",
+      "after_context": "或在諸夏，或在夷狄，是以其禨祥廢而不統。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「家業世世相傳爲疇。律，年二十三傅之疇官，各從其父學。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「疇，類也。」孟康云：「同類之人明曆者也。」樂產云：「疇昔知星人。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
+      "anchor_text": "或在諸夏，或在夷狄，是以其禨祥廢而不統。",
+      "before_context": "...朔，故疇人子弟分散，或在諸夏，或在夷狄，是以其禨祥廢而不統。",
+      "after_context": "周襄王二十六年閏三月，而春秋非之。先王之正時也，履端於始，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「《呂氏春秋》『荊人鬼而越人禨』，今之巫祝禱祠淫祀之比也。」晉灼曰：「禨音『珠璣』之『璣』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
+      "anchor_text": "月，而春秋非之。先王之正時也，履端於始，",
+      "before_context": "...。周襄王二十六年閏三月，而春秋非之。先王之正時也，履端於始，",
+      "after_context": "舉正於中，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「謂正曆必先稱端始也，若十一月朔旦冬至也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "舉正於中，",
+      "before_context": "...十六年閏三月，而春秋非之。先王之正時也，履端於始，舉正於中，",
+      "after_context": "歸邪",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「氣在望中，則時日昏明皆正也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "歸邪",
+      "before_context": "...年閏三月，而春秋非之。先王之正時也，履端於始，舉正於中，歸邪",
+      "after_context": "於終。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "音餘。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "於終。",
+      "before_context": "...月，而春秋非之。先王之正時也，履端於始，舉正於中，歸邪於終。",
+      "after_context": "履端於始，序則不愆；舉正於中，民則不惑；歸邪於終，事則不悖。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「邪，餘分也。終，閏月也。中氣在晦則後月閏，在望是其正中也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
       "anchor_text": "豈遑念斯哉！是時獨有鄒衍，明於五德之傳，",
       "before_context": "...禽敵，救急解紛而已，豈遑念斯哉！是時獨有鄒衍，明於五德之傳，",
       "after_context": "而散消息之分，以顯諸侯。而亦因秦滅六國，兵戎極煩，又升至尊之...",
@@ -222,7 +495,21 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n033",
+      "anchor_text": "又升至尊之日淺，未暇遑也。而亦頗推五勝，",
+      "before_context": "...秦滅六國，兵戎極煩，又升至尊之日淺，未暇遑也。而亦頗推五勝，",
+      "after_context": "而自以爲獲水德之瑞，更名河曰「德水」，而正",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「五行相勝，秦以周爲火，用水勝之也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "自以爲獲水德之瑞，更名河曰「德水」，而正",
       "before_context": "...也。而亦頗推五勝，而自以爲獲水德之瑞，更名河曰「德水」，而正",
       "after_context": "以十月，色上黑。然曆度閏餘，未能睹其真也。",
@@ -236,49 +523,134 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n035",
+      "anchor_text": "至今上即位，招致方士唐都，分其天部；",
+      "before_context": "至今上即位，招致方士唐都，分其天部；",
+      "after_context": "而巴落下閎運算轉曆，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「謂分部二十八宿爲距度。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
       "anchor_text": "而巴落下閎運算轉曆，",
       "before_context": "至今上即位，招致方士唐都，分其天部；而巴落下閎運算轉曆，",
-      "after_context": "然後日辰之度與夏正同。乃改元，更官號，封泰山",
+      "after_context": "然後日辰之度與夏正同。乃改元，更官號，封泰山。因詔御史曰：「...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「陳術云徵士巴郡落下閎也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "姚氏案：益部耆舊傳云「閎字長公，明曉天文，隱於落下，武帝徵待詔太史，於地中轉渾天，改顓頊曆作太初曆，拜侍中不受」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n037",
       "anchor_text": "之未定也，廣延宣問，以理星度，未能詹也。",
       "before_context": "...：「乃者，有司言星度之未定也，廣延宣問，以理星度，未能詹也。",
-      "after_context": "蓋聞昔者黃帝",
+      "after_context": "蓋聞昔者黃帝合而不死，名察度驗，定清濁，起五部，建氣物分數。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「詹，一作『售』也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《漢書》作「讐」，故徐廣云一作「售」，售即讐也。韋昭云「讐，比校也」。鄭德云「相應爲讐」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n038",
       "anchor_text": "，名察度驗，定清濁，起五部，建氣物分數。",
-      "before_context": "蓋聞昔者黃帝合而不死，名察度驗，定清濁，起五部，建氣物分數。",
-      "after_context": "然蓋尚矣。書缺樂弛，朕甚閔焉。朕唯未能循明也，紬績日分，率應...",
+      "before_context": "...蓋聞昔者黃帝合而不死，名察度驗，定清濁，起五部，建氣物分數。",
+      "after_context": "然蓋尚矣。書缺樂弛，朕甚閔焉。朕唯未能循明也，紬績日分，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「言黃帝造曆得仙，名節會，察寒暑，致啟閉分至，定清濁，起五部。五部，金、木、水、火、土也。建氣物分數，皆敘曆之意也。」孟康曰：「合，作也。黃帝作曆，曆終復始無窮已，故曰不死。清濁，律聲之清濁也。五部，五行也。天有四時，分爲五行也。氣，二十四氣；物，萬物也。分，曆數之分也。」瓚曰：「黃帝聖德，與虛合契，升龍登仙於天，故曰合而不死。題名宿度，候察進退，謂三辰之度，吉凶之驗也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "臣瓚云：「題名宿度，候察進退，以爲吉凶之狀，依文作解爲得。」案：《漢書》作「名察發歛」，韋昭云「發，氣發；歛，氣歛」。又《續漢書》以爲道之發歛，景之長短，則發歛是日行道去極盈縮也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n039",
+      "anchor_text": "弛，朕甚閔焉。朕唯未能循明也，紬績日分，",
+      "before_context": "...數。然蓋尚矣。書缺樂弛，朕甚閔焉。朕唯未能循明也，紬績日分，",
+      "after_context": "率應水德之勝。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "紬音宙，又如字。紬績者，女工紬緝之意，以言造曆算運者猶若女工緝而織之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "率應水德之勝。",
+      "before_context": "...書缺樂弛，朕甚閔焉。朕唯未能循明也，紬績日分，率應水德之勝。",
+      "after_context": "今日順夏至，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「蓋以爲應土德，土勝水。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
+      "anchor_text": "今日順夏至，",
+      "before_context": "...甚閔焉。朕唯未能循明也，紬績日分，率應水德之勝。今日順夏至，",
+      "after_context": "黃鐘爲宮，林鐘爲徵，太蔟爲商，南呂爲羽，姑洗爲角。自是以後，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：夏至，謂夏至、冬至。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
+      "anchor_text": "甲子朔旦冬至已詹，其更以七年爲太初元年。",
+      "before_context": "...離合之道行焉。十一月甲子朔旦冬至已詹，其更以七年爲太初元年。",
+      "after_context": "年名『焉逢攝提格』，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：改元封七年爲太初元年。然漢始以建亥爲年首，今改以建寅，故以七年爲元年。韋昭云「漢興至此百二歲」。案：《律曆志》云「乃以前曆上元太初四千六百一十七歲，至元封七年，復得閼逢攝提之歲，中冬十一月甲子朔旦冬至」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
       "anchor_text": "年名『焉逢攝提格』，",
       "before_context": "...甲子朔旦冬至已詹，其更以七年爲太初元年。年名『焉逢攝提格』，",
       "after_context": "月名『畢聚』，日得甲子，夜半朔旦冬至。」",
@@ -302,21 +674,110 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n044",
       "anchor_text": "月名『畢聚』，日得甲子，夜半朔旦冬至。」",
-      "before_context": "年名『焉逢攝提格』，月名『畢聚』，日得甲子，夜半朔旦冬至。」",
+      "before_context": "...年名『焉逢攝提格』，月名『畢聚』，日得甲子，夜半朔旦冬至。」",
       "after_context": "",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "文穎曰：「律居陰而治陽，曆居陽而治陰，更相治，閒不容期忽。五家文悖異，推太初之元也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "聚音娵。案：虞喜云「天元之始，於十一月甲子夜半朔旦冬至，日月若連珠，俱起牽牛之初。歲，雄在閼逢，雌在攝提格。月，雄在畢，雌在訾，訾則娵訾之宿。日，雄在甲，雌則在子。此則甲寅之元，天道之首」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n045",
+      "anchor_text": "曆術甲子篇",
+      "before_context": "曆術甲子篇",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "以十一月朔旦冬至得甲子，甲子是陽氣支干之首，故以甲子命曆術爲篇首，非謂此年歲在甲子也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n046",
+      "anchor_text": "太初元年，歲名「焉逢",
+      "before_context": "太初元年，歲名「焉逢",
+      "after_context": "攝提格」，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "甲，歲雄也。《漢書》作「閼逢」，亦音焉，與此音同。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
+      "anchor_text": "攝提格」，",
+      "before_context": "太初元年，歲名「焉逢攝提格」，",
+      "after_context": "月名「畢聚」，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "寅，歲陰也。此依《爾雅》甲寅之歲，若據漢志，以爲丙子之年。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
+      "anchor_text": "月名「畢聚」，",
+      "before_context": "太初元年，歲名「焉逢攝提格」，月名「畢聚」，",
+      "after_context": "日得甲子，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂月值畢及陬訾也。畢，月雄也。聚，月雌也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
+      "anchor_text": "日得甲子，",
+      "before_context": "太初元年，歲名「焉逢攝提格」，月名「畢聚」，日得甲子，",
+      "after_context": "夜半朔旦冬至。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂十一月冬至朔旦得甲子也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n050",
+      "anchor_text": "夜半朔旦冬至。",
+      "before_context": "...，歲名「焉逢攝提格」，月名「畢聚」，日得甲子，夜半朔旦冬至。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "以建子爲正，故以夜半爲朔；其至與朔同日，故云夜半朔旦冬至。若建寅爲正者，則以平旦爲朔也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
       "anchor_text": "正北",
       "before_context": "正北",
       "after_context": "",
@@ -335,7 +796,21 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n052",
+      "anchor_text": "十二",
+      "before_context": "十二",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "歲有十二月，有閏則云十三也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
       "anchor_text": "無大餘，無小餘；",
       "before_context": "無大餘，無小餘；",
       "after_context": "",
@@ -354,7 +829,35 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n054",
+      "anchor_text": "無大餘，無小餘；",
+      "before_context": "無大餘，無小餘；",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上大小餘朔之大小餘，此謂冬至大小餘。冬至亦與朔同日，並無餘分，至與朔法異，故重列之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n055",
+      "anchor_text": "焉逢攝提格太初元年。",
+      "before_context": "焉逢攝提格太初元年。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如漢志太初元年歲在丙子，據此，則甲寅歲也。《爾雅》釋天云歲陽者，甲、乙、丙、丁、戊、己、庚、辛、壬、癸十干是也。歲陰者，子、丑、寅、卯、辰、巳、午、未、申、酉、戌、亥十二支是也。歲陽在甲云焉逢，謂歲干也。歲陰在寅云攝提格，謂歲支也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n056",
       "anchor_text": "大餘五十四，",
       "before_context": "大餘五十四，",
       "after_context": "小餘三百四十八；",
@@ -373,7 +876,7 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n057",
       "anchor_text": "小餘三百四十八；",
       "before_context": "大餘五十四，小餘三百四十八；",
       "after_context": "",
@@ -392,7 +895,7 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n058",
       "anchor_text": "大餘五，",
       "before_context": "大餘五，",
       "after_context": "小餘八；",
@@ -411,7 +914,7 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n059",
       "anchor_text": "小餘八；",
       "before_context": "大餘五，小餘八；",
       "after_context": "",
@@ -430,7 +933,7 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n060",
       "anchor_text": "端蒙單閼二年。",
       "before_context": "端蒙單閼二年。",
       "after_context": "",
@@ -454,7 +957,7 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n061",
       "anchor_text": "游兆執徐三年。",
       "before_context": "游兆執徐三年。",
       "after_context": "",
@@ -473,7 +976,7 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n062",
       "anchor_text": "彊梧大荒落四年。",
       "before_context": "彊梧大荒落四年。",
       "after_context": "",
@@ -492,7 +995,7 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n063",
       "anchor_text": "徒維敦牂天漢元年。",
       "before_context": "徒維敦牂天漢元年。",
       "after_context": "",
@@ -511,7 +1014,7 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n064",
       "anchor_text": "祝犂協洽二年。",
       "before_context": "祝犂協洽二年。",
       "after_context": "",
@@ -530,7 +1033,7 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n065",
       "anchor_text": "商橫涒灘三年。",
       "before_context": "商橫涒灘三年。",
       "after_context": "",
@@ -549,7 +1052,7 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n066",
       "anchor_text": "昭陽作鄂四年。",
       "before_context": "昭陽作鄂四年。",
       "after_context": "",
@@ -568,7 +1071,7 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n067",
       "anchor_text": "橫艾淹茂太始元年。",
       "before_context": "橫艾淹茂太始元年。",
       "after_context": "",
@@ -587,7 +1090,7 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n068",
       "anchor_text": "尚章大淵獻二年。",
       "before_context": "尚章大淵獻二年。",
       "after_context": "",
@@ -606,7 +1109,7 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n069",
       "anchor_text": "焉逢困敦三年。",
       "before_context": "焉逢困敦三年。",
       "after_context": "",
@@ -625,7 +1128,7 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n070",
       "anchor_text": "端蒙赤奮若四年。",
       "before_context": "端蒙赤奮若四年。",
       "after_context": "",
@@ -644,7 +1147,21 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n071",
+      "anchor_text": "游兆",
+      "before_context": "游兆",
+      "after_context": "攝提格征和元年。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「作『游桃』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n072",
       "anchor_text": "攝提格征和元年。",
       "before_context": "游兆攝提格征和元年。",
       "after_context": "",
@@ -658,7 +1175,7 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n073",
       "anchor_text": "彊梧單閼二年。",
       "before_context": "彊梧單閼二年。",
       "after_context": "",
@@ -672,7 +1189,7 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n074",
       "anchor_text": "徒維執徐三年。",
       "before_context": "徒維執徐三年。",
       "after_context": "",
@@ -686,7 +1203,7 @@
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n075",
       "anchor_text": "祝犂大芒落四年。",
       "before_context": "祝犂大芒落四年。",
       "after_context": "",
@@ -705,7 +1222,7 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n076",
       "anchor_text": "商橫敦牂後元元年。",
       "before_context": "商橫敦牂後元元年。",
       "after_context": "",
@@ -719,7 +1236,7 @@
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n077",
       "anchor_text": "昭陽汁洽二年。",
       "before_context": "昭陽汁洽二年。",
       "after_context": "",
@@ -738,7 +1255,7 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n078",
       "anchor_text": "橫艾涒灘始元元年。",
       "before_context": "橫艾涒灘始元元年。",
       "after_context": "",
@@ -757,7 +1274,7 @@
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n079",
       "anchor_text": "尚章作噩二年。",
       "before_context": "尚章作噩二年。",
       "after_context": "",
@@ -776,7 +1293,7 @@
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n080",
       "anchor_text": "焉逢淹茂三年。",
       "before_context": "焉逢淹茂三年。",
       "after_context": "",
@@ -795,7 +1312,7 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n081",
       "anchor_text": "端蒙大淵獻四年。",
       "before_context": "端蒙大淵獻四年。",
       "after_context": "",
@@ -809,7 +1326,7 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n082",
       "anchor_text": "游兆困敦五年。",
       "before_context": "游兆困敦五年。",
       "after_context": "",
@@ -823,7 +1340,7 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n083",
       "anchor_text": "彊梧赤奮若六年。",
       "before_context": "彊梧赤奮若六年。",
       "after_context": "",
@@ -837,7 +1354,7 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n084",
       "anchor_text": "西，加酉時；正南，加午時；正東，加卯時。",
       "before_context": "...正北，冬至加子時；正西，加酉時；正南，加午時；正東，加卯時。",
       "after_context": "",

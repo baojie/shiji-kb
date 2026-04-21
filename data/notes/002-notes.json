@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "夏禹，",
       "before_context": "夏禹，",
-      "after_context": "名曰文命。禹之父曰鯀，鯀之父曰帝顓頊",
+      "after_context": "名曰文命。",
       "items": [
         {
           "source": "jijie",
@@ -24,7 +24,7 @@
       "id": "n002",
       "anchor_text": "名曰文命。",
       "before_context": "夏禹，名曰文命。",
-      "after_context": "禹之父曰鯀，鯀之父曰帝顓頊",
+      "after_context": "禹之父曰鯀，鯀之父曰帝顓頊，",
       "items": [
         {
           "source": "suoyin",
@@ -41,9 +41,51 @@
     },
     {
       "id": "n003",
+      "anchor_text": "，",
+      "before_context": "夏禹，名曰文命。禹之父曰鯀，鯀之父曰帝顓頊，",
+      "after_context": "顓頊之父曰昌意，昌意之父曰黃帝。禹者，黃帝之玄孫而帝顓頊之孫...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "皇甫謐云：「鯀，帝顓頊之子，字熙。」又連山易云「鯀封於崇」，故《國語》謂之「崇伯鯀」。《系本》亦以鯀爲顓頊子。《漢書律曆志》則云「顓頊五代而生鯀」。按：鯀既仕堯，與舜代系殊懸，舜即顓頊六代孫，則鯀非是顓頊之子。蓋班氏之言近得其實。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
+      "anchor_text": "之時，鴻水",
+      "before_context": "當帝堯之時，鴻水",
+      "after_context": "滔天，浩浩懷山襄陵，下民其憂。堯求能治水者，羣臣四嶽皆曰鯀可...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "一作「洪」。鴻，大也。以鳥大曰鴻，小曰鴈，故近代文字大義者皆作「鴻」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "，攝行天子之政，巡狩。行視鯀之治水無狀，",
+      "before_context": "...求人，更得舜。舜登用，攝行天子之政，巡狩。行視鯀之治水無狀，",
+      "after_context": "乃殛鯀於羽山以死。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言無功狀。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
       "anchor_text": "乃殛鯀於羽山以死。",
       "before_context": "...用，攝行天子之政，巡狩。行視鯀之治水無狀，乃殛鯀於羽山以死。",
-      "after_context": "天下皆以舜",
+      "after_context": "天下皆以舜之誅爲是。於是舜舉鯀子禹，而使續鯀之業。",
       "items": [
         {
           "source": "zhengyi",
@@ -54,21 +96,40 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
-      "anchor_text": "身爲度，",
-      "before_context": "...爲人敏給克勤；其悳不違，其仁可親，其言可信；聲爲律，身爲度，",
-      "after_context": "稱以出；亹亹穆穆，爲綱爲紀。",
+      "id": "n007",
+      "anchor_text": "；其悳不違，其仁可親，其言可信；聲爲律，",
+      "before_context": "禹爲人敏給克勤；其悳不違，其仁可親，其言可信；聲爲律，",
+      "after_context": "身爲度，",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "王肅曰：「以身爲法度。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言禹聲音應鍾律。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n008",
+      "anchor_text": "身爲度，",
+      "before_context": "...爲人敏給克勤；其悳不違，其仁可親，其言可信；聲爲律，身爲度，",
+      "after_context": "稱以出；",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "王肅曰：「以身爲法度。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：今巫猶稱「禹步」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
       "anchor_text": "稱以出；",
       "before_context": "...克勤；其悳不違，其仁可親，其言可信；聲爲律，身爲度，稱以出；",
       "after_context": "亹亹穆穆，爲綱爲紀。",
@@ -77,29 +138,81 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一作『士』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《大戴禮》見作「士」。又一解云，上文聲與身爲律度，則權衡亦出於其身，故云「稱以出」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n010",
       "anchor_text": "帝命，命諸侯百姓興人徒以傅土，行山表木，",
       "before_context": "禹乃遂與益、后稷奉帝命，命諸侯百姓興人徒以傅土，行山表木，",
-      "after_context": "定高山大川。禹傷先人父鯀功之不成受誅，乃勞身焦思，居外十三年...",
+      "after_context": "定高山大川。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《尚書》「傅」字作「敷」。馬融曰：「敷，分也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《尚書》作「敷土隨山刊木」。今案：《大戴禮》作「傅土」，故此紀依之。傅即付也，謂付功屬役之事。若《尚書》作「敷」，敷，分也，謂令人分布理九州之土地也。表木，謂刊木立爲表記，與孔注書意異。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n011",
+      "anchor_text": "定高山大川。",
+      "before_context": "...、后稷奉帝命，命諸侯百姓興人徒以傅土，行山表木，定高山大川。",
+      "after_context": "禹傷先人父鯀功之不成受誅，乃勞身焦思，居外十三年，過家門不敢...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「定其差秩祀禮所視也」。駰案：《尚書大傳》曰「高山大川，五嶽、四瀆之屬」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "三年，過家門不敢入。薄衣食，致孝于鬼神。",
+      "before_context": "...，乃勞身焦思，居外十三年，過家門不敢入。薄衣食，致孝于鬼神。",
+      "after_context": "卑宮室，致費於溝淢。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「祭祀豐絜。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
+      "anchor_text": "卑宮室，致費於溝淢。",
+      "before_context": "...三年，過家門不敢入。薄衣食，致孝于鬼神。卑宮室，致費於溝淢。",
+      "after_context": "陸行乘車，水行乘船，泥行乘橇，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "包氏曰：「方里爲井，井閒有溝，溝廣深四尺。十里爲成，成閒有淢，淢廣深八尺。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
       "anchor_text": "陸行乘車，水行乘船，泥行乘橇，",
       "before_context": "...孝于鬼神。卑宮室，致費於溝淢。陸行乘車，水行乘船，泥行乘橇，",
-      "after_context": "山行乘檋。左準繩，右規矩，載四時，以開九州，通九道，陂九澤，...",
+      "after_context": "山行乘檋。",
       "items": [
         {
           "source": "jijie",
@@ -115,10 +228,10 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n015",
       "anchor_text": "山行乘檋。",
-      "before_context": "卑宮室，致費於溝淢。陸行乘車，水行乘船，泥行乘橇，山行乘檋。",
-      "after_context": "左準繩，右規矩，載四時，以開九州，通九道，陂九澤，度九山。令...",
+      "before_context": "...卑宮室，致費於溝淢。陸行乘車，水行乘船，泥行乘橇，山行乘檋。",
+      "after_context": "左準繩，右規矩，",
       "items": [
         {
           "source": "jijie",
@@ -134,24 +247,43 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n016",
       "anchor_text": "左準繩，右規矩，",
       "before_context": "...淢。陸行乘車，水行乘船，泥行乘橇，山行乘檋。左準繩，右規矩，",
-      "after_context": "載四時，以開九州，通九道，陂九澤，度九山。令益予眾庶稻，可種...",
+      "after_context": "載四時，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "王肅曰：「左右言常用也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "左所運用堪爲人之準繩，右所舉動必應規矩也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n017",
+      "anchor_text": "載四時，",
+      "before_context": "...乘車，水行乘船，泥行乘橇，山行乘檋。左準繩，右規矩，載四時，",
+      "after_context": "以開九州，通九道，陂九澤，度九山。令益予眾庶稻，可種卑溼。命...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "王肅曰：「所以行不違四時之宜也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
       "anchor_text": "禹行自冀州始。冀州：既載",
       "before_context": "禹行自冀州始。冀州：既載",
-      "after_context": "壺口，治梁及岐。既脩太原，至于嶽陽。覃懷致功，至於衡漳。其土...",
+      "after_context": "壺口，治梁及岐。",
       "items": [
         {
           "source": "jijie",
@@ -167,10 +299,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n019",
       "anchor_text": "壺口，治梁及岐。",
       "before_context": "禹行自冀州始。冀州：既載壺口，治梁及岐。",
-      "after_context": "既脩太原，至于嶽陽。覃懷致功，至於衡漳。其土白壤。賦上上錯，",
+      "after_context": "既脩太原，至于嶽陽。",
       "items": [
         {
           "source": "jijie",
@@ -191,10 +323,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n020",
       "anchor_text": "既脩太原，至于嶽陽。",
       "before_context": "禹行自冀州始。冀州：既載壺口，治梁及岐。既脩太原，至于嶽陽。",
-      "after_context": "覃懷致功，至於衡漳。其土白壤。賦上上錯，田中中，常、衞既從，...",
+      "after_context": "覃懷致功，",
       "items": [
         {
           "source": "jijie",
@@ -215,24 +347,29 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n021",
       "anchor_text": "覃懷致功，",
       "before_context": "...始。冀州：既載壺口，治梁及岐。既脩太原，至于嶽陽。覃懷致功，",
-      "after_context": "至於衡漳。其土白壤。賦上上錯，田中中，常、衞既從，大陸既爲。",
+      "after_context": "至於衡漳。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「覃懷，近河地名。」鄭玄曰：「懷縣屬河內。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：河內有懷縣，今驗地無名「覃」者，蓋「覃懷」二字或當時共爲一地之名。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n022",
       "anchor_text": "至於衡漳。",
       "before_context": "...既載壺口，治梁及岐。既脩太原，至于嶽陽。覃懷致功，至於衡漳。",
-      "after_context": "其土白壤。賦上上錯，田中中，常、衞既從，大陸既爲。鳥夷皮服。",
+      "after_context": "其土白壤。",
       "items": [
         {
           "source": "jijie",
@@ -253,24 +390,71 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
-      "anchor_text": "常、衞既從，大陸既爲。",
-      "before_context": "至於衡漳。其土白壤。賦上上錯，田中中，常、衞既從，大陸既爲。",
-      "after_context": "鳥夷皮服。夾右碣石，入于海。",
+      "id": "n023",
+      "anchor_text": "其土白壤。",
+      "before_context": "...治梁及岐。既脩太原，至于嶽陽。覃懷致功，至於衡漳。其土白壤。",
+      "after_context": "賦上上錯，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "鄭玄曰：「《地理志》恆水出恆山，衞水在靈壽，大陸澤在鉅鹿。」"
+          "text": "孔安國曰：「土無塊曰壤。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n024",
+      "anchor_text": "賦上上錯，",
+      "before_context": "...既脩太原，至于嶽陽。覃懷致功，至於衡漳。其土白壤。賦上上錯，",
+      "after_context": "田中中，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「上上，第一。錯，雜也，雜出第二之賦。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "田中中，",
+      "before_context": "...，至于嶽陽。覃懷致功，至於衡漳。其土白壤。賦上上錯，田中中，",
+      "after_context": "常、衞既從，大陸既爲。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「九州之中爲第五。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "常、衞既從，大陸既爲。",
+      "before_context": "...至於衡漳。其土白壤。賦上上錯，田中中，常、衞既從，大陸既爲。",
+      "after_context": "鳥夷皮服。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「《地理志》恆水出恆山，衞水在靈壽，大陸澤在鉅鹿。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "此文改恆山、恆水皆作「常」，避漢文帝諱故也。常水出常山上曲陽縣，東入滱水。衞水出常山靈壽縣，東入虖池。郭璞云「大陸，今鉅鹿北廣河澤是已」。爲亦作也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "鳥夷皮服。",
-      "before_context": "其土白壤。賦上上錯，田中中，常、衞既從，大陸既爲。鳥夷皮服。",
-      "after_context": "夾右碣石，入于海。",
+      "before_context": "...其土白壤。賦上上錯，田中中，常、衞既從，大陸既爲。鳥夷皮服。",
+      "after_context": "夾右碣石，",
       "items": [
         {
           "source": "jijie",
@@ -286,7 +470,21 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n028",
+      "anchor_text": "夾右碣石，",
+      "before_context": "...賦上上錯，田中中，常、衞既從，大陸既爲。鳥夷皮服。夾右碣石，",
+      "after_context": "入于海。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「碣石，海畔之山也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "入于海。",
       "before_context": "...，田中中，常、衞既從，大陸既爲。鳥夷皮服。夾右碣石，入于海。",
       "after_context": "",
@@ -295,15 +493,48 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「海，一作『河』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》云「碣石山在北平驪城縣西南」。太康《地理志》云「樂浪遂城縣有碣石山，長城所起」。又水經云「在遼西臨渝縣南水中」。蓋碣石山有二，此云「夾右碣石入于海」，當是北平之碣石。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n030",
+      "anchor_text": "濟、河維沇州：",
+      "before_context": "濟、河維沇州：",
+      "after_context": "九河既道，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「言沇州之界在此兩水之閒。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "九河既道，",
+      "before_context": "濟、河維沇州：九河既道，",
+      "after_context": "雷夏既澤，雍、沮會同，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「九河名徒駭、太史、馬頰、覆釜、胡蘇、簡、絜、鉤盤、鬲津。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
       "anchor_text": "雷夏既澤，雍、沮會同，",
       "before_context": "濟、河維沇州：九河既道，雷夏既澤，雍、沮會同，",
-      "after_context": "桑土既蠶，於是民得下丘居土。其土黑墳，草繇木條。田中下，賦貞...",
+      "after_context": "桑土既蠶，於是民得下丘居土。",
       "items": [
         {
           "source": "jijie",
@@ -324,7 +555,91 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n033",
+      "anchor_text": "桑土既蠶，於是民得下丘居土。",
+      "before_context": "...九河既道，雷夏既澤，雍、沮會同，桑土既蠶，於是民得下丘居土。",
+      "after_context": "其土黑墳，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「大水去，民下丘居平土，就桑蠶。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
+      "anchor_text": "其土黑墳，",
+      "before_context": "...雷夏既澤，雍、沮會同，桑土既蠶，於是民得下丘居土。其土黑墳，",
+      "after_context": "草繇木條。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「色黑而墳起。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
+      "anchor_text": "草繇木條。",
+      "before_context": "...雍、沮會同，桑土既蠶，於是民得下丘居土。其土黑墳，草繇木條。",
+      "after_context": "田中下，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「繇，茂；條，長也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "田中下，",
+      "before_context": "...同，桑土既蠶，於是民得下丘居土。其土黑墳，草繇木條。田中下，",
+      "after_context": "賦貞，作十有三年乃同。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「第六。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "賦貞，作十有三年乃同。",
+      "before_context": "...下丘居土。其土黑墳，草繇木條。田中下，賦貞，作十有三年乃同。",
+      "after_context": "其貢漆絲，其篚織文。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「貞，正也。治此州正作不休，十三年乃有賦，與八州同，言功難也。其賦下下。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
+      "anchor_text": "其貢漆絲，其篚織文。",
+      "before_context": "...草繇木條。田中下，賦貞，作十有三年乃同。其貢漆絲，其篚織文。",
+      "after_context": "浮於濟、漯，通於河。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「地宜漆林，又宜桑蠶。織文，錦綺之屬，盛之筐篚而貢焉。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
       "anchor_text": "浮於濟、漯，通於河。",
       "before_context": "...貞，作十有三年乃同。其貢漆絲，其篚織文。浮於濟、漯，通於河。",
       "after_context": "",
@@ -333,15 +648,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "鄭玄曰：「《地理志》云漯水出東郡東武陽。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "濟水出河東垣縣王屋山東，其流至濟陰，故應劭云「濟水出平原漯陰縣東，漯水出東郡東武陽縣北，至千乘縣而入于海」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n040",
       "anchor_text": "海岱維青州：",
       "before_context": "海岱維青州：",
-      "after_context": "堣夷既略，濰、淄其道。其土白墳，海濱廣潟，厥田斥鹵。田上下，...",
+      "after_context": "堣夷既略，",
       "items": [
         {
           "source": "jijie",
@@ -357,24 +677,29 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n041",
       "anchor_text": "堣夷既略，",
       "before_context": "海岱維青州：堣夷既略，",
-      "after_context": "濰、淄其道。其土白墳，海濱廣潟，厥田斥鹵。田上下，賦中上。厥...",
+      "after_context": "濰、淄其道。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "馬融曰：「堣夷，地名。用功少曰略。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "孔安國云：「東表之地稱嵎夷。」按：《今文尚書》及帝命驗並作「禺鐵」，在遼西。鐵，古「夷」字也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n042",
       "anchor_text": "濰、淄其道。",
       "before_context": "海岱維青州：堣夷既略，濰、淄其道。",
-      "after_context": "其土白墳，海濱廣潟，厥田斥鹵。田上下，賦中上。厥貢鹽絺，海物...",
+      "after_context": "其土白墳，海濱廣潟，",
       "items": [
         {
           "source": "jijie",
@@ -395,35 +720,101 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n043",
+      "anchor_text": "其土白墳，海濱廣潟，",
+      "before_context": "海岱維青州：堣夷既略，濰、淄其道。其土白墳，海濱廣潟，",
+      "after_context": "厥田斥鹵。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『澤』，又作『斥』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n044",
       "anchor_text": "厥田斥鹵。",
       "before_context": "...維青州：堣夷既略，濰、淄其道。其土白墳，海濱廣潟，厥田斥鹵。",
-      "after_context": "田上下，賦中上。厥貢鹽絺，海物維錯，岱畎絲、枲、鉛、松、怪石...",
+      "after_context": "田上下，賦中上。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "鄭玄曰：「斥謂地鹹鹵。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鹵音魯。說文云：「鹵，鹹地。東方謂之斥，西方謂之鹵。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n045",
+      "anchor_text": "田上下，賦中上。",
+      "before_context": "...，濰、淄其道。其土白墳，海濱廣潟，厥田斥鹵。田上下，賦中上。",
+      "after_context": "厥貢鹽絺，海物維錯，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「田第三，賦第四。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n046",
+      "anchor_text": "厥貢鹽絺，海物維錯，",
+      "before_context": "...墳，海濱廣潟，厥田斥鹵。田上下，賦中上。厥貢鹽絺，海物維錯，",
+      "after_context": "岱畎絲、枲、鉛、松、怪石，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「絺，細葛。錯，雜，非一種。」鄭玄曰：「海物，海魚也。魚種類尤雜。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
+      "anchor_text": "岱畎絲、枲、鉛、松、怪石，",
+      "before_context": "...上下，賦中上。厥貢鹽絺，海物維錯，岱畎絲、枲、鉛、松、怪石，",
+      "after_context": "萊夷爲牧，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「畎，谷也。怪異好石似玉者。岱山之谷出此五物，皆貢之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
       "anchor_text": "萊夷爲牧，",
       "before_context": "...上。厥貢鹽絺，海物維錯，岱畎絲、枲、鉛、松、怪石，萊夷爲牧，",
-      "after_context": "其篚酓絲。浮於汶，通於濟。",
+      "after_context": "其篚酓絲。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「萊夷，地名，可以牧放。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《左傳》云萊人劫孔子，孔子稱「夷不亂華」，又云「齊侯伐萊」，服虔以爲東萊黃縣是。今按：《地理志》黃縣有萊山，恐即此地之夷。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n049",
       "anchor_text": "其篚酓絲。",
       "before_context": "...絺，海物維錯，岱畎絲、枲、鉛、松、怪石，萊夷爲牧，其篚酓絲。",
       "after_context": "浮於汶，通於濟。",
@@ -432,29 +823,81 @@
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「酓桑蠶絲中琴瑟弦。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《爾雅》云「檿，山桑」，是蠶食檿之絲也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n050",
+      "anchor_text": "浮於汶，通於濟。",
+      "before_context": "...畎絲、枲、鉛、松、怪石，萊夷爲牧，其篚酓絲。浮於汶，通於濟。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「《地理志》汶水出泰山萊蕪縣原山，西南入濟。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
+      "anchor_text": "海岱及淮維徐州：",
+      "before_context": "海岱及淮維徐州：",
+      "after_context": "淮、沂其治，蒙、羽其蓺。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「東至海，北至岱，南及淮。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n052",
       "anchor_text": "淮、沂其治，蒙、羽其蓺。",
       "before_context": "海岱及淮維徐州：淮、沂其治，蒙、羽其蓺。",
-      "after_context": "大野既都，東原厎平。其土赤埴墳，草木漸包。其田上中，賦中中。",
+      "after_context": "大野既都，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "鄭玄曰：「《地理志》沂水出泰山蓋縣。蒙，羽，二山名。」孔安國曰：「二水已治，二山可以種蓺。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "水經云淮水出南陽平氏縣胎簪山，東北過桐柏山。沂水出泰山蓋縣艾山，南過下邳縣入泗。蒙山在泰山蒙陰縣西南。羽山在東海祝其縣南，殛鯀之地。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n053",
+      "anchor_text": "大野既都，",
+      "before_context": "海岱及淮維徐州：淮、沂其治，蒙、羽其蓺。大野既都，",
+      "after_context": "東原厎平。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「大野在山陽鉅野北，名鉅野澤。」孔安國曰：「水所停曰都。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
       "anchor_text": "東原厎平。",
       "before_context": "海岱及淮維徐州：淮、沂其治，蒙、羽其蓺。大野既都，東原厎平。",
-      "after_context": "其土赤埴墳，草木漸包。其田上中，賦中中。貢維土五色，羽畎夏狄...",
+      "after_context": "其土赤埴墳，",
       "items": [
         {
           "source": "jijie",
@@ -475,10 +918,52 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n055",
+      "anchor_text": "其土赤埴墳，",
+      "before_context": "...州：淮、沂其治，蒙、羽其蓺。大野既都，東原厎平。其土赤埴墳，",
+      "after_context": "草木漸包。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「埴，黏土也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n056",
+      "anchor_text": "草木漸包。",
+      "before_context": "...其治，蒙、羽其蓺。大野既都，東原厎平。其土赤埴墳，草木漸包。",
+      "after_context": "其田上中，賦中中。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「漸，長進；包，叢生也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n057",
+      "anchor_text": "其田上中，賦中中。",
+      "before_context": "...大野既都，東原厎平。其土赤埴墳，草木漸包。其田上中，賦中中。",
+      "after_context": "貢維土五色，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「田第二，賦第五。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
       "anchor_text": "貢維土五色，",
       "before_context": "...原厎平。其土赤埴墳，草木漸包。其田上中，賦中中。貢維土五色，",
-      "after_context": "羽畎夏狄，嶧陽孤桐，泗濱浮磬，淮夷蠙珠臮魚，其篚玄纖縞。浮于...",
+      "after_context": "羽畎夏狄，",
       "items": [
         {
           "source": "jijie",
@@ -494,10 +979,24 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n059",
+      "anchor_text": "羽畎夏狄，",
+      "before_context": "...土赤埴墳，草木漸包。其田上中，賦中中。貢維土五色，羽畎夏狄，",
+      "after_context": "嶧陽孤桐，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「夏狄，狄，雉名也。羽中旌旄，羽山之谷有之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n060",
       "anchor_text": "嶧陽孤桐，",
-      "before_context": "草木漸包。其田上中，賦中中。貢維土五色，羽畎夏狄，嶧陽孤桐，",
-      "after_context": "泗濱浮磬，淮夷蠙珠臮魚，其篚玄纖縞。浮于淮、泗，通于河。",
+      "before_context": "...草木漸包。其田上中，賦中中。貢維土五色，羽畎夏狄，嶧陽孤桐，",
+      "after_context": "泗濱浮磬，",
       "items": [
         {
           "source": "jijie",
@@ -513,10 +1012,10 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n061",
       "anchor_text": "泗濱浮磬，",
-      "before_context": "其田上中，賦中中。貢維土五色，羽畎夏狄，嶧陽孤桐，泗濱浮磬，",
-      "after_context": "淮夷蠙珠臮魚，其篚玄纖縞。浮于淮、泗，通于河。",
+      "before_context": "...其田上中，賦中中。貢維土五色，羽畎夏狄，嶧陽孤桐，泗濱浮磬，",
+      "after_context": "淮夷蠙珠臮魚，",
       "items": [
         {
           "source": "jijie",
@@ -532,24 +1031,29 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n062",
       "anchor_text": "淮夷蠙珠臮魚，",
       "before_context": "...中。貢維土五色，羽畎夏狄，嶧陽孤桐，泗濱浮磬，淮夷蠙珠臮魚，",
-      "after_context": "其篚玄纖縞。浮于淮、泗，通于河。",
+      "after_context": "其篚玄纖縞。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「淮、夷二水，出蠙珠及美魚。」鄭玄曰：「淮夷，淮水之上夷民也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《尚書》云「徂茲淮夷，徐戎並興」，今徐州言淮夷，則鄭解爲得。蠙，一作「玭」，並步玄反。臮，古「暨」字。臮，與也。言夷人所居淮水之處，有此蠙珠與魚也。又作「濱」。濱，畔也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n063",
       "anchor_text": "其篚玄纖縞。",
       "before_context": "...色，羽畎夏狄，嶧陽孤桐，泗濱浮磬，淮夷蠙珠臮魚，其篚玄纖縞。",
-      "after_context": "浮于淮、泗，通于河。",
+      "after_context": "浮于淮、泗，",
       "items": [
         {
           "source": "jijie",
@@ -565,7 +1069,7 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n064",
       "anchor_text": "浮于淮、泗，",
       "before_context": "...，嶧陽孤桐，泗濱浮磬，淮夷蠙珠臮魚，其篚玄纖縞。浮于淮、泗，",
       "after_context": "通于河。",
@@ -579,10 +1083,24 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n065",
+      "anchor_text": "淮海維揚州：",
+      "before_context": "淮海維揚州：",
+      "after_context": "彭蠡既都，陽鳥所居。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「北據淮，南距海。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n066",
       "anchor_text": "彭蠡既都，陽鳥所居。",
       "before_context": "淮海維揚州：彭蠡既都，陽鳥所居。",
-      "after_context": "三江既入，震澤致定。竹箭既布。其草惟夭，其木惟喬，其土塗泥。",
+      "after_context": "三江既入，",
       "items": [
         {
           "source": "jijie",
@@ -603,10 +1121,24 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n067",
+      "anchor_text": "三江既入，",
+      "before_context": "淮海維揚州：彭蠡既都，陽鳥所居。三江既入，",
+      "after_context": "震澤致定。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「三江謂松江、錢唐江、浦陽江。」今按：《地理志》有南江、中江、北江，是爲三江。其南江從會稽吳縣南，東入海。中江從丹陽蕪湖縣西南，東至會稽陽羨縣入海。北江從會稽毗陵縣北，東入海。故下文「東爲中江」，又「東爲北江」，孔安國云「有北有中，南可知也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
       "anchor_text": "震澤致定。",
       "before_context": "淮海維揚州：彭蠡既都，陽鳥所居。三江既入，震澤致定。",
-      "after_context": "竹箭既布。其草惟夭，其木惟喬，其土塗泥。田下下，賦下上上雜。",
+      "after_context": "竹箭既布。",
       "items": [
         {
           "source": "jijie",
@@ -621,16 +1153,100 @@
         {
           "source": "zhengyi",
           "label": "正義",
-          "text": "澤在蘇州西南四十五里。三江者，在蘇州東南三十里，名三江口。一江西南上七十里至太湖，名曰松江，古笠澤江；　一　江東南上七十里至白蜆湖，名曰上江，亦曰東江；一江東北下三百餘里入海，名曰下江，亦曰婁江：於其分處號曰三江口。顧夷吳地記云「松江東北行七十里，得三江口。東北入海爲婁江，東南入海爲東江，并松江爲三江」是也。言理三江入海，非入震澤也。按：太湖西南湖州諸溪從天目山下，西北宣州諸山有溪，並下太湖。太湖東北流，各至三江口入海。其湖無通彭蠡湖及太湖處，並阻山陸。諸儒及地志等解「三江既入」皆非也。《周禮》職方氏云「揚州藪曰具區，川曰三江」。按：五湖、三江者，韋昭注非也。其源俱不通太湖，引解「三江既入」，失之遠矣。五湖者，菱湖、游湖、莫湖、貢湖、胥湖，皆太湖東岸，五灣爲五湖，蓋古時應別，今並相連。菱湖在莫釐山東，周迴三十餘里，西口闊二里，其口南則莫釐山，北則徐侯山，西與莫湖連。莫湖在莫釐山西及北，北與胥湖連；胥湖在胥山西，南與莫湖連：各周迴五六十里，西連太湖。游湖在北二十里，在長山東，湖西口闊二里，其口東南岸樹里山，西北岸長山，湖周迴五六十里。貢湖在長山西，其口闊四五里，口東南長山，山南即山陽村，西北連常州無錫縣老岸，湖周迴一百九十里已上，湖身向東北，長七十餘里。兩湖西亦連太湖。河渠《書》云「於吳則通渠三江、五湖」。貨殖傳云「夫吳有三江、五湖之利。」又太史公自敍傳云「登姑蘇，望五湖」是也。"
+          "text": "澤在蘇州西南四十五里。三江者，在蘇州東南三十里，名三江口。一江西南上七十里至太湖，名曰松江，古笠澤江；一江東南上七十里至白蜆湖，名曰上江，亦曰東江；一江東北下三百餘里入海，名曰下江，亦曰婁江：於其分處號曰三江口。顧夷吳地記云「松江東北行七十里，得三江口。東北入海爲婁江，東南入海爲東江，并松江爲三江」是也。言理三江入海，非入震澤也。按：太湖西南湖州諸溪從天目山下，西北宣州諸山有溪，並下太湖。太湖東北流，各至三江口入海。其湖無通彭蠡湖及太湖處，並阻山陸。諸儒及地志等解「三江既入」皆非也。《周禮》職方氏云「揚州藪曰具區，川曰三江」。按：五湖、三江者，韋昭注非也。其源俱不通太湖，引解「三江既入」，失之遠矣。五湖者，菱湖、游湖、莫湖、貢湖、胥湖，皆太湖東岸，五灣爲五湖，蓋古時應別，今並相連。菱湖在莫釐山東，周迴三十餘里，西口闊二里，其口南則莫釐山，北則徐侯山，西與莫湖連。莫湖在莫釐山西及北，北與胥湖連；胥湖在胥山西，南與莫湖連：各周迴五六十里，西連太湖。游湖在北二十里，在長山東，湖西口闊二里，其口東南岸樹里山，西北岸長山，湖周迴五六十里。貢湖在長山西，其口闊四五里，口東南長山，山南即山陽村，西北連常州無錫縣老岸，湖周迴一百九十里已上，湖身向東北，長七十餘里。兩湖西亦連太湖。河渠《書》云「於吳則通渠三江、五湖」。貨殖傳云「夫吳有三江、五湖之利。」又太史公自敍傳云「登姑蘇，望五湖」是也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n069",
+      "anchor_text": "竹箭既布。",
+      "before_context": "...海維揚州：彭蠡既都，陽鳥所居。三江既入，震澤致定。竹箭既布。",
+      "after_context": "其草惟夭，其木惟喬，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「水去布生。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
+      "anchor_text": "其草惟夭，其木惟喬，",
+      "before_context": "...陽鳥所居。三江既入，震澤致定。竹箭既布。其草惟夭，其木惟喬，",
+      "after_context": "其土塗泥。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "少長曰夭。喬，高也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
+      "anchor_text": "其土塗泥。",
+      "before_context": "...三江既入，震澤致定。竹箭既布。其草惟夭，其木惟喬，其土塗泥。",
+      "after_context": "田下下，賦下上上雜。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「漸，洳也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n072",
+      "anchor_text": "田下下，賦下上上雜。",
+      "before_context": "...竹箭既布。其草惟夭，其木惟喬，其土塗泥。田下下，賦下上上雜。",
+      "after_context": "貢金三品，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「田第九，賦第七，雜出第六。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n073",
+      "anchor_text": "貢金三品，",
+      "before_context": "...其草惟夭，其木惟喬，其土塗泥。田下下，賦下上上雜。貢金三品，",
+      "after_context": "瑤、琨、竹箭，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「金、銀、銅。」。鄭玄曰：「銅三色也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n074",
+      "anchor_text": "瑤、琨、竹箭，",
+      "before_context": "...惟喬，其土塗泥。田下下，賦下上上雜。貢金三品，瑤、琨、竹箭，",
+      "after_context": "齒、革、羽、旄，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「瑤，琨，皆美玉也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n075",
       "anchor_text": "齒、革、羽、旄，",
-      "before_context": "田下下，賦下上上雜。貢金三品，瑤、琨、竹箭，齒、革、羽、旄，",
-      "after_context": "島夷卉服，其篚織貝，其包橘、柚錫貢。均江海，通淮、泗。",
+      "before_context": "...田下下，賦下上上雜。貢金三品，瑤、琨、竹箭，齒、革、羽、旄，",
+      "after_context": "島夷卉服，",
       "items": [
         {
           "source": "jijie",
@@ -646,10 +1262,10 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n076",
       "anchor_text": "島夷卉服，",
       "before_context": "...下上上雜。貢金三品，瑤、琨、竹箭，齒、革、羽、旄，島夷卉服，",
-      "after_context": "其篚織貝，其包橘、柚錫貢。均江海，通淮、泗。",
+      "after_context": "其篚織貝，",
       "items": [
         {
           "source": "jijie",
@@ -665,10 +1281,66 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n077",
+      "anchor_text": "其篚織貝，",
+      "before_context": "...貢金三品，瑤、琨、竹箭，齒、革、羽、旄，島夷卉服，其篚織貝，",
+      "after_context": "其包橘、柚錫貢。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「織，細繒也。貝，水物也。」鄭玄曰：「貝，錦名也。《詩》云『成是貝錦』。凡織者，先染其絲，織之屬百濟。」又倭國，武皇后改即成〔文〕矣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n078",
+      "anchor_text": "其包橘、柚錫貢。",
+      "before_context": "...、竹箭，齒、革、羽、旄，島夷卉服，其篚織貝，其包橘、柚錫貢。",
+      "after_context": "均江海，通淮、泗。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「小曰橘，大曰柚。錫命乃貢，言不常也。」鄭玄曰：「有錫則貢之，或時乏則不貢。錫，所以柔金也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n079",
+      "anchor_text": "均江海，通淮、泗。",
+      "before_context": "...、旄，島夷卉服，其篚織貝，其包橘、柚錫貢。均江海，通淮、泗。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「均，讀曰沿。沿，順水行也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n080",
+      "anchor_text": "荊及衡陽維荊州：",
+      "before_context": "荊及衡陽維荊州：",
+      "after_context": "江、漢朝宗于海。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「北據荊山，南及衡山之陽。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
       "anchor_text": "江、漢朝宗于海。",
       "before_context": "荊及衡陽維荊州：江、漢朝宗于海。",
-      "after_context": "九江甚中，沱、涔已道，雲土、夢爲治。其土塗泥。田下中，賦上下...",
+      "after_context": "九江甚中，",
       "items": [
         {
           "source": "jijie",
@@ -684,24 +1356,29 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n082",
       "anchor_text": "九江甚中，",
       "before_context": "荊及衡陽維荊州：江、漢朝宗于海。九江甚中，",
-      "after_context": "沱、涔已道，雲土、夢爲治。其土塗泥。田下中，賦上下。貢羽、旄...",
+      "after_context": "沱、涔已道，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「江於此州界，分爲九道，甚得地勢之中。」鄭玄曰：「《地理志》九江在尋陽南，皆東合爲大江。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：尋陽記九江者，烏江、蚌江、烏白江、嘉靡江、沙江、畎江、廩江、隄江、箘江。又張湞九江圖所載有三里、五畎、烏土、白蚌。九江之名不同。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n083",
       "anchor_text": "沱、涔已道，",
       "before_context": "荊及衡陽維荊州：江、漢朝宗于海。九江甚中，沱、涔已道，",
-      "after_context": "雲土、夢爲治。其土塗泥。田下中，賦上下。貢羽、旄、齒、革，金...",
+      "after_context": "雲土、夢爲治。",
       "items": [
         {
           "source": "jijie",
@@ -722,24 +1399,99 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n084",
       "anchor_text": "雲土、夢爲治。",
       "before_context": "...維荊州：江、漢朝宗于海。九江甚中，沱、涔已道，雲土、夢爲治。",
-      "after_context": "其土塗泥。田下中，賦上下。貢羽、旄、齒、革，金三品，杶、榦、...",
+      "after_context": "其土塗泥。田下中，賦上下。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「雲夢之澤在江南，其中有平土丘，水去可爲耕作畎畝之治。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "夢，一作「瞢」，鄒誕生又音蒙。按：雲土、夢本二澤名，蓋人以二澤相近，或合稱雲夢耳。知者，據《左傳》云楚子濟江入于雲中，又楚子、鄭伯田于江南之夢，則是二澤各別也。韋昭曰：「雲土今爲縣，屬江夏南郡華容。」今按：《地理志》云江夏有雲杜縣，是其地。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n085",
+      "anchor_text": "其土塗泥。田下中，賦上下。",
+      "before_context": "...江甚中，沱、涔已道，雲土、夢爲治。其土塗泥。田下中，賦上下。",
+      "after_context": "貢羽、旄、齒、革，金三品，杶、榦、栝、柏，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「田第八，賦第三。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n086",
+      "anchor_text": "羽、旄、齒、革，金三品，杶、榦、栝、柏，",
+      "before_context": "...。田下中，賦上下。貢羽、旄、齒、革，金三品，杶、榦、栝、柏，",
+      "after_context": "礪、砥、砮、丹，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「四木名。」孔安國曰：「榦，柘也。柏葉松身曰栝。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
+      "anchor_text": "礪、砥、砮、丹，",
+      "before_context": "...。貢羽、旄、齒、革，金三品，杶、榦、栝、柏，礪、砥、砮、丹，",
+      "after_context": "維箘簬、楛，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「砥細於礪，皆磨石也。砮，石中矢鏃。丹，朱類也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n088",
+      "anchor_text": "維箘簬、楛，",
+      "before_context": "...齒、革，金三品，杶、榦、栝、柏，礪、砥、砮、丹，維箘簬、楛，",
+      "after_context": "三國致貢其名，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『箭足杆』。杆即楛也，音怙。箭足者，矢鏃也。或以箭足訓釋箘簬乎？」駰案：鄭玄曰「箘簬，聆風也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n089",
+      "anchor_text": "三國致貢其名，",
+      "before_context": "...，杶、榦、栝、柏，礪、砥、砮、丹，維箘簬、楛，三國致貢其名，",
+      "after_context": "包匭菁茅，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「言箘簬、楛三國所致貢，其名善也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n090",
       "anchor_text": "包匭菁茅，",
       "before_context": "...栝、柏，礪、砥、砮、丹，維箘簬、楛，三國致貢其名，包匭菁茅，",
-      "after_context": "其篚玄纁璣組，九江入賜大龜。浮于江、沱、涔、（",
+      "after_context": "其篚玄纁璣組，",
       "items": [
         {
           "source": "jijie",
@@ -755,10 +1507,38 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n091",
+      "anchor_text": "其篚玄纁璣組，",
+      "before_context": "...、砮、丹，維箘簬、楛，三國致貢其名，包匭菁茅，其篚玄纁璣組，",
+      "after_context": "九江入賜大龜。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「此州染玄纁色善，故貢之。璣，珠類，生於水中。組，綬類也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n092",
+      "anchor_text": "九江入賜大龜。",
+      "before_context": "...簬、楛，三國致貢其名，包匭菁茅，其篚玄纁璣組，九江入賜大龜。",
+      "after_context": "浮于江、沱、涔、（于）漢，踰于雒，至于南河。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「尺二寸曰大龜，出於九江水中。龜不常用，賜命而納之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n093",
       "anchor_text": "：",
       "before_context": "荊河惟豫州：",
-      "after_context": "伊、雒、瀍、澗既入于河，滎播既都，道荷澤，被明都。其土壤，下...",
+      "after_context": "伊、雒、瀍、澗既入于河，",
       "items": [
         {
           "source": "jijie",
@@ -774,10 +1554,10 @@
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n094",
       "anchor_text": "伊、雒、瀍、澗既入于河，",
       "before_context": "荊河惟豫州：伊、雒、瀍、澗既入于河，",
-      "after_context": "滎播既都，道荷澤，被明都。其土壤，下土墳壚。田中上，賦雜上中...",
+      "after_context": "滎播既都，",
       "items": [
         {
           "source": "jijie",
@@ -798,24 +1578,29 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n095",
       "anchor_text": "滎播既都，",
       "before_context": "荊河惟豫州：伊、雒、瀍、澗既入于河，滎播既都，",
-      "after_context": "道荷澤，被明都。其土壤，下土墳壚。田中上，賦雜上中。貢漆、絲...",
+      "after_context": "道荷澤，被明都。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「滎，澤名。波水已成遏都。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《古文尚書》作「滎波」，此及今文並云「滎播」。播是水播溢之義，滎是澤名。故《左傳》云狄及衞戰於滎澤。鄭玄云：「今塞爲平地，滎陽人猶謂其處爲滎播。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n096",
       "anchor_text": "道荷澤，被明都。",
       "before_context": "...河惟豫州：伊、雒、瀍、澗既入于河，滎播既都，道荷澤，被明都。",
-      "after_context": "其土壤，下土墳壚。田中上，賦雜上中。貢漆、絲、絺、紵，其篚纖...",
+      "after_context": "其土壤，下土墳壚。",
       "items": [
         {
           "source": "jijie",
@@ -836,10 +1621,66 @@
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n097",
+      "anchor_text": "其土壤，下土墳壚。",
+      "before_context": "...瀍、澗既入于河，滎播既都，道荷澤，被明都。其土壤，下土墳壚。",
+      "after_context": "田中上，賦雜上中。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「壚，疏也。」馬融曰：「豫州地有三等，下者墳壚也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n098",
+      "anchor_text": "田中上，賦雜上中。",
+      "before_context": "...播既都，道荷澤，被明都。其土壤，下土墳壚。田中上，賦雜上中。",
+      "after_context": "貢漆、絲、絺、紵，其篚纖絮，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「田第四，賦第二，又雜出第一。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n099",
+      "anchor_text": "貢漆、絲、絺、紵，其篚纖絮，",
+      "before_context": "...壤，下土墳壚。田中上，賦雜上中。貢漆、絲、絺、紵，其篚纖絮，",
+      "after_context": "錫貢磬錯。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「細緜也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n100",
+      "anchor_text": "錫貢磬錯。",
+      "before_context": "...壚。田中上，賦雜上中。貢漆、絲、絺、紵，其篚纖絮，錫貢磬錯。",
+      "after_context": "浮於雒，達於河。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「治玉石曰錯，治磬錯也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n101",
       "anchor_text": "陽黑水惟梁州：",
       "before_context": "華陽黑水惟梁州：",
-      "after_context": "汶、嶓既蓺，沱、涔既道，蔡、蒙旅平，和夷厎績。其土青驪。田下...",
+      "after_context": "汶、嶓既蓺，",
       "items": [
         {
           "source": "jijie",
@@ -855,10 +1696,10 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n102",
       "anchor_text": "汶、嶓既蓺，",
       "before_context": "華陽黑水惟梁州：汶、嶓既蓺，",
-      "after_context": "沱、涔既道，蔡、蒙旅平，和夷厎績。其土青驪。田下上，賦下中三...",
+      "after_context": "沱、涔既道，",
       "items": [
         {
           "source": "jijie",
@@ -879,10 +1720,24 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n103",
+      "anchor_text": "沱、涔既道，",
+      "before_context": "華陽黑水惟梁州：汶、嶓既蓺，沱、涔既道，",
+      "after_context": "蔡、蒙旅平，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「沱、潛發源此州，入荊州。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n104",
       "anchor_text": "蔡、蒙旅平，",
       "before_context": "華陽黑水惟梁州：汶、嶓既蓺，沱、涔既道，蔡、蒙旅平，",
-      "after_context": "和夷厎績。其土青驪。田下上，賦下中三錯。貢璆、鐵、銀、鏤、砮...",
+      "after_context": "和夷厎績。",
       "items": [
         {
           "source": "jijie",
@@ -903,10 +1758,80 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n105",
+      "anchor_text": "和夷厎績。",
+      "before_context": "...陽黑水惟梁州：汶、嶓既蓺，沱、涔既道，蔡、蒙旅平，和夷厎績。",
+      "after_context": "其土青驪。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「和夷，地名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n106",
+      "anchor_text": "其土青驪。",
+      "before_context": "...州：汶、嶓既蓺，沱、涔既道，蔡、蒙旅平，和夷厎績。其土青驪。",
+      "after_context": "田下上，賦下中三錯。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「色青黑也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n107",
+      "anchor_text": "田下上，賦下中三錯。",
+      "before_context": "...涔既道，蔡、蒙旅平，和夷厎績。其土青驪。田下上，賦下中三錯。",
+      "after_context": "貢璆、鐵、銀、鏤、砮、磬，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「田第七，賦第八，雜出第七第九三等。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n108",
+      "anchor_text": "貢璆、鐵、銀、鏤、砮、磬，",
+      "before_context": "...績。其土青驪。田下上，賦下中三錯。貢璆、鐵、銀、鏤、砮、磬，",
+      "after_context": "熊、羆、狐、貍、織皮。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「璆，玉名。」鄭玄曰：「黃金之美者謂之鏐。鏤，剛鐵，可以刻鏤也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n109",
+      "anchor_text": "熊、羆、狐、貍、織皮。",
+      "before_context": "...賦下中三錯。貢璆、鐵、銀、鏤、砮、磬，熊、羆、狐、貍、織皮。",
+      "after_context": "西傾因桓是來，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「貢四獸之皮也。織皮，今罽也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n110",
       "anchor_text": "西傾因桓是來，",
       "before_context": "...璆、鐵、銀、鏤、砮、磬，熊、羆、狐、貍、織皮。西傾因桓是來，",
-      "after_context": "浮于潛，踰于沔，入于渭，亂于河。",
+      "after_context": "浮于潛，踰于沔，",
       "items": [
         {
           "source": "jijie",
@@ -927,38 +1852,76 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n111",
+      "anchor_text": "浮于潛，踰于沔，",
+      "before_context": "...砮、磬，熊、羆、狐、貍、織皮。西傾因桓是來，浮于潛，踰于沔，",
+      "after_context": "入于渭，亂于河。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「漢上水爲沔。」鄭玄曰：「或謂漢爲沔。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n112",
+      "anchor_text": "入于渭，亂于河。",
+      "before_context": "...狐、貍、織皮。西傾因桓是來，浮于潛，踰于沔，入于渭，亂于河。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「正絕流曰亂。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n113",
       "anchor_text": "黑水西河惟雍州：",
       "before_context": "黑水西河惟雍州：",
-      "after_context": "弱水既西，涇屬渭汭。漆、沮既從，灃水所同。荊、岐已旅，終南、...",
+      "after_context": "弱水既西，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「西距黑水，東據河。龍門之河在冀州西。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》益州滇池有黑水祠。鄭玄引地說云「三危山，黑水出其南」。《山海經》「黑水出崑崙墟西北隅」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n052",
+      "id": "n114",
       "anchor_text": "弱水既西，",
       "before_context": "黑水西河惟雍州：弱水既西，",
-      "after_context": "涇屬渭汭。漆、沮既從，灃水所同。荊、岐已旅，終南、敦物至于鳥...",
+      "after_context": "涇屬渭汭。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「導之西流，至于合黎。」鄭玄曰：「眾水皆東，此獨西流也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：水經云「弱水出張掖刪丹縣西北，至酒泉會水縣入合黎山腹」。《山海經》云「弱水出崑崙墟西南隅」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n115",
       "anchor_text": "涇屬渭汭。",
       "before_context": "黑水西河惟雍州：弱水既西，涇屬渭汭。",
-      "after_context": "漆、沮既從，灃水所同。荊、岐已旅，終南、敦物至于鳥鼠。原隰厎...",
+      "after_context": "漆、沮既從，",
       "items": [
         {
           "source": "jijie",
@@ -979,10 +1942,10 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n116",
       "anchor_text": "漆、沮既從，",
       "before_context": "黑水西河惟雍州：弱水既西，涇屬渭汭。漆、沮既從，",
-      "after_context": "灃水所同。荊、岐已旅，終南、敦物至于鳥鼠。原隰厎績，至于都野...",
+      "after_context": "灃",
       "items": [
         {
           "source": "zhengyi",
@@ -993,10 +1956,24 @@
       "sentence_id": null
     },
     {
-      "id": "n055",
+      "id": "n117",
+      "anchor_text": "灃",
+      "before_context": "黑水西河惟雍州：弱水既西，涇屬渭汭。漆、沮既從，灃",
+      "after_context": "水所同。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "音豐。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n118",
       "anchor_text": "水所同。",
       "before_context": "黑水西河惟雍州：弱水既西，涇屬渭汭。漆、沮既從，灃水所同。",
-      "after_context": "荊、岐已旅，終南、敦物至于鳥鼠。原隰厎績，至于都野。三危既度...",
+      "after_context": "荊、岐已旅，",
       "items": [
         {
           "source": "jijie",
@@ -1017,10 +1994,10 @@
       "sentence_id": null
     },
     {
-      "id": "n056",
+      "id": "n119",
       "anchor_text": "荊、岐已旅，",
       "before_context": "...雍州：弱水既西，涇屬渭汭。漆、沮既從，灃水所同。荊、岐已旅，",
-      "after_context": "終南、敦物至于鳥鼠。原隰厎績，至于都野。三危既度，三苗大序。",
+      "after_context": "終南、敦物至于鳥鼠。",
       "items": [
         {
           "source": "jijie",
@@ -1036,10 +2013,10 @@
       "sentence_id": null
     },
     {
-      "id": "n057",
+      "id": "n120",
       "anchor_text": "終南、敦物至于鳥鼠。",
       "before_context": "...渭汭。漆、沮既從，灃水所同。荊、岐已旅，終南、敦物至于鳥鼠。",
-      "after_context": "原隰厎績，至于都野。三危既度，三苗大序。其土黃壤。田上上，賦...",
+      "after_context": "原隰厎績，至于都野。",
       "items": [
         {
           "source": "jijie",
@@ -1060,10 +2037,10 @@
       "sentence_id": null
     },
     {
-      "id": "n058",
+      "id": "n121",
       "anchor_text": "原隰厎績，至于都野。",
-      "before_context": "水所同。荊、岐已旅，終南、敦物至于鳥鼠。原隰厎績，至于都野。",
-      "after_context": "三危既度，三苗大序。其土黃壤。田上上，賦中下。貢璆、琳、琅玕...",
+      "before_context": "...水所同。荊、岐已旅，終南、敦物至于鳥鼠。原隰厎績，至于都野。",
+      "after_context": "三危既度，",
       "items": [
         {
           "source": "jijie",
@@ -1079,10 +2056,66 @@
       "sentence_id": null
     },
     {
-      "id": "n059",
+      "id": "n122",
+      "anchor_text": "三危既度，",
+      "before_context": "...、岐已旅，終南、敦物至于鳥鼠。原隰厎績，至于都野。三危既度，",
+      "after_context": "三苗大序。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鄭玄引《河圖》及地說云「三危山在鳥鼠西南，與岐山相連」。度，劉伯莊音田各反，《尚書》作「宅」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n123",
+      "anchor_text": "三苗大序。",
+      "before_context": "...終南、敦物至于鳥鼠。原隰厎績，至于都野。三危既度，三苗大序。",
+      "after_context": "其土黃壤。田上上，賦中下。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「西裔之山己可居，三苗之族大有次序，禹之功也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n124",
+      "anchor_text": "其土黃壤。田上上，賦中下。",
+      "before_context": "...績，至于都野。三危既度，三苗大序。其土黃壤。田上上，賦中下。",
+      "after_context": "貢璆、琳、琅玕。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「田第一，賦第六，人功少。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n125",
+      "anchor_text": "貢璆、琳、琅玕。",
+      "before_context": "...危既度，三苗大序。其土黃壤。田上上，賦中下。貢璆、琳、琅玕。",
+      "after_context": "浮于積石，至于龍門西河，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「璆，琳，皆玉名。琅玕，石而似珠者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n126",
       "anchor_text": "浮于積石，至于龍門西河，",
       "before_context": "...壤。田上上，賦中下。貢璆、琳、琅玕。浮于積石，至于龍門西河，",
-      "after_context": "會于渭汭。織皮昆侖、析支、渠搜，西戎即序。",
+      "after_context": "會于渭汭。",
       "items": [
         {
           "source": "jijie",
@@ -1103,7 +2136,7 @@
       "sentence_id": null
     },
     {
-      "id": "n060",
+      "id": "n127",
       "anchor_text": "會于渭汭。",
       "before_context": "...，賦中下。貢璆、琳、琅玕。浮于積石，至于龍門西河，會于渭汭。",
       "after_context": "織皮昆侖、析支、渠搜，西戎即序。",
@@ -1117,7 +2150,7 @@
       "sentence_id": null
     },
     {
-      "id": "n061",
+      "id": "n128",
       "anchor_text": "織皮昆侖、析支、渠搜，西戎即序。",
       "before_context": "...石，至于龍門西河，會于渭汭。織皮昆侖、析支、渠搜，西戎即序。",
       "after_context": "",
@@ -1126,15 +2159,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「織皮，毛布。此四國在荒服之外，流沙之內。羌、髳之屬皆就次序，美禹之功及戎狄也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鄭玄以爲衣皮之人居昆侖、析支、渠搜，三山皆在西戎。王肅曰「昆侖在臨羌西，析支在河關西，西戎在西域」。王肅以爲地名，而不言渠搜。今按：《地理志》金城臨羌縣有昆侖祠，敦煌廣至縣有昆侖障，朔方有渠搜縣。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n062",
+      "id": "n129",
+      "anchor_text": "道九山：",
+      "before_context": "道九山：",
+      "after_context": "汧及岐至于荊山，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "汧、壺口、砥柱、太行、西傾、熊耳、嶓冢、內方、㞶是九山也。古分爲三條，故《地理志》有北條之荊山。馬融以汧爲北條，西傾爲中條，嶓冢爲南條。鄭玄分四列，汧爲陰列，西傾次陰列，嶓冢爲陽列，㞶山次陽列。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n130",
       "anchor_text": "汧及岐至于荊山，",
       "before_context": "道九山：汧及岐至于荊山，",
-      "after_context": "踰于河；壺口、雷首至于太嶽；砥柱、析城至于王屋；太行、常山至...",
+      "after_context": "踰于河；壺口、雷首",
       "items": [
         {
           "source": "jijie",
@@ -1155,10 +2207,24 @@
       "sentence_id": null
     },
     {
-      "id": "n063",
+      "id": "n131",
+      "anchor_text": "踰于河；壺口、雷首",
+      "before_context": "道九山：汧及岐至于荊山，踰于河；壺口、雷首",
+      "after_context": "至于太嶽；",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "雷首山在河東蒲阪縣東南。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n132",
       "anchor_text": "至于太嶽；",
       "before_context": "道九山：汧及岐至于荊山，踰于河；壺口、雷首至于太嶽；",
-      "after_context": "砥柱、析城至于王屋；太行、常山至于碣石，入于海；西傾、朱圉、...",
+      "after_context": "砥柱、析城至于王屋；",
       "items": [
         {
           "source": "jijie",
@@ -1179,10 +2245,10 @@
       "sentence_id": null
     },
     {
-      "id": "n064",
+      "id": "n133",
       "anchor_text": "砥柱、析城至于王屋；",
       "before_context": "...岐至于荊山，踰于河；壺口、雷首至于太嶽；砥柱、析城至于王屋；",
-      "after_context": "太行、常山至于碣石，入于海；西傾、朱圉、鳥鼠至于太華；熊耳、...",
+      "after_context": "太行、常山至于碣石，入于海；",
       "items": [
         {
           "source": "jijie",
@@ -1203,10 +2269,10 @@
       "sentence_id": null
     },
     {
-      "id": "n065",
+      "id": "n134",
       "anchor_text": "太行、常山至于碣石，入于海；",
       "before_context": "...首至于太嶽；砥柱、析城至于王屋；太行、常山至于碣石，入于海；",
-      "after_context": "西傾、朱圉、鳥鼠至于太華；熊耳、外方、桐柏至于負尾；道嶓冢，...",
+      "after_context": "西傾、朱圉、鳥鼠",
       "items": [
         {
           "source": "jijie",
@@ -1227,24 +2293,43 @@
       "sentence_id": null
     },
     {
-      "id": "n066",
-      "anchor_text": "至于太華；",
-      "before_context": "...王屋；太行、常山至于碣石，入于海；西傾、朱圉、鳥鼠至于太華；",
-      "after_context": "熊耳、外方、桐柏至于負尾；道嶓冢，至于荊山；內方至于大別；汶...",
+      "id": "n135",
+      "anchor_text": "西傾、朱圉、鳥鼠",
+      "before_context": "...、析城至于王屋；太行、常山至于碣石，入于海；西傾、朱圉、鳥鼠",
+      "after_context": "至于太華；",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "鄭玄曰：「《地理志》太華山在弘農華陰南。」"
+          "text": "鄭玄曰：「《地理志》曰朱圉在漢陽南。」孔安國曰：「鳥鼠山，渭水所山，在隴西之西。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n067",
+      "id": "n136",
+      "anchor_text": "至于太華；",
+      "before_context": "...王屋；太行、常山至于碣石，入于海；西傾、朱圉、鳥鼠至于太華；",
+      "after_context": "熊耳、外方、桐柏至于負尾；",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「《地理志》太華山在弘農華陰南。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "圉，一作「圄」。朱圉山在天水冀縣南。鳥鼠山在隴西首陽縣西南。太華即敦物山。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n137",
       "anchor_text": "熊耳、外方、桐柏至于負尾；",
       "before_context": "...入于海；西傾、朱圉、鳥鼠至于太華；熊耳、外方、桐柏至于負尾；",
-      "after_context": "道嶓冢，至于荊山；內方至于大別；汶山之陽至衡山，過九江，至于...",
+      "after_context": "道嶓冢，至于荊山；",
       "items": [
         {
           "source": "jijie",
@@ -1265,10 +2350,10 @@
       "sentence_id": null
     },
     {
-      "id": "n068",
+      "id": "n138",
       "anchor_text": "道嶓冢，至于荊山；",
       "before_context": "...、鳥鼠至于太華；熊耳、外方、桐柏至于負尾；道嶓冢，至于荊山；",
-      "after_context": "內方至于大別；汶山之陽至衡山，過九江，至于敷淺原。",
+      "after_context": "內方至于大別；",
       "items": [
         {
           "source": "jijie",
@@ -1289,10 +2374,10 @@
       "sentence_id": null
     },
     {
-      "id": "n069",
+      "id": "n139",
       "anchor_text": "內方至于大別；",
       "before_context": "...；熊耳、外方、桐柏至于負尾；道嶓冢，至于荊山；內方至于大別；",
-      "after_context": "汶山之陽至衡山，過九江，至于敷淺原。",
+      "after_context": "汶山之陽至衡山，",
       "items": [
         {
           "source": "jijie",
@@ -1313,7 +2398,7 @@
       "sentence_id": null
     },
     {
-      "id": "n070",
+      "id": "n140",
       "anchor_text": "汶山之陽至衡山，",
       "before_context": "...柏至于負尾；道嶓冢，至于荊山；內方至于大別；汶山之陽至衡山，",
       "after_context": "過九江，至于敷淺原。",
@@ -1332,7 +2417,7 @@
       "sentence_id": null
     },
     {
-      "id": "n071",
+      "id": "n141",
       "anchor_text": "過九江，至于敷淺原。",
       "before_context": "...至于荊山；內方至于大別；汶山之陽至衡山，過九江，至于敷淺原。",
       "after_context": "",
@@ -1341,15 +2426,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「淺，一作『滅』。」駰案：孔安國曰「敷淺原一名傅陽山，在豫章」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "豫章歷陵縣南有傅陽山，一名敷淺原也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n072",
+      "id": "n142",
+      "anchor_text": "道九川：",
+      "before_context": "道九川：",
+      "after_context": "弱水至於合黎，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "弱、黑、河、瀁、江、沇、淮、渭、洛爲九川。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n143",
       "anchor_text": "弱水至於合黎，",
       "before_context": "道九川：弱水至於合黎，",
-      "after_context": "餘波入于流沙。道黑水，至于三危，入于南海。道河積石，至于龍門...",
+      "after_context": "餘波入于流沙。",
       "items": [
         {
           "source": "jijie",
@@ -1370,24 +2474,29 @@
       "sentence_id": null
     },
     {
-      "id": "n073",
+      "id": "n144",
       "anchor_text": "餘波入于流沙。",
       "before_context": "道九川：弱水至於合黎，餘波入于流沙。",
-      "after_context": "道黑水，至于三危，入于南海。道河積石，至于龍門，南至華陰，東...",
+      "after_context": "道黑水，至于三危，入于南海。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「弱水餘波西溢入流沙。」鄭玄曰：「《地理志》流沙在居延（西）〔東〕北，名居延澤。地記曰『弱水西流入合黎山腹，餘波入于流沙，通于南海』。」馬融、王肅皆云合黎、流沙是地名。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》云「張掖居延縣西北有居延澤，古文以爲流沙」。《廣志》「流沙在玉門關外，有居延澤、居延城」。又《山海經》云「流沙出鐘山，西南行昆侖墟入海」。按：是地兼有水，故一云地名，一云水名，馬鄭不同，抑有由也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n074",
+      "id": "n145",
       "anchor_text": "道黑水，至于三危，入于南海。",
       "before_context": "...川：弱水至於合黎，餘波入于流沙。道黑水，至于三危，入于南海。",
-      "after_context": "道河積石，至于龍門，南至華陰，東至砥柱，又東至于盟津，東過雒...",
+      "after_context": "道河積石，",
       "items": [
         {
           "source": "jijie",
@@ -1403,10 +2512,24 @@
       "sentence_id": null
     },
     {
-      "id": "n075",
+      "id": "n146",
+      "anchor_text": "道河積石，",
+      "before_context": "...於合黎，餘波入于流沙。道黑水，至于三危，入于南海。道河積石，",
+      "after_context": "至于龍門，南至華陰，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《爾雅》云：「河出昆侖墟，其色白。」《漢書》西域傳云：「河有兩源，一出蔥嶺，一出于闐。于闐河北流，與蔥嶺河合，東注蒲昌海，一名鹽澤。其水停居，冬夏不增減，潛行地中，南出積石爲中國河。」是河源發昆侖，禹導河自積石而加功也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n147",
       "anchor_text": "至于龍門，南至華陰，",
       "before_context": "...。道黑水，至于三危，入于南海。道河積石，至于龍門，南至華陰，",
-      "after_context": "東至砥柱，又東至于盟津，東過雒汭，至于大邳，北過降水，至于大...",
+      "after_context": "東至砥柱，",
       "items": [
         {
           "source": "jijie",
@@ -1422,10 +2545,10 @@
       "sentence_id": null
     },
     {
-      "id": "n076",
+      "id": "n148",
       "anchor_text": "東至砥柱，",
       "before_context": "...至于三危，入于南海。道河積石，至于龍門，南至華陰，東至砥柱，",
-      "after_context": "又東至于盟津，東過雒汭，至于大邳，北過降水，至于大陸，北播爲...",
+      "after_context": "又東至于盟津，",
       "items": [
         {
           "source": "jijie",
@@ -1441,10 +2564,10 @@
       "sentence_id": null
     },
     {
-      "id": "n077",
+      "id": "n149",
       "anchor_text": "又東至于盟津，",
       "before_context": "...南海。道河積石，至于龍門，南至華陰，東至砥柱，又東至于盟津，",
-      "after_context": "東過雒汭，至于大邳，北過降水，至于大陸，北播爲九河，同爲逆河...",
+      "after_context": "東過雒汭，至于大邳，",
       "items": [
         {
           "source": "jijie",
@@ -1465,10 +2588,10 @@
       "sentence_id": null
     },
     {
-      "id": "n078",
+      "id": "n150",
       "anchor_text": "東過雒汭，至于大邳，",
       "before_context": "...龍門，南至華陰，東至砥柱，又東至于盟津，東過雒汭，至于大邳，",
-      "after_context": "北過降水，至于大陸，北播爲九河，同爲逆河，入于海。嶓冢道瀁，...",
+      "after_context": "北過降水，至于大陸，",
       "items": [
         {
           "source": "jijie",
@@ -1489,10 +2612,10 @@
       "sentence_id": null
     },
     {
-      "id": "n079",
+      "id": "n151",
       "anchor_text": "北過降水，至于大陸，",
       "before_context": "...砥柱，又東至于盟津，東過雒汭，至于大邳，北過降水，至于大陸，",
-      "after_context": "北播爲九河，同爲逆河，入于海。嶓冢道瀁，東流爲漢，又東爲蒼浪...",
+      "after_context": "北播爲九河，同爲逆河，",
       "items": [
         {
           "source": "jijie",
@@ -1513,10 +2636,24 @@
       "sentence_id": null
     },
     {
-      "id": "n080",
+      "id": "n152",
+      "anchor_text": "北播爲九河，同爲逆河，",
+      "before_context": "...過雒汭，至于大邳，北過降水，至于大陸，北播爲九河，同爲逆河，",
+      "after_context": "入于海。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「下尾合名曰逆河，言相向迎受也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n153",
       "anchor_text": "入于海。",
       "before_context": "...至于大邳，北過降水，至于大陸，北播爲九河，同爲逆河，入于海。",
-      "after_context": "嶓冢道瀁，東流爲漢，又東爲蒼浪之水，過三澨，入于大別，南入于...",
+      "after_context": "嶓冢道瀁，東流爲漢，",
       "items": [
         {
           "source": "zhengyi",
@@ -1527,10 +2664,10 @@
       "sentence_id": null
     },
     {
-      "id": "n081",
+      "id": "n154",
       "anchor_text": "嶓冢道瀁，東流爲漢，",
       "before_context": "...至于大陸，北播爲九河，同爲逆河，入于海。嶓冢道瀁，東流爲漢，",
-      "after_context": "又東爲蒼浪之水，過三澨，入于大別，南入于江，東匯澤爲彭蠡，東...",
+      "after_context": "又東爲蒼浪之水，",
       "items": [
         {
           "source": "jijie",
@@ -1551,10 +2688,10 @@
       "sentence_id": null
     },
     {
-      "id": "n082",
+      "id": "n155",
       "anchor_text": "又東爲蒼浪之水，",
       "before_context": "...九河，同爲逆河，入于海。嶓冢道瀁，東流爲漢，又東爲蒼浪之水，",
-      "after_context": "過三澨，入于大別，南入于江，東匯澤爲彭蠡，東爲北江，入于海。",
+      "after_context": "過三澨，入于大別，",
       "items": [
         {
           "source": "jijie",
@@ -1575,38 +2712,104 @@
       "sentence_id": null
     },
     {
-      "id": "n083",
+      "id": "n156",
       "anchor_text": "過三澨，入于大別，",
       "before_context": "...于海。嶓冢道瀁，東流爲漢，又東爲蒼浪之水，過三澨，入于大別，",
-      "after_context": "南入于江，東匯澤爲彭蠡，東爲北江，入于海。汶山道江，東別爲沱...",
+      "after_context": "南入于江，東匯澤爲彭蠡，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「三澨，水名。」鄭玄曰：「在江夏竟陵之界。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "水經云「三澨，地名，在南郡邔縣北」。孔安國、鄭玄以爲水名。今竟陵有三參水，俗云是三澨水。參音去聲。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n084",
+      "id": "n157",
+      "anchor_text": "南入于江，東匯澤爲彭蠡，",
+      "before_context": "...，又東爲蒼浪之水，過三澨，入于大別，南入于江，東匯澤爲彭蠡，",
+      "after_context": "東爲北江，入于海。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「匯，回也。水東回爲彭蠡大澤。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n158",
+      "anchor_text": "東爲北江，入于海。",
+      "before_context": "...過三澨，入于大別，南入于江，東匯澤爲彭蠡，東爲北江，入于海。",
+      "after_context": "汶山道江，東別爲沱，又東至于醴，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「自彭蠡，江分爲三道入震澤，遂爲北江而入海。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n159",
       "anchor_text": "汶山道江，東別爲沱，又東至于醴，",
       "before_context": "...澤爲彭蠡，東爲北江，入于海。汶山道江，東別爲沱，又東至于醴，",
-      "after_context": "過九江，至于東陵，東迆北會于匯，東爲中江，入于海。道沇水，東...",
+      "after_context": "過九江，至于東陵，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國及馬融、王肅皆以醴爲水名。鄭玄曰：「醴，陵名也。大阜曰陵。長沙有醴陵縣。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：騷人所歌「濯余佩於醴浦」，明醴是水。孔安國、馬融解得其實。又虞喜志林以醴是江、沅之別流，而醴字作「澧」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n085",
+      "id": "n160",
+      "anchor_text": "過九江，至于東陵，",
+      "before_context": "...，入于海。汶山道江，東別爲沱，又東至于醴，過九江，至于東陵，",
+      "after_context": "東迆北會于匯，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「東陵，地名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n161",
+      "anchor_text": "東迆北會于匯，",
+      "before_context": "...道江，東別爲沱，又東至于醴，過九江，至于東陵，東迆北會于匯，",
+      "after_context": "東爲中江，入于海。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「迆，溢也。東溢分流都共北會彭蠡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n162",
       "anchor_text": "東爲中江，入于海。",
       "before_context": "...東至于醴，過九江，至于東陵，東迆北會于匯，東爲中江，入于海。",
-      "after_context": "道沇水，東爲濟，入于河，泆爲滎，東出陶丘北，又東至于荷，又東...",
+      "after_context": "道沇水，東爲濟，入于河，泆爲滎，",
       "items": [
         {
           "source": "jijie",
@@ -1622,10 +2825,10 @@
       "sentence_id": null
     },
     {
-      "id": "n086",
+      "id": "n163",
       "anchor_text": "道沇水，東爲濟，入于河，泆爲滎，",
       "before_context": "...北會于匯，東爲中江，入于海。道沇水，東爲濟，入于河，泆爲滎，",
-      "after_context": "東出陶丘北，又東至于荷，又東北會于汶，又東北入于海。道淮自桐...",
+      "after_context": "東出陶丘北，",
       "items": [
         {
           "source": "jijie",
@@ -1646,10 +2849,10 @@
       "sentence_id": null
     },
     {
-      "id": "n087",
+      "id": "n164",
       "anchor_text": "東出陶丘北，",
       "before_context": "...爲中江，入于海。道沇水，東爲濟，入于河，泆爲滎，東出陶丘北，",
-      "after_context": "又東至于荷，又東北會于汶，又東北入于海。道淮自桐柏，東會于泗...",
+      "after_context": "又東至于荷，",
       "items": [
         {
           "source": "jijie",
@@ -1665,10 +2868,24 @@
       "sentence_id": null
     },
     {
-      "id": "n088",
+      "id": "n165",
+      "anchor_text": "又東至于荷，",
+      "before_context": "...海。道沇水，東爲濟，入于河，泆爲滎，東出陶丘北，又東至于荷，",
+      "after_context": "又東北會于汶，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「荷澤之水。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n166",
       "anchor_text": "又東北會于汶，",
       "before_context": "...爲濟，入于河，泆爲滎，東出陶丘北，又東至于荷，又東北會于汶，",
-      "after_context": "又東北入于海。道淮自桐柏，東會于泗、沂，東入于海。道渭自鳥鼠...",
+      "after_context": "又東北入于海。道淮自桐柏，",
       "items": [
         {
           "source": "zhengyi",
@@ -1679,10 +2896,10 @@
       "sentence_id": null
     },
     {
-      "id": "n089",
+      "id": "n167",
       "anchor_text": "又東北入于海。道淮自桐柏，",
       "before_context": "...陶丘北，又東至于荷，又東北會于汶，又東北入于海。道淮自桐柏，",
-      "after_context": "東會于泗、沂，東入于海。道渭自鳥鼠同穴，東會于灃，又東北至于...",
+      "after_context": "東會于泗、沂，東入于海。",
       "items": [
         {
           "source": "zhengyi",
@@ -1693,10 +2910,24 @@
       "sentence_id": null
     },
     {
-      "id": "n090",
+      "id": "n168",
+      "anchor_text": "東會于泗、沂，東入于海。",
+      "before_context": "...北會于汶，又東北入于海。道淮自桐柏，東會于泗、沂，東入于海。",
+      "after_context": "道渭自鳥鼠同穴，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「與泗、沂二水合入海。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n169",
       "anchor_text": "道渭自鳥鼠同穴，",
       "before_context": "...入于海。道淮自桐柏，東會于泗、沂，東入于海。道渭自鳥鼠同穴，",
-      "after_context": "東會于灃，又東北至于涇，東過漆、沮，入于河。道雒自熊耳，東北...",
+      "after_context": "東會于灃，",
       "items": [
         {
           "source": "jijie",
@@ -1712,10 +2943,10 @@
       "sentence_id": null
     },
     {
-      "id": "n091",
+      "id": "n170",
       "anchor_text": "東會于灃，",
       "before_context": "...淮自桐柏，東會于泗、沂，東入于海。道渭自鳥鼠同穴，東會于灃，",
-      "after_context": "又東北至于涇，東過漆、沮，入于河。道雒自熊耳，東北會于澗、瀍...",
+      "after_context": "又東北至于涇，",
       "items": [
         {
           "source": "zhengyi",
@@ -1726,10 +2957,10 @@
       "sentence_id": null
     },
     {
-      "id": "n092",
+      "id": "n171",
       "anchor_text": "又東北至于涇，",
       "before_context": "...于泗、沂，東入于海。道渭自鳥鼠同穴，東會于灃，又東北至于涇，",
-      "after_context": "東過漆、沮，入于河。道雒自熊耳，東北會于澗、瀍，又東會于伊，",
+      "after_context": "東過漆、沮，入于河。",
       "items": [
         {
           "source": "zhengyi",
@@ -1740,10 +2971,24 @@
       "sentence_id": null
     },
     {
-      "id": "n093",
+      "id": "n172",
+      "anchor_text": "東過漆、沮，入于河。",
+      "before_context": "...道渭自鳥鼠同穴，東會于灃，又東北至于涇，東過漆、沮，入于河。",
+      "after_context": "道雒自熊耳，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「漆，沮，二水名，亦曰洛水，出馮翊北。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n173",
       "anchor_text": "道雒自熊耳，",
       "before_context": "...穴，東會于灃，又東北至于涇，東過漆、沮，入于河。道雒自熊耳，",
-      "after_context": "東北會于澗、瀍，又東會于伊，東北入于河。",
+      "after_context": "東北會于澗、瀍，",
       "items": [
         {
           "source": "jijie",
@@ -1759,10 +3004,10 @@
       "sentence_id": null
     },
     {
-      "id": "n094",
+      "id": "n174",
       "anchor_text": "東北會于澗、瀍，",
       "before_context": "...東北至于涇，東過漆、沮，入于河。道雒自熊耳，東北會于澗、瀍，",
-      "after_context": "又東會于伊，東北入于河。",
+      "after_context": "又東會于伊，",
       "items": [
         {
           "source": "jijie",
@@ -1778,49 +3023,428 @@
       "sentence_id": null
     },
     {
-      "id": "n095",
+      "id": "n175",
+      "anchor_text": "又東會于伊，",
+      "before_context": "...東過漆、沮，入于河。道雒自熊耳，東北會于澗、瀍，又東會于伊，",
+      "after_context": "東北入于河。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「會於洛陽之南。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n176",
+      "anchor_text": "東北入于河。",
+      "before_context": "...入于河。道雒自熊耳，東北會于澗、瀍，又東會于伊，東北入于河。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「合於鞏之東也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n177",
+      "anchor_text": "於是九州攸同，四奧既居，",
+      "before_context": "於是九州攸同，四奧既居，",
+      "after_context": "九山栞旅，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「四方之宅已可居也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n178",
+      "anchor_text": "九山栞旅，",
+      "before_context": "於是九州攸同，四奧既居，九山栞旅，",
+      "after_context": "九川滌原，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「九州名山已槎木通道而旅祭也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n179",
+      "anchor_text": "九川滌原，",
+      "before_context": "於是九州攸同，四奧既居，九山栞旅，九川滌原，",
+      "after_context": "九澤既陂，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「九州之川已滌除無壅塞也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n180",
+      "anchor_text": "九澤既陂，",
+      "before_context": "於是九州攸同，四奧既居，九山栞旅，九川滌原，九澤既陂，",
+      "after_context": "四海會同。六府甚脩，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「九州之澤皆已陂障無決溢也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n181",
+      "anchor_text": "四海會同。六府甚脩，",
+      "before_context": "...四奧既居，九山栞旅，九川滌原，九澤既陂，四海會同。六府甚脩，",
+      "after_context": "眾土交正，致慎財賦，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「六府，金、木、水、火、土、穀。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n182",
+      "anchor_text": "眾土交正，致慎財賦，",
+      "before_context": "...九川滌原，九澤既陂，四海會同。六府甚脩，眾土交正，致慎財賦，",
+      "after_context": "咸則三壤成賦。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「眾土美惡及高下得其正矣。亦致其貢篚，慎奉其財物之稅，皆法定制而入之也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n183",
+      "anchor_text": "咸則三壤成賦。",
+      "before_context": "...既陂，四海會同。六府甚脩，眾土交正，致慎財賦，咸則三壤成賦。",
+      "after_context": "中國賜土姓：「祗台德先，不距朕行。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「三壤，上、中、下各三等也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n184",
+      "anchor_text": "中國賜土姓：「祗台德先，不距朕行。」",
+      "before_context": "...致慎財賦，咸則三壤成賦。中國賜土姓：「祗台德先，不距朕行。」",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「中即九州也。天子建其國，諸侯祚之土，賜之姓，命之氏，其敬悅天子之德既先，又不距違我天子政教所行。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n185",
+      "anchor_text": "令天子之國以外五百里甸服：",
+      "before_context": "令天子之國以外五百里甸服：",
+      "after_context": "百里賦納緫，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「爲天子（之）服治田，去王城面五百里內。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n186",
       "anchor_text": "百里賦納緫，",
       "before_context": "令天子之國以外五百里甸服：百里賦納緫，",
-      "after_context": "二百里納銍，三百里納秸服，四百里粟，五百里米。甸服外五百里侯...",
+      "after_context": "二百里納銍，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「甸內近王城者。禾槀曰緫，供飼國馬也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "說文云：「緫，聚束草也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n096",
+      "id": "n187",
       "anchor_text": "二百里納銍，",
       "before_context": "令天子之國以外五百里甸服：百里賦納緫，二百里納銍，",
-      "after_context": "三百里納秸服，四百里粟，五百里米。甸服外五百里侯服：百里采，",
+      "after_context": "三百里納秸服，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「所銍刈謂禾穗。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "說文云：「銍，穫禾短鎌也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n097",
+      "id": "n188",
       "anchor_text": "三百里納秸服，",
       "before_context": "...子之國以外五百里甸服：百里賦納緫，二百里納銍，三百里納秸服，",
-      "after_context": "四百里粟，五百里米。甸服外五百里侯服：百里采，二百里任國，三...",
+      "after_context": "四百里粟，五百里米。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「秸，槀也。服槀役。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "禮郊特牲云「蒲越槀秸之美」，則秸是槀之類也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n098",
+      "id": "n189",
+      "anchor_text": "四百里粟，五百里米。",
+      "before_context": "...：百里賦納緫，二百里納銍，三百里納秸服，四百里粟，五百里米。",
+      "after_context": "甸服外五百里侯服：",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「所納精者少，麤者多。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n190",
+      "anchor_text": "甸服外五百里侯服：",
+      "before_context": "...里納銍，三百里納秸服，四百里粟，五百里米。甸服外五百里侯服：",
+      "after_context": "百里采，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「侯，候也。斥候而服事也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n191",
+      "anchor_text": "百里采，",
+      "before_context": "...三百里納秸服，四百里粟，五百里米。甸服外五百里侯服：百里采，",
+      "after_context": "二百里任國，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「采，事也。各受王事者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n192",
+      "anchor_text": "二百里任國，",
+      "before_context": "...，四百里粟，五百里米。甸服外五百里侯服：百里采，二百里任國，",
+      "after_context": "三百里諸侯。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「任王事者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n193",
+      "anchor_text": "三百里諸侯。",
+      "before_context": "...五百里米。甸服外五百里侯服：百里采，二百里任國，三百里諸侯。",
+      "after_context": "侯服外五百里綏服：",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「三百里同爲王者斥候，故合三爲一名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n194",
+      "anchor_text": "侯服外五百里綏服：",
+      "before_context": "...百里侯服：百里采，二百里任國，三百里諸侯。侯服外五百里綏服：",
+      "after_context": "三百里揆文教，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「綏，安也。服王者政教。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n195",
+      "anchor_text": "三百里揆文教，",
+      "before_context": "...采，二百里任國，三百里諸侯。侯服外五百里綏服：三百里揆文教，",
+      "after_context": "二百里奮武衞。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「揆，度也。度王者文教而行之，三百里皆同。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n196",
+      "anchor_text": "二百里奮武衞。",
+      "before_context": "...，三百里諸侯。侯服外五百里綏服：三百里揆文教，二百里奮武衞。",
+      "after_context": "綏服外五百里要服：",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「文教之外二百里奮武衞，天子所以安。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n197",
+      "anchor_text": "綏服外五百里要服：",
+      "before_context": "...外五百里綏服：三百里揆文教，二百里奮武衞。綏服外五百里要服：",
+      "after_context": "三百里夷，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「要束以文教也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n198",
+      "anchor_text": "三百里夷，",
+      "before_context": "...服：三百里揆文教，二百里奮武衞。綏服外五百里要服：三百里夷，",
+      "after_context": "二百里蔡。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「守平常之教，事王者而已。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n199",
+      "anchor_text": "二百里蔡。",
+      "before_context": "...揆文教，二百里奮武衞。綏服外五百里要服：三百里夷，二百里蔡。",
+      "after_context": "要服外五百里荒服：",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「蔡，法。受王者刑法而已。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n200",
+      "anchor_text": "要服外五百里荒服：",
+      "before_context": "...衞。綏服外五百里要服：三百里夷，二百里蔡。要服外五百里荒服：",
+      "after_context": "三百里蠻，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「政教荒忽，因其故俗而治之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n201",
+      "anchor_text": "三百里蠻，",
+      "before_context": "...五百里要服：三百里夷，二百里蔡。要服外五百里荒服：三百里蠻，",
+      "after_context": "二百里流。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「蠻，慢也。禮簡怠慢，來不距，去不禁。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n202",
+      "anchor_text": "二百里流。",
+      "before_context": "...：三百里夷，二百里蔡。要服外五百里荒服：三百里蠻，二百里流。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「流行無城郭常居。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n203",
+      "anchor_text": "東漸于海，西被于流沙，朔、南暨：",
+      "before_context": "東漸于海，西被于流沙，朔、南暨：",
+      "after_context": "聲教訖于四海。於是帝錫禹玄圭，以告成功于天下。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「朔，北方也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n204",
       "anchor_text": "于四海。於是帝錫禹玄圭，以告成功于天下。",
       "before_context": "...沙，朔、南暨：聲教訖于四海。於是帝錫禹玄圭，以告成功于天下。",
       "after_context": "天下於是太平治。",
@@ -1834,10 +3458,10 @@
       "sentence_id": null
     },
     {
-      "id": "n099",
+      "id": "n205",
       "anchor_text": "作士以理民。",
       "before_context": "皋陶作士以理民。",
-      "after_context": "帝舜",
+      "after_context": "帝舜朝，禹、伯夷、皋陶相與語帝前。皋陶述其謀曰：「信其道德，...",
       "items": [
         {
           "source": "zhengyi",
@@ -1848,10 +3472,10 @@
       "sentence_id": null
     },
     {
-      "id": "n100",
+      "id": "n206",
       "anchor_text": "曰：「於！",
       "before_context": "...：「信其道德，謀明輔和。」禹曰：「然，如何？」皋陶曰：「於！",
-      "after_context": "慎其身脩，思長，敦序九族，眾明高翼，近可遠在已。」禹拜美言，...",
+      "after_context": "慎其身脩，",
       "items": [
         {
           "source": "zhengyi",
@@ -1862,10 +3486,10 @@
       "sentence_id": null
     },
     {
-      "id": "n101",
+      "id": "n207",
       "anchor_text": "慎其身脩，",
       "before_context": "...德，謀明輔和。」禹曰：「然，如何？」皋陶曰：「於！慎其身脩，",
-      "after_context": "思長，敦序九族，眾明高翼，近可遠在已。」禹拜美言，曰：「然。...",
+      "after_context": "思長，",
       "items": [
         {
           "source": "zhengyi",
@@ -1876,7 +3500,217 @@
       "sentence_id": null
     },
     {
-      "id": "n102",
+      "id": "n208",
+      "anchor_text": "思長，",
+      "before_context": "...明輔和。」禹曰：「然，如何？」皋陶曰：「於！慎其身脩，思長，",
+      "after_context": "敦序九族，眾明高翼，近可遠在已。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「慎脩其身，思爲長久之道。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n209",
+      "anchor_text": "敦序九族，眾明高翼，近可遠在已。」",
+      "before_context": "...曰：「於！慎其身脩，思長，敦序九族，眾明高翼，近可遠在已。」",
+      "after_context": "禹拜美言，曰：「然。」皋陶曰：「於！在知人，在安民。」禹曰：...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「次序九族而親之，以眾賢明作羽翼之臣，此政由近可以及遠也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n210",
+      "anchor_text": "安民。」禹曰：「吁！皆若是，惟帝其難之。",
+      "before_context": "...曰：「於！在知人，在安民。」禹曰：「吁！皆若是，惟帝其難之。",
+      "after_context": "知人則智，能官人；能安民則惠，黎民懷之。能知能惠，何憂乎驩兜...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「言帝堯亦以爲難。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n211",
+      "anchor_text": "驩兜，何遷乎有苗，何畏乎巧言善色佞人？」",
+      "before_context": "...之。能知能惠，何憂乎驩兜，何遷乎有苗，何畏乎巧言善色佞人？」",
+      "after_context": "皋陶曰：「然，於！亦行有九德，亦言其有德。」乃言曰：「始事事...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「禹爲父隱，故言不及鯀。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n212",
+      "anchor_text": "有九德，亦言其有德。」乃言曰：「始事事，",
+      "before_context": "...陶曰：「然，於！亦行有九德，亦言其有德。」乃言曰：「始事事，",
+      "after_context": "寬而栗，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「言其人有德，必言其所行事，因事以爲驗。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n213",
+      "anchor_text": "寬而栗，",
+      "before_context": "...然，於！亦行有九德，亦言其有德。」乃言曰：「始事事，寬而栗，",
+      "after_context": "柔而立，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「性寬弘而能莊栗。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n214",
+      "anchor_text": "柔而立，",
+      "before_context": "...亦行有九德，亦言其有德。」乃言曰：「始事事，寬而栗，柔而立，",
+      "after_context": "愿而共，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「和柔而能立事。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n215",
+      "anchor_text": "愿而共，",
+      "before_context": "...德，亦言其有德。」乃言曰：「始事事，寬而栗，柔而立，愿而共，",
+      "after_context": "治而敬，擾而毅，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「慤愿而恭敬。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n216",
+      "anchor_text": "治而敬，擾而毅，",
+      "before_context": "...」乃言曰：「始事事，寬而栗，柔而立，愿而共，治而敬，擾而毅，",
+      "after_context": "直而溫，簡而廉，剛而實，彊而義，章其有常，吉哉。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「擾，一作『柔』。」駰案：孔安國曰「擾，順也。致果爲毅」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n217",
+      "anchor_text": "簡而廉，剛而實，彊而義，章其有常，吉哉。",
+      "before_context": "...敬，擾而毅，直而溫，簡而廉，剛而實，彊而義，章其有常，吉哉。",
+      "after_context": "日宣三德，蚤夜翊明有家。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「章，明也。吉，善也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n218",
+      "anchor_text": "日宣三德，蚤夜翊明有家。",
+      "before_context": "...廉，剛而實，彊而義，章其有常，吉哉。日宣三德，蚤夜翊明有家。",
+      "after_context": "日嚴振敬六德，亮采有國。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「三德，九德之中有其三也。卿大夫稱家，明行之可以爲卿大夫。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n219",
+      "anchor_text": "日嚴振敬六德，亮采有國。",
+      "before_context": "...有常，吉哉。日宣三德，蚤夜翊明有家。日嚴振敬六德，亮采有國。",
+      "after_context": "翕受普施，九德咸事，俊乂在官，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「嚴，敬也。行六德以信治政事，可爲諸侯也。」馬融曰：「亮，信；采，事也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n220",
+      "anchor_text": "翕受普施，九德咸事，俊乂在官，",
+      "before_context": "...有家。日嚴振敬六德，亮采有國。翕受普施，九德咸事，俊乂在官，",
+      "after_context": "百吏肅謹。毋教邪淫奇謀。非其人居其官，是謂亂天事。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「翕，合也。能合受三六之德而用之，以布施政教，使九德之人皆用事。謂天子（也）如此，則俊德理能之士並皆在官也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n221",
+      "anchor_text": "毋教邪淫奇謀。非其人居其官，是謂亂天事。",
+      "before_context": "...俊乂在官，百吏肅謹。毋教邪淫奇謀。非其人居其官，是謂亂天事。",
+      "after_context": "天討有辠，五刑五用哉。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "此取《尚書》皋陶謨爲文，斷絕殊無次序，即班固所謂「疎略抵捂」是也，今亦不能深考。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n222",
+      "anchor_text": "天討有辠，五刑五用哉。",
+      "before_context": "...教邪淫奇謀。非其人居其官，是謂亂天事。天討有辠，五刑五用哉。",
+      "after_context": "吾言厎可行乎？」禹曰：「女言致可績行。」皋陶曰：「余未有知，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「言用五刑必當。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n223",
       "anchor_text": "曰：「余未有知，思贊道哉。」",
       "before_context": "...？」禹曰：「女言致可績行。」皋陶曰：「余未有知，思贊道哉。」",
       "after_context": "",
@@ -1890,10 +3724,10 @@
       "sentence_id": null
     },
     {
-      "id": "n103",
+      "id": "n224",
       "anchor_text": "水行乘舟，泥行乘橇，山行乘檋，行山栞木。",
       "before_context": "...服於水。予陸行乘車，水行乘舟，泥行乘橇，山行乘檋，行山栞木。",
-      "after_context": "與益予眾庶稻鮮食。以決九川致四海，浚畎澮致之川。與稷予眾庶難...",
+      "after_context": "與益予眾庶稻鮮食。",
       "items": [
         {
           "source": "zhengyi",
@@ -1904,35 +3738,115 @@
       "sentence_id": null
     },
     {
-      "id": "n104",
+      "id": "n225",
       "anchor_text": "與益予眾庶稻鮮食。",
       "before_context": "...，水行乘舟，泥行乘橇，山行乘檋，行山栞木。與益予眾庶稻鮮食。",
-      "after_context": "以決九川致四海，浚畎澮致之川。與稷予眾庶難得之食。食少，調有...",
+      "after_context": "以決九川致四海，浚畎澮",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "孔安國曰：「鳥獸新殺曰鮮。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "予音與。上「與」謂「同與」之「與」，下「予」謂「施予」之「予」。此禹言其與益施予眾庶之稻糧。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n105",
+      "id": "n226",
+      "anchor_text": "以決九川致四海，浚畎澮",
+      "before_context": "...山行乘檋，行山栞木。與益予眾庶稻鮮食。以決九川致四海，浚畎澮",
+      "after_context": "致之川。與稷予眾庶難得之食。食少，調有餘補不足，徙居。眾民乃...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「畎澮，田閒溝也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n227",
+      "anchor_text": "禹曰：「於，帝！慎乃在位，安爾止。",
+      "before_context": "禹曰：「於，帝！慎乃在位，安爾止。",
+      "after_context": "輔德，天下大應。清意以昭待上帝命，天其重命用休。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「安汝之所止，無妄動，動則擾民。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n228",
+      "anchor_text": "大應。清意以昭待上帝命，天其重命用休。」",
+      "before_context": "...，安爾止。輔德，天下大應。清意以昭待上帝命，天其重命用休。」",
+      "after_context": "帝曰：「吁，臣哉，臣哉！臣作朕股肱耳目。予欲左右有民，女輔之...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「天將重命汝以美應，謂符瑞也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n229",
+      "anchor_text": "！臣作朕股肱耳目。予欲左右有民，女輔之。",
+      "before_context": "...曰：「吁，臣哉，臣哉！臣作朕股肱耳目。予欲左右有民，女輔之。",
+      "after_context": "余欲觀古人之象。日月星辰，作文繡服色，女明之。予欲聞六律五聲...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "馬融曰：「我欲左右助民，汝當翼成我也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n230",
       "anchor_text": "六律五聲八音，來始滑，以出入五言，女聽。",
       "before_context": "...服色，女明之。予欲聞六律五聲八音，來始滑，以出入五言，女聽。",
-      "after_context": "予即辟，女匡拂予。女無面諛。退而謗予。敬四輔臣。諸眾讒嬖臣，...",
+      "after_context": "予即辟，女匡拂予。女無面諛。退而謗予。敬四輔臣。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《尚書》「滑」字作「曶」，音忽。鄭玄曰：「曶者。臣見君所秉。書思對命者也。君亦有焉，以出內政教於五官。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《古文尚書》作「在治忽」，今文作「采政忽」，先儒各隨字解之。今此云「來始滑」，於義無所通。蓋來采字相近，滑忽聲相亂，始又與治相似，因誤爲「來始滑」，今依今文音「采政忽」三字。劉伯莊云「聽諸侯能爲政及怠忽者」，是也。五言謂仁、義、禮、智、信五德之言，鄭玄以爲「出納政教五官」，非也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n106",
+      "id": "n231",
+      "anchor_text": "女匡拂予。女無面諛。退而謗予。敬四輔臣。",
+      "before_context": "...五言，女聽。予即辟，女匡拂予。女無面諛。退而謗予。敬四輔臣。",
+      "after_context": "諸眾讒嬖臣，君",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《尚書大傳》曰：「古者天子必有四鄰，前曰疑，後曰丞，左曰輔，右曰弼。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n232",
       "anchor_text": "諸眾讒嬖臣，君",
       "before_context": "...即辟，女匡拂予。女無面諛。退而謗予。敬四輔臣。諸眾讒嬖臣，君",
       "after_context": "德誠施皆清矣。」禹曰：「然。帝即不時，布同善惡則毋功。」",
@@ -1941,15 +3855,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一作『吾』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "「諸眾讒嬖臣」爲一句，「君」字宜屬下文。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n107",
+      "id": "n233",
+      "anchor_text": "禹曰：「然。帝即不時，布同善惡則毋功。」",
+      "before_context": "...，君德誠施皆清矣。」禹曰：「然。帝即不時，布同善惡則毋功。」",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「帝用臣不是，則賢愚並位，優劣共流故也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n234",
       "anchor_text": "帝曰：",
       "before_context": "帝曰：",
-      "after_context": "「毋若丹朱",
+      "after_context": "「毋若丹朱傲，維慢游是好，毋水行舟，朋淫于家，",
       "items": [
         {
           "source": "zhengyi",
@@ -1960,10 +3893,24 @@
       "sentence_id": null
     },
     {
-      "id": "n108",
+      "id": "n235",
+      "anchor_text": "傲，維慢游是好，毋水行舟，朋淫于家，",
+      "before_context": "帝曰：「毋若丹朱傲，維慢游是好，毋水行舟，朋淫于家，",
+      "after_context": "用絕其世。予不能順是。」禹曰：「予（辛壬）娶塗山，〔辛壬〕癸...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「朋淫，淫門內。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n236",
       "anchor_text": "癸甲，生啟予不子，",
       "before_context": "...順是。」禹曰：「予（辛壬）娶塗山，〔辛壬〕癸甲，生啟予不子，",
-      "after_context": "以故能成水土功。輔成五服，至于五千里，州十二師，外薄四海，咸...",
+      "after_context": "以故能成水土功。輔成五服，至于五千里，州十二師，外薄四海，",
       "items": [
         {
           "source": "jijie",
@@ -1984,10 +3931,10 @@
       "sentence_id": null
     },
     {
-      "id": "n109",
+      "id": "n237",
       "anchor_text": "成五服，至于五千里，州十二師，外薄四海，",
       "before_context": "...，以故能成水土功。輔成五服，至于五千里，州十二師，外薄四海，",
-      "after_context": "咸建五長，各道有功。苗頑不即功，帝其念哉。」帝曰：「道吾德，...",
+      "after_context": "咸建五長，",
       "items": [
         {
           "source": "jijie",
@@ -2003,10 +3950,52 @@
       "sentence_id": null
     },
     {
-      "id": "n110",
+      "id": "n238",
+      "anchor_text": "咸建五長，",
+      "before_context": "...水土功。輔成五服，至于五千里，州十二師，外薄四海，咸建五長，",
+      "after_context": "各道有功。苗頑不即功，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「諸侯五國，立賢者一人爲方伯，謂之五長，以相統治。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n239",
+      "anchor_text": "各道有功。苗頑不即功，",
+      "before_context": "...五千里，州十二師，外薄四海，咸建五長，各道有功。苗頑不即功，",
+      "after_context": "帝其念哉。」帝曰：「道吾德，乃女功序之也。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「三苗頑凶，不得就官，善惡分別。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n240",
+      "anchor_text": "是敬禹之德，令民皆則禹。不如言，刑從之。",
+      "before_context": "皋陶於是敬禹之德，令民皆則禹。不如言，刑從之。",
+      "after_context": "舜德大明。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂不用命之人，則亦以刑罰而從之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n241",
       "anchor_text": "於是夔行樂，",
       "before_context": "於是夔行樂，",
-      "after_context": "祖考至，羣后相讓，鳥獸翔舞，簫韶九成，鳳皇來儀，百獸率舞，百...",
+      "after_context": "祖考至，羣后相讓，鳥獸翔舞，簫韶九成，鳳皇來儀，",
       "items": [
         {
           "source": "zhengyi",
@@ -2017,10 +4006,164 @@
       "sentence_id": null
     },
     {
-      "id": "n111",
+      "id": "n242",
+      "anchor_text": "羣后相讓，鳥獸翔舞，簫韶九成，鳳皇來儀，",
+      "before_context": "於是夔行樂，祖考至，羣后相讓，鳥獸翔舞，簫韶九成，鳳皇來儀，",
+      "after_context": "百獸率舞，百官信諧。帝用此作歌曰：「陟天之命，維時維幾。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「簫韶，舜樂名。備樂九奏而致鳳皇也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n243",
+      "anchor_text": "。帝用此作歌曰：「陟天之命，維時維幾。」",
+      "before_context": "...，百獸率舞，百官信諧。帝用此作歌曰：「陟天之命，維時維幾。」",
+      "after_context": "乃歌曰：「股肱喜哉，元首起哉，百工熙哉！」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「奉正天命以臨民，惟在順時，惟在慎微。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n244",
+      "anchor_text": "歌曰：「股肱喜哉，元首起哉，百工熙哉！」",
+      "before_context": "...之命，維時維幾。」乃歌曰：「股肱喜哉，元首起哉，百工熙哉！」",
+      "after_context": "皋陶拜手稽首揚言曰：「念哉，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「股肱之臣喜樂盡忠，君之治功乃起，百官之業乃廣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n245",
+      "anchor_text": "拜手稽首揚言曰：「念哉，",
+      "before_context": "...股肱喜哉，元首起哉，百工熙哉！」皋陶拜手稽首揚言曰：「念哉，",
+      "after_context": "率爲興事，慎乃憲，敬哉！」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「使羣臣念帝之戒。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n246",
+      "anchor_text": "率爲興事，慎乃憲，敬哉！」",
+      "before_context": "...哉！」皋陶拜手稽首揚言曰：「念哉，率爲興事，慎乃憲，敬哉！」",
+      "after_context": "乃更爲歌曰：「元首明哉，股肱良哉，庶事康哉！」（舜）又歌曰：...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「率臣下爲起治之事，當慎汝法度，敬其職。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n247",
+      "anchor_text": "曰：「元首叢脞哉，股肱惰哉，萬事墮哉！」",
+      "before_context": "...事康哉！」（舜）又歌曰：「元首叢脞哉，股肱惰哉，萬事墮哉！」",
+      "after_context": "帝拜曰：「然，往欽哉！」於是天下皆宗禹之明度數聲樂，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「叢脞，細碎無大略也。君如此，則臣懈惰，萬事墮廢也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n248",
+      "anchor_text": "，往欽哉！」於是天下皆宗禹之明度數聲樂，",
+      "before_context": "...墮哉！」帝拜曰：「然，往欽哉！」於是天下皆宗禹之明度數聲樂，",
+      "after_context": "爲山川神主。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「舜本紀云禹乃興九韶之樂。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n249",
+      "anchor_text": "薦禹於天，爲嗣。十七年",
+      "before_context": "帝舜薦禹於天，爲嗣。十七年",
+      "after_context": "而帝舜崩。三年喪畢，禹辭辟舜之子商均於陽城。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "劉熙曰：「若此，則舜格于文祖，三年之後，攝禹使得祭祀與？」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n250",
+      "anchor_text": "之子商均於陽城。",
+      "before_context": "...天，爲嗣。十七年而帝舜崩。三年喪畢，禹辭辟舜之子商均於陽城。",
+      "after_context": "天下諸侯皆去商均而朝禹。禹於是遂即天子位，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "劉熙曰：「今潁川陽城是也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n251",
+      "anchor_text": "下諸侯皆去商均而朝禹。禹於是遂即天子位，",
+      "before_context": "...舜之子商均於陽城。天下諸侯皆去商均而朝禹。禹於是遂即天子位，",
+      "after_context": "南面朝天下，國號曰夏后，姓姒氏。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "皇甫謐曰：「都平陽，或在安邑，或在晉陽。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n252",
+      "anchor_text": "南面朝天下，國號曰夏后，姓姒氏。",
+      "before_context": "...均而朝禹。禹於是遂即天子位，南面朝天下，國號曰夏后，姓姒氏。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "禮緯曰：「祖以吞薏苡生。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n253",
       "anchor_text": "卒。",
       "before_context": "帝禹立而舉皋陶薦之，且授政焉，而皋陶卒。",
-      "after_context": "封皋陶",
+      "after_context": "封皋陶之後於英、六，",
       "items": [
         {
           "source": "zhengyi",
@@ -2031,10 +4174,10 @@
       "sentence_id": null
     },
     {
-      "id": "n112",
+      "id": "n254",
       "anchor_text": "之後於英、六，",
       "before_context": "帝禹立而舉皋陶薦之，且授政焉，而皋陶卒。封皋陶之後於英、六，",
-      "after_context": "或在許。而后舉益，任之政。",
+      "after_context": "或在許。",
       "items": [
         {
           "source": "jijie",
@@ -2055,7 +4198,7 @@
       "sentence_id": null
     },
     {
-      "id": "n113",
+      "id": "n255",
       "anchor_text": "或在許。",
       "before_context": "...舉皋陶薦之，且授政焉，而皋陶卒。封皋陶之後於英、六，或在許。",
       "after_context": "而后舉益，任之政。",
@@ -2079,7 +4222,21 @@
       "sentence_id": null
     },
     {
-      "id": "n114",
+      "id": "n256",
+      "anchor_text": "十年，帝禹東巡狩，至于會稽而崩。",
+      "before_context": "十年，帝禹東巡狩，至于會稽而崩。",
+      "after_context": "以天下授益。三年之喪畢，益讓帝禹之子啟，而辟居箕山之陽。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "皇甫謐曰：「年百歲也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n257",
       "anchor_text": "之喪畢，益讓帝禹之子啟，而辟居箕山之陽。",
       "before_context": "...崩。以天下授益。三年之喪畢，益讓帝禹之子啟，而辟居箕山之陽。",
       "after_context": "禹子啟賢，天下屬意焉。及禹崩，雖授益，益之佐禹日淺，天下未洽...",
@@ -2098,10 +4255,10 @@
       "sentence_id": null
     },
     {
-      "id": "n115",
+      "id": "n258",
       "anchor_text": "有扈氏不服，",
       "before_context": "有扈氏不服，",
-      "after_context": "啟伐之，大戰於甘。將戰，作甘誓，乃召六卿申之。啟曰：「嗟！六...",
+      "after_context": "啟伐之，大戰於甘。",
       "items": [
         {
           "source": "jijie",
@@ -2122,24 +4279,253 @@
       "sentence_id": null
     },
     {
-      "id": "n116",
+      "id": "n259",
       "anchor_text": "啟伐之，大戰於甘。",
       "before_context": "有扈氏不服，啟伐之，大戰於甘。",
-      "after_context": "將戰，作甘誓，乃召六卿申之。啟曰：「嗟！六事之人，予誓告女：...",
+      "after_context": "將戰，作甘誓，乃召六卿申之。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "馬融曰：「甘，有扈氏南郊地名。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "夏啟所伐，鄠南有甘亭。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n117",
+      "id": "n260",
+      "anchor_text": "將戰，作甘誓，乃召六卿申之。",
+      "before_context": "有扈氏不服，啟伐之，大戰於甘。將戰，作甘誓，乃召六卿申之。",
+      "after_context": "啟曰：「嗟！六事之人，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「天子六軍，其將皆命卿也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n261",
+      "anchor_text": "啟曰：「嗟！六事之人，",
+      "before_context": "...大戰於甘。將戰，作甘誓，乃召六卿申之。啟曰：「嗟！六事之人，",
+      "after_context": "予誓告女：有扈氏威侮五行，怠棄三正，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「各有軍事，故曰六事。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n262",
+      "anchor_text": "予誓告女：有扈氏威侮五行，怠棄三正，",
+      "before_context": "...。啟曰：「嗟！六事之人，予誓告女：有扈氏威侮五行，怠棄三正，",
+      "after_context": "天用勦絕其命。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「五行，四時盛德所行之政也。威侮，暴逆之。三正，天、地、人之正道。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n263",
+      "anchor_text": "天用勦絕其命。",
+      "before_context": "...六事之人，予誓告女：有扈氏威侮五行，怠棄三正，天用勦絕其命。",
+      "after_context": "今予維共行天之罰。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「勦，截也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n264",
+      "anchor_text": "今予維共行天之罰。",
+      "before_context": "...：有扈氏威侮五行，怠棄三正，天用勦絕其命。今予維共行天之罰。",
+      "after_context": "左不攻于左，右不攻于右，女不共命。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「共，奉也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n265",
+      "anchor_text": "左不攻于左，右不攻于右，女不共命。",
+      "before_context": "...絕其命。今予維共行天之罰。左不攻于左，右不攻于右，女不共命。",
+      "after_context": "御非其馬之政，女不共命。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「左，車左。右，車右。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n266",
+      "anchor_text": "御非其馬之政，女不共命。",
+      "before_context": "...。左不攻于左，右不攻于右，女不共命。御非其馬之政，女不共命。",
+      "after_context": "用命，賞于祖；",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「御以正馬爲政也。三者有失，皆不奉我命也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n267",
+      "anchor_text": "用命，賞于祖；",
+      "before_context": "...右不攻于右，女不共命。御非其馬之政，女不共命。用命，賞于祖；",
+      "after_context": "不用命，僇于社，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「天子親征，必載遷廟之祖主行。有功即賞祖主前，示不專也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n268",
+      "anchor_text": "不用命，僇于社，",
+      "before_context": "...共命。御非其馬之政，女不共命。用命，賞于祖；不用命，僇于社，",
+      "after_context": "予則帑僇女。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「又載社主，謂之社事。奔北，則僇之社主前。社主陰，陰主殺也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n269",
+      "anchor_text": "予則帑僇女。」",
+      "before_context": "...之政，女不共命。用命，賞于祖；不用命，僇于社，予則帑僇女。」",
+      "after_context": "遂滅有扈氏。天下咸朝。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「非但止身，辱及女子，言恥累之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n270",
+      "anchor_text": "夏后帝啟崩，",
+      "before_context": "夏后帝啟崩，",
+      "after_context": "子帝太康立。帝太康失國，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「皇甫謐曰夏啟元年甲辰，十年癸丑崩。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n271",
+      "anchor_text": "子帝太康立。帝太康失國，",
+      "before_context": "夏后帝啟崩，子帝太康立。帝太康失國，",
+      "after_context": "昆弟五人，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「盤于遊田，不恤民事，爲羿所逐，不得反國。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n272",
+      "anchor_text": "昆弟五人，",
+      "before_context": "夏后帝啟崩，子帝太康立。帝太康失國，昆弟五人，",
+      "after_context": "須于洛汭，作五子之歌。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "皇甫謐云號五觀也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n273",
+      "anchor_text": "須于洛汭，作五子之歌。",
+      "before_context": "...崩，子帝太康立。帝太康失國，昆弟五人，須于洛汭，作五子之歌。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「太康五弟與其母待太康于洛水之北，怨其不反，故作歌。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n274",
+      "anchor_text": "帝中康。帝中康時，羲、和湎淫，廢時亂日。",
+      "before_context": "...康崩，弟中康立，是爲帝中康。帝中康時，羲、和湎淫，廢時亂日。",
+      "after_context": "胤往征之，作胤征。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「羲氏，和氏，掌天地四時之官。太康之後，沈湎于酒，廢天時，亂甲乙也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n275",
+      "anchor_text": "胤往征之，作胤征。",
+      "before_context": "...爲帝中康。帝中康時，羲、和湎淫，廢時亂日。胤往征之，作胤征。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「胤國之君受王命往征之。」鄭玄曰：「胤，臣名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n276",
       "anchor_text": "中康崩，子帝相立。帝相崩，子帝少康立。",
       "before_context": "中康崩，子帝相立。帝相崩，子帝少康立。",
-      "after_context": "帝少康崩，子帝予立。帝予崩，子帝槐立。帝槐崩，子帝芒立。帝芒...",
+      "after_context": "帝少康崩，子帝予",
       "items": [
         {
           "source": "suoyin",
@@ -2155,10 +4541,80 @@
       "sentence_id": null
     },
     {
-      "id": "n118",
+      "id": "n277",
+      "anchor_text": "帝少康崩，子帝予",
+      "before_context": "中康崩，子帝相立。帝相崩，子帝少康立。帝少康崩，子帝予",
+      "after_context": "立。帝予崩，子帝槐",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音佇。《系本》云季佇作甲者也。《左傳》曰杼滅豷于戈。《國語》云杼能帥禹者也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n278",
+      "anchor_text": "立。帝予崩，子帝槐",
+      "before_context": "...相立。帝相崩，子帝少康立。帝少康崩，子帝予立。帝予崩，子帝槐",
+      "after_context": "立。帝槐崩，子帝芒",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音回。《系本》作「帝芬」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n279",
+      "anchor_text": "立。帝槐崩，子帝芒",
+      "before_context": "...少康立。帝少康崩，子帝予立。帝予崩，子帝槐立。帝槐崩，子帝芒",
+      "after_context": "立。帝芒崩，子帝泄立。帝泄崩，子帝不降",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音亡。鄒誕生又音荒也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n280",
+      "anchor_text": "立。帝芒崩，子帝泄立。帝泄崩，子帝不降",
+      "before_context": "...帝槐立。帝槐崩，子帝芒立。帝芒崩，子帝泄立。帝泄崩，子帝不降",
+      "after_context": "立。帝不降崩，弟帝扃立。帝扃崩，子帝厪",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《系本》作「帝降」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n281",
+      "anchor_text": "立。帝不降崩，弟帝扃立。帝扃崩，子帝厪",
+      "before_context": "...泄立。帝泄崩，子帝不降立。帝不降崩，弟帝扃立。帝扃崩，子帝厪",
+      "after_context": "立。帝厪崩，立帝不降之子孔甲，是爲帝孔甲。帝孔甲立，好方鬼神...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音覲。鄒誕生又音勤。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n282",
       "anchor_text": "諸侯畔之。天降龍二，有雌雄，孔甲不能食，",
       "before_context": "...事淫亂。夏后氏德衰，諸侯畔之。天降龍二，有雌雄，孔甲不能食，",
-      "after_context": "未得豢龍氏。陶唐既衰，其后有劉累",
+      "after_context": "未得豢龍氏。",
       "items": [
         {
           "source": "zhengyi",
@@ -2169,10 +4625,24 @@
       "sentence_id": null
     },
     {
-      "id": "n119",
+      "id": "n283",
+      "anchor_text": "未得豢龍氏。",
+      "before_context": "...氏德衰，諸侯畔之。天降龍二，有雌雄，孔甲不能食，未得豢龍氏。",
+      "after_context": "陶唐既衰，其后有劉累，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "賈逵曰：「豢，養也。穀食曰豢。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n284",
       "anchor_text": "，",
       "before_context": "...龍二，有雌雄，孔甲不能食，未得豢龍氏。陶唐既衰，其后有劉累，",
-      "after_context": "學擾龍于豢龍氏，以事孔甲。孔甲賜之姓曰御龍氏，受豕韋之後。龍...",
+      "after_context": "學擾龍",
       "items": [
         {
           "source": "jijie",
@@ -2188,21 +4658,138 @@
       "sentence_id": null
     },
     {
-      "id": "n120",
+      "id": "n285",
+      "anchor_text": "學擾龍",
+      "before_context": "...有雌雄，孔甲不能食，未得豢龍氏。陶唐既衰，其后有劉累，學擾龍",
+      "after_context": "于豢龍氏，以事孔甲。孔甲賜之姓曰御龍氏，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「擾音柔。擾，馴也。能順養得其嗜慾。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n286",
+      "anchor_text": "于豢龍氏，以事孔甲。孔甲賜之姓曰御龍氏，",
+      "before_context": "...，其后有劉累，學擾龍于豢龍氏，以事孔甲。孔甲賜之姓曰御龍氏，",
+      "after_context": "受豕韋之後。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「御亦養。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n287",
       "anchor_text": "受豕韋之後。",
-      "before_context": "，學擾龍于豢龍氏，以事孔甲。孔甲賜之姓曰御龍氏，受豕韋之後。",
+      "before_context": "...，學擾龍于豢龍氏，以事孔甲。孔甲賜之姓曰御龍氏，受豕韋之後。",
       "after_context": "龍一雌死，以食夏后。夏后使求，懼而遷去。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「受，一作『更』。」駰案：賈逵曰「劉累之後至商不絕，以代豕韋之後。祝融之後封於豕韋，殷武丁滅之，以劉累之後代之」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《系本》豕韋，防姓。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n121",
+      "id": "n288",
+      "anchor_text": "龍一雌死，以食夏后。夏后使求，懼而遷去。",
+      "before_context": "...御龍氏，受豕韋之後。龍一雌死，以食夏后。夏后使求，懼而遷去。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "賈逵曰：「夏后既饗，而又使求致龍，劉累不能得而懼也。」傳曰遷於魯縣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n289",
+      "anchor_text": "孔甲崩，子帝皋立。帝皋崩，",
+      "before_context": "孔甲崩，子帝皋立。帝皋崩，",
+      "after_context": "子帝發立。帝發崩，子帝履癸立，是爲桀。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《左傳》曰皋墓在殽南陵。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n290",
+      "anchor_text": "子帝發立。帝發崩，子帝履癸立，是爲桀。",
+      "before_context": "...崩，子帝皋立。帝皋崩，子帝發立。帝發崩，子帝履癸立，是爲桀。",
+      "after_context": "帝桀之時，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "桀，名也。按：《系本》帝皋生發及桀。此以發生桀，皇甫謐同也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n291",
+      "anchor_text": "帝桀之時，",
+      "before_context": "...立。帝皋崩，子帝發立。帝發崩，子帝履癸立，是爲桀。帝桀之時，",
+      "after_context": "自孔甲以來而諸侯多畔夏，桀不務德而武傷百姓，百姓弗堪。迺召湯...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《謚法》：「賊人多殺曰桀。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n292",
+      "anchor_text": "而武傷百姓，百姓弗堪。迺召湯而囚之夏臺，",
+      "before_context": "...諸侯多畔夏，桀不務德而武傷百姓，百姓弗堪。迺召湯而囚之夏臺，",
+      "after_context": "已而釋之。湯修德，諸侯皆歸湯，湯遂率兵以伐夏桀。桀走鳴條，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "獄名。夏曰均臺。皇甫謐云「地在陽翟」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n293",
+      "anchor_text": "諸侯皆歸湯，湯遂率兵以伐夏桀。桀走鳴條，",
+      "before_context": "...，已而釋之。湯修德，諸侯皆歸湯，湯遂率兵以伐夏桀。桀走鳴條，",
+      "after_context": "遂放而死。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「地在安邑之西。」鄭玄曰：「南夷，地名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n294",
       "anchor_text": "遂放而死。",
       "before_context": "...。湯修德，諸侯皆歸湯，湯遂率兵以伐夏桀。桀走鳴條，遂放而死。",
       "after_context": "桀謂人曰：「吾悔不遂殺湯於夏臺，使至此。」湯乃踐天子位，代夏...",
@@ -2226,7 +4813,7 @@
       "sentence_id": null
     },
     {
-      "id": "n122",
+      "id": "n295",
       "anchor_text": "」湯乃踐天子位，代夏朝天下。湯封夏之後，",
       "before_context": "...殺湯於夏臺，使至此。」湯乃踐天子位，代夏朝天下。湯封夏之後，",
       "after_context": "至周封於杞也。",
@@ -2240,7 +4827,7 @@
       "sentence_id": null
     },
     {
-      "id": "n123",
+      "id": "n296",
       "anchor_text": "至周封於杞也。",
       "before_context": "...至此。」湯乃踐天子位，代夏朝天下。湯封夏之後，至周封於杞也。",
       "after_context": "",
@@ -2254,7 +4841,35 @@
       "sentence_id": null
     },
     {
-      "id": "n124",
+      "id": "n297",
+      "anchor_text": "姓，故有夏后氏、有扈氏、有男氏、斟尋氏、",
+      "before_context": "...姓，其後分封，用國爲姓，故有夏后氏、有扈氏、有男氏、斟尋氏、",
+      "after_context": "彤城氏、襃氏、費氏、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『斟氏、尋氏』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n298",
+      "anchor_text": "彤城氏、襃氏、費氏、",
+      "before_context": "...姓，故有夏后氏、有扈氏、有男氏、斟尋氏、彤城氏、襃氏、費氏、",
+      "after_context": "杞氏、繒氏、辛氏、冥氏、斟（氏）戈氏。孔子正夏時，學者多傳夏...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《系本》男作「南」，尋作「鄩」，費作「弗」，而不云彤城及襃。按：周有彤伯，蓋彤城氏之後。張敖地理記云：「濟南平壽縣，其地即古斟尋國。」又下云斟戈氏，按《左傳》、《系本》皆云斟灌氏。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n299",
       "anchor_text": "正夏時，學者多傳夏小正云。",
       "before_context": "...氏、辛氏、冥氏、斟（氏）戈氏。孔子正夏時，學者多傳夏小正云。",
       "after_context": "自虞、夏時，貢賦備矣。或言禹會諸侯江南，計功而崩，因葬焉，命...",
@@ -2263,12 +4878,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "禮運稱孔子曰：「我欲觀夏道，是故之杞，而不足徵也，吾得夏時焉。」鄭玄曰：「得夏四時之書，其存者有小正。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "小正，《大戴記》篇名。正征二音。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n125",
+      "id": "n300",
       "anchor_text": "而崩，因葬焉，命曰會稽。會稽者，會計也。",
       "before_context": "...言禹會諸侯江南，計功而崩，因葬焉，命曰會稽。會稽者，會計也。",
       "after_context": "",

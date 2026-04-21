@@ -3,6 +3,62 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "",
+      "before_context": "",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "景帝子十四人，一武帝，餘十三人爲王，《漢書》謂之「景十三王」。此名「五宗」者，十三人爲王，其母五人，同母者爲宗也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
+      "anchor_text": "人，同母者爲宗親。栗姬子曰榮、德、閼于。",
+      "before_context": "...凡十三人爲王，而母五人，同母者爲宗親。栗姬子曰榮、德、閼于。",
+      "after_context": "程姬子曰餘、非、端。賈夫人子曰彭祖、勝。唐姬子曰發。王夫人兒...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "閼音遏。《漢書》無「于」字。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
+      "anchor_text": "夫人子曰彭祖、勝。唐姬子曰發。王夫人兒姁",
+      "before_context": "...姬子曰餘、非、端。賈夫人子曰彭祖、勝。唐姬子曰發。王夫人兒姁",
+      "after_context": "子曰越、寄、乘、舜。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "況羽反。兒姁，夫人名也。王皇后之妹也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
+      "anchor_text": "河閒獻王德，",
+      "before_context": "河閒獻王德，",
+      "after_context": "以孝景帝前二年用皇子爲河閒王。好儒學，被服造次必於儒者。山東...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云「大行令奏：溢法曰聰明睿智曰獻」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "二十六年卒，",
       "before_context": "二十六年卒，",
       "after_context": "子共王不害立。四年卒，子剛王基代立。十二年卒，子頃王授代立。",
@@ -11,12 +67,45 @@
           "source": "jijie",
           "label": "集解",
           "text": "漢名臣奏：「杜業奏曰『河閒獻王經術通明，積德累行，天下雄俊眾儒皆歸之。孝武帝時，獻王朝，被服造次必於仁義。問以五策，獻王輒對無窮。孝武帝艴然難之，謂獻王曰：「湯以七十里，文王百里，王其勉之。」王知其意，歸即縱酒聽樂，因以終』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "注「問以五策」。按：《漢書》詔策問三十餘事。「被服造次」。按：小顏云「被服，言常居處其中也；造次，謂所向所行皆法於儒者」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n006",
+      "anchor_text": "，子剛王基代立。十二年卒，子頃王授代立。",
+      "before_context": "...子共王不害立。四年卒，子剛王基代立。十二年卒，子頃王授代立。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云授謚頃，音傾也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
+      "anchor_text": "四年，坐侵廟壖垣",
+      "before_context": "四年，坐侵廟壖垣",
+      "after_context": "爲宮，上徵榮。榮行，祖於江陵北門。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "服虔云「宮外之餘地」。顧野王云「牆外行馬內田」。音人椽反，又音軟，又音奴亂反。壖垣，牆外之短垣也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
       "anchor_text": "爲宮，上徵榮。榮行，祖於江陵北門。",
       "before_context": "四年，坐侵廟壖垣爲宮，上徵榮。榮行，祖於江陵北門。",
       "after_context": "既已上車，軸折車廢。江陵父老流涕竊言曰：「吾王不反矣！」榮至...",
@@ -35,7 +124,7 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n009",
       "anchor_text": "榮最長，",
       "before_context": "榮最長，",
       "after_context": "死無後，國除，地入于漢，爲南郡。",
@@ -49,7 +138,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n010",
       "anchor_text": "六年卒，子光代爲王。初好音輿馬；晚節嗇，",
       "before_context": "二十六年卒，子光代爲王。初好音輿馬；晚節嗇，",
       "after_context": "惟恐不足於財。",
@@ -63,7 +152,21 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n011",
+      "anchor_text": "江都易王非，",
+      "before_context": "江都易王非，",
+      "after_context": "以孝景前二年用皇子爲汝南王。吳楚反時，非年十五，有材力，上書...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《謚法》「好更故舊曰易」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
       "anchor_text": "出。易王死未葬，建有所說易王寵美人淖姬，",
       "before_context": "...賜將軍印，載天子旗以出。易王死未葬，建有所說易王寵美人淖姬，",
       "after_context": "夜使人迎與姦服舍中。及淮南事發，治黨與頗及江都王建。建恐，因...",
@@ -87,7 +190,35 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n013",
+      "anchor_text": "信巫祝，使人禱祠妄言。建又盡與其姊弟姦。",
+      "before_context": "...金錢，事絕其獄。而又信巫祝，使人禱祠妄言。建又盡與其姊弟姦。",
+      "after_context": "事既聞，漢公卿請捕治建。天子不忍，使大臣即訊王。王服所犯，遂...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云建女弟徵臣爲蓋侯子婦，以易王喪來歸，建復與姦也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
+      "anchor_text": "膠西于王端，",
+      "before_context": "膠西于王端，",
+      "after_context": "以孝景前三年吳楚七國反破後，端用皇子爲膠西王。端爲人賊戾，又...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：廣周書《謚法》云「能優其德曰于」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
       "anchor_text": "，端用皇子爲膠西王。端爲人賊戾，又陰痿，",
       "before_context": "...前三年吳楚七國反破後，端用皇子爲膠西王。端爲人賊戾，又陰痿，",
       "after_context": "一近婦人，病之數月。而有愛幸少年爲郎。爲郎者頃之與後宮亂，端...",
@@ -101,7 +232,7 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n016",
       "anchor_text": "再請削其國，去太半。端心慍，遂爲無訾省。",
       "before_context": "...，而端所爲滋甚。有司再請削其國，去太半。端心慍，遂爲無訾省。",
       "after_context": "府庫壞漏盡，腐財物以巨萬計，終不得收徙。令吏毋得收租賦。端皆...",
@@ -120,35 +251,143 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n017",
+      "anchor_text": "，終不得收徙。令吏毋得收租賦。端皆去衞，",
+      "before_context": "...漏盡，腐財物以巨萬計，終不得收徙。令吏毋得收租賦。端皆去衞，",
+      "after_context": "封其宮門，從一門出游。數變名姓，爲布衣，之他郡國。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂不置宿衞人。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
+      "anchor_text": "其罪告之，無罪者詐藥殺之。所以設詐究變，",
+      "before_context": "...，奉漢法以治，端輒求其罪告之，無罪者詐藥殺之。所以設詐究變，",
+      "after_context": "彊足以距諫，智足以飾非。相、二千石從王治，則漢繩以法。故膠西...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "究者，窮也。故郭璞云「究謂窮盡也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
+      "anchor_text": "景帝崩。彭祖爲人巧佞卑諂，足恭而心刻深。",
+      "before_context": "...徙爲趙王。十五年，孝景帝崩。彭祖爲人巧佞卑諂，足恭而心刻深。",
+      "after_context": "好法律，持詭辯以中人。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂刻害深，無仁恩也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "好法律，持詭辯以中人。",
+      "before_context": "...帝崩。彭祖爲人巧佞卑諂，足恭而心刻深。好法律，持詭辯以中人。",
+      "after_context": "彭祖多內寵姬及子孫。相、二千石欲奉漢法以治，則害於王家。是以...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂詭誑之辯，以中傷於人。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "石至，彭祖衣皁布衣，自行迎，除二千石舍，",
+      "before_context": "...王家。是以每相、二千石至，彭祖衣皁布衣，自行迎，除二千石舍，",
+      "after_context": "多設疑事以作動之，得二千石失言，中忌諱，輒書之。二千石欲治者...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂彭祖自爲二千石埽除其舍，以迎之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
       "anchor_text": "莫敢治。而趙王擅權，使使即縣爲賈人榷會，",
       "before_context": "...，小者刑，以故二千石莫敢治。而趙王擅權，使使即縣爲賈人榷會，",
-      "after_context": "入多於國經租稅。以是趙王家多金錢，然所賜姬諸子，亦盡之矣。彭...",
+      "after_context": "入多於國經租稅。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韋昭曰：「平會兩家買賣之賈也。榷者，禁他家，獨王家得爲之。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "榷音角。獨音榷，謂酤榷也。會音儈，古外反。謂爲賈人專榷買賣之賈，儈以取利，若今之和市矣。韋昭則訓榷爲平，其注解爲得。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n023",
+      "anchor_text": "入多於國經租稅。",
+      "before_context": "...千石莫敢治。而趙王擅權，使使即縣爲賈人榷會，入多於國經租稅。",
+      "after_context": "以是趙王家多金錢，然所賜姬諸子，亦盡之矣。彭祖取故江都易王寵...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "經者，常也。謂王家入多於國家常納之租稅也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
       "anchor_text": "彭祖不好治宮室、禨祥，",
       "before_context": "彭祖不好治宮室、禨祥，",
-      "after_context": "好爲吏事。上書願督國中盜賊。常夜從走卒行徼邯鄲中。諸使過客以...",
+      "after_context": "好爲吏事。上書願督國中盜賊。常夜從走卒行徼",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「求福也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：埤蒼云「禨，祅祥也」。列子云「荊人鬼，越人禨」。謂楚信鬼神而越信禨祥也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n025",
+      "anchor_text": "爲吏事。上書願督國中盜賊。常夜從走卒行徼",
+      "before_context": "...不好治宮室、禨祥，好爲吏事。上書願督國中盜賊。常夜從走卒行徼",
+      "after_context": "邯鄲中。諸使過客以彭祖險陂，莫敢留邯鄲。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上下孟反，下工弔反。徼是郊外之路，謂巡徼而伺察境界。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
       "anchor_text": "子爲中山王。十四年，孝景帝崩。勝爲人樂酒",
       "before_context": "...勝，以孝景前三年用皇子爲中山王。十四年，孝景帝崩。勝爲人樂酒",
       "after_context": "好內，有子枝屬百二十餘人。常與兄趙王相非，曰：「兄爲王，專代...",
@@ -162,7 +401,91 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n027",
+      "anchor_text": "立四十二年卒，",
+      "before_context": "立四十二年卒，",
+      "after_context": "子哀王昌立。一年卒，子昆侈代爲中山王。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：《漢書》建元三年，濟川、中山王等來朝，聞樂而泣。天子問其故，王對以大臣內讒，肺腑日疏，其言甚雄壯，詞切而理文。天子加親親之好。可謂漢之英藩矣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
+      "anchor_text": "子哀王昌立。一年卒，子昆侈代爲中山王。",
+      "before_context": "立四十二年卒，子哀王昌立。一年卒，子昆侈代爲中山王。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》昆侈謚康王，子頃王輔嗣，至孫國除也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "姬侍者。景帝召程姬，程姬有所辟，不願進，",
+      "before_context": "...發，發之母唐姬，故程姬侍者。景帝召程姬，程姬有所辟，不願進，",
+      "after_context": "而飾侍者唐兒使夜進。上醉不知，以爲程姬而幸之，遂有身。已乃覺...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "姚氏按：釋名云「天子諸侯羣妾以次進御，有月事者止不御，更不口說，故以丹注面目旳旳爲識，令女史見之」。王察神女賦以爲「脫袿裳，免簪笄，施玄旳，結羽釵」。旳即釋名所云也。說文云「姅，女污也」。漢津云「見姅變，不得侍祠」。姅音半。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "王。以其母微，無寵，故王卑溼貧國。",
+      "before_context": "...。以孝景前二年用皇子爲長沙王。以其母微，無寵，故王卑溼貧國。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「景帝後二年，諸王來朝，有詔更前稱壽歌舞。定王但張袖小舉手。左右笑其拙，上怪問之，對曰：『臣國小地狹，不足迴旋。』帝以武陵、零陵、桂陽屬焉。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "年卒，子康王庸立。二十八年，卒，子鮒鮈立",
+      "before_context": "立二十七年卒，子康王庸立。二十八年，卒，子鮒鮈立",
+      "after_context": "爲長沙王。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「鮈音拘。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "十二年卒，子齊立爲王。",
+      "before_context": "十二年卒，子齊立爲王。",
+      "after_context": "齊有幸臣桑距。已而有罪，欲誅距，距亡，王因禽其宗族。距怨王，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》齊謚繆王。《謚法》「傷人蔽賢曰繆」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
       "anchor_text": "之後，王齊數上書告言漢公卿及幸臣所忠等。",
       "before_context": "...告王齊與同產姦。自是之後，王齊數上書告言漢公卿及幸臣所忠等。",
       "after_context": "",
@@ -181,24 +504,43 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n034",
       "anchor_text": "。淮南王謀反時，寄微聞其事，私作樓車鏃矢",
       "before_context": "...爲膠東王。二十八年卒。淮南王謀反時，寄微聞其事，私作樓車鏃矢",
-      "after_context": "戰守備，候淮南之起。及吏治淮南之事，辭出之。寄於上最親，意傷...",
+      "after_context": "戰守備，候淮南之起。及吏治淮南之事，辭出之。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「樓車，所以窺看敵國營壘之虛實也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《左傳》云「登樓車以窺宋人」，謂看敵國營壘之虛實也。李巡注《爾雅》「金鏃，以金爲箭鏑」。鏃，《字林》音子木反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n035",
+      "anchor_text": "備，候淮南之起。及吏治淮南之事，辭出之。",
+      "before_context": "...事，私作樓車鏃矢戰守備，候淮南之起。及吏治淮南之事，辭出之。",
+      "after_context": "寄於上最親，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「窮治其辭，出此事。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
       "anchor_text": "寄於上最親，",
       "before_context": "...鏃矢戰守備，候淮南之起。及吏治淮南之事，辭出之。寄於上最親，",
-      "after_context": "意傷之，發病而死，不敢置後，於是上（",
+      "after_context": "意傷之，發病而死，不敢置後，於是上（問）〔聞〕。寄有長子者名...",
       "items": [
         {
           "source": "jijie",
@@ -214,7 +556,21 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n037",
+      "anchor_text": "膠東王賢立十四年卒，謚爲哀王。子慶爲王。",
+      "before_context": "膠東王賢立十四年卒，謚爲哀王。子慶爲王。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「他本亦作『慶』字，惟一本作『建』。不宜得與叔父同名，相承之誤。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
       "anchor_text": "有所不愛姬生長男梲。",
       "before_context": "初，憲王舜有所不愛姬生長男梲。",
       "after_context": "梲以母無寵故，亦不得幸於王。王后脩生太子勃。王內多，所幸姬生...",
@@ -223,12 +579,59 @@
           "source": "jijie",
           "label": "集解",
           "text": "蘇林曰：「音奪。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鄒氏一音之悅反。蘇林音奪。許慎說解《字林》云「他活反，字從木也」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n039",
+      "anchor_text": "及憲王病甚，諸幸姬常侍病，故王后亦以妒媢",
+      "before_context": "...、子商，王后希得幸。及憲王病甚，諸幸姬常侍病，故王后亦以妒媢",
+      "after_context": "不常侍病，輒歸舍。醫進藥，太子勃不自嘗藥，又不宿留侍病。及王...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "媢音亡報反。鄒氏本作「媚」。郭璞注《三蒼》云「媢，丈夫妒也」。又云妒女爲媢。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "王病時，王后、太子不侍，及薨，六日出舍，",
+      "before_context": "...者視憲王喪，梲自言憲王病時，王后、太子不侍，及薨，六日出舍，",
+      "after_context": "太子勃私姦，飲酒，博戲，擊筑，與女子載馳，環城過市，入牢視囚...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「服舍也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
+      "anchor_text": "子載馳，環城過市，入牢視囚。天子遣大行騫",
+      "before_context": "...酒，博戲，擊筑，與女子載馳，環城過市，入牢視囚。天子遣大行騫",
+      "after_context": "驗王后及問王勃，請逮勃所與姦諸證左，王又匿之。吏求捕勃大急，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：謂是張騫。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
       "anchor_text": "戶，爲真定王；封子商三萬戶，爲泗水王。」",
       "before_context": "...焉。其封憲王子平三萬戶，爲真定王；封子商三萬戶，爲泗水王。」",
       "after_context": "",
@@ -237,6 +640,20 @@
           "source": "zhengyi",
           "label": "正義",
           "text": "泗水，海州。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
+      "anchor_text": "曰：高祖時諸侯皆賦，",
+      "before_context": "太史公曰：高祖時諸侯皆賦，",
+      "after_context": "得自除內史以下，漢獨爲置丞相，黃金印。諸侯自除御史、廷尉正、...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「國所出有皆入于王也。」"
         }
       ],
       "sentence_id": null

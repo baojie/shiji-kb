@@ -3,9 +3,23 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "帝者，秦庄襄王子也。",
+      "before_context": "秦始皇帝者，秦庄襄王子也。",
+      "after_context": "庄襄王为秦质子于赵，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "庄襄王者，孝文王之中子，昭襄王之孙也，名子楚。按：《战国策》本名子异，后为华阳夫人嗣，夫人楚人，因改名子楚也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "庄襄王为秦质子于赵，",
       "before_context": "秦始皇帝者，秦庄襄王子也。庄襄王为秦质子于赵，",
-      "after_context": "见吕不韦姬，悦而取之，生始皇。以秦昭王四十八年正月生于邯郸。...",
+      "after_context": "见吕不韦姬，悦而取之，",
       "items": [
         {
           "source": "zhengyi",
@@ -16,9 +30,23 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
+      "anchor_text": "见吕不韦姬，悦而取之，",
+      "before_context": "...者，秦庄襄王子也。庄襄王为秦质子于赵，见吕不韦姬，悦而取之，",
+      "after_context": "生始皇。以秦昭王四十八年正月生于邯郸。及生，名为政，姓赵氏。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：不韦传云不韦，阳翟大贾也。其姬邯郸豪家女，善歌舞，有娠而献于子楚。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
       "anchor_text": "八年正月生于邯郸。及生，名为政，姓赵氏。",
-      "before_context": "生始皇。以秦昭王四十八年正月生于邯郸。及生，名为政，姓赵氏。",
+      "before_context": "...生始皇。以秦昭王四十八年正月生于邯郸。及生，名为政，姓赵氏。",
       "after_context": "年十三岁，庄襄王死，政代立为秦王。当是之时，秦地已并巴、蜀、...",
       "items": [
         {
@@ -40,10 +68,24 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n005",
+      "anchor_text": "为舍人。",
+      "before_context": "...封十万户，号曰文信侯。招致宾客游士，欲以并天下。李斯为舍人。",
+      "after_context": "蒙骜、王𬺈、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文颖曰：「主厩内小吏官名。或曰待从宾客谓之舍人也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
       "anchor_text": "蒙骜、王𬺈、",
       "before_context": "...曰文信侯。招致宾客游士，欲以并天下。李斯为舍人。蒙骜、王𬺈、",
-      "after_context": "麃公等为将军。王年少，初即位，委国事大臣。",
+      "after_context": "麃公等为将军。",
       "items": [
         {
           "source": "jijie",
@@ -64,7 +106,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n007",
       "anchor_text": "麃公等为将军。",
       "before_context": "...宾客游士，欲以并天下。李斯为舍人。蒙骜、王𬺈、麃公等为将军。",
       "after_context": "王年少，初即位，委国事大臣。",
@@ -88,7 +130,7 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n008",
       "anchor_text": "二年，麃公将卒攻卷，",
       "before_context": "二年，麃公将卒攻卷，",
       "after_context": "斩首三万。",
@@ -102,7 +144,7 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n009",
       "anchor_text": "。王𬺈死。十月，将军蒙骜攻魏氏𪽈、有诡。",
       "before_context": "...，蒙骜攻韩，取十三城。王𬺈死。十月，将军蒙骜攻魏氏𪽈、有诡。",
       "after_context": "岁大饥。",
@@ -111,15 +153,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「𪽈音场。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音畅，魏之邑名。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n010",
       "anchor_text": "五年，将军骜攻魏，定酸枣、",
       "before_context": "五年，将军骜攻魏，定酸枣、",
-      "after_context": "燕、虚、长平、雍丘、山阳城，皆拔之，取二十城。初置东郡。冬雷...",
+      "after_context": "燕、虚、长平、",
       "items": [
         {
           "source": "jijie",
@@ -135,10 +182,10 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n011",
       "anchor_text": "燕、虚、长平、",
       "before_context": "五年，将军骜攻魏，定酸枣、燕、虚、长平、",
-      "after_context": "雍丘、山阳城，皆拔之，取二十城。初置东郡。冬雷。",
+      "after_context": "雍丘、山阳城，",
       "items": [
         {
           "source": "jijie",
@@ -159,7 +206,7 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n012",
       "anchor_text": "雍丘、山阳城，",
       "before_context": "五年，将军骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，",
       "after_context": "皆拔之，取二十城。初置东郡。冬雷。",
@@ -178,7 +225,7 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n013",
       "anchor_text": "六年，韩、魏、赵、衞、楚共击秦，取寿陵。",
       "before_context": "六年，韩、魏、赵、衞、楚共击秦，取寿陵。",
       "after_context": "秦出兵，五国兵罢。拔衞，迫东郡，其君角率其支属徙居野王，阻其...",
@@ -192,10 +239,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n014",
       "anchor_text": "七年，彗星先出东方，见北方，五月见西方。",
       "before_context": "七年，彗星先出东方，见北方，五月见西方。",
-      "after_context": "将军骜死。以攻龙、孤、庆都，还兵攻汲。彗星复见西方十六日。夏...",
+      "after_context": "将军骜死。以攻龙、孤、庆都，",
       "items": [
         {
           "source": "zhengyi",
@@ -206,10 +253,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n015",
       "anchor_text": "将军骜死。以攻龙、孤、庆都，",
       "before_context": "...星先出东方，见北方，五月见西方。将军骜死。以攻龙、孤、庆都，",
-      "after_context": "还兵攻汲。彗星复见西方十六日。夏太后死。",
+      "after_context": "还兵攻汲。彗星复见西方",
       "items": [
         {
           "source": "jijie",
@@ -225,7 +272,7 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n016",
       "anchor_text": "还兵攻汲。彗星复见西方",
       "before_context": "...月见西方。将军骜死。以攻龙、孤、庆都，还兵攻汲。彗星复见西方",
       "after_context": "十六日。夏太后死。",
@@ -239,7 +286,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n017",
       "anchor_text": "十六日。夏太后死。",
       "before_context": "...。以攻龙、孤、庆都，还兵攻汲。彗星复见西方十六日。夏太后死。",
       "after_context": "",
@@ -258,10 +305,10 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n018",
       "anchor_text": "八年，王弟长安君成𫊸",
       "before_context": "八年，王弟长安君成𫊸",
-      "after_context": "将军击赵，反，死屯留，军吏皆斩死，迁其民于临洮。将军壁死，卒...",
+      "after_context": "将军击赵，反，",
       "items": [
         {
           "source": "zhengyi",
@@ -272,10 +319,10 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n019",
       "anchor_text": "将军击赵，反，",
       "before_context": "八年，王弟长安君成𫊸将军击赵，反，",
-      "after_context": "死屯留，军吏皆斩死，迁其民于临洮。将军壁死，卒屯留、蒲鶮反，...",
+      "after_context": "死屯留，",
       "items": [
         {
           "source": "zhengyi",
@@ -286,10 +333,10 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n020",
       "anchor_text": "死屯留，",
       "before_context": "八年，王弟长安君成𫊸将军击赵，反，死屯留，",
-      "after_context": "军吏皆斩死，迁其民于临洮。将军壁死，卒屯留、蒲鶮反，戮其尸。",
+      "after_context": "军吏皆斩死，迁其民于临洮。",
       "items": [
         {
           "source": "zhengyi",
@@ -300,10 +347,10 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n021",
       "anchor_text": "军吏皆斩死，迁其民于临洮。",
       "before_context": "...弟长安君成𫊸将军击赵，反，死屯留，军吏皆斩死，迁其民于临洮。",
-      "after_context": "将军壁死，卒屯留、蒲鶮反，戮其尸。河鱼大上，轻车重马东就食。",
+      "after_context": "将军壁死，",
       "items": [
         {
           "source": "suoyin",
@@ -319,10 +366,10 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n022",
       "anchor_text": "将军壁死，",
       "before_context": "...𫊸将军击赵，反，死屯留，军吏皆斩死，迁其民于临洮。将军壁死，",
-      "after_context": "卒屯留、蒲鶮反，戮其尸。河鱼大上，轻车重马东就食。",
+      "after_context": "卒屯留、蒲鶮反，戮其尸。",
       "items": [
         {
           "source": "zhengyi",
@@ -333,10 +380,10 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n023",
       "anchor_text": "卒屯留、蒲鶮反，戮其尸。",
-      "before_context": "军吏皆斩死，迁其民于临洮。将军壁死，卒屯留、蒲鶮反，戮其尸。",
-      "after_context": "河鱼大上，轻车重马东就食。",
+      "before_context": "...军吏皆斩死，迁其民于临洮。将军壁死，卒屯留、蒲鶮反，戮其尸。",
+      "after_context": "河鱼大上，",
       "items": [
         {
           "source": "jijie",
@@ -357,10 +404,10 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n024",
       "anchor_text": "河鱼大上，",
       "before_context": "...，迁其民于临洮。将军壁死，卒屯留、蒲鶮反，戮其尸。河鱼大上，",
-      "after_context": "轻车重马东就食。",
+      "after_context": "轻车重",
       "items": [
         {
           "source": "suoyin",
@@ -376,10 +423,38 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n025",
+      "anchor_text": "轻车重",
+      "before_context": "...民于临洮。将军壁死，卒屯留、蒲鶮反，戮其尸。河鱼大上，轻车重",
+      "after_context": "马东就食。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一无此『重』字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "马东就食。",
+      "before_context": "...将军壁死，卒屯留、蒲鶮反，戮其尸。河鱼大上，轻车重马东就食。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言河鱼大上，秦人皆轻车重马，并就食于东。言往河旁食鱼也。一云，河鱼大上为灾，人遂东就食，皆轻车重马而去。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "嫪毐",
       "before_context": "嫪毐",
-      "after_context": "封为长信侯。予之山阳地，令毐居之。宫室车马衣服苑囿驰猎恣毐。...",
+      "after_context": "封为长信侯。予之山阳地，",
       "items": [
         {
           "source": "suoyin",
@@ -395,7 +470,7 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n028",
       "anchor_text": "封为长信侯。予之山阳地，",
       "before_context": "嫪毐封为长信侯。予之山阳地，",
       "after_context": "令毐居之。宫室车马衣服苑囿驰猎恣毐。事无小大皆决于毐。又以河...",
@@ -409,10 +484,38 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n029",
+      "anchor_text": "苑囿驰猎恣毐。事无小大皆决于毐。又以河西",
+      "before_context": "...毐居之。宫室车马衣服苑囿驰猎恣毐。事无小大皆决于毐。又以河西",
+      "after_context": "太原郡更为毐国。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「河，一作『汾』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "四月，上宿雍。",
+      "before_context": "九年，彗星见，或竟天。攻魏垣、蒲阳。四月，上宿雍。",
+      "after_context": "己酉，王冠，带剑。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蔡邕曰：「上者，尊位所在也。」骃案：司马迁记事，当言「帝」则依违但言「上」，不敢媟言，尊尊之意也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
       "anchor_text": "己酉，王冠，带剑。",
       "before_context": "...星见，或竟天。攻魏垣、蒲阳。四月，上宿雍。己酉，王冠，带剑。",
-      "after_context": "长信侯毐作乱而觉，矫王御玺及太后玺以发县卒及衞卒、官骑、戎翟...",
+      "after_context": "长信侯毐作乱而觉，矫王御玺",
       "items": [
         {
           "source": "jijie",
@@ -428,10 +531,10 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n032",
       "anchor_text": "长信侯毐作乱而觉，矫王御玺",
       "before_context": "...。四月，上宿雍。己酉，王冠，带剑。长信侯毐作乱而觉，矫王御玺",
-      "after_context": "及太后玺以发县卒及衞卒、官骑、戎翟君公、舍人，将欲攻蕲年宫为...",
+      "after_context": "及太后玺以发县卒",
       "items": [
         {
           "source": "jijie",
@@ -447,10 +550,10 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n033",
       "anchor_text": "及太后玺以发县卒",
-      "before_context": "己酉，王冠，带剑。长信侯毐作乱而觉，矫王御玺及太后玺以发县卒",
-      "after_context": "及衞卒、官骑、戎翟君公、舍人，将欲攻蕲年宫为乱。王知之，令相...",
+      "before_context": "...己酉，王冠，带剑。长信侯毐作乱而觉，矫王御玺及太后玺以发县卒",
+      "after_context": "及衞卒、官骑、戎翟君公、舍人，将欲攻蕲年宫为乱。",
       "items": [
         {
           "source": "zhengyi",
@@ -461,10 +564,10 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n034",
       "anchor_text": "官骑、戎翟君公、舍人，将欲攻蕲年宫为乱。",
       "before_context": "...后玺以发县卒及衞卒、官骑、戎翟君公、舍人，将欲攻蕲年宫为乱。",
-      "after_context": "王知之，令相国昌平君、昌文君发卒攻毐。战咸阳",
+      "after_context": "王知之，令相国昌平君、昌文君发卒攻毐。",
       "items": [
         {
           "source": "jijie",
@@ -480,7 +583,21 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n035",
+      "anchor_text": "王知之，令相国昌平君、昌文君发卒攻毐。",
+      "before_context": "...人，将欲攻蕲年宫为乱。王知之，令相国昌平君、昌文君发卒攻毐。",
+      "after_context": "战咸阳，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "昌平君，楚之公子，立以为相，后徙于郢，项燕立为荆王，史失其名。昌文君名亦不知也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
       "anchor_text": "，",
       "before_context": "...攻蕲年宫为乱。王知之，令相国昌平君、昌文君发卒攻毐。战咸阳，",
       "after_context": "斩首数百，皆拜爵，及宦者皆在战中，亦拜爵一级。毐等败走。即令...",
@@ -494,10 +611,24 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n037",
+      "anchor_text": "钱百万；杀之，五十万。尽得毐等。衞尉竭、",
+      "before_context": "...令国中：有生得毐，赐钱百万；杀之，五十万。尽得毐等。衞尉竭、",
+      "after_context": "内史肆、佐弋竭、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书百官表》曰：「衞尉，秦官。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
       "anchor_text": "内史肆、佐弋竭、",
       "before_context": "...，赐钱百万；杀之，五十万。尽得毐等。衞尉竭、内史肆、佐弋竭、",
-      "after_context": "中大夫令齐等二十人皆枭首。车裂以徇，灭其宗。及其舍人，轻者为...",
+      "after_context": "中大夫令齐等",
       "items": [
         {
           "source": "jijie",
@@ -513,10 +644,10 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n039",
       "anchor_text": "中大夫令齐等",
       "before_context": "...杀之，五十万。尽得毐等。衞尉竭、内史肆、佐弋竭、中大夫令齐等",
-      "after_context": "二十人皆枭首。车裂以徇，灭其宗。及其舍人，轻者为鬼薪。及夺爵...",
+      "after_context": "二十人皆枭首。",
       "items": [
         {
           "source": "zhengyi",
@@ -527,10 +658,10 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n040",
       "anchor_text": "二十人皆枭首。",
       "before_context": "...尽得毐等。衞尉竭、内史肆、佐弋竭、中大夫令齐等二十人皆枭首。",
-      "after_context": "车裂以徇，灭其宗。及其舍人，轻者为鬼薪。及夺爵迁蜀四千余家，...",
+      "after_context": "车裂以徇，灭其宗。",
       "items": [
         {
           "source": "jijie",
@@ -546,10 +677,10 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n041",
       "anchor_text": "车裂以徇，灭其宗。",
-      "before_context": "内史肆、佐弋竭、中大夫令齐等二十人皆枭首。车裂以徇，灭其宗。",
-      "after_context": "及其舍人，轻者为鬼薪。及夺爵迁蜀四千余家，家房陵。（",
+      "before_context": "...内史肆、佐弋竭、中大夫令齐等二十人皆枭首。车裂以徇，灭其宗。",
+      "after_context": "及其舍人，轻者为鬼薪。",
       "items": [
         {
           "source": "zhengyi",
@@ -560,10 +691,10 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n042",
       "anchor_text": "及其舍人，轻者为鬼薪。",
       "before_context": "...令齐等二十人皆枭首。车裂以徇，灭其宗。及其舍人，轻者为鬼薪。",
-      "after_context": "及夺爵迁蜀四千余家，家房陵。（",
+      "after_context": "及夺爵迁蜀四千余家，家房陵。",
       "items": [
         {
           "source": "jijie",
@@ -579,10 +710,10 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n043",
       "anchor_text": "及夺爵迁蜀四千余家，家房陵。",
       "before_context": "...，灭其宗。及其舍人，轻者为鬼薪。及夺爵迁蜀四千余家，家房陵。",
-      "after_context": "（",
+      "after_context": "（四）〔是〕月寒冻，有死者。",
       "items": [
         {
           "source": "zhengyi",
@@ -593,10 +724,10 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n044",
       "anchor_text": "月寒冻，有死者。",
       "before_context": "...薪。及夺爵迁蜀四千余家，家房陵。（四）〔是〕月寒冻，有死者。",
-      "after_context": "杨端和攻衍氏。彗星见西方，又见北方，从斗以南八十日。",
+      "after_context": "杨端和攻衍氏。",
       "items": [
         {
           "source": "zhengyi",
@@ -607,7 +738,7 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n045",
       "anchor_text": "杨端和攻衍氏。",
       "before_context": "...四千余家，家房陵。（四）〔是〕月寒冻，有死者。杨端和攻衍氏。",
       "after_context": "彗星见西方，又见北方，从斗以南八十日。",
@@ -626,10 +757,52 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n046",
+      "anchor_text": "十年，",
+      "before_context": "十年，",
+      "after_context": "相国吕不韦坐嫪毐免。桓𬺈为将军。齐、赵来置酒。齐人茅焦说秦王...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「甲子。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
+      "anchor_text": "，",
+      "before_context": "...后之名，恐诸侯闻之，由此倍秦也。」秦王乃迎太后于雍而入咸阳，",
+      "after_context": "复居甘泉宫。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "说苑曰：「始皇帝立茅焦为傅，又爵之上卿。太后大喜，曰『天下亢直，使败复成，安秦社稷，使妾母子复相见者，茅君之力也』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n048",
+      "anchor_text": "复居甘泉宫。",
+      "before_context": "...侯闻之，由此倍秦也。」秦王乃迎太后于雍而入咸阳，复居甘泉宫。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「表云咸阳南宫也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "衣服食饮与缭同。缭曰：「秦王为人，蜂准，",
       "before_context": "...从其计，见尉缭亢礼，衣服食饮与缭同。缭曰：「秦王为人，蜂准，",
-      "after_context": "长目，挚鸟膺，豺声，少恩而虎狼心，居约易出人下，得志亦轻食人...",
+      "after_context": "长目，挚鸟膺，",
       "items": [
         {
           "source": "jijie",
@@ -645,10 +818,10 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n050",
       "anchor_text": "长目，挚鸟膺，",
       "before_context": "...亢礼，衣服食饮与缭同。缭曰：「秦王为人，蜂准，长目，挚鸟膺，",
-      "after_context": "豺声，少恩而虎狼心，居约易出人下，得志亦轻食人。我布衣，然见...",
+      "after_context": "豺声，少恩而虎狼心，居约易出人下，",
       "items": [
         {
           "source": "zhengyi",
@@ -659,10 +832,10 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n051",
       "anchor_text": "豺声，少恩而虎狼心，居约易出人下，",
       "before_context": "...为人，蜂准，长目，挚鸟膺，豺声，少恩而虎狼心，居约易出人下，",
-      "after_context": "得志亦轻食人。我布衣，然见我常身自下我。诚使秦王得志于天下，...",
+      "after_context": "得志亦轻食人。",
       "items": [
         {
           "source": "zhengyi",
@@ -673,7 +846,7 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n052",
       "anchor_text": "得志亦轻食人。",
       "before_context": "...目，挚鸟膺，豺声，少恩而虎狼心，居约易出人下，得志亦轻食人。",
       "after_context": "我布衣，然见我常身自下我。诚使秦王得志于天下，天下皆为虏矣。...",
@@ -687,10 +860,10 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n053",
       "anchor_text": "游。」乃亡去。秦王觉，固止，以为秦国尉，",
       "before_context": "...下皆为虏矣。不可与久游。」乃亡去。秦王觉，固止，以为秦国尉，",
-      "after_context": "卒用其计策。而李斯",
+      "after_context": "卒用其计策。而李斯用事。",
       "items": [
         {
           "source": "zhengyi",
@@ -701,10 +874,10 @@
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n054",
       "anchor_text": "、杨端和攻邺，取九城。王翦攻阏与、橑杨，",
       "before_context": "十一年，王翦、桓𬺈、杨端和攻邺，取九城。王翦攻阏与、橑杨，",
-      "after_context": "皆并为一军。翦将十八日，军归斗食以下，什推二人从军取邺安阳",
+      "after_context": "皆并为一军。翦将十八日，军归斗食以下，",
       "items": [
         {
           "source": "jijie",
@@ -720,10 +893,10 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n055",
       "anchor_text": "皆并为一军。翦将十八日，军归斗食以下，",
       "before_context": "...城。王翦攻阏与、橑杨，皆并为一军。翦将十八日，军归斗食以下，",
-      "after_context": "什推二人从军取邺安阳",
+      "after_context": "什推二人从军",
       "items": [
         {
           "source": "jijie",
@@ -739,10 +912,38 @@
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n056",
+      "anchor_text": "什推二人从军",
+      "before_context": "...与、橑杨，皆并为一军。翦将十八日，军归斗食以下，什推二人从军",
+      "after_context": "取邺安阳，桓𬺈将。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言王翦为将，诸军中皆归斗食以下，无功佐史，什中唯推择二人令从军耳。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n057",
+      "anchor_text": "十二年，文信侯不韦死，窃葬。",
+      "before_context": "十二年，文信侯不韦死，窃葬。",
+      "after_context": "其舍人临者，晋人也逐出之；",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：不韦饮鸩死，其宾客数千人窃共葬于洛阳北芒山。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
       "anchor_text": "其舍人临者，晋人也逐出之；",
       "before_context": "十二年，文信侯不韦死，窃葬。其舍人临者，晋人也逐出之；",
-      "after_context": "秦人六百石以上夺爵，迁；五百石以下不临，迁，勿夺爵。自今以来...",
+      "after_context": "秦人六百石以上夺爵，迁；",
       "items": [
         {
           "source": "zhengyi",
@@ -753,10 +954,10 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n059",
       "anchor_text": "秦人六百石以上夺爵，迁；",
       "before_context": "...死，窃葬。其舍人临者，晋人也逐出之；秦人六百石以上夺爵，迁；",
-      "after_context": "五百石以下不临，迁，勿夺爵。自今以来，操国事不道如嫪毐、不韦...",
+      "after_context": "五百石以下不临，迁，勿夺爵。",
       "items": [
         {
           "source": "zhengyi",
@@ -767,10 +968,10 @@
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n060",
       "anchor_text": "五百石以下不临，迁，勿夺爵。",
       "before_context": "...逐出之；秦人六百石以上夺爵，迁；五百石以下不临，迁，勿夺爵。",
-      "after_context": "自今以来，操国事不道如嫪毐、不韦者籍其门，视此。秋，复嫪毐舍...",
+      "after_context": "自今以来，操国事不道如嫪毐、不韦者籍其门，",
       "items": [
         {
           "source": "zhengyi",
@@ -781,7 +982,7 @@
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n061",
       "anchor_text": "今以来，操国事不道如嫪毐、不韦者籍其门，",
       "before_context": "...不临，迁，勿夺爵。自今以来，操国事不道如嫪毐、不韦者籍其门，",
       "after_context": "视此。秋，复嫪毐舍人迁蜀者。当是之时，天下大旱，六月至八月乃...",
@@ -805,10 +1006,10 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n062",
       "anchor_text": "十三年，桓𬺈攻赵平阳，",
       "before_context": "十三年，桓𬺈攻赵平阳，",
-      "after_context": "杀赵将扈辄，斩首十万。王之河南",
+      "after_context": "杀赵将扈辄，",
       "items": [
         {
           "source": "zhengyi",
@@ -819,10 +1020,10 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n063",
       "anchor_text": "杀赵将扈辄，",
       "before_context": "十三年，桓𬺈攻赵平阳，杀赵将扈辄，",
-      "after_context": "斩首十万。王之河南",
+      "after_context": "斩首十万。王之河南。正月，彗星见东方。十月，桓𬺈攻赵。",
       "items": [
         {
           "source": "zhengyi",
@@ -833,10 +1034,10 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n064",
       "anchor_text": "十四年，攻赵军于平阳，取宜安，",
       "before_context": "十四年，攻赵军于平阳，取宜安，",
-      "after_context": "破之，杀其将军。桓𬺈定平阳、武城。韩非使秦，秦用李斯",
+      "after_context": "破之，杀其将军。桓𬺈定平阳、武城。",
       "items": [
         {
           "source": "zhengyi",
@@ -847,10 +1048,10 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n065",
       "anchor_text": "破之，杀其将军。桓𬺈定平阳、武城。",
       "before_context": "...年，攻赵军于平阳，取宜安，破之，杀其将军。桓𬺈定平阳、武城。",
-      "after_context": "韩非使秦，秦用李斯",
+      "after_context": "韩非使秦，秦用李斯谋，留非，非死云阳。",
       "items": [
         {
           "source": "zhengyi",
@@ -861,7 +1062,7 @@
       "sentence_id": null
     },
     {
-      "id": "n052",
+      "id": "n066",
       "anchor_text": "谋，留非，非死云阳。",
       "before_context": "...军。桓𬺈定平阳、武城。韩非使秦，秦用李斯谋，留非，非死云阳。",
       "after_context": "韩王请为臣。",
@@ -875,7 +1076,21 @@
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n067",
+      "anchor_text": "，大兴兵，一军至邺，一军至太原，取狼孟。",
+      "before_context": "十五年，大兴兵，一军至邺，一军至太原，取狼孟。",
+      "after_context": "地动。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《地理志》太原有狼孟县。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
       "anchor_text": "十六年九月，发卒受地韩南阳假守",
       "before_context": "十六年九月，发卒受地韩南阳假守",
       "after_context": "腾。初令男子书年。魏献地于秦。秦置丽邑。",
@@ -889,7 +1104,7 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n069",
       "anchor_text": "腾。初令男子书年。魏献地于秦。秦置丽邑。",
       "before_context": "...，发卒受地韩南阳假守腾。初令男子书年。魏献地于秦。秦置丽邑。",
       "after_context": "",
@@ -903,10 +1118,10 @@
       "sentence_id": null
     },
     {
-      "id": "n055",
+      "id": "n070",
       "anchor_text": "十七年，内史腾攻韩，得韩王安，尽纳其地，",
       "before_context": "十七年，内史腾攻韩，得韩王安，尽纳其地，",
-      "after_context": "以其地为郡，命曰颍川。地动。华阳",
+      "after_context": "以其地为郡，命曰颍川。地动。华阳太后卒。民大饥。",
       "items": [
         {
           "source": "zhengyi",
@@ -917,10 +1132,24 @@
       "sentence_id": null
     },
     {
-      "id": "n056",
+      "id": "n071",
+      "anchor_text": "十八年，",
+      "before_context": "十八年，",
+      "after_context": "大兴兵攻赵，王翦将上地，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「巴郡出大人，长二十五丈六尺。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n072",
       "anchor_text": "大兴兵攻赵，王翦将上地，",
       "before_context": "十八年，大兴兵攻赵，王翦将上地，",
-      "after_context": "下井陉，端和将河内，羌瘣伐赵，端和围邯郸城。",
+      "after_context": "下井陉，",
       "items": [
         {
           "source": "zhengyi",
@@ -931,7 +1160,21 @@
       "sentence_id": null
     },
     {
-      "id": "n057",
+      "id": "n073",
+      "anchor_text": "下井陉，",
+      "before_context": "十八年，大兴兵攻赵，王翦将上地，下井陉，",
+      "after_context": "端和将河内，羌瘣",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「山名，在常山。今为县。音刑。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n074",
       "anchor_text": "端和将河内，羌瘣",
       "before_context": "十八年，大兴兵攻赵，王翦将上地，下井陉，端和将河内，羌瘣",
       "after_context": "伐赵，端和围邯郸城。",
@@ -945,7 +1188,7 @@
       "sentence_id": null
     },
     {
-      "id": "n058",
+      "id": "n075",
       "anchor_text": "九年，王翦、羌瘣尽定取赵地东阳，得赵王。",
       "before_context": "十九年，王翦、羌瘣尽定取赵地东阳，得赵王。",
       "after_context": "引兵欲攻燕，屯中山。秦王之邯郸，诸尝与王生赵时母家有仇怨，皆...",
@@ -964,7 +1207,7 @@
       "sentence_id": null
     },
     {
-      "id": "n059",
+      "id": "n076",
       "anchor_text": "兵至国，恐，使荆轲刺秦王。秦王觉之，体解",
       "before_context": "二十年，燕太子丹患秦兵至国，恐，使荆轲刺秦王。秦王觉之，体解",
       "after_context": "轲以徇，而使王翦、辛胜攻燕。燕、代发兵击秦军，秦军破燕易水之...",
@@ -978,10 +1221,10 @@
       "sentence_id": null
     },
     {
-      "id": "n060",
+      "id": "n077",
       "anchor_text": "二十一年，王贲",
       "before_context": "二十一年，王贲",
-      "after_context": "攻（",
+      "after_context": "攻（蓟）〔荆〕。乃益发卒诣王翦军，遂破燕太子军，取燕蓟城，得...",
       "items": [
         {
           "source": "zhengyi",
@@ -992,10 +1235,10 @@
       "sentence_id": null
     },
     {
-      "id": "n061",
+      "id": "n078",
       "anchor_text": "蓟城，得太子丹之首。燕王东收辽东而王之。",
       "before_context": "...，遂破燕太子军，取燕蓟城，得太子丹之首。燕王东收辽东而王之。",
-      "after_context": "王翦谢病老归。新郑",
+      "after_context": "王翦谢病老归。新郑反。昌平君徙于郢。大雨雪，",
       "items": [
         {
           "source": "zhengyi",
@@ -1006,7 +1249,7 @@
       "sentence_id": null
     },
     {
-      "id": "n062",
+      "id": "n079",
       "anchor_text": "反。昌平君徙于郢。大雨雪，",
       "before_context": "...东收辽东而王之。王翦谢病老归。新郑反。昌平君徙于郢。大雨雪，",
       "after_context": "深二尺五寸。",
@@ -1020,10 +1263,24 @@
       "sentence_id": null
     },
     {
-      "id": "n063",
+      "id": "n080",
+      "anchor_text": "攻魏，引河沟灌大梁，大梁城坏，其王请降，",
+      "before_context": "二十二年，王贲攻魏，引河沟灌大梁，大梁城坏，其王请降，",
+      "after_context": "尽取其地。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "魏王假也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
       "anchor_text": "十三年，秦王复召王翦，彊起之，使将击荆。",
       "before_context": "二十三年，秦王复召王翦，彊起之，使将击荆。",
-      "after_context": "取陈以南至平舆，虏荆王。秦王游至郢陈。荆将项燕立昌平君为荆王...",
+      "after_context": "取陈以南至平舆，",
       "items": [
         {
           "source": "zhengyi",
@@ -1034,10 +1291,10 @@
       "sentence_id": null
     },
     {
-      "id": "n064",
+      "id": "n082",
       "anchor_text": "取陈以南至平舆，",
       "before_context": "二十三年，秦王复召王翦，彊起之，使将击荆。取陈以南至平舆，",
-      "after_context": "虏荆王。秦王游至郢陈。荆将项燕立昌平君为荆王，反秦于淮南。",
+      "after_context": "虏荆王。",
       "items": [
         {
           "source": "jijie",
@@ -1053,7 +1310,21 @@
       "sentence_id": null
     },
     {
-      "id": "n065",
+      "id": "n083",
+      "anchor_text": "虏荆王。",
+      "before_context": "...年，秦王复召王翦，彊起之，使将击荆。取陈以南至平舆，虏荆王。",
+      "after_context": "秦王游至郢陈。荆将项燕立昌平君为荆王，反秦于淮南。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "荆王负刍也。楚称荆者，以避庄襄王讳，故易之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n084",
       "anchor_text": "陈。荆将项燕立昌平君为荆王，反秦于淮南。",
       "before_context": "...，虏荆王。秦王游至郢陈。荆将项燕立昌平君为荆王，反秦于淮南。",
       "after_context": "",
@@ -1072,10 +1343,10 @@
       "sentence_id": null
     },
     {
-      "id": "n066",
+      "id": "n085",
       "anchor_text": "，大兴兵，使王贲将，攻燕辽东，得燕王喜。",
       "before_context": "二十五年，大兴兵，使王贲将，攻燕辽东，得燕王喜。",
-      "after_context": "还攻代，虏代王嘉。王翦遂定荆江南地；降越君，置会稽郡。五月，...",
+      "after_context": "还攻代，虏代王嘉。王翦遂定荆江南地；",
       "items": [
         {
           "source": "zhengyi",
@@ -1086,10 +1357,10 @@
       "sentence_id": null
     },
     {
-      "id": "n067",
+      "id": "n086",
       "anchor_text": "还攻代，虏代王嘉。王翦遂定荆江南地；",
       "before_context": "...将，攻燕辽东，得燕王喜。还攻代，虏代王嘉。王翦遂定荆江南地；",
-      "after_context": "降越君，置会稽郡。五月，天下大酺。",
+      "after_context": "降越君，",
       "items": [
         {
           "source": "zhengyi",
@@ -1100,7 +1371,7 @@
       "sentence_id": null
     },
     {
-      "id": "n068",
+      "id": "n087",
       "anchor_text": "降越君，",
       "before_context": "...辽东，得燕王喜。还攻代，虏代王嘉。王翦遂定荆江南地；降越君，",
       "after_context": "置会稽郡。五月，天下大酺。",
@@ -1114,7 +1385,7 @@
       "sentence_id": null
     },
     {
-      "id": "n069",
+      "id": "n088",
       "anchor_text": "置会稽郡。五月，天下大酺。",
       "before_context": "...代王嘉。王翦遂定荆江南地；降越君，置会稽郡。五月，天下大酺。",
       "after_context": "",
@@ -1133,7 +1404,7 @@
       "sentence_id": null
     },
     {
-      "id": "n070",
+      "id": "n089",
       "anchor_text": "二十六年，齐王建与其相后胜",
       "before_context": "二十六年，齐王建与其相后胜",
       "after_context": "发兵守其西界，不通秦。秦使将军王贲从燕南攻齐，得齐王建。",
@@ -1147,7 +1418,7 @@
       "sentence_id": null
     },
     {
-      "id": "n071",
+      "id": "n090",
       "anchor_text": "通秦。秦使将军王贲从燕南攻齐，得齐王建。",
       "before_context": "...后胜发兵守其西界，不通秦。秦使将军王贲从燕南攻齐，得齐王建。",
       "after_context": "",
@@ -1166,10 +1437,10 @@
       "sentence_id": null
     },
     {
-      "id": "n072",
+      "id": "n091",
       "anchor_text": "秦初并天下，令丞相、御史曰：",
       "before_context": "秦初并天下，令丞相、御史曰：",
-      "after_context": "「异日韩王纳地效玺，请为藩臣，已而倍约，与赵、魏合从畔秦，故...",
+      "after_context": "「异日韩王纳地效玺，",
       "items": [
         {
           "source": "zhengyi",
@@ -1180,7 +1451,7 @@
       "sentence_id": null
     },
     {
-      "id": "n073",
+      "id": "n092",
       "anchor_text": "「异日韩王纳地效玺，",
       "before_context": "秦初并天下，令丞相、御史曰：「异日韩王纳地效玺，",
       "after_context": "请为藩臣，已而倍约，与赵、魏合从畔秦，故兴兵诛之，虏其王。寡...",
@@ -1194,7 +1465,7 @@
       "sentence_id": null
     },
     {
-      "id": "n074",
+      "id": "n093",
       "anchor_text": "兵革。赵王使其相李牧来约盟，故归其质子。",
       "before_context": "...。寡人以为善，庶几息兵革。赵王使其相李牧来约盟，故归其质子。",
       "after_context": "已而倍盟，反我太原，故兴兵诛之，得其王。赵公子嘉乃自立为代王...",
@@ -1208,21 +1479,68 @@
       "sentence_id": null
     },
     {
-      "id": "n075",
-      "anchor_text": "传后世。其议帝号。」丞相绾、御史大夫劫、",
-      "before_context": "...号不更，无以称成功，传后世。其议帝号。」丞相绾、御史大夫劫、",
-      "after_context": "廷尉斯等皆曰：「昔者五帝地方千里，其外侯服夷服诸侯或朝或否，...",
+      "id": "n094",
+      "anchor_text": "以西，",
+      "before_context": "...入秦，已而与韩、赵谋袭秦，秦兵吏诛，遂破之。荆王献青阳以西，",
+      "after_context": "已而畔约，击我南郡，故发兵诛，得其王，遂定其荆地。燕王昏乱，...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "《汉书百官表》曰：「御史大夫，秦官。」应劭曰：「侍御史之率，故称大夫也。」"
+          "text": "《汉书》邹阳传曰：「越水长沙，还舟青阳。」张晏曰：「青阳，地名。」苏林曰：「青阳，长沙县是也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n076",
+      "id": "n095",
+      "anchor_text": "传后世。其议帝号。」丞相绾、御史大夫劫、",
+      "before_context": "...号不更，无以称成功，传后世。其议帝号。」丞相绾、御史大夫劫、",
+      "after_context": "廷尉斯等",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书百官表》曰：「御史大夫，秦官。」应劭曰：「侍御史之率，故称大夫也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "绾姓王。劫姓冯。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n096",
+      "anchor_text": "廷尉斯等",
+      "before_context": "...无以称成功，传后世。其议帝号。」丞相绾、御史大夫劫、廷尉斯等",
+      "after_context": "皆曰：「昔者五帝地方千里，其外侯服夷服诸侯或朝或否，天子不能...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书百官表》曰：「廷尉，秦官。」应劭曰：「听狱必质诸朝廷，与众共之，兵狱同制，故称廷尉。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n097",
+      "anchor_text": "侯服夷服诸侯或朝或否，天子不能制。今陛下",
+      "before_context": "...者五帝地方千里，其外侯服夷服诸侯或朝或否，天子不能制。今陛下",
+      "after_context": "兴义兵，诛残贼，平定天下，海内为郡县，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蔡邕曰：「陛，阶也，所由升堂也。天子必有近臣立于陛侧，以戒不虞。谓之『陛下』者，群臣与天子言，不敢指斥，故呼在陛下者与之言，因卑达尊之意也。上书亦如之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n098",
       "anchor_text": "兴义兵，诛残贼，平定天下，海内为郡县，",
       "before_context": "...否，天子不能制。今陛下兴义兵，诛残贼，平定天下，海内为郡县，",
       "after_context": "法令由一统，自上古以来未尝有，五帝所不及。臣等谨与博士议曰：",
@@ -1236,10 +1554,38 @@
       "sentence_id": null
     },
     {
-      "id": "n077",
+      "id": "n099",
+      "anchor_text": "来未尝有，五帝所不及。臣等谨与博士议曰：",
+      "before_context": "...法令由一统，自上古以来未尝有，五帝所不及。臣等谨与博士议曰：",
+      "after_context": "『古有天皇，有地皇，有泰皇，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书百官表》曰：「博士，秦官，掌通古今。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n100",
+      "anchor_text": "『古有天皇，有地皇，有泰皇，",
+      "before_context": "...，五帝所不及。臣等谨与博士议曰：『古有天皇，有地皇，有泰皇，",
+      "after_context": "泰皇最贵。』臣等昧死上尊号，王为『泰皇』。命为『制』，令为『...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：天皇、地皇之下即云泰皇，当人皇也。而《封禅书》云「昔者太帝使素女鼓瑟而悲」，盖三皇已前称泰皇。一云泰皇，太昊也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n101",
       "anchor_text": "，王为『泰皇』。命为『制』，令为『诏』，",
       "before_context": "...贵。』臣等昧死上尊号，王为『泰皇』。命为『制』，令为『诏』，",
-      "after_context": "天子自称曰『朕』。」王曰：「去『泰』，著『皇』，采上古『帝』...",
+      "after_context": "天子自称曰『朕』。」",
       "items": [
         {
           "source": "jijie",
@@ -1255,7 +1601,21 @@
       "sentence_id": null
     },
     {
-      "id": "n078",
+      "id": "n102",
+      "anchor_text": "天子自称曰『朕』。」",
+      "before_context": "...，王为『泰皇』。命为『制』，令为『诏』，天子自称曰『朕』。」",
+      "after_context": "王曰：「去『泰』，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蔡邕曰：「朕，我也。古者上下共称之，贵贱不嫌，则可以同号之义也。皋陶与舜言『朕言惠，可底行』。屈原曰『朕皇考』。至秦，然后天子独以为称。汉因而不改。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n103",
       "anchor_text": "王曰：「去『泰』，",
       "before_context": "...为『制』，令为『诏』，天子自称曰『朕』。」王曰：「去『泰』，",
       "after_context": "著『皇』，采上古『帝』位号，号曰『皇帝』。他如议。」制曰：「...",
@@ -1269,7 +1629,49 @@
       "sentence_id": null
     },
     {
-      "id": "n079",
+      "id": "n104",
+      "anchor_text": "，号曰『皇帝』。他如议。」制曰：「可。」",
+      "before_context": "...』，采上古『帝』位号，号曰『皇帝』。他如议。」制曰：「可。」",
+      "after_context": "追尊庄襄王为太上皇。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蔡邕曰：「群臣有所奏，请尚书令奏之，下有司曰『制』，天子答之曰『可』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n105",
+      "anchor_text": "追尊庄襄王为太上皇。",
+      "before_context": "...，号曰『皇帝』。他如议。」制曰：「可。」追尊庄襄王为太上皇。",
+      "after_context": "制曰：「朕闻太古有号毋谥，中古有号，死而以行为谥。如此，则子...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "汉高祖尊父曰太上皇，亦放此也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n106",
+      "anchor_text": "》。",
+      "before_context": "...则子议父，臣议君也，甚无谓，朕弗取焉。自今已来，除《谥法》。",
+      "after_context": "朕为始皇帝。后世以计数，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《谥法》，周公所作。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n107",
       "anchor_text": "朕为始皇帝。后世以计数，",
       "before_context": "...谓，朕弗取焉。自今已来，除《谥法》。朕为始皇帝。后世以计数，",
       "after_context": "二世三世至于万世，传之无穷。」",
@@ -1283,24 +1685,29 @@
       "sentence_id": null
     },
     {
-      "id": "n080",
+      "id": "n108",
       "anchor_text": "始皇推终始五德之传，",
       "before_context": "始皇推终始五德之传，",
-      "after_context": "以为周得火德，秦代周德，从所不胜。方今水德之始，改年始，朝贺...",
+      "after_context": "以为周得火德，秦代周德，从所不胜。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "郑玄曰：「音亭传。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音张恋反。传，次也。谓五行之德始终相次也。《汉书郊祀志》曰：「齐人邹子之徒论著终始五德之运，始皇采用。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n081",
+      "id": "n109",
       "anchor_text": "以为周得火德，秦代周德，从所不胜。",
       "before_context": "始皇推终始五德之传，以为周得火德，秦代周德，从所不胜。",
-      "after_context": "方今水德之始，改年始，朝贺皆自十月朔。衣服旄旌节旗皆上黑。数...",
+      "after_context": "方今水德之始，",
       "items": [
         {
           "source": "zhengyi",
@@ -1311,10 +1718,24 @@
       "sentence_id": null
     },
     {
-      "id": "n082",
+      "id": "n110",
+      "anchor_text": "方今水德之始，",
+      "before_context": "...始五德之传，以为周得火德，秦代周德，从所不胜。方今水德之始，",
+      "after_context": "改年始，朝贺皆自十月朔。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《封禅书》曰秦文公获黑龙，以为水瑞，秦始皇帝因自谓为水德也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n111",
       "anchor_text": "改年始，朝贺皆自十月朔。",
       "before_context": "...，秦代周德，从所不胜。方今水德之始，改年始，朝贺皆自十月朔。",
-      "after_context": "衣服旄旌节旗皆上黑。数以六为纪，符、法冠皆六寸，而舆六尺，六...",
+      "after_context": "衣服旄旌节旗",
       "items": [
         {
           "source": "zhengyi",
@@ -1325,10 +1746,10 @@
       "sentence_id": null
     },
     {
-      "id": "n083",
+      "id": "n112",
       "anchor_text": "衣服旄旌节旗",
       "before_context": "...从所不胜。方今水德之始，改年始，朝贺皆自十月朔。衣服旄旌节旗",
-      "after_context": "皆上黑。数以六为纪，符、法冠皆六寸，而舆六尺，六尺为步，乘六...",
+      "after_context": "皆上黑。",
       "items": [
         {
           "source": "zhengyi",
@@ -1339,10 +1760,10 @@
       "sentence_id": null
     },
     {
-      "id": "n084",
+      "id": "n113",
       "anchor_text": "皆上黑。",
       "before_context": "...。方今水德之始，改年始，朝贺皆自十月朔。衣服旄旌节旗皆上黑。",
-      "after_context": "数以六为纪，符、法冠皆六寸，而舆六尺，六尺为步，乘六马。更名...",
+      "after_context": "数以六为纪，符、法冠皆六寸，而舆六尺，六尺为步，乘六马。",
       "items": [
         {
           "source": "zhengyi",
@@ -1353,7 +1774,7 @@
       "sentence_id": null
     },
     {
-      "id": "n085",
+      "id": "n114",
       "anchor_text": "法冠皆六寸，而舆六尺，六尺为步，乘六马。",
       "before_context": "...黑。数以六为纪，符、法冠皆六寸，而舆六尺，六尺为步，乘六马。",
       "after_context": "更名河曰德水，以为水德之始。刚毅戾深，事皆决于法，刻削毋仁恩...",
@@ -1362,12 +1783,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "张晏曰：「水，北方，黑，终数六，故以六寸为符，六尺为步。」瓒曰：「水数六，故以六为名。」谯周曰：「步以人足为数，非独秦制然。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "管子司马法皆云六尺为步。谯周以为步以人足，非独秦制。又按：《礼记》王制曰「古者八尺为步」，今以周尺六尺四寸为步，步之尺数亦不同。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n086",
+      "id": "n115",
+      "anchor_text": "决于法，刻削毋仁恩和义，然后合五德之数。",
+      "before_context": "...之始。刚毅戾深，事皆决于法，刻削毋仁恩和义，然后合五德之数。",
+      "after_context": "于是急法，久者不赦。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "水主阴，阴刑杀，故急法刻削，以合五德之数。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n116",
       "anchor_text": "绾等言：「诸侯初破，燕、齐、荆地远，不为",
       "before_context": "丞相绾等言：「诸侯初破，燕、齐、荆地远，不为",
       "after_context": "置王，毋以填之。请立诸子，唯上幸许。」始皇下其议于群臣，群臣...",
@@ -1381,7 +1821,7 @@
       "sentence_id": null
     },
     {
-      "id": "n087",
+      "id": "n117",
       "anchor_text": "以公赋税重赏赐之，甚足易制。天下无异意，",
       "before_context": "...，皆为郡县，诸子功臣以公赋税重赏赐之，甚足易制。天下无异意，",
       "after_context": "则安宁之术也。置诸侯不便。」始皇曰：「天下共苦战鬬不休，以有...",
@@ -1395,10 +1835,10 @@
       "sentence_id": null
     },
     {
-      "id": "n088",
+      "id": "n118",
       "anchor_text": "分天下以为三十六郡，",
       "before_context": "分天下以为三十六郡，",
-      "after_context": "郡置守、尉、监。更名民曰「黔首」。大酺。收天下兵，聚之咸阳",
+      "after_context": "郡置守、尉、监。",
       "items": [
         {
           "source": "jijie",
@@ -1414,7 +1854,63 @@
       "sentence_id": null
     },
     {
-      "id": "n089",
+      "id": "n119",
+      "anchor_text": "郡置守、尉、监。",
+      "before_context": "分天下以为三十六郡，郡置守、尉、监。",
+      "after_context": "更名民曰「黔首」。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书百官表》曰：「秦郡守掌治其郡；有丞、尉，掌佐守典武职甲卒；监御史掌监郡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n120",
+      "anchor_text": "更名民曰「黔首」。",
+      "before_context": "分天下以为三十六郡，郡置守、尉、监。更名民曰「黔首」。",
+      "after_context": "大酺。收天下兵，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "应劭曰：「黔亦黎，黑也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n121",
+      "anchor_text": "大酺。收天下兵，",
+      "before_context": "...三十六郡，郡置守、尉、监。更名民曰「黔首」。大酺。收天下兵，",
+      "after_context": "聚之咸阳，销以为钟鐻，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "应劭曰：「古者以铜为兵。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n122",
+      "anchor_text": "，销以为钟鐻，",
+      "before_context": "...监。更名民曰「黔首」。大酺。收天下兵，聚之咸阳，销以为钟鐻，",
+      "after_context": "金人十二，重各千石，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「音巨。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n123",
       "anchor_text": "金人十二，重各千石，",
       "before_context": "...。大酺。收天下兵，聚之咸阳，销以为钟鐻，金人十二，重各千石，",
       "after_context": "置廷宫中。一法度衡石丈尺。车同轨。书同文字。地东至海暨朝鲜，",
@@ -1433,10 +1929,10 @@
       "sentence_id": null
     },
     {
-      "id": "n090",
+      "id": "n124",
       "anchor_text": "丈尺。车同轨。书同文字。地东至海暨朝鲜，",
-      "before_context": "置廷宫中。一法度衡石丈尺。车同轨。书同文字。地东至海暨朝鲜，",
-      "after_context": "西至临洮、羌中，南至北向户，北据河为塞，并阴山至辽东。徙天下...",
+      "before_context": "...置廷宫中。一法度衡石丈尺。车同轨。书同文字。地东至海暨朝鲜，",
+      "after_context": "西至临洮、羌中，",
       "items": [
         {
           "source": "zhengyi",
@@ -1447,10 +1943,10 @@
       "sentence_id": null
     },
     {
-      "id": "n091",
+      "id": "n125",
       "anchor_text": "西至临洮、羌中，",
       "before_context": "...衡石丈尺。车同轨。书同文字。地东至海暨朝鲜，西至临洮、羌中，",
-      "after_context": "南至北向户，北据河为塞，并阴山至辽东。徙天下豪富于咸阳",
+      "after_context": "南至北向户，",
       "items": [
         {
           "source": "zhengyi",
@@ -1461,10 +1957,24 @@
       "sentence_id": null
     },
     {
-      "id": "n092",
+      "id": "n126",
+      "anchor_text": "南至北向户，",
+      "before_context": "...同轨。书同文字。地东至海暨朝鲜，西至临洮、羌中，南至北向户，",
+      "after_context": "北据河为塞，并阴山至辽东。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "吴都赋曰：「开北户以向日。」刘逵曰：「日南之北户，犹日北之南户也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n127",
       "anchor_text": "北据河为塞，并阴山至辽东。",
       "before_context": "...朝鲜，西至临洮、羌中，南至北向户，北据河为塞，并阴山至辽东。",
-      "after_context": "徙天下豪富于咸阳",
+      "after_context": "徙天下豪富于咸阳十二万户。诸庙及章台、上林皆在渭南。秦每破诸...",
       "items": [
         {
           "source": "jijie",
@@ -1480,10 +1990,10 @@
       "sentence_id": null
     },
     {
-      "id": "n093",
+      "id": "n128",
       "anchor_text": "北阪上，",
       "before_context": "...章台、上林皆在渭南。秦每破诸侯，写放其宫室，作之咸阳北阪上，",
-      "after_context": "南临渭，自雍门以东至泾、渭，殿屋复道周阁相属。所得诸侯美人钟...",
+      "after_context": "南临渭，自雍门",
       "items": [
         {
           "source": "jijie",
@@ -1499,10 +2009,10 @@
       "sentence_id": null
     },
     {
-      "id": "n094",
+      "id": "n129",
       "anchor_text": "南临渭，自雍门",
       "before_context": "...渭南。秦每破诸侯，写放其宫室，作之咸阳北阪上，南临渭，自雍门",
-      "after_context": "以东至泾、渭，殿屋复道周阁相属。所得诸侯美人钟鼓，以充入之。",
+      "after_context": "以东至泾、渭，殿屋复道周阁相属。",
       "items": [
         {
           "source": "jijie",
@@ -1518,7 +2028,7 @@
       "sentence_id": null
     },
     {
-      "id": "n095",
+      "id": "n130",
       "anchor_text": "以东至泾、渭，殿屋复道周阁相属。",
       "before_context": "...之咸阳北阪上，南临渭，自雍门以东至泾、渭，殿屋复道周阁相属。",
       "after_context": "所得诸侯美人钟鼓，以充入之。",
@@ -1532,9 +2042,9 @@
       "sentence_id": null
     },
     {
-      "id": "n096",
+      "id": "n131",
       "anchor_text": "所得诸侯美人钟鼓，以充入之。",
-      "before_context": "以东至泾、渭，殿屋复道周阁相属。所得诸侯美人钟鼓，以充入之。",
+      "before_context": "...以东至泾、渭，殿屋复道周阁相属。所得诸侯美人钟鼓，以充入之。",
       "after_context": "",
       "items": [
         {
@@ -1546,10 +2056,10 @@
       "sentence_id": null
     },
     {
-      "id": "n097",
+      "id": "n132",
       "anchor_text": "、北地，",
       "before_context": "二十七年，始皇巡陇西、北地，",
-      "after_context": "出鸡头山",
+      "after_context": "出鸡头山，",
       "items": [
         {
           "source": "zhengyi",
@@ -1560,10 +2070,10 @@
       "sentence_id": null
     },
     {
-      "id": "n098",
+      "id": "n133",
       "anchor_text": "，",
       "before_context": "二十七年，始皇巡陇西、北地，出鸡头山，",
-      "after_context": "过回中。焉作信宫渭南，已更命信宫为极庙，象天极。自极庙道通郦...",
+      "after_context": "过回中。",
       "items": [
         {
           "source": "zhengyi",
@@ -1574,10 +2084,10 @@
       "sentence_id": null
     },
     {
-      "id": "n099",
+      "id": "n134",
       "anchor_text": "过回中。",
       "before_context": "二十七年，始皇巡陇西、北地，出鸡头山，过回中。",
-      "after_context": "焉作信宫渭南，已更命信宫为极庙，象天极。自极庙道通郦山，作甘...",
+      "after_context": "焉作信宫渭南，已更命信宫为极庙，象天极。",
       "items": [
         {
           "source": "jijie",
@@ -1593,10 +2103,24 @@
       "sentence_id": null
     },
     {
-      "id": "n100",
+      "id": "n135",
+      "anchor_text": "焉作信宫渭南，已更命信宫为极庙，象天极。",
+      "before_context": "...，出鸡头山，过回中。焉作信宫渭南，已更命信宫为极庙，象天极。",
+      "after_context": "自极庙道通郦山，作甘泉前殿。筑甬道，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "为宫庙象天极，故曰极庙。《天官书》曰「中宫曰天极」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n136",
       "anchor_text": "自极庙道通郦山，作甘泉前殿。筑甬道，",
       "before_context": "...更命信宫为极庙，象天极。自极庙道通郦山，作甘泉前殿。筑甬道，",
-      "after_context": "自咸阳",
+      "after_context": "自咸阳属之。是岁，赐爵一级。治驰道。",
       "items": [
         {
           "source": "jijie",
@@ -1612,10 +2136,24 @@
       "sentence_id": null
     },
     {
-      "id": "n101",
+      "id": "n137",
+      "anchor_text": "属之。是岁，赐爵一级。治驰道。",
+      "before_context": "...山，作甘泉前殿。筑甬道，自咸阳属之。是岁，赐爵一级。治驰道。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "应劭曰：「驰道，天子道也，道若今之中道然。」《汉书》贾山传曰：「秦为驰道于天下，东穷燕齐，南极吴楚，江湖之上，滨海之观毕至。道广五十步，三丈而树，厚筑其外，隐以金椎，树以青松。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n138",
       "anchor_text": "二十八年，始皇东行郡县，上邹峄山。",
       "before_context": "二十八年，始皇东行郡县，上邹峄山。",
-      "after_context": "立石，与鲁诸儒生议，刻石颂秦德，议封禅望祭山川之事。乃遂上泰...",
+      "after_context": "立石，与鲁诸儒生议，刻石颂秦德，议封禅望祭山川之事。",
       "items": [
         {
           "source": "jijie",
@@ -1631,10 +2169,10 @@
       "sentence_id": null
     },
     {
-      "id": "n102",
+      "id": "n139",
       "anchor_text": "儒生议，刻石颂秦德，议封禅望祭山川之事。",
       "before_context": "...邹峄山。立石，与鲁诸儒生议，刻石颂秦德，议封禅望祭山川之事。",
-      "after_context": "乃遂上泰山",
+      "after_context": "乃遂上泰山，",
       "items": [
         {
           "source": "zhengyi",
@@ -1645,10 +2183,10 @@
       "sentence_id": null
     },
     {
-      "id": "n103",
+      "id": "n140",
       "anchor_text": "，",
       "before_context": "...，与鲁诸儒生议，刻石颂秦德，议封禅望祭山川之事。乃遂上泰山，",
-      "after_context": "立石，封，祠祀。下，风雨暴至，休于树下，因封其树为五大夫。禅...",
+      "after_context": "立石，封，祠祀。",
       "items": [
         {
           "source": "zhengyi",
@@ -1659,10 +2197,24 @@
       "sentence_id": null
     },
     {
-      "id": "n104",
+      "id": "n141",
+      "anchor_text": "立石，封，祠祀。",
+      "before_context": "...刻石颂秦德，议封禅望祭山川之事。乃遂上泰山，立石，封，祠祀。",
+      "after_context": "下，风雨暴至，休于树下，因封其树为五大夫。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「增天之高，归功于天。」张晏曰：「天高不可及，于泰山上立封禅而祭之，冀近神灵也。」瓒曰：「积土为封。谓负土于泰山上，为坛而祭之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n142",
       "anchor_text": "，风雨暴至，休于树下，因封其树为五大夫。",
-      "before_context": "，立石，封，祠祀。下，风雨暴至，休于树下，因封其树为五大夫。",
-      "after_context": "禅梁父。刻所立石，其辞曰：",
+      "before_context": "...，立石，封，祠祀。下，风雨暴至，休于树下，因封其树为五大夫。",
+      "after_context": "禅梁父。",
       "items": [
         {
           "source": "zhengyi",
@@ -1673,10 +2225,38 @@
       "sentence_id": null
     },
     {
-      "id": "n105",
+      "id": "n143",
+      "anchor_text": "禅梁父。",
+      "before_context": "...封，祠祀。下，风雨暴至，休于树下，因封其树为五大夫。禅梁父。",
+      "after_context": "刻所立石，其辞曰：",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「禅，阐广土地也。」瓒曰：「古者圣王封泰山，禅亭亭或梁父，皆泰山下小山。除地为𫮃，祭于梁父。后改『𫮃』曰『禅』。」正义父音甫。在兖州泗水县北八十里。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n144",
+      "anchor_text": "刻所立石，其辞曰：",
+      "before_context": "...暴至，休于树下，因封其树为五大夫。禅梁父。刻所立石，其辞曰：",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "其词每三句为韵，凡十二韵。下之罘、碣石、会稽三铭皆然。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n145",
       "anchor_text": "皇帝临位，作制明法，臣下修饬。",
       "before_context": "皇帝临位，作制明法，臣下修饬。",
-      "after_context": "二十有六年，初并天下，罔不宾服。亲巡远方黎民，登兹泰山",
+      "after_context": "二十有六年，初并天下，罔不宾服。亲巡远方黎民，登兹泰山，周览...",
       "items": [
         {
           "source": "zhengyi",
@@ -1687,10 +2267,10 @@
       "sentence_id": null
     },
     {
-      "id": "n106",
+      "id": "n146",
       "anchor_text": "，周览东极。从臣思迹，",
       "before_context": "...天下，罔不宾服。亲巡远方黎民，登兹泰山，周览东极。从臣思迹，",
-      "after_context": "本原事业，祗诵功德。治道运行，诸产得宜，皆有法式。大义休明，...",
+      "after_context": "本原事业，祗诵功德。",
       "items": [
         {
           "source": "zhengyi",
@@ -1701,7 +2281,7 @@
       "sentence_id": null
     },
     {
-      "id": "n107",
+      "id": "n147",
       "anchor_text": "本原事业，祗诵功德。",
       "before_context": "...远方黎民，登兹泰山，周览东极。从臣思迹，本原事业，祗诵功德。",
       "after_context": "治道运行，诸产得宜，皆有法式。大义休明，垂于后世，顺承勿革。...",
@@ -1715,7 +2295,7 @@
       "sentence_id": null
     },
     {
-      "id": "n108",
+      "id": "n148",
       "anchor_text": "既平天下，不懈于治。夙兴夜寐，建设长利，",
       "before_context": "...顺承勿革。皇帝躬圣，既平天下，不懈于治。夙兴夜寐，建设长利，",
       "after_context": "专隆教诲。训经宣达，远近毕理，咸承圣志。贵贱分明，男女礼顺，...",
@@ -1729,10 +2309,24 @@
       "sentence_id": null
     },
     {
-      "id": "n109",
+      "id": "n149",
+      "anchor_text": "贵贱分明，男女礼顺，慎遵职事。昭隔内外，",
+      "before_context": "...远近毕理，咸承圣志。贵贱分明，男女礼顺，慎遵职事。昭隔内外，",
+      "after_context": "靡不清净，施于后嗣。化及无穷，遵奉遗诏，永承重戒。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「隔，一作『融』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n150",
       "anchor_text": "于是乃并勃海以东，",
       "before_context": "于是乃并勃海以东，",
-      "after_context": "过黄、腄，穷成山，登之罘，立石颂秦德焉而去。",
+      "after_context": "过黄、腄，",
       "items": [
         {
           "source": "zhengyi",
@@ -1743,10 +2337,10 @@
       "sentence_id": null
     },
     {
-      "id": "n110",
+      "id": "n151",
       "anchor_text": "过黄、腄，",
       "before_context": "于是乃并勃海以东，过黄、腄，",
-      "after_context": "穷成山，登之罘，立石颂秦德焉而去。",
+      "after_context": "穷成山，登之罘，",
       "items": [
         {
           "source": "jijie",
@@ -1762,7 +2356,7 @@
       "sentence_id": null
     },
     {
-      "id": "n111",
+      "id": "n152",
       "anchor_text": "穷成山，登之罘，",
       "before_context": "于是乃并勃海以东，过黄、腄，穷成山，登之罘，",
       "after_context": "立石颂秦德焉而去。",
@@ -1781,10 +2375,24 @@
       "sentence_id": null
     },
     {
-      "id": "n112",
+      "id": "n153",
+      "anchor_text": "南登琅邪，",
+      "before_context": "南登琅邪，",
+      "after_context": "大乐之，留三月。乃徙黔首三万户琅邪台下，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "今兖州东沂州、密州，即古琅邪也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n154",
       "anchor_text": "大乐之，留三月。乃徙黔首三万户琅邪台下，",
       "before_context": "南登琅邪，大乐之，留三月。乃徙黔首三万户琅邪台下，",
-      "after_context": "复十二岁。作琅邪台，立石刻，颂秦德，明得意。曰：",
+      "after_context": "复十二岁。",
       "items": [
         {
           "source": "jijie",
@@ -1805,10 +2413,10 @@
       "sentence_id": null
     },
     {
-      "id": "n113",
+      "id": "n155",
       "anchor_text": "复十二岁。",
       "before_context": "南登琅邪，大乐之，留三月。乃徙黔首三万户琅邪台下，复十二岁。",
-      "after_context": "作琅邪台，立石刻，颂秦德，明得意。曰：",
+      "after_context": "作琅邪台，",
       "items": [
         {
           "source": "zhengyi",
@@ -1819,9 +2427,9 @@
       "sentence_id": null
     },
     {
-      "id": "n114",
+      "id": "n156",
       "anchor_text": "作琅邪台，",
-      "before_context": "大乐之，留三月。乃徙黔首三万户琅邪台下，复十二岁。作琅邪台，",
+      "before_context": "...大乐之，留三月。乃徙黔首三万户琅邪台下，复十二岁。作琅邪台，",
       "after_context": "立石刻，颂秦德，明得意。曰：",
       "items": [
         {
@@ -1833,7 +2441,21 @@
       "sentence_id": null
     },
     {
-      "id": "n115",
+      "id": "n157",
+      "anchor_text": "立石刻，颂秦德，明得意。曰：",
+      "before_context": "...户琅邪台下，复十二岁。作琅邪台，立石刻，颂秦德，明得意。曰：",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "二句为韵。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n158",
       "anchor_text": "圣智仁义，显白道理。东抚东土，以省卒士。",
       "before_context": "...以明人事，合同父子。圣智仁义，显白道理。东抚东土，以省卒士。",
       "after_context": "事已大毕，乃临于海。皇帝之功，勤劳本事。上农除末，黔首是富。...",
@@ -1847,7 +2469,21 @@
       "sentence_id": null
     },
     {
-      "id": "n116",
+      "id": "n159",
+      "anchor_text": "上农除末，黔首是富。普天之下，抟心揖志。",
+      "before_context": "...皇帝之功，勤劳本事。上农除末，黔首是富。普天之下，抟心揖志。",
+      "after_context": "器械一量，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "抟，古「专」字。《左传》云：「如琴瑟之抟壹。」揖音集。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n160",
       "anchor_text": "器械一量，",
       "before_context": "...勤劳本事。上农除末，黔首是富。普天之下，抟心揖志。器械一量，",
       "after_context": "同书文字。日月所照，舟舆所载。皆终其命，莫不得意。应时动事，...",
@@ -1861,10 +2497,10 @@
       "sentence_id": null
     },
     {
-      "id": "n117",
+      "id": "n161",
       "anchor_text": "应时动事，是维皇帝。匡饬异俗，陵水经地。",
       "before_context": "...皆终其命，莫不得意。应时动事，是维皇帝。匡饬异俗，陵水经地。",
-      "after_context": "忧恤黔首，朝夕不懈。除疑定法，咸知所辟。方伯分职，诸治经易。",
+      "after_context": "忧恤黔首，朝夕不懈。除疑定法，咸知所辟。",
       "items": [
         {
           "source": "zhengyi",
@@ -1875,10 +2511,10 @@
       "sentence_id": null
     },
     {
-      "id": "n118",
+      "id": "n162",
       "anchor_text": "忧恤黔首，朝夕不懈。除疑定法，咸知所辟。",
       "before_context": "...匡饬异俗，陵水经地。忧恤黔首，朝夕不懈。除疑定法，咸知所辟。",
-      "after_context": "方伯分职，诸治经易。举错必当，莫不如画。皇帝之明，临察四方。...",
+      "after_context": "方伯分职，诸治经易。",
       "items": [
         {
           "source": "zhengyi",
@@ -1889,10 +2525,10 @@
       "sentence_id": null
     },
     {
-      "id": "n119",
+      "id": "n163",
       "anchor_text": "方伯分职，诸治经易。",
-      "before_context": "忧恤黔首，朝夕不懈。除疑定法，咸知所辟。方伯分职，诸治经易。",
-      "after_context": "举错必当，莫不如画。皇帝之明，临察四方。尊卑贵贱，不逾次行。",
+      "before_context": "...忧恤黔首，朝夕不懈。除疑定法，咸知所辟。方伯分职，诸治经易。",
+      "after_context": "举错必当，莫不如画。",
       "items": [
         {
           "source": "zhengyi",
@@ -1903,10 +2539,10 @@
       "sentence_id": null
     },
     {
-      "id": "n120",
+      "id": "n164",
       "anchor_text": "举错必当，莫不如画。",
       "before_context": "...除疑定法，咸知所辟。方伯分职，诸治经易。举错必当，莫不如画。",
-      "after_context": "皇帝之明，临察四方。尊卑贵贱，不逾次行。奸邪不容，皆务贞良。...",
+      "after_context": "皇帝之明，临察四方。尊卑贵贱，不逾次行。",
       "items": [
         {
           "source": "zhengyi",
@@ -1917,10 +2553,10 @@
       "sentence_id": null
     },
     {
-      "id": "n121",
+      "id": "n165",
       "anchor_text": "皇帝之明，临察四方。尊卑贵贱，不逾次行。",
-      "before_context": "举错必当，莫不如画。皇帝之明，临察四方。尊卑贵贱，不逾次行。",
-      "after_context": "奸邪不容，皆务贞良。细大尽力，莫敢怠荒。远迩辟隐，专务肃庄。...",
+      "before_context": "...举错必当，莫不如画。皇帝之明，临察四方。尊卑贵贱，不逾次行。",
+      "after_context": "奸邪不容，皆务贞良。细大尽力，莫敢怠荒。远迩辟隐，",
       "items": [
         {
           "source": "zhengyi",
@@ -1931,7 +2567,7 @@
       "sentence_id": null
     },
     {
-      "id": "n122",
+      "id": "n166",
       "anchor_text": "皆务贞良。细大尽力，莫敢怠荒。远迩辟隐，",
       "before_context": "...不逾次行。奸邪不容，皆务贞良。细大尽力，莫敢怠荒。远迩辟隐，",
       "after_context": "专务肃庄。端直敦忠，事业有常。皇帝之德，存定四极。诛乱除害，...",
@@ -1945,7 +2581,7 @@
       "sentence_id": null
     },
     {
-      "id": "n123",
+      "id": "n167",
       "anchor_text": "节事以时，诸产繁殖。黔首安宁，不用兵革。",
       "before_context": "...诛乱除害，兴利致福。节事以时，诸产繁殖。黔首安宁，不用兵革。",
       "after_context": "六亲相保，终无寇贼。驩欣奉教，尽知法式。六合之内，皇帝之土。...",
@@ -1959,10 +2595,10 @@
       "sentence_id": null
     },
     {
-      "id": "n124",
+      "id": "n168",
       "anchor_text": "尽知法式。六合之内，皇帝之土。西涉流沙，",
       "before_context": "...终无寇贼。驩欣奉教，尽知法式。六合之内，皇帝之土。西涉流沙，",
-      "after_context": "南尽北户。东有东海",
+      "after_context": "南尽北户。东有东海，北过大夏。",
       "items": [
         {
           "source": "zhengyi",
@@ -1973,7 +2609,7 @@
       "sentence_id": null
     },
     {
-      "id": "n125",
+      "id": "n169",
       "anchor_text": "，北过大夏。",
       "before_context": "...六合之内，皇帝之土。西涉流沙，南尽北户。东有东海，北过大夏。",
       "after_context": "人迹所至，无不臣者。功盖五帝，泽及牛马。莫不受德，各安其宇。",
@@ -1992,10 +2628,38 @@
       "sentence_id": null
     },
     {
-      "id": "n126",
+      "id": "n170",
+      "anchor_text": "下，立名为皇帝，乃抚东土，至于琅邪。列侯",
+      "before_context": "维秦王兼有天下，立名为皇帝，乃抚东土，至于琅邪。列侯",
+      "after_context": "武城侯王离、列侯通武侯王贲、伦侯",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "张晏曰：「列侯者，见序列。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n171",
+      "anchor_text": "武城侯王离、列侯通武侯王贲、伦侯",
+      "before_context": "...帝，乃抚东土，至于琅邪。列侯武城侯王离、列侯通武侯王贲、伦侯",
+      "after_context": "建成侯赵亥、伦侯昌武侯成、伦侯武信侯冯毋择、丞相隗林、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "爵卑于列侯，无封邑者。伦，类也，亦列侯之类。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n172",
       "anchor_text": "侯昌武侯成、伦侯武信侯冯毋择、丞相隗林、",
       "before_context": "...、伦侯建成侯赵亥、伦侯昌武侯成、伦侯武信侯冯毋择、丞相隗林、",
-      "after_context": "丞相王绾、卿李斯",
+      "after_context": "丞相王绾、卿李斯、卿王戊、五大夫赵婴、五大夫杨樛",
       "items": [
         {
           "source": "suoyin",
@@ -2011,10 +2675,10 @@
       "sentence_id": null
     },
     {
-      "id": "n127",
+      "id": "n173",
       "anchor_text": "、卿王戊、五大夫赵婴、五大夫杨樛",
       "before_context": "...、丞相隗林、丞相王绾、卿李斯、卿王戊、五大夫赵婴、五大夫杨樛",
-      "after_context": "从，与议于海上。曰：「古之帝者，地不过千里，诸侯各守其封域，...",
+      "after_context": "从，与",
       "items": [
         {
           "source": "zhengyi",
@@ -2025,10 +2689,10 @@
       "sentence_id": null
     },
     {
-      "id": "n128",
+      "id": "n174",
       "anchor_text": "从，与",
       "before_context": "...隗林、丞相王绾、卿李斯、卿王戊、五大夫赵婴、五大夫杨樛从，与",
-      "after_context": "议于海上。曰：「古之帝者，地不过千里，诸侯各守其封域，或朝或...",
+      "after_context": "议于海上。",
       "items": [
         {
           "source": "zhengyi",
@@ -2039,10 +2703,10 @@
       "sentence_id": null
     },
     {
-      "id": "n129",
+      "id": "n175",
       "anchor_text": "议于海上。",
       "before_context": "...王绾、卿李斯、卿王戊、五大夫赵婴、五大夫杨樛从，与议于海上。",
-      "after_context": "曰：「古之帝者，地不过千里，诸侯各守其封域，或朝或否，相侵暴...",
+      "after_context": "曰：「古之帝者，地不过千里，",
       "items": [
         {
           "source": "zhengyi",
@@ -2053,7 +2717,7 @@
       "sentence_id": null
     },
     {
-      "id": "n130",
+      "id": "n176",
       "anchor_text": "曰：「古之帝者，地不过千里，",
       "before_context": "...赵婴、五大夫杨樛从，与议于海上。曰：「古之帝者，地不过千里，",
       "after_context": "诸侯各守其封域，或朝或否，相侵暴乱，残伐不止，犹刻金石，以自...",
@@ -2067,10 +2731,10 @@
       "sentence_id": null
     },
     {
-      "id": "n131",
+      "id": "n177",
       "anchor_text": "五帝三王，知教不同，法度不明，假威鬼神，",
       "before_context": "...金石，以自为纪。古之五帝三王，知教不同，法度不明，假威鬼神，",
-      "after_context": "以欺远方，实不称名，故不久长。其身未殁，诸侯倍叛，法令不行。...",
+      "after_context": "以欺远方，实不称名，",
       "items": [
         {
           "source": "zhengyi",
@@ -2081,7 +2745,7 @@
       "sentence_id": null
     },
     {
-      "id": "n132",
+      "id": "n178",
       "anchor_text": "以欺远方，实不称名，",
       "before_context": "...五帝三王，知教不同，法度不明，假威鬼神，以欺远方，实不称名，",
       "after_context": "故不久长。其身未殁，诸侯倍叛，法令不行。今皇帝并一海内，以为...",
@@ -2095,7 +2759,7 @@
       "sentence_id": null
     },
     {
-      "id": "n133",
+      "id": "n179",
       "anchor_text": "，言海中有三神山，名曰蓬莱、方丈、瀛洲，",
       "before_context": "既已，齐人徐巿等上书，言海中有三神山，名曰蓬莱、方丈、瀛洲，",
       "after_context": "僊人居之。请得斋戒，与童男女求之。于是遣徐巿发童男女数千人，...",
@@ -2109,7 +2773,7 @@
       "sentence_id": null
     },
     {
-      "id": "n134",
+      "id": "n180",
       "anchor_text": "。于是遣徐巿发童男女数千人，入海求僊人。",
       "before_context": "...得斋戒，与童男女求之。于是遣徐巿发童男女数千人，入海求僊人。",
       "after_context": "",
@@ -2123,7 +2787,7 @@
       "sentence_id": null
     },
     {
-      "id": "n135",
+      "id": "n181",
       "anchor_text": "，",
       "before_context": "始皇还，过彭城，",
       "after_context": "斋戒祷祠，欲出周鼎泗水。使千人没水求之，弗得。乃西南渡淮水，...",
@@ -2137,10 +2801,10 @@
       "sentence_id": null
     },
     {
-      "id": "n136",
+      "id": "n182",
       "anchor_text": "人没水求之，弗得。乃西南渡淮水，之衡山、",
       "before_context": "...，欲出周鼎泗水。使千人没水求之，弗得。乃西南渡淮水，之衡山、",
-      "after_context": "南郡。浮江，至湘山",
+      "after_context": "南郡。",
       "items": [
         {
           "source": "zhengyi",
@@ -2151,10 +2815,10 @@
       "sentence_id": null
     },
     {
-      "id": "n137",
+      "id": "n183",
       "anchor_text": "南郡。",
       "before_context": "...周鼎泗水。使千人没水求之，弗得。乃西南渡淮水，之衡山、南郡。",
-      "after_context": "浮江，至湘山",
+      "after_context": "浮江，至湘山祠。",
       "items": [
         {
           "source": "zhengyi",
@@ -2165,7 +2829,7 @@
       "sentence_id": null
     },
     {
-      "id": "n138",
+      "id": "n184",
       "anchor_text": "祠。",
       "before_context": "...没水求之，弗得。乃西南渡淮水，之衡山、南郡。浮江，至湘山祠。",
       "after_context": "逢大风，几不得渡。上问博士曰：「湘君何神？」博士对曰：「闻之...",
@@ -2179,7 +2843,21 @@
       "sentence_id": null
     },
     {
-      "id": "n139",
+      "id": "n185",
+      "anchor_text": "之妻，而葬此。」",
+      "before_context": "...曰：「湘君何神？」博士对曰：「闻之，尧女，舜之妻，而葬此。」",
+      "after_context": "于是始皇大怒，使刑徒三千人皆伐湘山树，赭其山。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《列女传》亦以湘君为尧女。按：楚词九歌有湘君、湘夫人。夫人是尧女，则湘君当是舜。今此文以湘君为尧女，是总而言之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n186",
       "anchor_text": "树，赭其山。",
       "before_context": "...妻，而葬此。」于是始皇大怒，使刑徒三千人皆伐湘山树，赭其山。",
       "after_context": "上自南郡由武关归。",
@@ -2193,7 +2871,7 @@
       "sentence_id": null
     },
     {
-      "id": "n140",
+      "id": "n187",
       "anchor_text": "上自南郡由武关归。",
       "before_context": "...始皇大怒，使刑徒三千人皆伐湘山树，赭其山。上自南郡由武关归。",
       "after_context": "",
@@ -2212,7 +2890,7 @@
       "sentence_id": null
     },
     {
-      "id": "n141",
+      "id": "n188",
       "anchor_text": "二十九年，始皇东游。至阳武博狼沙中，",
       "before_context": "二十九年，始皇东游。至阳武博狼沙中，",
       "after_context": "为盗所惊。求弗得，乃令天下大索十日。",
@@ -2231,10 +2909,24 @@
       "sentence_id": null
     },
     {
-      "id": "n142",
+      "id": "n189",
+      "anchor_text": "登之罘，刻石。其辞曰：",
+      "before_context": "登之罘，刻石。其辞曰：",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "三句为韵，凡十二韵。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n190",
       "anchor_text": "维二十九年，时在中春，",
       "before_context": "维二十九年，时在中春，",
-      "after_context": "阳和方起。皇帝东游，巡登之罘，临照于海。从臣嘉观，原念休烈，...",
+      "after_context": "阳和方起。皇帝东游，巡登之罘，临照于海。从臣嘉观，",
       "items": [
         {
           "source": "zhengyi",
@@ -2245,7 +2937,7 @@
       "sentence_id": null
     },
     {
-      "id": "n143",
+      "id": "n191",
       "anchor_text": "皇帝东游，巡登之罘，临照于海。从臣嘉观，",
       "before_context": "...时在中春，阳和方起。皇帝东游，巡登之罘，临照于海。从臣嘉观，",
       "after_context": "原念休烈，追诵本始。大圣作治，建定法度，显箸纲纪。外教诸侯，...",
@@ -2259,10 +2951,10 @@
       "sentence_id": null
     },
     {
-      "id": "n144",
+      "id": "n192",
       "anchor_text": "外教诸侯，光施文惠，明以义理。六国回辟，",
       "before_context": "...建定法度，显箸纲纪。外教诸侯，光施文惠，明以义理。六国回辟，",
-      "after_context": "贪戾无厌，虐杀不已。皇帝哀众，遂发讨师，奋扬武德。义诛信行，...",
+      "after_context": "贪戾无厌，",
       "items": [
         {
           "source": "zhengyi",
@@ -2273,7 +2965,7 @@
       "sentence_id": null
     },
     {
-      "id": "n145",
+      "id": "n193",
       "anchor_text": "贪戾无厌，",
       "before_context": "...显箸纲纪。外教诸侯，光施文惠，明以义理。六国回辟，贪戾无厌，",
       "after_context": "虐杀不已。皇帝哀众，遂发讨师，奋扬武德。义诛信行，威𬊤旁达，",
@@ -2287,21 +2979,124 @@
       "sentence_id": null
     },
     {
-      "id": "n146",
-      "anchor_text": "十二月，更名腊曰「嘉平」。",
-      "before_context": "三十一年十二月，更名腊曰「嘉平」。",
-      "after_context": "赐黔首里六石米，二羊。始皇为微行咸阳",
+      "id": "n194",
+      "anchor_text": "遂发讨师，奋扬武德。义诛信行，威𬊤旁达，",
+      "before_context": "...虐杀不已。皇帝哀众，遂发讨师，奋扬武德。义诛信行，威𬊤旁达，",
+      "after_context": "莫不宾服。烹灭彊暴，振救黔首，周定四极。普施明法，经纬天下，...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "太原真人茅盈内纪曰：「始皇三十一年九月庚子，盈曾祖父蒙，乃于华山之中，乘云驾龙，白日升天。先是其邑谣歌曰『神仙得者茅初成，驾龙上升入泰清，时下玄洲戏赤城，继世而往在我盈，帝若学之腊嘉平』。始皇闻谣歌而问其故，父老具对此仙人之谣歌，劝帝求长生之术。于是始皇欣然，乃有寻仙之志，因改腊曰『嘉平』。」"
+          "text": "徐广曰：「𬊤，充善反。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n147",
+      "id": "n195",
+      "anchor_text": "，经纬天下，永为仪则。大矣哉！宇县之中，",
+      "before_context": "...，周定四极。普施明法，经纬天下，永为仪则。大矣哉！宇县之中，",
+      "after_context": "承顺圣意。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "宇，宇宙。县，赤县。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n196",
+      "anchor_text": "承顺圣意。",
+      "before_context": "...。普施明法，经纬天下，永为仪则。大矣哉！宇县之中，承顺圣意。",
+      "after_context": "群臣诵功，请刻于石，表垂于常式。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "协韵音忆。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n197",
+      "anchor_text": "永偃戎兵。皇帝明德，经理宇内，视听不怠。",
+      "before_context": "...阐并天下，甾害绝息，永偃戎兵。皇帝明德，经理宇内，视听不怠。",
+      "after_context": "作立大义，昭设备器，咸有章旗。职臣遵分，各知所行，事无嫌疑。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "怠，协旗、疑韵，音铜綦反。故《国语》范蠡曰「得时不怠，时不再来」，亦以怠与台为韵。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n198",
+      "anchor_text": "旋，遂之琅邪，道上党入。",
+      "before_context": "旋，遂之琅邪，道上党入。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "道犹从也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n199",
+      "anchor_text": "三十一年",
+      "before_context": "三十一年",
+      "after_context": "十二月，更名腊曰「嘉平」。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「使黔首自实田也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n200",
+      "anchor_text": "十二月，更名腊曰「嘉平」。",
+      "before_context": "三十一年十二月，更名腊曰「嘉平」。",
+      "after_context": "赐黔首里六石米，二羊。始皇为微行咸阳，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "太原真人茅盈内纪曰：「始皇三十一年九月庚子，盈曾祖父蒙，乃于华山之中，乘云驾龙，白日升天。先是其邑谣歌曰『神仙得者茅初成，驾龙上升入泰清，时下玄洲戏赤城，继世而往在我盈，帝若学之腊嘉平』。始皇闻谣歌而问其故，父老具对此仙人之谣歌，劝帝求长生之术。于是始皇欣然，乃有寻仙之志，因改腊曰『嘉平』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "广雅曰：「夏曰『清祀』，殷曰『嘉平』，周曰『大蜡』，亦曰『腊』，秦更曰『嘉平』。」盖应歌谣之词而改从殷号也。道书茅蒙字初成，今此云「茅蒙初成」者为神仙之道，其意失也。盖由裴氏所引不明，或后人增益「蒙」字，遂令七言之词有衍尔。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n201",
+      "anchor_text": "，",
+      "before_context": "...月，更名腊曰「嘉平」。赐黔首里六石米，二羊。始皇为微行咸阳，",
+      "after_context": "与武士四人俱，夜出逢盗兰池，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "张晏曰：「若微贱之所为，故曰微行也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n202",
       "anchor_text": "与武士四人俱，夜出逢盗兰池，",
       "before_context": "...里六石米，二羊。始皇为微行咸阳，与武士四人俱，夜出逢盗兰池，",
       "after_context": "见窘，武士击杀盗，关中大索二十日。米石千六百。",
@@ -2320,10 +3115,24 @@
       "sentence_id": null
     },
     {
-      "id": "n148",
+      "id": "n203",
+      "anchor_text": "三十二年，始皇之碣石，使燕人卢生求羡门、",
+      "before_context": "三十二年，始皇之碣石，使燕人卢生求羡门、",
+      "after_context": "高誓。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韦昭曰：「古仙人。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n204",
       "anchor_text": "高誓。",
       "before_context": "三十二年，始皇之碣石，使燕人卢生求羡门、高誓。",
-      "after_context": "刻碣石门。坏城郭，决通隄防。其辞曰：",
+      "after_context": "刻碣石门。",
       "items": [
         {
           "source": "zhengyi",
@@ -2334,7 +3143,21 @@
       "sentence_id": null
     },
     {
-      "id": "n149",
+      "id": "n205",
+      "anchor_text": "刻碣石门。",
+      "before_context": "三十二年，始皇之碣石，使燕人卢生求羡门、高誓。刻碣石门。",
+      "after_context": "坏城郭，决通隄防。其辞曰：",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『盟』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n206",
       "anchor_text": "坏城郭，决通隄防。其辞曰：",
       "before_context": "...使燕人卢生求羡门、高誓。刻碣石门。坏城郭，决通隄防。其辞曰：",
       "after_context": "",
@@ -2348,7 +3171,7 @@
       "sentence_id": null
     },
     {
-      "id": "n150",
+      "id": "n207",
       "anchor_text": "诛戮无道，为逆灭息。武殄暴逆，文复无罪，",
       "before_context": "遂兴师旅，诛戮无道，为逆灭息。武殄暴逆，文复无罪，",
       "after_context": "庶心咸服。惠论功劳，赏及牛马，恩肥土域。皇帝奋威，德并诸侯，...",
@@ -2367,10 +3190,10 @@
       "sentence_id": null
     },
     {
-      "id": "n151",
+      "id": "n208",
       "anchor_text": "皇帝奋威，德并诸侯，初一泰平。堕坏城郭，",
       "before_context": "...赏及牛马，恩肥土域。皇帝奋威，德并诸侯，初一泰平。堕坏城郭，",
-      "after_context": "决通川防，夷去险阻。地势既定，黎庶无繇，天下咸抚。男乐其畴，...",
+      "after_context": "决通川防，夷去险阻。地势既定，黎庶无繇，",
       "items": [
         {
           "source": "zhengyi",
@@ -2381,7 +3204,7 @@
       "sentence_id": null
     },
     {
-      "id": "n152",
+      "id": "n209",
       "anchor_text": "决通川防，夷去险阻。地势既定，黎庶无繇，",
       "before_context": "...初一泰平。堕坏城郭，决通川防，夷去险阻。地势既定，黎庶无繇，",
       "after_context": "天下咸抚。男乐其畴，女修其业，事各有序。惠被诸产，久并来田，",
@@ -2395,10 +3218,24 @@
       "sentence_id": null
     },
     {
-      "id": "n153",
+      "id": "n210",
+      "anchor_text": "女修其业，事各有序。惠被诸产，久并来田，",
+      "before_context": "...天下咸抚。男乐其畴，女修其业，事各有序。惠被诸产，久并来田，",
+      "after_context": "莫不安所。群臣诵烈，请刻此石，垂著仪矩。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「久，一作『分』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n211",
       "anchor_text": "死之药。始皇巡北边，从上郡入。燕人卢生使",
       "before_context": "...、侯公、石生求仙人不死之药。始皇巡北边，从上郡入。燕人卢生使",
-      "after_context": "入海还，以鬼神事，因奏录图书，曰「亡秦者胡也」。始皇乃使将军...",
+      "after_context": "入海还，以鬼神事，因奏录图书，曰「亡秦者胡也」。",
       "items": [
         {
           "source": "zhengyi",
@@ -2409,7 +3246,21 @@
       "sentence_id": null
     },
     {
-      "id": "n154",
+      "id": "n212",
+      "anchor_text": "以鬼神事，因奏录图书，曰「亡秦者胡也」。",
+      "before_context": "...。燕人卢生使入海还，以鬼神事，因奏录图书，曰「亡秦者胡也」。",
+      "after_context": "始皇乃使将军蒙恬发兵三十万人北击胡，略取河南地。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "郑玄曰：「胡，胡亥，秦二世名也。秦见图书，不知此为人名，反备北胡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n213",
       "anchor_text": "地。",
       "before_context": "...秦者胡也」。始皇乃使将军蒙恬发兵三十万人北击胡，略取河南地。",
       "after_context": "",
@@ -2423,10 +3274,24 @@
       "sentence_id": null
     },
     {
-      "id": "n155",
+      "id": "n214",
+      "anchor_text": "三十三年，发诸尝逋亡人、赘壻、",
+      "before_context": "三十三年，发诸尝逋亡人、赘壻、",
+      "after_context": "贾人略取陆梁地，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "瓒曰：「赘，谓居穷有子，使就其妇家为赘壻。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n215",
       "anchor_text": "贾人略取陆梁地，",
       "before_context": "三十三年，发诸尝逋亡人、赘壻、贾人略取陆梁地，",
-      "after_context": "为桂林、象郡、南海，以适遣戍。西北斥逐匈奴",
+      "after_context": "为桂林、",
       "items": [
         {
           "source": "suoyin",
@@ -2442,10 +3307,38 @@
       "sentence_id": null
     },
     {
-      "id": "n156",
+      "id": "n216",
+      "anchor_text": "为桂林、",
+      "before_context": "三十三年，发诸尝逋亡人、赘壻、贾人略取陆梁地，为桂林、",
+      "after_context": "象郡、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韦昭曰：「今郁林是也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n217",
+      "anchor_text": "象郡、",
+      "before_context": "三十三年，发诸尝逋亡人、赘壻、贾人略取陆梁地，为桂林、象郡、",
+      "after_context": "南海，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韦昭曰：「今日南。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n218",
       "anchor_text": "南海，",
       "before_context": "...年，发诸尝逋亡人、赘壻、贾人略取陆梁地，为桂林、象郡、南海，",
-      "after_context": "以适遣戍。西北斥逐匈奴",
+      "after_context": "以适遣戍。",
       "items": [
         {
           "source": "zhengyi",
@@ -2456,10 +3349,10 @@
       "sentence_id": null
     },
     {
-      "id": "n157",
+      "id": "n219",
       "anchor_text": "以适遣戍。",
       "before_context": "...逋亡人、赘壻、贾人略取陆梁地，为桂林、象郡、南海，以适遣戍。",
-      "after_context": "西北斥逐匈奴",
+      "after_context": "西北斥逐匈奴。自榆中",
       "items": [
         {
           "source": "jijie",
@@ -2475,10 +3368,38 @@
       "sentence_id": null
     },
     {
-      "id": "n158",
+      "id": "n220",
+      "anchor_text": "。自榆中",
+      "before_context": "...取陆梁地，为桂林、象郡、南海，以适遣戍。西北斥逐匈奴。自榆中",
+      "after_context": "并河以东，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「在金城。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n221",
+      "anchor_text": "并河以东，",
+      "before_context": "...为桂林、象郡、南海，以适遣戍。西北斥逐匈奴。自榆中并河以东，",
+      "after_context": "属之阴山，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「并音傍。傍，依也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n222",
       "anchor_text": "属之阴山，",
       "before_context": "...郡、南海，以适遣戍。西北斥逐匈奴。自榆中并河以东，属之阴山，",
-      "after_context": "以为（",
+      "after_context": "以为（三）〔四〕十四县，城河上为塞。又使蒙恬渡河取高阙、",
       "items": [
         {
           "source": "jijie",
@@ -2494,10 +3415,10 @@
       "sentence_id": null
     },
     {
-      "id": "n159",
+      "id": "n223",
       "anchor_text": "十四县，城河上为塞。又使蒙恬渡河取高阙、",
       "before_context": "...山，以为（三）〔四〕十四县，城河上为塞。又使蒙恬渡河取高阙、",
-      "after_context": "（",
+      "after_context": "（陶）〔阳〕山、北假中，",
       "items": [
         {
           "source": "zhengyi",
@@ -2508,10 +3429,10 @@
       "sentence_id": null
     },
     {
-      "id": "n160",
+      "id": "n224",
       "anchor_text": "山、北假中，",
       "before_context": "...县，城河上为塞。又使蒙恬渡河取高阙、（陶）〔阳〕山、北假中，",
-      "after_context": "筑亭障以逐戎人。徙谪，实之初县。禁不得祠。明星出西方。",
+      "after_context": "筑亭障以逐戎人。徙谪，实之初县。",
       "items": [
         {
           "source": "jijie",
@@ -2532,7 +3453,35 @@
       "sentence_id": null
     },
     {
-      "id": "n161",
+      "id": "n225",
+      "anchor_text": "筑亭障以逐戎人。徙谪，实之初县。",
+      "before_context": "...阙、（陶）〔阳〕山、北假中，筑亭障以逐戎人。徙谪，实之初县。",
+      "after_context": "禁不得祠。明星出西方。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "徙有罪而谪之，以实初县，即上「自榆中属阴山，以为三十四县」是也。故汉七科谪亦因于秦。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n226",
+      "anchor_text": "禁不得祠。明星出西方。",
+      "before_context": "...假中，筑亭障以逐戎人。徙谪，实之初县。禁不得祠。明星出西方。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「皇甫谧云彗星见。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n227",
       "anchor_text": "十四年，适治狱吏不直者，筑长城及南越地。",
       "before_context": "三十四年，适治狱吏不直者，筑长城及南越地。",
       "after_context": "",
@@ -2546,7 +3495,7 @@
       "sentence_id": null
     },
     {
-      "id": "n162",
+      "id": "n228",
       "anchor_text": "宫，博士七十人前为寿。仆射",
       "before_context": "始皇置酒咸阳宫，博士七十人前为寿。仆射",
       "after_context": "周青臣进颂曰：「他时秦地不过千里，赖陛下神灵明圣，平定海内，...",
@@ -2565,7 +3514,7 @@
       "sentence_id": null
     },
     {
-      "id": "n163",
+      "id": "n229",
       "anchor_text": "子弟为匹夫，卒有田常、六卿之臣，无辅拂，",
       "before_context": "...辅。今陛下有海内，而子弟为匹夫，卒有田常、六卿之臣，无辅拂，",
       "after_context": "何以相救哉？事不师古而能长久者，非所闻也。今青臣又面谀以重陛...",
@@ -2579,7 +3528,7 @@
       "sentence_id": null
     },
     {
-      "id": "n164",
+      "id": "n230",
       "anchor_text": "一，百姓当家则力农工，士则学习法令辟禁。",
       "before_context": "...。今天下已定，法令出一，百姓当家则力农工，士则学习法令辟禁。",
       "after_context": "今诸生不师今而学古，以非当世，惑乱黔首。丞相臣斯昧死言：古者...",
@@ -2593,7 +3542,21 @@
       "sentence_id": null
     },
     {
-      "id": "n165",
+      "id": "n231",
+      "anchor_text": "道古以害今，饰虚言以乱实，人善其所私学，",
+      "before_context": "...，是以诸侯并作，语皆道古以害今，饰虚言以乱实，人善其所私学，",
+      "after_context": "以非上之所建立。今皇帝并有天下，别黑白而定一尊。私学而相与非...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「私，一作『知』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n232",
       "anchor_text": "学议之，入则心非，出则巷议，夸主以为名，",
       "before_context": "...，人闻令下，则各以其学议之，入则心非，出则巷议，夸主以为名，",
       "after_context": "异取以为高，率群下以造谤。如此弗禁，则主势降乎上，党与成乎下...",
@@ -2607,7 +3570,7 @@
       "sentence_id": null
     },
     {
-      "id": "n166",
+      "id": "n233",
       "anchor_text": "，悉诣守、尉杂烧之。有敢偶语诗书者弃市。",
       "before_context": "...有藏诗、书、百家语者，悉诣守、尉杂烧之。有敢偶语诗书者弃市。",
       "after_context": "以古非今者族。吏见知不举者与同罪。令下三十日不烧，黥为城旦。",
@@ -2626,10 +3589,66 @@
       "sentence_id": null
     },
     {
-      "id": "n167",
+      "id": "n234",
+      "anchor_text": "不举者与同罪。令下三十日不烧，黥为城旦。",
+      "before_context": "...以古非今者族。吏见知不举者与同罪。令下三十日不烧，黥为城旦。",
+      "after_context": "所不去者，医药卜筮种树之书。若欲有学法令，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「律说『论决为髡钳，输边筑长城，昼日伺寇虏，夜暮筑长城』。城旦，四岁刑。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n235",
+      "anchor_text": "不去者，医药卜筮种树之书。若欲有学法令，",
+      "before_context": "...日不烧，黥为城旦。所不去者，医药卜筮种树之书。若欲有学法令，",
+      "after_context": "以吏为师。」制曰：「可。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一无『法令』二字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n236",
+      "anchor_text": "三十五年，除道，道九原",
+      "before_context": "三十五年，除道，道九原",
+      "after_context": "抵云阳，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《地理志》五原郡有九原县。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n237",
+      "anchor_text": "抵云阳，",
+      "before_context": "三十五年，除道，道九原抵云阳，",
+      "after_context": "堑山堙谷，直通之。于是始皇以为咸阳人多，先王之宫廷小，吾闻周...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「表云道九原，通甘泉。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n238",
       "anchor_text": "。乃营作朝宫渭南上林苑中。先作前殿阿房，",
       "before_context": "...丰镐之闲，帝王之都也。乃营作朝宫渭南上林苑中。先作前殿阿房，",
-      "after_context": "东西五百步，南北五十丈，上可以坐万人，下可以建五丈旗。周驰为...",
+      "after_context": "东西五百步，南北五十丈，上可以坐万人，下可以建五丈旗。",
       "items": [
         {
           "source": "zhengyi",
@@ -2640,7 +3659,7 @@
       "sentence_id": null
     },
     {
-      "id": "n168",
+      "id": "n239",
       "anchor_text": "北五十丈，上可以坐万人，下可以建五丈旗。",
       "before_context": "...阿房，东西五百步，南北五十丈，上可以坐万人，下可以建五丈旗。",
       "after_context": "周驰为阁道，自殿下直抵南山。表南山之颠以为阙。为复道，自阿房...",
@@ -2659,7 +3678,21 @@
       "sentence_id": null
     },
     {
-      "id": "n169",
+      "id": "n240",
+      "anchor_text": "，以象天极阁道绝汉抵营室也。",
+      "before_context": "...阙。为复道，自阿房渡渭，属之咸阳，以象天极阁道绝汉抵营室也。",
+      "after_context": "阿房宫未成；成，欲更择令名名之。作宫阿房，故天下谓之阿房宫。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓为复道，渡渭属咸阳，象天文阁道绝汉抵营室也。常考《天官书》曰「天极紫宫后十七星绝汉抵营室，曰阁道」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n241",
       "anchor_text": "名名之。作宫阿房，故天下谓之阿房宫。隐宫",
       "before_context": "...宫未成；成，欲更择令名名之。作宫阿房，故天下谓之阿房宫。隐宫",
       "after_context": "徒刑者七十余万人，乃分作阿房宫，或作丽山。发北山石椁，乃写蜀...",
@@ -2673,7 +3706,7 @@
       "sentence_id": null
     },
     {
-      "id": "n170",
+      "id": "n242",
       "anchor_text": "上朐界中，以为秦东门。因徙三万家丽邑，",
       "before_context": "...外四百余。于是立石东海上朐界中，以为秦东门。因徙三万家丽邑，",
       "after_context": "五万家云阳，皆复不事十岁。",
@@ -2687,7 +3720,7 @@
       "sentence_id": null
     },
     {
-      "id": "n171",
+      "id": "n243",
       "anchor_text": "，则害于神。真人者，入水不濡，入火不𦶟，",
       "before_context": "...。人主所居而人臣知之，则害于神。真人者，入水不濡，入火不𦶟，",
       "after_context": "陵云气，与天地久长。今上治天下，未能恬倓。愿上所居宫毋令人知...",
@@ -2701,7 +3734,7 @@
       "sentence_id": null
     },
     {
-      "id": "n172",
+      "id": "n244",
       "anchor_text": "所幸，有言其处者，罪死。始皇帝幸梁山宫，",
       "before_context": "...之，各案署不移徙。行所幸，有言其处者，罪死。始皇帝幸梁山宫，",
       "after_context": "从山上见丞相车骑众，弗善也。中人或告丞相，丞相后损车骑。始皇...",
@@ -2720,7 +3753,21 @@
       "sentence_id": null
     },
     {
-      "id": "n173",
+      "id": "n245",
+      "anchor_text": "侯生、",
+      "before_context": "侯生、",
+      "after_context": "卢生相与谋曰：「始皇为人，天性刚戾自用，起诸侯，并天下，意得...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "说苑曰：「韩客侯生也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n246",
       "anchor_text": "大臣皆受成事，倚辨于上。上乐以刑杀为威，",
       "before_context": "...，特备员弗用。丞相诸大臣皆受成事，倚辨于上。上乐以刑杀为威，",
       "after_context": "天下畏罪持禄，莫敢尽忠。上不闻过而日骄，下慑伏谩欺以取容。秦...",
@@ -2734,7 +3781,7 @@
       "sentence_id": null
     },
     {
-      "id": "n174",
+      "id": "n247",
       "anchor_text": "而日骄，下慑伏谩欺以取容。秦法，不得兼方",
       "before_context": "...，莫敢尽忠。上不闻过而日骄，下慑伏谩欺以取容。秦法，不得兼方",
       "after_context": "不验，辄死。然候星气者至三百人，皆良士，畏忌讳谀，不敢端言其...",
@@ -2753,10 +3800,10 @@
       "sentence_id": null
     },
     {
-      "id": "n175",
+      "id": "n248",
       "anchor_text": "天下之事无小大皆决于上，上至以衡石量书，",
       "before_context": "...讳谀，不敢端言其过。天下之事无小大皆决于上，上至以衡石量书，",
-      "after_context": "日夜有呈，不中呈不得休息。贪于权势至如此，未可为求仙药。」于...",
+      "after_context": "日夜有呈，不中呈",
       "items": [
         {
           "source": "jijie",
@@ -2772,7 +3819,7 @@
       "sentence_id": null
     },
     {
-      "id": "n176",
+      "id": "n249",
       "anchor_text": "日夜有呈，不中呈",
       "before_context": "...过。天下之事无小大皆决于上，上至以衡石量书，日夜有呈，不中呈",
       "after_context": "不得休息。贪于权势至如此，未可为求仙药。」于是乃亡去。始皇闻...",
@@ -2786,10 +3833,24 @@
       "sentence_id": null
     },
     {
-      "id": "n177",
+      "id": "n250",
+      "anchor_text": "术士甚众，欲以兴太平，方士欲练以求奇药。",
+      "before_context": "...者尽去之。悉召文学方术士甚众，欲以兴太平，方士欲练以求奇药。",
+      "after_context": "今闻韩众",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一云『欲以练求』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n251",
       "anchor_text": "今闻韩众",
       "before_context": "...。悉召文学方术士甚众，欲以兴太平，方士欲练以求奇药。今闻韩众",
-      "after_context": "去不报，徐巿等费以巨万计，终不得药，徒奸利相告日闻。卢生等吾...",
+      "after_context": "去不报，徐巿等费以巨万计，终不得药，徒奸利相告日闻。",
       "items": [
         {
           "source": "zhengyi",
@@ -2800,7 +3861,35 @@
       "sentence_id": null
     },
     {
-      "id": "n178",
+      "id": "n252",
+      "anchor_text": "等费以巨万计，终不得药，徒奸利相告日闻。",
+      "before_context": "...今闻韩众去不报，徐巿等费以巨万计，终不得药，徒奸利相告日闻。",
+      "after_context": "卢生等吾尊赐之甚厚，今乃诽谤我，以重吾不德也。诸生在咸阳者，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『闲』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n253",
+      "anchor_text": "，使天下知之，以惩后。益发谪徙边。",
+      "before_context": "...者四百六十余人，皆阬之咸阳，使天下知之，以惩后。益发谪徙边。",
+      "after_context": "始皇长子扶苏谏曰：「天下初定，远方黔首未集，诸生皆诵法孔子，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「表云徙于北河、榆中，耐徙三处。拜爵一级。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n254",
       "anchor_text": "上察之。」始皇怒，使扶苏北监蒙恬于上郡。",
       "before_context": "...之，臣恐天下不安。唯上察之。」始皇怒，使扶苏北监蒙恬于上郡。",
       "after_context": "",
@@ -2814,10 +3903,24 @@
       "sentence_id": null
     },
     {
-      "id": "n179",
+      "id": "n255",
+      "anchor_text": "六年，荧惑守心。有坠星下东郡，至地为石，",
+      "before_context": "三十六年，荧惑守心。有坠星下东郡，至地为石，",
+      "after_context": "黔首或刻其石曰「始皇帝死而地分」。始皇闻之，遣御史逐问，莫服...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「表云石昼陨。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n256",
       "anchor_text": "乐，使博士为仙真人诗，及行所游天下，传令",
       "before_context": "...，因燔销其石。始皇不乐，使博士为仙真人诗，及行所游天下，传令",
-      "after_context": "乐人謌弦之。秋，使者从关东夜过华阴平舒道，有人持璧遮使者曰：...",
+      "after_context": "乐人謌弦之。秋，使者从关东夜过华阴平舒道，",
       "items": [
         {
           "source": "zhengyi",
@@ -2828,10 +3931,10 @@
       "sentence_id": null
     },
     {
-      "id": "n180",
+      "id": "n257",
       "anchor_text": "人謌弦之。秋，使者从关东夜过华阴平舒道，",
       "before_context": "...及行所游天下，传令乐人謌弦之。秋，使者从关东夜过华阴平舒道，",
-      "after_context": "有人持璧遮使者曰：「为吾遗滈池君。」因言曰：「今年祖龙死。」",
+      "after_context": "有人持璧遮使者曰：「为吾遗滈池君。」",
       "items": [
         {
           "source": "zhengyi",
@@ -2842,10 +3945,10 @@
       "sentence_id": null
     },
     {
-      "id": "n181",
+      "id": "n258",
       "anchor_text": "有人持璧遮使者曰：「为吾遗滈池君。」",
       "before_context": "...者从关东夜过华阴平舒道，有人持璧遮使者曰：「为吾遗滈池君。」",
-      "after_context": "因言曰：「今年祖龙死。」使者问其故，因忽不见，置其璧去。使者...",
+      "after_context": "因言曰：「今年祖龙死。」",
       "items": [
         {
           "source": "jijie",
@@ -2866,7 +3969,21 @@
       "sentence_id": null
     },
     {
-      "id": "n182",
+      "id": "n259",
+      "anchor_text": "因言曰：「今年祖龙死。」",
+      "before_context": "...有人持璧遮使者曰：「为吾遗滈池君。」因言曰：「今年祖龙死。」",
+      "after_context": "使者问其故，因忽不见，置其璧去。使者奉璧具以闻。始皇默然良久...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "苏林曰：「祖，始也。龙，人君象。谓始皇也。」服虔曰：「龙，人之先象也，言王亦人之先也。」应劭曰：「祖，人之先。龙，君之象。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n260",
       "anchor_text": "始皇卜之，卦得游徙吉。迁北河榆中三万家。",
       "before_context": "...行渡江所沈璧也。于是始皇卜之，卦得游徙吉。迁北河榆中三万家。",
       "after_context": "拜爵一级。",
@@ -2880,10 +3997,10 @@
       "sentence_id": null
     },
     {
-      "id": "n183",
+      "id": "n261",
       "anchor_text": "于九疑山。",
       "before_context": "...子胡亥爱慕请从，上许之。十一月，行至云梦，望祀虞舜于九疑山。",
-      "after_context": "浮江下，观籍柯，渡海渚。过丹阳，至钱唐。临浙江，水波恶，乃西...",
+      "after_context": "浮江下，观籍柯，渡海渚。",
       "items": [
         {
           "source": "zhengyi",
@@ -2894,10 +4011,10 @@
       "sentence_id": null
     },
     {
-      "id": "n184",
+      "id": "n262",
       "anchor_text": "浮江下，观籍柯，渡海渚。",
       "before_context": "...十一月，行至云梦，望祀虞舜于九疑山。浮江下，观籍柯，渡海渚。",
-      "after_context": "过丹阳，至钱唐。临浙江，水波恶，乃西百二十里从狭中渡。上会稽...",
+      "after_context": "过丹阳，",
       "items": [
         {
           "source": "zhengyi",
@@ -2908,10 +4025,10 @@
       "sentence_id": null
     },
     {
-      "id": "n185",
+      "id": "n263",
       "anchor_text": "过丹阳，",
       "before_context": "...行至云梦，望祀虞舜于九疑山。浮江下，观籍柯，渡海渚。过丹阳，",
-      "after_context": "至钱唐。临浙江，水波恶，乃西百二十里从狭中渡。上会稽，祭大禹...",
+      "after_context": "至钱唐。",
       "items": [
         {
           "source": "zhengyi",
@@ -2922,10 +4039,10 @@
       "sentence_id": null
     },
     {
-      "id": "n186",
+      "id": "n264",
       "anchor_text": "至钱唐。",
       "before_context": "...，望祀虞舜于九疑山。浮江下，观籍柯，渡海渚。过丹阳，至钱唐。",
-      "after_context": "临浙江，水波恶，乃西百二十里从狭中渡。上会稽，祭大禹，望于南...",
+      "after_context": "临浙江，",
       "items": [
         {
           "source": "zhengyi",
@@ -2936,10 +4053,38 @@
       "sentence_id": null
     },
     {
-      "id": "n187",
+      "id": "n265",
+      "anchor_text": "临浙江，",
+      "before_context": "...舜于九疑山。浮江下，观籍柯，渡海渚。过丹阳，至钱唐。临浙江，",
+      "after_context": "水波恶，乃西百二十里从狭中渡。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "晋灼曰：「其流东至会稽山阴而西折，故称浙。音折。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n266",
+      "anchor_text": "水波恶，乃西百二十里从狭中渡。",
+      "before_context": "...海渚。过丹阳，至钱唐。临浙江，水波恶，乃西百二十里从狭中渡。",
+      "after_context": "上会稽，祭大禹，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「盖在余杭也。顾夷曰『余杭者，秦始皇至会稽经此，立为县』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n267",
       "anchor_text": "上会稽，祭大禹，",
       "before_context": "...钱唐。临浙江，水波恶，乃西百二十里从狭中渡。上会稽，祭大禹，",
-      "after_context": "望于南海，而立石刻颂秦德。其文曰：",
+      "after_context": "望于南海，而立石刻",
       "items": [
         {
           "source": "zhengyi",
@@ -2950,7 +4095,21 @@
       "sentence_id": null
     },
     {
-      "id": "n188",
+      "id": "n268",
+      "anchor_text": "望于南海，而立石刻",
+      "before_context": "...恶，乃西百二十里从狭中渡。上会稽，祭大禹，望于南海，而立石刻",
+      "after_context": "颂秦德。其文曰：",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "望于南海而刻石。三句为韵，凡二十四韵。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n269",
       "anchor_text": "颂秦德。其文曰：",
       "before_context": "...从狭中渡。上会稽，祭大禹，望于南海，而立石刻颂秦德。其文曰：",
       "after_context": "",
@@ -2964,7 +4123,35 @@
       "sentence_id": null
     },
     {
-      "id": "n189",
+      "id": "n270",
+      "anchor_text": "皇帝休烈，平一宇内，德惠修长。",
+      "before_context": "皇帝休烈，平一宇内，德惠修长。",
+      "after_context": "三十有七年，亲巡天下，周览远方。遂登会稽，宣省习俗，黔首斋庄...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "修亦长也，重文耳。王劭按张徽所录会稽南山秦始皇碑文，「修」作「攸」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n271",
+      "anchor_text": "黔首斋庄。群臣诵功，本原事迹，追首高明。",
+      "before_context": "...遂登会稽，宣省习俗，黔首斋庄。群臣诵功，本原事迹，追首高明。",
+      "after_context": "秦圣临国，始定刑名，显陈旧章。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "今检会稽刻石文「首」字作「道」，雅符人情也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n272",
       "anchor_text": "秦圣临国，始定刑名，显陈旧章。",
       "before_context": "...群臣诵功，本原事迹，追首高明。秦圣临国，始定刑名，显陈旧章。",
       "after_context": "初平法式，审别职任，以立恒常。六王专倍，贪戾慠猛，率众自彊。",
@@ -2978,10 +4165,10 @@
       "sentence_id": null
     },
     {
-      "id": "n190",
+      "id": "n273",
       "anchor_text": "以立恒常。六王专倍，贪戾慠猛，率众自彊。",
-      "before_context": "初平法式，审别职任，以立恒常。六王专倍，贪戾慠猛，率众自彊。",
-      "after_context": "暴虐恣行，负力而骄，数动甲兵。阴通闲使，以事合从，行为辟方。",
+      "before_context": "...初平法式，审别职任，以立恒常。六王专倍，贪戾慠猛，率众自彊。",
+      "after_context": "暴虐恣行，",
       "items": [
         {
           "source": "zhengyi",
@@ -2992,10 +4179,10 @@
       "sentence_id": null
     },
     {
-      "id": "n191",
+      "id": "n274",
       "anchor_text": "暴虐恣行，",
       "before_context": "...审别职任，以立恒常。六王专倍，贪戾慠猛，率众自彊。暴虐恣行，",
-      "after_context": "负力而骄，数动甲兵。阴通闲使，以事合从，行为辟方。内饰诈谋，",
+      "after_context": "负力而骄，数动甲兵。",
       "items": [
         {
           "source": "zhengyi",
@@ -3006,10 +4193,10 @@
       "sentence_id": null
     },
     {
-      "id": "n192",
+      "id": "n275",
       "anchor_text": "负力而骄，数动甲兵。",
       "before_context": "...六王专倍，贪戾慠猛，率众自彊。暴虐恣行，负力而骄，数动甲兵。",
-      "after_context": "阴通闲使，以事合从，行为辟方。内饰诈谋，外来侵边，遂起祸殃。...",
+      "after_context": "阴通闲使，",
       "items": [
         {
           "source": "zhengyi",
@@ -3020,10 +4207,10 @@
       "sentence_id": null
     },
     {
-      "id": "n193",
+      "id": "n276",
       "anchor_text": "阴通闲使，",
       "before_context": "...贪戾慠猛，率众自彊。暴虐恣行，负力而骄，数动甲兵。阴通闲使，",
-      "after_context": "以事合从，行为辟方。内饰诈谋，外来侵边，遂起祸殃。义威诛之，...",
+      "after_context": "以事合从，",
       "items": [
         {
           "source": "zhengyi",
@@ -3034,10 +4221,10 @@
       "sentence_id": null
     },
     {
-      "id": "n194",
+      "id": "n277",
       "anchor_text": "以事合从，",
       "before_context": "...率众自彊。暴虐恣行，负力而骄，数动甲兵。阴通闲使，以事合从，",
-      "after_context": "行为辟方。内饰诈谋，外来侵边，遂起祸殃。义威诛之，殄熄暴悖，",
+      "after_context": "行为辟方。",
       "items": [
         {
           "source": "zhengyi",
@@ -3048,10 +4235,10 @@
       "sentence_id": null
     },
     {
-      "id": "n195",
+      "id": "n278",
       "anchor_text": "行为辟方。",
-      "before_context": "暴虐恣行，负力而骄，数动甲兵。阴通闲使，以事合从，行为辟方。",
-      "after_context": "内饰诈谋，外来侵边，遂起祸殃。义威诛之，殄熄暴悖，乱贼灭亡。...",
+      "before_context": "...暴虐恣行，负力而骄，数动甲兵。阴通闲使，以事合从，行为辟方。",
+      "after_context": "内饰诈谋，",
       "items": [
         {
           "source": "zhengyi",
@@ -3062,9 +4249,37 @@
       "sentence_id": null
     },
     {
-      "id": "n196",
+      "id": "n279",
+      "anchor_text": "内饰诈谋，",
+      "before_context": "...负力而骄，数动甲兵。阴通闲使，以事合从，行为辟方。内饰诈谋，",
+      "after_context": "外来侵边，遂起祸殃。义威诛之，殄熄",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "刻石文作「谋诈」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n280",
+      "anchor_text": "外来侵边，遂起祸殃。义威诛之，殄熄",
+      "before_context": "...合从，行为辟方。内饰诈谋，外来侵边，遂起祸殃。义威诛之，殄熄",
+      "after_context": "暴悖，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「音息。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n281",
       "anchor_text": "暴悖，",
-      "before_context": "行为辟方。内饰诈谋，外来侵边，遂起祸殃。义威诛之，殄熄暴悖，",
+      "before_context": "...行为辟方。内饰诈谋，外来侵边，遂起祸殃。义威诛之，殄熄暴悖，",
       "after_context": "乱贼灭亡。圣德广密，六合之中，被泽无疆。皇帝并宇，兼听万事，...",
       "items": [
         {
@@ -3076,10 +4291,10 @@
       "sentence_id": null
     },
     {
-      "id": "n197",
+      "id": "n282",
       "anchor_text": "贵贱并通，善否陈前，靡有隐情。饰省宣义，",
       "before_context": "...考验事实，各载其名。贵贱并通，善否陈前，靡有隐情。饰省宣义，",
-      "after_context": "有子而嫁，倍死不贞。防隔内外，禁止淫泆，男女絜诚。夫为寄豭，",
+      "after_context": "有子而嫁，",
       "items": [
         {
           "source": "jijie",
@@ -3095,10 +4310,10 @@
       "sentence_id": null
     },
     {
-      "id": "n198",
+      "id": "n283",
       "anchor_text": "有子而嫁，",
       "before_context": "...各载其名。贵贱并通，善否陈前，靡有隐情。饰省宣义，有子而嫁，",
-      "after_context": "倍死不贞。防隔内外，禁止淫泆，男女絜诚。夫为寄豭，杀之无罪，...",
+      "after_context": "倍死不贞。防隔内外，禁止淫泆，男女絜诚。夫为寄豭，",
       "items": [
         {
           "source": "zhengyi",
@@ -3109,10 +4324,24 @@
       "sentence_id": null
     },
     {
-      "id": "n199",
+      "id": "n284",
+      "anchor_text": "防隔内外，禁止淫泆，男女絜诚。夫为寄豭，",
+      "before_context": "...有子而嫁，倍死不贞。防隔内外，禁止淫泆，男女絜诚。夫为寄豭，",
+      "after_context": "杀之无罪，男秉义程。妻为逃嫁，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "豭，牡猪也。言夫淫他室，若寄豭之猪也。豭音加。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n285",
       "anchor_text": "杀之无罪，男秉义程。妻为逃嫁，",
       "before_context": "...禁止淫泆，男女絜诚。夫为寄豭，杀之无罪，男秉义程。妻为逃嫁，",
-      "after_context": "子不得母，咸化廉清。大治濯俗，天下承风，蒙被休经。皆遵度轨，...",
+      "after_context": "子不得母，",
       "items": [
         {
           "source": "zhengyi",
@@ -3123,7 +4352,7 @@
       "sentence_id": null
     },
     {
-      "id": "n200",
+      "id": "n286",
       "anchor_text": "子不得母，",
       "before_context": "...男女絜诚。夫为寄豭，杀之无罪，男秉义程。妻为逃嫁，子不得母，",
       "after_context": "咸化廉清。大治濯俗，天下承风，蒙被休经。皆遵度轨，和安敦勉，...",
@@ -3137,10 +4366,10 @@
       "sentence_id": null
     },
     {
-      "id": "n201",
+      "id": "n287",
       "anchor_text": "蒙被休经。皆遵度轨，和安敦勉，莫不顺令。",
       "before_context": "...大治濯俗，天下承风，蒙被休经。皆遵度轨，和安敦勉，莫不顺令。",
-      "after_context": "黔首修絜，人乐同则，嘉保太平。后敬奉法，常治无极，舆舟不倾。...",
+      "after_context": "黔首修絜，人乐同则，",
       "items": [
         {
           "source": "zhengyi",
@@ -3151,10 +4380,10 @@
       "sentence_id": null
     },
     {
-      "id": "n202",
+      "id": "n288",
       "anchor_text": "黔首修絜，人乐同则，",
       "before_context": "...蒙被休经。皆遵度轨，和安敦勉，莫不顺令。黔首修絜，人乐同则，",
-      "after_context": "嘉保太平。后敬奉法，常治无极，舆舟不倾。从臣诵烈，请刻此石，...",
+      "after_context": "嘉保太平。后敬奉法，常治无极，舆舟不倾。从臣诵烈，",
       "items": [
         {
           "source": "zhengyi",
@@ -3165,7 +4394,7 @@
       "sentence_id": null
     },
     {
-      "id": "n203",
+      "id": "n289",
       "anchor_text": "后敬奉法，常治无极，舆舟不倾。从臣诵烈，",
       "before_context": "...人乐同则，嘉保太平。后敬奉法，常治无极，舆舟不倾。从臣诵烈，",
       "after_context": "请刻此石，光垂休铭。",
@@ -3179,7 +4408,7 @@
       "sentence_id": null
     },
     {
-      "id": "n204",
+      "id": "n290",
       "anchor_text": "还过吴，从江乘渡。",
       "before_context": "还过吴，从江乘渡。",
       "after_context": "并海上，北至琅邪。方士徐巿等入海求神药，数岁不得，费多，恐谴...",
@@ -3203,7 +4432,7 @@
       "sentence_id": null
     },
     {
-      "id": "n205",
+      "id": "n291",
       "anchor_text": "乃诈曰：「蓬莱药可得，然常为大鲛鱼所苦，",
       "before_context": "...岁不得，费多，恐谴，乃诈曰：「蓬莱药可得，然常为大鲛鱼所苦，",
       "after_context": "故不得至，愿请善射与俱，见则以连弩射之。」始皇梦与海神战，如...",
@@ -3217,7 +4446,7 @@
       "sentence_id": null
     },
     {
-      "id": "n206",
+      "id": "n292",
       "anchor_text": "自以连弩候大鱼出射之。自琅邪北至荣成山，",
       "before_context": "...入海者赍捕巨鱼具，而自以连弩候大鱼出射之。自琅邪北至荣成山，",
       "after_context": "弗见。至之罘，见巨鱼，射杀一鱼。遂并海西。",
@@ -3231,7 +4460,7 @@
       "sentence_id": null
     },
     {
-      "id": "n207",
+      "id": "n293",
       "anchor_text": "至平原津而病。",
       "before_context": "至平原津而病。",
       "after_context": "始皇恶言死，群臣莫敢言死事。上病益甚，乃为玺书赐公子扶苏曰：...",
@@ -3250,10 +4479,24 @@
       "sentence_id": null
     },
     {
-      "id": "n208",
+      "id": "n294",
+      "anchor_text": "赵高",
+      "before_context": "...玺书赐公子扶苏曰：「与丧会咸阳而葬。」书已封，在中车府令赵高",
+      "after_context": "行符玺事所，未授使者。七月丙寅，始皇崩于沙丘平台。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "伏俨曰：「主乘舆路车。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n295",
       "anchor_text": "，未授使者。七月丙寅，始皇崩于沙丘平台。",
       "before_context": "...车府令赵高行符玺事所，未授使者。七月丙寅，始皇崩于沙丘平台。",
-      "after_context": "丞相斯为上崩在外，恐诸公子及天下有变，乃秘之，不发丧。棺载辒...",
+      "after_context": "丞相斯为上崩在外，",
       "items": [
         {
           "source": "jijie",
@@ -3269,10 +4512,10 @@
       "sentence_id": null
     },
     {
-      "id": "n209",
+      "id": "n296",
       "anchor_text": "丞相斯为上崩在外，",
       "before_context": "...所，未授使者。七月丙寅，始皇崩于沙丘平台。丞相斯为上崩在外，",
-      "after_context": "恐诸公子及天下有变，乃秘之，不发丧。棺载辒凉车中，故幸宦者参...",
+      "after_context": "恐诸公子及天下有变，乃秘之，不发丧。棺载辒凉车中，",
       "items": [
         {
           "source": "zhengyi",
@@ -3283,7 +4526,7 @@
       "sentence_id": null
     },
     {
-      "id": "n210",
+      "id": "n297",
       "anchor_text": "天下有变，乃秘之，不发丧。棺载辒凉车中，",
       "before_context": "...上崩在外，恐诸公子及天下有变，乃秘之，不发丧。棺载辒凉车中，",
       "after_context": "故幸宦者参乘，所至上食。百官奏事如故，宦者辄从辒凉车中可其奏...",
@@ -3297,7 +4540,7 @@
       "sentence_id": null
     },
     {
-      "id": "n211",
+      "id": "n298",
       "anchor_text": "高乃与公子胡亥、丞相斯阴谋破去始皇所封书",
       "before_context": "...令法事，胡亥私幸之。高乃与公子胡亥、丞相斯阴谋破去始皇所封书",
       "after_context": "赐公子扶苏者，而更诈为丞相斯受始皇遗诏沙丘，立子胡亥为太子。...",
@@ -3311,10 +4554,10 @@
       "sentence_id": null
     },
     {
-      "id": "n212",
+      "id": "n299",
       "anchor_text": "为太子。更为书赐公子扶苏、蒙恬，数以罪，",
       "before_context": "...皇遗诏沙丘，立子胡亥为太子。更为书赐公子扶苏、蒙恬，数以罪，",
-      "after_context": "（",
+      "after_context": "（其）赐死。语具在李斯传中。行，遂从井陉",
       "items": [
         {
           "source": "zhengyi",
@@ -3325,10 +4568,24 @@
       "sentence_id": null
     },
     {
-      "id": "n213",
+      "id": "n300",
+      "anchor_text": "传中。行，遂从井陉",
+      "before_context": "...扶苏、蒙恬，数以罪，（其）赐死。语具在李斯传中。行，遂从井陉",
+      "after_context": "抵九原。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「在常山。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n301",
       "anchor_text": "抵九原。",
       "before_context": "...恬，数以罪，（其）赐死。语具在李斯传中。行，遂从井陉抵九原。",
-      "after_context": "会暑，上辒车臭，乃诏从官令车载一石鲍鱼，以乱其臭。",
+      "after_context": "会暑，上辒车臭，乃诏从官令车载一石鲍鱼，",
       "items": [
         {
           "source": "zhengyi",
@@ -3339,7 +4596,7 @@
       "sentence_id": null
     },
     {
-      "id": "n214",
+      "id": "n302",
       "anchor_text": "会暑，上辒车臭，乃诏从官令车载一石鲍鱼，",
       "before_context": "...行，遂从井陉抵九原。会暑，上辒车臭，乃诏从官令车载一石鲍鱼，",
       "after_context": "以乱其臭。",
@@ -3353,10 +4610,10 @@
       "sentence_id": null
     },
     {
-      "id": "n215",
+      "id": "n303",
       "anchor_text": "天下，天下徒送诣七十余万人，穿三泉，下铜",
       "before_context": "...即位，穿治郦山，及并天下，天下徒送诣七十余万人，穿三泉，下铜",
-      "after_context": "而致椁，宫观百官奇器珍怪徙臧满之。令匠作机弩矢，有所穿近者辄...",
+      "after_context": "而致椁，宫观百官奇器珍怪徙臧满之。",
       "items": [
         {
           "source": "jijie",
@@ -3372,7 +4629,7 @@
       "sentence_id": null
     },
     {
-      "id": "n216",
+      "id": "n304",
       "anchor_text": "而致椁，宫观百官奇器珍怪徙臧满之。",
       "before_context": "...诣七十余万人，穿三泉，下铜而致椁，宫观百官奇器珍怪徙臧满之。",
       "after_context": "令匠作机弩矢，有所穿近者辄射之。以水银为百川江河大海，机相灌...",
@@ -3386,10 +4643,10 @@
       "sentence_id": null
     },
     {
-      "id": "n217",
+      "id": "n305",
       "anchor_text": "辄射之。以水银为百川江河大海，机相灌输，",
       "before_context": "...作机弩矢，有所穿近者辄射之。以水银为百川江河大海，机相灌输，",
-      "after_context": "上具天文，下具地理。以人鱼膏为烛，度不灭者久之。二世曰：「先...",
+      "after_context": "上具天文，下具地理。以人鱼膏为烛，",
       "items": [
         {
           "source": "zhengyi",
@@ -3400,10 +4657,10 @@
       "sentence_id": null
     },
     {
-      "id": "n218",
+      "id": "n306",
       "anchor_text": "上具天文，下具地理。以人鱼膏为烛，",
       "before_context": "...为百川江河大海，机相灌输，上具天文，下具地理。以人鱼膏为烛，",
-      "after_context": "度不灭者久之。二世曰：「先帝后宫非有子者，出焉不宜。」皆令从...",
+      "after_context": "度不灭者久之。",
       "items": [
         {
           "source": "jijie",
@@ -3419,7 +4676,7 @@
       "sentence_id": null
     },
     {
-      "id": "n219",
+      "id": "n307",
       "anchor_text": "度不灭者久之。",
       "before_context": "...，机相灌输，上具天文，下具地理。以人鱼膏为烛，度不灭者久之。",
       "after_context": "二世曰：「先帝后宫非有子者，出焉不宜。」皆令从死，死者甚众。...",
@@ -3433,7 +4690,7 @@
       "sentence_id": null
     },
     {
-      "id": "n220",
+      "id": "n308",
       "anchor_text": "皆知之，臧重即泄。大事毕，已臧，闭中羡，",
       "before_context": "...下，或言工匠为机，臧皆知之，臧重即泄。大事毕，已臧，闭中羡，",
       "after_context": "下外羡门，尽闭工匠臧者，无复出者。树草木以象山。",
@@ -3447,7 +4704,7 @@
       "sentence_id": null
     },
     {
-      "id": "n221",
+      "id": "n309",
       "anchor_text": "，尽闭工匠臧者，无复出者。树草木以象山。",
       "before_context": "...臧，闭中羡，下外羡门，尽闭工匠臧者，无复出者。树草木以象山。",
       "after_context": "",
@@ -3466,7 +4723,35 @@
       "sentence_id": null
     },
     {
-      "id": "n222",
+      "id": "n310",
+      "anchor_text": "二世皇帝元年，年二十一。",
+      "before_context": "二世皇帝元年，年二十一。",
+      "after_context": "赵高为郎中令，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「表云十月戊寅，大赦罪人。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n311",
+      "anchor_text": "为郎中令，",
+      "before_context": "二世皇帝元年，年二十一。赵高为郎中令，",
+      "after_context": "任用事。二世下诏，增始皇寝庙牺牲及山川百祀之礼。令群臣议尊始...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书百官表》曰：「秦官，掌宫殿门户。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n312",
       "anchor_text": "子七庙，诸侯五，大夫三，虽万世世不轶毁。",
       "before_context": "...皆顿首言曰：「古者天子七庙，诸侯五，大夫三，虽万世世不轶毁。",
       "after_context": "今始皇为极庙，四海之内皆献贡职，增牺牲，礼咸备，毋以加。先王...",
@@ -3480,10 +4765,10 @@
       "sentence_id": null
     },
     {
-      "id": "n223",
+      "id": "n313",
       "anchor_text": "增牺牲，礼咸备，毋以加。先王庙或在西雍，",
       "before_context": "...，四海之内皆献贡职，增牺牲，礼咸备，毋以加。先王庙或在西雍，",
-      "after_context": "或在咸阳",
+      "after_context": "或在咸阳。天子仪当独奉酌祠始皇庙。自襄公已下轶毁。所置凡七庙...",
       "items": [
         {
           "source": "zhengyi",
@@ -3494,7 +4779,7 @@
       "sentence_id": null
     },
     {
-      "id": "n224",
+      "id": "n314",
       "anchor_text": "海，南至会稽，而尽刻始皇所立刻石，石旁著",
       "before_context": "...，李斯从。到碣石，并海，南至会稽，而尽刻始皇所立刻石，石旁著",
       "after_context": "大臣从者名，以章先帝成功盛德焉：",
@@ -3508,10 +4793,10 @@
       "sentence_id": null
     },
     {
-      "id": "n225",
+      "id": "n315",
       "anchor_text": "石刻尽始皇帝所为也。今袭号而金石刻辞不称",
       "before_context": "皇帝曰：「金石刻尽始皇帝所为也。今袭号而金石刻辞不称",
-      "after_context": "始皇帝，其于久远也如后嗣为之者，不称成功盛德。」丞相臣斯、臣...",
+      "after_context": "始皇帝，其于久远也",
       "items": [
         {
           "source": "zhengyi",
@@ -3522,10 +4807,10 @@
       "sentence_id": null
     },
     {
-      "id": "n226",
+      "id": "n316",
       "anchor_text": "始皇帝，其于久远也",
       "before_context": "...金石刻尽始皇帝所为也。今袭号而金石刻辞不称始皇帝，其于久远也",
-      "after_context": "如后嗣为之者，不称成功盛德。」丞相臣斯、臣去疾、御史大夫臣德...",
+      "after_context": "如后嗣为之者，不称成功盛德。」丞相臣斯、臣去疾、",
       "items": [
         {
           "source": "zhengyi",
@@ -3536,7 +4821,7 @@
       "sentence_id": null
     },
     {
-      "id": "n227",
+      "id": "n317",
       "anchor_text": "之者，不称成功盛德。」丞相臣斯、臣去疾、",
       "before_context": "...，其于久远也如后嗣为之者，不称成功盛德。」丞相臣斯、臣去疾、",
       "after_context": "御史大夫臣德昧死言：「臣请具刻诏书刻石，因明白矣。臣昧死请。...",
@@ -3555,7 +4840,7 @@
       "sentence_id": null
     },
     {
-      "id": "n228",
+      "id": "n318",
       "anchor_text": "行诛大臣及诸公子，以罪过连逮少近官三郎，",
       "before_context": "...」二世曰：「善。」乃行诛大臣及诸公子，以罪过连逮少近官三郎，",
       "after_context": "无得立者，而六公子戮死于杜。公子将闾昆弟三人囚于内宫，议其罪...",
@@ -3574,7 +4859,7 @@
       "sentence_id": null
     },
     {
-      "id": "n229",
+      "id": "n319",
       "anchor_text": "房宫为室堂。未就，会上崩，罢其作者，复土",
       "before_context": "...为咸阳朝廷小，故营阿房宫为室堂。未就，会上崩，罢其作者，复土",
       "after_context": "郦山。郦山事大毕，今释阿房宫弗就，则是章先帝举事过也。」复作...",
@@ -3588,10 +4873,10 @@
       "sentence_id": null
     },
     {
-      "id": "n230",
+      "id": "n320",
       "anchor_text": "作阿房宫。外抚四夷，如始皇计。尽征其材士",
       "before_context": "...章先帝举事过也。」复作阿房宫。外抚四夷，如始皇计。尽征其材士",
-      "after_context": "五万人为屯衞咸阳",
+      "after_context": "五万人为屯衞咸阳，令教射狗马禽兽。当食者多，",
       "items": [
         {
           "source": "zhengyi",
@@ -3602,10 +4887,10 @@
       "sentence_id": null
     },
     {
-      "id": "n231",
+      "id": "n321",
       "anchor_text": "，令教射狗马禽兽。当食者多，",
       "before_context": "...皇计。尽征其材士五万人为屯衞咸阳，令教射狗马禽兽。当食者多，",
-      "after_context": "度不足，下调郡县转输菽粟刍藳，皆令自赍粮食，咸阳",
+      "after_context": "度不足，下调",
       "items": [
         {
           "source": "zhengyi",
@@ -3616,10 +4901,10 @@
       "sentence_id": null
     },
     {
-      "id": "n232",
+      "id": "n322",
       "anchor_text": "度不足，下调",
       "before_context": "...材士五万人为屯衞咸阳，令教射狗马禽兽。当食者多，度不足，下调",
-      "after_context": "郡县转输菽粟刍藳，皆令自赍粮食，咸阳",
+      "after_context": "郡县转输菽粟刍藳，皆令自赍粮食，咸阳三百里内不得食其谷。用法...",
       "items": [
         {
           "source": "zhengyi",
@@ -3630,10 +4915,10 @@
       "sentence_id": null
     },
     {
-      "id": "n233",
+      "id": "n323",
       "anchor_text": "七月，戍卒陈胜",
       "before_context": "七月，戍卒陈胜",
-      "after_context": "等反故荆地，为「张楚」。胜自立为楚王，居陈，遣诸将徇地。山东...",
+      "after_context": "等反故荆地，为「张楚」。",
       "items": [
         {
           "source": "zhengyi",
@@ -3644,10 +4929,52 @@
       "sentence_id": null
     },
     {
-      "id": "n234",
+      "id": "n324",
+      "anchor_text": "等反故荆地，为「张楚」。",
+      "before_context": "七月，戍卒陈胜等反故荆地，为「张楚」。",
+      "after_context": "胜自立为楚王，居陈，遣诸将徇地。山东郡县少年苦秦吏，皆杀其守...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「张大楚国也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n325",
+      "anchor_text": "王，合从西乡，名为伐秦，不可胜数也。谒者",
+      "before_context": "...，以应陈涉，相立为侯王，合从西乡，名为伐秦，不可胜数也。谒者",
+      "after_context": "使东方来，以反者闻二世。二世怒，下吏。后使者至，上问，对曰：...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书百官表》曰：「谒者，秦官，掌宾赞受事。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n326",
+      "anchor_text": "」上悦。武臣自立为赵王，魏咎为魏王，田儋",
+      "before_context": "...捕，今尽得，不足忧。」上悦。武臣自立为赵王，魏咎为魏王，田儋",
+      "after_context": "为齐王。沛公起沛。项梁举兵会稽郡。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「音负担。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n327",
       "anchor_text": "所遣周章等将西至戏，",
       "before_context": "二年冬，陈涉所遣周章等将西至戏，",
-      "after_context": "兵数十万。二世大惊，与群臣谋曰：「柰何？」少府章邯曰：「盗已...",
+      "after_context": "兵数十万。二世大惊，与群臣谋曰：「柰何？」少府章邯曰：",
       "items": [
         {
           "source": "jijie",
@@ -3663,7 +4990,7 @@
       "sentence_id": null
     },
     {
-      "id": "n235",
+      "id": "n328",
       "anchor_text": "大惊，与群臣谋曰：「柰何？」少府章邯曰：",
       "before_context": "...至戏，兵数十万。二世大惊，与群臣谋曰：「柰何？」少府章邯曰：",
       "after_context": "「盗已至，众彊，今发近县不及矣。郦山徒多，请赦之，授兵以击之...",
@@ -3682,10 +5009,10 @@
       "sentence_id": null
     },
     {
-      "id": "n236",
+      "id": "n329",
       "anchor_text": "，使章邯将，击破周章军而走，遂杀章曹阳。",
       "before_context": "...之。」二世乃大赦天下，使章邯将，击破周章军而走，遂杀章曹阳。",
-      "after_context": "二世益遣长史司马欣、董翳佐章邯击盗，杀陈胜城父，破项梁",
+      "after_context": "二世益遣长史司马欣、董翳佐章邯击盗，杀陈胜城父，",
       "items": [
         {
           "source": "jijie",
@@ -3701,10 +5028,10 @@
       "sentence_id": null
     },
     {
-      "id": "n237",
+      "id": "n330",
       "anchor_text": "长史司马欣、董翳佐章邯击盗，杀陈胜城父，",
       "before_context": "...遂杀章曹阳。二世益遣长史司马欣、董翳佐章邯击盗，杀陈胜城父，",
-      "after_context": "破项梁",
+      "after_context": "破项梁定陶，",
       "items": [
         {
           "source": "zhengyi",
@@ -3715,10 +5042,10 @@
       "sentence_id": null
     },
     {
-      "id": "n238",
+      "id": "n331",
       "anchor_text": "定陶，",
-      "before_context": "二世益遣长史司马欣、董翳佐章邯击盗，杀陈胜城父，破项梁定陶，",
-      "after_context": "灭魏咎临济。楚地盗名将已死，章邯乃北渡河，击赵王歇等于巨鹿。",
+      "before_context": "...二世益遣长史司马欣、董翳佐章邯击盗，杀陈胜城父，破项梁定陶，",
+      "after_context": "灭魏咎临济。",
       "items": [
         {
           "source": "zhengyi",
@@ -3729,7 +5056,7 @@
       "sentence_id": null
     },
     {
-      "id": "n239",
+      "id": "n332",
       "anchor_text": "灭魏咎临济。",
       "before_context": "...司马欣、董翳佐章邯击盗，杀陈胜城父，破项梁定陶，灭魏咎临济。",
       "after_context": "楚地盗名将已死，章邯乃北渡河，击赵王歇等于巨鹿。",
@@ -3743,9 +5070,9 @@
       "sentence_id": null
     },
     {
-      "id": "n240",
+      "id": "n333",
       "anchor_text": "将已死，章邯乃北渡河，击赵王歇等于巨鹿。",
-      "before_context": "灭魏咎临济。楚地盗名将已死，章邯乃北渡河，击赵王歇等于巨鹿。",
+      "before_context": "...灭魏咎临济。楚地盗名将已死，章邯乃北渡河，击赵王歇等于巨鹿。",
       "after_context": "",
       "items": [
         {
@@ -3757,10 +5084,38 @@
       "sentence_id": null
     },
     {
-      "id": "n241",
+      "id": "n334",
+      "anchor_text": "有误，示群臣短也。天子称朕，固不闻声。」",
+      "before_context": "...何与公卿廷决事？事即有误，示群臣短也。天子称朕，固不闻声。」",
+      "after_context": "于是二世常居禁中，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "一作「固闻声」。言天子常处禁中，臣下属望，才有兆朕，闻其声耳，不见其形也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n335",
+      "anchor_text": "于是二世常居禁中，",
+      "before_context": "...即有误，示群臣短也。天子称朕，固不闻声。」于是二世常居禁中，",
+      "after_context": "与高决诸事。其后公卿希得朝见，盗贼益多，而关中卒发东击盗者毋...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蔡邕曰：「禁中者，门户有禁，非侍御者不得入，故曰禁中。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n336",
       "anchor_text": "作事苦，赋税大也。请且止阿房宫作者，减省",
       "before_context": "...止。盗多，皆以戍漕转作事苦，赋税大也。请且止阿房宫作者，减省",
-      "after_context": "四边戍转。」二世曰：「吾闻之韩子曰：『尧",
+      "after_context": "四边戍转。」二世曰：「吾闻之韩子曰：『尧舜采椽不刮，",
       "items": [
         {
           "source": "zhengyi",
@@ -3771,38 +5126,62 @@
       "sentence_id": null
     },
     {
-      "id": "n242",
+      "id": "n337",
+      "anchor_text": "采椽不刮，",
+      "before_context": "...者，减省四边戍转。」二世曰：「吾闻之韩子曰：『尧舜采椽不刮，",
+      "after_context": "茅茨不翦，饭土塯，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "采，木名。刮音括。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n338",
       "anchor_text": "茅茨不翦，饭土塯，",
       "before_context": "...」二世曰：「吾闻之韩子曰：『尧舜采椽不刮，茅茨不翦，饭土塯，",
-      "after_context": "啜土形，虽监门之养，不觳于此。禹凿龙门，通大夏，决河亭水，放...",
+      "after_context": "啜土形，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「吕静云饭器谓之簋。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "如字，一音镂。一作「簋」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n243",
+      "id": "n339",
       "anchor_text": "啜土形，",
       "before_context": "...：「吾闻之韩子曰：『尧舜采椽不刮，茅茨不翦，饭土塯，啜土形，",
-      "after_context": "虽监门之养，不觳于此。禹凿龙门，通大夏，决河亭水，放之海，身...",
+      "after_context": "虽监门之养，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「土形，饭器之属，瓦器也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "饭器，以瓦为之。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n244",
+      "id": "n340",
       "anchor_text": "虽监门之养，",
       "before_context": "...子曰：『尧舜采椽不刮，茅茨不翦，饭土塯，啜土形，虽监门之养，",
-      "after_context": "不觳于此。禹凿龙门，通大夏，决河亭水，放之海，身自持筑臿，胫...",
+      "after_context": "不觳于此。",
       "items": [
         {
           "source": "zhengyi",
@@ -3813,10 +5192,10 @@
       "sentence_id": null
     },
     {
-      "id": "n245",
+      "id": "n341",
       "anchor_text": "不觳于此。",
-      "before_context": "舜采椽不刮，茅茨不翦，饭土塯，啜土形，虽监门之养，不觳于此。",
-      "after_context": "禹凿龙门，通大夏，决河亭水，放之海，身自持筑臿，胫毋毛，臣虏...",
+      "before_context": "...舜采椽不刮，茅茨不翦，饭土塯，啜土形，虽监门之养，不觳于此。",
+      "after_context": "禹凿龙门，通大夏，",
       "items": [
         {
           "source": "suoyin",
@@ -3832,10 +5211,10 @@
       "sentence_id": null
     },
     {
-      "id": "n246",
+      "id": "n342",
       "anchor_text": "禹凿龙门，通大夏，",
       "before_context": "...翦，饭土塯，啜土形，虽监门之养，不觳于此。禹凿龙门，通大夏，",
-      "after_context": "决河亭水，放之海，身自持筑臿，胫毋毛，臣虏之劳不烈于此矣。』",
+      "after_context": "决河亭水，",
       "items": [
         {
           "source": "zhengyi",
@@ -3846,10 +5225,10 @@
       "sentence_id": null
     },
     {
-      "id": "n247",
+      "id": "n343",
       "anchor_text": "决河亭水，",
       "before_context": "...，啜土形，虽监门之养，不觳于此。禹凿龙门，通大夏，决河亭水，",
-      "after_context": "放之海，身自持筑臿，胫毋毛，臣虏之劳不烈于此矣。』凡所为贵有...",
+      "after_context": "放之海，身自持筑臿，",
       "items": [
         {
           "source": "zhengyi",
@@ -3860,10 +5239,10 @@
       "sentence_id": null
     },
     {
-      "id": "n248",
+      "id": "n344",
       "anchor_text": "放之海，身自持筑臿，",
       "before_context": "...，不觳于此。禹凿龙门，通大夏，决河亭水，放之海，身自持筑臿，",
-      "after_context": "胫毋毛，臣虏之劳不烈于此矣。』凡所为贵有天下者，得肆意极欲，...",
+      "after_context": "胫毋毛，臣虏之劳不烈于此矣。』",
       "items": [
         {
           "source": "zhengyi",
@@ -3874,10 +5253,10 @@
       "sentence_id": null
     },
     {
-      "id": "n249",
+      "id": "n345",
       "anchor_text": "胫毋毛，臣虏之劳不烈于此矣。』",
-      "before_context": "决河亭水，放之海，身自持筑臿，胫毋毛，臣虏之劳不烈于此矣。』",
-      "after_context": "凡所为贵有天下者，得肆意极欲，主重明法，下不敢为非，以制御海...",
+      "before_context": "...决河亭水，放之海，身自持筑臿，胫毋毛，臣虏之劳不烈于此矣。』",
+      "after_context": "凡所为贵有天下者，得肆意极欲，主重",
       "items": [
         {
           "source": "zhengyi",
@@ -3888,7 +5267,7 @@
       "sentence_id": null
     },
     {
-      "id": "n250",
+      "id": "n346",
       "anchor_text": "凡所为贵有天下者，得肆意极欲，主重",
       "before_context": "...毛，臣虏之劳不烈于此矣。』凡所为贵有天下者，得肆意极欲，主重",
       "after_context": "明法，下不敢为非，以制御海内矣。夫虞、夏之主，贵为天子，亲处...",
@@ -3902,7 +5281,7 @@
       "sentence_id": null
     },
     {
-      "id": "n251",
+      "id": "n347",
       "anchor_text": "侯，兼天下，天下已定，外攘四夷以安边竟，",
       "before_context": "...充吾号名。且先帝起诸侯，兼天下，天下已定，外攘四夷以安边竟，",
       "after_context": "作宫室以章得意，而君观先帝功业有绪。今朕即位二年之闲，群盗并...",
@@ -3916,7 +5295,7 @@
       "sentence_id": null
     },
     {
-      "id": "n252",
+      "id": "n348",
       "anchor_text": "之所为，是上毋以报先帝，次不为朕尽忠力，",
       "before_context": "...君不能禁，又欲罢先帝之所为，是上毋以报先帝，次不为朕尽忠力，",
       "after_context": "何以在位？」下去疾、斯、劫吏，案责他罪。去疾、劫曰：「将相不...",
@@ -3930,7 +5309,7 @@
       "sentence_id": null
     },
     {
-      "id": "n253",
+      "id": "n349",
       "anchor_text": "去疾、劫曰：「将相不辱。」自杀。斯卒囚，",
       "before_context": "...斯、劫吏，案责他罪。去疾、劫曰：「将相不辱。」自杀。斯卒囚，",
       "after_context": "就五刑。",
@@ -3944,7 +5323,21 @@
       "sentence_id": null
     },
     {
-      "id": "n254",
+      "id": "n350",
+      "anchor_text": "军，虏王离，邯等遂以兵降诸侯。八月己亥，",
+      "before_context": "...功亦诛。」项羽急击秦军，虏王离，邯等遂以兵降诸侯。八月己亥，",
+      "after_context": "赵高欲为乱，恐群臣不听，乃先设验，持鹿献于二世，曰：「马也。...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『卯』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n351",
       "anchor_text": "、齐、楚、韩、魏皆立为王，自关以东，大氐",
       "before_context": "...，上书请益助，燕、赵、齐、楚、韩、魏皆立为王，自关以东，大氐",
       "after_context": "尽畔秦吏应诸侯，诸侯咸率其众西乡。沛公将数万人已屠武关，使人...",
@@ -3958,10 +5351,10 @@
       "sentence_id": null
     },
     {
-      "id": "n255",
+      "id": "n352",
       "anchor_text": "为祟。」",
       "before_context": "...白虎啮其左骖马，杀之，心不乐，怪问占梦。卜曰：「泾水为祟。」",
-      "after_context": "二世乃斋于望夷宫，欲祠泾，沈四白马。使使责让高以盗贼事。高惧...",
+      "after_context": "二世乃斋于望夷宫，",
       "items": [
         {
           "source": "zhengyi",
@@ -3972,10 +5365,10 @@
       "sentence_id": null
     },
     {
-      "id": "n256",
+      "id": "n353",
       "anchor_text": "二世乃斋于望夷宫，",
       "before_context": "...之，心不乐，怪问占梦。卜曰：「泾水为祟。」二世乃斋于望夷宫，",
-      "after_context": "欲祠泾，沈四白马。使使责让高以盗贼事。高惧，乃阴与其壻咸阳",
+      "after_context": "欲祠泾，沈四白马。使使责让高以盗贼事。高惧，乃阴与其壻咸阳令...",
       "items": [
         {
           "source": "jijie",
@@ -3991,77 +5384,466 @@
       "sentence_id": null
     },
     {
-      "id": "n257",
+      "id": "n354",
+      "anchor_text": "婴仁俭，百姓皆载其言。」使郎中令为内应，",
+      "before_context": "...置上，更立公子婴。子婴仁俭，百姓皆载其言。」使郎中令为内应，",
+      "after_context": "诈为有大贼，令乐召吏发卒，追劫乐母置高舍。遣乐将吏卒千余人至...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一云郎中令赵成。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n355",
+      "anchor_text": "入此，何不止？」衞令曰：「周庐设卒甚谨，",
+      "before_context": "...缚衞令仆射，曰：「贼入此，何不止？」衞令曰：「周庐设卒甚谨，",
+      "after_context": "安得贼敢入宫？」乐遂斩衞令，直将吏入，行射，郎宦者大惊，或走...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "西京赋曰：「徼道外周，千庐内傅。」薛综曰：「士傅宫外，内为庐舍，昼则巡行非常，夜则警备不虞。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n356",
+      "anchor_text": "得至今？」阎乐前即二世数曰：「足下骄恣，",
+      "before_context": "...使臣蚤言，皆已诛，安得至今？」阎乐前即二世数曰：「足下骄恣，",
+      "after_context": "诛杀无道，天下共畔足下，足下其自为计。」二世曰：「丞相可得见...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蔡邕曰：「群臣士庶相与言，曰殿下、阁下、足下、侍者、执事，皆谦类。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n357",
+      "anchor_text": "杀二世望夷宫，恐群臣诛之，乃详以义立我。",
+      "before_context": "...子二人谋曰：「丞相高杀二世望夷宫，恐群臣诛之，乃详以义立我。",
+      "after_context": "我闻赵高乃与楚约，灭秦宗室而王关中。今使我斋见庙，此欲因庙中...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "详音羊。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n358",
+      "anchor_text": "十六日，楚将沛公破秦军入武关，遂至霸上，",
+      "before_context": "...徇咸阳。子婴为秦王四十六日，楚将沛公破秦军入武关，遂至霸上，",
+      "after_context": "使人约降子婴。子婴即系颈以组，白马素车，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "应劭曰：「霸水上地名，在长安东三十里。古名滋水，秦穆公更名霸水。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n359",
+      "anchor_text": "使人约降子婴。子婴即系颈以组，白马素车，",
+      "before_context": "...军入武关，遂至霸上，使人约降子婴。子婴即系颈以组，白马素车，",
+      "after_context": "奉天子玺符，降轵道旁。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "应劭曰：「组者，天子黻也。系颈者，言欲自杀。素车白马，丧人之服也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n360",
+      "anchor_text": "奉天子玺符，降轵道旁。",
+      "before_context": "...人约降子婴。子婴即系颈以组，白马素车，奉天子玺符，降轵道旁。",
+      "after_context": "沛公遂入咸阳，封宫室府库，还军霸上。居月余，诸侯兵至，项籍为...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「在霸陵。」骃案：苏林曰「亭名，在长安东十三里」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n361",
+      "anchor_text": "还军霸上。居月余，诸侯兵至，项籍为从长，",
+      "before_context": "...入咸阳，封宫室府库，还军霸上。居月余，诸侯兵至，项籍为从长，",
+      "after_context": "杀子婴及秦诸公子宗族。遂屠咸阳，烧其宫室，虏其子女，收其珍宝...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓合关东为从长也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n362",
       "anchor_text": "数百，奋臂大呼，不用弓戟之兵，鉏櫌白梃，",
       "before_context": "...然陈涉以戍卒散乱之众数百，奋臂大呼，不用弓戟之兵，鉏櫌白梃，",
-      "after_context": "望屋而食，横行天下。秦人阻险不守，关梁不阖，长戟不刺，彊弩不...",
+      "after_context": "望屋而食，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「櫌，田器，音忧。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "徐以櫌为田器，非也。孟康以櫌为鉏柄，盖得其近也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n258",
+      "id": "n363",
+      "anchor_text": "望屋而食，",
+      "before_context": "...卒散乱之众数百，奋臂大呼，不用弓戟之兵，鉏櫌白梃，望屋而食，",
+      "after_context": "横行天下。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言其兵蚕食天下，不裹粮而行。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n364",
+      "anchor_text": "横行天下。",
+      "before_context": "...数百，奋臂大呼，不用弓戟之兵，鉏櫌白梃，望屋而食，横行天下。",
+      "after_context": "秦人阻险不守，关梁不阖，长戟不刺，彊弩不射。楚师深入，战于鸿...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓轻前敌，不部伍旅进也。舞阳侯曰「横行匈奴中」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n365",
       "anchor_text": "之艰。于是山东大扰，诸侯并起，豪俊相立。",
       "before_context": "...，战于鸿门，曾无藩篱之艰。于是山东大扰，诸侯并起，豪俊相立。",
-      "after_context": "秦使章邯将而东征，章邯因以三军之众要市于外，以谋其上。群臣之...",
+      "after_context": "秦使章邯将而东征，章邯因以三军之众要市于外，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "骃案：鹖冠子曰「德万人者谓之俊，德千人者谓之豪，德百人者谓之英」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓武臣、田儋、魏豹之属。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n259",
+      "id": "n366",
+      "anchor_text": "章邯将而东征，章邯因以三军之众要市于外，",
+      "before_context": "...并起，豪俊相立。秦使章邯将而东征，章邯因以三军之众要市于外，",
+      "after_context": "以谋其上。群臣之不信，可见于此矣。子婴立，遂不寤。藉使子婴有...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "此评失也。章邯之降，由赵高用事，不信任军将，一则恐诛，二则楚兵既盛，王离见虏，遂以兵降耳。非三军要市于外以求封明矣。要，平声。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n367",
+      "anchor_text": "不足哉？形不利，势不便也。秦小邑并大城，",
+      "before_context": "...北而遂坏。岂勇力智慧不足哉？形不利，势不便也。秦小邑并大城，",
+      "after_context": "守险塞而军，高垒毋战，闭关据阨，荷戟而守之。诸侯起于匹夫，以...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「大，一作『小』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n368",
+      "anchor_text": "也。彼见秦阻之难犯也，必退师。安土息民，",
+      "before_context": "...，名为亡秦，其实利之也。彼见秦阻之难犯也，必退师。安土息民，",
+      "after_context": "以待其敝，收弱扶罢，以令大国之君，不患不得意于海内。贵为天子...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "贾谊书「安」作「案」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n369",
+      "anchor_text": "；及其衰也，百姓怨望而海内畔矣。故周五序",
+      "before_context": "...也，繁法严刑而天下振；及其衰也，百姓怨望而海内畔矣。故周五序",
+      "after_context": "得其道，而千余岁不绝。秦本末并失，故不长久。由此观之，安危之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "贾谊书「五」作「王」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n370",
+      "anchor_text": "雍州之地，君臣固守而窥周室，有席卷天下，",
+      "before_context": "秦孝公据殽函之固，拥雍州之地，君臣固守而窥周室，有席卷天下，",
+      "after_context": "包举宇内，囊括四海之意，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：春秋纬曰诸侯冰散席卷也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n371",
       "anchor_text": "包举宇内，囊括四海之意，",
       "before_context": "...之地，君臣固守而窥周室，有席卷天下，包举宇内，囊括四海之意，",
-      "after_context": "并吞八荒之心。当是时，商君佐之，内立法度，务耕织，修守战之备...",
+      "after_context": "并吞八荒之心。当是时，商君佐之，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "张晏曰：「括，结囊也。言其能包含天下。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "注同。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n260",
+      "id": "n372",
+      "anchor_text": "并吞八荒之心。当是时，商君佐之，",
+      "before_context": "...下，包举宇内，囊括四海之意，并吞八荒之心。当是时，商君佐之，",
+      "after_context": "内立法度，务耕织，修守战之备，外连衡而鬬诸侯，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "商君，卫公孙鞅，仕秦为左庶长，遂为秦制法，孝公致霸，封之于商，号商君。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n373",
+      "anchor_text": "度，务耕织，修守战之备，外连衡而鬬诸侯，",
+      "before_context": "...时，商君佐之，内立法度，务耕织，修守战之备，外连衡而鬬诸侯，",
+      "after_context": "于是秦人拱手而取西河之外。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《战国策》曰：「苏秦亦为秦连衡。」高诱曰：「合关东从通之秦，故曰连衡也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n374",
+      "anchor_text": "器重宝肥美之地，以致天下之士，合从缔交，",
+      "before_context": "...会盟而谋弱秦，不爱珍器重宝肥美之地，以致天下之士，合从缔交，",
+      "after_context": "相与为一。当是时，齐有孟尝，赵有平原，楚有春申，魏有信陵。此...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书音义》曰：「缔，结也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n375",
+      "anchor_text": "而忠信，宽厚而爱人，尊贤重士，约从离衡，",
+      "before_context": "...陵。此四君者，皆明知而忠信，宽厚而爱人，尊贤重士，约从离衡，",
+      "after_context": "并韩、魏、燕、楚、齐、赵、宋、衞、中山之众。于是六国之士",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言孟尝等四君皆为其国共相约结为从，以离散秦之横。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n376",
+      "anchor_text": "、齐、赵、宋、衞、中山之众。于是六国之士",
+      "before_context": "...衡，并韩、魏、燕、楚、齐、赵、宋、衞、中山之众。于是六国之士",
+      "after_context": "有宁越、徐尚、苏秦、杜赫之属为之谋，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "六国者，韩、魏、赵、燕、齐、楚是也。与秦为七国，亦谓之七雄。又六国与宋、衞、中山为九国。其三国盖微，又前亡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n377",
       "anchor_text": "有宁越、徐尚、苏秦、杜赫之属为之谋，",
       "before_context": "...、中山之众。于是六国之士有宁越、徐尚、苏秦、杜赫之属为之谋，",
-      "after_context": "齐明、周最、陈轸、昭滑、楼缓",
+      "after_context": "齐明、周最、陈轸、昭滑、楼缓、翟景、苏厉、乐毅之徒通其意，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「越，一作『经』。或自别有此人，不必宁越也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "宁越，赵人，贾谊作「宁越」。徐尚，未详。苏秦，东周洛阳人。吕氏春秋「杜赫以安天下说周昭文君」，高诱曰「杜赫，周人也」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n261",
+      "id": "n378",
+      "anchor_text": "之徒通其意，",
+      "before_context": "...，齐明、周最、陈轸、昭滑、楼缓、翟景、苏厉、乐毅之徒通其意，",
+      "after_context": "吴起、孙膑、带佗、儿良、王廖、田忌、廉颇、赵奢之朋制其兵。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《战国策》齐明，东周臣，后仕秦、楚及韩。周最，周之公子，亦仕秦。陈轸，夏人，亦仕秦。昭滑，楚人。楼缓，魏文侯弟，所谓楼子也。苏厉，秦之弟，仕齐。乐毅本齐臣，入燕，燕昭王以客礼待之，以为亚卿。翟景，未详也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n379",
+      "anchor_text": "儿良、王廖、田忌、廉颇、赵奢之朋制其兵。",
+      "before_context": "...，吴起、孙膑、带佗、儿良、王廖、田忌、廉颇、赵奢之朋制其兵。",
+      "after_context": "常以十倍之地，百万之众，叩关而攻秦。秦人开关延敌，九国之师逡...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "吴起，衞人，事魏文侯为将。孙膑，孙武之后也。吕氏春秋曰「王廖贵先，儿良贵后」，二人皆天下之豪士。田忌，齐将也。廉颇，赵将也。赵奢亦赵之将。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n380",
+      "anchor_text": "而制其敝，追亡逐北，伏尸百万，流血漂卤。",
+      "before_context": "...割地而奉秦。秦有余力而制其敝，追亡逐北，伏尸百万，流血漂卤。",
+      "after_context": "因利乘便，宰割天下，分裂河山，彊国请服，弱国入朝。延及孝文王...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「卤，楯也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n381",
+      "anchor_text": "及至秦王，续六世之余烈，",
+      "before_context": "及至秦王，续六世之余烈，",
+      "after_context": "振长策而御宇内，吞二周而亡诸侯，履至尊而制六合，执棰拊",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "张晏曰：「孝公、惠文王、武王、昭王、孝文王、庄襄王。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n382",
       "anchor_text": "，吞二周而亡诸侯，履至尊而制六合，执棰拊",
       "before_context": "...余烈，振长策而御宇内，吞二周而亡诸侯，履至尊而制六合，执棰拊",
-      "after_context": "以鞭笞天下，威振四海。南取百越之地，以为桂林、象郡，百越之君...",
+      "after_context": "以鞭笞天下，威振四海。南取百越之地，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「拊，拍也，音府。一作『槁朴』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "贾本论作「槁朴」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n262",
+      "id": "n383",
+      "anchor_text": "以鞭笞天下，威振四海。南取百越之地，",
+      "before_context": "...，履至尊而制六合，执棰拊以鞭笞天下，威振四海。南取百越之地，",
+      "after_context": "以为桂林、象郡，百越之君俛首系颈，委命下吏。乃使蒙恬北筑长城...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韦昭曰：「越有百邑。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n384",
+      "anchor_text": "先王之道，焚百家之言，以愚黔首。堕名城，",
+      "before_context": "...敢弯弓而报怨。于是废先王之道，焚百家之言，以愚黔首。堕名城，",
+      "after_context": "杀豪俊，收天下之兵聚之咸阳，销锋铸鐻，以为金人十二，以弱黔首...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "应劭曰：「坏坚城，恐人复阻以害己也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n385",
       "anchor_text": "为金人十二，以弱黔首之民。然后斩华为城，",
       "before_context": "...之咸阳，销锋铸鐻，以为金人十二，以弱黔首之民。然后斩华为城，",
       "after_context": "因河为津，据亿丈之城，临不测之谿以为固。良将劲弩守要害之处，...",
@@ -4070,26 +5852,148 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「斩，一作『践』。」骃案：服虔曰「断华山为城」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "斩，亦作「践」，亦出贾本论。又崔浩云：「践，登也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n263",
+      "id": "n386",
       "anchor_text": "将劲弩守要害之处，信臣精卒陈利兵而谁何，",
       "before_context": "...临不测之谿以为固。良将劲弩守要害之处，信臣精卒陈利兵而谁何，",
-      "after_context": "天下以定。秦王之心，自以为关中之固，金城千里，子孙帝王万世之...",
+      "after_context": "天下以定。秦王之心，自以为关中之固，金城千里，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「何犹问也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "崔浩云：「何或为『呵』。」汉旧仪：「宿衞郎官分五夜谁呵，呵夜行者谁也。」何呵字同。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n264",
+      "id": "n387",
+      "anchor_text": "定。秦王之心，自以为关中之固，金城千里，",
+      "before_context": "...陈利兵而谁何，天下以定。秦王之心，自以为关中之固，金城千里，",
+      "after_context": "子孙帝王万世之业也。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "金城，言其实且坚也。韩子曰「虽有金城汤池」，《汉书》张良亦曰「关中所谓金城千里，天府之国。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n388",
+      "anchor_text": "，罋牖绳枢之子，",
+      "before_context": "秦王既没，余威振于殊俗。陈涉，罋牖绳枢之子，",
+      "after_context": "甿隶之人，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「以绳系户枢也。」孟康曰：「瓦罋为窻也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n389",
+      "anchor_text": "甿隶之人，",
+      "before_context": "秦王既没，余威振于殊俗。陈涉，罋牖绳枢之子，甿隶之人，",
+      "after_context": "而迁徙之徒，才能不及中人，非有仲尼、墨翟之贤，陶朱、猗顿之富...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「甿，古『氓』字。氓，民也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n390",
+      "anchor_text": "猗顿之富，蹑足行伍之闲，而倔起什伯之中，",
+      "before_context": "...尼、墨翟之贤，陶朱、猗顿之富，蹑足行伍之闲，而倔起什伯之中，",
+      "after_context": "率罢散之卒，将数百之众，而转攻秦。斩木为兵，揭竿为旗，天下云...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书音义》曰：「首出十长百长之中。」如淳曰：「时皆辟屈在十百之中。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n391",
+      "anchor_text": "天下非小弱也，雍州之地，殽函之固自若也。",
+      "before_context": "且夫天下非小弱也，雍州之地，殽函之固自若也。",
+      "after_context": "陈涉之位，非尊于齐、楚、燕、赵、韩、魏、宋、衞、中山之君；鉏...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韦昭曰：「殽谓二殽。函，函谷关也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n392",
+      "anchor_text": "赵、韩、魏、宋、衞、中山之君；鉏櫌棘矜，",
+      "before_context": "...，非尊于齐、楚、燕、赵、韩、魏、宋、衞、中山之君；鉏櫌棘矜，",
+      "after_context": "非锬于句戟长铩也；",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「以鉏柄及棘作矛槿也。」如淳曰：「櫌椎，块椎也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n393",
+      "anchor_text": "非锬于句戟长铩也；",
+      "before_context": "...、赵、韩、魏、宋、衞、中山之君；鉏櫌棘矜，非锬于句戟长铩也；",
+      "after_context": "适戍之众，非抗于九国之师；深谋远虑，行军用兵之道，非及乡时之...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「锬，一作『铦』。」骃案：如淳曰「长刃矛也」。又曰「钩戟似矛，刃下有铁，横方上钩曲也」。铩音所拜反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n394",
+      "anchor_text": "度长絜大，",
+      "before_context": "...士也。然而成败异变，功业相反也。试使山东之国与陈涉度长絜大，",
+      "after_context": "比权量力，则不可同年而语矣。然秦以区区之地，千乘之权，招八州...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书音义》曰：「『絜东』之『絜』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n395",
       "anchor_text": "秦并海内，兼诸侯，南面称帝，",
       "before_context": "秦并海内，兼诸侯，南面称帝，",
       "after_context": "以养四海，天下之士斐然乡风，若是者何也？曰：近古之无王者久矣...",
@@ -4098,12 +6002,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「一本有此篇，无前者『秦孝公』已下，而又以『秦并兼诸侯山东三十余郡』继此末也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：贾谊过秦论以「孝公」已下为上篇，「秦兼并诸侯山东三十余郡」为下篇。邹诞生云「太史公删贾谊过秦篇著此论，富其义而省其辞。褚先生增续既已混殽，而世俗小智不唯删省之旨，合写本论于此，故不同也。今颇亦不可分别」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n265",
+      "id": "n396",
       "anchor_text": "世立，天下莫不引领而观其政。夫寒者利裋褐",
       "before_context": "今秦二世立，天下莫不引领而观其政。夫寒者利裋褐",
       "after_context": "而饥者甘糟穅，天下之嗷嗷，新主之资也。此言劳民之易为仁也。乡...",
@@ -4112,12 +6021,59 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「一作『短』，小襦也，音竖。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "赵岐曰：「褐以毛毳织之，若马衣。或以褐编衣也。」裋，一音竖。谓褐布竖裁，为劳役之衣，短而且狭，故谓之短褐，亦曰竖褐。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n266",
+      "id": "n397",
+      "anchor_text": "二世不行此术，而重之以无道，坏宗庙与民，",
+      "before_context": "...智，而暴乱之奸止矣。二世不行此术，而重之以无道，坏宗庙与民，",
+      "after_context": "更始作阿房宫，繁刑严诛，吏治刻深，赏罚不当，赋敛无度，天下多...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一无此上五字。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n398",
+      "anchor_text": "襄公立，享国十二年。初为西畤。葬西垂。",
+      "before_context": "襄公立，享国十二年。初为西畤。葬西垂。",
+      "after_context": "生文公。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "此已下重序列秦之先君立年及葬处，皆当据秦纪为说，与正史小有不同，今取异说重列于后。襄公，秦仲孙，庄公子，救周，周始命为诸侯。初为西畤，祠白帝。立十三年，葬西土。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n399",
+      "anchor_text": "文公立，居西垂宫。五十年死，葬西垂。",
+      "before_context": "文公立，居西垂宫。五十年死，葬西垂。",
+      "after_context": "生静公。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "作鄜畤，又作陈宝祠。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n400",
       "anchor_text": "宪公享国十二年，居西新邑。死，葬衙。",
       "before_context": "宪公享国十二年，居西新邑。死，葬衙。",
       "after_context": "生武公、德公、出子。",
@@ -4126,12 +6082,129 @@
           "source": "jijie",
           "label": "集解",
           "text": "《地理志》云冯翊有衙县。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "宪公灭荡社，居新邑，葬衙。本纪宪公徙居平阳，葬西山。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n267",
+      "id": "n401",
+      "anchor_text": "。",
+      "before_context": "出子享国六年，居西陵。",
+      "after_context": "庶长弗忌、威累、参父三人，率贼贼出子鄙衍，葬衙。武公立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "一云居西陂，葬衙。本纪不云。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n402",
+      "anchor_text": "武公享国二十年。居平阳封宫。",
+      "before_context": "武公享国二十年。居平阳封宫。",
+      "after_context": "葬宣阳聚东南。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一云居平封宫。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n403",
+      "anchor_text": "葬宣阳聚东南。",
+      "before_context": "武公享国二十年。居平阳封宫。葬宣阳聚东南。",
+      "after_context": "三庶长伏其罪。德公立。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "纪云葬平阳，初以人从死。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n404",
+      "anchor_text": "生宣公、成公、缪公。葬阳。初伏，以御蛊。",
+      "before_context": "...国二年。居雍大郑宫。生宣公、成公、缪公。葬阳。初伏，以御蛊。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "二年初伏。本纪此已下居葬绝不言也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n405",
+      "anchor_text": "宣公享国十二年。居阳宫。葬阳。",
+      "before_context": "宣公享国十二年。居阳宫。葬阳。",
+      "after_context": "初志闰月。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "四年，作密畤。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n406",
+      "anchor_text": "成公享国四年，居雍之",
+      "before_context": "成公享国四年，居雍之",
+      "after_context": "宫。葬阳。齐伐山戎、孤竹。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「之，一作『走』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n407",
+      "anchor_text": "国三十九年。天子致霸。葬雍。缪公学著人。",
+      "before_context": "缪公享国三十九年。天子致霸。葬雍。缪公学著人。",
+      "after_context": "生康公。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "著音宁，又音贮，著即宁也。门屏之闲曰宁，谓学于宁门之人。故《诗》云「俟我于著乎而」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n408",
+      "anchor_text": "二十七年。居雍太寝。葬义里丘北。生景公。",
+      "before_context": "桓公享国二十七年。居雍太寝。葬义里丘北。生景公。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "一作「僖公」。《系本》云名后伯车。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n409",
       "anchor_text": "景公享国四十年。居雍高寝，葬丘里南。",
       "before_context": "景公享国四十年。居雍高寝，葬丘里南。",
       "after_context": "生毕公。",
@@ -4145,7 +6218,21 @@
       "sentence_id": null
     },
     {
-      "id": "n268",
+      "id": "n410",
+      "anchor_text": "生毕公。",
+      "before_context": "景公享国四十年。居雍高寝，葬丘里南。生毕公。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「春秋作『哀公』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n411",
       "anchor_text": "毕公享国三十六年。",
       "before_context": "毕公享国三十六年。",
       "after_context": "葬车里北。生夷公。",
@@ -4159,7 +6246,7 @@
       "sentence_id": null
     },
     {
-      "id": "n269",
+      "id": "n412",
       "anchor_text": "夷公不享国。死，葬左宫。生惠公。",
       "before_context": "夷公不享国。死，葬左宫。生惠公。",
       "after_context": "",
@@ -4173,10 +6260,10 @@
       "sentence_id": null
     },
     {
-      "id": "n270",
+      "id": "n413",
       "anchor_text": "悼公享国十五年。",
       "before_context": "悼公享国十五年。",
-      "after_context": "葬僖公西。城雍。生剌龚公。",
+      "after_context": "葬僖公西。城雍。生剌",
       "items": [
         {
           "source": "zhengyi",
@@ -4187,10 +6274,10 @@
       "sentence_id": null
     },
     {
-      "id": "n271",
+      "id": "n414",
       "anchor_text": "葬僖公西。城雍。生剌",
       "before_context": "悼公享国十五年。葬僖公西。城雍。生剌",
-      "after_context": "龚公。",
+      "after_context": "龚公",
       "items": [
         {
           "source": "zhengyi",
@@ -4201,10 +6288,38 @@
       "sentence_id": null
     },
     {
-      "id": "n272",
+      "id": "n415",
+      "anchor_text": "龚公",
+      "before_context": "悼公享国十五年。葬僖公西。城雍。生剌龚公",
+      "after_context": "。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "一作「厉共公」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n416",
+      "anchor_text": "剌龚公享国三十四年。葬入里。",
+      "before_context": "剌龚公享国三十四年。葬入里。",
+      "after_context": "生躁公、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『人』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n417",
       "anchor_text": "生躁公、",
       "before_context": "剌龚公享国三十四年。葬入里。生躁公、",
-      "after_context": "怀公。其十年，彗星见。",
+      "after_context": "怀公。",
       "items": [
         {
           "source": "suoyin",
@@ -4220,7 +6335,7 @@
       "sentence_id": null
     },
     {
-      "id": "n273",
+      "id": "n418",
       "anchor_text": "怀公。",
       "before_context": "剌龚公享国三十四年。葬入里。生躁公、怀公。",
       "after_context": "其十年，彗星见。",
@@ -4234,7 +6349,21 @@
       "sentence_id": null
     },
     {
-      "id": "n274",
+      "id": "n419",
+      "anchor_text": "四年。居受寝。葬悼公南。其元年，彗星见。",
+      "before_context": "躁公享国十四年。居受寝。葬悼公南。其元年，彗星见。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「年表云『星昼见』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n420",
       "anchor_text": "肃灵公，昭子子也。",
       "before_context": "肃灵公，昭子子也。",
       "after_context": "居泾阳。享国十年。葬悼公西。生简公。",
@@ -4243,12 +6372,59 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「怀公生昭子，昭子生灵公。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "纪年及《系本》无「肃」字。立十年，表同，纪十二年。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n275",
+      "id": "n421",
+      "anchor_text": "简公从晋来。享国十五年。葬僖公西。",
+      "before_context": "简公从晋来。享国十五年。葬僖公西。",
+      "after_context": "生惠公。其七年。百姓初带剑。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：本纪简公名悼子，即剌龚公之子，怀公弟也。且纪及《系本》皆以为然，今此文云「灵公」，谬也。立十六年，葬僖公西。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n422",
+      "anchor_text": "惠公享国十三年。葬陵圉。",
+      "before_context": "惠公享国十三年。葬陵圉。",
+      "after_context": "生出公。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "王劭按纪年云「简公后次敬公，敬公立十三年，乃至惠公」，辞即难凭，时参异说。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n423",
+      "anchor_text": "出公享国二年。",
+      "before_context": "出公享国二年。",
+      "after_context": "出公自杀，葬雍。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《系本》谓「少主」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n424",
       "anchor_text": "献公享国二十三年。",
       "before_context": "献公享国二十三年。",
       "after_context": "葬嚣圉。生孝公。",
@@ -4257,12 +6433,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「灵公子。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《系本》称「元献公」。立二十二年，表同，纪二十四年。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n276",
+      "id": "n425",
+      "anchor_text": "孝公享国二十四年。",
+      "before_context": "孝公享国二十四年。",
+      "after_context": "葬弟圉。生惠文王。其十三年，始都咸阳。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "本纪十二年。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n426",
       "anchor_text": "。",
       "before_context": "孝公享国二十四年。葬弟圉。生惠文王。其十三年，始都咸阳。",
       "after_context": "",
@@ -4276,7 +6471,21 @@
       "sentence_id": null
     },
     {
-      "id": "n277",
+      "id": "n427",
+      "anchor_text": "惠文王享国二十七年。",
+      "before_context": "惠文王享国二十七年。",
+      "after_context": "葬公陵。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "十九而立。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n428",
       "anchor_text": "葬公陵。",
       "before_context": "惠文王享国二十七年。葬公陵。",
       "after_context": "生悼武王。",
@@ -4290,7 +6499,7 @@
       "sentence_id": null
     },
     {
-      "id": "n278",
+      "id": "n429",
       "anchor_text": "悼武王享国四年，葬永陵。",
       "before_context": "悼武王享国四年，葬永陵。",
       "after_context": "",
@@ -4314,7 +6523,7 @@
       "sentence_id": null
     },
     {
-      "id": "n279",
+      "id": "n430",
       "anchor_text": "昭襄王享国五十六年。葬茝阳。",
       "before_context": "昭襄王享国五十六年。葬茝阳。",
       "after_context": "生孝文王。",
@@ -4333,7 +6542,7 @@
       "sentence_id": null
     },
     {
-      "id": "n280",
+      "id": "n431",
       "anchor_text": "始皇享国三十七年。葬郦邑。",
       "before_context": "始皇享国三十七年。葬郦邑。",
       "after_context": "生二世皇帝。始皇生十三年而立。",
@@ -4347,10 +6556,10 @@
       "sentence_id": null
     },
     {
-      "id": "n281",
+      "id": "n432",
       "anchor_text": "二世皇帝享国三年。葬宜春。",
       "before_context": "二世皇帝享国三年。葬宜春。",
-      "after_context": "赵高",
+      "after_context": "赵高为丞相安武侯。二世生十二年而立。",
       "items": [
         {
           "source": "zhengyi",
@@ -4361,7 +6570,21 @@
       "sentence_id": null
     },
     {
-      "id": "n282",
+      "id": "n433",
+      "anchor_text": "为丞相安武侯。二世生十二年而立。",
+      "before_context": "...世皇帝享国三年。葬宜春。赵高为丞相安武侯。二世生十二年而立。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「本纪云二十一。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n434",
       "anchor_text": "右秦襄公至二世，六百一十岁。",
       "before_context": "右秦襄公至二世，六百一十岁。",
       "after_context": "",
@@ -4375,7 +6598,7 @@
       "sentence_id": null
     },
     {
-      "id": "n283",
+      "id": "n435",
       "anchor_text": "孝明皇帝十七年",
       "before_context": "孝明皇帝十七年",
       "after_context": "十月十五日乙丑，曰：",
@@ -4389,10 +6612,24 @@
       "sentence_id": null
     },
     {
-      "id": "n284",
+      "id": "n436",
+      "anchor_text": "十月十五日乙丑，曰：",
+      "before_context": "孝明皇帝十七年十月十五日乙丑，曰：",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "此已下是汉孝明帝访班固评贾马赞中论秦二世亡天下之得失，后人因取其说附之此末。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n437",
       "anchor_text": "周历已移，",
       "before_context": "周历已移，",
-      "after_context": "仁不代母。秦直其位，吕政残虐。然以诸侯十三，并兼天下，极情纵...",
+      "after_context": "仁不代母。秦直其位，",
       "items": [
         {
           "source": "zhengyi",
@@ -4403,10 +6640,10 @@
       "sentence_id": null
     },
     {
-      "id": "n285",
+      "id": "n438",
       "anchor_text": "仁不代母。秦直其位，",
       "before_context": "周历已移，仁不代母。秦直其位，",
-      "after_context": "吕政残虐。然以诸侯十三，并兼天下，极情纵欲，养育宗亲。三十七...",
+      "after_context": "吕政残虐。然以诸侯十三，",
       "items": [
         {
           "source": "suoyin",
@@ -4422,7 +6659,7 @@
       "sentence_id": null
     },
     {
-      "id": "n286",
+      "id": "n439",
       "anchor_text": "吕政残虐。然以诸侯十三，",
       "before_context": "周历已移，仁不代母。秦直其位，吕政残虐。然以诸侯十三，",
       "after_context": "并兼天下，极情纵欲，养育宗亲。三十七年，兵无所不加，制作政令...",
@@ -4431,15 +6668,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "始皇初为秦王，年十三也。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "吕政者，始皇名政，是吕不韦幸姬有娠，献庄襄王而生始皇，故云吕政。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n287",
+      "id": "n440",
       "anchor_text": "十七年，兵无所不加，制作政令，施于后王。",
       "before_context": "...情纵欲，养育宗亲。三十七年，兵无所不加，制作政令，施于后王。",
-      "after_context": "盖得圣人之威，河神授图，据狼、狐，蹈参、伐，佐政驱除，距之称...",
+      "after_context": "盖得圣人之威，河神授图，",
       "items": [
         {
           "source": "zhengyi",
@@ -4450,10 +6692,10 @@
       "sentence_id": null
     },
     {
-      "id": "n288",
+      "id": "n441",
       "anchor_text": "盖得圣人之威，河神授图，",
       "before_context": "...年，兵无所不加，制作政令，施于后王。盖得圣人之威，河神授图，",
-      "after_context": "据狼、狐，蹈参、伐，佐政驱除，距之称始皇。",
+      "after_context": "据狼、狐，蹈参、伐，佐政驱除，",
       "items": [
         {
           "source": "zhengyi",
@@ -4464,10 +6706,10 @@
       "sentence_id": null
     },
     {
-      "id": "n289",
+      "id": "n442",
       "anchor_text": "据狼、狐，蹈参、伐，佐政驱除，",
       "before_context": "...后王。盖得圣人之威，河神授图，据狼、狐，蹈参、伐，佐政驱除，",
-      "after_context": "距之称始皇。",
+      "after_context": "距之",
       "items": [
         {
           "source": "zhengyi",
@@ -4478,7 +6720,7 @@
       "sentence_id": null
     },
     {
-      "id": "n290",
+      "id": "n443",
       "anchor_text": "距之",
       "before_context": "...。盖得圣人之威，河神授图，据狼、狐，蹈参、伐，佐政驱除，距之",
       "after_context": "称始皇。",
@@ -4492,10 +6734,10 @@
       "sentence_id": null
     },
     {
-      "id": "n291",
+      "id": "n444",
       "anchor_text": "。痛哉言乎！人头畜鸣。",
       "before_context": "...至欲罢先君所为」。诛斯、去疾，任用赵高。痛哉言乎！人头畜鸣。",
-      "after_context": "不威不伐恶，不笃不虚亡，距之不得留，残虐以促期，虽居形便之国...",
+      "after_context": "不威不伐恶，",
       "items": [
         {
           "source": "zhengyi",
@@ -4506,10 +6748,10 @@
       "sentence_id": null
     },
     {
-      "id": "n292",
+      "id": "n445",
       "anchor_text": "不威不伐恶，",
       "before_context": "...为」。诛斯、去疾，任用赵高。痛哉言乎！人头畜鸣。不威不伐恶，",
-      "after_context": "不笃不虚亡，距之不得留，残虐以促期，虽居形便之国，犹不得存。",
+      "after_context": "不笃不虚亡，",
       "items": [
         {
           "source": "zhengyi",
@@ -4520,7 +6762,7 @@
       "sentence_id": null
     },
     {
-      "id": "n293",
+      "id": "n446",
       "anchor_text": "不笃不虚亡，",
       "before_context": "...去疾，任用赵高。痛哉言乎！人头畜鸣。不威不伐恶，不笃不虚亡，",
       "after_context": "距之不得留，残虐以促期，虽居形便之国，犹不得存。",
@@ -4534,10 +6776,10 @@
       "sentence_id": null
     },
     {
-      "id": "n294",
+      "id": "n447",
       "anchor_text": "子婴度次得嗣，冠玉冠，",
       "before_context": "子婴度次得嗣，冠玉冠，",
-      "after_context": "佩华绂，车黄屋，从百司，谒七庙。小人乘非位，莫不怳忽失守，偷...",
+      "after_context": "佩华绂，",
       "items": [
         {
           "source": "zhengyi",
@@ -4548,10 +6790,10 @@
       "sentence_id": null
     },
     {
-      "id": "n295",
+      "id": "n448",
       "anchor_text": "佩华绂，",
       "before_context": "子婴度次得嗣，冠玉冠，佩华绂，",
-      "after_context": "车黄屋，从百司，谒七庙。小人乘非位，莫不怳忽失守，偷安日日，...",
+      "after_context": "车黄屋，",
       "items": [
         {
           "source": "zhengyi",
@@ -4562,7 +6804,21 @@
       "sentence_id": null
     },
     {
-      "id": "n296",
+      "id": "n449",
+      "anchor_text": "车黄屋，",
+      "before_context": "子婴度次得嗣，冠玉冠，佩华绂，车黄屋，",
+      "after_context": "从",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "蔡邕曰：「黄屋者，盖以黄为里。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n450",
       "anchor_text": "从",
       "before_context": "子婴度次得嗣，冠玉冠，佩华绂，车黄屋，从",
       "after_context": "百司，谒七庙。小人乘非位，莫不怳忽失守，偷安日日，独能长念却...",
@@ -4576,7 +6832,7 @@
       "sentence_id": null
     },
     {
-      "id": "n297",
+      "id": "n451",
       "anchor_text": "，父子作权，近取于户牖之闲，竟诛猾臣，为",
       "before_context": "...安日日，独能长念却虑，父子作权，近取于户牖之闲，竟诛猾臣，为",
       "after_context": "君讨贼。高死之后，宾婚未得尽相劳，餐未及下咽，酒未及濡唇，楚...",
@@ -4590,10 +6846,10 @@
       "sentence_id": null
     },
     {
-      "id": "n298",
+      "id": "n452",
       "anchor_text": "符玺，以归帝者。郑伯茅旌鸾刀，严王退舍。",
       "before_context": "...霸上，素车婴组，奉其符玺，以归帝者。郑伯茅旌鸾刀，严王退舍。",
-      "after_context": "河决不可复壅，鱼烂不可复全。贾谊",
+      "after_context": "河决不可复壅，鱼烂不可复全。",
       "items": [
         {
           "source": "jijie",
@@ -4609,10 +6865,24 @@
       "sentence_id": null
     },
     {
-      "id": "n299",
+      "id": "n453",
+      "anchor_text": "河决不可复壅，鱼烂不可复全。",
+      "before_context": "...归帝者。郑伯茅旌鸾刀，严王退舍。河决不可复壅，鱼烂不可复全。",
+      "after_context": "贾谊、司马迁曰：「向使婴有庸主之才，仅得中佐，山东虽乱，秦之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "宋均曰：「言如鱼之烂，从内而出。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n454",
       "anchor_text": "之祀未当绝也。」秦之积衰，天下土崩瓦解，",
       "before_context": "...秦之地可全而有，宗庙之祀未当绝也。」秦之积衰，天下土崩瓦解，",
-      "after_context": "虽有周旦之材，无所复陈其巧，而以责一日之孤，误哉！俗传秦始皇",
+      "after_context": "虽有周旦之材，无所复陈其巧，而以责一日之孤，",
       "items": [
         {
           "source": "zhengyi",
@@ -4623,10 +6893,10 @@
       "sentence_id": null
     },
     {
-      "id": "n300",
+      "id": "n455",
       "anchor_text": "周旦之材，无所复陈其巧，而以责一日之孤，",
       "before_context": "...，天下土崩瓦解，虽有周旦之材，无所复陈其巧，而以责一日之孤，",
-      "after_context": "误哉！俗传秦始皇",
+      "after_context": "误哉！俗传秦始皇起罪恶，胡亥极，得其理矣。复责小子，",
       "items": [
         {
           "source": "zhengyi",
@@ -4637,10 +6907,10 @@
       "sentence_id": null
     },
     {
-      "id": "n301",
+      "id": "n456",
       "anchor_text": "起罪恶，胡亥极，得其理矣。复责小子，",
       "before_context": "...日之孤，误哉！俗传秦始皇起罪恶，胡亥极，得其理矣。复责小子，",
-      "after_context": "云秦地可全，所谓不通时变者也。纪季以酅，春秋不名。吾读秦纪，...",
+      "after_context": "云秦地可全，所谓不通时变者也。纪季以酅，春秋不名。",
       "items": [
         {
           "source": "zhengyi",
@@ -4651,10 +6921,10 @@
       "sentence_id": null
     },
     {
-      "id": "n302",
+      "id": "n457",
       "anchor_text": "，所谓不通时变者也。纪季以酅，春秋不名。",
       "before_context": "...复责小子，云秦地可全，所谓不通时变者也。纪季以酅，春秋不名。",
-      "after_context": "吾读秦纪，至于子婴车裂赵高",
+      "after_context": "吾读秦纪，至于子婴车裂赵高，未尝不健其决，怜其志。婴死生之义...",
       "items": [
         {
           "source": "jijie",
@@ -4665,6 +6935,20 @@
           "source": "zhengyi",
           "label": "正义",
           "text": "酅音户圭反。《括地志》云：「安平城在青州临淄县东十九里，古纪之酅邑。《帝王纪》云周之纪国，姜姓也。纪侯谮齐哀公于周懿王，王烹之。外传曰纪侯入为周士。竹《书》云齐襄公灭纪、郱、鄑、郚。」又《括地志》云：「郱城在青州临朐县东三十里。鄑城在北海县东北七十里。郚城在密州安丘县界。」郱音骈。鄑音訾。按：秦始皇起罪恶，胡亥极，得其理。国既崩绝，箕子、比干尚不能存殷，庸主子婴焉能救秦之败？以贾谊、史迁不通时变，不如纪季之深识也。季，纪侯少弟，不书名，故曰纪季。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n458",
+      "anchor_text": "，未尝不健其决，怜其志。婴死生之义备矣。",
+      "before_context": "...纪，至于子婴车裂赵高，未尝不健其决，怜其志。婴死生之义备矣。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「班固典引曰『永平十七年，诏问臣固，太史迁赞语中宁有非邪？臣对，贾谊言子婴得中佐，秦未绝也。此言非是，臣素知之耳』。」"
         }
       ],
       "sentence_id": null

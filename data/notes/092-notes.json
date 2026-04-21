@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "者，淮陰人也。",
       "before_context": "淮陰侯韓信者，淮陰人也。",
-      "after_context": "始爲布衣時，貧無行，不得推擇爲吏，又不能治生商賈，常從人寄食...",
+      "after_context": "始爲布衣時，貧無行，不得推擇爲吏，",
       "items": [
         {
           "source": "zhengyi",
@@ -17,23 +17,70 @@
     },
     {
       "id": "n002",
-      "anchor_text": "，常從人寄食飲，人多厭之者，常數從其下鄉",
-      "before_context": "...爲吏，又不能治生商賈，常從人寄食飲，人多厭之者，常數從其下鄉",
-      "after_context": "南昌亭長寄食，數月，亭長妻患之，乃晨炊蓐食。食時信往，不爲具...",
+      "anchor_text": "始爲布衣時，貧無行，不得推擇爲吏，",
+      "before_context": "淮陰侯韓信者，淮陰人也。始爲布衣時，貧無行，不得推擇爲吏，",
+      "after_context": "又不能治生商賈，常從人寄食飲，人多厭之者，常數從其下鄉",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "張晏曰：「下鄉，縣，屬淮陰也。」"
+          "text": "李奇曰：「無善行可推舉選擇。」"
         }
       ],
       "sentence_id": null
     },
     {
       "id": "n003",
+      "anchor_text": "，常從人寄食飲，人多厭之者，常數從其下鄉",
+      "before_context": "...爲吏，又不能治生商賈，常從人寄食飲，人多厭之者，常數從其下鄉",
+      "after_context": "南昌亭長",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「下鄉，縣，屬淮陰也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：下鄉，鄉名，屬淮陰郡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n004",
+      "anchor_text": "南昌亭長",
+      "before_context": "...不能治生商賈，常從人寄食飲，人多厭之者，常數從其下鄉南昌亭長",
+      "after_context": "寄食，數月，亭長妻患之，乃晨炊蓐食。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《楚漢春秋》作「新昌亭長」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "寄食，數月，亭長妻患之，乃晨炊蓐食。",
+      "before_context": "...者，常數從其下鄉南昌亭長寄食，數月，亭長妻患之，乃晨炊蓐食。",
+      "after_context": "食時信往，不爲具食。信亦知其意，怒，竟絕去。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「未起而牀蓐中食。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
       "anchor_text": "信釣於城下，",
       "before_context": "信釣於城下，",
-      "after_context": "諸母漂，有一母見信飢，飯信，竟漂數十日。信喜，謂漂母曰：「吾...",
+      "after_context": "諸母漂，",
       "items": [
         {
           "source": "zhengyi",
@@ -44,10 +91,24 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n007",
+      "anchor_text": "諸母漂，",
+      "before_context": "信釣於城下，諸母漂，",
+      "after_context": "有一母見信飢，飯信，竟漂數十日。信喜，謂漂母曰：「吾必有以重...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「以水擊絮爲漂，故曰漂母。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
       "anchor_text": "有以重報母。」母怒曰：「大丈夫不能自食，",
       "before_context": "...喜，謂漂母曰：「吾必有以重報母。」母怒曰：「大丈夫不能自食，",
-      "after_context": "吾哀王孫而進食，豈望報乎！」",
+      "after_context": "吾哀王孫而進食，",
       "items": [
         {
           "source": "zhengyi",
@@ -58,7 +119,7 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n009",
       "anchor_text": "吾哀王孫而進食，",
       "before_context": "...吾必有以重報母。」母怒曰：「大丈夫不能自食，吾哀王孫而進食，",
       "after_context": "豈望報乎！」",
@@ -67,26 +128,36 @@
           "source": "jijie",
           "label": "集解",
           "text": "蘇林曰：「如言公子也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉德曰：「秦末多失國，言王孫、公子，尊之也。」蘇林亦同。張晏云「字王孫」，非也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n010",
       "anchor_text": "曰：「信能死，刺我；不能死，出我袴下。」",
       "before_context": "...，中情怯耳。」眾辱之曰：「信能死，刺我；不能死，出我袴下。」",
-      "after_context": "於是信孰視之，俛出袴下，蒲伏。一市人皆笑信，以爲怯。",
+      "after_context": "於是信孰視之，俛出袴下，蒲伏。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「袴，一作『胯』。胯，股也，音同。」又云《漢書》作「跨」，同耳。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "袴，《漢書》作「胯」。胯，股也，音枯化反。然尋此文作「袴」，欲依字讀，何爲不通？袴下即胯下也，亦何必須作「胯」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n011",
       "anchor_text": "於是信孰視之，俛出袴下，蒲伏。",
       "before_context": "...死，刺我；不能死，出我袴下。」於是信孰視之，俛出袴下，蒲伏。",
       "after_context": "一市人皆笑信，以爲怯。",
@@ -100,7 +171,21 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n012",
+      "anchor_text": "渡淮，信杖劍從之，居戲下，",
+      "before_context": "及項梁渡淮，信杖劍從之，居戲下，",
+      "after_context": "無所知名。項梁敗，又屬項羽，羽以爲郎中。數以策干項羽，羽不用...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「戲，一作『麾』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
       "anchor_text": "王之入蜀，信亡楚歸漢，未得知名，爲連敖。",
       "before_context": "...策干項羽，羽不用。漢王之入蜀，信亡楚歸漢，未得知名，爲連敖。",
       "after_context": "坐法當斬，其輩十三人皆已斬，次至信，信乃仰視，適見滕公，曰：...",
@@ -109,12 +194,59 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「典客也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "李奇云：「楚官名。」張晏云：「司馬也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n014",
+      "anchor_text": "者，國士無雙。王必欲長王漢中，無所事信；",
+      "before_context": "...「諸將易得耳。至如信者，國士無雙。王必欲長王漢中，無所事信；",
+      "after_context": "必欲爭天下，非信無所與計事者。顧王策安所決耳。」王曰：「吾亦...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「事猶業也。」張晏曰：「無事用信。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "。然臣嘗事之，請言項王之爲人也。項王喑噁",
+      "before_context": "...「惟信亦爲大王不如也。然臣嘗事之，請言項王之爲人也。項王喑噁",
+      "after_context": "叱咤，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上於金反，下烏路反。喑啞，懷怒氣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
+      "anchor_text": "叱咤，",
+      "before_context": "...亦爲大王不如也。然臣嘗事之，請言項王之爲人也。項王喑噁叱咤，",
+      "after_context": "千人皆廢，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "「咤」字或作「吒」。上昌栗反，下卓嫁反。叱咤，發怒聲。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "千人皆廢，",
       "before_context": "...如也。然臣嘗事之，請言項王之爲人也。項王喑噁叱咤，千人皆廢，",
       "after_context": "然不能任屬賢將，此特匹夫之勇耳。項王見人恭敬慈愛，言語嘔嘔，",
@@ -123,29 +255,109 @@
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「廢，不收也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "孟康曰：「廢，伏也。」張晏曰「廢，偃也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n018",
       "anchor_text": "匹夫之勇耳。項王見人恭敬慈愛，言語嘔嘔，",
-      "before_context": "然不能任屬賢將，此特匹夫之勇耳。項王見人恭敬慈愛，言語嘔嘔，",
+      "before_context": "...然不能任屬賢將，此特匹夫之勇耳。項王見人恭敬慈愛，言語嘔嘔，",
       "after_context": "人有疾病，涕泣分食飲，至使人有功當封爵者，印刓敝，忍不能予，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "音凶于反。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音吁。嘔嘔猶區區也。《漢書》作「姁姁」。鄧展曰「姁姁，好也」。張晏音吁。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n019",
+      "anchor_text": "，至使人有功當封爵者，印刓敝，忍不能予，",
+      "before_context": "...人有疾病，涕泣分食飲，至使人有功當封爵者，印刓敝，忍不能予，",
+      "after_context": "此所謂婦人之仁也。項王雖霸天下而臣諸侯，不居關中而都彭城。有...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「不忍授。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "今大王誠能反其道：任天下武勇，何所不誅！",
+      "before_context": "...下心。故曰其彊易弱。今大王誠能反其道：任天下武勇，何所不誅！",
+      "after_context": "以天下城邑封功臣，何所不服！以義兵從思東歸之士，何所不散！",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "何不誅。按：劉氏云「言何所不誅也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "何所不服！以義兵從思東歸之士，何所不散！",
+      "before_context": "...！以天下城邑封功臣，何所不服！以義兵從思東歸之士，何所不散！",
+      "after_context": "且三秦王爲秦將，將秦子弟數歲矣，所殺亡不可勝計，又欺其眾降諸...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "何不散。劉氏云：「用東歸之兵擊東方之敵，此敵無不散敗也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
+      "anchor_text": "，秦民莫愛也。大王之入武關，秋豪無所害，",
+      "before_context": "...。今楚彊以威王此三人，秦民莫愛也。大王之入武關，秋豪無所害，",
+      "after_context": "除秦苛法，與秦民約，法三章耳，秦民無不欲得大王王秦者。於諸侯...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：豪秋乃成。又王逸注楚詞云「銳毛爲豪，夏落秋生也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
+      "anchor_text": "恨者。今大王舉而東，三秦可傳檄而定也。」",
+      "before_context": "...失職入漢中，秦民無不恨者。今大王舉而東，三秦可傳檄而定也。」",
+      "after_context": "於是漢王大喜，自以爲得信晚。遂聽信計，部署諸將所擊。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：說文云「檄，二尺書也」。此云「傳檄」，謂爲檄書以責所伐者。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
       "anchor_text": "八月，漢王舉兵東出陳倉，",
       "before_context": "八月，漢王舉兵東出陳倉，",
-      "after_context": "定三秦。漢二年，出關，收魏、河南",
+      "after_context": "定三秦。漢二年，出關，",
       "items": [
         {
           "source": "zhengyi",
@@ -156,10 +368,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n025",
       "anchor_text": "定三秦。漢二年，出關，",
       "before_context": "八月，漢王舉兵東出陳倉，定三秦。漢二年，出關，",
-      "after_context": "收魏、河南",
+      "after_context": "收魏、河南，韓、殷王皆降。合齊、趙共擊楚。四月，至彭城，漢兵...",
       "items": [
         {
           "source": "zhengyi",
@@ -170,7 +382,7 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n026",
       "anchor_text": "，",
       "before_context": "漢之敗卻彭城，",
       "after_context": "塞王欣、翟王翳亡漢降楚，齊、趙亦反漢與楚和。六月，魏王豹謁歸...",
@@ -184,10 +396,66 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n027",
+      "anchor_text": "。六月，魏王豹謁歸視親疾，至國，即絕河關",
+      "before_context": "...，齊、趙亦反漢與楚和。六月，魏王豹謁歸視親疾，至國，即絕河關",
+      "after_context": "反漢，與楚約和。漢王使酈生說豹，不下。其八月，以信爲左丞相，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "：謂今蒲津關。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
+      "anchor_text": "信爲左丞相，擊魏。魏王盛兵蒲坂，塞臨晉，",
+      "before_context": "...豹，不下。其八月，以信爲左丞相，擊魏。魏王盛兵蒲坂，塞臨晉，",
+      "after_context": "信乃益爲疑兵，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "塞音先得反。臨晉，縣名，在河東之東岸，對舊關也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
+      "anchor_text": "信乃益爲疑兵，",
+      "before_context": "...月，以信爲左丞相，擊魏。魏王盛兵蒲坂，塞臨晉，信乃益爲疑兵，",
+      "after_context": "陳船欲度臨晉，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「益張旍旗，以疑敵者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n030",
+      "anchor_text": "陳船欲度臨晉，",
+      "before_context": "...相，擊魏。魏王盛兵蒲坂，塞臨晉，信乃益爲疑兵，陳船欲度臨晉，",
+      "after_context": "而伏兵從夏陽以木罌缻渡軍，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉氏云：「陳船，地名，在舊關之西，今之朝邑是也。」案：京兆有船司空縣，不名「陳船」。陳船者，陳列船艘欲渡河也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
       "anchor_text": "而伏兵從夏陽以木罌缻渡軍，",
       "before_context": "...臨晉，信乃益爲疑兵，陳船欲度臨晉，而伏兵從夏陽以木罌缻渡軍，",
-      "after_context": "襲安邑。魏王豹驚，引兵迎信，信遂虜豹，定魏爲河東郡。漢王遣張...",
+      "after_context": "襲安邑。",
       "items": [
         {
           "source": "jijie",
@@ -203,10 +471,10 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n032",
       "anchor_text": "襲安邑。",
       "before_context": "...乃益爲疑兵，陳船欲度臨晉，而伏兵從夏陽以木罌缻渡軍，襲安邑。",
-      "after_context": "魏王豹驚，引兵迎信，信遂虜豹，定魏爲河東郡。漢王遣張耳",
+      "after_context": "魏王豹驚，引兵迎信，信遂虜豹，",
       "items": [
         {
           "source": "zhengyi",
@@ -217,10 +485,24 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n033",
+      "anchor_text": "魏王豹驚，引兵迎信，信遂虜豹，",
+      "before_context": "...兵從夏陽以木罌缻渡軍，襲安邑。魏王豹驚，引兵迎信，信遂虜豹，",
+      "after_context": "定魏爲河東郡。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：劉氏云「夏陽舊無船，豹不備之，而防臨晉耳。今安邑被襲，故豹遂降也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "定魏爲河東郡。",
       "before_context": "...缻渡軍，襲安邑。魏王豹驚，引兵迎信，信遂虜豹，定魏爲河東郡。",
-      "after_context": "漢王遣張耳",
+      "after_context": "漢王遣張耳與信俱，引兵東，北擊趙、代。後九月，破代兵，禽夏說...",
       "items": [
         {
           "source": "zhengyi",
@@ -231,9 +513,9 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n035",
       "anchor_text": "北擊趙、代。後九月，破代兵，禽夏說閼與。",
-      "before_context": "張耳與信俱，引兵東，北擊趙、代。後九月，破代兵，禽夏說閼與。",
+      "before_context": "...張耳與信俱，引兵東，北擊趙、代。後九月，破代兵，禽夏說閼與。",
       "after_context": "信之下魏破代，漢輒使人收其精兵，詣滎陽以距楚。",
       "items": [
         {
@@ -255,10 +537,24 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n036",
+      "anchor_text": "以兵數萬，欲東下井陘擊趙。",
+      "before_context": "信與張耳以兵數萬，欲東下井陘擊趙。",
+      "after_context": "趙王、成安君陳餘聞漢且襲之也，聚兵井陘口，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《地理志》常山石邑縣，井陘山在西。又穆天子傳云「至于陘山之隧，升于三道之磴」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
       "anchor_text": "王、成安君陳餘聞漢且襲之也，聚兵井陘口，",
       "before_context": "...，欲東下井陘擊趙。趙王、成安君陳餘聞漢且襲之也，聚兵井陘口，",
-      "after_context": "號稱二十萬。廣武君李左車說成安君曰：「聞漢將韓信",
+      "after_context": "號稱二十萬。廣武君李左車說成安君曰：「聞漢將韓信涉西河，虜魏...",
       "items": [
         {
           "source": "zhengyi",
@@ -269,10 +565,38 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n038",
+      "anchor_text": "涉西河，虜魏王，禽夏說，新喋血",
+      "before_context": "...李左車說成安君曰：「聞漢將韓信涉西河，虜魏王，禽夏說，新喋血",
+      "after_context": "閼與，今乃輔以張耳，議欲下趙，此乘勝而去國遠鬬，其鋒不可當。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "喋，舊音歃，非也。案：陳湯傳「喋血萬里之外」，如淳云「殺人血流滂沱也」。韋昭音徒協反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
+      "anchor_text": "可當。臣聞千里餽糧，士有飢色，樵蘇後爨，",
+      "before_context": "...勝而去國遠鬬，其鋒不可當。臣聞千里餽糧，士有飢色，樵蘇後爨，",
+      "after_context": "師不宿飽。今井陘之道，車不得方軌，騎不得成列，行數百里，其勢...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「樵，取薪也。蘇，取草也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
       "anchor_text": "，知其不用，還報，則大喜，乃敢引兵遂下。",
       "before_context": "韓信使人閒視，知其不用，還報，則大喜，乃敢引兵遂下。",
-      "after_context": "未至井陘口三十里，止舍。夜半傳發，選輕騎二千人，人持一赤幟，...",
+      "after_context": "未至井陘口三十里，止舍。夜半傳發，",
       "items": [
         {
           "source": "zhengyi",
@@ -283,7 +607,21 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n041",
+      "anchor_text": "未至井陘口三十里，止舍。夜半傳發，",
+      "before_context": "...報，則大喜，乃敢引兵遂下。未至井陘口三十里，止舍。夜半傳發，",
+      "after_context": "選輕騎二千人，人持一赤幟，從閒道萆山而望趙軍，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「傳令軍中使發。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
       "anchor_text": "二千人，人持一赤幟，從閒道萆山而望趙軍，",
       "before_context": "...舍。夜半傳發，選輕騎二千人，人持一赤幟，從閒道萆山而望趙軍，",
       "after_context": "誡曰：「趙見我走，必空壁逐我，若疾入趙壁，拔趙幟，立漢赤幟。...",
@@ -292,12 +630,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "如淳曰：「萆音蔽。依山自覆蔽。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：謂令從閒道小路向前，望見陳餘軍營即住，仍須隱山自蔽，勿令趙軍知也。萆音蔽。蔽者，蓋覆也。《楚漢春秋》作「卑山」，《漢書》作「箄山」。說文云「箄，蔽也，從竹卑聲」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n043",
+      "anchor_text": "趙壁，拔趙幟，立漢赤幟。」令其裨將傳飧，",
+      "before_context": "...，必空壁逐我，若疾入趙壁，拔趙幟，立漢赤幟。」令其裨將傳飧，",
+      "after_context": "曰：「今日破趙會食！」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「音湌也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n044",
       "anchor_text": "曰：「今日破趙會食！」",
       "before_context": "...壁，拔趙幟，立漢赤幟。」令其裨將傳飧，曰：「今日破趙會食！」",
       "after_context": "諸將皆莫信，詳應曰：「諾。」謂軍吏曰：「趙已先據便地爲壁，且...",
@@ -306,12 +663,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "服虔曰：「立駐傳湌食也。」如淳曰：「小飯曰湌。言破趙後乃當共飽食也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳曰：「小飯曰湌。謂立駐傳湌，待破趙乃大食也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n045",
       "anchor_text": "阻險而還。」信乃使萬人先行，出，背水陳。",
       "before_context": "...，未肯擊前行，恐吾至阻險而還。」信乃使萬人先行，出，背水陳。",
       "after_context": "趙軍望見而大笑。平旦，信建大將之旗鼓，鼓行出井陘口，趙開壁擊...",
@@ -325,10 +687,10 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n046",
       "anchor_text": "建大將之旗鼓，鼓行出井陘口，趙開壁擊之，",
       "before_context": "...望見而大笑。平旦，信建大將之旗鼓，鼓行出井陘口，趙開壁擊之，",
-      "after_context": "大戰良久。於是信、張耳",
+      "after_context": "大戰良久。於是信、張耳詳弃鼓旗，走水上軍。水上軍開入之，復疾...",
       "items": [
         {
           "source": "zhengyi",
@@ -339,7 +701,7 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n047",
       "anchor_text": "是漢兵夾擊，大破虜趙軍，斬成安君泜水上，",
       "before_context": "...雖斬之，不能禁也。於是漢兵夾擊，大破虜趙軍，斬成安君泜水上，",
       "after_context": "禽趙王歇。",
@@ -348,12 +710,45 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「泜音遲。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣音遲。劉氏音脂。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n048",
+      "anchor_text": "諸將效首虜，",
+      "before_context": "諸將效首虜，",
+      "after_context": "（休）畢賀，因問信曰：「兵法右倍山陵，前左水澤，今者將軍令臣...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "如淳曰：「效，致也。」晉灼云：「效，數也。」鄭玄注禮「效猶呈見也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
+      "anchor_text": "君有百戰百勝之計，一旦而失之，軍敗鄗下，",
+      "before_context": "...用，願效愚忠。夫成安君有百戰百勝之計，一旦而失之，軍敗鄗下，",
+      "after_context": "身死泜上。今將軍涉西河，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「鄗音臛。今高邑是。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n050",
       "anchor_text": "身死泜上。今將軍涉西河，",
       "before_context": "...百戰百勝之計，一旦而失之，軍敗鄗下，身死泜上。今將軍涉西河，",
       "after_context": "虜魏王，禽夏說閼與，一舉而下井陘，不終朝破趙二十萬眾，誅成安...",
@@ -372,24 +767,57 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
-      "anchor_text": "孤，百里之內，牛酒日至，以饗士大夫醳兵，",
-      "before_context": "...如案甲休兵，鎮趙撫其孤，百里之內，牛酒日至，以饗士大夫醳兵，",
-      "after_context": "北首燕路，而後遣辯士奉咫尺之書，暴其所長於燕，燕必不敢不聽從...",
+      "id": "n051",
+      "anchor_text": "，威震天下，農夫莫不輟耕釋耒，褕衣甘食，",
+      "before_context": "...，誅成安君。名聞海內，威震天下，農夫莫不輟耕釋耒，褕衣甘食，",
+      "after_context": "傾耳以待命者。",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "魏都賦曰：「肴醳順時。」劉逵曰：「醳酒也。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "褕，鄒氏音踰，美也。恐滅亡不久，故廢止作業而事美衣甘食，日偷苟且也，慮不圖久故也。《漢書》作「靡衣媮食」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n052",
+      "anchor_text": "傾耳以待命者。",
+      "before_context": "...聞海內，威震天下，農夫莫不輟耕釋耒，褕衣甘食，傾耳以待命者。",
+      "after_context": "若此，將軍之所長也。然而眾勞卒罷，其實難用。今將軍欲舉倦獘之...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「恐滅亡不久故也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
+      "anchor_text": "孤，百里之內，牛酒日至，以饗士大夫醳兵，",
+      "before_context": "...如案甲休兵，鎮趙撫其孤，百里之內，牛酒日至，以饗士大夫醳兵，",
+      "after_context": "北首燕路，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "魏都賦曰：「肴醳順時。」劉逵曰：「醳酒也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉氏依劉逵音。醳酒謂以酒食養兵士也。案：《史記》古「釋」字皆如此作，豈亦謂以酒食醳兵士，故字從酉乎？"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
       "anchor_text": "北首燕路，",
       "before_context": "...，鎮趙撫其孤，百里之內，牛酒日至，以饗士大夫醳兵，北首燕路，",
-      "after_context": "而後遣辯士奉咫尺之書，暴其所長於燕，燕必不敢不聽從。燕已從，...",
+      "after_context": "而後遣辯士奉咫尺之書，",
       "items": [
         {
           "source": "zhengyi",
@@ -400,10 +828,10 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n055",
       "anchor_text": "而後遣辯士奉咫尺之書，",
       "before_context": "...，牛酒日至，以饗士大夫醳兵，北首燕路，而後遣辯士奉咫尺之書，",
-      "after_context": "暴其所長於燕，燕必不敢不聽從。燕已從，使諠言者東告齊，齊必從...",
+      "after_context": "暴其所長於燕，",
       "items": [
         {
           "source": "zhengyi",
@@ -414,7 +842,7 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n056",
       "anchor_text": "暴其所長於燕，",
       "before_context": "...饗士大夫醳兵，北首燕路，而後遣辯士奉咫尺之書，暴其所長於燕，",
       "after_context": "燕必不敢不聽從。燕已從，使諠言者東告齊，齊必從風而服，雖有智...",
@@ -428,7 +856,7 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n057",
       "anchor_text": "方急圍漢王於滎陽，漢王南出，之宛、葉閒，",
       "before_context": "...趙城邑，發兵詣漢。楚方急圍漢王於滎陽，漢王南出，之宛、葉閒，",
       "after_context": "得黥布，走入成皋，楚又復急圍之。六月，漢王出成皋，東渡河，獨...",
@@ -442,10 +870,24 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n058",
+      "anchor_text": "爲相國，收趙兵未發者擊齊。",
+      "before_context": "...奪兩人軍，即令張耳備守趙地。拜韓信爲相國，收趙兵未發者擊齊。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「謂趙人未嘗見發者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n059",
       "anchor_text": "信引兵東，未渡平原，",
       "before_context": "信引兵東，未渡平原，",
-      "after_context": "聞漢王使酈食其已說下齊，韓信",
+      "after_context": "聞漢王使酈食其已說下齊，韓信欲止。范陽辯士蒯通說信曰：「將軍...",
       "items": [
         {
           "source": "zhengyi",
@@ -456,7 +898,35 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n060",
+      "anchor_text": "止將軍乎？何以得毋行也！且酈生一士，伏軾",
+      "before_context": "...獨發閒使下齊，寧有詔止將軍乎？何以得毋行也！且酈生一士，伏軾",
+      "after_context": "掉三寸之舌，下齊七十餘城，將軍將數萬眾，歲餘乃下趙五十餘，爲...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「軾，今小車中隆起者。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n061",
+      "anchor_text": "，即留縱酒，罷備漢守禦。信因襲齊歷下軍，",
+      "before_context": "...，遂渡河。齊已聽酈生，即留縱酒，罷備漢守禦。信因襲齊歷下軍，",
+      "after_context": "遂至臨菑。齊王田廣以酈生賣己，乃亨之，而走高密，使使之楚請救...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「濟南歷城縣。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n062",
       "anchor_text": "其鋒不可當。齊、楚自居其地戰，兵易敗散。",
       "before_context": "...曰：「漢兵遠鬬窮戰，其鋒不可當。齊、楚自居其地戰，兵易敗散。",
       "after_context": "不如深壁，令齊王使其信臣招所亡城，亡城聞其王在，楚來救，必反...",
@@ -470,21 +940,26 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n063",
       "anchor_text": "之半可得，何爲止！」遂戰，與信夾濰水陳。",
       "before_context": "...何功？今戰而勝之，齊之半可得，何爲止！」遂戰，與信夾濰水陳。",
-      "after_context": "韓信",
+      "after_context": "韓信乃夜令人爲萬餘囊，滿盛沙，壅水上流，引軍半渡，擊龍且，詳...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「出東莞而東北流，至北海都昌縣入海。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "濰音維。《地理志》濰水出琅邪箕縣東北，至都昌入海。徐廣云「出東莞而東北流入海」，蓋據水經而說，少不同耳。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n064",
       "anchor_text": "水東軍散走，齊王廣亡去。信遂追北至城陽，",
       "before_context": "...即急擊，殺龍且。龍且水東軍散走，齊王廣亡去。信遂追北至城陽，",
       "after_context": "皆虜楚卒。",
@@ -498,7 +973,49 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n065",
+      "anchor_text": "使者至，發書，",
+      "before_context": "...願爲假王便。」當是時，楚方急圍漢王於滎陽，韓信使者至，發書，",
+      "after_context": "漢王大怒，罵曰：「吾困於此，旦暮望若來佐我，乃欲自立爲王！」...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「發信使者所齎書。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n066",
+      "anchor_text": "往立信爲齊王，",
+      "before_context": "...大丈夫定諸侯，即爲真王耳，何以假爲！」乃遣張良往立信爲齊王，",
+      "after_context": "徵其兵擊楚。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「四年二月。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
+      "anchor_text": "楚已亡龍且，項王恐，使盱眙人武涉",
+      "before_context": "楚已亡龍且，項王恐，使盱眙人武涉",
+      "after_context": "往說齊王信曰：「天下共苦秦久矣，相與勠力擊秦。秦已破，計功割...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張華曰：「武涉墓在盱眙城東十五里。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
       "anchor_text": "甚也。且漢王不可必，身居項王掌握中數矣，",
       "before_context": "...不休，其不知厭足如是甚也。且漢王不可必，身居項王掌握中數矣，",
       "after_context": "項王憐而活之，然得脫，輒倍約，復擊項王，其不可親信如此。今足...",
@@ -512,10 +1029,66 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n069",
+      "anchor_text": "曰：「臣事項王，官不過郎中，位不過執戟，",
+      "before_context": "...者固若此乎！」韓信謝曰：「臣事項王，官不過郎中，位不過執戟，",
+      "after_context": "言不聽，畫不用，故倍楚而歸漢。漢王授我上將軍印，予我數萬眾，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「郎中，宿衞執戟之人也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
+      "anchor_text": "封侯，又危不安。相君之背，貴乃不可言。」",
+      "before_context": "...曰：「相君之面，不過封侯，又危不安。相君之背，貴乃不可言。」",
+      "after_context": "韓信曰：「何謂也？」蒯通曰：「天下初發難也，俊雄豪桀建號壹呼...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「背畔則大貴。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
+      "anchor_text": "河之險，一日數戰，無尺寸之功，折北不救，",
+      "before_context": "...之眾，距鞏、雒，阻山河之險，一日數戰，無尺寸之功，折北不救，",
+      "after_context": "敗滎陽，傷成皋，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「折，衂敗也。北，奔北。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n072",
+      "anchor_text": "敗滎陽，傷成皋，",
+      "before_context": "...阻山河之險，一日數戰，無尺寸之功，折北不救，敗滎陽，傷成皋，",
+      "after_context": "遂走宛、葉之閒，此所謂智勇俱困者也。夫銳氣挫於險塞，而糧食竭...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「於成皋傷胷也。」臣瓚曰：「謂軍折傷。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n073",
       "anchor_text": "、趙，出空虛之地而制其後，因民之欲，西鄉",
       "before_context": "...兵之眾，據彊齊，從燕、趙，出空虛之地而制其後，因民之欲，西鄉",
-      "after_context": "爲百姓請命，則天下風走而響應矣，孰敢不聽！割大弱彊，以立諸侯...",
+      "after_context": "爲百姓請命，",
       "items": [
         {
           "source": "zhengyi",
@@ -526,7 +1099,7 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n074",
       "anchor_text": "爲百姓請命，",
       "before_context": "...齊，從燕、趙，出空虛之地而制其後，因民之欲，西鄉爲百姓請命，",
       "after_context": "則天下風走而響應矣，孰敢不聽！割大弱彊，以立諸侯，諸侯已立，...",
@@ -540,7 +1113,7 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n075",
       "anchor_text": "隨廝養之役者，失萬乘之權；守儋石之祿者，",
       "before_context": "...末者，不可紛以辭。夫隨廝養之役者，失萬乘之權；守儋石之祿者，",
       "after_context": "闕卿相之位。故知者決之斷也，疑者事之害也，審豪氂之小計，遺天...",
@@ -549,15 +1122,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「楊雄方言『海岱之閒名罌爲儋』。石，斗石也。」蘇林曰：「齊人名小罌爲儋。石，如今受鮐魚石罌，不過一二石耳。一說，一儋與一斛之餘。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "儋音都濫反。石，斗也。蘇林解爲近之。鮐音胎。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n076",
       "anchor_text": "禍也。故曰『猛虎之猶豫，不若蜂蠆之致螫；",
       "before_context": "...，決弗敢行者，百事之禍也。故曰『猛虎之猶豫，不若蜂蠆之致螫；",
-      "after_context": "騏驥之跼躅，不如駑馬之安步；孟賁之狐疑，不如庸夫之必至也；雖...",
+      "after_context": "騏驥之跼躅，",
       "items": [
         {
           "source": "zhengyi",
@@ -568,7 +1146,35 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n077",
+      "anchor_text": "騏驥之跼躅，",
+      "before_context": "...，百事之禍也。故曰『猛虎之猶豫，不若蜂蠆之致螫；騏驥之跼躅，",
+      "after_context": "不如駑馬之安步；孟賁之狐疑，不如庸夫之必至也；雖有舜禹之智，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「跼，一作『蹢』也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n078",
+      "anchor_text": "禹之智，吟而不言，",
+      "before_context": "...安步；孟賁之狐疑，不如庸夫之必至也；雖有舜禹之智，吟而不言，",
+      "after_context": "不如瘖聾之指麾也』。此言貴能行之。夫功者難成而易敗，時者難得...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "吟，鄭氏音拒蔭反，又音琴。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n079",
       "anchor_text": "我齊，遂謝蒯通。蒯通說不聽，已詳狂爲巫。",
       "before_context": "...自以爲功多，漢終不奪我齊，遂謝蒯通。蒯通說不聽，已詳狂爲巫。",
       "after_context": "",
@@ -577,12 +1183,45 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一本『遂不用蒯通，蒯通曰：「夫迫於細苛者，不可與圖大事；拘於臣虜者，固無君王之意。」說不聽，因去詳狂』也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《漢書》及《戰國策》皆有此文。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n080",
+      "anchor_text": "已破，高祖襲奪齊王軍。",
+      "before_context": "...用張良計，召齊王信，遂將兵會垓下。項羽已破，高祖襲奪齊王軍。",
+      "after_context": "漢五年正月，徙齊王信爲楚王，都下邳。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「以齊爲平原、千乘、東萊、齊郡。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
+      "anchor_text": "信至國，召所從食漂母，賜千金。",
+      "before_context": "信至國，召所從食漂母，賜千金。",
+      "after_context": "及下鄉南昌亭長，賜百錢，曰：「公，小人也，爲德不卒。」召辱己...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張華曰漂母冢在泗口南岸。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n082",
       "anchor_text": "項王亡將鍾離眛家在伊廬，",
       "before_context": "項王亡將鍾離眛家在伊廬，",
       "after_context": "素與信善。項王死後，亡歸信。漢王怨眛，聞其在楚，詔楚捕眛。信...",
@@ -606,7 +1245,7 @@
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n083",
       "anchor_text": "車。信曰：「果若人言，『狡兔死，良狗亨；",
       "before_context": "...。上令武士縛信，載後車。信曰：「果若人言，『狡兔死，良狗亨；",
       "after_context": "高鳥盡，良弓藏；敵國破，謀臣亡。』天下已定，我固當亨！」上曰...",
@@ -615,12 +1254,45 @@
           "source": "jijie",
           "label": "集解",
           "text": "張晏曰：「狡猶猾。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "郊兔死。郊音狡。狡，猾也。吳越春秋作「郊兔」，亦通。《漢書》作「狡兔」。《戰國策》曰「東郭逡，海內狡兔也」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n084",
+      "anchor_text": "陳豨拜爲鉅鹿守，",
+      "before_context": "陳豨拜爲鉅鹿守，",
+      "after_context": "辭於淮陰侯。淮陰侯挈其手，辟左右與之步於庭，仰天歎曰：「子可...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「表云爲趙相國，將兵守代也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n085",
+      "anchor_text": "以襲呂后、太子。部署已定，待豨報。其舍人",
+      "before_context": "...詐詔赦諸官徒奴，欲發以襲呂后、太子。部署已定，待豨報。其舍人",
+      "after_context": "得罪於信，信囚，欲殺之。舍人弟上變，告信欲反狀於呂后。呂后欲...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：晉灼曰，《楚漢春秋》云謝公也。姚氏案《功臣表》云慎陽侯樂說，淮陰舍人，告信反。未知孰是。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n086",
       "anchor_text": "。」信入，呂后使武士縛信，斬之長樂鍾室。",
       "before_context": "...信曰：「雖疾，彊入賀。」信入，呂后使武士縛信，斬之長樂鍾室。",
       "after_context": "信方斬，曰：「吾悔不用蒯通之計，乃爲兒女子所詐，豈非天哉！」...",
@@ -629,6 +1301,20 @@
           "source": "zhengyi",
           "label": "正義",
           "text": "長樂宮懸鍾之室。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
+      "anchor_text": "姓並起，英俊烏集。秦失其鹿，天下共逐之，",
+      "before_context": "...而維弛，山東大擾，異姓並起，英俊烏集。秦失其鹿，天下共逐之，",
+      "after_context": "於是高材疾足者先得焉。蹠之狗吠堯，堯非不仁，狗因吠非其主。當...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "張晏曰：「以鹿喻帝位也。」"
         }
       ],
       "sentence_id": null

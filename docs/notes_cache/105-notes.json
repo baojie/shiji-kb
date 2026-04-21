@@ -24,7 +24,7 @@
       "id": "n002",
       "anchor_text": "扁鹊者，",
       "before_context": "扁鹊者，",
-      "after_context": "勃海郡郑人也，姓秦氏，名越人。少时为人舍长。舍客长桑君过，扁...",
+      "after_context": "勃海郡郑人也，",
       "items": [
         {
           "source": "zhengyi",
@@ -38,12 +38,17 @@
       "id": "n003",
       "anchor_text": "勃海郡郑人也，",
       "before_context": "扁鹊者，勃海郡郑人也，",
-      "after_context": "姓秦氏，名越人。少时为人舍长。舍客长桑君过，扁鹊独奇之，常谨...",
+      "after_context": "姓秦氏，名越人。少时为人舍长。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「『郑』当为『鄚』。鄚，县名，今属河闲。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：勃海无郑县，当作鄚县，音莫，今属河闲。"
         }
       ],
       "sentence_id": null
@@ -52,7 +57,7 @@
       "id": "n004",
       "anchor_text": "姓秦氏，名越人。少时为人舍长。",
       "before_context": "扁鹊者，勃海郡郑人也，姓秦氏，名越人。少时为人舍长。",
-      "after_context": "舍客长桑君过，扁鹊独奇之，常谨遇之。长桑君亦知扁鹊非常人也。...",
+      "after_context": "舍客长桑君",
       "items": [
         {
           "source": "suoyin",
@@ -69,6 +74,20 @@
     },
     {
       "id": "n005",
+      "anchor_text": "舍客长桑君",
+      "before_context": "...鹊者，勃海郡郑人也，姓秦氏，名越人。少时为人舍长。舍客长桑君",
+      "after_context": "过，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "隐者，盖神人。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
       "anchor_text": "过，",
       "before_context": "...，勃海郡郑人也，姓秦氏，名越人。少时为人舍长。舍客长桑君过，",
       "after_context": "扁鹊独奇之，常谨遇之。长桑君亦知扁鹊非常人也。出入十余年，乃...",
@@ -82,7 +101,7 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n007",
       "anchor_text": "也。出入十余年，乃呼扁鹊私坐，闲与语曰：",
       "before_context": "...长桑君亦知扁鹊非常人也。出入十余年，乃呼扁鹊私坐，闲与语曰：",
       "after_context": "「我有禁方，年老，欲传与公，公毋泄。」扁鹊曰：「敬诺。」乃出...",
@@ -96,10 +115,38 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n008",
+      "anchor_text": "鹊：「饮是以上池之水，三十日当知物矣。」",
+      "before_context": "...。」乃出其怀中药予扁鹊：「饮是以上池之水，三十日当知物矣。」",
+      "after_context": "乃悉取其禁方书尽与扁鹊。忽然不见，殆非人也。扁鹊以其言饮药三...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：旧说云上池水谓水未至地，盖承取露及竹木上水，取之以和药，服之三十日，当见鬼物也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
+      "anchor_text": "也。扁鹊以其言饮药三十日，视见垣一方人。",
+      "before_context": "...鹊。忽然不见，殆非人也。扁鹊以其言饮药三十日，视见垣一方人。",
+      "after_context": "以此视病，尽见五藏症结，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "方犹边也。言能隔墙见彼边之人，则眼通神也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n010",
       "anchor_text": "以此视病，尽见五藏症结，",
       "before_context": "...扁鹊以其言饮药三十日，视见垣一方人。以此视病，尽见五藏症结，",
-      "after_context": "特以诊脉为名耳。为医或在齐，或在赵。在赵者名扁鹊。",
+      "after_context": "特以诊脉",
       "items": [
         {
           "source": "zhengyi",
@@ -110,7 +157,21 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n011",
+      "anchor_text": "特以诊脉",
+      "before_context": "...言饮药三十日，视见垣一方人。以此视病，尽见五藏症结，特以诊脉",
+      "after_context": "为名耳。为医或在齐，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "诊，邹氏音丈忍反，刘氏音陈忍反。司马彪云：「诊，占也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
       "anchor_text": "为名耳。为医或在齐，",
       "before_context": "...一方人。以此视病，尽见五藏症结，特以诊脉为名耳。为医或在齐，",
       "after_context": "或在赵。在赵者名扁鹊。",
@@ -124,10 +185,66 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n013",
+      "anchor_text": "当晋昭公时，",
+      "before_context": "当晋昭公时，",
+      "after_context": "诸大夫彊而公族弱，赵简子为大夫，专国事。简子疾，五日不知人，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案左氏，简子专国在定、顷二公之时，非当昭公之世。且赵系家敍此事亦在定公之初。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
+      "anchor_text": "简子为大夫，专国事。简子疾，五日不知人，",
+      "before_context": "...诸大夫彊而公族弱，赵简子为大夫，专国事。简子疾，五日不知人，",
+      "after_context": "大夫皆惧，于是召扁鹊。扁鹊入视病，出，董安于问扁鹊，扁鹊曰：...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：韩子云「十日不知人」，所记异也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "尝如此，七日而寤。寤之日，告公孙支与子舆",
+      "before_context": "...也，而何怪！昔秦穆公尝如此，七日而寤。寤之日，告公孙支与子舆",
+      "after_context": "曰：『我之帝所甚乐。吾所以久者，适有所学也。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：二子皆秦大夫。公孙支，子桑也。子舆未详。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
+      "anchor_text": "『我之帝所甚乐。吾所以久者，适有所学也。",
+      "before_context": "...，告公孙支与子舆曰：『我之帝所甚乐。吾所以久者，适有所学也。",
+      "after_context": "帝告我：「晋国且大乱，五世不安。其后将霸，未老而死。霸者之子...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "适音释。言我适来有所受教命，故云学也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "赐之。』帝告我：『晋国且世衰，七世而亡。",
       "before_context": "...曰：『及而子之壮也以赐之。』帝告我：『晋国且世衰，七世而亡。",
-      "after_context": "嬴姓将大败周人于范魁之西，而亦不能有也。』」董安于受言，书而...",
+      "after_context": "嬴姓将大败周人于范魁之西，",
       "items": [
         {
           "source": "zhengyi",
@@ -138,7 +255,7 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n018",
       "anchor_text": "嬴姓将大败周人于范魁之西，",
       "before_context": "...』帝告我：『晋国且世衰，七世而亡。嬴姓将大败周人于范魁之西，",
       "after_context": "而亦不能有也。』」董安于受言，书而藏之。以扁鹊言告简子，简子...",
@@ -152,10 +269,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n019",
       "anchor_text": "其后扁鹊过虢。",
       "before_context": "其后扁鹊过虢。",
-      "after_context": "虢太子死，扁鹊至虢宫门下，问中庶子喜方者曰：「太子何病，国中...",
+      "after_context": "虢太子",
       "items": [
         {
           "source": "zhengyi",
@@ -166,24 +283,29 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n020",
       "anchor_text": "虢太子",
       "before_context": "其后扁鹊过虢。虢太子",
-      "after_context": "死，扁鹊至虢宫门下，问中庶子喜方者曰：「太子何病，国中治穰过...",
+      "after_context": "死，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "傅玄曰：「虢是晋献公时先是百二十年灭矣，是时焉得有虢？」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：傅玄云「虢是晋献所灭，先此百二十余年，此时焉得有虢」，则此云「虢太子」，非也。然案虢后改称郭，春秋有郭公，盖郭之太子也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n021",
       "anchor_text": "死，",
       "before_context": "其后扁鹊过虢。虢太子死，",
-      "after_context": "扁鹊至虢宫门下，问中庶子喜方者曰：「太子何病，国中治穰过于众...",
+      "after_context": "扁鹊至虢宫门下，问中庶子喜方者",
       "items": [
         {
           "source": "zhengyi",
@@ -194,7 +316,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n022",
       "anchor_text": "扁鹊至虢宫门下，问中庶子喜方者",
       "before_context": "其后扁鹊过虢。虢太子死，扁鹊至虢宫门下，问中庶子喜方者",
       "after_context": "曰：「太子何病，国中治穰过于众事？」中庶子曰：「太子病血气不...",
@@ -213,10 +335,10 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n023",
       "anchor_text": "而不得泄，是以阳缓而阴急，故暴蹷而死。」",
       "before_context": "...不能止邪气，邪气畜积而不得泄，是以阳缓而阴急，故暴蹷而死。」",
-      "after_context": "扁鹊曰：「其死何如时？」曰：「鸡鸣至今。」曰：「收乎？」曰：...",
+      "after_context": "扁鹊曰：「其死何如时？」曰：「鸡鸣至今。」曰：「收乎？」",
       "items": [
         {
           "source": "suoyin",
@@ -232,10 +354,24 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n024",
+      "anchor_text": "如时？」曰：「鸡鸣至今。」曰：「收乎？」",
+      "before_context": "...。」扁鹊曰：「其死何如时？」曰：「鸡鸣至今。」曰：「收乎？」",
+      "after_context": "曰：「未也，其死未能半日也。」「言臣齐勃海秦越人也，家在于郑...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "收谓棺敛。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
       "anchor_text": "以言太子可生也！臣闻上古之时，医有俞跗，",
       "before_context": "...「先生得无诞之乎？何以言太子可生也！臣闻上古之时，医有俞跗，",
-      "after_context": "治病不以汤液醴洒，镵石挢引，案扤毒熨，一拨见病之应，因五藏之...",
+      "after_context": "治病不以汤液醴洒，",
       "items": [
         {
           "source": "suoyin",
@@ -251,10 +387,10 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n026",
       "anchor_text": "治病不以汤液醴洒，",
       "before_context": "...何以言太子可生也！臣闻上古之时，医有俞跗，治病不以汤液醴洒，",
-      "after_context": "镵石挢引，案扤毒熨，一拨见病之应，因五藏之输，乃割皮解肌，诀...",
+      "after_context": "镵石挢引，案扤毒熨，",
       "items": [
         {
           "source": "zhengyi",
@@ -265,10 +401,24 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n027",
+      "anchor_text": "镵石挢引，案扤毒熨，",
+      "before_context": "...闻上古之时，医有俞跗，治病不以汤液醴洒，镵石挢引，案扤毒熨，",
+      "after_context": "一拨见病之应，因五藏之输，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "镵音士咸反，谓石针也。挢音九兆反，谓为按摩之法，夭挢引身，如熊顾鸟伸也。扤音玩，亦谓按摩而玩弄身体使调也。毒熨谓毒病之处以药物熨帖也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
       "anchor_text": "一拨见病之应，因五藏之输，",
       "before_context": "...不以汤液醴洒，镵石挢引，案扤毒熨，一拨见病之应，因五藏之输，",
-      "after_context": "乃割皮解肌，诀脉结筋，搦髓脑，揲荒爪幕，湔浣肠胃，漱涤五藏，...",
+      "after_context": "乃割皮解肌，诀脉结筋，搦髓脑，揲荒",
       "items": [
         {
           "source": "suoyin",
@@ -284,24 +434,29 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n029",
       "anchor_text": "乃割皮解肌，诀脉结筋，搦髓脑，揲荒",
-      "before_context": "一拨见病之应，因五藏之输，乃割皮解肌，诀脉结筋，搦髓脑，揲荒",
-      "after_context": "爪幕，湔浣肠胃，漱涤五藏，练精易形。先生之方能若是，则太子可...",
+      "before_context": "...一拨见病之应，因五藏之输，乃割皮解肌，诀脉结筋，搦髓脑，揲荒",
+      "after_context": "爪幕，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「揲音舌。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "搦音女角反。揲音舌。荒，膏荒也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n030",
       "anchor_text": "爪幕，",
       "before_context": "...病之应，因五藏之输，乃割皮解肌，诀脉结筋，搦髓脑，揲荒爪幕，",
-      "after_context": "湔浣肠胃，漱涤五藏，练精易形。先生之方能若是，则太子可生也；...",
+      "after_context": "湔浣",
       "items": [
         {
           "source": "suoyin",
@@ -317,7 +472,7 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n031",
       "anchor_text": "湔浣",
       "before_context": "...应，因五藏之输，乃割皮解肌，诀脉结筋，搦髓脑，揲荒爪幕，湔浣",
       "after_context": "肠胃，漱涤五藏，练精易形。先生之方能若是，则太子可生也；不能...",
@@ -331,10 +486,10 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n032",
       "anchor_text": "管窥天，以郄视文。越人之为方也，不待切脉",
       "before_context": "...「夫子之为方也，若以管窥天，以郄视文。越人之为方也，不待切脉",
-      "after_context": "望色听声写形，言病之所在。闻病之阳，论得其阴；闻病之阴，论得...",
+      "after_context": "望色",
       "items": [
         {
           "source": "zhengyi",
@@ -345,10 +500,10 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n033",
       "anchor_text": "望色",
       "before_context": "...子之为方也，若以管窥天，以郄视文。越人之为方也，不待切脉望色",
-      "after_context": "听声写形，言病之所在。闻病之阳，论得其阴；闻病之阴，论得其阳...",
+      "after_context": "听声",
       "items": [
         {
           "source": "zhengyi",
@@ -359,10 +514,10 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n034",
       "anchor_text": "听声",
       "before_context": "...为方也，若以管窥天，以郄视文。越人之为方也，不待切脉望色听声",
-      "after_context": "写形，言病之所在。闻病之阳，论得其阴；闻病之阴，论得其阳。病...",
+      "after_context": "写形，",
       "items": [
         {
           "source": "zhengyi",
@@ -373,10 +528,10 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n035",
       "anchor_text": "写形，",
       "before_context": "...，若以管窥天，以郄视文。越人之为方也，不待切脉望色听声写形，",
-      "after_context": "言病之所在。闻病之阳，论得其阴；闻病之阴，论得其阳。病应见于...",
+      "after_context": "言病之所在。闻病之阳，论得其阴；闻病之阴，论得其阳。",
       "items": [
         {
           "source": "zhengyi",
@@ -387,10 +542,10 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n036",
       "anchor_text": "闻病之阳，论得其阴；闻病之阴，论得其阳。",
       "before_context": "...声写形，言病之所在。闻病之阳，论得其阴；闻病之阴，论得其阳。",
-      "after_context": "病应见于大表，不出千里，决者至众，不可曲止也。子以吾言为不诚...",
+      "after_context": "病应见于大表，不出千里，决者至众，不可曲止也。",
       "items": [
         {
           "source": "zhengyi",
@@ -401,10 +556,10 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n037",
       "anchor_text": "于大表，不出千里，决者至众，不可曲止也。",
       "before_context": "...阴，论得其阳。病应见于大表，不出千里，决者至众，不可曲止也。",
-      "after_context": "子以吾言为不诚，试入诊太子，当闻其耳鸣而鼻张，循其两股以至于...",
+      "after_context": "子以吾言为不诚，试入诊太子，当闻其耳鸣而鼻张，",
       "items": [
         {
           "source": "suoyin",
@@ -420,7 +575,7 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n038",
       "anchor_text": "言为不诚，试入诊太子，当闻其耳鸣而鼻张，",
       "before_context": "...，不可曲止也。子以吾言为不诚，试入诊太子，当闻其耳鸣而鼻张，",
       "after_context": "循其两股以至于阴，当尚温也。」",
@@ -434,24 +589,99 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
-      "anchor_text": "魂精泄横，流涕长潸，",
-      "before_context": "...壑，长终而不得反。」言末卒，因嘘唏服臆，魂精泄横，流涕长潸，",
-      "after_context": "忽忽承𥅴，悲不能自止，容貌变更。扁鹊曰：「若太子病，所谓『尸...",
+      "id": "n039",
+      "anchor_text": "中庶子闻扁鹊言，目眩然而不瞚，",
+      "before_context": "中庶子闻扁鹊言，目眩然而不瞚，",
+      "after_context": "舌挢然而不下，",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐广曰：「一云『言未卒，因涕泣交流，嘘唏不能自止』也。」"
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "眩音县。瞚音舜。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n040",
+      "anchor_text": "舌挢然而不下，",
+      "before_context": "中庶子闻扁鹊言，目眩然而不瞚，舌挢然而不下，",
+      "after_context": "乃以扁鹊言入报虢君。虢君闻之大惊，出见扁鹊于中阙，曰：「窃闻...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "挢音纪兆反。挢，举也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
+      "anchor_text": "谒于前也。先生过小国，幸而举之，偏国寡臣",
+      "before_context": "...之日久矣，然未尝得拜谒于前也。先生过小国，幸而举之，偏国寡臣",
+      "after_context": "幸甚。有先生则活，无先生则弃捐填沟壑，长终而不得反。」言末卒...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓虢君自谦，云己是偏远之国，寡小之臣也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
+      "anchor_text": "壑，长终而不得反。」言末卒，因嘘唏服臆，",
+      "before_context": "...活，无先生则弃捐填沟壑，长终而不得反。」言末卒，因嘘唏服臆，",
+      "after_context": "魂精泄横，流涕长潸，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "上音皮力反，下音忆。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
+      "anchor_text": "魂精泄横，流涕长潸，",
+      "before_context": "...壑，长终而不得反。」言末卒，因嘘唏服臆，魂精泄横，流涕长潸，",
+      "after_context": "忽忽承𥅴，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一云『言未卒，因涕泣交流，嘘唏不能自止』也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "潸音山。长潸谓长垂泪也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n044",
+      "anchor_text": "忽忽承𥅴，",
+      "before_context": "...不得反。」言末卒，因嘘唏服臆，魂精泄横，流涕长潸，忽忽承𥅴，",
+      "after_context": "悲不能自止，容貌变更。扁鹊曰：「若太子病，所谓『尸蹷』者也。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音接。𥅴即睫也。承𥅴，言泪恒垂以承于睫也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
       "anchor_text": "病，所谓『尸蹷』者也。夫以阳入阴中，动胃",
       "before_context": "...更。扁鹊曰：「若太子病，所谓『尸蹷』者也。夫以阳入阴中，动胃",
-      "after_context": "繵缘，中经维络，别下于三焦、膀胱，是以阳脉下遂，阴脉上争，会...",
+      "after_context": "繵",
       "items": [
         {
           "source": "zhengyi",
@@ -462,10 +692,24 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n046",
+      "anchor_text": "繵",
+      "before_context": "...。扁鹊曰：「若太子病，所谓『尸蹷』者也。夫以阳入阴中，动胃繵",
+      "after_context": "缘，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音直延反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
       "anchor_text": "缘，",
       "before_context": "...鹊曰：「若太子病，所谓『尸蹷』者也。夫以阳入阴中，动胃繵缘，",
-      "after_context": "中经维络，别下于三焦、膀胱，是以阳脉下遂，阴脉上争，会气闭而...",
+      "after_context": "中经维络，",
       "items": [
         {
           "source": "zhengyi",
@@ -476,10 +720,10 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n048",
       "anchor_text": "中经维络，",
       "before_context": "...太子病，所谓『尸蹷』者也。夫以阳入阴中，动胃繵缘，中经维络，",
-      "after_context": "别下于三焦、膀胱，是以阳脉下遂，阴脉上争，会气闭而不通，阴上...",
+      "after_context": "别下于三焦、膀胱，",
       "items": [
         {
           "source": "jijie",
@@ -495,10 +739,10 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n049",
       "anchor_text": "别下于三焦、膀胱，",
       "before_context": "...』者也。夫以阳入阴中，动胃繵缘，中经维络，别下于三焦、膀胱，",
-      "after_context": "是以阳脉下遂，阴脉上争，会气闭而不通，阴上而阳内行，下内鼓而...",
+      "after_context": "是以阳脉下遂，",
       "items": [
         {
           "source": "zhengyi",
@@ -509,10 +753,24 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n050",
+      "anchor_text": "是以阳脉下遂，",
+      "before_context": "...入阴中，动胃繵缘，中经维络，别下于三焦、膀胱，是以阳脉下遂，",
+      "after_context": "阴脉上争，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『队』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n051",
       "anchor_text": "阴脉上争，",
       "before_context": "...胃繵缘，中经维络，别下于三焦、膀胱，是以阳脉下遂，阴脉上争，",
-      "after_context": "会气闭而不通，阴上而阳内行，下内鼓而不起，上外绝而不为使，上...",
+      "after_context": "会气闭而不通，",
       "items": [
         {
           "source": "zhengyi",
@@ -523,7 +781,7 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n052",
       "anchor_text": "会气闭而不通，",
       "before_context": "...络，别下于三焦、膀胱，是以阳脉下遂，阴脉上争，会气闭而不通，",
       "after_context": "阴上而阳内行，下内鼓而不起，上外绝而不为使，上有绝阳之络，下...",
@@ -537,10 +795,10 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n053",
       "anchor_text": "绝而不为使，上有绝阳之络，下有破阴之纽，",
       "before_context": "...，下内鼓而不起，上外绝而不为使，上有绝阳之络，下有破阴之纽，",
-      "after_context": "破阴绝阳，（",
+      "after_context": "破阴绝阳，（之）色（已）废",
       "items": [
         {
           "source": "zhengyi",
@@ -551,9 +809,23 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n054",
+      "anchor_text": "废",
+      "before_context": "...为使，上有绝阳之络，下有破阴之纽，破阴绝阳，（之）色（已）废",
+      "after_context": "脉乱，故形静如死状。太子未死也。夫以阳入阴支兰藏者生，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『发』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n055",
       "anchor_text": "死状。太子未死也。夫以阳入阴支兰藏者生，",
-      "before_context": "已）废脉乱，故形静如死状。太子未死也。夫以阳入阴支兰藏者生，",
+      "before_context": "...已）废脉乱，故形静如死状。太子未死也。夫以阳入阴支兰藏者生，",
       "after_context": "以阴入阳支兰藏者死。凡此数事，皆五藏蹷中之时暴作也。良工取之...",
       "items": [
         {
@@ -565,7 +837,7 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n056",
       "anchor_text": "此数事，皆五藏蹷中之时暴作也。良工取之，",
       "before_context": "...阴入阳支兰藏者死。凡此数事，皆五藏蹷中之时暴作也。良工取之，",
       "after_context": "拙者疑殆。」",
@@ -579,10 +851,38 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n057",
+      "anchor_text": "扁鹊乃使弟子子阳",
+      "before_context": "扁鹊乃使弟子子阳",
+      "after_context": "厉针砥石，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "阳，扁鹊之弟子也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
+      "anchor_text": "厉针砥石，",
+      "before_context": "扁鹊乃使弟子子阳厉针砥石，",
+      "after_context": "以取外三阳五会。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "针音针。厉谓磨也。砥音脂。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n059",
       "anchor_text": "以取外三阳五会。",
       "before_context": "扁鹊乃使弟子子阳厉针砥石，以取外三阳五会。",
-      "after_context": "有闲，太子苏。乃使子豹为五分之熨，以八减之齐和煮之，以更熨两...",
+      "after_context": "有闲，太子苏。乃使子豹为五分之熨，以八减之齐",
       "items": [
         {
           "source": "zhengyi",
@@ -593,7 +893,21 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n060",
+      "anchor_text": "，太子苏。乃使子豹为五分之熨，以八减之齐",
+      "before_context": "...以取外三阳五会。有闲，太子苏。乃使子豹为五分之熨，以八减之齐",
+      "after_context": "和煮之，以更",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "五分之熨，八减之齐。案：言五分之熨者，谓熨之令温暖之气入五分也。八减之齐者，谓药之齐和所减有八。并越人当时有此方也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n061",
       "anchor_text": "和煮之，以更",
       "before_context": "...会。有闲，太子苏。乃使子豹为五分之熨，以八减之齐和煮之，以更",
       "after_context": "熨两胁下。太子起坐。更适阴阳，但服汤二旬而复故。故天下尽以扁...",
@@ -607,21 +921,26 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n062",
       "anchor_text": "扁鹊过齐，齐桓侯客之。",
       "before_context": "扁鹊过齐，齐桓侯客之。",
-      "after_context": "入朝见，曰：「君有疾在腠理，不治将深。」桓侯曰：「寡人无疾。...",
+      "after_context": "入朝见，曰：「君有疾在腠理，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "傅玄曰：「是时齐无桓侯。」骃谓是齐侯田和之子桓公午也。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：傅玄曰「是时齐无桓侯」。裴骃云「谓是齐侯田和之子桓公午也」。盖与赵简子颇亦相当。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n063",
       "anchor_text": "入朝见，曰：「君有疾在腠理，",
       "before_context": "扁鹊过齐，齐桓侯客之。入朝见，曰：「君有疾在腠理，",
       "after_context": "不治将深。」桓侯曰：「寡人无疾。」扁鹊出，桓侯谓左右曰：「医...",
@@ -635,10 +954,10 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n064",
       "anchor_text": "，则疾可已，身可活也。人之所病，病疾多；",
       "before_context": "...微，能使良医得蚤从事，则疾可已，身可活也。人之所病，病疾多；",
-      "after_context": "而医之所病，病道少。故病有六不治：骄恣不论于理，一不治也；轻...",
+      "after_context": "而医之所病，病道少。",
       "items": [
         {
           "source": "zhengyi",
@@ -649,10 +968,38 @@
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n065",
+      "anchor_text": "而医之所病，病道少。",
+      "before_context": "...，则疾可已，身可活也。人之所病，病疾多；而医之所病，病道少。",
+      "after_context": "故病有六不治：骄恣不论于理，一不治也；轻身重财，二不治也；衣...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「所病犹疗病也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n066",
+      "anchor_text": "带下医；过雒阳，闻周人爱老人，即为耳目痹",
+      "before_context": "...邯郸，闻贵妇人，即为带下医；过雒阳，闻周人爱老人，即为耳目痹",
+      "after_context": "医；来入咸阳，闻秦人爱小儿，即为小儿医：随俗为变。秦太医令李...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "音必二反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n067",
       "anchor_text": "者，齐太仓长，临菑人也，姓淳于氏，名意。",
       "before_context": "太仓公者，齐太仓长，临菑人也，姓淳于氏，名意。",
-      "after_context": "少而喜医方术。高后八年，更受师同郡元里公乘阳庆。庆年七十余，...",
+      "after_context": "少而喜医方术。高后八年，更受师同郡元里公乘阳庆。",
       "items": [
         {
           "source": "zhengyi",
@@ -663,10 +1010,10 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n068",
       "anchor_text": "方术。高后八年，更受师同郡元里公乘阳庆。",
       "before_context": "...于氏，名意。少而喜医方术。高后八年，更受师同郡元里公乘阳庆。",
-      "after_context": "庆年七十余，无子，使意尽去其故方，更悉以禁方予之，传黄帝",
+      "after_context": "庆年七十余，无子，使意尽去其故方，更悉以禁方予之，传黄帝、扁...",
       "items": [
         {
           "source": "zhengyi",
@@ -677,7 +1024,7 @@
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n069",
       "anchor_text": "、扁鹊之脉书，五色诊病，",
       "before_context": "...意尽去其故方，更悉以禁方予之，传黄帝、扁鹊之脉书，五色诊病，",
       "after_context": "知人死生，决嫌疑，定可治，及药论，甚精。受之三年，为人治病，...",
@@ -691,7 +1038,49 @@
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n070",
+      "anchor_text": "四年中，人上书言意，以刑罪当传西之长安。",
+      "before_context": "文帝四年中，人上书言意，以刑罪当传西之长安。",
+      "after_context": "意有五女，随而泣。意怒，骂曰：「生子不生男，缓急无可使者！」...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "传音竹恋反。传，乘传送之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
+      "anchor_text": "，缓急无可使者！」于是少女缇萦伤父之言，",
+      "before_context": "...，骂曰：「生子不生男，缓急无可使者！」于是少女缇萦伤父之言，",
+      "after_context": "乃随父西。上书曰：「妾父为吏，齐中称其廉平，今坐法当刑。妾切...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "缇音啼。萦音纡营反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n072",
+      "anchor_text": "当刑。妾切痛死者不可复生而刑者不可复续，",
+      "before_context": "...齐中称其廉平，今坐法当刑。妾切痛死者不可复生而刑者不可复续，",
+      "after_context": "虽欲改过自新，其道莫由，终不可得。妾愿入身为官婢，以赎父刑罪...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『赎』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n073",
       "anchor_text": "也。」书闻，上悲其意，此岁中亦除肉刑法。",
       "before_context": "...父刑罪，使得改行自新也。」书闻，上悲其意，此岁中亦除肉刑法。",
       "after_context": "",
@@ -710,7 +1099,35 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n074",
+      "anchor_text": "故太仓长臣意：「方伎所长，及所能治病者？",
+      "before_context": "诏问故太仓长臣意：「方伎所长，及所能治病者？",
+      "after_context": "有其书无有？皆安受学？受学几何岁？尝有所验，何县里人也？何病...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『为』，为亦治。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n075",
+      "anchor_text": "喜医药，医药方试之多不验者。至高后八年，",
+      "before_context": "自意少时，喜医药，医药方试之多不验者。至高后八年，",
+      "after_context": "得见师临菑元里公乘阳庆。庆年七十余，意得见事之。谓意曰：「尽...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「意年三十六。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n076",
       "anchor_text": "避席再拜谒，受其脉书上下经、五色诊、奇咳",
       "before_context": "...之所敢望也。」臣意即避席再拜谒，受其脉书上下经、五色诊、奇咳",
       "after_context": "术、揆度阴阳外变、药论、石神、接阴阳禁书，受读解验之，可一年...",
@@ -729,10 +1146,24 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n077",
+      "anchor_text": "不可言也。」即出，独告成弟昌曰：「此病疽",
+      "before_context": "...，告曰：「君之病恶，不可言也。」即出，独告成弟昌曰：「此病疽",
+      "after_context": "也，内发于肠胃之闲，后五日当𦡈肿，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "七如反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n078",
       "anchor_text": "也，内发于肠胃之闲，后五日当𦡈肿，",
       "before_context": "...出，独告成弟昌曰：「此病疽也，内发于肠胃之闲，后五日当𦡈肿，",
-      "after_context": "后八日呕脓死。」成之病得之饮酒且内。成即如期死。所以知成之病...",
+      "after_context": "后八日呕脓",
       "items": [
         {
           "source": "zhengyi",
@@ -743,7 +1174,7 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n079",
       "anchor_text": "后八日呕脓",
       "before_context": "...弟昌曰：「此病疽也，内发于肠胃之闲，后五日当𦡈肿，后八日呕脓",
       "after_context": "死。」成之病得之饮酒且内。成即如期死。所以知成之病者，臣意切...",
@@ -757,10 +1188,38 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n080",
+      "anchor_text": "以知成之病者，臣意切其脉，得肝气。肝气浊",
+      "before_context": "...且内。成即如期死。所以知成之病者，臣意切其脉，得肝气。肝气浊",
+      "after_context": "而静，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『黾』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
+      "anchor_text": "而静，",
+      "before_context": "...成即如期死。所以知成之病者，臣意切其脉，得肝气。肝气浊而静，",
+      "after_context": "此内关之病也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『清』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n082",
       "anchor_text": "此内关之病也。",
       "before_context": "...以知成之病者，臣意切其脉，得肝气。肝气浊而静，此内关之病也。",
-      "after_context": "脉法曰「脉长而弦，不得代四时者，其病主在于肝。和即经主病也，",
+      "after_context": "脉法曰「脉长而弦，不得代四时者，",
       "items": [
         {
           "source": "zhengyi",
@@ -771,10 +1230,10 @@
       "sentence_id": null
     },
     {
-      "id": "n052",
+      "id": "n083",
       "anchor_text": "脉法曰「脉长而弦，不得代四时者，",
       "before_context": "...。肝气浊而静，此内关之病也。脉法曰「脉长而弦，不得代四时者，",
-      "after_context": "其病主在于肝。和即经主病也，代则络脉有过」。经主病和者，其病...",
+      "after_context": "其病主在于肝。和即经主病也，",
       "items": [
         {
           "source": "zhengyi",
@@ -785,10 +1244,10 @@
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n084",
       "anchor_text": "其病主在于肝。和即经主病也，",
-      "before_context": "脉法曰「脉长而弦，不得代四时者，其病主在于肝。和即经主病也，",
-      "after_context": "代则络脉有过」。经主病和者，其病得之筋髓里。其代绝而脉贲者，...",
+      "before_context": "...脉法曰「脉长而弦，不得代四时者，其病主在于肝。和即经主病也，",
+      "after_context": "代则络脉有过」。",
       "items": [
         {
           "source": "zhengyi",
@@ -799,7 +1258,7 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n085",
       "anchor_text": "代则络脉有过」。",
       "before_context": "...，不得代四时者，其病主在于肝。和即经主病也，代则络脉有过」。",
       "after_context": "经主病和者，其病得之筋髓里。其代绝而脉贲者，病得之酒且内。所...",
@@ -813,7 +1272,7 @@
       "sentence_id": null
     },
     {
-      "id": "n055",
+      "id": "n086",
       "anchor_text": "故中热而脓未发也，及五分，则至少阳之界，",
       "before_context": "...其时，少阳初关一分，故中热而脓未发也，及五分，则至少阳之界，",
       "after_context": "及八日，则呕脓死，故上二分而脓发，至界而𦡈肿，尽泄而死。热上...",
@@ -832,7 +1291,49 @@
       "sentence_id": null
     },
     {
-      "id": "n056",
+      "id": "n087",
+      "anchor_text": "忧，数忔食饮。」",
+      "before_context": "...使人烦懑，食不下，时呕沫。病得之（少）〔心〕忧，数忔食饮。」",
+      "after_context": "臣意即为之作下气汤以饮之，一日气下，二日能食，三日即病愈。所...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "忔音疑乙反。忔者，风痺忔然不得动也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n088",
+      "anchor_text": "愈。所以知小子之病者，诊其脉，心气也，浊",
+      "before_context": "...，二日能食，三日即病愈。所以知小子之病者，诊其脉，心气也，浊",
+      "after_context": "躁而经也，此络阳病也。脉法曰「脉来数疾去难而不一者，病主在心...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『黾』，又作『猛』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n089",
+      "anchor_text": "者，病主在心」。周身热，脉盛者，为重阳。",
+      "before_context": "...「脉来数疾去难而不一者，病主在心」。周身热，脉盛者，为重阳。",
+      "after_context": "重阳者，逿心主。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "上音直陇反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n090",
       "anchor_text": "重阳者，逿心主。",
       "before_context": "...不一者，病主在心」。周身热，脉盛者，为重阳。重阳者，逿心主。",
       "after_context": "故烦懑食不下则络脉有过，络脉有过则血上出，血上出者死。此悲心...",
@@ -856,10 +1357,38 @@
       "sentence_id": null
     },
     {
-      "id": "n057",
+      "id": "n091",
+      "anchor_text": "蹷入中，而刺之。臣意诊之，曰：「涌疝也，",
+      "before_context": "...中令循病，众医皆以为蹷入中，而刺之。臣意诊之，曰：「涌疝也，",
+      "after_context": "令人不得前后溲。」",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "上音勇。下音讪，所谏反。邹诞生疝音山也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n092",
+      "anchor_text": "令人不得前后溲。」",
+      "before_context": "...为蹷入中，而刺之。臣意诊之，曰：「涌疝也，令人不得前后溲。」",
+      "after_context": "循曰：「不得前后溲三日矣。」臣意饮以火齐汤，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "溲音所留反。前溲谓小便。后溲，大便也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n093",
       "anchor_text": "：「不得前后溲三日矣。」臣意饮以火齐汤，",
       "before_context": "...人不得前后溲。」循曰：「不得前后溲三日矣。」臣意饮以火齐汤，",
-      "after_context": "一饮得前〔",
+      "after_context": "一饮得前〔后〕溲，再饮大溲，三饮而疾愈。病得之内。所以知循病...",
       "items": [
         {
           "source": "zhengyi",
@@ -870,10 +1399,10 @@
       "sentence_id": null
     },
     {
-      "id": "n058",
+      "id": "n094",
       "anchor_text": "之内。所以知循病者，切其脉时，右口气急，",
       "before_context": "...溲，三饮而疾愈。病得之内。所以知循病者，切其脉时，右口气急，",
-      "after_context": "脉无五藏气，右口脉大而数。数者中下热而涌，左为下，右为上，皆...",
+      "after_context": "脉无五藏气，右口",
       "items": [
         {
           "source": "jijie",
@@ -889,7 +1418,7 @@
       "sentence_id": null
     },
     {
-      "id": "n059",
+      "id": "n095",
       "anchor_text": "脉无五藏气，右口",
       "before_context": "...病得之内。所以知循病者，切其脉时，右口气急，脉无五藏气，右口",
       "after_context": "脉大而数。数者中下热而涌，左为下，右为上，皆无五藏应，故曰涌...",
@@ -903,7 +1432,7 @@
       "sentence_id": null
     },
     {
-      "id": "n060",
+      "id": "n096",
       "anchor_text": "，皆无五藏应，故曰涌疝。中热，故溺赤也。",
       "before_context": "...而涌，左为下，右为上，皆无五藏应，故曰涌疝。中热，故溺赤也。",
       "after_context": "",
@@ -917,10 +1446,10 @@
       "sentence_id": null
     },
     {
-      "id": "n061",
+      "id": "n097",
       "anchor_text": "浴流水而寒甚，已则热。」信曰：「唯，然！",
       "before_context": "...。」曰：「此病得之当浴流水而寒甚，已则热。」信曰：「唯，然！",
-      "after_context": "往冬时，为王使于楚，至莒县阳周水，而莒桥梁颇坏，信则擥车辕未...",
+      "after_context": "往冬时，为王使于楚，至莒县",
       "items": [
         {
           "source": "zhengyi",
@@ -931,10 +1460,10 @@
       "sentence_id": null
     },
     {
-      "id": "n062",
+      "id": "n098",
       "anchor_text": "往冬时，为王使于楚，至莒县",
       "before_context": "...而寒甚，已则热。」信曰：「唯，然！往冬时，为王使于楚，至莒县",
-      "after_context": "阳周水，而莒桥梁颇坏，信则擥车辕未欲渡也，马惊，即堕，信身入...",
+      "after_context": "阳周水，而莒桥梁颇坏，信则擥",
       "items": [
         {
           "source": "zhengyi",
@@ -945,7 +1474,7 @@
       "sentence_id": null
     },
     {
-      "id": "n063",
+      "id": "n099",
       "anchor_text": "阳周水，而莒桥梁颇坏，信则擥",
       "before_context": "...，然！往冬时，为王使于楚，至莒县阳周水，而莒桥梁颇坏，信则擥",
       "after_context": "车辕未欲渡也，马惊，即堕，信身入水中，几死，吏即来救信，出之...",
@@ -959,7 +1488,21 @@
       "sentence_id": null
     },
     {
-      "id": "n064",
+      "id": "n100",
+      "anchor_text": "而愈，其热虽未尽，犹活也。肾气有时闲浊，",
+      "before_context": "...并阴。并阴者，脉顺清而愈，其热虽未尽，犹活也。肾气有时闲浊，",
+      "after_context": "在太阴脉口而希，是水气也。肾固主水，故以此知之。失治一时，即...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『黾』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n101",
       "anchor_text": "王太后病，召臣意入诊脉，曰：「风瘅客脬，",
       "before_context": "齐王太后病，召臣意入诊脉，曰：「风瘅客脬，",
       "after_context": "难于大小溲，溺赤。」臣意饮以火齐汤，一饮即前后溲，再饮病已，...",
@@ -978,10 +1521,24 @@
       "sentence_id": null
     },
     {
-      "id": "n065",
+      "id": "n102",
+      "anchor_text": "后溲，再饮病已，溺如故。病得之流汗出㵌。",
+      "before_context": "...饮以火齐汤，一饮即前后溲，再饮病已，溺如故。病得之流汗出㵌。",
+      "after_context": "㵌者，去衣而汗晞也。所以知齐王太后病者，臣意诊其脉，切其太阴...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "刘氏音巡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n103",
       "anchor_text": "阴之口，湿然风气也。脉法曰「沈之而大坚，",
       "before_context": "...，臣意诊其脉，切其太阴之口，湿然风气也。脉法曰「沈之而大坚，",
-      "after_context": "浮之而大紧者，病主在肾」。肾切之而相反也，脉大而躁。大者，膀...",
+      "after_context": "浮之而大紧者，",
       "items": [
         {
           "source": "zhengyi",
@@ -992,7 +1549,7 @@
       "sentence_id": null
     },
     {
-      "id": "n066",
+      "id": "n104",
       "anchor_text": "浮之而大紧者，",
       "before_context": "...切其太阴之口，湿然风气也。脉法曰「沈之而大坚，浮之而大紧者，",
       "after_context": "病主在肾」。肾切之而相反也，脉大而躁。大者，膀胱气也；躁者，...",
@@ -1006,10 +1563,38 @@
       "sentence_id": null
     },
     {
-      "id": "n067",
+      "id": "n105",
+      "anchor_text": "齐章武里曹山跗病，",
+      "before_context": "齐章武里曹山跗病，",
+      "after_context": "臣意诊其脉，曰：「肺消瘅也，加以寒热。」即告其人曰：「死，不...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "跗，方符反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n106",
+      "anchor_text": "告其人曰：「死，不治。适其共养，此不当医",
+      "before_context": "...瘅也，加以寒热。」即告其人曰：「死，不治。适其共养，此不当医",
+      "after_context": "治。」法曰「后三日而当狂，妄起行，欲走；后五日死」。即如期死...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "适音释。共音恭。案：谓山跗家适近所持财物共养我，我不敢当，以言其人不堪疗也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n107",
       "anchor_text": "脉，肺气热也。脉法曰「不平不鼓，形獘」。",
       "before_context": "...山跗之病者，臣意切其脉，肺气热也。脉法曰「不平不鼓，形獘」。",
-      "after_context": "此五藏高之远数以经病也，故切之时不平而代。不平者，血不居其处...",
+      "after_context": "此五藏高之远数以经病也，故切之时不平而代。",
       "items": [
         {
           "source": "jijie",
@@ -1025,7 +1610,7 @@
       "sentence_id": null
     },
     {
-      "id": "n068",
+      "id": "n108",
       "anchor_text": "五藏高之远数以经病也，故切之时不平而代。",
       "before_context": "...不平不鼓，形獘」。此五藏高之远数以经病也，故切之时不平而代。",
       "after_context": "不平者，血不居其处；代者，时参击并至，乍躁乍大也。此两络脉绝...",
@@ -1039,7 +1624,7 @@
       "sentence_id": null
     },
     {
-      "id": "n069",
+      "id": "n109",
       "anchor_text": "后三日而当狂者，肝一络连属结绝乳下阳明，",
       "before_context": "...气，以故加寒热。所以后三日而当狂者，肝一络连属结绝乳下阳明，",
       "after_context": "故络绝，开阳明脉，阳明脉伤，即当狂走。后五日死者，肝与心相去...",
@@ -1053,10 +1638,10 @@
       "sentence_id": null
     },
     {
-      "id": "n070",
+      "id": "n110",
       "anchor_text": "齐中尉潘满如病少腹痛，",
       "before_context": "齐中尉潘满如病少腹痛，",
-      "after_context": "臣意诊其脉，曰：「遗积瘕也。」臣意即谓齐太仆臣饶、内史臣繇曰...",
+      "after_context": "臣意诊其脉，曰：「遗积瘕也。」",
       "items": [
         {
           "source": "zhengyi",
@@ -1067,7 +1652,7 @@
       "sentence_id": null
     },
     {
-      "id": "n071",
+      "id": "n111",
       "anchor_text": "臣意诊其脉，曰：「遗积瘕也。」",
       "before_context": "齐中尉潘满如病少腹痛，臣意诊其脉，曰：「遗积瘕也。」",
       "after_context": "臣意即谓齐太仆臣饶、内史臣繇曰：「中尉不复自止于内，则三十日...",
@@ -1086,10 +1671,24 @@
       "sentence_id": null
     },
     {
-      "id": "n072",
+      "id": "n112",
+      "anchor_text": "知潘满如病者，臣意切其脉深小弱，其卒然合",
+      "before_context": "...。病得之酒且内。所以知潘满如病者，臣意切其脉深小弱，其卒然合",
+      "after_context": "合也，是脾气也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一云『来然合』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n113",
       "anchor_text": "合也，是脾气也。",
       "before_context": "...所以知潘满如病者，臣意切其脉深小弱，其卒然合合也，是脾气也。",
-      "after_context": "右脉口气至紧小，见瘕气也。以次相乘，故三十日死。三阴俱抟者，",
+      "after_context": "右脉口气至紧小，",
       "items": [
         {
           "source": "zhengyi",
@@ -1100,10 +1699,10 @@
       "sentence_id": null
     },
     {
-      "id": "n073",
+      "id": "n114",
       "anchor_text": "右脉口气至紧小，",
       "before_context": "...，臣意切其脉深小弱，其卒然合合也，是脾气也。右脉口气至紧小，",
-      "after_context": "见瘕气也。以次相乘，故三十日死。三阴俱抟者，如法；不俱抟者，...",
+      "after_context": "见瘕气也。以次相乘，故三十日死。三阴俱抟者，",
       "items": [
         {
           "source": "zhengyi",
@@ -1114,9 +1713,9 @@
       "sentence_id": null
     },
     {
-      "id": "n074",
+      "id": "n115",
       "anchor_text": "气也。以次相乘，故三十日死。三阴俱抟者，",
-      "before_context": "右脉口气至紧小，见瘕气也。以次相乘，故三十日死。三阴俱抟者，",
+      "before_context": "...右脉口气至紧小，见瘕气也。以次相乘，故三十日死。三阴俱抟者，",
       "after_context": "如法；不俱抟者，决在急期；一抟一代者，近也。故其三阴抟，溲血...",
       "items": [
         {
@@ -1128,21 +1727,54 @@
       "sentence_id": null
     },
     {
-      "id": "n075",
-      "anchor_text": "众医皆以为寒中，臣意诊其脉曰：「迵风。」",
-      "before_context": "...侯相赵章病，召臣意。众医皆以为寒中，臣意诊其脉曰：「迵风。」",
-      "after_context": "迵风者，饮食下嗌而辄出不留。法曰「五日死」，而后十日乃死。病...",
+      "id": "n116",
+      "anchor_text": "抟一代者，近也。故其三阴抟，溲血如前止。",
+      "before_context": "...俱抟者，决在急期；一抟一代者，近也。故其三阴抟，溲血如前止。",
+      "after_context": "",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "迵音洞。言洞彻入四支。"
+          "text": "徐广曰：「前，一作『筋』也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n076",
+      "id": "n117",
+      "anchor_text": "众医皆以为寒中，臣意诊其脉曰：「迵风。」",
+      "before_context": "...侯相赵章病，召臣意。众医皆以为寒中，臣意诊其脉曰：「迵风。」",
+      "after_context": "迵风者，饮食下嗌",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "迵音洞。言洞彻入四支。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "下云「饮食下嗌辄出之」，是风疾洞彻五藏，故曰迵风。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n118",
+      "anchor_text": "迵风者，饮食下嗌",
+      "before_context": "...意。众医皆以为寒中，臣意诊其脉曰：「迵风。」迵风者，饮食下嗌",
+      "after_context": "而辄出不留。法曰「五日死」，而后十日乃死。病得之酒。所以知赵...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "音益，谓喉下也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n119",
       "anchor_text": "嗌而辄出不留者，法五日死，皆为前分界法。",
       "before_context": "...，是内风气也。饮食下嗌而辄出不留者，法五日死，皆为前分界法。",
       "after_context": "后十日乃死，所以过期者，其人嗜粥，故中藏实，中藏实故过期。师...",
@@ -1156,7 +1788,21 @@
       "sentence_id": null
     },
     {
-      "id": "n077",
+      "id": "n120",
+      "anchor_text": "北王病者，臣意切其脉时，风气也，心脉浊。",
+      "before_context": "...之汗出伏地。所以知济北王病者，臣意切其脉时，风气也，心脉浊。",
+      "after_context": "病法「过入其阳，阳气尽而阴气入」。阴气入张，则寒气上而热气下...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『黾』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n121",
       "anchor_text": "脉，气阴。阴气者，病必入中，出及瀺水也。",
       "before_context": "...满。汗出伏地者，切其脉，气阴。阴气者，病必入中，出及瀺水也。",
       "after_context": "",
@@ -1175,10 +1821,24 @@
       "sentence_id": null
     },
     {
-      "id": "n078",
+      "id": "n122",
+      "anchor_text": "齐北宫司空命妇",
+      "before_context": "齐北宫司空命妇",
+      "after_context": "出于",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『奴』。奴盖女奴。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n123",
       "anchor_text": "出于",
       "before_context": "齐北宫司空命妇出于",
-      "after_context": "病，众医皆以为风入中，病主在肺，刺其足少阳脉。臣意诊其脉，曰...",
+      "after_context": "病，众医皆以为风入中，病主在肺，",
       "items": [
         {
           "source": "zhengyi",
@@ -1189,7 +1849,21 @@
       "sentence_id": null
     },
     {
-      "id": "n079",
+      "id": "n124",
+      "anchor_text": "病，众医皆以为风入中，病主在肺，",
+      "before_context": "齐北宫司空命妇出于病，众医皆以为风入中，病主在肺，",
+      "after_context": "刺其足少阳脉。臣意诊其脉，曰：「病气疝，客于膀胱，难于前后溲...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『肝』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n125",
       "anchor_text": "者，切其脉大而实，其来难，是蹶阴之动也。",
       "before_context": "...以接内。所以知出于病者，切其脉大而实，其来难，是蹶阴之动也。",
       "after_context": "脉来难者，疝气之客于膀胱也。腹之所以肿者，言蹶阴之络结小腹也...",
@@ -1203,7 +1877,7 @@
       "sentence_id": null
     },
     {
-      "id": "n080",
+      "id": "n126",
       "anchor_text": "故济北王阿母",
       "before_context": "故济北王阿母",
       "after_context": "自言足热而懑，臣意告曰：「热蹶也。」则刺其足心各三所，案之无...",
@@ -1227,7 +1901,7 @@
       "sentence_id": null
     },
     {
-      "id": "n081",
+      "id": "n127",
       "anchor_text": "」则刺其足心各三所，案之无出血，病旋已。",
       "before_context": "...臣意告曰：「热蹶也。」则刺其足心各三所，案之无出血，病旋已。",
       "after_context": "病得之饮酒大醉。",
@@ -1246,21 +1920,54 @@
       "sentence_id": null
     },
     {
-      "id": "n082",
+      "id": "n128",
       "anchor_text": "王曰：「是好为方，多伎能，为所是案法新，",
       "before_context": "...「才人女子竖何能？」王曰：「是好为方，多伎能，为所是案法新，",
-      "after_context": "往年市之民所，四百七十万，曹偶四人。」王曰：「得毋有病乎？」...",
+      "after_context": "往年市之民所，四百七十万，曹偶四人。」",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「所，一作『取』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓于旧方技能生新意也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n083",
+      "id": "n129",
+      "anchor_text": "往年市之民所，四百七十万，曹偶四人。」",
+      "before_context": "...多伎能，为所是案法新，往年市之民所，四百七十万，曹偶四人。」",
+      "after_context": "王曰：「得毋有病乎？」臣意对曰：「竖病重，在死法中。」王召视...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：当今之四千七百贯也。曹偶犹等辈也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n130",
+      "anchor_text": "之厕，王去，竖后，王令人召之，即仆于厕，",
+      "before_context": "...所。至春，竖奉剑从王之厕，王去，竖后，王令人召之，即仆于厕，",
+      "after_context": "呕血死。病得之流汗。流汗者，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "仆音赴，又音步北反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n131",
       "anchor_text": "齐中大夫病龋齿，",
       "before_context": "齐中大夫病龋齿，",
       "after_context": "臣意灸其左大阳明脉，即为苦参汤，日嗽三升，出入五六日，病已。...",
@@ -1274,10 +1981,24 @@
       "sentence_id": null
     },
     {
-      "id": "n084",
+      "id": "n132",
+      "anchor_text": "菑川王美人怀子而不乳，",
+      "before_context": "菑川王美人怀子而不乳，",
+      "after_context": "来召臣意。臣意往，饮以莨𦿆",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "乳音人喻反。乳，生也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n133",
       "anchor_text": "来召臣意。臣意往，饮以莨𦿆",
       "before_context": "菑川王美人怀子而不乳，来召臣意。臣意往，饮以莨𦿆",
-      "after_context": "药一撮，以酒饮之，旋乳。臣意复诊其脉，而脉躁。躁者有余病，即...",
+      "after_context": "药一撮，以酒饮之，旋乳。",
       "items": [
         {
           "source": "zhengyi",
@@ -1288,10 +2009,38 @@
       "sentence_id": null
     },
     {
-      "id": "n085",
+      "id": "n134",
+      "anchor_text": "药一撮，以酒饮之，旋乳。",
+      "before_context": "...子而不乳，来召臣意。臣意往，饮以莨𦿆药一撮，以酒饮之，旋乳。",
+      "after_context": "臣意复诊其脉，而脉躁。躁者有余病，即饮以消石一齐，出血，血如...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "旋乳者，言回旋即生也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n135",
+      "anchor_text": "，即饮以消石一齐，出血，血如豆比五六枚。",
+      "before_context": "...，而脉躁。躁者有余病，即饮以消石一齐，出血，血如豆比五六枚。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "比音必利反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n136",
       "anchor_text": "藏，伤部而交，故伤脾之色也，望之杀然黄，",
       "before_context": "...知奴病者，脾气周乘五藏，伤部而交，故伤脾之色也，望之杀然黄，",
-      "after_context": "察之如死青之兹。众医不知，以为大虫，不知伤脾。所以至春死病者...",
+      "after_context": "察之如死青之兹。众医不知，以为大虫，",
       "items": [
         {
           "source": "jijie",
@@ -1307,10 +2056,24 @@
       "sentence_id": null
     },
     {
-      "id": "n086",
+      "id": "n137",
+      "anchor_text": "察之如死青之兹。众医不知，以为大虫，",
+      "before_context": "...伤脾之色也，望之杀然黄，察之如死青之兹。众医不知，以为大虫，",
+      "after_context": "不知伤脾。所以至春死病者，胃气黄，黄者土气也，土不胜木，故至...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "即蚖虫也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n138",
       "anchor_text": "菑川王病，召臣意诊脉，曰：「蹶上",
       "before_context": "菑川王病，召臣意诊脉，曰：「蹶上",
-      "after_context": "为重，头痛身热，使人烦懑。」臣意即以寒水拊其头，刺足阳明脉，...",
+      "after_context": "为重，头痛身热，使人烦懑。」",
       "items": [
         {
           "source": "zhengyi",
@@ -1321,10 +2084,10 @@
       "sentence_id": null
     },
     {
-      "id": "n087",
+      "id": "n139",
       "anchor_text": "为重，头痛身热，使人烦懑。」",
       "before_context": "菑川王病，召臣意诊脉，曰：「蹶上为重，头痛身热，使人烦懑。」",
-      "after_context": "臣意即以寒水拊其头，刺足阳明脉，左右各三所，病旋已。病得之沐...",
+      "after_context": "臣意即以寒水拊其头，",
       "items": [
         {
           "source": "zhengyi",
@@ -1335,7 +2098,21 @@
       "sentence_id": null
     },
     {
-      "id": "n088",
+      "id": "n140",
+      "anchor_text": "臣意即以寒水拊其头，",
+      "before_context": "...，曰：「蹶上为重，头痛身热，使人烦懑。」臣意即以寒水拊其头，",
+      "after_context": "刺足阳明脉，左右各三所，病旋已。病得之沐发未干而卧。诊如前，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "拊音附，又音抚。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n141",
       "anchor_text": "：「君有病，往四五日，君要胁痛不可俛仰，",
       "before_context": "...望见王后弟宋建，告曰：「君有病，往四五日，君要胁痛不可俛仰，",
       "after_context": "又不得小溲。不亟治，病即入濡肾。及其未舍五藏，急治之。病方今...",
@@ -1349,7 +2126,7 @@
       "sentence_id": null
     },
     {
-      "id": "n089",
+      "id": "n142",
       "anchor_text": "肾。及其未舍五藏，急治之。病方今客肾濡，",
       "before_context": "...溲。不亟治，病即入濡肾。及其未舍五藏，急治之。病方今客肾濡，",
       "after_context": "此所谓『肾痺』也。」宋建曰：「然，建故有要脊痛。往四五日，天...",
@@ -1363,10 +2140,10 @@
       "sentence_id": null
     },
     {
-      "id": "n090",
+      "id": "n143",
       "anchor_text": "，建故有要脊痛。往四五日，天雨，黄氏诸倩",
       "before_context": "...』也。」宋建曰：「然，建故有要脊痛。往四五日，天雨，黄氏诸倩",
-      "after_context": "见建家京下方石，即弄之，建亦欲效之，效之不能起，即复置之。暮...",
+      "after_context": "见建家京下方石，",
       "items": [
         {
           "source": "jijie",
@@ -1382,7 +2159,49 @@
       "sentence_id": null
     },
     {
-      "id": "n091",
+      "id": "n144",
+      "anchor_text": "见建家京下方石，",
+      "before_context": "...「然，建故有要脊痛。往四五日，天雨，黄氏诸倩见建家京下方石，",
+      "after_context": "即弄之，建亦欲效之，效之不能起，即复置之。暮，要脊痛，不得溺...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「京者，仓廪之属也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n145",
+      "anchor_text": "脉，曰：「内寒，月事不下也。」即窜以药，",
+      "before_context": "...皆以为寒热也。臣意诊脉，曰：「内寒，月事不下也。」即窜以药，",
+      "after_context": "旋下，病已。病得之欲男子而不可得也。所以知韩女之病者，诊其脉...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓以熏熏之，故云。窜音七乱反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n146",
+      "anchor_text": "临菑泛",
+      "before_context": "临菑泛",
+      "after_context": "里女子薄吾病甚，众医皆以为寒热笃，当死，不治。臣意诊其脉，曰...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "泛音凡。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n147",
       "anchor_text": "，当死，不治。臣意诊其脉，曰：「蛲瘕。」",
       "before_context": "...甚，众医皆以为寒热笃，当死，不治。臣意诊其脉，曰：「蛲瘕。」",
       "after_context": "蛲瘕为病，腹大，上肤黄麤，循之戚戚然。臣意饮以芫华一撮，即出...",
@@ -1406,24 +2225,29 @@
       "sentence_id": null
     },
     {
-      "id": "n092",
+      "id": "n148",
       "anchor_text": "已，三十日如故。病蛲得之于寒湿，寒湿气宛",
       "before_context": "...撮，即出蛲可数升，病已，三十日如故。病蛲得之于寒湿，寒湿气宛",
-      "after_context": "笃不发，化为虫。臣意所以知薄吾病者，切其脉，循其尺，其尺索刺...",
+      "after_context": "笃不发，化为虫。臣意所以知薄吾病者，切其脉，循其尺，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "音郁。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "又如字。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n093",
+      "id": "n149",
       "anchor_text": "虫。臣意所以知薄吾病者，切其脉，循其尺，",
       "before_context": "...寒湿气宛笃不发，化为虫。臣意所以知薄吾病者，切其脉，循其尺，",
-      "after_context": "其尺索刺麤，而毛美奉发，是虫气也。其色泽者，中藏无邪气及重病...",
+      "after_context": "其尺索刺麤，而毛美奉发，",
       "items": [
         {
           "source": "zhengyi",
@@ -1434,7 +2258,7 @@
       "sentence_id": null
     },
     {
-      "id": "n094",
+      "id": "n150",
       "anchor_text": "其尺索刺麤，而毛美奉发，",
       "before_context": "...臣意所以知薄吾病者，切其脉，循其尺，其尺索刺麤，而毛美奉发，",
       "after_context": "是虫气也。其色泽者，中藏无邪气及重病。",
@@ -1443,12 +2267,157 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「奉，一作『奏』，又作『秦』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "循音巡。案：谓手循其尺索也。刺音七赐反。麤音七胡反。言循其尺索，刺人手而麤，是妇人之病也。徐氏云奉一作「奏」，非其义也。又云一作「秦」，秦谓螓首，言发如蛴螬，事盖近也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n095",
+      "id": "n151",
+      "anchor_text": "：「当病迵风。迵风之状，饮食下嗌辄后之。",
+      "before_context": "...病，臣意切其脉，告曰：「当病迵风。迵风之状，饮食下嗌辄后之。",
+      "after_context": "病得之饱食而疾走。」淳于司马曰：「我之王家食马肝，食饱甚，见...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「如厕。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n152",
+      "anchor_text": "。」时医秦信在旁，臣意去，信谓左右阁都尉",
+      "before_context": "...汁饮之，七八日而当愈。」时医秦信在旁，臣意去，信谓左右阁都尉",
+      "after_context": "曰：「意以淳于司马病为何？」曰：「以为迵风，可治。」信即笑曰...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：阁者，姓也，为都尉。一云阁即宫阁，都尉掌之，故曰阁都尉也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n153",
+      "anchor_text": "色又乘之。所以知其堕马者，切之得番阴脉。",
+      "before_context": "...散，数道至而不一也。色又乘之。所以知其堕马者，切之得番阴脉。",
+      "after_context": "番阴脉入虚里，乘肺脉。肺脉散者，固色变也乘也。所以不中期死者...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "番音芳袁反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n154",
+      "anchor_text": "然必审诊，起度量，立规矩，称权衡，合色脉",
+      "before_context": "...远矣。扁鹊虽言若是，然必审诊，起度量，立规矩，称权衡，合色脉",
+      "after_context": "表里有余不足顺逆之法，参其人动静与息相应，乃可以论。论曰『阳...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「合，一作『占』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n155",
+      "anchor_text": "加悍药及镵石』。夫悍药入中，则邪气辟矣，",
+      "before_context": "...处内，阴形应外者，不加悍药及镵石』。夫悍药入中，则邪气辟矣，",
+      "after_context": "而宛气愈深。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "辟音必亦反，犹聚也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n156",
+      "anchor_text": "而宛气愈深。",
+      "before_context": "...外者，不加悍药及镵石』。夫悍药入中，则邪气辟矣，而宛气愈深。",
+      "after_context": "诊法曰『二阴应外，一阳接内者，不可以刚药』。刚药入则动阳，阴...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "愈音庾。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n157",
+      "anchor_text": "病益衰，阳病益箸，邪气流行，为重困于俞，",
+      "before_context": "...』。刚药入则动阳，阴病益衰，阳病益箸，邪气流行，为重困于俞，",
+      "after_context": "忿发为疽。」意告之后百余日，果为疽发乳上，入缺盆，死。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「音始喻反。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n158",
+      "anchor_text": "告之后百余日，果为疽发乳上，入缺盆，死。",
+      "before_context": "...于俞，忿发为疽。」意告之后百余日，果为疽发乳上，入缺盆，死。",
+      "after_context": "此谓论之大体也，必有经纪。拙工有一不习，文理阴阳失矣。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：缺盆，人乳房上骨名也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n159",
+      "anchor_text": "齐王故为阳虚侯时，病甚，",
+      "before_context": "齐王故为阳虚侯时，病甚，",
+      "after_context": "众医皆以为蹷。臣意诊脉，以为痺，根在右胁下，大如复杯，令人喘...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「齐悼惠王子也，名将庐，以文帝十六年为齐王，即位十一年卒，谥孝王。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n160",
+      "anchor_text": "方，开方自言以为不病，臣意谓之病苦沓风，",
+      "before_context": "...意尝诊安阳武都里成开方，开方自言以为不病，臣意谓之病苦沓风，",
+      "after_context": "三岁四支不能自用，使人瘖，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "沓音徒合反，风病之名也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n161",
       "anchor_text": "三岁四支不能自用，使人瘖，",
       "before_context": "...方自言以为不病，臣意谓之病苦沓风，三岁四支不能自用，使人瘖，",
       "after_context": "瘖即死。今闻其四支不能用，瘖而未死也。病得之数饮酒以见大风气...",
@@ -1457,15 +2426,90 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「一作『脊』，音才亦反。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "瘖者，失音也，读如音。又作「厝」。厝者，置也。言使人运置其手足也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n096",
+      "id": "n162",
+      "anchor_text": "，诊之，其脉法奇咳言曰「藏气相反者死」。",
+      "before_context": "...气。所以知成开方病者，诊之，其脉法奇咳言曰「藏气相反者死」。",
+      "after_context": "切之，得肾反肺，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「反，一作『及』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n163",
+      "anchor_text": "切之，得肾反肺，",
+      "before_context": "...病者，诊之，其脉法奇咳言曰「藏气相反者死」。切之，得肾反肺，",
+      "after_context": "法曰「三岁死」也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「反，一作『及』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n164",
+      "anchor_text": "安陵阪里公乘项处病，",
+      "before_context": "安陵阪里公乘项处病，",
+      "after_context": "臣意诊脉，曰：「牡疝。」",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：公乘，官名也。项，姓；处，名。故上云仓公之师，元里公乘阳庆，亦然也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n165",
+      "anchor_text": "臣意诊脉，曰：「牡疝。」",
+      "before_context": "安陵阪里公乘项处病，臣意诊脉，曰：「牡疝。」",
+      "after_context": "牡疝在鬲下，上连肺。病得之内。臣意谓之：「慎毋为劳力事，为劳...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "上音母，下音色谏反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n166",
+      "anchor_text": "毋为劳力事，为劳力事则必呕血死。」处后蹴",
+      "before_context": "...之内。臣意谓之：「慎毋为劳力事，为劳力事则必呕血死。」处后蹴",
+      "after_context": "踘，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『蹹』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n167",
       "anchor_text": "踘，",
       "before_context": "...。臣意谓之：「慎毋为劳力事，为劳力事则必呕血死。」处后蹴踘，",
-      "after_context": "要蹷寒，汗出多，即呕血。臣意复诊之，曰：「当旦日日夕死。」即...",
+      "after_context": "要蹷寒，汗出多，即呕血。臣意复诊之，曰：「当旦日日夕死。」",
       "items": [
         {
           "source": "zhengyi",
@@ -1476,10 +2520,94 @@
       "sentence_id": null
     },
     {
-      "id": "n097",
+      "id": "n168",
+      "anchor_text": "呕血。臣意复诊之，曰：「当旦日日夕死。」",
+      "before_context": "...，要蹷寒，汗出多，即呕血。臣意复诊之，曰：「当旦日日夕死。」",
+      "after_context": "即死。病得之内。所以知项处病者，切其脉得番阳。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：旦日，明日也。言明日之夕死也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n169",
+      "anchor_text": "病得之内。所以知项处病者，切其脉得番阳。",
+      "before_context": "...旦日日夕死。」即死。病得之内。所以知项处病者，切其脉得番阳。",
+      "after_context": "番阳入虚里，处旦日死。一番一络者，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "脉病之名曰番阳者，以言阳脉之翻入虚里也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n170",
+      "anchor_text": "番阳入虚里，处旦日死。一番一络者，",
+      "before_context": "...知项处病者，切其脉得番阳。番阳入虚里，处旦日死。一番一络者，",
+      "after_context": "牡疝也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「络，一作『结』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n171",
+      "anchor_text": "合于人，故乃别百病以异之，有数者能异之，",
+      "before_context": "...名之，与天地相应，参合于人，故乃别百病以异之，有数者能异之，",
+      "after_context": "无数者同之。然脉法不可胜验，诊疾人以度异之，乃可别同名，命病...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "数音色住反。谓术数之人乃可异其状也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n172",
+      "anchor_text": "宜，诸侯王大臣有尝问意者不？及文王病时，",
+      "before_context": "...能知病死生，论药用所宜，诸侯王大臣有尝问意者不？及文王病时，",
+      "after_context": "不求意诊治，何故？」对曰：「赵王、胶西王、济南王、吴王皆使人...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「齐文王也，以文帝十五年卒。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n173",
+      "anchor_text": "意家贫，欲为人治病，诚恐吏以除拘臣意也，",
+      "before_context": "...不敢往。文王病时，臣意家贫，欲为人治病，诚恐吏以除拘臣意也，",
+      "after_context": "故移名数，左右",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「时诸侯得自拜除吏。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n174",
       "anchor_text": "故移名数，左右",
       "before_context": "...时，臣意家贫，欲为人治病，诚恐吏以除拘臣意也，故移名数，左右",
-      "after_context": "不修家生，出行游国中，问善为方数者事之久矣，见事数师，悉受其...",
+      "after_context": "不修家生，出行游国中，问善为方数者事之久矣，",
       "items": [
         {
           "source": "zhengyi",
@@ -1490,7 +2618,21 @@
       "sentence_id": null
     },
     {
-      "id": "n098",
+      "id": "n175",
+      "anchor_text": "家生，出行游国中，问善为方数者事之久矣，",
+      "before_context": "...，故移名数，左右不修家生，出行游国中，问善为方数者事之久矣，",
+      "after_context": "见事数师，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "数音「术数」之「数」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n176",
       "anchor_text": "见事数师，",
       "before_context": "...，左右不修家生，出行游国中，问善为方数者事之久矣，见事数师，",
       "after_context": "悉受其要事，尽其方书意，及解论之。身居阳虚侯国，因事侯。侯入...",
@@ -1504,7 +2646,7 @@
       "sentence_id": null
     },
     {
-      "id": "n099",
+      "id": "n177",
       "anchor_text": "坐，年五十当安卧，年六十已上气当大董』。",
       "before_context": "...十当疾步，年四十当安坐，年五十当安卧，年六十已上气当大董』。",
       "after_context": "文王年未满二十，方脉气之趋也而徐之，不应天道四时。后闻医灸之...",
@@ -1513,15 +2655,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「董谓深藏之。一作『堇』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "堇音谨。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n100",
+      "id": "n178",
+      "anchor_text": "肉血脉，以泻气。故年二十，是谓『易𧵍』。",
+      "before_context": "...，车步广志，以适筋骨肉血脉，以泻气。故年二十，是谓『易𧵍』。",
+      "after_context": "法不当砭灸，砭灸至气逐。」",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『贺』，又作『质』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n179",
       "anchor_text": "，精良。臣意闻菑川唐里公孙光善为古传方，",
       "before_context": "...，臣意试其方，皆多验，精良。臣意闻菑川唐里公孙光善为古传方，",
-      "after_context": "臣意即往谒之。得见事之，受方化阴阳及传语法，臣意悉受书之。臣...",
+      "after_context": "臣意即往谒之。得见事之，受方化阴阳及传语法，",
       "items": [
         {
           "source": "suoyin",
@@ -1537,7 +2698,35 @@
       "sentence_id": null
     },
     {
-      "id": "n101",
+      "id": "n180",
+      "anchor_text": "即往谒之。得见事之，受方化阴阳及传语法，",
+      "before_context": "...孙光善为古传方，臣意即往谒之。得见事之，受方化阴阳及传语法，",
+      "after_context": "臣意悉受书之。臣意欲尽受他精方，公孙光曰：『吾方尽矣，不为爱...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「法，一作『五』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n181",
+      "anchor_text": "精方，公孙光曰：『吾方尽矣，不为爱公所。",
+      "before_context": "...受书之。臣意欲尽受他精方，公孙光曰：『吾方尽矣，不为爱公所。",
+      "after_context": "吾身已衰，无所复事之。是吾年少所受妙方也，悉与公，毋以教人。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言于意所，不爱惜方术也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n182",
       "anchor_text": "。意死不敢妄传人。』居有闲，公孙光闲处，",
       "before_context": "...公前，悉得禁方，幸甚。意死不敢妄传人。』居有闲，公孙光闲处，",
       "after_context": "臣意深论方，见言百世为之精也。师光喜曰：『公必为国工。吾有所...",
@@ -1551,10 +2740,94 @@
       "sentence_id": null
     },
     {
-      "id": "n102",
+      "id": "n183",
+      "anchor_text": "不若，其方甚奇，非世之所闻也。吾年中时，",
+      "before_context": "...产处临菑，善为方，吾不若，其方甚奇，非世之所闻也。吾年中时，",
+      "after_context": "尝欲受其方，杨中倩",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：年中谓中年时也。中年亦壮年也，古人语自尔。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n184",
+      "anchor_text": "尝欲受其方，杨中倩",
+      "before_context": "...吾不若，其方甚奇，非世之所闻也。吾年中时，尝欲受其方，杨中倩",
+      "after_context": "不肯，曰「若非其人也」。胥与公往见之，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "倩音七见反，人姓名也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n185",
+      "anchor_text": "不肯，曰「若非其人也」。胥与公往见之，",
+      "before_context": "...时，尝欲受其方，杨中倩不肯，曰「若非其人也」。胥与公往见之，",
+      "after_context": "当知公喜方也。其人亦老矣，其家给富。』时者未往，会庆子男殷来...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「胥犹言须也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n186",
+      "anchor_text": "以故得与殷善。光又属意于殷曰：『意好数，",
+      "before_context": "...，因师光奏马王所，意以故得与殷善。光又属意于殷曰：『意好数，",
+      "after_context": "公必谨遇之，其人圣儒。』",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "数，色句反。谓好术数也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n187",
+      "anchor_text": "公必谨遇之，其人圣儒。』",
+      "before_context": "...得与殷善。光又属意于殷曰：『意好数，公必谨遇之，其人圣儒。』",
+      "after_context": "即为书以意属阳庆，以故知庆。臣意事庆谨，以故爱意也。」",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "言意儒德，慕圣人之道，故云圣儒也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n188",
+      "anchor_text": "意方不？何县里人？」对曰：「临菑人宋邑。",
+      "before_context": "...有事学意方，及毕尽得意方不？何县里人？」对曰：「临菑人宋邑。",
+      "after_context": "邑学，臣意教以五诊，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『昆』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n189",
       "anchor_text": "邑学，臣意教以五诊，",
       "before_context": "...意方不？何县里人？」对曰：「临菑人宋邑。邑学，臣意教以五诊，",
-      "after_context": "岁余。济北王遣太医高期、王禹学，臣意教以经脉高下及奇络结，当...",
+      "after_context": "岁余。济北王遣太医高期、王禹",
       "items": [
         {
           "source": "zhengyi",
@@ -1565,10 +2838,24 @@
       "sentence_id": null
     },
     {
-      "id": "n103",
+      "id": "n190",
+      "anchor_text": "岁余。济北王遣太医高期、王禹",
+      "before_context": "...临菑人宋邑。邑学，臣意教以五诊，岁余。济北王遣太医高期、王禹",
+      "after_context": "学，臣意教以经脉高下及奇络结，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「一作『龋』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n191",
       "anchor_text": "学，臣意教以经脉高下及奇络结，",
       "before_context": "...，岁余。济北王遣太医高期、王禹学，臣意教以经脉高下及奇络结，",
-      "after_context": "当论俞所居，及气当上下出入邪〔",
+      "after_context": "当论俞",
       "items": [
         {
           "source": "zhengyi",
@@ -1579,10 +2866,10 @@
       "sentence_id": null
     },
     {
-      "id": "n104",
+      "id": "n192",
       "anchor_text": "当论俞",
       "before_context": "...。济北王遣太医高期、王禹学，臣意教以经脉高下及奇络结，当论俞",
-      "after_context": "所居，及气当上下出入邪〔",
+      "after_context": "所居，及气当上下出入邪〔正〕逆顺，以宜镵石，定砭灸处，岁余。...",
       "items": [
         {
           "source": "zhengyi",

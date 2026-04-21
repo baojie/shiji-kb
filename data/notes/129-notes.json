@@ -3,6 +3,20 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "",
+      "before_context": "",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《論語》云：「賜不受命而貨殖焉。」廣雅云：「殖，立也。」孔安國注《尚書》云：「殖，生也。生資貨財利。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "老子曰：「至治之極，鄰國相望，",
       "before_context": "老子曰：「至治之極，鄰國相望，",
       "after_context": "雞狗之聲相聞，民各甘其食，美其服，安其俗，樂其業，至老死不相...",
@@ -16,38 +30,90 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
-      "anchor_text": "夫山西饒材、竹、穀、纑、",
-      "before_context": "夫山西饒材、竹、穀、纑、",
-      "after_context": "旄、玉石；山東多魚、鹽、漆、絲、聲色；江南出枏、梓、薑、桂、...",
-      "items": [
-        {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「紵屬，可以爲布。」"
-        }
-      ],
-      "sentence_id": null
-    },
-    {
       "id": "n003",
-      "anchor_text": "薑、桂、金、錫、連、",
-      "before_context": "...東多魚、鹽、漆、絲、聲色；江南出枏、梓、薑、桂、金、錫、連、",
-      "after_context": "丹沙、犀、瑇瑁、珠璣、齒革；龍門、碣石北多馬、牛、羊、旃裘、...",
+      "anchor_text": "不相往來。」必用此爲務，輓近世塗民耳目，",
+      "before_context": "...其俗，樂其業，至老死不相往來。」必用此爲務，輓近世塗民耳目，",
+      "after_context": "則幾無行矣。",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「音蓮，鉛之未鍊者。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "輓音晚，古字通用。"
         }
       ],
       "sentence_id": null
     },
     {
       "id": "n004",
+      "anchor_text": "埶能之榮使。俗之漸民久矣，雖戶說以眇論，",
+      "before_context": "...，身安逸樂，而心誇矜埶能之榮使。俗之漸民久矣，雖戶說以眇論，",
+      "after_context": "終不能化。故善者因之，其次利道之，其次教誨之，其次整齊之，最...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音妙，下如字。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "夫山西饒材、竹、穀、纑、",
+      "before_context": "夫山西饒材、竹、穀、纑、",
+      "after_context": "旄、玉石；山東多魚、鹽、漆、絲、聲色；江南出枏、梓、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「紵屬，可以爲布。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音谷，又音雊。穀，木名，皮可爲紙。纑，山中紵，可以爲布，音盧。紵音佇，今山閒野紵，亦作「苧」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
+      "anchor_text": "東多魚、鹽、漆、絲、聲色；江南出枏、梓、",
+      "before_context": "...穀、纑、旄、玉石；山東多魚、鹽、漆、絲、聲色；江南出枏、梓、",
+      "after_context": "薑、桂、金、錫、連、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "南子二音。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
+      "anchor_text": "薑、桂、金、錫、連、",
+      "before_context": "...東多魚、鹽、漆、絲、聲色；江南出枏、梓、薑、桂、金、錫、連、",
+      "after_context": "丹沙、犀、瑇瑁、珠璣、齒革；龍門、碣石",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「音蓮，鉛之未鍊者。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "下音蓮。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
       "anchor_text": "丹沙、犀、瑇瑁、珠璣、齒革；龍門、碣石",
       "before_context": "...、薑、桂、金、錫、連、丹沙、犀、瑇瑁、珠璣、齒革；龍門、碣石",
-      "after_context": "北多馬、牛、羊、旃裘、筋角；銅、鐵則千里往往山出棊置：此其大...",
+      "after_context": "北多馬、牛、羊、旃裘、筋角；銅、鐵則千里往往山出棊置：",
       "items": [
         {
           "source": "zhengyi",
@@ -58,10 +124,10 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n009",
       "anchor_text": "、旃裘、筋角；銅、鐵則千里往往山出棊置：",
       "before_context": "...、碣石北多馬、牛、羊、旃裘、筋角；銅、鐵則千里往往山出棊置：",
-      "after_context": "此其大較也。皆中國人民所喜好，謠俗被服飲食奉生送死之具也。故...",
+      "after_context": "此其大較",
       "items": [
         {
           "source": "suoyin",
@@ -77,7 +143,105 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n010",
+      "anchor_text": "此其大較",
+      "before_context": "...多馬、牛、羊、旃裘、筋角；銅、鐵則千里往往山出棊置：此其大較",
+      "after_context": "也。皆中國人民所喜好，謠俗被服飲食奉生送死之具也。故待農而食...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音角。大較猶大略也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
+      "anchor_text": "任其能，竭其力，以得所欲。故物賤之徵貴，",
+      "before_context": "...政教發徵期會哉？人各任其能，竭其力，以得所欲。故物賤之徵貴，",
+      "after_context": "貴之徵賤，各勸其業，樂其事，若水之趨下，日夜無休時，不召而自...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徵者，求也。謂此處物賤，求彼貴賣之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "不召而自來，不求而民出之。豈非道之所符，",
+      "before_context": "...之趨下，日夜無休時，不召而自來，不求而民出之。豈非道之所符，",
+      "after_context": "而自然之驗邪？",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "道之符。符謂合於道也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
+      "anchor_text": "寶絕，虞不出則財匱少。」財匱少而山澤不辟",
+      "before_context": "...則乏其事，商不出則三寶絕，虞不出則財匱少。」財匱少而山澤不辟",
+      "after_context": "矣。此四者，民所衣食之原也。原大則饒，原小則鮮。上則富國，下...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "下音闢。辟，開也，通也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
+      "anchor_text": "上則富國，下則富家。貧富之道，莫之奪予，",
+      "before_context": "...原大則饒，原小則鮮。上則富國，下則富家。貧富之道，莫之奪予，",
+      "after_context": "而巧者有餘，拙者不足。故太公望封於營丘，地潟鹵，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音與。言貧富自由，無予奪。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "餘，拙者不足。故太公望封於營丘，地潟鹵，",
+      "before_context": "...，莫之奪予，而巧者有餘，拙者不足。故太公望封於營丘，地潟鹵，",
+      "after_context": "人民寡，於是太公勸其女功，極技巧，通魚鹽，則人物歸之，繈至而...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「潟音昔。潟鹵，鹹地也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
+      "anchor_text": "故齊冠帶衣履天下，海岱之閒斂袂而往朝焉。",
+      "before_context": "...物歸之，繈至而輻湊。故齊冠帶衣履天下，海岱之閒斂袂而往朝焉。",
+      "after_context": "其後齊中衰，管子修之，設輕重九府，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言齊既富饒，能冠帶天下，豐厚被於他邦，故海岱之閒斂袵而朝齊，言趨利者也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "其後齊中衰，管子修之，設輕重九府，",
       "before_context": "...下，海岱之閒斂袂而往朝焉。其後齊中衰，管子修之，設輕重九府，",
       "after_context": "則桓公以霸，九合諸侯，一匡天下；而管氏亦有三歸，位在陪臣，富...",
@@ -91,38 +255,146 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n018",
       "anchor_text": "者越王句踐困於會稽之上，乃用范蠡、計然。",
       "before_context": "昔者越王句踐困於會稽之上，乃用范蠡、計然。",
-      "after_context": "計然曰：「知鬬則修備，時用則知物，二者形則萬貨之情可得而觀已...",
+      "after_context": "計然曰：「知鬬則修備，時用則知物，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「計然者，范蠡之師也，名研，故諺曰『研、桑心筭』。」駰案：范子曰「計然者，葵丘濮上人，姓辛氏，字文子，其先晉國亡公子也。嘗南游於越，范蠡師事之。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "計然，韋昭云范蠡師也。蔡謨云蠡所著書名「計然」，蓋非也。徐廣亦以爲范蠡之師，名研，所謂「研、桑心計」也。范子曰「計然者，葵丘濮上人，姓辛氏，字文，其先晉之公子。南游越，范蠡事之」。吳越春秋謂之「計倪」。《漢書古今人表》計然列在第四，則「倪」之與「研」是一人，聲相近而相亂耳。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n019",
+      "anchor_text": "計然曰：「知鬬則修備，時用則知物，",
+      "before_context": "...會稽之上，乃用范蠡、計然。計然曰：「知鬬則修備，時用則知物，",
+      "after_context": "二者形則萬貨之情可得而觀已。故歲在金，穰；水，毀；木，饑；火...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "時用知物。案：言知時所用之物。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "。故歲在金，穰；水，毀；木，饑；火，旱。",
+      "before_context": "...則萬貨之情可得而觀已。故歲在金，穰；水，毀；木，饑；火，旱。",
+      "after_context": "旱則資舟，水則資車，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "五行不說土者，土，穰也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "旱則資舟，水則資車，",
+      "before_context": "...。故歲在金，穰；水，毀；木，饑；火，旱。旱則資舟，水則資車，",
+      "after_context": "物之理也。六歲穰，六歲旱，十二歲一大饑。夫糶，二十病農，九十...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《國語》大夫種曰「賈人旱資舟，水資車以待」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
+      "anchor_text": "十二歲一大饑。夫糶，二十病農，九十病末。",
+      "before_context": "...也。六歲穰，六歲旱，十二歲一大饑。夫糶，二十病農，九十病末。",
+      "after_context": "末病則財不出，農病則草不辟矣。上不過八十，下不減三十，則農末...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言米賤則農夫病也。若米斗直九十，則商賈病，故云「病末」。末謂逐末，即商賈也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
+      "anchor_text": "利，平糶齊物，關市不乏，治國之道也。積著",
+      "before_context": "...下不減三十，則農末俱利，平糶齊物，關市不乏，治國之道也。積著",
+      "after_context": "之理，務完物，無息幣。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音張呂反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n024",
+      "anchor_text": "之理，務完物，無息幣。",
+      "before_context": "...，平糶齊物，關市不乏，治國之道也。積著之理，務完物，無息幣。",
+      "after_context": "以物相貿易，腐敗而食之貨勿留，無敢居貴。論其有餘不足，則知貴...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "毋息弊。久停息貨物則無利。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "，賤下極則反貴。貴出如糞土，賤取如珠玉。",
+      "before_context": "...知貴賤。貴上極則反賤，賤下極則反貴。貴出如糞土，賤取如珠玉。",
+      "after_context": "財幣欲其行如流水。」修之十年，國富，厚賂戰士，士赴矢石，如渴...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "夫物極貴必賤，極賤必貴。貴出如糞土者，既極貴後，恐其必賤，故乘時出之如糞土。賤取如珠玉者，既極賤後，恐其必貴，故乘時取之如珠玉。此所以爲貨殖也。元注恐錯。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
       "anchor_text": "得意。既已施於國，吾欲用之家。」乃乘扁舟",
       "before_context": "...然之策七，越用其五而得意。既已施於國，吾欲用之家。」乃乘扁舟",
-      "after_context": "浮於江湖，變名易姓，適齊爲鴟夷子皮，之陶爲朱公。朱公以爲陶天...",
+      "after_context": "浮於江湖，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「特舟也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "扁音篇，又音符殄反。服虔云：「特舟也。」《國語》云：「范蠡乘輕舟。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n027",
       "anchor_text": "浮於江湖，",
       "before_context": "...越用其五而得意。既已施於國，吾欲用之家。」乃乘扁舟浮於江湖，",
-      "after_context": "變名易姓，適齊爲鴟夷子皮，之陶爲朱公。朱公以爲陶天下之中，諸...",
+      "after_context": "變名易姓，適齊爲鴟夷子皮，",
       "items": [
         {
           "source": "zhengyi",
@@ -133,7 +405,21 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n028",
+      "anchor_text": "變名易姓，適齊爲鴟夷子皮，",
+      "before_context": "...，吾欲用之家。」乃乘扁舟浮於江湖，變名易姓，適齊爲鴟夷子皮，",
+      "after_context": "之陶",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "大顏曰：「若盛酒者鴟夷也，用之則多所容納，不用則可卷而懷之，不忤於物也。」案：韓子云「鴟夷子皮事田成子，成子去齊之燕，子皮乃從之」也。蓋范蠡也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "之陶",
       "before_context": "...欲用之家。」乃乘扁舟浮於江湖，變名易姓，適齊爲鴟夷子皮，之陶",
       "after_context": "爲朱公。朱公以爲陶天下之中，諸侯四通，貨物所交易也。乃治產積...",
@@ -152,35 +438,115 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n030",
       "anchor_text": "侯四通，貨物所交易也。乃治產積居。與時逐",
       "before_context": "...公以爲陶天下之中，諸侯四通，貨物所交易也。乃治產積居。與時逐",
-      "after_context": "而不責於人。故善治生者，能擇人而任時。十九年之中三致千金，再...",
+      "after_context": "而不責於人。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「逐時而居貨。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「隨時逐利也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n031",
+      "anchor_text": "而不責於人。",
+      "before_context": "...之中，諸侯四通，貨物所交易也。乃治產積居。與時逐而不責於人。",
+      "after_context": "故善治生者，能擇人而任時。十九年之中三致千金，再分散與貧交疏...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：謂擇人而與人不負之，故云不責於人也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "衰老而聽子孫，子孫脩業而息之，遂至巨萬。",
+      "before_context": "...富好行其德者也。後年衰老而聽子孫，子孫脩業而息之，遂至巨萬。",
+      "after_context": "故言富者皆稱陶朱公。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「萬萬也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
       "anchor_text": "子贛既學於仲尼，退而仕於衞，廢著",
       "before_context": "子贛既學於仲尼，退而仕於衞，廢著",
-      "after_context": "鬻財於曹、魯之閒，七十子之徒，賜最爲饒益。原憲不厭糟穅，匿於...",
+      "after_context": "鬻財於曹、魯之閒，七十子之徒，賜最爲饒益。原憲不厭糟穅，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「子贛傳云『廢居』。著猶居也。著讀音如貯。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "著音貯。《漢書》亦作「貯」，貯猶居也。說文云：「貯，積也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n034",
+      "anchor_text": "，七十子之徒，賜最爲饒益。原憲不厭糟穅，",
+      "before_context": "...廢著鬻財於曹、魯之閒，七十子之徒，賜最爲饒益。原憲不厭糟穅，",
+      "after_context": "匿於窮巷。子貢結駟連騎，束帛之幣以聘享諸侯，所至，國君無不分...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "饜，飽也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
+      "anchor_text": "白圭，周人也。當魏文侯時，李克",
+      "before_context": "白圭，周人也。當魏文侯時，李克",
+      "after_context": "務盡地力，而白圭樂觀時變，故人弃我取，人取我與。夫歲孰取穀，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：《漢書》食貨志李悝爲魏文侯作盡地力之教，國以富強。今此及《漢書》言「克」，皆誤也。劉向《別錄》則云「李悝」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
+      "anchor_text": "歲孰取穀，予之絲漆；繭出取帛絮，予之食。",
+      "before_context": "...弃我取，人取我與。夫歲孰取穀，予之絲漆；繭出取帛絮，予之食。",
+      "after_context": "太陰在卯，穰；",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂穀。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
       "anchor_text": "太陰在卯，穰；",
       "before_context": "...與。夫歲孰取穀，予之絲漆；繭出取帛絮，予之食。太陰在卯，穰；",
       "after_context": "明歲衰惡。至午，旱；明歲美。至酉，穰；明歲衰惡。至子，大旱；...",
@@ -194,7 +560,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n038",
       "anchor_text": "。至子，大旱；明歲美，有水。至卯，積著率",
       "before_context": "...。至酉，穰；明歲衰惡。至子，大旱；明歲美，有水。至卯，積著率",
       "after_context": "歲倍。欲長錢，取下穀；長石斗，取上種。能薄飲食，忍嗜欲，節衣...",
@@ -208,7 +574,7 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n039",
       "anchor_text": "猗頓用盬鹽起。",
       "before_context": "猗頓用盬鹽起。",
       "after_context": "而邯鄲郭縱以鐵冶成業，與王者埒富。",
@@ -232,10 +598,10 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n040",
       "anchor_text": "烏氏倮",
       "before_context": "烏氏倮",
-      "after_context": "畜牧，及眾，斥賣，求奇繒物，閒獻遺戎王。戎王什倍其償，與之畜...",
+      "after_context": "畜牧，及眾，",
       "items": [
         {
           "source": "jijie",
@@ -256,38 +622,104 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n041",
+      "anchor_text": "畜牧，及眾，",
+      "before_context": "烏氏倮畜牧，及眾，",
+      "after_context": "斥賣，求奇繒物，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂畜牧及至眾多之時。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
+      "anchor_text": "斥賣，求奇繒物，",
+      "before_context": "烏氏倮畜牧，及眾，斥賣，求奇繒物，",
+      "after_context": "閒獻遺戎王。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂斥物賣之以求奇物也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
       "anchor_text": "閒獻遺戎王。",
       "before_context": "烏氏倮畜牧，及眾，斥賣，求奇繒物，閒獻遺戎王。",
-      "after_context": "戎王什倍其償，與之畜，畜至用谷量馬牛。秦始皇帝",
+      "after_context": "戎王什倍其償，與之畜，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「閒，一作『奸』。不以公正謂之奸也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：閒獻猶私獻也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n044",
+      "anchor_text": "戎王什倍其償，與之畜，",
+      "before_context": "...牧，及眾，斥賣，求奇繒物，閒獻遺戎王。戎王什倍其償，與之畜，",
+      "after_context": "畜至用谷量馬牛。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "什倍其當，予之畜。謂戎王償之牛羊十倍也。「當」字《漢書》作「償」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
       "anchor_text": "畜至用谷量馬牛。",
       "before_context": "...求奇繒物，閒獻遺戎王。戎王什倍其償，與之畜，畜至用谷量馬牛。",
-      "after_context": "秦始皇帝",
+      "after_context": "秦始皇帝令倮比封君，以時與列臣朝請。而巴（蜀）寡婦清，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韋昭曰：「滿谷則具不復數。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "谷音欲。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n046",
+      "anchor_text": "寡婦清，",
+      "before_context": "...馬牛。秦始皇帝令倮比封君，以時與列臣朝請。而巴（蜀）寡婦清，",
+      "after_context": "其先得丹穴，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》「巴寡婦清」。巴，寡婦之邑；清，其名也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n047",
       "anchor_text": "其先得丹穴，",
       "before_context": "...帝令倮比封君，以時與列臣朝請。而巴（蜀）寡婦清，其先得丹穴，",
-      "after_context": "而擅其利數世，家亦不訾。清，寡婦也，能守其業，用財自衞，不見...",
+      "after_context": "而擅其利數世，家亦不訾。",
       "items": [
         {
           "source": "jijie",
@@ -303,7 +735,7 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n048",
       "anchor_text": "而擅其利數世，家亦不訾。",
       "before_context": "...朝請。而巴（蜀）寡婦清，其先得丹穴，而擅其利數世，家亦不訾。",
       "after_context": "清，寡婦也，能守其業，用財自衞，不見侵犯。秦皇帝以爲貞婦而客...",
@@ -322,10 +754,24 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n049",
+      "anchor_text": "民猶有先王之遺風，好稼穡，殖五穀，地重，",
+      "before_context": "...作豐，武王治鎬，故其民猶有先王之遺風，好稼穡，殖五穀，地重，",
+      "after_context": "重爲邪。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言重耕稼也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n050",
       "anchor_text": "重爲邪。",
       "before_context": "...王治鎬，故其民猶有先王之遺風，好稼穡，殖五穀，地重，重爲邪。",
-      "after_context": "及秦文、（",
+      "after_context": "及秦文、（孝）〔德〕、繆居雍，隙",
       "items": [
         {
           "source": "suoyin",
@@ -341,10 +787,10 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n051",
       "anchor_text": "、繆居雍，隙",
       "before_context": "...稼穡，殖五穀，地重，重爲邪。及秦文、（孝）〔德〕、繆居雍，隙",
-      "after_context": "隴蜀之貨物而多賈。獻（",
+      "after_context": "隴蜀之貨物而多賈。",
       "items": [
         {
           "source": "jijie",
@@ -365,35 +811,101 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n052",
+      "anchor_text": "隴蜀之貨物而多賈。",
+      "before_context": "...，重爲邪。及秦文、（孝）〔德〕、繆居雍，隙隴蜀之貨物而多賈。",
+      "after_context": "獻（孝）公徙櫟邑，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音古。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
       "anchor_text": "公徙櫟邑，",
-      "before_context": "（孝）〔德〕、繆居雍，隙隴蜀之貨物而多賈。獻（孝）公徙櫟邑，",
-      "after_context": "櫟邑北卻戎翟，東通三晉，亦多大賈。（",
+      "before_context": "...（孝）〔德〕、繆居雍，隙隴蜀之貨物而多賈。獻（孝）公徙櫟邑，",
+      "after_context": "櫟邑北卻戎翟，東通三晉，亦多大賈。（武）〔孝〕、昭治咸陽，因...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「在馮翊。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音藥，即櫟陽。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n054",
+      "anchor_text": "而事末也。南則巴蜀。巴蜀亦沃野，地饒巵、",
+      "before_context": "...小人眾，故其民益玩巧而事末也。南則巴蜀。巴蜀亦沃野，地饒巵、",
+      "after_context": "薑、丹沙、石、銅、鐵、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「音支。烟支也，紫赤色也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n055",
+      "anchor_text": "薑、丹沙、石、銅、鐵、",
+      "before_context": "...事末也。南則巴蜀。巴蜀亦沃野，地饒巵、薑、丹沙、石、銅、鐵、",
+      "after_context": "竹、木之器。南御滇僰，僰僮。西近邛笮，笮馬、旄牛。然四塞，棧...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「邛都出銅，臨邛出鐵。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n056",
       "anchor_text": "塞，棧道千里，無所不通，唯褒斜綰轂其口，",
       "before_context": "...笮，笮馬、旄牛。然四塞，棧道千里，無所不通，唯褒斜綰轂其口，",
-      "after_context": "以所多易所鮮。天水、隴西",
+      "after_context": "以所多易所鮮。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「在漢中。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言褒斜道狹，綰其道口，有若車轂之湊，故云「綰轂」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n057",
+      "anchor_text": "以所多易所鮮。",
+      "before_context": "...。然四塞，棧道千里，無所不通，唯褒斜綰轂其口，以所多易所鮮。",
+      "after_context": "天水、隴西、北地、上郡與關中同俗，然西有羌中之利，北有戎翟之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "易音亦。鮮音尟。言以所多易其所少。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n058",
       "anchor_text": "畜牧爲天下饒。然地亦窮險，唯京師要其道。",
       "before_context": "...之利，北有戎翟之畜，畜牧爲天下饒。然地亦窮險，唯京師要其道。",
       "after_context": "故關中之地，於天下三分之一，而人眾不過什三；然量其富，什居其...",
@@ -407,10 +919,24 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n059",
+      "anchor_text": "昔唐人都河東，",
+      "before_context": "昔唐人都河東，",
+      "after_context": "殷人都河內，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「堯都晉陽也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n060",
       "anchor_text": "殷人都河內，",
       "before_context": "昔唐人都河東，殷人都河內，",
-      "after_context": "周人都河南",
+      "after_context": "周人都河南。",
       "items": [
         {
           "source": "zhengyi",
@@ -421,7 +947,7 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n061",
       "anchor_text": "。",
       "before_context": "昔唐人都河東，殷人都河內，周人都河南。",
       "after_context": "夫三河在天下之中，若鼎足，王者所更居也，建國各數百千歲，土地...",
@@ -435,10 +961,24 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n062",
+      "anchor_text": "國諸侯所聚會，故其俗纖儉習事。楊、平陽陳",
+      "before_context": "...土地小狹，民人眾，都國諸侯所聚會，故其俗纖儉習事。楊、平陽陳",
+      "after_context": "西賈秦、翟，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "楊，平陽，二邑名，在趙之西。「陳」蓋衍字。以下有「楊平陽陳掾」，此因衍也。言二邑之人皆西賈於秦、翟，北賈於種、代。種、代在石邑之北也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n063",
       "anchor_text": "西賈秦、翟，",
       "before_context": "...人眾，都國諸侯所聚會，故其俗纖儉習事。楊、平陽陳西賈秦、翟，",
-      "after_context": "北賈種、代。種、代，石北也，地邊胡，數被寇。人民矜懻忮，好氣...",
+      "after_context": "北賈種、代。",
       "items": [
         {
           "source": "zhengyi",
@@ -449,10 +989,10 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n064",
       "anchor_text": "北賈種、代。",
       "before_context": "...侯所聚會，故其俗纖儉習事。楊、平陽陳西賈秦、翟，北賈種、代。",
-      "after_context": "種、代，石北也，地邊胡，數被寇。人民矜懻忮，好氣，任俠爲姦，...",
+      "after_context": "種、代，石北也，",
       "items": [
         {
           "source": "zhengyi",
@@ -463,7 +1003,21 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n065",
+      "anchor_text": "種、代，石北也，",
+      "before_context": "...纖儉習事。楊、平陽陳西賈秦、翟，北賈種、代。種、代，石北也，",
+      "after_context": "地邊胡，數被寇。人民矜懻忮，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「石邑縣也，在常山。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n066",
       "anchor_text": "地邊胡，數被寇。人民矜懻忮，",
       "before_context": "...翟，北賈種、代。種、代，石北也，地邊胡，數被寇。人民矜懻忮，",
       "after_context": "好氣，任俠爲姦，不事農商。然迫近北夷，師旅亟往，中國委輸時有...",
@@ -472,12 +1026,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "晉灼曰：「懻音慨。忮音堅忮。」瓚曰：「懻音慨。今北土名彊直爲『懻中』也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音冀，下音寘。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n067",
+      "anchor_text": "然迫近北夷，師旅亟往，中國委輸時有奇羨。",
+      "before_context": "...任俠爲姦，不事農商。然迫近北夷，師旅亟往，中國委輸時有奇羨。",
+      "after_context": "其民羯羠不均，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音羈，下音羊戰反。奇羨謂奇有餘衍也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
       "anchor_text": "其民羯羠不均，",
       "before_context": "...農商。然迫近北夷，師旅亟往，中國委輸時有奇羨。其民羯羠不均，",
       "after_context": "自全晉之時固已患其僄悍，而武靈王益厲之，其謠俗猶有趙之風也。...",
@@ -486,15 +1059,48 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「羠音兕，一音囚几反，皆健羊名。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "羯音己紇反。羠音慈紀反。徐廣云羠音兕，皆健羊也。其方人性若羊，健捍而不均。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n069",
+      "anchor_text": "其謠俗猶有趙之風也。故楊、平陽陳掾其閒，",
+      "before_context": "...悍，而武靈王益厲之，其謠俗猶有趙之風也。故楊、平陽陳掾其閒，",
+      "after_context": "得所欲。溫、軹",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "掾音逐緣反。陳掾猶經營馳逐也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n070",
+      "anchor_text": "得所欲。溫、軹",
+      "before_context": "...厲之，其謠俗猶有趙之風也。故楊、平陽陳掾其閒，得所欲。溫、軹",
+      "after_context": "西賈上黨，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "二縣名，屬河內。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n071",
       "anchor_text": "西賈上黨，",
       "before_context": "...俗猶有趙之風也。故楊、平陽陳掾其閒，得所欲。溫、軹西賈上黨，",
-      "after_context": "北賈趙、中山。中山地薄人眾，猶有沙丘紂淫地餘民，民俗懁急，仰...",
+      "after_context": "北賈趙、中山。",
       "items": [
         {
           "source": "zhengyi",
@@ -505,10 +1111,10 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n072",
       "anchor_text": "北賈趙、中山。",
       "before_context": "...。故楊、平陽陳掾其閒，得所欲。溫、軹西賈上黨，北賈趙、中山。",
-      "after_context": "中山地薄人眾，猶有沙丘紂淫地餘民，民俗懁急，仰機利而食。丈夫...",
+      "after_context": "中山地薄人眾，猶有沙丘紂淫地餘民，",
       "items": [
         {
           "source": "zhengyi",
@@ -519,10 +1125,10 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n073",
       "anchor_text": "中山地薄人眾，猶有沙丘紂淫地餘民，",
       "before_context": "...軹西賈上黨，北賈趙、中山。中山地薄人眾，猶有沙丘紂淫地餘民，",
-      "after_context": "民俗懁急，仰機利而食。丈夫相聚游戲，悲歌忼慨，起則相隨椎剽，",
+      "after_context": "民俗懁急，",
       "items": [
         {
           "source": "jijie",
@@ -538,21 +1144,68 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n074",
       "anchor_text": "民俗懁急，",
       "before_context": "...，北賈趙、中山。中山地薄人眾，猶有沙丘紂淫地餘民，民俗懁急，",
-      "after_context": "仰機利而食。丈夫相聚游戲，悲歌忼慨，起則相隨椎剽，休則掘冢作...",
+      "after_context": "仰機利而食。丈夫相聚游戲，悲歌忼慨，起則相隨椎剽，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「懁，急也，音絹。一作『儇』，一作『惠』也，音翾也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "懁音絹。儇音翾。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n075",
+      "anchor_text": "。丈夫相聚游戲，悲歌忼慨，起則相隨椎剽，",
+      "before_context": "...民俗懁急，仰機利而食。丈夫相聚游戲，悲歌忼慨，起則相隨椎剽，",
+      "after_context": "休則掘冢作巧姦冶，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "椎，即追反。椎殺人而剽掠之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n076",
+      "anchor_text": "休則掘冢作巧姦冶，",
+      "before_context": "...食。丈夫相聚游戲，悲歌忼慨，起則相隨椎剽，休則掘冢作巧姦冶，",
+      "after_context": "多美物，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『蠱』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n077",
+      "anchor_text": "多美物，",
+      "before_context": "...相聚游戲，悲歌忼慨，起則相隨椎剽，休則掘冢作巧姦冶，多美物，",
+      "after_context": "爲倡優。女子則鼓鳴瑟，跕屣，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「美，一作『弄』，一作『椎』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n078",
       "anchor_text": "爲倡優。女子則鼓鳴瑟，跕屣，",
       "before_context": "...椎剽，休則掘冢作巧姦冶，多美物，爲倡優。女子則鼓鳴瑟，跕屣，",
       "after_context": "游媚貴富，入後宮，徧諸侯。",
@@ -561,12 +1214,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「跕音帖。」張晏曰：「跕，屣也。」瓚曰：「躡跟爲跕也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音帖，下所綺反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n079",
       "anchor_text": "然邯鄲亦漳、河之閒",
       "before_context": "然邯鄲亦漳、河之閒",
       "after_context": "一都會也。北通燕、涿，南有鄭、衞。鄭、衞俗與趙相類，然近梁、...",
@@ -580,7 +1238,21 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n080",
+      "anchor_text": "、衞俗與趙相類，然近梁、魯，微重而矜節。",
+      "before_context": "...、涿，南有鄭、衞。鄭、衞俗與趙相類，然近梁、魯，微重而矜節。",
+      "after_context": "濮上之邑徙野王，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「矜，一作『務』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n081",
       "anchor_text": "濮上之邑徙野王，",
       "before_context": "...。鄭、衞俗與趙相類，然近梁、魯，微重而矜節。濮上之邑徙野王，",
       "after_context": "野王好氣任俠，衞之風也。",
@@ -599,10 +1271,10 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n082",
       "anchor_text": "夫燕亦勃、碣之閒",
       "before_context": "夫燕亦勃、碣之閒",
-      "after_context": "一都會也。南通齊、趙，東北邊胡。上谷",
+      "after_context": "一都會也。南通齊、趙，東北邊胡。上谷至遼東，地踔遠，",
       "items": [
         {
           "source": "zhengyi",
@@ -613,7 +1285,63 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n083",
+      "anchor_text": "至遼東，地踔遠，",
+      "before_context": "...、碣之閒一都會也。南通齊、趙，東北邊胡。上谷至遼東，地踔遠，",
+      "after_context": "人民希，數被寇，大與趙、代俗相類，而民雕捍",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉氏上音卓，一音勑教反，亦遠騰皃也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n084",
+      "anchor_text": "民希，數被寇，大與趙、代俗相類，而民雕捍",
+      "before_context": "...谷至遼東，地踔遠，人民希，數被寇，大與趙、代俗相類，而民雕捍",
+      "after_context": "少慮，有魚鹽棗栗之饒。北鄰烏桓、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "人雕悍。言如雕性之捷捍也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n085",
+      "anchor_text": "少慮，有魚鹽棗栗之饒。北鄰烏桓、",
+      "before_context": "...，大與趙、代俗相類，而民雕捍少慮，有魚鹽棗栗之饒。北鄰烏桓、",
+      "after_context": "夫餘，東綰穢貉、",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鄰，一作『臨』。臨者，亦卻背之義，他並類此也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n086",
+      "anchor_text": "夫餘，東綰穢貉、",
+      "before_context": "...類，而民雕捍少慮，有魚鹽棗栗之饒。北鄰烏桓、夫餘，東綰穢貉、",
+      "after_context": "朝鮮、真番之利。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "東綰穢貊。案：綰者，綰統其要津；則上云「臨」者，謂卻背之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
       "anchor_text": "朝鮮、真番之利。",
       "before_context": "...，有魚鹽棗栗之饒。北鄰烏桓、夫餘，東綰穢貉、朝鮮、真番之利。",
       "after_context": "",
@@ -627,10 +1355,80 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n088",
+      "anchor_text": "齊帶山海，",
+      "before_context": "齊帶山海，",
+      "after_context": "膏壤千里，宜桑麻，人民多文綵布帛魚鹽。臨菑亦海岱之閒一都會也...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「齊世家曰齊自泰山屬之琅邪，北被于海，膏壤二千里，其民闊達多匿智。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n089",
+      "anchor_text": "刺，故多劫人者，大國之風也。其中具五民。",
+      "before_context": "...搖，怯於衆鬬，勇於持刺，故多劫人者，大國之風也。其中具五民。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "服虔曰：「士農商工賈也。」如淳曰：「游子樂其俗不復歸，故有五方之民。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n090",
+      "anchor_text": "有周公遺風，俗好儒，備於禮，故其民齪齪。",
+      "before_context": "而鄒、魯濱洙、泗，猶有周公遺風，俗好儒，備於禮，故其民齪齪。",
+      "after_context": "頗有桑麻之業，無林澤之饒。地小人眾，儉嗇，畏罪遠邪。及其衰，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "齪音側角反，又音側齗反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n091",
+      "anchor_text": "夫自鴻溝以東，",
+      "before_context": "夫自鴻溝以東，",
+      "after_context": "芒、碭以北，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「在滎陽。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n092",
+      "anchor_text": "芒、碭以北，",
+      "before_context": "夫自鴻溝以東，芒、碭以北，",
+      "after_context": "屬巨野，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「今爲臨淮。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n093",
       "anchor_text": "屬巨野，",
       "before_context": "夫自鴻溝以東，芒、碭以北，屬巨野，",
-      "after_context": "此梁、宋也。陶、睢陽亦一都會也。昔堯",
+      "after_context": "此梁、宋也。",
       "items": [
         {
           "source": "zhengyi",
@@ -641,10 +1439,10 @@
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n094",
       "anchor_text": "此梁、宋也。",
       "before_context": "夫自鴻溝以東，芒、碭以北，屬巨野，此梁、宋也。",
-      "after_context": "陶、睢陽亦一都會也。昔堯",
+      "after_context": "陶、",
       "items": [
         {
           "source": "jijie",
@@ -660,10 +1458,10 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n095",
       "anchor_text": "陶、",
       "before_context": "夫自鴻溝以東，芒、碭以北，屬巨野，此梁、宋也。陶、",
-      "after_context": "睢陽亦一都會也。昔堯",
+      "after_context": "睢陽",
       "items": [
         {
           "source": "jijie",
@@ -679,10 +1477,10 @@
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n096",
       "anchor_text": "睢陽",
       "before_context": "夫自鴻溝以東，芒、碭以北，屬巨野，此梁、宋也。陶、睢陽",
-      "after_context": "亦一都會也。昔堯",
+      "after_context": "亦一都會也。昔堯作（游）〔於〕成陽，",
       "items": [
         {
           "source": "zhengyi",
@@ -693,10 +1491,24 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n097",
+      "anchor_text": "成陽，",
+      "before_context": "...野，此梁、宋也。陶、睢陽亦一都會也。昔堯作（游）〔於〕成陽，",
+      "after_context": "舜漁於雷澤，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "如淳曰：「作，起也。成陽在定陶。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n098",
       "anchor_text": "漁於雷澤，",
       "before_context": "...也。陶、睢陽亦一都會也。昔堯作（游）〔於〕成陽，舜漁於雷澤，",
-      "after_context": "湯止于亳。其俗猶有先王遺風，重厚多君子，好稼穡，雖無山川之饒...",
+      "after_context": "湯止于亳。",
       "items": [
         {
           "source": "jijie",
@@ -712,7 +1524,7 @@
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n099",
       "anchor_text": "湯止于亳。",
       "before_context": "...陽亦一都會也。昔堯作（游）〔於〕成陽，舜漁於雷澤，湯止于亳。",
       "after_context": "其俗猶有先王遺風，重厚多君子，好稼穡，雖無山川之饒，能惡衣食...",
@@ -731,10 +1543,10 @@
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n100",
       "anchor_text": "越、楚則有三俗。",
       "before_context": "越、楚則有三俗。",
-      "after_context": "夫自淮北沛、陳、汝南、南郡，此西楚也。其俗剽輕，易發怒，地薄...",
+      "after_context": "夫自淮北沛、陳、汝南、南郡，此西楚也。",
       "items": [
         {
           "source": "zhengyi",
@@ -745,10 +1557,10 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n101",
       "anchor_text": "夫自淮北沛、陳、汝南、南郡，此西楚也。",
       "before_context": "越、楚則有三俗。夫自淮北沛、陳、汝南、南郡，此西楚也。",
-      "after_context": "其俗剽輕，易發怒，地薄，寡於積聚。江陵故郢都，西通巫、巴，東...",
+      "after_context": "其俗剽輕，易發怒，地薄，寡於積聚。江陵故郢都，",
       "items": [
         {
           "source": "zhengyi",
@@ -759,10 +1571,10 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n102",
       "anchor_text": "輕，易發怒，地薄，寡於積聚。江陵故郢都，",
       "before_context": "...郡，此西楚也。其俗剽輕，易發怒，地薄，寡於積聚。江陵故郢都，",
-      "after_context": "西通巫、巴，東有雲夢之饒。陳在楚夏之交，通魚鹽之貨，其民多賈...",
+      "after_context": "西通巫、巴，",
       "items": [
         {
           "source": "zhengyi",
@@ -773,10 +1585,10 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n103",
       "anchor_text": "西通巫、巴，",
       "before_context": "...。其俗剽輕，易發怒，地薄，寡於積聚。江陵故郢都，西通巫、巴，",
-      "after_context": "東有雲夢之饒。陳在楚夏之交，通魚鹽之貨，其民多賈。徐、僮、取...",
+      "after_context": "東有雲夢之饒。",
       "items": [
         {
           "source": "zhengyi",
@@ -787,10 +1599,24 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n104",
+      "anchor_text": "東有雲夢之饒。",
+      "before_context": "...發怒，地薄，寡於積聚。江陵故郢都，西通巫、巴，東有雲夢之饒。",
+      "after_context": "陳在楚夏之交，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「在華容。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n105",
       "anchor_text": "陳在楚夏之交，",
       "before_context": "...於積聚。江陵故郢都，西通巫、巴，東有雲夢之饒。陳在楚夏之交，",
-      "after_context": "通魚鹽之貨，其民多賈。徐、僮、取慮，則清刻，矜己諾。",
+      "after_context": "通魚鹽之貨，其民多賈。徐、僮、取慮，",
       "items": [
         {
           "source": "zhengyi",
@@ -801,7 +1627,7 @@
       "sentence_id": null
     },
     {
-      "id": "n052",
+      "id": "n106",
       "anchor_text": "通魚鹽之貨，其民多賈。徐、僮、取慮，",
       "before_context": "...雲夢之饒。陳在楚夏之交，通魚鹽之貨，其民多賈。徐、僮、取慮，",
       "after_context": "則清刻，矜己諾。",
@@ -820,7 +1646,7 @@
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n107",
       "anchor_text": "則清刻，矜己諾。",
       "before_context": "...夏之交，通魚鹽之貨，其民多賈。徐、僮、取慮，則清刻，矜己諾。",
       "after_context": "",
@@ -834,10 +1660,10 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n108",
       "anchor_text": "、吳、廣陵，此東楚也。",
       "before_context": "彭城以東，東海、吳、廣陵，此東楚也。",
-      "after_context": "其俗類徐、僮。朐、繒以北，俗則齊。浙江南則越。夫吳自闔廬、春...",
+      "after_context": "其俗類徐、僮。朐、繒以北，俗則齊。",
       "items": [
         {
           "source": "zhengyi",
@@ -848,9 +1674,9 @@
       "sentence_id": null
     },
     {
-      "id": "n055",
+      "id": "n109",
       "anchor_text": "其俗類徐、僮。朐、繒以北，俗則齊。",
-      "before_context": "東海、吳、廣陵，此東楚也。其俗類徐、僮。朐、繒以北，俗則齊。",
+      "before_context": "...東海、吳、廣陵，此東楚也。其俗類徐、僮。朐、繒以北，俗則齊。",
       "after_context": "浙江南則越。夫吳自闔廬、春申、王濞三人招致天下之喜游子弟，東...",
       "items": [
         {
@@ -862,10 +1688,10 @@
       "sentence_id": null
     },
     {
-      "id": "n056",
+      "id": "n110",
       "anchor_text": "衡山、",
       "before_context": "衡山、",
-      "after_context": "九江、江南、豫章、長沙",
+      "after_context": "九江、",
       "items": [
         {
           "source": "jijie",
@@ -881,10 +1707,10 @@
       "sentence_id": null
     },
     {
-      "id": "n057",
+      "id": "n111",
       "anchor_text": "九江、",
       "before_context": "衡山、九江、",
-      "after_context": "江南、豫章、長沙",
+      "after_context": "江南、",
       "items": [
         {
           "source": "zhengyi",
@@ -895,10 +1721,10 @@
       "sentence_id": null
     },
     {
-      "id": "n058",
+      "id": "n112",
       "anchor_text": "江南、",
       "before_context": "衡山、九江、江南、",
-      "after_context": "豫章、長沙",
+      "after_context": "豫章、",
       "items": [
         {
           "source": "jijie",
@@ -914,10 +1740,10 @@
       "sentence_id": null
     },
     {
-      "id": "n059",
+      "id": "n113",
       "anchor_text": "豫章、",
       "before_context": "衡山、九江、江南、豫章、",
-      "after_context": "長沙",
+      "after_context": "長沙，",
       "items": [
         {
           "source": "zhengyi",
@@ -928,10 +1754,10 @@
       "sentence_id": null
     },
     {
-      "id": "n060",
+      "id": "n114",
       "anchor_text": "，",
       "before_context": "衡山、九江、江南、豫章、長沙，",
-      "after_context": "是南楚也，其俗大類西楚。郢之後徙壽春，亦一都會也。而合肥受南...",
+      "after_context": "是南楚也，其俗大類西楚。郢之後徙壽春，",
       "items": [
         {
           "source": "zhengyi",
@@ -942,10 +1768,10 @@
       "sentence_id": null
     },
     {
-      "id": "n061",
+      "id": "n115",
       "anchor_text": "是南楚也，其俗大類西楚。郢之後徙壽春，",
       "before_context": "...江、江南、豫章、長沙，是南楚也，其俗大類西楚。郢之後徙壽春，",
-      "after_context": "亦一都會也。而合肥受南北潮，皮革、鮑、木輸會也。與閩中、干越...",
+      "after_context": "亦一都會也。而合肥受南北潮，",
       "items": [
         {
           "source": "zhengyi",
@@ -956,7 +1782,7 @@
       "sentence_id": null
     },
     {
-      "id": "n062",
+      "id": "n116",
       "anchor_text": "亦一都會也。而合肥受南北潮，",
       "before_context": "...也，其俗大類西楚。郢之後徙壽春，亦一都會也。而合肥受南北潮，",
       "after_context": "皮革、鮑、木輸會也。與閩中、干越雜俗，故南楚好辭，巧說少信。...",
@@ -975,10 +1801,10 @@
       "sentence_id": null
     },
     {
-      "id": "n063",
+      "id": "n117",
       "anchor_text": "江南卑溼，丈夫早夭。多竹木。豫章出黃金，",
       "before_context": "...南楚好辭，巧說少信。江南卑溼，丈夫早夭。多竹木。豫章出黃金，",
-      "after_context": "長沙",
+      "after_context": "長沙出連、錫，然堇堇",
       "items": [
         {
           "source": "jijie",
@@ -994,10 +1820,10 @@
       "sentence_id": null
     },
     {
-      "id": "n064",
+      "id": "n118",
       "anchor_text": "出連、錫，然堇堇",
       "before_context": "...江南卑溼，丈夫早夭。多竹木。豫章出黃金，長沙出連、錫，然堇堇",
-      "after_context": "物之所有，取之不足以更費。九疑、蒼梧以南至儋耳者，與江南大同...",
+      "after_context": "物之所有，取之不足以更費。",
       "items": [
         {
           "source": "zhengyi",
@@ -1008,10 +1834,38 @@
       "sentence_id": null
     },
     {
-      "id": "n065",
+      "id": "n119",
+      "anchor_text": "物之所有，取之不足以更費。",
+      "before_context": "...。豫章出黃金，長沙出連、錫，然堇堇物之所有，取之不足以更費。",
+      "after_context": "九疑、",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「堇，少也。更，償也。言金少少耳，取之不足用，顧費用也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n120",
+      "anchor_text": "九疑、",
+      "before_context": "...出黃金，長沙出連、錫，然堇堇物之所有，取之不足以更費。九疑、",
+      "after_context": "蒼梧以南至儋耳者，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「山在營道縣南。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n121",
       "anchor_text": "蒼梧以南至儋耳者，",
       "before_context": "...錫，然堇堇物之所有，取之不足以更費。九疑、蒼梧以南至儋耳者，",
-      "after_context": "與江南大同俗，而楊越多焉。番禺亦其一都會也，珠璣、犀、瑇瑁、...",
+      "after_context": "與江南大同俗，而楊越多焉。番禺",
       "items": [
         {
           "source": "zhengyi",
@@ -1022,7 +1876,7 @@
       "sentence_id": null
     },
     {
-      "id": "n066",
+      "id": "n122",
       "anchor_text": "與江南大同俗，而楊越多焉。番禺",
       "before_context": "...更費。九疑、蒼梧以南至儋耳者，與江南大同俗，而楊越多焉。番禺",
       "after_context": "亦其一都會也，珠璣、犀、瑇瑁、果、布之湊。",
@@ -1036,7 +1890,21 @@
       "sentence_id": null
     },
     {
-      "id": "n067",
+      "id": "n123",
+      "anchor_text": "其一都會也，珠璣、犀、瑇瑁、果、布之湊。",
+      "before_context": "...，而楊越多焉。番禺亦其一都會也，珠璣、犀、瑇瑁、果、布之湊。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「果謂龍眼、離支之屬。布，葛布。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n124",
       "anchor_text": "潁川、南陽，夏人之居也。",
       "before_context": "潁川、南陽，夏人之居也。",
       "after_context": "夏人政尚忠朴，猶有先王之遺風。潁川敦愿。秦末世，遷不軌之民於...",
@@ -1055,7 +1923,7 @@
       "sentence_id": null
     },
     {
-      "id": "n068",
+      "id": "n125",
       "anchor_text": "，遷不軌之民於南陽。南陽西通武關、鄖關，",
       "before_context": "...風。潁川敦愿。秦末世，遷不軌之民於南陽。南陽西通武關、鄖關，",
       "after_context": "東南受漢、江、淮。宛亦一都會也。俗雜好事，業多賈。其任俠，交...",
@@ -1079,10 +1947,10 @@
       "sentence_id": null
     },
     {
-      "id": "n069",
+      "id": "n126",
       "anchor_text": "所多，人民謠俗，山東食海鹽，山西食鹽鹵，",
       "before_context": "夫天下物所鮮所多，人民謠俗，山東食海鹽，山西食鹽鹵，",
-      "after_context": "領南、沙北固往往出鹽，大體如此矣。",
+      "after_context": "領南、沙北",
       "items": [
         {
           "source": "zhengyi",
@@ -1093,7 +1961,7 @@
       "sentence_id": null
     },
     {
-      "id": "n070",
+      "id": "n127",
       "anchor_text": "領南、沙北",
       "before_context": "...天下物所鮮所多，人民謠俗，山東食海鹽，山西食鹽鹵，領南、沙北",
       "after_context": "固往往出鹽，大體如此矣。",
@@ -1107,10 +1975,10 @@
       "sentence_id": null
     },
     {
-      "id": "n071",
+      "id": "n128",
       "anchor_text": "之地，地廣人希，飯稻羹魚，或火耕而水耨，",
       "before_context": "總之，楚越之地，地廣人希，飯稻羹魚，或火耕而水耨，",
-      "after_context": "果隋蠃蛤，不待賈而足，地埶饒食，無飢饉之患，以故呰窳偷生，無...",
+      "after_context": "果隋",
       "items": [
         {
           "source": "jijie",
@@ -1126,10 +1994,10 @@
       "sentence_id": null
     },
     {
-      "id": "n072",
+      "id": "n129",
       "anchor_text": "果隋",
       "before_context": "總之，楚越之地，地廣人希，飯稻羹魚，或火耕而水耨，果隋",
-      "after_context": "蠃蛤，不待賈而足，地埶饒食，無飢饉之患，以故呰窳偷生，無積聚",
+      "after_context": "蠃蛤，不待賈而足，",
       "items": [
         {
           "source": "jijie",
@@ -1150,10 +2018,10 @@
       "sentence_id": null
     },
     {
-      "id": "n073",
+      "id": "n130",
       "anchor_text": "蠃蛤，不待賈而足，",
       "before_context": "...地，地廣人希，飯稻羹魚，或火耕而水耨，果隋蠃蛤，不待賈而足，",
-      "after_context": "地埶饒食，無飢饉之患，以故呰窳偷生，無積聚而多貧。是故江淮以...",
+      "after_context": "地埶饒食，無飢饉之患，以故呰窳",
       "items": [
         {
           "source": "zhengyi",
@@ -1164,10 +2032,10 @@
       "sentence_id": null
     },
     {
-      "id": "n074",
+      "id": "n131",
       "anchor_text": "地埶饒食，無飢饉之患，以故呰窳",
       "before_context": "...而水耨，果隋蠃蛤，不待賈而足，地埶饒食，無飢饉之患，以故呰窳",
-      "after_context": "偷生，無積聚而多貧。是故江淮以南，無凍餓之人，亦無千金之家。...",
+      "after_context": "偷生，無積聚",
       "items": [
         {
           "source": "jijie",
@@ -1188,9 +2056,9 @@
       "sentence_id": null
     },
     {
-      "id": "n075",
+      "id": "n132",
       "anchor_text": "偷生，無積聚",
-      "before_context": "蠃蛤，不待賈而足，地埶饒食，無飢饉之患，以故呰窳偷生，無積聚",
+      "before_context": "...蠃蛤，不待賈而足，地埶饒食，無飢饉之患，以故呰窳偷生，無積聚",
       "after_context": "而多貧。是故江淮以南，無凍餓之人，亦無千金之家。沂、泗水以北...",
       "items": [
         {
@@ -1202,7 +2070,49 @@
       "sentence_id": null
     },
     {
-      "id": "n076",
+      "id": "n133",
+      "anchor_text": "於富厚也。是以廉吏久，久更富，廉賈歸富。",
+      "before_context": "...設爲名高者安歸乎？歸於富厚也。是以廉吏久，久更富，廉賈歸富。",
+      "after_context": "富者，人之情性，所不學而俱欲者也。故壯士在軍，攻城先登，陷陣...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "駰案：歸者，取利而不停貨也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n134",
+      "anchor_text": "報仇，篡逐幽隱，不避法禁，走死地如騖者，",
+      "before_context": "...鑄幣，任俠并兼，借交報仇，篡逐幽隱，不避法禁，走死地如騖者，",
+      "after_context": "其實皆爲財用耳。今夫趙女鄭姬，設形容，揳鳴琴，揄長袂，躡利屣...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「騖，一作『流』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n135",
+      "anchor_text": "女鄭姬，設形容，揳鳴琴，揄長袂，躡利屣，",
+      "before_context": "...實皆爲財用耳。今夫趙女鄭姬，設形容，揳鳴琴，揄長袂，躡利屣，",
+      "after_context": "目挑心招，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「揄音臾。躡，一作『跕』。跕音吐協反。屣音山耳反，舞屣也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n136",
       "anchor_text": "目挑心招，",
       "before_context": "...耳。今夫趙女鄭姬，設形容，揳鳴琴，揄長袂，躡利屣，目挑心招，",
       "after_context": "出不遠千里，不擇老少者，奔富厚也。游閑公子，飾冠劍，連車騎，...",
@@ -1216,10 +2126,10 @@
       "sentence_id": null
     },
     {
-      "id": "n077",
+      "id": "n137",
       "anchor_text": "，爵邑之入，而樂與之比者。命曰「素封」。",
       "before_context": "...謂也。今有無秩祿之奉，爵邑之入，而樂與之比者。命曰「素封」。",
-      "after_context": "封者食租稅，歲率戶二百。千戶之君則二十萬，朝覲聘享出其中。庶...",
+      "after_context": "封者食租稅，歲率",
       "items": [
         {
           "source": "suoyin",
@@ -1235,10 +2145,10 @@
       "sentence_id": null
     },
     {
-      "id": "n078",
+      "id": "n138",
       "anchor_text": "封者食租稅，歲率",
       "before_context": "...之奉，爵邑之入，而樂與之比者。命曰「素封」。封者食租稅，歲率",
-      "after_context": "戶二百。千戶之君則二十萬，朝覲聘享出其中。庶民農工商賈，率亦...",
+      "after_context": "戶二百。千戶之君",
       "items": [
         {
           "source": "zhengyi",
@@ -1249,52 +2159,95 @@
       "sentence_id": null
     },
     {
-      "id": "n079",
+      "id": "n139",
+      "anchor_text": "戶二百。千戶之君",
+      "before_context": "...而樂與之比者。命曰「素封」。封者食租稅，歲率戶二百。千戶之君",
+      "after_context": "則二十萬，朝覲聘享出其中。庶民農工商賈，率亦歲萬",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "千戶之邑，戶率二百，故千戶二十萬。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n140",
+      "anchor_text": "，朝覲聘享出其中。庶民農工商賈，率亦歲萬",
+      "before_context": "...百。千戶之君則二十萬，朝覲聘享出其中。庶民農工商賈，率亦歲萬",
+      "after_context": "息二千（戶），百萬之家則二十萬，而更傜租賦出其中。衣食之欲，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "息二千，故百萬之家亦二十萬。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n141",
       "anchor_text": "食之欲，恣所好美矣。故曰陸地牧馬二百蹄，",
       "before_context": "...而更傜租賦出其中。衣食之欲，恣所好美矣。故曰陸地牧馬二百蹄，",
-      "after_context": "牛蹄角千，千足羊，澤中千足彘，水居千石魚陂，山居千章之材。安...",
+      "after_context": "牛蹄角千，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「五十匹。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：馬有四足，二百蹄有五十匹也。《漢書》則云「馬蹄噭千」，所記各異。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n080",
+      "id": "n142",
       "anchor_text": "牛蹄角千，",
       "before_context": "...出其中。衣食之欲，恣所好美矣。故曰陸地牧馬二百蹄，牛蹄角千，",
-      "after_context": "千足羊，澤中千足彘，水居千石魚陂，山居千章之材。安邑千樹棗；...",
+      "after_context": "千足羊，澤中千足彘，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「百六十七頭也。馬貴而牛賤，以此爲率。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "牛足角千。案：馬貴而牛賤，以此爲率，則牛有百六十六頭有奇也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n081",
+      "id": "n143",
       "anchor_text": "千足羊，澤中千足彘，",
       "before_context": "...所好美矣。故曰陸地牧馬二百蹄，牛蹄角千，千足羊，澤中千足彘，",
-      "after_context": "水居千石魚陂，山居千章之材。安邑千樹棗；燕、秦千樹栗；蜀、漢...",
+      "after_context": "水居千石魚陂，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "韋昭曰：「二百五十頭。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「二百五十頭。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n082",
+      "id": "n144",
       "anchor_text": "水居千石魚陂，",
       "before_context": "...陸地牧馬二百蹄，牛蹄角千，千足羊，澤中千足彘，水居千石魚陂，",
-      "after_context": "山居千章之材。安邑千樹棗；燕、秦千樹栗；蜀、漢、江陵千樹橘；...",
+      "after_context": "山居千章之材。",
       "items": [
         {
           "source": "jijie",
@@ -1315,7 +2268,7 @@
       "sentence_id": null
     },
     {
-      "id": "n083",
+      "id": "n145",
       "anchor_text": "山居千章之材。",
       "before_context": "...，牛蹄角千，千足羊，澤中千足彘，水居千石魚陂，山居千章之材。",
       "after_context": "安邑千樹棗；燕、秦千樹栗；蜀、漢、江陵千樹橘；淮北、常山已南...",
@@ -1324,26 +2277,50 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一作『楸』。」駰案：韋昭曰「楸木所以爲轅，音秋」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「千章之萩」，音秋。服虔云：「章，方也。」如淳云：「言任方章者千枚，謂章，大材也。」樂產云：「萩，梓木也，可以爲轅。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n084",
+      "id": "n146",
+      "anchor_text": "畝竹；及名國萬家之城，帶郭千畝畝鍾之田，",
+      "before_context": "...、魯千畝桑麻；渭川千畝竹；及名國萬家之城，帶郭千畝畝鍾之田，",
+      "after_context": "若千畝巵茜，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「六斛四斗也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n147",
       "anchor_text": "若千畝巵茜，",
       "before_context": "...；渭川千畝竹；及名國萬家之城，帶郭千畝畝鍾之田，若千畝巵茜，",
-      "after_context": "千畦薑韭：此其人皆與千戶侯等。然是富給之資也，不窺市井，不行...",
+      "after_context": "千畦薑韭：",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「巵音支，鮮支也。茜音倩，一名紅藍，其花染繒赤黃也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "巵音支，鮮支也。茜音倩，一名紅藍花，染繒赤黃也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n085",
+      "id": "n148",
       "anchor_text": "千畦薑韭：",
       "before_context": "...竹；及名國萬家之城，帶郭千畝畝鍾之田，若千畝巵茜，千畦薑韭：",
       "after_context": "此其人皆與千戶侯等。然是富給之資也，不窺市井，不行異邑，坐而...",
@@ -1352,12 +2329,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「千畦，二十五畝。」駰案：韋昭曰「畦猶隴」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韋昭云：「埒中畦猶隴也，謂五十畝也。」劉熙注孟子云：「今俗以二十五畝爲小畦，五十畝爲大畦。」王逸云：「畦猶區也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n086",
+      "id": "n149",
       "anchor_text": "至家貧親老，妻子軟弱，歲時無以祭祀進醵，",
       "before_context": "...處士之義而取給焉。若至家貧親老，妻子軟弱，歲時無以祭祀進醵，",
       "after_context": "飲食被服不足以自通，如此不慙恥，則無所比矣。是以無財作力，少...",
@@ -1366,15 +2348,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「會聚食。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音渠略反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n087",
+      "id": "n150",
       "anchor_text": "恥，則無所比矣。是以無財作力，少有鬬智，",
       "before_context": "...不足以自通，如此不慙恥，則無所比矣。是以無財作力，少有鬬智，",
-      "after_context": "既饒爭時，此其大經也。今治生不待危身取給，則賢人勉焉。是故本...",
+      "after_context": "既饒爭時，",
       "items": [
         {
           "source": "zhengyi",
@@ -1385,7 +2372,7 @@
       "sentence_id": null
     },
     {
-      "id": "n088",
+      "id": "n151",
       "anchor_text": "既饒爭時，",
       "before_context": "...，如此不慙恥，則無所比矣。是以無財作力，少有鬬智，既饒爭時，",
       "after_context": "此其大經也。今治生不待危身取給，則賢人勉焉。是故本富爲上，末...",
@@ -1399,10 +2386,10 @@
       "sentence_id": null
     },
     {
-      "id": "n089",
+      "id": "n152",
       "anchor_text": "末業，貧者之資也。通邑大都，酤一歲千釀，",
       "before_context": "...繡文不如倚市門，此言末業，貧者之資也。通邑大都，酤一歲千釀，",
-      "after_context": "醯醬千瓨，漿千甔，屠牛羊彘千皮，販穀糶千鍾，薪稾千車，船長千...",
+      "after_context": "醯醬千瓨，",
       "items": [
         {
           "source": "zhengyi",
@@ -1413,52 +2400,95 @@
       "sentence_id": null
     },
     {
-      "id": "n090",
+      "id": "n153",
       "anchor_text": "醯醬千瓨，",
       "before_context": "...市門，此言末業，貧者之資也。通邑大都，酤一歲千釀，醯醬千瓨，",
-      "after_context": "漿千甔，屠牛羊彘千皮，販穀糶千鍾，薪稾千車，船長千丈，木千章...",
+      "after_context": "漿千甔，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「長頸罌。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "醯醢千缻。閑江反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n091",
+      "id": "n154",
       "anchor_text": "漿千甔，",
       "before_context": "...言末業，貧者之資也。通邑大都，酤一歲千釀，醯醬千瓨，漿千甔，",
-      "after_context": "屠牛羊彘千皮，販穀糶千鍾，薪稾千車，船長千丈，木千章，竹竿萬...",
+      "after_context": "屠牛羊彘千皮，販穀糶千鍾，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「大罌缶。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "醬千檐。下都甘反。《漢書》作「儋」。孟康曰「儋，石甖」。石甖受一石，故云儋石。一音都濫反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n092",
+      "id": "n155",
+      "anchor_text": "屠牛羊彘千皮，販穀糶千鍾，",
+      "before_context": "...都，酤一歲千釀，醯醬千瓨，漿千甔，屠牛羊彘千皮，販穀糶千鍾，",
+      "after_context": "薪稾千車，船長千丈，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「出穀也。糶音掉也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n156",
+      "anchor_text": "薪稾千車，船長千丈，",
+      "before_context": "...千瓨，漿千甔，屠牛羊彘千皮，販穀糶千鍾，薪稾千車，船長千丈，",
+      "after_context": "木千章，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：積數長千丈。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n157",
       "anchor_text": "木千章，",
       "before_context": "...千甔，屠牛羊彘千皮，販穀糶千鍾，薪稾千車，船長千丈，木千章，",
-      "after_context": "竹竿萬个，其軺車百乘，牛車千兩，木器髤者千枚，銅器千鈞，素木...",
+      "after_context": "竹竿萬个，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「洪洞方槀。章，材也。舊將作大匠掌材曰章曹掾。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：將作大匠掌材曰章曹掾。洪，胡孔反；洞音動。又並如字也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n093",
+      "id": "n158",
       "anchor_text": "竹竿萬个，",
       "before_context": "...羊彘千皮，販穀糶千鍾，薪稾千車，船長千丈，木千章，竹竿萬个，",
-      "after_context": "其軺車百乘，牛車千兩，木器髤者千枚，銅器千鈞，素木鐵器若巵茜...",
+      "after_context": "其軺車百乘，",
       "items": [
         {
           "source": "jijie",
@@ -1479,10 +2509,10 @@
       "sentence_id": null
     },
     {
-      "id": "n094",
+      "id": "n159",
       "anchor_text": "其軺車百乘，",
       "before_context": "...穀糶千鍾，薪稾千車，船長千丈，木千章，竹竿萬个，其軺車百乘，",
-      "after_context": "牛車千兩，木器髤者千枚，銅器千鈞，素木鐵器若巵茜千石，馬蹄躈...",
+      "after_context": "牛車千兩，",
       "items": [
         {
           "source": "jijie",
@@ -1498,10 +2528,10 @@
       "sentence_id": null
     },
     {
-      "id": "n095",
+      "id": "n160",
       "anchor_text": "牛車千兩，",
-      "before_context": "薪稾千車，船長千丈，木千章，竹竿萬个，其軺車百乘，牛車千兩，",
-      "after_context": "木器髤者千枚，銅器千鈞，素木鐵器若巵茜千石，馬蹄躈千，牛千足...",
+      "before_context": "...薪稾千車，船長千丈，木千章，竹竿萬个，其軺車百乘，牛車千兩，",
+      "after_context": "木器髤者千枚，",
       "items": [
         {
           "source": "zhengyi",
@@ -1512,10 +2542,10 @@
       "sentence_id": null
     },
     {
-      "id": "n096",
+      "id": "n161",
       "anchor_text": "木器髤者千枚，",
       "before_context": "...千丈，木千章，竹竿萬个，其軺車百乘，牛車千兩，木器髤者千枚，",
-      "after_context": "銅器千鈞，素木鐵器若巵茜千石，馬蹄躈千，牛千足，羊彘千雙，僮...",
+      "after_context": "銅器千鈞，",
       "items": [
         {
           "source": "jijie",
@@ -1536,24 +2566,71 @@
       "sentence_id": null
     },
     {
-      "id": "n097",
-      "anchor_text": "馬蹄躈千，",
-      "before_context": "...千兩，木器髤者千枚，銅器千鈞，素木鐵器若巵茜千石，馬蹄躈千，",
-      "after_context": "牛千足，羊彘千雙，僮手指千，筋角丹沙千斤，其帛絮細布千鈞，文...",
+      "id": "n162",
+      "anchor_text": "銅器千鈞，",
+      "before_context": "...章，竹竿萬个，其軺車百乘，牛車千兩，木器髤者千枚，銅器千鈞，",
+      "after_context": "素木鐵器若巵茜千石，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐廣曰：「躈音苦弔反，馬八髎也，音料。」"
+          "text": "徐廣曰：「三十斤。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n098",
+      "id": "n163",
+      "anchor_text": "素木鐵器若巵茜千石，",
+      "before_context": "...百乘，牛車千兩，木器髤者千枚，銅器千鈞，素木鐵器若巵茜千石，",
+      "after_context": "馬蹄躈千，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「百二十斤爲石。」駰案：《漢書音義》曰「素木，素器也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n164",
+      "anchor_text": "馬蹄躈千，",
+      "before_context": "...千兩，木器髤者千枚，銅器千鈞，素木鐵器若巵茜千石，馬蹄躈千，",
+      "after_context": "牛千足，羊彘千雙，僮手指千，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「躈音苦弔反，馬八髎也，音料。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣音苦弔反，馬八髎也，音料。埤倉云「尻骨謂八髎，一曰夜蹄」。小顏云「噭，口也。蹄與口共千，則爲二百匹」。若顧胤則云「上文馬二百蹄，比千乘之家，不容亦二百。則躈謂九竅，通四蹄爲十三而成一馬，所謂『生之徒十有三』是也。凡七十六匹馬」。案：亦多於千戶侯比，則不知其所。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n165",
+      "anchor_text": "牛千足，羊彘千雙，僮手指千，",
+      "before_context": "...，素木鐵器若巵茜千石，馬蹄躈千，牛千足，羊彘千雙，僮手指千，",
+      "after_context": "筋角丹沙千斤，其帛絮細布千鈞，文采千匹，榻布皮革千石，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「僮，奴婢也。古者無空手游日，皆有作務，作務須手指，故曰手指，以別馬牛蹄角也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n166",
       "anchor_text": "其帛絮細布千鈞，文采千匹，榻布皮革千石，",
       "before_context": "...指千，筋角丹沙千斤，其帛絮細布千鈞，文采千匹，榻布皮革千石，",
-      "after_context": "漆千斗，糱麴鹽豉千荅，鮐鮆千斤，鯫千石，鮑千鈞，棗栗千石者三...",
+      "after_context": "漆千斗，",
       "items": [
         {
           "source": "jijie",
@@ -1574,24 +2651,43 @@
       "sentence_id": null
     },
     {
-      "id": "n099",
-      "anchor_text": "糱麴鹽豉千荅，",
-      "before_context": "...帛絮細布千鈞，文采千匹，榻布皮革千石，漆千斗，糱麴鹽豉千荅，",
-      "after_context": "鮐鮆千斤，鯫千石，鮑千鈞，棗栗千石者三之，狐鼦裘千皮，羔羊裘...",
+      "id": "n167",
+      "anchor_text": "漆千斗，",
+      "before_context": "...角丹沙千斤，其帛絮細布千鈞，文采千匹，榻布皮革千石，漆千斗，",
+      "after_context": "糱麴鹽豉千荅，",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「或作『台』，器名有瓵。孫叔然云瓵，瓦器，受斗六升合爲瓵。音貽。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「漆大斗」。案：謂大斗，大量也。言滿量千斗，即今之千桶也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n100",
+      "id": "n168",
+      "anchor_text": "糱麴鹽豉千荅，",
+      "before_context": "...帛絮細布千鈞，文采千匹，榻布皮革千石，漆千斗，糱麴鹽豉千荅，",
+      "after_context": "鮐鮆",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「或作『台』，器名有瓵。孫叔然云瓵，瓦器，受斗六升合爲瓵。音貽。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鹽豉千蓋。下音貽。〔孫〕炎（反）說（文）云「瓵，瓦器，受斗六合」，以解此「蓋」，非也。案：《尚書大傳》云「文皮千合」，則數兩謂之合也。三倉云「橢，盛鹽豉器，音他果反」，則蓋或橢之異名耳。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n169",
       "anchor_text": "鮐鮆",
       "before_context": "...細布千鈞，文采千匹，榻布皮革千石，漆千斗，糱麴鹽豉千荅，鮐鮆",
-      "after_context": "千斤，鯫千石，鮑千鈞，棗栗千石者三之，狐鼦裘千皮，羔羊裘千石...",
+      "after_context": "千斤，鯫千石，鮑千鈞，",
       "items": [
         {
           "source": "jijie",
@@ -1612,10 +2708,10 @@
       "sentence_id": null
     },
     {
-      "id": "n101",
+      "id": "n170",
       "anchor_text": "千斤，鯫千石，鮑千鈞，",
       "before_context": "...布皮革千石，漆千斗，糱麴鹽豉千荅，鮐鮆千斤，鯫千石，鮑千鈞，",
-      "after_context": "棗栗千石者三之，狐鼦裘千皮，羔羊裘千石，旃席千具，佗果菜千鍾...",
+      "after_context": "棗栗千石者三之，",
       "items": [
         {
           "source": "jijie",
@@ -1636,10 +2732,10 @@
       "sentence_id": null
     },
     {
-      "id": "n102",
+      "id": "n171",
       "anchor_text": "棗栗千石者三之，",
       "before_context": "...斗，糱麴鹽豉千荅，鮐鮆千斤，鯫千石，鮑千鈞，棗栗千石者三之，",
-      "after_context": "狐鼦裘千皮，羔羊裘千石，旃席千具，佗果菜千鍾，子貸金錢千貫，",
+      "after_context": "狐鼦",
       "items": [
         {
           "source": "suoyin",
@@ -1655,10 +2751,10 @@
       "sentence_id": null
     },
     {
-      "id": "n103",
+      "id": "n172",
       "anchor_text": "狐鼦",
-      "before_context": "糱麴鹽豉千荅，鮐鮆千斤，鯫千石，鮑千鈞，棗栗千石者三之，狐鼦",
-      "after_context": "裘千皮，羔羊裘千石，旃席千具，佗果菜千鍾，子貸金錢千貫，節駔...",
+      "before_context": "...糱麴鹽豉千荅，鮐鮆千斤，鯫千石，鮑千鈞，棗栗千石者三之，狐鼦",
+      "after_context": "裘千皮，羔羊裘千石，",
       "items": [
         {
           "source": "suoyin",
@@ -1674,10 +2770,24 @@
       "sentence_id": null
     },
     {
-      "id": "n104",
+      "id": "n173",
+      "anchor_text": "裘千皮，羔羊裘千石，",
+      "before_context": "...斤，鯫千石，鮑千鈞，棗栗千石者三之，狐鼦裘千皮，羔羊裘千石，",
+      "after_context": "旃席千具，佗果菜千鍾，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "羔羊千石。謂秤皮重千石。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n174",
       "anchor_text": "旃席千具，佗果菜千鍾，",
       "before_context": "...栗千石者三之，狐鼦裘千皮，羔羊裘千石，旃席千具，佗果菜千鍾，",
-      "after_context": "子貸金錢千貫，節駔會，貪賈三之，廉賈五之，此亦比千乘之家，其...",
+      "after_context": "子貸金錢千貫，",
       "items": [
         {
           "source": "suoyin",
@@ -1693,21 +2803,54 @@
       "sentence_id": null
     },
     {
-      "id": "n105",
-      "anchor_text": "節駔會，",
-      "before_context": "...皮，羔羊裘千石，旃席千具，佗果菜千鍾，子貸金錢千貫，節駔會，",
-      "after_context": "貪賈三之，廉賈五之，此亦比千乘之家，其大率也。佗雜業不中什二...",
+      "id": "n175",
+      "anchor_text": "子貸金錢千貫，",
+      "before_context": "...狐鼦裘千皮，羔羊裘千石，旃席千具，佗果菜千鍾，子貸金錢千貫，",
+      "after_context": "節駔會，",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「駔音祖朗反，馬儈也。」駰案：《漢書音義》曰「會亦是儈也。節，節物貴賤也。謂估儈其餘利比千乘之家」。"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：子謂利息也。貸音土代反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n106",
+      "id": "n176",
+      "anchor_text": "節駔會，",
+      "before_context": "...皮，羔羊裘千石，旃席千具，佗果菜千鍾，子貸金錢千貫，節駔會，",
+      "after_context": "貪賈三之，廉賈五之，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「駔音祖朗反，馬儈也。」駰案：《漢書音義》曰「會亦是儈也。節，節物貴賤也。謂估儈其餘利比千乘之家」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：節者，節貴賤也。駔，舊音祖朗反，今音驡。駔者，度牛馬市；云駔儈者，合市也，音古外反。《淮南子》云「段干木，晉國之大駔」，注云「干木，度市之魁也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n177",
+      "anchor_text": "貪賈三之，廉賈五之，",
+      "before_context": "...千具，佗果菜千鍾，子貸金錢千貫，節駔會，貪賈三之，廉賈五之，",
+      "after_context": "此亦比千乘之家，其大率也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「貪賈未當賣而賣，未可買而買，故得利少，而十得三。廉賈貴而賣，賤乃買，故十得五。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n178",
       "anchor_text": "此亦比千乘之家，其大率也。",
       "before_context": "...千貫，節駔會，貪賈三之，廉賈五之，此亦比千乘之家，其大率也。",
       "after_context": "佗雜業不中什二，則非吾財也。",
@@ -1721,7 +2864,7 @@
       "sentence_id": null
     },
     {
-      "id": "n107",
+      "id": "n179",
       "anchor_text": "佗雜業不中什二，則非吾財也。",
       "before_context": "...五之，此亦比千乘之家，其大率也。佗雜業不中什二，則非吾財也。",
       "after_context": "",
@@ -1735,7 +2878,7 @@
       "sentence_id": null
     },
     {
-      "id": "n108",
+      "id": "n180",
       "anchor_text": "蜀卓氏之先，",
       "before_context": "蜀卓氏之先，",
       "after_context": "趙人也，用鐵冶富。秦破趙，遷卓氏。卓氏見虜略，獨夫妻推輦，行...",
@@ -1744,15 +2887,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「卓，一作『淖』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "注「卓，一作『淖』」，並音斲，一音鬧。淖亦音泥淖，亦是姓，故齊有淖齒，漢有淖蓋，與卓氏同出，或以同音淖也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n109",
+      "id": "n181",
       "anchor_text": "諸遷虜少有餘財，爭與吏，求近處，處葭萌。",
       "before_context": "...夫妻推輦，行詣遷處。諸遷虜少有餘財，爭與吏，求近處，處葭萌。",
-      "after_context": "唯卓氏曰：「此地狹薄。吾聞汶山之下，沃野，下有蹲鴟，至死不飢...",
+      "after_context": "唯卓氏曰：「此地狹薄。吾聞汶山之下，",
       "items": [
         {
           "source": "jijie",
@@ -1768,10 +2916,10 @@
       "sentence_id": null
     },
     {
-      "id": "n110",
+      "id": "n182",
       "anchor_text": "唯卓氏曰：「此地狹薄。吾聞汶山之下，",
       "before_context": "...爭與吏，求近處，處葭萌。唯卓氏曰：「此地狹薄。吾聞汶山之下，",
-      "after_context": "沃野，下有蹲鴟，至死不飢。民工於市，易賈。」乃求遠遷。致之臨...",
+      "after_context": "沃野，下有蹲鴟，",
       "items": [
         {
           "source": "suoyin",
@@ -1787,7 +2935,7 @@
       "sentence_id": null
     },
     {
-      "id": "n111",
+      "id": "n183",
       "anchor_text": "沃野，下有蹲鴟，",
       "before_context": "...處葭萌。唯卓氏曰：「此地狹薄。吾聞汶山之下，沃野，下有蹲鴟，",
       "after_context": "至死不飢。民工於市，易賈。」乃求遠遷。致之臨邛，大喜，即鐵山...",
@@ -1806,10 +2954,24 @@
       "sentence_id": null
     },
     {
-      "id": "n112",
+      "id": "n184",
+      "anchor_text": "遷。致之臨邛，大喜，即鐵山鼓鑄，運籌策，",
+      "before_context": "...於市，易賈。」乃求遠遷。致之臨邛，大喜，即鐵山鼓鑄，運籌策，",
+      "after_context": "傾滇蜀之民，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》云「運籌以賈滇」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n185",
       "anchor_text": "傾滇蜀之民，",
       "before_context": "...」乃求遠遷。致之臨邛，大喜，即鐵山鼓鑄，運籌策，傾滇蜀之民，",
-      "after_context": "富至僮千人。田池射獵之樂，擬於人君。",
+      "after_context": "富至僮千人。",
       "items": [
         {
           "source": "zhengyi",
@@ -1820,21 +2982,68 @@
       "sentence_id": null
     },
     {
-      "id": "n113",
-      "anchor_text": "諸侯，因通商賈之利，有游閑公子之賜與名。",
-      "before_context": "...，規陂池，連車騎，游諸侯，因通商賈之利，有游閑公子之賜與名。",
-      "after_context": "然其贏得過當，愈於纖嗇，家致富數千金，故南陽行賈盡法孔氏之雍...",
+      "id": "n186",
+      "anchor_text": "富至僮千人。",
+      "before_context": "...致之臨邛，大喜，即鐵山鼓鑄，運籌策，傾滇蜀之民，富至僮千人。",
+      "after_context": "田池射獵之樂，擬於人君。",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "韋昭曰：「優游閑暇也。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》及相如列傳並云「八百人」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n114",
+      "id": "n187",
+      "anchor_text": "程鄭，山東遷虜也，亦冶鑄，賈椎髻之民，",
+      "before_context": "程鄭，山東遷虜也，亦冶鑄，賈椎髻之民，",
+      "after_context": "富埒卓氏，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "魋結之人。上音椎髻，謂通賈南越也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n188",
+      "anchor_text": "富埒卓氏，",
+      "before_context": "程鄭，山東遷虜也，亦冶鑄，賈椎髻之民，富埒卓氏，",
+      "after_context": "俱居臨邛。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "埒者，鄰畔，言鄰相次。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n189",
+      "anchor_text": "諸侯，因通商賈之利，有游閑公子之賜與名。",
+      "before_context": "...，規陂池，連車騎，游諸侯，因通商賈之利，有游閑公子之賜與名。",
+      "after_context": "然其贏得過當，愈於纖嗇，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "韋昭曰：「優游閑暇也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂通賜與於游閒公子，得其名。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n190",
       "anchor_text": "然其贏得過當，愈於纖嗇，",
       "before_context": "...，因通商賈之利，有游閑公子之賜與名。然其贏得過當，愈於纖嗇，",
       "after_context": "家致富數千金，故南陽行賈盡法孔氏之雍容。",
@@ -1853,7 +3062,35 @@
       "sentence_id": null
     },
     {
-      "id": "n115",
+      "id": "n191",
+      "anchor_text": "魯人俗儉嗇，而曹邴氏",
+      "before_context": "魯人俗儉嗇，而曹邴氏",
+      "after_context": "尤甚，以鐵冶",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "邴音柄也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n192",
+      "anchor_text": "尤甚，以鐵冶",
+      "before_context": "魯人俗儉嗇，而曹邴氏尤甚，以鐵冶",
+      "after_context": "起，富至巨萬。然家自父兄子孫約，俛有拾，仰有取，貰貸行賈徧郡...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「魯縣出鐵。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n193",
       "anchor_text": "齊俗賤奴虜，而刀閒",
       "before_context": "齊俗賤奴虜，而刀閒",
       "after_context": "獨愛貴之。桀黠奴，人之所患也，唯刀閒收取，使之逐漁鹽商賈之利...",
@@ -1872,7 +3109,7 @@
       "sentence_id": null
     },
     {
-      "id": "n116",
+      "id": "n194",
       "anchor_text": "終得其力，起富數千萬。故曰「寧爵毋刀」，",
       "before_context": "...交守相，然愈益任之。終得其力，起富數千萬。故曰「寧爵毋刀」，",
       "after_context": "言其能使豪奴自饒而盡其力。",
@@ -1881,12 +3118,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "《漢書音義》曰：「奴自相謂曰：『寧欲免去作民有爵邪？將止爲刀氏作奴乎？』毋，發聲語助。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案奴自相謂曰：「寧免去求官爵邪？」曰：「無刀。」無刀，相止之辭也，言不去，止爲刀氏作奴也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n117",
+      "id": "n195",
+      "anchor_text": "周人既纖，",
+      "before_context": "周人既纖，",
+      "after_context": "而師史",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「儉，嗇也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n196",
       "anchor_text": "而師史",
       "before_context": "周人既纖，而師史",
       "after_context": "尤甚，轉轂以百數，賈郡國，無所不至。洛陽街居在齊秦楚趙之中，",
@@ -1905,10 +3161,10 @@
       "sentence_id": null
     },
     {
-      "id": "n118",
+      "id": "n197",
       "anchor_text": "郡國，無所不至。洛陽街居在齊秦楚趙之中，",
-      "before_context": "尤甚，轉轂以百數，賈郡國，無所不至。洛陽街居在齊秦楚趙之中，",
-      "after_context": "貧人學事富家，相矜以久賈，數過邑不入門，設任此等，故師史能致...",
+      "before_context": "...尤甚，轉轂以百數，賈郡國，無所不至。洛陽街居在齊秦楚趙之中，",
+      "after_context": "貧人學事富家，相矜以久賈，",
       "items": [
         {
           "source": "zhengyi",
@@ -1919,10 +3175,24 @@
       "sentence_id": null
     },
     {
-      "id": "n119",
+      "id": "n198",
+      "anchor_text": "貧人學事富家，相矜以久賈，",
+      "before_context": "...無所不至。洛陽街居在齊秦楚趙之中，貧人學事富家，相矜以久賈，",
+      "after_context": "數過邑不入門，設任此等，故師史能致七千萬。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「謂街巷居民無田地，皆相矜久賈在此諸國也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n199",
       "anchor_text": "宣曲",
       "before_context": "宣曲",
-      "after_context": "任氏之先，爲督道倉吏。秦之敗也，豪傑皆爭取金玉，而任氏獨窖倉...",
+      "after_context": "任氏之先，爲督道倉吏。",
       "items": [
         {
           "source": "jijie",
@@ -1943,10 +3213,38 @@
       "sentence_id": null
     },
     {
-      "id": "n120",
+      "id": "n200",
+      "anchor_text": "任氏之先，爲督道倉吏。",
+      "before_context": "宣曲任氏之先，爲督道倉吏。",
+      "after_context": "秦之敗也，豪傑皆爭取金玉，而任氏獨窖倉粟。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《漢書音義》曰：「若今吏督租穀使上道輸在所也。」韋昭曰：「督道，秦時邊縣名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n201",
+      "anchor_text": "之敗也，豪傑皆爭取金玉，而任氏獨窖倉粟。",
+      "before_context": "...之先，爲督道倉吏。秦之敗也，豪傑皆爭取金玉，而任氏獨窖倉粟。",
+      "after_context": "楚漢相距滎陽也，民不得耕種，米石至萬，而豪傑金玉盡歸任氏，任...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「窖音校，穿地以藏也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n202",
       "anchor_text": "而任氏折節爲儉，力田畜。田畜人爭取賤賈，",
       "before_context": "...此起富。富人爭奢侈，而任氏折節爲儉，力田畜。田畜人爭取賤賈，",
-      "after_context": "任氏獨取貴善。富者數世。然任公家約，非田畜所出弗衣食，公事不...",
+      "after_context": "任氏獨取貴善。",
       "items": [
         {
           "source": "suoyin",
@@ -1962,10 +3260,24 @@
       "sentence_id": null
     },
     {
-      "id": "n121",
+      "id": "n203",
+      "anchor_text": "任氏獨取貴善。",
+      "before_context": "...奢侈，而任氏折節爲儉，力田畜。田畜人爭取賤賈，任氏獨取貴善。",
+      "after_context": "富者數世。然任公家約，非田畜所出弗衣食，公事不畢則身不得飲酒...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂買物必取貴而善者，不爭賤價也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n204",
       "anchor_text": "塞之斥也，",
       "before_context": "塞之斥也，",
-      "after_context": "唯橋姚已致馬千匹，牛倍之，羊萬頭，粟以萬鍾計。吳楚七國兵起時...",
+      "after_context": "唯橋姚",
       "items": [
         {
           "source": "jijie",
@@ -1975,7 +3287,7 @@
         {
           "source": "suoyin",
           "label": "索隱",
-          "text": "孟康云：「邊塞主斥候之卒也。」　又案：斥，開也，相如傳云「邊塞益斥」是也。"
+          "text": "孟康云：「邊塞主斥候之卒也。」又案：斥，開也，相如傳云「邊塞益斥」是也。"
         },
         {
           "source": "zhengyi",
@@ -1986,10 +3298,10 @@
       "sentence_id": null
     },
     {
-      "id": "n122",
+      "id": "n205",
       "anchor_text": "唯橋姚",
       "before_context": "塞之斥也，唯橋姚",
-      "after_context": "已致馬千匹，牛倍之，羊萬頭，粟以萬鍾計。吳楚七國兵起時，長安...",
+      "after_context": "已致馬千匹，",
       "items": [
         {
           "source": "suoyin",
@@ -2005,10 +3317,122 @@
       "sentence_id": null
     },
     {
-      "id": "n123",
+      "id": "n206",
+      "anchor_text": "已致馬千匹，",
+      "before_context": "塞之斥也，唯橋姚已致馬千匹，",
+      "after_context": "牛倍之，羊萬頭，粟以萬鍾計。吳楚七國兵起時，長安中列侯封君行...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言橋姚因斥塞而致此資。風俗通云：「馬稱匹者，俗說云相馬及君子與人相匹，故云匹。或說馬夜行目照前四丈，故云一匹。或說度馬縱橫適得一匹。」又韓詩外傳云：「孔子與顏回登山，望見一匹練，前有藍，視之果馬，馬光景一匹長也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n207",
+      "anchor_text": "起時，長安中列侯封君行從軍旅，齎貸子錢，",
+      "before_context": "...以萬鍾計。吳楚七國兵起時，長安中列侯封君行從軍旅，齎貸子錢，",
+      "after_context": "子錢家以爲侯邑國在關東，關東成敗未決，莫肯與。唯無鹽氏出捐千...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "齎音子稽反。貨，假也，音吐得反。與人物云齎。《周禮》注「齎所給與」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n208",
+      "anchor_text": "東成敗未決，莫肯與。唯無鹽氏出捐千金貸，",
+      "before_context": "...以爲侯邑國在關東，關東成敗未決，莫肯與。唯無鹽氏出捐千金貸，",
+      "after_context": "其息什之。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "吐代反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n209",
+      "anchor_text": "其息什之。",
+      "before_context": "...在關東，關東成敗未決，莫肯與。唯無鹽氏出捐千金貸，其息什之。",
+      "after_context": "三月，吳楚平，一歲之中，則無鹽氏之息什倍，用此富埒關中。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂出一得十倍。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n210",
+      "anchor_text": "田，田嗇、田蘭。韋家栗氏，安陵、杜杜氏，",
+      "before_context": "...中富商大賈，大抵盡諸田，田嗇、田蘭。韋家栗氏，安陵、杜杜氏，",
+      "after_context": "亦巨萬。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「安陵及杜，二縣名，各有杜姓也。宣帝以杜爲杜陵。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n211",
+      "anchor_text": "此其章章尤異者也。",
+      "before_context": "此其章章尤異者也。",
+      "after_context": "皆非有爵邑奉祿弄法犯姦而富，盡椎埋去就，與時俯仰，獲其贏利，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「異，一作『淑』，又作『較』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n212",
+      "anchor_text": "生之正道也，而富者必用奇勝。田農，掘業，",
+      "before_context": "夫纖嗇筋力，治生之正道也，而富者必用奇勝。田農，掘業，",
+      "after_context": "而秦揚以蓋一州。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「古『拙』字亦作『掘』也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n213",
+      "anchor_text": "而秦揚以蓋一州。",
+      "before_context": "...，治生之正道也，而富者必用奇勝。田農，掘業，而秦揚以蓋一州。",
+      "after_context": "掘冢，姦事也，而田叔以起。博戲，惡業也，而桓發",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《漢書》作「甲一州」。服虔云：「富爲州之中第一。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n214",
       "anchor_text": "姦事也，而田叔以起。博戲，惡業也，而桓發",
       "before_context": "...秦揚以蓋一州。掘冢，姦事也，而田叔以起。博戲，惡業也，而桓發",
-      "after_context": "用（",
+      "after_context": "用（之）富。行賈，丈夫賤行也，而雍樂成以饒。販脂，",
       "items": [
         {
           "source": "suoyin",
@@ -2024,10 +3448,10 @@
       "sentence_id": null
     },
     {
-      "id": "n124",
+      "id": "n215",
       "anchor_text": "。行賈，丈夫賤行也，而雍樂成以饒。販脂，",
       "before_context": "...也，而桓發用（之）富。行賈，丈夫賤行也，而雍樂成以饒。販脂，",
-      "after_context": "辱處也，而雍伯千金。賣漿，小業也，而張氏千萬。洒削，薄技也，...",
+      "after_context": "辱處也，而雍伯千金。",
       "items": [
         {
           "source": "zhengyi",
@@ -2038,35 +3462,45 @@
       "sentence_id": null
     },
     {
-      "id": "n125",
+      "id": "n216",
       "anchor_text": "辱處也，而雍伯千金。",
       "before_context": "...。行賈，丈夫賤行也，而雍樂成以饒。販脂，辱處也，而雍伯千金。",
-      "after_context": "賣漿，小業也，而張氏千萬。洒削，薄技也，而郅氏鼎食。胃脯，簡...",
+      "after_context": "賣漿，小業也，而張氏千萬。洒削，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「雍，一作『翁』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "雍，於恭反。《漢書》作「翁伯」也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n126",
+      "id": "n217",
       "anchor_text": "賣漿，小業也，而張氏千萬。洒削，",
       "before_context": "...。販脂，辱處也，而雍伯千金。賣漿，小業也，而張氏千萬。洒削，",
-      "after_context": "薄技也，而郅氏鼎食。胃脯，簡微耳，濁氏連騎。馬醫，淺方，張里...",
+      "after_context": "薄技也，而郅氏鼎食。胃脯，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「洒，或作『細』。」駰案：《漢書音義》曰「治刀劍名」。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "上音先禮反，削刀者名。洒削，謂摩刀以水洒之。又方言云「劍削，關東謂之削，音肖」。削，一依字讀也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n127",
+      "id": "n218",
       "anchor_text": "薄技也，而郅氏鼎食。胃脯，",
       "before_context": "...。賣漿，小業也，而張氏千萬。洒削，薄技也，而郅氏鼎食。胃脯，",
       "after_context": "簡微耳，濁氏連騎。馬醫，淺方，張里擊鍾。此皆誠壹之所致。",

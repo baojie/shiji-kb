@@ -3,6 +3,34 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "者，故魏諸公子也。其兄魏咎，",
+      "before_context": "魏豹者，故魏諸公子也。其兄魏咎，",
+      "after_context": "故魏時封爲寧陵君。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：彭越傳云「魏豹，魏王咎從弟，真魏後也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
+      "anchor_text": "故魏時封爲寧陵君。",
+      "before_context": "魏豹者，故魏諸公子也。其兄魏咎，故魏時封爲寧陵君。",
+      "after_context": "秦滅魏，遷咎爲家人。陳勝之起王也，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "案：晉灼云「寧陵，梁國縣也，即今寧陵是」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
       "anchor_text": "秦滅魏，遷咎爲家人。陳勝之起王也，",
       "before_context": "...兄魏咎，故魏時封爲寧陵君。秦滅魏，遷咎爲家人。陳勝之起王也，",
       "after_context": "咎往從之。陳王使魏人周市徇魏地，魏地已下，欲相與立周市爲魏王...",
@@ -16,10 +44,38 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n004",
+      "anchor_text": "市爲魏王。周市曰：「天下昬亂，忠臣乃見。",
+      "before_context": "...魏地已下，欲相與立周市爲魏王。周市曰：「天下昬亂，忠臣乃見。",
+      "after_context": "今天下共畔秦，其義必立魏王後乃可。」齊、趙使車各五十乘，立周...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "老子曰「國家昬亂有忠臣」，此取以爲說也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "，迎魏咎於陳。五反，陳王乃遣立咎爲魏王。",
+      "before_context": "...周市爲魏王。市辭不受，迎魏咎於陳。五反，陳王乃遣立咎爲魏王。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「元年十二月也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
       "anchor_text": "章邯已破陳王，乃進兵擊魏王於臨濟。",
       "before_context": "章邯已破陳王，乃進兵擊魏王於臨濟。",
-      "after_context": "魏王乃使周市出請救於齊、楚。齊、楚遣項它、田巴將兵隨市救魏。...",
+      "after_context": "魏王乃使周市出請救於齊、楚。齊、楚遣項它、田巴",
       "items": [
         {
           "source": "zhengyi",
@@ -30,7 +86,7 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n007",
       "anchor_text": "使周市出請救於齊、楚。齊、楚遣項它、田巴",
       "before_context": "...擊魏王於臨濟。魏王乃使周市出請救於齊、楚。齊、楚遣項它、田巴",
       "after_context": "將兵隨市救魏。章邯遂擊破殺周市等軍，圍臨濟。咎爲其民約降。約...",
@@ -49,7 +105,21 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n008",
+      "anchor_text": "亡走楚。",
+      "before_context": "魏豹亡走楚。",
+      "after_context": "楚懷王予魏豹數千人，復徇魏地。項羽已破秦，降章邯。豹下魏二十...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「二年六月。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
       "anchor_text": "侯，欲有梁地，乃徙魏王豹於河東，都平陽，",
       "before_context": "...關。漢元年，項羽封諸侯，欲有梁地，乃徙魏王豹於河東，都平陽，",
       "after_context": "爲西魏王。",
@@ -63,10 +133,10 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n010",
       "anchor_text": "漢王還定三秦，渡臨晉，",
       "before_context": "漢王還定三秦，渡臨晉，",
-      "after_context": "魏王豹以國屬焉，遂從擊楚於彭城",
+      "after_context": "魏王豹以國屬焉，遂從擊楚於彭城。漢敗，還至滎陽，豹請歸視親病...",
       "items": [
         {
           "source": "zhengyi",
@@ -77,10 +147,52 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n011",
+      "anchor_text": "豹。豹謝曰：「人生一世閒，如白駒過隙耳。",
+      "before_context": "...以萬戶封若。」酈生說豹。豹謝曰：「人生一世閒，如白駒過隙耳。",
+      "after_context": "今漢王慢而侮人，罵詈諸侯羣臣如罵奴耳，非有上下禮節也，吾不忍...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "莊子云「無異騏驥之馳過隙」，則謂馬也。小顏云「白駒謂日影也。隙，壁隙也」。以言速疾，若日影過壁隙也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "擊虜豹於河東，",
+      "before_context": "...非有上下禮節也，吾不忍復見也。」於是漢王遣韓信擊虜豹於河東，",
+      "after_context": "傳詣滎陽，以豹國爲郡。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「二年九月也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
+      "anchor_text": "傳詣滎陽，以豹國爲郡。",
+      "before_context": "...復見也。」於是漢王遣韓信擊虜豹於河東，傳詣滎陽，以豹國爲郡。",
+      "after_context": "漢王令豹守滎陽。楚圍之急，周苛遂殺魏豹。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "高祖本紀曰：「置三郡，河東、太原、上黨。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
       "anchor_text": "彭越者，昌邑人也，",
       "before_context": "彭越者，昌邑人也，",
-      "after_context": "字仲。常漁鉅野澤中，爲羣盜。陳勝、項梁",
+      "after_context": "字仲。常漁鉅野澤中，爲羣盜。陳勝、項梁之起，少年或謂越曰：「...",
       "items": [
         {
           "source": "zhengyi",
@@ -91,7 +203,21 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n015",
+      "anchor_text": "願與諸君。」少年彊請，乃許。與期旦日日出",
+      "before_context": "...長。」越謝曰：「臣不願與諸君。」少年彊請，乃許。與期旦日日出",
+      "after_context": "會，後期者斬。旦日日出，十餘人後，後者至日中。於是越謝曰：「...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "旦日謂明日之朝日出時也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
       "anchor_text": "沛公之從碭北",
       "before_context": "沛公之從碭北",
       "after_context": "擊昌邑，彭越助之。昌邑未下，沛公引兵西。彭越亦將其眾居鉅野中...",
@@ -105,7 +231,7 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n017",
       "anchor_text": "賜彭越將軍印，使下濟陰以擊楚。楚命蕭公角",
       "before_context": "...畔項王，（漢）乃使人賜彭越將軍印，使下濟陰以擊楚。楚命蕭公角",
       "after_context": "將兵擊越，越大破楚軍。漢王二年春，與魏王豹及諸侯東擊楚，彭越...",
@@ -119,7 +245,21 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n018",
+      "anchor_text": "，真魏後。」乃拜彭越爲魏相國，擅將其兵，",
+      "before_context": "...魏王豹亦魏王咎從弟也，真魏後。」乃拜彭越爲魏相國，擅將其兵，",
+      "after_context": "略定梁地。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "擅猶專也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
       "anchor_text": "，彭越皆復亡其所下城，獨將其兵北居河上。",
       "before_context": "漢王之敗彭城解而西也，彭越皆復亡其所下城，獨將其兵北居河上。",
       "after_context": "漢王三年，彭越常往來爲漢游兵，擊楚，絕其後糧於梁地。漢四年冬...",
@@ -133,10 +273,10 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n020",
       "anchor_text": "漢王相距滎陽，彭越攻下睢陽、外黃十七城。",
       "before_context": "...地。漢四年冬，項王與漢王相距滎陽，彭越攻下睢陽、外黃十七城。",
-      "after_context": "項王聞之，乃使曹咎守成皋，自東收彭越所下城邑，皆復爲楚。越將...",
+      "after_context": "項王聞之，乃使曹咎守成皋，",
       "items": [
         {
           "source": "zhengyi",
@@ -147,10 +287,10 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n021",
       "anchor_text": "項王聞之，乃使曹咎守成皋，",
       "before_context": "...距滎陽，彭越攻下睢陽、外黃十七城。項王聞之，乃使曹咎守成皋，",
-      "after_context": "自東收彭越所下城邑，皆復爲楚。越將其兵北走穀城。漢五年秋，項...",
+      "after_context": "自東收彭越所下城邑，皆復爲楚。",
       "items": [
         {
           "source": "zhengyi",
@@ -161,10 +301,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n022",
       "anchor_text": "自東收彭越所下城邑，皆復爲楚。",
       "before_context": "...城。項王聞之，乃使曹咎守成皋，自東收彭越所下城邑，皆復爲楚。",
-      "after_context": "越將其兵北走穀城。漢五年秋，項王之南走陽夏，彭越復下昌邑旁二...",
+      "after_context": "越將其兵北走穀城。",
       "items": [
         {
           "source": "zhengyi",
@@ -175,10 +315,10 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n023",
       "anchor_text": "越將其兵北走穀城。",
       "before_context": "...曹咎守成皋，自東收彭越所下城邑，皆復爲楚。越將其兵北走穀城。",
-      "after_context": "漢五年秋，項王之南走陽夏，彭越復下昌邑旁二十餘城，得穀十餘萬...",
+      "after_context": "漢五年秋，項王之南走陽夏，",
       "items": [
         {
           "source": "zhengyi",
@@ -189,7 +329,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n024",
       "anchor_text": "漢五年秋，項王之南走陽夏，",
       "before_context": "...城邑，皆復爲楚。越將其兵北走穀城。漢五年秋，項王之南走陽夏，",
       "after_context": "彭越復下昌邑旁二十餘城，得穀十餘萬斛，以給漢王食。",
@@ -203,7 +343,7 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n025",
       "anchor_text": "楚，未可去。」漢王追楚，爲項籍所敗固陵。",
       "before_context": "...曰：「魏地初定，尚畏楚，未可去。」漢王追楚，爲項籍所敗固陵。",
       "after_context": "乃謂留侯曰：「諸侯兵不從，爲之柰何？」留侯曰：「齊王信之立，...",
@@ -217,10 +357,10 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n026",
       "anchor_text": "定。與此兩國約：即勝楚，睢陽以北至穀城，",
       "before_context": "...越亦欲王，而君王不蚤定。與此兩國約：即勝楚，睢陽以北至穀城，",
-      "after_context": "皆以王彭相國；從陳以東傅海，與齊王信。齊王信家在楚，此其意欲...",
+      "after_context": "皆以王彭相國；從陳以東傅海，",
       "items": [
         {
           "source": "zhengyi",
@@ -231,7 +371,7 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n027",
       "anchor_text": "皆以王彭相國；從陳以東傅海，",
       "before_context": "...兩國約：即勝楚，睢陽以北至穀城，皆以王彭相國；從陳以東傅海，",
       "after_context": "與齊王信。齊王信家在楚，此其意欲復得故邑。君王能出捐此地許二...",
@@ -255,10 +395,10 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n028",
       "anchor_text": "，如留侯策。使者至，彭越乃悉引兵會垓下，",
       "before_context": "...於是漢王乃發使使彭越，如留侯策。使者至，彭越乃悉引兵會垓下，",
-      "after_context": "遂破楚。（",
+      "after_context": "遂破楚。（五年）項籍已死。春，立彭越爲梁王，都定陶。",
       "items": [
         {
           "source": "zhengyi",
@@ -269,7 +409,7 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n029",
       "anchor_text": "項籍已死。春，立彭越爲梁王，都定陶。",
       "before_context": "...會垓下，遂破楚。（五年）項籍已死。春，立彭越爲梁王，都定陶。",
       "after_context": "",
@@ -283,21 +423,40 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
-      "anchor_text": "請論如法。上赦以爲庶人，傳處蜀青衣。",
-      "before_context": "...之雒陽。有司治反形己具，請論如法。上赦以爲庶人，傳處蜀青衣。",
-      "after_context": "西至鄭，逢呂后從長安來，欲之雒陽，道見彭王。彭王爲呂后泣涕，...",
+      "id": "n030",
+      "anchor_text": "不覺，捕梁王，囚之雒陽。有司治反形己具，",
+      "before_context": "...是上使使掩梁王，梁王不覺，捕梁王，囚之雒陽。有司治反形己具，",
+      "after_context": "請論如法。上赦以爲庶人，傳處蜀青衣。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "文穎曰：「青衣，縣名，在蜀。」瓚曰：「今漢嘉是也。」"
+          "text": "張晏曰：「扈輒勸越反，不聽，而云『反形已見』，有司非也。」瓚曰：「扈輒勸越反，而越不誅輒，是反形已具。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n031",
+      "anchor_text": "請論如法。上赦以爲庶人，傳處蜀青衣。",
+      "before_context": "...之雒陽。有司治反形己具，請論如法。上赦以爲庶人，傳處蜀青衣。",
+      "after_context": "西至鄭，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文穎曰：「青衣，縣名，在蜀。」瓚曰：「今漢嘉是也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "蘇林曰：「縣名，今爲臨邛。」瓚曰：「今漢嘉是也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
       "anchor_text": "西至鄭，",
       "before_context": "...有司治反形己具，請論如法。上赦以爲庶人，傳處蜀青衣。西至鄭，",
       "after_context": "逢呂后從長安來，欲之雒陽，道見彭王。彭王爲呂后泣涕，自言無罪...",
@@ -316,7 +475,7 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n033",
       "anchor_text": "白上曰：「彭王壯士，今徙之蜀，此自遺患，",
       "before_context": "...，與俱東至雒陽。呂后白上曰：「彭王壯士，今徙之蜀，此自遺患，",
       "after_context": "不如遂誅之。妾謹與俱來。」於是呂后乃令其舍人告彭越復謀反。廷...",
@@ -330,10 +489,10 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n034",
       "anchor_text": "、彭越雖故賤，然已席卷千里，",
       "before_context": "太史公曰：魏豹、彭越雖故賤，然已席卷千里，",
-      "after_context": "南面稱孤，喋血乘勝日有聞矣。懷畔逆之意，及敗，不死而虜囚，身...",
+      "after_context": "南面稱孤，喋血",
       "items": [
         {
           "source": "zhengyi",
@@ -344,7 +503,7 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n035",
       "anchor_text": "南面稱孤，喋血",
       "before_context": "太史公曰：魏豹、彭越雖故賤，然已席卷千里，南面稱孤，喋血",
       "after_context": "乘勝日有聞矣。懷畔逆之意，及敗，不死而虜囚，身被刑戮，何哉？...",
@@ -353,6 +512,11 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「喋，一作『唼』。韓傳亦有『喋血』語也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音牒。喋猶踐也。殺敵踐血而行，孝文紀「喋血京師」是也。"
         }
       ],
       "sentence_id": null

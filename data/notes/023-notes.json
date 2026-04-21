@@ -22,9 +22,23 @@
     },
     {
       "id": "n002",
+      "anchor_text": "曰：洋洋",
+      "before_context": "太史公曰：洋洋",
+      "after_context": "美德乎！宰制萬物，役使羣眾，豈人力也哉？",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音羊。洋洋，美盛貌。鄒誕生音翔。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
       "anchor_text": "美德乎！宰制萬物，役使羣眾，豈人力也哉？",
       "before_context": "太史公曰：洋洋美德乎！宰制萬物，役使羣眾，豈人力也哉？",
-      "after_context": "余至大行禮官，觀三代損益，乃知緣人情而制禮，依人性而作儀，其...",
+      "after_context": "余至大行禮官，",
       "items": [
         {
           "source": "zhengyi",
@@ -35,10 +49,24 @@
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
+      "anchor_text": "余至大行禮官，",
+      "before_context": "...：洋洋美德乎！宰制萬物，役使羣眾，豈人力也哉？余至大行禮官，",
+      "after_context": "觀三代損益，乃知緣人情而制禮，依人性而作儀，其所由來尚矣。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "大行，秦官，主禮儀。漢景帝改曰大鴻臚。鴻臚，掌九賓之儀也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "，所以總一海內而整齊萬民也。人體安駕乘，",
       "before_context": "...厚者位尊，祿重者寵榮，所以總一海內而整齊萬民也。人體安駕乘，",
-      "after_context": "爲之金輿錯衡以繁其飾；目好五色，爲之黼黻文章以表其能；耳樂鐘...",
+      "after_context": "爲之金輿錯衡以繁其飾；",
       "items": [
         {
           "source": "zhengyi",
@@ -49,7 +77,7 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n006",
       "anchor_text": "爲之金輿錯衡以繁其飾；",
       "before_context": "...所以總一海內而整齊萬民也。人體安駕乘，爲之金輿錯衡以繁其飾；",
       "after_context": "目好五色，爲之黼黻文章以表其能；耳樂鐘磬，爲之調諧八音以蕩其...",
@@ -73,10 +101,24 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n007",
+      "anchor_text": "蕩其心；口甘五味，爲之庶羞酸鹹以致其美；",
+      "before_context": "...鐘磬，爲之調諧八音以蕩其心；口甘五味，爲之庶羞酸鹹以致其美；",
+      "after_context": "情好珍善，爲之琢磨圭璧以通其意。故大路越席，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《周禮》曰：「羞用百有二十品。」鄭玄曰：「羞出于牲及禽獸，以備其滋味，謂之庶羞。」鄭眾曰：「羞者，進也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
       "anchor_text": "珍善，爲之琢磨圭璧以通其意。故大路越席，",
       "before_context": "...羞酸鹹以致其美；情好珍善，爲之琢磨圭璧以通其意。故大路越席，",
-      "after_context": "皮弁布裳，朱弦洞越，大羹玄酒，所以防其淫侈，救其彫敝。是以君...",
+      "after_context": "皮弁布裳，",
       "items": [
         {
           "source": "jijie",
@@ -92,10 +134,10 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n009",
       "anchor_text": "皮弁布裳，",
       "before_context": "...其美；情好珍善，爲之琢磨圭璧以通其意。故大路越席，皮弁布裳，",
-      "after_context": "朱弦洞越，大羹玄酒，所以防其淫侈，救其彫敝。是以君臣朝廷尊卑...",
+      "after_context": "朱弦洞越，",
       "items": [
         {
           "source": "jijie",
@@ -111,7 +153,105 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n010",
+      "anchor_text": "朱弦洞越，",
+      "before_context": "...珍善，爲之琢磨圭璧以通其意。故大路越席，皮弁布裳，朱弦洞越，",
+      "after_context": "大羹玄酒，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「朱弦，練朱絲弦也。越，瑟底孔。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
+      "anchor_text": "大羹玄酒，",
+      "before_context": "...琢磨圭璧以通其意。故大路越席，皮弁布裳，朱弦洞越，大羹玄酒，",
+      "after_context": "所以防其淫侈，救其彫敝。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「大羹，肉湆不調以鹽菜也。玄酒，水也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "所以防其淫侈，救其彫敝。",
+      "before_context": "...越席，皮弁布裳，朱弦洞越，大羹玄酒，所以防其淫侈，救其彫敝。",
+      "after_context": "是以君臣朝廷尊卑貴賤之序，下及黎庶車輿衣服宮室飲食嫁娶喪祭之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "彫謂彫飾也。言彫飾是奢侈之弊也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
+      "anchor_text": "尼曰：「禘自既灌而往者，吾不欲觀之矣。」",
+      "before_context": "...有宜適，物有節文。仲尼曰：「禘自既灌而往者，吾不欲觀之矣。」",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "孔安國曰：「禘祫之禮，爲序昭穆也，故毀廟之主及羣廟之主皆合食于太祖。灌者，酌鬱鬯，灌于太祖，以降神也。既灌之後，列尊卑，序昭穆。而魯逆祀，躋僖公，亂昭穆，故不欲觀之。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
+      "anchor_text": "之家，兼備三歸。",
+      "before_context": "周衰，禮廢樂壞，大小相踰，管仲之家，兼備三歸。",
+      "after_context": "循法守正者見侮於世，奢溢僭差者謂之顯榮。自子夏，門人之高弟也...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "包氏曰：「三歸，娶三姓女也。婦人謂嫁曰歸。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "溢僭差者謂之顯榮。自子夏，門人之高弟也，",
+      "before_context": "...法守正者見侮於世，奢溢僭差者謂之顯榮。自子夏，門人之高弟也，",
+      "after_context": "猶云「出見紛華盛麗而說，入聞夫子之道而樂，二者心戰，未能自決...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言子夏是孔子門人之中高弟者，謂才優而品第高也，故《論語》四科有「文學子游、子夏」是。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
+      "anchor_text": "曰「必也正名」，於衞所居不合。",
+      "before_context": "...漸漬於失教，被服於成俗乎？孔子曰「必也正名」，於衞所居不合。",
+      "after_context": "仲尼沒後，受業之徒沈湮而不舉，或適齊、楚，或入河海，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《論語》曰：「子路曰『衞君待子而爲政，子將奚先』？子曰『必也正名乎』！」馬融曰：「正百事之名。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "業之徒沈湮而不舉，或適齊、楚，或入河海，",
       "before_context": "...居不合。仲尼沒後，受業之徒沈湮而不舉，或適齊、楚，或入河海，",
       "after_context": "豈不痛哉！",
@@ -125,10 +265,10 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n018",
       "anchor_text": "合聖制，其尊君抑臣，朝廷濟濟，依古以來。",
       "before_context": "...禮儀，采擇其善，雖不合聖制，其尊君抑臣，朝廷濟濟，依古以來。",
-      "after_context": "至于高祖，光有四海，叔孫通",
+      "after_context": "至于高祖，光有四海，叔孫通頗有所增益減損，大抵皆襲秦故。",
       "items": [
         {
           "source": "zhengyi",
@@ -139,21 +279,26 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n019",
       "anchor_text": "頗有所增益減損，大抵皆襲秦故。",
       "before_context": "...來。至于高祖，光有四海，叔孫通頗有所增益減損，大抵皆襲秦故。",
-      "after_context": "自天子稱號下至佐僚及宮室官名，少所變改。孝文即位，有司議欲定...",
+      "after_context": "自天子稱號",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "應劭曰：「抵，至也。」瓚曰：「抵，歸也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：大抵猶大略也。臣瓚以抵訓爲歸，則是大略大歸，其義通也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n020",
       "anchor_text": "自天子稱號",
       "before_context": "...祖，光有四海，叔孫通頗有所增益減損，大抵皆襲秦故。自天子稱號",
       "after_context": "下至佐僚及宮室官名，少所變改。孝文即位，有司議欲定儀禮，孝文...",
@@ -167,7 +312,7 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n021",
       "anchor_text": "學，以爲繁禮飾貌，無益於治，躬化謂何耳，",
       "before_context": "...定儀禮，孝文好道家之學，以爲繁禮飾貌，無益於治，躬化謂何耳，",
       "after_context": "故罷去之。孝景時，御史大夫鼂錯明於世務刑名，數干諫孝景曰：「...",
@@ -181,10 +326,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n022",
       "anchor_text": "，恐不可傳後。」孝景用其計，而六國畔逆，",
       "before_context": "...國專治異政，不稟京師，恐不可傳後。」孝景用其計，而六國畔逆，",
-      "after_context": "以錯首名，天子誅錯以解難。事在袁盎語中。是後官者養交安祿而已...",
+      "after_context": "以錯首名，天子誅錯以解難。",
       "items": [
         {
           "source": "zhengyi",
@@ -195,7 +340,7 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n023",
       "anchor_text": "以錯首名，天子誅錯以解難。",
       "before_context": "...可傳後。」孝景用其計，而六國畔逆，以錯首名，天子誅錯以解難。",
       "after_context": "事在袁盎語中。是後官者養交安祿而已，莫敢復議。",
@@ -209,7 +354,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n024",
       "anchor_text": "不就。或言古者太平，萬民和喜，瑞應辨至，",
       "before_context": "...士，令共定儀，十餘年不就。或言古者太平，萬民和喜，瑞應辨至，",
       "after_context": "乃采風俗，定制作。上聞之，制詔御史曰：「蓋受命而王，各有所由...",
@@ -223,7 +368,21 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n025",
+      "anchor_text": "者褊狹，可不勉與！」乃以太初之元改正朔，",
+      "before_context": "...何？化隆者閎博，治淺者褊狹，可不勉與！」乃以太初之元改正朔，",
+      "after_context": "易服色，封太山，定宗廟百官之儀，以爲典常，垂之於後云。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "應劭曰：「初用夏正，以正月爲歲首，改年爲太初。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
       "anchor_text": "欲，欲而不得則不能無忿，忿而無度量則爭，",
       "before_context": "禮由人起。人生有欲，欲而不得則不能無忿，忿而無度量則爭，",
       "after_context": "爭則亂。先王惡其亂，故制禮義以養人之欲，給人之求，使欲不窮於...",
@@ -237,7 +396,7 @@
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n027",
       "anchor_text": "欲，給人之求，使欲不窮於物，物不屈於欲，",
       "before_context": "...亂，故制禮義以養人之欲，給人之求，使欲不窮於物，物不屈於欲，",
       "after_context": "二者相待而長，是禮之所起也。故禮者養也。稻粱五味，所以養口也...",
@@ -251,7 +410,21 @@
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n028",
+      "anchor_text": "者養也。稻粱五味，所以養口也；椒蘭芬茝，",
+      "before_context": "...，是禮之所起也。故禮者養也。稻粱五味，所以養口也；椒蘭芬茝，",
+      "after_context": "所以養鼻也；鐘鼓管弦，所以養耳也；刻鏤文章，所以養目也；疏房...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音止，又昌改反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "，所以養目也；疏房牀笫几席，所以養體也：",
       "before_context": "...所以養耳也；刻鏤文章，所以養目也；疏房牀笫几席，所以養體也：",
       "after_context": "故禮者養也。",
@@ -275,10 +448,10 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n030",
       "anchor_text": "重皆有稱也。故天子大路越席，所以養體也；",
       "before_context": "...等，長少有差，貧富輕重皆有稱也。故天子大路越席，所以養體也；",
-      "after_context": "側載臭茝，所以養鼻也；前有錯衡，所以養目也；和鸞之聲，步中武...",
+      "after_context": "側載臭茝，所以養鼻也；",
       "items": [
         {
           "source": "zhengyi",
@@ -289,10 +462,38 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n031",
+      "anchor_text": "側載臭茝，所以養鼻也；",
+      "before_context": "...皆有稱也。故天子大路越席，所以養體也；側載臭茝，所以養鼻也；",
+      "after_context": "前有錯衡，所以養目也；",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉氏云：「側，特也。臭，香也。茝，香草也。言天子行，特得以香草自隨也，其餘則否。」臭爲香者，《山海經》云「臭如蘪蕪」，《易》曰「其臭如蘭」，是臭爲草之香也。今以側爲邊側，載者置也，言天子之側常置芳香於左右。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
+      "anchor_text": "前有錯衡，所以養目也；",
+      "before_context": "...席，所以養體也；側載臭茝，所以養鼻也；前有錯衡，所以養目也；",
+      "after_context": "和鸞之聲，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《詩》云：「約軧錯衡。」毛傳云：「錯衡，文衡也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n033",
       "anchor_text": "和鸞之聲，",
       "before_context": "...體也；側載臭茝，所以養鼻也；前有錯衡，所以養目也；和鸞之聲，",
-      "after_context": "步中武象，驟中韶濩，所以養耳也；龍旂九斿，所以養信也；寢兕持...",
+      "after_context": "步中武象，驟中韶濩，所以養耳也；",
       "items": [
         {
           "source": "jijie",
@@ -308,10 +509,10 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n034",
       "anchor_text": "步中武象，驟中韶濩，所以養耳也；",
       "before_context": "...錯衡，所以養目也；和鸞之聲，步中武象，驟中韶濩，所以養耳也；",
-      "after_context": "龍旂九斿，所以養信也；寢兕持虎，鮫韅彌龍，所以養威也。故大路...",
+      "after_context": "龍旂九斿，所以養信也；",
       "items": [
         {
           "source": "jijie",
@@ -327,10 +528,10 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n035",
       "anchor_text": "龍旂九斿，所以養信也；",
       "before_context": "...之聲，步中武象，驟中韶濩，所以養耳也；龍旂九斿，所以養信也；",
-      "after_context": "寢兕持虎，鮫韅彌龍，所以養威也。故大路之馬，必信至教順，然后...",
+      "after_context": "寢兕",
       "items": [
         {
           "source": "jijie",
@@ -346,10 +547,10 @@
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n036",
       "anchor_text": "寢兕",
       "before_context": "...，步中武象，驟中韶濩，所以養耳也；龍旂九斿，所以養信也；寢兕",
-      "after_context": "持虎，鮫韅彌龍，所以養威也。故大路之馬，必信至教順，然后乘之...",
+      "after_context": "持虎，",
       "items": [
         {
           "source": "suoyin",
@@ -365,21 +566,40 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
-      "anchor_text": "鮫韅",
-      "before_context": "...，驟中韶濩，所以養耳也；龍旂九斿，所以養信也；寢兕持虎，鮫韅",
-      "after_context": "彌龍，所以養威也。故大路之馬，必信至教順，然后乘之，所以養安...",
+      "id": "n037",
+      "anchor_text": "持虎，",
+      "before_context": "...武象，驟中韶濩，所以養耳也；龍旂九斿，所以養信也；寢兕持虎，",
+      "after_context": "鮫韅",
       "items": [
         {
-          "source": "jijie",
-          "label": "集解",
-          "text": "徐廣曰：「鮫魚皮可以飾服器，音交。韅者，當馬腋之革，音呼見反。」"
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "持虎者，以猛獸皮文飾倚較及伏軾，故云持虎。劉氏云「畫之於旍竿及楯仗等」，以今所見爲說也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n038",
+      "anchor_text": "鮫韅",
+      "before_context": "...，驟中韶濩，所以養耳也；龍旂九斿，所以養信也；寢兕持虎，鮫韅",
+      "after_context": "彌龍，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「鮫魚皮可以飾服器，音交。韅者，當馬腋之革，音呼見反。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "以鮫魚皮飾韅。韅，馬腹帶也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
       "anchor_text": "彌龍，",
       "before_context": "...韶濩，所以養耳也；龍旂九斿，所以養信也；寢兕持虎，鮫韅彌龍，",
       "after_context": "所以養威也。故大路之馬，必信至教順，然后乘之，所以養安也。孰...",
@@ -388,15 +608,20 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「乘輿車金薄璆龍爲輿倚較，文虎伏軾，龍首銜軛。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "彌亦音弭，謂金飾衡枙爲龍。此皆王者服御崇飾，所以示威武，故云「所以養威」也。此文皆出《大戴禮》，蓋是荀卿所說。劉氏云：「薄猶飾也。璆然，龍貌。璆音虬。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n040",
       "anchor_text": "出死要節之所以養生也。",
       "before_context": "...順，然后乘之，所以養安也。孰知夫（士）出死要節之所以養生也。",
-      "after_context": "孰知夫輕費用之所以養財也，孰知夫恭敬辭讓之所以養安也，孰知夫...",
+      "after_context": "孰知夫輕費用之所以養財也，",
       "items": [
         {
           "source": "suoyin",
@@ -412,10 +637,10 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
+      "id": "n041",
       "anchor_text": "孰知夫輕費用之所以養財也，",
       "before_context": "...孰知夫（士）出死要節之所以養生也。孰知夫輕費用之所以養財也，",
-      "after_context": "孰知夫恭敬辭讓之所以養安也，孰知夫禮義文理之所以養情也。",
+      "after_context": "孰知夫恭敬辭讓之所以養安也，",
       "items": [
         {
           "source": "zhengyi",
@@ -426,7 +651,7 @@
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n042",
       "anchor_text": "孰知夫恭敬辭讓之所以養安也，",
       "before_context": "...生也。孰知夫輕費用之所以養財也，孰知夫恭敬辭讓之所以養安也，",
       "after_context": "孰知夫禮義文理之所以養情也。",
@@ -440,7 +665,7 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n043",
       "anchor_text": "孰知夫禮義文理之所以養情也。",
       "before_context": "...也，孰知夫恭敬辭讓之所以養安也，孰知夫禮義文理之所以養情也。",
       "after_context": "",
@@ -454,10 +679,10 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n044",
       "anchor_text": "人苟生之爲見，若者必死；",
       "before_context": "人苟生之爲見，若者必死；",
-      "after_context": "苟利之爲見，若者必害；怠惰之爲安，若者必危；情勝之爲安，若者...",
+      "after_context": "苟利之爲見，若者必害；",
       "items": [
         {
           "source": "zhengyi",
@@ -468,10 +693,10 @@
       "sentence_id": null
     },
     {
-      "id": "n030",
+      "id": "n045",
       "anchor_text": "苟利之爲見，若者必害；",
       "before_context": "人苟生之爲見，若者必死；苟利之爲見，若者必害；",
-      "after_context": "怠惰之爲安，若者必危；情勝之爲安，若者必滅。故聖人一之於禮義...",
+      "after_context": "怠惰之爲安，若者必危；",
       "items": [
         {
           "source": "zhengyi",
@@ -482,10 +707,10 @@
       "sentence_id": null
     },
     {
-      "id": "n031",
+      "id": "n046",
       "anchor_text": "怠惰之爲安，若者必危；",
       "before_context": "...爲見，若者必死；苟利之爲見，若者必害；怠惰之爲安，若者必危；",
-      "after_context": "情勝之爲安，若者必滅。故聖人一之於禮義，則兩得之矣；一之於情...",
+      "after_context": "情勝之爲安，若者必滅。",
       "items": [
         {
           "source": "zhengyi",
@@ -496,7 +721,7 @@
       "sentence_id": null
     },
     {
-      "id": "n032",
+      "id": "n047",
       "anchor_text": "情勝之爲安，若者必滅。",
       "before_context": "...爲見，若者必害；怠惰之爲安，若者必危；情勝之爲安，若者必滅。",
       "after_context": "故聖人一之於禮義，則兩得之矣；一之於情性，則兩失之矣。故儒者...",
@@ -515,7 +740,21 @@
       "sentence_id": null
     },
     {
-      "id": "n033",
+      "id": "n048",
+      "anchor_text": "將使人兩得之者也，墨者將使人兩失之者也。",
+      "before_context": "...，則兩失之矣。故儒者將使人兩得之者也，墨者將使人兩失之者也。",
+      "after_context": "是儒墨之分。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "墨者不尚禮義而任儉嗇，無仁恩，故使人兩失之。《易》曰「悅以使人，人忘其死」是也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
       "anchor_text": "是儒墨之分。",
       "before_context": "...。故儒者將使人兩得之者也，墨者將使人兩失之者也。是儒墨之分。",
       "after_context": "",
@@ -529,10 +768,10 @@
       "sentence_id": null
     },
     {
-      "id": "n034",
+      "id": "n050",
       "anchor_text": "治辨之極也，彊固之本也，",
       "before_context": "治辨之極也，彊固之本也，",
-      "after_context": "威行之道也，功名之總也。王公由之，所以一天下，臣諸侯也；弗由...",
+      "after_context": "威行之道也，",
       "items": [
         {
           "source": "suoyin",
@@ -548,10 +787,10 @@
       "sentence_id": null
     },
     {
-      "id": "n035",
+      "id": "n051",
       "anchor_text": "威行之道也，",
       "before_context": "治辨之極也，彊固之本也，威行之道也，",
-      "after_context": "功名之總也。王公由之，所以一天下，臣諸侯也；弗由之，所以捐社...",
+      "after_context": "功名之總也。",
       "items": [
         {
           "source": "zhengyi",
@@ -562,10 +801,10 @@
       "sentence_id": null
     },
     {
-      "id": "n036",
+      "id": "n052",
       "anchor_text": "功名之總也。",
       "before_context": "治辨之極也，彊固之本也，威行之道也，功名之總也。",
-      "after_context": "王公由之，所以一天下，臣諸侯也；弗由之，所以捐社稷也。故堅革...",
+      "after_context": "王公由之，",
       "items": [
         {
           "source": "zhengyi",
@@ -576,7 +815,7 @@
       "sentence_id": null
     },
     {
-      "id": "n037",
+      "id": "n053",
       "anchor_text": "王公由之，",
       "before_context": "治辨之極也，彊固之本也，威行之道也，功名之總也。王公由之，",
       "after_context": "所以一天下，臣諸侯也；弗由之，所以捐社稷也。故堅革利兵不足以...",
@@ -590,10 +829,24 @@
       "sentence_id": null
     },
     {
-      "id": "n038",
+      "id": "n054",
+      "anchor_text": "之，所以捐社稷也。故堅革利兵不足以爲勝，",
+      "before_context": "...天下，臣諸侯也；弗由之，所以捐社稷也。故堅革利兵不足以爲勝，",
+      "after_context": "高城深池不足以爲固，嚴令繁刑不足以爲威。由其道則行，不由其道...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "覆上「功名之總也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n055",
       "anchor_text": "人鮫革犀兕，所以爲甲，堅如金石；宛之鉅鐵",
       "before_context": "...行，不由其道則廢。楚人鮫革犀兕，所以爲甲，堅如金石；宛之鉅鐵",
-      "after_context": "施，鑽如蠭蠆，輕利剽遫，卒如熛風。然而兵殆於垂涉，唐昧死焉；",
+      "after_context": "施，鑽如蠭蠆，",
       "items": [
         {
           "source": "jijie",
@@ -609,10 +862,24 @@
       "sentence_id": null
     },
     {
-      "id": "n039",
+      "id": "n056",
+      "anchor_text": "施，鑽如蠭蠆，",
+      "before_context": "...廢。楚人鮫革犀兕，所以爲甲，堅如金石；宛之鉅鐵施，鑽如蠭蠆，",
+      "after_context": "輕利剽遫，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "鑽謂矛刃及矢鏃也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n057",
       "anchor_text": "輕利剽遫，",
       "before_context": "...革犀兕，所以爲甲，堅如金石；宛之鉅鐵施，鑽如蠭蠆，輕利剽遫，",
-      "after_context": "卒如熛風。然而兵殆於垂涉，唐昧死焉；莊蹻起，楚分而爲四參。是...",
+      "after_context": "卒如熛風。",
       "items": [
         {
           "source": "zhengyi",
@@ -623,10 +890,10 @@
       "sentence_id": null
     },
     {
-      "id": "n040",
+      "id": "n058",
       "anchor_text": "卒如熛風。",
       "before_context": "...以爲甲，堅如金石；宛之鉅鐵施，鑽如蠭蠆，輕利剽遫，卒如熛風。",
-      "after_context": "然而兵殆於垂涉，唐昧死焉；莊蹻起，楚分而爲四參。是豈無堅革利...",
+      "after_context": "然而兵殆於垂涉，唐昧死焉；",
       "items": [
         {
           "source": "zhengyi",
@@ -637,10 +904,24 @@
       "sentence_id": null
     },
     {
-      "id": "n041",
+      "id": "n059",
+      "anchor_text": "然而兵殆於垂涉，唐昧死焉；",
+      "before_context": "...施，鑽如蠭蠆，輕利剽遫，卒如熛風。然而兵殆於垂涉，唐昧死焉；",
+      "after_context": "莊蹻起，楚分而爲四",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "許慎曰：「垂涉，地名也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n060",
       "anchor_text": "莊蹻起，楚分而爲四",
       "before_context": "...剽遫，卒如熛風。然而兵殆於垂涉，唐昧死焉；莊蹻起，楚分而爲四",
-      "after_context": "參。是豈無堅革利兵哉？其所以統之者非其道故也。汝潁以爲險，江...",
+      "after_context": "參。是豈無堅革利兵哉？",
       "items": [
         {
           "source": "suoyin",
@@ -656,10 +937,10 @@
       "sentence_id": null
     },
     {
-      "id": "n042",
+      "id": "n061",
       "anchor_text": "參。是豈無堅革利兵哉？",
       "before_context": "...殆於垂涉，唐昧死焉；莊蹻起，楚分而爲四參。是豈無堅革利兵哉？",
-      "after_context": "其所以統之者非其道故也。汝潁以爲險，江漢以爲池，阻之以鄧林，",
+      "after_context": "其所以統之者非其道故也。汝潁以爲險，",
       "items": [
         {
           "source": "suoyin",
@@ -675,10 +956,10 @@
       "sentence_id": null
     },
     {
-      "id": "n043",
+      "id": "n062",
       "anchor_text": "其所以統之者非其道故也。汝潁以爲險，",
       "before_context": "...四參。是豈無堅革利兵哉？其所以統之者非其道故也。汝潁以爲險，",
-      "after_context": "江漢以爲池，阻之以鄧林，緣之以方城。然而秦師至鄢郢，舉若振槁...",
+      "after_context": "江漢以爲池，",
       "items": [
         {
           "source": "zhengyi",
@@ -689,10 +970,10 @@
       "sentence_id": null
     },
     {
-      "id": "n044",
+      "id": "n063",
       "anchor_text": "江漢以爲池，",
       "before_context": "...堅革利兵哉？其所以統之者非其道故也。汝潁以爲險，江漢以爲池，",
-      "after_context": "阻之以鄧林，緣之以方城。然而秦師至鄢郢，舉若振槁。是豈無固塞...",
+      "after_context": "阻之以鄧林，",
       "items": [
         {
           "source": "zhengyi",
@@ -703,24 +984,29 @@
       "sentence_id": null
     },
     {
-      "id": "n045",
+      "id": "n064",
       "anchor_text": "阻之以鄧林，",
-      "before_context": "其所以統之者非其道故也。汝潁以爲險，江漢以爲池，阻之以鄧林，",
-      "after_context": "緣之以方城。然而秦師至鄢郢，舉若振槁。是豈無固塞險阻哉？其所...",
+      "before_context": "...其所以統之者非其道故也。汝潁以爲險，江漢以爲池，阻之以鄧林，",
+      "after_context": "緣之以方城。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《山海經》曰：「夸父與日逐走，日入，渴，欲得飲，飲於渭河；不足，北飲大澤；未至，道渴而死。弃其杖，化爲鄧林。」駰謂鄧林後遂爲林名。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：裴氏引《山海經》，以爲夸父弃杖爲鄧林，其言北飲大澤，蓋非在中國也。劉氏以爲今襄州南鳳林山是古鄧祁侯之國，在楚之北境，故云阻以鄧林也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n046",
+      "id": "n065",
       "anchor_text": "緣之以方城。",
       "before_context": "...非其道故也。汝潁以爲險，江漢以爲池，阻之以鄧林，緣之以方城。",
-      "after_context": "然而秦師至鄢郢，舉若振槁。是豈無固塞險阻哉？其所以統之者非其...",
+      "after_context": "然而秦師至鄢郢，舉若振槁。",
       "items": [
         {
           "source": "zhengyi",
@@ -731,7 +1017,7 @@
       "sentence_id": null
     },
     {
-      "id": "n047",
+      "id": "n066",
       "anchor_text": "然而秦師至鄢郢，舉若振槁。",
       "before_context": "...漢以爲池，阻之以鄧林，緣之以方城。然而秦師至鄢郢，舉若振槁。",
       "after_context": "是豈無固塞險阻哉？其所以統之者非其道故也。紂剖比干，囚箕子，...",
@@ -750,10 +1036,24 @@
       "sentence_id": null
     },
     {
-      "id": "n048",
+      "id": "n067",
+      "anchor_text": "爲炮格，刑殺無辜，時臣下懍然，莫必其命。",
+      "before_context": "...。紂剖比干，囚箕子，爲炮格，刑殺無辜，時臣下懍然，莫必其命。",
+      "after_context": "然而周師至，而令不行乎下，不能用其民。是豈令不嚴，刑不陖哉？...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言無人必保其性命。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n068",
       "anchor_text": "之兵，戈矛弓矢而已，然而敵國不待試而詘。",
       "before_context": "古者之兵，戈矛弓矢而已，然而敵國不待試而詘。",
-      "after_context": "城郭不集，溝池不掘，固塞不樹，機變不張，然而國晏然不畏外而固...",
+      "after_context": "城郭不集，溝池不掘，",
       "items": [
         {
           "source": "jijie",
@@ -769,7 +1069,7 @@
       "sentence_id": null
     },
     {
-      "id": "n049",
+      "id": "n069",
       "anchor_text": "城郭不集，溝池不掘，",
       "before_context": "...之兵，戈矛弓矢而已，然而敵國不待試而詘。城郭不集，溝池不掘，",
       "after_context": "固塞不樹，機變不張，然而國晏然不畏外而固者，無他故焉，明道而...",
@@ -783,7 +1083,7 @@
       "sentence_id": null
     },
     {
-      "id": "n050",
+      "id": "n070",
       "anchor_text": "然不畏外而固者，無他故焉，明道而均分之，",
       "before_context": "...，機變不張，然而國晏然不畏外而固者，無他故焉，明道而均分之，",
       "after_context": "時使而誠愛之，則下應之如景響。有不由命者，然後俟之以刑，則民...",
@@ -797,7 +1097,7 @@
       "sentence_id": null
     },
     {
-      "id": "n051",
+      "id": "n071",
       "anchor_text": "。有不由命者，然後俟之以刑，則民知辠矣。",
       "before_context": "...愛之，則下應之如景響。有不由命者，然後俟之以刑，則民知辠矣。",
       "after_context": "故刑一人而天下服。辠人不尤其上，知辠之在己也。是故刑罰省而威...",
@@ -811,10 +1111,10 @@
       "sentence_id": null
     },
     {
-      "id": "n052",
+      "id": "n072",
       "anchor_text": "天地者，生之本也；先祖者，類之本也；",
       "before_context": "天地者，生之本也；先祖者，類之本也；",
-      "after_context": "君師者，治之本也。無天地惡生？無先祖惡出？無君師惡治？三者偏...",
+      "after_context": "君師者，治之本也。無天地惡生？",
       "items": [
         {
           "source": "zhengyi",
@@ -825,10 +1125,10 @@
       "sentence_id": null
     },
     {
-      "id": "n053",
+      "id": "n073",
       "anchor_text": "君師者，治之本也。無天地惡生？",
       "before_context": "...，生之本也；先祖者，類之本也；君師者，治之本也。無天地惡生？",
-      "after_context": "無先祖惡出？無君師惡治？三者偏亡，則無安人。故禮，上事天，下...",
+      "after_context": "無先祖惡出？無君師惡治？三者偏亡，",
       "items": [
         {
           "source": "zhengyi",
@@ -839,7 +1139,7 @@
       "sentence_id": null
     },
     {
-      "id": "n054",
+      "id": "n074",
       "anchor_text": "無先祖惡出？無君師惡治？三者偏亡，",
       "before_context": "...者，治之本也。無天地惡生？無先祖惡出？無君師惡治？三者偏亡，",
       "after_context": "則無安人。故禮，上事天，下事地，尊先祖而隆君師，是禮之三本也...",
@@ -858,7 +1158,77 @@
       "sentence_id": null
     },
     {
-      "id": "n055",
+      "id": "n075",
+      "anchor_text": "故王者天太祖，",
+      "before_context": "故王者天太祖，",
+      "after_context": "諸侯不敢懷，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "毛詩敍曰：「文武之功起於后稷，故推以配天焉。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n076",
+      "anchor_text": "諸侯不敢懷，",
+      "before_context": "故王者天太祖，諸侯不敢懷，",
+      "after_context": "大夫士有常宗，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "懷，思也。言諸侯不敢思以太祖配天而食也。又一解，王之子孫爲諸侯，不思祀其父祖，故《禮》云「諸侯不敢祖天子」，蓋與此同意。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n077",
+      "anchor_text": "大夫士有常宗，",
+      "before_context": "故王者天太祖，諸侯不敢懷，大夫士有常宗，",
+      "after_context": "所以辨貴賤。貴賤治，得之本也。郊疇乎天子，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《禮記》曰：「別子爲祖，繼別爲宗。百世不遷者，謂別子之後也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n078",
+      "anchor_text": "以辨貴賤。貴賤治，得之本也。郊疇乎天子，",
+      "before_context": "...懷，大夫士有常宗，所以辨貴賤。貴賤治，得之本也。郊疇乎天子，",
+      "after_context": "社至乎諸侯，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "疇，類也。天子類得郊天，餘並不合祭，今《大戴禮》作「郊止乎天子」是也。止或作「疇」，因誤耳。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n079",
+      "anchor_text": "社至乎諸侯，",
+      "before_context": "...常宗，所以辨貴賤。貴賤治，得之本也。郊疇乎天子，社至乎諸侯，",
+      "after_context": "函",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言天子已下至諸侯得立社。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n080",
       "anchor_text": "函",
       "before_context": "...宗，所以辨貴賤。貴賤治，得之本也。郊疇乎天子，社至乎諸侯，函",
       "after_context": "及士大夫，所以辨尊者事尊，卑者事卑，宜鉅者鉅，宜小者小。故有...",
@@ -867,15 +1237,104 @@
           "source": "jijie",
           "label": "集解",
           "text": "音含。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "啗音含。含謂包容。諸侯已下至士大夫得祭社，故《禮》云「大夫成羣立社曰置社」，亦曰里社也。鄒誕生音啗徒濫反，意義亦通，但不見古文，各以意爲音耳。今按：《大戴禮》作「導及士大夫」，導亦通也。今此爲「啗」者，當以導與蹈同，後「足」字失「止」，唯有「口」存，故使解者穿鑿也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n056",
+      "id": "n081",
+      "anchor_text": "世，有一國者事五世，有五乘之地者事三世，",
+      "before_context": "...者小。故有天下者事七世，有一國者事五世，有五乘之地者事三世，",
+      "after_context": "有三乘之地者事二世，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「古者方十里，其中六十四井出兵車一乘，此兵法之賦。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n082",
+      "anchor_text": "有三乘之地者事二世，",
+      "before_context": "...世，有一國者事五世，有五乘之地者事三世，有三乘之地者事二世，",
+      "after_context": "有特牲而食者不得立宗廟，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "穀梁傳曰：「天子至于士皆有廟，天子七，諸侯五，大夫三，士二。始封之者必爲其太祖。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n083",
+      "anchor_text": "有特牲而食者不得立宗廟，",
+      "before_context": "...乘之地者事三世，有三乘之地者事二世，有特牲而食者不得立宗廟，",
+      "after_context": "所以辨積厚者流澤廣，積薄者流澤狹也。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《禮記》曰：「庶人祭於寢。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n084",
+      "anchor_text": "大饗上玄尊，俎上腥魚，",
+      "before_context": "大饗上玄尊，俎上腥魚，",
+      "after_context": "先大羹，貴食飲之本也。大饗上玄尊而用薄酒，食先黍稷而飯稻粱，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「大饗，祫祭先王，以腥魚爲俎實，不臑孰之也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n085",
+      "anchor_text": "尊而用薄酒，食先黍稷而飯稻粱，祭嚌先大羹",
+      "before_context": "...食飲之本也。大饗上玄尊而用薄酒，食先黍稷而飯稻粱，祭嚌先大羹",
+      "after_context": "而飽庶羞，貴本而親用也。貴本之謂文，親用之謂理，兩者合而成文...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「嚌，至齒。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n086",
+      "anchor_text": "謂理，兩者合而成文，以歸太一，是謂大隆。",
+      "before_context": "...。貴本之謂文，親用之謂理，兩者合而成文，以歸太一，是謂大隆。",
+      "after_context": "故尊之上玄尊也，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "貴本親用，兩者合而成文，以歸太一。太一者，天地之本也。得禮之文理，是合於太一也。隆者，盛也，高也。得禮文理，歸于太一，是禮之盛者也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n087",
       "anchor_text": "故尊之上玄尊也，",
       "before_context": "...用之謂理，兩者合而成文，以歸太一，是謂大隆。故尊之上玄尊也，",
-      "after_context": "俎之上腥魚也，豆之先大羹，一也。利爵弗啐也，成事俎弗嘗也，三...",
+      "after_context": "俎之上腥魚也，豆之先大羹，一也。",
       "items": [
         {
           "source": "zhengyi",
@@ -886,38 +1345,118 @@
       "sentence_id": null
     },
     {
-      "id": "n057",
+      "id": "n088",
+      "anchor_text": "俎之上腥魚也，豆之先大羹，一也。",
+      "before_context": "...，是謂大隆。故尊之上玄尊也，俎之上腥魚也，豆之先大羹，一也。",
+      "after_context": "利爵弗啐也，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "尊之上玄尊，俎之上生魚，豆之先大羹，三者如一，皆是本，故云一也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n089",
       "anchor_text": "利爵弗啐也，",
-      "before_context": "故尊之上玄尊也，俎之上腥魚也，豆之先大羹，一也。利爵弗啐也，",
-      "after_context": "成事俎弗嘗也，三侑之弗食也，大昏之未廢齊也，大廟之未內尸也，...",
+      "before_context": "...故尊之上玄尊也，俎之上腥魚也，豆之先大羹，一也。利爵弗啐也，",
+      "after_context": "成事俎弗嘗也，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "鄭玄曰：「啐，入口也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：儀禮祭畢獻，祝西面告成，是爲利爵。祭初未行無算爵，故不啐入口也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n058",
+      "id": "n090",
+      "anchor_text": "成事俎弗嘗也，",
+      "before_context": "...，俎之上腥魚也，豆之先大羹，一也。利爵弗啐也，成事俎弗嘗也，",
+      "after_context": "三侑之弗食也，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "成事卒哭之祭，故記曰「卒哭曰成事」。既是卒哭之祭，始從吉祭，故受胙爵而不嘗俎也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n091",
+      "anchor_text": "三侑之弗食也，",
+      "before_context": "...，豆之先大羹，一也。利爵弗啐也，成事俎弗嘗也，三侑之弗食也，",
+      "after_context": "大昏之未廢齊也，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "禮，祭必立侑以勸尸食，至三飯而後止。每飯有侑一人，故有三侑。既是勸尸，故不相食也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n092",
+      "anchor_text": "大昏之未廢齊也，",
+      "before_context": "...也。利爵弗啐也，成事俎弗嘗也，三侑之弗食也，大昏之未廢齊也，",
+      "after_context": "大廟之未內尸也，始絕之未小斂，一也。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "廢齊，謂昏禮父親醮子而迎之前，故《曲禮》云「齋戒以告鬼神」，是昏禮有齊也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n093",
+      "anchor_text": "大廟之未內尸也，始絕之未小斂，一也。",
+      "before_context": "...弗食也，大昏之未廢齊也，大廟之未內尸也，始絕之未小斂，一也。",
+      "after_context": "大路之素幬也，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "此五者皆禮之初始，質而未備，亦是貴本之義，故云一也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n094",
       "anchor_text": "大路之素幬也，",
       "before_context": "...未廢齊也，大廟之未內尸也，始絕之未小斂，一也。大路之素幬也，",
-      "after_context": "郊之麻絻，喪服之先散麻，一也。三年哭之不反也，清廟之歌一倡而...",
+      "after_context": "郊之麻絻，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "《禮記》曰：「乘素車，貴其質也。」鄭玄曰：「素車，殷輅也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "幬音稠。謂車蓋以素帷，亦質也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n059",
+      "id": "n095",
       "anchor_text": "郊之麻絻，",
-      "before_context": "大廟之未內尸也，始絕之未小斂，一也。大路之素幬也，郊之麻絻，",
-      "after_context": "喪服之先散麻，一也。三年哭之不反也，清廟之歌一倡而三歎，縣一...",
+      "before_context": "...大廟之未內尸也，始絕之未小斂，一也。大路之素幬也，郊之麻絻，",
+      "after_context": "喪服之先散麻，一也。",
       "items": [
         {
           "source": "jijie",
@@ -933,21 +1472,68 @@
       "sentence_id": null
     },
     {
-      "id": "n060",
+      "id": "n096",
       "anchor_text": "喪服之先散麻，一也。",
       "before_context": "...之未小斂，一也。大路之素幬也，郊之麻絻，喪服之先散麻，一也。",
-      "after_context": "三年哭之不反也，清廟之歌一倡而三歎，縣一鐘尚拊膈，朱弦而通越...",
+      "after_context": "三年哭之不反也，",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "儀禮士喪《禮》曰：「始死，主人散帶，垂之三尺。」《禮記》曰：「大功已上散帶也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "大路已下，三事相似如一，故云一也。散麻取其質無文飾，亦貴本也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n061",
+      "id": "n097",
+      "anchor_text": "三年哭之不反也，",
+      "before_context": "...大路之素幬也，郊之麻絻，喪服之先散麻，一也。三年哭之不反也，",
+      "after_context": "清廟之歌",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《禮記》曰：「斬衰之哭，若往而不反。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n098",
+      "anchor_text": "清廟之歌",
+      "before_context": "...幬也，郊之麻絻，喪服之先散麻，一也。三年哭之不反也，清廟之歌",
+      "after_context": "一倡而三歎，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「清廟謂作樂歌清廟。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n099",
+      "anchor_text": "一倡而三歎，",
+      "before_context": "...絻，喪服之先散麻，一也。三年哭之不反也，清廟之歌一倡而三歎，",
+      "after_context": "縣一鐘尚拊膈，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「倡，發歌句者。三歎，三人從歎。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n100",
       "anchor_text": "縣一鐘尚拊膈，",
       "before_context": "...麻，一也。三年哭之不反也，清廟之歌一倡而三歎，縣一鐘尚拊膈，",
       "after_context": "朱弦而通越，一也。",
@@ -956,29 +1542,81 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一作『搏膈』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "縣一鍾尚拊隔。隔，懸鍾格。拊音撫。〔拊〕隔，不擊其鐘而拊其格，不取其聲，亦質也。鄒氏隔音膊，蓋依《大戴禮》也。而鄭禮注云搏，拊柷敔也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n062",
+      "id": "n101",
+      "anchor_text": "朱弦而通越，一也。",
+      "before_context": "...不反也，清廟之歌一倡而三歎，縣一鐘尚拊膈，朱弦而通越，一也。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "大瑟而練朱其弦，又通其下孔，使聲濁且遲，上質而貴本，不取其聲文。自「三年」已下四事，皆不取其聲也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n102",
+      "anchor_text": "凡禮始乎脫，",
+      "before_context": "凡禮始乎脫，",
+      "after_context": "成乎文，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "脫猶疏略也。始，初也。言禮之初尚疏略也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n103",
+      "anchor_text": "成乎文，",
+      "before_context": "凡禮始乎脫，成乎文，",
+      "after_context": "終乎稅。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言禮成就有文飾。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n104",
       "anchor_text": "終乎稅。",
       "before_context": "凡禮始乎脫，成乎文，終乎稅。",
-      "after_context": "故至備，情文俱盡；其次，情文代勝；其下，復情以歸太一。天地以...",
+      "after_context": "故至備，情文俱盡；",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一作『悅』。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音悅。言禮終卒和悅人情也。《大戴禮》作「終於隆」，隆謂盛也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n063",
+      "id": "n105",
       "anchor_text": "故至備，情文俱盡；",
       "before_context": "凡禮始乎脫，成乎文，終乎稅。故至備，情文俱盡；",
-      "after_context": "其次，情文代勝；其下，復情以歸太一。天地以合，日月以明，四時...",
+      "after_context": "其次，情文代勝；",
       "items": [
         {
           "source": "jijie",
@@ -994,7 +1632,35 @@
       "sentence_id": null
     },
     {
-      "id": "n064",
+      "id": "n106",
+      "anchor_text": "其次，情文代勝；",
+      "before_context": "...禮始乎脫，成乎文，終乎稅。故至備，情文俱盡；其次，情文代勝；",
+      "after_context": "其下，復情以歸太一。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音昇，又尸證反。或文勝情，或情勝文，是情文更代相勝也。《大戴禮》作「迭興」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n107",
+      "anchor_text": "其下，復情以歸太一。",
+      "before_context": "...乎稅。故至備，情文俱盡；其次，情文代勝；其下，復情以歸太一。",
+      "after_context": "天地以合，日月以明，四時以序，星辰以行，江河以流，萬物以昌，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言其次情文俱失，歸心渾沌天地之初，復禮之本，是歸太一也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n108",
       "anchor_text": "以節，喜怒以當。以爲下則順，以爲上則明。",
       "before_context": "...以流，萬物以昌，好惡以節，喜怒以當。以爲下則順，以爲上則明。",
       "after_context": "",
@@ -1008,10 +1674,38 @@
       "sentence_id": null
     },
     {
-      "id": "n065",
+      "id": "n109",
+      "anchor_text": "曰：至矣哉！",
+      "before_context": "太史公曰：至矣哉！",
+      "after_context": "立隆以爲極，而天下莫之能益損也。本末相順，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "已下亦是太史公取荀卿禮論之意，極言禮之損益，以結禮書之論也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n110",
+      "anchor_text": "隆以爲極，而天下莫之能益損也。本末相順，",
+      "before_context": "太史公曰：至矣哉！立隆以爲極，而天下莫之能益損也。本末相順，",
+      "after_context": "終始相應，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂禮之盛，文理合以歸太一，至禮之殺，復情以歸太一。隆殺皆歸太一者，是本末相順也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n111",
       "anchor_text": "終始相應，",
       "before_context": "...至矣哉！立隆以爲極，而天下莫之能益損也。本末相順，終始相應，",
-      "after_context": "至文有以辨，至察有以說。天下從之者治，不從者亂；從之者安，不...",
+      "after_context": "至文有以辨，",
       "items": [
         {
           "source": "suoyin",
@@ -1027,7 +1721,35 @@
       "sentence_id": null
     },
     {
-      "id": "n066",
+      "id": "n112",
+      "anchor_text": "至文有以辨，",
+      "before_context": "...以爲極，而天下莫之能益損也。本末相順，終始相應，至文有以辨，",
+      "after_context": "至察有以說。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言禮之至文，能辨尊卑貴賤，故云有以辨也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n113",
+      "anchor_text": "至察有以說。",
+      "before_context": "...下莫之能益損也。本末相順，終始相應，至文有以辨，至察有以說。",
+      "after_context": "天下從之者治，不從者亂；從之者安，不從者危。小人不能則也。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言禮之至察，有以明隆殺損益，委曲情文，足以悅人心，故云有以說也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n114",
       "anchor_text": "者亂；從之者安，不從者危。小人不能則也。",
       "before_context": "...。天下從之者治，不從者亂；從之者安，不從者危。小人不能則也。",
       "after_context": "",
@@ -1041,10 +1763,24 @@
       "sentence_id": null
     },
     {
-      "id": "n067",
+      "id": "n115",
+      "anchor_text": "禮之貌誠",
+      "before_context": "禮之貌誠",
+      "after_context": "深矣，堅白同異之察，入焉而弱。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "有本作「懇誠」者，非也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n116",
       "anchor_text": "深矣，堅白同異之察，入焉而弱。",
       "before_context": "禮之貌誠深矣，堅白同異之察，入焉而弱。",
-      "after_context": "其貌誠大矣，擅作典制褊陋之說，入焉而望。其貌誠高矣，暴慢恣睢...",
+      "after_context": "其貌誠大矣，擅作典制褊陋之說，入焉而望。",
       "items": [
         {
           "source": "zhengyi",
@@ -1055,10 +1791,10 @@
       "sentence_id": null
     },
     {
-      "id": "n068",
+      "id": "n117",
       "anchor_text": "其貌誠大矣，擅作典制褊陋之說，入焉而望。",
       "before_context": "...同異之察，入焉而弱。其貌誠大矣，擅作典制褊陋之說，入焉而望。",
-      "after_context": "其貌誠高矣，暴慢恣睢，輕俗以爲高之屬，入焉而隊。故繩誠陳，則...",
+      "after_context": "其貌誠高矣，暴慢恣睢，",
       "items": [
         {
           "source": "suoyin",
@@ -1074,10 +1810,24 @@
       "sentence_id": null
     },
     {
-      "id": "n069",
+      "id": "n118",
+      "anchor_text": "其貌誠高矣，暴慢恣睢，",
+      "before_context": "...貌誠大矣，擅作典制褊陋之說，入焉而望。其貌誠高矣，暴慢恣睢，",
+      "after_context": "輕俗以爲高之屬，入焉而隊。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "恣睢猶毀訾也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n119",
       "anchor_text": "輕俗以爲高之屬，入焉而隊。",
       "before_context": "...，入焉而望。其貌誠高矣，暴慢恣睢，輕俗以爲高之屬，入焉而隊。",
-      "after_context": "故繩誠陳，則不可欺以曲直；衡誠縣，則不可欺以輕重；規矩誠錯，",
+      "after_context": "故繩誠陳，",
       "items": [
         {
           "source": "suoyin",
@@ -1093,10 +1843,24 @@
       "sentence_id": null
     },
     {
-      "id": "n070",
+      "id": "n120",
+      "anchor_text": "故繩誠陳，",
+      "before_context": "...。其貌誠高矣，暴慢恣睢，輕俗以爲高之屬，入焉而隊。故繩誠陳，",
+      "after_context": "則不可欺以曲直；衡誠縣，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「誠猶審也。陳，設也，謂彈畫也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n121",
       "anchor_text": "則不可欺以曲直；衡誠縣，",
-      "before_context": "輕俗以爲高之屬，入焉而隊。故繩誠陳，則不可欺以曲直；衡誠縣，",
-      "after_context": "則不可欺以輕重；規矩誠錯，則不可欺以方員；君子審禮，則不可欺...",
+      "before_context": "...輕俗以爲高之屬，入焉而隊。故繩誠陳，則不可欺以曲直；衡誠縣，",
+      "after_context": "則不可欺以輕重；規矩誠錯，",
       "items": [
         {
           "source": "jijie",
@@ -1112,10 +1876,10 @@
       "sentence_id": null
     },
     {
-      "id": "n071",
+      "id": "n122",
       "anchor_text": "則不可欺以輕重；規矩誠錯，",
-      "before_context": "故繩誠陳，則不可欺以曲直；衡誠縣，則不可欺以輕重；規矩誠錯，",
-      "after_context": "則不可欺以方員；君子審禮，則不可欺以詐僞。故繩者，直之至也；...",
+      "before_context": "...故繩誠陳，則不可欺以曲直；衡誠縣，則不可欺以輕重；規矩誠錯，",
+      "after_context": "則不可欺以方員；君子審禮，則不可欺以詐僞。",
       "items": [
         {
           "source": "suoyin",
@@ -1131,7 +1895,7 @@
       "sentence_id": null
     },
     {
-      "id": "n072",
+      "id": "n123",
       "anchor_text": "不可欺以方員；君子審禮，則不可欺以詐僞。",
       "before_context": "...以輕重；規矩誠錯，則不可欺以方員；君子審禮，則不可欺以詐僞。",
       "after_context": "故繩者，直之至也；衡者，平之至也；規矩者，方員之至也；禮者，...",
@@ -1145,10 +1909,38 @@
       "sentence_id": null
     },
     {
-      "id": "n073",
+      "id": "n124",
+      "anchor_text": "極也。然而不法禮者不足禮，謂之無方之民；",
+      "before_context": "...之至也；禮者，人道之極也。然而不法禮者不足禮，謂之無方之民；",
+      "after_context": "法禮足禮，謂之有方之士。禮之中，能思索，",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "鄭玄曰：「方猶道也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n125",
+      "anchor_text": "法禮足禮，謂之有方之士。禮之中，能思索，",
+      "before_context": "...足禮，謂之無方之民；法禮足禮，謂之有方之士。禮之中，能思索，",
+      "after_context": "謂之能慮；能慮勿易，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "索，求也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n126",
       "anchor_text": "謂之能慮；能慮勿易，",
-      "before_context": "法禮足禮，謂之有方之士。禮之中，能思索，謂之能慮；能慮勿易，",
-      "after_context": "謂之能固。能慮能固，加好之焉，聖矣。天者，高之極也；地者，下...",
+      "before_context": "...法禮足禮，謂之有方之士。禮之中，能思索，謂之能慮；能慮勿易，",
+      "after_context": "謂之能固。能慮能固，加好之焉，聖矣。",
       "items": [
         {
           "source": "zhengyi",
@@ -1159,7 +1951,7 @@
       "sentence_id": null
     },
     {
-      "id": "n074",
+      "id": "n127",
       "anchor_text": "謂之能固。能慮能固，加好之焉，聖矣。",
       "before_context": "...索，謂之能慮；能慮勿易，謂之能固。能慮能固，加好之焉，聖矣。",
       "after_context": "天者，高之極也；地者，下之極也；日月者，明之極也；無窮者，廣...",
@@ -1173,7 +1965,7 @@
       "sentence_id": null
     },
     {
-      "id": "n075",
+      "id": "n128",
       "anchor_text": "；無窮者，廣大之極也；聖人者，道之極也。",
       "before_context": "...也；日月者，明之極也；無窮者，廣大之極也；聖人者，道之極也。",
       "after_context": "",
@@ -1187,10 +1979,24 @@
       "sentence_id": null
     },
     {
-      "id": "n076",
+      "id": "n129",
+      "anchor_text": "用，以貴賤爲文，以多少爲異，以隆殺爲要。",
+      "before_context": "以財物爲用，以貴賤爲文，以多少爲異，以隆殺爲要。",
+      "after_context": "文貌繁，情欲省，禮之隆也；文貌省，情欲繁，禮之殺也；文貌情欲...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "隆猶厚也。殺猶薄也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n130",
       "anchor_text": "情欲相爲內外表裏，並行而雜，禮之中流也。",
       "before_context": "...欲繁，禮之殺也；文貌情欲相爲內外表裏，並行而雜，禮之中流也。",
-      "after_context": "君子上致其隆，下盡其殺，而中處其中。步驟馳騁廣騖不外，是以君...",
+      "after_context": "君子上致其隆，下盡其殺，而中處其中。",
       "items": [
         {
           "source": "zhengyi",
@@ -1201,10 +2007,10 @@
       "sentence_id": null
     },
     {
-      "id": "n077",
+      "id": "n131",
       "anchor_text": "君子上致其隆，下盡其殺，而中處其中。",
       "before_context": "...，並行而雜，禮之中流也。君子上致其隆，下盡其殺，而中處其中。",
-      "after_context": "步驟馳騁廣騖不外，是以君子之性守宮庭也。人域是域，士君子也。",
+      "after_context": "步驟馳騁廣騖不外，",
       "items": [
         {
           "source": "zhengyi",
@@ -1215,10 +2021,10 @@
       "sentence_id": null
     },
     {
-      "id": "n078",
+      "id": "n132",
       "anchor_text": "步驟馳騁廣騖不外，",
       "before_context": "...流也。君子上致其隆，下盡其殺，而中處其中。步驟馳騁廣騖不外，",
-      "after_context": "是以君子之性守宮庭也。人域是域，士君子也。外是，民也。於是中...",
+      "after_context": "是以君子之性守宮庭也。",
       "items": [
         {
           "source": "zhengyi",
@@ -1229,10 +2035,10 @@
       "sentence_id": null
     },
     {
-      "id": "n079",
+      "id": "n133",
       "anchor_text": "是以君子之性守宮庭也。",
       "before_context": "...盡其殺，而中處其中。步驟馳騁廣騖不外，是以君子之性守宮庭也。",
-      "after_context": "人域是域，士君子也。外是，民也。於是中焉，房皇周浹，曲（",
+      "after_context": "人域是域，士君子也。",
       "items": [
         {
           "source": "suoyin",
@@ -1248,10 +2054,10 @@
       "sentence_id": null
     },
     {
-      "id": "n080",
+      "id": "n134",
       "anchor_text": "人域是域，士君子也。",
-      "before_context": "步驟馳騁廣騖不外，是以君子之性守宮庭也。人域是域，士君子也。",
-      "after_context": "外是，民也。於是中焉，房皇周浹，曲（",
+      "before_context": "...步驟馳騁廣騖不外，是以君子之性守宮庭也。人域是域，士君子也。",
+      "after_context": "外是，民也。",
       "items": [
         {
           "source": "suoyin",
@@ -1267,7 +2073,49 @@
       "sentence_id": null
     },
     {
-      "id": "n081",
+      "id": "n135",
+      "anchor_text": "外是，民也。",
+      "before_context": "...不外，是以君子之性守宮庭也。人域是域，士君子也。外是，民也。",
+      "after_context": "於是中焉，房皇周浹，曲（直）得其次序，聖人也。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "外謂人域之外，非人所居之地。以喻禮義之外，別爲它行，即是小人，故云外是人也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n136",
+      "anchor_text": "得其次序，聖人也。",
+      "before_context": "...。外是，民也。於是中焉，房皇周浹，曲（直）得其次序，聖人也。",
+      "after_context": "故厚者，禮之積也；大者，禮之廣也；",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "房音旁。旁皇猶徘徊也。周浹猶周帀。言徘徊周浹，委曲得禮之序，動不失中，則是聖人之行也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n137",
+      "anchor_text": "故厚者，禮之積也；大者，禮之廣也；",
+      "before_context": "...曲（直）得其次序，聖人也。故厚者，禮之積也；大者，禮之廣也；",
+      "after_context": "高者，禮之隆也；明者，禮之盡也。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言君子聖人有厚大之德，則爲禮之所積益弘廣也，故曰「甘受和，白受采，忠信之人可以學禮，苟無忠信，則禮不虛道」。然此文皆荀卿禮論也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n138",
       "anchor_text": "高者，禮之隆也；明者，禮之盡也。",
       "before_context": "...，禮之積也；大者，禮之廣也；高者，禮之隆也；明者，禮之盡也。",
       "after_context": "",

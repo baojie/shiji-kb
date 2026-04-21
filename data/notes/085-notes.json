@@ -5,7 +5,7 @@
       "id": "n001",
       "anchor_text": "呂不韋者，陽翟",
       "before_context": "呂不韋者，陽翟",
-      "after_context": "大賈人也。往來販賤賣貴，家累千金。",
+      "after_context": "大賈",
       "items": [
         {
           "source": "suoyin",
@@ -22,6 +22,20 @@
     },
     {
       "id": "n002",
+      "anchor_text": "大賈",
+      "before_context": "呂不韋者，陽翟大賈",
+      "after_context": "人也。往來販賤賣貴，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "音古。鄭玄注周《禮》云「行曰商，處曰賈」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n003",
       "anchor_text": "人也。往來販賤賣貴，",
       "before_context": "呂不韋者，陽翟大賈人也。往來販賤賣貴，",
       "after_context": "家累千金。",
@@ -30,12 +44,87 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「一本云『陽翟大賈也，往來賤買貴賣』也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "王劭賣音作育。案：育賣義同，今依義。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
+      "anchor_text": "十年，太子死。其四十二年，以其次子安國君",
+      "before_context": "秦昭王四十年，太子死。其四十二年，以其次子安國君",
+      "after_context": "爲太子。安國君有子二十餘人。安國君有所甚愛姬，立以爲正夫人，...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "名柱，後立，是爲孝文王也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
+      "anchor_text": "夫人無子。安國君中男名子楚，",
+      "before_context": "...立以爲正夫人，號曰華陽夫人。華陽夫人無子。安國君中男名子楚，",
+      "after_context": "子楚母曰夏姬，毋愛。子楚爲秦質",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "即莊襄王也。《戰國策》曰本名異人，後從趙還，不韋使以楚服見，王后悅之，曰「吾楚人也而子字之」，乃變其名曰子楚也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n006",
+      "anchor_text": "子楚母曰夏姬，毋愛。子楚爲秦質",
+      "before_context": "...陽夫人無子。安國君中男名子楚，子楚母曰夏姬，毋愛。子楚爲秦質",
+      "after_context": "子於趙。秦數攻趙，趙不甚禮子楚。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "舊音致，今讀依此。穀梁傳曰「交質不及二伯」。《左傳》曰「信不由中，質無益也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
+      "anchor_text": "子楚，秦諸庶孼孫，",
+      "before_context": "子楚，秦諸庶孼孫，",
+      "after_context": "質於諸侯，車乘進用",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "韓王信傳亦曰「韓信，襄王孼孫」。張晏曰「孺子曰孼子」。何休注公羊「孼，賤子也。以非嫡正，故曰孼」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n008",
+      "anchor_text": "質於諸侯，車乘進用",
+      "before_context": "子楚，秦諸庶孼孫，質於諸侯，車乘進用",
+      "after_context": "不饒，居處困，不得意。呂不韋賈邯鄲，見而憐之，曰「此奇貨可居...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：下文云「以五百金爲進用」，宜依小顏讀爲「賮」，音才刃反。進者，財也，古字假借之也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n009",
       "anchor_text": "不韋賈邯鄲，見而憐之，曰「此奇貨可居」。",
       "before_context": "...，居處困，不得意。呂不韋賈邯鄲，見而憐之，曰「此奇貨可居」。",
       "after_context": "乃往見子楚，說曰：「吾能大子之門。」子楚笑曰：「且自大君之門...",
@@ -54,10 +143,24 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n010",
+      "anchor_text": "門而大。」子楚心知所謂，乃引與坐，深語。",
+      "before_context": "...「子不知也，吾門待子門而大。」子楚心知所謂，乃引與坐，深語。",
+      "after_context": "呂不韋曰：「秦王老矣，安國君得爲太子。竊聞安國君愛幸華陽夫人...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "謂既解不韋所言之意，遂與密謀深語也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n011",
       "anchor_text": "夫人無子，能立適嗣者",
       "before_context": "...君得爲太子。竊聞安國君愛幸華陽夫人，華陽夫人無子，能立適嗣者",
-      "after_context": "獨華陽",
+      "after_context": "獨華陽夫人耳。今子兄弟二十餘人，子又居中，不甚見幸，久質諸侯...",
       "items": [
         {
           "source": "zhengyi",
@@ -68,7 +171,7 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n012",
       "anchor_text": "即大王薨，安國君立爲王，則子毋幾得與長子",
       "before_context": "...不甚見幸，久質諸侯。即大王薨，安國君立爲王，則子毋幾得與長子",
       "after_context": "及諸子旦暮在前者爭爲太子矣。」子楚曰：「然。爲之柰何？」呂不...",
@@ -87,7 +190,77 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n013",
+      "anchor_text": "子及夫人」。夫人大喜。不韋因使其姊說夫人",
+      "before_context": "...夫人爲天，日夜泣思太子及夫人」。夫人大喜。不韋因使其姊說夫人",
+      "after_context": "曰：「吾聞之，以色事人者，色衰而愛弛。今夫人事太子，甚愛而無...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《戰國策》作「說秦王后弟陽泉君」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n014",
+      "anchor_text": "蚤自結於諸子中賢孝者，舉立以爲適而子之，",
+      "before_context": "...甚愛而無子，不以此時蚤自結於諸子中賢孝者，舉立以爲適而子之，",
+      "after_context": "夫在則重尊，夫百歲之後，所子者爲王，終不失勢，此所謂一言而萬...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "以此爲一句。子謂養之爲子也。然欲分「立以爲適」作上句，而「子之夫在則尊重」作下句，意亦通。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
+      "anchor_text": "夫人以爲然，承太子閒，從容",
+      "before_context": "...爲適，夫人則竟世有寵於秦矣。」華陽夫人以爲然，承太子閒，從容",
+      "after_context": "言子楚質於趙者絕賢，來往者皆稱譽之。乃因涕泣曰：「妾幸得充後...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "閒音閑。從音七恭反。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n016",
+      "anchor_text": "呂不韋取邯鄲諸姬絕好善舞",
+      "before_context": "呂不韋取邯鄲諸姬絕好善舞",
+      "after_context": "者與居，知有身。子楚從不韋飲，見而說之，因起爲壽，請之。呂不...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "言其姿容絕美而又善舞也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
+      "anchor_text": "。呂不韋怒，念業已破家爲子楚，欲以釣奇，",
+      "before_context": "...說之，因起爲壽，請之。呂不韋怒，念業已破家爲子楚，欲以釣奇，",
+      "after_context": "乃遂獻其姬。姬自匿有身，至大期時，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "釣者，以取魚喻也。奇即上云「此奇貨可居」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n018",
       "anchor_text": "乃遂獻其姬。姬自匿有身，至大期時，",
       "before_context": "...業已破家爲子楚，欲以釣奇，乃遂獻其姬。姬自匿有身，至大期時，",
       "after_context": "生子政。子楚遂立姬爲夫人。",
@@ -96,12 +269,73 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐廣曰：「期，十二月也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "徐廣云「十二月也」。譙周云「人十月生，此過二月，故云『大朞』」，蓋當然也。既云自匿有娠，則生政固當踰常朞也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n019",
+      "anchor_text": "王。太子子楚代立，是爲莊襄王。莊襄王所母",
+      "before_context": "...立一年，薨，謚爲孝文王。太子子楚代立，是爲莊襄王。莊襄王所母",
+      "after_context": "華陽后爲華陽太后，真母夏姬尊以爲夏太后。莊襄王元年，以呂不韋...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉氏本作「所生母」，「生」衍字也。今檢諸本並無「生」字。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "以爲夏太后。莊襄王元年，以呂不韋爲丞相，",
+      "before_context": "...華陽太后，真母夏姬尊以爲夏太后。莊襄王元年，以呂不韋爲丞相，",
+      "after_context": "封爲文信侯，食河南雒陽",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "下文「尊爲相國」。案：《百官表》曰「皆秦官，金印紫綬，掌承天子助理萬機。秦置左右，高帝置一，後又更名相國，哀帝時更名大司徒」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "雒陽",
+      "before_context": "...爲夏太后。莊襄王元年，以呂不韋爲丞相，封爲文信侯，食河南雒陽",
+      "after_context": "十萬戶。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《戰國策》曰「食藍田十二縣」。而《秦本紀》莊襄王元年初置三川郡，《地理志》高祖更名河南。此秦代而曰「河南」者，《史記》後作，據漢郡而言之耳。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
+      "anchor_text": "莊襄王即位三年，薨，太子政立爲王，",
+      "before_context": "莊襄王即位三年，薨，太子政立爲王，",
+      "after_context": "尊呂不韋爲相國，號稱「仲父」。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「時年十三。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n023",
       "anchor_text": "尊呂不韋爲相國，號稱「仲父」。",
       "before_context": "...王即位三年，薨，太子政立爲王，尊呂不韋爲相國，號稱「仲父」。",
       "after_context": "秦王年少，太后時時竊私通呂不韋。不韋家僮萬人。",
@@ -115,10 +349,10 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n024",
       "anchor_text": "當是時，魏有信陵君，",
       "before_context": "當是時，魏有信陵君，",
-      "after_context": "楚有春申君，趙有平原君，齊有孟嘗君，皆下士喜賓客以相傾。呂不...",
+      "after_context": "楚有春申君，趙有平原君，齊有孟嘗君，",
       "items": [
         {
           "source": "zhengyi",
@@ -129,7 +363,49 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n025",
+      "anchor_text": "楚有春申君，趙有平原君，齊有孟嘗君，",
+      "before_context": "當是時，魏有信陵君，楚有春申君，趙有平原君，齊有孟嘗君，",
+      "after_context": "皆下士喜賓客以相傾。呂不韋以秦之彊，羞不如，亦招致士，厚遇之...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：王劭云「孟嘗、春申死已久」。據表及傳，孟嘗、平原死稍在前。信陵將五國兵攻秦河外，正當在莊襄王時，不韋已爲相。又春申與不韋並時，各相向十餘年，不得言死之久矣。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "集論以爲八覽、六論、十二紀，二十餘萬言。",
+      "before_context": "...乃使其客人人著所聞，集論以爲八覽、六論、十二紀，二十餘萬言。",
+      "after_context": "以爲備天地萬物古今之事，號曰《呂氏春秋》。布咸陽",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "八覽者，有始、孝行、慎大、先識、審分、審應、離俗、時君也。六論者，開春、慎行、貴直、不苟、以順、士容也。十二紀者，記十二月也，其書有孟春等紀。二十餘萬言，二十六卷也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
+      "anchor_text": "咸陽",
+      "before_context": "...二十餘萬言。以爲備天地萬物古今之事，號曰《呂氏春秋》。布咸陽",
+      "after_context": "市門，懸千金其上，延諸侯游士賓客有能增損一字者予千金。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》右扶風渭城縣，故咸陽，高帝更名新城，景帝更名渭城。案：咸訓皆，其地在渭水之北，北阪之南，水北曰陽，山南亦曰陽，皆在二者之陽也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n028",
       "anchor_text": "爲舍人，時縱倡樂，使毐以其陰關桐輪而行，",
       "before_context": "...，乃私求大陰人嫪毐以爲舍人，時縱倡樂，使毐以其陰關桐輪而行，",
       "after_context": "令太后聞之，以啗太后。太后聞，果欲私得之。呂不韋乃進嫪毐，詐...",
@@ -143,7 +419,7 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n029",
       "anchor_text": "果欲私得之。呂不韋乃進嫪毐，詐令人以腐罪",
       "before_context": "...，以啗太后。太后聞，果欲私得之。呂不韋乃進嫪毐，詐令人以腐罪",
       "after_context": "告之。不韋又陰謂太后曰：「可事詐腐，則得給事中。」太后乃陰厚...",
@@ -157,7 +433,7 @@
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n030",
       "anchor_text": "身，太后恐人知之，詐卜當避時，徙宮居雍。",
       "before_context": "...后私與通，絕愛之。有身，太后恐人知之，詐卜當避時，徙宮居雍。",
       "after_context": "嫪毐常從，賞賜甚厚，事皆決於嫪毐。嫪毐家僮數千人，諸客求宦爲...",
@@ -171,10 +447,10 @@
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n031",
       "anchor_text": "太后，與孝文王會葬壽陵。",
       "before_context": "...年，莊襄王母夏太后薨。孝文王后曰華陽太后，與孝文王會葬壽陵。",
-      "after_context": "夏太后子莊襄王葬芷陽，故夏太后獨別葬杜東，曰「東望吾子，西望...",
+      "after_context": "夏太后子莊襄王葬芷陽，",
       "items": [
         {
           "source": "zhengyi",
@@ -185,10 +461,10 @@
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n032",
       "anchor_text": "夏太后子莊襄王葬芷陽，",
       "before_context": "...孝文王后曰華陽太后，與孝文王會葬壽陵。夏太后子莊襄王葬芷陽，",
-      "after_context": "故夏太后獨別葬杜東，曰「東望吾子，西望吾夫。後百年，旁當有萬...",
+      "after_context": "故夏太后獨別葬杜東，",
       "items": [
         {
           "source": "suoyin",
@@ -204,7 +480,7 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n033",
       "anchor_text": "故夏太后獨別葬杜東，",
       "before_context": "...與孝文王會葬壽陵。夏太后子莊襄王葬芷陽，故夏太后獨別葬杜東，",
       "after_context": "曰「東望吾子，西望吾夫。後百年，旁當有萬家邑」。",
@@ -223,7 +499,21 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n034",
+      "anchor_text": "吾子，西望吾夫。後百年，旁當有萬家邑」。",
+      "before_context": "...獨別葬杜東，曰「東望吾子，西望吾夫。後百年，旁當有萬家邑」。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：宣帝元康元年起杜陵。漢舊儀武、昭、宣三陵皆三萬戶，計去此一百六十餘年也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n035",
       "anchor_text": "皆匿之。與太后謀曰「王即薨，以子爲後」。",
       "before_context": "...太后私亂，生子二人，皆匿之。與太后謀曰「王即薨，以子爲後」。",
       "after_context": "於是秦王下吏治，具得情實，事連相國呂不韋。九月，夷嫪毐三族，...",
@@ -232,20 +522,151 @@
           "source": "jijie",
           "label": "集解",
           "text": "說苑曰：「毐與侍中左右貴臣博弈飲酒，醉，爭言而鬬，瞋目大叱曰：『吾乃皇帝假父也，寠人子何敢乃與我亢！』所與鬬者走，行白始皇。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "劉氏寠音其矩反。今俗本多作「屢」字，蓋相承錯耳，不近詞義。今按：說苑作「寠子」，言輕諸侍中，以爲窮寠家之子也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n036",
+      "anchor_text": "毐三族，殺太后所生兩子，而遂遷太后於雍。",
+      "before_context": "...國呂不韋。九月，夷嫪毐三族，殺太后所生兩子，而遂遷太后於雍。",
+      "after_context": "諸嫪毐舍人皆沒其家而遷之蜀。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：說苑云遷太后棫陽宮。《地理志》雍縣有棫陽宮，秦昭王所起也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n037",
+      "anchor_text": "諸嫪毐舍人皆沒其家而遷之蜀。",
+      "before_context": "...殺太后所生兩子，而遂遷太后於雍。諸嫪毐舍人皆沒其家而遷之蜀。",
+      "after_context": "王欲誅相國，爲其奉先王功大，及賓客辯士爲游說者衆，王不忍致法...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "家謂家產資物，並沒入官，人口則遷之蜀也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n038",
+      "anchor_text": "，",
+      "before_context": "...免相國呂不韋。及齊人茅焦說秦王，秦王乃迎太后於雍，歸復咸陽，",
+      "after_context": "而出文信侯就國河南。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「入南宮。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
+      "anchor_text": "蜀！」呂不韋自度稍侵，恐誅，乃飲酖而死。",
+      "before_context": "...稱仲父。其與家屬徙處蜀！」呂不韋自度稍侵，恐誅，乃飲酖而死。",
+      "after_context": "秦王所加怒呂不韋、嫪毐皆已死，乃皆復歸嫪毐舍人遷蜀者。",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「十二年。」駰案：《皇覽》曰「呂不韋冢在河南洛陽北邙道西大冢是也。民傳言呂母冢。不韋妻先葬，故其冢名『呂母』也」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n040",
+      "anchor_text": "始皇十九年，太后薨，謚爲帝太后，",
+      "before_context": "始皇十九年，太后薨，謚爲帝太后，",
+      "after_context": "與莊襄王會葬茝陽。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "王劭云「秦不用《謚法》，此蓋號耳」，其義亦當然也。始皇稱皇帝之後，故其母號爲帝太后，豈謂誄列生時之行乎！"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n041",
+      "anchor_text": "與莊襄王會葬茝陽。",
+      "before_context": "始皇十九年，太后薨，謚爲帝太后，與莊襄王會葬茝陽。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐廣曰：「一作『芷陽』。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n042",
+      "anchor_text": "曰：不韋及嫪毐貴，封號文信侯。",
+      "before_context": "太史公曰：不韋及嫪毐貴，封號文信侯。",
+      "after_context": "人之告嫪毐，毐聞之。秦王驗左右，未發。上之雍郊，毐恐禍起，乃...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "按：文信侯，不韋封也。嫪毐封長信侯。上文已言不韋封，此贊中言嫪毐得寵貴由不韋耳，今此合作「長信侯」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
       "anchor_text": "禍起，乃與黨謀，矯太后璽發卒以反蘄年宮。",
       "before_context": "...未發。上之雍郊，毐恐禍起，乃與黨謀，矯太后璽發卒以反蘄年宮。",
-      "after_context": "發吏攻毐，毐敗亡走，追斬之好畤，遂滅其宗。而呂不韋由此絀矣。",
+      "after_context": "發吏攻毐，毐敗亡走，追斬之好畤，",
       "items": [
         {
           "source": "zhengyi",
           "label": "正義",
           "text": "蘄年宮在岐州城西故城內。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n044",
+      "anchor_text": "發吏攻毐，毐敗亡走，追斬之好畤，",
+      "before_context": "...謀，矯太后璽發卒以反蘄年宮。發吏攻毐，毐敗亡走，追斬之好畤，",
+      "after_context": "遂滅其宗。而呂不韋由此絀矣。孔子之所謂「聞」者，其呂子乎？",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隱",
+          "text": "《地理志》扶風有好畤縣也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n045",
+      "anchor_text": "之所謂「聞」者，其呂子乎？",
+      "before_context": "...，遂滅其宗。而呂不韋由此絀矣。孔子之所謂「聞」者，其呂子乎？",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《論語》曰：「夫聞也者，色取仁而行違，居之不疑，在邦必聞，在家必聞。」馬融曰：「此言佞人也。」"
         }
       ],
       "sentence_id": null

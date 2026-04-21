@@ -3,6 +3,20 @@
   "notes": [
     {
       "id": "n001",
+      "anchor_text": "黥布者，六人也，",
+      "before_context": "黥布者，六人也，",
+      "after_context": "姓英氏。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "《地理志》庐江有六县。苏林曰：「今为六安也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n002",
       "anchor_text": "姓英氏。",
       "before_context": "黥布者，六人也，姓英氏。",
       "after_context": "秦时为布衣。少年，有客相之曰：「当刑而王。」及壮，坐法黥。布...",
@@ -21,24 +35,43 @@
       "sentence_id": null
     },
     {
-      "id": "n002",
+      "id": "n003",
       "anchor_text": "布欣然笑曰：「人相我当刑而王，几是乎？」",
       "before_context": "...王。」及壮，坐法黥。布欣然笑曰：「人相我当刑而王，几是乎？」",
-      "after_context": "人有闻者，共俳笑之。布已论输丽山，丽山之徒数十万人，布皆与其...",
+      "after_context": "人有闻者，共俳笑之。",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「几，一作『岂』。」骃谓几，近也。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "裴骃曰「臣瓒音机。几，近也」。《楚汉春秋》作「岂是乎」，故徐广云一作「岂」。刘氏作「祈」，祈者语辞也，亦通。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n003",
+      "id": "n004",
+      "anchor_text": "人有闻者，共俳笑之。",
+      "before_context": "...布欣然笑曰：「人相我当刑而王，几是乎？」人有闻者，共俳笑之。",
+      "after_context": "布已论输丽山，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "谓众共以俳优辈笑之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n005",
       "anchor_text": "布已论输丽山，",
       "before_context": "...人相我当刑而王，几是乎？」人有闻者，共俳笑之。布已论输丽山，",
-      "after_context": "丽山之徒数十万人，布皆与其徒长豪桀交通，迺率其曹偶，亡之江中...",
+      "after_context": "丽山之徒数十万人，布皆与其徒长豪桀交通，迺率其曹偶，",
       "items": [
         {
           "source": "zhengyi",
@@ -49,10 +82,24 @@
       "sentence_id": null
     },
     {
-      "id": "n004",
+      "id": "n006",
+      "anchor_text": "万人，布皆与其徒长豪桀交通，迺率其曹偶，",
+      "before_context": "...输丽山，丽山之徒数十万人，布皆与其徒长豪桀交通，迺率其曹偶，",
+      "after_context": "亡之江中为群盗。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "曹，辈也。偶，类也。谓徒辈之类。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n007",
       "anchor_text": "定江东会稽，",
       "before_context": "...布乃引兵北击秦左右校，破之清波，引兵而东。闻项梁定江东会稽，",
-      "after_context": "涉江而西。陈婴以项氏世为楚将，迺以兵属项梁",
+      "after_context": "涉江而西。陈婴以项氏世为楚将，迺以兵属项梁，渡淮南，英布、蒲...",
       "items": [
         {
           "source": "zhengyi",
@@ -63,10 +110,10 @@
       "sentence_id": null
     },
     {
-      "id": "n005",
+      "id": "n008",
       "anchor_text": "至薛，",
       "before_context": "项梁涉淮而西，击景驹、秦嘉等，布常冠军。项梁至薛，",
-      "after_context": "闻陈王定死，迺立楚怀王。项梁",
+      "after_context": "闻陈王定死，迺立楚怀王。项梁号为武信君，英布为当阳君。",
       "items": [
         {
           "source": "zhengyi",
@@ -77,10 +124,10 @@
       "sentence_id": null
     },
     {
-      "id": "n006",
+      "id": "n009",
       "anchor_text": "号为武信君，英布为当阳君。",
-      "before_context": "至薛，闻陈王定死，迺立楚怀王。项梁号为武信君，英布为当阳君。",
-      "after_context": "项梁",
+      "before_context": "...至薛，闻陈王定死，迺立楚怀王。项梁号为武信君，英布为当阳君。",
+      "after_context": "项梁败死定陶，怀王徙都彭城，诸将英布亦皆保聚彭城。当是时，秦...",
       "items": [
         {
           "source": "zhengyi",
@@ -91,7 +138,7 @@
       "sentence_id": null
     },
     {
-      "id": "n007",
+      "id": "n010",
       "anchor_text": "项籍之引兵西至新安，",
       "before_context": "项籍之引兵西至新安，",
       "after_context": "又使布等夜击阬章邯秦卒二十余万人。至关，不得入，又使布等先从...",
@@ -105,9 +152,37 @@
       "sentence_id": null
     },
     {
-      "id": "n008",
+      "id": "n011",
+      "anchor_text": "十余万人。至关，不得入，又使布等先从闲道",
+      "before_context": "...布等夜击阬章邯秦卒二十余万人。至关，不得入，又使布等先从闲道",
+      "after_context": "破关下军，遂得入，至咸阳。布常为军锋。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "邹氏云「闲犹闲也，谓私也」。今以闲音纪苋反。闲道即他道，犹若反闲之义。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n012",
+      "anchor_text": "。布常为军锋。",
+      "before_context": "...得入，又使布等先从闲道破关下军，遂得入，至咸阳。布常为军锋。",
+      "after_context": "项王封诸将，立布为九江王，都六。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：《汉书》作「楚军前簿」，簿者卤簿。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n013",
       "anchor_text": "击之。其八月，布使将击义帝，追杀之郴县。",
-      "before_context": "，迺阴令九江王布等行击之。其八月，布使将击义帝，追杀之郴县。",
+      "before_context": "...，迺阴令九江王布等行击之。其八月，布使将击义帝，追杀之郴县。",
       "after_context": "",
       "items": [
         {
@@ -119,10 +194,24 @@
       "sentence_id": null
     },
     {
-      "id": "n009",
+      "id": "n014",
+      "anchor_text": "又称病不佐楚。项王由此怨布，数使使者诮让",
+      "before_context": "...行。汉之败楚彭城，布又称病不佐楚。项王由此怨布，数使使者诮让",
+      "after_context": "召布，布愈恐，不敢往。项王方北忧齐、赵，西患汉，所与者独九江...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书音义》曰：「诮，责也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n015",
       "anchor_text": "，不利，出梁地，至虞，",
       "before_context": "汉三年，汉王击楚，大战彭城，不利，出梁地，至虞，",
-      "after_context": "谓左右曰：「如彼等者，无足与计天下事。」谒者随何进曰：「不审...",
+      "after_context": "谓左右曰：",
       "items": [
         {
           "source": "zhengyi",
@@ -133,7 +222,21 @@
       "sentence_id": null
     },
     {
-      "id": "n010",
+      "id": "n016",
+      "anchor_text": "谓左右曰：",
+      "before_context": "汉三年，汉王击楚，大战彭城，不利，出梁地，至虞，谓左右曰：",
+      "after_context": "「如彼等者，无足与计天下事。」谒者随何进曰：「不审陛下所谓。...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：谓随何。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n017",
       "anchor_text": "」迺与二十人俱，使淮南。至，因太宰主之，",
       "before_context": "...随何曰：「臣请使之。」迺与二十人俱，使淮南。至，因太宰主之，",
       "after_context": "三日不得见。随何因说太宰曰：「王之不见何，必以楚为彊，以汉为...",
@@ -142,12 +245,73 @@
           "source": "jijie",
           "label": "集解",
           "text": "《汉书音义》曰：「淮南太宰作内主也。」韦昭曰：「主，舍也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "太宰，掌膳食之官。韦昭曰「主，舍」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n011",
+      "id": "n018",
+      "anchor_text": "楚为彊，可以托国也。项王伐齐，身负板筑，",
+      "before_context": "...，北乡而臣事之，必以楚为彊，可以托国也。项王伐齐，身负板筑，",
+      "after_context": "以为士卒先，大王宜悉淮南之众，身自将之，为楚军前锋，今迺发四...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "李奇曰：「板，墙板也。筑，杵也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n019",
+      "anchor_text": "，项王未出齐也，大王宜骚",
+      "before_context": "...而臣事人者，固若是乎？夫汉王战于彭城，项王未出齐也，大王宜骚",
+      "after_context": "淮南之兵渡淮，日夜会战彭城下，大王抚万人之众，无一人渡淮者，...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "音埽。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n020",
+      "anchor_text": "为弱也。夫楚兵虽彊，天下负之以不义之名，",
+      "before_context": "...而大王不背楚者，以汉为弱也。夫楚兵虽彊，天下负之以不义之名，",
+      "after_context": "以其背盟约而杀义帝也。然而楚王恃战胜自彊，汉王收诸侯，还守成...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "负犹被也。以不义被其身。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n021",
+      "anchor_text": "，下蜀、汉之粟，深沟壁垒，分卒守徼乘塞，",
+      "before_context": "...诸侯，还守成皋、荥阳，下蜀、汉之粟，深沟壁垒，分卒守徼乘塞，",
+      "after_context": "楚人还兵，闲以梁地，深入敌国八九百里，",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "徼谓边境亭鄣。以徼绕边陲，常守之也。乘者，登也，登塞垣而守之。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n022",
       "anchor_text": "楚人还兵，闲以梁地，深入敌国八九百里，",
       "before_context": "...沟壁垒，分卒守徼乘塞，楚人还兵，闲以梁地，深入敌国八九百里，",
       "after_context": "欲战则不得，攻城则力不能，老弱转粮千里之外；楚兵至荥阳、成皋...",
@@ -156,12 +320,17 @@
           "source": "jijie",
           "label": "集解",
           "text": "张晏曰：「羽从齐还，当经梁地八九百里，迺得羽地。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：服虔曰「梁在楚汉之中闲」。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n012",
+      "id": "n023",
       "anchor_text": "则不得攻，退则不得解。故曰楚兵不足恃也。",
       "before_context": "...皋，汉坚守而不动，进则不得攻，退则不得解。故曰楚兵不足恃也。",
       "after_context": "使楚胜汉，则诸侯自危惧而相救。夫楚之彊，适足以致天下之兵耳。...",
@@ -170,12 +339,59 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「恃，一作『罢』。言其已困，不足复苦也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：《汉书》作「罢」，音皮。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n013",
+      "id": "n024",
+      "anchor_text": "楚使者在，",
+      "before_context": "楚使者在，",
+      "after_context": "方急责英布发兵，舍传舍。随何直入，坐楚使者上坐，曰：「九江王...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "文颖曰：「在淮南王所。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n025",
+      "anchor_text": "布愕然。楚使者起。何因说布曰：「事已搆，",
+      "before_context": "...汉，楚何以得发兵？」布愕然。楚使者起。何因说布曰：「事已搆，",
+      "after_context": "可遂杀楚使者，无使归，而疾走汉",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "按：搆训成也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n026",
+      "anchor_text": "可遂杀楚使者，无使归，而疾走汉",
+      "before_context": "...使者起。何因说布曰：「事已搆，可遂杀楚使者，无使归，而疾走汉",
+      "after_context": "并力。」布曰：「如使者教，因起兵而击之耳。」于是杀使者，因起...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "走音奏，向也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n027",
       "anchor_text": "。楚使项声、龙且攻淮南，项王留而攻下邑。",
       "before_context": "...杀使者，因起兵而攻楚。楚使项声、龙且攻淮南，项王留而攻下邑。",
       "after_context": "数月，龙且击淮南，破布军。布欲引兵走汉，恐楚王杀之，故闲行与...",
@@ -189,7 +405,21 @@
       "sentence_id": null
     },
     {
-      "id": "n014",
+      "id": "n028",
+      "anchor_text": "淮南王至，",
+      "before_context": "淮南王至，",
+      "after_context": "上方踞床洗，召布入见，布（甚）大怒，悔来，欲自杀。出就舍，帐...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「三年十二月。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n029",
       "anchor_text": "舍，帐御饮食从官如汉王居，布又大喜过望。",
       "before_context": "...，悔来，欲自杀。出就舍，帐御饮食从官如汉王居，布又大喜过望。",
       "after_context": "于是迺使人入九江。楚已使项伯收九江兵，尽杀布妻子。布使者颇得...",
@@ -203,7 +433,35 @@
       "sentence_id": null
     },
     {
-      "id": "n015",
+      "id": "n030",
+      "anchor_text": "折随何之功，谓何为腐儒，为天下安用腐儒。",
+      "before_context": "...，天下定，上置酒。上折随何之功，谓何为腐儒，为天下安用腐儒。",
+      "after_context": "随何跪曰：「夫陛下引兵攻彭城，楚王未去齐也，陛下发步卒五万人...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "腐音辅。谓之腐儒者，言如腐败之物不任用。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n031",
+      "anchor_text": "醢，因大恐，阴令人部聚兵，候伺旁郡警急。",
+      "before_context": "...淮南，淮南王方猎，见醢，因大恐，阴令人部聚兵，候伺旁郡警急。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "张晏曰：「欲有所会。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n032",
       "anchor_text": "布所幸姬疾，请就医，医家与中大夫贲赫",
       "before_context": "布所幸姬疾，请就医，医家与中大夫贲赫",
       "after_context": "对门，姬数如医家，贲赫自以为侍中，迺厚餽遗，从姬饮医家。姬侍...",
@@ -212,12 +470,31 @@
           "source": "jijie",
           "label": "集解",
           "text": "徐广曰：「贲音肥。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "贲音肥，人姓也。赫音虚格反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n016",
+      "id": "n033",
+      "anchor_text": "布不宜有此，恐仇怨妄诬之。请系赫，使人微",
+      "before_context": "...语萧相国。相国曰：「布不宜有此，恐仇怨妄诬之。请系赫，使人微",
+      "after_context": "验淮南王。」淮南王布见赫以罪亡，上变，固已疑其言国阴事；汉使...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "一作「征」。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n034",
       "anchor_text": "。」滕公曰：「上裂地而王之，疏爵而贵之，",
       "before_context": "...。令尹曰：「是故当反。」滕公曰：「上裂地而王之，疏爵而贵之，",
       "after_context": "南面而立万乘之主，其反何也？」令尹曰：「往年杀彭越，前年杀韩...",
@@ -226,15 +503,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "《汉书音义》曰：「疏，分也。『禹决江疏河』是也。」"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "疏，分也。《汉书》曰「禹决江疏河」。《尚书》曰「列爵惟五，分土惟三」。按；裂地是对文，故知疏即分也。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n017",
+      "id": "n035",
+      "anchor_text": "，",
+      "before_context": "...而立万乘之主，其反何也？」令尹曰：「往年杀彭越，前年杀韩信，",
+      "after_context": "此三人者，同功一体之人也。自疑祸及身，故反耳。」滕公言之上曰...",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "张晏曰：「往年、前年同耳，使文相避也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n036",
       "anchor_text": "上曰：「何谓上计？」令尹对曰：「东取吴，",
       "before_context": "...，陛下安枕而卧矣。」上曰：「何谓上计？」令尹对曰：「东取吴，",
-      "after_context": "西取楚，并齐取鲁，传檄燕、赵，固守其所，山东非汉之有也。」「...",
+      "after_context": "西取楚，",
       "items": [
         {
           "source": "zhengyi",
@@ -245,7 +541,7 @@
       "sentence_id": null
     },
     {
-      "id": "n018",
+      "id": "n037",
       "anchor_text": "西取楚，",
       "before_context": "...枕而卧矣。」上曰：「何谓上计？」令尹对曰：「东取吴，西取楚，",
       "after_context": "并齐取鲁，传檄燕、赵，固守其所，山东非汉之有也。」「何谓中计...",
@@ -259,10 +555,24 @@
       "sentence_id": null
     },
     {
-      "id": "n019",
+      "id": "n038",
+      "anchor_text": "「东取吴，西取楚，并韩取魏，据敖庾之粟，",
+      "before_context": "...也。」「何谓中计？」「东取吴，西取楚，并韩取魏，据敖庾之粟，",
+      "after_context": "塞成皋之口，胜败之数未可知也。」「何谓下计？」「东取吴，西取...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：太康地记云「秦建敖仓于成皋」。又云「庾」，故云「敖庾」也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n039",
       "anchor_text": "也。」「何谓下计？」「东取吴，西取下蔡，",
       "before_context": "...之口，胜败之数未可知也。」「何谓下计？」「东取吴，西取下蔡，",
-      "after_context": "归重于越，身归长沙",
+      "after_context": "归重于越，身归长沙，",
       "items": [
         {
           "source": "zhengyi",
@@ -273,10 +583,10 @@
       "sentence_id": null
     },
     {
-      "id": "n020",
+      "id": "n040",
       "anchor_text": "，",
       "before_context": "...也。」「何谓下计？」「东取吴，西取下蔡，归重于越，身归长沙，",
-      "after_context": "陛下安枕而卧，汉无事矣。」上曰：「是计将安出？」令尹对曰：「...",
+      "after_context": "陛下安枕而卧，汉无事矣。」",
       "items": [
         {
           "source": "zhengyi",
@@ -287,7 +597,7 @@
       "sentence_id": null
     },
     {
-      "id": "n021",
+      "id": "n041",
       "anchor_text": "陛下安枕而卧，汉无事矣。」",
       "before_context": "...吴，西取下蔡，归重于越，身归长沙，陛下安枕而卧，汉无事矣。」",
       "after_context": "上曰：「是计将安出？」令尹对曰：「出下计。」上曰：「何谓废上...",
@@ -296,15 +606,34 @@
           "source": "jijie",
           "label": "集解",
           "text": "桓谭新论曰：「世有围碁之戏，或言是兵法之类也。及为之上者，远碁疏张，置以会围，因而成多，得道之胜。中者，则务相绝遮要，以争便求利，故胜负狐疑，须计数而定。下者，则守边隅，趋作罫，以自生于小地，然亦必不如。」察薛公之言上计，云取吴、楚，并齐、鲁及燕、赵者，此广道地之谓。中计云取吴、楚，并韩、魏，塞成皋，据敖仓，此趋遮要争利者也。下计云取吴、下蔡，据长沙以临越，此守边隅，趋作罫者也。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "罫音乌卦反。"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n022",
+      "id": "n042",
+      "anchor_text": "故曰出下计。」上曰：「善。」封薛公千户。",
+      "before_context": "...后为百姓万世虑者也，故曰出下计。」上曰：「善。」封薛公千户。",
+      "after_context": "迺立皇子长为淮南王。上遂发兵自将东击布。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "刘氏云：「薛公得封千户，盖关内侯也。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n043",
       "anchor_text": "果如薛公筹之，东击荆，荆王刘贾走死富陵。",
       "before_context": "...不足畏也。」故遂反。果如薛公筹之，东击荆，荆王刘贾走死富陵。",
-      "after_context": "尽劫其兵，渡淮击楚。楚发兵与战徐、僮闲，为三军，欲以相救为奇...",
+      "after_context": "尽劫其兵，渡淮击楚。楚发兵与战徐、僮闲，",
       "items": [
         {
           "source": "zhengyi",
@@ -315,7 +644,7 @@
       "sentence_id": null
     },
     {
-      "id": "n023",
+      "id": "n044",
       "anchor_text": "尽劫其兵，渡淮击楚。楚发兵与战徐、僮闲，",
       "before_context": "...，荆王刘贾走死富陵。尽劫其兵，渡淮击楚。楚发兵与战徐、僮闲，",
       "after_context": "为三军，欲以相救为奇。或说楚将曰：「布善用兵，民素畏之。且兵...",
@@ -339,7 +668,7 @@
       "sentence_id": null
     },
     {
-      "id": "n024",
+      "id": "n045",
       "anchor_text": "兵，民素畏之。且兵法，诸侯战其地为散地。",
       "before_context": "...或说楚将曰：「布善用兵，民素畏之。且兵法，诸侯战其地为散地。",
       "after_context": "今别为三，彼败吾一军，余皆走，安能相救！」不听。布果破其一军...",
@@ -358,10 +687,10 @@
       "sentence_id": null
     },
     {
-      "id": "n025",
+      "id": "n046",
       "anchor_text": "遂西，与上兵遇蕲西，会甀。",
       "before_context": "遂西，与上兵遇蕲西，会甀。",
-      "after_context": "布兵精甚，上迺壁庸城，望布军置陈如项籍军，上恶之。与布相望见...",
+      "after_context": "布兵精甚，上迺壁庸城，",
       "items": [
         {
           "source": "suoyin",
@@ -377,21 +706,54 @@
       "sentence_id": null
     },
     {
-      "id": "n026",
-      "anchor_text": "哀王",
-      "before_context": "...淮，数止战，不利，与百余人走江南。布故与番君婚，以故长沙哀王",
-      "after_context": "使人绐布，伪与亡，诱走越，故信而随之番阳。番阳人杀布兹乡民田...",
+      "id": "n047",
+      "anchor_text": "布兵精甚，上迺壁庸城，",
+      "before_context": "遂西，与上兵遇蕲西，会甀。布兵精甚，上迺壁庸城，",
+      "after_context": "望布军置陈如项籍军，上恶之。与布相望见，遥谓布曰：「何苦而反...",
       "items": [
         {
           "source": "jijie",
           "label": "集解",
-          "text": "徐广曰：「表云成王臣，吴芮之子也。」骃案；晋灼曰「芮之孙固」。或曰是成王，非哀王也，传误也。"
+          "text": "邓展曰：「地名也。」"
         }
       ],
       "sentence_id": null
     },
     {
-      "id": "n027",
+      "id": "n048",
+      "anchor_text": "哀王",
+      "before_context": "...淮，数止战，不利，与百余人走江南。布故与番君婚，以故长沙哀王",
+      "after_context": "使人绐布，伪与亡，诱走越，故信而随之番阳。番阳人杀布兹乡",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "徐广曰：「表云成王臣，吴芮之子也。」骃案；晋灼曰「芮之孙固」。或曰是成王，非哀王也，传误也。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "「哀」字误也。是成王臣，吴芮之子也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n049",
+      "anchor_text": "，诱走越，故信而随之番阳。番阳人杀布兹乡",
+      "before_context": "...哀王使人绐布，伪与亡，诱走越，故信而随之番阳。番阳人杀布兹乡",
+      "after_context": "民田舍，遂灭黥布。",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "{{{1}}}"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n050",
       "anchor_text": "民田舍，遂灭黥布。",
       "before_context": "...亡，诱走越，故信而随之番阳。番阳人杀布兹乡民田舍，遂灭黥布。",
       "after_context": "",
@@ -405,7 +767,7 @@
       "sentence_id": null
     },
     {
-      "id": "n028",
+      "id": "n051",
       "anchor_text": "立皇子长为淮南王，封贲赫为期思侯，",
       "before_context": "立皇子长为淮南王，封贲赫为期思侯，",
       "after_context": "诸将率多以功封者。",
@@ -419,7 +781,35 @@
       "sentence_id": null
     },
     {
-      "id": "n029",
+      "id": "n052",
+      "anchor_text": "诸将率多以功封者。",
+      "before_context": "立皇子长为淮南王，封贲赫为期思侯，诸将率多以功封者。",
+      "after_context": "",
+      "items": [
+        {
+          "source": "jijie",
+          "label": "集解",
+          "text": "《汉书》曰：「将率封者六人。」"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n053",
+      "anchor_text": "之后哉？身被刑法，何其拔兴",
+      "before_context": "...者，其先岂春秋所见楚灭英、六，皋陶之后哉？身被刑法，何其拔兴",
+      "after_context": "之暴也！项氏之所阬杀人以千万数，而布常为首虐。功冠诸侯，用此...",
+      "items": [
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "拔，白曷反，疾也。"
+        }
+      ],
+      "sentence_id": null
+    },
+    {
+      "id": "n054",
       "anchor_text": "亦不免于身为世大僇。祸之兴自爱姬殖，妒媢",
       "before_context": "...功冠诸侯，用此得王，亦不免于身为世大僇。祸之兴自爱姬殖，妒媢",
       "after_context": "生患，竟以灭国！",
@@ -428,6 +818,11 @@
           "source": "jijie",
           "label": "集解",
           "text": "音冒。媢亦妒也。"
+        },
+        {
+          "source": "suoyin",
+          "label": "索隐",
+          "text": "案：王劭音冒，媢亦妒也。《汉书》外戚传亦云「或结宠妾妬媢之诛」。又论衡云「妬夫媢妇」，则媢是妬之别名。今原英布之诛为疑贲赫与其妃有乱，故至灭国，所以不得言妬媢是媚也。一云男妬曰媢。"
         }
       ],
       "sentence_id": null
