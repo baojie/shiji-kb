@@ -11,25 +11,54 @@
 
 ## 🔥 近期优先
 
-### 📖 《读史记十表》句读与排版（新）
+### 📖 《读史记十表》OCR 整理（阶段一完成，阶段二待启动）
 
 **记录日期**：2026-04-22
-**背景**：`corpus/shiji/读史记十表.txt`（四库本OCR）无标点、有OCR噪声、影印排版需重建。
+**背景**：`corpus/shiji/读史记十表.txt`（四库本 OCR）无标点、有 OCR 噪声、影印排版需重建。
 
-**当前状态**：
-- ✅ 方法论已沉淀：[SKILL_01i OCR影印古籍句读排版](skills/SKILL_01i_OCR影印古籍句读排版.md)
-- ✅ 提要、总论、卷一（太史公原序 + 夏殷世系）已句读排版
-- ✅ OCR 可疑字报告已建：[logs/curation/reports/读史记十表_OCR可疑字.md](logs/curation/reports/读史记十表_OCR可疑字.md)
-- ⏳ 输出：[corpus/shiji/读史记十表.md](corpus/shiji/读史记十表.md)
+**阶段一：句读 + 排版（已完成 2026-04-22）**：
+- ✅ 方法论沉淀：[SKILL_01i OCR影印古籍句读排版](skills/SKILL_01i_OCR影印古籍句读排版.md)
+- ✅ 项目经验沉淀：[SKILL_10i OCR古籍整理项目经验](skills/SKILL_10i_OCR古籍整理项目经验.md)
+- ✅ 全书十卷 + 提要 + 总论完整句读与 Markdown 排版：[corpus/shiji/读史记十表.md](corpus/shiji/读史记十表.md)
+- ✅ OCR 可疑字全书扫描报告（"防"字 13 种语义 + 零星单字）：[logs/curation/reports/读史记十表_OCR可疑字.md](logs/curation/reports/读史记十表_OCR可疑字.md)
 
-**待续任务**：
-- [ ] 卷一"读三代世表"、"读三代世表补"
-- [ ] 卷二"十二诸侯年表"（正序 + 读 + 补 + 存疑）
-- [ ] 卷三"六国表" ～ 卷十"汉兴以来将相名臣年表"
-- [ ] 完成后汇总 OCR 可疑字表，交由 SKILL_01b 多版本互校订正
-- [ ] 工具化：`scripts/curation/clean_ocr_raw.py` / `verify_ocr_preserve.py`（方法论已规划）
+**阶段二：多版本互校订正 + 工具化（待启动）**：
+- [ ] 找到《读史记十表》点校本或其他四库翻印本，逐条订正 OCR 可疑字
+- [ ] 表格正文从影印 PDF 还原（OCR 丢失的年表列）
+- [ ] 工具化：`scripts/curation/verify_ocr_preserve.py`（字符完整性）、`clean_ocr_raw.py`（阶段 1 清洗）
+- [ ] HTML 渲染器接入（让 `.md` 出现在站内目录）
 
-**关联 Skill**：SKILL_01i（主）/ 01f（句读）/ 01b（互校）/ 01e（繁简）
+**关联 Skill**：SKILL_01i（方法论）/ SKILL_10i（项目经验）/ 01f（句读规范）/ 01b（互校订正）
+
+---
+
+### 📝 全库白话翻译 v2 重译（Phase 6 pilot 已通过评估）
+
+**记录日期**：2026-04-22
+**背景**：基于 hunterhug 段译 + 白话史记外部白话双参考做 v2 提示词迭代。pilot 评估 002/067 两章：067 年龄"岁"误译 23 处全部修复，与 hunterhug 相似度 +2.5pt，所有指标无退化。
+
+**任务**：用 v2 提示词（当前 [SKILL_01h 白话翻译](skills/SKILL_01h_白话翻译.md)）全量重译 130 章，替换现有 `doc/translation/`。
+
+**工作量估算**：
+- Agent 并行：~6-10 小时 agent 时间
+- 人工抽检：10-20 章重点章节（含 067/087/129 等已知高缺陷章）
+- 下游重跑：`sync_translation_disambig.py` → `translate_surface.py` → `generate_translation_json.py`
+
+**执行步骤**：
+1. 按章分批（参考 2026-04-22 首次 130 章翻译方法，超长章 006/007/008/128/130 分 part）
+2. 输出到 `doc/translation_v2/`，与 v1 共存以便 diff
+3. 对每章跑 `scripts/evaluate_v2.py NNN` 自动指标对比
+4. 抽检无退化后，覆盖 `doc/translation/`，重跑下游
+5. 记录到 `doc/translation_quality/v2_fullrun_log.md`（见下方附注）
+
+**关联文档**：
+- SPEC：[doc/spec/SPEC_白话翻译质量提升.md](doc/spec/SPEC_白话翻译质量提升.md)
+- 分析与评估：[doc/translation_quality/](doc/translation_quality/)
+  - v2_分析.md / v2_diff.md（hunterhug 派生规则）
+  - v2b_白话史记补充.md（白话史记补充规则）
+  - v2_evaluation.md / v2_evaluation_summary.md（pilot 回归指标）
+
+**依赖**：建议先完成"纪年消歧"与"完整性修复"后再跑（避免 v2 重译与标注更新撞车）。
 
 ---
 
@@ -223,15 +252,17 @@
 
 ## ✅ 近期关闭的 Issue / 里程碑归档
 
-### 2026-04-22（二）：《读史记十表》OCR 句读工序开工
+### 2026-04-22（二）：《读史记十表》OCR 整理阶段一完成
 
-**开工**：
+**阶段一一次性交付**：
 - OCR 影印古籍方法论沉淀为 [SKILL_01i](skills/SKILL_01i_OCR影印古籍句读排版.md)
-- 《读史记十表》提要、总论、卷一样本完成句读排版
+- 项目经验沉淀为 [SKILL_10i](skills/SKILL_10i_OCR古籍整理项目经验.md)
+- 《读史记十表》全书十卷 + 提要 + 总论完整句读与 Markdown 排版
+- OCR 可疑字全书扫描（"防"字 13 种语义 + 零星单字）
 - SKILL_01 主文档更新，新增 01i 引用
 
 **产物**：
-- [corpus/shiji/读史记十表.md](corpus/shiji/读史记十表.md)
+- [corpus/shiji/读史记十表.md](corpus/shiji/读史记十表.md)（10 万字级完整整理）
 - [logs/curation/reports/读史记十表_OCR可疑字.md](logs/curation/reports/读史记十表_OCR可疑字.md)
 
 ### 2026-04-22（一）：白话翻译与三家注落地

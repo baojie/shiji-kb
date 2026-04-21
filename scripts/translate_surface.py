@@ -58,11 +58,15 @@ EXACT_REPLACEMENTS = {
     '〖!填星〗': '〖!土星|填星〗',
 
     # 典籍：六经简称 → 全称
-    '〖{诗〗': '〖{诗经|诗〗',
-    '〖{书〗': '〖{尚书|书〗',
-    '〖{易〗': '〖{易经|易〗',
-    '〖{礼〗': '〖{礼记|礼〗',
-    '〖{乐〗': '〖{乐经|乐〗',
+    # 注意（2026-04-22 v2）：暂停这些规则。
+    # 源 tagged.md 中 "〖{礼〗" 等标注在礼义/礼节语境下也被打标，
+    # 盲目替换为"礼记"会造成语义错误（例如"礼之用，和为贵"被渲染成"礼记的作用"）。
+    # 仅当源文上下文明确为书名时，才通过消歧语法 〖{X|Y〗 人工添加。
+    # '〖{诗〗': '〖{诗经|诗〗',
+    # '〖{书〗': '〖{尚书|书〗',
+    # '〖{易〗': '〖{易经|易〗',
+    # '〖{礼〗': '〖{礼记|礼〗',
+    # '〖{乐〗': '〖{乐经|乐〗',
 
     # 身份：文言专称 → 白话
     '〖#黔首〗': '〖#百姓|黔首〗',
@@ -75,22 +79,43 @@ EXACT_REPLACEMENTS = {
 }
 
 
-# 正则替换：文言时间 surface → 白话
+# 年龄上下文哨兵字符：紧跟在 〖% 之前出现这些字，说明是"年龄"语境，不应将"岁"→"年"
+_AGE_CONTEXT_CHARS = set('少长小大年比')
+
+
+def _sui_to_nian_with_age_guard(content: str) -> tuple:
+    """
+    将 `〖%X岁|时长〗` → `〖%X年|时长〗`，但若 〖 前紧邻 少/长/小/大/年/比 等年龄词则跳过（年龄语境）。
+    返回 (new_content, n_replaced, n_skipped)。
+    """
+    pattern = re.compile(r'〖%([^|〗]*?)岁(\|时长)〗')
+    result = []
+    last = 0
+    n_replaced = n_skipped = 0
+    for m in pattern.finditer(content):
+        pre = content[m.start() - 1] if m.start() > 0 else ''
+        result.append(content[last:m.start()])
+        if pre in _AGE_CONTEXT_CHARS:
+            result.append(m.group(0))
+            n_skipped += 1
+        else:
+            result.append(f'〖%{m.group(1)}年{m.group(2)}〗')
+            n_replaced += 1
+        last = m.end()
+    result.append(content[last:])
+    return ''.join(result), n_replaced, n_skipped
+
+
 REGEX_RULES = [
-    # 1) 时长"岁"→"年"（只在 |时长 语境下，surface 结尾为"岁"）
+    # 2) 〖%X岁〗 无消歧、X 为数字 → 〖%X年〗（时长语境）
+    #    使用**负向回看**跳过年龄语境（少/长/小/大/年/比 紧邻 〖）
+    #    排除"万岁"（祝颂语，不是"一万年"）
     (
-        re.compile(r'〖%([^|〗]*?)岁(\|时长)〗'),
-        r'〖%\1年\2〗',
-    ),
-    # 2) 〖%X岁〗 无消歧、但 X 为数字/量词 → 〖%X年〗
-    #    只处理明确的"数+岁"组合，避免误伤"岁"单独（年龄）
-    #    排除"万岁"（为祝颂语/永寿语义，非"一万年"）
-    (
-        re.compile(r'〖%([〇一二三四五六七八九十百千数]+)岁〗'),  # 去除 万
+        re.compile(r'(?<![少长小大年比])〖%([〇一二三四五六七八九十百千数]+)岁〗'),
         r'〖%\1年〗',
     ),
     (
-        re.compile(r'〖%([二三四五六七八九十百千数]+十数?|数|[一二三四五六七八九][百千])岁〗'),
+        re.compile(r'(?<![少长小大年比])〖%([二三四五六七八九十百千数]+十数?|数|[一二三四五六七八九][百千])岁〗'),
         r'〖%\1年〗',
     ),
     # 3) "X馀Y" → "X多Y"（岁馀→一年多 之前 岁→年）
@@ -152,6 +177,13 @@ def translate_file(path: Path, dry_run: bool = True):
         if c > 0:
             content = content.replace(old, new)
             changes[old + ' → ' + new] = c
+
+    # 带年龄语境保护的岁→年替换（处理 |时长 消歧的情形）
+    content, n_repl, n_skip = _sui_to_nian_with_age_guard(content)
+    if n_repl:
+        changes[f'〖%X岁|时长〗→〖%X年|时长〗（非年龄）'] = n_repl
+    if n_skip:
+        changes[f'〖%X岁|时长〗保留（年龄语境，规则 13）'] = n_skip
 
     # 正则规则
     for pat, repl in REGEX_RULES:
