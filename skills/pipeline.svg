@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1180" font-family="-apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif">
+  <title>史记知识库 SKILL 管线调用大图</title>
+  <desc>从原始文本到知识应用的完整工序依赖图，包含 14 元技能 + 87 管线技能</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arrow-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+
+  <style>
+    .title { font-size: 28px; font-weight: 700; fill: #1a1a1a; }
+    .subtitle { font-size: 14px; fill: #666; }
+    .stage-head { font-size: 18px; font-weight: 700; fill: #1a1a1a; }
+    .stage-bg { fill-opacity: 0.22; stroke-width: 1.5; }
+    .skill-box { fill: #ffffff; stroke-width: 1; rx: 4; ry: 4; }
+    .skill-main { stroke-width: 2; fill: #fff8e7; }
+    .skill-new { fill: #fff3b0; stroke: #d4a017; }
+    .skill-text { font-size: 12px; fill: #1a1a1a; dominant-baseline: middle; }
+    .skill-sub { font-size: 11px; fill: #444; dominant-baseline: middle; }
+    .meta-box { fill: #f3e8ff; stroke: #7c3aed; stroke-width: 1; rx: 3; }
+    .meta-text { font-size: 10.5px; fill: #3a1f66; dominant-baseline: middle; }
+    .main-flow { stroke: #333; stroke-width: 2.4; fill: none; }
+    .cross-dep { stroke: #2b6cb0; stroke-width: 1.2; fill: none; stroke-dasharray: 5 3; }
+    .tool-line { stroke: #a06; stroke-width: 1; fill: none; stroke-dasharray: 2 3; }
+    .legend-text { font-size: 12px; fill: #333; }
+    .note-text { font-size: 11px; fill: #555; font-style: italic; }
+  </style>
+
+  <!-- Title -->
+  <text x="1100" y="38" text-anchor="middle" class="title">《史记》知识库 SKILL 管线调用大图</text>
+  <text x="1100" y="60" text-anchor="middle" class="subtitle">14 元技能 + 87 管线技能 · 原始文本 → 知识应用 · 生成日期 2026-04-22</text>
+
+  <!-- ============ META SKILLS BAND (top) ============ -->
+  <rect x="20" y="78" width="2160" height="64" fill="#f3e8ff" fill-opacity="0.35" stroke="#7c3aed" stroke-width="1" rx="6"/>
+  <text x="32" y="98" class="stage-head" fill="#5b21b6" font-size="14">元技能 Meta-Skills（横向方法论，贯穿所有工序）</text>
+
+  <g transform="translate(30,110)">
+    <!-- 14 meta boxes in a row -->
+    <g><rect class="meta-box" x="0"    y="0" width="148" height="26"/><text class="meta-text" x="74"   y="13" text-anchor="middle">M00 好东西都是总结出来的</text></g>
+    <g><rect class="meta-box" x="154"  y="0" width="148" height="26"/><text class="meta-text" x="228"  y="13" text-anchor="middle">M01 反思</text></g>
+    <g><rect class="meta-box" x="308"  y="0" width="148" height="26"/><text class="meta-text" x="382"  y="13" text-anchor="middle">M02 迭代工作流</text></g>
+    <g><rect class="meta-box" x="462"  y="0" width="148" height="26"/><text class="meta-text" x="536"  y="13" text-anchor="middle">M03 冷启动</text></g>
+    <g><rect class="meta-box" x="616"  y="0" width="148" height="26"/><text class="meta-text" x="690"  y="13" text-anchor="middle">M04 柳叶刀方法</text></g>
+    <g><rect class="meta-box" x="770"  y="0" width="148" height="26"/><text class="meta-text" x="844"  y="13" text-anchor="middle">M05 知识即压缩</text></g>
+    <g><rect class="meta-box" x="924"  y="0" width="148" height="26"/><text class="meta-text" x="998"  y="13" text-anchor="middle">M06 SKILL 优化演化</text></g>
+    <g><rect class="meta-box" x="1078" y="0" width="148" height="26"/><text class="meta-text" x="1152" y="13" text-anchor="middle">M07 可读性</text></g>
+    <g><rect class="meta-box" x="1232" y="0" width="148" height="26"/><text class="meta-text" x="1306" y="13" text-anchor="middle">M08 标注体系设计</text></g>
+    <g><rect class="meta-box" x="1386" y="0" width="148" height="26"/><text class="meta-text" x="1460" y="13" text-anchor="middle">M09 Agent 提示词工程</text></g>
+    <g><rect class="meta-box" x="1540" y="0" width="148" height="26"/><text class="meta-text" x="1614" y="13" text-anchor="middle">M10 质量控制</text></g>
+    <g><rect class="meta-box" x="1694" y="0" width="148" height="26"/><text class="meta-text" x="1768" y="13" text-anchor="middle">M11 数据体感培养</text></g>
+    <g><rect class="meta-box" x="1848" y="0" width="148" height="26"/><text class="meta-text" x="1922" y="13" text-anchor="middle">M12 数据融合</text></g>
+    <g><rect class="meta-box" x="2002" y="0" width="148" height="26"/><text class="meta-text" x="2076" y="13" text-anchor="middle">M13 技能迁移</text></g>
+  </g>
+
+  <!-- ============ MAIN STAGE ARROWS (top of pipeline) ============ -->
+  <g stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <line x1="240" y1="185" x2="250" y2="185"/>
+    <line x1="470" y1="185" x2="480" y2="185"/>
+    <line x1="700" y1="185" x2="710" y2="185"/>
+    <line x1="930" y1="185" x2="940" y2="185"/>
+    <line x1="1160" y1="185" x2="1170" y2="185"/>
+    <line x1="1390" y1="185" x2="1400" y2="185"/>
+    <line x1="1620" y1="185" x2="1630" y2="185"/>
+    <line x1="1850" y1="185" x2="1860" y2="185"/>
+  </g>
+
+  <!-- ============ STAGE 01 校勘 ============ -->
+  <g>
+    <rect x="20"  y="160" width="220" height="560" class="stage-bg" fill="#f59e0b" stroke="#c2410c"/>
+    <text x="130" y="184" text-anchor="middle" class="stage-head">01 古籍校勘</text>
+    <text x="130" y="200" text-anchor="middle" class="subtitle">底本→定本</text>
+
+    <!-- skills -->
+    <g transform="translate(30,216)">
+      <rect class="skill-box skill-new" x="0" y="0"   width="200" height="26"/><text class="skill-text" x="100" y="13" text-anchor="middle">★ 01i OCR 影印句读排版</text>
+      <rect class="skill-box skill-main" x="0" y="30"  width="200" height="26"/><text class="skill-text" x="100" y="43" text-anchor="middle">01f 句读与标点（最前置）</text>
+      <rect class="skill-box" x="0" y="60"  width="200" height="26"/><text class="skill-text" x="100" y="73" text-anchor="middle">01e 繁简体处理</text>
+      <rect class="skill-box" x="0" y="90"  width="200" height="26"/><text class="skill-text" x="100" y="103" text-anchor="middle">01d 正音与拼音</text>
+      <rect class="skill-box" x="0" y="120" width="200" height="26"/><text class="skill-text" x="100" y="133" text-anchor="middle">01b 多版本互校</text>
+      <rect class="skill-box" x="0" y="150" width="200" height="26"/><text class="skill-text" x="100" y="163" text-anchor="middle">01c 表格校勘</text>
+      <rect class="skill-box" x="0" y="180" width="200" height="26"/><text class="skill-text" x="100" y="193" text-anchor="middle">01g 标注符号原则</text>
+      <rect class="skill-box" x="0" y="210" width="200" height="26"/><text class="skill-text" x="100" y="223" text-anchor="middle">01a 标注完整性校验</text>
+      <rect class="skill-box skill-new" x="0" y="240" width="200" height="26"/><text class="skill-text" x="100" y="253" text-anchor="middle">★ 01h 白话翻译（依赖 02a）</text>
+    </g>
+  </g>
+
+  <!-- ============ STAGE 02 结构分析 ============ -->
+  <g>
+    <rect x="250" y="160" width="220" height="560" class="stage-bg" fill="#eab308" stroke="#a16207"/>
+    <text x="360" y="184" text-anchor="middle" class="stage-head">02 结构分析</text>
+    <text x="360" y="200" text-anchor="middle" class="subtitle">段落/区块/注释层</text>
+
+    <g transform="translate(260,216)">
+      <rect class="skill-box skill-main" x="0" y="0"   width="200" height="26"/><text class="skill-text" x="100" y="13" text-anchor="middle">02a PN 章节切分编号</text>
+      <rect class="skill-box" x="0" y="30"  width="200" height="26"/><text class="skill-text" x="100" y="43" text-anchor="middle">02b 区块与韵文</text>
+      <rect class="skill-box" x="0" y="60"  width="200" height="26"/><text class="skill-text" x="100" y="73" text-anchor="middle">02c 三家注标注</text>
+      <rect class="skill-box" x="0" y="90"  width="200" height="26"/><text class="skill-text" x="100" y="103" text-anchor="middle">02g 表格结构语义</text>
+      <rect class="skill-box" x="0" y="120" width="200" height="26"/><text class="skill-text" x="100" y="133" text-anchor="middle">02d 结构语义分析</text>
+      <rect class="skill-box" x="0" y="150" width="200" height="26"/><text class="skill-text" x="100" y="163" text-anchor="middle">02e 词法分析</text>
+      <rect class="skill-box" x="0" y="180" width="200" height="26"/><text class="skill-text" x="100" y="193" text-anchor="middle">02f 文本统计</text>
+      <rect class="skill-box skill-new" x="0" y="210" width="200" height="26"/><text class="skill-text" x="100" y="223" text-anchor="middle">★ 02h 词表构建</text>
+      <rect class="skill-box" x="0" y="240" width="200" height="26"/><text class="skill-text" x="100" y="253" text-anchor="middle">02i 指代消解（依赖 03a）</text>
+      <rect class="skill-box skill-new" x="0" y="270" width="200" height="26"/><text class="skill-text" x="100" y="283" text-anchor="middle">★ 02j 修辞标注（依赖 03a）</text>
+      <rect class="skill-box skill-new" x="0" y="300" width="200" height="26"/><text class="skill-text" x="100" y="313" text-anchor="middle">★ 02k 成语识别（依赖 03a）</text>
+    </g>
+  </g>
+
+  <!-- ============ STAGE 03 实体构建 ============ -->
+  <g>
+    <rect x="480" y="160" width="220" height="560" class="stage-bg" fill="#22c55e" stroke="#15803d"/>
+    <text x="590" y="184" text-anchor="middle" class="stage-head">03 实体构建</text>
+    <text x="590" y="200" text-anchor="middle" class="subtitle">23 类 NER / 消歧 / 分类</text>
+
+    <g transform="translate(490,216)">
+      <rect class="skill-box skill-main" x="0" y="0"   width="200" height="26"/><text class="skill-text" x="100" y="13" text-anchor="middle">03a 实体标注（23 类）</text>
+      <rect class="skill-box" x="0" y="30"  width="200" height="26"/><text class="skill-text" x="100" y="43" text-anchor="middle">03b 人名消歧</text>
+      <rect class="skill-box" x="0" y="60"  width="200" height="26"/><text class="skill-text" x="100" y="73" text-anchor="middle">03c 按章反思</text>
+      <rect class="skill-box" x="0" y="90"  width="200" height="26"/><text class="skill-text" x="100" y="103" text-anchor="middle">03f 边界反思</text>
+      <rect class="skill-box skill-new" x="0" y="120" width="200" height="26"/><text class="skill-text" x="100" y="133" text-anchor="middle">★ 03e 按类型反思（入口）</text>
+      <rect class="skill-box" x="10" y="150" width="180" height="22"/><text class="skill-sub" x="100" y="161" text-anchor="middle">├ 03e1 跨类型迁移</text>
+      <rect class="skill-box" x="10" y="176" width="180" height="22"/><text class="skill-sub" x="100" y="187" text-anchor="middle">└ 03e2 按类型纠错</text>
+      <rect class="skill-box" x="0" y="202" width="200" height="26"/><text class="skill-text" x="100" y="215" text-anchor="middle">03g 时间实体消歧</text>
+      <rect class="skill-box" x="0" y="232" width="200" height="26"/><text class="skill-text" x="100" y="245" text-anchor="middle">03h 地名分类</text>
+      <rect class="skill-box" x="0" y="262" width="200" height="26"/><text class="skill-text" x="100" y="275" text-anchor="middle">03i 官职分类</text>
+      <rect class="skill-box skill-new" x="0" y="292" width="200" height="26"/><text class="skill-text" x="100" y="305" text-anchor="middle">★ 03j 人名分类+alias 合并</text>
+      <rect class="skill-box skill-new" x="0" y="322" width="200" height="26"/><text class="skill-text" x="100" y="335" text-anchor="middle">★ 03k 邦国分类</text>
+      <rect class="skill-box" x="0" y="352" width="200" height="26"/><text class="skill-text" x="100" y="365" text-anchor="middle">03d 渲染与发布 → 09a</text>
+    </g>
+  </g>
+
+  <!-- ============ STAGE 04 事件构建 ============ -->
+  <g>
+    <rect x="710" y="160" width="220" height="560" class="stage-bg" fill="#10b981" stroke="#047857"/>
+    <text x="820" y="184" text-anchor="middle" class="stage-head">04 事件构建</text>
+    <text x="820" y="200" text-anchor="middle" class="subtitle">事件+纪年</text>
+
+    <g transform="translate(720,216)">
+      <rect class="skill-box" x="0" y="0"   width="200" height="26"/><text class="skill-text" x="100" y="13" text-anchor="middle">04f 动词标注（谓词）</text>
+      <rect class="skill-box skill-main" x="0" y="30"  width="200" height="26"/><text class="skill-text" x="100" y="43" text-anchor="middle">04a 事件识别</text>
+      <rect class="skill-box" x="0" y="60"  width="200" height="26"/><text class="skill-text" x="100" y="73" text-anchor="middle">04b 十表事件</text>
+      <rect class="skill-box" x="0" y="90"  width="200" height="26"/><text class="skill-text" x="100" y="103" text-anchor="middle">04c 事件年代推断</text>
+      <rect class="skill-box" x="0" y="120" width="200" height="26"/><text class="skill-text" x="100" y="133" text-anchor="middle">04e 年份消歧</text>
+      <rect class="skill-box" x="0" y="150" width="200" height="26"/><text class="skill-text" x="100" y="163" text-anchor="middle">04d 年代审查</text>
+    </g>
+  </g>
+
+  <!-- ============ STAGE 05 关系构建 ============ -->
+  <g>
+    <rect x="940" y="160" width="220" height="560" class="stage-bg" fill="#06b6d4" stroke="#0e7490"/>
+    <text x="1050" y="184" text-anchor="middle" class="stage-head">05 关系构建</text>
+    <text x="1050" y="200" text-anchor="middle" class="subtitle">关系+事实</text>
+
+    <g transform="translate(950,216)">
+      <rect class="skill-box" x="0" y="0"   width="200" height="26"/><text class="skill-text" x="100" y="13" text-anchor="middle">05a 事件关系发现</text>
+      <rect class="skill-box" x="0" y="30"  width="200" height="26"/><text class="skill-text" x="100" y="43" text-anchor="middle">05b 实体关系构建</text>
+      <rect class="skill-box" x="0" y="60"  width="200" height="26"/><text class="skill-text" x="100" y="73" text-anchor="middle">05c 人物关系构建</text>
+      <rect class="skill-box" x="0" y="90"  width="200" height="26"/><text class="skill-text" x="100" y="103" text-anchor="middle">05e 战争事件识别</text>
+      <rect class="skill-box skill-main" x="0" y="120" width="200" height="26"/><text class="skill-text" x="100" y="133" text-anchor="middle">05d 事实发现（SPO 10 万）</text>
+    </g>
+  </g>
+
+  <!-- ============ STAGE 06 本体 ============ -->
+  <g>
+    <rect x="1170" y="160" width="220" height="560" class="stage-bg" fill="#3b82f6" stroke="#1d4ed8"/>
+    <text x="1280" y="184" text-anchor="middle" class="stage-head">06 本体构造</text>
+    <text x="1280" y="200" text-anchor="middle" class="subtitle">OWL/RDF + 规则</text>
+
+    <g transform="translate(1180,216)">
+      <rect class="skill-box skill-main" x="0" y="0"   width="200" height="26"/><text class="skill-text" x="100" y="13" text-anchor="middle">06a 实体到本体</text>
+      <rect class="skill-box skill-new" x="0" y="30"  width="200" height="26"/><text class="skill-text" x="100" y="43" text-anchor="middle">★ 06e 概念分类树构建</text>
+      <rect class="skill-box" x="0" y="60"  width="200" height="26"/><text class="skill-text" x="100" y="73" text-anchor="middle">06b 属性/约束（规划）</text>
+      <rect class="skill-box" x="0" y="90"  width="200" height="26"/><text class="skill-text" x="100" y="103" text-anchor="middle">06c 规则构建（规划）</text>
+      <rect class="skill-box" x="0" y="120" width="200" height="26"/><text class="skill-text" x="100" y="133" text-anchor="middle">06d 推理机（规划）</text>
+    </g>
+  </g>
+
+  <!-- ============ STAGE 07 推理 ============ -->
+  <g>
+    <rect x="1400" y="160" width="220" height="560" class="stage-bg" fill="#8b5cf6" stroke="#6d28d9"/>
+    <text x="1510" y="184" text-anchor="middle" class="stage-head">07 逻辑推理</text>
+    <text x="1510" y="200" text-anchor="middle" class="subtitle">矛盾+洞见</text>
+
+    <g transform="translate(1410,216)">
+      <rect class="skill-box" x="0" y="0"   width="200" height="26"/><text class="skill-text" x="100" y="13" text-anchor="middle">07a 生卒年推断</text>
+      <rect class="skill-box" x="0" y="30"  width="200" height="26"/><text class="skill-text" x="100" y="43" text-anchor="middle">07b 姓氏推理</text>
+      <rect class="skill-box" x="0" y="60"  width="200" height="26"/><text class="skill-text" x="100" y="73" text-anchor="middle">07c 反常推理</text>
+      <rect class="skill-box" x="0" y="90"  width="200" height="26"/><text class="skill-text" x="100" y="103" text-anchor="middle">07d 溯源推理</text>
+      <rect class="skill-box" x="0" y="120" width="200" height="26"/><text class="skill-text" x="100" y="133" text-anchor="middle">07e 真实性推理</text>
+      <rect class="skill-box" x="0" y="150" width="200" height="26"/><text class="skill-text" x="100" y="163" text-anchor="middle">07f 专著方法提炼</text>
+    </g>
+  </g>
+
+  <!-- ============ STAGE 08 管驭 ============ -->
+  <g>
+    <rect x="1630" y="160" width="220" height="560" class="stage-bg" fill="#ec4899" stroke="#be185d"/>
+    <text x="1740" y="184" text-anchor="middle" class="stage-head">08 知识库管驭</text>
+    <text x="1740" y="200" text-anchor="middle" class="subtitle">粒度/覆盖/成本/质量</text>
+
+    <g transform="translate(1640,216)">
+      <rect class="skill-box" x="0" y="0"   width="200" height="26"/><text class="skill-text" x="100" y="13" text-anchor="middle">08a 颗粒度（规划）</text>
+      <rect class="skill-box" x="0" y="30"  width="200" height="26"/><text class="skill-text" x="100" y="43" text-anchor="middle">08b 覆盖度评估</text>
+      <rect class="skill-box" x="0" y="60"  width="200" height="26"/><text class="skill-text" x="100" y="73" text-anchor="middle">08c 成本管控（规划）</text>
+      <rect class="skill-box" x="0" y="90"  width="200" height="26"/><text class="skill-text" x="100" y="103" text-anchor="middle">08d 正确性（规划）</text>
+      <rect class="skill-box" x="0" y="120" width="200" height="26"/><text class="skill-text" x="100" y="133" text-anchor="middle">08e 表格迭代提取</text>
+      <rect class="skill-box skill-new" x="0" y="150" width="200" height="26"/><text class="skill-text" x="100" y="163" text-anchor="middle">★ 08f 置信度函数设计</text>
+    </g>
+  </g>
+
+  <!-- ============ STAGE 09 应用 ============ -->
+  <g>
+    <rect x="1860" y="160" width="320" height="560" class="stage-bg" fill="#ef4444" stroke="#b91c1c"/>
+    <text x="2020" y="184" text-anchor="middle" class="stage-head">09 应用构造</text>
+    <text x="2020" y="200" text-anchor="middle" class="subtitle">阅读/搜索/创作/研究</text>
+
+    <g transform="translate(1870,216)">
+      <rect class="skill-box skill-main" x="0" y="0"   width="145" height="26"/><text class="skill-text" x="72"  y="13" text-anchor="middle">09a 语法高亮</text>
+      <rect class="skill-box" x="155" y="0"  width="145" height="26"/><text class="skill-text" x="228" y="13" text-anchor="middle">09c 个性化阅读</text>
+      <rect class="skill-box" x="0" y="30"   width="145" height="26"/><text class="skill-text" x="72"  y="43" text-anchor="middle">09m 排版电子书</text>
+      <rect class="skill-box skill-new" x="155" y="30" width="145" height="26"/><text class="skill-text" x="228" y="43" text-anchor="middle">★ 09d 语义搜索</text>
+      <rect class="skill-box" x="0" y="60"   width="145" height="26"/><text class="skill-text" x="72"  y="73" text-anchor="middle">09b 游戏化</text>
+      <rect class="skill-box" x="155" y="60"  width="145" height="26"/><text class="skill-text" x="228" y="73" text-anchor="middle">09e 故事创作</text>
+      <rect class="skill-box" x="0" y="90"   width="145" height="26"/><text class="skill-text" x="72"  y="103" text-anchor="middle">09f 音频创作</text>
+      <rect class="skill-box" x="155" y="90"  width="145" height="26"/><text class="skill-text" x="228" y="103" text-anchor="middle">09g 视频创作</text>
+      <rect class="skill-box" x="0" y="120"  width="145" height="26"/><text class="skill-text" x="72"  y="133" text-anchor="middle">09h 图片漫画</text>
+      <rect class="skill-box" x="155" y="120" width="145" height="26"/><text class="skill-text" x="228" y="133" text-anchor="middle">09i 信息图可视化</text>
+      <rect class="skill-box" x="0" y="150"  width="145" height="26"/><text class="skill-text" x="72"  y="163" text-anchor="middle">09j 历史地图</text>
+      <rect class="skill-box" x="155" y="150" width="145" height="26"/><text class="skill-text" x="228" y="163" text-anchor="middle">09k 专业文献</text>
+      <rect class="skill-box" x="0" y="180"  width="145" height="26"/><text class="skill-text" x="72"  y="193" text-anchor="middle">09l 考古辅助</text>
+    </g>
+  </g>
+
+  <!-- ============ CROSS-STAGE DEPENDENCIES (dashed blue) ============ -->
+  <!-- 02a → 01h (白话翻译依赖PN) -->
+  <path class="cross-dep" d="M 260,229 C 250,460 250,460 240,472" marker-end="url(#arrow-blue)"/>
+  <!-- 03a → 02i/02j/02k -->
+  <path class="cross-dep" d="M 490,229 C 478,440 478,440 460,472" marker-end="url(#arrow-blue)"/>
+  <path class="cross-dep" d="M 490,229 C 478,490 478,490 460,502" marker-end="url(#arrow-blue)"/>
+  <path class="cross-dep" d="M 490,229 C 478,520 478,520 460,532" marker-end="url(#arrow-blue)"/>
+  <!-- 03g → 04c (时间消歧 → 年代推断) -->
+  <path class="cross-dep" d="M 690,432 C 700,432 710,319 720,319" marker-end="url(#arrow-blue)"/>
+  <!-- 03a → 04f (动词标注 依赖实体边界) -->
+  <path class="cross-dep" d="M 690,229 C 705,229 705,229 720,229" marker-end="url(#arrow-blue)"/>
+  <!-- 03h/i/j/k → 06a (二级分类 → 本体) -->
+  <path class="cross-dep" d="M 690,505 C 900,505 1050,229 1180,229" marker-end="url(#arrow-blue)"/>
+  <!-- 05d → 07c (事实 → 反常推理) -->
+  <path class="cross-dep" d="M 1150,349 C 1275,349 1275,289 1410,289" marker-end="url(#arrow-blue)"/>
+  <!-- 06 → 09d (本体 → 语义搜索) -->
+  <path class="cross-dep" d="M 1380,245 C 1500,245 1700,259 1870,259" marker-end="url(#arrow-blue)"/>
+  <!-- 03d → 09a (渲染 → 阅读) -->
+  <path class="cross-dep" d="M 690,581 C 1100,700 1600,229 1870,229" marker-end="url(#arrow-blue)"/>
+
+  <!-- ============ STAGE 10 项目管理（底部横向支撑带）============ -->
+  <g>
+    <rect x="20" y="750" width="2160" height="90" fill="#6b7280" fill-opacity="0.18" stroke="#374151" stroke-width="1.5" rx="6"/>
+    <text x="32" y="776" class="stage-head" fill="#1f2937">10 项目管理（横向贯穿所有工序）</text>
+
+    <g transform="translate(30,790)">
+      <rect class="skill-box" x="0"    y="0" width="296" height="34"/><text class="skill-text" x="148"  y="17" text-anchor="middle">10a TODO / Issue 管理</text>
+      <rect class="skill-box" x="306"  y="0" width="296" height="34"/><text class="skill-text" x="454"  y="17" text-anchor="middle">10b 每日工作日志</text>
+      <rect class="skill-box" x="612"  y="0" width="296" height="34"/><text class="skill-text" x="760"  y="17" text-anchor="middle">10c Git 版本管理规范</text>
+      <rect class="skill-box" x="918"  y="0" width="296" height="34"/><text class="skill-text" x="1066" y="17" text-anchor="middle">10d CHANGELOG 编写</text>
+      <rect class="skill-box" x="1224" y="0" width="296" height="34"/><text class="skill-text" x="1372" y="17" text-anchor="middle">10e 文件组织与目录结构</text>
+      <rect class="skill-box" x="1530" y="0" width="296" height="34"/><text class="skill-text" x="1678" y="17" text-anchor="middle">10f Skill 提炼与转化</text>
+      <rect class="skill-box" x="1836" y="0" width="294" height="34"/><text class="skill-text" x="1983" y="17" text-anchor="middle">10g 项目成本与时间</text>
+    </g>
+  </g>
+
+  <!-- Vertical ties from stage-10 band to all upper stages -->
+  <g stroke="#a06" stroke-width="1" stroke-dasharray="2 3" fill="none">
+    <line x1="130"  y1="720" x2="130"  y2="750"/>
+    <line x1="360"  y1="720" x2="360"  y2="750"/>
+    <line x1="590"  y1="720" x2="590"  y2="750"/>
+    <line x1="820"  y1="720" x2="820"  y2="750"/>
+    <line x1="1050" y1="720" x2="1050" y2="750"/>
+    <line x1="1280" y1="720" x2="1280" y2="750"/>
+    <line x1="1510" y1="720" x2="1510" y2="750"/>
+    <line x1="1740" y1="720" x2="1740" y2="750"/>
+    <line x1="2020" y1="720" x2="2020" y2="750"/>
+  </g>
+
+  <!-- ============ LEGEND ============ -->
+  <g transform="translate(20,870)">
+    <rect x="0" y="0" width="2160" height="280" fill="#fafafa" stroke="#d1d5db" stroke-width="1" rx="6"/>
+    <text x="16" y="26" class="stage-head" font-size="16">图例</text>
+
+    <g transform="translate(20,42)">
+      <!-- Flow legend -->
+      <text x="0" y="18" class="legend-text" font-weight="700">流向</text>
+      <line x1="0" y1="40" x2="60" y2="40" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)"/>
+      <text x="70" y="44" class="legend-text">主管线（阶段间顺序）</text>
+      <line x1="0" y1="64" x2="60" y2="64" stroke="#2b6cb0" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow-blue)"/>
+      <text x="70" y="68" class="legend-text">跨阶段依赖（02i/02j/02k 依赖 03a 等）</text>
+      <line x1="0" y1="88" x2="60" y2="88" stroke="#a06" stroke-width="1" stroke-dasharray="2 3"/>
+      <text x="70" y="92" class="legend-text">项目管理横向支撑</text>
+
+      <!-- Box color legend -->
+      <text x="360" y="18" class="legend-text" font-weight="700">SKILL 盒子</text>
+      <rect x="360" y="30" width="140" height="22" class="skill-box"/>
+      <text x="510" y="44" class="legend-text">普通 SKILL</text>
+      <rect x="360" y="58" width="140" height="22" class="skill-box skill-main"/>
+      <text x="510" y="72" class="legend-text">阶段主入口 SKILL</text>
+      <rect x="360" y="86" width="140" height="22" class="skill-box skill-new"/>
+      <text x="510" y="100" class="legend-text">★ 近两周新增/重写（截至 2026-04-22）</text>
+      <rect x="360" y="114" width="140" height="22" class="meta-box"/>
+      <text x="510" y="128" class="meta-text" fill="#333">元技能 Meta-Skill</text>
+
+      <!-- Stage color legend -->
+      <text x="780" y="18" class="legend-text" font-weight="700">阶段配色</text>
+      <g transform="translate(780,30)">
+        <rect x="0"    y="0" width="80" height="18" fill="#f59e0b" fill-opacity="0.22" stroke="#c2410c"/><text x="86" y="13" class="legend-text">01 校勘</text>
+        <rect x="160"  y="0" width="80" height="18" fill="#eab308" fill-opacity="0.22" stroke="#a16207"/><text x="246" y="13" class="legend-text">02 结构</text>
+        <rect x="320"  y="0" width="80" height="18" fill="#22c55e" fill-opacity="0.22" stroke="#15803d"/><text x="406" y="13" class="legend-text">03 实体</text>
+        <rect x="480"  y="0" width="80" height="18" fill="#10b981" fill-opacity="0.22" stroke="#047857"/><text x="566" y="13" class="legend-text">04 事件</text>
+        <rect x="640"  y="0" width="80" height="18" fill="#06b6d4" fill-opacity="0.22" stroke="#0e7490"/><text x="726" y="13" class="legend-text">05 关系</text>
+        <rect x="800"  y="0" width="80" height="18" fill="#3b82f6" fill-opacity="0.22" stroke="#1d4ed8"/><text x="886" y="13" class="legend-text">06 本体</text>
+        <rect x="960"  y="0" width="80" height="18" fill="#8b5cf6" fill-opacity="0.22" stroke="#6d28d9"/><text x="1046" y="13" class="legend-text">07 推理</text>
+        <rect x="0"    y="30" width="80" height="18" fill="#ec4899" fill-opacity="0.22" stroke="#be185d"/><text x="86" y="43" class="legend-text">08 管驭</text>
+        <rect x="160"  y="30" width="80" height="18" fill="#ef4444" fill-opacity="0.22" stroke="#b91c1c"/><text x="246" y="43" class="legend-text">09 应用</text>
+        <rect x="320"  y="30" width="80" height="18" fill="#6b7280" fill-opacity="0.18" stroke="#374151"/><text x="406" y="43" class="legend-text">10 项目管理</text>
+      </g>
+
+      <!-- Notes -->
+      <text x="0" y="160" class="legend-text" font-weight="700">备注</text>
+      <text x="0" y="182" class="note-text">· 图中"编号"沿用现有 SKILL 文件名，不做改号；与依赖顺序不一致处以跨阶段蓝色虚线箭头标示。</text>
+      <text x="0" y="202" class="note-text">· 01h 白话翻译编号属 01，但实际依赖 02a PN 编号；02i/02j/02k 依赖 03a 实体边界；04f 动词标注依赖 03a。</text>
+      <text x="0" y="222" class="note-text">· 03d 渲染发布 → 09a 语法高亮为跨阶段"产出→应用"接续。</text>
+      <text x="0" y="242" class="note-text">· 元技能 M00–M13 为横向方法论，所有工序均可调用，不绘具体箭头。</text>
+    </g>
+  </g>
+</svg>
