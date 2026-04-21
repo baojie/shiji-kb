@@ -1309,3 +1309,202 @@ body.show-translation .modern-translation {
     }
 }
 
+/* =========================================================================
+ * 三家注（集解·索隐·正义）行下展示
+ * 数据源：docs/notes_cache/NNN-notes.json（由 scripts/build_sanjia_cache.py 生成）
+ * 渲染：docs/js/sanjia-notes.js
+ * ========================================================================= */
+
+/* 原文中的锚点编号（默认隐藏，启用三家注时显示） */
+.sanjia-anchor-marker {
+    display: none;
+    color: #c0504d;
+    font-size: 0.7em;
+    font-weight: bold;
+    vertical-align: super;
+    cursor: pointer;
+    margin: 0 1px;
+    padding: 0 2px;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s;
+    user-select: none;
+}
+body.show-sanjia .sanjia-anchor-marker {
+    display: inline;
+}
+.sanjia-anchor-marker:hover {
+    background: #fff3cd;
+    color: #8B4513;
+}
+.sanjia-anchor-marker.highlighted {
+    background: #ffd700;
+    color: #8B4513;
+}
+
+/* 注释容器：默认隐藏，启用时显示 */
+.sanjia-notes-container {
+    display: none;
+    background-color: #faf8f0;
+    border-left: 4px solid #c0a060;
+    padding: 14px 18px;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+    font-size: 0.9em;
+    line-height: 1.8;
+    color: #3d3326;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+}
+body.show-sanjia .sanjia-notes-container {
+    display: block;
+}
+.sanjia-notes-container::before {
+    content: "三家注";
+    display: block;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #8B4513;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+.sanjia-notes-container.sanjia-notes-chapter::before {
+    content: "三家注 · 章首";
+}
+.sanjia-notes-container.sanjia-notes-orphans::before {
+    content: "三家注 · 未定位";
+    color: #888;
+}
+
+/* 折叠式未定位注：<details> 元素 */
+details.sanjia-notes-container {
+    margin-top: 30px;
+    opacity: 0.85;
+}
+details.sanjia-notes-container[open] {
+    opacity: 1;
+}
+details.sanjia-notes-container > summary {
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 0;
+    font-weight: 600;
+    color: #8B4513;
+    outline: none;
+    list-style: none;
+}
+details.sanjia-notes-container > summary::-webkit-details-marker {
+    display: none;
+}
+details.sanjia-notes-container > summary::before {
+    content: "▸ ";
+    display: inline-block;
+    font-size: 0.9em;
+    margin-right: 4px;
+    transition: transform 0.15s;
+}
+details.sanjia-notes-container[open] > summary::before {
+    content: "▾ ";
+}
+.sanjia-notes-heading {
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+/* 单条注释条目 */
+.sanjia-note {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #fff8e5;
+    border-radius: 4px;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.sanjia-note:last-child {
+    margin-bottom: 0;
+}
+.sanjia-note.highlighted {
+    background: #fff3b8;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* 注释条目内：编号与锚词 */
+.sanjia-note-num {
+    display: inline-block;
+    color: #c0504d;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-right: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+.sanjia-note-anchor {
+    display: inline-block;
+    color: #8B4513;
+    font-weight: 500;
+    padding: 0 4px;
+    border-bottom: 1px dotted #c0a060;
+    margin-right: 8px;
+    font-size: 0.92em;
+}
+
+/* 条目内的单条注（集解/索隐/正义） */
+.sanjia-note-items {
+    margin-top: 4px;
+}
+.sanjia-note-item {
+    margin-bottom: 4px;
+    padding-left: 2px;
+    line-height: 1.75;
+}
+.sanjia-note-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 出处标签：三色区分 */
+.sanjia-source {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 3px;
+    font-size: 0.78em;
+    font-weight: bold;
+    margin-right: 8px;
+    color: white;
+    vertical-align: baseline;
+    letter-spacing: 0.05em;
+}
+.sanjia-source-jijie   { background: #26a269; }  /* 集解：绿 */
+.sanjia-source-suoyin  { background: #d72187; }  /* 索隐：粉 */
+.sanjia-source-zhengyi { background: #8B5A5A; }  /* 正义：棕 */
+
+.sanjia-text {
+    color: #4a3c2a;
+}
+
+/* 智能分段（合并模式）：隐藏子段落的三家注容器，避免错位重复 */
+body.merge-paragraphs .sanjia-notes-container[data-sub="true"] {
+    display: none !important;
+}
+
+/* 移动端响应式 */
+@media (max-width: 768px) {
+    .sanjia-notes-container {
+        font-size: 0.85em;
+        padding: 12px 14px;
+        margin: 8px 0 16px 0;
+    }
+    .sanjia-source {
+        font-size: 0.75em;
+        padding: 1px 6px;
+    }
+}
+
+/* 打印优化 */
+@media print {
+    .sanjia-notes-container {
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+}
+

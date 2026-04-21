@@ -74,7 +74,10 @@
             // 繁简转换（依赖OpenCC.js）
             '../js/simp-trad-converter.js',
 
-            // 配置面板（最后加载，依赖转换器）
+            // 三家注（集解·索隐·正义）
+            '../js/sanjia-notes.js',
+
+            // 配置面板（最后加载，依赖转换器与三家注模块）
             '../js/settings-panel-config.js',
 
             // 报错按钮（独立功能，无依赖）

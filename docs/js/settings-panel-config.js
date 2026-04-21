@@ -56,6 +56,16 @@
             }
         },
         {
+            id: 'sanjia-notes',
+            label: '三家注',
+            labelHTML: '三家注 <span style="font-size:0.8em;color:#999;font-weight:normal;">（集解·索隐·正义）</span>',
+            storageKey: 'shiji-sanjia-notes',
+            defaultValue: false,  // 默认关闭
+            onChange: function(enabled) {
+                updateSanjiaNotes(enabled);
+            }
+        },
+        {
             type: 'slider',
             id: 'font-size',
             label: '字体大小',
@@ -266,6 +276,16 @@
                 elem.removeAttribute('data-original-translation');
             });
 
+            // 恢复合并过的顶级三家注容器
+            document.querySelectorAll('.sanjia-notes-container[data-original-sanjia]').forEach(elem => {
+                elem.innerHTML = elem.getAttribute('data-original-sanjia');
+                elem.removeAttribute('data-original-sanjia');
+            });
+            // 移除动态创建的三家注合并容器（当顶级段落原本无三家注时创建）
+            document.querySelectorAll('.sanjia-notes-container[data-dynamically-merged]').forEach(elem => {
+                elem.remove();
+            });
+
             // 恢复对话和引用元素的样式
             document.querySelectorAll('.quoted, .dialogue').forEach(elem => {
                 elem.style.display = '';
@@ -457,6 +477,53 @@
                         }
                     }
                 }
+
+                // 合并子段落的三家注到顶级三家注容器（类比白话翻译合并）
+                // 顶级容器用 data-pn=topNum 查找；子容器 data-pn 形如 "N.M" "N.M.K"
+                const subSanjiaNotes = [];
+                document.querySelectorAll(
+                    `.sanjia-notes-container[data-sub][data-pn^="${topNum}."]`
+                ).forEach(sub => {
+                    const pn = sub.getAttribute('data-pn') || '';
+                    // 仅匹配 topNum 为根的编号（避免 "10.1" 误匹配 topNum="1"）
+                    if (pn.split('.')[0] !== topNum) return;
+                    Array.from(sub.querySelectorAll('.sanjia-note')).forEach(note => {
+                        subSanjiaNotes.push(note.outerHTML);
+                    });
+                });
+                if (subSanjiaNotes.length > 0) {
+                    const topSanjia = document.querySelector(
+                        `.sanjia-notes-container[data-pn="${topNum}"]:not([data-sub])`
+                    );
+                    if (topSanjia) {
+                        // 顶级段落本身有三家注：把子注追加进去
+                        topSanjia.setAttribute('data-original-sanjia', topSanjia.innerHTML);
+                        topSanjia.innerHTML += subSanjiaNotes.join('');
+                    } else {
+                        // 顶级段落原无三家注：动态创建一个容器承载子注
+                        const newContainer = document.createElement('div');
+                        newContainer.className = 'sanjia-notes-container';
+                        newContainer.setAttribute('data-pn', topNum);
+                        newContainer.setAttribute('data-dynamically-merged', 'true');
+                        newContainer.innerHTML = subSanjiaNotes.join('');
+                        // 插入到 topElem 之后，跳过紧跟的 <ul>/<ol> 与 modern-translation
+                        let anchor = topElem;
+                        while (anchor.nextElementSibling && (
+                            anchor.nextElementSibling.tagName === 'UL' ||
+                            anchor.nextElementSibling.tagName === 'OL'
+                        )) {
+                            anchor = anchor.nextElementSibling;
+                        }
+                        while (anchor.nextElementSibling &&
+                               anchor.nextElementSibling.classList &&
+                               anchor.nextElementSibling.classList.contains('modern-translation')) {
+                            anchor = anchor.nextElementSibling;
+                        }
+                        if (anchor.parentNode) {
+                            anchor.parentNode.insertBefore(newContainer, anchor.nextSibling);
+                        }
+                    }
+                }
             });
 
             // 兜底处理：对于所有未被合并的子段落（孤立子段落，没有对应的顶级段落）
@@ -579,6 +646,29 @@
             });
 
             console.log('[settings-panel] 白话翻译已关闭');
+        }
+    }
+
+    /**
+     * 更新三家注显示（由 sanjia-notes.js 实现加载与渲染）
+     */
+    async function updateSanjiaNotes(enabled) {
+        // 模块可能晚于此处初始化，等待就绪后再调用
+        const invoke = () => window.ShijiSanjia.setEnabled(enabled);
+        if (window.ShijiSanjia) {
+            invoke();
+        } else {
+            let attempts = 0;
+            const timer = setInterval(() => {
+                attempts++;
+                if (window.ShijiSanjia) {
+                    clearInterval(timer);
+                    invoke();
+                } else if (attempts > 50) {
+                    clearInterval(timer);
+                    console.warn('[settings-panel] ShijiSanjia 未加载');
+                }
+            }, 100);
         }
     }
 
