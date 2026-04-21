@@ -294,11 +294,7 @@ def generate_html(json_path, output_path):
 
         /* 搜索框样式 */
         .search-box {
-            background: #fff8f0;
-            padding: 20px;
             margin-bottom: 30px;
-            border-radius: 5px;
-            border: 2px solid #d4a373;
         }
 
         .search-box input {
