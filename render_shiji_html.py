@@ -425,10 +425,14 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
         return
 
     # 确定输出文件
+    # 默认输出到 docs/chapters/，而非源 .md 所在目录（避免产生错误的 CSS 相对路径）
     if output_file is None:
-        output_file = md_path.with_suffix('.html')
+        project_root = md_path.parent.parent
+        docs_chapters = project_root / 'docs' / 'chapters'
+        docs_chapters.mkdir(parents=True, exist_ok=True)
+        output_file = docs_chapters / md_path.with_suffix('.html').name.replace('.tagged.html', '.html')
     output_path = Path(output_file)
-    
+
     # 确定CSS文件路径
     if css_file is None:
         css_file = md_path.parent.parent / 'docs' / 'css' / 'shiji-styles.css'
@@ -860,20 +864,31 @@ def markdown_to_html(md_file, output_file=None, css_file=None, prev_chapter=None
             )
 
     # 生成完整HTML
-    # 计算CSS文件的相对路径（从输出HTML文件到CSS文件）
+    # 计算 CSS / JS 相对路径（从输出 HTML 到 docs/css 与 docs/js）
+    # 约束：输出路径必须位于 docs/ 子树内，否则相对路径会是相对 docs 之外的，
+    # 上传 GitHub Pages 后会 404。
+    import os
+    css_path = Path(css_file).resolve()
+    out_parent_abs = output_path.resolve().parent
+    docs_root = css_path.parent.parent  # css_file = docs/css/xxx → docs_root = docs
     try:
-        # 使用 os.path.relpath 来计算相对路径，支持兄弟目录
-        import os
-        css_href = os.path.relpath(css_file, output_path.parent)
-        # 计算chapter-nav.css的相对路径
-        chapter_nav_css = os.path.relpath(str(Path(css_file).parent / 'chapter-nav.css'), output_path.parent)
-        # 计算shiji-imports.js的相对路径（统一脚本导入）
-        shiji_imports_js = os.path.relpath(str(Path(css_file).parent.parent / 'js' / 'shiji-imports.js'), output_path.parent)
-    except Exception:
-        # 如果失败，使用简单的相对路径（假设标准目录结构）
-        css_href = "../css/shiji-styles.css"
-        chapter_nav_css = "../css/chapter-nav.css"
-        shiji_imports_js = "../js/shiji-imports.js"
+        out_parent_abs.relative_to(docs_root)
+    except ValueError:
+        raise RuntimeError(
+            f"[render_shiji_html] 输出 {output_path} 必须在 {docs_root} 子树内；"
+            f"否则生成的 CSS 相对路径会指向 docs 之外，GitHub Pages 上将 404。"
+        )
+
+    css_href = os.path.relpath(css_path, out_parent_abs)
+    chapter_nav_css = os.path.relpath(css_path.parent / 'chapter-nav.css', out_parent_abs)
+    shiji_imports_js = os.path.relpath(css_path.parent.parent / 'js' / 'shiji-imports.js', out_parent_abs)
+
+    # 清洁性检查：CSS href 必须能解析为存在的文件
+    if not (out_parent_abs / css_href).exists():
+        raise RuntimeError(
+            f"[render_shiji_html] 计算得到的 CSS 相对路径 {css_href!r} "
+            f"从 {out_parent_abs} 解析后不存在。请检查 css_file 与输出路径。"
+        )
 
     # 生成导航栏HTML
     # 计算主页链接：如果输出在 docs/chapters/ 下则用 ../index.html
