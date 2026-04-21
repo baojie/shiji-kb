@@ -65,7 +65,7 @@ python scripts/lint_text_integrity.py
 | 维度 | 脚本 | 输出 | 频率 |
 |------|------|------|------|
 | 去重后条目数 · 总出现次数 · 各类分布 | `kg/entities/scripts/build_entity_index.py` | `kg/entities/data/entity_index.json` + `docs/entities/*.html` | 每次实体标注改动后 |
-| 周度快照（趋势图） | `data/entity_stats_weekly.md`（手动维护） | 同名 md | 每周 |
+| 周度快照（趋势图） | `doc/entities/实体标注统计/每周实体数量统计.md`（手动维护） | 同名 md | 每周 |
 
 **回答的问题**：去重后有多少"不同的"人名、地名等？每类平均出现多少次？
 
@@ -119,7 +119,7 @@ python scripts/lint_text_integrity.py
 
 - **[kg/entities/scripts/build_entity_index.py](../../kg/entities/scripts/build_entity_index.py)** — 扫描所有 tagged.md，按类型聚合，合并别名（`entity_aliases.json`），生成 JSON + 各类 HTML 索引页
 - 产出：`kg/entities/data/entity_index.json` · `docs/entities/person.html` 等 20+ 类型页
-- 周度汇总：`data/entity_stats_weekly.md`（人工从 git 历史采样）
+- 周度汇总：`doc/entities/实体标注统计/每周实体数量统计.md`（人工从 git 历史采样）
 
 ### 3.3 完整性校验（前置条件）
 
@@ -174,7 +174,7 @@ python scripts/lint_text_integrity.py --check-nested  # 附加嵌套标注检测
 ### 执行后
 
 - [ ] 新报告放入 `doc/analysis/` 并 commit
-- [ ] 同步更新 `data/entity_stats_weekly.md` 的本周一行
+- [ ] 同步更新 `doc/entities/实体标注统计/每周实体数量统计.md` 的本周一行
 - [ ] 若触达里程碑（如首次突破 40%），更新 `README.md` 顶部统计块
 
 ---
@@ -197,7 +197,7 @@ python scripts/lint_text_integrity.py --check-nested  # 附加嵌套标注检测
 |------|------|--------|
 | `doc/analysis/汉字标注覆盖率统计报告_{YYYYMMDD}.md` | 总体/类型/章节三视图 | 脚本自动 |
 | `kg/entities/data/entity_index.json` | 18+4 类实体条目表 | 脚本自动 |
-| `data/entity_stats_weekly.md` | 周度趋势 | 手工维护 |
+| `doc/entities/实体标注统计/每周实体数量统计.md` | 周度趋势 | 手工维护 |
 | `data/{chengyu,wars,...}.md` | 专题覆盖报告 | 各专题脚本 |
 | `docs/special/special_index.html` | 专题汇总入口 | 手工维护 |
 

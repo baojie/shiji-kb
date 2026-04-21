@@ -67,7 +67,7 @@ python kg/entities/scripts/build_entity_index.py
 | -------------------------------- | -------------- |
 | `doc/analysis/汉字标注覆盖率统计报告_{YYYYMMDD}.md` | 字级覆盖率 · 类型分布 · 章节 TOP/BOTTOM（月度）|
 | `kg/entities/data/entity_index.json` | 18+4 类实体条目与出现位置 |
-| `data/entity_stats_weekly.md` | 实体条目数 · 出现次数的周度趋势 |
+| `doc/entities/实体标注统计/每周实体数量统计.md` | 实体条目数 · 出现次数的周度趋势 |
 | `doc/analysis/词频统计表.md`     | 高频字词表     |
 | `doc/analysis/词频统计结果.json` | 结构化词频数据 |
 
