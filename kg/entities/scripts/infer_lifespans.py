@@ -191,14 +191,21 @@ def build_alias_map(reign_aliases: dict, v1_persons: dict, rulers: dict,
         add(s); add(c)
         union(s, c)
 
-    # 边 2: entity_aliases 单 canonical（跳过 1 字 surface，这类短名常歧义）
+    # 边 2: entity_aliases 单 canonical
+    # 1 字 surface 只有在它本身不是别人的 canonical 时才建边（否则如"子→孔子"会把
+    # 许多无关名字因"子"这个单字传染到一起）
+    ea_canonicals_all: set[str] = set()
+    for cans in entity_aliases.values():
+        ea_canonicals_all.update(cans)
     for s, cans in entity_aliases.items():
-        if len(s) < 2:
+        if len(cans) != 1:
             continue
-        if len(cans) == 1:
-            c = cans[0]
-            add(s); add(c)
-            union(s, c)
+        if len(s) < 2 and s in ea_canonicals_all:
+            # 1 字且本身也是 canonical（如"汤"、"尧"等）— 跳过以免传染
+            continue
+        c = cans[0]
+        add(s); add(c)
+        union(s, c)
 
     # 边 2.5: v1 note 为短别名指向（如 缪公 note="秦穆公"、梁孝王 note="刘武"）
     # 仅当 note 看起来像人名（≤5 字，非描述句）时建边
@@ -244,11 +251,19 @@ def build_alias_map(reign_aliases: dict, v1_persons: dict, rulers: dict,
     for n in parent:
         clusters[find(n)].append(n)
 
+    # entity_aliases 里的 canonical 集合（做为主名偏好）
+    ea_canonicals: set[str] = set()
+    for cans in entity_aliases.values():
+        ea_canonicals.update(cans)
+
     def pick_canonical(members: list[str]) -> str:
         def score(n: str) -> tuple:
             in_rulers = 1 if n in rulers else 0
             in_v1 = 1 if n in v1_persons else 0
-            return (in_rulers, in_v1, len(n), n)
+            is_ea_canon = 1 if n in ea_canonicals else 0
+            is_ea_surface_only = 1 if (n in entity_aliases and n not in ea_canonicals) else 0
+            # 优先级：in_rulers > in_v1 > is_ea_canon > 非 surface only > 长度 > 字典序
+            return (in_rulers, in_v1, is_ea_canon, -is_ea_surface_only, len(n), n)
         return max(members, key=score)
 
     alias_map: dict[str, str] = {}
@@ -262,26 +277,118 @@ def build_alias_map(reign_aliases: dict, v1_persons: dict, rulers: dict,
     return alias_map
 
 
-def load_event_deaths() -> dict[str, int]:
-    """从 kg/events/data/*_事件索引.md 提取"X卒/薨/崩"事件的公元年，返回 {person: ce_year}。
+# ============================================================
+# 常识性生卒年约束（单位：岁）
+# ============================================================
+MAX_LIFESPAN = 85           # 先秦至汉代典型最长寿命（保守上限；张苍 100+ 为异常）
+MIN_ADULT_AGE = 15          # 参与大事（征伐/从政/使节/著书）的最低年龄
+MAX_RULER_ACCESSION_AGE = 70  # 君主即位年龄上限
+MIN_RULER_ACCESSION_AGE = 0   # 婴幼即位下限（如汉昭帝 8 岁即位）
+POST_DEATH_BUFFER = 15        # 人物最后出现 → 卒年的最大间隔
+
+
+def load_person_event_timeline(entity_aliases: dict | None = None,
+                                 alias_refs: dict | None = None
+                                 ) -> dict[str, list[tuple[int, str, str]]]:
+    """扫描所有事件索引，按人物聚合事件时间线。
+
+    返回 {person_surface_or_canonical: [(ce_year, event_id, chapter_id), ...]}。
+    只收录时间字段可解析为具体公元年的事件；approx（`[约公元前...年]`）同样保留。
+    单字 surface 在提取时尝试 disambiguate_single_char 规范化。
+    """
+    entity_aliases = entity_aliases or {}
+    alias_refs = alias_refs or {}
+    pat_year = re.compile(r'[（\[](?:约)?公元前?(\d+)年')
+    pat_year_ce = re.compile(r'[（\[]公元(\d+)年')
+    pat_person = re.compile(r'〖[@;]([^〗|]+?)(?:\|([^〗]+))?〗')
+
+    timeline: dict[str, list[tuple[int, str, str]]] = defaultdict(list)
+
+    for fpath in sorted(EVENTS_DIR.glob('*_事件索引.md')):
+        if fpath.name == '战争事件索引.md':
+            continue
+        chapter_id = fpath.name[:3]
+        text = fpath.read_text(encoding='utf-8')
+        for line in text.splitlines():
+            if not line.startswith('|') or line.startswith('|---'):
+                continue
+            cols = [c.strip() for c in line.split('|')]
+            if len(cols) < 7:
+                continue
+            event_id = cols[1]
+            if not re.match(r'\d{3}-\d+', event_id):
+                continue
+            time_field = cols[4]
+            persons_field = cols[6]
+            event_name = cols[2]
+
+            m = pat_year.search(time_field)
+            if m:
+                ce_year = -int(m.group(1))
+            else:
+                mc = pat_year_ce.search(time_field)
+                if mc:
+                    ce_year = int(mc.group(1))
+                else:
+                    continue
+
+            seen: set[str] = set()
+            for src in (persons_field, event_name):
+                for pm in pat_person.finditer(src):
+                    raw = (pm.group(2) or pm.group(1)).strip()
+                    if not raw:
+                        continue
+                    if len(raw) == 1:
+                        resolved = disambiguate_single_char(
+                            raw, chapter_id, entity_aliases, alias_refs)
+                        if resolved:
+                            raw = resolved
+                    if raw in seen:
+                        continue
+                    seen.add(raw)
+                    timeline[raw].append((ce_year, event_id, chapter_id))
+
+    return dict(timeline)
+
+
+def load_event_birth_death(entity_aliases: dict | None = None,
+                            alias_refs: dict | None = None
+                            ) -> tuple[dict[str, tuple[int, str, str]], dict[str, tuple[int, str, str]]]:
+    """从 kg/events/data/*_事件索引.md 提取生卒事件。
+
+    返回 (births, deaths)，每个 dict 格式为 {person: (ce_year, event_id, approx_marker)}。
+    approx_marker 为 '约' 或 '' （精确/推算）。
 
     事件索引行列序：| 事件ID | 事件名称 | 事件类型 | 时间 | 地点 | 主要人物 | 朝代 |
 
     人名提取：
-    - 从"主要人物"列里解析所有 〖@〗（person）和 〖;〗（shihao/title）标签
-    - 多人事件（如"梁孝王城阳共王汝南王薨"）会为每个人都记卒年
-    - 放弃基于事件名称的正则兜底（曾误把"梁孝王城阳共王汝南王"当作一个人名）
+    - 从"主要人物"列解析所有 〖@〗（person）和 〖;〗（shihao/title）标签
+    - 多人事件（如 011-038 梁孝王城阳共王汝南王薨）为每个标签人名各记一条
     """
-    pat_year = re.compile(r'[（\[](?:约)?公元前(\d+)年')
-    # 同时匹配 @（person 显式）和 ;（shihao/title 如"梁孝王"）
+    pat_year = re.compile(r'[（\[](约)?公元前(\d+)年')
     pat_person = re.compile(r'〖[@;]([^〗|]+?)(?:\|([^〗]+))?〗')
-    pat_death = re.compile(r'(?:卒|薨|崩)(?:$|[^徒])')
-    result: dict[str, int] = {}
+    # 死亡关键词集合（包含自然死、刑杀、战死、自尽等）
+    # - 卒/薨/崩/殁：须排除作为"士兵"义的 X卒（降卒/士卒等）
+    # - 斩/腰斩/诛/伏诛/弑/自杀/自刎/刎/自尽/戮/自戕/自焚
+    # - 死/赐死：常见死亡委婉语，排除 死罪/死士/死守/生死/死节/死敌 等组合
+    pat_death = re.compile(
+        r'(?<![士降兵马骑车戍卒楚汉秦赵齐燕韩魏宋周鲁吴越陈蔡])(?:卒|薨|崩|殁|驾崩)(?!徒)'
+        r'|(?:腰斩|伏诛|自刎|自杀|自尽|自戕|自焚|赐死|身死|遇害)'
+        r'|(?:诛|弑|戮|刎)(?![绝诸])'
+        r'|(?<![生必以求贪])死(?![罪士守节敌灰后生])'
+    )
+    pat_birth = re.compile(r'(?:出生|生于|诞生|而生)')
+    births: dict[str, tuple[int, str, str]] = {}
+    deaths: dict[str, tuple[int, str, str]] = {}
+
+    entity_aliases = entity_aliases or {}
+    alias_refs = alias_refs or {}
 
     for fpath in sorted(EVENTS_DIR.glob('*_事件索引.md')):
         if fpath.name == '战争事件索引.md':
             continue
         text = fpath.read_text(encoding='utf-8')
+        chapter_id = fpath.name[:3]
         for line in text.splitlines():
             if not line.startswith('|') or line.startswith('|---'):
                 continue
@@ -295,24 +402,89 @@ def load_event_deaths() -> dict[str, int]:
             time_field = cols[4]
             persons_field = cols[6]
 
-            if not pat_death.search(event_name):
+            has_death = bool(pat_death.search(event_name))
+            has_birth = bool(pat_birth.search(event_name))
+            if not (has_death or has_birth):
                 continue
+
             ym = pat_year.search(time_field)
             if not ym:
                 continue
-            ce_year = -int(ym.group(1))
+            approx = '约' if ym.group(1) else ''
+            ce_year = -int(ym.group(2))
 
-            # 每个有标签的人都记一条卒年
+            # 从 persons_field 抽所有 tagged 人名
+            tagged: list[str] = []
             for pm in pat_person.finditer(persons_field):
-                name = (pm.group(2) or pm.group(1)).strip()
-                if name:
-                    result.setdefault(name, ce_year)
-            # 次要：事件名称里也可能带 〖@〗 标签
+                nm = (pm.group(2) or pm.group(1)).strip()
+                if nm:
+                    tagged.append(nm)
+            # 事件名称里额外的 @ 标签（如 004-013 的 〖@发〗）
             for pm in pat_person.finditer(event_name):
-                name = (pm.group(2) or pm.group(1)).strip()
-                if name:
-                    result.setdefault(name, ce_year)
-    return result
+                nm = (pm.group(2) or pm.group(1)).strip()
+                if nm and nm not in tagged:
+                    tagged.append(nm)
+
+            def canon_name(raw: str) -> str:
+                if len(raw) == 1:
+                    resolved = disambiguate_single_char(
+                        raw, chapter_id, entity_aliases, alias_refs)
+                    if resolved:
+                        return resolved
+                return raw
+
+            # 从 event_name 中找死亡/出生动词的"主语"片段，避免把"文王崩武王立"
+            # 里的武王/发也判定为死亡
+            pat_death_subj = re.compile(
+                r'([\u4e00-\u9fa5]+?)'
+                r'(?:驾崩|腰斩|伏诛|自刎|自杀|自尽|自戕|自焚|赐死|身死|遇害'
+                r'|崩|薨|殁|诛|弑|戮|刎'
+                r'|卒(?!徒)'
+                r'|(?<![生必以求贪])死(?![罪士守节敌灰后生]))'
+                r'(?!徒)'
+            )
+            pat_birth_subj = re.compile(r'([\u4e00-\u9fa5]+?)(?:出生|生于|诞生|而生)')
+
+            def match_tagged(subject: str) -> list[str]:
+                """从 subject 串中挑出 persons_field 里出现的人名。"""
+                return [t for t in tagged if t in subject]
+
+            # 去掉 event_name 中的 〖...〗 标签以便字符匹配
+            clean_event_name = re.sub(r'〖[^〗]+〗', lambda m: m.group(0).split('|')[0].lstrip('〖').lstrip('@=;%&^◆~•!#+?{:[_$'), event_name)
+            clean_event_name = clean_event_name.replace('〗', '')
+
+            if has_death:
+                matched_deaths: list[str] = []
+                for sm in pat_death_subj.finditer(clean_event_name):
+                    subj = sm.group(1)
+                    # 去除连接词（如"及"、"与"、"、"）
+                    for t in match_tagged(subj):
+                        if t not in matched_deaths:
+                            matched_deaths.append(t)
+                # 若 event_name 主语匹配不到任何 tagged（如 "驾崩"），退回 tagged 第 1 位
+                if not matched_deaths and tagged:
+                    matched_deaths = [tagged[0]]
+                for raw in matched_deaths:
+                    deaths.setdefault(canon_name(raw), (ce_year, event_id, approx))
+
+            if has_birth:
+                matched_births: list[str] = []
+                for sm in pat_birth_subj.finditer(clean_event_name):
+                    subj = sm.group(1)
+                    for t in match_tagged(subj):
+                        if t not in matched_births:
+                            matched_births.append(t)
+                if not matched_births and tagged:
+                    matched_births = [tagged[0]]
+                for raw in matched_births:
+                    births.setdefault(canon_name(raw), (ce_year, event_id, approx))
+    return births, deaths
+
+
+def load_event_deaths() -> dict[str, int]:
+    """向后兼容：仅返回 {person: ce_year} 形式的卒年字典。"""
+    _, deaths = load_event_birth_death()
+    return {n: v[0] for n, v in deaths.items()}
 
 
 def load_entity_aliases() -> dict[str, list[str]]:
@@ -333,19 +505,61 @@ def load_entity_aliases() -> dict[str, list[str]]:
     return {sf: sorted(cans) for sf, cans in sf_map.items()}
 
 
+def load_alias_refs() -> dict[tuple[str, str], set[str]]:
+    """构建 (surface, canonical) -> {chapter_id...}，用于单字名的章节消歧。
+
+    refs 格式 [[chapter_stem, paragraph], ...] — chapter_stem 如 "112_平津侯主父列传"，
+    提取前 3 位作为 chapter_id。
+    """
+    if not ENTITY_ALIASES.exists():
+        return {}
+    d = json.loads(ENTITY_ALIASES.read_text(encoding='utf-8'))
+    result: dict[tuple[str, str], set[str]] = defaultdict(set)
+    for e in d.get('person', []):
+        sf = e.get('surface')
+        can = e.get('canonical')
+        if not sf or not can:
+            continue
+        for ref in e.get('refs', []):
+            if isinstance(ref, list) and len(ref) >= 1:
+                stem = ref[0]
+                m = re.match(r'(\d{3})', stem)
+                if m:
+                    result[(sf, can)].add(m.group(1))
+    return dict(result)
+
+
+def disambiguate_single_char(surface: str, chapter_id: str,
+                               entity_aliases: dict, alias_refs: dict) -> str | None:
+    """对单字 surface 在指定章节里选一个 canonical（若有唯一章节命中则返回，否则 None）。"""
+    cans = entity_aliases.get(surface, [])
+    if not cans:
+        return None
+    if len(cans) == 1:
+        return cans[0]
+    # 多 canonical：看哪个 canonical 的 refs 包含 chapter_id
+    hits = [c for c in cans if chapter_id in alias_refs.get((surface, c), set())]
+    if len(hits) == 1:
+        return hits[0]
+    return None  # 0 或 >1 → 无法确定
+
+
 def infer_all():
     reign_data = json.loads(REIGN_FILE.read_text(encoding='utf-8'))
     rulers = reign_data['rulers']
     aliases = reign_data.get('aliases', {})
     v1 = json.loads(LIFESPAN_V1.read_text(encoding='utf-8'))
     v1_persons = v1['persons']
-    event_deaths = load_event_deaths()
     entity_aliases = load_entity_aliases()
+    alias_refs = load_alias_refs()
+    event_births, event_deaths_full = load_event_birth_death(entity_aliases, alias_refs)
+    event_deaths = {n: v[0] for n, v in event_deaths_full.items()}
+    event_timeline = load_person_event_timeline(entity_aliases, alias_refs)
 
     # 模式扫描结果（提前以收集名字）
     evidence_by_pattern = scan_patterns()
     pattern_names = {h['ruler'] for hits in evidence_by_pattern.values() for h in hits}
-    extra_names = pattern_names | set(event_deaths.keys())
+    extra_names = pattern_names | set(event_deaths.keys()) | set(event_births.keys())
     alias_to_canonical = build_alias_map(aliases, v1_persons, rulers, entity_aliases,
                                           extra_names=extra_names)
 
@@ -358,10 +572,19 @@ def infer_all():
         for h in hits:
             pattern_by_person[canon(h['ruler'])].append({**h, 'pattern': pat_name})
 
-    # 事件死亡也规范化
-    event_deaths_canon: dict[str, int] = {}
-    for name, year in event_deaths.items():
-        event_deaths_canon.setdefault(canon(name), year)
+    # 事件死亡/出生也规范化
+    event_deaths_canon: dict[str, tuple[int, str, str]] = {}
+    for name, tup in event_deaths_full.items():
+        event_deaths_canon.setdefault(canon(name), tup)
+    event_births_canon: dict[str, tuple[int, str, str]] = {}
+    for name, tup in event_births.items():
+        event_births_canon.setdefault(canon(name), tup)
+
+    # 时间线规范化（所有事件按 canonical 聚合）
+    timeline_canon: dict[str, list[tuple[int, str, str]]] = defaultdict(list)
+    for name, evs in event_timeline.items():
+        c = canon(name)
+        timeline_canon[c].extend(evs)
 
     # v1 人物 也合并别名（保留首个出现，其余忽略避免歧义）
     v1_canon: dict[str, dict] = {}
@@ -373,15 +596,19 @@ def infer_all():
         elif not (v1_canon[c].get('note') or '') and (v.get('note') or ''):
             v1_canon[c] = v
 
-    # 候选人物：reign_periods + v1（canon） + 模式 + 事件卒年
+    # 候选人物：reign_periods + v1（canon） + 模式 + 事件卒/生年 + 时间线
     all_persons = (set(rulers.keys()) | set(v1_canon.keys())
-                   | set(pattern_by_person.keys()) | set(event_deaths_canon.keys()))
+                   | set(pattern_by_person.keys())
+                   | set(event_deaths_canon.keys()) | set(event_births_canon.keys())
+                   | set(timeline_canon.keys()))
 
     result_persons: dict[str, dict] = {}
     for name in sorted(all_persons):
         entry = infer_one(name, rulers, v1_canon,
                           pattern_by_person.get(name, []),
-                          event_deaths_canon.get(name))
+                          event_deaths_canon.get(name),
+                          event_births_canon.get(name),
+                          timeline_canon.get(name))
         if entry is not None:
             result_persons[name] = entry
 
@@ -426,7 +653,10 @@ def promote(current: str, new: str) -> str:
 
 
 def infer_one(name: str, rulers: dict, v1_persons: dict,
-              patterns: list[dict], event_death_year: int | None = None) -> dict | None:
+              patterns: list[dict],
+              event_death: tuple[int, str, str] | None = None,
+              event_birth: tuple[int, str, str] | None = None,
+              timeline: list[tuple[int, str, str]] | None = None) -> dict | None:
     """对单个人物应用证据链推断生卒年区间。
 
     置信度分生/卒两路：
@@ -446,27 +676,45 @@ def infer_one(name: str, rulers: dict, v1_persons: dict,
     death_conf = 'low'
 
     # Source 1: reign_periods（十表）
+    accession_year = None
     if name in rulers:
         r = rulers[name]
         state = r.get('state')
         sources.add('reign_periods')
         start = signed_bce(r['start_bce'])
         end = signed_bce(r['end_bce'])
+        accession_year = start
         # 卒年 = 在位末年（来自十表明文）→ high
         death_min = death_max = end
         death_conf = promote(death_conf, 'high')
-        # 生年：即位年 ±10~60 岁（推算，低置信）
-        birth_min = start - 59
-        birth_max = start - 9
-        birth_conf = promote(birth_conf, 'low')
         evidence.append(f'十表 reign_periods: {r.get("state","?")} 在位 {r["start_bce"]}–{r["end_bce"]} BCE')
 
     # Source 1b: 事件索引卒年（来自原文事件锚点）
-    if death_min is None and event_death_year is not None:
+    if event_death is not None:
+        ed_year, ed_id, ed_approx = event_death
         sources.add('event_index')
-        death_min = death_max = event_death_year
-        death_conf = promote(death_conf, 'high')
-        evidence.append(f'事件索引（原文）: 卒于 {fmt_year(event_death_year)}')
+        if death_min is None:
+            death_min = death_max = ed_year
+        if ed_approx == '约':
+            # 事件时间为推算 → 约
+            if death_conf in ('low',):
+                death_conf = promote(death_conf, 'approximate')
+        else:
+            death_conf = promote(death_conf, 'high')
+        approx_prefix = '约 ' if ed_approx else ''
+        evidence.append(f'事件索引 {ed_id}（原文）: {approx_prefix}卒于 {fmt_year(ed_year)}')
+
+    # Source 1c: 事件索引生年
+    if event_birth is not None:
+        eb_year, eb_id, eb_approx = event_birth
+        sources.add('event_index')
+        birth_min = birth_max = eb_year
+        if eb_approx == '约':
+            birth_conf = promote(birth_conf, 'approximate')
+        else:
+            birth_conf = promote(birth_conf, 'high')
+        approx_prefix = '约 ' if eb_approx else ''
+        evidence.append(f'事件索引 {eb_id}（原文）: {approx_prefix}生于 {fmt_year(eb_year)}')
 
     # Source 2: 文本模式（方法 2/3）
     for p in patterns:
@@ -551,6 +799,90 @@ def infer_one(name: str, rulers: dict, v1_persons: dict,
                 death_min = v1_death - 3
                 death_max = v1_death + 3
                 death_conf = promote(death_conf, 'medium')
+
+    # Source 4: 事件时间线 + 常识约束（只在生年仍无点值时应用）
+    has_direct_birth = (birth_min is not None and birth_min == birth_max and birth_conf == 'high')
+    has_direct_death = (death_min is not None and death_min == death_max and death_conf == 'high')
+    timeline_years = sorted({y for y, _, _ in (timeline or [])})
+    if timeline_years:
+        first_yr = timeline_years[0]
+        last_yr = timeline_years[-1]
+        evidence.append(
+            f'事件时间线: 共 {len(timeline_years)} 年跨度'
+            f'（{fmt_year(first_yr)} → {fmt_year(last_yr)}）'
+        )
+        sources.add('event_timeline')
+
+        # 约束组：(lower, upper, label)
+        birth_constraints = []
+        death_constraints = []
+
+        # 约束 A：首次出现时至少 MIN_ADULT_AGE 岁 → 生年 ≤ first_yr - MIN_ADULT_AGE
+        birth_constraints.append((None, first_yr - MIN_ADULT_AGE,
+                                   f'首次出现 {fmt_year(first_yr)} 时 ≥{MIN_ADULT_AGE} 岁'))
+        # 约束 B：最后出现时仍在世 ≤ MAX_LIFESPAN 岁 → 生年 ≥ last_yr - MAX_LIFESPAN
+        birth_constraints.append((last_yr - MAX_LIFESPAN, None,
+                                   f'最后出现 {fmt_year(last_yr)} 时 ≤{MAX_LIFESPAN} 岁'))
+        # 约束 C：卒年 ≥ last_yr（最后出现时仍在世）
+        death_constraints.append((last_yr, None,
+                                   f'最后出现于 {fmt_year(last_yr)}'))
+        # 约束 D：卒年 ≤ last_yr + POST_DEATH_BUFFER（罕有身后仍被纪录事件）
+        death_constraints.append((None, last_yr + POST_DEATH_BUFFER,
+                                   f'最后出现后 ≤{POST_DEATH_BUFFER} 年内卒'))
+
+        # 即位年约束（若为君主）
+        if accession_year is not None:
+            birth_constraints.append((
+                accession_year - MAX_RULER_ACCESSION_AGE,
+                accession_year - MIN_RULER_ACCESSION_AGE,
+                f'即位 {fmt_year(accession_year)} 时年龄 '
+                f'{MIN_RULER_ACCESSION_AGE}–{MAX_RULER_ACCESSION_AGE} 岁'
+            ))
+
+        # 仅当无直接点值时，用约束更新区间（取交集）
+        if not has_direct_birth:
+            lo_candidates = [c[0] for c in birth_constraints if c[0] is not None]
+            hi_candidates = [c[1] for c in birth_constraints if c[1] is not None]
+            new_lo = max(lo_candidates) if lo_candidates else None
+            new_hi = min(hi_candidates) if hi_candidates else None
+            if new_lo is not None and new_hi is not None and new_lo <= new_hi:
+                # 与现有区间取交（若已有）
+                if birth_min is not None and birth_max is not None:
+                    new_lo = max(new_lo, birth_min)
+                    new_hi = min(new_hi, birth_max)
+                    if new_lo > new_hi:
+                        new_lo, new_hi = birth_min, birth_max  # 冲突时保留原
+                birth_min = new_lo
+                birth_max = new_hi
+                # 区间越窄置信度越高；点值 → medium，≤5 年 → medium，其他 → low
+                width = new_hi - new_lo
+                if width == 0:
+                    birth_conf = promote(birth_conf, 'medium')
+                elif width <= 5:
+                    birth_conf = promote(birth_conf, 'medium')
+                else:
+                    birth_conf = promote(birth_conf, 'low')
+                for lo, hi, label in birth_constraints:
+                    evidence.append(f'  · 约束: {label}')
+
+        if not has_direct_death:
+            lo_candidates = [c[0] for c in death_constraints if c[0] is not None]
+            hi_candidates = [c[1] for c in death_constraints if c[1] is not None]
+            new_lo = max(lo_candidates) if lo_candidates else None
+            new_hi = min(hi_candidates) if hi_candidates else None
+            if new_lo is not None and new_hi is not None and new_lo <= new_hi:
+                if death_min is not None and death_max is not None:
+                    new_lo = max(new_lo, death_min)
+                    new_hi = min(new_hi, death_max)
+                    if new_lo > new_hi:
+                        new_lo, new_hi = death_min, death_max
+                death_min = new_lo
+                death_max = new_hi
+                width = new_hi - new_lo
+                if width <= 5:
+                    death_conf = promote(death_conf, 'medium')
+                else:
+                    death_conf = promote(death_conf, 'low')
 
     if birth_min is None and death_min is None:
         return None
