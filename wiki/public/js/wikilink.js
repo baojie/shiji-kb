@@ -39,7 +39,8 @@ export function expandWikilinks(html, tokens, opts) {
     const resolved = resolve(target);
     if (!resolved) {
       onBroken(target);
-      return `<a class="wikilink broken" data-target="${escape(target)}"` +
+      // 断链仍可点击（导航到目标，页面会显示 404），仅样式不同
+      return `<a class="wikilink broken" href="#${encodeURIComponent(target)}" data-target="${escape(target)}"` +
         ` title="未解析: ${escape(target)}">${escape(display)}</a>`;
     }
     const [pid] = resolved;

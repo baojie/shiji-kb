@@ -666,19 +666,29 @@ footer code {
 
 /* 源码查看面板 */
 .src-link { color: var(--fg-muted); font-size: 13px; }
-.src-toggle {
-  background: none; border: 1px solid var(--fg-muted);
-  border-radius: 3px; padding: 1px 6px; font-size: 12px;
-  cursor: pointer; color: var(--fg-muted);
-}
-.src-toggle:hover { border-color: var(--accent); color: var(--accent); }
-.src-panel {
-  margin: 1em 0;
+/* 标题右侧 "查看源码" 标签 */
+.src-tab {
+  float: right;
+  font-size: 13px;
+  font-weight: normal;
+  color: var(--fg-muted);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  padding: 2px 10px;
+  text-decoration: none;
   background: var(--bg-box);
-  overflow: auto;
-  max-height: 70vh;
+  position: relative;
+  top: 4px;
+}
+.src-tab:hover { color: var(--accent); border-color: var(--accent); }
+/* 专用源码页 */
+.src-view-title { margin-bottom: 0.2em; }
+.src-view-badge {
+  font-size: 0.5em; font-weight: normal;
+  background: var(--bg-box); border: 1px solid var(--border);
+  border-radius: 3px; padding: 2px 6px;
+  color: var(--fg-muted); vertical-align: middle;
 }
 .src-pre {
   margin: 0;
@@ -698,3 +708,20 @@ footer code {
 .settings-table th, .settings-table td { padding: .6em .8em; border-bottom: 1px solid var(--border); vertical-align: top; }
 .toggle-label { cursor: pointer; display: flex; align-items: center; gap: .4em; justify-content: center; }
 .toggle-label input { width: 1.1em; height: 1.1em; cursor: pointer; }
+
+/* K 值页 */
+.k-stat-bar {
+  display: flex; gap: 1.5em; flex-wrap: wrap;
+  margin: 1.2em 0 2em;
+}
+.k-stat {
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--bg-box); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1em 1.5em; min-width: 100px;
+}
+.k-stat-val { font-size: 2em; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.k-stat-label { font-size: 0.78em; color: var(--fg-muted); margin-top: .3em; }
+.k-chart-wrap {
+  background: var(--bg-box); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1em; margin: 0.5em 0 2em;
+}

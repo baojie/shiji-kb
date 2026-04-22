@@ -92,23 +92,24 @@ export async function renderPage(core, pid, meta, mdText) {
     (TYPE_LABELS[meta.type] || meta.type) + ' / ' + label;
   document.title = label + ' · 史记 Wiki';
 
-  // 源码查看按钮（只读编辑界面）
+  // 源码查看链接 —— 在标题右侧注入，点击进入专用源码页
+  const srcHref = `#?source=${encodeURIComponent(pid)}`;
+  const h1 = document.getElementById('article').querySelector('h1');
+  if (h1) {
+    const existing = h1.querySelector('.src-tab');
+    if (existing) existing.remove();
+    const tab = document.createElement('a');
+    tab.href = srcHref;
+    tab.className = 'src-tab';
+    tab.textContent = '查看源码';
+    h1.appendChild(tab);
+  }
+  // footer 保留原始文件链接（开发用）
   const srcSpan = document.getElementById('src-info');
-  srcSpan.innerHTML = `<a href="${escapeHtml(meta.path)}" class="src-link" target="_blank">源: ${escapeHtml(meta.path)}</a>` +
-    ` · <button class="src-toggle" id="src-toggle-btn">查看源码</button>`;
-  // 确保旧 panel 不残留
-  let srcPanel = document.getElementById('src-panel');
+  srcSpan.innerHTML = `<a href="${escapeHtml(meta.path)}" class="src-link" target="_blank">源文件: ${escapeHtml(meta.path)}</a>`;
+  // 清除残留 panel
+  const srcPanel = document.getElementById('src-panel');
   if (srcPanel) srcPanel.remove();
-  document.getElementById('src-toggle-btn').addEventListener('click', () => {
-    let panel = document.getElementById('src-panel');
-    if (panel) { panel.remove(); return; }
-    panel = document.createElement('div');
-    panel.id = 'src-panel';
-    panel.className = 'src-panel';
-    panel.innerHTML = `<pre class="src-pre">${escapeHtml(mdText)}</pre>`;
-    document.getElementById('article').insertAdjacentElement('afterend', panel);
-    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
 
   const brokenInfo = document.getElementById('broken-info');
   if (broken.length) {
@@ -119,6 +120,27 @@ export async function renderPage(core, pid, meta, mdText) {
     brokenInfo.textContent = '';
   }
 
+  window.scrollTo(0, 0);
+}
+
+export async function renderSource(core, pid, meta) {
+  document.body.classList.remove('is-home');
+  const r = await fetch(meta.path);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const mdText = await r.text();
+
+  const label = meta.label || pid;
+  document.getElementById('crumb').textContent = '源码 / ' + label;
+  document.title = label + ' 源码 · 史记 Wiki';
+
+  document.getElementById('article').innerHTML = `
+    <h1 class="src-view-title">${escapeHtml(label)} <span class="src-view-badge">源码</span></h1>
+    <p class="muted"><a href="#${encodeURIComponent(pid)}">← 返回阅读页</a></p>
+    <pre class="src-pre">${escapeHtml(mdText)}</pre>
+  `;
+  document.getElementById('infobox').outerHTML = '<aside class="infobox" id="infobox" hidden></aside>';
+  document.getElementById('src-info').textContent = '';
+  document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
 }
 

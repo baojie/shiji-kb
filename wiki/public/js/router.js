@@ -4,8 +4,9 @@ import { resolvePageId } from './registry.js';
 import {
   renderPage, renderHome, renderNotFound, renderCategory,
   renderRecent, renderHistory, renderRevision, renderAll, renderDiff,
+  renderSource,
 } from './renderer.js';
-import { renderSpecialSettings, renderSpecialPlugins, renderSpecialAll } from './special.js';
+import { renderSpecialSettings, renderSpecialPlugins, renderSpecialAll, renderSpecialKnowledge } from './special.js';
 import { setStatus, showFatal } from './util.js';
 
 export function setupRouter(core) {
@@ -54,6 +55,15 @@ async function route(core) {
       catch (e) { showFatal(`history/${page}.json#${rev} 加载失败：${e.message}`); }
       setStatus(''); return;
     }
+    if (params.has('source')) {
+      const page = params.get('source');
+      const resolved = resolvePageId(page, core.registry);
+      if (!resolved) { renderNotFound(core, page); setStatus(''); return; }
+      const [pid, meta] = resolved;
+      try { await renderSource(core, pid, meta); }
+      catch (e) { showFatal(`源码加载失败：${e.message}`); }
+      setStatus(''); return;
+    }
   }
 
   let raw = decodeURIComponent(rawHash);
@@ -95,6 +105,10 @@ async function route(core) {
   }
   if (raw === 'Special:All') {
     renderSpecialAll(core);
+    setStatus(''); return;
+  }
+  if (raw === 'Special:知识量') {
+    renderSpecialKnowledge(core);
     setStatus(''); return;
   }
 

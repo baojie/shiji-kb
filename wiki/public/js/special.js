@@ -168,3 +168,148 @@ export function renderSpecialAll(core) {
     </table>
   `);
 }
+
+/* ── Special:知识量 — 动态 K 值页（含增长图表）── */
+export async function renderSpecialKnowledge(core) {
+  // 加载时间线数据
+  let timeline = [];
+  try {
+    const r = await fetch('data/knowledge_timeline.jsonl');
+    if (r.ok) {
+      const text = await r.text();
+      timeline = text.trim().split('\n').filter(Boolean).map(l => JSON.parse(l));
+    }
+  } catch (e) { /* 无数据则不画图 */ }
+
+  // 加载最新快照
+  let latest = null;
+  try {
+    const r = await fetch('data/knowledge_latest.json');
+    if (r.ok) latest = await r.json();
+  } catch (e) { /* ignore */ }
+
+  const K = latest ? latest.K.toLocaleString() : '—';
+  const pages = latest ? latest.page_count : '—';
+  const featured = latest ? latest.featured_count : '—';
+  const hitRate = latest ? (latest.link_hit_rate * 100).toFixed(1) + '%' : '—';
+
+  // SVG 折线图
+  const chartHtml = buildKChart(timeline);
+
+  // K 公式（仅文字，不依赖 KaTeX）
+  const formula = `
+    <blockquote>
+      <code>K = Σ_page  log₂(1+B) × (1 + min(D,5)) × W × clamp(q/30, 1, 3)</code>
+    </blockquote>
+    <table>
+      <thead><tr><th>变量</th><th>含义</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td><b>B</b></td><td>页面字节数</td><td>去除 frontmatter 后 UTF-8 字节数</td></tr>
+        <tr><td><b>D</b></td><td>链接密度（封顶 5.0）</td><td>wikilink 数 / (B/1000)</td></tr>
+        <tr><td><b>W</b></td><td>类型权重</td><td>person/event/place=1.0 · topic=0.8 · chapter=0.4</td></tr>
+        <tr><td><b>q</b></td><td>质量分（0–90）</td><td>归一化为 Q∈[1, 3]</td></tr>
+      </tbody>
+    </table>`;
+
+  const top10 = latest && latest.top10_pages ? latest.top10_pages.map((p, i) =>
+    `<tr><td>${i + 1}</td><td><a href="#${encodeURIComponent(p.pid)}">${escapeHtml(p.pid)}</a></td><td>${p.k}</td></tr>`
+  ).join('') : '';
+
+  setPage('知识量 (K)', `
+    <h1>Special:知识量 — 知识量度量</h1>
+
+    <div class="k-stat-bar">
+      <div class="k-stat"><span class="k-stat-val">${K}</span><span class="k-stat-label">当前 K 值</span></div>
+      <div class="k-stat"><span class="k-stat-val">${pages}</span><span class="k-stat-label">总页数</span></div>
+      <div class="k-stat"><span class="k-stat-val">${featured}</span><span class="k-stat-label">精品页</span></div>
+      <div class="k-stat"><span class="k-stat-val">${hitRate}</span><span class="k-stat-label">链接命中率</span></div>
+    </div>
+
+    <h2>增长曲线</h2>
+    ${chartHtml}
+
+    <h2>公式定义</h2>
+    ${formula}
+
+    <h2>K 值 Top 10 页面</h2>
+    <table>
+      <thead><tr><th>#</th><th>页面</th><th>K</th></tr></thead>
+      <tbody>${top10}</tbody>
+    </table>
+
+    <h2>设计目标</h2>
+    <ul>
+      <li>反映<b>知识深度</b>，而非单纯字数——链接密度奖励内联结构</li>
+      <li>防止刷字数——log₂ 压缩使扩张收益递减</li>
+      <li>区分内容质量——Q 乘子激励高质量页面</li>
+      <li>章节存根不淹没实体页——章节权重 0.4 刻意压缩</li>
+    </ul>
+
+    <p class="muted">Special: 系统页本身不计入 K。
+    →&nbsp;<a href="#${encodeURIComponent('Special:Settings')}">设置</a>
+    &nbsp;·&nbsp;<a href="#${encodeURIComponent('Special:All')}">所有特殊页面</a></p>
+  `);
+}
+
+function buildKChart(timeline) {
+  if (!timeline.length) return '<p class="muted">（暂无历史数据）</p>';
+
+  const W = 680, H = 260, PAD = { top: 20, right: 20, bottom: 40, left: 60 };
+  const cw = W - PAD.left - PAD.right;
+  const ch = H - PAD.top - PAD.bottom;
+
+  const vals = timeline.map(d => d.K);
+  const minK = Math.min(...vals) * 0.97;
+  const maxK = Math.max(...vals) * 1.01;
+
+  const xScale = (i) => PAD.left + (i / (timeline.length - 1 || 1)) * cw;
+  const yScale = (v) => PAD.top + ch - ((v - minK) / (maxK - minK)) * ch;
+
+  const points = timeline.map((d, i) => `${xScale(i).toFixed(1)},${yScale(d.K).toFixed(1)}`).join(' ');
+
+  // Y axis ticks
+  const yTicks = 5;
+  const yTickHtml = Array.from({ length: yTicks + 1 }, (_, i) => {
+    const v = minK + (maxK - minK) * (i / yTicks);
+    const y = yScale(v).toFixed(1);
+    return `<line x1="${PAD.left}" y1="${y}" x2="${PAD.left + cw}" y2="${y}" stroke="var(--border)" stroke-dasharray="3,3"/>
+      <text x="${PAD.left - 6}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="11" fill="var(--fg-muted)">${Math.round(v).toLocaleString()}</text>`;
+  }).join('');
+
+  // X axis labels (evenly spaced, max 6)
+  const step = Math.ceil(timeline.length / 6);
+  const xTickHtml = timeline.map((d, i) => {
+    if (i % step !== 0 && i !== timeline.length - 1) return '';
+    const x = xScale(i).toFixed(1);
+    const label = d.generated ? d.generated.slice(0, 10) : '';
+    return `<text x="${x}" y="${H - PAD.bottom + 14}" text-anchor="middle" font-size="10" fill="var(--fg-muted)">${label}</text>`;
+  }).join('');
+
+  // Featured count as area fill (secondary)
+  const featVals = timeline.map(d => d.featured_count || 0);
+  const maxFeat = Math.max(...featVals) || 1;
+  const featPoints = timeline.map((d, i) => {
+    const fy = PAD.top + ch - ((d.featured_count || 0) / maxFeat) * ch;
+    return `${xScale(i).toFixed(1)},${fy.toFixed(1)}`;
+  }).join(' ');
+  const featClose = `${xScale(timeline.length - 1).toFixed(1)},${PAD.top + ch} ${xScale(0).toFixed(1)},${PAD.top + ch}`;
+
+  return `<div class="k-chart-wrap">
+  <svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${W}px;height:auto;display:block">
+    <!-- grid + y ticks -->
+    ${yTickHtml}
+    <!-- featured fill (secondary axis, scaled independently) -->
+    <polygon points="${featPoints} ${featClose}" fill="rgba(99,179,237,0.15)" stroke="none"/>
+    <!-- K line -->
+    <polyline points="${points}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- dots -->
+    ${timeline.map((d, i) => `<circle cx="${xScale(i).toFixed(1)}" cy="${yScale(d.K).toFixed(1)}" r="3" fill="var(--accent)"/>`).join('')}
+    <!-- x labels -->
+    ${xTickHtml}
+    <!-- axis labels -->
+    <text x="${PAD.left}" y="${H - 4}" font-size="11" fill="var(--fg-muted)">日期</text>
+    <text x="${PAD.left - 40}" y="${PAD.top}" font-size="11" fill="var(--accent)" text-anchor="middle">K 值</text>
+    <text x="${PAD.left + cw}" y="${PAD.top + 12}" font-size="10" fill="rgba(99,179,237,0.8)" text-anchor="end">精品页（淡蓝）</text>
+  </svg>
+  </div>`;
+}
