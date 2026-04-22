@@ -37,6 +37,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[3]
 REIGN_FILE = BASE_DIR / 'kg' / 'chronology' / 'data' / 'reign_periods.json'
 LIFESPAN_V1 = BASE_DIR / 'kg' / 'entities' / 'data' / 'person_lifespans.json'
+ENTITY_ALIASES = BASE_DIR / 'kg' / 'entities' / 'data' / 'entity_aliases.json'
 CHAPTER_DIR = BASE_DIR / 'chapter_md'
 EVENTS_DIR = BASE_DIR / 'kg' / 'events' / 'data'
 OUTPUT_FILE = BASE_DIR / 'kg' / 'entities' / 'data' / 'person_lifespans_v2.json'
@@ -150,62 +151,130 @@ STATE_PREFIXES = ['秦', '齐', '晋', '楚', '鲁', '宋', '卫', '陈', '蔡',
                   '郑', '燕', '吴', '魏', '韩', '赵', '周', '汉']
 
 
-def resolve_to_canonical(name: str, reign_aliases: dict, v1_persons: dict, rulers: dict) -> str:
-    """尝试把任意名字解析为 rulers 的规范键。找不到则返回原名。"""
-    if name in rulers:
-        return name
-    # reign_aliases 一级跳
-    if name in reign_aliases and reign_aliases[name] in rulers:
-        return reign_aliases[name]
-    # v1 note 指向
-    v1 = v1_persons.get(name)
-    if v1:
-        note = (v1.get('note') or '').strip()
-        if note and len(note) <= 5 and note in rulers:
-            return note
-    # 国名前缀
-    for sp in STATE_PREFIXES:
-        cand = sp + name
-        if cand in rulers:
-            return cand
-    # 缪↔穆
-    if '缪' in name:
-        alt = name.replace('缪', '穆')
-        if alt in rulers:
-            return alt
-        for sp in STATE_PREFIXES:
-            cand = sp + alt
-            if cand in rulers:
-                return cand
-    if '穆' in name:
-        alt = name.replace('穆', '缪')
-        if alt in rulers:
-            return alt
-    return name
-
-
 def build_alias_map(reign_aliases: dict, v1_persons: dict, rulers: dict,
+                    entity_aliases: dict,
                     extra_names: set[str] | None = None) -> dict:
-    """构建 任意名字 → 规范名 映射。"""
-    alias_map: dict[str, str] = {}
-    candidates = set(v1_persons.keys()) | set(reign_aliases.keys())
+    """构建 任意名字 → 规范名 映射（union-find 聚类）。
+
+    规则：
+    1. reign_aliases 的 surface→canonical 全部建边（高祖~高皇帝）
+    2. entity_aliases 单一 canonical 的 surface→canonical 建边（刘邦~汉高祖）
+    3. 多 canonical 的 surface：只有当所有 canonical 已同簇时才建边（高祖~{刘邦,汉高祖}
+       已通过 2 同簇 → OK；刘武~{梁孝王,城阳惠王} 不同簇 → 拒绝合并）
+    4. 同簇中选主名：优先 rulers 键 > 较长名 > 字典序
+    """
+    parent: dict[str, str] = {}
+
+    def add(n: str) -> None:
+        parent.setdefault(n, n)
+
+    def find(x: str) -> str:
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(a: str, b: str) -> None:
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+
+    # 先把所有候选名字注册进去
+    candidates = set(v1_persons.keys()) | set(reign_aliases.keys()) | set(entity_aliases.keys()) | set(rulers.keys())
     if extra_names:
         candidates |= extra_names
-    for name in candidates:
-        canonical = resolve_to_canonical(name, reign_aliases, v1_persons, rulers)
-        if canonical != name:
-            alias_map[name] = canonical
+    for n in candidates:
+        add(n)
+
+    # 边 1: reign_aliases
+    for s, c in reign_aliases.items():
+        add(s); add(c)
+        union(s, c)
+
+    # 边 2: entity_aliases 单 canonical（跳过 1 字 surface，这类短名常歧义）
+    for s, cans in entity_aliases.items():
+        if len(s) < 2:
+            continue
+        if len(cans) == 1:
+            c = cans[0]
+            add(s); add(c)
+            union(s, c)
+
+    # 边 2.5: v1 note 为短别名指向（如 缪公 note="秦穆公"、梁孝王 note="刘武"）
+    # 仅当 note 看起来像人名（≤5 字，非描述句）时建边
+    for name, v in v1_persons.items():
+        note = (v.get('note') or '').strip()
+        if not note or len(note) > 5:
+            continue
+        # 排除明显的非指向注（如"约"、"传说"、"约，周初人"）
+        if note in ('约', '传说') or note.startswith('约，'):
+            continue
+        add(name); add(note)
+        union(name, note)
+
+    # 边 2.6: 国名前缀补全（缪公 → 秦穆公 等）
+    # 跳过 1 字名字（子/万 等过于歧义，不要自动前缀）
+    for n in list(parent.keys()):
+        if n in rulers or len(n) < 2:
+            continue
+        for sp in STATE_PREFIXES:
+            cand = sp + n
+            if cand in rulers:
+                add(cand)
+                union(n, cand)
+                break
+        if '缪' in n:
+            alt = n.replace('缪', '穆')
+            if alt in rulers:
+                add(alt); union(n, alt)
+
+    # 边 3: 多 canonical — 仅当所有 canonical 已同簇才合并（跳过 1 字 surface）
+    for s, cans in entity_aliases.items():
+        if len(s) < 2 or len(cans) < 2:
+            continue
+        for c in cans:
+            add(c)
+        roots = {find(c) for c in cans}
+        if len(roots) == 1:
+            add(s)
+            union(s, cans[0])
+
+    # 聚类并选主名
+    clusters: dict[str, list[str]] = defaultdict(list)
+    for n in parent:
+        clusters[find(n)].append(n)
+
+    def pick_canonical(members: list[str]) -> str:
+        def score(n: str) -> tuple:
+            in_rulers = 1 if n in rulers else 0
+            in_v1 = 1 if n in v1_persons else 0
+            return (in_rulers, in_v1, len(n), n)
+        return max(members, key=score)
+
+    alias_map: dict[str, str] = {}
+    for members in clusters.values():
+        if len(members) <= 1:
+            continue
+        canon = pick_canonical(members)
+        for m in members:
+            if m != canon:
+                alias_map[m] = canon
     return alias_map
 
 
 def load_event_deaths() -> dict[str, int]:
     """从 kg/events/data/*_事件索引.md 提取"X卒/薨/崩"事件的公元年，返回 {person: ce_year}。
-    用于为非君主人物补充卒年锚点（如张苍）。
 
     事件索引行列序：| 事件ID | 事件名称 | 事件类型 | 时间 | 地点 | 主要人物 | 朝代 |
+
+    人名提取：
+    - 从"主要人物"列里解析所有 〖@〗（person）和 〖;〗（shihao/title）标签
+    - 多人事件（如"梁孝王城阳共王汝南王薨"）会为每个人都记卒年
+    - 放弃基于事件名称的正则兜底（曾误把"梁孝王城阳共王汝南王"当作一个人名）
     """
     pat_year = re.compile(r'[（\[](?:约)?公元前(\d+)年')
-    pat_person = re.compile(r'〖@([^〗|]+?)(?:\|([^〗]+))?〗')
+    # 同时匹配 @（person 显式）和 ;（shihao/title 如"梁孝王"）
+    pat_person = re.compile(r'〖[@;]([^〗|]+?)(?:\|([^〗]+))?〗')
     pat_death = re.compile(r'(?:卒|薨|崩)(?:$|[^徒])')
     result: dict[str, int] = {}
 
@@ -217,7 +286,6 @@ def load_event_deaths() -> dict[str, int]:
             if not line.startswith('|') or line.startswith('|---'):
                 continue
             cols = [c.strip() for c in line.split('|')]
-            # 期望 cols[1]=事件ID, cols[2]=事件名称, cols[4]=时间, cols[6]=主要人物
             if len(cols) < 7:
                 continue
             event_id = cols[1]
@@ -234,22 +302,35 @@ def load_event_deaths() -> dict[str, int]:
                 continue
             ce_year = -int(ym.group(1))
 
-            # 先从"主要人物"列取首位 @标签 人名
-            person_names: list[str] = []
+            # 每个有标签的人都记一条卒年
             for pm in pat_person.finditer(persons_field):
-                person_names.append((pm.group(2) or pm.group(1)).strip())
-            # 若事件名称含 @标签 则优先
+                name = (pm.group(2) or pm.group(1)).strip()
+                if name:
+                    result.setdefault(name, ce_year)
+            # 次要：事件名称里也可能带 〖@〗 标签
             for pm in pat_person.finditer(event_name):
-                person_names.insert(0, (pm.group(2) or pm.group(1)).strip())
-            # 兜底：若事件名称以"X 卒/薨/崩"开头，取首字至卒前的片段
-            if not person_names:
-                m = re.match(r'^([\u4e00-\u9fa5]+?)(?:免相病?|病|免相)?(?:卒|薨|崩)', event_name)
-                if m:
-                    person_names.append(m.group(1))
-
-            if person_names:
-                result.setdefault(person_names[0], ce_year)
+                name = (pm.group(2) or pm.group(1)).strip()
+                if name:
+                    result.setdefault(name, ce_year)
     return result
+
+
+def load_entity_aliases() -> dict[str, list[str]]:
+    """从 kg/entities/data/entity_aliases.json 构建 surface -> canonicals（多重 canonical）。
+    返回 {surface: [canonical, ...]} — 若一个 surface 指向多个 canonical（同名不同人），
+    则保留所有，调用方需自行处理歧义。
+    """
+    if not ENTITY_ALIASES.exists():
+        return {}
+    d = json.loads(ENTITY_ALIASES.read_text(encoding='utf-8'))
+    persons = d.get('person', [])
+    sf_map: dict[str, set] = defaultdict(set)
+    for e in persons:
+        sf = e.get('surface')
+        can = e.get('canonical')
+        if sf and can:
+            sf_map[sf].add(can)
+    return {sf: sorted(cans) for sf, cans in sf_map.items()}
 
 
 def infer_all():
@@ -259,12 +340,14 @@ def infer_all():
     v1 = json.loads(LIFESPAN_V1.read_text(encoding='utf-8'))
     v1_persons = v1['persons']
     event_deaths = load_event_deaths()
+    entity_aliases = load_entity_aliases()
 
     # 模式扫描结果（提前以收集名字）
     evidence_by_pattern = scan_patterns()
     pattern_names = {h['ruler'] for hits in evidence_by_pattern.values() for h in hits}
     extra_names = pattern_names | set(event_deaths.keys())
-    alias_to_canonical = build_alias_map(aliases, v1_persons, rulers, extra_names=extra_names)
+    alias_to_canonical = build_alias_map(aliases, v1_persons, rulers, entity_aliases,
+                                          extra_names=extra_names)
 
     def canon(name: str) -> str:
         return alias_to_canonical.get(name, name)

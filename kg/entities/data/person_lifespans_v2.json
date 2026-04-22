@@ -3,30 +3,30 @@
   "_generator": "kg/entities/scripts/infer_lifespans.py",
   "_schema_ref": "skills/SKILL_07a_人物生卒年推断.md §2.1",
   "_stats": {
-    "total_persons": 525,
+    "total_persons": 571,
     "confidence_distribution": {
-      "low": 425,
+      "low": 480,
       "approximate": 44,
-      "medium": 47,
+      "medium": 38,
       "legend": 6,
       "high": 3
     },
     "birth_confidence_distribution": {
-      "low": 425,
+      "low": 480,
       "approximate": 44,
-      "medium": 47,
+      "medium": 38,
       "legend": 6,
       "high": 3
     },
     "death_confidence_distribution": {
-      "high": 455,
-      "approximate": 34,
-      "medium": 30,
+      "high": 518,
+      "approximate": 31,
+      "medium": 16,
       "legend": 6
     },
     "source_distribution": {
-      "event_index": 70,
-      "lifespans_v1": 152,
+      "event_index": 134,
+      "lifespans_v1": 145,
       "reign_periods": 390,
       "text_pattern": 21
     },
@@ -50,6 +50,19 @@
       "death_min": -124,
       "death_max": -124
     },
+    "世父": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前778年"
+      ],
+      "death_min": -778,
+      "death_max": -778
+    },
     "东方朔": {
       "sources": [
         "lifespans_v1"
@@ -67,6 +80,32 @@
       "age_min": 49,
       "age_max": 89
     },
+    "中壬": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1587年"
+      ],
+      "death_min": -1587,
+      "death_max": -1587
+    },
+    "临江哀王": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前153年"
+      ],
+      "death_min": -153,
+      "death_max": -153
+    },
     "主父偃": {
       "sources": [
         "lifespans_v1"
@@ -83,6 +122,19 @@
       "death_max": -116,
       "age_min": 30,
       "age_max": 70
+    },
+    "义": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前186年"
+      ],
+      "death_min": -186,
+      "death_max": -186
     },
     "乐毅": {
       "sources": [
@@ -102,6 +154,32 @@
       "death_max": -260,
       "age_min": 41,
       "age_max": 61
+    },
+    "仲行": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前621年"
+      ],
+      "death_min": -621,
+      "death_max": -621
+    },
+    "伉": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前189年"
+      ],
+      "death_min": -189,
+      "death_max": -189
     },
     "伍子胥": {
       "sources": [
@@ -137,6 +215,19 @@
       "age_min": 41,
       "age_max": 81
     },
+    "伯阳甫": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前780年"
+      ],
+      "death_min": -780,
+      "death_max": -780
+    },
     "信陵君": {
       "sources": [
         "event_index",
@@ -156,22 +247,50 @@
       "age_min": 50,
       "age_max": 56
     },
+    "偃": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前187年"
+      ],
+      "death_min": -187,
+      "death_max": -187
+    },
     "公孙弘": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "medium",
-      "death_confidence": "medium",
+      "death_confidence": "high",
       "confidence": "medium",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前135年",
         "v1 lifespans: 公元前200年–公元前121年"
       ],
       "birth_min": -203,
       "birth_max": -197,
-      "death_min": -124,
-      "death_max": -118,
-      "age_min": 74,
-      "age_max": 86
+      "death_min": -135,
+      "death_max": -135,
+      "age_min": 63,
+      "age_max": 69
+    },
+    "公孙臣": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前162年"
+      ],
+      "death_min": -162,
+      "death_max": -162
     },
     "共和": {
       "sources": [
@@ -191,7 +310,7 @@
       "age_min": 23,
       "age_max": 73
     },
-    "刘不识": {
+    "刘建（燕灵王）": {
       "sources": [
         "event_index"
       ],
@@ -199,42 +318,10 @@
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前143年"
+        "事件索引（原文）: 卒于 公元前181年"
       ],
-      "death_min": -143,
-      "death_max": -143
-    },
-    "刘定": {
-      "sources": [
-        "event_index"
-      ],
-      "birth_confidence": "low",
-      "death_confidence": "high",
-      "confidence": "low",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前136年"
-      ],
-      "death_min": -136,
-      "death_max": -136
-    },
-    "刘武": {
-      "sources": [
-        "event_index",
-        "lifespans_v1"
-      ],
-      "birth_confidence": "medium",
-      "death_confidence": "high",
-      "confidence": "medium",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前144年",
-        "v1 lifespans: 公元前184年–公元前144年"
-      ],
-      "birth_min": -187,
-      "birth_max": -181,
-      "death_min": -144,
-      "death_max": -144,
-      "age_min": 38,
-      "age_max": 44
+      "death_min": -181,
+      "death_max": -181
     },
     "刘泽": {
       "sources": [
@@ -249,41 +336,7 @@
       "death_min": -178,
       "death_max": -178
     },
-    "刘濞": {
-      "sources": [
-        "lifespans_v1"
-      ],
-      "birth_confidence": "medium",
-      "death_confidence": "medium",
-      "confidence": "medium",
-      "evidence": [
-        "v1 lifespans: 公元前216年–公元前154年"
-      ],
-      "birth_min": -219,
-      "birth_max": -213,
-      "death_min": -157,
-      "death_max": -151,
-      "age_min": 57,
-      "age_max": 69
-    },
-    "刘盈": {
-      "sources": [
-        "lifespans_v1"
-      ],
-      "birth_confidence": "medium",
-      "death_confidence": "medium",
-      "confidence": "medium",
-      "evidence": [
-        "v1 lifespans: 公元前210年–公元前188年（汉惠帝）"
-      ],
-      "birth_min": -213,
-      "birth_max": -207,
-      "death_min": -191,
-      "death_max": -185,
-      "age_min": 17,
-      "age_max": 29
-    },
-    "刘肥": {
+    "刘舍": {
       "sources": [
         "event_index"
       ],
@@ -291,10 +344,36 @@
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前189年"
+        "事件索引（原文）: 卒于 公元前143年"
       ],
-      "death_min": -189,
-      "death_max": -189
+      "death_min": -143,
+      "death_max": -143
+    },
+    "华阳夫人": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前251年"
+      ],
+      "death_min": -251,
+      "death_max": -251
+    },
+    "南越武王（武帝）": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前137年"
+      ],
+      "death_min": -137,
+      "death_max": -137
     },
     "卫出公": {
       "sources": [
@@ -691,23 +770,6 @@
       "age_min": 47,
       "age_max": 87
     },
-    "卫鞅": {
-      "sources": [
-        "lifespans_v1"
-      ],
-      "birth_confidence": "medium",
-      "death_confidence": "medium",
-      "confidence": "medium",
-      "evidence": [
-        "v1 lifespans: 公元前395年–公元前338年（商鞅）"
-      ],
-      "birth_min": -398,
-      "birth_max": -392,
-      "death_min": -341,
-      "death_max": -335,
-      "age_min": 52,
-      "age_max": 64
-    },
     "卫黔牟": {
       "sources": [
         "reign_periods"
@@ -725,6 +787,19 @@
       "death_max": -668,
       "age_min": 38,
       "age_max": 88
+    },
+    "发": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1056年"
+      ],
+      "death_min": -1056,
+      "death_max": -1056
     },
     "叔齐": {
       "sources": [
@@ -900,13 +975,15 @@
     },
     "吴王": {
       "sources": [
+        "lifespans_v1",
         "reign_periods"
       ],
       "birth_confidence": "low",
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "十表 reign_periods: 吴 在位 495–425 BCE"
+        "十表 reign_periods: 吴 在位 495–425 BCE",
+        "v1 lifespans: 公元前216年–公元前154年"
       ],
       "state": "吴",
       "birth_min": -554,
@@ -1088,15 +1165,15 @@
       "death_confidence": "high",
       "confidence": "approximate",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前169年",
+        "事件索引（原文）: 卒于 公元前178年",
         "v1 lifespans: 公元前243年–公元前169年（约）"
       ],
       "birth_min": -253,
       "birth_max": -233,
-      "death_min": -169,
-      "death_max": -169,
-      "age_min": 65,
-      "age_max": 85
+      "death_min": -178,
+      "death_max": -178,
+      "age_min": 56,
+      "age_max": 76
     },
     "周匡王": {
       "sources": [
@@ -1680,22 +1757,115 @@
       "age_min": 16,
       "age_max": 66
     },
+    "咎单": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1560年"
+      ],
+      "death_min": -1560,
+      "death_max": -1560
+    },
+    "唐八子": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前251年"
+      ],
+      "death_min": -251,
+      "death_max": -251
+    },
+    "唐太后": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前251年"
+      ],
+      "death_min": -251,
+      "death_max": -251
+    },
     "商鞅": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "medium",
-      "death_confidence": "medium",
+      "death_confidence": "high",
       "confidence": "medium",
       "evidence": [
-        "v1 lifespans: 公元前395年–公元前338年"
+        "事件索引（原文）: 卒于 公元前338年",
+        "v1 lifespans: 公元前395年–公元前338年（商鞅）"
       ],
       "birth_min": -398,
       "birth_max": -392,
-      "death_min": -341,
-      "death_max": -335,
-      "age_min": 52,
-      "age_max": 64
+      "death_min": -338,
+      "death_max": -338,
+      "age_min": 55,
+      "age_max": 61
+    },
+    "商高宗": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1192年"
+      ],
+      "death_min": -1192,
+      "death_max": -1192
+    },
+    "嘉": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前186年"
+      ],
+      "death_min": -186,
+      "death_max": -186
+    },
+    "四岳": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前2085年"
+      ],
+      "death_min": -2085,
+      "death_max": -2085
+    },
+    "城阳共王": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前144年"
+      ],
+      "death_min": -144,
+      "death_max": -144
     },
     "夏后帝启": {
       "sources": [
@@ -1723,6 +1893,32 @@
       "death_min": -240,
       "death_max": -240
     },
+    "外丙": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1587年"
+      ],
+      "death_min": -1587,
+      "death_max": -1587
+    },
+    "太丁": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1587年"
+      ],
+      "death_min": -1587,
+      "death_max": -1587
+    },
     "太上皇": {
       "sources": [
         "event_index"
@@ -1749,7 +1945,7 @@
       "death_min": -228,
       "death_max": -228
     },
-    "子产": {
+    "太子": {
       "sources": [
         "event_index"
       ],
@@ -1757,10 +1953,23 @@
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前522年"
+        "事件索引（原文）: 卒于 公元前195年"
       ],
-      "death_min": -522,
-      "death_max": -522
+      "death_min": -195,
+      "death_max": -195
+    },
+    "奄息": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前621年"
+      ],
+      "death_min": -621,
+      "death_max": -621
     },
     "孔子": {
       "sources": [
@@ -1853,13 +2062,15 @@
     },
     "孝惠": {
       "sources": [
+        "lifespans_v1",
         "reign_periods"
       ],
       "birth_confidence": "low",
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "十表 reign_periods: 汉 在位 194–188 BCE"
+        "十表 reign_periods: 汉 在位 194–188 BCE",
+        "v1 lifespans: 公元前210年–公元前188年（汉惠帝）"
       ],
       "state": "汉",
       "birth_min": -253,
@@ -2026,7 +2237,7 @@
       "age_min": 56,
       "age_max": 68
     },
-    "安国君": {
+    "季札": {
       "sources": [
         "event_index"
       ],
@@ -2034,10 +2245,10 @@
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前265年"
+        "事件索引（原文）: 卒于 公元前561年"
       ],
-      "death_min": -265,
-      "death_max": -265
+      "death_min": -561,
+      "death_max": -561
     },
     "宋元公": {
       "sources": [
@@ -2415,6 +2626,32 @@
       "death_min": -186,
       "death_max": -186
     },
+    "山阳哀王": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前136年"
+      ],
+      "death_min": -136,
+      "death_max": -136
+    },
+    "市人": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前189年"
+      ],
+      "death_min": -189,
+      "death_max": -189
+    },
     "帝乙": {
       "sources": [
         "reign_periods"
@@ -2433,22 +2670,61 @@
       "age_min": 35,
       "age_max": 85
     },
+    "帝发": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1650年"
+      ],
+      "death_min": -1650,
+      "death_max": -1650
+    },
     "帝喾": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "legend",
       "death_confidence": "legend",
       "confidence": "legend",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前2437年",
         "v1 lifespans: 公元前2436年–公元前2367年（传说）"
       ],
       "birth_min": -2466,
       "birth_max": -2406,
-      "death_min": -2397,
-      "death_max": -2337,
-      "age_min": 10,
-      "age_max": 130
+      "death_min": -2437,
+      "death_max": -2437
+    },
+    "帝太康": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前2000年"
+      ],
+      "death_min": -2000,
+      "death_max": -2000
+    },
+    "帝桀": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1650年"
+      ],
+      "death_min": -1650,
+      "death_max": -1650
     },
     "帝武丁": {
       "sources": [
@@ -2480,19 +2756,6 @@
       ],
       "death_min": -1650,
       "death_max": -1650
-    },
-    "帝禹": {
-      "sources": [
-        "event_index"
-      ],
-      "birth_confidence": "low",
-      "death_confidence": "high",
-      "confidence": "low",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前2061年"
-      ],
-      "death_min": -2061,
-      "death_max": -2061
     },
     "帝辛": {
       "sources": [
@@ -2593,6 +2856,25 @@
       "death_min": -181,
       "death_max": -181
     },
+    "张丞相": {
+      "sources": [
+        "event_index",
+        "text_pattern"
+      ],
+      "birth_confidence": "high",
+      "death_confidence": "high",
+      "confidence": "high",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前162年",
+        "原文模式 享年百有馀岁 @096：生年=公元前261年（卒年 −99）"
+      ],
+      "birth_min": -261,
+      "birth_max": -261,
+      "death_min": -162,
+      "death_max": -162,
+      "age_min": 100,
+      "age_max": 100
+    },
     "张仪": {
       "sources": [
         "event_index",
@@ -2614,20 +2896,22 @@
     },
     "张耳": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "medium",
-      "death_confidence": "medium",
+      "death_confidence": "high",
       "confidence": "medium",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前186年",
         "v1 lifespans: 公元前264年–公元前202年"
       ],
       "birth_min": -267,
       "birth_max": -261,
-      "death_min": -205,
-      "death_max": -199,
-      "age_min": 57,
-      "age_max": 69
+      "death_min": -186,
+      "death_max": -186,
+      "age_min": 76,
+      "age_max": 82
     },
     "张良": {
       "sources": [
@@ -2647,25 +2931,6 @@
       "death_max": -185,
       "age_min": 56,
       "age_max": 76
-    },
-    "张苍": {
-      "sources": [
-        "event_index",
-        "text_pattern"
-      ],
-      "birth_confidence": "high",
-      "death_confidence": "high",
-      "confidence": "high",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前162年",
-        "原文模式 享年百有馀岁 @096：生年=公元前261年（卒年 −99）"
-      ],
-      "birth_min": -261,
-      "birth_max": -261,
-      "death_min": -162,
-      "death_max": -162,
-      "age_min": 100,
-      "age_max": 100
     },
     "张骞": {
       "sources": [
@@ -2716,6 +2981,32 @@
       "death_min": -128,
       "death_max": -128
     },
+    "悼子": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前412年"
+      ],
+      "death_min": -412,
+      "death_max": -412
+    },
+    "所忠": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前117年"
+      ],
+      "death_min": -117,
+      "death_max": -117
+    },
     "文丁": {
       "sources": [
         "reign_periods"
@@ -2733,6 +3024,58 @@
       "death_max": -1102,
       "age_min": 20,
       "age_max": 70
+    },
+    "文王熊赀": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前690年"
+      ],
+      "death_min": -690,
+      "death_max": -690
+    },
+    "无忌": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前247年"
+      ],
+      "death_min": -247,
+      "death_max": -247
+    },
+    "无诡": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前643年"
+      ],
+      "death_min": -643,
+      "death_max": -643
+    },
+    "易牙": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前643年"
+      ],
+      "death_min": -643,
+      "death_max": -643
     },
     "春申君": {
       "sources": [
@@ -3646,20 +3989,22 @@
     },
     "李斯": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "medium",
-      "death_confidence": "medium",
+      "death_confidence": "high",
       "confidence": "medium",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前210年",
         "v1 lifespans: 公元前284年–公元前208年"
       ],
       "birth_min": -287,
       "birth_max": -281,
-      "death_min": -211,
-      "death_max": -205,
-      "age_min": 71,
-      "age_max": 83
+      "death_min": -210,
+      "death_max": -210,
+      "age_min": 72,
+      "age_max": 78
     },
     "梁孝王": {
       "sources": [
@@ -3680,7 +4025,7 @@
       "age_min": 38,
       "age_max": 44
     },
-    "梁孝王城阳共王汝南王": {
+    "楚公子闾": {
       "sources": [
         "event_index"
       ],
@@ -3688,10 +4033,10 @@
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前144年"
+        "事件索引（原文）: 卒于 公元前489年"
       ],
-      "death_min": -144,
-      "death_max": -144
+      "death_min": -489,
+      "death_max": -489
     },
     "楚共王": {
       "sources": [
@@ -4326,19 +4671,6 @@
       "death_min": -183,
       "death_max": -183
     },
-    "武丁": {
-      "sources": [
-        "event_index"
-      ],
-      "birth_confidence": "low",
-      "death_confidence": "high",
-      "confidence": "low",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前1192年"
-      ],
-      "death_min": -1192,
-      "death_max": -1192
-    },
     "武乙": {
       "sources": [
         "reign_periods"
@@ -4356,6 +4688,32 @@
       "death_max": -1113,
       "age_min": 44,
       "age_max": 94
+    },
+    "毕公": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1021年"
+      ],
+      "death_min": -1021,
+      "death_max": -1021
+    },
+    "汝南王": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前144年"
+      ],
+      "death_min": -144,
+      "death_max": -144
     },
     "汤": {
       "sources": [
@@ -4408,22 +4766,31 @@
       "death_min": -1560,
       "death_max": -1560
     },
-    "沛公": {
+    "济阴哀王": {
       "sources": [
-        "lifespans_v1"
+        "event_index"
       ],
-      "birth_confidence": "medium",
-      "death_confidence": "medium",
-      "confidence": "medium",
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
       "evidence": [
-        "v1 lifespans: 公元前256年–公元前195年"
+        "事件索引（原文）: 卒于 公元前143年"
       ],
-      "birth_min": -259,
-      "birth_max": -253,
-      "death_min": -198,
-      "death_max": -192,
-      "age_min": 56,
-      "age_max": 68
+      "death_min": -143,
+      "death_max": -143
+    },
+    "淮阳王": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前183年"
+      ],
+      "death_min": -183,
+      "death_max": -183
     },
     "淳于髡": {
       "sources": [
@@ -4525,6 +4892,19 @@
       "death_max": -372,
       "age_min": 40,
       "age_max": 90
+    },
+    "燕召公": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1021年"
+      ],
+      "death_min": -1021,
+      "death_max": -1021
     },
     "燕哀侯": {
       "sources": [
@@ -5082,6 +5462,19 @@
       "death_min": -531,
       "death_max": -531
     },
+    "王龁": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前247年"
+      ],
+      "death_min": -247,
+      "death_max": -247
+    },
     "甘茂": {
       "sources": [
         "lifespans_v1"
@@ -5098,6 +5491,19 @@
       "death_max": -270,
       "age_min": 36,
       "age_max": 76
+    },
+    "田仁": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前140年"
+      ],
+      "death_min": -140,
+      "death_max": -140
     },
     "田单": {
       "sources": [
@@ -5116,19 +5522,6 @@
       "age_min": 41,
       "age_max": 81
     },
-    "田叔": {
-      "sources": [
-        "event_index"
-      ],
-      "birth_confidence": "low",
-      "death_confidence": "high",
-      "confidence": "low",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前140年"
-      ],
-      "death_min": -140,
-      "death_max": -140
-    },
     "田忌": {
       "sources": [
         "lifespans_v1"
@@ -5146,24 +5539,52 @@
       "age_min": 41,
       "age_max": 81
     },
+    "田氏": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前379年"
+      ],
+      "death_min": -379,
+      "death_max": -379
+    },
+    "田相": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前140年"
+      ],
+      "death_min": -140,
+      "death_max": -140
+    },
     "田蚡": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "approximate",
-      "death_confidence": "approximate",
+      "death_confidence": "high",
       "confidence": "approximate",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前135年",
         "v1 lifespans: 公元前180年–公元前131年（约）"
       ],
       "birth_min": -190,
       "birth_max": -170,
-      "death_min": -141,
-      "death_max": -121,
-      "age_min": 30,
-      "age_max": 70
+      "death_min": -135,
+      "death_max": -135,
+      "age_min": 36,
+      "age_max": 56
     },
-    "申屠嘉": {
+    "申屠丞相": {
       "sources": [
         "event_index"
       ],
@@ -5175,6 +5596,19 @@
       ],
       "death_min": -155,
       "death_max": -155
+    },
+    "白": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前678年"
+      ],
+      "death_min": -678,
+      "death_max": -678
     },
     "白起": {
       "sources": [
@@ -5195,6 +5629,32 @@
       "age_min": 70,
       "age_max": 76
     },
+    "皋陶": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前2065年"
+      ],
+      "death_min": -2065,
+      "death_max": -2065
+    },
+    "益": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前2065年"
+      ],
+      "death_min": -2065,
+      "death_max": -2065
+    },
     "石庆": {
       "sources": [
         "event_index"
@@ -5208,6 +5668,58 @@
       "death_min": -103,
       "death_max": -103
     },
+    "石建": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前124年"
+      ],
+      "death_min": -124,
+      "death_max": -124
+    },
+    "石德": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前103年"
+      ],
+      "death_min": -103,
+      "death_max": -103
+    },
+    "祖己": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1192年"
+      ],
+      "death_min": -1192,
+      "death_max": -1192
+    },
+    "祖庚": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1192年"
+      ],
+      "death_min": -1192,
+      "death_max": -1192
+    },
     "禹": {
       "sources": [
         "event_index",
@@ -5217,13 +5729,15 @@
       "death_confidence": "legend",
       "confidence": "legend",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前2065年",
+        "事件索引（原文）: 卒于 公元前2085年",
         "v1 lifespans: 公元前2200年–公元前2100年（传说）"
       ],
       "birth_min": -2230,
       "birth_max": -2170,
-      "death_min": -2065,
-      "death_max": -2065
+      "death_min": -2085,
+      "death_max": -2085,
+      "age_min": 86,
+      "age_max": 146
     },
     "秦二世": {
       "sources": [
@@ -5381,15 +5895,13 @@
     },
     "秦始皇帝": {
       "sources": [
-        "lifespans_v1",
         "reign_periods"
       ],
       "birth_confidence": "low",
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "十表 reign_periods: 秦 在位 246–209 BCE",
-        "v1 lifespans: 公元前259年–公元前210年"
+        "十表 reign_periods: 秦 在位 246–209 BCE"
       ],
       "state": "秦",
       "birth_min": -305,
@@ -5474,6 +5986,19 @@
       "death_max": -663,
       "age_min": 22,
       "age_max": 72
+    },
+    "秦宣太后": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前265年"
+      ],
+      "death_min": -265,
+      "death_max": -265
     },
     "秦庄公": {
       "sources": [
@@ -5900,25 +6425,6 @@
       "age_min": 73,
       "age_max": 79
     },
-    "窦太后": {
-      "sources": [
-        "event_index",
-        "lifespans_v1"
-      ],
-      "birth_confidence": "approximate",
-      "death_confidence": "high",
-      "confidence": "approximate",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前135年",
-        "v1 lifespans: 公元前215年–公元前135年（约）"
-      ],
-      "birth_min": -225,
-      "birth_max": -205,
-      "death_min": -135,
-      "death_max": -135,
-      "age_min": 71,
-      "age_max": 91
-    },
     "窦婴": {
       "sources": [
         "lifespans_v1"
@@ -5938,37 +6444,80 @@
     },
     "窦皇后": {
       "sources": [
-        "lifespans_v1"
-      ],
-      "birth_confidence": "medium",
-      "death_confidence": "medium",
-      "confidence": "medium",
-      "evidence": [
-        "v1 lifespans: 公元前215年–公元前135年（窦太后）"
-      ],
-      "birth_min": -218,
-      "birth_max": -212,
-      "death_min": -138,
-      "death_max": -132,
-      "age_min": 75,
-      "age_max": 87
-    },
-    "章邯": {
-      "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "approximate",
-      "death_confidence": "approximate",
+      "death_confidence": "high",
       "confidence": "approximate",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前135年",
+        "v1 lifespans: 公元前215年–公元前135年（约）"
+      ],
+      "birth_min": -225,
+      "birth_max": -205,
+      "death_min": -135,
+      "death_max": -135,
+      "age_min": 71,
+      "age_max": 91
+    },
+    "竖刀": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前643年"
+      ],
+      "death_min": -643,
+      "death_max": -643
+    },
+    "章邯": {
+      "sources": [
+        "event_index",
+        "lifespans_v1"
+      ],
+      "birth_confidence": "approximate",
+      "death_confidence": "high",
+      "confidence": "approximate",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前206年",
         "v1 lifespans: 公元前250年–公元前205年（约）"
       ],
       "birth_min": -260,
       "birth_max": -240,
-      "death_min": -215,
-      "death_max": -195,
-      "age_min": 26,
-      "age_max": 66
+      "death_min": -206,
+      "death_max": -206,
+      "age_min": 35,
+      "age_max": 55
+    },
+    "竫公": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前716年"
+      ],
+      "death_min": -716,
+      "death_max": -716
+    },
+    "端木子贡": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前479年"
+      ],
+      "death_min": -479,
+      "death_max": -479
     },
     "管仲": {
       "sources": [
@@ -6001,19 +6550,6 @@
       ],
       "death_min": -125,
       "death_max": -125
-    },
-    "胡亥": {
-      "sources": [
-        "event_index"
-      ],
-      "birth_confidence": "low",
-      "death_confidence": "high",
-      "confidence": "low",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前210年"
-      ],
-      "death_min": -210,
-      "death_max": -210
     },
     "舜": {
       "sources": [
@@ -6157,20 +6693,22 @@
     },
     "蒙恬": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "medium",
-      "death_confidence": "medium",
+      "death_confidence": "high",
       "confidence": "medium",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前210年",
         "v1 lifespans: 公元前259年–公元前210年"
       ],
       "birth_min": -262,
       "birth_max": -256,
-      "death_min": -213,
-      "death_max": -207,
-      "age_min": 44,
-      "age_max": 56
+      "death_min": -210,
+      "death_max": -210,
+      "age_min": 47,
+      "age_max": 53
     },
     "蒙骜": {
       "sources": [
@@ -6184,6 +6722,19 @@
       ],
       "death_min": -247,
       "death_max": -247
+    },
+    "蒲将军": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前206年"
+      ],
+      "death_min": -206,
+      "death_max": -206
     },
     "蔡侯": {
       "sources": [
@@ -6542,6 +7093,19 @@
       "age_min": 48,
       "age_max": 88
     },
+    "诵": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1043年"
+      ],
+      "death_min": -1043,
+      "death_max": -1043
+    },
     "贾谊": {
       "sources": [
         "lifespans_v1"
@@ -6578,19 +7142,6 @@
       "death_max": -222,
       "age_min": 15,
       "age_max": 65
-    },
-    "赵佗": {
-      "sources": [
-        "event_index"
-      ],
-      "birth_confidence": "low",
-      "death_confidence": "high",
-      "confidence": "low",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前137年"
-      ],
-      "death_min": -137,
-      "death_max": -137
     },
     "赵孝成王": {
       "sources": [
@@ -6998,6 +7549,19 @@
       "age_min": 24,
       "age_max": 74
     },
+    "郑子产": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前522年"
+      ],
+      "death_min": -522,
+      "death_max": -522
+    },
     "郑定公": {
       "sources": [
         "reign_periods"
@@ -7245,22 +7809,31 @@
       "age_min": 28,
       "age_max": 78
     },
-    "重耳": {
+    "针虎": {
       "sources": [
-        "lifespans_v1"
+        "event_index"
       ],
-      "birth_confidence": "medium",
-      "death_confidence": "medium",
-      "confidence": "medium",
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
       "evidence": [
-        "v1 lifespans: 公元前697年–公元前628年"
+        "事件索引（原文）: 卒于 公元前621年"
       ],
-      "birth_min": -700,
-      "birth_max": -694,
-      "death_min": -631,
-      "death_max": -625,
-      "age_min": 64,
-      "age_max": 76
+      "death_min": -621,
+      "death_max": -621
+    },
+    "钊": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前1021年"
+      ],
+      "death_min": -1021,
+      "death_max": -1021
     },
     "闳": {
       "sources": [
@@ -7275,7 +7848,7 @@
       "death_min": -113,
       "death_max": -113
     },
-    "阏于": {
+    "阿衡": {
       "sources": [
         "event_index"
       ],
@@ -7283,10 +7856,10 @@
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前153年"
+        "事件索引（原文）: 卒于 公元前1560年"
       ],
-      "death_min": -153,
-      "death_max": -153
+      "death_min": -1560,
+      "death_max": -1560
     },
     "陈共公": {
       "sources": [
@@ -7682,6 +8255,19 @@
       "age_min": 16,
       "age_max": 56
     },
+    "陶青": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前155年"
+      ],
+      "death_min": -155,
+      "death_max": -155
+    },
     "霍光": {
       "sources": [
         "event_index",
@@ -7717,23 +8303,6 @@
       "death_max": -114,
       "age_min": 18,
       "age_max": 30
-    },
-    "韩信": {
-      "sources": [
-        "lifespans_v1"
-      ],
-      "birth_confidence": "medium",
-      "death_confidence": "medium",
-      "confidence": "medium",
-      "evidence": [
-        "v1 lifespans: 公元前231年–公元前196年"
-      ],
-      "birth_min": -234,
-      "birth_max": -228,
-      "death_min": -199,
-      "death_max": -193,
-      "age_min": 30,
-      "age_max": 42
     },
     "韩厘王": {
       "sources": [
@@ -8002,23 +8571,6 @@
       "age_min": 33,
       "age_max": 73
     },
-    "项王": {
-      "sources": [
-        "lifespans_v1"
-      ],
-      "birth_confidence": "medium",
-      "death_confidence": "medium",
-      "confidence": "medium",
-      "evidence": [
-        "v1 lifespans: 公元前232年–公元前202年"
-      ],
-      "birth_min": -235,
-      "birth_max": -229,
-      "death_min": -205,
-      "death_max": -199,
-      "age_min": 25,
-      "age_max": 37
-    },
     "项羽": {
       "sources": [
         "event_index",
@@ -8047,15 +8599,26 @@
       "death_confidence": "legend",
       "confidence": "legend",
       "evidence": [
-        "事件索引（原文）: 卒于 公元前2437年",
+        "事件索引（原文）: 卒于 公元前2599年",
         "v1 lifespans: 公元前2514年–公元前2437年（传说）"
       ],
       "birth_min": -2544,
       "birth_max": -2484,
-      "death_min": -2437,
-      "death_max": -2437,
-      "age_min": 48,
-      "age_max": 108
+      "death_min": -2599,
+      "death_max": -2599
+    },
+    "馀眛": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前531年"
+      ],
+      "death_min": -531,
+      "death_max": -531
     },
     "高后": {
       "sources": [
@@ -8135,20 +8698,22 @@
     },
     "魏安釐王": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "approximate",
-      "death_confidence": "approximate",
+      "death_confidence": "high",
       "confidence": "approximate",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前243年",
         "v1 lifespans: 公元前300年–公元前243年（约）"
       ],
       "birth_min": -310,
       "birth_max": -290,
-      "death_min": -253,
-      "death_max": -233,
-      "age_min": 38,
-      "age_max": 78
+      "death_min": -243,
+      "death_max": -243,
+      "age_min": 48,
+      "age_max": 68
     },
     "魏惠王": {
       "sources": [
@@ -8870,20 +9435,22 @@
     },
     "黥布": {
       "sources": [
+        "event_index",
         "lifespans_v1"
       ],
       "birth_confidence": "medium",
-      "death_confidence": "medium",
+      "death_confidence": "high",
       "confidence": "medium",
       "evidence": [
+        "事件索引（原文）: 卒于 公元前206年",
         "v1 lifespans: 公元前235年–公元前196年"
       ],
       "birth_min": -238,
       "birth_max": -232,
-      "death_min": -199,
-      "death_max": -193,
-      "age_min": 34,
-      "age_max": 46
+      "death_min": -206,
+      "death_max": -206,
+      "age_min": 27,
+      "age_max": 33
     },
     "齐厉公": {
       "sources": [
@@ -9073,6 +9640,19 @@
       "age_min": 14,
       "age_max": 64
     },
+    "齐悼惠王": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前189年"
+      ],
+      "death_min": -189,
+      "death_max": -189
+    },
     "齐惠公": {
       "sources": [
         "lifespans_v1",
@@ -9148,19 +9728,6 @@
       "death_max": -803,
       "age_min": 22,
       "age_max": 72
-    },
-    "齐文王": {
-      "sources": [
-        "event_index"
-      ],
-      "birth_confidence": "low",
-      "death_confidence": "high",
-      "confidence": "low",
-      "evidence": [
-        "事件索引（原文）: 卒于 公元前179年"
-      ],
-      "death_min": -179,
-      "death_max": -179
     },
     "齐昭公": {
       "sources": [
@@ -9318,13 +9885,15 @@
     },
     "齐王": {
       "sources": [
+        "lifespans_v1",
         "reign_periods"
       ],
       "birth_confidence": "low",
       "death_confidence": "high",
       "confidence": "low",
       "evidence": [
-        "十表 reign_periods: 齐 在位 264–207 BCE"
+        "十表 reign_periods: 齐 在位 264–207 BCE",
+        "v1 lifespans: 公元前231年–公元前196年"
       ],
       "state": "齐",
       "birth_min": -323,
@@ -9409,6 +9978,19 @@
       "death_max": -581,
       "age_min": 27,
       "age_max": 77
+    },
+    "（名不详）": {
+      "sources": [
+        "event_index"
+      ],
+      "birth_confidence": "low",
+      "death_confidence": "high",
+      "confidence": "low",
+      "evidence": [
+        "事件索引（原文）: 卒于 公元前179年"
+      ],
+      "death_min": -179,
+      "death_max": -179
     }
   }
 }
