@@ -182,6 +182,8 @@ def main() -> int:
             body = md_text.split("---", 2)[-1] if md_text.startswith("---") else md_text
             if "<!-- stub:" in body:
                 narrative_bonus -= 5  # stub 明确惩罚
+            if "*生卒依据*" in body or "[^ref" in body:
+                narrative_bonus += 3  # 有引证加分 (user-req-4)
             # 散文段 = 既不是空行, 不以 | 开头, 不以 # 开头, 不以 - 开头
             prose_paras = 0
             for block in body.split("\n\n"):

@@ -44,14 +44,46 @@
         "death": -126,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "乐毅": {
+      "type": "person",
+      "label": "乐毅",
+      "aliases": [
+        "乐子",
+        "昌国君",
+        "望诸君",
+        "毅"
+      ],
+      "tags": [
+        "战国",
+        "燕国",
+        "武将"
+      ],
+      "path": "pages/乐毅.md",
+      "total_refs": 23,
+      "total_chapters": 8,
+      "lifespan": {
+        "birth": -310,
+        "death": -245,
+        "note": "约"
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "二世皇帝": {
@@ -70,14 +102,14 @@
       "path": "pages/二世皇帝.md",
       "total_refs": 40,
       "total_chapters": 13,
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 2,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "仲由": {
@@ -106,6 +138,31 @@
         "narrative": -5
       }
     },
+    "伊尹": {
+      "type": "person",
+      "label": "伊尹",
+      "aliases": [
+        "伊",
+        "阿衡"
+      ],
+      "tags": [
+        "商",
+        "辅臣",
+        "三代"
+      ],
+      "path": "pages/伊尹.md",
+      "total_refs": 22,
+      "total_chapters": 12,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
     "伍子胥": {
       "type": "person",
       "label": "伍子胥",
@@ -129,14 +186,39 @@
         "birth": -559,
         "death": -484
       },
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 3,
         "tags": 4,
+        "revs": 9,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "伯嚭": {
+      "type": "person",
+      "label": "伯嚭",
+      "aliases": [
+        "嚭",
+        "子嚭"
+      ],
+      "tags": [
+        "春秋",
+        "吴国",
+        "奸臣"
+      ],
+      "path": "pages/伯嚭.md",
+      "total_refs": 23,
+      "total_chapters": 7,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
         "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "公孙卿": {
@@ -152,14 +234,14 @@
       "path": "pages/公孙卿.md",
       "total_refs": 29,
       "total_chapters": 3,
-      "quality_score": 3,
+      "quality_score": 9,
       "_score_parts": {
         "base_refs": 1,
         "tags": 4,
-        "revs": 3,
+        "revs": 6,
         "size": 0,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "公孙弘": {
@@ -183,14 +265,61 @@
         "birth": -200,
         "death": -121
       },
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 3,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "公孙敖": {
+      "type": "person",
+      "label": "公孙敖",
+      "aliases": [
+        "敖"
+      ],
+      "tags": [
+        "汉朝",
+        "武将"
+      ],
+      "path": "pages/公孙敖.md",
+      "total_refs": 20,
+      "total_chapters": 6,
+      "quality_score": 10,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 4,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "刘如意": {
+      "type": "person",
+      "label": "刘如意",
+      "aliases": [
+        "如意"
+      ],
+      "tags": [
+        "汉朝",
+        "诸侯王",
+        "赵王"
+      ],
+      "path": "pages/刘如意.md",
+      "total_refs": 20,
+      "total_chapters": 13,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "刘濞": {
@@ -274,14 +403,39 @@
       "path": "pages/卢绾.md",
       "total_refs": 43,
       "total_chapters": 20,
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "卫康叔": {
+      "type": "person",
+      "label": "卫康叔",
+      "aliases": [
+        "封",
+        "康叔"
+      ],
+      "tags": [
+        "西周",
+        "诸侯",
+        "三代"
+      ],
+      "path": "pages/卫康叔.md",
+      "total_refs": 20,
+      "total_chapters": 9,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "卫青": {
@@ -306,14 +460,14 @@
         "death": -106,
         "note": "约"
       },
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 2,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "司马迁": {
@@ -337,14 +491,14 @@
         "death": -86,
         "note": "约"
       },
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "司马迁的史学思想": {
@@ -390,14 +544,14 @@
       "path": "pages/后稷.md",
       "total_refs": 46,
       "total_chapters": 14,
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 2,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "吕产": {
@@ -414,14 +568,14 @@
       "path": "pages/吕产.md",
       "total_refs": 39,
       "total_chapters": 10,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "吕尚": {
@@ -446,14 +600,14 @@
       "path": "pages/吕尚.md",
       "total_refs": 53,
       "total_chapters": 24,
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "吕禄": {
@@ -470,14 +624,14 @@
       "path": "pages/吕禄.md",
       "total_refs": 37,
       "total_chapters": 14,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "吕雉": {
@@ -497,12 +651,12 @@
       "path": "pages/吕雉.md",
       "total_refs": 142,
       "total_chapters": 43,
-      "quality_score": 12,
+      "quality_score": 16,
       "_score_parts": {
         "base_refs": 7,
         "tags": 6,
-        "revs": 3,
-        "size": 1,
+        "revs": 6,
+        "size": 2,
         "manual": 0,
         "narrative": -5
       }
@@ -523,14 +677,43 @@
       "path": "pages/吴王阖闾.md",
       "total_refs": 33,
       "total_chapters": 16,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "吴起": {
+      "type": "person",
+      "label": "吴起",
+      "aliases": [
+        "吴",
+        "起"
+      ],
+      "tags": [
+        "战国",
+        "兵家",
+        "武将"
+      ],
+      "path": "pages/吴起.md",
+      "total_refs": 22,
+      "total_chapters": 9,
+      "lifespan": {
+        "birth": -440,
+        "death": -381
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "周亚夫": {
@@ -552,14 +735,14 @@
         "birth": -199,
         "death": -143
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "周勃": {
@@ -584,14 +767,14 @@
         "death": -169,
         "note": "约"
       },
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 2,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "周厉王": {
@@ -611,14 +794,14 @@
       "path": "pages/周厉王.md",
       "total_refs": 42,
       "total_chapters": 21,
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "周宣王": {
@@ -637,14 +820,14 @@
       "path": "pages/周宣王.md",
       "total_refs": 31,
       "total_chapters": 17,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "周成王": {
@@ -664,14 +847,14 @@
       "path": "pages/周成王.md",
       "total_refs": 56,
       "total_chapters": 24,
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "周文王": {
@@ -699,14 +882,14 @@
         "death": -1056,
         "note": "约"
       },
-      "quality_score": 12,
+      "quality_score": 22,
       "_score_parts": {
         "base_refs": 4,
         "tags": 6,
-        "revs": 6,
-        "size": 1,
+        "revs": 12,
+        "size": 2,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "周武王": {
@@ -733,14 +916,14 @@
         "death": -1043,
         "note": "约"
       },
-      "quality_score": 11,
+      "quality_score": 21,
       "_score_parts": {
         "base_refs": 6,
         "tags": 6,
-        "revs": 3,
-        "size": 1,
+        "revs": 9,
+        "size": 2,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "商鞅": {
@@ -766,14 +949,14 @@
         "birth": -395,
         "death": -338
       },
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 2,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "如何阅读史记": {
@@ -838,14 +1021,14 @@
       "path": "pages/姬夫差.md",
       "total_refs": 28,
       "total_chapters": 17,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "姬旦": {
@@ -925,14 +1108,69 @@
         "birth": -551,
         "death": -479
       },
-      "quality_score": 23,
+      "quality_score": 33,
       "_score_parts": {
         "base_refs": 13,
         "tags": 8,
+        "revs": 12,
+        "size": 2,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "宋平公": {
+      "type": "person",
+      "label": "宋平公",
+      "aliases": [
+        "平公",
+        "成"
+      ],
+      "tags": [
+        "春秋",
+        "宋国",
+        "世家人物"
+      ],
+      "path": "pages/宋平公.md",
+      "total_refs": 21,
+      "total_chapters": 13,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
         "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "宋襄公": {
+      "type": "person",
+      "label": "宋襄公",
+      "aliases": [
+        "宋公",
+        "襄公"
+      ],
+      "tags": [
+        "春秋",
+        "宋国",
+        "世家人物"
+      ],
+      "path": "pages/宋襄公.md",
+      "total_refs": 20,
+      "total_chapters": 8,
+      "lifespan": {
+        "death": -637,
+        "birth": -650,
+        "note": "宋国君主，在位14年，泓之战战败受伤，次年伤重而卒..."
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "尧": {
@@ -959,14 +1197,14 @@
         "death": -2259,
         "note": "传说"
       },
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 3,
         "tags": 4,
-        "revs": 6,
+        "revs": 9,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "廉颇": {
@@ -990,14 +1228,38 @@
         "birth": -327,
         "death": -243
       },
-      "quality_score": 11,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 3,
+        "tags": 6,
+        "revs": 9,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "张敖": {
+      "type": "person",
+      "label": "张敖",
+      "aliases": [
+        "敖"
+      ],
+      "tags": [
+        "汉朝",
+        "诸侯王",
+        "赵国"
+      ],
+      "path": "pages/张敖.md",
+      "total_refs": 23,
+      "total_chapters": 11,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
         "tags": 6,
         "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "张汤": {
@@ -1015,14 +1277,14 @@
       "path": "pages/张汤.md",
       "total_refs": 46,
       "total_chapters": 11,
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "张良": {
@@ -1048,14 +1310,14 @@
         "death": -186,
         "note": "约"
       },
-      "quality_score": 10,
+      "quality_score": 16,
       "_score_parts": {
         "base_refs": 3,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "张苍": {
@@ -1075,14 +1337,14 @@
       "path": "pages/张苍.md",
       "total_refs": 27,
       "total_chapters": 9,
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "张骞": {
@@ -1105,14 +1367,14 @@
         "birth": -164,
         "death": -114
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "彭越": {
@@ -1138,14 +1400,14 @@
         "death": -196,
         "note": "约"
       },
-      "quality_score": 11,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 3,
         "tags": 6,
-        "revs": 6,
+        "revs": 9,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "晁错": {
@@ -1168,14 +1430,14 @@
         "death": -154,
         "note": "约"
       },
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "晋哀侯": {
@@ -1193,14 +1455,14 @@
       "path": "pages/晋哀侯.md",
       "total_refs": 26,
       "total_chapters": 6,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "晋平公": {
@@ -1218,14 +1480,70 @@
       "path": "pages/晋平公.md",
       "total_refs": 25,
       "total_chapters": 15,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "晋悼公": {
+      "type": "person",
+      "label": "晋悼公",
+      "aliases": [
+        "周",
+        "悼公"
+      ],
+      "tags": [
+        "春秋",
+        "晋国",
+        "世家人物"
+      ],
+      "path": "pages/晋悼公.md",
+      "total_refs": 20,
+      "total_chapters": 10,
+      "lifespan": {
+        "death": -558,
+        "birth": -572,
+        "note": "晋国君主，在位15年，景公之孙，使晋国重振霸业..."
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "晋惠公": {
+      "type": "person",
+      "label": "晋惠公",
+      "aliases": [
+        "惠",
+        "惠公",
+        "晋君夷吾"
+      ],
+      "tags": [
+        "春秋",
+        "晋国",
+        "世家人物"
+      ],
+      "path": "pages/晋惠公.md",
+      "total_refs": 20,
+      "total_chapters": 7,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "晋文公": {
@@ -1249,14 +1567,74 @@
         "birth": -697,
         "death": -628
       },
-      "quality_score": 12,
+      "quality_score": 22,
       "_score_parts": {
         "base_refs": 4,
+        "tags": 6,
+        "revs": 12,
+        "size": 2,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "晋景公": {
+      "type": "person",
+      "label": "晋景公",
+      "aliases": [
+        "景",
+        "景公"
+      ],
+      "tags": [
+        "春秋",
+        "晋国",
+        "世家人物"
+      ],
+      "path": "pages/晋景公.md",
+      "total_refs": 23,
+      "total_chapters": 8,
+      "lifespan": {
+        "death": -581,
+        "birth": -599,
+        "note": "晋国君主，在位19年，成公之子，鞍之战败齐..."
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
         "tags": 6,
         "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "晋灵公": {
+      "type": "person",
+      "label": "晋灵公",
+      "aliases": [
+        "灵",
+        "灵公"
+      ],
+      "tags": [
+        "春秋",
+        "晋国",
+        "昏君"
+      ],
+      "path": "pages/晋灵公.md",
+      "total_refs": 23,
+      "total_chapters": 7,
+      "lifespan": {
+        "death": -607,
+        "birth": -620,
+        "note": "晋国君主，在位14年，襄公之子..."
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "晋献公": {
@@ -1274,14 +1652,69 @@
       "path": "pages/晋献公.md",
       "total_refs": 39,
       "total_chapters": 16,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "晋襄公": {
+      "type": "person",
+      "label": "晋襄公",
+      "aliases": [
+        "襄",
+        "襄公"
+      ],
+      "tags": [
+        "春秋",
+        "晋国",
+        "世家人物"
+      ],
+      "path": "pages/晋襄公.md",
+      "total_refs": 21,
+      "total_chapters": 8,
+      "lifespan": {
+        "death": -621,
+        "birth": -627,
+        "note": "晋国君主，在位7年，文公之子，殽之战大败秦师..."
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "晋顷公": {
+      "type": "person",
+      "label": "晋顷公",
+      "aliases": [
+        "去疾",
+        "顷公"
+      ],
+      "tags": [
+        "春秋",
+        "晋国",
+        "世家人物"
+      ],
+      "path": "pages/晋顷公.md",
+      "total_refs": 21,
+      "total_chapters": 11,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "晏婴": {
@@ -1301,14 +1734,14 @@
       "path": "pages/晏婴.md",
       "total_refs": 26,
       "total_chapters": 13,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "曹参": {
@@ -1332,14 +1765,14 @@
         "death": -190,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "李广": {
@@ -1363,14 +1796,14 @@
         "birth": -189,
         "death": -119
       },
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "李斯": {
@@ -1392,14 +1825,14 @@
         "birth": -284,
         "death": -208
       },
-      "quality_score": 11,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 3,
         "tags": 6,
-        "revs": 6,
+        "revs": 9,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "李牧": {
@@ -1416,14 +1849,14 @@
       "path": "pages/李牧.md",
       "total_refs": 29,
       "total_chapters": 7,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "梁孝王": {
@@ -1447,14 +1880,39 @@
         "death": -144,
         "note": "刘武"
       },
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "楚元王": {
+      "type": "person",
+      "label": "楚元王",
+      "aliases": [
+        "元王",
+        "刘交"
+      ],
+      "tags": [
+        "汉朝",
+        "诸侯王",
+        "楚国"
+      ],
+      "path": "pages/楚元王.md",
+      "total_refs": 20,
+      "total_chapters": 12,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "楚平王": {
@@ -1482,14 +1940,14 @@
         "birth": -528,
         "note": "楚国君主，在位13年，即公子弃疾，伍子胥复仇的对象..."
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "楚庄王": {
@@ -1512,14 +1970,14 @@
         "birth": -631,
         "death": -591
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "楚怀王": {
@@ -1543,14 +2001,14 @@
         "death": -296,
         "note": "约"
       },
-      "quality_score": 11,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 3,
         "tags": 6,
-        "revs": 6,
+        "revs": 9,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "楚成王": {
@@ -1575,14 +2033,14 @@
         "birth": -671,
         "note": "楚国君主，在位46年，《史记》明确记载在位46年..."
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "楚昭王": {
@@ -1608,14 +2066,14 @@
         "birth": -515,
         "note": "楚国君主，在位27年，伍子胥率吴军入郢，昭王出奔..."
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "楚灵王": {
@@ -1640,14 +2098,14 @@
         "birth": -540,
         "note": "楚国君主，在位12年，康王之弟，最后饿死于申亥家..."
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "樊哙": {
@@ -1670,9 +2128,35 @@
         "birth": -242,
         "death": -189
       },
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "汉宣帝": {
+      "type": "person",
+      "label": "汉宣帝",
+      "aliases": [
+        "孝宣",
+        "孝宣帝",
+        "宣帝"
+      ],
+      "tags": [
+        "汉朝",
+        "本纪人物",
+        "中兴"
+      ],
+      "path": "pages/汉宣帝.md",
+      "total_refs": 21,
+      "total_chapters": 5,
+      "quality_score": 6,
+      "_score_parts": {
+        "base_refs": 1,
         "tags": 6,
         "revs": 3,
         "size": 1,
@@ -1702,10 +2186,35 @@
       "path": "pages/汉文帝.md",
       "total_refs": 123,
       "total_chapters": 49,
-      "quality_score": 13,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 6,
         "tags": 8,
+        "revs": 6,
+        "size": 2,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
+    "汉昭帝": {
+      "type": "person",
+      "label": "汉昭帝",
+      "aliases": [
+        "孝昭",
+        "孝昭帝",
+        "昭帝"
+      ],
+      "tags": [
+        "汉朝",
+        "本纪人物"
+      ],
+      "path": "pages/汉昭帝.md",
+      "total_refs": 22,
+      "total_chapters": 5,
+      "quality_score": 4,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 4,
         "revs": 3,
         "size": 1,
         "manual": 0,
@@ -1733,12 +2242,12 @@
       "path": "pages/汉景帝.md",
       "total_refs": 102,
       "total_chapters": 34,
-      "quality_score": 10,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 5,
         "tags": 6,
-        "revs": 3,
-        "size": 1,
+        "revs": 6,
+        "size": 2,
         "manual": 0,
         "narrative": -5
       }
@@ -1793,14 +2302,14 @@
         "death": -112,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "淮南厉王": {
@@ -1817,14 +2326,14 @@
       "path": "pages/淮南厉王.md",
       "total_refs": 26,
       "total_chapters": 9,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "淳于意": {
@@ -1843,14 +2352,14 @@
       "path": "pages/淳于意.md",
       "total_refs": 44,
       "total_chapters": 3,
-      "quality_score": 6,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
-        "size": 0,
+        "revs": 6,
+        "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "灌夫": {
@@ -1870,14 +2379,14 @@
       "path": "pages/灌夫.md",
       "total_refs": 26,
       "total_chapters": 9,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "灌婴": {
@@ -1901,14 +2410,14 @@
         "death": -176,
         "note": "约"
       },
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "燕召公": {
@@ -1925,14 +2434,38 @@
       "path": "pages/燕召公.md",
       "total_refs": 26,
       "total_chapters": 11,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "王陵": {
+      "type": "person",
+      "label": "王陵",
+      "aliases": [
+        "陵"
+      ],
+      "tags": [
+        "汉朝",
+        "丞相",
+        "楚汉之际"
+      ],
+      "path": "pages/王陵.md",
+      "total_refs": 21,
+      "total_chapters": 7,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "田单": {
@@ -1955,14 +2488,14 @@
         "death": -260,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "田常": {
@@ -1980,14 +2513,14 @@
       "path": "pages/田常.md",
       "total_refs": 45,
       "total_chapters": 22,
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "田文": {
@@ -2039,14 +2572,14 @@
         "death": -131,
         "note": "约"
       },
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "秦始皇": {
@@ -2078,14 +2611,14 @@
         "birth": -259,
         "death": -210
       },
-      "quality_score": 10,
+      "quality_score": 16,
       "_score_parts": {
         "base_refs": 3,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "秦子婴": {
@@ -2103,14 +2636,14 @@
       "path": "pages/秦子婴.md",
       "total_refs": 31,
       "total_chapters": 10,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "秦孝公": {
@@ -2134,14 +2667,14 @@
         "birth": -381,
         "death": -338
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "秦庄襄王": {
@@ -2160,14 +2693,14 @@
       "path": "pages/秦庄襄王.md",
       "total_refs": 37,
       "total_chapters": 13,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "秦惠王": {
@@ -2219,14 +2752,73 @@
         "birth": -325,
         "death": -251
       },
-      "quality_score": 9,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 4,
         "tags": 6,
-        "revs": 3,
+        "revs": 9,
+        "size": 2,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "秦武王": {
+      "type": "person",
+      "label": "秦武王",
+      "aliases": [
+        "武王"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "世家人物"
+      ],
+      "path": "pages/秦武王.md",
+      "total_refs": 21,
+      "total_chapters": 12,
+      "lifespan": {
+        "birth": -329,
+        "death": -307,
+        "note": "嬴荡"
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "秦献公": {
+      "type": "person",
+      "label": "秦献公",
+      "aliases": [
+        "献",
+        "献公"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "世家人物"
+      ],
+      "path": "pages/秦献公.md",
+      "total_refs": 22,
+      "total_chapters": 12,
+      "lifespan": {
+        "birth": -424,
+        "death": -362,
+        "note": "约"
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "秦缪公": {
@@ -2245,12 +2837,12 @@
       "path": "pages/秦缪公.md",
       "total_refs": 76,
       "total_chapters": 28,
-      "quality_score": 11,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 3,
         "tags": 6,
-        "revs": 6,
-        "size": 1,
+        "revs": 9,
+        "size": 2,
         "manual": 0,
         "narrative": -5
       }
@@ -2276,14 +2868,14 @@
         "death": -135,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "窦婴": {
@@ -2308,14 +2900,14 @@
         "death": -131,
         "note": "约"
       },
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "箕子": {
@@ -2332,14 +2924,14 @@
       "path": "pages/箕子.md",
       "total_refs": 26,
       "total_chapters": 16,
-      "quality_score": 5,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
-        "size": 0,
+        "revs": 6,
+        "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "管仲": {
@@ -2365,14 +2957,14 @@
         "birth": -723,
         "death": -645
       },
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 3,
         "tags": 4,
-        "revs": 6,
+        "revs": 9,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "老子": {
@@ -2393,14 +2985,14 @@
       "path": "pages/老子.md",
       "total_refs": 27,
       "total_chapters": 12,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "苏代": {
@@ -2417,14 +3009,14 @@
       "path": "pages/苏代.md",
       "total_refs": 26,
       "total_chapters": 10,
-      "quality_score": 4,
+      "quality_score": 10,
       "_score_parts": {
         "base_refs": 1,
         "tags": 4,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "英布": {
@@ -2448,14 +3040,65 @@
         "birth": -235,
         "death": -196
       },
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "范增": {
+      "type": "person",
+      "label": "范增",
+      "aliases": [
+        "亚父"
+      ],
+      "tags": [
+        "秦末",
+        "楚汉之际",
+        "谋士"
+      ],
+      "path": "pages/范增.md",
+      "total_refs": 23,
+      "total_chapters": 4,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "范蠡": {
+      "type": "person",
+      "label": "范蠡",
+      "aliases": [
+        "蠡",
+        "陶朱公",
+        "陶硃公",
+        "鸱夷子皮"
+      ],
+      "tags": [
+        "春秋",
+        "越国",
+        "辅臣"
+      ],
+      "path": "pages/范蠡.md",
+      "total_refs": 22,
+      "total_chapters": 8,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "萧何": {
@@ -2480,14 +3123,14 @@
         "birth": -257,
         "death": -193
       },
-      "quality_score": 9,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 2,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "蒙恬": {
@@ -2509,14 +3152,14 @@
         "birth": -259,
         "death": -210
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "蔡共侯": {
@@ -2534,14 +3177,14 @@
       "path": "pages/蔡共侯.md",
       "total_refs": 24,
       "total_chapters": 4,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "蔡夷侯": {
@@ -2558,14 +3201,14 @@
       "path": "pages/蔡夷侯.md",
       "total_refs": 24,
       "total_chapters": 4,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "蔡庄侯": {
@@ -2583,14 +3226,14 @@
       "path": "pages/蔡庄侯.md",
       "total_refs": 28,
       "total_chapters": 5,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "蔺相如": {
@@ -2613,14 +3256,14 @@
         "death": -259,
         "note": "约"
       },
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 3,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "袁盎": {
@@ -2645,14 +3288,45 @@
         "death": -148,
         "note": "约"
       },
-      "quality_score": 12,
+      "quality_score": 22,
       "_score_parts": {
         "base_refs": 4,
+        "tags": 6,
+        "revs": 12,
+        "size": 2,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
+    "贾谊": {
+      "type": "person",
+      "label": "贾谊",
+      "aliases": [
+        "谊",
+        "贾太傅",
+        "贾子",
+        "贾生"
+      ],
+      "tags": [
+        "汉朝",
+        "文景之治",
+        "辞赋"
+      ],
+      "path": "pages/贾谊.md",
+      "total_refs": 23,
+      "total_chapters": 7,
+      "lifespan": {
+        "birth": -200,
+        "death": -168
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
         "tags": 6,
         "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "赵奢": {
@@ -2671,14 +3345,14 @@
       "path": "pages/赵奢.md",
       "total_refs": 27,
       "total_chapters": 6,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "赵括": {
@@ -2697,14 +3371,14 @@
       "path": "pages/赵括.md",
       "total_refs": 24,
       "total_chapters": 8,
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "赵敬侯": {
@@ -2723,14 +3397,14 @@
       "path": "pages/赵敬侯.md",
       "total_refs": 28,
       "total_chapters": 7,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "赵简子": {
@@ -2751,14 +3425,14 @@
       "path": "pages/赵简子.md",
       "total_refs": 50,
       "total_chapters": 15,
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "赵胜": {
@@ -2805,14 +3479,14 @@
       "path": "pages/赵襄子.md",
       "total_refs": 27,
       "total_chapters": 9,
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "赵高": {
@@ -2837,14 +3511,14 @@
         "death": -207,
         "note": "约"
       },
-      "quality_score": 8,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 3,
         "tags": 6,
-        "revs": 3,
-        "size": 1,
+        "revs": 9,
+        "size": 2,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "郦食其": {
@@ -2864,14 +3538,14 @@
       "path": "pages/郦食其.md",
       "total_refs": 30,
       "total_chapters": 8,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "陈平": {
@@ -2894,14 +3568,14 @@
         "death": -178,
         "note": "约"
       },
-      "quality_score": 13,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 3,
         "tags": 8,
-        "revs": 6,
+        "revs": 9,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "陈豨": {
@@ -2924,14 +3598,14 @@
         "death": -195,
         "note": "约"
       },
-      "quality_score": 7,
+      "quality_score": 13,
       "_score_parts": {
         "base_refs": 2,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "陈馀": {
@@ -2955,14 +3629,44 @@
         "death": -205,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "霍去病": {
+      "type": "person",
+      "label": "霍去病",
+      "aliases": [
+        "冠军侯",
+        "去病",
+        "嫖姚"
+      ],
+      "tags": [
+        "汉朝",
+        "武将",
+        "外戚"
+      ],
+      "path": "pages/霍去病.md",
+      "total_refs": 23,
+      "total_chapters": 9,
+      "lifespan": {
+        "birth": -140,
+        "death": -117
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "韩信": {
@@ -2989,14 +3693,14 @@
         "birth": -231,
         "death": -196
       },
-      "quality_score": 10,
+      "quality_score": 16,
       "_score_parts": {
         "base_refs": 3,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "韩安国": {
@@ -3020,14 +3724,14 @@
         "death": -127,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "韩王信": {
@@ -3046,14 +3750,44 @@
       "path": "pages/韩王信.md",
       "total_refs": 34,
       "total_chapters": 11,
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
+      }
+    },
+    "韩非": {
+      "type": "person",
+      "label": "韩非",
+      "aliases": [
+        "非",
+        "韩",
+        "韩子"
+      ],
+      "tags": [
+        "战国",
+        "法家",
+        "诸子"
+      ],
+      "path": "pages/韩非.md",
+      "total_refs": 21,
+      "total_chapters": 9,
+      "lifespan": {
+        "birth": -280,
+        "death": -233
+      },
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
       }
     },
     "项梁": {
@@ -3075,14 +3809,14 @@
         "death": -208,
         "note": "约"
       },
-      "quality_score": 12,
+      "quality_score": 22,
       "_score_parts": {
         "base_refs": 4,
         "tags": 6,
-        "revs": 6,
-        "size": 1,
+        "revs": 12,
+        "size": 2,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "项羽": {
@@ -3110,14 +3844,14 @@
         "birth": -232,
         "death": -202
       },
-      "quality_score": 31,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 21,
         "tags": 8,
-        "revs": 6,
-        "size": 1,
+        "revs": 12,
+        "size": 2,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "魏冉": {
@@ -3168,14 +3902,14 @@
         "death": -319,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "魏文侯": {
@@ -3194,14 +3928,14 @@
       "path": "pages/魏文侯.md",
       "total_refs": 25,
       "total_chapters": 16,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "魏无忌": {
@@ -3231,6 +3965,32 @@
         "narrative": -5
       }
     },
+    "鲁仲连": {
+      "type": "person",
+      "label": "鲁仲连",
+      "aliases": [
+        "连",
+        "鲁连",
+        "鲁连子"
+      ],
+      "tags": [
+        "战国",
+        "齐国",
+        "辩士"
+      ],
+      "path": "pages/鲁仲连.md",
+      "total_refs": 22,
+      "total_chapters": 3,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 1,
+        "tags": 6,
+        "revs": 6,
+        "size": 1,
+        "manual": 0,
+        "narrative": -2
+      }
+    },
     "鲁隐公": {
       "type": "person",
       "label": "鲁隐公",
@@ -3247,14 +4007,14 @@
       "path": "pages/鲁隐公.md",
       "total_refs": 24,
       "total_chapters": 15,
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "黄帝": {
@@ -3283,14 +4043,14 @@
         "death": -2599,
         "note": "传说"
       },
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 4,
         "tags": 6,
-        "revs": 6,
+        "revs": 9,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "黄歇": {
@@ -3340,14 +4100,14 @@
         "death": -320,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "齐宣王": {
@@ -3371,14 +4131,14 @@
         "death": -301,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "齐庄公": {
@@ -3401,14 +4161,14 @@
         "birth": -553,
         "note": "齐国君主，在位6年，灵公之子，被崔杼弑于前548年..."
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "齐悼惠王": {
@@ -3428,14 +4188,14 @@
       "path": "pages/齐悼惠王.md",
       "total_refs": 28,
       "total_chapters": 10,
-      "quality_score": 8,
+      "quality_score": 14,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "齐景公": {
@@ -3457,14 +4217,14 @@
         "birth": -547,
         "note": "齐国君主，在位58年，庄公之弟，《晏子春秋》主人公所侍君主..."
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "齐桓公": {
@@ -3489,14 +4249,14 @@
         "birth": -716,
         "death": -643
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "齐湣王": {
@@ -3519,14 +4279,14 @@
         "death": -284,
         "note": "约"
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     },
     "齐襄公": {
@@ -3549,14 +4309,14 @@
         "birth": -697,
         "note": "齐国君主，在位12年，桓公元年为前685年，襄公死于前一年..."
       },
-      "quality_score": 6,
+      "quality_score": 12,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 3,
+        "revs": 6,
         "size": 1,
         "manual": 0,
-        "narrative": -5
+        "narrative": -2
       }
     }
   },
@@ -3567,12 +4327,20 @@
     "主父偃": "主父偃",
     "主父": "主父偃",
     "偃": "主父偃",
+    "乐毅": "乐毅",
+    "乐子": "乐毅",
+    "昌国君": "乐毅",
+    "望诸君": "乐毅",
+    "毅": "乐毅",
     "二世皇帝": "二世皇帝",
     "秦二世": "二世皇帝",
     "胡亥": "二世皇帝",
     "仲由": "仲由",
     "子路": "仲由",
     "由": "仲由",
+    "伊尹": "伊尹",
+    "伊": "伊尹",
+    "阿衡": "伊尹",
     "伍子胥": "伍子胥",
     "伍员": "伍子胥",
     "伍奢子": "伍子胥",
@@ -3581,6 +4349,9 @@
     "子胥": "伍子胥",
     "申胥": "伍子胥",
     "胥": "伍子胥",
+    "伯嚭": "伯嚭",
+    "嚭": "伯嚭",
+    "子嚭": "伯嚭",
     "公孙卿": "公孙卿",
     "卿": "公孙卿",
     "公孙弘": "公孙弘",
@@ -3588,6 +4359,10 @@
     "平津": "公孙弘",
     "平津侯": "公孙弘",
     "弘": "公孙弘",
+    "公孙敖": "公孙敖",
+    "敖": "公孙敖",
+    "刘如意": "刘如意",
+    "如意": "刘如意",
     "刘濞": "刘濞",
     "吴王": "刘濞",
     "濞": "刘濞",
@@ -3604,6 +4379,9 @@
     "卢绾": "卢绾",
     "燕王": "卢绾",
     "绾": "卢绾",
+    "卫康叔": "卫康叔",
+    "封": "卫康叔",
+    "康叔": "卫康叔",
     "卫青": "卫青",
     "卫将军": "卫青",
     "烈侯": "卫青",
@@ -3644,6 +4422,9 @@
     "光": "吴王阖闾",
     "公子光": "吴王阖闾",
     "阖庐": "吴王阖闾",
+    "吴起": "吴起",
+    "吴": "吴起",
+    "起": "吴起",
     "周亚夫": "周亚夫",
     "亚夫": "周亚夫",
     "条侯": "周亚夫",
@@ -3709,6 +4490,11 @@
     "孔丘": "孔子",
     "孔仲尼": "孔子",
     "尼父": "孔子",
+    "宋平公": "宋平公",
+    "平公": "宋平公",
+    "宋襄公": "宋襄公",
+    "宋公": "宋襄公",
+    "襄公": "宋襄公",
     "尧": "尧",
     "唐": "尧",
     "唐尧": "尧",
@@ -3722,6 +4508,7 @@
     "廉": "廉颇",
     "廉将军": "廉颇",
     "颇": "廉颇",
+    "张敖": "张敖",
     "张汤": "张汤",
     "张廷尉": "张汤",
     "汤": "张汤",
@@ -3750,15 +4537,32 @@
     "晋哀侯": "晋哀侯",
     "哀侯": "晋哀侯",
     "晋平公": "晋平公",
-    "平公": "晋平公",
     "彪": "晋平公",
+    "晋悼公": "晋悼公",
+    "周": "晋悼公",
+    "悼公": "晋悼公",
+    "晋惠公": "晋惠公",
+    "惠": "晋惠公",
+    "惠公": "晋惠公",
+    "晋君夷吾": "晋惠公",
     "晋文公": "晋文公",
     "文公": "晋文公",
     "晋文": "晋文公",
     "重耳": "晋文公",
+    "晋景公": "晋景公",
+    "景": "晋景公",
+    "景公": "晋景公",
+    "晋灵公": "晋灵公",
+    "灵": "晋灵公",
+    "灵公": "晋灵公",
     "晋献公": "晋献公",
     "献": "晋献公",
     "献公": "晋献公",
+    "晋襄公": "晋襄公",
+    "襄": "晋襄公",
+    "晋顷公": "晋顷公",
+    "去疾": "晋顷公",
+    "顷公": "晋顷公",
     "晏婴": "晏婴",
     "婴": "晏婴",
     "平仲": "晏婴",
@@ -3780,6 +4584,9 @@
     "梁孝王": "梁孝王",
     "刘武": "梁孝王",
     "孝王": "梁孝王",
+    "楚元王": "楚元王",
+    "元王": "楚元王",
+    "刘交": "楚元王",
     "楚平王": "楚平王",
     "公子弃疾": "楚平王",
     "平王": "楚平王",
@@ -3814,6 +4621,10 @@
     "哙": "樊哙",
     "樊将军": "樊哙",
     "舞阳侯": "樊哙",
+    "汉宣帝": "汉宣帝",
+    "孝宣": "汉宣帝",
+    "孝宣帝": "汉宣帝",
+    "宣帝": "汉宣帝",
     "汉文帝": "汉文帝",
     "代王": "汉文帝",
     "刘恒": "汉文帝",
@@ -3823,13 +4634,16 @@
     "孝文皇帝": "汉文帝",
     "恆": "汉文帝",
     "文帝": "汉文帝",
+    "汉昭帝": "汉昭帝",
+    "孝昭": "汉昭帝",
+    "孝昭帝": "汉昭帝",
+    "昭帝": "汉昭帝",
     "汉景帝": "汉景帝",
     "上": "汉景帝",
     "刘启": "汉景帝",
     "孝景": "汉景帝",
     "孝景帝": "汉景帝",
     "帝": "汉景帝",
-    "景": "汉景帝",
     "景帝": "汉景帝",
     "某": "汉景帝",
     "汉武帝": "汉武帝",
@@ -3859,6 +4673,8 @@
     "颍阴侯": "灌婴",
     "燕召公": "燕召公",
     "召公": "燕召公",
+    "王陵": "王陵",
+    "陵": "王陵",
     "田单": "田单",
     "单": "田单",
     "安平君": "田单",
@@ -3901,6 +4717,8 @@
     "昭襄王": "秦昭襄王",
     "秦昭王": "秦昭襄王",
     "襄王": "秦昭襄王",
+    "秦武王": "秦武王",
+    "秦献公": "秦献公",
     "秦缪公": "秦缪公",
     "秦穆公": "秦缪公",
     "缪": "秦缪公",
@@ -3936,6 +4754,13 @@
     "布": "英布",
     "淮南王": "英布",
     "黥布": "英布",
+    "范增": "范增",
+    "亚父": "范增",
+    "范蠡": "范蠡",
+    "蠡": "范蠡",
+    "陶朱公": "范蠡",
+    "陶硃公": "范蠡",
+    "鸱夷子皮": "范蠡",
     "萧何": "萧何",
     "何": "萧何",
     "萧": "萧何",
@@ -3960,6 +4785,11 @@
     "盎": "袁盎",
     "袁丝": "袁盎",
     "袁将军": "袁盎",
+    "贾谊": "贾谊",
+    "谊": "贾谊",
+    "贾太傅": "贾谊",
+    "贾子": "贾谊",
+    "贾生": "贾谊",
     "赵奢": "赵奢",
     "奢": "赵奢",
     "马服": "赵奢",
@@ -3982,7 +4812,6 @@
     "胜": "赵胜",
     "赵襄子": "赵襄子",
     "子毋恤": "赵襄子",
-    "襄": "赵襄子",
     "襄主": "赵襄子",
     "襄子": "赵襄子",
     "赵毋恤": "赵襄子",
@@ -4004,6 +4833,10 @@
     "陈馀": "陈馀",
     "成安君": "陈馀",
     "馀": "陈馀",
+    "霍去病": "霍去病",
+    "冠军侯": "霍去病",
+    "去病": "霍去病",
+    "嫖姚": "霍去病",
     "韩信": "韩信",
     "信": "韩信",
     "楚王": "韩信",
@@ -4015,6 +4848,9 @@
     "安国": "韩安国",
     "韩": "韩安国",
     "韩王信": "韩王信",
+    "韩非": "韩非",
+    "非": "韩非",
+    "韩子": "韩非",
     "项梁": "项梁",
     "梁": "项梁",
     "项羽": "项羽",
@@ -4038,6 +4874,10 @@
     "信陵君": "魏无忌",
     "无忌": "魏无忌",
     "毋忌": "魏无忌",
+    "鲁仲连": "鲁仲连",
+    "连": "鲁仲连",
+    "鲁连": "鲁仲连",
+    "鲁连子": "鲁仲连",
     "鲁隐公": "鲁隐公",
     "息姑": "鲁隐公",
     "隐": "鲁隐公",
@@ -4068,7 +4908,6 @@
     "悼惠": "齐悼惠王",
     "齐悼": "齐悼惠王",
     "齐景公": "齐景公",
-    "景公": "齐景公",
     "齐桓公": "齐桓公",
     "公子小白": "齐桓公",
     "小白": "齐桓公",
@@ -4079,8 +4918,7 @@
     "地": "齐湣王",
     "湣王": "齐湣王",
     "齐襄公": "齐襄公",
-    "襄公": "齐襄公",
     "齐侯": "齐襄公"
   },
-  "generated": "2026-04-22T17:14:48"
+  "generated": "2026-04-22T17:29:46"
 }

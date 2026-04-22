@@ -18,3 +18,7 @@
 2026-04-22  user-req-3  renderAll + router #?all + homeHome  全部页面单独 /all 页, 按 type 分组组内按质量降序.
 2026-04-22  w5-v3-8     build_registry.py  narrative_bonus: `<!-- stub:` -5, 散文段落 ≥2 +8. stub 和有内容页明确区分. [reflections/2026-04-22-v3.md]
 2026-04-22  w5-v3-10    discover_tags.py   era_tag 改优先 death_ce, 修刘邦'战国'误推. [reflections/2026-04-22-v3.md]
+2026-04-22  w5-v4-11    record_revision.py  recent.json 上限 500, 超出写 recent-archive/YYYY-MM.json. [reflections/2026-04-22-v4.md]
+2026-04-22  w5-v4-12    build_registry.py   alias_conflicts.json 输出冲突详情. [reflections/2026-04-22-v4.md]
+2026-04-22  w5-v4-13    discover_doc.py     新脚本扫 doc/lifespan_inference 输出 P2 cite-doc-report 候选. [reflections/2026-04-22-v4.md]
+2026-04-22  user-req-4  SKILL_W1 §3.4 + build_registry.py  median quality < 10 时优先深度 (enrich > create-stub); cite-doc 加 +3 narrative_bonus. 响应用户反馈"基本都是空骨架". [ad-hoc]

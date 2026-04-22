@@ -116,6 +116,18 @@ markdown 格式, 人和 butler 共读。
 
 **原始 2:1 规则 (v0.1, 历史留档)**: 每 3 次 invocation = 2 trail + 1 explore. 在队列大 (>10) 或小 (<5) 时不平衡.
 
+### 3.4 广度 vs 深度 (v0.4, 2026-04-22 user-req-4)
+
+若 wiki 的 quality_score **中位数 < 10** (绝大多数是 stub), butler 优先做**深度动作** (enrich-infobox / cite-doc-report / embed-sku-excerpt), 推迟 create-stub.
+
+判断标准:
+- 读 pages.json 统计 median quality
+- median < 10 → **深度优先**: 60% 时间做 enrich 类, 40% create-stub
+- median 10-15 → 平衡: 各半
+- median > 15 → 广度优先 (现状 3:1 or 原规则)
+
+原因: 用户反馈"基本都是空骨架", 需要持续选页加信息而非一味新建.
+
 ### 3.3 源耗尽降权 (v0.3, 2026-04-22 W5 v2 加)
 
 若近 N (=5) 次 explore 对某食物源, 输出候选 < 1 条, 该源权重 *= 0.5 保持下去, 直到产出恢复。
