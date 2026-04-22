@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>史记 Wiki</title>
+<link rel="stylesheet" href="style.css">
+<!-- 运行时依赖: markdown-it + js-yaml. 首次加载后由浏览器缓存 -->
+<script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="#" class="brand">史记 Wiki</a>
+  <span id="crumb" class="crumb"></span>
+  <span class="spacer"></span>
+  <span id="status" class="status"></span>
+</nav>
+
+<main class="page" id="page-root">
+  <aside class="infobox" id="infobox" hidden></aside>
+  <article id="article">
+    <p class="loading">载入中…</p>
+  </article>
+</main>
+
+<footer>
+  <small>
+    <span id="src-info"></span>
+    <span id="broken-info"></span>
+  </small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
