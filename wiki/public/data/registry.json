@@ -3156,20 +3156,21 @@
       ],
       "tags": [
         "汉朝",
-        "方士"
+        "方士",
+        "汉武帝时代"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/公孙卿.md",
       "total_refs": 29,
       "total_chapters": 3,
-      "quality_score": 25,
+      "quality_score": 42,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 4,
+        "tags": 6,
         "revs": 15,
-        "size": 2,
-        "manual": 0,
-        "narrative": 3
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "公孙弘": {
@@ -3208,24 +3209,26 @@
       "type": "person",
       "label": "公孙敖",
       "aliases": [
-        "敖"
+        "敖",
+        "合骑侯"
       ],
       "tags": [
         "汉朝",
-        "武将"
+        "武将",
+        "汉武帝时代"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/公孙敖.md",
       "total_refs": 20,
       "total_chapters": 6,
-      "quality_score": 24,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 4,
+        "tags": 6,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "公孙贺": {
@@ -5627,14 +5630,15 @@
       "label": "晋襄公",
       "aliases": [
         "襄",
-        "襄公"
+        "襄公",
+        "晋侯欢"
       ],
       "tags": [
         "春秋",
         "晋国",
         "世家人物"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/晋襄公.md",
       "total_refs": 21,
       "total_chapters": 8,
@@ -5643,14 +5647,14 @@
         "birth": -627,
         "note": "晋国君主，在位7年，文公之子，殽之战大败秦师..."
       },
-      "quality_score": 26,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "晋靖侯": {
@@ -9968,6 +9972,7 @@
     "平津侯": "公孙弘",
     "平津侯公孙弘": "公孙弘",
     "公孙敖": "公孙敖",
+    "合骑侯": "公孙敖",
     "公孙贺": "公孙贺",
     "葛绎侯": "公孙贺",
     "南窌侯": "公孙贺",
@@ -10200,6 +10205,7 @@
     "诡诸": "晋献公",
     "献公": "晋献公",
     "晋襄公": "晋襄公",
+    "晋侯欢": "晋襄公",
     "晋靖侯": "晋靖侯",
     "靖侯": "晋靖侯",
     "晋顷公": "晋顷公",
@@ -10558,5 +10564,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T06:02:30"
+  "generated": "2026-04-23T06:07:49"
 }
