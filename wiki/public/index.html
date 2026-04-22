@@ -15,6 +15,11 @@
   <a href="#" class="brand">史记 Wiki</a>
   <span id="crumb" class="crumb"></span>
   <span class="spacer"></span>
+  <form class="topnav-search" onsubmit="event.preventDefault();const v=this.q.value.trim();if(v)location.hash=encodeURIComponent(v);">
+    <input id="topnav-q" name="q" type="search" placeholder="搜索页面…" autocomplete="off" list="topnav-pages">
+    <datalist id="topnav-pages"></datalist>
+  </form>
+  <span class="spacer-sm"></span>
   <a href="#Special%3AAll" class="topnav-link">特殊页面</a>
   <a href="#?recent" class="topnav-link">最近修订</a>
   <a href="/index.html" class="topnav-link">主站</a>
@@ -37,5 +42,17 @@
 </footer>
 
 <script type="module" src="js/core.js"></script>
+<script>
+// 从 pages.json 填充搜索 datalist
+fetch('pages.json').then(r=>r.json()).then(data=>{
+  const dl = document.getElementById('topnav-pages');
+  (data.pages||[]).forEach(p=>{
+    const o = document.createElement('option');
+    o.value = p.id || p.label || '';
+    if(p.label && p.label !== o.value) o.label = p.label;
+    dl.appendChild(o);
+  });
+}).catch(()=>{});
+</script>
 </body>
 </html>

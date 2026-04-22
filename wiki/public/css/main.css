@@ -38,6 +38,10 @@ body {
 .topnav .brand { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
 .topnav .crumb { color: var(--fg-muted); }
 .topnav .spacer { flex: 1; }
+.topnav .spacer-sm { flex: 0 0 .4em; }
+.topnav-search { display: flex; align-items: center; }
+.topnav-search input { width: 160px; padding: .3em .6em; border: 1px solid var(--border); border-radius: 4px; font-size: 13px; font-family: var(--sans); outline: none; background: var(--bg-code); color: var(--fg); }
+.topnav-search input:focus { border-color: var(--accent); width: 220px; transition: width .2s; }
 .topnav .status { color: var(--fg-muted); font-style: italic; font-size: 12px; }
 
 .page {
