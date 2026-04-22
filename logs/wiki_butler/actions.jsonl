@@ -209,3 +209,5 @@
 {"ts":"2026-04-22T09:29:00Z","mode":"trail","action":"add-tag-batch","affected_pages":15,"verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":15}
 {"ts":"2026-04-22T09:30:00Z","mode":"trail","action":"enrich-timeline-batch","affected_pages":15,"verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":15}
 {"ts":"2026-04-22T09:31:00Z","mode":"maintenance","action":"fix-timeline-annotations","target":"enrich_timeline.py + 146 pages","source":"用户反馈: 标注未渲染","rationale":"strip 〖TYPE value〗 / ⟦TYPE verb⟧ 保留 value, 清空括号噪音","verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":146}
+{"ts":"2026-04-22T09:32:00Z","mode":"maintenance","action":"migrate-history-to-json","target":"wiki/public/history/","source":"用户反馈: 小文件太多","rationale":"内联 content 到 per-page JSON, 1159 文件 → 166, 5.3M → 1.5M","verdict":"accept","commit":"pending","affected_files":166}
+{"ts":"2026-04-22T09:33:00Z","mode":"reflect-apply","action":"apply-user-req-6","target":"record_revision.py + renderer.js + router.js","rationale":"write to JSON inline, no more per-rev md files","verdict":"accept","commit":"pending","diff_lines":25}

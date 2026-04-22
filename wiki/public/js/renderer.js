@@ -434,12 +434,17 @@ export async function renderHistory(core, page) {
 }
 
 /**
- * 单条历史版本 (#?revision=<page>&rev=<id>): 渲染 history/<page>/<id>.md (只读).
+ * 单条历史版本 (#?revision=<page>&rev=<id>): 从 history/<page>.json 的
+ * revisions[].content 中提取内容 (user-req-6 内联存储后). 历史数据在单文件里.
  */
 export async function renderRevision(core, page, revId) {
-  const r = await fetch(`history/${encodeURIComponent(page)}/${encodeURIComponent(revId)}.md`);
+  const r = await fetch(`history/${encodeURIComponent(page)}.json`);
   if (!r.ok) throw new Error('HTTP ' + r.status);
-  const mdText = await r.text();
+  const data = await r.json();
+  const rev = (data.revisions || []).find((x) => x.rev_id === revId);
+  if (!rev) throw new Error(`rev not found: ${revId}`);
+  if (rev.content == null) throw new Error(`rev missing content: ${revId}`);
+  const mdText = rev.content;
 
   const meta = (core.registry.pages[page]) || { type: 'meta', label: page, path: '' };
   const { html } = await parseMarkdown(core, mdText, { pid: page, meta });

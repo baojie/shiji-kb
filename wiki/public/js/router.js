@@ -43,7 +43,7 @@ async function route(core) {
       const page = params.get('revision');
       const rev = params.get('rev');
       try { await renderRevision(core, page, rev); }
-      catch (e) { showFatal(`history/${page}/${rev}.md 加载失败：${e.message}`); }
+      catch (e) { showFatal(`history/${page}.json#${rev} 加载失败：${e.message}`); }
       setStatus(''); return;
     }
   }

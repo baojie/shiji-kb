@@ -68,12 +68,11 @@ def main() -> int:
     rev_id = f'{now.strftime("%Y%m%d-%H%M%S")}-{sha[:6]}'
     ts_iso = iso_with_colon(now)
 
-    # 1. 写副本
-    rev_dir = HIST / page
-    rev_dir.mkdir(parents=True, exist_ok=True)
-    (rev_dir / f'{rev_id}.md').write_text(content, encoding='utf-8')
+    # W5 v6 / user-req (2026-04-22): 不再写独立 rev .md 文件.
+    # 内容 inlined 到 per-page JSON 的 revisions[].content 字段.
+    # 文件数从每修订一文件 -> 每页一文件.
 
-    # 2. 更新 per-page
+    # 更新 per-page
     page_json = HIST / f'{page}.json'
     if page_json.exists():
         data = json.loads(page_json.read_text(encoding='utf-8'))
@@ -97,6 +96,7 @@ def main() -> int:
         'parent_rev': parent_rev,
         'content_hash': f'sha256:{sha}',
         'size': len(content.encode('utf-8')),
+        'content': content,  # inlined
     }
     data['revisions'].insert(0, entry)
     data['latest_rev_id'] = rev_id

@@ -25,3 +25,4 @@
 2026-04-22  w5-v5-15    clean-stub 条件扩展  tags≥3 OR cite OR timeline → 清 stub 标记. [reflections/2026-04-22-v5.md]
 2026-04-22  w5-v5-16    link-external-docs  批量给 151 页加 docs/entities/person.html 索引链 (topic 页 rollback). [reflections/2026-04-22-v5.md]
 2026-04-22  user-req-5  enrich_timeline.py  strip_annotations: 清 〖TYPE value〗/⟦TYPE verb⟧ 保 value, clean_field 去括号噪音, 146 页 timeline 全量重写. [ad-hoc · user feedback]
+2026-04-22  user-req-6  history 存储升级  1159 小文件 → 166 (content inlined 到 per-page JSON). record_revision.py 不再写 rev .md. renderer.js renderRevision 从 JSON content 字段取. 文件数 -86%, 体积 -72%. [ad-hoc · user feedback]
