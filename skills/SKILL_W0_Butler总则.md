@@ -38,6 +38,10 @@ description: 史记 wiki 管家 (Butler Agent) 的总则与进化框架。定义
    单页整体产出可超 20 行, 但仍是一次原子动作一次 commit。
 2. **可逆**：每个动作 ↔ 1 个 commit, 失败时 `git revert <sha>` 即可回滚。
 3. **留痕**：每个动作前先写 `logs/wiki_butler/actions.jsonl`, 含动机 / 前置 / 后置 / 来源。
+   **写入 wiki 页面后，必须立即调用 `record_revision.py`**，将本次修改记入修订历史（`wiki/public/history/<slug>.json`）——人工编辑和自动脚本同等要求：
+   ```bash
+   python3 wiki/scripts/butler/record_revision.py <slug> --summary "W2/<action>: ..." --author butler
+   ```
 4. **自改**：skill 文件可被 butler (通过 W5) 修改, 但必须走"反思 → 提案 → changelog"流程。
 5. **禁编造**：不写原文未支持的"事实"。不确定加 "据…" 或 "疑" 或直接不写。
 
