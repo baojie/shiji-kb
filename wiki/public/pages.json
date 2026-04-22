@@ -4811,25 +4811,27 @@
       "type": "person",
       "label": "崔杼",
       "aliases": [
-        "崔"
+        "崔武子",
+        "杼"
       ],
       "tags": [
         "春秋",
         "齐国",
-        "世家人物"
+        "弑君",
+        "太史书法"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/崔杼.md",
       "total_refs": 15,
       "total_chapters": 7,
-      "quality_score": 16,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "巨鹿之战": {
@@ -5191,24 +5193,27 @@
       "type": "person",
       "label": "扁鹊",
       "aliases": [
-        "秦越人"
+        "秦越人",
+        "扁鹊仓公"
       ],
       "tags": [
         "战国",
-        "医家"
+        "名医",
+        "诊脉",
+        "望齐侯之色"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/扁鹊.md",
       "total_refs": 16,
       "total_chapters": 4,
-      "quality_score": 14,
+      "quality_score": 43,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 4,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "晁错": {
@@ -5383,14 +5388,16 @@
       "label": "晋悼公",
       "aliases": [
         "周",
-        "悼公"
+        "悼公",
+        "公子周"
       ],
       "tags": [
         "春秋",
         "晋国",
-        "世家人物"
+        "复霸",
+        "魏绛和戎"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/晋悼公.md",
       "total_refs": 20,
       "total_chapters": 10,
@@ -5399,14 +5406,14 @@
         "birth": -572,
         "note": "晋国君主，在位15年，景公之孙，使晋国重振霸业..."
       },
-      "quality_score": 26,
+      "quality_score": 45,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "晋惠公": {
@@ -7300,22 +7307,23 @@
         "箕"
       ],
       "tags": [
-        "商",
-        "贤臣",
-        "三代"
+        "商末周初",
+        "殷三仁",
+        "朝鲜",
+        "洪范九畴"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/箕子.md",
       "total_refs": 26,
       "total_chapters": 16,
-      "quality_score": 26,
+      "quality_score": 45,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "管仲": {
@@ -10045,6 +10053,7 @@
     "帝尧": "尧",
     "陶唐氏": "尧",
     "崔杼": "崔杼",
+    "崔武子": "崔杼",
     "巨鹿之战": "巨鹿之战",
     "巨鹿大战": "巨鹿之战",
     "救赵之役": "巨鹿之战",
@@ -10082,6 +10091,7 @@
     "戚姬": "戚夫人",
     "扁鹊": "扁鹊",
     "秦越人": "扁鹊",
+    "扁鹊仓公": "扁鹊",
     "晁错": "晁错",
     "晁御史": "晁错",
     "晋厉公": "晋厉公",
@@ -10096,6 +10106,7 @@
     "晋平公": "晋平公",
     "晋悼公": "晋悼公",
     "悼公": "晋悼公",
+    "公子周": "晋悼公",
     "晋惠公": "晋惠公",
     "惠公": "晋惠公",
     "晋君夷吾": "晋惠公",
@@ -10465,5 +10476,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T04:45:10"
+  "generated": "2026-04-23T04:51:23"
 }
