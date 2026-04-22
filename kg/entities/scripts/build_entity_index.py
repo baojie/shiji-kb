@@ -378,8 +378,18 @@ def build_event_index(event_dir):
     return index
 
 
+_CHAP_REF_RE = re.compile(r'^\d{3}_')
+
+
 def load_alias_map(alias_file):
-    """加载别名映射，返回 {type_key: {surface_form: canonical_name}}
+    """加载别名映射，返回 {type_key: {surface: [(canonical, refs_set), ...]}}
+
+    refs_set 语义：
+      - None          → 全局生效（旧格式、或含 rulers.json/baojie_md 等外部权威数据源的条目）
+      - set[(ch,pa)]  → 局部白名单，仅在列出的 (chapter_id, para_num) 生效
+                        （对应新格式里 refs 只有章节引用的条目，如临时消歧）
+
+    匹配优先级由 build_index 处理：精确白名单 > 全局 > 保留原 surface。
 
     兼容两种格式：
       旧格式：{entity_type: {canonical: [alias, ...]}}
@@ -393,25 +403,57 @@ def load_alias_map(alias_file):
 
     reverse_map = {}
     for entity_type, mappings in raw.items():
-        reverse_map[entity_type] = {}
+        bucket = {}
         if isinstance(mappings, list):
-            # 新格式：列表中每项含 surface 和 canonical 字段
             for item in mappings:
                 surface = item.get('surface', '')
                 canonical = item.get('canonical', '')
-                if canonical:
-                    reverse_map[entity_type][canonical] = canonical
-                if surface and canonical:
-                    reverse_map[entity_type][surface] = canonical
+                if not (surface and canonical):
+                    continue
+                refs = item.get('refs') or []
+                has_external = any(not _CHAP_REF_RE.match(str(r[0])) for r in refs)
+                chap_set = {(str(r[0]), str(r[1]))
+                            for r in refs if _CHAP_REF_RE.match(str(r[0]))}
+                if not refs or has_external:
+                    refs_set = None  # 全局
+                else:
+                    refs_set = chap_set  # 局部白名单
+                bucket.setdefault(surface, []).append((canonical, refs_set))
+                bucket.setdefault(canonical, []).append((canonical, None))
         else:
-            # 旧格式：{canonical: [alias, ...]}
+            # 旧格式：整表全局
             for canonical, aliases in mappings.items():
-                reverse_map[entity_type][canonical] = canonical
+                bucket.setdefault(canonical, []).append((canonical, None))
                 for alias in aliases:
                     if alias:
-                        reverse_map[entity_type][alias] = canonical
+                        bucket.setdefault(alias, []).append((canonical, None))
+        reverse_map[entity_type] = bucket
 
     return reverse_map
+
+
+def resolve_canonical(entries, surface, chapter_id, para_num):
+    """按优先级解析 canonical：
+      1. 精确落入某条 chap_set 白名单
+      2. 全局兜底（refs_set is None）
+      3. 保留原 surface（不做重写）
+    """
+    if not entries:
+        return surface
+    # aliases 的 refs 多为段落级 ('4')，扫到的 para_num 可能是子句级 ('4.1')：
+    # 允许段落前缀匹配，反之不允许。
+    pa_variants = {para_num}
+    if '.' in para_num:
+        pa_variants.add(para_num.split('.', 1)[0])
+    global_fallback = None
+    for canonical, refs_set in entries:
+        if refs_set is None:
+            if global_fallback is None:
+                global_fallback = canonical
+            continue
+        if any((chapter_id, pv) in refs_set for pv in pa_variants):
+            return canonical
+    return global_fallback if global_fallback is not None else surface
 
 
 def load_disambiguation_map(disambig_file):
@@ -453,9 +495,12 @@ def build_index(chapter_dir, alias_map, disambig_map=None):
                 if surface in chapter_disambig:
                     resolved = chapter_disambig[surface]
 
-            # 别名解析
+            # 别名解析（refs 作为白名单/全局的区分见 load_alias_map）
             type_aliases = alias_map.get(type_key, {})
-            canonical = type_aliases.get(resolved, resolved)
+            canonical = resolve_canonical(
+                type_aliases.get(resolved, []),
+                resolved, chapter_id, para_num,
+            )
 
             # 初始化条目
             if canonical not in index[type_key]:
