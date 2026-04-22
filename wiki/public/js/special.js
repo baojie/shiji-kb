@@ -32,8 +32,14 @@ async function getPluginDefs() {
     const m = await r.json();
     _pluginDefs = (m.plugins || []).map(p =>
       typeof p === 'string'
-        ? { key: p, name: p, desc: '' }
-        : { key: p.settings_key || p.id, name: p.name || p.id, desc: p.description || '', id: p.id }
+        ? { key: p, name: p, desc: '', corePlugin: false }
+        : {
+            key:        p.settings_key || p.id,
+            name:       p.name || p.id,
+            desc:       p.description || '',
+            id:         p.id,
+            corePlugin: !p.settings_key,   // 无 settings_key = 核心插件，始终运行
+          }
     );
     return _pluginDefs;
   } catch { return []; }
@@ -96,17 +102,19 @@ export async function renderSpecialSettings(core) {
 export async function renderSpecialPlugins(core) {
   const PLUGIN_DEFS = await getPluginDefs();
   const s = loadSettings();
-  const activatedDefs = PLUGIN_DEFS.filter(p => s?.plugins?.[p.key] === true);
+  const activatedDefs = PLUGIN_DEFS.filter(p => p.corePlugin || s?.plugins?.[p.key] === true);
   const pluginRows = activatedDefs.length
     ? activatedDefs.map(p =>
         `<tr><td><strong>${escapeHtml(p.name)}</strong></td><td>${escapeHtml(p.version || '—')}</td></tr>`
       ).join('')
     : '<tr><td colspan="2" class="muted">（无已激活插件）</td></tr>';
   const allDefs = PLUGIN_DEFS.map(p => {
-    const enabled = s?.plugins?.[p.key] === true;
+    const status = p.corePlugin
+      ? '🔵 核心插件，始终运行'
+      : (s?.plugins?.[p.key] === true ? '✅ 已启用' : '⭕ 已安装，未启用');
     return `<tr>
       <td><strong>${escapeHtml(p.name)}</strong></td>
-      <td>${enabled ? '✅ 已启用' : '⭕ 已安装，未启用'}</td>
+      <td>${status}</td>
       <td><small class="muted">${escapeHtml(p.desc)}</small></td>
     </tr>`;
   }).join('');
