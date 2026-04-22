@@ -2964,12 +2964,12 @@
         "death": -126,
         "note": "约"
       },
-      "quality_score": 43,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
         "revs": 15,
-        "size": 6,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -3175,6 +3175,33 @@
         "tags": 8,
         "revs": 15,
         "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "优孟": {
+      "type": "person",
+      "label": "优孟",
+      "aliases": [
+        "优孟"
+      ],
+      "tags": [
+        "春秋",
+        "楚国",
+        "滑稽",
+        "楚庄王",
+        "孙叔敖"
+      ],
+      "featured": true,
+      "path": "pages/优孟.md",
+      "total_refs": 4,
+      "total_chapters": 1,
+      "quality_score": 26,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 5,
         "manual": 5,
         "narrative": 8
       }
@@ -7106,6 +7133,38 @@
         "narrative": 8
       }
     },
+    "淳于髡": {
+      "type": "person",
+      "label": "淳于髡",
+      "aliases": [
+        "淳于髡"
+      ],
+      "tags": [
+        "战国",
+        "齐国",
+        "滑稽",
+        "齐威王",
+        "一鸣惊人"
+      ],
+      "featured": true,
+      "path": "pages/淳于髡.md",
+      "total_refs": 15,
+      "total_chapters": 5,
+      "lifespan": {
+        "birth": -386,
+        "death": -310,
+        "note": "约"
+      },
+      "quality_score": 26,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 5,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "灌夫": {
       "type": "person",
       "label": "灌夫",
@@ -8101,12 +8160,12 @@
         "birth": -723,
         "death": -645
       },
-      "quality_score": 49,
+      "quality_score": 48,
       "_score_parts": {
         "base_refs": 3,
         "tags": 8,
         "revs": 15,
-        "size": 10,
+        "size": 9,
         "manual": 5,
         "narrative": 8
       }
@@ -9555,6 +9614,35 @@
         "size": 10,
         "manual": 5,
         "narrative": 11
+      }
+    },
+    "陈涉": {
+      "type": "person",
+      "label": "陈涉",
+      "aliases": [
+        "陈胜",
+        "陈涉",
+        "张楚王"
+      ],
+      "tags": [
+        "秦末",
+        "农民起义",
+        "陈涉世家",
+        "大泽乡",
+        "张楚"
+      ],
+      "featured": true,
+      "path": "pages/陈涉.md",
+      "total_refs": 7,
+      "total_chapters": 5,
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "陈胜": {
@@ -11021,6 +11109,7 @@
     "子胥": "伍子胥",
     "申胥": "伍子胥",
     "伍胥": "伍子胥",
+    "优孟": "优孟",
     "伯嚭": "伯嚭",
     "子嚭": "伯嚭",
     "侯嬴": "侯嬴",
@@ -11380,6 +11469,7 @@
     "淳于意": "淳于意",
     "仓公": "淳于意",
     "太仓公": "淳于意",
+    "淳于髡": "淳于髡",
     "灌夫": "灌夫",
     "灌仲孺": "灌夫",
     "灌婴": "灌婴",
@@ -11580,8 +11670,9 @@
     "陆生": "陆贾",
     "陈平": "陈平",
     "陈丞相": "陈平",
-    "陈胜": "陈胜",
-    "陈涉": "陈胜",
+    "陈涉": "陈涉",
+    "陈胜": "陈涉",
+    "张楚王": "陈涉",
     "陈王": "陈胜",
     "陈豨": "陈豨",
     "陈馀": "陈馀",
@@ -11677,5 +11768,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T07:32:17"
+  "generated": "2026-04-23T07:44:58"
 }

@@ -743,5 +743,11 @@ footer code {
 .k-stat-label { font-size: 0.78em; color: var(--fg-muted); margin-top: .3em; }
 .k-chart-wrap {
   background: var(--bg-box); border: 1px solid var(--border);
-  border-radius: 8px; padding: 1em; margin: 0.5em 0 2em;
+  border-radius: 8px; padding: 1em; margin: 0.5em 0 1.5em;
+}
+.chart-desc {
+  margin: 0.2em 0 0.5em;
+  font-size: 0.92em;
+  color: var(--fg-muted);
+  line-height: 1.6;
 }

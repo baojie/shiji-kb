@@ -203,6 +203,7 @@ export async function renderSpecialKnowledge(core) {
 
   // SVG 折线图
   const chartHtml = buildKChart(timeline);
+  const featChartHtml = buildFeatChart(timeline);
 
   // K 公式（仅文字，不依赖 KaTeX）
   const formula = `
@@ -236,6 +237,9 @@ export async function renderSpecialKnowledge(core) {
     <h2>增长曲线</h2>
     ${chartHtml}
 
+    <h2>精品页增长</h2>
+    ${featChartHtml}
+
     <h2>公式定义</h2>
     ${formula}
 
@@ -259,65 +263,89 @@ export async function renderSpecialKnowledge(core) {
   `);
 }
 
-function buildKChart(timeline) {
-  if (!timeline.length) return '<p class="muted">（暂无历史数据）</p>';
-
-  const W = 680, H = 260, PAD = { top: 20, right: 20, bottom: 40, left: 60 };
+function _buildSvgBase(timeline, vals, color, yLabel, maxTickCount = 8) {
+  const W = 900, H = 320, PAD = { top: 28, right: 24, bottom: 48, left: 68 };
   const cw = W - PAD.left - PAD.right;
   const ch = H - PAD.top - PAD.bottom;
 
-  const vals = timeline.map(d => d.K);
-  const minK = Math.min(...vals) * 0.97;
-  const maxK = Math.max(...vals) * 1.01;
-
+  const minV = Math.min(...vals) * 0.97;
+  const maxV = Math.max(...vals) * 1.01;
   const xScale = (i) => PAD.left + (i / (timeline.length - 1 || 1)) * cw;
-  const yScale = (v) => PAD.top + ch - ((v - minK) / (maxK - minK)) * ch;
+  const yScale = (v) => PAD.top + ch - ((v - minV) / (maxV - minV || 1)) * ch;
 
-  const points = timeline.map((d, i) => `${xScale(i).toFixed(1)},${yScale(d.K).toFixed(1)}`).join(' ');
+  const points = timeline.map((d, i) => `${xScale(i).toFixed(1)},${yScale(vals[i]).toFixed(1)}`).join(' ');
 
-  // Y axis ticks
-  const yTicks = 5;
+  // area fill under line
+  const areaClose = `${xScale(timeline.length - 1).toFixed(1)},${PAD.top + ch} ${xScale(0).toFixed(1)},${PAD.top + ch}`;
+
+  const yTicks = 6;
   const yTickHtml = Array.from({ length: yTicks + 1 }, (_, i) => {
-    const v = minK + (maxK - minK) * (i / yTicks);
+    const v = minV + (maxV - minV) * (i / yTicks);
     const y = yScale(v).toFixed(1);
-    return `<line x1="${PAD.left}" y1="${y}" x2="${PAD.left + cw}" y2="${y}" stroke="var(--border)" stroke-dasharray="3,3"/>
-      <text x="${PAD.left - 6}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="11" fill="var(--fg-muted)">${Math.round(v).toLocaleString()}</text>`;
+    const label = v >= 1000 ? Math.round(v).toLocaleString() : Math.round(v);
+    return `<line x1="${PAD.left}" y1="${y}" x2="${PAD.left + cw}" y2="${y}" stroke="var(--border)" stroke-dasharray="4,4"/>
+      <text x="${PAD.left - 8}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="12" fill="var(--fg-muted)">${label}</text>`;
   }).join('');
 
-  // X axis labels (evenly spaced, max 6)
-  const step = Math.ceil(timeline.length / 6);
+  const step = Math.ceil(timeline.length / maxTickCount);
   const xTickHtml = timeline.map((d, i) => {
     if (i % step !== 0 && i !== timeline.length - 1) return '';
     const x = xScale(i).toFixed(1);
     const label = d.generated ? d.generated.slice(0, 10) : '';
-    return `<text x="${x}" y="${H - PAD.bottom + 14}" text-anchor="middle" font-size="10" fill="var(--fg-muted)">${label}</text>`;
+    return `<text x="${x}" y="${H - PAD.bottom + 16}" text-anchor="middle" font-size="11" fill="var(--fg-muted)">${label}</text>`;
   }).join('');
 
-  // Featured count as area fill (secondary)
-  const featVals = timeline.map(d => d.featured_count || 0);
-  const maxFeat = Math.max(...featVals) || 1;
-  const featPoints = timeline.map((d, i) => {
-    const fy = PAD.top + ch - ((d.featured_count || 0) / maxFeat) * ch;
-    return `${xScale(i).toFixed(1)},${fy.toFixed(1)}`;
-  }).join(' ');
-  const featClose = `${xScale(timeline.length - 1).toFixed(1)},${PAD.top + ch} ${xScale(0).toFixed(1)},${PAD.top + ch}`;
+  return { W, H, PAD, cw, ch, xScale, yScale, points, areaClose, yTickHtml, xTickHtml, color };
+}
 
-  return `<div class="k-chart-wrap">
-  <svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${W}px;height:auto;display:block">
-    <!-- grid + y ticks -->
+function buildKChart(timeline) {
+  if (!timeline.length) return '<p class="muted">（暂无历史数据）</p>';
+
+  const vals = timeline.map(d => d.K);
+  const { W, H, PAD, cw, ch, xScale, yScale, points, areaClose, yTickHtml, xTickHtml } = _buildSvgBase(timeline, vals, 'var(--accent)');
+
+  return `
+  <p class="chart-desc">每次提交后计算的知识量总分。<b>K 值越高</b>，代表知识库的信息密度与覆盖深度越大。
+  单次跳跃通常对应批量新增页面；平缓上升对应现有页面的深化扩写。</p>
+  <div class="k-chart-wrap">
+  <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">
     ${yTickHtml}
-    <!-- featured fill (secondary axis, scaled independently) -->
-    <polygon points="${featPoints} ${featClose}" fill="rgba(99,179,237,0.15)" stroke="none"/>
-    <!-- K line -->
+    <polygon points="${points} ${areaClose}" fill="rgba(var(--accent-rgb,220,38,38),0.08)" stroke="none"/>
     <polyline points="${points}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
-    <!-- dots -->
-    ${timeline.map((d, i) => `<circle cx="${xScale(i).toFixed(1)}" cy="${yScale(d.K).toFixed(1)}" r="3" fill="var(--accent)"/>`).join('')}
-    <!-- x labels -->
+    ${timeline.map((d, i) => `<circle cx="${xScale(i).toFixed(1)}" cy="${yScale(vals[i]).toFixed(1)}" r="3.5" fill="var(--accent)"/>`).join('')}
     ${xTickHtml}
-    <!-- axis labels -->
-    <text x="${PAD.left}" y="${H - 4}" font-size="11" fill="var(--fg-muted)">日期</text>
-    <text x="${PAD.left - 40}" y="${PAD.top}" font-size="11" fill="var(--accent)" text-anchor="middle">K 值</text>
-    <text x="${PAD.left + cw}" y="${PAD.top + 12}" font-size="10" fill="rgba(99,179,237,0.8)" text-anchor="end">精品页（淡蓝）</text>
+    <text x="${PAD.left - 8}" y="${PAD.top - 10}" font-size="12" fill="var(--accent)" text-anchor="end">K 值</text>
+    <text x="${PAD.left + cw / 2}" y="${H - 6}" font-size="12" fill="var(--fg-muted)" text-anchor="middle">提交日期</text>
+  </svg>
+  </div>`;
+}
+
+function buildFeatChart(timeline) {
+  if (!timeline.length) return '';
+
+  const vals = timeline.map(d => d.featured_count || 0);
+  if (Math.max(...vals) === 0) return '';
+
+  const { W, H, PAD, cw, ch, xScale, yScale, points, areaClose, yTickHtml, xTickHtml } = _buildSvgBase(timeline, vals, 'rgba(99,179,237,1)');
+
+  // bar-style dots at each data point
+  const dotHtml = timeline.map((d, i) => {
+    const cx = xScale(i).toFixed(1), cy = yScale(vals[i]).toFixed(1);
+    return `<circle cx="${cx}" cy="${cy}" r="3.5" fill="rgba(99,179,237,1)"/>`;
+  }).join('');
+
+  return `
+  <p class="chart-desc"><b>精品页</b>（featured）指内容完整、有详细叙述与引文的高质量词条。
+  精品页数量的增长节奏反映了知识库的深化进度，是衡量内容质量的核心指标之一。</p>
+  <div class="k-chart-wrap">
+  <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">
+    ${yTickHtml}
+    <polygon points="${points} ${areaClose}" fill="rgba(99,179,237,0.18)" stroke="none"/>
+    <polyline points="${points}" fill="none" stroke="rgba(99,179,237,1)" stroke-width="2.5" stroke-linejoin="round"/>
+    ${dotHtml}
+    ${xTickHtml}
+    <text x="${PAD.left - 8}" y="${PAD.top - 10}" font-size="12" fill="rgba(99,179,237,1)" text-anchor="end">精品页数</text>
+    <text x="${PAD.left + cw / 2}" y="${H - 6}" font-size="12" fill="var(--fg-muted)" text-anchor="middle">提交日期</text>
   </svg>
   </div>`;
 }
