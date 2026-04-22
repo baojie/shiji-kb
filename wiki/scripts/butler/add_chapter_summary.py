@@ -26,6 +26,23 @@ TAISHIGONG_JSON = BASE / 'wiki/data/taishigong_descs.json'
 # ── 文本清洗 ──────────────────────────────────────────────────────────────────
 TYPE_CHARS = r'[@&#;◆+!%~^_=?:•$\*\.\/\s]'
 
+def _best_snippet(s: str, target: int = 20, max_len: int = 35) -> str:
+    """Return text up to the punctuation position closest to `target` chars."""
+    PUNCT = '，。；！？、：'
+    best_pos = None
+    for i, ch in enumerate(s):
+        if i >= max_len:
+            break
+        if ch in PUNCT:
+            pos = i + 1  # include the punctuation
+            if best_pos is None or abs(pos - target) < abs(best_pos - target):
+                best_pos = pos
+    if best_pos:
+        return s[:best_pos].strip()
+    # No punctuation found: cut at target, prefer not mid-word
+    return s[:target].strip()
+
+
 def strip_annot(text: str) -> str:
     def _entity(m):
         inner = m.group(1)
@@ -58,8 +75,7 @@ def extract_sections(tagged_path: Path):
                 continue
             if re.match(r'^[，。；！？\s·\[\]]+$', s):
                 continue
-            m = re.search(r'^(.{3,35}?)[，。；！？]', s)
-            summary = (m.group(0) if m else s[:35]).strip()
+            summary = _best_snippet(s, target=20, max_len=35)
             break
         sections.append((cur_level, cur_title, summary))
         cur_lines = []
