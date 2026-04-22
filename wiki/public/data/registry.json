@@ -4863,9 +4863,11 @@
       "tags": [
         "五帝",
         "三代",
-        "传说"
+        "传说",
+        "黄帝曾孙",
+        "商周始祖之父"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/帝喾.md",
       "total_refs": 16,
       "total_chapters": 8,
@@ -4874,14 +4876,14 @@
         "death": -2367,
         "note": "传说"
       },
-      "quality_score": 16,
+      "quality_score": 40,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "帝颛顼": {
@@ -5236,25 +5238,27 @@
       "aliases": [
         "厉",
         "厉公",
-        "晋侯"
+        "寿曼"
       ],
       "tags": [
         "春秋",
         "晋国",
-        "世家人物"
+        "鄢陵之战",
+        "宠姬乱政",
+        "被弑"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/晋厉公.md",
       "total_refs": 17,
       "total_chapters": 8,
-      "quality_score": 16,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "晋哀侯": {
@@ -6532,9 +6536,11 @@
       "tags": [
         "战国",
         "燕国",
-        "世家人物"
+        "招贤纳士",
+        "乐毅伐齐",
+        "复仇"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/燕昭王.md",
       "total_refs": 18,
       "total_chapters": 9,
@@ -6543,14 +6549,14 @@
         "death": -279,
         "note": "约"
       },
-      "quality_score": 16,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "王温舒": {
@@ -9383,12 +9389,12 @@
         "birth": -608,
         "note": "齐国君主，在位10年，懿公被弑后，齐人迎公子元于卫而立之..."
       },
-      "quality_score": 29,
+      "quality_score": 35,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
-        "revs": 6,
-        "size": 4,
+        "revs": 9,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -10057,7 +10063,7 @@
     "晁御史": "晁错",
     "晋厉公": "晋厉公",
     "厉公": "晋厉公",
-    "晋侯": "晋厉公",
+    "寿曼": "晋厉公",
     "晋哀侯": "晋哀侯",
     "哀侯": "晋哀侯",
     "晋孝侯": "晋孝侯",
@@ -10434,5 +10440,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T04:14:12"
+  "generated": "2026-04-23T04:23:02"
 }
