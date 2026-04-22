@@ -30,6 +30,14 @@ from pathlib import Path
 import yaml
 from markdown_it import MarkdownIt
 
+from semantic_block import (
+    SemanticBlock,
+    expand_blocks_in_html,
+    get_display_meta,
+    parse_semantic_blocks,
+    render_infobox_html,
+)
+
 
 # ---------- Frontmatter ----------
 
@@ -163,41 +171,19 @@ def html_path_for(page: Page, relative_to: Page) -> str:
 
 # ---------- Infobox (property table) ----------
 
-INFOBOX_FIELDS = [
-    ("label", "名称"),
-    ("canonical_name", "规范名"),
-    ("type", "类型"),
-    ("birth_ce", "生"),
-    ("death_ce", "卒"),
-    ("tags", "标签"),
-]
-
-
-def render_infobox(page: Page) -> str:
+def render_sidebar_infobox(page: Page, display_meta: dict) -> str:
     """
-    从 frontmatter 提取可展示字段, 渲染右侧 infobox。
-    缺字段自动跳过。
+    渲染右侧 sidebar infobox。
+    display_meta 已由 get_display_meta() 合并了 frontmatter 与第一个
+    ::: infobox 块（块字段优先），可包含任意扩展字段。
     """
-    rows = []
-    for key, label in INFOBOX_FIELDS:
-        if key not in page.meta:
-            continue
-        v = page.meta[key]
-        if v is None:
-            continue
-        if isinstance(v, list):
-            v = " · ".join(str(x) for x in v)
-        elif isinstance(v, int) and key in ("birth_ce", "death_ce"):
-            v = f"前 {-v}" if v < 0 else str(v)
-        rows.append(f"<tr><th>{label}</th><td>{v}</td></tr>")
-    if page.aliases:
-        rows.insert(1, f"<tr><th>别名</th><td>{' · '.join(page.aliases)}</td></tr>")
-    if not rows:
-        return ""
-    return ('<aside class="infobox">'
-            f'<h2>{page.label}</h2>'
-            f'<table>{"".join(rows)}</table>'
-            '</aside>')
+    # 确保 label 和 aliases 有值
+    render_meta = dict(display_meta)
+    if "label" not in render_meta or not render_meta["label"]:
+        render_meta["label"] = page.label
+    if "aliases" not in render_meta and page.aliases:
+        render_meta["aliases"] = page.aliases
+    return render_infobox_html(render_meta, css_class="infobox")
 
 
 # ---------- Markdown → HTML ----------
@@ -358,6 +344,15 @@ aside.infobox th, aside.infobox td {
 }
 aside.infobox th { color: var(--fg-muted); font-weight: 500; width: 4.5em; }
 
+aside.infobox.inline {
+  float: right;
+  clear: right;
+  margin: 0 0 1.2em 1.5em;
+  width: 240px;
+  font-size: .88em;
+}
+aside.infobox.inline h2 { font-size: 1em; }
+
 .wikilink.resolved { color: var(--link); text-decoration: none; }
 .wikilink.resolved:hover { text-decoration: underline; }
 .wikilink.self { color: var(--fg); font-weight: 600; text-decoration: none; cursor: default; }
@@ -399,11 +394,17 @@ TYPE_LABELS = {
 
 def render_page(page: Page, registry: dict[str, Page], md: MarkdownIt) -> tuple[str, list[str]]:
     broken: list[str] = []
-    # 先替换 wikilink 为占位符 (避开 MD 表格 '|' 冲突与转义)
-    protected, tokens = protect_wikilinks(page.body)
+    # 1. 解析语义块（::: infobox / ::: meta），替换为占位符
+    processed_body, blocks = parse_semantic_blocks(page.body)
+    # 2. 保护 wikilink（避开 MD 表格 '|' 冲突与转义）
+    protected, tokens = protect_wikilinks(processed_body)
     body_html = md.render(protected)
     body_html = expand_wikilinks(body_html, tokens, registry, page, broken)
-    infobox = render_infobox(page)
+    # 3. 展开语义块占位符（第一个 infobox 由 sidebar 渲染，body 内跳过）
+    body_html = expand_blocks_in_html(body_html, blocks, first_infobox_in_sidebar=True)
+    # 4. Sidebar infobox：合并 frontmatter + 第一个 infobox 块（块优先）
+    display_meta = get_display_meta(page.meta, blocks)
+    infobox = render_sidebar_infobox(page, display_meta)
     from datetime import datetime
     broken_footer = ""
     if broken:
