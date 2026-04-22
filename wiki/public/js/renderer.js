@@ -7,6 +7,25 @@
 import { escapeHtml, TYPE_LABELS } from './util.js';
 import { parseMarkdown } from './parser.js';
 
+function buildPager(current, total) {
+  const mk = (n, label, cls = '') =>
+    n === current
+      ? `<span class="pager-current">${label}</span>`
+      : `<a class="pager-link${cls ? ' ' + cls : ''}" href="#?recent&page=${n}">${label}</a>`;
+  const parts = [];
+  if (current > 1) parts.push(mk(current - 1, '← 上一页', 'prev'));
+  // 页码数字 (window of 5)
+  const lo = Math.max(1, current - 2);
+  const hi = Math.min(total, current + 2);
+  if (lo > 1) parts.push(mk(1, '1'));
+  if (lo > 2) parts.push('<span class="pager-gap">…</span>');
+  for (let i = lo; i <= hi; i++) parts.push(mk(i, String(i)));
+  if (hi < total - 1) parts.push('<span class="pager-gap">…</span>');
+  if (hi < total) parts.push(mk(total, String(total)));
+  if (current < total) parts.push(mk(current + 1, '下一页 →', 'next'));
+  return `<nav class="pager">${parts.join(' ')}</nav>`;
+}
+
 function fmtTimestamp(iso) {
   // ISO → "2026-04-22 16:10" (本地时区)
   try {
@@ -86,28 +105,22 @@ export function renderHome(core) {
   const pages = core.registry.pages;
   const ids = Object.keys(pages);
 
-  // 代表人物: 按 total_refs 降序取 top 6, 缺此字段则按 id 序
+  // 代表人物: 优先按 quality_score, 否则 total_refs, 否则 id
+  const hasQuality = ids.some((id) => pages[id].quality_score != null);
   const hasRefs = ids.some((id) => pages[id].total_refs != null);
   const featured = ids
     .map((id) => ({ id, ...pages[id] }))
     .sort((a, b) => {
+      if (hasQuality) {
+        const d = (b.quality_score || 0) - (a.quality_score || 0);
+        if (d !== 0) return d;
+      }
       if (hasRefs) return (b.total_refs || 0) - (a.total_refs || 0);
       return a.id.localeCompare(b.id, 'zh');
     })
     .slice(0, 6);
 
   const featuredHtml = featured.map(renderFeaturedCard).join('');
-
-  const allItems = ids.slice().sort((a, b) => a.localeCompare(b, 'zh'))
-    .map((id) => {
-      const p = pages[id];
-      const t = TYPE_LABELS[p.type] || p.type || '';
-      const meta = p.total_refs != null
-        ? ` <span class="list-meta">${p.total_refs} 次 / ${p.total_chapters} 篇</span>`
-        : '';
-      return `<li><span class="type-tag">${escapeHtml(t)}</span>` +
-        `<a href="#${encodeURIComponent(id)}">${escapeHtml(p.label)}</a>${meta}</li>`;
-    }).join('');
 
   document.getElementById('article').innerHTML =
     `<div class="wiki-home">
@@ -121,13 +134,13 @@ export function renderHome(core) {
         <ul id="search-results" hidden></ul>
       </div>
 
-      <h2>代表人物</h2>
+      <h2>代表人物 <small class="muted">(按质量排)</small></h2>
       <div class="featured-grid">${featuredHtml}</div>
 
-      <details class="all-pages">
-        <summary>全部 ${ids.length} 页</summary>
-        <ul class="page-list">${allItems}</ul>
-      </details>
+      <nav class="home-links">
+        <a href="#?all" class="home-link">全部 ${ids.length} 页 →</a>
+        <a href="#?recent" class="home-link">最近修订 →</a>
+      </nav>
     </div>`;
 
   document.body.classList.add('is-home');
@@ -321,13 +334,20 @@ export function renderCategory(core, kind, value) {
 }
 
 /**
- * 最近修订页 (#?recent): 读 docs/wiki/recent.json, 倒序展示.
+ * 最近修订页 (#?recent[&page=N]): 读 recent.json, 每页 50 条.
  */
-export async function renderRecent(core) {
+export async function renderRecent(core, pageNum = 1) {
   const r = await fetch('recent.json');
   if (!r.ok) throw new Error('HTTP ' + r.status);
   const data = await r.json();
-  const entries = data.entries || [];
+  const allEntries = data.entries || [];
+
+  const PAGE_SIZE = 50;
+  const totalEntries = allEntries.length;
+  const totalPages = Math.max(1, Math.ceil(totalEntries / PAGE_SIZE));
+  pageNum = Math.min(Math.max(1, pageNum), totalPages);
+  const start = (pageNum - 1) * PAGE_SIZE;
+  const entries = allEntries.slice(start, start + PAGE_SIZE);
 
   const rows = entries.map((e) => {
     const pageLink = `<a href="#${encodeURIComponent(e.page)}">${escapeHtml(e.page)}</a>`;
@@ -342,17 +362,21 @@ export async function renderRecent(core) {
     </tr>`;
   }).join('');
 
+  // 翻页条
+  const pagerHtml = totalPages > 1 ? buildPager(pageNum, totalPages) : '';
+
   const body = entries.length === 0
     ? '<p class="category-empty">暂无修订记录。</p>'
     : `<table class="recent-changes">
         <thead><tr><th>时间</th><th>页面</th><th>作者</th><th>摘要</th><th>修订</th></tr></thead>
         <tbody>${rows}</tbody>
-      </table>`;
+      </table>
+      ${pagerHtml}`;
 
   document.getElementById('article').innerHTML =
     `<nav class="category-crumb"><a href="#">← 首页</a></nav>
-     <h1>最近修订</h1>
-     <p class="category-summary">最近 <strong>${entries.length}</strong> 条 · 共 <strong>${data.total_pages}</strong> 个页面</p>
+     <h1>最近修订 <small class="muted">第 ${pageNum}/${totalPages} 页</small></h1>
+     <p class="category-summary">共 <strong>${totalEntries}</strong> 条修订 · <strong>${data.total_pages}</strong> 个页面</p>
      ${body}`;
 
   document.body.classList.add('is-home');
@@ -432,6 +456,78 @@ export async function renderRevision(core, page, revId) {
   document.getElementById('crumb').textContent = `${page} @ ${revId}`;
   document.title = `${page} @ ${revId} · 史记 Wiki`;
   document.getElementById('src-info').textContent = `history/${page}/${revId}.md`;
+  document.getElementById('broken-info').textContent = '';
+  window.scrollTo(0, 0);
+}
+
+/**
+ * All 页 (#?all): 全部页面的完整列表, 分组可切换 (type / era / alpha).
+ * 取代主页原来的 "全部 N 页" 折叠区.
+ */
+export function renderAll(core) {
+  const pages = core.registry.pages;
+  const ids = Object.keys(pages);
+
+  // 分组: 按 type
+  const byType = {};
+  for (const id of ids) {
+    const p = pages[id];
+    const t = p.type || 'unknown';
+    if (!byType[t]) byType[t] = [];
+    byType[t].push({ id, ...p });
+  }
+
+  // 每组内按 quality_score 降序
+  for (const t of Object.keys(byType)) {
+    byType[t].sort((a, b) =>
+      (b.quality_score || 0) - (a.quality_score || 0) ||
+      a.id.localeCompare(b.id, 'zh')
+    );
+  }
+
+  const typeOrder = ['person', 'topic', 'place', 'state', 'event',
+                     'chapter', 'official', 'identity'];
+  const orderedTypes = Object.keys(byType).sort((a, b) => {
+    const ia = typeOrder.indexOf(a), ib = typeOrder.indexOf(b);
+    if (ia === -1 && ib === -1) return a.localeCompare(b);
+    if (ia === -1) return 1;
+    if (ib === -1) return -1;
+    return ia - ib;
+  });
+
+  const groupsHtml = orderedTypes.map((t) => {
+    const label = TYPE_LABELS[t] || t;
+    const items = byType[t].map((p) => {
+      const qs = p.quality_score != null
+        ? ` <span class="list-score">q=${p.quality_score}</span>` : '';
+      const meta = p.total_refs != null
+        ? ` <span class="list-meta">${p.total_refs} 次 / ${p.total_chapters} 篇</span>` : '';
+      const tags = (p.tags || []).slice(0, 3).map(escapeHtml).join(' · ');
+      const tagsHtml = tags ? ` <span class="list-tags">${tags}</span>` : '';
+      return `<li>
+        <a href="#${encodeURIComponent(p.id)}">${escapeHtml(p.label)}</a>
+        ${qs}${meta}${tagsHtml}
+      </li>`;
+    }).join('');
+    return `<section class="all-group">
+      <h2>${escapeHtml(label)} <small>(${byType[t].length})</small></h2>
+      <ul class="all-list">${items}</ul>
+    </section>`;
+  }).join('');
+
+  document.getElementById('article').innerHTML =
+    `<nav class="category-crumb"><a href="#">← 首页</a></nav>
+     <h1>全部页面</h1>
+     <p class="category-summary">共 <strong>${ids.length}</strong> 页, 按类型分组, 组内按质量分降序</p>
+     ${groupsHtml}`;
+
+  document.body.classList.add('is-home');
+  const ib = document.getElementById('infobox');
+  ib.hidden = true;
+  ib.innerHTML = '';
+  document.getElementById('crumb').textContent = '全部页面';
+  document.title = '全部 · 史记 Wiki';
+  document.getElementById('src-info').textContent = 'pages.json';
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
 }

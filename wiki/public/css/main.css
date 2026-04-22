@@ -268,6 +268,105 @@ body.is-home .page { grid-template-columns: 1fr; }
 .all-pages[open] summary::before { transform: rotate(90deg); }
 
 .list-meta { color: var(--fg-muted); font-size: .85em; margin-left: .5em; }
+.list-score { color: var(--accent); font-size: .8em; margin-left: .4em;
+              background: var(--bg-box); padding: 1px 6px; border-radius: 3px; }
+.list-tags { color: var(--fg-muted); font-size: .8em; margin-left: .5em; }
+
+/* ---------- 主页导航链接 ---------- */
+.home-links {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 1.5em;
+  font-family: var(--sans);
+}
+.home-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: .95em;
+  padding: .3em .6em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all .15s;
+}
+.home-link:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.muted { color: var(--fg-muted); font-weight: normal; font-size: .85em; }
+
+/* ---------- 翻页条 ---------- */
+.pager {
+  margin: 1.5em 0 2em;
+  display: flex;
+  justify-content: center;
+  gap: .3em;
+  font-family: var(--sans);
+  font-size: .9em;
+}
+.pager-link, .pager-current {
+  padding: .3em .7em;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  min-width: 2em;
+  text-align: center;
+}
+.pager-link {
+  color: var(--link);
+  text-decoration: none;
+  background: white;
+}
+.pager-link:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.pager-current {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.pager-gap { color: var(--fg-muted); padding: .3em .4em; }
+
+/* ---------- All 页 ---------- */
+.all-group {
+  margin: 1.8em 0;
+}
+.all-group h2 {
+  font-size: 1.2em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .2em;
+}
+.all-group h2 small {
+  color: var(--fg-muted);
+  font-weight: normal;
+  font-size: .8em;
+  margin-left: .5em;
+}
+.all-list {
+  list-style: none;
+  padding: 0;
+  margin: .5em 0;
+  columns: 2;
+  column-gap: 2em;
+}
+.all-list li {
+  padding: .25em 0;
+  break-inside: avoid;
+}
+.all-list li a {
+  font-weight: 500;
+  color: var(--link);
+  text-decoration: none;
+}
+.all-list li a:hover { color: var(--accent); text-decoration: underline; }
+@media (max-width: 700px) {
+  .all-list { columns: 1; }
+}
 
 /* ---------- 分类页 (Category) ---------- */
 

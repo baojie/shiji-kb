@@ -1,5 +1,9 @@
 # Skill 修改日志
-（由 W5 反思流程产生。每条一行。）
+（W5 反思流程 + 用户紧急反馈 共同产出。每条一行。）
+
+格式: `YYYY-MM-DD  [w5-vN-n | user-req-N]  <文件/skill>  <摘要>  [source]`
+- `w5-vN-n`: 第 N 次 W5 反思的第 n 条提案 (e.g., w5-v3-8)
+- `user-req-N`: 用户紧急反馈的第 N 项
 
 
 2026-04-22  proposal-1  generate_entity_page.py  stub 模板 59→20 行, 移除基本属性 (与 infobox 重复), 章节表改单行压缩, 与 W0 ≤20 行不变量对齐. [reflections/2026-04-22.md]
@@ -9,3 +13,8 @@
 2026-04-22  proposal-5  seed.js findLikelyDuplicates  检测共享强别名的 canonical 对, 写 wiki/data/duplicate_candidates.json 供人工审. [reflections/2026-04-22-v2.md]
 2026-04-22  proposal-6  tags_vocabulary.json + discover_tags.py  era (按 birth_ce 区间) + identity (按章节前缀分布) + theme (种子列表) 自动推标签. [reflections/2026-04-22-v2.md]
 2026-04-22  proposal-7  SKILL_W1 §三.3  源耗尽降权 (连续 5 次空探索 weight*=0.5), 配 source_access.json 扩展字段. [reflections/2026-04-22-v2.md]
+2026-04-22  user-req-1  record_revision.py + renderRecent  recent.json 不再 limit 50 截断, UI 每页 50 条分页.
+2026-04-22  user-req-2  build_registry.py + renderHome  加 quality_score (多因子), featured 改按质量降序.
+2026-04-22  user-req-3  renderAll + router #?all + homeHome  全部页面单独 /all 页, 按 type 分组组内按质量降序.
+2026-04-22  w5-v3-8     build_registry.py  narrative_bonus: `<!-- stub:` -5, 散文段落 ≥2 +8. stub 和有内容页明确区分. [reflections/2026-04-22-v3.md]
+2026-04-22  w5-v3-10    discover_tags.py   era_tag 改优先 death_ce, 修刘邦'战国'误推. [reflections/2026-04-22-v3.md]

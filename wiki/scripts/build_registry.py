@@ -100,6 +100,24 @@ def main() -> int:
         print(f"[warn] 别名冲突: '{key}' → 保留 {first}, 忽略 {dup}",
               file=sys.stderr)
 
+    # W5 v4 提案 12: 冲突别名输出到文件供反思查看
+    if alias_conflicts:
+        conflict_data = {
+            "generated": datetime.now().isoformat(timespec="seconds"),
+            "count": len(alias_conflicts),
+            "note": "surface 被多个 pages 作为 alias, 只保留第一个.",
+            "conflicts": [
+                {"alias": k, "kept": f, "ignored": d}
+                for (k, f, d) in alias_conflicts
+            ],
+        }
+        conflict_out = site_root.parent / "data" / "alias_conflicts.json"
+        conflict_out.parent.mkdir(parents=True, exist_ok=True)
+        conflict_out.write_text(
+            json.dumps(conflict_data, ensure_ascii=False, indent=2),
+            encoding="utf-8"
+        )
+
     # 若存在 wiki/data/semantic.json, 合并 total_refs / total_chapters / lifespan
     # 给首页卡片与搜索结果用. 路径: site_root/../data/semantic.json
     semantic_path = site_root.parent / "data" / "semantic.json"
@@ -152,22 +170,43 @@ def main() -> int:
         rev_bonus = min(max(rev_count - 1, 0), 5) * 3
         size_bonus = min(size // 500, 10)
 
-        # 是否手工精修
+        # 是否手工精修 + narrative_bonus (W5 v3 提案 8)
         md_path = root / entry["path"][len("pages/"):]
-        manual_bonus = 5  # default 给予手写
+        manual_bonus = 5
+        narrative_bonus = 0
         try:
             md_text = md_path.read_text(encoding="utf-8")
             if "auto_generated: true" in md_text:
                 manual_bonus = 0
+            # body 里检查散文段落
+            body = md_text.split("---", 2)[-1] if md_text.startswith("---") else md_text
+            if "<!-- stub:" in body:
+                narrative_bonus -= 5  # stub 明确惩罚
+            # 散文段 = 既不是空行, 不以 | 开头, 不以 # 开头, 不以 - 开头
+            prose_paras = 0
+            for block in body.split("\n\n"):
+                b = block.strip()
+                if not b:
+                    continue
+                first = b.splitlines()[0].lstrip()
+                # 过滤各种非散文: 标题 / 表格 / 列表 / 链接行 / 注释 / 代码块 / 引用
+                if first.startswith(("#", "|", "-", "*", "<", "```", "> ", "[[")):
+                    continue
+                if len(b) < 20:
+                    continue
+                prose_paras += 1
+            if prose_paras >= 2:
+                narrative_bonus += 8
         except Exception:
             pass
 
         entry["quality_score"] = (
-            base + tag_bonus + rev_bonus + size_bonus + manual_bonus
+            base + tag_bonus + rev_bonus + size_bonus + manual_bonus + narrative_bonus
         )
         entry["_score_parts"] = {
             "base_refs": base, "tags": tag_bonus, "revs": rev_bonus,
             "size": size_bonus, "manual": manual_bonus,
+            "narrative": narrative_bonus,
         }
         score_details += 1
     print(f"[enrich] {score_details} 页计算了 quality_score")

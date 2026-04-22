@@ -48,14 +48,21 @@ def parse_frontmatter_simple(text):
                 out['birth_ce'] = int(line[9:].strip())
             except ValueError:
                 pass
+        elif line.startswith('death_ce:'):
+            try:
+                out['death_ce'] = int(line[9:].strip())
+            except ValueError:
+                pass
     return out
 
 
-def era_tag(birth_ce, vocab_era):
-    if birth_ce is None:
+def era_tag(birth_ce, death_ce, vocab_era):
+    """v0.2 (W5 v3 提案 10): 优先 death_ce (政治生涯), fallback birth_ce."""
+    target = death_ce if death_ce is not None else birth_ce
+    if target is None:
         return None
     for r in vocab_era['_ranges']:
-        if r['birth_min'] <= birth_ce <= r['birth_max']:
+        if r['birth_min'] <= target <= r['birth_max']:
             return r['name']
     return None
 
@@ -114,7 +121,7 @@ def main() -> int:
         entity = entities.get(slug)
 
         suggested = set()
-        if e_tag := era_tag(fm.get('birth_ce'), vocab['era']):
+        if e_tag := era_tag(fm.get('birth_ce'), fm.get('death_ce'), vocab['era']):
             suggested.add(e_tag)
         suggested.update(identity_tags(entity, vocab['identity']))
         suggested.update(theme_tags(slug, entity, vocab['theme']['_seed']))

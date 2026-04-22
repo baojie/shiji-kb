@@ -113,8 +113,27 @@ def main() -> int:
         recent = {'limit': 50, 'total_pages': 0, 'entries': []}
 
     recent['entries'].insert(0, {'page': page, **entry})
-    recent['entries'] = recent['entries'][:recent.get('limit', 50)]
+
+    # W5 v4 提案 11: recent.json 上限 500, 旧的月度归档
+    ARCHIVE_LIMIT = 500
+    if len(recent['entries']) > ARCHIVE_LIMIT:
+        overflow = recent['entries'][ARCHIVE_LIMIT:]
+        recent['entries'] = recent['entries'][:ARCHIVE_LIMIT]
+        # 按月分卷归档
+        archive_dir = PUBLIC / 'recent-archive'
+        archive_dir.mkdir(exist_ok=True)
+        for item in overflow:
+            ym = item['timestamp'][:7]  # YYYY-MM
+            arc = archive_dir / f'{ym}.json'
+            if arc.exists():
+                data = json.loads(arc.read_text(encoding='utf-8'))
+            else:
+                data = {'month': ym, 'entries': []}
+            data['entries'].append(item)
+            arc.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n',
+                          encoding='utf-8')
     recent['total_pages'] = len({e['page'] for e in recent['entries']})
+    recent['total_revisions'] = len(recent['entries'])
     RECENT.write_text(
         json.dumps(recent, ensure_ascii=False, indent=2) + '\n',
         encoding='utf-8'

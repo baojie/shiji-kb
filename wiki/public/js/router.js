@@ -3,7 +3,7 @@
 import { resolvePageId } from './registry.js';
 import {
   renderPage, renderHome, renderNotFound, renderCategory,
-  renderRecent, renderHistory, renderRevision,
+  renderRecent, renderHistory, renderRevision, renderAll,
 } from './renderer.js';
 import { setStatus, showFatal } from './util.js';
 
@@ -24,8 +24,13 @@ async function route(core) {
     const tag = params.get('tag');
     if (type) { renderCategory(core, 'type', type); setStatus(''); return; }
     if (tag) { renderCategory(core, 'tag', tag); setStatus(''); return; }
+    if (params.has('all')) {
+      renderAll(core);
+      setStatus(''); return;
+    }
     if (params.has('recent')) {
-      try { await renderRecent(core); } catch (e) { showFatal(`recent.json 加载失败：${e.message}`); }
+      const pageNum = parseInt(params.get('page') || '1', 10);
+      try { await renderRecent(core, pageNum); } catch (e) { showFatal(`recent.json 加载失败：${e.message}`); }
       setStatus(''); return;
     }
     if (params.has('history')) {
