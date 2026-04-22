@@ -248,3 +248,5 @@
 {"ts":"2026-04-23T01:32:53","action":"expand_premium_pages","pids":["项梁","赵高","秦缪公"],"K_after":14135.3,"featured":19,"note":"项梁奠基·赵高指鹿为马·秦穆公五羖大夫"}
 {"ts":"2026-04-23T01:36:40","action":"expand_premium_pages","pids":["管仲","伍子胥","廉颇"],"K_after":14218.02,"featured":22,"note":"管鲍之交·鞭尸三百·负荆请罪"}
 {"ts":"2026-04-23T01:38:00","action":"implement_proposal_25","note":"K timeline sparkline SVG in k-panel, public/data/knowledge_timeline.jsonl exposed"}
+{"ts": "2026-04-23T06:55:42+08:00", "agent": "bot-lint", "action": "citation-quote_mismatch", "target": "wiki/public/pages/晁错.md", "issue": "（[[101_袁盎晁错列传|101-018]]）\n (L34)", "old_text": "（[[101_袁盎晁错列传|101-018]]）\n", "new_text": "（[[101_袁盎晁错列传|101-119]]）\n", "confidence": 0.5625, "verdict": "queue", "dry_run": false}
+{"ts": "2026-04-23T06:55:42+08:00", "agent": "bot-lint", "action": "citation-quote_mismatch", "target": "wiki/public/pages/晁错.md", "issue": "（[[101_袁盎晁错列传|101-023]]）\n (L67)", "old_text": "（[[101_袁盎晁错列传|101-023]]）\n", "new_text": "（[[101_袁盎晁错列传|101-157]]）\n", "confidence": 1.0, "verdict": "accept", "dry_run": false}
