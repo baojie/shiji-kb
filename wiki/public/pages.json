@@ -4896,25 +4896,28 @@
       "label": "帝颛顼",
       "aliases": [
         "颛顼",
-        "高阳"
+        "高阳",
+        "高阳氏"
       ],
       "tags": [
         "五帝",
         "三代",
-        "传说"
+        "传说",
+        "黄帝之孙",
+        "舜之先祖"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/帝颛顼.md",
       "total_refs": 16,
       "total_chapters": 10,
-      "quality_score": 16,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "廉颇": {
@@ -5533,15 +5536,17 @@
       "type": "person",
       "label": "晋灵公",
       "aliases": [
-        "灵",
+        "夷皋",
         "灵公"
       ],
       "tags": [
         "春秋",
         "晋国",
-        "昏君"
+        "赵盾",
+        "弑君",
+        "董狐直笔"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/晋灵公.md",
       "total_refs": 23,
       "total_chapters": 7,
@@ -5550,14 +5555,14 @@
         "birth": -620,
         "note": "晋国君主，在位14年，襄公之子..."
       },
-      "quality_score": 26,
+      "quality_score": 46,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 9,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "晋献公": {
@@ -6022,12 +6027,12 @@
       "path": "pages/楚惠王.md",
       "total_refs": 17,
       "total_chapters": 8,
-      "quality_score": 38,
+      "quality_score": 43,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 12,
-        "size": 5,
+        "revs": 15,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -7206,20 +7211,22 @@
       "tags": [
         "春秋",
         "秦国",
-        "世家人物"
+        "始封诸侯",
+        "救周",
+        "西畤"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/秦襄公.md",
       "total_refs": 20,
       "total_chapters": 9,
-      "quality_score": 17,
+      "quality_score": 42,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "窦太后": {
@@ -10048,6 +10055,7 @@
     "帝颛顼": "帝颛顼",
     "颛顼": "帝颛顼",
     "高阳": "帝颛顼",
+    "高阳氏": "帝颛顼",
     "廉颇": "廉颇",
     "信平君": "廉颇",
     "廉将军": "廉颇",
@@ -10101,6 +10109,7 @@
     "公子重耳": "晋文公",
     "晋景公": "晋景公",
     "晋灵公": "晋灵公",
+    "夷皋": "晋灵公",
     "晋献公": "晋献公",
     "诡诸": "晋献公",
     "献公": "晋献公",
@@ -10457,5 +10466,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T04:32:18"
+  "generated": "2026-04-23T04:38:28"
 }
