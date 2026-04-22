@@ -3406,6 +3406,32 @@
         "narrative": 8
       }
     },
+    "冒顿单于": {
+      "type": "person",
+      "label": "冒顿单于",
+      "aliases": [
+        "冒顿",
+        "冒顿单于"
+      ],
+      "tags": [
+        "匈奴",
+        "单于",
+        "白登之围",
+        "和亲",
+        "汉初"
+      ],
+      "featured": true,
+      "path": "pages/冒顿单于.md",
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "刘兴居": {
       "type": "person",
       "label": "刘兴居",
@@ -4128,6 +4154,39 @@
         "narrative": 8
       }
     },
+    "吴广": {
+      "type": "person",
+      "label": "吴广",
+      "aliases": [
+        "吴广",
+        "吴叔"
+      ],
+      "tags": [
+        "秦末",
+        "农民起义",
+        "陈涉世家",
+        "大泽乡",
+        "假王"
+      ],
+      "featured": true,
+      "path": "pages/吴广.md",
+      "total_refs": 13,
+      "total_chapters": 8,
+      "lifespan": {
+        "birth": -240,
+        "death": -208,
+        "note": "约"
+      },
+      "quality_score": 26,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 5,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "吴王濞": {
       "type": "person",
       "label": "吴王濞",
@@ -4758,6 +4817,33 @@
         "tags": 8,
         "revs": 15,
         "size": 8,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "娄敬": {
+      "type": "person",
+      "label": "娄敬",
+      "aliases": [
+        "刘敬",
+        "娄敬",
+        "建信侯"
+      ],
+      "tags": [
+        "汉朝",
+        "汉高祖",
+        "谋士",
+        "和亲",
+        "定都关中"
+      ],
+      "featured": true,
+      "path": "pages/娄敬.md",
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 6,
         "manual": 5,
         "narrative": 8
       }
@@ -7614,11 +7700,11 @@
       ],
       "featured": true,
       "path": "pages/白登之围.md",
-      "quality_score": 31,
+      "quality_score": 34,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 0,
+        "revs": 3,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -11126,6 +11212,8 @@
     "公孙贺": "公孙贺",
     "葛绎侯": "公孙贺",
     "南窌侯": "公孙贺",
+    "冒顿单于": "冒顿单于",
+    "冒顿": "冒顿单于",
     "刘兴居": "刘兴居",
     "东牟": "刘兴居",
     "兴居": "刘兴居",
@@ -11199,6 +11287,8 @@
     "吴太伯": "吴太伯",
     "大伯": "吴太伯",
     "太伯": "吴太伯",
+    "吴广": "吴广",
+    "吴叔": "吴广",
     "吴王濞": "吴王濞",
     "吴王阖闾": "吴王阖闾",
     "阖庐": "吴王阖闾",
@@ -11258,6 +11348,7 @@
     "姬旦": "姬旦",
     "周公": "姬旦",
     "周公旦": "姬旦",
+    "建信侯": "娄敬",
     "嫪毐": "嫪毐",
     "子产": "子产",
     "公孙侨": "子产",
@@ -11768,5 +11859,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T07:44:58"
+  "generated": "2026-04-23T07:50:37"
 }
