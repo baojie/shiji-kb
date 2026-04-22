@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>史记中的故事 · 史记专项索引</title>
+    <link rel="stylesheet" href="../css/shiji-styles-v6.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { padding: 20px; font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif; background: #faf7f2; }
+        .container { max-width: 1100px; margin: 0 auto; background: #fff; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #8b4513; font-size: 2.4em; margin-bottom: 10px; border-bottom: 3px double #8b4513; padding-bottom: 20px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 1.05em; }
+        .nav { background: #f5f1ea; padding: 15px 20px; margin-bottom: 25px; border-radius: 5px; }
+        .nav a { color: #8b4513; text-decoration: none; margin-right: 20px; font-size: 0.95em; }
+        .nav a:hover { text-decoration: underline; }
+
+        .stats { display: flex; gap: 20px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
+        .stat { background: #f9f3ea; padding: 12px 20px; border-radius: 5px; border-left: 3px solid #8b4513; }
+        .stat-num { font-size: 1.4em; font-weight: bold; color: #8b4513; }
+        .stat-label { color: #666; font-size: 0.88em; }
+
+        .toc { margin-bottom: 40px; padding: 20px; background: #fafafa; border-radius: 5px; border: 1px solid #eee; }
+        .toc h2 { font-size: 1.3em; color: #8b4513; margin-bottom: 12px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+        .toc-chapter { margin: 12px 0; }
+        .toc-chapter-title { font-weight: bold; color: #444; font-size: 1.02em; }
+        .toc-chapter-title a { color: #8b4513; text-decoration: none; }
+        .toc-chapter-title a:hover { text-decoration: underline; }
+        .toc-stories { list-style: none; padding-left: 20px; margin-top: 4px; }
+        .toc-stories li { margin: 3px 0; font-size: 0.95em; color: #555; }
+        .toc-stories li a { color: #666; text-decoration: none; }
+        .toc-stories li a:hover { color: #8b4513; text-decoration: underline; }
+        .toc-stories li .status-planned { color: #bbb; font-style: italic; }
+        .toc-stories li .status-done::before { content: "● "; color: #8b4513; font-size: 0.7em; }
+        .toc-stories li .status-planned::before { content: "○ "; color: #bbb; font-size: 0.7em; }
+
+        .chapter-section { margin: 50px 0; padding-top: 20px; border-top: 2px solid #e8d9c0; }
+        .chapter-section > h2 { color: #8b4513; font-size: 1.6em; margin-bottom: 20px; }
+        .chapter-section > h2 a { color: #8b4513; text-decoration: none; font-size: 0.75em; margin-left: 10px; color: #999; font-weight: normal; }
+
+        .story { margin: 30px 0; padding: 20px 24px; background: #fffdf8; border-left: 4px solid #8b4513; border-radius: 4px; }
+        .story-head { margin-bottom: 14px; }
+        .story-title { font-size: 1.25em; color: #8b4513; font-weight: bold; margin-bottom: 4px; }
+        .story-summary { color: #666; font-size: 0.95em; line-height: 1.6; }
+        .story-meta { color: #999; font-size: 0.82em; margin-top: 6px; }
+
+        .story-body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px; }
+        .story-body .col h4 { font-size: 0.95em; color: #888; border-bottom: 1px solid #eee; padding-bottom: 4px; margin-bottom: 10px; letter-spacing: 2px; }
+        .story-body .col-original { line-height: 2; color: #222; font-size: 1.02em; }
+        .story-body .col-translation { line-height: 2; color: #444; font-size: 0.98em; }
+        .story-body p { margin-bottom: 0.8em; text-indent: 2em; }
+        .story-body ul { padding-left: 2em; margin: 0.5em 0; }
+        .story-body ul li { text-indent: 0; margin: 0.2em 0; }
+
+        .story-planned { color: #bbb; font-style: italic; padding: 14px 20px; background: #fafafa; border-radius: 4px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.7em; }
+            .story-body { grid-template-columns: 1fr; }
+        }
+
+        .footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #999; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>史记中的故事</h1>
+    <div class="subtitle">按章节整理的独立故事目录 · 原文 + 白话文翻译</div>
+
+    <div class="nav">
+        <a href="../index.html">← 返回首页</a>
+        <a href="special_index.html">专项索引</a>
+        <a href="README.md">说明</a>
+    </div>
+
+    <div class="stats" id="stats">
+        <div class="stat"><div class="stat-num" id="stat-chapters">—</div><div class="stat-label">覆盖章节</div></div>
+        <div class="stat"><div class="stat-num" id="stat-stories">—</div><div class="stat-label">故事总数</div></div>
+        <div class="stat"><div class="stat-num" id="stat-done">—</div><div class="stat-label">已撰写</div></div>
+    </div>
+
+    <div class="toc">
+        <h2>诸章故事目录</h2>
+        <div id="toc-body">加载中…</div>
+    </div>
+
+    <div id="chapters-body"></div>
+
+    <div class="footer">
+        <p>数据来源：<code>data/stories/catalog.json</code> · 原文基于 <code>data/translation_alignment/NNN.json</code> 去标注版本</p>
+        <p>点击章节标题可跳转到带实体标注的完整章节页面</p>
+    </div>
+</div>
+
+<script>
+const CATALOG_URL = 'data/stories/catalog.json';
+const CHAPTER_URL = n => `data/stories/${n}.json`;
+
+function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function renderTextBlock(text) {
+    if (!text) return '';
+    // Paragraphs split by double newline; list items (lines starting with "- ") grouped.
+    const paras = text.split(/\n\n+/);
+    return paras.map(p => {
+        const lines = p.split('\n');
+        if (lines.every(l => l.trim().startsWith('- '))) {
+            return '<ul>' + lines.map(l => `<li>${escapeHtml(l.replace(/^-\s*/, ''))}</li>`).join('') + '</ul>';
+        }
+        return `<p>${escapeHtml(p).replace(/\n/g, '<br>')}</p>`;
+    }).join('');
+}
+
+async function main() {
+    const catalog = await fetch(CATALOG_URL).then(r => r.json());
+    const chapters = catalog.chapters || [];
+
+    // Stats
+    let totalStories = 0, doneStories = 0;
+    chapters.forEach(ch => {
+        (ch.stories || []).forEach(s => {
+            totalStories++;
+            if (s.status === 'done') doneStories++;
+        });
+    });
+    document.getElementById('stat-chapters').textContent = chapters.length;
+    document.getElementById('stat-stories').textContent = totalStories;
+    document.getElementById('stat-done').textContent = doneStories;
+
+    // TOC
+    const tocBody = document.getElementById('toc-body');
+    tocBody.innerHTML = chapters.map(ch => `
+        <div class="toc-chapter">
+            <div class="toc-chapter-title">
+                <a href="#ch-${ch.chapter_num}">${ch.chapter_num} ${escapeHtml(ch.chapter_title)}</a>
+                <span style="color:#999; font-weight:normal; font-size:0.88em;">（${ch.stories.length} 个故事）</span>
+            </div>
+            <ul class="toc-stories">
+                ${ch.stories.map(s => `
+                    <li>
+                        <a href="#${s.id}"><span class="status-${s.status || 'planned'}">${escapeHtml(s.title)}</span></a>
+                        <span style="color:#aaa; font-size:0.9em;"> — ${escapeHtml(s.summary || '')}</span>
+                    </li>
+                `).join('')}
+            </ul>
+        </div>
+    `).join('');
+
+    // Chapters body: fetch each chapter's full data
+    const chBody = document.getElementById('chapters-body');
+    const chapterHtmls = await Promise.all(chapters.map(async ch => {
+        let data;
+        try {
+            data = await fetch(CHAPTER_URL(ch.chapter_num)).then(r => {
+                if (!r.ok) throw new Error();
+                return r.json();
+            });
+        } catch(e) {
+            // Fall back to catalog stubs (meta only)
+            data = { stories: ch.stories };
+        }
+        const storyHtmls = (data.stories || []).map(s => {
+            const hasContent = s.original && s.translation;
+            const body = hasContent ? `
+                <div class="story-body">
+                    <div class="col col-original"><h4>原文</h4>${renderTextBlock(s.original)}</div>
+                    <div class="col col-translation"><h4>白话文</h4>${renderTextBlock(s.translation)}</div>
+                </div>
+            ` : `<div class="story-planned">（待撰写）</div>`;
+            return `
+                <div class="story" id="${s.id}">
+                    <div class="story-head">
+                        <div class="story-title">${escapeHtml(s.title)}</div>
+                        <div class="story-summary">${escapeHtml(s.summary || '')}</div>
+                        <div class="story-meta">段落：${(s.source_pns || []).join(', ')}${hasContent ? '' : ' · 状态：待撰写'}</div>
+                    </div>
+                    ${body}
+                </div>
+            `;
+        }).join('');
+        return `
+            <div class="chapter-section" id="ch-${ch.chapter_num}">
+                <h2>${ch.chapter_num} ${escapeHtml(ch.chapter_title)}
+                    <a href="../chapters/${ch.chapter_num}_${ch.chapter_title}.html" title="跳转到带标注的完整章节">[查看完整章节 →]</a>
+                </h2>
+                ${storyHtmls}
+            </div>
+        `;
+    }));
+    chBody.innerHTML = chapterHtmls.join('');
+
+    // Scroll to hash if present
+    if (location.hash) {
+        const el = document.querySelector(location.hash);
+        if (el) el.scrollIntoView();
+    }
+}
+
+main().catch(e => {
+    document.getElementById('toc-body').innerHTML = `<span style="color:#c33">加载失败：${e.message}</span>`;
+});
+</script>
+</body>
+</html>
