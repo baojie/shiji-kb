@@ -1,19 +1,26 @@
 {
   "plugins": [
     {
-      "id": "semantic-block",
-      "entry": "plugins/semantic-block/index.js",
-      "name": "语义块",
-      "version": "1.0.0",
-      "description": "处理 ::: infobox 和 ::: meta 语义块，支持 inline infobox 和元数据注入"
-    },
-    {
       "id": "math",
       "entry": "plugins/math/index.js",
       "name": "KaTeX 数学公式",
       "version": "1.0.0",
       "description": "渲染页面中的 $...$ 行内公式和 $$...$$ 块级公式（需联网加载 KaTeX CDN）",
       "settings_key": "math"
+    },
+    {
+      "id": "pn-citation",
+      "entry": "plugins/pn-citation/index.js",
+      "name": "PN 引文链接",
+      "version": "1.0.0",
+      "description": "将 （[[NNN_章节|NNN-MMM]]） 或 （NNN-MMM） 格式的引文渲染为指向章节原文段落的链接"
+    },
+    {
+      "id": "semantic-block",
+      "entry": "plugins/semantic-block/index.js",
+      "name": "语义块",
+      "version": "1.0.0",
+      "description": "处理页面中的 ::: infobox 和 ::: meta 语义块；支持 inline infobox 折叠/展开与元数据读取"
     }
   ]
 }

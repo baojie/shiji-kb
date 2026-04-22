@@ -22,8 +22,10 @@ v0 约束:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
+import urllib.parse
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -122,6 +124,60 @@ def resolve_wikilink(target: str, registry: dict[str, Page]) -> Page | None:
 PLACEHOLDER_OPEN = "\ue010"
 PLACEHOLDER_CLOSE = "\ue011"
 PLACEHOLDER_RE = re.compile(f"{PLACEHOLDER_OPEN}(\\d+){PLACEHOLDER_CLOSE}")
+
+
+CHAPTERS_BASE = 'https://baojie.github.io/shiji-kb/chapters/'
+_CHAPTER_MAP_PATH = Path(__file__).resolve().parents[1] / 'public' / 'data' / 'chapter_map.json'
+
+def _load_chapter_map() -> dict[str, str]:
+    try:
+        return json.loads(_CHAPTER_MAP_PATH.read_text(encoding='utf-8'))
+    except Exception:
+        return {}
+
+_CHAPTER_MAP: dict[str, str] = _load_chapter_map()
+
+# 匹配 wikilink 展开后形式：（<a class="wikilink...">NNN-MMM</a>）
+_CITE_WIKILINK_RE = re.compile(
+    r'（<a\s[^>]*class="wikilink[^"]*"[^>]*>(\d{3})-(\d{3}(?:\.\d+)?)</a>(?:意旨)?）'
+)
+# 匹配纯文本形式：（NNN-MMM）或（NNN-MMM意旨）
+_CITE_PLAIN_RE = re.compile(r'（(\d{3})-(\d{3}(?:\.\d+)?)(?:意旨)?）')
+
+
+def _pn_to_int(pn_str: str) -> str:
+    return pn_str if '.' in pn_str else str(int(pn_str))
+
+
+def _cite_link(ch_num: str, pn_str: str) -> str | None:
+    ch_file = _CHAPTER_MAP.get(ch_num)
+    if not ch_file:
+        return None
+    pn = _pn_to_int(pn_str)
+    url = f'{CHAPTERS_BASE}{urllib.parse.quote(ch_file)}.html#pn-{pn}'
+    return f'（<a class="pn-citation" href="{url}" target="_blank" title="{ch_num}-{pn_str} 原文">{ch_num}-{pn_str}</a>）'
+
+
+def expand_pn_citations(html: str) -> str:
+    """将 wiki HTML 中的 PN 引文转为指向章节段落锚的链接。在 expand_wikilinks 之后调用。"""
+    # 1. wikilink 展开形式（优先）
+    html = _CITE_WIKILINK_RE.sub(
+        lambda m: _cite_link(m.group(1), m.group(2)) or m.group(0), html
+    )
+    # 2. 纯文本形式（跳过已在 <a> 内的）
+    parts: list[str] = []
+    last = 0
+    for tag in re.finditer(r'<a[\s\S]*?</a>', html):
+        segment = html[last:tag.start()]
+        parts.append(_CITE_PLAIN_RE.sub(
+            lambda m: _cite_link(m.group(1), m.group(2)) or m.group(0), segment
+        ))
+        parts.append(tag.group(0))
+        last = tag.end()
+    parts.append(_CITE_PLAIN_RE.sub(
+        lambda m: _cite_link(m.group(1), m.group(2)) or m.group(0), html[last:]
+    ))
+    return ''.join(parts)
 
 
 def protect_wikilinks(body: str) -> tuple[str, list[tuple[str, str | None]]]:
@@ -362,6 +418,17 @@ aside.infobox.inline h2 { font-size: 1em; }
   cursor: help;
 }
 
+a.pn-citation {
+  color: var(--fg-muted);
+  font-size: .88em;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--fg-muted);
+}
+a.pn-citation:hover {
+  color: var(--link);
+  border-bottom-color: var(--link);
+}
+
 footer {
   max-width: 900px;
   margin: 3em auto 2em;
@@ -400,6 +467,7 @@ def render_page(page: Page, registry: dict[str, Page], md: MarkdownIt) -> tuple[
     protected, tokens = protect_wikilinks(processed_body)
     body_html = md.render(protected)
     body_html = expand_wikilinks(body_html, tokens, registry, page, broken)
+    body_html = expand_pn_citations(body_html)
     # 3. 展开语义块占位符（第一个 infobox 由 sidebar 渲染，body 内跳过）
     body_html = expand_blocks_in_html(body_html, blocks, first_infobox_in_sidebar=True)
     # 4. Sidebar infobox：合并 frontmatter + 第一个 infobox 块（块优先）
