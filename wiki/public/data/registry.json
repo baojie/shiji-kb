@@ -3906,27 +3906,28 @@
       "type": "person",
       "label": "吴王阖闾",
       "aliases": [
-        "光",
+        "阖庐",
         "公子光",
-        "阖庐"
+        "阖闾"
       ],
       "tags": [
         "春秋",
         "吴国",
-        "霸主"
+        "破楚入郢",
+        "专诸"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/吴王阖闾.md",
       "total_refs": 33,
       "total_chapters": 16,
-      "quality_score": 26,
+      "quality_score": 45,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "吴起": {
@@ -4750,15 +4751,16 @@
       "type": "person",
       "label": "宋襄公",
       "aliases": [
-        "宋公",
+        "兹甫",
         "襄公"
       ],
       "tags": [
         "春秋",
         "宋国",
-        "世家人物"
+        "泓水之战",
+        "仁义之师"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/宋襄公.md",
       "total_refs": 20,
       "total_chapters": 8,
@@ -4767,14 +4769,14 @@
         "birth": -650,
         "note": "宋国君主，在位14年，泓之战战败受伤，次年伤重而卒..."
       },
-      "quality_score": 26,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "尧": {
@@ -5079,27 +5081,27 @@
       "type": "person",
       "label": "张释之",
       "aliases": [
-        "张季",
         "张廷尉",
-        "释之"
+        "张季"
       ],
       "tags": [
-        "汉朝",
-        "司法",
-        "文景之治"
+        "汉初",
+        "法制",
+        "廷尉",
+        "文帝"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/张释之.md",
       "total_refs": 17,
       "total_chapters": 5,
-      "quality_score": 17,
+      "quality_score": 40,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 2,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "张骞": {
@@ -9347,14 +9349,16 @@
       "label": "齐庄公",
       "aliases": [
         "庄",
-        "庄公"
+        "购",
+        "齐庄"
       ],
       "tags": [
         "春秋",
         "齐国",
-        "世家人物"
+        "崔杼",
+        "弑君"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/齐庄公.md",
       "total_refs": 25,
       "total_chapters": 8,
@@ -9363,14 +9367,14 @@
         "birth": -553,
         "note": "齐国君主，在位6年，灵公之子，被崔杼弑于前548年..."
       },
-      "quality_score": 26,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "齐悼惠王": {
@@ -9966,8 +9970,9 @@
     "大伯": "吴太伯",
     "太伯": "吴太伯",
     "吴王阖闾": "吴王阖闾",
-    "公子光": "吴王阖闾",
     "阖庐": "吴王阖闾",
+    "公子光": "吴王阖闾",
+    "阖闾": "吴王阖闾",
     "吴起": "吴起",
     "吴子": "吴起",
     "周亚夫": "周亚夫",
@@ -10050,7 +10055,7 @@
     "宋景公": "宋景公",
     "景公": "宋景公",
     "宋襄公": "宋襄公",
-    "宋公": "宋襄公",
+    "兹甫": "宋襄公",
     "襄公": "宋襄公",
     "唐尧": "尧",
     "帝尧": "尧",
@@ -10082,9 +10087,8 @@
     "北平侯": "张苍",
     "张丞相": "张苍",
     "张释之": "张释之",
-    "张季": "张释之",
     "张廷尉": "张释之",
-    "释之": "张释之",
+    "张季": "张释之",
     "张骞": "张骞",
     "博望侯": "张骞",
     "彭越": "彭越",
@@ -10459,7 +10463,7 @@
     "齐宣王": "齐宣王",
     "辟彊": "齐宣王",
     "齐庄公": "齐庄公",
-    "庄公": "齐庄公",
+    "齐庄": "齐庄公",
     "齐悼惠王": "齐悼惠王",
     "刘肥": "齐悼惠王",
     "悼惠": "齐悼惠王",
@@ -10480,5 +10484,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T04:56:57"
+  "generated": "2026-04-23T05:01:29"
 }
