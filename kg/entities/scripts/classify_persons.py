@@ -340,8 +340,7 @@ EXPLICIT_CONSORT = {
     '葛嬴',          # 齐桓公夫人
     '萧桐叔子',      # 齐顷公母
     '东郭女',        # 崔杼妻
-    '王媪',          # 汉高祖债家女（有龙见） → 可归平民，此处作平民
-    '武负',          # 同上
+    # 王媪/武负 高祖酒家女 已在 EXPLICIT_COMMONER 归平民，不再兼后妃
     '卫长公主',      # 武帝女
     '当利公主',      # 武帝女
     '凡凡夫',        # 暂略
@@ -1142,7 +1141,8 @@ EXPLICIT_MYTHICAL = {
     '嫘祖',          # 黄帝妃（与后妃重叠，此处上古语境）
     '羿',            # 古弓箭英雄（夏代）
     '简狄',          # 殷契母
-    '奄息', '仲行', '针虎',  # 秦穆公殉葬三人（子舆氏）
+    # 秦穆公殉葬三人（子舆氏）不归上古神话，由 TTL per:秦国臣子 处理
+    # 奄息/仲行/针虎 已从此移除
     '臣扈', '伊陟', '巫咸', '巫贤',  # 商代贤臣
     # 补录（第四轮）
     '后羿', '羿',    # 有穷后羿
@@ -1190,7 +1190,7 @@ EXPLICIT_MYTHICAL = {
 EXPLICIT_RETAINER = {
     '冯驩', '毛遂', '朱亥', '侯嬴', '夷门监',
     '唐雎', '宾孟', '安陵君',
-    '魏武子', '程婴', '公孙杵臼', '赵朔', '赵武',  # 赵氏孤儿
+    '程婴', '公孙杵臼',  # 赵氏孤儿门客（赵朔/赵武/魏武子 归晋卿大夫，不在此）
     '豫让',  # 兼刺客
     # 补录（第三轮）
     '毛公',          # 信陵君门下处士
@@ -1264,6 +1264,9 @@ SUFFIX_RULES = [
     (2, '太后', CAT_CONSORT),
     (2, '王后', CAT_CONSORT),
     (2, '皇后', CAT_CONSORT),
+    (2, '美人', CAT_CONSORT),
+    (2, '婕妤', CAT_CONSORT),
+    (2, '孺子', CAT_CONSORT),
     (1, '姬', CAT_CONSORT),
     (2, '公子', CAT_PRINCE),
     (2, '太子', CAT_PRINCE),
@@ -1435,18 +1438,19 @@ TTL_CLASS_MAP = {
     '疑似误标': CAT_MIS,
     '无国名谥号': CAT_MIS,
     '后妃相关': CAT_MIS,
-    '吴国': CAT_MIS,
-    '燕国': CAT_MIS,
-    '赵国': CAT_MIS,
-    '鲁国': CAT_MIS,
-    '齐国': CAT_MIS,
     # 上古
     '上古': CAT_EMPEROR,
     '周': CAT_EMPEROR,
     '商': CAT_EMPEROR,
     '夏': CAT_EMPEROR,
-    '晋国': CAT_RULER,   # 晋国诸侯君主
+    # 诸侯邦国 path → 诸侯君主（与晋/楚统一口径）
+    '晋国': CAT_RULER,
     '楚国': CAT_RULER,
+    '吴国': CAT_RULER,
+    '燕国': CAT_RULER,
+    '赵国': CAT_RULER,
+    '鲁国': CAT_RULER,
+    '齐国': CAT_RULER,
     '汉': CAT_EMPEROR,
     '秦朝': CAT_EMPEROR,
 }
@@ -1692,6 +1696,10 @@ def apply_l2(canonical, refs, thematic_chapters):
     """
     if not refs:
         return []
+    # 护栏：国名+爵号 是诸侯君主/帝王 而非专题章归类（如 陈出公/周太王/燕昭王）
+    if len(canonical) >= 2 and canonical[0] in '齐楚燕赵韩魏秦吴越晋郑宋卫陈蔡曹滕许邾莒徐虢杞周汉' \
+            and canonical[-1] in '公王侯':
+        return []
     chap_count = Counter(r[0] for r in refs)
     total = len(refs)
     for chap, n in chap_count.items():
@@ -1746,6 +1754,10 @@ def apply_l4(canonical):
     if canonical.endswith('侯') and len(canonical) >= 2 and len(canonical) <= 4:
         # 非"列侯/彻侯"等泛称（那些是 official）
         if canonical not in ('侯',):
+            # 春秋诸侯 X侯（X 为邦国单字）→ 诸侯君主（与 X王/X公 同级）
+            if canonical[0] in '齐楚燕赵韩魏秦吴越晋郑宋卫陈蔡曹滕许邾莒徐虢杞蔡':
+                # 形如 晋武侯/齐成侯/韩烈侯/蔡穆侯 春秋诸侯
+                return [CAT_RULER]
             return [CAT_CHANCELLOR]  # 汉代列侯多是功臣
     if canonical.endswith('君') and len(canonical) >= 2 and len(canonical) <= 4:
         if canonical not in ('君',):
@@ -1815,6 +1827,10 @@ def apply_l4_extra(canonical, refs):
         return []
     # 排除明显的君主/贵族后缀（应由上面规则处理）；保留 父 （如"太王亶父"）
     if len(canonical) >= 2 and canonical.endswith(('王', '公', '侯', '君', '姬')):
+        return []
+    # 护栏：国名+爵号 不应进入 L4.5 的专题章节桶（如 028_封禅书 → 近臣奇人）
+    if len(canonical) >= 2 and canonical[0] in '齐楚燕赵韩魏秦吴越晋郑宋卫陈蔡曹滕许邾莒徐虢杞周汉' \
+            and canonical[-1] in '公王侯':
         return []
     # 全部 refs 在 031-060 世家章节
     worldfamily = {f'0{i}_' for i in range(31, 60)}

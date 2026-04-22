@@ -588,7 +588,7 @@ per:夷吾 a per:晋国世族 ; rdfs:label "夷吾"@zh ; :count 45 .
 per:吕产 a per:吕氏集团 ; rdfs:label "吕产"@zh ; :count 45 .
 per:崔杼 a per:齐国权臣 ; rdfs:label "崔杼"@zh ; :count 44 .
 per:萧何 a per:刘邦文臣 ; rdfs:label "萧何"@zh ; :count 44 .
-per:赵朔 a per:卫国臣子 ; rdfs:label "赵朔"@zh ; :count 44 .
+per:赵朔 a per:春秋 ; rdfs:label "赵朔"@zh ; :count 44 .
 per:李牧 a per:赵国将领 ; rdfs:label "李牧"@zh ; :count 43 .
 per:卜式 a per:汉中后 ; rdfs:label "卜式"@zh ; :count 43 .
 per:吕禄 a per:吕氏集团 ; rdfs:label "吕禄"@zh ; :count 42 .
@@ -731,7 +731,7 @@ per:造父 a per:秦国先祖 ; rdfs:label "造父"@zh ; :count 16 .
 per:田乞 a per:齐国权臣 ; rdfs:label "田乞"@zh ; :count 16 .
 per:桓叔 a per:晋国谋臣 ; rdfs:label "桓叔"@zh ; :count 16 .
 per:子玉 a per:楚国臣子 ; rdfs:label "子玉"@zh ; :count 16 .
-per:赵武 a per:赵国政治 ; rdfs:label "赵武"@zh ; :count 16 .
+per:赵武 a per:春秋 ; rdfs:label "赵武"@zh ; :count 16 .
 per:绛侯 a per:文景朝臣 ; rdfs:label "绛侯"@zh ; :count 16 .
 per:田不礼 a per:赵国政治 ; rdfs:label "田不礼"@zh ; :count 15 .
 per:蹇叔 a per:秦国相臣 ; rdfs:label "蹇叔"@zh ; :count 15 .
@@ -1572,13 +1572,13 @@ per:严仲子 a per:刺客 ; rdfs:label "严仲子"@zh ; :count 13 .
 per:豫让 a per:刺客 ; rdfs:label "豫让"@zh ; :count 12 .
 per:秦舞阳 a per:刺客 ; rdfs:label "秦舞阳"@zh ; :count 11 .
 per:曹沫 a per:刺客 ; rdfs:label "曹沫"@zh ; :count 10 .
-per:樊於期 a per:刺客 ; rdfs:label "樊於期"@zh ; :count 9 .
+per:樊於期 a per:秦朝将领 ; rdfs:label "樊於期"@zh ; :count 9 .
 per:高渐离 a per:刺客 ; rdfs:label "高渐离"@zh ; :count 8 .
 per:盖聂 a per:刺客 ; rdfs:label "盖聂"@zh ; :count 4 .
 per:侠累 a per:刺客 ; rdfs:label "侠累"@zh ; :count 3 .
 per:鲁句践 a per:刺客 ; rdfs:label "鲁句践"@zh ; :count 3 .
-per:鞠武 a per:刺客 ; rdfs:label "鞠武"@zh ; :count 3 .
-per:夏无且 a per:刺客 ; rdfs:label "夏无且"@zh ; :count 3 .
+per:鞠武 a per:战国 ; rdfs:label "鞠武"@zh ; :count 3 .
+per:夏无且 a per:汉其他 ; rdfs:label "夏无且"@zh ; :count 3 .
 
 # 游侠 (7)
 per:郭解 a per:游侠 ; rdfs:label "郭解"@zh ; :count 55 .
@@ -1645,7 +1645,7 @@ per:长桑君 a per:医者 ; rdfs:label "长桑君"@zh ; :count 3 .
 
 # 外邦 (51)
 per:冒顿 a per:匈奴 ; rdfs:label "冒顿"@zh ; :count 50 .
-per:张骞 a per:大宛西域 ; rdfs:label "张骞"@zh ; :count 47 .
+per:张骞 a per:武帝朝臣 ; rdfs:label "张骞"@zh ; :count 47 .
 per:尉佗 a per:南越 ; rdfs:label "尉佗"@zh ; :count 28 .
 per:刘郢 a per:南越 ; rdfs:label "刘郢"@zh ; :count 22 .
 per:昆莫 a per:大宛西域 ; rdfs:label "昆莫"@zh ; :count 21 .
@@ -1656,7 +1656,7 @@ per:馀善 a per:东越 ; rdfs:label "馀善"@zh ; :count 15 .
 per:赵破奴 a per:匈奴 ; rdfs:label "赵破奴"@zh ; :count 14 .
 per:吕嘉 a per:南越 ; rdfs:label "吕嘉"@zh ; :count 13 .
 per:婴齐 a per:南越 ; rdfs:label "婴齐"@zh ; :count 11 .
-per:杨仆 a per:东越 ; rdfs:label "杨仆"@zh ; :count 11 .
+per:杨仆 a per:武帝将领 ; rdfs:label "杨仆"@zh ; :count 11 .
 per:路博德 a per:匈奴 ; rdfs:label "路博德"@zh ; :count 9 .
 per:头曼 a per:匈奴 ; rdfs:label "头曼"@zh ; :count 9 .
 per:中行说 a per:匈奴 ; rdfs:label "中行说"@zh ; :count 9 .
@@ -1666,23 +1666,23 @@ per:李广利 a per:匈奴 ; rdfs:label "李广利"@zh ; :count 7 .
 per:岑娶 a per:大宛西域 ; rdfs:label "岑娶"@zh ; :count 7 .
 per:王子带 a per:匈奴 ; rdfs:label "王子带"@zh ; :count 6 .
 per:路人 a per:朝鲜 ; rdfs:label "路人"@zh ; :count 6 .
-per:上官桀 a per:大宛西域 ; rdfs:label "上官桀"@zh ; :count 6 .
+per:上官桀 a per:武帝朝臣 ; rdfs:label "上官桀"@zh ; :count 6 .
 per:庄蹻 a per:西南夷 ; rdfs:label "庄蹻"@zh ; :count 6 .
-per:王乌 a per:匈奴 ; rdfs:label "王乌"@zh ; :count 6 .
+per:王乌 a per:武帝朝臣 ; rdfs:label "王乌"@zh ; :count 6 .
 per:毋寡 a per:大宛西域 ; rdfs:label "毋寡"@zh ; :count 6 .
 per:军臣 a per:匈奴 ; rdfs:label "军臣"@zh ; :count 5 .
 per:乌维 a per:匈奴 ; rdfs:label "乌维"@zh ; :count 5 .
-per:杨信 a per:匈奴 ; rdfs:label "杨信"@zh ; :count 5 .
+per:杨信 a per:武帝朝臣 ; rdfs:label "杨信"@zh ; :count 5 .
 per:赵始成 a per:大宛西域 ; rdfs:label "赵始成"@zh ; :count 5 .
 per:李哆 a per:大宛西域 ; rdfs:label "李哆"@zh ; :count 5 .
-per:荀彘 a per:朝鲜 ; rdfs:label "荀彘"@zh ; :count 4 .
+per:荀彘 a per:武帝将领 ; rdfs:label "荀彘"@zh ; :count 4 .
 per:赵弟 a per:大宛西域 ; rdfs:label "赵弟"@zh ; :count 4 .
 per:郭吉 a per:匈奴 ; rdfs:label "郭吉"@zh ; :count 4 .
 per:路充国 a per:匈奴 ; rdfs:label "路充国"@zh ; :count 4 .
 per:大禄 a per:大宛西域 ; rdfs:label "大禄"@zh ; :count 4 .
 per:昧蔡 a per:大宛西域 ; rdfs:label "昧蔡"@zh ; :count 4 .
 per:浞野侯 a per:大宛西域 ; rdfs:label "浞野侯"@zh ; :count 3 .
-per:卫山 a per:朝鲜 ; rdfs:label "卫山"@zh ; :count 3 .
+per:卫山 a per:武帝朝臣 ; rdfs:label "卫山"@zh ; :count 3 .
 per:雕渠难 a per:匈奴 ; rdfs:label "雕渠难"@zh ; :count 3 .
 per:稽粥 a per:匈奴 ; rdfs:label "稽粥"@zh ; :count 3 .
 per:伊稚斜 a per:匈奴 ; rdfs:label "伊稚斜"@zh ; :count 3 .
@@ -1690,7 +1690,7 @@ per:呴犁湖 a per:匈奴 ; rdfs:label "呴犁湖"@zh ; :count 3 .
 per:任嚣 a per:南越 ; rdfs:label "任嚣"@zh ; :count 3 .
 per:安国少季 a per:南越 ; rdfs:label "安国少季"@zh ; :count 3 .
 per:居股 a per:东越 ; rdfs:label "居股"@zh ; :count 3 .
-per:涉何 a per:朝鲜 ; rdfs:label "涉何"@zh ; :count 3 .
+per:涉何 a per:武帝朝臣 ; rdfs:label "涉何"@zh ; :count 3 .
 per:王然于 a per:西南夷 ; rdfs:label "王然于"@zh ; :count 3 .
 per:吕越人 a per:西南夷 ; rdfs:label "吕越人"@zh ; :count 3 .
 per:头兰 a per:西南夷 ; rdfs:label "头兰"@zh ; :count 3 .
@@ -1713,7 +1713,7 @@ per:起 a per:疑似误标 ; rdfs:label "起"@zh ; :count 43 .
 per:中行 a per:晋国 ; rdfs:label "中行"@zh ; :count 42 .
 per:成 a per:疑似误标 ; rdfs:label "成"@zh ; :count 38 .
 per:庆 a per:疑似误标 ; rdfs:label "庆"@zh ; :count 37 .
-per:悼惠 a per:无国名谥号 ; rdfs:label "悼惠"@zh ; :count 36 .
+per:悼惠 a per:汉诸侯王 ; rdfs:label "悼惠"@zh ; :count 36 .
 per:文 a per:疑似误标 ; rdfs:label "文"@zh ; :count 34 .
 per:吕 a per:疑似误标 ; rdfs:label "吕"@zh ; :count 34 .
 per:长 a per:疑似误标 ; rdfs:label "长"@zh ; :count 33 .
@@ -1736,7 +1736,7 @@ per:陵 a per:疑似误标 ; rdfs:label "陵"@zh ; :count 25 .
 per:敬侯 a per:疑似误标 ; rdfs:label "敬侯"@zh ; :count 25 .
 per:共侯 a per:疑似误标 ; rdfs:label "共侯"@zh ; :count 25 .
 per:仁 a per:疑似误标 ; rdfs:label "仁"@zh ; :count 25 .
-per:刘季 a per:疑似误标 ; rdfs:label "刘季"@zh ; :count 24 .
+per:刘季 a per:汉其他 ; rdfs:label "刘季"@zh ; :count 24 .
 per:安 a per:疑似误标 ; rdfs:label "安"@zh ; :count 23 .
 per:武公 a per:疑似误标 ; rdfs:label "武公"@zh ; :count 23 .
 per:用 a per:疑似误标 ; rdfs:label "用"@zh ; :count 23 .
@@ -1763,7 +1763,7 @@ per:成公 a per:疑似误标 ; rdfs:label "成公"@zh ; :count 19 .
 per:孝侯 a per:晋国 ; rdfs:label "孝侯"@zh ; :count 19 .
 per:孝 a per:疑似误标 ; rdfs:label "孝"@zh ; :count 19 .
 per:周 a per:疑似误标 ; rdfs:label "周"@zh ; :count 19 .
-per:王子比干 a per:疑似误标 ; rdfs:label "王子比干"@zh ; :count 18 .
+per:王子比干 a per:宗室 ; rdfs:label "王子比干"@zh ; :count 18 .
 per:唐 a per:疑似误标 ; rdfs:label "唐"@zh ; :count 18 .
 per:献公 a per:疑似误标 ; rdfs:label "献公"@zh ; :count 18 .
 per:襄王 a per:无国名谥号 ; rdfs:label "襄王"@zh ; :count 18 .
@@ -1775,7 +1775,7 @@ per:出子 a per:疑似误标 ; rdfs:label "出子"@zh ; :count 17 .
 per:顷侯 a per:疑似误标 ; rdfs:label "顷侯"@zh ; :count 17 .
 per:昭帝 a per:疑似误标 ; rdfs:label "昭帝"@zh ; :count 17 .
 per:契 a per:疑似误标 ; rdfs:label "契"@zh ; :count 16 .
-per:别将 a per:疑似误标 ; rdfs:label "别将"@zh ; :count 16 .
+per:别将 a per:汉其他 ; rdfs:label "别将"@zh ; :count 16 .
 per:戴侯 a per:疑似误标 ; rdfs:label "戴侯"@zh ; :count 16 .
 per:庄伯 a per:晋国 ; rdfs:label "庄伯"@zh ; :count 16 .
 per:鄂侯 a per:晋国 ; rdfs:label "鄂侯"@zh ; :count 15 .
@@ -1791,9 +1791,9 @@ per:伋 a per:疑似误标 ; rdfs:label "伋"@zh ; :count 15 .
 per:由 a per:疑似误标 ; rdfs:label "由"@zh ; :count 15 .
 per:襄公 a per:疑似误标 ; rdfs:label "襄公"@zh ; :count 14 .
 per:主 a per:疑似误标 ; rdfs:label "主"@zh ; :count 14 .
-per:益 a per:疑似误标 ; rdfs:label "益"@zh ; :count 13 .
+per:益 a per:五帝时代 ; rdfs:label "益"@zh ; :count 13 .
 per:市 a per:疑似误标 ; rdfs:label "市"@zh ; :count 13 .
-per:太上皇 a per:疑似误标 ; rdfs:label "太上皇"@zh ; :count 13 .
+per:太上皇 a per:汉其他 ; rdfs:label "太上皇"@zh ; :count 13 .
 per:萧 a per:疑似误标 ; rdfs:label "萧"@zh ; :count 13 .
 per:惠王 a per:疑似误标 ; rdfs:label "惠王"@zh ; :count 13 .
 per:纠 a per:疑似误标 ; rdfs:label "纠"@zh ; :count 13 .
@@ -1801,7 +1801,7 @@ per:固 a per:疑似误标 ; rdfs:label "固"@zh ; :count 13 .
 per:管 a per:疑似误标 ; rdfs:label "管"@zh ; :count 12 .
 per:郑伯 a per:晋国 ; rdfs:label "郑伯"@zh ; :count 12 .
 per:申 a per:疑似误标 ; rdfs:label "申"@zh ; :count 12 .
-per:高昭子 a per:无国名谥号 ; rdfs:label "高昭子"@zh ; :count 12 .
+per:高昭子 a per:春秋 ; rdfs:label "高昭子"@zh ; :count 12 .
 per:政 a per:疑似误标 ; rdfs:label "政"@zh ; :count 12 .
 per:山 a per:疑似误标 ; rdfs:label "山"@zh ; :count 12 .
 per:灌 a per:疑似误标 ; rdfs:label "灌"@zh ; :count 12 .
@@ -1818,7 +1818,7 @@ per:厉公 a per:疑似误标 ; rdfs:label "厉公"@zh ; :count 11 .
 per:桓子 a per:疑似误标 ; rdfs:label "桓子"@zh ; :count 11 .
 per:悼侯 a per:疑似误标 ; rdfs:label "悼侯"@zh ; :count 11 .
 per:易王 a per:燕国 ; rdfs:label "易王"@zh ; :count 11 .
-per:允 a per:疑似误标 ; rdfs:label "允"@zh ; :count 11 .
+per:允 a per:诸侯 ; rdfs:label "允"@zh ; :count 11 .
 per:考烈王 a per:疑似误标 ; rdfs:label "考烈王"@zh ; :count 11 .
 per:赐 a per:疑似误标 ; rdfs:label "赐"@zh ; :count 11 .
 per:桓 a per:疑似误标 ; rdfs:label "桓"@zh ; :count 10 .
@@ -1893,18 +1893,18 @@ per:武安侯 a per:疑似误标 ; rdfs:label "武安侯"@zh ; :count 6 .
 per:魏其 a per:疑似误标 ; rdfs:label "魏其"@zh ; :count 6 .
 per:齐王 a per:疑似误标 ; rdfs:label "齐王"@zh ; :count 6 .
 per:窦 a per:疑似误标 ; rdfs:label "窦"@zh ; :count 6 .
-per:重 a per:疑似误标 ; rdfs:label "重"@zh ; :count 6 .
+per:重 a per:五帝时代 ; rdfs:label "重"@zh ; :count 6 .
 per:国 a per:疑似误标 ; rdfs:label "国"@zh ; :count 6 .
 per:万 a per:疑似误标 ; rdfs:label "万"@zh ; :count 6 .
 per:伯 a per:疑似误标 ; rdfs:label "伯"@zh ; :count 6 .
 per:逞 a per:疑似误标 ; rdfs:label "逞"@zh ; :count 6 .
 per:陈 a per:疑似误标 ; rdfs:label "陈"@zh ; :count 6 .
-per:五羖 a per:无国名谥号 ; rdfs:label "五羖"@zh ; :count 6 .
+per:五羖 a per:秦国臣子 ; rdfs:label "五羖"@zh ; :count 6 .
 per:刘 a per:疑似误标 ; rdfs:label "刘"@zh ; :count 6 .
 per:吉 a per:疑似误标 ; rdfs:label "吉"@zh ; :count 6 .
 per:康 a per:疑似误标 ; rdfs:label "康"@zh ; :count 5 .
 per:林 a per:疑似误标 ; rdfs:label "林"@zh ; :count 5 .
-per:梁伯 a per:无国名谥号 ; rdfs:label "梁伯"@zh ; :count 5 .
+per:梁伯 a per:诸侯 ; rdfs:label "梁伯"@zh ; :count 5 .
 per:惠文王 a per:疑似误标 ; rdfs:label "惠文王"@zh ; :count 5 .
 per:项 a per:疑似误标 ; rdfs:label "项"@zh ; :count 5 .
 per:绛 a per:疑似误标 ; rdfs:label "绛"@zh ; :count 5 .
@@ -1935,9 +1935,9 @@ per:尝 a per:疑似误标 ; rdfs:label "尝"@zh ; :count 5 .
 per:卫 a per:疑似误标 ; rdfs:label "卫"@zh ; :count 5 .
 per:卓 a per:疑似误标 ; rdfs:label "卓"@zh ; :count 5 .
 per:龙 a per:疑似误标 ; rdfs:label "龙"@zh ; :count 4 .
-per:夔 a per:疑似误标 ; rdfs:label "夔"@zh ; :count 4 .
+per:夔 a per:五帝时代 ; rdfs:label "夔"@zh ; :count 4 .
 per:辛 a per:疑似误标 ; rdfs:label "辛"@zh ; :count 4 .
-per:摎 a per:疑似误标 ; rdfs:label "摎"@zh ; :count 4 .
+per:摎 a per:秦朝将领 ; rdfs:label "摎"@zh ; :count 4 .
 per:白 a per:疑似误标 ; rdfs:label "白"@zh ; :count 4 .
 per:周王 a per:无国名谥号 ; rdfs:label "周王"@zh ; :count 4 .
 per:贲 a per:疑似误标 ; rdfs:label "贲"@zh ; :count 4 .
@@ -1976,14 +1976,14 @@ per:宽 a per:疑似误标 ; rdfs:label "宽"@zh ; :count 4 .
 per:敬 a per:疑似误标 ; rdfs:label "敬"@zh ; :count 4 .
 per:度 a per:疑似误标 ; rdfs:label "度"@zh ; :count 4 .
 per:但 a per:疑似误标 ; rdfs:label "但"@zh ; :count 4 .
-per:羲 a per:疑似误标 ; rdfs:label "羲"@zh ; :count 3 .
-per:垂 a per:疑似误标 ; rdfs:label "垂"@zh ; :count 3 .
+per:羲 a per:五帝时代 ; rdfs:label "羲"@zh ; :count 3 .
+per:垂 a per:五帝时代 ; rdfs:label "垂"@zh ; :count 3 .
 per:钊 a per:疑似误标 ; rdfs:label "钊"@zh ; :count 3 .
 per:静 a per:疑似误标 ; rdfs:label "静"@zh ; :count 3 .
 per:猛 a per:疑似误标 ; rdfs:label "猛"@zh ; :count 3 .
 per:翦 a per:疑似误标 ; rdfs:label "翦"@zh ; :count 3 .
 per:缪王 a per:无国名谥号 ; rdfs:label "缪王"@zh ; :count 3 .
-per:秦侯 a per:无国名谥号 ; rdfs:label "秦侯"@zh ; :count 3 .
+per:秦侯 a per:诸侯 ; rdfs:label "秦侯"@zh ; :count 3 .
 per:今天子 a per:无国名谥号 ; rdfs:label "今天子"@zh ; :count 3 .
 per:奂 a per:疑似误标 ; rdfs:label "奂"@zh ; :count 3 .
 per:心 a per:疑似误标 ; rdfs:label "心"@zh ; :count 3 .
@@ -2012,7 +2012,7 @@ per:葛绎侯 a per:疑似误标 ; rdfs:label "葛绎侯"@zh ; :count 3 .
 per:案道侯 a per:疑似误标 ; rdfs:label "案道侯"@zh ; :count 3 .
 per:扶阳侯 a per:疑似误标 ; rdfs:label "扶阳侯"@zh ; :count 3 .
 per:虞公 a per:吴国 ; rdfs:label "虞公"@zh ; :count 3 .
-per:崔 a per:疑似误标 ; rdfs:label "崔"@zh ; :count 3 .
+per:崔 a per:春秋 ; rdfs:label "崔"@zh ; :count 3 .
 per:封 a per:疑似误标 ; rdfs:label "封"@zh ; :count 3 .
 per:同 a per:疑似误标 ; rdfs:label "同"@zh ; :count 3 .
 per:恶 a per:疑似误标 ; rdfs:label "恶"@zh ; :count 3 .
@@ -2023,7 +2023,7 @@ per:毁 a per:疑似误标 ; rdfs:label "毁"@zh ; :count 3 .
 per:游 a per:疑似误标 ; rdfs:label "游"@zh ; :count 3 .
 per:推 a per:疑似误标 ; rdfs:label "推"@zh ; :count 3 .
 per:据 a per:疑似误标 ; rdfs:label "据"@zh ; :count 3 .
-per:智 a per:疑似误标 ; rdfs:label "智"@zh ; :count 3 .
+per:智 a per:春秋 ; rdfs:label "智"@zh ; :count 3 .
 per:恽 a per:疑似误标 ; rdfs:label "恽"@zh ; :count 3 .
 per:比 a per:疑似误标 ; rdfs:label "比"@zh ; :count 3 .
 per:知 a per:疑似误标 ; rdfs:label "知"@zh ; :count 3 .
@@ -2084,22 +2084,22 @@ per:共工 a per:五帝时代 ; rdfs:label "共工"@zh ; :count 6 .
 per:风后 a per:五帝时代 ; rdfs:label "风后"@zh ; :count 3 .
 per:八元 a per:五帝时代 ; rdfs:label "八元"@zh ; :count 2 .
 per:八恺 a per:五帝时代 ; rdfs:label "八恺"@zh ; :count 2 .
-per:奄息 a per:五帝时代 ; rdfs:label "奄息"@zh ; :count 2 .
+per:奄息 a per:秦国臣子 ; rdfs:label "奄息"@zh ; :count 2 .
 per:熊罴 a per:五帝时代 ; rdfs:label "熊罴"@zh ; :count 2 .
 per:硃虎 a per:五帝时代 ; rdfs:label "硃虎"@zh ; :count 2 .
 per:羿 a per:五帝时代 ; rdfs:label "羿"@zh ; :count 2 .
 per:臣扈 a per:五帝时代 ; rdfs:label "臣扈"@zh ; :count 2 .
-per:针虎 a per:五帝时代 ; rdfs:label "针虎"@zh ; :count 2 .
+per:针虎 a per:秦国臣子 ; rdfs:label "针虎"@zh ; :count 2 .
 per:陆终 a per:五帝时代 ; rdfs:label "陆终"@zh ; :count 2 .
 per:青阳 a per:五帝时代 ; rdfs:label "青阳"@zh ; :count 2 .
 per:驩兜 a per:五帝时代 ; rdfs:label "驩兜"@zh ; :count 2 .
-per:仲行 a per:五帝时代 ; rdfs:label "仲行"@zh ; :count 1 .
+per:仲行 a per:秦国臣子 ; rdfs:label "仲行"@zh ; :count 1 .
 per:力牧 a per:五帝时代 ; rdfs:label "力牧"@zh ; :count 1 .
 per:大鸿 a per:五帝时代 ; rdfs:label "大鸿"@zh ; :count 1 .
 per:祝融 a per:五帝时代 ; rdfs:label "祝融"@zh ; :count 1 .
 
 # 佞幸 (16)
-per:商纣王 a per:佞幸 ; rdfs:label "商纣王"@zh ; :count 15 .
+per:商纣王 a per:帝王 ; rdfs:label "商纣王"@zh ; :count 15 .
 per:桑距 a per:佞幸 ; rdfs:label "桑距"@zh ; :count 4 .
 per:齐侍医遂 a per:佞幸 ; rdfs:label "齐侍医遂"@zh ; :count 4 .
 per:江充 a per:佞幸 ; rdfs:label "江充"@zh ; :count 3 .
@@ -2398,7 +2398,7 @@ per:宰我 a per:孔门弟子 ; rdfs:label "宰我"@zh ; :count 4 .
 per:有若 a per:孔门弟子 ; rdfs:label "有若"@zh ; :count 4 .
 per:樊迟 a per:孔门弟子 ; rdfs:label "樊迟"@zh ; :count 3 .
 per:言偃 a per:孔门弟子 ; rdfs:label "言偃"@zh ; :count 3 .
-per:越石父 a per:孔门弟子 ; rdfs:label "越石父"@zh ; :count 3 .
+per:越石父 a per:春秋 ; rdfs:label "越石父"@zh ; :count 3 .
 per:颜路 a per:孔门弟子 ; rdfs:label "颜路"@zh ; :count 3 .
 per:鲋 a per:孔门弟子 ; rdfs:label "鲋"@zh ; :count 3 .
 per:伯牛 a per:孔门弟子 ; rdfs:label "伯牛"@zh ; :count 2 .
@@ -2995,7 +2995,7 @@ per:齐张丑 a per:春秋 ; rdfs:label "齐张丑"@zh ; :count 1 .
 per:齐隰朋 a per:春秋 ; rdfs:label "齐隰朋"@zh ; :count 1 .
 
 # 朝鲜 (1)
-per:公孙遂 a per:朝鲜 ; rdfs:label "公孙遂"@zh ; :count 7 .
+per:公孙遂 a per:武帝朝臣 ; rdfs:label "公孙遂"@zh ; :count 7 .
 
 # 楚汉 (23)
 per:周兰 a per:楚汉 ; rdfs:label "周兰"@zh ; :count 5 .
@@ -3231,7 +3231,7 @@ per:黄同 a per:汉中后 ; rdfs:label "黄同"@zh ; :count 1 .
 # 汉儒 (8)
 per:司马谈 a per:汉儒 ; rdfs:label "司马谈"@zh ; :count 8 .
 per:狄山 a per:汉儒 ; rdfs:label "狄山"@zh ; :count 6 .
-per:吕雉 a per:汉儒 ; rdfs:label "吕雉"@zh ; :count 5 .
+per:吕雉 a per:汉后妃 ; rdfs:label "吕雉"@zh ; :count 5 .
 per:徐延 a per:汉儒 ; rdfs:label "徐延"@zh ; :count 3 .
 per:徐襄 a per:汉儒 ; rdfs:label "徐襄"@zh ; :count 3 .
 per:石申 a per:汉儒 ; rdfs:label "石申"@zh ; :count 3 .
@@ -4009,3 +4009,4 @@ per:梁惠王 a per:魏国 ; rdfs:label "梁惠王"@zh ; :count 19 .
 per:魏襄王 a per:魏国 ; rdfs:label "魏襄王"@zh ; :count 8 .
 per:魏景湣王 a per:魏国 ; rdfs:label "魏景湣王"@zh ; :count 4 .
 per:秦灵公 a per:魏国 ; rdfs:label "秦灵公"@zh ; :count 3 .
+per:周王季 a per:帝王 ; rdfs:label "周王季"@zh ; :count 1 .
