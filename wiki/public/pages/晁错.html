@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晁错 · 史记 Wiki</title>
+<style>
+:root {
+  --fg: #1a1a1a;
+  --fg-muted: #666;
+  --bg: #fafaf7;
+  --bg-box: #f0ece0;
+  --accent: #7a1f1f;
+  --link: #1a5490;
+  --link-broken: #c44;
+  --border: #d8d2bf;
+  --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  --sans: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--serif);
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.75;
+  font-size: 17px;
+}
+.topnav {
+  padding: .6em 1.2em;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--sans);
+  font-size: 14px;
+}
+.topnav a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.topnav .crumb { margin-left: 1em; color: var(--fg-muted); }
+
+.page {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 0 1.2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+@media (min-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr) 260px; }
+  .page > article { grid-column: 1; grid-row: 1; }
+  .page > aside.infobox { grid-column: 2; grid-row: 1; }
+}
+
+article h1 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-bottom: .3em;
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
+}
+article h2 {
+  font-size: 1.35em;
+  margin-top: 1.8em;
+  padding-bottom: .2em;
+  border-bottom: 1px solid var(--border);
+}
+article h3 {
+  font-size: 1.1em;
+  margin-top: 1.4em;
+  color: var(--accent);
+}
+article p { margin: .7em 0; }
+article ul, article ol { padding-left: 1.4em; }
+article li { margin: .3em 0; }
+article blockquote {
+  margin: 1em 0;
+  padding: .6em 1em;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-box);
+  color: var(--fg-muted);
+  font-size: .95em;
+}
+article table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: .93em;
+}
+article th, article td {
+  padding: .35em .8em;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+article th { background: var(--bg-box); font-weight: 600; }
+article hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+article em { color: var(--fg-muted); font-style: normal; }
+
+aside.infobox {
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1em;
+  font-size: .9em;
+  align-self: start;
+}
+aside.infobox h2 {
+  margin: 0 0 .6em 0;
+  font-size: 1.1em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid var(--border);
+  color: var(--accent);
+}
+aside.infobox table { width: 100%; border: none; margin: 0; }
+aside.infobox th, aside.infobox td {
+  border: none;
+  padding: .25em .3em;
+  vertical-align: top;
+  background: transparent;
+}
+aside.infobox th { color: var(--fg-muted); font-weight: 500; width: 4.5em; }
+
+aside.infobox.inline {
+  float: right;
+  clear: right;
+  margin: 0 0 1.2em 1.5em;
+  width: 240px;
+  font-size: .88em;
+}
+aside.infobox.inline h2 { font-size: 1em; }
+
+.wikilink.resolved { color: var(--link); text-decoration: none; }
+.wikilink.resolved:hover { text-decoration: underline; }
+.wikilink.self { color: var(--fg); font-weight: 600; text-decoration: none; cursor: default; }
+.wikilink.broken {
+  color: var(--link-broken);
+  text-decoration: underline dashed;
+  cursor: help;
+}
+
+a.pn-citation {
+  color: var(--fg-muted);
+  font-size: .88em;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--fg-muted);
+}
+a.pn-citation:hover {
+  color: var(--link);
+  border-bottom-color: var(--link);
+}
+
+footer {
+  max-width: 900px;
+  margin: 3em auto 2em;
+  padding: 1em 1.2em;
+  color: var(--fg-muted);
+  font-family: var(--sans);
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+}
+footer code { background: var(--bg-box); padding: 1px 4px; border-radius: 2px; }
+footer .broken-list { margin-top: .6em; }
+footer .broken-list summary { cursor: pointer; color: var(--link-broken); }
+footer .broken-list code { color: var(--link-broken); }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="index.html">史记 Wiki</a>
+  <span class="crumb">人名 / 晁错</span>
+</nav>
+<main class="page">
+  <aside class="infobox"><h2>晁错</h2><table><tr><th>类型</th><td>人物</td></tr><tr><th>生</th><td>前 200</td></tr><tr><th>卒</th><td>前 154</td></tr><tr><th>标签</th><td>汉朝 · 文景之治 · 谏臣 · 削藩 · 七国之乱</td></tr><tr><th>别名</th><td>晁御史</td></tr></table></aside>
+  <article>
+<h1>晁错</h1>
+<p><a class="wikilink self" href="晁错.html">晁错</a>（约前 200 — 前 154），颍川（今河南禹州）人，
+汉文帝、景帝两朝<strong>最重要的政策谋臣</strong>，号&quot;<strong>智囊</strong>&quot;。
+上《削藩策》主张削减诸侯国势力，引发<strong>七国之乱</strong>；
+<a class="wikilink broken" data-target="汉景帝" title="未解析: 汉景帝">汉景帝</a>为平叛而将其<strong>腰斩于东市</strong>（衣朝服，未及辩解）——
+功过之争延续千年，司马迁惋惜其擅权变法而不能自保。</p>
+<p>《史记》专传见<a class="wikilink broken" data-target="101_袁盎晁错列传" title="未解析: 101_袁盎晁错列传">101 袁盎晁错列传</a>（51 次，12 篇）。</p>
+<hr />
+<h2>生平</h2>
+<h3>学尚书于伏生 · 智囊得名</h3>
+<p>文帝时，晁错奉命赴济南向年逾九十的经学家<strong>伏生</strong>学习《尚书》，
+归后详述，颇得文帝赏识。</p>
+<p>以太子（景帝）家令身份进谏，所言切中要害，太子呼为&quot;<strong>智囊</strong>&quot;：</p>
+<blockquote>
+<p>以其辩得幸太子，太子家号曰&quot;智囊&quot;。（<a class="pn-citation" href="https://baojie.github.io/shiji-kb/chapters/101_%E8%A2%81%E7%9B%8E%E6%99%81%E9%94%99%E5%88%97%E4%BC%A0.html#pn-118" target="_blank" title="101-118 原文">101-118</a>）</p>
+</blockquote>
+<blockquote>
+<p>数上书孝文时，言削诸侯事，及法令可更定者。（<a class="pn-citation" href="https://baojie.github.io/shiji-kb/chapters/101_%E8%A2%81%E7%9B%8E%E6%99%81%E9%94%99%E5%88%97%E4%BC%A0.html#pn-119" target="_blank" title="101-119 原文">101-119</a>）</p>
+</blockquote>
+<h3>《论贵粟疏》与《守边劝农疏》</h3>
+<p>文帝时，晁错上《论贵粟疏》：提倡重农抑商，以粮食换取爵位——
+&quot;使天下入粟于边，以受爵免罪，不过三岁，塞下之粟必多矣&quot;（<a class="pn-citation" href="https://baojie.github.io/shiji-kb/chapters/101_%E8%A2%81%E7%9B%8E%E6%99%81%E9%94%99%E5%88%97%E4%BC%A0.html#pn-13" target="_blank" title="101-013 原文">101-013</a>）。</p>
+<p>又上《守边劝农疏》，建议移民实边，屯田养兵，减轻长途运粮之苦。
+文帝采纳，为汉代边防政策奠定基础。</p>
+<h3>《削藩策》· 引七国之乱（前 154）</h3>
+<p>景帝即位，晁错为御史大夫，上削藩策——其父来劝，晁错曰：</p>
+<blockquote>
+<p>&quot;固也。不如此，天子不尊，宗庙不安。&quot;错父曰：&quot;刘氏安矣，而晁氏危矣，吾去公归矣！&quot;遂饮药死，曰：&quot;吾不忍见祸及吾身。&quot;死十馀日，吴楚七国果反，以诛错为名。（<a class="pn-citation" href="https://baojie.github.io/shiji-kb/chapters/101_%E8%A2%81%E7%9B%8E%E6%99%81%E9%94%99%E5%88%97%E4%BC%A0.html#pn-20" target="_blank" title="101-020 原文">101-020</a>）</p>
+</blockquote>
+<p>景帝从之，先后削楚王、赵王、胶西王封地。
+<strong>吴王刘濞</strong>联合六国，以&quot;清君侧，诛晁错&quot;为旗号，七国之乱爆发。</p>
+<p>晁错建议景帝<strong>亲征</strong>，自留守京师；景帝未从，亦无明确方案应对。</p>
+<h3>腰斩东市（前 154）</h3>
+<p><a class="wikilink broken" data-target="袁盎" title="未解析: 袁盎">袁盎</a>入见景帝，力言斩晁错可平乱。景帝默然，遂下令：</p>
+<blockquote>
+<p>着晁错<strong>朝服</strong>，骗至东市，<strong>腰斩</strong>——
+晁错死时甚至不知为何被杀。</p>
+</blockquote>
+<p>然诸侯并未因此退兵，七国之乱仍用三月方平。
+晁错之死成为政治牺牲品的历史符号——</p>
+<p>太史公曰：</p>
+<blockquote>
+<p>晁错为家令时，数言事不用；後擅权，多所变更。诸侯发难，不急匡救，欲报私雠，反以亡躯。语曰&quot;变古乱常，不死则亡&quot;，岂错等谓邪！（<a class="pn-citation" href="https://baojie.github.io/shiji-kb/chapters/101_%E8%A2%81%E7%9B%8E%E6%99%81%E9%94%99%E5%88%97%E4%BC%A0.html#pn-157" target="_blank" title="101-157 原文">101-157</a>）</p>
+</blockquote>
+<hr />
+<h2>对照表</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>籍贯</td>
+<td>颍川（今河南禹州）</td>
+</tr>
+<tr>
+<td>生年</td>
+<td>约前 200 年</td>
+</tr>
+<tr>
+<td>卒年</td>
+<td>前 154 年（腰斩）</td>
+</tr>
+<tr>
+<td>最高职</td>
+<td>御史大夫</td>
+</tr>
+<tr>
+<td>关键政策</td>
+<td>削藩策、论贵粟疏、守边劝农疏</td>
+</tr>
+<tr>
+<td>死因</td>
+<td>景帝以其谢七国，腰斩于东市</td>
+</tr>
+<tr>
+<td>史记出现</td>
+<td>51 次 / 12 篇</td>
+</tr>
+<tr>
+<td>专传</td>
+<td><a class="wikilink broken" data-target="101_袁盎晁错列传" title="未解析: 101_袁盎晁错列传">101 袁盎晁错列传</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>典故与成语</h2>
+<ul>
+<li><strong>智囊</strong> — 太子对晁错的称呼，后泛指谋士</li>
+<li><strong>腰斩东市</strong> — 身着朝服被突然处决，成为政治牺牲的典故</li>
+<li><strong>削之亦反，不削亦反</strong> — 晁错对藩国问题的精辟判断</li>
+</ul>
+<hr />
+<h2>相关章节</h2>
+<ul>
+<li><a class="wikilink broken" data-target="101_袁盎晁错列传" title="未解析: 101_袁盎晁错列传">101 袁盎晁错列传</a>（与袁盎并传，有宿怨）</li>
+<li><a class="wikilink broken" data-target="106_吴王濞列传" title="未解析: 106_吴王濞列传">106 吴王濞列传</a>（七国之乱始末）</li>
+<li><a class="wikilink broken" data-target="011_孝景本纪" title="未解析: 011_孝景本纪">011 孝景本纪</a>（景帝处决晁错）</li>
+</ul>
+<h2>相关人物</h2>
+<ul>
+<li><a class="wikilink broken" data-target="汉景帝" title="未解析: 汉景帝">汉景帝</a>（君主，最终下令杀之）</li>
+<li><a class="wikilink broken" data-target="袁盎" title="未解析: 袁盎">袁盎</a>（政敌，建议杀晁错）</li>
+<li><a class="wikilink broken" data-target="吴王濞" title="未解析: 吴王濞">吴王濞</a>（七国之乱主谋）</li>
+</ul>
+<hr />
+<p><em>外部索引</em>: <a href="../../docs/entities/person.html#%E6%99%81%E9%94%99">person.html#晁错</a></p>
+
+  </article>
+</main>
+<footer>
+  <small>
+    源文件: <code>wiki/public/pages/晁错.md</code> ·
+    生成时间: 2026-04-23 07:05
+    <details class="broken-list"><summary>断链 6 处</summary><code>011_孝景本纪</code><code>101_袁盎晁错列传</code><code>106_吴王濞列传</code><code>吴王濞</code><code>汉景帝</code><code>袁盎</code></details>
+  </small>
+</footer>
+</body>
+</html>

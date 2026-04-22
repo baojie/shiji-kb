@@ -82,3 +82,197 @@
 
 ### bot-lint 待审 (2026-04-23)
 - [x] `晁错` L34 （[[101_袁盎晁错列传|101-018]]）→ 拆为 101-118 + 101-119
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `二世皇帝` L31 （006-083）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `勾践` L44 （[[041_越王句践世家|041-012]]）
+ → PN 21 (conf=0.63, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `卫灵公` L48 （047-024）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `吴王阖闾` L64 （031-032）
+ → PN 30.2 (conf=0.79, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `夫差` L47 （[[041_越王句践世家|041-009]]）
+ → PN 17 (conf=0.79, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `姬旦` L39 （033-002）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `姬旦` L60 （033-005意旨）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `宋义` L49 （007-015）
+ → PN 35.2 (conf=0.75, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `平原君` L42 （[[076_平原君虞卿列传|076-006]]）
+ → PN 5 (conf=0.94, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `张仪` L32 （070-003）
+ → PN 2 (conf=0.68, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `张耳` L63 （[[089_张耳陈馀列传|089-030]]）
+ → PN 29 (conf=0.76, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `彭越` L60 （汉王）与韩信、彭越期会击楚……乃皆来。"*（008-063）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `扶苏` L30 （[[006_秦始皇本纪|006-041]]）
+ → PN 72.1 (conf=0.76, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `晋平公` L50 （024-004）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `晋悼公` L38 （039-118）
+ → PN 117 (conf=0.57, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `李斯` L66 （087-006）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `李斯` L87 （087-023）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `樊哙` L46 （[[007_项羽本纪|007-018]]）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `毛遂` L54 （[[076_平原君虞卿列传|076-006]]）
+ → PN 5 (conf=0.84, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `汉文帝` L40 （010-001）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `王离` L54 （007-030）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `田单` L51 （082-006）
+ → PN 6.3 (conf=0.67, missing_pn)
+- [ ] `田单` L73 （082-009）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `田常` L33 （046-016）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `田常` L55 （046-017）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `秦始皇` L71 （006-015）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `秦子婴` L65 （006-104）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `箕子` L56 （038-010）
+ → PN 9 (conf=0.91, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `聂政` L48 （[[086_刺客列传|086-019]]）
+ → PN 22 (conf=0.56, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `范增` L36 （007-009）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `范增` L46 （007-025）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `范增` L66 （007-049）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `荆轲` L48 （[[086_刺客列传|086-039]]）
+ → PN 56 (conf=0.59, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `蒙毅` L45 （[[088_蒙恬列传|088-010]]）
+ → PN 8 (conf=0.59, quote_mismatch)
+- [ ] `蒙毅` L53 （[[088_蒙恬列传|088-012]]）
+ → PN 10 (conf=0.76, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `虞姬` L30 （[[007_项羽本纪|007-040]]）
+ → PN 168.2 (conf=0.48, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `赵括` L35 （081-017）
+ → PN 25.3 (conf=0.64, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `陆贾` L40 （097-011）
+ → PN 10 (conf=0.64, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `陈馀` L42 （089-015）
+ → PN 14 (conf=0.56, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `项梁` L41 （007-003） → PN 5.2 (conf=0.67, missing_pn)
+- [ ] `项梁` L51 （007-005）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `项梁` L69 （007-009）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `项梁` L78 （007-013）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `高渐离` L37 （[[086_刺客列传|086-037]]）
+ → PN 53 (conf=0.55, quote_mismatch)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `鲁仲连` L38 （083-005）
+ → PN 4.3 (conf=0.76, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `鲁哀公` L43 （047-044）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `齐威王` L37 （046-006）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `齐简公` L47 （046-033）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `齐简公` L57 （047-039）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `齐简公` L62 （047-039）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `李斯` L66 （087-006）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `李斯` L87 （087-023）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `秦始皇` L71 （006-015）
+ → PN ? (conf=0.00, missing_pn)
+
+### bot-lint 待审 (2026-04-23)
+- [ ] `项梁` L41 （007-003） → PN 5.2 (conf=0.67, missing_pn)
+- [ ] `项梁` L51 （007-005）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `项梁` L69 （007-009）
+ → PN ? (conf=0.00, missing_pn)
+- [ ] `项梁` L78 （007-013）
+ → PN ? (conf=0.00, missing_pn)
