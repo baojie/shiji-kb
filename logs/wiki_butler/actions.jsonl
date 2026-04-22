@@ -234,3 +234,17 @@
 {"ts":"2026-04-22T10:01:00Z","mode":"trail","action":"premium-page","target":"wiki/public/pages/秦始皇.md","source":"chapter_md/006 + kg/events","rationale":"第 5 精品页: 千古一帝, 帝制奠基者","diff_lines":null,"verdict":"accept","revision_recorded":true,"commit":"pending"}
 {"ts":"2026-04-22T10:02:00Z","mode":"trail","action":"premium-page","target":"wiki/public/pages/韩信.md","source":"chapter_md/092 + kg/events","rationale":"第 6 精品页: 兵仙, 悲剧命运, 成语集群最密","diff_lines":null,"verdict":"accept","revision_recorded":true,"commit":"pending"}
 {"ts":"2026-04-22T10:03:00Z","mode":"trail","action":"premium-page","target":"wiki/public/pages/张良.md","source":"chapter_md/055 + kg/events","rationale":"第 7 精品页: 汉初三杰之首, 圯上授书神授, 功成身退","diff_lines":null,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-23T01:05:42","action":"compute_knowledge_init","K":13336.34,"pages":229,"featured":10,"link_hit_rate":0.208,"revisions":1307,"note":"v8 引入知识量度量"}
+{"ts":"2026-04-23T01:05:42","action":"create_premium_page","pid":"巨鹿之战","type":"event","bytes":3517,"rev":"20260423-010542"}
+{"ts":"2026-04-23T01:10:00","action":"reflection_v8","file":"logs/wiki_butler/reflections/2026-04-23-v8-knowledge-metric.md","proposals":["23:batch-chapter-stubs","24:home-k-dashboard","25:k-timeline-chart"]}
+{"ts":"2026-04-23T01:20:00","action":"batch_chapter_stubs","proposal":23,"created":130,"K_before":13336.34,"K_after":13717.17,"delta":380.83,"link_hit_rate_before":0.208,"link_hit_rate_after":0.812}
+{"ts":"2026-04-23T01:11:33","action":"create_premium_page","pid":"白登之围","type":"event","bytes":3573,"rev":"20260423-011133","K_after":13796.8}
+{"ts":"2026-04-23T01:15:00","action":"home_k_dashboard","proposal":24,"files":["wiki/public/js/renderer.js","wiki/public/css/main.css","wiki/public/data/knowledge_latest.json"]}
+{"ts":"2026-04-23T01:24:07","action":"expand_premium_page","pid":"陈平","type":"person","bytes":3556,"rev":"20260423-012207","note":"六奇计·分肉甚均·宰相之论"}
+{"ts":"2026-04-23T01:24:07","action":"expand_premium_page","pid":"萧何","type":"person","bytes":3336,"rev":"20260423-012407","note":"月下追韩信·萧规曹随·论功第一"}
+{"ts":"2026-04-23T01:24:07","action":"integrate_bootstrap_k","file":"wiki/scripts/butler/bootstrap.sh","K_after":13906.51,"featured":13}
+{"ts":"2026-04-23T01:27:05","action":"expand_premium_pages","pids":["周文王","晋文公","黄帝"],"featured_before":13,"featured_after":16,"K":14040.56,"note":"三篇历史早期人物扩写+别名修复"}
+{"ts":"2026-04-23T01:27:05","action":"alias_conflict_reduction","before":73,"after":34,"fixes":["鲁桓公移除桓公","城阳惠王移除刘武","张汤移除张廷尉","build_registry单字过滤"]}
+{"ts":"2026-04-23T01:32:53","action":"expand_premium_pages","pids":["项梁","赵高","秦缪公"],"K_after":14135.3,"featured":19,"note":"项梁奠基·赵高指鹿为马·秦穆公五羖大夫"}
+{"ts":"2026-04-23T01:36:40","action":"expand_premium_pages","pids":["管仲","伍子胥","廉颇"],"K_after":14218.02,"featured":22,"note":"管鲍之交·鞭尸三百·负荆请罪"}
+{"ts":"2026-04-23T01:38:00","action":"implement_proposal_25","note":"K timeline sparkline SVG in k-panel, public/data/knowledge_timeline.jsonl exposed"}

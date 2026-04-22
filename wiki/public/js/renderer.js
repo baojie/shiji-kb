@@ -184,8 +184,68 @@ export function renderHome(core) {
       <nav class="home-links">
         <a href="#?all" class="home-link">全部 ${ids.length} 页 →</a>
         <a href="#?recent" class="home-link">最近修订 →</a>
+        <a href="#${encodeURIComponent('Special:Random')}" class="home-link">随机页 →</a>
       </nav>
+
+      <div id="k-panel" class="k-panel"><span class="muted">正在加载知识量...</span></div>
     </div>`;
+
+  // 知识量仪表板：latest + timeline sparkline
+  Promise.all([
+    fetch('data/knowledge_latest.json').then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch('data/knowledge_timeline.jsonl').then(r => r.ok ? r.text() : '').catch(() => ''),
+  ]).then(([k, tlText]) => {
+    if (!k) { document.getElementById('k-panel').innerHTML = ''; return; }
+    const panel = document.getElementById('k-panel');
+    if (!panel) return;
+    const pct = (k.link_hit_rate * 100).toFixed(1);
+    const kb  = (k.total_bytes / 1024).toFixed(0);
+
+    // sparkline from timeline
+    const pts = tlText.trim().split('\n')
+      .map(l => { try { return JSON.parse(l); } catch { return null; } })
+      .filter(d => d && d.K > 100)        // filter bad K=0 entries
+      .slice(-30);                         // last 30 snapshots
+    let sparkSvg = '';
+    if (pts.length >= 2) {
+      const W = 120, H = 28, pad = 2;
+      const ks = pts.map(p => p.K);
+      const mn = Math.min(...ks), mx = Math.max(...ks);
+      const range = mx - mn || 1;
+      const coords = pts.map((p, i) => {
+        const x = pad + (i / (pts.length - 1)) * (W - pad * 2);
+        const y = H - pad - ((p.K - mn) / range) * (H - pad * 2);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(' ');
+      sparkSvg = `<svg class="k-spark" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
+        aria-label="知识量增长曲线">
+        <polyline points="${coords}" fill="none" stroke="var(--accent)" stroke-width="1.5"
+          stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="${+coords.split(' ').at(-1).split(',')[0]}"
+                cy="${+coords.split(' ').at(-1).split(',')[1]}"
+                r="2.5" fill="var(--accent)"/>
+      </svg>`;
+    }
+
+    panel.innerHTML = `
+      <h3>📊 知识量 <span class="k-value">${k.K.toLocaleString()}</span>
+        ${sparkSvg}
+      </h3>
+      <div class="k-row">
+        <span>${k.page_count} 页</span>
+        <span>${k.featured_count} 精品</span>
+        <span>链接命中 ${pct}%</span>
+        <span>${kb} KB</span>
+        <span>${k.total_revisions} 修订</span>
+      </div>
+      <div class="k-row k-top">
+        TOP: ${k.top10_pages.slice(0, 5).map(t =>
+          `<a href="#${encodeURIComponent(t.pid)}">${t.pid}</a>(${t.k})`
+        ).join(' · ')}
+      </div>
+      <div class="k-row muted">快照: ${k.generated}</div>
+    `;
+  }).catch(() => { const p = document.getElementById('k-panel'); if (p) p.innerHTML = ''; });
 
   document.body.classList.add('is-home');
   const ib = document.getElementById('infobox');

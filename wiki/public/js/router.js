@@ -74,6 +74,17 @@ async function route(core) {
     return;
   }
 
+  // Special: 系统页路由
+  if (raw === 'Special:Random') {
+    const pids = Object.keys(core.registry.pages).filter(
+      p => !p.startsWith('Special:') && core.registry.pages[p].type !== 'chapter'
+    );
+    const randomPid = pids[Math.floor(Math.random() * pids.length)];
+    location.hash = encodeURIComponent(randomPid);
+    setStatus('');
+    return;
+  }
+
   const resolved = resolvePageId(raw, core.registry);
   if (!resolved) {
     renderNotFound(core, raw);

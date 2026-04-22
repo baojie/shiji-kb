@@ -35,6 +35,30 @@
 
 ---
 
+## P0 高优 (v8 反思新增)
+
+- [ ] 批量生成 130 章节 stub 页 (chapter type): `batch-chapter-stubs` [P0] [2026-04-23 v8]
+  - 预期: link_hit_rate 20.8% → 40%+, K +~4000
+  - 需同时给 compute_knowledge.py 增加 TYPE_WEIGHT["chapter"]=0.4
+- [ ] bootstrap.sh 末尾调用 compute_knowledge.py 自动打快照 [P0] [2026-04-23 v8]
+
+## P1 (v8 新增)
+
+- [ ] 精品页 白登之围 (event) [P1] [2026-04-23 v8]
+- [ ] 精品页 萧何 / 曹参 / 陈平 任选一 (person) [P1] [2026-04-23 v8]
+- [ ] 主页 footer 知识量仪表板 (提案 24) [P1] [2026-04-23 v8]
+- [ ] 收敛 7 个 alias_conflicts (惠公/景公/桓/桓公/简/襄公/襄王) [P1] [2026-04-23 v8]
+
+---
+
+## 已完成 (本轮 v8, 2026-04-23)
+
+- [x] `wiki/scripts/compute_knowledge.py` 知识量度量 K 首版
+- [x] 首个 K 快照: 13336.34 / 229 页 / 链接命中率 20.8%
+- [x] 精品页 巨鹿之战 (3.5 KB, 10 成语溯源)
+
+---
+
 ## P2 低优 (手动加入)
 
 （留给用户手动追加的低优任务）

@@ -598,3 +598,68 @@ footer code {
 }
 .rev-banner code { background: rgba(0,0,0,.06); padding: 1px 5px; border-radius: 2px; }
 .rev-banner a { color: var(--link); margin-left: .5em; }
+
+/* 知识量仪表板 (主页 footer, v8) */
+.k-panel {
+  margin-top: 2.5em;
+  padding: 1.1em 1.3em;
+  border-top: 2px solid var(--accent);
+  background: #fbfaf5;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.k-panel h3 {
+  margin: 0 0 .6em 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--fg-muted);
+}
+.k-panel .k-value {
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 700;
+  font-family: ui-monospace, monospace;
+  margin-left: .4em;
+}
+.k-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4em;
+  margin-bottom: .3em;
+}
+.k-row.k-top { gap: .5em; align-items: baseline; }
+.k-row.muted { font-size: 12px; color: var(--fg-muted); margin-top: .5em; }
+.k-row a { color: var(--link); text-decoration: none; }
+.k-row a:hover { text-decoration: underline; }
+
+/* Hero image (精品页可选) */
+.hero-image {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+.hero-image img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+.hero-image figcaption {
+  margin-top: .4em;
+  font-size: 13px;
+  color: var(--fg-muted);
+  font-family: var(--sans);
+  font-style: italic;
+}
+.hero-image .credit {
+  font-size: 12px;
+  opacity: .8;
+}
+
+/* K sparkline (提案 25) */
+.k-spark {
+  vertical-align: middle;
+  margin-left: .8em;
+  opacity: .85;
+}

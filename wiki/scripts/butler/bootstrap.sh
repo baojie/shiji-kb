@@ -65,6 +65,10 @@ cat >> "$LOG/actions.jsonl" <<JSONL
 {"ts":"$TS","mode":"observe","action":"bootstrap","target":"logs/wiki_butler/queue.md","rationale":"首次扫描填 queue","result":"accept","p0_count":$P0_COUNT,"p1_count":$P1_COUNT,"verdict":"accept","diff_lines":0}
 JSONL
 
+# 知识量快照
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+python "$SCRIPT_DIR/compute_knowledge.py" 2>&1 || true
+
 echo ""
 echo "=========================================="
 echo "  bootstrap 完成"
