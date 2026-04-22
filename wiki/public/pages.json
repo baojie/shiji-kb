@@ -4075,18 +4075,18 @@
         "本纪人物",
         "中兴"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/周宣王.md",
       "total_refs": 31,
       "total_chapters": 17,
-      "quality_score": 26,
+      "quality_score": 40,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 5,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "周康王": {
@@ -5443,20 +5443,21 @@
       "tags": [
         "春秋",
         "晋国",
-        "世家人物"
+        "世家人物",
+        "背信弃义"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/晋惠公.md",
       "total_refs": 20,
       "total_chapters": 7,
-      "quality_score": 26,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "晋成公": {
@@ -5748,12 +5749,12 @@
         "death": -190,
         "note": "约"
       },
-      "quality_score": 44,
+      "quality_score": 43,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
         "revs": 15,
-        "size": 7,
+        "size": 6,
         "manual": 5,
         "narrative": 8
       }
@@ -7064,25 +7065,28 @@
       "label": "秦惠王",
       "aliases": [
         "惠王",
-        "秦王"
+        "秦王",
+        "惠文王"
       ],
       "tags": [
         "战国",
         "秦国",
-        "世家人物"
+        "张仪",
+        "连横",
+        "伐蜀"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/秦惠王.md",
       "total_refs": 39,
       "total_chapters": 16,
-      "quality_score": 24,
+      "quality_score": 43,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 2,
-        "manual": 0,
-        "narrative": 0
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "秦文公": {
@@ -10319,6 +10323,7 @@
     "子楚": "秦庄襄王",
     "异人": "秦庄襄王",
     "秦惠王": "秦惠王",
+    "惠文王": "秦惠王",
     "秦文公": "秦文公",
     "秦昭襄王": "秦昭襄王",
     "秦昭王": "秦昭襄王",
@@ -10401,7 +10406,6 @@
     "赵丹": "赵孝成王",
     "赵王": "赵孝成王",
     "赵惠文王": "赵惠文王",
-    "惠文王": "赵惠文王",
     "赵何": "赵惠文王",
     "赵括": "赵括",
     "马服子": "赵括",
@@ -10539,5 +10543,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T05:41:55"
+  "generated": "2026-04-23T05:47:02"
 }
