@@ -4,7 +4,7 @@
 
 用法:
     python scripts/wiki/render_html.py <input.md> [<input.md> ...]
-    python scripts/wiki/render_html.py labs/prototypes/wiki_v0/*.md
+    python scripts/wiki/render_html.py wiki/pages/*.md
 
 功能:
     1. 解析 YAML frontmatter
