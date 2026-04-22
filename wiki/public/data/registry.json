@@ -3070,12 +3070,12 @@
       "path": "pages/伊尹.md",
       "total_refs": 22,
       "total_chapters": 12,
-      "quality_score": 42,
+      "quality_score": 43,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
         "revs": 15,
-        "size": 5,
+        "size": 6,
         "manual": 5,
         "narrative": 8
       }
@@ -4009,28 +4009,27 @@
       "type": "person",
       "label": "周厉王",
       "aliases": [
-        "厉",
-        "厉王",
         "姬胡",
-        "胡"
+        "厉王"
       ],
       "tags": [
         "西周",
-        "本纪人物",
-        "昏君"
+        "昏君",
+        "国人暴动",
+        "共和行政"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/周厉王.md",
       "total_refs": 42,
       "total_chapters": 21,
-      "quality_score": 27,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 2,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "周宣王": {
@@ -8053,29 +8052,28 @@
       "type": "person",
       "label": "赵简子",
       "aliases": [
-        "简",
-        "简主",
-        "简子",
-        "赵简",
-        "赵鞅"
+        "赵鞅",
+        "简主"
       ],
       "tags": [
         "春秋",
         "晋国",
-        "赵氏"
+        "赵氏",
+        "三家分晋前驱",
+        "扁鹊"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/赵简子.md",
       "total_refs": 50,
       "total_chapters": 15,
-      "quality_score": 27,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 2,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "赵胜": {
@@ -8382,15 +8380,16 @@
       "type": "person",
       "label": "陈豨",
       "aliases": [
-        "豨",
-        "陈"
+        "陈豨"
       ],
       "tags": [
         "汉朝",
         "反叛",
-        "武将"
+        "武将",
+        "韩信",
+        "刘邦"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/陈豨.md",
       "total_refs": 59,
       "total_chapters": 18,
@@ -8399,14 +8398,14 @@
         "death": -195,
         "note": "约"
       },
-      "quality_score": 27,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 2,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "陈馀": {
@@ -9799,8 +9798,8 @@
     "绛侯": "周勃",
     "绛侯周勃": "周勃",
     "周厉王": "周厉王",
-    "厉王": "周厉王",
     "姬胡": "周厉王",
+    "厉王": "周厉王",
     "周宣王": "周宣王",
     "姬静": "周宣王",
     "宣王": "周宣王",
@@ -10172,10 +10171,8 @@
     "赵王歇": "赵王歇",
     "赵歇": "赵王歇",
     "赵简子": "赵简子",
-    "简主": "赵简子",
-    "简子": "赵简子",
-    "赵简": "赵简子",
     "赵鞅": "赵简子",
+    "简主": "赵简子",
     "赵胜": "赵胜",
     "平原君": "赵胜",
     "赵衰": "赵衰",
@@ -10291,5 +10288,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T03:10:52"
+  "generated": "2026-04-23T03:13:36"
 }
