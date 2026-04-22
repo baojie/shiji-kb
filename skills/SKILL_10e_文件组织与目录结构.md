@@ -124,10 +124,11 @@ doc/
 **子目录示例**：
 ```
 labs/
-├── prototypes/       # 功能原型（HTML demo、UI试验等）
-├── research/         # 研究记录（方案对比、文献调研等）
-├── experiments/      # 实验性脚本与测试
-└── planning/         # 规划文档（设计草稿、待决策方案）
+├── prototypes/          # 功能原型（HTML demo、UI试验等）
+├── research/            # 研究记录（方案对比、文献调研等）
+├── experiments/         # 实验性脚本与测试
+├── planning/            # 规划文档（设计草稿、待决策方案）
+└── insight-inference/   # 基于 KG 的 insight 推理文章（样板、案例）
 ```
 
 **存放内容**：
@@ -136,11 +137,19 @@ labs/
 - 待评审的设计方案
 - 实验性算法或标注方案
 - 性能测试、A/B测试
+- KG 驱动的 insight 推理文章（以原文+三家注+汉书为依据的深度论证）
 
 **典型场景**：
 - "我在试验几种UI布局方案" → `labs/prototypes/`
 - "对比三种拼音标注算法" → `labs/experiments/`
 - "调研繁简转换工具" → `labs/research/`
+- "吕公为何嫁女给刘邦（基于 KG 的深度推理）" → `labs/insight-inference/`
+
+**⛔ 禁止目录 `labs/writing/`**：
+- 此目录**不存在**，也**不得新建**
+- 对外传播文章草稿一律走 `resources/draft/`
+- KG 驱动的 insight 推理文章走 `labs/insight-inference/`
+- 其他写作类任务请参照决策树（§3）归位，绝不要创建 `labs/writing/`
 
 **何时移出 `labs/`**：
 - 原型确定采用 → 移至 `docs/` 或项目主代码
@@ -290,7 +299,8 @@ archive/
 ├─ 是实验性工作？
 │  ├─ 功能原型 → labs/prototypes/
 │  ├─ 技术调研 → labs/research/
-│  └─ 实验性脚本 → labs/experiments/
+│  ├─ 实验性脚本 → labs/experiments/
+│  └─ KG 驱动的 insight 推理文章 → labs/insight-inference/
 │
 ├─ 是可复用脚本？
 │  └─ scripts/
@@ -321,10 +331,12 @@ archive/
 - **错误**：`scripts/test_pinyin.py`（一次性测试）
 - **纠正**：`labs/experiments/test_pinyin.py`
 
-### ❌ 错误4：技术文章草稿放在 `labs/writing/`
+### ❌ 错误4：任何文章放在 `labs/writing/`
 - **错误**：`labs/writing/2026-04-03_史记知识库介绍.md`
-- **纠正**：`resources/draft/2026-04-03_史记知识库介绍.md`
-- **原因**：`labs/` 用于技术实验，`resources/draft/` 用于对外传播内容
+- **错误**：`labs/writing/insight_reasoning_template_吕公嫁女.md`
+- **纠正（对外传播文章）**：`resources/draft/2026-04-03_史记知识库介绍.md`
+- **纠正（KG 驱动的 insight 推理）**：`labs/insight-inference/insight_reasoning_template_吕公嫁女.md`
+- **原因**：`labs/writing/` **不存在也不得新建**。对外传播走 `resources/draft/`，KG insight 推理走 `labs/insight-inference/`
 
 ### ❌ 错误5：内部技术文档放在 `docs/spec/`
 - **错误**：`docs/spec/智能分段功能_说明.md`
