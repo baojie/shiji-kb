@@ -362,6 +362,7 @@ body.is-home .page { grid-template-columns: 1fr; }
 .diff-sign {
   flex: 0 0 1.5em;
   color: var(--fg-muted);
+  -webkit-user-select: none;
   user-select: none;
   text-align: center;
 }

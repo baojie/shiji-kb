@@ -1,0 +1,47 @@
+{
+  "page": "季札",
+  "latest_rev_id": "20260422-182541-c7cf82",
+  "revision_count": 4,
+  "revisions": [
+    {
+      "rev_id": "20260422-182541-c7cf82",
+      "timestamp": "2026-04-22T18:25:41+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 严格正则匹配替代子串匹配 (bug-fix)",
+      "parent_rev": "20260422-181910-f04d93",
+      "content_hash": "sha256:c7cf827c5f99eb0b549ae575d4c8e616a2d025b5a5a087a8ef0f6fb9c66ce5ce",
+      "size": 925,
+      "content": "---\nid: 季札\ntype: person\nlabel: 季札\naliases: [季子, 延陵季子]\ncanonical_name: 季札\ntags: [春秋, 吴国, 贤臣]\nauto_generated: true\n---\n\n# 季札\n\n《史记》中出现 **15** 次, 分布于 **4** 篇。\n\n## 重点章节\n\n[[031_吴太伯世家|吴太伯世家]] (11) · [[086_刺客列传|刺客列传]] (2) · [[037_卫康叔世家|卫康叔世家]] (1) · [[014_十二诸侯年表|十二诸侯年表]] (1)\n\n## 生平大事 (自 kg 事件索引)\n\n- 二十五年 （公元前561年） · 寿梦卒诸樊立（吴）  [`031-007`]\n- 元年 （公元前560年） · 季札让国不受（吴）  [`031-008`]\n- 四年 （公元前544年） · 季札聘鲁观周乐（鲁）  [`031-009`]\n- 约公元前544年 · 季札出使诸国（齐、郑、卫、晋）  [`031-010`]\n- 约公元前544年 · 季札挂剑徐君冢（徐）  [`031-011`]\n- 四年 （公元前527年） · 季札逃位僚立（吴）  [`031-015`]\n"
+    },
+    {
+      "rev_id": "20260422-181910-f04d93",
+      "timestamp": "2026-04-22T18:19:10+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 季札",
+      "parent_rev": "20260422-181909-afa0ca",
+      "content_hash": "sha256:f04d933c5e70d6066e0ebb6a1887b20ce9544f58ef2aa5c5fc9b4091b005eeab",
+      "size": 994,
+      "content": "---\nid: 季札\ntype: person\nlabel: 季札\naliases: [季子, 延陵季子]\ncanonical_name: 季札\ntags: [春秋, 吴国, 贤臣]\nauto_generated: true\n---\n\n# 季札\n\n《史记》中出现 **15** 次, 分布于 **4** 篇。\n\n## 重点章节\n\n[[031_吴太伯世家|吴太伯世家]] (11) · [[086_刺客列传|刺客列传]] (2) · [[037_卫康叔世家|卫康叔世家]] (1) · [[014_十二诸侯年表|十二诸侯年表]] (1)\n\n<!-- stub: butler 自动生成, 待 enrich/narrate 动作补丰 -->\n\n## 生平大事 (自 kg 事件索引)\n\n- 二十五年 （公元前561年） · 寿梦卒诸樊立（吴）  [`031-007`]\n- 元年 （公元前560年） · 季札让国不受（吴）  [`031-008`]\n- 四年 （公元前544年） · 季札聘鲁观周乐（鲁）  [`031-009`]\n- 约公元前544年 · 季札出使诸国（齐、郑、卫、晋）  [`031-010`]\n- 约公元前544年 · 季札挂剑徐君冢（徐）  [`031-011`]\n- 四年 （公元前527年） · 季札逃位僚立（吴）  [`031-015`]\n"
+    },
+    {
+      "rev_id": "20260422-181909-afa0ca",
+      "timestamp": "2026-04-22T18:19:09+08:00",
+      "author": "butler",
+      "summary": "butler/add-tag: 季札",
+      "parent_rev": "20260422-181908-b2cfbb",
+      "content_hash": "sha256:afa0caf3c3d22cea77ed82f217a864f96ea2cc675bfec7cde219774c1311351b",
+      "size": 493,
+      "content": "---\nid: 季札\ntype: person\nlabel: 季札\naliases: [季子, 延陵季子]\ncanonical_name: 季札\ntags: [春秋, 吴国, 贤臣]\nauto_generated: true\n---\n\n# 季札\n\n《史记》中出现 **15** 次, 分布于 **4** 篇。\n\n## 重点章节\n\n[[031_吴太伯世家|吴太伯世家]] (11) · [[086_刺客列传|刺客列传]] (2) · [[037_卫康叔世家|卫康叔世家]] (1) · [[014_十二诸侯年表|十二诸侯年表]] (1)\n\n<!-- stub: butler 自动生成, 待 enrich/narrate 动作补丰 -->"
+    },
+    {
+      "rev_id": "20260422-181908-b2cfbb",
+      "timestamp": "2026-04-22T18:19:08+08:00",
+      "author": "butler",
+      "summary": "butler/create-stub: 季札",
+      "parent_rev": null,
+      "content_hash": "sha256:b2cfbb60b7e7efe269787e149c866d943c09d3a97331278e3f675c20fe3424b8",
+      "size": 471,
+      "content": "---\nid: 季札\ntype: person\nlabel: 季札\naliases: [季子, 延陵季子]\ncanonical_name: 季札\ntags: []\nauto_generated: true\n---\n\n# 季札\n\n《史记》中出现 **15** 次, 分布于 **4** 篇。\n\n## 重点章节\n\n[[031_吴太伯世家|吴太伯世家]] (11) · [[086_刺客列传|刺客列传]] (2) · [[037_卫康叔世家|卫康叔世家]] (1) · [[014_十二诸侯年表|十二诸侯年表]] (1)\n\n<!-- stub: butler 自动生成, 待 enrich/narrate 动作补丰 -->"
+    }
+  ]
+}

@@ -44,26 +44,42 @@ def parse_aliases(md_text):
     return []
 
 
-def extract_events(chapter_slug, person_names):
-    """从事件索引里抽该人物相关的事件"""
+def extract_events(chapter_slug, canonical, aliases):
+    """从事件索引里抽该人物相关的事件.
+
+    user-req-9 (2026-04-22): 严格匹配 〖@<name>〗 / 〖@<alias>|<canonical>〗,
+    不再裸串匹配. 避免 "桓" 匹到"三桓"、"齐桓公" 这类误伤.
+    """
     f = EVENTS_DIR / f'{chapter_slug}_事件索引.md'
     if not f.exists():
         return []
     text = f.read_text(encoding='utf-8')
+
+    # 构建严格正则: 匹配 〖@N〗 其中 N == canonical,
+    # 或 〖@X|canonical〗 其中消歧后 canonical 等于本人
+    # 或 〖@alias〗 其中 alias 是 **长度 >= 2** 的别名 (单字太宽)
+    patterns = []
+    # canonical 完整名
+    patterns.append(r'〖@' + re.escape(canonical) + r'(?:\|[^〗]+)?〗')
+    # 消歧到本人: 〖@X|canonical〗
+    patterns.append(r'〖@[^〗]+\|' + re.escape(canonical) + r'〗')
+    # 别名: 只用 >= 2 字, 防止 "桓" 这种单字误匹
+    for a in aliases:
+        if len(a) >= 2:
+            patterns.append(r'〖@' + re.escape(a) + r'(?:\|[^〗]+)?〗')
+    combined = re.compile('|'.join(patterns))
+
     events = []
     for line in text.splitlines():
         m = ROW_RE.match(line)
         if not m:
             continue
         ev_id, name, kind, when, where, people = (m.group(i) for i in range(1, 7))
-        # 检查 people 列含任一 person_name
-        for pn in person_names:
-            if pn and pn in people:
-                events.append({
-                    'id': ev_id, 'name': name.strip(),
-                    'time': when.strip(), 'where': where.strip(),
-                })
-                break
+        if combined.search(people):
+            events.append({
+                'id': ev_id, 'name': name.strip(),
+                'time': when.strip(), 'where': where.strip(),
+            })
     return events
 
 
@@ -120,7 +136,6 @@ def enrich_one(slug):
         return False, 'already has timeline'
 
     aliases = parse_aliases(text)
-    person_names = [slug] + aliases
 
     # 找 top chapter
     semantic = json.loads(SEMANTIC.read_text(encoding='utf-8'))
@@ -129,7 +144,7 @@ def enrich_one(slug):
         return False, 'no chapter data'
     top_chapter = e['chapters'][0]['chapter']
 
-    events = extract_events(top_chapter, person_names)
+    events = extract_events(top_chapter, slug, aliases)
     if not events:
         return False, f'no events in {top_chapter}'
 

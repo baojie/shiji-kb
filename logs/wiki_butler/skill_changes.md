@@ -26,3 +26,8 @@
 2026-04-22  w5-v5-16    link-external-docs  批量给 151 页加 docs/entities/person.html 索引链 (topic 页 rollback). [reflections/2026-04-22-v5.md]
 2026-04-22  user-req-5  enrich_timeline.py  strip_annotations: 清 〖TYPE value〗/⟦TYPE verb⟧ 保 value, clean_field 去括号噪音, 146 页 timeline 全量重写. [ad-hoc · user feedback]
 2026-04-22  user-req-6  history 存储升级  1159 小文件 → 166 (content inlined 到 per-page JSON). record_revision.py 不再写 rev .md. renderer.js renderRevision 从 JSON content 字段取. 文件数 -86%, 体积 -72%. [ad-hoc · user feedback]
+2026-04-22  user-req-7  record_revision.py + renderer.js  归档 index.json + renderRecent 穿透归档, 所有历史都能翻页看到. [ad-hoc · user feedback]
+2026-04-22  user-req-8  renderer.js + router.js + css  新 #?diff=<page>&rev=<id> 视图, LCS 行级 diff 展示. renderHistory/Revision 加 diff 入口. [ad-hoc · user feedback]
+2026-04-22  w5-v6-17    reflection_scan.py  新工具自动扫 alias_conflicts / duplicate_candidates / no-timeline / quality-bottom, W5 反思引用. [reflections/2026-04-22-v6.md]
+2026-04-22  w5-v6       CANONICAL_MERGE 扩  汉孝景帝/汉孝文帝/汉孝武帝/项籍/秦二世 纳入合并. 3 个重复 canonical 消失. [reflections/2026-04-22-v6.md]
+2026-04-22  bug-fix-v7  enrich_timeline.py  抽取用 〖@〗 严格正则, 单字别名禁用于匹配. 195 页 timeline 全量重写消除误伤. [reflections/2026-04-22-v7-bug.md · user 报告 鲁桓公]
