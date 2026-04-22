@@ -98,11 +98,23 @@ export async function renderPage(core, pid, meta, mdText) {
   if (h1) {
     const existing = h1.querySelector('.src-tab');
     if (existing) existing.remove();
+    const existingOrig = h1.querySelector('.orig-tab');
+    if (existingOrig) existingOrig.remove();
     const tab = document.createElement('a');
     tab.href = srcHref;
     tab.className = 'src-tab';
     tab.textContent = '查看源码';
     h1.appendChild(tab);
+    // 章节页额外注入"查看原文"链接，指向 GitHub Pages 渲染版
+    if (meta.type === 'chapter') {
+      const origTab = document.createElement('a');
+      origTab.href = `https://baojie.github.io/shiji-kb/chapters/${encodeURIComponent(pid)}.html`;
+      origTab.className = 'orig-tab';
+      origTab.textContent = '查看原文';
+      origTab.target = '_blank';
+      origTab.rel = 'noopener';
+      h1.appendChild(origTab);
+    }
   }
   // footer 保留原始文件链接（开发用）
   const srcSpan = document.getElementById('src-info');

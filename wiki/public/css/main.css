@@ -682,6 +682,22 @@ footer code {
   top: 4px;
 }
 .src-tab:hover { color: var(--accent); border-color: var(--accent); }
+.orig-tab {
+  float: right;
+  font-size: 13px;
+  font-weight: normal;
+  color: var(--fg-muted);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  padding: 2px 10px;
+  text-decoration: none;
+  background: var(--bg-box);
+  position: relative;
+  top: 4px;
+  margin-right: 6px;
+}
+.orig-tab:hover { color: #c0392b; border-color: #c0392b; }
 /* 专用源码页 */
 .src-view-title { margin-bottom: 0.2em; }
 .src-view-badge {
