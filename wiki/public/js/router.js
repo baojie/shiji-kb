@@ -1,7 +1,7 @@
 /* 哈希路由。 */
 
 import { resolvePageId } from './registry.js';
-import { renderPage, renderHome, renderNotFound } from './renderer.js';
+import { renderPage, renderHome, renderNotFound, renderCategory } from './renderer.js';
 import { setStatus, showFatal } from './util.js';
 
 export function setupRouter(core) {
@@ -10,8 +10,20 @@ export function setupRouter(core) {
 }
 
 async function route(core) {
-  let raw = decodeURIComponent(location.hash.slice(1) || '');
+  // 先取原始 hash (未解码), 便于区分 '?query' 和普通 slug
+  const rawHash = location.hash.slice(1) || '';
   setStatus('载入…');
+
+  // 分类页: #?type=<type> 或 #?tag=<tag>
+  if (rawHash.startsWith('?')) {
+    const params = new URLSearchParams(rawHash.slice(1));
+    const type = params.get('type');
+    const tag = params.get('tag');
+    if (type) { renderCategory(core, 'type', type); setStatus(''); return; }
+    if (tag) { renderCategory(core, 'tag', tag); setStatus(''); return; }
+  }
+
+  let raw = decodeURIComponent(rawHash);
 
   // Plugin hook: 自定义路由
   //   handler 返回 null  → 表示"已自行处理", 跳过默认路由

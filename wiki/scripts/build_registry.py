@@ -82,6 +82,7 @@ def main() -> int:
             "type": meta.get("type", ""),
             "label": meta.get("label", md.stem),
             "aliases": meta.get("aliases") or [],
+            "tags": meta.get("tags") or [],
             "path": md.relative_to(site_root).as_posix(),
         }
         pages[pid] = entry
@@ -98,6 +99,29 @@ def main() -> int:
     for key, first, dup in alias_conflicts:
         print(f"[warn] 别名冲突: '{key}' → 保留 {first}, 忽略 {dup}",
               file=sys.stderr)
+
+    # 若存在 wiki/data/semantic.json, 合并 total_refs / total_chapters / lifespan
+    # 给首页卡片与搜索结果用. 路径: site_root/../data/semantic.json
+    semantic_path = site_root.parent / "data" / "semantic.json"
+    enriched = 0
+    if semantic_path.exists():
+        try:
+            semantic = json.loads(semantic_path.read_text(encoding="utf-8"))
+            ents = semantic.get("entities", {})
+            for pid, entry in pages.items():
+                e = ents.get(pid)
+                if not e:
+                    continue
+                if e.get("total_refs") is not None:
+                    entry["total_refs"] = e["total_refs"]
+                if e.get("total_chapters") is not None:
+                    entry["total_chapters"] = e["total_chapters"]
+                if e.get("lifespan"):
+                    entry["lifespan"] = e["lifespan"]
+                enriched += 1
+            print(f"[enrich] {enriched} 页注入 semantic.json 数据")
+        except Exception as exc:
+            print(f"[warn] semantic.json 合并失败: {exc}", file=sys.stderr)
 
     out.write_text(json.dumps({
         "pages": pages,

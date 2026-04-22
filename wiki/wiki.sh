@@ -20,8 +20,11 @@ set -euo pipefail
 PORT="${1:-8000}"
 WIKI_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PUBLIC_DIR="$WIKI_ROOT/public"
+DATA_DIR="$WIKI_ROOT/data"
 REGISTRY_SCRIPT="$WIKI_ROOT/scripts/build_registry.py"
 SERVE_SCRIPT="$WIKI_ROOT/server/serve.js"
+SEED_SCRIPT="$WIKI_ROOT/server/api/seed.js"
+SEMANTIC_DB="$DATA_DIR/semantic.json"
 
 if [[ ! -d "$PUBLIC_DIR" ]]; then
   echo "✗ 未找到 $PUBLIC_DIR" >&2
@@ -40,8 +43,15 @@ if ! command -v node >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "[1/2] 重建注册表"
+if [[ ! -f "$SEMANTIC_DB" ]]; then
+  echo "[1/3] 首次运行, 构建语义数据库 $SEMANTIC_DB"
+  node "$SEED_SCRIPT"
+else
+  echo "[1/3] 语义数据库已存在: $SEMANTIC_DB (删除可重建)"
+fi
+
+echo "[2/3] 重建页面注册表 (注入 semantic 数据)"
 python3 "$REGISTRY_SCRIPT" "$PUBLIC_DIR/pages"
 
-echo "[2/2] 启动服务 (Ctrl+C 停止)"
+echo "[3/3] 启动服务 (Ctrl+C 停止)"
 exec node "$SERVE_SCRIPT" "$PUBLIC_DIR" "$PORT"

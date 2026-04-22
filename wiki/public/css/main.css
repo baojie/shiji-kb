@@ -135,6 +135,242 @@ aside.infobox th { color: var(--fg-muted); font-weight: 500; width: 4.5em; }
   cursor: help;
 }
 
+/* ---------- 首页 ---------- */
+
+body.is-home .page { grid-template-columns: 1fr; }
+
+.wiki-home .tagline {
+  color: var(--fg-muted);
+  font-size: .95em;
+  margin-top: -.4em;
+}
+
+.search-box { margin: 2em 0 2.5em; position: relative; }
+.search-box input {
+  width: 100%;
+  padding: 1em 1.3em;
+  font-size: 1.4em;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  font-family: var(--serif);
+  color: var(--fg);
+  transition: border-color .15s, box-shadow .15s;
+}
+.search-box input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(122,31,31,.1);
+}
+.search-box input::placeholder {
+  color: var(--fg-muted);
+  opacity: .7;
+}
+
+#search-results {
+  list-style: none;
+  margin: .4em 0 0;
+  padding: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  max-height: 420px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  position: absolute;
+  left: 0; right: 0;
+  z-index: 5;
+}
+.search-result-item a {
+  font-size: 1.05em;
+  padding: .7em 1em;
+}
+.search-result-item { border-bottom: 1px solid var(--border); }
+.search-result-item:last-child { border-bottom: none; }
+.search-result-item a {
+  display: flex; align-items: center; gap: .6em;
+  padding: .5em .8em;
+  text-decoration: none;
+  color: inherit;
+}
+.search-result-item a:hover { background: var(--bg-box); }
+.match-label { font-weight: 600; color: var(--accent); }
+.match-alt { color: var(--fg-muted); font-size: .9em; }
+.match-meta { margin-left: auto; color: var(--fg-muted); font-size: .85em; }
+.search-empty {
+  padding: .6em .8em;
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1em;
+  margin: 1em 0 2em;
+}
+.featured-card {
+  display: block;
+  padding: 1em 1.1em;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .12s, box-shadow .12s, border-color .12s;
+}
+.featured-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 3px 10px rgba(122,31,31,.1);
+  transform: translateY(-1px);
+}
+.featured-card h3 {
+  margin: 0 0 .35em 0;
+  font-size: 1.2em;
+  color: var(--accent);
+  border: none;
+  padding: 0;
+}
+.card-life {
+  font-size: .85em;
+  color: var(--fg-muted);
+  margin-bottom: .35em;
+}
+.card-meta { font-size: .9em; margin-bottom: .35em; }
+.card-meta strong { color: var(--accent); font-weight: 600; }
+.card-aliases {
+  font-size: .85em;
+  color: var(--fg-muted);
+  margin-top: .3em;
+  padding-top: .3em;
+  border-top: 1px dashed var(--border);
+}
+
+.all-pages {
+  margin-top: 2em;
+  border-top: 1px solid var(--border);
+  padding-top: 1em;
+}
+.all-pages summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: .3em 0;
+  color: var(--fg-muted);
+  list-style: none;
+}
+.all-pages summary::-webkit-details-marker { display: none; }
+.all-pages summary:hover { color: var(--accent); }
+.all-pages summary::before {
+  content: '▶'; display: inline-block;
+  width: 1.2em; font-size: .75em;
+  transition: transform .15s;
+}
+.all-pages[open] summary::before { transform: rotate(90deg); }
+
+.list-meta { color: var(--fg-muted); font-size: .85em; margin-left: .5em; }
+
+/* ---------- 分类页 (Category) ---------- */
+
+.category-crumb {
+  font-size: .9em;
+  margin: 0 0 1em 0;
+}
+.category-crumb a {
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+.category-crumb a:hover { color: var(--accent); text-decoration: underline; }
+
+.category-summary {
+  color: var(--fg-muted);
+  font-size: .95em;
+  margin: 0 0 1.5em 0;
+}
+.category-summary strong { color: var(--accent); }
+
+.category-list {
+  list-style: decimal;
+  padding-left: 2em;
+  margin: 0;
+}
+.category-list li {
+  padding: .45em 0;
+  border-bottom: 1px solid var(--border);
+}
+.category-list li:last-child { border-bottom: none; }
+.category-list .cat-link {
+  font-size: 1.05em;
+  color: var(--link);
+  text-decoration: none;
+  margin-right: .8em;
+}
+.category-list .cat-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.category-list .cat-life {
+  color: var(--fg-muted);
+  font-size: .85em;
+  margin-right: .8em;
+}
+.category-list .cat-meta {
+  color: var(--fg-muted);
+  font-size: .85em;
+  float: right;
+}
+.category-empty {
+  color: var(--fg-muted);
+  font-style: italic;
+  padding: 2em 0;
+  text-align: center;
+}
+
+/* ---------- 页底分类 tag (语义化) ---------- */
+
+.entity-tags {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border);
+  font-family: var(--sans);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+  align-items: center;
+}
+.entity-tags .tag-label {
+  color: var(--fg-muted);
+  font-size: .85em;
+  margin-right: .3em;
+}
+.entity-tags .tag {
+  display: inline-block;
+  padding: .25em .75em;
+  background: var(--bg-box);
+  color: var(--fg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: .85em;
+  text-decoration: none;
+  transition: all .12s;
+}
+.entity-tags .tag:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.entity-tags .tag.tag-type {
+  background: #fff;
+  color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.entity-tags .tag.tag-type:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* ---------- 旧版列表 (404 页等复用) ---------- */
+
 .page-list { list-style: none; padding: 0; }
 .page-list li { padding: .3em 0; }
 .type-tag {

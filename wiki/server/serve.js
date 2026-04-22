@@ -21,6 +21,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const apiRouter = require('./api/index.js');
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -59,6 +60,12 @@ function resolveArgs() {
 
 function makeHandler(root) {
   return (req, res) => {
+    // /api/* 前置分派: 走 API 路由, 不落静态文件系统
+    if (req.url.startsWith('/api/') || req.url === '/api') {
+      console.log(`  ${req.method} ${req.url} → api`);
+      return apiRouter.dispatch(req, res);
+    }
+
     let urlPath;
     try {
       urlPath = decodeURIComponent(req.url.split('?')[0]);
