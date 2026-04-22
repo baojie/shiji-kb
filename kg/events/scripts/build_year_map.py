@@ -99,12 +99,37 @@ CN_NUM_PAT = r'(?:元|[二三四五六七八九]十[一二三四五六七八九]
 # ============================================================
 
 def parse_table_row(line):
-    """Parse a markdown table row into cells."""
+    """Parse a markdown table row into cells, honoring 〖...〗 brackets.
+
+    消歧语法 〖TYPE 显示名|规范名〗 中的 | 不是列分隔符；若用 str.split('|')
+    会把一个单元格切成两半，导致后续所有列向左错位（曾导致 楚熊霜 误入 宋 列）。
+    """
     if '|' not in line:
         return None
-    parts = line.strip().split('|')
-    # Remove first/last empty from split
-    cells = [p.strip() for p in parts[1:-1]]
+    line = line.strip()
+    cells: list[str] = []
+    buf = []
+    depth = 0
+    for ch in line:
+        if ch == '〖':
+            depth += 1
+            buf.append(ch)
+        elif ch == '〗':
+            if depth > 0:
+                depth -= 1
+            buf.append(ch)
+        elif ch == '|' and depth == 0:
+            cells.append(''.join(buf).strip())
+            buf = []
+        else:
+            buf.append(ch)
+    if buf:
+        cells.append(''.join(buf).strip())
+    # str.split('|') 在开头/结尾空单元也产生空串，这里保持相同语义
+    if cells and cells[0] == '':
+        cells = cells[1:]
+    if cells and cells[-1] == '':
+        cells = cells[:-1]
     return cells
 
 
@@ -119,11 +144,15 @@ def extract_bce_year(cell_text):
 
 def strip_entity_tags(text):
     """Remove entity tags from text.
-    v2.1 格式: 〖@人名〗 〖=地名〗 〖;官职〗 〖%时间〗 〖&氏族〗 etc.
+    v2.1 格式: 〖@人名〗 〖=地名〗 〖◆邦国〗 〖;官职〗 〖%时间〗 〖&氏族〗 etc.
     先去除〖TYPE...〗的括号和类型前缀，再清除残留的v1符号。
+
+    消歧语法 〖TYPE 显示名|规范名〗：只保留显示名（| 之前部分），规范名丢弃。
     """
-    # v2.1: 去除 〖X...〗 括号（保留内容）
-    text = re.sub(r'〖[@=;%&^~•!?+$\?\{\:\[\_]', '', text)
+    # v2.1: 先处理带消歧的标签 〖TYPE 显示|规范〗 → 只保留显示名
+    text = re.sub(r'〖[@=;#%&◆^~•!?+$\{\:\[\_]([^〗|]+)\|[^〗]*〗', r'\1', text)
+    # 再处理普通标签 〖TYPE X...〗 → 保留 X...（包含 ◆ 与 # 等所有已知类型）
+    text = re.sub(r'〖[@=;#%&◆^~•!?+$\{\:\[\_]', '', text)
     text = text.replace('〗', '')
     # v2.8: 神话已迁移为〖?〗，通过下方统一〖〗剥离
     # 清除可能残留的v1符号
