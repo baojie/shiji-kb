@@ -31,3 +31,6 @@
 2026-04-22  w5-v6-17    reflection_scan.py  新工具自动扫 alias_conflicts / duplicate_candidates / no-timeline / quality-bottom, W5 反思引用. [reflections/2026-04-22-v6.md]
 2026-04-22  w5-v6       CANONICAL_MERGE 扩  汉孝景帝/汉孝文帝/汉孝武帝/项籍/秦二世 纳入合并. 3 个重复 canonical 消失. [reflections/2026-04-22-v6.md]
 2026-04-22  bug-fix-v7  enrich_timeline.py  抽取用 〖@〗 严格正则, 单字别名禁用于匹配. 195 页 timeline 全量重写消除误伤. [reflections/2026-04-22-v7-bug.md · user 报告 鲁桓公]
+2026-04-22  user-req-10  刘邦精品页样本  多源综合: 原文引用 + 他人评价 + 典故成语 + 制度结构 + 互见法叙述. "消化不生产"约束对 featured 页放宽. [user-req]
+2026-04-22  premium-2  项羽+孔子精品页  "消化不生产"放宽适用于 featured, 多源综合产出百科式长页. [user-req]
+2026-04-22  user-req-11  SKILL_W0  移除不变量 #6 "消化不生产". 六不变量 → 五不变量. butler 可写分析性段落 (断言需有源). [user-req]
