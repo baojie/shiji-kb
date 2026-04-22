@@ -491,6 +491,8 @@ h2 {
 .place-category.cat-retainer   { background: #f2e7d6; color: #6a4a20; border-color: #ddcba6; }
 .place-category.cat-commoner   { background: #ece9e0; color: #6a6050; border-color: #d0ccb8; }
 .place-category.cat-fictional  { background: #f0e8fa; color: #6a3a8a; border-color: #ddc8ee; font-style: italic; }
+.place-category.cat-kin        { background: #f5e8e0; color: #7a4a20; border-color: #e6d0b8; }
+.place-category.cat-outcast    { background: #e4dfda; color: #4a3a30; border-color: #c8beb0; }
 
 /* cat-chip 开关 — 官职类 */
 .cat-chip.cat-sangong          { background: #fbe4e4; color: #8b2a2a; }
@@ -565,6 +567,10 @@ h2 {
 .cat-chip.cat-commoner.active  { background: #6a6050; color: #ece9e0; }
 .cat-chip.cat-fictional        { background: #f0e8fa; color: #6a3a8a; }
 .cat-chip.cat-fictional.active { background: #6a3a8a; color: #f0e8fa; }
+.cat-chip.cat-kin              { background: #f5e8e0; color: #7a4a20; }
+.cat-chip.cat-kin.active       { background: #7a4a20; color: #f5e8e0; }
+.cat-chip.cat-outcast          { background: #e4dfda; color: #4a3a30; }
+.cat-chip.cat-outcast.active   { background: #4a3a30; color: #e4dfda; }
 
 /* cat-chip 开关 — 邦国国类（SKILL_03k） */
 .cat-chip.cat-ancient-state        { background: #eee4cc; color: #6a4a2a; }
