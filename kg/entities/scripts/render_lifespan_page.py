@@ -124,6 +124,18 @@ def render():
     lines.append('<h1>人物生卒年推理</h1>')
     lines.append('<p class="subtitle">基于 SKILL 07a 方法论：合并 reign_periods + 文本模式（立X年卒 / 生X岁立 / 享年X岁） + 事件索引 + v1 外部数据，按证据强度输出区间估算</p>')
 
+    # WIP 横幅
+    from datetime import datetime, timezone, timedelta
+    tz = timezone(timedelta(hours=8))
+    now_str = datetime.now(tz).strftime('%Y-%m-%d')
+    lines.append('<div class="wip-banner">')
+    lines.append('  <strong>⚠️ 进行中工作 (Work in Progress)</strong>')
+    lines.append('  <p>本页为机器自动化挖掘的中间结果，<strong>推理逻辑尚未充分收敛，含有大量错误</strong>。'
+                 '区间宽、置信度"低"的条目尤其可能失真；置信度"高"的条目也需逐一核对原文。')
+    lines.append('  请勿作为学术引用，仅用于内部观察与迭代。</p>')
+    lines.append(f'  <p class="wip-date">最后更新：{now_str}</p>')
+    lines.append('</div>')
+
     # 简洁统计：人数 + 生/卒两条堆叠置信度条
     total = stats.get('total_persons', len(persons))
     birth_dist = stats.get('birth_confidence_distribution', {})
@@ -303,6 +315,20 @@ h1 {
     font-size: 0.95em;
 }
 .topnav a:hover { text-decoration: underline; }
+
+.wip-banner {
+    background: #fff7e0;
+    border-left: 5px solid #d4941e;
+    padding: 14px 20px;
+    margin: 0 0 24px;
+    border-radius: 6px;
+    color: #6b4b15;
+    font-size: 0.93em;
+    line-height: 1.5;
+}
+.wip-banner strong { color: #8b4513; font-size: 1em; }
+.wip-banner p { margin: 6px 0 0; }
+.wip-date { color: #a07730; font-size: 0.88em; margin-top: 8px !important; }
 
 .stats-compact {
     display: flex;

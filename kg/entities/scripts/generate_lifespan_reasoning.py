@@ -96,14 +96,21 @@ def classify_evidence(ev: str) -> str:
 
 
 def reasoning_sections(entry: dict) -> list[tuple[str, list[str]]]:
-    """拆证据链为 (分类, [证据行]) 列表，保持原顺序。"""
+    """拆证据链为 (分类, [证据行]) 列表，保持原顺序。
+    "· 原文：..." 行跟随前一条证据所在的分组。"""
     groups: dict[str, list[str]] = defaultdict(list)
     order: list[str] = []
+    last_group = None
     for ev in entry.get('evidence', []):
+        stripped = ev.lstrip()
+        if stripped.startswith('· 原文') and last_group:
+            groups[last_group].append(ev)
+            continue
         g = classify_evidence(ev)
         if g not in groups:
             order.append(g)
         groups[g].append(ev)
+        last_group = g
     return [(g, groups[g]) for g in order]
 
 
