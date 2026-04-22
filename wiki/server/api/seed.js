@@ -211,6 +211,54 @@ function main() {
   fs.writeFileSync(OUT, JSON.stringify(data, null, 2));
   const sizeMB = (fs.statSync(OUT).size / (1024 * 1024)).toFixed(2);
   console.log(`[seed] ${entityCount} 实体 / ${sizeMB} MB → ${OUT}`);
+
+  // W5 提案 5 (2026-04-22-v2): 重复 canonical 诊断. 共享强别名 → 合并候选.
+  findLikelyDuplicates(entities);
+}
+
+function findLikelyDuplicates(entities) {
+  // 过滤掉过于通用的别名 (王/帝/公/侯/君 等单字和常用组合)
+  const WEAK = new Set(['王', '帝', '公', '侯', '君', '上', '子', '父',
+    '太子', '太后', '皇帝', '天子', '孝', '文', '武', '大夫']);
+  const strongAlias = (s) => s.length >= 2 && !WEAK.has(s);
+
+  const byAlias = {};  // alias → [canonical, ...]
+  for (const [c, e] of Object.entries(entities)) {
+    for (const a of (e.aliases || [])) {
+      if (!strongAlias(a)) continue;
+      if (!byAlias[a]) byAlias[a] = [];
+      byAlias[a].push(c);
+    }
+  }
+
+  const dupes = [];
+  for (const [a, cs] of Object.entries(byAlias)) {
+    if (cs.length < 2) continue;
+    // 避免重复 pair
+    for (let i = 0; i < cs.length; i++) {
+      for (let j = i + 1; j < cs.length; j++) {
+        dupes.push({
+          alias: a,
+          canonicals: [cs[i], cs[j]],
+          hint: 'both share strong alias',
+        });
+      }
+    }
+  }
+
+  if (dupes.length === 0) {
+    console.log('[seed] 无重复 canonical 候选');
+    return;
+  }
+
+  const out = path.resolve(__dirname, '../../data/duplicate_candidates.json');
+  fs.writeFileSync(out, JSON.stringify({
+    generated: new Date().toISOString(),
+    count: dupes.length,
+    note: '共享强别名的 canonical 对. 人工审核后加进 seed.js 的 CANONICAL_MERGE.',
+    candidates: dupes.slice(0, 50),
+  }, null, 2));
+  console.log(`[seed] 发现 ${dupes.length} 对重复候选 → ${out}`);
 }
 
 main();

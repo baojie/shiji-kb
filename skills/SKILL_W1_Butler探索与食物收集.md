@@ -93,20 +93,28 @@ markdown 格式, 人和 butler 共读。
 
 ---
 
-## 三、2:1 配比
+## 三、动态配比 (v0.2, 2026-04-22 W5 修订)
 
-每 3 次 invocation：
-- **2 次顺藤摸瓜**：从 wiki 已有页出发, 扫 broken link / 缺项, 选一个补
-- **1 次无约束探索**：独立扫某食物源, 找从未入 wiki 的候选
+配比随 P1 队列规模变化:
+
+| P1 队列 | trail:explore | 理由 |
+| ---: | ---: | --- |
+| > 10 | 3:1 | 队列积压, 优先消费, 少探索 |
+| 5 — 10 | 2:1 | 默认平衡 (原版) |
+| < 5 | 1:1 | 队列接近清空, 加大探索拉新 |
+| = 0 | 0:1 (纯 explore) | 无积压, 仅探索 |
+
+**trail** = 从 wiki 已有页出发, 扫 broken link / 缺项 / 消费队列
+**explore** = 独立扫某食物源, 找从未入 wiki 的候选
 
 ### 本轮选哪个?
 
-看 `actions.jsonl` 最后 3 条的 `mode` 字段：
-- `[trail, trail]` → 本次 `explore`
-- `[trail, explore]` 或 `[explore, trail]` → 本次 `trail`
-- `[explore, trail, trail]` → 本次 `trail`
+1. 计算当前 P1 队列规模 `n = 统计 queue.md 中 \[P1\] 数`
+2. 按上表查目标比例
+3. 看 `actions.jsonl` 最后 (k+1) 条的 `mode` 字段, 维持比例
+   - 例: 3:1 规则 → 最后 3 条都是 trail → 本次 `explore`; 否则 `trail`
 
-若反思显示 wiki 已致密 (断链少), W5 可改 1:2 甚至 1:3。这个比例**可变**, 由 W5 决定。
+**原始 2:1 规则 (v0.1, 历史留档)**: 每 3 次 invocation = 2 trail + 1 explore. 在队列大 (>10) 或小 (<5) 时不平衡.
 
 ---
 

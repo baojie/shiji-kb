@@ -51,6 +51,8 @@
 
 ## 记账
 
+### 1. 写 butler 日志 (内部)
+
 追加 `logs/wiki_butler/actions.jsonl` 一行 JSON:
 ```json
 {"ts":"YYYY-MM-DDTHH:MM:SSZ","mode":"trail|explore|observe",
@@ -58,6 +60,23 @@
  "rationale":"<短>","score_before":N,"score_after":N,"red_flags":[],
  "diff_lines":N,"verdict":"accept|fail|rollback","commit":"<sha>"}
 ```
+
+### 2. 写 wiki 修订记录 (用户可见)
+
+当 action 改动了 `wiki/public/pages/<slug>.md` 时, **必须**调用:
+
+```bash
+python3 wiki/scripts/butler/record_revision.py <slug> \
+  --summary "butler/<action>: <slug> <一句话>" \
+  --author butler
+```
+
+产出:
+- `wiki/public/history/<slug>/<rev_id>.md` (内容副本)
+- `wiki/public/history/<slug>.json` (per-page 索引)
+- `wiki/public/recent.json` (全局最近, 首页 `#?recent` 可看)
+
+**不调用 = butler 的工作在前端不可见**. 连续忘记 → W5 反思触发.
 
 ## 不变量 (违反立刻停, 不自行修正)
 

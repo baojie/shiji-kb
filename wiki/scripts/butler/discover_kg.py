@@ -21,6 +21,40 @@ ROOT = Path(__file__).resolve().parents[3]
 SEMANTIC = ROOT / 'wiki/data/semantic.json'
 PAGES_DIR = ROOT / 'wiki/public/pages'
 
+# W5 反思 2026-04-22 · 提案 2 引入:
+# KG 层 canonical 质量过滤, 跳过明显错误的 canonical, 避免 butler 把噪音当候选.
+# 这些应在 KG 侧修, 不在 butler 范围.
+
+# 上古传说帝王的单字名若被包进"姓氏+单字" canonical, 多半是消歧错
+LEGEND_SINGLE_CHARS = set('舜尧禹汤启契稷')
+# 已知重复 canonical (应合并到左侧) 的前缀/后缀形式
+KNOWN_REDUNDANT_PATTERNS = [
+    r'^汉孝.+帝$',      # 汉孝文帝 / 汉孝景帝 = 汉文帝 / 汉景帝
+    r'^秦[张李赵].+$',  # 秦张仪 / 秦李斯 类 = 张仪 / 李斯
+    r'^张楚.+王$',      # 张楚楚隐王 类
+]
+# 职位/头衔类 canonical (非人名)
+TITLE_CANONICALS = {'雍王', '梁王', '赵王', '齐王', '楚王', '汉王', '韩王',
+                    '燕王', '魏王', '吴王', '秦王', '陈王'}
+
+
+def is_bad_canonical(entity):
+    """返回 (is_bad, reason) 或 (False, None)."""
+    import re
+    c = entity['id']
+    aliases = entity.get('aliases', [])
+
+    if c in TITLE_CANONICALS:
+        return True, 'title-not-person'
+    for pat in KNOWN_REDUNDANT_PATTERNS:
+        if re.match(pat, c):
+            return True, f'redundant-form:{pat}'
+    # aliases 里只有"单字传说帝王"且 canonical 含姓氏 (如 刘舜/舜)
+    if (len(aliases) == 1 and aliases[0] in LEGEND_SINGLE_CHARS
+            and len(c) > 1 and c[-1] == aliases[0]):
+        return True, f'legend-char-merged:{aliases[0]}'
+    return False, None
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -45,7 +79,15 @@ def main() -> int:
         key=lambda e: -e.get('total_refs', 0),
     )[:args.top]
 
-    missing = [e for e in top if e['id'] not in existing]
+    missing, skipped = [], []
+    for e in top:
+        if e['id'] in existing:
+            continue
+        bad, reason = is_bad_canonical(e)
+        if bad:
+            skipped.append((e['id'], reason))
+            continue
+        missing.append(e)
 
     today = date.today().isoformat()
 
@@ -71,8 +113,12 @@ def main() -> int:
                   f'(refs={e["total_refs"]}/章={e["total_chapters"]}) '
                   f'[源:A] [{p}] [{today}]')
 
-    print(f'\n[discover_kg] 扫 top-{args.top}, 发现 {len(missing)} 个缺失.',
-          file=sys.stderr)
+    print(f'\n[discover_kg] 扫 top-{args.top}, 发现 {len(missing)} 个缺失, '
+          f'跳过 {len(skipped)} 个 bad canonical.', file=sys.stderr)
+    if skipped:
+        print('[discover_kg] 跳过的 canonical (需 KG 侧修):', file=sys.stderr)
+        for name, reason in skipped:
+            print(f'  - {name} [{reason}]', file=sys.stderr)
     return 0
 
 
