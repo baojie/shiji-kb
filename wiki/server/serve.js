@@ -2,9 +2,11 @@
 /* 史记 Wiki 本地静态服务器 (无外部依赖, 仅用 Node 内置 http/fs)。
  *
  * 用法:
- *   node scripts/wiki/serve.js [root] [port]
- *   node scripts/wiki/serve.js wiki         # 默认端口 8000
- *   node scripts/wiki/serve.js wiki 9000    # 指定端口
+ *   node wiki/server/serve.js [root] [port]
+ *   node wiki/server/serve.js wiki/public         # 默认端口 8000
+ *   node wiki/server/serve.js wiki/public 9000    # 指定端口
+ *
+ * 常规启动走 wiki/wiki.sh, 无需直接调用本脚本。
  *
  * 特性:
  *   - 自动处理 /  → index.html

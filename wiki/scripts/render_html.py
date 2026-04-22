@@ -3,8 +3,8 @@
 史记 Wiki v0 HTML 渲染器（单页版）
 
 用法:
-    python scripts/wiki/render_html.py <input.md> [<input.md> ...]
-    python scripts/wiki/render_html.py wiki/pages/*.md
+    python wiki/scripts/render_html.py <input.md> [<input.md> ...]
+    python wiki/scripts/render_html.py wiki/public/pages/*.md
 
 功能:
     1. 解析 YAML frontmatter
