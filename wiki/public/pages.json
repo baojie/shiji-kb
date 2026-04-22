@@ -3584,11 +3584,11 @@
       "path": "pages/卜商.md",
       "total_refs": 16,
       "total_chapters": 8,
-      "quality_score": 39,
+      "quality_score": 42,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 12,
+        "revs": 15,
         "size": 6,
         "manual": 5,
         "narrative": 8
@@ -4488,6 +4488,32 @@
         "base_refs": 0,
         "tags": 8,
         "revs": 9,
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "夫差": {
+      "type": "person",
+      "label": "夫差",
+      "aliases": [
+        "夫差",
+        "吴王夫差"
+      ],
+      "tags": [
+        "春秋",
+        "吴国",
+        "吴越争霸",
+        "霸主",
+        "不听忠谏"
+      ],
+      "featured": true,
+      "path": "pages/夫差.md",
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
         "size": 6,
         "manual": 5,
         "narrative": 8
@@ -5492,6 +5518,32 @@
         "tags": 8,
         "revs": 12,
         "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "扶苏": {
+      "type": "person",
+      "label": "扶苏",
+      "aliases": [
+        "扶苏",
+        "公子扶苏"
+      ],
+      "tags": [
+        "秦朝",
+        "秦始皇",
+        "矫诏",
+        "忠孝",
+        "悲剧皇子"
+      ],
+      "featured": true,
+      "path": "pages/扶苏.md",
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 6,
         "manual": 5,
         "narrative": 8
       }
@@ -6975,6 +7027,38 @@
         "base_refs": 0,
         "tags": 8,
         "revs": 15,
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "王翦": {
+      "type": "person",
+      "label": "王翦",
+      "aliases": [
+        "王翦"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "名将",
+        "灭六国",
+        "请田宅"
+      ],
+      "featured": true,
+      "path": "pages/王翦.md",
+      "total_refs": 4,
+      "total_chapters": 2,
+      "lifespan": {
+        "birth": -285,
+        "death": -210,
+        "note": "约"
+      },
+      "quality_score": 28,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
         "size": 7,
         "manual": 5,
         "narrative": 8
@@ -10561,6 +10645,8 @@
     "刘章": "城阳惠王",
     "太子丹": "太子丹",
     "燕太子": "太子丹",
+    "夫差": "夫差",
+    "吴王夫差": "夫差",
     "如何阅读史记": "如何阅读史记",
     "入门七步": "如何阅读史记",
     "史记阅读指南": "如何阅读史记",
@@ -10568,8 +10654,6 @@
     "姬僚": "姬僚",
     "吴王僚": "姬僚",
     "姬夫差": "姬夫差",
-    "夫差": "姬夫差",
-    "吴王夫差": "姬夫差",
     "姬旦": "姬旦",
     "周公": "姬旦",
     "周公旦": "姬旦",
@@ -10655,6 +10739,8 @@
     "扁鹊": "扁鹊",
     "秦越人": "扁鹊",
     "扁鹊仓公": "扁鹊",
+    "扶苏": "扶苏",
+    "公子扶苏": "扶苏",
     "春申君": "春申君",
     "黄歇": "春申君",
     "晁错": "晁错",
@@ -10785,6 +10871,7 @@
     "王温舒": "王温舒",
     "温舒": "王温舒",
     "王离": "王离",
+    "王翦": "王翦",
     "王陵": "王陵",
     "安国侯": "王陵",
     "王黄": "王黄",
@@ -11054,5 +11141,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T06:37:34"
+  "generated": "2026-04-23T06:45:06"
 }
