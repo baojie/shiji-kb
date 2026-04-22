@@ -405,3 +405,54 @@ footer code {
   color: var(--link-broken);
   margin-right: 4px;
 }
+
+/* —— 修订/历史相关 —— */
+.topnav-link {
+  color: var(--link); text-decoration: none;
+  font-family: var(--sans); font-size: 13px;
+}
+.topnav-link:hover { text-decoration: underline; }
+
+.page-history-link {
+  margin-top: 2em; padding-top: .8em;
+  border-top: 1px dashed var(--border);
+  font-family: var(--sans); font-size: 13px;
+  color: var(--fg-muted);
+}
+.page-history-link a { color: var(--link); text-decoration: none; }
+.page-history-link a:hover { text-decoration: underline; }
+
+.recent-changes {
+  width: 100%; border-collapse: collapse;
+  font-family: var(--sans); font-size: 14px;
+  margin-top: 1em;
+}
+.recent-changes th, .recent-changes td {
+  text-align: left; padding: .5em .8em;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.recent-changes th {
+  background: var(--bg-box); font-weight: 600;
+}
+.recent-changes .rc-time { white-space: nowrap; color: var(--fg-muted); width: 11em; }
+.recent-changes .rc-page { font-weight: 500; }
+.recent-changes .rc-author { color: var(--fg-muted); width: 7em; }
+.recent-changes .rc-size { color: var(--fg-muted); white-space: nowrap; width: 5em; }
+.recent-changes .rc-rev { font-family: ui-monospace, monospace; font-size: 12px; white-space: nowrap; }
+.recent-changes a { color: var(--link); text-decoration: none; }
+.recent-changes a:hover { text-decoration: underline; }
+
+.rev-badge {
+  background: var(--accent); color: #fff;
+  padding: 1px 6px; border-radius: 2px;
+  font-size: 11px; font-family: var(--sans);
+}
+
+.rev-banner {
+  background: #fff8e1; border-left: 4px solid #d4a017;
+  padding: .8em 1em; margin-bottom: 1.5em;
+  font-family: var(--sans); font-size: 14px;
+}
+.rev-banner code { background: rgba(0,0,0,.06); padding: 1px 5px; border-radius: 2px; }
+.rev-banner a { color: var(--link); margin-left: .5em; }

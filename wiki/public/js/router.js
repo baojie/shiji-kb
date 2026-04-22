@@ -1,7 +1,10 @@
 /* 哈希路由。 */
 
 import { resolvePageId } from './registry.js';
-import { renderPage, renderHome, renderNotFound, renderCategory } from './renderer.js';
+import {
+  renderPage, renderHome, renderNotFound, renderCategory,
+  renderRecent, renderHistory, renderRevision,
+} from './renderer.js';
 import { setStatus, showFatal } from './util.js';
 
 export function setupRouter(core) {
@@ -14,13 +17,30 @@ async function route(core) {
   const rawHash = location.hash.slice(1) || '';
   setStatus('载入…');
 
-  // 分类页: #?type=<type> 或 #?tag=<tag>
+  // 特殊页: #?type=<type> · #?tag=<tag> · #?recent · #?history=<page> · #?revision=<page>&rev=<id>
   if (rawHash.startsWith('?')) {
     const params = new URLSearchParams(rawHash.slice(1));
     const type = params.get('type');
     const tag = params.get('tag');
     if (type) { renderCategory(core, 'type', type); setStatus(''); return; }
     if (tag) { renderCategory(core, 'tag', tag); setStatus(''); return; }
+    if (params.has('recent')) {
+      try { await renderRecent(core); } catch (e) { showFatal(`recent.json 加载失败：${e.message}`); }
+      setStatus(''); return;
+    }
+    if (params.has('history')) {
+      const page = params.get('history');
+      try { await renderHistory(core, page); }
+      catch (e) { showFatal(`history/${page}.json 加载失败：${e.message}`); }
+      setStatus(''); return;
+    }
+    if (params.has('revision')) {
+      const page = params.get('revision');
+      const rev = params.get('rev');
+      try { await renderRevision(core, page, rev); }
+      catch (e) { showFatal(`history/${page}/${rev}.md 加载失败：${e.message}`); }
+      setStatus(''); return;
+    }
   }
 
   let raw = decodeURIComponent(rawHash);

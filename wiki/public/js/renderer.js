@@ -7,12 +7,23 @@
 import { escapeHtml, TYPE_LABELS } from './util.js';
 import { parseMarkdown } from './parser.js';
 
+function fmtTimestamp(iso) {
+  // ISO → "2026-04-22 16:10" (本地时区)
+  try {
+    const d = new Date(iso);
+    const pad = (n) => String(n).padStart(2, '0');
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ` +
+      `${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  } catch { return iso; }
+}
+
 export async function renderPage(core, pid, meta, mdText) {
   document.body.classList.remove('is-home');
   const { front, html, broken } = await parseMarkdown(core, mdText, { pid, meta });
 
   const tagsFooter = renderTagsFooter(front, meta);
-  document.getElementById('article').innerHTML = html + tagsFooter;
+  const historyLink = `<p class="page-history-link"><a href="#?history=${encodeURIComponent(pid)}">查看修订历史 →</a></p>`;
+  document.getElementById('article').innerHTML = html + historyLink + tagsFooter;
   const infoboxHtml = await renderInfobox(core, front, meta);
   document.getElementById('infobox').outerHTML = infoboxHtml;
 
@@ -305,6 +316,122 @@ export function renderCategory(core, kind, value) {
   document.title = `${titleKind} ${displayValue} · 史记 Wiki`;
   document.getElementById('src-info').textContent =
     `pages.json (筛选: ${kind}=${value})`;
+  document.getElementById('broken-info').textContent = '';
+  window.scrollTo(0, 0);
+}
+
+/**
+ * 最近修订页 (#?recent): 读 docs/wiki/recent.json, 倒序展示.
+ */
+export async function renderRecent(core) {
+  const r = await fetch('recent.json');
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const data = await r.json();
+  const entries = data.entries || [];
+
+  const rows = entries.map((e) => {
+    const pageLink = `<a href="#${encodeURIComponent(e.page)}">${escapeHtml(e.page)}</a>`;
+    const histLink = `<a href="#?history=${encodeURIComponent(e.page)}">历史</a>`;
+    const revLink = `<a href="#?revision=${encodeURIComponent(e.page)}&rev=${encodeURIComponent(e.rev_id)}">${escapeHtml(e.rev_id)}</a>`;
+    return `<tr>
+      <td class="rc-time">${escapeHtml(fmtTimestamp(e.timestamp))}</td>
+      <td class="rc-page">${pageLink}</td>
+      <td class="rc-author">${escapeHtml(e.author)}</td>
+      <td class="rc-summary">${escapeHtml(e.summary || '')}</td>
+      <td class="rc-rev">${revLink} · ${histLink}</td>
+    </tr>`;
+  }).join('');
+
+  const body = entries.length === 0
+    ? '<p class="category-empty">暂无修订记录。</p>'
+    : `<table class="recent-changes">
+        <thead><tr><th>时间</th><th>页面</th><th>作者</th><th>摘要</th><th>修订</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+
+  document.getElementById('article').innerHTML =
+    `<nav class="category-crumb"><a href="#">← 首页</a></nav>
+     <h1>最近修订</h1>
+     <p class="category-summary">最近 <strong>${entries.length}</strong> 条 · 共 <strong>${data.total_pages}</strong> 个页面</p>
+     ${body}`;
+
+  document.body.classList.add('is-home');
+  const ib = document.getElementById('infobox');
+  ib.hidden = true; ib.innerHTML = '';
+  document.getElementById('crumb').textContent = '最近修订';
+  document.title = '最近修订 · 史记 Wiki';
+  document.getElementById('src-info').textContent = 'recent.json';
+  document.getElementById('broken-info').textContent = '';
+  window.scrollTo(0, 0);
+}
+
+/**
+ * 单页修订历史 (#?history=<page>): 读 docs/wiki/history/<page>.json.
+ */
+export async function renderHistory(core, page) {
+  const r = await fetch(`history/${encodeURIComponent(page)}.json`);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const data = await r.json();
+  const revs = data.revisions || [];
+
+  const rows = revs.map((rev, idx) => {
+    const isLatest = rev.rev_id === data.latest_rev_id;
+    const tag = isLatest ? ' <span class="rev-badge">最新</span>' : '';
+    const revLink = `<a href="#?revision=${encodeURIComponent(page)}&rev=${encodeURIComponent(rev.rev_id)}">${escapeHtml(rev.rev_id)}</a>`;
+    return `<tr>
+      <td class="rc-time">${escapeHtml(fmtTimestamp(rev.timestamp))}</td>
+      <td class="rc-author">${escapeHtml(rev.author)}</td>
+      <td class="rc-summary">${escapeHtml(rev.summary || '')}</td>
+      <td class="rc-size">${rev.size} B</td>
+      <td class="rc-rev">${revLink}${tag}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('article').innerHTML =
+    `<nav class="category-crumb">
+       <a href="#">← 首页</a> ·
+       <a href="#${encodeURIComponent(page)}">← ${escapeHtml(page)}</a>
+     </nav>
+     <h1>${escapeHtml(page)} · 修订历史</h1>
+     <p class="category-summary">共 <strong>${data.revision_count}</strong> 条修订</p>
+     <table class="recent-changes">
+       <thead><tr><th>时间</th><th>作者</th><th>摘要</th><th>大小</th><th>修订</th></tr></thead>
+       <tbody>${rows}</tbody>
+     </table>`;
+
+  document.body.classList.add('is-home');
+  const ib = document.getElementById('infobox');
+  ib.hidden = true; ib.innerHTML = '';
+  document.getElementById('crumb').textContent = `修订历史 / ${page}`;
+  document.title = `${page} 修订历史 · 史记 Wiki`;
+  document.getElementById('src-info').textContent = `history/${page}.json`;
+  document.getElementById('broken-info').textContent = '';
+  window.scrollTo(0, 0);
+}
+
+/**
+ * 单条历史版本 (#?revision=<page>&rev=<id>): 渲染 history/<page>/<id>.md (只读).
+ */
+export async function renderRevision(core, page, revId) {
+  const r = await fetch(`history/${encodeURIComponent(page)}/${encodeURIComponent(revId)}.md`);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const mdText = await r.text();
+
+  const meta = (core.registry.pages[page]) || { type: 'meta', label: page, path: '' };
+  const { html } = await parseMarkdown(core, mdText, { pid: page, meta });
+
+  const banner = `<div class="rev-banner">
+    <strong>历史版本</strong> · 修订 <code>${escapeHtml(revId)}</code> ·
+    <a href="#${encodeURIComponent(page)}">→ 查看当前版本</a> ·
+    <a href="#?history=${encodeURIComponent(page)}">→ 全部修订</a>
+  </div>`;
+
+  document.getElementById('article').innerHTML = banner + html;
+  const ib = document.getElementById('infobox');
+  ib.hidden = true; ib.innerHTML = '';
+  document.getElementById('crumb').textContent = `${page} @ ${revId}`;
+  document.title = `${page} @ ${revId} · 史记 Wiki`;
+  document.getElementById('src-info').textContent = `history/${page}/${revId}.md`;
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
 }
