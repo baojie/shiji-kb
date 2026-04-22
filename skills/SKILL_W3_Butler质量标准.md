@@ -12,25 +12,27 @@ description: Butler 的 wiki 质量标准 (rubric) — 一个页面怎样算"好
 ## 版本
 
 - **v0.1** (2026-04-22) · 初版, 5 维度, 量化阈值偏松
-- v0.2 预期 (10 次反思后) · 收紧阈值, 加"引证完整性"维度
+- **v0.2** (2026-04-23) · 将"引证完整性"升为独立维度 (第6维), 强制 `required_citation: true`; 新增溯源红旗
+- v0.3 预期 (10 次反思后) · 收紧字数阈值
 
 ---
 
-## 一、五维度
+## 一、六维度 (v0.2)
 
 好的 wiki 页应在以下维度都不差 (**及格线**), 其中 1-2 维度优秀则算好页。
 
-| 维度 | 简述 | 量化信号 (v0.1) |
+| 维度 | 简述 | 量化信号 (v0.2) |
 |---|---|---|
 | **1. 完整性** | 关键结构区都有内容 | frontmatter 必填字段齐; 至少 3 个 section; 字数 200–2000 |
 | **2. 准确性** | 事实有源 | 无编造; 生卒/出处有 kg / doc 可追溯 |
 | **3. 链接密度** | 页内 wikilink 多 + 少 broken | resolved wikilink ≥ 5; broken 比例 ≤ 20% |
 | **4. 信息来源分布** | 跨多源引用 | 至少 2 个食物源 (kg + SKU, 或 kg + doc 等); 纯 kg 信息是浅页 |
 | **5. 可读性** | 人能顺畅读 | 句不过长 (< 80 字); 属性表 + 段落交替; 无机器痕迹 |
+| **6. 引证完整性** | 每句断言可溯源 | 直接引文必须来自 chapter_md; 结论性陈述必须有出处标注 |
 
 ---
 
-## 二、量化阈值 (v0.1)
+## 二、量化阈值 (v0.2)
 
 ```yaml
 completeness:
@@ -39,20 +41,30 @@ completeness:
   word_count_range: [200, 2000]
 
 accuracy:
-  forbidden_phrases: []  # v0 暂不 hardcode, 靠 6-不变量的"禁编造"
-  required_citation: false  # v0.2 起改 true
+  forbidden_phrases: []
+  required_citation: true   # v0.2 起强制
 
 link_density:
   min_resolved_wikilinks: 5
   max_broken_ratio: 0.20
 
 source_diversity:
-  min_sources: 2   # 即至少 2 个食物源有输入
+  min_sources: 2
   allowed_sources: [kg, sku, doc, docs]
 
 readability:
   max_sentence_length: 80
   prefer_pattern: alternate_table_and_paragraph
+
+citation_integrity:                         # 新增 v0.2
+  direct_quote_must_exist_in: docs/original_text  # 用干净原文 grep，不用含标注符号的 chapter_md
+  factual_claim_needs_source: true          # 结论性陈述需注明出处(kg/PN/chapter_md)
+  allowed_source_types:
+    - chapter_md      # 原文直接引用
+    - kg_entity       # kg 实体属性
+    - pn_annotation   # PN 标注结果
+    - sku_fact        # ontology-v2 fact
+    - doc_report      # doc/entities 分析报告
 ```
 
 ---
@@ -67,6 +79,8 @@ readability:
 - 🚩 单一源 (完全来自 kg 或完全来自 SKU), 无跨源
 - 🚩 frontmatter `auto_generated: true` 持续 > 30 天未被二次加工
 - 🚩 页面字数 < 50 (空壳)
+- 🚩 **直接引文无法在 `chapter_md/` 中 grep 到** (v0.2 新增)
+- 🚩 **页面含结论性陈述但无任何出处标注** (v0.2 新增)
 
 ---
 
