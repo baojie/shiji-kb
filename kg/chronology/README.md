@@ -9,7 +9,8 @@
 | `reign_periods.json` | rulers×382 / eras×32 / aliases×48 | 君主在位年、年号分期、人名别称映射 |
 | `year_ce_map.json` | 93章 / 2090条 | 按章节×段落ID的叙事年份→公元年消歧映射 |
 | `year_state_map.json` | 635个公元年 | 公元年→各诸侯国当年在位君主及纪年 |
-| `史记编年表.md` | — | 编年对照表（前2700年～前87年） |
+| `person_lifespan_events.json` | ~77 人 / ~124 事件 | 明确纪年人物派生的生/卒事件（去重后注入 timeline.html） |
+| `史记编年表.md` | — | 编年对照表（前2700年～前87年）；末尾"附录：主要人物生卒年"由 `sync_chronology_md.py` 自动维护 |
 | `中国历史大事年表.md` | — | 参考资料（文字版） |
 | `[中国历史大事年表（古代）].沈起炜.扫描版.pdf` | — | 参考文献（扫描版） |
 
@@ -59,3 +60,5 @@
 | `reign_periods.json` | `kg/events/scripts/build_year_map.py --extract-reigns` | 十表（013-022）+ 本纪章节 |
 | `year_ce_map.json` | `kg/events/scripts/build_year_map.py` | 全部 tagged.md 年份实体消歧 |
 | `year_state_map.json` | `kg/events/scripts/build_year_map.py` | 由 reign_periods 派生 |
+| `person_lifespan_events.json` | `kg/chronology/scripts/build_lifespan_events.py` | `kg/entities/data/person_lifespans.json`，按 note 筛选明确纪年 + 与事件索引去重 |
+| `史记编年表.md` 附录 | `kg/chronology/scripts/sync_chronology_md.py` | `person_lifespan_events.json`（幂等替换 AUTO-GENERATED 区块）|

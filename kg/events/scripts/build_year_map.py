@@ -1640,12 +1640,16 @@ def generate_timeline(year_map, reign_data=None, event_year_map=None, year_state
             year_display = format_bce_year(ce_year)
             year_anchor = f'year-{ce_year}'
 
-            event_count = len(by_year_events.get(ce_year, []))
+            events_for_year = by_year_events.get(ce_year, [])
+            life_count = sum(1 for ev in events_for_year if isinstance(ev[0], str) and ev[0].startswith('LIFE-'))
+            event_count = len(events_for_year) - life_count
             count_parts = []
             if refs:
                 count_parts.append(f'{len(refs)}引用')
             if event_count:
                 count_parts.append(f'{event_count}事件')
+            if life_count:
+                count_parts.append(f'{life_count}生卒')
 
             lines.append(f'  <div class="entity-entry timeline-entry" id="{year_anchor}">')
 
@@ -1710,14 +1714,31 @@ def generate_timeline(year_map, reign_data=None, event_year_map=None, year_state
             if events_this_year:
                 lines.append('      <ul class="event-list">')
                 for ev_id, ev_name, ev_ch_id, ev_approx in sorted(events_this_year, key=lambda x: x[0]):
-                    _, ch_stem = chapter_names.get(ev_ch_id, (ev_ch_id, ev_ch_id))
                     approx_mark = '<span class="approx-mark" title="近似年代">~</span>' if ev_approx else ''
-                    lines.append(
-                        f'        <li class="event-item">{approx_mark}'
-                        f'<a href="event.html#event-{html_mod.escape(ev_id)}" class="event-ref">'
-                        f'<span class="event-id">{html_mod.escape(ev_id)}</span> '
-                        f'{html_mod.escape(ev_name)}</a></li>'
-                    )
+                    is_lifespan = isinstance(ev_id, str) and ev_id.startswith('LIFE-')
+                    if is_lifespan:
+                        # 生卒年事件：显示生/卒标记，链接到章节（若有）而非 event.html
+                        action = '生' if ev_id.endswith('-生') else '卒'
+                        person = ev_name[:-1] if ev_name.endswith(action) else ev_name
+                        badge = f'<span class="life-badge life-{action}">{action}</span>'
+                        if ev_ch_id and ev_ch_id != '000' and ev_ch_id in chapter_names:
+                            _, ch_stem = chapter_names[ev_ch_id]
+                            name_html = (
+                                f'<a href="../chapters/{ch_stem}.html" class="life-ref">'
+                                f'{html_mod.escape(person)}</a>'
+                            )
+                        else:
+                            name_html = f'<span class="life-ref">{html_mod.escape(person)}</span>'
+                        lines.append(
+                            f'        <li class="event-item life-item">{badge}{name_html}</li>'
+                        )
+                    else:
+                        lines.append(
+                            f'        <li class="event-item">{approx_mark}'
+                            f'<a href="event.html#event-{html_mod.escape(ev_id)}" class="event-ref">'
+                            f'<span class="event-id">{html_mod.escape(ev_id)}</span> '
+                            f'{html_mod.escape(ev_name)}</a></li>'
+                        )
                 lines.append('      </ul>')
 
             lines.append('    </div>')
@@ -1820,6 +1841,37 @@ document.addEventListener('DOMContentLoaded', function() {
 # Main
 # ============================================================
 
+def load_lifespan_events():
+    """Load synthetic birth/death events emitted by build_lifespan_events.py and
+    merge them into the event index format expected by generate_timeline.
+
+    Returns {ce_year: [(event_id, event_name, ch_id, is_approx), ...]}.
+    """
+    fpath = os.path.join(BASE_DIR, 'kg', 'chronology', 'data', 'person_lifespan_events.json')
+    if not os.path.exists(fpath):
+        print('  (no person_lifespan_events.json — run kg/chronology/scripts/build_lifespan_events.py first)')
+        return {}
+    with open(fpath, encoding='utf-8') as f:
+        data = json.load(f)
+    result = {}
+    for yr_str, events in data.get('events', {}).items():
+        ce_year = int(yr_str)
+        result[ce_year] = [tuple(e) for e in events]
+    total = sum(len(v) for v in result.values())
+    print(f'  Lifespan events: {total} birth/death markers across {len(result)} years')
+    return result
+
+
+def merge_event_maps(base, extra):
+    """Merge two {ce_year: [events]} dicts, returning a new dict."""
+    merged = defaultdict(list)
+    for yr, evs in base.items():
+        merged[yr].extend(evs)
+    for yr, evs in extra.items():
+        merged[yr].extend(evs)
+    return dict(merged)
+
+
 def main():
     if '--extract-reigns' in sys.argv:
         # Phase 1 only
@@ -1838,8 +1890,11 @@ def main():
     year_map = disambiguate_years(reign_data)
     save_year_map(year_map)
 
-    # Phase 3: Load event index years
+    # Phase 3: Load event index years + merge lifespan-derived birth/death events
     event_year_map = load_event_index_years()
+    lifespan_events = load_lifespan_events()
+    if lifespan_events:
+        event_year_map = merge_event_maps(event_year_map, lifespan_events)
 
     # Phase 4: Generate timeline.html (pass year_state_map for comprehensive ruler display)
     generate_timeline(year_map, reign_data, event_year_map, year_state_map)

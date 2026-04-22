@@ -777,8 +777,9 @@ description: 历史事件公元纪年推断方法,基于年号表与在位年计
 | 文件 | 用途 |
 |------|------|
 | `kg/chronology/data/中国历史大事年表.md` | 交叉验证的ground truth，684个年份条目 |
-| `kg/chronology/data/史记编年表.md` | 《史记》编年大纲（上古→西汉），本工序的汇总输出，反向用作整体校验 |
-| `kg/entities/data/person_lifespans.json` | 人物生卒年（外部来源），用于无纪年事件的近似定位 |
+| `kg/chronology/data/史记编年表.md` | 《史记》编年大纲（上古→西汉），手写正文 + 由 `sync_chronology_md.py` 自动维护的"附录：主要人物生卒年" |
+| `kg/entities/data/person_lifespans.json` | 人物生卒年（外部来源），用于无纪年事件的近似定位 + 派生生卒事件注入 timeline |
+| `kg/chronology/data/person_lifespan_events.json` | 由 `build_lifespan_events.py` 筛选明确纪年并去重后的生/卒事件表（timeline Phase 3 自动合并） |
 
 ### 核心数据输出
 
@@ -821,15 +822,44 @@ python kg/events/scripts/build_year_map.py
    - 用 reign_periods 消歧为公元纪年（Mapped: 2127，Unresolved: 134）
    - 输出 `kg/chronology/data/year_ce_map.json`
 
-3. **Phase 3 — 事件索引年份 → event_year_map**
-   - `load_event_index_years()`：解析130章事件索引 `kg/events/data/`
-   - 提取时间字段的公元纪年（精确/推算/近似/区间）
-   - 输出：3077个带纪年的事件
+3. **Phase 3 — 事件索引年份 + 生卒年注入 → event_year_map**
+   - `load_event_index_years()`：解析130章事件索引 `kg/events/data/`，提取时间字段公元纪年（精确/推算/近似/区间）
+   - `load_lifespan_events()`：加载 `kg/chronology/data/person_lifespan_events.json`（由 `kg/chronology/scripts/build_lifespan_events.py` 派生），合并注入
+   - 合成事件 ID 前缀为 `LIFE-{人物}-生|卒`，与章节事件共享 event_year_map 数据结构
 
 4. **Phase 4 — 生成 timeline.html**
-   - 合并 year_ce_map + event_year_map（文本引用 + 事件）
+   - 合并 year_ce_map + event_year_map（文本引用 + 事件 + 生卒标记）
    - 用 year_state_map 为每年显示所有诸侯国君主纪年（>4国则折叠展示）
-   - 总计：835个年份，1956次文本引用，3077个事件
+   - 生卒事件渲染为带 `生`/`卒` 徽章的无链接条目（`LIFE-` 前缀触发特殊渲染）
+
+### 生卒年独立管线（SKILL_04c 子流程）
+
+```bash
+# 从 person_lifespans.json 派生明确纪年的生/卒事件 + 与已有章节事件去重
+python kg/chronology/scripts/build_lifespan_events.py
+#  → kg/chronology/data/person_lifespan_events.json
+
+# 将附录同步到 史记编年表.md 的 AUTO-GENERATED 区块
+python kg/chronology/scripts/sync_chronology_md.py
+#  → 幂等更新 kg/chronology/data/史记编年表.md 末尾的附录
+
+# 重跑主管线，timeline.html 自动包含新注入的生卒标记
+python kg/events/scripts/build_year_map.py
+```
+
+**筛选规则**（`is_explicit()`）：
+- 排除 `note == "传说"`
+- 排除 `note` 以 `"约"` 开头或仅含 `"约"` 无考证
+- 保留 `note` 为空、别名指向（如"商鞅→卫鞅"）、或含 `"在位"/"君主"/"即"` 等考证关键词
+
+**别名合并 / 主名选择**（`collect_alias_clusters()`）：
+- 以 `(birth, death)` 为键聚类同生卒年 person_key
+- `PREFERRED_MAIN_NAME` 硬编码主名覆盖（如 `{刘邦, 高祖, 高帝, 沛公} → 刘邦`）
+- `EXCLUDE_PERSONS` 排除上游占位人物（如蒙恬 != 秦始皇）
+
+**去重策略**（`load_existing_birth_death_events()`）：
+- 扫描所有 `kg/events/data/*_事件索引.md`，按 `(公元年, 生|卒)` 索引既有事件
+- 若同年同动作的事件名包含该人物任一别名，则跳过合成（避免"孔子生"与"033-023 孔子生"双重展示）
 
 **解析器设计要点**：
 - 十表无 `| 公元前` 列，用**行号计数法**（不是从单元格读年份）

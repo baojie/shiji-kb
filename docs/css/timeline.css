@@ -134,6 +134,42 @@
     cursor: default;
 }
 
+/* 生卒年标记（由 person_lifespans.json 派生） */
+.timeline-index .life-item {
+    list-style: none;
+    margin-left: -1.1em;
+}
+
+.timeline-index .life-badge {
+    display: inline-block;
+    min-width: 1.4em;
+    padding: 0 0.35em;
+    margin-right: 0.4em;
+    border-radius: 3px;
+    font-size: 0.82em;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    vertical-align: baseline;
+}
+
+.timeline-index .life-badge.life-生 {
+    background: #5fa05f;
+}
+
+.timeline-index .life-badge.life-卒 {
+    background: #9e6b6b;
+}
+
+.timeline-index .life-ref {
+    color: #4682B4;
+    text-decoration: none;
+}
+
+.timeline-index .life-ref:hover {
+    text-decoration: underline;
+}
+
 /* ── 响应式：窄屏单列 ── */
 @media (max-width: 900px) {
     .timeline-index .timeline-entry {
