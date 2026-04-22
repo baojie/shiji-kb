@@ -47,6 +47,24 @@ async function fetchFromArchive(months, offset, count) {
   return out;
 }
 
+/* Hero image 渲染. frontmatter 可指定:
+ *   image: images/xxx.jpg
+ *   image_caption: "刘邦画像, 清南薰殿旧藏"
+ *   image_credit: "Public Domain · 南薰殿"
+ * 图片放 wiki/public/images/. 加载失败时隐藏. */
+function renderHeroImage(front) {
+  const src = front.image;
+  if (!src) return '';
+  const caption = front.image_caption || '';
+  const credit = front.image_credit || '';
+  return `<figure class="hero-image">
+    <img src="${escapeHtml(src)}"
+         alt="${escapeHtml(caption)}"
+         onerror="this.closest('figure').style.display='none'">
+    ${caption ? `<figcaption>${escapeHtml(caption)}${credit ? ` <span class="credit">· ${escapeHtml(credit)}</span>` : ''}</figcaption>` : ''}
+  </figure>`;
+}
+
 function fmtTimestamp(iso) {
   // ISO → "2026-04-22 16:10" (本地时区)
   try {
@@ -63,7 +81,9 @@ export async function renderPage(core, pid, meta, mdText) {
 
   const tagsFooter = renderTagsFooter(front, meta);
   const historyLink = `<p class="page-history-link"><a href="#?history=${encodeURIComponent(pid)}">查看修订历史 →</a></p>`;
-  document.getElementById('article').innerHTML = html + historyLink + tagsFooter;
+  // Hero image (featured 页可选)
+  const heroImg = renderHeroImage(front);
+  document.getElementById('article').innerHTML = heroImg + html + historyLink + tagsFooter;
   const infoboxHtml = await renderInfobox(core, front, meta);
   document.getElementById('infobox').outerHTML = infoboxHtml;
 
@@ -126,12 +146,15 @@ export function renderHome(core) {
   const pages = core.registry.pages;
   const ids = Object.keys(pages);
 
-  // 代表人物: 优先按 quality_score, 否则 total_refs, 否则 id
+  // 代表页面: featured=true 优先, 再按 quality_score, 然后 total_refs, 然后 id
   const hasQuality = ids.some((id) => pages[id].quality_score != null);
   const hasRefs = ids.some((id) => pages[id].total_refs != null);
   const featured = ids
     .map((id) => ({ id, ...pages[id] }))
     .sort((a, b) => {
+      // featured 优先
+      const fa = a.featured ? 1 : 0, fb = b.featured ? 1 : 0;
+      if (fa !== fb) return fb - fa;
       if (hasQuality) {
         const d = (b.quality_score || 0) - (a.quality_score || 0);
         if (d !== 0) return d;
@@ -139,7 +162,7 @@ export function renderHome(core) {
       if (hasRefs) return (b.total_refs || 0) - (a.total_refs || 0);
       return a.id.localeCompare(b.id, 'zh');
     })
-    .slice(0, 6);
+    .slice(0, 8);  // user-req: 主页 8 个精品位
 
   const featuredHtml = featured.map(renderFeaturedCard).join('');
 

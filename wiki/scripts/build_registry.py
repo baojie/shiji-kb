@@ -83,6 +83,7 @@ def main() -> int:
             "label": meta.get("label", md.stem),
             "aliases": meta.get("aliases") or [],
             "tags": meta.get("tags") or [],
+            "featured": bool(meta.get("featured", False)),
             "path": md.relative_to(site_root).as_posix(),
         }
         pages[pid] = entry
