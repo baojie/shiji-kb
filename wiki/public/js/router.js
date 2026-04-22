@@ -3,7 +3,7 @@
 import { resolvePageId } from './registry.js';
 import {
   renderPage, renderHome, renderNotFound, renderCategory,
-  renderRecent, renderHistory, renderRevision, renderAll,
+  renderRecent, renderHistory, renderRevision, renderAll, renderDiff,
 } from './renderer.js';
 import { setStatus, showFatal } from './util.js';
 
@@ -37,6 +37,13 @@ async function route(core) {
       const page = params.get('history');
       try { await renderHistory(core, page); }
       catch (e) { showFatal(`history/${page}.json 加载失败：${e.message}`); }
+      setStatus(''); return;
+    }
+    if (params.has('diff')) {
+      const page = params.get('diff');
+      const rev = params.get('rev');
+      try { await renderDiff(core, page, rev); }
+      catch (e) { showFatal(`diff ${page} @ ${rev} 失败：${e.message}`); }
       setStatus(''); return;
     }
     if (params.has('revision')) {

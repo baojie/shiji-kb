@@ -114,7 +114,7 @@ def main() -> int:
 
     recent['entries'].insert(0, {'page': page, **entry})
 
-    # W5 v4 提案 11: recent.json 上限 500, 旧的月度归档
+    # W5 v4 提案 11 + user-req-7: recent.json 上限 500, 旧的月度归档
     ARCHIVE_LIMIT = 500
     if len(recent['entries']) > ARCHIVE_LIMIT:
         overflow = recent['entries'][ARCHIVE_LIMIT:]
@@ -122,6 +122,7 @@ def main() -> int:
         # 按月分卷归档
         archive_dir = PUBLIC / 'recent-archive'
         archive_dir.mkdir(exist_ok=True)
+        months_touched = set()
         for item in overflow:
             ym = item['timestamp'][:7]  # YYYY-MM
             arc = archive_dir / f'{ym}.json'
@@ -132,6 +133,22 @@ def main() -> int:
             data['entries'].append(item)
             arc.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n',
                           encoding='utf-8')
+            months_touched.add(ym)
+        # 维护 archive-index.json 供前端 renderRecent 翻页用
+        idx_file = archive_dir / 'index.json'
+        if idx_file.exists():
+            idx = json.loads(idx_file.read_text(encoding='utf-8'))
+        else:
+            idx = {'months': []}
+        by_month = {m['name']: m for m in idx['months']}
+        for ym in months_touched:
+            arc = archive_dir / f'{ym}.json'
+            data = json.loads(arc.read_text(encoding='utf-8'))
+            by_month[ym] = {'name': ym, 'count': len(data['entries'])}
+        idx['months'] = sorted(by_month.values(), key=lambda x: x['name'], reverse=True)
+        idx['total_archived'] = sum(m['count'] for m in idx['months'])
+        idx_file.write_text(json.dumps(idx, ensure_ascii=False, indent=2) + '\n',
+                           encoding='utf-8')
     recent['total_pages'] = len({e['page'] for e in recent['entries']})
     recent['total_revisions'] = len(recent['entries'])
     RECENT.write_text(

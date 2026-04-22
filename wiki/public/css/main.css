@@ -331,6 +331,48 @@ body.is-home .page { grid-template-columns: 1fr; }
 }
 .pager-gap { color: var(--fg-muted); padding: .3em .4em; }
 
+/* ---------- 版本 diff 页 ---------- */
+.diff-meta {
+  background: var(--bg-box);
+  padding: .8em 1em;
+  border-radius: 4px;
+  margin: 1em 0 1.5em;
+  font-family: var(--sans);
+  font-size: .9em;
+  line-height: 1.6;
+}
+.diff-meta code { background: white; padding: 1px 4px; border-radius: 2px; }
+.diff-meta .diff-summary { margin-top: .4em; color: var(--fg-muted); }
+.diff-added { color: #22863a; font-weight: 600; }
+.diff-removed { color: #cb2431; font-weight: 600; }
+.diff-body {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+.diff-line {
+  display: flex;
+  padding: 1px 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.diff-sign {
+  flex: 0 0 1.5em;
+  color: var(--fg-muted);
+  user-select: none;
+  text-align: center;
+}
+.diff-text { flex: 1; }
+.diff-same { background: #fff; color: var(--fg); }
+.diff-add  { background: #e6ffed; color: #22863a; }
+.diff-add .diff-sign { color: #22863a; font-weight: 600; }
+.diff-del  { background: #ffeef0; color: #cb2431; }
+.diff-del .diff-sign { color: #cb2431; font-weight: 600; }
+.sep { color: var(--border); margin: 0 .4em; }
+
 /* ---------- All 页 ---------- */
 .all-group {
   margin: 1.8em 0;

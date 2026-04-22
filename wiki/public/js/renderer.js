@@ -26,6 +26,27 @@ function buildPager(current, total) {
   return `<nav class="pager">${parts.join(' ')}</nav>`;
 }
 
+/* 从 recent-archive 取 [offset, offset+count) 的 entries.
+ * 月份文件按 index.json 排好最新在前, 每个文件 entries[] 内部也按时间倒序. */
+async function fetchFromArchive(months, offset, count) {
+  const out = [];
+  let skip = offset;
+  for (const m of months) {
+    if (m.count <= skip) { skip -= m.count; continue; }
+    const r = await fetch(`recent-archive/${encodeURIComponent(m.name)}.json`);
+    if (!r.ok) continue;
+    const data = await r.json();
+    // 归档文件按插入顺序, 较老的在后面. 但插入时每次 overflow 用 .append, 旧的在前,
+    // 所以我们要反转 (最新在前) 再 slice.
+    const entries = (data.entries || []).slice().reverse();
+    const take = entries.slice(skip, skip + (count - out.length));
+    out.push(...take);
+    skip = 0;
+    if (out.length >= count) break;
+  }
+  return out;
+}
+
 function fmtTimestamp(iso) {
   // ISO → "2026-04-22 16:10" (本地时区)
   try {
@@ -334,31 +355,61 @@ export function renderCategory(core, kind, value) {
 }
 
 /**
- * 最近修订页 (#?recent[&page=N]): 读 recent.json, 每页 50 条.
+ * 最近修订页 (#?recent[&page=N]): 读 recent.json (活跃 500 条), 超出则拉归档.
+ * user-req-7: 归档的历史也可翻页看到.
  */
 export async function renderRecent(core, pageNum = 1) {
   const r = await fetch('recent.json');
   if (!r.ok) throw new Error('HTTP ' + r.status);
   const data = await r.json();
-  const allEntries = data.entries || [];
+  const activeEntries = data.entries || [];
+
+  // 尝试读 archive-index.json
+  let archivedCount = 0;
+  let archiveMonths = [];  // [{name, count}, ...] 最新月在前
+  try {
+    const ai = await fetch('recent-archive/index.json');
+    if (ai.ok) {
+      const idx = await ai.json();
+      archiveMonths = idx.months || [];
+      archivedCount = idx.total_archived || 0;
+    }
+  } catch { /* no archive */ }
 
   const PAGE_SIZE = 50;
-  const totalEntries = allEntries.length;
+  const totalEntries = activeEntries.length + archivedCount;
   const totalPages = Math.max(1, Math.ceil(totalEntries / PAGE_SIZE));
   pageNum = Math.min(Math.max(1, pageNum), totalPages);
+
   const start = (pageNum - 1) * PAGE_SIZE;
-  const entries = allEntries.slice(start, start + PAGE_SIZE);
+  const end = start + PAGE_SIZE;
+
+  let entries;
+  if (end <= activeEntries.length) {
+    // 整页在活跃区
+    entries = activeEntries.slice(start, end);
+  } else if (start >= activeEntries.length) {
+    // 整页在归档区 — 按月累加定位
+    const offsetInArchive = start - activeEntries.length;
+    entries = await fetchFromArchive(archiveMonths, offsetInArchive, PAGE_SIZE);
+  } else {
+    // 跨界: 活跃尾 + 归档头
+    const activeTail = activeEntries.slice(start);
+    const fromArch = await fetchFromArchive(archiveMonths, 0, PAGE_SIZE - activeTail.length);
+    entries = activeTail.concat(fromArch);
+  }
 
   const rows = entries.map((e) => {
     const pageLink = `<a href="#${encodeURIComponent(e.page)}">${escapeHtml(e.page)}</a>`;
     const histLink = `<a href="#?history=${encodeURIComponent(e.page)}">历史</a>`;
     const revLink = `<a href="#?revision=${encodeURIComponent(e.page)}&rev=${encodeURIComponent(e.rev_id)}">${escapeHtml(e.rev_id)}</a>`;
+    const diffLink = `<a href="#?diff=${encodeURIComponent(e.page)}&rev=${encodeURIComponent(e.rev_id)}">diff</a>`;
     return `<tr>
       <td class="rc-time">${escapeHtml(fmtTimestamp(e.timestamp))}</td>
       <td class="rc-page">${pageLink}</td>
       <td class="rc-author">${escapeHtml(e.author)}</td>
       <td class="rc-summary">${escapeHtml(e.summary || '')}</td>
-      <td class="rc-rev">${revLink} · ${histLink}</td>
+      <td class="rc-rev">${revLink} · ${diffLink} · ${histLink}</td>
     </tr>`;
   }).join('');
 
@@ -402,11 +453,15 @@ export async function renderHistory(core, page) {
     const isLatest = rev.rev_id === data.latest_rev_id;
     const tag = isLatest ? ' <span class="rev-badge">最新</span>' : '';
     const revLink = `<a href="#?revision=${encodeURIComponent(page)}&rev=${encodeURIComponent(rev.rev_id)}">${escapeHtml(rev.rev_id)}</a>`;
+    const diffLink = rev.parent_rev
+      ? `<a href="#?diff=${encodeURIComponent(page)}&rev=${encodeURIComponent(rev.rev_id)}">diff</a>`
+      : '<span class="muted">diff</span>';
     return `<tr>
-      <td class="rc-time">${escapeHtml(fmtTimestamp(rev.timestamp))}</td>
+      <td class="rc-time">${escapeHtml(fmtTimestamp(rev.timestamp))}${tag}</td>
       <td class="rc-author">${escapeHtml(rev.author)}</td>
       <td class="rc-summary">${escapeHtml(rev.summary || '')}</td>
       <td class="rc-size">${rev.size} B</td>
+      <td class="rc-diff">${diffLink}</td>
       <td class="rc-rev">${revLink}${tag}</td>
     </tr>`;
   }).join('');
@@ -451,8 +506,9 @@ export async function renderRevision(core, page, revId) {
 
   const banner = `<div class="rev-banner">
     <strong>历史版本</strong> · 修订 <code>${escapeHtml(revId)}</code> ·
-    <a href="#${encodeURIComponent(page)}">→ 查看当前版本</a> ·
-    <a href="#?history=${encodeURIComponent(page)}">→ 全部修订</a>
+    <a href="#${encodeURIComponent(page)}">→ 当前版本</a> ·
+    <a href="#?history=${encodeURIComponent(page)}">→ 全部修订</a> ·
+    <a href="#?diff=${encodeURIComponent(page)}&rev=${encodeURIComponent(revId)}">→ vs 上版 diff</a>
   </div>`;
 
   document.getElementById('article').innerHTML = banner + html;
@@ -535,6 +591,97 @@ export function renderAll(core) {
   document.getElementById('src-info').textContent = 'pages.json';
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
+}
+
+/**
+ * 版本 diff 页 (#?diff=<page>&rev=<rev_id>): 显示该版 vs parent_rev 的行级 diff.
+ * user-req-8: 每个版本应可看上一个版本的 diff.
+ */
+export async function renderDiff(core, page, revId) {
+  const r = await fetch(`history/${encodeURIComponent(page)}.json`);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const data = await r.json();
+  const revs = data.revisions || [];
+  const cur = revs.find((x) => x.rev_id === revId);
+  if (!cur) throw new Error(`rev not found: ${revId}`);
+
+  let prevContent = '';
+  let prevRev = null;
+  if (cur.parent_rev) {
+    prevRev = revs.find((x) => x.rev_id === cur.parent_rev);
+    if (prevRev) prevContent = prevRev.content || '';
+  }
+  const curContent = cur.content || '';
+
+  const chunks = computeLineDiff(prevContent, curContent);
+  const diffHtml = renderDiffChunks(chunks);
+
+  const header = `<nav class="category-crumb">
+    <a href="#${encodeURIComponent(page)}">← ${escapeHtml(page)}</a>
+    <span class="sep">·</span>
+    <a href="#?history=${encodeURIComponent(page)}">所有修订</a>
+    <span class="sep">·</span>
+    <a href="#?revision=${encodeURIComponent(page)}&rev=${encodeURIComponent(revId)}">查看该版</a>
+  </nav>`;
+
+  const meta = `<div class="diff-meta">
+    <div><strong>本版:</strong> <code>${escapeHtml(revId)}</code> · ${escapeHtml(fmtTimestamp(cur.timestamp))} · ${escapeHtml(cur.author)}</div>
+    ${prevRev
+      ? `<div><strong>上版:</strong> <code>${escapeHtml(prevRev.rev_id)}</code> · ${escapeHtml(fmtTimestamp(prevRev.timestamp))} · ${escapeHtml(prevRev.author)}</div>`
+      : '<div><em>首个版本 (无上版), 全部显示为新增</em></div>'}
+    <div class="diff-summary">
+      <span class="diff-added">+${chunks.filter((c) => c.type === 'add').length}</span>
+      ·
+      <span class="diff-removed">-${chunks.filter((c) => c.type === 'del').length}</span>
+      行 · 摘要: <em>${escapeHtml(cur.summary || '(无)')}</em>
+    </div>
+  </div>`;
+
+  document.getElementById('article').innerHTML = header +
+    `<h1>版本差异 <small class="muted">${escapeHtml(page)}</small></h1>` +
+    meta + `<div class="diff-body">${diffHtml}</div>`;
+
+  const ib = document.getElementById('infobox');
+  ib.hidden = true; ib.innerHTML = '';
+  document.getElementById('crumb').textContent = `${page} diff ${revId}`;
+  document.title = `${page} diff · 史记 Wiki`;
+  document.getElementById('src-info').textContent = `history/${page}.json (diff ${revId} vs ${cur.parent_rev || 'null'})`;
+  document.getElementById('broken-info').textContent = '';
+  window.scrollTo(0, 0);
+}
+
+// 行级 LCS-based diff. 返回 [{type: 'same'|'add'|'del', line}, ...] 按新序.
+function computeLineDiff(oldText, newText) {
+  const o = oldText.split('\n');
+  const n = newText.split('\n');
+  const m = o.length, nn = n.length;
+  // DP
+  const dp = Array(m + 1).fill(null).map(() => new Int32Array(nn + 1));
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= nn; j++) {
+      dp[i][j] = o[i - 1] === n[j - 1]
+        ? dp[i - 1][j - 1] + 1
+        : Math.max(dp[i - 1][j], dp[i][j - 1]);
+    }
+  }
+  const res = [];
+  let i = m, j = nn;
+  while (i > 0 && j > 0) {
+    if (o[i - 1] === n[j - 1]) { res.push({ type: 'same', line: o[i - 1] }); i--; j--; }
+    else if (dp[i - 1][j] >= dp[i][j - 1]) { res.push({ type: 'del', line: o[i - 1] }); i--; }
+    else { res.push({ type: 'add', line: n[j - 1] }); j--; }
+  }
+  while (i > 0) { res.push({ type: 'del', line: o[i - 1] }); i--; }
+  while (j > 0) { res.push({ type: 'add', line: n[j - 1] }); j--; }
+  return res.reverse();
+}
+
+function renderDiffChunks(chunks) {
+  return chunks.map((c) => {
+    const cls = 'diff-line diff-' + c.type;
+    const sign = { same: ' ', add: '+', del: '-' }[c.type];
+    return `<div class="${cls}"><span class="diff-sign">${sign}</span><span class="diff-text">${escapeHtml(c.line)}</span></div>`;
+  }).join('');
 }
 
 export function renderNotFound(core, target) {
