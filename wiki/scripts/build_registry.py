@@ -123,6 +123,55 @@ def main() -> int:
         except Exception as exc:
             print(f"[warn] semantic.json 合并失败: {exc}", file=sys.stderr)
 
+    # 计算 quality_score 用于首页 featured 动态排序.
+    # 设计 (butler v0, 可反思调整):
+    #   base = total_refs // 20 (0-30 分)
+    #   + tag_bonus = min(len(tags), 4) * 2  (0-8)
+    #   + rev_bonus = min(revision_count - 1, 5) * 3  (0-15, 鼓励多次编辑)
+    #   + size_bonus = (size // 500) 到 max 10  (0-10, 越长越好)
+    #   + manual_bonus = 5 (auto_generated != true)
+    # 总分大概 0-70, featured 取高分前 N
+    history_dir = site_root / "history"
+    score_details = 0
+    for pid, entry in pages.items():
+        base = (entry.get("total_refs") or 0) // 20
+        tag_bonus = min(len(entry.get("tags") or []), 4) * 2
+
+        # 从 history/<pid>.json 读 revision_count 和 size
+        rev_count = 1
+        size = 0
+        hist_json = history_dir / f"{pid}.json"
+        if hist_json.exists():
+            try:
+                h = json.loads(hist_json.read_text(encoding="utf-8"))
+                rev_count = h.get("revision_count", 1)
+                if h.get("revisions"):
+                    size = h["revisions"][0].get("size", 0)
+            except Exception:
+                pass
+        rev_bonus = min(max(rev_count - 1, 0), 5) * 3
+        size_bonus = min(size // 500, 10)
+
+        # 是否手工精修
+        md_path = root / entry["path"][len("pages/"):]
+        manual_bonus = 5  # default 给予手写
+        try:
+            md_text = md_path.read_text(encoding="utf-8")
+            if "auto_generated: true" in md_text:
+                manual_bonus = 0
+        except Exception:
+            pass
+
+        entry["quality_score"] = (
+            base + tag_bonus + rev_bonus + size_bonus + manual_bonus
+        )
+        entry["_score_parts"] = {
+            "base_refs": base, "tags": tag_bonus, "revs": rev_bonus,
+            "size": size_bonus, "manual": manual_bonus,
+        }
+        score_details += 1
+    print(f"[enrich] {score_details} 页计算了 quality_score")
+
     out.write_text(json.dumps({
         "pages": pages,
         "alias_index": alias_index,

@@ -116,6 +116,18 @@ markdown 格式, 人和 butler 共读。
 
 **原始 2:1 规则 (v0.1, 历史留档)**: 每 3 次 invocation = 2 trail + 1 explore. 在队列大 (>10) 或小 (<5) 时不平衡.
 
+### 3.3 源耗尽降权 (v0.3, 2026-04-22 W5 v2 加)
+
+若近 N (=5) 次 explore 对某食物源, 输出候选 < 1 条, 该源权重 *= 0.5 保持下去, 直到产出恢复。
+避免强制比例压 butler 对已经饱和的源做无效探索 (如 SKU 只有 2 个, 都建了 topic 页后应停止轮询)。
+
+`source_access.json` 增一个字段:
+```json
+"B_sku": {"last": "...", "empty_streak": 3, "weight": 0.25}
+```
+
+选源时 `weight` 做 softmax 归一化。新源 / 有产出源自然胜出。
+
 ---
 
 ## 四、食物源轮换
