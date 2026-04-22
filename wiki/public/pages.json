@@ -3370,7 +3370,7 @@
         "诸侯王",
         "七国之乱"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/刘濞.md",
       "total_refs": 32,
       "total_chapters": 15,
@@ -3378,14 +3378,14 @@
         "birth": -216,
         "death": -154
       },
-      "quality_score": 21,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
-        "revs": 12,
-        "size": 2,
-        "manual": 0,
-        "narrative": 0
+        "revs": 15,
+        "size": 9,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "刘邦": {
@@ -6515,12 +6515,12 @@
         "death": -176,
         "note": "约"
       },
-      "quality_score": 44,
+      "quality_score": 45,
       "_score_parts": {
         "base_refs": 2,
         "tags": 8,
         "revs": 15,
-        "size": 6,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -6646,25 +6646,27 @@
       "type": "person",
       "label": "王陵",
       "aliases": [
-        "陵"
+        "陵",
+        "安国侯"
       ],
       "tags": [
-        "汉朝",
+        "汉初",
         "丞相",
-        "楚汉之际"
+        "白马盟",
+        "吕后"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/王陵.md",
       "total_refs": 21,
       "total_chapters": 7,
-      "quality_score": 26,
+      "quality_score": 44,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 6,
+        "tags": 8,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "王黄": {
@@ -6873,21 +6875,23 @@
         "石君"
       ],
       "tags": [
-        "汉朝",
-        "大臣"
+        "汉初",
+        "恭谨",
+        "万石君",
+        "家风"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/石奋.md",
       "total_refs": 15,
       "total_chapters": 5,
-      "quality_score": 14,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 4,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "秦始皇": {
@@ -10260,6 +10264,7 @@
     "温舒": "王温舒",
     "王离": "王离",
     "王陵": "王陵",
+    "安国侯": "王陵",
     "王黄": "王黄",
     "田单": "田单",
     "安平君": "田单",
@@ -10520,5 +10525,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T05:20:59"
+  "generated": "2026-04-23T05:25:29"
 }
