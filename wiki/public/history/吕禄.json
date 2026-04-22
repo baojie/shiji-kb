@@ -1,8 +1,35 @@
 {
   "page": "吕禄",
-  "latest_rev_id": "20260422-172450-36da33",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173846-dc37e2",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173846-dc37e2",
+      "timestamp": "2026-04-22T17:38:46+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173422-d163f4",
+      "content_hash": "sha256:dc37e2a462c1cfee49b91dbbc7eefbbfd60d829c89e09e34a5277fe89280e57d",
+      "size": 1145
+    },
+    {
+      "rev_id": "20260422-173422-d163f4",
+      "timestamp": "2026-04-22T17:34:22+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 吕禄",
+      "parent_rev": "20260422-173116-56cf9a",
+      "content_hash": "sha256:d163f43010ed81c211aae7c3c5e0b11e03a1dcfc543f1c90a474561f55be5cc8",
+      "size": 1205
+    },
+    {
+      "rev_id": "20260422-173116-56cf9a",
+      "timestamp": "2026-04-22T17:31:16+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 吕禄",
+      "parent_rev": "20260422-172450-36da33",
+      "content_hash": "sha256:56cf9a72ac49c9797b953bc492908240ed74f0981168edc18c84866540eda9c7",
+      "size": 1196
+    },
     {
       "rev_id": "20260422-172450-36da33",
       "timestamp": "2026-04-22T17:24:50+08:00",

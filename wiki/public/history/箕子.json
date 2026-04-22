@@ -1,8 +1,35 @@
 {
   "page": "箕子",
-  "latest_rev_id": "20260422-172453-87afd9",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173845-669114",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173845-669114",
+      "timestamp": "2026-04-22T17:38:45+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173423-4a9fe6",
+      "content_hash": "sha256:66911489629f08e1083292432b20d8b7e154f47eb56ef34a14984c3309ff904e",
+      "size": 858
+    },
+    {
+      "rev_id": "20260422-173423-4a9fe6",
+      "timestamp": "2026-04-22T17:34:23+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 箕子",
+      "parent_rev": "20260422-173115-ef57ed",
+      "content_hash": "sha256:4a9fe6737221c4a027e0daaf092dbc927a669dc06d41b9ba9810878f9bb64910",
+      "size": 860
+    },
+    {
+      "rev_id": "20260422-173115-ef57ed",
+      "timestamp": "2026-04-22T17:31:15+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 箕子",
+      "parent_rev": "20260422-172453-87afd9",
+      "content_hash": "sha256:ef57ed18ff7b7b6f86e9bf7123e000204add316c492111761b2e530a8697cf4a",
+      "size": 851
+    },
     {
       "rev_id": "20260422-172453-87afd9",
       "timestamp": "2026-04-22T17:24:53+08:00",

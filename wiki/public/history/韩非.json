@@ -1,8 +1,35 @@
 {
   "page": "韩非",
-  "latest_rev_id": "20260422-172451-002f95",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173845-56e789",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173845-56e789",
+      "timestamp": "2026-04-22T17:38:45+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173422-0fbd75",
+      "content_hash": "sha256:56e7893f650d0874d7a2fa73d34bab6a5ae9d68a65eaa2d5631d4721d5fc04e1",
+      "size": 920
+    },
+    {
+      "rev_id": "20260422-173422-0fbd75",
+      "timestamp": "2026-04-22T17:34:22+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 韩非",
+      "parent_rev": "20260422-173114-989762",
+      "content_hash": "sha256:0fbd75ba5c3da48b13ba5ff5fcc6fd4ac4c9a14919e358ffc625546d7a996c00",
+      "size": 918
+    },
+    {
+      "rev_id": "20260422-173114-989762",
+      "timestamp": "2026-04-22T17:31:14+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 韩非",
+      "parent_rev": "20260422-172451-002f95",
+      "content_hash": "sha256:989762c6ed350a7d41cf3813449f4a6fe1b3665b35c4d1f6ea9364762c5e20b9",
+      "size": 909
+    },
     {
       "rev_id": "20260422-172451-002f95",
       "timestamp": "2026-04-22T17:24:51+08:00",

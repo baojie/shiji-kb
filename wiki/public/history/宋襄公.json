@@ -1,8 +1,35 @@
 {
   "page": "宋襄公",
-  "latest_rev_id": "20260422-172452-f14b50",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173847-761373",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173847-761373",
+      "timestamp": "2026-04-22T17:38:47+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173422-09c459",
+      "content_hash": "sha256:7613739d17ee3fa6d37543eb5e3877d613518293dfc0259f1faddff12a8e5d7c",
+      "size": 999
+    },
+    {
+      "rev_id": "20260422-173422-09c459",
+      "timestamp": "2026-04-22T17:34:22+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 宋襄公",
+      "parent_rev": "20260422-173116-52d04b",
+      "content_hash": "sha256:09c459a3f2635ce7b89a52ba3692bdcac7b6b9fdceb761207f9a8c22ea01b851",
+      "size": 1011
+    },
+    {
+      "rev_id": "20260422-173116-52d04b",
+      "timestamp": "2026-04-22T17:31:16+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 宋襄公",
+      "parent_rev": "20260422-172452-f14b50",
+      "content_hash": "sha256:52d04bae30055d7e77805e02ac9f3521be251db016c7d0d198cc4e687f540b14",
+      "size": 996
+    },
     {
       "rev_id": "20260422-172452-f14b50",
       "timestamp": "2026-04-22T17:24:52+08:00",

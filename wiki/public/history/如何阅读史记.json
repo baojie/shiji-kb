@@ -1,8 +1,26 @@
 {
   "page": "如何阅读史记",
-  "latest_rev_id": "20260422-082800-e2f002",
-  "revision_count": 1,
+  "latest_rev_id": "20260422-173453-e2f002",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260422-173453-e2f002",
+      "timestamp": "2026-04-22T17:34:53+08:00",
+      "author": "butler",
+      "summary": "butler/fix: 移除 topic 页误加的 person.html 链",
+      "parent_rev": "20260422-173421-da716e",
+      "content_hash": "sha256:e2f0021838abb6373a067227afa0e1c9a049325f4040167ea1d0ba8ca46365be",
+      "size": 803
+    },
+    {
+      "rev_id": "20260422-173421-da716e",
+      "timestamp": "2026-04-22T17:34:21+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 如何阅读史记",
+      "parent_rev": "20260422-082800-e2f002",
+      "content_hash": "sha256:da716e89e644bb98229100cd080e1af9b1959255c269b3ac8c600842daca686b",
+      "size": 904
+    },
     {
       "rev_id": "20260422-082800-e2f002",
       "timestamp": "2026-04-22T08:28:00+00:00",

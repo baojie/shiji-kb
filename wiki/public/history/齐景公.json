@@ -1,8 +1,35 @@
 {
   "page": "齐景公",
-  "latest_rev_id": "20260422-172452-98b917",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173846-d67ba3",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173846-d67ba3",
+      "timestamp": "2026-04-22T17:38:46+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173420-0f901a",
+      "content_hash": "sha256:d67ba3648612ff95a71cb2dc7840213f7a2a21b6dae3a35ccea80451777dfe21",
+      "size": 929
+    },
+    {
+      "rev_id": "20260422-173420-0f901a",
+      "timestamp": "2026-04-22T17:34:20+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 齐景公",
+      "parent_rev": "20260422-173116-a2df90",
+      "content_hash": "sha256:0f901a012e46a7ceb6c9de884e0eccf2c80c65314073a7175521f61c347487df",
+      "size": 930
+    },
+    {
+      "rev_id": "20260422-173116-a2df90",
+      "timestamp": "2026-04-22T17:31:16+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 齐景公",
+      "parent_rev": "20260422-172452-98b917",
+      "content_hash": "sha256:a2df90abf1e81609ecd5aad97df4f9ceab86e2f3dfab79450186bf2a656a8c07",
+      "size": 915
+    },
     {
       "rev_id": "20260422-172452-98b917",
       "timestamp": "2026-04-22T17:24:52+08:00",

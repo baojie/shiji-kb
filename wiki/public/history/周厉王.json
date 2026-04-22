@@ -1,8 +1,44 @@
 {
   "page": "周厉王",
-  "latest_rev_id": "20260422-172453-d529ea",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173849-26bffd",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260422-173849-26bffd",
+      "timestamp": "2026-04-22T17:38:49+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173420-aed616",
+      "content_hash": "sha256:26bffd05b4fa6cee0cd57c17e2195ac43370bd76497a5cc99702d7dae24e1f63",
+      "size": 1054
+    },
+    {
+      "rev_id": "20260422-173420-aed616",
+      "timestamp": "2026-04-22T17:34:20+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 周厉王",
+      "parent_rev": "20260422-173118-0a8af7",
+      "content_hash": "sha256:aed6163ecffcb168d891033400b0fbc91d69e4172efbfcd52fa91fb1d6705efb",
+      "size": 1104
+    },
+    {
+      "rev_id": "20260422-173118-0a8af7",
+      "timestamp": "2026-04-22T17:31:18+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 周厉王",
+      "parent_rev": "20260422-173024-a5d431",
+      "content_hash": "sha256:0a8af75e410f0e4bd70a4f55702f185ac1865768bbb3e8cd083ace2bb233417e",
+      "size": 1021
+    },
+    {
+      "rev_id": "20260422-173024-a5d431",
+      "timestamp": "2026-04-22T17:30:24+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 周厉王",
+      "parent_rev": "20260422-172453-d529ea",
+      "content_hash": "sha256:a5d43146666859b33fde071b0f06a86342e90f3d4dc61d6a71277ad94f3c3ece",
+      "size": 1089
+    },
     {
       "rev_id": "20260422-172453-d529ea",
       "timestamp": "2026-04-22T17:24:53+08:00",

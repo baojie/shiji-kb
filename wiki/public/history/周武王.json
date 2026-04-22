@@ -1,8 +1,35 @@
 {
   "page": "周武王",
-  "latest_rev_id": "20260422-172945-7d6c7d",
-  "revision_count": 4,
+  "latest_rev_id": "20260422-173849-669ccf",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260422-173849-669ccf",
+      "timestamp": "2026-04-22T17:38:49+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173420-fab4fd",
+      "content_hash": "sha256:669ccf6f53bda6c3e82fd7a85fbdeff4d0d34bbc299b675f5748ca28e09cc142",
+      "size": 1362
+    },
+    {
+      "rev_id": "20260422-173420-fab4fd",
+      "timestamp": "2026-04-22T17:34:20+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 周武王",
+      "parent_rev": "20260422-173118-6fc28a",
+      "content_hash": "sha256:fab4fd90d1db4f34c112f4302be3de237f4cf892e085366fcf3905fb21ea18e5",
+      "size": 1331
+    },
+    {
+      "rev_id": "20260422-173118-6fc28a",
+      "timestamp": "2026-04-22T17:31:18+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 周武王",
+      "parent_rev": "20260422-172945-7d6c7d",
+      "content_hash": "sha256:6fc28a318c39d05c2832b17616c05c9d470c50fd909a415e9a092fa82d4cb602",
+      "size": 1248
+    },
     {
       "rev_id": "20260422-172945-7d6c7d",
       "timestamp": "2026-04-22T17:29:45+08:00",

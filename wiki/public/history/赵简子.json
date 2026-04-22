@@ -1,8 +1,44 @@
 {
   "page": "赵简子",
-  "latest_rev_id": "20260422-172451-f2952b",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173848-9fab86",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260422-173848-9fab86",
+      "timestamp": "2026-04-22T17:38:48+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173423-6bdb7f",
+      "content_hash": "sha256:9fab863e9c3385a8bc9f15e014a299bb1e04531cebc331eb886fcecd767f2370",
+      "size": 862
+    },
+    {
+      "rev_id": "20260422-173423-6bdb7f",
+      "timestamp": "2026-04-22T17:34:23+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 赵简子",
+      "parent_rev": "20260422-173117-fbbd3a",
+      "content_hash": "sha256:6bdb7f9082cb26f95f40687579136f53428ab6e0a53d752b689343807a42758b",
+      "size": 880
+    },
+    {
+      "rev_id": "20260422-173117-fbbd3a",
+      "timestamp": "2026-04-22T17:31:17+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 赵简子",
+      "parent_rev": "20260422-173024-c7be0c",
+      "content_hash": "sha256:fbbd3a9e33d5afdac9dedf1b1669adc25a6c6bb1021fae9c4369417bc4561cc1",
+      "size": 797
+    },
+    {
+      "rev_id": "20260422-173024-c7be0c",
+      "timestamp": "2026-04-22T17:30:24+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 赵简子",
+      "parent_rev": "20260422-172451-f2952b",
+      "content_hash": "sha256:c7be0c9cef8a9c123c44cbd504e2fa7b21fc367a8813ac603189198fc2cbc283",
+      "size": 865
+    },
     {
       "rev_id": "20260422-172451-f2952b",
       "timestamp": "2026-04-22T17:24:51+08:00",

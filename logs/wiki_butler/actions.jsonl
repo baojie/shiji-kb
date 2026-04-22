@@ -185,3 +185,27 @@
 {"ts":"2026-04-22T09:18:00Z","mode":"trail","action":"cite-doc-report-batch","source":"discover_doc.py + doc/lifespan_inference","rationale":"批量给有 lifespan 报告的页加引证行 (user-req-4 深度优先)","verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":25}
 {"ts":"2026-04-22T09:19:00Z","mode":"reflect-apply","action":"apply-user-req-4","target":"SKILL_W1 §3.4 + build_registry.py","rationale":"user 规则: median quality < 10 时优先深度; cite 加 +3 narrative","diff_lines":15,"verdict":"accept","commit":"pending"}
 {"ts":"2026-04-22T09:20:00Z","mode":"trail","action":"add-event-timeline-batch","affected_pages":13,"source":"kg/events/data/","rationale":"top 15 refs 页加生平大事 (user-req-4 深度优先)","verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":13}
+{"ts":"2026-04-22T09:22:00Z","mode":"trail","action":"add-event-timeline-batch2","affected_pages":30,"source":"kg/events/data/","rationale":"top 30-60 加时间线","verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":30}
+{"ts":"2026-04-22T09:23:00Z","mode":"trail","action":"enrich-timeline-full","affected_pages":90,"source":"kg/events/data/","rationale":"全量 enrich 可能有事件的页, 去 stub 标记","verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":90}
+{"ts":"2026-04-22T09:24:00Z","mode":"reflect","action":"reflect-w5","target":"logs/wiki_butler/reflections/2026-04-22-v5.md","source":"actions #150-190","verdict":"accept","commit":"pending","proposals":3}
+{"ts":"2026-04-22T09:25:00Z","mode":"reflect-apply","action":"apply-proposal-15","target":"various pages","rationale":"扩展条件清 stub 标记: 有 cite/timeline/≥3tags","diff_lines":14,"verdict":"accept","commit":"pending","affected_pages":14}
+{"ts":"2026-04-22T09:26:00Z","mode":"trail","action":"link-external-docs-batch","target":"151 pages","rationale":"加 docs/entities/person.html 外部索引链","verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":151}
+{"ts":"2026-04-22T09:27:00Z","mode":"maintenance","action":"rollback-topic-link","target":"2 topic pages","rationale":"修 topic 页误加 person.html 链","verdict":"accept","commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/嫪毐.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/公孙贺.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/秦襄公.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/赵孝成王.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/鲁景公.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/里克.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/叔孙通.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/赵衰.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/赵文子.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/齐襄王.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/齐简公.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/刘长.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/蒙骜.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/赵武灵王.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:28:00Z","mode":"trail","action":"create-stub","target":"wiki/public/pages/赵惠文王.md","diff_lines":20,"verdict":"accept","revision_recorded":true,"commit":"pending"}
+{"ts":"2026-04-22T09:29:00Z","mode":"trail","action":"add-tag-batch","affected_pages":15,"verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":15}
+{"ts":"2026-04-22T09:30:00Z","mode":"trail","action":"enrich-timeline-batch","affected_pages":15,"verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":15}
+{"ts":"2026-04-22T09:31:00Z","mode":"maintenance","action":"fix-timeline-annotations","target":"enrich_timeline.py + 146 pages","source":"用户反馈: 标注未渲染","rationale":"strip 〖TYPE value〗 / ⟦TYPE verb⟧ 保留 value, 清空括号噪音","verdict":"accept","revision_recorded":true,"commit":"pending","diff_lines":146}

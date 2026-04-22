@@ -1,8 +1,44 @@
 {
   "page": "仲由",
-  "latest_rev_id": "20260422-170107-e2223d",
-  "revision_count": 2,
+  "latest_rev_id": "20260422-173849-684986",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173849-684986",
+      "timestamp": "2026-04-22T17:38:49+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173421-ae2bd0",
+      "content_hash": "sha256:684986820b587b15d7a556e5c025da70b45035541765dcdd8bc5431588304b92",
+      "size": 778
+    },
+    {
+      "rev_id": "20260422-173421-ae2bd0",
+      "timestamp": "2026-04-22T17:34:21+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 仲由",
+      "parent_rev": "20260422-173118-488e01",
+      "content_hash": "sha256:ae2bd0356b89cb4667f4e2b6b48f7dc185707eda196f001b8d232046c9c8a52d",
+      "size": 777
+    },
+    {
+      "rev_id": "20260422-173118-488e01",
+      "timestamp": "2026-04-22T17:31:18+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 仲由",
+      "parent_rev": "20260422-173024-425500",
+      "content_hash": "sha256:488e019ddf9f693f5a6f6cf0d5f6de15116c82c94b3a4a0de72af2a98bdeaf60",
+      "size": 700
+    },
+    {
+      "rev_id": "20260422-173024-425500",
+      "timestamp": "2026-04-22T17:30:24+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 仲由",
+      "parent_rev": "20260422-170107-e2223d",
+      "content_hash": "sha256:42550090090237bae414e6d43d979bff1fcadead752074eccb2de2add99b4771",
+      "size": 768
+    },
     {
       "rev_id": "20260422-170107-e2223d",
       "timestamp": "2026-04-22T17:01:07+08:00",

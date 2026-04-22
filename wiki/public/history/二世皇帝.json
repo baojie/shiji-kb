@@ -1,8 +1,44 @@
 {
   "page": "二世皇帝",
-  "latest_rev_id": "20260422-172450-8d98ad",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173844-9fc44e",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260422-173844-9fc44e",
+      "timestamp": "2026-04-22T17:38:44+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173421-5312cb",
+      "content_hash": "sha256:9fc44e14740f7aba6d34ecc389bea320d4ac28a1702ce418d63f8ef2c9188298",
+      "size": 909
+    },
+    {
+      "rev_id": "20260422-173421-5312cb",
+      "timestamp": "2026-04-22T17:34:21+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 二世皇帝",
+      "parent_rev": "20260422-173114-e46132",
+      "content_hash": "sha256:5312cb4977ea18abdca518ebf2cdfea727b50e9fb4c6f39ab2ac29c8d2be1f0a",
+      "size": 924
+    },
+    {
+      "rev_id": "20260422-173114-e46132",
+      "timestamp": "2026-04-22T17:31:14+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 二世皇帝",
+      "parent_rev": "20260422-173022-cae66a",
+      "content_hash": "sha256:e4613260ae6450d7b6465dc345c6a6d80ea8db27124e7ec9fada88de492c829c",
+      "size": 835
+    },
+    {
+      "rev_id": "20260422-173022-cae66a",
+      "timestamp": "2026-04-22T17:30:22+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 二世皇帝",
+      "parent_rev": "20260422-172450-8d98ad",
+      "content_hash": "sha256:cae66ad53b362d73ad2e550f305e328637f21d368b01aa2c064a9940f8b5625b",
+      "size": 903
+    },
     {
       "rev_id": "20260422-172450-8d98ad",
       "timestamp": "2026-04-22T17:24:50+08:00",

@@ -1,8 +1,35 @@
 {
   "page": "晋惠公",
-  "latest_rev_id": "20260422-172452-c1079e",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173845-184f68",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173845-184f68",
+      "timestamp": "2026-04-22T17:38:45+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173420-a33907",
+      "content_hash": "sha256:184f684ee2d7a9f1e05084f37b40afa747bfa569adf5a3c6a2831375192d7543",
+      "size": 804
+    },
+    {
+      "rev_id": "20260422-173420-a33907",
+      "timestamp": "2026-04-22T17:34:20+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 晋惠公",
+      "parent_rev": "20260422-173115-f85ff4",
+      "content_hash": "sha256:a339074975c554e6a5aa5cf856ffb3af167d5f9f1ae7a62e77d58f269bee7929",
+      "size": 810
+    },
+    {
+      "rev_id": "20260422-173115-f85ff4",
+      "timestamp": "2026-04-22T17:31:15+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 晋惠公",
+      "parent_rev": "20260422-172452-c1079e",
+      "content_hash": "sha256:f85ff4256eaa63fd06288234eb593374ff301ad167ee24f5e83f5aaf7473300b",
+      "size": 795
+    },
     {
       "rev_id": "20260422-172452-c1079e",
       "timestamp": "2026-04-22T17:24:52+08:00",

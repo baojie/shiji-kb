@@ -1,8 +1,35 @@
 {
   "page": "晋襄公",
-  "latest_rev_id": "20260422-172452-053d5a",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173845-a58dc8",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173845-a58dc8",
+      "timestamp": "2026-04-22T17:38:45+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173421-13b9ab",
+      "content_hash": "sha256:a58dc8b918ae31a483e021d13f0ee234ffe28112a5001b48d77b56233f0f7f22",
+      "size": 1002
+    },
+    {
+      "rev_id": "20260422-173421-13b9ab",
+      "timestamp": "2026-04-22T17:34:21+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 晋襄公",
+      "parent_rev": "20260422-173115-3261f7",
+      "content_hash": "sha256:13b9aba579f4a53e73837e8033f2286d494aa1cb5556f6fa46d93c04beddd25c",
+      "size": 1051
+    },
+    {
+      "rev_id": "20260422-173115-3261f7",
+      "timestamp": "2026-04-22T17:31:15+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 晋襄公",
+      "parent_rev": "20260422-172452-053d5a",
+      "content_hash": "sha256:3261f771c3afb666402e844c666cb3ecb35e4650a59f0e31fe72ce70910c5469",
+      "size": 1036
+    },
     {
       "rev_id": "20260422-172452-053d5a",
       "timestamp": "2026-04-22T17:24:52+08:00",

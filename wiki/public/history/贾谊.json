@@ -1,8 +1,35 @@
 {
   "page": "贾谊",
-  "latest_rev_id": "20260422-172449-04f774",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173845-77d606",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173845-77d606",
+      "timestamp": "2026-04-22T17:38:45+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173419-12dea4",
+      "content_hash": "sha256:77d6061c0f561f8844ea07f808274bcdda22c87212f74f8d636d0b1666140627",
+      "size": 1240
+    },
+    {
+      "rev_id": "20260422-173419-12dea4",
+      "timestamp": "2026-04-22T17:34:19+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 贾谊",
+      "parent_rev": "20260422-173115-4311a0",
+      "content_hash": "sha256:12dea44b90c9f6b9fdbc4ecb8b2be44feacd2a1366f97fb77b50693113bd770b",
+      "size": 1239
+    },
+    {
+      "rev_id": "20260422-173115-4311a0",
+      "timestamp": "2026-04-22T17:31:15+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 贾谊",
+      "parent_rev": "20260422-172449-04f774",
+      "content_hash": "sha256:4311a0ea8cebd35a79fedff0505b175b382078f86b20e953e5cafe96b30d28b6",
+      "size": 1230
+    },
     {
       "rev_id": "20260422-172449-04f774",
       "timestamp": "2026-04-22T17:24:49+08:00",

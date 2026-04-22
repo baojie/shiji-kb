@@ -1,8 +1,44 @@
 {
   "page": "伍子胥",
-  "latest_rev_id": "20260422-172452-bc7045",
-  "revision_count": 4,
+  "latest_rev_id": "20260422-173848-f702d2",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260422-173848-f702d2",
+      "timestamp": "2026-04-22T17:38:48+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173421-924bcc",
+      "content_hash": "sha256:f702d217171896f8c100dcafff76a91b5bd6a2dac44eec1a051d0835a7ca9b6b",
+      "size": 1321
+    },
+    {
+      "rev_id": "20260422-173421-924bcc",
+      "timestamp": "2026-04-22T17:34:21+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 伍子胥",
+      "parent_rev": "20260422-173117-334cc8",
+      "content_hash": "sha256:924bcccc8aecb2f0455701be3b4d745bb09f98375f9ab0c6625b4b907a7dbc16",
+      "size": 1295
+    },
+    {
+      "rev_id": "20260422-173117-334cc8",
+      "timestamp": "2026-04-22T17:31:17+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 伍子胥",
+      "parent_rev": "20260422-173023-19589c",
+      "content_hash": "sha256:334cc85d773ee4aa45057c005c29b95889325343160f6f04fadbc42d9b25c772",
+      "size": 1212
+    },
+    {
+      "rev_id": "20260422-173023-19589c",
+      "timestamp": "2026-04-22T17:30:23+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 伍子胥",
+      "parent_rev": "20260422-172452-bc7045",
+      "content_hash": "sha256:19589ccd9117ba182861c8d4547c9c8224edb86ee9a024f790501828aad9331f",
+      "size": 1280
+    },
     {
       "rev_id": "20260422-172452-bc7045",
       "timestamp": "2026-04-22T17:24:52+08:00",

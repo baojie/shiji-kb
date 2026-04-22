@@ -1,8 +1,35 @@
 {
   "page": "老子",
-  "latest_rev_id": "20260422-172450-2a34a7",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173845-99fcae",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260422-173845-99fcae",
+      "timestamp": "2026-04-22T17:38:45+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173421-2c44e0",
+      "content_hash": "sha256:99fcae44406677f11a2aab4cf28c44eeb72cbceebcdc4c23fe53195e32e77d34",
+      "size": 929
+    },
+    {
+      "rev_id": "20260422-173421-2c44e0",
+      "timestamp": "2026-04-22T17:34:21+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 老子",
+      "parent_rev": "20260422-173115-6bb990",
+      "content_hash": "sha256:2c44e07295a26a89d6693d39a08b42e2822d497a2b5324ee40fe474a14ad8550",
+      "size": 921
+    },
+    {
+      "rev_id": "20260422-173115-6bb990",
+      "timestamp": "2026-04-22T17:31:15+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 老子",
+      "parent_rev": "20260422-172450-2a34a7",
+      "content_hash": "sha256:6bb990ff580045b6860467168fcb6ac7a24036840e235050cfc663537cbfc4cd",
+      "size": 912
+    },
     {
       "rev_id": "20260422-172450-2a34a7",
       "timestamp": "2026-04-22T17:24:50+08:00",

@@ -22,3 +22,6 @@
 2026-04-22  w5-v4-12    build_registry.py   alias_conflicts.json 输出冲突详情. [reflections/2026-04-22-v4.md]
 2026-04-22  w5-v4-13    discover_doc.py     新脚本扫 doc/lifespan_inference 输出 P2 cite-doc-report 候选. [reflections/2026-04-22-v4.md]
 2026-04-22  user-req-4  SKILL_W1 §3.4 + build_registry.py  median quality < 10 时优先深度 (enrich > create-stub); cite-doc 加 +3 narrative_bonus. 响应用户反馈"基本都是空骨架". [ad-hoc]
+2026-04-22  w5-v5-15    clean-stub 条件扩展  tags≥3 OR cite OR timeline → 清 stub 标记. [reflections/2026-04-22-v5.md]
+2026-04-22  w5-v5-16    link-external-docs  批量给 151 页加 docs/entities/person.html 索引链 (topic 页 rollback). [reflections/2026-04-22-v5.md]
+2026-04-22  user-req-5  enrich_timeline.py  strip_annotations: 清 〖TYPE value〗/⟦TYPE verb⟧ 保 value, clean_field 去括号噪音, 146 页 timeline 全量重写. [ad-hoc · user feedback]

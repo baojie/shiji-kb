@@ -1,8 +1,44 @@
 {
   "page": "陈平",
-  "latest_rev_id": "20260422-172449-f2f4aa",
-  "revision_count": 4,
+  "latest_rev_id": "20260422-173844-2fd18a",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260422-173844-2fd18a",
+      "timestamp": "2026-04-22T17:38:44+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173419-28f7c0",
+      "content_hash": "sha256:2fd18a2e59d52ee98c658bf0a34687251a2018dc7a128d14c9e24d206a2f6dd7",
+      "size": 1201
+    },
+    {
+      "rev_id": "20260422-173419-28f7c0",
+      "timestamp": "2026-04-22T17:34:19+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 陈平",
+      "parent_rev": "20260422-173114-e6097c",
+      "content_hash": "sha256:28f7c0e89622dc5cc747eea756d3474d25edc79c99964a48d339fa72cb10e680",
+      "size": 1190
+    },
+    {
+      "rev_id": "20260422-173114-e6097c",
+      "timestamp": "2026-04-22T17:31:14+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 陈平",
+      "parent_rev": "20260422-173022-64d1a6",
+      "content_hash": "sha256:e6097c12dd70159cd99e344f6ad6133f376aba4ddec3c6169cbf32fbdcb3bce4",
+      "size": 1113
+    },
+    {
+      "rev_id": "20260422-173022-64d1a6",
+      "timestamp": "2026-04-22T17:30:22+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 陈平",
+      "parent_rev": "20260422-172449-f2f4aa",
+      "content_hash": "sha256:64d1a61ee0661dda2183f89e09644c5a735054706ed874e6a1c0c027238a4f41",
+      "size": 1181
+    },
     {
       "rev_id": "20260422-172449-f2f4aa",
       "timestamp": "2026-04-22T17:24:49+08:00",

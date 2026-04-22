@@ -67,20 +67,46 @@ def extract_events(chapter_slug, person_names):
     return events
 
 
-def clean_tag(s):
-    """去掉 〖@xxx〗 标注符号, 只留 inner."""
-    return re.sub(r'〖[^〗]*?(?:\|([^〗]+))?〗', lambda m: m.group(1) or
-                  re.sub(r'^[^|]+?', '', m.group(0).strip('〖〗')), s)
+def strip_annotations(s):
+    """去 〖TYPE value〗 / 〖TYPE value|canonical〗 / ⟦TYPE verb⟧, 保留 value.
+    TYPE 是单字符标记 (%, @, ;, =, ◆, ◇, ◈, ◉, ○, #, &, ^, [, •, $, _, !, {, +, ~, :, ?)."""
+    def repl_noun(m):
+        c = m.group(1)
+        before_pipe = c.split('|', 1)[0]
+        # 首字符 TYPE marker, 其余为 value
+        return before_pipe[1:] if len(before_pipe) > 1 else before_pipe
+    s = re.sub(r'〖([^〗]+)〗', repl_noun, s)
+    s = re.sub(r'⟦([^⟧]+)⟧', repl_noun, s)
+    return s
+
+
+def clean_field(s):
+    """清标注 + 去括号里仅剩分隔符的噪音."""
+    s = strip_annotations(s)
+    # 去方括号 [公元前...]
+    s = re.sub(r'\[(.+?)\]', r'\1', s)
+    # 归并多余空白
+    s = re.sub(r'\s+', ' ', s).strip()
+    # 空括号/仅分隔 ( 、 ) → 空
+    if s in {'-', '—', '、', ',', '。', ''}:
+        return ''
+    return s
 
 
 def build_timeline_section(events, max_n=8):
     events = events[:max_n]
     lines = ['## 生平大事 (自 kg 事件索引)', '']
     for e in events:
-        # 清理标注
-        where = re.sub(r'〖[^〗]+〗', '', e['where']).strip() or '—'
-        time = re.sub(r'\[(.+?)\]', r'\1', e['time']).strip()
-        lines.append(f"- {time} · {e['name']}（{where}）  [{e['id']}]")
+        t = clean_field(e['time'])
+        w = clean_field(e['where'])
+        name = clean_field(e['name'])
+        parts = [t] if t else []
+        parts.append(name)
+        line = ' · '.join(parts)
+        if w:
+            line += f'（{w}）'
+        line += f'  [`{e["id"]}`]'
+        lines.append(f'- {line}')
     lines.append('')
     return '\n'.join(lines)
 

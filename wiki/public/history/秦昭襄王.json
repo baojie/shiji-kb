@@ -1,8 +1,35 @@
 {
   "page": "秦昭襄王",
-  "latest_rev_id": "20260422-172945-f5e188",
-  "revision_count": 4,
+  "latest_rev_id": "20260422-173847-be629a",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260422-173847-be629a",
+      "timestamp": "2026-04-22T17:38:47+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173422-16bfff",
+      "content_hash": "sha256:be629a6ab30839e163e43d8cd6bf96d592c268b22a3383dd093d891823097b0d",
+      "size": 1328
+    },
+    {
+      "rev_id": "20260422-173422-16bfff",
+      "timestamp": "2026-04-22T17:34:22+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 秦昭襄王",
+      "parent_rev": "20260422-173116-400da9",
+      "content_hash": "sha256:16bfff26364f2272b62893b83d8dd78ee6383dfa51431ec44cc0f1d5768e349e",
+      "size": 1312
+    },
+    {
+      "rev_id": "20260422-173116-400da9",
+      "timestamp": "2026-04-22T17:31:16+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 秦昭襄王",
+      "parent_rev": "20260422-172945-f5e188",
+      "content_hash": "sha256:400da99d1915082926a74f315c04c6e27e566c8af6c0c6e75e1c245e0139f2a5",
+      "size": 1223
+    },
     {
       "rev_id": "20260422-172945-f5e188",
       "timestamp": "2026-04-22T17:29:45+08:00",

@@ -1,8 +1,44 @@
 {
   "page": "彭越",
-  "latest_rev_id": "20260422-172450-d2ce6e",
-  "revision_count": 4,
+  "latest_rev_id": "20260422-173846-c4dca4",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260422-173846-c4dca4",
+      "timestamp": "2026-04-22T17:38:46+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173421-1df330",
+      "content_hash": "sha256:c4dca446629f94fa7cda20a348eef0f2598f38d2dee9cf432d2d72e3a166da0e",
+      "size": 1197
+    },
+    {
+      "rev_id": "20260422-173421-1df330",
+      "timestamp": "2026-04-22T17:34:21+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 彭越",
+      "parent_rev": "20260422-173116-6e7aa4",
+      "content_hash": "sha256:1df330210e3d678f1262576b5a9dad7f55e65f055f47041eed7dbf1f7f79891a",
+      "size": 1240
+    },
+    {
+      "rev_id": "20260422-173116-6e7aa4",
+      "timestamp": "2026-04-22T17:31:16+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 彭越",
+      "parent_rev": "20260422-173023-e5a3d3",
+      "content_hash": "sha256:6e7aa4c6dbe1570bca30bbd2b7772da14e948be0563fe3146e9f8a93a2674952",
+      "size": 1163
+    },
+    {
+      "rev_id": "20260422-173023-e5a3d3",
+      "timestamp": "2026-04-22T17:30:23+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 彭越",
+      "parent_rev": "20260422-172450-d2ce6e",
+      "content_hash": "sha256:e5a3d373166b7a7baa36e76d70483e05ff2ac956b6c6b07f5e093d6f5c6ed763",
+      "size": 1231
+    },
     {
       "rev_id": "20260422-172450-d2ce6e",
       "timestamp": "2026-04-22T17:24:50+08:00",

@@ -1,8 +1,44 @@
 {
   "page": "楚怀王",
-  "latest_rev_id": "20260422-172451-0b0048",
-  "revision_count": 4,
+  "latest_rev_id": "20260422-173844-265b99",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260422-173844-265b99",
+      "timestamp": "2026-04-22T17:38:44+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173422-56f041",
+      "content_hash": "sha256:265b997e23ff17e720a6934b3862ef6f5f674abc4d5ac16e56f862996364d98d",
+      "size": 997
+    },
+    {
+      "rev_id": "20260422-173422-56f041",
+      "timestamp": "2026-04-22T17:34:22+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 楚怀王",
+      "parent_rev": "20260422-173114-7df340",
+      "content_hash": "sha256:56f041912036d1c89f591e98a0dd6705b8219c6ad0bc2a99de44733bdba6c784",
+      "size": 978
+    },
+    {
+      "rev_id": "20260422-173114-7df340",
+      "timestamp": "2026-04-22T17:31:14+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 楚怀王",
+      "parent_rev": "20260422-173022-8b2492",
+      "content_hash": "sha256:7df340a4f5f7e3c50ed355589ecf1efec78571e91d800f94101b57efd7ee33dc",
+      "size": 895
+    },
+    {
+      "rev_id": "20260422-173022-8b2492",
+      "timestamp": "2026-04-22T17:30:22+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 楚怀王",
+      "parent_rev": "20260422-172451-0b0048",
+      "content_hash": "sha256:8b2492dd694180f9c2997c67170f38fc1bacef02c872af459f0e89e45e172df3",
+      "size": 963
+    },
     {
       "rev_id": "20260422-172451-0b0048",
       "timestamp": "2026-04-22T17:24:51+08:00",

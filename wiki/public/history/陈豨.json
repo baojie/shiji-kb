@@ -1,8 +1,44 @@
 {
   "page": "陈豨",
-  "latest_rev_id": "20260422-172449-80fce2",
-  "revision_count": 3,
+  "latest_rev_id": "20260422-173844-d250b0",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260422-173844-d250b0",
+      "timestamp": "2026-04-22T17:38:44+08:00",
+      "author": "butler",
+      "summary": "butler/fix-timeline: 清标注符号",
+      "parent_rev": "20260422-173419-d8897f",
+      "content_hash": "sha256:d250b02c38559a16798d7bd70cc908eed544dfd6baaa32ed3f4c81b3c69538ef",
+      "size": 1012
+    },
+    {
+      "rev_id": "20260422-173419-d8897f",
+      "timestamp": "2026-04-22T17:34:19+08:00",
+      "author": "butler",
+      "summary": "butler/link-external-docs: 陈豨",
+      "parent_rev": "20260422-173114-276cca",
+      "content_hash": "sha256:d8897f99265d89a7cd7e9a335370e6df3aefa1f38015ddc1de29ce384afdb425",
+      "size": 1059
+    },
+    {
+      "rev_id": "20260422-173114-276cca",
+      "timestamp": "2026-04-22T17:31:14+08:00",
+      "author": "butler",
+      "summary": "butler/enrich-timeline: 陈豨",
+      "parent_rev": "20260422-173022-f02276",
+      "content_hash": "sha256:276cca99872f55b6ed65f6bf9a3ca4e7666b7424803d3fe8f5d159ceb2374495",
+      "size": 982
+    },
+    {
+      "rev_id": "20260422-173022-f02276",
+      "timestamp": "2026-04-22T17:30:22+08:00",
+      "author": "butler",
+      "summary": "butler/add-event-timeline: 陈豨",
+      "parent_rev": "20260422-172449-80fce2",
+      "content_hash": "sha256:f02276ee2f38f92cebdcf974d13559b9a5d9009b0a552089242a384ce0fdbf2b",
+      "size": 1050
+    },
     {
       "rev_id": "20260422-172449-80fce2",
       "timestamp": "2026-04-22T17:24:49+08:00",
