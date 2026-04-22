@@ -22,17 +22,31 @@
 
         .toc { margin-bottom: 40px; padding: 20px; background: #fafafa; border-radius: 5px; border: 1px solid #eee; }
         .toc h2 { font-size: 1.3em; color: #8b4513; margin-bottom: 12px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
-        .toc-chapter { margin: 12px 0; }
-        .toc-chapter-title { font-weight: bold; color: #444; font-size: 1.02em; }
+        .toc-chapter { margin: 10px 0; line-height: 2.1; font-size: 0.95em; padding-bottom: 6px; border-bottom: 1px dashed #eee; }
+        .toc-chapter:last-child { border-bottom: none; }
+        .toc-chapter-title { font-weight: bold; color: #8b4513; margin-right: 6px; }
         .toc-chapter-title a { color: #8b4513; text-decoration: none; }
         .toc-chapter-title a:hover { text-decoration: underline; }
-        .toc-stories { list-style: none; padding-left: 20px; margin-top: 4px; }
-        .toc-stories li { margin: 3px 0; font-size: 0.95em; color: #555; }
-        .toc-stories li a { color: #666; text-decoration: none; }
-        .toc-stories li a:hover { color: #8b4513; text-decoration: underline; }
-        .toc-stories li .status-planned { color: #bbb; font-style: italic; }
-        .toc-stories li .status-done::before { content: "● "; color: #8b4513; font-size: 0.7em; }
-        .toc-stories li .status-planned::before { content: "○ "; color: #bbb; font-size: 0.7em; }
+        .toc-chapter-count { color: #999; font-size: 0.85em; font-weight: normal; margin-right: 6px; }
+        .toc-story-link {
+            display: inline-block;
+            color: #555;
+            text-decoration: none;
+            background: #fff;
+            border: 1px solid #e8dcc8;
+            border-radius: 3px;
+            padding: 1px 8px;
+            margin: 2px 2px;
+            font-size: 0.9em;
+            line-height: 1.5;
+            transition: background .15s, border-color .15s;
+        }
+        .toc-story-link:hover {
+            background: #8b4513;
+            border-color: #8b4513;
+            color: #fff;
+        }
+        .status-planned { color: #bbb; font-style: italic; }
 
         .chapter-section { margin: 50px 0; padding-top: 20px; border-top: 2px solid #e8d9c0; }
         .chapter-section > h2 { color: #8b4513; font-size: 1.6em; margin-bottom: 20px; }
@@ -130,24 +144,19 @@ async function main() {
     document.getElementById('stat-stories').textContent = totalStories;
     document.getElementById('stat-done').textContent = doneStories;
 
-    // TOC
+    // TOC (compact: one line per chapter)
     const tocBody = document.getElementById('toc-body');
-    tocBody.innerHTML = chapters.map(ch => `
+    tocBody.innerHTML = chapters.map(ch => {
+        const storyLinks = ch.stories.map(s =>
+            `<a class="toc-story-link ${s.status==='planned'?'status-planned':''}" href="#${s.id}">${escapeHtml(s.title)}</a>`
+        ).join('');
+        return `
         <div class="toc-chapter">
-            <div class="toc-chapter-title">
-                <a href="#ch-${ch.chapter_num}">${ch.chapter_num} ${escapeHtml(ch.chapter_title)}</a>
-                <span style="color:#999; font-weight:normal; font-size:0.88em;">（${ch.stories.length} 个故事）</span>
-            </div>
-            <ul class="toc-stories">
-                ${ch.stories.map(s => `
-                    <li>
-                        <a href="#${s.id}"><span class="status-${s.status || 'planned'}">${escapeHtml(s.title)}</span></a>
-                        <span style="color:#aaa; font-size:0.9em;"> — ${escapeHtml(s.summary || '')}</span>
-                    </li>
-                `).join('')}
-            </ul>
-        </div>
-    `).join('');
+            <span class="toc-chapter-title"><a href="#ch-${ch.chapter_num}">${ch.chapter_num} ${escapeHtml(ch.chapter_title)}</a></span>
+            <span class="toc-chapter-count">（${ch.stories.length}）</span>
+            ${storyLinks}
+        </div>`;
+    }).join('');
 
     // Chapters body: fetch each chapter's full data
     const chBody = document.getElementById('chapters-body');
@@ -192,9 +201,10 @@ async function main() {
     }));
     chBody.innerHTML = chapterHtmls.join('');
 
-    // Scroll to hash if present
+    // Scroll to hash if present (use getElementById to handle digit-starting IDs)
     if (location.hash) {
-        const el = document.querySelector(location.hash);
+        const id = decodeURIComponent(location.hash.slice(1));
+        const el = document.getElementById(id);
         if (el) el.scrollIntoView();
     }
 }
