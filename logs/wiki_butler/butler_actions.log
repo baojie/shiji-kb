@@ -6,3 +6,14 @@
   feature: 主页"随机页→"按钮 (home-links nav)
   feature: compute_knowledge.py 排除 special type页
   K: 14470.48  pages=361  links=1822/2316(78.7%)  revs=1325
+
+[2026-04-23T02:10] cycle=continued
+  expanded: 吕雉(2010B), 周武王(1928B), 秦昭襄王(1925B) → featured=31
+  user-btw: 实体本体概念应作为tag（已部分实践，待系统化）
+  K: 14652.24  pages=361  links=1867/2370(78.8%)  revs=1328
+
+[2026-04-23T02:20] cycle=continued
+  expanded: 尧(1789B), 姬旦(2062B), 公孙弘(1680B) → featured=36
+  fix: record_revision.py 改存 UTC 时间戳（前端 fmtTimestamp 已正确转本地时间）
+  K: 14865.24  pages=361  links=1925/2438(79.0%)  revs=1333
+  user-btw: 时间戳改 UTC，旧数据lint任务后续处理

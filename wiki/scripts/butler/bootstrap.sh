@@ -67,6 +67,7 @@ JSONL
 
 # 知识量快照
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+python "$SCRIPT_DIR/scan_plugins.py" 2>&1 || true
 python "$SCRIPT_DIR/compute_knowledge.py" 2>&1 || true
 
 echo ""

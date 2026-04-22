@@ -5,6 +5,7 @@ import {
   renderPage, renderHome, renderNotFound, renderCategory,
   renderRecent, renderHistory, renderRevision, renderAll, renderDiff,
 } from './renderer.js';
+import { renderSpecialSettings, renderSpecialPlugins, renderSpecialAll } from './special.js';
 import { setStatus, showFatal } from './util.js';
 
 export function setupRouter(core) {
@@ -84,6 +85,18 @@ async function route(core) {
     setStatus('');
     return;
   }
+  if (raw === 'Special:Settings') {
+    renderSpecialSettings(core);
+    setStatus(''); return;
+  }
+  if (raw === 'Special:Plugins') {
+    renderSpecialPlugins(core);
+    setStatus(''); return;
+  }
+  if (raw === 'Special:All') {
+    renderSpecialAll(core);
+    setStatus(''); return;
+  }
 
   const resolved = resolvePageId(raw, core.registry);
   if (!resolved) {
@@ -97,6 +110,20 @@ async function route(core) {
     const r = await fetch(meta.path);
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const mdText = await r.text();
+
+    // Redirect syntax: first non-empty line is "#REDIRECT [[目标]]"
+    const firstLine = mdText.split('\n').find(l => l.trim());
+    const redirectMatch = firstLine && firstLine.match(/^#REDIRECT\s+\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/);
+    if (redirectMatch) {
+      const target = redirectMatch[1].trim();
+      const targetResolved = resolvePageId(target, core.registry);
+      if (targetResolved) {
+        location.hash = encodeURIComponent(targetResolved[0]);
+        setStatus('');
+        return;
+      }
+    }
+
     await renderPage(core, pid, meta, mdText);
     setStatus('');
   } catch (e) {

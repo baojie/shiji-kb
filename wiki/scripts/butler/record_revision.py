@@ -33,10 +33,13 @@ HIST = PUBLIC / 'history'
 RECENT = PUBLIC / 'recent.json'
 
 TZ_BJ = timezone(timedelta(hours=8))
+TZ_UTC = timezone.utc
 
 
 def iso_with_colon(dt):
     s = dt.strftime('%Y-%m-%dT%H:%M:%S%z')
+    if s.endswith('+0000'):
+        return s[:-5] + 'Z'
     return s[:-2] + ':' + s[-2:]  # +0800 → +08:00
 
 
@@ -61,9 +64,10 @@ def main() -> int:
     if args.timestamp:
         now = datetime.fromisoformat(args.timestamp)
         if now.tzinfo is None:
-            now = now.replace(tzinfo=TZ_BJ)
+            now = now.replace(tzinfo=TZ_UTC)
+        now = now.astimezone(TZ_UTC)
     else:
-        now = datetime.now(TZ_BJ)
+        now = datetime.now(TZ_UTC)  # 存 UTC，前端转本地时间
 
     rev_id = f'{now.strftime("%Y%m%d-%H%M%S")}-{sha[:6]}'
     ts_iso = iso_with_colon(now)

@@ -663,3 +663,38 @@ footer code {
   margin-left: .8em;
   opacity: .85;
 }
+
+/* 源码查看面板 */
+.src-link { color: var(--fg-muted); font-size: 13px; }
+.src-toggle {
+  background: none; border: 1px solid var(--fg-muted);
+  border-radius: 3px; padding: 1px 6px; font-size: 12px;
+  cursor: pointer; color: var(--fg-muted);
+}
+.src-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.src-panel {
+  margin: 1em 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-box);
+  overflow: auto;
+  max-height: 70vh;
+}
+.src-pre {
+  margin: 0;
+  padding: 1em;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--mono, monospace);
+}
+
+.k-title-link { color: inherit; text-decoration: none; }
+.k-title-link:hover { text-decoration: underline; color: var(--accent); }
+
+/* Special: 系统页 */
+.settings-table { width: 100%; border-collapse: collapse; }
+.settings-table th, .settings-table td { padding: .6em .8em; border-bottom: 1px solid var(--border); vertical-align: top; }
+.toggle-label { cursor: pointer; display: flex; align-items: center; gap: .4em; justify-content: center; }
+.toggle-label input { width: 1.1em; height: 1.1em; cursor: pointer; }

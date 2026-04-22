@@ -52,18 +52,25 @@ async function loadPlugins(core) {
     return; // 无 manifest = 无插件
   }
   for (const entry of (manifest.plugins || [])) {
+    // 支持旧格式（字符串路径）和新格式（对象 {id, entry, ...}）
+    const pluginPath = typeof entry === 'string' ? entry : entry.entry;
+    const pluginId   = typeof entry === 'string' ? entry : entry.id;
     try {
-      const mod = await import('../' + entry);
+      const mod = await import('../' + pluginPath);
       const p = mod.default;
       if (!p || typeof p.init !== 'function') {
-        console.warn(`[plugin] ${entry} 缺少 default.init`);
+        console.warn(`[plugin] ${pluginId} 缺少 default.init`);
         continue;
       }
       await p.init(core);
-      core.plugins.push({ name: p.name || entry, version: p.version });
-      console.log(`[plugin] ${p.name || entry} v${p.version || '?'} loaded`);
+      core.plugins.push({
+        name: p.name || pluginId,
+        version: p.version || entry.version || '?',
+        description: entry.description || '',
+      });
+      console.log(`[plugin] ${p.name || pluginId} v${p.version || '?'} loaded`);
     } catch (e) {
-      console.error(`[plugin] ${entry} 加载失败:`, e);
+      console.error(`[plugin] ${pluginId} 加载失败:`, e);
     }
   }
 }

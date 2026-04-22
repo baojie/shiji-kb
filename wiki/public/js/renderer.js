@@ -91,7 +91,24 @@ export async function renderPage(core, pid, meta, mdText) {
   document.getElementById('crumb').textContent =
     (TYPE_LABELS[meta.type] || meta.type) + ' / ' + label;
   document.title = label + ' · 史记 Wiki';
-  document.getElementById('src-info').textContent = '源: ' + meta.path;
+
+  // 源码查看按钮（只读编辑界面）
+  const srcSpan = document.getElementById('src-info');
+  srcSpan.innerHTML = `<a href="${escapeHtml(meta.path)}" class="src-link" target="_blank">源: ${escapeHtml(meta.path)}</a>` +
+    ` · <button class="src-toggle" id="src-toggle-btn">查看源码</button>`;
+  // 确保旧 panel 不残留
+  let srcPanel = document.getElementById('src-panel');
+  if (srcPanel) srcPanel.remove();
+  document.getElementById('src-toggle-btn').addEventListener('click', () => {
+    let panel = document.getElementById('src-panel');
+    if (panel) { panel.remove(); return; }
+    panel = document.createElement('div');
+    panel.id = 'src-panel';
+    panel.className = 'src-panel';
+    panel.innerHTML = `<pre class="src-pre">${escapeHtml(mdText)}</pre>`;
+    document.getElementById('article').insertAdjacentElement('afterend', panel);
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 
   const brokenInfo = document.getElementById('broken-info');
   if (broken.length) {
@@ -228,7 +245,7 @@ export function renderHome(core) {
     }
 
     panel.innerHTML = `
-      <h3>📊 知识量 <span class="k-value">${k.K.toLocaleString()}</span>
+      <h3>📊 <a href="#${encodeURIComponent('Special:知识量')}" class="k-title-link">知识量</a> <span class="k-value">${k.K.toLocaleString()}</span>
         ${sparkSvg}
       </h3>
       <div class="k-row">

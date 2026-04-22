@@ -1,3 +1,12 @@
 {
-  "plugins": []
+  "plugins": [
+    {
+      "id": "math",
+      "entry": "plugins/math/index.js",
+      "name": "KaTeX 数学公式",
+      "version": "1.0.0",
+      "description": "渲染页面中的 $...$ 行内公式和 $$...$$ 块级公式（需联网加载 KaTeX CDN）",
+      "settings_key": "math"
+    }
+  ]
 }

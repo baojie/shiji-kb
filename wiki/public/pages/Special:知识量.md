@@ -89,8 +89,9 @@ $$k_{\text{page}} = \log_2(1 + B) \times (1 + D) \times W \times Q$$
 
 ## 相关页面
 
-- [[Special:系统信息]] — 知识库整体统计
-- [[Special:最近修改]] — 最近编辑历史
+- [[Special:Settings]] — 插件开关（启用数学公式渲染）
+- [[Special:Plugins]] — 已安装插件列表
+- [[Special:All]] — 所有特殊页面索引
 
 ---
 
