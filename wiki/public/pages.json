@@ -3233,24 +3233,27 @@
       "label": "公孙贺",
       "aliases": [
         "葛绎侯",
-        "贺"
+        "贺",
+        "南窌侯"
       ],
       "tags": [
         "汉朝",
-        "武将"
+        "武将",
+        "丞相",
+        "汉武帝时代"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/公孙贺.md",
       "total_refs": 20,
       "total_chapters": 6,
-      "quality_score": 15,
+      "quality_score": 40,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 4,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "刘兴居": {
@@ -7455,24 +7458,27 @@
       "type": "person",
       "label": "苏建",
       "aliases": [
-        "建"
+        "建",
+        "平陵侯",
+        "右将军苏建"
       ],
       "tags": [
         "汉朝",
-        "武将"
+        "武将",
+        "汉武帝时代"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/苏建.md",
       "total_refs": 16,
       "total_chapters": 4,
-      "quality_score": 14,
+      "quality_score": 38,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 4,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 6,
+        "revs": 12,
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "英布": {
@@ -9623,14 +9629,15 @@
       "label": "齐襄公",
       "aliases": [
         "襄公",
-        "齐侯"
+        "齐侯",
+        "诸儿"
       ],
       "tags": [
         "春秋",
         "齐国",
         "世家人物"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/齐襄公.md",
       "total_refs": 31,
       "total_chapters": 11,
@@ -9639,14 +9646,14 @@
         "birth": -697,
         "note": "齐国君主，在位12年，桓公元年为前685年，襄公死于前一年..."
       },
-      "quality_score": 26,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 1,
         "tags": 6,
         "revs": 15,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "齐襄王": {
@@ -9963,6 +9970,7 @@
     "公孙敖": "公孙敖",
     "公孙贺": "公孙贺",
     "葛绎侯": "公孙贺",
+    "南窌侯": "公孙贺",
     "刘兴居": "刘兴居",
     "东牟": "刘兴居",
     "兴居": "刘兴居",
@@ -10358,6 +10366,8 @@
     "苏代": "苏代",
     "苏子": "苏代",
     "苏建": "苏建",
+    "平陵侯": "苏建",
+    "右将军苏建": "苏建",
     "英布": "英布",
     "黥布": "英布",
     "淮南王": "英布",
@@ -10543,9 +10553,10 @@
     "简公": "齐简公",
     "齐襄公": "齐襄公",
     "齐侯": "齐襄公",
+    "诸儿": "齐襄公",
     "齐襄王": "齐襄王",
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T05:50:45"
+  "generated": "2026-04-23T06:02:30"
 }
