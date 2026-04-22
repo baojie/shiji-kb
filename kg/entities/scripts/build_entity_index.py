@@ -44,6 +44,8 @@ PERSON_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'person_categorie
 PERSON_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'person_confidence.json'
 FEUDAL_STATE_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'feudal_state_categories.json'
 FEUDAL_STATE_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'feudal_state_confidence.json'
+IDENTITY_CAT_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'identity_categories.json'
+IDENTITY_CONF_FILE = _PROJECT_ROOT / 'kg' / 'entities' / 'data' / 'identity_confidence.json'
 EVENT_DIR = _PROJECT_ROOT / 'kg' / 'events' / 'data'
 
 # 实体类型定义: (type_key, regex_pattern, css_class, chinese_label, html_filename)
@@ -81,6 +83,55 @@ VERB_TYPES = [
 
 # 段落编号模式
 PARA_NUM_PATTERN = r'\[(\d+(?:\.\d+)*)\]'
+
+
+def _build_table_row_anchors(content):
+    """扫描文件，为每张表格的数据行生成与 render_shiji_html.py 一致的 rN 锚点。
+
+    返回 {line_index: 'rN'}：行首为 '|' 的数据行按章内累计计数；若显式
+    `[rN]` 则用 N（与 render 侧逻辑一致，计数器不因显式标记而前移）。
+    """
+    anchors = {}
+    lines = content.split('\n')
+    row_counter = 0
+    i, n = 0, len(lines)
+    while i < n:
+        stripped = lines[i].strip()
+        if stripped.startswith('|') and '|' in stripped[1:]:
+            block = []
+            j = i
+            while j < n and lines[j].strip().startswith('|'):
+                block.append(j)
+                j += 1
+            if len(block) >= 2:
+                # 第二行是否为分隔行（--- | --- | ...）
+                sep = lines[block[1]].strip().replace('-', '')
+                data_start = 2 if re.match(r'^[\s|:-]+$', sep) else 1
+                for idx in block[data_start:]:
+                    row_text = lines[idx].strip()
+                    first_cell = row_text[1:].split('|', 1)[0] if row_text.startswith('|') else ''
+                    m = re.match(r'^\s*\[r(\d+)\]\s*', first_cell)
+                    if m:
+                        rn = m.group(1)
+                    else:
+                        row_counter += 1
+                        rn = str(row_counter)
+                    anchors[idx] = f'r{rn}'
+            i = j
+        else:
+            i += 1
+    return anchors
+
+
+def _para_sort_key(para_num):
+    """段落排序键：数字段落（1.2 在前）与行锚点（rN 在后）"""
+    if para_num.startswith('r') and para_num[1:].isdigit():
+        return (1, [int(para_num[1:])])
+    try:
+        return (0, [int(x) for x in para_num.split('.')])
+    except ValueError:
+        return (2, [0])
+
 
 def is_valid_entity(surface):
     """检查提取的实体名是否合法（白名单：只允许汉字和阿拉伯数字）"""
@@ -126,14 +177,21 @@ def extract_entities_from_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
+    # 十表等章节的表格行：用 rN 锚点（与 render_shiji_html 同步）
+    row_anchor_map = _build_table_row_anchors(content)
+
     lines = content.split('\n')
     current_para = '0'
 
-    for line in lines:
-        # 更新当前段落号（取行中第一个段落编号）
-        pn_matches = list(re.finditer(PARA_NUM_PATTERN, line))
-        if pn_matches:
-            current_para = pn_matches[0].group(1)
+    for idx, line in enumerate(lines):
+        if idx in row_anchor_map:
+            # 表格数据行：用 rN 锚点（覆盖本行范围的 current_para）
+            current_para = row_anchor_map[idx]
+        else:
+            # 非表格行：取行中第一个段落编号
+            pn_matches = list(re.finditer(PARA_NUM_PATTERN, line))
+            if pn_matches:
+                current_para = pn_matches[0].group(1)
 
         # 提取各类实体
         for type_key, pattern, css_class, label, _ in ENTITY_TYPES:
@@ -417,7 +475,7 @@ def build_index(chapter_dir, alias_map, disambig_map=None):
         for canonical, entry in index[type_key].items():
             # 去重：同一章同一段落只记录一次
             unique_refs = sorted(set(entry['refs']),
-                                 key=lambda r: (r[0], [int(x) for x in r[1].split('.')]))
+                                 key=lambda r: (r[0], _para_sort_key(r[1])))
             entry['refs'] = unique_refs
             # aliases 转为排序列表
             entry['aliases'] = sorted(entry['aliases'])
@@ -610,6 +668,37 @@ def _load_feudal_state_confidence():
         return {}
 
 
+def _load_identity_categories():
+    """加载身份分类数据，返回 {name: [cat, ...]}。"""
+    if not IDENTITY_CAT_FILE.exists():
+        return {}
+    try:
+        with open(IDENTITY_CAT_FILE, encoding='utf-8') as f:
+            data = json.load(f)
+        out = {}
+        for k, v in data.items():
+            if isinstance(v, list):
+                out[k] = v
+            elif isinstance(v, str):
+                out[k] = [v] if v else []
+            else:
+                out[k] = []
+        return out
+    except Exception:
+        return {}
+
+
+def _load_identity_confidence():
+    """加载身份置信度 {name: {cat: conf}}。若文件不存在返回空字典。"""
+    if not IDENTITY_CONF_FILE.exists():
+        return {}
+    try:
+        with open(IDENTITY_CONF_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
 # 地段分类 -> CSS 修饰类（用于上色）
 PLACE_CATEGORY_CSS = {
     '水域': 'cat-river',    # 江河湖泊 + 海洋合并
@@ -674,6 +763,26 @@ FEUDAL_STATE_CATEGORY_CSS = {
 }
 
 
+# 身份分类 -> CSS 修饰类（与 classify_identities.py 14 主类 + 误标/泛称对应）
+IDENTITY_CATEGORY_CSS = {
+    '君主':     'cat-ruler',
+    '宗室皇族': 'cat-prince',
+    '后妃侍妾': 'cat-consort',
+    '爵衔通称': 'cat-emperor',
+    '臣属泛称': 'cat-chancellor',
+    '士人儒生': 'cat-scholar',
+    '军旅兵员': 'cat-military',
+    '宾客门徒': 'cat-retainer',
+    '百姓庶民': 'cat-commoner',
+    '血缘亲属': 'cat-kin',
+    '工商贫富': 'cat-merchant',
+    '罪囚奴役': 'cat-outcast',
+    '外邦异族': 'cat-foreign',
+    '泛称其它': 'cat-generic',
+    '人名误标': 'cat-person-mis',
+}
+
+
 # 人名身份分类 -> CSS 修饰类（与 SKILL_03j 对应）
 PERSON_CATEGORY_CSS = {
     '帝王':    'cat-emperor',
@@ -722,6 +831,8 @@ def generate_type_page(type_key, css_class, label, filename, entries):
     person_confidence = _load_person_confidence() if type_key == 'person' else {}
     feudal_state_categories = _load_feudal_state_categories() if type_key == 'feudal-state' else {}
     feudal_state_confidence = _load_feudal_state_confidence() if type_key == 'feudal-state' else {}
+    identity_categories = _load_identity_categories() if type_key == 'identity' else {}
+    identity_confidence = _load_identity_confidence() if type_key == 'identity' else {}
 
     # 根据 type_key 选择分类源；categorized_type 表示"有分类功能"的类型
     if type_key == 'place':
@@ -740,6 +851,10 @@ def generate_type_page(type_key, css_class, label, filename, entries):
         cat_source = feudal_state_categories
         conf_source = feudal_state_confidence
         cat_css_map = FEUDAL_STATE_CATEGORY_CSS
+    elif type_key == 'identity':
+        cat_source = identity_categories
+        conf_source = identity_confidence
+        cat_css_map = IDENTITY_CATEGORY_CSS
     else:
         cat_source = {}
         conf_source = {}

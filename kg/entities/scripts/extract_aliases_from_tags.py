@@ -70,6 +70,39 @@ ENTITY_TYPES = [
 PARA_NUM_PATTERN = r'\[(\d+(?:\.\d+)*)\]'
 
 
+def _build_table_row_anchors(content):
+    """为每张表格数据行生成 rN 锚点（与 render_shiji_html.py 行号规则一致）"""
+    anchors = {}
+    lines = content.split('\n')
+    row_counter = 0
+    i, n = 0, len(lines)
+    while i < n:
+        stripped = lines[i].strip()
+        if stripped.startswith('|') and '|' in stripped[1:]:
+            block = []
+            j = i
+            while j < n and lines[j].strip().startswith('|'):
+                block.append(j)
+                j += 1
+            if len(block) >= 2:
+                sep = lines[block[1]].strip().replace('-', '')
+                data_start = 2 if re.match(r'^[\s|:-]+$', sep) else 1
+                for idx in block[data_start:]:
+                    row_text = lines[idx].strip()
+                    first_cell = row_text[1:].split('|', 1)[0] if row_text.startswith('|') else ''
+                    m = re.match(r'^\s*\[r(\d+)\]\s*', first_cell)
+                    if m:
+                        rn = m.group(1)
+                    else:
+                        row_counter += 1
+                        rn = str(row_counter)
+                    anchors[idx] = f'r{rn}'
+            i = j
+        else:
+            i += 1
+    return anchors
+
+
 def extract_inline_aliases():
     """扫描所有 tagged.md，提取 〖TYPE X|Y〗 内联消歧对。
 
@@ -80,12 +113,16 @@ def extract_inline_aliases():
     for fpath in sorted(CHAPTER_DIR.glob('*.tagged.md')):
         chap = fpath.stem.replace('.tagged', '')
         content = fpath.read_text(encoding='utf-8')
+        row_anchor_map = _build_table_row_anchors(content)
         current_para = '0'
 
-        for line in content.split('\n'):
-            pn = re.search(PARA_NUM_PATTERN, line)
-            if pn:
-                current_para = pn.group(1)
+        for idx, line in enumerate(content.split('\n')):
+            if idx in row_anchor_map:
+                current_para = row_anchor_map[idx]
+            else:
+                pn = re.search(PARA_NUM_PATTERN, line)
+                if pn:
+                    current_para = pn.group(1)
             for type_key, pat in ENTITY_TYPES:
                 for m in re.finditer(pat, line):
                     raw = m.group(1).strip()
@@ -119,8 +156,61 @@ def load_disambig_map():
     return records
 
 
+# 不加国名前缀的 所属国（上古/三代/外邦/汉朝 — 谥号单独足以识别或另有命名约定）
+_NO_PREFIX_GUO = {
+    '上古', '夏', '商', '殷', '商（殷）', '汉',
+    '匈奴', '南越', '东越', '闽越', '东越（东瓯）', '夜郎', '滇',
+    '箕子朝鲜', '卫氏朝鲜',
+    '翟', '塞', '雍', '临菑',
+}
+
+
+def _normalize_guo(guo):
+    """把 rulers.json 的 所属国 字段标准化为用作 canonical 的国名前缀；
+    返回空串表示不加前缀。"""
+    if not guo:
+        return ''
+    # 剥离括号备注：'齐（田齐）' → '齐'；'胶东国（景帝子所封）' → '胶东国'
+    g = re.sub(r'[（(].*?[）)]', '', guo).strip()
+    # 前缀特殊判定：带"国"后缀的汉侯国（梁国/代国/河间国/…）去掉"国"
+    if g.endswith('国') and len(g) > 1:
+        g = g[:-1]
+    # 吴/越/赵/燕/... 等原本就是单字
+    # 不加前缀的情形
+    if g in _NO_PREFIX_GUO:
+        return ''
+    if '朝鲜' in g:
+        return ''
+    return g
+
+
+# 传统谥号模式：1-2 字 + 公/王/侯/伯/君/子（总长 ≤3）
+# 覆盖 "穆公"/"昭王"/"惠文王"/"武灵王"/"孝成王" 等，
+# 排除 "西楚霸王"(4字)/"始皇帝" 等自号。
+_CONVENTIONAL_SHIHAO_RE = re.compile(r'^[\u4e00-\u9fff]{1,2}[公王侯伯君子]$')
+
+
+def _ruler_canonical(r):
+    """构造 ruler 的 canonical：所属国前缀 + 谥号；若无 谥号 退回 名。
+    - 已含前缀则不重复追加
+    - 特殊 所属国（上古/夏/商/匈奴/…）不加前缀
+    - 仅传统 "XX公/XX王/XX侯/..." 才加前缀；自号如 "西楚霸王"/"始皇帝" 保留原形
+    """
+    shihao = (r.get('谥号') or '').strip()
+    if shihao:
+        prefix = _normalize_guo(r.get('所属国') or '')
+        if prefix and not shihao.startswith(prefix) \
+                and _CONVENTIONAL_SHIHAO_RE.match(shihao):
+            return prefix + shihao
+        return shihao
+    return (r.get('名') or '').strip()
+
+
 def load_rulers():
-    """rulers.json 的别名字段 → {(surface, canonical): set()}（refs 空）."""
+    """rulers.json 的别名字段 → {(surface, canonical): set()}（refs 空）.
+
+    canonical 构造规则见 _ruler_canonical：所属国+谥号（避免裸谥号歧义）。
+    """
     records = defaultdict(set)
     if not RULERS_JSON.exists():
         return records
@@ -128,9 +218,13 @@ def load_rulers():
         data = json.load(f)
     rulers = data.get('rulers', [])
     for r in rulers:
-        canonical = (r.get('谥号') or r.get('名') or '').strip()
+        canonical = _ruler_canonical(r)
         if not canonical:
             continue
+        # 裸谥号本身作为别名 → 指向带前缀 canonical（覆盖 rulers.json 旧 alias 结构）
+        shihao = (r.get('谥号') or '').strip()
+        if shihao and shihao != canonical:
+            records[(shihao, canonical)].add(('rulers.json', '*'))
         aliases = r.get('别名') or []
         if not isinstance(aliases, list):
             continue
@@ -146,12 +240,38 @@ def load_rulers():
     return records
 
 
+# 可用作 canonical 前缀的诸侯邦国（单字+双字）
+_CANONICAL_STATE_PREFIXES = {
+    '周', '秦', '齐', '鲁', '晋', '楚', '燕', '赵', '魏', '韩',
+    '宋', '郑', '卫', '陈', '蔡', '曹', '吴', '越', '虢', '杞',
+    '徐', '邾', '滕', '许', '莒', '代', '梁', '中山', '东周', '西周',
+    '吕', '薛',
+}
+
+
+def _promote_state_prefixed_canonical(canonical, aliases):
+    """若 aliases 中存在 '{state}+canonical' 形式（如 '秦穆公'、'周文王'），
+    则返回该形式作为真正 canonical；否则返回原 canonical。
+    用于修正 鲍捷 md / legacy 里用裸谥号作 canonical 的历史问题。"""
+    for alias in aliases:
+        if not alias or alias == canonical:
+            continue
+        if alias.endswith(canonical) and len(alias) > len(canonical):
+            prefix = alias[:-len(canonical)]
+            if prefix in _CANONICAL_STATE_PREFIXES:
+                return alias
+    return canonical
+
+
 def load_baojie_md():
     """解析 private/to鲍捷 史记里的人名.md 的称呼对照。
 
     格式示例：
         黄帝：有熊氏、帝轩辕、轩辕、黄宗（《竹书纪年》）、...
         商鞅：商君、卫鞅、公孙鞅、鞅（《战国策·秦策》）、...
+
+    归一化：若首列是裸谥号（穆公/昭王/…）且别名列含 {国}+canonical
+    （秦穆公/周昭王），则把带前缀形作为真正 canonical，避免裸谥号歧义。
     """
     records = defaultdict(set)
     if not BAOJIE_MD.exists():
@@ -166,16 +286,22 @@ def load_baojie_md():
             continue
         canonical = m.group(1).strip()
         aliases_part = m.group(2).strip()
-        # 按"、"分割，去掉括号及内部注明来源
+        # 先 parse 出 clean alias 列表
+        clean_aliases = []
         for alias in re.split(r'[、，,]', aliases_part):
             alias = re.sub(r'[（(][^）)]*[）)]', '', alias).strip()
             alias = alias.strip('"" """"\'\'')
-            if not alias or alias == '无' or alias == canonical:
+            if not alias or alias == '无':
                 continue
-            # 过滤过长或非汉字项
             if len(alias) > 12:
                 continue
             if not re.match(r'^[\u4e00-\u9fff]+$', alias):
+                continue
+            clean_aliases.append(alias)
+        # 提升带国名前缀的 alias 为真 canonical
+        canonical = _promote_state_prefixed_canonical(canonical, clean_aliases)
+        for alias in clean_aliases:
+            if alias == canonical:
                 continue
             records[(alias, canonical)].add(('baojie_md', '*'))
     return records
