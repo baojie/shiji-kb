@@ -2889,21 +2889,23 @@
         "靖王"
       ],
       "tags": [
-        "汉朝",
-        "诸侯王"
+        "西汉",
+        "诸侯王",
+        "乐酒好内",
+        "五宗"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/中山靖王.md",
       "total_refs": 25,
       "total_chapters": 5,
-      "quality_score": 7,
+      "quality_score": 36,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 4,
-        "revs": 6,
-        "size": 1,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 9,
+        "size": 5,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "主父偃": {
@@ -3332,15 +3334,17 @@
       "type": "person",
       "label": "刘武",
       "aliases": [
-        "惠王",
-        "武"
+        "梁孝王",
+        "孝王"
       ],
       "tags": [
-        "汉朝",
-        "诸侯王",
-        "梁王"
+        "西汉",
+        "梁王",
+        "七国之乱",
+        "窦太后",
+        "袁盎"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/刘武.md",
       "total_refs": 18,
       "total_chapters": 7,
@@ -3348,14 +3352,14 @@
         "birth": -184,
         "death": -144
       },
-      "quality_score": 16,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 0
+        "tags": 8,
+        "revs": 12,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "刘濞": {
@@ -5950,12 +5954,12 @@
         "birth": -528,
         "note": "楚国君主，在位13年，即公子弃疾，伍子胥复仇的对象..."
       },
-      "quality_score": 43,
+      "quality_score": 47,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
         "revs": 15,
-        "size": 6,
+        "size": 10,
         "manual": 5,
         "narrative": 8
       }
@@ -9424,23 +9428,23 @@
         "齐悼"
       ],
       "tags": [
-        "汉朝",
-        "诸侯王",
+        "汉初",
         "齐国",
-        "世家人物"
+        "高祖长庶子",
+        "吕后"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/齐悼惠王.md",
       "total_refs": 28,
       "total_chapters": 10,
-      "quality_score": 22,
+      "quality_score": 41,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
-        "revs": 9,
-        "size": 1,
-        "manual": 0,
-        "narrative": 3
+        "revs": 12,
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "齐惠公": {
@@ -9953,7 +9957,8 @@
     "娄敬": "刘敬",
     "奉春君": "刘敬",
     "刘武": "刘武",
-    "惠王": "刘武",
+    "梁孝王": "刘武",
+    "孝王": "刘武",
     "刘濞": "刘濞",
     "吴王": "刘濞",
     "刘邦": "刘邦",
@@ -10190,7 +10195,6 @@
     "武安君李牧": "李牧",
     "栾布": "栾布",
     "栾公": "栾布",
-    "梁孝王": "梁孝王",
     "梁王": "梁孝王",
     "楚元王": "楚元王",
     "元王": "楚元王",
@@ -10205,6 +10209,7 @@
     "怀王熊槐": "楚怀王",
     "楚怀": "楚怀王",
     "楚惠王": "楚惠王",
+    "惠王": "楚惠王",
     "楚惠": "楚惠王",
     "楚成王": "楚成王",
     "熊恽": "楚成王",
@@ -10525,5 +10530,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T05:25:29"
+  "generated": "2026-04-23T05:36:56"
 }
