@@ -103,72 +103,28 @@ def render_frontmatter(entity):
 
 
 def render_body(entity):
+    """精简 stub body (≤ 12 行, 与 frontmatter 合计 ≤ 20 行). 与 W0 不变量对齐.
+    属性表由 renderer 的 infobox 从 frontmatter 生成, 不在 body 复制.
+    后续动作 (enrich-infobox / add-event-timeline / embed-sku-excerpt) 渐次补全."""
     canonical = entity['id']
-    label = canonical
-    aliases = [a for a in entity.get('aliases', []) if a != canonical]
-    lifespan = entity.get('lifespan') or {}
     total_refs = entity.get('total_refs', 0)
     total_chapters = entity.get('total_chapters', 0)
-    chapters = entity.get('chapters', [])[:TOP_CHAPTERS]
+    top5 = entity.get('chapters', [])[:5]
 
-    out = []
-    out.append(f'# {label}')
+    out = [f'# {canonical}', '']
+    out.append(f'《史记》中出现 **{total_refs}** 次, 分布于 **{total_chapters}** 篇。')
     out.append('')
-    if aliases:
-        out.append(f'*别名*：{" · ".join(aliases)}')
-        out.append('')
-
-    life_s = format_lifespan(lifespan)
-    intro_parts = []
-    if life_s:
-        intro_parts.append(f'生卒 {life_s}')
-    intro_parts.append(f'《史记》中出现 **{total_refs}** 次，分布于 **{total_chapters}** 篇')
-    out.append('。'.join(intro_parts) + '。')
-    out.append('')
-    out.append('---')
-    out.append('')
-
-    # 基本属性
-    out.append('## 基本属性')
-    out.append('')
-    out.append('| 属性 | 值 |')
-    out.append('| --- | --- |')
-    if life_s:
-        out.append(f'| 生卒 | {life_s} |')
-    if aliases:
-        out.append(f'| 别名 | {" · ".join(aliases)} |')
-    out.append(f'| 总引用 | {total_refs} 次 |')
-    out.append(f'| 覆盖章节 | {total_chapters} 篇 |')
-    out.append('')
-    out.append('---')
-    out.append('')
-
-    # 章节分布
-    out.append('## 在史记中的分布')
-    out.append('')
-    if chapters:
-        out.append(f'**重点章节**（按出现次数排序，top {len(chapters)}）：')
-        out.append('')
-        out.append('| 章节 | 次数 |')
-        out.append('| --- | ---: |')
-        for ch in chapters:
+    if top5:
+        links = []
+        for ch in top5:
             cid = ch['chapter']
-            # label = 去掉 NNN_ 前缀, 更易读
             disp = cid.split('_', 1)[1] if '_' in cid else cid
-            out.append(f'| [[{cid}|{disp}]] | {ch["count"]} |')
+            links.append(f'[[{cid}|{disp}]] ({ch["count"]})')
+        out.append('## 重点章节')
         out.append('')
-    else:
-        out.append('*无章节数据*')
+        out.append(' · '.join(links))
         out.append('')
-    out.append('---')
-    out.append('')
-
-    # 自由撰写区
-    out.append('<!-- 自由撰写区 (LLM 或人工填充) -->')
-    out.append('')
-    out.append('*本页由 `wiki/scripts/generate_entity_page.py` 自动生成。*')
-    out.append('*属性表 / 章节分布由脚本维护；叙述段落待补。*')
-    out.append('')
+    out.append('<!-- stub: butler 自动生成, 待 enrich/narrate 动作补丰 -->')
     return '\n'.join(out)
 
 

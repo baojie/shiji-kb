@@ -1,0 +1,173 @@
+---
+name: skill-butler-1
+description: Butler agent 的探索与食物收集。定义 6 大食物源 (kg / ontology-v2 / doc / data / docs / logs) 的扫描策略、候选识别信号、消化方式。维护 queue.md 候选队列 (P0/P1/P2)。每轮 invocation 按 2:1 配比在"顺藤摸瓜"与"无约束探索"间选择。本 skill 决定每次 invocation 做什么, 不规定怎么做 (W2 负责)。
+---
+
+# SKILL W1: 探索与食物收集
+
+> Butler 是消化系统, 本 skill 规定"去哪找、找什么、怎么排优先"。
+
+---
+
+## 一、食物地图 (6 源)
+
+### 源 A · kg 结构化数据
+**路径**：`kg/entities/data/`、`kg/events/data/`、`kg/relations/data/`
+**营养**：infobox 字段 / 事件时间线 / 人物关系网
+**探查信号**：
+- `kg/entities/data/entity_aliases.json` 里 canonical 在 wiki 无页 → 建 stub
+- `kg/entity_index.json` top-N 人物无 wiki 页 → **P0**
+- 事件索引里某事件 id 在 wiki 是 broken link → 建事件页
+**消化**：`enrich-infobox` / `add-event-timeline` / `link-from-relations` (见 W2)
+
+### 源 B · 精炼 SKU
+**路径**：`kg/ontology/ontology-v2/**/skus/*.md`
+**营养**：直接作 topic 页 / 作"深度阅读"区
+**探查信号**：
+- SKU 无对应 `wiki/public/pages/<slug>.md` → 建 topic 页 (**P0**)
+- SKU frontmatter 提及某实体, 该实体 wiki 页未引用此 SKU → 补"相关主题"链
+**消化**：`import-sku-as-topic` / `embed-sku-excerpt`
+
+### 源 C · 项目分析报告
+**路径**：`doc/**/*.md`
+**营养**：引证脚注, 如 `doc/lifespan_inference/<人名>.md` 证明某人物生卒
+**探查信号**：
+- wiki 页声称生卒但无引证 + doc 存在 → 加脚注
+- `doc/events/*总结.md` 提及某人物 → 该页可加"相关反思"链
+**消化**：`cite-doc-report` / `link-investigation`
+**限制**：**不搬内容只做链接**, 摘要 ≤ 50 字
+
+### 源 D · 原始数据
+**路径**：`data/`
+**营养**：后台校验用, **不面向读者**
+**探查信号**：写完 wiki 字段时抽查式交叉验证
+**消化**：`verify-from-data` (内部校验, 不出现在 UI)
+
+### 源 E · 已发布文档
+**路径**：`docs/entities/*.html`、`docs/chapters/*.html`
+**营养**：wiki 页底"外部链接"出口
+**探查信号**：新建人物/章节页时, 对应 docs 文件已存在
+**消化**：`link-external-docs`
+**限制**：只从 wiki 指向 docs, 不重建 docs 功能
+
+### 源 F · 每日日志
+**路径**：`logs/daily/*.md`
+**营养**：最近活跃页 / 时间线入口 (可选, v2)
+**探查信号**：日志高频提及某实体 → "本周热点"
+**消化**：`link-daily-log` (低优先)
+
+---
+
+## 二、候选队列 (queue.md)
+
+markdown 格式, 人和 butler 共读。
+
+### 2.1 结构
+
+```markdown
+# Butler 候选队列
+
+## P0 高优
+- [ ] 萧何: 建 stub (kg refs=75/30 篇, top 20) [源:A] [2026-04-22]
+- [ ] 孔子页加 `论语` book 关联 [源:A]
+
+## P1 中优
+- [ ] 建 topic 页 "神话与历史的界限" [源:B] [fact_005]
+- [ ] 刘邦页补生卒脚注 [源:C] [doc/lifespan_inference/刘邦.md]
+
+## P2 低优
+- [ ] 全局扫"相关邦国"都空的人物页 [源:A]
+```
+
+### 2.2 入队规则
+
+- 每轮 invocation 可 **discover 1–3 条新候选** 加入队列
+- 但**本轮只执行 1 条**, 队列永远在增长
+- P0 = 已知入口缺失 / broken link 明显 / 主页代表人物缺内容
+- P1 = 有现成食物未利用
+- P2 = 全局扫描发现的不一致
+
+### 2.3 去重
+
+同名候选 (同 target 页 + 同动作) 只入一次。如重复出现, W5 反思需要看是不是前置条件常年不满足。
+
+---
+
+## 三、2:1 配比
+
+每 3 次 invocation：
+- **2 次顺藤摸瓜**：从 wiki 已有页出发, 扫 broken link / 缺项, 选一个补
+- **1 次无约束探索**：独立扫某食物源, 找从未入 wiki 的候选
+
+### 本轮选哪个?
+
+看 `actions.jsonl` 最后 3 条的 `mode` 字段：
+- `[trail, trail]` → 本次 `explore`
+- `[trail, explore]` 或 `[explore, trail]` → 本次 `trail`
+- `[explore, trail, trail]` → 本次 `trail`
+
+若反思显示 wiki 已致密 (断链少), W5 可改 1:2 甚至 1:3。这个比例**可变**, 由 W5 决定。
+
+---
+
+## 四、食物源轮换
+
+`explore` 模式时, 按 `source_access.json` 选**最久未访问**的源：
+
+```json
+{
+  "A_kg": "2026-04-22T10:00",
+  "B_sku": "2026-04-20T11:00",
+  "C_doc": null,
+  "D_data": null,
+  "E_docs": "2026-04-21T09:00",
+  "F_logs": null
+}
+```
+
+`null` 或最老的优先。
+
+---
+
+## 五、发现脚本 (discover_*)
+
+每种源对应一段扫描脚本, butler 调用, 输出候选条目。
+
+**规划位置**：`wiki/scripts/butler/discover_<source>.py`
+- `discover_kg.py`：扫 top-N 未入 wiki 的人物
+- `discover_sku.py`：扫 ontology-v2 SKU 无对应 topic
+- `discover_doc.py`：扫 doc/ 与 wiki 页的不一致
+- `discover_docs.py`：wiki 页 + docs/ 交叉
+- `discover_logs.py`：日志高频实体
+
+**v0 策略**：只写 `discover_kg.py` 和 `discover_sku.py`, 其他按需求逐步补。W5 反思说需要时再写。
+
+---
+
+## 六、何时停止探索
+
+单次 invocation 探索时长 ≤ 2 分钟 / 扫文件 ≤ 50 个。超过则把本轮当"纯探索", **发现的全入队**, 本轮不行动 (mode=`observe`)。
+
+---
+
+## 七、交给 W2
+
+本 skill 的输出 = 一个具体候选条目, 格式：
+
+```json
+{
+  "target": "wiki/public/pages/萧何.md",
+  "action": "create-stub",
+  "source": "kg/entity_aliases.json",
+  "mode": "explore",
+  "rationale": "萧何在 kg top-20 (refs=75), 无 wiki 页"
+}
+```
+
+W2 按此执行。
+
+---
+
+## 相关
+- [W0 总则](SKILL_W0_Butler总则.md)
+- [W2 原子行动目录](SKILL_W2_Butler原子行动目录.md)
