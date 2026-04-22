@@ -2881,6 +2881,40 @@
         "narrative": 8
       }
     },
+    "东方朔": {
+      "type": "person",
+      "label": "东方朔",
+      "aliases": [
+        "东方朔",
+        "东方生",
+        "曼倩"
+      ],
+      "tags": [
+        "汉朝",
+        "武帝",
+        "滑稽",
+        "辞赋",
+        "避世金马门"
+      ],
+      "featured": true,
+      "path": "pages/东方朔.md",
+      "total_refs": 7,
+      "total_chapters": 2,
+      "lifespan": {
+        "birth": -161,
+        "death": -93,
+        "note": "约"
+      },
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "中山靖王": {
       "type": "person",
       "label": "中山靖王",
@@ -3724,6 +3758,39 @@
         "tags": 8,
         "revs": 9,
         "size": 7,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "司马相如": {
+      "type": "person",
+      "label": "司马相如",
+      "aliases": [
+        "司马相如",
+        "长卿",
+        "犬子"
+      ],
+      "tags": [
+        "汉朝",
+        "武帝",
+        "辞赋",
+        "文学",
+        "卓文君"
+      ],
+      "featured": true,
+      "path": "pages/司马相如.md",
+      "total_refs": 10,
+      "total_chapters": 5,
+      "lifespan": {
+        "birth": -179,
+        "death": -117
+      },
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 6,
         "manual": 5,
         "narrative": 8
       }
@@ -6446,6 +6513,34 @@
         "base_refs": 0,
         "tags": 8,
         "revs": 12,
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "毛遂": {
+      "type": "person",
+      "label": "毛遂",
+      "aliases": [
+        "毛遂",
+        "毛先生"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "纵横",
+        "食客",
+        "锥处囊中"
+      ],
+      "featured": true,
+      "path": "pages/毛遂.md",
+      "total_refs": 4,
+      "total_chapters": 1,
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
         "size": 6,
         "manual": 5,
         "narrative": 8
@@ -10227,6 +10322,9 @@
     "太史公自序": "130_太史公自序",
     "130": "130_太史公自序",
     "知识量 (K)": "Special:知识量",
+    "东方朔": "东方朔",
+    "东方生": "东方朔",
+    "曼倩": "东方朔",
     "中山靖王": "中山靖王",
     "刘胜": "中山靖王",
     "靖王": "中山靖王",
@@ -10304,6 +10402,9 @@
     "叔孙通": "叔孙通",
     "稷嗣君": "叔孙通",
     "叔带": "叔带",
+    "司马相如": "司马相如",
+    "长卿": "司马相如",
+    "犬子": "司马相如",
     "司马迁": "司马迁",
     "太史公": "司马迁",
     "子长": "司马迁",
@@ -10557,6 +10658,8 @@
     "舞阳侯": "樊哙",
     "比干": "比干",
     "王子比干": "比干",
+    "毛遂": "毛遂",
+    "毛先生": "毛遂",
     "汉宣帝": "汉宣帝",
     "孝宣": "汉宣帝",
     "孝宣帝": "汉宣帝",
@@ -10865,5 +10968,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T06:28:45"
+  "generated": "2026-04-23T06:34:11"
 }
