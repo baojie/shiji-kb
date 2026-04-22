@@ -95,13 +95,13 @@ export async function renderSpecialSettings(core) {
 /* ── Special:Plugins ── */
 export async function renderSpecialPlugins(core) {
   const PLUGIN_DEFS = await getPluginDefs();
-  const pluginRows = core.plugins.length
-    ? core.plugins.map(p =>
-        `<tr><td><code>${escapeHtml(p.name)}</code></td><td>${escapeHtml(p.version || '?')}</td><td class="muted">${escapeHtml(p.description || '')}</td></tr>`
-      ).join('')
-    : '<tr><td colspan="3" class="muted">（无已激活插件）</td></tr>';
-
   const s = loadSettings();
+  const activatedDefs = PLUGIN_DEFS.filter(p => s?.plugins?.[p.key] === true);
+  const pluginRows = activatedDefs.length
+    ? activatedDefs.map(p =>
+        `<tr><td><strong>${escapeHtml(p.name)}</strong></td><td>${escapeHtml(p.version || '—')}</td></tr>`
+      ).join('')
+    : '<tr><td colspan="2" class="muted">（无已激活插件）</td></tr>';
   const allDefs = PLUGIN_DEFS.map(p => {
     const enabled = s?.plugins?.[p.key] === true;
     return `<tr>
