@@ -92,6 +92,7 @@ $$k_{\text{page}} = \log_2(1 + B) \times (1 + D) \times W \times Q$$
 - [[Special:Settings]] — 插件开关（启用数学公式渲染）
 - [[Special:Plugins]] — 已安装插件列表
 - [[Special:All]] — 所有特殊页面索引
+- [[Special:WantedPages]] — 被链接但尚未创建的页面
 
 ---
 

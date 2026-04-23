@@ -8,9 +8,11 @@ export const TYPE_LABELS = {
   identity: '身份',
   dynasty: '朝代',
   event: '事件',
+  concept: '概念',
   chapter: '章节',
   topic: '主题',
   meta: '元页',
+  sanwen: '散文',
 };
 
 export function escapeHtml(s) {

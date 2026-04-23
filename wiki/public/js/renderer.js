@@ -7,6 +7,45 @@
 import { escapeHtml, TYPE_LABELS } from './util.js';
 import { parseMarkdown } from './parser.js';
 
+/* 只在本地开发服务器上启用"想要"按钮 */
+function isLocalhost() {
+  return location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+}
+
+/* 渲染"想要此页面"按钮 HTML + 绑定点击事件（异步注入）。
+ * 仅在 localhost 下注入；远程部署时返回空字符串。 */
+function injectWantButton(pid) {
+  if (!isLocalhost()) return;
+  const btn = document.createElement('button');
+  btn.className = 'want-btn';
+  btn.textContent = '⭐ 想要此页面';
+  btn.title = '把这个页面加入 Butler 优先处理队列';
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    btn.textContent = '提交中…';
+    try {
+      const res = await fetch('/api/want', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ page: pid }),
+      });
+      const data = await res.json();
+      if (data.added) {
+        btn.textContent = '✅ 已加入队列';
+        btn.classList.add('want-btn--done');
+      } else {
+        btn.textContent = '已在队列中';
+        btn.classList.add('want-btn--exists');
+      }
+    } catch (e) {
+      btn.textContent = '❌ 提交失败';
+      btn.disabled = false;
+    }
+  });
+  const article = document.getElementById('article');
+  if (article) article.appendChild(btn);
+}
+
 function buildPager(current, total) {
   const mk = (n, label, cls = '') =>
     n === current
@@ -131,6 +170,8 @@ export async function renderPage(core, pid, meta, mdText) {
   } else {
     brokenInfo.textContent = '';
   }
+
+  if (front.auto_generated) injectWantButton(pid);
 
   window.scrollTo(0, 0);
 }
@@ -894,4 +935,5 @@ export function renderNotFound(core, target) {
   document.title = '未找到 · 史记 Wiki';
   document.getElementById('src-info').textContent = '';
   document.getElementById('broken-info').textContent = '';
+  injectWantButton(target);
 }

@@ -9,11 +9,15 @@
  */
 
 const TYPE_LABELS = {
-  person:  '人物',
-  event:   '事件',
-  concept: '概念',
-  chapter: '章节',
-  topic:   '专题',
+  person:   '人名',
+  place:    '地名',
+  state:    '邦国',
+  official: '官职',
+  identity: '身份',
+  event:    '事件',
+  concept:  '概念',
+  chapter:  '章节',
+  topic:    '主题',
 };
 
 function renderBacklinks(backlinks, pid) {

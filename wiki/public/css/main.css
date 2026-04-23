@@ -836,3 +836,26 @@ footer code {
   color: var(--fg-muted);
   line-height: 1.6;
 }
+
+/* ── 想要按钮 (仅 localhost 显示) ─────────────────── */
+.want-btn {
+  display: inline-flex; align-items: center; gap: .4em;
+  margin: 2em 0 1em;
+  padding: .55em 1.2em;
+  background: var(--bg-box);
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.want-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
+}
+.want-btn:disabled { cursor: default; }
+.want-btn--done    { border-color: #2e7d32; color: #2e7d32; }
+.want-btn--exists  { border-color: var(--fg-muted); color: var(--fg-muted); }
