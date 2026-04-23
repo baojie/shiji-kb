@@ -115,10 +115,9 @@ export async function renderPage(core, pid, meta, mdText) {
   const { front, html, broken } = await parseMarkdown(core, mdText, { pid, meta });
 
   const tagsFooter = renderTagsFooter(front, meta);
-  const historyLink = `<p class="page-history-link"><a href="#?history=${encodeURIComponent(pid)}">查看修订历史 →</a></p>`;
   // Hero image (featured 页可选)
   const heroImg = renderHeroImage(front);
-  document.getElementById('article').innerHTML = heroImg + html + historyLink + tagsFooter;
+  document.getElementById('article').innerHTML = heroImg + html + tagsFooter;
   const infoboxHtml = await renderInfobox(core, front, meta);
   document.getElementById('infobox').outerHTML = infoboxHtml;
 
@@ -140,6 +139,11 @@ export async function renderPage(core, pid, meta, mdText) {
     tab.className = 'src-tab';
     tab.textContent = '查看源码';
     h1.appendChild(tab);
+    const histTab = document.createElement('a');
+    histTab.href = `#?history=${encodeURIComponent(pid)}`;
+    histTab.className = 'src-tab hist-tab';
+    histTab.textContent = '修订历史';
+    h1.appendChild(histTab);
     // 章节页额外注入"查看原文"链接，指向 GitHub Pages 渲染版
     if (meta.type === 'chapter') {
       const origTab = document.createElement('a');
@@ -498,14 +502,14 @@ export function renderCategory(core, kind, value) {
     }
     const meta = p.total_refs != null
       ? `<span class="cat-meta">${p.total_refs} 次 / ${p.total_chapters} 篇</span>` : '';
-    return `<li data-first="${escapeHtml(firstChar)}">
+    return `<li data-alpha="${getPinyinInitial(p.label)}">
       <a href="#${encodeURIComponent(p.pid)}" class="cat-link">${escapeHtml(p.label)}</a>
       ${lifeS}${meta}
     </li>`;
   }).join('');
 
-  // A: 列表超过 20 项时附加首字过滤栏
-  const filterBar = matches.length > 20
+  // 超过 100 项时附加 A-Z 过滤栏
+  const filterBar = matches.length > 100
     ? buildFirstCharBarHtml(matches.map(p => p.label || p.pid))
     : '';
 
@@ -704,17 +708,50 @@ export async function renderRevision(core, page, revId) {
 
 /**
 /* 从 label 列表提取唯一首字，返回过滤栏 HTML（首字 ≤ 3 个时不生成）。*/
-function buildFirstCharBarHtml(labels) {
-  const chars = [...new Set(labels.map(l => l && l[0]).filter(Boolean))]
-    .sort((a, b) => a.localeCompare(b, 'zh'));
-  if (chars.length <= 3) return '';
-  const btns = ['全', ...chars].map((c, i) =>
-    `<button class="firstchar-btn${i === 0 ? ' active' : ''}" data-char="${escapeHtml(c)}">${escapeHtml(c)}</button>`
-  ).join('');
-  return `<div class="firstchar-bar" role="group" aria-label="按首字过滤">${btns}</div>`;
+/* 拼音首字母映射表（覆盖史记人名常用首字） */
+const PINYIN_INITIAL = {
+  B: '伯卜扁比白百薄褒鲍',
+  C: '城崔春晁曹曾楚樗淳程蔡触鉏陈',
+  D: '丁东帝杜段澹窦翟董邓',
+  E: '二',
+  F: '冯夫扶樊肥范',
+  G: '公勾灌甘盖管葛虢郭高',
+  H: '侯后壶扈桓汉浑淮狐胡衡闳霍韩黄',
+  J: '介剧姬季晋景汲箕荆贾蹇鞠',
+  K: '孔括蒯',
+  L: '乐刘卢吕娄嫪廉李栗栾梁老落蔺路郦酈里陆骊鲁龙',
+  M: '冒孟枚毛缪蒙闵',
+  N: '南宁聂',
+  P: '平庞彭辟',
+  Q: '屈戚秦骑齐',
+  R: '任穰',
+  S: '叔司商姒孙宋审慎桑申石示苏随',
+  T: '唐太屠田缇',
+  W: '伍卫吴文王魏',
+  X: '侠信先夏宣弦徐新荀萧西许郤项须',
+  Y: '严义伊优原夷尧晏杨燕由羊英虞袁豫颜',
+  Z: '专中主仲召周子宰州庄张智朱章臧赵邹郅郑钟长',
+};
+
+function getPinyinInitial(label) {
+  const ch = label && label[0];
+  if (!ch) return '#';
+  for (const [letter, chars] of Object.entries(PINYIN_INITIAL)) {
+    if (chars.includes(ch)) return letter;
+  }
+  return '#';
 }
 
-/* 为含 .firstchar-bar 的容器绑定过滤事件。listSel = 包含 <li data-first> 的列表选择器。*/
+function buildFirstCharBarHtml(labels) {
+  const used = new Set(labels.map(l => getPinyinInitial(l)).filter(c => c !== '#'));
+  const ordered = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').filter(l => used.has(l));
+  if (ordered.length <= 2) return '';
+  const btns = ['全', ...ordered].map((c, i) =>
+    `<button class="firstchar-btn${i === 0 ? ' active' : ''}" data-char="${c}">${c}</button>`
+  ).join('');
+  return `<div class="firstchar-bar" role="group" aria-label="按拼音首字母过滤">${btns}</div>`;
+}
+
 function setupFirstCharFilter(container) {
   const bar = container.querySelector('.firstchar-bar');
   if (!bar) return;
@@ -723,8 +760,8 @@ function setupFirstCharFilter(container) {
     if (!btn) return;
     const ch = btn.dataset.char;
     bar.querySelectorAll('.firstchar-btn').forEach(b => b.classList.toggle('active', b === btn));
-    container.querySelectorAll('li[data-first]').forEach(li => {
-      li.hidden = ch !== '全' && li.dataset.first !== ch;
+    container.querySelectorAll('li[data-alpha]').forEach(li => {
+      li.hidden = ch !== '全' && li.dataset.alpha !== ch;
     });
   });
 }
@@ -746,8 +783,9 @@ export function renderAll(core) {
     byType[t].push({ id, ...p });
   }
 
-  // 每组内按 quality_score 降序
+  // 每组内排序：章节按 id 顺序，其他按 quality_score 降序
   for (const t of Object.keys(byType)) {
+    if (t === 'chapter') continue; // 章节在 render 时再排
     byType[t].sort((a, b) =>
       (b.quality_score || 0) - (a.quality_score || 0) ||
       a.id.localeCompare(b.id, 'zh')
@@ -766,22 +804,29 @@ export function renderAll(core) {
 
   const groupsHtml = orderedTypes.map((t) => {
     const label = TYPE_LABELS[t] || t;
-    const isPerson = t === 'person';
+    const isPerson  = t === 'person';
+    const isChapter = t === 'chapter';
+    // 章节组按 id 数字顺序排
+    if (isChapter) byType[t].sort((a, b) => a.id.localeCompare(b.id));
     const items = byType[t].map((p) => {
-      const firstChar = p.label ? p.label[0] : '';
+      const displayLabel = isChapter ? p.id : escapeHtml(p.label);
+      const needsAlpha = byType[t].length > 100 && !isChapter;
+      const alpha = needsAlpha ? getPinyinInitial(p.label) : '';
       const qs = p.quality_score != null
         ? ` <span class="list-score">q=${p.quality_score}</span>` : '';
       const meta = p.total_refs != null
         ? ` <span class="list-meta">${p.total_refs} 次 / ${p.total_chapters} 篇</span>` : '';
       const tags = (p.tags || []).slice(0, 3).map(escapeHtml).join(' · ');
       const tagsHtml = tags ? ` <span class="list-tags">${tags}</span>` : '';
-      return `<li data-first="${escapeHtml(firstChar)}">
-        <a href="#${encodeURIComponent(p.id)}">${escapeHtml(p.label)}</a>
+      const alphaAttr = needsAlpha ? ` data-alpha="${alpha}"` : '';
+      return `<li${alphaAttr}>
+        <a href="#${encodeURIComponent(p.id)}">${displayLabel}</a>
         ${qs}${meta}${tagsHtml}
       </li>`;
     }).join('');
-    // A: person 组附加首字过滤栏；B: 非 person 组默认折叠
-    const filterBar = isPerson ? buildFirstCharBarHtml(byType[t].map(p => p.label || p.id)) : '';
+    // 超过 100 项且非章节组：附加 A-Z 过滤栏
+    const filterBar = (byType[t].length > 100 && !isChapter)
+      ? buildFirstCharBarHtml(byType[t].map(p => p.label || p.id)) : '';
     const collapsed = isPerson ? '' : ' is-collapsed';
     const chevron = isPerson ? '▼' : '▶';
     return `<section class="all-group${collapsed}" data-type="${escapeHtml(t)}">
@@ -823,9 +868,10 @@ export function renderAll(core) {
     h.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
   });
 
-  // A: 绑定 person 组首字过滤
-  const personSection = document.querySelector('.all-group[data-type="person"]');
-  if (personSection) setupFirstCharFilter(personSection);
+  // A: 为所有含 .firstchar-bar 的组绑定 A-Z 过滤
+  document.querySelectorAll('.all-group').forEach(sec => {
+    if (sec.querySelector('.firstchar-bar')) setupFirstCharFilter(sec);
+  });
 }
 
 /**

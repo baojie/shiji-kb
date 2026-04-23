@@ -452,12 +452,14 @@ body.is-home .page { grid-template-columns: 1fr; }
 .firstchar-btn {
   font-family: var(--sans);
   font-size: .82em;
-  padding: .15em .55em;
+  min-width: 1.9em;
+  padding: .15em .4em;
   border: 1px solid var(--border);
   border-radius: 3px;
   background: var(--bg-box);
   color: var(--fg-muted);
   cursor: pointer;
+  text-align: center;
   transition: background .1s, color .1s;
 }
 .firstchar-btn:hover {
