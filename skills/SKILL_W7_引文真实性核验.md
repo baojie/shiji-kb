@@ -1,30 +1,45 @@
 ---
 name: skill-butler-6b
-description: W6b 增量引文真实性核验 — 三层流水线（缓存→规则→LLM），每次检查一个页面，已验证的句子不重复检查。与 W6 离线质检互补：W6 批量扫描，W6b 增量精查+自动修复。
+description: W7 增量引文真实性核验 — 三层流水线（缓存→规则→LLM），每次检查一个页面，已验证的句子不重复检查。与 W6 离线质检互补：W6 批量扫描，W7 增量精查+自动修复。
 ---
 
-# SKILL W6b: 增量引文真实性核验
+# SKILL W7: 增量引文真实性核验
 
 > **核心问题**: 每个 wiki 引文是真实来自《史记》，还是 AI 编造/改写的？
-> **与 W6 的分工**: W6 批量全扫（detect-only），W6b 增量精查（detect+fix，用 LLM 二审）。
+> **与 W6 的分工**: W6 批量全扫（detect-only），W7 增量精查（detect+fix，用 LLM 二审）。
 
 ---
 
-## 一、三层流水线
+## 一、流水线
 
 ```
-L0: 缓存命中 → 跳过（logs/wiki_butler/quote_cache.json）
+L0: 缓存命中（quote_cache.json，key = sha256[:16]）
+      ok/llm_ok → 跳过 L1/L2，仍做 PN 比对
+      fabricated/llm_fail → 完全跳过
       ↓ 未命中
-L1: find_pn 规则匹配（scripts/find_pn_for_quote.py）
-      score ≥ 0.90 → ✅ ok，写缓存
-      score 0.55–0.90 + 有 cited PN → L2
-      score < 0.55   + 有 cited PN → L2（查 PN 对应原文比对）
-      score < 0.55   + 无 cited PN → ❌ FABRICATED，写 issue
-      ↓ uncertain
-L2: LLM (Claude Haiku)，提供引文 + 原文段落，判断准确性
-      exact (≥70%) → ✅ llm_ok，写缓存
-      fabricated/paraphrase (≥60%) → ❌ 写 issue + suggestion
-      uncertain → ⚠️ human_review
+L1: find_pn 规则匹配
+      score ≥ 0.90 → ✅ ok，写缓存 → PN 比对
+      score 0.55–0.90 → 近似命中（情况 A）→ L2 修复
+      score < 0.55   → 未命中（情况 B/C）
+
+PN 比对（quote 存在 + 有 cited PN）
+      cited PN ≠ actual PN → ⚠️ WRONG_PN (warning, fix_pn)
+      cited PN = actual PN → ✅
+
+L2: l2_repair（Claude Haiku，≤8次/轮）
+  情况 A：近似命中 → 提供 L1 best_entry 段落 + wiki 上下文
+  情况 B：未命中 + 有 cited PN → 提供 cited PN 段落 + wiki 上下文
+  情况 C：未命中 + 无 cited PN → 直接 FABRICATED，不调 LLM
+
+  l2_repair 返回：
+    replacement   → 从原文提取的正确引文（≤60字，原文字面）
+    context_ok    → "yes|partial|no"（周围解释文字是否含义匹配）
+    context_issue → 解释文字存在的问题描述（≤30字）
+
+  决策：
+    replacement 有效 (conf≥60%) → ⚠️ NEAR_MATCH (warning, replace_quote)
+                                   若 context_ok≠yes → 附加 context_issue
+    replacement 为空            → ❌ FABRICATED (critical)
 ```
 
 **token 控制**：每次运行最多 8 次 LLM 调用（`MAX_LLM_PER_RUN = 8`）。
@@ -35,15 +50,15 @@ L2: LLM (Claude Haiku)，提供引文 + 原文段落，判断准确性
 
 ### 主触发：每 10 次 trail/explore action 后
 
-在 `wiki/scripts/butler/PROMPT.md` 中，W5 反思计数器同时触发 W6b：
+在 `wiki/scripts/butler/PROMPT.md` 中，W5 反思计数器同时触发 W7：
 
 ```
-- 若累计 atomic action ≥ 10 条未做 W6b → 插入一次 verify-citations
+- 若累计 atomic action ≥ 10 条未做 W7 → 插入一次 verify-citations
 ```
 
 ### 补充触发：queue 为空时
 
-当 `queue.md` 无 P0/P1 任务时，butler 优先跑 W6b 而非 explore。
+当 `queue.md` 无 P0/P1 任务时，butler 优先跑 W7 而非 explore。
 
 ### 手动触发
 
@@ -87,7 +102,7 @@ python3 scripts/verify_quotes_agent.py --llm-off
 
 ## 四、butler 动作记录
 
-W6b 运行后需写 `actions.jsonl`：
+W7 运行后需写 `actions.jsonl`：
 
 ```json
 {
@@ -95,7 +110,7 @@ W6b 运行后需写 `actions.jsonl`：
   "mode": "observe",
   "action": "verify-citations",
   "target": "wiki/public/pages/郑当时.md",
-  "rationale": "W6b 增量引文核验",
+  "rationale": "W7 增量引文核验",
   "score_before": null,
   "score_after": null,
   "red_flags": [],

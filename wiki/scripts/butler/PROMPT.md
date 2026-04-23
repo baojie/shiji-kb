@@ -20,12 +20,12 @@
 
 - 若最近 3 条同 action 全 fail → 进入 **W5 反思**, 读 `skills/SKILL_W5_Butler反思与自改.md`, 写 `logs/wiki_butler/reflections/$(date +%F).md`, 本轮不做原子动作
 - 若累计 atomic action ≥ 20 条未反思 → 进入 W5 反思
-- 若累计 trail/explore ≥ 10 条，且最近一条 `verify-citations` 距今 ≥ 10 条 → 本轮做 **W6b 引文核验**:
+- 若累计 trail/explore ≥ 10 条，且最近一条 `verify-citations` 距今 ≥ 10 条 → 本轮做 **W7 引文核验**:
   ```bash
   python3 scripts/verify_quotes_agent.py   # 处理下一个未检查页面
   ```
   写 actions.jsonl (mode=observe, action=verify-citations)，不需要 W4 评估，不 commit。
-- 若 `logs/wiki_butler/queue.md` 无 P0/P1 → 本轮做 W6b 引文核验（优先于 explore）
+- 若 `logs/wiki_butler/queue.md` 无 P0/P1 → 本轮做 W7 引文核验（优先于 explore）
 - 否则按 W1 的 2:1 比例:
   - 最近 [trail, trail] → 本次 `explore`
   - 否则 `trail`

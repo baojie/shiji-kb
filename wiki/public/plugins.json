@@ -21,6 +21,13 @@
       "name": "语义块",
       "version": "1.0.0",
       "description": "处理页面中的 ::: infobox 和 ::: meta 语义块；支持 inline infobox 折叠/展开与元数据读取"
+    },
+    {
+      "id": "backlinks",
+      "entry": "plugins/backlinks/index.js",
+      "name": "反向引用",
+      "version": "1.0.0",
+      "description": "在页面底部显示哪些页面引用了本页，索引由 scripts/build_backlinks.py 生成"
     }
   ]
 }

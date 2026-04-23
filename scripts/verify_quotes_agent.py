@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-verify_quotes_agent.py — W6b 增量引文真实性核验
+verify_quotes_agent.py — W7 增量引文真实性核验
 
 三层流水线（per quote）：
   L0: 缓存命中 → 跳过（节省重复 token）
@@ -190,8 +190,6 @@ def l1_check(quote: str, index: list) -> tuple[float, dict | None]:
 
 def get_para_by_pn(chapter_num: str, pn_str: str, index: list) -> str | None:
     """在 PN 索引中按章号+段号查找原文段落。"""
-    ch = chapter_num.lstrip("0") or "0"
-    # pn_str 可能是 "011" → 需要尝试 "11", "11.0" 等形式
     pn_int = pn_str.lstrip("0") or "0"
     for entry in index:
         if entry["chapter_num"] != chapter_num:
@@ -203,61 +201,112 @@ def get_para_by_pn(chapter_num: str, pn_str: str, index: list) -> str | None:
     return None
 
 
+def _pn_matches(found_pn: str, cited_ch: str, cited_pn: str) -> bool:
+    """
+    检查 find_pn 找到的 'NNN-PP' 是否与页面标注的 cited_ch/cited_pn 一致。
+    只比较章号整数 + 段号整数部分（忽略小数细分和前导零）。
+    """
+    parts = found_pn.split("-", 1)
+    if len(parts) != 2:
+        return False
+    found_ch, found_pp = parts
+    if found_ch.lstrip("0") != cited_ch.lstrip("0"):
+        return False
+    found_pp_int = found_pp.split(".")[0].lstrip("0") or "0"
+    cited_pn_int = cited_pn.split(".")[0].lstrip("0") or "0"
+    return found_pp_int == cited_pn_int
+
+
 # ─────────────────────────────────────────────
 # L2: LLM 层
 # ─────────────────────────────────────────────
 
-def _call_llm(prompt: str) -> str | None:
+def _call_llm(prompt: str, max_tokens: int = 512) -> str | None:
     """调用 Claude Haiku，返回 response text 或 None（失败）。"""
     try:
         import anthropic
     except ImportError:
-        print("  [W6b] anthropic SDK 未安装，跳过 LLM 层", file=sys.stderr)
+        print("  [W7] anthropic SDK 未安装，跳过 LLM 层", file=sys.stderr)
         return None
 
     try:
         client = anthropic.Anthropic()
         msg = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=256,
+            max_tokens=max_tokens,
             messages=[{"role": "user", "content": prompt}],
         )
         return msg.content[0].text
     except Exception as e:
-        print(f"  [W6b] LLM 调用失败: {e}", file=sys.stderr)
+        print(f"  [W7] LLM 调用失败: {e}", file=sys.stderr)
         return None
 
 
-def l2_check(quote: str, original_para: str) -> dict:
+def get_wiki_context(md_lines: list[str], line_no: int, window: int = 4) -> str:
     """
-    让 LLM 判断引文是否准确引自原文段落。
-    返回 {verdict, correct_quote, confidence, reason}。
+    提取 wiki 页面中引文周围的解释文字（去掉引文行本身）。
+    window: 引文前后各取多少行。
     """
+    total = len(md_lines)
+    idx = line_no - 1  # 0-indexed
+    start = max(0, idx - window)
+    end = min(total, idx + window + 1)
+    context_lines = []
+    for i in range(start, end):
+        if i == idx:
+            continue  # 跳过引文行本身
+        line = md_lines[i].strip()
+        # 跳过空行、frontmatter、标题
+        if not line or line.startswith("---") or line.startswith("#"):
+            continue
+        # 跳过其他引文行（以 > 开头）
+        if line.startswith(">"):
+            continue
+        context_lines.append(line)
+    return "\n".join(context_lines)
+
+
+def l2_repair(quote: str, original_para: str, wiki_context: str) -> dict:
+    """
+    两合一 LLM 调用：
+    1. 从原文段落提取最贴切的替换引文（保持原文字面，不改写）
+    2. 检查 wiki 解释文字是否与原文含义一致
+
+    Returns:
+        replacement: str      — 原文中最贴切引文（空 = 原文段落无关内容）
+        context_ok: str       — "yes" | "partial" | "no"
+        context_issue: str    — 解释文字存在的问题（若无则空）
+        confidence: int       — 0-100
+    """
+    ctx_section = f"\n\n【wiki页面引文附近的解释文字】\n{wiki_context}" if wiki_context.strip() else ""
     prompt = (
-        "你是《史记》文本核验专家。请判断wiki页面引文是否准确引自《史记》原文。\n\n"
-        f"【引文】\n{quote}\n\n"
-        f"【原文段落】\n{original_para}\n\n"
-        "判断标准：\n"
-        "- exact: 与原文完全匹配或省略后仍准确\n"
-        "- paraphrase: 是原文释义，非直接引用\n"
-        "- fabricated: 原文段落中找不到此内容\n"
-        "- uncertain: 无法确定\n\n"
+        "你是《史记》文本核验专家。请完成以下两项任务。\n\n"
+        f"【wiki页面引文】（已知与原文不完全一致）\n{quote}\n\n"
+        f"【《史记》原文段落】\n{original_para}"
+        f"{ctx_section}\n\n"
+        "任务一：从原文段落中提取最贴切的直接引文（≤60字，必须是原文原字，不得改写）。\n"
+        "  若原文段落与引文内容完全无关，replacement 填空字符串。\n\n"
+        "任务二：检查 wiki 解释文字是否与原文段落含义一致（若无解释文字则填 yes）。\n"
+        "  yes=准确 | partial=有细节偏差 | no=有误或夸大\n"
+        "  若非 yes，context_issue 填问题描述（≤30字）。\n\n"
         "仅返回JSON，不要其他文字：\n"
-        '{"verdict":"exact|paraphrase|fabricated|uncertain",'
-        '"correct_quote":"（如需修正，填入原文正确引法，≤60字；无需修正则空字符串）",'
+        '{"replacement":"原文中最贴切引文或空字符串",'
+        '"context_ok":"yes|partial|no",'
+        '"context_issue":"问题描述或空字符串",'
         '"confidence":0到100的整数}'
     )
-    raw = _call_llm(prompt)
-    if not raw:
-        return {"verdict": "uncertain", "correct_quote": "", "confidence": 0}
+    raw_resp = _call_llm(prompt, max_tokens=512)
+    default = {"replacement": "", "context_ok": "yes", "context_issue": "", "confidence": 0}
+    if not raw_resp:
+        return default
     try:
-        # 提取 JSON（防止 LLM 包裹额外文字）
-        m = re.search(r"\{[^{}]+\}", raw, re.DOTALL)
+        m = re.search(r"\{[^{}]+\}", raw_resp, re.DOTALL)
         if m:
-            return json.loads(m.group())
+            result = json.loads(m.group())
+            return {**default, **result}
     except Exception:
         pass
-    return {"verdict": "uncertain", "correct_quote": "", "confidence": 0}
+    return default
 
 
 # ─────────────────────────────────────────────
@@ -275,10 +324,23 @@ def verify_page(
     同时更新 cache（in-place）。
     """
     md_text = page_path.read_text(encoding="utf-8")
+    md_lines = md_text.split("\n")
     page_id = page_path.stem
     quotes = extract_quotes(md_text)
     issues: list[dict] = []
     llm_calls = 0
+
+    def _make_issue(issue_type, severity, action, q_info, extra=None):
+        iss = {
+            "ts": now_iso(), "page": page_id,
+            "issue_type": issue_type, "severity": severity,
+            "content": q_info["raw"], "line_no": q_info["line_no"],
+            "quote_type": q_info["quote_type"],
+            "action": action, "status": "open",
+        }
+        if extra:
+            iss.update(extra)
+        return iss
 
     for q in quotes:
         raw = q["raw"]
@@ -286,131 +348,195 @@ def verify_page(
             continue
 
         key = _hash(raw)
-
-        # L0: 缓存命中
-        if key in cache:
-            cached = cache[key]
-            if cached["status"] in ("ok", "llm_ok"):
-                print(f"  [L0-SKIP] {raw[:40]}…")
-                continue
-            # fabricated 缓存也跳过（避免重复写 issue）
-            if cached["status"] in ("fabricated", "llm_fail"):
-                print(f"  [L0-KNOWN-FAIL] {raw[:40]}…")
-                continue
-
-        # L1: 规则匹配
-        score, best_entry = l1_check(raw, index)
-
-        if score >= L1_OK:
-            cache[key] = {
-                "status": "ok", "method": "rule", "confidence": round(score, 3),
-                "found_pn": f"{best_entry['chapter_num']}-{best_entry['pn']}",
-                "checked_at": now_iso(),
-            }
-            print(f"  [L1-OK {score:.2f}] {raw[:40]}…")
-            continue
-
-        # 是否有 cited PN（wiki 页面中标注的出处）
         cited_ch = q.get("cited_ch")
         cited_pn = q.get("cited_pn")
 
-        # L2: LLM（仅限有 cited PN 且有原文段落可供比对的案例）
-        llm_result = None
-        if use_llm and llm_calls < MAX_LLM_PER_RUN and cited_ch and cited_pn:
+        # ── L0: 缓存（ok/llm_ok 仍需做 PN 比对，fabricated 直接跳过）──
+        quote_exists = False
+        found_pn: str | None = None
+
+        if key in cache:
+            cached = cache[key]
+            if cached["status"] in ("fabricated", "llm_fail"):
+                print(f"  [L0-KNOWN-FAIL] {raw[:40]}…")
+                continue
+            if cached["status"] in ("ok", "llm_ok"):
+                quote_exists = True
+                found_pn = cached.get("found_pn")
+                print(f"  [L0-CACHE-OK] {raw[:40]}… → PN check")
+
+        # ── L1: 规则匹配（仅在未缓存时运行）──
+        score, best_entry = (0.0, None)
+        if not quote_exists:
+            score, best_entry = l1_check(raw, index)
+
+            if score >= L1_OK:
+                found_pn = f"{best_entry['chapter_num']}-{best_entry['pn']}"
+                cache[key] = {
+                    "status": "ok", "method": "rule", "confidence": round(score, 3),
+                    "found_pn": found_pn, "checked_at": now_iso(),
+                }
+                quote_exists = True
+                print(f"  [L1-OK {score:.2f}] {raw[:40]}…")
+
+        # ── PN 比对（引文存在 + 有标注 PN）──
+        if quote_exists and cited_ch and cited_pn and found_pn:
+            if not _pn_matches(found_pn, cited_ch, cited_pn):
+                issues.append(_make_issue("WRONG_PN", "warning", "fix_pn", q, {
+                    "cited_pn": f"{cited_ch}-{cited_pn}",
+                    "correct_pn": found_pn,
+                    "grep_result": f"found_in_{found_pn}",
+                }))
+                print(f"  [PN-MISMATCH] cited {cited_ch}-{cited_pn} → actual {found_pn}")
+            else:
+                print(f"  [PN-OK] {cited_ch}-{cited_pn} ✓")
+
+        if quote_exists:
+            continue  # 引文存在，已处理 PN，无需 L2
+
+        # ── 以下是引文未找到（score < L1_OK）的路径 ──
+
+        can_llm = use_llm and llm_calls < MAX_LLM_PER_RUN
+
+        # 情况 A：L1 近似命中（0.55 ≤ score < 0.90）→ near match，用该段落做修复
+        if score >= L1_UNCERTAIN and best_entry is not None:
+            original_para = best_entry["text_raw"]
+            near_pn = f"{best_entry['chapter_num']}-{best_entry['pn']}"
+            if can_llm:
+                llm_calls += 1
+                context = get_wiki_context(md_lines, q["line_no"])
+                print(f"  [L2-NEAR {score:.2f}] {raw[:40]}… → repair+context")
+                result = l2_repair(raw, original_para, context)
+                replacement = result.get("replacement", "")
+                ctx_ok = result.get("context_ok", "yes")
+                ctx_issue = result.get("context_issue", "")
+                conf = result.get("confidence", 0)
+
+                if replacement and conf >= 60:
+                    cache[key] = {
+                        "status": "ok", "method": "llm_repair", "confidence": conf / 100,
+                        "found_pn": near_pn, "checked_at": now_iso(),
+                    }
+                    iss = _make_issue("NEAR_MATCH", "warning", "replace_quote", q, {
+                        "grep_result": f"near_{score:.2f}",
+                        "replacement": replacement,
+                        "correct_pn": near_pn,
+                        "cited_pn": f"{cited_ch}-{cited_pn}" if cited_ch else None,
+                    })
+                    if ctx_ok != "yes" and ctx_issue:
+                        iss["context_issue"] = ctx_issue
+                        iss["context_ok"] = ctx_ok
+                    issues.append(iss)
+                    ctx_flag = f" [ctx:{ctx_ok}]" if ctx_ok != "yes" else ""
+                    print(f"    → replacement found ({conf}%){ctx_flag}: {replacement[:40]}…")
+                else:
+                    # LLM 无法从近似段落提取合适引文 → 标为需人工审查
+                    issues.append(_make_issue("UNVERIFIED_QUOTE", "warning", "human_review", q, {
+                        "grep_result": f"near_{score:.2f}",
+                        "cited_pn": f"{cited_ch}-{cited_pn}" if cited_ch else None,
+                    }))
+                    print(f"    → no replacement found → human_review")
+            else:
+                issues.append(_make_issue("UNVERIFIED_QUOTE", "warning", "human_review", q, {
+                    "grep_result": f"near_{score:.2f}",
+                    "cited_pn": f"{cited_ch}-{cited_pn}" if cited_ch else None,
+                }))
+                print(f"  [L1-NEAR {score:.2f}] {raw[:40]}… → needs LLM")
+            continue
+
+        # 情况 B：L1 完全未命中（score < 0.55）→ 用 cited PN 段落做修复尝试
+        if can_llm and cited_ch and cited_pn:
             original_para = get_para_by_pn(cited_ch, cited_pn, index)
             if original_para:
                 llm_calls += 1
-                print(f"  [L2-LLM] {raw[:40]}… (cited {cited_ch}-{cited_pn})")
-                llm_result = l2_check(raw, original_para)
+                context = get_wiki_context(md_lines, q["line_no"])
+                print(f"  [L2-CITED {cited_ch}-{cited_pn}] {raw[:40]}…")
+                result = l2_repair(raw, original_para, context)
+                replacement = result.get("replacement", "")
+                ctx_ok = result.get("context_ok", "yes")
+                ctx_issue = result.get("context_issue", "")
+                conf = result.get("confidence", 0)
 
-        # 决策
-        if llm_result:
-            verdict = llm_result.get("verdict", "uncertain")
-            conf = llm_result.get("confidence", 0)
-            correct = llm_result.get("correct_quote", "")
-
-            if verdict == "exact" and conf >= 70:
-                cache[key] = {
-                    "status": "llm_ok", "method": "llm", "confidence": conf / 100,
-                    "checked_at": now_iso(),
-                }
-                print(f"    → LLM: exact ({conf}%)")
+                if replacement and conf >= 60:
+                    cache[key] = {
+                        "status": "ok", "method": "llm_repair", "confidence": conf / 100,
+                        "found_pn": f"{cited_ch}-{cited_pn}", "checked_at": now_iso(),
+                    }
+                    iss = _make_issue("NEAR_MATCH", "warning", "replace_quote", q, {
+                        "grep_result": f"found_in_cited_pn",
+                        "replacement": replacement,
+                        "correct_pn": f"{cited_ch}-{cited_pn}",
+                        "cited_pn": f"{cited_ch}-{cited_pn}",
+                    })
+                    if ctx_ok != "yes" and ctx_issue:
+                        iss["context_issue"] = ctx_issue
+                        iss["context_ok"] = ctx_ok
+                    issues.append(iss)
+                    ctx_flag = f" [ctx:{ctx_ok}]" if ctx_ok != "yes" else ""
+                    print(f"    → replacement in cited PN ({conf}%){ctx_flag}: {replacement[:40]}…")
+                else:
+                    # 引文与 cited PN 段落内容无关 → 确认为伪造
+                    cache[key] = {
+                        "status": "llm_fail", "method": "llm", "confidence": conf / 100,
+                        "checked_at": now_iso(),
+                    }
+                    issues.append(_make_issue("FABRICATED_QUOTE", "critical", "delete_and_replace", q, {
+                        "grep_result": "not_found",
+                        "cited_pn": f"{cited_ch}-{cited_pn}",
+                        "context_issue": ctx_issue if ctx_ok != "yes" else None,
+                    }))
+                    print(f"    → FABRICATED (conf {conf}%)")
                 continue
 
-            if verdict in ("fabricated", "paraphrase") and conf >= 60:
-                status = "llm_fail"
-                issue_type = "FABRICATED_QUOTE" if verdict == "fabricated" else "PARAPHRASE_QUOTE"
-                cache[key] = {
-                    "status": status, "method": "llm", "confidence": conf / 100,
-                    "suggestion": correct, "checked_at": now_iso(),
-                }
-                issues.append({
-                    "ts": now_iso(), "page": page_id,
-                    "issue_type": issue_type, "severity": "critical",
-                    "content": raw, "line_no": q["line_no"],
-                    "quote_type": q["quote_type"],
-                    "cited_pn": f"{cited_ch}-{cited_pn}" if cited_ch else None,
-                    "suggestion": correct or None,
-                    "grep_result": "not_found", "action": "delete_and_replace",
-                    "status": "open",
-                })
-                print(f"    → LLM: {verdict} ({conf}%) → issue logged")
-                continue
+        # 情况 C：L1 未命中 + 无 LLM / 无 cited PN → 直接标为 FABRICATED
+        cache[key] = {
+            "status": "fabricated", "method": "rule", "confidence": round(score, 3),
+            "checked_at": now_iso(),
+        }
+        issues.append(_make_issue("FABRICATED_QUOTE", "critical", "delete_and_replace", q, {
+            "grep_result": "not_found",
+            "cited_pn": f"{cited_ch}-{cited_pn}" if cited_ch else None,
+        }))
+        print(f"  [L1-FAIL {score:.2f}] {raw[:40]}… → FABRICATED")
 
-            # LLM uncertain → 记为 warning
-            issues.append({
-                "ts": now_iso(), "page": page_id,
-                "issue_type": "UNVERIFIED_QUOTE", "severity": "warning",
-                "content": raw, "line_no": q["line_no"],
-                "quote_type": q["quote_type"],
-                "cited_pn": f"{cited_ch}-{cited_pn}" if cited_ch else None,
-                "grep_result": "uncertain", "action": "human_review",
-                "status": "open",
-            })
-            print(f"    → LLM: uncertain → human_review")
-
-        else:
-            # 纯规则未命中（且无 LLM 结果）
-            if score < L1_UNCERTAIN:
-                cache[key] = {
-                    "status": "fabricated", "method": "rule", "confidence": round(score, 3),
-                    "checked_at": now_iso(),
-                }
-                issues.append({
-                    "ts": now_iso(), "page": page_id,
-                    "issue_type": "FABRICATED_QUOTE", "severity": "critical",
-                    "content": raw, "line_no": q["line_no"],
-                    "quote_type": q["quote_type"],
-                    "cited_pn": f"{cited_ch}-{cited_pn}" if cited_ch else None,
-                    "grep_result": "not_found", "action": "delete_and_replace",
-                    "status": "open",
-                })
-                print(f"  [L1-FAIL {score:.2f}] {raw[:40]}… → FABRICATED")
-            else:
-                # L1 uncertain，但没有 LLM 可用（llm_off 或超限）
-                issues.append({
-                    "ts": now_iso(), "page": page_id,
-                    "issue_type": "UNVERIFIED_QUOTE", "severity": "warning",
-                    "content": raw, "line_no": q["line_no"],
-                    "quote_type": q["quote_type"],
-                    "cited_pn": f"{cited_ch}-{cited_pn}" if cited_ch else None,
-                    "grep_result": f"partial_{score:.2f}", "action": "human_review",
-                    "status": "open",
-                })
-                print(f"  [L1-UNCERTAIN {score:.2f}] {raw[:40]}… → needs LLM")
-
-    return issues
+    # 去重：同一页面内，content+issue_type 相同的只保留第一条
+    seen: set[tuple] = set()
+    deduped: list[dict] = []
+    for iss in issues:
+        key_dedup = (iss["issue_type"], iss["content"][:60])
+        if key_dedup not in seen:
+            seen.add(key_dedup)
+            deduped.append(iss)
+    return deduped
 
 
 # ─────────────────────────────────────────────
 # 自动修复
 # ─────────────────────────────────────────────
 
+def _replace_quote_in_line(line: str, replacement: str) -> str:
+    """在单行中把全角引号内容替换为 replacement。"""
+    return re.sub(r'[""][^""]{4,}[""]', f'"{replacement}"', line, count=1)
+
+
+def _fix_pn_in_line(line: str, old_pn: str, new_pn: str) -> str:
+    """把行中的 (old_ch-old_pn) 改为 (new_ch-new_pp)。"""
+    old_ch, old_pp = old_pn.split("-", 1) if "-" in old_pn else (None, None)
+    new_ch, new_pp = new_pn.split("-", 1) if "-" in new_pn else (None, None)
+    if not (old_ch and new_ch):
+        return line
+    # 匹配 （old_ch-任意格式段号）
+    pattern = rf"（{re.escape(old_ch)}-\d{{3,4}}(?:\.\d+)?(?:意旨)?）"
+    replacement_pn = f"（{new_ch}-{int(new_pp):03d}）" if new_pp.isdigit() else f"（{new_pn}）"
+    return re.sub(pattern, replacement_pn, line, count=1)
+
+
 def auto_fix(page_path: Path, issues: list[dict], cache: dict) -> int:
     """
-    修复两类问题：
-    1. FABRICATED_QUOTE + LLM 提供了 suggestion → 替换为正确引文
-    2. FABRICATED_QUOTE + 无 suggestion → 注释掉 + featured 降级
+    修复三类问题（按行号降序处理，避免行号偏移）：
+      NEAR_MATCH      → 用 replacement 替换引文文字，更新 PN；若 context_issue 存在则加注释
+      WRONG_PN        → 仅更新 PN，不改引文
+      FABRICATED_QUOTE → 有 suggestion 则替换，无则注释掉 + featured 降级
     """
     if not issues:
         return 0
@@ -418,45 +544,76 @@ def auto_fix(page_path: Path, issues: list[dict], cache: dict) -> int:
     md_text = page_path.read_text(encoding="utf-8")
     lines = md_text.split("\n")
     fixed = 0
+    need_downgrade = False
 
-    # 按行号降序，避免修改后行号偏移
-    critical = [i for i in issues if i["severity"] == "critical"]
-    critical.sort(key=lambda x: x["line_no"], reverse=True)
+    # 只处理可自动修复的 issue，按行号降序
+    fixable_types = {"NEAR_MATCH", "WRONG_PN", "FABRICATED_QUOTE"}
+    to_fix = [i for i in issues if i["issue_type"] in fixable_types]
+    to_fix.sort(key=lambda x: x["line_no"], reverse=True)
 
-    for iss in critical:
+    for iss in to_fix:
         idx = iss["line_no"] - 1
         if not (0 <= idx < len(lines)):
             continue
 
-        suggestion = iss.get("suggestion") or ""
-        if suggestion and len(suggestion) >= MIN_LEN:
-            # 有 LLM 修正建议 → 替换引文内容
-            orig_line = lines[idx]
-            # 找到引号内容，替换为建议内容
-            new_line = re.sub(
-                r'[""][^""]{%d,}[""]' % MIN_LEN,
-                f'"{suggestion}"',
-                orig_line,
-                count=1,
-            )
+        itype = iss["issue_type"]
+        orig_line = lines[idx]
+
+        if itype == "NEAR_MATCH":
+            replacement = iss.get("replacement", "")
+            correct_pn = iss.get("correct_pn", "")
+            cited_pn = iss.get("cited_pn", "")
+            new_line = orig_line
+            if replacement:
+                new_line = _replace_quote_in_line(new_line, replacement)
+            if correct_pn and cited_pn and correct_pn != cited_pn:
+                new_line = _fix_pn_in_line(new_line, cited_pn, correct_pn)
             if new_line != orig_line:
                 lines[idx] = new_line
                 fixed += 1
-                print(f"  ✏️  [fix-replace] 行{iss['line_no']}: {orig_line.strip()[:50]}…")
-        else:
-            # 无建议 → 注释掉
-            lines[idx] = f"<!-- [W6b质检删除] 原文无法溯源: {lines[idx].strip()[:60]} -->"
-            fixed += 1
-            print(f"  🗑️  [fix-comment] 行{iss['line_no']} 已注释")
+                print(f"  ✏️  [near-match→replace] 行{iss['line_no']}")
+            # 上下文问题 → 在下一行插入注释提示
+            ctx_issue = iss.get("context_issue", "")
+            if ctx_issue:
+                comment = f"<!-- [W7上下文警告] {ctx_issue} -->"
+                lines.insert(idx + 1, comment)
+                print(f"  ⚠️  [context-note] 行{iss['line_no']+1}: {ctx_issue}")
+
+        elif itype == "WRONG_PN":
+            correct_pn = iss.get("correct_pn", "")
+            cited_pn = iss.get("cited_pn", "")
+            if correct_pn and cited_pn:
+                new_line = _fix_pn_in_line(orig_line, cited_pn, correct_pn)
+                if new_line != orig_line:
+                    lines[idx] = new_line
+                    fixed += 1
+                    print(f"  🔢 [fix-pn] 行{iss['line_no']}: {cited_pn} → {correct_pn}")
+
+        elif itype == "FABRICATED_QUOTE":
+            suggestion = iss.get("suggestion") or iss.get("replacement") or ""
+            if suggestion and len(suggestion) >= MIN_LEN:
+                new_line = _replace_quote_in_line(orig_line, suggestion)
+                if new_line != orig_line:
+                    lines[idx] = new_line
+                    fixed += 1
+                    print(f"  ✏️  [fabricated→replace] 行{iss['line_no']}")
+            else:
+                lines[idx] = f"<!-- [W7质检删除] 原文无法溯源: {orig_line.strip()[:60]} -->"
+                fixed += 1
+                need_downgrade = True
+                print(f"  🗑️  [fix-comment] 行{iss['line_no']} 已注释")
 
     if fixed:
         result = "\n".join(lines)
-        result = re.sub(r"^featured:\s*true", "featured: false  # W6b降级", result, flags=re.MULTILINE)
+        if need_downgrade:
+            result = re.sub(r"^featured:\s*true", "featured: false  # W7降级",
+                            result, flags=re.MULTILINE)
         page_path.write_text(result, encoding="utf-8")
 
-        # 写修订记录
         slug = page_path.stem
-        summary = f"W6b/verify-quotes: 修复 {fixed} 处引文问题，页面降级 featured→false"
+        summary = f"W7/verify-quotes: 修复 {fixed} 处引文问题"
+        if need_downgrade:
+            summary += "，页面降级 featured→false"
         try:
             subprocess.run(
                 [sys.executable, str(RECORD_REV_PY), slug, "--summary", summary, "--author", "bot-verify"],
@@ -504,7 +661,7 @@ def append_issues(issues: list[dict]) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="W6b 增量引文真实性核验")
+    parser = argparse.ArgumentParser(description="W7 增量引文真实性核验")
     parser.add_argument("--page", help="检查指定页面（slug，不含 .md）")
     parser.add_argument("--status", action="store_true", help="显示覆盖进度")
     parser.add_argument("--fix", action="store_true", help="检查后自动修复高置信度问题")

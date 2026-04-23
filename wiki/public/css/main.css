@@ -607,6 +607,36 @@ footer code {
   margin-right: 4px;
 }
 
+/* —— 反向引用 —— */
+.backlinks {
+  margin-top: 2em; padding-top: .8em;
+  border-top: 1px solid var(--border);
+  font-family: var(--sans); font-size: 13px;
+}
+.bl-heading {
+  font-size: 13px; font-weight: 600;
+  color: var(--fg-muted); margin: 0 0 .5em;
+  text-transform: none; letter-spacing: 0;
+  border: none; padding: 0;
+}
+.bl-body {
+  display: flex; flex-wrap: wrap; gap: .4em .8em;
+  line-height: 1.8;
+}
+.bl-group {
+  display: inline-flex; align-items: baseline; gap: .3em; flex-wrap: wrap;
+}
+.bl-group-label {
+  font-size: 11px; color: var(--fg-muted);
+  background: var(--bg-box); border: 1px solid var(--border);
+  border-radius: 3px; padding: 1px 5px;
+  white-space: nowrap;
+}
+.bl-link {
+  color: var(--link); text-decoration: none; font-size: 13px;
+}
+.bl-link:hover { text-decoration: underline; }
+
 /* —— 修订/历史相关 —— */
 .topnav-link {
   color: var(--link); text-decoration: none;
