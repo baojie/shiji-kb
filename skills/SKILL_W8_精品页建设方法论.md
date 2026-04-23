@@ -237,6 +237,36 @@ for f in sorted(os.listdir(facts_dir)):
 
 ---
 
+## Bot接口与Revision规范
+
+**铁律：所有直接 wiki 页面编辑必须留下 revision 记录。**
+
+任何非 butler 自动化反思生成的页面编辑（包括精品页深化、手动修订、Claude 辅助编辑等），在页面内容写入后必须调用：
+
+```bash
+python3 wiki/scripts/butler/record_revision.py <页面slug> \
+    --summary "claude/featured-deepdive: 深化精品页 <人名>" \
+    --author claude
+```
+
+**summary 命名规范**：
+- 精品页深化：`claude/featured-deepdive: 深化精品页 <人名>`
+- 链接强化：`claude/link-enhance: 添加事件页链接`
+- 内容补充：`claude/content-patch: 补充 <具体内容>`
+- 修正错误：`claude/fix: 修正 <描述>`
+
+此命令会同步更新：
+1. `wiki/public/history/<slug>.json` — 页面级 revision 历史
+2. `wiki/public/recent.json` — 全局最近编辑列表
+
+**Revision 文件需随页面一起 git add 和 commit。**
+
+```bash
+git add wiki/public/pages/<slug>.md wiki/public/history/<slug>.json wiki/public/recent.json
+```
+
+---
+
 ## 执行前/中/后检查清单
 
 **执行前**：
@@ -251,6 +281,7 @@ for f in sorted(os.listdir(facts_dir)):
 
 **执行后**：
 - [ ] 写edit_report_姓名.md
+- [ ] **调用 record_revision.py 留下 revision 记录**（必须）
 - [ ] 检查PN格式是否正确（NNN-NNN）
 - [ ] 确认引文使用全角引号
 
