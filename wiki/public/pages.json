@@ -2860,6 +2860,26 @@
         "narrative": 0
       }
     },
+    "Special:WantedPages": {
+      "type": "special",
+      "label": "想要的页面",
+      "aliases": [],
+      "tags": [
+        "系统页面",
+        "维护"
+      ],
+      "featured": false,
+      "path": "pages/Special:WantedPages.md",
+      "quality_score": 9,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 4,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "Special:知识量": {
       "type": "special",
       "label": "知识量 (K)",
@@ -2882,7 +2902,7 @@
       }
     },
     "一鸣惊人与问鼎中原": {
-      "type": "",
+      "type": "event",
       "label": "一鸣惊人与问鼎中原",
       "aliases": [],
       "tags": [],
@@ -2924,7 +2944,7 @@
       }
     },
     "七国之乱": {
-      "type": "",
+      "type": "event",
       "label": "七国之乱",
       "aliases": [],
       "tags": [
@@ -2947,7 +2967,7 @@
       }
     },
     "七国之乱中的梁国": {
-      "type": "",
+      "type": "event",
       "label": "七国之乱中的梁国",
       "aliases": [],
       "tags": [],
@@ -2964,7 +2984,7 @@
       }
     },
     "三代王朝兴衰规律": {
-      "type": "",
+      "type": "concept",
       "label": "三代王朝兴衰规律",
       "aliases": [],
       "tags": [],
@@ -2981,7 +3001,7 @@
       }
     },
     "三家分晋": {
-      "type": "",
+      "type": "event",
       "label": "三家分晋",
       "aliases": [],
       "tags": [],
@@ -2998,7 +3018,7 @@
       }
     },
     "三桓专政": {
-      "type": "",
+      "type": "event",
       "label": "三桓专政",
       "aliases": [],
       "tags": [],
@@ -3015,7 +3035,7 @@
       }
     },
     "三监之乱": {
-      "type": "",
+      "type": "event",
       "label": "三监之乱",
       "aliases": [],
       "tags": [],
@@ -3223,6 +3243,32 @@
         "narrative": 8
       }
     },
+    "乐乘": {
+      "type": "person",
+      "label": "乐乘",
+      "aliases": [
+        "乐乘"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "廉颇",
+        "阏与之战"
+      ],
+      "featured": false,
+      "path": "pages/乐乘.md",
+      "total_refs": 11,
+      "total_chapters": 4,
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "乐毅": {
       "type": "person",
       "label": "乐毅",
@@ -3280,7 +3326,7 @@
       }
     },
     "九世之乱": {
-      "type": "",
+      "type": "event",
       "label": "九世之乱",
       "aliases": [],
       "tags": [],
@@ -3297,7 +3343,7 @@
       }
     },
     "九合诸侯称霸策略": {
-      "type": "",
+      "type": "concept",
       "label": "九合诸侯称霸策略",
       "aliases": [],
       "tags": [],
@@ -3368,7 +3414,7 @@
       }
     },
     "五国伐齐": {
-      "type": "",
+      "type": "event",
       "label": "五国伐齐",
       "aliases": [],
       "tags": [],
@@ -3385,7 +3431,7 @@
       }
     },
     "五官星宿系统": {
-      "type": "",
+      "type": "concept",
       "label": "五官星宿系统",
       "aliases": [],
       "tags": [],
@@ -3402,7 +3448,7 @@
       }
     },
     "五星运行规律": {
-      "type": "",
+      "type": "concept",
       "label": "五星运行规律",
       "aliases": [],
       "tags": [],
@@ -3446,7 +3492,7 @@
       }
     },
     "五铢钱": {
-      "type": "",
+      "type": "concept",
       "label": "五铢钱",
       "aliases": [],
       "tags": [],
@@ -3463,7 +3509,7 @@
       }
     },
     "人彘": {
-      "type": "",
+      "type": "event",
       "label": "人彘",
       "aliases": [],
       "tags": [],
@@ -3507,7 +3553,7 @@
       }
     },
     "代王入继": {
-      "type": "",
+      "type": "event",
       "label": "代王入继",
       "aliases": [],
       "tags": [],
@@ -3524,7 +3570,7 @@
       }
     },
     "以礼制夷：夹谷会盟": {
-      "type": "",
+      "type": "event",
       "label": "以礼制夷：夹谷会盟",
       "aliases": [],
       "tags": [],
@@ -3650,7 +3696,7 @@
       }
     },
     "伊尹放太甲": {
-      "type": "",
+      "type": "event",
       "label": "伊尹放太甲",
       "aliases": [],
       "tags": [],
@@ -3856,7 +3902,7 @@
       }
     },
     "作法自毙": {
-      "type": "",
+      "type": "event",
       "label": "作法自毙",
       "aliases": [],
       "tags": [],
@@ -3933,7 +3979,7 @@
       }
     },
     "借名起义的合法性包装": {
-      "type": "",
+      "type": "event",
       "label": "借名起义的合法性包装",
       "aliases": [],
       "tags": [],
@@ -3973,6 +4019,23 @@
         "narrative": 0
       }
     },
+    "公信力建立方法": {
+      "type": "concept",
+      "label": "公信力建立方法",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/公信力建立方法.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "公冶长": {
       "type": "person",
       "label": "公冶长",
@@ -3989,6 +4052,32 @@
       "path": "pages/公冶长.md",
       "total_refs": 2,
       "total_chapters": 1,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
+    "公叔座": {
+      "type": "person",
+      "label": "公叔座",
+      "aliases": [
+        "公叔座",
+        "公叔痤"
+      ],
+      "tags": [
+        "战国",
+        "魏国",
+        "商鞅"
+      ],
+      "featured": false,
+      "path": "pages/公叔座.md",
+      "total_refs": 5,
+      "total_chapters": 3,
       "quality_score": 12,
       "_score_parts": {
         "base_refs": 0,
@@ -4027,24 +4116,47 @@
       "type": "person",
       "label": "公子卬",
       "aliases": [
-        "公子卬",
-        "魏公子卬"
+        "公子卬"
       ],
       "tags": [
         "战国",
         "魏国",
-        "武将"
+        "商鞅"
       ],
       "featured": false,
       "path": "pages/公子卬.md",
       "total_refs": 9,
       "total_chapters": 6,
-      "quality_score": 12,
+      "quality_score": 15,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
-        "revs": 0,
+        "revs": 3,
         "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
+    "公子虔": {
+      "type": "person",
+      "label": "公子虔",
+      "aliases": [
+        "公子虔"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "商鞅变法",
+        "太子傅"
+      ],
+      "featured": true,
+      "path": "pages/公子虔.md",
+      "quality_score": 16,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 3,
         "manual": 5,
         "narrative": 0
       }
@@ -4239,7 +4351,7 @@
       }
     },
     "六国合纵盟约": {
-      "type": "",
+      "type": "event",
       "label": "六国合纵盟约",
       "aliases": [],
       "tags": [],
@@ -4256,7 +4368,7 @@
       }
     },
     "共和行政": {
-      "type": "",
+      "type": "event",
       "label": "共和行政",
       "aliases": [],
       "tags": [],
@@ -4323,6 +4435,23 @@
         "narrative": 8
       }
     },
+    "军功激励机制设计": {
+      "type": "concept",
+      "label": "军功激励机制设计",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/军功激励机制设计.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "冯唐": {
       "type": "person",
       "label": "冯唐",
@@ -4350,7 +4479,7 @@
       }
     },
     "冯驩三窟": {
-      "type": "",
+      "type": "event",
       "label": "冯驩三窟",
       "aliases": [],
       "tags": [],
@@ -4662,6 +4791,23 @@
         "narrative": 8
       }
     },
+    "削藩策略": {
+      "type": "concept",
+      "label": "削藩策略",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/削藩策略.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "剧辛": {
       "type": "person",
       "label": "剧辛",
@@ -4686,8 +4832,25 @@
         "narrative": 0
       }
     },
+    "功劳评定体系": {
+      "type": "concept",
+      "label": "功劳评定体系",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/功劳评定体系.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "功成身退": {
-      "type": "",
+      "type": "concept",
       "label": "功成身退",
       "aliases": [],
       "tags": [],
@@ -4704,7 +4867,7 @@
       }
     },
     "功成身退：蔡泽说范睢": {
-      "type": "",
+      "type": "event",
       "label": "功成身退：蔡泽说范睢",
       "aliases": [],
       "tags": [],
@@ -4721,7 +4884,7 @@
       }
     },
     "功狗与功人": {
-      "type": "",
+      "type": "concept",
       "label": "功狗与功人",
       "aliases": [],
       "tags": [],
@@ -4737,8 +4900,25 @@
         "narrative": 8
       }
     },
-    "功臣世家的传代困境": {
+    "功臣世家传代策略": {
       "type": "",
+      "label": "功臣世家传代策略",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/功臣世家传代策略.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "功臣世家的传代困境": {
+      "type": "concept",
       "label": "功臣世家的传代困境",
       "aliases": [],
       "tags": [],
@@ -4755,7 +4935,7 @@
       }
     },
     "功高震主": {
-      "type": "",
+      "type": "concept",
       "label": "功高震主",
       "aliases": [],
       "tags": [],
@@ -4767,6 +4947,23 @@
         "tags": 0,
         "revs": 0,
         "size": 8,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "功高震主的生存之道": {
+      "type": "concept",
+      "label": "功高震主的生存之道",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/功高震主的生存之道.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
         "manual": 5,
         "narrative": 8
       }
@@ -4799,7 +4996,7 @@
       }
     },
     "千金市骨招贤法": {
-      "type": "",
+      "type": "concept",
       "label": "千金市骨招贤法",
       "aliases": [],
       "tags": [],
@@ -4839,8 +5036,35 @@
         "narrative": 8
       }
     },
+    "南宫括": {
+      "type": "person",
+      "label": "南宫括",
+      "aliases": [
+        "南宫括",
+        "子容",
+        "南容"
+      ],
+      "tags": [
+        "春秋",
+        "儒家",
+        "孔门弟子"
+      ],
+      "featured": false,
+      "path": "pages/南宫括.md",
+      "total_refs": 3,
+      "total_chapters": 2,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "博浪沙刺秦": {
-      "type": "",
+      "type": "event",
       "label": "博浪沙刺秦",
       "aliases": [],
       "tags": [],
@@ -4940,7 +5164,7 @@
       }
     },
     "卧薪尝胆": {
-      "type": "",
+      "type": "event",
       "label": "卧薪尝胆",
       "aliases": [],
       "tags": [],
@@ -4957,7 +5181,7 @@
       }
     },
     "卫国小国长寿术": {
-      "type": "",
+      "type": "concept",
       "label": "卫国小国长寿术",
       "aliases": [],
       "tags": [],
@@ -5142,8 +5366,25 @@
         "narrative": 0
       }
     },
+    "危机中的逆向思维": {
+      "type": "concept",
+      "label": "危机中的逆向思维",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/危机中的逆向思维.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "历法与政治合法性": {
-      "type": "",
+      "type": "concept",
       "label": "历法与政治合法性",
       "aliases": [],
       "tags": [],
@@ -5160,7 +5401,7 @@
       }
     },
     "历法改革与政治合法性": {
-      "type": "",
+      "type": "concept",
       "label": "历法改革与政治合法性",
       "aliases": [],
       "tags": [],
@@ -5176,8 +5417,35 @@
         "narrative": 8
       }
     },
+    "原宪": {
+      "type": "person",
+      "label": "原宪",
+      "aliases": [
+        "原宪",
+        "子思"
+      ],
+      "tags": [
+        "春秋",
+        "儒家",
+        "孔门弟子",
+        "安贫乐道"
+      ],
+      "featured": true,
+      "path": "pages/原宪.md",
+      "total_refs": 5,
+      "total_chapters": 3,
+      "quality_score": 17,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "发愤著书：司马迁的李陵之祸": {
-      "type": "",
+      "type": "event",
       "label": "发愤著书：司马迁的李陵之祸",
       "aliases": [],
       "tags": [],
@@ -5273,7 +5541,7 @@
       }
     },
     "古乐与新乐之辨": {
-      "type": "",
+      "type": "concept",
       "label": "古乐与新乐之辨",
       "aliases": [],
       "tags": [],
@@ -5290,7 +5558,7 @@
       }
     },
     "古代隐士与历史考证": {
-      "type": "",
+      "type": "concept",
       "label": "古代隐士与历史考证",
       "aliases": [],
       "tags": [],
@@ -5335,7 +5603,7 @@
       }
     },
     "史记创作时间线": {
-      "type": "",
+      "type": "concept",
       "label": "史记创作时间线",
       "aliases": [],
       "tags": [],
@@ -5352,7 +5620,7 @@
       }
     },
     "史记的体例与方法论": {
-      "type": "",
+      "type": "concept",
       "label": "史记的体例与方法论",
       "aliases": [],
       "tags": [],
@@ -5366,6 +5634,57 @@
         "size": 5,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "司马尚": {
+      "type": "person",
+      "label": "司马尚",
+      "aliases": [
+        "司马尚"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "李牧",
+        "王翦"
+      ],
+      "featured": false,
+      "path": "pages/司马尚.md",
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
+    "司马欣": {
+      "type": "person",
+      "label": "司马欣",
+      "aliases": [
+        "司马欣",
+        "塞王"
+      ],
+      "tags": [
+        "楚汉",
+        "秦将",
+        "塞王",
+        "项羽"
+      ],
+      "featured": false,
+      "path": "pages/司马欣.md",
+      "total_refs": 12,
+      "total_chapters": 2,
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
       }
     },
     "司马相如": {
@@ -5430,8 +5749,35 @@
         "narrative": 8
       }
     },
+    "司马谈": {
+      "type": "person",
+      "label": "司马谈",
+      "aliases": [
+        "司马谈",
+        "太史公"
+      ],
+      "tags": [
+        "西汉",
+        "太史令",
+        "史学",
+        "司马迁"
+      ],
+      "featured": true,
+      "path": "pages/司马谈.md",
+      "total_refs": 5,
+      "total_chapters": 2,
+      "quality_score": 25,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "司马谈临终嘱托与史记使命": {
-      "type": "",
+      "type": "concept",
       "label": "司马谈临终嘱托与史记使命",
       "aliases": [],
       "tags": [],
@@ -5448,7 +5794,7 @@
       }
     },
     "司马谈六家论": {
-      "type": "",
+      "type": "concept",
       "label": "司马谈六家论",
       "aliases": [],
       "tags": [],
@@ -5465,7 +5811,7 @@
       }
     },
     "司马谈论六家要指": {
-      "type": "",
+      "type": "concept",
       "label": "司马谈论六家要指",
       "aliases": [],
       "tags": [],
@@ -5541,7 +5887,7 @@
       }
     },
     "司马迁的经济思想": {
-      "type": "",
+      "type": "concept",
       "label": "司马迁的经济思想",
       "aliases": [],
       "tags": [],
@@ -5557,8 +5903,34 @@
         "narrative": 8
       }
     },
+    "司马错": {
+      "type": "person",
+      "label": "司马错",
+      "aliases": [
+        "司马错"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "司马迁",
+        "伐蜀"
+      ],
+      "featured": false,
+      "path": "pages/司马错.md",
+      "total_refs": 12,
+      "total_chapters": 5,
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "合纵连横": {
-      "type": "",
+      "type": "concept",
       "label": "合纵连横",
       "aliases": [],
       "tags": [
@@ -5581,7 +5953,7 @@
       }
     },
     "名声传扬的机制": {
-      "type": "",
+      "type": "concept",
       "label": "名声传扬的机制",
       "aliases": [],
       "tags": [],
@@ -5626,7 +5998,7 @@
       }
     },
     "向戌弭兵": {
-      "type": "",
+      "type": "event",
       "label": "向戌弭兵",
       "aliases": [],
       "tags": [],
@@ -5702,7 +6074,7 @@
       }
     },
     "吕后称制": {
-      "type": "",
+      "type": "event",
       "label": "吕后称制",
       "aliases": [],
       "tags": [],
@@ -5775,7 +6147,7 @@
       }
     },
     "吕氏专权": {
-      "type": "",
+      "type": "event",
       "label": "吕氏专权",
       "aliases": [],
       "tags": [],
@@ -6014,6 +6386,35 @@
         "narrative": 8
       }
     },
+    "吴芮": {
+      "type": "person",
+      "label": "吴芮",
+      "aliases": [
+        "吴芮",
+        "鄱君",
+        "衡山王",
+        "长沙王"
+      ],
+      "tags": [
+        "楚汉",
+        "长沙王",
+        "百越",
+        "项羽分封"
+      ],
+      "featured": false,
+      "path": "pages/吴芮.md",
+      "total_refs": 2,
+      "total_chapters": 2,
+      "quality_score": 15,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 2,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "吴起": {
       "type": "person",
       "label": "吴起",
@@ -6046,7 +6447,7 @@
       }
     },
     "吴起与田文论功": {
-      "type": "",
+      "type": "event",
       "label": "吴起与田文论功",
       "aliases": [],
       "tags": [],
@@ -6063,7 +6464,7 @@
       }
     },
     "吴起吮疽": {
-      "type": "",
+      "type": "event",
       "label": "吴起吮疽",
       "aliases": [],
       "tags": [],
@@ -6080,7 +6481,7 @@
       }
     },
     "吴起德险论": {
-      "type": "",
+      "type": "concept",
       "label": "吴起德险论",
       "aliases": [],
       "tags": [],
@@ -6097,7 +6498,7 @@
       }
     },
     "吴起楚国变法": {
-      "type": "",
+      "type": "event",
       "label": "吴起楚国变法",
       "aliases": [],
       "tags": [],
@@ -6145,7 +6546,7 @@
       }
     },
     "周亚夫平七国": {
-      "type": "",
+      "type": "event",
       "label": "周亚夫平七国",
       "aliases": [],
       "tags": [],
@@ -6196,7 +6597,7 @@
       }
     },
     "周公摄政": {
-      "type": "",
+      "type": "event",
       "label": "周公摄政",
       "aliases": [],
       "tags": [
@@ -6218,7 +6619,7 @@
       }
     },
     "周公摄政还政": {
-      "type": "",
+      "type": "event",
       "label": "周公摄政还政",
       "aliases": [],
       "tags": [],
@@ -6268,7 +6669,7 @@
       }
     },
     "周勃冤狱": {
-      "type": "",
+      "type": "event",
       "label": "周勃冤狱",
       "aliases": [],
       "tags": [],
@@ -6484,7 +6885,7 @@
       }
     },
     "周朝衰落": {
-      "type": "",
+      "type": "event",
       "label": "周朝衰落",
       "aliases": [],
       "tags": [],
@@ -6533,7 +6934,7 @@
       }
     },
     "周王室衰落": {
-      "type": "",
+      "type": "event",
       "label": "周王室衰落",
       "aliases": [],
       "tags": [],
@@ -6575,7 +6976,7 @@
       }
     },
     "唇亡齿寒": {
-      "type": "",
+      "type": "concept",
       "label": "唇亡齿寒",
       "aliases": [],
       "tags": [],
@@ -6591,8 +6992,32 @@
         "narrative": 8
       }
     },
+    "唐都": {
+      "type": "person",
+      "label": "唐都",
+      "aliases": [
+        "唐都"
+      ],
+      "tags": [
+        "西汉",
+        "天文",
+        "太初历",
+        "汉武帝"
+      ],
+      "featured": false,
+      "path": "pages/唐都.md",
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "商朝帝王世系与九世之乱": {
-      "type": "",
+      "type": "event",
       "label": "商朝帝王世系与九世之乱",
       "aliases": [],
       "tags": [],
@@ -6642,7 +7067,7 @@
       }
     },
     "商鞅变法": {
-      "type": "",
+      "type": "concept",
       "label": "商鞅变法",
       "aliases": [],
       "tags": [],
@@ -6658,8 +7083,25 @@
         "narrative": 8
       }
     },
+    "四战之地生存策略": {
+      "type": "concept",
+      "label": "四战之地生存策略",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/四战之地生存策略.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "四战之地的缓冲国困境": {
-      "type": "",
+      "type": "concept",
       "label": "四战之地的缓冲国困境",
       "aliases": [],
       "tags": [],
@@ -6676,7 +7118,7 @@
       }
     },
     "四皓保储": {
-      "type": "",
+      "type": "event",
       "label": "四皓保储",
       "aliases": [],
       "tags": [],
@@ -6693,7 +7135,7 @@
       }
     },
     "因材施教": {
-      "type": "",
+      "type": "concept",
       "label": "因材施教",
       "aliases": [],
       "tags": [],
@@ -6710,7 +7152,7 @@
       }
     },
     "围魏救赵": {
-      "type": "",
+      "type": "event",
       "label": "围魏救赵",
       "aliases": [],
       "tags": [
@@ -6732,8 +7174,25 @@
         "narrative": 8
       }
     },
-    "围魏救赵：桂陵与马陵之战": {
+    "围魏救赵战术": {
       "type": "",
+      "label": "围魏救赵战术",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/围魏救赵战术.md",
+      "quality_score": 22,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 9,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "围魏救赵：桂陵与马陵之战": {
+      "type": "event",
       "label": "围魏救赵：桂陵与马陵之战",
       "aliases": [],
       "tags": [],
@@ -6750,7 +7209,7 @@
       }
     },
     "圯桥受书": {
-      "type": "",
+      "type": "event",
       "label": "圯桥受书",
       "aliases": [],
       "tags": [],
@@ -6767,7 +7226,7 @@
       }
     },
     "均输平准": {
-      "type": "",
+      "type": "concept",
       "label": "均输平准",
       "aliases": [],
       "tags": [],
@@ -6811,7 +7270,7 @@
       }
     },
     "城濮之战": {
-      "type": "",
+      "type": "event",
       "label": "城濮之战",
       "aliases": [],
       "tags": [],
@@ -6856,7 +7315,7 @@
       }
     },
     "士为知己者死：豫让与聂政": {
-      "type": "",
+      "type": "event",
       "label": "士为知己者死：豫让与聂政",
       "aliases": [],
       "tags": [],
@@ -6868,6 +7327,31 @@
         "tags": 0,
         "revs": 0,
         "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "壶遂": {
+      "type": "person",
+      "label": "壶遂",
+      "aliases": [
+        "壶遂"
+      ],
+      "tags": [
+        "西汉",
+        "汉武帝",
+        "司马迁"
+      ],
+      "featured": true,
+      "path": "pages/壶遂.md",
+      "total_refs": 4,
+      "total_chapters": 2,
+      "quality_score": 22,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 3,
         "manual": 5,
         "narrative": 8
       }
@@ -6949,8 +7433,35 @@
         "narrative": 0
       }
     },
+    "夏无且": {
+      "type": "person",
+      "label": "夏无且",
+      "aliases": [
+        "夏无且",
+        "无且"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "刺客列传",
+        "荆轲"
+      ],
+      "featured": true,
+      "path": "pages/夏无且.md",
+      "total_refs": 3,
+      "total_chapters": 1,
+      "quality_score": 24,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 3,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "大宛物产与西域风俗": {
-      "type": "",
+      "type": "concept",
       "label": "大宛物产与西域风俗",
       "aliases": [],
       "tags": [],
@@ -6967,7 +7478,7 @@
       }
     },
     "大泽乡起义": {
-      "type": "",
+      "type": "event",
       "label": "大泽乡起义",
       "aliases": [],
       "tags": [],
@@ -6984,7 +7495,7 @@
       }
     },
     "天人感应与天变占验": {
-      "type": "",
+      "type": "concept",
       "label": "天人感应与天变占验",
       "aliases": [],
       "tags": [],
@@ -7001,7 +7512,7 @@
       }
     },
     "天官星象": {
-      "type": "",
+      "type": "concept",
       "label": "天官星象",
       "aliases": [],
       "tags": [],
@@ -7018,7 +7529,7 @@
       }
     },
     "天道悖论": {
-      "type": "",
+      "type": "concept",
       "label": "天道悖论",
       "aliases": [],
       "tags": [],
@@ -7035,7 +7546,7 @@
       }
     },
     "太伯让国与建国吴地": {
-      "type": "",
+      "type": "event",
       "label": "太伯让国与建国吴地",
       "aliases": [],
       "tags": [],
@@ -7082,7 +7593,7 @@
       }
     },
     "太史公评卫青霍去病": {
-      "type": "",
+      "type": "concept",
       "label": "太史公评卫青霍去病",
       "aliases": [],
       "tags": [],
@@ -7117,12 +7628,12 @@
       "path": "pages/太子丹.md",
       "total_refs": 16,
       "total_chapters": 5,
-      "quality_score": 39,
+      "quality_score": 43,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 12,
-        "size": 6,
+        "revs": 15,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -7370,7 +7881,7 @@
       }
     },
     "嫪毐之乱": {
-      "type": "",
+      "type": "event",
       "label": "嫪毐之乱",
       "aliases": [],
       "tags": [
@@ -7492,6 +8003,32 @@
         "narrative": 0
       }
     },
+    "子张": {
+      "type": "person",
+      "label": "子张",
+      "aliases": [
+        "子张",
+        "颛孙师"
+      ],
+      "tags": [
+        "春秋",
+        "儒家",
+        "孔门弟子"
+      ],
+      "featured": true,
+      "path": "pages/子张.md",
+      "total_refs": 8,
+      "total_chapters": 2,
+      "quality_score": 15,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "子游": {
       "type": "person",
       "label": "子游",
@@ -7537,12 +8074,12 @@
       "path": "pages/子贡.md",
       "total_refs": 50,
       "total_chapters": 14,
-      "quality_score": 44,
+      "quality_score": 45,
       "_score_parts": {
         "base_refs": 2,
         "tags": 8,
         "revs": 15,
-        "size": 6,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -7607,7 +8144,7 @@
       }
     },
     "孔子仕鲁": {
-      "type": "",
+      "type": "event",
       "label": "孔子仕鲁",
       "aliases": [],
       "tags": [],
@@ -7624,7 +8161,7 @@
       }
     },
     "孔子删定六经": {
-      "type": "",
+      "type": "event",
       "label": "孔子删定六经",
       "aliases": [],
       "tags": [],
@@ -7671,7 +8208,7 @@
       }
     },
     "孔子问礼于老子": {
-      "type": "",
+      "type": "event",
       "label": "孔子问礼于老子",
       "aliases": [],
       "tags": [],
@@ -7688,7 +8225,7 @@
       }
     },
     "存二王之后的周初制度": {
-      "type": "",
+      "type": "concept",
       "label": "存二王之后的周初制度",
       "aliases": [],
       "tags": [],
@@ -7705,7 +8242,7 @@
       }
     },
     "存亡国之后裔": {
-      "type": "",
+      "type": "concept",
       "label": "存亡国之后裔",
       "aliases": [],
       "tags": [],
@@ -7782,7 +8319,7 @@
       }
     },
     "孙武斩美姬": {
-      "type": "",
+      "type": "event",
       "label": "孙武斩美姬",
       "aliases": [],
       "tags": [],
@@ -7799,7 +8336,7 @@
       }
     },
     "孙武练兵": {
-      "type": "",
+      "type": "event",
       "label": "孙武练兵",
       "aliases": [],
       "tags": [
@@ -7855,7 +8392,7 @@
       }
     },
     "孙膑与庞涓恩怨": {
-      "type": "",
+      "type": "event",
       "label": "孙膑与庞涓恩怨",
       "aliases": [],
       "tags": [],
@@ -7872,7 +8409,7 @@
       }
     },
     "孝景帝官制改革": {
-      "type": "",
+      "type": "concept",
       "label": "孝景帝官制改革",
       "aliases": [],
       "tags": [],
@@ -8032,7 +8569,7 @@
       }
     },
     "季札观乐": {
-      "type": "",
+      "type": "event",
       "label": "季札观乐",
       "aliases": [],
       "tags": [],
@@ -8273,7 +8810,7 @@
       }
     },
     "宋襄公之仁": {
-      "type": "",
+      "type": "event",
       "label": "宋襄公之仁",
       "aliases": [],
       "tags": [],
@@ -8290,7 +8827,7 @@
       }
     },
     "完璧归赵": {
-      "type": "",
+      "type": "event",
       "label": "完璧归赵",
       "aliases": [],
       "tags": [
@@ -8363,8 +8900,53 @@
         "narrative": 8
       }
     },
+    "宰予": {
+      "type": "person",
+      "label": "宰予",
+      "aliases": [
+        "宰予",
+        "宰我",
+        "子我"
+      ],
+      "tags": [
+        "春秋",
+        "儒家",
+        "孔门弟子",
+        "孔门十哲"
+      ],
+      "featured": true,
+      "path": "pages/宰予.md",
+      "total_refs": 7,
+      "total_chapters": 4,
+      "quality_score": 17,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
+    "家族传承的生存之道": {
+      "type": "concept",
+      "label": "家族传承的生存之道",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/家族传承的生存之道.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "封狼居胥": {
-      "type": "",
+      "type": "event",
       "label": "封狼居胥",
       "aliases": [],
       "tags": [],
@@ -8381,7 +8963,7 @@
       }
     },
     "封禅": {
-      "type": "",
+      "type": "concept",
       "label": "封禅",
       "aliases": [],
       "tags": [
@@ -8403,7 +8985,7 @@
       }
     },
     "封禅的起源与历史传承": {
-      "type": "",
+      "type": "concept",
       "label": "封禅的起源与历史传承",
       "aliases": [],
       "tags": [],
@@ -8420,7 +9002,7 @@
       }
     },
     "封禅礼制": {
-      "type": "",
+      "type": "concept",
       "label": "封禅礼制",
       "aliases": [],
       "tags": [],
@@ -8437,7 +9019,7 @@
       }
     },
     "将相和": {
-      "type": "",
+      "type": "event",
       "label": "将相和",
       "aliases": [],
       "tags": [
@@ -8460,7 +9042,7 @@
       }
     },
     "小国夹缝生存术": {
-      "type": "",
+      "type": "concept",
       "label": "小国夹缝生存术",
       "aliases": [],
       "tags": [],
@@ -8472,6 +9054,23 @@
         "tags": 0,
         "revs": 0,
         "size": 7,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "小国长寿术": {
+      "type": "",
+      "label": "小国长寿术",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/小国长寿术.md",
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 8,
         "manual": 5,
         "narrative": 8
       }
@@ -8638,7 +9237,7 @@
       }
     },
     "师旷之谏与亡国之声": {
-      "type": "",
+      "type": "event",
       "label": "师旷之谏与亡国之声",
       "aliases": [],
       "tags": [],
@@ -8777,7 +9376,7 @@
       }
     },
     "庄子思想": {
-      "type": "",
+      "type": "concept",
       "label": "庄子思想",
       "aliases": [],
       "tags": [],
@@ -8819,7 +9418,7 @@
       }
     },
     "废除肉刑": {
-      "type": "",
+      "type": "concept",
       "label": "废除肉刑",
       "aliases": [],
       "tags": [],
@@ -8866,6 +9465,23 @@
         "narrative": 8
       }
     },
+    "建国之初的文件治理": {
+      "type": "",
+      "label": "建国之初的文件治理",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/建国之初的文件治理.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "张仪": {
       "type": "person",
       "label": "张仪",
@@ -8899,7 +9515,7 @@
       }
     },
     "张仪欺楚：六百里变六里": {
-      "type": "",
+      "type": "event",
       "label": "张仪欺楚：六百里变六里",
       "aliases": [],
       "tags": [],
@@ -8945,7 +9561,7 @@
       }
     },
     "张楚政权": {
-      "type": "",
+      "type": "event",
       "label": "张楚政权",
       "aliases": [],
       "tags": [],
@@ -9037,11 +9653,11 @@
         "birth": -264,
         "death": -202
       },
-      "quality_score": 34,
+      "quality_score": 37,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 6,
+        "revs": 9,
         "size": 7,
         "manual": 5,
         "narrative": 8
@@ -9083,7 +9699,7 @@
       }
     },
     "张良借箸八不可": {
-      "type": "",
+      "type": "event",
       "label": "张良借箸八不可",
       "aliases": [],
       "tags": [],
@@ -9232,6 +9848,23 @@
         "narrative": 0
       }
     },
+    "弱者逆袭强者的战略方法论": {
+      "type": "concept",
+      "label": "弱者逆袭强者的战略方法论",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/弱者逆袭强者的战略方法论.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "彭越": {
       "type": "person",
       "label": "彭越",
@@ -9264,8 +9897,32 @@
         "narrative": 8
       }
     },
+    "徐夫人": {
+      "type": "person",
+      "label": "徐夫人",
+      "aliases": [
+        "徐夫人"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "刺客列传",
+        "荆轲"
+      ],
+      "featured": false,
+      "path": "pages/徐夫人.md",
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "悬梁刺股": {
-      "type": "",
+      "type": "event",
       "label": "悬梁刺股",
       "aliases": [],
       "tags": [],
@@ -9332,7 +9989,7 @@
       }
     },
     "战争正当性论": {
-      "type": "",
+      "type": "concept",
       "label": "战争正当性论",
       "aliases": [],
       "tags": [],
@@ -9349,7 +10006,7 @@
       }
     },
     "战国变法运动": {
-      "type": "",
+      "type": "concept",
       "label": "战国变法运动",
       "aliases": [],
       "tags": [
@@ -9366,6 +10023,23 @@
         "tags": 8,
         "revs": 0,
         "size": 9,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "战略选址方法": {
+      "type": "",
+      "label": "战略选址方法",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/战略选址方法.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
         "manual": 5,
         "narrative": 8
       }
@@ -9450,8 +10124,35 @@
         "narrative": 8
       }
     },
+    "括母": {
+      "type": "person",
+      "label": "括母",
+      "aliases": [
+        "括母",
+        "赵括之母",
+        "马服君夫人"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "长平之战",
+        "赵括",
+        "赵奢"
+      ],
+      "featured": true,
+      "path": "pages/括母.md",
+      "quality_score": 25,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "挡箭牌藩国战略": {
-      "type": "",
+      "type": "concept",
       "label": "挡箭牌藩国战略",
       "aliases": [],
       "tags": [],
@@ -9468,7 +10169,7 @@
       }
     },
     "掘地见母": {
-      "type": "",
+      "type": "event",
       "label": "掘地见母",
       "aliases": [],
       "tags": [],
@@ -9485,7 +10186,7 @@
       }
     },
     "推恩令": {
-      "type": "",
+      "type": "concept",
       "label": "推恩令",
       "aliases": [],
       "tags": [
@@ -9508,7 +10209,7 @@
       }
     },
     "推恩令前奏": {
-      "type": "",
+      "type": "concept",
       "label": "推恩令前奏",
       "aliases": [],
       "tags": [],
@@ -9524,8 +10225,42 @@
         "narrative": 8
       }
     },
+    "推行政治改革的方法": {
+      "type": "concept",
+      "label": "推行政治改革的方法",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/推行政治改革的方法.md",
+      "quality_score": 15,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
+    "改革阻力应对策略": {
+      "type": "concept",
+      "label": "改革阻力应对策略",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/改革阻力应对策略.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "文景之治": {
-      "type": "",
+      "type": "concept",
       "label": "文景之治",
       "aliases": [],
       "tags": [
@@ -9576,7 +10311,7 @@
       }
     },
     "日月食与天象占验": {
-      "type": "",
+      "type": "concept",
       "label": "日月食与天象占验",
       "aliases": [],
       "tags": [],
@@ -9627,7 +10362,7 @@
       }
     },
     "春申君说秦与李园之祸": {
-      "type": "",
+      "type": "event",
       "label": "春申君说秦与李园之祸",
       "aliases": [],
       "tags": [],
@@ -9644,7 +10379,7 @@
       }
     },
     "春秋五霸": {
-      "type": "",
+      "type": "event",
       "label": "春秋五霸",
       "aliases": [],
       "tags": [],
@@ -9661,7 +10396,7 @@
       }
     },
     "春秋五霸兴替": {
-      "type": "",
+      "type": "concept",
       "label": "春秋五霸兴替",
       "aliases": [],
       "tags": [],
@@ -9678,7 +10413,7 @@
       }
     },
     "春秋诸侯存亡规律": {
-      "type": "",
+      "type": "concept",
       "label": "春秋诸侯存亡规律",
       "aliases": [],
       "tags": [],
@@ -9727,7 +10462,7 @@
       }
     },
     "晁错削藩": {
-      "type": "",
+      "type": "event",
       "label": "晁错削藩",
       "aliases": [],
       "tags": [],
@@ -10233,18 +10968,68 @@
       }
     },
     "晏婴进谏艺术": {
-      "type": "",
+      "type": "concept",
       "label": "晏婴进谏艺术",
       "aliases": [],
       "tags": [],
       "featured": false,
       "path": "pages/晏婴进谏艺术.md",
-      "quality_score": 20,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
+        "revs": 3,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "景监": {
+      "type": "person",
+      "label": "景监",
+      "aliases": [
+        "景监"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "商鞅",
+        "秦孝公"
+      ],
+      "featured": true,
+      "path": "pages/景监.md",
+      "quality_score": 24,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
         "revs": 0,
-        "size": 7,
+        "size": 3,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "智伯": {
+      "type": "person",
+      "label": "智伯",
+      "aliases": [
+        "智伯",
+        "智伯瑶",
+        "智瑶"
+      ],
+      "tags": [
+        "战国",
+        "晋国",
+        "豫让",
+        "三家分晋"
+      ],
+      "featured": true,
+      "path": "pages/智伯.md",
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
         "manual": 5,
         "narrative": 8
       }
@@ -10283,7 +11068,7 @@
       }
     },
     "曹参无为而治": {
-      "type": "",
+      "type": "concept",
       "label": "曹参无为而治",
       "aliases": [],
       "tags": [],
@@ -10300,7 +11085,7 @@
       }
     },
     "曹参萧何功臣排序之争": {
-      "type": "",
+      "type": "event",
       "label": "曹参萧何功臣排序之争",
       "aliases": [],
       "tags": [],
@@ -10312,6 +11097,34 @@
         "tags": 0,
         "revs": 0,
         "size": 5,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "曹咎": {
+      "type": "person",
+      "label": "曹咎",
+      "aliases": [
+        "曹咎",
+        "海春侯",
+        "大司马曹咎"
+      ],
+      "tags": [
+        "楚汉",
+        "楚将",
+        "项羽",
+        "成皋之战"
+      ],
+      "featured": true,
+      "path": "pages/曹咎.md",
+      "total_refs": 11,
+      "total_chapters": 5,
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 6,
         "manual": 5,
         "narrative": 8
       }
@@ -10398,7 +11211,7 @@
       }
     },
     "朱公救子与财富的逻辑": {
-      "type": "",
+      "type": "concept",
       "label": "朱公救子与财富的逻辑",
       "aliases": [],
       "tags": [],
@@ -10439,7 +11252,7 @@
       }
     },
     "杀母立子制度": {
-      "type": "",
+      "type": "concept",
       "label": "杀母立子制度",
       "aliases": [],
       "tags": [],
@@ -10649,7 +11462,7 @@
       }
     },
     "李牧守边与冤死": {
-      "type": "",
+      "type": "event",
       "label": "李牧守边与冤死",
       "aliases": [],
       "tags": [],
@@ -10720,7 +11533,7 @@
       }
     },
     "李陵之祸与发愤著书": {
-      "type": "",
+      "type": "event",
       "label": "李陵之祸与发愤著书",
       "aliases": [],
       "tags": [],
@@ -10757,6 +11570,55 @@
         "size": 2,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "杜挚": {
+      "type": "person",
+      "label": "杜挚",
+      "aliases": [
+        "杜挚"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "商鞅变法",
+        "守旧贵族"
+      ],
+      "featured": false,
+      "path": "pages/杜挚.md",
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
+    "杨何": {
+      "type": "person",
+      "label": "杨何",
+      "aliases": [
+        "杨何"
+      ],
+      "tags": [
+        "西汉",
+        "易学",
+        "司马谈"
+      ],
+      "featured": false,
+      "path": "pages/杨何.md",
+      "total_refs": 3,
+      "total_chapters": 3,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
       }
     },
     "枚乘": {
@@ -10840,7 +11702,7 @@
       }
     },
     "梁国守睢阳": {
-      "type": "",
+      "type": "event",
       "label": "梁国守睢阳",
       "aliases": [],
       "tags": [],
@@ -10889,7 +11751,7 @@
       }
     },
     "梁孝王刺袁盎": {
-      "type": "",
+      "type": "event",
       "label": "梁孝王刺袁盎",
       "aliases": [],
       "tags": [],
@@ -10934,7 +11796,7 @@
       }
     },
     "楚元王学术治国": {
-      "type": "",
+      "type": "concept",
       "label": "楚元王学术治国",
       "aliases": [],
       "tags": [],
@@ -11290,6 +12152,33 @@
         "narrative": 8
       }
     },
+    "樊於期": {
+      "type": "person",
+      "label": "樊於期",
+      "aliases": [
+        "樊於期",
+        "樊将军"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "刺客列传",
+        "荆轲"
+      ],
+      "featured": true,
+      "path": "pages/樊於期.md",
+      "total_refs": 7,
+      "total_chapters": 2,
+      "quality_score": 25,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "樗里子": {
       "type": "person",
       "label": "樗里子",
@@ -11318,7 +12207,7 @@
       }
     },
     "正当战争论与穷武之戒": {
-      "type": "",
+      "type": "concept",
       "label": "正当战争论与穷武之戒",
       "aliases": [],
       "tags": [],
@@ -11335,7 +12224,7 @@
       }
     },
     "武丁中兴": {
-      "type": "",
+      "type": "event",
       "label": "武丁中兴",
       "aliases": [],
       "tags": [
@@ -11357,7 +12246,7 @@
       }
     },
     "武王分封同姓": {
-      "type": "",
+      "type": "event",
       "label": "武王分封同姓",
       "aliases": [],
       "tags": [],
@@ -11398,7 +12287,7 @@
       }
     },
     "殷末三仁的不同选择": {
-      "type": "",
+      "type": "event",
       "label": "殷末三仁的不同选择",
       "aliases": [],
       "tags": [],
@@ -11471,7 +12360,7 @@
       }
     },
     "毛遂自荐": {
-      "type": "",
+      "type": "event",
       "label": "毛遂自荐",
       "aliases": [],
       "tags": [],
@@ -11488,7 +12377,7 @@
       }
     },
     "汉代低调派外戚": {
-      "type": "",
+      "type": "concept",
       "label": "汉代低调派外戚",
       "aliases": [],
       "tags": [],
@@ -11505,7 +12394,7 @@
       }
     },
     "汉代侯爵存续规律": {
-      "type": "",
+      "type": "concept",
       "label": "汉代侯爵存续规律",
       "aliases": [],
       "tags": [],
@@ -11522,7 +12411,7 @@
       }
     },
     "汉代漕运系统": {
-      "type": "",
+      "type": "concept",
       "label": "汉代漕运系统",
       "aliases": [],
       "tags": [],
@@ -11539,7 +12428,7 @@
       }
     },
     "汉代祭祀体系": {
-      "type": "",
+      "type": "concept",
       "label": "汉代祭祀体系",
       "aliases": [],
       "tags": [],
@@ -11556,7 +12445,7 @@
       }
     },
     "汉代酷吏制度": {
-      "type": "",
+      "type": "concept",
       "label": "汉代酷吏制度",
       "aliases": [],
       "tags": [],
@@ -11573,7 +12462,7 @@
       }
     },
     "汉初功臣从军起点与封赏关系": {
-      "type": "",
+      "type": "concept",
       "label": "汉初功臣从军起点与封赏关系",
       "aliases": [],
       "tags": [],
@@ -11590,7 +12479,7 @@
       }
     },
     "汉初功臣存活策略": {
-      "type": "",
+      "type": "concept",
       "label": "汉初功臣存活策略",
       "aliases": [],
       "tags": [],
@@ -11607,7 +12496,7 @@
       }
     },
     "汉初功臣封侯体系": {
-      "type": "",
+      "type": "concept",
       "label": "汉初功臣封侯体系",
       "aliases": [],
       "tags": [],
@@ -11624,7 +12513,7 @@
       }
     },
     "汉初外戚政治": {
-      "type": "",
+      "type": "concept",
       "label": "汉初外戚政治",
       "aliases": [],
       "tags": [],
@@ -11641,7 +12530,7 @@
       }
     },
     "汉初政治制度": {
-      "type": "",
+      "type": "concept",
       "label": "汉初政治制度",
       "aliases": [],
       "tags": [],
@@ -11658,7 +12547,7 @@
       }
     },
     "汉初经济政策": {
-      "type": "",
+      "type": "concept",
       "label": "汉初经济政策",
       "aliases": [],
       "tags": [],
@@ -11675,7 +12564,7 @@
       }
     },
     "汉初经济政策与文景之治": {
-      "type": "",
+      "type": "concept",
       "label": "汉初经济政策与文景之治",
       "aliases": [],
       "tags": [],
@@ -11692,7 +12581,7 @@
       }
     },
     "汉初诸侯王体系演变": {
-      "type": "",
+      "type": "concept",
       "label": "汉初诸侯王体系演变",
       "aliases": [],
       "tags": [],
@@ -11794,7 +12683,7 @@
       }
     },
     "汉文帝节俭": {
-      "type": "",
+      "type": "concept",
       "label": "汉文帝节俭",
       "aliases": [],
       "tags": [
@@ -11903,7 +12792,7 @@
       }
     },
     "汉武帝封禅": {
-      "type": "",
+      "type": "concept",
       "label": "汉武帝封禅",
       "aliases": [],
       "tags": [],
@@ -11920,7 +12809,7 @@
       }
     },
     "汉武帝方士求仙": {
-      "type": "",
+      "type": "concept",
       "label": "汉武帝方士求仙",
       "aliases": [],
       "tags": [],
@@ -11937,7 +12826,7 @@
       }
     },
     "汉武帝财政危机": {
-      "type": "",
+      "type": "concept",
       "label": "汉武帝财政危机",
       "aliases": [],
       "tags": [],
@@ -11987,7 +12876,7 @@
       }
     },
     "沙丘政变": {
-      "type": "",
+      "type": "event",
       "label": "沙丘政变",
       "aliases": [],
       "tags": [],
@@ -12147,7 +13036,7 @@
       }
     },
     "渑池之会": {
-      "type": "",
+      "type": "event",
       "label": "渑池之会",
       "aliases": [],
       "tags": [
@@ -12169,8 +13058,25 @@
         "narrative": 8
       }
     },
-    "漠北大战": {
+    "游说君主的方法": {
       "type": "",
+      "label": "游说君主的方法",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/游说君主的方法.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "漠北大战": {
+      "type": "event",
       "label": "漠北大战",
       "aliases": [],
       "tags": [],
@@ -12184,6 +13090,32 @@
         "size": 5,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "澹台灭明": {
+      "type": "person",
+      "label": "澹台灭明",
+      "aliases": [
+        "澹台灭明",
+        "子羽"
+      ],
+      "tags": [
+        "春秋",
+        "儒家",
+        "孔门弟子"
+      ],
+      "featured": false,
+      "path": "pages/澹台灭明.md",
+      "total_refs": 7,
+      "total_chapters": 3,
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
       }
     },
     "灌夫": {
@@ -12275,7 +13207,7 @@
       }
     },
     "燕国末年灭亡": {
-      "type": "",
+      "type": "event",
       "label": "燕国末年灭亡",
       "aliases": [],
       "tags": [],
@@ -12355,7 +13287,7 @@
       }
     },
     "牧野之战": {
-      "type": "",
+      "type": "event",
       "label": "牧野之战",
       "aliases": [],
       "tags": [
@@ -12406,7 +13338,7 @@
       }
     },
     "独收秦图书": {
-      "type": "",
+      "type": "event",
       "label": "独收秦图书",
       "aliases": [],
       "tags": [],
@@ -12535,7 +13467,7 @@
       }
     },
     "王翦灭楚与请田自坚": {
-      "type": "",
+      "type": "event",
       "label": "王翦灭楚与请田自坚",
       "aliases": [],
       "tags": [],
@@ -12632,7 +13564,7 @@
       }
     },
     "瓠子决口": {
-      "type": "",
+      "type": "event",
       "label": "瓠子决口",
       "aliases": [],
       "tags": [],
@@ -12649,7 +13581,7 @@
       }
     },
     "瓠子决口与黄河治理": {
-      "type": "",
+      "type": "concept",
       "label": "瓠子决口与黄河治理",
       "aliases": [],
       "tags": [],
@@ -12711,6 +13643,30 @@
         "tags": 8,
         "revs": 0,
         "size": 4,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "甘龙": {
+      "type": "person",
+      "label": "甘龙",
+      "aliases": [
+        "甘龙"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "商鞅变法",
+        "守旧贵族"
+      ],
+      "featured": true,
+      "path": "pages/甘龙.md",
+      "quality_score": 24,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 3,
         "manual": 5,
         "narrative": 8
       }
@@ -12887,7 +13843,7 @@
       }
     },
     "田忌赛马": {
-      "type": "",
+      "type": "event",
       "label": "田忌赛马",
       "aliases": [],
       "tags": [
@@ -12964,7 +13920,7 @@
       }
     },
     "田氏代齐": {
-      "type": "",
+      "type": "event",
       "label": "田氏代齐",
       "aliases": [],
       "tags": [],
@@ -12981,7 +13937,7 @@
       }
     },
     "田氏源出陈国": {
-      "type": "",
+      "type": "event",
       "label": "田氏源出陈国",
       "aliases": [],
       "tags": [],
@@ -12998,7 +13954,7 @@
       }
     },
     "田生激吕术": {
-      "type": "",
+      "type": "event",
       "label": "田生激吕术",
       "aliases": [],
       "tags": [],
@@ -13010,6 +13966,32 @@
         "tags": 0,
         "revs": 0,
         "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "田荣": {
+      "type": "person",
+      "label": "田荣",
+      "aliases": [
+        "田荣"
+      ],
+      "tags": [
+        "楚汉",
+        "齐国",
+        "项羽",
+        "分封不公"
+      ],
+      "featured": true,
+      "path": "pages/田荣.md",
+      "total_refs": 14,
+      "total_chapters": 4,
+      "quality_score": 28,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -13099,7 +14081,7 @@
       }
     },
     "申不害术治": {
-      "type": "",
+      "type": "concept",
       "label": "申不害术治",
       "aliases": [],
       "tags": [],
@@ -13116,7 +14098,7 @@
       }
     },
     "申不害术治思想": {
-      "type": "",
+      "type": "concept",
       "label": "申不害术治思想",
       "aliases": [],
       "tags": [],
@@ -13133,7 +14115,7 @@
       }
     },
     "申不害相韩": {
-      "type": "",
+      "type": "concept",
       "label": "申不害相韩",
       "aliases": [],
       "tags": [],
@@ -13276,6 +14258,23 @@
         "narrative": 8
       }
     },
+    "白圭经商法": {
+      "type": "",
+      "label": "白圭经商法",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/白圭经商法.md",
+      "quality_score": 19,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "白登之围": {
       "type": "event",
       "label": "白登之围",
@@ -13334,7 +14333,7 @@
       }
     },
     "白起之死": {
-      "type": "",
+      "type": "event",
       "label": "白起之死",
       "aliases": [],
       "tags": [],
@@ -13351,7 +14350,7 @@
       }
     },
     "白马之盟": {
-      "type": "",
+      "type": "event",
       "label": "白马之盟",
       "aliases": [],
       "tags": [],
@@ -13395,7 +14394,7 @@
       }
     },
     "皋陶九德": {
-      "type": "",
+      "type": "event",
       "label": "皋陶九德",
       "aliases": [],
       "tags": [
@@ -13417,7 +14416,7 @@
       }
     },
     "盐铁专营": {
-      "type": "",
+      "type": "concept",
       "label": "盐铁专营",
       "aliases": [],
       "tags": [],
@@ -13431,6 +14430,29 @@
         "size": 7,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "盖聂": {
+      "type": "person",
+      "label": "盖聂",
+      "aliases": [
+        "盖聂"
+      ],
+      "tags": [
+        "战国",
+        "刺客列传",
+        "荆轲"
+      ],
+      "featured": false,
+      "path": "pages/盖聂.md",
+      "quality_score": 12,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
       }
     },
     "石奋": {
@@ -13510,7 +14532,7 @@
       }
     },
     "礼乐刑政": {
-      "type": "",
+      "type": "concept",
       "label": "礼乐刑政",
       "aliases": [],
       "tags": [
@@ -13533,7 +14555,7 @@
       }
     },
     "礼乐同异论": {
-      "type": "",
+      "type": "concept",
       "label": "礼乐同异论",
       "aliases": [],
       "tags": [],
@@ -13550,7 +14572,7 @@
       }
     },
     "礼的本质与起源": {
-      "type": "",
+      "type": "concept",
       "label": "礼的本质与起源",
       "aliases": [],
       "tags": [],
@@ -13567,7 +14589,7 @@
       }
     },
     "礼的起源与本质": {
-      "type": "",
+      "type": "concept",
       "label": "礼的起源与本质",
       "aliases": [],
       "tags": [
@@ -13589,7 +14611,7 @@
       }
     },
     "禅让制度": {
-      "type": "",
+      "type": "concept",
       "label": "禅让制度",
       "aliases": [],
       "tags": [
@@ -13611,7 +14633,7 @@
       }
     },
     "禹治水": {
-      "type": "",
+      "type": "event",
       "label": "禹治水",
       "aliases": [],
       "tags": [],
@@ -13668,7 +14690,7 @@
       }
     },
     "秦始皇中央集权改革": {
-      "type": "",
+      "type": "concept",
       "label": "秦始皇中央集权改革",
       "aliases": [],
       "tags": [
@@ -13691,7 +14713,7 @@
       }
     },
     "秦始皇封禅": {
-      "type": "",
+      "type": "concept",
       "label": "秦始皇封禅",
       "aliases": [],
       "tags": [],
@@ -13965,7 +14987,7 @@
       }
     },
     "秦楚之际权力三嬗": {
-      "type": "",
+      "type": "event",
       "label": "秦楚之际权力三嬗",
       "aliases": [],
       "tags": [],
@@ -14239,7 +15261,7 @@
       }
     },
     "稷下学宫": {
-      "type": "",
+      "type": "concept",
       "label": "稷下学宫",
       "aliases": [],
       "tags": [],
@@ -14284,7 +15306,7 @@
       }
     },
     "穰侯魏冉与秦国外戚政治": {
-      "type": "",
+      "type": "concept",
       "label": "穰侯魏冉与秦国外戚政治",
       "aliases": [],
       "tags": [],
@@ -14301,7 +15323,7 @@
       }
     },
     "窃符救赵": {
-      "type": "",
+      "type": "event",
       "label": "窃符救赵",
       "aliases": [],
       "tags": [],
@@ -14383,7 +15405,7 @@
       }
     },
     "立木为信": {
-      "type": "",
+      "type": "event",
       "label": "立木为信",
       "aliases": [],
       "tags": [],
@@ -14431,7 +15453,7 @@
       }
     },
     "符瑞政治": {
-      "type": "",
+      "type": "concept",
       "label": "符瑞政治",
       "aliases": [],
       "tags": [],
@@ -14508,7 +15530,7 @@
       }
     },
     "管仲改革": {
-      "type": "",
+      "type": "concept",
       "label": "管仲改革",
       "aliases": [],
       "tags": [],
@@ -14552,7 +15574,7 @@
       }
     },
     "纸上谈兵": {
-      "type": "",
+      "type": "event",
       "label": "纸上谈兵",
       "aliases": [],
       "tags": [],
@@ -14569,7 +15591,7 @@
       }
     },
     "细柳营治军": {
-      "type": "",
+      "type": "event",
       "label": "细柳营治军",
       "aliases": [],
       "tags": [],
@@ -14611,7 +15633,7 @@
       }
     },
     "缇萦上书": {
-      "type": "",
+      "type": "event",
       "label": "缇萦上书",
       "aliases": [],
       "tags": [
@@ -14683,7 +15705,7 @@
       }
     },
     "羲和历法": {
-      "type": "",
+      "type": "concept",
       "label": "羲和历法",
       "aliases": [],
       "tags": [
@@ -14758,7 +15780,7 @@
       }
     },
     "老子生平与道德经": {
-      "type": "",
+      "type": "concept",
       "label": "老子生平与道德经",
       "aliases": [],
       "tags": [],
@@ -14851,7 +15873,7 @@
       }
     },
     "背水一战": {
-      "type": "",
+      "type": "event",
       "label": "背水一战",
       "aliases": [],
       "tags": [
@@ -14874,7 +15896,7 @@
       }
     },
     "背水一战：井陉之战": {
-      "type": "",
+      "type": "event",
       "label": "背水一战：井陉之战",
       "aliases": [],
       "tags": [],
@@ -14916,7 +15938,7 @@
       }
     },
     "胡服骑射": {
-      "type": "",
+      "type": "event",
       "label": "胡服骑射",
       "aliases": [],
       "tags": [
@@ -14939,7 +15961,7 @@
       }
     },
     "胯下之辱与韩信的忍耐": {
-      "type": "",
+      "type": "event",
       "label": "胯下之辱与韩信的忍耐",
       "aliases": [],
       "tags": [],
@@ -14953,6 +15975,32 @@
         "size": 4,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "臧荼": {
+      "type": "person",
+      "label": "臧荼",
+      "aliases": [
+        "臧荼",
+        "燕王臧荼"
+      ],
+      "tags": [
+        "楚汉",
+        "燕王",
+        "项羽分封"
+      ],
+      "featured": false,
+      "path": "pages/臧荼.md",
+      "total_refs": 2,
+      "total_chapters": 1,
+      "quality_score": 13,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 2,
+        "manual": 5,
+        "narrative": 0
       }
     },
     "苏代": {
@@ -15116,12 +16164,40 @@
       ],
       "featured": true,
       "path": "pages/范睢.md",
+      "quality_score": 35,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 6,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "范睢上秦昭王书": {
+      "type": "sanwen",
+      "label": "范睢上秦昭王书",
+      "aliases": [
+        "范睢奏疏",
+        "范睢见秦王",
+        "范睢说秦昭王"
+      ],
+      "tags": [
+        "奏疏",
+        "战国",
+        "范睢",
+        "秦昭王",
+        "散文",
+        "远交近攻"
+      ],
+      "featured": false,
+      "path": "pages/范睢上秦昭王书.md",
       "quality_score": 31,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 3,
-        "size": 7,
+        "revs": 0,
+        "size": 10,
         "manual": 5,
         "narrative": 8
       }
@@ -15150,6 +16226,23 @@
         "tags": 8,
         "revs": 15,
         "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "范蠡功成身退": {
+      "type": "",
+      "label": "范蠡功成身退",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/范蠡功成身退.md",
+      "quality_score": 20,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -15276,7 +16369,7 @@
       }
     },
     "荆轲刺秦王": {
-      "type": "",
+      "type": "event",
       "label": "荆轲刺秦王",
       "aliases": [],
       "tags": [],
@@ -15327,7 +16420,7 @@
       }
     },
     "萧何收秦图书": {
-      "type": "",
+      "type": "event",
       "label": "萧何收秦图书",
       "aliases": [],
       "tags": [],
@@ -15344,7 +16437,7 @@
       }
     },
     "萧何月下追韩信": {
-      "type": "",
+      "type": "event",
       "label": "萧何月下追韩信",
       "aliases": [],
       "tags": [],
@@ -15361,7 +16454,7 @@
       }
     },
     "萧何第一": {
-      "type": "",
+      "type": "event",
       "label": "萧何第一",
       "aliases": [],
       "tags": [],
@@ -15378,7 +16471,7 @@
       }
     },
     "萧何自污保身": {
-      "type": "",
+      "type": "event",
       "label": "萧何自污保身",
       "aliases": [],
       "tags": [],
@@ -15395,7 +16488,7 @@
       }
     },
     "萧规曹随": {
-      "type": "",
+      "type": "concept",
       "label": "萧规曹随",
       "aliases": [],
       "tags": [],
@@ -15407,6 +16500,30 @@
         "tags": 0,
         "revs": 0,
         "size": 7,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "落下闳": {
+      "type": "person",
+      "label": "落下闳",
+      "aliases": [
+        "落下闳"
+      ],
+      "tags": [
+        "西汉",
+        "天文",
+        "太初历",
+        "汉武帝"
+      ],
+      "featured": true,
+      "path": "pages/落下闳.md",
+      "quality_score": 24,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 3,
         "manual": 5,
         "narrative": 8
       }
@@ -15460,6 +16577,32 @@
         "size": 4,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "蒙嘉": {
+      "type": "person",
+      "label": "蒙嘉",
+      "aliases": [
+        "蒙嘉"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "刺客列传",
+        "荆轲"
+      ],
+      "featured": false,
+      "path": "pages/蒙嘉.md",
+      "total_refs": 2,
+      "total_chapters": 2,
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
       }
     },
     "蒙恬": {
@@ -15547,7 +16690,7 @@
       }
     },
     "蒯聩之乱与父子争位": {
-      "type": "",
+      "type": "event",
       "label": "蒯聩之乱与父子争位",
       "aliases": [],
       "tags": [],
@@ -16030,6 +17173,30 @@
         "narrative": 8
       }
     },
+    "许历": {
+      "type": "person",
+      "label": "许历",
+      "aliases": [
+        "许历"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "阏与之战",
+        "赵奢"
+      ],
+      "featured": true,
+      "path": "pages/许历.md",
+      "quality_score": 25,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "许负": {
       "type": "person",
       "label": "许负",
@@ -16053,8 +17220,25 @@
         "narrative": 0
       }
     },
+    "识别并抵御心理操控": {
+      "type": "concept",
+      "label": "识别并抵御心理操控",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/识别并抵御心理操控.md",
+      "quality_score": 15,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "诛吕立文": {
-      "type": "",
+      "type": "event",
       "label": "诛吕立文",
       "aliases": [],
       "tags": [],
@@ -16071,7 +17255,7 @@
       }
     },
     "诛灭诸吕": {
-      "type": "",
+      "type": "event",
       "label": "诛灭诸吕",
       "aliases": [],
       "tags": [],
@@ -16088,7 +17272,7 @@
       }
     },
     "说难与游说之难": {
-      "type": "",
+      "type": "concept",
       "label": "说难与游说之难",
       "aliases": [],
       "tags": [],
@@ -16105,7 +17289,7 @@
       }
     },
     "诸侯国生存与灭亡": {
-      "type": "",
+      "type": "concept",
       "label": "诸侯国生存与灭亡",
       "aliases": [],
       "tags": [],
@@ -16121,8 +17305,25 @@
         "narrative": 8
       }
     },
-    "谏逐客书": {
+    "谏言说服方法": {
       "type": "",
+      "label": "谏言说服方法",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/谏言说服方法.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "谏逐客书": {
+      "type": "concept",
       "label": "谏逐客书",
       "aliases": [],
       "tags": [],
@@ -16166,7 +17367,7 @@
       }
     },
     "货殖列传中的致富案例": {
-      "type": "",
+      "type": "concept",
       "label": "货殖列传中的致富案例",
       "aliases": [],
       "tags": [],
@@ -16178,6 +17379,23 @@
         "tags": 0,
         "revs": 0,
         "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "贵族避乱迁徙重建": {
+      "type": "",
+      "label": "贵族避乱迁徙重建",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/贵族避乱迁徙重建.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
         "manual": 5,
         "narrative": 8
       }
@@ -16204,18 +17422,18 @@
         "birth": -200,
         "death": -168
       },
-      "quality_score": 44,
+      "quality_score": 45,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
         "revs": 15,
-        "size": 7,
+        "size": 8,
         "manual": 5,
         "narrative": 8
       }
     },
     "贾谊的政治悲剧": {
-      "type": "",
+      "type": "concept",
       "label": "贾谊的政治悲剧",
       "aliases": [],
       "tags": [],
@@ -16741,7 +17959,7 @@
       }
     },
     "赵良苦谏商君": {
-      "type": "",
+      "type": "event",
       "label": "赵良苦谏商君",
       "aliases": [],
       "tags": [],
@@ -16755,6 +17973,30 @@
         "size": 10,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "赵葱": {
+      "type": "person",
+      "label": "赵葱",
+      "aliases": [
+        "赵葱"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "王翦",
+        "李牧"
+      ],
+      "featured": false,
+      "path": "pages/赵葱.md",
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
       }
     },
     "赵衰": {
@@ -16844,7 +18086,7 @@
       }
     },
     "路中大夫殉节": {
-      "type": "",
+      "type": "event",
       "label": "路中大夫殉节",
       "aliases": [],
       "tags": [],
@@ -16912,19 +18154,100 @@
         "narrative": 0
       }
     },
+    "过秦论上": {
+      "type": "sanwen",
+      "label": "过秦论上",
+      "aliases": [
+        "贾谊过秦论上",
+        "过秦论·上篇"
+      ],
+      "tags": [
+        "议论",
+        "政论文",
+        "贾谊",
+        "汉初",
+        "秦朝",
+        "散文"
+      ],
+      "featured": false,
+      "path": "pages/过秦论上.md",
+      "quality_score": 28,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 7,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "过秦论下": {
+      "type": "sanwen",
+      "label": "过秦论下",
+      "aliases": [
+        "贾谊过秦论下",
+        "过秦论·下篇"
+      ],
+      "tags": [
+        "议论",
+        "政论文",
+        "贾谊",
+        "汉初",
+        "秦朝",
+        "散文"
+      ],
+      "featured": false,
+      "path": "pages/过秦论下.md",
+      "quality_score": 27,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 6,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "过秦论中": {
+      "type": "sanwen",
+      "label": "过秦论中",
+      "aliases": [
+        "贾谊过秦论中",
+        "过秦论·中篇"
+      ],
+      "tags": [
+        "议论",
+        "政论文",
+        "贾谊",
+        "汉初",
+        "秦朝",
+        "散文"
+      ],
+      "featured": false,
+      "path": "pages/过秦论中.md",
+      "quality_score": 30,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 9,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "远交近攻": {
-      "type": "",
+      "type": "concept",
       "label": "远交近攻",
       "aliases": [],
       "tags": [],
       "featured": false,
       "path": "pages/远交近攻.md",
-      "quality_score": 17,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 0,
-        "size": 4,
+        "revs": 3,
+        "size": 10,
         "manual": 5,
         "narrative": 8
       }
@@ -17098,7 +18421,7 @@
       }
     },
     "郑国渠与关中水利": {
-      "type": "",
+      "type": "concept",
       "label": "郑国渠与关中水利",
       "aliases": [],
       "tags": [],
@@ -17276,6 +18599,31 @@
         "narrative": 8
       }
     },
+    "郭开": {
+      "type": "person",
+      "label": "郭开",
+      "aliases": [
+        "郭开"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "奸臣",
+        "廉颇",
+        "李牧"
+      ],
+      "featured": true,
+      "path": "pages/郭开.md",
+      "quality_score": 25,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "郭解": {
       "type": "person",
       "label": "郭解",
@@ -17381,7 +18729,7 @@
       }
     },
     "重耳流亡复国": {
-      "type": "",
+      "type": "event",
       "label": "重耳流亡复国",
       "aliases": [],
       "tags": [],
@@ -17447,7 +18795,7 @@
       }
     },
     "长平之战": {
-      "type": "",
+      "type": "event",
       "label": "长平之战",
       "aliases": [],
       "tags": [
@@ -17498,6 +18846,33 @@
         "narrative": 8
       }
     },
+    "闵子骞": {
+      "type": "person",
+      "label": "闵子骞",
+      "aliases": [
+        "闵子骞",
+        "闵损",
+        "子骞"
+      ],
+      "tags": [
+        "春秋",
+        "儒家",
+        "孔门弟子",
+        "孔门十哲",
+        "孝子"
+      ],
+      "featured": false,
+      "path": "pages/闵子骞.md",
+      "quality_score": 14,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "陆贾": {
       "type": "person",
       "label": "陆贾",
@@ -17524,8 +18899,34 @@
         "narrative": 8
       }
     },
+    "陈余": {
+      "type": "person",
+      "label": "陈余",
+      "aliases": [
+        "陈余",
+        "陈馀",
+        "成安君"
+      ],
+      "tags": [
+        "楚汉",
+        "赵国",
+        "张耳",
+        "刎颈之交"
+      ],
+      "featured": true,
+      "path": "pages/陈余.md",
+      "quality_score": 29,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "陈完奔齐与田氏代齐预言": {
-      "type": "",
+      "type": "event",
       "label": "陈完奔齐与田氏代齐预言",
       "aliases": [],
       "tags": [],
@@ -17575,7 +18976,7 @@
       }
     },
     "陈平六出奇计": {
-      "type": "",
+      "type": "event",
       "label": "陈平六出奇计",
       "aliases": [],
       "tags": [],
@@ -17592,7 +18993,7 @@
       }
     },
     "陈平模糊站队术": {
-      "type": "",
+      "type": "concept",
       "label": "陈平模糊站队术",
       "aliases": [],
       "tags": [],
@@ -17724,7 +19125,7 @@
       }
     },
     "陈胜首事之功与历史定位": {
-      "type": "",
+      "type": "event",
       "label": "陈胜首事之功与历史定位",
       "aliases": [],
       "tags": [],
@@ -17741,7 +19142,7 @@
       }
     },
     "陈蔡绝粮": {
-      "type": "",
+      "type": "event",
       "label": "陈蔡绝粮",
       "aliases": [],
       "tags": [],
@@ -17836,12 +19237,38 @@
         "death": -205,
         "note": "约"
       },
-      "quality_score": 44,
+      "quality_score": 45,
       "_score_parts": {
         "base_refs": 1,
         "tags": 8,
         "revs": 15,
-        "size": 7,
+        "size": 8,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "陈馀遗章邯书": {
+      "type": "sanwen",
+      "label": "陈馀遗章邯书",
+      "aliases": [
+        "陈馀书",
+        "陈馀致章邯书"
+      ],
+      "tags": [
+        "书信",
+        "楚汉之际",
+        "陈馀",
+        "章邯",
+        "散文"
+      ],
+      "featured": false,
+      "path": "pages/陈馀遗章邯书.md",
+      "quality_score": 24,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 3,
         "manual": 5,
         "narrative": 8
       }
@@ -17930,6 +19357,50 @@
         "narrative": 8
       }
     },
+    "霸权建立与维持方法论": {
+      "type": "concept",
+      "label": "霸权建立与维持方法论",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/霸权建立与维持方法论.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "鞠武": {
+      "type": "person",
+      "label": "鞠武",
+      "aliases": [
+        "鞠武",
+        "太傅"
+      ],
+      "tags": [
+        "战国",
+        "燕国",
+        "刺客列传",
+        "太子丹"
+      ],
+      "featured": true,
+      "path": "pages/鞠武.md",
+      "total_refs": 4,
+      "total_chapters": 1,
+      "quality_score": 25,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 4,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "韩信": {
       "type": "person",
       "label": "韩信",
@@ -17992,7 +19463,7 @@
       }
     },
     "韩国军事弱势的结构性原因": {
-      "type": "",
+      "type": "concept",
       "label": "韩国军事弱势的结构性原因",
       "aliases": [],
       "tags": [],
@@ -18009,7 +19480,7 @@
       }
     },
     "韩国灭亡": {
-      "type": "",
+      "type": "event",
       "label": "韩国灭亡",
       "aliases": [],
       "tags": [],
@@ -18120,7 +19591,7 @@
       }
     },
     "韩非入秦被害": {
-      "type": "",
+      "type": "event",
       "label": "韩非入秦被害",
       "aliases": [],
       "tags": [],
@@ -18230,7 +19701,7 @@
       }
     },
     "项羽战略失误": {
-      "type": "",
+      "type": "concept",
       "label": "项羽战略失误",
       "aliases": [],
       "tags": [],
@@ -18300,6 +19771,23 @@
         "narrative": 8
       }
     },
+    "马陵之战诱敌伏击战术": {
+      "type": "event",
+      "label": "马陵之战诱敌伏击战术",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/马陵之战诱敌伏击战术.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "骊姬": {
       "type": "person",
       "label": "骊姬",
@@ -18326,7 +19814,7 @@
       }
     },
     "骊姬之乱": {
-      "type": "",
+      "type": "event",
       "label": "骊姬之乱",
       "aliases": [],
       "tags": [],
@@ -18561,7 +20049,7 @@
       }
     },
     "魏才天下用": {
-      "type": "",
+      "type": "concept",
       "label": "魏才天下用",
       "aliases": [],
       "tags": [],
@@ -18608,7 +20096,7 @@
       }
     },
     "魏文侯变法": {
-      "type": "",
+      "type": "concept",
       "label": "魏文侯变法",
       "aliases": [],
       "tags": [],
@@ -18625,7 +20113,7 @@
       }
     },
     "魏文侯变法称霸": {
-      "type": "",
+      "type": "event",
       "label": "魏文侯变法称霸",
       "aliases": [],
       "tags": [],
@@ -18943,6 +20431,23 @@
         "narrative": 8
       }
     },
+    "鲍叔式人才识别方法": {
+      "type": "concept",
+      "label": "鲍叔式人才识别方法",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/鲍叔式人才识别方法.md",
+      "quality_score": 23,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "鲍叔牙": {
       "type": "person",
       "label": "鲍叔牙",
@@ -18972,7 +20477,7 @@
       }
     },
     "鸡鸣狗盗": {
-      "type": "",
+      "type": "event",
       "label": "鸡鸣狗盗",
       "aliases": [],
       "tags": [],
@@ -19111,7 +20616,7 @@
       }
     },
     "齐威王烹阿大夫": {
-      "type": "",
+      "type": "event",
       "label": "齐威王烹阿大夫",
       "aliases": [],
       "tags": [],
@@ -19318,7 +20823,7 @@
       }
     },
     "齐桓公称霸": {
-      "type": "",
+      "type": "event",
       "label": "齐桓公称霸",
       "aliases": [],
       "tags": [],
@@ -19367,7 +20872,7 @@
       }
     },
     "齐王建坐视五国覆亡": {
-      "type": "",
+      "type": "event",
       "label": "齐王建坐视五国覆亡",
       "aliases": [],
       "tags": [],
@@ -19749,6 +21254,7 @@
     "129": "129_货殖列传",
     "太史公自序": "130_太史公自序",
     "130": "130_太史公自序",
+    "想要的页面": "Special:WantedPages",
     "知识量 (K)": "Special:知识量",
     "一鸣惊人与问鼎中原": "一鸣惊人与问鼎中原",
     "丁公": "丁公",
@@ -19771,6 +21277,7 @@
     "主父偃": "主父偃",
     "主父": "主父偃",
     "义纵": "义纵",
+    "乐乘": "乐乘",
     "乐毅": "乐毅",
     "昌国君": "乐毅",
     "望诸君": "乐毅",
@@ -19826,12 +21333,13 @@
     "公子无忌": "信陵君",
     "借名起义的合法性包装": "借名起义的合法性包装",
     "先轸": "先轸",
+    "公信力建立方法": "公信力建立方法",
     "公冶长": "公冶长",
     "子长": "公冶长",
-    "公叔痤": "公叔痤",
-    "公叔座": "公叔痤",
+    "公叔座": "公叔座",
+    "公叔痤": "公叔座",
     "公子卬": "公子卬",
-    "魏公子卬": "公子卬",
+    "公子虔": "公子虔",
     "公孙卿": "公孙卿",
     "公孙弘": "公孙弘",
     "平津侯": "公孙弘",
@@ -19849,6 +21357,7 @@
     "共和行政": "共和行政",
     "冒顿": "冒顿",
     "冒顿单于": "冒顿",
+    "军功激励机制设计": "军功激励机制设计",
     "冯唐": "冯唐",
     "冯驩三窟": "冯驩三窟",
     "刘兴居": "刘兴居",
@@ -19885,18 +21394,25 @@
     "汉高祖": "刘邦",
     "刘长": "刘长",
     "淮南厉王": "刘长",
+    "削藩策略": "削藩策略",
     "剧辛": "剧辛",
+    "功劳评定体系": "功劳评定体系",
     "功成身退": "功成身退",
     "功成身退：蔡泽说范睢": "功成身退：蔡泽说范睢",
     "功狗与功人": "功狗与功人",
+    "功臣世家传代策略": "功臣世家传代策略",
     "功臣世家的传代困境": "功臣世家的传代困境",
     "功高震主": "功高震主",
+    "功高震主的生存之道": "功高震主的生存之道",
     "勾践": "勾践",
     "句践": "勾践",
     "越王勾践": "勾践",
     "千金市骨招贤法": "千金市骨招贤法",
     "南子": "南子",
     "卫灵公夫人": "南子",
+    "南宫括": "南宫括",
+    "子容": "南宫括",
+    "南容": "南宫括",
     "博浪沙刺秦": "博浪沙刺秦",
     "卜商": "卜商",
     "子夏": "卜商",
@@ -19919,8 +21435,11 @@
     "长平侯": "卫青",
     "卫顷侯": "卫顷侯",
     "顷侯": "卫顷侯",
+    "危机中的逆向思维": "危机中的逆向思维",
     "历法与政治合法性": "历法与政治合法性",
     "历法改革与政治合法性": "历法改革与政治合法性",
+    "原宪": "原宪",
+    "子思": "原宪",
     "发愤著书：司马迁的李陵之祸": "发愤著书：司马迁的李陵之祸",
     "叔孙通": "叔孙通",
     "稷嗣君": "叔孙通",
@@ -19932,22 +21451,27 @@
     "召康公": "召公奭",
     "史记创作时间线": "史记创作时间线",
     "史记的体例与方法论": "史记的体例与方法论",
+    "司马尚": "司马尚",
+    "司马欣": "司马欣",
+    "塞王": "司马欣",
     "司马相如": "司马相如",
     "长卿": "司马相如",
     "犬子": "司马相如",
     "司马穰苴": "司马穰苴",
     "田穰苴": "司马穰苴",
     "穰苴": "司马穰苴",
+    "司马谈": "司马谈",
+    "太史公": "司马谈",
     "司马谈临终嘱托与史记使命": "司马谈临终嘱托与史记使命",
     "司马谈六家论": "司马谈六家论",
     "司马谈论六家要指": "司马谈论六家要指",
     "司马迁": "司马迁",
-    "太史公": "司马迁",
     "司马迁的史学思想": "司马迁的史学思想",
     "究天人之际": "司马迁的史学思想",
     "通古今之变": "司马迁的史学思想",
     "成一家之言": "司马迁的史学思想",
     "司马迁的经济思想": "司马迁的经济思想",
+    "司马错": "司马错",
     "合纵连横": "合纵连横",
     "名声传扬的机制": "名声传扬的机制",
     "后稷": "后稷",
@@ -19985,6 +21509,10 @@
     "阖庐": "吴王阖闾",
     "公子光": "吴王阖闾",
     "阖闾": "吴王阖闾",
+    "吴芮": "吴芮",
+    "鄱君": "吴芮",
+    "衡山王": "吴芮",
+    "长沙王": "吴芮",
     "吴起": "吴起",
     "吴子": "吴起",
     "吴起与田文论功": "吴起与田文论功",
@@ -20032,16 +21560,19 @@
     "周王室衰落": "周王室衰落",
     "周阳由": "周阳由",
     "唇亡齿寒": "唇亡齿寒",
+    "唐都": "唐都",
     "商朝帝王世系与九世之乱": "商朝帝王世系与九世之乱",
     "商鞅": "商鞅",
     "公孙鞅": "商鞅",
     "卫鞅": "商鞅",
     "商君": "商鞅",
     "商鞅变法": "商鞅变法",
+    "四战之地生存策略": "四战之地生存策略",
     "四战之地的缓冲国困境": "四战之地的缓冲国困境",
     "四皓保储": "四皓保储",
     "因材施教": "因材施教",
     "围魏救赵": "围魏救赵",
+    "围魏救赵战术": "围魏救赵战术",
     "围魏救赵：桂陵与马陵之战": "围魏救赵：桂陵与马陵之战",
     "圯桥受书": "圯桥受书",
     "均输平准": "均输平准",
@@ -20052,11 +21583,14 @@
     "城濮之战": "城濮之战",
     "城阳惠王": "城阳惠王",
     "士为知己者死：豫让与聂政": "士为知己者死：豫让与聂政",
+    "壶遂": "壶遂",
     "夏侯婴": "夏侯婴",
     "滕公": "夏侯婴",
     "汝阴侯": "夏侯婴",
     "夏姬": "夏姬",
     "夏徵舒": "夏徵舒",
+    "夏无且": "夏无且",
+    "无且": "夏无且",
     "大宛物产与西域风俗": "大宛物产与西域风俗",
     "大泽乡起义": "大泽乡起义",
     "天人感应与天变占验": "天人感应与天变占验",
@@ -20085,6 +21619,8 @@
     "子婴": "子婴",
     "秦王子婴": "子婴",
     "子寿": "子寿",
+    "子张": "子张",
+    "颛孙师": "子张",
     "子游": "子游",
     "言偃": "子游",
     "子贡": "子贡",
@@ -20150,12 +21686,17 @@
     "辟阳侯": "审食其",
     "宣太后": "宣太后",
     "芈八子": "宣太后",
+    "宰予": "宰予",
+    "宰我": "宰予",
+    "子我": "宰予",
+    "家族传承的生存之道": "家族传承的生存之道",
     "封狼居胥": "封狼居胥",
     "封禅": "封禅",
     "封禅的起源与历史传承": "封禅的起源与历史传承",
     "封禅礼制": "封禅礼制",
     "将相和": "将相和",
     "小国夹缝生存术": "小国夹缝生存术",
+    "小国长寿术": "小国长寿术",
     "唐尧": "尧",
     "帝尧": "尧",
     "陶唐氏": "尧",
@@ -20188,6 +21729,7 @@
     "廉颇": "廉颇",
     "信平君": "廉颇",
     "廉将军": "廉颇",
+    "建国之初的文件治理": "建国之初的文件治理",
     "张仪": "张仪",
     "武信君": "张仪",
     "张仪欺楚：六百里变六里": "张仪欺楚：六百里变六里",
@@ -20215,15 +21757,18 @@
     "张骞": "张骞",
     "博望侯": "张骞",
     "弦高": "弦高",
+    "弱者逆袭强者的战略方法论": "弱者逆袭强者的战略方法论",
     "彭越": "彭越",
     "彭王": "彭越",
     "梁王彭越": "彭越",
+    "徐夫人": "徐夫人",
     "悬梁刺股": "悬梁刺股",
     "慎到": "慎到",
     "慎子": "慎到",
     "慎夫人": "慎夫人",
     "战争正当性论": "战争正当性论",
     "战国变法运动": "战国变法运动",
+    "战略选址方法": "战略选址方法",
     "戚夫人": "戚夫人",
     "戚姬": "戚夫人",
     "扁鹊": "扁鹊",
@@ -20231,10 +21776,15 @@
     "扁鹊仓公": "扁鹊",
     "扶苏": "扶苏",
     "公子扶苏": "扶苏",
+    "括母": "括母",
+    "赵括之母": "括母",
+    "马服君夫人": "括母",
     "挡箭牌藩国战略": "挡箭牌藩国战略",
     "掘地见母": "掘地见母",
     "推恩令": "推恩令",
     "推恩令前奏": "推恩令前奏",
+    "推行政治改革的方法": "推行政治改革的方法",
+    "改革阻力应对策略": "改革阻力应对策略",
     "文景之治": "文景之治",
     "文种": "文种",
     "大夫种": "文种",
@@ -20290,11 +21840,18 @@
     "晏子": "晏婴",
     "晏平仲": "晏婴",
     "晏婴进谏艺术": "晏婴进谏艺术",
+    "景监": "景监",
+    "智伯": "智伯",
+    "智伯瑶": "智伯",
+    "智瑶": "智伯",
     "曹参": "曹参",
     "曹相国": "曹参",
     "平阳侯": "曹参",
     "曹参无为而治": "曹参无为而治",
     "曹参萧何功臣排序之争": "曹参萧何功臣排序之争",
+    "曹咎": "曹咎",
+    "海春侯": "曹咎",
+    "大司马曹咎": "曹咎",
     "曹沫": "曹沫",
     "曹刿": "曹沫",
     "曾参": "曾参",
@@ -20325,6 +21882,8 @@
     "李陵": "李陵",
     "李陵之祸与发愤著书": "李陵之祸与发愤著书",
     "杜周": "杜周",
+    "杜挚": "杜挚",
+    "杨何": "杨何",
     "枚乘": "枚乘",
     "栾布": "栾布",
     "栾公": "栾布",
@@ -20366,6 +21925,7 @@
     "樊哙": "樊哙",
     "樊将军": "樊哙",
     "舞阳侯": "樊哙",
+    "樊於期": "樊於期",
     "樗里子": "樗里子",
     "严君疾": "樗里子",
     "樗里疾": "樗里子",
@@ -20437,7 +21997,10 @@
     "太仓公": "淳于意",
     "淳于髡": "淳于髡",
     "渑池之会": "渑池之会",
+    "游说君主的方法": "游说君主的方法",
     "漠北大战": "漠北大战",
+    "澹台灭明": "澹台灭明",
+    "子羽": "澹台灭明",
     "灌夫": "灌夫",
     "灌仲孺": "灌夫",
     "灌婴": "灌婴",
@@ -20470,6 +22033,7 @@
     "瓠子决口与黄河治理": "瓠子决口与黄河治理",
     "甘罗": "甘罗",
     "甘茂": "甘茂",
+    "甘龙": "甘龙",
     "田光": "田光",
     "田光先生": "田光",
     "田单": "田单",
@@ -20485,6 +22049,7 @@
     "田氏代齐": "田氏代齐",
     "田氏源出陈国": "田氏源出陈国",
     "田生激吕术": "田生激吕术",
+    "田荣": "田荣",
     "田蚡": "田蚡",
     "武安侯": "田蚡",
     "由余": "由余",
@@ -20502,6 +22067,7 @@
     "太子申生": "申生",
     "恭太子": "申生",
     "白圭": "白圭",
+    "白圭经商法": "白圭经商法",
     "白登之围": "白登之围",
     "白登之战": "白登之围",
     "白登围": "白登之围",
@@ -20514,6 +22080,7 @@
     "百里傒": "百里奚",
     "皋陶九德": "皋陶九德",
     "盐铁专营": "盐铁专营",
+    "盖聂": "盖聂",
     "石奋": "石奋",
     "万石": "石奋",
     "万石君": "石奋",
@@ -20627,6 +22194,8 @@
     "背水一战：井陉之战": "背水一战：井陉之战",
     "胡服骑射": "胡服骑射",
     "胯下之辱与韩信的忍耐": "胯下之辱与韩信的忍耐",
+    "臧荼": "臧荼",
+    "燕王臧荼": "臧荼",
     "苏代": "苏代",
     "苏子": "苏代",
     "苏建": "苏建",
@@ -20641,17 +22210,20 @@
     "范睢": "范睢",
     "应侯": "范睢",
     "张禄": "范睢",
+    "范睢上秦昭王书": "范睢上秦昭王书",
+    "范睢奏疏": "范睢上秦昭王书",
+    "范睢见秦王": "范睢上秦昭王书",
+    "范睢说秦昭王": "范睢上秦昭王书",
     "范蠡": "范蠡",
     "陶朱公": "范蠡",
     "鸱夷子皮": "范蠡",
+    "范蠡功成身退": "范蠡功成身退",
     "范雎": "范雎",
     "荀卿": "荀卿",
     "荀子": "荀卿",
     "荀况": "荀卿",
     "荀瑶": "荀瑶",
-    "智伯": "荀瑶",
     "知伯": "荀瑶",
-    "智瑶": "荀瑶",
     "荆轲": "荆轲",
     "荆卿": "荆轲",
     "庆卿": "荆轲",
@@ -20664,9 +22236,11 @@
     "萧何第一": "萧何第一",
     "萧何自污保身": "萧何自污保身",
     "萧规曹随": "萧规曹随",
+    "落下闳": "落下闳",
     "葛婴": "葛婴",
     "董狐": "董狐",
     "晋太史": "董狐",
+    "蒙嘉": "蒙嘉",
     "蒙恬": "蒙恬",
     "蒙将军": "蒙恬",
     "蒙毅": "蒙毅",
@@ -20696,8 +22270,6 @@
     "虞美人": "虞姬",
     "虢石父": "虢石父",
     "石父": "虢石父",
-    "衡山王": "衡山王",
-    "吴芮": "衡山王",
     "番君": "衡山王",
     "吴�芮": "衡山王",
     "袁盎": "袁盎",
@@ -20709,14 +22281,18 @@
     "触龙": "触龙",
     "触詟": "触龙",
     "左师公": "触龙",
+    "许历": "许历",
     "许负": "许负",
+    "识别并抵御心理操控": "识别并抵御心理操控",
     "诛吕立文": "诛吕立文",
     "诛灭诸吕": "诛灭诸吕",
     "说难与游说之难": "说难与游说之难",
     "诸侯国生存与灭亡": "诸侯国生存与灭亡",
+    "谏言说服方法": "谏言说服方法",
     "谏逐客书": "谏逐客书",
     "豫让": "豫让",
     "货殖列传中的致富案例": "货殖列传中的致富案例",
+    "贵族避乱迁徙重建": "贵族避乱迁徙重建",
     "贾谊": "贾谊",
     "贾生": "贾谊",
     "贾太傅": "贾谊",
@@ -20761,6 +22337,7 @@
     "赵鞅": "赵简子",
     "简主": "赵简子",
     "赵良苦谏商君": "赵良苦谏商君",
+    "赵葱": "赵葱",
     "赵衰": "赵衰",
     "子馀": "赵衰",
     "成季": "赵衰",
@@ -20774,6 +22351,15 @@
     "符离侯": "路博德",
     "伏波将军": "路博德",
     "蹇叔": "蹇叔",
+    "过秦论上": "过秦论上",
+    "贾谊过秦论上": "过秦论上",
+    "过秦论·上篇": "过秦论上",
+    "过秦论下": "过秦论下",
+    "贾谊过秦论下": "过秦论下",
+    "过秦论·下篇": "过秦论下",
+    "过秦论中": "过秦论中",
+    "贾谊过秦论中": "过秦论中",
+    "过秦论·中篇": "过秦论中",
     "远交近攻": "远交近攻",
     "邓通": "邓通",
     "邹忌": "邹忌",
@@ -20798,6 +22384,7 @@
     "郦食其": "郦食其",
     "郦生": "郦食其",
     "广野君": "郦食其",
+    "郭开": "郭开",
     "郭解": "郭解",
     "郭翁伯": "郭解",
     "郭隗": "郭隗",
@@ -20811,8 +22398,14 @@
     "长沙定王": "长沙定王",
     "刘发": "长沙定王",
     "定王": "长沙定王",
+    "闵子骞": "闵子骞",
+    "闵损": "闵子骞",
+    "子骞": "闵子骞",
     "陆贾": "陆贾",
     "陆生": "陆贾",
+    "陈余": "陈余",
+    "陈馀": "陈余",
+    "成安君": "陈余",
     "陈完奔齐与田氏代齐预言": "陈完奔齐与田氏代齐预言",
     "陈平": "陈平",
     "陈丞相": "陈平",
@@ -20830,8 +22423,9 @@
     "陈蔡绝粮": "陈蔡绝粮",
     "陈豨": "陈豨",
     "陈轸": "陈轸",
-    "陈馀": "陈馀",
-    "成安君": "陈馀",
+    "陈馀遗章邯书": "陈馀遗章邯书",
+    "陈馀书": "陈馀遗章邯书",
+    "陈馀致章邯书": "陈馀遗章邯书",
     "随会": "随会",
     "士会": "随会",
     "士季": "随会",
@@ -20839,6 +22433,9 @@
     "随何": "随何",
     "霍去病": "霍去病",
     "冠军侯": "霍去病",
+    "霸权建立与维持方法论": "霸权建立与维持方法论",
+    "鞠武": "鞠武",
+    "太傅": "鞠武",
     "韩信": "韩信",
     "淮阴": "韩信",
     "淮阴侯": "韩信",
@@ -20868,6 +22465,7 @@
     "颜回": "颜回",
     "子渊": "颜回",
     "颜渊": "颜回",
+    "马陵之战诱敌伏击战术": "马陵之战诱敌伏击战术",
     "骊姬": "骊姬",
     "骊姬之乱": "骊姬之乱",
     "骑劫": "骑劫",
@@ -20911,6 +22509,7 @@
     "鲁隐公": "鲁隐公",
     "息姑": "鲁隐公",
     "隐公": "鲁隐公",
+    "鲍叔式人才识别方法": "鲍叔式人才识别方法",
     "鲍叔牙": "鲍叔牙",
     "鲍叔": "鲍叔牙",
     "鲍子": "鲍叔牙",
@@ -20957,5 +22556,5 @@
     "襄王": "齐襄王",
     "龙且": "龙且"
   },
-  "generated": "2026-04-23T12:21:44"
+  "generated": "2026-04-23T13:03:41"
 }
