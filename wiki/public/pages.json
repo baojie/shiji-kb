@@ -3082,6 +3082,32 @@
         "narrative": 8
       }
     },
+    "九州": {
+      "type": "topic",
+      "label": "九州",
+      "aliases": [
+        "九州制度",
+        "禹贡九州"
+      ],
+      "tags": [
+        "地理",
+        "夏朝",
+        "大禹",
+        "行政制度",
+        "贡赋"
+      ],
+      "featured": false,
+      "path": "pages/九州.md",
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "二世皇帝": {
       "type": "person",
       "label": "二世皇帝",
@@ -3106,6 +3132,33 @@
         "tags": 8,
         "revs": 15,
         "size": 7,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "五服制度": {
+      "type": "topic",
+      "label": "五服制度",
+      "aliases": [
+        "五服",
+        "王畿五服",
+        "甸服侯服绥服要服荒服"
+      ],
+      "tags": [
+        "制度",
+        "夏朝",
+        "大禹",
+        "行政制度",
+        "天下观"
+      ],
+      "featured": false,
+      "path": "pages/五服制度.md",
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
         "manual": 5,
         "narrative": 8
       }
@@ -4629,6 +4682,33 @@
         "narrative": 8
       }
     },
+    "周幽王": {
+      "type": "person",
+      "label": "周幽王",
+      "aliases": [
+        "幽王",
+        "宫湦"
+      ],
+      "tags": [
+        "西周",
+        "褒姒",
+        "烽火戏诸侯",
+        "亡国"
+      ],
+      "featured": true,
+      "path": "pages/周幽王.md",
+      "total_refs": 14,
+      "total_chapters": 9,
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "周康王": {
       "type": "person",
       "label": "周康王",
@@ -5254,6 +5334,33 @@
         "narrative": 11
       }
     },
+    "孙叔敖": {
+      "type": "person",
+      "label": "孙叔敖",
+      "aliases": [
+        "孙叔敖"
+      ],
+      "tags": [
+        "春秋",
+        "楚国",
+        "楚庄王",
+        "循吏",
+        "三相楚"
+      ],
+      "featured": false,
+      "path": "pages/孙叔敖.md",
+      "total_refs": 8,
+      "total_chapters": 6,
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "孙武": {
       "type": "person",
       "label": "孙武",
@@ -5317,6 +5424,37 @@
         "tags": 8,
         "revs": 6,
         "size": 8,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "孟子": {
+      "type": "person",
+      "label": "孟子",
+      "aliases": [
+        "孟轲",
+        "孟子"
+      ],
+      "tags": [
+        "战国",
+        "儒家",
+        "仁义",
+        "游说诸侯"
+      ],
+      "featured": true,
+      "path": "pages/孟子.md",
+      "total_refs": 14,
+      "total_chapters": 9,
+      "lifespan": {
+        "birth": -372,
+        "death": -289
+      },
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
         "manual": 5,
         "narrative": 8
       }
@@ -5578,6 +5716,32 @@
         "tags": 8,
         "revs": 15,
         "size": 7,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "宣太后": {
+      "type": "person",
+      "label": "宣太后",
+      "aliases": [
+        "芈八子",
+        "宣太后"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "秦昭王",
+        "太后摄政",
+        "楚人"
+      ],
+      "featured": false,
+      "path": "pages/宣太后.md",
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
         "manual": 5,
         "narrative": 8
       }
@@ -8718,6 +8882,32 @@
         "narrative": 8
       }
     },
+    "秦昭王": {
+      "type": "person",
+      "label": "秦昭王",
+      "aliases": [
+        "昭襄王",
+        "秦昭襄王"
+      ],
+      "tags": [
+        "战国",
+        "秦国",
+        "白起",
+        "长平之战",
+        "宣太后"
+      ],
+      "featured": true,
+      "path": "pages/秦昭王.md",
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "秦昭襄王": {
       "type": "person",
       "label": "秦昭襄王",
@@ -9096,6 +9286,31 @@
         "tags": 8,
         "revs": 3,
         "size": 5,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "肥义": {
+      "type": "person",
+      "label": "肥义",
+      "aliases": [
+        "肥义"
+      ],
+      "tags": [
+        "战国",
+        "赵国",
+        "赵武灵王",
+        "胡服骑射",
+        "沙丘之乱"
+      ],
+      "featured": false,
+      "path": "pages/肥义.md",
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
         "manual": 5,
         "narrative": 8
       }
@@ -12296,9 +12511,16 @@
     "乐毅": "乐毅",
     "昌国君": "乐毅",
     "望诸君": "乐毅",
+    "九州": "九州",
+    "九州制度": "九州",
+    "禹贡九州": "九州",
     "二世皇帝": "二世皇帝",
     "秦二世": "二世皇帝",
     "胡亥": "二世皇帝",
+    "五服制度": "五服制度",
+    "五服": "五服制度",
+    "王畿五服": "五服制度",
+    "甸服侯服绥服要服荒服": "五服制度",
     "介之推": "介之推",
     "介子推": "介之推",
     "仲由": "仲由",
@@ -12433,6 +12655,9 @@
     "周宣王": "周宣王",
     "姬静": "周宣王",
     "宣王": "周宣王",
+    "周幽王": "周幽王",
+    "幽王": "周幽王",
+    "宫湦": "周幽王",
     "周康王": "周康王",
     "姬钊": "周康王",
     "康王": "周康王",
@@ -12490,10 +12715,13 @@
     "孔丘": "孔子",
     "孔仲尼": "孔子",
     "尼父": "孔子",
+    "孙叔敖": "孙叔敖",
     "孙武": "孙武",
     "孙子": "孙武",
     "孙膑": "孙膑",
     "孙武之后": "孙膑",
+    "孟子": "孟子",
+    "孟轲": "孟子",
     "孟尝君": "孟尝君",
     "田文": "孟尝君",
     "薛公": "孟尝君",
@@ -12516,6 +12744,8 @@
     "宋襄公": "宋襄公",
     "兹甫": "宋襄公",
     "襄公": "宋襄公",
+    "宣太后": "宣太后",
+    "芈八子": "宣太后",
     "唐尧": "尧",
     "帝尧": "尧",
     "陶唐氏": "尧",
@@ -12780,8 +13010,9 @@
     "秦惠王": "秦惠王",
     "惠文王": "秦惠王",
     "秦文公": "秦文公",
-    "秦昭襄王": "秦昭襄王",
-    "秦昭王": "秦昭襄王",
+    "秦昭王": "秦昭王",
+    "昭襄王": "秦昭王",
+    "秦昭襄王": "秦昭王",
     "嬴稷": "秦昭襄王",
     "秦武王": "秦武王",
     "嬴荡": "秦武王",
@@ -12810,6 +13041,7 @@
     "老聃": "老子",
     "伯阳": "老子",
     "聂政": "聂政",
+    "肥义": "肥义",
     "苏代": "苏代",
     "苏子": "苏代",
     "苏建": "苏建",
@@ -13046,5 +13278,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T08:45:07"
+  "generated": "2026-04-23T08:55:53"
 }
