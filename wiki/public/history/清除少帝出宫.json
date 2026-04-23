@@ -1,8 +1,18 @@
 {
   "page": "清除少帝出宫",
-  "latest_rev_id": "20260423-155330-ed634e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161151-4a596a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161151-4a596a",
+      "timestamp": "2026-04-23T16:11:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155330-ed634e",
+      "content_hash": "sha256:4a596aef9bf916146e4d3918ca305dcea69a0ca39c461333c8e7b22a72261c30",
+      "size": 1108,
+      "content": "paragraph_refs:\n  009-069: \"[51.1]-[51.8]\"\nevent_type: 政治整顿\nlocation: \"未央宫\"\n---\nid: \"清除少帝出宫\"\ntype: event\ntitle: 清除少帝出宫\ndescription: 东牟侯兴居与太仆汝阴侯滕公入宫，告知少帝\"足下非刘氏，不当立\"，令执戟者放下兵器离去。滕公召乘舆车将少帝载出宫，安置于少府。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-069]\ndate: \"（公元前180年）\"\n---\n\n# 清除少帝出宫\n\n> 东牟侯兴居与太仆汝阴侯滕公入宫，告知少帝\"足下非刘氏，不当立\"，令执戟者放下兵器离去。滕公召乘舆车将少帝载出宫，安置于少府。\n\n**主要人物**：东牟侯兴居、少帝、张泽、滕公\n\n## 事件经过\n\n东牟侯兴居与太仆汝阴侯滕公入宫，告知少帝\"足下非刘氏，不当立\"，令执戟者放下兵器离去。滕公召乘舆车将少帝载出宫，安置于少府。\n\n## 原文\n\n> 东牟侯兴居曰：'诛吕氏吾无功，请得除宫。'乃与太仆汝阴侯滕公入宫，前谓少帝曰：'足下非刘氏，不当立。'\n\n"
+    },
     {
       "rev_id": "20260423-155330-ed634e",
       "timestamp": "2026-04-23T15:53:30Z",

@@ -1,8 +1,18 @@
 {
   "page": "汲黯拜淮阳太守",
-  "latest_rev_id": "20260423-152823-a4b0f0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161144-b931c4",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161144-b931c4",
+      "timestamp": "2026-04-23T16:11:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152823-a4b0f0",
+      "content_hash": "sha256:b931c4be957d1f7271b0d93ca7abcf3b224095306c7796a075dd4392e06afaaa",
+      "size": 1085,
+      "content": "paragraph_refs:\n  120-014: \"[12]\"\nevent_type: 政治活动\nlocation: \"淮阳\"\n---\nid: \"汲黯拜淮阳太守\"\ntype: event\ntitle: 汲黯拜淮阳太守\ndescription: 居数年会更五铢钱楚地盗铸甚，上以淮阳为楚地之郊召拜黯为淮阳太守。黯伏谢不受印泣言愿为中郎补过拾遗。上曰吾徒得君之重卧而治之。黯既辞行。\ntags: [史记, 事件, 汲郑列传]\nsources: [汲郑列传]\nevent_ids: [120-014]\ndate: \"（公元前118年）\"\n---\n\n# 汲黯拜淮阳太守\n\n> 居数年会更五铢钱楚地盗铸甚，上以淮阳为楚地之郊召拜黯为淮阳太守。黯伏谢不受印泣言愿为中郎补过拾遗。上曰吾徒得君之重卧而治之。黯既辞行。\n\n**主要人物**：汲黯\n\n## 事件经过\n\n居数年会更五铢钱楚地盗铸甚，上以淮阳为楚地之郊召拜黯为淮阳太守。黯伏谢不受印泣言愿为中郎补过拾遗。上曰吾徒得君之重卧而治之。黯既辞行。\n\n## 原文\n\n> 上曰：'君薄淮阳邪？吾今召君矣。顾淮阳吏民不相得，吾徒得君之重，卧而治之。'\n\n"
+    },
     {
       "rev_id": "20260423-152823-a4b0f0",
       "timestamp": "2026-04-23T15:28:23Z",

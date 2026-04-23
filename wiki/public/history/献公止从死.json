@@ -1,8 +1,18 @@
 {
   "page": "献公止从死",
-  "latest_rev_id": "20260423-155344-d98f3d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161159-b31fd3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161159-b31fd3",
+      "timestamp": "2026-04-23T16:11:59Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155344-d98f3d",
+      "content_hash": "sha256:b31fd35d398986f19673bc69c18bf4fc04c2c02aa13a62fa5b24898b3fd73f2e",
+      "size": 725,
+      "content": "paragraph_refs:\n  005-058: \"[47]\"\nevent_type: 政治改革\n---\nid: \"献公止从死\"\ntype: event\ntitle: 献公止从死\ndescription: 献公元年，废止殉葬制度。这是秦国重要的政治改革，终结了自缪公以来的人殉传统。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-058]\ndate: \"〖@献公〗〖%元年〗 （公元前384年）\"\n---\n\n# 献公止从死\n\n> 献公元年，废止殉葬制度。这是秦国重要的政治改革，终结了自缪公以来的人殉传统。\n\n**主要人物**：献公\n\n## 事件经过\n\n献公元年，废止殉葬制度。这是秦国重要的政治改革，终结了自缪公以来的人殉传统。\n\n## 原文\n\n> 献公元年，止从死。\n\n"
+    },
     {
       "rev_id": "20260423-155344-d98f3d",
       "timestamp": "2026-04-23T15:53:44Z",

@@ -1,8 +1,18 @@
 {
   "page": "淮南衡山江都王谋反",
-  "latest_rev_id": "20260423-155330-c8d6dc",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161150-dd7df8",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161150-dd7df8",
+      "timestamp": "2026-04-23T16:11:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155330-c8d6dc",
+      "content_hash": "sha256:dd7df80cb7afd344f2b7663a778e17b8708777d0e3badd7ce99df0b41f201e5a",
+      "size": 876,
+      "content": "paragraph_refs:\n  030-016: \"[10]\"\nevent_type: 政治整顿\nlocation: \"淮南、衡山、江都\"\n---\nid: \"淮南衡山江都王谋反\"\ntype: event\ntitle: 淮南衡山江都王谋反\ndescription: 淮南、衡山、江都王谋反迹见，公卿寻端治之，竟其党与，坐死者数万人。长吏益惨急，法令明察。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-016]\ndate: \"（公元前122年）\"\n---\n\n# 淮南衡山江都王谋反\n\n> 淮南、衡山、江都王谋反迹见，公卿寻端治之，竟其党与，坐死者数万人。长吏益惨急，法令明察。\n\n## 事件经过\n\n淮南、衡山、江都王谋反迹见，公卿寻端治之，竟其党与，坐死者数万人。长吏益惨急，法令明察。\n\n## 原文\n\n> 淮南、衡山、江都王谋反迹见，而公卿寻端治之，竟其党与，而坐死者数万人。\n\n"
+    },
     {
       "rev_id": "20260423-155330-c8d6dc",
       "timestamp": "2026-04-23T15:53:30Z",

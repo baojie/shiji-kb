@@ -1,8 +1,18 @@
 {
   "page": "柏梁灾",
-  "latest_rev_id": "20260423-155248-5d4f94",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161126-0ed18c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161126-0ed18c",
+      "timestamp": "2026-04-23T16:11:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155248-5d4f94",
+      "content_hash": "sha256:0ed18c23c9c974fa8707a525c10dbbd87d6c0a845bf02d7927307b2a52b86a7e",
+      "size": 492,
+      "content": "paragraph_refs:\n  012-059: \"[45.1]\"\nevent_type: 自然灾害\n---\nid: \"柏梁灾\"\ntype: event\ntitle: 柏梁灾\ndescription: 十一月乙酉柏梁台遭火灾。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-059]\ndate: \"〖%太初元年十一月乙酉〗 （公元前104年）\"\n---\n\n# 柏梁灾\n\n> 十一月乙酉柏梁台遭火灾。\n\n**主要人物**：天子\n\n## 事件经过\n\n十一月乙酉柏梁台遭火灾。\n\n## 原文\n\n> 十一月乙酉，柏梁灾。\n\n"
+    },
     {
       "rev_id": "20260423-155248-5d4f94",
       "timestamp": "2026-04-23T15:52:48Z",

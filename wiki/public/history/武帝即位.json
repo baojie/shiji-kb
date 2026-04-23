@@ -1,8 +1,18 @@
 {
   "page": "武帝即位",
-  "latest_rev_id": "20260423-152817-f6f8fb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161137-56513a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161137-56513a",
+      "timestamp": "2026-04-23T16:11:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152817-f6f8fb",
+      "content_hash": "sha256:56513a9d028fc1bd9188135d71a9f5c8f9ffc83712aefe34512a42be7087f772",
+      "size": 983,
+      "content": "paragraph_refs:\n  012-001: \"[1.1]-[1.5]\"\nevent_type: 继位\n---\nid: \"武帝即位\"\ntype: event\ntitle: 武帝即位\ndescription: 孝武皇帝为孝景帝中子，母王太后。景帝四年立为胶东王，七年栗太子废，以胶东王为太子。景帝十六年崩，太子即位为孝武皇帝。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-001]\ndate: \"〖%孝景十六年〗 （公元前141年）\"\n---\n\n# 武帝即位\n\n> 孝武皇帝为孝景帝中子，母王太后。景帝四年立为胶东王，七年栗太子废，以胶东王为太子。景帝十六年崩，太子即位为孝武皇帝。\n\n**主要人物**：孝武皇帝、王太后\n\n## 事件经过\n\n孝武皇帝为孝景帝中子，母王太后。景帝四年立为胶东王，七年栗太子废，以胶东王为太子。景帝十六年崩，太子即位为孝武皇帝。\n\n## 原文\n\n> 孝武皇帝者，孝景中子也。母曰王太后。孝景四年，以皇子为胶东王。\n\n"
+    },
     {
       "rev_id": "20260423-152817-f6f8fb",
       "timestamp": "2026-04-23T15:28:17Z",

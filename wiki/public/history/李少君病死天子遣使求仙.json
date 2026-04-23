@@ -1,8 +1,18 @@
 {
   "page": "李少君病死天子遣使求仙",
-  "latest_rev_id": "20260423-155245-e2ec61",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161122-3e2d49",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161122-3e2d49",
+      "timestamp": "2026-04-23T16:11:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155245-e2ec61",
+      "content_hash": "sha256:3e2d490d85ca1d53ac5b1aed7afab19ccf8adfd121e6ccef9e58a64400bc1841",
+      "size": 970,
+      "content": "paragraph_refs:\n  028-039: \"[61]\"\nevent_type: 文化活动\n---\nid: \"李少君病死天子遣使求仙\"\ntype: event\ntitle: 李少君病死天子遣使求仙\ndescription: 李少君病死，天子以为其化去不死，使黄锤、史宽舒受其方。求蓬莱安期生莫能得，而海上燕齐怪迂之方士多更来言神事。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-039]\ndate: \"[约公元前133年]\"\n---\n\n# 李少君病死天子遣使求仙\n\n> 李少君病死，天子以为其化去不死，使黄锤、史宽舒受其方。求蓬莱安期生莫能得，而海上燕齐怪迂之方士多更来言神事。\n\n**主要人物**：李少君、黄锤\n\n## 事件经过\n\n李少君病死，天子以为其化去不死，使黄锤、史宽舒受其方。求蓬莱安期生莫能得，而海上燕齐怪迂之方士多更来言神事。\n\n## 原文\n\n> 居久之，李少君病死。天子以为化去不死，而使黄锤史宽舒受其方。\n\n"
+    },
     {
       "rev_id": "20260423-155245-e2ec61",
       "timestamp": "2026-04-23T15:52:45Z",

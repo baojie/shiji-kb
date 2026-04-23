@@ -1,8 +1,18 @@
 {
   "page": "柯盟劫齐桓公",
-  "latest_rev_id": "20260423-152800-55d40c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161126-e5bfbf",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161126-e5bfbf",
+      "timestamp": "2026-04-23T16:11:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152800-55d40c",
+      "content_hash": "sha256:e5bfbfdea9658824fd03f75fb157259df25e6be143409584f03d5054702d0e10",
+      "size": 823,
+      "content": "paragraph_refs:\n  086-002: \"[1.2]\"\nevent_type: 政治活动\nlocation: \"柯\"\n---\nid: \"柯盟劫齐桓公\"\ntype: event\ntitle: 柯盟劫齐桓公\ndescription: 齐桓公与鲁庄公盟于柯，曹沫于坛上执匕首劫齐桓公，言齐侵鲁已甚。桓公许尽归鲁之侵地。\ntags: [史记, 事件, 刺客列传]\nsources: [刺客列传]\nevent_ids: [086-002]\ndate: \"（公元前681年）\"\n---\n\n# 柯盟劫齐桓公\n\n> 齐桓公与鲁庄公盟于柯，曹沫于坛上执匕首劫齐桓公，言齐侵鲁已甚。桓公许尽归鲁之侵地。\n\n**主要人物**：庄公、曹沫、桓公\n\n## 事件经过\n\n齐桓公与鲁庄公盟于柯，曹沫于坛上执匕首劫齐桓公，言齐侵鲁已甚。桓公许尽归鲁之侵地。\n\n## 原文\n\n> 曹沫执匕首劫齐桓公,桓公左右莫敢动,而问曰:'子将何欲?'\n\n"
+    },
     {
       "rev_id": "20260423-152800-55d40c",
       "timestamp": "2026-04-23T15:28:00Z",

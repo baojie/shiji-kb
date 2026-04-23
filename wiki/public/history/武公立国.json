@@ -1,8 +1,18 @@
 {
   "page": "武公立国",
-  "latest_rev_id": "20260423-155258-2f019f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161135-236517",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161135-236517",
+      "timestamp": "2026-04-23T16:11:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155258-2f019f",
+      "content_hash": "sha256:2365172023edfbea7278010118dfd0600b9075aec6ca3fa723166c1943c084ed",
+      "size": 510,
+      "content": "paragraph_refs:\n  042-004: \"[3.3]\"\nevent_type: 继位\n---\nid: \"武公立国\"\ntype: event\ntitle: 武公立国\ndescription: 郑人共立桓公之子掘突，是为武公。\ntags: [史记, 事件, 郑世家]\nsources: [郑世家]\nevent_ids: [042-004]\ndate: \"（公元前770年）\"\n---\n\n# 武公立国\n\n> 郑人共立桓公之子掘突，是为武公。\n\n**主要人物**：掘突、武公\n\n## 事件经过\n\n郑人共立桓公之子掘突，是为武公。\n\n## 原文\n\n> 郑人共立其子掘突，是为武公。\n\n"
+    },
     {
       "rev_id": "20260423-155258-2f019f",
       "timestamp": "2026-04-23T15:52:58Z",

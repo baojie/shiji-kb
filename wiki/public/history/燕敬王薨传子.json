@@ -1,8 +1,18 @@
 {
   "page": "燕敬王薨传子",
-  "latest_rev_id": "20260423-155339-553b71",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161157-d3ada1",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161157-d3ada1",
+      "timestamp": "2026-04-23T16:11:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155339-553b71",
+      "content_hash": "sha256:d3ada1903427d2c57a351f25f820907a9c3a5860a3d6ac73607f95f932ade7ea",
+      "size": 611,
+      "content": "paragraph_refs:\n  051-014: \"[9]\"\nevent_type: 家族事件\nlocation: \"燕\"\n---\nid: \"燕敬王薨传子\"\ntype: event\ntitle: 燕敬王薨传子\ndescription: 刘泽王燕二年薨，谥为敬王。传子嘉，为康王。\ntags: [史记, 事件, 荆燕世家]\nsources: [荆燕世家]\nevent_ids: [051-014]\ndate: \"（公元前178年）\"\n---\n\n# 燕敬王薨传子\n\n> 刘泽王燕二年薨，谥为敬王。传子嘉，为康王。\n\n**主要人物**：刘泽\n\n## 事件经过\n\n刘泽王燕二年薨，谥为敬王。传子嘉，为康王。\n\n## 原文\n\n> 泽王燕二年，薨，谥为敬王。传子嘉，为康王。\n\n"
+    },
     {
       "rev_id": "20260423-155339-553b71",
       "timestamp": "2026-04-23T15:53:39Z",

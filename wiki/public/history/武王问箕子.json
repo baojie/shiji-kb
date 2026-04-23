@@ -1,8 +1,18 @@
 {
   "page": "武王问箕子",
-  "latest_rev_id": "20260423-152819-266ab4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161139-a85e1b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161139-a85e1b",
+      "timestamp": "2026-04-23T16:11:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152819-266ab4",
+      "content_hash": "sha256:a85e1b1bd3f27556919e7ffeba86e9058ea2d33e48ebb051333dacd60366d7f2",
+      "size": 881,
+      "content": "paragraph_refs:\n  004-021: \"[19]\"\nevent_type: 政治活动\n---\nid: \"武王问箕子\"\ntype: event\ntitle: 武王问箕子\ndescription: 武王克殷后二年，问箕子殷所以亡。箕子不忍言殷恶，以存亡国宜告。武王亦感愧，故问以天道。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-021]\ndate: \"克殷後〖%二年〗 （公元前1044年）\"\n---\n\n# 武王问箕子\n\n> 武王克殷后二年，问箕子殷所以亡。箕子不忍言殷恶，以存亡国宜告。武王亦感愧，故问以天道。\n\n**主要人物**：武王、箕子\n\n## 事件经过\n\n武王克殷后二年，问箕子殷所以亡。箕子不忍言殷恶，以存亡国宜告。武王亦感愧，故问以天道。\n\n## 原文\n\n> 武王已克殷，後二年，问箕子殷所以亡。箕子不忍言殷恶，以存亡国宜告。武王亦丑，故问以天道。\n\n"
+    },
     {
       "rev_id": "20260423-152819-266ab4",
       "timestamp": "2026-04-23T15:28:19Z",

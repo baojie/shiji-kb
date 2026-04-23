@@ -1,8 +1,18 @@
 {
   "page": "王翦攻邺",
-  "latest_rev_id": "20260423-152846-16e4a9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161201-b1d93a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161201-b1d93a",
+      "timestamp": "2026-04-23T16:12:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152846-16e4a9",
+      "content_hash": "sha256:b1d93adff7a8668f08b44c9f489c5bb0b7fa8faa2bd6b6d7a401cbb560623b52",
+      "size": 846,
+      "content": "paragraph_refs:\n  006-022: \"[18.1], [18.2]\"\nevent_type: 战争\nlocation: \"邺、阏与、橑杨\"\n---\nid: \"王翦攻邺\"\ntype: event\ntitle: 王翦攻邺\ndescription: 十一年，王翦、桓齮、杨端和三将攻邺，取九城。王翦攻阏与、橑杨，皆并为一军。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-022]\ndate: \"〖%十一年〗 （公元前236年）\"\n---\n\n# 王翦攻邺\n\n> 十一年，王翦、桓齮、杨端和三将攻邺，取九城。王翦攻阏与、橑杨，皆并为一军。\n\n**主要人物**：杨端和、桓齮、王翦\n\n## 事件经过\n\n十一年，王翦、桓齮、杨端和三将攻邺，取九城。王翦攻阏与、橑杨，皆并为一军。\n\n## 原文\n\n> 十一年，王翦、桓齮、杨端和攻鄴，取九城。王翦攻阏与、橑杨，皆并为一军。\n\n"
+    },
     {
       "rev_id": "20260423-152846-16e4a9",
       "timestamp": "2026-04-23T15:28:46Z",

@@ -1,8 +1,18 @@
 {
   "page": "桂陵之战围魏救赵",
-  "latest_rev_id": "20260423-152801-22fc8e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161127-b905df",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161127-b905df",
+      "timestamp": "2026-04-23T16:11:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152801-22fc8e",
+      "content_hash": "sha256:b905df1a0bc1f298f7c17d43340c535ac34026cac3e1079d7f216f1252411e3c",
+      "size": 1135,
+      "content": "paragraph_refs:\n  065-005: \"[4]\"\nevent_type: 战争\nlocation: \"大梁\"\n---\nid: \"桂陵之战围魏救赵\"\ntype: event\ntitle: 桂陵之战围魏救赵\ndescription: 魏伐赵，赵求救于齐。齐以田忌为将、孙膑为军师。孙膑提出批亢捣虚之策，不救赵而直趋大梁，魏果释赵自救。齐魏战于桂陵，大破魏军。\ntags: [史记, 事件, 孙子吴起列传]\nsources: [孙子吴起列传]\nevent_ids: [065-005]\ndate: \"（公元前353年）\"\n---\n\n# 桂陵之战围魏救赵\n\n> 魏伐赵，赵求救于齐。齐以田忌为将、孙膑为军师。孙膑提出批亢捣虚之策，不救赵而直趋大梁，魏果释赵自救。齐魏战于桂陵，大破魏军。\n\n**主要人物**：孙膑\n\n## 事件经过\n\n魏伐赵，赵求救于齐。齐以田忌为将、孙膑为军师。孙膑提出批亢捣虚之策，不救赵而直趋大梁，魏果释赵自救。齐魏战于桂陵，大破魏军。\n\n## 原文\n\n> 孙子曰：'夫解杂乱纷纠者不控卷，救斗者不搏撠，批亢捣虚，形格势禁，则自为解耳。'……田忌从之，魏果去邯郸，与齐战於桂陵，大破梁军。\n\n"
+    },
     {
       "rev_id": "20260423-152801-22fc8e",
       "timestamp": "2026-04-23T15:28:01Z",

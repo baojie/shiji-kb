@@ -1,8 +1,18 @@
 {
   "page": "楚平王复立蔡",
-  "latest_rev_id": "20260423-152808-b3ded2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161131-07ff2d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161131-07ff2d",
+      "timestamp": "2026-04-23T16:11:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152808-b3ded2",
+      "content_hash": "sha256:07ff2d1189d8b2f42e375e5b037c37531bbbb013eb4a2bd118beee2579f67309",
+      "size": 981,
+      "content": "paragraph_refs:\n  035-009: \"[16.16]\"\nevent_type: 政治活动\nlocation: \"蔡\"\n---\nid: \"楚平王复立蔡\"\ntype: event\ntitle: 楚平王复立蔡\ndescription: 楚灭蔡三岁，楚公子弃疾弑灵王代立为平王。平王求蔡景侯少子庐立之为平侯。楚平王初立欲亲诸侯，故复立陈、蔡后。\ntags: [史记, 事件, 管蔡世家]\nsources: [管蔡世家]\nevent_ids: [035-009]\ndate: \"（公元前528年）\"\n---\n\n# 楚平王复立蔡\n\n> 楚灭蔡三岁，楚公子弃疾弑灵王代立为平王。平王求蔡景侯少子庐立之为平侯。楚平王初立欲亲诸侯，故复立陈、蔡后。\n\n**主要人物**：楚平王、蔡平侯\n\n## 事件经过\n\n楚灭蔡三岁，楚公子弃疾弑灵王代立为平王。平王求蔡景侯少子庐立之为平侯。楚平王初立欲亲诸侯，故复立陈、蔡后。\n\n## 原文\n\n> 楚灭蔡三岁，楚公子弃疾弑其君灵王代立，为平王。平王乃求蔡景侯少子庐，立之，是为平侯。\n\n"
+    },
     {
       "rev_id": "20260423-152808-b3ded2",
       "timestamp": "2026-04-23T15:28:08Z",

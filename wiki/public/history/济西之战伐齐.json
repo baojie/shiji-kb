@@ -1,8 +1,18 @@
 {
   "page": "济西之战伐齐",
-  "latest_rev_id": "20260423-152831-87cb1d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161148-11c937",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161148-11c937",
+      "timestamp": "2026-04-23T16:11:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152831-87cb1d",
+      "content_hash": "sha256:11c93726f88cf4a374a23c8732b0411636c5f1df527aad03df8b53ec5b8244df",
+      "size": 878,
+      "content": "paragraph_refs:\n  005-122: \"[63.10]\"\nevent_type: 战争\nlocation: \"济西\"\n---\nid: \"济西之战伐齐\"\ntype: event\ntitle: 济西之战伐齐\ndescription: 昭襄王二十三年，尉斯离与晋、燕联军伐齐，在济西大破齐军。秦王又分别与魏王会于宜阳、与韩王会于新城。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-122]\ndate: \"〖%二十三年〗 （公元前284年）\"\n---\n\n# 济西之战伐齐\n\n> 昭襄王二十三年，尉斯离与晋、燕联军伐齐，在济西大破齐军。秦王又分别与魏王会于宜阳、与韩王会于新城。\n\n**主要人物**：尉斯离\n\n## 事件经过\n\n昭襄王二十三年，尉斯离与晋、燕联军伐齐，在济西大破齐军。秦王又分别与魏王会于宜阳、与韩王会于新城。\n\n## 原文\n\n> 二十三年，尉斯离与晋、燕伐齐，破之济西。\n\n"
+    },
     {
       "rev_id": "20260423-152831-87cb1d",
       "timestamp": "2026-04-23T15:28:31Z",

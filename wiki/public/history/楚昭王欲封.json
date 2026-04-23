@@ -1,8 +1,18 @@
 {
   "page": "楚昭王欲封",
-  "latest_rev_id": "20260423-152811-dbce9b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161132-37be5e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161132-37be5e",
+      "timestamp": "2026-04-23T16:11:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152811-dbce9b",
+      "content_hash": "sha256:37be5e4e90f60a8e6484f488c5fc24ea544af2a53951b913a5fdf375bc10ef0e",
+      "size": 1052,
+      "content": "paragraph_refs:\n  047-014: \"[25]\"\nevent_type: 政治活动\n---\nid: \"楚昭王欲封\"\ntype: event\ntitle: 楚昭王欲封\ndescription: 昭王将以书社地七百里封孔子，令尹子西谏阻。子西言孔子得据土壤、贤弟子为佐，非楚之福。文王百里卒王天下，不可令孔子据地。昭王乃止。其秋昭王卒。\ntags: [史记, 事件, 孔子世家]\nsources: [孔子世家]\nevent_ids: [047-014]\ndate: \"（公元前489年）\"\n---\n\n# 楚昭王欲封\n\n> 昭王将以书社地七百里封孔子，令尹子西谏阻。子西言孔子得据土壤、贤弟子为佐，非楚之福。文王百里卒王天下，不可令孔子据地。昭王乃止。其秋昭王卒。\n\n**主要人物**：令尹子西、孔子、楚昭王\n\n## 事件经过\n\n昭王将以书社地七百里封孔子，令尹子西谏阻。子西言孔子得据土壤、贤弟子为佐，非楚之福。文王百里卒王天下，不可令孔子据地。昭王乃止。其秋昭王卒。\n\n## 原文\n\n> 今孔丘得据土壤，贤弟子为佐，非楚之福也。\n\n"
+    },
     {
       "rev_id": "20260423-152811-dbce9b",
       "timestamp": "2026-04-23T15:28:11Z",

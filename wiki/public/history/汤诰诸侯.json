@@ -1,8 +1,18 @@
 {
   "page": "汤诰诸侯",
-  "latest_rev_id": "20260423-152821-ecd7e1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161144-61769c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161144-61769c",
+      "timestamp": "2026-04-23T16:11:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152821-ecd7e1",
+      "content_hash": "sha256:61769c31c24c4e51fd2731b9d984e03dbcd75be5049a1817fa5cf951123dae7a",
+      "size": 961,
+      "content": "paragraph_refs:\n  003-010: \"[8]-[8.4]\"\nevent_type: 政治活动\nlocation: \"泰卷陶、亳、东郊\"\n---\nid: \"汤诰诸侯\"\ntype: event\ntitle: 汤诰诸侯\ndescription: 汤归至泰卷陶，中纻作诰。既绌夏命，还亳，作汤诰，告诫诸侯群后勤力于事。伊尹作咸有一德，咎单作明居。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-010]\ndate: \"〖%三月〗 [约公元前1600年]\"\n---\n\n# 汤诰诸侯\n\n> 汤归至泰卷陶，中纻作诰。既绌夏命，还亳，作汤诰，告诫诸侯群后勤力于事。伊尹作咸有一德，咎单作明居。\n\n**主要人物**：中纻、伊尹、咎单、汤\n\n## 事件经过\n\n汤归至泰卷陶，中纻作诰。既绌夏命，还亳，作汤诰，告诫诸侯群后勤力于事。伊尹作咸有一德，咎单作明居。\n\n## 原文\n\n> 汤归至于泰卷陶，中纻作诰。既绌夏命，还亳，作汤诰……伊尹作咸有一德，咎单作明居。\n\n"
+    },
     {
       "rev_id": "20260423-152821-ecd7e1",
       "timestamp": "2026-04-23T15:28:21Z",

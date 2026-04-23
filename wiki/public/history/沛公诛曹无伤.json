@@ -1,8 +1,18 @@
 {
   "page": "沛公诛曹无伤",
-  "latest_rev_id": "20260423-152830-07b8fb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161146-e3e774",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161146-e3e774",
+      "timestamp": "2026-04-23T16:11:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152830-07b8fb",
+      "content_hash": "sha256:e3e7746d2ad6f18fafc4ece9638bf0e7a232237dd9d214f6f0d626c1872481dc",
+      "size": 744,
+      "content": "paragraph_refs:\n  007-030: \"[87]\"\nevent_type: 政治整顿\nlocation: \"霸上\"\n---\nid: \"沛公诛曹无伤\"\ntype: event\ntitle: 沛公诛曹无伤\ndescription: 沛公回到军中后，立即诛杀了向项羽告密的左司马曹无伤。此举既除内奸又惩叛臣。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-030]\ndate: \"（公元前206年）\"\n---\n\n# 沛公诛曹无伤\n\n> 沛公回到军中后，立即诛杀了向项羽告密的左司马曹无伤。此举既除内奸又惩叛臣。\n\n**主要人物**：曹无伤、沛公\n\n## 事件经过\n\n沛公回到军中后，立即诛杀了向项羽告密的左司马曹无伤。此举既除内奸又惩叛臣。\n\n## 原文\n\n> 沛公至军，立诛杀曹无伤。\n\n"
+    },
     {
       "rev_id": "20260423-152830-07b8fb",
       "timestamp": "2026-04-23T15:28:30Z",

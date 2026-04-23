@@ -1,8 +1,18 @@
 {
   "page": "桓齮攻赵平阳",
-  "latest_rev_id": "20260423-152803-cec68c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161129-e0181b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161129-e0181b",
+      "timestamp": "2026-04-23T16:11:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152803-cec68c",
+      "content_hash": "sha256:e0181b86cb37a7769f1e2aea62fc4b9b8704ccb98631252f53e9197ba91e5b58",
+      "size": 655,
+      "content": "paragraph_refs:\n  006-025: \"[20.1]\"\nevent_type: 战争\nlocation: \"平阳\"\n---\nid: \"桓齮攻赵平阳\"\ntype: event\ntitle: 桓齮攻赵平阳\ndescription: 十三年，桓齮攻赵平阳，杀赵将扈辄，斩首十万。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-025]\ndate: \"〖%十三年〗 （公元前234年）\"\n---\n\n# 桓齮攻赵平阳\n\n> 十三年，桓齮攻赵平阳，杀赵将扈辄，斩首十万。\n\n**主要人物**：扈辄、桓齮\n\n## 事件经过\n\n十三年，桓齮攻赵平阳，杀赵将扈辄，斩首十万。\n\n## 原文\n\n> 十三年，桓齮攻赵平阳，杀赵将扈辄，斩首十万。\n\n"
+    },
     {
       "rev_id": "20260423-152803-cec68c",
       "timestamp": "2026-04-23T15:28:03Z",

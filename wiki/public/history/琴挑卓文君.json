@@ -1,8 +1,18 @@
 {
   "page": "琴挑卓文君",
-  "latest_rev_id": "20260423-152848-b9841e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161202-4273ff",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161202-4273ff",
+      "timestamp": "2026-04-23T16:12:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152848-b9841e",
+      "content_hash": "sha256:4273ff944b23b4e337bd61ba9961651ce4eb995003604373dc9de077170a3dce",
+      "size": 1139,
+      "content": "paragraph_refs:\n  117-003: \"[1]\"\nevent_type: 家族事件\nlocation: \"临邛\"\n---\nid: \"琴挑卓文君\"\ntype: event\ntitle: 琴挑卓文君\ndescription: 梁孝王卒后相如归蜀，家贫无以自业。与临邛令王吉相善，至临邛。卓王孙置酒，相如以琴心挑之。卓文君新寡好音，窃从户窥之心悦，夜亡奔相如，驰归成都。\ntags: [史记, 事件, 司马相如列传]\nsources: [司马相如列传]\nevent_ids: [117-003]\ndate: \"（公元前143年）\"\n---\n\n# 琴挑卓文君\n\n> 梁孝王卒后相如归蜀，家贫无以自业。与临邛令王吉相善，至临邛。卓王孙置酒，相如以琴心挑之。卓文君新寡好音，窃从户窥之心悦，夜亡奔相如，驰归成都。\n\n**主要人物**：卓文君、卓王孙、司马相如\n\n## 事件经过\n\n梁孝王卒后相如归蜀，家贫无以自业。与临邛令王吉相善，至临邛。卓王孙置酒，相如以琴心挑之。卓文君新寡好音，窃从户窥之心悦，夜亡奔相如，驰归成都。\n\n## 原文\n\n> 故相如缪与令相重，而以琴心挑之。……文君夜亡奔相如，相如乃与驰归成都。\n\n"
+    },
     {
       "rev_id": "20260423-152848-b9841e",
       "timestamp": "2026-04-23T15:28:48Z",

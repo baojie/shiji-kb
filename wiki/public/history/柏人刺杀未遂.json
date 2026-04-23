@@ -1,8 +1,18 @@
 {
   "page": "柏人刺杀未遂",
-  "latest_rev_id": "20260423-155248-b33f5c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161126-583d95",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161126-583d95",
+      "timestamp": "2026-04-23T16:11:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155248-b33f5c",
+      "content_hash": "sha256:583d950e62e4ad185509ca0fd078eaedcdbf92d68d1d1d7710dd4af29420a4e8",
+      "size": 962,
+      "content": "paragraph_refs:\n  089-021: \"[24]\"\nevent_type: 政治活动\nlocation: \"柏人\"\n---\nid: \"柏人刺杀未遂\"\ntype: event\ntitle: 柏人刺杀未遂\ndescription: 汉八年高祖从东垣还过赵，贯高等壁人于柏人要之。高祖欲宿，问县名曰\"柏人\"，曰\"柏人者迫于人也\"，不宿而去。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-021]\ndate: \"〖%汉八年〗 （公元前199年）\"\n---\n\n# 柏人刺杀未遂\n\n> 汉八年高祖从东垣还过赵，贯高等壁人于柏人要之。高祖欲宿，问县名曰\"柏人\"，曰\"柏人者迫于人也\"，不宿而去。\n\n**主要人物**：贯高、高祖\n\n## 事件经过\n\n汉八年高祖从东垣还过赵，贯高等壁人于柏人要之。高祖欲宿，问县名曰\"柏人\"，曰\"柏人者迫于人也\"，不宿而去。\n\n## 原文\n\n> 上过欲宿，心动问曰：'县名为何？'曰：'柏人。''柏人者，迫於人也！'不宿而去。\n\n"
+    },
     {
       "rev_id": "20260423-155248-b33f5c",
       "timestamp": "2026-04-23T15:52:48Z",

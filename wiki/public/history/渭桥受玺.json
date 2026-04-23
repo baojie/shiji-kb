@@ -1,8 +1,18 @@
 {
   "page": "渭桥受玺",
-  "latest_rev_id": "20260423-155331-1eb82d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161151-ca93dc",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161151-ca93dc",
+      "timestamp": "2026-04-23T16:11:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155331-1eb82d",
+      "content_hash": "sha256:ca93dc6d8fed3c06417ff708ccfad250809d71a468bb0a682fd8c64bb8d6ace6",
+      "size": 864,
+      "content": "paragraph_refs:\n  010-006: \"[5.1]-[5.9]\"\nevent_type: 继位\nlocation: \"渭桥、代邸\"\n---\nid: \"渭桥受玺\"\ntype: event\ntitle: 渭桥受玺\ndescription: 宋昌先至渭桥观变，丞相以下皆迎。代王驰至渭桥，群臣拜谒。太尉跪上天子玺符，代王谢曰至代邸再议。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-006]\ndate: \"（公元前180年）\"\n---\n\n# 渭桥受玺\n\n> 宋昌先至渭桥观变，丞相以下皆迎。代王驰至渭桥，群臣拜谒。太尉跪上天子玺符，代王谢曰至代邸再议。\n\n**主要人物**：代王、周勃、宋昌\n\n## 事件经过\n\n宋昌先至渭桥观变，丞相以下皆迎。代王驰至渭桥，群臣拜谒。太尉跪上天子玺符，代王谢曰至代邸再议。\n\n## 原文\n\n> 太尉乃跪上天子玺符。代王谢曰：'至代邸而议之。'\n\n"
+    },
     {
       "rev_id": "20260423-155331-1eb82d",
       "timestamp": "2026-04-23T15:53:31Z",

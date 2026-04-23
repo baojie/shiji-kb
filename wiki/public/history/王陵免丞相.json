@@ -1,8 +1,18 @@
 {
   "page": "王陵免丞相",
-  "latest_rev_id": "20260423-152847-dcba58",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161202-13c6cf",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161202-13c6cf",
+      "timestamp": "2026-04-23T16:12:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152847-dcba58",
+      "content_hash": "sha256:13c6cfc5dbca4ce2a9ed5f85848acc74115bafb335e67642fc1c56986b72ab87",
+      "size": 987,
+      "content": "paragraph_refs:\n  056-021: \"[19]\"\nevent_type: 政治活动\n---\nid: \"王陵免丞相\"\ntype: event\ntitle: 王陵免丞相\ndescription: 孝惠帝崩，高后欲立诸吕为王。王陵曰不可，陈平曰可。吕太后怒，详迁陵为帝太傅实不用陵。陵怒谢疾免杜门不朝请。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-021]\ndate: \"（公元前187年）\"\n---\n\n# 王陵免丞相\n\n> 孝惠帝崩，高后欲立诸吕为王。王陵曰不可，陈平曰可。吕太后怒，详迁陵为帝太傅实不用陵。陵怒谢疾免杜门不朝请。\n\n**主要人物**：吕后、王陵、陈平\n\n## 事件经过\n\n孝惠帝崩，高后欲立诸吕为王。王陵曰不可，陈平曰可。吕太后怒，详迁陵为帝太傅实不用陵。陵怒谢疾免杜门不朝请。\n\n## 原文\n\n> 高后欲立诸吕为王，问王陵，王陵曰：'不可。'问陈平，陈平曰：'可。'吕太后怒，乃详迁陵为帝太傅，实不用陵。\n\n"
+    },
     {
       "rev_id": "20260423-152847-dcba58",
       "timestamp": "2026-04-23T15:28:47Z",

@@ -1,8 +1,18 @@
 {
   "page": "楚王世系传承",
-  "latest_rev_id": "20260423-152812-28c35f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161133-cb2e78",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161133-cb2e78",
+      "timestamp": "2026-04-23T16:11:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152812-28c35f",
+      "content_hash": "sha256:cb2e78dc65624008e62e41c5defb8ef496351fea9d4cf02bad4b75eb5a23fcda",
+      "size": 787,
+      "content": "paragraph_refs:\n  050-005: \"[4]\"\nevent_type: 继位\n---\nid: \"楚王世系传承\"\ntype: event\ntitle: 楚王世系传承\ndescription: 文王立三年卒，子安王道立。安王二十二年卒，子襄王注立。襄王立十四年卒，子王纯代立。\ntags: [史记, 事件, 楚元王世家]\nsources: [楚元王世家]\nevent_ids: [050-005]\ndate: \"（公元前151年）\"\n---\n\n# 楚王世系传承\n\n> 文王立三年卒，子安王道立。安王二十二年卒，子襄王注立。襄王立十四年卒，子王纯代立。\n\n**主要人物**：安王道、文王、王纯、襄王注\n\n## 事件经过\n\n文王立三年卒，子安王道立。安王二十二年卒，子襄王注立。襄王立十四年卒，子王纯代立。\n\n## 原文\n\n> 文王立三年卒，子$安王道@$立。\n\n"
+    },
     {
       "rev_id": "20260423-152812-28c35f",
       "timestamp": "2026-04-23T15:28:12Z",

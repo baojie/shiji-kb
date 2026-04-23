@@ -1,8 +1,18 @@
 {
   "page": "李良叛赵杀武臣",
-  "latest_rev_id": "20260423-155247-ef7b1c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161125-372e57",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161125-372e57",
+      "timestamp": "2026-04-23T16:11:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155247-ef7b1c",
+      "content_hash": "sha256:372e57e5a9d1ddc406bcc9ad1f5081a585baca76c68dfe8470b55fdd2a968207",
+      "size": 1185,
+      "content": "paragraph_refs:\n  089-011: \"[13]\"\nevent_type: 战争\nlocation: \"邯郸\"\n---\nid: \"李良叛赵杀武臣\"\ntype: event\ntitle: 李良叛赵杀武臣\ndescription: 李良略常山还报，欲略太原被秦兵阻。秦将诈以二世书诱良反赵。李良途逢赵王姊不下车，从官激之。李良怒遂杀王姊，袭邯郸杀武臣、邵骚。张耳、陈馀得脱。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-011]\ndate: \"（公元前208年）\"\n---\n\n# 李良叛赵杀武臣\n\n> 李良略常山还报，欲略太原被秦兵阻。秦将诈以二世书诱良反赵。李良途逢赵王姊不下车，从官激之。李良怒遂杀王姊，袭邯郸杀武臣、邵骚。张耳、陈馀得脱。\n\n**主要人物**：李良、武臣、邵骚\n\n## 事件经过\n\n李良略常山还报，欲略太原被秦兵阻。秦将诈以二世书诱良反赵。李良途逢赵王姊不下车，从官激之。李良怒遂杀王姊，袭邯郸杀武臣、邵骚。张耳、陈馀得脱。\n\n## 原文\n\n> 李良已得秦书，固欲反赵，未决，因此怒，遣人追杀王姊道中，乃遂将其兵袭邯郸。邯郸不知，竟杀武臣、邵骚。\n\n"
+    },
     {
       "rev_id": "20260423-155247-ef7b1c",
       "timestamp": "2026-04-23T15:52:47Z",

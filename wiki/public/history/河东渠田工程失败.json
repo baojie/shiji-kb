@@ -1,8 +1,18 @@
 {
   "page": "河东渠田工程失败",
-  "latest_rev_id": "20260423-155324-e64cb2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161147-000304",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161147-000304",
+      "timestamp": "2026-04-23T16:11:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155324-e64cb2",
+      "content_hash": "sha256:000304705b40ff7ca20d626600be580b8954d9daf6987538ef324d7a2e1c9a39",
+      "size": 1047,
+      "content": "paragraph_refs:\n  029-013: \"[8]\"\nevent_type: 建设\nlocation: \"汾、皮氏、汾阴、蒲坂\"\n---\nid: \"河东渠田工程失败\"\ntype: event\ntitle: 河东渠田工程失败\ndescription: 河东守番系言穿渠引汾、河溉田五千顷，可得谷二百万石。天子发卒数万人作渠田。数年后河移徙，渠不利，田者不能偿种。河东渠田遂废。\ntags: [史记, 事件, 河渠书]\nsources: [河渠书]\nevent_ids: [029-013]\ndate: \"〖%数岁〗 [约公元前126年]\"\n---\n\n# 河东渠田工程失败\n\n> 河东守番系言穿渠引汾、河溉田五千顷，可得谷二百万石。天子发卒数万人作渠田。数年后河移徙，渠不利，田者不能偿种。河东渠田遂废。\n\n**主要人物**：番系\n\n## 事件经过\n\n河东守番系言穿渠引汾、河溉田五千顷，可得谷二百万石。天子发卒数万人作渠田。数年后河移徙，渠不利，田者不能偿种。河东渠田遂废。\n\n## 原文\n\n> 数岁，河移徙，渠不利，则田者不能偿种。久之，河东渠田废。\n\n"
+    },
     {
       "rev_id": "20260423-155324-e64cb2",
       "timestamp": "2026-04-23T15:53:24Z",

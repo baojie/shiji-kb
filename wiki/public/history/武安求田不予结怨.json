@@ -1,8 +1,18 @@
 {
   "page": "武安求田不予结怨",
-  "latest_rev_id": "20260423-155259-ebf635",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161136-cb3f42",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161136-cb3f42",
+      "timestamp": "2026-04-23T16:11:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155259-ebf635",
+      "content_hash": "sha256:cb3f428ed29e57bee5bf41fd6eeda409d0ccc1ba3f0980663055c0024ce072fc",
+      "size": 988,
+      "content": "paragraph_refs:\n  107-013: \"[4.2]\"\nevent_type: 政治活动\nlocation: \"城南\"\n---\nid: \"武安求田不予结怨\"\ntype: event\ntitle: 武安求田不予结怨\ndescription: 田蚡使籍福请魏其城南田，魏其怒拒\"老仆虽弃，将军虽贵，宁可以势夺乎\"。灌夫骂籍福。武安由此大怨灌夫、魏其。\ntags: [史记, 事件, 魏其武安侯列传]\nsources: [魏其武安侯列传]\nevent_ids: [107-013]\ndate: \"〖;武帝〗时 [约公元前133年]\"\n---\n\n# 武安求田不予结怨\n\n> 田蚡使籍福请魏其城南田，魏其怒拒\"老仆虽弃，将军虽贵，宁可以势夺乎\"。灌夫骂籍福。武安由此大怨灌夫、魏其。\n\n**主要人物**：灌夫、田蚡、窦婴、籍福\n\n## 事件经过\n\n田蚡使籍福请魏其城南田，魏其怒拒\"老仆虽弃，将军虽贵，宁可以势夺乎\"。灌夫骂籍福。武安由此大怨灌夫、魏其。\n\n## 原文\n\n> 魏其大望曰：'老仆虽弃，将军虽贵，宁可以势夺乎！'不许。\n\n"
+    },
     {
       "rev_id": "20260423-155259-ebf635",
       "timestamp": "2026-04-23T15:52:59Z",

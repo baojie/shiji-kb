@@ -1,8 +1,18 @@
 {
   "page": "曹参闻萧何卒入相",
-  "latest_rev_id": "20260423-152746-d5fd21",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161120-c1c64b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161120-c1c64b",
+      "timestamp": "2026-04-23T16:11:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152746-d5fd21",
+      "content_hash": "sha256:c1c64b5a7d7144a431d848b40b1590a4986f209f65c99a5e1f870b9726a89d45",
+      "size": 1035,
+      "content": "paragraph_refs:\n  054-011: \"[10]\"\nevent_type: 继位\nlocation: \"齐\"\n---\nid: \"曹参闻萧何卒入相\"\ntype: event\ntitle: 曹参闻萧何卒入相\ndescription: 惠帝二年，萧何卒。参闻之告舍人趣治行，\"吾将入相\"。居无何使者果召参。参去属其后相曰：以齐狱市为寄，慎勿扰也。\ntags: [史记, 事件, 曹相国世家]\nsources: [曹相国世家]\nevent_ids: [054-011]\ndate: \"〖%惠帝二年〗 （公元前193年）\"\n---\n\n# 曹参闻萧何卒入相\n\n> 惠帝二年，萧何卒。参闻之告舍人趣治行，\"吾将入相\"。居无何使者果召参。参去属其后相曰：以齐狱市为寄，慎勿扰也。\n\n**主要人物**：曹参、萧何\n\n## 事件经过\n\n惠帝二年，萧何卒。参闻之告舍人趣治行，\"吾将入相\"。居无何使者果召参。参去属其后相曰：以齐狱市为寄，慎勿扰也。\n\n## 原文\n\n> 惠帝二年，萧何卒。参闻之，告舍人趣治行，'吾将入相'。...参去，属其後相曰：'以齐狱市为寄，慎勿扰也。'\n\n"
+    },
     {
       "rev_id": "20260423-152746-d5fd21",
       "timestamp": "2026-04-23T15:27:46Z",

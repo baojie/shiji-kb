@@ -1,8 +1,18 @@
 {
   "page": "灭燕得燕王",
-  "latest_rev_id": "20260423-155333-434f8b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161154-ebad0f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161154-ebad0f",
+      "timestamp": "2026-04-23T16:11:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155333-434f8b",
+      "content_hash": "sha256:ebad0fc27a669766544b641fc85c5db420020cb99bfc50bcba1993d7a79f6c98",
+      "size": 697,
+      "content": "paragraph_refs:\n  006-041: \"[32.1]\"\nevent_type: 战争\nlocation: \"辽东\"\n---\nid: \"灭燕得燕王\"\ntype: event\ntitle: 灭燕得燕王\ndescription: 二十五年，大兴兵使王贲攻燕辽东，俘获燕王喜。燕国灭亡。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-041]\ndate: \"〖%二十五年〗 （公元前222年）\"\n---\n\n# 灭燕得燕王\n\n> 二十五年，大兴兵使王贲攻燕辽东，俘获燕王喜。燕国灭亡。\n\n**主要人物**：喜、王贲\n\n## 事件经过\n\n二十五年，大兴兵使王贲攻燕辽东，俘获燕王喜。燕国灭亡。\n\n## 原文\n\n> 二十五年，大兴兵，使王贲将，攻燕辽东，得燕王喜。\n\n"
+    },
     {
       "rev_id": "20260423-155333-434f8b",
       "timestamp": "2026-04-23T15:53:33Z",

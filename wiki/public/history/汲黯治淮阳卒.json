@@ -1,8 +1,18 @@
 {
   "page": "汲黯治淮阳卒",
-  "latest_rev_id": "20260423-152823-9a14da",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161145-084163",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161145-084163",
+      "timestamp": "2026-04-23T16:11:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152823-9a14da",
+      "content_hash": "sha256:084163a208923f681cd122d96b67577d174315205250db2772e4c20297280274",
+      "size": 941,
+      "content": "paragraph_refs:\n  120-016: \"[12]-[13]\"\nevent_type: 家族事件\nlocation: \"淮阳\"\n---\nid: \"汲黯治淮阳卒\"\ntype: event\ntitle: 汲黯治淮阳卒\ndescription: 汲黯居郡如故治，淮阳政清。令黯以诸侯相秩居淮阳，七岁而卒。卒后上以黯故官其弟汲仁至九卿、子汲偃至诸侯相。\ntags: [史记, 事件, 汲郑列传]\nsources: [汲郑列传]\nevent_ids: [120-016]\ndate: \"（公元前112年）\"\n---\n\n# 汲黯治淮阳卒\n\n> 汲黯居郡如故治，淮阳政清。令黯以诸侯相秩居淮阳，七岁而卒。卒后上以黯故官其弟汲仁至九卿、子汲偃至诸侯相。\n\n**主要人物**：汲黯\n\n## 事件经过\n\n汲黯居郡如故治，淮阳政清。令黯以诸侯相秩居淮阳，七岁而卒。卒后上以黯故官其弟汲仁至九卿、子汲偃至诸侯相。\n\n## 原文\n\n> 黯居郡如故治，淮阳政清。後张汤果败……令黯以诸侯相秩居淮阳。七岁而卒。\n\n"
+    },
     {
       "rev_id": "20260423-152823-9a14da",
       "timestamp": "2026-04-23T15:28:23Z",

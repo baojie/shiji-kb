@@ -1,8 +1,18 @@
 {
   "page": "楚庄王问鼎",
-  "latest_rev_id": "20260423-152809-48af62",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161131-015579",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161131-015579",
+      "timestamp": "2026-04-23T16:11:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152809-48af62",
+      "content_hash": "sha256:01557947a7eb3da4445208eae00502b72536a8980b09e80e1c8b24cdda847bcd",
+      "size": 969,
+      "content": "paragraph_refs:\n  004-055: \"[51]\"\nevent_type: 政治活动\nlocation: \"洛\"\n---\nid: \"楚庄王问鼎\"\ntype: event\ntitle: 楚庄王问鼎\ndescription: 定王元年，楚庄王伐陆浑之戎，次于洛，使人问九鼎轻重。王使王孙满应设以辞，楚兵乃去。此为楚问鼎中原之典故。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-055]\ndate: \"〖@定王〗〖%元年〗 （公元前606年）\"\n---\n\n# 楚庄王问鼎\n\n> 定王元年，楚庄王伐陆浑之戎，次于洛，使人问九鼎轻重。王使王孙满应设以辞，楚兵乃去。此为楚问鼎中原之典故。\n\n**主要人物**：楚庄王、王孙满\n\n## 事件经过\n\n定王元年，楚庄王伐陆浑之戎，次于洛，使人问九鼎轻重。王使王孙满应设以辞，楚兵乃去。此为楚问鼎中原之典故。\n\n## 原文\n\n> 定王元年，楚庄王伐陆浑之戎，次洛，使人问九鼎。王使王孙满应设以辞，楚兵乃去。\n\n"
+    },
     {
       "rev_id": "20260423-152809-48af62",
       "timestamp": "2026-04-23T15:28:09Z",

@@ -1,8 +1,18 @@
 {
   "page": "田单破骑劫复齐城",
-  "latest_rev_id": "20260423-152852-a1e040",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161204-78d2c5",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161204-78d2c5",
+      "timestamp": "2026-04-23T16:12:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152852-a1e040",
+      "content_hash": "sha256:78d2c55c9ec7feaac10f4965a02b1250fb1dd34c64c2cabfecefa6876dc311c1",
+      "size": 1010,
+      "content": "paragraph_refs:\n  080-011: \"[5]\"\nevent_type: 战争\nlocation: \"即墨\"\n---\nid: \"田单破骑劫复齐城\"\ntype: event\ntitle: 田单破骑劫复齐城\ndescription: 田单以诈术大破骑劫于即墨城下，转战逐燕北至河上，尽复齐国全部城池，迎齐襄王自莒入临菑。乐毅五年之功毁于一旦。\ntags: [史记, 事件, 乐毅列传]\nsources: [乐毅列传]\nevent_ids: [080-011]\ndate: \"乐毅降赵后（公元前279年）\"\n---\n\n# 田单破骑劫复齐城\n\n> 田单以诈术大破骑劫于即墨城下，转战逐燕北至河上，尽复齐国全部城池，迎齐襄王自莒入临菑。乐毅五年之功毁于一旦。\n\n**主要人物**：田单、骑劫\n\n## 事件经过\n\n田单以诈术大破骑劫于即墨城下，转战逐燕北至河上，尽复齐国全部城池，迎齐襄王自莒入临菑。乐毅五年之功毁于一旦。\n\n## 原文\n\n> 齐田单後与骑劫战，果设诈诳燕军，遂破骑劫於即墨下，而转战逐燕，北至河上，尽复得齐城。\n\n"
+    },
     {
       "rev_id": "20260423-152852-a1e040",
       "timestamp": "2026-04-23T15:28:52Z",

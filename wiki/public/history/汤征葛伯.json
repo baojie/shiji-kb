@@ -1,8 +1,18 @@
 {
   "page": "汤征葛伯",
-  "latest_rev_id": "20260423-155321-6ac704",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161144-062c01",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161144-062c01",
+      "timestamp": "2026-04-23T16:11:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155321-6ac704",
+      "content_hash": "sha256:062c01a9c49f44e10d862bae9cc6e7c6017cefd0df108bd635f5ac3878ac15a8",
+      "size": 757,
+      "content": "paragraph_refs:\n  003-004: \"[4]-[4.4]\"\nevent_type: 战争\n---\nid: \"汤征葛伯\"\ntype: event\ntitle: 汤征葛伯\ndescription: 汤开始征伐诸侯，因葛伯不举行祭祀，汤首先讨伐葛伯。伊尹辅佐汤，劝勉其行善，汤作汤征。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-004]\ndate: \"[约公元前1617年]\"\n---\n\n# 汤征葛伯\n\n> 汤开始征伐诸侯，因葛伯不举行祭祀，汤首先讨伐葛伯。伊尹辅佐汤，劝勉其行善，汤作汤征。\n\n**主要人物**：伊尹、汤、葛伯\n\n## 事件经过\n\n汤开始征伐诸侯，因葛伯不举行祭祀，汤首先讨伐葛伯。伊尹辅佐汤，劝勉其行善，汤作汤征。\n\n## 原文\n\n> 汤征诸侯。葛伯不祀，汤始伐之。\n\n"
+    },
     {
       "rev_id": "20260423-155321-6ac704",
       "timestamp": "2026-04-23T15:53:21Z",

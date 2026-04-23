@@ -1,8 +1,18 @@
 {
   "page": "江都大暴风",
-  "latest_rev_id": "20260423-155319-32b83f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161143-764f10",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161143-764f10",
+      "timestamp": "2026-04-23T16:11:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155319-32b83f",
+      "content_hash": "sha256:764f1046a30ec38b3db70e19e3aa61bdac2ae10388d3d136b475e1fff0965d3a",
+      "size": 521,
+      "content": "paragraph_refs:\n  011-021: \"[10.3]\"\nevent_type: 自然灾害\nlocation: \"江都\"\n---\nid: \"江都大暴风\"\ntype: event\ntitle: 江都大暴风\ndescription: 江都大暴风从西方来，坏城十二丈。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-021]\ndate: \"（公元前152年）\"\n---\n\n# 江都大暴风\n\n> 江都大暴风从西方来，坏城十二丈。\n\n## 事件经过\n\n江都大暴风从西方来，坏城十二丈。\n\n## 原文\n\n> 江都大暴风从西方来，坏城十二丈。\n\n"
+    },
     {
       "rev_id": "20260423-155319-32b83f",
       "timestamp": "2026-04-23T15:53:19Z",

@@ -1,8 +1,18 @@
 {
   "page": "桑弘羊财政成就",
-  "latest_rev_id": "20260423-152802-a9d72f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161128-e89fe2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161128-e89fe2",
+      "timestamp": "2026-04-23T16:11:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152802-a9d72f",
+      "content_hash": "sha256:e89fe2c372afd480a0aaafe29814fc4c246f372bfc8780f5bbc5e89919ec7091",
+      "size": 1178,
+      "content": "paragraph_refs:\n  030-041: \"[46]\"\nevent_type: 经济活动\nlocation: \"太仓、甘泉\"\n---\nid: \"桑弘羊财政成就\"\ntype: event\ntitle: 桑弘羊财政成就\ndescription: 桑弘羊又请令吏得入粟补官及罪人赎罪，令民入粟甘泉以复终身不告缗。一岁之中太仓甘泉仓满，边余穀均输帛五百万匹。民不益赋而天下用饶。弘羊赐爵左庶长黄金再百斤。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-041]\ndate: \"[约公元前109年]\"\n---\n\n# 桑弘羊财政成就\n\n> 桑弘羊又请令吏得入粟补官及罪人赎罪，令民入粟甘泉以复终身不告缗。一岁之中太仓甘泉仓满，边余穀均输帛五百万匹。民不益赋而天下用饶。弘羊赐爵左庶长黄金再百斤。\n\n**主要人物**：桑弘羊\n\n## 事件经过\n\n桑弘羊又请令吏得入粟补官及罪人赎罪，令民入粟甘泉以复终身不告缗。一岁之中太仓甘泉仓满，边余穀均输帛五百万匹。民不益赋而天下用饶。弘羊赐爵左庶长黄金再百斤。\n\n## 原文\n\n> 一岁之中，太仓、甘泉仓满。边馀穀诸物均输帛五百万匹。民不益赋而天下用饶。\n\n"
+    },
     {
       "rev_id": "20260423-152802-a9d72f",
       "timestamp": "2026-04-23T15:28:02Z",

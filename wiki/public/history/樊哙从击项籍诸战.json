@@ -1,8 +1,18 @@
 {
   "page": "樊哙从击项籍诸战",
-  "latest_rev_id": "20260423-152814-eb1389",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161133-11ba6f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161133-11ba6f",
+      "timestamp": "2026-04-23T16:11:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152814-eb1389",
+      "content_hash": "sha256:11ba6fa87141fcc6d93d9081508e165cf9e7e3c5c7824a111ebbbaea39a085c6",
+      "size": 1159,
+      "content": "paragraph_refs:\n  095-005: \"[5]\"\nevent_type: 战争\nlocation: \"荥阳、陈\"\n---\nid: \"樊哙从击项籍诸战\"\ntype: event\ntitle: 樊哙从击项籍诸战\ndescription: 樊哙从攻项籍，屠煮枣，击破王武、程处于外黄。项羽败汉于彭城后，樊哙还至荥阳守广武。后从高祖击项籍下阳夏，围项籍于陈大破之，屠胡陵。\ntags: [史记, 事件, 樊郦滕灌列传]\nsources: [樊郦滕灌列传]\nevent_ids: [095-005]\ndate: \"[约公元前205—前202年]\"\n---\n\n# 樊哙从击项籍诸战\n\n> 樊哙从攻项籍，屠煮枣，击破王武、程处于外黄。项羽败汉于彭城后，樊哙还至荥阳守广武。后从高祖击项籍下阳夏，围项籍于陈大破之，屠胡陵。\n\n**主要人物**：樊哙、项羽、高祖\n\n## 事件经过\n\n樊哙从攻项籍，屠煮枣，击破王武、程处于外黄。项羽败汉于彭城后，樊哙还至荥阳守广武。后从高祖击项籍下阳夏，围项籍于陈大破之，屠胡陵。\n\n## 原文\n\n> 从攻项籍，屠煮枣。击破王武、程处军於外黄...从高祖击项籍，下阳夏，虏楚周将军卒四千人。围项籍於陈，大破之。\n\n"
+    },
     {
       "rev_id": "20260423-152814-eb1389",
       "timestamp": "2026-04-23T15:28:14Z",

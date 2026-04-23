@@ -1,8 +1,18 @@
 {
   "page": "朝鲜拔星茀河戍",
-  "latest_rev_id": "20260423-155231-1c8da5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161121-aeae93",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161121-aeae93",
+      "timestamp": "2026-04-23T16:11:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155231-1c8da5",
+      "content_hash": "sha256:aeae936416793154a7f6de49c0b94924f87777739dfc13e6a26abef59d058511",
+      "size": 573,
+      "content": "paragraph_refs:\n  027-018: \"[120]\"\nevent_type: 战争\n---\nid: \"朝鲜拔星茀河戍\"\ntype: event\ntitle: 朝鲜拔星茀河戍\ndescription: 汉军攻拔朝鲜时，星茀于河戍。天象与军事行动相对应。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-018]\ndate: \"（公元前108年）\"\n---\n\n# 朝鲜拔星茀河戍\n\n> 汉军攻拔朝鲜时，星茀于河戍。天象与军事行动相对应。\n\n## 事件经过\n\n汉军攻拔朝鲜时，星茀于河戍。天象与军事行动相对应。\n\n## 原文\n\n> 朝鲜之拔，星茀于河戍。\n\n"
+    },
     {
       "rev_id": "20260423-155231-1c8da5",
       "timestamp": "2026-04-23T15:52:31Z",

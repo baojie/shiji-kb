@@ -1,8 +1,18 @@
 {
   "page": "沛公遇彭越",
-  "latest_rev_id": "20260423-152830-744ce4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161147-d2ce72",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161147-d2ce72",
+      "timestamp": "2026-04-23T16:11:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152830-744ce4",
+      "content_hash": "sha256:d2ce72ab705a7bd4e4dbf86b2118d71eadfa77216b26b53edc9e79fd59884434",
+      "size": 917,
+      "content": "paragraph_refs:\n  008-020: \"[20.1]-[20.2]\"\nevent_type: 战争\nlocation: \"昌邑\"\n---\nid: \"沛公遇彭越\"\ntype: event\ntitle: 沛公遇彭越\ndescription: 沛公引兵西行，于昌邑遇彭越，与之合攻秦军但战不利。还至栗，夺刚武侯军四千余人以壮大兵力。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-020]\ndate: \"〖%二世三年〗 （公元前207年）\"\n---\n\n# 沛公遇彭越\n\n> 沛公引兵西行，于昌邑遇彭越，与之合攻秦军但战不利。还至栗，夺刚武侯军四千余人以壮大兵力。\n\n**主要人物**：刘邦、彭越\n\n## 事件经过\n\n沛公引兵西行，于昌邑遇彭越，与之合攻秦军但战不利。还至栗，夺刚武侯军四千余人以壮大兵力。\n\n## 原文\n\n> 沛公引兵西，遇彭越昌邑，因与俱攻秦军，战不利。还至栗，遇刚武侯，夺其军，可四千馀人，并之。\n\n"
+    },
     {
       "rev_id": "20260423-152830-744ce4",
       "timestamp": "2026-04-23T15:28:30Z",

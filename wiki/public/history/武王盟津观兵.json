@@ -1,8 +1,18 @@
 {
   "page": "武王盟津观兵",
-  "latest_rev_id": "20260423-155307-68ba3b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161138-5da686",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161138-5da686",
+      "timestamp": "2026-04-23T16:11:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155307-68ba3b",
+      "content_hash": "sha256:5da6862aa70f9e2cecc30c628c8da6673bb343ea46ca9324ea873dffede47d25",
+      "size": 904,
+      "content": "paragraph_refs:\n  003-037: \"[31]\"\nevent_type: 战争\nlocation: \"盟津\"\n---\nid: \"武王盟津观兵\"\ntype: event\ntitle: 武王盟津观兵\ndescription: 西伯卒后，周武王东伐至盟津，叛殷会周的诸侯八百。诸侯皆曰纣可伐，武王以未知天命为由班师。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-037]\ndate: \"[约公元前1048年]\"\n---\n\n# 武王盟津观兵\n\n> 西伯卒后，周武王东伐至盟津，叛殷会周的诸侯八百。诸侯皆曰纣可伐，武王以未知天命为由班师。\n\n**主要人物**：周武王\n\n## 事件经过\n\n西伯卒后，周武王东伐至盟津，叛殷会周的诸侯八百。诸侯皆曰纣可伐，武王以未知天命为由班师。\n\n## 原文\n\n> 西伯既卒，周武王之东伐，至盟津，诸侯叛殷会周者八百。诸侯皆曰：'纣可伐矣。'武王曰：'尔未知天命。'乃复归。\n\n"
+    },
     {
       "rev_id": "20260423-155307-68ba3b",
       "timestamp": "2026-04-23T15:53:07Z",

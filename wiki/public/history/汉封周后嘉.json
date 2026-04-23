@@ -1,8 +1,18 @@
 {
   "page": "汉封周后嘉",
-  "latest_rev_id": "20260423-155315-f60bc5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161142-0cc39c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161142-0cc39c",
+      "timestamp": "2026-04-23T16:11:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155315-f60bc5",
+      "content_hash": "sha256:0cc39cf9a8f47bd5ce62f0df301daa072978ad5a8c06e3bd65a075a0cfd71f5e",
+      "size": 1122,
+      "content": "paragraph_refs:\n  004-078: \"[72]\"\nevent_type: 政治活动\nlocation: \"河南、泰山\"\n---\nid: \"汉封周后嘉\"\ntype: event\ntitle: 汉封周后嘉\ndescription: 太史公曰中记载：秦灭周，汉兴九十余载，天子将封泰山，东巡至河南，求周苗裔，封其后嘉三十里地，号周子南君，比列侯，以奉先祭祀。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-078]\ndate: \"〖&汉〗兴〖%九十有馀载〗 （公元前110年）\"\n---\n\n# 汉封周后嘉\n\n> 太史公曰中记载：秦灭周，汉兴九十余载，天子将封泰山，东巡至河南，求周苗裔，封其后嘉三十里地，号周子南君，比列侯，以奉先祭祀。\n\n**主要人物**：嘉\n\n## 事件经过\n\n太史公曰中记载：秦灭周，汉兴九十余载，天子将封泰山，东巡至河南，求周苗裔，封其后嘉三十里地，号周子南君，比列侯，以奉先祭祀。\n\n## 原文\n\n> 秦灭周。汉兴九十有馀载，天子将封泰山，东巡狩至河南，求周苗裔，封其後嘉三十里地，号曰周子南君，比列侯，以奉其先祭祀。\n\n"
+    },
     {
       "rev_id": "20260423-155315-f60bc5",
       "timestamp": "2026-04-23T15:53:15Z",

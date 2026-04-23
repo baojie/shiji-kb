@@ -1,8 +1,18 @@
 {
   "page": "沙丘之乱",
-  "latest_rev_id": "20260423-155322-caf747",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161146-ad4845",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161146-ad4845",
+      "timestamp": "2026-04-23T16:11:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155322-caf747",
+      "content_hash": "sha256:ad4845a3273c20ce478e7bc8b31d743b23d60592531e620142a192453edb86e5",
+      "size": 1024,
+      "content": "paragraph_refs:\n  043-022: \"[26.4]\"\nevent_type: 战争\nlocation: \"沙丘\"\n---\nid: \"沙丘之乱\"\ntype: event\ntitle: 沙丘之乱\ndescription: 主父及王游沙丘，公子章以其徒与田不礼作乱，诈以主父令召王。肥义先入，被杀。公子成与李兑起四邑兵入距难，杀公子章及田不礼。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-022]\ndate: \"〖%四年〗 （公元前295年）\"\n---\n\n# 沙丘之乱\n\n> 主父及王游沙丘，公子章以其徒与田不礼作乱，诈以主父令召王。肥义先入，被杀。公子成与李兑起四邑兵入距难，杀公子章及田不礼。\n\n**主要人物**：公子成、公子章、李兑、田不礼、肥义\n\n## 事件经过\n\n主父及王游沙丘，公子章以其徒与田不礼作乱，诈以主父令召王。肥义先入，被杀。公子成与李兑起四邑兵入距难，杀公子章及田不礼。\n\n## 原文\n\n> 公子章即以其徒与田不礼作乱，诈以主父令召王。肥义先入，杀之。\n\n"
+    },
     {
       "rev_id": "20260423-155322-caf747",
       "timestamp": "2026-04-23T15:53:22Z",

@@ -1,8 +1,18 @@
 {
   "page": "武王立逐张仪拜左右丞相",
-  "latest_rev_id": "20260423-152819-c9c346",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161139-653d77",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161139-653d77",
+      "timestamp": "2026-04-23T16:11:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152819-c9c346",
+      "content_hash": "sha256:653d77a0a6138c303a4bab654ef767cf655af1283a0c5f5c8f14a43a127d4f07",
+      "size": 1039,
+      "content": "paragraph_refs:\n  071-005: \"[3]\"\nevent_type: 政治活动\nlocation: \"秦\"\n---\nid: \"武王立逐张仪拜左右丞相\"\ntype: event\ntitle: 武王立逐张仪拜左右丞相\ndescription: 秦惠王去世后，太子武王即位。武王驱逐了张仪和魏章，任命樗里子和甘茂为左右丞相，标志着秦国政治格局的重大变化。\ntags: [史记, 事件, 樗里子甘茂列传]\nsources: [樗里子甘茂列传]\nevent_ids: [071-005]\ndate: \"[公元前310—前309年]\"\n---\n\n# 武王立逐张仪拜左右丞相\n\n> 秦惠王去世后，太子武王即位。武王驱逐了张仪和魏章，任命樗里子和甘茂为左右丞相，标志着秦国政治格局的重大变化。\n\n**主要人物**：张仪、樗里子、武王、甘茂\n\n## 事件经过\n\n秦惠王去世后，太子武王即位。武王驱逐了张仪和魏章，任命樗里子和甘茂为左右丞相，标志着秦国政治格局的重大变化。\n\n## 原文\n\n> 秦惠王卒，太子武王立，逐张仪、魏章，而以樗里子、甘茂为左右丞相。\n\n"
+    },
     {
       "rev_id": "20260423-152819-c9c346",
       "timestamp": "2026-04-23T15:28:19Z",

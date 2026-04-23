@@ -1,8 +1,18 @@
 {
   "page": "汉兴五星聚东井",
-  "latest_rev_id": "20260423-155313-b6cf31",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161141-d8fb71",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161141-d8fb71",
+      "timestamp": "2026-04-23T16:11:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155313-b6cf31",
+      "content_hash": "sha256:d8fb71ebb4d817498440d99ea4f0f81a7738a1cadcf2a166ac9cd4067c0cfdc7",
+      "size": 804,
+      "content": "paragraph_refs:\n  027-011: \"[120]\"\nevent_type: 自然灾害\n---\nid: \"汉兴五星聚东井\"\ntype: event\ntitle: 汉兴五星聚东井\ndescription: 汉朝兴起之际，五星聚于东井。这是汉朝受命的重要天象瑞应。按天文占卜，五星聚于一舍，其下之国可致天下。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-011]\ndate: \"（公元前205年）\"\n---\n\n# 汉兴五星聚东井\n\n> 汉朝兴起之际，五星聚于东井。这是汉朝受命的重要天象瑞应。按天文占卜，五星聚于一舍，其下之国可致天下。\n\n## 事件经过\n\n汉朝兴起之际，五星聚于东井。这是汉朝受命的重要天象瑞应。按天文占卜，五星聚于一舍，其下之国可致天下。\n\n## 原文\n\n> 汉之兴，五星聚于东井。\n\n"
+    },
     {
       "rev_id": "20260423-155313-b6cf31",
       "timestamp": "2026-04-23T15:53:13Z",

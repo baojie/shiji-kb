@@ -1,8 +1,18 @@
 {
   "page": "王翦灭楚平荆",
-  "latest_rev_id": "20260423-152846-9af5ee",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161201-7b9f1f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161201-7b9f1f",
+      "timestamp": "2026-04-23T16:12:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152846-9af5ee",
+      "content_hash": "sha256:7b9f1f3ba6e19267895f180614197966f58ca219374e23aaca2d06850d37f258",
+      "size": 1137,
+      "content": "paragraph_refs:\n  073-017: \"[12]\"\nevent_type: 战争\nlocation: \"楚\"\n---\nid: \"王翦灭楚平荆\"\ntype: event\ntitle: 王翦灭楚平荆\ndescription: 王翦率六十万大军伐楚，坚壁不战，待楚军疲惫东引后举兵追击，于蕲南大破楚军，杀将军项燕。岁余俘虏楚王负刍，平定楚地为郡县，又南征百越。\ntags: [史记, 事件, 白起王翦列传]\nsources: [白起王翦列传]\nevent_ids: [073-017]\ndate: \"（公元前224—前223年）\"\n---\n\n# 王翦灭楚平荆\n\n> 王翦率六十万大军伐楚，坚壁不战，待楚军疲惫东引后举兵追击，于蕲南大破楚军，杀将军项燕。岁余俘虏楚王负刍，平定楚地为郡县，又南征百越。\n\n**主要人物**：王翦、项燕\n\n## 事件经过\n\n王翦率六十万大军伐楚，坚壁不战，待楚军疲惫东引后举兵追击，于蕲南大破楚军，杀将军项燕。岁余俘虏楚王负刍，平定楚地为郡县，又南征百越。\n\n## 原文\n\n> 翦因举兵追之，令壮士击，大破荆军。至蕲南，杀其将军项燕，荆兵遂败走。……岁馀，虏荆王负刍，竟平荆地为郡县。\n\n"
+    },
     {
       "rev_id": "20260423-152846-9af5ee",
       "timestamp": "2026-04-23T15:28:46Z",

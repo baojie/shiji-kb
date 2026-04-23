@@ -1,8 +1,18 @@
 {
   "page": "灵王求九鼎",
-  "latest_rev_id": "20260423-155335-3d10e1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161155-c8c4bd",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161155-c8c4bd",
+      "timestamp": "2026-04-23T16:11:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155335-3d10e1",
+      "content_hash": "sha256:c8c4bdc4fe7fe9d83a24f4419b08e0a9a7a47b5c75a19ae3bac5b7e9a26a854b",
+      "size": 970,
+      "content": "paragraph_refs:\n  040-020: \"[38.42]\"\nevent_type: 政治活动\nlocation: \"乾谿\"\n---\nid: \"灵王求九鼎\"\ntype: event\ntitle: 灵王求九鼎\ndescription: 灵王次于乾谿问\"今吾使周求鼎以为分其予我乎\"。析父对以楚先王辟在荆山之苦，齐晋鲁卫皆有分而楚独无。灵王又欲求郑许旧地。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-020]\ndate: \"[约公元前530年]\"\n---\n\n# 灵王求九鼎\n\n> 灵王次于乾谿问\"今吾使周求鼎以为分其予我乎\"。析父对以楚先王辟在荆山之苦，齐晋鲁卫皆有分而楚独无。灵王又欲求郑许旧地。\n\n**主要人物**：析父、灵王\n\n## 事件经过\n\n灵王次于乾谿问\"今吾使周求鼎以为分其予我乎\"。析父对以楚先王辟在荆山之苦，齐晋鲁卫皆有分而楚独无。灵王又欲求郑许旧地。\n\n## 原文\n\n> 灵王次於乾谿以待之。王曰：'...今吾使使周求鼎以为分，其予我乎？'\n\n"
+    },
     {
       "rev_id": "20260423-155335-3d10e1",
       "timestamp": "2026-04-23T15:53:35Z",

@@ -1,8 +1,18 @@
 {
   "page": "桃冬花异象",
-  "latest_rev_id": "20260423-155251-c1ed31",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161127-f589fb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161127-f589fb",
+      "timestamp": "2026-04-23T16:11:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155251-c1ed31",
+      "content_hash": "sha256:f589fbf54818de1caaf251077dcd6452029b3d0dbe9a8ff4c97f775b79651609",
+      "size": 652,
+      "content": "paragraph_refs:\n  005-062: \"[47.4]\"\nevent_type: 自然灾害\n---\nid: \"桃冬花异象\"\ntype: event\ntitle: 桃冬花异象\ndescription: 献公十六年冬，桃树开花。冬日桃花盛开为反常物候现象，古人视为异象。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-062]\ndate: \"〖%十六年〗〖%冬〗 （公元前369年）\"\n---\n\n# 桃冬花异象\n\n> 献公十六年冬，桃树开花。冬日桃花盛开为反常物候现象，古人视为异象。\n\n## 事件经过\n\n献公十六年冬，桃树开花。冬日桃花盛开为反常物候现象，古人视为异象。\n\n## 原文\n\n> 十六年，桃冬花。\n\n"
+    },
     {
       "rev_id": "20260423-155251-c1ed31",
       "timestamp": "2026-04-23T15:52:51Z",

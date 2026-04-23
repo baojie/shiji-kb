@@ -1,8 +1,18 @@
 {
   "page": "汉四路讨东越",
-  "latest_rev_id": "20260423-155315-7d8d6a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161141-363302",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161141-363302",
+      "timestamp": "2026-04-23T16:11:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155315-7d8d6a",
+      "content_hash": "sha256:3633028bd05c93a5fbdf2c6292b1db3af202be89edbaf356781f9e75c2fa51a6",
+      "size": 1147,
+      "content": "paragraph_refs:\n  114-014: \"[7]\"\nevent_type: 战争\nlocation: \"东越、句章、武林、梅岭\"\n---\nid: \"汉四路讨东越\"\ntype: event\ntitle: 汉四路讨东越\ndescription: 天子遣横海将军韩说出句章浮海，楼船将军杨仆出武林，中尉王温舒出梅岭，越侯为戈船下濑将军出若邪白沙，四路讨东越。楼船军败于东越徇北将军。\ntags: [史记, 事件, 东越列传]\nsources: [东越列传]\nevent_ids: [114-014]\ndate: \"〖%元封元年冬〗 （公元前111年）\"\n---\n\n# 汉四路讨东越\n\n> 天子遣横海将军韩说出句章浮海，楼船将军杨仆出武林，中尉王温舒出梅岭，越侯为戈船下濑将军出若邪白沙，四路讨东越。楼船军败于东越徇北将军。\n\n**主要人物**：杨仆、王温舒、韩说\n\n## 事件经过\n\n天子遣横海将军韩说出句章浮海，楼船将军杨仆出武林，中尉王温舒出梅岭，越侯为戈船下濑将军出若邪白沙，四路讨东越。楼船军败于东越徇北将军。\n\n## 原文\n\n> 天子遣横海将军韩说出句章，浮海从东方往；楼船将军杨仆出武林；中尉王温舒出梅岭。\n\n"
+    },
     {
       "rev_id": "20260423-155315-7d8d6a",
       "timestamp": "2026-04-23T15:53:15Z",

@@ -1,8 +1,18 @@
 {
   "page": "燕王策书颁下",
-  "latest_rev_id": "20260423-155340-2f5153",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161157-09fc6d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161157-09fc6d",
+      "timestamp": "2026-04-23T16:11:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155340-2f5153",
+      "content_hash": "sha256:09fc6dcadde878e592fdcf2dc1e9facf2dec30c1191d3214dfd9ab2d99f121f4",
+      "size": 857,
+      "content": "paragraph_refs:\n  060-013: \"[13]\"\nevent_type: 政治活动\nlocation: \"未央宫\"\n---\nid: \"燕王策书颁下\"\ntype: event\ntitle: 燕王策书颁下\ndescription: 皇帝使御史大夫汤庙立子旦为燕王。策书特别戒以北方匈奴之患，嘱咐毋作怨毋俷德毋废备。\ntags: [史记, 事件, 三王世家]\nsources: [三王世家]\nevent_ids: [060-013]\ndate: \"〖%元狩六年〗〖%四月〗〖%乙巳〗 （公元前117年）\"\n---\n\n# 燕王策书颁下\n\n> 皇帝使御史大夫汤庙立子旦为燕王。策书特别戒以北方匈奴之患，嘱咐毋作怨毋俷德毋废备。\n\n**主要人物**：旦、汤\n\n## 事件经过\n\n皇帝使御史大夫汤庙立子旦为燕王。策书特别戒以北方匈奴之患，嘱咐毋作怨毋俷德毋废备。\n\n## 原文\n\n> 维六年四月乙巳，皇帝使御史;大夫汤庙立子旦为燕王。\n\n"
+    },
     {
       "rev_id": "20260423-155340-2f5153",
       "timestamp": "2026-04-23T15:53:40Z",

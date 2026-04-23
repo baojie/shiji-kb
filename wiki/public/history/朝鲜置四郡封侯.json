@@ -1,8 +1,18 @@
 {
   "page": "朝鲜置四郡封侯",
-  "latest_rev_id": "20260423-155239-00de9a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161121-8a9173",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161121-8a9173",
+      "timestamp": "2026-04-23T16:11:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155239-00de9a",
+      "content_hash": "sha256:8a9173ac26e2deaf643abf5c735737492a16c65deb26e2eaa148ba7da0d536d2",
+      "size": 946,
+      "content": "paragraph_refs:\n  115-013: \"[7]\"\nevent_type: 政治活动\nlocation: \"朝鲜\"\n---\nid: \"朝鲜置四郡封侯\"\ntype: event\ntitle: 朝鲜置四郡封侯\ndescription: 朝鲜平定后置四郡。封参为澅清侯、韩阴为荻苴侯、唊为平州侯、长为几侯。最以父路人死颇有功为温阳侯。\ntags: [史记, 事件, 朝鲜列传]\nsources: [朝鲜列传]\nevent_ids: [115-013]\ndate: \"〖%元封三年〗 （公元前108年）\"\n---\n\n# 朝鲜置四郡封侯\n\n> 朝鲜平定后置四郡。封参为澅清侯、韩阴为荻苴侯、唊为平州侯、长为几侯。最以父路人死颇有功为温阳侯。\n\n**主要人物**：参、最、长、韩阴\n\n## 事件经过\n\n朝鲜平定后置四郡。封参为澅清侯、韩阴为荻苴侯、唊为平州侯、长为几侯。最以父路人死颇有功为温阳侯。\n\n## 原文\n\n> 以故遂定朝鲜，为四郡。封参为澅清侯，阴为荻苴侯，唊为平州侯，长为几侯。\n\n"
+    },
     {
       "rev_id": "20260423-155239-00de9a",
       "timestamp": "2026-04-23T15:52:39Z",

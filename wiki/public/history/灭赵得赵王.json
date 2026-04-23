@@ -1,8 +1,18 @@
 {
   "page": "灭赵得赵王",
-  "latest_rev_id": "20260423-155334-bed2e4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161154-0f5e25",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161154-0f5e25",
+      "timestamp": "2026-04-23T16:11:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155334-bed2e4",
+      "content_hash": "sha256:0f5e2551faf43bb1b1870e6c6cfa29b6904b57cad93d9897bf7141335699431d",
+      "size": 814,
+      "content": "paragraph_refs:\n  006-031: \"[26.1]\"\nevent_type: 战争\nlocation: \"东阳\"\n---\nid: \"灭赵得赵王\"\ntype: event\ntitle: 灭赵得赵王\ndescription: 十九年，王翦、羌瘣尽定赵地东阳，俘获赵王。秦王至邯郸，将曾与王母家有仇怨者皆坑杀。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-031]\ndate: \"〖%十九年〗 （公元前228年）\"\n---\n\n# 灭赵得赵王\n\n> 十九年，王翦、羌瘣尽定赵地东阳，俘获赵王。秦王至邯郸，将曾与王母家有仇怨者皆坑杀。\n\n**主要人物**：王翦、羌瘣\n\n## 事件经过\n\n十九年，王翦、羌瘣尽定赵地东阳，俘获赵王。秦王至邯郸，将曾与王母家有仇怨者皆坑杀。\n\n## 原文\n\n> 十九年，王翦、羌瘣尽定取赵地东阳，得赵王。\n\n"
+    },
     {
       "rev_id": "20260423-155334-bed2e4",
       "timestamp": "2026-04-23T15:53:34Z",

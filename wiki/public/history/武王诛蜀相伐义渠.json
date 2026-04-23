@@ -1,8 +1,18 @@
 {
   "page": "武王诛蜀相伐义渠",
-  "latest_rev_id": "20260423-155308-2ba4b8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161139-588a61",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161139-588a61",
+      "timestamp": "2026-04-23T16:11:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155308-2ba4b8",
+      "content_hash": "sha256:588a6160aa27c5379c9ededf9b86ee644110ee951e109238474db94e684e11d4",
+      "size": 945,
+      "content": "paragraph_refs:\n  005-104: \"[61]\"\nevent_type: 政治整顿\nlocation: \"临晋、丹、犁\"\n---\nid: \"武王诛蜀相伐义渠\"\ntype: event\ntitle: 武王诛蜀相伐义渠\ndescription: 武王元年，与魏惠王会于临晋。诛杀蜀相壮。将张仪、魏章驱逐东出至魏。又伐义渠、丹、犁。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-104]\ndate: \"〖@武王〗〖%元年〗 （公元前310年）\"\n---\n\n# 武王诛蜀相伐义渠\n\n> 武王元年，与魏惠王会于临晋。诛杀蜀相壮。将张仪、魏章驱逐东出至魏。又伐义渠、丹、犁。\n\n**主要人物**：张仪、武王、蜀相壮、魏惠王、魏章\n\n## 事件经过\n\n武王元年，与魏惠王会于临晋。诛杀蜀相壮。将张仪、魏章驱逐东出至魏。又伐义渠、丹、犁。\n\n## 原文\n\n> 武王元年，与魏惠王会临晋。诛蜀相壮。张仪、魏章皆东出之魏。伐义渠、丹、犁。\n\n"
+    },
     {
       "rev_id": "20260423-155308-2ba4b8",
       "timestamp": "2026-04-23T15:53:08Z",

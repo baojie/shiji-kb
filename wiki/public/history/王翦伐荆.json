@@ -1,8 +1,18 @@
 {
   "page": "王翦伐荆",
-  "latest_rev_id": "20260423-152846-7ce41f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161201-f23f19",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161201-f23f19",
+      "timestamp": "2026-04-23T16:12:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152846-7ce41f",
+      "content_hash": "sha256:f23f1984b1eef05766c646b9ae9a3b91b8000ab7cdef3c98add4badaad417529",
+      "size": 813,
+      "content": "paragraph_refs:\n  006-038: \"[30.1], [30.2]\"\nevent_type: 战争\nlocation: \"陈、平舆\"\n---\nid: \"王翦伐荆\"\ntype: event\ntitle: 王翦伐荆\ndescription: 二十三年，秦王复召王翦强起之，使其率军伐荆（楚）。取陈以南至平舆，虏荆王。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-038]\ndate: \"〖%二十三年〗 （公元前224年）\"\n---\n\n# 王翦伐荆\n\n> 二十三年，秦王复召王翦强起之，使其率军伐荆（楚）。取陈以南至平舆，虏荆王。\n\n**主要人物**：王翦\n\n## 事件经过\n\n二十三年，秦王复召王翦强起之，使其率军伐荆（楚）。取陈以南至平舆，虏荆王。\n\n## 原文\n\n> 二十三年，秦王复召王翦，强起之，使将击荆。取陈以南至平舆，虏荆王。\n\n"
+    },
     {
       "rev_id": "20260423-152846-7ce41f",
       "timestamp": "2026-04-23T15:28:46Z",

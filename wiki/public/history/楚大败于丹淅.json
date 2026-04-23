@@ -1,8 +1,18 @@
 {
   "page": "楚大败于丹淅",
-  "latest_rev_id": "20260423-152807-0a38b4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161131-6921ab",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161131-6921ab",
+      "timestamp": "2026-04-23T16:11:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152807-0a38b4",
+      "content_hash": "sha256:6921ab3f434dd2b6b569483b8eba0f4f142e7d1a5d77857058fb75a50f3bed2a",
+      "size": 1052,
+      "content": "paragraph_refs:\n  084-004: \"[3.1]\"\nevent_type: 战争\nlocation: \"丹、淅、蓝田\"\n---\nid: \"楚大败于丹淅\"\ntype: event\ntitle: 楚大败于丹淅\ndescription: 怀王怒伐秦，秦发兵大破楚师于丹淅，斩首八万，虏楚将屈匄，取汉中地。怀王悉发国中兵深入，战于蓝田。魏袭楚至邓，齐怒不救，楚大困。\ntags: [史记, 事件, 屈原贾生列传]\nsources: [屈原贾生列传]\nevent_ids: [084-004]\ndate: \"（公元前312年）\"\n---\n\n# 楚大败于丹淅\n\n> 怀王怒伐秦，秦发兵大破楚师于丹淅，斩首八万，虏楚将屈匄，取汉中地。怀王悉发国中兵深入，战于蓝田。魏袭楚至邓，齐怒不救，楚大困。\n\n**主要人物**：屈匄、怀王\n\n## 事件经过\n\n怀王怒伐秦，秦发兵大破楚师于丹淅，斩首八万，虏楚将屈匄，取汉中地。怀王悉发国中兵深入，战于蓝田。魏袭楚至邓，齐怒不救，楚大困。\n\n## 原文\n\n> 秦发兵击之,大破楚师於丹、淅,斩首八万,虏楚将屈匄,遂取楚之汉中地。\n\n"
+    },
     {
       "rev_id": "20260423-152807-0a38b4",
       "timestamp": "2026-04-23T15:28:07Z",

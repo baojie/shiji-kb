@@ -1,8 +1,18 @@
 {
   "page": "灵王灭陈蔡",
-  "latest_rev_id": "20260423-155336-8599be",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161155-93c8d9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161155-93c8d9",
+      "timestamp": "2026-04-23T16:11:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155336-8599be",
+      "content_hash": "sha256:93c8d9bae3b7aef8ef1aa688e175d9844cf09326881c8a92dafe4c5fed8f3847",
+      "size": 771,
+      "content": "paragraph_refs:\n  040-019: \"[37.41]\"\nevent_type: 战争\nlocation: \"陈、蔡\"\n---\nid: \"灵王灭陈蔡\"\ntype: event\ntitle: 灵王灭陈蔡\ndescription: 灵王八年使公子弃疾灭陈。十年召蔡侯醉而杀之，使弃疾定蔡因为陈蔡公。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-019]\ndate: \"（公元前534年）\"\n---\n\n# 灵王灭陈蔡\n\n> 灵王八年使公子弃疾灭陈。十年召蔡侯醉而杀之，使弃疾定蔡因为陈蔡公。\n\n**主要人物**：公子弃疾、灵王\n\n## 事件经过\n\n灵王八年使公子弃疾灭陈。十年召蔡侯醉而杀之，使弃疾定蔡因为陈蔡公。\n\n## 原文\n\n> 八年，使公子弃疾将兵灭陈。十年，召蔡侯，醉而杀之。使弃疾定蔡，因为陈蔡公。\n\n"
+    },
     {
       "rev_id": "20260423-155336-8599be",
       "timestamp": "2026-04-23T15:53:36Z",

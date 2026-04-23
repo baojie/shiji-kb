@@ -1,8 +1,18 @@
 {
   "page": "水灌废丘",
-  "latest_rev_id": "20260423-155312-c3096e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161140-3e2c84",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161140-3e2c84",
+      "timestamp": "2026-04-23T16:11:40Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155312-c3096e",
+      "content_hash": "sha256:3e2c84355419708a709c26d125c8e0cb19503dd98ebf9565b87bb8f5ae2b4709",
+      "size": 764,
+      "content": "paragraph_refs:\n  008-042: \"[37.4]-[37.5]\"\nevent_type: 战争\nlocation: \"废丘\"\n---\nid: \"水灌废丘\"\ntype: event\ntitle: 水灌废丘\ndescription: 引水灌废丘，废丘降，雍王章邯自杀。更名废丘为槐里。三秦之地至此全部平定。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-042]\ndate: \"〖%六月〗 （公元前205年）\"\n---\n\n# 水灌废丘\n\n> 引水灌废丘，废丘降，雍王章邯自杀。更名废丘为槐里。三秦之地至此全部平定。\n\n**主要人物**：刘邦、章邯\n\n## 事件经过\n\n引水灌废丘，废丘降，雍王章邯自杀。更名废丘为槐里。三秦之地至此全部平定。\n\n## 原文\n\n> 引水灌废丘，废丘降，章邯自杀。更名废丘为槐里。\n\n"
+    },
     {
       "rev_id": "20260423-155312-c3096e",
       "timestamp": "2026-04-23T15:53:12Z",

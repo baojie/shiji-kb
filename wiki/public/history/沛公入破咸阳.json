@@ -1,8 +1,18 @@
 {
   "page": "沛公入破咸阳",
-  "latest_rev_id": "20260423-155322-abcf1f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161146-f130b6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161146-f130b6",
+      "timestamp": "2026-04-23T16:11:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155322-abcf1f",
+      "content_hash": "sha256:f130b68e8bc3b76aed6842ffe57c57271bff8f8f26ca025102e2042313c3ddd9",
+      "size": 993,
+      "content": "paragraph_refs:\n  016-010: \"r30\"\nevent_type: 战争\nlocation: \"咸阳\"\n---\nid: \"沛公入破咸阳\"\ntype: event\ntitle: 沛公入破咸阳\ndescription: 汉元年十月，秦王子婴投降，沛公入破咸阳，平定秦国，还军霸上以待诸侯之约。随后出令约法三章，秦民大悦。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-010]\ndate: \"〖%汉元年十月〗 （公元前206年）\"\n---\n\n# 沛公入破咸阳\n\n> 汉元年十月，秦王子婴投降，沛公入破咸阳，平定秦国，还军霸上以待诸侯之约。随后出令约法三章，秦民大悦。\n\n**主要人物**：沛公\n\n## 事件经过\n\n汉元年十月，秦王子婴投降，沛公入破咸阳，平定秦国，还军霸上以待诸侯之约。随后出令约法三章，秦民大悦。\n\n## 原文\n\n> 二十七。汉元年，秦王子婴降。沛公入破咸阳，平秦，还军霸上，待诸侯约。\"\"二十八。沛公出令三章，秦民大悦。\n\n"
+    },
     {
       "rev_id": "20260423-155322-abcf1f",
       "timestamp": "2026-04-23T15:53:22Z",

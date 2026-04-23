@@ -1,8 +1,18 @@
 {
   "page": "汤改正朔",
-  "latest_rev_id": "20260423-155321-ab44f3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161144-06591d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161144-06591d",
+      "timestamp": "2026-04-23T16:11:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155321-ab44f3",
+      "content_hash": "sha256:06591d04cc13c776ad1d5a12e11aa33de8f0888feca2c4c9e97e4fa6568b9d99",
+      "size": 640,
+      "content": "paragraph_refs:\n  003-011: \"[9]\"\nevent_type: 政治改革\n---\nid: \"汤改正朔\"\ntype: event\ntitle: 汤改正朔\ndescription: 汤改正朔，变易服色崇尚白色，朝会改在白天举行，确立殷商礼制。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-011]\ndate: \"[约公元前1600年]\"\n---\n\n# 汤改正朔\n\n> 汤改正朔，变易服色崇尚白色，朝会改在白天举行，确立殷商礼制。\n\n**主要人物**：汤\n\n## 事件经过\n\n汤改正朔，变易服色崇尚白色，朝会改在白天举行，确立殷商礼制。\n\n## 原文\n\n> 汤乃改正朔，易服色，上白，朝会以昼。\n\n"
+    },
     {
       "rev_id": "20260423-155321-ab44f3",
       "timestamp": "2026-04-23T15:53:21Z",

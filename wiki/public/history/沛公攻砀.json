@@ -1,8 +1,18 @@
 {
   "page": "沛公攻砀",
-  "latest_rev_id": "20260423-155323-cb1261",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161146-369216",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161146-369216",
+      "timestamp": "2026-04-23T16:11:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155323-cb1261",
+      "content_hash": "sha256:369216f10db3870d81a5cbeb9789575d2c79aa30d9d9e0c0bd4e258adafbb131",
+      "size": 880,
+      "content": "paragraph_refs:\n  008-012: \"[12.16]-[12.18]\"\nevent_type: 战争\nlocation: \"砀、下邑\"\n---\nid: \"沛公攻砀\"\ntype: event\ntitle: 沛公攻砀\ndescription: 沛公收兵聚留，引兵攻砀，三日取之，收砀兵五六千人。又攻下邑拔之，还军丰。军力得到壮大。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-012]\ndate: \"〖%二世二年〗 （公元前208年）\"\n---\n\n# 沛公攻砀\n\n> 沛公收兵聚留，引兵攻砀，三日取之，收砀兵五六千人。又攻下邑拔之，还军丰。军力得到壮大。\n\n**主要人物**：刘邦\n\n## 事件经过\n\n沛公收兵聚留，引兵攻砀，三日取之，收砀兵五六千人。又攻下邑拔之，还军丰。军力得到壮大。\n\n## 原文\n\n> 还收兵聚留，引兵攻砀，三日乃取砀。因收砀兵，得五六千人。攻下邑，拔之。还军丰。\n\n"
+    },
     {
       "rev_id": "20260423-155323-cb1261",
       "timestamp": "2026-04-23T15:53:23Z",

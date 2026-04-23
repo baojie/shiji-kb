@@ -1,8 +1,18 @@
 {
   "page": "李牧击秦",
-  "latest_rev_id": "20260423-152756-cc0262",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161124-2903e2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161124-2903e2",
+      "timestamp": "2026-04-23T16:11:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152756-cc0262",
+      "content_hash": "sha256:2903e2380fed38149bd0de0b5039784a0dd86352a1ef76e73b4193bc35a75fa4",
+      "size": 797,
+      "content": "paragraph_refs:\n  043-028: \"[34.2]\"\nevent_type: 战争\nlocation: \"肥\"\n---\nid: \"李牧击秦\"\ntype: event\ntitle: 李牧击秦\ndescription: 秦攻赤丽、宜安，李牧率师与战于肥下，却之，封牧为武安君。四年，秦攻番吾，李牧又却之。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-028]\ndate: \"〖;幽缪王〗〖%三年〗 （公元前233年）\"\n---\n\n# 李牧击秦\n\n> 秦攻赤丽、宜安，李牧率师与战于肥下，却之，封牧为武安君。四年，秦攻番吾，李牧又却之。\n\n**主要人物**：李牧\n\n## 事件经过\n\n秦攻赤丽、宜安，李牧率师与战于肥下，却之，封牧为武安君。四年，秦攻番吾，李牧又却之。\n\n## 原文\n\n> 李牧率师与战肥下，卻之。封牧为武安君。\n\n"
+    },
     {
       "rev_id": "20260423-152756-cc0262",
       "timestamp": "2026-04-23T15:27:56Z",

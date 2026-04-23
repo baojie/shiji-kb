@@ -1,8 +1,18 @@
 {
   "page": "李少君病死",
-  "latest_rev_id": "20260423-155245-f4e710",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161122-72fbb3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161122-72fbb3",
+      "timestamp": "2026-04-23T16:11:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155245-f4e710",
+      "content_hash": "sha256:72fbb38424ca2605175a9c57e3245cd92e0687fb59c83cf9d394f77fb231d382",
+      "size": 920,
+      "content": "paragraph_refs:\n  012-010: \"[8.1]-[8.3]\"\nevent_type: 文化活动\n---\nid: \"李少君病死\"\ntype: event\ntitle: 李少君病死\ndescription: 李少君病死，天子以为化去不死，使黄锤、史宽舒受其方。求蓬莱安期生莫能得，而海上燕齐方士多相效更言神事。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-010]\ndate: \"[约公元前133年]\"\n---\n\n# 李少君病死\n\n> 李少君病死，天子以为化去不死，使黄锤、史宽舒受其方。求蓬莱安期生莫能得，而海上燕齐方士多相效更言神事。\n\n**主要人物**：史宽舒、李少君、黄锤\n\n## 事件经过\n\n李少君病死，天子以为化去不死，使黄锤、史宽舒受其方。求蓬莱安期生莫能得，而海上燕齐方士多相效更言神事。\n\n## 原文\n\n> 居久之，李少君病死。天子以为化去不死也，而使黄锤、史宽舒受其方。\n\n"
+    },
     {
       "rev_id": "20260423-155245-f4e710",
       "timestamp": "2026-04-23T15:52:45Z",

@@ -1,8 +1,18 @@
 {
   "page": "汉击韩信军铜鞮",
-  "latest_rev_id": "20260423-152820-661b83",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161141-00025a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161141-00025a",
+      "timestamp": "2026-04-23T16:11:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152820-661b83",
+      "content_hash": "sha256:00025a8ea8829b7dbcf85a2313116fb54e4fadbd089f02a92566bad1c37c066f",
+      "size": 1018,
+      "content": "paragraph_refs:\n  093-006: \"[5]\"\nevent_type: 战争\nlocation: \"铜鞮、离石、楼烦\"\n---\nid: \"汉击韩信军铜鞮\"\ntype: event\ntitle: 汉击韩信军铜鞮\ndescription: 七年冬高祖亲往击韩信，破其军于铜鞮，斩将王喜。韩信亡走匈奴。其余部与匈奴联兵，立赵利为赵王，汉军大破之，追击连胜。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-006]\ndate: \"〖%七年冬〗 （公元前200年）\"\n---\n\n# 汉击韩信军铜鞮\n\n> 七年冬高祖亲往击韩信，破其军于铜鞮，斩将王喜。韩信亡走匈奴。其余部与匈奴联兵，立赵利为赵王，汉军大破之，追击连胜。\n\n**主要人物**：韩信、高皇帝\n\n## 事件经过\n\n七年冬高祖亲往击韩信，破其军于铜鞮，斩将王喜。韩信亡走匈奴。其余部与匈奴联兵，立赵利为赵王，汉军大破之，追击连胜。\n\n## 原文\n\n> 七年冬，上自往击，破信军铜鞮，斩其将王喜。信亡走匈奴。\n\n"
+    },
     {
       "rev_id": "20260423-152820-661b83",
       "timestamp": "2026-04-23T15:28:20Z",

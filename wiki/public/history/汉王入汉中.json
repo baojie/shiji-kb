@@ -1,8 +1,18 @@
 {
   "page": "汉王入汉中",
-  "latest_rev_id": "20260423-155317-af8c3b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161142-b5cf7d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161142-b5cf7d",
+      "timestamp": "2026-04-23T16:11:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155317-af8c3b",
+      "content_hash": "sha256:b5cf7d7c756deb9b9edf85b6594d25a57703fe7a3876789acebc49c263217cbf",
+      "size": 1130,
+      "content": "paragraph_refs:\n  008-032: \"[28]\"\nevent_type: 政治活动\nlocation: \"南郑\"\n---\nid: \"汉王入汉中\"\ntype: event\ntitle: 汉王入汉中\ndescription: 四月兵罢戏下，汉王之国，项王使卒三万人从，从杜南入蚀中。去辄烧绝栈道以备诸侯，亦示项羽无东意。至南郑，将士多亡归，皆歌思东归。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-032]\ndate: \"〖%四月〗 （公元前206年）\"\n---\n\n# 汉王入汉中\n\n> 四月兵罢戏下，汉王之国，项王使卒三万人从，从杜南入蚀中。去辄烧绝栈道以备诸侯，亦示项羽无东意。至南郑，将士多亡归，皆歌思东归。\n\n**主要人物**：刘邦\n\n## 事件经过\n\n四月兵罢戏下，汉王之国，项王使卒三万人从，从杜南入蚀中。去辄烧绝栈道以备诸侯，亦示项羽无东意。至南郑，将士多亡归，皆歌思东归。\n\n## 原文\n\n> 四月，兵罢戏下，诸侯各就国。汉王之国...去辄烧绝栈道，以备诸侯盗兵袭之，亦示项羽无东意。至南郑，诸将及士卒多道亡归，士卒皆歌思东归。\n\n"
+    },
     {
       "rev_id": "20260423-155317-af8c3b",
       "timestamp": "2026-04-23T15:53:17Z",

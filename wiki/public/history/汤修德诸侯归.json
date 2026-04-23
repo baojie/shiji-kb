@@ -1,8 +1,18 @@
 {
   "page": "汤修德诸侯归",
-  "latest_rev_id": "20260423-155320-1e202b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161143-df7b43",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161143-df7b43",
+      "timestamp": "2026-04-23T16:11:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155320-1e202b",
+      "content_hash": "sha256:df7b43fd098f99df1580f540c833f1b2710a60c7317c87e51c7cfa1682356ecc",
+      "size": 572,
+      "content": "paragraph_refs:\n  002-041: \"[26]\"\nevent_type: 政治活动\n---\nid: \"汤修德诸侯归\"\ntype: event\ntitle: 汤修德诸侯归\ndescription: 汤修德，诸侯皆归附汤。汤遂率兵以伐夏桀。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-041]\ndate: \"[约公元前1605年]\"\n---\n\n# 汤修德诸侯归\n\n> 汤修德，诸侯皆归附汤。汤遂率兵以伐夏桀。\n\n**主要人物**：汤\n\n## 事件经过\n\n汤修德，诸侯皆归附汤。汤遂率兵以伐夏桀。\n\n## 原文\n\n> 汤修德，诸侯皆归汤，汤遂率兵以伐夏桀。\n\n"
+    },
     {
       "rev_id": "20260423-155320-1e202b",
       "timestamp": "2026-04-23T15:53:20Z",

@@ -1,8 +1,18 @@
 {
   "page": "武庚叛乱平定",
-  "latest_rev_id": "20260423-155304-7bed6f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161137-f3c604",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161137-f3c604",
+      "timestamp": "2026-04-23T16:11:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155304-7bed6f",
+      "content_hash": "sha256:f3c604141fd01337c87315317161e51f5f348453d1ef41e6755925cfd552f16d",
+      "size": 810,
+      "content": "paragraph_refs:\n  003-042: \"[33]\"\nevent_type: 战争\nlocation: \"宋\"\n---\nid: \"武庚叛乱平定\"\ntype: event\ntitle: 武庚叛乱平定\ndescription: 周武王崩后，武庚与管叔蔡叔作乱，成王命周公诛之。立微子于宋以续殷后。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-042]\ndate: \"[约公元前1041年]\"\n---\n\n# 武庚叛乱平定\n\n> 周武王崩后，武庚与管叔蔡叔作乱，成王命周公诛之。立微子于宋以续殷后。\n\n**主要人物**：周公、微子、成王、武庚、管叔、蔡叔\n\n## 事件经过\n\n周武王崩后，武庚与管叔蔡叔作乱，成王命周公诛之。立微子于宋以续殷后。\n\n## 原文\n\n> 周武王崩，武庚与管叔、蔡叔作乱，成王命周公诛之，而立微子於宋，以续殷後焉。\n\n"
+    },
     {
       "rev_id": "20260423-155304-7bed6f",
       "timestamp": "2026-04-23T15:53:04Z",

@@ -1,8 +1,18 @@
 {
   "page": "河决瓠子",
-  "latest_rev_id": "20260423-155324-4f40d1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161147-7507ab",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161147-7507ab",
+      "timestamp": "2026-04-23T16:11:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155324-4f40d1",
+      "content_hash": "sha256:7507ab0dc618a70699ad0c6e3a6d61f66f8d4d4283da8b715ea2becbdbc0af35",
+      "size": 766,
+      "content": "paragraph_refs:\n  022-024: \"r75\"\nevent_type: 自然灾害\nlocation: \"瓠子\"\n---\nid: \"河决瓠子\"\ntype: event\ntitle: 河决瓠子\ndescription: 元光三年五月丙子，黄河在瓠子决口。此后二十余年不能堵塞，至元封二年武帝亲临始塞。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-024]\ndate: \"〖%元光三年〗 （公元前132年）\"\n---\n\n# 河决瓠子\n\n> 元光三年五月丙子，黄河在瓠子决口。此后二十余年不能堵塞，至元封二年武帝亲临始塞。\n\n## 事件经过\n\n元光三年五月丙子，黄河在瓠子决口。此后二十余年不能堵塞，至元封二年武帝亲临始塞。\n\n## 原文\n\n> 五月丙子，河决于瓠子。\n\n"
+    },
     {
       "rev_id": "20260423-155324-4f40d1",
       "timestamp": "2026-04-23T15:53:24Z",

@@ -1,8 +1,18 @@
 {
   "page": "沛公西略地",
-  "latest_rev_id": "20260423-155323-e2c195",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161146-ef698a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161146-ef698a",
+      "timestamp": "2026-04-23T16:11:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155323-e2c195",
+      "content_hash": "sha256:ef698a0e08d2b715c2b4dce6e244041b02938707f6e717b934ed2fca12841fc4",
+      "size": 793,
+      "content": "paragraph_refs:\n  008-019: \"[19.5]\"\nevent_type: 战争\nlocation: \"砀、成阳、杠里\"\n---\nid: \"沛公西略地\"\ntype: event\ntitle: 沛公西略地\ndescription: 沛公收陈王、项梁散卒，道砀至成阳，与杠里秦军夹壁而破二军，开始西进入关的征程。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-019]\ndate: \"〖%二世三年〗 （公元前207年）\"\n---\n\n# 沛公西略地\n\n> 沛公收陈王、项梁散卒，道砀至成阳，与杠里秦军夹壁而破二军，开始西进入关的征程。\n\n**主要人物**：刘邦\n\n## 事件经过\n\n沛公收陈王、项梁散卒，道砀至成阳，与杠里秦军夹壁而破二军，开始西进入关的征程。\n\n## 原文\n\n> 乃道砀至成阳，与杠里秦军夹壁，破二军。\n\n"
+    },
     {
       "rev_id": "20260423-155323-e2c195",
       "timestamp": "2026-04-23T15:53:23Z",

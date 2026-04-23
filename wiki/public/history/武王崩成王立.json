@@ -1,8 +1,18 @@
 {
   "page": "武王崩成王立",
-  "latest_rev_id": "20260423-155307-442e93",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161138-815ce7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161138-815ce7",
+      "timestamp": "2026-04-23T16:11:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155307-442e93",
+      "content_hash": "sha256:815ce70826bc074e87d81a549978df3ba3d149f2dba5f5c54861c3a3b91ceb4c",
+      "size": 945,
+      "content": "paragraph_refs:\n  004-022: \"[20]\"\nevent_type: 继位\n---\nid: \"武王崩成王立\"\ntype: event\ntitle: 武王崩成王立\ndescription: 武王病，天下未集，群公惧。周公祓斋自为质，欲代武王死。武王一度有瘳，后崩，太子诵代立，是为成王。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-022]\ndate: \"（公元前1043年）\"\n---\n\n# 武王崩成王立\n\n> 武王病，天下未集，群公惧。周公祓斋自为质，欲代武王死。武王一度有瘳，后崩，太子诵代立，是为成王。\n\n**主要人物**：周公、成王（诵）、武王\n\n## 事件经过\n\n武王病，天下未集，群公惧。周公祓斋自为质，欲代武王死。武王一度有瘳，后崩，太子诵代立，是为成王。\n\n## 原文\n\n> 武王病。天下未集，群公惧，穆卜，周公乃祓斋，自为质，欲代武王，武王有瘳。後而崩，太子诵代立，是为成王。\n\n"
+    },
     {
       "rev_id": "20260423-155307-442e93",
       "timestamp": "2026-04-23T15:53:07Z",

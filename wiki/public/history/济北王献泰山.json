@@ -1,8 +1,18 @@
 {
   "page": "济北王献泰山",
-  "latest_rev_id": "20260423-155326-9082aa",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161148-ebbd93",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161148-ebbd93",
+      "timestamp": "2026-04-23T16:11:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155326-9082aa",
+      "content_hash": "sha256:ebbd9375a8864de2359dec3294592bb76c23fb1a67e6c7a76a68222a837b5ef3",
+      "size": 791,
+      "content": "paragraph_refs:\n  012-014: \"[12.1]-[12.2]\"\nevent_type: 政治活动\nlocation: \"泰山\"\n---\nid: \"济北王献泰山\"\ntype: event\ntitle: 济北王献泰山\ndescription: 济北王以为天子将封禅，上书献泰山及其旁邑。天子受之更以他县偿之。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-014]\ndate: \"[约公元前115年—前113年]\"\n---\n\n# 济北王献泰山\n\n> 济北王以为天子将封禅，上书献泰山及其旁邑。天子受之更以他县偿之。\n\n**主要人物**：天子、济北王\n\n## 事件经过\n\n济北王以为天子将封禅，上书献泰山及其旁邑。天子受之更以他县偿之。\n\n## 原文\n\n> 於是济北王以为天子且封禅，乃上书献泰山及其旁邑。天子受之，更以他县偿之。\n\n"
+    },
     {
       "rev_id": "20260423-155326-9082aa",
       "timestamp": "2026-04-23T15:53:26Z",

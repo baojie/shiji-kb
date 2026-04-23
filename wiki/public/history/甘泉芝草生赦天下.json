@@ -1,8 +1,18 @@
 {
   "page": "甘泉芝草生赦天下",
-  "latest_rev_id": "20260423-155350-ba61c3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161202-693ff2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161202-693ff2",
+      "timestamp": "2026-04-23T16:12:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155350-ba61c3",
+      "content_hash": "sha256:693ff257e394a594c3aad0fe9f6ae2080c96c851664162ff233c3144c39ef721",
+      "size": 889,
+      "content": "paragraph_refs:\n  012-052: \"[39.4]-[39.5]\"\nevent_type: 文化活动\nlocation: \"甘泉\"\n---\nid: \"甘泉芝草生赦天下\"\ntype: event\ntitle: 甘泉芝草生赦天下\ndescription: 夏甘泉殿防内中有芝生九茎。天子为塞河兴通天台若有光云，下诏赦天下毋有复作。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-052]\ndate: \"〖%元封二年〗 （公元前109年）\"\n---\n\n# 甘泉芝草生赦天下\n\n> 夏甘泉殿防内中有芝生九茎。天子为塞河兴通天台若有光云，下诏赦天下毋有复作。\n\n**主要人物**：天子\n\n## 事件经过\n\n夏甘泉殿防内中有芝生九茎。天子为塞河兴通天台若有光云，下诏赦天下毋有复作。\n\n## 原文\n\n> 夏，有芝生殿防内中。天子为塞河，兴通天台，若有光云，乃下诏曰：'甘泉防生芝九茎，赦天下，毋有复作。'\n\n"
+    },
     {
       "rev_id": "20260423-155350-ba61c3",
       "timestamp": "2026-04-23T15:53:50Z",

@@ -1,8 +1,18 @@
 {
   "page": "樊哙斩陈豨于灵丘",
-  "latest_rev_id": "20260423-152815-c923df",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161134-d7d90b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161134-d7d90b",
+      "timestamp": "2026-04-23T16:11:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152815-c923df",
+      "content_hash": "sha256:d7d90baf5321abcd667f0a93322372a6312628ffe991763bbc5f031b76d7149a",
+      "size": 746,
+      "content": "paragraph_refs:\n  093-023: \"[19]\"\nevent_type: 战争\nlocation: \"灵丘\"\n---\nid: \"樊哙斩陈豨于灵丘\"\ntype: event\ntitle: 樊哙斩陈豨于灵丘\ndescription: 高祖十二年冬，樊哙率军卒追斩陈豨于灵丘，彻底平定了陈豨叛乱。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-023]\ndate: \"〖%高祖十二年冬〗 （公元前195年）\"\n---\n\n# 樊哙斩陈豨于灵丘\n\n> 高祖十二年冬，樊哙率军卒追斩陈豨于灵丘，彻底平定了陈豨叛乱。\n\n**主要人物**：樊哙、陈豨\n\n## 事件经过\n\n高祖十二年冬，樊哙率军卒追斩陈豨于灵丘，彻底平定了陈豨叛乱。\n\n## 原文\n\n> 高祖十二年冬，樊哙军卒追斩豨於灵丘。\n\n"
+    },
     {
       "rev_id": "20260423-152815-c923df",
       "timestamp": "2026-04-23T15:28:15Z",

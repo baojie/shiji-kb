@@ -1,8 +1,18 @@
 {
   "page": "楚灵王弑夹敖",
-  "latest_rev_id": "20260423-152812-e3878e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161132-fe5e87",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161132-fe5e87",
+      "timestamp": "2026-04-23T16:11:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152812-e3878e",
+      "content_hash": "sha256:fe5e879182e1116abec398c2dd7805eb833f040bfb9515d1a703572997861a26",
+      "size": 651,
+      "content": "paragraph_refs:\n  031-012: \"[16.1]\"\nevent_type: 继位\n---\nid: \"楚灵王弑夹敖\"\ntype: event\ntitle: 楚灵王弑夹敖\ndescription: 馀祭七年，楚公子围弑其王夹敖而代立，是为灵王。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-012]\ndate: \"〖%七年〗 （公元前541年）\"\n---\n\n# 楚灵王弑夹敖\n\n> 馀祭七年，楚公子围弑其王夹敖而代立，是为灵王。\n\n**主要人物**：公子围、夹敖、灵王\n\n## 事件经过\n\n馀祭七年，楚公子围弑其王夹敖而代立，是为灵王。\n\n## 原文\n\n> 七年，楚公子围弑其王夹敖而代立，是为灵王。\n\n"
+    },
     {
       "rev_id": "20260423-152812-e3878e",
       "timestamp": "2026-04-23T15:28:12Z",

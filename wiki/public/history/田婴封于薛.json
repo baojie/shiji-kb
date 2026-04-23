@@ -1,8 +1,18 @@
 {
   "page": "田婴封于薛",
-  "latest_rev_id": "20260423-152855-1d088c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161205-73aafd",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161205-73aafd",
+      "timestamp": "2026-04-23T16:12:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152855-1d088c",
+      "content_hash": "sha256:73aafd0d98d7c769b36cb1b658c61ab4a41bd3d66fb84a9e81bd44d981124599",
+      "size": 762,
+      "content": "paragraph_refs:\n  075-004: \"[1]\"\nevent_type: 政治活动\nlocation: \"薛\"\n---\nid: \"田婴封于薛\"\ntype: event\ntitle: 田婴封于薛\ndescription: 田婴相齐十一年，宣王卒，湣王即位。即位三年封田婴于薛。田婴后卒，谥为靖郭君。\ntags: [史记, 事件, 孟尝君列传]\nsources: [孟尝君列传]\nevent_ids: [075-004]\ndate: \"湣王即位三年 （公元前298年）\"\n---\n\n# 田婴封于薛\n\n> 田婴相齐十一年，宣王卒，湣王即位。即位三年封田婴于薛。田婴后卒，谥为靖郭君。\n\n**主要人物**：湣王、田婴\n\n## 事件经过\n\n田婴相齐十一年，宣王卒，湣王即位。即位三年封田婴于薛。田婴后卒，谥为靖郭君。\n\n## 原文\n\n> 即位三年，而封田婴於薛。\n\n"
+    },
     {
       "rev_id": "20260423-152855-1d088c",
       "timestamp": "2026-04-23T15:28:55Z",

@@ -1,8 +1,18 @@
 {
   "page": "田叔卒于官",
-  "latest_rev_id": "20260423-152853-3556bf",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161204-a9c710",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161204-a9c710",
+      "timestamp": "2026-04-23T16:12:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152853-3556bf",
+      "content_hash": "sha256:a9c7108195622b4fab04af5f0f0fa90b792cb73eef6190dbf8ab4246d70af565",
+      "size": 752,
+      "content": "paragraph_refs:\n  104-009: \"[1.7]\"\nevent_type: 家族事件\nlocation: \"鲁\"\n---\nid: \"田叔卒于官\"\ntype: event\ntitle: 田叔卒于官\ndescription: 田叔数年以官卒，鲁以百金祠之。少子田仁不受，曰\"不以百金伤先人名\"。\ntags: [史记, 事件, 田叔列传]\nsources: [田叔列传]\nevent_ids: [104-009]\ndate: \"[约公元前140年]\"\n---\n\n# 田叔卒于官\n\n> 田叔数年以官卒，鲁以百金祠之。少子田仁不受，曰\"不以百金伤先人名\"。\n\n**主要人物**：田仁、田叔\n\n## 事件经过\n\n田叔数年以官卒，鲁以百金祠之。少子田仁不受，曰\"不以百金伤先人名\"。\n\n## 原文\n\n> 数年，叔以官卒，鲁以百金祠，少子仁不受也，曰：'不以百金伤先人名。'\n\n"
+    },
     {
       "rev_id": "20260423-152853-3556bf",
       "timestamp": "2026-04-23T15:28:53Z",

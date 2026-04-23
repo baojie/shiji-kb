@@ -1,8 +1,18 @@
 {
   "page": "武帝招儒定仪未就",
-  "latest_rev_id": "20260423-155302-0b3ad6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161137-828996",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161137-828996",
+      "timestamp": "2026-04-23T16:11:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155302-0b3ad6",
+      "content_hash": "sha256:828996f76b7c3661464ee8b019aedd1040ebc903535e28cc7bfea6926f703f7a",
+      "size": 706,
+      "content": "paragraph_refs:\n  023-009: \"[8.1]\"\nevent_type: 政治改革\n---\nid: \"武帝招儒定仪未就\"\ntype: event\ntitle: 武帝招儒定仪未就\ndescription: 当今天子即位后，招致儒术之士，令共定礼仪，但十余年未能完成。\ntags: [史记, 事件, 礼书]\nsources: [礼书]\nevent_ids: [023-009]\ndate: \"〖%十馀年〗 [约公元前130年]\"\n---\n\n# 武帝招儒定仪未就\n\n> 当今天子即位后，招致儒术之士，令共定礼仪，但十余年未能完成。\n\n**主要人物**：今上\n\n## 事件经过\n\n当今天子即位后，招致儒术之士，令共定礼仪，但十余年未能完成。\n\n## 原文\n\n> 今上即位，招致儒术之士，令共定仪，十馀年不就。\n\n"
+    },
     {
       "rev_id": "20260423-155302-0b3ad6",
       "timestamp": "2026-04-23T15:53:02Z",

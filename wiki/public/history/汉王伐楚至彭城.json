@@ -1,8 +1,18 @@
 {
   "page": "汉王伐楚至彭城",
-  "latest_rev_id": "20260423-152820-db7198",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161142-e068f0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161142-e068f0",
+      "timestamp": "2026-04-23T16:11:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152820-db7198",
+      "content_hash": "sha256:e068f00f04cd79b3c8a0f64bcfa877901f37bb16350e52f80016fe8888ef5b46",
+      "size": 709,
+      "content": "paragraph_refs:\n  016-014: \"r42\"\nevent_type: 战争\nlocation: \"彭城\"\n---\nid: \"汉王伐楚至彭城\"\ntype: event\ntitle: 汉王伐楚至彭城\ndescription: 汉二年四月，汉王联合诸侯东伐楚，进至彭城，但随后被项羽击溃。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-014]\ndate: \"〖%汉二年四月〗 （公元前205年）\"\n---\n\n# 汉王伐楚至彭城\n\n> 汉二年四月，汉王联合诸侯东伐楚，进至彭城，但随后被项羽击溃。\n\n**主要人物**：汉王\n\n## 事件经过\n\n汉二年四月，汉王联合诸侯东伐楚，进至彭城，但随后被项羽击溃。\n\n## 原文\n\n> 四月。王伐楚至彭城，坏走。\n\n"
+    },
     {
       "rev_id": "20260423-152820-db7198",
       "timestamp": "2026-04-23T15:28:20Z",

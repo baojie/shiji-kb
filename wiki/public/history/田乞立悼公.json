@@ -1,8 +1,18 @@
 {
   "page": "田乞立悼公",
-  "latest_rev_id": "20260423-155351-16ba91",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161203-a7f248",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161203-a7f248",
+      "timestamp": "2026-04-23T16:12:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155351-16ba91",
+      "content_hash": "sha256:a7f248087242606604deeaae932c1ffc88de8b1acfd7ea7304ea509a800ecfda",
+      "size": 977,
+      "content": "paragraph_refs:\n  032-031: \"[71]\"\nevent_type: 继位\nlocation: \"齐\"\n---\nid: \"田乞立悼公\"\ntype: event\ntitle: 田乞立悼公\ndescription: 田乞败高昭子、国惠子二相，使人召公子阳生于鲁。十月戊子，田乞盛阳生于橐中置坐中央发出，立之，是为悼公。迁晏孺子杀之。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-031]\ndate: \"（公元前489年）\"\n---\n\n# 田乞立悼公\n\n> 田乞败高昭子、国惠子二相，使人召公子阳生于鲁。十月戊子，田乞盛阳生于橐中置坐中央发出，立之，是为悼公。迁晏孺子杀之。\n\n**主要人物**：田乞、阳生（悼公）\n\n## 事件经过\n\n田乞败高昭子、国惠子二相，使人召公子阳生于鲁。十月戊子，田乞盛阳生于橐中置坐中央发出，立之，是为悼公。迁晏孺子杀之。\n\n## 原文\n\n> 田乞盛阳生橐中，置坐中央，发橐出阳生，曰：'此乃齐君矣！'\n\n"
+    },
     {
       "rev_id": "20260423-155351-16ba91",
       "timestamp": "2026-04-23T15:53:51Z",

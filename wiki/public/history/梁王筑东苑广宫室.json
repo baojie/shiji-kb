@@ -1,8 +1,18 @@
 {
   "page": "梁王筑东苑广宫室",
-  "latest_rev_id": "20260423-155255-f54878",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161130-cffaf9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161130-cffaf9",
+      "timestamp": "2026-04-23T16:11:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155255-f54878",
+      "content_hash": "sha256:cffaf968aa35f9f046767ad655a7dbbd76d076f12672b255279b0cf627c42132",
+      "size": 862,
+      "content": "paragraph_refs:\n  058-008: \"[6]\"\nevent_type: 建设\nlocation: \"睢阳\"\n---\nid: \"梁王筑东苑广宫室\"\ntype: event\ntitle: 梁王筑东苑广宫室\ndescription: 孝王筑东苑方三百余里，广睢阳城七十里。大治宫室为复道，自宫连属于平台三十余里。\ntags: [史记, 事件, 梁孝王世家]\nsources: [梁孝王世家]\nevent_ids: [058-008]\ndate: \"[约公元前153年]\"\n---\n\n# 梁王筑东苑广宫室\n\n> 孝王筑东苑方三百余里，广睢阳城七十里。大治宫室为复道，自宫连属于平台三十余里。\n\n**主要人物**：刘武\n\n## 事件经过\n\n孝王筑东苑方三百余里，广睢阳城七十里。大治宫室为复道，自宫连属于平台三十余里。\n\n## 原文\n\n> 於是孝王筑东苑，方三百馀里。广睢阳城七十里。大治宫室，为衤复道，自宫连属於平台三十馀里。\n\n"
+    },
     {
       "rev_id": "20260423-155255-f54878",
       "timestamp": "2026-04-23T15:52:55Z",

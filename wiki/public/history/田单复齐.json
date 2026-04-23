@@ -1,8 +1,18 @@
 {
   "page": "田单复齐",
-  "latest_rev_id": "20260423-152852-89278a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161204-d5fc87",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161204-d5fc87",
+      "timestamp": "2026-04-23T16:12:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152852-89278a",
+      "content_hash": "sha256:d5fc872bb27ed0b329cff6f5c4963fd86525c8f1266067351744c723b5c5cc59",
+      "size": 809,
+      "content": "paragraph_refs:\n  046-020: \"[25.3]\"\nevent_type: 战争\nlocation: \"即墨\"\n---\nid: \"田单复齐\"\ntype: event\ntitle: 田单复齐\ndescription: 襄王在莒五年，田单以即墨攻破燕军，迎襄王入临菑。齐故地尽复属齐。田单封为安平君。\ntags: [史记, 事件, 田敬仲完世家]\nsources: [田敬仲完世家]\nevent_ids: [046-020]\ndate: \"〖;襄王〗〖%五年〗 （公元前279年）\"\n---\n\n# 田单复齐\n\n> 襄王在莒五年，田单以即墨攻破燕军，迎襄王入临菑。齐故地尽复属齐。田单封为安平君。\n\n**主要人物**：田单、襄王\n\n## 事件经过\n\n襄王在莒五年，田单以即墨攻破燕军，迎襄王入临菑。齐故地尽复属齐。田单封为安平君。\n\n## 原文\n\n> 田单以即墨攻破燕军，迎襄王於莒，入临菑。\n\n"
+    },
     {
       "rev_id": "20260423-152852-89278a",
       "timestamp": "2026-04-23T15:28:52Z",

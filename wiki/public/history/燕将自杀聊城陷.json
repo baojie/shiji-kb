@@ -1,8 +1,18 @@
 {
   "page": "燕将自杀聊城陷",
-  "latest_rev_id": "20260423-155338-1f3433",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161156-6d9ca3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161156-6d9ca3",
+      "timestamp": "2026-04-23T16:11:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155338-1f3433",
+      "content_hash": "sha256:6d9ca31c4f100f4d26427e87a0e97fb1f75e2e900c4a03a1ac58bc2087291fbb",
+      "size": 997,
+      "content": "paragraph_refs:\n  083-006: \"[11.1]-[11.5]\"\nevent_type: 战争\nlocation: \"聊城\"\n---\nid: \"燕将自杀聊城陷\"\ntype: event\ntitle: 燕将自杀聊城陷\ndescription: 燕将读鲁连书泣三日，犹豫不决。欲归燕恐诛，欲降齐恐辱。最终叹\"与人刃我，宁自刃\"，乃自杀。聊城乱，田单遂屠聊城。\ntags: [史记, 事件, 鲁仲连邹阳列传]\nsources: [鲁仲连邹阳列传]\nevent_ids: [083-006]\ndate: \"[约公元前249年]\"\n---\n\n# 燕将自杀聊城陷\n\n> 燕将读鲁连书泣三日，犹豫不决。欲归燕恐诛，欲降齐恐辱。最终叹\"与人刃我，宁自刃\"，乃自杀。聊城乱，田单遂屠聊城。\n\n**主要人物**：田单\n\n## 事件经过\n\n燕将读鲁连书泣三日，犹豫不决。欲归燕恐诛，欲降齐恐辱。最终叹\"与人刃我，宁自刃\"，乃自杀。聊城乱，田单遂屠聊城。\n\n## 原文\n\n> 燕将见鲁连书，泣三日，犹豫不能自决……喟然叹曰：'与人刃我，宁自刃。'乃自杀。\n\n"
+    },
     {
       "rev_id": "20260423-155338-1f3433",
       "timestamp": "2026-04-23T15:53:38Z",

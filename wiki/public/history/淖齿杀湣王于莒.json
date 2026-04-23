@@ -1,8 +1,18 @@
 {
   "page": "淖齿杀湣王于莒",
-  "latest_rev_id": "20260423-155328-c40753",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161149-26b912",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161149-26b912",
+      "timestamp": "2026-04-23T16:11:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155328-c40753",
+      "content_hash": "sha256:26b912745815711551293f73942f9d5219d21512f6f824b01e5385918b35bc44",
+      "size": 751,
+      "content": "paragraph_refs:\n  082-002: \"[2.6]\"\nevent_type: 政治活动\nlocation: \"莒\"\n---\nid: \"淖齿杀湣王于莒\"\ntype: event\ntitle: 淖齿杀湣王于莒\ndescription: 淖齿在莒城杀齐湣王，但莒人坚守抵抗燕军，数年不下。燕军转而东围即墨。\ntags: [史记, 事件, 田单列传]\nsources: [田单列传]\nevent_ids: [082-002]\ndate: \"（公元前284年）\"\n---\n\n# 淖齿杀湣王于莒\n\n> 淖齿在莒城杀齐湣王，但莒人坚守抵抗燕军，数年不下。燕军转而东围即墨。\n\n**主要人物**：淖齿、湣王\n\n## 事件经过\n\n淖齿在莒城杀齐湣王，但莒人坚守抵抗燕军，数年不下。燕军转而东围即墨。\n\n## 原文\n\n> 淖齿既杀湣王於莒，因坚守，距燕军，数年不下。\n\n"
+    },
     {
       "rev_id": "20260423-155328-c40753",
       "timestamp": "2026-04-23T15:53:28Z",

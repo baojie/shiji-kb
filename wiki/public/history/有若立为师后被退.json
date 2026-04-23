@@ -1,8 +1,18 @@
 {
   "page": "有若立为师后被退",
-  "latest_rev_id": "20260423-152747-76513f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161121-31d3d7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161121-31d3d7",
+      "timestamp": "2026-04-23T16:11:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152747-76513f",
+      "content_hash": "sha256:31d3d7e68c5df5aee1a8d9282062cb3c5752f26e1c9e3d387a2c7a9a6c557646",
+      "size": 1021,
+      "content": "paragraph_refs:\n  067-018: \"[97]\"\nevent_type: 文化活动\nlocation: \"鲁\"\n---\nid: \"有若立为师后被退\"\ntype: event\ntitle: 有若立为师后被退\ndescription: 孔子既没，弟子以有若状似孔子，共立为师。弟子进问孔子旧事，有若默然无以应答。弟子起曰有子避之此非子之座也。\ntags: [史记, 事件, 仲尼弟子列传]\nsources: [仲尼弟子列传]\nevent_ids: [067-018]\ndate: \"[约公元前478年]\"\n---\n\n# 有若立为师后被退\n\n> 孔子既没，弟子以有若状似孔子，共立为师。弟子进问孔子旧事，有若默然无以应答。弟子起曰有子避之此非子之座也。\n\n**主要人物**：孔子\n\n## 事件经过\n\n孔子既没，弟子以有若状似孔子，共立为师。弟子进问孔子旧事，有若默然无以应答。弟子起曰有子避之此非子之座也。\n\n## 原文\n\n> 弟子相与共立为师，师之如夫子时也。他日，弟子进问……有若默然无以应。弟子起曰：'有子避之，此非子之座也！'\n\n"
+    },
     {
       "rev_id": "20260423-152747-76513f",
       "timestamp": "2026-04-23T15:27:47Z",

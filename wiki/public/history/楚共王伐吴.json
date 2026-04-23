@@ -1,8 +1,18 @@
 {
   "page": "楚共王伐吴",
-  "latest_rev_id": "20260423-152807-04f57d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161130-0b59bf",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161130-0b59bf",
+      "timestamp": "2026-04-23T16:11:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152807-04f57d",
+      "content_hash": "sha256:0b59bf9c3b184c56b339e54a450a969424fc0b7e8a3619c9801e47b6ee4292f3",
+      "size": 579,
+      "content": "paragraph_refs:\n  031-006: \"[5.2]\"\nevent_type: 战争\nlocation: \"衡山\"\n---\nid: \"楚共王伐吴\"\ntype: event\ntitle: 楚共王伐吴\ndescription: 寿梦十六年，楚共王率兵伐吴，至衡山。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-006]\ndate: \"〖%十六年〗 （公元前570年）\"\n---\n\n# 楚共王伐吴\n\n> 寿梦十六年，楚共王率兵伐吴，至衡山。\n\n**主要人物**：楚共王\n\n## 事件经过\n\n寿梦十六年，楚共王率兵伐吴，至衡山。\n\n## 原文\n\n> 十六年，楚共王伐吴，至衡山。\n\n"
+    },
     {
       "rev_id": "20260423-152807-04f57d",
       "timestamp": "2026-04-23T15:28:07Z",

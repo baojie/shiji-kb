@@ -1,8 +1,18 @@
 {
   "page": "浑邪王率众降汉",
-  "latest_rev_id": "20260423-152832-07362c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161149-08bd81",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161149-08bd81",
+      "timestamp": "2026-04-23T16:11:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152832-07362c",
+      "content_hash": "sha256:08bd81b2f307cb0a4e4eef44f0bfb3eae1737c34d8522706cf3a540f06c256a3",
+      "size": 959,
+      "content": "paragraph_refs:\n  030-017: \"[12]\"\nevent_type: 政治活动\n---\nid: \"浑邪王率众降汉\"\ntype: event\ntitle: 浑邪王率众降汉\ndescription: 骠骑仍再出击胡获首四万。其秋浑邪王率数万之众来降，汉发车二万乘迎之。受赏赐及有功之士，是岁费凡百余巨万。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-017]\ndate: \"（公元前121年）\"\n---\n\n# 浑邪王率众降汉\n\n> 骠骑仍再出击胡获首四万。其秋浑邪王率数万之众来降，汉发车二万乘迎之。受赏赐及有功之士，是岁费凡百余巨万。\n\n**主要人物**：浑邪王\n\n## 事件经过\n\n骠骑仍再出击胡获首四万。其秋浑邪王率数万之众来降，汉发车二万乘迎之。受赏赐及有功之士，是岁费凡百余巨万。\n\n## 原文\n\n> 其秋，浑邪王率数万之众来降，於是汉发车二万乘迎之。既至，受赏，赐及有功之士。是岁费凡百馀巨万。\n\n"
+    },
     {
       "rev_id": "20260423-152832-07362c",
       "timestamp": "2026-04-23T15:28:32Z",

@@ -1,8 +1,18 @@
 {
   "page": "楚惠王灭陈",
-  "latest_rev_id": "20260423-152810-5b8e44",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161132-c9dfb6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161132-c9dfb6",
+      "timestamp": "2026-04-23T16:11:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152810-5b8e44",
+      "content_hash": "sha256:c9dfb603d0835c7e23600b2ea89f4e327c4a2bcd8b435dd215c3220aa00304ea",
+      "size": 783,
+      "content": "paragraph_refs:\n  036-011: \"[26.26]\"\nevent_type: 战争\nlocation: \"陈\"\n---\nid: \"楚惠王灭陈\"\ntype: event\ntitle: 楚惠王灭陈\ndescription: 湣公二十四年，楚惠王复国以兵北伐，杀陈湣公，遂灭陈而有之。是岁孔子卒。\ntags: [史记, 事件, 陈杞世家]\nsources: [陈杞世家]\nevent_ids: [036-011]\ndate: \"（公元前478年）\"\n---\n\n# 楚惠王灭陈\n\n> 湣公二十四年，楚惠王复国以兵北伐，杀陈湣公，遂灭陈而有之。是岁孔子卒。\n\n**主要人物**：楚惠王、陈湣公\n\n## 事件经过\n\n湣公二十四年，楚惠王复国以兵北伐，杀陈湣公，遂灭陈而有之。是岁孔子卒。\n\n## 原文\n\n> 二十四年，楚惠王复国，以兵北伐，杀陈湣公，遂灭陈而有之。是岁，孔子卒。\n\n"
+    },
     {
       "rev_id": "20260423-152810-5b8e44",
       "timestamp": "2026-04-23T15:28:10Z",

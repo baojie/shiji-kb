@@ -1,8 +1,18 @@
 {
   "page": "梁王比年入朝",
-  "latest_rev_id": "20260423-155254-5a0cee",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161130-7146b4",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161130-7146b4",
+      "timestamp": "2026-04-23T16:11:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155254-5a0cee",
+      "content_hash": "sha256:7146b4763610d837e01eae9076e0065c3e219612c87310804679dcba886ac2c6",
+      "size": 1039,
+      "content": "paragraph_refs:\n  058-004: \"[4]\"\nevent_type: 政治活动\nlocation: \"长安\"\n---\nid: \"梁王比年入朝\"\ntype: event\ntitle: 梁王比年入朝\ndescription: 梁王十四年入朝，十七年十八年比年入朝留，二十一年入朝，二十二年孝文帝崩，二十四年二十五年复入朝。是时上未置太子也。\ntags: [史记, 事件, 梁孝王世家]\nsources: [梁孝王世家]\nevent_ids: [058-004]\ndate: \"[约公元前154年]\"\n---\n\n# 梁王比年入朝\n\n> 梁王十四年入朝，十七年十八年比年入朝留，二十一年入朝，二十二年孝文帝崩，二十四年二十五年复入朝。是时上未置太子也。\n\n**主要人物**：刘武、景帝\n\n## 事件经过\n\n梁王十四年入朝，十七年十八年比年入朝留，二十一年入朝，二十二年孝文帝崩，二十四年二十五年复入朝。是时上未置太子也。\n\n## 原文\n\n> 梁王十四年，入朝。十七年，十八年，比年入朝，留...二十四年，入朝。二十五年，复入朝。是时上未置太子也。\n\n"
+    },
     {
       "rev_id": "20260423-155254-5a0cee",
       "timestamp": "2026-04-23T15:52:54Z",

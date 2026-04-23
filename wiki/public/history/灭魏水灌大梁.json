@@ -1,8 +1,18 @@
 {
   "page": "灭魏水灌大梁",
-  "latest_rev_id": "20260423-155334-37f888",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161154-853bad",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161154-853bad",
+      "timestamp": "2026-04-23T16:11:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155334-37f888",
+      "content_hash": "sha256:853bad3035805974b4f5fa458b9dacd17ffdba2808b64bbc04199c3fefeff164",
+      "size": 830,
+      "content": "paragraph_refs:\n  006-037: \"[29]\"\nevent_type: 战争\nlocation: \"大梁\"\n---\nid: \"灭魏水灌大梁\"\ntype: event\ntitle: 灭魏水灌大梁\ndescription: 二十二年，王贲攻魏，引河水灌大梁城，城墙崩坏，魏王请降，秦尽取魏地。魏国灭亡。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-037]\ndate: \"〖%二十二年〗 （公元前225年）\"\n---\n\n# 灭魏水灌大梁\n\n> 二十二年，王贲攻魏，引河水灌大梁城，城墙崩坏，魏王请降，秦尽取魏地。魏国灭亡。\n\n**主要人物**：王贲\n\n## 事件经过\n\n二十二年，王贲攻魏，引河水灌大梁城，城墙崩坏，魏王请降，秦尽取魏地。魏国灭亡。\n\n## 原文\n\n> 二十二年，王贲攻魏，引河沟灌大梁，大梁城坏，其王请降，尽取其地。\n\n"
+    },
     {
       "rev_id": "20260423-155334-37f888",
       "timestamp": "2026-04-23T15:53:34Z",

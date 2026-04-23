@@ -1,8 +1,18 @@
 {
   "page": "燕昭王礼贤招士",
-  "latest_rev_id": "20260423-152842-e2ab78",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161157-a49503",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161157-a49503",
+      "timestamp": "2026-04-23T16:11:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152842-e2ab78",
+      "content_hash": "sha256:a49503f21160e41a5b26535184389a837997fd9764c96aa2fbd95f7b63509741",
+      "size": 1037,
+      "content": "paragraph_refs:\n  080-004: \"[2]\"\nevent_type: 政治活动\nlocation: \"燕\"\n---\nid: \"燕昭王礼贤招士\"\ntype: event\ntitle: 燕昭王礼贤招士\ndescription: 燕昭王因子之之乱及齐大败燕国而怨齐，但燕国小弱力不能制。于是屈身下士，先礼郭隗以招贤。这一举措为日后伐齐复仇奠定了人才基础。\ntags: [史记, 事件, 乐毅列传]\nsources: [乐毅列传]\nevent_ids: [080-004]\ndate: \"子之之乱后（公元前311年）\"\n---\n\n# 燕昭王礼贤招士\n\n> 燕昭王因子之之乱及齐大败燕国而怨齐，但燕国小弱力不能制。于是屈身下士，先礼郭隗以招贤。这一举措为日后伐齐复仇奠定了人才基础。\n\n**主要人物**：燕昭王、郭隗\n\n## 事件经过\n\n燕昭王因子之之乱及齐大败燕国而怨齐，但燕国小弱力不能制。于是屈身下士，先礼郭隗以招贤。这一举措为日后伐齐复仇奠定了人才基础。\n\n## 原文\n\n> 燕国小，辟远，力不能制，於是屈身下士，先礼郭隗以招贤者。\n\n"
+    },
     {
       "rev_id": "20260423-152842-e2ab78",
       "timestamp": "2026-04-23T15:28:42Z",

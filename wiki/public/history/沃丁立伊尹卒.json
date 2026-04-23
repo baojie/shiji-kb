@@ -1,8 +1,18 @@
 {
   "page": "沃丁立伊尹卒",
-  "latest_rev_id": "20260423-152825-f2d42a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161146-735a25",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161146-735a25",
+      "timestamp": "2026-04-23T16:11:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152825-f2d42a",
+      "content_hash": "sha256:735a259ed3f49a95346a77cd16686eb86760fea87c5276401402d18ff722e832",
+      "size": 849,
+      "content": "paragraph_refs:\n  003-016: \"[13]\"\nevent_type: 继位\nlocation: \"亳\"\n---\nid: \"沃丁立伊尹卒\"\ntype: event\ntitle: 沃丁立伊尹卒\ndescription: 太宗崩，子沃丁即位。沃丁在位期间，伊尹去世，葬于亳。咎单追述伊尹事迹，作沃丁篇。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-016]\ndate: \"[约公元前1560年]\"\n---\n\n# 沃丁立伊尹卒\n\n> 太宗崩，子沃丁即位。沃丁在位期间，伊尹去世，葬于亳。咎单追述伊尹事迹，作沃丁篇。\n\n**主要人物**：伊尹、咎单、太宗、沃丁\n\n## 事件经过\n\n太宗崩，子沃丁即位。沃丁在位期间，伊尹去世，葬于亳。咎单追述伊尹事迹，作沃丁篇。\n\n## 原文\n\n> 太宗崩，子沃丁立。帝沃丁之时，伊尹卒。既葬伊尹於亳，咎单遂训伊尹事，作沃丁。\n\n"
+    },
     {
       "rev_id": "20260423-152825-f2d42a",
       "timestamp": "2026-04-23T15:28:25Z",

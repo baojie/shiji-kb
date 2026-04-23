@@ -1,8 +1,18 @@
 {
   "page": "汉军征朝鲜两路出兵",
-  "latest_rev_id": "20260423-155314-6c6637",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161141-0ad271",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161141-0ad271",
+      "timestamp": "2026-04-23T16:11:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155314-6c6637",
+      "content_hash": "sha256:0ad271f9f1692f5b4afd39626d95164cb0d2aac1b19a9015aab81d6df8ea90a8",
+      "size": 1138,
+      "content": "paragraph_refs:\n  115-007: \"[3]\"\nevent_type: 战争\nlocation: \"渤海、辽东、王险\"\n---\nid: \"汉军征朝鲜两路出兵\"\ntype: event\ntitle: 汉军征朝鲜两路出兵\ndescription: 天子募罪人击朝鲜。其秋，遣楼船将军杨仆从齐浮渤海率兵五万人，左将军荀彘出辽东讨右渠。右渠发兵拒险，左将军先锋败散，楼船军亦被败散走。\ntags: [史记, 事件, 朝鲜列传]\nsources: [朝鲜列传]\nevent_ids: [115-007]\ndate: \"〖%元封二年秋〗 （公元前109年）\"\n---\n\n# 汉军征朝鲜两路出兵\n\n> 天子募罪人击朝鲜。其秋，遣楼船将军杨仆从齐浮渤海率兵五万人，左将军荀彘出辽东讨右渠。右渠发兵拒险，左将军先锋败散，楼船军亦被败散走。\n\n**主要人物**：右渠、杨仆、荀彘\n\n## 事件经过\n\n天子募罪人击朝鲜。其秋，遣楼船将军杨仆从齐浮渤海率兵五万人，左将军荀彘出辽东讨右渠。右渠发兵拒险，左将军先锋败散，楼船军亦被败散走。\n\n## 原文\n\n> 其秋，遣楼船将军杨仆从齐浮渤海；兵五万人，左将军荀彘出辽东：讨右渠。\n\n"
+    },
     {
       "rev_id": "20260423-155314-6c6637",
       "timestamp": "2026-04-23T15:53:14Z",

@@ -1,8 +1,18 @@
 {
   "page": "献公城栎阳",
-  "latest_rev_id": "20260423-155343-ed5f74",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161159-a92d8f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161159-a92d8f",
+      "timestamp": "2026-04-23T16:11:59Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155343-ed5f74",
+      "content_hash": "sha256:a92d8fdfdcdd03b4fa7fa111380599b3a58bb77e460ca9215bed4a3db944f5bf",
+      "size": 721,
+      "content": "paragraph_refs:\n  005-059: \"[47.1]\"\nevent_type: 建设\nlocation: \"栎阳\"\n---\nid: \"献公城栎阳\"\ntype: event\ntitle: 献公城栎阳\ndescription: 献公二年，在栎阳筑城。栎阳后来成为秦国的都城，是献公东向争夺河西的战略布局。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-059]\ndate: \"〖%二年〗 （公元前383年）\"\n---\n\n# 献公城栎阳\n\n> 献公二年，在栎阳筑城。栎阳后来成为秦国的都城，是献公东向争夺河西的战略布局。\n\n**主要人物**：献公\n\n## 事件经过\n\n献公二年，在栎阳筑城。栎阳后来成为秦国的都城，是献公东向争夺河西的战略布局。\n\n## 原文\n\n> 二年，城栎阳。\n\n"
+    },
     {
       "rev_id": "20260423-155343-ed5f74",
       "timestamp": "2026-04-23T15:53:43Z",

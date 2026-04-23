@@ -1,8 +1,18 @@
 {
   "page": "桓公始霸",
-  "latest_rev_id": "20260423-155252-7165e9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161128-a6b0a5",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161128-a6b0a5",
+      "timestamp": "2026-04-23T16:11:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155252-7165e9",
+      "content_hash": "sha256:a6b0a5a8d3be09062a10d9c42606b511337468173e24e2b2b9f9f2f647df4c21",
+      "size": 584,
+      "content": "paragraph_refs:\n  032-015: \"[30]\"\nevent_type: 政治活动\nlocation: \"甄\"\n---\nid: \"桓公始霸\"\ntype: event\ntitle: 桓公始霸\ndescription: 七年，诸侯会桓公于甄，桓公于是始霸。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-015]\ndate: \"〖%七年〗 （公元前679年）\"\n---\n\n# 桓公始霸\n\n> 七年，诸侯会桓公于甄，桓公于是始霸。\n\n**主要人物**：桓公\n\n## 事件经过\n\n七年，诸侯会桓公于甄，桓公于是始霸。\n\n## 原文\n\n> 七年，诸侯会桓公於甄，而桓公於是始霸焉。\n\n"
+    },
     {
       "rev_id": "20260423-155252-7165e9",
       "timestamp": "2026-04-23T15:52:52Z",

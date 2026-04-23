@@ -1,8 +1,18 @@
 {
   "page": "桀走鸣条放死",
-  "latest_rev_id": "20260423-155250-6e7da0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161127-9ca602",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161127-9ca602",
+      "timestamp": "2026-04-23T16:11:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155250-6e7da0",
+      "content_hash": "sha256:9ca60207bed9253e784bada541f4f17c7e4beee39d348dba2fe40e148bfb912a",
+      "size": 824,
+      "content": "paragraph_refs:\n  002-043: \"[26]\"\nevent_type: 战争\nlocation: \"鸣条\"\n---\nid: \"桀走鸣条放死\"\ntype: event\ntitle: 桀走鸣条放死\ndescription: 桀败走鸣条，被流放而死。临死前后悔说：我后悔当初不在夏台杀汤，以至于落到今天这个地步。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-043]\ndate: \"[约公元前1600年]\"\n---\n\n# 桀走鸣条放死\n\n> 桀败走鸣条，被流放而死。临死前后悔说：我后悔当初不在夏台杀汤，以至于落到今天这个地步。\n\n**主要人物**：桀\n\n## 事件经过\n\n桀败走鸣条，被流放而死。临死前后悔说：我后悔当初不在夏台杀汤，以至于落到今天这个地步。\n\n## 原文\n\n> 桀走鸣条，遂放而死。桀谓人曰：'吾悔不遂杀汤於夏台，使至此。'\n\n"
+    },
     {
       "rev_id": "20260423-155250-6e7da0",
       "timestamp": "2026-04-23T15:52:50Z",

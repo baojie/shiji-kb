@@ -1,8 +1,18 @@
 {
   "page": "楚灭蔡",
-  "latest_rev_id": "20260423-152811-1f8c60",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161132-7580fa",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161132-7580fa",
+      "timestamp": "2026-04-23T16:11:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152811-1f8c60",
+      "content_hash": "sha256:7580fa79e90e132b0b1a4d49c4a1bd83f8ac9fbc8a2677c62cc955c6a158ebb0",
+      "size": 606,
+      "content": "paragraph_refs:\n  035-012: \"[21.21]\"\nevent_type: 战争\nlocation: \"蔡\"\n---\nid: \"楚灭蔡\"\ntype: event\ntitle: 楚灭蔡\ndescription: 蔡侯齐四年，楚惠王灭蔡，蔡侯齐亡，蔡遂绝祀。\ntags: [史记, 事件, 管蔡世家]\nsources: [管蔡世家]\nevent_ids: [035-012]\ndate: \"（公元前447年）\"\n---\n\n# 楚灭蔡\n\n> 蔡侯齐四年，楚惠王灭蔡，蔡侯齐亡，蔡遂绝祀。\n\n**主要人物**：楚惠王、蔡侯齐\n\n## 事件经过\n\n蔡侯齐四年，楚惠王灭蔡，蔡侯齐亡，蔡遂绝祀。\n\n## 原文\n\n> 侯齐四年，楚惠王灭蔡，蔡侯齐亡，蔡遂绝祀。\n\n"
+    },
     {
       "rev_id": "20260423-152811-1f8c60",
       "timestamp": "2026-04-23T15:28:11Z",

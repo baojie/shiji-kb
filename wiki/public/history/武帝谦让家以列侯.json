@@ -1,8 +1,18 @@
 {
   "page": "武帝谦让家以列侯",
-  "latest_rev_id": "20260423-155303-077c97",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161137-40510b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161137-40510b",
+      "timestamp": "2026-04-23T16:11:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155303-077c97",
+      "content_hash": "sha256:40510b6960b31a3087028fa53b29ccba6af84bfe424b5252376f124e83f118c3",
+      "size": 1039,
+      "content": "paragraph_refs:\n  060-003: \"[3]\"\nevent_type: 政治活动\nlocation: \"未央宫\"\n---\nid: \"武帝谦让家以列侯\"\ntype: event\ntitle: 武帝谦让家以列侯\ndescription: 武帝制曰：朕无闻并建诸侯所以重社稷。且以未教成者强君连城，即股肱何劝。其更议以列侯家之。谦让不许封王。\ntags: [史记, 事件, 三王世家]\nsources: [三王世家]\nevent_ids: [060-003]\ndate: \"〖%元狩六年〗〖%三月〗 （公元前117年）\"\n---\n\n# 武帝谦让家以列侯\n\n> 武帝制曰：朕无闻并建诸侯所以重社稷。且以未教成者强君连城，即股肱何劝。其更议以列侯家之。谦让不许封王。\n\n**主要人物**：武帝\n\n## 事件经过\n\n武帝制曰：朕无闻并建诸侯所以重社稷。且以未教成者强君连城，即股肱何劝。其更议以列侯家之。谦让不许封王。\n\n## 原文\n\n> 制曰：'...朕无闻焉。且天非为君生民也。朕之不德，海内未洽，乃以未教成者彊君连城，即股肱何劝？其更议以列侯家之。'\n\n"
+    },
     {
       "rev_id": "20260423-155303-077c97",
       "timestamp": "2026-04-23T15:53:03Z",

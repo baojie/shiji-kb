@@ -1,8 +1,18 @@
 {
   "page": "燕伐赵大败廉颇破栗腹",
-  "latest_rev_id": "20260423-152841-9f240a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161156-14a246",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161156-14a246",
+      "timestamp": "2026-04-23T16:11:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152841-9f240a",
+      "content_hash": "sha256:14a246bb554f8b4837f772a6275158b2fc1fe914490fc18e5acfbd8ebdd8dd49",
+      "size": 828,
+      "content": "paragraph_refs:\n  080-016: \"[15]\"\nevent_type: 战争\nlocation: \"鄗\"\n---\nid: \"燕伐赵大败廉颇破栗腹\"\ntype: event\ntitle: 燕伐赵大败廉颇破栗腹\ndescription: 赵使廉颇迎击燕军，在鄗地大破栗腹之军，俘虏栗腹与乐乘。乐间之预言完全应验。\ntags: [史记, 事件, 乐毅列传]\nsources: [乐毅列传]\nevent_ids: [080-016]\ndate: \"乐间谏不听后（公元前251年）\"\n---\n\n# 燕伐赵大败廉颇破栗腹\n\n> 赵使廉颇迎击燕军，在鄗地大破栗腹之军，俘虏栗腹与乐乘。乐间之预言完全应验。\n\n**主要人物**：乐乘、廉颇、栗腹\n\n## 事件经过\n\n赵使廉颇迎击燕军，在鄗地大破栗腹之军，俘虏栗腹与乐乘。乐间之预言完全应验。\n\n## 原文\n\n> 赵使廉颇击之，大破栗腹之军於鄗，禽栗腹、乐乘。\n\n"
+    },
     {
       "rev_id": "20260423-152841-9f240a",
       "timestamp": "2026-04-23T15:28:41Z",

@@ -1,8 +1,18 @@
 {
   "page": "更诸侯丞相为相",
-  "latest_rev_id": "20260423-155230-b4ef40",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161119-d5cb44",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161119-d5cb44",
+      "timestamp": "2026-04-23T16:11:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155230-b4ef40",
+      "content_hash": "sha256:d5cb44aa9f1d28603e793f668afdf3d48b40ef3d736fef6f8b7ca946be7100d1",
+      "size": 553,
+      "content": "paragraph_refs:\n  011-036: \"[18.4]\"\nevent_type: 改革\n---\nid: \"更诸侯丞相为相\"\ntype: event\ntitle: 更诸侯丞相为相\ndescription: 更命诸侯丞相曰相，削弱诸侯国官制规格。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-036]\ndate: \"（公元前145年）\"\n---\n\n# 更诸侯丞相为相\n\n> 更命诸侯丞相曰相，削弱诸侯国官制规格。\n\n**主要人物**：孝景皇帝\n\n## 事件经过\n\n更命诸侯丞相曰相，削弱诸侯国官制规格。\n\n## 原文\n\n> 更命诸侯丞相曰相。\n\n"
+    },
     {
       "rev_id": "20260423-155230-b4ef40",
       "timestamp": "2026-04-23T15:52:30Z",

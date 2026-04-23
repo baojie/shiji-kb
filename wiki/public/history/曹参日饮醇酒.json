@@ -1,8 +1,18 @@
 {
   "page": "曹参日饮醇酒",
-  "latest_rev_id": "20260423-152746-22fa53",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161120-1b3e8a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161120-1b3e8a",
+      "timestamp": "2026-04-23T16:11:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152746-22fa53",
+      "content_hash": "sha256:1b3e8ad7807ed0ff48c6ebec3a26aa9fbb417c4aa874d3f403725500e2ee1912",
+      "size": 1007,
+      "content": "paragraph_refs:\n  054-013: \"[12]-[13]\"\nevent_type: 政治活动\n---\nid: \"曹参日饮醇酒\"\ntype: event\ntitle: 曹参日饮醇酒\ndescription: 曹参日夜饮醇酒，来者欲有言，参辄饮以醇酒，醉而后去，终莫得开说。相舍后园近吏舍，吏日饮歌呼，参反取酒歌呼与相应和。\ntags: [史记, 事件, 曹相国世家]\nsources: [曹相国世家]\nevent_ids: [054-013]\ndate: \"（公元前193-前190年）\"\n---\n\n# 曹参日饮醇酒\n\n> 曹参日夜饮醇酒，来者欲有言，参辄饮以醇酒，醉而后去，终莫得开说。相舍后园近吏舍，吏日饮歌呼，参反取酒歌呼与相应和。\n\n**主要人物**：曹参\n\n## 事件经过\n\n曹参日夜饮醇酒，来者欲有言，参辄饮以醇酒，醉而后去，终莫得开说。相舍后园近吏舍，吏日饮歌呼，参反取酒歌呼与相应和。\n\n## 原文\n\n> 日夜饮醇酒。...至者，参辄饮以醇酒，间之，欲有所言，复饮之，醉而後去，终莫得开说，以为常。\n\n"
+    },
     {
       "rev_id": "20260423-152746-22fa53",
       "timestamp": "2026-04-23T15:27:46Z",

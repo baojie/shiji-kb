@@ -1,8 +1,18 @@
 {
   "page": "沛公初起",
-  "latest_rev_id": "20260423-155323-863ab9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161146-9a1fca",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161146-9a1fca",
+      "timestamp": "2026-04-23T16:11:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155323-863ab9",
+      "content_hash": "sha256:9a1fcae102d436fb0b867ae559ace5426b020da9aba26377d98ff7d3a9f619de",
+      "size": 650,
+      "content": "paragraph_refs:\n  016-003: \"r1\"\nevent_type: 战争\n---\nid: \"沛公初起\"\ntype: event\ntitle: 沛公初起\ndescription: 秦二世元年九月，沛公（刘邦）初起兵反秦，开始了其争夺天下之路。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-003]\ndate: \"〖%二世元年九月〗 （公元前209年）\"\n---\n\n# 沛公初起\n\n> 秦二世元年九月，沛公（刘邦）初起兵反秦，开始了其争夺天下之路。\n\n**主要人物**：沛公\n\n## 事件经过\n\n秦二世元年九月，沛公（刘邦）初起兵反秦，开始了其争夺天下之路。\n\n## 原文\n\n> 沛公初起。\n\n"
+    },
     {
       "rev_id": "20260423-155323-863ab9",
       "timestamp": "2026-04-23T15:53:23Z",

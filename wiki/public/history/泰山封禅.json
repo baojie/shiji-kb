@@ -1,8 +1,18 @@
 {
   "page": "泰山封禅",
-  "latest_rev_id": "20260423-152831-67ed18",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161147-949297",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161147-949297",
+      "timestamp": "2026-04-23T16:11:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152831-67ed18",
+      "content_hash": "sha256:949297ed865892d930344faa8e42b5ffb1072e559135a37a1fdfc842868204bc",
+      "size": 1067,
+      "content": "paragraph_refs:\n  006-058: \"[43.1]-[43.5]\"\nevent_type: 文化活动\nlocation: \"泰山、梁父、邹峄山\"\n---\nid: \"泰山封禅\"\ntype: event\ntitle: 泰山封禅\ndescription: 二十八年，始皇东行郡县，上邹峄山，与鲁儒生议封禅事。遂上泰山立石行封礼，禅于梁父。下山途中遇风雨，休于树下，封树为五大夫。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-058]\ndate: \"〖%二十八年〗 （公元前219年）\"\n---\n\n# 泰山封禅\n\n> 二十八年，始皇东行郡县，上邹峄山，与鲁儒生议封禅事。遂上泰山立石行封礼，禅于梁父。下山途中遇风雨，休于树下，封树为五大夫。\n\n**主要人物**：始皇\n\n## 事件经过\n\n二十八年，始皇东行郡县，上邹峄山，与鲁儒生议封禅事。遂上泰山立石行封礼，禅于梁父。下山途中遇风雨，休于树下，封树为五大夫。\n\n## 原文\n\n> 乃遂上泰山，立石，封，祠祀。下，风雨暴至，休於树下，因封其树为五大夫。禅梁父。\n\n"
+    },
     {
       "rev_id": "20260423-152831-67ed18",
       "timestamp": "2026-04-23T15:28:31Z",

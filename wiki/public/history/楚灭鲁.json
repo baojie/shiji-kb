@@ -1,8 +1,18 @@
 {
   "page": "楚灭鲁",
-  "latest_rev_id": "20260423-152811-3273c3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161132-fadbc6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161132-fadbc6",
+      "timestamp": "2026-04-23T16:11:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152811-3273c3",
+      "content_hash": "sha256:fadbc64dea32eae91a2178950e087d77bb7792da6d986e0cc3e289ee12f389ab",
+      "size": 896,
+      "content": "paragraph_refs:\n  033-030: \"[24.5]\"\nevent_type: 战争\nlocation: \"徐州\"\n---\nid: \"楚灭鲁\"\ntype: event\ntitle: 楚灭鲁\ndescription: 顷公十九年楚伐鲁取徐州。二十四年楚考烈王伐灭鲁。顷公亡迁下邑为家人，鲁绝祀。鲁起周公至顷公凡三十四世。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-030]\ndate: \"（公元前256年）\"\n---\n\n# 楚灭鲁\n\n> 顷公十九年楚伐鲁取徐州。二十四年楚考烈王伐灭鲁。顷公亡迁下邑为家人，鲁绝祀。鲁起周公至顷公凡三十四世。\n\n**主要人物**：楚考烈王、顷公\n\n## 事件经过\n\n顷公十九年楚伐鲁取徐州。二十四年楚考烈王伐灭鲁。顷公亡迁下邑为家人，鲁绝祀。鲁起周公至顷公凡三十四世。\n\n## 原文\n\n> 二十四年,楚考烈王伐灭鲁。顷公亡,迁於下邑,为家人,鲁绝?祀?。\n\n"
+    },
     {
       "rev_id": "20260423-152811-3273c3",
       "timestamp": "2026-04-23T15:28:11Z",

@@ -1,8 +1,18 @@
 {
   "page": "汤崩诸子立",
-  "latest_rev_id": "20260423-155321-6bdbdb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161143-5eda72",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161143-5eda72",
+      "timestamp": "2026-04-23T16:11:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155321-6bdbdb",
+      "content_hash": "sha256:5eda7294fbccd32845889565a7435cfa385d97ceefa33c8ca4f8dd3f572ad9dd",
+      "size": 911,
+      "content": "paragraph_refs:\n  003-012: \"[10]\"\nevent_type: 继位\n---\nid: \"汤崩诸子立\"\ntype: event\ntitle: 汤崩诸子立\ndescription: 汤崩，太子太丁未立而卒，乃立太丁之弟外丙。外丙在位三年崩，弟中壬立，中壬在位四年崩。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-012]\ndate: \"[约公元前1587年]\"\n---\n\n# 汤崩诸子立\n\n> 汤崩，太子太丁未立而卒，乃立太丁之弟外丙。外丙在位三年崩，弟中壬立，中壬在位四年崩。\n\n**主要人物**：中壬、外丙、太丁、汤\n\n## 事件经过\n\n汤崩，太子太丁未立而卒，乃立太丁之弟外丙。外丙在位三年崩，弟中壬立，中壬在位四年崩。\n\n## 原文\n\n> 汤崩，太子太丁未立而卒，於是乃立太丁之弟外丙，是为帝外丙。帝外丙即位三年，崩，立外丙之弟中壬，是为帝中壬。帝中壬即位四年，崩\n\n"
+    },
     {
       "rev_id": "20260423-155321-6bdbdb",
       "timestamp": "2026-04-23T15:53:21Z",

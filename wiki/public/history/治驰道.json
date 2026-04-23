@@ -1,8 +1,18 @@
 {
   "page": "治驰道",
-  "latest_rev_id": "20260423-155325-fc84b7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161147-bcfc20",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161147-bcfc20",
+      "timestamp": "2026-04-23T16:11:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155325-fc84b7",
+      "content_hash": "sha256:bcfc20b056eb60c0bf674555c0836fcf08384c524a06099431fc410343f74c26",
+      "size": 501,
+      "content": "paragraph_refs:\n  006-057: \"[42.4]\"\nevent_type: 建设\n---\nid: \"治驰道\"\ntype: event\ntitle: 治驰道\ndescription: 是年修建驰道，贯通全国交通。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-057]\ndate: \"〖%二十七年〗 （公元前220年）\"\n---\n\n# 治驰道\n\n> 是年修建驰道，贯通全国交通。\n\n**主要人物**：始皇\n\n## 事件经过\n\n是年修建驰道，贯通全国交通。\n\n## 原文\n\n> 是岁，赐爵一级。治驰道。\n\n"
+    },
     {
       "rev_id": "20260423-155325-fc84b7",
       "timestamp": "2026-04-23T15:53:25Z",

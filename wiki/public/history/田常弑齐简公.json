@@ -1,8 +1,18 @@
 {
   "page": "田常弑齐简公",
-  "latest_rev_id": "20260423-152856-f06452",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161205-706d42",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161205-706d42",
+      "timestamp": "2026-04-23T16:12:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152856-f06452",
+      "content_hash": "sha256:706d4291ac1d4e384cc2a6906701a048096b8908ccdab01e66cc2f2d95352314",
+      "size": 620,
+      "content": "paragraph_refs:\n  004-060: \"[55]\"\nevent_type: 政治整顿\n---\nid: \"田常弑齐简公\"\ntype: event\ntitle: 田常弑齐简公\ndescription: 敬王三十九年，齐田常杀其君简公，田氏篡齐之始。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-060]\ndate: \"〖@敬王〗〖%三十九年〗 （公元前481年）\"\n---\n\n# 田常弑齐简公\n\n> 敬王三十九年，齐田常杀其君简公，田氏篡齐之始。\n\n**主要人物**：田常\n\n## 事件经过\n\n敬王三十九年，齐田常杀其君简公，田氏篡齐之始。\n\n## 原文\n\n> 三十九年，齐田常杀其君简公。\n\n"
+    },
     {
       "rev_id": "20260423-152856-f06452",
       "timestamp": "2026-04-23T15:28:56Z",

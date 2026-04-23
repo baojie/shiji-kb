@@ -1,8 +1,18 @@
 {
   "page": "漂母饭信",
-  "latest_rev_id": "20260423-152835-bab834",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161152-bbeefb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161152-bbeefb",
+      "timestamp": "2026-04-23T16:11:52Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152835-bab834",
+      "content_hash": "sha256:bbeefba0d69827229c21e9a7b789c0be90367a996769481a922e52fc1318bf37",
+      "size": 1079,
+      "content": "paragraph_refs:\n  092-002: \"[1.2]\"\nevent_type: 家族事件\nlocation: \"淮阴\"\n---\nid: \"漂母饭信\"\ntype: event\ntitle: 漂母饭信\ndescription: 韩信钓鱼于城下，有一漂母见其饥饿，给他饭食，连续数十日。韩信感激表示必重报，漂母怒斥说哀怜王孙而进食，并非望报。\ntags: [史记, 事件, 淮阴侯列传]\nsources: [淮阴侯列传]\nevent_ids: [092-002]\ndate: \"〖%数十日〗 [公元前209年以前]\"\n---\n\n# 漂母饭信\n\n> 韩信钓鱼于城下，有一漂母见其饥饿，给他饭食，连续数十日。韩信感激表示必重报，漂母怒斥说哀怜王孙而进食，并非望报。\n\n**主要人物**：韩信\n\n## 事件经过\n\n韩信钓鱼于城下，有一漂母见其饥饿，给他饭食，连续数十日。韩信感激表示必重报，漂母怒斥说哀怜王孙而进食，并非望报。\n\n## 原文\n\n> 信钓於城下，诸母漂，有一母见信饥，饭信，竟漂数十日。信喜，谓漂母曰：\"吾必有以重报母。\"母怒曰：\"大丈夫不能自食，吾哀王孙而进食，岂望报乎！\n\n"
+    },
     {
       "rev_id": "20260423-152835-bab834",
       "timestamp": "2026-04-23T15:28:35Z",

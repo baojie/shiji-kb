@@ -1,8 +1,18 @@
 {
   "page": "朱虚侯斩吕产",
-  "latest_rev_id": "20260423-152748-930220",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161121-3bcc59",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161121-3bcc59",
+      "timestamp": "2026-04-23T16:11:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152748-930220",
+      "content_hash": "sha256:3bcc59e0f3cfd1c719f4ed973832e05ff841df134e07e904f09aeb9e680c7868",
+      "size": 1007,
+      "content": "paragraph_refs:\n  052-010: \"[14]\"\nevent_type: 战争\nlocation: \"未央宫\"\n---\nid: \"朱虚侯斩吕产\"\ntype: event\ntitle: 朱虚侯斩吕产\ndescription: 吕禄、吕产欲作乱关中，朱虚侯与太尉勃、丞相平等诛之。朱虚侯首先斩吕王产于未央宫，太尉勃等乃得尽诛诸吕。\ntags: [史记, 事件, 齐悼惠王世家]\nsources: [齐悼惠王世家]\nevent_ids: [052-010]\ndate: \"- （公元前180年）\"\n---\n\n# 朱虚侯斩吕产\n\n> 吕禄、吕产欲作乱关中，朱虚侯与太尉勃、丞相平等诛之。朱虚侯首先斩吕王产于未央宫，太尉勃等乃得尽诛诸吕。\n\n**主要人物**：吕产、周勃、朱虚侯、陈平\n\n## 事件经过\n\n吕禄、吕产欲作乱关中，朱虚侯与太尉勃、丞相平等诛之。朱虚侯首先斩吕王产于未央宫，太尉勃等乃得尽诛诸吕。\n\n## 原文\n\n> 吕禄、吕产欲作乱关中，硃虚侯与太尉勃、丞相平等诛之。硃虚侯首先斩吕产，於是太尉勃等乃得尽诛诸吕。\n\n"
+    },
     {
       "rev_id": "20260423-152748-930220",
       "timestamp": "2026-04-23T15:27:48Z",

@@ -1,8 +1,18 @@
 {
   "page": "琅邪王被骗留齐",
-  "latest_rev_id": "20260423-152848-21ee75",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161202-ce7ffb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161202-ce7ffb",
+      "timestamp": "2026-04-23T16:12:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152848-21ee75",
+      "content_hash": "sha256:ce7ffb5f8a432f3546a27db09f2c8fc0e7798b5440894eee9f19116ca433521e",
+      "size": 1172,
+      "content": "paragraph_refs:\n  052-008: \"[10]-[11]\"\nevent_type: 政治活动\nlocation: \"齐\"\n---\nid: \"琅邪王被骗留齐\"\ntype: event\ntitle: 琅邪王被骗留齐\ndescription: 齐王使祝午东诈琅邪王，请其至临菑并将齐兵西平关中之乱。琅邪王信之驰见齐王，齐王因留琅邪王而并将其兵。琅邪王既见欺，说齐王放己入关计事，齐王许之。\ntags: [史记, 事件, 齐悼惠王世家]\nsources: [齐悼惠王世家]\nevent_ids: [052-008]\ndate: \"（公元前180年）\"\n---\n\n# 琅邪王被骗留齐\n\n> 齐王使祝午东诈琅邪王，请其至临菑并将齐兵西平关中之乱。琅邪王信之驰见齐王，齐王因留琅邪王而并将其兵。琅邪王既见欺，说齐王放己入关计事，齐王许之。\n\n**主要人物**：刘泽、齐哀王\n\n## 事件经过\n\n齐王使祝午东诈琅邪王，请其至临菑并将齐兵西平关中之乱。琅邪王信之驰见齐王，齐王因留琅邪王而并将其兵。琅邪王既见欺，说齐王放己入关计事，齐王许之。\n\n## 原文\n\n> 琅邪王信之，以为然，驰见齐王。齐王与魏勃等因留琅邪王，而使祝午尽发琅邪国而并将其兵。\n\n"
+    },
     {
       "rev_id": "20260423-152848-21ee75",
       "timestamp": "2026-04-23T15:28:48Z",

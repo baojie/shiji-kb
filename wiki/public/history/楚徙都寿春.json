@@ -1,8 +1,18 @@
 {
   "page": "楚徙都寿春",
-  "latest_rev_id": "20260423-152809-5da726",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161132-767303",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161132-767303",
+      "timestamp": "2026-04-23T16:11:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152809-5da726",
+      "content_hash": "sha256:7673039f1eecbd97b048142170fc062d49f56781f21b2c8d471e02ad7f0d7d0c",
+      "size": 907,
+      "content": "paragraph_refs:\n  078-011: \"[18]\"\nevent_type: 政治活动\nlocation: \"寿春\"\n---\nid: \"楚徙都寿春\"\ntype: event\ntitle: 楚徙都寿春\ndescription: 门客硃英分析魏即将亡国、秦距陈仅百六十里，秦楚必将日斗。楚于是去陈迁都寿春。春申君就封于吴地行相事。\ntags: [史记, 事件, 春申君列传]\nsources: [春申君列传]\nevent_ids: [078-011]\ndate: \"合纵败后 （公元前241年）\"\n---\n\n# 楚徙都寿春\n\n> 门客硃英分析魏即将亡国、秦距陈仅百六十里，秦楚必将日斗。楚于是去陈迁都寿春。春申君就封于吴地行相事。\n\n**主要人物**：春申君、硃英\n\n## 事件经过\n\n门客硃英分析魏即将亡国、秦距陈仅百六十里，秦楚必将日斗。楚于是去陈迁都寿春。春申君就封于吴地行相事。\n\n## 原文\n\n> 楚於是去陈徙寿春……春申君由此就封於吴，行相事。\n\n"
+    },
     {
       "rev_id": "20260423-152809-5da726",
       "timestamp": "2026-04-23T15:28:09Z",

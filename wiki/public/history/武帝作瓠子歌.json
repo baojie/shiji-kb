@@ -1,8 +1,18 @@
 {
   "page": "武帝作瓠子歌",
-  "latest_rev_id": "20260423-155301-6702f8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161136-93cb36",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161136-93cb36",
+      "timestamp": "2026-04-23T16:11:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155301-6702f8",
+      "content_hash": "sha256:93cb364726c4e352b76d41d85a885319a5049b877d54572508d8534cef3643db",
+      "size": 944,
+      "content": "paragraph_refs:\n  029-017: \"[12]\"\nevent_type: 文化活动\nlocation: \"瓠子\"\n---\nid: \"武帝作瓠子歌\"\ntype: event\ntitle: 武帝作瓠子歌\ndescription: 天子临河决，悼功之不成，作瓠子歌二首。歌曰\"瓠子决兮将柰何\"，又曰\"河汤汤兮激潺湲\"。抒发治河之艰辛与宣房塞成之喜悦。\ntags: [史记, 事件, 河渠书]\nsources: [河渠书]\nevent_ids: [029-017]\ndate: \"（公元前109年）\"\n---\n\n# 武帝作瓠子歌\n\n> 天子临河决，悼功之不成，作瓠子歌二首。歌曰\"瓠子决兮将柰何\"，又曰\"河汤汤兮激潺湲\"。抒发治河之艰辛与宣房塞成之喜悦。\n\n**主要人物**：今上\n\n## 事件经过\n\n天子临河决，悼功之不成，作瓠子歌二首。歌曰\"瓠子决兮将柰何\"，又曰\"河汤汤兮激潺湲\"。抒发治河之艰辛与宣房塞成之喜悦。\n\n## 原文\n\n> 天子既临河决，悼功之不成，乃作歌曰：'瓠子决兮将柰何？'\n\n"
+    },
     {
       "rev_id": "20260423-155301-6702f8",
       "timestamp": "2026-04-23T15:53:01Z",

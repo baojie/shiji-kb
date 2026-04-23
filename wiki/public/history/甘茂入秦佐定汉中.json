@@ -1,8 +1,18 @@
 {
   "page": "甘茂入秦佐定汉中",
-  "latest_rev_id": "20260423-152849-c2f725",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161203-730185",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161203-730185",
+      "timestamp": "2026-04-23T16:12:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152849-c2f725",
+      "content_hash": "sha256:730185bc393fcaf7bccaa197f90d5c2e5deb17d231adb8c31e499ebc64e6e35f",
+      "size": 1024,
+      "content": "paragraph_refs:\n  071-010: \"[7]\"\nevent_type: 战争\nlocation: \"汉中\"\n---\nid: \"甘茂入秦佐定汉中\"\ntype: event\ntitle: 甘茂入秦佐定汉中\ndescription: 甘茂为下蔡人，学百家之术，经张仪、樗里子引荐见秦惠王。惠王赏识他，命他率军协助魏章攻略汉中之地。\ntags: [史记, 事件, 樗里子甘茂列传]\nsources: [樗里子甘茂列传]\nevent_ids: [071-010]\ndate: \"[约公元前312年]\"\n---\n\n# 甘茂入秦佐定汉中\n\n> 甘茂为下蔡人，学百家之术，经张仪、樗里子引荐见秦惠王。惠王赏识他，命他率军协助魏章攻略汉中之地。\n\n**主要人物**：张仪、樗里子、甘茂、秦惠王\n\n## 事件经过\n\n甘茂为下蔡人，学百家之术，经张仪、樗里子引荐见秦惠王。惠王赏识他，命他率军协助魏章攻略汉中之地。\n\n## 原文\n\n> 甘茂者，下蔡人也。事下蔡史举先生，学百家之术。因张仪、樗里子而求见秦惠王。王见而说之，使将，而佐魏章略定汉中地。\n\n"
+    },
     {
       "rev_id": "20260423-152849-c2f725",
       "timestamp": "2026-04-23T15:28:49Z",

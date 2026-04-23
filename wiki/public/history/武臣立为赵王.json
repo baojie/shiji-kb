@@ -1,8 +1,18 @@
 {
   "page": "武臣立为赵王",
-  "latest_rev_id": "20260423-155309-330e1f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161139-86020a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161139-86020a",
+      "timestamp": "2026-04-23T16:11:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155309-330e1f",
+      "content_hash": "sha256:86020a9f74ff8ca65df62c205e3ac32c1a66104eaaa268b0f5c3e5c9f66d900a",
+      "size": 878,
+      "content": "paragraph_refs:\n  048-006: \"[5]\"\nevent_type: 继位\nlocation: \"邯郸\"\n---\nid: \"武臣立为赵王\"\ntype: event\ntitle: 武臣立为赵王\ndescription: 武臣到邯郸自立为赵王，陈馀为大将军，张耳为左丞相。陈王怒欲诛之，柱国谏止。赵不西兵入关，遣韩广北徇燕地。\ntags: [史记, 事件, 陈涉世家]\nsources: [陈涉世家]\nevent_ids: [048-006]\ndate: \"（公元前209年）\"\n---\n\n# 武臣立为赵王\n\n> 武臣到邯郸自立为赵王，陈馀为大将军，张耳为左丞相。陈王怒欲诛之，柱国谏止。赵不西兵入关，遣韩广北徇燕地。\n\n**主要人物**：张耳、武臣、陈馀\n\n## 事件经过\n\n武臣到邯郸自立为赵王，陈馀为大将军，张耳为左丞相。陈王怒欲诛之，柱国谏止。赵不西兵入关，遣韩广北徇燕地。\n\n## 原文\n\n> 武臣到邯郸，自立为赵王。\n\n"
+    },
     {
       "rev_id": "20260423-155309-330e1f",
       "timestamp": "2026-04-23T15:53:09Z",

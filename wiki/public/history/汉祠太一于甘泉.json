@@ -1,8 +1,18 @@
 {
   "page": "汉祠太一于甘泉",
-  "latest_rev_id": "20260423-155318-94705b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161143-279a8b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161143-279a8b",
+      "timestamp": "2026-04-23T16:11:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155318-94705b",
+      "content_hash": "sha256:279a8bd1acbc65d33bec7fa84c1ca65721ac53d517f2643a6fa5abd0916d3b46",
+      "size": 941,
+      "content": "paragraph_refs:\n  024-008: \"[6.1]\"\nevent_type: 文化活动\nlocation: \"甘泉\"\n---\nid: \"汉祠太一于甘泉\"\ntype: event\ntitle: 汉祠太一于甘泉\ndescription: 汉家常以正月上辛日祠太一于甘泉，以昏时夜祠至明而终。使僮男僮女七十人俱歌，春歌青阳、夏歌朱明、秋歌西暝、冬歌玄冥。\ntags: [史记, 事件, 乐书]\nsources: [乐书]\nevent_ids: [024-008]\ndate: \"〖%正月上辛〗 [约公元前120年]\"\n---\n\n# 汉祠太一于甘泉\n\n> 汉家常以正月上辛日祠太一于甘泉，以昏时夜祠至明而终。使僮男僮女七十人俱歌，春歌青阳、夏歌朱明、秋歌西暝、冬歌玄冥。\n\n## 事件经过\n\n汉家常以正月上辛日祠太一于甘泉，以昏时夜祠至明而终。使僮男僮女七十人俱歌，春歌青阳、夏歌朱明、秋歌西暝、冬歌玄冥。\n\n## 原文\n\n> 汉家常以正月上辛祠太一甘泉，以昏时夜祠，到明而终。\n\n"
+    },
     {
       "rev_id": "20260423-155318-94705b",
       "timestamp": "2026-04-23T15:53:18Z",

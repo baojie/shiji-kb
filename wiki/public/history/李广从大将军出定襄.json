@@ -1,8 +1,18 @@
 {
   "page": "李广从大将军出定襄",
-  "latest_rev_id": "20260423-152750-201a51",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161123-4cc304",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161123-4cc304",
+      "timestamp": "2026-04-23T16:11:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152750-201a51",
+      "content_hash": "sha256:4cc3040e6bd6868417cc2aaffcf8d9fa7f5a449f977ee94e8635e00746f80209",
+      "size": 894,
+      "content": "paragraph_refs:\n  109-010: \"[1.9]\"\nevent_type: 战争\nlocation: \"定襄\"\n---\nid: \"李广从大将军出定襄\"\ntype: event\ntitle: 李广从大将军出定襄\ndescription: 李广复为后将军，从大将军军出定襄击匈奴。诸将多中首虏率以功为侯，而李广军无功。\ntags: [史记, 事件, 李将军列传]\nsources: [李将军列传]\nevent_ids: [109-010]\ndate: \"〖%元朔六年〗 （公元前123年）\"\n---\n\n# 李广从大将军出定襄\n\n> 李广复为后将军，从大将军军出定襄击匈奴。诸将多中首虏率以功为侯，而李广军无功。\n\n**主要人物**：大将军、李广\n\n## 事件经过\n\n李广复为后将军，从大将军军出定襄击匈奴。诸将多中首虏率以功为侯，而李广军无功。\n\n## 原文\n\n> 广复为後将军，从大将军军出定襄，击匈奴。诸将多中首虏率，以功为侯者，而广军无功。\n\n"
+    },
     {
       "rev_id": "20260423-152750-201a51",
       "timestamp": "2026-04-23T15:27:50Z",

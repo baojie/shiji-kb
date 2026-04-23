@@ -1,8 +1,18 @@
 {
   "page": "柯地之盟曹沬劫齐",
-  "latest_rev_id": "20260423-152759-303d44",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161126-3637b4",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161126-3637b4",
+      "timestamp": "2026-04-23T16:11:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152759-303d44",
+      "content_hash": "sha256:3637b4bc4c1e0358766311daaac451fb7819eaa96f375d033cdbad409c04f0ec",
+      "size": 1116,
+      "content": "paragraph_refs:\n  032-014: \"[30]\"\nevent_type: 政治活动\nlocation: \"柯\"\n---\nid: \"柯地之盟曹沬劫齐\"\ntype: event\ntitle: 柯地之盟曹沬劫齐\ndescription: 伐鲁，鲁请献遂邑以平。与鲁会柯而盟时，曹沬以匕首劫桓公于坛上，要求归还鲁之侵地。管仲谏桓公守信归地，诸侯皆信齐而欲附。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-014]\ndate: \"〖%五年〗 （公元前681年）\"\n---\n\n# 柯地之盟曹沬劫齐\n\n> 伐鲁，鲁请献遂邑以平。与鲁会柯而盟时，曹沬以匕首劫桓公于坛上，要求归还鲁之侵地。管仲谏桓公守信归地，诸侯皆信齐而欲附。\n\n**主要人物**：曹沬、桓公、管仲\n\n## 事件经过\n\n伐鲁，鲁请献遂邑以平。与鲁会柯而盟时，曹沬以匕首劫桓公于坛上，要求归还鲁之侵地。管仲谏桓公守信归地，诸侯皆信齐而欲附。\n\n## 原文\n\n> 鲁将盟，曹沬以匕首劫桓公於坛上，曰：'反鲁之侵地！'...管仲曰：'夫劫许之而倍信杀之...而弃信於诸侯，失天下之援，不可。'\n\n"
+    },
     {
       "rev_id": "20260423-152759-303d44",
       "timestamp": "2026-04-23T15:27:59Z",

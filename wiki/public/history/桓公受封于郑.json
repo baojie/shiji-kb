@@ -1,8 +1,18 @@
 {
   "page": "桓公受封于郑",
-  "latest_rev_id": "20260423-155251-c111fb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161128-a0549e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161128-a0549e",
+      "timestamp": "2026-04-23T16:11:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155251-c111fb",
+      "content_hash": "sha256:a0549e8d5ee9f06fe7ece5a1ef2797cb512a3af11585d35fab849099e48a1fd9",
+      "size": 932,
+      "content": "paragraph_refs:\n  042-001: \"[1]\"\nevent_type: 继位\nlocation: \"郑\"\n---\nid: \"桓公受封于郑\"\ntype: event\ntitle: 桓公受封于郑\ndescription: 郑桓公友，周厉王少子而宣王庶弟。宣王立二十二年，友初封于郑。封三十三岁，百姓皆便爱之。幽王以为司徒。\ntags: [史记, 事件, 郑世家]\nsources: [郑世家]\nevent_ids: [042-001]\ndate: \"〖;宣王〗〖%二十二年〗 （公元前806年）\"\n---\n\n# 桓公受封于郑\n\n> 郑桓公友，周厉王少子而宣王庶弟。宣王立二十二年，友初封于郑。封三十三岁，百姓皆便爱之。幽王以为司徒。\n\n**主要人物**：友、宣王\n\n## 事件经过\n\n郑桓公友，周厉王少子而宣王庶弟。宣王立二十二年，友初封于郑。封三十三岁，百姓皆便爱之。幽王以为司徒。\n\n## 原文\n\n> 郑桓公友者，周厉王少子而宣王庶弟也。宣王立二十二年，友初封于郑。\n\n"
+    },
     {
       "rev_id": "20260423-155251-c111fb",
       "timestamp": "2026-04-23T15:52:51Z",

@@ -1,8 +1,18 @@
 {
   "page": "朱虚侯封章入卫",
-  "latest_rev_id": "20260423-155241-e8d171",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161121-34d456",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161121-34d456",
+      "timestamp": "2026-04-23T16:11:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155241-e8d171",
+      "content_hash": "sha256:34d456f9fe92fc6b3a0e5c3476effee411595d2225e523867e51ae600a10a2e9",
+      "size": 954,
+      "content": "paragraph_refs:\n  052-005: \"[5]\"\nevent_type: 政治活动\nlocation: \"长安\"\n---\nid: \"朱虚侯封章入卫\"\ntype: event\ntitle: 朱虚侯封章入卫\ndescription: 哀王三年，其弟章入宿卫于汉，吕太后封为朱虚侯，以吕禄女妻之。后四年，封章弟兴居为东牟侯，皆宿卫长安中。\ntags: [史记, 事件, 齐悼惠王世家]\nsources: [齐悼惠王世家]\nevent_ids: [052-005]\ndate: \"〖%三年〗 [公元前186年]\"\n---\n\n# 朱虚侯封章入卫\n\n> 哀王三年，其弟章入宿卫于汉，吕太后封为朱虚侯，以吕禄女妻之。后四年，封章弟兴居为东牟侯，皆宿卫长安中。\n\n**主要人物**：吕禄、朱虚侯\n\n## 事件经过\n\n哀王三年，其弟章入宿卫于汉，吕太后封为朱虚侯，以吕禄女妻之。后四年，封章弟兴居为东牟侯，皆宿卫长安中。\n\n## 原文\n\n> 哀王三年，其弟章入宿卫於汉，吕太后封为硃虚侯，以吕禄女妻之。\n\n"
+    },
     {
       "rev_id": "20260423-155241-e8d171",
       "timestamp": "2026-04-23T15:52:41Z",

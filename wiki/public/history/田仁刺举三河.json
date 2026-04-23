@@ -1,8 +1,18 @@
 {
   "page": "田仁刺举三河",
-  "latest_rev_id": "20260423-155351-7b30ab",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161203-b041d7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161203-b041d7",
+      "timestamp": "2026-04-23T16:12:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155351-7b30ab",
+      "content_hash": "sha256:b041d7f058256c2bdc13bc569a06020a0de3edbc15e91b6a946d13c546ed193c",
+      "size": 1203,
+      "content": "paragraph_refs:\n  104-012: \"[4.4]\"\nevent_type: 政治整顿\nlocation: \"三河\"\n---\nid: \"田仁刺举三河\"\ntype: event\ntitle: 田仁刺举三河\ndescription: 田仁为丞相长史，上书言天下郡太守多为奸利，三河尤甚。三河太守皆内倚中贵人。田仁不畏强御，刺举三河，三河太守皆下吏诛死。武帝悦，拜仁为丞相司直，威振天下。\ntags: [史记, 事件, 田叔列传]\nsources: [田叔列传]\nevent_ids: [104-012]\ndate: \"〖;武帝〗时 [约公元前100年]\"\n---\n\n# 田仁刺举三河\n\n> 田仁为丞相长史，上书言天下郡太守多为奸利，三河尤甚。三河太守皆内倚中贵人。田仁不畏强御，刺举三河，三河太守皆下吏诛死。武帝悦，拜仁为丞相司直，威振天下。\n\n**主要人物**：田仁\n\n## 事件经过\n\n田仁为丞相长史，上书言天下郡太守多为奸利，三河尤甚。三河太守皆内倚中贵人。田仁不畏强御，刺举三河，三河太守皆下吏诛死。武帝悦，拜仁为丞相司直，威振天下。\n\n## 原文\n\n> 田仁上书言：'天下郡太守多为奸利，三河尤甚，臣请先刺举三河。'\"\"仁已刺三河，三河太守皆下吏诛死。\n\n"
+    },
     {
       "rev_id": "20260423-155351-7b30ab",
       "timestamp": "2026-04-23T15:53:51Z",

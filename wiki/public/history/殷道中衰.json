@@ -1,8 +1,18 @@
 {
   "page": "殷道中衰",
-  "latest_rev_id": "20260423-155310-be7048",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161139-fe8128",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161139-fe8128",
+      "timestamp": "2026-04-23T16:11:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155310-be7048",
+      "content_hash": "sha256:fe8128b1ded0d9467a2486cef412ff68ff7ccca24e4cdd6ba2a935d0b127bc19",
+      "size": 884,
+      "content": "paragraph_refs:\n  003-017: \"[14]\"\nevent_type: 继位\n---\nid: \"殷道中衰\"\ntype: event\ntitle: 殷道中衰\ndescription: 沃丁崩后，弟太庚立。太庚崩子小甲立，小甲崩弟雍己立。雍己时代殷道衰落，诸侯有不来朝者。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-017]\ndate: \"[约公元前1530年]\"\n---\n\n# 殷道中衰\n\n> 沃丁崩后，弟太庚立。太庚崩子小甲立，小甲崩弟雍己立。雍己时代殷道衰落，诸侯有不来朝者。\n\n**主要人物**：太庚、小甲、沃丁、雍己\n\n## 事件经过\n\n沃丁崩后，弟太庚立。太庚崩子小甲立，小甲崩弟雍己立。雍己时代殷道衰落，诸侯有不来朝者。\n\n## 原文\n\n> 沃丁崩，弟太庚立，是为帝太庚。帝太庚崩，子帝小甲立。帝小甲崩，弟雍己立，是为帝雍己。殷道衰，诸侯或不至。\n\n"
+    },
     {
       "rev_id": "20260423-155310-be7048",
       "timestamp": "2026-04-23T15:53:10Z",

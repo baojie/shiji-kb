@@ -1,8 +1,18 @@
 {
   "page": "武公卒以人殉葬",
-  "latest_rev_id": "20260423-155258-f6cad0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161135-45fce2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161135-45fce2",
+      "timestamp": "2026-04-23T16:11:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155258-f6cad0",
+      "content_hash": "sha256:45fce20ceccf4e3a5f0b206e80d45ee1c20c40de051bce04c5336c191353ebef",
+      "size": 1188,
+      "content": "paragraph_refs:\n  005-020: \"[12]\"\nevent_type: 继位\nlocation: \"雍平阳\"\n---\nid: \"武公卒以人殉葬\"\ntype: event\ntitle: 武公卒以人殉葬\ndescription: 〖@武公〗〖%二十年〗卒，葬〖=雍平阳〗。初以人从死，从死者六十六人。其子〖@白〗不立，封〖=平阳〗，立其弟〖@德公〗。此为秦国人殉制度的首次记录。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-020]\ndate: \"〖@武公〗〖%二十年〗 （公元前678年）\"\n---\n\n# 武公卒以人殉葬\n\n> 〖@武公〗〖%二十年〗卒，葬〖=雍平阳〗。初以人从死，从死者六十六人。其子〖@白〗不立，封〖=平阳〗，立其弟〖@德公〗。此为秦国人殉制度的首次记录。\n\n**主要人物**：德公、武公、白\n\n## 事件经过\n\n〖@武公〗〖%二十年〗卒，葬〖=雍平阳〗。初以人从死，从死者六十六人。其子〖@白〗不立，封〖=平阳〗，立其弟〖@德公〗。此为秦国人殉制度的首次记录。\n\n## 原文\n\n> 二十年，武公卒，葬雍平阳。初以人从死，从死者六十六人。有子一人，名曰白，白不立，封平阳。立其弟德公。\n\n"
+    },
     {
       "rev_id": "20260423-155258-f6cad0",
       "timestamp": "2026-04-23T15:52:58Z",
