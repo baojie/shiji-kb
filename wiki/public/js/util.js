@@ -11,6 +11,7 @@ export const TYPE_LABELS = {
   concept: '概念',
   chapter: '章节',
   topic: '主题',
+  overview: '综述',
   meta: '元页',
   sanwen: '散文',
 };
