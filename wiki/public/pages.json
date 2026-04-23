@@ -5083,6 +5083,30 @@
         "narrative": 8
       }
     },
+    "子路": {
+      "type": "person",
+      "label": "子路",
+      "aliases": [
+        "仲由",
+        "子路"
+      ],
+      "tags": [
+        "春秋",
+        "孔子弟子",
+        "仲尼弟子"
+      ],
+      "featured": false,
+      "path": "pages/子路.md",
+      "quality_score": 19,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "孔子": {
       "type": "person",
       "label": "孔子",
@@ -5653,6 +5677,32 @@
         "size": 7,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "庄子": {
+      "type": "person",
+      "label": "庄子",
+      "aliases": [
+        "庄周",
+        "庄子"
+      ],
+      "tags": [
+        "战国",
+        "道家",
+        "宋国"
+      ],
+      "featured": false,
+      "path": "pages/庄子.md",
+      "total_refs": 1,
+      "total_chapters": 1,
+      "quality_score": 11,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 0
       }
     },
     "廉颇": {
@@ -7998,6 +8048,31 @@
         "narrative": 8
       }
     },
+    "申生": {
+      "type": "person",
+      "label": "申生",
+      "aliases": [
+        "太子申生",
+        "恭太子"
+      ],
+      "tags": [
+        "春秋",
+        "晋国",
+        "骊姬之乱",
+        "晋献公"
+      ],
+      "featured": true,
+      "path": "pages/申生.md",
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "白登之围": {
       "type": "event",
       "label": "白登之围",
@@ -8887,6 +8962,32 @@
         "narrative": 8
       }
     },
+    "荀卿": {
+      "type": "person",
+      "label": "荀卿",
+      "aliases": [
+        "荀子",
+        "荀况",
+        "荀卿"
+      ],
+      "tags": [
+        "战国",
+        "儒家",
+        "赵国",
+        "稷下学宫"
+      ],
+      "featured": false,
+      "path": "pages/荀卿.md",
+      "quality_score": 13,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "荀瑶": {
       "type": "person",
       "label": "荀瑶",
@@ -9370,6 +9471,33 @@
         "tags": 8,
         "revs": 15,
         "size": 9,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "西门豹": {
+      "type": "person",
+      "label": "西门豹",
+      "aliases": [
+        "西门豹"
+      ],
+      "tags": [
+        "战国",
+        "魏国",
+        "地方官",
+        "治水",
+        "除迷信"
+      ],
+      "featured": true,
+      "path": "pages/西门豹.md",
+      "total_refs": 8,
+      "total_chapters": 3,
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
         "manual": 5,
         "narrative": 8
       }
@@ -9891,6 +10019,40 @@
         "tags": 8,
         "revs": 15,
         "size": 10,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
+    "邹忌": {
+      "type": "person",
+      "label": "邹忌",
+      "aliases": [
+        "驺忌",
+        "驺忌子",
+        "成侯邹忌"
+      ],
+      "tags": [
+        "战国",
+        "齐国",
+        "齐威王",
+        "谋士",
+        "相国"
+      ],
+      "featured": true,
+      "path": "pages/邹忌.md",
+      "total_refs": 3,
+      "total_chapters": 2,
+      "lifespan": {
+        "birth": -385,
+        "death": -319,
+        "note": "约"
+      },
+      "quality_score": 21,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
         "manual": 5,
         "narrative": 8
       }
@@ -11890,6 +12052,8 @@
     "高阳氏": "帝颛顼",
     "平原君": "平原君",
     "赵胜": "平原君",
+    "庄子": "庄子",
+    "庄周": "庄子",
     "廉颇": "廉颇",
     "信平君": "廉颇",
     "廉将军": "廉颇",
@@ -12082,6 +12246,9 @@
     "申包胥": "申包胥",
     "申屠嘉": "申屠嘉",
     "申屠丞相": "申屠嘉",
+    "申生": "申生",
+    "太子申生": "申生",
+    "恭太子": "申生",
     "白登之围": "白登之围",
     "白登之战": "白登之围",
     "白登围": "白登之围",
@@ -12162,6 +12329,9 @@
     "陶朱公": "范蠡",
     "鸱夷子皮": "范蠡",
     "范雎": "范雎",
+    "荀卿": "荀卿",
+    "荀子": "荀卿",
+    "荀况": "荀卿",
     "荀瑶": "荀瑶",
     "智伯": "荀瑶",
     "知伯": "荀瑶",
@@ -12203,6 +12373,7 @@
     "袁盎": "袁盎",
     "袁丝": "袁盎",
     "袁将军": "袁盎",
+    "西门豹": "西门豹",
     "豫让": "豫让",
     "贾谊": "贾谊",
     "贾生": "贾谊",
@@ -12246,6 +12417,10 @@
     "赵高": "赵高",
     "丞相高": "赵高",
     "中车府令": "赵高",
+    "邹忌": "邹忌",
+    "驺忌": "邹忌",
+    "驺忌子": "邹忌",
+    "成侯邹忌": "邹忌",
     "郅都": "郅都",
     "郑厉公": "郑厉公",
     "郑当时": "郑当时",
@@ -12363,5 +12538,5 @@
     "法章": "齐襄王",
     "襄王": "齐襄王"
   },
-  "generated": "2026-04-23T08:13:01"
+  "generated": "2026-04-23T08:22:21"
 }
