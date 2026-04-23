@@ -78,12 +78,20 @@
 
 ### 2. 写 wiki 修订记录 (用户可见)
 
-当 action 改动了 `wiki/public/pages/<slug>.md` 时, **必须**调用:
+当 action 改动了 `wiki/public/pages/<slug>.md` 时, **必须**调用（**删除前**同样必须调用，用 `--action delete`）:
 
 ```bash
+# 普通编辑
 python3 wiki/scripts/butler/record_revision.py <slug> \
   --summary "butler/<action>: <slug> <一句话>" \
   --author butler
+
+# 删除页面（必须在 git rm 之前调用）
+python3 wiki/scripts/butler/record_revision.py <slug> \
+  --action delete \
+  --summary "butler/delete-page: <slug> <删除原因>" \
+  --author butler
+# 然后再执行 git rm wiki/public/pages/<slug>.md
 ```
 
 产出:

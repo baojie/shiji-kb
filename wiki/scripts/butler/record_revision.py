@@ -48,6 +48,9 @@ def main() -> int:
     ap.add_argument('page', help='slug (without .md)')
     ap.add_argument('--summary', default='', help='修订说明')
     ap.add_argument('--author', default='butler')
+    ap.add_argument('--action', default='edit',
+                    choices=['edit', 'delete'],
+                    help='edit（默认）或 delete（删除前调用，留快照）')
     ap.add_argument('--timestamp', default=None,
                     help='ISO 时间 (默认现在). 用于补录历史.')
     args = ap.parse_args()
@@ -102,9 +105,14 @@ def main() -> int:
         'size': len(content.encode('utf-8')),
         'content': content,  # inlined
     }
+    if args.action == 'delete':
+        entry['action'] = 'delete'
     data['revisions'].insert(0, entry)
     data['latest_rev_id'] = rev_id
     data['revision_count'] = len(data['revisions'])
+    if args.action == 'delete':
+        data['deleted'] = True
+        data['deleted_at'] = ts_iso
     page_json.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + '\n',
         encoding='utf-8'
@@ -160,7 +168,8 @@ def main() -> int:
         encoding='utf-8'
     )
 
-    print(f'✓ {page} rev={rev_id} size={len(content)} author={args.author}')
+    verb = '(deleted)' if args.action == 'delete' else ''
+    print(f'✓ {page} rev={rev_id} size={len(content)} author={args.author} {verb}')
     return 0
 
 
