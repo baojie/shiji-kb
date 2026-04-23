@@ -88,9 +88,10 @@ def main() -> int:
         }
         pages[pid] = entry
 
-        # alias_index: 收 id + label + aliases
+        # alias_index: 收 slug(文件名) + id + label + aliases
         # 单字 alias 跳过: 太通用，冲突率极高，搜索几乎无用
-        for key in [pid, entry["label"], *entry["aliases"]]:
+        slug = md.stem  # 文件名去掉 .md
+        for key in [slug, pid, entry["label"], *entry["aliases"]]:
             if not key:
                 continue
             if len(str(key)) < 2:  # 单字跳过
