@@ -45737,18 +45737,19 @@
       "tags": [
         "地名",
         "楚汉",
+        "项羽",
         "都城"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/彭城.md",
-      "quality_score": 1,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "彭城之战": {
@@ -57215,6 +57216,28 @@
         "narrative": 8
       }
     },
+    "杨敞": {
+      "type": "person",
+      "label": "杨敞",
+      "aliases": [],
+      "tags": [
+        "西汉",
+        "汉昭帝",
+        "丞相",
+        "安平侯"
+      ],
+      "featured": false,
+      "path": "pages/杨敞.md",
+      "quality_score": 9,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": -5
+      }
+    },
     "杨武": {
       "type": "person",
       "label": "杨武",
@@ -59922,6 +59945,32 @@
         "size": 2,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "楚武王": {
+      "type": "person",
+      "label": "楚武王",
+      "aliases": [
+        "熊通"
+      ],
+      "tags": [
+        "春秋",
+        "楚国",
+        "楚君",
+        "称王"
+      ],
+      "featured": false,
+      "path": "pages/楚武王.md",
+      "total_refs": 10,
+      "total_chapters": 3,
+      "quality_score": 9,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": -5
       }
     },
     "楚武王始称王": {
@@ -87948,18 +87997,19 @@
       "tags": [
         "地名",
         "楚汉",
-        "战场"
+        "战场",
+        "关中门户"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/荥阳.md",
-      "quality_score": 1,
+      "quality_score": 27,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 3,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "荥阳引河开鸿沟": {
@@ -97903,18 +97953,19 @@
       "tags": [
         "地名",
         "赵国",
-        "都城"
+        "都城",
+        "战国"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/邯郸.md",
-      "quality_score": 1,
+      "quality_score": 27,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 3,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "邯郸解围": {
@@ -116482,6 +116533,7 @@
     "杨何": "杨何",
     "杨可告缗遍天下": "杨可告缗遍天下",
     "杨喜": "杨喜",
+    "杨敞": "杨敞",
     "杨武": "杨武",
     "杨虚侯国": "杨虚侯国",
     "松兹侯国": "松兹侯国",
@@ -116628,6 +116680,8 @@
     "熊珍": "楚昭王",
     "楚昭王复入郢": "楚昭王复入郢",
     "楚昭王欲封": "楚昭王欲封",
+    "楚武王": "楚武王",
+    "熊通": "楚武王",
     "楚武王始称王": "楚武王始称王",
     "楚汉垓下、杀韩信": "楚汉垓下、杀韩信",
     "楚灭蔡": "楚灭蔡",
@@ -119464,5 +119518,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T02:20:39"
+  "generated": "2026-04-24T02:23:12"
 }
