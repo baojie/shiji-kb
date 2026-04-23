@@ -5056,18 +5056,19 @@
       "tags": [
         "西汉",
         "汉武帝",
-        "上书"
+        "上书",
+        "郎中"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/严安.md",
-      "quality_score": 1,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "严安上书": {
@@ -6208,16 +6209,16 @@
         "力士",
         "传说"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/乌获.md",
-      "quality_score": 3,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "乐乘": {
@@ -8550,6 +8551,28 @@
         "size": 2,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "任鄙": {
+      "type": "person",
+      "label": "任鄙",
+      "aliases": [],
+      "tags": [
+        "战国",
+        "秦国",
+        "力士",
+        "传说"
+      ],
+      "featured": false,
+      "path": "pages/任鄙.md",
+      "quality_score": 9,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": -5
       }
     },
     "仿建六国宫室": {
@@ -100234,19 +100257,20 @@
       "aliases": [],
       "tags": [
         "地名",
-        "汉朝",
-        "都城"
+        "西汉",
+        "都城",
+        "关中"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/长安.md",
-      "quality_score": 1,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "长安君": {
@@ -108102,6 +108126,30 @@
         "narrative": 8
       }
     },
+    "马陵": {
+      "type": "place",
+      "label": "马陵",
+      "aliases": [
+        "马陵道"
+      ],
+      "tags": [
+        "战国",
+        "地名",
+        "战场",
+        "齐魏"
+      ],
+      "featured": false,
+      "path": "pages/马陵.md",
+      "quality_score": 18,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 2,
+        "manual": 5,
+        "narrative": 3
+      }
+    },
     "马陵之战": {
       "type": "event",
       "label": "马陵之战",
@@ -113837,6 +113885,7 @@
     "任泗水亭长": "任泗水亭长",
     "任用范蠡文种": "任用范蠡文种",
     "任用贤臣治民": "任用贤臣治民",
+    "任鄙": "任鄙",
     "仿建六国宫室": "仿建六国宫室",
     "伊即轩": "伊即轩",
     "伊尹": "伊尹",
@@ -119109,6 +119158,8 @@
     "马邑之谋匈奴绝和亲": "马邑之谋匈奴绝和亲",
     "马邑之谋李广参战": "马邑之谋李广参战",
     "马邑伏击匈奴不合": "马邑伏击匈奴不合",
+    "马陵": "马陵",
+    "马陵道": "马陵",
     "马陵之战": "马陵之战",
     "马陵之战完整战术方法论：减灶诱敌三层心理设计精确时机计算与伏击组合拳": "马陵之战完整战术方法论：减灶诱敌三层心理设计精确时机计算与伏击组合拳",
     "马陵之战庞涓自刭": "马陵之战庞涓自刭",
@@ -119413,5 +119464,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T02:10:42"
+  "generated": "2026-04-24T02:20:39"
 }
