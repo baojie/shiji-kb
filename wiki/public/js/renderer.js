@@ -233,7 +233,7 @@ export function renderHome(core) {
       <div class="featured-grid">${featuredHtml}</div>
 
       <nav class="home-links">
-        <a href="#?all" class="home-link">全部 ${ids.length} 页 →</a>
+        <a href="#${encodeURIComponent('Special:AllPages')}" class="home-link">全部 ${ids.length} 页 →</a>
         <a href="#?recent" class="home-link">最近修订 →</a>
         <a href="#${encodeURIComponent('Special:Random')}" class="home-link">随机页 →</a>
       </nav>
@@ -693,7 +693,7 @@ function setupFirstCharFilter(container) {
 }
 
 /**
- * All 页 (#?all): 全部页面的完整列表, 分组可切换 (type / era / alpha).
+ * All 页 (Special:AllPages): 全部页面的完整列表, 分组可切换 (type / era / alpha).
  * 取代主页原来的 "全部 N 页" 折叠区.
  */
 export function renderAll(core) {

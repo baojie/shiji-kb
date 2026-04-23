@@ -27,7 +27,7 @@ async function route(core) {
     if (type) { renderCategory(core, 'type', type); setStatus(''); return; }
     if (tag) { renderCategory(core, 'tag', tag); setStatus(''); return; }
     if (params.has('all')) {
-      renderAll(core);
+      location.hash = encodeURIComponent('Special:AllPages');
       setStatus(''); return;
     }
     if (params.has('recent')) {
@@ -101,6 +101,10 @@ async function route(core) {
   }
   if (raw === 'Special:Plugins') {
     renderSpecialPlugins(core);
+    setStatus(''); return;
+  }
+  if (raw === 'Special:AllPages') {
+    renderAll(core);
     setStatus(''); return;
   }
   if (raw === 'Special:All') {

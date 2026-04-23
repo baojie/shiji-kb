@@ -3,11 +3,12 @@
 import { escapeHtml } from './util.js';
 
 const SPECIAL_PAGES = [
-  { id: 'Special:知识量',  desc: '知识量（K）度量的定义与公式' },
-  { id: 'Special:Settings', desc: '插件开关与用户设置' },
-  { id: 'Special:Plugins',  desc: '已安装插件列表' },
-  { id: 'Special:All',      desc: '所有特殊系统页面索引' },
-  { id: 'Special:Random',   desc: '随机跳转到一个非章节页面' },
+  { id: 'Special:AllPages',  desc: '所有 wiki 页面的完整列表，支持分组切换' },
+  { id: 'Special:知识量',   desc: '知识量（K）度量的定义与公式' },
+  { id: 'Special:Settings',  desc: '插件开关与用户设置' },
+  { id: 'Special:Plugins',   desc: '已安装插件列表' },
+  { id: 'Special:All',       desc: '所有特殊系统页面索引' },
+  { id: 'Special:Random',    desc: '随机跳转到一个非章节页面' },
 ];
 
 function setPage(title, html) {
@@ -147,6 +148,7 @@ export function renderSpecialAll(core) {
 
   // 合并硬编码路由（不在 registry 里的）
   const hardcoded = [
+    { pid: 'Special:AllPages', label: '所有页面' },
     { pid: 'Special:Random',   label: '随机页' },
     { pid: 'Special:Settings', label: '设置' },
     { pid: 'Special:Plugins',  label: '插件列表' },
