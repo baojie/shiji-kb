@@ -171,7 +171,6 @@ export async function renderPage(core, pid, meta, mdText) {
     brokenInfo.textContent = '';
   }
 
-  if (front.auto_generated) injectWantButton(pid);
 
   window.scrollTo(0, 0);
 }
