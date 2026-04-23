@@ -14,6 +14,7 @@ export const TYPE_LABELS = {
   overview: '综述',
   meta: '元页',
   sanwen: '散文',
+  story: '故事',
 };
 
 export function escapeHtml(s) {
