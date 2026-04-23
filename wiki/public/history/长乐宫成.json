@@ -1,8 +1,28 @@
 {
   "page": "长乐宫成",
-  "latest_rev_id": "20260423-161434-8eaf2d",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164951-5e37f2",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164951-5e37f2",
+      "timestamp": "2026-04-23T16:49:51Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163515-914b62",
+      "content_hash": "sha256:5e37f2b144c4c76321f83b43fc6bf1181de6e33c0f8796761c17b57d53d3bea3",
+      "size": 808,
+      "content": "---\nid: \"长乐宫成\"\ntype: event\ntitle: 长乐宫成\ndescription: 高祖自平城过赵、洛阳至长安。长乐宫建成，丞相以下徙治长安，汉朝正式定都长安。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-078]\ndate: \"〖%七年〗 （公元前200年）\"\n---\n\n::: meta\npn: (008-66)\nevent_type: 建设\nlocation: \"长安\"\nchapter: [高祖本纪]\n:::\n\n# 长乐宫成\n\n> 高祖自平城过赵、洛阳至长安。长乐宫建成，丞相以下徙治长安，汉朝正式定都长安。\n\n**主要人物**：刘邦\n\n## 事件经过\n\n高祖自平城过赵、洛阳至长安。长乐宫建成，丞相以下徙治长安，汉朝正式定都长安。\n\n## 原文\n\n> 二月，高祖自平城过赵、雒阳，至长安。长乐宫成，丞相已下徙治长安。\n\n"
+    },
+    {
+      "rev_id": "20260423-163515-914b62",
+      "timestamp": "2026-04-23T16:35:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161434-8eaf2d",
+      "content_hash": "sha256:914b62fe73a354f7847f60bc9102a9974ce0f96b5d11e8afd3aa0af7daa28103",
+      "size": 782,
+      "content": "---\nid: \"长乐宫成\"\ntype: event\ntitle: 长乐宫成\ndescription: 高祖自平城过赵、洛阳至长安。长乐宫建成，丞相以下徙治长安，汉朝正式定都长安。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-078]\ndate: \"〖%七年〗 （公元前200年）\"\n---\n\n::: meta\npn: \"[66]\"\nevent_type: 建设\nlocation: \"长安\"\n:::\n\n# 长乐宫成\n\n> 高祖自平城过赵、洛阳至长安。长乐宫建成，丞相以下徙治长安，汉朝正式定都长安。\n\n**主要人物**：刘邦\n\n## 事件经过\n\n高祖自平城过赵、洛阳至长安。长乐宫建成，丞相以下徙治长安，汉朝正式定都长安。\n\n## 原文\n\n> 二月，高祖自平城过赵、雒阳，至长安。长乐宫成，丞相已下徙治长安。\n\n"
+    },
     {
       "rev_id": "20260423-161434-8eaf2d",
       "timestamp": "2026-04-23T16:14:34Z",

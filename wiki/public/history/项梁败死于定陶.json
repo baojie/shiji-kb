@@ -1,8 +1,28 @@
 {
   "page": "项梁败死于定陶",
-  "latest_rev_id": "20260423-161538-22f193",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165010-9c16da",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165010-9c16da",
+      "timestamp": "2026-04-23T16:50:10Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163639-dec1f9",
+      "content_hash": "sha256:9c16da659e9ab23dfb67d35de5a851b69fb79521c24276e8d892d0a26472eee3",
+      "size": 925,
+      "content": "---\nid: \"项梁败死于定陶\"\ntype: event\ntitle: 项梁败死于定陶\ndescription: 章邯在定陶破杀项梁。项羽恐惧，还军彭城。楚都徙至彭城。项梁之死是楚军的重大挫折，也促使项羽崛起。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-007]\ndate: \"〖%二世二年九月〗 （公元前208年）\"\n---\n\n::: meta\npn: (016-r5)\nevent_type: 战争\nlocation: \"定陶\"\nchapter: [秦楚之际月表]\n:::\n\n# 项梁败死于定陶\n\n> 章邯在定陶破杀项梁。项羽恐惧，还军彭城。楚都徙至彭城。项梁之死是楚军的重大挫折，也促使项羽崛起。\n\n**主要人物**：项梁\n\n## 事件经过\n\n章邯在定陶破杀项梁。项羽恐惧，还军彭城。楚都徙至彭城。项梁之死是楚军的重大挫折，也促使项羽崛起。\n\n## 原文\n\n> 十三。章邯破杀项梁于定陶，项羽恐，还军彭城。\n\n"
+    },
+    {
+      "rev_id": "20260423-163639-dec1f9",
+      "timestamp": "2026-04-23T16:36:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161538-22f193",
+      "content_hash": "sha256:dec1f9f50503e6dcabb7420b6f2d6de9c32fb6fc16cb136a280357275e5f98d4",
+      "size": 891,
+      "content": "---\nid: \"项梁败死于定陶\"\ntype: event\ntitle: 项梁败死于定陶\ndescription: 章邯在定陶破杀项梁。项羽恐惧，还军彭城。楚都徙至彭城。项梁之死是楚军的重大挫折，也促使项羽崛起。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-007]\ndate: \"〖%二世二年九月〗 （公元前208年）\"\n---\n\n::: meta\npn: \"r5\"\nevent_type: 战争\nlocation: \"定陶\"\n:::\n\n# 项梁败死于定陶\n\n> 章邯在定陶破杀项梁。项羽恐惧，还军彭城。楚都徙至彭城。项梁之死是楚军的重大挫折，也促使项羽崛起。\n\n**主要人物**：项梁\n\n## 事件经过\n\n章邯在定陶破杀项梁。项羽恐惧，还军彭城。楚都徙至彭城。项梁之死是楚军的重大挫折，也促使项羽崛起。\n\n## 原文\n\n> 十三。章邯破杀项梁于定陶，项羽恐，还军彭城。\n\n"
+    },
     {
       "rev_id": "20260423-161538-22f193",
       "timestamp": "2026-04-23T16:15:38Z",

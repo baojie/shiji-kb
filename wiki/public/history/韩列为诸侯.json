@@ -1,8 +1,28 @@
 {
   "page": "韩列为诸侯",
-  "latest_rev_id": "20260423-161526-44194a",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165006-cb339b",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165006-cb339b",
+      "timestamp": "2026-04-23T16:50:06Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163621-73817d",
+      "content_hash": "sha256:cb339b9b75e60a16ec131c2f9643f2fae050d4ebdb44fa9d4a577316fdd0480d",
+      "size": 662,
+      "content": "---\nid: \"韩列为诸侯\"\ntype: event\ntitle: 韩列为诸侯\ndescription: 景侯六年，与赵、魏俱得列为诸侯，韩正式成为独立诸侯国。\ntags: [史记, 事件, 韩世家]\nsources: [韩世家]\nevent_ids: [045-005]\ndate: \"〖;景侯〗〖%六年〗 （公元前403年）\"\n---\n\n::: meta\npn: (045-5.2)\nevent_type: 继位\nchapter: [韩世家]\n:::\n\n# 韩列为诸侯\n\n> 景侯六年，与赵、魏俱得列为诸侯，韩正式成为独立诸侯国。\n\n**主要人物**：景侯、赵、魏\n\n## 事件经过\n\n景侯六年，与赵、魏俱得列为诸侯，韩正式成为独立诸侯国。\n\n## 原文\n\n> 六年，与赵、魏俱得列为诸侯。\n\n"
+    },
+    {
+      "rev_id": "20260423-163621-73817d",
+      "timestamp": "2026-04-23T16:36:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161526-44194a",
+      "content_hash": "sha256:73817dfb03de2c40232f7f0686fad0841bd5bccfe2c2f8ff894654edaf44b90e",
+      "size": 639,
+      "content": "---\nid: \"韩列为诸侯\"\ntype: event\ntitle: 韩列为诸侯\ndescription: 景侯六年，与赵、魏俱得列为诸侯，韩正式成为独立诸侯国。\ntags: [史记, 事件, 韩世家]\nsources: [韩世家]\nevent_ids: [045-005]\ndate: \"〖;景侯〗〖%六年〗 （公元前403年）\"\n---\n\n::: meta\npn: \"[5.2]\"\nevent_type: 继位\n:::\n\n# 韩列为诸侯\n\n> 景侯六年，与赵、魏俱得列为诸侯，韩正式成为独立诸侯国。\n\n**主要人物**：景侯、赵、魏\n\n## 事件经过\n\n景侯六年，与赵、魏俱得列为诸侯，韩正式成为独立诸侯国。\n\n## 原文\n\n> 六年，与赵、魏俱得列为诸侯。\n\n"
+    },
     {
       "rev_id": "20260423-161526-44194a",
       "timestamp": "2026-04-23T16:15:26Z",

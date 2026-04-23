@@ -1,8 +1,28 @@
 {
   "page": "陈涉起义",
-  "latest_rev_id": "20260423-161459-e8b7dd",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164958-e118af",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164958-e118af",
+      "timestamp": "2026-04-23T16:49:58Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163544-280ae5",
+      "content_hash": "sha256:e118af55b1e039bbe378912326d397a7fec218dfa154a9359c060e45ca1fc2a0",
+      "size": 890,
+      "content": "---\nid: \"陈涉起义\"\ntype: event\ntitle: 陈涉起义\ndescription: 秦二世元年七月，陈涉等在大泽中起事反秦，天下响应。此为秦末农民大起义的开端，也是项梁、项籍起兵的背景。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-004]\ndate: \"〖%二世元年七月〗 （公元前209年）\"\n---\n\n::: meta\npn: (007-7.1)\nevent_type: 战争\nlocation: \"大泽\"\nchapter: [项羽本纪]\n:::\n\n# 陈涉起义\n\n> 秦二世元年七月，陈涉等在大泽中起事反秦，天下响应。此为秦末农民大起义的开端，也是项梁、项籍起兵的背景。\n\n**主要人物**：陈涉\n\n## 事件经过\n\n秦二世元年七月，陈涉等在大泽中起事反秦，天下响应。此为秦末农民大起义的开端，也是项梁、项籍起兵的背景。\n\n## 原文\n\n> 秦二世元年七月，陈涉等起大泽中。\n\n"
+    },
+    {
+      "rev_id": "20260423-163544-280ae5",
+      "timestamp": "2026-04-23T16:35:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161459-e8b7dd",
+      "content_hash": "sha256:280ae5dee38d45da14f662648822eec5565c496fce55e8a36eb7a08bc24ee91a",
+      "size": 864,
+      "content": "---\nid: \"陈涉起义\"\ntype: event\ntitle: 陈涉起义\ndescription: 秦二世元年七月，陈涉等在大泽中起事反秦，天下响应。此为秦末农民大起义的开端，也是项梁、项籍起兵的背景。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-004]\ndate: \"〖%二世元年七月〗 （公元前209年）\"\n---\n\n::: meta\npn: \"[7.1]\"\nevent_type: 战争\nlocation: \"大泽\"\n:::\n\n# 陈涉起义\n\n> 秦二世元年七月，陈涉等在大泽中起事反秦，天下响应。此为秦末农民大起义的开端，也是项梁、项籍起兵的背景。\n\n**主要人物**：陈涉\n\n## 事件经过\n\n秦二世元年七月，陈涉等在大泽中起事反秦，天下响应。此为秦末农民大起义的开端，也是项梁、项籍起兵的背景。\n\n## 原文\n\n> 秦二世元年七月，陈涉等起大泽中。\n\n"
+    },
     {
       "rev_id": "20260423-161459-e8b7dd",
       "timestamp": "2026-04-23T16:14:59Z",

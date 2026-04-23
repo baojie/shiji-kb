@@ -1,8 +1,28 @@
 {
   "page": "项王自立霸王",
-  "latest_rev_id": "20260423-161541-cd351b",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165011-9febf4",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165011-9febf4",
+      "timestamp": "2026-04-23T16:50:11Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163642-49f95f",
+      "content_hash": "sha256:9febf4583be166e2b91143c46a08a749788e7016df48b13a4bdc7bafe5b58253",
+      "size": 764,
+      "content": "---\nid: \"项王自立霸王\"\ntype: event\ntitle: 项王自立霸王\ndescription: 项王自立为西楚霸王，据有九郡之地，以彭城为都。至此项羽权倾天下，号令诸侯。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-037]\ndate: \"（公元前206年）\"\n---\n\n::: meta\npn: (007-103.2)\nevent_type: 继位\nlocation: \"彭城\"\nchapter: [项羽本纪]\n:::\n\n# 项王自立霸王\n\n> 项王自立为西楚霸王，据有九郡之地，以彭城为都。至此项羽权倾天下，号令诸侯。\n\n**主要人物**：项王\n\n## 事件经过\n\n项王自立为西楚霸王，据有九郡之地，以彭城为都。至此项羽权倾天下，号令诸侯。\n\n## 原文\n\n> 项王自立为西楚霸王，王九郡，都彭城。\n\n"
+    },
+    {
+      "rev_id": "20260423-163642-49f95f",
+      "timestamp": "2026-04-23T16:36:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161541-cd351b",
+      "content_hash": "sha256:49f95f832c56e85f830a94b8624b389e2edfae8d4bc2ae3d5d56f0f4c4e4f55e",
+      "size": 738,
+      "content": "---\nid: \"项王自立霸王\"\ntype: event\ntitle: 项王自立霸王\ndescription: 项王自立为西楚霸王，据有九郡之地，以彭城为都。至此项羽权倾天下，号令诸侯。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-037]\ndate: \"（公元前206年）\"\n---\n\n::: meta\npn: \"[103.2]\"\nevent_type: 继位\nlocation: \"彭城\"\n:::\n\n# 项王自立霸王\n\n> 项王自立为西楚霸王，据有九郡之地，以彭城为都。至此项羽权倾天下，号令诸侯。\n\n**主要人物**：项王\n\n## 事件经过\n\n项王自立为西楚霸王，据有九郡之地，以彭城为都。至此项羽权倾天下，号令诸侯。\n\n## 原文\n\n> 项王自立为西楚霸王，王九郡，都彭城。\n\n"
+    },
     {
       "rev_id": "20260423-161541-cd351b",
       "timestamp": "2026-04-23T16:15:41Z",

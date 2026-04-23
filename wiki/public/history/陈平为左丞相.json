@@ -1,8 +1,28 @@
 {
   "page": "陈平为左丞相",
-  "latest_rev_id": "20260423-161448-1d33ae",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164955-5aa20f",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164955-5aa20f",
+      "timestamp": "2026-04-23T16:49:55Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163531-6182c3",
+      "content_hash": "sha256:5aa20f2dd016d34f9b3178bc72d48f2a46cf2f5fa6e3ba29b5c324610e0d2a8d",
+      "size": 747,
+      "content": "---\nid: \"陈平为左丞相\"\ntype: event\ntitle: 陈平为左丞相\ndescription: 孝惠帝六年相国曹参卒，以安国侯王陵为右丞相，陈平为左丞相。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-020]\ndate: \"〖%六年〗 （公元前189年）\"\n---\n\n::: meta\npn: (056-17)\nevent_type: 继位\nchapter: [陈丞相世家]\n:::\n\n# 陈平为左丞相\n\n> 孝惠帝六年相国曹参卒，以安国侯王陵为右丞相，陈平为左丞相。\n\n**主要人物**：曹参、王陵、陈平\n\n## 事件经过\n\n孝惠帝六年相国曹参卒，以安国侯王陵为右丞相，陈平为左丞相。\n\n## 原文\n\n> 孝惠帝六年，相国曹参卒，以安国侯王陵为右丞相，陈平为左丞相。\n\n"
+    },
+    {
+      "rev_id": "20260423-163531-6182c3",
+      "timestamp": "2026-04-23T16:35:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161448-1d33ae",
+      "content_hash": "sha256:6182c3d20cdba76180207217172b656badb53d12056affeb3c2ae09a2b21586e",
+      "size": 718,
+      "content": "---\nid: \"陈平为左丞相\"\ntype: event\ntitle: 陈平为左丞相\ndescription: 孝惠帝六年相国曹参卒，以安国侯王陵为右丞相，陈平为左丞相。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-020]\ndate: \"〖%六年〗 （公元前189年）\"\n---\n\n::: meta\npn: \"[17]\"\nevent_type: 继位\n:::\n\n# 陈平为左丞相\n\n> 孝惠帝六年相国曹参卒，以安国侯王陵为右丞相，陈平为左丞相。\n\n**主要人物**：曹参、王陵、陈平\n\n## 事件经过\n\n孝惠帝六年相国曹参卒，以安国侯王陵为右丞相，陈平为左丞相。\n\n## 原文\n\n> 孝惠帝六年，相国曹参卒，以安国侯王陵为右丞相，陈平为左丞相。\n\n"
+    },
     {
       "rev_id": "20260423-161448-1d33ae",
       "timestamp": "2026-04-23T16:14:48Z",

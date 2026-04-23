@@ -1,8 +1,28 @@
 {
   "page": "韩信贬为淮阴侯",
-  "latest_rev_id": "20260423-161525-6a0e7d",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165006-cabc7e",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165006-cabc7e",
+      "timestamp": "2026-04-23T16:50:06Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163621-dfbda3",
+      "content_hash": "sha256:cabc7e7358b91a6987e316cd853f8e7407d5015da3b5668d8d7bf04ef792fad6",
+      "size": 820,
+      "content": "---\nid: \"韩信贬为淮阴侯\"\ntype: event\ntitle: 韩信贬为淮阴侯\ndescription: 汉王至雒阳后赦免韩信罪过，但将其由楚王贬为淮阴侯。韩信由此失去王位封国，仅为列侯。\ntags: [史记, 事件, 淮阴侯列传]\nsources: [淮阴侯列传]\nevent_ids: [092-024]\ndate: \"（公元前201年）\"\n---\n\n::: meta\npn: (092-12.1)\nevent_type: 政治整顿\nlocation: \"雒阳\"\nchapter: [淮阴侯列传]\n:::\n\n# 韩信贬为淮阴侯\n\n> 汉王至雒阳后赦免韩信罪过，但将其由楚王贬为淮阴侯。韩信由此失去王位封国，仅为列侯。\n\n**主要人物**：韩信、高帝\n\n## 事件经过\n\n汉王至雒阳后赦免韩信罪过，但将其由楚王贬为淮阴侯。韩信由此失去王位封国，仅为列侯。\n\n## 原文\n\n> 至雒阳，赦信罪，以为淮阴侯。\n\n"
+    },
+    {
+      "rev_id": "20260423-163621-dfbda3",
+      "timestamp": "2026-04-23T16:36:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161525-6a0e7d",
+      "content_hash": "sha256:dfbda3202cda11d0c95f4b78ee795bc3c549031945f62e8296db58f9334b1507",
+      "size": 791,
+      "content": "---\nid: \"韩信贬为淮阴侯\"\ntype: event\ntitle: 韩信贬为淮阴侯\ndescription: 汉王至雒阳后赦免韩信罪过，但将其由楚王贬为淮阴侯。韩信由此失去王位封国，仅为列侯。\ntags: [史记, 事件, 淮阴侯列传]\nsources: [淮阴侯列传]\nevent_ids: [092-024]\ndate: \"（公元前201年）\"\n---\n\n::: meta\npn: \"[12.1]\"\nevent_type: 政治整顿\nlocation: \"雒阳\"\n:::\n\n# 韩信贬为淮阴侯\n\n> 汉王至雒阳后赦免韩信罪过，但将其由楚王贬为淮阴侯。韩信由此失去王位封国，仅为列侯。\n\n**主要人物**：韩信、高帝\n\n## 事件经过\n\n汉王至雒阳后赦免韩信罪过，但将其由楚王贬为淮阴侯。韩信由此失去王位封国，仅为列侯。\n\n## 原文\n\n> 至雒阳，赦信罪，以为淮阴侯。\n\n"
+    },
     {
       "rev_id": "20260423-161525-6a0e7d",
       "timestamp": "2026-04-23T16:15:25Z",

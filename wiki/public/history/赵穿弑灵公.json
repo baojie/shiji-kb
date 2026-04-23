@@ -1,8 +1,28 @@
 {
   "page": "赵穿弑灵公",
-  "latest_rev_id": "20260423-161351-8ca4ef",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164941-8b8bad",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164941-8b8bad",
+      "timestamp": "2026-04-23T16:49:41Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163425-cb90e7",
+      "content_hash": "sha256:8b8badf50e268dc37a4d271a34ae1c440ac497d83a7a78399227cbc460ff58d0",
+      "size": 799,
+      "content": "---\nid: \"赵穿弑灵公\"\ntype: event\ntitle: 赵穿弑灵公\ndescription: 灵公欲杀赵盾不成，赵穿弑灵公而立成公。太史书\"赵盾弑其君\"，因其为正卿，亡不出境，反不讨贼。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-005]\ndate: \"（公元前607年）\"\n---\n\n::: meta\npn: (043-3.1)\nevent_type: 政治活动\nchapter: [赵世家]\n:::\n\n# 赵穿弑灵公\n\n> 灵公欲杀赵盾不成，赵穿弑灵公而立成公。太史书\"赵盾弑其君\"，因其为正卿，亡不出境，反不讨贼。\n\n**主要人物**：灵公、赵盾、赵穿\n\n## 事件经过\n\n灵公欲杀赵盾不成，赵穿弑灵公而立成公。太史书\"赵盾弑其君\"，因其为正卿，亡不出境，反不讨贼。\n\n## 原文\n\n> 故太史书曰'赵盾弑其君'。\n\n"
+    },
+    {
+      "rev_id": "20260423-163425-cb90e7",
+      "timestamp": "2026-04-23T16:34:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161351-8ca4ef",
+      "content_hash": "sha256:cb90e7b0e5bbdd3b740a919a1b4fd3aa351273cde77e23d553732143e33ef0f0",
+      "size": 776,
+      "content": "---\nid: \"赵穿弑灵公\"\ntype: event\ntitle: 赵穿弑灵公\ndescription: 灵公欲杀赵盾不成，赵穿弑灵公而立成公。太史书\"赵盾弑其君\"，因其为正卿，亡不出境，反不讨贼。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-005]\ndate: \"（公元前607年）\"\n---\n\n::: meta\npn: \"[3.1]\"\nevent_type: 政治活动\n:::\n\n# 赵穿弑灵公\n\n> 灵公欲杀赵盾不成，赵穿弑灵公而立成公。太史书\"赵盾弑其君\"，因其为正卿，亡不出境，反不讨贼。\n\n**主要人物**：灵公、赵盾、赵穿\n\n## 事件经过\n\n灵公欲杀赵盾不成，赵穿弑灵公而立成公。太史书\"赵盾弑其君\"，因其为正卿，亡不出境，反不讨贼。\n\n## 原文\n\n> 故太史书曰'赵盾弑其君'。\n\n"
+    },
     {
       "rev_id": "20260423-161351-8ca4ef",
       "timestamp": "2026-04-23T16:13:51Z",

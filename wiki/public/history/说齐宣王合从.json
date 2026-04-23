@@ -1,8 +1,28 @@
 {
   "page": "说齐宣王合从",
-  "latest_rev_id": "20260423-161325-dc9f96",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164934-6b457a",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164934-6b457a",
+      "timestamp": "2026-04-23T16:49:34Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163352-213da2",
+      "content_hash": "sha256:6b457abdc3ef76907e8406baac34736609c50578f22142f71cdd42900e833785",
+      "size": 882,
+      "content": "---\nid: \"说齐宣王合从\"\ntype: event\ntitle: 说齐宣王合从\ndescription: 苏秦东说齐宣王，论齐之四塞之固、临菑之富、军力之盛，不当西面事秦。齐王敬以国从。\ntags: [史记, 事件, 苏秦列传]\nsources: [苏秦列传]\nevent_ids: [069-010]\ndate: \"[约公元前308年]\"\n---\n\n::: meta\npn: (069-29)\nevent_type: 政治活动\nlocation: \"齐\"\nchapter: [苏秦列传]\n:::\n\n# 说齐宣王合从\n\n> 苏秦东说齐宣王，论齐之四塞之固、临菑之富、军力之盛，不当西面事秦。齐王敬以国从。\n\n**主要人物**：苏秦、齐宣王\n\n## 事件经过\n\n苏秦东说齐宣王，论齐之四塞之固、临菑之富、军力之盛，不当西面事秦。齐王敬以国从。\n\n## 原文\n\n> 齐王曰：'寡人不敏，僻远守海，穷道东境之国也，未尝得闻馀教。今足下以赵王诏诏之，敬以国从。'\n\n"
+    },
+    {
+      "rev_id": "20260423-163352-213da2",
+      "timestamp": "2026-04-23T16:33:52Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161325-dc9f96",
+      "content_hash": "sha256:213da2199f6210c071efa39ec23761690c7270428bbe43c9afdc91f2ab6c9042",
+      "size": 856,
+      "content": "---\nid: \"说齐宣王合从\"\ntype: event\ntitle: 说齐宣王合从\ndescription: 苏秦东说齐宣王，论齐之四塞之固、临菑之富、军力之盛，不当西面事秦。齐王敬以国从。\ntags: [史记, 事件, 苏秦列传]\nsources: [苏秦列传]\nevent_ids: [069-010]\ndate: \"[约公元前308年]\"\n---\n\n::: meta\npn: \"[29]\"\nevent_type: 政治活动\nlocation: \"齐\"\n:::\n\n# 说齐宣王合从\n\n> 苏秦东说齐宣王，论齐之四塞之固、临菑之富、军力之盛，不当西面事秦。齐王敬以国从。\n\n**主要人物**：苏秦、齐宣王\n\n## 事件经过\n\n苏秦东说齐宣王，论齐之四塞之固、临菑之富、军力之盛，不当西面事秦。齐王敬以国从。\n\n## 原文\n\n> 齐王曰：'寡人不敏，僻远守海，穷道东境之国也，未尝得闻馀教。今足下以赵王诏诏之，敬以国从。'\n\n"
+    },
     {
       "rev_id": "20260423-161325-dc9f96",
       "timestamp": "2026-04-23T16:13:25Z",

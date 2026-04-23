@@ -1,8 +1,28 @@
 {
   "page": "郑桓公始封",
-  "latest_rev_id": "20260423-161422-659e06",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164948-bc8a72",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164948-bc8a72",
+      "timestamp": "2026-04-23T16:49:48Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163500-c3ebf9",
+      "content_hash": "sha256:bc8a72a891e34bcce6ef7b4cc8fbaff874ec09e59f4a71916c5a76a656e8b7eb",
+      "size": 746,
+      "content": "---\nid: \"郑桓公始封\"\ntype: event\ntitle: 郑桓公始封\ndescription: 郑桓公友为周宣王母弟，始封于郑。郑国由此建立，后成为春秋时期重要诸侯国。\ntags: [史记, 事件, 十二诸侯年表]\nsources: [十二诸侯年表]\nevent_ids: [014-012]\ndate: \"（公元前806年）\"\n---\n\n::: meta\npn: (014-r36)\nevent_type: 政治活动\nchapter: [十二诸侯年表]\n:::\n\n# 郑桓公始封\n\n> 郑桓公友为周宣王母弟，始封于郑。郑国由此建立，后成为春秋时期重要诸侯国。\n\n**主要人物**：郑桓公友\n\n## 事件经过\n\n郑桓公友为周宣王母弟，始封于郑。郑国由此建立，后成为春秋时期重要诸侯国。\n\n## 原文\n\n> 郑桓公友元年始封。周宣王母弟。\n\n"
+    },
+    {
+      "rev_id": "20260423-163500-c3ebf9",
+      "timestamp": "2026-04-23T16:35:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161422-659e06",
+      "content_hash": "sha256:c3ebf9811aafd9c8f11c0392707aff04490f4315e3a03ca68c1fe79d01772a9f",
+      "size": 712,
+      "content": "---\nid: \"郑桓公始封\"\ntype: event\ntitle: 郑桓公始封\ndescription: 郑桓公友为周宣王母弟，始封于郑。郑国由此建立，后成为春秋时期重要诸侯国。\ntags: [史记, 事件, 十二诸侯年表]\nsources: [十二诸侯年表]\nevent_ids: [014-012]\ndate: \"（公元前806年）\"\n---\n\n::: meta\npn: \"r36\"\nevent_type: 政治活动\n:::\n\n# 郑桓公始封\n\n> 郑桓公友为周宣王母弟，始封于郑。郑国由此建立，后成为春秋时期重要诸侯国。\n\n**主要人物**：郑桓公友\n\n## 事件经过\n\n郑桓公友为周宣王母弟，始封于郑。郑国由此建立，后成为春秋时期重要诸侯国。\n\n## 原文\n\n> 郑桓公友元年始封。周宣王母弟。\n\n"
+    },
     {
       "rev_id": "20260423-161422-659e06",
       "timestamp": "2026-04-23T16:14:22Z",

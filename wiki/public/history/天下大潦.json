@@ -1,8 +1,18 @@
 {
   "page": "天下大潦",
-  "latest_rev_id": "20260423-162124-6a3924",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164657-2ed07f",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164657-2ed07f",
+      "timestamp": "2026-04-23T16:46:57Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-162124-6a3924",
+      "content_hash": "sha256:2ed07f925525c0502736dd39a94116bfa380162c2c5f29b9fa8b299c18a3ca14",
+      "size": 387,
+      "content": "---\nid: \"天下大潦\"\ntype: event\ntitle: 天下大潦\ndescription: 天下大涝灾。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-035]\ndate: \"（公元前145年）\"\n---\n\n::: meta\npn: (011-18.3)\nevent_type: 自然灾害\nchapter: [孝景本纪]\n:::\n\n# 天下大潦\n\n> 天下大涝灾。\n\n## 事件经过\n\n天下大涝灾。\n\n## 原文\n\n> 天下大潦。\n\n"
+    },
     {
       "rev_id": "20260423-162124-6a3924",
       "timestamp": "2026-04-23T16:21:24Z",

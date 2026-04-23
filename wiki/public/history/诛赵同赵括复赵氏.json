@@ -1,8 +1,28 @@
 {
   "page": "诛赵同赵括复赵氏",
-  "latest_rev_id": "20260423-161322-ffb004",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164933-afbdda",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164933-afbdda",
+      "timestamp": "2026-04-23T16:49:33Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163347-e17dea",
+      "content_hash": "sha256:afbddaa05e0415934ff283da900736ab4b8b505b9fd2e1ef042d598d49f25ccb",
+      "size": 944,
+      "content": "---\nid: \"诛赵同赵括复赵氏\"\ntype: event\ntitle: 诛赵同赵括复赵氏\ndescription: 景公十七年诛赵同赵括族灭之。韩厥曰\"赵衰赵盾之功岂可忘乎\"。乃复令赵庶子武为赵后复与之邑。\ntags: [史记, 事件, 晋世家]\nsources: [晋世家]\nevent_ids: [039-030]\ndate: \"（公元前583年）\"\n---\n\n::: meta\npn: (039-94.109)\nevent_type: 政治活动\nlocation: \"晋\"\nchapter: [晋世家]\n:::\n\n# 诛赵同赵括复赵氏\n\n> 景公十七年诛赵同赵括族灭之。韩厥曰\"赵衰赵盾之功岂可忘乎\"。乃复令赵庶子武为赵后复与之邑。\n\n**主要人物**：赵同、赵括、韩厥\n\n## 事件经过\n\n景公十七年诛赵同赵括族灭之。韩厥曰\"赵衰赵盾之功岂可忘乎\"。乃复令赵庶子武为赵后复与之邑。\n\n## 原文\n\n> 十七年，诛赵同、赵括，族灭之。韩厥曰：'赵衰、赵盾之功岂可忘乎？柰何绝祀！'乃复令赵庶子武为赵後。\n\n"
+    },
+    {
+      "rev_id": "20260423-163347-e17dea",
+      "timestamp": "2026-04-23T16:33:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161322-ffb004",
+      "content_hash": "sha256:e17deaa29b8a46d53ba82ea366fb390fb8332b86b51d104ac80434ff7dc7a043",
+      "size": 921,
+      "content": "---\nid: \"诛赵同赵括复赵氏\"\ntype: event\ntitle: 诛赵同赵括复赵氏\ndescription: 景公十七年诛赵同赵括族灭之。韩厥曰\"赵衰赵盾之功岂可忘乎\"。乃复令赵庶子武为赵后复与之邑。\ntags: [史记, 事件, 晋世家]\nsources: [晋世家]\nevent_ids: [039-030]\ndate: \"（公元前583年）\"\n---\n\n::: meta\npn: \"[94.109]\"\nevent_type: 政治活动\nlocation: \"晋\"\n:::\n\n# 诛赵同赵括复赵氏\n\n> 景公十七年诛赵同赵括族灭之。韩厥曰\"赵衰赵盾之功岂可忘乎\"。乃复令赵庶子武为赵后复与之邑。\n\n**主要人物**：赵同、赵括、韩厥\n\n## 事件经过\n\n景公十七年诛赵同赵括族灭之。韩厥曰\"赵衰赵盾之功岂可忘乎\"。乃复令赵庶子武为赵后复与之邑。\n\n## 原文\n\n> 十七年，诛赵同、赵括，族灭之。韩厥曰：'赵衰、赵盾之功岂可忘乎？柰何绝祀！'乃复令赵庶子武为赵後。\n\n"
+    },
     {
       "rev_id": "20260423-161322-ffb004",
       "timestamp": "2026-04-23T16:13:22Z",

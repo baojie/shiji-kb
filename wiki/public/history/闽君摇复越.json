@@ -1,8 +1,28 @@
 {
   "page": "闽君摇复越",
-  "latest_rev_id": "20260423-161439-cde020",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164953-ad4b90",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164953-ad4b90",
+      "timestamp": "2026-04-23T16:49:53Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163520-07adf1",
+      "content_hash": "sha256:ad4b9061706f35523e500a5bddbe3ef0999b2e98a8ccc45e1251c3c9cbc61f0e",
+      "size": 829,
+      "content": "---\nid: \"闽君摇复越\"\ntype: event\ntitle: 闽君摇复越\ndescription: 后七世，至闽君摇，佐诸侯平秦。汉高帝复以摇为越王，以奉越后。东越、闽君，皆其后也。\ntags: [史记, 事件, 越王句践世家]\nsources: [越王句践世家]\nevent_ids: [041-020]\ndate: \"（公元前192年）\"\n---\n\n::: meta\npn: (041-20)\nevent_type: 继位\nchapter: [越王句践世家]\n:::\n\n# 闽君摇复越\n\n> 后七世，至闽君摇，佐诸侯平秦。汉高帝复以摇为越王，以奉越后。东越、闽君，皆其后也。\n\n**主要人物**：摇、高帝\n\n## 事件经过\n\n后七世，至闽君摇，佐诸侯平秦。汉高帝复以摇为越王，以奉越后。东越、闽君，皆其后也。\n\n## 原文\n\n> 後七世，至闽君摇，佐诸侯平秦。汉高帝复以摇为越王，以奉越後。\n\n"
+    },
+    {
+      "rev_id": "20260423-163520-07adf1",
+      "timestamp": "2026-04-23T16:35:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161439-cde020",
+      "content_hash": "sha256:07adf1d1a1b16a6a8434e51f73b0a85c09c0650d5d61c9ec0a74516333f10132",
+      "size": 797,
+      "content": "---\nid: \"闽君摇复越\"\ntype: event\ntitle: 闽君摇复越\ndescription: 后七世，至闽君摇，佐诸侯平秦。汉高帝复以摇为越王，以奉越后。东越、闽君，皆其后也。\ntags: [史记, 事件, 越王句践世家]\nsources: [越王句践世家]\nevent_ids: [041-020]\ndate: \"（公元前192年）\"\n---\n\n::: meta\npn: \"[20]\"\nevent_type: 继位\n:::\n\n# 闽君摇复越\n\n> 后七世，至闽君摇，佐诸侯平秦。汉高帝复以摇为越王，以奉越后。东越、闽君，皆其后也。\n\n**主要人物**：摇、高帝\n\n## 事件经过\n\n后七世，至闽君摇，佐诸侯平秦。汉高帝复以摇为越王，以奉越后。东越、闽君，皆其后也。\n\n## 原文\n\n> 後七世，至闽君摇，佐诸侯平秦。汉高帝复以摇为越王，以奉越後。\n\n"
+    },
     {
       "rev_id": "20260423-161439-cde020",
       "timestamp": "2026-04-23T16:14:39Z",

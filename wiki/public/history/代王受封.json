@@ -1,8 +1,18 @@
 {
   "page": "代王受封",
-  "latest_rev_id": "20260423-161752-7add04",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164432-b045c5",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164432-b045c5",
+      "timestamp": "2026-04-23T16:44:32Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-161752-7add04",
+      "content_hash": "sha256:b045c5407e91258ac7f0173acd26995ee5d2fca445869d3d8a209edf88710355",
+      "size": 927,
+      "content": "---\nid: \"代王受封\"\ntype: event\ntitle: 代王受封\ndescription: 孝文皇帝是高祖的中子。高祖十一年春，破陈豨军，平定代地，立为代王，都中都。太后为薄氏之子。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-001]\ndate: \"〖%高祖十一年春〗 （公元前196年）\"\n---\n\n::: meta\npn: (010-1.1-1.3)\nevent_type: 继位\nlocation: \"代、中都\"\nchapter: [孝文本纪]\n:::\n\n# 代王受封\n\n> 孝文皇帝是高祖的中子。高祖十一年春，破陈豨军，平定代地，立为代王，都中都。太后为薄氏之子。\n\n**主要人物**：代王、陈豨、高祖\n\n## 事件经过\n\n孝文皇帝是高祖的中子。高祖十一年春，破陈豨军，平定代地，立为代王，都中都。太后为薄氏之子。\n\n## 原文\n\n> 孝文皇帝，高祖中子也。高祖十一年春，已破陈豨军，定代地，立为代王，都中都。\n\n"
+    },
     {
       "rev_id": "20260423-161752-7add04",
       "timestamp": "2026-04-23T16:17:52Z",

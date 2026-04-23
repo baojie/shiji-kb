@@ -1,8 +1,28 @@
 {
   "page": "马邑之谋李广参战",
-  "latest_rev_id": "20260423-161555-139e1a",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165014-f02b23",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165014-f02b23",
+      "timestamp": "2026-04-23T16:50:14Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163659-cadeec",
+      "content_hash": "sha256:f02b238318e4ab33b5d09cac32e423871b59ef392d8e81c79b794d68d4e76543",
+      "size": 938,
+      "content": "---\nid: \"马邑之谋李广参战\"\ntype: event\ntitle: 马邑之谋李广参战\ndescription: 汉以马邑城诱单于，使大军伏马邑旁谷，李广为骁骑将军领属护军将军。单于觉察引兵还，汉军皆无功。\ntags: [史记, 事件, 李将军列传]\nsources: [李将军列传]\nevent_ids: [109-005]\ndate: \"〖%元光二年〗 （公元前133年）\"\n---\n\n::: meta\npn: (109-1.5)\nevent_type: 战争\nlocation: \"马邑\"\nchapter: [李将军列传]\n:::\n\n# 马邑之谋李广参战\n\n> 汉以马邑城诱单于，使大军伏马邑旁谷，李广为骁骑将军领属护军将军。单于觉察引兵还，汉军皆无功。\n\n**主要人物**：李广、韩安国\n\n## 事件经过\n\n汉以马邑城诱单于，使大军伏马邑旁谷，李广为骁骑将军领属护军将军。单于觉察引兵还，汉军皆无功。\n\n## 原文\n\n> 而广为骁骑将军，领属护军将军。是时单于觉之，去，汉军皆无功。\n\n"
+    },
+    {
+      "rev_id": "20260423-163659-cadeec",
+      "timestamp": "2026-04-23T16:36:59Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161555-139e1a",
+      "content_hash": "sha256:cadeecc923a0fca9a670dd952060bba8ee64ea7a6156e28a73aa452563027d33",
+      "size": 909,
+      "content": "---\nid: \"马邑之谋李广参战\"\ntype: event\ntitle: 马邑之谋李广参战\ndescription: 汉以马邑城诱单于，使大军伏马邑旁谷，李广为骁骑将军领属护军将军。单于觉察引兵还，汉军皆无功。\ntags: [史记, 事件, 李将军列传]\nsources: [李将军列传]\nevent_ids: [109-005]\ndate: \"〖%元光二年〗 （公元前133年）\"\n---\n\n::: meta\npn: \"[1.5]\"\nevent_type: 战争\nlocation: \"马邑\"\n:::\n\n# 马邑之谋李广参战\n\n> 汉以马邑城诱单于，使大军伏马邑旁谷，李广为骁骑将军领属护军将军。单于觉察引兵还，汉军皆无功。\n\n**主要人物**：李广、韩安国\n\n## 事件经过\n\n汉以马邑城诱单于，使大军伏马邑旁谷，李广为骁骑将军领属护军将军。单于觉察引兵还，汉军皆无功。\n\n## 原文\n\n> 而广为骁骑将军，领属护军将军。是时单于觉之，去，汉军皆无功。\n\n"
+    },
     {
       "rev_id": "20260423-161555-139e1a",
       "timestamp": "2026-04-23T16:15:55Z",

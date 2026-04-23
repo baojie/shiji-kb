@@ -1,8 +1,28 @@
 {
   "page": "项羽屠咸阳",
-  "latest_rev_id": "20260423-161545-89eee3",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165012-789bf1",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165012-789bf1",
+      "timestamp": "2026-04-23T16:50:12Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163647-e00022",
+      "content_hash": "sha256:789bf1ee600d524048d1bc216f63bb7bcd5e7c1a7d7388c328acbd140985120d",
+      "size": 802,
+      "content": "---\nid: \"项羽屠咸阳\"\ntype: event\ntitle: 项羽屠咸阳\ndescription: 项羽遂西进，屠烧咸阳秦宫室，所过无不残破。秦人大失望，但畏惧不敢不服。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-030]\ndate: \"〖%十二月〗 （公元前206年）\"\n---\n\n::: meta\npn: (008-25)\nevent_type: 战争\nlocation: \"咸阳\"\nchapter: [高祖本纪]\n:::\n\n# 项羽屠咸阳\n\n> 项羽遂西进，屠烧咸阳秦宫室，所过无不残破。秦人大失望，但畏惧不敢不服。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽遂西进，屠烧咸阳秦宫室，所过无不残破。秦人大失望，但畏惧不敢不服。\n\n## 原文\n\n> 项羽遂西，屠烧咸阳秦宫室，所过无不残破。秦人大失望，然恐，不敢不服耳。\n\n"
+    },
+    {
+      "rev_id": "20260423-163647-e00022",
+      "timestamp": "2026-04-23T16:36:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161545-89eee3",
+      "content_hash": "sha256:e00022346e9689012d57f8d4b76aad7e139931be65ab302d84a60904e733d16d",
+      "size": 776,
+      "content": "---\nid: \"项羽屠咸阳\"\ntype: event\ntitle: 项羽屠咸阳\ndescription: 项羽遂西进，屠烧咸阳秦宫室，所过无不残破。秦人大失望，但畏惧不敢不服。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-030]\ndate: \"〖%十二月〗 （公元前206年）\"\n---\n\n::: meta\npn: \"[25]\"\nevent_type: 战争\nlocation: \"咸阳\"\n:::\n\n# 项羽屠咸阳\n\n> 项羽遂西进，屠烧咸阳秦宫室，所过无不残破。秦人大失望，但畏惧不敢不服。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽遂西进，屠烧咸阳秦宫室，所过无不残破。秦人大失望，但畏惧不敢不服。\n\n## 原文\n\n> 项羽遂西，屠烧咸阳秦宫室，所过无不残破。秦人大失望，然恐，不敢不服耳。\n\n"
+    },
     {
       "rev_id": "20260423-161545-89eee3",
       "timestamp": "2026-04-23T16:15:45Z",

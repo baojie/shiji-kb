@@ -1,8 +1,28 @@
 {
   "page": "韩信为匈奴击边",
-  "latest_rev_id": "20260423-161518-728aa0",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165004-da8eb7",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165004-da8eb7",
+      "timestamp": "2026-04-23T16:50:04Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163611-e60b6e",
+      "content_hash": "sha256:da8eb7d815d988d30469ae0dc1123e3b208f53082aee1c1443254c2b20d43350",
+      "size": 725,
+      "content": "---\nid: \"韩信为匈奴击边\"\ntype: event\ntitle: 韩信为匈奴击边\ndescription: 韩王信逃入匈奴后，为匈奴将兵，往来侵击汉朝边境，成为汉朝北方边患。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-008]\ndate: \"[约公元前200年至前196年]\"\n---\n\n::: meta\npn: (093-5)\nevent_type: 战争\nchapter: [韩信卢绾列传]\n:::\n\n# 韩信为匈奴击边\n\n> 韩王信逃入匈奴后，为匈奴将兵，往来侵击汉朝边境，成为汉朝北方边患。\n\n**主要人物**：韩信\n\n## 事件经过\n\n韩王信逃入匈奴后，为匈奴将兵，往来侵击汉朝边境，成为汉朝北方边患。\n\n## 原文\n\n> 韩信为匈奴将兵往来击边。\n\n"
+    },
+    {
+      "rev_id": "20260423-163611-e60b6e",
+      "timestamp": "2026-04-23T16:36:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161518-728aa0",
+      "content_hash": "sha256:e60b6e068e298e25844bd3c7cf3b3526ea12c143f3384f4a39fd4b4748149b85",
+      "size": 693,
+      "content": "---\nid: \"韩信为匈奴击边\"\ntype: event\ntitle: 韩信为匈奴击边\ndescription: 韩王信逃入匈奴后，为匈奴将兵，往来侵击汉朝边境，成为汉朝北方边患。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-008]\ndate: \"[约公元前200年至前196年]\"\n---\n\n::: meta\npn: \"[5]\"\nevent_type: 战争\n:::\n\n# 韩信为匈奴击边\n\n> 韩王信逃入匈奴后，为匈奴将兵，往来侵击汉朝边境，成为汉朝北方边患。\n\n**主要人物**：韩信\n\n## 事件经过\n\n韩王信逃入匈奴后，为匈奴将兵，往来侵击汉朝边境，成为汉朝北方边患。\n\n## 原文\n\n> 韩信为匈奴将兵往来击边。\n\n"
+    },
     {
       "rev_id": "20260423-161518-728aa0",
       "timestamp": "2026-04-23T16:15:18Z",

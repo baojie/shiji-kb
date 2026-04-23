@@ -1,8 +1,28 @@
 {
   "page": "赵夙封耿",
-  "latest_rev_id": "20260423-161342-29a34d",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164939-98bd00",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164939-98bd00",
+      "timestamp": "2026-04-23T16:49:39Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163414-2d36e2",
+      "content_hash": "sha256:98bd00641c5fbe3de7a8a9de99145b8a69a8e5d9af3a91c668e761910dd0623e",
+      "size": 726,
+      "content": "---\nid: \"赵夙封耿\"\ntype: event\ntitle: 赵夙封耿\ndescription: 晋献公十六年伐霍、魏、耿，赵夙为将伐霍。晋献公赐赵夙耿，赵氏始有封地。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-002]\ndate: \"〖;献公〗〖%十六年〗 （公元前661年）\"\n---\n\n::: meta\npn: (043-2.1)\nevent_type: 继位\nlocation: \"耿\"\nchapter: [赵世家]\n:::\n\n# 赵夙封耿\n\n> 晋献公十六年伐霍、魏、耿，赵夙为将伐霍。晋献公赐赵夙耿，赵氏始有封地。\n\n**主要人物**：晋献公、赵夙\n\n## 事件经过\n\n晋献公十六年伐霍、魏、耿，赵夙为将伐霍。晋献公赐赵夙耿，赵氏始有封地。\n\n## 原文\n\n> 晋献公赐赵夙耿。\n\n"
+    },
+    {
+      "rev_id": "20260423-163414-2d36e2",
+      "timestamp": "2026-04-23T16:34:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161342-29a34d",
+      "content_hash": "sha256:2d36e213650cf7f78ec568c2139aef9bfe0e0085172b50e0687eb4d882538221",
+      "size": 703,
+      "content": "---\nid: \"赵夙封耿\"\ntype: event\ntitle: 赵夙封耿\ndescription: 晋献公十六年伐霍、魏、耿，赵夙为将伐霍。晋献公赐赵夙耿，赵氏始有封地。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-002]\ndate: \"〖;献公〗〖%十六年〗 （公元前661年）\"\n---\n\n::: meta\npn: \"[2.1]\"\nevent_type: 继位\nlocation: \"耿\"\n:::\n\n# 赵夙封耿\n\n> 晋献公十六年伐霍、魏、耿，赵夙为将伐霍。晋献公赐赵夙耿，赵氏始有封地。\n\n**主要人物**：晋献公、赵夙\n\n## 事件经过\n\n晋献公十六年伐霍、魏、耿，赵夙为将伐霍。晋献公赐赵夙耿，赵氏始有封地。\n\n## 原文\n\n> 晋献公赐赵夙耿。\n\n"
+    },
     {
       "rev_id": "20260423-161342-29a34d",
       "timestamp": "2026-04-23T16:13:42Z",

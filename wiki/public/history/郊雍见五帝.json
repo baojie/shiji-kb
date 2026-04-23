@@ -1,8 +1,28 @@
 {
   "page": "郊雍见五帝",
-  "latest_rev_id": "20260423-161415-26ec33",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164947-b9c60e",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164947-b9c60e",
+      "timestamp": "2026-04-23T16:49:47Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163456-9e3b01",
+      "content_hash": "sha256:b9c60ebd2f03558a87d6e14ea83cbf105e871844056e762128b8d5da1fa951ce",
+      "size": 708,
+      "content": "---\nid: \"郊雍见五帝\"\ntype: event\ntitle: 郊雍见五帝\ndescription: 中六年二月己卯行幸雍，郊见五帝，延续文帝以来的郊祀传统。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-037]\ndate: \"〖%中六年二月己卯〗 （公元前144年）\"\n---\n\n::: meta\npn: (011-19.1)\nevent_type: 文化活动\nlocation: \"雍\"\nchapter: [孝景本纪]\n:::\n\n# 郊雍见五帝\n\n> 中六年二月己卯行幸雍，郊见五帝，延续文帝以来的郊祀传统。\n\n**主要人物**：孝景皇帝\n\n## 事件经过\n\n中六年二月己卯行幸雍，郊见五帝，延续文帝以来的郊祀传统。\n\n## 原文\n\n> 中六年二月己卯，行幸雍，郊见五帝。\n\n"
+    },
+    {
+      "rev_id": "20260423-163456-9e3b01",
+      "timestamp": "2026-04-23T16:34:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161415-26ec33",
+      "content_hash": "sha256:9e3b01e2045331e17eb4c3b13496ab834a594b32bb645e9a146d863331d03c2f",
+      "size": 682,
+      "content": "---\nid: \"郊雍见五帝\"\ntype: event\ntitle: 郊雍见五帝\ndescription: 中六年二月己卯行幸雍，郊见五帝，延续文帝以来的郊祀传统。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-037]\ndate: \"〖%中六年二月己卯〗 （公元前144年）\"\n---\n\n::: meta\npn: \"[19.1]\"\nevent_type: 文化活动\nlocation: \"雍\"\n:::\n\n# 郊雍见五帝\n\n> 中六年二月己卯行幸雍，郊见五帝，延续文帝以来的郊祀传统。\n\n**主要人物**：孝景皇帝\n\n## 事件经过\n\n中六年二月己卯行幸雍，郊见五帝，延续文帝以来的郊祀传统。\n\n## 原文\n\n> 中六年二月己卯，行幸雍，郊见五帝。\n\n"
+    },
     {
       "rev_id": "20260423-161415-26ec33",
       "timestamp": "2026-04-23T16:14:15Z",

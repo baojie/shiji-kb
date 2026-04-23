@@ -1,8 +1,28 @@
 {
   "page": "谬忌奏祠太一",
-  "latest_rev_id": "20260423-161329-c1b26d",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164935-628944",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164935-628944",
+      "timestamp": "2026-04-23T16:49:35Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163358-1aa10c",
+      "content_hash": "sha256:628944a08d9f07a244f9f874e75c536df9dd7bf9c7e29ba3aa806b30b48ba95e",
+      "size": 921,
+      "content": "---\nid: \"谬忌奏祠太一\"\ntype: event\ntitle: 谬忌奏祠太一\ndescription: 亳人谬忌奏祠太一之方，言天神贵者太一，太一佐曰五帝。天子令太祝立太一祠于长安东南郊。这是太一祠制度的创始。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-040]\ndate: \"[约公元前133年]\"\n---\n\n::: meta\npn: (028-62)\nevent_type: 改革\nlocation: \"长安\"\nchapter: [封禅书]\n:::\n\n# 谬忌奏祠太一\n\n> 亳人谬忌奏祠太一之方，言天神贵者太一，太一佐曰五帝。天子令太祝立太一祠于长安东南郊。这是太一祠制度的创始。\n\n**主要人物**：谬忌\n\n## 事件经过\n\n亳人谬忌奏祠太一之方，言天神贵者太一，太一佐曰五帝。天子令太祝立太一祠于长安东南郊。这是太一祠制度的创始。\n\n## 原文\n\n> 亳人谬忌奏祠太一方，曰：'天神贵者太一，太一佐曰五帝。'\n\n"
+    },
+    {
+      "rev_id": "20260423-163358-1aa10c",
+      "timestamp": "2026-04-23T16:33:58Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161329-c1b26d",
+      "content_hash": "sha256:1aa10c65732d84c3a54bc8e8045b4df0a9bb9c4deffddea0a4296910ef049a81",
+      "size": 898,
+      "content": "---\nid: \"谬忌奏祠太一\"\ntype: event\ntitle: 谬忌奏祠太一\ndescription: 亳人谬忌奏祠太一之方，言天神贵者太一，太一佐曰五帝。天子令太祝立太一祠于长安东南郊。这是太一祠制度的创始。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-040]\ndate: \"[约公元前133年]\"\n---\n\n::: meta\npn: \"[62]\"\nevent_type: 改革\nlocation: \"长安\"\n:::\n\n# 谬忌奏祠太一\n\n> 亳人谬忌奏祠太一之方，言天神贵者太一，太一佐曰五帝。天子令太祝立太一祠于长安东南郊。这是太一祠制度的创始。\n\n**主要人物**：谬忌\n\n## 事件经过\n\n亳人谬忌奏祠太一之方，言天神贵者太一，太一佐曰五帝。天子令太祝立太一祠于长安东南郊。这是太一祠制度的创始。\n\n## 原文\n\n> 亳人谬忌奏祠太一方，曰：'天神贵者太一，太一佐曰五帝。'\n\n"
+    },
     {
       "rev_id": "20260423-161329-c1b26d",
       "timestamp": "2026-04-23T16:13:29Z",

@@ -1,8 +1,28 @@
 {
   "page": "赵嘉自立代王",
-  "latest_rev_id": "20260423-161341-5ee81f",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164938-f0f39a",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164938-f0f39a",
+      "timestamp": "2026-04-23T16:49:38Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163413-75e5cb",
+      "content_hash": "sha256:f0f39a93c1070e6eb40675a2dcc77528b8992681dfb3edb34d7b6b4d838ebeee",
+      "size": 831,
+      "content": "---\nid: \"赵嘉自立代王\"\ntype: event\ntitle: 赵嘉自立代王\ndescription: 赵公子嘉率宗族数百人逃往代地，自立为代王，东与燕合兵，屯军上谷。是年大饥。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-033]\ndate: \"〖%十九年〗 （公元前228年）\"\n---\n\n::: meta\npn: (006-26.6)\nevent_type: 政治活动\nlocation: \"代\"\nchapter: [秦始皇本纪]\n:::\n\n# 赵嘉自立代王\n\n> 赵公子嘉率宗族数百人逃往代地，自立为代王，东与燕合兵，屯军上谷。是年大饥。\n\n**主要人物**：嘉\n\n## 事件经过\n\n赵公子嘉率宗族数百人逃往代地，自立为代王，东与燕合兵，屯军上谷。是年大饥。\n\n## 原文\n\n> 赵公子嘉率其宗数百人之代，自立为代王，东与燕合兵，军上谷。大饥。\n\n"
+    },
+    {
+      "rev_id": "20260423-163413-75e5cb",
+      "timestamp": "2026-04-23T16:34:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161341-5ee81f",
+      "content_hash": "sha256:75e5cb955f8d01750ced68c10d9bb81f3ae6b5583e5868155b06239c6b217f60",
+      "size": 802,
+      "content": "---\nid: \"赵嘉自立代王\"\ntype: event\ntitle: 赵嘉自立代王\ndescription: 赵公子嘉率宗族数百人逃往代地，自立为代王，东与燕合兵，屯军上谷。是年大饥。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-033]\ndate: \"〖%十九年〗 （公元前228年）\"\n---\n\n::: meta\npn: \"[26.6]\"\nevent_type: 政治活动\nlocation: \"代\"\n:::\n\n# 赵嘉自立代王\n\n> 赵公子嘉率宗族数百人逃往代地，自立为代王，东与燕合兵，屯军上谷。是年大饥。\n\n**主要人物**：嘉\n\n## 事件经过\n\n赵公子嘉率宗族数百人逃往代地，自立为代王，东与燕合兵，屯军上谷。是年大饥。\n\n## 原文\n\n> 赵公子嘉率其宗数百人之代，自立为代王，东与燕合兵，军上谷。大饥。\n\n"
+    },
     {
       "rev_id": "20260423-161341-5ee81f",
       "timestamp": "2026-04-23T16:13:41Z",

@@ -1,8 +1,28 @@
 {
   "page": "赵王自杀济北王徙",
-  "latest_rev_id": "20260423-161348-afd30d",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164940-33b2c1",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164940-33b2c1",
+      "timestamp": "2026-04-23T16:49:40Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163422-1573ea",
+      "content_hash": "sha256:33b2c1b32ff76bc289b4afb69ec4d9b209d9a3f5bdaf3b8f26883608cf7e5b2d",
+      "size": 817,
+      "content": "---\nid: \"赵王自杀济北王徙\"\ntype: event\ntitle: 赵王自杀济北王徙\ndescription: 郦将军围赵十月而下之，赵王自杀。济北王以被劫守之故得不诛，徙王菑川。\ntags: [史记, 事件, 吴王濞列传]\nsources: [吴王濞列传]\nevent_ids: [106-014]\ndate: \"〖;景帝〗时 （公元前154年）\"\n---\n\n::: meta\npn: (106-3.3)\nevent_type: 战争\nchapter: [吴王濞列传]\n:::\n\n# 赵王自杀济北王徙\n\n> 郦将军围赵十月而下之，赵王自杀。济北王以被劫守之故得不诛，徙王菑川。\n\n**主要人物**：济北王、赵王遂\n\n## 事件经过\n\n郦将军围赵十月而下之，赵王自杀。济北王以被劫守之故得不诛，徙王菑川。\n\n## 原文\n\n> 郦将军围赵十月而下之，赵王自杀。济北王以劫故，得不诛，徙王菑川。\n\n"
+    },
+    {
+      "rev_id": "20260423-163422-1573ea",
+      "timestamp": "2026-04-23T16:34:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161348-afd30d",
+      "content_hash": "sha256:1573ea20dc1cd5482bc9dc8afdd3e8953ed29396953ccb9e877a24dae362ebc5",
+      "size": 788,
+      "content": "---\nid: \"赵王自杀济北王徙\"\ntype: event\ntitle: 赵王自杀济北王徙\ndescription: 郦将军围赵十月而下之，赵王自杀。济北王以被劫守之故得不诛，徙王菑川。\ntags: [史记, 事件, 吴王濞列传]\nsources: [吴王濞列传]\nevent_ids: [106-014]\ndate: \"〖;景帝〗时 （公元前154年）\"\n---\n\n::: meta\npn: \"[3.3]\"\nevent_type: 战争\n:::\n\n# 赵王自杀济北王徙\n\n> 郦将军围赵十月而下之，赵王自杀。济北王以被劫守之故得不诛，徙王菑川。\n\n**主要人物**：济北王、赵王遂\n\n## 事件经过\n\n郦将军围赵十月而下之，赵王自杀。济北王以被劫守之故得不诛，徙王菑川。\n\n## 原文\n\n> 郦将军围赵十月而下之，赵王自杀。济北王以劫故，得不诛，徙王菑川。\n\n"
+    },
     {
       "rev_id": "20260423-161348-afd30d",
       "timestamp": "2026-04-23T16:13:48Z",

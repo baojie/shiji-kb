@@ -1,8 +1,28 @@
 {
   "page": "陈平蹑足立齐王",
-  "latest_rev_id": "20260423-161456-49c641",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164958-f9c271",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164958-f9c271",
+      "timestamp": "2026-04-23T16:49:58Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163541-e1b1cc",
+      "content_hash": "sha256:f9c271685289ef29ac2c1065857881ad18697b02ff3e2c71cac61d91052930eb",
+      "size": 823,
+      "content": "---\nid: \"陈平蹑足立齐王\"\ntype: event\ntitle: 陈平蹑足立齐王\ndescription: 淮阴侯破齐自立为齐王，汉王大怒而骂。陈平蹑汉王足，汉王亦悟，乃厚遇齐使。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-011]\ndate: \"（公元前203年）\"\n---\n\n::: meta\npn: (056-10)\nevent_type: 政治活动\nchapter: [陈丞相世家]\n:::\n\n# 陈平蹑足立齐王\n\n> 淮阴侯破齐自立为齐王，汉王大怒而骂。陈平蹑汉王足，汉王亦悟，乃厚遇齐使。\n\n**主要人物**：陈平、韩信\n\n## 事件经过\n\n淮阴侯破齐自立为齐王，汉王大怒而骂。陈平蹑汉王足，汉王亦悟，乃厚遇齐使。\n\n## 原文\n\n> 淮阴侯破齐，自立为齐王，使使言之汉王。汉王大怒而骂，陈平蹑汉王。汉王亦悟。\n\n"
+    },
+    {
+      "rev_id": "20260423-163541-e1b1cc",
+      "timestamp": "2026-04-23T16:35:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161456-49c641",
+      "content_hash": "sha256:e1b1cce8ff367fea17390578cf6b4d2a4ea0a23f39352f211d4cfc0cda01f920",
+      "size": 794,
+      "content": "---\nid: \"陈平蹑足立齐王\"\ntype: event\ntitle: 陈平蹑足立齐王\ndescription: 淮阴侯破齐自立为齐王，汉王大怒而骂。陈平蹑汉王足，汉王亦悟，乃厚遇齐使。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-011]\ndate: \"（公元前203年）\"\n---\n\n::: meta\npn: \"[10]\"\nevent_type: 政治活动\n:::\n\n# 陈平蹑足立齐王\n\n> 淮阴侯破齐自立为齐王，汉王大怒而骂。陈平蹑汉王足，汉王亦悟，乃厚遇齐使。\n\n**主要人物**：陈平、韩信\n\n## 事件经过\n\n淮阴侯破齐自立为齐王，汉王大怒而骂。陈平蹑汉王足，汉王亦悟，乃厚遇齐使。\n\n## 原文\n\n> 淮阴侯破齐，自立为齐王，使使言之汉王。汉王大怒而骂，陈平蹑汉王。汉王亦悟。\n\n"
+    },
     {
       "rev_id": "20260423-161456-49c641",
       "timestamp": "2026-04-23T16:14:56Z",

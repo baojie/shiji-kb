@@ -1,8 +1,28 @@
 {
   "page": "赵佗卒",
-  "latest_rev_id": "20260423-161339-3b8876",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164938-406e46",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164938-406e46",
+      "timestamp": "2026-04-23T16:49:38Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163410-f79cbb",
+      "content_hash": "sha256:406e461f02b8bdb004142d14f9f9ae7fa7db28e37f23de7441a25206697c7851",
+      "size": 855,
+      "content": "---\nid: \"赵佗卒\"\ntype: event\ntitle: 赵佗卒\ndescription: 赵佗在位期间虽居国窃如故号名，但使天子时称王朝命如诸侯。至建元四年赵佗卒，其孙胡继位。\ntags: [史记, 事件, 南越列传]\nsources: [南越列传]\nevent_ids: [113-009]\ndate: \"〖%建元四年〗 （公元前137年）\"\n---\n\n::: meta\npn: (113-3)\nevent_type: 家族事件\nlocation: \"南越\"\nchapter: [南越列传]\n:::\n\n# 赵佗卒\n\n> 赵佗在位期间虽居国窃如故号名，但使天子时称王朝命如诸侯。至建元四年赵佗卒，其孙胡继位。\n\n**主要人物**：赵佗\n\n## 事件经过\n\n赵佗在位期间虽居国窃如故号名，但使天子时称王朝命如诸侯。至建元四年赵佗卒，其孙胡继位。\n\n## 原文\n\n> 然南越其居国窃如故号名，其使天子，称王朝命如诸侯。至建元四年卒。\n\n"
+    },
+    {
+      "rev_id": "20260423-163410-f79cbb",
+      "timestamp": "2026-04-23T16:34:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161339-3b8876",
+      "content_hash": "sha256:f79cbba0287c8d0ae420ea2ac513eb17af32ba2c7c2b2c8b439ecc617ea1c896",
+      "size": 829,
+      "content": "---\nid: \"赵佗卒\"\ntype: event\ntitle: 赵佗卒\ndescription: 赵佗在位期间虽居国窃如故号名，但使天子时称王朝命如诸侯。至建元四年赵佗卒，其孙胡继位。\ntags: [史记, 事件, 南越列传]\nsources: [南越列传]\nevent_ids: [113-009]\ndate: \"〖%建元四年〗 （公元前137年）\"\n---\n\n::: meta\npn: \"[3]\"\nevent_type: 家族事件\nlocation: \"南越\"\n:::\n\n# 赵佗卒\n\n> 赵佗在位期间虽居国窃如故号名，但使天子时称王朝命如诸侯。至建元四年赵佗卒，其孙胡继位。\n\n**主要人物**：赵佗\n\n## 事件经过\n\n赵佗在位期间虽居国窃如故号名，但使天子时称王朝命如诸侯。至建元四年赵佗卒，其孙胡继位。\n\n## 原文\n\n> 然南越其居国窃如故号名，其使天子，称王朝命如诸侯。至建元四年卒。\n\n"
+    },
     {
       "rev_id": "20260423-161339-3b8876",
       "timestamp": "2026-04-23T16:13:39Z",

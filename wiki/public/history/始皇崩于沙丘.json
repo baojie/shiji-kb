@@ -1,8 +1,18 @@
 {
   "page": "始皇崩于沙丘",
-  "latest_rev_id": "20260423-162152-4a030c",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164702-ca1445",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164702-ca1445",
+      "timestamp": "2026-04-23T16:47:02Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-162152-4a030c",
+      "content_hash": "sha256:ca1445a647e978a43b7600507cfe40c084c02682be8c8426e784433f166f65a9",
+      "size": 861,
+      "content": "---\nid: \"始皇崩于沙丘\"\ntype: event\ntitle: 始皇崩于沙丘\ndescription: 秦始皇三十七年，帝巡游会稽、琅邪，还至沙丘崩逝。子胡亥即位为二世皇帝，杀蒙恬。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-031]\ndate: \"〖%三十七年〗 （公元前210年）\"\n---\n\n::: meta\npn: (015-r267)\nevent_type: 继位\nlocation: \"沙丘\"\nchapter: [六国年表]\n:::\n\n# 始皇崩于沙丘\n\n> 秦始皇三十七年，帝巡游会稽、琅邪，还至沙丘崩逝。子胡亥即位为二世皇帝，杀蒙恬。\n\n**主要人物**：胡亥、蒙恬\n\n## 事件经过\n\n秦始皇三十七年，帝巡游会稽、琅邪，还至沙丘崩逝。子胡亥即位为二世皇帝，杀蒙恬。\n\n## 原文\n\n> 三十七十月，帝之会稽、琅邪，还至沙丘崩。子胡亥立，为二世皇帝。杀蒙恬。\n\n"
+    },
     {
       "rev_id": "20260423-162152-4a030c",
       "timestamp": "2026-04-23T16:21:52Z",

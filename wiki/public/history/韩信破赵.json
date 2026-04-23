@@ -1,8 +1,28 @@
 {
   "page": "韩信破赵",
-  "latest_rev_id": "20260423-161521-14f90e",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165005-634e1d",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165005-634e1d",
+      "timestamp": "2026-04-23T16:50:05Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163616-c1c2f3",
+      "content_hash": "sha256:634e1dcaa2aa170ddaa753a496fd9c6faecbbf4862a138a65a74458bbae7eae7",
+      "size": 800,
+      "content": "---\nid: \"韩信破赵\"\ntype: event\ntitle: 韩信破赵\ndescription: 汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-045]\ndate: \"〖%三年〗 （公元前204年）\"\n---\n\n::: meta\npn: (008-39.5-39.6)\nevent_type: 战争\nlocation: \"井陉\"\nchapter: [高祖本纪]\n:::\n\n# 韩信破赵\n\n> 汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\n\n**主要人物**：张耳、赵歇、陈馀、韩信\n\n## 事件经过\n\n汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\n\n## 原文\n\n> 汉王乃令张耳与韩信遂东下井陉击赵，斩陈馀、赵王歇。其明年，立张耳为赵王。\n\n"
+    },
+    {
+      "rev_id": "20260423-163616-c1c2f3",
+      "timestamp": "2026-04-23T16:36:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161521-14f90e",
+      "content_hash": "sha256:c1c2f326e08fa4cdf834147bdbf0ace52cd56f207605238757888affc3342f04",
+      "size": 776,
+      "content": "---\nid: \"韩信破赵\"\ntype: event\ntitle: 韩信破赵\ndescription: 汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-045]\ndate: \"〖%三年〗 （公元前204年）\"\n---\n\n::: meta\npn: \"[39.5]-[39.6]\"\nevent_type: 战争\nlocation: \"井陉\"\n:::\n\n# 韩信破赵\n\n> 汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\n\n**主要人物**：张耳、赵歇、陈馀、韩信\n\n## 事件经过\n\n汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\n\n## 原文\n\n> 汉王乃令张耳与韩信遂东下井陉击赵，斩陈馀、赵王歇。其明年，立张耳为赵王。\n\n"
+    },
     {
       "rev_id": "20260423-161521-14f90e",
       "timestamp": "2026-04-23T16:15:21Z",

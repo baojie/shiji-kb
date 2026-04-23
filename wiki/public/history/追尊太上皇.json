@@ -1,8 +1,28 @@
 {
   "page": "追尊太上皇",
-  "latest_rev_id": "20260423-161405-10e8a2",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164944-5906d6",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164944-5906d6",
+      "timestamp": "2026-04-23T16:49:44Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163444-e77d4c",
+      "content_hash": "sha256:5906d64a409e8f7710a1504bd45ea7cd2f89ffceb65df1f68f87161b46bc66af",
+      "size": 506,
+      "content": "---\nid: \"追尊太上皇\"\ntype: event\ntitle: 追尊太上皇\ndescription: 追尊庄襄王为太上皇。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-046]\ndate: \"〖%二十六年〗 （公元前221年）\"\n---\n\n::: meta\npn: (006-36.1)\nevent_type: 政治改革\nchapter: [秦始皇本纪]\n:::\n\n# 追尊太上皇\n\n> 追尊庄襄王为太上皇。\n\n**主要人物**：庄襄王\n\n## 事件经过\n\n追尊庄襄王为太上皇。\n\n## 原文\n\n> 追尊庄襄王为太上皇。\n\n"
+    },
+    {
+      "rev_id": "20260423-163444-e77d4c",
+      "timestamp": "2026-04-23T16:34:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161405-10e8a2",
+      "content_hash": "sha256:e77d4c3cff5db20619a3608594a5657ec2eabbbd44e84fab1f3efc717064d633",
+      "size": 477,
+      "content": "---\nid: \"追尊太上皇\"\ntype: event\ntitle: 追尊太上皇\ndescription: 追尊庄襄王为太上皇。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-046]\ndate: \"〖%二十六年〗 （公元前221年）\"\n---\n\n::: meta\npn: \"[36.1]\"\nevent_type: 政治改革\n:::\n\n# 追尊太上皇\n\n> 追尊庄襄王为太上皇。\n\n**主要人物**：庄襄王\n\n## 事件经过\n\n追尊庄襄王为太上皇。\n\n## 原文\n\n> 追尊庄襄王为太上皇。\n\n"
+    },
     {
       "rev_id": "20260423-161405-10e8a2",
       "timestamp": "2026-04-23T16:14:05Z",

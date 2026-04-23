@@ -1,8 +1,28 @@
 {
   "page": "项王杀韩王成",
-  "latest_rev_id": "20260423-161540-84916c",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165010-1ac206",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165010-1ac206",
+      "timestamp": "2026-04-23T16:50:10Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163642-56b29a",
+      "content_hash": "sha256:1ac206cd7095daac482462f36b7eb9dcf4a31cee06d3edb97dce2c2345b03679",
+      "size": 908,
+      "content": "---\nid: \"项王杀韩王成\"\ntype: event\ntitle: 项王杀韩王成\ndescription: 良至韩，韩王成以良从汉王故，项王不遣成之国。项王竟不肯遣韩王，以为侯又杀之彭城。良亡间行归汉王。\ntags: [史记, 事件, 留侯世家]\nsources: [留侯世家]\nevent_ids: [055-010]\ndate: \"（公元前206年）\"\n---\n\n::: meta\npn: (055-12)\nevent_type: 政治活动\nlocation: \"彭城\"\nchapter: [留侯世家]\n:::\n\n# 项王杀韩王成\n\n> 良至韩，韩王成以良从汉王故，项王不遣成之国。项王竟不肯遣韩王，以为侯又杀之彭城。良亡间行归汉王。\n\n**主要人物**：张良、项羽\n\n## 事件经过\n\n良至韩，韩王成以良从汉王故，项王不遣成之国。项王竟不肯遣韩王，以为侯又杀之彭城。良亡间行归汉王。\n\n## 原文\n\n> 项王竟不肯遣韩王，乃以为侯，又杀之彭城。良亡，间行归汉王。\n\n"
+    },
+    {
+      "rev_id": "20260423-163642-56b29a",
+      "timestamp": "2026-04-23T16:36:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161540-84916c",
+      "content_hash": "sha256:56b29ae6350d51eea6c58c7b3b5fcf9d42596e7e64e0facdfa0e90e3c1c373eb",
+      "size": 882,
+      "content": "---\nid: \"项王杀韩王成\"\ntype: event\ntitle: 项王杀韩王成\ndescription: 良至韩，韩王成以良从汉王故，项王不遣成之国。项王竟不肯遣韩王，以为侯又杀之彭城。良亡间行归汉王。\ntags: [史记, 事件, 留侯世家]\nsources: [留侯世家]\nevent_ids: [055-010]\ndate: \"（公元前206年）\"\n---\n\n::: meta\npn: \"[12]\"\nevent_type: 政治活动\nlocation: \"彭城\"\n:::\n\n# 项王杀韩王成\n\n> 良至韩，韩王成以良从汉王故，项王不遣成之国。项王竟不肯遣韩王，以为侯又杀之彭城。良亡间行归汉王。\n\n**主要人物**：张良、项羽\n\n## 事件经过\n\n良至韩，韩王成以良从汉王故，项王不遣成之国。项王竟不肯遣韩王，以为侯又杀之彭城。良亡间行归汉王。\n\n## 原文\n\n> 项王竟不肯遣韩王，乃以为侯，又杀之彭城。良亡，间行归汉王。\n\n"
+    },
     {
       "rev_id": "20260423-161540-84916c",
       "timestamp": "2026-04-23T16:15:40Z",

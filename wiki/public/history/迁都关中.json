@@ -1,8 +1,28 @@
 {
   "page": "迁都关中",
-  "latest_rev_id": "20260423-161402-9ae9b1",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164944-6adeff",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164944-6adeff",
+      "timestamp": "2026-04-23T16:49:44Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163441-275cc8",
+      "content_hash": "sha256:6adeffd329f4aff199d0aa62014d094704cb545c30514af7d18ab1870fc8d0b8",
+      "size": 892,
+      "content": "---\nid: \"迁都关中\"\ntype: event\ntitle: 迁都关中\ndescription: 高祖欲长都洛阳，齐人刘敬进说，留侯亦劝入都关中。高祖当日驾入都关中。六月大赦天下。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-067]\ndate: \"〖%五年〗 （公元前202年）\"\n---\n\n::: meta\npn: (008-59)\nevent_type: 政治活动\nlocation: \"关中\"\nchapter: [高祖本纪]\n:::\n\n# 迁都关中\n\n> 高祖欲长都洛阳，齐人刘敬进说，留侯亦劝入都关中。高祖当日驾入都关中。六月大赦天下。\n\n**主要人物**：刘敬、刘邦、留侯\n\n## 事件经过\n\n高祖欲长都洛阳，齐人刘敬进说，留侯亦劝入都关中。高祖当日驾入都关中。六月大赦天下。\n\n## 原文\n\n> 高祖欲长都雒阳，齐人刘敬说，乃留侯劝上入都关中，高祖是日驾，入都关中。六月，大赦天下。\n\n"
+    },
+    {
+      "rev_id": "20260423-163441-275cc8",
+      "timestamp": "2026-04-23T16:34:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161402-9ae9b1",
+      "content_hash": "sha256:275cc8965704749cab909164689524436b51d339c42a74257135358df5172d86",
+      "size": 866,
+      "content": "---\nid: \"迁都关中\"\ntype: event\ntitle: 迁都关中\ndescription: 高祖欲长都洛阳，齐人刘敬进说，留侯亦劝入都关中。高祖当日驾入都关中。六月大赦天下。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-067]\ndate: \"〖%五年〗 （公元前202年）\"\n---\n\n::: meta\npn: \"[59]\"\nevent_type: 政治活动\nlocation: \"关中\"\n:::\n\n# 迁都关中\n\n> 高祖欲长都洛阳，齐人刘敬进说，留侯亦劝入都关中。高祖当日驾入都关中。六月大赦天下。\n\n**主要人物**：刘敬、刘邦、留侯\n\n## 事件经过\n\n高祖欲长都洛阳，齐人刘敬进说，留侯亦劝入都关中。高祖当日驾入都关中。六月大赦天下。\n\n## 原文\n\n> 高祖欲长都雒阳，齐人刘敬说，乃留侯劝上入都关中，高祖是日驾，入都关中。六月，大赦天下。\n\n"
+    },
     {
       "rev_id": "20260423-161402-9ae9b1",
       "timestamp": "2026-04-23T16:14:02Z",

@@ -1,8 +1,28 @@
 {
   "page": "陈平分肉言志",
-  "latest_rev_id": "20260423-161450-2bacea",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164956-e1f648",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164956-e1f648",
+      "timestamp": "2026-04-23T16:49:56Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163534-6eddd2",
+      "content_hash": "sha256:e1f648a956d6b23a662301d94951c75e58b3a532995dfcdcfe3c8a3ea4396115",
+      "size": 852,
+      "content": "---\nid: \"陈平分肉言志\"\ntype: event\ntitle: 陈平分肉言志\ndescription: 里中社祭，陈平为宰分肉食甚均。父老称善。平曰：嗟乎，使平得宰天下亦如是肉矣。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-003]\ndate: \"[约公元前215年]\"\n---\n\n::: meta\npn: (056-3)\nevent_type: 政治活动\nchapter: [陈丞相世家]\n:::\n\n# 陈平分肉言志\n\n> 里中社祭，陈平为宰分肉食甚均。父老称善。平曰：嗟乎，使平得宰天下亦如是肉矣。\n\n**主要人物**：陈平\n\n## 事件经过\n\n里中社祭，陈平为宰分肉食甚均。父老称善。平曰：嗟乎，使平得宰天下亦如是肉矣。\n\n## 原文\n\n> 里中社，平为宰，分肉食甚均。父老曰：'善，陈孺子之为宰！'平曰：'嗟乎，使平得宰天下，亦如是肉矣！'\n\n"
+    },
+    {
+      "rev_id": "20260423-163534-6eddd2",
+      "timestamp": "2026-04-23T16:35:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161450-2bacea",
+      "content_hash": "sha256:6eddd2a74911c4dc7be1b312036285f03e184d1c97177f044a0ec9b2da171180",
+      "size": 823,
+      "content": "---\nid: \"陈平分肉言志\"\ntype: event\ntitle: 陈平分肉言志\ndescription: 里中社祭，陈平为宰分肉食甚均。父老称善。平曰：嗟乎，使平得宰天下亦如是肉矣。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-003]\ndate: \"[约公元前215年]\"\n---\n\n::: meta\npn: \"[3]\"\nevent_type: 政治活动\n:::\n\n# 陈平分肉言志\n\n> 里中社祭，陈平为宰分肉食甚均。父老称善。平曰：嗟乎，使平得宰天下亦如是肉矣。\n\n**主要人物**：陈平\n\n## 事件经过\n\n里中社祭，陈平为宰分肉食甚均。父老称善。平曰：嗟乎，使平得宰天下亦如是肉矣。\n\n## 原文\n\n> 里中社，平为宰，分肉食甚均。父老曰：'善，陈孺子之为宰！'平曰：'嗟乎，使平得宰天下，亦如是肉矣！'\n\n"
+    },
     {
       "rev_id": "20260423-161450-2bacea",
       "timestamp": "2026-04-23T16:14:50Z",

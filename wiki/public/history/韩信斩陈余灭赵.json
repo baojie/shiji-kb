@@ -1,8 +1,28 @@
 {
   "page": "韩信斩陈余灭赵",
-  "latest_rev_id": "20260423-161520-23c8b2",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165005-8f03d3",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165005-8f03d3",
+      "timestamp": "2026-04-23T16:50:05Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163614-c4f99b",
+      "content_hash": "sha256:8f03d33ea23eca78e5b718b72f4b1c76fb86fee0fd02f9a2dc68c20166a80da0",
+      "size": 774,
+      "content": "---\nid: \"韩信斩陈余灭赵\"\ntype: event\ntitle: 韩信斩陈余灭赵\ndescription: 汉三年，汉将韩信斩赵国丞相陈余，赵王歇被灭。赵、代之地归于汉，为汉郡。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-016]\ndate: \"〖%汉三年〗 （公元前204年）\"\n---\n\n::: meta\npn: (016-r55)\nevent_type: 战争\nchapter: [秦楚之际月表]\n:::\n\n# 韩信斩陈余灭赵\n\n> 汉三年，汉将韩信斩赵国丞相陈余，赵王歇被灭。赵、代之地归于汉，为汉郡。\n\n**主要人物**：韩信\n\n## 事件经过\n\n汉三年，汉将韩信斩赵国丞相陈余，赵王歇被灭。赵、代之地归于汉，为汉郡。\n\n## 原文\n\n> 十二。汉将韩信斩陈余。\"\"四十八。汉灭歇。\n\n"
+    },
+    {
+      "rev_id": "20260423-163614-c4f99b",
+      "timestamp": "2026-04-23T16:36:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161520-23c8b2",
+      "content_hash": "sha256:c4f99b19b39e1cf319564c71f82db3d76aed49d61592438dd6ac2c17837c5bed",
+      "size": 740,
+      "content": "---\nid: \"韩信斩陈余灭赵\"\ntype: event\ntitle: 韩信斩陈余灭赵\ndescription: 汉三年，汉将韩信斩赵国丞相陈余，赵王歇被灭。赵、代之地归于汉，为汉郡。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-016]\ndate: \"〖%汉三年〗 （公元前204年）\"\n---\n\n::: meta\npn: \"r55\"\nevent_type: 战争\n:::\n\n# 韩信斩陈余灭赵\n\n> 汉三年，汉将韩信斩赵国丞相陈余，赵王歇被灭。赵、代之地归于汉，为汉郡。\n\n**主要人物**：韩信\n\n## 事件经过\n\n汉三年，汉将韩信斩赵国丞相陈余，赵王歇被灭。赵、代之地归于汉，为汉郡。\n\n## 原文\n\n> 十二。汉将韩信斩陈余。\"\"四十八。汉灭歇。\n\n"
+    },
     {
       "rev_id": "20260423-161520-23c8b2",
       "timestamp": "2026-04-23T16:15:20Z",

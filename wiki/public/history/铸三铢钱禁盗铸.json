@@ -1,8 +1,28 @@
 {
   "page": "铸三铢钱禁盗铸",
-  "latest_rev_id": "20260423-161433-0671e4",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164951-568a87",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164951-568a87",
+      "timestamp": "2026-04-23T16:49:51Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163514-7f6e60",
+      "content_hash": "sha256:568a87449e3f2b505f211bfac6b41634bf50397a75a3bb5be217560ecd91e71a",
+      "size": 655,
+      "content": "---\nid: \"铸三铢钱禁盗铸\"\ntype: event\ntitle: 铸三铢钱禁盗铸\ndescription: 令县官销半两钱更铸三铢钱，文如其重。盗铸诸金钱罪皆死。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-022]\ndate: \"（公元前120年）\"\n---\n\n::: meta\npn: (030-17)\nevent_type: 改革\nchapter: [平准书]\n:::\n\n# 铸三铢钱禁盗铸\n\n> 令县官销半两钱更铸三铢钱，文如其重。盗铸诸金钱罪皆死。\n\n## 事件经过\n\n令县官销半两钱更铸三铢钱，文如其重。盗铸诸金钱罪皆死。\n\n## 原文\n\n> 令县官销半两钱，更铸三铢钱，文如其重。盗铸诸金钱罪皆死。\n\n"
+    },
+    {
+      "rev_id": "20260423-163514-7f6e60",
+      "timestamp": "2026-04-23T16:35:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161433-0671e4",
+      "content_hash": "sha256:7f6e6073b4490e2512c6ed603ea352f36e5a5ac4de136b8e4362f320b83085a6",
+      "size": 632,
+      "content": "---\nid: \"铸三铢钱禁盗铸\"\ntype: event\ntitle: 铸三铢钱禁盗铸\ndescription: 令县官销半两钱更铸三铢钱，文如其重。盗铸诸金钱罪皆死。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-022]\ndate: \"（公元前120年）\"\n---\n\n::: meta\npn: \"[17]\"\nevent_type: 改革\n:::\n\n# 铸三铢钱禁盗铸\n\n> 令县官销半两钱更铸三铢钱，文如其重。盗铸诸金钱罪皆死。\n\n## 事件经过\n\n令县官销半两钱更铸三铢钱，文如其重。盗铸诸金钱罪皆死。\n\n## 原文\n\n> 令县官销半两钱，更铸三铢钱，文如其重。盗铸诸金钱罪皆死。\n\n"
+    },
     {
       "rev_id": "20260423-161433-0671e4",
       "timestamp": "2026-04-23T16:14:33Z",

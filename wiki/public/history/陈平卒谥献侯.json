@@ -1,8 +1,28 @@
 {
   "page": "陈平卒谥献侯",
-  "latest_rev_id": "20260423-161451-88d58a",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164956-1732f5",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164956-1732f5",
+      "timestamp": "2026-04-23T16:49:56Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163534-9a9702",
+      "content_hash": "sha256:1732f5d96b2e91cbfa853ccdbdd96f07001d71deb171d54f23221f5d0305ae35",
+      "size": 579,
+      "content": "---\nid: \"陈平卒谥献侯\"\ntype: event\ntitle: 陈平卒谥献侯\ndescription: 孝文帝二年丞相陈平卒，谥为献侯。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-027]\ndate: \"〖%二年〗 （公元前178年）\"\n---\n\n::: meta\npn: (056-26)\nevent_type: 家族事件\nchapter: [陈丞相世家]\n:::\n\n# 陈平卒谥献侯\n\n> 孝文帝二年丞相陈平卒，谥为献侯。\n\n**主要人物**：陈平\n\n## 事件经过\n\n孝文帝二年丞相陈平卒，谥为献侯。\n\n## 原文\n\n> 孝文帝二年，丞相陈平卒，谥为献侯。\n\n"
+    },
+    {
+      "rev_id": "20260423-163534-9a9702",
+      "timestamp": "2026-04-23T16:35:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161451-88d58a",
+      "content_hash": "sha256:9a9702f4df8aff39e1cd1335d3ac5af2ea1c7d85d5c72d8b0567c61b8d974c23",
+      "size": 550,
+      "content": "---\nid: \"陈平卒谥献侯\"\ntype: event\ntitle: 陈平卒谥献侯\ndescription: 孝文帝二年丞相陈平卒，谥为献侯。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-027]\ndate: \"〖%二年〗 （公元前178年）\"\n---\n\n::: meta\npn: \"[26]\"\nevent_type: 家族事件\n:::\n\n# 陈平卒谥献侯\n\n> 孝文帝二年丞相陈平卒，谥为献侯。\n\n**主要人物**：陈平\n\n## 事件经过\n\n孝文帝二年丞相陈平卒，谥为献侯。\n\n## 原文\n\n> 孝文帝二年，丞相陈平卒，谥为献侯。\n\n"
+    },
     {
       "rev_id": "20260423-161451-88d58a",
       "timestamp": "2026-04-23T16:14:51Z",

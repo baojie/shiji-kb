@@ -1,8 +1,28 @@
 {
   "page": "陈豨反代地",
-  "latest_rev_id": "20260423-161502-a17b73",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164959-16ceef",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164959-16ceef",
+      "timestamp": "2026-04-23T16:49:59Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163549-bcaa33",
+      "content_hash": "sha256:16ceef37d9ca6bd5b1a1834186ebb622f3a71ad8162041621679a8e1fb4d387b",
+      "size": 616,
+      "content": "---\nid: \"陈豨反代地\"\ntype: event\ntitle: 陈豨反代地\ndescription: 高祖十年，太上皇崩。陈豨在代地反叛。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-007]\ndate: \"〖%高祖十年〗 （公元前197年）\"\n---\n\n::: meta\npn: (022-r10)\nevent_type: 战争\nchapter: [汉兴以来将相名臣年表]\n:::\n\n# 陈豨反代地\n\n> 高祖十年，太上皇崩。陈豨在代地反叛。\n\n**主要人物**：陈豨\n\n## 事件经过\n\n高祖十年，太上皇崩。陈豨在代地反叛。\n\n## 原文\n\n> 太上皇崩。陈豨反代地。\n\n"
+    },
+    {
+      "rev_id": "20260423-163549-bcaa33",
+      "timestamp": "2026-04-23T16:35:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161502-a17b73",
+      "content_hash": "sha256:bcaa33c52f3e9be50fa866555b91dcf2cde4c72491523162de293d12d2043b63",
+      "size": 570,
+      "content": "---\nid: \"陈豨反代地\"\ntype: event\ntitle: 陈豨反代地\ndescription: 高祖十年，太上皇崩。陈豨在代地反叛。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-007]\ndate: \"〖%高祖十年〗 （公元前197年）\"\n---\n\n::: meta\npn: \"r10\"\nevent_type: 战争\n:::\n\n# 陈豨反代地\n\n> 高祖十年，太上皇崩。陈豨在代地反叛。\n\n**主要人物**：陈豨\n\n## 事件经过\n\n高祖十年，太上皇崩。陈豨在代地反叛。\n\n## 原文\n\n> 太上皇崩。陈豨反代地。\n\n"
+    },
     {
       "rev_id": "20260423-161502-a17b73",
       "timestamp": "2026-04-23T16:15:02Z",

@@ -1,8 +1,28 @@
 {
   "page": "项羽大破秦军巨鹿",
-  "latest_rev_id": "20260423-161544-8d8722",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165011-1542a0",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165011-1542a0",
+      "timestamp": "2026-04-23T16:50:11Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163646-8f69af",
+      "content_hash": "sha256:1542a0a32f779a3061403e5e474e17afc9a98c4d4e23f3be0bd50dadd1e13641",
+      "size": 871,
+      "content": "---\nid: \"项羽大破秦军巨鹿\"\ntype: event\ntitle: 项羽大破秦军巨鹿\ndescription: 项羽在巨鹿大破秦军，俘虏秦将王离，诸侯将皆归属项羽。此战奠定了项羽的霸主地位。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-009]\ndate: \"〖%二世三年十二月〗 （公元前207年）\"\n---\n\n::: meta\npn: (016-r18)\nevent_type: 战争\nlocation: \"巨鹿\"\nchapter: [秦楚之际月表]\n:::\n\n# 项羽大破秦军巨鹿\n\n> 项羽在巨鹿大破秦军，俘虏秦将王离，诸侯将皆归属项羽。此战奠定了项羽的霸主地位。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽在巨鹿大破秦军，俘虏秦将王离，诸侯将皆归属项羽。此战奠定了项羽的霸主地位。\n\n## 原文\n\n> 四。大破秦军巨鹿下，诸侯将皆属项羽。\"\"五。虏秦将王离。\n\n"
+    },
+    {
+      "rev_id": "20260423-163646-8f69af",
+      "timestamp": "2026-04-23T16:36:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161544-8d8722",
+      "content_hash": "sha256:8f69af6118a6864178c21ab1c8a7ee1212d8d74c8c72d364eb9985f9e5386f7a",
+      "size": 837,
+      "content": "---\nid: \"项羽大破秦军巨鹿\"\ntype: event\ntitle: 项羽大破秦军巨鹿\ndescription: 项羽在巨鹿大破秦军，俘虏秦将王离，诸侯将皆归属项羽。此战奠定了项羽的霸主地位。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-009]\ndate: \"〖%二世三年十二月〗 （公元前207年）\"\n---\n\n::: meta\npn: \"r18\"\nevent_type: 战争\nlocation: \"巨鹿\"\n:::\n\n# 项羽大破秦军巨鹿\n\n> 项羽在巨鹿大破秦军，俘虏秦将王离，诸侯将皆归属项羽。此战奠定了项羽的霸主地位。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽在巨鹿大破秦军，俘虏秦将王离，诸侯将皆归属项羽。此战奠定了项羽的霸主地位。\n\n## 原文\n\n> 四。大破秦军巨鹿下，诸侯将皆属项羽。\"\"五。虏秦将王离。\n\n"
+    },
     {
       "rev_id": "20260423-161544-8d8722",
       "timestamp": "2026-04-23T16:15:44Z",

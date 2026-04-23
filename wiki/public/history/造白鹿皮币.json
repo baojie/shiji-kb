@@ -1,8 +1,28 @@
 {
   "page": "造白鹿皮币",
-  "latest_rev_id": "20260423-161408-ef57d3",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164945-97ea2b",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164945-97ea2b",
+      "timestamp": "2026-04-23T16:49:45Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163447-e9e814",
+      "content_hash": "sha256:97ea2b485f171c03a2e9f27a05a86f464bb26f2d3b08c4418751d85c9ec8705b",
+      "size": 844,
+      "content": "---\nid: \"造白鹿皮币\"\ntype: event\ntitle: 造白鹿皮币\ndescription: 天子与公卿议更钱造币以赡用。以白鹿皮方尺缘以藻缋为皮币，直四十万。王侯宗室朝觐聘享必以皮币荐璧然后得行。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-020]\ndate: \"（公元前120年）\"\n---\n\n::: meta\npn: (030-16)\nevent_type: 改革\nchapter: [平准书]\n:::\n\n# 造白鹿皮币\n\n> 天子与公卿议更钱造币以赡用。以白鹿皮方尺缘以藻缋为皮币，直四十万。王侯宗室朝觐聘享必以皮币荐璧然后得行。\n\n## 事件经过\n\n天子与公卿议更钱造币以赡用。以白鹿皮方尺缘以藻缋为皮币，直四十万。王侯宗室朝觐聘享必以皮币荐璧然后得行。\n\n## 原文\n\n> 乃以白鹿皮方尺，缘以藻缋，为皮币，直四十万。\n\n"
+    },
+    {
+      "rev_id": "20260423-163447-e9e814",
+      "timestamp": "2026-04-23T16:34:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161408-ef57d3",
+      "content_hash": "sha256:e9e8141a22b29a954696af926162617628f8a53c8c9caaf2ecdd07228201f2fe",
+      "size": 821,
+      "content": "---\nid: \"造白鹿皮币\"\ntype: event\ntitle: 造白鹿皮币\ndescription: 天子与公卿议更钱造币以赡用。以白鹿皮方尺缘以藻缋为皮币，直四十万。王侯宗室朝觐聘享必以皮币荐璧然后得行。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-020]\ndate: \"（公元前120年）\"\n---\n\n::: meta\npn: \"[16]\"\nevent_type: 改革\n:::\n\n# 造白鹿皮币\n\n> 天子与公卿议更钱造币以赡用。以白鹿皮方尺缘以藻缋为皮币，直四十万。王侯宗室朝觐聘享必以皮币荐璧然后得行。\n\n## 事件经过\n\n天子与公卿议更钱造币以赡用。以白鹿皮方尺缘以藻缋为皮币，直四十万。王侯宗室朝觐聘享必以皮币荐璧然后得行。\n\n## 原文\n\n> 乃以白鹿皮方尺，缘以藻缋，为皮币，直四十万。\n\n"
+    },
     {
       "rev_id": "20260423-161408-ef57d3",
       "timestamp": "2026-04-23T16:14:08Z",

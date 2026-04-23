@@ -1,8 +1,28 @@
 {
   "page": "项梁号武信君",
-  "latest_rev_id": "20260423-161537-3b4ceb",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165009-26cca2",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165009-26cca2",
+      "timestamp": "2026-04-23T16:50:09Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163637-398480",
+      "content_hash": "sha256:26cca2d142565dd5928284c3c04cec95bb89b91114ccb16c8ff2155cf1c6b24d",
+      "size": 869,
+      "content": "---\nid: \"项梁号武信君\"\ntype: event\ntitle: 项梁号武信君\ndescription: 陈涉起兵后，项梁在九月起兵响应，号武信君。陈涉部将召平矫拜项梁为楚柱国，令其急西击秦。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-002]\ndate: \"〖%二世元年九月〗 （公元前209年）\"\n---\n\n::: meta\npn: (016-r1)\nevent_type: 政治活动\nchapter: [秦楚之际月表]\n:::\n\n# 项梁号武信君\n\n> 陈涉起兵后，项梁在九月起兵响应，号武信君。陈涉部将召平矫拜项梁为楚柱国，令其急西击秦。\n\n**主要人物**：项梁\n\n## 事件经过\n\n陈涉起兵后，项梁在九月起兵响应，号武信君。陈涉部将召平矫拜项梁为楚柱国，令其急西击秦。\n\n## 原文\n\n> 项梁号武信君。\"\"涉将召平矫拜项梁为楚柱国，急西击秦。\n\n"
+    },
+    {
+      "rev_id": "20260423-163637-398480",
+      "timestamp": "2026-04-23T16:36:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161537-3b4ceb",
+      "content_hash": "sha256:398480ad42f88e2f87f8e5035138e542c2f3db7f60267b83ff0428c7c9321801",
+      "size": 835,
+      "content": "---\nid: \"项梁号武信君\"\ntype: event\ntitle: 项梁号武信君\ndescription: 陈涉起兵后，项梁在九月起兵响应，号武信君。陈涉部将召平矫拜项梁为楚柱国，令其急西击秦。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-002]\ndate: \"〖%二世元年九月〗 （公元前209年）\"\n---\n\n::: meta\npn: \"r1\"\nevent_type: 政治活动\n:::\n\n# 项梁号武信君\n\n> 陈涉起兵后，项梁在九月起兵响应，号武信君。陈涉部将召平矫拜项梁为楚柱国，令其急西击秦。\n\n**主要人物**：项梁\n\n## 事件经过\n\n陈涉起兵后，项梁在九月起兵响应，号武信君。陈涉部将召平矫拜项梁为楚柱国，令其急西击秦。\n\n## 原文\n\n> 项梁号武信君。\"\"涉将召平矫拜项梁为楚柱国，急西击秦。\n\n"
+    },
     {
       "rev_id": "20260423-161537-3b4ceb",
       "timestamp": "2026-04-23T16:15:37Z",

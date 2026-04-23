@@ -1,8 +1,28 @@
 {
   "page": "邯郸解围",
-  "latest_rev_id": "20260423-161411-9829a3",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164946-deaaca",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164946-deaaca",
+      "timestamp": "2026-04-23T16:49:46Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163451-68ec4b",
+      "content_hash": "sha256:deaaca6aade0d664e27d45b9cb9aa31e2dbcf1a5d600dc15876c6f9b7ce11605",
+      "size": 735,
+      "content": "---\nid: \"邯郸解围\"\ntype: event\ntitle: 邯郸解围\ndescription: 平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-026]\ndate: \"〖%八年〗 （公元前258年）\"\n---\n\n::: meta\npn: (043-31.5)\nevent_type: 战争\nlocation: \"邯郸\"\nchapter: [赵世家]\n:::\n\n# 邯郸解围\n\n> 平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\n\n**主要人物**：信陵君、平原君\n\n## 事件经过\n\n平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\n\n## 原文\n\n> 平原君如楚请救。还，楚来救，及$魏公子无忌@$亦来救，秦围邯郸乃解。\n\n"
+    },
+    {
+      "rev_id": "20260423-163451-68ec4b",
+      "timestamp": "2026-04-23T16:34:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161411-9829a3",
+      "content_hash": "sha256:68ec4b385ae57b41308f65a6390ea58a2df50980af3ef354f747e03ae5594a8b",
+      "size": 712,
+      "content": "---\nid: \"邯郸解围\"\ntype: event\ntitle: 邯郸解围\ndescription: 平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-026]\ndate: \"〖%八年〗 （公元前258年）\"\n---\n\n::: meta\npn: \"[31.5]\"\nevent_type: 战争\nlocation: \"邯郸\"\n:::\n\n# 邯郸解围\n\n> 平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\n\n**主要人物**：信陵君、平原君\n\n## 事件经过\n\n平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\n\n## 原文\n\n> 平原君如楚请救。还，楚来救，及$魏公子无忌@$亦来救，秦围邯郸乃解。\n\n"
+    },
     {
       "rev_id": "20260423-161411-9829a3",
       "timestamp": "2026-04-23T16:14:11Z",

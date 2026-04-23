@@ -1,8 +1,28 @@
 {
   "page": "陈平诛吕立文帝",
-  "latest_rev_id": "20260423-161456-e16096",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164957-38db08",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164957-38db08",
+      "timestamp": "2026-04-23T16:49:57Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163540-b5fa64",
+      "content_hash": "sha256:38db0806e04ad959ade31cb57731b33b17ca8602fd639d42e5e068ff0fcdd9bb",
+      "size": 796,
+      "content": "---\nid: \"陈平诛吕立文帝\"\ntype: event\ntitle: 陈平诛吕立文帝\ndescription: 吕太后崩，平与太尉勃合谋卒诛诸吕，立孝文皇帝。陈平本谋也。审食其免相。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-023]\ndate: \"（公元前180年）\"\n---\n\n::: meta\npn: (056-23)\nevent_type: 政治整顿\nchapter: [陈丞相世家]\n:::\n\n# 陈平诛吕立文帝\n\n> 吕太后崩，平与太尉勃合谋卒诛诸吕，立孝文皇帝。陈平本谋也。审食其免相。\n\n**主要人物**：周勃、陈平\n\n## 事件经过\n\n吕太后崩，平与太尉勃合谋卒诛诸吕，立孝文皇帝。陈平本谋也。审食其免相。\n\n## 原文\n\n> 及吕太后崩，平与太尉勃合谋，卒诛诸吕，立孝文皇帝，陈平本谋也。\n\n"
+    },
+    {
+      "rev_id": "20260423-163540-b5fa64",
+      "timestamp": "2026-04-23T16:35:40Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161456-e16096",
+      "content_hash": "sha256:b5fa64286e5f56bb37cdc944b013900505c1d3139ced429c16dfc48ed150aa1f",
+      "size": 767,
+      "content": "---\nid: \"陈平诛吕立文帝\"\ntype: event\ntitle: 陈平诛吕立文帝\ndescription: 吕太后崩，平与太尉勃合谋卒诛诸吕，立孝文皇帝。陈平本谋也。审食其免相。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-023]\ndate: \"（公元前180年）\"\n---\n\n::: meta\npn: \"[23]\"\nevent_type: 政治整顿\n:::\n\n# 陈平诛吕立文帝\n\n> 吕太后崩，平与太尉勃合谋卒诛诸吕，立孝文皇帝。陈平本谋也。审食其免相。\n\n**主要人物**：周勃、陈平\n\n## 事件经过\n\n吕太后崩，平与太尉勃合谋卒诛诸吕，立孝文皇帝。陈平本谋也。审食其免相。\n\n## 原文\n\n> 及吕太后崩，平与太尉勃合谋，卒诛诸吕，立孝文皇帝，陈平本谋也。\n\n"
+    },
     {
       "rev_id": "20260423-161456-e16096",
       "timestamp": "2026-04-23T16:14:56Z",

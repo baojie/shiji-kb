@@ -1,8 +1,18 @@
 {
   "page": "元里之战",
-  "latest_rev_id": "20260423-161830-28e817",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164515-1fcaa5",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164515-1fcaa5",
+      "timestamp": "2026-04-23T16:45:15Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-161830-28e817",
+      "content_hash": "sha256:1fcaa528b06f865fcc5324de49f8eca3472a6277dac0615eaf97fdd873241b9c",
+      "size": 714,
+      "content": "---\nid: \"元里之战\"\ntype: event\ntitle: 元里之战\ndescription: 孝公八年，秦与魏在元里交战，秦军有功。这是商鞅变法后秦国军事力量增强的体现。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-072]\ndate: \"〖%八年〗 （公元前354年）\"\n---\n\n::: meta\npn: (005-52.1)\nevent_type: 战争\nlocation: \"元里\"\nchapter: [秦本纪]\n:::\n\n# 元里之战\n\n> 孝公八年，秦与魏在元里交战，秦军有功。这是商鞅变法后秦国军事力量增强的体现。\n\n## 事件经过\n\n孝公八年，秦与魏在元里交战，秦军有功。这是商鞅变法后秦国军事力量增强的体现。\n\n## 原文\n\n> 八年，与魏战元里，有功。\n\n"
+    },
     {
       "rev_id": "20260423-161830-28e817",
       "timestamp": "2026-04-23T16:18:30Z",

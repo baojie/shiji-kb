@@ -1,8 +1,28 @@
 {
   "page": "越国散亡",
-  "latest_rev_id": "20260423-161359-933f81",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164943-c99095",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164943-c99095",
+      "timestamp": "2026-04-23T16:49:43Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163436-6d00ae",
+      "content_hash": "sha256:c99095bb37bbfac4d5df21564c8f793fd7eaefb7c5d720d2ab231608e33e5dc4",
+      "size": 782,
+      "content": "---\nid: \"越国散亡\"\ntype: event\ntitle: 越国散亡\ndescription: 越以此散，诸族子争立，或为王或为君，滨于江南海上，服朝于楚。越国由此衰落分裂。\ntags: [史记, 事件, 越王句践世家]\nsources: [越王句践世家]\nevent_ids: [041-019]\ndate: \"[约公元前334年]\"\n---\n\n::: meta\npn: (041-19.9)\nevent_type: 政治活动\nchapter: [越王句践世家]\n:::\n\n# 越国散亡\n\n> 越以此散，诸族子争立，或为王或为君，滨于江南海上，服朝于楚。越国由此衰落分裂。\n\n## 事件经过\n\n越以此散，诸族子争立，或为王或为君，滨于江南海上，服朝于楚。越国由此衰落分裂。\n\n## 原文\n\n> 而越以此散，诸族子争立，或为王，或为君，滨於江南海上，服朝於楚。\n\n"
+    },
+    {
+      "rev_id": "20260423-163436-6d00ae",
+      "timestamp": "2026-04-23T16:34:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161359-933f81",
+      "content_hash": "sha256:6d00aeb816942bd6f52fe37b9a5de28d127b779b2f0113b98b0cc4c12c06443a",
+      "size": 750,
+      "content": "---\nid: \"越国散亡\"\ntype: event\ntitle: 越国散亡\ndescription: 越以此散，诸族子争立，或为王或为君，滨于江南海上，服朝于楚。越国由此衰落分裂。\ntags: [史记, 事件, 越王句践世家]\nsources: [越王句践世家]\nevent_ids: [041-019]\ndate: \"[约公元前334年]\"\n---\n\n::: meta\npn: \"[19.9]\"\nevent_type: 政治活动\n:::\n\n# 越国散亡\n\n> 越以此散，诸族子争立，或为王或为君，滨于江南海上，服朝于楚。越国由此衰落分裂。\n\n## 事件经过\n\n越以此散，诸族子争立，或为王或为君，滨于江南海上，服朝于楚。越国由此衰落分裂。\n\n## 原文\n\n> 而越以此散，诸族子争立，或为王，或为君，滨於江南海上，服朝於楚。\n\n"
+    },
     {
       "rev_id": "20260423-161359-933f81",
       "timestamp": "2026-04-23T16:13:59Z",

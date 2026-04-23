@@ -1,8 +1,28 @@
 {
   "page": "除田租",
-  "latest_rev_id": "20260423-161505-73e0d0",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165000-5fcabc",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165000-5fcabc",
+      "timestamp": "2026-04-23T16:50:00Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163555-49751c",
+      "content_hash": "sha256:5fcabcf486ac9f413c6a314c82ea17935600deecdc91769fe3e9828a3606b967",
+      "size": 820,
+      "content": "---\nid: \"除田租\"\ntype: event\ntitle: 除田租\ndescription: 文帝以农为天下之本，而有租税之赋使本末无异，劝农之道未备，下诏除田之租税。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-032]\ndate: \"（公元前167年）\"\n---\n\n::: meta\npn: (010-29)\nevent_type: 经济活动\nchapter: [孝文本纪]\n:::\n\n# 除田租\n\n> 文帝以农为天下之本，而有租税之赋使本末无异，劝农之道未备，下诏除田之租税。\n\n**主要人物**：孝文皇帝\n\n## 事件经过\n\n文帝以农为天下之本，而有租税之赋使本末无异，劝农之道未备，下诏除田之租税。\n\n## 原文\n\n> 农，天下之本，务莫大焉。今勤身从事而有租税之赋，是为本末者毋以异，其於劝农之道未备。其除田之租税。\n\n"
+    },
+    {
+      "rev_id": "20260423-163555-49751c",
+      "timestamp": "2026-04-23T16:35:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161505-73e0d0",
+      "content_hash": "sha256:49751c0b16a292222daf0f89cce810dbdd81647a9926c37897b3822d6205199c",
+      "size": 794,
+      "content": "---\nid: \"除田租\"\ntype: event\ntitle: 除田租\ndescription: 文帝以农为天下之本，而有租税之赋使本末无异，劝农之道未备，下诏除田之租税。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-032]\ndate: \"（公元前167年）\"\n---\n\n::: meta\npn: \"[29]\"\nevent_type: 经济活动\n:::\n\n# 除田租\n\n> 文帝以农为天下之本，而有租税之赋使本末无异，劝农之道未备，下诏除田之租税。\n\n**主要人物**：孝文皇帝\n\n## 事件经过\n\n文帝以农为天下之本，而有租税之赋使本末无异，劝农之道未备，下诏除田之租税。\n\n## 原文\n\n> 农，天下之本，务莫大焉。今勤身从事而有租税之赋，是为本末者毋以异，其於劝农之道未备。其除田之租税。\n\n"
+    },
     {
       "rev_id": "20260423-161505-73e0d0",
       "timestamp": "2026-04-23T16:15:05Z",

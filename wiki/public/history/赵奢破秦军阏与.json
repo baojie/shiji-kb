@@ -1,8 +1,28 @@
 {
   "page": "赵奢破秦军阏与",
-  "latest_rev_id": "20260423-161343-5f0f91",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164939-f5775c",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164939-f5775c",
+      "timestamp": "2026-04-23T16:49:39Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163415-101413",
+      "content_hash": "sha256:f5775c074494e312543c7f40706dc0c46b93dab5e3990d187266d12146d8db8a",
+      "size": 708,
+      "content": "---\nid: \"赵奢破秦军阏与\"\ntype: event\ntitle: 赵奢破秦军阏与\ndescription: 次年赵奢在阏与击败秦军。此事为赵奢的军事功绩提供简述。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-012]\ndate: \"〖%明年〗 （公元前269年）\"\n---\n\n::: meta\npn: (081-10.5)\nevent_type: 战争\nlocation: \"阏与\"\nchapter: [廉颇蔺相如列传]\n:::\n\n# 赵奢破秦军阏与\n\n> 次年赵奢在阏与击败秦军。此事为赵奢的军事功绩提供简述。\n\n**主要人物**：赵奢\n\n## 事件经过\n\n次年赵奢在阏与击败秦军。此事为赵奢的军事功绩提供简述。\n\n## 原文\n\n> 其明年，赵奢破秦军阏与下。\n\n"
+    },
+    {
+      "rev_id": "20260423-163415-101413",
+      "timestamp": "2026-04-23T16:34:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161343-5f0f91",
+      "content_hash": "sha256:101413c4eb60bf2706fb593ea58470013f5167f93cf4f9e59424d5b4f5c72ad4",
+      "size": 673,
+      "content": "---\nid: \"赵奢破秦军阏与\"\ntype: event\ntitle: 赵奢破秦军阏与\ndescription: 次年赵奢在阏与击败秦军。此事为赵奢的军事功绩提供简述。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-012]\ndate: \"〖%明年〗 （公元前269年）\"\n---\n\n::: meta\npn: \"[10.5]\"\nevent_type: 战争\nlocation: \"阏与\"\n:::\n\n# 赵奢破秦军阏与\n\n> 次年赵奢在阏与击败秦军。此事为赵奢的军事功绩提供简述。\n\n**主要人物**：赵奢\n\n## 事件经过\n\n次年赵奢在阏与击败秦军。此事为赵奢的军事功绩提供简述。\n\n## 原文\n\n> 其明年，赵奢破秦军阏与下。\n\n"
+    },
     {
       "rev_id": "20260423-161343-5f0f91",
       "timestamp": "2026-04-23T16:13:43Z",

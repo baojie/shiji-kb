@@ -1,8 +1,18 @@
 {
   "page": "白鹿皮币白金",
-  "latest_rev_id": "20260423-163010-bfcd3f",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164852-13de97",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164852-13de97",
+      "timestamp": "2026-04-23T16:48:52Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163010-bfcd3f",
+      "content_hash": "sha256:13de972675b1ca044a347488629fc90f0216b74b87690d54974b3473915e28a9",
+      "size": 639,
+      "content": "---\nid: \"白鹿皮币白金\"\ntype: event\ntitle: 白鹿皮币白金\ndescription: 天子苑有白鹿，以其皮为币发瑞应，造白金。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-012]\ndate: \"〖%元狩三年〗 （公元前120年）\"\n---\n\n::: meta\npn: (012-10)\nevent_type: 经济活动\nchapter: [孝武本纪]\n:::\n\n# 白鹿皮币白金\n\n> 天子苑有白鹿，以其皮为币发瑞应，造白金。\n\n**主要人物**：天子\n\n## 事件经过\n\n天子苑有白鹿，以其皮为币发瑞应，造白金。\n\n## 原文\n\n> 其後，天子苑有白鹿，以其皮为币，以发瑞应，造白金焉。\n\n"
+    },
     {
       "rev_id": "20260423-163010-bfcd3f",
       "timestamp": "2026-04-23T16:30:10Z",

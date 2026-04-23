@@ -1,8 +1,18 @@
 {
   "page": "大蝗灾",
-  "latest_rev_id": "20260423-162123-562889",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164657-fa105c",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164657-fa105c",
+      "timestamp": "2026-04-23T16:46:57Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-162123-562889",
+      "content_hash": "sha256:fa105c0bea165a90213ee4bc5c02709e7cfea24367ea715c69ec4cefb832f0f9",
+      "size": 372,
+      "content": "---\nid: \"大蝗灾\"\ntype: event\ntitle: 大蝗灾\ndescription: 大蝗灾发生。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-033]\ndate: \"（公元前146年）\"\n---\n\n::: meta\npn: (011-17.2)\nevent_type: 自然灾害\nchapter: [孝景本纪]\n:::\n\n# 大蝗灾\n\n> 大蝗灾发生。\n\n## 事件经过\n\n大蝗灾发生。\n\n## 原文\n\n> 大蝗。\n\n"
+    },
     {
       "rev_id": "20260423-162123-562889",
       "timestamp": "2026-04-23T16:21:23Z",

@@ -1,8 +1,28 @@
 {
   "page": "诛季君之乱",
-  "latest_rev_id": "20260423-161319-e23778",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164933-395406",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164933-395406",
+      "timestamp": "2026-04-23T16:49:33Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163343-eafa08",
+      "content_hash": "sha256:395406c6540abd1e73e2cb053b8744bbda122d5d27b9f42cef045c113fbafbc3",
+      "size": 955,
+      "content": "---\nid: \"诛季君之乱\"\ntype: event\ntitle: 诛季君之乱\ndescription: 昭王即位后，魏厓以将军身份卫戍咸阳，诛灭季君之乱，驱逐武王后至魏国，并铲除昭王诸兄弟中不善者，威震秦国。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-002]\ndate: \"昭王二年（公元前305年）\"\n---\n\n::: meta\npn: (072-2)\nevent_type: 政治整顿\nlocation: \"咸阳\"\nchapter: [穰侯列传]\n:::\n\n# 诛季君之乱\n\n> 昭王即位后，魏厓以将军身份卫戍咸阳，诛灭季君之乱，驱逐武王后至魏国，并铲除昭王诸兄弟中不善者，威震秦国。\n\n**主要人物**：昭王、穰侯\n\n## 事件经过\n\n昭王即位后，魏厓以将军身份卫戍咸阳，诛灭季君之乱，驱逐武王后至魏国，并铲除昭王诸兄弟中不善者，威震秦国。\n\n## 原文\n\n> 诛季君之乱，而逐武王后出之魏，昭王诸兄弟不善者皆灭之，威振秦国。\n\n"
+    },
+    {
+      "rev_id": "20260423-163343-eafa08",
+      "timestamp": "2026-04-23T16:33:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161319-e23778",
+      "content_hash": "sha256:eafa081fbddc20d3841e20e77a3111fec7df2a9d7269b9e42a5d521d83a00acd",
+      "size": 929,
+      "content": "---\nid: \"诛季君之乱\"\ntype: event\ntitle: 诛季君之乱\ndescription: 昭王即位后，魏厓以将军身份卫戍咸阳，诛灭季君之乱，驱逐武王后至魏国，并铲除昭王诸兄弟中不善者，威震秦国。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-002]\ndate: \"昭王二年（公元前305年）\"\n---\n\n::: meta\npn: \"[2]\"\nevent_type: 政治整顿\nlocation: \"咸阳\"\n:::\n\n# 诛季君之乱\n\n> 昭王即位后，魏厓以将军身份卫戍咸阳，诛灭季君之乱，驱逐武王后至魏国，并铲除昭王诸兄弟中不善者，威震秦国。\n\n**主要人物**：昭王、穰侯\n\n## 事件经过\n\n昭王即位后，魏厓以将军身份卫戍咸阳，诛灭季君之乱，驱逐武王后至魏国，并铲除昭王诸兄弟中不善者，威震秦国。\n\n## 原文\n\n> 诛季君之乱，而逐武王后出之魏，昭王诸兄弟不善者皆灭之，威振秦国。\n\n"
+    },
     {
       "rev_id": "20260423-161319-e23778",
       "timestamp": "2026-04-23T16:13:19Z",

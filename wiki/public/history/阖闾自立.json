@@ -1,8 +1,28 @@
 {
   "page": "阖闾自立",
-  "latest_rev_id": "20260423-161442-69b710",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164954-51a0b6",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164954-51a0b6",
+      "timestamp": "2026-04-23T16:49:54Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163524-5476f1",
+      "content_hash": "sha256:51a0b6901536c16c0d7ed90fa09119cf5e183568b4a07e3ec2addb22396c9931",
+      "size": 743,
+      "content": "---\nid: \"阖闾自立\"\ntype: event\ntitle: 阖闾自立\ndescription: 公子光出伏甲攻王僚之徒尽灭之，遂自立为王，是为阖闾。封专诸之子为上卿。\ntags: [史记, 事件, 刺客列传]\nsources: [刺客列传]\nevent_ids: [086-006]\ndate: \"（公元前515年）\"\n---\n\n::: meta\npn: (086-2.4)\nevent_type: 继位\nchapter: [刺客列传]\n:::\n\n# 阖闾自立\n\n> 公子光出伏甲攻王僚之徒尽灭之，遂自立为王，是为阖闾。封专诸之子为上卿。\n\n**主要人物**：专诸、阖闾\n\n## 事件经过\n\n公子光出伏甲攻王僚之徒尽灭之，遂自立为王，是为阖闾。封专诸之子为上卿。\n\n## 原文\n\n> 公子光出其伏甲以攻王僚之徒,尽灭之,遂自立为王,是为阖闾。\n\n"
+    },
+    {
+      "rev_id": "20260423-163524-5476f1",
+      "timestamp": "2026-04-23T16:35:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161442-69b710",
+      "content_hash": "sha256:5476f141cbf84903db87b245b9762b1535b551494d478b3712ad1e18b4f0b1ae",
+      "size": 717,
+      "content": "---\nid: \"阖闾自立\"\ntype: event\ntitle: 阖闾自立\ndescription: 公子光出伏甲攻王僚之徒尽灭之，遂自立为王，是为阖闾。封专诸之子为上卿。\ntags: [史记, 事件, 刺客列传]\nsources: [刺客列传]\nevent_ids: [086-006]\ndate: \"（公元前515年）\"\n---\n\n::: meta\npn: \"[2.4]\"\nevent_type: 继位\n:::\n\n# 阖闾自立\n\n> 公子光出伏甲攻王僚之徒尽灭之，遂自立为王，是为阖闾。封专诸之子为上卿。\n\n**主要人物**：专诸、阖闾\n\n## 事件经过\n\n公子光出伏甲攻王僚之徒尽灭之，遂自立为王，是为阖闾。封专诸之子为上卿。\n\n## 原文\n\n> 公子光出其伏甲以攻王僚之徒,尽灭之,遂自立为王,是为阖闾。\n\n"
+    },
     {
       "rev_id": "20260423-161442-69b710",
       "timestamp": "2026-04-23T16:14:42Z",

@@ -1,8 +1,28 @@
 {
   "page": "项羽三万破汉五十六万",
-  "latest_rev_id": "20260423-161542-c37b47",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165011-eac8e8",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165011-eac8e8",
+      "timestamp": "2026-04-23T16:50:11Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163643-b4a5ae",
+      "content_hash": "sha256:eac8e8f0b55e64128e5ca2cd043ee44425a7aacf4e460364911c912cfce274c7",
+      "size": 878,
+      "content": "---\nid: \"项羽三万破汉五十六万\"\ntype: event\ntitle: 项羽三万破汉五十六万\ndescription: 项羽以精兵三万人大破汉军五十六万。此役是楚汉战争中汉王的最大败仗，汉王被迫西走荥阳。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-015]\ndate: \"〖%汉二年四月〗 （公元前205年）\"\n---\n\n::: meta\npn: (016-r42)\nevent_type: 战争\nlocation: \"彭城\"\nchapter: [秦楚之际月表]\n:::\n\n# 项羽三万破汉五十六万\n\n> 项羽以精兵三万人大破汉军五十六万。此役是楚汉战争中汉王的最大败仗，汉王被迫西走荥阳。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽以精兵三万人大破汉军五十六万。此役是楚汉战争中汉王的最大败仗，汉王被迫西走荥阳。\n\n## 原文\n\n> 三。项羽以兵三万破汉兵五十六万。\n\n"
+    },
+    {
+      "rev_id": "20260423-163643-b4a5ae",
+      "timestamp": "2026-04-23T16:36:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161542-c37b47",
+      "content_hash": "sha256:b4a5ae88836a8cf1e715361a2aa5ca672dad17ea1e455776013c0b36aaa97e82",
+      "size": 844,
+      "content": "---\nid: \"项羽三万破汉五十六万\"\ntype: event\ntitle: 项羽三万破汉五十六万\ndescription: 项羽以精兵三万人大破汉军五十六万。此役是楚汉战争中汉王的最大败仗，汉王被迫西走荥阳。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-015]\ndate: \"〖%汉二年四月〗 （公元前205年）\"\n---\n\n::: meta\npn: \"r42\"\nevent_type: 战争\nlocation: \"彭城\"\n:::\n\n# 项羽三万破汉五十六万\n\n> 项羽以精兵三万人大破汉军五十六万。此役是楚汉战争中汉王的最大败仗，汉王被迫西走荥阳。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽以精兵三万人大破汉军五十六万。此役是楚汉战争中汉王的最大败仗，汉王被迫西走荥阳。\n\n## 原文\n\n> 三。项羽以兵三万破汉兵五十六万。\n\n"
+    },
     {
       "rev_id": "20260423-161542-c37b47",
       "timestamp": "2026-04-23T16:15:42Z",

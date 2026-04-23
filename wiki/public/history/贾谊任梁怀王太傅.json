@@ -1,8 +1,28 @@
 {
   "page": "贾谊任梁怀王太傅",
-  "latest_rev_id": "20260423-161335-f558d2",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164937-e3d789",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164937-e3d789",
+      "timestamp": "2026-04-23T16:49:37Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163405-7e7f7b",
+      "content_hash": "sha256:e3d789820f2fba27bb13ea5276eab9cc15ea5dd898bc773c9fc6fb8ecd009e52",
+      "size": 829,
+      "content": "---\nid: \"贾谊任梁怀王太傅\"\ntype: event\ntitle: 贾谊任梁怀王太傅\ndescription: 文帝拜贾谊为梁怀王太傅。梁怀王是文帝少子，爱之且好书，故令贾生傅之。\ntags: [史记, 事件, 屈原贾生列传]\nsources: [屈原贾生列传]\nevent_ids: [084-014]\ndate: \"（公元前173年）\"\n---\n\n::: meta\npn: (084-14.1)\nevent_type: 政治活动\nchapter: [屈原贾生列传]\n:::\n\n# 贾谊任梁怀王太傅\n\n> 文帝拜贾谊为梁怀王太傅。梁怀王是文帝少子，爱之且好书，故令贾生傅之。\n\n**主要人物**：文帝、梁怀王、贾生\n\n## 事件经过\n\n文帝拜贾谊为梁怀王太傅。梁怀王是文帝少子，爱之且好书，故令贾生傅之。\n\n## 原文\n\n> 居顷之,拜贾生为$梁怀王太傅$。梁怀王,文帝之少子,爱,而好书,故令贾生傅之。\n\n"
+    },
+    {
+      "rev_id": "20260423-163405-7e7f7b",
+      "timestamp": "2026-04-23T16:34:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161335-f558d2",
+      "content_hash": "sha256:7e7f7bfada3564e9f2df40c08a3c163c011a7a4aeec5df0c5653133bb9b7d5e1",
+      "size": 797,
+      "content": "---\nid: \"贾谊任梁怀王太傅\"\ntype: event\ntitle: 贾谊任梁怀王太傅\ndescription: 文帝拜贾谊为梁怀王太傅。梁怀王是文帝少子，爱之且好书，故令贾生傅之。\ntags: [史记, 事件, 屈原贾生列传]\nsources: [屈原贾生列传]\nevent_ids: [084-014]\ndate: \"（公元前173年）\"\n---\n\n::: meta\npn: \"[14.1]\"\nevent_type: 政治活动\n:::\n\n# 贾谊任梁怀王太傅\n\n> 文帝拜贾谊为梁怀王太傅。梁怀王是文帝少子，爱之且好书，故令贾生傅之。\n\n**主要人物**：文帝、梁怀王、贾生\n\n## 事件经过\n\n文帝拜贾谊为梁怀王太傅。梁怀王是文帝少子，爱之且好书，故令贾生傅之。\n\n## 原文\n\n> 居顷之,拜贾生为$梁怀王太傅$。梁怀王,文帝之少子,爱,而好书,故令贾生傅之。\n\n"
+    },
     {
       "rev_id": "20260423-161335-f558d2",
       "timestamp": "2026-04-23T16:13:35Z",

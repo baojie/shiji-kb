@@ -1,8 +1,28 @@
 {
   "page": "陈敬仲奔齐",
-  "latest_rev_id": "20260423-161457-7ee41a",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164958-6728cd",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164958-6728cd",
+      "timestamp": "2026-04-23T16:49:58Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163542-0b163a",
+      "content_hash": "sha256:6728cdff078c3ea55b79161e375014bfad948cb4e954b6b4f8d3b926a90f9a3e",
+      "size": 904,
+      "content": "---\nid: \"陈敬仲奔齐\"\ntype: event\ntitle: 陈敬仲奔齐\ndescription: 陈厉公子完来奔齐，号敬仲。桓公欲以为卿，完让，以为工正。田成子常之祖也。此为田氏代齐之始。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-016]\ndate: \"〖%十四年〗 （公元前672年）\"\n---\n\n::: meta\npn: (032-31)\nevent_type: 政治活动\nlocation: \"齐\"\nchapter: [齐太公世家]\n:::\n\n# 陈敬仲奔齐\n\n> 陈厉公子完来奔齐，号敬仲。桓公欲以为卿，完让，以为工正。田成子常之祖也。此为田氏代齐之始。\n\n**主要人物**：陈完（敬仲）、齐桓公\n\n## 事件经过\n\n陈厉公子完来奔齐，号敬仲。桓公欲以为卿，完让，以为工正。田成子常之祖也。此为田氏代齐之始。\n\n## 原文\n\n> 十四年，陈厉公子完，号敬仲，来奔齐。...田成子常之祖也。\n\n"
+    },
+    {
+      "rev_id": "20260423-163542-0b163a",
+      "timestamp": "2026-04-23T16:35:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161457-7ee41a",
+      "content_hash": "sha256:0b163ae362812aaec5ca03fca22109e25ed5b04e3c3e41a915d652ffb0fae9df",
+      "size": 875,
+      "content": "---\nid: \"陈敬仲奔齐\"\ntype: event\ntitle: 陈敬仲奔齐\ndescription: 陈厉公子完来奔齐，号敬仲。桓公欲以为卿，完让，以为工正。田成子常之祖也。此为田氏代齐之始。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-016]\ndate: \"〖%十四年〗 （公元前672年）\"\n---\n\n::: meta\npn: \"[31]\"\nevent_type: 政治活动\nlocation: \"齐\"\n:::\n\n# 陈敬仲奔齐\n\n> 陈厉公子完来奔齐，号敬仲。桓公欲以为卿，完让，以为工正。田成子常之祖也。此为田氏代齐之始。\n\n**主要人物**：陈完（敬仲）、齐桓公\n\n## 事件经过\n\n陈厉公子完来奔齐，号敬仲。桓公欲以为卿，完让，以为工正。田成子常之祖也。此为田氏代齐之始。\n\n## 原文\n\n> 十四年，陈厉公子完，号敬仲，来奔齐。...田成子常之祖也。\n\n"
+    },
     {
       "rev_id": "20260423-161457-7ee41a",
       "timestamp": "2026-04-23T16:14:57Z",

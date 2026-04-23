@@ -1,8 +1,28 @@
 {
   "page": "长星出天火燔雒阳",
-  "latest_rev_id": "20260423-161437-24b1f3",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164952-d32d48",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164952-d32d48",
+      "timestamp": "2026-04-23T16:49:52Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163518-12f99e",
+      "content_hash": "sha256:d32d48c9c5f8d5a7c0b952a1f0bca386e5193589171890c7777d4d0304637ecd",
+      "size": 592,
+      "content": "---\nid: \"长星出天火燔雒阳\"\ntype: event\ntitle: 长星出天火燔雒阳\ndescription: 长星出西方。天火燔雒阳东宫大殿城室。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-011]\ndate: \"（公元前154年）\"\n---\n\n::: meta\npn: (011-5.2-5.3)\nevent_type: 自然灾害\nlocation: \"雒阳\"\nchapter: [孝景本纪]\n:::\n\n# 长星出天火燔雒阳\n\n> 长星出西方。天火燔雒阳东宫大殿城室。\n\n## 事件经过\n\n长星出西方。天火燔雒阳东宫大殿城室。\n\n## 原文\n\n> 长星出西方。天火燔雒阳东宫大殿城室。\n\n"
+    },
+    {
+      "rev_id": "20260423-163518-12f99e",
+      "timestamp": "2026-04-23T16:35:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161437-24b1f3",
+      "content_hash": "sha256:12f99e5d2854695dae3bdb4f22ad8408611476f27d6b68dfc85d3c5ea7fffcf9",
+      "size": 568,
+      "content": "---\nid: \"长星出天火燔雒阳\"\ntype: event\ntitle: 长星出天火燔雒阳\ndescription: 长星出西方。天火燔雒阳东宫大殿城室。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-011]\ndate: \"（公元前154年）\"\n---\n\n::: meta\npn: \"[5.2]-[5.3]\"\nevent_type: 自然灾害\nlocation: \"雒阳\"\n:::\n\n# 长星出天火燔雒阳\n\n> 长星出西方。天火燔雒阳东宫大殿城室。\n\n## 事件经过\n\n长星出西方。天火燔雒阳东宫大殿城室。\n\n## 原文\n\n> 长星出西方。天火燔雒阳东宫大殿城室。\n\n"
+    },
     {
       "rev_id": "20260423-161437-24b1f3",
       "timestamp": "2026-04-23T16:14:37Z",

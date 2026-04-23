@@ -1,8 +1,28 @@
 {
   "page": "项羽杀义帝",
-  "latest_rev_id": "20260423-161547-4b5a1b",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165012-245e24",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165012-245e24",
+      "timestamp": "2026-04-23T16:50:12Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163649-ce75f8",
+      "content_hash": "sha256:245e24cfd7a62bfd11c58cac682960c9a859a1b809bf64b7892bafe5bfdeba8b",
+      "size": 913,
+      "content": "---\nid: \"项羽杀义帝\"\ntype: event\ntitle: 项羽杀义帝\ndescription: 项羽尊怀王为义帝后徙之长沙郴县，催促其行，群臣渐叛。项羽阴令衡山王、临江王击杀义帝于江南。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-034]\ndate: \"（公元前205年）\"\n---\n\n::: meta\npn: (008-29.2)\nevent_type: 政治整顿\nlocation: \"江南\"\nchapter: [高祖本纪]\n:::\n\n# 项羽杀义帝\n\n> 项羽尊怀王为义帝后徙之长沙郴县，催促其行，群臣渐叛。项羽阴令衡山王、临江王击杀义帝于江南。\n\n**主要人物**：义帝、项羽\n\n## 事件经过\n\n项羽尊怀王为义帝后徙之长沙郴县，催促其行，群臣渐叛。项羽阴令衡山王、临江王击杀义帝于江南。\n\n## 原文\n\n> 乃使使徙义帝长沙郴县，趣义帝行，群臣稍倍叛之，乃阴令衡山王、临江王击之，杀义帝江南。\n\n"
+    },
+    {
+      "rev_id": "20260423-163649-ce75f8",
+      "timestamp": "2026-04-23T16:36:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161547-4b5a1b",
+      "content_hash": "sha256:ce75f88c53f83fa11ac6a90cdec99e046874ca438fffd97715ac43c587ab58b5",
+      "size": 887,
+      "content": "---\nid: \"项羽杀义帝\"\ntype: event\ntitle: 项羽杀义帝\ndescription: 项羽尊怀王为义帝后徙之长沙郴县，催促其行，群臣渐叛。项羽阴令衡山王、临江王击杀义帝于江南。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-034]\ndate: \"（公元前205年）\"\n---\n\n::: meta\npn: \"[29.2]\"\nevent_type: 政治整顿\nlocation: \"江南\"\n:::\n\n# 项羽杀义帝\n\n> 项羽尊怀王为义帝后徙之长沙郴县，催促其行，群臣渐叛。项羽阴令衡山王、临江王击杀义帝于江南。\n\n**主要人物**：义帝、项羽\n\n## 事件经过\n\n项羽尊怀王为义帝后徙之长沙郴县，催促其行，群臣渐叛。项羽阴令衡山王、临江王击杀义帝于江南。\n\n## 原文\n\n> 乃使使徙义帝长沙郴县，趣义帝行，群臣稍倍叛之，乃阴令衡山王、临江王击之，杀义帝江南。\n\n"
+    },
     {
       "rev_id": "20260423-161547-4b5a1b",
       "timestamp": "2026-04-23T16:15:47Z",

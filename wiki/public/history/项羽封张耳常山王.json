@@ -1,8 +1,28 @@
 {
   "page": "项羽封张耳常山王",
-  "latest_rev_id": "20260423-161545-55aeba",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165011-818c19",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165011-818c19",
+      "timestamp": "2026-04-23T16:50:11Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163647-d398aa",
+      "content_hash": "sha256:818c1930fb7fafe2398ab2dc944cd5498133fa0ebe1e8834d1b7beb2ad413101",
+      "size": 912,
+      "content": "---\nid: \"项羽封张耳常山王\"\ntype: event\ntitle: 项羽封张耳常山王\ndescription: 张耳从项羽入关。项羽分赵立张耳为常山王治信都。陈馀因不从入关仅封南皮旁三县，赵王歇徙王代。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-016]\ndate: \"〖%汉元年二月〗 （公元前206年）\"\n---\n\n::: meta\npn: (089-17-18)\nevent_type: 政治活动\nchapter: [张耳陈馀列传]\n:::\n\n# 项羽封张耳常山王\n\n> 张耳从项羽入关。项羽分赵立张耳为常山王治信都。陈馀因不从入关仅封南皮旁三县，赵王歇徙王代。\n\n**主要人物**：张耳、项羽\n\n## 事件经过\n\n张耳从项羽入关。项羽分赵立张耳为常山王治信都。陈馀因不从入关仅封南皮旁三县，赵王歇徙王代。\n\n## 原文\n\n> 项羽亦素数闻张耳贤，乃分赵立张耳为常山王，治信都。\n\n"
+    },
+    {
+      "rev_id": "20260423-163647-d398aa",
+      "timestamp": "2026-04-23T16:36:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161545-55aeba",
+      "content_hash": "sha256:d398aab2a42e41e5201ce584a1625dcb31ba9e5941bbf20ab17ca8a9f6f3a54b",
+      "size": 882,
+      "content": "---\nid: \"项羽封张耳常山王\"\ntype: event\ntitle: 项羽封张耳常山王\ndescription: 张耳从项羽入关。项羽分赵立张耳为常山王治信都。陈馀因不从入关仅封南皮旁三县，赵王歇徙王代。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-016]\ndate: \"〖%汉元年二月〗 （公元前206年）\"\n---\n\n::: meta\npn: \"[17]-[18]\"\nevent_type: 政治活动\n:::\n\n# 项羽封张耳常山王\n\n> 张耳从项羽入关。项羽分赵立张耳为常山王治信都。陈馀因不从入关仅封南皮旁三县，赵王歇徙王代。\n\n**主要人物**：张耳、项羽\n\n## 事件经过\n\n张耳从项羽入关。项羽分赵立张耳为常山王治信都。陈馀因不从入关仅封南皮旁三县，赵王歇徙王代。\n\n## 原文\n\n> 项羽亦素数闻张耳贤，乃分赵立张耳为常山王，治信都。\n\n"
+    },
     {
       "rev_id": "20260423-161545-55aeba",
       "timestamp": "2026-04-23T16:15:45Z",

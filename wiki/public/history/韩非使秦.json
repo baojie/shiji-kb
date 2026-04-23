@@ -1,8 +1,28 @@
 {
   "page": "韩非使秦",
-  "latest_rev_id": "20260423-161534-277b81",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165009-db25ab",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165009-db25ab",
+      "timestamp": "2026-04-23T16:50:09Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163632-d6c0c6",
+      "content_hash": "sha256:db25abb14fd4e8917065be5c857702f405714d2342f6fe4d8f4f646e370b7e4e",
+      "size": 702,
+      "content": "---\nid: \"韩非使秦\"\ntype: event\ntitle: 韩非使秦\ndescription: 秦攻韩，韩急，使韩非使秦。秦留韩非，因杀之。法家大师韩非至此身亡。\ntags: [史记, 事件, 韩世家]\nsources: [韩世家]\nevent_ids: [045-015]\ndate: \"〖;王安〗〖%五年〗 （公元前234年）\"\n---\n\n::: meta\npn: (045-19.1)\nevent_type: 政治活动\nchapter: [韩世家]\n:::\n\n# 韩非使秦\n\n> 秦攻韩，韩急，使韩非使秦。秦留韩非，因杀之。法家大师韩非至此身亡。\n\n**主要人物**：韩非\n\n## 事件经过\n\n秦攻韩，韩急，使韩非使秦。秦留韩非，因杀之。法家大师韩非至此身亡。\n\n## 原文\n\n> 使韩非使秦，秦留非，因杀之。\n\n"
+    },
+    {
+      "rev_id": "20260423-163632-d6c0c6",
+      "timestamp": "2026-04-23T16:36:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161534-277b81",
+      "content_hash": "sha256:d6c0c61daddbec2b8cc76fc6750d1a0a113bfdeab8ec2b77d5a775b6154f28a6",
+      "size": 679,
+      "content": "---\nid: \"韩非使秦\"\ntype: event\ntitle: 韩非使秦\ndescription: 秦攻韩，韩急，使韩非使秦。秦留韩非，因杀之。法家大师韩非至此身亡。\ntags: [史记, 事件, 韩世家]\nsources: [韩世家]\nevent_ids: [045-015]\ndate: \"〖;王安〗〖%五年〗 （公元前234年）\"\n---\n\n::: meta\npn: \"[19.1]\"\nevent_type: 政治活动\n:::\n\n# 韩非使秦\n\n> 秦攻韩，韩急，使韩非使秦。秦留韩非，因杀之。法家大师韩非至此身亡。\n\n**主要人物**：韩非\n\n## 事件经过\n\n秦攻韩，韩急，使韩非使秦。秦留韩非，因杀之。法家大师韩非至此身亡。\n\n## 原文\n\n> 使韩非使秦，秦留非，因杀之。\n\n"
+    },
     {
       "rev_id": "20260423-161534-277b81",
       "timestamp": "2026-04-23T16:15:34Z",

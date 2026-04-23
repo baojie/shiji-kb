@@ -1,8 +1,18 @@
 {
   "page": "楚灭陈孔子卒",
-  "latest_rev_id": "20260423-162713-7677f2",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164813-c3a040",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164813-c3a040",
+      "timestamp": "2026-04-23T16:48:13Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-162713-7677f2",
+      "content_hash": "sha256:c3a040515a81ff349469ab6b58389fcfe710879d848c4932d5e06624d90a09ae",
+      "size": 571,
+      "content": "---\nid: \"楚灭陈孔子卒\"\ntype: event\ntitle: 楚灭陈孔子卒\ndescription: 敬王四十一年，楚灭陈。同年孔子卒。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-061]\ndate: \"〖@敬王〗〖%四十一年〗 （公元前479年）\"\n---\n\n::: meta\npn: (004-56)\nevent_type: 战争\nchapter: [周本纪]\n:::\n\n# 楚灭陈孔子卒\n\n> 敬王四十一年，楚灭陈。同年孔子卒。\n\n**主要人物**：孔子\n\n## 事件经过\n\n敬王四十一年，楚灭陈。同年孔子卒。\n\n## 原文\n\n> 四十一年，楚灭陈。孔子卒。\n\n"
+    },
     {
       "rev_id": "20260423-162713-7677f2",
       "timestamp": "2026-04-23T16:27:13Z",

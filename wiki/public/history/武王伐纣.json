@@ -1,8 +1,18 @@
 {
   "page": "武王伐纣",
-  "latest_rev_id": "20260423-162739-54221e",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164818-db642a",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164818-db642a",
+      "timestamp": "2026-04-23T16:48:18Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-162739-54221e",
+      "content_hash": "sha256:db642a6888e5f77fa2ae41a045aaf8aca9f588a5f72695adb8c2f783b1643f98",
+      "size": 583,
+      "content": "---\nid: \"武王伐纣\"\ntype: event\ntitle: 武王伐纣\ndescription: 帝纣淫乱，武王伐之。始未尝不肃祗，后稍怠慢也。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-006]\ndate: \"（公元前1046年）\"\n---\n\n::: meta\npn: (028-3)\nevent_type: 战争\nchapter: [封禅书]\n:::\n\n# 武王伐纣\n\n> 帝纣淫乱，武王伐之。始未尝不肃祗，后稍怠慢也。\n\n**主要人物**：武王、纣\n\n## 事件经过\n\n帝纣淫乱，武王伐之。始未尝不肃祗，后稍怠慢也。\n\n## 原文\n\n> 後三世，帝纣淫乱，武王伐之。\n\n"
+    },
     {
       "rev_id": "20260423-162739-54221e",
       "timestamp": "2026-04-23T16:27:39Z",

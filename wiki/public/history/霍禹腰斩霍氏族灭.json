@@ -1,8 +1,28 @@
 {
   "page": "霍禹腰斩霍氏族灭",
-  "latest_rev_id": "20260423-161515-7e0579",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165003-2181e3",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165003-2181e3",
+      "timestamp": "2026-04-23T16:50:03Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163607-f50ebd",
+      "content_hash": "sha256:2181e3fae25bc3ad1f051d2c550f886facaa48c442eb3fa615aba1f0344b3e64",
+      "size": 894,
+      "content": "---\nid: \"霍禹腰斩霍氏族灭\"\ntype: event\ntitle: 霍禹腰斩霍氏族灭\ndescription: 地节四年七月壬寅，霍禹腰斩。霍光死后二年，霍氏家族因谋反罪被族灭。这标志着宣帝完全掌控朝政。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-038]\ndate: \"〖%地节四年〗 （公元前66年）\"\n---\n\n::: meta\npn: (022-r41)\nevent_type: 政治整顿\nchapter: [汉兴以来将相名臣年表]\n:::\n\n# 霍禹腰斩霍氏族灭\n\n> 地节四年七月壬寅，霍禹腰斩。霍光死后二年，霍氏家族因谋反罪被族灭。这标志着宣帝完全掌控朝政。\n\n**主要人物**：霍禹\n\n## 事件经过\n\n地节四年七月壬寅，霍禹腰斩。霍光死后二年，霍氏家族因谋反罪被族灭。这标志着宣帝完全掌控朝政。\n\n## 原文\n\n> 七月壬寅，禹腰斩。\n\n"
+    },
+    {
+      "rev_id": "20260423-163607-f50ebd",
+      "timestamp": "2026-04-23T16:36:07Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161515-7e0579",
+      "content_hash": "sha256:f50ebd14c28b363c8b09382a9cadfe2830511baed406e20e6c9281e609b412f3",
+      "size": 848,
+      "content": "---\nid: \"霍禹腰斩霍氏族灭\"\ntype: event\ntitle: 霍禹腰斩霍氏族灭\ndescription: 地节四年七月壬寅，霍禹腰斩。霍光死后二年，霍氏家族因谋反罪被族灭。这标志着宣帝完全掌控朝政。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-038]\ndate: \"〖%地节四年〗 （公元前66年）\"\n---\n\n::: meta\npn: \"r41\"\nevent_type: 政治整顿\n:::\n\n# 霍禹腰斩霍氏族灭\n\n> 地节四年七月壬寅，霍禹腰斩。霍光死后二年，霍氏家族因谋反罪被族灭。这标志着宣帝完全掌控朝政。\n\n**主要人物**：霍禹\n\n## 事件经过\n\n地节四年七月壬寅，霍禹腰斩。霍光死后二年，霍氏家族因谋反罪被族灭。这标志着宣帝完全掌控朝政。\n\n## 原文\n\n> 七月壬寅，禹腰斩。\n\n"
+    },
     {
       "rev_id": "20260423-161515-7e0579",
       "timestamp": "2026-04-23T16:15:15Z",

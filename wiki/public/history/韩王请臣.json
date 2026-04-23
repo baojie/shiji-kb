@@ -1,8 +1,28 @@
 {
   "page": "韩王请臣",
-  "latest_rev_id": "20260423-161533-cf97d0",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165009-6c8c5c",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165009-6c8c5c",
+      "timestamp": "2026-04-23T16:50:09Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163632-deb388",
+      "content_hash": "sha256:6c8c5c098229a388265d13f7f33f35731a3a5eccd91cc4cdd0d22d1dd45578b3",
+      "size": 443,
+      "content": "---\nid: \"韩王请臣\"\ntype: event\ntitle: 韩王请臣\ndescription: 韩王请求向秦称臣。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-027]\ndate: \"〖%十四年〗 （公元前233年）\"\n---\n\n::: meta\npn: (006-21.4)\nevent_type: 政治活动\nchapter: [秦始皇本纪]\n:::\n\n# 韩王请臣\n\n> 韩王请求向秦称臣。\n\n## 事件经过\n\n韩王请求向秦称臣。\n\n## 原文\n\n> 韩王请为臣。\n\n"
+    },
+    {
+      "rev_id": "20260423-163632-deb388",
+      "timestamp": "2026-04-23T16:36:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161533-cf97d0",
+      "content_hash": "sha256:deb3889051813b059facada4dff41aa6d51bb5a599e2468c7cd001912637b048",
+      "size": 414,
+      "content": "---\nid: \"韩王请臣\"\ntype: event\ntitle: 韩王请臣\ndescription: 韩王请求向秦称臣。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-027]\ndate: \"〖%十四年〗 （公元前233年）\"\n---\n\n::: meta\npn: \"[21.4]\"\nevent_type: 政治活动\n:::\n\n# 韩王请臣\n\n> 韩王请求向秦称臣。\n\n## 事件经过\n\n韩王请求向秦称臣。\n\n## 原文\n\n> 韩王请为臣。\n\n"
+    },
     {
       "rev_id": "20260423-161533-cf97d0",
       "timestamp": "2026-04-23T16:15:33Z",

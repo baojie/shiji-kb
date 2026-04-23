@@ -1,8 +1,28 @@
 {
   "page": "赧王时东西周分治",
-  "latest_rev_id": "20260423-161338-993661",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164938-74d54f",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164938-74d54f",
+      "timestamp": "2026-04-23T16:49:38Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163410-59f73d",
+      "content_hash": "sha256:74d54f2b59c229727f06482f10284a7ab488959255b6c5c2599f369c79c0985f",
+      "size": 751,
+      "content": "---\nid: \"赧王时东西周分治\"\ntype: event\ntitle: 赧王时东西周分治\ndescription: 显王崩，子慎靓王定立，六年崩，子赧王延立。王赧时东西周分治，王赧徙都西周。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-068]\ndate: \"（公元前314年）\"\n---\n\n::: meta\npn: (004-65)\nevent_type: 政治活动\nchapter: [周本纪]\n:::\n\n# 赧王时东西周分治\n\n> 显王崩，子慎靓王定立，六年崩，子赧王延立。王赧时东西周分治，王赧徙都西周。\n\n**主要人物**：王赧\n\n## 事件经过\n\n显王崩，子慎靓王定立，六年崩，子赧王延立。王赧时东西周分治，王赧徙都西周。\n\n## 原文\n\n> 王赧时东西周分治。王赧徙都西周。\n\n"
+    },
+    {
+      "rev_id": "20260423-163410-59f73d",
+      "timestamp": "2026-04-23T16:34:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161338-993661",
+      "content_hash": "sha256:59f73d41f29aafbd8e7be255aa9143bd73b5b856ae1850e562230aca3583e3e1",
+      "size": 728,
+      "content": "---\nid: \"赧王时东西周分治\"\ntype: event\ntitle: 赧王时东西周分治\ndescription: 显王崩，子慎靓王定立，六年崩，子赧王延立。王赧时东西周分治，王赧徙都西周。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-068]\ndate: \"（公元前314年）\"\n---\n\n::: meta\npn: \"[65]\"\nevent_type: 政治活动\n:::\n\n# 赧王时东西周分治\n\n> 显王崩，子慎靓王定立，六年崩，子赧王延立。王赧时东西周分治，王赧徙都西周。\n\n**主要人物**：王赧\n\n## 事件经过\n\n显王崩，子慎靓王定立，六年崩，子赧王延立。王赧时东西周分治，王赧徙都西周。\n\n## 原文\n\n> 王赧时东西周分治。王赧徙都西周。\n\n"
+    },
     {
       "rev_id": "20260423-161338-993661",
       "timestamp": "2026-04-23T16:13:38Z",

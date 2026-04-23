@@ -1,8 +1,28 @@
 {
   "page": "赵氏起源",
-  "latest_rev_id": "20260423-161346-9f094f",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164940-77c00b",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164940-77c00b",
+      "timestamp": "2026-04-23T16:49:40Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163420-4c166c",
+      "content_hash": "sha256:77c00b5db0728b3bf05b11a2b32eadbe08027cde95623be2419cb3aef3847901",
+      "size": 861,
+      "content": "---\nid: \"赵氏起源\"\ntype: event\ntitle: 赵氏起源\ndescription: 赵氏之先与秦共祖。造父幸于周缪王，为其御驾西巡狩，日驰千里马攻徐偃王。缪王赐造父以赵城，由此为赵氏。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-001]\ndate: \"[约公元前950年]\"\n---\n\n::: meta\npn: (043-1)\nevent_type: 家族事件\nlocation: \"赵城\"\nchapter: [赵世家]\n:::\n\n# 赵氏起源\n\n> 赵氏之先与秦共祖。造父幸于周缪王，为其御驾西巡狩，日驰千里马攻徐偃王。缪王赐造父以赵城，由此为赵氏。\n\n**主要人物**：季胜、缪王、造父\n\n## 事件经过\n\n赵氏之先与秦共祖。造父幸于周缪王，为其御驾西巡狩，日驰千里马攻徐偃王。缪王赐造父以赵城，由此为赵氏。\n\n## 原文\n\n> 乃赐造父以赵城，由此为赵氏。\n\n"
+    },
+    {
+      "rev_id": "20260423-163420-4c166c",
+      "timestamp": "2026-04-23T16:34:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161346-9f094f",
+      "content_hash": "sha256:4c166c1da033dfe07da3bc63fb7b791a3cbb889be60bbfa3abe57fae73ff9e57",
+      "size": 838,
+      "content": "---\nid: \"赵氏起源\"\ntype: event\ntitle: 赵氏起源\ndescription: 赵氏之先与秦共祖。造父幸于周缪王，为其御驾西巡狩，日驰千里马攻徐偃王。缪王赐造父以赵城，由此为赵氏。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-001]\ndate: \"[约公元前950年]\"\n---\n\n::: meta\npn: \"[1]\"\nevent_type: 家族事件\nlocation: \"赵城\"\n:::\n\n# 赵氏起源\n\n> 赵氏之先与秦共祖。造父幸于周缪王，为其御驾西巡狩，日驰千里马攻徐偃王。缪王赐造父以赵城，由此为赵氏。\n\n**主要人物**：季胜、缪王、造父\n\n## 事件经过\n\n赵氏之先与秦共祖。造父幸于周缪王，为其御驾西巡狩，日驰千里马攻徐偃王。缪王赐造父以赵城，由此为赵氏。\n\n## 原文\n\n> 乃赐造父以赵城，由此为赵氏。\n\n"
+    },
     {
       "rev_id": "20260423-161346-9f094f",
       "timestamp": "2026-04-23T16:13:46Z",

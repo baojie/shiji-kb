@@ -1,8 +1,28 @@
 {
   "page": "诛晁错遣袁盎谕告",
-  "latest_rev_id": "20260423-161320-bd92a6",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164933-c92d20",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164933-c92d20",
+      "timestamp": "2026-04-23T16:49:33Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163344-ba4356",
+      "content_hash": "sha256:c92d2054ba187985c626f750ced10050be558e91724c8cd03b02b119816dfdeb",
+      "size": 785,
+      "content": "---\nid: \"诛晁错遣袁盎谕告\"\ntype: event\ntitle: 诛晁错遣袁盎谕告\ndescription: 七国之乱爆发后，天子为诛晁错以消弥叛乱借口，遣袁盎谕告七国，然而七国不止。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-013]\ndate: \"（公元前154年）\"\n---\n\n::: meta\npn: (011-6.2)\nevent_type: 政治整顿\nchapter: [孝景本纪]\n:::\n\n# 诛晁错遣袁盎谕告\n\n> 七国之乱爆发后，天子为诛晁错以消弥叛乱借口，遣袁盎谕告七国，然而七国不止。\n\n**主要人物**：晁错、袁盎\n\n## 事件经过\n\n七国之乱爆发后，天子为诛晁错以消弥叛乱借口，遣袁盎谕告七国，然而七国不止。\n\n## 原文\n\n> 天子为诛晁错，遣袁盎谕告，不止，遂西围梁。\n\n"
+    },
+    {
+      "rev_id": "20260423-163344-ba4356",
+      "timestamp": "2026-04-23T16:33:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161320-bd92a6",
+      "content_hash": "sha256:ba4356ea8001b84e770eab8cdff87f8dd9e2cccd7d462181b782640243473b3a",
+      "size": 759,
+      "content": "---\nid: \"诛晁错遣袁盎谕告\"\ntype: event\ntitle: 诛晁错遣袁盎谕告\ndescription: 七国之乱爆发后，天子为诛晁错以消弥叛乱借口，遣袁盎谕告七国，然而七国不止。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-013]\ndate: \"（公元前154年）\"\n---\n\n::: meta\npn: \"[6.2]\"\nevent_type: 政治整顿\n:::\n\n# 诛晁错遣袁盎谕告\n\n> 七国之乱爆发后，天子为诛晁错以消弥叛乱借口，遣袁盎谕告七国，然而七国不止。\n\n**主要人物**：晁错、袁盎\n\n## 事件经过\n\n七国之乱爆发后，天子为诛晁错以消弥叛乱借口，遣袁盎谕告七国，然而七国不止。\n\n## 原文\n\n> 天子为诛晁错，遣袁盎谕告，不止，遂西围梁。\n\n"
+    },
     {
       "rev_id": "20260423-161320-bd92a6",
       "timestamp": "2026-04-23T16:13:20Z",

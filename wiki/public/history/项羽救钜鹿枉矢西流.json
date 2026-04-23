@@ -1,8 +1,28 @@
 {
   "page": "项羽救钜鹿枉矢西流",
-  "latest_rev_id": "20260423-161546-094a56",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165012-31782a",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165012-31782a",
+      "timestamp": "2026-04-23T16:50:12Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163648-03226d",
+      "content_hash": "sha256:31782a745541cdbd16d6d97051e5896965156e81d81c5c3b4d70e8668f69a7c5",
+      "size": 807,
+      "content": "---\nid: \"项羽救钜鹿枉矢西流\"\ntype: event\ntitle: 项羽救钜鹿枉矢西流\ndescription: 项羽救钜鹿之际，天象显示枉矢西流，随后山东诸侯合纵西坑秦人。天象与人事相应。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-009]\ndate: \"（公元前207年）\"\n---\n\n::: meta\npn: (027-119)\nevent_type: 战争\nlocation: \"钜鹿\"\nchapter: [天官书]\n:::\n\n# 项羽救钜鹿枉矢西流\n\n> 项羽救钜鹿之际，天象显示枉矢西流，随后山东诸侯合纵西坑秦人。天象与人事相应。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽救钜鹿之际，天象显示枉矢西流，随后山东诸侯合纵西坑秦人。天象与人事相应。\n\n## 原文\n\n> 项羽救钜鹿，枉矢西流，山东遂合从诸侯，西坑秦人。\n\n"
+    },
+    {
+      "rev_id": "20260423-163648-03226d",
+      "timestamp": "2026-04-23T16:36:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161546-094a56",
+      "content_hash": "sha256:03226dc8b4ad3e11eb240d82311d34344d38fae05fc7b329c919c02dd19f07d6",
+      "size": 784,
+      "content": "---\nid: \"项羽救钜鹿枉矢西流\"\ntype: event\ntitle: 项羽救钜鹿枉矢西流\ndescription: 项羽救钜鹿之际，天象显示枉矢西流，随后山东诸侯合纵西坑秦人。天象与人事相应。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-009]\ndate: \"（公元前207年）\"\n---\n\n::: meta\npn: \"[119]\"\nevent_type: 战争\nlocation: \"钜鹿\"\n:::\n\n# 项羽救钜鹿枉矢西流\n\n> 项羽救钜鹿之际，天象显示枉矢西流，随后山东诸侯合纵西坑秦人。天象与人事相应。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽救钜鹿之际，天象显示枉矢西流，随后山东诸侯合纵西坑秦人。天象与人事相应。\n\n## 原文\n\n> 项羽救钜鹿，枉矢西流，山东遂合从诸侯，西坑秦人。\n\n"
+    },
     {
       "rev_id": "20260423-161546-094a56",
       "timestamp": "2026-04-23T16:15:46Z",

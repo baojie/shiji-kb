@@ -1,8 +1,28 @@
 {
   "page": "陈平专为丞相",
-  "latest_rev_id": "20260423-161448-cd9086",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164955-f7efc7",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164955-f7efc7",
+      "timestamp": "2026-04-23T16:49:55Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163530-4a8a3b",
+      "content_hash": "sha256:f7efc7cccc851ae4f8c87047ec6235d3f137c699c458c3f8c32bf3e684ee3d0c",
+      "size": 568,
+      "content": "---\nid: \"陈平专为丞相\"\ntype: event\ntitle: 陈平专为丞相\ndescription: 绛侯谢病请免相，陈平专为一丞相。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-026]\ndate: \"（公元前179年）\"\n---\n\n::: meta\npn: (056-25)\nevent_type: 继位\nchapter: [陈丞相世家]\n:::\n\n# 陈平专为丞相\n\n> 绛侯谢病请免相，陈平专为一丞相。\n\n**主要人物**：陈平\n\n## 事件经过\n\n绛侯谢病请免相，陈平专为一丞相。\n\n## 原文\n\n> 居顷之，绛侯谢病请免相，陈平专为一丞相。\n\n"
+    },
+    {
+      "rev_id": "20260423-163530-4a8a3b",
+      "timestamp": "2026-04-23T16:35:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161448-cd9086",
+      "content_hash": "sha256:4a8a3b3ebf2c269b315e52a3fe510a801247ca7a1dc46799c89762afe085dcf2",
+      "size": 539,
+      "content": "---\nid: \"陈平专为丞相\"\ntype: event\ntitle: 陈平专为丞相\ndescription: 绛侯谢病请免相，陈平专为一丞相。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-026]\ndate: \"（公元前179年）\"\n---\n\n::: meta\npn: \"[25]\"\nevent_type: 继位\n:::\n\n# 陈平专为丞相\n\n> 绛侯谢病请免相，陈平专为一丞相。\n\n**主要人物**：陈平\n\n## 事件经过\n\n绛侯谢病请免相，陈平专为一丞相。\n\n## 原文\n\n> 居顷之，绛侯谢病请免相，陈平专为一丞相。\n\n"
+    },
     {
       "rev_id": "20260423-161448-cd9086",
       "timestamp": "2026-04-23T16:14:48Z",

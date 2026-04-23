@@ -1,8 +1,28 @@
 {
   "page": "问礼老子",
-  "latest_rev_id": "20260423-161438-9a63c3",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164952-e8a5e5",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164952-e8a5e5",
+      "timestamp": "2026-04-23T16:49:52Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163519-309c67",
+      "content_hash": "sha256:e8a5e5e6a96ad289e9d0aeb298bbf1325f4a605305c8d15ad19eca8b7ccfea01",
+      "size": 935,
+      "content": "---\nid: \"问礼老子\"\ntype: event\ntitle: 问礼老子\ndescription: 南宫敬叔言于鲁君，请与孔子适周问礼，盖见老子。老子送之以言，诫其勿好议人、勿发人恶。孔子自周反鲁，弟子稍益进。\ntags: [史记, 事件, 孔子世家]\nsources: [孔子世家]\nevent_ids: [047-002]\ndate: \"[约公元前518年]\"\n---\n\n::: meta\npn: (047-3)\nevent_type: 文化活动\nlocation: \"周\"\nchapter: [孔子世家]\n:::\n\n# 问礼老子\n\n> 南宫敬叔言于鲁君，请与孔子适周问礼，盖见老子。老子送之以言，诫其勿好议人、勿发人恶。孔子自周反鲁，弟子稍益进。\n\n**主要人物**：孔子、老子\n\n## 事件经过\n\n南宫敬叔言于鲁君，请与孔子适周问礼，盖见老子。老子送之以言，诫其勿好议人、勿发人恶。孔子自周反鲁，弟子稍益进。\n\n## 原文\n\n> 老子送之曰：'吾闻富贵者送人以财，仁人者送人以言。'\n\n"
+    },
+    {
+      "rev_id": "20260423-163519-309c67",
+      "timestamp": "2026-04-23T16:35:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161438-9a63c3",
+      "content_hash": "sha256:309c674d623cb39feca1b194920e993ad8885e768cfe5ab96b38d2dff94daaae",
+      "size": 909,
+      "content": "---\nid: \"问礼老子\"\ntype: event\ntitle: 问礼老子\ndescription: 南宫敬叔言于鲁君，请与孔子适周问礼，盖见老子。老子送之以言，诫其勿好议人、勿发人恶。孔子自周反鲁，弟子稍益进。\ntags: [史记, 事件, 孔子世家]\nsources: [孔子世家]\nevent_ids: [047-002]\ndate: \"[约公元前518年]\"\n---\n\n::: meta\npn: \"[3]\"\nevent_type: 文化活动\nlocation: \"周\"\n:::\n\n# 问礼老子\n\n> 南宫敬叔言于鲁君，请与孔子适周问礼，盖见老子。老子送之以言，诫其勿好议人、勿发人恶。孔子自周反鲁，弟子稍益进。\n\n**主要人物**：孔子、老子\n\n## 事件经过\n\n南宫敬叔言于鲁君，请与孔子适周问礼，盖见老子。老子送之以言，诫其勿好议人、勿发人恶。孔子自周反鲁，弟子稍益进。\n\n## 原文\n\n> 老子送之曰：'吾闻富贵者送人以财，仁人者送人以言。'\n\n"
+    },
     {
       "rev_id": "20260423-161438-9a63c3",
       "timestamp": "2026-04-23T16:14:38Z",

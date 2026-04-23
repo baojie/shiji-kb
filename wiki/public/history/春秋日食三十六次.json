@@ -1,8 +1,18 @@
 {
   "page": "春秋日食三十六次",
-  "latest_rev_id": "20260423-162540-2f596d",
-  "revision_count": 3,
+  "latest_rev_id": "20260423-164750-de0160",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164750-de0160",
+      "timestamp": "2026-04-23T16:47:50Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-162540-2f596d",
+      "content_hash": "sha256:de0160b2de44e823cc6e1a7b42c75b133628c08c35ec805533db294f9933e15f",
+      "size": 790,
+      "content": "---\nid: \"春秋日食三十六次\"\ntype: event\ntitle: 春秋日食三十六次\ndescription: 太史公推考春秋二百四十二年之间的天变记录，日食三十六次。天子衰微，诸侯力政。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-001]\ndate: \"〖%春秋〗二百四十二年间 [约公元前722年-前481年]\"\n---\n\n::: meta\npn: (027-115)\nevent_type: 自然灾害\nchapter: [天官书]\n:::\n\n# 春秋日食三十六次\n\n> 太史公推考春秋二百四十二年之间的天变记录，日食三十六次。天子衰微，诸侯力政。\n\n## 事件经过\n\n太史公推考春秋二百四十二年之间的天变记录，日食三十六次。天子衰微，诸侯力政。\n\n## 原文\n\n> 盖略以春秋二百四十二年之间，日蚀三十六。\n\n"
+    },
     {
       "rev_id": "20260423-162540-2f596d",
       "timestamp": "2026-04-23T16:25:40Z",

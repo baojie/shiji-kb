@@ -1,8 +1,28 @@
 {
   "page": "赵武灵王灭中山",
-  "latest_rev_id": "20260423-161346-9f7fb8",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164940-41880d",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164940-41880d",
+      "timestamp": "2026-04-23T16:49:40Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163419-dcefe7",
+      "content_hash": "sha256:41880d6a4a4d0467f0171b34bd7d798266f502ec8a424bd2ee987cc629c26455",
+      "size": 745,
+      "content": "---\nid: \"赵武灵王灭中山\"\ntype: event\ntitle: 赵武灵王灭中山\ndescription: 中山国复国后，至赵武灵王时再次被灭。乐氏后人乐毅即出于此族。\ntags: [史记, 事件, 乐毅列传]\nsources: [乐毅列传]\nevent_ids: [080-002]\ndate: \"赵武灵王时（公元前296年）\"\n---\n\n::: meta\npn: (080-1)\nevent_type: 战争\nlocation: \"中山\"\nchapter: [乐毅列传]\n:::\n\n# 赵武灵王灭中山\n\n> 中山国复国后，至赵武灵王时再次被灭。乐氏后人乐毅即出于此族。\n\n**主要人物**：赵武灵王\n\n## 事件经过\n\n中山国复国后，至赵武灵王时再次被灭。乐氏后人乐毅即出于此族。\n\n## 原文\n\n> 中山复国，至赵武灵王时复灭中山，而乐氏後有乐毅。\n\n"
+    },
+    {
+      "rev_id": "20260423-163419-dcefe7",
+      "timestamp": "2026-04-23T16:34:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161346-9f7fb8",
+      "content_hash": "sha256:dcefe7ec675cbe59f0b132d57b680cda731adb313480becc2009e8292f87ca39",
+      "size": 719,
+      "content": "---\nid: \"赵武灵王灭中山\"\ntype: event\ntitle: 赵武灵王灭中山\ndescription: 中山国复国后，至赵武灵王时再次被灭。乐氏后人乐毅即出于此族。\ntags: [史记, 事件, 乐毅列传]\nsources: [乐毅列传]\nevent_ids: [080-002]\ndate: \"赵武灵王时（公元前296年）\"\n---\n\n::: meta\npn: \"[1]\"\nevent_type: 战争\nlocation: \"中山\"\n:::\n\n# 赵武灵王灭中山\n\n> 中山国复国后，至赵武灵王时再次被灭。乐氏后人乐毅即出于此族。\n\n**主要人物**：赵武灵王\n\n## 事件经过\n\n中山国复国后，至赵武灵王时再次被灭。乐氏后人乐毅即出于此族。\n\n## 原文\n\n> 中山复国，至赵武灵王时复灭中山，而乐氏後有乐毅。\n\n"
+    },
     {
       "rev_id": "20260423-161346-9f7fb8",
       "timestamp": "2026-04-23T16:13:46Z",

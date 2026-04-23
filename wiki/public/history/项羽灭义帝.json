@@ -1,8 +1,28 @@
 {
   "page": "项羽灭义帝",
-  "latest_rev_id": "20260423-161547-93c619",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165012-d5965e",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165012-d5965e",
+      "timestamp": "2026-04-23T16:50:12Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163650-aca874",
+      "content_hash": "sha256:d5965eee9337487fb4037f0ed71db4db81977f89a42343072fac64895adb853f",
+      "size": 823,
+      "content": "---\nid: \"项羽灭义帝\"\ntype: event\ntitle: 项羽灭义帝\ndescription: 汉二年，项羽命人弑杀义帝（楚怀王）。此举使项羽失去政治合法性，成为汉王讨伐项羽的重要口实。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-013]\ndate: \"〖%汉二年十月〗 （公元前205年）\"\n---\n\n::: meta\npn: (016-r42)\nevent_type: 政治整顿\nchapter: [秦楚之际月表]\n:::\n\n# 项羽灭义帝\n\n> 汉二年，项羽命人弑杀义帝（楚怀王）。此举使项羽失去政治合法性，成为汉王讨伐项羽的重要口实。\n\n**主要人物**：项羽\n\n## 事件经过\n\n汉二年，项羽命人弑杀义帝（楚怀王）。此举使项羽失去政治合法性，成为汉王讨伐项羽的重要口实。\n\n## 原文\n\n> 十。项羽灭义帝。\n\n"
+    },
+    {
+      "rev_id": "20260423-163650-aca874",
+      "timestamp": "2026-04-23T16:36:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161547-93c619",
+      "content_hash": "sha256:aca874a0d515ca22561d8ff0f00053dc9ab3b573d728bc7b7f8db68c4a0495b8",
+      "size": 789,
+      "content": "---\nid: \"项羽灭义帝\"\ntype: event\ntitle: 项羽灭义帝\ndescription: 汉二年，项羽命人弑杀义帝（楚怀王）。此举使项羽失去政治合法性，成为汉王讨伐项羽的重要口实。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-013]\ndate: \"〖%汉二年十月〗 （公元前205年）\"\n---\n\n::: meta\npn: \"r42\"\nevent_type: 政治整顿\n:::\n\n# 项羽灭义帝\n\n> 汉二年，项羽命人弑杀义帝（楚怀王）。此举使项羽失去政治合法性，成为汉王讨伐项羽的重要口实。\n\n**主要人物**：项羽\n\n## 事件经过\n\n汉二年，项羽命人弑杀义帝（楚怀王）。此举使项羽失去政治合法性，成为汉王讨伐项羽的重要口实。\n\n## 原文\n\n> 十。项羽灭义帝。\n\n"
+    },
     {
       "rev_id": "20260423-161547-93c619",
       "timestamp": "2026-04-23T16:15:47Z",

@@ -1,8 +1,28 @@
 {
   "page": "赵奢封马服君",
-  "latest_rev_id": "20260423-161342-a4aa47",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164939-8cd8e9",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164939-8cd8e9",
+      "timestamp": "2026-04-23T16:49:39Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163415-54dcf8",
+      "content_hash": "sha256:8cd8e9b3152733333d2d2ab2487f801864e7a24c69f11a45f2ecfea88b6e9e7f",
+      "size": 883,
+      "content": "---\nid: \"赵奢封马服君\"\ntype: event\ntitle: 赵奢封马服君\ndescription: 阏与大捷后，赵惠文王赐赵奢号为马服君，以许历为国尉。赵奢由此与廉颇、蔺相如同位。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-015]\ndate: \"〖%赵惠文王〗 （公元前269年）\"\n---\n\n::: meta\npn: (081-14.1-14.2)\nevent_type: 政治活动\nchapter: [廉颇蔺相如列传]\n:::\n\n# 赵奢封马服君\n\n> 阏与大捷后，赵惠文王赐赵奢号为马服君，以许历为国尉。赵奢由此与廉颇、蔺相如同位。\n\n**主要人物**：许历、赵奢\n\n## 事件经过\n\n阏与大捷后，赵惠文王赐赵奢号为马服君，以许历为国尉。赵奢由此与廉颇、蔺相如同位。\n\n## 原文\n\n> 赵惠文王赐奢号为马服君，以许历为国尉。赵奢於是与廉颇、蔺相如同位。\n\n"
+    },
+    {
+      "rev_id": "20260423-163415-54dcf8",
+      "timestamp": "2026-04-23T16:34:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161342-a4aa47",
+      "content_hash": "sha256:54dcf86d8d3c8d136b8714d9f08cd032c9dda8b27d1cd6bfdd4ed0fd6e6d1ecb",
+      "size": 850,
+      "content": "---\nid: \"赵奢封马服君\"\ntype: event\ntitle: 赵奢封马服君\ndescription: 阏与大捷后，赵惠文王赐赵奢号为马服君，以许历为国尉。赵奢由此与廉颇、蔺相如同位。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-015]\ndate: \"〖%赵惠文王〗 （公元前269年）\"\n---\n\n::: meta\npn: \"[14.1]-[14.2]\"\nevent_type: 政治活动\n:::\n\n# 赵奢封马服君\n\n> 阏与大捷后，赵惠文王赐赵奢号为马服君，以许历为国尉。赵奢由此与廉颇、蔺相如同位。\n\n**主要人物**：许历、赵奢\n\n## 事件经过\n\n阏与大捷后，赵惠文王赐赵奢号为马服君，以许历为国尉。赵奢由此与廉颇、蔺相如同位。\n\n## 原文\n\n> 赵惠文王赐奢号为马服君，以许历为国尉。赵奢於是与廉颇、蔺相如同位。\n\n"
+    },
     {
       "rev_id": "20260423-161342-a4aa47",
       "timestamp": "2026-04-23T16:13:42Z",

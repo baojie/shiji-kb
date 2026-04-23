@@ -1,8 +1,28 @@
 {
   "page": "顷襄王卒考烈王立",
-  "latest_rev_id": "20260423-161536-2d6f51",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165009-01b903",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165009-01b903",
+      "timestamp": "2026-04-23T16:50:09Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163635-da6add",
+      "content_hash": "sha256:01b9035b098d06e226780005db28cafe16a4796d51822fff0c36c8e0ea47f00b",
+      "size": 930,
+      "content": "---\nid: \"顷襄王卒考烈王立\"\ntype: event\ntitle: 顷襄王卒考烈王立\ndescription: 黄歇到达楚国三个月后，顷襄王去世，太子完即位，是为考烈王。黄歇的冒死护送确保了王位的正常继承。\ntags: [史记, 事件, 春申君列传]\nsources: [春申君列传]\nevent_ids: [078-004]\ndate: \"黄歇至楚三月后 （公元前263年）\"\n---\n\n::: meta\npn: (078-12)\nevent_type: 继位\nlocation: \"楚\"\nchapter: [春申君列传]\n:::\n\n# 顷襄王卒考烈王立\n\n> 黄歇到达楚国三个月后，顷襄王去世，太子完即位，是为考烈王。黄歇的冒死护送确保了王位的正常继承。\n\n**主要人物**：楚顷襄王、考烈王\n\n## 事件经过\n\n黄歇到达楚国三个月后，顷襄王去世，太子完即位，是为考烈王。黄歇的冒死护送确保了王位的正常继承。\n\n## 原文\n\n> 歇至楚三月，楚顷襄王卒，太子完立，是为考烈王。\n\n"
+    },
+    {
+      "rev_id": "20260423-163635-da6add",
+      "timestamp": "2026-04-23T16:36:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161536-2d6f51",
+      "content_hash": "sha256:da6add37706158def9fd5d2d66b1fb9042a58600f79cc3aa9107db5d3ddfb490",
+      "size": 901,
+      "content": "---\nid: \"顷襄王卒考烈王立\"\ntype: event\ntitle: 顷襄王卒考烈王立\ndescription: 黄歇到达楚国三个月后，顷襄王去世，太子完即位，是为考烈王。黄歇的冒死护送确保了王位的正常继承。\ntags: [史记, 事件, 春申君列传]\nsources: [春申君列传]\nevent_ids: [078-004]\ndate: \"黄歇至楚三月后 （公元前263年）\"\n---\n\n::: meta\npn: \"[12]\"\nevent_type: 继位\nlocation: \"楚\"\n:::\n\n# 顷襄王卒考烈王立\n\n> 黄歇到达楚国三个月后，顷襄王去世，太子完即位，是为考烈王。黄歇的冒死护送确保了王位的正常继承。\n\n**主要人物**：楚顷襄王、考烈王\n\n## 事件经过\n\n黄歇到达楚国三个月后，顷襄王去世，太子完即位，是为考烈王。黄歇的冒死护送确保了王位的正常继承。\n\n## 原文\n\n> 歇至楚三月，楚顷襄王卒，太子完立，是为考烈王。\n\n"
+    },
     {
       "rev_id": "20260423-161536-2d6f51",
       "timestamp": "2026-04-23T16:15:36Z",

@@ -1,8 +1,28 @@
 {
   "page": "颛顼崩帝喾立",
-  "latest_rev_id": "20260423-161550-0013f7",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165013-c0382f",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165013-c0382f",
+      "timestamp": "2026-04-23T16:50:13Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163653-c2dd0e",
+      "content_hash": "sha256:c0382fc9269fdf3e3facb6de26c35234962aee90d493eeae855f604e6513bc56",
+      "size": 849,
+      "content": "---\nid: \"颛顼崩帝喾立\"\ntype: event\ntitle: 颛顼崩帝喾立\ndescription: 帝颛顼生子穷蝉。颛顼崩逝，玄嚣之孙高辛立，是为帝喾。高辛是黄帝的曾孙，对于颛顼是族子关系。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-012]\ndate: \"[约公元前2437年]\"\n---\n\n::: meta\npn: (001-6)\nevent_type: 继位\nchapter: [五帝本纪]\n:::\n\n# 颛顼崩帝喾立\n\n> 帝颛顼生子穷蝉。颛顼崩逝，玄嚣之孙高辛立，是为帝喾。高辛是黄帝的曾孙，对于颛顼是族子关系。\n\n**主要人物**：颛顼、高辛\n\n## 事件经过\n\n帝颛顼生子穷蝉。颛顼崩逝，玄嚣之孙高辛立，是为帝喾。高辛是黄帝的曾孙，对于颛顼是族子关系。\n\n## 原文\n\n> 帝颛顼生子曰穷蝉。颛顼崩，而玄嚣之孙高辛立，是为帝喾。\n\n"
+    },
+    {
+      "rev_id": "20260423-163653-c2dd0e",
+      "timestamp": "2026-04-23T16:36:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161550-0013f7",
+      "content_hash": "sha256:c2dd0eea1f20f7f389503295d4bb05d834940e03d517d5c852a36f1fc6376a0a",
+      "size": 823,
+      "content": "---\nid: \"颛顼崩帝喾立\"\ntype: event\ntitle: 颛顼崩帝喾立\ndescription: 帝颛顼生子穷蝉。颛顼崩逝，玄嚣之孙高辛立，是为帝喾。高辛是黄帝的曾孙，对于颛顼是族子关系。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-012]\ndate: \"[约公元前2437年]\"\n---\n\n::: meta\npn: \"[6]\"\nevent_type: 继位\n:::\n\n# 颛顼崩帝喾立\n\n> 帝颛顼生子穷蝉。颛顼崩逝，玄嚣之孙高辛立，是为帝喾。高辛是黄帝的曾孙，对于颛顼是族子关系。\n\n**主要人物**：颛顼、高辛\n\n## 事件经过\n\n帝颛顼生子穷蝉。颛顼崩逝，玄嚣之孙高辛立，是为帝喾。高辛是黄帝的曾孙，对于颛顼是族子关系。\n\n## 原文\n\n> 帝颛顼生子曰穷蝉。颛顼崩，而玄嚣之孙高辛立，是为帝喾。\n\n"
+    },
     {
       "rev_id": "20260423-161550-0013f7",
       "timestamp": "2026-04-23T16:15:50Z",

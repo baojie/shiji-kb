@@ -1,8 +1,28 @@
 {
   "page": "陈平从项羽击秦",
-  "latest_rev_id": "20260423-161449-7ce1fe",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164955-cff5ef",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164955-cff5ef",
+      "timestamp": "2026-04-23T16:49:55Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163533-d247fb",
+      "content_hash": "sha256:cff5ef8d4f3b7968988640c880c84c46243bf9536296bc6766a57eb976031f0e",
+      "size": 836,
+      "content": "---\nid: \"陈平从项羽击秦\"\ntype: event\ntitle: 陈平从项羽击秦\ndescription: 项羽略地至河上，陈平往归之，从入破秦，赐平爵卿。项羽使平为信武君将魏王咎客击降殷王。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-005]\ndate: \"[约公元前207年]\"\n---\n\n::: meta\npn: (056-5)\nevent_type: 政治活动\nchapter: [陈丞相世家]\n:::\n\n# 陈平从项羽击秦\n\n> 项羽略地至河上，陈平往归之，从入破秦，赐平爵卿。项羽使平为信武君将魏王咎客击降殷王。\n\n**主要人物**：陈平、项羽\n\n## 事件经过\n\n项羽略地至河上，陈平往归之，从入破秦，赐平爵卿。项羽使平为信武君将魏王咎客击降殷王。\n\n## 原文\n\n> 项羽略地至河上，陈平往归之，从入破秦，赐平爵卿。\n\n"
+    },
+    {
+      "rev_id": "20260423-163533-d247fb",
+      "timestamp": "2026-04-23T16:35:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161449-7ce1fe",
+      "content_hash": "sha256:d247fb0a2494df74713d80aea8b40451f2c3450d5f58b92ab7457aba5047ee06",
+      "size": 807,
+      "content": "---\nid: \"陈平从项羽击秦\"\ntype: event\ntitle: 陈平从项羽击秦\ndescription: 项羽略地至河上，陈平往归之，从入破秦，赐平爵卿。项羽使平为信武君将魏王咎客击降殷王。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-005]\ndate: \"[约公元前207年]\"\n---\n\n::: meta\npn: \"[5]\"\nevent_type: 政治活动\n:::\n\n# 陈平从项羽击秦\n\n> 项羽略地至河上，陈平往归之，从入破秦，赐平爵卿。项羽使平为信武君将魏王咎客击降殷王。\n\n**主要人物**：陈平、项羽\n\n## 事件经过\n\n项羽略地至河上，陈平往归之，从入破秦，赐平爵卿。项羽使平为信武君将魏王咎客击降殷王。\n\n## 原文\n\n> 项羽略地至河上，陈平往归之，从入破秦，赐平爵卿。\n\n"
+    },
     {
       "rev_id": "20260423-161449-7ce1fe",
       "timestamp": "2026-04-23T16:14:49Z",

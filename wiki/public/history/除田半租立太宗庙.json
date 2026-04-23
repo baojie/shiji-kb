@@ -1,8 +1,28 @@
 {
   "page": "除田半租立太宗庙",
-  "latest_rev_id": "20260423-161505-ed3e73",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-165000-946267",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-165000-946267",
+      "timestamp": "2026-04-23T16:50:00Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163554-f9d338",
+      "content_hash": "sha256:9462671fec593e4bf6a881be3b48f9d812155280631ab29ccf3fc4e109af4843",
+      "size": 676,
+      "content": "---\nid: \"除田半租立太宗庙\"\ntype: event\ntitle: 除田半租立太宗庙\ndescription: 五月除田半租，为孝文帝立太宗庙，令群臣无朝贺。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-003]\ndate: \"〖%五月〗 （公元前156年）\"\n---\n\n::: meta\npn: (011-2.2)\nevent_type: 经济活动\nchapter: [孝景本纪]\n:::\n\n# 除田半租立太宗庙\n\n> 五月除田半租，为孝文帝立太宗庙，令群臣无朝贺。\n\n**主要人物**：孝景皇帝\n\n## 事件经过\n\n五月除田半租，为孝文帝立太宗庙，令群臣无朝贺。\n\n## 原文\n\n> 五月，除田半租，为孝文立太宗庙。令群臣无朝贺。\n\n"
+    },
+    {
+      "rev_id": "20260423-163554-f9d338",
+      "timestamp": "2026-04-23T16:35:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161505-ed3e73",
+      "content_hash": "sha256:f9d338de4fdec229f330f8c3e1f0019baa189f592eddad81e8c07328df56694e",
+      "size": 650,
+      "content": "---\nid: \"除田半租立太宗庙\"\ntype: event\ntitle: 除田半租立太宗庙\ndescription: 五月除田半租，为孝文帝立太宗庙，令群臣无朝贺。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-003]\ndate: \"〖%五月〗 （公元前156年）\"\n---\n\n::: meta\npn: \"[2.2]\"\nevent_type: 经济活动\n:::\n\n# 除田半租立太宗庙\n\n> 五月除田半租，为孝文帝立太宗庙，令群臣无朝贺。\n\n**主要人物**：孝景皇帝\n\n## 事件经过\n\n五月除田半租，为孝文帝立太宗庙，令群臣无朝贺。\n\n## 原文\n\n> 五月，除田半租，为孝文立太宗庙。令群臣无朝贺。\n\n"
+    },
     {
       "rev_id": "20260423-161505-ed3e73",
       "timestamp": "2026-04-23T16:15:05Z",

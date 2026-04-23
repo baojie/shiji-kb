@@ -1,8 +1,28 @@
 {
   "page": "赵高杀李斯",
-  "latest_rev_id": "20260423-161355-9c8320",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164942-04e8f6",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164942-04e8f6",
+      "timestamp": "2026-04-23T16:49:42Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163431-8c501c",
+      "content_hash": "sha256:04e8f61b6a2c414a189ef9b09a4c334e72cca5827b28f8f3c377bde86d0c17b0",
+      "size": 630,
+      "content": "---\nid: \"赵高杀李斯\"\ntype: event\ntitle: 赵高杀李斯\ndescription: 三年冬，赵高为丞相，竟案治李斯，将其杀害。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-097]\ndate: \"〖%二世三年冬〗 （公元前207年）\"\n---\n\n::: meta\npn: (006-104.2)\nevent_type: 政治整顿\nchapter: [秦始皇本纪]\n:::\n\n# 赵高杀李斯\n\n> 三年冬，赵高为丞相，竟案治李斯，将其杀害。\n\n**主要人物**：李斯、赵高\n\n## 事件经过\n\n三年冬，赵高为丞相，竟案治李斯，将其杀害。\n\n## 原文\n\n> 冬，赵高为丞相，竟案李斯杀之。\n\n"
+    },
+    {
+      "rev_id": "20260423-163431-8c501c",
+      "timestamp": "2026-04-23T16:34:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161355-9c8320",
+      "content_hash": "sha256:8c501c9661fbad369b97afc876fbeb8c425e930cf8af32e4d5dc1a6e92338f24",
+      "size": 601,
+      "content": "---\nid: \"赵高杀李斯\"\ntype: event\ntitle: 赵高杀李斯\ndescription: 三年冬，赵高为丞相，竟案治李斯，将其杀害。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-097]\ndate: \"〖%二世三年冬〗 （公元前207年）\"\n---\n\n::: meta\npn: \"[104.2]\"\nevent_type: 政治整顿\n:::\n\n# 赵高杀李斯\n\n> 三年冬，赵高为丞相，竟案治李斯，将其杀害。\n\n**主要人物**：李斯、赵高\n\n## 事件经过\n\n三年冬，赵高为丞相，竟案治李斯，将其杀害。\n\n## 原文\n\n> 冬，赵高为丞相，竟案李斯杀之。\n\n"
+    },
     {
       "rev_id": "20260423-161355-9c8320",
       "timestamp": "2026-04-23T16:13:55Z",

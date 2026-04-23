@@ -1,8 +1,28 @@
 {
   "page": "迫卫迁东郡",
-  "latest_rev_id": "20260423-161404-df1f02",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-164944-b3a13e",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260423-164944-b3a13e",
+      "timestamp": "2026-04-23T16:49:44Z",
+      "author": "butler",
+      "summary": "butler/fix-pn: 修正PN格式 + 添加章节关联",
+      "parent_rev": "20260423-163443-ed0f2b",
+      "content_hash": "sha256:b3a13e94175088674d400367973b9433e3d85999fdd72e6400315cdc259b387d",
+      "size": 743,
+      "content": "---\nid: \"迫卫迁东郡\"\ntype: event\ntitle: 迫卫迁东郡\ndescription: 秦攻克卫国，迫近东郡，卫君角率宗族迁居野王，依山保魏之河内。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-011]\ndate: \"〖%六年〗 （公元前241年）\"\n---\n\n::: meta\npn: (006-7.2)\nevent_type: 战争\nlocation: \"野王\"\nchapter: [秦始皇本纪]\n:::\n\n# 迫卫迁东郡\n\n> 秦攻克卫国，迫近东郡，卫君角率宗族迁居野王，依山保魏之河内。\n\n**主要人物**：角\n\n## 事件经过\n\n秦攻克卫国，迫近东郡，卫君角率宗族迁居野王，依山保魏之河内。\n\n## 原文\n\n> 拔卫，迫东郡，其君角率其支属徙居野王，阻其山以保魏之河内。\n\n"
+    },
+    {
+      "rev_id": "20260423-163443-ed0f2b",
+      "timestamp": "2026-04-23T16:34:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161404-df1f02",
+      "content_hash": "sha256:ed0f2bc05282553918684bce644b4d8470d9c2487cfcfc9b1e398a07bfc11001",
+      "size": 714,
+      "content": "---\nid: \"迫卫迁东郡\"\ntype: event\ntitle: 迫卫迁东郡\ndescription: 秦攻克卫国，迫近东郡，卫君角率宗族迁居野王，依山保魏之河内。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-011]\ndate: \"〖%六年〗 （公元前241年）\"\n---\n\n::: meta\npn: \"[7.2]\"\nevent_type: 战争\nlocation: \"野王\"\n:::\n\n# 迫卫迁东郡\n\n> 秦攻克卫国，迫近东郡，卫君角率宗族迁居野王，依山保魏之河内。\n\n**主要人物**：角\n\n## 事件经过\n\n秦攻克卫国，迫近东郡，卫君角率宗族迁居野王，依山保魏之河内。\n\n## 原文\n\n> 拔卫，迫东郡，其君角率其支属徙居野王，阻其山以保魏之河内。\n\n"
+    },
     {
       "rev_id": "20260423-161404-df1f02",
       "timestamp": "2026-04-23T16:14:04Z",
