@@ -47,7 +47,7 @@ function renderBacklinks(backlinks, pid) {
 export default {
   async init(core) {
     // ── onBoot: 加载 backlinks.json ──
-    core.hooks.onBoot.tap(async (c) => {
+    core.hooks.onBoot.add(async (c) => {
       try {
         const r = await fetch('backlinks.json');
         if (r.ok) {
@@ -61,7 +61,7 @@ export default {
     });
 
     // ── onAfterRender: 注入反向引用区块 ──
-    core.hooks.onAfterRender.tap((html, { pid }) => {
+    core.hooks.onAfterRender.add((html, { pid }) => {
       if (!core.backlinks) return html;
       const section = renderBacklinks(core.backlinks, pid);
       if (!section) return html;

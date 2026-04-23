@@ -67,7 +67,7 @@ export default {
     await loadKaTeX();
 
     // 每次页面渲染后运行 KaTeX
-    core.hooks.onAfterRender.tap(async (html) => {
+    core.hooks.onAfterRender.add(async (html) => {
       // 稍延迟等 DOM 更新
       setTimeout(renderMath, 50);
       return html;
