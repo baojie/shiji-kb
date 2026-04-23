@@ -38,10 +38,17 @@ description: 史记 wiki 管家 (Butler Agent) 的总则与进化框架。定义
    单页整体产出可超 20 行, 但仍是一次原子动作一次 commit。
 2. **可逆**：每个动作 ↔ 1 个 commit, 失败时 `git revert <sha>` 即可回滚。
 3. **留痕**：每个动作前先写 `logs/wiki_butler/actions.jsonl`, 含动机 / 前置 / 后置 / 来源。
-   **写入 wiki 页面后，必须立即调用 `record_revision.py`**，将本次修改记入修订历史（`wiki/public/history/<slug>.json`）——人工编辑和自动脚本同等要求：
+   **所有 wiki 页面写入必须通过专用脚本**，禁止直接 Edit/Write wiki/public/pages/*.md：
    ```bash
-   python3 wiki/scripts/butler/record_revision.py <slug> --summary "W2/<action>: ..." --author butler
+   # 新建页面
+   python3 wiki/scripts/butler/add_page.py <slug> <content_file> --summary "butler/<action>: ..." --author butler
+   # 编辑页面
+   python3 wiki/scripts/butler/edit_page.py <slug> <content_file> --summary "butler/<action>: ..." --author butler
+   # 删除页面
+   python3 wiki/scripts/butler/delete_page.py <slug> --summary "butler/delete: ..." --author butler
    ```
+   这三个脚本自动调用 `record_revision.py`，保证修订历史不会遗漏。
+   **bot 添加的页面**（author=butler）在修订历史中标注为 bot 操作，与人工编辑区分。
 4. **自改**：skill 文件可被 butler (通过 W5) 修改, 但必须走"反思 → 提案 → changelog"流程。
 5. **禁编造**：不写原文未支持的"事实"。不确定加 "据…" 或 "疑" 或直接不写。
 
@@ -147,7 +154,9 @@ touch logs/wiki_butler/{queue.md,actions.jsonl,failures.jsonl,skill_changes.md}
 - ❌ 跳过 log (未写 actions.jsonl)
 - ❌ 修改 `chapter_md/` / `kg/` / `data/`（butler 只读这些）
 - ❌ 批量删除/重命名 `wiki/public/pages/`
-- ❌ 直接改 W0 本文的"六不变量"章节（仅经用户明确 review 才可动）
+- ❌ **直接 Edit/Write wiki/public/pages/*.md**（必须用 add_page / edit_page / delete_page）
+- ❌ 直接调用 `record_revision.py`（应通过上述三个脚本间接调用）
+- ❌ 直接改 W0 本文的"五不变量"章节（仅经用户明确 review 才可动）
 - ❌ 不经 W5 反思流程直接改其他 skill
 - ❌ 单次 invocation 涉及 > 3 个文件改动 (多文件要拆成多次 invocation)
 
