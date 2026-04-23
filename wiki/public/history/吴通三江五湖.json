@@ -1,8 +1,18 @@
 {
   "page": "吴通三江五湖",
-  "latest_rev_id": "20260423-155022-c046ea",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160732-8b578d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160732-8b578d",
+      "timestamp": "2026-04-23T16:07:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155022-c046ea",
+      "content_hash": "sha256:8b578df602f57d2bb6e4bd7dadcee2aed66ee820caebd5b3cd5919e87a02852c",
+      "size": 429,
+      "content": "paragraph_refs:\n  029-004: \"[2]\"\nevent_type: 建设\n---\nid: \"吴通三江五湖\"\ntype: event\ntitle: 吴通三江五湖\ndescription: 吴国通渠三江、五湖。\ntags: [史记, 事件, 河渠书]\nsources: [河渠书]\nevent_ids: [029-004]\ndate: \"[约公元前510年]\"\n---\n\n# 吴通三江五湖\n\n> 吴国通渠三江、五湖。\n\n## 事件经过\n\n吴国通渠三江、五湖。\n\n## 原文\n\n> 於吴，则通渠三江、五湖。\n\n"
+    },
     {
       "rev_id": "20260423-155022-c046ea",
       "timestamp": "2026-04-23T15:50:22Z",

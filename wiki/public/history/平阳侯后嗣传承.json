@@ -1,8 +1,18 @@
 {
   "page": "平阳侯后嗣传承",
-  "latest_rev_id": "20260423-155132-4dfecf",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161000-17dc71",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161000-17dc71",
+      "timestamp": "2026-04-23T16:10:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155132-4dfecf",
+      "content_hash": "sha256:17dc71292427ca467abfc754c75db07ba9d907ac639861d894308d709ea31c39",
+      "size": 728,
+      "content": "paragraph_refs:\n  054-017: \"[17]\"\nevent_type: 家族事件\n---\nid: \"平阳侯后嗣传承\"\ntype: event\ntitle: 平阳侯后嗣传承\ndescription: 子窋代侯，高后时为御史大夫。传至子宗，征和二年中坐太子死，国除。\ntags: [史记, 事件, 曹相国世家]\nsources: [曹相国世家]\nevent_ids: [054-017]\ndate: \"（公元前190-前91年）\"\n---\n\n# 平阳侯后嗣传承\n\n> 子窋代侯，高后时为御史大夫。传至子宗，征和二年中坐太子死，国除。\n\n## 事件经过\n\n子窋代侯，高后时为御史大夫。传至子宗，征和二年中坐太子死，国除。\n\n## 原文\n\n> 平阳侯窋，高后时为御史大夫...子宗代侯。征和二年中，宗坐太子死，国除。\n\n"
+    },
     {
       "rev_id": "20260423-155132-4dfecf",
       "timestamp": "2026-04-23T15:51:32Z",

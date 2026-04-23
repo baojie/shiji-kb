@@ -1,8 +1,18 @@
 {
   "page": "卫山谕降未成",
-  "latest_rev_id": "20260423-154959-045ebc",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160646-7d3a64",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160646-7d3a64",
+      "timestamp": "2026-04-23T16:06:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154959-045ebc",
+      "content_hash": "sha256:7d3a646f02debfb527a85a0df4534e252b0c93d2ce6a55077c3fb95db4e52dbf",
+      "size": 1123,
+      "content": "paragraph_refs:\n  115-009: \"[4]\"\nevent_type: 政治活动\nlocation: \"浿水\"\n---\nid: \"卫山谕降未成\"\ntype: event\ntitle: 卫山谕降未成\ndescription: 天子使卫山因兵威谕降右渠。右渠愿降，遣太子持兵万余人渡浿水。使者及左将军疑其为变，太子亦疑被诈杀，遂不渡水而归。卫山还报后被诛。\ntags: [史记, 事件, 朝鲜列传]\nsources: [朝鲜列传]\nevent_ids: [115-009]\ndate: \"（公元前109年）\"\n---\n\n# 卫山谕降未成\n\n> 天子使卫山因兵威谕降右渠。右渠愿降，遣太子持兵万余人渡浿水。使者及左将军疑其为变，太子亦疑被诈杀，遂不渡水而归。卫山还报后被诛。\n\n**主要人物**：卫山、右渠\n\n## 事件经过\n\n天子使卫山因兵威谕降右渠。右渠愿降，遣太子持兵万余人渡浿水。使者及左将军疑其为变，太子亦疑被诈杀，遂不渡水而归。卫山还报后被诛。\n\n## 原文\n\n> 右渠见使者顿首谢：'原降，恐两将诈杀臣；今见信节，请服降。'遣太子入谢……太子亦疑使者左将军诈杀之，遂不渡浿水，复引归。\n\n"
+    },
     {
       "rev_id": "20260423-154959-045ebc",
       "timestamp": "2026-04-23T15:49:59Z",

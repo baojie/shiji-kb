@@ -1,8 +1,18 @@
 {
   "page": "文帝崩",
-  "latest_rev_id": "20260423-155209-9f7a0b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161110-d8c430",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161110-d8c430",
+      "timestamp": "2026-04-23T16:11:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155209-9f7a0b",
+      "content_hash": "sha256:d8c4306fb053e4813a2f96913541102616502926d02c1c7c5b00f1521589d7ba",
+      "size": 989,
+      "content": "paragraph_refs:\n  010-044: \"[41.1]-[41.3]\"\nevent_type: 继位\nlocation: \"未央宫\"\n---\nid: \"文帝崩\"\ntype: event\ntitle: 文帝崩\ndescription: 后七年六月己亥，帝崩于未央宫。遗诏言死者天地之理，令天下吏民出临三日释服，勿禁婚嫁饮酒，霸陵山川因其故勿改。薄葬之意贯穿始终。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-044]\ndate: \"〖%後七年六月己亥〗 （公元前157年）\"\n---\n\n# 文帝崩\n\n> 后七年六月己亥，帝崩于未央宫。遗诏言死者天地之理，令天下吏民出临三日释服，勿禁婚嫁饮酒，霸陵山川因其故勿改。薄葬之意贯穿始终。\n\n**主要人物**：孝文皇帝\n\n## 事件经过\n\n后七年六月己亥，帝崩于未央宫。遗诏言死者天地之理，令天下吏民出临三日释服，勿禁婚嫁饮酒，霸陵山川因其故勿改。薄葬之意贯穿始终。\n\n## 原文\n\n> 後七年六月己亥，帝崩於未央宫。\n\n"
+    },
     {
       "rev_id": "20260423-155209-9f7a0b",
       "timestamp": "2026-04-23T15:52:09Z",

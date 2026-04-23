@@ -1,8 +1,18 @@
 {
   "page": "作阳陵渭桥",
-  "latest_rev_id": "20260423-154923-adaedb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160548-b04404",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160548-b04404",
+      "timestamp": "2026-04-23T16:05:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154923-adaedb",
+      "content_hash": "sha256:b04404837efbe5a62cf0f6625ca01a5ea135ef549deac3ac63f09db74c7f3448",
+      "size": 677,
+      "content": "paragraph_refs:\n  011-020: \"[10.1]-[10.2]\"\nevent_type: 建设\nlocation: \"阳陵、渭桥\"\n---\nid: \"作阳陵渭桥\"\ntype: event\ntitle: 作阳陵渭桥\ndescription: 五年三月作阳陵、渭桥。五月募徙阳陵予钱二十万。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-020]\ndate: \"〖%五年三月〗 （公元前152年）\"\n---\n\n# 作阳陵渭桥\n\n> 五年三月作阳陵、渭桥。五月募徙阳陵予钱二十万。\n\n**主要人物**：孝景皇帝\n\n## 事件经过\n\n五年三月作阳陵、渭桥。五月募徙阳陵予钱二十万。\n\n## 原文\n\n> 五年三月，作阳陵、渭桥。五月，募徙阳陵，予钱二十万。\n\n"
+    },
     {
       "rev_id": "20260423-154923-adaedb",
       "timestamp": "2026-04-23T15:49:23Z",

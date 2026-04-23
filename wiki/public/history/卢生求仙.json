@@ -1,8 +1,18 @@
 {
   "page": "卢生求仙",
-  "latest_rev_id": "20260423-154958-046d88",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160642-f1af49",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160642-f1af49",
+      "timestamp": "2026-04-23T16:06:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154958-046d88",
+      "content_hash": "sha256:f1af49ebe12e5354df7bd16f41a265fb1d76daf2ca05549b92af2183d7189520",
+      "size": 904,
+      "content": "paragraph_refs:\n  006-066: \"[56.1], [57.1]\"\nevent_type: 文化活动\nlocation: \"碣石\"\n---\nid: \"卢生求仙\"\ntype: event\ntitle: 卢生求仙\ndescription: 三十二年，始皇至碣石，使燕人卢生求羡门、高誓等仙人。又使韩终、侯公、石生求仙人不死之药。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-066]\ndate: \"〖%三十二年〗 （公元前215年）\"\n---\n\n# 卢生求仙\n\n> 三十二年，始皇至碣石，使燕人卢生求羡门、高誓等仙人。又使韩终、侯公、石生求仙人不死之药。\n\n**主要人物**：卢生\n\n## 事件经过\n\n三十二年，始皇至碣石，使燕人卢生求羡门、高誓等仙人。又使韩终、侯公、石生求仙人不死之药。\n\n## 原文\n\n> 三十二年，始皇之碣石，使燕人卢生求?羡门?、?高誓?。因使韩终、侯公、石生求仙人不死之药。\n\n"
+    },
     {
       "rev_id": "20260423-154958-046d88",
       "timestamp": "2026-04-23T15:49:58Z",

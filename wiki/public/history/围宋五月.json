@@ -1,8 +1,18 @@
 {
   "page": "围宋五月",
-  "latest_rev_id": "20260423-155032-6364e1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160800-192c1c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160800-192c1c",
+      "timestamp": "2026-04-23T16:08:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155032-6364e1",
+      "content_hash": "sha256:192c1c6ede6fef2bc67ed6701c172e7f26e6ec6f88923bf781ed00a89b9b49b4",
+      "size": 896,
+      "content": "paragraph_refs:\n  040-016: \"[30.33]\"\nevent_type: 战争\nlocation: \"宋\"\n---\nid: \"围宋五月\"\ntype: event\ntitle: 围宋五月\ndescription: 二十年围宋以杀楚使也。围宋五月城中食尽易子而食析骨而炊。宋华元出告以情。庄王曰\"君子哉\"遂罢兵去。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-016]\ndate: \"（公元前594年）\"\n---\n\n# 围宋五月\n\n> 二十年围宋以杀楚使也。围宋五月城中食尽易子而食析骨而炊。宋华元出告以情。庄王曰\"君子哉\"遂罢兵去。\n\n**主要人物**：华元、庄王\n\n## 事件经过\n\n二十年围宋以杀楚使也。围宋五月城中食尽易子而食析骨而炊。宋华元出告以情。庄王曰\"君子哉\"遂罢兵去。\n\n## 原文\n\n> 围宋五月，城中食尽，易子而食，析骨而炊。宋华元出告以情。庄王曰：'君子哉！'遂罢兵去。\n\n"
+    },
     {
       "rev_id": "20260423-155032-6364e1",
       "timestamp": "2026-04-23T15:50:32Z",

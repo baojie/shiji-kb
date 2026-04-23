@@ -1,8 +1,18 @@
 {
   "page": "东略诸王降",
-  "latest_rev_id": "20260423-154900-b916c9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160500-7c548d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160500-7c548d",
+      "timestamp": "2026-04-23T16:05:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154900-b916c9",
+      "content_hash": "sha256:7c548d2c94ddf08c6a62b534077162d1f88481eb2f68d3d743022e4e9418fde1",
+      "size": 1006,
+      "content": "paragraph_refs:\n  008-037: \"[31]\"\nevent_type: 战争\n---\nid: \"东略诸王降\"\ntype: event\ntitle: 东略诸王降\ndescription: 二年汉王东略，塞王欣、翟王翳、河南王申阳皆降。韩王昌不听，韩信击破之。置陇西、北地等六郡，关外置河南郡，更立韩信为韩王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-037]\ndate: \"〖%二年〗 （公元前205年）\"\n---\n\n# 东略诸王降\n\n> 二年汉王东略，塞王欣、翟王翳、河南王申阳皆降。韩王昌不听，韩信击破之。置陇西、北地等六郡，关外置河南郡，更立韩信为韩王。\n\n**主要人物**：刘邦、韩信\n\n## 事件经过\n\n二年汉王东略，塞王欣、翟王翳、河南王申阳皆降。韩王昌不听，韩信击破之。置陇西、北地等六郡，关外置河南郡，更立韩信为韩王。\n\n## 原文\n\n> 二年，汉王东略地，塞王欣、翟王翳、河南王申阳皆降。韩王昌不听，使韩信击破之。\n\n"
+    },
     {
       "rev_id": "20260423-154900-b916c9",
       "timestamp": "2026-04-23T15:49:00Z",

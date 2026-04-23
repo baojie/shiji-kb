@@ -1,8 +1,18 @@
 {
   "page": "三年赦天下",
-  "latest_rev_id": "20260423-154853-0ad6b0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160451-731179",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160451-731179",
+      "timestamp": "2026-04-23T16:04:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154853-0ad6b0",
+      "content_hash": "sha256:73117971d5cc730d696d9f4a7ab718d7237d3804dd6ea45ebad5cd361dacb64c",
+      "size": 491,
+      "content": "paragraph_refs:\n  011-010: \"[5.1]\"\nevent_type: 政治活动\n---\nid: \"三年赦天下\"\ntype: event\ntitle: 三年赦天下\ndescription: 三年正月乙巳赦天下。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-010]\ndate: \"〖%三年正月乙巳〗 （公元前154年）\"\n---\n\n# 三年赦天下\n\n> 三年正月乙巳赦天下。\n\n**主要人物**：孝景皇帝\n\n## 事件经过\n\n三年正月乙巳赦天下。\n\n## 原文\n\n> 三年正月乙巳，赦天下。\n\n"
+    },
     {
       "rev_id": "20260423-154853-0ad6b0",
       "timestamp": "2026-04-23T15:48:53Z",

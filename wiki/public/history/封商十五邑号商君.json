@@ -1,8 +1,18 @@
 {
   "page": "封商十五邑号商君",
-  "latest_rev_id": "20260423-155116-a7c852",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160925-0e52b6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160925-0e52b6",
+      "timestamp": "2026-04-23T16:09:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155116-a7c852",
+      "content_hash": "sha256:0e52b6d26cd185bd959c2b9ec71294e44149515038db898d9ef5ad0a2f2502ee",
+      "size": 623,
+      "content": "paragraph_refs:\n  068-013: \"[8]\"\nevent_type: 政治活动\nlocation: \"商\"\n---\nid: \"封商十五邑号商君\"\ntype: event\ntitle: 封商十五邑号商君\ndescription: 卫鞅破魏归，秦封之于商十五邑，号为商君。\ntags: [史记, 事件, 商君列传]\nsources: [商君列传]\nevent_ids: [068-013]\ndate: \"（公元前340年）\"\n---\n\n# 封商十五邑号商君\n\n> 卫鞅破魏归，秦封之于商十五邑，号为商君。\n\n**主要人物**：卫鞅\n\n## 事件经过\n\n卫鞅破魏归，秦封之于商十五邑，号为商君。\n\n## 原文\n\n> 卫鞅既破魏还，秦封之於、商十五邑，号为商君。\n\n"
+    },
     {
       "rev_id": "20260423-155116-a7c852",
       "timestamp": "2026-04-23T15:51:16Z",

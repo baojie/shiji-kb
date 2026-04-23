@@ -1,8 +1,18 @@
 {
   "page": "卫鞅击魏封商君",
-  "latest_rev_id": "20260423-155003-1d3efe",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160656-9a866d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160656-9a866d",
+      "timestamp": "2026-04-23T16:06:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155003-1d3efe",
+      "content_hash": "sha256:9a866d5a87d35f526392068015a3c79156474d567ed97b524324128af29dda63",
+      "size": 760,
+      "content": "paragraph_refs:\n  005-079: \"[54]\"\nevent_type: 战争\n---\nid: \"卫鞅击魏封商君\"\ntype: event\ntitle: 卫鞅击魏封商君\ndescription: 孝公二十二年，卫鞅率军攻魏，俘虏魏公子卬。孝公封鞅为列侯，号商君。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-079]\ndate: \"〖%二十二年〗 （公元前340年）\"\n---\n\n# 卫鞅击魏封商君\n\n> 孝公二十二年，卫鞅率军攻魏，俘虏魏公子卬。孝公封鞅为列侯，号商君。\n\n**主要人物**：公子卬、卫鞅（商君）\n\n## 事件经过\n\n孝公二十二年，卫鞅率军攻魏，俘虏魏公子卬。孝公封鞅为列侯，号商君。\n\n## 原文\n\n> 二十二年，卫鞅击魏，虏魏公子卬。封鞅为列侯，号商君。\n\n"
+    },
     {
       "rev_id": "20260423-155003-1d3efe",
       "timestamp": "2026-04-23T15:50:03Z",

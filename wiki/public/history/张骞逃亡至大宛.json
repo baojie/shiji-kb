@@ -1,8 +1,18 @@
 {
   "page": "张骞逃亡至大宛",
-  "latest_rev_id": "20260423-152723-94323a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161044-abe80f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161044-abe80f",
+      "timestamp": "2026-04-23T16:10:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152723-94323a",
+      "content_hash": "sha256:abe80f9fd8232ae78dccc548944d86c471ef1f5e7f0bbc9bec4f78496c90c2de",
+      "size": 973,
+      "content": "paragraph_refs:\n  123-002: \"[1]\"\nevent_type: 政治活动\nlocation: \"大宛\"\n---\nid: \"张骞逃亡至大宛\"\ntype: event\ntitle: 张骞逃亡至大宛\ndescription: 张骞居匈奴中渐得宽待，趁机与属吏逃亡向月氏，西走数十日至大宛。大宛闻汉之饶财，喜见张骞，遣导绎送至康居，转致大月氏。\ntags: [史记, 事件, 大宛列传]\nsources: [大宛列传]\nevent_ids: [123-002]\ndate: \"[约公元前129年]\"\n---\n\n# 张骞逃亡至大宛\n\n> 张骞居匈奴中渐得宽待，趁机与属吏逃亡向月氏，西走数十日至大宛。大宛闻汉之饶财，喜见张骞，遣导绎送至康居，转致大月氏。\n\n**主要人物**：张骞\n\n## 事件经过\n\n张骞居匈奴中渐得宽待，趁机与属吏逃亡向月氏，西走数十日至大宛。大宛闻汉之饶财，喜见张骞，遣导绎送至康居，转致大月氏。\n\n## 原文\n\n> 居匈奴中，益宽，骞因与其属亡乡月氏，西走数十日至大宛。\n\n"
+    },
     {
       "rev_id": "20260423-152723-94323a",
       "timestamp": "2026-04-23T15:27:23Z",

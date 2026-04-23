@@ -1,8 +1,18 @@
 {
   "page": "乐毅卒于赵",
-  "latest_rev_id": "20260423-152526-0181a9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160516-ede3e8",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160516-ede3e8",
+      "timestamp": "2026-04-23T16:05:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152526-0181a9",
+      "content_hash": "sha256:ede3e86605b68eeee0ed58109845921cbe7239bfe630096c094577c41c3685c6",
+      "size": 699,
+      "content": "paragraph_refs:\n  080-014: \"[14]\"\nevent_type: 家族事件\nlocation: \"赵\"\n---\nid: \"乐毅卒于赵\"\ntype: event\ntitle: 乐毅卒于赵\ndescription: 乐毅最终在赵国去世。一代名将虽功业被燕惠王所毁，但善保其身、全节而终。\ntags: [史记, 事件, 乐毅列传]\nsources: [乐毅列传]\nevent_ids: [080-014]\ndate: \"乐毅晚年 [约公元前260年代]\"\n---\n\n# 乐毅卒于赵\n\n> 乐毅最终在赵国去世。一代名将虽功业被燕惠王所毁，但善保其身、全节而终。\n\n**主要人物**：乐毅\n\n## 事件经过\n\n乐毅最终在赵国去世。一代名将虽功业被燕惠王所毁，但善保其身、全节而终。\n\n## 原文\n\n> 乐毅卒於赵。\n\n"
+    },
     {
       "rev_id": "20260423-152526-0181a9",
       "timestamp": "2026-04-23T15:25:26Z",

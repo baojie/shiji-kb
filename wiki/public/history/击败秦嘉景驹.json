@@ -1,8 +1,18 @@
 {
   "page": "击败秦嘉景驹",
-  "latest_rev_id": "20260423-154939-d5af2d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160618-541d12",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160618-541d12",
+      "timestamp": "2026-04-23T16:06:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154939-d5af2d",
+      "content_hash": "sha256:541d12bf5cfd4751c89621f78214b85a5b6dc23298f6051a874f83d1a94849bf",
+      "size": 1173,
+      "content": "paragraph_refs:\n  007-008: \"[19.1]-[19.3]\"\nevent_type: 战争\nlocation: \"彭城、胡陵\"\n---\nid: \"击败秦嘉景驹\"\ntype: event\ntitle: 击败秦嘉景驹\ndescription: 秦嘉已立景驹为楚王，驻军彭城东欲抵御项梁。项梁斥秦嘉背叛陈王、擅立景驹为逆无道，遂进兵攻击。秦嘉败走，追至胡陵，秦嘉战死，军降；景驹逃走后死于梁地。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-008]\ndate: \"（公元前208年）\"\n---\n\n# 击败秦嘉景驹\n\n> 秦嘉已立景驹为楚王，驻军彭城东欲抵御项梁。项梁斥秦嘉背叛陈王、擅立景驹为逆无道，遂进兵攻击。秦嘉败走，追至胡陵，秦嘉战死，军降；景驹逃走后死于梁地。\n\n**主要人物**：景驹、秦嘉、项梁\n\n## 事件经过\n\n秦嘉已立景驹为楚王，驻军彭城东欲抵御项梁。项梁斥秦嘉背叛陈王、擅立景驹为逆无道，遂进兵攻击。秦嘉败走，追至胡陵，秦嘉战死，军降；景驹逃走后死于梁地。\n\n## 原文\n\n> 乃进兵击秦嘉。秦嘉军败走，追之至胡陵。嘉还战一日，嘉死，军降。景驹走死梁地。\n\n"
+    },
     {
       "rev_id": "20260423-154939-d5af2d",
       "timestamp": "2026-04-23T15:49:39Z",

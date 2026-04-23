@@ -1,8 +1,18 @@
 {
   "page": "日食求言",
-  "latest_rev_id": "20260423-152735-8dde7e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161113-b84dec",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161113-b84dec",
+      "timestamp": "2026-04-23T16:11:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152735-8dde7e",
+      "content_hash": "sha256:b84dec8ede3efa4d6b5c137e5a5bac63d837e313452b0216b9cba37e490ea9cc",
+      "size": 947,
+      "content": "paragraph_refs:\n  010-018: \"[17.1]-[17.3]\"\nevent_type: 自然灾害\n---\nid: \"日食求言\"\ntype: event\ntitle: 日食求言\ndescription: 十一月晦日有食之，十二月望日又食。文帝以为天示灾变，下诏求直言，举贤良方正能直言极谏者，省徭费以便民，罢卫将军军。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-018]\ndate: \"〖%十一月〗、〖%十二月〗 （公元前178年）\"\n---\n\n# 日食求言\n\n> 十一月晦日有食之，十二月望日又食。文帝以为天示灾变，下诏求直言，举贤良方正能直言极谏者，省徭费以便民，罢卫将军军。\n\n**主要人物**：孝文皇帝\n\n## 事件经过\n\n十一月晦日有食之，十二月望日又食。文帝以为天示灾变，下诏求直言，举贤良方正能直言极谏者，省徭费以便民，罢卫将军军。\n\n## 原文\n\n> 十一月晦，日有食之。十二月望，日又食。\n\n"
+    },
     {
       "rev_id": "20260423-152735-8dde7e",
       "timestamp": "2026-04-23T15:27:35Z",

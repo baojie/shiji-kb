@@ -1,8 +1,18 @@
 {
   "page": "敦煌置酒泉都尉",
-  "latest_rev_id": "20260423-155204-67d89d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161109-0eeb7c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161109-0eeb7c",
+      "timestamp": "2026-04-23T16:11:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155204-67d89d",
+      "content_hash": "sha256:0eeb7c8a209d02f97278f06ae97ed8054c97c505f1137f1c6a345494c13ac8f7",
+      "size": 1059,
+      "content": "paragraph_refs:\n  123-024: \"[34]\"\nevent_type: 建设\nlocation: \"敦煌、盐水\"\n---\nid: \"敦煌置酒泉都尉\"\ntype: event\ntitle: 敦煌置酒泉都尉\ndescription: 汉于敦煌置酒泉都尉，西至盐水往往有亭。仑头有田卒数百人屯田积粟，以给使外国者。这标志着汉朝在西域建立了系统的军事和后勤保障体系。\ntags: [史记, 事件, 大宛列传]\nsources: [大宛列传]\nevent_ids: [123-024]\ndate: \"（公元前101年）\"\n---\n\n# 敦煌置酒泉都尉\n\n> 汉于敦煌置酒泉都尉，西至盐水往往有亭。仑头有田卒数百人屯田积粟，以给使外国者。这标志着汉朝在西域建立了系统的军事和后勤保障体系。\n\n## 事件经过\n\n汉于敦煌置酒泉都尉，西至盐水往往有亭。仑头有田卒数百人屯田积粟，以给使外国者。这标志着汉朝在西域建立了系统的军事和后勤保障体系。\n\n## 原文\n\n> 而敦煌置酒泉都尉；西至盐水，往往有亭。而仑头有田卒数百人，因置使者护田积粟，以给使外国者。\n\n"
+    },
     {
       "rev_id": "20260423-155204-67d89d",
       "timestamp": "2026-04-23T15:52:04Z",

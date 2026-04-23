@@ -1,8 +1,18 @@
 {
   "page": "征大宛星茀招摇",
-  "latest_rev_id": "20260423-155143-d07a9c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161052-38ee64",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161052-38ee64",
+      "timestamp": "2026-04-23T16:10:52Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155143-d07a9c",
+      "content_hash": "sha256:38ee6495535c51cf6849f28aff005dd3036170c91e600f10769123cec395c024",
+      "size": 597,
+      "content": "paragraph_refs:\n  027-019: \"[120]\"\nevent_type: 战争\n---\nid: \"征大宛星茀招摇\"\ntype: event\ntitle: 征大宛星茀招摇\ndescription: 汉军征伐大宛时，星茀于招摇。此为天官书所记荦荦大者之一。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-019]\ndate: \"（公元前101年）\"\n---\n\n# 征大宛星茀招摇\n\n> 汉军征伐大宛时，星茀于招摇。此为天官书所记荦荦大者之一。\n\n## 事件经过\n\n汉军征伐大宛时，星茀于招摇。此为天官书所记荦荦大者之一。\n\n## 原文\n\n> 兵征大宛，星茀招摇。\n\n"
+    },
     {
       "rev_id": "20260423-155143-d07a9c",
       "timestamp": "2026-04-23T15:51:43Z",

@@ -1,8 +1,18 @@
 {
   "page": "伍子胥奔吴",
-  "latest_rev_id": "20260423-152531-52c7f2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160535-e1bb76",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160535-e1bb76",
+      "timestamp": "2026-04-23T16:05:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152531-52c7f2",
+      "content_hash": "sha256:e1bb76bc383398038c9aca1439393eb41ca8b4e485bae5dd5027bf97eea31835",
+      "size": 999,
+      "content": "paragraph_refs:\n  031-016: \"[20.1-20.2]\"\nevent_type: 政治活动\nlocation: \"吴\"\n---\nid: \"伍子胥奔吴\"\ntype: event\ntitle: 伍子胥奔吴\ndescription: 王僚五年，楚之亡臣伍子胥来奔吴，公子光客之。光以为父兄弟四人当传至季子，季子不受国则光当立，阴纳贤士，欲以袭王僚。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-016]\ndate: \"〖%五年〗 （公元前522年）\"\n---\n\n# 伍子胥奔吴\n\n> 王僚五年，楚之亡臣伍子胥来奔吴，公子光客之。光以为父兄弟四人当传至季子，季子不受国则光当立，阴纳贤士，欲以袭王僚。\n\n**主要人物**：伍子胥、公子光\n\n## 事件经过\n\n王僚五年，楚之亡臣伍子胥来奔吴，公子光客之。光以为父兄弟四人当传至季子，季子不受国则光当立，阴纳贤士，欲以袭王僚。\n\n## 原文\n\n> 五年，楚之亡臣伍子胥来奔，公子光客之。...阴纳贤士，欲以袭王僚。\n\n"
+    },
     {
       "rev_id": "20260423-152531-52c7f2",
       "timestamp": "2026-04-23T15:25:31Z",

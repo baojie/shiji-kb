@@ -1,8 +1,18 @@
 {
   "page": "伐大宛得千里马作歌",
-  "latest_rev_id": "20260423-154917-f31310",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160538-db244b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160538-db244b",
+      "timestamp": "2026-04-23T16:05:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154917-f31310",
+      "content_hash": "sha256:db244b48461db08617d3d01bd4008f061154e86a2ce6f2c3a18656c25d571d53",
+      "size": 753,
+      "content": "paragraph_refs:\n  024-010: \"[7.3]\"\nevent_type: 战争\n---\nid: \"伐大宛得千里马作歌\"\ntype: event\ntitle: 伐大宛得千里马作歌\ndescription: 汉朝征伐大宛，获得千里马，马名蒲梢，遂作天马之歌。歌曰\"天马来兮从西极\"，以纪其事。\ntags: [史记, 事件, 乐书]\nsources: [乐书]\nevent_ids: [024-010]\ndate: \"（公元前101年）\"\n---\n\n# 伐大宛得千里马作歌\n\n> 汉朝征伐大宛，获得千里马，马名蒲梢，遂作天马之歌。歌曰\"天马来兮从西极\"，以纪其事。\n\n## 事件经过\n\n汉朝征伐大宛，获得千里马，马名蒲梢，遂作天马之歌。歌曰\"天马来兮从西极\"，以纪其事。\n\n## 原文\n\n> 後伐大宛得千里马，马名蒲梢，次作以为歌。\n\n"
+    },
     {
       "rev_id": "20260423-154917-f31310",
       "timestamp": "2026-04-23T15:49:17Z",

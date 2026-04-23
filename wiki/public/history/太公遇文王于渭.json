@@ -1,8 +1,18 @@
 {
   "page": "太公遇文王于渭",
-  "latest_rev_id": "20260423-155048-e05e04",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160822-effbbf",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160822-effbbf",
+      "timestamp": "2026-04-23T16:08:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155048-e05e04",
+      "content_hash": "sha256:effbbf270670b537945d70e6c768a679a244d7f5dd1650614cc2d66a6aee4c13",
+      "size": 981,
+      "content": "paragraph_refs:\n  032-001: \"[2]\"\nevent_type: 政治活动\nlocation: \"渭\"\n---\nid: \"太公遇文王于渭\"\ntype: event\ntitle: 太公遇文王于渭\ndescription: 太公望吕尚年老穷困，以渔钓于渭水之阳。周西伯出猎，卜得\"所获霸王之辅\"，果遇太公，载与俱归，立为师。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-001]\ndate: \"[约公元前1050年]\"\n---\n\n# 太公遇文王于渭\n\n> 太公望吕尚年老穷困，以渔钓于渭水之阳。周西伯出猎，卜得\"所获霸王之辅\"，果遇太公，载与俱归，立为师。\n\n**主要人物**：周西伯、太公望\n\n## 事件经过\n\n太公望吕尚年老穷困，以渔钓于渭水之阳。周西伯出猎，卜得\"所获霸王之辅\"，果遇太公，载与俱归，立为师。\n\n## 原文\n\n> 吕尚盖尝穷困，年老矣，以渔钓奸周西伯。西伯将出猎，卜之，曰'所获非?龙?非?彲?，非?虎?非?罴?；所获霸王之辅'。\n\n"
+    },
     {
       "rev_id": "20260423-155048-e05e04",
       "timestamp": "2026-04-23T15:50:48Z",

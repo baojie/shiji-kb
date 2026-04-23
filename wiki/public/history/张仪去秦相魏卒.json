@@ -1,8 +1,18 @@
 {
   "page": "张仪去秦相魏卒",
-  "latest_rev_id": "20260423-152710-a29e76",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161021-cc3e9a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161021-cc3e9a",
+      "timestamp": "2026-04-23T16:10:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152710-a29e76",
+      "content_hash": "sha256:cc3e9a6f5cbc811bf6026d718ca025d2914e69b2827b6bc37498a22423cca31b",
+      "size": 1088,
+      "content": "paragraph_refs:\n  070-022: \"[50]、[51]\"\nevent_type: 政治活动\nlocation: \"魏\"\n---\nid: \"张仪去秦相魏卒\"\ntype: event\ntitle: 张仪去秦相魏卒\ndescription: 张仪惧诛，献计自请去秦之梁引齐伐之，秦可乘间伐韩。秦王具革车三十乘送之。齐果兴师伐魏，张仪使舍人借楚使说齐罢兵。张仪相魏一岁卒于魏。\ntags: [史记, 事件, 张仪列传]\nsources: [张仪列传]\nevent_ids: [070-022]\ndate: \"（公元前310年）\"\n---\n\n# 张仪去秦相魏卒\n\n> 张仪惧诛，献计自请去秦之梁引齐伐之，秦可乘间伐韩。秦王具革车三十乘送之。齐果兴师伐魏，张仪使舍人借楚使说齐罢兵。张仪相魏一岁卒于魏。\n\n**主要人物**：张仪、秦武王\n\n## 事件经过\n\n张仪惧诛，献计自请去秦之梁引齐伐之，秦可乘间伐韩。秦王具革车三十乘送之。齐果兴师伐魏，张仪使舍人借楚使说齐罢兵。张仪相魏一岁卒于魏。\n\n## 原文\n\n> 张仪惧诛，乃因谓秦武王曰：'仪有愚计，原效之。'\"\"张仪相魏一岁，卒於魏也。\n\n"
+    },
     {
       "rev_id": "20260423-152710-a29e76",
       "timestamp": "2026-04-23T15:27:10Z",

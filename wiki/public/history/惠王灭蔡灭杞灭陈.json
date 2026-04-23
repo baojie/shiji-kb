@@ -1,8 +1,18 @@
 {
   "page": "惠王灭蔡灭杞灭陈",
-  "latest_rev_id": "20260423-155154-2d7769",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161105-a6e999",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161105-a6e999",
+      "timestamp": "2026-04-23T16:11:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155154-2d7769",
+      "content_hash": "sha256:a6e999632fe24d04c9af8af93bf1c66c488e97e39e08229aaf3e032672d0e322",
+      "size": 766,
+      "content": "paragraph_refs:\n  040-032: \"[61.65]\"\nevent_type: 战争\n---\nid: \"惠王灭蔡灭杞灭陈\"\ntype: event\ntitle: 惠王灭蔡灭杞灭陈\ndescription: 惠王四十二年灭蔡，四十四年灭杞，与秦平。楚东侵广地至泗上。又灭陈县之。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-032]\ndate: \"[约公元前447年]\"\n---\n\n# 惠王灭蔡灭杞灭陈\n\n> 惠王四十二年灭蔡，四十四年灭杞，与秦平。楚东侵广地至泗上。又灭陈县之。\n\n**主要人物**：惠王\n\n## 事件经过\n\n惠王四十二年灭蔡，四十四年灭杞，与秦平。楚东侵广地至泗上。又灭陈县之。\n\n## 原文\n\n> 四十二年，楚灭蔡。四十四年，楚灭杞。与秦平。...楚东侵，广地至泗上。\n\n"
+    },
     {
       "rev_id": "20260423-155154-2d7769",
       "timestamp": "2026-04-23T15:51:54Z",

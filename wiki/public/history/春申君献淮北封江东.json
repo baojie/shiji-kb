@@ -1,8 +1,18 @@
 {
   "page": "春申君献淮北封江东",
-  "latest_rev_id": "20260423-152736-65873b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161113-c73b32",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161113-c73b32",
+      "timestamp": "2026-04-23T16:11:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152736-65873b",
+      "content_hash": "sha256:c73b32d757f707111e2b68d43d1eb7b6eac1189436666e56cf480bec42ab965d",
+      "size": 1024,
+      "content": "paragraph_refs:\n  078-006: \"[12]\"\nevent_type: 政治活动\nlocation: \"淮北、江东\"\n---\nid: \"春申君献淮北封江东\"\ntype: event\ntitle: 春申君献淮北封江东\ndescription: 春申君以淮北边齐事急为由请改为郡，同时献出淮北十二县，改请封于江东。考烈王允许，春申君遂筑吴墟旧城为都邑，自此经营江东。\ntags: [史记, 事件, 春申君列传]\nsources: [春申君列传]\nevent_ids: [078-006]\ndate: \"考烈王十五年 （公元前248年）\"\n---\n\n# 春申君献淮北封江东\n\n> 春申君以淮北边齐事急为由请改为郡，同时献出淮北十二县，改请封于江东。考烈王允许，春申君遂筑吴墟旧城为都邑，自此经营江东。\n\n**主要人物**：春申君、考烈王\n\n## 事件经过\n\n春申君以淮北边齐事急为由请改为郡，同时献出淮北十二县，改请封于江东。考烈王允许，春申君遂筑吴墟旧城为都邑，自此经营江东。\n\n## 原文\n\n> 春申君因城故吴墟，以自为都邑。\n\n"
+    },
     {
       "rev_id": "20260423-152736-65873b",
       "timestamp": "2026-04-23T15:27:36Z",

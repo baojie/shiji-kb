@@ -1,8 +1,18 @@
 {
   "page": "昭襄王郊祀上帝",
-  "latest_rev_id": "20260423-155222-a90964",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161115-b8b3ff",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161115-b8b3ff",
+      "timestamp": "2026-04-23T16:11:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155222-a90964",
+      "content_hash": "sha256:b8b3ff2b69d35d5330f86402d067982616d05dcfeb5948977d8b90ed76276809",
+      "size": 742,
+      "content": "paragraph_refs:\n  005-142: \"[65.1]\"\nevent_type: 文化活动\nlocation: \"雍\"\n---\nid: \"昭襄王郊祀上帝\"\ntype: event\ntitle: 昭襄王郊祀上帝\ndescription: 昭襄王五十四年，秦王在雍举行郊祀上帝之礼。此举表明秦已自视为天下共主。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-142]\ndate: \"〖%五十四年〗 （公元前253年）\"\n---\n\n# 昭襄王郊祀上帝\n\n> 昭襄王五十四年，秦王在雍举行郊祀上帝之礼。此举表明秦已自视为天下共主。\n\n**主要人物**：昭襄王\n\n## 事件经过\n\n昭襄王五十四年，秦王在雍举行郊祀上帝之礼。此举表明秦已自视为天下共主。\n\n## 原文\n\n> 五十四年，王郊见上帝於雍。\n\n"
+    },
     {
       "rev_id": "20260423-155222-a90964",
       "timestamp": "2026-04-23T15:52:22Z",

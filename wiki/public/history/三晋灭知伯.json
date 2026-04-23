@@ -1,8 +1,18 @@
 {
   "page": "三晋灭知伯",
-  "latest_rev_id": "20260423-154854-48fc99",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160452-6592fd",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160452-6592fd",
+      "timestamp": "2026-04-23T16:04:52Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154854-48fc99",
+      "content_hash": "sha256:6592fd84b0a2d010c29cd60290a5956d5bb505d36aaa779fb59387a127907b99",
+      "size": 706,
+      "content": "paragraph_refs:\n  034-007: \"[11.1]\"\nevent_type: 战争\n---\nid: \"三晋灭知伯\"\ntype: event\ntitle: 三晋灭知伯\ndescription: 燕孝公十二年，韩、魏、赵灭知伯，分其地，三晋强盛。此后三晋列为诸侯。\ntags: [史记, 事件, 燕召公世家]\nsources: [燕召公世家]\nevent_ids: [034-007]\ndate: \"（公元前453年）\"\n---\n\n# 三晋灭知伯\n\n> 燕孝公十二年，韩、魏、赵灭知伯，分其地，三晋强盛。此后三晋列为诸侯。\n\n**主要人物**：知伯\n\n## 事件经过\n\n燕孝公十二年，韩、魏、赵灭知伯，分其地，三晋强盛。此后三晋列为诸侯。\n\n## 原文\n\n> 孝公十二年,韩、魏、赵灭知伯,分其地,三晋彊。\n\n"
+    },
     {
       "rev_id": "20260423-154854-48fc99",
       "timestamp": "2026-04-23T15:48:54Z",

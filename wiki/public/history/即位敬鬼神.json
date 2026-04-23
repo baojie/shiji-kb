@@ -1,8 +1,18 @@
 {
   "page": "即位敬鬼神",
-  "latest_rev_id": "20260423-155004-4ab6d0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160657-ce6186",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160657-ce6186",
+      "timestamp": "2026-04-23T16:06:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155004-4ab6d0",
+      "content_hash": "sha256:ce6186b81507c868fbcb88ee474443be720013300e609dbfb8404934e24dbd6b",
+      "size": 651,
+      "content": "paragraph_refs:\n  012-002: \"[2]\"\nevent_type: 文化活动\n---\nid: \"即位敬鬼神\"\ntype: event\ntitle: 即位敬鬼神\ndescription: 武帝初即位，尤敬鬼神之祀，奠定其在位期间崇尚祭祀求仙的基调。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-002]\ndate: \"[公元前141年]\"\n---\n\n# 即位敬鬼神\n\n> 武帝初即位，尤敬鬼神之祀，奠定其在位期间崇尚祭祀求仙的基调。\n\n**主要人物**：孝武皇帝\n\n## 事件经过\n\n武帝初即位，尤敬鬼神之祀，奠定其在位期间崇尚祭祀求仙的基调。\n\n## 原文\n\n> 孝武皇帝初即位，尤敬鬼神之祀。\n\n"
+    },
     {
       "rev_id": "20260423-155004-4ab6d0",
       "timestamp": "2026-04-23T15:50:04Z",

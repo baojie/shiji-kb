@@ -1,8 +1,18 @@
 {
   "page": "春申君救赵邯郸",
-  "latest_rev_id": "20260423-152736-9cd698",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161113-9ad504",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161113-9ad504",
+      "timestamp": "2026-04-23T16:11:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152736-9cd698",
+      "content_hash": "sha256:9ad50411e3a8a8f3bdda63f88d4f099ab6ca33e3e681be9bf75c3ce034adfdf3",
+      "size": 985,
+      "content": "paragraph_refs:\n  078-007: \"[14]\"\nevent_type: 战争\nlocation: \"邯郸\"\n---\nid: \"春申君救赵邯郸\"\ntype: event\ntitle: 春申君救赵邯郸\ndescription: 秦破赵长平军四十余万后围邯郸，邯郸告急于楚。楚使春申君率兵救赵，秦兵亦去。春申君归楚。此举与信陵君窃符救赵同时。\ntags: [史记, 事件, 春申君列传]\nsources: [春申君列传]\nevent_ids: [078-007]\ndate: \"春申君相楚四年 （公元前258年）\"\n---\n\n# 春申君救赵邯郸\n\n> 秦破赵长平军四十余万后围邯郸，邯郸告急于楚。楚使春申君率兵救赵，秦兵亦去。春申君归楚。此举与信陵君窃符救赵同时。\n\n**主要人物**：春申君\n\n## 事件经过\n\n秦破赵长平军四十余万后围邯郸，邯郸告急于楚。楚使春申君率兵救赵，秦兵亦去。春申君归楚。此举与信陵君窃符救赵同时。\n\n## 原文\n\n> 邯郸告急於楚，楚使春申君将兵往救之，秦兵亦去，春申君归。\n\n"
+    },
     {
       "rev_id": "20260423-152736-9cd698",
       "timestamp": "2026-04-23T15:27:36Z",

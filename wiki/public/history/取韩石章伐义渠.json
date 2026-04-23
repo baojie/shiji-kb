@@ -1,8 +1,18 @@
 {
   "page": "取韩石章伐义渠",
-  "latest_rev_id": "20260423-155009-30bbb3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160705-1705b4",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160705-1705b4",
+      "timestamp": "2026-04-23T16:07:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155009-30bbb3",
+      "content_hash": "sha256:1705b44875f13af767f85e531fdcfd4018e726c4798d7440d6edae61ad4cc718",
+      "size": 823,
+      "content": "paragraph_refs:\n  005-098: \"[59.7]\"\nevent_type: 战争\nlocation: \"石章\"\n---\nid: \"取韩石章伐义渠\"\ntype: event\ntitle: 取韩石章伐义渠\ndescription: 更元十年，韩太子苍入秦为质。秦伐取韩国石章，又击败赵将泥，伐取义渠二十五城。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-098]\ndate: \"更元〖%十年〗 （公元前315年）\"\n---\n\n# 取韩石章伐义渠\n\n> 更元十年，韩太子苍入秦为质。秦伐取韩国石章，又击败赵将泥，伐取义渠二十五城。\n\n**主要人物**：韩太子苍\n\n## 事件经过\n\n更元十年，韩太子苍入秦为质。秦伐取韩国石章，又击败赵将泥，伐取义渠二十五城。\n\n## 原文\n\n> 十年，韩太子苍来质。伐取韩石章。伐败赵将泥。伐取义渠二十五城。\n\n"
+    },
     {
       "rev_id": "20260423-155009-30bbb3",
       "timestamp": "2026-04-23T15:50:09Z",

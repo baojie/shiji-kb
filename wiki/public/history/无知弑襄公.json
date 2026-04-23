@@ -1,8 +1,18 @@
 {
   "page": "无知弑襄公",
-  "latest_rev_id": "20260423-155217-4b737c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161113-5ec01e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161113-5ec01e",
+      "timestamp": "2026-04-23T16:11:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155217-4b737c",
+      "content_hash": "sha256:5ec01ea998cb86e3321d2a1ada4588519527f4710c117f5cf4f2757ab3616bd3",
+      "size": 1001,
+      "content": "paragraph_refs:\n  032-011: \"[24]\"\nevent_type: 继位\nlocation: \"姑棼、沛丘\"\n---\nid: \"无知弑襄公\"\ntype: event\ntitle: 无知弑襄公\ndescription: 襄公淫乱不道，连称、管至父戍葵丘逾期不代，怨之。冬十二月，趁襄公猎于沛丘受伤，袭宫弑之。无知自立为齐君。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-011]\ndate: \"〖%十二年冬十二月〗 （公元前686年）\"\n---\n\n# 无知弑襄公\n\n> 襄公淫乱不道，连称、管至父戍葵丘逾期不代，怨之。冬十二月，趁襄公猎于沛丘受伤，袭宫弑之。无知自立为齐君。\n\n**主要人物**：公孙无知、管至父、襄公、连称\n\n## 事件经过\n\n襄公淫乱不道，连称、管至父戍葵丘逾期不代，怨之。冬十二月，趁襄公猎于沛丘受伤，袭宫弑之。无知自立为齐君。\n\n## 原文\n\n> 无知、连称、管至父等闻公伤，乃遂率其众袭宫...遂弑之，而无知自立为齐君。\n\n"
+    },
     {
       "rev_id": "20260423-155217-4b737c",
       "timestamp": "2026-04-23T15:52:17Z",

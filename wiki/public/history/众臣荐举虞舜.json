@@ -1,8 +1,18 @@
 {
   "page": "众臣荐举虞舜",
-  "latest_rev_id": "20260423-154919-e1b96e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160540-e3c454",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160540-e3c454",
+      "timestamp": "2026-04-23T16:05:40Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154919-e1b96e",
+      "content_hash": "sha256:e3c454997eb5e9ceb716e15f2188746eeef4d08a3c5e222323fd87318729bef7",
+      "size": 989,
+      "content": "paragraph_refs:\n  001-022: \"[13.4-13.6]\"\nevent_type: 政治活动\n---\nid: \"众臣荐举虞舜\"\ntype: event\ntitle: 众臣荐举虞舜\ndescription: 众臣向尧推荐在民间的虞舜。岳介绍舜是盲者之子，父顽母嚚弟傲，但能以孝和之，不至奸恶。尧决定试用舜。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-022]\ndate: \"[约公元前2287年]\"\n---\n\n# 众臣荐举虞舜\n\n> 众臣向尧推荐在民间的虞舜。岳介绍舜是盲者之子，父顽母嚚弟傲，但能以孝和之，不至奸恶。尧决定试用舜。\n\n**主要人物**：尧、岳、虞舜\n\n## 事件经过\n\n众臣向尧推荐在民间的虞舜。岳介绍舜是盲者之子，父顽母嚚弟傲，但能以孝和之，不至奸恶。尧决定试用舜。\n\n## 原文\n\n> 众皆言於尧曰：'有矜在民间，曰虞舜。' 尧曰：'然，朕闻之。其何如？' 岳曰：'盲者子。父顽，母嚚，弟傲，能和以孝，烝烝治，不至奸。'\n\n"
+    },
     {
       "rev_id": "20260423-154919-e1b96e",
       "timestamp": "2026-04-23T15:49:19Z",

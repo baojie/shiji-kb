@@ -1,8 +1,18 @@
 {
   "page": "文帝遗诏用亚夫",
-  "latest_rev_id": "20260423-155210-176143",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161111-a53f80",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161111-a53f80",
+      "timestamp": "2026-04-23T16:11:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155210-176143",
+      "content_hash": "sha256:a53f805e253dff6ae5eae50588f7c09be16bfad5ceca9f5d61d2db9dc9ed9f85",
+      "size": 808,
+      "content": "paragraph_refs:\n  057-016: \"[13]\"\nevent_type: 政治活动\n---\nid: \"文帝遗诏用亚夫\"\ntype: event\ntitle: 文帝遗诏用亚夫\ndescription: 孝文且崩时诫太子曰：即有缓急周亚夫真可任将兵。文帝崩拜亚夫为车骑将军。\ntags: [史记, 事件, 绛侯周勃世家]\nsources: [绛侯周勃世家]\nevent_ids: [057-016]\ndate: \"（公元前157年）\"\n---\n\n# 文帝遗诏用亚夫\n\n> 孝文且崩时诫太子曰：即有缓急周亚夫真可任将兵。文帝崩拜亚夫为车骑将军。\n\n**主要人物**：周亚夫、文帝\n\n## 事件经过\n\n孝文且崩时诫太子曰：即有缓急周亚夫真可任将兵。文帝崩拜亚夫为车骑将军。\n\n## 原文\n\n> 孝文且崩时，诫太子曰：'即有缓急，周亚夫真可任将兵。'文帝崩，拜亚夫为车骑将军。\n\n"
+    },
     {
       "rev_id": "20260423-155210-176143",
       "timestamp": "2026-04-23T15:52:10Z",

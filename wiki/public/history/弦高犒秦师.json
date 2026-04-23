@@ -1,8 +1,18 @@
 {
   "page": "弦高犒秦师",
-  "latest_rev_id": "20260423-152724-74ea6a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161045-1b4ca3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161045-1b4ca3",
+      "timestamp": "2026-04-23T16:10:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152724-74ea6a",
+      "content_hash": "sha256:1b4ca3b786d2cf68577f56ecbbf01c632b52244b64bf2cbe93f3907acc5db2c7",
+      "size": 827,
+      "content": "paragraph_refs:\n  042-015: \"[23.1]\"\nevent_type: 战争\nlocation: \"滑\"\n---\nid: \"弦高犒秦师\"\ntype: event\ntitle: 弦高犒秦师\ndescription: 秦穆公使三将欲袭郑，至滑，逢郑贾人弦高诈以十二牛劳军，秦兵不至而还，晋败之于崤。\ntags: [史记, 事件, 郑世家]\nsources: [郑世家]\nevent_ids: [042-015]\ndate: \"〖;缪公〗〖%元年春〗 （公元前627年）\"\n---\n\n# 弦高犒秦师\n\n> 秦穆公使三将欲袭郑，至滑，逢郑贾人弦高诈以十二牛劳军，秦兵不至而还，晋败之于崤。\n\n**主要人物**：弦高、秦缪公\n\n## 事件经过\n\n秦穆公使三将欲袭郑，至滑，逢郑贾人弦高诈以十二牛劳军，秦兵不至而还，晋败之于崤。\n\n## 原文\n\n> 逢郑贾人弦高诈以十二牛劳军，故秦兵不至而还，晋败之於崤。\n\n"
+    },
     {
       "rev_id": "20260423-152724-74ea6a",
       "timestamp": "2026-04-23T15:27:24Z",

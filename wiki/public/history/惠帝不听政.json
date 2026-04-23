@@ -1,8 +1,18 @@
 {
   "page": "惠帝不听政",
-  "latest_rev_id": "20260423-155151-c76ea5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161104-deae9f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161104-deae9f",
+      "timestamp": "2026-04-23T16:11:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155151-c76ea5",
+      "content_hash": "sha256:deae9f5bb1793e3918600b5879fc4fd5abcdfaae57e7733af6e14d372d526a8f",
+      "size": 737,
+      "content": "paragraph_refs:\n  009-011: \"[7.6]\"\nevent_type: 政治活动\n---\nid: \"惠帝不听政\"\ntype: event\ntitle: 惠帝不听政\ndescription: 孝惠帝因目睹人彘之惨状，深受刺激，此后日夜饮酒作乐，不再过问朝政，由此染病。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-011]\ndate: \"[公元前194年]\"\n---\n\n# 惠帝不听政\n\n> 孝惠帝因目睹人彘之惨状，深受刺激，此后日夜饮酒作乐，不再过问朝政，由此染病。\n\n**主要人物**：孝惠\n\n## 事件经过\n\n孝惠帝因目睹人彘之惨状，深受刺激，此后日夜饮酒作乐，不再过问朝政，由此染病。\n\n## 原文\n\n> 孝惠以此日饮为淫乐，不听政，故有病也。\n\n"
+    },
     {
       "rev_id": "20260423-155151-c76ea5",
       "timestamp": "2026-04-23T15:51:51Z",

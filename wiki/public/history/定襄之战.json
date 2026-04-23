@@ -1,8 +1,18 @@
 {
   "page": "定襄之战",
-  "latest_rev_id": "20260423-155110-398aeb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160916-026213",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160916-026213",
+      "timestamp": "2026-04-23T16:09:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155110-398aeb",
+      "content_hash": "sha256:02621365d0d911bb7e6fb788cf6a84bde9a758e48c32536a57fa0e5f97966b76",
+      "size": 1014,
+      "content": "paragraph_refs:\n  111-014: \"[6.1]-[6.2]\"\nevent_type: 战争\nlocation: \"定襄\"\n---\nid: \"定襄之战\"\ntype: event\ntitle: 定襄之战\ndescription: 大将军卫青出定襄，率诸将击匈奴，斩首数千级而还。月余复出定襄，斩首虏万余人。此为卫青大将军任上的重要战役。\ntags: [史记, 事件, 卫将军骠骑列传]\nsources: [卫将军骠骑列传]\nevent_ids: [111-014]\ndate: \"〖&元朔〗〖%六年春〗 （公元前123年）\"\n---\n\n# 定襄之战\n\n> 大将军卫青出定襄，率诸将击匈奴，斩首数千级而还。月余复出定襄，斩首虏万余人。此为卫青大将军任上的重要战役。\n\n**主要人物**：公孙贺、卫青、李广、苏建、赵信\n\n## 事件经过\n\n大将军卫青出定襄，率诸将击匈奴，斩首数千级而还。月余复出定襄，斩首虏万余人。此为卫青大将军任上的重要战役。\n\n## 原文\n\n> 大将军青出定襄……斩首数千级而还。月馀,悉复出定襄击匈奴,斩首虏万馀人。\n\n"
+    },
     {
       "rev_id": "20260423-155110-398aeb",
       "timestamp": "2026-04-23T15:51:10Z",

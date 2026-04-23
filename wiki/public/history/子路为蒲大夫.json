@@ -1,8 +1,18 @@
 {
   "page": "子路为蒲大夫",
-  "latest_rev_id": "20260423-152640-191167",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160848-6708f1",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160848-6708f1",
+      "timestamp": "2026-04-23T16:08:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152640-191167",
+      "content_hash": "sha256:6708f1885a6fe1863369f4e2a4c1e81f200d0eda54bcd26a5ad866add38d9067",
+      "size": 922,
+      "content": "paragraph_refs:\n  067-003: \"[27]\"\nevent_type: 政治活动\nlocation: \"卫\"\n---\nid: \"子路为蒲大夫\"\ntype: event\ntitle: 子路为蒲大夫\ndescription: 子路为蒲大夫，辞孔子。孔子教以恭敬、宽正、恭正以静三策。子路又为卫大夫孔悝之邑宰。\ntags: [史记, 事件, 仲尼弟子列传]\nsources: [仲尼弟子列传]\nevent_ids: [067-003]\ndate: \"[约公元前495年]\"\n---\n\n# 子路为蒲大夫\n\n> 子路为蒲大夫，辞孔子。孔子教以恭敬、宽正、恭正以静三策。子路又为卫大夫孔悝之邑宰。\n\n**主要人物**：子路、孔子\n\n## 事件经过\n\n子路为蒲大夫，辞孔子。孔子教以恭敬、宽正、恭正以静三策。子路又为卫大夫孔悝之邑宰。\n\n## 原文\n\n> 子路为蒲大夫，辞孔子。孔子曰：'蒲多壮士，又难治。然吾语汝：恭以敬，可以执勇；宽以正，可以比众；恭正以静，可以报上。'\n\n"
+    },
     {
       "rev_id": "20260423-152640-191167",
       "timestamp": "2026-04-23T15:26:40Z",

@@ -1,8 +1,18 @@
 {
   "page": "伯御弑懿公宣王伐鲁",
-  "latest_rev_id": "20260423-154919-36d4f1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160543-b8c112",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160543-b8c112",
+      "timestamp": "2026-04-23T16:05:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154919-36d4f1",
+      "content_hash": "sha256:b8c1127d9441d9a839d36b4ba8e17b81b9471f8c86d467c4bf8d81fdfc996964",
+      "size": 1071,
+      "content": "paragraph_refs:\n  033-015: \"[9.2]\"\nevent_type: 战争\nlocation: \"鲁\"\n---\nid: \"伯御弑懿公宣王伐鲁\"\ntype: event\ntitle: 伯御弑懿公宣王伐鲁\ndescription: 懿公九年，兄括之子伯御与鲁人弑懿公自立。伯御即位十一年，宣王伐鲁杀伯御，立懿公弟称于夷宫为孝公。自此诸侯多畔王命。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-015]\ndate: \"[约公元前816年—前806年]\"\n---\n\n# 伯御弑懿公宣王伐鲁\n\n> 懿公九年，兄括之子伯御与鲁人弑懿公自立。伯御即位十一年，宣王伐鲁杀伯御，立懿公弟称于夷宫为孝公。自此诸侯多畔王命。\n\n**主要人物**：伯御、孝公、宣王、懿公\n\n## 事件经过\n\n懿公九年，兄括之子伯御与鲁人弑懿公自立。伯御即位十一年，宣王伐鲁杀伯御，立懿公弟称于夷宫为孝公。自此诸侯多畔王命。\n\n## 原文\n\n> 懿公九年,懿公兄括之子伯御与鲁人攻弑懿公...周宣王伐鲁,杀其$君@伯御$...乃立称於夷宫,是为孝公。\n\n"
+    },
     {
       "rev_id": "20260423-154919-36d4f1",
       "timestamp": "2026-04-23T15:49:19Z",

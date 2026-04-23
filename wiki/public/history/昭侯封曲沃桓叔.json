@@ -1,8 +1,18 @@
 {
   "page": "昭侯封曲沃桓叔",
-  "latest_rev_id": "20260423-155219-ee553a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161114-84a75a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161114-84a75a",
+      "timestamp": "2026-04-23T16:11:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155219-ee553a",
+      "content_hash": "sha256:84a75aecc4cdee4d912b19b525d1085d7b41635c2cc209995894cf41095df665",
+      "size": 1087,
+      "content": "paragraph_refs:\n  039-006: \"[8.10]\"\nevent_type: 政治活动\nlocation: \"曲沃\"\n---\nid: \"昭侯封曲沃桓叔\"\ntype: event\ntitle: 昭侯封曲沃桓叔\ndescription: 昭侯元年封文侯弟成师于曲沃。曲沃邑大于翼（晋都），成师好德晋众皆附。君子曰\"晋之乱其在曲沃矣，末大于本而得民心，不乱何待\"。\ntags: [史记, 事件, 晋世家]\nsources: [晋世家]\nevent_ids: [039-006]\ndate: \"（公元前745年）\"\n---\n\n# 昭侯封曲沃桓叔\n\n> 昭侯元年封文侯弟成师于曲沃。曲沃邑大于翼（晋都），成师好德晋众皆附。君子曰\"晋之乱其在曲沃矣，末大于本而得民心，不乱何待\"。\n\n**主要人物**：成师（桓叔）、昭侯\n\n## 事件经过\n\n昭侯元年封文侯弟成师于曲沃。曲沃邑大于翼（晋都），成师好德晋众皆附。君子曰\"晋之乱其在曲沃矣，末大于本而得民心，不乱何待\"。\n\n## 原文\n\n> 昭侯元年，封文侯弟成师于曲沃。曲沃邑大於翼。...君子曰：'晋之乱其在曲沃矣。末大於本而得民心，不乱何待！'\n\n"
+    },
     {
       "rev_id": "20260423-155219-ee553a",
       "timestamp": "2026-04-23T15:52:19Z",

@@ -1,8 +1,18 @@
 {
   "page": "昭公弑杀文公立",
-  "latest_rev_id": "20260423-155219-cc4701",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161114-2b444f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161114-2b444f",
+      "timestamp": "2026-04-23T16:11:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155219-cc4701",
+      "content_hash": "sha256:2b444fc389a0e25eff3176a515046f444e85cdcc81eb98c7b003c2d4c3ec1518",
+      "size": 1011,
+      "content": "paragraph_refs:\n  038-015: \"[31.42]\"\nevent_type: 继位\nlocation: \"宋\"\n---\nid: \"昭公弑杀文公立\"\ntype: event\ntitle: 昭公弑杀文公立\ndescription: 昭公无道国人不附。昭公弟鲍革贤下士，襄公夫人欲通不可乃助之施于国。夫人王姬使卫伯攻杀昭公杵臼，弟鲍革立为文公。\ntags: [史记, 事件, 宋微子世家]\nsources: [宋微子世家]\nevent_ids: [038-015]\ndate: \"（公元前611年）\"\n---\n\n# 昭公弑杀文公立\n\n> 昭公无道国人不附。昭公弟鲍革贤下士，襄公夫人欲通不可乃助之施于国。夫人王姬使卫伯攻杀昭公杵臼，弟鲍革立为文公。\n\n**主要人物**：文公、昭公、襄公夫人\n\n## 事件经过\n\n昭公无道国人不附。昭公弟鲍革贤下士，襄公夫人欲通不可乃助之施于国。夫人王姬使卫伯攻杀昭公杵臼，弟鲍革立为文公。\n\n## 原文\n\n> 昭公弟鲍革贤而下士。...昭公出猎，夫人王姬使卫伯攻杀昭公杵臼。弟鲍革立，是为文公。\n\n"
+    },
     {
       "rev_id": "20260423-155219-cc4701",
       "timestamp": "2026-04-23T15:52:19Z",

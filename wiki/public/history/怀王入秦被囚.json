@@ -1,8 +1,18 @@
 {
   "page": "怀王入秦被囚",
-  "latest_rev_id": "20260423-155147-07a2eb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161058-a5cfb2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161058-a5cfb2",
+      "timestamp": "2026-04-23T16:10:58Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155147-07a2eb",
+      "content_hash": "sha256:a5cfb2f88b1f993bf3a203b764f921267f923a16eaebba83dfee250c144e9d9c",
+      "size": 1226,
+      "content": "paragraph_refs:\n  040-035: \"[82.86]\"\nevent_type: 政治活动\nlocation: \"武关、咸阳\"\n---\nid: \"怀王入秦被囚\"\ntype: event\ntitle: 怀王入秦被囚\ndescription: 三十年秦邀怀王会武关。昭雎谏\"王毋行秦虎狼不可信\"。子兰劝行。怀王至武关被闭，西至咸阳朝章台如蕃臣。秦因留楚王要割巫黔中，怀王怒不许。秦留之不归。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-035]\ndate: \"（公元前299年）\"\n---\n\n# 怀王入秦被囚\n\n> 三十年秦邀怀王会武关。昭雎谏\"王毋行秦虎狼不可信\"。子兰劝行。怀王至武关被闭，西至咸阳朝章台如蕃臣。秦因留楚王要割巫黔中，怀王怒不许。秦留之不归。\n\n**主要人物**：子兰、怀王、昭雎、秦昭王\n\n## 事件经过\n\n三十年秦邀怀王会武关。昭雎谏\"王毋行秦虎狼不可信\"。子兰劝行。怀王至武关被闭，西至咸阳朝章台如蕃臣。秦因留楚王要割巫黔中，怀王怒不许。秦留之不归。\n\n## 原文\n\n> 昭雎曰：'王毋行，而发兵自守耳。秦虎狼，不可信，有并诸侯之心。'...楚王至，则闭武关，遂与西至咸阳，朝章台，如蕃臣，不与亢礼。\n\n"
+    },
     {
       "rev_id": "20260423-155147-07a2eb",
       "timestamp": "2026-04-23T15:51:47Z",

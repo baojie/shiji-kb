@@ -1,8 +1,18 @@
 {
   "page": "张释之审惊马案",
-  "latest_rev_id": "20260423-152720-a6fdd8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161039-78d736",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161039-78d736",
+      "timestamp": "2026-04-23T16:10:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152720-a6fdd8",
+      "content_hash": "sha256:78d73605cd408e4fd4141c88998bd05a0a5c9f07f88b8d03826e7a93a86fc6a2",
+      "size": 1183,
+      "content": "paragraph_refs:\n  102-006: \"[1.6]\"\nevent_type: 政治活动\nlocation: \"中渭桥\"\n---\nid: \"张释之审惊马案\"\ntype: event\ntitle: 张释之审惊马案\ndescription: 有人从中渭桥下跑出惊了御马。廷尉释之审理后判罚金。文帝怒其轻判。释之言法者天子与天下公共，廷尉为天下之平，不可偏重。文帝良久称是。\ntags: [史记, 事件, 张释之冯唐列传]\nsources: [张释之冯唐列传]\nevent_ids: [102-006]\ndate: \"〖;文帝〗时 [约公元前176年]\"\n---\n\n# 张释之审惊马案\n\n> 有人从中渭桥下跑出惊了御马。廷尉释之审理后判罚金。文帝怒其轻判。释之言法者天子与天下公共，廷尉为天下之平，不可偏重。文帝良久称是。\n\n**主要人物**：张释之、文帝\n\n## 事件经过\n\n有人从中渭桥下跑出惊了御马。廷尉释之审理后判罚金。文帝怒其轻判。释之言法者天子与天下公共，廷尉为天下之平，不可偏重。文帝良久称是。\n\n## 原文\n\n> 法者天子所与天下公共也。今法如此而更重之，是法不信於民也。\"\"廷尉，天下之平也，一倾而天下用法皆为轻重，民安所措其手足？\n\n"
+    },
     {
       "rev_id": "20260423-152720-a6fdd8",
       "timestamp": "2026-04-23T15:27:20Z",

@@ -1,8 +1,18 @@
 {
   "page": "上书谏猎",
-  "latest_rev_id": "20260423-154856-f97959",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160454-a77c42",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160454-a77c42",
+      "timestamp": "2026-04-23T16:04:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154856-f97959",
+      "content_hash": "sha256:a77c424e8ab28b5ab2b252162dddef457d75c11beb6cafe7d506fac2aed82a73",
+      "size": 1083,
+      "content": "paragraph_refs:\n  117-011: \"[8]-[10]\"\nevent_type: 政治活动\nlocation: \"长杨\"\n---\nid: \"上书谏猎\"\ntype: event\ntitle: 上书谏猎\ndescription: 相如常从上至长杨猎，天子好自击熊彘驰逐野兽。相如上疏谏之，言天子轻万乘之重而乐出于万有一危之途不可取，引\"家累千金坐不垂堂\"之谚。上善之。\ntags: [史记, 事件, 司马相如列传]\nsources: [司马相如列传]\nevent_ids: [117-011]\ndate: \"[约公元前127年]\"\n---\n\n# 上书谏猎\n\n> 相如常从上至长杨猎，天子好自击熊彘驰逐野兽。相如上疏谏之，言天子轻万乘之重而乐出于万有一危之途不可取，引\"家累千金坐不垂堂\"之谚。上善之。\n\n**主要人物**：司马相如\n\n## 事件经过\n\n相如常从上至长杨猎，天子好自击熊彘驰逐野兽。相如上疏谏之，言天子轻万乘之重而乐出于万有一危之途不可取，引\"家累千金坐不垂堂\"之谚。上善之。\n\n## 原文\n\n> 虽万全无患，然本非天子之所宜近也。……盖明者远见於未萌而智者避危於无形。\n\n"
+    },
     {
       "rev_id": "20260423-154856-f97959",
       "timestamp": "2026-04-23T15:48:56Z",

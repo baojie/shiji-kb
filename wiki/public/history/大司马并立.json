@@ -1,8 +1,18 @@
 {
   "page": "大司马并立",
-  "latest_rev_id": "20260423-155039-1d8d9e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160810-d59fce",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160810-d59fce",
+      "timestamp": "2026-04-23T16:08:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155039-1d8d9e",
+      "content_hash": "sha256:d59fce34ba073d6d573e6d45fea84cb91a43d3e30d77331bc6268011e7911ce3",
+      "size": 1078,
+      "content": "paragraph_refs:\n  111-029: \"[13]\"\nevent_type: 政治活动\n---\nid: \"大司马并立\"\ntype: event\ntitle: 大司马并立\ndescription: 漠北大战后，益置大司马位，大将军与骠骑将军皆为大司马，骠骑将军秩禄与大将军等。此后大将军日退而骠骑日益贵，故人门下多转投霍去病。\ntags: [史记, 事件, 卫将军骠骑列传]\nsources: [卫将军骠骑列传]\nevent_ids: [111-029]\ndate: \"〖&元狩〗〖%四年〗 （公元前119年）\"\n---\n\n# 大司马并立\n\n> 漠北大战后，益置大司马位，大将军与骠骑将军皆为大司马，骠骑将军秩禄与大将军等。此后大将军日退而骠骑日益贵，故人门下多转投霍去病。\n\n**主要人物**：卫青、霍去病\n\n## 事件经过\n\n漠北大战后，益置大司马位，大将军与骠骑将军皆为大司马，骠骑将军秩禄与大将军等。此后大将军日退而骠骑日益贵，故人门下多转投霍去病。\n\n## 原文\n\n> 乃益置大司马位,大将军、骠骑将军皆为大司马。定令,令骠骑将军秩禄与大将军等。\n\n"
+    },
     {
       "rev_id": "20260423-155039-1d8d9e",
       "timestamp": "2026-04-23T15:50:39Z",

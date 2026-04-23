@@ -1,8 +1,18 @@
 {
   "page": "孝王遗金四十万斤",
-  "latest_rev_id": "20260423-155105-33ed03",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160902-621cf9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160902-621cf9",
+      "timestamp": "2026-04-23T16:09:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155105-33ed03",
+      "content_hash": "sha256:621cf961989d1863942d89798ee7cbb7f63856e9ea89de088fce422dd04fde0a",
+      "size": 797,
+      "content": "paragraph_refs:\n  058-019: \"[15]\"\nevent_type: 经济活动\n---\nid: \"孝王遗金四十万斤\"\ntype: event\ntitle: 孝王遗金四十万斤\ndescription: 孝王未死时财以巨万计不可胜数。及死藏府余黄金尚四十余万斤，他财物称是。\ntags: [史记, 事件, 梁孝王世家]\nsources: [梁孝王世家]\nevent_ids: [058-019]\ndate: \"（公元前144年）\"\n---\n\n# 孝王遗金四十万斤\n\n> 孝王未死时财以巨万计不可胜数。及死藏府余黄金尚四十余万斤，他财物称是。\n\n**主要人物**：刘武\n\n## 事件经过\n\n孝王未死时财以巨万计不可胜数。及死藏府余黄金尚四十余万斤，他财物称是。\n\n## 原文\n\n> 孝王未死时，财以巨万计，不可胜数。及死，藏府馀黄金尚四十馀万斤，他财物称是。\n\n"
+    },
     {
       "rev_id": "20260423-155105-33ed03",
       "timestamp": "2026-04-23T15:51:05Z",

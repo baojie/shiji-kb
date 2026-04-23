@@ -1,8 +1,18 @@
 {
   "page": "成王伐东夷",
-  "latest_rev_id": "20260423-155156-929c51",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161106-df4eaa",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161106-df4eaa",
+      "timestamp": "2026-04-23T16:11:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155156-929c51",
+      "content_hash": "sha256:df4eaa182da1f2038a96675bc1d5e59795181b00cfcc246003b29a3fa43eae62",
+      "size": 912,
+      "content": "paragraph_refs:\n  004-025: \"[22]\"\nevent_type: 战争\nlocation: \"奄、薄姑\"\n---\nid: \"成王伐东夷\"\ntype: event\ntitle: 成王伐东夷\ndescription: 召公为保，周公为师，东伐淮夷，残奄，迁其君于薄姑。成王自奄归，在宗周。又伐东夷，息慎来贺。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-025]\ndate: \"[约公元前1035年]\"\n---\n\n# 成王伐东夷\n\n> 召公为保，周公为师，东伐淮夷，残奄，迁其君于薄姑。成王自奄归，在宗周。又伐东夷，息慎来贺。\n\n**主要人物**：召公、周公、成王\n\n## 事件经过\n\n召公为保，周公为师，东伐淮夷，残奄，迁其君于薄姑。成王自奄归，在宗周。又伐东夷，息慎来贺。\n\n## 原文\n\n> 召公为保，周公为师，东伐淮夷，残奄，迁其君薄姑。成王自奄归，在宗周……成王既伐东夷，息慎来贺。\n\n"
+    },
     {
       "rev_id": "20260423-155156-929c51",
       "timestamp": "2026-04-23T15:51:56Z",

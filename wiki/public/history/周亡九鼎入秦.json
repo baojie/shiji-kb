@@ -1,8 +1,18 @@
 {
   "page": "周亡九鼎入秦",
-  "latest_rev_id": "20260423-155023-aee733",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160735-5f1584",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160735-5f1584",
+      "timestamp": "2026-04-23T16:07:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155023-aee733",
+      "content_hash": "sha256:5f1584c14dfbaaaff8ad7e47096a04ad825c6df505d6910d45a1652c95cd6996",
+      "size": 777,
+      "content": "paragraph_refs:\n  005-140: \"[64.1]\"\nevent_type: 战争\n---\nid: \"周亡九鼎入秦\"\ntype: event\ntitle: 周亡九鼎入秦\ndescription: 昭襄王五十二年，周民东逃，九鼎等重器入秦。周朝自此灭亡，延续八百余年的周王室正式终结。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-140]\ndate: \"〖%五十二年〗 （公元前255年）\"\n---\n\n# 周亡九鼎入秦\n\n> 昭襄王五十二年，周民东逃，九鼎等重器入秦。周朝自此灭亡，延续八百余年的周王室正式终结。\n\n## 事件经过\n\n昭襄王五十二年，周民东逃，九鼎等重器入秦。周朝自此灭亡，延续八百余年的周王室正式终结。\n\n## 原文\n\n> 五十二年，周民东亡，其器九鼎入秦。周初亡。\n\n"
+    },
     {
       "rev_id": "20260423-155023-aee733",
       "timestamp": "2026-04-23T15:50:23Z",

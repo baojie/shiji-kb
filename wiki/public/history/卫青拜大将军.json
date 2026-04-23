@@ -1,8 +1,18 @@
 {
   "page": "卫青拜大将军",
-  "latest_rev_id": "20260423-152600-8d3668",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160654-e3bd2a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160654-e3bd2a",
+      "timestamp": "2026-04-23T16:06:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152600-8d3668",
+      "content_hash": "sha256:e3bd2a4d8fefab6766e7c30c0a22603b10e4ff170bc4e18f372648eb3b365733",
+      "size": 975,
+      "content": "paragraph_refs:\n  111-011: \"[5.4]\"\nevent_type: 政治活动\n---\nid: \"卫青拜大将军\"\ntype: event\ntitle: 卫青拜大将军\ndescription: 卫青率军凯旋至塞，天子使使者持大将军印，在军中拜车骑将军卫青为大将军，诸将皆以兵属大将军。卫青益封六千户。\ntags: [史记, 事件, 卫将军骠骑列传]\nsources: [卫将军骠骑列传]\nevent_ids: [111-011]\ndate: \"〖&元朔〗〖%五年〗 （公元前124年）\"\n---\n\n# 卫青拜大将军\n\n> 卫青率军凯旋至塞，天子使使者持大将军印，在军中拜车骑将军卫青为大将军，诸将皆以兵属大将军。卫青益封六千户。\n\n**主要人物**：卫青\n\n## 事件经过\n\n卫青率军凯旋至塞，天子使使者持大将军印，在军中拜车骑将军卫青为大将军，诸将皆以兵属大将军。卫青益封六千户。\n\n## 原文\n\n> 至塞,天子使使者持大将军印,即军中拜车骑将军青为大将军,诸将皆以兵属大将军。\n\n"
+    },
     {
       "rev_id": "20260423-152600-8d3668",
       "timestamp": "2026-04-23T15:26:00Z",

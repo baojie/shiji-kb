@@ -1,8 +1,18 @@
 {
   "page": "改封曲逆侯",
-  "latest_rev_id": "20260423-155202-5df4f5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161108-5a60e9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161108-5a60e9",
+      "timestamp": "2026-04-23T16:11:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155202-5df4f5",
+      "content_hash": "sha256:5a60e9bb41dc424932f2279426b6cadd6c3be3854a7b5ff8a2f8edb14bcb90ab",
+      "size": 832,
+      "content": "paragraph_refs:\n  056-015: \"[13]\"\nevent_type: 继位\nlocation: \"曲逆\"\n---\nid: \"改封曲逆侯\"\ntype: event\ntitle: 改封曲逆侯\ndescription: 高帝南过曲逆，上其城望见屋室甚大，曰壮哉县。诏御史更以陈平为曲逆侯，尽食之。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-015]\ndate: \"[公元前200年]\"\n---\n\n# 改封曲逆侯\n\n> 高帝南过曲逆，上其城望见屋室甚大，曰壮哉县。诏御史更以陈平为曲逆侯，尽食之。\n\n**主要人物**：陈平\n\n## 事件经过\n\n高帝南过曲逆，上其城望见屋室甚大，曰壮哉县。诏御史更以陈平为曲逆侯，尽食之。\n\n## 原文\n\n> 高帝南过曲逆，上其城，望见其屋室甚大，曰：'壮哉县！'...於是乃诏御史，更以陈平为曲逆侯，尽食之。\n\n"
+    },
     {
       "rev_id": "20260423-155202-5df4f5",
       "timestamp": "2026-04-23T15:52:02Z",

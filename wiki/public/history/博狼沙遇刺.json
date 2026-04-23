@@ -1,8 +1,18 @@
 {
   "page": "博狼沙遇刺",
-  "latest_rev_id": "20260423-154957-343a91",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160641-2a0ba0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160641-2a0ba0",
+      "timestamp": "2026-04-23T16:06:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154957-343a91",
+      "content_hash": "sha256:2a0ba0162047f8e7403c33810a1d52a689b85dbc466757d30f797ccab77be944",
+      "size": 847,
+      "content": "paragraph_refs:\n  006-064: \"[51.1]\"\nevent_type: 政治整顿\nlocation: \"博狼沙、阳武\"\n---\nid: \"博狼沙遇刺\"\ntype: event\ntitle: 博狼沙遇刺\ndescription: 二十九年，始皇东游至阳武、博狼沙中，被刺客袭击。搜捕不获，下令天下大索十日。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-064]\ndate: \"〖%二十九年〗 （公元前218年）\"\n---\n\n# 博狼沙遇刺\n\n> 二十九年，始皇东游至阳武、博狼沙中，被刺客袭击。搜捕不获，下令天下大索十日。\n\n**主要人物**：始皇\n\n## 事件经过\n\n二十九年，始皇东游至阳武、博狼沙中，被刺客袭击。搜捕不获，下令天下大索十日。\n\n## 原文\n\n> 二十九年，始皇东游。至阳武、博狼沙中，为盗所惊。求弗得，乃令天下大索十日。\n\n"
+    },
     {
       "rev_id": "20260423-154957-343a91",
       "timestamp": "2026-04-23T15:49:57Z",

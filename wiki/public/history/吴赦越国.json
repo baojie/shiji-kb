@@ -1,8 +1,18 @@
 {
   "page": "吴赦越国",
-  "latest_rev_id": "20260423-155022-69d133",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160730-2c1e70",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160730-2c1e70",
+      "timestamp": "2026-04-23T16:07:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155022-69d133",
+      "content_hash": "sha256:2c1e70a9cb3cdb09650a84dbf8cd2568daaf42c5ea632d3f2e3deb91387df736",
+      "size": 726,
+      "content": "paragraph_refs:\n  041-007: \"[8.3]\"\nevent_type: 政治活动\n---\nid: \"吴赦越国\"\ntype: event\ntitle: 吴赦越国\ndescription: 吴王将许和约，子胥进谏\"今不灭越，后必悔之\"，但吴王弗听，卒赦越，罢兵而归。\ntags: [史记, 事件, 越王句践世家]\nsources: [越王句践世家]\nevent_ids: [041-007]\ndate: \"（公元前494年）\"\n---\n\n# 吴赦越国\n\n> 吴王将许和约，子胥进谏\"今不灭越，后必悔之\"，但吴王弗听，卒赦越，罢兵而归。\n\n**主要人物**：吴王、嚭、子胥\n\n## 事件经过\n\n吴王将许和约，子胥进谏\"今不灭越，后必悔之\"，但吴王弗听，卒赦越，罢兵而归。\n\n## 原文\n\n> 吴王弗听，卒赦越，罢兵而归。\n\n"
+    },
     {
       "rev_id": "20260423-155022-69d133",
       "timestamp": "2026-04-23T15:50:22Z",

@@ -1,8 +1,18 @@
 {
   "page": "四年拔城",
-  "latest_rev_id": "20260423-155031-05e2f7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160758-9cbd12",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160758-9cbd12",
+      "timestamp": "2026-04-23T16:07:58Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155031-05e2f7",
+      "content_hash": "sha256:9cbd121660b30bb0d4c14133a09dfc10e9ab637116277e7149c0f0c790ca45cd",
+      "size": 670,
+      "content": "paragraph_refs:\n  006-007: \"[5.1], [5.2]\"\nevent_type: 战争\nlocation: \"篸、有诡\"\n---\nid: \"四年拔城\"\ntype: event\ntitle: 四年拔城\ndescription: 四年，攻克篸、有诡二城。三月军罢。秦质子自赵归，赵太子出归国。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-007]\ndate: \"〖%四年〗 （公元前243年）\"\n---\n\n# 四年拔城\n\n> 四年，攻克篸、有诡二城。三月军罢。秦质子自赵归，赵太子出归国。\n\n## 事件经过\n\n四年，攻克篸、有诡二城。三月军罢。秦质子自赵归，赵太子出归国。\n\n## 原文\n\n> 四年，拔篸、有诡。三月，军罢。\n\n"
+    },
     {
       "rev_id": "20260423-155031-05e2f7",
       "timestamp": "2026-04-23T15:50:31Z",

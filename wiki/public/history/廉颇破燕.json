@@ -1,8 +1,18 @@
 {
   "page": "廉颇破燕",
-  "latest_rev_id": "20260423-152709-14f04a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161017-73ba98",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161017-73ba98",
+      "timestamp": "2026-04-23T16:10:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152709-14f04a",
+      "content_hash": "sha256:73ba981ddbecc064f3e938d597f6a5b0b078147823cfeeffae0ac81a80ea8c8e",
+      "size": 783,
+      "content": "paragraph_refs:\n  043-027: \"[32.2]\"\nevent_type: 战争\n---\nid: \"廉颇破燕\"\ntype: event\ntitle: 廉颇破燕\ndescription: 燕相栗腹以赵壮者皆死长平、其孤未壮为由劝燕王伐赵。廉颇为赵将，破杀栗腹，虏卿秦、乐间。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-027]\ndate: \"〖%十五年〗 （公元前251年）\"\n---\n\n# 廉颇破燕\n\n> 燕相栗腹以赵壮者皆死长平、其孤未壮为由劝燕王伐赵。廉颇为赵将，破杀栗腹，虏卿秦、乐间。\n\n**主要人物**：廉颇、栗腹\n\n## 事件经过\n\n燕相栗腹以赵壮者皆死长平、其孤未壮为由劝燕王伐赵。廉颇为赵将，破杀栗腹，虏卿秦、乐间。\n\n## 原文\n\n> 廉颇为赵将，破杀栗腹，虏卿秦、乐间。\n\n"
+    },
     {
       "rev_id": "20260423-152709-14f04a",
       "timestamp": "2026-04-23T15:27:09Z",

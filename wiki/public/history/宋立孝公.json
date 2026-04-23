@@ -1,8 +1,18 @@
 {
   "page": "宋立孝公",
-  "latest_rev_id": "20260423-155109-57eebe",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160914-4337c9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160914-4337c9",
+      "timestamp": "2026-04-23T16:09:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155109-57eebe",
+      "content_hash": "sha256:4337c9e722f2e849bde1de215410c4a3fefdee68b9b55facada077eb551cfc20",
+      "size": 944,
+      "content": "paragraph_refs:\n  032-023: \"[44]\"\nevent_type: 继位\nlocation: \"齐\"\n---\nid: \"宋立孝公\"\ntype: event\ntitle: 宋立孝公\ndescription: 孝公元年三月，宋襄公率诸侯兵送太子昭伐齐，齐人杀无诡。四公子之徒攻太子，宋败四公子师而立太子昭为孝公。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-023]\ndate: \"〖%元年三月〗 （公元前642年）\"\n---\n\n# 宋立孝公\n\n> 孝公元年三月，宋襄公率诸侯兵送太子昭伐齐，齐人杀无诡。四公子之徒攻太子，宋败四公子师而立太子昭为孝公。\n\n**主要人物**：宋襄公、齐孝公\n\n## 事件经过\n\n孝公元年三月，宋襄公率诸侯兵送太子昭伐齐，齐人杀无诡。四公子之徒攻太子，宋败四公子师而立太子昭为孝公。\n\n## 原文\n\n> 宋襄公率诸侯兵送齐太子昭而伐齐。...宋败齐四公子师而立太子昭，是为齐孝公。\n\n"
+    },
     {
       "rev_id": "20260423-155109-57eebe",
       "timestamp": "2026-04-23T15:51:09Z",

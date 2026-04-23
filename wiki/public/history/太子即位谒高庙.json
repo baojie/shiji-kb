@@ -1,8 +1,18 @@
 {
   "page": "太子即位谒高庙",
-  "latest_rev_id": "20260423-155051-fa7e3f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160827-19f2c9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160827-19f2c9",
+      "timestamp": "2026-04-23T16:08:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155051-fa7e3f",
+      "content_hash": "sha256:19f2c9d8048ba6abb6cd258e7fa72d59a8daafa4be301d7c1c5c77a6b9255d1b",
+      "size": 782,
+      "content": "paragraph_refs:\n  009-019: \"[11.8]-[11.9]\"\nevent_type: 继位\nlocation: \"高庙\"\n---\nid: \"太子即位谒高庙\"\ntype: event\ntitle: 太子即位谒高庙\ndescription: 惠帝下葬后，太子即位为帝，谒拜高庙。元年号令皆出自太后，太后称制。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-019]\ndate: \"〖%九月辛丑〗 （公元前188年）\"\n---\n\n# 太子即位谒高庙\n\n> 惠帝下葬后，太子即位为帝，谒拜高庙。元年号令皆出自太后，太后称制。\n\n**主要人物**：太子\n\n## 事件经过\n\n惠帝下葬后，太子即位为帝，谒拜高庙。元年号令皆出自太后，太后称制。\n\n## 原文\n\n> 九月辛丑，葬。太子即位为帝，谒高庙。元年，号令一出太后。\n\n"
+    },
     {
       "rev_id": "20260423-155051-fa7e3f",
       "timestamp": "2026-04-23T15:50:51Z",

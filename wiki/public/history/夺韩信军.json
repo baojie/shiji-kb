@@ -1,8 +1,18 @@
 {
   "page": "夺韩信军",
-  "latest_rev_id": "20260423-152633-df105f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160831-fb17d1",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160831-fb17d1",
+      "timestamp": "2026-04-23T16:08:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152633-df105f",
+      "content_hash": "sha256:fb17d15a93d38c93fd98e04464ecf64caaadc04d1c7f4f8817b7705b086d7d83",
+      "size": 983,
+      "content": "paragraph_refs:\n  008-052: \"[44]\"\nevent_type: 政治活动\nlocation: \"脩武\"\n---\nid: \"夺韩信军\"\ntype: event\ntitle: 夺韩信军\ndescription: 汉王跳出成皋北渡河，自称使者晨驰入张耳、韩信壁夺其军权。使张耳北收赵兵，韩信东击齐。汉王得韩信军复振。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-052]\ndate: \"〖%三年〗 （公元前204年）\"\n---\n\n# 夺韩信军\n\n> 汉王跳出成皋北渡河，自称使者晨驰入张耳、韩信壁夺其军权。使张耳北收赵兵，韩信东击齐。汉王得韩信军复振。\n\n**主要人物**：刘邦、张耳、韩信\n\n## 事件经过\n\n汉王跳出成皋北渡河，自称使者晨驰入张耳、韩信壁夺其军权。使张耳北收赵兵，韩信东击齐。汉王得韩信军复振。\n\n## 原文\n\n> 自称使者，晨驰入张耳、韩信壁，而夺之军。乃使张耳北益收兵赵地，使韩信东击齐。汉王得韩信军，则复振。\n\n"
+    },
     {
       "rev_id": "20260423-152633-df105f",
       "timestamp": "2026-04-23T15:26:33Z",

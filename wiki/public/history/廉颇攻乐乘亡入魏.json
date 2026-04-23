@@ -1,8 +1,18 @@
 {
   "page": "廉颇攻乐乘亡入魏",
-  "latest_rev_id": "20260423-152709-b02f4a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161017-8af84f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161017-8af84f",
+      "timestamp": "2026-04-23T16:10:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152709-b02f4a",
+      "content_hash": "sha256:8af84f22b4f016becc3437d96c23e501b360886b8889191bb1b3a13012a92a68",
+      "size": 906,
+      "content": "paragraph_refs:\n  080-019: \"[18]\"\nevent_type: 政治活动\nlocation: \"赵\"\n---\nid: \"廉颇攻乐乘亡入魏\"\ntype: event\ntitle: 廉颇攻乐乘亡入魏\ndescription: 赵孝成王卒，襄王使乐乘代廉颇。廉颇不服，攻乐乘，乐乘逃走，廉颇亡入魏。此后十六年秦灭赵。\ntags: [史记, 事件, 乐毅列传]\nsources: [乐毅列传]\nevent_ids: [080-019]\ndate: \"赵孝成王卒后（公元前245年）\"\n---\n\n# 廉颇攻乐乘亡入魏\n\n> 赵孝成王卒，襄王使乐乘代廉颇。廉颇不服，攻乐乘，乐乘逃走，廉颇亡入魏。此后十六年秦灭赵。\n\n**主要人物**：乐乘、廉颇\n\n## 事件经过\n\n赵孝成王卒，襄王使乐乘代廉颇。廉颇不服，攻乐乘，乐乘逃走，廉颇亡入魏。此后十六年秦灭赵。\n\n## 原文\n\n> 襄王使乐乘代廉颇。廉颇攻乐乘，乐乘走，廉颇亡入魏。其後十六年而秦灭赵。\n\n"
+    },
     {
       "rev_id": "20260423-152709-b02f4a",
       "timestamp": "2026-04-23T15:27:09Z",

@@ -1,8 +1,18 @@
 {
   "page": "晁错被斩东市",
-  "latest_rev_id": "20260423-152739-9d3dd0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161115-ea3dce",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161115-ea3dce",
+      "timestamp": "2026-04-23T16:11:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152739-9d3dd0",
+      "content_hash": "sha256:ea3dce188d4fe1b533daae1ebda8340a13b6c30fffa6013def819d3e5db3ca66",
+      "size": 877,
+      "content": "paragraph_refs:\n  101-017: \"[21.1]\"\nevent_type: 政治活动\nlocation: \"东市\"\n---\nid: \"晁错被斩东市\"\ntype: event\ntitle: 晁错被斩东市\ndescription: 窦婴、袁盎进说后，景帝令晁错衣朝衣斩于东市。晁错为汉朝削藩而献身，成为政治斗争的牺牲品。\ntags: [史记, 事件, 袁盎晁错列传]\nsources: [袁盎晁错列传]\nevent_ids: [101-017]\ndate: \"〖;景帝〗时 （公元前154年）\"\n---\n\n# 晁错被斩东市\n\n> 窦婴、袁盎进说后，景帝令晁错衣朝衣斩于东市。晁错为汉朝削藩而献身，成为政治斗争的牺牲品。\n\n**主要人物**：晁错、景帝、窦婴、袁盎\n\n## 事件经过\n\n窦婴、袁盎进说后，景帝令晁错衣朝衣斩于东市。晁错为汉朝削藩而献身，成为政治斗争的牺牲品。\n\n## 原文\n\n> 及窦婴、袁盎进说，上令晁错衣朝衣斩东市。\n\n"
+    },
     {
       "rev_id": "20260423-152739-9d3dd0",
       "timestamp": "2026-04-23T15:27:39Z",

@@ -1,8 +1,18 @@
 {
   "page": "孝公会魏惠王杜平",
-  "latest_rev_id": "20260423-152646-390144",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160857-f320b9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160857-f320b9",
+      "timestamp": "2026-04-23T16:08:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152646-390144",
+      "content_hash": "sha256:f320b9934d91f7bbedb2a3f5915bf3f86a5ce4c4ae5dad19128c9ecbe944506b",
+      "size": 696,
+      "content": "paragraph_refs:\n  005-071: \"[52]\"\nevent_type: 政治活动\nlocation: \"杜平\"\n---\nid: \"孝公会魏惠王杜平\"\ntype: event\ntitle: 孝公会魏惠王杜平\ndescription: 孝公七年，与魏惠王在杜平会面。此为秦魏之间的外交活动。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-071]\ndate: \"〖@孝公〗〖%七年〗 （公元前355年）\"\n---\n\n# 孝公会魏惠王杜平\n\n> 孝公七年，与魏惠王在杜平会面。此为秦魏之间的外交活动。\n\n**主要人物**：孝公、魏惠王\n\n## 事件经过\n\n孝公七年，与魏惠王在杜平会面。此为秦魏之间的外交活动。\n\n## 原文\n\n> 孝公七年，与魏惠王会杜平。\n\n"
+    },
     {
       "rev_id": "20260423-152646-390144",
       "timestamp": "2026-04-23T15:26:46Z",

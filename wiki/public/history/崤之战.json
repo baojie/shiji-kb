@@ -1,8 +1,18 @@
 {
   "page": "崤之战",
-  "latest_rev_id": "20260423-152700-89c991",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160947-de04ae",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160947-de04ae",
+      "timestamp": "2026-04-23T16:09:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152700-89c991",
+      "content_hash": "sha256:de04ae0bb633054ae76f35542b2b365b69cc612237f81cad4d26670ad8b1ecab",
+      "size": 1018,
+      "content": "paragraph_refs:\n  014-021: \"r215\"\nevent_type: 战争\nlocation: \"殽\"\n---\nid: \"崤之战\"\ntype: event\ntitle: 崤之战\ndescription: 晋襄公元年（前627年），秦穆公三十三年袭郑，晋破秦于殽。秦军大败。郑国弦高以牛诈退秦军。此战标志秦国东进受阻，秦晋关系破裂。\ntags: [史记, 事件, 十二诸侯年表]\nsources: [十二诸侯年表]\nevent_ids: [014-021]\ndate: \"（公元前627年）\"\n---\n\n# 崤之战\n\n> 晋襄公元年（前627年），秦穆公三十三年袭郑，晋破秦于殽。秦军大败。郑国弦高以牛诈退秦军。此战标志秦国东进受阻，秦晋关系破裂。\n\n**主要人物**：晋襄公、秦穆公\n\n## 事件经过\n\n晋襄公元年（前627年），秦穆公三十三年袭郑，晋破秦于殽。秦军大败。郑国弦高以牛诈退秦军。此战标志秦国东进受阻，秦晋关系破裂。\n\n## 原文\n\n> 晋襄公驩元年破秦于殽。\"\"三十三袭郑，晋败我殽。\"\"郑穆公兰元年秦袭我，弦高诈之。\n\n"
+    },
     {
       "rev_id": "20260423-152700-89c991",
       "timestamp": "2026-04-23T15:27:00Z",

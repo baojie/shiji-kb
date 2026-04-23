@@ -1,8 +1,18 @@
 {
   "page": "召公封燕",
-  "latest_rev_id": "20260423-155011-1d6a52",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160707-ab2a09",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160707-ab2a09",
+      "timestamp": "2026-04-23T16:07:07Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155011-1d6a52",
+      "content_hash": "sha256:ab2a0933da438f73c6e8455d23efbd6ee59b1e57f0db48984450741d99f1e273",
+      "size": 661,
+      "content": "paragraph_refs:\n  034-001: \"[1.1]\"\nevent_type: 政治活动\nlocation: \"燕\"\n---\nid: \"召公封燕\"\ntype: event\ntitle: 召公封燕\ndescription: 召公奭与周同姓，姓姬氏。周武王灭纣后，封召公于北燕。\ntags: [史记, 事件, 燕召公世家]\nsources: [燕召公世家]\nevent_ids: [034-001]\ndate: \"（公元前1046年）\"\n---\n\n# 召公封燕\n\n> 召公奭与周同姓，姓姬氏。周武王灭纣后，封召公于北燕。\n\n**主要人物**：召公奭\n\n## 事件经过\n\n召公奭与周同姓，姓姬氏。周武王灭纣后，封召公于北燕。\n\n## 原文\n\n> 召公奭与周同姓,姓姬氏。周武王之灭纣,封召公於北燕。\n\n"
+    },
     {
       "rev_id": "20260423-155011-1d6a52",
       "timestamp": "2026-04-23T15:50:11Z",

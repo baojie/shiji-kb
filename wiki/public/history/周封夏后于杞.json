@@ -1,8 +1,18 @@
 {
   "page": "周封夏后于杞",
-  "latest_rev_id": "20260423-155025-f0d36e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160746-89d6e7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160746-89d6e7",
+      "timestamp": "2026-04-23T16:07:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155025-f0d36e",
+      "content_hash": "sha256:89d6e7f202bb9d30c8263e65977b9def574d38ecc8a41d182a0b30fb5be435c7",
+      "size": 646,
+      "content": "paragraph_refs:\n  002-045: \"[26]\"\nevent_type: 政治活动\nlocation: \"杞\"\n---\nid: \"周封夏后于杞\"\ntype: event\ntitle: 周封夏后于杞\ndescription: 汤封夏之后代，至周时封于杞。这体现了对前朝的尊重，保留其祭祀。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-045]\ndate: \"（公元前1046年）\"\n---\n\n# 周封夏后于杞\n\n> 汤封夏之后代，至周时封于杞。这体现了对前朝的尊重，保留其祭祀。\n\n## 事件经过\n\n汤封夏之后代，至周时封于杞。这体现了对前朝的尊重，保留其祭祀。\n\n## 原文\n\n> 汤封夏之後，至周封於杞也。\n\n"
+    },
     {
       "rev_id": "20260423-155025-f0d36e",
       "timestamp": "2026-04-23T15:50:25Z",

@@ -1,8 +1,18 @@
 {
   "page": "御者妻谏夫自省",
-  "latest_rev_id": "20260423-155145-fc5563",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161055-25af16",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161055-25af16",
+      "timestamp": "2026-04-23T16:10:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155145-fc5563",
+      "content_hash": "sha256:25af16f6796f491598535f70f3546c43f135715e9df85b19c82737fda7974b03",
+      "size": 949,
+      "content": "paragraph_refs:\n  062-012: \"[9]\"\nevent_type: 文化活动\nlocation: \"齐\"\n---\nid: \"御者妻谏夫自省\"\ntype: event\ntitle: 御者妻谏夫自省\ndescription: 晏子的车夫意气扬扬，其妻认为晏子身为齐相尚常自谦，车夫却以仆御之位而自满，要求离去。车夫此后自抑损，晏子荐其为大夫。\ntags: [史记, 事件, 管晏列传]\nsources: [管晏列传]\nevent_ids: [062-012]\ndate: \"[约公元前530年]\"\n---\n\n# 御者妻谏夫自省\n\n> 晏子的车夫意气扬扬，其妻认为晏子身为齐相尚常自谦，车夫却以仆御之位而自满，要求离去。车夫此后自抑损，晏子荐其为大夫。\n\n**主要人物**：晏子\n\n## 事件经过\n\n晏子的车夫意气扬扬，其妻认为晏子身为齐相尚常自谦，车夫却以仆御之位而自满，要求离去。车夫此后自抑损，晏子荐其为大夫。\n\n## 原文\n\n> 晏子为齐相，出，其御之妻从门间而闚其夫。\n\n"
+    },
     {
       "rev_id": "20260423-155145-fc5563",
       "timestamp": "2026-04-23T15:51:45Z",

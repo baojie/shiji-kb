@@ -1,8 +1,18 @@
 {
   "page": "嫪毐伏诛",
-  "latest_rev_id": "20260423-152634-233ffa",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160840-0e7c35",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160840-0e7c35",
+      "timestamp": "2026-04-23T16:08:40Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152634-233ffa",
+      "content_hash": "sha256:0e7c3559bbf565e05cde4d5f3c190a3b45bfd2c9350f22acc904d8a23042e545",
+      "size": 924,
+      "content": "paragraph_refs:\n  006-017: \"[13.1], [13.2], [13.3], [13.4]\"\nevent_type: 政治整顿\nlocation: \"咸阳\"\n---\nid: \"嫪毐伏诛\"\ntype: event\ntitle: 嫪毐伏诛\ndescription: 嫪毐败走被擒，车裂以徇示众，灭其宗族。卫尉竭等二十人枭首。牵连者四千余家被夺爵迁蜀。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-017]\ndate: \"〖%九年〗 （公元前238年）\"\n---\n\n# 嫪毐伏诛\n\n> 嫪毐败走被擒，车裂以徇示众，灭其宗族。卫尉竭等二十人枭首。牵连者四千余家被夺爵迁蜀。\n\n**主要人物**：嫪毐\n\n## 事件经过\n\n嫪毐败走被擒，车裂以徇示众，灭其宗族。卫尉竭等二十人枭首。牵连者四千余家被夺爵迁蜀。\n\n## 原文\n\n> 毐等败走。即令国中：'有生得毐，赐钱百万；杀之，五十万。'尽得毐等。车裂以徇，灭其宗。及夺爵迁蜀四千馀家。\n\n"
+    },
     {
       "rev_id": "20260423-152634-233ffa",
       "timestamp": "2026-04-23T15:26:34Z",

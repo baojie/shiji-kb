@@ -1,8 +1,18 @@
 {
   "page": "匈奴入北地",
-  "latest_rev_id": "20260423-154947-dfb7b7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160631-13b5bf",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160631-13b5bf",
+      "timestamp": "2026-04-23T16:06:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154947-dfb7b7",
+      "content_hash": "sha256:13b5bf3c34e88a10f4d8856d795490d0811a4f83b4b2627ff94dc8124c5ad649",
+      "size": 1086,
+      "content": "paragraph_refs:\n  010-025: \"[23.1]-[23.4]\"\nevent_type: 战争\nlocation: \"北地、河南、甘泉、高奴\"\n---\nid: \"匈奴入北地\"\ntype: event\ntitle: 匈奴入北地\ndescription: 五月匈奴入北地，居河南为寇。帝初幸甘泉。六月下诏，言匈奴违约入侵，发边骑八万五千诣高奴，遣丞相灌婴击匈奴。匈奴退去。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-025]\ndate: \"〖%五月〗、〖%六月〗 （公元前177年）\"\n---\n\n# 匈奴入北地\n\n> 五月匈奴入北地，居河南为寇。帝初幸甘泉。六月下诏，言匈奴违约入侵，发边骑八万五千诣高奴，遣丞相灌婴击匈奴。匈奴退去。\n\n**主要人物**：匈奴、孝文皇帝、灌婴\n\n## 事件经过\n\n五月匈奴入北地，居河南为寇。帝初幸甘泉。六月下诏，言匈奴违约入侵，发边骑八万五千诣高奴，遣丞相灌婴击匈奴。匈奴退去。\n\n## 原文\n\n> 五月，匈奴入北地，居河南为寇。……其发边吏骑八万五千诣高奴，遣丞相颍阴侯灌婴击匈奴。\n\n"
+    },
     {
       "rev_id": "20260423-154947-dfb7b7",
       "timestamp": "2026-04-23T15:49:47Z",

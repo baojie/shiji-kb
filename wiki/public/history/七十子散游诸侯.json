@@ -1,8 +1,18 @@
 {
   "page": "七十子散游诸侯",
-  "latest_rev_id": "20260423-154850-5c5c3f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160445-3d288c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160445-3d288c",
+      "timestamp": "2026-04-23T16:04:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154850-5c5c3f",
+      "content_hash": "sha256:3d288c309a1b79d8907d39f32c0e8aceff3e6dd2a8e2ee5f9b2315f7139a2ac4",
+      "size": 1225,
+      "content": "paragraph_refs:\n  121-002: \"[1]\"\nevent_type: 文化活动\nlocation: \"卫、陈、楚、西河、齐\"\n---\nid: \"七十子散游诸侯\"\ntype: event\ntitle: 七十子散游诸侯\ndescription: 孔子卒后，七十子弟子散游于诸侯各国，大者为师傅卿相，小者友教士大夫。子路居卫，子张居陈，子夏居西河教出田子方、段干木、吴起等著名弟子。\ntags: [史记, 事件, 儒林列传]\nsources: [儒林列传]\nevent_ids: [121-002]\ndate: \"[约公元前479年]\"\n---\n\n# 七十子散游诸侯\n\n> 孔子卒后，七十子弟子散游于诸侯各国，大者为师傅卿相，小者友教士大夫。子路居卫，子张居陈，子夏居西河教出田子方、段干木、吴起等著名弟子。\n\n**主要人物**：子夏、子张、子贡、子路、澹台子羽\n\n## 事件经过\n\n孔子卒后，七十子弟子散游于诸侯各国，大者为师傅卿相，小者友教士大夫。子路居卫，子张居陈，子夏居西河教出田子方、段干木、吴起等著名弟子。\n\n## 原文\n\n> 自孔子卒後，七十子之徒散游诸侯，大者为师傅卿相，小者友教士大夫……子路居卫，子张居陈，澹台子羽居楚，子夏居西河，子贡终於齐。\n\n"
+    },
     {
       "rev_id": "20260423-154850-5c5c3f",
       "timestamp": "2026-04-23T15:48:50Z",

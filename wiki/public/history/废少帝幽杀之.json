@@ -1,8 +1,18 @@
 {
   "page": "废少帝幽杀之",
-  "latest_rev_id": "20260423-155137-53fd6d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161010-2768a4",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161010-2768a4",
+      "timestamp": "2026-04-23T16:10:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155137-53fd6d",
+      "content_hash": "sha256:2768a445c24f2a6a96784fb9b2e875f4fa0c86a7881a410c0751b5019962e05b",
+      "size": 953,
+      "content": "paragraph_refs:\n  009-034: \"[20.1]-[20.4]\"\nevent_type: 政治整顿\nlocation: \"永卷\"\n---\nid: \"废少帝幽杀之\"\ntype: event\ntitle: 废少帝幽杀之\ndescription: 太后将少帝幽禁于永卷之中，对外宣称帝病重。随后以皇帝失惑昏乱、不能继嗣奉宗庙为由废之，并将其幽杀。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-034]\ndate: \"（公元前184年）\"\n---\n\n# 废少帝幽杀之\n\n> 太后将少帝幽禁于永卷之中，对外宣称帝病重。随后以皇帝失惑昏乱、不能继嗣奉宗庙为由废之，并将其幽杀。\n\n**主要人物**：太后、皇帝\n\n## 事件经过\n\n太后将少帝幽禁于永卷之中，对外宣称帝病重。随后以皇帝失惑昏乱、不能继嗣奉宗庙为由废之，并将其幽杀。\n\n## 原文\n\n> 太后闻而患之，恐其为乱，乃幽之永卷中，言帝病甚，左右莫得见。\"...\"帝废位，太后幽杀之。\n\n"
+    },
     {
       "rev_id": "20260423-155137-53fd6d",
       "timestamp": "2026-04-23T15:51:37Z",

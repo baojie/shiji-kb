@@ -1,8 +1,18 @@
 {
   "page": "成王举康叔为司寇",
-  "latest_rev_id": "20260423-155156-b24a01",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161105-c65c36",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161105-c65c36",
+      "timestamp": "2026-04-23T16:11:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155156-b24a01",
+      "content_hash": "sha256:c65c364a40758933ea3cf8b17b6455d8c711d27f377dfeb2183c15f25581de23",
+      "size": 688,
+      "content": "paragraph_refs:\n  037-003: \"[4.4]\"\nevent_type: 政治活动\nlocation: \"周\"\n---\nid: \"成王举康叔为司寇\"\ntype: event\ntitle: 成王举康叔为司寇\ndescription: 成王长用事，举康叔为周司寇，赐卫宝祭器以章有德。\ntags: [史记, 事件, 卫康叔世家]\nsources: [卫康叔世家]\nevent_ids: [037-003]\ndate: \"[约公元前1030年]\"\n---\n\n# 成王举康叔为司寇\n\n> 成王长用事，举康叔为周司寇，赐卫宝祭器以章有德。\n\n**主要人物**：康叔、成王\n\n## 事件经过\n\n成王长用事，举康叔为周司寇，赐卫宝祭器以章有德。\n\n## 原文\n\n> 成王长，用事，举康叔为周司寇，赐卫宝祭器，以章有德。\n\n"
+    },
     {
       "rev_id": "20260423-155156-b24a01",
       "timestamp": "2026-04-23T15:51:56Z",

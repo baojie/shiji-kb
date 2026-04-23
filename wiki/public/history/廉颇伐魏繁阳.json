@@ -1,8 +1,18 @@
 {
   "page": "廉颇伐魏繁阳",
-  "latest_rev_id": "20260423-152707-028050",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161014-fb9df3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161014-fb9df3",
+      "timestamp": "2026-04-23T16:10:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152707-028050",
+      "content_hash": "sha256:fb9df36d993a3e2a5f887d8d53804bf1a7608ff060e77110411d255b065e9e5d",
+      "size": 607,
+      "content": "paragraph_refs:\n  081-022: \"[19.5]\"\nevent_type: 战争\nlocation: \"繁阳\"\n---\nid: \"廉颇伐魏繁阳\"\ntype: event\ntitle: 廉颇伐魏繁阳\ndescription: 六年后，赵使廉颇伐魏之繁阳，攻拔之。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-022]\ndate: \"〖%居六年〗 （公元前245年）\"\n---\n\n# 廉颇伐魏繁阳\n\n> 六年后，赵使廉颇伐魏之繁阳，攻拔之。\n\n**主要人物**：廉颇\n\n## 事件经过\n\n六年后，赵使廉颇伐魏之繁阳，攻拔之。\n\n## 原文\n\n> 居六年，赵使廉颇伐魏之繁阳，拔之。\n\n"
+    },
     {
       "rev_id": "20260423-152707-028050",
       "timestamp": "2026-04-23T15:27:07Z",

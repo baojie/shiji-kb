@@ -1,8 +1,18 @@
 {
   "page": "屈原被迁",
-  "latest_rev_id": "20260423-152659-b82a88",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160943-861ef3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160943-861ef3",
+      "timestamp": "2026-04-23T16:09:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152659-b82a88",
+      "content_hash": "sha256:861ef3ca6dfacd7d76e3fb8a8113bd2f2a2641a09447e5c8c97f0cde000fdb36",
+      "size": 805,
+      "content": "paragraph_refs:\n  084-007: \"[6.1]\"\nevent_type: 政治活动\n---\nid: \"屈原被迁\"\ntype: event\ntitle: 屈原被迁\ndescription: 令尹子兰闻屈原不满，使上官大夫短屈原于顷襄王。顷襄王怒而迁屈原，流放于江南。\ntags: [史记, 事件, 屈原贾生列传]\nsources: [屈原贾生列传]\nevent_ids: [084-007]\ndate: \"[约公元前296年]\"\n---\n\n# 屈原被迁\n\n> 令尹子兰闻屈原不满，使上官大夫短屈原于顷襄王。顷襄王怒而迁屈原，流放于江南。\n\n**主要人物**：上官大夫、子兰、屈原、顷襄王\n\n## 事件经过\n\n令尹子兰闻屈原不满，使上官大夫短屈原于顷襄王。顷襄王怒而迁屈原，流放于江南。\n\n## 原文\n\n> 令尹子兰闻之大怒,卒使上官大夫短屈原於顷襄王,顷襄王怒而迁之。\n\n"
+    },
     {
       "rev_id": "20260423-152659-b82a88",
       "timestamp": "2026-04-23T15:26:59Z",

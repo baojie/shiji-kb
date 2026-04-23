@@ -1,8 +1,18 @@
 {
   "page": "凤凰来翔",
-  "latest_rev_id": "20260423-154935-37aed9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160616-ed7318",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160616-ed7318",
+      "timestamp": "2026-04-23T16:06:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154935-37aed9",
+      "content_hash": "sha256:ed73180aa315970c3e4a349daa89c7930d6dc7de2abafda5bc1f64de7bc1002e",
+      "size": 772,
+      "content": "paragraph_refs:\n  001-058: \"[24.9]\"\nevent_type: 文化活动\n---\nid: \"凤凰来翔\"\ntype: event\ntitle: 凤凰来翔\ndescription: 禹兴起九招之乐，招致异物，凤凰飞来翔舞。这象征着天下太平、德政昌明的盛世景象。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-058]\ndate: \"[约公元前2240年]\"\n---\n\n# 凤凰来翔\n\n> 禹兴起九招之乐，招致异物，凤凰飞来翔舞。这象征着天下太平、德政昌明的盛世景象。\n\n**主要人物**：帝舜、禹\n\n## 事件经过\n\n禹兴起九招之乐，招致异物，凤凰飞来翔舞。这象征着天下太平、德政昌明的盛世景象。\n\n## 原文\n\n> 於是禹乃兴九招之乐，致异物，凤皇来翔。天下明德皆自虞帝始。\n\n"
+    },
     {
       "rev_id": "20260423-154935-37aed9",
       "timestamp": "2026-04-23T15:49:35Z",

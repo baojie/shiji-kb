@@ -1,8 +1,18 @@
 {
   "page": "尧欲传位四岳",
-  "latest_rev_id": "20260423-152658-9ec89d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160941-03d1b2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160941-03d1b2",
+      "timestamp": "2026-04-23T16:09:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152658-9ec89d",
+      "content_hash": "sha256:03d1b2d0c28a300f274c65f652e08cf0f4712c3064fa07634f0f357b94707bde",
+      "size": 914,
+      "content": "paragraph_refs:\n  001-021: \"[13.1-13.2]\"\nevent_type: 政治活动\n---\nid: \"尧欲传位四岳\"\ntype: event\ntitle: 尧欲传位四岳\ndescription: 尧在位七十年，询问四岳能否接受帝位。四岳回答德行微薄，不配帝位。尧于是要求举荐贵戚及疏远隐匿的贤者。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-021]\ndate: \"[约公元前2287年]\"\n---\n\n# 尧欲传位四岳\n\n> 尧在位七十年，询问四岳能否接受帝位。四岳回答德行微薄，不配帝位。尧于是要求举荐贵戚及疏远隐匿的贤者。\n\n**主要人物**：四岳、尧\n\n## 事件经过\n\n尧在位七十年，询问四岳能否接受帝位。四岳回答德行微薄，不配帝位。尧于是要求举荐贵戚及疏远隐匿的贤者。\n\n## 原文\n\n> 尧曰：'嗟！四岳：朕在位七十载，汝能庸命，践朕位？' 岳应曰：'鄙德忝帝位。'\n\n"
+    },
     {
       "rev_id": "20260423-152658-9ec89d",
       "timestamp": "2026-04-23T15:26:58Z",

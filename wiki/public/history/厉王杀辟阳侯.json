@@ -1,8 +1,18 @@
 {
   "page": "厉王杀辟阳侯",
-  "latest_rev_id": "20260423-152601-fe8a86",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160700-e25954",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160700-e25954",
+      "timestamp": "2026-04-23T16:07:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152601-fe8a86",
+      "content_hash": "sha256:e25954ef6f5f62d38add762572bf2084abd98f23eddc3d1371ba9be652a93662",
+      "size": 1189,
+      "content": "paragraph_refs:\n  118-003: \"[1]\"\nevent_type: 政治活动\nlocation: \"长安\"\n---\nid: \"厉王杀辟阳侯\"\ntype: event\ntitle: 厉王杀辟阳侯\ndescription: 孝文帝初即位，淮南王入朝甚横，自以为最亲。厉王力能扛鼎，往请辟阳侯，出见即袖铁椎椎之，令从者魏敬刭之。肉袒谢阙下，列辟阳侯三罪。文帝伤其志弗治。\ntags: [史记, 事件, 淮南衡山列传]\nsources: [淮南衡山列传]\nevent_ids: [118-003]\ndate: \"〖%孝文帝〗初 （公元前177年）\"\n---\n\n# 厉王杀辟阳侯\n\n> 孝文帝初即位，淮南王入朝甚横，自以为最亲。厉王力能扛鼎，往请辟阳侯，出见即袖铁椎椎之，令从者魏敬刭之。肉袒谢阙下，列辟阳侯三罪。文帝伤其志弗治。\n\n**主要人物**：辟阳侯、长、魏敬\n\n## 事件经过\n\n孝文帝初即位，淮南王入朝甚横，自以为最亲。厉王力能扛鼎，往请辟阳侯，出见即袖铁椎椎之，令从者魏敬刭之。肉袒谢阙下，列辟阳侯三罪。文帝伤其志弗治。\n\n## 原文\n\n> 厉王有材力，力能扛鼎，乃往请辟阳侯。辟阳侯出见之，即自袖铁椎椎辟阳侯，令从者魏敬刭之。\n\n"
+    },
     {
       "rev_id": "20260423-152601-fe8a86",
       "timestamp": "2026-04-23T15:26:01Z",

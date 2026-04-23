@@ -1,8 +1,18 @@
 {
   "page": "徙都大梁",
-  "latest_rev_id": "20260423-155145-c23bc7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161055-687a82",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161055-687a82",
+      "timestamp": "2026-04-23T16:10:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155145-c23bc7",
+      "content_hash": "sha256:687a8289eb8bd17e116be7f748e73b1e74b84e0b076145024e384ae77b988748",
+      "size": 661,
+      "content": "paragraph_refs:\n  044-013: \"[12.1]\"\nevent_type: 建设\nlocation: \"大梁\"\n---\nid: \"徙都大梁\"\ntype: event\ntitle: 徙都大梁\ndescription: 秦、赵、齐共伐魏，秦将商君诈夺魏军。安邑近秦，于是徙治大梁。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-013]\ndate: \"〖%三十一年〗 （公元前340年）\"\n---\n\n# 徙都大梁\n\n> 秦、赵、齐共伐魏，秦将商君诈夺魏军。安邑近秦，于是徙治大梁。\n\n**主要人物**：惠王\n\n## 事件经过\n\n秦、赵、齐共伐魏，秦将商君诈夺魏军。安邑近秦，于是徙治大梁。\n\n## 原文\n\n> 安邑近秦，於是徙治大梁。\n\n"
+    },
     {
       "rev_id": "20260423-155145-c23bc7",
       "timestamp": "2026-04-23T15:51:45Z",

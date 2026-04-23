@@ -1,8 +1,18 @@
 {
   "page": "修封泰山祠明堂",
-  "latest_rev_id": "20260423-154923-40caf6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160551-a0458a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160551-a0458a",
+      "timestamp": "2026-04-23T16:05:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154923-40caf6",
+      "content_hash": "sha256:a0458a28b3023fbe6d1ed627f9e67fffabd64571b6f24442c8338925d8b80e23",
+      "size": 894,
+      "content": "paragraph_refs:\n  028-053: \"[98]\"\nevent_type: 文化活动\nlocation: \"泰山、奉高\"\n---\nid: \"修封泰山祠明堂\"\ntype: event\ntitle: 修封泰山祠明堂\ndescription: 武帝五年修封泰山，祠太一五帝于明堂上坐，令高皇帝祠坐对之，祠后土于下房。又上泰山自有秘祠其巅。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-053]\ndate: \"（公元前106年）\"\n---\n\n# 修封泰山祠明堂\n\n> 武帝五年修封泰山，祠太一五帝于明堂上坐，令高皇帝祠坐对之，祠后土于下房。又上泰山自有秘祠其巅。\n\n**主要人物**：今上、公孙带\n\n## 事件经过\n\n武帝五年修封泰山，祠太一五帝于明堂上坐，令高皇帝祠坐对之，祠后土于下房。又上泰山自有秘祠其巅。\n\n## 原文\n\n> 及五年脩封，则祠太一、五帝於明堂上坐，令高皇帝祠坐对之。\n\n"
+    },
     {
       "rev_id": "20260423-154923-40caf6",
       "timestamp": "2026-04-23T15:49:23Z",

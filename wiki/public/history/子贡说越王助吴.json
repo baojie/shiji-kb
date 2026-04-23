@@ -1,8 +1,18 @@
 {
   "page": "子贡说越王助吴",
-  "latest_rev_id": "20260423-152640-b55d12",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160848-34d4f2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160848-34d4f2",
+      "timestamp": "2026-04-23T16:08:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152640-b55d12",
+      "content_hash": "sha256:34d4f25aa894a849a4edb02b521eeade81017cacffc0f4a4a96a19c86f5b30c1",
+      "size": 1084,
+      "content": "paragraph_refs:\n  067-009: \"[42]\"\nevent_type: 政治活动\nlocation: \"越\"\n---\nid: \"子贡说越王助吴\"\ntype: event\ntitle: 子贡说越王助吴\ndescription: 子贡至越，告越王吴王欲先伐越。劝越王卑辞重宝助吴伐齐，待吴精锐尽于齐、重甲困于晋，越可制其敝灭吴。越王大悦，赠金璧剑矛，子贡不受。\ntags: [史记, 事件, 仲尼弟子列传]\nsources: [仲尼弟子列传]\nevent_ids: [067-009]\ndate: \"[约公元前484年]\"\n---\n\n# 子贡说越王助吴\n\n> 子贡至越，告越王吴王欲先伐越。劝越王卑辞重宝助吴伐齐，待吴精锐尽于齐、重甲困于晋，越可制其敝灭吴。越王大悦，赠金璧剑矛，子贡不受。\n\n**主要人物**：子贡\n\n## 事件经过\n\n子贡至越，告越王吴王欲先伐越。劝越王卑辞重宝助吴伐齐，待吴精锐尽于齐、重甲困于晋，越可制其敝灭吴。越王大悦，赠金璧剑矛，子贡不受。\n\n## 原文\n\n> 子贡曰：'……其锐兵尽於齐，重甲困於晋，而王制其敝，此灭吴必矣。'越王大说，许诺。\n\n"
+    },
     {
       "rev_id": "20260423-152640-b55d12",
       "timestamp": "2026-04-23T15:26:40Z",

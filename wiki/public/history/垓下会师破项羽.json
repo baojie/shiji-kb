@@ -1,8 +1,18 @@
 {
   "page": "垓下会师破项羽",
-  "latest_rev_id": "20260423-152624-97b684",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160803-92ed59",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160803-92ed59",
+      "timestamp": "2026-04-23T16:08:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152624-97b684",
+      "content_hash": "sha256:92ed5965afeeaa9511c285a6fad93515e91831981c45f7676d358e0953828397",
+      "size": 863,
+      "content": "paragraph_refs:\n  092-020: \"[11.1]\"\nevent_type: 战争\nlocation: \"垓下\"\n---\nid: \"垓下会师破项羽\"\ntype: event\ntitle: 垓下会师破项羽\ndescription: 汉王困固陵时用张良计召齐王韩信，韩信遂率兵会于垓下。项羽既破，高祖袭夺齐王军。\ntags: [史记, 事件, 淮阴侯列传]\nsources: [淮阴侯列传]\nevent_ids: [092-020]\ndate: \"（公元前202年）\"\n---\n\n# 垓下会师破项羽\n\n> 汉王困固陵时用张良计召齐王韩信，韩信遂率兵会于垓下。项羽既破，高祖袭夺齐王军。\n\n**主要人物**：汉王、韩信、项羽\n\n## 事件经过\n\n汉王困固陵时用张良计召齐王韩信，韩信遂率兵会于垓下。项羽既破，高祖袭夺齐王军。\n\n## 原文\n\n> 汉王之困固陵，用张良计，召$齐王信$，遂将兵会=垓下。〖项羽〗已破，高祖袭夺齐王军。\n\n"
+    },
     {
       "rev_id": "20260423-152624-97b684",
       "timestamp": "2026-04-23T15:26:24Z",

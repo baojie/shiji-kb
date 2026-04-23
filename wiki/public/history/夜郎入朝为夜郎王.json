@@ -1,8 +1,18 @@
 {
   "page": "夜郎入朝为夜郎王",
-  "latest_rev_id": "20260423-155038-bc7c25",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160809-d05e34",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160809-d05e34",
+      "timestamp": "2026-04-23T16:08:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155038-bc7c25",
+      "content_hash": "sha256:d05e34d85cade6d8a46d51ae152a89513146715921669d17f10760acdbc41852",
+      "size": 860,
+      "content": "paragraph_refs:\n  116-012: \"[6]\"\nevent_type: 政治活动\nlocation: \"夜郎\"\n---\nid: \"夜郎入朝为夜郎王\"\ntype: event\ntitle: 夜郎入朝为夜郎王\ndescription: 夜郎侯始倚南越，南越已灭，会汉军还诛反者，夜郎遂入朝。上以为夜郎王，正式纳入汉朝藩属体系。\ntags: [史记, 事件, 西南夷列传]\nsources: [西南夷列传]\nevent_ids: [116-012]\ndate: \"（公元前111年）\"\n---\n\n# 夜郎入朝为夜郎王\n\n> 夜郎侯始倚南越，南越已灭，会汉军还诛反者，夜郎遂入朝。上以为夜郎王，正式纳入汉朝藩属体系。\n\n## 事件经过\n\n夜郎侯始倚南越，南越已灭，会汉军还诛反者，夜郎遂入朝。上以为夜郎王，正式纳入汉朝藩属体系。\n\n## 原文\n\n> 夜郎侯始倚南越，南越已灭，会还诛反者，夜郎遂入朝。上以为夜郎王。\n\n"
+    },
     {
       "rev_id": "20260423-155038-bc7c25",
       "timestamp": "2026-04-23T15:50:38Z",

@@ -1,8 +1,18 @@
 {
   "page": "广陵王胥祝诅自杀",
-  "latest_rev_id": "20260423-155135-a80273",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161004-d57919",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161004-d57919",
+      "timestamp": "2026-04-23T16:10:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155135-a80273",
+      "content_hash": "sha256:d57919385948a9f8c91f821fe92e217a08fa2453a0ade2955c05ef0edf4c4968",
+      "size": 601,
+      "content": "paragraph_refs:\n  060-020: \"褚先生曰\"\nevent_type: 政治整顿\nlocation: \"广陵\"\n---\nid: \"广陵王胥祝诅自杀\"\ntype: event\ntitle: 广陵王胥祝诅自杀\ndescription: 其后胥复祝诅谋反自杀国除。如其策所戒。\ntags: [史记, 事件, 三王世家]\nsources: [三王世家]\nevent_ids: [060-020]\ndate: \"（公元前54年）\"\n---\n\n# 广陵王胥祝诅自杀\n\n> 其后胥复祝诅谋反自杀国除。如其策所戒。\n\n**主要人物**：胥\n\n## 事件经过\n\n其后胥复祝诅谋反自杀国除。如其策所戒。\n\n## 原文\n\n> 其後胥复祝诅谋反，自杀，国除。\n\n"
+    },
     {
       "rev_id": "20260423-155135-a80273",
       "timestamp": "2026-04-23T15:51:35Z",

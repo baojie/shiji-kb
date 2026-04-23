@@ -1,8 +1,18 @@
 {
   "page": "文帝崩景帝即位",
-  "latest_rev_id": "20260423-155209-8d89de",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161110-861eb1",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161110-861eb1",
+      "timestamp": "2026-04-23T16:11:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155209-8d89de",
+      "content_hash": "sha256:861eb1873e18115e2a8057ffe944c7403dcddfc88d505e17daf44cb651748baa",
+      "size": 877,
+      "content": "paragraph_refs:\n  022-017: \"r50\"\nevent_type: 继位\nlocation: \"霸陵\"\n---\nid: \"文帝崩景帝即位\"\ntype: event\ntitle: 文帝崩景帝即位\ndescription: 文帝后七年六月己亥，孝文皇帝崩。丁未，太子立。民出临三日，葬霸陵。中尉周亚夫为车骑将军。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-017]\ndate: \"〖%文帝后七年〗 （公元前157年）\"\n---\n\n# 文帝崩景帝即位\n\n> 文帝后七年六月己亥，孝文皇帝崩。丁未，太子立。民出临三日，葬霸陵。中尉周亚夫为车骑将军。\n\n## 事件经过\n\n文帝后七年六月己亥，孝文皇帝崩。丁未，太子立。民出临三日，葬霸陵。中尉周亚夫为车骑将军。\n\n## 原文\n\n> 六月己亥，孝文皇帝崩。丁未，太子立。民出临三日，葬霸陵。\n\n"
+    },
     {
       "rev_id": "20260423-155209-8d89de",
       "timestamp": "2026-04-23T15:52:09Z",

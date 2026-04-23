@@ -1,8 +1,18 @@
 {
   "page": "彭越袭击楚后方",
-  "latest_rev_id": "20260423-152726-f6e060",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161051-65c0e5",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161051-65c0e5",
+      "timestamp": "2026-04-23T16:10:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152726-f6e060",
+      "content_hash": "sha256:65c0e5f0daed20a98c5bd42ed6c9666e33f46c156250c849c785fe84c28a1710",
+      "size": 1037,
+      "content": "paragraph_refs:\n  007-053: \"[138.1]-[139.2]\"\nevent_type: 战争\nlocation: \"东阿\"\n---\nid: \"彭越袭击楚后方\"\ntype: event\ntitle: 彭越袭击楚后方\ndescription: 彭越多次在梁地反复骚扰楚军，断绝楚军粮道。项王不得不亲自东击彭越，击破之后走彭越。但此举使成皋方向空虚，汉王趁机渡河复取成皋。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-053]\ndate: \"（公元前204年）\"\n---\n\n# 彭越袭击楚后方\n\n> 彭越多次在梁地反复骚扰楚军，断绝楚军粮道。项王不得不亲自东击彭越，击破之后走彭越。但此举使成皋方向空虚，汉王趁机渡河复取成皋。\n\n**主要人物**：彭越、项王\n\n## 事件经过\n\n彭越多次在梁地反复骚扰楚军，断绝楚军粮道。项王不得不亲自东击彭越，击破之后走彭越。但此举使成皋方向空虚，汉王趁机渡河复取成皋。\n\n## 原文\n\n> 是时，彭越渡河击楚东阿，杀楚将军薛公。项王乃自东击彭越。\n\n"
+    },
     {
       "rev_id": "20260423-152726-f6e060",
       "timestamp": "2026-04-23T15:27:26Z",

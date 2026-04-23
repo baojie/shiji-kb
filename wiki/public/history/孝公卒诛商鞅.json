@@ -1,8 +1,18 @@
 {
   "page": "孝公卒诛商鞅",
-  "latest_rev_id": "20260423-152646-7cb099",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160858-67dbaa",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160858-67dbaa",
+      "timestamp": "2026-04-23T16:08:58Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152646-7cb099",
+      "content_hash": "sha256:67dbaaa509833a6cf0f421cf99ee683ea53cb6de41c1af92e1f0480ccfbaf26e",
+      "size": 1127,
+      "content": "paragraph_refs:\n  005-081: \"[56]\"\nevent_type: 政治整顿\n---\nid: \"孝公卒诛商鞅\"\ntype: event\ntitle: 孝公卒诛商鞅\ndescription: 孝公去世，子惠文君继位。同年诛杀卫鞅。商鞅在秦施法时，太子犯禁，鞅刑其傅师，法令大行。孝公死后，宗室多怨鞅，鞅出逃被捕，以谋反罪车裂示众。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-081]\ndate: \"〖@孝公〗卒〖%岁〗 （公元前338年）\"\n---\n\n# 孝公卒诛商鞅\n\n> 孝公去世，子惠文君继位。同年诛杀卫鞅。商鞅在秦施法时，太子犯禁，鞅刑其傅师，法令大行。孝公死后，宗室多怨鞅，鞅出逃被捕，以谋反罪车裂示众。\n\n**主要人物**：卫鞅（商君）、孝公、惠文君\n\n## 事件经过\n\n孝公去世，子惠文君继位。同年诛杀卫鞅。商鞅在秦施法时，太子犯禁，鞅刑其傅师，法令大行。孝公死后，宗室多怨鞅，鞅出逃被捕，以谋反罪车裂示众。\n\n## 原文\n\n> 孝公卒，子惠文君立。是岁，诛卫鞅。……鞅亡，因以为反，而卒车裂以徇秦国。\n\n"
+    },
     {
       "rev_id": "20260423-152646-7cb099",
       "timestamp": "2026-04-23T15:26:46Z",

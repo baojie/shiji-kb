@@ -1,8 +1,18 @@
 {
   "page": "华阳之战斩首十三万",
-  "latest_rev_id": "20260423-154953-8840f2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160637-219710",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160637-219710",
+      "timestamp": "2026-04-23T16:06:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154953-8840f2",
+      "content_hash": "sha256:219710910b406e10d961ac67c253b37a7fd7e3b9081480da47cdb8e0ff444af6",
+      "size": 974,
+      "content": "paragraph_refs:\n  073-006: \"[1]\"\nevent_type: 战争\nlocation: \"华阳\"\n---\nid: \"华阳之战斩首十三万\"\ntype: event\ntitle: 华阳之战斩首十三万\ndescription: 白起攻魏，于华阳击走芒卯，俘虏三晋将领，斩首十三万。又与赵将贾偃交战，将赵军二万人沉入河中。\ntags: [史记, 事件, 白起王翦列传]\nsources: [白起王翦列传]\nevent_ids: [073-006]\ndate: \"昭王三十四年（公元前273年）\"\n---\n\n# 华阳之战斩首十三万\n\n> 白起攻魏，于华阳击走芒卯，俘虏三晋将领，斩首十三万。又与赵将贾偃交战，将赵军二万人沉入河中。\n\n**主要人物**：白起\n\n## 事件经过\n\n白起攻魏，于华阳击走芒卯，俘虏三晋将领，斩首十三万。又与赵将贾偃交战，将赵军二万人沉入河中。\n\n## 原文\n\n> 昭王三十四年，白起攻魏，拔华阳，走芒卯，而虏三晋将，斩首十三万。与赵将贾偃战，沈其卒二万人於河中。\n\n"
+    },
     {
       "rev_id": "20260423-154953-8840f2",
       "timestamp": "2026-04-23T15:49:53Z",

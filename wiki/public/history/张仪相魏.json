@@ -1,8 +1,18 @@
 {
   "page": "张仪相魏",
-  "latest_rev_id": "20260423-152712-cca41a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161024-fe8764",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161024-fe8764",
+      "timestamp": "2026-04-23T16:10:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152712-cca41a",
+      "content_hash": "sha256:fe876479bff7367e9a8e34a028c2743bbccac38c7563d93d9d78c3df8e3f1c71",
+      "size": 591,
+      "content": "paragraph_refs:\n  044-016: \"[14.4]\"\nevent_type: 政治活动\n---\nid: \"张仪相魏\"\ntype: event\ntitle: 张仪相魏\ndescription: 张仪相魏。秦取魏曲沃、平周。此后魏国持续受秦侵削。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-016]\ndate: \"〖%十三年〗 （公元前322年）\"\n---\n\n# 张仪相魏\n\n> 张仪相魏。秦取魏曲沃、平周。此后魏国持续受秦侵削。\n\n**主要人物**：张仪\n\n## 事件经过\n\n张仪相魏。秦取魏曲沃、平周。此后魏国持续受秦侵削。\n\n## 原文\n\n> 十三年，张仪相魏。\n\n"
+    },
     {
       "rev_id": "20260423-152712-cca41a",
       "timestamp": "2026-04-23T15:27:12Z",

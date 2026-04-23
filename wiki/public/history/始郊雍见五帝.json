@@ -1,8 +1,18 @@
 {
   "page": "始郊雍见五帝",
-  "latest_rev_id": "20260423-155059-e581a1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160837-956801",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160837-956801",
+      "timestamp": "2026-04-23T16:08:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155059-e581a1",
+      "content_hash": "sha256:956801c279748ca5dfce8a423797f98e5fdffb0d8e2fc02115171572d3a79e42",
+      "size": 724,
+      "content": "paragraph_refs:\n  010-036: \"[33.4]\"\nevent_type: 文化活动\nlocation: \"雍\"\n---\nid: \"始郊雍见五帝\"\ntype: event\ntitle: 始郊雍见五帝\ndescription: 天子始幸雍，郊见五帝，以孟夏四月答礼。此为文帝始行郊祀之礼。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-036]\ndate: \"〖%孟夏四月〗 （公元前165年）\"\n---\n\n# 始郊雍见五帝\n\n> 天子始幸雍，郊见五帝，以孟夏四月答礼。此为文帝始行郊祀之礼。\n\n**主要人物**：孝文皇帝\n\n## 事件经过\n\n天子始幸雍，郊见五帝，以孟夏四月答礼。此为文帝始行郊祀之礼。\n\n## 原文\n\n> 於是天子始幸雍，郊见五帝，以孟夏四月答礼焉。\n\n"
+    },
     {
       "rev_id": "20260423-155059-e581a1",
       "timestamp": "2026-04-23T15:50:59Z",

@@ -1,8 +1,18 @@
 {
   "page": "往见项梁",
-  "latest_rev_id": "20260423-152727-633ca4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161051-6309f6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161051-6309f6",
+      "timestamp": "2026-04-23T16:10:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152727-633ca4",
+      "content_hash": "sha256:6309f60e71caae6778a864d7824cba5f53d5d150ee5ff59c8667bc287247e650",
+      "size": 907,
+      "content": "paragraph_refs:\n  008-013: \"[12.19]-[12.21]\"\nevent_type: 政治活动\nlocation: \"薛\"\n---\nid: \"往见项梁\"\ntype: event\ntitle: 往见项梁\ndescription: 沛公闻项梁在薛，从骑百余人往见之。项梁益沛公卒五千人、五大夫将十人，沛公军力大增，还攻丰。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-013]\ndate: \"〖%二世二年〗 （公元前208年）\"\n---\n\n# 往见项梁\n\n> 沛公闻项梁在薛，从骑百余人往见之。项梁益沛公卒五千人、五大夫将十人，沛公军力大增，还攻丰。\n\n**主要人物**：刘邦、项梁\n\n## 事件经过\n\n沛公闻项梁在薛，从骑百余人往见之。项梁益沛公卒五千人、五大夫将十人，沛公军力大增，还攻丰。\n\n## 原文\n\n> 闻项梁在薛，从骑百馀往见之。项梁益沛公卒五千人，五大夫将十人。沛公还，引兵攻丰。\n\n"
+    },
     {
       "rev_id": "20260423-152727-633ca4",
       "timestamp": "2026-04-23T15:27:27Z",

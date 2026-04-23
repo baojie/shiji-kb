@@ -1,8 +1,18 @@
 {
   "page": "张骞后期失侯",
-  "latest_rev_id": "20260423-152722-46d355",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161041-60c743",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161041-60c743",
+      "timestamp": "2026-04-23T16:10:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152722-46d355",
+      "content_hash": "sha256:60c7433a36be826f235e415359b1adbbae4452ca194e40322eaeeb38c310b846",
+      "size": 899,
+      "content": "paragraph_refs:\n  123-008: \"[13]\"\nevent_type: 战争\nlocation: \"右北平\"\n---\nid: \"张骞后期失侯\"\ntype: event\ntitle: 张骞后期失侯\ndescription: 张骞为卫尉与李将军俱出右北平击匈奴，匈奴围李将军军失亡多，张骞后期当斩，赎为庶人。\ntags: [史记, 事件, 大宛列传]\nsources: [大宛列传]\nevent_ids: [123-008]\ndate: \"〖%元狩二年〗 （公元前121年）\"\n---\n\n# 张骞后期失侯\n\n> 张骞为卫尉与李将军俱出右北平击匈奴，匈奴围李将军军失亡多，张骞后期当斩，赎为庶人。\n\n**主要人物**：张骞、李将军\n\n## 事件经过\n\n张骞为卫尉与李将军俱出右北平击匈奴，匈奴围李将军军失亡多，张骞后期当斩，赎为庶人。\n\n## 原文\n\n> 其明年，骞为卫尉，与李将军俱出右北平击匈奴。匈奴围李将军，军失亡多；而骞後期当斩，赎为庶人。\n\n"
+    },
     {
       "rev_id": "20260423-152722-46d355",
       "timestamp": "2026-04-23T15:27:22Z",

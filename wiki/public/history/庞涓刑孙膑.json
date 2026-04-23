@@ -1,8 +1,18 @@
 {
   "page": "庞涓刑孙膑",
-  "latest_rev_id": "20260423-152706-4a6521",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161009-db2714",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161009-db2714",
+      "timestamp": "2026-04-23T16:10:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152706-4a6521",
+      "content_hash": "sha256:db27145d2e8023eb884dc673a4423c496dd04c90a1cbfe0924cf94fca7c29550",
+      "size": 1075,
+      "content": "paragraph_refs:\n  065-003: \"[2]\"\nevent_type: 政治活动\nlocation: \"魏\"\n---\nid: \"庞涓刑孙膑\"\ntype: event\ntitle: 庞涓刑孙膑\ndescription: 孙膑与庞涓同学兵法。庞涓事魏为惠王将军，自以为不及孙膑，阴使召膑至魏。庞涓嫉妒其才，以法刑断其两足而黥之，欲使其隐没。\ntags: [史记, 事件, 孙子吴起列传]\nsources: [孙子吴起列传]\nevent_ids: [065-003]\ndate: \"[约公元前354年]\"\n---\n\n# 庞涓刑孙膑\n\n> 孙膑与庞涓同学兵法。庞涓事魏为惠王将军，自以为不及孙膑，阴使召膑至魏。庞涓嫉妒其才，以法刑断其两足而黥之，欲使其隐没。\n\n**主要人物**：孙膑\n\n## 事件经过\n\n孙膑与庞涓同学兵法。庞涓事魏为惠王将军，自以为不及孙膑，阴使召膑至魏。庞涓嫉妒其才，以法刑断其两足而黥之，欲使其隐没。\n\n## 原文\n\n> 庞涓既事魏，得为惠王将军，而自以为能不及孙膑，乃阴使召孙膑。膑至，庞涓恐其贤於己，疾之，则以法刑断其两足而黥之，欲隐勿见。\n\n"
+    },
     {
       "rev_id": "20260423-152706-4a6521",
       "timestamp": "2026-04-23T15:27:06Z",

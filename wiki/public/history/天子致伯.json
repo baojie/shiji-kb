@@ -1,8 +1,18 @@
 {
   "page": "天子致伯",
-  "latest_rev_id": "20260423-155044-21a695",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160817-3ebe77",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160817-3ebe77",
+      "timestamp": "2026-04-23T16:08:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155044-21a695",
+      "content_hash": "sha256:3ebe776bf5d30e12f6fe19d430f99a32f2e4b2d7afa0715d79c6135567f6efbd",
+      "size": 618,
+      "content": "paragraph_refs:\n  005-076: \"[52.5]\"\nevent_type: 政治活动\n---\nid: \"天子致伯\"\ntype: event\ntitle: 天子致伯\ndescription: 孝公十九年，周天子赐予霸主称号，正式承认秦国的强国地位。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-076]\ndate: \"〖%十九年〗 （公元前343年）\"\n---\n\n# 天子致伯\n\n> 孝公十九年，周天子赐予霸主称号，正式承认秦国的强国地位。\n\n**主要人物**：孝公\n\n## 事件经过\n\n孝公十九年，周天子赐予霸主称号，正式承认秦国的强国地位。\n\n## 原文\n\n> 十九年，天子致伯。\n\n"
+    },
     {
       "rev_id": "20260423-155044-21a695",
       "timestamp": "2026-04-23T15:50:44Z",

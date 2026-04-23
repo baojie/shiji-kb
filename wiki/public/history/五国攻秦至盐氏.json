@@ -1,8 +1,18 @@
 {
   "page": "五国攻秦至盐氏",
-  "latest_rev_id": "20260423-154909-f67a8c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160523-009bba",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160523-009bba",
+      "timestamp": "2026-04-23T16:05:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154909-f67a8c",
+      "content_hash": "sha256:009bba20be731feea7dc30a3eb6d655ca3954c431579891e94b4a00d083bfef5",
+      "size": 1208,
+      "content": "paragraph_refs:\n  005-114: \"[62.10]\"\nevent_type: 战争\nlocation: \"盐氏\"\n---\nid: \"五国攻秦至盐氏\"\ntype: event\ntitle: 五国攻秦至盐氏\ndescription: 昭襄王十一年，齐、韩、魏、赵、宋、中山五国联合攻秦，进至盐氏而还。秦与韩、魏以河北及封陵讲和。楚怀王逃往赵国，赵不接纳，还之秦，怀王死于秦国，归葬楚地。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-114]\ndate: \"〖%十一年〗 （公元前296年）\"\n---\n\n# 五国攻秦至盐氏\n\n> 昭襄王十一年，齐、韩、魏、赵、宋、中山五国联合攻秦，进至盐氏而还。秦与韩、魏以河北及封陵讲和。楚怀王逃往赵国，赵不接纳，还之秦，怀王死于秦国，归葬楚地。\n\n**主要人物**：楚怀王\n\n## 事件经过\n\n昭襄王十一年，齐、韩、魏、赵、宋、中山五国联合攻秦，进至盐氏而还。秦与韩、魏以河北及封陵讲和。楚怀王逃往赵国，赵不接纳，还之秦，怀王死于秦国，归葬楚地。\n\n## 原文\n\n> 齐、韩、魏、赵、宋、中山五国共攻秦，至盐氏而还。……楚怀王走之赵，赵不受，还之秦，即死，归葬。\n\n"
+    },
     {
       "rev_id": "20260423-154909-f67a8c",
       "timestamp": "2026-04-23T15:49:09Z",

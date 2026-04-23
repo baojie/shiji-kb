@@ -1,8 +1,18 @@
 {
   "page": "东上泰山立石",
-  "latest_rev_id": "20260423-154858-d55637",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160457-fc1685",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160457-fc1685",
+      "timestamp": "2026-04-23T16:04:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154858-d55637",
+      "content_hash": "sha256:fc168596923da4b99afaf10a6fe34239f65ec0909833033c20c1e85657230ae6",
+      "size": 673,
+      "content": "paragraph_refs:\n  012-041: \"[30.5]\"\nevent_type: 文化活动\nlocation: \"泰山\"\n---\nid: \"东上泰山立石\"\ntype: event\ntitle: 东上泰山立石\ndescription: 东上泰山，山之草木叶未生，乃令人上石立之泰山颠。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-041]\ndate: \"〖%元封元年〗 （公元前110年）\"\n---\n\n# 东上泰山立石\n\n> 东上泰山，山之草木叶未生，乃令人上石立之泰山颠。\n\n**主要人物**：天子\n\n## 事件经过\n\n东上泰山，山之草木叶未生，乃令人上石立之泰山颠。\n\n## 原文\n\n> 东上泰山，山之草木叶未生，乃令人上石立之泰山颠。\n\n"
+    },
     {
       "rev_id": "20260423-154858-d55637",
       "timestamp": "2026-04-23T15:48:58Z",

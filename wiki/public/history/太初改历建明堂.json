@@ -1,8 +1,18 @@
 {
   "page": "太初改历建明堂",
-  "latest_rev_id": "20260423-155049-c9fe3f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160822-fc1c37",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160822-fc1c37",
+      "timestamp": "2026-04-23T16:08:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155049-c9fe3f",
+      "content_hash": "sha256:fc1c37617fbea082a5e78e79bc281d52ed40cb8d2491e288f76257d7c9338f44",
+      "size": 967,
+      "content": "paragraph_refs:\n  130-015: \"[12.1]\"\nevent_type: 政治改革\nlocation: \"明堂\"\n---\nid: \"太初改历建明堂\"\ntype: event\ntitle: 太初改历建明堂\ndescription: 司马迁任太史令五年当太初元年，十一月甲子朔旦冬至，天历始改，建于明堂，诸神受纪。这是汉代重要的历法改革。\ntags: [史记, 事件, 太史公自序]\nsources: [太史公自序]\nevent_ids: [130-015]\ndate: \"〖%太初元年〗 （公元前104年）\"\n---\n\n# 太初改历建明堂\n\n> 司马迁任太史令五年当太初元年，十一月甲子朔旦冬至，天历始改，建于明堂，诸神受纪。这是汉代重要的历法改革。\n\n**主要人物**：迁\n\n## 事件经过\n\n司马迁任太史令五年当太初元年，十一月甲子朔旦冬至，天历始改，建于明堂，诸神受纪。这是汉代重要的历法改革。\n\n## 原文\n\n> 五年而当太初元年，十一月甲子朔旦冬至，天历始改，建於明堂，诸神受纪。\n\n"
+    },
     {
       "rev_id": "20260423-155049-c9fe3f",
       "timestamp": "2026-04-23T15:50:49Z",

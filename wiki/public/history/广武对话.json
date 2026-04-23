@@ -1,8 +1,18 @@
 {
   "page": "广武对话",
-  "latest_rev_id": "20260423-155134-8fadaa",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161003-e60b2c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161003-e60b2c",
+      "timestamp": "2026-04-23T16:10:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155134-8fadaa",
+      "content_hash": "sha256:e60b2c76c19853b35d5f673ee3ea712236c543d299c4aeef45ad2d50146a3249",
+      "size": 1061,
+      "content": "paragraph_refs:\n  008-056: \"[49]\"\nevent_type: 政治活动\nlocation: \"广武\"\n---\nid: \"广武对话\"\ntype: event\ntitle: 广武对话\ndescription: 楚汉久相持未决，壮者苦军旅，老弱疲于转运。汉王与项羽临广武对话，汉王历数项羽十大罪状。项羽欲独身挑战被拒。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-056]\ndate: \"〖%四年〗 （公元前203年）\"\n---\n\n# 广武对话\n\n> 楚汉久相持未决，壮者苦军旅，老弱疲于转运。汉王与项羽临广武对话，汉王历数项羽十大罪状。项羽欲独身挑战被拒。\n\n**主要人物**：刘邦、项羽\n\n## 事件经过\n\n楚汉久相持未决，壮者苦军旅，老弱疲于转运。汉王与项羽临广武对话，汉王历数项羽十大罪状。项羽欲独身挑战被拒。\n\n## 原文\n\n> 汉王@项羽相与临广武之间而语。项羽欲与汉王独身挑战。汉王数项羽曰：'...夫为人臣而弑其主，杀已降，为政不平，主约不信，天下所不容，大逆无道，罪十也。'\n\n"
+    },
     {
       "rev_id": "20260423-155134-8fadaa",
       "timestamp": "2026-04-23T15:51:34Z",

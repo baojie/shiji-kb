@@ -1,8 +1,18 @@
 {
   "page": "开籍田亲耕",
-  "latest_rev_id": "20260423-152709-31987c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161019-59b4a3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161019-59b4a3",
+      "timestamp": "2026-04-23T16:10:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152709-31987c",
+      "content_hash": "sha256:59b4a3a1d0b444292434cc3b84cb552691b14006a31133a2f8a7f8d2628ddb4f",
+      "size": 706,
+      "content": "paragraph_refs:\n  010-019: \"[18]\"\nevent_type: 经济活动\n---\nid: \"开籍田亲耕\"\ntype: event\ntitle: 开籍田亲耕\ndescription: 文帝以农为天下之本，开籍田，亲率耕以给宗庙粢盛，彰显重农之意。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-019]\ndate: \"〖%正月〗 （公元前178年）\"\n---\n\n# 开籍田亲耕\n\n> 文帝以农为天下之本，开籍田，亲率耕以给宗庙粢盛，彰显重农之意。\n\n**主要人物**：孝文皇帝\n\n## 事件经过\n\n文帝以农为天下之本，开籍田，亲率耕以给宗庙粢盛，彰显重农之意。\n\n## 原文\n\n> 农，天下之本，其开籍田，朕亲率耕，以给宗庙粢盛。\n\n"
+    },
     {
       "rev_id": "20260423-152709-31987c",
       "timestamp": "2026-04-23T15:27:09Z",

@@ -1,8 +1,18 @@
 {
   "page": "废栗太子",
-  "latest_rev_id": "20260423-152706-df196f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161010-140785",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161010-140785",
+      "timestamp": "2026-04-23T16:10:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152706-df196f",
+      "content_hash": "sha256:140785db137fd176af6b0fe599c6f1bdb8e01e6695cba9a6c0a97458a3d96f0a",
+      "size": 601,
+      "content": "paragraph_refs:\n  011-023: \"[12.1]-[12.4]\"\nevent_type: 政治活动\n---\nid: \"废栗太子\"\ntype: event\ntitle: 废栗太子\ndescription: 七年冬废栗太子为临江王。十月晦日食。丞相青免。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-023]\ndate: \"〖%七年冬〗 （公元前150年）\"\n---\n\n# 废栗太子\n\n> 七年冬废栗太子为临江王。十月晦日食。丞相青免。\n\n**主要人物**：栗太子\n\n## 事件经过\n\n七年冬废栗太子为临江王。十月晦日食。丞相青免。\n\n## 原文\n\n> 七年冬，废栗太子为临江王。\n\n"
+    },
     {
       "rev_id": "20260423-152706-df196f",
       "timestamp": "2026-04-23T15:27:06Z",

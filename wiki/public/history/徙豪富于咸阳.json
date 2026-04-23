@@ -1,8 +1,18 @@
 {
   "page": "徙豪富于咸阳",
-  "latest_rev_id": "20260423-155144-528f21",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161053-99f0a5",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161053-99f0a5",
+      "timestamp": "2026-04-23T16:10:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155144-528f21",
+      "content_hash": "sha256:99f0a51a4100bda4afb1045e700c80ad6c4e12b2fe7ed54b5fda22baaefe1b3c",
+      "size": 574,
+      "content": "paragraph_refs:\n  006-053: \"[40.4]\"\nevent_type: 政治活动\nlocation: \"咸阳\"\n---\nid: \"徙豪富于咸阳\"\ntype: event\ntitle: 徙豪富于咸阳\ndescription: 迁徙天下豪富于咸阳，共十二万户。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-053]\ndate: \"〖%二十六年〗 （公元前221年）\"\n---\n\n# 徙豪富于咸阳\n\n> 迁徙天下豪富于咸阳，共十二万户。\n\n**主要人物**：始皇\n\n## 事件经过\n\n迁徙天下豪富于咸阳，共十二万户。\n\n## 原文\n\n> 徙天下豪富於咸阳十二万户。\n\n"
+    },
     {
       "rev_id": "20260423-155144-528f21",
       "timestamp": "2026-04-23T15:51:44Z",

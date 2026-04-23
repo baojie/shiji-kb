@@ -1,8 +1,18 @@
 {
   "page": "华阳之战",
-  "latest_rev_id": "20260423-154953-38bf74",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160637-1090bd",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160637-1090bd",
+      "timestamp": "2026-04-23T16:06:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154953-38bf74",
+      "content_hash": "sha256:1090bdca5251ef4e4231c182c7a5a4ca536ff75e30ba889ca24b49ab4fb8590f",
+      "size": 954,
+      "content": "paragraph_refs:\n  045-013: \"[17]\"\nevent_type: 战争\nlocation: \"华阳\"\n---\nid: \"华阳之战\"\ntype: event\ntitle: 华阳之战\ndescription: 赵、魏攻韩华阳，韩告急于秦。陈筮见穰侯，以\"韩急则将变而佗从，以未急故复来\"激之。穰侯遂发兵，八日至华阳，败赵、魏。\ntags: [史记, 事件, 韩世家]\nsources: [韩世家]\nevent_ids: [045-013]\ndate: \"〖%二十三年〗 （公元前273年）\"\n---\n\n# 华阳之战\n\n> 赵、魏攻韩华阳，韩告急于秦。陈筮见穰侯，以\"韩急则将变而佗从，以未急故复来\"激之。穰侯遂发兵，八日至华阳，败赵、魏。\n\n**主要人物**：穰侯、陈筮\n\n## 事件经过\n\n赵、魏攻韩华阳，韩告急于秦。陈筮见穰侯，以\"韩急则将变而佗从，以未急故复来\"激之。穰侯遂发兵，八日至华阳，败赵、魏。\n\n## 原文\n\n> 陈筮曰：'未急也。'……穰侯曰：'公无见王，请今发兵救韩。'\n\n"
+    },
     {
       "rev_id": "20260423-154953-38bf74",
       "timestamp": "2026-04-23T15:49:53Z",

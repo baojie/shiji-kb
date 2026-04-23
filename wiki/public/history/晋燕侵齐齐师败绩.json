@@ -1,8 +1,18 @@
 {
   "page": "晋燕侵齐齐师败绩",
-  "latest_rev_id": "20260423-152741-847bf7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161116-774a89",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161116-774a89",
+      "timestamp": "2026-04-23T16:11:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152741-847bf7",
+      "content_hash": "sha256:774a89d2c2e5ad9dced7a5602cf18f88164122faf2733818e6480bc9f2178058",
+      "size": 769,
+      "content": "paragraph_refs:\n  064-001: \"[1]\"\nevent_type: 战争\nlocation: \"阿、齐\"\n---\nid: \"晋燕侵齐齐师败绩\"\ntype: event\ntitle: 晋燕侵齐齐师败绩\ndescription: 齐景公时，晋国攻伐阿、甄，燕国侵犯河上，齐军败绩。景公深以为患。\ntags: [史记, 事件, 司马穰苴列传]\nsources: [司马穰苴列传]\nevent_ids: [064-001]\ndate: \"[约公元前535年]\"\n---\n\n# 晋燕侵齐齐师败绩\n\n> 齐景公时，晋国攻伐阿、甄，燕国侵犯河上，齐军败绩。景公深以为患。\n\n**主要人物**：晏婴、齐景公\n\n## 事件经过\n\n齐景公时，晋国攻伐阿、甄，燕国侵犯河上，齐军败绩。景公深以为患。\n\n## 原文\n\n> 齐景公时，晋伐阿、甄，而燕侵河上，齐师败绩。景公患之。\n\n"
+    },
     {
       "rev_id": "20260423-152741-847bf7",
       "timestamp": "2026-04-23T15:27:41Z",

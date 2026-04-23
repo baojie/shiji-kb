@@ -1,8 +1,18 @@
 {
   "page": "文帝复齐故地",
-  "latest_rev_id": "20260423-152734-6c9783",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161110-b445e5",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161110-b445e5",
+      "timestamp": "2026-04-23T16:11:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152734-6c9783",
+      "content_hash": "sha256:b445e5294aab6d2e130ab99fa324c14f47270e7a44fdbb101c07ee937c26ec98",
+      "size": 989,
+      "content": "paragraph_refs:\n  052-012: \"[18]\"\nevent_type: 政治活动\nlocation: \"齐\"\n---\nid: \"文帝复齐故地\"\ntype: event\ntitle: 文帝复齐故地\ndescription: 孝文帝元年，尽以高后时所割齐之城阳、琅邪、济南郡复与齐，徙琅邪王王燕，益封朱虚侯、东牟侯各二千户。\ntags: [史记, 事件, 齐悼惠王世家]\nsources: [齐悼惠王世家]\nevent_ids: [052-012]\ndate: \"〖%元年〗 （公元前179年）\"\n---\n\n# 文帝复齐故地\n\n> 孝文帝元年，尽以高后时所割齐之城阳、琅邪、济南郡复与齐，徙琅邪王王燕，益封朱虚侯、东牟侯各二千户。\n\n**主要人物**：文帝、朱虚侯\n\n## 事件经过\n\n孝文帝元年，尽以高后时所割齐之城阳、琅邪、济南郡复与齐，徙琅邪王王燕，益封朱虚侯、东牟侯各二千户。\n\n## 原文\n\n> 孝文帝元年，尽以高后时所割齐之城阳、琅邪、济南郡复与齐，而徙琅邪王王燕，益封硃虚侯、东牟侯各二千户。\n\n"
+    },
     {
       "rev_id": "20260423-152734-6c9783",
       "timestamp": "2026-04-23T15:27:34Z",

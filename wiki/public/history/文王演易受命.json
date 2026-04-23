@@ -1,8 +1,18 @@
 {
   "page": "文王演易受命",
-  "latest_rev_id": "20260423-155212-51a944",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161111-3320d4",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161111-3320d4",
+      "timestamp": "2026-04-23T16:11:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155212-51a944",
+      "content_hash": "sha256:3320d4214e5e5bc1594eca3698d146743f43841c02cf2981c0b04e4927ff021f",
+      "size": 759,
+      "content": "paragraph_refs:\n  004-014: \"[11]\"\nevent_type: 文化活动\nlocation: \"羑里\"\n---\nid: \"文王演易受命\"\ntype: event\ntitle: 文王演易受命\ndescription: 文王囚羑里时，益易之八卦为六十四卦。受命之年称王而断虞、芮之讼。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-014]\ndate: \"[约公元前1080年]\"\n---\n\n# 文王演易受命\n\n> 文王囚羑里时，益易之八卦为六十四卦。受命之年称王而断虞、芮之讼。\n\n**主要人物**：文王\n\n## 事件经过\n\n文王囚羑里时，益易之八卦为六十四卦。受命之年称王而断虞、芮之讼。\n\n## 原文\n\n> 其囚羑里，盖益易之八卦为六十四卦。诗人道西伯，盖受命之年称王而断虞、芮之讼。\n\n"
+    },
     {
       "rev_id": "20260423-155212-51a944",
       "timestamp": "2026-04-23T15:52:12Z",

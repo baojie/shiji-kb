@@ -1,8 +1,18 @@
 {
   "page": "张良议都关中",
-  "latest_rev_id": "20260423-152718-03b161",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161035-622e9c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161035-622e9c",
+      "timestamp": "2026-04-23T16:10:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152718-03b161",
+      "content_hash": "sha256:622e9c1db28e0d403eece792f89377947f05acd3e08b05afecbd5b75ea47d37a",
+      "size": 1157,
+      "content": "paragraph_refs:\n  055-017: \"[20]\"\nevent_type: 政治活动\nlocation: \"关中\"\n---\nid: \"张良议都关中\"\ntype: event\ntitle: 张良议都关中\ndescription: 刘敬说高帝都关中，左右大臣多劝都雒阳。留侯言雒阳虽有固中小四面受敌，关中左殽函右陇蜀沃野千里，金城千里天府之国。高帝即日驾西都关中。\ntags: [史记, 事件, 留侯世家]\nsources: [留侯世家]\nevent_ids: [055-017]\ndate: \"（公元前202年）\"\n---\n\n# 张良议都关中\n\n> 刘敬说高帝都关中，左右大臣多劝都雒阳。留侯言雒阳虽有固中小四面受敌，关中左殽函右陇蜀沃野千里，金城千里天府之国。高帝即日驾西都关中。\n\n**主要人物**：张良、高祖\n\n## 事件经过\n\n刘敬说高帝都关中，左右大臣多劝都雒阳。留侯言雒阳虽有固中小四面受敌，关中左殽函右陇蜀沃野千里，金城千里天府之国。高帝即日驾西都关中。\n\n## 原文\n\n> 留侯曰：'雒阳虽有此固，其中小，不过数百里，田地薄，四面受敌...此所谓金城千里，天府之国也，刘敬说是也。'於是高帝即日驾，西都关中。\n\n"
+    },
     {
       "rev_id": "20260423-152718-03b161",
       "timestamp": "2026-04-23T15:27:18Z",

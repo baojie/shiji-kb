@@ -1,8 +1,18 @@
 {
   "page": "幽王为犬戎所杀",
-  "latest_rev_id": "20260423-155133-424ef7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161001-56c267",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161001-56c267",
+      "timestamp": "2026-04-23T16:10:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155133-424ef7",
+      "content_hash": "sha256:56c2675c877e0dc1b0cb6d9d2e042d182bdddd00672a23edbba4a20151eb799b",
+      "size": 934,
+      "content": "paragraph_refs:\n  014-013: \"r71\"\nevent_type: 战争\nlocation: \"镐京\"\n---\nid: \"幽王为犬戎所杀\"\ntype: event\ntitle: 幽王为犬戎所杀\ndescription: 周幽王十一年（前771年），犬戎攻入镐京，幽王被杀。西周灭亡。秦襄公因救周有功，始列为诸侯。平王东迁洛邑，东周开始。\ntags: [史记, 事件, 十二诸侯年表]\nsources: [十二诸侯年表]\nevent_ids: [014-013]\ndate: \"（公元前771年）\"\n---\n\n# 幽王为犬戎所杀\n\n> 周幽王十一年（前771年），犬戎攻入镐京，幽王被杀。西周灭亡。秦襄公因救周有功，始列为诸侯。平王东迁洛邑，东周开始。\n\n**主要人物**：幽王\n\n## 事件经过\n\n周幽王十一年（前771年），犬戎攻入镐京，幽王被杀。西周灭亡。秦襄公因救周有功，始列为诸侯。平王东迁洛邑，东周开始。\n\n## 原文\n\n> 十一幽王为犬戎所杀。\"\"七始列为诸侯。\n\n"
+    },
     {
       "rev_id": "20260423-155133-424ef7",
       "timestamp": "2026-04-23T15:51:33Z",

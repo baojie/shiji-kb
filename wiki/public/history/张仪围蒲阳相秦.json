@@ -1,8 +1,18 @@
 {
   "page": "张仪围蒲阳相秦",
-  "latest_rev_id": "20260423-152711-5a6e78",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161022-452cfb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161022-452cfb",
+      "timestamp": "2026-04-23T16:10:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152711-5a6e78",
+      "content_hash": "sha256:452cfb4f18c08f7c054bb5cc3848a2671dda8e185c0e0bb2b37c94e8055238ef",
+      "size": 988,
+      "content": "paragraph_refs:\n  070-007: \"[10]\"\nevent_type: 战争\nlocation: \"魏\"\n---\nid: \"张仪围蒲阳相秦\"\ntype: event\ntitle: 张仪围蒲阳相秦\ndescription: 秦惠王十年，使公子华与张仪围蒲阳降之。张仪因言秦复与魏和，使魏入上郡少梁谢秦。惠王以张仪为相，立惠王为王。\ntags: [史记, 事件, 张仪列传]\nsources: [张仪列传]\nevent_ids: [070-007]\ndate: \"〖%秦惠王十年〗 （公元前328年）\"\n---\n\n# 张仪围蒲阳相秦\n\n> 秦惠王十年，使公子华与张仪围蒲阳降之。张仪因言秦复与魏和，使魏入上郡少梁谢秦。惠王以张仪为相，立惠王为王。\n\n**主要人物**：张仪、秦惠王\n\n## 事件经过\n\n秦惠王十年，使公子华与张仪围蒲阳降之。张仪因言秦复与魏和，使魏入上郡少梁谢秦。惠王以张仪为相，立惠王为王。\n\n## 原文\n\n> 秦惠王十年，使公子华与张仪围蒲阳，降之。\"\"惠王乃以张仪为相，更名少梁曰夏阳。\n\n"
+    },
     {
       "rev_id": "20260423-152711-5a6e78",
       "timestamp": "2026-04-23T15:27:11Z",

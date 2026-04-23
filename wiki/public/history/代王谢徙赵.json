@@ -1,8 +1,18 @@
 {
   "page": "代王谢徙赵",
-  "latest_rev_id": "20260423-154913-22b6a2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160529-1fd660",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160529-1fd660",
+      "timestamp": "2026-04-23T16:05:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154913-22b6a2",
+      "content_hash": "sha256:1fd660308235ae32a65355bbadde48c4b048f80f3a7956a419cc464fe2001225",
+      "size": 768,
+      "content": "paragraph_refs:\n  009-046: \"[28.2]\"\nevent_type: 政治活动\n---\nid: \"代王谢徙赵\"\ntype: event\ntitle: 代王谢徙赵\ndescription: 秋天，太后派使者告代王，欲将其徙封为赵王。代王推辞谢绝，表示愿守代地边疆。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-046]\ndate: \"〖%秋〗 （公元前181年）\"\n---\n\n# 代王谢徙赵\n\n> 秋天，太后派使者告代王，欲将其徙封为赵王。代王推辞谢绝，表示愿守代地边疆。\n\n**主要人物**：代王、太后\n\n## 事件经过\n\n秋天，太后派使者告代王，欲将其徙封为赵王。代王推辞谢绝，表示愿守代地边疆。\n\n## 原文\n\n> 秋，太后使使告代王，欲徙王赵。代王谢，原守代边。\n\n"
+    },
     {
       "rev_id": "20260423-154913-22b6a2",
       "timestamp": "2026-04-23T15:49:13Z",

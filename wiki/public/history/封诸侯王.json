@@ -1,8 +1,18 @@
 {
   "page": "封诸侯王",
-  "latest_rev_id": "20260423-155120-727939",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160932-cfc27f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160932-cfc27f",
+      "timestamp": "2026-04-23T16:09:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155120-727939",
+      "content_hash": "sha256:cfc27ffda657fdafe5c15194661e6ab9b629b1840e982409cc0dc0839d995d27",
+      "size": 967,
+      "content": "paragraph_refs:\n  008-064: \"[55]\"\nevent_type: 政治活动\n---\nid: \"封诸侯王\"\ntype: event\ntitle: 封诸侯王\ndescription: 皇帝封韩信为楚王都下邳，彭越为梁王都定陶，韩王信为韩王都阳翟，徙吴芮为长沙王。淮南王布、燕王臧荼、赵王敖皆如故。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-064]\ndate: \"〖%五年〗 （公元前202年）\"\n---\n\n# 封诸侯王\n\n> 皇帝封韩信为楚王都下邳，彭越为梁王都定陶，韩王信为韩王都阳翟，徙吴芮为长沙王。淮南王布、燕王臧荼、赵王敖皆如故。\n\n**主要人物**：刘邦、吴芮、彭越、韩信\n\n## 事件经过\n\n皇帝封韩信为楚王都下邳，彭越为梁王都定陶，韩王信为韩王都阳翟，徙吴芮为长沙王。淮南王布、燕王臧荼、赵王敖皆如故。\n\n## 原文\n\n> 齐王韩信习楚风俗，徙为楚王，都下邳。立建成侯彭越为梁王，都定陶。\n\n"
+    },
     {
       "rev_id": "20260423-155120-727939",
       "timestamp": "2026-04-23T15:51:20Z",

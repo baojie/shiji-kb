@@ -1,8 +1,18 @@
 {
   "page": "文王征伐诸国",
-  "latest_rev_id": "20260423-155211-22c912",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161111-27bd88",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161111-27bd88",
+      "timestamp": "2026-04-23T16:11:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155211-22c912",
+      "content_hash": "sha256:27bd88e6b01f427ec9c1080d44a136a369216ca1597c7e5761c64886d7443ee0",
+      "size": 1049,
+      "content": "paragraph_refs:\n  004-012: \"[10]\"\nevent_type: 战争\nlocation: \"密须、耆国、邘、丰邑\"\n---\nid: \"文王征伐诸国\"\ntype: event\ntitle: 文王征伐诸国\ndescription: 文王连年征伐犬戎、密须、耆国、邘、崇侯虎，而作丰邑，自岐下徙都丰。殷之祖伊闻之惧告纣，纣不以为然。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-012]\ndate: \"[约公元前1060年-前1057年]\"\n---\n\n# 文王征伐诸国\n\n> 文王连年征伐犬戎、密须、耆国、邘、崇侯虎，而作丰邑，自岐下徙都丰。殷之祖伊闻之惧告纣，纣不以为然。\n\n**主要人物**：崇侯虎、帝纣、文王、祖伊\n\n## 事件经过\n\n文王连年征伐犬戎、密须、耆国、邘、崇侯虎，而作丰邑，自岐下徙都丰。殷之祖伊闻之惧告纣，纣不以为然。\n\n## 原文\n\n> 明年，伐犬戎。明年，伐密须。明年，败耆国。殷之祖伊闻之，惧，以告帝纣。……明年，伐邘。明年，伐崇侯虎。而作丰邑，自岐下而徙都丰。\n\n"
+    },
     {
       "rev_id": "20260423-155211-22c912",
       "timestamp": "2026-04-23T15:52:11Z",

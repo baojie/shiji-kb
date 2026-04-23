@@ -1,8 +1,18 @@
 {
   "page": "周武王封周章",
-  "latest_rev_id": "20260423-152621-728d3b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160750-e4c697",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160750-e4c697",
+      "timestamp": "2026-04-23T16:07:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152621-728d3b",
+      "content_hash": "sha256:e4c697a69cacf3834b65872a4c37e6ba3de5620fc802aca90703b4233fc8a46b",
+      "size": 998,
+      "content": "paragraph_refs:\n  031-003: \"[2.3-2.4]\"\nevent_type: 政治活动\nlocation: \"吴、夏虚\"\n---\nid: \"周武王封周章\"\ntype: event\ntitle: 周武王封周章\ndescription: 武王克殷后，求太伯、仲雍之后，得周章。周章已为吴君，因而封之。又封周章弟虞仲于周之北故夏虚，列为诸侯。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-003]\ndate: \"[约公元前1046年]\"\n---\n\n# 周武王封周章\n\n> 武王克殷后，求太伯、仲雍之后，得周章。周章已为吴君，因而封之。又封周章弟虞仲于周之北故夏虚，列为诸侯。\n\n**主要人物**：周章、武王、虞仲\n\n## 事件经过\n\n武王克殷后，求太伯、仲雍之后，得周章。周章已为吴君，因而封之。又封周章弟虞仲于周之北故夏虚，列为诸侯。\n\n## 原文\n\n> 是时周武王克殷，求太伯、仲雍之後，得周章。周章已君吴，因而封之。乃封周章弟虞仲於周之北故夏虚。\n\n"
+    },
     {
       "rev_id": "20260423-152621-728d3b",
       "timestamp": "2026-04-23T15:26:21Z",

@@ -1,8 +1,18 @@
 {
   "page": "春申君北伐灭鲁",
-  "latest_rev_id": "20260423-152735-5f722f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161113-95288c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161113-95288c",
+      "timestamp": "2026-04-23T16:11:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152735-5f722f",
+      "content_hash": "sha256:95288c9213f58d727bc96af6cfe293b10b6b03bf5e8987097dc3c82bba5d64c3",
+      "size": 892,
+      "content": "paragraph_refs:\n  078-008: \"[14]\"\nevent_type: 战争\nlocation: \"鲁\"\n---\nid: \"春申君北伐灭鲁\"\ntype: event\ntitle: 春申君北伐灭鲁\ndescription: 春申君为楚北伐灭鲁，并任命荀卿为兰陵令。楚由此复强，显示了春申君执政时期楚国国力的恢复。\ntags: [史记, 事件, 春申君列传]\nsources: [春申君列传]\nevent_ids: [078-008]\ndate: \"春申君相楚八年 （公元前256年）\"\n---\n\n# 春申君北伐灭鲁\n\n> 春申君为楚北伐灭鲁，并任命荀卿为兰陵令。楚由此复强，显示了春申君执政时期楚国国力的恢复。\n\n**主要人物**：春申君、荀卿\n\n## 事件经过\n\n春申君为楚北伐灭鲁，并任命荀卿为兰陵令。楚由此复强，显示了春申君执政时期楚国国力的恢复。\n\n## 原文\n\n> 春申君相楚八年，为楚北伐灭鲁，以荀卿为兰陵令。当是时，楚复彊。\n\n"
+    },
     {
       "rev_id": "20260423-152735-5f722f",
       "timestamp": "2026-04-23T15:27:35Z",

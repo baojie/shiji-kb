@@ -1,8 +1,18 @@
 {
   "page": "晁错学尚书于伏生",
-  "latest_rev_id": "20260423-152738-e940e7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161115-c9b419",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161115-c9b419",
+      "timestamp": "2026-04-23T16:11:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152738-e940e7",
+      "content_hash": "sha256:c9b41991ae3007d23068b2b2080003e71e5a541160eaf4a32348a8da93ee3f00",
+      "size": 1044,
+      "content": "paragraph_refs:\n  101-011: \"[17.2]—[17.4]\"\nevent_type: 文化活动\nlocation: \"济南\"\n---\nid: \"晁错学尚书于伏生\"\ntype: event\ntitle: 晁错学尚书于伏生\ndescription: 孝文帝时天下无人治尚书，唯济南伏生为秦博士，年九十余。太常遣晁错前往受学。晁错学成归来，上书称说，由此被重用。\ntags: [史记, 事件, 袁盎晁错列传]\nsources: [袁盎晁错列传]\nevent_ids: [101-011]\ndate: \"〖;孝文帝〗时 （公元前171年）\"\n---\n\n# 晁错学尚书于伏生\n\n> 孝文帝时天下无人治尚书，唯济南伏生为秦博士，年九十余。太常遣晁错前往受学。晁错学成归来，上书称说，由此被重用。\n\n**主要人物**：伏生、晁错\n\n## 事件经过\n\n孝文帝时天下无人治尚书，唯济南伏生为秦博士，年九十余。太常遣晁错前往受学。晁错学成归来，上书称说，由此被重用。\n\n## 原文\n\n> 天下无治尚书者，独闻济南伏生故秦博士，治尚书，年九十馀\"\"太常遣错受尚书伏生所。\n\n"
+    },
     {
       "rev_id": "20260423-152738-e940e7",
       "timestamp": "2026-04-23T15:27:38Z",

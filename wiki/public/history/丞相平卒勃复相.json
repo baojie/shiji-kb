@@ -1,8 +1,18 @@
 {
   "page": "丞相平卒勃复相",
-  "latest_rev_id": "20260423-154901-d45f34",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160505-62cf96",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160505-62cf96",
+      "timestamp": "2026-04-23T16:05:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154901-d45f34",
+      "content_hash": "sha256:62cf9639f3d5bfafcad428e7a65624c11ea9f94c766813e41397a0891ef5924e",
+      "size": 835,
+      "content": "paragraph_refs:\n  010-017: \"[16.1]-[16.2]\"\nevent_type: 政治活动\n---\nid: \"丞相平卒勃复相\"\ntype: event\ntitle: 丞相平卒勃复相\ndescription: 二年十月丞相陈平卒，复以绛侯周勃为丞相。文帝下诏令列侯就国，为吏及诏所止者遣太子代之。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-017]\ndate: \"〖%二年十月〗 （公元前178年）\"\n---\n\n# 丞相平卒勃复相\n\n> 二年十月丞相陈平卒，复以绛侯周勃为丞相。文帝下诏令列侯就国，为吏及诏所止者遣太子代之。\n\n**主要人物**：周勃、陈平\n\n## 事件经过\n\n二年十月丞相陈平卒，复以绛侯周勃为丞相。文帝下诏令列侯就国，为吏及诏所止者遣太子代之。\n\n## 原文\n\n> 二年十月，丞相平卒，复以绛侯勃为丞相。\n\n"
+    },
     {
       "rev_id": "20260423-154901-d45f34",
       "timestamp": "2026-04-23T15:49:01Z",

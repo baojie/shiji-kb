@@ -1,8 +1,18 @@
 {
   "page": "作甘泉宫画天地",
-  "latest_rev_id": "20260423-154922-df4692",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160547-6e4af0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160547-6e4af0",
+      "timestamp": "2026-04-23T16:05:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154922-df4692",
+      "content_hash": "sha256:6e4af0543642f94b17e9d6f147aa52a22d22a56afe3ae7be1e6b992334782980",
+      "size": 863,
+      "content": "paragraph_refs:\n  012-017: \"[13.4]-[13.6]\"\nevent_type: 建设\nlocation: \"甘泉宫\"\n---\nid: \"作甘泉宫画天地\"\ntype: event\ntitle: 作甘泉宫画天地\ndescription: 文成将军言宫室被服不象神则神物不至，乃作画云气车、甘泉宫台室，画天地泰一诸神以致天神。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-017]\ndate: \"[约公元前120年]\"\n---\n\n# 作甘泉宫画天地\n\n> 文成将军言宫室被服不象神则神物不至，乃作画云气车、甘泉宫台室，画天地泰一诸神以致天神。\n\n**主要人物**：文成将军\n\n## 事件经过\n\n文成将军言宫室被服不象神则神物不至，乃作画云气车、甘泉宫台室，画天地泰一诸神以致天神。\n\n## 原文\n\n> 又作=甘泉宫，中为台室，画天、地、?泰一?诸神，而置祭具以致天神。\n\n"
+    },
     {
       "rev_id": "20260423-154922-df4692",
       "timestamp": "2026-04-23T15:49:22Z",

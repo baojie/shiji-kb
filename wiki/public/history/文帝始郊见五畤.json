@@ -1,8 +1,18 @@
 {
   "page": "文帝始郊见五畤",
-  "latest_rev_id": "20260423-155208-189ff5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161110-41ea37",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161110-41ea37",
+      "timestamp": "2026-04-23T16:11:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155208-189ff5",
+      "content_hash": "sha256:41ea37eeb988e51d3ee3458383ff50e715758b5f645657f4e5941ca6c070fd39",
+      "size": 731,
+      "content": "paragraph_refs:\n  028-032: \"[47]\"\nevent_type: 文化活动\nlocation: \"雍\"\n---\nid: \"文帝始郊见五畤\"\ntype: event\ntitle: 文帝始郊见五畤\ndescription: 夏四月，文帝始郊见雍五畤祠，衣皆上赤。这是汉朝天子亲郊祀的开始。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-032]\ndate: \"〖%夏四月〗 （公元前165年）\"\n---\n\n# 文帝始郊见五畤\n\n> 夏四月，文帝始郊见雍五畤祠，衣皆上赤。这是汉朝天子亲郊祀的开始。\n\n**主要人物**：文帝\n\n## 事件经过\n\n夏四月，文帝始郊见雍五畤祠，衣皆上赤。这是汉朝天子亲郊祀的开始。\n\n## 原文\n\n> 於是夏四月，文帝始郊见雍五畤祠，衣皆上赤。\n\n"
+    },
     {
       "rev_id": "20260423-155208-189ff5",
       "timestamp": "2026-04-23T15:52:08Z",

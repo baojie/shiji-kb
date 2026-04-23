@@ -1,8 +1,18 @@
 {
   "page": "卫鞅入秦",
-  "latest_rev_id": "20260423-155003-099a2f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160655-929e41",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160655-929e41",
+      "timestamp": "2026-04-23T16:06:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155003-099a2f",
+      "content_hash": "sha256:929e41c74d2d3b779a4376669a716cb5286bd77b694cf01c5467415ab86598f7",
+      "size": 737,
+      "content": "paragraph_refs:\n  005-068: \"[49]\"\nevent_type: 政治活动\n---\nid: \"卫鞅入秦\"\ntype: event\ntitle: 卫鞅入秦\ndescription: 卫鞅闻孝公求贤令，西入秦国，通过景监引荐求见孝公。此为商鞅变法的起点。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-068]\ndate: \"〖@孝公〗〖%元年〗 （公元前361年）\"\n---\n\n# 卫鞅入秦\n\n> 卫鞅闻孝公求贤令，西入秦国，通过景监引荐求见孝公。此为商鞅变法的起点。\n\n**主要人物**：卫鞅、孝公、景监\n\n## 事件经过\n\n卫鞅闻孝公求贤令，西入秦国，通过景监引荐求见孝公。此为商鞅变法的起点。\n\n## 原文\n\n> 卫鞅闻是令下，西入秦，因景监求见孝公。\n\n"
+    },
     {
       "rev_id": "20260423-155003-099a2f",
       "timestamp": "2026-04-23T15:50:03Z",

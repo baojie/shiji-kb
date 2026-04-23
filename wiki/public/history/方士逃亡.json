@@ -1,8 +1,18 @@
 {
   "page": "方士逃亡",
-  "latest_rev_id": "20260423-155215-1b48a6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161112-a61075",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161112-a61075",
+      "timestamp": "2026-04-23T16:11:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155215-1b48a6",
+      "content_hash": "sha256:a610750dae5d96090bc3123692c5f918d7b8738eed6f7fd7502a94a75e711f48",
+      "size": 822,
+      "content": "paragraph_refs:\n  006-074: \"[70.1]-[70.4]\"\nevent_type: 政治整顿\n---\nid: \"方士逃亡\"\ntype: event\ntitle: 方士逃亡\ndescription: 侯生、卢生私下议论始皇刚戾自用、专任狱吏、贪于权势，认为不可为其求仙药，遂逃亡。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-074]\ndate: \"〖%三十五年〗 （公元前212年）\"\n---\n\n# 方士逃亡\n\n> 侯生、卢生私下议论始皇刚戾自用、专任狱吏、贪于权势，认为不可为其求仙药，遂逃亡。\n\n**主要人物**：侯生、卢生\n\n## 事件经过\n\n侯生、卢生私下议论始皇刚戾自用、专任狱吏、贪于权势，认为不可为其求仙药，遂逃亡。\n\n## 原文\n\n> 侯生卢生相与谋曰：'贪於权势至如此，未可为求仙药。'於是乃亡去。\n\n"
+    },
     {
       "rev_id": "20260423-155215-1b48a6",
       "timestamp": "2026-04-23T15:52:15Z",

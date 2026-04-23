@@ -1,8 +1,18 @@
 {
   "page": "建信宫极庙",
-  "latest_rev_id": "20260423-155139-910c4f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161018-47095a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161018-47095a",
+      "timestamp": "2026-04-23T16:10:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155139-910c4f",
+      "content_hash": "sha256:47095a5d683e748bb68ca70fdbc3238de801bc2683bd05289d2af76399f6a065",
+      "size": 912,
+      "content": "paragraph_refs:\n  006-056: \"[42.2], [42.3]\"\nevent_type: 建设\nlocation: \"渭南\"\n---\nid: \"建信宫极庙\"\ntype: event\ntitle: 建信宫极庙\ndescription: 在渭南修建信宫，后更名为极庙，象征天极。自极庙修道通郦山，作甘泉前殿，筑甬道自咸阳相连。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-056]\ndate: \"〖%二十七年〗 （公元前220年）\"\n---\n\n# 建信宫极庙\n\n> 在渭南修建信宫，后更名为极庙，象征天极。自极庙修道通郦山，作甘泉前殿，筑甬道自咸阳相连。\n\n**主要人物**：始皇\n\n## 事件经过\n\n在渭南修建信宫，后更名为极庙，象征天极。自极庙修道通郦山，作甘泉前殿，筑甬道自咸阳相连。\n\n## 原文\n\n> 焉作信宫渭南，已更命信宫为极庙，象天极。自极庙道通郦山，作甘泉前殿。筑甬道，自咸阳属之。\n\n"
+    },
     {
       "rev_id": "20260423-155139-910c4f",
       "timestamp": "2026-04-23T15:51:39Z",

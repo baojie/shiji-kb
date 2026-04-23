@@ -1,8 +1,18 @@
 {
   "page": "东阿破秦军",
-  "latest_rev_id": "20260423-154900-b6b9ec",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160502-c44920",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160502-c44920",
+      "timestamp": "2026-04-23T16:05:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154900-b6b9ec",
+      "content_hash": "sha256:c449203b1c551b2e21cf3060371e998ff0cbf8c290af72ae121cfc3b085f5dbf",
+      "size": 1038,
+      "content": "paragraph_refs:\n  007-011: \"[24.1]-[25.4]\"\nevent_type: 战争\nlocation: \"东阿、亢父\"\n---\nid: \"东阿破秦军\"\ntype: event\ntitle: 东阿破秦军\ndescription: 项梁引兵攻亢父，与齐田荣、司马龙且军合力救东阿，大破秦军。田荣随后引兵归齐，逐走齐王假，立田儋子市为齐王。项梁趁势追击秦军。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-011]\ndate: \"（公元前208年）\"\n---\n\n# 东阿破秦军\n\n> 项梁引兵攻亢父，与齐田荣、司马龙且军合力救东阿，大破秦军。田荣随后引兵归齐，逐走齐王假，立田儋子市为齐王。项梁趁势追击秦军。\n\n**主要人物**：田荣、项梁、龙且\n\n## 事件经过\n\n项梁引兵攻亢父，与齐田荣、司马龙且军合力救东阿，大破秦军。田荣随后引兵归齐，逐走齐王假，立田儋子市为齐王。项梁趁势追击秦军。\n\n## 原文\n\n> 居数月，引兵攻亢父，与齐田荣、司马龙且军救东阿，大破秦军於东阿。\n\n"
+    },
     {
       "rev_id": "20260423-154900-b6b9ec",
       "timestamp": "2026-04-23T15:49:00Z",

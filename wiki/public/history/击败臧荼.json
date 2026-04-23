@@ -1,8 +1,18 @@
 {
   "page": "击败臧荼",
-  "latest_rev_id": "20260423-152550-f2af8d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160618-eef58f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160618-eef58f",
+      "timestamp": "2026-04-23T16:06:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152550-f2af8d",
+      "content_hash": "sha256:eef58f3e7558884d4cf22ae53ed73c42c683353a1bbaf4c814c56349130e38cc",
+      "size": 683,
+      "content": "paragraph_refs:\n  008-068: \"[60]\"\nevent_type: 战争\nlocation: \"燕\"\n---\nid: \"击败臧荼\"\ntype: event\ntitle: 击败臧荼\ndescription: 十月，燕王臧荼反，攻下代地。高祖自将击之，得燕王臧荼。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-068]\ndate: \"〖%五年〗 （公元前202年）\"\n---\n\n# 击败臧荼\n\n> 十月，燕王臧荼反，攻下代地。高祖自将击之，得燕王臧荼。\n\n**主要人物**：刘邦、臧荼\n\n## 事件经过\n\n十月，燕王臧荼反，攻下代地。高祖自将击之，得燕王臧荼。\n\n## 原文\n\n> 十月，燕王臧荼反，攻下代地。高祖自将击之，得燕王臧荼。\n\n"
+    },
     {
       "rev_id": "20260423-152550-f2af8d",
       "timestamp": "2026-04-23T15:25:50Z",

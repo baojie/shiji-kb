@@ -1,8 +1,18 @@
 {
   "page": "得神马作太一之歌",
-  "latest_rev_id": "20260423-155143-cc74b3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161052-78cbec",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161052-78cbec",
+      "timestamp": "2026-04-23T16:10:52Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155143-cc74b3",
+      "content_hash": "sha256:78cbec769a9ca190060f22954a0ea4f125035b379525353c35fa980ee3263ef8",
+      "size": 690,
+      "content": "paragraph_refs:\n  024-009: \"[7.1]\"\nevent_type: 文化活动\nlocation: \"渥洼水\"\n---\nid: \"得神马作太一之歌\"\ntype: event\ntitle: 得神马作太一之歌\ndescription: 汉朝曾在渥洼水中获得神马，遂以此作太一之歌，歌咏天马下凡之瑞应。\ntags: [史记, 事件, 乐书]\nsources: [乐书]\nevent_ids: [024-009]\ndate: \"[约公元前122年]\"\n---\n\n# 得神马作太一之歌\n\n> 汉朝曾在渥洼水中获得神马，遂以此作太一之歌，歌咏天马下凡之瑞应。\n\n## 事件经过\n\n汉朝曾在渥洼水中获得神马，遂以此作太一之歌，歌咏天马下凡之瑞应。\n\n## 原文\n\n> 又尝得神马渥洼水中，复次以为太一之歌。\n\n"
+    },
     {
       "rev_id": "20260423-155143-cc74b3",
       "timestamp": "2026-04-23T15:51:43Z",

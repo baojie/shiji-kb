@@ -1,8 +1,18 @@
 {
   "page": "平王施惠复陈蔡",
-  "latest_rev_id": "20260423-155131-759d56",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161000-11f5b6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161000-11f5b6",
+      "timestamp": "2026-04-23T16:10:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155131-759d56",
+      "content_hash": "sha256:11f5b606314379bb4a059da51fcd1cabf58d0b19ee6b97938aee55d21b98dfd6",
+      "size": 897,
+      "content": "paragraph_refs:\n  040-022: \"[43.47]\"\nevent_type: 政治活动\nlocation: \"楚\"\n---\nid: \"平王施惠复陈蔡\"\ntype: event\ntitle: 平王施惠复陈蔡\ndescription: 平王以诈弑两王自立，恐国人及诸侯叛，施惠百姓。复陈蔡之地立其后如故，归郑侵地，修政教。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-022]\ndate: \"（公元前528年）\"\n---\n\n# 平王施惠复陈蔡\n\n> 平王以诈弑两王自立，恐国人及诸侯叛，施惠百姓。复陈蔡之地立其后如故，归郑侵地，修政教。\n\n**主要人物**：平王（弃疾）\n\n## 事件经过\n\n平王以诈弑两王自立，恐国人及诸侯叛，施惠百姓。复陈蔡之地立其后如故，归郑侵地，修政教。\n\n## 原文\n\n> 平王以诈弑两王而自立，恐国人及诸侯叛之，乃施惠百姓。复陈蔡之地而立其後如故，归郑之侵地。\n\n"
+    },
     {
       "rev_id": "20260423-155131-759d56",
       "timestamp": "2026-04-23T15:51:31Z",

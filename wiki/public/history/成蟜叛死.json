@@ -1,8 +1,18 @@
 {
   "page": "成蟜叛死",
-  "latest_rev_id": "20260423-155158-53f723",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161106-0269ff",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161106-0269ff",
+      "timestamp": "2026-04-23T16:11:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155158-53f723",
+      "content_hash": "sha256:0269ff5fedeba65cd20b1c64291c2884cbe9b4ba22f7e09ddf9dec93cac32bba",
+      "size": 821,
+      "content": "paragraph_refs:\n  006-014: \"[9.1]\"\nevent_type: 政治整顿\nlocation: \"屯留\"\n---\nid: \"成蟜叛死\"\ntype: event\ntitle: 成蟜叛死\ndescription: 八年，王弟长安君成蟜率军击赵，途中反叛，死于屯留。军吏皆斩死，其民被迁至临洮。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-014]\ndate: \"〖%八年〗 （公元前239年）\"\n---\n\n# 成蟜叛死\n\n> 八年，王弟长安君成蟜率军击赵，途中反叛，死于屯留。军吏皆斩死，其民被迁至临洮。\n\n**主要人物**：成蟜\n\n## 事件经过\n\n八年，王弟长安君成蟜率军击赵，途中反叛，死于屯留。军吏皆斩死，其民被迁至临洮。\n\n## 原文\n\n> 八年，王弟$长安君成蟜将军$击赵，反，死屯留，军吏皆斩死，迁其民於临洮。\n\n"
+    },
     {
       "rev_id": "20260423-155158-53f723",
       "timestamp": "2026-04-23T15:51:58Z",

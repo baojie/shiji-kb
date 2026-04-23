@@ -1,8 +1,18 @@
 {
   "page": "惠公伐蜀取南郑",
-  "latest_rev_id": "20260423-155151-d92ad8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161103-a9a091",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161103-a9a091",
+      "timestamp": "2026-04-23T16:11:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155151-d92ad8",
+      "content_hash": "sha256:a9a0916a16122dd099f39a947e4463a72d8a6598d97b752e3a77767aa5c14e5c",
+      "size": 805,
+      "content": "paragraph_refs:\n  005-056: \"[45]-[45.1]\"\nevent_type: 战争\nlocation: \"南郑\"\n---\nid: \"惠公伐蜀取南郑\"\ntype: event\ntitle: 惠公伐蜀取南郑\ndescription: 惠公十二年，其子出子出生。十三年，惠公伐蜀，取南郑。惠公随即去世，出子继位。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-056]\ndate: \"〖@惠公〗〖%十三年〗 （公元前387年）\"\n---\n\n# 惠公伐蜀取南郑\n\n> 惠公十二年，其子出子出生。十三年，惠公伐蜀，取南郑。惠公随即去世，出子继位。\n\n**主要人物**：出子、惠公\n\n## 事件经过\n\n惠公十二年，其子出子出生。十三年，惠公伐蜀，取南郑。惠公随即去世，出子继位。\n\n## 原文\n\n> 十三年，伐蜀，取南郑。惠公卒，出子立。\n\n"
+    },
     {
       "rev_id": "20260423-155151-d92ad8",
       "timestamp": "2026-04-23T15:51:51Z",

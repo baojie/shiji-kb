@@ -1,8 +1,18 @@
 {
   "page": "幽公被弟晞杀",
-  "latest_rev_id": "20260423-155132-24c178",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161001-5be859",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161001-5be859",
+      "timestamp": "2026-04-23T16:10:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155132-24c178",
+      "content_hash": "sha256:5be8594bc0ecf04aca88b437dbacd1c7392467f5757657c3f733a140a197df2e",
+      "size": 610,
+      "content": "paragraph_refs:\n  033-013: \"[8.1]\"\nevent_type: 继位\nlocation: \"鲁\"\n---\nid: \"幽公被弟晞杀\"\ntype: event\ntitle: 幽公被弟晞杀\ndescription: 幽公十四年，弟晞杀幽公自立，是为魏公。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-013]\ndate: \"[公元前973年]\"\n---\n\n# 幽公被弟晞杀\n\n> 幽公十四年，弟晞杀幽公自立，是为魏公。\n\n**主要人物**：幽公、晞（魏公）\n\n## 事件经过\n\n幽公十四年，弟晞杀幽公自立，是为魏公。\n\n## 原文\n\n> 幽公十四年。幽公弟晞杀幽公而自立,是为魏公。\n\n"
+    },
     {
       "rev_id": "20260423-155132-24c178",
       "timestamp": "2026-04-23T15:51:32Z",

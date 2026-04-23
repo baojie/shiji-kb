@@ -1,8 +1,18 @@
 {
   "page": "新垣平设五庙",
-  "latest_rev_id": "20260423-155215-91ae87",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161112-e1e116",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161112-e1e116",
+      "timestamp": "2026-04-23T16:11:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155215-91ae87",
+      "content_hash": "sha256:e1e1162a82c729443de89e2d20ac87c8881ef04f62dfae3c361456b49e3dd959",
+      "size": 783,
+      "content": "paragraph_refs:\n  010-037: \"[33.5]-[33.6]\"\nevent_type: 文化活动\nlocation: \"渭阳\"\n---\nid: \"新垣平设五庙\"\ntype: event\ntitle: 新垣平设五庙\ndescription: 赵人新垣平以望气见，因说上设立渭阳五庙，又言欲出周鼎，当有玉英见。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-037]\ndate: \"[约至前164年] （公元前164年）\"\n---\n\n# 新垣平设五庙\n\n> 赵人新垣平以望气见，因说上设立渭阳五庙，又言欲出周鼎，当有玉英见。\n\n**主要人物**：新垣平\n\n## 事件经过\n\n赵人新垣平以望气见，因说上设立渭阳五庙，又言欲出周鼎，当有玉英见。\n\n## 原文\n\n> 赵人新垣平以望气见，因说上设立渭阳五庙。欲出周鼎，当有玉英见。\n\n"
+    },
     {
       "rev_id": "20260423-155215-91ae87",
       "timestamp": "2026-04-23T15:52:15Z",

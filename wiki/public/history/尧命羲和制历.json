@@ -1,8 +1,18 @@
 {
   "page": "尧命羲和制历",
-  "latest_rev_id": "20260423-152656-03e9a7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160939-270f38",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160939-270f38",
+      "timestamp": "2026-04-23T16:09:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152656-03e9a7",
+      "content_hash": "sha256:270f38438ce942982140b6360c3666972e4a7a91aa2efe46969e6ca42ee4a885",
+      "size": 1098,
+      "content": "paragraph_refs:\n  001-017: \"[11]\"\nevent_type: 文化活动\nlocation: \"郁夷、南交、西土、北方\"\n---\nid: \"尧命羲和制历\"\ntype: event\ntitle: 尧命羲和制历\ndescription: 尧命令羲、和敬顺昊天，推算日月星辰运行规律，敬授民时。分别命羲仲驻郁夷观察春分，羲叔驻南交观察夏至，和仲驻西土观察秋分，和叔驻北方观察冬至。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-017]\ndate: \"[约公元前2310年]\"\n---\n\n# 尧命羲和制历\n\n> 尧命令羲、和敬顺昊天，推算日月星辰运行规律，敬授民时。分别命羲仲驻郁夷观察春分，羲叔驻南交观察夏至，和仲驻西土观察秋分，和叔驻北方观察冬至。\n\n**主要人物**：和、尧、羲\n\n## 事件经过\n\n尧命令羲、和敬顺昊天，推算日月星辰运行规律，敬授民时。分别命羲仲驻郁夷观察春分，羲叔驻南交观察夏至，和仲驻西土观察秋分，和叔驻北方观察冬至。\n\n## 原文\n\n> 乃命羲、和，敬顺昊天，数法日月星辰，敬授民时。\n\n"
+    },
     {
       "rev_id": "20260423-152656-03e9a7",
       "timestamp": "2026-04-23T15:26:56Z",

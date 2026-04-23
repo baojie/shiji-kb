@@ -1,8 +1,18 @@
 {
   "page": "太子建谋郑被杀",
-  "latest_rev_id": "20260423-155052-881999",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160827-864c06",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160827-864c06",
+      "timestamp": "2026-04-23T16:08:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155052-881999",
+      "content_hash": "sha256:864c069d85a9c0ea968ce43149236f96526bacf51bdf7bfb3af2b45813427cbe",
+      "size": 955,
+      "content": "paragraph_refs:\n  066-006: \"[6]\"\nevent_type: 政治活动\nlocation: \"郑\"\n---\nid: \"太子建谋郑被杀\"\ntype: event\ntitle: 太子建谋郑被杀\ndescription: 太子建至晋，晋顷公令其为内应灭郑。太子建还郑后，因私欲杀从者，从者告发于郑。郑定公与子产诛杀太子建。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-006]\ndate: \"[约公元前519年]\"\n---\n\n# 太子建谋郑被杀\n\n> 太子建至晋，晋顷公令其为内应灭郑。太子建还郑后，因私欲杀从者，从者告发于郑。郑定公与子产诛杀太子建。\n\n**主要人物**：伍子胥\n\n## 事件经过\n\n太子建至晋，晋顷公令其为内应灭郑。太子建还郑后，因私欲杀从者，从者告发于郑。郑定公与子产诛杀太子建。\n\n## 原文\n\n> 太子乃还郑。事未会，会自私欲杀其从者，从者知其谋，乃告之於郑。郑定公与子产诛杀太子建。\n\n"
+    },
     {
       "rev_id": "20260423-155052-881999",
       "timestamp": "2026-04-23T15:50:52Z",

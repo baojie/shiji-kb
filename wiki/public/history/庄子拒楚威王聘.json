@@ -1,8 +1,18 @@
 {
   "page": "庄子拒楚威王聘",
-  "latest_rev_id": "20260423-152704-26938c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161006-8580e3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161006-8580e3",
+      "timestamp": "2026-04-23T16:10:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152704-26938c",
+      "content_hash": "sha256:8580e3a0acf2561eb92f038948f18baf50a9b33320143ee39835e163c4a1fd60",
+      "size": 973,
+      "content": "paragraph_refs:\n  063-005: \"[10]\"\nevent_type: 政治活动\nlocation: \"楚\"\n---\nid: \"庄子拒楚威王聘\"\ntype: event\ntitle: 庄子拒楚威王聘\ndescription: 楚威王闻庄周贤，遣使厚币迎之，许以为相。庄周以郊祭牺牛为喻拒绝，宁游戏污渎之中自快，终身不仕。\ntags: [史记, 事件, 老子韩非列传]\nsources: [老子韩非列传]\nevent_ids: [063-005]\ndate: \"[约公元前334年]\"\n---\n\n# 庄子拒楚威王聘\n\n> 楚威王闻庄周贤，遣使厚币迎之，许以为相。庄周以郊祭牺牛为喻拒绝，宁游戏污渎之中自快，终身不仕。\n\n**主要人物**：威王、庄子\n\n## 事件经过\n\n楚威王闻庄周贤，遣使厚币迎之，许以为相。庄周以郊祭牺牛为喻拒绝，宁游戏污渎之中自快，终身不仕。\n\n## 原文\n\n> 楚威王闻庄周贤，使使厚币迎之，许以为相。庄周笑谓楚使者曰：'千金，重利；卿相，尊位也。子独不见郊祭之牺牛乎？'\n\n"
+    },
     {
       "rev_id": "20260423-152704-26938c",
       "timestamp": "2026-04-23T15:27:04Z",

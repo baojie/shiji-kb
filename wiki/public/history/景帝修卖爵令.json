@@ -1,8 +1,18 @@
 {
   "page": "景帝修卖爵令",
-  "latest_rev_id": "20260423-155226-d825fb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161118-6d70de",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161118-6d70de",
+      "timestamp": "2026-04-23T16:11:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155226-d825fb",
+      "content_hash": "sha256:6d70debcd0d38ad24cd31addbf0e25bb8b72e1360dd2158ad8d444009f0bb83f",
+      "size": 811,
+      "content": "paragraph_refs:\n  030-007: \"[5]\"\nevent_type: 改革\nlocation: \"上郡\"\n---\nid: \"景帝修卖爵令\"\ntype: event\ntitle: 景帝修卖爵令\ndescription: 孝景帝时上郡以西旱灾，复修卖爵令贱其价以招民；徒复作得输粟县官以除罪。益造苑马以广用。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-007]\ndate: \"[约公元前148年]\"\n---\n\n# 景帝修卖爵令\n\n> 孝景帝时上郡以西旱灾，复修卖爵令贱其价以招民；徒复作得输粟县官以除罪。益造苑马以广用。\n\n**主要人物**：孝景\n\n## 事件经过\n\n孝景帝时上郡以西旱灾，复修卖爵令贱其价以招民；徒复作得输粟县官以除罪。益造苑马以广用。\n\n## 原文\n\n> 孝景时，上郡以西旱，亦复脩卖爵令，而贱其价以招民。\n\n"
+    },
     {
       "rev_id": "20260423-155226-d825fb",
       "timestamp": "2026-04-23T15:52:26Z",

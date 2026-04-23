@@ -1,8 +1,18 @@
 {
   "page": "成王布德千里",
-  "latest_rev_id": "20260423-155157-07d391",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161106-354d0e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161106-354d0e",
+      "timestamp": "2026-04-23T16:11:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155157-07d391",
+      "content_hash": "sha256:354d0ef048c225f131ea9be328b9edeaea9fa9af8a894ba4bbadad70ff8385e4",
+      "size": 968,
+      "content": "paragraph_refs:\n  040-007: \"[15.18]\"\nevent_type: 政治活动\nlocation: \"楚\"\n---\nid: \"成王布德千里\"\ntype: event\ntitle: 成王布德千里\ndescription: 成王元年即位布德施惠结旧好于诸侯。使人献天子，天子赐胙曰\"镇尔南方夷越之乱无侵中国\"。于是楚地千里。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-007]\ndate: \"（公元前671年）\"\n---\n\n# 成王布德千里\n\n> 成王元年即位布德施惠结旧好于诸侯。使人献天子，天子赐胙曰\"镇尔南方夷越之乱无侵中国\"。于是楚地千里。\n\n**主要人物**：成王恽\n\n## 事件经过\n\n成王元年即位布德施惠结旧好于诸侯。使人献天子，天子赐胙曰\"镇尔南方夷越之乱无侵中国\"。于是楚地千里。\n\n## 原文\n\n> 成王恽元年，初即位，布德施惠，结旧好於诸侯。使人献天子，天子赐胙，曰：'镇尔南方夷越之乱，无侵中国。'於是楚地千里。\n\n"
+    },
     {
       "rev_id": "20260423-155157-07d391",
       "timestamp": "2026-04-23T15:51:57Z",

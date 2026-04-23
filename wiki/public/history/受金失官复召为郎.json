@@ -1,8 +1,18 @@
 {
   "page": "受金失官复召为郎",
-  "latest_rev_id": "20260423-155009-de0f6c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160705-be8287",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160705-be8287",
+      "timestamp": "2026-04-23T16:07:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155009-de0f6c",
+      "content_hash": "sha256:be82875c5fe33b614103d92e365fafef53be69a392761a99cb3610cfa679de86",
+      "size": 825,
+      "content": "paragraph_refs:\n  117-010: \"[7]\"\nevent_type: 政治活动\n---\nid: \"受金失官复召为郎\"\ntype: event\ntitle: 受金失官复召为郎\ndescription: 有人上书言相如使时受金，因此失官。居岁余，复召为郎。相如口吃而善著书，常有消渴疾。\ntags: [史记, 事件, 司马相如列传]\nsources: [司马相如列传]\nevent_ids: [117-010]\ndate: \"[约公元前128年]\"\n---\n\n# 受金失官复召为郎\n\n> 有人上书言相如使时受金，因此失官。居岁余，复召为郎。相如口吃而善著书，常有消渴疾。\n\n**主要人物**：司马相如\n\n## 事件经过\n\n有人上书言相如使时受金，因此失官。居岁余，复召为郎。相如口吃而善著书，常有消渴疾。\n\n## 原文\n\n> 其後人有上书言相如使时受金，失官。居岁馀，复召为郎。\n\n"
+    },
     {
       "rev_id": "20260423-155009-de0f6c",
       "timestamp": "2026-04-23T15:50:09Z",

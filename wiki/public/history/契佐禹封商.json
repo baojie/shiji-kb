@@ -1,8 +1,18 @@
 {
   "page": "契佐禹封商",
-  "latest_rev_id": "20260423-155054-e2c8e8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160832-d94fa0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160832-d94fa0",
+      "timestamp": "2026-04-23T16:08:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155054-e2c8e8",
+      "content_hash": "sha256:d94fa0390446645b34669f9ca49a41bef8f47f5f3d9d89b69ff369165347fc76",
+      "size": 1135,
+      "content": "paragraph_refs:\n  003-001: \"[1]\"\nevent_type: 政治活动\nlocation: \"商\"\n---\nid: \"契佐禹封商\"\ntype: event\ntitle: 契佐禹封商\ndescription: 殷商始祖契，其母简狄为帝喾次妃，吞玄鸟卵而生契。契长而佐禹治水有功，帝舜命其为司徒敷五教，封于商，赐姓子氏。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-001]\ndate: \"[约公元前2100年]\"\n---\n\n# 契佐禹封商\n\n> 殷商始祖契，其母简狄为帝喾次妃，吞玄鸟卵而生契。契长而佐禹治水有功，帝舜命其为司徒敷五教，封于商，赐姓子氏。\n\n**主要人物**：契、帝舜、禹、简狄\n\n## 事件经过\n\n殷商始祖契，其母简狄为帝喾次妃，吞玄鸟卵而生契。契长而佐禹治水有功，帝舜命其为司徒敷五教，封于商，赐姓子氏。\n\n## 原文\n\n> 殷契，母曰简狄，有娀氏之女，为帝喾次妃。三人行浴，见玄鸟堕其卵，简狄取吞之，因孕生契。契长而佐禹治水有功。帝舜乃命契曰：'百姓不亲，五品不训，汝为司徒而敬敷五教，五教在宽。'封于商，赐姓子氏。\n\n"
+    },
     {
       "rev_id": "20260423-155054-e2c8e8",
       "timestamp": "2026-04-23T15:50:54Z",

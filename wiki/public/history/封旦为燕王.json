@@ -1,8 +1,18 @@
 {
   "page": "封旦为燕王",
-  "latest_rev_id": "20260423-155117-f016d7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160926-262abb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160926-262abb",
+      "timestamp": "2026-04-23T16:09:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155117-f016d7",
+      "content_hash": "sha256:262abbd79cf31de0e4199ff3065e1ae6256cd84f4ad25c1057fc1d25d59b62e1",
+      "size": 1204,
+      "content": "paragraph_refs:\n  060-010: \"[13]\"\nevent_type: 继位\nlocation: \"未央宫\"\n---\nid: \"封旦为燕王\"\ntype: event\ntitle: 封旦为燕王\ndescription: 立皇子旦为燕王。策书戒之以荤粥氏虐老兽心侵犯寇盗，已征厥罪万夫长千夫长三十二君皆来降，荤粥徙域北州以绥。悉尔心毋作怨毋俷德毋废备，非教士不得从征。\ntags: [史记, 事件, 三王世家]\nsources: [三王世家]\nevent_ids: [060-010]\ndate: \"〖%元狩六年〗〖%四月〗〖%乙巳〗 （公元前117年）\"\n---\n\n# 封旦为燕王\n\n> 立皇子旦为燕王。策书戒之以荤粥氏虐老兽心侵犯寇盗，已征厥罪万夫长千夫长三十二君皆来降，荤粥徙域北州以绥。悉尔心毋作怨毋俷德毋废备，非教士不得从征。\n\n**主要人物**：旦、武帝\n\n## 事件经过\n\n立皇子旦为燕王。策书戒之以荤粥氏虐老兽心侵犯寇盗，已征厥罪万夫长千夫长三十二君皆来降，荤粥徙域北州以绥。悉尔心毋作怨毋俷德毋废备，非教士不得从征。\n\n## 原文\n\n> 小子旦，受兹玄社！...荤粥氏虐老兽心，侵犯寇盗...悉尔心，毋作怨，毋俷德，毋乃废备。非教士不得从徵。\n\n"
+    },
     {
       "rev_id": "20260423-155117-f016d7",
       "timestamp": "2026-04-23T15:51:17Z",

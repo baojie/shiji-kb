@@ -1,8 +1,18 @@
 {
   "page": "山东郡县响应",
-  "latest_rev_id": "20260423-155125-e53925",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160945-df06a9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160945-df06a9",
+      "timestamp": "2026-04-23T16:09:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155125-e53925",
+      "content_hash": "sha256:df06a9d292fdf539ebb7ec6f4f94ad411a52f7b1711785b18fbe0328b536633d",
+      "size": 1047,
+      "content": "paragraph_refs:\n  006-091: \"[98.3], [99.4]\"\nevent_type: 战争\nlocation: \"山东\"\n---\nid: \"山东郡县响应\"\ntype: event\ntitle: 山东郡县响应\ndescription: 山东郡县少年苦秦吏，皆杀守尉令丞以响应陈涉，相立为侯王，合纵西向伐秦。武臣自立为赵王，魏咎为魏王，田儋为齐王。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-091]\ndate: \"〖%二世元年〗 （公元前209年）\"\n---\n\n# 山东郡县响应\n\n> 山东郡县少年苦秦吏，皆杀守尉令丞以响应陈涉，相立为侯王，合纵西向伐秦。武臣自立为赵王，魏咎为魏王，田儋为齐王。\n\n**主要人物**：武臣、田儋、魏咎\n\n## 事件经过\n\n山东郡县少年苦秦吏，皆杀守尉令丞以响应陈涉，相立为侯王，合纵西向伐秦。武臣自立为赵王，魏咎为魏王，田儋为齐王。\n\n## 原文\n\n> 山东郡县少年苦秦吏，皆杀其守、尉、令、丞反，以应陈涉。武臣自立为赵王，魏咎为魏王，田儋为齐王。\n\n"
+    },
     {
       "rev_id": "20260423-155125-e53925",
       "timestamp": "2026-04-23T15:51:25Z",

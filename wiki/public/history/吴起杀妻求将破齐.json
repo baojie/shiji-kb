@@ -1,8 +1,18 @@
 {
   "page": "吴起杀妻求将破齐",
-  "latest_rev_id": "20260423-152612-38c279",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160730-15a9a9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160730-15a9a9",
+      "timestamp": "2026-04-23T16:07:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152612-38c279",
+      "content_hash": "sha256:15a9a93a1051abd244ea733c930e13b76b9ab42c2c07f9c842609e988a320e6e",
+      "size": 1004,
+      "content": "paragraph_refs:\n  065-007: \"[6]\"\nevent_type: 战争\nlocation: \"鲁\"\n---\nid: \"吴起杀妻求将破齐\"\ntype: event\ntitle: 吴起杀妻求将破齐\ndescription: 吴起为卫人，事鲁君。齐攻鲁，鲁欲将吴起，但因其妻为齐人而疑之。吴起遂杀妻以明不与齐。鲁以为将，攻齐大破之。\ntags: [史记, 事件, 孙子吴起列传]\nsources: [孙子吴起列传]\nevent_ids: [065-007]\ndate: \"（公元前412年）\"\n---\n\n# 吴起杀妻求将破齐\n\n> 吴起为卫人，事鲁君。齐攻鲁，鲁欲将吴起，但因其妻为齐人而疑之。吴起遂杀妻以明不与齐。鲁以为将，攻齐大破之。\n\n**主要人物**：吴起\n\n## 事件经过\n\n吴起为卫人，事鲁君。齐攻鲁，鲁欲将吴起，但因其妻为齐人而疑之。吴起遂杀妻以明不与齐。鲁以为将，攻齐大破之。\n\n## 原文\n\n> 吴起取齐女为妻，而鲁疑之。吴起於是欲就名，遂杀其妻，以明不与齐也。鲁卒以为将。将而攻齐，大破之。\n\n"
+    },
     {
       "rev_id": "20260423-152612-38c279",
       "timestamp": "2026-04-23T15:26:12Z",

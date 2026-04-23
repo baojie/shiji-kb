@@ -1,8 +1,18 @@
 {
   "page": "季札让国不受",
-  "latest_rev_id": "20260423-152650-ca1476",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160909-31f596",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160909-31f596",
+      "timestamp": "2026-04-23T16:09:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152650-ca1476",
+      "content_hash": "sha256:31f5967f2064eae93a21bc4ac38afd20527ce579507a3800662fb8447564ac0f",
+      "size": 1047,
+      "content": "paragraph_refs:\n  031-008: \"[7.1-7.3]\"\nevent_type: 政治活动\nlocation: \"吴\"\n---\nid: \"季札让国不受\"\ntype: event\ntitle: 季札让国不受\ndescription: 诸樊即位后除丧，欲让位于季札。季札以曹宣公时子臧让国之义辞之，弃室而耕。吴人乃舍之不立。季札封于延陵，号延陵季子。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-008]\ndate: \"〖%元年〗 （公元前560年）\"\n---\n\n# 季札让国不受\n\n> 诸樊即位后除丧，欲让位于季札。季札以曹宣公时子臧让国之义辞之，弃室而耕。吴人乃舍之不立。季札封于延陵，号延陵季子。\n\n**主要人物**：季札、诸樊\n\n## 事件经过\n\n诸樊即位后除丧，欲让位于季札。季札以曹宣公时子臧让国之义辞之，弃室而耕。吴人乃舍之不立。季札封于延陵，号延陵季子。\n\n## 原文\n\n> 季札谢曰：'...有国，非吾节也。札虽不材，原附於子臧之义。'吴人固立季札，季札弃其室而耕，乃舍之。\n\n"
+    },
     {
       "rev_id": "20260423-152650-ca1476",
       "timestamp": "2026-04-23T15:26:50Z",

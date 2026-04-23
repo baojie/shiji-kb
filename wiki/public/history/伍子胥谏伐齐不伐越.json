@@ -1,8 +1,18 @@
 {
   "page": "伍子胥谏伐齐不伐越",
-  "latest_rev_id": "20260423-152532-7b2db8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160536-def073",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160536-def073",
+      "timestamp": "2026-04-23T16:05:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152532-7b2db8",
+      "content_hash": "sha256:def073006ae63f21b9171105bd2011051d8fc08a8a0d86af6ed3ec31fbfd066a",
+      "size": 1194,
+      "content": "paragraph_refs:\n  066-018: \"[17]、[18]\"\nevent_type: 政治活动\nlocation: \"吴\"\n---\nid: \"伍子胥谏伐齐不伐越\"\ntype: event\ntitle: 伍子胥谏伐齐不伐越\ndescription: 吴王闻齐景公死而兴师北伐齐。伍子胥再三谏曰越为腹心之疾，不先越而务齐不亦谬乎。吴王不听，伐齐大胜于艾陵，益疏子胥之谋。后又将北伐齐，子胥仍谏应先越。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-018]\ndate: \"（公元前484年）\"\n---\n\n# 伍子胥谏伐齐不伐越\n\n> 吴王闻齐景公死而兴师北伐齐。伍子胥再三谏曰越为腹心之疾，不先越而务齐不亦谬乎。吴王不听，伐齐大胜于艾陵，益疏子胥之谋。后又将北伐齐，子胥仍谏应先越。\n\n**主要人物**：伍子胥\n\n## 事件经过\n\n吴王闻齐景公死而兴师北伐齐。伍子胥再三谏曰越为腹心之疾，不先越而务齐不亦谬乎。吴王不听，伐齐大胜于艾陵，益疏子胥之谋。后又将北伐齐，子胥仍谏应先越。\n\n## 原文\n\n> 伍子胥谏曰：'今吴之有越，犹人之有腹心疾也。而王不先越而乃务齐，不亦谬乎！'吴王不听。\n\n"
+    },
     {
       "rev_id": "20260423-152532-7b2db8",
       "timestamp": "2026-04-23T15:25:32Z",

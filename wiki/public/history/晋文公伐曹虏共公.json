@@ -1,8 +1,18 @@
 {
   "page": "晋文公伐曹虏共公",
-  "latest_rev_id": "20260423-152739-68ff8e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161116-e7c003",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161116-e7c003",
+      "timestamp": "2026-04-23T16:11:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152739-68ff8e",
+      "content_hash": "sha256:e7c00331edf2c20a98578eea32514c7dc259fbe5f20c536d1b42d3be8b900f1b",
+      "size": 1152,
+      "content": "paragraph_refs:\n  035-015: \"[33.33]\"\nevent_type: 战争\nlocation: \"曹\"\n---\nid: \"晋文公伐曹虏共公\"\ntype: event\ntitle: 晋文公伐曹虏共公\ndescription: 曹共公十六年，晋公子重耳亡过曹，曹君无礼欲观其骈胁。釐负羁谏不听。二十一年晋文公伐曹虏共公以归，令军毋入釐负羁之宗族闾。后有人劝晋文公复归共公。\ntags: [史记, 事件, 管蔡世家]\nsources: [管蔡世家]\nevent_ids: [035-015]\ndate: \"（公元前632年）\"\n---\n\n# 晋文公伐曹虏共公\n\n> 曹共公十六年，晋公子重耳亡过曹，曹君无礼欲观其骈胁。釐负羁谏不听。二十一年晋文公伐曹虏共公以归，令军毋入釐负羁之宗族闾。后有人劝晋文公复归共公。\n\n**主要人物**：晋文公、曹共公、釐负羁\n\n## 事件经过\n\n曹共公十六年，晋公子重耳亡过曹，曹君无礼欲观其骈胁。釐负羁谏不听。二十一年晋文公伐曹虏共公以归，令军毋入釐负羁之宗族闾。后有人劝晋文公复归共公。\n\n## 原文\n\n> 晋文公重耳伐曹，虏共公以归，令军毋入釐负羁之宗族闾。...晋乃复归共公。\n\n"
+    },
     {
       "rev_id": "20260423-152739-68ff8e",
       "timestamp": "2026-04-23T15:27:39Z",

@@ -1,8 +1,18 @@
 {
   "page": "张仪说燕昭王事秦",
-  "latest_rev_id": "20260423-152713-df545b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161025-7951e7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161025-7951e7",
+      "timestamp": "2026-04-23T16:10:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152713-df545b",
+      "content_hash": "sha256:7951e7936a9d0076d7d012a2fbc67c0cc615a237ac6df926f77ff426efa26f97",
+      "size": 1084,
+      "content": "paragraph_refs:\n  070-020: \"[49]\"\nevent_type: 政治活动\nlocation: \"燕\"\n---\nid: \"张仪说燕昭王事秦\"\ntype: event\ntitle: 张仪说燕昭王事秦\ndescription: 张仪北之燕说昭王，以赵襄子杀代王之典故论赵之狠戾无亲，劝燕事秦以得秦援免齐赵患。燕王献恒山尾五城事秦。张仪归报途中秦惠王卒。\ntags: [史记, 事件, 张仪列传]\nsources: [张仪列传]\nevent_ids: [070-020]\ndate: \"[公元前311年]\"\n---\n\n# 张仪说燕昭王事秦\n\n> 张仪北之燕说昭王，以赵襄子杀代王之典故论赵之狠戾无亲，劝燕事秦以得秦援免齐赵患。燕王献恒山尾五城事秦。张仪归报途中秦惠王卒。\n\n**主要人物**：张仪、燕昭王\n\n## 事件经过\n\n张仪北之燕说昭王，以赵襄子杀代王之典故论赵之狠戾无亲，劝燕事秦以得秦援免齐赵患。燕王献恒山尾五城事秦。张仪归报途中秦惠王卒。\n\n## 原文\n\n> 燕王曰：'寡人蛮夷僻处……请西面而事秦，献恆山之尾五城。'燕王听仪。仪归报，未至咸阳而秦惠王卒。\n\n"
+    },
     {
       "rev_id": "20260423-152713-df545b",
       "timestamp": "2026-04-23T15:27:13Z",

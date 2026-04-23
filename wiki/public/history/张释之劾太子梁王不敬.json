@@ -1,8 +1,18 @@
 {
   "page": "张释之劾太子梁王不敬",
-  "latest_rev_id": "20260423-152720-dc67b7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161039-43ec10",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161039-43ec10",
+      "timestamp": "2026-04-23T16:10:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152720-dc67b7",
+      "content_hash": "sha256:43ec10a12abb61333e973a7f4b66ad0c017b69729493d74294fca893f0d394d1",
+      "size": 1136,
+      "content": "paragraph_refs:\n  102-004: \"[1.4]\"\nevent_type: 政治活动\nlocation: \"司马门\"\n---\nid: \"张释之劾太子梁王不敬\"\ntype: event\ntitle: 张释之劾太子梁王不敬\ndescription: 太子与梁王共车入朝，不下司马门。释之追止二人，劾以不下公门不敬。薄太后闻之，遣使承诏赦之。文帝由是奇释之，拜为中大夫。\ntags: [史记, 事件, 张释之冯唐列传]\nsources: [张释之冯唐列传]\nevent_ids: [102-004]\ndate: \"〖;文帝〗时 [约公元前170年]\"\n---\n\n# 张释之劾太子梁王不敬\n\n> 太子与梁王共车入朝，不下司马门。释之追止二人，劾以不下公门不敬。薄太后闻之，遣使承诏赦之。文帝由是奇释之，拜为中大夫。\n\n**主要人物**：太子、张释之、梁王、薄太后\n\n## 事件经过\n\n太子与梁王共车入朝，不下司马门。释之追止二人，劾以不下公门不敬。薄太后闻之，遣使承诏赦之。文帝由是奇释之，拜为中大夫。\n\n## 原文\n\n> 太子与梁王共车入朝，不下司马门，於是释之追止太子、梁王无得入殿门。遂劾不下公门不敬，奏之。\n\n"
+    },
     {
       "rev_id": "20260423-152720-dc67b7",
       "timestamp": "2026-04-23T15:27:20Z",

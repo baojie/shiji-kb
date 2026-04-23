@@ -1,8 +1,18 @@
 {
   "page": "上会稽刻石",
-  "latest_rev_id": "20260423-154856-8aa148",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160454-cf4e75",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160454-cf4e75",
+      "timestamp": "2026-04-23T16:04:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154856-8aa148",
+      "content_hash": "sha256:cf4e75e132d5bd1f68897af46b057dc2a529f9b5a8dfe36ab42cd0ba53512978",
+      "size": 804,
+      "content": "paragraph_refs:\n  006-080: \"[78.1], [78.2]\"\nevent_type: 文化活动\nlocation: \"会稽\"\n---\nid: \"上会稽刻石\"\ntype: event\ntitle: 上会稽刻石\ndescription: 始皇上会稽山，祭大禹，望于南海，立石刻颂秦德。还过吴，从江乘渡，并海北至琅邪。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-080]\ndate: \"〖%三十七年〗 （公元前210年）\"\n---\n\n# 上会稽刻石\n\n> 始皇上会稽山，祭大禹，望于南海，立石刻颂秦德。还过吴，从江乘渡，并海北至琅邪。\n\n**主要人物**：始皇\n\n## 事件经过\n\n始皇上会稽山，祭大禹，望于南海，立石刻颂秦德。还过吴，从江乘渡，并海北至琅邪。\n\n## 原文\n\n> 上会稽，祭大禹，望于南海，而立石刻颂秦德。\n\n"
+    },
     {
       "rev_id": "20260423-154856-8aa148",
       "timestamp": "2026-04-23T15:48:56Z",

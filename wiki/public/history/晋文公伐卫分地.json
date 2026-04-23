@@ -1,8 +1,18 @@
 {
   "page": "晋文公伐卫分地",
-  "latest_rev_id": "20260423-152739-bbe4c7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161116-afbb0e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161116-afbb0e",
+      "timestamp": "2026-04-23T16:11:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152739-bbe4c7",
+      "content_hash": "sha256:afbb0e114449f84b6891bcbf90ac2ff160479d89579d435bacc0e2e5585740fa",
+      "size": 1042,
+      "content": "paragraph_refs:\n  037-013: \"[22.22]\"\nevent_type: 战争\nlocation: \"卫\"\n---\nid: \"晋文公伐卫分地\"\ntype: event\ntitle: 晋文公伐卫分地\ndescription: 成公三年晋欲假道于卫救宋，成公不许。晋文公伐卫分地予宋。大夫元咺攻成公，成公出奔陈。晋使人鸩成公未死，后周为请晋入之卫。\ntags: [史记, 事件, 卫康叔世家]\nsources: [卫康叔世家]\nevent_ids: [037-013]\ndate: \"前632年 （公元前632年）\"\n---\n\n# 晋文公伐卫分地\n\n> 成公三年晋欲假道于卫救宋，成公不许。晋文公伐卫分地予宋。大夫元咺攻成公，成公出奔陈。晋使人鸩成公未死，后周为请晋入之卫。\n\n**主要人物**：元咺、成公、晋文公\n\n## 事件经过\n\n成公三年晋欲假道于卫救宋，成公不许。晋文公伐卫分地予宋。大夫元咺攻成公，成公出奔陈。晋使人鸩成公未死，后周为请晋入之卫。\n\n## 原文\n\n> 晋文公重耳伐卫，分其地予宋...卫成公遂出奔陈。...卒入之卫，而诛元亘。\n\n"
+    },
     {
       "rev_id": "20260423-152739-bbe4c7",
       "timestamp": "2026-04-23T15:27:39Z",

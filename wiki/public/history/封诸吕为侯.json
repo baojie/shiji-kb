@@ -1,8 +1,18 @@
 {
   "page": "封诸吕为侯",
-  "latest_rev_id": "20260423-155121-94be11",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160933-6be855",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160933-6be855",
+      "timestamp": "2026-04-23T16:09:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155121-94be11",
+      "content_hash": "sha256:6be8553dae360394ffed6ac191ce94e0573402211f995956125319593930c150",
+      "size": 702,
+      "content": "paragraph_refs:\n  009-026: \"[15.6]\"\nevent_type: 政治活动\n---\nid: \"封诸吕为侯\"\ntype: event\ntitle: 封诸吕为侯\ndescription: 封吕种为沛侯，吕平为扶柳侯，张买为南宫侯，吕氏势力进一步扩张。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-026]\ndate: \"[公元前187年]\"\n---\n\n# 封诸吕为侯\n\n> 封吕种为沛侯，吕平为扶柳侯，张买为南宫侯，吕氏势力进一步扩张。\n\n**主要人物**：吕平、吕种、张买\n\n## 事件经过\n\n封吕种为沛侯，吕平为扶柳侯，张买为南宫侯，吕氏势力进一步扩张。\n\n## 原文\n\n> 乃封吕种为沛侯，吕平为扶柳侯，张买为南宫侯。\n\n"
+    },
     {
       "rev_id": "20260423-155121-94be11",
       "timestamp": "2026-04-23T15:51:21Z",

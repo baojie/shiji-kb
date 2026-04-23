@@ -1,8 +1,18 @@
 {
   "page": "出仕为政",
-  "latest_rev_id": "20260423-154937-10fdb4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160616-5b4989",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160616-5b4989",
+      "timestamp": "2026-04-23T16:06:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154937-10fdb4",
+      "content_hash": "sha256:5b4989051f693b43dfea7b74704e44b004b395c2e68e4b7791324a1e4d1fd206",
+      "size": 697,
+      "content": "paragraph_refs:\n  047-006: \"[9]\"\nevent_type: 政治活动\n---\nid: \"出仕为政\"\ntype: event\ntitle: 出仕为政\ndescription: 定公以孔子为中都宰，一年四方皆则之。由中都宰为司空，由司空为大司寇。\ntags: [史记, 事件, 孔子世家]\nsources: [孔子世家]\nevent_ids: [047-006]\ndate: \"（公元前501年）\"\n---\n\n# 出仕为政\n\n> 定公以孔子为中都宰，一年四方皆则之。由中都宰为司空，由司空为大司寇。\n\n**主要人物**：孔子、定公\n\n## 事件经过\n\n定公以孔子为中都宰，一年四方皆则之。由中都宰为司空，由司空为大司寇。\n\n## 原文\n\n> 定公以孔子为中都宰，一年，四方皆则之。\n\n"
+    },
     {
       "rev_id": "20260423-154937-10fdb4",
       "timestamp": "2026-04-23T15:49:37Z",

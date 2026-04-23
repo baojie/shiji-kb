@@ -1,8 +1,18 @@
 {
   "page": "司马错张仪争论伐蜀伐韩",
-  "latest_rev_id": "20260423-152606-44d4ba",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160712-33d69e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160712-33d69e",
+      "timestamp": "2026-04-23T16:07:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152606-44d4ba",
+      "content_hash": "sha256:33d69ebc0bdacbeb2e80fa76d06dd48bbf8ba1786f1569313048f28ef994c58e",
+      "size": 1044,
+      "content": "paragraph_refs:\n  070-005: \"[6]、[7]、[8]、[9]\"\nevent_type: 政治活动\nlocation: \"秦\"\n---\nid: \"司马错张仪争论伐蜀伐韩\"\ntype: event\ntitle: 司马错张仪争论伐蜀伐韩\ndescription: 苴蜀相攻各告急于秦，韩又来侵。张仪主张伐韩取三川挟天子令天下，司马错主张伐蜀以广国富民。惠王从司马错之言。\ntags: [史记, 事件, 张仪列传]\nsources: [张仪列传]\nevent_ids: [070-005]\ndate: \"（公元前316年）\"\n---\n\n# 司马错张仪争论伐蜀伐韩\n\n> 苴蜀相攻各告急于秦，韩又来侵。张仪主张伐韩取三川挟天子令天下，司马错主张伐蜀以广国富民。惠王从司马错之言。\n\n**主要人物**：张仪、惠王\n\n## 事件经过\n\n苴蜀相攻各告急于秦，韩又来侵。张仪主张伐韩取三川挟天子令天下，司马错主张伐蜀以广国富民。惠王从司马错之言。\n\n## 原文\n\n> 张仪曰：'不如伐韩。'\"\"司马错曰：'不然。臣闻之，欲富国者务广其地。'\"\"惠王曰：'善，寡人请听子。'\n\n"
+    },
     {
       "rev_id": "20260423-152606-44d4ba",
       "timestamp": "2026-04-23T15:26:06Z",

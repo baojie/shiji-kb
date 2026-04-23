@@ -1,8 +1,18 @@
 {
   "page": "景帝即位",
-  "latest_rev_id": "20260423-155226-ad9e92",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161118-4ff51d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161118-4ff51d",
+      "timestamp": "2026-04-23T16:11:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155226-ad9e92",
+      "content_hash": "sha256:4ff51d48a00f041280d7f7efde0d8c138ab823280d5e382ffa43c92bf1fe51cc",
+      "size": 702,
+      "content": "paragraph_refs:\n  010-045: \"[42.1]-[42.3]\"\nevent_type: 继位\nlocation: \"高庙\"\n---\nid: \"景帝即位\"\ntype: event\ntitle: 景帝即位\ndescription: 乙巳日群臣顿首上尊号曰孝文皇帝。太子即位于高庙，丁未袭号曰皇帝。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-045]\ndate: \"（公元前157年）\"\n---\n\n# 景帝即位\n\n> 乙巳日群臣顿首上尊号曰孝文皇帝。太子即位于高庙，丁未袭号曰皇帝。\n\n**主要人物**：太子、孝景皇帝\n\n## 事件经过\n\n乙巳日群臣顿首上尊号曰孝文皇帝。太子即位于高庙，丁未袭号曰皇帝。\n\n## 原文\n\n> 太子即位于高庙。丁未，袭号曰皇帝。\n\n"
+    },
     {
       "rev_id": "20260423-155226-ad9e92",
       "timestamp": "2026-04-23T15:52:26Z",

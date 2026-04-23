@@ -1,8 +1,18 @@
 {
   "page": "夏侯婴事沛公为太仆",
-  "latest_rev_id": "20260423-152624-afb259",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160806-ad675d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160806-ad675d",
+      "timestamp": "2026-04-23T16:08:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152624-afb259",
+      "content_hash": "sha256:ad675dec87fc45c84e3796aa4bd10dc498fd0bc36196e20117e822b7128b5707",
+      "size": 1178,
+      "content": "paragraph_refs:\n  095-014: \"[16]\"\nevent_type: 政治活动\nlocation: \"沛\"\n---\nid: \"夏侯婴事沛公为太仆\"\ntype: event\ntitle: 夏侯婴事沛公为太仆\ndescription: 夏侯婴为沛人，为沛厩司御。每送使客还与高祖语，未尝不移日。高祖戏伤婴，被人告发，婴证其不伤，后坐系岁余掠笞数百终脱高祖。高祖起沛后以婴为太仆。\ntags: [史记, 事件, 樊郦滕灌列传]\nsources: [樊郦滕灌列传]\nevent_ids: [095-014]\ndate: \"（公元前209年）\"\n---\n\n# 夏侯婴事沛公为太仆\n\n> 夏侯婴为沛人，为沛厩司御。每送使客还与高祖语，未尝不移日。高祖戏伤婴，被人告发，婴证其不伤，后坐系岁余掠笞数百终脱高祖。高祖起沛后以婴为太仆。\n\n**主要人物**：夏侯婴、高祖\n\n## 事件经过\n\n夏侯婴为沛人，为沛厩司御。每送使客还与高祖语，未尝不移日。高祖戏伤婴，被人告发，婴证其不伤，后坐系岁余掠笞数百终脱高祖。高祖起沛后以婴为太仆。\n\n## 原文\n\n> 汝阴侯$夏侯婴，=沛人也。为沛厩$司御$。每送使客还，过沛泗上亭，与高祖@语，未尝不移日也。\n\n"
+    },
     {
       "rev_id": "20260423-152624-afb259",
       "timestamp": "2026-04-23T15:26:24Z",

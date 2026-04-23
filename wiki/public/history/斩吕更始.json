@@ -1,8 +1,18 @@
 {
   "page": "斩吕更始",
-  "latest_rev_id": "20260423-155213-7c8ffb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161111-23f6be",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161111-23f6be",
+      "timestamp": "2026-04-23T16:11:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155213-7c8ffb",
+      "content_hash": "sha256:23f6be37d7000d55fc464aa0bfe8bf964ca77cf53f299f2d65981068442ea887",
+      "size": 917,
+      "content": "paragraph_refs:\n  009-063: \"[48.1]-[48.3]\"\nevent_type: 战争\n---\nid: \"斩吕更始\"\ntype: event\ntitle: 斩吕更始\ndescription: 朱虚侯杀吕产后，帝命谒者持节慰劳。朱虚侯夺节信驰往长乐宫，斩杀长乐卫尉吕更始，然后回到北军向太尉报告。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-063]\ndate: \"（公元前180年）\"\n---\n\n# 斩吕更始\n\n> 朱虚侯杀吕产后，帝命谒者持节慰劳。朱虚侯夺节信驰往长乐宫，斩杀长乐卫尉吕更始，然后回到北军向太尉报告。\n\n**主要人物**：吕更始、硃虚侯\n\n## 事件经过\n\n朱虚侯杀吕产后，帝命谒者持节慰劳。朱虚侯夺节信驰往长乐宫，斩杀长乐卫尉吕更始，然后回到北军向太尉报告。\n\n## 原文\n\n> 硃虚侯欲夺节信，谒者不肯，硃虚侯则从与载，因节信驰走，斩长乐卫尉吕更始。\n\n"
+    },
     {
       "rev_id": "20260423-155213-7c8ffb",
       "timestamp": "2026-04-23T15:52:13Z",

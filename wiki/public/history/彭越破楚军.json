@@ -1,8 +1,18 @@
 {
   "page": "彭越破楚军",
-  "latest_rev_id": "20260423-152725-b513aa",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161049-1a8b73",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161049-1a8b73",
+      "timestamp": "2026-04-23T16:10:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152725-b513aa",
+      "content_hash": "sha256:1a8b73f22ebd9e9951fc6c1b50c70f4798ef7d05b00271e3e97fd5bdc5e4da1d",
+      "size": 830,
+      "content": "paragraph_refs:\n  008-050: \"[43.3]-[43.4]\"\nevent_type: 战争\nlocation: \"下邳\"\n---\nid: \"彭越破楚军\"\ntype: event\ntitle: 彭越破楚军\ndescription: 彭越渡睢水与项声、薛公战于下邳，大破楚军。项羽引兵东击彭越，汉王趁机北军成皋。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-050]\ndate: \"〖%三年〗 （公元前204年）\"\n---\n\n# 彭越破楚军\n\n> 彭越渡睢水与项声、薛公战于下邳，大破楚军。项羽引兵东击彭越，汉王趁机北军成皋。\n\n**主要人物**：彭越、项声\n\n## 事件经过\n\n彭越渡睢水与项声、薛公战于下邳，大破楚军。项羽引兵东击彭越，汉王趁机北军成皋。\n\n## 原文\n\n> 彭越渡睢水，与项声、薛公战下邳，彭越大破楚军。项羽乃引兵东击彭越。\n\n"
+    },
     {
       "rev_id": "20260423-152725-b513aa",
       "timestamp": "2026-04-23T15:27:25Z",

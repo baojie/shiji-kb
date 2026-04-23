@@ -1,8 +1,18 @@
 {
   "page": "太初改历以正月为岁首",
-  "latest_rev_id": "20260423-155048-8a32ca",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160822-0b9d74",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160822-0b9d74",
+      "timestamp": "2026-04-23T16:08:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155048-8a32ca",
+      "content_hash": "sha256:0b9d747462186a540fc89c4b672b01e0320cf28667a2f0294b86f74b6bcd7a73",
+      "size": 826,
+      "content": "paragraph_refs:\n  022-032: \"r103\"\nevent_type: 政治改革\n---\nid: \"太初改历以正月为岁首\"\ntype: event\ntitle: 太初改历以正月为岁首\ndescription: 太初元年改历，以正月为岁首，废除秦以来十月为岁首的颛顼历。这是中国历法史上的重大变革。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-032]\ndate: \"〖%太初元年〗 （公元前104年）\"\n---\n\n# 太初改历以正月为岁首\n\n> 太初元年改历，以正月为岁首，废除秦以来十月为岁首的颛顼历。这是中国历法史上的重大变革。\n\n## 事件经过\n\n太初元年改历，以正月为岁首，废除秦以来十月为岁首的颛顼历。这是中国历法史上的重大变革。\n\n## 原文\n\n> 改历，以正月为岁首。\n\n"
+    },
     {
       "rev_id": "20260423-155048-8a32ca",
       "timestamp": "2026-04-23T15:50:48Z",

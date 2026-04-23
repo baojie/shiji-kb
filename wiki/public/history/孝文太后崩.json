@@ -1,8 +1,18 @@
 {
   "page": "孝文太后崩",
-  "latest_rev_id": "20260423-155103-f237b7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160859-c12c0c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160859-c12c0c",
+      "timestamp": "2026-04-23T16:08:59Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155103-f237b7",
+      "content_hash": "sha256:c12c0ced34af81fb3057090c80573c307ea6d6694ce858207780ee9cf2dbcc54",
+      "size": 623,
+      "content": "paragraph_refs:\n  011-006: \"[3.3]-[3.4]\"\nevent_type: 家族事件\n---\nid: \"孝文太后崩\"\ntype: event\ntitle: 孝文太后崩\ndescription: 四月壬午孝文太后崩。广川王、长沙王皆之国。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-006]\ndate: \"〖%四月壬午〗 （公元前155年）\"\n---\n\n# 孝文太后崩\n\n> 四月壬午孝文太后崩。广川王、长沙王皆之国。\n\n**主要人物**：孝文太后\n\n## 事件经过\n\n四月壬午孝文太后崩。广川王、长沙王皆之国。\n\n## 原文\n\n> 四月壬午，孝文太后崩。广川王、长沙王皆之国。\n\n"
+    },
     {
       "rev_id": "20260423-155103-f237b7",
       "timestamp": "2026-04-23T15:51:03Z",

@@ -1,8 +1,18 @@
 {
   "page": "张骞拜大行卒",
-  "latest_rev_id": "20260423-152722-947d85",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161043-65858e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161043-65858e",
+      "timestamp": "2026-04-23T16:10:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152722-947d85",
+      "content_hash": "sha256:65858ede69a27ee047771bbb9dc32bb42c6e61ead0f1dabcb672830c98e9dfac",
+      "size": 788,
+      "content": "paragraph_refs:\n  123-012: \"[17]\"\nevent_type: 政治活动\n---\nid: \"张骞拜大行卒\"\ntype: event\ntitle: 张骞拜大行卒\ndescription: 张骞还朝后拜为大行，列于九卿。岁余而卒。张骞凿空西域，后世使者皆称博望侯以为信于外国。\ntags: [史记, 事件, 大宛列传]\nsources: [大宛列传]\nevent_ids: [123-012]\ndate: \"（公元前114年）\"\n---\n\n# 张骞拜大行卒\n\n> 张骞还朝后拜为大行，列于九卿。岁余而卒。张骞凿空西域，后世使者皆称博望侯以为信于外国。\n\n**主要人物**：张骞\n\n## 事件经过\n\n张骞还朝后拜为大行，列于九卿。岁余而卒。张骞凿空西域，后世使者皆称博望侯以为信于外国。\n\n## 原文\n\n> 骞还到，拜为大行，列於九卿。岁馀，卒。\n\n"
+    },
     {
       "rev_id": "20260423-152722-947d85",
       "timestamp": "2026-04-23T15:27:22Z",

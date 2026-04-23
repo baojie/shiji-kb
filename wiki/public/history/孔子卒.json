@@ -1,8 +1,18 @@
 {
   "page": "孔子卒",
-  "latest_rev_id": "20260423-152508-e24056",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160850-fa81c9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160850-fa81c9",
+      "timestamp": "2026-04-23T16:08:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152508-e24056",
+      "content_hash": "sha256:fa81c9ba6db908cfb3c33b85600010ad6c89d365c91c4847fb2babda570a2e89",
+      "size": 1065,
+      "content": "paragraph_refs:\n  033-028: \"[23.5]\"\n  047-018: \"[33-35]\"\nevent_type: 家族事件\nlocation: \"鲁\"\n---\nid: \"孔子卒\"\ntype: event\ntitle: 孔子卒\ndescription: 哀公十六年，孔子卒。\ntags: [史记, 事件, 鲁周公世家, 孔子世家]\nsources: [鲁周公世家, 孔子世家]\nevent_ids: [033-028, 047-018]\ndate: \"〖%十六年〗 （公元前479年）\"\n---\n\n# 孔子卒\n\n> 哀公十六年，孔子卒。\n\n**主要人物**：子贡、孔子\n\n## 各章节记载\n\n### 鲁周公世家 (033-028) [文化活动] [PN:[23.5]](../chapters/033_鲁周公世家.html#pn-23.5)\n\n哀公十六年，孔子卒。\n\n**原文**：\n\n> 十六年,孔子卒。\n\n### 孔子世家 (047-018) [家族事件] [PN:[33-35]](../chapters/047_孔子世家.html#pn-33-35)\n\n子路死于卫，孔子病。负杖逍遥于门，歌曰\"太山坏乎，梁柱摧乎，哲人萎乎\"。七日后卒，年七十三。葬鲁城北泗上，弟子皆服三年。子贡庐于冢上凡六年。高祖过鲁以太牢祠之。\n\n**原文**：\n\n> 孔子年七十三，以鲁哀公十六年四月己丑卒。\n\n"
+    },
     {
       "rev_id": "20260423-152508-e24056",
       "timestamp": "2026-04-23T15:25:08Z",

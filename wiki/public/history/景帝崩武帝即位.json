@@ -1,8 +1,18 @@
 {
   "page": "景帝崩武帝即位",
-  "latest_rev_id": "20260423-155227-99c3f5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161118-5635ea",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161118-5635ea",
+      "timestamp": "2026-04-23T16:11:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155227-99c3f5",
+      "content_hash": "sha256:5635ea7280752384e83cd7023311c6243f8059e38114d07feae43df967b127d4",
+      "size": 663,
+      "content": "paragraph_refs:\n  022-021: \"r66\"\nevent_type: 继位\n---\nid: \"景帝崩武帝即位\"\ntype: event\ntitle: 景帝崩武帝即位\ndescription: 景帝后三年正月甲子，孝景皇帝崩。二月丙子，太子立。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-021]\ndate: \"〖%景帝后三年〗 （公元前141年）\"\n---\n\n# 景帝崩武帝即位\n\n> 景帝后三年正月甲子，孝景皇帝崩。二月丙子，太子立。\n\n## 事件经过\n\n景帝后三年正月甲子，孝景皇帝崩。二月丙子，太子立。\n\n## 原文\n\n> 正月甲子，孝景皇帝崩。二月丙子，太子立。\n\n"
+    },
     {
       "rev_id": "20260423-155227-99c3f5",
       "timestamp": "2026-04-23T15:52:27Z",

@@ -1,8 +1,18 @@
 {
   "page": "五战入郢破楚",
-  "latest_rev_id": "20260423-152528-bec706",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160524-5a005b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160524-5a005b",
+      "timestamp": "2026-04-23T16:05:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152528-bec706",
+      "content_hash": "sha256:5a005b8980008b1a92208fee0ca6369985fc594095af41433f8f7d77d20e90a4",
+      "size": 1080,
+      "content": "paragraph_refs:\n  066-011: \"[11]\"\nevent_type: 战争\nlocation: \"郢\"\n---\nid: \"五战入郢破楚\"\ntype: event\ntitle: 五战入郢破楚\ndescription: 阖庐九年，听子胥、孙武之谋，悉兴师与唐蔡伐楚，夹汉水而陈。阖庐弟夫概率五千人击楚将子常，子常败走。吴乘胜五战遂至郢。楚昭王出奔。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-011]\ndate: \"（公元前506年）\"\n---\n\n# 五战入郢破楚\n\n> 阖庐九年，听子胥、孙武之谋，悉兴师与唐蔡伐楚，夹汉水而陈。阖庐弟夫概率五千人击楚将子常，子常败走。吴乘胜五战遂至郢。楚昭王出奔。\n\n**主要人物**：伍子胥、孙武\n\n## 事件经过\n\n阖庐九年，听子胥、孙武之谋，悉兴师与唐蔡伐楚，夹汉水而陈。阖庐弟夫概率五千人击楚将子常，子常败走。吴乘胜五战遂至郢。楚昭王出奔。\n\n## 原文\n\n> 吴王之弟夫概将兵请从……於是吴乘胜而前，五战，遂至郢。己卯，楚昭王出奔。庚辰，吴王入郢。\n\n"
+    },
     {
       "rev_id": "20260423-152528-bec706",
       "timestamp": "2026-04-23T15:25:28Z",

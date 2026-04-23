@@ -1,8 +1,18 @@
 {
   "page": "匈奴入燕不和亲",
-  "latest_rev_id": "20260423-154948-c2b56a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160631-befd1d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160631-befd1d",
+      "timestamp": "2026-04-23T16:06:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154948-c2b56a",
+      "content_hash": "sha256:befd1d06bb0b6d2119ede00527b9a591b14940bdf7009f379f696cc4ab9e3b69",
+      "size": 652,
+      "content": "paragraph_refs:\n  011-028: \"[15.1]\"\nevent_type: 战争\nlocation: \"燕\"\n---\nid: \"匈奴入燕不和亲\"\ntype: event\ntitle: 匈奴入燕不和亲\ndescription: 中二年二月匈奴入燕，遂不和亲，匈奴与汉关系破裂。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-028]\ndate: \"〖%中二年二月〗 （公元前148年）\"\n---\n\n# 匈奴入燕不和亲\n\n> 中二年二月匈奴入燕，遂不和亲，匈奴与汉关系破裂。\n\n**主要人物**：匈奴\n\n## 事件经过\n\n中二年二月匈奴入燕，遂不和亲，匈奴与汉关系破裂。\n\n## 原文\n\n> 中二年二月，匈奴入燕，遂不和亲。\n\n"
+    },
     {
       "rev_id": "20260423-154948-c2b56a",
       "timestamp": "2026-04-23T15:49:48Z",

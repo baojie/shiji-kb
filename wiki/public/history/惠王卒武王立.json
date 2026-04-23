@@ -1,8 +1,18 @@
 {
   "page": "惠王卒武王立",
-  "latest_rev_id": "20260423-155153-976952",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161105-ff4421",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161105-ff4421",
+      "timestamp": "2026-04-23T16:11:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155153-976952",
+      "content_hash": "sha256:ff4421a66b961c9da5077142b8c5057da708c893ef32027b4b47804274ff0396",
+      "size": 766,
+      "content": "paragraph_refs:\n  005-103: \"[60]\"\nevent_type: 继位\n---\nid: \"惠王卒武王立\"\ntype: event\ntitle: 惠王卒武王立\ndescription: 惠王去世，子武王继位。韩、魏、齐、楚、越皆宾从，显示秦国已成为天下最强之国。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-103]\ndate: \"〖@惠王〗卒 （公元前311年）\"\n---\n\n# 惠王卒武王立\n\n> 惠王去世，子武王继位。韩、魏、齐、楚、越皆宾从，显示秦国已成为天下最强之国。\n\n**主要人物**：惠王、武王\n\n## 事件经过\n\n惠王去世，子武王继位。韩、魏、齐、楚、越皆宾从，显示秦国已成为天下最强之国。\n\n## 原文\n\n> 惠王卒，子武王立。韩、魏、齐、楚、越皆宾从。\n\n"
+    },
     {
       "rev_id": "20260423-155153-976952",
       "timestamp": "2026-04-23T15:51:53Z",

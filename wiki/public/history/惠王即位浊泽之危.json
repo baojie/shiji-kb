@@ -1,8 +1,18 @@
 {
   "page": "惠王即位浊泽之危",
-  "latest_rev_id": "20260423-155153-e3b917",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161105-32120f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161105-32120f",
+      "timestamp": "2026-04-23T16:11:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155153-e3b917",
+      "content_hash": "sha256:32120f2e4661f14de99cd194d26f58588f6f6a8080d9157e1c8af70bf9d8fa75",
+      "size": 1097,
+      "content": "paragraph_refs:\n  044-010: \"[10.1]\"\nevent_type: 战争\nlocation: \"浊泽\"\n---\nid: \"惠王即位浊泽之危\"\ntype: event\ntitle: 惠王即位浊泽之危\ndescription: 武侯卒，子与公中缓争为太子。韩、赵合军伐魏，战于浊泽大败，围魏君。赵欲杀魏君立公中缓割地，韩欲两分之。二家谋不和，惠王得以身不死国不分。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-010]\ndate: \"〖;惠王〗〖%元年〗 （公元前369年）\"\n---\n\n# 惠王即位浊泽之危\n\n> 武侯卒，子与公中缓争为太子。韩、赵合军伐魏，战于浊泽大败，围魏君。赵欲杀魏君立公中缓割地，韩欲两分之。二家谋不和，惠王得以身不死国不分。\n\n**主要人物**：惠王、赵成侯、韩懿侯\n\n## 事件经过\n\n武侯卒，子与公中缓争为太子。韩、赵合军伐魏，战于浊泽大败，围魏君。赵欲杀魏君立公中缓割地，韩欲两分之。二家谋不和，惠王得以身不死国不分。\n\n## 原文\n\n> 惠王之所以身不死，国不分者，二家谋不和也。\n\n"
+    },
     {
       "rev_id": "20260423-155153-e3b917",
       "timestamp": "2026-04-23T15:51:53Z",

@@ -1,8 +1,18 @@
 {
   "page": "夫差北伐齐败艾陵",
-  "latest_rev_id": "20260423-152632-c5b10d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160829-d2d0c8",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160829-d2d0c8",
+      "timestamp": "2026-04-23T16:08:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152632-c5b10d",
+      "content_hash": "sha256:d2d0c8967f36ed9e4c27364cd35ae62881769bf5cffc15795270b9da6b63ce5b",
+      "size": 888,
+      "content": "paragraph_refs:\n  031-027: \"[33.1-33.3]\"\nevent_type: 战争\nlocation: \"艾陵\"\n---\nid: \"夫差北伐齐败艾陵\"\ntype: event\ntitle: 夫差北伐齐败艾陵\ndescription: 夫差北伐齐，伍子胥谏言越在腹心，不宜舍近而伐远，吴王不听。败齐师于艾陵。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-027]\ndate: \"〖%十二年〗 （公元前484年）\"\n---\n\n# 夫差北伐齐败艾陵\n\n> 夫差北伐齐，伍子胥谏言越在腹心，不宜舍近而伐远，吴王不听。败齐师于艾陵。\n\n**主要人物**：吴王夫差、齐景公\n\n## 事件经过\n\n夫差北伐齐，伍子胥谏言越在腹心，不宜舍近而伐远，吴王不听。败齐师于艾陵。\n\n## 原文\n\n> 七年，吴王夫差闻齐景公死而大臣争宠，新君弱，乃兴师北伐齐。...吴王不听，遂北伐齐，败齐师於艾陵。\n\n"
+    },
     {
       "rev_id": "20260423-152632-c5b10d",
       "timestamp": "2026-04-23T15:26:32Z",

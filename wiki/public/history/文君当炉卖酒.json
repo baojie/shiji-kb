@@ -1,8 +1,18 @@
 {
   "page": "文君当炉卖酒",
-  "latest_rev_id": "20260423-155207-9e0e4d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161110-abc6ca",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161110-abc6ca",
+      "timestamp": "2026-04-23T16:11:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155207-9e0e4d",
+      "content_hash": "sha256:abc6caaca4a854019d3e7b9a089e33292dc9361f1b3e958e174b9a1353acb7fd",
+      "size": 1262,
+      "content": "paragraph_refs:\n  117-004: \"[1]\"\nevent_type: 家族事件\nlocation: \"临邛\"\n---\nid: \"文君当炉卖酒\"\ntype: event\ntitle: 文君当炉卖酒\ndescription: 相如家徒四壁，与文君至临邛买酒舍酤酒，令文君当炉，相如身著犊鼻裈涤器于市中。卓王孙闻而耻之，后不得已分予文君僮百人、钱百万及嫁时财物。二人归成都买田宅为富人。\ntags: [史记, 事件, 司马相如列传]\nsources: [司马相如列传]\nevent_ids: [117-004]\ndate: \"（公元前143年）\"\n---\n\n# 文君当炉卖酒\n\n> 相如家徒四壁，与文君至临邛买酒舍酤酒，令文君当炉，相如身著犊鼻裈涤器于市中。卓王孙闻而耻之，后不得已分予文君僮百人、钱百万及嫁时财物。二人归成都买田宅为富人。\n\n**主要人物**：卓文君、卓王孙、司马相如\n\n## 事件经过\n\n相如家徒四壁，与文君至临邛买酒舍酤酒，令文君当炉，相如身著犊鼻裈涤器于市中。卓王孙闻而耻之，后不得已分予文君僮百人、钱百万及嫁时财物。二人归成都买田宅为富人。\n\n## 原文\n\n> 相如与俱之临邛，尽卖其车骑，买一酒舍酤酒，而令文君当炉。相如身自著犊鼻裈，与保庸杂作，涤器於市中。\n\n"
+    },
     {
       "rev_id": "20260423-155207-9e0e4d",
       "timestamp": "2026-04-23T15:52:07Z",

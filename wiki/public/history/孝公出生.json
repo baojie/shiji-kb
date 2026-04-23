@@ -1,8 +1,18 @@
 {
   "page": "孝公出生",
-  "latest_rev_id": "20260423-155101-95da0e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160857-2261b2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160857-2261b2",
+      "timestamp": "2026-04-23T16:08:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155101-95da0e",
+      "content_hash": "sha256:2261b2d27eb07948f0e2f9c5a34a3acd3c9b13d747eab015eb222727eb8b8396",
+      "size": 685,
+      "content": "paragraph_refs:\n  005-060: \"[47.2]\"\nevent_type: 家族事件\n---\nid: \"孝公出生\"\ntype: event\ntitle: 孝公出生\ndescription: 献公四年正月庚寅日，孝公出生。孝公后来成为秦国变法图强的关键君主。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-060]\ndate: \"〖%四年〗〖%正月庚寅〗 （公元前381年）\"\n---\n\n# 孝公出生\n\n> 献公四年正月庚寅日，孝公出生。孝公后来成为秦国变法图强的关键君主。\n\n**主要人物**：孝公\n\n## 事件经过\n\n献公四年正月庚寅日，孝公出生。孝公后来成为秦国变法图强的关键君主。\n\n## 原文\n\n> 四年正月庚寅，孝公生。\n\n"
+    },
     {
       "rev_id": "20260423-155101-95da0e",
       "timestamp": "2026-04-23T15:51:01Z",

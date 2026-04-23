@@ -1,8 +1,18 @@
 {
   "page": "五国共击齐",
-  "latest_rev_id": "20260423-152528-e0a284",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160522-6c01db",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160522-6c01db",
+      "timestamp": "2026-04-23T16:05:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152528-e0a284",
+      "content_hash": "sha256:6c01dbf843bddfe66aa4ab0e204a497d19b84b636bd249827383c561b83b28c3",
+      "size": 901,
+      "content": "paragraph_refs:\n  015-018: \"r193\"\nevent_type: 战争\nlocation: \"临菑\"\n---\nid: \"五国共击齐\"\ntype: event\ntitle: 五国共击齐\ndescription: 秦与韩、魏、燕、赵五国联合攻齐，大破齐军。燕军独入至临菑，取其宝器。齐湣王走莒。此役使齐国一蹶不振。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-018]\ndate: \"〖%公元前284〗 （公元前284年）\"\n---\n\n# 五国共击齐\n\n> 秦与韩、魏、燕、赵五国联合攻齐，大破齐军。燕军独入至临菑，取其宝器。齐湣王走莒。此役使齐国一蹶不振。\n\n## 事件经过\n\n秦与韩、魏、燕、赵五国联合攻齐，大破齐军。燕军独入至临菑，取其宝器。齐湣王走莒。此役使齐国一蹶不振。\n\n## 原文\n\n> 二十三。尉斯离与韩、魏、燕、赵共击齐，破之。\"\"四十。五国共击湣王，王走莒。\n\n"
+    },
     {
       "rev_id": "20260423-152528-e0a284",
       "timestamp": "2026-04-23T15:25:28Z",

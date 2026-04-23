@@ -1,8 +1,18 @@
 {
   "page": "为义帝发丧",
-  "latest_rev_id": "20260423-154905-569acc",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160511-9234d8",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160511-9234d8",
+      "timestamp": "2026-04-23T16:05:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154905-569acc",
+      "content_hash": "sha256:9234d85192a6fa75168761c0b071b5c0c3fffbfda4589f10c5492dc4a85c4677",
+      "size": 1108,
+      "content": "paragraph_refs:\n  008-039: \"[34.4]-[34.6]\"\nevent_type: 政治活动\nlocation: \"雒阳\"\n---\nid: \"为义帝发丧\"\ntype: event\ntitle: 为义帝发丧\ndescription: 汉王至雒阳，新城三老董公以义帝死故说汉王。汉王袒而大哭，为义帝发丧临三日，发使告诸侯声讨项羽杀义帝之罪，号召诸侯共击楚。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-039]\ndate: \"〖%三月〗 （公元前205年）\"\n---\n\n# 为义帝发丧\n\n> 汉王至雒阳，新城三老董公以义帝死故说汉王。汉王袒而大哭，为义帝发丧临三日，发使告诸侯声讨项羽杀义帝之罪，号召诸侯共击楚。\n\n**主要人物**：刘邦、董公\n\n## 事件经过\n\n汉王至雒阳，新城三老董公以义帝死故说汉王。汉王袒而大哭，为义帝发丧临三日，发使告诸侯声讨项羽杀义帝之罪，号召诸侯共击楚。\n\n## 原文\n\n> 汉王闻之，袒而大哭。遂为义帝发丧，临三日。发使者告诸侯曰：'...今项羽放杀义帝於江南，大逆无道。...原从诸侯王击楚之杀义帝者。'\n\n"
+    },
     {
       "rev_id": "20260423-154905-569acc",
       "timestamp": "2026-04-23T15:49:05Z",

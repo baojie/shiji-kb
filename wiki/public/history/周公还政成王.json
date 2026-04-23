@@ -1,8 +1,18 @@
 {
   "page": "周公还政成王",
-  "latest_rev_id": "20260423-152617-4e893c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160738-292bb7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160738-292bb7",
+      "timestamp": "2026-04-23T16:07:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152617-4e893c",
+      "content_hash": "sha256:292bb70d96b3378d913eeeb84346d9207f2b23da7fadb1b3676fb126b2377021",
+      "size": 855,
+      "content": "paragraph_refs:\n  033-006: \"[5.1]\"\nevent_type: 政治活动\n---\nid: \"周公还政成王\"\ntype: event\ntitle: 周公还政成王\ndescription: 成王长能听政，周公还政于成王。周公之代治南面朝诸侯，七年后还政北面就臣位，歔歔如畏然。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-006]\ndate: \"〖%七年〗 （公元前1036年）\"\n---\n\n# 周公还政成王\n\n> 成王长能听政，周公还政于成王。周公之代治南面朝诸侯，七年后还政北面就臣位，歔歔如畏然。\n\n**主要人物**：周公、成王\n\n## 事件经过\n\n成王长能听政，周公还政于成王。周公之代治南面朝诸侯，七年后还政北面就臣位，歔歔如畏然。\n\n## 原文\n\n> 於是周公乃还政於成王...及七年後,还政成王,北面就臣位,歔歔如畏然。\n\n"
+    },
     {
       "rev_id": "20260423-152617-4e893c",
       "timestamp": "2026-04-23T15:26:17Z",

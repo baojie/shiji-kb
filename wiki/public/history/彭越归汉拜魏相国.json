@@ -1,8 +1,18 @@
 {
   "page": "彭越归汉拜魏相国",
-  "latest_rev_id": "20260423-152725-e9fc65",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161049-0dfa59",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161049-0dfa59",
+      "timestamp": "2026-04-23T16:10:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152725-e9fc65",
+      "content_hash": "sha256:0dfa592ca43625984b2f8c1b9021d4a6faaf40b16c8e55c3cd44ca67e7b295c3",
+      "size": 963,
+      "content": "paragraph_refs:\n  090-006: \"[7]\"\nevent_type: 政治活动\nlocation: \"外黄\"\n---\nid: \"彭越归汉拜魏相国\"\ntype: event\ntitle: 彭越归汉拜魏相国\ndescription: 汉王二年春彭越将兵三万余人归汉于外黄。汉王以西魏王豹为真魏后，拜彭越为魏相国，擅将其兵略定梁地。\ntags: [史记, 事件, 魏豹彭越列传]\nsources: [魏豹彭越列传]\nevent_ids: [090-006]\ndate: \"〖%汉王二年春〗 （公元前205年）\"\n---\n\n# 彭越归汉拜魏相国\n\n> 汉王二年春彭越将兵三万余人归汉于外黄。汉王以西魏王豹为真魏后，拜彭越为魏相国，擅将其兵略定梁地。\n\n**主要人物**：彭越、汉王\n\n## 事件经过\n\n汉王二年春彭越将兵三万余人归汉于外黄。汉王以西魏王豹为真魏后，拜彭越为魏相国，擅将其兵略定梁地。\n\n## 原文\n\n> 汉王曰：'彭将军收魏地得十馀城……'乃拜彭越为魏相国，擅将其兵，略定梁地。\n\n"
+    },
     {
       "rev_id": "20260423-152725-e9fc65",
       "timestamp": "2026-04-23T15:27:25Z",

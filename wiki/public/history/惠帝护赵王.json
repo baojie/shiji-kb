@@ -1,8 +1,18 @@
 {
   "page": "惠帝护赵王",
-  "latest_rev_id": "20260423-155151-501e44",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161104-c08722",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161104-c08722",
+      "timestamp": "2026-04-23T16:11:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155151-501e44",
+      "content_hash": "sha256:c087226f7da4294fa21b67f11430cab1ac1d0b3ddefdb6b2987ca7bbbb3d3035",
+      "size": 885,
+      "content": "paragraph_refs:\n  009-008: \"[6.1]-[6.2]\"\nevent_type: 政治活动\nlocation: \"霸上\"\n---\nid: \"惠帝护赵王\"\ntype: event\ntitle: 惠帝护赵王\ndescription: 赵王入京途中，孝惠帝出于仁慈，亲自到霸上迎接赵王，与之同入宫，同起居饮食，使太后无法下手。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-008]\ndate: \"[公元前195年]\"\n---\n\n# 惠帝护赵王\n\n> 赵王入京途中，孝惠帝出于仁慈，亲自到霸上迎接赵王，与之同入宫，同起居饮食，使太后无法下手。\n\n**主要人物**：太后、孝惠帝、赵王\n\n## 事件经过\n\n赵王入京途中，孝惠帝出于仁慈，亲自到霸上迎接赵王，与之同入宫，同起居饮食，使太后无法下手。\n\n## 原文\n\n> 孝惠帝慈仁，知太后怒，自迎赵王霸上，与入宫，自挟与赵王起居饮食。\n\n"
+    },
     {
       "rev_id": "20260423-155151-501e44",
       "timestamp": "2026-04-23T15:51:51Z",

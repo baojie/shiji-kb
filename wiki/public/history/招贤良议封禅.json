@@ -1,8 +1,18 @@
 {
   "page": "招贤良议封禅",
-  "latest_rev_id": "20260423-152732-f8366c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161107-91846b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161107-91846b",
+      "timestamp": "2026-04-23T16:11:07Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152732-f8366c",
+      "content_hash": "sha256:91846bbdb566cb4993e6a7b8f43125230ef3d70537ebfc75b73e3492ab00d142",
+      "size": 1062,
+      "content": "paragraph_refs:\n  012-003: \"[3.1]-[3.3]\"\nevent_type: 政治改革\nlocation: \"城南\"\n---\nid: \"招贤良议封禅\"\ntype: event\ntitle: 招贤良议封禅\ndescription: 元年汉兴六十余年天下乂安，武帝向儒术，招贤良。赵绾、王臧以文学为公卿，欲议古立明堂于城南以朝诸侯，草巡狩封禅改历服色事未就。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-003]\ndate: \"〖%元年〗 （公元前140年）\"\n---\n\n# 招贤良议封禅\n\n> 元年汉兴六十余年天下乂安，武帝向儒术，招贤良。赵绾、王臧以文学为公卿，欲议古立明堂于城南以朝诸侯，草巡狩封禅改历服色事未就。\n\n**主要人物**：王臧、赵绾\n\n## 事件经过\n\n元年汉兴六十余年天下乂安，武帝向儒术，招贤良。赵绾、王臧以文学为公卿，欲议古立明堂于城南以朝诸侯，草巡狩封禅改历服色事未就。\n\n## 原文\n\n> 而上乡儒术，招贤良，赵绾、王臧等以文学为公卿，欲议古立明堂城南，以朝诸侯。\n\n"
+    },
     {
       "rev_id": "20260423-152732-f8366c",
       "timestamp": "2026-04-23T15:27:32Z",

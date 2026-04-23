@@ -1,8 +1,18 @@
 {
   "page": "太后赐韩嫣死",
-  "latest_rev_id": "20260423-152630-5539e7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160826-c48fd9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160826-c48fd9",
+      "timestamp": "2026-04-23T16:08:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152630-5539e7",
+      "content_hash": "sha256:c48fd9db0a5cfed49a5a2a9ce144722727720ff3b3a8faced2197e9bca9430e4",
+      "size": 966,
+      "content": "paragraph_refs:\n  125-007: \"[5]\"\nevent_type: 政治活动\n---\nid: \"太后赐韩嫣死\"\ntype: event\ntitle: 太后赐韩嫣死\ndescription: 韩嫣侍上出入永巷不禁，以奸闻皇太后。太后怒使使赐嫣死，天子为之谢罪终不能得，韩嫣遂死。其弟案道侯韩说亦佞幸。\ntags: [史记, 事件, 佞幸列传]\nsources: [佞幸列传]\nevent_ids: [125-007]\ndate: \"[约公元前128年]\"\n---\n\n# 太后赐韩嫣死\n\n> 韩嫣侍上出入永巷不禁，以奸闻皇太后。太后怒使使赐嫣死，天子为之谢罪终不能得，韩嫣遂死。其弟案道侯韩说亦佞幸。\n\n**主要人物**：皇太后、韩嫣\n\n## 事件经过\n\n韩嫣侍上出入永巷不禁，以奸闻皇太后。太后怒使使赐嫣死，天子为之谢罪终不能得，韩嫣遂死。其弟案道侯韩说亦佞幸。\n\n## 原文\n\n> 嫣侍上，出入永巷不禁，以奸闻皇太后。皇太后怒，使使赐嫣死。上为谢，终不能得，嫣遂死。\n\n"
+    },
     {
       "rev_id": "20260423-152630-5539e7",
       "timestamp": "2026-04-23T15:26:30Z",

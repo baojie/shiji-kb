@@ -1,8 +1,18 @@
 {
   "page": "墨翟善守为节用",
-  "latest_rev_id": "20260423-155035-b04968",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160805-e9b429",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160805-e9b429",
+      "timestamp": "2026-04-23T16:08:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155035-b04968",
+      "content_hash": "sha256:e9b429c5f87cce6c031cfed0a28289aa78d876fc62b8df34f24215ff2e7d1cfb",
+      "size": 938,
+      "content": "paragraph_refs:\n  074-011: \"[12]\"\nevent_type: 文化活动\nlocation: \"宋\"\n---\nid: \"墨翟善守为节用\"\ntype: event\ntitle: 墨翟善守为节用\ndescription: 墨翟为宋国大夫，擅长守御之术，主张节用。或说与孔子同时，或说在孔子之后。墨家学说与儒家并立为战国显学。\ntags: [史记, 事件, 孟子荀卿列传]\nsources: [孟子荀卿列传]\nevent_ids: [074-011]\ndate: \"[约公元前468—前376年]\"\n---\n\n# 墨翟善守为节用\n\n> 墨翟为宋国大夫，擅长守御之术，主张节用。或说与孔子同时，或说在孔子之后。墨家学说与儒家并立为战国显学。\n\n**主要人物**：墨翟\n\n## 事件经过\n\n墨翟为宋国大夫，擅长守御之术，主张节用。或说与孔子同时，或说在孔子之后。墨家学说与儒家并立为战国显学。\n\n## 原文\n\n> 盖墨翟，宋之大夫，善守御，为节用。或曰并孔子时，或曰在其後。\n\n"
+    },
     {
       "rev_id": "20260423-155035-b04968",
       "timestamp": "2026-04-23T15:50:35Z",

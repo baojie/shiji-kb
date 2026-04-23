@@ -1,8 +1,18 @@
 {
   "page": "伍员奔宋郑至吴",
-  "latest_rev_id": "20260423-154917-64472f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160534-95432e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160534-95432e",
+      "timestamp": "2026-04-23T16:05:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154917-64472f",
+      "content_hash": "sha256:95432e65446b8b5aaf3bc40f411eccb693163cc4c63a30feff2d213b8a3ffd0c",
+      "size": 1121,
+      "content": "paragraph_refs:\n  066-005: \"[6]\"\nevent_type: 政治活动\nlocation: \"宋、郑、吴\"\n---\nid: \"伍员奔宋郑至吴\"\ntype: event\ntitle: 伍员奔宋郑至吴\ndescription: 伍胥先至宋，因华氏之乱与太子建俱奔郑。后独身步走至吴，途经昭关几不得脱，至江上有渔父渡之。至吴时疾，中道乞食，最终因公子光以求见吴王。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-005]\ndate: \"（公元前522年）\"\n---\n\n# 伍员奔宋郑至吴\n\n> 伍胥先至宋，因华氏之乱与太子建俱奔郑。后独身步走至吴，途经昭关几不得脱，至江上有渔父渡之。至吴时疾，中道乞食，最终因公子光以求见吴王。\n\n**主要人物**：伍子胥\n\n## 事件经过\n\n伍胥先至宋，因华氏之乱与太子建俱奔郑。后独身步走至吴，途经昭关几不得脱，至江上有渔父渡之。至吴时疾，中道乞食，最终因公子光以求见吴王。\n\n## 原文\n\n> 伍胥遂与胜独身步走，几不得脱。追者在後。至江，江上有一渔父乘船，知伍胥之急，乃渡伍胥。\n\n"
+    },
     {
       "rev_id": "20260423-154917-64472f",
       "timestamp": "2026-04-23T15:49:17Z",

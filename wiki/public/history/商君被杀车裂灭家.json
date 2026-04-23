@@ -1,8 +1,18 @@
 {
   "page": "商君被杀车裂灭家",
-  "latest_rev_id": "20260423-155029-0dfd5e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160756-d5ab68",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160756-d5ab68",
+      "timestamp": "2026-04-23T16:07:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155029-0dfd5e",
+      "content_hash": "sha256:d5ab68f85076743aad42af7a51d7f7d56a999cee36862a1bde28be479d6d131b",
+      "size": 917,
+      "content": "paragraph_refs:\n  068-017: \"[10]\"\nevent_type: 政治活动\nlocation: \"秦\"\n---\nid: \"商君被杀车裂灭家\"\ntype: event\ntitle: 商君被杀车裂灭家\ndescription: 商君复入秦，走商邑发邑兵北出击郑。秦发兵攻商君，杀之于郑黾池。秦惠王车裂商君以徇，灭其家。\ntags: [史记, 事件, 商君列传]\nsources: [商君列传]\nevent_ids: [068-017]\ndate: \"（公元前338年）\"\n---\n\n# 商君被杀车裂灭家\n\n> 商君复入秦，走商邑发邑兵北出击郑。秦发兵攻商君，杀之于郑黾池。秦惠王车裂商君以徇，灭其家。\n\n**主要人物**：商鞅、秦惠王\n\n## 事件经过\n\n商君复入秦，走商邑发邑兵北出击郑。秦发兵攻商君，杀之于郑黾池。秦惠王车裂商君以徇，灭其家。\n\n## 原文\n\n> 秦发兵攻商君，杀之於郑黾池。秦惠王车裂商君以徇，曰：'莫如商鞅反者！'遂灭商君之家。\n\n"
+    },
     {
       "rev_id": "20260423-155029-0dfd5e",
       "timestamp": "2026-04-23T15:50:29Z",

@@ -1,8 +1,18 @@
 {
   "page": "建沛宫原庙",
-  "latest_rev_id": "20260423-155139-418f61",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161018-f2d870",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161018-f2d870",
+      "timestamp": "2026-04-23T16:10:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155139-418f61",
+      "content_hash": "sha256:f2d8705b89a57932cbc8b2f23c1bafb464557efac380648e6e7a96421732a849",
+      "size": 935,
+      "content": "paragraph_refs:\n  008-099: \"[90]\"\nevent_type: 建设\nlocation: \"沛\"\n---\nid: \"建沛宫原庙\"\ntype: event\ntitle: 建沛宫原庙\ndescription: 孝惠五年，思高祖悲乐于沛之事，以沛宫为高祖原庙。高祖所教歌儿百二十人皆令为吹乐，后有缺辄补之。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-099]\ndate: \"〖%孝惠五年〗 （公元前190年）\"\n---\n\n# 建沛宫原庙\n\n> 孝惠五年，思高祖悲乐于沛之事，以沛宫为高祖原庙。高祖所教歌儿百二十人皆令为吹乐，后有缺辄补之。\n\n**主要人物**：孝惠帝\n\n## 事件经过\n\n孝惠五年，思高祖悲乐于沛之事，以沛宫为高祖原庙。高祖所教歌儿百二十人皆令为吹乐，后有缺辄补之。\n\n## 原文\n\n> 及孝惠五年，思高祖之悲乐沛，以沛宫为高祖原庙。高祖所教歌兒百二十人，皆令为吹乐，後有缺，辄补之。\n\n"
+    },
     {
       "rev_id": "20260423-155139-418f61",
       "timestamp": "2026-04-23T15:51:39Z",

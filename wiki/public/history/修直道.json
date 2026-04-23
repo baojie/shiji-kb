@@ -1,8 +1,18 @@
 {
   "page": "修直道",
-  "latest_rev_id": "20260423-154924-f0d0d7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160552-7d6d6e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160552-7d6d6e",
+      "timestamp": "2026-04-23T16:05:52Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154924-f0d0d7",
+      "content_hash": "sha256:7d6d6e60ff2e052adaeb50021160c32a1d570e9e49a6002e9c6957e011bd6a49",
+      "size": 673,
+      "content": "paragraph_refs:\n  006-072: \"[65.1]\"\nevent_type: 建设\nlocation: \"九原、云阳\"\n---\nid: \"修直道\"\ntype: event\ntitle: 修直道\ndescription: 三十五年，修筑直道，自九原抵云阳，堑山堙谷，直通之。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-072]\ndate: \"〖%三十五年〗 （公元前212年）\"\n---\n\n# 修直道\n\n> 三十五年，修筑直道，自九原抵云阳，堑山堙谷，直通之。\n\n**主要人物**：始皇\n\n## 事件经过\n\n三十五年，修筑直道，自九原抵云阳，堑山堙谷，直通之。\n\n## 原文\n\n> 三十五年，除道，道九原抵云阳，堑山堙谷，直通之。\n\n"
+    },
     {
       "rev_id": "20260423-154924-f0d0d7",
       "timestamp": "2026-04-23T15:49:24Z",

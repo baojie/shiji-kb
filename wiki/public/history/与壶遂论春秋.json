@@ -1,8 +1,18 @@
 {
   "page": "与壶遂论春秋",
-  "latest_rev_id": "20260423-152520-cf59c5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160456-abbee1",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160456-abbee1",
+      "timestamp": "2026-04-23T16:04:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152520-cf59c5",
+      "content_hash": "sha256:abbee11dda3b5d84b35a5af283ffdbf6e7a6afc8d4f27787682a07f3563e6792",
+      "size": 1106,
+      "content": "paragraph_refs:\n  130-017: \"[14.1]-[18.2]\"\nevent_type: 文化活动\n---\nid: \"与壶遂论春秋\"\ntype: event\ntitle: 与壶遂论春秋\ndescription: 上大夫壶遂问孔子何为作春秋。司马迁引董仲舒之言论春秋为礼义之大宗、王道之大者。壶遂质疑今有明君何需作此，迁答所述乃故事非如孔子之作，是述而非作。\ntags: [史记, 事件, 太史公自序]\nsources: [太史公自序]\nevent_ids: [130-017]\ndate: \"[约公元前104年]\"\n---\n\n# 与壶遂论春秋\n\n> 上大夫壶遂问孔子何为作春秋。司马迁引董仲舒之言论春秋为礼义之大宗、王道之大者。壶遂质疑今有明君何需作此，迁答所述乃故事非如孔子之作，是述而非作。\n\n**主要人物**：壶遂、迁\n\n## 事件经过\n\n上大夫壶遂问孔子何为作春秋。司马迁引董仲舒之言论春秋为礼义之大宗、王道之大者。壶遂质疑今有明君何需作此，迁答所述乃故事非如孔子之作，是述而非作。\n\n## 原文\n\n> 上大夫壶遂曰：'昔孔子何为而作春秋哉？'太史公曰：'余闻董生曰……'\n\n"
+    },
     {
       "rev_id": "20260423-152520-cf59c5",
       "timestamp": "2026-04-23T15:25:20Z",

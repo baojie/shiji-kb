@@ -1,8 +1,18 @@
 {
   "page": "夏太后死",
-  "latest_rev_id": "20260423-155036-07a2a6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160807-f6fbfb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160807-f6fbfb",
+      "timestamp": "2026-04-23T16:08:07Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155036-07a2a6",
+      "content_hash": "sha256:f6fbfb25788794e4a38aea927d9e5a28113b5b29a9e4ec8a84be5c77a57709d7",
+      "size": 536,
+      "content": "paragraph_refs:\n  006-013: \"[8.4]\"\nevent_type: 家族事件\n---\nid: \"夏太后死\"\ntype: event\ntitle: 夏太后死\ndescription: 七年夏，太后去世。将军蒙骜亦卒于同年。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-013]\ndate: \"〖%七年夏〗 （公元前240年）\"\n---\n\n# 夏太后死\n\n> 七年夏，太后去世。将军蒙骜亦卒于同年。\n\n**主要人物**：太后\n\n## 事件经过\n\n七年夏，太后去世。将军蒙骜亦卒于同年。\n\n## 原文\n\n> 夏太后死。\n\n"
+    },
     {
       "rev_id": "20260423-155036-07a2a6",
       "timestamp": "2026-04-23T15:50:36Z",

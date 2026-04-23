@@ -1,8 +1,18 @@
 {
   "page": "封皇子为诸侯王",
-  "latest_rev_id": "20260423-155119-20dfe7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160929-6bceb5",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160929-6bceb5",
+      "timestamp": "2026-04-23T16:09:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155119-20dfe7",
+      "content_hash": "sha256:6bceb50869869df1fdbe441ff4a6d1b2c32a557e29281b4e556bf8e06f678aa0",
+      "size": 1051,
+      "content": "paragraph_refs:\n  010-020: \"[19.1]-[19.3]\"\nevent_type: 政治活动\n---\nid: \"封皇子为诸侯王\"\ntype: event\ntitle: 封皇子为诸侯王\ndescription: 有司请立皇子为诸侯王。帝立赵幽王少子辟彊为河间王，朱虚侯为城阳王，东牟侯为济北王，皇子武为代王、参为太原王、揖为梁王。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-020]\ndate: \"〖%三月〗 （公元前178年）\"\n---\n\n# 封皇子为诸侯王\n\n> 有司请立皇子为诸侯王。帝立赵幽王少子辟彊为河间王，朱虚侯为城阳王，东牟侯为济北王，皇子武为代王、参为太原王、揖为梁王。\n\n**主要人物**：刘兴居、刘章、参、揖、武、辟彊\n\n## 事件经过\n\n有司请立皇子为诸侯王。帝立赵幽王少子辟彊为河间王，朱虚侯为城阳王，东牟侯为济北王，皇子武为代王、参为太原王、揖为梁王。\n\n## 原文\n\n> 乃立赵幽王少子辟彊为河间王……皇子武为代王，子参为太原王，子揖为梁王。\n\n"
+    },
     {
       "rev_id": "20260423-155119-20dfe7",
       "timestamp": "2026-04-23T15:51:19Z",

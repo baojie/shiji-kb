@@ -1,8 +1,18 @@
 {
   "page": "孔子修诗书礼乐",
-  "latest_rev_id": "20260423-152641-d099ea",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160850-98e02c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160850-98e02c",
+      "timestamp": "2026-04-23T16:08:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152641-d099ea",
+      "content_hash": "sha256:98e02c833efdf2e285f1dc47fdcc32009f4a82343c3f6bf5d518e613c0f17236",
+      "size": 1126,
+      "content": "paragraph_refs:\n  121-001: \"[0]\"\nevent_type: 文化活动\nlocation: \"齐、卫、鲁\"\n---\nid: \"孔子修诗书礼乐\"\ntype: event\ntitle: 孔子修诗书礼乐\ndescription: 周室衰微，礼乐崩坏，孔子于是论次诗书，修起礼乐。适齐闻韶三月不知肉味，自卫返鲁后正乐，使雅颂各得其所。周游七十余君而不遇用。\ntags: [史记, 事件, 儒林列传]\nsources: [儒林列传]\nevent_ids: [121-001]\ndate: \"[约公元前500年]\"\n---\n\n# 孔子修诗书礼乐\n\n> 周室衰微，礼乐崩坏，孔子于是论次诗书，修起礼乐。适齐闻韶三月不知肉味，自卫返鲁后正乐，使雅颂各得其所。周游七十余君而不遇用。\n\n**主要人物**：仲尼、孔子\n\n## 事件经过\n\n周室衰微，礼乐崩坏，孔子于是论次诗书，修起礼乐。适齐闻韶三月不知肉味，自卫返鲁后正乐，使雅颂各得其所。周游七十余君而不遇用。\n\n## 原文\n\n> 夫周室衰而关雎作，幽、厉微而礼乐坏……於是论次诗书，修起礼乐。適齐闻韶，三月不知肉味。自卫返鲁，然後乐正，雅颂各得其所。\n\n"
+    },
     {
       "rev_id": "20260423-152641-d099ea",
       "timestamp": "2026-04-23T15:26:41Z",

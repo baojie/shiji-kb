@@ -1,8 +1,18 @@
 {
   "page": "召公藏太子",
-  "latest_rev_id": "20260423-155011-6bd046",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160707-a66986",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160707-a66986",
+      "timestamp": "2026-04-23T16:07:07Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155011-6bd046",
+      "content_hash": "sha256:a6698658a2867c1357b8b03906f0c9b4be502a379090c9fed40986aa1ca58b8c",
+      "size": 776,
+      "content": "paragraph_refs:\n  004-037: \"[31]\"\nevent_type: 家族事件\n---\nid: \"召公藏太子\"\ntype: event\ntitle: 召公藏太子\ndescription: 厉王太子静藏匿于召公之家，国人闻之围之。召公以己子代王太子，太子竟得脱。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-037]\ndate: \"（公元前841年）\"\n---\n\n# 召公藏太子\n\n> 厉王太子静藏匿于召公之家，国人闻之围之。召公以己子代王太子，太子竟得脱。\n\n**主要人物**：召公、太子静\n\n## 事件经过\n\n厉王太子静藏匿于召公之家，国人闻之围之。召公以己子代王太子，太子竟得脱。\n\n## 原文\n\n> 厉王太子静匿召公之家，国人闻之，乃围之。……乃以其子代王太子，太子竟得脱。\n\n"
+    },
     {
       "rev_id": "20260423-155011-6bd046",
       "timestamp": "2026-04-23T15:50:11Z",

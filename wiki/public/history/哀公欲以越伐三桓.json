@@ -1,8 +1,18 @@
 {
   "page": "哀公欲以越伐三桓",
-  "latest_rev_id": "20260423-155028-a3d040",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160754-c9e38e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160754-c9e38e",
+      "timestamp": "2026-04-23T16:07:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155028-a3d040",
+      "content_hash": "sha256:c9e38e0cf15f921e312ab6a6d81cceb22ce1bed7d8fe59e9e021f46dc4e4a367",
+      "size": 1117,
+      "content": "paragraph_refs:\n  033-029: \"[23.7]\"\nevent_type: 政治活动\nlocation: \"鲁\"\n---\nid: \"哀公欲以越伐三桓\"\ntype: event\ntitle: 哀公欲以越伐三桓\ndescription: 哀公二十七年，哀公患三桓欲以越伐之。八月三桓攻公，公奔卫，去邹至越。国人迎公复归，卒于有山氏。子宁立为悼公。三桓胜，鲁如小侯。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-029]\ndate: \"〖%二十七年〗 （公元前468年）\"\n---\n\n# 哀公欲以越伐三桓\n\n> 哀公二十七年，哀公患三桓欲以越伐之。八月三桓攻公，公奔卫，去邹至越。国人迎公复归，卒于有山氏。子宁立为悼公。三桓胜，鲁如小侯。\n\n**主要人物**：三桓、哀公\n\n## 事件经过\n\n哀公二十七年，哀公患三桓欲以越伐之。八月三桓攻公，公奔卫，去邹至越。国人迎公复归，卒于有山氏。子宁立为悼公。三桓胜，鲁如小侯。\n\n## 原文\n\n> 二十七年春...公欲以越伐三桓。八月,哀公如陉氏。三桓攻公,公奔于卫...国人迎哀公复归,卒于有山氏。\n\n"
+    },
     {
       "rev_id": "20260423-155028-a3d040",
       "timestamp": "2026-04-23T15:50:28Z",

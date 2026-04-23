@@ -1,8 +1,18 @@
 {
   "page": "共叔段之乱",
-  "latest_rev_id": "20260423-154933-98f643",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160610-5e8120",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160610-5e8120",
+      "timestamp": "2026-04-23T16:06:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154933-98f643",
+      "content_hash": "sha256:5e8120d43b7119c0fddd459c7a7ca445cf916ff74bfed4d679f6b956ec54db24",
+      "size": 1016,
+      "content": "paragraph_refs:\n  042-005: \"[5]\"\nevent_type: 战争\nlocation: \"京、鄢、共\"\n---\nid: \"共叔段之乱\"\ntype: event\ntitle: 共叔段之乱\ndescription: 庄公元年，封弟段于京。段缮治甲兵，与其母武姜谋袭郑。二十二年，段果袭郑，武姜为内应。庄公发兵伐段，段走鄢，鄢溃，出奔共。\ntags: [史记, 事件, 郑世家]\nsources: [郑世家]\nevent_ids: [042-005]\ndate: \"〖;庄公〗〖%二十二年〗 （公元前722年）\"\n---\n\n# 共叔段之乱\n\n> 庄公元年，封弟段于京。段缮治甲兵，与其母武姜谋袭郑。二十二年，段果袭郑，武姜为内应。庄公发兵伐段，段走鄢，鄢溃，出奔共。\n\n**主要人物**：庄公、武姜、段\n\n## 事件经过\n\n庄公元年，封弟段于京。段缮治甲兵，与其母武姜谋袭郑。二十二年，段果袭郑，武姜为内应。庄公发兵伐段，段走鄢，鄢溃，出奔共。\n\n## 原文\n\n> 二十二年，段果袭郑，武姜为内应。庄公发兵伐段，段走。\n\n"
+    },
     {
       "rev_id": "20260423-154933-98f643",
       "timestamp": "2026-04-23T15:49:33Z",

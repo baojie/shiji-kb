@@ -1,8 +1,18 @@
 {
   "page": "从陈涉起兵",
-  "latest_rev_id": "20260423-152529-79a1f1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160527-8fe7b0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160527-8fe7b0",
+      "timestamp": "2026-04-23T16:05:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152529-79a1f1",
+      "content_hash": "sha256:8fe7b0b9ad106c941bd4d434d60398eacd349ed8ae64e907c3983e8a6909a657",
+      "size": 668,
+      "content": "paragraph_refs:\n  089-003: \"[3]\"\nevent_type: 战争\nlocation: \"陈\"\n---\nid: \"从陈涉起兵\"\ntype: event\ntitle: 从陈涉起兵\ndescription: 陈涉起蕲至入陈，兵数万。张耳、陈馀上谒，陈涉大喜。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-003]\ndate: \"（公元前209年）\"\n---\n\n# 从陈涉起兵\n\n> 陈涉起蕲至入陈，兵数万。张耳、陈馀上谒，陈涉大喜。\n\n**主要人物**：张耳、陈涉、陈馀\n\n## 事件经过\n\n陈涉起蕲至入陈，兵数万。张耳、陈馀上谒，陈涉大喜。\n\n## 原文\n\n> 陈涉起蕲，至入陈，兵数万。张耳、陈馀上谒陈涉。\n\n"
+    },
     {
       "rev_id": "20260423-152529-79a1f1",
       "timestamp": "2026-04-23T15:25:29Z",

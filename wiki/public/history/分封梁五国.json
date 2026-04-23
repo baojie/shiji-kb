@@ -1,8 +1,18 @@
 {
   "page": "分封梁五国",
-  "latest_rev_id": "20260423-154941-6935de",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160620-9c331a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160620-9c331a",
+      "timestamp": "2026-04-23T16:06:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154941-6935de",
+      "content_hash": "sha256:9c331aa877289e2515eb50eb1ff89ef9443e0a8f49becedbc8e89f55541d868a",
+      "size": 924,
+      "content": "paragraph_refs:\n  058-018: \"[14]\"\nevent_type: 继位\nlocation: \"梁\"\n---\nid: \"分封梁五国\"\ntype: event\ntitle: 分封梁五国\ndescription: 梁孝王长子买为梁王是为共王，子明为济川王，子彭离为济东王，子定为山阳王，子不识为济阴王。\ntags: [史记, 事件, 梁孝王世家]\nsources: [梁孝王世家]\nevent_ids: [058-018]\ndate: \"（公元前144年）\"\n---\n\n# 分封梁五国\n\n> 梁孝王长子买为梁王是为共王，子明为济川王，子彭离为济东王，子定为山阳王，子不识为济阴王。\n\n**主要人物**：刘不识、刘买、刘定、刘彭离、刘明\n\n## 事件经过\n\n梁孝王长子买为梁王是为共王，子明为济川王，子彭离为济东王，子定为山阳王，子不识为济阴王。\n\n## 原文\n\n> 梁孝王长子买为梁王，是为共王；子明为济川王；子彭离为济东王；子定为山阳王；子不识为济阴王。\n\n"
+    },
     {
       "rev_id": "20260423-154941-6935de",
       "timestamp": "2026-04-23T15:49:41Z",

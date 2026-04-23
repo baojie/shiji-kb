@@ -1,8 +1,18 @@
 {
   "page": "文王胡称病不入见而薨",
-  "latest_rev_id": "20260423-155212-8de23a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161111-d6ee54",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161111-d6ee54",
+      "timestamp": "2026-04-23T16:11:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155212-8de23a",
+      "content_hash": "sha256:d6ee54c84eb2fd9f650699613e28431b3ec5ae43ef6e8a15c44cd4e991a2b2f9",
+      "size": 862,
+      "content": "paragraph_refs:\n  113-012: \"[5]\"\nevent_type: 家族事件\nlocation: \"南越\"\n---\nid: \"文王胡称病不入见而薨\"\ntype: event\ntitle: 文王胡称病不入见而薨\ndescription: 文王胡受大臣谏阻，终不入见天子。后十余年胡实病甚，太子婴齐请归。胡薨，谥为文王。\ntags: [史记, 事件, 南越列传]\nsources: [南越列传]\nevent_ids: [113-012]\ndate: \"[约公元前125年]\"\n---\n\n# 文王胡称病不入见而薨\n\n> 文王胡受大臣谏阻，终不入见天子。后十余年胡实病甚，太子婴齐请归。胡薨，谥为文王。\n\n**主要人物**：胡\n\n## 事件经过\n\n文王胡受大臣谏阻，终不入见天子。后十余年胡实病甚，太子婴齐请归。胡薨，谥为文王。\n\n## 原文\n\n> 於是胡称病，竟不入见。後十馀岁，胡实病甚，太子婴齐请归。胡薨，谥为文王。\n\n"
+    },
     {
       "rev_id": "20260423-155212-8de23a",
       "timestamp": "2026-04-23T15:52:12Z",

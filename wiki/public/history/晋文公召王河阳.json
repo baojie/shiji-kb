@@ -1,8 +1,18 @@
 {
   "page": "晋文公召王河阳",
-  "latest_rev_id": "20260423-152740-2687af",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161116-3b39b5",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161116-3b39b5",
+      "timestamp": "2026-04-23T16:11:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152740-2687af",
+      "content_hash": "sha256:3b39b5a016df33567e5f7ad0a6cc499332fa93167a7e0515c972ea394e81b6d1",
+      "size": 952,
+      "content": "paragraph_refs:\n  004-053: \"[47]\"\nevent_type: 政治活动\nlocation: \"河阳、践土\"\n---\nid: \"晋文公召王河阳\"\ntype: event\ntitle: 晋文公召王河阳\ndescription: 襄王二十年，晋文公召襄王会于河阳、践土，诸侯毕朝。书讳曰\"天子狩于河阳\"，实为诸侯召天子之非礼之举。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-053]\ndate: \"〖%二十年〗 （公元前632年）\"\n---\n\n# 晋文公召王河阳\n\n> 襄王二十年，晋文公召襄王会于河阳、践土，诸侯毕朝。书讳曰\"天子狩于河阳\"，实为诸侯召天子之非礼之举。\n\n**主要人物**：晋文公、襄王\n\n## 事件经过\n\n襄王二十年，晋文公召襄王会于河阳、践土，诸侯毕朝。书讳曰\"天子狩于河阳\"，实为诸侯召天子之非礼之举。\n\n## 原文\n\n> 二十年，晋文公召襄王，襄王会之河阳、践土，诸侯毕朝，书讳曰'天子狩于河阳'。\n\n"
+    },
     {
       "rev_id": "20260423-152740-2687af",
       "timestamp": "2026-04-23T15:27:40Z",

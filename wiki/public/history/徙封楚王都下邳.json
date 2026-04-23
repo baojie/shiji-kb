@@ -1,8 +1,18 @@
 {
   "page": "徙封楚王都下邳",
-  "latest_rev_id": "20260423-152727-2b79f1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161053-09eb3c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161053-09eb3c",
+      "timestamp": "2026-04-23T16:10:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152727-2b79f1",
+      "content_hash": "sha256:09eb3c620350d627018c89d6e9875dba0904dc5e473bb22b88016bd8c01b3f34",
+      "size": 831,
+      "content": "paragraph_refs:\n  092-021: \"[11.1]\"\nevent_type: 继位\nlocation: \"下邳\"\n---\nid: \"徙封楚王都下邳\"\ntype: event\ntitle: 徙封楚王都下邳\ndescription: 汉五年正月，高祖将齐王韩信徙封为楚王，建都下邳。韩信由齐王改封楚王，回到其故里附近。\ntags: [史记, 事件, 淮阴侯列传]\nsources: [淮阴侯列传]\nevent_ids: [092-021]\ndate: \"〖%汉五年正月〗 （公元前202年）\"\n---\n\n# 徙封楚王都下邳\n\n> 汉五年正月，高祖将齐王韩信徙封为楚王，建都下邳。韩信由齐王改封楚王，回到其故里附近。\n\n**主要人物**：韩信\n\n## 事件经过\n\n汉五年正月，高祖将齐王韩信徙封为楚王，建都下邳。韩信由齐王改封楚王，回到其故里附近。\n\n## 原文\n\n> 汉五年正月，徙$齐王信$为楚王，都下邳。\n\n"
+    },
     {
       "rev_id": "20260423-152727-2b79f1",
       "timestamp": "2026-04-23T15:27:27Z",

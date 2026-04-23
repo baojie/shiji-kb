@@ -1,8 +1,18 @@
 {
   "page": "张楚并起兵乱三十年",
-  "latest_rev_id": "20260423-152714-4b8350",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161027-9db05b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161027-9db05b",
+      "timestamp": "2026-04-23T16:10:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152714-4b8350",
+      "content_hash": "sha256:9db05b787848ab1c646218f234cc5fd3a1d32ba173570b2b732c25d52a3d74c8",
+      "size": 651,
+      "content": "paragraph_refs:\n  027-008: \"[118]\"\nevent_type: 战争\n---\nid: \"张楚并起兵乱三十年\"\ntype: event\ntitle: 张楚并起兵乱三十年\ndescription: 秦统一后，因张楚并起，三十年间兵相蹂藉，不可胜数。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-008]\ndate: \"（公元前209年）\"\n---\n\n# 张楚并起兵乱三十年\n\n> 秦统一后，因张楚并起，三十年间兵相蹂藉，不可胜数。\n\n**主要人物**：张楚\n\n## 事件经过\n\n秦统一后，因张楚并起，三十年间兵相蹂藉，不可胜数。\n\n## 原文\n\n> 因以张楚并起，三十年之间兵相骀藉，不可胜数。\n\n"
+    },
     {
       "rev_id": "20260423-152714-4b8350",
       "timestamp": "2026-04-23T15:27:14Z",

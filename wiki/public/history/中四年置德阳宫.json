@@ -1,8 +1,18 @@
 {
   "page": "中四年置德阳宫",
-  "latest_rev_id": "20260423-154903-cc19b8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160507-cced6d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160507-cced6d",
+      "timestamp": "2026-04-23T16:05:07Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154903-cc19b8",
+      "content_hash": "sha256:cced6dde1b068b2230b1ac421fb5275d597f4280fbebcd0c332aa9227fde143b",
+      "size": 523,
+      "content": "paragraph_refs:\n  011-032: \"[17.1]\"\nevent_type: 建设\nlocation: \"德阳宫\"\n---\nid: \"中四年置德阳宫\"\ntype: event\ntitle: 中四年置德阳宫\ndescription: 中四年三月置德阳宫。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-032]\ndate: \"〖%中四年三月〗 （公元前146年）\"\n---\n\n# 中四年置德阳宫\n\n> 中四年三月置德阳宫。\n\n**主要人物**：孝景皇帝\n\n## 事件经过\n\n中四年三月置德阳宫。\n\n## 原文\n\n> 中四年三月，置德阳宫。\n\n"
+    },
     {
       "rev_id": "20260423-154903-cc19b8",
       "timestamp": "2026-04-23T15:49:03Z",

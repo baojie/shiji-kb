@@ -1,8 +1,18 @@
 {
   "page": "廉颇伐齐拔几",
-  "latest_rev_id": "20260423-152707-779e1e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161015-bf4421",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161015-bf4421",
+      "timestamp": "2026-04-23T16:10:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152707-779e1e",
+      "content_hash": "sha256:bf44215604d93ebcefb026ce06ee35b46de9387f7460b150813da4db3ab92a2f",
+      "size": 573,
+      "content": "paragraph_refs:\n  081-009: \"[10.2]\"\nevent_type: 战争\nlocation: \"几\"\n---\nid: \"廉颇伐齐拔几\"\ntype: event\ntitle: 廉颇伐齐拔几\ndescription: 两年后，廉颇再次伐齐，攻拔几地。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-009]\ndate: \"〖%居二年〗 [公元前277年]\"\n---\n\n# 廉颇伐齐拔几\n\n> 两年后，廉颇再次伐齐，攻拔几地。\n\n**主要人物**：廉颇\n\n## 事件经过\n\n两年后，廉颇再次伐齐，攻拔几地。\n\n## 原文\n\n> 居二年，廉颇复伐齐几，拔之。\n\n"
+    },
     {
       "rev_id": "20260423-152707-779e1e",
       "timestamp": "2026-04-23T15:27:07Z",

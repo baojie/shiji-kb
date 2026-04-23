@@ -1,8 +1,18 @@
 {
   "page": "彗星出东北",
-  "latest_rev_id": "20260423-155142-141ab3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161046-1361df",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161046-1361df",
+      "timestamp": "2026-04-23T16:10:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155142-141ab3",
+      "content_hash": "sha256:1361df891bfaa53f5c68fd323553e9310c22a269c6c206448417996f55c4d28a",
+      "size": 516,
+      "content": "paragraph_refs:\n  011-008: \"[3.7]\"\nevent_type: 自然灾害\n---\nid: \"彗星出东北\"\ntype: event\ntitle: 彗星出东北\ndescription: 二年有彗星出东北方向，为当时所记天象异变。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-008]\ndate: \"（公元前155年）\"\n---\n\n# 彗星出东北\n\n> 二年有彗星出东北方向，为当时所记天象异变。\n\n## 事件经过\n\n二年有彗星出东北方向，为当时所记天象异变。\n\n## 原文\n\n> 彗星出东北。\n\n"
+    },
     {
       "rev_id": "20260423-155142-141ab3",
       "timestamp": "2026-04-23T15:51:42Z",

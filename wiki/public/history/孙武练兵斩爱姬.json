@@ -1,8 +1,18 @@
 {
   "page": "孙武练兵斩爱姬",
-  "latest_rev_id": "20260423-152645-fa41d3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160856-67f5b6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160856-67f5b6",
+      "timestamp": "2026-04-23T16:08:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152645-fa41d3",
+      "content_hash": "sha256:67f5b68d34a6dfa563684ac3422cecf1ca76045f49aa40b34c01c30e8526d1a6",
+      "size": 1072,
+      "content": "paragraph_refs:\n  065-001: \"[1]\"\nevent_type: 政治整顿\nlocation: \"吴\"\n---\nid: \"孙武练兵斩爱姬\"\ntype: event\ntitle: 孙武练兵斩爱姬\ndescription: 孙武以兵法见吴王阖庐，阖庐以宫中美女试之。妇人不从令而笑，孙武三令五申后斩队长二人。吴王虽不忍，孙武坚持军法，妇人遂皆中规矩绳墨。\ntags: [史记, 事件, 孙子吴起列传]\nsources: [孙子吴起列传]\nevent_ids: [065-001]\ndate: \"（公元前512年）\"\n---\n\n# 孙武练兵斩爱姬\n\n> 孙武以兵法见吴王阖庐，阖庐以宫中美女试之。妇人不从令而笑，孙武三令五申后斩队长二人。吴王虽不忍，孙武坚持军法，妇人遂皆中规矩绳墨。\n\n**主要人物**：孙子、孙武\n\n## 事件经过\n\n孙武以兵法见吴王阖庐，阖庐以宫中美女试之。妇人不从令而笑，孙武三令五申后斩队长二人。吴王虽不忍，孙武坚持军法，妇人遂皆中规矩绳墨。\n\n## 原文\n\n> 孙子曰：'臣既已受命为将，将在军，君命有所不受。'遂斩队长二人以徇。\n\n"
+    },
     {
       "rev_id": "20260423-152645-fa41d3",
       "timestamp": "2026-04-23T15:26:45Z",

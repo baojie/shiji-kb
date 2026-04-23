@@ -1,8 +1,18 @@
 {
   "page": "伐湘山树",
-  "latest_rev_id": "20260423-154918-fad337",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160540-a9b9b2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160540-a9b9b2",
+      "timestamp": "2026-04-23T16:05:40Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154918-fad337",
+      "content_hash": "sha256:a9b9b251f07866b6952aa04aac13aef4bde6d522007e9fd6be51a14adba53b5d",
+      "size": 899,
+      "content": "paragraph_refs:\n  006-063: \"[50.1]-[50.4]\"\nevent_type: 政治活动\nlocation: \"湘山\"\n---\nid: \"伐湘山树\"\ntype: event\ntitle: 伐湘山树\ndescription: 始皇浮江至湘山祠，逢大风几不得渡。得知湘君为尧女、舜妻，始皇大怒，使刑徒三千人伐尽湘山树木，赭其山。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-063]\ndate: \"〖%二十八年〗 （公元前219年）\"\n---\n\n# 伐湘山树\n\n> 始皇浮江至湘山祠，逢大风几不得渡。得知湘君为尧女、舜妻，始皇大怒，使刑徒三千人伐尽湘山树木，赭其山。\n\n**主要人物**：始皇\n\n## 事件经过\n\n始皇浮江至湘山祠，逢大风几不得渡。得知湘君为尧女、舜妻，始皇大怒，使刑徒三千人伐尽湘山树木，赭其山。\n\n## 原文\n\n> 於是始皇大怒，使刑徒三千人皆伐湘山树，赭其山。\n\n"
+    },
     {
       "rev_id": "20260423-154918-fad337",
       "timestamp": "2026-04-23T15:49:18Z",

@@ -1,8 +1,18 @@
 {
   "page": "季札出使诸国",
-  "latest_rev_id": "20260423-152649-4b21c8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160908-654781",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160908-654781",
+      "timestamp": "2026-04-23T16:09:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152649-4b21c8",
+      "content_hash": "sha256:6547813f0735517e9d0a6664c27ca04ee3bd9e7fc17f642b7378ca6edf560b6d",
+      "size": 1063,
+      "content": "paragraph_refs:\n  031-010: \"[11-14]\"\nevent_type: 政治活动\nlocation: \"齐、郑、卫、晋\"\n---\nid: \"季札出使诸国\"\ntype: event\ntitle: 季札出使诸国\ndescription: 季札离鲁后出使齐、郑、卫、晋。劝晏平仲速纳邑以免祸，告子产郑政将及于子，赞卫多君子，预言晋国之政卒归三家（赵、韩、魏）。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-010]\ndate: \"[约公元前544年]\"\n---\n\n# 季札出使诸国\n\n> 季札离鲁后出使齐、郑、卫、晋。劝晏平仲速纳邑以免祸，告子产郑政将及于子，赞卫多君子，预言晋国之政卒归三家（赵、韩、魏）。\n\n**主要人物**：子产、季札、晏平仲、赵文子、韩宣子、魏献子\n\n## 事件经过\n\n季札离鲁后出使齐、郑、卫、晋。劝晏平仲速纳邑以免祸，告子产郑政将及于子，赞卫多君子，预言晋国之政卒归三家（赵、韩、魏）。\n\n## 原文\n\n> 適晋，说赵文子、韩宣子、魏献子曰：'晋国其萃於三家乎！'\n\n"
+    },
     {
       "rev_id": "20260423-152649-4b21c8",
       "timestamp": "2026-04-23T15:26:49Z",

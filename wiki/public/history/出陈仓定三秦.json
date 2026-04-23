@@ -1,8 +1,18 @@
 {
   "page": "出陈仓定三秦",
-  "latest_rev_id": "20260423-154938-d1bf1e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160617-494892",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160617-494892",
+      "timestamp": "2026-04-23T16:06:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154938-d1bf1e",
+      "content_hash": "sha256:49489273713bcd3d941ab61b9938ce379a29c5e8f49e588a0baaf37cc5314585",
+      "size": 1080,
+      "content": "paragraph_refs:\n  092-008: \"[5.1]\"\nevent_type: 战争\nlocation: \"陈仓\"\n---\nid: \"出陈仓定三秦\"\ntype: event\ntitle: 出陈仓定三秦\ndescription: 八月，汉王举兵东出陈仓，平定三秦。汉二年出关收魏、河南，韩、殷王皆降。四月至彭城，汉兵败散。韩信复收兵与汉王会荥阳，击破楚京索间。\ntags: [史记, 事件, 淮阴侯列传]\nsources: [淮阴侯列传]\nevent_ids: [092-008]\ndate: \"〖%八月〗 （公元前206年）\"\n---\n\n# 出陈仓定三秦\n\n> 八月，汉王举兵东出陈仓，平定三秦。汉二年出关收魏、河南，韩、殷王皆降。四月至彭城，汉兵败散。韩信复收兵与汉王会荥阳，击破楚京索间。\n\n**主要人物**：汉王、韩信\n\n## 事件经过\n\n八月，汉王举兵东出陈仓，平定三秦。汉二年出关收魏、河南，韩、殷王皆降。四月至彭城，汉兵败散。韩信复收兵与汉王会荥阳，击破楚京索间。\n\n## 原文\n\n> 八月，汉王举兵东出陈仓，定三秦。汉二年，出关，收魏、河南，韩、殷王皆降。\n\n"
+    },
     {
       "rev_id": "20260423-154938-d1bf1e",
       "timestamp": "2026-04-23T15:49:38Z",

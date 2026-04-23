@@ -1,8 +1,18 @@
 {
   "page": "斩会稽守起兵",
-  "latest_rev_id": "20260423-155213-fb93da",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161111-af0f9b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161111-af0f9b",
+      "timestamp": "2026-04-23T16:11:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155213-fb93da",
+      "content_hash": "sha256:af0f9be8855ab37e6d95cbc17bc0415c8927a058dc1ba3ddeb01ce2d7208e64c",
+      "size": 1184,
+      "content": "paragraph_refs:\n  007-005: \"[7.2]-[12]\"\nevent_type: 战争\nlocation: \"会稽\"\n---\nid: \"斩会稽守起兵\"\ntype: event\ntitle: 斩会稽守起兵\ndescription: 会稽郡守通欲起兵反秦，召项梁商议。项梁设计让项籍持剑等候，趁机由项籍斩杀郡守，夺取印绶。项梁遂举吴中兵，得精兵八千人，自任会稽守，项籍为裨将。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-005]\ndate: \"〖%二世元年九月〗 （公元前209年）\"\n---\n\n# 斩会稽守起兵\n\n> 会稽郡守通欲起兵反秦，召项梁商议。项梁设计让项籍持剑等候，趁机由项籍斩杀郡守，夺取印绶。项梁遂举吴中兵，得精兵八千人，自任会稽守，项籍为裨将。\n\n**主要人物**：项梁、项籍\n\n## 事件经过\n\n会稽郡守通欲起兵反秦，召项梁商议。项梁设计让项籍持剑等候，趁机由项籍斩杀郡守，夺取印绶。项梁遂举吴中兵，得精兵八千人，自任会稽守，项籍为裨将。\n\n## 原文\n\n> 於是籍遂拔剑斩守头。项梁持守头，佩其印绶。门下大惊，扰乱，籍所击杀数十百人。一府中皆慴伏，莫敢起。\n\n"
+    },
     {
       "rev_id": "20260423-155213-fb93da",
       "timestamp": "2026-04-23T15:52:13Z",

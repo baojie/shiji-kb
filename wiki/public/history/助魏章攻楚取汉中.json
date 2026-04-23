@@ -1,8 +1,18 @@
 {
   "page": "助魏章攻楚取汉中",
-  "latest_rev_id": "20260423-152554-80ca07",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160629-936de9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160629-936de9",
+      "timestamp": "2026-04-23T16:06:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152554-80ca07",
+      "content_hash": "sha256:936de90b54310948b6bcec75a7387878b31a2756e446aa2f63622826d87d2ff8",
+      "size": 903,
+      "content": "paragraph_refs:\n  071-003: \"[2]\"\nevent_type: 战争\nlocation: \"汉中\"\n---\nid: \"助魏章攻楚取汉中\"\ntype: event\ntitle: 助魏章攻楚取汉中\ndescription: 樗里子协助魏章攻打楚国，击败楚将屈丐，夺取汉中之地。此役后秦国封赏樗里子，号为严君。\ntags: [史记, 事件, 樗里子甘茂列传]\nsources: [樗里子甘茂列传]\nevent_ids: [071-003]\ndate: \"〖%秦惠王二十六年〗（公元前312年）\"\n---\n\n# 助魏章攻楚取汉中\n\n> 樗里子协助魏章攻打楚国，击败楚将屈丐，夺取汉中之地。此役后秦国封赏樗里子，号为严君。\n\n**主要人物**：樗里子、魏章\n\n## 事件经过\n\n樗里子协助魏章攻打楚国，击败楚将屈丐，夺取汉中之地。此役后秦国封赏樗里子，号为严君。\n\n## 原文\n\n> 明年，助魏章攻楚，败楚将屈丐，取汉中地。秦封樗里子，号为严君。\n\n"
+    },
     {
       "rev_id": "20260423-152554-80ca07",
       "timestamp": "2026-04-23T15:25:54Z",

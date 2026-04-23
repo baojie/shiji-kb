@@ -1,8 +1,18 @@
 {
   "page": "三家列为诸侯",
-  "latest_rev_id": "20260423-154853-93a8ce",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160450-357868",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160450-357868",
+      "timestamp": "2026-04-23T16:04:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154853-93a8ce",
+      "content_hash": "sha256:357868b6209e1215ee8e890450e1ebc84addae06192707e4720b14671a760c9a",
+      "size": 620,
+      "content": "paragraph_refs:\n  044-007: \"[5.4]\"\nevent_type: 政治活动\n---\nid: \"三家列为诸侯\"\ntype: event\ntitle: 三家列为诸侯\ndescription: 魏、赵、韩列为诸侯，正式从晋卿升为独立诸侯国。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-007]\ndate: \"〖%二十二年〗 （公元前403年）\"\n---\n\n# 三家列为诸侯\n\n> 魏、赵、韩列为诸侯，正式从晋卿升为独立诸侯国。\n\n**主要人物**：赵、韩、魏\n\n## 事件经过\n\n魏、赵、韩列为诸侯，正式从晋卿升为独立诸侯国。\n\n## 原文\n\n> 二十二年，魏、赵、韩列为诸侯。\n\n"
+    },
     {
       "rev_id": "20260423-154853-93a8ce",
       "timestamp": "2026-04-23T15:48:53Z",

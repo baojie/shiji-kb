@@ -1,8 +1,18 @@
 {
   "page": "唐雎说秦救魏",
-  "latest_rev_id": "20260423-155029-df59dd",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160756-b4c40f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160756-b4c40f",
+      "timestamp": "2026-04-23T16:07:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155029-df59dd",
+      "content_hash": "sha256:b4c40fe37b0997ac578ef145d1fed69bcb902e5f1ef2617ac6906802a1f8fb10",
+      "size": 889,
+      "content": "paragraph_refs:\n  044-018: \"[21]\"\nevent_type: 政治活动\n---\nid: \"唐雎说秦救魏\"\ntype: event\ntitle: 唐雎说秦救魏\ndescription: 齐、楚攻魏，魏求救秦不至。唐雎年九十余，西说秦王，指出若不救则魏将割地约从，秦失东藩而强二敌。秦昭王遂发兵救魏。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-018]\ndate: \"[约公元前276年]\"\n---\n\n# 唐雎说秦救魏\n\n> 齐、楚攻魏，魏求救秦不至。唐雎年九十余，西说秦王，指出若不救则魏将割地约从，秦失东藩而强二敌。秦昭王遂发兵救魏。\n\n**主要人物**：唐雎、秦昭王\n\n## 事件经过\n\n齐、楚攻魏，魏求救秦不至。唐雎年九十余，西说秦王，指出若不救则魏将割地约从，秦失东藩而强二敌。秦昭王遂发兵救魏。\n\n## 原文\n\n> 於是秦昭王遽为发兵救魏。\n\n"
+    },
     {
       "rev_id": "20260423-155029-df59dd",
       "timestamp": "2026-04-23T15:50:29Z",

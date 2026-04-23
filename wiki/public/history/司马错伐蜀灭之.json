@@ -1,8 +1,18 @@
 {
   "page": "司马错伐蜀灭之",
-  "latest_rev_id": "20260423-152606-0b6e20",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160712-6eda99",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160712-6eda99",
+      "timestamp": "2026-04-23T16:07:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152606-0b6e20",
+      "content_hash": "sha256:6eda99a862ba20ee9a7520bd3d812b0aa206823253a1478326eba7dc7e82eb8b",
+      "size": 790,
+      "content": "paragraph_refs:\n  005-097: \"[59.6]\"\nevent_type: 战争\nlocation: \"中都、西阳\"\n---\nid: \"司马错伐蜀灭之\"\ntype: event\ntitle: 司马错伐蜀灭之\ndescription: 更元九年，司马错率军伐蜀并灭之，为秦取得巴蜀粮仓。同时伐取赵国中都、西阳。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-097]\ndate: \"更元〖%九年〗 （公元前316年）\"\n---\n\n# 司马错伐蜀灭之\n\n> 更元九年，司马错率军伐蜀并灭之，为秦取得巴蜀粮仓。同时伐取赵国中都、西阳。\n\n**主要人物**：司马错\n\n## 事件经过\n\n更元九年，司马错率军伐蜀并灭之，为秦取得巴蜀粮仓。同时伐取赵国中都、西阳。\n\n## 原文\n\n> 九年，司马错伐蜀，灭之。伐取赵中都、西阳。\n\n"
+    },
     {
       "rev_id": "20260423-152606-0b6e20",
       "timestamp": "2026-04-23T15:26:06Z",

@@ -1,8 +1,18 @@
 {
   "page": "乐间奔赵赵围燕",
-  "latest_rev_id": "20260423-152527-e37e6c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160519-1d4f46",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160519-1d4f46",
+      "timestamp": "2026-04-23T16:05:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152527-e37e6c",
+      "content_hash": "sha256:1d4f467c2c3656a34cc99d6553535c389449b108de9c1404567d0ce9ff6f857e",
+      "size": 783,
+      "content": "paragraph_refs:\n  080-017: \"[15]\"\nevent_type: 战争\nlocation: \"燕\"\n---\nid: \"乐间奔赵赵围燕\"\ntype: event\ntitle: 乐间奔赵赵围燕\ndescription: 燕大败后乐间奔赵，赵军乘胜围燕。燕国被迫割地与赵求和，赵方解围而去。\ntags: [史记, 事件, 乐毅列传]\nsources: [乐毅列传]\nevent_ids: [080-017]\ndate: \"燕败于赵后 [公元前251年—前250年]\"\n---\n\n# 乐间奔赵赵围燕\n\n> 燕大败后乐间奔赵，赵军乘胜围燕。燕国被迫割地与赵求和，赵方解围而去。\n\n**主要人物**：乐乘、乐间\n\n## 事件经过\n\n燕大败后乐间奔赵，赵军乘胜围燕。燕国被迫割地与赵求和，赵方解围而去。\n\n## 原文\n\n> 於是乐间奔赵，赵遂围燕。燕重割地以与赵和，赵乃解而去。\n\n"
+    },
     {
       "rev_id": "20260423-152527-e37e6c",
       "timestamp": "2026-04-23T15:25:27Z",

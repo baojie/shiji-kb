@@ -1,8 +1,18 @@
 {
   "page": "廉颇奔魏",
-  "latest_rev_id": "20260423-152708-e9a753",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161016-b6507f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161016-b6507f",
+      "timestamp": "2026-04-23T16:10:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152708-e9a753",
+      "content_hash": "sha256:b6507fa7ad4db8af1c93257f3c826d15a3aee12aa5b9742397f6aa9db69fde47",
+      "size": 864,
+      "content": "paragraph_refs:\n  081-023: \"[20.1]-[20.3]\"\nevent_type: 政治活动\nlocation: \"大梁\"\n---\nid: \"廉颇奔魏\"\ntype: event\ntitle: 廉颇奔魏\ndescription: 赵孝成王卒，悼襄王立，以乐乘代廉颇。廉颇怒攻乐乘，乐乘走。廉颇遂出奔魏国大梁。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-023]\ndate: \"（公元前245年）\"\n---\n\n# 廉颇奔魏\n\n> 赵孝成王卒，悼襄王立，以乐乘代廉颇。廉颇怒攻乐乘，乐乘走。廉颇遂出奔魏国大梁。\n\n**主要人物**：乐乘、廉颇、悼襄王\n\n## 事件经过\n\n赵孝成王卒，悼襄王立，以乐乘代廉颇。廉颇怒攻乐乘，乐乘走。廉颇遂出奔魏国大梁。\n\n## 原文\n\n> 赵孝成王卒，子悼襄王立，使乐乘代廉颇。廉颇怒，攻乐乘，乐乘走。廉颇遂奔魏之大梁。\n\n"
+    },
     {
       "rev_id": "20260423-152708-e9a753",
       "timestamp": "2026-04-23T15:27:08Z",

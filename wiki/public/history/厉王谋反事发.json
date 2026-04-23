@@ -1,8 +1,18 @@
 {
   "page": "厉王谋反事发",
-  "latest_rev_id": "20260423-155007-ef88ec",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160701-0b879e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160701-0b879e",
+      "timestamp": "2026-04-23T16:07:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155007-ef88ec",
+      "content_hash": "sha256:0b879e8fac56f2a9fc108f886848fa2c6ab9e82c569e62c5e048b1fb79847ef9",
+      "size": 1027,
+      "content": "paragraph_refs:\n  118-005: \"[2]\"\nevent_type: 政治活动\nlocation: \"淮南、长安\"\n---\nid: \"厉王谋反事发\"\ntype: event\ntitle: 厉王谋反事发\ndescription: 六年，厉王令男子但等七十人与棘蒲侯柴武太子奇谋反于谷口，令人使闽越、匈奴。事觉治之，使使召淮南王至长安。\ntags: [史记, 事件, 淮南衡山列传]\nsources: [淮南衡山列传]\nevent_ids: [118-005]\ndate: \"〖%六年〗 （公元前174年）\"\n---\n\n# 厉王谋反事发\n\n> 六年，厉王令男子但等七十人与棘蒲侯柴武太子奇谋反于谷口，令人使闽越、匈奴。事觉治之，使使召淮南王至长安。\n\n**主要人物**：但、柴武太子奇、长\n\n## 事件经过\n\n六年，厉王令男子但等七十人与棘蒲侯柴武太子奇谋反于谷口，令人使闽越、匈奴。事觉治之，使使召淮南王至长安。\n\n## 原文\n\n> 六年，令男子但等七十人与棘蒲侯柴武太子奇谋，以輂车四十乘反谷口，令人使闽越、匈奴。事觉，治之。\n\n"
+    },
     {
       "rev_id": "20260423-155007-ef88ec",
       "timestamp": "2026-04-23T15:50:07Z",

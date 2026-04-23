@@ -1,8 +1,18 @@
 {
   "page": "吴终亡于越",
-  "latest_rev_id": "20260423-155022-f28ce2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160729-cc84c3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160729-cc84c3",
+      "timestamp": "2026-04-23T16:07:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155022-f28ce2",
+      "content_hash": "sha256:cc84c317704f0014776cf08e0efdfd7e7bf0bb54e2ba4e44c5bcfaf1e6bad661",
+      "size": 1034,
+      "content": "paragraph_refs:\n  066-021: \"[20]\"\nevent_type: 战争\nlocation: \"吴\"\n---\nid: \"吴终亡于越\"\ntype: event\ntitle: 吴终亡于越\ndescription: 吴王诛伍子胥后，大会诸侯于黄池以令周室。越王句践趁机袭杀吴太子、破吴兵。后九年越遂灭吴，杀王夫差，诛太宰嚭。伍子胥之预言应验。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-021]\ndate: \"（公元前473年）\"\n---\n\n# 吴终亡于越\n\n> 吴王诛伍子胥后，大会诸侯于黄池以令周室。越王句践趁机袭杀吴太子、破吴兵。后九年越遂灭吴，杀王夫差，诛太宰嚭。伍子胥之预言应验。\n\n**主要人物**：伍子胥\n\n## 事件经过\n\n吴王诛伍子胥后，大会诸侯于黄池以令周室。越王句践趁机袭杀吴太子、破吴兵。后九年越遂灭吴，杀王夫差，诛太宰嚭。伍子胥之预言应验。\n\n## 原文\n\n> 越王句践袭杀吴太子，破吴兵。\"\"後九年，越王句践遂灭吴，杀王夫差；而诛太宰嚭。\n\n"
+    },
     {
       "rev_id": "20260423-155022-f28ce2",
       "timestamp": "2026-04-23T15:50:22Z",

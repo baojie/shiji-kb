@@ -1,8 +1,18 @@
 {
   "page": "太甲悔过复位",
-  "latest_rev_id": "20260423-155053-77611b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160829-852b5b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160829-852b5b",
+      "timestamp": "2026-04-23T16:08:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155053-77611b",
+      "content_hash": "sha256:852b5ba9a39378df92ec578c1f674675d4a68b8333ae1bb028fa4aa7f37eddfd",
+      "size": 1115,
+      "content": "paragraph_refs:\n  003-015: \"[12]\"\nevent_type: 政治活动\nlocation: \"桐宫\"\n---\nid: \"太甲悔过复位\"\ntype: event\ntitle: 太甲悔过复位\ndescription: 太甲居桐宫三年，悔过自责，反归于善。伊尹迎太甲还政，太甲修德，诸侯归殷，百姓安宁。伊尹作太甲训三篇，褒称太甲为太宗。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-015]\ndate: \"〖%三年〗 [约公元前1574年]\"\n---\n\n# 太甲悔过复位\n\n> 太甲居桐宫三年，悔过自责，反归于善。伊尹迎太甲还政，太甲修德，诸侯归殷，百姓安宁。伊尹作太甲训三篇，褒称太甲为太宗。\n\n**主要人物**：伊尹、帝太甲\n\n## 事件经过\n\n太甲居桐宫三年，悔过自责，反归于善。伊尹迎太甲还政，太甲修德，诸侯归殷，百姓安宁。伊尹作太甲训三篇，褒称太甲为太宗。\n\n## 原文\n\n> 帝太甲居桐宫三年，悔过自责，反善，於是伊尹乃迎帝太甲而授之政。帝太甲修德，诸侯咸归殷，百姓以宁。伊尹嘉之，乃作太甲训三篇，襃帝太甲，称太宗。\n\n"
+    },
     {
       "rev_id": "20260423-155053-77611b",
       "timestamp": "2026-04-23T15:50:53Z",

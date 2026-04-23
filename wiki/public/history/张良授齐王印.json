@@ -1,8 +1,18 @@
 {
   "page": "张良授齐王印",
-  "latest_rev_id": "20260423-152717-e495ba",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161034-3411bc",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161034-3411bc",
+      "timestamp": "2026-04-23T16:10:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152717-e495ba",
+      "content_hash": "sha256:3411bc605cfa191c3e4064cdf9fae4839b3e55cc9bdc89bbab89be5b3ecd24fe",
+      "size": 772,
+      "content": "paragraph_refs:\n  055-013: \"[16]\"\nevent_type: 政治活动\n---\nid: \"张良授齐王印\"\ntype: event\ntitle: 张良授齐王印\ndescription: 汉四年，韩信破齐欲自立为齐王，汉王怒。张良说汉王，使良授齐王信印。\ntags: [史记, 事件, 留侯世家]\nsources: [留侯世家]\nevent_ids: [055-013]\ndate: \"〖%四年〗 （公元前203年）\"\n---\n\n# 张良授齐王印\n\n> 汉四年，韩信破齐欲自立为齐王，汉王怒。张良说汉王，使良授齐王信印。\n\n**主要人物**：张良、韩信\n\n## 事件经过\n\n汉四年，韩信破齐欲自立为齐王，汉王怒。张良说汉王，使良授齐王信印。\n\n## 原文\n\n> 汉四年，韩信破齐而欲自立为齐王，汉王怒。张良说汉王，汉王使良授齐王信印。\n\n"
+    },
     {
       "rev_id": "20260423-152717-e495ba",
       "timestamp": "2026-04-23T15:27:17Z",

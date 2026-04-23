@@ -1,8 +1,18 @@
 {
   "page": "太康失国",
-  "latest_rev_id": "20260423-152631-408dba",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160828-379cb7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160828-379cb7",
+      "timestamp": "2026-04-23T16:08:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152631-408dba",
+      "content_hash": "sha256:379cb79c3680f020d87af8de5f508b9adeb53ba4c9ebe365bb46a77bd5575908",
+      "size": 786,
+      "content": "paragraph_refs:\n  002-034: \"[23]\"\nevent_type: 政治活动\nlocation: \"洛汭\"\n---\nid: \"太康失国\"\ntype: event\ntitle: 太康失国\ndescription: 帝太康失国，其昆弟五人等待于洛汭，作五子之歌以哀叹。这反映了太康统治不善导致的危机。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-034]\ndate: \"[约公元前1990年]\"\n---\n\n# 太康失国\n\n> 帝太康失国，其昆弟五人等待于洛汭，作五子之歌以哀叹。这反映了太康统治不善导致的危机。\n\n**主要人物**：帝太康\n\n## 事件经过\n\n帝太康失国，其昆弟五人等待于洛汭，作五子之歌以哀叹。这反映了太康统治不善导致的危机。\n\n## 原文\n\n> 帝太康失国，昆弟五人，须于洛汭，作五子之歌。\n\n"
+    },
     {
       "rev_id": "20260423-152631-408dba",
       "timestamp": "2026-04-23T15:26:31Z",

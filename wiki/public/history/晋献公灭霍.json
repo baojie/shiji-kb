@@ -1,8 +1,18 @@
 {
   "page": "晋献公灭霍",
-  "latest_rev_id": "20260423-152741-2fcbcd",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161116-71685a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161116-71685a",
+      "timestamp": "2026-04-23T16:11:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152741-2fcbcd",
+      "content_hash": "sha256:71685add25deff4400a3ccc421e0bbe9deb43366c9d4bba7d108a85d140a056d",
+      "size": 763,
+      "content": "paragraph_refs:\n  013-015: \"[9.4]\"\nevent_type: 战争\nlocation: \"霍\"\n---\nid: \"晋献公灭霍\"\ntype: event\ntitle: 晋献公灭霍\ndescription: 晋献公灭霍国，霍公的后世沦为庶民，往来居于平阳。此事与后来霍光家族的渊源有关。\ntags: [史记, 事件, 三代世表]\nsources: [三代世表]\nevent_ids: [013-015]\ndate: \"（公元前661年）\"\n---\n\n# 晋献公灭霍\n\n> 晋献公灭霍国，霍公的后世沦为庶民，往来居于平阳。此事与后来霍光家族的渊源有关。\n\n**主要人物**：晋献公\n\n## 事件经过\n\n晋献公灭霍国，霍公的后世沦为庶民，往来居于平阳。此事与后来霍光家族的渊源有关。\n\n## 原文\n\n> 後世晋献公灭霍公，後世为庶民，往来居平阳。\n\n"
+    },
     {
       "rev_id": "20260423-152741-2fcbcd",
       "timestamp": "2026-04-23T15:27:41Z",

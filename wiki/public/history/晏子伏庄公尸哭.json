@@ -1,8 +1,18 @@
 {
   "page": "晏子伏庄公尸哭",
-  "latest_rev_id": "20260423-155224-08a428",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161117-ea457a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161117-ea457a",
+      "timestamp": "2026-04-23T16:11:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155224-08a428",
+      "content_hash": "sha256:ea457a4ef56d041c6e04a0e8ffc0312143eff577cf4ff07e74479918aaff7943",
+      "size": 803,
+      "content": "paragraph_refs:\n  062-013: \"[11]\"\nevent_type: 政治活动\nlocation: \"齐\"\n---\nid: \"晏子伏庄公尸哭\"\ntype: event\ntitle: 晏子伏庄公尸哭\ndescription: 晏子伏庄公尸而哭之，成礼然后去。太史公赞其为\"见义不为无勇\"，进思尽忠退思补过。\ntags: [史记, 事件, 管晏列传]\nsources: [管晏列传]\nevent_ids: [062-013]\ndate: \"（公元前548年）\"\n---\n\n# 晏子伏庄公尸哭\n\n> 晏子伏庄公尸而哭之，成礼然后去。太史公赞其为\"见义不为无勇\"，进思尽忠退思补过。\n\n**主要人物**：晏子\n\n## 事件经过\n\n晏子伏庄公尸而哭之，成礼然后去。太史公赞其为\"见义不为无勇\"，进思尽忠退思补过。\n\n## 原文\n\n> 方晏子伏庄公尸哭之，成礼然後去，岂所谓'见义不为无勇'者邪？\n\n"
+    },
     {
       "rev_id": "20260423-155224-08a428",
       "timestamp": "2026-04-23T15:52:24Z",

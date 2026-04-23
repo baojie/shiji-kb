@@ -1,8 +1,18 @@
 {
   "page": "兰池遇盗",
-  "latest_rev_id": "20260423-154932-a7bebe",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160609-e31a78",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160609-e31a78",
+      "timestamp": "2026-04-23T16:06:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154932-a7bebe",
+      "content_hash": "sha256:e31a78f6526359d2d1b614e3d17dc4c6b17adb3865ba06a733fc62d5472e54b0",
+      "size": 895,
+      "content": "paragraph_refs:\n  006-065: \"[55.2]\"\nevent_type: 政治整顿\nlocation: \"兰池、咸阳\"\n---\nid: \"兰池遇盗\"\ntype: event\ntitle: 兰池遇盗\ndescription: 三十一年，始皇微行咸阳，与武士四人夜出，在兰池遇盗，被围，武士击杀盗贼。关中大索二十日。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-065]\ndate: \"〖%三十一年〗 （公元前216年）\"\n---\n\n# 兰池遇盗\n\n> 三十一年，始皇微行咸阳，与武士四人夜出，在兰池遇盗，被围，武士击杀盗贼。关中大索二十日。\n\n**主要人物**：始皇\n\n## 事件经过\n\n三十一年，始皇微行咸阳，与武士四人夜出，在兰池遇盗，被围，武士击杀盗贼。关中大索二十日。\n\n## 原文\n\n> 始皇为微行咸阳，与武士四人俱，夜出逢盗兰池，见窘，武士击杀盗，关中大索二十日。\n\n"
+    },
     {
       "rev_id": "20260423-154932-a7bebe",
       "timestamp": "2026-04-23T15:49:32Z",

@@ -1,8 +1,18 @@
 {
   "page": "大旱与民疫",
-  "latest_rev_id": "20260423-155040-de5ef5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160812-e5f92c",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160812-e5f92c",
+      "timestamp": "2026-04-23T16:08:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155040-de5ef5",
+      "content_hash": "sha256:e5f92c6f454032748c59044cba03d0a8abf4ff5279553fed1fab779e7ed39591",
+      "size": 653,
+      "content": "paragraph_refs:\n  011-048: \"[24.4]-[24.5]\"\nevent_type: 自然灾害\nlocation: \"衡山国、河东、云中郡\"\n---\nid: \"大旱与民疫\"\ntype: event\ntitle: 大旱与民疫\ndescription: 十月租长陵田，大旱。衡山国、河东、云中郡民疫。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-048]\ndate: \"〖%十月〗 （公元前142年）\"\n---\n\n# 大旱与民疫\n\n> 十月租长陵田，大旱。衡山国、河东、云中郡民疫。\n\n## 事件经过\n\n十月租长陵田，大旱。衡山国、河东、云中郡民疫。\n\n## 原文\n\n> 十月，租长陵田。大旱。衡山国、河东、云中郡民疫。\n\n"
+    },
     {
       "rev_id": "20260423-155040-de5ef5",
       "timestamp": "2026-04-23T15:50:40Z",

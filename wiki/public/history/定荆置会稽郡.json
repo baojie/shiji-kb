@@ -1,8 +1,18 @@
 {
   "page": "定荆置会稽郡",
-  "latest_rev_id": "20260423-155109-7a348a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160915-9fcfbf",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160915-9fcfbf",
+      "timestamp": "2026-04-23T16:09:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155109-7a348a",
+      "content_hash": "sha256:9fcfbf33d2f1c25377ac048afba0c1c07ea1543155d20f53c412626c56dc698c",
+      "size": 723,
+      "content": "paragraph_refs:\n  006-043: \"[32.3], [32.4]\"\nevent_type: 战争\nlocation: \"江南、会稽\"\n---\nid: \"定荆置会稽郡\"\ntype: event\ntitle: 定荆置会稽郡\ndescription: 王翦遂定荆之江南地，降越君，设置会稽郡。五月天下大酺。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-043]\ndate: \"〖%二十五年〗 （公元前222年）\"\n---\n\n# 定荆置会稽郡\n\n> 王翦遂定荆之江南地，降越君，设置会稽郡。五月天下大酺。\n\n**主要人物**：王翦\n\n## 事件经过\n\n王翦遂定荆之江南地，降越君，设置会稽郡。五月天下大酺。\n\n## 原文\n\n> 王翦遂定荆江南地；降越君，置会稽郡。五月，天下大酺。\n\n"
+    },
     {
       "rev_id": "20260423-155109-7a348a",
       "timestamp": "2026-04-23T15:51:09Z",

@@ -1,8 +1,18 @@
 {
   "page": "左丘明作左氏春秋",
-  "latest_rev_id": "20260423-155126-a2f2b4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160948-e180f5",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160948-e180f5",
+      "timestamp": "2026-04-23T16:09:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155126-a2f2b4",
+      "content_hash": "sha256:e180f5aa3649c215af4a25325513038d4c36fea7c0ae5e6b832e92b587962069",
+      "size": 909,
+      "content": "paragraph_refs:\n  014-005: \"[4.3]\"\nevent_type: 文化活动\nlocation: \"鲁\"\n---\nid: \"左丘明作左氏春秋\"\ntype: event\ntitle: 左丘明作左氏春秋\ndescription: 鲁国君子左丘明担心弟子各人立意不同，失去真意，故因孔子史记详论其语，著成《左氏春秋》。\ntags: [史记, 事件, 十二诸侯年表]\nsources: [十二诸侯年表]\nevent_ids: [014-005]\ndate: \"[约公元前468年]\"\n---\n\n# 左丘明作左氏春秋\n\n> 鲁国君子左丘明担心弟子各人立意不同，失去真意，故因孔子史记详论其语，著成《左氏春秋》。\n\n**主要人物**：孔子、左丘明\n\n## 事件经过\n\n鲁国君子左丘明担心弟子各人立意不同，失去真意，故因孔子史记详论其语，著成《左氏春秋》。\n\n## 原文\n\n> 鲁君子左丘明惧弟子人人异端，各安其意，失其真，故因孔子史记具论其语，成左氏春秋。\n\n"
+    },
     {
       "rev_id": "20260423-155126-a2f2b4",
       "timestamp": "2026-04-23T15:51:26Z",

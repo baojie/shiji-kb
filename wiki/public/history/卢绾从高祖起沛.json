@@ -1,8 +1,18 @@
 {
   "page": "卢绾从高祖起沛",
-  "latest_rev_id": "20260423-152555-e70d33",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160643-359d12",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160643-359d12",
+      "timestamp": "2026-04-23T16:06:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152555-e70d33",
+      "content_hash": "sha256:359d1222a1eb61dd6e95f77261cd16ec0a3473d47bd0fd7daadc46ce4eb172e5",
+      "size": 1055,
+      "content": "paragraph_refs:\n  093-012: \"[8]\"\nevent_type: 战争\nlocation: \"沛\"\n---\nid: \"卢绾从高祖起沛\"\ntype: event\ntitle: 卢绾从高祖起沛\ndescription: 高祖初起沛时，卢绾以客从，入汉中为将军，常侍中。从东击项籍，以太尉常从，出入卧内。其亲幸程度群臣莫及，封为长安侯。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-012]\ndate: \"（公元前209年）\"\n---\n\n# 卢绾从高祖起沛\n\n> 高祖初起沛时，卢绾以客从，入汉中为将军，常侍中。从东击项籍，以太尉常从，出入卧内。其亲幸程度群臣莫及，封为长安侯。\n\n**主要人物**：卢绾、高祖\n\n## 事件经过\n\n高祖初起沛时，卢绾以客从，入汉中为将军，常侍中。从东击项籍，以太尉常从，出入卧内。其亲幸程度群臣莫及，封为长安侯。\n\n## 原文\n\n> 及高祖初起沛，卢绾以客从，入汉中为将军，常侍中。从东击项籍，以太尉常从，出入卧内，衣被饮食赏赐，群臣莫敢望\n\n"
+    },
     {
       "rev_id": "20260423-152555-e70d33",
       "timestamp": "2026-04-23T15:25:55Z",

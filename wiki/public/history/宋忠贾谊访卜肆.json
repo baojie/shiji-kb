@@ -1,8 +1,18 @@
 {
   "page": "宋忠贾谊访卜肆",
-  "latest_rev_id": "20260423-152651-3a7ca0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-160913-de2d98",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-160913-de2d98",
+      "timestamp": "2026-04-23T16:09:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152651-3a7ca0",
+      "content_hash": "sha256:de2d98c9fe4784f36a242c0ff8f5f5e4bc26e1e04cc02a8d6fd595168339251d",
+      "size": 1194,
+      "content": "paragraph_refs:\n  127-002: \"[2]\"\nevent_type: 文化活动\nlocation: \"长安\"\n---\nid: \"宋忠贾谊访卜肆\"\ntype: event\ntitle: 宋忠贾谊访卜肆\ndescription: 宋忠为中大夫、贾谊为博士，同日出洗沐，相从论议。已见三公九卿朝士大夫，欲往卜数中观采。二人即同舆至市游于卜肆，见司马季主正辩天地之道，再拜谒之。\ntags: [史记, 事件, 日者列传]\nsources: [日者列传]\nevent_ids: [127-002]\ndate: \"[约公元前176年]\"\n---\n\n# 宋忠贾谊访卜肆\n\n> 宋忠为中大夫、贾谊为博士，同日出洗沐，相从论议。已见三公九卿朝士大夫，欲往卜数中观采。二人即同舆至市游于卜肆，见司马季主正辩天地之道，再拜谒之。\n\n**主要人物**：司马季主、宋忠、贾谊\n\n## 事件经过\n\n宋忠为中大夫、贾谊为博士，同日出洗沐，相从论议。已见三公九卿朝士大夫，欲往卜数中观采。二人即同舆至市游于卜肆，见司马季主正辩天地之道，再拜谒之。\n\n## 原文\n\n> 贾谊曰：'吾闻古之圣人，不居朝廷，必在卜医之中。今吾已见三公九卿朝士大夫，皆可知矣。试之卜数中以观采。'\n\n"
+    },
     {
       "rev_id": "20260423-152651-3a7ca0",
       "timestamp": "2026-04-23T15:26:51Z",
