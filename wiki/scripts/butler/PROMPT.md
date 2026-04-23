@@ -13,6 +13,10 @@
 2. `logs/wiki_butler/queue.md` — 当前候选队列
 3. `logs/wiki_butler/actions.jsonl` 的最后 10 行 (了解最近 mode)
 4. `logs/wiki_butler/failures.jsonl` 的最后 5 行 (避开已失败路径)
+5. `logs/wiki_butler/kb/w5_ops.md` — 操作规则知识库（已验证的行动成功/失败模式）
+6. `logs/wiki_butler/kb/w7_citations.md` — 引文知识库（已核验的真实引文与误引）
+7. `logs/wiki_butler/kb/w9_schemas.md` — 页面结构知识库（各类型页面的定稿规则）
+8. `logs/wiki_butler/kb/w11_taxonomy.md` — 分类知识库（类型判断规则）
 
 ## 判断 mode
 

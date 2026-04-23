@@ -217,3 +217,14 @@ version: 1
 - `logs/wiki_butler/skill_changes.md` — 模板修订记录
 - `skills/SKILL_W5_Butler反思与自改.md` — 系统反思（互补）
 - `skills/SKILL_W8_精品页建设方法论.md` — 精品页质量标准（互补）
+
+---
+
+## KB 写入规则
+
+W9 反思确认某 schema 规则后，将定论写入 `logs/wiki_butler/kb/w9_schemas.md`：
+
+- **写什么**：在 ≥2 轮 W9 中重复发现、已被实际页面验证的结构规则
+- **不写什么**：schema_patterns/ 里的单轮发现（那里是草稿，KB 是结论）
+- **格式**：`- [R<N> 确认] <规则>` 追加到对应页面类型分组
+- **用途**：butler 执行 create-stub / enrich 类动作前读取，确保新页面符合已知最佳结构

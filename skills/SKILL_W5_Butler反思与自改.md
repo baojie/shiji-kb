@@ -254,3 +254,14 @@ actions #1–20, failures 5 条
 - `logs/wiki_butler/skill_changes.md` — 修订 changelog
 - `logs/wiki_butler/arch_snooze.json` — 用户暂缓的架构阈值覆盖
 - `wiki/scripts/butler/check_scale.py` — 规模指标快照工具（每次反思必跑）
+
+---
+
+## KB 写入规则
+
+反思结束后，将定论写入 `logs/wiki_butler/kb/w5_ops.md`：
+
+- **写什么**：在 ≥2 次反思中重复出现、被 W5 修订采纳的操作规则
+- **不写什么**：单次失败、偶发异常、未经 ≥2 次验证的猜测
+- **格式**：`- [R<N> 确认] <条件> → <结论>` 追加到对应分组（行动成功模式 / 行动失败模式 / 已废弃路径）
+- **更新旧规则**：改写原行，加 `[R<N> 更新，原见 R<M>]` 标注
