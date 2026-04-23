@@ -1,0 +1,17 @@
+{
+  "page": "Special_知识量",
+  "latest_rev_id": "20260423-100000-823efb",
+  "revision_count": 1,
+  "revisions": [
+    {
+      "rev_id": "20260423-100000-823efb",
+      "timestamp": "2026-04-23T10:00:00+08:00",
+      "author": "butler",
+      "summary": "butler/ontology-import: Special_知识量",
+      "parent_rev": null,
+      "content_hash": "sha256:823efbdb320125e843d2e365d883e3efce0101aa49779759ae5c4f1af9d432ad",
+      "size": 2887,
+      "content": "---\nid: \"Special_知识量\"\ntype: special\nlabel: 知识量 (K)\ncanonical_name: \"Special_知识量\"\ntags: [系统页面, 知识量, 度量]\n---\n\n# Special:知识量\n\n本页解释《史记》知识库的**知识量（K）** 度量——一个衡量知识库信息密度与覆盖深度的综合指标。\n\n---\n\n## 定义\n\n$$K = \\sum_{\\text{page}} k_{\\text{page}}$$\n\n每一页的贡献值：\n\n$$k_{\\text{page}} = \\log_2(1 + B) \\times (1 + D) \\times W \\times Q$$\n\n| 变量 | 含义 | 说明 |\n|------|------|------|\n| $B$ | 页面正文字节数 | 去除 frontmatter 后的 UTF-8 字节数 |\n| $D$ | 链接密度（封顶 5.0） | $\\min\\!\\left(\\dfrac{\\text{wikilink数}}{B/1000},\\ 5.0\\right)$ |\n| $W$ | 类型权重 | 见下表 |\n| $Q$ | 质量归一化（1.0 — 3.0） | $\\text{clamp}(q/30,\\ 1.0,\\ 3.0)$，$q$ 为质量分 |\n\n### 类型权重 W\n\n| 类型 | 权重 | 理由 |\n|------|------|------|\n| `person` / `event` / `place` / `state` | 1.0 | 核心知识实体 |\n| `topic` | 0.8 | 主题词条，略低 |\n| `surface` | 0.5 | 表面索引页，内容稀薄 |\n| `chapter` | 0.4 | 章节存根，体量虚低，权重压缩 |\n| 其他 | 0.6 | 默认 |\n\n### 质量分 q\n\n质量分由 [`build_registry.py`](../../scripts/build_registry.py) 自动计算，综合：\n\n- 页面字节数（篇幅）\n- wikilink 数（内部链接密度）\n- frontmatter 完整性（birth_ce / death_ce / tags 等字段）\n- 是否有生平叙述段落\n\n质量分归一化为 $Q \\in [1.0, 3.0]$，防止单一高质量页影响过大。\n\n---\n\n## 设计目标\n\n**K 度量的目标**：\n\n1. **反映知识深度**，而非单纯字数——通过链接密度奖励内联结构\n2. **防止刷字数**——`log₂` 压缩使得无限扩张收益递减\n3. **区分内容质量**——通过 $Q$ 乘子激励高质量页面\n4. **章节存根不淹没实体页**——章节权重 0.4 是刻意压缩\n\n---\n\n## 当前快照\n\n> 数据由 [`compute_knowledge.py`](../../scripts/compute_knowledge.py) 实时计算，\n> 最新值见首页 K 面板或 [`data/knowledge_latest.json`](../data/knowledge_latest.json)。\n\n---\n\n## 历史演进\n\n| 里程碑 | K 值 | 说明 |\n|--------|------|------|\n| 初始建立 | ~13,000 | 约 230 页，link_hit_rate 20.8% |\n| 批量生成 130 章节存根 | ~13,800 | link_hit_rate 升至 81% |\n| 持续扩写精品页 | ~14,470 | 28 篇 featured，link_hit_rate ~79% |\n\n---\n\n## 局限性\n\n- K 不衡量**正确性**——错误内容也会贡献 K\n- K 不区分**独创性**——重复信息与新增信息同等计分\n- 章节存根大量存在时，link_hit_rate 虚高\n- **K 是内部追踪指标**，非学术度量\n\n---\n\n## 相关页面\n\n- [[Special:Settings]] — 插件开关（启用数学公式渲染）\n- [[Special:Plugins]] — 已安装插件列表\n- [[Special:All]] — 所有特殊页面索引\n\n---\n\n*本页为系统特殊页面（`Special:` 前缀），不计入 K 值。*\n"
+    }
+  ]
+}
