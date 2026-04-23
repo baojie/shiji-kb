@@ -1,8 +1,28 @@
 {
   "page": "苏秦私通燕太后亡走齐",
-  "latest_rev_id": "20260423-154639-2fd3dd",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163233-9e827d",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163233-9e827d",
+      "timestamp": "2026-04-23T16:32:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161242-fc30df",
+      "content_hash": "sha256:9e827de598ef05d60b51b42f2e652e4f9fedc46d3f2cfa1186dcd252833348d2",
+      "size": 1058,
+      "content": "---\nid: \"苏秦私通燕太后亡走齐\"\ntype: event\ntitle: 苏秦私通燕太后亡走齐\ndescription: 苏秦与易王母私通，燕王知之反加厚待。苏秦恐诛，说燕王令其在齐则燕必重。遂诈为得罪于燕亡走齐，齐宣王以为客卿。\ntags: [史记, 事件, 苏秦列传]\nsources: [苏秦列传]\nevent_ids: [069-018]\ndate: \"（公元前300年）\"\n---\n\n::: meta\npn: \"[43]\"\nevent_type: 政治活动\nlocation: \"燕、齐\"\n:::\n\n# 苏秦私通燕太后亡走齐\n\n> 苏秦与易王母私通，燕王知之反加厚待。苏秦恐诛，说燕王令其在齐则燕必重。遂诈为得罪于燕亡走齐，齐宣王以为客卿。\n\n**主要人物**：苏秦、齐宣王\n\n## 事件经过\n\n苏秦与易王母私通，燕王知之反加厚待。苏秦恐诛，说燕王令其在齐则燕必重。遂诈为得罪于燕亡走齐，齐宣王以为客卿。\n\n## 原文\n\n> 易王母，文侯夫人也，与苏秦私通。燕王知之，而事之加厚。苏秦恐诛，乃说燕王曰：'臣居燕不能使燕重，而在齐则燕必重。'\n\n"
+    },
+    {
+      "rev_id": "20260423-161242-fc30df",
+      "timestamp": "2026-04-23T16:12:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154639-2fd3dd",
+      "content_hash": "sha256:fc30df5c7018b68f8181d04ba779c5f42c158c092b42bae5b2ee6d13b4fff2c1",
+      "size": 1067,
+      "content": "paragraph_refs:\n  069-018: \"[43]\"\nevent_type: 政治活动\nlocation: \"燕、齐\"\n---\nid: \"苏秦私通燕太后亡走齐\"\ntype: event\ntitle: 苏秦私通燕太后亡走齐\ndescription: 苏秦与易王母私通，燕王知之反加厚待。苏秦恐诛，说燕王令其在齐则燕必重。遂诈为得罪于燕亡走齐，齐宣王以为客卿。\ntags: [史记, 事件, 苏秦列传]\nsources: [苏秦列传]\nevent_ids: [069-018]\ndate: \"（公元前300年）\"\n---\n\n# 苏秦私通燕太后亡走齐\n\n> 苏秦与易王母私通，燕王知之反加厚待。苏秦恐诛，说燕王令其在齐则燕必重。遂诈为得罪于燕亡走齐，齐宣王以为客卿。\n\n**主要人物**：苏秦、齐宣王\n\n## 事件经过\n\n苏秦与易王母私通，燕王知之反加厚待。苏秦恐诛，说燕王令其在齐则燕必重。遂诈为得罪于燕亡走齐，齐宣王以为客卿。\n\n## 原文\n\n> 易王母，文侯夫人也，与苏秦私通。燕王知之，而事之加厚。苏秦恐诛，乃说燕王曰：'臣居燕不能使燕重，而在齐则燕必重。'\n\n"
+    },
     {
       "rev_id": "20260423-154639-2fd3dd",
       "timestamp": "2026-04-23T15:46:39Z",

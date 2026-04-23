@@ -1,8 +1,28 @@
 {
   "page": "白起攻魏楚取垣宛",
-  "latest_rev_id": "20260423-154607-c1fc57",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163008-bc94d2",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163008-bc94d2",
+      "timestamp": "2026-04-23T16:30:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161210-f0db1f",
+      "content_hash": "sha256:bc94d28d00742a603ec9629bb65710177997f5c8897d8b1c91f0d55113c5f6a0",
+      "size": 799,
+      "content": "---\nid: \"白起攻魏楚取垣宛\"\ntype: event\ntitle: 白起攻魏楚取垣宛\ndescription: 昭襄王十五年，大良造白起攻魏取垣城后归还，又攻楚取宛。秦同时对魏楚两线用兵。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-117]\ndate: \"〖%十五年〗 （公元前292年）\"\n---\n\n::: meta\npn: \"[63.2]\"\nevent_type: 战争\nlocation: \"垣、宛\"\n:::\n\n# 白起攻魏楚取垣宛\n\n> 昭襄王十五年，大良造白起攻魏取垣城后归还，又攻楚取宛。秦同时对魏楚两线用兵。\n\n**主要人物**：白起\n\n## 事件经过\n\n昭襄王十五年，大良造白起攻魏取垣城后归还，又攻楚取宛。秦同时对魏楚两线用兵。\n\n## 原文\n\n> 十五年，大良造白起攻魏，取垣，复予之。攻楚，取宛。\n\n"
+    },
+    {
+      "rev_id": "20260423-161210-f0db1f",
+      "timestamp": "2026-04-23T16:12:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154607-c1fc57",
+      "content_hash": "sha256:f0db1f29f263e658416ef96fe4a5f810d59ce6a8decb49b496ecb44263047ef1",
+      "size": 808,
+      "content": "paragraph_refs:\n  005-117: \"[63.2]\"\nevent_type: 战争\nlocation: \"垣、宛\"\n---\nid: \"白起攻魏楚取垣宛\"\ntype: event\ntitle: 白起攻魏楚取垣宛\ndescription: 昭襄王十五年，大良造白起攻魏取垣城后归还，又攻楚取宛。秦同时对魏楚两线用兵。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-117]\ndate: \"〖%十五年〗 （公元前292年）\"\n---\n\n# 白起攻魏楚取垣宛\n\n> 昭襄王十五年，大良造白起攻魏取垣城后归还，又攻楚取宛。秦同时对魏楚两线用兵。\n\n**主要人物**：白起\n\n## 事件经过\n\n昭襄王十五年，大良造白起攻魏取垣城后归还，又攻楚取宛。秦同时对魏楚两线用兵。\n\n## 原文\n\n> 十五年，大良造白起攻魏，取垣，复予之。攻楚，取宛。\n\n"
+    },
     {
       "rev_id": "20260423-154607-c1fc57",
       "timestamp": "2026-04-23T15:46:07Z",

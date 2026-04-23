@@ -1,8 +1,28 @@
 {
   "page": "留侯道引辟谷",
-  "latest_rev_id": "20260423-155354-a4bc2b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163000-918072",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163000-918072",
+      "timestamp": "2026-04-23T16:30:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161208-031c70",
+      "content_hash": "sha256:9180721bbf4b5c804c1e743090634d9d4c88f8c6442d76ee49039983b36ae18a",
+      "size": 646,
+      "content": "---\nid: \"留侯道引辟谷\"\ntype: event\ntitle: 留侯道引辟谷\ndescription: 留侯从入关。留侯性多病，即道引不食谷，杜门不出岁余。\ntags: [史记, 事件, 留侯世家]\nsources: [留侯世家]\nevent_ids: [055-018]\ndate: \"[约公元前201年]\"\n---\n\n::: meta\npn: \"[21]\"\nevent_type: 家族事件\n:::\n\n# 留侯道引辟谷\n\n> 留侯从入关。留侯性多病，即道引不食谷，杜门不出岁余。\n\n**主要人物**：张良\n\n## 事件经过\n\n留侯从入关。留侯性多病，即道引不食谷，杜门不出岁余。\n\n## 原文\n\n> 留侯从入关。留侯性多病，即道引不食穀，杜门不出岁馀。\n\n"
+    },
+    {
+      "rev_id": "20260423-161208-031c70",
+      "timestamp": "2026-04-23T16:12:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155354-a4bc2b",
+      "content_hash": "sha256:031c70f6732047a2556b19cbe073cf35519c5eab0cff4b5547da29e9cccfaf22",
+      "size": 655,
+      "content": "paragraph_refs:\n  055-018: \"[21]\"\nevent_type: 家族事件\n---\nid: \"留侯道引辟谷\"\ntype: event\ntitle: 留侯道引辟谷\ndescription: 留侯从入关。留侯性多病，即道引不食谷，杜门不出岁余。\ntags: [史记, 事件, 留侯世家]\nsources: [留侯世家]\nevent_ids: [055-018]\ndate: \"[约公元前201年]\"\n---\n\n# 留侯道引辟谷\n\n> 留侯从入关。留侯性多病，即道引不食谷，杜门不出岁余。\n\n**主要人物**：张良\n\n## 事件经过\n\n留侯从入关。留侯性多病，即道引不食谷，杜门不出岁余。\n\n## 原文\n\n> 留侯从入关。留侯性多病，即道引不食穀，杜门不出岁馀。\n\n"
+    },
     {
       "rev_id": "20260423-155354-a4bc2b",
       "timestamp": "2026-04-23T15:53:54Z",

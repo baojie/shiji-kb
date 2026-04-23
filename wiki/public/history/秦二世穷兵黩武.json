@@ -1,8 +1,28 @@
 {
   "page": "秦二世穷兵黩武",
-  "latest_rev_id": "20260423-155413-ae860e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163041-ae1563",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163041-ae1563",
+      "timestamp": "2026-04-23T16:30:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161217-243231",
+      "content_hash": "sha256:ae1563359931b501985f12c0f0a8017221c52abbe2be132e2472f70a844adf6f",
+      "size": 848,
+      "content": "---\nid: \"秦二世穷兵黩武\"\ntype: event\ntitle: 秦二世穷兵黩武\ndescription: 秦二世宿军于无用之地，连兵于边陲，结怨匈奴，絓祸于越，势力虽大，终因穷武而亡。\ntags: [史记, 事件, 律书]\nsources: [律书]\nevent_ids: [025-007]\ndate: \"[约—前207年] [约—前207年] [约公元前209年—前207年]\"\n---\n\n::: meta\npn: \"[5.3]-[5.4]\"\nevent_type: 政治活动\n:::\n\n# 秦二世穷兵黩武\n\n> 秦二世宿军于无用之地，连兵于边陲，结怨匈奴，絓祸于越，势力虽大，终因穷武而亡。\n\n**主要人物**：秦二世\n\n## 事件经过\n\n秦二世宿军于无用之地，连兵于边陲，结怨匈奴，絓祸于越，势力虽大，终因穷武而亡。\n\n## 原文\n\n> 秦二世宿军无用之地，连兵於边陲，力非弱也；结怨匈奴，絓祸於越，势非寡也。\n\n"
+    },
+    {
+      "rev_id": "20260423-161217-243231",
+      "timestamp": "2026-04-23T16:12:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155413-ae860e",
+      "content_hash": "sha256:2432318902c896033ffde6f6c70f836682b0bbf74ed7e0b320b67cbb9876d0f1",
+      "size": 857,
+      "content": "paragraph_refs:\n  025-007: \"[5.3]-[5.4]\"\nevent_type: 政治活动\n---\nid: \"秦二世穷兵黩武\"\ntype: event\ntitle: 秦二世穷兵黩武\ndescription: 秦二世宿军于无用之地，连兵于边陲，结怨匈奴，絓祸于越，势力虽大，终因穷武而亡。\ntags: [史记, 事件, 律书]\nsources: [律书]\nevent_ids: [025-007]\ndate: \"[约—前207年] [约—前207年] [约公元前209年—前207年]\"\n---\n\n# 秦二世穷兵黩武\n\n> 秦二世宿军于无用之地，连兵于边陲，结怨匈奴，絓祸于越，势力虽大，终因穷武而亡。\n\n**主要人物**：秦二世\n\n## 事件经过\n\n秦二世宿军于无用之地，连兵于边陲，结怨匈奴，絓祸于越，势力虽大，终因穷武而亡。\n\n## 原文\n\n> 秦二世宿军无用之地，连兵於边陲，力非弱也；结怨匈奴，絓祸於越，势非寡也。\n\n"
+    },
     {
       "rev_id": "20260423-155413-ae860e",
       "timestamp": "2026-04-23T15:54:13Z",

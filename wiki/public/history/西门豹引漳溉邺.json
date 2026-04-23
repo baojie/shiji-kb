@@ -1,8 +1,28 @@
 {
   "page": "西门豹引漳溉邺",
-  "latest_rev_id": "20260423-154704-152783",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163334-a9cfa6",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163334-a9cfa6",
+      "timestamp": "2026-04-23T16:33:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161312-2e4cc4",
+      "content_hash": "sha256:a9cfa64f1206f1d86e178e33b88f60fa5fa7789f0fefcbdf9334ce8b0b408b04",
+      "size": 587,
+      "content": "---\nid: \"西门豹引漳溉邺\"\ntype: event\ntitle: 西门豹引漳溉邺\ndescription: 西门豹引漳水灌溉邺地，以此使魏之河内富庶。\ntags: [史记, 事件, 河渠书]\nsources: [河渠书]\nevent_ids: [029-007]\ndate: \"（公元前403年）\"\n---\n\n::: meta\npn: \"[3]\"\nevent_type: 建设\nlocation: \"鄴\"\n:::\n\n# 西门豹引漳溉邺\n\n> 西门豹引漳水灌溉邺地，以此使魏之河内富庶。\n\n**主要人物**：西门豹\n\n## 事件经过\n\n西门豹引漳水灌溉邺地，以此使魏之河内富庶。\n\n## 原文\n\n> 西门豹引漳水溉鄴，以富魏之河内。\n\n"
+    },
+    {
+      "rev_id": "20260423-161312-2e4cc4",
+      "timestamp": "2026-04-23T16:13:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154704-152783",
+      "content_hash": "sha256:2e4cc499dd054caf718e517fe7ff46f4127f40021cae72d9e94a4d1872a4e0e5",
+      "size": 596,
+      "content": "paragraph_refs:\n  029-007: \"[3]\"\nevent_type: 建设\nlocation: \"鄴\"\n---\nid: \"西门豹引漳溉邺\"\ntype: event\ntitle: 西门豹引漳溉邺\ndescription: 西门豹引漳水灌溉邺地，以此使魏之河内富庶。\ntags: [史记, 事件, 河渠书]\nsources: [河渠书]\nevent_ids: [029-007]\ndate: \"（公元前403年）\"\n---\n\n# 西门豹引漳溉邺\n\n> 西门豹引漳水灌溉邺地，以此使魏之河内富庶。\n\n**主要人物**：西门豹\n\n## 事件经过\n\n西门豹引漳水灌溉邺地，以此使魏之河内富庶。\n\n## 原文\n\n> 西门豹引漳水溉鄴，以富魏之河内。\n\n"
+    },
     {
       "rev_id": "20260423-154704-152783",
       "timestamp": "2026-04-23T15:47:04Z",

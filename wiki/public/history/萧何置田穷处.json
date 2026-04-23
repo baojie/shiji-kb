@@ -1,8 +1,28 @@
 {
   "page": "萧何置田穷处",
-  "latest_rev_id": "20260423-154650-191cf3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163255-1010a4",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163255-1010a4",
+      "timestamp": "2026-04-23T16:32:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161247-f3fb31",
+      "content_hash": "sha256:1010a477e61dbaa11737886666f1ef137603a04b60117c3816cdd74733f5b1ee",
+      "size": 783,
+      "content": "---\nid: \"萧何置田穷处\"\ntype: event\ntitle: 萧何置田穷处\ndescription: 萧何置田宅必居穷处，为家不治垣屋，曰：后世贤，师吾俭；不贤，毋为势家所夺。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-016]\ndate: \"[约公元前193年]\"\n---\n\n::: meta\npn: \"[14]\"\nevent_type: 家族事件\n:::\n\n# 萧何置田穷处\n\n> 萧何置田宅必居穷处，为家不治垣屋，曰：后世贤，师吾俭；不贤，毋为势家所夺。\n\n**主要人物**：萧何\n\n## 事件经过\n\n萧何置田宅必居穷处，为家不治垣屋，曰：后世贤，师吾俭；不贤，毋为势家所夺。\n\n## 原文\n\n> 何置田宅必居穷处，为家不治垣屋。曰：'後世贤，师吾俭；不贤，毋为势家所夺。'\n\n"
+    },
+    {
+      "rev_id": "20260423-161247-f3fb31",
+      "timestamp": "2026-04-23T16:12:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154650-191cf3",
+      "content_hash": "sha256:f3fb3121d7b93c2d332b47d6674628b4dbb27bac49ec818fd0c6d64e7ddbe26c",
+      "size": 792,
+      "content": "paragraph_refs:\n  053-016: \"[14]\"\nevent_type: 家族事件\n---\nid: \"萧何置田穷处\"\ntype: event\ntitle: 萧何置田穷处\ndescription: 萧何置田宅必居穷处，为家不治垣屋，曰：后世贤，师吾俭；不贤，毋为势家所夺。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-016]\ndate: \"[约公元前193年]\"\n---\n\n# 萧何置田穷处\n\n> 萧何置田宅必居穷处，为家不治垣屋，曰：后世贤，师吾俭；不贤，毋为势家所夺。\n\n**主要人物**：萧何\n\n## 事件经过\n\n萧何置田宅必居穷处，为家不治垣屋，曰：后世贤，师吾俭；不贤，毋为势家所夺。\n\n## 原文\n\n> 何置田宅必居穷处，为家不治垣屋。曰：'後世贤，师吾俭；不贤，毋为势家所夺。'\n\n"
+    },
     {
       "rev_id": "20260423-154650-191cf3",
       "timestamp": "2026-04-23T15:46:50Z",

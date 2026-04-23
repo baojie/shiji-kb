@@ -1,8 +1,28 @@
 {
   "page": "窦婴周亚夫平乱",
-  "latest_rev_id": "20260423-154623-6dd296",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163126-485099",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163126-485099",
+      "timestamp": "2026-04-23T16:31:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161227-c2ea98",
+      "content_hash": "sha256:485099a0f7ab7f1bca49c92ad30f262fc06a16ae9980b83dabcec8d94fe4fac2",
+      "size": 615,
+      "content": "---\nid: \"窦婴周亚夫平乱\"\ntype: event\ntitle: 窦婴周亚夫平乱\ndescription: 景帝遣大将军窦婴、太尉周亚夫将兵诛灭七国叛乱。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-014]\ndate: \"（公元前154年）\"\n---\n\n::: meta\npn: \"[6.3]\"\nevent_type: 战争\n:::\n\n# 窦婴周亚夫平乱\n\n> 景帝遣大将军窦婴、太尉周亚夫将兵诛灭七国叛乱。\n\n**主要人物**：周亚夫、窦婴\n\n## 事件经过\n\n景帝遣大将军窦婴、太尉周亚夫将兵诛灭七国叛乱。\n\n## 原文\n\n> 上乃遣大将军窦婴、太尉周亚夫将兵诛之。\n\n"
+    },
+    {
+      "rev_id": "20260423-161227-c2ea98",
+      "timestamp": "2026-04-23T16:12:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154623-6dd296",
+      "content_hash": "sha256:c2ea98b7cc9622bd9abd7392af7b6bd82ee50d063defcc87f0a2f9f798c086ab",
+      "size": 624,
+      "content": "paragraph_refs:\n  011-014: \"[6.3]\"\nevent_type: 战争\n---\nid: \"窦婴周亚夫平乱\"\ntype: event\ntitle: 窦婴周亚夫平乱\ndescription: 景帝遣大将军窦婴、太尉周亚夫将兵诛灭七国叛乱。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-014]\ndate: \"（公元前154年）\"\n---\n\n# 窦婴周亚夫平乱\n\n> 景帝遣大将军窦婴、太尉周亚夫将兵诛灭七国叛乱。\n\n**主要人物**：周亚夫、窦婴\n\n## 事件经过\n\n景帝遣大将军窦婴、太尉周亚夫将兵诛灭七国叛乱。\n\n## 原文\n\n> 上乃遣大将军窦婴、太尉周亚夫将兵诛之。\n\n"
+    },
     {
       "rev_id": "20260423-154623-6dd296",
       "timestamp": "2026-04-23T15:46:23Z",

@@ -1,8 +1,18 @@
 {
   "page": "鄢陵之战",
-  "latest_rev_id": "20260423-155546-e67e65",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161429-8ed3f3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161429-8ed3f3",
+      "timestamp": "2026-04-23T16:14:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155546-e67e65",
+      "content_hash": "sha256:8ed3f3554e5f682b56bbf243a5bef682056860fe238792cfec50713bbeec52d0",
+      "size": 885,
+      "content": "paragraph_refs:\n  040-017: \"[32.35]\"\nevent_type: 战争\nlocation: \"鄢陵\"\n---\nid: \"鄢陵之战\"\ntype: event\ntitle: 鄢陵之战\ndescription: 共王十六年救郑与晋战鄢陵，晋败楚射中共王目。子反嗜酒被竖阳穀进酒醉。共王怒射杀子反罢兵归。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-017]\ndate: \"（公元前575年）\"\n---\n\n# 鄢陵之战\n\n> 共王十六年救郑与晋战鄢陵，晋败楚射中共王目。子反嗜酒被竖阳穀进酒醉。共王怒射杀子反罢兵归。\n\n**主要人物**：共王、子反\n\n## 事件经过\n\n共王十六年救郑与晋战鄢陵，晋败楚射中共王目。子反嗜酒被竖阳穀进酒醉。共王怒射杀子反罢兵归。\n\n## 原文\n\n> 晋败楚，射中共王目。共王召将军子反。子反嗜酒，从者竖阳穀进酒醉。王怒，射杀子反，遂罢兵归。\n\n"
+    },
     {
       "rev_id": "20260423-155546-e67e65",
       "timestamp": "2026-04-23T15:55:46Z",

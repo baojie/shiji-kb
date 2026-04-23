@@ -1,8 +1,18 @@
 {
   "page": "赵良苦谏商君不从",
-  "latest_rev_id": "20260423-154718-e23fe7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161352-5bfef9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161352-5bfef9",
+      "timestamp": "2026-04-23T16:13:52Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154718-e23fe7",
+      "content_hash": "sha256:5bfef98c6f04ba837a1aa8e3bd6bb5caeb7062858366cc0d79ebff1451d7e6f7",
+      "size": 1011,
+      "content": "paragraph_refs:\n  068-014: \"[9]\"\nevent_type: 政治活动\nlocation: \"秦\"\n---\nid: \"赵良苦谏商君不从\"\ntype: event\ntitle: 赵良苦谏商君不从\ndescription: 商君相秦十年，宗室贵戚多怨望。赵良以五羖大夫之德与商君之刻薄对比，警告其危若朝露，劝其归十五都灌园于鄙。商君不从。\ntags: [史记, 事件, 商君列传]\nsources: [商君列传]\nevent_ids: [068-014]\ndate: \"[约公元前338年]\"\n---\n\n# 赵良苦谏商君不从\n\n> 商君相秦十年，宗室贵戚多怨望。赵良以五羖大夫之德与商君之刻薄对比，警告其危若朝露，劝其归十五都灌园于鄙。商君不从。\n\n**主要人物**：卫鞅\n\n## 事件经过\n\n商君相秦十年，宗室贵戚多怨望。赵良以五羖大夫之德与商君之刻薄对比，警告其危若朝露，劝其归十五都灌园于鄙。商君不从。\n\n## 原文\n\n> 赵良曰：'……君之危若朝露，尚将欲延年益寿乎？则何不归十五都，灌园於鄙。'商君弗从。\n\n"
+    },
     {
       "rev_id": "20260423-154718-e23fe7",
       "timestamp": "2026-04-23T15:47:18Z",

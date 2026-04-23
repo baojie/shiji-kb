@@ -1,8 +1,18 @@
 {
   "page": "诛文成将军",
-  "latest_rev_id": "20260423-155518-65f15c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161319-ca45e6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161319-ca45e6",
+      "timestamp": "2026-04-23T16:13:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155518-65f15c",
+      "content_hash": "sha256:ca45e63ac1b356ea4e4534427a204f46d89eab548bd6bd33e0c2dda53bb82b8a",
+      "size": 785,
+      "content": "paragraph_refs:\n  012-018: \"[13.7]-[13.11]\"\nevent_type: 政治整顿\n---\nid: \"诛文成将军\"\ntype: event\ntitle: 诛文成将军\ndescription: 居岁余文成将军方术益衰神不至，乃以帛书饭牛诈称奇事。天子识其手书，诛文成将军而隐之。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-018]\ndate: \"〖%元狩四年〗 （公元前119年）\"\n---\n\n# 诛文成将军\n\n> 居岁余文成将军方术益衰神不至，乃以帛书饭牛诈称奇事。天子识其手书，诛文成将军而隐之。\n\n**主要人物**：天子、少翁\n\n## 事件经过\n\n居岁余文成将军方术益衰神不至，乃以帛书饭牛诈称奇事。天子识其手书，诛文成将军而隐之。\n\n## 原文\n\n> 於是诛文成将军而隐之。\n\n"
+    },
     {
       "rev_id": "20260423-155518-65f15c",
       "timestamp": "2026-04-23T15:55:18Z",

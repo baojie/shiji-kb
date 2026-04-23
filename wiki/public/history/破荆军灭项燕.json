@@ -1,8 +1,28 @@
 {
   "page": "破荆军灭项燕",
-  "latest_rev_id": "20260423-155403-054bc9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163024-7875a0",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163024-7875a0",
+      "timestamp": "2026-04-23T16:30:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161213-7039a8",
+      "content_hash": "sha256:7875a0463d7e85c535b2180216fede10191ddc1e12d0587c5e729ecc7d42b982",
+      "size": 700,
+      "content": "---\nid: \"破荆军灭项燕\"\ntype: event\ntitle: 破荆军灭项燕\ndescription: 二十四年，王翦、蒙武攻荆，破荆军，昌平君死，项燕自杀。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-040]\ndate: \"〖%二十四年〗 （公元前223年）\"\n---\n\n::: meta\npn: \"[31]\"\nevent_type: 战争\n:::\n\n# 破荆军灭项燕\n\n> 二十四年，王翦、蒙武攻荆，破荆军，昌平君死，项燕自杀。\n\n**主要人物**：王翦、蒙武、项燕\n\n## 事件经过\n\n二十四年，王翦、蒙武攻荆，破荆军，昌平君死，项燕自杀。\n\n## 原文\n\n> 二十四年，王翦、蒙武攻荆，破荆军，昌平君死，项燕遂自杀。\n\n"
+    },
+    {
+      "rev_id": "20260423-161213-7039a8",
+      "timestamp": "2026-04-23T16:12:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155403-054bc9",
+      "content_hash": "sha256:7039a8775367328a64c242740a0505b7656db81033c7f0e48e6f441e8455560b",
+      "size": 709,
+      "content": "paragraph_refs:\n  006-040: \"[31]\"\nevent_type: 战争\n---\nid: \"破荆军灭项燕\"\ntype: event\ntitle: 破荆军灭项燕\ndescription: 二十四年，王翦、蒙武攻荆，破荆军，昌平君死，项燕自杀。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-040]\ndate: \"〖%二十四年〗 （公元前223年）\"\n---\n\n# 破荆军灭项燕\n\n> 二十四年，王翦、蒙武攻荆，破荆军，昌平君死，项燕自杀。\n\n**主要人物**：王翦、蒙武、项燕\n\n## 事件经过\n\n二十四年，王翦、蒙武攻荆，破荆军，昌平君死，项燕自杀。\n\n## 原文\n\n> 二十四年，王翦、蒙武攻荆，破荆军，昌平君死，项燕遂自杀。\n\n"
+    },
     {
       "rev_id": "20260423-155403-054bc9",
       "timestamp": "2026-04-23T15:54:03Z",

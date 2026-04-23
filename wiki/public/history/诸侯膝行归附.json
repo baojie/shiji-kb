@@ -1,8 +1,18 @@
 {
   "page": "诸侯膝行归附",
-  "latest_rev_id": "20260423-155521-c446af",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161327-805361",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161327-805361",
+      "timestamp": "2026-04-23T16:13:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155521-c446af",
+      "content_hash": "sha256:80536180dfdb80e86cb6880c5dd80e5e251871c5657f0d40fcc514a28fdf333c",
+      "size": 1014,
+      "content": "paragraph_refs:\n  007-018: \"[43.1]-[43.2]\"\nevent_type: 政治活动\nlocation: \"钜鹿\"\n---\nid: \"诸侯膝行归附\"\ntype: event\ntitle: 诸侯膝行归附\ndescription: 巨鹿之战大破秦军后，项羽召见诸侯将领，各将入辕门皆膝行而前，不敢仰视。项羽由此成为诸侯上将军，诸侯皆归其统帅。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-018]\ndate: \"（公元前207年）\"\n---\n\n# 诸侯膝行归附\n\n> 巨鹿之战大破秦军后，项羽召见诸侯将领，各将入辕门皆膝行而前，不敢仰视。项羽由此成为诸侯上将军，诸侯皆归其统帅。\n\n**主要人物**：项羽\n\n## 事件经过\n\n巨鹿之战大破秦军后，项羽召见诸侯将领，各将入辕门皆膝行而前，不敢仰视。项羽由此成为诸侯上将军，诸侯皆归其统帅。\n\n## 原文\n\n> 於是已破秦军，项羽召见诸侯将，入辕门，无不膝行而前，莫敢仰视。项羽由是始为诸侯上将军，诸侯皆属焉。\n\n"
+    },
     {
       "rev_id": "20260423-155521-c446af",
       "timestamp": "2026-04-23T15:55:21Z",

@@ -1,8 +1,18 @@
 {
   "page": "齐魏灭薛绝嗣",
-  "latest_rev_id": "20260423-154834-1e591b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161646-d26f9b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161646-d26f9b",
+      "timestamp": "2026-04-23T16:16:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154834-1e591b",
+      "content_hash": "sha256:d26f9bb6a349d47347ba2de61a5c6e49df436090d6885f4aa2f58527236fd756",
+      "size": 921,
+      "content": "paragraph_refs:\n  075-017: \"[13]\"\nevent_type: 家族事件\nlocation: \"薛\"\n---\nid: \"齐魏灭薛绝嗣\"\ntype: event\ntitle: 齐魏灭薛绝嗣\ndescription: 孟尝君卒后谥为孟尝君。其诸子争立，齐国和魏国乘机联合灭薛。孟尝君遂绝嗣无后，一代豪杰的家族就此终结。\ntags: [史记, 事件, 孟尝君列传]\nsources: [孟尝君列传]\nevent_ids: [075-017]\ndate: \"孟尝君卒后 [约公元前279年]\"\n---\n\n# 齐魏灭薛绝嗣\n\n> 孟尝君卒后谥为孟尝君。其诸子争立，齐国和魏国乘机联合灭薛。孟尝君遂绝嗣无后，一代豪杰的家族就此终结。\n\n**主要人物**：孟尝君\n\n## 事件经过\n\n孟尝君卒后谥为孟尝君。其诸子争立，齐国和魏国乘机联合灭薛。孟尝君遂绝嗣无后，一代豪杰的家族就此终结。\n\n## 原文\n\n> 文卒，谥为孟尝君。诸子争立，而齐魏共灭薛。孟尝绝嗣无後也。\n\n"
+    },
     {
       "rev_id": "20260423-154834-1e591b",
       "timestamp": "2026-04-23T15:48:34Z",

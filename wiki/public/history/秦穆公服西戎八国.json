@@ -1,8 +1,28 @@
 {
   "page": "秦穆公服西戎八国",
-  "latest_rev_id": "20260423-154617-c6acee",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163108-bce685",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163108-bce685",
+      "timestamp": "2026-04-23T16:31:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161223-1833ec",
+      "content_hash": "sha256:bce685ca6d1a48cd8c4099c1019cf4f2d94cb897bf1411283b8aa93b07fcfe44",
+      "size": 750,
+      "content": "---\nid: \"秦穆公服西戎八国\"\ntype: event\ntitle: 秦穆公服西戎八国\ndescription: 秦穆公得由余，西戎八国服于秦。自陇以西有绵诸、绲戎、翟、镕之戎等多族。\ntags: [史记, 事件, 匈奴列传]\nsources: [匈奴列传]\nevent_ids: [110-004]\ndate: \"〖&秦〗〖@穆公〗时 （公元前623年）\"\n---\n\n::: meta\npn: \"[3.1]\"\nevent_type: 政治活动\n:::\n\n# 秦穆公服西戎八国\n\n> 秦穆公得由余，西戎八国服于秦。自陇以西有绵诸、绲戎、翟、镕之戎等多族。\n\n**主要人物**：由余、秦穆公\n\n## 事件经过\n\n秦穆公得由余，西戎八国服于秦。自陇以西有绵诸、绲戎、翟、镕之戎等多族。\n\n## 原文\n\n> 秦穆公得由余，西戎八国服於秦\n\n"
+    },
+    {
+      "rev_id": "20260423-161223-1833ec",
+      "timestamp": "2026-04-23T16:12:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154617-c6acee",
+      "content_hash": "sha256:1833ec50ed37881729ebbe2c8d8cddc4b2a0962abe17da403dec625a3e2b16b8",
+      "size": 759,
+      "content": "paragraph_refs:\n  110-004: \"[3.1]\"\nevent_type: 政治活动\n---\nid: \"秦穆公服西戎八国\"\ntype: event\ntitle: 秦穆公服西戎八国\ndescription: 秦穆公得由余，西戎八国服于秦。自陇以西有绵诸、绲戎、翟、镕之戎等多族。\ntags: [史记, 事件, 匈奴列传]\nsources: [匈奴列传]\nevent_ids: [110-004]\ndate: \"〖&秦〗〖@穆公〗时 （公元前623年）\"\n---\n\n# 秦穆公服西戎八国\n\n> 秦穆公得由余，西戎八国服于秦。自陇以西有绵诸、绲戎、翟、镕之戎等多族。\n\n**主要人物**：由余、秦穆公\n\n## 事件经过\n\n秦穆公得由余，西戎八国服于秦。自陇以西有绵诸、绲戎、翟、镕之戎等多族。\n\n## 原文\n\n> 秦穆公得由余，西戎八国服於秦\n\n"
+    },
     {
       "rev_id": "20260423-154617-c6acee",
       "timestamp": "2026-04-23T15:46:17Z",

@@ -1,8 +1,18 @@
 {
   "page": "越王栖会稽求和",
-  "latest_rev_id": "20260423-155534-2dda02",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161400-5f98bc",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161400-5f98bc",
+      "timestamp": "2026-04-23T16:14:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155534-2dda02",
+      "content_hash": "sha256:5f98bca6ba986db8d1ad0194b115227b91ac433c915a4de404b422efcfb2e75d",
+      "size": 1146,
+      "content": "paragraph_refs:\n  031-026: \"[32.1-32.2]\"\nevent_type: 政治活动\nlocation: \"会稽\"\n---\nid: \"越王栖会稽求和\"\ntype: event\ntitle: 越王栖会稽求和\ndescription: 越王句践以甲兵五千栖于会稽，请委国为臣妾。伍子胥以少康中兴故事力谏灭越，吴王不听，许越平而罢兵。这是吴国由盛转衰的转折点。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-026]\ndate: \"（公元前494年）\"\n---\n\n# 越王栖会稽求和\n\n> 越王句践以甲兵五千栖于会稽，请委国为臣妾。伍子胥以少康中兴故事力谏灭越，吴王不听，许越平而罢兵。这是吴国由盛转衰的转折点。\n\n**主要人物**：伍子胥、吴王夫差、越王句践\n\n## 事件经过\n\n越王句践以甲兵五千栖于会稽，请委国为臣妾。伍子胥以少康中兴故事力谏灭越，吴王不听，许越平而罢兵。这是吴国由盛转衰的转折点。\n\n## 原文\n\n> 伍子胥谏曰：'...今不因此而灭之，又将之，不亦难乎！且句践为人能辛苦，今不灭，後必悔之。'吴王不听...卒许越平，与盟而罢兵去。\n\n"
+    },
     {
       "rev_id": "20260423-155534-2dda02",
       "timestamp": "2026-04-23T15:55:34Z",

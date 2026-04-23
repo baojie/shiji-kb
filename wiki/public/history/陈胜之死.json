@@ -1,8 +1,18 @@
 {
   "page": "陈胜之死",
-  "latest_rev_id": "20260423-154744-dd8a73",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161500-537a39",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161500-537a39",
+      "timestamp": "2026-04-23T16:15:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154744-dd8a73",
+      "content_hash": "sha256:537a39e6cb001de4d8b6251aa26118bc5c6c077059d794af51ab01d0cc773bd8",
+      "size": 920,
+      "content": "paragraph_refs:\n  048-011: \"[10]\"\nevent_type: 战争\nlocation: \"下城父\"\n---\nid: \"陈胜之死\"\ntype: event\ntitle: 陈胜之死\ndescription: 章邯破各路楚军，击陈。陈王出监战，军破。腊月，陈王之汝阴还至下城父，其御庄贾杀之以降秦。陈胜葬砀，谥曰隐王。\ntags: [史记, 事件, 陈涉世家]\nsources: [陈涉世家]\nevent_ids: [048-011]\ndate: \"〖%腊月〗 （公元前208年）\"\n---\n\n# 陈胜之死\n\n> 章邯破各路楚军，击陈。陈王出监战，军破。腊月，陈王之汝阴还至下城父，其御庄贾杀之以降秦。陈胜葬砀，谥曰隐王。\n\n**主要人物**：御庄贾、章邯、陈胜\n\n## 事件经过\n\n章邯破各路楚军，击陈。陈王出监战，军破。腊月，陈王之汝阴还至下城父，其御庄贾杀之以降秦。陈胜葬砀，谥曰隐王。\n\n## 原文\n\n> 其御庄贾杀以降秦。陈胜葬砀，谥曰隐王。\n\n"
+    },
     {
       "rev_id": "20260423-154744-dd8a73",
       "timestamp": "2026-04-23T15:47:44Z",

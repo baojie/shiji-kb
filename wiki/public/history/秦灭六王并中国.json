@@ -1,8 +1,28 @@
 {
   "page": "秦灭六王并中国",
-  "latest_rev_id": "20260423-155422-fc0fd2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163058-ddfaa7",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163058-ddfaa7",
+      "timestamp": "2026-04-23T16:30:58Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161221-b0ecba",
+      "content_hash": "sha256:ddfaa7fdabf6efdb40b5402b9387593ff3d481d6a691d52afd8b0ca780af77c0",
+      "size": 762,
+      "content": "---\nid: \"秦灭六王并中国\"\ntype: event\ntitle: 秦灭六王并中国\ndescription: 彗星频现之后，秦以兵灭六王，并中国，外攘四夷。死人如乱麻，自蚩尤以来未尝若斯。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-007]\ndate: \"（公元前221年）\"\n---\n\n::: meta\npn: \"[118]\"\nevent_type: 战争\n:::\n\n# 秦灭六王并中国\n\n> 彗星频现之后，秦以兵灭六王，并中国，外攘四夷。死人如乱麻，自蚩尤以来未尝若斯。\n\n**主要人物**：秦始皇\n\n## 事件经过\n\n彗星频现之后，秦以兵灭六王，并中国，外攘四夷。死人如乱麻，自蚩尤以来未尝若斯。\n\n## 原文\n\n> 其後秦遂以兵灭六王，并中国，外攘四夷，死人如乱麻。\n\n"
+    },
+    {
+      "rev_id": "20260423-161221-b0ecba",
+      "timestamp": "2026-04-23T16:12:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155422-fc0fd2",
+      "content_hash": "sha256:b0ecba96f9c3d1c1b6bef76cdfa8b9627739a6447faad6e189feae686492afff",
+      "size": 771,
+      "content": "paragraph_refs:\n  027-007: \"[118]\"\nevent_type: 战争\n---\nid: \"秦灭六王并中国\"\ntype: event\ntitle: 秦灭六王并中国\ndescription: 彗星频现之后，秦以兵灭六王，并中国，外攘四夷。死人如乱麻，自蚩尤以来未尝若斯。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-007]\ndate: \"（公元前221年）\"\n---\n\n# 秦灭六王并中国\n\n> 彗星频现之后，秦以兵灭六王，并中国，外攘四夷。死人如乱麻，自蚩尤以来未尝若斯。\n\n**主要人物**：秦始皇\n\n## 事件经过\n\n彗星频现之后，秦以兵灭六王，并中国，外攘四夷。死人如乱麻，自蚩尤以来未尝若斯。\n\n## 原文\n\n> 其後秦遂以兵灭六王，并中国，外攘四夷，死人如乱麻。\n\n"
+    },
     {
       "rev_id": "20260423-155422-fc0fd2",
       "timestamp": "2026-04-23T15:54:22Z",

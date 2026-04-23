@@ -1,8 +1,18 @@
 {
   "page": "郭解亡命被捕",
-  "latest_rev_id": "20260423-154728-0fc95a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161427-4a2d48",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161427-4a2d48",
+      "timestamp": "2026-04-23T16:14:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154728-0fc95a",
+      "content_hash": "sha256:4a2d482adaf91b853fd07b5f2e3f80110dfe3e012cf3594afe9701a27f125c75",
+      "size": 1118,
+      "content": "paragraph_refs:\n  124-009: \"[13]\"\nevent_type: 政治整顿\nlocation: \"夏阳、临晋、太原\"\n---\nid: \"郭解亡命被捕\"\ntype: event\ntitle: 郭解亡命被捕\ndescription: 郭解亡命至临晋，求籍少公出关，少公帮助后自杀以灭口。解转入太原，所过告主人家。吏追至籍少公处，少公已死。久之乃得解，穷治所犯皆在赦前。\ntags: [史记, 事件, 游侠列传]\nsources: [游侠列传]\nevent_ids: [124-009]\ndate: \"[约公元前125年]\"\n---\n\n# 郭解亡命被捕\n\n> 郭解亡命至临晋，求籍少公出关，少公帮助后自杀以灭口。解转入太原，所过告主人家。吏追至籍少公处，少公已死。久之乃得解，穷治所犯皆在赦前。\n\n**主要人物**：籍少公、郭解\n\n## 事件经过\n\n郭解亡命至临晋，求籍少公出关，少公帮助后自杀以灭口。解转入太原，所过告主人家。吏追至籍少公处，少公已死。久之乃得解，穷治所犯皆在赦前。\n\n## 原文\n\n> 临晋籍少公素不知解，解冒，因求出关。籍少公已出解……少公自杀，口绝。久之，乃得解。\n\n"
+    },
     {
       "rev_id": "20260423-154728-0fc95a",
       "timestamp": "2026-04-23T15:47:28Z",

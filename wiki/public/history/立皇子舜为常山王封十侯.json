@@ -1,8 +1,28 @@
 {
   "page": "立皇子舜为常山王封十侯",
-  "latest_rev_id": "20260423-154625-ecfeaf",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163134-b1029f",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163134-b1029f",
+      "timestamp": "2026-04-23T16:31:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161229-157ae0",
+      "content_hash": "sha256:b1029f4e16d38f32de786470c62555e8349bc2685cd81ba798516de3529b47c8",
+      "size": 721,
+      "content": "---\nid: \"立皇子舜为常山王封十侯\"\ntype: event\ntitle: 立皇子舜为常山王封十侯\ndescription: 中五年夏立皇子舜为常山王，封十侯。六月丁巳赦天下赐爵一级。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-034]\ndate: \"〖%中五年夏〗 （公元前145年）\"\n---\n\n::: meta\npn: \"[18.1]-[18.2]\"\nevent_type: 政治活动\n:::\n\n# 立皇子舜为常山王封十侯\n\n> 中五年夏立皇子舜为常山王，封十侯。六月丁巳赦天下赐爵一级。\n\n**主要人物**：舜\n\n## 事件经过\n\n中五年夏立皇子舜为常山王，封十侯。六月丁巳赦天下赐爵一级。\n\n## 原文\n\n> 中五年夏，立皇子舜为常山王。封十侯。\n\n"
+    },
+    {
+      "rev_id": "20260423-161229-157ae0",
+      "timestamp": "2026-04-23T16:12:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154625-ecfeaf",
+      "content_hash": "sha256:157ae05d49565c75cf6291408aa84c97ac0dbacb11382b19c995e1aed95d32e6",
+      "size": 730,
+      "content": "paragraph_refs:\n  011-034: \"[18.1]-[18.2]\"\nevent_type: 政治活动\n---\nid: \"立皇子舜为常山王封十侯\"\ntype: event\ntitle: 立皇子舜为常山王封十侯\ndescription: 中五年夏立皇子舜为常山王，封十侯。六月丁巳赦天下赐爵一级。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-034]\ndate: \"〖%中五年夏〗 （公元前145年）\"\n---\n\n# 立皇子舜为常山王封十侯\n\n> 中五年夏立皇子舜为常山王，封十侯。六月丁巳赦天下赐爵一级。\n\n**主要人物**：舜\n\n## 事件经过\n\n中五年夏立皇子舜为常山王，封十侯。六月丁巳赦天下赐爵一级。\n\n## 原文\n\n> 中五年夏，立皇子舜为常山王。封十侯。\n\n"
+    },
     {
       "rev_id": "20260423-154625-ecfeaf",
       "timestamp": "2026-04-23T15:46:25Z",

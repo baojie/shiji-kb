@@ -1,8 +1,18 @@
 {
   "page": "项羽破函谷关",
-  "latest_rev_id": "20260423-154811-473abc",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161548-da0756",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161548-da0756",
+      "timestamp": "2026-04-23T16:15:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154811-473abc",
+      "content_hash": "sha256:da0756a7dc660d383cb0715488c59c9bddf067f09d4abfc42f48478341ece892",
+      "size": 929,
+      "content": "paragraph_refs:\n  008-027: \"[24.3]-[24.5]\"\nevent_type: 战争\nlocation: \"函谷关\"\n---\nid: \"项羽破函谷关\"\ntype: event\ntitle: 项羽破函谷关\ndescription: 沛公守函谷关不纳诸侯军，项羽率军西来，闻沛公已定关中大怒，使黥布等攻破函谷关，十二月至戏。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-027]\ndate: \"〖%十一月〗 （公元前206年）\"\n---\n\n# 项羽破函谷关\n\n> 沛公守函谷关不纳诸侯军，项羽率军西来，闻沛公已定关中大怒，使黥布等攻破函谷关，十二月至戏。\n\n**主要人物**：项羽、黥布\n\n## 事件经过\n\n沛公守函谷关不纳诸侯军，项羽率军西来，闻沛公已定关中大怒，使黥布等攻破函谷关，十二月至戏。\n\n## 原文\n\n> 十一月中，项羽果率诸侯兵西，欲入关，关门闭。闻沛公已定关中，大怒，使黥布等攻破函谷关。\n\n"
+    },
     {
       "rev_id": "20260423-154811-473abc",
       "timestamp": "2026-04-23T15:48:11Z",

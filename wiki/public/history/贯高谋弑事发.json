@@ -1,8 +1,18 @@
 {
   "page": "贯高谋弑事发",
-  "latest_rev_id": "20260423-155524-b873fb",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161332-fdb65f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161332-fdb65f",
+      "timestamp": "2026-04-23T16:13:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155524-b873fb",
+      "content_hash": "sha256:fdb65f28416cca800860724ef318c17fdaba0c2a3fd237d8316b248acd5f3432",
+      "size": 979,
+      "content": "paragraph_refs:\n  008-080: \"[69]-[70]\"\nevent_type: 政治整顿\nlocation: \"柏人\"\n---\nid: \"贯高谋弑事发\"\ntype: event\ntitle: 贯高谋弑事发\ndescription: 赵相贯高等谋弑高祖于柏人，高祖心动未留。九年事发觉，夷三族。废赵王敖为宣平侯。代王刘仲弃国亡归洛阳，废为合阳侯。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-080]\ndate: \"〖%九年〗 （公元前198年）\"\n---\n\n# 贯高谋弑事发\n\n> 赵相贯高等谋弑高祖于柏人，高祖心动未留。九年事发觉，夷三族。废赵王敖为宣平侯。代王刘仲弃国亡归洛阳，废为合阳侯。\n\n**主要人物**：刘邦、贯高、赵敖\n\n## 事件经过\n\n赵相贯高等谋弑高祖于柏人，高祖心动未留。九年事发觉，夷三族。废赵王敖为宣平侯。代王刘仲弃国亡归洛阳，废为合阳侯。\n\n## 原文\n\n> 九年，赵相贯高等事发觉，夷三族。废赵王敖为宣平侯。\n\n"
+    },
     {
       "rev_id": "20260423-155524-b873fb",
       "timestamp": "2026-04-23T15:55:24Z",

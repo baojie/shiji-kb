@@ -1,8 +1,28 @@
 {
   "page": "立卢绾为燕王",
-  "latest_rev_id": "20260423-154624-9163b6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163129-454c45",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163129-454c45",
+      "timestamp": "2026-04-23T16:31:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161228-e2b2c6",
+      "content_hash": "sha256:454c459c3ff41da3e83f392795df3d0ae633864e53de9a1d8c8f134274de8809",
+      "size": 558,
+      "content": "---\nid: \"立卢绾为燕王\"\ntype: event\ntitle: 立卢绾为燕王\ndescription: 击败臧荼后，高祖即立太尉卢绾为燕王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-069]\ndate: \"〖%五年十月〗 （公元前202年）\"\n---\n\n::: meta\npn: \"[60.3]\"\nevent_type: 政治活动\n:::\n\n# 立卢绾为燕王\n\n> 击败臧荼后，高祖即立太尉卢绾为燕王。\n\n**主要人物**：刘邦、卢绾\n\n## 事件经过\n\n击败臧荼后，高祖即立太尉卢绾为燕王。\n\n## 原文\n\n> 即立太尉卢绾为燕王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161228-e2b2c6",
+      "timestamp": "2026-04-23T16:12:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154624-9163b6",
+      "content_hash": "sha256:e2b2c6f7391475738f6853caf8f63766058c0b501914e06016e2ca5a9bc71f3a",
+      "size": 567,
+      "content": "paragraph_refs:\n  008-069: \"[60.3]\"\nevent_type: 政治活动\n---\nid: \"立卢绾为燕王\"\ntype: event\ntitle: 立卢绾为燕王\ndescription: 击败臧荼后，高祖即立太尉卢绾为燕王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-069]\ndate: \"〖%五年十月〗 （公元前202年）\"\n---\n\n# 立卢绾为燕王\n\n> 击败臧荼后，高祖即立太尉卢绾为燕王。\n\n**主要人物**：刘邦、卢绾\n\n## 事件经过\n\n击败臧荼后，高祖即立太尉卢绾为燕王。\n\n## 原文\n\n> 即立太尉卢绾为燕王。\n\n"
+    },
     {
       "rev_id": "20260423-154624-9163b6",
       "timestamp": "2026-04-23T15:46:24Z",

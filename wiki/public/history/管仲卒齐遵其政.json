@@ -1,8 +1,28 @@
 {
   "page": "管仲卒齐遵其政",
-  "latest_rev_id": "20260423-154628-e214b1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163143-3ba77b",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163143-3ba77b",
+      "timestamp": "2026-04-23T16:31:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161231-100b3a",
+      "content_hash": "sha256:3ba77b1da6af6adad2cc22b3bec455dc2ab515dde9f1edbfcab42bf7f080247b",
+      "size": 815,
+      "content": "---\nid: \"管仲卒齐遵其政\"\ntype: event\ntitle: 管仲卒齐遵其政\ndescription: 管仲去世后，齐国仍然遵循其政策，常强于诸侯。管仲富拟公室，有三归反坫，齐人不以为侈。\ntags: [史记, 事件, 管晏列传]\nsources: [管晏列传]\nevent_ids: [062-009]\ndate: \"（公元前645年）\"\n---\n\n::: meta\npn: \"[6]\"\nevent_type: 政治活动\nlocation: \"齐\"\n:::\n\n# 管仲卒齐遵其政\n\n> 管仲去世后，齐国仍然遵循其政策，常强于诸侯。管仲富拟公室，有三归反坫，齐人不以为侈。\n\n**主要人物**：管仲\n\n## 事件经过\n\n管仲去世后，齐国仍然遵循其政策，常强于诸侯。管仲富拟公室，有三归反坫，齐人不以为侈。\n\n## 原文\n\n> 管仲卒，齐国遵其政，常彊於诸侯。後百馀年而有晏子焉。\n\n"
+    },
+    {
+      "rev_id": "20260423-161231-100b3a",
+      "timestamp": "2026-04-23T16:12:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154628-e214b1",
+      "content_hash": "sha256:100b3a86bfaa2dae013b54295035bc60705e6624aba881be4054fba2a3169252",
+      "size": 824,
+      "content": "paragraph_refs:\n  062-009: \"[6]\"\nevent_type: 政治活动\nlocation: \"齐\"\n---\nid: \"管仲卒齐遵其政\"\ntype: event\ntitle: 管仲卒齐遵其政\ndescription: 管仲去世后，齐国仍然遵循其政策，常强于诸侯。管仲富拟公室，有三归反坫，齐人不以为侈。\ntags: [史记, 事件, 管晏列传]\nsources: [管晏列传]\nevent_ids: [062-009]\ndate: \"（公元前645年）\"\n---\n\n# 管仲卒齐遵其政\n\n> 管仲去世后，齐国仍然遵循其政策，常强于诸侯。管仲富拟公室，有三归反坫，齐人不以为侈。\n\n**主要人物**：管仲\n\n## 事件经过\n\n管仲去世后，齐国仍然遵循其政策，常强于诸侯。管仲富拟公室，有三归反坫，齐人不以为侈。\n\n## 原文\n\n> 管仲卒，齐国遵其政，常彊於诸侯。後百馀年而有晏子焉。\n\n"
+    },
     {
       "rev_id": "20260423-154628-e214b1",
       "timestamp": "2026-04-23T15:46:28Z",

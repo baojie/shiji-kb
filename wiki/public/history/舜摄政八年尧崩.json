@@ -1,8 +1,28 @@
 {
   "page": "舜摄政八年尧崩",
-  "latest_rev_id": "20260423-154635-15fca1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163221-4b695e",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163221-4b695e",
+      "timestamp": "2026-04-23T16:32:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161239-37431a",
+      "content_hash": "sha256:4b695e070a8d25afdd64a50e7942e6ffe5bb2ac80eddf09ac071ded802f40a25",
+      "size": 772,
+      "content": "---\nid: \"舜摄政八年尧崩\"\ntype: event\ntitle: 舜摄政八年尧崩\ndescription: 舜摄政八年后尧崩逝。三年守丧完毕，舜让位于丹朱，但天下归向舜。于是舜正式即位。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-046]\ndate: \"〖%八年〗 [约公元前2259年]\"\n---\n\n::: meta\npn: \"[23]\"\nevent_type: 继位\n:::\n\n# 舜摄政八年尧崩\n\n> 舜摄政八年后尧崩逝。三年守丧完毕，舜让位于丹朱，但天下归向舜。于是舜正式即位。\n\n**主要人物**：尧、舜\n\n## 事件经过\n\n舜摄政八年后尧崩逝。三年守丧完毕，舜让位于丹朱，但天下归向舜。于是舜正式即位。\n\n## 原文\n\n> 摄政八年而尧崩。三年丧毕，让丹硃，天下归舜。\n\n"
+    },
+    {
+      "rev_id": "20260423-161239-37431a",
+      "timestamp": "2026-04-23T16:12:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154635-15fca1",
+      "content_hash": "sha256:37431a899aea7a345e8eb5bf95f7caf3c9695a55bf193152ad6aa51c2ecfef08",
+      "size": 781,
+      "content": "paragraph_refs:\n  001-046: \"[23]\"\nevent_type: 继位\n---\nid: \"舜摄政八年尧崩\"\ntype: event\ntitle: 舜摄政八年尧崩\ndescription: 舜摄政八年后尧崩逝。三年守丧完毕，舜让位于丹朱，但天下归向舜。于是舜正式即位。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-046]\ndate: \"〖%八年〗 [约公元前2259年]\"\n---\n\n# 舜摄政八年尧崩\n\n> 舜摄政八年后尧崩逝。三年守丧完毕，舜让位于丹朱，但天下归向舜。于是舜正式即位。\n\n**主要人物**：尧、舜\n\n## 事件经过\n\n舜摄政八年后尧崩逝。三年守丧完毕，舜让位于丹朱，但天下归向舜。于是舜正式即位。\n\n## 原文\n\n> 摄政八年而尧崩。三年丧毕，让丹硃，天下归舜。\n\n"
+    },
     {
       "rev_id": "20260423-154635-15fca1",
       "timestamp": "2026-04-23T15:46:35Z",

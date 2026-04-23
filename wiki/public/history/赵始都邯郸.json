@@ -1,8 +1,18 @@
 {
   "page": "赵始都邯郸",
-  "latest_rev_id": "20260423-155528-bbe546",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161343-3a2b99",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161343-3a2b99",
+      "timestamp": "2026-04-23T16:13:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155528-bbe546",
+      "content_hash": "sha256:3a2b99fe98a3d25ac8e57e37fac1d692b3369e890e7bfde4541f51446776ce12",
+      "size": 605,
+      "content": "paragraph_refs:\n  043-017: \"[16.1]\"\nevent_type: 建设\nlocation: \"邯郸\"\n---\nid: \"赵始都邯郸\"\ntype: event\ntitle: 赵始都邯郸\ndescription: 敬侯元年，武公子朝作乱不克，出奔魏。赵始都邯郸。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-017]\ndate: \"〖;敬侯〗〖%元年〗 （公元前386年）\"\n---\n\n# 赵始都邯郸\n\n> 敬侯元年，武公子朝作乱不克，出奔魏。赵始都邯郸。\n\n**主要人物**：敬侯\n\n## 事件经过\n\n敬侯元年，武公子朝作乱不克，出奔魏。赵始都邯郸。\n\n## 原文\n\n> 赵始都邯郸。\n\n"
+    },
     {
       "rev_id": "20260423-155528-bbe546",
       "timestamp": "2026-04-23T15:55:28Z",

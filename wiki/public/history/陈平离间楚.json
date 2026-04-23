@@ -1,8 +1,18 @@
 {
   "page": "陈平离间楚",
-  "latest_rev_id": "20260423-154740-03716d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161454-e266ae",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161454-e266ae",
+      "timestamp": "2026-04-23T16:14:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154740-03716d",
+      "content_hash": "sha256:e266ae2fd21ea994cecf254280bde6f23820eaec39827356c7f73de2bab7062c",
+      "size": 1055,
+      "content": "paragraph_refs:\n  008-047: \"[40.6]-[40.8]\"\nevent_type: 政治活动\nlocation: \"荥阳\"\n---\nid: \"陈平离间楚\"\ntype: event\ntitle: 陈平离间楚\ndescription: 汉王用陈平之计，予金四万斤以间疏楚君臣。项羽果疑亚父范增，范增怒而辞老请归，未至彭城而死。楚军失一重要谋臣。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-047]\ndate: \"〖%三年〗 （公元前204年）\"\n---\n\n# 陈平离间楚\n\n> 汉王用陈平之计，予金四万斤以间疏楚君臣。项羽果疑亚父范增，范增怒而辞老请归，未至彭城而死。楚军失一重要谋臣。\n\n**主要人物**：亚父、刘邦、陈平、项羽\n\n## 事件经过\n\n汉王用陈平之计，予金四万斤以间疏楚君臣。项羽果疑亚父范增，范增怒而辞老请归，未至彭城而死。楚军失一重要谋臣。\n\n## 原文\n\n> 乃用陈平之计，予陈平金四万斤，以间疏楚君臣。於是项羽乃疑亚父。亚父...乃怒，辞老，原赐骸骨归卒伍，未至彭城而死。\n\n"
+    },
     {
       "rev_id": "20260423-154740-03716d",
       "timestamp": "2026-04-23T15:47:40Z",

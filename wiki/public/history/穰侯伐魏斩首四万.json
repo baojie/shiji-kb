@@ -1,8 +1,28 @@
 {
   "page": "穰侯伐魏斩首四万",
-  "latest_rev_id": "20260423-154619-a02dc6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163116-aa758c",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163116-aa758c",
+      "timestamp": "2026-04-23T16:31:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161225-6b723f",
+      "content_hash": "sha256:aa758cf2a1fa6bf3006bf7fbb39f5df593e15a1bea857d0fe906dd402ee15e90",
+      "size": 923,
+      "content": "---\nid: \"穰侯伐魏斩首四万\"\ntype: event\ntitle: 穰侯伐魏斩首四万\ndescription: 罢梁围次年，魏背秦与齐合纵。秦派穰侯伐魏，斩首四万，击走魏将暴鸢，取魏三县。穰侯因此增加封地。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-010]\ndate: \"昭王三十三年（公元前274年）\"\n---\n\n::: meta\npn: \"[7]\"\nevent_type: 战争\nlocation: \"魏\"\n:::\n\n# 穰侯伐魏斩首四万\n\n> 罢梁围次年，魏背秦与齐合纵。秦派穰侯伐魏，斩首四万，击走魏将暴鸢，取魏三县。穰侯因此增加封地。\n\n**主要人物**：穰侯\n\n## 事件经过\n\n罢梁围次年，魏背秦与齐合纵。秦派穰侯伐魏，斩首四万，击走魏将暴鸢，取魏三县。穰侯因此增加封地。\n\n## 原文\n\n> 明年，魏背秦，与齐从亲。秦使穰侯伐魏，斩首四万，走魏将暴鸢，得魏三县。穰侯益封。\n\n"
+    },
+    {
+      "rev_id": "20260423-161225-6b723f",
+      "timestamp": "2026-04-23T16:12:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154619-a02dc6",
+      "content_hash": "sha256:6b723f002f0115620dc2d7eaca8265f709751507ddeddab03677d6708510a676",
+      "size": 932,
+      "content": "paragraph_refs:\n  072-010: \"[7]\"\nevent_type: 战争\nlocation: \"魏\"\n---\nid: \"穰侯伐魏斩首四万\"\ntype: event\ntitle: 穰侯伐魏斩首四万\ndescription: 罢梁围次年，魏背秦与齐合纵。秦派穰侯伐魏，斩首四万，击走魏将暴鸢，取魏三县。穰侯因此增加封地。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-010]\ndate: \"昭王三十三年（公元前274年）\"\n---\n\n# 穰侯伐魏斩首四万\n\n> 罢梁围次年，魏背秦与齐合纵。秦派穰侯伐魏，斩首四万，击走魏将暴鸢，取魏三县。穰侯因此增加封地。\n\n**主要人物**：穰侯\n\n## 事件经过\n\n罢梁围次年，魏背秦与齐合纵。秦派穰侯伐魏，斩首四万，击走魏将暴鸢，取魏三县。穰侯因此增加封地。\n\n## 原文\n\n> 明年，魏背秦，与齐从亲。秦使穰侯伐魏，斩首四万，走魏将暴鸢，得魏三县。穰侯益封。\n\n"
+    },
     {
       "rev_id": "20260423-154619-a02dc6",
       "timestamp": "2026-04-23T15:46:19Z",

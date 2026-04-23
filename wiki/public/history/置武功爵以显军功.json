@@ -1,8 +1,28 @@
 {
   "page": "置武功爵以显军功",
-  "latest_rev_id": "20260423-155445-f544ae",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163200-c40936",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163200-c40936",
+      "timestamp": "2026-04-23T16:32:00Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161235-dd914b",
+      "content_hash": "sha256:c40936f95d889d9d46dbb74916ea4c8d67d8c5fd425eea17d35dae411bf27400",
+      "size": 979,
+      "content": "---\nid: \"置武功爵以显军功\"\ntype: event\ntitle: 置武功爵以显军功\ndescription: 议令民得买爵及赎禁锢免减罪，请置赏官命曰武功爵。级十七万，凡直三十余万金。军功多用越等，大者封侯，小者郎吏。吏道杂而多端，官职耗废。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-014]\ndate: \"（公元前123年）\"\n---\n\n::: meta\npn: \"[9]\"\nevent_type: 改革\n:::\n\n# 置武功爵以显军功\n\n> 议令民得买爵及赎禁锢免减罪，请置赏官命曰武功爵。级十七万，凡直三十余万金。军功多用越等，大者封侯，小者郎吏。吏道杂而多端，官职耗废。\n\n## 事件经过\n\n议令民得买爵及赎禁锢免减罪，请置赏官命曰武功爵。级十七万，凡直三十余万金。军功多用越等，大者封侯，小者郎吏。吏道杂而多端，官职耗废。\n\n## 原文\n\n> 请置赏官，命曰武功爵。级十七万，凡直三十馀万金。\n\n"
+    },
+    {
+      "rev_id": "20260423-161235-dd914b",
+      "timestamp": "2026-04-23T16:12:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155445-f544ae",
+      "content_hash": "sha256:dd914b6c07cc62daa5aad5d1d07f952e91ed9a3d1a8825b61d1dcfc6cebb377a",
+      "size": 988,
+      "content": "paragraph_refs:\n  030-014: \"[9]\"\nevent_type: 改革\n---\nid: \"置武功爵以显军功\"\ntype: event\ntitle: 置武功爵以显军功\ndescription: 议令民得买爵及赎禁锢免减罪，请置赏官命曰武功爵。级十七万，凡直三十余万金。军功多用越等，大者封侯，小者郎吏。吏道杂而多端，官职耗废。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-014]\ndate: \"（公元前123年）\"\n---\n\n# 置武功爵以显军功\n\n> 议令民得买爵及赎禁锢免减罪，请置赏官命曰武功爵。级十七万，凡直三十余万金。军功多用越等，大者封侯，小者郎吏。吏道杂而多端，官职耗废。\n\n## 事件经过\n\n议令民得买爵及赎禁锢免减罪，请置赏官命曰武功爵。级十七万，凡直三十余万金。军功多用越等，大者封侯，小者郎吏。吏道杂而多端，官职耗废。\n\n## 原文\n\n> 请置赏官，命曰武功爵。级十七万，凡直三十馀万金。\n\n"
+    },
     {
       "rev_id": "20260423-155445-f544ae",
       "timestamp": "2026-04-23T15:54:45Z",

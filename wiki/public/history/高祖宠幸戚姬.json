@@ -1,8 +1,18 @@
 {
   "page": "高祖宠幸戚姬",
-  "latest_rev_id": "20260423-155616-284ce3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161603-b3b069",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161603-b3b069",
+      "timestamp": "2026-04-23T16:16:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155616-284ce3",
+      "content_hash": "sha256:b3b069c45569ba29d18297730f4174d33cfb3d904358f8a27db31833c71d6bfb",
+      "size": 852,
+      "content": "paragraph_refs:\n  009-002: \"[1.2]\"\nevent_type: 家族事件\nlocation: \"定陶\"\n---\nid: \"高祖宠幸戚姬\"\ntype: event\ntitle: 高祖宠幸戚姬\ndescription: 高祖为汉王后，在定陶得到戚姬，十分宠爱，生下赵隐王如意。这为日后废立太子之争埋下伏笔。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-002]\ndate: \"[约公元前205年]\"\n---\n\n# 高祖宠幸戚姬\n\n> 高祖为汉王后，在定陶得到戚姬，十分宠爱，生下赵隐王如意。这为日后废立太子之争埋下伏笔。\n\n**主要人物**：戚姬、赵隐王如意、高祖\n\n## 事件经过\n\n高祖为汉王后，在定陶得到戚姬，十分宠爱，生下赵隐王如意。这为日后废立太子之争埋下伏笔。\n\n## 原文\n\n> 及高祖为汉王，得定陶戚姬，爱幸，生赵隐王如意。\n\n"
+    },
     {
       "rev_id": "20260423-155616-284ce3",
       "timestamp": "2026-04-23T15:56:16Z",

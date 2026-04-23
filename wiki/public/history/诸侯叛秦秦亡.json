@@ -1,8 +1,18 @@
 {
   "page": "诸侯叛秦秦亡",
-  "latest_rev_id": "20260423-155520-9084c8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161325-9d91f0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161325-9d91f0",
+      "timestamp": "2026-04-23T16:13:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155520-9084c8",
+      "content_hash": "sha256:9d91f0fcca2e0c0f3df9cbbdf7681666847c164a8ab1a10188344dce302d6956",
+      "size": 912,
+      "content": "paragraph_refs:\n  005-150: \"[68.2]\"\nevent_type: 战争\n---\nid: \"诸侯叛秦秦亡\"\ntype: event\ntitle: 诸侯叛秦秦亡\ndescription: 二世三年，诸侯并起反叛秦朝。赵高杀二世，立子婴。子婴立月余，诸侯诛之，秦朝灭亡。详情载于始皇本纪。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-150]\ndate: \"〖%三年〗 （公元前207年）\"\n---\n\n# 诸侯叛秦秦亡\n\n> 二世三年，诸侯并起反叛秦朝。赵高杀二世，立子婴。子婴立月余，诸侯诛之，秦朝灭亡。详情载于始皇本纪。\n\n**主要人物**：二世、子婴、赵高\n\n## 事件经过\n\n二世三年，诸侯并起反叛秦朝。赵高杀二世，立子婴。子婴立月余，诸侯诛之，秦朝灭亡。详情载于始皇本纪。\n\n## 原文\n\n> 三年，诸侯并起叛秦，赵高杀二世，立子婴。子婴立月馀，诸侯诛之，遂灭秦。\n\n"
+    },
     {
       "rev_id": "20260423-155520-9084c8",
       "timestamp": "2026-04-23T15:55:20Z",

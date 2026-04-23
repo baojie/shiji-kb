@@ -1,8 +1,28 @@
 {
   "page": "秦灭魏二人隐陈",
-  "latest_rev_id": "20260423-155424-f61ac1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163103-9be843",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163103-9be843",
+      "timestamp": "2026-04-23T16:31:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161222-d06f34",
+      "content_hash": "sha256:9be843119794038eb298360e7c88313300b71a580036ceb3e68d5e50967507c1",
+      "size": 967,
+      "content": "---\nid: \"秦灭魏二人隐陈\"\ntype: event\ntitle: 秦灭魏二人隐陈\ndescription: 秦灭大梁后购求张耳千金、陈馀五百金。二人变名姓俱至陈县，为里监门自食。高祖布衣时曾数从张耳游客数月。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-002]\ndate: \"[约公元前222年]\"\n---\n\n::: meta\npn: \"[2]\"\nevent_type: 政治活动\nlocation: \"陈\"\n:::\n\n# 秦灭魏二人隐陈\n\n> 秦灭大梁后购求张耳千金、陈馀五百金。二人变名姓俱至陈县，为里监门自食。高祖布衣时曾数从张耳游客数月。\n\n**主要人物**：张耳、陈馀\n\n## 事件经过\n\n秦灭大梁后购求张耳千金、陈馀五百金。二人变名姓俱至陈县，为里监门自食。高祖布衣时曾数从张耳游客数月。\n\n## 原文\n\n> 秦灭魏数岁，已闻此两人魏之名士也，购求有得张耳千金，陈馀五百金。张耳、陈馀乃变名姓，俱之陈。\n\n"
+    },
+    {
+      "rev_id": "20260423-161222-d06f34",
+      "timestamp": "2026-04-23T16:12:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155424-f61ac1",
+      "content_hash": "sha256:d06f345a0a3bc1665bbe08b3b6b82ced941e35285da5072584cf95e4da42597d",
+      "size": 976,
+      "content": "paragraph_refs:\n  089-002: \"[2]\"\nevent_type: 政治活动\nlocation: \"陈\"\n---\nid: \"秦灭魏二人隐陈\"\ntype: event\ntitle: 秦灭魏二人隐陈\ndescription: 秦灭大梁后购求张耳千金、陈馀五百金。二人变名姓俱至陈县，为里监门自食。高祖布衣时曾数从张耳游客数月。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-002]\ndate: \"[约公元前222年]\"\n---\n\n# 秦灭魏二人隐陈\n\n> 秦灭大梁后购求张耳千金、陈馀五百金。二人变名姓俱至陈县，为里监门自食。高祖布衣时曾数从张耳游客数月。\n\n**主要人物**：张耳、陈馀\n\n## 事件经过\n\n秦灭大梁后购求张耳千金、陈馀五百金。二人变名姓俱至陈县，为里监门自食。高祖布衣时曾数从张耳游客数月。\n\n## 原文\n\n> 秦灭魏数岁，已闻此两人魏之名士也，购求有得张耳千金，陈馀五百金。张耳、陈馀乃变名姓，俱之陈。\n\n"
+    },
     {
       "rev_id": "20260423-155424-f61ac1",
       "timestamp": "2026-04-23T15:54:24Z",

@@ -1,8 +1,28 @@
 {
   "page": "秦师破鄢郢",
-  "latest_rev_id": "20260423-155418-1f0d12",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163050-bac3f1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163050-bac3f1",
+      "timestamp": "2026-04-23T16:30:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161219-7324c0",
+      "content_hash": "sha256:bac3f115bb13864da8a4307b15c5b9b36141024d8a0ae82bb07c288e1a9d4df9",
+      "size": 899,
+      "content": "---\nid: \"秦师破鄢郢\"\ntype: event\ntitle: 秦师破鄢郢\ndescription: 楚国以汝、颍为险，江、汉为池，邓林、方城为屏障，看似固若金汤，然而秦师攻至鄢郢，举如振槁，不堪一击。说明不由礼道则险固无用。\ntags: [史记, 事件, 礼书]\nsources: [礼书]\nevent_ids: [023-012]\ndate: \"（公元前278年）\"\n---\n\n::: meta\npn: \"[14.6]\"\nevent_type: 战争\nlocation: \"鄢郢\"\n:::\n\n# 秦师破鄢郢\n\n> 楚国以汝、颍为险，江、汉为池，邓林、方城为屏障，看似固若金汤，然而秦师攻至鄢郢，举如振槁，不堪一击。说明不由礼道则险固无用。\n\n## 事件经过\n\n楚国以汝、颍为险，江、汉为池，邓林、方城为屏障，看似固若金汤，然而秦师攻至鄢郢，举如振槁，不堪一击。说明不由礼道则险固无用。\n\n## 原文\n\n> 然而秦师至鄢郢，举若振槁。\n\n"
+    },
+    {
+      "rev_id": "20260423-161219-7324c0",
+      "timestamp": "2026-04-23T16:12:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155418-1f0d12",
+      "content_hash": "sha256:7324c0c7398c6dd0bed075fa32c9c14ae3ca5aa84c4d5ee9ef1644696fbe63f4",
+      "size": 908,
+      "content": "paragraph_refs:\n  023-012: \"[14.6]\"\nevent_type: 战争\nlocation: \"鄢郢\"\n---\nid: \"秦师破鄢郢\"\ntype: event\ntitle: 秦师破鄢郢\ndescription: 楚国以汝、颍为险，江、汉为池，邓林、方城为屏障，看似固若金汤，然而秦师攻至鄢郢，举如振槁，不堪一击。说明不由礼道则险固无用。\ntags: [史记, 事件, 礼书]\nsources: [礼书]\nevent_ids: [023-012]\ndate: \"（公元前278年）\"\n---\n\n# 秦师破鄢郢\n\n> 楚国以汝、颍为险，江、汉为池，邓林、方城为屏障，看似固若金汤，然而秦师攻至鄢郢，举如振槁，不堪一击。说明不由礼道则险固无用。\n\n## 事件经过\n\n楚国以汝、颍为险，江、汉为池，邓林、方城为屏障，看似固若金汤，然而秦师攻至鄢郢，举如振槁，不堪一击。说明不由礼道则险固无用。\n\n## 原文\n\n> 然而秦师至鄢郢，举若振槁。\n\n"
+    },
     {
       "rev_id": "20260423-155418-1f0d12",
       "timestamp": "2026-04-23T15:54:18Z",

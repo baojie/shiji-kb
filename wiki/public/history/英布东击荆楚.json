@@ -1,8 +1,28 @@
 {
   "page": "英布东击荆楚",
-  "latest_rev_id": "20260423-154640-b0f874",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163234-a35685",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163234-a35685",
+      "timestamp": "2026-04-23T16:32:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161242-351da4",
+      "content_hash": "sha256:a35685b3dab8f6a64aad8f8c583c64ecec0db3f45a38b0caa827f13aa53c86ac",
+      "size": 1032,
+      "content": "---\nid: \"英布东击荆楚\"\ntype: event\ntitle: 英布东击荆楚\ndescription: 英布反叛后果如薛公所料，东击荆国。荆王刘贾走死于富陵，英布尽劫其兵，渡淮击楚。楚分三军应战，英布破其一军，余二军散走。\ntags: [史记, 事件, 黥布列传]\nsources: [黥布列传]\nevent_ids: [091-021]\ndate: \"（公元前196年）\"\n---\n\n::: meta\npn: \"[16]\"\nevent_type: 战争\nlocation: \"富陵、徐、僮\"\n:::\n\n# 英布东击荆楚\n\n> 英布反叛后果如薛公所料，东击荆国。荆王刘贾走死于富陵，英布尽劫其兵，渡淮击楚。楚分三军应战，英布破其一军，余二军散走。\n\n**主要人物**：刘贾、英布\n\n## 事件经过\n\n英布反叛后果如薛公所料，东击荆国。荆王刘贾走死于富陵，英布尽劫其兵，渡淮击楚。楚分三军应战，英布破其一军，余二军散走。\n\n## 原文\n\n> 果如薛公筹之，东击荆，荆王刘贾走死富陵。尽劫其兵，渡淮击楚。...布果破其一军，其二军散走。\n\n"
+    },
+    {
+      "rev_id": "20260423-161242-351da4",
+      "timestamp": "2026-04-23T16:12:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154640-b0f874",
+      "content_hash": "sha256:351da407dd01b127a23d9dc3590fc3236f5cafbbdef6ccb3e228c646e35b77cd",
+      "size": 1041,
+      "content": "paragraph_refs:\n  091-021: \"[16]\"\nevent_type: 战争\nlocation: \"富陵、徐、僮\"\n---\nid: \"英布东击荆楚\"\ntype: event\ntitle: 英布东击荆楚\ndescription: 英布反叛后果如薛公所料，东击荆国。荆王刘贾走死于富陵，英布尽劫其兵，渡淮击楚。楚分三军应战，英布破其一军，余二军散走。\ntags: [史记, 事件, 黥布列传]\nsources: [黥布列传]\nevent_ids: [091-021]\ndate: \"（公元前196年）\"\n---\n\n# 英布东击荆楚\n\n> 英布反叛后果如薛公所料，东击荆国。荆王刘贾走死于富陵，英布尽劫其兵，渡淮击楚。楚分三军应战，英布破其一军，余二军散走。\n\n**主要人物**：刘贾、英布\n\n## 事件经过\n\n英布反叛后果如薛公所料，东击荆国。荆王刘贾走死于富陵，英布尽劫其兵，渡淮击楚。楚分三军应战，英布破其一军，余二军散走。\n\n## 原文\n\n> 果如薛公筹之，东击荆，荆王刘贾走死富陵。尽劫其兵，渡淮击楚。...布果破其一军，其二军散走。\n\n"
+    },
     {
       "rev_id": "20260423-154640-b0f874",
       "timestamp": "2026-04-23T15:46:40Z",

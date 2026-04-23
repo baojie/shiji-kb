@@ -1,8 +1,18 @@
 {
   "page": "齐襄公杀鲁桓公",
-  "latest_rev_id": "20260423-154833-e227f2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161645-531f40",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161645-531f40",
+      "timestamp": "2026-04-23T16:16:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154833-e227f2",
+      "content_hash": "sha256:531f4057b527574cb6e190f04cf9199994c22e33f64c649f57697728bb36d650",
+      "size": 971,
+      "content": "paragraph_refs:\n  033-018: \"[12.2]\"\nevent_type: 继位\nlocation: \"齐\"\n---\nid: \"齐襄公杀鲁桓公\"\ntype: event\ntitle: 齐襄公杀鲁桓公\ndescription: 桓公十八年春与夫人如齐，齐襄公复通其夫人。四月丙子齐襄公飨桓公，使公子彭生摺其胁杀之。立太子同为庄公。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-018]\ndate: \"〖%十八年春四月丙子〗 （公元前694年）\"\n---\n\n# 齐襄公杀鲁桓公\n\n> 桓公十八年春与夫人如齐，齐襄公复通其夫人。四月丙子齐襄公飨桓公，使公子彭生摺其胁杀之。立太子同为庄公。\n\n**主要人物**：彭生、桓公、齐襄公\n\n## 事件经过\n\n桓公十八年春与夫人如齐，齐襄公复通其夫人。四月丙子齐襄公飨桓公，使公子彭生摺其胁杀之。立太子同为庄公。\n\n## 原文\n\n> 齐襄公飨公,公醉,使公子彭生抱鲁桓公,因命彭生摺其胁,公死于车。\n\n"
+    },
     {
       "rev_id": "20260423-154833-e227f2",
       "timestamp": "2026-04-23T15:48:33Z",

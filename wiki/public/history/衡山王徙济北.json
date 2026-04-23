@@ -1,8 +1,28 @@
 {
   "page": "衡山王徙济北",
-  "latest_rev_id": "20260423-154700-6726a8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163320-885a35",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163320-885a35",
+      "timestamp": "2026-04-23T16:33:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161301-eecece",
+      "content_hash": "sha256:885a3592565ac828d50bb7b95bda279a9335390bca948ef5ad463866132c18ed",
+      "size": 1027,
+      "content": "---\nid: \"衡山王徙济北\"\ntype: event\ntitle: 衡山王徙济北\ndescription: 吴楚已破，衡山王朝。上以其贞信劳苦之，徙衡山王王济北以褒之。及薨赐谥贞王。庐江王因边越数使使相交，徙为衡山王王江北。\ntags: [史记, 事件, 淮南衡山列传]\nsources: [淮南衡山列传]\nevent_ids: [118-012]\ndate: \"〖%孝景四年〗 （公元前153年）\"\n---\n\n::: meta\npn: \"[13]\"\nevent_type: 政治活动\nlocation: \"济北\"\n:::\n\n# 衡山王徙济北\n\n> 吴楚已破，衡山王朝。上以其贞信劳苦之，徙衡山王王济北以褒之。及薨赐谥贞王。庐江王因边越数使使相交，徙为衡山王王江北。\n\n**主要人物**：勃\n\n## 事件经过\n\n吴楚已破，衡山王朝。上以其贞信劳苦之，徙衡山王王济北以褒之。及薨赐谥贞王。庐江王因边越数使使相交，徙为衡山王王江北。\n\n## 原文\n\n> 孝景四年，吴楚已破，衡山王朝，上以为贞信，乃劳苦之曰：'南方卑湿。'徙衡山王王济北。\n\n"
+    },
+    {
+      "rev_id": "20260423-161301-eecece",
+      "timestamp": "2026-04-23T16:13:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154700-6726a8",
+      "content_hash": "sha256:eecece2faf6ec3019b814d5eecfb7d513356bf2a607dc46fda1412df9e6af951",
+      "size": 1036,
+      "content": "paragraph_refs:\n  118-012: \"[13]\"\nevent_type: 政治活动\nlocation: \"济北\"\n---\nid: \"衡山王徙济北\"\ntype: event\ntitle: 衡山王徙济北\ndescription: 吴楚已破，衡山王朝。上以其贞信劳苦之，徙衡山王王济北以褒之。及薨赐谥贞王。庐江王因边越数使使相交，徙为衡山王王江北。\ntags: [史记, 事件, 淮南衡山列传]\nsources: [淮南衡山列传]\nevent_ids: [118-012]\ndate: \"〖%孝景四年〗 （公元前153年）\"\n---\n\n# 衡山王徙济北\n\n> 吴楚已破，衡山王朝。上以其贞信劳苦之，徙衡山王王济北以褒之。及薨赐谥贞王。庐江王因边越数使使相交，徙为衡山王王江北。\n\n**主要人物**：勃\n\n## 事件经过\n\n吴楚已破，衡山王朝。上以其贞信劳苦之，徙衡山王王济北以褒之。及薨赐谥贞王。庐江王因边越数使使相交，徙为衡山王王江北。\n\n## 原文\n\n> 孝景四年，吴楚已破，衡山王朝，上以为贞信，乃劳苦之曰：'南方卑湿。'徙衡山王王济北。\n\n"
+    },
     {
       "rev_id": "20260423-154700-6726a8",
       "timestamp": "2026-04-23T15:47:00Z",

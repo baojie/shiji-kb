@@ -1,8 +1,28 @@
 {
   "page": "立长为淮南王",
-  "latest_rev_id": "20260423-155437-048c22",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163136-8a5e06",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163136-8a5e06",
+      "timestamp": "2026-04-23T16:31:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161229-ca8303",
+      "content_hash": "sha256:8a5e06dbb87c0c3212690b42cb3c1f025be9508f58ea76dcdd59437a37e67688",
+      "size": 890,
+      "content": "---\nid: \"立长为淮南王\"\ntype: event\ntitle: 立长为淮南王\ndescription: 高祖十一年，淮南王黥布反。上自将兵击灭布，立子长为淮南王，王黥布故地凡四郡。厉王遂即位。\ntags: [史记, 事件, 淮南衡山列传]\nsources: [淮南衡山列传]\nevent_ids: [118-002]\ndate: \"〖&高祖〗〖%十一年月〗 （公元前196年）\"\n---\n\n::: meta\npn: \"[1]\"\nevent_type: 继位\nlocation: \"淮南\"\n:::\n\n# 立长为淮南王\n\n> 高祖十一年，淮南王黥布反。上自将兵击灭布，立子长为淮南王，王黥布故地凡四郡。厉王遂即位。\n\n**主要人物**：长、黥布\n\n## 事件经过\n\n高祖十一年，淮南王黥布反。上自将兵击灭布，立子长为淮南王，王黥布故地凡四郡。厉王遂即位。\n\n## 原文\n\n> 高祖十一年月，淮南王黥布反，立子长为淮南王，王黥布故地，凡四郡。\n\n"
+    },
+    {
+      "rev_id": "20260423-161229-ca8303",
+      "timestamp": "2026-04-23T16:12:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155437-048c22",
+      "content_hash": "sha256:ca8303527a6f645c35410d3fd7d9c5c36d70d952aed172427a980e289394e999",
+      "size": 899,
+      "content": "paragraph_refs:\n  118-002: \"[1]\"\nevent_type: 继位\nlocation: \"淮南\"\n---\nid: \"立长为淮南王\"\ntype: event\ntitle: 立长为淮南王\ndescription: 高祖十一年，淮南王黥布反。上自将兵击灭布，立子长为淮南王，王黥布故地凡四郡。厉王遂即位。\ntags: [史记, 事件, 淮南衡山列传]\nsources: [淮南衡山列传]\nevent_ids: [118-002]\ndate: \"〖&高祖〗〖%十一年月〗 （公元前196年）\"\n---\n\n# 立长为淮南王\n\n> 高祖十一年，淮南王黥布反。上自将兵击灭布，立子长为淮南王，王黥布故地凡四郡。厉王遂即位。\n\n**主要人物**：长、黥布\n\n## 事件经过\n\n高祖十一年，淮南王黥布反。上自将兵击灭布，立子长为淮南王，王黥布故地凡四郡。厉王遂即位。\n\n## 原文\n\n> 高祖十一年月，淮南王黥布反，立子长为淮南王，王黥布故地，凡四郡。\n\n"
+    },
     {
       "rev_id": "20260423-155437-048c22",
       "timestamp": "2026-04-23T15:54:37Z",

@@ -1,8 +1,28 @@
 {
   "page": "禹受玄圭太平",
-  "latest_rev_id": "20260423-155411-a3fcc8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163035-c42863",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163035-c42863",
+      "timestamp": "2026-04-23T16:30:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161216-56a25f",
+      "content_hash": "sha256:c42863c426584a75e0105e0517e6af921339cb5b32d81c09f6c4a0d9e793cd1f",
+      "size": 890,
+      "content": "---\nid: \"禹受玄圭太平\"\ntype: event\ntitle: 禹受玄圭太平\ndescription: 东渐于海，西被于流沙，朔、南暨：声教讫于四海。于是帝锡禹玄圭，以告成功于天下。天下于是太平治。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-020]\ndate: \"[约公元前2070年]\"\n---\n\n::: meta\npn: \"[16]\"\nevent_type: 政治活动\n:::\n\n# 禹受玄圭太平\n\n> 东渐于海，西被于流沙，朔、南暨：声教讫于四海。于是帝锡禹玄圭，以告成功于天下。天下于是太平治。\n\n**主要人物**：禹\n\n## 事件经过\n\n东渐于海，西被于流沙，朔、南暨：声教讫于四海。于是帝锡禹玄圭，以告成功于天下。天下于是太平治。\n\n## 原文\n\n> 东渐于海，西被于流沙，朔、南暨：声教讫于四海。於是帝锡禹玄圭，以告成功于天下。天下於是太平治。\n\n"
+    },
+    {
+      "rev_id": "20260423-161216-56a25f",
+      "timestamp": "2026-04-23T16:12:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155411-a3fcc8",
+      "content_hash": "sha256:56a25f212afd65180f14aacd59eab27672568fee3ff9dfe83450ce914c916397",
+      "size": 899,
+      "content": "paragraph_refs:\n  002-020: \"[16]\"\nevent_type: 政治活动\n---\nid: \"禹受玄圭太平\"\ntype: event\ntitle: 禹受玄圭太平\ndescription: 东渐于海，西被于流沙，朔、南暨：声教讫于四海。于是帝锡禹玄圭，以告成功于天下。天下于是太平治。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-020]\ndate: \"[约公元前2070年]\"\n---\n\n# 禹受玄圭太平\n\n> 东渐于海，西被于流沙，朔、南暨：声教讫于四海。于是帝锡禹玄圭，以告成功于天下。天下于是太平治。\n\n**主要人物**：禹\n\n## 事件经过\n\n东渐于海，西被于流沙，朔、南暨：声教讫于四海。于是帝锡禹玄圭，以告成功于天下。天下于是太平治。\n\n## 原文\n\n> 东渐于海，西被于流沙，朔、南暨：声教讫于四海。於是帝锡禹玄圭，以告成功于天下。天下於是太平治。\n\n"
+    },
     {
       "rev_id": "20260423-155411-a3fcc8",
       "timestamp": "2026-04-23T15:54:11Z",

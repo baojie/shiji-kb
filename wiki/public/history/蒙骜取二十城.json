@@ -1,8 +1,28 @@
 {
   "page": "蒙骜取二十城",
-  "latest_rev_id": "20260423-154655-90780c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163305-70802b",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163305-70802b",
+      "timestamp": "2026-04-23T16:33:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161250-1dc82d",
+      "content_hash": "sha256:70802b10b65c8f68e1a690a3523628d53d931cc195f392d96f18a2260ee25d84",
+      "size": 927,
+      "content": "---\nid: \"蒙骜取二十城\"\ntype: event\ntitle: 蒙骜取二十城\ndescription: 五年，将军蒙骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，皆攻克，取二十城。初次设置东郡。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-009]\ndate: \"〖%五年〗 （公元前242年）\"\n---\n\n::: meta\npn: \"[6.1]\"\nevent_type: 战争\nlocation: \"酸枣、燕、虚、长平、雍丘、山阳城\"\n:::\n\n# 蒙骜取二十城\n\n> 五年，将军蒙骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，皆攻克，取二十城。初次设置东郡。\n\n**主要人物**：骜\n\n## 事件经过\n\n五年，将军蒙骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，皆攻克，取二十城。初次设置东郡。\n\n## 原文\n\n> 五年，将军骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，皆拔之，取二十城。初置东郡。\n\n"
+    },
+    {
+      "rev_id": "20260423-161250-1dc82d",
+      "timestamp": "2026-04-23T16:12:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154655-90780c",
+      "content_hash": "sha256:1dc82dfc24f52dcfdfe85eb4ef948dbc6ab0b58b7ee341c410871de12b423d06",
+      "size": 936,
+      "content": "paragraph_refs:\n  006-009: \"[6.1]\"\nevent_type: 战争\nlocation: \"酸枣、燕、虚、长平、雍丘、山阳城\"\n---\nid: \"蒙骜取二十城\"\ntype: event\ntitle: 蒙骜取二十城\ndescription: 五年，将军蒙骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，皆攻克，取二十城。初次设置东郡。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-009]\ndate: \"〖%五年〗 （公元前242年）\"\n---\n\n# 蒙骜取二十城\n\n> 五年，将军蒙骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，皆攻克，取二十城。初次设置东郡。\n\n**主要人物**：骜\n\n## 事件经过\n\n五年，将军蒙骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，皆攻克，取二十城。初次设置东郡。\n\n## 原文\n\n> 五年，将军骜攻魏，定酸枣、燕、虚、长平、雍丘、山阳城，皆拔之，取二十城。初置东郡。\n\n"
+    },
     {
       "rev_id": "20260423-154655-90780c",
       "timestamp": "2026-04-23T15:46:55Z",

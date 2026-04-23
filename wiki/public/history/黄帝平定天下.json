@@ -1,8 +1,18 @@
 {
   "page": "黄帝平定天下",
-  "latest_rev_id": "20260423-154821-928979",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161626-152b6e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161626-152b6e",
+      "timestamp": "2026-04-23T16:16:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154821-928979",
+      "content_hash": "sha256:152b6e67435ce8235334e994695fab80b269f9264d4c3e5f994aaeadda3cb964",
+      "size": 990,
+      "content": "paragraph_refs:\n  001-004: \"[1.3]\"\nevent_type: 政治整顿\n---\nid: \"黄帝平定天下\"\ntype: event\ntitle: 黄帝平定天下\ndescription: 诸侯尊奉轩辕为天子，代替神农氏，是为黄帝。天下有不顺从者，黄帝征讨之；已平定的地方则离开，披山通道，从未安居。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-004]\ndate: \"[约公元前2670年]\"\n---\n\n# 黄帝平定天下\n\n> 诸侯尊奉轩辕为天子，代替神农氏，是为黄帝。天下有不顺从者，黄帝征讨之；已平定的地方则离开，披山通道，从未安居。\n\n**主要人物**：黄帝\n\n## 事件经过\n\n诸侯尊奉轩辕为天子，代替神农氏，是为黄帝。天下有不顺从者，黄帝征讨之；已平定的地方则离开，披山通道，从未安居。\n\n## 原文\n\n> 而诸侯咸尊轩辕为天子，代神农氏，是为黄帝。天下有不顺者，黄帝从而征之，平者去之，披山通道，未尝宁居。\n\n"
+    },
     {
       "rev_id": "20260423-154821-928979",
       "timestamp": "2026-04-23T15:48:21Z",

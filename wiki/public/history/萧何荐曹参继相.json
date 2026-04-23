@@ -1,8 +1,28 @@
 {
   "page": "萧何荐曹参继相",
-  "latest_rev_id": "20260423-154650-688978",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163255-573ea8",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163255-573ea8",
+      "timestamp": "2026-04-23T16:32:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161247-b69be0",
+      "content_hash": "sha256:573ea8ae2006175e2035e1ee9370b2cca15ebde3c64f3dce16604243c1b1ceae",
+      "size": 870,
+      "content": "---\nid: \"萧何荐曹参继相\"\ntype: event\ntitle: 萧何荐曹参继相\ndescription: 何素不与曹参相能，及何病，孝惠自临视相国病，问百岁后谁可代。萧何顿首曰帝得之矣，推荐曹参继任。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-015]\ndate: \"（公元前193年）\"\n---\n\n::: meta\npn: \"[13]\"\nevent_type: 政治活动\n:::\n\n# 萧何荐曹参继相\n\n> 何素不与曹参相能，及何病，孝惠自临视相国病，问百岁后谁可代。萧何顿首曰帝得之矣，推荐曹参继任。\n\n**主要人物**：孝惠、曹参、萧何\n\n## 事件经过\n\n何素不与曹参相能，及何病，孝惠自临视相国病，问百岁后谁可代。萧何顿首曰帝得之矣，推荐曹参继任。\n\n## 原文\n\n> 孝惠曰：'曹参何如？'何顿首曰：'帝得之矣！臣死不恨矣！'\n\n"
+    },
+    {
+      "rev_id": "20260423-161247-b69be0",
+      "timestamp": "2026-04-23T16:12:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154650-688978",
+      "content_hash": "sha256:b69be0e8c271c8cfa8f3d72784f3030e36761b75b2b260c6930c98855095dfbf",
+      "size": 879,
+      "content": "paragraph_refs:\n  053-015: \"[13]\"\nevent_type: 政治活动\n---\nid: \"萧何荐曹参继相\"\ntype: event\ntitle: 萧何荐曹参继相\ndescription: 何素不与曹参相能，及何病，孝惠自临视相国病，问百岁后谁可代。萧何顿首曰帝得之矣，推荐曹参继任。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-015]\ndate: \"（公元前193年）\"\n---\n\n# 萧何荐曹参继相\n\n> 何素不与曹参相能，及何病，孝惠自临视相国病，问百岁后谁可代。萧何顿首曰帝得之矣，推荐曹参继任。\n\n**主要人物**：孝惠、曹参、萧何\n\n## 事件经过\n\n何素不与曹参相能，及何病，孝惠自临视相国病，问百岁后谁可代。萧何顿首曰帝得之矣，推荐曹参继任。\n\n## 原文\n\n> 孝惠曰：'曹参何如？'何顿首曰：'帝得之矣！臣死不恨矣！'\n\n"
+    },
     {
       "rev_id": "20260423-154650-688978",
       "timestamp": "2026-04-23T15:46:50Z",

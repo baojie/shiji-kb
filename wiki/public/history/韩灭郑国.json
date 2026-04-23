@@ -1,8 +1,18 @@
 {
   "page": "韩灭郑国",
-  "latest_rev_id": "20260423-152514-1e48bf",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161531-eaec37",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161531-eaec37",
+      "timestamp": "2026-04-23T16:15:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152514-1e48bf",
+      "content_hash": "sha256:eaec37c55f818f48d57a5980e0839c99b3ed1dd064bda9b2aad9590f86c49d68",
+      "size": 1023,
+      "content": "paragraph_refs:\n  042-023: \"[43.3]\"\n  045-006: \"[8.1]\"\nevent_type: 战争\n---\nid: \"韩灭郑国\"\ntype: event\ntitle: 韩灭郑国\ndescription: 韩哀侯灭郑，并其国。郑自桓公封国至此，历四百余年而亡。\ntags: [史记, 事件, 郑世家, 韩世家]\nsources: [郑世家, 韩世家]\nevent_ids: [042-023, 045-006]\ndate: \"〖;哀侯〗〖%二年〗 （公元前375年）\"\n---\n\n# 韩灭郑国\n\n> 韩哀侯灭郑，并其国。郑自桓公封国至此，历四百余年而亡。\n\n**主要人物**：哀侯、韩哀侯\n\n## 各章节记载\n\n### 郑世家 (042-023) [战争] [PN:[43.3]](../chapters/042_郑世家.html#pn-43.3)\n\n韩哀侯灭郑，并其国。郑自桓公封国至此，历四百余年而亡。\n\n**原文**：\n\n> 二十一年，韩哀侯灭郑，并其国。\n\n### 韩世家 (045-006) [战争] [PN:[8.1]](../chapters/045_韩世家.html#pn-8.1)\n\n哀侯元年与赵、魏分晋国，二年灭郑，因徙都郑。韩国由此获得重要领土。\n\n**原文**：\n\n> 二年，灭郑，因徙都郑。\n\n"
+    },
     {
       "rev_id": "20260423-152514-1e48bf",
       "timestamp": "2026-04-23T15:25:14Z",

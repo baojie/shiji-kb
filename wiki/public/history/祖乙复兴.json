@@ -1,8 +1,28 @@
 {
   "page": "祖乙复兴",
-  "latest_rev_id": "20260423-155405-f6a2bf",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163026-05bb5f",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163026-05bb5f",
+      "timestamp": "2026-04-23T16:30:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161214-62eae3",
+      "content_hash": "sha256:05bb5f5d00bfeec26cf82006554c37b9a3dd1e980b73ce1ff729fc5ace536841",
+      "size": 614,
+      "content": "---\nid: \"祖乙复兴\"\ntype: event\ntitle: 祖乙复兴\ndescription: 河亶甲崩后子祖乙立，殷道复兴，巫贤在朝任职辅政。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-020]\ndate: \"[约公元前1390年]\"\n---\n\n::: meta\npn: \"[17]\"\nevent_type: 政治活动\n:::\n\n# 祖乙复兴\n\n> 河亶甲崩后子祖乙立，殷道复兴，巫贤在朝任职辅政。\n\n**主要人物**：巫贤、帝祖乙\n\n## 事件经过\n\n河亶甲崩后子祖乙立，殷道复兴，巫贤在朝任职辅政。\n\n## 原文\n\n> 河亶甲崩，子帝祖乙立。帝祖乙立，殷复兴。巫贤任职。\n\n"
+    },
+    {
+      "rev_id": "20260423-161214-62eae3",
+      "timestamp": "2026-04-23T16:12:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155405-f6a2bf",
+      "content_hash": "sha256:62eae35d97465b2ed795e07324e8d77da30f4259955335d46806f17358ecbd60",
+      "size": 623,
+      "content": "paragraph_refs:\n  003-020: \"[17]\"\nevent_type: 政治活动\n---\nid: \"祖乙复兴\"\ntype: event\ntitle: 祖乙复兴\ndescription: 河亶甲崩后子祖乙立，殷道复兴，巫贤在朝任职辅政。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-020]\ndate: \"[约公元前1390年]\"\n---\n\n# 祖乙复兴\n\n> 河亶甲崩后子祖乙立，殷道复兴，巫贤在朝任职辅政。\n\n**主要人物**：巫贤、帝祖乙\n\n## 事件经过\n\n河亶甲崩后子祖乙立，殷道复兴，巫贤在朝任职辅政。\n\n## 原文\n\n> 河亶甲崩，子帝祖乙立。帝祖乙立，殷复兴。巫贤任职。\n\n"
+    },
     {
       "rev_id": "20260423-155405-f6a2bf",
       "timestamp": "2026-04-23T15:54:05Z",

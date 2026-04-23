@@ -1,8 +1,18 @@
 {
   "page": "颛顼平共工水害",
-  "latest_rev_id": "20260423-155609-61bebe",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161551-6ba4d6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161551-6ba4d6",
+      "timestamp": "2026-04-23T16:15:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155609-61bebe",
+      "content_hash": "sha256:6ba4d680761ee36746ac5beadbe43c7d846b4d99b23bb496de1dc84bc0888ceb",
+      "size": 582,
+      "content": "paragraph_refs:\n  025-003: \"[3.2]\"\nevent_type: 战争\n---\nid: \"颛顼平共工水害\"\ntype: event\ntitle: 颛顼平共工水害\ndescription: 颛顼与共工交战，以平水害。体现用兵之正当性。\ntags: [史记, 事件, 律书]\nsources: [律书]\nevent_ids: [025-003]\ndate: \"[约公元前2476年]\"\n---\n\n# 颛顼平共工水害\n\n> 颛顼与共工交战，以平水害。体现用兵之正当性。\n\n**主要人物**：共工、颛顼\n\n## 事件经过\n\n颛顼与共工交战，以平水害。体现用兵之正当性。\n\n## 原文\n\n> 颛顼有共工之陈，以平水害。\n\n"
+    },
     {
       "rev_id": "20260423-155609-61bebe",
       "timestamp": "2026-04-23T15:56:09Z",

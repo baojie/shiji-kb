@@ -1,8 +1,28 @@
 {
   "page": "舜任命垂为共工",
-  "latest_rev_id": "20260423-155452-04df71",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163214-d090d2",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163214-d090d2",
+      "timestamp": "2026-04-23T16:32:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161238-de4ae0",
+      "content_hash": "sha256:d090d231041e1ad878ebc4e748f4acb6cfa516052b47655cf7f96fc720dd0c4b",
+      "size": 735,
+      "content": "---\nid: \"舜任命垂为共工\"\ntype: event\ntitle: 舜任命垂为共工\ndescription: 舜询问谁能驯服我的工匠，众人说垂可以。于是任命垂为共工，主管百工技艺。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-051]\ndate: \"[约公元前2255年]\"\n---\n\n::: meta\npn: \"[23.2.5]\"\nevent_type: 政治改革\n:::\n\n# 舜任命垂为共工\n\n> 舜询问谁能驯服我的工匠，众人说垂可以。于是任命垂为共工，主管百工技艺。\n\n**主要人物**：垂、舜\n\n## 事件经过\n\n舜询问谁能驯服我的工匠，众人说垂可以。于是任命垂为共工，主管百工技艺。\n\n## 原文\n\n> 舜曰：'谁能驯予工？' 皆曰垂可。於是以垂为共工。\n\n"
+    },
+    {
+      "rev_id": "20260423-161238-de4ae0",
+      "timestamp": "2026-04-23T16:12:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155452-04df71",
+      "content_hash": "sha256:de4ae0bf92d4b39d10261c3233a80947881e5f27905c69032deaf06557371a97",
+      "size": 744,
+      "content": "paragraph_refs:\n  001-051: \"[23.2.5]\"\nevent_type: 政治改革\n---\nid: \"舜任命垂为共工\"\ntype: event\ntitle: 舜任命垂为共工\ndescription: 舜询问谁能驯服我的工匠，众人说垂可以。于是任命垂为共工，主管百工技艺。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-051]\ndate: \"[约公元前2255年]\"\n---\n\n# 舜任命垂为共工\n\n> 舜询问谁能驯服我的工匠，众人说垂可以。于是任命垂为共工，主管百工技艺。\n\n**主要人物**：垂、舜\n\n## 事件经过\n\n舜询问谁能驯服我的工匠，众人说垂可以。于是任命垂为共工，主管百工技艺。\n\n## 原文\n\n> 舜曰：'谁能驯予工？' 皆曰垂可。於是以垂为共工。\n\n"
+    },
     {
       "rev_id": "20260423-155452-04df71",
       "timestamp": "2026-04-23T15:54:52Z",

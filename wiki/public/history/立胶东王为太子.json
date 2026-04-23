@@ -1,8 +1,28 @@
 {
   "page": "立胶东王为太子",
-  "latest_rev_id": "20260423-155436-344f63",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163136-196c60",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163136-196c60",
+      "timestamp": "2026-04-23T16:31:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161229-a32877",
+      "content_hash": "sha256:196c6012320d8100ebdbac0939d8dd6e5789ee510ee7f667b07ea471676579ee",
+      "size": 737,
+      "content": "---\nid: \"立胶东王为太子\"\ntype: event\ntitle: 立胶东王为太子\ndescription: 四月乙巳立胶东王太后为皇后。丁巳立胶东王为太子，名彻，即后来的汉武帝。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-025]\ndate: \"〖%四月乙巳〗、〖%丁巳〗 （公元前150年）\"\n---\n\n::: meta\npn: \"[13.1]-[13.2]\"\nevent_type: 继位\n:::\n\n# 立胶东王为太子\n\n> 四月乙巳立胶东王太后为皇后。丁巳立胶东王为太子，名彻，即后来的汉武帝。\n\n**主要人物**：彻\n\n## 事件经过\n\n四月乙巳立胶东王太后为皇后。丁巳立胶东王为太子，名彻，即后来的汉武帝。\n\n## 原文\n\n> 丁巳，立胶东王为太子。名彻。\n\n"
+    },
+    {
+      "rev_id": "20260423-161229-a32877",
+      "timestamp": "2026-04-23T16:12:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155436-344f63",
+      "content_hash": "sha256:a32877387d22d8cdb853fd4b512820e3e4ba6d9596c7fd4ecc729f28a134ebea",
+      "size": 746,
+      "content": "paragraph_refs:\n  011-025: \"[13.1]-[13.2]\"\nevent_type: 继位\n---\nid: \"立胶东王为太子\"\ntype: event\ntitle: 立胶东王为太子\ndescription: 四月乙巳立胶东王太后为皇后。丁巳立胶东王为太子，名彻，即后来的汉武帝。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-025]\ndate: \"〖%四月乙巳〗、〖%丁巳〗 （公元前150年）\"\n---\n\n# 立胶东王为太子\n\n> 四月乙巳立胶东王太后为皇后。丁巳立胶东王为太子，名彻，即后来的汉武帝。\n\n**主要人物**：彻\n\n## 事件经过\n\n四月乙巳立胶东王太后为皇后。丁巳立胶东王为太子，名彻，即后来的汉武帝。\n\n## 原文\n\n> 丁巳，立胶东王为太子。名彻。\n\n"
+    },
     {
       "rev_id": "20260423-155436-344f63",
       "timestamp": "2026-04-23T15:54:36Z",

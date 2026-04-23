@@ -1,8 +1,18 @@
 {
   "page": "越亡荧惑守斗",
-  "latest_rev_id": "20260423-155532-7f6476",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161357-000599",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161357-000599",
+      "timestamp": "2026-04-23T16:13:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155532-7f6476",
+      "content_hash": "sha256:00059900265e148190437afb5566cd1df7d9175f1b2e82f3b953b5daa0f01a6e",
+      "size": 537,
+      "content": "paragraph_refs:\n  027-017: \"[120]\"\nevent_type: 自然灾害\n---\nid: \"越亡荧惑守斗\"\ntype: event\ntitle: 越亡荧惑守斗\ndescription: 越国灭亡之际，荧惑守斗。天象与越之覆亡相应。\ntags: [史记, 事件, 天官书]\nsources: [天官书]\nevent_ids: [027-017]\ndate: \"（公元前111年）\"\n---\n\n# 越亡荧惑守斗\n\n> 越国灭亡之际，荧惑守斗。天象与越之覆亡相应。\n\n## 事件经过\n\n越国灭亡之际，荧惑守斗。天象与越之覆亡相应。\n\n## 原文\n\n> 越之亡，荧惑守斗。\n\n"
+    },
     {
       "rev_id": "20260423-155532-7f6476",
       "timestamp": "2026-04-23T15:55:32Z",

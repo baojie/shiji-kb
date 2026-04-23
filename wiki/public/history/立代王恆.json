@@ -1,8 +1,28 @@
 {
   "page": "立代王恆",
-  "latest_rev_id": "20260423-155432-7161e7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163128-74207d",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163128-74207d",
+      "timestamp": "2026-04-23T16:31:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161228-30ee2b",
+      "content_hash": "sha256:74207df053c8d50b3c59a6c1adcb128f4263f8078f4695d959f7a1488d0649db",
+      "size": 845,
+      "content": "---\nid: \"立代王恆\"\ntype: event\ntitle: 立代王恆\ndescription: 高祖还至洛阳后，以代地在常山以北距赵远，乃立皇子恆为代王，都中都，代、雁门皆属代。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-022]\ndate: \"（公元前196年）\"\n---\n\n::: meta\npn: \"[18]\"\nevent_type: 继位\nlocation: \"中都\"\n:::\n\n# 立代王恆\n\n> 高祖还至洛阳后，以代地在常山以北距赵远，乃立皇子恆为代王，都中都，代、雁门皆属代。\n\n**主要人物**：恆\n\n## 事件经过\n\n高祖还至洛阳后，以代地在常山以北距赵远，乃立皇子恆为代王，都中都，代、雁门皆属代。\n\n## 原文\n\n> 上还至洛阳。上曰：\"代居常山北，赵乃从山南有之，远。\"乃立子恆为代王，都中都，代、雁门皆属代。\n\n"
+    },
+    {
+      "rev_id": "20260423-161228-30ee2b",
+      "timestamp": "2026-04-23T16:12:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155432-7161e7",
+      "content_hash": "sha256:30ee2ba004bfbb6361927f17101d5848dd8d5b0f4e0f5c83e2d12f3213a2a436",
+      "size": 854,
+      "content": "paragraph_refs:\n  093-022: \"[18]\"\nevent_type: 继位\nlocation: \"中都\"\n---\nid: \"立代王恆\"\ntype: event\ntitle: 立代王恆\ndescription: 高祖还至洛阳后，以代地在常山以北距赵远，乃立皇子恆为代王，都中都，代、雁门皆属代。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-022]\ndate: \"（公元前196年）\"\n---\n\n# 立代王恆\n\n> 高祖还至洛阳后，以代地在常山以北距赵远，乃立皇子恆为代王，都中都，代、雁门皆属代。\n\n**主要人物**：恆\n\n## 事件经过\n\n高祖还至洛阳后，以代地在常山以北距赵远，乃立皇子恆为代王，都中都，代、雁门皆属代。\n\n## 原文\n\n> 上还至洛阳。上曰：\"代居常山北，赵乃从山南有之，远。\"乃立子恆为代王，都中都，代、雁门皆属代。\n\n"
+    },
     {
       "rev_id": "20260423-155432-7161e7",
       "timestamp": "2026-04-23T15:54:32Z",

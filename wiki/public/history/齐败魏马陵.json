@@ -1,8 +1,18 @@
 {
   "page": "齐败魏马陵",
-  "latest_rev_id": "20260423-154833-b41e69",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161645-8558c1",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161645-8558c1",
+      "timestamp": "2026-04-23T16:16:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154833-b41e69",
+      "content_hash": "sha256:8558c1e218fd4f28f91ab214c40bdb6056f1202e44ba0c4d90bd0a8ca3276159",
+      "size": 729,
+      "content": "paragraph_refs:\n  005-078: \"[53]\"\nevent_type: 战争\nlocation: \"马陵\"\n---\nid: \"齐败魏马陵\"\ntype: event\ntitle: 齐败魏马陵\ndescription: 孝公二十一年，齐国在马陵大败魏国。此即著名的马陵之战，魏国军事霸权由此衰落。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-078]\ndate: \"〖@孝公〗〖%二十一年〗 （公元前341年）\"\n---\n\n# 齐败魏马陵\n\n> 孝公二十一年，齐国在马陵大败魏国。此即著名的马陵之战，魏国军事霸权由此衰落。\n\n## 事件经过\n\n孝公二十一年，齐国在马陵大败魏国。此即著名的马陵之战，魏国军事霸权由此衰落。\n\n## 原文\n\n> 孝公二十一年，齐败魏马陵。\n\n"
+    },
     {
       "rev_id": "20260423-154833-b41e69",
       "timestamp": "2026-04-23T15:48:33Z",

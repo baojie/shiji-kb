@@ -1,8 +1,18 @@
 {
   "page": "郡县皆反",
-  "latest_rev_id": "20260423-155544-bd72ad",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161422-d6a56d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161422-d6a56d",
+      "timestamp": "2026-04-23T16:14:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155544-bd72ad",
+      "content_hash": "sha256:d6a56d16c8002241d5bafd29ed061567124df7fa2efb7e26495b1506e70ab4cb",
+      "size": 688,
+      "content": "paragraph_refs:\n  015-032: \"r268\"\nevent_type: 战争\n---\nid: \"郡县皆反\"\ntype: event\ntitle: 郡县皆反\ndescription: 二世元年九月，郡县皆起兵反秦。楚兵至戏，章邯击退之。秦朝统治动摇。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-032]\ndate: \"〖%二世元年〗 （公元前209年）\"\n---\n\n# 郡县皆反\n\n> 二世元年九月，郡县皆起兵反秦。楚兵至戏，章邯击退之。秦朝统治动摇。\n\n## 事件经过\n\n二世元年九月，郡县皆起兵反秦。楚兵至戏，章邯击退之。秦朝统治动摇。\n\n## 原文\n\n> 二世元年……其九月，郡县皆反。楚兵至戏，章邯击却之。\n\n"
+    },
     {
       "rev_id": "20260423-155544-bd72ad",
       "timestamp": "2026-04-23T15:55:44Z",

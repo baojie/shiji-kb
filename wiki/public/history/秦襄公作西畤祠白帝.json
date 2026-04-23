@@ -1,8 +1,28 @@
 {
   "page": "秦襄公作西畤祠白帝",
-  "latest_rev_id": "20260423-154618-1b3303",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163111-0f08fe",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163111-0f08fe",
+      "timestamp": "2026-04-23T16:31:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161224-cf9e7e",
+      "content_hash": "sha256:0f08fee181003a3f0b39f9168a4e41aa110c004b55c096f4b9b43c0b37c298c6",
+      "size": 871,
+      "content": "---\nid: \"秦襄公作西畤祠白帝\"\ntype: event\ntitle: 秦襄公作西畤祠白帝\ndescription: 秦襄公攻戎救周，始列为诸侯，居西垂，自以为主少昚之神，作西畤祠白帝。这是秦国祭祀制度的起始。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-008]\ndate: \"[约公元前770年]\"\n---\n\n::: meta\npn: \"[6]\"\nevent_type: 文化活动\nlocation: \"西畤\"\n:::\n\n# 秦襄公作西畤祠白帝\n\n> 秦襄公攻戎救周，始列为诸侯，居西垂，自以为主少昚之神，作西畤祠白帝。这是秦国祭祀制度的起始。\n\n**主要人物**：秦襄公\n\n## 事件经过\n\n秦襄公攻戎救周，始列为诸侯，居西垂，自以为主少昚之神，作西畤祠白帝。这是秦国祭祀制度的起始。\n\n## 原文\n\n> 秦襄公既侯，居西垂，自以为主少昚之神，作西畤，祠白帝。\n\n"
+    },
+    {
+      "rev_id": "20260423-161224-cf9e7e",
+      "timestamp": "2026-04-23T16:12:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154618-1b3303",
+      "content_hash": "sha256:cf9e7e4993f8029ae5be4e68607bbf07d19c0a6add577d84bd3493e54aaee298",
+      "size": 880,
+      "content": "paragraph_refs:\n  028-008: \"[6]\"\nevent_type: 文化活动\nlocation: \"西畤\"\n---\nid: \"秦襄公作西畤祠白帝\"\ntype: event\ntitle: 秦襄公作西畤祠白帝\ndescription: 秦襄公攻戎救周，始列为诸侯，居西垂，自以为主少昚之神，作西畤祠白帝。这是秦国祭祀制度的起始。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-008]\ndate: \"[约公元前770年]\"\n---\n\n# 秦襄公作西畤祠白帝\n\n> 秦襄公攻戎救周，始列为诸侯，居西垂，自以为主少昚之神，作西畤祠白帝。这是秦国祭祀制度的起始。\n\n**主要人物**：秦襄公\n\n## 事件经过\n\n秦襄公攻戎救周，始列为诸侯，居西垂，自以为主少昚之神，作西畤祠白帝。这是秦国祭祀制度的起始。\n\n## 原文\n\n> 秦襄公既侯，居西垂，自以为主少昚之神，作西畤，祠白帝。\n\n"
+    },
     {
       "rev_id": "20260423-154618-1b3303",
       "timestamp": "2026-04-23T15:46:18Z",

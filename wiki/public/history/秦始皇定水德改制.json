@@ -1,8 +1,28 @@
 {
   "page": "秦始皇定水德改制",
-  "latest_rev_id": "20260423-154612-f5ba4b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163048-d2bc43",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163048-d2bc43",
+      "timestamp": "2026-04-23T16:30:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161219-c5cc4a",
+      "content_hash": "sha256:d2bc432f44b6b8f8d2d39bda90a7f3cdd55b0affdc9eb9e0f2548ba0666c4ce6",
+      "size": 796,
+      "content": "---\nid: \"秦始皇定水德改制\"\ntype: event\ntitle: 秦始皇定水德改制\ndescription: 秦始皇并天下称帝，定秦为水德，更名河曰\"德水\"，以冬十月为年首，色上黑，度以六为名。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-019]\ndate: \"（公元前221年）\"\n---\n\n::: meta\npn: \"[20]\"\nevent_type: 改革\n:::\n\n# 秦始皇定水德改制\n\n> 秦始皇并天下称帝，定秦为水德，更名河曰\"德水\"，以冬十月为年首，色上黑，度以六为名。\n\n**主要人物**：秦始皇\n\n## 事件经过\n\n秦始皇并天下称帝，定秦为水德，更名河曰\"德水\"，以冬十月为年首，色上黑，度以六为名。\n\n## 原文\n\n> 於是秦更命河曰'德水'，以冬十月为年首，色上黑，度以六为名。\n\n"
+    },
+    {
+      "rev_id": "20260423-161219-c5cc4a",
+      "timestamp": "2026-04-23T16:12:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154612-f5ba4b",
+      "content_hash": "sha256:c5cc4a2096158a11e41f69fcf48b8ff3f92f2226e26a120eae29cd13e53aaf96",
+      "size": 805,
+      "content": "paragraph_refs:\n  028-019: \"[20]\"\nevent_type: 改革\n---\nid: \"秦始皇定水德改制\"\ntype: event\ntitle: 秦始皇定水德改制\ndescription: 秦始皇并天下称帝，定秦为水德，更名河曰\"德水\"，以冬十月为年首，色上黑，度以六为名。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-019]\ndate: \"（公元前221年）\"\n---\n\n# 秦始皇定水德改制\n\n> 秦始皇并天下称帝，定秦为水德，更名河曰\"德水\"，以冬十月为年首，色上黑，度以六为名。\n\n**主要人物**：秦始皇\n\n## 事件经过\n\n秦始皇并天下称帝，定秦为水德，更名河曰\"德水\"，以冬十月为年首，色上黑，度以六为名。\n\n## 原文\n\n> 於是秦更命河曰'德水'，以冬十月为年首，色上黑，度以六为名。\n\n"
+    },
     {
       "rev_id": "20260423-154612-f5ba4b",
       "timestamp": "2026-04-23T15:46:12Z",

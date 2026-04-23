@@ -1,8 +1,28 @@
 {
   "page": "白起封武安君",
-  "latest_rev_id": "20260423-154604-e83ad6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163004-789875",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163004-789875",
+      "timestamp": "2026-04-23T16:30:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161209-18ddf7",
+      "content_hash": "sha256:78987556d0750fb28f86f3c3cd103cbea89409f3ab96e9c157df0aa9b44d581b",
+      "size": 825,
+      "content": "---\nid: \"白起封武安君\"\ntype: event\ntitle: 白起封武安君\ndescription: 白起攻取楚国都城郢，并平定巫、黔中郡，因赫赫战功被封为武安君，成为秦国最具威名的将领。\ntags: [史记, 事件, 白起王翦列传]\nsources: [白起王翦列传]\nevent_ids: [073-005]\ndate: \"拔郢后 （公元前277年）\"\n---\n\n::: meta\npn: \"[1]\"\nevent_type: 政治活动\nlocation: \"秦\"\n:::\n\n# 白起封武安君\n\n> 白起攻取楚国都城郢，并平定巫、黔中郡，因赫赫战功被封为武安君，成为秦国最具威名的将领。\n\n**主要人物**：白起\n\n## 事件经过\n\n白起攻取楚国都城郢，并平定巫、黔中郡，因赫赫战功被封为武安君，成为秦国最具威名的将领。\n\n## 原文\n\n> 白起迁为武安君。武安君因取楚，定巫、黔中郡。\n\n"
+    },
+    {
+      "rev_id": "20260423-161209-18ddf7",
+      "timestamp": "2026-04-23T16:12:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154604-e83ad6",
+      "content_hash": "sha256:18ddf79166d33b6498c245204beb460b502836dbdbc9eed8b4066759502eac3f",
+      "size": 834,
+      "content": "paragraph_refs:\n  073-005: \"[1]\"\nevent_type: 政治活动\nlocation: \"秦\"\n---\nid: \"白起封武安君\"\ntype: event\ntitle: 白起封武安君\ndescription: 白起攻取楚国都城郢，并平定巫、黔中郡，因赫赫战功被封为武安君，成为秦国最具威名的将领。\ntags: [史记, 事件, 白起王翦列传]\nsources: [白起王翦列传]\nevent_ids: [073-005]\ndate: \"拔郢后 （公元前277年）\"\n---\n\n# 白起封武安君\n\n> 白起攻取楚国都城郢，并平定巫、黔中郡，因赫赫战功被封为武安君，成为秦国最具威名的将领。\n\n**主要人物**：白起\n\n## 事件经过\n\n白起攻取楚国都城郢，并平定巫、黔中郡，因赫赫战功被封为武安君，成为秦国最具威名的将领。\n\n## 原文\n\n> 白起迁为武安君。武安君因取楚，定巫、黔中郡。\n\n"
+    },
     {
       "rev_id": "20260423-154604-e83ad6",
       "timestamp": "2026-04-23T15:46:04Z",

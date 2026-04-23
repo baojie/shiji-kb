@@ -1,8 +1,18 @@
 {
   "page": "除肉刑",
-  "latest_rev_id": "20260423-154747-c59521",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161506-da338a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161506-da338a",
+      "timestamp": "2026-04-23T16:15:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154747-c59521",
+      "content_hash": "sha256:da338a7b62608913728cdc448e5fc8c1407e8b949d7af1322bff5ed3f340a083",
+      "size": 868,
+      "content": "paragraph_refs:\n  010-031: \"[28.5]\"\nevent_type: 政治改革\n---\nid: \"除肉刑\"\ntype: event\ntitle: 除肉刑\ndescription: 文帝因缇萦上书，下诏除肉刑。以有虞氏画衣冠而民不犯为鉴，认为刑至断肢体何其楚痛不德，下令除之。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-031]\ndate: \"（公元前167年）\"\n---\n\n# 除肉刑\n\n> 文帝因缇萦上书，下诏除肉刑。以有虞氏画衣冠而民不犯为鉴，认为刑至断肢体何其楚痛不德，下令除之。\n\n**主要人物**：孝文皇帝\n\n## 事件经过\n\n文帝因缇萦上书，下诏除肉刑。以有虞氏画衣冠而民不犯为鉴，认为刑至断肢体何其楚痛不德，下令除之。\n\n## 原文\n\n> 夫刑至断支体，刻肌肤，终身不息，何其楚痛而不德也，岂称为民父母之意哉！其除肉刑。\n\n"
+    },
     {
       "rev_id": "20260423-154747-c59521",
       "timestamp": "2026-04-23T15:47:47Z",

@@ -1,8 +1,18 @@
 {
   "page": "陈豨反代",
-  "latest_rev_id": "20260423-154744-ed57f0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161502-ecb838",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161502-ecb838",
+      "timestamp": "2026-04-23T16:15:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154744-ed57f0",
+      "content_hash": "sha256:ecb838e246a9fadfec8321c55ef7ae2bf9e263306240f099e8a0161598fe4de8",
+      "size": 970,
+      "content": "paragraph_refs:\n  008-085: \"[74]-[76]\"\nevent_type: 战争\nlocation: \"代\"\n---\nid: \"陈豨反代\"\ntype: event\ntitle: 陈豨反代\ndescription: 赵相国陈豨反代地。高祖九月自东往击之至邯郸，以金啗豨将使多降。次年太尉周勃定代地。十一年，樊哙斩陈豨于当城。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-085]\ndate: \"〖%十年八月〗 （公元前197年）\"\n---\n\n# 陈豨反代\n\n> 赵相国陈豨反代地。高祖九月自东往击之至邯郸，以金啗豨将使多降。次年太尉周勃定代地。十一年，樊哙斩陈豨于当城。\n\n**主要人物**：刘邦、陈豨\n\n## 事件经过\n\n赵相国陈豨反代地。高祖九月自东往击之至邯郸，以金啗豨将使多降。次年太尉周勃定代地。十一年，樊哙斩陈豨于当城。\n\n## 原文\n\n> 八月，赵相国陈豨反代地。...九月，上自东往击之。...乃多以金啗豨将，豨将多降者。\n\n"
+    },
     {
       "rev_id": "20260423-154744-ed57f0",
       "timestamp": "2026-04-23T15:47:44Z",

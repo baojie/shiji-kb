@@ -1,8 +1,28 @@
 {
   "page": "萧何固请不入秦",
-  "latest_rev_id": "20260423-154648-1c706d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163253-6953e7",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163253-6953e7",
+      "timestamp": "2026-04-23T16:32:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161247-c455a3",
+      "content_hash": "sha256:6953e76e8696ea07d6e9aa15ca851b90a6b5bb5ac76eed22c1e218dcfc8e1ecb",
+      "size": 606,
+      "content": "---\nid: \"萧何固请不入秦\"\ntype: event\ntitle: 萧何固请不入秦\ndescription: 秦御史监郡者欲入言征何，何固请不行，留在地方。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-003]\ndate: \"[约公元前209年]\"\n---\n\n::: meta\npn: \"[3]\"\nevent_type: 政治活动\n:::\n\n# 萧何固请不入秦\n\n> 秦御史监郡者欲入言征何，何固请不行，留在地方。\n\n**主要人物**：萧何\n\n## 事件经过\n\n秦御史监郡者欲入言征何，何固请不行，留在地方。\n\n## 原文\n\n> 秦御史欲入言徵何，何固请，得毋行。\n\n"
+    },
+    {
+      "rev_id": "20260423-161247-c455a3",
+      "timestamp": "2026-04-23T16:12:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154648-1c706d",
+      "content_hash": "sha256:c455a34bfd55c0f0e8b42ad4df53952d64dd883d85e9285db5cea57a3ceb8545",
+      "size": 615,
+      "content": "paragraph_refs:\n  053-003: \"[3]\"\nevent_type: 政治活动\n---\nid: \"萧何固请不入秦\"\ntype: event\ntitle: 萧何固请不入秦\ndescription: 秦御史监郡者欲入言征何，何固请不行，留在地方。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-003]\ndate: \"[约公元前209年]\"\n---\n\n# 萧何固请不入秦\n\n> 秦御史监郡者欲入言征何，何固请不行，留在地方。\n\n**主要人物**：萧何\n\n## 事件经过\n\n秦御史监郡者欲入言征何，何固请不行，留在地方。\n\n## 原文\n\n> 秦御史欲入言徵何，何固请，得毋行。\n\n"
+    },
     {
       "rev_id": "20260423-154648-1c706d",
       "timestamp": "2026-04-23T15:46:48Z",

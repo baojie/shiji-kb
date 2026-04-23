@@ -1,8 +1,28 @@
 {
   "page": "秦拔郢烧夷陵",
-  "latest_rev_id": "20260423-155420-7de957",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163053-4758af",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163053-4758af",
+      "timestamp": "2026-04-23T16:30:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161220-14f141",
+      "content_hash": "sha256:4758af4dacdca6db8546e14a021c36474c918a6c0bc06e4f6fe3c506d577052a",
+      "size": 975,
+      "content": "---\nid: \"秦拔郢烧夷陵\"\ntype: event\ntitle: 秦拔郢烧夷陵\ndescription: 顷襄王二十一年秦将白起拔郢烧先王墓夷陵。楚襄王兵散不复战，东北保于陈城。二十二年秦复拔巫黔中郡。楚国丧失故都。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-037]\ndate: \"（公元前278年）\"\n---\n\n::: meta\npn: \"[90.94]\"\nevent_type: 战争\nlocation: \"郢、夷陵\"\n:::\n\n# 秦拔郢烧夷陵\n\n> 顷襄王二十一年秦将白起拔郢烧先王墓夷陵。楚襄王兵散不复战，东北保于陈城。二十二年秦复拔巫黔中郡。楚国丧失故都。\n\n**主要人物**：白起、顷襄王\n\n## 事件经过\n\n顷襄王二十一年秦将白起拔郢烧先王墓夷陵。楚襄王兵散不复战，东北保于陈城。二十二年秦复拔巫黔中郡。楚国丧失故都。\n\n## 原文\n\n> 二十一年，秦将白起遂拔我郢，烧先王墓夷陵。楚襄王兵散，遂不复战，东北保於陈城。\n\n"
+    },
+    {
+      "rev_id": "20260423-161220-14f141",
+      "timestamp": "2026-04-23T16:12:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155420-7de957",
+      "content_hash": "sha256:14f141dcd0d9061dd0d199ab31bcbf624a7eaa2aad58483eb88c82fc10331531",
+      "size": 984,
+      "content": "paragraph_refs:\n  040-037: \"[90.94]\"\nevent_type: 战争\nlocation: \"郢、夷陵\"\n---\nid: \"秦拔郢烧夷陵\"\ntype: event\ntitle: 秦拔郢烧夷陵\ndescription: 顷襄王二十一年秦将白起拔郢烧先王墓夷陵。楚襄王兵散不复战，东北保于陈城。二十二年秦复拔巫黔中郡。楚国丧失故都。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-037]\ndate: \"（公元前278年）\"\n---\n\n# 秦拔郢烧夷陵\n\n> 顷襄王二十一年秦将白起拔郢烧先王墓夷陵。楚襄王兵散不复战，东北保于陈城。二十二年秦复拔巫黔中郡。楚国丧失故都。\n\n**主要人物**：白起、顷襄王\n\n## 事件经过\n\n顷襄王二十一年秦将白起拔郢烧先王墓夷陵。楚襄王兵散不复战，东北保于陈城。二十二年秦复拔巫黔中郡。楚国丧失故都。\n\n## 原文\n\n> 二十一年，秦将白起遂拔我郢，烧先王墓夷陵。楚襄王兵散，遂不复战，东北保於陈城。\n\n"
+    },
     {
       "rev_id": "20260423-155420-7de957",
       "timestamp": "2026-04-23T15:54:20Z",

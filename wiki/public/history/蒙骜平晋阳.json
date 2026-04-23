@@ -1,8 +1,28 @@
 {
   "page": "蒙骜平晋阳",
-  "latest_rev_id": "20260423-154655-f60136",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163305-1d9532",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163305-1d9532",
+      "timestamp": "2026-04-23T16:33:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161250-27cd00",
+      "content_hash": "sha256:1d95321276deb14502734016fe7017b4f165b2536895295a4fd6c1495b89dbf5",
+      "size": 612,
+      "content": "---\nid: \"蒙骜平晋阳\"\ntype: event\ntitle: 蒙骜平晋阳\ndescription: 晋阳发生叛乱，秦王政元年，将军蒙骜率兵击定之。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-004]\ndate: \"〖%元年〗 （公元前246年）\"\n---\n\n::: meta\npn: \"[4.1]\"\nevent_type: 战争\nlocation: \"晋阳\"\n:::\n\n# 蒙骜平晋阳\n\n> 晋阳发生叛乱，秦王政元年，将军蒙骜率兵击定之。\n\n**主要人物**：蒙骜\n\n## 事件经过\n\n晋阳发生叛乱，秦王政元年，将军蒙骜率兵击定之。\n\n## 原文\n\n> 晋阳反，元年，将军蒙骜击定之。\n\n"
+    },
+    {
+      "rev_id": "20260423-161250-27cd00",
+      "timestamp": "2026-04-23T16:12:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154655-f60136",
+      "content_hash": "sha256:27cd0016a9637ffd82971ff6719ba8287d63cc5393e03fcece6e3ba23ab88595",
+      "size": 621,
+      "content": "paragraph_refs:\n  006-004: \"[4.1]\"\nevent_type: 战争\nlocation: \"晋阳\"\n---\nid: \"蒙骜平晋阳\"\ntype: event\ntitle: 蒙骜平晋阳\ndescription: 晋阳发生叛乱，秦王政元年，将军蒙骜率兵击定之。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-004]\ndate: \"〖%元年〗 （公元前246年）\"\n---\n\n# 蒙骜平晋阳\n\n> 晋阳发生叛乱，秦王政元年，将军蒙骜率兵击定之。\n\n**主要人物**：蒙骜\n\n## 事件经过\n\n晋阳发生叛乱，秦王政元年，将军蒙骜率兵击定之。\n\n## 原文\n\n> 晋阳反，元年，将军蒙骜击定之。\n\n"
+    },
     {
       "rev_id": "20260423-154655-f60136",
       "timestamp": "2026-04-23T15:46:55Z",

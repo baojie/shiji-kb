@@ -1,8 +1,28 @@
 {
   "page": "蜀守若取巫郡置黔中郡",
-  "latest_rev_id": "20260423-155509-18fe98",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163317-1a373f",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163317-1a373f",
+      "timestamp": "2026-04-23T16:33:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161259-70c938",
+      "content_hash": "sha256:1a373fddc9875e16980d5e424068641492da809a1aadd8ba95913739d0fcefa6",
+      "size": 842,
+      "content": "---\nid: \"蜀守若取巫郡置黔中郡\"\ntype: event\ntitle: 蜀守若取巫郡置黔中郡\ndescription: 昭襄王三十年，蜀守若伐楚取巫郡，及江南之地设为黔中郡。秦国西南疆域进一步拓展。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-125]\ndate: \"〖%三十年〗 （公元前277年）\"\n---\n\n::: meta\npn: \"[63.17]\"\nevent_type: 战争\nlocation: \"巫郡、江南（黔中郡）\"\n:::\n\n# 蜀守若取巫郡置黔中郡\n\n> 昭襄王三十年，蜀守若伐楚取巫郡，及江南之地设为黔中郡。秦国西南疆域进一步拓展。\n\n**主要人物**：蜀守若\n\n## 事件经过\n\n昭襄王三十年，蜀守若伐楚取巫郡，及江南之地设为黔中郡。秦国西南疆域进一步拓展。\n\n## 原文\n\n> 三十年，蜀守若伐楚，取巫郡，及江南为黔中郡。\n\n"
+    },
+    {
+      "rev_id": "20260423-161259-70c938",
+      "timestamp": "2026-04-23T16:12:59Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155509-18fe98",
+      "content_hash": "sha256:70c938cd9784db86dfe7af4adef572050fe53db21e3b073543d12c0f5d52750c",
+      "size": 851,
+      "content": "paragraph_refs:\n  005-125: \"[63.17]\"\nevent_type: 战争\nlocation: \"巫郡、江南（黔中郡）\"\n---\nid: \"蜀守若取巫郡置黔中郡\"\ntype: event\ntitle: 蜀守若取巫郡置黔中郡\ndescription: 昭襄王三十年，蜀守若伐楚取巫郡，及江南之地设为黔中郡。秦国西南疆域进一步拓展。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-125]\ndate: \"〖%三十年〗 （公元前277年）\"\n---\n\n# 蜀守若取巫郡置黔中郡\n\n> 昭襄王三十年，蜀守若伐楚取巫郡，及江南之地设为黔中郡。秦国西南疆域进一步拓展。\n\n**主要人物**：蜀守若\n\n## 事件经过\n\n昭襄王三十年，蜀守若伐楚取巫郡，及江南之地设为黔中郡。秦国西南疆域进一步拓展。\n\n## 原文\n\n> 三十年，蜀守若伐楚，取巫郡，及江南为黔中郡。\n\n"
+    },
     {
       "rev_id": "20260423-155509-18fe98",
       "timestamp": "2026-04-23T15:55:09Z",

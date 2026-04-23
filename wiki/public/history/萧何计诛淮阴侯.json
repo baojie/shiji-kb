@@ -1,8 +1,28 @@
 {
   "page": "萧何计诛淮阴侯",
-  "latest_rev_id": "20260423-154651-a49140",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163256-cfbda2",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163256-cfbda2",
+      "timestamp": "2026-04-23T16:32:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161247-d1da93",
+      "content_hash": "sha256:cfbda2fab363aee5a8b778a6cd7d76d37ecf4c19fcddd4a3eef9c75c36dd323e",
+      "size": 989,
+      "content": "---\nid: \"萧何计诛淮阴侯\"\ntype: event\ntitle: 萧何计诛淮阴侯\ndescription: 汉十一年，陈豨反，高祖自将至邯郸。淮阴侯谋反关中，吕后用萧何计诛淮阴侯。上拜丞相何为相国，益封五千户。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-010]\ndate: \"〖%十一年〗 （公元前196年）\"\n---\n\n::: meta\npn: \"[10]\"\nevent_type: 政治整顿\nlocation: \"关中\"\n:::\n\n# 萧何计诛淮阴侯\n\n> 汉十一年，陈豨反，高祖自将至邯郸。淮阴侯谋反关中，吕后用萧何计诛淮阴侯。上拜丞相何为相国，益封五千户。\n\n**主要人物**：吕后、萧何\n\n## 事件经过\n\n汉十一年，陈豨反，高祖自将至邯郸。淮阴侯谋反关中，吕后用萧何计诛淮阴侯。上拜丞相何为相国，益封五千户。\n\n## 原文\n\n> 汉十一年，陈豨反...淮阴侯谋反关中，吕后用萧何计，诛淮阴侯...使使拜丞相何为相国，益封五千户。\n\n"
+    },
+    {
+      "rev_id": "20260423-161247-d1da93",
+      "timestamp": "2026-04-23T16:12:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154651-a49140",
+      "content_hash": "sha256:d1da93292281d468f939e7a7557f11a73edba939554d6a75e6c8b0df49da9761",
+      "size": 998,
+      "content": "paragraph_refs:\n  053-010: \"[10]\"\nevent_type: 政治整顿\nlocation: \"关中\"\n---\nid: \"萧何计诛淮阴侯\"\ntype: event\ntitle: 萧何计诛淮阴侯\ndescription: 汉十一年，陈豨反，高祖自将至邯郸。淮阴侯谋反关中，吕后用萧何计诛淮阴侯。上拜丞相何为相国，益封五千户。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-010]\ndate: \"〖%十一年〗 （公元前196年）\"\n---\n\n# 萧何计诛淮阴侯\n\n> 汉十一年，陈豨反，高祖自将至邯郸。淮阴侯谋反关中，吕后用萧何计诛淮阴侯。上拜丞相何为相国，益封五千户。\n\n**主要人物**：吕后、萧何\n\n## 事件经过\n\n汉十一年，陈豨反，高祖自将至邯郸。淮阴侯谋反关中，吕后用萧何计诛淮阴侯。上拜丞相何为相国，益封五千户。\n\n## 原文\n\n> 汉十一年，陈豨反...淮阴侯谋反关中，吕后用萧何计，诛淮阴侯...使使拜丞相何为相国，益封五千户。\n\n"
+    },
     {
       "rev_id": "20260423-154651-a49140",
       "timestamp": "2026-04-23T15:46:51Z",

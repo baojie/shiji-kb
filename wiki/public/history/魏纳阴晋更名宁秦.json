@@ -1,8 +1,18 @@
 {
   "page": "魏纳阴晋更名宁秦",
-  "latest_rev_id": "20260423-155623-6f59a6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161615-b31ab6",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161615-b31ab6",
+      "timestamp": "2026-04-23T16:16:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155623-6f59a6",
+      "content_hash": "sha256:b31ab6ece15a71d441559e2d8cfbd6f95b41bfd2445fd9355641d0bf18beedbd",
+      "size": 709,
+      "content": "paragraph_refs:\n  005-085: \"[58.1]\"\nevent_type: 政治活动\nlocation: \"阴晋（宁秦）\"\n---\nid: \"魏纳阴晋更名宁秦\"\ntype: event\ntitle: 魏纳阴晋更名宁秦\ndescription: 惠文君六年，魏国献出阴晋，秦将其更名为宁秦。秦国领土进一步扩张。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-085]\ndate: \"〖%六年〗 （公元前332年）\"\n---\n\n# 魏纳阴晋更名宁秦\n\n> 惠文君六年，魏国献出阴晋，秦将其更名为宁秦。秦国领土进一步扩张。\n\n## 事件经过\n\n惠文君六年，魏国献出阴晋，秦将其更名为宁秦。秦国领土进一步扩张。\n\n## 原文\n\n> 六年，魏纳阴晋，阴晋更名宁秦。\n\n"
+    },
     {
       "rev_id": "20260423-155623-6f59a6",
       "timestamp": "2026-04-23T15:56:23Z",

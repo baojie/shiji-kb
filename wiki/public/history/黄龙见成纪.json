@@ -1,8 +1,18 @@
 {
   "page": "黄龙见成纪",
-  "latest_rev_id": "20260423-155629-f3b869",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161630-1be878",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161630-1be878",
+      "timestamp": "2026-04-23T16:16:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155629-f3b869",
+      "content_hash": "sha256:1be8780eb9337ba42171e7b018dec1a5355a33914eac6dbbacab4819dc8d0872",
+      "size": 905,
+      "content": "paragraph_refs:\n  010-035: \"[33.1]-[33.4]\"\nevent_type: 文化活动\nlocation: \"成纪\"\n---\nid: \"黄龙见成纪\"\ntype: event\ntitle: 黄龙见成纪\ndescription: 十五年黄龙见于成纪，天子复召公孙臣为博士申明土德事。下诏言有异物神见，岁有丰年，亲郊祀上帝。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-035]\ndate: \"〖%十五年〗 （公元前165年）\"\n---\n\n# 黄龙见成纪\n\n> 十五年黄龙见于成纪，天子复召公孙臣为博士申明土德事。下诏言有异物神见，岁有丰年，亲郊祀上帝。\n\n**主要人物**：公孙臣、孝文皇帝\n\n## 事件经过\n\n十五年黄龙见于成纪，天子复召公孙臣为博士申明土德事。下诏言有异物神见，岁有丰年，亲郊祀上帝。\n\n## 原文\n\n> 十五年，黄龙见成纪，天子乃复召鲁公孙臣，以为博士，申明土德事。\n\n"
+    },
     {
       "rev_id": "20260423-155629-f3b869",
       "timestamp": "2026-04-23T15:56:29Z",

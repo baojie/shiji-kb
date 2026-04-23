@@ -1,8 +1,18 @@
 {
   "page": "馀祭卒馀眛立",
-  "latest_rev_id": "20260423-155610-41457a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161553-827d60",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161553-827d60",
+      "timestamp": "2026-04-23T16:15:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155610-41457a",
+      "content_hash": "sha256:827d608511750af0703cf5c26508ca86c2cc973dd50ad992f55ec723662ae243",
+      "size": 685,
+      "content": "paragraph_refs:\n  031-014: \"[17.1]\"\nevent_type: 继位\nlocation: \"吴\"\n---\nid: \"馀祭卒馀眛立\"\ntype: event\ntitle: 馀祭卒馀眛立\ndescription: 馀祭十七年卒，弟馀眛立。馀眛二年，楚公子弃疾弑灵王代立。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-014]\ndate: \"〖%十七年〗 （公元前531年）\"\n---\n\n# 馀祭卒馀眛立\n\n> 馀祭十七年卒，弟馀眛立。馀眛二年，楚公子弃疾弑灵王代立。\n\n**主要人物**：王馀祭、馀眛\n\n## 事件经过\n\n馀祭十七年卒，弟馀眛立。馀眛二年，楚公子弃疾弑灵王代立。\n\n## 原文\n\n> 十七年，王馀祭卒，弟馀眛立。\n\n"
+    },
     {
       "rev_id": "20260423-155610-41457a",
       "timestamp": "2026-04-23T15:56:10Z",

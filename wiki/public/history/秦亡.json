@@ -1,8 +1,28 @@
 {
   "page": "秦亡",
-  "latest_rev_id": "20260423-154611-a3e8db",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163042-faa342",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163042-faa342",
+      "timestamp": "2026-04-23T16:30:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161217-b212fc",
+      "content_hash": "sha256:faa3426f7b63c85c31df9ee224ca1ce4451f12480d63903f5f299b972d1de625",
+      "size": 979,
+      "content": "---\nid: \"秦亡\"\ntype: event\ntitle: 秦亡\ndescription: 子婴立三月，沛公兵从武关入至咸阳，群臣百官皆叛。子婴与妻子系颈以组降于轵道旁。沛公以属吏，项王至而斩之，秦遂亡。\ntags: [史记, 事件, 李斯列传]\nsources: [李斯列传]\nevent_ids: [087-020]\ndate: \"（公元前206年）\"\n---\n\n::: meta\npn: \"[20.1]\"\nevent_type: 战争\nlocation: \"咸阳、武关、轵道\"\n:::\n\n# 秦亡\n\n> 子婴立三月，沛公兵从武关入至咸阳，群臣百官皆叛。子婴与妻子系颈以组降于轵道旁。沛公以属吏，项王至而斩之，秦遂亡。\n\n**主要人物**：子婴、沛公、项王\n\n## 事件经过\n\n子婴立三月，沛公兵从武关入至咸阳，群臣百官皆叛。子婴与妻子系颈以组降于轵道旁。沛公以属吏，项王至而斩之，秦遂亡。\n\n## 原文\n\n> 子婴立三月,沛公兵从武关入,至咸阳,群臣百官皆畔,不適。子婴与妻子自系其颈以组,降轵道旁。\n\n"
+    },
+    {
+      "rev_id": "20260423-161217-b212fc",
+      "timestamp": "2026-04-23T16:12:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154611-a3e8db",
+      "content_hash": "sha256:b212fcf8a06a297f318c27bf461812c0e9bf27459cc0983877e3121c6641aef2",
+      "size": 988,
+      "content": "paragraph_refs:\n  087-020: \"[20.1]\"\nevent_type: 战争\nlocation: \"咸阳、武关、轵道\"\n---\nid: \"秦亡\"\ntype: event\ntitle: 秦亡\ndescription: 子婴立三月，沛公兵从武关入至咸阳，群臣百官皆叛。子婴与妻子系颈以组降于轵道旁。沛公以属吏，项王至而斩之，秦遂亡。\ntags: [史记, 事件, 李斯列传]\nsources: [李斯列传]\nevent_ids: [087-020]\ndate: \"（公元前206年）\"\n---\n\n# 秦亡\n\n> 子婴立三月，沛公兵从武关入至咸阳，群臣百官皆叛。子婴与妻子系颈以组降于轵道旁。沛公以属吏，项王至而斩之，秦遂亡。\n\n**主要人物**：子婴、沛公、项王\n\n## 事件经过\n\n子婴立三月，沛公兵从武关入至咸阳，群臣百官皆叛。子婴与妻子系颈以组降于轵道旁。沛公以属吏，项王至而斩之，秦遂亡。\n\n## 原文\n\n> 子婴立三月,沛公兵从武关入,至咸阳,群臣百官皆畔,不適。子婴与妻子自系其颈以组,降轵道旁。\n\n"
+    },
     {
       "rev_id": "20260423-154611-a3e8db",
       "timestamp": "2026-04-23T15:46:11Z",

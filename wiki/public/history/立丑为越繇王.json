@@ -1,8 +1,28 @@
 {
   "page": "立丑为越繇王",
-  "latest_rev_id": "20260423-155432-15c577",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163128-95de78",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163128-95de78",
+      "timestamp": "2026-04-23T16:31:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161228-a82175",
+      "content_hash": "sha256:95de78424d446d7d40c2ce2befe1bf60c48a535e39667f83d093eb78aec5b631",
+      "size": 799,
+      "content": "---\nid: \"立丑为越繇王\"\ntype: event\ntitle: 立丑为越繇王\ndescription: 天子诏罢两将兵，以郢等首恶而无诸孙繇君丑不与谋，使郎中将立丑为越繇王，奉闽越先祭祀。\ntags: [史记, 事件, 东越列传]\nsources: [东越列传]\nevent_ids: [114-010]\ndate: \"〖%建元六年〗 （公元前135年）\"\n---\n\n::: meta\npn: \"[3]\"\nevent_type: 册封\nlocation: \"闽越\"\n:::\n\n# 立丑为越繇王\n\n> 天子诏罢两将兵，以郢等首恶而无诸孙繇君丑不与谋，使郎中将立丑为越繇王，奉闽越先祭祀。\n\n**主要人物**：丑\n\n## 事件经过\n\n天子诏罢两将兵，以郢等首恶而无诸孙繇君丑不与谋，使郎中将立丑为越繇王，奉闽越先祭祀。\n\n## 原文\n\n> 乃使郎中将立丑为越繇王，奉闽越先祭祀。\n\n"
+    },
+    {
+      "rev_id": "20260423-161228-a82175",
+      "timestamp": "2026-04-23T16:12:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155432-15c577",
+      "content_hash": "sha256:a82175f04288b3cafd0c2fd90d6ffbe4fcebaebeb4a82fd55b0ff779dda828e3",
+      "size": 808,
+      "content": "paragraph_refs:\n  114-010: \"[3]\"\nevent_type: 册封\nlocation: \"闽越\"\n---\nid: \"立丑为越繇王\"\ntype: event\ntitle: 立丑为越繇王\ndescription: 天子诏罢两将兵，以郢等首恶而无诸孙繇君丑不与谋，使郎中将立丑为越繇王，奉闽越先祭祀。\ntags: [史记, 事件, 东越列传]\nsources: [东越列传]\nevent_ids: [114-010]\ndate: \"〖%建元六年〗 （公元前135年）\"\n---\n\n# 立丑为越繇王\n\n> 天子诏罢两将兵，以郢等首恶而无诸孙繇君丑不与谋，使郎中将立丑为越繇王，奉闽越先祭祀。\n\n**主要人物**：丑\n\n## 事件经过\n\n天子诏罢两将兵，以郢等首恶而无诸孙繇君丑不与谋，使郎中将立丑为越繇王，奉闽越先祭祀。\n\n## 原文\n\n> 乃使郎中将立丑为越繇王，奉闽越先祭祀。\n\n"
+    },
     {
       "rev_id": "20260423-155432-15c577",
       "timestamp": "2026-04-23T15:54:32Z",

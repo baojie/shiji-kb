@@ -1,8 +1,18 @@
 {
   "page": "韩信谋反伏诛",
-  "latest_rev_id": "20260423-154757-1ba880",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161524-7d41da",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161524-7d41da",
+      "timestamp": "2026-04-23T16:15:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154757-1ba880",
+      "content_hash": "sha256:7d41dab3542dc3f46ee40ecb352e4c6f627c30de351a6c975aec5ef62371e96f",
+      "size": 676,
+      "content": "paragraph_refs:\n  008-086: \"[77.1]\"\nevent_type: 政治整顿\nlocation: \"关中\"\n---\nid: \"韩信谋反伏诛\"\ntype: event\ntitle: 韩信谋反伏诛\ndescription: 春，淮阴侯韩信谋反关中，被吕后与萧何设计擒杀，夷三族。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-086]\ndate: \"〖%十一年〗春 （公元前196年）\"\n---\n\n# 韩信谋反伏诛\n\n> 春，淮阴侯韩信谋反关中，被吕后与萧何设计擒杀，夷三族。\n\n**主要人物**：韩信\n\n## 事件经过\n\n春，淮阴侯韩信谋反关中，被吕后与萧何设计擒杀，夷三族。\n\n## 原文\n\n> 春，淮阴侯韩信谋反关中，夷三族。\n\n"
+    },
     {
       "rev_id": "20260423-154757-1ba880",
       "timestamp": "2026-04-23T15:47:57Z",

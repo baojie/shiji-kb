@@ -1,8 +1,18 @@
 {
   "page": "项羽坑秦降卒二十万",
-  "latest_rev_id": "20260423-154808-ed961f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161544-a00aeb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161544-a00aeb",
+      "timestamp": "2026-04-23T16:15:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154808-ed961f",
+      "content_hash": "sha256:a00aebedefb999b9c88eb7db1785c330dacb619802047aa4b2c6ae0df47358bb",
+      "size": 889,
+      "content": "paragraph_refs:\n  016-011: \"r30\"\nevent_type: 战争\nlocation: \"新安\"\n---\nid: \"项羽坑秦降卒二十万\"\ntype: event\ntitle: 项羽坑秦降卒二十万\ndescription: 项羽率诸侯兵西行至河南，在新安诈坑秦降卒二十万人。此举震慑天下，也为项羽埋下日后失败的隐患。\ntags: [史记, 事件, 秦楚之际月表]\nsources: [秦楚之际月表]\nevent_ids: [016-011]\ndate: \"〖%汉元年十一月〗 （公元前206年）\"\n---\n\n# 项羽坑秦降卒二十万\n\n> 项羽率诸侯兵西行至河南，在新安诈坑秦降卒二十万人。此举震慑天下，也为项羽埋下日后失败的隐患。\n\n**主要人物**：项羽\n\n## 事件经过\n\n项羽率诸侯兵西行至河南，在新安诈坑秦降卒二十万人。此举震慑天下，也为项羽埋下日后失败的隐患。\n\n## 原文\n\n> 十五。羽诈阬杀秦降卒二十万人于新安。\n\n"
+    },
     {
       "rev_id": "20260423-154808-ed961f",
       "timestamp": "2026-04-23T15:48:08Z",

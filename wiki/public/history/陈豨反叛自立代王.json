@@ -1,8 +1,18 @@
 {
   "page": "陈豨反叛自立代王",
-  "latest_rev_id": "20260423-154745-e385d4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161503-171513",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161503-171513",
+      "timestamp": "2026-04-23T16:15:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154745-e385d4",
+      "content_hash": "sha256:171513e1a9746350b9d511ff912333ab23fe34be62dff1a057479d23e48f9a8a",
+      "size": 1014,
+      "content": "paragraph_refs:\n  093-020: \"[15]\"\nevent_type: 战争\nlocation: \"代\"\n---\nid: \"陈豨反叛自立代王\"\ntype: event\ntitle: 陈豨反叛自立代王\ndescription: 高祖十年七月太上皇崩，使人召陈豨，陈豨称病不至。九月遂与王黄等反叛，自立为代王，劫略赵、代之地。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-020]\ndate: \"〖%高祖十年七月〗至〖%九月〗 （公元前197年）\"\n---\n\n# 陈豨反叛自立代王\n\n> 高祖十年七月太上皇崩，使人召陈豨，陈豨称病不至。九月遂与王黄等反叛，自立为代王，劫略赵、代之地。\n\n**主要人物**：曼丘臣、王黄、陈豨\n\n## 事件经过\n\n高祖十年七月太上皇崩，使人召陈豨，陈豨称病不至。九月遂与王黄等反叛，自立为代王，劫略赵、代之地。\n\n## 原文\n\n> 及高祖十年七月，太上皇崩，使人召豨，豨称病甚。九月，遂与王黄等反，自立为代王，劫略赵、代。\n\n"
+    },
     {
       "rev_id": "20260423-154745-e385d4",
       "timestamp": "2026-04-23T15:47:45Z",

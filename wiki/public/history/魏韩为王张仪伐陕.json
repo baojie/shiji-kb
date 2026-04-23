@@ -1,8 +1,18 @@
 {
   "page": "魏韩为王张仪伐陕",
-  "latest_rev_id": "20260423-154818-f1464f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161616-491aab",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161616-491aab",
+      "timestamp": "2026-04-23T16:16:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154818-f1464f",
+      "content_hash": "sha256:491aab027198e0d0aa9a8a6ea59b33bf101ae0a1b7f8305850028b5930a6b4f6",
+      "size": 863,
+      "content": "paragraph_refs:\n  005-092: \"[58.8]\"\nevent_type: 政治活动\nlocation: \"陕\"\n---\nid: \"魏韩为王张仪伐陕\"\ntype: event\ntitle: 魏韩为王张仪伐陕\ndescription: 惠文君十三年四月戊午，魏君称王，韩亦称王。秦使张仪伐取陕地，将当地百姓迁给魏国。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-092]\ndate: \"〖%十三年〗〖%四月戊午〗 （公元前325年）\"\n---\n\n# 魏韩为王张仪伐陕\n\n> 惠文君十三年四月戊午，魏君称王，韩亦称王。秦使张仪伐取陕地，将当地百姓迁给魏国。\n\n**主要人物**：张仪\n\n## 事件经过\n\n惠文君十三年四月戊午，魏君称王，韩亦称王。秦使张仪伐取陕地，将当地百姓迁给魏国。\n\n## 原文\n\n> 十三年四月戊午，魏君为王，韩亦为王。使张仪伐取陕，出其人与魏。\n\n"
+    },
     {
       "rev_id": "20260423-154818-f1464f",
       "timestamp": "2026-04-23T15:48:18Z",

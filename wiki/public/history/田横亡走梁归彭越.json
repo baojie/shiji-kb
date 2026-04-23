@@ -1,8 +1,28 @@
 {
   "page": "田横亡走梁归彭越",
-  "latest_rev_id": "20260423-152857-8e8b30",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-162947-331dd2",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-162947-331dd2",
+      "timestamp": "2026-04-23T16:29:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161206-c2b0aa",
+      "content_hash": "sha256:331dd2025afccb0554e945c42b1c3ff53ac2d81b3397b704a2e4eda9dbca0cd4",
+      "size": 915,
+      "content": "---\nid: \"田横亡走梁归彭越\"\ntype: event\ntitle: 田横亡走梁归彭越\ndescription: 田横闻齐王死后自立为齐王，还击灌婴被败于嬴下。田横逃往梁地投奔彭越，彭越当时居梁地中立于楚汉之间。\ntags: [史记, 事件, 田儋列传]\nsources: [田儋列传]\nevent_ids: [094-012]\ndate: \"（公元前203年）\"\n---\n\n::: meta\npn: \"[10]\"\nevent_type: 政治活动\nlocation: \"嬴\"\n:::\n\n# 田横亡走梁归彭越\n\n> 田横闻齐王死后自立为齐王，还击灌婴被败于嬴下。田横逃往梁地投奔彭越，彭越当时居梁地中立于楚汉之间。\n\n**主要人物**：彭越、灌婴、田横\n\n## 事件经过\n\n田横闻齐王死后自立为齐王，还击灌婴被败于嬴下。田横逃往梁地投奔彭越，彭越当时居梁地中立于楚汉之间。\n\n## 原文\n\n> 田横亡走梁，归彭越。彭越是时居梁地，中立，且为汉，且为楚。\n\n"
+    },
+    {
+      "rev_id": "20260423-161206-c2b0aa",
+      "timestamp": "2026-04-23T16:12:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-152857-8e8b30",
+      "content_hash": "sha256:c2b0aa878f38ff08ba29775d98ecd825119fb5e944e353339a914cb4ce078e77",
+      "size": 924,
+      "content": "paragraph_refs:\n  094-012: \"[10]\"\nevent_type: 政治活动\nlocation: \"嬴\"\n---\nid: \"田横亡走梁归彭越\"\ntype: event\ntitle: 田横亡走梁归彭越\ndescription: 田横闻齐王死后自立为齐王，还击灌婴被败于嬴下。田横逃往梁地投奔彭越，彭越当时居梁地中立于楚汉之间。\ntags: [史记, 事件, 田儋列传]\nsources: [田儋列传]\nevent_ids: [094-012]\ndate: \"（公元前203年）\"\n---\n\n# 田横亡走梁归彭越\n\n> 田横闻齐王死后自立为齐王，还击灌婴被败于嬴下。田横逃往梁地投奔彭越，彭越当时居梁地中立于楚汉之间。\n\n**主要人物**：彭越、灌婴、田横\n\n## 事件经过\n\n田横闻齐王死后自立为齐王，还击灌婴被败于嬴下。田横逃往梁地投奔彭越，彭越当时居梁地中立于楚汉之间。\n\n## 原文\n\n> 田横亡走梁，归彭越。彭越是时居梁地，中立，且为汉，且为楚。\n\n"
+    },
     {
       "rev_id": "20260423-152857-8e8b30",
       "timestamp": "2026-04-23T15:28:57Z",

@@ -1,8 +1,28 @@
 {
   "page": "相如拜上大夫",
-  "latest_rev_id": "20260423-155400-5c3d31",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163016-0624fb",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163016-0624fb",
+      "timestamp": "2026-04-23T16:30:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161212-405ed5",
+      "content_hash": "sha256:0624fba9e5ec9ed114b8911c5918c03794d5122cf84e4ca3eb87cd96c45c426a",
+      "size": 899,
+      "content": "---\nid: \"相如拜上大夫\"\ntype: event\ntitle: 相如拜上大夫\ndescription: 蔺相如完璧归赵后，赵王认为他是贤大夫，出使不辱于诸侯，拜其为上大夫。秦国也未以城予赵，赵亦终不予秦璧。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-004]\ndate: \"[公元前283年]\"\n---\n\n::: meta\npn: \"[6.1]-[6.2]\"\nevent_type: 政治活动\n:::\n\n# 相如拜上大夫\n\n> 蔺相如完璧归赵后，赵王认为他是贤大夫，出使不辱于诸侯，拜其为上大夫。秦国也未以城予赵，赵亦终不予秦璧。\n\n**主要人物**：蔺相如\n\n## 事件经过\n\n蔺相如完璧归赵后，赵王认为他是贤大夫，出使不辱于诸侯，拜其为上大夫。秦国也未以城予赵，赵亦终不予秦璧。\n\n## 原文\n\n> 相如既归，赵王以为贤大夫使不辱於诸侯，拜相如为上大夫。\n\n"
+    },
+    {
+      "rev_id": "20260423-161212-405ed5",
+      "timestamp": "2026-04-23T16:12:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155400-5c3d31",
+      "content_hash": "sha256:405ed586a5a47a8d75832d7e8d62c33f62ad751894e93a81a0a2986bbba0ab38",
+      "size": 908,
+      "content": "paragraph_refs:\n  081-004: \"[6.1]-[6.2]\"\nevent_type: 政治活动\n---\nid: \"相如拜上大夫\"\ntype: event\ntitle: 相如拜上大夫\ndescription: 蔺相如完璧归赵后，赵王认为他是贤大夫，出使不辱于诸侯，拜其为上大夫。秦国也未以城予赵，赵亦终不予秦璧。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-004]\ndate: \"[公元前283年]\"\n---\n\n# 相如拜上大夫\n\n> 蔺相如完璧归赵后，赵王认为他是贤大夫，出使不辱于诸侯，拜其为上大夫。秦国也未以城予赵，赵亦终不予秦璧。\n\n**主要人物**：蔺相如\n\n## 事件经过\n\n蔺相如完璧归赵后，赵王认为他是贤大夫，出使不辱于诸侯，拜其为上大夫。秦国也未以城予赵，赵亦终不予秦璧。\n\n## 原文\n\n> 相如既归，赵王以为贤大夫使不辱於诸侯，拜相如为上大夫。\n\n"
+    },
     {
       "rev_id": "20260423-155400-5c3d31",
       "timestamp": "2026-04-23T15:54:00Z",

@@ -1,8 +1,18 @@
 {
   "page": "贾谊贬长沙王太傅",
-  "latest_rev_id": "20260423-154712-097cdc",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161337-66468a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161337-66468a",
+      "timestamp": "2026-04-23T16:13:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154712-097cdc",
+      "content_hash": "sha256:66468ae586aba2e4795047de18014de6671c71cb61cf820af039a4d6837e50d6",
+      "size": 984,
+      "content": "paragraph_refs:\n  084-011: \"[11.2]\"\nevent_type: 政治活动\nlocation: \"长沙\"\n---\nid: \"贾谊贬长沙王太傅\"\ntype: event\ntitle: 贾谊贬长沙王太傅\ndescription: 天子欲以贾生任公卿，绛侯、灌侯等大臣尽害之，短言其\"年少专欲擅权\"。天子后亦疏之，贬贾谊为长沙王太傅。\ntags: [史记, 事件, 屈原贾生列传]\nsources: [屈原贾生列传]\nevent_ids: [084-011]\ndate: \"（公元前176年）\"\n---\n\n# 贾谊贬长沙王太傅\n\n> 天子欲以贾生任公卿，绛侯、灌侯等大臣尽害之，短言其\"年少专欲擅权\"。天子后亦疏之，贬贾谊为长沙王太傅。\n\n**主要人物**：孝文帝、贾生\n\n## 事件经过\n\n天子欲以贾生任公卿，绛侯、灌侯等大臣尽害之，短言其\"年少专欲擅权\"。天子后亦疏之，贬贾谊为长沙王太傅。\n\n## 原文\n\n> $绛侯$、$灌侯$、$东阳侯$、冯敬之属尽害之,乃短贾生曰:'雒阳之人,年少初学,专欲擅权,纷乱诸事。'\n\n"
+    },
     {
       "rev_id": "20260423-154712-097cdc",
       "timestamp": "2026-04-23T15:47:12Z",

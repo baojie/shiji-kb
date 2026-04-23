@@ -1,8 +1,28 @@
 {
   "page": "秦王政即位",
-  "latest_rev_id": "20260423-155425-608256",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163106-7f3b00",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163106-7f3b00",
+      "timestamp": "2026-04-23T16:31:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161223-85f7be",
+      "content_hash": "sha256:7f3b005a512c7c3d70e21c4232f4f0c5ab9baa0fd5237c11effd5b2775a0aba6",
+      "size": 749,
+      "content": "---\nid: \"秦王政即位\"\ntype: event\ntitle: 秦王政即位\ndescription: 秦王政十三岁时，庄襄王去世，政继位为秦王。当时王年少，初即位，委国事于大臣。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-002]\ndate: \"〖%年十三岁〗 （公元前247年）\"\n---\n\n::: meta\npn: \"[1.2]\"\nevent_type: 继位\n:::\n\n# 秦王政即位\n\n> 秦王政十三岁时，庄襄王去世，政继位为秦王。当时王年少，初即位，委国事于大臣。\n\n**主要人物**：庄襄王、政\n\n## 事件经过\n\n秦王政十三岁时，庄襄王去世，政继位为秦王。当时王年少，初即位，委国事于大臣。\n\n## 原文\n\n> 年十三岁，庄襄王死，政代立为秦王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161223-85f7be",
+      "timestamp": "2026-04-23T16:12:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155425-608256",
+      "content_hash": "sha256:85f7be0a9337c261d0f5794e23b69612f31124bb9960c15912528563a15e27c9",
+      "size": 758,
+      "content": "paragraph_refs:\n  006-002: \"[1.2]\"\nevent_type: 继位\n---\nid: \"秦王政即位\"\ntype: event\ntitle: 秦王政即位\ndescription: 秦王政十三岁时，庄襄王去世，政继位为秦王。当时王年少，初即位，委国事于大臣。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-002]\ndate: \"〖%年十三岁〗 （公元前247年）\"\n---\n\n# 秦王政即位\n\n> 秦王政十三岁时，庄襄王去世，政继位为秦王。当时王年少，初即位，委国事于大臣。\n\n**主要人物**：庄襄王、政\n\n## 事件经过\n\n秦王政十三岁时，庄襄王去世，政继位为秦王。当时王年少，初即位，委国事于大臣。\n\n## 原文\n\n> 年十三岁，庄襄王死，政代立为秦王。\n\n"
+    },
     {
       "rev_id": "20260423-155425-608256",
       "timestamp": "2026-04-23T15:54:25Z",

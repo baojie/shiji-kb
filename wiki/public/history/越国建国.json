@@ -1,8 +1,18 @@
 {
   "page": "越国建国",
-  "latest_rev_id": "20260423-155533-8c45f2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161359-12a8f0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161359-12a8f0",
+      "timestamp": "2026-04-23T16:13:59Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155533-8c45f2",
+      "content_hash": "sha256:12a8f065afd0db160bc253e68ebb9f6db69af7cb8d786c2fe769fab51356dc8f",
+      "size": 963,
+      "content": "paragraph_refs:\n  041-001: \"[1]\"\nevent_type: 继位\nlocation: \"会稽\"\n---\nid: \"越国建国\"\ntype: event\ntitle: 越国建国\ndescription: 越王句践，其先为禹之苗裔，夏后帝少康之庶子。封于会稽，以奉守禹之祀。文身断发，披草莱而邑。后二十余世，至允常。\ntags: [史记, 事件, 越王句践世家]\nsources: [越王句践世家]\nevent_ids: [041-001]\ndate: \"[约公元前1900年]\"\n---\n\n# 越国建国\n\n> 越王句践，其先为禹之苗裔，夏后帝少康之庶子。封于会稽，以奉守禹之祀。文身断发，披草莱而邑。后二十余世，至允常。\n\n**主要人物**：句践、少康\n\n## 事件经过\n\n越王句践，其先为禹之苗裔，夏后帝少康之庶子。封于会稽，以奉守禹之祀。文身断发，披草莱而邑。后二十余世，至允常。\n\n## 原文\n\n> 越王句践，其先?禹?之苗裔，而夏后帝少康之庶子也。封於会稽，以奉守?禹?之祀。\n\n"
+    },
     {
       "rev_id": "20260423-155533-8c45f2",
       "timestamp": "2026-04-23T15:55:33Z",

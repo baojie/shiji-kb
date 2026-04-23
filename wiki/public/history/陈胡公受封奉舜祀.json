@@ -1,8 +1,18 @@
 {
   "page": "陈胡公受封奉舜祀",
-  "latest_rev_id": "20260423-155555-fa5145",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161501-758199",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161501-758199",
+      "timestamp": "2026-04-23T16:15:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155555-fa5145",
+      "content_hash": "sha256:7581993d7d9f7cb433601c60fcd31d64b335c32351ac3d20b74ce341cb196212",
+      "size": 943,
+      "content": "paragraph_refs:\n  036-001: \"[1.1]\"\nevent_type: 政治活动\nlocation: \"陈\"\n---\nid: \"陈胡公受封奉舜祀\"\ntype: event\ntitle: 陈胡公受封奉舜祀\ndescription: 陈胡公满为虞帝舜之后，姓妫氏。周武王克殷纣后求舜后，得妫满，封之于陈以奉帝舜祀，是为胡公。\ntags: [史记, 事件, 陈杞世家]\nsources: [陈杞世家]\nevent_ids: [036-001]\ndate: \"[公元前1046年]\"\n---\n\n# 陈胡公受封奉舜祀\n\n> 陈胡公满为虞帝舜之后，姓妫氏。周武王克殷纣后求舜后，得妫满，封之于陈以奉帝舜祀，是为胡公。\n\n**主要人物**：武王、陈胡公满\n\n## 事件经过\n\n陈胡公满为虞帝舜之后，姓妫氏。周武王克殷纣后求舜后，得妫满，封之于陈以奉帝舜祀，是为胡公。\n\n## 原文\n\n> 陈胡公满者，虞帝舜之後也。...至于周武王克殷纣，乃复求舜後，得妫满，封之於陈，以奉帝舜祀，是为胡公。\n\n"
+    },
     {
       "rev_id": "20260423-155555-fa5145",
       "timestamp": "2026-04-23T15:55:55Z",

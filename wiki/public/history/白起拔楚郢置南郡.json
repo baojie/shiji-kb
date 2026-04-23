@@ -1,8 +1,28 @@
 {
   "page": "白起拔楚郢置南郡",
-  "latest_rev_id": "20260423-154605-0c3d98",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163005-e2a59c",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163005-e2a59c",
+      "timestamp": "2026-04-23T16:30:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161209-e82468",
+      "content_hash": "sha256:e2a59cf6adf899d9a41c335eb90e1f7e10a90d53b57f4bb6d4907013ed5ae3bc",
+      "size": 896,
+      "content": "---\nid: \"白起拔楚郢置南郡\"\ntype: event\ntitle: 白起拔楚郢置南郡\ndescription: 穰侯派遣白起攻拔楚国都城郢，秦在此设置南郡。白起因功被封为武安君。穰侯之富由此超过王室。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-008]\ndate: \"昭王二十九年（公元前278年）\"\n---\n\n::: meta\npn: \"[5]\"\nevent_type: 战争\nlocation: \"郢\"\n:::\n\n# 白起拔楚郢置南郡\n\n> 穰侯派遣白起攻拔楚国都城郢，秦在此设置南郡。白起因功被封为武安君。穰侯之富由此超过王室。\n\n**主要人物**：白起、穰侯\n\n## 事件经过\n\n穰侯派遣白起攻拔楚国都城郢，秦在此设置南郡。白起因功被封为武安君。穰侯之富由此超过王室。\n\n## 原文\n\n> 而使白起拔楚之郢，秦置南郡。乃封白起为武安君。……於是穰侯之富，富於王室。\n\n"
+    },
+    {
+      "rev_id": "20260423-161209-e82468",
+      "timestamp": "2026-04-23T16:12:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154605-0c3d98",
+      "content_hash": "sha256:e82468a20eb7611ca6bed182c9406e3e50eebe7f1860d3c1411d02c4fcbb98e2",
+      "size": 905,
+      "content": "paragraph_refs:\n  072-008: \"[5]\"\nevent_type: 战争\nlocation: \"郢\"\n---\nid: \"白起拔楚郢置南郡\"\ntype: event\ntitle: 白起拔楚郢置南郡\ndescription: 穰侯派遣白起攻拔楚国都城郢，秦在此设置南郡。白起因功被封为武安君。穰侯之富由此超过王室。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-008]\ndate: \"昭王二十九年（公元前278年）\"\n---\n\n# 白起拔楚郢置南郡\n\n> 穰侯派遣白起攻拔楚国都城郢，秦在此设置南郡。白起因功被封为武安君。穰侯之富由此超过王室。\n\n**主要人物**：白起、穰侯\n\n## 事件经过\n\n穰侯派遣白起攻拔楚国都城郢，秦在此设置南郡。白起因功被封为武安君。穰侯之富由此超过王室。\n\n## 原文\n\n> 而使白起拔楚之郢，秦置南郡。乃封白起为武安君。……於是穰侯之富，富於王室。\n\n"
+    },
     {
       "rev_id": "20260423-154605-0c3d98",
       "timestamp": "2026-04-23T15:46:05Z",

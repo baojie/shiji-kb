@@ -1,8 +1,18 @@
 {
   "page": "魏豹叛汉",
-  "latest_rev_id": "20260423-154817-429cde",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161615-d6741e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161615-d6741e",
+      "timestamp": "2026-04-23T16:16:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154817-429cde",
+      "content_hash": "sha256:d6741e3a1af612d8cd3657fc61511ac9640e0134260ca4b67615372de07097eb",
+      "size": 997,
+      "content": "paragraph_refs:\n  008-044: \"[39]\"\nevent_type: 战争\n---\nid: \"魏豹叛汉\"\ntype: event\ntitle: 魏豹叛汉\ndescription: 三年，魏王豹谒归视亲疾，至即绝河津反为楚。汉王使郦生说豹不听，遣韩信击大破之，虏豹，定魏地置河东、太原、上党三郡。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-044]\ndate: \"〖%三年〗 （公元前205年）\"\n---\n\n# 魏豹叛汉\n\n> 三年，魏王豹谒归视亲疾，至即绝河津反为楚。汉王使郦生说豹不听，遣韩信击大破之，虏豹，定魏地置河东、太原、上党三郡。\n\n**主要人物**：韩信、魏豹\n\n## 事件经过\n\n三年，魏王豹谒归视亲疾，至即绝河津反为楚。汉王使郦生说豹不听，遣韩信击大破之，虏豹，定魏地置河东、太原、上党三郡。\n\n## 原文\n\n> 魏王豹谒归视亲疾，至即绝河津，反为楚。汉王使郦生说豹，豹不听。汉王遣将军韩信击，大破之，虏豹。\n\n"
+    },
     {
       "rev_id": "20260423-154817-429cde",
       "timestamp": "2026-04-23T15:48:17Z",

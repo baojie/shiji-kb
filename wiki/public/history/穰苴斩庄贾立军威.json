@@ -1,8 +1,28 @@
 {
   "page": "穰苴斩庄贾立军威",
-  "latest_rev_id": "20260423-155430-38cf02",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163120-592c2a",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163120-592c2a",
+      "timestamp": "2026-04-23T16:31:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161226-7bcdf3",
+      "content_hash": "sha256:592c2a5a4f996ab945df8bf7a28ea115f2c6182b5e8278dfbaaa7bed2ec733cb",
+      "size": 1023,
+      "content": "---\nid: \"穰苴斩庄贾立军威\"\ntype: event\ntitle: 穰苴斩庄贾立军威\ndescription: 穰苴与庄贾约旦日日中会于军门。穰苴先至立表下漏，庄贾骄贵迟到。穰苴以军法斩庄贾以徇三军，三军之士皆振栗。\ntags: [史记, 事件, 司马穰苴列传]\nsources: [司马穰苴列传]\nevent_ids: [064-003]\ndate: \"[约公元前535年]\"\n---\n\n::: meta\npn: \"[1]\"\nevent_type: 政治整顿\nlocation: \"齐\"\n:::\n\n# 穰苴斩庄贾立军威\n\n> 穰苴与庄贾约旦日日中会于军门。穰苴先至立表下漏，庄贾骄贵迟到。穰苴以军法斩庄贾以徇三军，三军之士皆振栗。\n\n**主要人物**：穰苴、齐景公\n\n## 事件经过\n\n穰苴与庄贾约旦日日中会于军门。穰苴先至立表下漏，庄贾骄贵迟到。穰苴以军法斩庄贾以徇三军，三军之士皆振栗。\n\n## 原文\n\n> 穰苴曰：'将受命之日则忘其家，临军约束则忘其亲，援枹鼓之急则忘其身。'……於是遂斩庄贾以徇三军。三军之士皆振栗。\n\n"
+    },
+    {
+      "rev_id": "20260423-161226-7bcdf3",
+      "timestamp": "2026-04-23T16:12:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155430-38cf02",
+      "content_hash": "sha256:7bcdf3781b723b8b5eee10ba9618b941d85f0634c84071c1769bb727d47e6d7b",
+      "size": 1032,
+      "content": "paragraph_refs:\n  064-003: \"[1]\"\nevent_type: 政治整顿\nlocation: \"齐\"\n---\nid: \"穰苴斩庄贾立军威\"\ntype: event\ntitle: 穰苴斩庄贾立军威\ndescription: 穰苴与庄贾约旦日日中会于军门。穰苴先至立表下漏，庄贾骄贵迟到。穰苴以军法斩庄贾以徇三军，三军之士皆振栗。\ntags: [史记, 事件, 司马穰苴列传]\nsources: [司马穰苴列传]\nevent_ids: [064-003]\ndate: \"[约公元前535年]\"\n---\n\n# 穰苴斩庄贾立军威\n\n> 穰苴与庄贾约旦日日中会于军门。穰苴先至立表下漏，庄贾骄贵迟到。穰苴以军法斩庄贾以徇三军，三军之士皆振栗。\n\n**主要人物**：穰苴、齐景公\n\n## 事件经过\n\n穰苴与庄贾约旦日日中会于军门。穰苴先至立表下漏，庄贾骄贵迟到。穰苴以军法斩庄贾以徇三军，三军之士皆振栗。\n\n## 原文\n\n> 穰苴曰：'将受命之日则忘其家，临军约束则忘其亲，援枹鼓之急则忘其身。'……於是遂斩庄贾以徇三军。三军之士皆振栗。\n\n"
+    },
     {
       "rev_id": "20260423-155430-38cf02",
       "timestamp": "2026-04-23T15:54:30Z",

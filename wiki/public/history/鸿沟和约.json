@@ -1,8 +1,18 @@
 {
   "page": "鸿沟和约",
-  "latest_rev_id": "20260423-155627-132db6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161622-43cb05",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161622-43cb05",
+      "timestamp": "2026-04-23T16:16:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155627-132db6",
+      "content_hash": "sha256:43cb05daab675c3a940c2e42781124868c0d108525612d96d53c36081433f18e",
+      "size": 1073,
+      "content": "paragraph_refs:\n  008-058: \"[51.4]-[51.5]\"\nevent_type: 政治活动\nlocation: \"鸿沟\"\n---\nid: \"鸿沟和约\"\ntype: event\ntitle: 鸿沟和约\ndescription: 彭越苦楚绝其粮，齐王韩信又进击楚，项羽恐，与汉王约中分天下，割鸿沟以西为汉、以东为楚。项王归还汉王父母妻子，军中皆呼万岁。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-058]\ndate: \"〖%四年〗 （公元前203年）\"\n---\n\n# 鸿沟和约\n\n> 彭越苦楚绝其粮，齐王韩信又进击楚，项羽恐，与汉王约中分天下，割鸿沟以西为汉、以东为楚。项王归还汉王父母妻子，军中皆呼万岁。\n\n**主要人物**：刘邦、项羽\n\n## 事件经过\n\n彭越苦楚绝其粮，齐王韩信又进击楚，项羽恐，与汉王约中分天下，割鸿沟以西为汉、以东为楚。项王归还汉王父母妻子，军中皆呼万岁。\n\n## 原文\n\n> 项羽恐，乃与汉王约，中分天下，割鸿沟而西者为汉，鸿沟而东者为楚。项王归汉王父母妻子，军中皆呼万岁。\n\n"
+    },
     {
       "rev_id": "20260423-155627-132db6",
       "timestamp": "2026-04-23T15:56:27Z",

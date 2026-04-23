@@ -1,8 +1,18 @@
 {
   "page": "黄帝崩逝",
-  "latest_rev_id": "20260423-154821-b09f9e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161626-8550bf",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161626-8550bf",
+      "timestamp": "2026-04-23T16:16:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154821-b09f9e",
+      "content_hash": "sha256:8550bf08cf8515c4a1397cc498f3424a8a2a842044fa828392c747170da06983",
+      "size": 865,
+      "content": "paragraph_refs:\n  001-009: \"[4.2]\"\nevent_type: 继位\nlocation: \"桥山\"\n---\nid: \"黄帝崩逝\"\ntype: event\ntitle: 黄帝崩逝\ndescription: 黄帝崩逝，葬于桥山。其孙昌意之子高阳立，是为帝颛顼。黄帝传位给孙辈而非儿子，开创了传贤传德的先例。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-009]\ndate: \"[约公元前2599年]\"\n---\n\n# 黄帝崩逝\n\n> 黄帝崩逝，葬于桥山。其孙昌意之子高阳立，是为帝颛顼。黄帝传位给孙辈而非儿子，开创了传贤传德的先例。\n\n**主要人物**：高阳、黄帝\n\n## 事件经过\n\n黄帝崩逝，葬于桥山。其孙昌意之子高阳立，是为帝颛顼。黄帝传位给孙辈而非儿子，开创了传贤传德的先例。\n\n## 原文\n\n> 黄帝崩，葬桥山。其孙昌意之子高阳立，是为帝颛顼也。\n\n"
+    },
     {
       "rev_id": "20260423-154821-b09f9e",
       "timestamp": "2026-04-23T15:48:21Z",

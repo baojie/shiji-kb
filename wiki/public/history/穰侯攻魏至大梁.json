@@ -1,8 +1,28 @@
 {
   "page": "穰侯攻魏至大梁",
-  "latest_rev_id": "20260423-154620-f07f4a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163118-193e35",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163118-193e35",
+      "timestamp": "2026-04-23T16:31:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161225-c955f8",
+      "content_hash": "sha256:193e35a7990179bc95dfd686411c9fb32208d7961762f8fdaecabc96c6aac0af",
+      "size": 854,
+      "content": "---\nid: \"穰侯攻魏至大梁\"\ntype: event\ntitle: 穰侯攻魏至大梁\ndescription: 昭襄王三十二年，丞相穰侯攻魏至大梁，击败暴鸢，斩首四万，暴鸢逃走。魏国献三县求和。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-127]\ndate: \"〖%三十二年〗 （公元前275年）\"\n---\n\n::: meta\npn: \"[63.19]\"\nevent_type: 战争\nlocation: \"大梁\"\n:::\n\n# 穰侯攻魏至大梁\n\n> 昭襄王三十二年，丞相穰侯攻魏至大梁，击败暴鸢，斩首四万，暴鸢逃走。魏国献三县求和。\n\n**主要人物**：暴鸢、穰侯\n\n## 事件经过\n\n昭襄王三十二年，丞相穰侯攻魏至大梁，击败暴鸢，斩首四万，暴鸢逃走。魏国献三县求和。\n\n## 原文\n\n> 三十二年，相穰侯攻魏，至大梁，破暴鸢，斩首四万，鸢走，魏入三县请和。\n\n"
+    },
+    {
+      "rev_id": "20260423-161225-c955f8",
+      "timestamp": "2026-04-23T16:12:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154620-f07f4a",
+      "content_hash": "sha256:c955f887fdfed2a9d16b8fe53d3e957c62d3f20d9f0a95ac7ecaba53a9a5032d",
+      "size": 863,
+      "content": "paragraph_refs:\n  005-127: \"[63.19]\"\nevent_type: 战争\nlocation: \"大梁\"\n---\nid: \"穰侯攻魏至大梁\"\ntype: event\ntitle: 穰侯攻魏至大梁\ndescription: 昭襄王三十二年，丞相穰侯攻魏至大梁，击败暴鸢，斩首四万，暴鸢逃走。魏国献三县求和。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-127]\ndate: \"〖%三十二年〗 （公元前275年）\"\n---\n\n# 穰侯攻魏至大梁\n\n> 昭襄王三十二年，丞相穰侯攻魏至大梁，击败暴鸢，斩首四万，暴鸢逃走。魏国献三县求和。\n\n**主要人物**：暴鸢、穰侯\n\n## 事件经过\n\n昭襄王三十二年，丞相穰侯攻魏至大梁，击败暴鸢，斩首四万，暴鸢逃走。魏国献三县求和。\n\n## 原文\n\n> 三十二年，相穰侯攻魏，至大梁，破暴鸢，斩首四万，鸢走，魏入三县请和。\n\n"
+    },
     {
       "rev_id": "20260423-154620-f07f4a",
       "timestamp": "2026-04-23T15:46:20Z",

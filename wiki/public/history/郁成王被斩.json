@@ -1,8 +1,18 @@
 {
   "page": "郁成王被斩",
-  "latest_rev_id": "20260423-155541-af17c0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161413-4162e3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161413-4162e3",
+      "timestamp": "2026-04-23T16:14:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155541-af17c0",
+      "content_hash": "sha256:4162e372143ffffcc145147f2e9f2195bdb7b5bb96391e84244ec9249f770704",
+      "size": 930,
+      "content": "paragraph_refs:\n  123-021: \"[31]\"\nevent_type: 战争\nlocation: \"郁成、康居\"\n---\nid: \"郁成王被斩\"\ntype: event\ntitle: 郁成王被斩\ndescription: 校尉王申生等千余人别至郁成被杀。上官桀追击破郁成，郁成王逃至康居。康居交出郁成王，骑士赵弟最少，拔剑斩郁成王。\ntags: [史记, 事件, 大宛列传]\nsources: [大宛列传]\nevent_ids: [123-021]\ndate: \"（公元前102年）\"\n---\n\n# 郁成王被斩\n\n> 校尉王申生等千余人别至郁成被杀。上官桀追击破郁成，郁成王逃至康居。康居交出郁成王，骑士赵弟最少，拔剑斩郁成王。\n\n**主要人物**：上官桀、赵弟\n\n## 事件经过\n\n校尉王申生等千余人别至郁成被杀。上官桀追击破郁成，郁成王逃至康居。康居交出郁成王，骑士赵弟最少，拔剑斩郁成王。\n\n## 原文\n\n> 上邽骑士赵弟最少，拔剑击之，斩郁成王，赍头。\n\n"
+    },
     {
       "rev_id": "20260423-155541-af17c0",
       "timestamp": "2026-04-23T15:55:41Z",

@@ -1,8 +1,28 @@
 {
   "page": "立摇为东海王",
-  "latest_rev_id": "20260423-155435-70f73b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163133-e13248",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163133-e13248",
+      "timestamp": "2026-04-23T16:31:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161229-fc760a",
+      "content_hash": "sha256:e132484e01f8d48f2d54711fb84cdea3af8de750e7e2da1660bd9ab287f824b6",
+      "size": 868,
+      "content": "---\nid: \"立摇为东海王\"\ntype: event\ntitle: 立摇为东海王\ndescription: 孝惠三年，举高帝时越功，以闽君摇功多、其民便附，乃立摇为东海王，都东瓯，世俗号为东瓯王。\ntags: [史记, 事件, 东越列传]\nsources: [东越列传]\nevent_ids: [114-004]\ndate: \"〖%孝惠三年〗 （公元前192年）\"\n---\n\n::: meta\npn: \"[0]\"\nevent_type: 册封\nlocation: \"东瓯\"\n:::\n\n# 立摇为东海王\n\n> 孝惠三年，举高帝时越功，以闽君摇功多、其民便附，乃立摇为东海王，都东瓯，世俗号为东瓯王。\n\n**主要人物**：摇\n\n## 事件经过\n\n孝惠三年，举高帝时越功，以闽君摇功多、其民便附，乃立摇为东海王，都东瓯，世俗号为东瓯王。\n\n## 原文\n\n> 孝惠三年，举高帝时越功，曰闽君摇功多，其民便附，乃立摇为东海王，都东瓯。\n\n"
+    },
+    {
+      "rev_id": "20260423-161229-fc760a",
+      "timestamp": "2026-04-23T16:12:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155435-70f73b",
+      "content_hash": "sha256:fc760a336b72a58b8751a4711cb300b3a7d25cc99710b0e42cde072128c8c862",
+      "size": 877,
+      "content": "paragraph_refs:\n  114-004: \"[0]\"\nevent_type: 册封\nlocation: \"东瓯\"\n---\nid: \"立摇为东海王\"\ntype: event\ntitle: 立摇为东海王\ndescription: 孝惠三年，举高帝时越功，以闽君摇功多、其民便附，乃立摇为东海王，都东瓯，世俗号为东瓯王。\ntags: [史记, 事件, 东越列传]\nsources: [东越列传]\nevent_ids: [114-004]\ndate: \"〖%孝惠三年〗 （公元前192年）\"\n---\n\n# 立摇为东海王\n\n> 孝惠三年，举高帝时越功，以闽君摇功多、其民便附，乃立摇为东海王，都东瓯，世俗号为东瓯王。\n\n**主要人物**：摇\n\n## 事件经过\n\n孝惠三年，举高帝时越功，以闽君摇功多、其民便附，乃立摇为东海王，都东瓯，世俗号为东瓯王。\n\n## 原文\n\n> 孝惠三年，举高帝时越功，曰闽君摇功多，其民便附，乃立摇为东海王，都东瓯。\n\n"
+    },
     {
       "rev_id": "20260423-155435-70f73b",
       "timestamp": "2026-04-23T15:54:35Z",

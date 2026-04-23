@@ -1,8 +1,18 @@
 {
   "page": "黄帝涿鹿之战",
-  "latest_rev_id": "20260423-154822-88dd2a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161627-830cfd",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161627-830cfd",
+      "timestamp": "2026-04-23T16:16:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154822-88dd2a",
+      "content_hash": "sha256:830cfdf30a5128ba43250b819f3ab5b22c61f7971698c87bafd2c77f9438d984",
+      "size": 653,
+      "content": "paragraph_refs:\n  025-002: \"[3.1]\"\nevent_type: 战争\nlocation: \"涿鹿\"\n---\nid: \"黄帝涿鹿之战\"\ntype: event\ntitle: 黄帝涿鹿之战\ndescription: 黄帝在涿鹿有战事，以此平定火灾。作为历代用兵正当性的典范。\ntags: [史记, 事件, 律书]\nsources: [律书]\nevent_ids: [025-002]\ndate: \"[约公元前2600年]\"\n---\n\n# 黄帝涿鹿之战\n\n> 黄帝在涿鹿有战事，以此平定火灾。作为历代用兵正当性的典范。\n\n**主要人物**：?黄帝?\n\n## 事件经过\n\n黄帝在涿鹿有战事，以此平定火灾。作为历代用兵正当性的典范。\n\n## 原文\n\n> 昔?黄帝?有涿鹿之战，以定火灾。\n\n"
+    },
     {
       "rev_id": "20260423-154822-88dd2a",
       "timestamp": "2026-04-23T15:48:22Z",

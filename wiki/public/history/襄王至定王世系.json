@@ -1,8 +1,28 @@
 {
   "page": "襄王至定王世系",
-  "latest_rev_id": "20260423-155513-c5290b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163330-7d64f4",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163330-7d64f4",
+      "timestamp": "2026-04-23T16:33:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161309-e2d125",
+      "content_hash": "sha256:7d64f4eace7a95fd7918c83eb940b11255926c56581836f59103a4495cb5b342",
+      "size": 891,
+      "content": "---\nid: \"襄王至定王世系\"\ntype: event\ntitle: 襄王至定王世系\ndescription: 襄王三十二年崩，子顷王壬臣立。顷王六年崩，子匡王班立。匡王六年崩，弟瑜立，是为定王。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-054]\ndate: \"（公元前619年-前606年）\"\n---\n\n::: meta\npn: \"[50]\"\nevent_type: 继位\n:::\n\n# 襄王至定王世系\n\n> 襄王三十二年崩，子顷王壬臣立。顷王六年崩，子匡王班立。匡王六年崩，弟瑜立，是为定王。\n\n**主要人物**：匡王班、定王、襄王、顷王壬臣\n\n## 事件经过\n\n襄王三十二年崩，子顷王壬臣立。顷王六年崩，子匡王班立。匡王六年崩，弟瑜立，是为定王。\n\n## 原文\n\n> 三十二年，襄王崩，子顷王壬臣立。顷王六年，崩，子匡王班立。匡王六年，崩，弟瑜立，是为定王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161309-e2d125",
+      "timestamp": "2026-04-23T16:13:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155513-c5290b",
+      "content_hash": "sha256:e2d125d923cb2e81ccbcba11258edba3d3db8f41ac9de530542c36c49563860a",
+      "size": 900,
+      "content": "paragraph_refs:\n  004-054: \"[50]\"\nevent_type: 继位\n---\nid: \"襄王至定王世系\"\ntype: event\ntitle: 襄王至定王世系\ndescription: 襄王三十二年崩，子顷王壬臣立。顷王六年崩，子匡王班立。匡王六年崩，弟瑜立，是为定王。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-054]\ndate: \"（公元前619年-前606年）\"\n---\n\n# 襄王至定王世系\n\n> 襄王三十二年崩，子顷王壬臣立。顷王六年崩，子匡王班立。匡王六年崩，弟瑜立，是为定王。\n\n**主要人物**：匡王班、定王、襄王、顷王壬臣\n\n## 事件经过\n\n襄王三十二年崩，子顷王壬臣立。顷王六年崩，子匡王班立。匡王六年崩，弟瑜立，是为定王。\n\n## 原文\n\n> 三十二年，襄王崩，子顷王壬臣立。顷王六年，崩，子匡王班立。匡王六年，崩，弟瑜立，是为定王。\n\n"
+    },
     {
       "rev_id": "20260423-155513-c5290b",
       "timestamp": "2026-04-23T15:55:13Z",

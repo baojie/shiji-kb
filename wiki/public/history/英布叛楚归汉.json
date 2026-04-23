@@ -1,8 +1,28 @@
 {
   "page": "英布叛楚归汉",
-  "latest_rev_id": "20260423-154641-0e5df8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163236-5833f1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163236-5833f1",
+      "timestamp": "2026-04-23T16:32:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161243-f4e1ca",
+      "content_hash": "sha256:5833f12118d51ed8f9d3bea2cf0fad8612e0d2fa598d375ed26019b20feee60e",
+      "size": 1060,
+      "content": "---\nid: \"英布叛楚归汉\"\ntype: event\ntitle: 英布叛楚归汉\ndescription: 随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\ntags: [史记, 事件, 黥布列传]\nsources: [黥布列传]\nevent_ids: [091-012]\ndate: \"（公元前204年）\"\n---\n\n::: meta\npn: \"[8]\"\nevent_type: 战争\nlocation: \"淮南、下邑\"\n:::\n\n# 英布叛楚归汉\n\n> 随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\n\n**主要人物**：英布、随何、项声、龙且\n\n## 事件经过\n\n随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\n\n## 原文\n\n> 随何直入，坐楚使者上坐，曰：\"九江王已归汉，楚何以得发兵？\"...布欲引兵走汉，恐楚王杀之，故间行与何俱归汉。\n\n"
+    },
+    {
+      "rev_id": "20260423-161243-f4e1ca",
+      "timestamp": "2026-04-23T16:12:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154641-0e5df8",
+      "content_hash": "sha256:f4e1ca77a7a808a4cdeb432be5883aa4d9b90bbb8b48d26e667e3df0d6f43aa8",
+      "size": 1069,
+      "content": "paragraph_refs:\n  091-012: \"[8]\"\nevent_type: 战争\nlocation: \"淮南、下邑\"\n---\nid: \"英布叛楚归汉\"\ntype: event\ntitle: 英布叛楚归汉\ndescription: 随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\ntags: [史记, 事件, 黥布列传]\nsources: [黥布列传]\nevent_ids: [091-012]\ndate: \"（公元前204年）\"\n---\n\n# 英布叛楚归汉\n\n> 随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\n\n**主要人物**：英布、随何、项声、龙且\n\n## 事件经过\n\n随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\n\n## 原文\n\n> 随何直入，坐楚使者上坐，曰：\"九江王已归汉，楚何以得发兵？\"...布欲引兵走汉，恐楚王杀之，故间行与何俱归汉。\n\n"
+    },
     {
       "rev_id": "20260423-154641-0e5df8",
       "timestamp": "2026-04-23T15:46:41Z",

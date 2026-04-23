@@ -1,8 +1,28 @@
 {
   "page": "窦太后崩征文学",
-  "latest_rev_id": "20260423-154621-fab50d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163122-2f54aa",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163122-2f54aa",
+      "timestamp": "2026-04-23T16:31:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161226-a7d5db",
+      "content_hash": "sha256:2f54aab90619a4460c3995b5f479ad160e299f759ba07ba2d0ccd68eb889c3cf",
+      "size": 719,
+      "content": "---\nid: \"窦太后崩征文学\"\ntype: event\ntitle: 窦太后崩征文学\ndescription: 后六年窦太后崩，其明年上征文学之士公孙弘等，重新推行儒术。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-005]\ndate: \"〖%建元六年〗 （公元前135年）\"\n---\n\n::: meta\npn: \"[4.1]-[4.2]\"\nevent_type: 政治活动\n:::\n\n# 窦太后崩征文学\n\n> 后六年窦太后崩，其明年上征文学之士公孙弘等，重新推行儒术。\n\n**主要人物**：公孙弘、窦太后\n\n## 事件经过\n\n后六年窦太后崩，其明年上征文学之士公孙弘等，重新推行儒术。\n\n## 原文\n\n> 後六年，窦太后崩。其明年，上徵文学之士公孙弘等。\n\n"
+    },
+    {
+      "rev_id": "20260423-161226-a7d5db",
+      "timestamp": "2026-04-23T16:12:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154621-fab50d",
+      "content_hash": "sha256:a7d5db28dab3c47768f0a6e065698fe248ff0af8b3188dcf83c74ee557625565",
+      "size": 728,
+      "content": "paragraph_refs:\n  012-005: \"[4.1]-[4.2]\"\nevent_type: 政治活动\n---\nid: \"窦太后崩征文学\"\ntype: event\ntitle: 窦太后崩征文学\ndescription: 后六年窦太后崩，其明年上征文学之士公孙弘等，重新推行儒术。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-005]\ndate: \"〖%建元六年〗 （公元前135年）\"\n---\n\n# 窦太后崩征文学\n\n> 后六年窦太后崩，其明年上征文学之士公孙弘等，重新推行儒术。\n\n**主要人物**：公孙弘、窦太后\n\n## 事件经过\n\n后六年窦太后崩，其明年上征文学之士公孙弘等，重新推行儒术。\n\n## 原文\n\n> 後六年，窦太后崩。其明年，上徵文学之士公孙弘等。\n\n"
+    },
     {
       "rev_id": "20260423-154621-fab50d",
       "timestamp": "2026-04-23T15:46:21Z",

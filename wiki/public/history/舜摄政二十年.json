@@ -1,8 +1,28 @@
 {
   "page": "舜摄政二十年",
-  "latest_rev_id": "20260423-155457-db245e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163220-6cb8c4",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163220-6cb8c4",
+      "timestamp": "2026-04-23T16:32:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161239-045a59",
+      "content_hash": "sha256:6cb8c4d3b24d7adee66416447ed01da79574de0ad749fa83239c43fccf9f9a03",
+      "size": 769,
+      "content": "---\nid: \"舜摄政二十年\"\ntype: event\ntitle: 舜摄政二十年\ndescription: 尧年老，让舜摄行天子政务，巡狩四方。舜得以举用政事二十年，然后尧让其摄政。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-045]\ndate: \"〖%二十年〗 [约公元前2267年]\"\n---\n\n::: meta\npn: \"[23]\"\nevent_type: 继位\n:::\n\n# 舜摄政二十年\n\n> 尧年老，让舜摄行天子政务，巡狩四方。舜得以举用政事二十年，然后尧让其摄政。\n\n**主要人物**：尧、舜\n\n## 事件经过\n\n尧年老，让舜摄行天子政务，巡狩四方。舜得以举用政事二十年，然后尧让其摄政。\n\n## 原文\n\n> 尧老，使舜摄行天子政，巡狩。舜得举用事二十年，而尧使摄政。\n\n"
+    },
+    {
+      "rev_id": "20260423-161239-045a59",
+      "timestamp": "2026-04-23T16:12:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155457-db245e",
+      "content_hash": "sha256:045a59dba93beed4a5464485c40e1b712caf1aba354a13c827b2768dc2063ade",
+      "size": 778,
+      "content": "paragraph_refs:\n  001-045: \"[23]\"\nevent_type: 继位\n---\nid: \"舜摄政二十年\"\ntype: event\ntitle: 舜摄政二十年\ndescription: 尧年老，让舜摄行天子政务，巡狩四方。舜得以举用政事二十年，然后尧让其摄政。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-045]\ndate: \"〖%二十年〗 [约公元前2267年]\"\n---\n\n# 舜摄政二十年\n\n> 尧年老，让舜摄行天子政务，巡狩四方。舜得以举用政事二十年，然后尧让其摄政。\n\n**主要人物**：尧、舜\n\n## 事件经过\n\n尧年老，让舜摄行天子政务，巡狩四方。舜得以举用政事二十年，然后尧让其摄政。\n\n## 原文\n\n> 尧老，使舜摄行天子政，巡狩。舜得举用事二十年，而尧使摄政。\n\n"
+    },
     {
       "rev_id": "20260423-155457-db245e",
       "timestamp": "2026-04-23T15:54:57Z",

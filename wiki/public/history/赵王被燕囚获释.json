@@ -1,8 +1,18 @@
 {
   "page": "赵王被燕囚获释",
-  "latest_rev_id": "20260423-155531-f2a128",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161349-09dcfa",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161349-09dcfa",
+      "timestamp": "2026-04-23T16:13:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155531-f2a128",
+      "content_hash": "sha256:09dcfab96ea9e2a68ecd813f3f907f44e383393cb5ca5aeb174fbbb3d84f89f3",
+      "size": 970,
+      "content": "paragraph_refs:\n  089-010: \"[12]\"\nevent_type: 政治活动\n---\nid: \"赵王被燕囚获释\"\ntype: event\ntitle: 赵王被燕囚获释\ndescription: 赵王间出为燕军所囚，燕以分赵地半为条件。使者往十余辈皆被杀。一厮养卒以\"两人实欲分赵自王\"之辞说服燕将，燕乃归赵王。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-010]\ndate: \"[公元前209年]\"\n---\n\n# 赵王被燕囚获释\n\n> 赵王间出为燕军所囚，燕以分赵地半为条件。使者往十余辈皆被杀。一厮养卒以\"两人实欲分赵自王\"之辞说服燕将，燕乃归赵王。\n\n**主要人物**：张耳、武臣、陈馀\n\n## 事件经过\n\n赵王间出为燕军所囚，燕以分赵地半为条件。使者往十余辈皆被杀。一厮养卒以\"两人实欲分赵自王\"之辞说服燕将，燕乃归赵王。\n\n## 原文\n\n> 赵王间出，为燕军所得。燕将囚之，欲与分赵地半，乃归王。\n\n"
+    },
     {
       "rev_id": "20260423-155531-f2a128",
       "timestamp": "2026-04-23T15:55:31Z",

@@ -1,8 +1,28 @@
 {
   "page": "立后土祠汾阴",
-  "latest_rev_id": "20260423-155433-fddafe",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163130-843c75",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163130-843c75",
+      "timestamp": "2026-04-23T16:31:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161228-c9896a",
+      "content_hash": "sha256:843c75efdda04e600c49a686ce962d90c245aa6561fbbe299155d763acc06eda",
+      "size": 1037,
+      "content": "---\nid: \"立后土祠汾阴\"\ntype: event\ntitle: 立后土祠汾阴\ndescription: 天子郊雍后议后土无祀礼不答。与太史公、祠官宽舒等议，于泽中圜丘为五坛祠后土。天子遂东始立后土祠汾阴脽上，亲望拜如上帝礼。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-023]\ndate: \"〖%元鼎四年〗 （公元前113年）\"\n---\n\n::: meta\npn: \"[17.1]-[17.5]\"\nevent_type: 文化活动\nlocation: \"汾阴、脽\"\n:::\n\n# 立后土祠汾阴\n\n> 天子郊雍后议后土无祀礼不答。与太史公、祠官宽舒等议，于泽中圜丘为五坛祠后土。天子遂东始立后土祠汾阴脽上，亲望拜如上帝礼。\n\n**主要人物**：天子、宽舒\n\n## 事件经过\n\n天子郊雍后议后土无祀礼不答。与太史公、祠官宽舒等议，于泽中圜丘为五坛祠后土。天子遂东始立后土祠汾阴脽上，亲望拜如上帝礼。\n\n## 原文\n\n> 於是天子遂东，始立后土祠汾阴脽上，如宽舒等议。上亲望拜，如上帝礼。\n\n"
+    },
+    {
+      "rev_id": "20260423-161228-c9896a",
+      "timestamp": "2026-04-23T16:12:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155433-fddafe",
+      "content_hash": "sha256:c9896af0ecc23c1362b938291ba0f91cd53b2ba283b2326a5a1913ae5272d862",
+      "size": 1046,
+      "content": "paragraph_refs:\n  012-023: \"[17.1]-[17.5]\"\nevent_type: 文化活动\nlocation: \"汾阴、脽\"\n---\nid: \"立后土祠汾阴\"\ntype: event\ntitle: 立后土祠汾阴\ndescription: 天子郊雍后议后土无祀礼不答。与太史公、祠官宽舒等议，于泽中圜丘为五坛祠后土。天子遂东始立后土祠汾阴脽上，亲望拜如上帝礼。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-023]\ndate: \"〖%元鼎四年〗 （公元前113年）\"\n---\n\n# 立后土祠汾阴\n\n> 天子郊雍后议后土无祀礼不答。与太史公、祠官宽舒等议，于泽中圜丘为五坛祠后土。天子遂东始立后土祠汾阴脽上，亲望拜如上帝礼。\n\n**主要人物**：天子、宽舒\n\n## 事件经过\n\n天子郊雍后议后土无祀礼不答。与太史公、祠官宽舒等议，于泽中圜丘为五坛祠后土。天子遂东始立后土祠汾阴脽上，亲望拜如上帝礼。\n\n## 原文\n\n> 於是天子遂东，始立后土祠汾阴脽上，如宽舒等议。上亲望拜，如上帝礼。\n\n"
+    },
     {
       "rev_id": "20260423-155433-fddafe",
       "timestamp": "2026-04-23T15:54:33Z",

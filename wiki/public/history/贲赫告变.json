@@ -1,8 +1,18 @@
 {
   "page": "贲赫告变",
-  "latest_rev_id": "20260423-155526-a7881e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161334-3961c1",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161334-3961c1",
+      "timestamp": "2026-04-23T16:13:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155526-a7881e",
+      "content_hash": "sha256:3961c1028e53dabe81cd3da0e75faf3aca9a26e8de6dc2eaa291b0bf87638213",
+      "size": 1110,
+      "content": "paragraph_refs:\n  091-019: \"[14]\"\nevent_type: 政治活动\nlocation: \"长安、淮南\"\n---\nid: \"贲赫告变\"\ntype: event\ntitle: 贲赫告变\ndescription: 英布宠姬与中大夫贲赫有交往，英布疑其私通，欲捕贲赫。贲赫逃至长安上变告英布谋反。萧何建议验证。英布见贲赫逃走已泄密，遂族灭赫家、发兵叛汉。\ntags: [史记, 事件, 黥布列传]\nsources: [黥布列传]\nevent_ids: [091-019]\ndate: \"（公元前196年）\"\n---\n\n# 贲赫告变\n\n> 英布宠姬与中大夫贲赫有交往，英布疑其私通，欲捕贲赫。贲赫逃至长安上变告英布谋反。萧何建议验证。英布见贲赫逃走已泄密，遂族灭赫家、发兵叛汉。\n\n**主要人物**：英布、萧何、贲赫\n\n## 事件经过\n\n英布宠姬与中大夫贲赫有交往，英布疑其私通，欲捕贲赫。贲赫逃至长安上变告英布谋反。萧何建议验证。英布见贲赫逃走已泄密，遂族灭赫家、发兵叛汉。\n\n## 原文\n\n> 赫言变事，乘传诣长安。布使人追，不及。赫至，上变，言布谋反有端，可先未发诛也。\n\n"
+    },
     {
       "rev_id": "20260423-155526-a7881e",
       "timestamp": "2026-04-23T15:55:26Z",

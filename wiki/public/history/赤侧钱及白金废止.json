@@ -1,8 +1,18 @@
 {
   "page": "赤侧钱及白金废止",
-  "latest_rev_id": "20260423-155526-156d0f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161338-2a3786",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161338-2a3786",
+      "timestamp": "2026-04-23T16:13:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155526-156d0f",
+      "content_hash": "sha256:2a3786f93e80e0d5c015be07fbbbb23793ea782393be6d665ca9ac7c8e916ab5",
+      "size": 1011,
+      "content": "paragraph_refs:\n  030-031: \"[32]\"\nevent_type: 改革\nlocation: \"京师\"\n---\nid: \"赤侧钱及白金废止\"\ntype: event\ntitle: 赤侧钱及白金废止\ndescription: 郡国多私铸钱，公卿请令京师铸赤侧一当五。白金稍贱终废不行。赤侧钱亦贱废。于是悉禁郡国无铸钱，专令上林三官铸。是岁张汤死。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-031]\ndate: \"（公元前115年）\"\n---\n\n# 赤侧钱及白金废止\n\n> 郡国多私铸钱，公卿请令京师铸赤侧一当五。白金稍贱终废不行。赤侧钱亦贱废。于是悉禁郡国无铸钱，专令上林三官铸。是岁张汤死。\n\n**主要人物**：张汤\n\n## 事件经过\n\n郡国多私铸钱，公卿请令京师铸赤侧一当五。白金稍贱终废不行。赤侧钱亦贱废。于是悉禁郡国无铸钱，专令上林三官铸。是岁张汤死。\n\n## 原文\n\n> 於是悉禁郡国无铸钱，专令上林三官铸。钱既多，而令天下非三官钱不得行。\n\n"
+    },
     {
       "rev_id": "20260423-155526-156d0f",
       "timestamp": "2026-04-23T15:55:26Z",

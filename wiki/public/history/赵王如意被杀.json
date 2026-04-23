@@ -1,8 +1,18 @@
 {
   "page": "赵王如意被杀",
-  "latest_rev_id": "20260423-155530-1b9d13",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161348-9772bc",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161348-9772bc",
+      "timestamp": "2026-04-23T16:13:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155530-1b9d13",
+      "content_hash": "sha256:9772bc78fe382118719756447c4785f5246e9b057da46cef3caeb6e11c836431",
+      "size": 1117,
+      "content": "paragraph_refs:\n  096-012: \"[3.3]\"\nevent_type: 政治整顿\nlocation: \"长安\"\n---\nid: \"赵王如意被杀\"\ntype: event\ntitle: 赵王如意被杀\ndescription: 周昌被徵至长安后，吕后另遣使召赵王。赵王果来，至长安月余饮药而死。周昌因此谢病不朝，三年后死。后五年吕后又因赵尧参与高祖定赵王之计而治其罪。\ntags: [史记, 事件, 张丞相列传]\nsources: [张丞相列传]\nevent_ids: [096-012]\ndate: \"（公元前194年）\"\n---\n\n# 赵王如意被杀\n\n> 周昌被徵至长安后，吕后另遣使召赵王。赵王果来，至长安月余饮药而死。周昌因此谢病不朝，三年后死。后五年吕后又因赵尧参与高祖定赵王之计而治其罪。\n\n**主要人物**：吕太后、周昌、赵王如意\n\n## 事件经过\n\n周昌被徵至长安后，吕后另遣使召赵王。赵王果来，至长安月余饮药而死。周昌因此谢病不朝，三年后死。后五年吕后又因赵尧参与高祖定赵王之计而治其罪。\n\n## 原文\n\n> 赵王果来。至长安月馀，饮药而死。周昌因谢病不朝见，三岁而死。\n\n"
+    },
     {
       "rev_id": "20260423-155530-1b9d13",
       "timestamp": "2026-04-23T15:55:30Z",

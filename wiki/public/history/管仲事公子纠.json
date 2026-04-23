@@ -1,8 +1,28 @@
 {
   "page": "管仲事公子纠",
-  "latest_rev_id": "20260423-154627-7a54b8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163143-cd96ca",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163143-cd96ca",
+      "timestamp": "2026-04-23T16:31:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161231-9b2aba",
+      "content_hash": "sha256:cd96ca5777b1627d733823f13d56a4b07323bb906010be500b098d0cf699dbbc",
+      "size": 764,
+      "content": "---\nid: \"管仲事公子纠\"\ntype: event\ntitle: 管仲事公子纠\ndescription: 鲍叔事齐公子小白，管仲事公子纠。二人分事不同主，为日后管仲被荐埋下伏笔。\ntags: [史记, 事件, 管晏列传]\nsources: [管晏列传]\nevent_ids: [062-002]\ndate: \"（公元前686年）\"\n---\n\n::: meta\npn: \"[1]\"\nevent_type: 政治活动\nlocation: \"齐\"\n:::\n\n# 管仲事公子纠\n\n> 鲍叔事齐公子小白，管仲事公子纠。二人分事不同主，为日后管仲被荐埋下伏笔。\n\n**主要人物**：公子小白、公子纠、管仲、鲍叔\n\n## 事件经过\n\n鲍叔事齐公子小白，管仲事公子纠。二人分事不同主，为日后管仲被荐埋下伏笔。\n\n## 原文\n\n> 已而鲍叔事齐公子小白，管仲事公子纠。\n\n"
+    },
+    {
+      "rev_id": "20260423-161231-9b2aba",
+      "timestamp": "2026-04-23T16:12:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154627-7a54b8",
+      "content_hash": "sha256:9b2aba4fddfa97356c359c82c9b56e301c8b13adea139b0c26ac0fadd7de4c47",
+      "size": 773,
+      "content": "paragraph_refs:\n  062-002: \"[1]\"\nevent_type: 政治活动\nlocation: \"齐\"\n---\nid: \"管仲事公子纠\"\ntype: event\ntitle: 管仲事公子纠\ndescription: 鲍叔事齐公子小白，管仲事公子纠。二人分事不同主，为日后管仲被荐埋下伏笔。\ntags: [史记, 事件, 管晏列传]\nsources: [管晏列传]\nevent_ids: [062-002]\ndate: \"（公元前686年）\"\n---\n\n# 管仲事公子纠\n\n> 鲍叔事齐公子小白，管仲事公子纠。二人分事不同主，为日后管仲被荐埋下伏笔。\n\n**主要人物**：公子小白、公子纠、管仲、鲍叔\n\n## 事件经过\n\n鲍叔事齐公子小白，管仲事公子纠。二人分事不同主，为日后管仲被荐埋下伏笔。\n\n## 原文\n\n> 已而鲍叔事齐公子小白，管仲事公子纠。\n\n"
+    },
     {
       "rev_id": "20260423-154627-7a54b8",
       "timestamp": "2026-04-23T15:46:27Z",

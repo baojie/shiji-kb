@@ -1,8 +1,28 @@
 {
   "page": "虏代王嘉",
-  "latest_rev_id": "20260423-155508-5b2028",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163311-39a06f",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163311-39a06f",
+      "timestamp": "2026-04-23T16:33:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161256-de06f3",
+      "content_hash": "sha256:39a06fd3267acf5a6abcde444aa8ccffda826b56f6be76bbe535902d93e587b8",
+      "size": 516,
+      "content": "---\nid: \"虏代王嘉\"\ntype: event\ntitle: 虏代王嘉\ndescription: 秦军还攻代地，虏代王嘉。代国灭亡。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-042]\ndate: \"〖%二十五年〗 （公元前222年）\"\n---\n\n::: meta\npn: \"[32.2]\"\nevent_type: 战争\n:::\n\n# 虏代王嘉\n\n> 秦军还攻代地，虏代王嘉。代国灭亡。\n\n**主要人物**：嘉\n\n## 事件经过\n\n秦军还攻代地，虏代王嘉。代国灭亡。\n\n## 原文\n\n> 还攻代，虏代王嘉。\n\n"
+    },
+    {
+      "rev_id": "20260423-161256-de06f3",
+      "timestamp": "2026-04-23T16:12:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155508-5b2028",
+      "content_hash": "sha256:de06f301193d00dd15779588f91c1e2d487ec71953637903b088437fa69f8eeb",
+      "size": 525,
+      "content": "paragraph_refs:\n  006-042: \"[32.2]\"\nevent_type: 战争\n---\nid: \"虏代王嘉\"\ntype: event\ntitle: 虏代王嘉\ndescription: 秦军还攻代地，虏代王嘉。代国灭亡。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-042]\ndate: \"〖%二十五年〗 （公元前222年）\"\n---\n\n# 虏代王嘉\n\n> 秦军还攻代地，虏代王嘉。代国灭亡。\n\n**主要人物**：嘉\n\n## 事件经过\n\n秦军还攻代地，虏代王嘉。代国灭亡。\n\n## 原文\n\n> 还攻代，虏代王嘉。\n\n"
+    },
     {
       "rev_id": "20260423-155508-5b2028",
       "timestamp": "2026-04-23T15:55:08Z",

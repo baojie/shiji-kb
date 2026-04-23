@@ -1,8 +1,28 @@
 {
   "page": "秦救楚败吴兵",
-  "latest_rev_id": "20260423-154614-bd6004",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163055-b12ce1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163055-b12ce1",
+      "timestamp": "2026-04-23T16:30:55Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161220-59cf74",
+      "content_hash": "sha256:b12ce1aa5162c3e64b2632f94b7bfcd40a46544a0b18aed5a669cd80a0e33aab",
+      "size": 917,
+      "content": "---\nid: \"秦救楚败吴兵\"\ntype: event\ntitle: 秦救楚败吴兵\ndescription: 秦遣车五百乘救楚击吴，六月败吴兵于稷。阖庐弟夫概亡归自立为王，阖庐释楚归击夫概。楚昭王乘吴内乱复入郢。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-014]\ndate: \"（公元前505年）\"\n---\n\n::: meta\npn: \"[13]\"\nevent_type: 战争\nlocation: \"楚\"\n:::\n\n# 秦救楚败吴兵\n\n> 秦遣车五百乘救楚击吴，六月败吴兵于稷。阖庐弟夫概亡归自立为王，阖庐释楚归击夫概。楚昭王乘吴内乱复入郢。\n\n**主要人物**：昭王\n\n## 事件经过\n\n秦遣车五百乘救楚击吴，六月败吴兵于稷。阖庐弟夫概亡归自立为王，阖庐释楚归击夫概。楚昭王乘吴内乱复入郢。\n\n## 原文\n\n> 秦乃遣车五百乘救楚击吴。六月，败吴兵於稷。\"\"楚昭王见吴有内乱，乃复入郢。\n\n"
+    },
+    {
+      "rev_id": "20260423-161220-59cf74",
+      "timestamp": "2026-04-23T16:12:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154614-bd6004",
+      "content_hash": "sha256:59cf7403e4a1da94521e8a2cdc508f34e38adfaff1a5b27b2576b779a4ad2654",
+      "size": 926,
+      "content": "paragraph_refs:\n  066-014: \"[13]\"\nevent_type: 战争\nlocation: \"楚\"\n---\nid: \"秦救楚败吴兵\"\ntype: event\ntitle: 秦救楚败吴兵\ndescription: 秦遣车五百乘救楚击吴，六月败吴兵于稷。阖庐弟夫概亡归自立为王，阖庐释楚归击夫概。楚昭王乘吴内乱复入郢。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-014]\ndate: \"（公元前505年）\"\n---\n\n# 秦救楚败吴兵\n\n> 秦遣车五百乘救楚击吴，六月败吴兵于稷。阖庐弟夫概亡归自立为王，阖庐释楚归击夫概。楚昭王乘吴内乱复入郢。\n\n**主要人物**：昭王\n\n## 事件经过\n\n秦遣车五百乘救楚击吴，六月败吴兵于稷。阖庐弟夫概亡归自立为王，阖庐释楚归击夫概。楚昭王乘吴内乱复入郢。\n\n## 原文\n\n> 秦乃遣车五百乘救楚击吴。六月，败吴兵於稷。\"\"楚昭王见吴有内乱，乃复入郢。\n\n"
+    },
     {
       "rev_id": "20260423-154614-bd6004",
       "timestamp": "2026-04-23T15:46:14Z",

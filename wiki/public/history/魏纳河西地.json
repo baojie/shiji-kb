@@ -1,8 +1,18 @@
 {
   "page": "魏纳河西地",
-  "latest_rev_id": "20260423-155623-8adeac",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161614-d898ed",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161614-d898ed",
+      "timestamp": "2026-04-23T16:16:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155623-8adeac",
+      "content_hash": "sha256:d898ed2552bac5392173bbac14eacedc87e5435357a436e370710079abe4117a",
+      "size": 679,
+      "content": "paragraph_refs:\n  005-087: \"[58.3]\"\nevent_type: 政治活动\nlocation: \"河西\"\n---\nid: \"魏纳河西地\"\ntype: event\ntitle: 魏纳河西地\ndescription: 惠文君八年，魏国献出河西之地。秦国收复了自献公以来一直争夺的战略要地。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-087]\ndate: \"〖%八年〗 （公元前330年）\"\n---\n\n# 魏纳河西地\n\n> 惠文君八年，魏国献出河西之地。秦国收复了自献公以来一直争夺的战略要地。\n\n## 事件经过\n\n惠文君八年，魏国献出河西之地。秦国收复了自献公以来一直争夺的战略要地。\n\n## 原文\n\n> 八年，魏纳河西地。\n\n"
+    },
     {
       "rev_id": "20260423-155623-8adeac",
       "timestamp": "2026-04-23T15:56:23Z",

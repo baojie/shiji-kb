@@ -1,8 +1,18 @@
 {
   "page": "败宋于泓",
-  "latest_rev_id": "20260423-155523-a729e8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161331-91b177",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161331-91b177",
+      "timestamp": "2026-04-23T16:13:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155523-a729e8",
+      "content_hash": "sha256:91b177c53b43270a2f781de509d21195d546698c85caf06216072233be9d8920",
+      "size": 915,
+      "content": "paragraph_refs:\n  040-009: \"[18.21]\"\nevent_type: 战争\nlocation: \"泓\"\n---\nid: \"败宋于泓\"\ntype: event\ntitle: 败宋于泓\ndescription: 成王三十三年宋襄公欲盟会召楚，楚王怒往袭辱之执宋公。三十四年楚北伐宋败之泓，射伤宋襄公，襄公遂病创死。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-009]\ndate: \"（公元前638年）\"\n---\n\n# 败宋于泓\n\n> 成王三十三年宋襄公欲盟会召楚，楚王怒往袭辱之执宋公。三十四年楚北伐宋败之泓，射伤宋襄公，襄公遂病创死。\n\n**主要人物**：宋襄公、楚成王\n\n## 事件经过\n\n成王三十三年宋襄公欲盟会召楚，楚王怒往袭辱之执宋公。三十四年楚北伐宋败之泓，射伤宋襄公，襄公遂病创死。\n\n## 原文\n\n> 三十四年，郑文公南朝楚。楚成王北伐宋，败之泓，射伤宋襄公，襄公遂病创死。\n\n"
+    },
     {
       "rev_id": "20260423-155523-a729e8",
       "timestamp": "2026-04-23T15:55:23Z",

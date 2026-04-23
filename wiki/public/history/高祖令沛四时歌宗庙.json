@@ -1,8 +1,18 @@
 {
   "page": "高祖令沛四时歌宗庙",
-  "latest_rev_id": "20260423-155614-d00653",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161601-9e3683",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161601-9e3683",
+      "timestamp": "2026-04-23T16:16:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155614-d00653",
+      "content_hash": "sha256:9e3683de292374667e44d935924d9e6ba12827db3d3db0234f36329b9291964f",
+      "size": 682,
+      "content": "paragraph_refs:\n  024-006: \"[4.2]\"\nevent_type: 文化活动\nlocation: \"沛\"\n---\nid: \"高祖令沛四时歌宗庙\"\ntype: event\ntitle: 高祖令沛四时歌宗庙\ndescription: 高祖驾崩后，令沛地得以四时歌舞于宗庙，确立了汉初宗庙乐制。\ntags: [史记, 事件, 乐书]\nsources: [乐书]\nevent_ids: [024-006]\ndate: \"（公元前195年）\"\n---\n\n# 高祖令沛四时歌宗庙\n\n> 高祖驾崩后，令沛地得以四时歌舞于宗庙，确立了汉初宗庙乐制。\n\n**主要人物**：高祖\n\n## 事件经过\n\n高祖驾崩后，令沛地得以四时歌舞于宗庙，确立了汉初宗庙乐制。\n\n## 原文\n\n> 高祖崩，令沛得以四时歌鳷宗庙。\n\n"
+    },
     {
       "rev_id": "20260423-155614-d00653",
       "timestamp": "2026-04-23T15:56:14Z",

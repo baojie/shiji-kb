@@ -1,8 +1,18 @@
 {
   "page": "黥布反叛",
-  "latest_rev_id": "20260423-155629-309fb2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161630-81d57a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161630-81d57a",
+      "timestamp": "2026-04-23T16:16:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155629-309fb2",
+      "content_hash": "sha256:81d57a586c38e7637b950bca2dd64faf0d76cf56e082cf3f7dec7a6d3dd977cf",
+      "size": 901,
+      "content": "paragraph_refs:\n  008-088: \"[79]\"\nevent_type: 战争\n---\nid: \"黥布反叛\"\ntype: event\ntitle: 黥布反叛\ndescription: 秋七月淮南王黥布反，东并荆王刘贾地，北渡淮，楚王刘交走入薛。高祖自往击之，立子长为淮南王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-088]\ndate: \"〖%十一年七月〗 （公元前196年）\"\n---\n\n# 黥布反叛\n\n> 秋七月淮南王黥布反，东并荆王刘贾地，北渡淮，楚王刘交走入薛。高祖自往击之，立子长为淮南王。\n\n**主要人物**：刘贾、刘邦、黥布\n\n## 事件经过\n\n秋七月淮南王黥布反，东并荆王刘贾地，北渡淮，楚王刘交走入薛。高祖自往击之，立子长为淮南王。\n\n## 原文\n\n> 秋七月，淮南王黥布反，东并荆王刘贾地，北渡淮，楚王交走入薛。高祖自往击之。立子长为淮南王。\n\n"
+    },
     {
       "rev_id": "20260423-155629-309fb2",
       "timestamp": "2026-04-23T15:56:29Z",

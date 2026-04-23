@@ -1,8 +1,18 @@
 {
   "page": "诸王来朝",
-  "latest_rev_id": "20260423-155522-6df75b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161328-3e509e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161328-3e509e",
+      "timestamp": "2026-04-23T16:13:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155522-6df75b",
+      "content_hash": "sha256:3e509ec8b28721090321ae804faaea561acdc8e350c8c19eb24d066ef163225f",
+      "size": 1000,
+      "content": "paragraph_refs:\n  008-083: \"[72.1]\"\nevent_type: 政治活动\nlocation: \"长乐宫\"\n---\nid: \"诸王来朝\"\ntype: event\ntitle: 诸王来朝\ndescription: 十年十月，淮南王黥布、梁王彭越、燕王卢绾、荆王刘贾、楚王刘交、齐王刘肥、长沙王吴芮皆来朝长乐宫。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-083]\ndate: \"〖%十年十月〗 （公元前197年）\"\n---\n\n# 诸王来朝\n\n> 十年十月，淮南王黥布、梁王彭越、燕王卢绾、荆王刘贾、楚王刘交、齐王刘肥、长沙王吴芮皆来朝长乐宫。\n\n**主要人物**：刘交、刘肥、刘贾、卢绾、吴芮、彭越、黥布\n\n## 事件经过\n\n十年十月，淮南王黥布、梁王彭越、燕王卢绾、荆王刘贾、楚王刘交、齐王刘肥、长沙王吴芮皆来朝长乐宫。\n\n## 原文\n\n> 十年十月，淮南王黥布、梁王彭越、燕王卢绾、荆王刘贾、楚王刘交、齐王刘肥、长沙王吴芮皆来朝长乐宫。\n\n"
+    },
     {
       "rev_id": "20260423-155522-6df75b",
       "timestamp": "2026-04-23T15:55:22Z",

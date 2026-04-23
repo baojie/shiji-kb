@@ -1,8 +1,28 @@
 {
   "page": "简公卒惠公立",
-  "latest_rev_id": "20260423-155438-fb94ed",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163141-58ad49",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163141-58ad49",
+      "timestamp": "2026-04-23T16:31:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161230-b22eb9",
+      "content_hash": "sha256:58ad4914b212c8d0cd27a55cba799b5b0825916a5c7fa35c044e7388aa10124f",
+      "size": 507,
+      "content": "---\nid: \"简公卒惠公立\"\ntype: event\ntitle: 简公卒惠公立\ndescription: 简公十六年卒，其子惠公继位。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-055]\ndate: \"〖%十六年〗 （公元前399年）\"\n---\n\n::: meta\npn: \"[44.1]\"\nevent_type: 继位\n:::\n\n# 简公卒惠公立\n\n> 简公十六年卒，其子惠公继位。\n\n**主要人物**：惠公、简公\n\n## 事件经过\n\n简公十六年卒，其子惠公继位。\n\n## 原文\n\n> 十六年卒，子惠公立。\n\n"
+    },
+    {
+      "rev_id": "20260423-161230-b22eb9",
+      "timestamp": "2026-04-23T16:12:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155438-fb94ed",
+      "content_hash": "sha256:b22eb9a9ed046a7e589cf06bec11fa3b1d704b9b98078d30ec843735d3f6328e",
+      "size": 516,
+      "content": "paragraph_refs:\n  005-055: \"[44.1]\"\nevent_type: 继位\n---\nid: \"简公卒惠公立\"\ntype: event\ntitle: 简公卒惠公立\ndescription: 简公十六年卒，其子惠公继位。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-055]\ndate: \"〖%十六年〗 （公元前399年）\"\n---\n\n# 简公卒惠公立\n\n> 简公十六年卒，其子惠公继位。\n\n**主要人物**：惠公、简公\n\n## 事件经过\n\n简公十六年卒，其子惠公继位。\n\n## 原文\n\n> 十六年卒，子惠公立。\n\n"
+    },
     {
       "rev_id": "20260423-155438-fb94ed",
       "timestamp": "2026-04-23T15:54:38Z",

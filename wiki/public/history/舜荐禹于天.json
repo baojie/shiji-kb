@@ -1,8 +1,28 @@
 {
   "page": "舜荐禹于天",
-  "latest_rev_id": "20260423-155459-b0dad8",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163223-146065",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163223-146065",
+      "timestamp": "2026-04-23T16:32:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161240-4b13b4",
+      "content_hash": "sha256:1460650d854208c172d2ef2c5a9cee195eebb23acafa0d07e2df63afa7496cfb",
+      "size": 939,
+      "content": "---\nid: \"舜荐禹于天\"\ntype: event\ntitle: 舜荐禹于天\ndescription: 舜的儿子商均也不肖，舜于是预先向天推荐禹。十七年后舜崩逝。三年守丧完毕，禹也让位给舜子，如同舜让尧子一样。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-064]\ndate: \"〖%十七年〗 [约公元前2234年]\"\n---\n\n::: meta\npn: \"[25.1]\"\nevent_type: 继位\n:::\n\n# 舜荐禹于天\n\n> 舜的儿子商均也不肖，舜于是预先向天推荐禹。十七年后舜崩逝。三年守丧完毕，禹也让位给舜子，如同舜让尧子一样。\n\n**主要人物**：禹、舜\n\n## 事件经过\n\n舜的儿子商均也不肖，舜于是预先向天推荐禹。十七年后舜崩逝。三年守丧完毕，禹也让位给舜子，如同舜让尧子一样。\n\n## 原文\n\n> 舜子商均亦不肖，舜乃豫荐禹於天。十七年而崩。三年丧毕，禹亦乃让舜子，如舜让尧子。\n\n"
+    },
+    {
+      "rev_id": "20260423-161240-4b13b4",
+      "timestamp": "2026-04-23T16:12:40Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155459-b0dad8",
+      "content_hash": "sha256:4b13b44eac8067e31db1f944866419c529c5c788a02eb78d3be872c2eca9f3d4",
+      "size": 948,
+      "content": "paragraph_refs:\n  001-064: \"[25.1]\"\nevent_type: 继位\n---\nid: \"舜荐禹于天\"\ntype: event\ntitle: 舜荐禹于天\ndescription: 舜的儿子商均也不肖，舜于是预先向天推荐禹。十七年后舜崩逝。三年守丧完毕，禹也让位给舜子，如同舜让尧子一样。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-064]\ndate: \"〖%十七年〗 [约公元前2234年]\"\n---\n\n# 舜荐禹于天\n\n> 舜的儿子商均也不肖，舜于是预先向天推荐禹。十七年后舜崩逝。三年守丧完毕，禹也让位给舜子，如同舜让尧子一样。\n\n**主要人物**：禹、舜\n\n## 事件经过\n\n舜的儿子商均也不肖，舜于是预先向天推荐禹。十七年后舜崩逝。三年守丧完毕，禹也让位给舜子，如同舜让尧子一样。\n\n## 原文\n\n> 舜子商均亦不肖，舜乃豫荐禹於天。十七年而崩。三年丧毕，禹亦乃让舜子，如舜让尧子。\n\n"
+    },
     {
       "rev_id": "20260423-155459-b0dad8",
       "timestamp": "2026-04-23T15:54:59Z",

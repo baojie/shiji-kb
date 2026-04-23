@@ -1,8 +1,18 @@
 {
   "page": "齐哀王卒文王立",
-  "latest_rev_id": "20260423-154825-9b2ce4",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161634-11da14",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161634-11da14",
+      "timestamp": "2026-04-23T16:16:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154825-9b2ce4",
+      "content_hash": "sha256:11da14cb0a85c7c490f4dc03b04c2fa30b8739d84ce4cebe3b7d2e6ba0907d25",
+      "size": 587,
+      "content": "paragraph_refs:\n  052-013: \"[19]\"\nevent_type: 继位\nlocation: \"齐\"\n---\nid: \"齐哀王卒文王立\"\ntype: event\ntitle: 齐哀王卒文王立\ndescription: 是岁齐哀王卒，太子立，是为文王。\ntags: [史记, 事件, 齐悼惠王世家]\nsources: [齐悼惠王世家]\nevent_ids: [052-013]\ndate: \"〖%元年〗 （公元前179年）\"\n---\n\n# 齐哀王卒文王立\n\n> 是岁齐哀王卒，太子立，是为文王。\n\n**主要人物**：齐文王\n\n## 事件经过\n\n是岁齐哀王卒，太子立，是为文王。\n\n## 原文\n\n> 是岁，齐哀王卒，太子立，是为文王。\n\n"
+    },
     {
       "rev_id": "20260423-154825-9b2ce4",
       "timestamp": "2026-04-23T15:48:25Z",

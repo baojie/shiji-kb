@@ -1,8 +1,18 @@
 {
   "page": "韩信贫困寄食",
-  "latest_rev_id": "20260423-154758-54308a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161525-7d7ae4",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161525-7d7ae4",
+      "timestamp": "2026-04-23T16:15:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154758-54308a",
+      "content_hash": "sha256:7d7ae45d6ca1acbe545a3f063e3cefef5480ac66090e3e1ef557e29d29c4de4f",
+      "size": 1060,
+      "content": "paragraph_refs:\n  092-001: \"[1.1]\"\nevent_type: 家族事件\nlocation: \"淮阴\"\n---\nid: \"韩信贫困寄食\"\ntype: event\ntitle: 韩信贫困寄食\ndescription: 韩信为淮阴人，布衣时贫穷无行，不能为吏，不能经商，常寄食于人。曾在南昌亭长家寄食数月，亭长妻厌之晨起蓐食，韩信怒而绝去。\ntags: [史记, 事件, 淮阴侯列传]\nsources: [淮阴侯列传]\nevent_ids: [092-001]\ndate: \"[公元前209年以前]\"\n---\n\n# 韩信贫困寄食\n\n> 韩信为淮阴人，布衣时贫穷无行，不能为吏，不能经商，常寄食于人。曾在南昌亭长家寄食数月，亭长妻厌之晨起蓐食，韩信怒而绝去。\n\n**主要人物**：韩信\n\n## 事件经过\n\n韩信为淮阴人，布衣时贫穷无行，不能为吏，不能经商，常寄食于人。曾在南昌亭长家寄食数月，亭长妻厌之晨起蓐食，韩信怒而绝去。\n\n## 原文\n\n> 淮阴侯韩信@者，淮阴人也。始为布衣时，贫无行，不得推择为吏，又不能治生商贾，常从人寄食饮，人多厌之者\n\n"
+    },
     {
       "rev_id": "20260423-154758-54308a",
       "timestamp": "2026-04-23T15:47:58Z",

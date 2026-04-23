@@ -1,8 +1,18 @@
 {
   "page": "说燕文侯合从",
-  "latest_rev_id": "20260423-155519-a34e16",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161323-7feae7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161323-7feae7",
+      "timestamp": "2026-04-23T16:13:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155519-a34e16",
+      "content_hash": "sha256:7feae708f67e002be6c64ff1d8b150d19e660221b1458b5a2bda6bc8dbac6573",
+      "size": 890,
+      "content": "paragraph_refs:\n  069-006: \"[7]、[8]\"\nevent_type: 政治活动\nlocation: \"燕\"\n---\nid: \"说燕文侯合从\"\ntype: event\ntitle: 说燕文侯合从\ndescription: 苏秦说燕文侯，论燕之地利与赵为屏蔽之重要，劝与赵从亲天下为一。文侯许以国从，资苏秦车马金帛至赵。\ntags: [史记, 事件, 苏秦列传]\nsources: [苏秦列传]\nevent_ids: [069-006]\ndate: \"[约公元前311年]\"\n---\n\n# 说燕文侯合从\n\n> 苏秦说燕文侯，论燕之地利与赵为屏蔽之重要，劝与赵从亲天下为一。文侯许以国从，资苏秦车马金帛至赵。\n\n**主要人物**：苏秦\n\n## 事件经过\n\n苏秦说燕文侯，论燕之地利与赵为屏蔽之重要，劝与赵从亲天下为一。文侯许以国从，资苏秦车马金帛至赵。\n\n## 原文\n\n> 文侯曰：'子言则可……寡人请以国从。'\"\"於是资苏秦车马金帛以至赵。\n\n"
+    },
     {
       "rev_id": "20260423-155519-a34e16",
       "timestamp": "2026-04-23T15:55:19Z",

@@ -1,8 +1,28 @@
 {
   "page": "穰侯魏厓为相",
-  "latest_rev_id": "20260423-154621-d0c602",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163119-c5fada",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163119-c5fada",
+      "timestamp": "2026-04-23T16:31:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161225-9bb127",
+      "content_hash": "sha256:c5fada58d00e54e40d85a96c819dbce06c9a2cde7ee761b1eaf4913a043d2b3c",
+      "size": 823,
+      "content": "---\nid: \"穰侯魏厓为相\"\ntype: event\ntitle: 穰侯魏厓为相\ndescription: 昭襄王十二年，楼缓免相，穰侯魏厓出任丞相。又予楚国粟五万石。穰侯此后长期主导秦国政局。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-115]\ndate: \"〖%十二年〗 （公元前295年）\"\n---\n\n::: meta\npn: \"[62.11]\"\nevent_type: 政治活动\n:::\n\n# 穰侯魏厓为相\n\n> 昭襄王十二年，楼缓免相，穰侯魏厓出任丞相。又予楚国粟五万石。穰侯此后长期主导秦国政局。\n\n**主要人物**：楼缓、穰侯（魏厓）\n\n## 事件经过\n\n昭襄王十二年，楼缓免相，穰侯魏厓出任丞相。又予楚国粟五万石。穰侯此后长期主导秦国政局。\n\n## 原文\n\n> 十二年，楼缓免，穰侯魏厓为相。予楚粟五万石。\n\n"
+    },
+    {
+      "rev_id": "20260423-161225-9bb127",
+      "timestamp": "2026-04-23T16:12:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154621-d0c602",
+      "content_hash": "sha256:9bb127ec9e5f647c7b96e29c9238e515619b5d8984da7ae71184027e0360f746",
+      "size": 832,
+      "content": "paragraph_refs:\n  005-115: \"[62.11]\"\nevent_type: 政治活动\n---\nid: \"穰侯魏厓为相\"\ntype: event\ntitle: 穰侯魏厓为相\ndescription: 昭襄王十二年，楼缓免相，穰侯魏厓出任丞相。又予楚国粟五万石。穰侯此后长期主导秦国政局。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-115]\ndate: \"〖%十二年〗 （公元前295年）\"\n---\n\n# 穰侯魏厓为相\n\n> 昭襄王十二年，楼缓免相，穰侯魏厓出任丞相。又予楚国粟五万石。穰侯此后长期主导秦国政局。\n\n**主要人物**：楼缓、穰侯（魏厓）\n\n## 事件经过\n\n昭襄王十二年，楼缓免相，穰侯魏厓出任丞相。又予楚国粟五万石。穰侯此后长期主导秦国政局。\n\n## 原文\n\n> 十二年，楼缓免，穰侯魏厓为相。予楚粟五万石。\n\n"
+    },
     {
       "rev_id": "20260423-154621-d0c602",
       "timestamp": "2026-04-23T15:46:21Z",

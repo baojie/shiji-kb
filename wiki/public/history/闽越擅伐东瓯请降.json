@@ -1,8 +1,18 @@
 {
   "page": "闽越擅伐东瓯请降",
-  "latest_rev_id": "20260423-155551-e06883",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161440-d5b004",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161440-d5b004",
+      "timestamp": "2026-04-23T16:14:40Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155551-e06883",
+      "content_hash": "sha256:d5b004c21edd3a83cb1a906766e376a8dcc36c57eb6127778870d29fc0b69097",
+      "size": 873,
+      "content": "paragraph_refs:\n  020-002: \"[1.1]-[1.2]\"\nevent_type: 战争\nlocation: \"东瓯\"\n---\nid: \"闽越擅伐东瓯请降\"\ntype: event\ntitle: 闽越擅伐东瓯请降\ndescription: 闽越擅自征伐，东瓯请降。二夷交侵，当盛汉之隆。此后汉朝出师北讨强胡、南诛劲越，将卒以次封侯。\ntags: [史记, 事件, 建元以来侯者年表]\nsources: [建元以来侯者年表]\nevent_ids: [020-002]\ndate: \"〖%建元三年〗 （公元前138年）\"\n---\n\n# 闽越擅伐东瓯请降\n\n> 闽越擅自征伐，东瓯请降。二夷交侵，当盛汉之隆。此后汉朝出师北讨强胡、南诛劲越，将卒以次封侯。\n\n## 事件经过\n\n闽越擅自征伐，东瓯请降。二夷交侵，当盛汉之隆。此后汉朝出师北讨强胡、南诛劲越，将卒以次封侯。\n\n## 原文\n\n> 闽越擅伐，东瓯请降。二夷交侵，当盛汉之隆\n\n"
+    },
     {
       "rev_id": "20260423-155551-e06883",
       "timestamp": "2026-04-23T15:55:51Z",

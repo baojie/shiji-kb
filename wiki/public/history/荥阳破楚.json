@@ -1,8 +1,28 @@
 {
   "page": "荥阳破楚",
-  "latest_rev_id": "20260423-154648-5780f6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163249-df8d02",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163249-df8d02",
+      "timestamp": "2026-04-23T16:32:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161246-4debf5",
+      "content_hash": "sha256:df8d023feffb47bc5af85c0e6333d4c3cc38a37fc0775e04264189207d30c092",
+      "size": 800,
+      "content": "---\nid: \"荥阳破楚\"\ntype: event\ntitle: 荥阳破楚\ndescription: 九江王布与龙且战不胜归汉，汉王收士卒与关中卒益出，兵大振荥阳，破楚于京索之间。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-043]\ndate: \"（公元前205年）\"\n---\n\n::: meta\npn: \"[38.2]\"\nevent_type: 战争\nlocation: \"荥阳、京、索\"\n:::\n\n# 荥阳破楚\n\n> 九江王布与龙且战不胜归汉，汉王收士卒与关中卒益出，兵大振荥阳，破楚于京索之间。\n\n**主要人物**：刘邦、黥布\n\n## 事件经过\n\n九江王布与龙且战不胜归汉，汉王收士卒与关中卒益出，兵大振荥阳，破楚于京索之间。\n\n## 原文\n\n> 汉王稍收士卒，与诸将及关中卒益出，是以兵大振荥阳，破楚京、索间。\n\n"
+    },
+    {
+      "rev_id": "20260423-161246-4debf5",
+      "timestamp": "2026-04-23T16:12:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154648-5780f6",
+      "content_hash": "sha256:4debf5b11fe7d44733ae9ad7e3c74ea86c8e5736676f821af8f6fa55219b8967",
+      "size": 809,
+      "content": "paragraph_refs:\n  008-043: \"[38.2]\"\nevent_type: 战争\nlocation: \"荥阳、京、索\"\n---\nid: \"荥阳破楚\"\ntype: event\ntitle: 荥阳破楚\ndescription: 九江王布与龙且战不胜归汉，汉王收士卒与关中卒益出，兵大振荥阳，破楚于京索之间。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-043]\ndate: \"（公元前205年）\"\n---\n\n# 荥阳破楚\n\n> 九江王布与龙且战不胜归汉，汉王收士卒与关中卒益出，兵大振荥阳，破楚于京索之间。\n\n**主要人物**：刘邦、黥布\n\n## 事件经过\n\n九江王布与龙且战不胜归汉，汉王收士卒与关中卒益出，兵大振荥阳，破楚于京索之间。\n\n## 原文\n\n> 汉王稍收士卒，与诸将及关中卒益出，是以兵大振荥阳，破楚京、索间。\n\n"
+    },
     {
       "rev_id": "20260423-154648-5780f6",
       "timestamp": "2026-04-23T15:46:48Z",

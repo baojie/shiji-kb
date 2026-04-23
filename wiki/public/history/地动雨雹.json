@@ -1,8 +1,18 @@
 {
   "page": "地动雨雹",
-  "latest_rev_id": "20260423-160802-873ff1",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-162109-0acb83",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-162109-0acb83",
+      "timestamp": "2026-04-23T16:21:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-160802-873ff1",
+      "content_hash": "sha256:0acb83b549373c3c3b0f173a012480a1481ebb7c0ec47f4dc4bfc893fec80ac4",
+      "size": 523,
+      "content": "---\nid: \"地动雨雹\"\ntype: event\ntitle: 地动雨雹\ndescription: 地动。衡山、原都雨雹大者尺八寸。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-027]\ndate: \"（公元前149年）\"\n---\n\n::: meta\npn_011-027: \"[14.3]\"\nevent_type: 自然灾害\nlocation: \"衡山、原都\"\n:::\n\n# 地动雨雹\n\n> 地动。衡山、原都雨雹大者尺八寸。\n\n## 事件经过\n\n地动。衡山、原都雨雹大者尺八寸。\n\n## 原文\n\n> 地动。衡山、原都雨雹，大者尺八寸。\n\n"
+    },
     {
       "rev_id": "20260423-160802-873ff1",
       "timestamp": "2026-04-23T16:08:02Z",

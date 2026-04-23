@@ -1,8 +1,28 @@
 {
   "page": "胶西王端无男国除",
-  "latest_rev_id": "20260423-155450-cb0484",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163210-23bad5",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163210-23bad5",
+      "timestamp": "2026-04-23T16:32:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161237-ff11b8",
+      "content_hash": "sha256:23bad5700982f89c3f9807df6ab315451d14d893dd4b82826e757a3bd5e2cbe6",
+      "size": 665,
+      "content": "---\nid: \"胶西王端无男国除\"\ntype: event\ntitle: 胶西王端无男国除\ndescription: 立四十七年卒，竟无男代后国除地入于汉为胶西郡。\ntags: [史记, 事件, 五宗世家]\nsources: [五宗世家]\nevent_ids: [059-010]\ndate: \"[公元前108年]\"\n---\n\n::: meta\npn: \"[15]\"\nevent_type: 家族事件\nlocation: \"胶西\"\n:::\n\n# 胶西王端无男国除\n\n> 立四十七年卒，竟无男代后国除地入于汉为胶西郡。\n\n**主要人物**：胶西于王端\n\n## 事件经过\n\n立四十七年卒，竟无男代后国除地入于汉为胶西郡。\n\n## 原文\n\n> 立四十七年，卒，竟无男代後，国除，地入于汉，为胶西郡。\n\n"
+    },
+    {
+      "rev_id": "20260423-161237-ff11b8",
+      "timestamp": "2026-04-23T16:12:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155450-cb0484",
+      "content_hash": "sha256:ff11b85f7274db73abfb4abb06a4e007833a8fcca9f0cd12c9e4fdd3b3c52ab6",
+      "size": 674,
+      "content": "paragraph_refs:\n  059-010: \"[15]\"\nevent_type: 家族事件\nlocation: \"胶西\"\n---\nid: \"胶西王端无男国除\"\ntype: event\ntitle: 胶西王端无男国除\ndescription: 立四十七年卒，竟无男代后国除地入于汉为胶西郡。\ntags: [史记, 事件, 五宗世家]\nsources: [五宗世家]\nevent_ids: [059-010]\ndate: \"[公元前108年]\"\n---\n\n# 胶西王端无男国除\n\n> 立四十七年卒，竟无男代后国除地入于汉为胶西郡。\n\n**主要人物**：胶西于王端\n\n## 事件经过\n\n立四十七年卒，竟无男代后国除地入于汉为胶西郡。\n\n## 原文\n\n> 立四十七年，卒，竟无男代後，国除，地入于汉，为胶西郡。\n\n"
+    },
     {
       "rev_id": "20260423-155450-cb0484",
       "timestamp": "2026-04-23T15:54:50Z",

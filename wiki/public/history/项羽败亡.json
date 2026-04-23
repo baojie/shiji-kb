@@ -1,8 +1,18 @@
 {
   "page": "项羽败亡",
-  "latest_rev_id": "20260423-154811-fdbab0",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161549-a0e652",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161549-a0e652",
+      "timestamp": "2026-04-23T16:15:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154811-fdbab0",
+      "content_hash": "sha256:a0e6522077588e46ccbc81153f61bc66342cb91166e8a7502ca91fe2eff87640",
+      "size": 792,
+      "content": "paragraph_refs:\n  008-061: \"[53.7]-[53.10]\"\nevent_type: 战争\nlocation: \"东城\"\n---\nid: \"项羽败亡\"\ntype: event\ntitle: 项羽败亡\ndescription: 使骑将灌婴追杀项羽于东城，斩首八万，遂略定楚地。以鲁公号葬项羽于穀城。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-061]\ndate: \"〖%五年〗 （公元前202年）\"\n---\n\n# 项羽败亡\n\n> 使骑将灌婴追杀项羽于东城，斩首八万，遂略定楚地。以鲁公号葬项羽于穀城。\n\n**主要人物**：灌婴、项羽\n\n## 事件经过\n\n使骑将灌婴追杀项羽于东城，斩首八万，遂略定楚地。以鲁公号葬项羽于穀城。\n\n## 原文\n\n> 使骑将灌婴追杀项羽东城，斩首八万，遂略定楚地。...遂以鲁公号葬项羽穀城。\n\n"
+    },
     {
       "rev_id": "20260423-154811-fdbab0",
       "timestamp": "2026-04-23T15:48:11Z",

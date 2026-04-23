@@ -1,8 +1,28 @@
 {
   "page": "荀卿著书卒葬兰陵",
-  "latest_rev_id": "20260423-154647-8ecc7f",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163247-c89d89",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163247-c89d89",
+      "timestamp": "2026-04-23T16:32:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161245-1700a7",
+      "content_hash": "sha256:c89d891ae0e2c99a157d8a5a599d64a1a112b8bbc113d7a3c7f3579761c4899e",
+      "size": 1037,
+      "content": "---\nid: \"荀卿著书卒葬兰陵\"\ntype: event\ntitle: 荀卿著书卒葬兰陵\ndescription: 荀卿痛恨浊世之政，亡国乱君相属，推演儒、墨、道德之行事兴坏，著述数万言而终。因葬于兰陵。其著述成为先秦思想的重要总结。\ntags: [史记, 事件, 孟子荀卿列传]\nsources: [孟子荀卿列传]\nevent_ids: [074-010]\ndate: \"[约公元前238—前220年]\"\n---\n\n::: meta\npn: \"[10]\"\nevent_type: 文化活动\nlocation: \"兰陵\"\n:::\n\n# 荀卿著书卒葬兰陵\n\n> 荀卿痛恨浊世之政，亡国乱君相属，推演儒、墨、道德之行事兴坏，著述数万言而终。因葬于兰陵。其著述成为先秦思想的重要总结。\n\n**主要人物**：荀卿\n\n## 事件经过\n\n荀卿痛恨浊世之政，亡国乱君相属，推演儒、墨、道德之行事兴坏，著述数万言而终。因葬于兰陵。其著述成为先秦思想的重要总结。\n\n## 原文\n\n> 荀卿嫉浊世之政……於是推儒、墨、道德之行事兴坏，序列著数万言而卒。因葬兰陵。\n\n"
+    },
+    {
+      "rev_id": "20260423-161245-1700a7",
+      "timestamp": "2026-04-23T16:12:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154647-8ecc7f",
+      "content_hash": "sha256:1700a72fd5c5724a78fefbe13dab6568ce5fa56b5ae7f4caa5887f20fe09bac1",
+      "size": 1046,
+      "content": "paragraph_refs:\n  074-010: \"[10]\"\nevent_type: 文化活动\nlocation: \"兰陵\"\n---\nid: \"荀卿著书卒葬兰陵\"\ntype: event\ntitle: 荀卿著书卒葬兰陵\ndescription: 荀卿痛恨浊世之政，亡国乱君相属，推演儒、墨、道德之行事兴坏，著述数万言而终。因葬于兰陵。其著述成为先秦思想的重要总结。\ntags: [史记, 事件, 孟子荀卿列传]\nsources: [孟子荀卿列传]\nevent_ids: [074-010]\ndate: \"[约公元前238—前220年]\"\n---\n\n# 荀卿著书卒葬兰陵\n\n> 荀卿痛恨浊世之政，亡国乱君相属，推演儒、墨、道德之行事兴坏，著述数万言而终。因葬于兰陵。其著述成为先秦思想的重要总结。\n\n**主要人物**：荀卿\n\n## 事件经过\n\n荀卿痛恨浊世之政，亡国乱君相属，推演儒、墨、道德之行事兴坏，著述数万言而终。因葬于兰陵。其著述成为先秦思想的重要总结。\n\n## 原文\n\n> 荀卿嫉浊世之政……於是推儒、墨、道德之行事兴坏，序列著数万言而卒。因葬兰陵。\n\n"
+    },
     {
       "rev_id": "20260423-154647-8ecc7f",
       "timestamp": "2026-04-23T15:46:47Z",

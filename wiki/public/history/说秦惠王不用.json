@@ -1,8 +1,18 @@
 {
   "page": "说秦惠王不用",
-  "latest_rev_id": "20260423-154708-4d350e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161323-25d66e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161323-25d66e",
+      "timestamp": "2026-04-23T16:13:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154708-4d350e",
+      "content_hash": "sha256:25d66e8f1e999d5e74c0a570684733303fc27b0cf751ee8f9b3f295a1f4b0ba8",
+      "size": 942,
+      "content": "paragraph_refs:\n  069-004: \"[3]\"\nevent_type: 政治活动\nlocation: \"秦\"\n---\nid: \"说秦惠王不用\"\ntype: event\ntitle: 说秦惠王不用\ndescription: 苏秦西至秦说惠王，论秦为天府之国可吞天下称帝。秦王以毛羽未成不可高飞为由，且方诛商鞅疾辩士，不用苏秦。\ntags: [史记, 事件, 苏秦列传]\nsources: [苏秦列传]\nevent_ids: [069-004]\ndate: \"[约公元前313年]\"\n---\n\n# 说秦惠王不用\n\n> 苏秦西至秦说惠王，论秦为天府之国可吞天下称帝。秦王以毛羽未成不可高飞为由，且方诛商鞅疾辩士，不用苏秦。\n\n**主要人物**：惠王、苏秦\n\n## 事件经过\n\n苏秦西至秦说惠王，论秦为天府之国可吞天下称帝。秦王以毛羽未成不可高飞为由，且方诛商鞅疾辩士，不用苏秦。\n\n## 原文\n\n> 秦王曰：'毛羽未成，不可以高蜚；文理未明，不可以并兼。'方诛商鞅，疾辩士，弗用。\n\n"
+    },
     {
       "rev_id": "20260423-154708-4d350e",
       "timestamp": "2026-04-23T15:47:08Z",

@@ -1,8 +1,28 @@
 {
   "page": "舜六十一践帝位",
-  "latest_rev_id": "20260423-155455-d86b32",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163217-40cb71",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163217-40cb71",
+      "timestamp": "2026-04-23T16:32:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161239-8afb2f",
+      "content_hash": "sha256:40cb71dcadb484402aa479e1f3d37374597b01e970e489a130c0d246c7a73817",
+      "size": 883,
+      "content": "---\nid: \"舜六十一践帝位\"\ntype: event\ntitle: 舜六十一践帝位\ndescription: 舜六十一岁正式代尧践帝位。践帝位三十九年后，南巡狩至苍梧之野崩逝，葬于江南九疑，是为零陵。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-060]\ndate: \"〖%年六十一〗 [约公元前2256年]\"\n---\n\n::: meta\npn: \"[25]\"\nevent_type: 继位\n:::\n\n# 舜六十一践帝位\n\n> 舜六十一岁正式代尧践帝位。践帝位三十九年后，南巡狩至苍梧之野崩逝，葬于江南九疑，是为零陵。\n\n**主要人物**：舜\n\n## 事件经过\n\n舜六十一岁正式代尧践帝位。践帝位三十九年后，南巡狩至苍梧之野崩逝，葬于江南九疑，是为零陵。\n\n## 原文\n\n> 年六十一代尧践帝位。践帝位三十九年，南巡狩，崩於苍梧之野。葬於江南九疑，是为零陵。\n\n"
+    },
+    {
+      "rev_id": "20260423-161239-8afb2f",
+      "timestamp": "2026-04-23T16:12:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155455-d86b32",
+      "content_hash": "sha256:8afb2f1f2218db6215a2d5aee8cfd1f75ede246c4ae713e63ed0a45b472e770f",
+      "size": 892,
+      "content": "paragraph_refs:\n  001-060: \"[25]\"\nevent_type: 继位\n---\nid: \"舜六十一践帝位\"\ntype: event\ntitle: 舜六十一践帝位\ndescription: 舜六十一岁正式代尧践帝位。践帝位三十九年后，南巡狩至苍梧之野崩逝，葬于江南九疑，是为零陵。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-060]\ndate: \"〖%年六十一〗 [约公元前2256年]\"\n---\n\n# 舜六十一践帝位\n\n> 舜六十一岁正式代尧践帝位。践帝位三十九年后，南巡狩至苍梧之野崩逝，葬于江南九疑，是为零陵。\n\n**主要人物**：舜\n\n## 事件经过\n\n舜六十一岁正式代尧践帝位。践帝位三十九年后，南巡狩至苍梧之野崩逝，葬于江南九疑，是为零陵。\n\n## 原文\n\n> 年六十一代尧践帝位。践帝位三十九年，南巡狩，崩於苍梧之野。葬於江南九疑，是为零陵。\n\n"
+    },
     {
       "rev_id": "20260423-155455-d86b32",
       "timestamp": "2026-04-23T15:54:55Z",

@@ -1,8 +1,18 @@
 {
   "page": "贰师将军首伐大宛",
-  "latest_rev_id": "20260423-155525-ec2aa7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161333-229691",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161333-229691",
+      "timestamp": "2026-04-23T16:13:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155525-ec2aa7",
+      "content_hash": "sha256:2296911ee425605a99eb77a2c889de07deb83972352572fae4c2270cda8ea8cf",
+      "size": 1189,
+      "content": "paragraph_refs:\n  123-017: \"[27]\"\nevent_type: 战争\nlocation: \"郁成、敦煌\"\n---\nid: \"贰师将军首伐大宛\"\ntype: event\ntitle: 贰师将军首伐大宛\ndescription: 大宛匿善马杀汉使。天子拜李广利为贰师将军，发属国六千骑及恶少年数万人伐宛。至郁成大败，士不过什一二还至敦煌。天子大怒，使使遮玉门不许入。\ntags: [史记, 事件, 大宛列传]\nsources: [大宛列传]\nevent_ids: [123-017]\ndate: \"〖%太初元年〗 （公元前104年）\"\n---\n\n# 贰师将军首伐大宛\n\n> 大宛匿善马杀汉使。天子拜李广利为贰师将军，发属国六千骑及恶少年数万人伐宛。至郁成大败，士不过什一二还至敦煌。天子大怒，使使遮玉门不许入。\n\n**主要人物**：李广利\n\n## 事件经过\n\n大宛匿善马杀汉使。天子拜李广利为贰师将军，发属国六千骑及恶少年数万人伐宛。至郁成大败，士不过什一二还至敦煌。天子大怒，使使遮玉门不许入。\n\n## 原文\n\n> 拜李广利为贰师将军，发属国六千骑，及郡国恶少年数万人，以往伐宛。期至贰师城取善马，故号'贰师将军'。是岁太初元年也。\n\n"
+    },
     {
       "rev_id": "20260423-155525-ec2aa7",
       "timestamp": "2026-04-23T15:55:25Z",

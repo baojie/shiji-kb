@@ -1,8 +1,28 @@
 {
   "page": "苏秦合纵说燕",
-  "latest_rev_id": "20260423-154638-bf812c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163231-b5c5e3",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163231-b5c5e3",
+      "timestamp": "2026-04-23T16:32:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161242-ef5997",
+      "content_hash": "sha256:b5c5e39c0bc903e04039ec351ebe8950200bf27f1c73f916440f08ff14f5c77a",
+      "size": 958,
+      "content": "---\nid: \"苏秦合纵说燕\"\ntype: event\ntitle: 苏秦合纵说燕\ndescription: 文公二十八年，苏秦始来见说文公。文公予车马金帛以至赵，赵肃侯用之。因约六国为合纵长。秦惠王以其女为燕太子妇。\ntags: [史记, 事件, 燕召公世家]\nsources: [燕召公世家]\nevent_ids: [034-008]\ndate: \"[公元前334年]\"\n---\n\n::: meta\npn: \"[13.1]\"\nevent_type: 政治活动\nlocation: \"燕\"\n:::\n\n# 苏秦合纵说燕\n\n> 文公二十八年，苏秦始来见说文公。文公予车马金帛以至赵，赵肃侯用之。因约六国为合纵长。秦惠王以其女为燕太子妇。\n\n**主要人物**：文公、苏秦\n\n## 事件经过\n\n文公二十八年，苏秦始来见说文公。文公予车马金帛以至赵，赵肃侯用之。因约六国为合纵长。秦惠王以其女为燕太子妇。\n\n## 原文\n\n> 苏秦始来见,说文公。文公予*车**马**金帛*以至赵,赵肃侯用之。因约六国,为从长。\n\n"
+    },
+    {
+      "rev_id": "20260423-161242-ef5997",
+      "timestamp": "2026-04-23T16:12:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154638-bf812c",
+      "content_hash": "sha256:ef59977a424390e4f838b99c3c2356fc4fd2c6433ea05137e622aad2d8e534e9",
+      "size": 967,
+      "content": "paragraph_refs:\n  034-008: \"[13.1]\"\nevent_type: 政治活动\nlocation: \"燕\"\n---\nid: \"苏秦合纵说燕\"\ntype: event\ntitle: 苏秦合纵说燕\ndescription: 文公二十八年，苏秦始来见说文公。文公予车马金帛以至赵，赵肃侯用之。因约六国为合纵长。秦惠王以其女为燕太子妇。\ntags: [史记, 事件, 燕召公世家]\nsources: [燕召公世家]\nevent_ids: [034-008]\ndate: \"[公元前334年]\"\n---\n\n# 苏秦合纵说燕\n\n> 文公二十八年，苏秦始来见说文公。文公予车马金帛以至赵，赵肃侯用之。因约六国为合纵长。秦惠王以其女为燕太子妇。\n\n**主要人物**：文公、苏秦\n\n## 事件经过\n\n文公二十八年，苏秦始来见说文公。文公予车马金帛以至赵，赵肃侯用之。因约六国为合纵长。秦惠王以其女为燕太子妇。\n\n## 原文\n\n> 苏秦始来见,说文公。文公予*车**马**金帛*以至赵,赵肃侯用之。因约六国,为从长。\n\n"
+    },
     {
       "rev_id": "20260423-154638-bf812c",
       "timestamp": "2026-04-23T15:46:38Z",

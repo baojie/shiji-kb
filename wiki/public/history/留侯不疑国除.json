@@ -1,8 +1,28 @@
 {
   "page": "留侯不疑国除",
-  "latest_rev_id": "20260423-155353-bfa48d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-162959-593ef9",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-162959-593ef9",
+      "timestamp": "2026-04-23T16:29:59Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161208-8184a4",
+      "content_hash": "sha256:593ef9b02984f0a0cdea63c6c11d07f141bf9517161ed758567d060274b203d7",
+      "size": 553,
+      "content": "---\nid: \"留侯不疑国除\"\ntype: event\ntitle: 留侯不疑国除\ndescription: 留侯不疑，孝文帝五年坐不敬，国除。\ntags: [史记, 事件, 留侯世家]\nsources: [留侯世家]\nevent_ids: [055-024]\ndate: \"〖%五年〗 （公元前175年）\"\n---\n\n::: meta\npn: \"[29]\"\nevent_type: 家族事件\n:::\n\n# 留侯不疑国除\n\n> 留侯不疑，孝文帝五年坐不敬，国除。\n\n**主要人物**：不疑\n\n## 事件经过\n\n留侯不疑，孝文帝五年坐不敬，国除。\n\n## 原文\n\n> 留侯不疑，孝文帝五年坐不敬，国除。\n\n"
+    },
+    {
+      "rev_id": "20260423-161208-8184a4",
+      "timestamp": "2026-04-23T16:12:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155353-bfa48d",
+      "content_hash": "sha256:8184a4b2ef2ff0f1214301fbd24e371e1a876ef0cf1ce18cc044d66da75de996",
+      "size": 562,
+      "content": "paragraph_refs:\n  055-024: \"[29]\"\nevent_type: 家族事件\n---\nid: \"留侯不疑国除\"\ntype: event\ntitle: 留侯不疑国除\ndescription: 留侯不疑，孝文帝五年坐不敬，国除。\ntags: [史记, 事件, 留侯世家]\nsources: [留侯世家]\nevent_ids: [055-024]\ndate: \"〖%五年〗 （公元前175年）\"\n---\n\n# 留侯不疑国除\n\n> 留侯不疑，孝文帝五年坐不敬，国除。\n\n**主要人物**：不疑\n\n## 事件经过\n\n留侯不疑，孝文帝五年坐不敬，国除。\n\n## 原文\n\n> 留侯不疑，孝文帝五年坐不敬，国除。\n\n"
+    },
     {
       "rev_id": "20260423-155353-bfa48d",
       "timestamp": "2026-04-23T15:53:53Z",

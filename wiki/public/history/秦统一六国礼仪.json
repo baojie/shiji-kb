@@ -1,8 +1,28 @@
 {
   "page": "秦统一六国礼仪",
-  "latest_rev_id": "20260423-154617-624e07",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163109-f65332",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163109-f65332",
+      "timestamp": "2026-04-23T16:31:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161223-c9e205",
+      "content_hash": "sha256:f65332e95552cd87ec79c50a855b61ee8579e52ca3eddac69fb2238e07419d20",
+      "size": 798,
+      "content": "---\nid: \"秦统一六国礼仪\"\ntype: event\ntitle: 秦统一六国礼仪\ndescription: 秦统一天下后，收纳六国礼仪制度，择善而从。虽不全合圣制，但确立了尊君抑臣的朝廷秩序。\ntags: [史记, 事件, 礼书]\nsources: [礼书]\nevent_ids: [023-004]\ndate: \"（公元前221年）\"\n---\n\n::: meta\npn: \"[4.1]\"\nevent_type: 改革\n:::\n\n# 秦统一六国礼仪\n\n> 秦统一天下后，收纳六国礼仪制度，择善而从。虽不全合圣制，但确立了尊君抑臣的朝廷秩序。\n\n## 事件经过\n\n秦统一天下后，收纳六国礼仪制度，择善而从。虽不全合圣制，但确立了尊君抑臣的朝廷秩序。\n\n## 原文\n\n> 至秦有天下，悉内六国礼仪，采择其善，虽不合圣制，其尊君抑臣，朝廷济济，依古以来。\n\n"
+    },
+    {
+      "rev_id": "20260423-161223-c9e205",
+      "timestamp": "2026-04-23T16:12:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154617-624e07",
+      "content_hash": "sha256:c9e20534eabbe6cb4816d462e4b9125c2d8bb1a864a37ca75357b3252e7704db",
+      "size": 807,
+      "content": "paragraph_refs:\n  023-004: \"[4.1]\"\nevent_type: 改革\n---\nid: \"秦统一六国礼仪\"\ntype: event\ntitle: 秦统一六国礼仪\ndescription: 秦统一天下后，收纳六国礼仪制度，择善而从。虽不全合圣制，但确立了尊君抑臣的朝廷秩序。\ntags: [史记, 事件, 礼书]\nsources: [礼书]\nevent_ids: [023-004]\ndate: \"（公元前221年）\"\n---\n\n# 秦统一六国礼仪\n\n> 秦统一天下后，收纳六国礼仪制度，择善而从。虽不全合圣制，但确立了尊君抑臣的朝廷秩序。\n\n## 事件经过\n\n秦统一天下后，收纳六国礼仪制度，择善而从。虽不全合圣制，但确立了尊君抑臣的朝廷秩序。\n\n## 原文\n\n> 至秦有天下，悉内六国礼仪，采择其善，虽不合圣制，其尊君抑臣，朝廷济济，依古以来。\n\n"
+    },
     {
       "rev_id": "20260423-154617-624e07",
       "timestamp": "2026-04-23T15:46:17Z",

@@ -1,8 +1,18 @@
 {
   "page": "颁行铜虎符",
-  "latest_rev_id": "20260423-155608-d42834",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161549-eb3006",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161549-eb3006",
+      "timestamp": "2026-04-23T16:15:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155608-d42834",
+      "content_hash": "sha256:eb3006d1830405094b528c3ece662684febcf6f53ab82e11880f2468b5d4f83e",
+      "size": 646,
+      "content": "paragraph_refs:\n  010-022: \"[21]\"\nevent_type: 改革\n---\nid: \"颁行铜虎符\"\ntype: event\ntitle: 颁行铜虎符\ndescription: 九月，初与郡国守相为铜虎符、竹使符，建立符节调兵制度。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-022]\ndate: \"〖%九月〗 （公元前178年）\"\n---\n\n# 颁行铜虎符\n\n> 九月，初与郡国守相为铜虎符、竹使符，建立符节调兵制度。\n\n**主要人物**：孝文皇帝\n\n## 事件经过\n\n九月，初与郡国守相为铜虎符、竹使符，建立符节调兵制度。\n\n## 原文\n\n> 九月，初与郡国守相为铜虎符、竹使符。\n\n"
+    },
     {
       "rev_id": "20260423-155608-d42834",
       "timestamp": "2026-04-23T15:56:08Z",

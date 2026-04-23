@@ -1,8 +1,28 @@
 {
   "page": "秦军退邯郸解围",
-  "latest_rev_id": "20260423-155416-835215",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163045-9ecaf1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163045-9ecaf1",
+      "timestamp": "2026-04-23T16:30:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161218-d94bda",
+      "content_hash": "sha256:9ecaf1f6113fc9c9eafaabfe9fc5eb80783c595f1011ec4bd20585bcb90a0f10",
+      "size": 913,
+      "content": "---\nid: \"秦军退邯郸解围\"\ntype: event\ntitle: 秦军退邯郸解围\ndescription: 秦将闻鲁仲连之言退军五十里。适逢魏公子无忌夺晋鄙军以救赵，击秦军，秦军遂引去，邯郸之围解。\ntags: [史记, 事件, 鲁仲连邹阳列传]\nsources: [鲁仲连邹阳列传]\nevent_ids: [083-003]\ndate: \"（公元前257年）\"\n---\n\n::: meta\npn: \"[8.2]-[8.3]\"\nevent_type: 战争\nlocation: \"邯郸\"\n:::\n\n# 秦军退邯郸解围\n\n> 秦将闻鲁仲连之言退军五十里。适逢魏公子无忌夺晋鄙军以救赵，击秦军，秦军遂引去，邯郸之围解。\n\n**主要人物**：无忌、鲁仲连\n\n## 事件经过\n\n秦将闻鲁仲连之言退军五十里。适逢魏公子无忌夺晋鄙军以救赵，击秦军，秦军遂引去，邯郸之围解。\n\n## 原文\n\n> 秦将闻之，为卻军五十里。適会魏公子无忌夺晋鄙军以救赵，击秦军，秦军遂引而去。\n\n"
+    },
+    {
+      "rev_id": "20260423-161218-d94bda",
+      "timestamp": "2026-04-23T16:12:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155416-835215",
+      "content_hash": "sha256:d94bdaf48b6bcb27aee313f51257dcbfaec839cfe58e6ce41a49078c0f3239c2",
+      "size": 922,
+      "content": "paragraph_refs:\n  083-003: \"[8.2]-[8.3]\"\nevent_type: 战争\nlocation: \"邯郸\"\n---\nid: \"秦军退邯郸解围\"\ntype: event\ntitle: 秦军退邯郸解围\ndescription: 秦将闻鲁仲连之言退军五十里。适逢魏公子无忌夺晋鄙军以救赵，击秦军，秦军遂引去，邯郸之围解。\ntags: [史记, 事件, 鲁仲连邹阳列传]\nsources: [鲁仲连邹阳列传]\nevent_ids: [083-003]\ndate: \"（公元前257年）\"\n---\n\n# 秦军退邯郸解围\n\n> 秦将闻鲁仲连之言退军五十里。适逢魏公子无忌夺晋鄙军以救赵，击秦军，秦军遂引去，邯郸之围解。\n\n**主要人物**：无忌、鲁仲连\n\n## 事件经过\n\n秦将闻鲁仲连之言退军五十里。适逢魏公子无忌夺晋鄙军以救赵，击秦军，秦军遂引去，邯郸之围解。\n\n## 原文\n\n> 秦将闻之，为卻军五十里。適会魏公子无忌夺晋鄙军以救赵，击秦军，秦军遂引而去。\n\n"
+    },
     {
       "rev_id": "20260423-155416-835215",
       "timestamp": "2026-04-23T15:54:16Z",

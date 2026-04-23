@@ -1,8 +1,28 @@
 {
   "page": "立皇子彻为胶东王",
-  "latest_rev_id": "20260423-155435-44ccaa",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163134-9ec070",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163134-9ec070",
+      "timestamp": "2026-04-23T16:31:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161229-436f0e",
+      "content_hash": "sha256:9ec0702ceba89977f81466f4a262f98d580f1e3042d0f1ec0f2b74f8f0544a83",
+      "size": 531,
+      "content": "---\nid: \"立皇子彻为胶东王\"\ntype: event\ntitle: 立皇子彻为胶东王\ndescription: 立皇子彻为胶东王，即后来的汉武帝。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-018]\ndate: \"（公元前153年）\"\n---\n\n::: meta\npn: \"[9.2]\"\nevent_type: 政治活动\n:::\n\n# 立皇子彻为胶东王\n\n> 立皇子彻为胶东王，即后来的汉武帝。\n\n**主要人物**：彻\n\n## 事件经过\n\n立皇子彻为胶东王，即后来的汉武帝。\n\n## 原文\n\n> 立皇子彻为胶东王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161229-436f0e",
+      "timestamp": "2026-04-23T16:12:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155435-44ccaa",
+      "content_hash": "sha256:436f0e9ba93d462a47330aa4ed6cf1ace8849bc4ea5178c205472f812d1480ca",
+      "size": 540,
+      "content": "paragraph_refs:\n  011-018: \"[9.2]\"\nevent_type: 政治活动\n---\nid: \"立皇子彻为胶东王\"\ntype: event\ntitle: 立皇子彻为胶东王\ndescription: 立皇子彻为胶东王，即后来的汉武帝。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-018]\ndate: \"（公元前153年）\"\n---\n\n# 立皇子彻为胶东王\n\n> 立皇子彻为胶东王，即后来的汉武帝。\n\n**主要人物**：彻\n\n## 事件经过\n\n立皇子彻为胶东王，即后来的汉武帝。\n\n## 原文\n\n> 立皇子彻为胶东王。\n\n"
+    },
     {
       "rev_id": "20260423-155435-44ccaa",
       "timestamp": "2026-04-23T15:54:35Z",

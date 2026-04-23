@@ -1,8 +1,28 @@
 {
   "page": "秦破燕易水",
-  "latest_rev_id": "20260423-155426-04e318",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163108-b96fdf",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163108-b96fdf",
+      "timestamp": "2026-04-23T16:31:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161223-2c50e0",
+      "content_hash": "sha256:b96fdfad688e77c8859524d7a46c7a0c3b16dca88f76db8f0c4d4f509d131f44",
+      "size": 735,
+      "content": "---\nid: \"秦破燕易水\"\ntype: event\ntitle: 秦破燕易水\ndescription: 秦派王翦、辛胜攻燕。燕、代合兵抵抗，秦军于易水以西击破燕军。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-035]\ndate: \"〖%二十年〗 （公元前227年）\"\n---\n\n::: meta\npn: \"[27.2], [27.3]\"\nevent_type: 战争\nlocation: \"易水\"\n:::\n\n# 秦破燕易水\n\n> 秦派王翦、辛胜攻燕。燕、代合兵抵抗，秦军于易水以西击破燕军。\n\n**主要人物**：王翦、辛胜\n\n## 事件经过\n\n秦派王翦、辛胜攻燕。燕、代合兵抵抗，秦军于易水以西击破燕军。\n\n## 原文\n\n> 而使王翦、辛胜攻燕。燕、代发兵击秦军，秦军破燕易水之西。\n\n"
+    },
+    {
+      "rev_id": "20260423-161223-2c50e0",
+      "timestamp": "2026-04-23T16:12:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155426-04e318",
+      "content_hash": "sha256:2c50e03ef230f1051979bfe7e66b027b449bc639c0a46a17b68c24d91c3cbf37",
+      "size": 744,
+      "content": "paragraph_refs:\n  006-035: \"[27.2], [27.3]\"\nevent_type: 战争\nlocation: \"易水\"\n---\nid: \"秦破燕易水\"\ntype: event\ntitle: 秦破燕易水\ndescription: 秦派王翦、辛胜攻燕。燕、代合兵抵抗，秦军于易水以西击破燕军。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-035]\ndate: \"〖%二十年〗 （公元前227年）\"\n---\n\n# 秦破燕易水\n\n> 秦派王翦、辛胜攻燕。燕、代合兵抵抗，秦军于易水以西击破燕军。\n\n**主要人物**：王翦、辛胜\n\n## 事件经过\n\n秦派王翦、辛胜攻燕。燕、代合兵抵抗，秦军于易水以西击破燕军。\n\n## 原文\n\n> 而使王翦、辛胜攻燕。燕、代发兵击秦军，秦军破燕易水之西。\n\n"
+    },
     {
       "rev_id": "20260423-155426-04e318",
       "timestamp": "2026-04-23T15:54:26Z",

@@ -1,8 +1,28 @@
 {
   "page": "视西南夷盛毁其事",
-  "latest_rev_id": "20260423-155515-631b36",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163336-8e9456",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163336-8e9456",
+      "timestamp": "2026-04-23T16:33:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161314-7bfafd",
+      "content_hash": "sha256:8e94563f648f5431dc6af30aaf85c1869a70e7ae34b49129db016bfa04f2512e",
+      "size": 838,
+      "content": "---\nid: \"视西南夷盛毁其事\"\ntype: event\ntitle: 视西南夷盛毁其事\ndescription: 通西南夷道置郡，巴蜀民苦之。诏使公孙弘往视察。弘还奏事，盛毁西南夷无所用，但皇上不听。\ntags: [史记, 事件, 平津侯主父列传]\nsources: [平津侯主父列传]\nevent_ids: [112-005]\ndate: \"[约公元前130年—前129年]\"\n---\n\n::: meta\npn: \"[2.6]\"\nevent_type: 政治活动\n:::\n\n# 视西南夷盛毁其事\n\n> 通西南夷道置郡，巴蜀民苦之。诏使公孙弘往视察。弘还奏事，盛毁西南夷无所用，但皇上不听。\n\n**主要人物**：公孙弘\n\n## 事件经过\n\n通西南夷道置郡，巴蜀民苦之。诏使公孙弘往视察。弘还奏事，盛毁西南夷无所用，但皇上不听。\n\n## 原文\n\n> 诏使弘视之。还奏事,盛毁西南夷无所用,上不听。\n\n"
+    },
+    {
+      "rev_id": "20260423-161314-7bfafd",
+      "timestamp": "2026-04-23T16:13:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155515-631b36",
+      "content_hash": "sha256:7bfafd902acaaa452dcde3adc2b91470095af625e05ddae62b334b818c156b8a",
+      "size": 847,
+      "content": "paragraph_refs:\n  112-005: \"[2.6]\"\nevent_type: 政治活动\n---\nid: \"视西南夷盛毁其事\"\ntype: event\ntitle: 视西南夷盛毁其事\ndescription: 通西南夷道置郡，巴蜀民苦之。诏使公孙弘往视察。弘还奏事，盛毁西南夷无所用，但皇上不听。\ntags: [史记, 事件, 平津侯主父列传]\nsources: [平津侯主父列传]\nevent_ids: [112-005]\ndate: \"[约公元前130年—前129年]\"\n---\n\n# 视西南夷盛毁其事\n\n> 通西南夷道置郡，巴蜀民苦之。诏使公孙弘往视察。弘还奏事，盛毁西南夷无所用，但皇上不听。\n\n**主要人物**：公孙弘\n\n## 事件经过\n\n通西南夷道置郡，巴蜀民苦之。诏使公孙弘往视察。弘还奏事，盛毁西南夷无所用，但皇上不听。\n\n## 原文\n\n> 诏使弘视之。还奏事,盛毁西南夷无所用,上不听。\n\n"
+    },
     {
       "rev_id": "20260423-155515-631b36",
       "timestamp": "2026-04-23T15:55:15Z",

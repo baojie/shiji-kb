@@ -1,8 +1,18 @@
 {
   "page": "阖庐即位",
-  "latest_rev_id": "20260423-155552-dc5f07",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161442-d549fd",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161442-d549fd",
+      "timestamp": "2026-04-23T16:14:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155552-dc5f07",
+      "content_hash": "sha256:d549fd14bdc14e33dda4e57c9202ac51f1fc50206201eb9bddaf1ea88f742a5b",
+      "size": 782,
+      "content": "paragraph_refs:\n  031-018: \"[23.9, 25.1]\"\nevent_type: 继位\nlocation: \"吴\"\n---\nid: \"阖庐即位\"\ntype: event\ntitle: 阖庐即位\ndescription: 公子光竟代立为王，是为吴王阖庐。阖庐元年，举伍子胥为行人而与谋国事。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-018]\ndate: \"（公元前514年）\"\n---\n\n# 阖庐即位\n\n> 公子光竟代立为王，是为吴王阖庐。阖庐元年，举伍子胥为行人而与谋国事。\n\n**主要人物**：伍子胥、吴王阖庐\n\n## 事件经过\n\n公子光竟代立为王，是为吴王阖庐。阖庐元年，举伍子胥为行人而与谋国事。\n\n## 原文\n\n> 公子光竟代立为王，是为吴王阖庐。...王阖庐元年，举伍子胥为行人而与谋国事。\n\n"
+    },
     {
       "rev_id": "20260423-155552-dc5f07",
       "timestamp": "2026-04-23T15:55:52Z",

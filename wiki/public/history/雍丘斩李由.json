@@ -1,8 +1,18 @@
 {
   "page": "雍丘斩李由",
-  "latest_rev_id": "20260423-155559-158da6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161509-2fb978",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161509-2fb978",
+      "timestamp": "2026-04-23T16:15:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155559-158da6",
+      "content_hash": "sha256:2fb978d78b575e6e58e766d73a72e7f56ba8d9391671fd8f1454c6742de13097",
+      "size": 802,
+      "content": "paragraph_refs:\n  008-016: \"[14.3]\"\nevent_type: 战争\nlocation: \"雍丘\"\n---\nid: \"雍丘斩李由\"\ntype: event\ntitle: 雍丘斩李由\ndescription: 沛公与项羽西略地至雍丘，与秦军大战，斩秦将李由。此为沛公军事上的重大战果。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-016]\ndate: \"〖%二世二年〗 （公元前208年）\"\n---\n\n# 雍丘斩李由\n\n> 沛公与项羽西略地至雍丘，与秦军大战，斩秦将李由。此为沛公军事上的重大战果。\n\n**主要人物**：刘邦、李由、项羽\n\n## 事件经过\n\n沛公与项羽西略地至雍丘，与秦军大战，斩秦将李由。此为沛公军事上的重大战果。\n\n## 原文\n\n> 沛公与项羽西略地至雍丘之下，与秦军战，大破之，斩李由。\n\n"
+    },
     {
       "rev_id": "20260423-155559-158da6",
       "timestamp": "2026-04-23T15:55:59Z",

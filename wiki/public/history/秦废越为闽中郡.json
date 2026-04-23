@@ -1,8 +1,28 @@
 {
   "page": "秦废越为闽中郡",
-  "latest_rev_id": "20260423-155419-91d3b2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163052-5e64c1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163052-5e64c1",
+      "timestamp": "2026-04-23T16:30:52Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161219-ba4814",
+      "content_hash": "sha256:5e64c1bc9f8fc605ed2b42b0817a78759842405c2debbc4493297cdf2140f343",
+      "size": 914,
+      "content": "---\nid: \"秦废越为闽中郡\"\ntype: event\ntitle: 秦废越为闽中郡\ndescription: 闽越王无诸及越东海王摇，先皆越王句践之后，姓驺氏。秦并天下，皆废为君长，以其地为闽中郡。\ntags: [史记, 事件, 东越列传]\nsources: [东越列传]\nevent_ids: [114-001]\ndate: \"（公元前221年）\"\n---\n\n::: meta\npn: \"[0]\"\nevent_type: 政治活动\nlocation: \"闽中\"\n:::\n\n# 秦废越为闽中郡\n\n> 闽越王无诸及越东海王摇，先皆越王句践之后，姓驺氏。秦并天下，皆废为君长，以其地为闽中郡。\n\n**主要人物**：摇、无诸、越\n\n## 事件经过\n\n闽越王无诸及越东海王摇，先皆越王句践之后，姓驺氏。秦并天下，皆废为君长，以其地为闽中郡。\n\n## 原文\n\n> 闽越王无诸及越东海王摇者，其先皆越王句践之後也，姓驺氏。秦已并天下，皆废为君长，以其地为闽中郡。\n\n"
+    },
+    {
+      "rev_id": "20260423-161219-ba4814",
+      "timestamp": "2026-04-23T16:12:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155419-91d3b2",
+      "content_hash": "sha256:ba481461cd02077b4bf1df1e80c3d583c3af05c8d276b4bf4d020b5d4339447f",
+      "size": 923,
+      "content": "paragraph_refs:\n  114-001: \"[0]\"\nevent_type: 政治活动\nlocation: \"闽中\"\n---\nid: \"秦废越为闽中郡\"\ntype: event\ntitle: 秦废越为闽中郡\ndescription: 闽越王无诸及越东海王摇，先皆越王句践之后，姓驺氏。秦并天下，皆废为君长，以其地为闽中郡。\ntags: [史记, 事件, 东越列传]\nsources: [东越列传]\nevent_ids: [114-001]\ndate: \"（公元前221年）\"\n---\n\n# 秦废越为闽中郡\n\n> 闽越王无诸及越东海王摇，先皆越王句践之后，姓驺氏。秦并天下，皆废为君长，以其地为闽中郡。\n\n**主要人物**：摇、无诸、越\n\n## 事件经过\n\n闽越王无诸及越东海王摇，先皆越王句践之后，姓驺氏。秦并天下，皆废为君长，以其地为闽中郡。\n\n## 原文\n\n> 闽越王无诸及越东海王摇者，其先皆越王句践之後也，姓驺氏。秦已并天下，皆废为君长，以其地为闽中郡。\n\n"
+    },
     {
       "rev_id": "20260423-155419-91d3b2",
       "timestamp": "2026-04-23T15:54:19Z",

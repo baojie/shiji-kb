@@ -1,8 +1,28 @@
 {
   "page": "秦并天下",
-  "latest_rev_id": "20260423-155419-a097fc",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163051-37d188",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163051-37d188",
+      "timestamp": "2026-04-23T16:30:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161219-5f3cb6",
+      "content_hash": "sha256:37d1882dad045ecfac3bbf8b1fd5ffbadcffa0aadc1a6607889a3b33dcde52b1",
+      "size": 963,
+      "content": "---\nid: \"秦并天下\"\ntype: event\ntitle: 秦并天下\ndescription: 秦始皇二十六年，天下尽并。王氏与蒙氏功绩最多，名传后世。王翦父子在统一战争中灭赵、灭燕、灭魏、灭楚，功勋卓著。\ntags: [史记, 事件, 白起王翦列传]\nsources: [白起王翦列传]\nevent_ids: [073-018]\ndate: \"始皇二十六年（公元前221年）\"\n---\n\n::: meta\npn: \"[13]\"\nevent_type: 政治活动\nlocation: \"秦\"\n:::\n\n# 秦并天下\n\n> 秦始皇二十六年，天下尽并。王氏与蒙氏功绩最多，名传后世。王翦父子在统一战争中灭赵、灭燕、灭魏、灭楚，功勋卓著。\n\n**主要人物**：王翦、王贲、秦始皇\n\n## 事件经过\n\n秦始皇二十六年，天下尽并。王氏与蒙氏功绩最多，名传后世。王翦父子在统一战争中灭赵、灭燕、灭魏、灭楚，功勋卓著。\n\n## 原文\n\n> 秦始皇二十六年，尽并天下，王氏、蒙氏功为多，名施於後世。\n\n"
+    },
+    {
+      "rev_id": "20260423-161219-5f3cb6",
+      "timestamp": "2026-04-23T16:12:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155419-a097fc",
+      "content_hash": "sha256:5f3cb6504eb65910b351467ab6d4a2349ba939796b6c9afc8b286fcbf5677e33",
+      "size": 972,
+      "content": "paragraph_refs:\n  073-018: \"[13]\"\nevent_type: 政治活动\nlocation: \"秦\"\n---\nid: \"秦并天下\"\ntype: event\ntitle: 秦并天下\ndescription: 秦始皇二十六年，天下尽并。王氏与蒙氏功绩最多，名传后世。王翦父子在统一战争中灭赵、灭燕、灭魏、灭楚，功勋卓著。\ntags: [史记, 事件, 白起王翦列传]\nsources: [白起王翦列传]\nevent_ids: [073-018]\ndate: \"始皇二十六年（公元前221年）\"\n---\n\n# 秦并天下\n\n> 秦始皇二十六年，天下尽并。王氏与蒙氏功绩最多，名传后世。王翦父子在统一战争中灭赵、灭燕、灭魏、灭楚，功勋卓著。\n\n**主要人物**：王翦、王贲、秦始皇\n\n## 事件经过\n\n秦始皇二十六年，天下尽并。王氏与蒙氏功绩最多，名传后世。王翦父子在统一战争中灭赵、灭燕、灭魏、灭楚，功勋卓著。\n\n## 原文\n\n> 秦始皇二十六年，尽并天下，王氏、蒙氏功为多，名施於後世。\n\n"
+    },
     {
       "rev_id": "20260423-155419-a097fc",
       "timestamp": "2026-04-23T15:54:19Z",

@@ -1,8 +1,18 @@
 {
   "page": "韩厥伐齐",
-  "latest_rev_id": "20260423-154758-119829",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161526-082ac7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161526-082ac7",
+      "timestamp": "2026-04-23T16:15:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154758-119829",
+      "content_hash": "sha256:082ac7a488cdf84485f887d0a5537f50291f46ccfb6309c6bb5c93c5fae5d00d",
+      "size": 817,
+      "content": "paragraph_refs:\n  045-003: \"[2.2]\"\nevent_type: 战争\nlocation: \"鞍\"\n---\nid: \"韩厥伐齐\"\ntype: event\ntitle: 韩厥伐齐\ndescription: 韩厥与郤克将兵八百乘伐齐，败齐顷公于鞍，获逢丑父。晋作六卿，韩厥在一卿之位，号为献子。\ntags: [史记, 事件, 韩世家]\nsources: [韩世家]\nevent_ids: [045-003]\ndate: \"〖;景公〗〖%十一年〗 （公元前589年）\"\n---\n\n# 韩厥伐齐\n\n> 韩厥与郤克将兵八百乘伐齐，败齐顷公于鞍，获逢丑父。晋作六卿，韩厥在一卿之位，号为献子。\n\n**主要人物**：韩厥、齐顷公\n\n## 事件经过\n\n韩厥与郤克将兵八百乘伐齐，败齐顷公于鞍，获逢丑父。晋作六卿，韩厥在一卿之位，号为献子。\n\n## 原文\n\n> 厥与郤克将兵八百乘伐齐，败齐顷公于鞍。\n\n"
+    },
     {
       "rev_id": "20260423-154758-119829",
       "timestamp": "2026-04-23T15:47:58Z",

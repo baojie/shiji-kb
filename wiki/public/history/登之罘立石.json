@@ -1,8 +1,28 @@
 {
   "page": "登之罘立石",
-  "latest_rev_id": "20260423-155355-fc4a37",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163001-5cb73b",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163001-5cb73b",
+      "timestamp": "2026-04-23T16:30:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161208-446cb3",
+      "content_hash": "sha256:5cb73b7acdfdc57d6ec5c1dceececdee85bcb5cd2d729e41345eff68a789a61c",
+      "size": 716,
+      "content": "---\nid: \"登之罘立石\"\ntype: event\ntitle: 登之罘立石\ndescription: 始皇沿勃海以东，过黄、腄，穷成山，登之罘山，立石颂秦德。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-059]\ndate: \"〖%二十八年〗 （公元前219年）\"\n---\n\n::: meta\npn: \"[45]\"\nevent_type: 文化活动\nlocation: \"之罘\"\n:::\n\n# 登之罘立石\n\n> 始皇沿勃海以东，过黄、腄，穷成山，登之罘山，立石颂秦德。\n\n**主要人物**：始皇\n\n## 事件经过\n\n始皇沿勃海以东，过黄、腄，穷成山，登之罘山，立石颂秦德。\n\n## 原文\n\n> 於是乃并勃海以东，过黄、腄，穷成山，登之罘，立石颂秦德焉而去。\n\n"
+    },
+    {
+      "rev_id": "20260423-161208-446cb3",
+      "timestamp": "2026-04-23T16:12:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155355-fc4a37",
+      "content_hash": "sha256:446cb3a0cd293d64b1d6f2d61b904b9e92bfa46fd5cd733a520e6be0be8b985f",
+      "size": 725,
+      "content": "paragraph_refs:\n  006-059: \"[45]\"\nevent_type: 文化活动\nlocation: \"之罘\"\n---\nid: \"登之罘立石\"\ntype: event\ntitle: 登之罘立石\ndescription: 始皇沿勃海以东，过黄、腄，穷成山，登之罘山，立石颂秦德。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-059]\ndate: \"〖%二十八年〗 （公元前219年）\"\n---\n\n# 登之罘立石\n\n> 始皇沿勃海以东，过黄、腄，穷成山，登之罘山，立石颂秦德。\n\n**主要人物**：始皇\n\n## 事件经过\n\n始皇沿勃海以东，过黄、腄，穷成山，登之罘山，立石颂秦德。\n\n## 原文\n\n> 於是乃并勃海以东，过黄、腄，穷成山，登之罘，立石颂秦德焉而去。\n\n"
+    },
     {
       "rev_id": "20260423-155355-fc4a37",
       "timestamp": "2026-04-23T15:53:55Z",

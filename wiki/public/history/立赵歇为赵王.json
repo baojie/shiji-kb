@@ -1,8 +1,28 @@
 {
   "page": "立赵歇为赵王",
-  "latest_rev_id": "20260423-155437-f0c666",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163136-c111d8",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163136-c111d8",
+      "timestamp": "2026-04-23T16:31:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161229-8d4019",
+      "content_hash": "sha256:c111d84e0cdd51a00891b62fe2864d0ce08f177715125f634a45e846256a9f93",
+      "size": 915,
+      "content": "---\nid: \"立赵歇为赵王\"\ntype: event\ntitle: 立赵歇为赵王\ndescription: 张耳、陈馀收兵得数万人，客建议立赵后以义扶之。乃求得赵歇立为赵王，居信都。陈馀败李良，李良走归章邯。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-012]\ndate: \"（公元前208年）\"\n---\n\n::: meta\npn: \"[13]\"\nevent_type: 继位\nlocation: \"信都\"\n:::\n\n# 立赵歇为赵王\n\n> 张耳、陈馀收兵得数万人，客建议立赵后以义扶之。乃求得赵歇立为赵王，居信都。陈馀败李良，李良走归章邯。\n\n**主要人物**：张耳、赵歇、陈馀\n\n## 事件经过\n\n张耳、陈馀收兵得数万人，客建议立赵后以义扶之。乃求得赵歇立为赵王，居信都。陈馀败李良，李良走归章邯。\n\n## 原文\n\n> 乃求得赵歇，立为赵王，居信都。李良进兵击陈馀，陈馀败李良。\n\n"
+    },
+    {
+      "rev_id": "20260423-161229-8d4019",
+      "timestamp": "2026-04-23T16:12:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155437-f0c666",
+      "content_hash": "sha256:8d4019560f95197c74fa5a698fbd0c3ce9861cc74e240736647365b05534f077",
+      "size": 924,
+      "content": "paragraph_refs:\n  089-012: \"[13]\"\nevent_type: 继位\nlocation: \"信都\"\n---\nid: \"立赵歇为赵王\"\ntype: event\ntitle: 立赵歇为赵王\ndescription: 张耳、陈馀收兵得数万人，客建议立赵后以义扶之。乃求得赵歇立为赵王，居信都。陈馀败李良，李良走归章邯。\ntags: [史记, 事件, 张耳陈馀列传]\nsources: [张耳陈馀列传]\nevent_ids: [089-012]\ndate: \"（公元前208年）\"\n---\n\n# 立赵歇为赵王\n\n> 张耳、陈馀收兵得数万人，客建议立赵后以义扶之。乃求得赵歇立为赵王，居信都。陈馀败李良，李良走归章邯。\n\n**主要人物**：张耳、赵歇、陈馀\n\n## 事件经过\n\n张耳、陈馀收兵得数万人，客建议立赵后以义扶之。乃求得赵歇立为赵王，居信都。陈馀败李良，李良走归章邯。\n\n## 原文\n\n> 乃求得赵歇，立为赵王，居信都。李良进兵击陈馀，陈馀败李良。\n\n"
+    },
     {
       "rev_id": "20260423-155437-f0c666",
       "timestamp": "2026-04-23T15:54:37Z",

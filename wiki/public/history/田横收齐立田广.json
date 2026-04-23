@@ -1,8 +1,28 @@
 {
   "page": "田横收齐立田广",
-  "latest_rev_id": "20260423-152857-95ddd9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-162948-d7a950",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-162948-d7a950",
+      "timestamp": "2026-04-23T16:29:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161206-dbc2a2",
+      "content_hash": "sha256:d7a9503855f5fd0d435a8bcb843cac2979576fb4e4d327c90eb8ab6028e1e398",
+      "size": 961,
+      "content": "---\nid: \"田横收齐立田广\"\ntype: event\ntitle: 田横收齐立田广\ndescription: 汉王率诸侯入彭城，项羽回师击汉。田横趁机收复齐地城邑，立田荣子田广为齐王，田横为相，专国政大小事务皆由相决断。\ntags: [史记, 事件, 田儋列传]\nsources: [田儋列传]\nevent_ids: [094-009]\ndate: \"（公元前205年）\"\n---\n\n::: meta\npn: \"[9]\"\nevent_type: 政治活动\n:::\n\n# 田横收齐立田广\n\n> 汉王率诸侯入彭城，项羽回师击汉。田横趁机收复齐地城邑，立田荣子田广为齐王，田横为相，专国政大小事务皆由相决断。\n\n**主要人物**：田广、田横\n\n## 事件经过\n\n汉王率诸侯入彭城，项羽回师击汉。田横趁机收复齐地城邑，立田荣子田广为齐王，田横为相，专国政大小事务皆由相决断。\n\n## 原文\n\n> 以故田横复得收齐城邑，立田荣子广为齐王，而横相之，专国政，政无巨细皆断於相。\n\n"
+    },
+    {
+      "rev_id": "20260423-161206-dbc2a2",
+      "timestamp": "2026-04-23T16:12:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-152857-95ddd9",
+      "content_hash": "sha256:dbc2a29c2df8c0e08802f16e3e6441fad332f02734909d5feb9eb0e7d6edca58",
+      "size": 970,
+      "content": "paragraph_refs:\n  094-009: \"[9]\"\nevent_type: 政治活动\n---\nid: \"田横收齐立田广\"\ntype: event\ntitle: 田横收齐立田广\ndescription: 汉王率诸侯入彭城，项羽回师击汉。田横趁机收复齐地城邑，立田荣子田广为齐王，田横为相，专国政大小事务皆由相决断。\ntags: [史记, 事件, 田儋列传]\nsources: [田儋列传]\nevent_ids: [094-009]\ndate: \"（公元前205年）\"\n---\n\n# 田横收齐立田广\n\n> 汉王率诸侯入彭城，项羽回师击汉。田横趁机收复齐地城邑，立田荣子田广为齐王，田横为相，专国政大小事务皆由相决断。\n\n**主要人物**：田广、田横\n\n## 事件经过\n\n汉王率诸侯入彭城，项羽回师击汉。田横趁机收复齐地城邑，立田荣子田广为齐王，田横为相，专国政大小事务皆由相决断。\n\n## 原文\n\n> 以故田横复得收齐城邑，立田荣子广为齐王，而横相之，专国政，政无巨细皆断於相。\n\n"
+    },
     {
       "rev_id": "20260423-152857-95ddd9",
       "timestamp": "2026-04-23T15:28:57Z",

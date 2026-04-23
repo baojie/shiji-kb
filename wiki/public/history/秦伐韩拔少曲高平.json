@@ -1,8 +1,28 @@
 {
   "page": "秦伐韩拔少曲高平",
-  "latest_rev_id": "20260423-155415-a47a0c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163043-e7a61d",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163043-e7a61d",
+      "timestamp": "2026-04-23T16:30:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161217-63aada",
+      "content_hash": "sha256:e7a61de70e5d9795ba077e3c66b426a07f3fa11d2f8827d67a50df2c954b60a9",
+      "size": 828,
+      "content": "---\nid: \"秦伐韩拔少曲高平\"\ntype: event\ntitle: 秦伐韩拔少曲高平\ndescription: 范睢相秦两年，秦昭王四十二年东伐韩国少曲、高平，攻拔之。远交近攻之策持续推进。\ntags: [史记, 事件, 范睢蔡泽列传]\nsources: [范睢蔡泽列传]\nevent_ids: [079-012]\ndate: \"昭王四十二年（公元前265年）\"\n---\n\n::: meta\npn: \"[23]\"\nevent_type: 战争\nlocation: \"韩\"\n:::\n\n# 秦伐韩拔少曲高平\n\n> 范睢相秦两年，秦昭王四十二年东伐韩国少曲、高平，攻拔之。远交近攻之策持续推进。\n\n**主要人物**：范睢\n\n## 事件经过\n\n范睢相秦两年，秦昭王四十二年东伐韩国少曲、高平，攻拔之。远交近攻之策持续推进。\n\n## 原文\n\n> 范睢相秦二年，秦昭王之四十二年，东伐韩少曲、高平，拔之。\n\n"
+    },
+    {
+      "rev_id": "20260423-161217-63aada",
+      "timestamp": "2026-04-23T16:12:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155415-a47a0c",
+      "content_hash": "sha256:63aada92fdf8bd95b4cdd7b4cbb14ff39eafa0419f335b6649c57e9dfb409e10",
+      "size": 837,
+      "content": "paragraph_refs:\n  079-012: \"[23]\"\nevent_type: 战争\nlocation: \"韩\"\n---\nid: \"秦伐韩拔少曲高平\"\ntype: event\ntitle: 秦伐韩拔少曲高平\ndescription: 范睢相秦两年，秦昭王四十二年东伐韩国少曲、高平，攻拔之。远交近攻之策持续推进。\ntags: [史记, 事件, 范睢蔡泽列传]\nsources: [范睢蔡泽列传]\nevent_ids: [079-012]\ndate: \"昭王四十二年（公元前265年）\"\n---\n\n# 秦伐韩拔少曲高平\n\n> 范睢相秦两年，秦昭王四十二年东伐韩国少曲、高平，攻拔之。远交近攻之策持续推进。\n\n**主要人物**：范睢\n\n## 事件经过\n\n范睢相秦两年，秦昭王四十二年东伐韩国少曲、高平，攻拔之。远交近攻之策持续推进。\n\n## 原文\n\n> 范睢相秦二年，秦昭王之四十二年，东伐韩少曲、高平，拔之。\n\n"
+    },
     {
       "rev_id": "20260423-155415-a47a0c",
       "timestamp": "2026-04-23T15:54:15Z",

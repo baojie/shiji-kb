@@ -1,8 +1,18 @@
 {
   "page": "齐魏相王于徐州",
-  "latest_rev_id": "20260423-154834-f23436",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161646-c3a9c3",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161646-c3a9c3",
+      "timestamp": "2026-04-23T16:16:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154834-f23436",
+      "content_hash": "sha256:c3a9c3dbc5fa6e9b2caa8033c5eaa1fea70e6c33dc58395352082a5e44b5ad80",
+      "size": 826,
+      "content": "paragraph_refs:\n  015-012: \"r143\"\nevent_type: 政治活动\nlocation: \"徐州\"\n---\nid: \"齐魏相王于徐州\"\ntype: event\ntitle: 齐魏相王于徐州\ndescription: 魏襄王与齐王在徐州会盟，互相尊称为王（相王）。这一事件标志着诸侯公然僭越天子之号。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-012]\ndate: \"〖%公元前334〗 （公元前334年）\"\n---\n\n# 齐魏相王于徐州\n\n> 魏襄王与齐王在徐州会盟，互相尊称为王（相王）。这一事件标志着诸侯公然僭越天子之号。\n\n## 事件经过\n\n魏襄王与齐王在徐州会盟，互相尊称为王（相王）。这一事件标志着诸侯公然僭越天子之号。\n\n## 原文\n\n> 魏襄王元年。与诸侯会徐州，以相王。\"\"九。与魏会徐州，诸侯相王。\n\n"
+    },
     {
       "rev_id": "20260423-154834-f23436",
       "timestamp": "2026-04-23T15:48:34Z",

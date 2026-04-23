@@ -1,8 +1,28 @@
 {
   "page": "秦襄公始封为诸侯",
-  "latest_rev_id": "20260423-154618-4f1828",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163111-787397",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163111-787397",
+      "timestamp": "2026-04-23T16:31:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161224-7c4c1f",
+      "content_hash": "sha256:787397d18e8f37caec325e76c24096b9af9db1242f4e7cfd489218615d98a381",
+      "size": 810,
+      "content": "---\nid: \"秦襄公始封为诸侯\"\ntype: event\ntitle: 秦襄公始封为诸侯\ndescription: 秦襄公因护送周平王东迁有功，始封为诸侯，作西畤祭祀上帝。太史公认为秦国僭越之端由此开始。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-002]\ndate: \"（公元前770年）\"\n---\n\n::: meta\npn: \"[1.1]\"\nevent_type: 继位\n:::\n\n# 秦襄公始封为诸侯\n\n> 秦襄公因护送周平王东迁有功，始封为诸侯，作西畤祭祀上帝。太史公认为秦国僭越之端由此开始。\n\n**主要人物**：襄公\n\n## 事件经过\n\n秦襄公因护送周平王东迁有功，始封为诸侯，作西畤祭祀上帝。太史公认为秦国僭越之端由此开始。\n\n## 原文\n\n> 秦襄公始封为诸侯，作西畤用事上帝，僭端见矣。\n\n"
+    },
+    {
+      "rev_id": "20260423-161224-7c4c1f",
+      "timestamp": "2026-04-23T16:12:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154618-4f1828",
+      "content_hash": "sha256:7c4c1f9cd68ca4913d7dbc78bc1de885695e26bf06168cef9ab046e556be9d95",
+      "size": 819,
+      "content": "paragraph_refs:\n  015-002: \"[1.1]\"\nevent_type: 继位\n---\nid: \"秦襄公始封为诸侯\"\ntype: event\ntitle: 秦襄公始封为诸侯\ndescription: 秦襄公因护送周平王东迁有功，始封为诸侯，作西畤祭祀上帝。太史公认为秦国僭越之端由此开始。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-002]\ndate: \"（公元前770年）\"\n---\n\n# 秦襄公始封为诸侯\n\n> 秦襄公因护送周平王东迁有功，始封为诸侯，作西畤祭祀上帝。太史公认为秦国僭越之端由此开始。\n\n**主要人物**：襄公\n\n## 事件经过\n\n秦襄公因护送周平王东迁有功，始封为诸侯，作西畤祭祀上帝。太史公认为秦国僭越之端由此开始。\n\n## 原文\n\n> 秦襄公始封为诸侯，作西畤用事上帝，僭端见矣。\n\n"
+    },
     {
       "rev_id": "20260423-154618-4f1828",
       "timestamp": "2026-04-23T15:46:18Z",

@@ -1,8 +1,18 @@
 {
   "page": "郑安平降赵应侯请罪",
-  "latest_rev_id": "20260423-155542-bb2269",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161419-aa67d7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161419-aa67d7",
+      "timestamp": "2026-04-23T16:14:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155542-bb2269",
+      "content_hash": "sha256:aa67d7b4202d9d7931cfb57755fe87d6a3b2b03c3d7c1ac57feb1888ec8fd9d6",
+      "size": 1159,
+      "content": "paragraph_refs:\n  079-015: \"[26]\"\nevent_type: 政治活动\nlocation: \"赵\"\n---\nid: \"郑安平降赵应侯请罪\"\ntype: event\ntitle: 郑安平降赵应侯请罪\ndescription: 范睢所荐郑安平率军击赵，被围后以二万人降赵。按秦法应侯当收三族。秦昭王恐伤应侯之意，下令禁言此事并加赐厚待。但应侯日益不安。\ntags: [史记, 事件, 范睢蔡泽列传]\nsources: [范睢蔡泽列传]\nevent_ids: [079-015]\ndate: \"秦昭王五十年（公元前257年）\"\n---\n\n# 郑安平降赵应侯请罪\n\n> 范睢所荐郑安平率军击赵，被围后以二万人降赵。按秦法应侯当收三族。秦昭王恐伤应侯之意，下令禁言此事并加赐厚待。但应侯日益不安。\n\n**主要人物**：范睢、郑安平\n\n## 事件经过\n\n范睢所荐郑安平率军击赵，被围后以二万人降赵。按秦法应侯当收三族。秦昭王恐伤应侯之意，下令禁言此事并加赐厚待。但应侯日益不安。\n\n## 原文\n\n> 郑安平为赵所围，急，以兵二万人降赵。应侯席请罪。……秦昭王恐伤应侯之意，乃下令国中：\"有敢言郑安平事者，以其罪罪之。\n\n"
+    },
     {
       "rev_id": "20260423-155542-bb2269",
       "timestamp": "2026-04-23T15:55:42Z",

@@ -1,8 +1,18 @@
 {
   "page": "隐匿芒砀",
-  "latest_rev_id": "20260423-155558-f54476",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161508-f8d01e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161508-f8d01e",
+      "timestamp": "2026-04-23T16:15:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155558-f54476",
+      "content_hash": "sha256:f8d01e1628808dfb1abdce6240f3815c5b04f840502b9c0db93f0c62931d3f7f",
+      "size": 1093,
+      "content": "paragraph_refs:\n  008-007: \"[9]\"\nevent_type: 政治活动\nlocation: \"芒、砀山\"\n---\nid: \"隐匿芒砀\"\ntype: event\ntitle: 隐匿芒砀\ndescription: 秦始皇常言东南有天子气而东游以厌之。高祖自疑，亡匿于芒砀山泽间。吕后每次都能找到他，因其所居上常有云气。沛中子弟闻之，多欲归附。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-007]\ndate: \"（公元前211年）\"\n---\n\n# 隐匿芒砀\n\n> 秦始皇常言东南有天子气而东游以厌之。高祖自疑，亡匿于芒砀山泽间。吕后每次都能找到他，因其所居上常有云气。沛中子弟闻之，多欲归附。\n\n**主要人物**：刘邦、吕后\n\n## 事件经过\n\n秦始皇常言东南有天子气而东游以厌之。高祖自疑，亡匿于芒砀山泽间。吕后每次都能找到他，因其所居上常有云气。沛中子弟闻之，多欲归附。\n\n## 原文\n\n> 高祖即自疑，亡匿，隐於芒、砀山泽岩石之间。吕后与人俱求，常得之。吕后曰：'季所居上常有云气，故从往常得季。'\n\n"
+    },
     {
       "rev_id": "20260423-155558-f54476",
       "timestamp": "2026-04-23T15:55:58Z",

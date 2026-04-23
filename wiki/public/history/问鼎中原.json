@@ -1,8 +1,18 @@
 {
   "page": "问鼎中原",
-  "latest_rev_id": "20260423-154732-029d27",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161438-2b54f8",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161438-2b54f8",
+      "timestamp": "2026-04-23T16:14:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154732-029d27",
+      "content_hash": "sha256:2b54f8f66ef7150946676fd91f0248ce81844c95d3b75a42bad4ff486d0dd8ae",
+      "size": 976,
+      "content": "paragraph_refs:\n  040-013: \"[26.29]\"\nevent_type: 政治活动\nlocation: \"洛\"\n---\nid: \"问鼎中原\"\ntype: event\ntitle: 问鼎中原\ndescription: 庄王八年伐陆浑戎至洛观兵于周郊。问鼎小大轻重。王孙满对曰\"在德不在鼎\"，周德虽衰天命未改鼎之轻重未可问。庄王乃归。\ntags: [史记, 事件, 楚世家]\nsources: [楚世家]\nevent_ids: [040-013]\ndate: \"（公元前606年）\"\n---\n\n# 问鼎中原\n\n> 庄王八年伐陆浑戎至洛观兵于周郊。问鼎小大轻重。王孙满对曰\"在德不在鼎\"，周德虽衰天命未改鼎之轻重未可问。庄王乃归。\n\n**主要人物**：庄王、王孙满\n\n## 事件经过\n\n庄王八年伐陆浑戎至洛观兵于周郊。问鼎小大轻重。王孙满对曰\"在德不在鼎\"，周德虽衰天命未改鼎之轻重未可问。庄王乃归。\n\n## 原文\n\n> 楚王问鼎小大轻重，对曰：'在德不在鼎。'...王孙满曰：'...鼎之轻重，未可问也。'楚王乃归。\n\n"
+    },
     {
       "rev_id": "20260423-154732-029d27",
       "timestamp": "2026-04-23T15:47:32Z",

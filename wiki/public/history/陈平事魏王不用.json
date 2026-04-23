@@ -1,8 +1,18 @@
 {
   "page": "陈平事魏王不用",
-  "latest_rev_id": "20260423-154736-86c4ae",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161449-fce693",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161449-fce693",
+      "timestamp": "2026-04-23T16:14:49Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154736-86c4ae",
+      "content_hash": "sha256:fce693c1b1cb3c7d3172d7776124eece57aab658dacdaf3421a8662bc56e7769",
+      "size": 929,
+      "content": "paragraph_refs:\n  056-004: \"[4]\"\nevent_type: 政治活动\nlocation: \"临济\"\n---\nid: \"陈平事魏王不用\"\ntype: event\ntitle: 陈平事魏王不用\ndescription: 陈涉起而王陈，陈平从少年往事魏王咎于临济。魏王以为太仆，说魏王不听，人或谗之，陈平亡去。\ntags: [史记, 事件, 陈丞相世家]\nsources: [陈丞相世家]\nevent_ids: [056-004]\ndate: \"（公元前209年）\"\n---\n\n# 陈平事魏王不用\n\n> 陈涉起而王陈，陈平从少年往事魏王咎于临济。魏王以为太仆，说魏王不听，人或谗之，陈平亡去。\n\n**主要人物**：陈平\n\n## 事件经过\n\n陈涉起而王陈，陈平从少年往事魏王咎于临济。魏王以为太仆，说魏王不听，人或谗之，陈平亡去。\n\n## 原文\n\n> 陈涉起而王陈...陈平固已前谢其兄伯，从少年往事魏王咎於临济。魏王以为太仆。说魏王不听，人或谗之，陈平亡去。\n\n"
+    },
     {
       "rev_id": "20260423-154736-86c4ae",
       "timestamp": "2026-04-23T15:47:36Z",

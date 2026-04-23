@@ -1,8 +1,28 @@
 {
   "page": "白起攻韩陉城拔五城",
-  "latest_rev_id": "20260423-154606-d6d95d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163008-636212",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163008-636212",
+      "timestamp": "2026-04-23T16:30:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161210-6ba968",
+      "content_hash": "sha256:6362122cac6eadfb81ec84e4a2f35314ee4c71cc2c206505e58e155991d43e20",
+      "size": 893,
+      "content": "---\nid: \"白起攻韩陉城拔五城\"\ntype: event\ntitle: 白起攻韩陉城拔五城\ndescription: 白起攻韩陉城，拔五城，斩首五万。次年又攻南阳太行道，切断其通路。连续削弱韩国实力。\ntags: [史记, 事件, 白起王翦列传]\nsources: [白起王翦列传]\nevent_ids: [073-007]\ndate: \"昭王四十三年（公元前264年）\"\n---\n\n::: meta\npn: \"[1]\"\nevent_type: 战争\nlocation: \"陉城\"\n:::\n\n# 白起攻韩陉城拔五城\n\n> 白起攻韩陉城，拔五城，斩首五万。次年又攻南阳太行道，切断其通路。连续削弱韩国实力。\n\n**主要人物**：白起\n\n## 事件经过\n\n白起攻韩陉城，拔五城，斩首五万。次年又攻南阳太行道，切断其通路。连续削弱韩国实力。\n\n## 原文\n\n> 昭王四十三年，白起攻韩陉城，拔五城，斩首五万。四十四年，白起攻南阳太行道，绝之。\n\n"
+    },
+    {
+      "rev_id": "20260423-161210-6ba968",
+      "timestamp": "2026-04-23T16:12:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154606-d6d95d",
+      "content_hash": "sha256:6ba9680880132809d97c887fd16262f1ea5aa5e75480471d3b9d990ea3d93c79",
+      "size": 902,
+      "content": "paragraph_refs:\n  073-007: \"[1]\"\nevent_type: 战争\nlocation: \"陉城\"\n---\nid: \"白起攻韩陉城拔五城\"\ntype: event\ntitle: 白起攻韩陉城拔五城\ndescription: 白起攻韩陉城，拔五城，斩首五万。次年又攻南阳太行道，切断其通路。连续削弱韩国实力。\ntags: [史记, 事件, 白起王翦列传]\nsources: [白起王翦列传]\nevent_ids: [073-007]\ndate: \"昭王四十三年（公元前264年）\"\n---\n\n# 白起攻韩陉城拔五城\n\n> 白起攻韩陉城，拔五城，斩首五万。次年又攻南阳太行道，切断其通路。连续削弱韩国实力。\n\n**主要人物**：白起\n\n## 事件经过\n\n白起攻韩陉城，拔五城，斩首五万。次年又攻南阳太行道，切断其通路。连续削弱韩国实力。\n\n## 原文\n\n> 昭王四十三年，白起攻韩陉城，拔五城，斩首五万。四十四年，白起攻南阳太行道，绝之。\n\n"
+    },
     {
       "rev_id": "20260423-154606-d6d95d",
       "timestamp": "2026-04-23T15:46:06Z",

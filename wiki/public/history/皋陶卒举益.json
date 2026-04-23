@@ -1,8 +1,28 @@
 {
   "page": "皋陶卒举益",
-  "latest_rev_id": "20260423-155356-25de79",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163011-8eb80e",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163011-8eb80e",
+      "timestamp": "2026-04-23T16:30:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161211-418a25",
+      "content_hash": "sha256:8eb80e35b5d7278ca1f91ed5243dfc404710e507f2026a90110e88aa76f5c61a",
+      "size": 668,
+      "content": "---\nid: \"皋陶卒举益\"\ntype: event\ntitle: 皋陶卒举益\ndescription: 皋陶去世后，禹举用益，任以政事。益成为禹的主要辅佐大臣。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-027]\ndate: \"[约公元前2065年]\"\n---\n\n::: meta\npn: \"[20]\"\nevent_type: 政治活动\n:::\n\n# 皋陶卒举益\n\n> 皋陶去世后，禹举用益，任以政事。益成为禹的主要辅佐大臣。\n\n**主要人物**：皋陶、益、禹\n\n## 事件经过\n\n皋陶去世后，禹举用益，任以政事。益成为禹的主要辅佐大臣。\n\n## 原文\n\n> 而皋陶卒。封皋陶之後於英、六，或在许。而后举益，任之政。\n\n"
+    },
+    {
+      "rev_id": "20260423-161211-418a25",
+      "timestamp": "2026-04-23T16:12:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155356-25de79",
+      "content_hash": "sha256:418a257d32e9bccb6cd674ca338f857c1b3299f5a42016fd167b7205babf3101",
+      "size": 677,
+      "content": "paragraph_refs:\n  002-027: \"[20]\"\nevent_type: 政治活动\n---\nid: \"皋陶卒举益\"\ntype: event\ntitle: 皋陶卒举益\ndescription: 皋陶去世后，禹举用益，任以政事。益成为禹的主要辅佐大臣。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-027]\ndate: \"[约公元前2065年]\"\n---\n\n# 皋陶卒举益\n\n> 皋陶去世后，禹举用益，任以政事。益成为禹的主要辅佐大臣。\n\n**主要人物**：皋陶、益、禹\n\n## 事件经过\n\n皋陶去世后，禹举用益，任以政事。益成为禹的主要辅佐大臣。\n\n## 原文\n\n> 而皋陶卒。封皋陶之後於英、六，或在许。而后举益，任之政。\n\n"
+    },
     {
       "rev_id": "20260423-155356-25de79",
       "timestamp": "2026-04-23T15:53:56Z",

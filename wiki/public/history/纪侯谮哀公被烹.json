@@ -1,8 +1,28 @@
 {
   "page": "纪侯谮哀公被烹",
-  "latest_rev_id": "20260423-155440-9653cf",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163150-6d403b",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163150-6d403b",
+      "timestamp": "2026-04-23T16:31:50Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161232-fd56fb",
+      "content_hash": "sha256:6d403bd62bfecb0741f08918548f0723f26158004c059d3b4e5f4f1a6dc8d86f",
+      "size": 712,
+      "content": "---\nid: \"纪侯谮哀公被烹\"\ntype: event\ntitle: 纪侯谮哀公被烹\ndescription: 哀公时，纪侯在周天子前进谗言，周天子烹杀哀公，立其弟静为胡公。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-006]\ndate: \"[约公元前885年]\"\n---\n\n::: meta\npn: \"[10]\"\nevent_type: 政治整顿\n:::\n\n# 纪侯谮哀公被烹\n\n> 哀公时，纪侯在周天子前进谗言，周天子烹杀哀公，立其弟静为胡公。\n\n**主要人物**：哀公、纪侯\n\n## 事件经过\n\n哀公时，纪侯在周天子前进谗言，周天子烹杀哀公，立其弟静为胡公。\n\n## 原文\n\n> 哀公时，纪侯谮之周，周烹哀公而立其弟静，是为胡公。\n\n"
+    },
+    {
+      "rev_id": "20260423-161232-fd56fb",
+      "timestamp": "2026-04-23T16:12:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155440-9653cf",
+      "content_hash": "sha256:fd56fb845bc945f6516e16be279b27aeac8374f52acd25cc2a6c4429d16d47a0",
+      "size": 721,
+      "content": "paragraph_refs:\n  032-006: \"[10]\"\nevent_type: 政治整顿\n---\nid: \"纪侯谮哀公被烹\"\ntype: event\ntitle: 纪侯谮哀公被烹\ndescription: 哀公时，纪侯在周天子前进谗言，周天子烹杀哀公，立其弟静为胡公。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-006]\ndate: \"[约公元前885年]\"\n---\n\n# 纪侯谮哀公被烹\n\n> 哀公时，纪侯在周天子前进谗言，周天子烹杀哀公，立其弟静为胡公。\n\n**主要人物**：哀公、纪侯\n\n## 事件经过\n\n哀公时，纪侯在周天子前进谗言，周天子烹杀哀公，立其弟静为胡公。\n\n## 原文\n\n> 哀公时，纪侯谮之周，周烹哀公而立其弟静，是为胡公。\n\n"
+    },
     {
       "rev_id": "20260423-155440-9653cf",
       "timestamp": "2026-04-23T15:54:40Z",

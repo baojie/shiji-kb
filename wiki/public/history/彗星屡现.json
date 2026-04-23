@@ -1,8 +1,18 @@
 {
   "page": "彗星屡现",
-  "latest_rev_id": "20260423-161046-cb5739",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-162430-4d6edf",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-162430-4d6edf",
+      "timestamp": "2026-04-23T16:24:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161046-cb5739",
+      "content_hash": "sha256:4d6edfcbb064a2e946c6eeafed44d6aa3b732857f8ce4297ca02377b4b0b315e",
+      "size": 656,
+      "content": "---\nid: \"彗星屡现\"\ntype: event\ntitle: 彗星屡现\ndescription: 七年，彗星先出东方，见于北方，五月见西方。后复见西方十六日。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-012]\ndate: \"〖%七年〗 （公元前240年）\"\n---\n\n::: meta\npn_006-012: \"[8.1], [8.3]\"\nevent_type: 自然灾害\n:::\n\n# 彗星屡现\n\n> 七年，彗星先出东方，见于北方，五月见西方。后复见西方十六日。\n\n## 事件经过\n\n七年，彗星先出东方，见于北方，五月见西方。后复见西方十六日。\n\n## 原文\n\n> 七年，彗星先出东方，见北方，五月见西方。\n\n"
+    },
     {
       "rev_id": "20260423-161046-cb5739",
       "timestamp": "2026-04-23T16:10:46Z",

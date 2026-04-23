@@ -1,8 +1,28 @@
 {
   "page": "秦初置丞相",
-  "latest_rev_id": "20260423-155416-6c4b14",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163046-73a1aa",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163046-73a1aa",
+      "timestamp": "2026-04-23T16:30:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161218-5dab69",
+      "content_hash": "sha256:73a1aad47e6fa2a1d71ddb889d222d046b264886b7cb3325c331c50aaa263f34",
+      "size": 697,
+      "content": "---\nid: \"秦初置丞相\"\ntype: event\ntitle: 秦初置丞相\ndescription: 秦武王二年，初设丞相之职，以樗里子、甘茂为丞相。这是秦国官制的重要变革。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-015]\ndate: \"〖%秦武王二年〗 （公元前309年）\"\n---\n\n::: meta\npn: \"r168\"\nevent_type: 政治改革\n:::\n\n# 秦初置丞相\n\n> 秦武王二年，初设丞相之职，以樗里子、甘茂为丞相。这是秦国官制的重要变革。\n\n## 事件经过\n\n秦武王二年，初设丞相之职，以樗里子、甘茂为丞相。这是秦国官制的重要变革。\n\n## 原文\n\n> 二。初置丞相，樗里子、甘茂为丞相。\n\n"
+    },
+    {
+      "rev_id": "20260423-161218-5dab69",
+      "timestamp": "2026-04-23T16:12:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155416-6c4b14",
+      "content_hash": "sha256:5dab697197866c3e4101a7a254fe8728fa3fe5ad34205c1907ec9290b69c4cd8",
+      "size": 706,
+      "content": "paragraph_refs:\n  015-015: \"r168\"\nevent_type: 政治改革\n---\nid: \"秦初置丞相\"\ntype: event\ntitle: 秦初置丞相\ndescription: 秦武王二年，初设丞相之职，以樗里子、甘茂为丞相。这是秦国官制的重要变革。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-015]\ndate: \"〖%秦武王二年〗 （公元前309年）\"\n---\n\n# 秦初置丞相\n\n> 秦武王二年，初设丞相之职，以樗里子、甘茂为丞相。这是秦国官制的重要变革。\n\n## 事件经过\n\n秦武王二年，初设丞相之职，以樗里子、甘茂为丞相。这是秦国官制的重要变革。\n\n## 原文\n\n> 二。初置丞相，樗里子、甘茂为丞相。\n\n"
+    },
     {
       "rev_id": "20260423-155416-6c4b14",
       "timestamp": "2026-04-23T15:54:16Z",

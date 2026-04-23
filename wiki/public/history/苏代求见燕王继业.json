@@ -1,8 +1,28 @@
 {
   "page": "苏代求见燕王继业",
-  "latest_rev_id": "20260423-154636-c0fcf1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163228-8deca1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163228-8deca1",
+      "timestamp": "2026-04-23T16:32:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161241-46d627",
+      "content_hash": "sha256:8deca1eaa07a621e165fe076c23c533d43231d222b1d8a208419173067a040f6",
+      "size": 844,
+      "content": "---\nid: \"苏代求见燕王继业\"\ntype: event\ntitle: 苏代求见燕王继业\ndescription: 苏秦死后，弟苏代求见燕王欲袭故事。燕王欲伐齐，苏代分析齐国数战民劳兵敝可取。燕王以受命于天待之。\ntags: [史记, 事件, 苏秦列传]\nsources: [苏秦列传]\nevent_ids: [069-020]\ndate: \"[约公元前283年]\"\n---\n\n::: meta\npn: \"[45]\"\nevent_type: 政治活动\nlocation: \"燕\"\n:::\n\n# 苏代求见燕王继业\n\n> 苏秦死后，弟苏代求见燕王欲袭故事。燕王欲伐齐，苏代分析齐国数战民劳兵敝可取。燕王以受命于天待之。\n\n**主要人物**：苏秦\n\n## 事件经过\n\n苏秦死后，弟苏代求见燕王欲袭故事。燕王欲伐齐，苏代分析齐国数战民劳兵敝可取。燕王以受命于天待之。\n\n## 原文\n\n> 燕王曰：'吾终以子受命於天矣。'\n\n"
+    },
+    {
+      "rev_id": "20260423-161241-46d627",
+      "timestamp": "2026-04-23T16:12:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154636-c0fcf1",
+      "content_hash": "sha256:46d62785fba72ba84af2005fcc49147c9d8a532691139a6f8a53e0e042d2938c",
+      "size": 853,
+      "content": "paragraph_refs:\n  069-020: \"[45]\"\nevent_type: 政治活动\nlocation: \"燕\"\n---\nid: \"苏代求见燕王继业\"\ntype: event\ntitle: 苏代求见燕王继业\ndescription: 苏秦死后，弟苏代求见燕王欲袭故事。燕王欲伐齐，苏代分析齐国数战民劳兵敝可取。燕王以受命于天待之。\ntags: [史记, 事件, 苏秦列传]\nsources: [苏秦列传]\nevent_ids: [069-020]\ndate: \"[约公元前283年]\"\n---\n\n# 苏代求见燕王继业\n\n> 苏秦死后，弟苏代求见燕王欲袭故事。燕王欲伐齐，苏代分析齐国数战民劳兵敝可取。燕王以受命于天待之。\n\n**主要人物**：苏秦\n\n## 事件经过\n\n苏秦死后，弟苏代求见燕王欲袭故事。燕王欲伐齐，苏代分析齐国数战民劳兵敝可取。燕王以受命于天待之。\n\n## 原文\n\n> 燕王曰：'吾终以子受命於天矣。'\n\n"
+    },
     {
       "rev_id": "20260423-154636-c0fcf1",
       "timestamp": "2026-04-23T15:46:36Z",

@@ -1,8 +1,18 @@
 {
   "page": "韩王信攻韩地封韩王",
-  "latest_rev_id": "20260423-154802-ae109b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161533-8f2acb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161533-8f2acb",
+      "timestamp": "2026-04-23T16:15:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154802-ae109b",
+      "content_hash": "sha256:8f2acb60a133ce9c4661bb4e61b68b6f6beb0b9f9ab4a06a670b41b2e1adbd23",
+      "size": 1214,
+      "content": "paragraph_refs:\n  093-003: \"[3]\"\nevent_type: 战争\nlocation: \"阳城、颍川\"\n---\nid: \"韩王信攻韩地封韩王\"\ntype: event\ntitle: 韩王信攻韩地封韩王\ndescription: 汉二年韩信略定韩地十余城，击韩王郑昌于阳城使其降。汉王立韩信为韩王。三年荥阳城破韩信降楚，后逃归汉，复立为韩王。五年春与剖符为韩王，王颍川。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-003]\ndate: \"〖%汉二年〗至〖%五年春〗 （公元前205年至前202年）\"\n---\n\n# 韩王信攻韩地封韩王\n\n> 汉二年韩信略定韩地十余城，击韩王郑昌于阳城使其降。汉王立韩信为韩王。三年荥阳城破韩信降楚，后逃归汉，复立为韩王。五年春与剖符为韩王，王颍川。\n\n**主要人物**：郑昌、韩信\n\n## 事件经过\n\n汉二年韩信略定韩地十余城，击韩王郑昌于阳城使其降。汉王立韩信为韩王。三年荥阳城破韩信降楚，后逃归汉，复立为韩王。五年春与剖符为韩王，王颍川。\n\n## 原文\n\n> 汉二年，韩信略定韩十馀城。汉王至河南，韩信急击韩王昌阳城。昌降，汉王乃立韩信为韩王\n\n"
+    },
     {
       "rev_id": "20260423-154802-ae109b",
       "timestamp": "2026-04-23T15:48:02Z",

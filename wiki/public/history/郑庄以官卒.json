@@ -1,8 +1,18 @@
 {
   "page": "郑庄以官卒",
-  "latest_rev_id": "20260423-155542-5c1db5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161420-c97498",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161420-c97498",
+      "timestamp": "2026-04-23T16:14:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155542-5c1db5",
+      "content_hash": "sha256:c974988bffe902532de19f02793bd84e49376fd2273f0c733617071c989f54a7",
+      "size": 1039,
+      "content": "paragraph_refs:\n  120-021: \"[17]-[18]\"\nevent_type: 家族事件\nlocation: \"汝南\"\n---\nid: \"郑庄以官卒\"\ntype: event\ntitle: 郑庄以官卒\ndescription: 顷之守长史，上以为老以庄为汝南太守。数岁以官卒。郑庄、汲黯始列为九卿皆廉内行修洁，中废家贫宾客益落。卒后家无余赀财。\ntags: [史记, 事件, 汲郑列传]\nsources: [汲郑列传]\nevent_ids: [120-021]\ndate: \"[约公元前115年]\"\n---\n\n# 郑庄以官卒\n\n> 顷之守长史，上以为老以庄为汝南太守。数岁以官卒。郑庄、汲黯始列为九卿皆廉内行修洁，中废家贫宾客益落。卒后家无余赀财。\n\n**主要人物**：郑当时\n\n## 事件经过\n\n顷之守长史，上以为老以庄为汝南太守。数岁以官卒。郑庄、汲黯始列为九卿皆廉内行修洁，中废家贫宾客益落。卒后家无余赀财。\n\n## 原文\n\n> 上以为老，以庄为汝南太守。数岁，以官卒。郑庄、汲黯始列为九卿，廉，内行脩絜。此两人中废，家贫，宾客益落。\n\n"
+    },
     {
       "rev_id": "20260423-155542-5c1db5",
       "timestamp": "2026-04-23T15:55:42Z",

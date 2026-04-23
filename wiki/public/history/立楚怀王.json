@@ -1,8 +1,28 @@
 {
   "page": "立楚怀王",
-  "latest_rev_id": "20260423-154625-2394c5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163133-c6be1c",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163133-c6be1c",
+      "timestamp": "2026-04-23T16:31:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161229-9fb98d",
+      "content_hash": "sha256:c6be1ca88161eaa6e49d8a7bb58fc68846fed952f2fa796be3fa03ab1e264fea",
+      "size": 890,
+      "content": "---\nid: \"立楚怀王\"\ntype: event\ntitle: 立楚怀王\ndescription: 闻陈王已死，项梁因立楚后怀王孙心为楚王，治盱台。项梁号武信君。此为反秦势力建立名义上的统一旗帜。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-014]\ndate: \"〖%二世二年〗 （公元前208年）\"\n---\n\n::: meta\npn: \"[13.3]-[13.4]\"\nevent_type: 政治活动\nlocation: \"盱台\"\n:::\n\n# 立楚怀王\n\n> 闻陈王已死，项梁因立楚后怀王孙心为楚王，治盱台。项梁号武信君。此为反秦势力建立名义上的统一旗帜。\n\n**主要人物**：心、项梁\n\n## 事件经过\n\n闻陈王已死，项梁因立楚后怀王孙心为楚王，治盱台。项梁号武信君。此为反秦势力建立名义上的统一旗帜。\n\n## 原文\n\n> 闻陈王定死，因立楚後怀王孙心为楚王，治盱台。项梁号武信君。\n\n"
+    },
+    {
+      "rev_id": "20260423-161229-9fb98d",
+      "timestamp": "2026-04-23T16:12:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154625-2394c5",
+      "content_hash": "sha256:9fb98d1192a0a008ef4057b7cb04d8c28e71e8ef103747b0d3003b91dd0af49d",
+      "size": 899,
+      "content": "paragraph_refs:\n  008-014: \"[13.3]-[13.4]\"\nevent_type: 政治活动\nlocation: \"盱台\"\n---\nid: \"立楚怀王\"\ntype: event\ntitle: 立楚怀王\ndescription: 闻陈王已死，项梁因立楚后怀王孙心为楚王，治盱台。项梁号武信君。此为反秦势力建立名义上的统一旗帜。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-014]\ndate: \"〖%二世二年〗 （公元前208年）\"\n---\n\n# 立楚怀王\n\n> 闻陈王已死，项梁因立楚后怀王孙心为楚王，治盱台。项梁号武信君。此为反秦势力建立名义上的统一旗帜。\n\n**主要人物**：心、项梁\n\n## 事件经过\n\n闻陈王已死，项梁因立楚后怀王孙心为楚王，治盱台。项梁号武信君。此为反秦势力建立名义上的统一旗帜。\n\n## 原文\n\n> 闻陈王定死，因立楚後怀王孙心为楚王，治盱台。项梁号武信君。\n\n"
+    },
     {
       "rev_id": "20260423-154625-2394c5",
       "timestamp": "2026-04-23T15:46:25Z",

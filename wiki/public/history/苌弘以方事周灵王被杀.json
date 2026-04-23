@@ -1,8 +1,28 @@
 {
   "page": "苌弘以方事周灵王被杀",
-  "latest_rev_id": "20260423-155501-eed0b3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163226-d5aa27",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163226-d5aa27",
+      "timestamp": "2026-04-23T16:32:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161241-cdee27",
+      "content_hash": "sha256:d5aa277bf8df03a81a7fd8c065caaf716d2fe67b5e89b962f60edbe1b6b4a5fb",
+      "size": 856,
+      "content": "---\nid: \"苌弘以方事周灵王被杀\"\ntype: event\ntitle: 苌弘以方事周灵王被杀\ndescription: 苌弘以方术事奉周灵王，设射貍首以求诸侯来朝。诸侯不从，晋人执杀苌弘。周人言方怪者自苌弘始。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-016]\ndate: \"[约公元前492年]\"\n---\n\n::: meta\npn: \"[15]\"\nevent_type: 政治整顿\n:::\n\n# 苌弘以方事周灵王被杀\n\n> 苌弘以方术事奉周灵王，设射貍首以求诸侯来朝。诸侯不从，晋人执杀苌弘。周人言方怪者自苌弘始。\n\n**主要人物**：周灵王、苌弘\n\n## 事件经过\n\n苌弘以方术事奉周灵王，设射貍首以求诸侯来朝。诸侯不从，晋人执杀苌弘。周人言方怪者自苌弘始。\n\n## 原文\n\n> 是时苌弘以方事周灵王……诸侯不从，而晋人执杀苌弘。\n\n"
+    },
+    {
+      "rev_id": "20260423-161241-cdee27",
+      "timestamp": "2026-04-23T16:12:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155501-eed0b3",
+      "content_hash": "sha256:cdee27471100049aff901e63a5c85e530abc0de3f7cb110a85d1efe6862b66c0",
+      "size": 865,
+      "content": "paragraph_refs:\n  028-016: \"[15]\"\nevent_type: 政治整顿\n---\nid: \"苌弘以方事周灵王被杀\"\ntype: event\ntitle: 苌弘以方事周灵王被杀\ndescription: 苌弘以方术事奉周灵王，设射貍首以求诸侯来朝。诸侯不从，晋人执杀苌弘。周人言方怪者自苌弘始。\ntags: [史记, 事件, 封禅书]\nsources: [封禅书]\nevent_ids: [028-016]\ndate: \"[约公元前492年]\"\n---\n\n# 苌弘以方事周灵王被杀\n\n> 苌弘以方术事奉周灵王，设射貍首以求诸侯来朝。诸侯不从，晋人执杀苌弘。周人言方怪者自苌弘始。\n\n**主要人物**：周灵王、苌弘\n\n## 事件经过\n\n苌弘以方术事奉周灵王，设射貍首以求诸侯来朝。诸侯不从，晋人执杀苌弘。周人言方怪者自苌弘始。\n\n## 原文\n\n> 是时苌弘以方事周灵王……诸侯不从，而晋人执杀苌弘。\n\n"
+    },
     {
       "rev_id": "20260423-155501-eed0b3",
       "timestamp": "2026-04-23T15:55:01Z",

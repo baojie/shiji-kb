@@ -1,8 +1,28 @@
 {
   "page": "英布归属项梁",
-  "latest_rev_id": "20260423-154641-80965d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163237-a0b42e",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163237-a0b42e",
+      "timestamp": "2026-04-23T16:32:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161243-f614e4",
+      "content_hash": "sha256:a0b42e7c4894646f14a4a0c2f9b91eb04781409fbc85117882dd2eb09b574a42",
+      "size": 971,
+      "content": "---\nid: \"英布归属项梁\"\ntype: event\ntitle: 英布归属项梁\ndescription: 英布闻项梁平定江东会稽，遂渡江西往。陈婴以项氏世为楚将，率兵归属项梁。英布、蒲将军亦率兵归属项梁。\ntags: [史记, 事件, 黥布列传]\nsources: [黥布列传]\nevent_ids: [091-004]\ndate: \"（公元前208年）\"\n---\n\n::: meta\npn: \"[2]\"\nevent_type: 战争\nlocation: \"江东、会稽\"\n:::\n\n# 英布归属项梁\n\n> 英布闻项梁平定江东会稽，遂渡江西往。陈婴以项氏世为楚将，率兵归属项梁。英布、蒲将军亦率兵归属项梁。\n\n**主要人物**：英布、蒲将军、陈婴、项梁\n\n## 事件经过\n\n英布闻项梁平定江东会稽，遂渡江西往。陈婴以项氏世为楚将，率兵归属项梁。英布、蒲将军亦率兵归属项梁。\n\n## 原文\n\n> 闻项梁定江东会稽，涉江而西。陈婴以项氏世为楚将，乃以兵属项梁，渡淮南，英布、蒲将军亦以兵属项梁。\n\n"
+    },
+    {
+      "rev_id": "20260423-161243-f614e4",
+      "timestamp": "2026-04-23T16:12:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154641-80965d",
+      "content_hash": "sha256:f614e4ff509a06638b14db43f20b647c0ddd4184388c8326bdbdfe05a2458fb1",
+      "size": 980,
+      "content": "paragraph_refs:\n  091-004: \"[2]\"\nevent_type: 战争\nlocation: \"江东、会稽\"\n---\nid: \"英布归属项梁\"\ntype: event\ntitle: 英布归属项梁\ndescription: 英布闻项梁平定江东会稽，遂渡江西往。陈婴以项氏世为楚将，率兵归属项梁。英布、蒲将军亦率兵归属项梁。\ntags: [史记, 事件, 黥布列传]\nsources: [黥布列传]\nevent_ids: [091-004]\ndate: \"（公元前208年）\"\n---\n\n# 英布归属项梁\n\n> 英布闻项梁平定江东会稽，遂渡江西往。陈婴以项氏世为楚将，率兵归属项梁。英布、蒲将军亦率兵归属项梁。\n\n**主要人物**：英布、蒲将军、陈婴、项梁\n\n## 事件经过\n\n英布闻项梁平定江东会稽，遂渡江西往。陈婴以项氏世为楚将，率兵归属项梁。英布、蒲将军亦率兵归属项梁。\n\n## 原文\n\n> 闻项梁定江东会稽，涉江而西。陈婴以项氏世为楚将，乃以兵属项梁，渡淮南，英布、蒲将军亦以兵属项梁。\n\n"
+    },
     {
       "rev_id": "20260423-154641-80965d",
       "timestamp": "2026-04-23T15:46:41Z",

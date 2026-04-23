@@ -1,8 +1,28 @@
 {
   "page": "秦灭燕灭赵代",
-  "latest_rev_id": "20260423-155423-dd5c0b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163101-f257dc",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163101-f257dc",
+      "timestamp": "2026-04-23T16:31:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161221-4ab602",
+      "content_hash": "sha256:f257dc3a3b4dd5cc1968d6cb7fd3a43085588ed7db1d465190d4a371dc93cc9d",
+      "size": 847,
+      "content": "---\nid: \"秦灭燕灭赵代\"\ntype: event\ntitle: 秦灭燕灭赵代\ndescription: 秦始皇二十五年，王贲攻燕虏燕王喜，又攻取代王嘉。五月天下大酺。燕国和赵代残余势力被彻底消灭。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-027]\ndate: \"〖%公元前222〗 （公元前222年）\"\n---\n\n::: meta\npn: \"r255\"\nevent_type: 战争\n:::\n\n# 秦灭燕灭赵代\n\n> 秦始皇二十五年，王贲攻燕虏燕王喜，又攻取代王嘉。五月天下大酺。燕国和赵代残余势力被彻底消灭。\n\n**主要人物**：王贲\n\n## 事件经过\n\n秦始皇二十五年，王贲攻燕虏燕王喜，又攻取代王嘉。五月天下大酺。燕国和赵代残余势力被彻底消灭。\n\n## 原文\n\n> 二十五。王贲击燕，虏王喜。又击得代王嘉。五月，天下大酺。\n\n"
+    },
+    {
+      "rev_id": "20260423-161221-4ab602",
+      "timestamp": "2026-04-23T16:12:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155423-dd5c0b",
+      "content_hash": "sha256:4ab60298e6774e00afd428b1a1bc802a2c23e13af499ee9258031bba53df23e8",
+      "size": 856,
+      "content": "paragraph_refs:\n  015-027: \"r255\"\nevent_type: 战争\n---\nid: \"秦灭燕灭赵代\"\ntype: event\ntitle: 秦灭燕灭赵代\ndescription: 秦始皇二十五年，王贲攻燕虏燕王喜，又攻取代王嘉。五月天下大酺。燕国和赵代残余势力被彻底消灭。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-027]\ndate: \"〖%公元前222〗 （公元前222年）\"\n---\n\n# 秦灭燕灭赵代\n\n> 秦始皇二十五年，王贲攻燕虏燕王喜，又攻取代王嘉。五月天下大酺。燕国和赵代残余势力被彻底消灭。\n\n**主要人物**：王贲\n\n## 事件经过\n\n秦始皇二十五年，王贲攻燕虏燕王喜，又攻取代王嘉。五月天下大酺。燕国和赵代残余势力被彻底消灭。\n\n## 原文\n\n> 二十五。王贲击燕，虏王喜。又击得代王嘉。五月，天下大酺。\n\n"
+    },
     {
       "rev_id": "20260423-155423-dd5c0b",
       "timestamp": "2026-04-23T15:54:23Z",

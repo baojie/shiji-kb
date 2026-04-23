@@ -1,8 +1,28 @@
 {
   "page": "缇萦救父",
-  "latest_rev_id": "20260423-154631-408403",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163154-d2dcc9",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163154-d2dcc9",
+      "timestamp": "2026-04-23T16:31:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161233-8ee4ab",
+      "content_hash": "sha256:d2dcc9ea85f9acbae94795e643919962d337460db3e32315873256d1122f2450",
+      "size": 937,
+      "content": "---\nid: \"缇萦救父\"\ntype: event\ntitle: 缇萦救父\ndescription: 齐太仓令淳于公有罪当刑，其少女缇萦随父至长安上书，愿没入为官婢以赎父刑罪。天子怜悲其意。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-030]\ndate: \"〖%五月〗 （公元前167年）\"\n---\n\n::: meta\npn: \"[28.1]-[28.4]\"\nevent_type: 政治改革\nlocation: \"长安\"\n:::\n\n# 缇萦救父\n\n> 齐太仓令淳于公有罪当刑，其少女缇萦随父至长安上书，愿没入为官婢以赎父刑罪。天子怜悲其意。\n\n**主要人物**：孝文皇帝、淳于公、缇萦\n\n## 事件经过\n\n齐太仓令淳于公有罪当刑，其少女缇萦随父至长安上书，愿没入为官婢以赎父刑罪。天子怜悲其意。\n\n## 原文\n\n> 其少女缇萦自伤泣，乃随其父至长安，上书曰：'妾父为吏，齐中皆称其廉平，今坐法当刑。妾伤夫死者不可复生……'\n\n"
+    },
+    {
+      "rev_id": "20260423-161233-8ee4ab",
+      "timestamp": "2026-04-23T16:12:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154631-408403",
+      "content_hash": "sha256:8ee4abe673271de2221645cce3422eafd3a2c2482e04d231da4e5a9515a96ecd",
+      "size": 946,
+      "content": "paragraph_refs:\n  010-030: \"[28.1]-[28.4]\"\nevent_type: 政治改革\nlocation: \"长安\"\n---\nid: \"缇萦救父\"\ntype: event\ntitle: 缇萦救父\ndescription: 齐太仓令淳于公有罪当刑，其少女缇萦随父至长安上书，愿没入为官婢以赎父刑罪。天子怜悲其意。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-030]\ndate: \"〖%五月〗 （公元前167年）\"\n---\n\n# 缇萦救父\n\n> 齐太仓令淳于公有罪当刑，其少女缇萦随父至长安上书，愿没入为官婢以赎父刑罪。天子怜悲其意。\n\n**主要人物**：孝文皇帝、淳于公、缇萦\n\n## 事件经过\n\n齐太仓令淳于公有罪当刑，其少女缇萦随父至长安上书，愿没入为官婢以赎父刑罪。天子怜悲其意。\n\n## 原文\n\n> 其少女缇萦自伤泣，乃随其父至长安，上书曰：'妾父为吏，齐中皆称其廉平，今坐法当刑。妾伤夫死者不可复生……'\n\n"
+    },
     {
       "rev_id": "20260423-154631-408403",
       "timestamp": "2026-04-23T15:46:31Z",

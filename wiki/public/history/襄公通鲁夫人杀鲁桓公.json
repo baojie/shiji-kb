@@ -1,8 +1,28 @@
 {
   "page": "襄公通鲁夫人杀鲁桓公",
-  "latest_rev_id": "20260423-154703-a8186c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163329-b9e18d",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163329-b9e18d",
+      "timestamp": "2026-04-23T16:33:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161308-a9663f",
+      "content_hash": "sha256:b9e18d231bc4fd4d14e813c15506ef1ce4351afd5108be08b707f5051471a038",
+      "size": 941,
+      "content": "---\nid: \"襄公通鲁夫人杀鲁桓公\"\ntype: event\ntitle: 襄公通鲁夫人杀鲁桓公\ndescription: 齐襄公私通其女弟鲁夫人。鲁桓公来齐知之而怒，齐襄公使力士彭生抱鲁君车上拉杀之。后杀彭生以谢鲁。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-010]\ndate: \"〖%四年〗 （公元前694年）\"\n---\n\n::: meta\npn: \"[22]\"\nevent_type: 政治活动\nlocation: \"齐\"\n:::\n\n# 襄公通鲁夫人杀鲁桓公\n\n> 齐襄公私通其女弟鲁夫人。鲁桓公来齐知之而怒，齐襄公使力士彭生抱鲁君车上拉杀之。后杀彭生以谢鲁。\n\n**主要人物**：彭生、鲁桓公、齐襄公\n\n## 事件经过\n\n齐襄公私通其女弟鲁夫人。鲁桓公来齐知之而怒，齐襄公使力士彭生抱鲁君车上拉杀之。后杀彭生以谢鲁。\n\n## 原文\n\n> 齐襄公与鲁君饮，醉之，使力士彭生抱上鲁君车，因拉杀鲁桓公。\n\n"
+    },
+    {
+      "rev_id": "20260423-161308-a9663f",
+      "timestamp": "2026-04-23T16:13:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154703-a8186c",
+      "content_hash": "sha256:a9663f8addcdac3051e42cef1cd43f3fd5dfc3a4d7d9543bc74fa00311a74c53",
+      "size": 950,
+      "content": "paragraph_refs:\n  032-010: \"[22]\"\nevent_type: 政治活动\nlocation: \"齐\"\n---\nid: \"襄公通鲁夫人杀鲁桓公\"\ntype: event\ntitle: 襄公通鲁夫人杀鲁桓公\ndescription: 齐襄公私通其女弟鲁夫人。鲁桓公来齐知之而怒，齐襄公使力士彭生抱鲁君车上拉杀之。后杀彭生以谢鲁。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-010]\ndate: \"〖%四年〗 （公元前694年）\"\n---\n\n# 襄公通鲁夫人杀鲁桓公\n\n> 齐襄公私通其女弟鲁夫人。鲁桓公来齐知之而怒，齐襄公使力士彭生抱鲁君车上拉杀之。后杀彭生以谢鲁。\n\n**主要人物**：彭生、鲁桓公、齐襄公\n\n## 事件经过\n\n齐襄公私通其女弟鲁夫人。鲁桓公来齐知之而怒，齐襄公使力士彭生抱鲁君车上拉杀之。后杀彭生以谢鲁。\n\n## 原文\n\n> 齐襄公与鲁君饮，醉之，使力士彭生抱上鲁君车，因拉杀鲁桓公。\n\n"
+    },
     {
       "rev_id": "20260423-154703-a8186c",
       "timestamp": "2026-04-23T15:47:03Z",

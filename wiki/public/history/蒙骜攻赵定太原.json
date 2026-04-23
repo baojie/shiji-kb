@@ -1,8 +1,28 @@
 {
   "page": "蒙骜攻赵定太原",
-  "latest_rev_id": "20260423-154655-e71e8e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163306-70537e",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163306-70537e",
+      "timestamp": "2026-04-23T16:33:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161251-912c57",
+      "content_hash": "sha256:70537e0c0d6201117811a7a4b3d4816f2d4904d9a7fad22da0caa0412ca60028",
+      "size": 602,
+      "content": "---\nid: \"蒙骜攻赵定太原\"\ntype: event\ntitle: 蒙骜攻赵定太原\ndescription: 庄襄王二年，使蒙骜攻赵，平定太原地区。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-146]\ndate: \"〖@庄襄王〗〖%二年〗 （公元前248年）\"\n---\n\n::: meta\npn: \"[67.1]\"\nevent_type: 战争\nlocation: \"太原\"\n:::\n\n# 蒙骜攻赵定太原\n\n> 庄襄王二年，使蒙骜攻赵，平定太原地区。\n\n**主要人物**：蒙骜\n\n## 事件经过\n\n庄襄王二年，使蒙骜攻赵，平定太原地区。\n\n## 原文\n\n> 庄襄王二年，使蒙骜攻赵，定太原。\n\n"
+    },
+    {
+      "rev_id": "20260423-161251-912c57",
+      "timestamp": "2026-04-23T16:12:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154655-e71e8e",
+      "content_hash": "sha256:912c5780d2dd1640656746a0e535b090074be7544724ef76184c2cd96b0cbb0d",
+      "size": 611,
+      "content": "paragraph_refs:\n  005-146: \"[67.1]\"\nevent_type: 战争\nlocation: \"太原\"\n---\nid: \"蒙骜攻赵定太原\"\ntype: event\ntitle: 蒙骜攻赵定太原\ndescription: 庄襄王二年，使蒙骜攻赵，平定太原地区。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-146]\ndate: \"〖@庄襄王〗〖%二年〗 （公元前248年）\"\n---\n\n# 蒙骜攻赵定太原\n\n> 庄襄王二年，使蒙骜攻赵，平定太原地区。\n\n**主要人物**：蒙骜\n\n## 事件经过\n\n庄襄王二年，使蒙骜攻赵，平定太原地区。\n\n## 原文\n\n> 庄襄王二年，使蒙骜攻赵，定太原。\n\n"
+    },
     {
       "rev_id": "20260423-154655-e71e8e",
       "timestamp": "2026-04-23T15:46:55Z",

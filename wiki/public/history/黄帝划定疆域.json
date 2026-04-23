@@ -1,8 +1,18 @@
 {
   "page": "黄帝划定疆域",
-  "latest_rev_id": "20260423-154820-cdba01",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161625-b18dcd",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161625-b18dcd",
+      "timestamp": "2026-04-23T16:16:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154820-cdba01",
+      "content_hash": "sha256:b18dcd5d45963764cad3b22e071fb82f1daee4f54aaac4e73fa497de66c1bb11",
+      "size": 1073,
+      "content": "paragraph_refs:\n  001-005: \"[2]\"\nevent_type: 建设\nlocation: \"海、丸山、岱宗、空桐、鸡头、江、熊、湘\"\n---\nid: \"黄帝划定疆域\"\ntype: event\ntitle: 黄帝划定疆域\ndescription: 黄帝划定四方疆域：东至于海，登丸山及岱宗；西至空桐，登鸡头；南至于江，登熊、湘；北逐荤粥，合符釜山，邑于涿鹿之阿。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-005]\ndate: \"[约公元前2660年]\"\n---\n\n# 黄帝划定疆域\n\n> 黄帝划定四方疆域：东至于海，登丸山及岱宗；西至空桐，登鸡头；南至于江，登熊、湘；北逐荤粥，合符釜山，邑于涿鹿之阿。\n\n**主要人物**：黄帝\n\n## 事件经过\n\n黄帝划定四方疆域：东至于海，登丸山及岱宗；西至空桐，登鸡头；南至于江，登熊、湘；北逐荤粥，合符釜山，邑于涿鹿之阿。\n\n## 原文\n\n> 东至于海，登丸山，及岱宗。西至于空桐，登鸡头。南至于江，登熊、湘。北逐荤粥，合符釜山，而邑于涿鹿之阿。\n\n"
+    },
     {
       "rev_id": "20260423-154820-cdba01",
       "timestamp": "2026-04-23T15:48:20Z",

@@ -1,8 +1,28 @@
 {
   "page": "舜荐禹为嗣",
-  "latest_rev_id": "20260423-155459-ea3a22",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163223-4e14a1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163223-4e14a1",
+      "timestamp": "2026-04-23T16:32:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161240-89827f",
+      "content_hash": "sha256:4e14a1456f24fc389d310d2729a4ed1acfb211958c1b8779122a8da71bd8f3d5",
+      "size": 820,
+      "content": "---\nid: \"舜荐禹为嗣\"\ntype: event\ntitle: 舜荐禹为嗣\ndescription: 帝舜向天推荐禹为继承人。十七年后帝舜崩逝。三年守丧完毕，禹谦让辟避舜之子商均于阳城。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-023]\ndate: \"〖%十七年〗 [约公元前2087年]\"\n---\n\n::: meta\npn: \"[19]\"\nevent_type: 继位\n:::\n\n# 舜荐禹为嗣\n\n> 帝舜向天推荐禹为继承人。十七年后帝舜崩逝。三年守丧完毕，禹谦让辟避舜之子商均于阳城。\n\n**主要人物**：帝舜、禹\n\n## 事件经过\n\n帝舜向天推荐禹为继承人。十七年后帝舜崩逝。三年守丧完毕，禹谦让辟避舜之子商均于阳城。\n\n## 原文\n\n> 帝舜荐禹於天，为嗣。十七年而帝舜崩。三年丧毕，禹辞辟舜之子商均於阳城。\n\n"
+    },
+    {
+      "rev_id": "20260423-161240-89827f",
+      "timestamp": "2026-04-23T16:12:40Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155459-ea3a22",
+      "content_hash": "sha256:89827f7cc7b23aa4df02e0a072e403ac24587aac745480f36a68358ab217b1a5",
+      "size": 829,
+      "content": "paragraph_refs:\n  002-023: \"[19]\"\nevent_type: 继位\n---\nid: \"舜荐禹为嗣\"\ntype: event\ntitle: 舜荐禹为嗣\ndescription: 帝舜向天推荐禹为继承人。十七年后帝舜崩逝。三年守丧完毕，禹谦让辟避舜之子商均于阳城。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-023]\ndate: \"〖%十七年〗 [约公元前2087年]\"\n---\n\n# 舜荐禹为嗣\n\n> 帝舜向天推荐禹为继承人。十七年后帝舜崩逝。三年守丧完毕，禹谦让辟避舜之子商均于阳城。\n\n**主要人物**：帝舜、禹\n\n## 事件经过\n\n帝舜向天推荐禹为继承人。十七年后帝舜崩逝。三年守丧完毕，禹谦让辟避舜之子商均于阳城。\n\n## 原文\n\n> 帝舜荐禹於天，为嗣。十七年而帝舜崩。三年丧毕，禹辞辟舜之子商均於阳城。\n\n"
+    },
     {
       "rev_id": "20260423-155459-ea3a22",
       "timestamp": "2026-04-23T15:54:59Z",

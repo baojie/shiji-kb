@@ -1,8 +1,28 @@
 {
   "page": "襄王复国",
-  "latest_rev_id": "20260423-155512-527ade",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163329-d9e726",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163329-d9e726",
+      "timestamp": "2026-04-23T16:33:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161308-5e10fd",
+      "content_hash": "sha256:d9e72678b937b75a79446af97cab747503e7407105f23acd7838a04eddd0657a",
+      "size": 906,
+      "content": "---\nid: \"襄王复国\"\ntype: event\ntitle: 襄王复国\ndescription: 湣王子法章变名姓为莒太史敫家庸。太史敫女怜之，与私通。莒人共立法章为襄王，以保莒城。立太史氏女为王后，是为君王后。\ntags: [史记, 事件, 田敬仲完世家]\nsources: [田敬仲完世家]\nevent_ids: [046-019]\ndate: \"（公元前283年）\"\n---\n\n::: meta\npn: \"[25]\"\nevent_type: 继位\nlocation: \"莒\"\n:::\n\n# 襄王复国\n\n> 湣王子法章变名姓为莒太史敫家庸。太史敫女怜之，与私通。莒人共立法章为襄王，以保莒城。立太史氏女为王后，是为君王后。\n\n**主要人物**：君王后、法章\n\n## 事件经过\n\n湣王子法章变名姓为莒太史敫家庸。太史敫女怜之，与私通。莒人共立法章为襄王，以保莒城。立太史氏女为王后，是为君王后。\n\n## 原文\n\n> 於是莒人共立法章，是为襄王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161308-5e10fd",
+      "timestamp": "2026-04-23T16:13:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155512-527ade",
+      "content_hash": "sha256:5e10fda00a9327b505570ea1dba643027fc619bf683cadba445700e8e1f74c53",
+      "size": 915,
+      "content": "paragraph_refs:\n  046-019: \"[25]\"\nevent_type: 继位\nlocation: \"莒\"\n---\nid: \"襄王复国\"\ntype: event\ntitle: 襄王复国\ndescription: 湣王子法章变名姓为莒太史敫家庸。太史敫女怜之，与私通。莒人共立法章为襄王，以保莒城。立太史氏女为王后，是为君王后。\ntags: [史记, 事件, 田敬仲完世家]\nsources: [田敬仲完世家]\nevent_ids: [046-019]\ndate: \"（公元前283年）\"\n---\n\n# 襄王复国\n\n> 湣王子法章变名姓为莒太史敫家庸。太史敫女怜之，与私通。莒人共立法章为襄王，以保莒城。立太史氏女为王后，是为君王后。\n\n**主要人物**：君王后、法章\n\n## 事件经过\n\n湣王子法章变名姓为莒太史敫家庸。太史敫女怜之，与私通。莒人共立法章为襄王，以保莒城。立太史氏女为王后，是为君王后。\n\n## 原文\n\n> 於是莒人共立法章，是为襄王。\n\n"
+    },
     {
       "rev_id": "20260423-155512-527ade",
       "timestamp": "2026-04-23T15:55:12Z",

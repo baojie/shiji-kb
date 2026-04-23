@@ -1,8 +1,18 @@
 {
   "page": "项羽分封三齐",
-  "latest_rev_id": "20260423-154807-ec7c52",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161543-181c54",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161543-181c54",
+      "timestamp": "2026-04-23T16:15:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154807-ec7c52",
+      "content_hash": "sha256:181c54f9e27d8a3fa4ce09e0e10dcb8b8999b5421024a6dfc77a17cd165dee72",
+      "size": 1157,
+      "content": "paragraph_refs:\n  094-006: \"[7]\"\nevent_type: 政治活动\nlocation: \"即墨、临淄、博阳\"\n---\nid: \"项羽分封三齐\"\ntype: event\ntitle: 项羽分封三齐\ndescription: 项羽灭秦封诸侯时，徙齐王田市为胶东王治即墨，立田都为齐王治临淄，立田安为济北王治博阳。田荣因不助楚赵攻秦未得封王，由此怨项王。\ntags: [史记, 事件, 田儋列传]\nsources: [田儋列传]\nevent_ids: [094-006]\ndate: \"（公元前206年）\"\n---\n\n# 项羽分封三齐\n\n> 项羽灭秦封诸侯时，徙齐王田市为胶东王治即墨，立田都为齐王治临淄，立田安为济北王治博阳。田荣因不助楚赵攻秦未得封王，由此怨项王。\n\n**主要人物**：田安、田市、田都、项羽\n\n## 事件经过\n\n项羽灭秦封诸侯时，徙齐王田市为胶东王治即墨，立田都为齐王治临淄，立田安为济北王治博阳。田荣因不助楚赵攻秦未得封王，由此怨项王。\n\n## 原文\n\n> 项羽既存赵，降章邯等，西屠咸阳，灭秦而立侯王也，乃徙齐王田市更王胶东，治即墨。...田荣以负项梁不肯出兵助楚、赵攻秦，故不得王\n\n"
+    },
     {
       "rev_id": "20260423-154807-ec7c52",
       "timestamp": "2026-04-23T15:48:07Z",

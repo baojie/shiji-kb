@@ -1,8 +1,18 @@
 {
   "page": "韩王请臣",
-  "latest_rev_id": "20260423-155604-3989ea",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161533-cf97d0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161533-cf97d0",
+      "timestamp": "2026-04-23T16:15:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155604-3989ea",
+      "content_hash": "sha256:cf97d0236bf69401b7c2ea50b45604d962adc82bb637a857485b0c30796906c9",
+      "size": 423,
+      "content": "paragraph_refs:\n  006-027: \"[21.4]\"\nevent_type: 政治活动\n---\nid: \"韩王请臣\"\ntype: event\ntitle: 韩王请臣\ndescription: 韩王请求向秦称臣。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-027]\ndate: \"〖%十四年〗 （公元前233年）\"\n---\n\n# 韩王请臣\n\n> 韩王请求向秦称臣。\n\n## 事件经过\n\n韩王请求向秦称臣。\n\n## 原文\n\n> 韩王请为臣。\n\n"
+    },
     {
       "rev_id": "20260423-155604-3989ea",
       "timestamp": "2026-04-23T15:56:04Z",

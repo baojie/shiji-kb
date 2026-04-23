@@ -1,8 +1,28 @@
 {
   "page": "萧何护高祖为吏",
-  "latest_rev_id": "20260423-154650-741889",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163254-adb63f",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163254-adb63f",
+      "timestamp": "2026-04-23T16:32:54Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161247-f71211",
+      "content_hash": "sha256:adb63fd36b1f5fc34436d466117a9e30c19619894ec36fab6b45229c02eb942b",
+      "size": 949,
+      "content": "---\nid: \"萧何护高祖为吏\"\ntype: event\ntitle: 萧何护高祖为吏\ndescription: 高祖为布衣时，萧何数以吏事护高祖。高祖以吏繇咸阳，吏皆送奉钱三，何独以五，显示二人早年友谊深厚。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-002]\ndate: \"[约公元前215年]\"\n---\n\n::: meta\npn: \"[2]\"\nevent_type: 政治活动\nlocation: \"咸阳\"\n:::\n\n# 萧何护高祖为吏\n\n> 高祖为布衣时，萧何数以吏事护高祖。高祖以吏繇咸阳，吏皆送奉钱三，何独以五，显示二人早年友谊深厚。\n\n**主要人物**：萧何、高祖\n\n## 事件经过\n\n高祖为布衣时，萧何数以吏事护高祖。高祖以吏繇咸阳，吏皆送奉钱三，何独以五，显示二人早年友谊深厚。\n\n## 原文\n\n> 高祖为布衣时，何数以吏事护高祖。高祖为亭长，常左右之。高祖以吏繇咸阳，吏皆送奉钱三，何独以五。\n\n"
+    },
+    {
+      "rev_id": "20260423-161247-f71211",
+      "timestamp": "2026-04-23T16:12:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154650-741889",
+      "content_hash": "sha256:f7121162997630a099eacb2458db186aa30eeb773d9d6f5f27af1bbf9c8c1714",
+      "size": 958,
+      "content": "paragraph_refs:\n  053-002: \"[2]\"\nevent_type: 政治活动\nlocation: \"咸阳\"\n---\nid: \"萧何护高祖为吏\"\ntype: event\ntitle: 萧何护高祖为吏\ndescription: 高祖为布衣时，萧何数以吏事护高祖。高祖以吏繇咸阳，吏皆送奉钱三，何独以五，显示二人早年友谊深厚。\ntags: [史记, 事件, 萧相国世家]\nsources: [萧相国世家]\nevent_ids: [053-002]\ndate: \"[约公元前215年]\"\n---\n\n# 萧何护高祖为吏\n\n> 高祖为布衣时，萧何数以吏事护高祖。高祖以吏繇咸阳，吏皆送奉钱三，何独以五，显示二人早年友谊深厚。\n\n**主要人物**：萧何、高祖\n\n## 事件经过\n\n高祖为布衣时，萧何数以吏事护高祖。高祖以吏繇咸阳，吏皆送奉钱三，何独以五，显示二人早年友谊深厚。\n\n## 原文\n\n> 高祖为布衣时，何数以吏事护高祖。高祖为亭长，常左右之。高祖以吏繇咸阳，吏皆送奉钱三，何独以五。\n\n"
+    },
     {
       "rev_id": "20260423-154650-741889",
       "timestamp": "2026-04-23T15:46:50Z",

@@ -1,8 +1,28 @@
 {
   "page": "秦齐称帝",
-  "latest_rev_id": "20260423-154618-6165cc",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163113-b989a6",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163113-b989a6",
+      "timestamp": "2026-04-23T16:31:13Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161224-ad07b6",
+      "content_hash": "sha256:b989a683841c72395cacd48daee150c0fd6eb95b8237e0bd66a4694502552d82",
+      "size": 887,
+      "content": "---\nid: \"秦齐称帝\"\ntype: event\ntitle: 秦齐称帝\ndescription: 昭王十九年，秦国称西帝，齐国称东帝。但仅一月余，因吕礼来秦之故，齐、秦双方各自去帝号恢复称王。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-007]\ndate: \"昭王十九年（公元前288年）\"\n---\n\n::: meta\npn: \"[5]\"\nevent_type: 政治活动\nlocation: \"秦、齐\"\n:::\n\n# 秦齐称帝\n\n> 昭王十九年，秦国称西帝，齐国称东帝。但仅一月余，因吕礼来秦之故，齐、秦双方各自去帝号恢复称王。\n\n**主要人物**：昭王、齐王\n\n## 事件经过\n\n昭王十九年，秦国称西帝，齐国称东帝。但仅一月余，因吕礼来秦之故，齐、秦双方各自去帝号恢复称王。\n\n## 原文\n\n> 昭王十九年，秦称西帝，齐称东帝。月馀，吕礼来，而齐、秦各复归帝为王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161224-ad07b6",
+      "timestamp": "2026-04-23T16:12:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154618-6165cc",
+      "content_hash": "sha256:ad07b64260aefb63f9639f544728b9dabd047635e2c6262dc662d352c6bce95c",
+      "size": 896,
+      "content": "paragraph_refs:\n  072-007: \"[5]\"\nevent_type: 政治活动\nlocation: \"秦、齐\"\n---\nid: \"秦齐称帝\"\ntype: event\ntitle: 秦齐称帝\ndescription: 昭王十九年，秦国称西帝，齐国称东帝。但仅一月余，因吕礼来秦之故，齐、秦双方各自去帝号恢复称王。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-007]\ndate: \"昭王十九年（公元前288年）\"\n---\n\n# 秦齐称帝\n\n> 昭王十九年，秦国称西帝，齐国称东帝。但仅一月余，因吕礼来秦之故，齐、秦双方各自去帝号恢复称王。\n\n**主要人物**：昭王、齐王\n\n## 事件经过\n\n昭王十九年，秦国称西帝，齐国称东帝。但仅一月余，因吕礼来秦之故，齐、秦双方各自去帝号恢复称王。\n\n## 原文\n\n> 昭王十九年，秦称西帝，齐称东帝。月馀，吕礼来，而齐、秦各复归帝为王。\n\n"
+    },
     {
       "rev_id": "20260423-154618-6165cc",
       "timestamp": "2026-04-23T15:46:18Z",

@@ -1,8 +1,18 @@
 {
   "page": "赵尧拜御史大夫",
-  "latest_rev_id": "20260423-154715-cc8014",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161344-d513a0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161344-d513a0",
+      "timestamp": "2026-04-23T16:13:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154715-cc8014",
+      "content_hash": "sha256:d513a0d5d1f7ec2efb21e4df1174fb168f78c4a2aab2c7e4675fdb040cc6fb53",
+      "size": 987,
+      "content": "paragraph_refs:\n  096-010: \"[3.2]\"\nevent_type: 政治活动\n---\nid: \"赵尧拜御史大夫\"\ntype: event\ntitle: 赵尧拜御史大夫\ndescription: 周昌赴任后，高祖持御史大夫印把玩，审视赵尧说\"无以易尧\"，遂拜赵尧为御史大夫。赵尧后从击陈豨有功，封为江邑侯。\ntags: [史记, 事件, 张丞相列传]\nsources: [张丞相列传]\nevent_ids: [096-010]\ndate: \"[公元前198年]\"\n---\n\n# 赵尧拜御史大夫\n\n> 周昌赴任后，高祖持御史大夫印把玩，审视赵尧说\"无以易尧\"，遂拜赵尧为御史大夫。赵尧后从击陈豨有功，封为江邑侯。\n\n**主要人物**：赵尧、高祖\n\n## 事件经过\n\n周昌赴任后，高祖持御史大夫印把玩，审视赵尧说\"无以易尧\"，遂拜赵尧为御史大夫。赵尧后从击陈豨有功，封为江邑侯。\n\n## 原文\n\n> 高祖持御史大夫印弄之，曰：\"谁可以为御史大夫者？\"孰视赵尧，曰：\"无以易尧。\"遂拜赵尧为御史大夫。\n\n"
+    },
     {
       "rev_id": "20260423-154715-cc8014",
       "timestamp": "2026-04-23T15:47:15Z",

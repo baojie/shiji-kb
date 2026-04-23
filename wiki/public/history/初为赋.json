@@ -1,8 +1,18 @@
 {
   "page": "初为赋",
-  "latest_rev_id": "20260423-160626-843f58",
-  "revision_count": 2,
+  "latest_rev_id": "20260423-161908-6b19c3",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-161908-6b19c3",
+      "timestamp": "2026-04-23T16:19:08Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-160626-843f58",
+      "content_hash": "sha256:6b19c321b13930a1b9dd38f2088aa688da31e5fce560458ce4b1c9407e4bfa6c",
+      "size": 632,
+      "content": "---\nid: \"初为赋\"\ntype: event\ntitle: 初为赋\ndescription: 孝公十四年，秦国首次实行赋税制度。这是商鞅变法中经济改革的重要内容。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-075]\ndate: \"〖%十四年〗 （公元前348年）\"\n---\n\n::: meta\npn_005-075: \"[52.4]\"\nevent_type: 经济活动\n:::\n\n# 初为赋\n\n> 孝公十四年，秦国首次实行赋税制度。这是商鞅变法中经济改革的重要内容。\n\n## 事件经过\n\n孝公十四年，秦国首次实行赋税制度。这是商鞅变法中经济改革的重要内容。\n\n## 原文\n\n> 十四年，初为赋。\n\n"
+    },
     {
       "rev_id": "20260423-160626-843f58",
       "timestamp": "2026-04-23T16:06:26Z",

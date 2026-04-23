@@ -1,8 +1,18 @@
 {
   "page": "邓通赐铜山铸钱",
-  "latest_rev_id": "20260423-154723-4d0d22",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161411-974622",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161411-974622",
+      "timestamp": "2026-04-23T16:14:11Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154723-4d0d22",
+      "content_hash": "sha256:97462287fb1a779c00b26decd660b7dcce9c84414433c96efc9cc4a08f87373a",
+      "size": 1031,
+      "content": "paragraph_refs:\n  125-003: \"[2]\"\nevent_type: 经济活动\nlocation: \"蜀严道铜山\"\n---\nid: \"邓通赐铜山铸钱\"\ntype: event\ntitle: 邓通赐铜山铸钱\ndescription: 善相者相邓通说他当贫饿死。文帝说能使通富者在我，于是赐邓通蜀严道铜山，得自铸钱。\"邓氏钱\"布天下，其富如此。\ntags: [史记, 事件, 佞幸列传]\nsources: [佞幸列传]\nevent_ids: [125-003]\ndate: \"（公元前175年）\"\n---\n\n# 邓通赐铜山铸钱\n\n> 善相者相邓通说他当贫饿死。文帝说能使通富者在我，于是赐邓通蜀严道铜山，得自铸钱。\"邓氏钱\"布天下，其富如此。\n\n**主要人物**：文帝、邓通\n\n## 事件经过\n\n善相者相邓通说他当贫饿死。文帝说能使通富者在我，于是赐邓通蜀严道铜山，得自铸钱。\"邓氏钱\"布天下，其富如此。\n\n## 原文\n\n> 上使善相者相通，曰'当贫饿死'。文帝曰：'能富通者在我也。何谓贫乎？'於是赐邓通蜀严道铜山，得自铸钱，'邓氏钱'布天下。\n\n"
+    },
     {
       "rev_id": "20260423-154723-4d0d22",
       "timestamp": "2026-04-23T15:47:23Z",

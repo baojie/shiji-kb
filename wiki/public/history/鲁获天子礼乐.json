@@ -1,8 +1,18 @@
 {
   "page": "鲁获天子礼乐",
-  "latest_rev_id": "20260423-155625-4148d5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161619-58f930",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161619-58f930",
+      "timestamp": "2026-04-23T16:16:19Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155625-4148d5",
+      "content_hash": "sha256:58f930cb57c9a3602a70eb750a77deebefbe6863d775be9ae523f0525e61c8a8",
+      "size": 677,
+      "content": "paragraph_refs:\n  033-010: \"[6.2]\"\nevent_type: 政治活动\nlocation: \"鲁\"\n---\nid: \"鲁获天子礼乐\"\ntype: event\ntitle: 鲁获天子礼乐\ndescription: 成王乃命鲁得郊祭文王。鲁有天子礼乐，以褒周公之德。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-010]\ndate: \"[约公元前1032年]\"\n---\n\n# 鲁获天子礼乐\n\n> 成王乃命鲁得郊祭文王。鲁有天子礼乐，以褒周公之德。\n\n**主要人物**：成王\n\n## 事件经过\n\n成王乃命鲁得郊祭文王。鲁有天子礼乐，以褒周公之德。\n\n## 原文\n\n> 於是成王乃命鲁得郊祭文王。鲁有天子礼乐者,以襃周公之德也。\n\n"
+    },
     {
       "rev_id": "20260423-155625-4148d5",
       "timestamp": "2026-04-23T15:56:25Z",

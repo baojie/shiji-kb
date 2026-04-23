@@ -1,8 +1,28 @@
 {
   "page": "秦灭齐并天下",
-  "latest_rev_id": "20260423-154615-98d1b3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163104-4783d1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163104-4783d1",
+      "timestamp": "2026-04-23T16:31:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161222-6722ff",
+      "content_hash": "sha256:4783d1965670e18099af0b65ce87095ce49efd999f9db9c54eef75b178b4e9f3",
+      "size": 760,
+      "content": "---\nid: \"秦灭齐并天下\"\ntype: event\ntitle: 秦灭齐并天下\ndescription: 秦始皇二十六年，王贲攻齐虏齐王建。秦初并天下，始皇帝称帝。六国至此全部灭亡。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-028]\ndate: \"〖%公元前221〗 （公元前221年）\"\n---\n\n::: meta\npn: \"r256\"\nevent_type: 战争\n:::\n\n# 秦灭齐并天下\n\n> 秦始皇二十六年，王贲攻齐虏齐王建。秦初并天下，始皇帝称帝。六国至此全部灭亡。\n\n**主要人物**：王贲\n\n## 事件经过\n\n秦始皇二十六年，王贲攻齐虏齐王建。秦初并天下，始皇帝称帝。六国至此全部灭亡。\n\n## 原文\n\n> 二十六。王贲击齐，虏王建。初并天下，立为皇帝。\n\n"
+    },
+    {
+      "rev_id": "20260423-161222-6722ff",
+      "timestamp": "2026-04-23T16:12:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154615-98d1b3",
+      "content_hash": "sha256:6722ff884c0ea8609c19c1ec27cd42e839c15e1fa667d2ffcc4a55b583df5eae",
+      "size": 769,
+      "content": "paragraph_refs:\n  015-028: \"r256\"\nevent_type: 战争\n---\nid: \"秦灭齐并天下\"\ntype: event\ntitle: 秦灭齐并天下\ndescription: 秦始皇二十六年，王贲攻齐虏齐王建。秦初并天下，始皇帝称帝。六国至此全部灭亡。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-028]\ndate: \"〖%公元前221〗 （公元前221年）\"\n---\n\n# 秦灭齐并天下\n\n> 秦始皇二十六年，王贲攻齐虏齐王建。秦初并天下，始皇帝称帝。六国至此全部灭亡。\n\n**主要人物**：王贲\n\n## 事件经过\n\n秦始皇二十六年，王贲攻齐虏齐王建。秦初并天下，始皇帝称帝。六国至此全部灭亡。\n\n## 原文\n\n> 二十六。王贲击齐，虏王建。初并天下，立为皇帝。\n\n"
+    },
     {
       "rev_id": "20260423-154615-98d1b3",
       "timestamp": "2026-04-23T15:46:15Z",

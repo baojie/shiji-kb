@@ -1,8 +1,28 @@
 {
   "page": "聂政刺杀侠累",
-  "latest_rev_id": "20260423-154633-1e3519",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163206-74db32",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163206-74db32",
+      "timestamp": "2026-04-23T16:32:06Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161236-ae884e",
+      "content_hash": "sha256:74db329d17766bfaf5e0bfbc06d563ac2e8700cc7c24c13e6c6ea35b3c50744a",
+      "size": 924,
+      "content": "---\nid: \"聂政刺杀侠累\"\ntype: event\ntitle: 聂政刺杀侠累\ndescription: 聂政辞车骑人徒独行，杖剑至韩，直入刺杀侠累，又击杀数十人。为免连累姊与严仲子，自皮面决眼、出肠而死。\ntags: [史记, 事件, 刺客列传]\nsources: [刺客列传]\nevent_ids: [086-011]\ndate: \"（公元前397年）\"\n---\n\n::: meta\npn: \"[4.5]\"\nevent_type: 政治活动\n:::\n\n# 聂政刺杀侠累\n\n> 聂政辞车骑人徒独行，杖剑至韩，直入刺杀侠累，又击杀数十人。为免连累姊与严仲子，自皮面决眼、出肠而死。\n\n**主要人物**：相侠累、聂政\n\n## 事件经过\n\n聂政辞车骑人徒独行，杖剑至韩，直入刺杀侠累，又击杀数十人。为免连累姊与严仲子，自皮面决眼、出肠而死。\n\n## 原文\n\n> 聂政直入,上阶刺杀侠累,左右大乱。聂政大呼,所击杀者数十人,因自皮面决眼,自屠出肠,遂以死。\n\n"
+    },
+    {
+      "rev_id": "20260423-161236-ae884e",
+      "timestamp": "2026-04-23T16:12:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154633-1e3519",
+      "content_hash": "sha256:ae884ee407feb7d1403e8086de23701e26d401138c38efbc4daab1335881a2fe",
+      "size": 933,
+      "content": "paragraph_refs:\n  086-011: \"[4.5]\"\nevent_type: 政治活动\n---\nid: \"聂政刺杀侠累\"\ntype: event\ntitle: 聂政刺杀侠累\ndescription: 聂政辞车骑人徒独行，杖剑至韩，直入刺杀侠累，又击杀数十人。为免连累姊与严仲子，自皮面决眼、出肠而死。\ntags: [史记, 事件, 刺客列传]\nsources: [刺客列传]\nevent_ids: [086-011]\ndate: \"（公元前397年）\"\n---\n\n# 聂政刺杀侠累\n\n> 聂政辞车骑人徒独行，杖剑至韩，直入刺杀侠累，又击杀数十人。为免连累姊与严仲子，自皮面决眼、出肠而死。\n\n**主要人物**：相侠累、聂政\n\n## 事件经过\n\n聂政辞车骑人徒独行，杖剑至韩，直入刺杀侠累，又击杀数十人。为免连累姊与严仲子，自皮面决眼、出肠而死。\n\n## 原文\n\n> 聂政直入,上阶刺杀侠累,左右大乱。聂政大呼,所击杀者数十人,因自皮面决眼,自屠出肠,遂以死。\n\n"
+    },
     {
       "rev_id": "20260423-154633-1e3519",
       "timestamp": "2026-04-23T15:46:33Z",

@@ -1,8 +1,28 @@
 {
   "page": "秦止白起善楚约盟",
-  "latest_rev_id": "20260423-154615-9896bc",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163057-d2d956",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163057-d2d956",
+      "timestamp": "2026-04-23T16:30:57Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161221-1f3113",
+      "content_hash": "sha256:d2d9562cd149eaf6b97f7388e230354d0bc16de44d157e9fbd1e3ec13f140294",
+      "size": 974,
+      "content": "---\nid: \"秦止白起善楚约盟\"\ntype: event\ntitle: 秦止白起善楚约盟\ndescription: 秦昭王听从黄歇之论，停止白起伐楚之计，辞谢韩魏，遣使赂楚，约为盟国。黄歇外交辩论的成功挽救了楚国于危亡之际。\ntags: [史记, 事件, 春申君列传]\nsources: [春申君列传]\nevent_ids: [078-002]\ndate: \"黄歇上书后 [约公元前272年]\"\n---\n\n::: meta\npn: \"[10]\"\nevent_type: 政治活动\nlocation: \"秦\"\n:::\n\n# 秦止白起善楚约盟\n\n> 秦昭王听从黄歇之论，停止白起伐楚之计，辞谢韩魏，遣使赂楚，约为盟国。黄歇外交辩论的成功挽救了楚国于危亡之际。\n\n**主要人物**：白起、秦昭王\n\n## 事件经过\n\n秦昭王听从黄歇之论，停止白起伐楚之计，辞谢韩魏，遣使赂楚，约为盟国。黄歇外交辩论的成功挽救了楚国于危亡之际。\n\n## 原文\n\n> 昭王曰：\"善。\"於是乃止白起而谢韩、魏。发使赂楚，约为与国。\n\n"
+    },
+    {
+      "rev_id": "20260423-161221-1f3113",
+      "timestamp": "2026-04-23T16:12:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154615-9896bc",
+      "content_hash": "sha256:1f3113b38644a4c5b08dc612fae3ac0db47b6d9da0b0251e7e2bcf5883dd3c48",
+      "size": 983,
+      "content": "paragraph_refs:\n  078-002: \"[10]\"\nevent_type: 政治活动\nlocation: \"秦\"\n---\nid: \"秦止白起善楚约盟\"\ntype: event\ntitle: 秦止白起善楚约盟\ndescription: 秦昭王听从黄歇之论，停止白起伐楚之计，辞谢韩魏，遣使赂楚，约为盟国。黄歇外交辩论的成功挽救了楚国于危亡之际。\ntags: [史记, 事件, 春申君列传]\nsources: [春申君列传]\nevent_ids: [078-002]\ndate: \"黄歇上书后 [约公元前272年]\"\n---\n\n# 秦止白起善楚约盟\n\n> 秦昭王听从黄歇之论，停止白起伐楚之计，辞谢韩魏，遣使赂楚，约为盟国。黄歇外交辩论的成功挽救了楚国于危亡之际。\n\n**主要人物**：白起、秦昭王\n\n## 事件经过\n\n秦昭王听从黄歇之论，停止白起伐楚之计，辞谢韩魏，遣使赂楚，约为盟国。黄歇外交辩论的成功挽救了楚国于危亡之际。\n\n## 原文\n\n> 昭王曰：\"善。\"於是乃止白起而谢韩、魏。发使赂楚，约为与国。\n\n"
+    },
     {
       "rev_id": "20260423-154615-9896bc",
       "timestamp": "2026-04-23T15:46:15Z",

@@ -1,8 +1,28 @@
 {
   "page": "白起伐魏楚人反江南",
-  "latest_rev_id": "20260423-154604-06da44",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163003-e30b61",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163003-e30b61",
+      "timestamp": "2026-04-23T16:30:03Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161209-84fb58",
+      "content_hash": "sha256:e30b612529ef38cd6acf4dabb1f5ba1271c98287a33ee36388b2290ea5e1e79b",
+      "size": 698,
+      "content": "---\nid: \"白起伐魏楚人反江南\"\ntype: event\ntitle: 白起伐魏楚人反江南\ndescription: 昭襄王三十一年，白起伐魏取两城。楚人反攻收复江南之地。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-126]\ndate: \"〖%三十一年〗 （公元前276年）\"\n---\n\n::: meta\npn: \"[63.18]\"\nevent_type: 战争\nlocation: \"江南\"\n:::\n\n# 白起伐魏楚人反江南\n\n> 昭襄王三十一年，白起伐魏取两城。楚人反攻收复江南之地。\n\n**主要人物**：白起\n\n## 事件经过\n\n昭襄王三十一年，白起伐魏取两城。楚人反攻收复江南之地。\n\n## 原文\n\n> 三十一年，白起伐魏，取两城。楚人反我江南。\n\n"
+    },
+    {
+      "rev_id": "20260423-161209-84fb58",
+      "timestamp": "2026-04-23T16:12:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154604-06da44",
+      "content_hash": "sha256:84fb5848f1123e952e2bccf2dc2e225d0040ab59b489f8497cc36d9544454e69",
+      "size": 707,
+      "content": "paragraph_refs:\n  005-126: \"[63.18]\"\nevent_type: 战争\nlocation: \"江南\"\n---\nid: \"白起伐魏楚人反江南\"\ntype: event\ntitle: 白起伐魏楚人反江南\ndescription: 昭襄王三十一年，白起伐魏取两城。楚人反攻收复江南之地。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-126]\ndate: \"〖%三十一年〗 （公元前276年）\"\n---\n\n# 白起伐魏楚人反江南\n\n> 昭襄王三十一年，白起伐魏取两城。楚人反攻收复江南之地。\n\n**主要人物**：白起\n\n## 事件经过\n\n昭襄王三十一年，白起伐魏取两城。楚人反攻收复江南之地。\n\n## 原文\n\n> 三十一年，白起伐魏，取两城。楚人反我江南。\n\n"
+    },
     {
       "rev_id": "20260423-154604-06da44",
       "timestamp": "2026-04-23T15:46:04Z",

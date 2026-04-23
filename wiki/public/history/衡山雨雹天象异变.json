@@ -1,8 +1,28 @@
 {
   "page": "衡山雨雹天象异变",
-  "latest_rev_id": "20260423-155510-f7df57",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163321-319374",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163321-319374",
+      "timestamp": "2026-04-23T16:33:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161302-7594bd",
+      "content_hash": "sha256:319374406611d936b8a3cf6c856cdab89aaa42ffe669e8167ba65127b718e615",
+      "size": 819,
+      "content": "---\nid: \"衡山雨雹天象异变\"\ntype: event\ntitle: 衡山雨雹天象异变\ndescription: 秋，衡山雨雹大者五寸深者二尺。荧惑逆行守北辰，月出北辰间，岁星逆行天廷中，天象异常。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-009]\ndate: \"〖%秋〗 （公元前155年）\"\n---\n\n::: meta\npn: \"[4.1]-[4.4]\"\nevent_type: 自然灾害\nlocation: \"衡山\"\n:::\n\n# 衡山雨雹天象异变\n\n> 秋，衡山雨雹大者五寸深者二尺。荧惑逆行守北辰，月出北辰间，岁星逆行天廷中，天象异常。\n\n## 事件经过\n\n秋，衡山雨雹大者五寸深者二尺。荧惑逆行守北辰，月出北辰间，岁星逆行天廷中，天象异常。\n\n## 原文\n\n> 秋，衡山雨雹，大者五寸，深者二尺。荧惑逆行，守北辰。\n\n"
+    },
+    {
+      "rev_id": "20260423-161302-7594bd",
+      "timestamp": "2026-04-23T16:13:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155510-f7df57",
+      "content_hash": "sha256:7594bd5c705b39a02c8c1c18c87e297fc7310304a77b48abe0a958b8fd28c444",
+      "size": 828,
+      "content": "paragraph_refs:\n  011-009: \"[4.1]-[4.4]\"\nevent_type: 自然灾害\nlocation: \"衡山\"\n---\nid: \"衡山雨雹天象异变\"\ntype: event\ntitle: 衡山雨雹天象异变\ndescription: 秋，衡山雨雹大者五寸深者二尺。荧惑逆行守北辰，月出北辰间，岁星逆行天廷中，天象异常。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-009]\ndate: \"〖%秋〗 （公元前155年）\"\n---\n\n# 衡山雨雹天象异变\n\n> 秋，衡山雨雹大者五寸深者二尺。荧惑逆行守北辰，月出北辰间，岁星逆行天廷中，天象异常。\n\n## 事件经过\n\n秋，衡山雨雹大者五寸深者二尺。荧惑逆行守北辰，月出北辰间，岁星逆行天廷中，天象异常。\n\n## 原文\n\n> 秋，衡山雨雹，大者五寸，深者二尺。荧惑逆行，守北辰。\n\n"
+    },
     {
       "rev_id": "20260423-155510-f7df57",
       "timestamp": "2026-04-23T15:55:10Z",

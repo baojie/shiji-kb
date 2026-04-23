@@ -1,8 +1,28 @@
 {
   "page": "白公胜归楚作乱",
-  "latest_rev_id": "20260423-154603-ceaf2a",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163001-eebd68",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163001-eebd68",
+      "timestamp": "2026-04-23T16:30:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161209-b87e34",
+      "content_hash": "sha256:eebd683e647d0f16730ddab16a0c37a0c2a65098ee4ae3bfd195449194308529",
+      "size": 938,
+      "content": "---\nid: \"白公胜归楚作乱\"\ntype: event\ntitle: 白公胜归楚作乱\ndescription: 太子建之子胜在吴，楚惠王召其归楚，号白公，居边邑鄢。白公胜怨郑杀其父，阴养死士求报郑。请伐郑不得而怒子西。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-022]\ndate: \"（公元前487年）\"\n---\n\n::: meta\npn: \"[21]、[22]\"\nevent_type: 政治活动\nlocation: \"楚\"\n:::\n\n# 白公胜归楚作乱\n\n> 太子建之子胜在吴，楚惠王召其归楚，号白公，居边邑鄢。白公胜怨郑杀其父，阴养死士求报郑。请伐郑不得而怒子西。\n\n**主要人物**：惠王\n\n## 事件经过\n\n太子建之子胜在吴，楚惠王召其归楚，号白公，居边邑鄢。白公胜怨郑杀其父，阴养死士求报郑。请伐郑不得而怒子西。\n\n## 原文\n\n> 白公归楚三年而吴诛子胥。\"\"白公胜怒曰：'非郑之仇，乃子西也。'\n\n"
+    },
+    {
+      "rev_id": "20260423-161209-b87e34",
+      "timestamp": "2026-04-23T16:12:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154603-ceaf2a",
+      "content_hash": "sha256:b87e3475943cff1ce90e2821c75e29b3b3c122869f4f50951fa1dcf6c77ddec0",
+      "size": 947,
+      "content": "paragraph_refs:\n  066-022: \"[21]、[22]\"\nevent_type: 政治活动\nlocation: \"楚\"\n---\nid: \"白公胜归楚作乱\"\ntype: event\ntitle: 白公胜归楚作乱\ndescription: 太子建之子胜在吴，楚惠王召其归楚，号白公，居边邑鄢。白公胜怨郑杀其父，阴养死士求报郑。请伐郑不得而怒子西。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-022]\ndate: \"（公元前487年）\"\n---\n\n# 白公胜归楚作乱\n\n> 太子建之子胜在吴，楚惠王召其归楚，号白公，居边邑鄢。白公胜怨郑杀其父，阴养死士求报郑。请伐郑不得而怒子西。\n\n**主要人物**：惠王\n\n## 事件经过\n\n太子建之子胜在吴，楚惠王召其归楚，号白公，居边邑鄢。白公胜怨郑杀其父，阴养死士求报郑。请伐郑不得而怒子西。\n\n## 原文\n\n> 白公归楚三年而吴诛子胥。\"\"白公胜怒曰：'非郑之仇，乃子西也。'\n\n"
+    },
     {
       "rev_id": "20260423-154603-ceaf2a",
       "timestamp": "2026-04-23T15:46:03Z",

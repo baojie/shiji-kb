@@ -1,8 +1,28 @@
 {
   "page": "秦围邯郸",
-  "latest_rev_id": "20260423-155417-8833ea",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163047-feaefc",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163047-feaefc",
+      "timestamp": "2026-04-23T16:30:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161218-278536",
+      "content_hash": "sha256:feaefce992644a5f36910e9c99ea9e9bf26c2d3d1692831529b1d539e4ece91b",
+      "size": 827,
+      "content": "---\nid: \"秦围邯郸\"\ntype: event\ntitle: 秦围邯郸\ndescription: 长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-019]\ndate: \"〖%明年〗 （公元前258年）\"\n---\n\n::: meta\npn: \"[17.6]-[17.7]\"\nevent_type: 战争\nlocation: \"邯郸\"\n:::\n\n# 秦围邯郸\n\n> 长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\n\n## 事件经过\n\n长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\n\n## 原文\n\n> 明年，秦兵遂围邯郸，岁馀，几不得脱。赖楚、魏诸侯来救，乃得解邯郸之围。\n\n"
+    },
+    {
+      "rev_id": "20260423-161218-278536",
+      "timestamp": "2026-04-23T16:12:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155417-8833ea",
+      "content_hash": "sha256:278536e2340d1baa167434bc6a831145f67d288f64efa5e2746fddb6d505bf4a",
+      "size": 836,
+      "content": "paragraph_refs:\n  081-019: \"[17.6]-[17.7]\"\nevent_type: 战争\nlocation: \"邯郸\"\n---\nid: \"秦围邯郸\"\ntype: event\ntitle: 秦围邯郸\ndescription: 长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-019]\ndate: \"〖%明年〗 （公元前258年）\"\n---\n\n# 秦围邯郸\n\n> 长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\n\n## 事件经过\n\n长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\n\n## 原文\n\n> 明年，秦兵遂围邯郸，岁馀，几不得脱。赖楚、魏诸侯来救，乃得解邯郸之围。\n\n"
+    },
     {
       "rev_id": "20260423-155417-8833ea",
       "timestamp": "2026-04-23T15:54:17Z",

@@ -1,8 +1,28 @@
 {
   "page": "立刘仲为代王",
-  "latest_rev_id": "20260423-155433-283f42",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163129-78d6b3",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163129-78d6b3",
+      "timestamp": "2026-04-23T16:31:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161228-bfdd96",
+      "content_hash": "sha256:78d6b35ead1c23273a00a4938ad191f577074027bd878ae60932fa69994e9b32",
+      "size": 667,
+      "content": "---\nid: \"立刘仲为代王\"\ntype: event\ntitle: 立刘仲为代王\ndescription: 白登之围后，令樊哙定代地，立兄刘仲为代王，加强北方防御。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-077]\ndate: \"〖%七年〗 （公元前200年）\"\n---\n\n::: meta\npn: \"[65.5]-[65.6]\"\nevent_type: 政治活动\n:::\n\n# 立刘仲为代王\n\n> 白登之围后，令樊哙定代地，立兄刘仲为代王，加强北方防御。\n\n**主要人物**：刘仲、刘邦\n\n## 事件经过\n\n白登之围后，令樊哙定代地，立兄刘仲为代王，加强北方防御。\n\n## 原文\n\n> 令樊哙止定代地。立兄刘仲为代王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161228-bfdd96",
+      "timestamp": "2026-04-23T16:12:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155433-283f42",
+      "content_hash": "sha256:bfdd965a130df3515c3a96da3e7ee13dd53567dcfabc3a4ece06401c1d9c7538",
+      "size": 676,
+      "content": "paragraph_refs:\n  008-077: \"[65.5]-[65.6]\"\nevent_type: 政治活动\n---\nid: \"立刘仲为代王\"\ntype: event\ntitle: 立刘仲为代王\ndescription: 白登之围后，令樊哙定代地，立兄刘仲为代王，加强北方防御。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-077]\ndate: \"〖%七年〗 （公元前200年）\"\n---\n\n# 立刘仲为代王\n\n> 白登之围后，令樊哙定代地，立兄刘仲为代王，加强北方防御。\n\n**主要人物**：刘仲、刘邦\n\n## 事件经过\n\n白登之围后，令樊哙定代地，立兄刘仲为代王，加强北方防御。\n\n## 原文\n\n> 令樊哙止定代地。立兄刘仲为代王。\n\n"
+    },
     {
       "rev_id": "20260423-155433-283f42",
       "timestamp": "2026-04-23T15:54:33Z",

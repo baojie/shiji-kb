@@ -1,8 +1,28 @@
 {
   "page": "营建成周洛邑",
-  "latest_rev_id": "20260423-155504-b11df9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163251-b2cef8",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163251-b2cef8",
+      "timestamp": "2026-04-23T16:32:51Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161246-d477ee",
+      "content_hash": "sha256:b2cef8fef4cff5c285f752fcfa5d645032e342e8bd43eb6d308f62996a9f75e1",
+      "size": 956,
+      "content": "---\nid: \"营建成周洛邑\"\ntype: event\ntitle: 营建成周洛邑\ndescription: 成王七年二月乙未，王朝步自周至丰，使召公先到洛相土。三月周公往营成周洛邑，卜居吉，遂国之。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-005]\ndate: \"〖%七年二月乙未〗 （公元前1036年）\"\n---\n\n::: meta\npn: \"[4.3]\"\nevent_type: 建设\nlocation: \"成周雒邑\"\n:::\n\n# 营建成周洛邑\n\n> 成王七年二月乙未，王朝步自周至丰，使召公先到洛相土。三月周公往营成周洛邑，卜居吉，遂国之。\n\n**主要人物**：召公、周公、成王\n\n## 事件经过\n\n成王七年二月乙未，王朝步自周至丰，使召公先到洛相土。三月周公往营成周洛邑，卜居吉，遂国之。\n\n## 原文\n\n> 成王七年二月乙未,王朝步自周,至丰,使太保召公先之雒相土。其三月,周公往营成周雒邑,卜居焉,曰吉,遂国之。\n\n"
+    },
+    {
+      "rev_id": "20260423-161246-d477ee",
+      "timestamp": "2026-04-23T16:12:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155504-b11df9",
+      "content_hash": "sha256:d477eebd07596581f5c55e8c139f4690e73cb68eb4f5a590d0a27135acab3082",
+      "size": 965,
+      "content": "paragraph_refs:\n  033-005: \"[4.3]\"\nevent_type: 建设\nlocation: \"成周雒邑\"\n---\nid: \"营建成周洛邑\"\ntype: event\ntitle: 营建成周洛邑\ndescription: 成王七年二月乙未，王朝步自周至丰，使召公先到洛相土。三月周公往营成周洛邑，卜居吉，遂国之。\ntags: [史记, 事件, 鲁周公世家]\nsources: [鲁周公世家]\nevent_ids: [033-005]\ndate: \"〖%七年二月乙未〗 （公元前1036年）\"\n---\n\n# 营建成周洛邑\n\n> 成王七年二月乙未，王朝步自周至丰，使召公先到洛相土。三月周公往营成周洛邑，卜居吉，遂国之。\n\n**主要人物**：召公、周公、成王\n\n## 事件经过\n\n成王七年二月乙未，王朝步自周至丰，使召公先到洛相土。三月周公往营成周洛邑，卜居吉，遂国之。\n\n## 原文\n\n> 成王七年二月乙未,王朝步自周,至丰,使太保召公先之雒相土。其三月,周公往营成周雒邑,卜居焉,曰吉,遂国之。\n\n"
+    },
     {
       "rev_id": "20260423-155504-b11df9",
       "timestamp": "2026-04-23T15:55:04Z",

@@ -1,8 +1,18 @@
 {
   "page": "魏咎立为魏王",
-  "latest_rev_id": "20260423-155622-3120b3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161612-19dc20",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161612-19dc20",
+      "timestamp": "2026-04-23T16:16:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155622-3120b3",
+      "content_hash": "sha256:19dc20396c3c7d49936d8cc823767f219c3e1bad3b4a68c2c03ef3116536160c",
+      "size": 910,
+      "content": "paragraph_refs:\n  048-008: \"[7]\"\nevent_type: 继位\n---\nid: \"魏咎立为魏王\"\ntype: event\ntitle: 魏咎立为魏王\ndescription: 周市北徇至狄，田儋杀狄令自立为齐王。周市还至魏地，欲立宁陵君咎为魏王。使者五返，陈王乃立咎为魏王遣之国，周市为相。\ntags: [史记, 事件, 陈涉世家]\nsources: [陈涉世家]\nevent_ids: [048-008]\ndate: \"（公元前209年）\"\n---\n\n# 魏咎立为魏王\n\n> 周市北徇至狄，田儋杀狄令自立为齐王。周市还至魏地，欲立宁陵君咎为魏王。使者五返，陈王乃立咎为魏王遣之国，周市为相。\n\n**主要人物**：周市、魏咎\n\n## 事件经过\n\n周市北徇至狄，田儋杀狄令自立为齐王。周市还至魏地，欲立宁陵君咎为魏王。使者五返，陈王乃立咎为魏王遣之国，周市为相。\n\n## 原文\n\n> 陈王乃立$甯陵君咎@$为魏王，遣之国。\n\n"
+    },
     {
       "rev_id": "20260423-155622-3120b3",
       "timestamp": "2026-04-23T15:56:22Z",

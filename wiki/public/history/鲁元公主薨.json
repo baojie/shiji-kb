@@ -1,8 +1,18 @@
 {
   "page": "鲁元公主薨",
-  "latest_rev_id": "20260423-154819-9594db",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161618-e1c21a",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161618-e1c21a",
+      "timestamp": "2026-04-23T16:16:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154819-9594db",
+      "content_hash": "sha256:e1c21ab399eedebb1b86aceec8590fc1046988da47e34b610ed9a613a1dd62c0",
+      "size": 751,
+      "content": "paragraph_refs:\n  009-024: \"[15.2]-[15.3]\"\nevent_type: 家族事件\n---\nid: \"鲁元公主薨\"\ntype: event\ntitle: 鲁元公主薨\ndescription: 鲁元公主去世，赐谥号为鲁元太后。其子偃为鲁王，其父为宣平侯张敖。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-024]\ndate: \"[约公元前187年]\"\n---\n\n# 鲁元公主薨\n\n> 鲁元公主去世，赐谥号为鲁元太后。其子偃为鲁王，其父为宣平侯张敖。\n\n**主要人物**：偃、张敖、鲁元公主\n\n## 事件经过\n\n鲁元公主去世，赐谥号为鲁元太后。其子偃为鲁王，其父为宣平侯张敖。\n\n## 原文\n\n> 鲁元公主薨，赐谥为鲁元太后。子偃为鲁王。鲁王父，宣平侯张敖也。\n\n"
+    },
     {
       "rev_id": "20260423-154819-9594db",
       "timestamp": "2026-04-23T15:48:19Z",

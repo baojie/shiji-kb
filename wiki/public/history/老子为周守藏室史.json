@@ -1,8 +1,28 @@
 {
   "page": "老子为周守藏室史",
-  "latest_rev_id": "20260423-154632-73285e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163204-f453a1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163204-f453a1",
+      "timestamp": "2026-04-23T16:32:04Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161235-9ac6d5",
+      "content_hash": "sha256:f453a1e6bfe45af9fe4e0d3f8d5e3257c95a21ee9960565cb9fca3e9a06eb70a",
+      "size": 901,
+      "content": "---\nid: \"老子为周守藏室史\"\ntype: event\ntitle: 老子为周守藏室史\ndescription: 老子姓李氏，名耳，字摐，楚国苦县厉乡曲仁里人，为周守藏室之史。老子修道德，其学以自隐无名为务。\ntags: [史记, 事件, 老子韩非列传]\nsources: [老子韩非列传]\nevent_ids: [063-001]\ndate: \"[约公元前550年]\"\n---\n\n::: meta\npn: \"[1]\"\nevent_type: 政治活动\nlocation: \"周\"\n:::\n\n# 老子为周守藏室史\n\n> 老子姓李氏，名耳，字摐，楚国苦县厉乡曲仁里人，为周守藏室之史。老子修道德，其学以自隐无名为务。\n\n**主要人物**：老子\n\n## 事件经过\n\n老子姓李氏，名耳，字摐，楚国苦县厉乡曲仁里人，为周守藏室之史。老子修道德，其学以自隐无名为务。\n\n## 原文\n\n> 老子者，楚苦县厉乡曲仁里人也，姓李氏，名耳，字摐，周守藏室之史也。\n\n"
+    },
+    {
+      "rev_id": "20260423-161235-9ac6d5",
+      "timestamp": "2026-04-23T16:12:35Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154632-73285e",
+      "content_hash": "sha256:9ac6d54386f9b750a87ff7922cab8088504f09a3ee6b33f0a74f8fdd5ca3da4d",
+      "size": 910,
+      "content": "paragraph_refs:\n  063-001: \"[1]\"\nevent_type: 政治活动\nlocation: \"周\"\n---\nid: \"老子为周守藏室史\"\ntype: event\ntitle: 老子为周守藏室史\ndescription: 老子姓李氏，名耳，字摐，楚国苦县厉乡曲仁里人，为周守藏室之史。老子修道德，其学以自隐无名为务。\ntags: [史记, 事件, 老子韩非列传]\nsources: [老子韩非列传]\nevent_ids: [063-001]\ndate: \"[约公元前550年]\"\n---\n\n# 老子为周守藏室史\n\n> 老子姓李氏，名耳，字摐，楚国苦县厉乡曲仁里人，为周守藏室之史。老子修道德，其学以自隐无名为务。\n\n**主要人物**：老子\n\n## 事件经过\n\n老子姓李氏，名耳，字摐，楚国苦县厉乡曲仁里人，为周守藏室之史。老子修道德，其学以自隐无名为务。\n\n## 原文\n\n> 老子者，楚苦县厉乡曲仁里人也，姓李氏，名耳，字摐，周守藏室之史也。\n\n"
+    },
     {
       "rev_id": "20260423-154632-73285e",
       "timestamp": "2026-04-23T15:46:32Z",

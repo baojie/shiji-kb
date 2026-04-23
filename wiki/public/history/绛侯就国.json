@@ -1,8 +1,28 @@
 {
   "page": "绛侯就国",
-  "latest_rev_id": "20260423-155442-db0926",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163153-da7817",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163153-da7817",
+      "timestamp": "2026-04-23T16:31:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161233-88e52f",
+      "content_hash": "sha256:da781786c714f7717fe95eacaecfe134786cae914fd8da4ab1bf91c5aadc0598",
+      "size": 877,
+      "content": "---\nid: \"绛侯就国\"\ntype: event\ntitle: 绛侯就国\ndescription: 三年十月日食，十一月文帝令丞相率列侯之国。绛侯勃免丞相就国，以颍阴侯灌婴为丞相，罢太尉官属丞相。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-023]\ndate: \"〖%三年十一月〗 （公元前177年）\"\n---\n\n::: meta\npn: \"[22.1]-[22.4]\"\nevent_type: 政治活动\n:::\n\n# 绛侯就国\n\n> 三年十月日食，十一月文帝令丞相率列侯之国。绛侯勃免丞相就国，以颍阴侯灌婴为丞相，罢太尉官属丞相。\n\n**主要人物**：周勃、灌婴\n\n## 事件经过\n\n三年十月日食，十一月文帝令丞相率列侯之国。绛侯勃免丞相就国，以颍阴侯灌婴为丞相，罢太尉官属丞相。\n\n## 原文\n\n> 绛侯勃免丞相就国，以太尉颍阴侯婴为丞相。罢太尉官，属丞相。\n\n"
+    },
+    {
+      "rev_id": "20260423-161233-88e52f",
+      "timestamp": "2026-04-23T16:12:33Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155442-db0926",
+      "content_hash": "sha256:88e52f9efb60e8d5358ed138ddb9ceeda2c9d89756e3bac71e85fd634124ef03",
+      "size": 886,
+      "content": "paragraph_refs:\n  010-023: \"[22.1]-[22.4]\"\nevent_type: 政治活动\n---\nid: \"绛侯就国\"\ntype: event\ntitle: 绛侯就国\ndescription: 三年十月日食，十一月文帝令丞相率列侯之国。绛侯勃免丞相就国，以颍阴侯灌婴为丞相，罢太尉官属丞相。\ntags: [史记, 事件, 孝文本纪]\nsources: [孝文本纪]\nevent_ids: [010-023]\ndate: \"〖%三年十一月〗 （公元前177年）\"\n---\n\n# 绛侯就国\n\n> 三年十月日食，十一月文帝令丞相率列侯之国。绛侯勃免丞相就国，以颍阴侯灌婴为丞相，罢太尉官属丞相。\n\n**主要人物**：周勃、灌婴\n\n## 事件经过\n\n三年十月日食，十一月文帝令丞相率列侯之国。绛侯勃免丞相就国，以颍阴侯灌婴为丞相，罢太尉官属丞相。\n\n## 原文\n\n> 绛侯勃免丞相就国，以太尉颍阴侯婴为丞相。罢太尉官，属丞相。\n\n"
+    },
     {
       "rev_id": "20260423-155442-db0926",
       "timestamp": "2026-04-23T15:54:42Z",

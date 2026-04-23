@@ -1,8 +1,28 @@
 {
   "page": "禹举皋陶授政",
-  "latest_rev_id": "20260423-155407-0fc77e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163030-d515de",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163030-d515de",
+      "timestamp": "2026-04-23T16:30:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161215-c1d5f4",
+      "content_hash": "sha256:d515dea6361f551b91b17822f647dfe30add9faf5a8b71a51d2ae890e5ed6c59",
+      "size": 924,
+      "content": "---\nid: \"禹举皋陶授政\"\ntype: event\ntitle: 禹举皋陶授政\ndescription: 帝禹立而举用皋陶推荐之，且授予政事，但皋陶卒。封皋陶之后于英、六，或在许。然后举用益，任以政事。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-026]\ndate: \"[约公元前2070年]\"\n---\n\n::: meta\npn: \"[20]\"\nevent_type: 政治活动\nlocation: \"英、六、许\"\n:::\n\n# 禹举皋陶授政\n\n> 帝禹立而举用皋陶推荐之，且授予政事，但皋陶卒。封皋陶之后于英、六，或在许。然后举用益，任以政事。\n\n**主要人物**：皋陶、禹\n\n## 事件经过\n\n帝禹立而举用皋陶推荐之，且授予政事，但皋陶卒。封皋陶之后于英、六，或在许。然后举用益，任以政事。\n\n## 原文\n\n> 帝禹立而举皋陶荐之，且授政焉，而皋陶卒。封皋陶之後於英、六，或在许。而后举益，任之政。\n\n"
+    },
+    {
+      "rev_id": "20260423-161215-c1d5f4",
+      "timestamp": "2026-04-23T16:12:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155407-0fc77e",
+      "content_hash": "sha256:c1d5f48184092eabbbfe20ed184ad73096f5d6230d8e0eeb4d97ba166f93b315",
+      "size": 933,
+      "content": "paragraph_refs:\n  002-026: \"[20]\"\nevent_type: 政治活动\nlocation: \"英、六、许\"\n---\nid: \"禹举皋陶授政\"\ntype: event\ntitle: 禹举皋陶授政\ndescription: 帝禹立而举用皋陶推荐之，且授予政事，但皋陶卒。封皋陶之后于英、六，或在许。然后举用益，任以政事。\ntags: [史记, 事件, 夏本纪]\nsources: [夏本纪]\nevent_ids: [002-026]\ndate: \"[约公元前2070年]\"\n---\n\n# 禹举皋陶授政\n\n> 帝禹立而举用皋陶推荐之，且授予政事，但皋陶卒。封皋陶之后于英、六，或在许。然后举用益，任以政事。\n\n**主要人物**：皋陶、禹\n\n## 事件经过\n\n帝禹立而举用皋陶推荐之，且授予政事，但皋陶卒。封皋陶之后于英、六，或在许。然后举用益，任以政事。\n\n## 原文\n\n> 帝禹立而举皋陶荐之，且授政焉，而皋陶卒。封皋陶之後於英、六，或在许。而后举益，任之政。\n\n"
+    },
     {
       "rev_id": "20260423-155407-0fc77e",
       "timestamp": "2026-04-23T15:54:07Z",

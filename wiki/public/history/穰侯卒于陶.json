@@ -1,8 +1,28 @@
 {
   "page": "穰侯卒于陶",
-  "latest_rev_id": "20260423-154619-71feb7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163117-ed6b8e",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163117-ed6b8e",
+      "timestamp": "2026-04-23T16:31:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161225-821746",
+      "content_hash": "sha256:ed6b8e0651a6e8a46dde6b54236346c7772c39e9f95d1f3cbeda8a12d79dc76b",
+      "size": 876,
+      "content": "---\nid: \"穰侯卒于陶\"\ntype: event\ntitle: 穰侯卒于陶\ndescription: 穰侯被逐出关后，退居封邑陶地，最终在陶地去世并就地安葬。秦国随后收回陶邑设为郡县。一代权臣以忧愤而终。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-014]\ndate: \"昭王四十二年后 [约公元前265年]\"\n---\n\n::: meta\npn: \"[10]\"\nevent_type: 家族事件\nlocation: \"陶\"\n:::\n\n# 穰侯卒于陶\n\n> 穰侯被逐出关后，退居封邑陶地，最终在陶地去世并就地安葬。秦国随后收回陶邑设为郡县。一代权臣以忧愤而终。\n\n**主要人物**：穰侯\n\n## 事件经过\n\n穰侯被逐出关后，退居封邑陶地，最终在陶地去世并就地安葬。秦国随后收回陶邑设为郡县。一代权臣以忧愤而终。\n\n## 原文\n\n> 穰侯卒於陶，而因葬焉。秦复收陶为郡。\n\n"
+    },
+    {
+      "rev_id": "20260423-161225-821746",
+      "timestamp": "2026-04-23T16:12:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154619-71feb7",
+      "content_hash": "sha256:8217465bc41e00b53744847e94352878d42cc77807ad6da882f8b88507dd7e57",
+      "size": 885,
+      "content": "paragraph_refs:\n  072-014: \"[10]\"\nevent_type: 家族事件\nlocation: \"陶\"\n---\nid: \"穰侯卒于陶\"\ntype: event\ntitle: 穰侯卒于陶\ndescription: 穰侯被逐出关后，退居封邑陶地，最终在陶地去世并就地安葬。秦国随后收回陶邑设为郡县。一代权臣以忧愤而终。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-014]\ndate: \"昭王四十二年后 [约公元前265年]\"\n---\n\n# 穰侯卒于陶\n\n> 穰侯被逐出关后，退居封邑陶地，最终在陶地去世并就地安葬。秦国随后收回陶邑设为郡县。一代权臣以忧愤而终。\n\n**主要人物**：穰侯\n\n## 事件经过\n\n穰侯被逐出关后，退居封邑陶地，最终在陶地去世并就地安葬。秦国随后收回陶邑设为郡县。一代权臣以忧愤而终。\n\n## 原文\n\n> 穰侯卒於陶，而因葬焉。秦复收陶为郡。\n\n"
+    },
     {
       "rev_id": "20260423-154619-71feb7",
       "timestamp": "2026-04-23T15:46:19Z",

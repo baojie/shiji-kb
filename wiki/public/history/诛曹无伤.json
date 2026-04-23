@@ -1,8 +1,18 @@
 {
   "page": "诛曹无伤",
-  "latest_rev_id": "20260423-154707-abdd16",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161320-b5bb6b",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161320-b5bb6b",
+      "timestamp": "2026-04-23T16:13:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154707-abdd16",
+      "content_hash": "sha256:b5bb6b46edb65a8fbdb830190a526b41804eff8f22d03cfdd8710e6805357221",
+      "size": 661,
+      "content": "paragraph_refs:\n  008-029: \"[24.16]\"\nevent_type: 政治整顿\n---\nid: \"诛曹无伤\"\ntype: event\ntitle: 诛曹无伤\ndescription: 沛公从鸿门脱险归来，立即诛杀告密者左司马曹无伤，清除内部叛逆。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-029]\ndate: \"〖%十二月〗 （公元前206年）\"\n---\n\n# 诛曹无伤\n\n> 沛公从鸿门脱险归来，立即诛杀告密者左司马曹无伤，清除内部叛逆。\n\n**主要人物**：刘邦、曹无伤\n\n## 事件经过\n\n沛公从鸿门脱险归来，立即诛杀告密者左司马曹无伤，清除内部叛逆。\n\n## 原文\n\n> 归，立诛曹无伤。\n\n"
+    },
     {
       "rev_id": "20260423-154707-abdd16",
       "timestamp": "2026-04-23T15:47:07Z",

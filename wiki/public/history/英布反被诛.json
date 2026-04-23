@@ -1,8 +1,28 @@
 {
   "page": "英布反被诛",
-  "latest_rev_id": "20260423-154641-74eacf",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163236-afa2cd",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163236-afa2cd",
+      "timestamp": "2026-04-23T16:32:36Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161243-6d8bab",
+      "content_hash": "sha256:afa2cda992e19e0f2fb772eb48738f07f1b1f0b9f7a96efec43c8e1a856c6e07",
+      "size": 948,
+      "content": "---\nid: \"英布反被诛\"\ntype: event\ntitle: 英布反被诛\ndescription: 淮南王英布（黥布）于高祖十一年见韩信、彭越被诛后举兵反叛，高祖十二年（前195年）兵败被杀。其国除为郡，后立高祖子长为淮南王。\ntags: [史记, 事件, 汉兴以来诸侯王年表]\nsources: [汉兴以来诸侯王年表]\nevent_ids: [017-007]\ndate: \"〖%高祖十一年〗 （公元前196年）\"\n---\n\n::: meta\npn: \"r11\"\nevent_type: 战争\n:::\n\n# 英布反被诛\n\n> 淮南王英布（黥布）于高祖十一年见韩信、彭越被诛后举兵反叛，高祖十二年（前195年）兵败被杀。其国除为郡，后立高祖子长为淮南王。\n\n**主要人物**：英布\n\n## 事件经过\n\n淮南王英布（黥布）于高祖十一年见韩信、彭越被诛后举兵反叛，高祖十二年（前195年）兵败被杀。其国除为郡，后立高祖子长为淮南王。\n\n## 原文\n\n> 七。来朝。反，诛。\n\n"
+    },
+    {
+      "rev_id": "20260423-161243-6d8bab",
+      "timestamp": "2026-04-23T16:12:43Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154641-74eacf",
+      "content_hash": "sha256:6d8bab0583b47c4195d2eb7a23b60395ae35cdfd0bd0d23881e295500836f838",
+      "size": 957,
+      "content": "paragraph_refs:\n  017-007: \"r11\"\nevent_type: 战争\n---\nid: \"英布反被诛\"\ntype: event\ntitle: 英布反被诛\ndescription: 淮南王英布（黥布）于高祖十一年见韩信、彭越被诛后举兵反叛，高祖十二年（前195年）兵败被杀。其国除为郡，后立高祖子长为淮南王。\ntags: [史记, 事件, 汉兴以来诸侯王年表]\nsources: [汉兴以来诸侯王年表]\nevent_ids: [017-007]\ndate: \"〖%高祖十一年〗 （公元前196年）\"\n---\n\n# 英布反被诛\n\n> 淮南王英布（黥布）于高祖十一年见韩信、彭越被诛后举兵反叛，高祖十二年（前195年）兵败被杀。其国除为郡，后立高祖子长为淮南王。\n\n**主要人物**：英布\n\n## 事件经过\n\n淮南王英布（黥布）于高祖十一年见韩信、彭越被诛后举兵反叛，高祖十二年（前195年）兵败被杀。其国除为郡，后立高祖子长为淮南王。\n\n## 原文\n\n> 七。来朝。反，诛。\n\n"
+    },
     {
       "rev_id": "20260423-154641-74eacf",
       "timestamp": "2026-04-23T15:46:41Z",

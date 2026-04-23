@@ -1,8 +1,28 @@
 {
   "page": "立太子惠",
-  "latest_rev_id": "20260423-155434-9d7bb7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163131-0308d9",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163131-0308d9",
+      "timestamp": "2026-04-23T16:31:31Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161228-828b1d",
+      "content_hash": "sha256:0308d917906b08cee58f41a72b4f31bfd83264191b2fb2855e789d7e6b83387e",
+      "size": 749,
+      "content": "---\nid: \"立太子惠\"\ntype: event\ntitle: 立太子惠\ndescription: 彭城败后汉王西行，独得孝惠。六月立为太子，大赦罪人，令太子守栎阳。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-041]\ndate: \"〖%六月〗 （公元前205年）\"\n---\n\n::: meta\npn: \"[37.2]-[37.3]\"\nevent_type: 家族事件\nlocation: \"栎阳\"\n:::\n\n# 立太子惠\n\n> 彭城败后汉王西行，独得孝惠。六月立为太子，大赦罪人，令太子守栎阳。\n\n**主要人物**：刘邦、孝惠\n\n## 事件经过\n\n彭城败后汉王西行，独得孝惠。六月立为太子，大赦罪人，令太子守栎阳。\n\n## 原文\n\n> 败後乃独得孝惠，六月，立为太子，大赦罪人。令太子守栎阳。\n\n"
+    },
+    {
+      "rev_id": "20260423-161228-828b1d",
+      "timestamp": "2026-04-23T16:12:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155434-9d7bb7",
+      "content_hash": "sha256:828b1dcebd7fd7319195766e743aedea69b5315504b58e7efc5f87b14f09bc05",
+      "size": 758,
+      "content": "paragraph_refs:\n  008-041: \"[37.2]-[37.3]\"\nevent_type: 家族事件\nlocation: \"栎阳\"\n---\nid: \"立太子惠\"\ntype: event\ntitle: 立太子惠\ndescription: 彭城败后汉王西行，独得孝惠。六月立为太子，大赦罪人，令太子守栎阳。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-041]\ndate: \"〖%六月〗 （公元前205年）\"\n---\n\n# 立太子惠\n\n> 彭城败后汉王西行，独得孝惠。六月立为太子，大赦罪人，令太子守栎阳。\n\n**主要人物**：刘邦、孝惠\n\n## 事件经过\n\n彭城败后汉王西行，独得孝惠。六月立为太子，大赦罪人，令太子守栎阳。\n\n## 原文\n\n> 败後乃独得孝惠，六月，立为太子，大赦罪人。令太子守栎阳。\n\n"
+    },
     {
       "rev_id": "20260423-155434-9d7bb7",
       "timestamp": "2026-04-23T15:54:34Z",

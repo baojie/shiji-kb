@@ -1,8 +1,28 @@
 {
   "page": "萧何守汉中为丞相",
-  "latest_rev_id": "20260423-154649-f009d1",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163253-49c054",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163253-49c054",
+      "timestamp": "2026-04-23T16:32:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161247-eb8711",
+      "content_hash": "sha256:49c05458c153c424849e7d703f88f6d9cdfaf46165b3af15def004d9015533d5",
+      "size": 911,
+      "content": "---\nid: \"萧何守汉中为丞相\"\ntype: event\ntitle: 萧何守汉中为丞相\ndescription: 高皇帝元年春，沛公为汉王，往南郑。丞相萧何守汉中，为汉王经营后方根据地。秋，汉王还定雍地。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-001]\ndate: \"〖%高祖元年〗 （公元前206年）\"\n---\n\n::: meta\npn: \"r1\"\nevent_type: 政治活动\nlocation: \"南郑\"\n:::\n\n# 萧何守汉中为丞相\n\n> 高皇帝元年春，沛公为汉王，往南郑。丞相萧何守汉中，为汉王经营后方根据地。秋，汉王还定雍地。\n\n**主要人物**：萧何\n\n## 事件经过\n\n高皇帝元年春，沛公为汉王，往南郑。丞相萧何守汉中，为汉王经营后方根据地。秋，汉王还定雍地。\n\n## 原文\n\n> 春，沛公为汉王，之南郑。秋，还定雍。\"\"丞相萧何守汉中。\n\n"
+    },
+    {
+      "rev_id": "20260423-161247-eb8711",
+      "timestamp": "2026-04-23T16:12:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154649-f009d1",
+      "content_hash": "sha256:eb8711fabf2758ce588b8d310d7cb0b5c70548f5742f11450a493645938699b5",
+      "size": 920,
+      "content": "paragraph_refs:\n  022-001: \"r1\"\nevent_type: 政治活动\nlocation: \"南郑\"\n---\nid: \"萧何守汉中为丞相\"\ntype: event\ntitle: 萧何守汉中为丞相\ndescription: 高皇帝元年春，沛公为汉王，往南郑。丞相萧何守汉中，为汉王经营后方根据地。秋，汉王还定雍地。\ntags: [史记, 事件, 汉兴以来将相名臣年表]\nsources: [汉兴以来将相名臣年表]\nevent_ids: [022-001]\ndate: \"〖%高祖元年〗 （公元前206年）\"\n---\n\n# 萧何守汉中为丞相\n\n> 高皇帝元年春，沛公为汉王，往南郑。丞相萧何守汉中，为汉王经营后方根据地。秋，汉王还定雍地。\n\n**主要人物**：萧何\n\n## 事件经过\n\n高皇帝元年春，沛公为汉王，往南郑。丞相萧何守汉中，为汉王经营后方根据地。秋，汉王还定雍地。\n\n## 原文\n\n> 春，沛公为汉王，之南郑。秋，还定雍。\"\"丞相萧何守汉中。\n\n"
+    },
     {
       "rev_id": "20260423-154649-f009d1",
       "timestamp": "2026-04-23T15:46:49Z",

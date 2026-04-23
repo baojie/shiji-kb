@@ -1,8 +1,28 @@
 {
   "page": "皇太子冠",
-  "latest_rev_id": "20260423-155356-1c849c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163010-1c33a2",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163010-1c33a2",
+      "timestamp": "2026-04-23T16:30:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161210-76f1d7",
+      "content_hash": "sha256:1c33a2772463eea346115c44ccac54d96736e45791221af09955fb850636cde2",
+      "size": 534,
+      "content": "---\nid: \"皇太子冠\"\ntype: event\ntitle: 皇太子冠\ndescription: 正月甲寅皇太子行冠礼，标志太子成年。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-050]\ndate: \"〖%正月甲寅〗 （公元前141年）\"\n---\n\n::: meta\npn: \"[26.1]\"\nevent_type: 家族事件\n:::\n\n# 皇太子冠\n\n> 正月甲寅皇太子行冠礼，标志太子成年。\n\n**主要人物**：皇太子\n\n## 事件经过\n\n正月甲寅皇太子行冠礼，标志太子成年。\n\n## 原文\n\n> 正月甲寅，皇太子冠。\n\n"
+    },
+    {
+      "rev_id": "20260423-161210-76f1d7",
+      "timestamp": "2026-04-23T16:12:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155356-1c849c",
+      "content_hash": "sha256:76f1d7354fd91f0a91e665450656c390620a10e80d5ce87f1faca8b38cf2ed9f",
+      "size": 543,
+      "content": "paragraph_refs:\n  011-050: \"[26.1]\"\nevent_type: 家族事件\n---\nid: \"皇太子冠\"\ntype: event\ntitle: 皇太子冠\ndescription: 正月甲寅皇太子行冠礼，标志太子成年。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-050]\ndate: \"〖%正月甲寅〗 （公元前141年）\"\n---\n\n# 皇太子冠\n\n> 正月甲寅皇太子行冠礼，标志太子成年。\n\n**主要人物**：皇太子\n\n## 事件经过\n\n正月甲寅皇太子行冠礼，标志太子成年。\n\n## 原文\n\n> 正月甲寅，皇太子冠。\n\n"
+    },
     {
       "rev_id": "20260423-155356-1c849c",
       "timestamp": "2026-04-23T15:53:56Z",

@@ -1,8 +1,18 @@
 {
   "page": "飞将军威名匈奴避之",
-  "latest_rev_id": "20260423-155610-cacb4d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161553-39dec1",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161553-39dec1",
+      "timestamp": "2026-04-23T16:15:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155610-cacb4d",
+      "content_hash": "sha256:39dec11b83d802393ced1bc4a1805354ce1b403350205ab3e4c6b836778374af",
+      "size": 872,
+      "content": "paragraph_refs:\n  109-008: \"[1.7]\"\nevent_type: 战争\nlocation: \"右北平\"\n---\nid: \"飞将军威名匈奴避之\"\ntype: event\ntitle: 飞将军威名匈奴避之\ndescription: 李广居右北平，匈奴闻之号曰\"汉之飞将军\"，避之数岁不敢入右北平。此为李广军事威名之极致。\ntags: [史记, 事件, 李将军列传]\nsources: [李将军列传]\nevent_ids: [109-008]\ndate: \"[约公元前127年]\"\n---\n\n# 飞将军威名匈奴避之\n\n> 李广居右北平，匈奴闻之号曰\"汉之飞将军\"，避之数岁不敢入右北平。此为李广军事威名之极致。\n\n**主要人物**：李广\n\n## 事件经过\n\n李广居右北平，匈奴闻之号曰\"汉之飞将军\"，避之数岁不敢入右北平。此为李广军事威名之极致。\n\n## 原文\n\n> 广居右北平，匈奴闻之，号曰'汉之飞将军'，避之数岁，不敢入右北平。\n\n"
+    },
     {
       "rev_id": "20260423-155610-cacb4d",
       "timestamp": "2026-04-23T15:56:10Z",

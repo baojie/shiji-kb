@@ -1,8 +1,28 @@
 {
   "page": "讨伐燕王卢绾",
-  "latest_rev_id": "20260423-154705-88eaef",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163337-b14df4",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163337-b14df4",
+      "timestamp": "2026-04-23T16:33:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161315-96d52a",
+      "content_hash": "sha256:b14df41afab8e20b0b0704995e014108c8076ff34275772a7c8de134a164f93b",
+      "size": 968,
+      "content": "---\nid: \"讨伐燕王卢绾\"\ntype: event\ntitle: 讨伐燕王卢绾\ndescription: 陈豨降将揭发燕王卢绾与陈豨阴谋。高祖使辟阳侯迎卢绾，绾称病不至。二月遣樊哙、周勃将兵击燕，立皇子建为燕王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-093]\ndate: \"〖%十二年二月〗 （公元前195年）\"\n---\n\n::: meta\npn: \"[84]\"\nevent_type: 战争\nlocation: \"燕\"\n:::\n\n# 讨伐燕王卢绾\n\n> 陈豨降将揭发燕王卢绾与陈豨阴谋。高祖使辟阳侯迎卢绾，绾称病不至。二月遣樊哙、周勃将兵击燕，立皇子建为燕王。\n\n**主要人物**：刘邦、卢绾、周勃、樊哙\n\n## 事件经过\n\n陈豨降将揭发燕王卢绾与陈豨阴谋。高祖使辟阳侯迎卢绾，绾称病不至。二月遣樊哙、周勃将兵击燕，立皇子建为燕王。\n\n## 原文\n\n> 二月，使樊哙、周勃将兵击燕王绾，赦燕吏民与反者。立皇子建为燕王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161315-96d52a",
+      "timestamp": "2026-04-23T16:13:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154705-88eaef",
+      "content_hash": "sha256:96d52a69ec72ebd49dfba6100391401c8b33d3a091712d95b563d354eab462d4",
+      "size": 977,
+      "content": "paragraph_refs:\n  008-093: \"[84]\"\nevent_type: 战争\nlocation: \"燕\"\n---\nid: \"讨伐燕王卢绾\"\ntype: event\ntitle: 讨伐燕王卢绾\ndescription: 陈豨降将揭发燕王卢绾与陈豨阴谋。高祖使辟阳侯迎卢绾，绾称病不至。二月遣樊哙、周勃将兵击燕，立皇子建为燕王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-093]\ndate: \"〖%十二年二月〗 （公元前195年）\"\n---\n\n# 讨伐燕王卢绾\n\n> 陈豨降将揭发燕王卢绾与陈豨阴谋。高祖使辟阳侯迎卢绾，绾称病不至。二月遣樊哙、周勃将兵击燕，立皇子建为燕王。\n\n**主要人物**：刘邦、卢绾、周勃、樊哙\n\n## 事件经过\n\n陈豨降将揭发燕王卢绾与陈豨阴谋。高祖使辟阳侯迎卢绾，绾称病不至。二月遣樊哙、周勃将兵击燕，立皇子建为燕王。\n\n## 原文\n\n> 二月，使樊哙、周勃将兵击燕王绾，赦燕吏民与反者。立皇子建为燕王。\n\n"
+    },
     {
       "rev_id": "20260423-154705-88eaef",
       "timestamp": "2026-04-23T15:47:05Z",

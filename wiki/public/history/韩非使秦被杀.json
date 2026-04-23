@@ -1,8 +1,18 @@
 {
   "page": "韩非使秦被杀",
-  "latest_rev_id": "20260423-154803-5c025c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161534-6362b7",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161534-6362b7",
+      "timestamp": "2026-04-23T16:15:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154803-5c025c",
+      "content_hash": "sha256:6362b719411b91bc8f4682e2d58f27a30702f884854559991f49891058ec0a8a",
+      "size": 688,
+      "content": "paragraph_refs:\n  006-026: \"[21.3]\"\nevent_type: 政治活动\nlocation: \"云阳\"\n---\nid: \"韩非使秦被杀\"\ntype: event\ntitle: 韩非使秦被杀\ndescription: 韩非出使秦国，秦用李斯之谋留韩非不遣，韩非死于云阳。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-026]\ndate: \"〖%十四年〗 （公元前233年）\"\n---\n\n# 韩非使秦被杀\n\n> 韩非出使秦国，秦用李斯之谋留韩非不遣，韩非死于云阳。\n\n**主要人物**：李斯、韩非\n\n## 事件经过\n\n韩非出使秦国，秦用李斯之谋留韩非不遣，韩非死于云阳。\n\n## 原文\n\n> 韩非使秦，秦用李斯谋，留非，非死云阳。\n\n"
+    },
     {
       "rev_id": "20260423-154803-5c025c",
       "timestamp": "2026-04-23T15:48:03Z",

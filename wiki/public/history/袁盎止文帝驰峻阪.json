@@ -1,8 +1,28 @@
 {
   "page": "袁盎止文帝驰峻阪",
-  "latest_rev_id": "20260423-154702-125fae",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163324-128464",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163324-128464",
+      "timestamp": "2026-04-23T16:33:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161305-b25bf8",
+      "content_hash": "sha256:128464821a1351a6e1506c28428851a42d3b76d20ff50771002e319d586409c2",
+      "size": 934,
+      "content": "---\nid: \"袁盎止文帝驰峻阪\"\ntype: event\ntitle: 袁盎止文帝驰峻阪\ndescription: 文帝从霸陵上欲西驰下峻坡，袁盎骑马并车揽辔阻止，以千金之子不垂堂、圣主不乘危之理劝谏。文帝乃止。\ntags: [史记, 事件, 袁盎晁错列传]\nsources: [袁盎晁错列传]\nevent_ids: [101-007]\ndate: \"〖;文帝〗时 [约公元前170年]\"\n---\n\n::: meta\npn: \"[7.1]—[7.5]\"\nevent_type: 政治活动\nlocation: \"霸陵\"\n:::\n\n# 袁盎止文帝驰峻阪\n\n> 文帝从霸陵上欲西驰下峻坡，袁盎骑马并车揽辔阻止，以千金之子不垂堂、圣主不乘危之理劝谏。文帝乃止。\n\n**主要人物**：文帝、袁盎\n\n## 事件经过\n\n文帝从霸陵上欲西驰下峻坡，袁盎骑马并车揽辔阻止，以千金之子不垂堂、圣主不乘危之理劝谏。文帝乃止。\n\n## 原文\n\n> 臣闻千金之子坐不垂堂，百金之子不骑衡，圣主不乘危而徼幸。\n\n"
+    },
+    {
+      "rev_id": "20260423-161305-b25bf8",
+      "timestamp": "2026-04-23T16:13:05Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154702-125fae",
+      "content_hash": "sha256:b25bf80d8d9803380c0fdacc6dcd28c2c217e67514e9d1e14c5a01ddd12beba6",
+      "size": 943,
+      "content": "paragraph_refs:\n  101-007: \"[7.1]—[7.5]\"\nevent_type: 政治活动\nlocation: \"霸陵\"\n---\nid: \"袁盎止文帝驰峻阪\"\ntype: event\ntitle: 袁盎止文帝驰峻阪\ndescription: 文帝从霸陵上欲西驰下峻坡，袁盎骑马并车揽辔阻止，以千金之子不垂堂、圣主不乘危之理劝谏。文帝乃止。\ntags: [史记, 事件, 袁盎晁错列传]\nsources: [袁盎晁错列传]\nevent_ids: [101-007]\ndate: \"〖;文帝〗时 [约公元前170年]\"\n---\n\n# 袁盎止文帝驰峻阪\n\n> 文帝从霸陵上欲西驰下峻坡，袁盎骑马并车揽辔阻止，以千金之子不垂堂、圣主不乘危之理劝谏。文帝乃止。\n\n**主要人物**：文帝、袁盎\n\n## 事件经过\n\n文帝从霸陵上欲西驰下峻坡，袁盎骑马并车揽辔阻止，以千金之子不垂堂、圣主不乘危之理劝谏。文帝乃止。\n\n## 原文\n\n> 臣闻千金之子坐不垂堂，百金之子不骑衡，圣主不乘危而徼幸。\n\n"
+    },
     {
       "rev_id": "20260423-154702-125fae",
       "timestamp": "2026-04-23T15:47:02Z",

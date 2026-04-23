@@ -1,8 +1,18 @@
 {
   "page": "齐桓公即位",
-  "latest_rev_id": "20260423-154828-34caae",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161638-077189",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161638-077189",
+      "timestamp": "2026-04-23T16:16:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154828-34caae",
+      "content_hash": "sha256:07718993d0e3a208d9523955e370ef8d45c0387c4435c31c6082cd3c9a41b866",
+      "size": 977,
+      "content": "paragraph_refs:\n  014-016: \"r157\"\nevent_type: 继位\nlocation: \"齐\"\n---\nid: \"齐桓公即位\"\ntype: event\ntitle: 齐桓公即位\ndescription: 齐桓公小白于前685年即位。鲁欲送公子纠入齐，后于小白，齐拒鲁，使人致管仲归齐。桓公用管仲为相，齐国由此走向霸业。\ntags: [史记, 事件, 十二诸侯年表]\nsources: [十二诸侯年表]\nevent_ids: [014-016]\ndate: \"（公元前685年）\"\n---\n\n# 齐桓公即位\n\n> 齐桓公小白于前685年即位。鲁欲送公子纠入齐，后于小白，齐拒鲁，使人致管仲归齐。桓公用管仲为相，齐国由此走向霸业。\n\n**主要人物**：管仲、齐桓公小白\n\n## 事件经过\n\n齐桓公小白于前685年即位。鲁欲送公子纠入齐，后于小白，齐拒鲁，使人致管仲归齐。桓公用管仲为相，齐国由此走向霸业。\n\n## 原文\n\n> 齐桓公小白元年春，齐杀毋知。\"\"九鲁欲与纠入，后小白，齐距鲁，使生致管仲。\n\n"
+    },
     {
       "rev_id": "20260423-154828-34caae",
       "timestamp": "2026-04-23T15:48:28Z",

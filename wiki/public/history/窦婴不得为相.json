@@ -1,8 +1,28 @@
 {
   "page": "窦婴不得为相",
-  "latest_rev_id": "20260423-154623-bcbc2c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163125-8ba945",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163125-8ba945",
+      "timestamp": "2026-04-23T16:31:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161227-09f506",
+      "content_hash": "sha256:8ba94560a1c9a8bd15027e66a1d367a9a2f11ca9f88dabd81c7884663b9cb09a",
+      "size": 823,
+      "content": "---\nid: \"窦婴不得为相\"\ntype: event\ntitle: 窦婴不得为相\ndescription: 桃侯免相，窦太后数言魏其侯。景帝言魏其者沾沾自喜、多易、难以持重为相，遂用卫绾。\ntags: [史记, 事件, 魏其武安侯列传]\nsources: [魏其武安侯列传]\nevent_ids: [107-004]\ndate: \"〖;景帝〗时 [约公元前145年]\"\n---\n\n::: meta\npn: \"[1.5]\"\nevent_type: 政治活动\n:::\n\n# 窦婴不得为相\n\n> 桃侯免相，窦太后数言魏其侯。景帝言魏其者沾沾自喜、多易、难以持重为相，遂用卫绾。\n\n**主要人物**：卫绾、景帝、窦太后、窦婴\n\n## 事件经过\n\n桃侯免相，窦太后数言魏其侯。景帝言魏其者沾沾自喜、多易、难以持重为相，遂用卫绾。\n\n## 原文\n\n> 魏其者，沾沾自喜耳，多易。难以为相，持重。\n\n"
+    },
+    {
+      "rev_id": "20260423-161227-09f506",
+      "timestamp": "2026-04-23T16:12:27Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154623-bcbc2c",
+      "content_hash": "sha256:09f5062ac69285d39971862f17c4e5e7874ecb741cf58a6d9fa9e8e259f7d089",
+      "size": 832,
+      "content": "paragraph_refs:\n  107-004: \"[1.5]\"\nevent_type: 政治活动\n---\nid: \"窦婴不得为相\"\ntype: event\ntitle: 窦婴不得为相\ndescription: 桃侯免相，窦太后数言魏其侯。景帝言魏其者沾沾自喜、多易、难以持重为相，遂用卫绾。\ntags: [史记, 事件, 魏其武安侯列传]\nsources: [魏其武安侯列传]\nevent_ids: [107-004]\ndate: \"〖;景帝〗时 [约公元前145年]\"\n---\n\n# 窦婴不得为相\n\n> 桃侯免相，窦太后数言魏其侯。景帝言魏其者沾沾自喜、多易、难以持重为相，遂用卫绾。\n\n**主要人物**：卫绾、景帝、窦太后、窦婴\n\n## 事件经过\n\n桃侯免相，窦太后数言魏其侯。景帝言魏其者沾沾自喜、多易、难以持重为相，遂用卫绾。\n\n## 原文\n\n> 魏其者，沾沾自喜耳，多易。难以为相，持重。\n\n"
+    },
     {
       "rev_id": "20260423-154623-bcbc2c",
       "timestamp": "2026-04-23T15:46:23Z",

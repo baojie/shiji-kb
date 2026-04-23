@@ -1,8 +1,18 @@
 {
   "page": "阖庐伤于姑苏之战",
-  "latest_rev_id": "20260423-155552-3de08d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161441-acb300",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161441-acb300",
+      "timestamp": "2026-04-23T16:14:41Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155552-3de08d",
+      "content_hash": "sha256:acb3003891efac1d07fde4cd88ec63271ab1e231e4a9e08f2fc014dcfc539d83",
+      "size": 965,
+      "content": "paragraph_refs:\n  066-015: \"[16]\"\nevent_type: 战争\nlocation: \"吴\"\n---\nid: \"阖庐伤于姑苏之战\"\ntype: event\ntitle: 阖庐伤于姑苏之战\ndescription: 吴伐越，越王句践迎击，败吴于姑苏，伤阖庐指。阖庐病创将死，嘱太子夫差勿忘句践杀父之仇。是夕阖庐死。\ntags: [史记, 事件, 伍子胥列传]\nsources: [伍子胥列传]\nevent_ids: [066-015]\ndate: \"（公元前496年）\"\n---\n\n# 阖庐伤于姑苏之战\n\n> 吴伐越，越王句践迎击，败吴于姑苏，伤阖庐指。阖庐病创将死，嘱太子夫差勿忘句践杀父之仇。是夕阖庐死。\n\n**主要人物**：伍子胥\n\n## 事件经过\n\n吴伐越，越王句践迎击，败吴于姑苏，伤阖庐指。阖庐病创将死，嘱太子夫差勿忘句践杀父之仇。是夕阖庐死。\n\n## 原文\n\n> 伐越。越王句践迎击，败吴於姑苏，伤阖庐指，军卻。阖庐病创将死，谓太子夫差曰：'尔忘句践杀尔父乎？'\n\n"
+    },
     {
       "rev_id": "20260423-155552-3de08d",
       "timestamp": "2026-04-23T15:55:52Z",

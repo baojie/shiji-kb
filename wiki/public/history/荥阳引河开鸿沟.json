@@ -1,8 +1,28 @@
 {
   "page": "荥阳引河开鸿沟",
-  "latest_rev_id": "20260423-155502-5f5d5c",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163248-0b99a8",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163248-0b99a8",
+      "timestamp": "2026-04-23T16:32:48Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161245-a5ccb0",
+      "content_hash": "sha256:0b99a81dd7f96638f656d2482ad81df7aef895ec67921a6bba23800bb3eaff7b",
+      "size": 854,
+      "content": "---\nid: \"荥阳引河开鸿沟\"\ntype: event\ntitle: 荥阳引河开鸿沟\ndescription: 荥阳以下引河东南为鸿沟，以通宋、郑、陈、蔡、曹、卫，与济、汝、淮、泗会合。这是古代重要的人工运河。\ntags: [史记, 事件, 河渠书]\nsources: [河渠书]\nevent_ids: [029-002]\ndate: \"（公元前339年）\"\n---\n\n::: meta\npn: \"[2]\"\nevent_type: 建设\nlocation: \"荥阳\"\n:::\n\n# 荥阳引河开鸿沟\n\n> 荥阳以下引河东南为鸿沟，以通宋、郑、陈、蔡、曹、卫，与济、汝、淮、泗会合。这是古代重要的人工运河。\n\n## 事件经过\n\n荥阳以下引河东南为鸿沟，以通宋、郑、陈、蔡、曹、卫，与济、汝、淮、泗会合。这是古代重要的人工运河。\n\n## 原文\n\n> 自是之後，荥阳下引河东南为鸿沟，以通宋、郑、陈、蔡、曹、卫。\n\n"
+    },
+    {
+      "rev_id": "20260423-161245-a5ccb0",
+      "timestamp": "2026-04-23T16:12:45Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155502-5f5d5c",
+      "content_hash": "sha256:a5ccb0da33980063c244566715d00c5e9c77a9f06f9a7a634e48542193f5472b",
+      "size": 863,
+      "content": "paragraph_refs:\n  029-002: \"[2]\"\nevent_type: 建设\nlocation: \"荥阳\"\n---\nid: \"荥阳引河开鸿沟\"\ntype: event\ntitle: 荥阳引河开鸿沟\ndescription: 荥阳以下引河东南为鸿沟，以通宋、郑、陈、蔡、曹、卫，与济、汝、淮、泗会合。这是古代重要的人工运河。\ntags: [史记, 事件, 河渠书]\nsources: [河渠书]\nevent_ids: [029-002]\ndate: \"（公元前339年）\"\n---\n\n# 荥阳引河开鸿沟\n\n> 荥阳以下引河东南为鸿沟，以通宋、郑、陈、蔡、曹、卫，与济、汝、淮、泗会合。这是古代重要的人工运河。\n\n## 事件经过\n\n荥阳以下引河东南为鸿沟，以通宋、郑、陈、蔡、曹、卫，与济、汝、淮、泗会合。这是古代重要的人工运河。\n\n## 原文\n\n> 自是之後，荥阳下引河东南为鸿沟，以通宋、郑、陈、蔡、曹、卫。\n\n"
+    },
     {
       "rev_id": "20260423-155502-5f5d5c",
       "timestamp": "2026-04-23T15:55:02Z",

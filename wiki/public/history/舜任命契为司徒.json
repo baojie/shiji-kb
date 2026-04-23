@@ -1,8 +1,28 @@
 {
   "page": "舜任命契为司徒",
-  "latest_rev_id": "20260423-155453-4dc772",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163215-f7d103",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163215-f7d103",
+      "timestamp": "2026-04-23T16:32:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161238-ba5dbb",
+      "content_hash": "sha256:f7d1031c470746dd7a1174ec5420f50db7210c2151b31cbd365064ba2713830d",
+      "size": 872,
+      "content": "---\nid: \"舜任命契为司徒\"\ntype: event\ntitle: 舜任命契为司徒\ndescription: 舜对契说，百姓不亲近，五品不驯服，你为司徒，要恭敬地推行五教，施政要宽厚。这是任命契主管教化。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-049]\ndate: \"[约公元前2255年]\"\n---\n\n::: meta\npn: \"[23.2.3]\"\nevent_type: 政治改革\n:::\n\n# 舜任命契为司徒\n\n> 舜对契说，百姓不亲近，五品不驯服，你为司徒，要恭敬地推行五教，施政要宽厚。这是任命契主管教化。\n\n**主要人物**：司徒、契、舜\n\n## 事件经过\n\n舜对契说，百姓不亲近，五品不驯服，你为司徒，要恭敬地推行五教，施政要宽厚。这是任命契主管教化。\n\n## 原文\n\n> 舜曰：'契，百姓不亲，五品不驯，汝为司徒，而敬敷五教，在宽。'\n\n"
+    },
+    {
+      "rev_id": "20260423-161238-ba5dbb",
+      "timestamp": "2026-04-23T16:12:38Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155453-4dc772",
+      "content_hash": "sha256:ba5dbbdf83a3e744eb5df022d5ca21807debbc9082d3dcbad896a257418b263f",
+      "size": 881,
+      "content": "paragraph_refs:\n  001-049: \"[23.2.3]\"\nevent_type: 政治改革\n---\nid: \"舜任命契为司徒\"\ntype: event\ntitle: 舜任命契为司徒\ndescription: 舜对契说，百姓不亲近，五品不驯服，你为司徒，要恭敬地推行五教，施政要宽厚。这是任命契主管教化。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-049]\ndate: \"[约公元前2255年]\"\n---\n\n# 舜任命契为司徒\n\n> 舜对契说，百姓不亲近，五品不驯服，你为司徒，要恭敬地推行五教，施政要宽厚。这是任命契主管教化。\n\n**主要人物**：司徒、契、舜\n\n## 事件经过\n\n舜对契说，百姓不亲近，五品不驯服，你为司徒，要恭敬地推行五教，施政要宽厚。这是任命契主管教化。\n\n## 原文\n\n> 舜曰：'契，百姓不亲，五品不驯，汝为司徒，而敬敷五教，在宽。'\n\n"
+    },
     {
       "rev_id": "20260423-155453-4dc772",
       "timestamp": "2026-04-23T15:54:53Z",

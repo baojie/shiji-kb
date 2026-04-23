@@ -1,8 +1,18 @@
 {
   "page": "铸五铢钱",
-  "latest_rev_id": "20260423-154730-0bf86b",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161434-d16689",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161434-d16689",
+      "timestamp": "2026-04-23T16:14:34Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154730-0bf86b",
+      "content_hash": "sha256:d16689e6b954d92ab981cbeeb3be93508358aeabbcbc497b6aec477874d0ff23",
+      "size": 692,
+      "content": "paragraph_refs:\n  030-027: \"[21]\"\nevent_type: 改革\n---\nid: \"铸五铢钱\"\ntype: event\ntitle: 铸五铢钱\ndescription: 有司言三铢钱轻易奸诈，乃更请诸郡国铸五铢钱，周郭其下令不可磨取铜。\ntags: [史记, 事件, 平准书]\nsources: [平准书]\nevent_ids: [030-027]\ndate: \"（公元前118年）\"\n---\n\n# 铸五铢钱\n\n> 有司言三铢钱轻易奸诈，乃更请诸郡国铸五铢钱，周郭其下令不可磨取铜。\n\n## 事件经过\n\n有司言三铢钱轻易奸诈，乃更请诸郡国铸五铢钱，周郭其下令不可磨取铜。\n\n## 原文\n\n> 有司言三铢钱轻，易奸诈，乃更请诸郡国铸五铢钱，周郭其下，令不可磨取鋊焉。\n\n"
+    },
     {
       "rev_id": "20260423-154730-0bf86b",
       "timestamp": "2026-04-23T15:47:30Z",

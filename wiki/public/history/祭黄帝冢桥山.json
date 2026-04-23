@@ -1,8 +1,28 @@
 {
   "page": "祭黄帝冢桥山",
-  "latest_rev_id": "20260423-154610-105c99",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163028-c6ce19",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163028-c6ce19",
+      "timestamp": "2026-04-23T16:30:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161214-cc19d9",
+      "content_hash": "sha256:c6ce192b0974b0203600d4362ccf465fe7a90f5a06b42fd408e81ba3611e2bec",
+      "size": 820,
+      "content": "---\nid: \"祭黄帝冢桥山\"\ntype: event\ntitle: 祭黄帝冢桥山\ndescription: 天子祭黄帝冢于桥山，问黄帝不死何以有冢。或对曰黄帝已仙上天群臣葬其衣冠。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-038]\ndate: \"〖%元封元年〗 （公元前110年）\"\n---\n\n::: meta\npn: \"[28.3]-[28.4]\"\nevent_type: 文化活动\nlocation: \"桥山\"\n:::\n\n# 祭黄帝冢桥山\n\n> 天子祭黄帝冢于桥山，问黄帝不死何以有冢。或对曰黄帝已仙上天群臣葬其衣冠。\n\n**主要人物**：天子\n\n## 事件经过\n\n天子祭黄帝冢于桥山，问黄帝不死何以有冢。或对曰黄帝已仙上天群臣葬其衣冠。\n\n## 原文\n\n> 上曰：'吾闻?黄帝?不死，今有冢，何也？'或对曰：'?黄帝?已仙上天，群臣葬其衣冠。'\n\n"
+    },
+    {
+      "rev_id": "20260423-161214-cc19d9",
+      "timestamp": "2026-04-23T16:12:14Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154610-105c99",
+      "content_hash": "sha256:cc19d937f324545ed0c49185e3a04cdb649df6e49b1b58d5907d19e989566a6b",
+      "size": 829,
+      "content": "paragraph_refs:\n  012-038: \"[28.3]-[28.4]\"\nevent_type: 文化活动\nlocation: \"桥山\"\n---\nid: \"祭黄帝冢桥山\"\ntype: event\ntitle: 祭黄帝冢桥山\ndescription: 天子祭黄帝冢于桥山，问黄帝不死何以有冢。或对曰黄帝已仙上天群臣葬其衣冠。\ntags: [史记, 事件, 孝武本纪]\nsources: [孝武本纪]\nevent_ids: [012-038]\ndate: \"〖%元封元年〗 （公元前110年）\"\n---\n\n# 祭黄帝冢桥山\n\n> 天子祭黄帝冢于桥山，问黄帝不死何以有冢。或对曰黄帝已仙上天群臣葬其衣冠。\n\n**主要人物**：天子\n\n## 事件经过\n\n天子祭黄帝冢于桥山，问黄帝不死何以有冢。或对曰黄帝已仙上天群臣葬其衣冠。\n\n## 原文\n\n> 上曰：'吾闻?黄帝?不死，今有冢，何也？'或对曰：'?黄帝?已仙上天，群臣葬其衣冠。'\n\n"
+    },
     {
       "rev_id": "20260423-154610-105c99",
       "timestamp": "2026-04-23T15:46:10Z",

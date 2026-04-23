@@ -1,8 +1,28 @@
 {
   "page": "许由隐居箕山",
-  "latest_rev_id": "20260423-155516-142adf",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163339-e21699",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163339-e21699",
+      "timestamp": "2026-04-23T16:33:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161316-98cec4",
+      "content_hash": "sha256:e2169911516860e5688ca53c3fcea4cc368a7376e819e47d1fa8848e35c87c87",
+      "size": 752,
+      "content": "---\nid: \"许由隐居箕山\"\ntype: event\ntitle: 许由隐居箕山\ndescription: 尧欲让天下于许由，许由不受，以此为耻而逃隐。太史公登箕山，见其上有许由冢。\ntags: [史记, 事件, 伯夷列传]\nsources: [伯夷列传]\nevent_ids: [061-001]\ndate: \"[约公元前2200年]\"\n---\n\n::: meta\npn: \"[0]\"\nevent_type: 政治活动\nlocation: \"箕山\"\n:::\n\n# 许由隐居箕山\n\n> 尧欲让天下于许由，许由不受，以此为耻而逃隐。太史公登箕山，见其上有许由冢。\n\n**主要人物**：许由\n\n## 事件经过\n\n尧欲让天下于许由，许由不受，以此为耻而逃隐。太史公登箕山，见其上有许由冢。\n\n## 原文\n\n> 而说者曰尧让天下於许由，许由不受，耻之逃隐。\n\n"
+    },
+    {
+      "rev_id": "20260423-161316-98cec4",
+      "timestamp": "2026-04-23T16:13:16Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155516-142adf",
+      "content_hash": "sha256:98cec40ae9ac1fd37d7a6b4ce7b28c50f8e9d155647fe155c623244c6901b7d2",
+      "size": 761,
+      "content": "paragraph_refs:\n  061-001: \"[0]\"\nevent_type: 政治活动\nlocation: \"箕山\"\n---\nid: \"许由隐居箕山\"\ntype: event\ntitle: 许由隐居箕山\ndescription: 尧欲让天下于许由，许由不受，以此为耻而逃隐。太史公登箕山，见其上有许由冢。\ntags: [史记, 事件, 伯夷列传]\nsources: [伯夷列传]\nevent_ids: [061-001]\ndate: \"[约公元前2200年]\"\n---\n\n# 许由隐居箕山\n\n> 尧欲让天下于许由，许由不受，以此为耻而逃隐。太史公登箕山，见其上有许由冢。\n\n**主要人物**：许由\n\n## 事件经过\n\n尧欲让天下于许由，许由不受，以此为耻而逃隐。太史公登箕山，见其上有许由冢。\n\n## 原文\n\n> 而说者曰尧让天下於许由，许由不受，耻之逃隐。\n\n"
+    },
     {
       "rev_id": "20260423-155516-142adf",
       "timestamp": "2026-04-23T15:55:16Z",

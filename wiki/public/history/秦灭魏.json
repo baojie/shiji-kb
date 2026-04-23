@@ -1,8 +1,28 @@
 {
   "page": "秦灭魏",
-  "latest_rev_id": "20260423-155424-40b145",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163102-ceb3b0",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163102-ceb3b0",
+      "timestamp": "2026-04-23T16:31:02Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161222-b446ef",
+      "content_hash": "sha256:ceb3b04497201bfaac76b5921a1a400bba269aa3f82fcc13ec862afa8f580a7d",
+      "size": 640,
+      "content": "---\nid: \"秦灭魏\"\ntype: event\ntitle: 秦灭魏\ndescription: 秦始皇二十二年，王贲攻魏，俘虏魏王假，尽取其地。魏国灭亡。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-025]\ndate: \"〖%公元前225〗 （公元前225年）\"\n---\n\n::: meta\npn: \"r252\"\nevent_type: 战争\n:::\n\n# 秦灭魏\n\n> 秦始皇二十二年，王贲攻魏，俘虏魏王假，尽取其地。魏国灭亡。\n\n**主要人物**：王贲\n\n## 事件经过\n\n秦始皇二十二年，王贲攻魏，俘虏魏王假，尽取其地。魏国灭亡。\n\n## 原文\n\n> 二十二。王贲击魏，得其王假，尽取其地。\n\n"
+    },
+    {
+      "rev_id": "20260423-161222-b446ef",
+      "timestamp": "2026-04-23T16:12:22Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155424-40b145",
+      "content_hash": "sha256:b446ef97dcb68de035b53ef7779037f7094891b33eda6c9b976ae984d66a935c",
+      "size": 649,
+      "content": "paragraph_refs:\n  015-025: \"r252\"\nevent_type: 战争\n---\nid: \"秦灭魏\"\ntype: event\ntitle: 秦灭魏\ndescription: 秦始皇二十二年，王贲攻魏，俘虏魏王假，尽取其地。魏国灭亡。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-025]\ndate: \"〖%公元前225〗 （公元前225年）\"\n---\n\n# 秦灭魏\n\n> 秦始皇二十二年，王贲攻魏，俘虏魏王假，尽取其地。魏国灭亡。\n\n**主要人物**：王贲\n\n## 事件经过\n\n秦始皇二十二年，王贲攻魏，俘虏魏王假，尽取其地。魏国灭亡。\n\n## 原文\n\n> 二十二。王贲击魏，得其王假，尽取其地。\n\n"
+    },
     {
       "rev_id": "20260423-155424-40b145",
       "timestamp": "2026-04-23T15:54:24Z",

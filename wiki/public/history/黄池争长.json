@@ -1,8 +1,18 @@
 {
   "page": "黄池争长",
-  "latest_rev_id": "20260423-155629-72d922",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161629-d532b2",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161629-d532b2",
+      "timestamp": "2026-04-23T16:16:29Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155629-72d922",
+      "content_hash": "sha256:d532b2f5d2d24b0fcfc8c95f872ab214cd54bee47aab091f6802b89b75e42ee5",
+      "size": 1114,
+      "content": "paragraph_refs:\n  031-029: \"[37.1-37.6]\"\nevent_type: 政治活动\nlocation: \"黄池\"\n---\nid: \"黄池争长\"\ntype: event\ntitle: 黄池争长\ndescription: 夫差十四年春，北会诸侯于黄池，欲霸中国。吴王与晋定公争长，吴王曰\"于周室我为长\"，晋定公曰\"于姬姓我为伯\"。赵鞅怒欲伐吴，乃长晋。\ntags: [史记, 事件, 吴太伯世家]\nsources: [吴太伯世家]\nevent_ids: [031-029]\ndate: \"〖%十四年春〗 （公元前482年）\"\n---\n\n# 黄池争长\n\n> 夫差十四年春，北会诸侯于黄池，欲霸中国。吴王与晋定公争长，吴王曰\"于周室我为长\"，晋定公曰\"于姬姓我为伯\"。赵鞅怒欲伐吴，乃长晋。\n\n**主要人物**：吴王夫差、晋定公、赵鞅\n\n## 事件经过\n\n夫差十四年春，北会诸侯于黄池，欲霸中国。吴王与晋定公争长，吴王曰\"于周室我为长\"，晋定公曰\"于姬姓我为伯\"。赵鞅怒欲伐吴，乃长晋。\n\n## 原文\n\n> 十四年春，吴王北会诸侯於黄池，欲霸中国以全周室。...吴王曰：'於周室我为长。'晋定公曰：'於姬姓我为伯。'\n\n"
+    },
     {
       "rev_id": "20260423-155629-72d922",
       "timestamp": "2026-04-23T15:56:29Z",

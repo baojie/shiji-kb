@@ -1,8 +1,28 @@
 {
   "page": "石奋为太子太傅",
-  "latest_rev_id": "20260423-154609-cde333",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163018-a1eb1c",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163018-a1eb1c",
+      "timestamp": "2026-04-23T16:30:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161212-4ad35e",
+      "content_hash": "sha256:a1eb1cb035f8c2c3af8391d75f0c8959d2757af942f4b8b1c0002912655169a6",
+      "size": 811,
+      "content": "---\nid: \"石奋为太子太傅\"\ntype: event\ntitle: 石奋为太子太傅\ndescription: 文帝时选太子太傅，众人皆推石奋。及景帝即位，以石奋为九卿，后因迫近畏之，徙为诸侯相。\ntags: [史记, 事件, 万石张叔列传]\nsources: [万石张叔列传]\nevent_ids: [103-002]\ndate: \"〖;文帝〗时 [约公元前168年]\"\n---\n\n::: meta\npn: \"[1.2]\"\nevent_type: 政治活动\n:::\n\n# 石奋为太子太傅\n\n> 文帝时选太子太傅，众人皆推石奋。及景帝即位，以石奋为九卿，后因迫近畏之，徙为诸侯相。\n\n**主要人物**：文帝、石奋\n\n## 事件经过\n\n文帝时选太子太傅，众人皆推石奋。及景帝即位，以石奋为九卿，后因迫近畏之，徙为诸侯相。\n\n## 原文\n\n> 选可为傅者，皆推奋，奋为太子太傅。\n\n"
+    },
+    {
+      "rev_id": "20260423-161212-4ad35e",
+      "timestamp": "2026-04-23T16:12:12Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154609-cde333",
+      "content_hash": "sha256:4ad35e45e830478860157d315fc5e23168304cfd392fac48f91c4f716be77a01",
+      "size": 820,
+      "content": "paragraph_refs:\n  103-002: \"[1.2]\"\nevent_type: 政治活动\n---\nid: \"石奋为太子太傅\"\ntype: event\ntitle: 石奋为太子太傅\ndescription: 文帝时选太子太傅，众人皆推石奋。及景帝即位，以石奋为九卿，后因迫近畏之，徙为诸侯相。\ntags: [史记, 事件, 万石张叔列传]\nsources: [万石张叔列传]\nevent_ids: [103-002]\ndate: \"〖;文帝〗时 [约公元前168年]\"\n---\n\n# 石奋为太子太傅\n\n> 文帝时选太子太傅，众人皆推石奋。及景帝即位，以石奋为九卿，后因迫近畏之，徙为诸侯相。\n\n**主要人物**：文帝、石奋\n\n## 事件经过\n\n文帝时选太子太傅，众人皆推石奋。及景帝即位，以石奋为九卿，后因迫近畏之，徙为诸侯相。\n\n## 原文\n\n> 选可为傅者，皆推奋，奋为太子太傅。\n\n"
+    },
     {
       "rev_id": "20260423-154609-cde333",
       "timestamp": "2026-04-23T15:46:09Z",

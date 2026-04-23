@@ -1,8 +1,28 @@
 {
   "page": "舜在位三十九年",
-  "latest_rev_id": "20260423-155456-65bfc7",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163218-b3d439",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163218-b3d439",
+      "timestamp": "2026-04-23T16:32:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161239-b8601c",
+      "content_hash": "sha256:b3d439cf0f55e92ecba035e8722d6266bbe5312610a8bb039aaba72b51c7ff22",
+      "size": 884,
+      "content": "---\nid: \"舜在位三十九年\"\ntype: event\ntitle: 舜在位三十九年\ndescription: 舜践帝位三十九年，南巡狩时崩于苍梧之野，葬于江南九疑山，是为零陵。这标志着舜时代的结束。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-061]\ndate: \"〖%三十九年〗 [约公元前2217年]\"\n---\n\n::: meta\npn: \"[25]\"\nevent_type: 继位\nlocation: \"苍梧之野、江南九疑\"\n:::\n\n# 舜在位三十九年\n\n> 舜践帝位三十九年，南巡狩时崩于苍梧之野，葬于江南九疑山，是为零陵。这标志着舜时代的结束。\n\n**主要人物**：舜\n\n## 事件经过\n\n舜践帝位三十九年，南巡狩时崩于苍梧之野，葬于江南九疑山，是为零陵。这标志着舜时代的结束。\n\n## 原文\n\n> 践帝位三十九年，南巡狩，崩於苍梧之野。葬於江南九疑，是为零陵。\n\n"
+    },
+    {
+      "rev_id": "20260423-161239-b8601c",
+      "timestamp": "2026-04-23T16:12:39Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155456-65bfc7",
+      "content_hash": "sha256:b8601c3aedc00643eddea984350a836dd7c99991b4569060ceff4e6c72b9ffdc",
+      "size": 893,
+      "content": "paragraph_refs:\n  001-061: \"[25]\"\nevent_type: 继位\nlocation: \"苍梧之野、江南九疑\"\n---\nid: \"舜在位三十九年\"\ntype: event\ntitle: 舜在位三十九年\ndescription: 舜践帝位三十九年，南巡狩时崩于苍梧之野，葬于江南九疑山，是为零陵。这标志着舜时代的结束。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-061]\ndate: \"〖%三十九年〗 [约公元前2217年]\"\n---\n\n# 舜在位三十九年\n\n> 舜践帝位三十九年，南巡狩时崩于苍梧之野，葬于江南九疑山，是为零陵。这标志着舜时代的结束。\n\n**主要人物**：舜\n\n## 事件经过\n\n舜践帝位三十九年，南巡狩时崩于苍梧之野，葬于江南九疑山，是为零陵。这标志着舜时代的结束。\n\n## 原文\n\n> 践帝位三十九年，南巡狩，崩於苍梧之野。葬於江南九疑，是为零陵。\n\n"
+    },
     {
       "rev_id": "20260423-155456-65bfc7",
       "timestamp": "2026-04-23T15:54:56Z",

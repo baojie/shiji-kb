@@ -1,8 +1,28 @@
 {
   "page": "秦拔韩伊阙",
-  "latest_rev_id": "20260423-155420-f8b387",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163053-22e2a4",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163053-22e2a4",
+      "timestamp": "2026-04-23T16:30:53Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161220-8406f4",
+      "content_hash": "sha256:22e2a4d3d46923a170f37d24ace8ddf1ff6cd4e0da86f214105e6c5db3990d51",
+      "size": 764,
+      "content": "---\nid: \"秦拔韩伊阙\"\ntype: event\ntitle: 秦拔韩伊阙\ndescription: 韩使公孙喜率周、魏攻秦，秦败韩二十四万，虏喜于伊阙。此后韩国连续遭受秦国打击。\ntags: [史记, 事件, 韩世家]\nsources: [韩世家]\nevent_ids: [045-012]\ndate: \"〖;釐王〗〖%三年〗 （公元前293年）\"\n---\n\n::: meta\npn: \"[16.1]\"\nevent_type: 战争\nlocation: \"伊阙\"\n:::\n\n# 秦拔韩伊阙\n\n> 韩使公孙喜率周、魏攻秦，秦败韩二十四万，虏喜于伊阙。此后韩国连续遭受秦国打击。\n\n**主要人物**：公孙喜、白起\n\n## 事件经过\n\n韩使公孙喜率周、魏攻秦，秦败韩二十四万，虏喜于伊阙。此后韩国连续遭受秦国打击。\n\n## 原文\n\n> 秦败我二十四万，虏喜伊阙。\n\n"
+    },
+    {
+      "rev_id": "20260423-161220-8406f4",
+      "timestamp": "2026-04-23T16:12:20Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155420-f8b387",
+      "content_hash": "sha256:8406f4a74c2a02d02025f5cbd375f4c363b72110cdb1b40a2252077d2b154ec1",
+      "size": 773,
+      "content": "paragraph_refs:\n  045-012: \"[16.1]\"\nevent_type: 战争\nlocation: \"伊阙\"\n---\nid: \"秦拔韩伊阙\"\ntype: event\ntitle: 秦拔韩伊阙\ndescription: 韩使公孙喜率周、魏攻秦，秦败韩二十四万，虏喜于伊阙。此后韩国连续遭受秦国打击。\ntags: [史记, 事件, 韩世家]\nsources: [韩世家]\nevent_ids: [045-012]\ndate: \"〖;釐王〗〖%三年〗 （公元前293年）\"\n---\n\n# 秦拔韩伊阙\n\n> 韩使公孙喜率周、魏攻秦，秦败韩二十四万，虏喜于伊阙。此后韩国连续遭受秦国打击。\n\n**主要人物**：公孙喜、白起\n\n## 事件经过\n\n韩使公孙喜率周、魏攻秦，秦败韩二十四万，虏喜于伊阙。此后韩国连续遭受秦国打击。\n\n## 原文\n\n> 秦败我二十四万，虏喜伊阙。\n\n"
+    },
     {
       "rev_id": "20260423-155420-f8b387",
       "timestamp": "2026-04-23T15:54:20Z",

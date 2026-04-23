@@ -1,8 +1,28 @@
 {
   "page": "纣为暴虐元龟不占",
-  "latest_rev_id": "20260423-155439-e1e6a9",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163147-00d506",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163147-00d506",
+      "timestamp": "2026-04-23T16:31:47Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161232-3063d4",
+      "content_hash": "sha256:00d5063faea59566f0e48c4dd2835d45dc2dd48a99ece492d4e472ef7b75917e",
+      "size": 715,
+      "content": "---\nid: \"纣为暴虐元龟不占\"\ntype: event\ntitle: 纣为暴虐元龟不占\ndescription: 纣王暴虐无道，元龟不为之占卜。这表明龟卜有其灵性，对不义之君拒绝显示吉凶。\ntags: [史记, 事件, 龟策列传]\nsources: [龟策列传]\nevent_ids: [128-002]\ndate: \"[约公元前1050年]\"\n---\n\n::: meta\npn: \"[3]\"\nevent_type: 政治活动\n:::\n\n# 纣为暴虐元龟不占\n\n> 纣王暴虐无道，元龟不为之占卜。这表明龟卜有其灵性，对不义之君拒绝显示吉凶。\n\n**主要人物**：纣\n\n## 事件经过\n\n纣王暴虐无道，元龟不为之占卜。这表明龟卜有其灵性，对不义之君拒绝显示吉凶。\n\n## 原文\n\n> 纣为暴虐，而元龟不占。\n\n"
+    },
+    {
+      "rev_id": "20260423-161232-3063d4",
+      "timestamp": "2026-04-23T16:12:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-155439-e1e6a9",
+      "content_hash": "sha256:3063d4a22ba0670a623c840da74677f62cd24e3858c5149a62329409d5b54bcd",
+      "size": 724,
+      "content": "paragraph_refs:\n  128-002: \"[3]\"\nevent_type: 政治活动\n---\nid: \"纣为暴虐元龟不占\"\ntype: event\ntitle: 纣为暴虐元龟不占\ndescription: 纣王暴虐无道，元龟不为之占卜。这表明龟卜有其灵性，对不义之君拒绝显示吉凶。\ntags: [史记, 事件, 龟策列传]\nsources: [龟策列传]\nevent_ids: [128-002]\ndate: \"[约公元前1050年]\"\n---\n\n# 纣为暴虐元龟不占\n\n> 纣王暴虐无道，元龟不为之占卜。这表明龟卜有其灵性，对不义之君拒绝显示吉凶。\n\n**主要人物**：纣\n\n## 事件经过\n\n纣王暴虐无道，元龟不为之占卜。这表明龟卜有其灵性，对不义之君拒绝显示吉凶。\n\n## 原文\n\n> 纣为暴虐，而元龟不占。\n\n"
+    },
     {
       "rev_id": "20260423-155439-e1e6a9",
       "timestamp": "2026-04-23T15:54:39Z",

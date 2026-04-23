@@ -1,8 +1,28 @@
 {
   "page": "穰侯封穰益陶",
-  "latest_rev_id": "20260423-154620-449e02",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163117-a201b7",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163117-a201b7",
+      "timestamp": "2026-04-23T16:31:17Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161225-96119b",
+      "content_hash": "sha256:a201b750963b9371941fc5fd683b7e3fd15b52b3ec2211db91ed08fab4c0f3b9",
+      "size": 899,
+      "content": "---\nid: \"穰侯封穰益陶\"\ntype: event\ntitle: 穰侯封穰益陶\ndescription: 穰侯经历罢相复相后，被封于穰地，又加封陶邑，号为穰侯。陶邑后来成为穰侯经营的重要据点，其财富甚至超过王室。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-005]\ndate: \"昭王十六年（公元前291年）\"\n---\n\n::: meta\npn: \"[4]\"\nevent_type: 政治活动\nlocation: \"穰、陶\"\n:::\n\n# 穰侯封穰益陶\n\n> 穰侯经历罢相复相后，被封于穰地，又加封陶邑，号为穰侯。陶邑后来成为穰侯经营的重要据点，其财富甚至超过王室。\n\n**主要人物**：穰侯\n\n## 事件经过\n\n穰侯经历罢相复相后，被封于穰地，又加封陶邑，号为穰侯。陶邑后来成为穰侯经营的重要据点，其财富甚至超过王室。\n\n## 原文\n\n> 乃封魏厓於穰，复益封陶，号曰穰侯。\n\n"
+    },
+    {
+      "rev_id": "20260423-161225-96119b",
+      "timestamp": "2026-04-23T16:12:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154620-449e02",
+      "content_hash": "sha256:96119bf803cb2d4379f8588c7803123265da77a38d6ab7ed07a56e79141dabcb",
+      "size": 908,
+      "content": "paragraph_refs:\n  072-005: \"[4]\"\nevent_type: 政治活动\nlocation: \"穰、陶\"\n---\nid: \"穰侯封穰益陶\"\ntype: event\ntitle: 穰侯封穰益陶\ndescription: 穰侯经历罢相复相后，被封于穰地，又加封陶邑，号为穰侯。陶邑后来成为穰侯经营的重要据点，其财富甚至超过王室。\ntags: [史记, 事件, 穰侯列传]\nsources: [穰侯列传]\nevent_ids: [072-005]\ndate: \"昭王十六年（公元前291年）\"\n---\n\n# 穰侯封穰益陶\n\n> 穰侯经历罢相复相后，被封于穰地，又加封陶邑，号为穰侯。陶邑后来成为穰侯经营的重要据点，其财富甚至超过王室。\n\n**主要人物**：穰侯\n\n## 事件经过\n\n穰侯经历罢相复相后，被封于穰地，又加封陶邑，号为穰侯。陶邑后来成为穰侯经营的重要据点，其财富甚至超过王室。\n\n## 原文\n\n> 乃封魏厓於穰，复益封陶，号曰穰侯。\n\n"
+    },
     {
       "rev_id": "20260423-154620-449e02",
       "timestamp": "2026-04-23T15:46:20Z",

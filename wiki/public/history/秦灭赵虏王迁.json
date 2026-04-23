@@ -1,8 +1,28 @@
 {
   "page": "秦灭赵虏王迁",
-  "latest_rev_id": "20260423-155423-952721",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163101-08b210",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163101-08b210",
+      "timestamp": "2026-04-23T16:31:01Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161221-7180a5",
+      "content_hash": "sha256:08b210c7fad3262baa5b7a8661b7ae291c58d57f552d6fb5cf9cdfe6af887e27",
+      "size": 823,
+      "content": "---\nid: \"秦灭赵虏王迁\"\ntype: event\ntitle: 秦灭赵虏王迁\ndescription: 秦始皇十九年，王翦攻拔赵国，虏赵王迁于邯郸。赵公子嘉自立为代王，赵国实际灭亡。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-023]\ndate: \"〖%公元前228〗 （公元前228年）\"\n---\n\n::: meta\npn: \"r249\"\nevent_type: 战争\nlocation: \"邯郸\"\n:::\n\n# 秦灭赵虏王迁\n\n> 秦始皇十九年，王翦攻拔赵国，虏赵王迁于邯郸。赵公子嘉自立为代王，赵国实际灭亡。\n\n**主要人物**：王翦\n\n## 事件经过\n\n秦始皇十九年，王翦攻拔赵国，虏赵王迁于邯郸。赵公子嘉自立为代王，赵国实际灭亡。\n\n## 原文\n\n> 十九。王翦拔赵，虏王迁邯郸。\"\"八。秦王翦虏王迁邯郸。公子嘉自立为代王。\n\n"
+    },
+    {
+      "rev_id": "20260423-161221-7180a5",
+      "timestamp": "2026-04-23T16:12:21Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155423-952721",
+      "content_hash": "sha256:7180a508c875b5aad8c3fc1ec3cde21688dea764b00e00439edb3a90af6324f1",
+      "size": 832,
+      "content": "paragraph_refs:\n  015-023: \"r249\"\nevent_type: 战争\nlocation: \"邯郸\"\n---\nid: \"秦灭赵虏王迁\"\ntype: event\ntitle: 秦灭赵虏王迁\ndescription: 秦始皇十九年，王翦攻拔赵国，虏赵王迁于邯郸。赵公子嘉自立为代王，赵国实际灭亡。\ntags: [史记, 事件, 六国年表]\nsources: [六国年表]\nevent_ids: [015-023]\ndate: \"〖%公元前228〗 （公元前228年）\"\n---\n\n# 秦灭赵虏王迁\n\n> 秦始皇十九年，王翦攻拔赵国，虏赵王迁于邯郸。赵公子嘉自立为代王，赵国实际灭亡。\n\n**主要人物**：王翦\n\n## 事件经过\n\n秦始皇十九年，王翦攻拔赵国，虏赵王迁于邯郸。赵公子嘉自立为代王，赵国实际灭亡。\n\n## 原文\n\n> 十九。王翦拔赵，虏王迁邯郸。\"\"八。秦王翦虏王迁邯郸。公子嘉自立为代王。\n\n"
+    },
     {
       "rev_id": "20260423-155423-952721",
       "timestamp": "2026-04-23T15:54:23Z",

@@ -1,8 +1,28 @@
 {
   "page": "蜀侯煇反司马错定蜀",
-  "latest_rev_id": "20260423-154659-a0c35e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163315-9b9a5e",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163315-9b9a5e",
+      "timestamp": "2026-04-23T16:33:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161259-2973bc",
+      "content_hash": "sha256:9b9a5e9ff88b02e2022b69f32e6ae3af45bf0743283cec155d74c83ae1137aeb",
+      "size": 912,
+      "content": "---\nid: \"蜀侯煇反司马错定蜀\"\ntype: event\ntitle: 蜀侯煇反司马错定蜀\ndescription: 昭襄王六年，蜀侯煇反叛，司马错率军平定蜀地。庶长奂伐楚斩首二万。泾阳君入齐为质。同年日食，白昼变暗。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-111]\ndate: \"〖%六年〗 （公元前301年）\"\n---\n\n::: meta\npn: \"[62.5]\"\nevent_type: 政治整顿\n:::\n\n# 蜀侯煇反司马错定蜀\n\n> 昭襄王六年，蜀侯煇反叛，司马错率军平定蜀地。庶长奂伐楚斩首二万。泾阳君入齐为质。同年日食，白昼变暗。\n\n**主要人物**：司马错、蜀侯煇\n\n## 事件经过\n\n昭襄王六年，蜀侯煇反叛，司马错率军平定蜀地。庶长奂伐楚斩首二万。泾阳君入齐为质。同年日食，白昼变暗。\n\n## 原文\n\n> 六年，蜀侯煇反，司马错定蜀。庶长奂伐楚，斩首二万。\n\n"
+    },
+    {
+      "rev_id": "20260423-161259-2973bc",
+      "timestamp": "2026-04-23T16:12:59Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154659-a0c35e",
+      "content_hash": "sha256:2973bc631f3944b125d3e4c3dc11184e6ad767709b7902594cae78872dab6146",
+      "size": 921,
+      "content": "paragraph_refs:\n  005-111: \"[62.5]\"\nevent_type: 政治整顿\n---\nid: \"蜀侯煇反司马错定蜀\"\ntype: event\ntitle: 蜀侯煇反司马错定蜀\ndescription: 昭襄王六年，蜀侯煇反叛，司马错率军平定蜀地。庶长奂伐楚斩首二万。泾阳君入齐为质。同年日食，白昼变暗。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-111]\ndate: \"〖%六年〗 （公元前301年）\"\n---\n\n# 蜀侯煇反司马错定蜀\n\n> 昭襄王六年，蜀侯煇反叛，司马错率军平定蜀地。庶长奂伐楚斩首二万。泾阳君入齐为质。同年日食，白昼变暗。\n\n**主要人物**：司马错、蜀侯煇\n\n## 事件经过\n\n昭襄王六年，蜀侯煇反叛，司马错率军平定蜀地。庶长奂伐楚斩首二万。泾阳君入齐为质。同年日食，白昼变暗。\n\n## 原文\n\n> 六年，蜀侯煇反，司马错定蜀。庶长奂伐楚，斩首二万。\n\n"
+    },
     {
       "rev_id": "20260423-154659-a0c35e",
       "timestamp": "2026-04-23T15:46:59Z",

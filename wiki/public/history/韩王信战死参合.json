@@ -1,8 +1,18 @@
 {
   "page": "韩王信战死参合",
-  "latest_rev_id": "20260423-154802-04a164",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161532-e4f2aa",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161532-e4f2aa",
+      "timestamp": "2026-04-23T16:15:32Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154802-04a164",
+      "content_hash": "sha256:e4f2aa0365acd66838ede986902e8fbf208ab28e47e13036504532fe85c750d5",
+      "size": 1144,
+      "content": "paragraph_refs:\n  093-009: \"[6]\"\nevent_type: 战争\nlocation: \"参合\"\n---\nid: \"韩王信战死参合\"\ntype: event\ntitle: 韩王信战死参合\ndescription: 汉十年韩信令王黄等说误陈豨叛汉。十一年春韩信复与胡骑入居参合对抗汉军。汉致书招降，韩信回书述三罪不敢归。柴将军屠参合，斩韩王信。\ntags: [史记, 事件, 韩信卢绾列传]\nsources: [韩信卢绾列传]\nevent_ids: [093-009]\ndate: \"〖%汉十年〗至〖%十一年春〗 （公元前197年至前196年）\"\n---\n\n# 韩王信战死参合\n\n> 汉十年韩信令王黄等说误陈豨叛汉。十一年春韩信复与胡骑入居参合对抗汉军。汉致书招降，韩信回书述三罪不敢归。柴将军屠参合，斩韩王信。\n\n**主要人物**：陈豨、韩信\n\n## 事件经过\n\n汉十年韩信令王黄等说误陈豨叛汉。十一年春韩信复与胡骑入居参合对抗汉军。汉致书招降，韩信回书述三罪不敢归。柴将军屠参合，斩韩王信。\n\n## 原文\n\n> 韩王信报曰：\"...今仆有三罪於陛下，而欲求活於世...势不可耳。\"遂战。柴将军屠参合，斩韩王信。\n\n"
+    },
     {
       "rev_id": "20260423-154802-04a164",
       "timestamp": "2026-04-23T15:48:02Z",

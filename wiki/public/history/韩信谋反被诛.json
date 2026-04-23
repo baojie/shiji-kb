@@ -1,8 +1,18 @@
 {
   "page": "韩信谋反被诛",
-  "latest_rev_id": "20260423-154757-55159e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161525-dde300",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161525-dde300",
+      "timestamp": "2026-04-23T16:15:25Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154757-55159e",
+      "content_hash": "sha256:dde3009b5cf56ea645e5163d6283eeeac669bcc8e0525179422f692a7b6d7cde",
+      "size": 1189,
+      "content": "paragraph_refs:\n  018-005: \"r40\"\nevent_type: 政治整顿\nlocation: \"关中\"\n---\nid: \"韩信谋反被诛\"\ntype: event\ntitle: 韩信谋反被诛\ndescription: 淮阴侯韩信，原以卒从项梁，后归汉为连敖，经萧何推荐为大将军。别定魏、齐，为王；徙楚后因擅发兵被废为淮阴侯。高祖十一年谋反关中，吕后诛信，夷三族，国除。\ntags: [史记, 事件, 高祖功臣侯者年表]\nsources: [高祖功臣侯者年表]\nevent_ids: [018-005]\ndate: \"〖%高祖十一年〗 （公元前196年）\"\n---\n\n# 韩信谋反被诛\n\n> 淮阴侯韩信，原以卒从项梁，后归汉为连敖，经萧何推荐为大将军。别定魏、齐，为王；徙楚后因擅发兵被废为淮阴侯。高祖十一年谋反关中，吕后诛信，夷三族，国除。\n\n**主要人物**：韩信\n\n## 事件经过\n\n淮阴侯韩信，原以卒从项梁，后归汉为连敖，经萧何推荐为大将军。别定魏、齐，为王；徙楚后因擅发兵被废为淮阴侯。高祖十一年谋反关中，吕后诛信，夷三族，国除。\n\n## 原文\n\n> 五。六年四月，侯韩信元年。十一年，信谋反关中，吕后诛信，夷三族，国除。\n\n"
+    },
     {
       "rev_id": "20260423-154757-55159e",
       "timestamp": "2026-04-23T15:47:57Z",

@@ -1,8 +1,18 @@
 {
   "page": "鞍之战齐败于晋",
-  "latest_rev_id": "20260423-154752-33eb40",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161518-0326cb",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161518-0326cb",
+      "timestamp": "2026-04-23T16:15:18Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154752-33eb40",
+      "content_hash": "sha256:0326cb85c7b4d3be52d2da012688bab45c4fe13abb059faad0e02a790b04b266",
+      "size": 1061,
+      "content": "paragraph_refs:\n  032-028: \"[54]\"\nevent_type: 战争\nlocation: \"鞍\"\n---\nid: \"鞍之战齐败于晋\"\ntype: event\ntitle: 鞍之战齐败于晋\ndescription: 齐伐鲁卫，晋使郤克以车八百乘救之。癸酉陈于鞍，齐败。逄丑父恐齐侯被俘，与顷公易位。顷公得脱。晋追至马陵，终令齐归鲁卫之侵地。\ntags: [史记, 事件, 齐太公世家]\nsources: [齐太公世家]\nevent_ids: [032-028]\ndate: \"〖%十年春〗 （公元前589年）\"\n---\n\n# 鞍之战齐败于晋\n\n> 齐伐鲁卫，晋使郤克以车八百乘救之。癸酉陈于鞍，齐败。逄丑父恐齐侯被俘，与顷公易位。顷公得脱。晋追至马陵，终令齐归鲁卫之侵地。\n\n**主要人物**：逄丑父、郤克、齐顷公\n\n## 事件经过\n\n齐伐鲁卫，晋使郤克以车八百乘救之。癸酉陈于鞍，齐败。逄丑父恐齐侯被俘，与顷公易位。顷公得脱。晋追至马陵，终令齐归鲁卫之侵地。\n\n## 原文\n\n> 与齐侯兵合靡笄下。癸酉，陈于鞍。...齐急，丑父恐齐侯得，乃易处。\n\n"
+    },
     {
       "rev_id": "20260423-154752-33eb40",
       "timestamp": "2026-04-23T15:47:52Z",

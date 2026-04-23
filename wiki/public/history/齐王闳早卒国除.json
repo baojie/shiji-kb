@@ -1,8 +1,18 @@
 {
   "page": "齐王闳早卒国除",
-  "latest_rev_id": "20260423-154832-34d071",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161644-74a38f",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161644-74a38f",
+      "timestamp": "2026-04-23T16:16:44Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154832-34d071",
+      "content_hash": "sha256:74a38f2c2803005031fd9b5e0d5eebb3a381547b28320c7e26a88ce7c712a332",
+      "size": 737,
+      "content": "paragraph_refs:\n  060-016: \"褚先生曰\"\nevent_type: 家族事件\nlocation: \"齐\"\n---\nid: \"齐王闳早卒国除\"\ntype: event\ntitle: 齐王闳早卒国除\ndescription: 子闳王齐年少无有子，立不幸早死国绝为郡。全身无过如其策意。\ntags: [史记, 事件, 三王世家]\nsources: [三王世家]\nevent_ids: [060-016]\ndate: \"（公元前113年）\"\n---\n\n# 齐王闳早卒国除\n\n> 子闳王齐年少无有子，立不幸早死国绝为郡。全身无过如其策意。\n\n**主要人物**：闳\n\n## 事件经过\n\n子闳王齐年少无有子，立不幸早死国绝为郡。全身无过如其策意。\n\n## 原文\n\n> 子闳王齐，年少，无有子，立，不幸早死，国绝，为郡。天下称齐不宜王云。\n\n"
+    },
     {
       "rev_id": "20260423-154832-34d071",
       "timestamp": "2026-04-23T15:48:32Z",

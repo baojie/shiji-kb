@@ -1,8 +1,18 @@
 {
   "page": "雍齿叛丰",
-  "latest_rev_id": "20260423-155559-aeb674",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161510-ad1d02",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161510-ad1d02",
+      "timestamp": "2026-04-23T16:15:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155559-aeb674",
+      "content_hash": "sha256:ad1d02634e47a09fe42c3fffe867fd6a801a50563a64fb01ca4b2bca49e4dfed",
+      "size": 964,
+      "content": "paragraph_refs:\n  008-011: \"[12.10]-[12.12]\"\nevent_type: 战争\nlocation: \"丰\"\n---\nid: \"雍齿叛丰\"\ntype: event\ntitle: 雍齿叛丰\ndescription: 魏人周市招降雍齿，雍齿本不欲属沛公，遂反为魏守丰。沛公引兵攻丰不能取，因病还沛。此为刘邦早期重大挫折。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-011]\ndate: \"〖%二世二年〗 （公元前208年）\"\n---\n\n# 雍齿叛丰\n\n> 魏人周市招降雍齿，雍齿本不欲属沛公，遂反为魏守丰。沛公引兵攻丰不能取，因病还沛。此为刘邦早期重大挫折。\n\n**主要人物**：刘邦、周市、雍齿\n\n## 事件经过\n\n魏人周市招降雍齿，雍齿本不欲属沛公，遂反为魏守丰。沛公引兵攻丰不能取，因病还沛。此为刘邦早期重大挫折。\n\n## 原文\n\n> 雍齿雅不欲属沛公，及魏招之，即反为魏守丰。沛公引兵攻丰，不能取。沛公病，还之沛。\n\n"
+    },
     {
       "rev_id": "20260423-155559-aeb674",
       "timestamp": "2026-04-23T15:55:59Z",

@@ -1,8 +1,18 @@
 {
   "page": "雨金栎阳",
-  "latest_rev_id": "20260423-155600-6080e5",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161510-43195e",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161510-43195e",
+      "timestamp": "2026-04-23T16:15:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155600-6080e5",
+      "content_hash": "sha256:43195eccf9ec9d43f94eb52d22dfc59a45cd091f342d127eabce05f9d12f1b9b",
+      "size": 709,
+      "content": "paragraph_refs:\n  005-063: \"[47.5]\"\nevent_type: 自然灾害\nlocation: \"栎阳\"\n---\nid: \"雨金栎阳\"\ntype: event\ntitle: 雨金栎阳\ndescription: 献公十八年，栎阳天降金属（陨石），古人视为天降异象，常被解读为祥瑞或灾异之兆。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-063]\ndate: \"〖%十八年〗 （公元前367年）\"\n---\n\n# 雨金栎阳\n\n> 献公十八年，栎阳天降金属（陨石），古人视为天降异象，常被解读为祥瑞或灾异之兆。\n\n## 事件经过\n\n献公十八年，栎阳天降金属（陨石），古人视为天降异象，常被解读为祥瑞或灾异之兆。\n\n## 原文\n\n> 十八年，雨金栎阳。\n\n"
+    },
     {
       "rev_id": "20260423-155600-6080e5",
       "timestamp": "2026-04-23T15:56:00Z",

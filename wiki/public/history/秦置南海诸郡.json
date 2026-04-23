@@ -1,8 +1,28 @@
 {
   "page": "秦置南海诸郡",
-  "latest_rev_id": "20260423-155426-3d16c2",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163110-88950c",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163110-88950c",
+      "timestamp": "2026-04-23T16:31:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161223-6e430d",
+      "content_hash": "sha256:88950ce5d6c2777091eb9171e144fedec1c373ef527e2575566d0f7d801daa51",
+      "size": 934,
+      "content": "---\nid: \"秦置南海诸郡\"\ntype: event\ntitle: 秦置南海诸郡\ndescription: 秦已并天下，略定杨越，置桂林、南海、象郡，以谪徙民与越人杂处十三岁。赵佗在秦时被任为南海龙川令。\ntags: [史记, 事件, 南越列传]\nsources: [南越列传]\nevent_ids: [113-001]\ndate: \"〖%秦始皇三十三年〗 （公元前214年）\"\n---\n\n::: meta\npn: \"[0]\"\nevent_type: 政治活动\nlocation: \"桂林、南海、象郡\"\n:::\n\n# 秦置南海诸郡\n\n> 秦已并天下，略定杨越，置桂林、南海、象郡，以谪徙民与越人杂处十三岁。赵佗在秦时被任为南海龙川令。\n\n**主要人物**：越\n\n## 事件经过\n\n秦已并天下，略定杨越，置桂林、南海、象郡，以谪徙民与越人杂处十三岁。赵佗在秦时被任为南海龙川令。\n\n## 原文\n\n> 秦时已并天下，略定杨越，置桂林、南海、象郡，以谪徙民，与越杂处十三岁。\n\n"
+    },
+    {
+      "rev_id": "20260423-161223-6e430d",
+      "timestamp": "2026-04-23T16:12:23Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155426-3d16c2",
+      "content_hash": "sha256:6e430dafced9377ccc64513eea2b0d78643a116d3943cfe53e87c0944b384a0f",
+      "size": 943,
+      "content": "paragraph_refs:\n  113-001: \"[0]\"\nevent_type: 政治活动\nlocation: \"桂林、南海、象郡\"\n---\nid: \"秦置南海诸郡\"\ntype: event\ntitle: 秦置南海诸郡\ndescription: 秦已并天下，略定杨越，置桂林、南海、象郡，以谪徙民与越人杂处十三岁。赵佗在秦时被任为南海龙川令。\ntags: [史记, 事件, 南越列传]\nsources: [南越列传]\nevent_ids: [113-001]\ndate: \"〖%秦始皇三十三年〗 （公元前214年）\"\n---\n\n# 秦置南海诸郡\n\n> 秦已并天下，略定杨越，置桂林、南海、象郡，以谪徙民与越人杂处十三岁。赵佗在秦时被任为南海龙川令。\n\n**主要人物**：越\n\n## 事件经过\n\n秦已并天下，略定杨越，置桂林、南海、象郡，以谪徙民与越人杂处十三岁。赵佗在秦时被任为南海龙川令。\n\n## 原文\n\n> 秦时已并天下，略定杨越，置桂林、南海、象郡，以谪徙民，与越杂处十三岁。\n\n"
+    },
     {
       "rev_id": "20260423-155426-3d16c2",
       "timestamp": "2026-04-23T15:54:26Z",

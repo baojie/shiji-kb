@@ -1,8 +1,18 @@
 {
   "page": "项羽拔荥阳",
-  "latest_rev_id": "20260423-154809-d19cc6",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161546-5f5938",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161546-5f5938",
+      "timestamp": "2026-04-23T16:15:46Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-154809-d19cc6",
+      "content_hash": "sha256:5f59387403ef0383e39323bc0767bddc2d1acbef8054f105e8cc0aee3df3e6eb",
+      "size": 826,
+      "content": "paragraph_refs:\n  008-051: \"[43.6]\"\nevent_type: 战争\nlocation: \"荥阳、成皋\"\n---\nid: \"项羽拔荥阳\"\ntype: event\ntitle: 项羽拔荥阳\ndescription: 项羽破走彭越后闻汉王复军成皋，引兵西拔荥阳，诛周苛、枞公，虏韩王信，遂围成皋。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-051]\ndate: \"〖%三年〗 （公元前204年）\"\n---\n\n# 项羽拔荥阳\n\n> 项羽破走彭越后闻汉王复军成皋，引兵西拔荥阳，诛周苛、枞公，虏韩王信，遂围成皋。\n\n**主要人物**：周苛、项羽\n\n## 事件经过\n\n项羽破走彭越后闻汉王复军成皋，引兵西拔荥阳，诛周苛、枞公，虏韩王信，遂围成皋。\n\n## 原文\n\n> 项羽...乃复引兵西，拔荥阳，诛周苛、枞公，而虏韩王信，遂围成皋。\n\n"
+    },
     {
       "rev_id": "20260423-154809-d19cc6",
       "timestamp": "2026-04-23T15:48:09Z",

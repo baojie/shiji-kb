@@ -1,8 +1,18 @@
 {
   "page": "齐王发檄文",
-  "latest_rev_id": "20260423-154831-a2b03d",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161642-f3df6d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161642-f3df6d",
+      "timestamp": "2026-04-23T16:16:42Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type)",
+      "parent_rev": "20260423-154831-a2b03d",
+      "content_hash": "sha256:f3df6d428a3a9afb89e78047fa7632f62b70e1e08a7e7721827582ce98d6d96e",
+      "size": 1041,
+      "content": "paragraph_refs:\n  009-056: \"[36.1]\"\nevent_type: 政治活动\n---\nid: \"齐王发檄文\"\ntype: event\ntitle: 齐王发檄文\ndescription: 齐王遗书诸侯王，历数吕后称制以来擅废帝更立、比杀三赵王、灭梁赵燕以王诸吕、分齐为四等罪状，宣布率兵入京诛杀不当为王者。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-056]\ndate: \"（公元前180年）\"\n---\n\n# 齐王发檄文\n\n> 齐王遗书诸侯王，历数吕后称制以来擅废帝更立、比杀三赵王、灭梁赵燕以王诸吕、分齐为四等罪状，宣布率兵入京诛杀不当为王者。\n\n**主要人物**：齐王\n\n## 事件经过\n\n齐王遗书诸侯王，历数吕后称制以来擅废帝更立、比杀三赵王、灭梁赵燕以王诸吕、分齐为四等罪状，宣布率兵入京诛杀不当为王者。\n\n## 原文\n\n> 齐王乃遗诸侯王书曰：'...诸吕又擅自尊官，聚兵严威，劫列侯忠臣，矫制以令天下，宗庙所以危。寡人率兵入诛不当为王者。'\n\n"
+    },
     {
       "rev_id": "20260423-154831-a2b03d",
       "timestamp": "2026-04-23T15:48:31Z",

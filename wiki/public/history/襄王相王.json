@@ -1,8 +1,28 @@
 {
   "page": "襄王相王",
-  "latest_rev_id": "20260423-155513-2e05a3",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-163330-48b0f0",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260423-163330-48b0f0",
+      "timestamp": "2026-04-23T16:33:30Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全:::meta段落位置+事件元数据",
+      "parent_rev": "20260423-161309-75405d",
+      "content_hash": "sha256:48b0f0b75d29b78ec96cf8a9b393bb1777cf2b137aafc20a7b25725b0bcd2c2c",
+      "size": 704,
+      "content": "---\nid: \"襄王相王\"\ntype: event\ntitle: 襄王相王\ndescription: 襄王元年，与诸侯会徐州相王，追尊父惠王为王。此后魏国不断被秦侵削。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-015]\ndate: \"〖;襄王〗〖%元年〗 （公元前318年）\"\n---\n\n::: meta\npn: \"[14.1]\"\nevent_type: 政治活动\nlocation: \"徐州\"\n:::\n\n# 襄王相王\n\n> 襄王元年，与诸侯会徐州相王，追尊父惠王为王。此后魏国不断被秦侵削。\n\n**主要人物**：襄王\n\n## 事件经过\n\n襄王元年，与诸侯会徐州相王，追尊父惠王为王。此后魏国不断被秦侵削。\n\n## 原文\n\n> 襄王元年，与诸侯会徐州，相王也。\n\n"
+    },
+    {
+      "rev_id": "20260423-161309-75405d",
+      "timestamp": "2026-04-23T16:13:09Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155513-2e05a3",
+      "content_hash": "sha256:75405dc3b5544cf82010519cb500ad817e27b4c957210744b86b688f15e8814c",
+      "size": 713,
+      "content": "paragraph_refs:\n  044-015: \"[14.1]\"\nevent_type: 政治活动\nlocation: \"徐州\"\n---\nid: \"襄王相王\"\ntype: event\ntitle: 襄王相王\ndescription: 襄王元年，与诸侯会徐州相王，追尊父惠王为王。此后魏国不断被秦侵削。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-015]\ndate: \"〖;襄王〗〖%元年〗 （公元前318年）\"\n---\n\n# 襄王相王\n\n> 襄王元年，与诸侯会徐州相王，追尊父惠王为王。此后魏国不断被秦侵削。\n\n**主要人物**：襄王\n\n## 事件经过\n\n襄王元年，与诸侯会徐州相王，追尊父惠王为王。此后魏国不断被秦侵削。\n\n## 原文\n\n> 襄王元年，与诸侯会徐州，相王也。\n\n"
+    },
     {
       "rev_id": "20260423-155513-2e05a3",
       "timestamp": "2026-04-23T15:55:13Z",

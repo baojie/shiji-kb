@@ -1,8 +1,18 @@
 {
   "page": "麃公攻卷",
-  "latest_rev_id": "20260423-155628-977e6e",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161624-19ded9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161624-19ded9",
+      "timestamp": "2026-04-23T16:16:24Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155628-977e6e",
+      "content_hash": "sha256:19ded9a8c70092f37fc0035f7a0ab6c2c0ba21b3ae3a7b9d799e4ebafb770adf",
+      "size": 555,
+      "content": "paragraph_refs:\n  006-005: \"[4.2]\"\nevent_type: 战争\nlocation: \"卷\"\n---\nid: \"麃公攻卷\"\ntype: event\ntitle: 麃公攻卷\ndescription: 二年，麃公率兵攻打卷地，斩首三万。\ntags: [史记, 事件, 秦始皇本纪]\nsources: [秦始皇本纪]\nevent_ids: [006-005]\ndate: \"〖%二年〗 （公元前245年）\"\n---\n\n# 麃公攻卷\n\n> 二年，麃公率兵攻打卷地，斩首三万。\n\n**主要人物**：麃公\n\n## 事件经过\n\n二年，麃公率兵攻打卷地，斩首三万。\n\n## 原文\n\n> 二年，麃公将卒攻卷，斩首三万。\n\n"
+    },
     {
       "rev_id": "20260423-155628-977e6e",
       "timestamp": "2026-04-23T15:56:28Z",

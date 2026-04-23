@@ -1,8 +1,18 @@
 {
   "page": "诸侯毕贺朝天子",
-  "latest_rev_id": "20260423-155521-3ad375",
-  "revision_count": 1,
+  "latest_rev_id": "20260423-161326-bc3dc9",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260423-161326-bc3dc9",
+      "timestamp": "2026-04-23T16:13:26Z",
+      "author": "butler",
+      "summary": "butler/add-pn: 补全PN+元数据 (paragraph_refs, event_type, location)",
+      "parent_rev": "20260423-155521-3ad375",
+      "content_hash": "sha256:bc3dc961de9034777821e4bb4b6f57a124e3fbaba815d1124bca107687d7d879",
+      "size": 868,
+      "content": "paragraph_refs:\n  005-077: \"[52.6]\"\nevent_type: 政治活动\nlocation: \"逢泽\"\n---\nid: \"诸侯毕贺朝天子\"\ntype: event\ntitle: 诸侯毕贺朝天子\ndescription: 孝公二十年，诸侯皆来祝贺。秦使公子少官率师会诸侯于逢泽，朝见天子。秦国国际地位大幅提升。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-077]\ndate: \"〖%二十年〗 （公元前342年）\"\n---\n\n# 诸侯毕贺朝天子\n\n> 孝公二十年，诸侯皆来祝贺。秦使公子少官率师会诸侯于逢泽，朝见天子。秦国国际地位大幅提升。\n\n**主要人物**：公子少官\n\n## 事件经过\n\n孝公二十年，诸侯皆来祝贺。秦使公子少官率师会诸侯于逢泽，朝见天子。秦国国际地位大幅提升。\n\n## 原文\n\n> 二十年，诸侯毕贺。秦使公子少官率师会诸侯逢泽，朝天子。\n\n"
+    },
     {
       "rev_id": "20260423-155521-3ad375",
       "timestamp": "2026-04-23T15:55:21Z",
