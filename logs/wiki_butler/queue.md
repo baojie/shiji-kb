@@ -3,6 +3,17 @@
 > 由 bootstrap.sh 于 2026-04-22 填充.
 > P0 高优 / P1 中优 / P2 低优. 每次 invocation 只做 1 条, 按 W1 优先级选.
 
+## ⛔ P0 [ARCH] — 等待用户批准
+
+- [ ] **[ARCH] wiki 全部页面显示重构** [P0] [2026-04-23] [等待批准]
+  - 反思文档：`logs/wiki_butler/reflections/arch_2026-04-23.md`
+  - 问题：renderAll + renderCategory 全量渲染，671 页已出现体验问题，800 页后明显恶化
+  - 待批准方案（三选其一）：
+    - **A+B+C**（推荐）：首字过滤栏 + 类型折叠 + person 排序维度，共约 100 行改动
+    - **仅 A**：只加首字过滤栏，最小改动
+    - **T2**：直接做按需渲染（懒加载），更彻底但工作量更大
+  - Butler 在收到批准前不会自动修改 renderer.js
+
 ## 来自 discover_kg (kg top-N 缺 wiki 页)
 
 - [ ] 周文王: `create-stub` (refs=97/章=42) [源:A] [P1] [2026-04-22]

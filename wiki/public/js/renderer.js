@@ -451,6 +451,7 @@ export function renderCategory(core, kind, value) {
     ? (TYPE_LABELS[value] || value) : value;
 
   const itemsHtml = matches.map((p) => {
+    const firstChar = p.label ? p.label[0] : '';
     const life = p.lifespan;
     let lifeS = '';
     if (life && life.birth != null && life.death != null) {
@@ -460,14 +461,19 @@ export function renderCategory(core, kind, value) {
     }
     const meta = p.total_refs != null
       ? `<span class="cat-meta">${p.total_refs} 次 / ${p.total_chapters} 篇</span>` : '';
-    return `<li>
+    return `<li data-first="${escapeHtml(firstChar)}">
       <a href="#${encodeURIComponent(p.pid)}" class="cat-link">${escapeHtml(p.label)}</a>
       ${lifeS}${meta}
     </li>`;
   }).join('');
 
+  // A: 列表超过 20 项时附加首字过滤栏
+  const filterBar = matches.length > 20
+    ? buildFirstCharBarHtml(matches.map(p => p.label || p.pid))
+    : '';
+
   const body = matches.length > 0
-    ? `<ol class="category-list">${itemsHtml}</ol>`
+    ? `<div class="category-filterable">${filterBar}<ol class="category-list">${itemsHtml}</ol></div>`
     : '<p class="category-empty">此分类下暂无页面。</p>';
 
   document.getElementById('article').innerHTML =
@@ -475,6 +481,10 @@ export function renderCategory(core, kind, value) {
      <h1>${escapeHtml(titleKind)}：${escapeHtml(displayValue)}</h1>
      <p class="category-summary">共 <strong>${matches.length}</strong> 个页面</p>
      ${body}`;
+
+  // A: 绑定首字过滤
+  const filterable = document.querySelector('.category-filterable');
+  if (filterable) setupFirstCharFilter(filterable);
 
   document.body.classList.add('is-home');
   const ib = document.getElementById('infobox');
@@ -656,6 +666,33 @@ export async function renderRevision(core, page, revId) {
 }
 
 /**
+/* 从 label 列表提取唯一首字，返回过滤栏 HTML（首字 ≤ 3 个时不生成）。*/
+function buildFirstCharBarHtml(labels) {
+  const chars = [...new Set(labels.map(l => l && l[0]).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, 'zh'));
+  if (chars.length <= 3) return '';
+  const btns = ['全', ...chars].map((c, i) =>
+    `<button class="firstchar-btn${i === 0 ? ' active' : ''}" data-char="${escapeHtml(c)}">${escapeHtml(c)}</button>`
+  ).join('');
+  return `<div class="firstchar-bar" role="group" aria-label="按首字过滤">${btns}</div>`;
+}
+
+/* 为含 .firstchar-bar 的容器绑定过滤事件。listSel = 包含 <li data-first> 的列表选择器。*/
+function setupFirstCharFilter(container) {
+  const bar = container.querySelector('.firstchar-bar');
+  if (!bar) return;
+  bar.addEventListener('click', e => {
+    const btn = e.target.closest('.firstchar-btn');
+    if (!btn) return;
+    const ch = btn.dataset.char;
+    bar.querySelectorAll('.firstchar-btn').forEach(b => b.classList.toggle('active', b === btn));
+    container.querySelectorAll('li[data-first]').forEach(li => {
+      li.hidden = ch !== '全' && li.dataset.first !== ch;
+    });
+  });
+}
+
+/**
  * All 页 (#?all): 全部页面的完整列表, 分组可切换 (type / era / alpha).
  * 取代主页原来的 "全部 N 页" 折叠区.
  */
@@ -692,28 +729,40 @@ export function renderAll(core) {
 
   const groupsHtml = orderedTypes.map((t) => {
     const label = TYPE_LABELS[t] || t;
+    const isPerson = t === 'person';
     const items = byType[t].map((p) => {
+      const firstChar = p.label ? p.label[0] : '';
       const qs = p.quality_score != null
         ? ` <span class="list-score">q=${p.quality_score}</span>` : '';
       const meta = p.total_refs != null
         ? ` <span class="list-meta">${p.total_refs} 次 / ${p.total_chapters} 篇</span>` : '';
       const tags = (p.tags || []).slice(0, 3).map(escapeHtml).join(' · ');
       const tagsHtml = tags ? ` <span class="list-tags">${tags}</span>` : '';
-      return `<li>
+      return `<li data-first="${escapeHtml(firstChar)}">
         <a href="#${encodeURIComponent(p.id)}">${escapeHtml(p.label)}</a>
         ${qs}${meta}${tagsHtml}
       </li>`;
     }).join('');
-    return `<section class="all-group">
-      <h2>${escapeHtml(label)} <small>(${byType[t].length})</small></h2>
-      <ul class="all-list">${items}</ul>
+    // A: person 组附加首字过滤栏；B: 非 person 组默认折叠
+    const filterBar = isPerson ? buildFirstCharBarHtml(byType[t].map(p => p.label || p.id)) : '';
+    const collapsed = isPerson ? '' : ' is-collapsed';
+    const chevron = isPerson ? '▼' : '▶';
+    return `<section class="all-group${collapsed}" data-type="${escapeHtml(t)}">
+      <h2 class="all-group-header" role="button" tabindex="0">
+        <span class="all-group-chevron" aria-hidden="true">${chevron}</span>
+        ${escapeHtml(label)} <small>(${byType[t].length})</small>
+      </h2>
+      <div class="all-group-body">
+        ${filterBar}
+        <ul class="all-list">${items}</ul>
+      </div>
     </section>`;
   }).join('');
 
   document.getElementById('article').innerHTML =
     `<nav class="category-crumb"><a href="#">← 首页</a></nav>
      <h1>全部页面</h1>
-     <p class="category-summary">共 <strong>${ids.length}</strong> 页, 按类型分组, 组内按质量分降序</p>
+     <p class="category-summary">共 <strong>${ids.length}</strong> 页，按类型分组，组内按质量分降序</p>
      ${groupsHtml}`;
 
   document.body.classList.add('is-home');
@@ -725,6 +774,21 @@ export function renderAll(core) {
   document.getElementById('src-info').textContent = 'pages.json';
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
+
+  // B: 绑定折叠/展开事件
+  document.querySelectorAll('.all-group-header').forEach(h => {
+    const toggle = () => {
+      const sec = h.closest('.all-group');
+      const collapsed = sec.classList.toggle('is-collapsed');
+      h.querySelector('.all-group-chevron').textContent = collapsed ? '▶' : '▼';
+    };
+    h.addEventListener('click', toggle);
+    h.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
+
+  // A: 绑定 person 组首字过滤
+  const personSection = document.querySelector('.all-group[data-type="person"]');
+  if (personSection) setupFirstCharFilter(personSection);
 }
 
 /**
