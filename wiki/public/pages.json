@@ -14422,18 +14422,18 @@
         "高祖",
         "太上皇"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/刘太公.md",
       "total_refs": 4,
       "total_chapters": 1,
-      "quality_score": 1,
+      "quality_score": 23,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "revs": 3,
+        "size": 1,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "刘如意": {
@@ -40419,27 +40419,6 @@
         "narrative": 8
       }
     },
-    "常山王": {
-      "type": "person",
-      "label": "常山王",
-      "aliases": [
-        "张耳"
-      ],
-      "tags": [],
-      "featured": false,
-      "path": "pages/常山王.md",
-      "total_refs": 60,
-      "total_chapters": 15,
-      "quality_score": -1,
-      "_score_parts": {
-        "base_refs": 3,
-        "tags": 0,
-        "revs": 0,
-        "size": 1,
-        "manual": 0,
-        "narrative": -5
-      }
-    },
     "常山王勃废徙房陵": {
       "type": "event",
       "label": "常山王勃废徙房陵",
@@ -40744,6 +40723,27 @@
         "size": 1,
         "manual": 0,
         "narrative": 8
+      }
+    },
+    "平城": {
+      "type": "place",
+      "label": "平城",
+      "aliases": [],
+      "tags": [
+        "地名",
+        "汉初",
+        "匈奴"
+      ],
+      "featured": false,
+      "path": "pages/平城.md",
+      "quality_score": 1,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
       }
     },
     "平城之围月晕参毕七重": {
@@ -74989,16 +74989,16 @@
         "圣臣",
         "法律"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/皋陶.md",
-      "quality_score": 3,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "皋陶九德": {
@@ -107809,6 +107809,27 @@
         "narrative": 8
       }
     },
+    "马邑": {
+      "type": "place",
+      "label": "马邑",
+      "aliases": [],
+      "tags": [
+        "地名",
+        "汉朝",
+        "匈奴"
+      ],
+      "featured": false,
+      "path": "pages/马邑.md",
+      "quality_score": 1,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
     "马邑之谋": {
       "type": "event",
       "label": "马邑之谋",
@@ -115345,8 +115366,6 @@
     "高阳氏": "帝颛顼",
     "常乐侯国": "常乐侯国",
     "常山宪王舜骄怠": "常山宪王舜骄怠",
-    "常山王": "常山王",
-    "张耳": "常山王",
     "常山王勃废徙房陵": "常山王勃废徙房陵",
     "常山王薨弟代立": "常山王薨弟代立",
     "常山王迁五岳归郡": "常山王迁五岳归郡",
@@ -115362,6 +115381,7 @@
     "平原君救辟阳侯出狱": "平原君救辟阳侯出狱",
     "平原君自杀": "平原君自杀",
     "平台侯国": "平台侯国",
+    "平城": "平城",
     "平城之围月晕参毕七重": "平城之围月晕参毕七重",
     "平定侯国": "平定侯国",
     "平州侯国": "平州侯国",
@@ -115534,6 +115554,8 @@
     "张汤治狱、死而家不过五百金": "张汤治狱、死而家不过五百金",
     "张汤治陈皇后蛊狱": "张汤治陈皇后蛊狱",
     "张羽": "张羽",
+    "张耳": "张耳",
+    "常山王": "张耳",
     "赵王张耳": "张耳",
     "张耳依汉、陈馀亡赵": "张耳依汉、陈馀亡赵",
     "张耳立为赵王": "张耳立为赵王",
@@ -118878,6 +118900,7 @@
     "馀祭卒馀眛立": "馀祭卒馀眛立",
     "马上得之、宁可马上治之": "马上得之、宁可马上治之",
     "马犯使梁城周": "马犯使梁城周",
+    "马邑": "马邑",
     "马邑之谋": "马邑之谋",
     "马邑之谋匈奴绝和亲": "马邑之谋匈奴绝和亲",
     "马邑之谋李广参战": "马邑之谋李广参战",
@@ -119186,5 +119209,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T01:29:17"
+  "generated": "2026-04-24T01:34:41"
 }
