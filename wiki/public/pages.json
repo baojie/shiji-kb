@@ -13176,18 +13176,19 @@
       "tags": [
         "地名",
         "地理",
-        "秦汉"
+        "秦汉",
+        "战略要地"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/关中.md",
-      "quality_score": 1,
+      "quality_score": 27,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 3,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "兴正礼乐": {
@@ -26452,18 +26453,19 @@
       "tags": [
         "地名",
         "秦国",
-        "都城"
+        "都城",
+        "关中"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/咸阳.md",
-      "quality_score": 1,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "哀二世赋": {
@@ -58396,6 +58398,29 @@
         "size": 3,
         "manual": 0,
         "narrative": 8
+      }
+    },
+    "桓魋": {
+      "type": "person",
+      "label": "桓魋",
+      "aliases": [
+        "司马桓魋"
+      ],
+      "tags": [
+        "春秋",
+        "宋国",
+        "宋司马"
+      ],
+      "featured": false,
+      "path": "pages/桓魋.md",
+      "quality_score": 7,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": -5
       }
     },
     "桓齮": {
@@ -100088,6 +100113,27 @@
         "narrative": 8
       }
     },
+    "钟离昧": {
+      "type": "person",
+      "label": "钟离昧",
+      "aliases": [],
+      "tags": [
+        "楚汉",
+        "楚将",
+        "项羽部将"
+      ],
+      "featured": false,
+      "path": "pages/钟离昧.md",
+      "quality_score": 7,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": -5
+      }
+    },
     "钟离眛": {
       "type": "person",
       "label": "钟离眛",
@@ -104065,18 +104111,19 @@
       "tags": [
         "地名",
         "周朝",
+        "东周",
         "都城"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/雒阳.md",
-      "quality_score": 1,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "雨金栎阳": {
@@ -116591,6 +116638,8 @@
     "吴少将桓": "桓将军",
     "桓王伐郑受伤": "桓王伐郑受伤",
     "桓邑侯国": "桓邑侯国",
+    "桓魋": "桓魋",
+    "司马桓魋": "桓魋",
     "桓齮": "桓齮",
     "桓齮攻赵平阳": "桓齮攻赵平阳",
     "梁国东方屏障：挡箭牌藩国六步战略设计与稀释方法论": "梁国东方屏障：挡箭牌藩国六步战略设计与稀释方法论",
@@ -118797,6 +118846,7 @@
     "重耳流亡复国": "重耳流亡复国",
     "金縢启发天佑": "金縢启发天佑",
     "鉏麑": "鉏麑",
+    "钟离昧": "钟离昧",
     "钟离眛": "钟离眛",
     "锺离眛": "钟离眛",
     "钩弋夫人之死": "钩弋夫人之死",
@@ -119518,5 +119568,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T02:23:12"
+  "generated": "2026-04-24T02:26:45"
 }
