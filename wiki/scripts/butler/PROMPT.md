@@ -21,6 +21,7 @@
 - 若最近 3 条同 action 全 fail → 进入 **W5 反思**, 读 `skills/SKILL_W5_Butler反思与自改.md`, 写 `logs/wiki_butler/reflections/$(date +%F).md`, 本轮不做原子动作
 - 若累计 atomic action ≥ 20 条未反思 → 进入 W5 反思
 - 若本轮是"每 6 次精品/stub 创建后的第 6 次"（即每完成 3 精品+3 stub 一组）→ 追加 **W9 图式反思**: 读 `skills/SKILL_W9_Butler页面图式反思.md`, 写 `logs/wiki_butler/schema_patterns/$(date +%F)-R<N>.md`; 若发现新细分类型 ≥3 页且缺模板则同时创建 `skills/templates/<类型>.md`。W9 **不阻塞**下一轮，不影响 actions.jsonl 计数。
+- 若 `logs/wiki_butler/round_counter.txt` 中当前轮次 **mod 10 == 0** → 执行 **W11 概念分类元反思**: 读 `skills/SKILL_W11_概念分类元反思.md`, 扫描错误分类候选、发现新概念、写 `logs/wiki_butler/type_audits/$(date +%F)-R<N>.md`，执行 ≥1 条 `reclassify` 修正（若有），新概念候选加入 queue.md P1。W11 **不阻塞**下一轮。
 - 若累计 trail/explore ≥ 10 条，且最近一条 `verify-citations` 距今 ≥ 10 条 → 本轮做 **W7 引文核验**:
   ```bash
   python3 scripts/verify_quotes_agent.py   # 处理下一个未检查页面
