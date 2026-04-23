@@ -32698,6 +32698,28 @@
         "narrative": 8
       }
     },
+    "宽舒": {
+      "type": "person",
+      "label": "宽舒",
+      "aliases": [],
+      "tags": [
+        "西汉",
+        "汉武帝",
+        "祠官",
+        "礼仪"
+      ],
+      "featured": false,
+      "path": "pages/宽舒.md",
+      "quality_score": 3,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
     "富平侯国": {
       "type": "侯国",
       "label": "富平侯国",
@@ -47705,6 +47727,7 @@
       "label": "曹沫",
       "aliases": [
         "曹刿",
+        "曹子",
         "曹沫"
       ],
       "tags": [
@@ -47718,11 +47741,11 @@
       "path": "pages/曹沫.md",
       "total_refs": 10,
       "total_chapters": 5,
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 0,
+        "revs": 3,
         "size": 5,
         "manual": 5,
         "narrative": 8
@@ -61622,6 +61645,32 @@
         "size": 1,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "王信": {
+      "type": "person",
+      "label": "王信",
+      "aliases": [
+        "盖侯"
+      ],
+      "tags": [
+        "西汉",
+        "汉景帝",
+        "盖侯",
+        "王娡"
+      ],
+      "featured": false,
+      "path": "pages/王信.md",
+      "total_refs": 7,
+      "total_chapters": 4,
+      "quality_score": 3,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
       }
     },
     "王凤为大司马大将军": {
@@ -79626,20 +79675,16 @@
       }
     },
     "衡山王谋反": {
-      "type": "event",
+      "type": "",
       "label": "衡山王谋反",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "淮南衡山列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/衡山王谋反.md",
-      "quality_score": 24,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
+        "tags": 0,
         "revs": 3,
         "size": 2,
         "manual": 5,
@@ -79647,24 +79692,20 @@
       }
     },
     "衡山雨雹天象异变": {
-      "type": "event",
+      "type": "",
       "label": "衡山雨雹天象异变",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝景本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/衡山雨雹天象异变.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎": {
@@ -79700,192 +79741,156 @@
       }
     },
     "袁盎为楚相退居": {
-      "type": "event",
+      "type": "",
       "label": "袁盎为楚相退居",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎为楚相退居.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎使吴脱险归梁": {
-      "type": "event",
+      "type": "",
       "label": "袁盎使吴脱险归梁",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎使吴脱险归梁.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎入仕为中郎": {
-      "type": "event",
+      "type": "",
       "label": "袁盎入仕为中郎",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎入仕为中郎.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎却慎夫人座": {
-      "type": "event",
+      "type": "",
       "label": "袁盎却慎夫人座",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎却慎夫人座.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎外任吴相": {
-      "type": "event",
+      "type": "",
       "label": "袁盎外任吴相",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎外任吴相.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎救绛侯出狱": {
-      "type": "event",
+      "type": "",
       "label": "袁盎救绛侯出狱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎救绛侯出狱.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎斥宦者赵同": {
-      "type": "event",
+      "type": "",
       "label": "袁盎斥宦者赵同",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎斥宦者赵同.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎止文帝驰峻阪": {
-      "type": "event",
+      "type": "",
       "label": "袁盎止文帝驰峻阪",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎止文帝驰峻阪.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎献策斩晁错": {
-      "type": "event",
+      "type": "",
       "label": "袁盎献策斩晁错",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吴王濞列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎献策斩晁错.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎直谏：尊卑有序": {
@@ -79910,66 +79915,54 @@
       }
     },
     "袁盎论绛侯非社稷臣": {
-      "type": "event",
+      "type": "",
       "label": "袁盎论绛侯非社稷臣",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎论绛侯非社稷臣.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎说丞相申屠嘉": {
-      "type": "event",
+      "type": "",
       "label": "袁盎说丞相申屠嘉",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎说丞相申屠嘉.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎谏削淮南王": {
-      "type": "event",
+      "type": "",
       "label": "袁盎谏削淮南王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/袁盎谏削淮南王.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "袁盎谏斩晁错": {
@@ -80019,24 +80012,20 @@
       }
     },
     "褒斜道开通水运不成": {
-      "type": "event",
+      "type": "",
       "label": "褒斜道开通水运不成",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "河渠书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/褒斜道开通水运不成.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "褚先生补记：张夫子问孔子删书": {
@@ -80082,24 +80071,20 @@
       }
     },
     "褚先生论天命与信疑": {
-      "type": "event",
+      "type": "",
       "label": "褚先生论天命与信疑",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "三代世表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/褚先生论天命与信疑.md",
-      "quality_score": 14,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 3,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄公之仁——道义的代价与反思": {
@@ -80120,87 +80105,71 @@
       }
     },
     "襄公争霸泓之战": {
-      "type": "event",
+      "type": "",
       "label": "襄公争霸泓之战",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "宋微子世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄公争霸泓之战.md",
-      "quality_score": 13,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 2,
+        "tags": 0,
+        "revs": 3,
+        "size": 3,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄公受封建国": {
-      "type": "event",
+      "type": "",
       "label": "襄公受封建国",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄公受封建国.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄公救周抗戎": {
-      "type": "event",
+      "type": "",
       "label": "襄公救周抗戎",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄公救周抗戎.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄公通鲁夫人杀鲁桓公": {
-      "type": "event",
+      "type": "",
       "label": "襄公通鲁夫人杀鲁桓公",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "齐太公世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄公通鲁夫人杀鲁桓公.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄城侯国": {
@@ -80267,24 +80236,20 @@
       }
     },
     "襄王复国": {
-      "type": "event",
+      "type": "",
       "label": "襄王复国",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "田敬仲完世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄王复国.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄王奔郑、晋文公纳王": {
@@ -80309,87 +80274,71 @@
       }
     },
     "襄王收东地迁都寿春": {
-      "type": "event",
+      "type": "",
       "label": "襄王收东地迁都寿春",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "楚世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄王收东地迁都寿春.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄王相王": {
-      "type": "event",
+      "type": "",
       "label": "襄王相王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "魏世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄王相王.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄王至定王世系": {
-      "type": "event",
+      "type": "",
       "label": "襄王至定王世系",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "周本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄王至定王世系.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "襄王避叔带之乱": {
-      "type": "event",
+      "type": "",
       "label": "襄王避叔带之乱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "周本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/襄王避叔带之乱.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "西乞术": {
@@ -80414,21 +80363,17 @@
       }
     },
     "西伐大宛": {
-      "type": "event",
+      "type": "",
       "label": "西伐大宛",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝武本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西伐大宛.md",
-      "quality_score": 11,
+      "quality_score": 8,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 0,
         "manual": 5,
         "narrative": 0
@@ -80456,108 +80401,88 @@
       }
     },
     "西伯归修德": {
-      "type": "event",
+      "type": "",
       "label": "西伯归修德",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "殷本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西伯归修德.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "西伯获释": {
-      "type": "event",
+      "type": "",
       "label": "西伯获释",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "殷本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西伯获释.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "西北国始通于汉": {
-      "type": "event",
+      "type": "",
       "label": "西北国始通于汉",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "大宛列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西北国始通于汉.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "西南夷诸国风俗": {
-      "type": "event",
+      "type": "",
       "label": "西南夷诸国风俗",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "西南夷列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西南夷诸国风俗.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "西周立嗣之谋": {
-      "type": "event",
+      "type": "",
       "label": "西周立嗣之谋",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "周本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西周立嗣之谋.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "西平侯国": {
@@ -80631,150 +80556,122 @@
       }
     },
     "西门豹凿十二渠": {
-      "type": "event",
+      "type": "",
       "label": "西门豹凿十二渠",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "滑稽列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西门豹凿十二渠.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "西门豹引漳溉邺": {
-      "type": "event",
+      "type": "",
       "label": "西门豹引漳溉邺",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "河渠书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西门豹引漳溉邺.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "西门豹破河伯娶妇": {
-      "type": "event",
+      "type": "",
       "label": "西门豹破河伯娶妇",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "滑稽列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/西门豹破河伯娶妇.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "见南子": {
-      "type": "event",
+      "type": "",
       "label": "见南子",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孔子世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/见南子.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "观秦始皇出行": {
-      "type": "event",
+      "type": "",
       "label": "观秦始皇出行",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/观秦始皇出行.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "观秦皇出游": {
-      "type": "event",
+      "type": "",
       "label": "观秦皇出游",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "项羽本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/观秦皇出游.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "视西南夷盛毁其事": {
-      "type": "event",
+      "type": "",
       "label": "视西南夷盛毁其事",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "平津侯主父列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/视西南夷盛毁其事.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "触龙": {
@@ -80804,24 +80701,20 @@
       }
     },
     "触龙说太后": {
-      "type": "event",
+      "type": "",
       "label": "触龙说太后",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/触龙说太后.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "触龙说赵太后": {
@@ -80867,87 +80760,71 @@
       }
     },
     "计然助越王灭吴": {
-      "type": "event",
+      "type": "",
       "label": "计然助越王灭吴",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "货殖列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/计然助越王灭吴.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "讨伐燕王卢绾": {
-      "type": "event",
+      "type": "",
       "label": "讨伐燕王卢绾",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/讨伐燕王卢绾.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "议定皇帝称号": {
-      "type": "event",
+      "type": "",
       "label": "议定皇帝称号",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/议定皇帝称号.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "议立郡县制": {
-      "type": "event",
+      "type": "",
       "label": "议立郡县制",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/议立郡县制.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "许历": {
@@ -80975,24 +80852,20 @@
       }
     },
     "许由隐居箕山": {
-      "type": "event",
+      "type": "",
       "label": "许由隐居箕山",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "伯夷列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/许由隐居箕山.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "许负": {
@@ -81019,43 +80892,34 @@
       }
     },
     "论功行封萧何第一": {
-      "type": "event",
+      "type": "",
       "label": "论功行封萧何第一",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "萧相国世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/论功行封萧何第一.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "论功行赏": {
-      "type": "event",
+      "type": "",
       "label": "论功行赏",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝文本纪",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/论功行赏.md",
-      "quality_score": 24,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 8,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 3,
         "manual": 5,
         "narrative": 8
@@ -81083,24 +80947,20 @@
       }
     },
     "设置官制云师": {
-      "type": "event",
+      "type": "",
       "label": "设置官制云师",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "五帝本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/设置官制云师.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "识别并抵御心理操控": {
@@ -81140,88 +81000,71 @@
       }
     },
     "诈虏魏公子卬破魏军": {
-      "type": "event",
+      "type": "",
       "label": "诈虏魏公子卬破魏军",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "商君列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诈虏魏公子卬破魏军.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛五利将军": {
-      "type": "event",
+      "type": "",
       "label": "诛五利将军",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝武本纪",
-        "封禅书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛五利将军.md",
-      "quality_score": 23,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 8,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
         "narrative": 8
       }
     },
     "诛吕后吕侯国除": {
-      "type": "event",
+      "type": "",
       "label": "诛吕后吕侯国除",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "惠景间侯者年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛吕后吕侯国除.md",
-      "quality_score": 14,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 3,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛吕氏立文帝": {
-      "type": "event",
+      "type": "",
       "label": "诛吕氏立文帝",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "惠景间侯者年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛吕氏立文帝.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛吕立文": {
@@ -81242,45 +81085,37 @@
       }
     },
     "诛吕立文帝": {
-      "type": "event",
+      "type": "",
       "label": "诛吕立文帝",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "郦生陆贾列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛吕立文帝.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛季君之乱": {
-      "type": "event",
+      "type": "",
       "label": "诛季君之乱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "穰侯列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛季君之乱.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛少正卯": {
@@ -81305,129 +81140,105 @@
       }
     },
     "诛文成将军": {
-      "type": "event",
+      "type": "",
       "label": "诛文成将军",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝武本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛文成将军.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛晁错遣袁盎谕告": {
-      "type": "event",
+      "type": "",
       "label": "诛晁错遣袁盎谕告",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝景本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛晁错遣袁盎谕告.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛曹无伤": {
-      "type": "event",
+      "type": "",
       "label": "诛曹无伤",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛曹无伤.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛杀吕产": {
-      "type": "event",
+      "type": "",
       "label": "诛杀吕产",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吕太后本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛杀吕产.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛淮阴彭越黥布反": {
-      "type": "event",
+      "type": "",
       "label": "诛淮阴彭越黥布反",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汉兴以来将相名臣年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛淮阴彭越黥布反.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛灭诸假惠帝子": {
-      "type": "event",
+      "type": "",
       "label": "诛灭诸假惠帝子",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吕太后本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛灭诸假惠帝子.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛灭诸吕": {
@@ -81448,192 +81259,156 @@
       }
     },
     "诛燕王吕通废鲁王": {
-      "type": "event",
+      "type": "",
       "label": "诛燕王吕通废鲁王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吕太后本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛燕王吕通废鲁王.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛诸吕立文帝": {
-      "type": "event",
+      "type": "",
       "label": "诛诸吕立文帝",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汉兴以来诸侯王年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛诸吕立文帝.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诛赵同赵括复赵氏": {
-      "type": "event",
+      "type": "",
       "label": "诛赵同赵括复赵氏",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "晋世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诛赵同赵括复赵氏.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说服公子成": {
-      "type": "event",
+      "type": "",
       "label": "说服公子成",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说服公子成.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说楚威王合从": {
-      "type": "event",
+      "type": "",
       "label": "说楚威王合从",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "苏秦列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说楚威王合从.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说燕文侯合从": {
-      "type": "event",
+      "type": "",
       "label": "说燕文侯合从",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "苏秦列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说燕文侯合从.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说秦惠王不用": {
-      "type": "event",
+      "type": "",
       "label": "说秦惠王不用",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "苏秦列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说秦惠王不用.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说赵不用游燕得见": {
-      "type": "event",
+      "type": "",
       "label": "说赵不用游燕得见",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "苏秦列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说赵不用游燕得见.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说赵肃侯合从": {
-      "type": "event",
+      "type": "",
       "label": "说赵肃侯合从",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "苏秦列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说赵肃侯合从.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说难与游说之难": {
@@ -81673,108 +81448,88 @@
       }
     },
     "说韩宣王合从": {
-      "type": "event",
+      "type": "",
       "label": "说韩宣王合从",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "苏秦列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说韩宣王合从.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说项梁立韩王成": {
-      "type": "event",
+      "type": "",
       "label": "说项梁立韩王成",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "留侯世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说项梁立韩王成.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说魏襄王合从": {
-      "type": "event",
+      "type": "",
       "label": "说魏襄王合从",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "苏秦列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说魏襄王合从.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "说齐宣王合从": {
-      "type": "event",
+      "type": "",
       "label": "说齐宣王合从",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "苏秦列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/说齐宣王合从.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸侯叛秦秦亡": {
-      "type": "event",
+      "type": "",
       "label": "诸侯叛秦秦亡",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸侯叛秦秦亡.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸侯国生存与灭亡": {
@@ -81795,108 +81550,88 @@
       }
     },
     "诸侯封立与官员调任": {
-      "type": "event",
+      "type": "",
       "label": "诸侯封立与官员调任",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝文本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸侯封立与官员调任.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸侯毕贺朝天子": {
-      "type": "event",
+      "type": "",
       "label": "诸侯毕贺朝天子",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸侯毕贺朝天子.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸侯罢戏下各就国": {
-      "type": "event",
+      "type": "",
       "label": "诸侯罢戏下各就国",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦楚之际月表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸侯罢戏下各就国.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸侯膝行归附": {
-      "type": "event",
+      "type": "",
       "label": "诸侯膝行归附",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "项羽本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸侯膝行归附.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸侯骄奢叛逆": {
-      "type": "event",
+      "type": "",
       "label": "诸侯骄奢叛逆",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汉兴以来诸侯王年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸侯骄奢叛逆.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸吕之乱、周勃夺军 (左袒为刘氏)": {
@@ -81921,109 +81656,88 @@
       }
     },
     "诸吕之乱平定": {
-      "type": "event",
+      "type": "",
       "label": "诸吕之乱平定",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝文本纪",
-        "外戚世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸吕之乱平定.md",
-      "quality_score": 23,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 8,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
         "narrative": 8
       }
     },
     "诸吕作乱日食昼晦": {
-      "type": "event",
+      "type": "",
       "label": "诸吕作乱日食昼晦",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "天官书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸吕作乱日食昼晦.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸王来朝": {
-      "type": "event",
+      "type": "",
       "label": "诸王来朝",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸王来朝.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸臣议立代王": {
-      "type": "event",
+      "type": "",
       "label": "诸臣议立代王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吕太后本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸臣议立代王.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "诸邛筰厓駹置郡": {
-      "type": "event",
+      "type": "",
       "label": "诸邛筰厓駹置郡",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "西南夷列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/诸邛筰厓駹置郡.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "谋圣张良、辟谷学仙": {
@@ -82122,24 +81836,20 @@
       }
     },
     "谬忌奏祠太一": {
-      "type": "event",
+      "type": "",
       "label": "谬忌奏祠太一",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "封禅书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/谬忌奏祠太一.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "谷陵侯国": {
@@ -82212,87 +81922,71 @@
       }
     },
     "豫让击衣自杀": {
-      "type": "event",
+      "type": "",
       "label": "豫让击衣自杀",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "刺客列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/豫让击衣自杀.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "豫让报智伯": {
-      "type": "event",
+      "type": "",
       "label": "豫让报智伯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "刺客列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/豫让报智伯.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "豫让漆身吞炭": {
-      "type": "story",
+      "type": "",
       "label": "豫让漆身吞炭",
       "aliases": [],
-      "tags": [
-        "史记",
-        "故事",
-        "刺客列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/豫让漆身吞炭.md",
-      "quality_score": 31,
+      "quality_score": 28,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 3,
+        "tags": 0,
+        "revs": 6,
         "size": 9,
         "manual": 5,
         "narrative": 8
       }
     },
     "负荆请罪": {
-      "type": "event",
+      "type": "",
       "label": "负荆请罪",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "廉颇蔺相如列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/负荆请罪.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "负荆请罪、将相和": {
@@ -82317,24 +82011,20 @@
       }
     },
     "败宋于泓": {
-      "type": "event",
+      "type": "",
       "label": "败宋于泓",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "楚世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/败宋于泓.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "货殖列传中的致富案例": {
@@ -82395,192 +82085,156 @@
       }
     },
     "贯高入狱明主不反": {
-      "type": "event",
+      "type": "",
       "label": "贯高入狱明主不反",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "张耳陈馀列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贯高入狱明主不反.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贯高谋刺高祖": {
-      "type": "event",
+      "type": "",
       "label": "贯高谋刺高祖",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "张耳陈馀列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贯高谋刺高祖.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贯高谋反田叔随赵王": {
-      "type": "event",
+      "type": "",
       "label": "贯高谋反田叔随赵王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "田叔列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贯高谋反田叔随赵王.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贯高谋弑事发": {
-      "type": "event",
+      "type": "",
       "label": "贯高谋弑事发",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贯高谋弑事发.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贰师再伐大宛": {
-      "type": "event",
+      "type": "",
       "label": "贰师再伐大宛",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "大宛列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贰师再伐大宛.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贰师将军出击匈奴": {
-      "type": "event",
+      "type": "",
       "label": "贰师将军出击匈奴",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汉兴以来将相名臣年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贰师将军出击匈奴.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贰师将军首伐大宛": {
-      "type": "event",
+      "type": "",
       "label": "贰师将军首伐大宛",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "大宛列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贰师将军首伐大宛.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贰师降胡田千秋为丞相": {
-      "type": "event",
+      "type": "",
       "label": "贰师降胡田千秋为丞相",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汉兴以来将相名臣年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贰师降胡田千秋为丞相.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贲赫告变": {
-      "type": "event",
+      "type": "",
       "label": "贲赫告变",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "黥布列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贲赫告变.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贳侯国": {
@@ -82681,24 +82335,20 @@
       }
     },
     "费无忌谗害太子建": {
-      "type": "event",
+      "type": "",
       "label": "费无忌谗害太子建",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "楚世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/费无忌谗害太子建.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊": {
@@ -82776,129 +82426,105 @@
       }
     },
     "贾谊为梁怀王傅毒恨死": {
-      "type": "event",
+      "type": "",
       "label": "贾谊为梁怀王傅毒恨死",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "日者列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贾谊为梁怀王傅毒恨死.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊任梁怀王太傅": {
-      "type": "event",
+      "type": "",
       "label": "贾谊任梁怀王太傅",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "屈原贾生列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贾谊任梁怀王太傅.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊吊屈原作赋": {
-      "type": "event",
+      "type": "",
       "label": "贾谊吊屈原作赋",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "屈原贾生列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贾谊吊屈原作赋.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊宣室夜对": {
-      "type": "event",
+      "type": "",
       "label": "贾谊宣室夜对",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "屈原贾生列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贾谊宣室夜对.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊建议改制": {
-      "type": "event",
+      "type": "",
       "label": "贾谊建议改制",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "屈原贾生列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贾谊建议改制.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊拜博士超迁": {
-      "type": "event",
+      "type": "",
       "label": "贾谊拜博士超迁",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "屈原贾生列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贾谊拜博士超迁.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊改制建议": {
@@ -82940,45 +82566,37 @@
       }
     },
     "贾谊谏削诸侯": {
-      "type": "event",
+      "type": "",
       "label": "贾谊谏削诸侯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "屈原贾生列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贾谊谏削诸侯.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊贬长沙王太傅": {
-      "type": "event",
+      "type": "",
       "label": "贾谊贬长沙王太傅",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "屈原贾生列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/贾谊贬长沙王太傅.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "贾谊过秦论上（褚先生引）": {
@@ -83003,24 +82621,20 @@
       }
     },
     "赐姓刘氏封奉春君": {
-      "type": "event",
+      "type": "",
       "label": "赐姓刘氏封奉春君",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "刘敬叔孙通列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赐姓刘氏封奉春君.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赘其侯国": {
@@ -83045,24 +82659,20 @@
       }
     },
     "赤侧钱及白金废止": {
-      "type": "event",
+      "type": "",
       "label": "赤侧钱及白金废止",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "平准书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赤侧钱及白金废止.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赤泉侯国": {
@@ -83087,45 +82697,37 @@
       }
     },
     "赦七国从犯封窦婴": {
-      "type": "event",
+      "type": "",
       "label": "赦七国从犯封窦婴",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝景本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赦七国从犯封窦婴.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赧王时东西周分治": {
-      "type": "event",
+      "type": "",
       "label": "赧王时东西周分治",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "周本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赧王时东西周分治.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵佗": {
@@ -83159,66 +82761,54 @@
       }
     },
     "赵佗卒": {
-      "type": "event",
+      "type": "",
       "label": "赵佗卒",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "南越列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵佗卒.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵佗去帝制称臣": {
-      "type": "event",
+      "type": "",
       "label": "赵佗去帝制称臣",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "南越列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵佗去帝制称臣.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵佗役属闽越西瓯": {
-      "type": "event",
+      "type": "",
       "label": "赵佗役属闽越西瓯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "南越列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵佗役属闽越西瓯.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵佗据南越": {
@@ -83243,45 +82833,37 @@
       }
     },
     "赵佗称帝攻长沙": {
-      "type": "event",
+      "type": "",
       "label": "赵佗称帝攻长沙",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "南越列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵佗称帝攻长沙.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵佗自立为南越武王": {
-      "type": "event",
+      "type": "",
       "label": "赵佗自立为南越武王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "南越列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵佗自立为南越武王.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵信": {
@@ -83312,108 +82894,88 @@
       }
     },
     "赵信叛降匈奴": {
-      "type": "event",
+      "type": "",
       "label": "赵信叛降匈奴",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "卫将军骠骑列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵信叛降匈奴.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵信降匈奴": {
-      "type": "event",
+      "type": "",
       "label": "赵信降匈奴",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "匈奴列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵信降匈奴.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵嘉自立代王": {
-      "type": "event",
+      "type": "",
       "label": "赵嘉自立代王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵嘉自立代王.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵国灭亡": {
-      "type": "event",
+      "type": "",
       "label": "赵国灭亡",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵国灭亡.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵夙封耿": {
-      "type": "event",
+      "type": "",
       "label": "赵夙封耿",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵夙封耿.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵太后": {
@@ -83442,24 +83004,20 @@
       }
     },
     "赵太子丹与姊奸废": {
-      "type": "event",
+      "type": "",
       "label": "赵太子丹与姊奸废",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "五宗世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵太子丹与姊奸废.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵奢": {
@@ -83490,66 +83048,54 @@
       }
     },
     "赵奢封马服君": {
-      "type": "event",
+      "type": "",
       "label": "赵奢封马服君",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "廉颇蔺相如列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵奢封马服君.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵奢执法不阿": {
-      "type": "event",
+      "type": "",
       "label": "赵奢执法不阿",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "廉颇蔺相如列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵奢执法不阿.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵奢破秦军阏与": {
-      "type": "event",
+      "type": "",
       "label": "赵奢破秦军阏与",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "廉颇蔺相如列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵奢破秦军阏与.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵奢阏与破秦": {
@@ -83574,24 +83120,20 @@
       }
     },
     "赵始都邯郸": {
-      "type": "event",
+      "type": "",
       "label": "赵始都邯郸",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵始都邯郸.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵姬": {
@@ -83617,24 +83159,20 @@
       }
     },
     "赵媾秦应侯示郑朱": {
-      "type": "event",
+      "type": "",
       "label": "赵媾秦应侯示郑朱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "平原君虞卿列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵媾秦应侯示郑朱.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵孝成王": {
@@ -83673,66 +83211,54 @@
       }
     },
     "赵尧建议周昌相赵": {
-      "type": "event",
+      "type": "",
       "label": "赵尧建议周昌相赵",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "张丞相列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵尧建议周昌相赵.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵尧拜御史大夫": {
-      "type": "event",
+      "type": "",
       "label": "赵尧拜御史大夫",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "张丞相列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵尧拜御史大夫.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵幽王之死": {
-      "type": "event",
+      "type": "",
       "label": "赵幽王之死",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "楚元王世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵幽王之死.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵悼襄王": {
@@ -83795,24 +83321,20 @@
       }
     },
     "赵惠文王卒孝成王立": {
-      "type": "event",
+      "type": "",
       "label": "赵惠文王卒孝成王立",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "廉颇蔺相如列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵惠文王卒孝成王立.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵括": {
@@ -83975,45 +83497,37 @@
       }
     },
     "赵武灵王初胡服": {
-      "type": "event",
+      "type": "",
       "label": "赵武灵王初胡服",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "六国年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵武灵王初胡服.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵武灵王灭中山": {
-      "type": "event",
+      "type": "",
       "label": "赵武灵王灭中山",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "乐毅列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵武灵王灭中山.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵武灵王胡服骑射": {
@@ -84076,66 +83590,54 @@
       }
     },
     "赵氏复位": {
-      "type": "event",
+      "type": "",
       "label": "赵氏复位",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵氏复位.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵氏起源": {
-      "type": "event",
+      "type": "",
       "label": "赵氏起源",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵氏起源.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵烈侯立为诸侯": {
-      "type": "event",
+      "type": "",
       "label": "赵烈侯立为诸侯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵烈侯立为诸侯.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵王刘遂": {
@@ -84165,66 +83667,54 @@
       }
     },
     "赵王友被召幽死": {
-      "type": "event",
+      "type": "",
       "label": "赵王友被召幽死",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吕太后本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵王友被召幽死.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵王如意被杀": {
-      "type": "event",
+      "type": "",
       "label": "赵王如意被杀",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "张丞相列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵王如意被杀.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵王彭祖巧佞": {
-      "type": "event",
+      "type": "",
       "label": "赵王彭祖巧佞",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "五宗世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵王彭祖巧佞.md",
-      "quality_score": 13,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 2,
+        "tags": 0,
+        "revs": 3,
+        "size": 3,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵王歇": {
@@ -84256,45 +83746,37 @@
       }
     },
     "赵王自杀济北王徙": {
-      "type": "event",
+      "type": "",
       "label": "赵王自杀济北王徙",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吴王濞列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵王自杀济北王徙.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵王被燕囚获释": {
-      "type": "event",
+      "type": "",
       "label": "赵王被燕囚获释",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "张耳陈馀列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵王被燕囚获释.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵王迁": {
@@ -84323,24 +83805,20 @@
       }
     },
     "赵王遂叛乱": {
-      "type": "event",
+      "type": "",
       "label": "赵王遂叛乱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "楚元王世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵王遂叛乱.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵盾": {
@@ -84370,24 +83848,20 @@
       }
     },
     "赵盾专政": {
-      "type": "event",
+      "type": "",
       "label": "赵盾专政",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵盾专政.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵盾弑君与董狐直笔": {
@@ -84412,24 +83886,20 @@
       }
     },
     "赵盾执政": {
-      "type": "event",
+      "type": "",
       "label": "赵盾执政",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "晋世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵盾执政.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵破奴": {
@@ -84488,45 +83958,37 @@
       }
     },
     "赵禹举田仁任安": {
-      "type": "event",
+      "type": "",
       "label": "赵禹举田仁任安",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "田叔列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵禹举田仁任安.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵禹张汤定律令": {
-      "type": "event",
+      "type": "",
       "label": "赵禹张汤定律令",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "酷吏列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵禹张汤定律令.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵穿": {
@@ -84555,24 +84017,20 @@
       }
     },
     "赵穿弑灵公": {
-      "type": "event",
+      "type": "",
       "label": "赵穿弑灵公",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵穿弑灵公.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵简子": {
@@ -84625,24 +84083,20 @@
       }
     },
     "赵简子神游": {
-      "type": "event",
+      "type": "",
       "label": "赵简子神游",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵简子神游.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵绾": {
@@ -84672,24 +84126,20 @@
       }
     },
     "赵绾王臧议明堂被诛": {
-      "type": "event",
+      "type": "",
       "label": "赵绾王臧议明堂被诛",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "封禅书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵绾王臧议明堂被诛.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵胜": {
@@ -84737,45 +84187,37 @@
       }
     },
     "赵良苦谏商君不从": {
-      "type": "event",
+      "type": "",
       "label": "赵良苦谏商君不从",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "商君列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵良苦谏商君不从.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵范中行之乱": {
-      "type": "event",
+      "type": "",
       "label": "赵范中行之乱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "晋世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵范中行之乱.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵葱": {
@@ -84831,24 +84273,20 @@
       }
     },
     "赵衰从重耳出亡": {
-      "type": "event",
+      "type": "",
       "label": "赵衰从重耳出亡",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵衰从重耳出亡.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵襄子": {
@@ -84878,45 +84316,37 @@
       }
     },
     "赵襄子吞代": {
-      "type": "event",
+      "type": "",
       "label": "赵襄子吞代",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵襄子吞代.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵襄子诱杀代王": {
-      "type": "event",
+      "type": "",
       "label": "赵襄子诱杀代王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "六国年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵襄子诱杀代王.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高": {
@@ -84952,150 +84382,122 @@
       }
     },
     "赵高专权幽二世": {
-      "type": "event",
+      "type": "",
       "label": "赵高专权幽二世",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高专权幽二世.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高反二世自杀": {
-      "type": "event",
+      "type": "",
       "label": "赵高反二世自杀",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "六国年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高反二世自杀.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高弑二世": {
-      "type": "event",
+      "type": "",
       "label": "赵高弑二世",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高弑二世.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高杀二世": {
-      "type": "event",
+      "type": "",
       "label": "赵高杀二世",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "李斯列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高杀二世.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高杀李斯": {
-      "type": "event",
+      "type": "",
       "label": "赵高杀李斯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高杀李斯.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高获罪蒙毅判死": {
-      "type": "event",
+      "type": "",
       "label": "赵高获罪蒙毅判死",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "蒙恬列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高获罪蒙毅判死.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高说李斯立胡亥": {
-      "type": "event",
+      "type": "",
       "label": "赵高说李斯立胡亥",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "李斯列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高说李斯立胡亥.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高说李斯：六种心理操控技术与防御": {
@@ -85137,276 +84539,224 @@
       }
     },
     "赵高谮李斯": {
-      "type": "event",
+      "type": "",
       "label": "赵高谮李斯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "李斯列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高谮李斯.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "赵高谮蒙毅": {
-      "type": "event",
+      "type": "",
       "label": "赵高谮蒙毅",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "蒙恬列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/赵高谮蒙毅.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "起兵沛县": {
-      "type": "event",
+      "type": "",
       "label": "起兵沛县",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/起兵沛县.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越亡荧惑守斗": {
-      "type": "event",
+      "type": "",
       "label": "越亡荧惑守斗",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "天官书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越亡荧惑守斗.md",
-      "quality_score": 11,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
+        "tags": 0,
+        "revs": 3,
+        "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越伐吴虏太子友": {
-      "type": "event",
+      "type": "",
       "label": "越伐吴虏太子友",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吴太伯世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越伐吴虏太子友.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越伐吴败太子": {
-      "type": "event",
+      "type": "",
       "label": "越伐吴败太子",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "越王句践世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越伐吴败太子.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越国世系传承": {
-      "type": "event",
+      "type": "",
       "label": "越国世系传承",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "越王句践世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越国世系传承.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越国建国": {
-      "type": "event",
+      "type": "",
       "label": "越国建国",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "越王句践世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越国建国.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越国散亡": {
-      "type": "event",
+      "type": "",
       "label": "越国散亡",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "越王句践世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越国散亡.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越灭吴国": {
-      "type": "event",
+      "type": "",
       "label": "越灭吴国",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "越王句践世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越灭吴国.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越灭吴夫差自刭": {
-      "type": "event",
+      "type": "",
       "label": "越灭吴夫差自刭",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吴太伯世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越灭吴夫差自刭.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越王栖会稽求和": {
-      "type": "event",
+      "type": "",
       "label": "越王栖会稽求和",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吴太伯世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越王栖会稽求和.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "越祠鸡卜始用": {
-      "type": "event",
+      "type": "",
       "label": "越祠鸡卜始用",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝武本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/越祠鸡卜始用.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "路中大夫殉节": {
@@ -85456,24 +84806,20 @@
       }
     },
     "践土受命为伯": {
-      "type": "event",
+      "type": "",
       "label": "践土受命为伯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "晋世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/践土受命为伯.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "蹇叔": {
@@ -85500,24 +84846,20 @@
       }
     },
     "躁公卒立怀公": {
-      "type": "event",
+      "type": "",
       "label": "躁公卒立怀公",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/躁公卒立怀公.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "轪侯国": {
@@ -85563,66 +84905,54 @@
       }
     },
     "辕固生徵贤良被罢": {
-      "type": "event",
+      "type": "",
       "label": "辕固生徵贤良被罢",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "儒林列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/辕固生徵贤良被罢.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "辕固生斥老子遭刺豕": {
-      "type": "event",
+      "type": "",
       "label": "辕固生斥老子遭刺豕",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "儒林列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/辕固生斥老子遭刺豕.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "辕固生景帝前辩论": {
-      "type": "event",
+      "type": "",
       "label": "辕固生景帝前辩论",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "儒林列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/辕固生景帝前辩论.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "辟阳侯": {
@@ -85671,87 +85001,71 @@
       }
     },
     "迁都关中": {
-      "type": "event",
+      "type": "",
       "label": "迁都关中",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/迁都关中.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "迁都咸阳与县制改革": {
-      "type": "event",
+      "type": "",
       "label": "迁都咸阳与县制改革",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/迁都咸阳与县制改革.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "过宋遭难": {
-      "type": "event",
+      "type": "",
       "label": "过宋遭难",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孔子世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/过宋遭难.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "过沛大风歌": {
-      "type": "event",
+      "type": "",
       "label": "过沛大风歌",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/过沛大风歌.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "过秦论上": {
@@ -85836,24 +85150,20 @@
       }
     },
     "还定三秦": {
-      "type": "event",
+      "type": "",
       "label": "还定三秦",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/还定三秦.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "远交近攻": {
@@ -85912,108 +85222,88 @@
       }
     },
     "迫卫迁东郡": {
-      "type": "event",
+      "type": "",
       "label": "迫卫迁东郡",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/迫卫迁东郡.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "追击项羽至固陵": {
-      "type": "event",
+      "type": "",
       "label": "追击项羽至固陵",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "项羽本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/追击项羽至固陵.md",
-      "quality_score": 13,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 2,
+        "tags": 0,
+        "revs": 3,
+        "size": 3,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "追尊太上皇": {
-      "type": "event",
+      "type": "",
       "label": "追尊太上皇",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/追尊太上皇.md",
-      "quality_score": 11,
+      "quality_score": 8,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 0,
         "manual": 5,
         "narrative": 0
       }
     },
     "追尊淮南厉王": {
-      "type": "event",
+      "type": "",
       "label": "追尊淮南厉王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "淮南衡山列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/追尊淮南厉王.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "追颂文帝昭德之舞": {
-      "type": "event",
+      "type": "",
       "label": "追颂文帝昭德之舞",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝文本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/追颂文帝昭德之舞.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "适周问礼于老子": {
@@ -86038,45 +85328,37 @@
       }
     },
     "选定太子毋恤": {
-      "type": "event",
+      "type": "",
       "label": "选定太子毋恤",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/选定太子毋恤.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "逐客令始末": {
-      "type": "event",
+      "type": "",
       "label": "逐客令始末",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/逐客令始末.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "通西南夷": {
@@ -86097,129 +85379,105 @@
       }
     },
     "通西南夷为中郎将": {
-      "type": "event",
+      "type": "",
       "label": "通西南夷为中郎将",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "司马相如列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/通西南夷为中郎将.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "造父御缪王平徐偃王之乱": {
-      "type": "event",
+      "type": "",
       "label": "造父御缪王平徐偃王之乱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/造父御缪王平徐偃王之乱.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "造白金三品": {
-      "type": "event",
+      "type": "",
       "label": "造白金三品",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "平准书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/造白金三品.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "造白鹿皮币": {
-      "type": "event",
+      "type": "",
       "label": "造白鹿皮币",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "平准书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/造白鹿皮币.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "逢同献策": {
-      "type": "event",
+      "type": "",
       "label": "逢同献策",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "越王句践世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/逢同献策.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "逼赵追杀魏齐": {
-      "type": "event",
+      "type": "",
       "label": "逼赵追杀魏齐",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "范睢蔡泽列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/逼赵追杀魏齐.md",
-      "quality_score": 13,
+      "quality_score": 19,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 2,
+        "tags": 0,
+        "revs": 3,
+        "size": 3,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "遒侯国": {
@@ -86244,24 +85502,20 @@
       }
     },
     "遗诏与太子即位": {
-      "type": "event",
+      "type": "",
       "label": "遗诏与太子即位",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝景本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/遗诏与太子即位.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "遣列侯就国诏": {
@@ -86286,24 +85540,20 @@
       }
     },
     "遣徐市求仙": {
-      "type": "event",
+      "type": "",
       "label": "遣徐市求仙",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦始皇本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/遣徐市求仙.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "遽侯国": {
@@ -86352,24 +85602,20 @@
       }
     },
     "邓公为晁错辩护": {
-      "type": "event",
+      "type": "",
       "label": "邓公为晁错辩护",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "袁盎晁错列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邓公为晁错辩护.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邓通": {
@@ -86420,87 +85666,71 @@
       }
     },
     "邓通免官贫饿死": {
-      "type": "event",
+      "type": "",
       "label": "邓通免官贫饿死",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "佞幸列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邓通免官贫饿死.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邓通唶痈得罪太子": {
-      "type": "event",
+      "type": "",
       "label": "邓通唶痈得罪太子",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "佞幸列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邓通唶痈得罪太子.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邓通梦推上天得宠": {
-      "type": "event",
+      "type": "",
       "label": "邓通梦推上天得宠",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "佞幸列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邓通梦推上天得宠.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邓通赐铜山铸钱": {
-      "type": "event",
+      "type": "",
       "label": "邓通赐铜山铸钱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "佞幸列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邓通赐铜山铸钱.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邔侯国": {
@@ -86546,45 +85776,37 @@
       }
     },
     "邯郸解围": {
-      "type": "event",
+      "type": "",
       "label": "邯郸解围",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "赵世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邯郸解围.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邲之战晋败于楚": {
-      "type": "event",
+      "type": "",
       "label": "邲之战晋败于楚",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "晋世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邲之战晋败于楚.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邲之战：庄王胜晋": {
@@ -86758,24 +85980,20 @@
       }
     },
     "邹衍明五德之传": {
-      "type": "event",
+      "type": "",
       "label": "邹衍明五德之传",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "历书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邹衍明五德之传.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邹阳": {
@@ -86804,42 +86022,34 @@
       }
     },
     "邹阳下狱": {
-      "type": "event",
+      "type": "",
       "label": "邹阳下狱",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "鲁仲连邹阳列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邹阳下狱.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "邹阳狱中上书": {
-      "type": "story",
+      "type": "",
       "label": "邹阳狱中上书",
       "aliases": [],
-      "tags": [
-        "史记",
-        "故事",
-        "鲁仲连邹阳列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/邹阳狱中上书.md",
-      "quality_score": 32,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 3,
+        "tags": 0,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -86867,24 +86077,20 @@
       }
     },
     "郁成王被斩": {
-      "type": "event",
+      "type": "",
       "label": "郁成王被斩",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "大宛列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郁成王被斩.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郅都": {
@@ -86914,87 +86120,71 @@
       }
     },
     "郅都守雁门匈奴远避": {
-      "type": "event",
+      "type": "",
       "label": "郅都守雁门匈奴远避",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "酷吏列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郅都守雁门匈奴远避.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郅都族灭济南瞷氏": {
-      "type": "event",
+      "type": "",
       "label": "郅都族灭济南瞷氏",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "酷吏列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郅都族灭济南瞷氏.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郅都直谏护驾": {
-      "type": "event",
+      "type": "",
       "label": "郅都直谏护驾",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "酷吏列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郅都直谏护驾.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郅都禁临江王自杀": {
-      "type": "event",
+      "type": "",
       "label": "郅都禁临江王自杀",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "酷吏列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郅都禁临江王自杀.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郅都苍鹰": {
@@ -87061,45 +86251,37 @@
       }
     },
     "郊雍作泰一祠坛": {
-      "type": "event",
+      "type": "",
       "label": "郊雍作泰一祠坛",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝武本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郊雍作泰一祠坛.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郊雍见五帝": {
-      "type": "event",
+      "type": "",
       "label": "郊雍见五帝",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "孝景本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郊雍见五帝.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑伯克段于鄢、黄泉见母": {
@@ -87192,87 +86374,71 @@
       }
     },
     "郑国渠建成秦以富强": {
-      "type": "event",
+      "type": "",
       "label": "郑国渠建成秦以富强",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "河渠书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑国渠建成秦以富强.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑安平救范睢更名张禄": {
-      "type": "event",
+      "type": "",
       "label": "郑安平救范睢更名张禄",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "范睢蔡泽列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑安平救范睢更名张禄.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑安平降赵应侯请罪": {
-      "type": "event",
+      "type": "",
       "label": "郑安平降赵应侯请罪",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "范睢蔡泽列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑安平降赵应侯请罪.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑庄以官卒": {
-      "type": "event",
+      "type": "",
       "label": "郑庄以官卒",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汲郑列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑庄以官卒.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑庄公": {
@@ -87304,66 +86470,54 @@
       }
     },
     "郑庄坐事赎为庶人": {
-      "type": "event",
+      "type": "",
       "label": "郑庄坐事赎为庶人",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汲郑列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑庄坐事赎为庶人.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑庄好士推贤": {
-      "type": "event",
+      "type": "",
       "label": "郑庄好士推贤",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汲郑列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑庄好士推贤.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑庄推毂贤士": {
-      "type": "event",
+      "type": "",
       "label": "郑庄推毂贤士",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汲郑列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑庄推毂贤士.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑当时": {
@@ -87396,45 +86550,37 @@
       }
     },
     "郑当时家世": {
-      "type": "event",
+      "type": "",
       "label": "郑当时家世",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "汲郑列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑当时家世.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑当时建议开漕渠": {
-      "type": "event",
+      "type": "",
       "label": "郑当时建议开漕渠",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "河渠书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑当时建议开漕渠.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郑当时长者": {
@@ -87459,45 +86605,37 @@
       }
     },
     "郑桓公始封": {
-      "type": "event",
+      "type": "",
       "label": "郑桓公始封",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "十二诸侯年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郑桓公始封.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郡县皆反": {
-      "type": "event",
+      "type": "",
       "label": "郡县皆反",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "六国年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郡县皆反.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郤克": {
@@ -87525,24 +86663,20 @@
       }
     },
     "郦况卖交诛吕": {
-      "type": "event",
+      "type": "",
       "label": "郦况卖交诛吕",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "樊郦滕灌列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦况卖交诛吕.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦商": {
@@ -87573,24 +86707,20 @@
       }
     },
     "郦商定北地从击项羽": {
-      "type": "event",
+      "type": "",
       "label": "郦商定北地从击项羽",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "樊郦滕灌列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦商定北地从击项羽.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦商定雍、陇西": {
@@ -87615,45 +86745,37 @@
       }
     },
     "郦商平叛击布封侯": {
-      "type": "event",
+      "type": "",
       "label": "郦商平叛击布封侯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "樊郦滕灌列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦商平叛击布封侯.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦商聚兵从沛公": {
-      "type": "event",
+      "type": "",
       "label": "郦商聚兵从沛公",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "樊郦滕灌列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦商聚兵从沛公.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦寄": {
@@ -87683,108 +86805,88 @@
       }
     },
     "郦寄说吕禄交兵权": {
-      "type": "event",
+      "type": "",
       "label": "郦寄说吕禄交兵权",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "吕太后本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦寄说吕禄交兵权.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦生下陈留": {
-      "type": "event",
+      "type": "",
       "label": "郦生下陈留",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "郦生陆贾列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦生下陈留.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦生初见沛公": {
-      "type": "event",
+      "type": "",
       "label": "郦生初见沛公",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "郦生陆贾列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦生初见沛公.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦生说齐七十余城": {
-      "type": "event",
+      "type": "",
       "label": "郦生说齐七十余城",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "郦生陆贾列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦生说齐七十余城.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦生说齐罢兵": {
-      "type": "event",
+      "type": "",
       "label": "郦生说齐罢兵",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "田儋列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦生说齐罢兵.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦食其": {
@@ -87816,45 +86918,37 @@
       }
     },
     "郦食其子封高梁侯": {
-      "type": "event",
+      "type": "",
       "label": "郦食其子封高梁侯",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "郦生陆贾列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦食其子封高梁侯.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦食其献策": {
-      "type": "event",
+      "type": "",
       "label": "郦食其献策",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郦食其献策.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郦食其见沛公": {
@@ -87900,24 +86994,20 @@
       }
     },
     "郭吉风告单于": {
-      "type": "event",
+      "type": "",
       "label": "郭吉风告单于",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "匈奴列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郭吉风告单于.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郭开": {
@@ -87946,24 +87036,20 @@
       }
     },
     "郭舍人救武帝乳母": {
-      "type": "event",
+      "type": "",
       "label": "郭舍人救武帝乳母",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "滑稽列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郭舍人救武帝乳母.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郭解": {
@@ -88014,129 +87100,105 @@
       }
     },
     "郭解亡命被捕": {
-      "type": "event",
+      "type": "",
       "label": "郭解亡命被捕",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "游侠列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郭解亡命被捕.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郭解入关杀杨季主": {
-      "type": "event",
+      "type": "",
       "label": "郭解入关杀杨季主",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "游侠列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郭解入关杀杨季主.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郭解姊子被杀事件": {
-      "type": "event",
+      "type": "",
       "label": "郭解姊子被杀事件",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "游侠列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郭解姊子被杀事件.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郭解少年杀人为盗": {
-      "type": "event",
+      "type": "",
       "label": "郭解少年杀人为盗",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "游侠列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郭解少年杀人为盗.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郭解徙茂陵事件": {
-      "type": "event",
+      "type": "",
       "label": "郭解徙茂陵事件",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "游侠列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郭解徙茂陵事件.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郭解调解雒阳仇家": {
-      "type": "event",
+      "type": "",
       "label": "郭解调解雒阳仇家",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "游侠列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/郭解调解雒阳仇家.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "郭隗": {
@@ -88207,67 +87269,78 @@
         "narrative": 8
       }
     },
-    "鄂君议萧何位次第一": {
-      "type": "event",
-      "label": "鄂君议萧何位次第一",
-      "aliases": [],
+    "鄂侯": {
+      "type": "person",
+      "label": "鄂侯",
+      "aliases": [
+        "邘侯"
+      ],
       "tags": [
-        "史记",
-        "事件",
-        "萧相国世家"
+        "商朝",
+        "商纣王",
+        "三公"
       ],
       "featured": false,
-      "path": "pages/鄂君议萧何位次第一.md",
-      "quality_score": 13,
+      "path": "pages/鄂侯.md",
+      "quality_score": 1,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
         "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
+    "鄂君议萧何位次第一": {
+      "type": "",
+      "label": "鄂君议萧何位次第一",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/鄂君议萧何位次第一.md",
+      "quality_score": 18,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "鄢陵之战": {
-      "type": "event",
+      "type": "",
       "label": "鄢陵之战",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "楚世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/鄢陵之战.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "鄢陵之战晋败楚": {
-      "type": "event",
+      "type": "",
       "label": "鄢陵之战晋败楚",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "晋世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/鄢陵之战晋败楚.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "鄢陵侯国": {
@@ -88339,89 +87412,71 @@
       }
     },
     "酎金国除56侯详情": {
-      "type": "event",
+      "type": "",
       "label": "酎金国除56侯详情",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "建元已来王子侯者年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/酎金国除56侯详情.md",
-      "quality_score": 16,
+      "quality_score": 21,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 5,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "酎金坐罪国除": {
-      "type": "event",
+      "type": "",
       "label": "酎金坐罪国除",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "建元以来侯者年表",
-        "惠景间侯者年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/酎金坐罪国除.md",
-      "quality_score": 25,
+      "quality_score": 21,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 8,
-        "revs": 0,
-        "size": 4,
+        "tags": 0,
+        "revs": 3,
+        "size": 5,
         "manual": 5,
         "narrative": 8
       }
     },
     "酎金坐罪大量国除": {
-      "type": "event",
+      "type": "",
       "label": "酎金坐罪大量国除",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "高祖功臣侯者年表",
-        "建元已来王子侯者年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/酎金坐罪大量国除.md",
-      "quality_score": 26,
+      "quality_score": 21,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 8,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 5,
         "manual": 5,
         "narrative": 8
       }
     },
     "酎金失侯百余人": {
-      "type": "event",
+      "type": "",
       "label": "酎金失侯百余人",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "平准书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/酎金失侯百余人.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "酒家卧龙、吕公相婿": {
@@ -88467,24 +87522,20 @@
       }
     },
     "醿里疾攻焦败韩岸门": {
-      "type": "event",
+      "type": "",
       "label": "醿里疾攻焦败韩岸门",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/醿里疾攻焦败韩岸门.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "里克": {
@@ -88514,45 +87565,37 @@
       }
     },
     "重耳夷吾出奔": {
-      "type": "event",
+      "type": "",
       "label": "重耳夷吾出奔",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "晋世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/重耳夷吾出奔.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "重耳流亡十九年": {
-      "type": "story",
+      "type": "",
       "label": "重耳流亡十九年",
       "aliases": [],
-      "tags": [
-        "史记",
-        "故事",
-        "晋世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/重耳流亡十九年.md",
-      "quality_score": 24,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 3,
+        "tags": 0,
+        "revs": 6,
         "size": 10,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "重耳流亡复国": {
@@ -88573,24 +87616,20 @@
       }
     },
     "金縢启发天佑": {
-      "type": "event",
+      "type": "",
       "label": "金縢启发天佑",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "鲁周公世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/金縢启发天佑.md",
-      "quality_score": 12,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 1,
+        "tags": 0,
+        "revs": 3,
+        "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "鉏麑": {
@@ -88643,24 +87682,20 @@
       }
     },
     "钩弋夫人之死": {
-      "type": "event",
+      "type": "",
       "label": "钩弋夫人之死",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "外戚世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/钩弋夫人之死.md",
-      "quality_score": 13,
+      "quality_score": 18,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 2,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "钩弋夫人被赐死": {
@@ -88685,24 +87720,20 @@
       }
     },
     "铎椒作铎氏微": {
-      "type": "event",
+      "type": "",
       "label": "铎椒作铎氏微",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "十二诸侯年表"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/铎椒作铎氏微.md",
-      "quality_score": 12,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
+        "tags": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "铸三铢钱禁盗铸": {
@@ -88716,14 +87747,14 @@
       ],
       "featured": false,
       "path": "pages/铸三铢钱禁盗铸.md",
-      "quality_score": 12,
+      "quality_score": 23,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
-        "revs": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "铸五铢钱": {
@@ -88737,14 +87768,14 @@
       ],
       "featured": false,
       "path": "pages/铸五铢钱.md",
-      "quality_score": 12,
+      "quality_score": 23,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
-        "revs": 0,
+        "revs": 3,
         "size": 1,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "锤侯国": {
@@ -100131,6 +99162,30 @@
         "narrative": 0
       }
     },
+    "黄石公": {
+      "type": "person",
+      "label": "黄石公",
+      "aliases": [
+        "圯上老人"
+      ],
+      "tags": [
+        "秦汉",
+        "传说",
+        "张良",
+        "谋略"
+      ],
+      "featured": false,
+      "path": "pages/黄石公.md",
+      "quality_score": 3,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
     "黄霸以礼义治颍川": {
       "type": "event",
       "label": "黄霸以礼义治颍川",
@@ -104001,6 +103056,7 @@
     "宰我参与田常之乱": "宰我参与田常之乱",
     "家族传承的生存之道": "家族传承的生存之道",
     "容成侯国": "容成侯国",
+    "宽舒": "宽舒",
     "富平侯国": "富平侯国",
     "富民侯国": "富民侯国",
     "对外扩张财政支出增加": "对外扩张财政支出增加",
@@ -104885,6 +103941,7 @@
     "曹无伤密告项羽": "曹无伤密告项羽",
     "曹沫": "曹沫",
     "曹刿": "曹沫",
+    "曹子": "曹沫",
     "曹沫三败于齐": "曹沫三败于齐",
     "曹沫劫盟专诸刺王僚：高风险行动窗口期三维时机选择法": "曹沫劫盟专诸刺王僚：高风险行动窗口期三维时机选择法",
     "曹沫劫齐桓公": "曹沫劫齐桓公",
@@ -105716,6 +104773,8 @@
     "玄鸟降卵：简狄生契": "玄鸟降卵：简狄生契",
     "率五国破秦于河外": "率五国破秦于河外",
     "王为西帝后复去": "王为西帝后复去",
+    "王信": "王信",
+    "盖侯": "王信",
     "王凤为大司马大将军": "王凤为大司马大将军",
     "王商为丞相": "王商为丞相",
     "王太后入宫": "王太后入宫",
@@ -107231,6 +106290,8 @@
     "郭隗": "郭隗",
     "都成侯国": "都成侯国",
     "都昌侯国": "都昌侯国",
+    "鄂侯": "鄂侯",
+    "邘侯": "鄂侯",
     "鄂君议萧何位次第一": "鄂君议萧何位次第一",
     "鄢陵之战": "鄢陵之战",
     "鄢陵之战晋败楚": "鄢陵之战晋败楚",
@@ -107843,6 +106904,8 @@
     "黄歇护送太子完归楚": "黄歇护送太子完归楚",
     "黄歇拜相封春申君": "黄歇拜相封春申君",
     "黄池争长": "黄池争长",
+    "黄石公": "黄石公",
+    "圯上老人": "黄石公",
     "黄霸以礼义治颍川": "黄霸以礼义治颍川",
     "黄龙见成纪": "黄龙见成纪",
     "黄龙见成纪张苍自黜": "黄龙见成纪张苍自黜",
@@ -107944,5 +107007,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T00:13:02"
+  "generated": "2026-04-24T00:14:34"
 }
