@@ -7432,19 +7432,26 @@
       "type": "person",
       "label": "刘舜",
       "aliases": [
-        "舜"
+        "舜",
+        "帝舜",
+        "虞舜"
       ],
-      "tags": [],
+      "tags": [
+        "五帝",
+        "传说时代",
+        "禅让",
+        "圣君"
+      ],
       "featured": false,
       "path": "pages/刘舜.md",
       "total_refs": 81,
       "total_chapters": 26,
-      "quality_score": -1,
+      "quality_score": 11,
       "_score_parts": {
         "base_refs": 4,
-        "tags": 0,
-        "revs": 0,
-        "size": 0,
+        "tags": 8,
+        "revs": 3,
+        "size": 1,
         "manual": 0,
         "narrative": -5
       }
@@ -17576,6 +17583,27 @@
         "size": 3,
         "manual": 0,
         "narrative": 8
+      }
+    },
+    "常山王": {
+      "type": "person",
+      "label": "常山王",
+      "aliases": [
+        "张耳"
+      ],
+      "tags": [],
+      "featured": false,
+      "path": "pages/常山王.md",
+      "total_refs": 60,
+      "total_chapters": 15,
+      "quality_score": -1,
+      "_score_parts": {
+        "base_refs": 3,
+        "tags": 0,
+        "revs": 0,
+        "size": 1,
+        "manual": 0,
+        "narrative": -5
       }
     },
     "平丘侯国": {
@@ -42092,17 +42120,22 @@
       "aliases": [
         "章邯"
       ],
-      "tags": [],
+      "tags": [
+        "秦末",
+        "秦将",
+        "三秦",
+        "诸侯王"
+      ],
       "featured": false,
       "path": "pages/雍王.md",
       "total_refs": 79,
       "total_chapters": 17,
-      "quality_score": -2,
+      "quality_score": 10,
       "_score_parts": {
         "base_refs": 3,
-        "tags": 0,
-        "revs": 0,
-        "size": 0,
+        "tags": 8,
+        "revs": 3,
+        "size": 1,
         "manual": 0,
         "narrative": -5
       }
@@ -46123,6 +46156,8 @@
     "硃虚侯": "刘章",
     "城阳景王": "刘章",
     "刘舜": "刘舜",
+    "帝舜": "刘舜",
+    "虞舜": "刘舜",
     "刘赐": "刘赐",
     "衡山王赐": "刘赐",
     "庐江王赐": "刘赐",
@@ -46738,6 +46773,8 @@
     "高阳": "帝颛顼",
     "高阳氏": "帝颛顼",
     "常乐侯国": "常乐侯国",
+    "常山王": "常山王",
+    "张耳": "常山王",
     "平丘侯国": "平丘侯国",
     "平侯国": "平侯国",
     "平原君": "平原君",
@@ -46825,8 +46862,6 @@
     "张御史": "张汤",
     "张汤治狱、死而家不过五百金": "张汤治狱、死而家不过五百金",
     "张羽": "张羽",
-    "张耳": "张耳",
-    "常山王": "张耳",
     "赵王张耳": "张耳",
     "张耳依汉、陈馀亡赵": "张耳依汉、陈馀亡赵",
     "张耳陈馀刎颈之交": "张耳陈馀刎颈之交",
@@ -48397,5 +48432,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-23T23:03:36"
+  "generated": "2026-04-23T23:07:32"
 }
