@@ -31353,6 +31353,28 @@
         "narrative": 0
       }
     },
+    "子之": {
+      "type": "person",
+      "label": "子之",
+      "aliases": [],
+      "tags": [
+        "战国",
+        "燕国",
+        "内乱",
+        "禅让"
+      ],
+      "featured": false,
+      "path": "pages/子之.md",
+      "quality_score": 3,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
     "子之之乱齐破燕": {
       "type": "event",
       "label": "子之之乱齐破燕",
@@ -55896,6 +55918,49 @@
         "narrative": 0
       }
     },
+    "杨喜": {
+      "type": "person",
+      "label": "杨喜",
+      "aliases": [],
+      "tags": [
+        "西汉",
+        "楚汉",
+        "汉将",
+        "杜衍侯国"
+      ],
+      "featured": false,
+      "path": "pages/杨喜.md",
+      "quality_score": 3,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
+    "杨武": {
+      "type": "person",
+      "label": "杨武",
+      "aliases": [],
+      "tags": [
+        "西汉",
+        "楚汉",
+        "汉将"
+      ],
+      "featured": false,
+      "path": "pages/杨武.md",
+      "quality_score": 1,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
     "杨虚侯国": {
       "type": "侯国",
       "label": "杨虚侯国",
@@ -59588,6 +59653,31 @@
         "narrative": 8
       }
     },
+    "武丁": {
+      "type": "person",
+      "label": "武丁",
+      "aliases": [
+        "高宗"
+      ],
+      "tags": [
+        "商朝",
+        "帝王",
+        "中兴"
+      ],
+      "featured": false,
+      "path": "pages/武丁.md",
+      "total_refs": 9,
+      "total_chapters": 7,
+      "quality_score": 1,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
     "武丁中兴": {
       "type": "event",
       "label": "武丁中兴",
@@ -62415,6 +62505,7 @@
       "label": "汉惠帝",
       "aliases": [
         "孝惠帝",
+        "孝惠",
         "惠帝",
         "刘盈",
         "汉惠帝"
@@ -62430,11 +62521,11 @@
       "path": "pages/汉惠帝.md",
       "total_refs": 8,
       "total_chapters": 7,
-      "quality_score": 30,
+      "quality_score": 33,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 6,
         "manual": 5,
         "narrative": 8
@@ -113021,6 +113112,7 @@
     "嫪毐伏诛": "嫪毐伏诛",
     "嫪毐作乱": "嫪毐作乱",
     "嫪毐封侯": "嫪毐封侯",
+    "子之": "子之",
     "子之之乱齐破燕": "子之之乱齐破燕",
     "子产": "子产",
     "公孙侨": "子产",
@@ -114302,6 +114394,8 @@
     "条侯亚夫为丞相": "条侯亚夫为丞相",
     "杨何": "杨何",
     "杨可告缗遍天下": "杨可告缗遍天下",
+    "杨喜": "杨喜",
+    "杨武": "杨武",
     "杨虚侯国": "杨虚侯国",
     "松兹侯国": "松兹侯国",
     "枚乘": "枚乘",
@@ -114502,6 +114596,8 @@
     "樗里子智囊": "樗里子智囊",
     "樗里子车百乘入周": "樗里子车百乘入周",
     "正当战争论与穷武之戒": "正当战争论与穷武之戒",
+    "武丁": "武丁",
+    "高宗": "武丁",
     "武丁中兴": "武丁中兴",
     "武丁修政兴殷": "武丁修政兴殷",
     "武丁崩祖庚立": "武丁崩祖庚立",
@@ -114646,6 +114742,7 @@
     "汉廷遣将应对": "汉廷遣将应对",
     "汉惠帝": "汉惠帝",
     "孝惠帝": "汉惠帝",
+    "孝惠": "汉惠帝",
     "惠帝": "汉惠帝",
     "刘盈": "汉惠帝",
     "汉文帝": "汉文帝",
@@ -117199,5 +117296,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T00:01:14"
+  "generated": "2026-04-24T00:02:30"
 }
