@@ -24,11 +24,7 @@ function injectWantButton(pid) {
     btn.disabled = true;
     btn.textContent = '提交中…';
     try {
-      const res = await fetch('/api/want', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ page: pid }),
-      });
+      const res = await fetch('/api/want?page=' + encodeURIComponent(pid));
       const data = await res.json();
       if (data.added) {
         btn.textContent = '✅ 已加入队列';

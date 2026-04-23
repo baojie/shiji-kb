@@ -25,6 +25,12 @@
   python3 scripts/verify_quotes_agent.py   # 处理下一个未检查页面
   ```
   写 actions.jsonl (mode=observe, action=verify-citations)，不需要 W4 评估，不 commit。
+- 若最近一条 `update-wanted-pages` 在 actions.jsonl 中距今 ≥ 20 条（或从未出现过）→ 本轮做 **WantedPages 刷新**:
+  ```bash
+  python3 wiki/scripts/build_wanted_pages.py --update-page
+  python3 wiki/scripts/build_registry.py wiki/public/pages --out wiki/public/pages.json
+  ```
+  写 actions.jsonl (mode=observe, action=update-wanted-pages, target=Special:WantedPages)，不需要 W4 评估，**需要** commit（包含 wanted_pages.json + Special:WantedPages.md + pages.json，commit message: `butler/observe: update-wanted-pages`）。
 - 若 `logs/wiki_butler/queue.md` 无 P0/P1 → 本轮做 W7 引文核验（优先于 explore）
 - 否则按 W1 的 2:1 比例:
   - 最近 [trail, trail] → 本次 `explore`
