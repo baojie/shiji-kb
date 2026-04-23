@@ -20,6 +20,7 @@
 
 - 若最近 3 条同 action 全 fail → 进入 **W5 反思**, 读 `skills/SKILL_W5_Butler反思与自改.md`, 写 `logs/wiki_butler/reflections/$(date +%F).md`, 本轮不做原子动作
 - 若累计 atomic action ≥ 20 条未反思 → 进入 W5 反思
+- 若本轮是"每 6 次精品/stub 创建后的第 6 次"（即每完成 3 精品+3 stub 一组）→ 追加 **W9 图式反思**: 读 `skills/SKILL_W9_Butler页面图式反思.md`, 写 `logs/wiki_butler/schema_patterns/$(date +%F)-R<N>.md`; 若发现新细分类型 ≥3 页且缺模板则同时创建 `skills/templates/<类型>.md`。W9 **不阻塞**下一轮，不影响 actions.jsonl 计数。
 - 若累计 trail/explore ≥ 10 条，且最近一条 `verify-citations` 距今 ≥ 10 条 → 本轮做 **W7 引文核验**:
   ```bash
   python3 scripts/verify_quotes_agent.py   # 处理下一个未检查页面
@@ -31,6 +32,7 @@
   python3 wiki/scripts/build_registry.py wiki/public/pages --out wiki/public/pages.json
   ```
   写 actions.jsonl (mode=observe, action=update-wanted-pages, target=Special:WantedPages)，不需要 W4 评估，**需要** commit（包含 wanted_pages.json + Special:WantedPages.md + pages.json，commit message: `butler/observe: update-wanted-pages`）。
+- 若 `logs/wiki_butler/housekeeping_queue.md` 有 P0 未处理，且本轮无其他 P0 → 处理一条 housekeeping P0（读 `skills/SKILL_W10_Butler内务整理.md`）
 - 若 `logs/wiki_butler/queue.md` 无 P0/P1 → 本轮做 W7 引文核验（优先于 explore）
 - 否则按 W1 的 2:1 比例:
   - 最近 [trail, trail] → 本次 `explore`
