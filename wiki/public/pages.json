@@ -15074,18 +15074,18 @@
         "禅让",
         "圣君"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/刘舜.md",
       "total_refs": 81,
       "total_chapters": 26,
-      "quality_score": 11,
+      "quality_score": 33,
       "_score_parts": {
         "base_refs": 4,
         "tags": 8,
-        "revs": 3,
-        "size": 1,
-        "manual": 0,
-        "narrative": -5
+        "revs": 6,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "刘良": {
@@ -16535,6 +16535,30 @@
         "size": 2,
         "manual": 5,
         "narrative": 8
+      }
+    },
+    "北地": {
+      "type": "place",
+      "label": "北地",
+      "aliases": [
+        "北地郡"
+      ],
+      "tags": [
+        "地名",
+        "汉朝",
+        "边郡",
+        "匈奴"
+      ],
+      "featured": false,
+      "path": "pages/北地.md",
+      "quality_score": 3,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
       }
     },
     "北巡朔方勒兵": {
@@ -22869,16 +22893,16 @@
         "中水侯",
         "汉将"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/吕马童.md",
-      "quality_score": 3,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "启伐有扈氏": {
@@ -100544,6 +100568,27 @@
         "narrative": 8
       }
     },
+    "长陵": {
+      "type": "place",
+      "label": "长陵",
+      "aliases": [],
+      "tags": [
+        "地名",
+        "汉朝",
+        "陵墓"
+      ],
+      "featured": false,
+      "path": "pages/长陵.md",
+      "quality_score": 1,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 6,
+        "revs": 0,
+        "size": 0,
+        "manual": 0,
+        "narrative": -5
+      }
+    },
     "问礼老子": {
       "type": "event",
       "label": "问礼老子",
@@ -106727,16 +106772,16 @@
         "楚将",
         "秦楚战争"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/项燕.md",
-      "quality_score": 1,
+      "quality_score": 24,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "项燕立昌平君": {
@@ -114185,6 +114230,8 @@
     "匈奴攻马邑": "匈奴攻马邑",
     "匈奴王降封列侯": "匈奴王降封列侯",
     "匈奴绝和亲攻当路塞": "匈奴绝和亲攻当路塞",
+    "北地": "北地",
+    "北地郡": "北地",
     "北巡朔方勒兵": "北巡朔方勒兵",
     "北平侯国": "北平侯国",
     "北石侯国": "北石侯国",
@@ -118626,6 +118673,7 @@
     "定王": "长沙定王",
     "长沙定王发因母微": "长沙定王发因母微",
     "长沙王全禅五世": "长沙王全禅五世",
+    "长陵": "长陵",
     "问礼老子": "问礼老子",
     "问鼎中原": "问鼎中原",
     "闳夭": "闳夭",
@@ -119312,5 +119360,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T01:45:56"
+  "generated": "2026-04-24T01:50:45"
 }
