@@ -14155,6 +14155,30 @@
         "narrative": 8
       }
     },
+    "函谷关": {
+      "type": "place",
+      "label": "函谷关",
+      "aliases": [
+        "函关"
+      ],
+      "tags": [
+        "地名",
+        "关隘",
+        "秦国",
+        "关中门户"
+      ],
+      "featured": false,
+      "path": "pages/函谷关.md",
+      "quality_score": 17,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": 3
+      }
+    },
     "刀间用奴起富千万": {
       "type": "event",
       "label": "刀间用奴起富千万",
@@ -29289,18 +29313,19 @@
       "tags": [
         "地名",
         "魏国",
-        "都城"
+        "都城",
+        "战国"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/大梁.md",
-      "quality_score": 1,
+      "quality_score": 27,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 3,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "大泽乡起义": {
@@ -47876,18 +47901,19 @@
       "tags": [
         "地名",
         "楚汉",
-        "战场"
+        "战场",
+        "关中门户"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/成皋.md",
-      "quality_score": 1,
+      "quality_score": 26,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 2,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "成皋之战": {
@@ -63140,18 +63166,19 @@
       "tags": [
         "地名",
         "楚汉",
-        "封地"
+        "汉王封地",
+        "关中南门"
       ],
-      "featured": false,
+      "featured": true,
       "path": "pages/汉中.md",
-      "quality_score": 1,
+      "quality_score": 27,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 0,
-        "manual": 0,
-        "narrative": -5
+        "tags": 8,
+        "revs": 3,
+        "size": 3,
+        "manual": 5,
+        "narrative": 8
       }
     },
     "汉五路大军伐南越": {
@@ -89608,6 +89635,30 @@
         "narrative": 8
       }
     },
+    "蒯聩": {
+      "type": "person",
+      "label": "蒯聩",
+      "aliases": [
+        "卫庄公"
+      ],
+      "tags": [
+        "春秋",
+        "卫国",
+        "卫公子",
+        "卫庄公"
+      ],
+      "featured": false,
+      "path": "pages/蒯聩.md",
+      "quality_score": 9,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 8,
+        "revs": 0,
+        "size": 1,
+        "manual": 5,
+        "narrative": -5
+      }
+    },
     "蒯聩之乱与父子争位": {
       "type": "event",
       "label": "蒯聩之乱与父子争位",
@@ -114274,6 +114325,8 @@
     "击败臧荼": "击败臧荼",
     "击败黥布": "击败黥布",
     "击魏虏魏王豹": "击魏虏魏王豹",
+    "函谷关": "函谷关",
+    "函关": "函谷关",
     "刀间用奴起富千万": "刀间用奴起富千万",
     "分天下三十六郡": "分天下三十六郡",
     "分封关东诸王": "分封关东诸王",
@@ -118288,6 +118341,7 @@
     "蒙骜攻赵定太原": "蒙骜攻赵定太原",
     "蒙骜攻韩魏": "蒙骜攻韩魏",
     "蒯成侯国": "蒯成侯国",
+    "蒯聩": "蒯聩",
     "蒯聩之乱与父子争位": "蒯聩之乱与父子争位",
     "蒯聩辄父子争位处理六原则：前任现任冲突方法论与三方决策框架": "蒯聩辄父子争位处理六原则：前任现任冲突方法论与三方决策框架",
     "蒯聩辄父子争位完整方法论：前任现任冲突六原则三方决策框架与前CEO复辟应对": "蒯聩辄父子争位完整方法论：前任现任冲突六原则三方决策框架与前CEO复辟应对",
@@ -119568,5 +119622,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T02:26:45"
+  "generated": "2026-04-24T02:28:58"
 }
