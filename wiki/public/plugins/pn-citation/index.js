@@ -18,13 +18,15 @@ const CHAPTERS_BASE = 'https://baojie.github.io/shiji-kb/chapters/';
 
 // 匹配 wikilink 展开后的形式：（<a ...>040-082</a>）
 // 支持 class="wikilink resolved/broken/self"
-const RE_WIKILINK = /（<a\s[^>]*class="wikilink[^"]*"[^>]*>(\d{3})-(\d{3}(?:\.\d+)?)<\/a>(?:意旨)?）/g;
+// pn 格式：普通段落号（数字，可带小数）或表格行号（r + 数字）
+const RE_PN = '(r?\\d+(?:\\.\\d+)?)';
+const RE_WIKILINK = new RegExp(`（<a\\s[^>]*class="wikilink[^"]*"[^>]*>(\\d{3})-${RE_PN}<\\/a>(?:意旨)?）`, 'g');
 
-// 匹配纯文本形式：（040-082）或（040-082意旨）
-// 负向前瞻排除已在 <a> 内的情况
-const RE_PLAIN = /（(\d{3})-(\d{3}(?:\.\d+)?)(?:意旨)?）/g;
+// 匹配纯文本形式：（040-12）（040-082）（022-r7）（040-082意旨）
+const RE_PLAIN = new RegExp(`（(\\d{3})-${RE_PN}(?:意旨)?）`, 'g');
 
 function pnToInt(pnStr) {
+  if (pnStr.startsWith('r')) return pnStr;          // 表格行：r7 → #pn-r7
   return pnStr.includes('.') ? pnStr : String(parseInt(pnStr, 10));
 }
 
@@ -84,5 +86,10 @@ export default {
       if (!chapterMap) return html;
       return expandCitations(html, chapterMap);
     });
+
+    // 暴露给其他插件（如 semantic-block）用于 DOM 注入后的补充展开
+    core.pnCitation = {
+      expand: (html) => chapterMap ? expandCitations(html, chapterMap) : html,
+    };
   },
 };

@@ -61,26 +61,6 @@ function buildPager(current, total) {
   return `<nav class="pager">${parts.join(' ')}</nav>`;
 }
 
-/* 从 recent-archive 取 [offset, offset+count) 的 entries.
- * 月份文件按 index.json 排好最新在前, 每个文件 entries[] 内部也按时间倒序. */
-async function fetchFromArchive(months, offset, count) {
-  const out = [];
-  let skip = offset;
-  for (const m of months) {
-    if (m.count <= skip) { skip -= m.count; continue; }
-    const r = await fetch(`recent-archive/${encodeURIComponent(m.name)}.json`);
-    if (!r.ok) continue;
-    const data = await r.json();
-    // 归档文件按插入顺序, 较老的在后面. 但插入时每次 overflow 用 .append, 旧的在前,
-    // 所以我们要反转 (最新在前) 再 slice.
-    const entries = (data.entries || []).slice().reverse();
-    const take = entries.slice(skip, skip + (count - out.length));
-    out.push(...take);
-    skip = 0;
-    if (out.length >= count) break;
-  }
-  return out;
-}
 
 /* Hero image 渲染. frontmatter 可指定:
  *   image: images/xxx.jpg
@@ -196,29 +176,70 @@ export async function renderSource(core, pid, meta) {
   window.scrollTo(0, 0);
 }
 
+// 字段名 → 中文标签（仅用于改善显示，未收录的字段直接用 key 显示）
+const FIELD_LABELS = {
+  event_type: '事件类型', date: '日期', location: '地点', description: '描述',
+  sources: '来源', event_ids: '事件编号', essay_type: '散文类型',
+  author: '作者', chapter_no: '章节', canonical_name: '规范名',
+  aliases: '别名', birth_ce: '生', death_ce: '卒', tags: '标签',
+};
+
+// 纯内部字段，不对用户展示
+const INFOBOX_SKIP = new Set([
+  'id', 'label', 'title', 'type', 'featured', 'auto_generated',
+  'quality_score', 'path', 'paragraph_refs',
+]);
+
 export async function renderInfobox(core, front, meta) {
   let rows = [];
+  const handled = new Set();
   const push = (k, v) => {
     if (v != null && v !== '') {
       rows.push(`<tr><th>${escapeHtml(k)}</th><td>${v}</td></tr>`);
     }
   };
 
+  // 特殊格式字段（需定制渲染，先处理）
   if (front.canonical_name && front.canonical_name !== (front.label || meta.label)) {
     push('规范名', escapeHtml(front.canonical_name));
   }
+  handled.add('canonical_name');
+
   if (front.aliases && front.aliases.length) {
     push('别名', front.aliases.map(escapeHtml).join(' · '));
   }
+  handled.add('aliases');
+
   push('类型', TYPE_LABELS[front.type || meta.type] || front.type || meta.type);
+  handled.add('type');
+
   if (front.birth_ce != null) {
     push('生', front.birth_ce < 0 ? `前 ${-front.birth_ce}` : String(front.birth_ce));
   }
+  handled.add('birth_ce');
+
   if (front.death_ce != null) {
     push('卒', front.death_ce < 0 ? `前 ${-front.death_ce}` : String(front.death_ce));
   }
+  handled.add('death_ce');
+
   if (front.tags && front.tags.length) {
     push('标签', front.tags.map(escapeHtml).join(' · '));
+  }
+  handled.add('tags');
+
+  // 遍历所有剩余字段，通用渲染
+  for (const [key, val] of Object.entries(front)) {
+    if (handled.has(key) || INFOBOX_SKIP.has(key)) continue;
+    if (val == null || val === '') continue;
+    const label = FIELD_LABELS[key] || key;
+    if (Array.isArray(val)) {
+      if (val.length) push(label, val.map(v => escapeHtml(String(v))).join(' · '));
+    } else if (typeof val === 'object') {
+      // 嵌套对象（如 paragraph_refs）跳过
+    } else {
+      push(label, escapeHtml(String(val)));
+    }
   }
 
   // Plugin hook: 允许改写 infobox 行
@@ -543,45 +564,34 @@ export function renderCategory(core, kind, value) {
  * user-req-7: 归档的历史也可翻页看到.
  */
 export async function renderRecent(core, pageNum = 1) {
+  const DISPLAY_LIMIT = 500;
+  const PAGE_SIZE = 50;
+
   const r = await fetch('recent.json');
   if (!r.ok) throw new Error('HTTP ' + r.status);
   const data = await r.json();
-  const activeEntries = data.entries || [];
+  let allEntries = data.entries || [];
+  const rotations = data.rotations || 0;
 
-  // 尝试读 archive-index.json
-  let archivedCount = 0;
-  let archiveMonths = [];  // [{name, count}, ...] 最新月在前
-  try {
-    const ai = await fetch('recent-archive/index.json');
-    if (ai.ok) {
-      const idx = await ai.json();
-      archiveMonths = idx.months || [];
-      archivedCount = idx.total_archived || 0;
-    }
-  } catch { /* no archive */ }
+  // 若当前文件不足 DISPLAY_LIMIT，从轮转文件（最新编号往旧）补充，直到凑满
+  for (let n = rotations; n >= 1 && allEntries.length < DISPLAY_LIMIT; n--) {
+    try {
+      const rn = await fetch(`recent.${n}.json`);
+      if (!rn.ok) break;
+      const dn = await rn.json();
+      allEntries = (dn.entries || []).concat(allEntries);
+    } catch { break; }
+  }
 
-  const PAGE_SIZE = 50;
-  const totalEntries = activeEntries.length + archivedCount;
+  // 取最后 DISPLAY_LIMIT 条，逆序显示（最新在前）
+  const recent500 = allEntries.slice(-DISPLAY_LIMIT).reverse();
+
+  const totalEntries = recent500.length;
   const totalPages = Math.max(1, Math.ceil(totalEntries / PAGE_SIZE));
   pageNum = Math.min(Math.max(1, pageNum), totalPages);
 
   const start = (pageNum - 1) * PAGE_SIZE;
-  const end = start + PAGE_SIZE;
-
-  let entries;
-  if (end <= activeEntries.length) {
-    // 整页在活跃区
-    entries = activeEntries.slice(start, end);
-  } else if (start >= activeEntries.length) {
-    // 整页在归档区 — 按月累加定位
-    const offsetInArchive = start - activeEntries.length;
-    entries = await fetchFromArchive(archiveMonths, offsetInArchive, PAGE_SIZE);
-  } else {
-    // 跨界: 活跃尾 + 归档头
-    const activeTail = activeEntries.slice(start);
-    const fromArch = await fetchFromArchive(archiveMonths, 0, PAGE_SIZE - activeTail.length);
-    entries = activeTail.concat(fromArch);
-  }
+  const entries = recent500.slice(start, start + PAGE_SIZE);
 
   const rows = entries.map((e) => {
     const pageLink = `<a href="#${encodeURIComponent(e.page)}">${escapeHtml(e.page)}</a>`;
@@ -597,8 +607,11 @@ export async function renderRecent(core, pageNum = 1) {
     </tr>`;
   }).join('');
 
-  // 翻页条
   const pagerHtml = totalPages > 1 ? buildPager(pageNum, totalPages) : '';
+
+  const totalLog = allEntries.length;
+  const uniquePages = new Set(recent500.map(e => e.page)).size;
+  const logNote = totalLog > DISPLAY_LIMIT ? `（日志共 ${totalLog} 条，显示最新 ${DISPLAY_LIMIT} 条）` : '';
 
   const body = entries.length === 0
     ? '<p class="category-empty">暂无修订记录。</p>'
@@ -611,7 +624,7 @@ export async function renderRecent(core, pageNum = 1) {
   document.getElementById('article').innerHTML =
     `<nav class="category-crumb"><a href="#">← 首页</a></nav>
      <h1>最近修订 <small class="muted">第 ${pageNum}/${totalPages} 页</small></h1>
-     <p class="category-summary">共 <strong>${totalEntries}</strong> 条修订 · <strong>${data.total_pages}</strong> 个页面</p>
+     <p class="category-summary">显示 <strong>${totalEntries}</strong> 条修订 · <strong>${uniquePages}</strong> 个页面 ${escapeHtml(logNote)}</p>
      ${body}`;
 
   document.body.classList.add('is-home');

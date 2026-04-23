@@ -211,6 +211,21 @@ aside.infobox.inline.collapsed table { display: none; }
   padding: 0; line-height: 1;
 }
 .infobox-toggle:hover { color: var(--accent, #7a1f1f); }
+.sb-meta-section {
+  margin-top: .6em;
+  padding-top: .5em;
+  border-top: 1px solid var(--border, #d8d2bf);
+}
+.sb-meta-section table { width: 100%; border: none; margin: 0; }
+.sb-meta-section th, .sb-meta-section td {
+  border: none;
+  padding: .15em .25em;
+  vertical-align: top;
+  background: transparent;
+  font-size: .93em;
+}
+.sb-meta-section th { color: var(--fg-muted, #888); font-weight: 400; width: 5em; white-space: nowrap; }
+.sb-meta-section td { word-break: break-all; }
 `;
 
 function injectStyles() {
@@ -219,6 +234,59 @@ function injectStyles() {
   el.id = 'semantic-block-style';
   el.textContent = STYLES;
   document.head.appendChild(el);
+}
+
+// ---------- meta 字段显示名 ----------
+
+const META_FIELD_LABELS = {
+  pn:             '原文位置',
+  event_type:     '事件类型',
+  location:       '地点',
+  chapter:        '来源章节',
+  paragraph_refs: '段落引用',
+};
+
+function fmtMetaValue(key, v) {
+  if (key === 'chapter') {
+    const names = Array.isArray(v) ? v : String(v).split(/[\s,，]+/).filter(Boolean);
+    return names.map(n => `<a href="#${encodeURIComponent(n)}">${esc(n)}</a>`).join(' · ');
+  }
+  if (key === 'pn') {
+    // 转为全角括号，供 pn-citation 插件展开为链接
+    const s = String(v).trim().replace(/^\(/, '（').replace(/\)$/, '）');
+    return s;  // 不 escape，让 pn-citation 处理
+  }
+  if (Array.isArray(v)) return esc(v.join(' · '));
+  return esc(String(v));
+}
+
+function injectMetaBlock(blocks, core) {
+  const metaBlocks = blocks.filter(b => b.blockType === 'meta');
+  if (!metaBlocks.length) return;
+
+  const infobox = document.getElementById('infobox');
+  if (!infobox) return;
+
+  infobox.querySelectorAll('.sb-meta-section').forEach(el => el.remove());
+
+  for (const mb of metaBlocks) {
+    const rows = [];
+    for (const [k, v] of Object.entries(mb.meta)) {
+      const label = META_FIELD_LABELS[k] || k;
+      const fv = fmtMetaValue(k, v);
+      if (fv) rows.push(`<tr><th>${esc(label)}</th><td>${fv}</td></tr>`);
+    }
+    if (!rows.length) continue;
+    const section = document.createElement('div');
+    section.className = 'sb-meta-section';
+    let tableHtml = `<table>${rows.join('')}</table>`;
+    // pn-citation 插件负责将 （NNN-MMM） 展开为链接
+    if (core?.pnCitation) tableHtml = core.pnCitation.expand(tableHtml);
+    section.innerHTML = tableHtml;
+    infobox.appendChild(section);
+  }
+
+  infobox.removeAttribute('hidden');
 }
 
 // ---------- 折叠按钮 ----------
@@ -285,15 +353,18 @@ export default {
           return renderInlineInfoboxHtml(meta);
         }
         if (blockType === 'meta') {
-          const safe = JSON.stringify(meta).replace(/'/g, '&#39;');
-          return `<div class="semantic-meta" data-meta='${safe}' hidden></div>`;
+          // 不在 article 体内渲染，数据已缓存在 _cache，由 infobox 下方注入
+          return '';
         }
         const safe = JSON.stringify({ type: blockType, ...meta }).replace(/'/g, '&#39;');
         return `<div class="semantic-block" data-block-type="${esc(blockType)}" data-meta='${safe}' hidden></div>`;
       });
 
-      // 折叠按钮在 DOM 更新后初始化
-      setTimeout(initCollapseButtons, 0);
+      // 折叠按钮 + meta块 在 DOM 更新后初始化
+      setTimeout(() => {
+        initCollapseButtons();
+        injectMetaBlock(blocks, core);
+      }, 0);
 
       return result;
     });
@@ -303,18 +374,17 @@ export default {
       const pid = front?.id ?? '__last__';
       const blocks = _cache.get(pid) || _cache.get('__last__') || [];
       const first = blocks.find(b => b.blockType === 'infobox');
-      if (!first) return rows;
-
-      const extra = buildExtraInfoboxRows(first.meta);
-      if (!extra.length) return rows;
-
-      // 插入位置：紧接"卒"行之后（如有），否则追加到末尾
-      let insertAt = -1;
-      for (let i = 0; i < rows.length; i++) {
-        if (rows[i].includes('>卒<')) { insertAt = i + 1; break; }
+      if (first) {
+        const extra = buildExtraInfoboxRows(first.meta);
+        if (extra.length) {
+          let insertAt = -1;
+          for (let i = 0; i < rows.length; i++) {
+            if (rows[i].includes('>卒<')) { insertAt = i + 1; break; }
+          }
+          if (insertAt >= 0) rows.splice(insertAt, 0, ...extra);
+          else rows.push(...extra);
+        }
       }
-      if (insertAt >= 0) rows.splice(insertAt, 0, ...extra);
-      else rows.push(...extra);
 
       return rows;
     });
