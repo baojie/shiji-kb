@@ -766,112 +766,260 @@ function setupFirstCharFilter(container) {
 }
 
 /**
- * All 页 (Special:AllPages): 全部页面的完整列表, 分组可切换 (type / era / alpha).
- * 取代主页原来的 "全部 N 页" 折叠区.
+ * Special:AllPages — 分面浏览器
+ * 左侧分面（类型 / 标签 / 质量层级），右侧分页结果列表，顶部文字搜索。
  */
 export function renderAll(core) {
   const pages = core.registry.pages;
-  const ids = Object.keys(pages);
 
-  // 分组: 按 type
-  const byType = {};
-  for (const id of ids) {
-    const p = pages[id];
+  // ── 构建全局分面数据 ─────────────────────────────────────────────
+  const allEntries = Object.entries(pages)
+    .filter(([id]) => !id.startsWith('Special:') && pages[id].type !== 'redirect')
+    .map(([id, p]) => ({ id, ...p }));
+
+  const typeCounts = {};
+  const tagCounts  = {};
+  for (const p of allEntries) {
     const t = p.type || 'unknown';
-    if (!byType[t]) byType[t] = [];
-    byType[t].push({ id, ...p });
+    typeCounts[t] = (typeCounts[t] || 0) + 1;
+    for (const tag of (p.tags || [])) tagCounts[tag] = (tagCounts[tag] || 0) + 1;
   }
 
-  // 每组内排序：章节按 id 顺序，其他按 quality_score 降序
-  for (const t of Object.keys(byType)) {
-    if (t === 'chapter') continue; // 章节在 render 时再排
-    byType[t].sort((a, b) =>
+  // 只显示出现 ≥ 5 次的 tag
+  const topTags = Object.entries(tagCounts)
+    .filter(([, c]) => c >= 5)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 30)
+    .map(([t]) => t);
+
+  const typeOrder = ['person', 'story', '侯国', 'overview', 'chapter',
+                     'sanwen', 'event', 'concept', 'state', 'skill'];
+  const orderedTypes = Object.keys(typeCounts).sort((a, b) => {
+    const ia = typeOrder.indexOf(a), ib = typeOrder.indexOf(b);
+    return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib) || a.localeCompare(b);
+  });
+
+  // ── URL 状态 ──────────────────────────────────────────────────────
+  function getState() {
+    const hash = decodeURIComponent(location.hash.slice(1));
+    const qi   = hash.indexOf('?');
+    const p    = new URLSearchParams(qi >= 0 ? hash.slice(qi + 1) : '');
+    return {
+      types:  p.getAll('type'),
+      tags:   p.getAll('tag'),
+      qlevel: p.get('q') || '',
+      search: p.get('s') || '',
+      page:   Math.max(1, parseInt(p.get('page') || '1', 10)),
+    };
+  }
+
+  function buildHash(s) {
+    const p = new URLSearchParams();
+    s.types.forEach(t => p.append('type', t));
+    s.tags.forEach(t  => p.append('tag',  t));
+    if (s.qlevel) p.set('q',    s.qlevel);
+    if (s.search) p.set('s',    s.search);
+    if (s.page > 1) p.set('page', String(s.page));
+    const qs = p.toString();
+    return '#' + encodeURIComponent('Special:AllPages') + (qs ? '?' + qs : '');
+  }
+
+  // ── 过滤 ──────────────────────────────────────────────────────────
+  const PAGE_SIZE = 50;
+
+  function applyFilters(s) {
+    let r = allEntries;
+    if (s.types.length)  r = r.filter(p => s.types.includes(p.type || 'unknown'));
+    if (s.tags.length)   r = r.filter(p => s.tags.every(t => (p.tags || []).includes(t)));
+    if (s.qlevel === 'featured') r = r.filter(p => p.featured);
+    else if (s.qlevel === 'high') r = r.filter(p => !p.featured && (p.quality_score || 0) >= 30);
+    else if (s.qlevel === 'mid')  r = r.filter(p => (p.quality_score || 0) >= 10 && (p.quality_score || 0) < 30);
+    else if (s.qlevel === 'low')  r = r.filter(p => (p.quality_score || 0) < 10);
+    if (s.search) {
+      const kw = s.search.toLowerCase();
+      r = r.filter(p =>
+        p.id.toLowerCase().includes(kw) ||
+        (p.label || '').toLowerCase().includes(kw) ||
+        (p.aliases || []).some(a => a.toLowerCase().includes(kw))
+      );
+    }
+    return r.slice().sort((a, b) =>
+      (b.featured ? 1 : 0) - (a.featured ? 1 : 0) ||
       (b.quality_score || 0) - (a.quality_score || 0) ||
-      a.id.localeCompare(b.id, 'zh')
+      (a.label || a.id).localeCompare(b.label || b.id, 'zh')
     );
   }
 
-  const typeOrder = ['person', 'topic', 'place', 'state', 'event',
-                     'chapter', 'official', 'identity'];
-  const orderedTypes = Object.keys(byType).sort((a, b) => {
-    const ia = typeOrder.indexOf(a), ib = typeOrder.indexOf(b);
-    if (ia === -1 && ib === -1) return a.localeCompare(b);
-    if (ia === -1) return 1;
-    if (ib === -1) return -1;
-    return ia - ib;
-  });
+  // ── 分面栏 ────────────────────────────────────────────────────────
+  function renderFacets(s) {
+    const typeItems = orderedTypes.map(t => {
+      const active = s.types.includes(t);
+      return `<label class="facet-item${active ? ' active' : ''}">
+        <input type="checkbox" data-facet="type" data-val="${escapeHtml(t)}"${active ? ' checked' : ''}>
+        <span class="facet-label">${escapeHtml(TYPE_LABELS[t] || t)}</span>
+        <span class="facet-count">${typeCounts[t]}</span>
+      </label>`;
+    }).join('');
 
-  const groupsHtml = orderedTypes.map((t) => {
-    const label = TYPE_LABELS[t] || t;
-    const isPerson  = t === 'person';
-    const isChapter = t === 'chapter';
-    // 章节组按 id 数字顺序排
-    if (isChapter) byType[t].sort((a, b) => a.id.localeCompare(b.id));
-    const items = byType[t].map((p) => {
-      const displayLabel = isChapter ? p.id : escapeHtml(p.label);
-      const needsAlpha = byType[t].length > 100 && !isChapter;
-      const alpha = needsAlpha ? getPinyinInitial(p.label) : '';
-      const qs = p.quality_score != null
-        ? ` <span class="list-score">q=${p.quality_score}</span>` : '';
-      const meta = p.total_refs != null
-        ? ` <span class="list-meta">${p.total_refs} 次 / ${p.total_chapters} 篇</span>` : '';
-      const tags = (p.tags || []).slice(0, 3).map(escapeHtml).join(' · ');
-      const tagsHtml = tags ? ` <span class="list-tags">${tags}</span>` : '';
-      const alphaAttr = needsAlpha ? ` data-alpha="${alpha}"` : '';
-      return `<li${alphaAttr}>
-        <a href="#${encodeURIComponent(p.id)}">${displayLabel}</a>
-        ${qs}${meta}${tagsHtml}
+    const tagItems = topTags.map(tag => {
+      const active = s.tags.includes(tag);
+      return `<label class="facet-item${active ? ' active' : ''}">
+        <input type="checkbox" data-facet="tag" data-val="${escapeHtml(tag)}"${active ? ' checked' : ''}>
+        <span class="facet-label">${escapeHtml(tag)}</span>
+        <span class="facet-count">${tagCounts[tag]}</span>
+      </label>`;
+    }).join('');
+
+    const qlevels = [
+      ['featured', '⭐ 精品页'],
+      ['high',     '🟢 高质量 (q≥30)'],
+      ['mid',      '🟡 中等 (10≤q<30)'],
+      ['low',      '⬜ 待完善 (q<10)'],
+    ];
+    const qItems = qlevels.map(([val, lbl]) =>
+      `<label class="facet-item${s.qlevel === val ? ' active' : ''}">
+        <input type="radio" name="qlevel" data-facet="q" data-val="${val}"${s.qlevel === val ? ' checked' : ''}>
+        <span class="facet-label">${lbl}</span>
+      </label>`
+    ).join('');
+
+    return `<aside class="facet-panel">
+      <div class="facet-reset-row">
+        <strong>筛选</strong>
+        <button class="facet-reset-btn" id="facet-reset">清除</button>
+      </div>
+      <details class="facet-group" open>
+        <summary class="facet-group-title">类型</summary>
+        <div class="facet-items">${typeItems}</div>
+      </details>
+      <details class="facet-group" open>
+        <summary class="facet-group-title">标签</summary>
+        <div class="facet-items facet-tags">${tagItems}</div>
+      </details>
+      <details class="facet-group">
+        <summary class="facet-group-title">质量层级</summary>
+        <div class="facet-items">${qItems}</div>
+      </details>
+    </aside>`;
+  }
+
+  // ── 结果列表 ──────────────────────────────────────────────────────
+  function renderResults(results, s) {
+    const total      = results.length;
+    const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    const page       = Math.min(s.page, totalPages);
+    const slice      = results.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
+    const items = slice.map(p => {
+      const star  = p.featured ? '<span class="res-star">⭐</span>' : '';
+      const qs    = p.quality_score != null ? `<span class="res-score">q=${p.quality_score}</span>` : '';
+      const tags  = (p.tags || []).slice(0, 4).map(t => `<span class="res-tag">${escapeHtml(t)}</span>`).join('');
+      return `<li class="res-item">
+        <a class="res-title" href="#${encodeURIComponent(p.id)}">${star}${escapeHtml(p.label || p.id)}</a>
+        <div class="res-meta"><span class="res-type">${escapeHtml(TYPE_LABELS[p.type] || p.type || '')}</span>${qs}${tags}</div>
       </li>`;
     }).join('');
-    // 超过 100 项且非章节组：附加 A-Z 过滤栏
-    const filterBar = (byType[t].length > 100 && !isChapter)
-      ? buildFirstCharBarHtml(byType[t].map(p => p.label || p.id)) : '';
-    const collapsed = isPerson ? '' : ' is-collapsed';
-    const chevron = isPerson ? '▼' : '▶';
-    return `<section class="all-group${collapsed}" data-type="${escapeHtml(t)}">
-      <h2 class="all-group-header" role="button" tabindex="0">
-        <span class="all-group-chevron" aria-hidden="true">${chevron}</span>
-        ${escapeHtml(label)} <small>(${byType[t].length})</small>
-      </h2>
-      <div class="all-group-body">
-        ${filterBar}
-        <ul class="all-list">${items}</ul>
+
+    let pagerHtml = '';
+    if (totalPages > 1) {
+      const mkLink = (pg, label) =>
+        `<a class="pager-btn${pg === page ? ' active' : ''}" href="${buildHash({ ...s, page: pg })}">${label}</a>`;
+      const prev  = page > 1 ? mkLink(page - 1, '←') : '';
+      const next  = page < totalPages ? mkLink(page + 1, '→') : '';
+      const nums  = Array.from({ length: totalPages }, (_, i) => i + 1)
+        .filter(n => n <= 2 || n >= totalPages - 1 || Math.abs(n - page) <= 2)
+        .reduce((acc, n, i, arr) => {
+          if (i > 0 && n - arr[i - 1] > 1) acc.push('…');
+          acc.push(n); return acc;
+        }, [])
+        .map(n => typeof n === 'string' ? `<span class="pager-ellipsis">…</span>` : mkLink(n, n))
+        .join('');
+      pagerHtml = `<div class="pager">${prev}${nums}${next}</div>`;
+    }
+
+    const badge = [...s.types.map(t => TYPE_LABELS[t] || t), ...s.tags,
+                   ...(s.qlevel ? [s.qlevel] : []), ...(s.search ? [`"${s.search}"`] : [])].join(' · ');
+    return `<div class="res-header">
+        <span class="res-count">共 <strong>${total}</strong> 个页面${badge ? ' · ' + badge : ''}</span>
       </div>
-    </section>`;
-  }).join('');
+      <ul class="res-list">${items || '<li class="res-empty">无匹配结果</li>'}</ul>
+      ${pagerHtml}`;
+  }
 
-  document.getElementById('article').innerHTML =
-    `<nav class="category-crumb"><a href="#">← 首页</a></nav>
-     <h1>全部页面</h1>
-     <p class="category-summary">共 <strong>${ids.length}</strong> 页，按类型分组，组内按质量分降序</p>
-     ${groupsHtml}`;
+  // ── 主渲染 ────────────────────────────────────────────────────────
+  function render() {
+    const s       = getState();
+    const results = applyFilters(s);
+    const article = document.getElementById('article');
 
-  document.body.classList.add('is-home');
-  const ib = document.getElementById('infobox');
-  ib.hidden = true;
-  ib.innerHTML = '';
-  document.getElementById('crumb').textContent = '全部页面';
-  document.title = '全部 · 史记 Wiki';
-  document.getElementById('src-info').textContent = 'pages.json';
-  document.getElementById('broken-info').textContent = '';
-  window.scrollTo(0, 0);
+    article.innerHTML = `
+      <nav class="category-crumb"><a href="#">← 首页</a></nav>
+      <h1>Special:AllPages</h1>
+      <div class="allpages-layout">
+        ${renderFacets(s)}
+        <div class="allpages-main">
+          <div class="allpages-search-row">
+            <input id="ap-search" class="allpages-search" type="search"
+              placeholder="搜索页面名称或别名…" value="${escapeHtml(s.search)}">
+          </div>
+          <div id="ap-results">${renderResults(results, s)}</div>
+        </div>
+      </div>`;
 
-  // B: 绑定折叠/展开事件
-  document.querySelectorAll('.all-group-header').forEach(h => {
-    const toggle = () => {
-      const sec = h.closest('.all-group');
-      const collapsed = sec.classList.toggle('is-collapsed');
-      h.querySelector('.all-group-chevron').textContent = collapsed ? '▶' : '▼';
-    };
-    h.addEventListener('click', toggle);
-    h.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
-  });
+    document.body.classList.add('is-home');
+    const ib = document.getElementById('infobox');
+    ib.hidden = true; ib.innerHTML = '';
+    document.getElementById('crumb').textContent = 'Special:AllPages';
+    document.title = '全部页面 · 史记 Wiki';
+    document.getElementById('src-info').textContent = `共 ${allEntries.length} 页`;
+    document.getElementById('broken-info').textContent = '';
+    window.scrollTo(0, 0);
 
-  // A: 为所有含 .firstchar-bar 的组绑定 A-Z 过滤
-  document.querySelectorAll('.all-group').forEach(sec => {
-    if (sec.querySelector('.firstchar-bar')) setupFirstCharFilter(sec);
-  });
+    // 分面 checkbox / radio
+    article.querySelectorAll('input[data-facet]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const ns = getState();
+        const { facet, val } = cb.dataset;
+        if (facet === 'type') {
+          ns.types = cb.checked ? [...new Set([...ns.types, val])] : ns.types.filter(t => t !== val);
+        } else if (facet === 'tag') {
+          ns.tags  = cb.checked ? [...new Set([...ns.tags,  val])] : ns.tags.filter(t => t !== val);
+        } else if (facet === 'q') {
+          ns.qlevel = cb.checked ? val : '';
+        }
+        ns.page = 1;
+        history.replaceState(null, '', buildHash(ns));
+        document.getElementById('ap-results').innerHTML = renderResults(applyFilters(ns), ns);
+        article.querySelectorAll('.facet-item').forEach(lbl => {
+          const inp = lbl.querySelector('input');
+          lbl.classList.toggle('active', !!(inp && inp.checked));
+        });
+      });
+    });
+
+    // 搜索框（防抖 200ms）
+    let timer;
+    article.querySelector('#ap-search').addEventListener('input', e => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const ns = getState();
+        ns.search = e.target.value.trim();
+        ns.page = 1;
+        history.replaceState(null, '', buildHash(ns));
+        document.getElementById('ap-results').innerHTML = renderResults(applyFilters(ns), ns);
+      }, 200);
+    });
+
+    // 清除按钮
+    article.querySelector('#facet-reset')?.addEventListener('click', () => {
+      history.replaceState(null, '', buildHash({ types: [], tags: [], qlevel: '', search: '', page: 1 }));
+      render();
+    });
+  }
+
+  render();
 }
+
 
 /**
  * 版本 diff 页 (#?diff=<page>&rev=<rev_id>): 显示该版 vs parent_rev 的行级 diff.

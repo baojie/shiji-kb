@@ -491,6 +491,175 @@ body.is-home .page { grid-template-columns: 1fr; }
 }
 .category-summary strong { color: var(--accent); }
 
+/* ── Special:AllPages 分面浏览器 ─────────────────────────────────── */
+.allpages-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.5em;
+  align-items: start;
+}
+@media (max-width: 700px) {
+  .allpages-layout { grid-template-columns: 1fr; }
+}
+
+/* 分面侧栏 */
+.facet-panel {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .75em;
+  font-size: .9em;
+  position: sticky;
+  top: 1em;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+.facet-reset-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .6em;
+}
+.facet-reset-btn {
+  font-size: .8em;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: none;
+  cursor: pointer;
+  color: var(--fg-muted);
+}
+.facet-reset-btn:hover { color: var(--accent); border-color: var(--accent); }
+.facet-group {
+  margin-bottom: .5em;
+}
+.facet-group-title {
+  font-weight: 600;
+  font-size: .85em;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--fg-muted);
+  cursor: pointer;
+  padding: .3em 0;
+  list-style: none;
+}
+.facet-group-title::marker { display: none; }
+.facet-group summary::-webkit-details-marker { display: none; }
+.facet-group-title {
+  -webkit-user-select: none;
+  user-select: none;
+}
+.facet-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: .25em 0 .5em 0;
+}
+.facet-tags { max-height: 240px; overflow-y: auto; }
+.facet-item {
+  display: flex;
+  align-items: center;
+  gap: .4em;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.35;
+}
+.facet-item:hover { background: var(--bg-alt, #f8f4f0); }
+.facet-item.active { background: var(--bg-alt, #f8f4f0); }
+.facet-item input { accent-color: var(--accent); flex-shrink: 0; }
+.facet-label { flex: 1; }
+.facet-count {
+  font-size: .8em;
+  color: var(--fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 搜索栏 */
+.allpages-search-row { margin-bottom: .8em; }
+.allpages-search {
+  width: 100%;
+  padding: .45em .7em;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: .95em;
+  background: var(--bg);
+  color: var(--fg);
+  box-sizing: border-box;
+}
+.allpages-search:focus { outline: none; border-color: var(--accent); }
+
+/* 结果列表 */
+.res-header {
+  font-size: .88em;
+  color: var(--fg-muted);
+  margin-bottom: .6em;
+}
+.res-header strong { color: var(--fg); }
+.res-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.res-item {
+  padding: .5em 0;
+  border-bottom: 1px solid var(--border);
+}
+.res-title {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--link, #7a1a1a);
+}
+.res-title:hover { text-decoration: underline; color: var(--accent); }
+.res-star { margin-right: .2em; font-size: .85em; }
+.res-meta {
+  margin-top: .2em;
+  font-size: .82em;
+  color: var(--fg-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35em;
+  align-items: center;
+}
+.res-type {
+  background: var(--bg-alt, #f0ece8);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: .9em;
+}
+.res-score { color: var(--fg-muted); }
+.res-tag {
+  background: var(--bg-alt, #f0ece8);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+.res-empty { color: var(--fg-muted); padding: 1.5em 0; font-style: italic; }
+
+/* 分页 */
+.pager {
+  display: flex;
+  gap: .3em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.pager-btn, .pager-num {
+  display: inline-block;
+  padding: .3em .65em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: .88em;
+  color: var(--link, #7a1a1a);
+  background: var(--bg);
+}
+.pager-btn:hover, .pager-num:hover { border-color: var(--accent); }
+.pager-btn.active, .pager-num.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.pager-ellipsis { color: var(--fg-muted); padding: .3em .2em; }
+
 .category-list {
   list-style: decimal;
   padding-left: 2em;
