@@ -662,3 +662,4 @@
 {"round": 297, "action": "create-stub", "target": "田轸", "note": "楚国相，纵横家，又名陈轸", "timestamp": "2026-04-24T00:47:19.698035"}
 {"round": 298, "action": "create-stub", "target": "刘建", "note": "淮南王刘长之子，庐江王", "timestamp": "2026-04-24T00:48:28.991573"}
 {"round": 299, "action": "create-stub", "target": "伊即轩", "note": "匈奴归义楼剸王，漠北大战后封众利侯", "timestamp": "2026-04-24T00:49:18.396693"}
+{"round": 300, "action": "fix-registry", "target": "build_registry.py", "note": "将 pid（页面 slug）加入 alias_index，章节ID链接全部解析，links率 79.8%→82.8%", "timestamp": "2026-04-24T00:56:17.048688"}

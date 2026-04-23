@@ -88,9 +88,9 @@ def main() -> int:
         }
         pages[pid] = entry
 
-        # alias_index: 只收 label + aliases (不含 id; id 直接在 pages 里)
+        # alias_index: 收 id + label + aliases
         # 单字 alias 跳过: 太通用，冲突率极高，搜索几乎无用
-        for key in [entry["label"], *entry["aliases"]]:
+        for key in [pid, entry["label"], *entry["aliases"]]:
             if not key:
                 continue
             if len(str(key)) < 2:  # 单字跳过
