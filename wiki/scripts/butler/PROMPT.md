@@ -61,8 +61,8 @@
 1. 红旗检查 (任一命中 → 回滚)
 2. 打分 5 维度 + bonus
 3. accept 门槛: score_after ≥ score_before + 1 或 score_after ≥ 8
-4. accept → git commit (`butler/<action>: <target> <一句话>`)
-5. fail → `git restore .` + 写 `failures.jsonl`
+4. accept → `git add <file>`（暂存；**不立即 commit**，每5轮由 /wiki 批量提交）
+5. fail → `git restore <file>` + 写 `failures.jsonl`
 
 ## 记账
 
