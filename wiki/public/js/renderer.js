@@ -318,23 +318,37 @@ export function renderHome(core) {
   const pages = core.registry.pages;
   const ids = Object.keys(pages);
 
-  // 代表页面: featured=true 优先, 再按 quality_score, 然后 total_refs, 然后 id
-  const hasQuality = ids.some((id) => pages[id].quality_score != null);
-  const hasRefs = ids.some((id) => pages[id].total_refs != null);
-  const featured = ids
-    .map((id) => ({ id, ...pages[id] }))
-    .sort((a, b) => {
-      // featured 优先
-      const fa = a.featured ? 1 : 0, fb = b.featured ? 1 : 0;
-      if (fa !== fb) return fb - fa;
-      if (hasQuality) {
-        const d = (b.quality_score || 0) - (a.quality_score || 0);
-        if (d !== 0) return d;
-      }
-      if (hasRefs) return (b.total_refs || 0) - (a.total_refs || 0);
-      return a.id.localeCompare(b.id, 'zh');
-    })
-    .slice(0, 8);  // user-req: 主页 8 个精品位
+  // 精品页面: 按类型分桶保证多样性，featured=true 优先，再按 quality_score
+  const allPages = ids.map((id) => ({ id, ...pages[id] }));
+  const scoreOf = (p) => (p.featured ? 1000 : 0) + (p.quality_score || 0);
+  const byScore = (a, b) => scoreOf(b) - scoreOf(a);
+
+  // 各类型上限：person≤6，story≤4，sanwen≤3，overview/concept/chapter 各≤2
+  const caps = { person: 6, story: 4, sanwen: 3, overview: 2, concept: 2, chapter: 2 };
+  const SKIP_TYPES = new Set(['redirect', 'disambiguation', 'year', 'place', 'event', 'special', 'list', '侯国', 'skill']);
+  const counts = {};
+  const featured = [];
+  const candidates = [...allPages].sort(byScore);
+  // 第一轮：按上限从各桶各取
+  for (const p of candidates) {
+    if (featured.length >= 18) break;
+    const t = p.type || '';
+    if (SKIP_TYPES.has(t) || !(t in caps)) continue;
+    const n = counts[t] || 0;
+    if (n >= caps[t]) continue;
+    counts[t] = n + 1;
+    featured.push(p);
+  }
+  // 第二轮：剩余位用高分补足
+  if (featured.length < 18) {
+    const used = new Set(featured.map((p) => p.id));
+    for (const p of candidates) {
+      if (featured.length >= 18) break;
+      if (used.has(p.id)) continue;
+      if (SKIP_TYPES.has(p.type || '')) continue;
+      featured.push(p);
+    }
+  }
 
   const featuredHtml = featured.map(renderFeaturedCard).join('');
 
@@ -350,7 +364,7 @@ export function renderHome(core) {
         <ul id="search-results" hidden></ul>
       </div>
 
-      <h2>代表人物 <small class="muted">(按质量排)</small></h2>
+      <h2>精品页面 <small class="muted">(按质量排)</small></h2>
       <div class="featured-grid">${featuredHtml}</div>
 
       <nav class="home-links">

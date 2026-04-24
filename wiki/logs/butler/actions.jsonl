@@ -1589,3 +1589,21 @@
 {"round":1272,"action":"trail","type":"create","page":"黔中","summary":"butler/create: 黔中（place，2链接，秦代西南郡名/张仪楚秦谈判）","timestamp":"2026-04-24T07:20:00Z"}
 {"round":1273,"action":"explore","type":"scan","summary":"刷新，新候选汨罗/江都/江南/河山/河北，下批trail：汨罗/江都/江南/河山","timestamp":"2026-04-24T07:20:30Z"}
 {"round":1274,"action":"trail","type":"create","page":"汨罗","summary":"butler/create: 汨罗（place，2链接，屈原投江自沉处）","timestamp":"2026-04-24T07:21:00Z"}
+{"round":1275,"action":"commit","type":"wiki_commit","summary":"commit 680e79a74：R1259-R1275新建17页+W11审计，K=151010，links=95.4%","timestamp":"2026-04-24T07:22:00Z"}
+{"round":1276,"action":"trail","type":"create","page":"江都","summary":"butler/create: 江都（place，2链接，汉代诸侯国/扬州）","timestamp":"2026-04-24T07:24:00Z"}
+{"round":1277,"action":"trail","type":"create","page":"雍氏","summary":"butler/create: 雍氏（place，2链接，韩国城邑/秦军围攻）","timestamp":"2026-04-24T07:24:30Z"}
+{"round":1278,"action":"explore","type":"scan","summary":"扫描，新候选永巷/武城/汉孝文帝(redirect)/江南，下批trail：永巷/武城/汉孝文帝redirect/江南","timestamp":"2026-04-24T07:25:00Z"}
+{"round":1279,"action":"trail","type":"create","page":"汉孝文帝","summary":"butler/create: 汉孝文帝（redirect→汉文帝）","timestamp":"2026-04-24T07:25:30Z"}
+{"round":1280,"action":"trail","type":"create","page":"永巷","summary":"butler/create: 永巷（concept，2链接，汉代宫廷监禁处/人彘典故地）","timestamp":"2026-04-24T07:26:00Z"}
+{"round": 1281, "action": "explore", "type": "scan", "summary": "扫描wanted_pages，新候选：武城/槐里/棘门/桐宫/昌邑/新丰/桐宫，下批trail：武城/槐里", "timestamp": "2026-04-24T07:00:54Z"}
+{"round": 1282, "action": "trail", "type": "create", "page": "武城", "summary": "butler/create: 武城（place，鲁国邑名，澹台灭明故乡，子游武城宰）", "timestamp": "2026-04-24T07:01:21Z"}
+{"round": 1283, "action": "trail", "type": "create", "page": "槐里", "summary": "butler/create: 槐里（place，汉代关中县，王太后籍贯）", "timestamp": "2026-04-24T07:01:35Z"}
+{"round": 1284, "action": "explore", "type": "scan", "summary": "扫描，新候选棘门/桐宫/梁父/梁地/高门，下批trail：棘门/桐宫", "timestamp": "2026-04-24T07:02:00Z"}
+{"round": 1285, "action": "trail", "type": "create", "page": "棘门", "summary": "butler/create: 棘门（place，汉代关中军营/楚国宫门）", "timestamp": "2026-04-24T07:02:32Z"}
+{"round": 1286, "action": "trail", "type": "create", "page": "桐宫", "summary": "butler/create: 桐宫（place，商代地名，伊尹放太甲典故地）", "timestamp": "2026-04-24T07:02:50Z"}
+{"round": 1287, "action": "explore", "type": "scan", "summary": "扫描，新候选：不疑(redirect→直不疑)/东门(place)/梁父(place)/昌邑(place)，下批trail：不疑redirect/梁父", "timestamp": "2026-04-24T07:03:19Z"}
+{"round": 1288, "action": "trail", "type": "create", "page": "直不疑+不疑", "summary": "butler/create: 直不疑（person）+ 不疑（redirect→直不疑）", "timestamp": "2026-04-24T07:04:00Z"}
+{"round": 1289, "action": "trail", "type": "edit", "page": "梁父", "summary": "butler/edit: 梁父（place，auto→完整，封禅泰山禅地）", "timestamp": "2026-04-24T07:04:33Z"}
+{"round": 1290, "action": "explore", "type": "W11_audit", "summary": "W11类型审计：8279页，K=237730，127个unknown(event格式问题)，place=1950(含自动生成stub)，无误分类", "timestamp": "2026-04-24T07:06:49Z"}
+{"round": 1291, "action": "trail", "type": "edit", "page": "昌邑", "summary": "butler/edit: 昌邑（place，auto→完整，彭越故乡，楚汉重地）", "timestamp": "2026-04-24T07:07:15Z"}
+{"round": 1292, "action": "trail", "type": "create", "page": "太甲", "summary": "butler/create: 太甲（person，商代第四王，伊尹放桐宫悔过复位）", "timestamp": "2026-04-24T07:07:51Z"}
