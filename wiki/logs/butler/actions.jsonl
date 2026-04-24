@@ -1471,3 +1471,19 @@
 {"ts":"2026-04-24T06:11:16Z","round":1154,"mode":"explore","action":"scan-wanted","note":"越王句践→建redirect到句践; 象(舜弟)→建person page; 荆→楚的别名，redirect; 下轮trail→越王句践redirect"}
 {"ts":"2026-04-24T06:11:56Z","round":1155,"mode":"trail","action":"create-page","target":"越王句践","type":"person","links":["041_越王句践世家","066_伍子胥列传"],"note":"卧薪尝胆，灭吴称霸，春秋末霸主"}
 {"ts":"2026-04-24T06:12:10Z","round":1156,"mode":"trail","action":"create-page","target":"荆","type":"redirect","note":"荆→楚 redirect，楚国别称"}
+{"ts":"2026-04-24T06:13:19Z","round":1157,"mode":"trail","action":"create-page","target":"象","type":"person","links":["001_五帝本纪"],"note":"舜弟，谋害舜，舜以德化封之有鼻"}
+{"ts":"2026-04-24T06:13:45Z","round":1158,"mode":"explore","action":"update-wanted+scan","note":"新地理批次：钜鹿(4,巨鹿之战)/长乐宫(4,汉代宫殿)/鄴(4,西门豹治邺)/长城(4,秦长城)/鄗(4,赵地)/阳城(4); 下轮trail→钜鹿"}
+{"ts":"2026-04-24T06:14:13Z","round":1159,"mode":"trail","action":"create-page","target":"钜鹿","type":"place","links":["007_项羽本纪","089_张耳陈馀列传"],"note":"巨鹿之战，项羽破釜沉舟大破秦军"}
+{"ts":"2026-04-24T06:14:41Z","round":1160,"mode":"trail","action":"create-page","target":"长乐宫","type":"place","links":["009_吕太后本纪","099_刘敬叔孙通列传","刘邦"],"note":"汉高祖崩处，吕太后执政中心"}
+{"ts":"2026-04-24T06:14:53Z","round":1161,"mode":"explore","action":"scan-wanted","note":"鄴(4,西门豹治邺)/鄗(4,赵地)/长城(4,秦长城)/阳城(4,陈胜/韩国); 均有效; 下轮trail→鄴"}
+{"ts":"2026-04-24T06:15:18Z","round":1162,"mode":"trail","action":"create-page","target":"鄴","type":"place","links":["044_魏世家","077_魏公子列传","126_滑稽列传"],"note":"西门豹治邺，破河伯娶妻，漳水十二渠"}
+{"ts":"2026-04-24T06:15:46Z","round":1163,"mode":"trail","action":"create-page","target":"长城","type":"concept","links":["015_六国年表","088_蒙恬列传","108_韩长孺列传"],"note":"秦长城万里，蒙恬修筑，御匈奴"}
+{"ts":"2026-04-24T06:15:57Z","round":1164,"mode":"explore","action":"scan-wanted","note":"鄗(赵国城邑,燕赵长平之战)/阳城(韩国城邑,陈胜陈王阳城); 下轮trail→鄗"}
+{"ts":"2026-04-24T06:16:15Z","round":1165,"mode":"trail","action":"create-page","target":"鄗","type":"place","links":["034_燕召公世家","043_赵世家","077_魏公子列传"],"note":"赵国重城，燕赵争夺，信陵君经过"}
+{"round":1166,"action":"trail","type":"create","page":"阳城","summary":"butler/create: 阳城（place，3链接，陈胜攻取地/韩国城邑）","timestamp":"2026-04-24T06:18:04Z"}
+{"round":1167,"action":"explore","type":"scan","summary":"扫描wanted_pages(200条)，识别trail候选：平阳/敖仓/东越/东城/东垣/义渠","timestamp":"2026-04-24T06:19:00Z"}
+{"round":1168,"action":"trail","type":"create","page":"平阳","summary":"butler/create: 平阳（place，3链接，韩国古都/汉初曹参封地/帝尧传说居地）","timestamp":"2026-04-24T06:19:05Z"}
+{"round":1169,"action":"trail","type":"create","page":"敖仓","summary":"butler/create: 敖仓（place，3链接，楚汉粮仓战略要地）","timestamp":"2026-04-24T06:19:30Z"}
+{"round":1170,"action":"explore","type":"w11_audit","summary":"W11审计：5810页，place=115，state=23，K=128132.56，links=93.4%，无误分类","timestamp":"2026-04-24T06:20:00Z"}
+{"round":1171,"action":"trail","type":"create","page":"东越","summary":"butler/create: 东越（state，3链接，汉代闽越/东瓯越族政权）","timestamp":"2026-04-24T06:20:30Z"}
+{"round":1172,"action":"trail","type":"create","page":"东城","summary":"butler/create: 东城（place，2链接，项羽垓下突围后最后战场）","timestamp":"2026-04-24T06:21:00Z"}
