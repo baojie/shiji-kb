@@ -302,9 +302,11 @@ function fmtMetaValue(key, v) {
 
 function injectMetaBlock(blocks, core) {
   const metaBlocks = blocks.filter(b => b.blockType === 'meta');
+  console.debug('[sb] injectMetaBlock: metaBlocks=', metaBlocks.length, 'blocks total=', blocks.length);
   if (!metaBlocks.length) return;
 
   const infobox = document.getElementById('infobox');
+  console.debug('[sb] infobox found:', !!infobox, infobox?.id);
   if (!infobox) return;
 
   infobox.querySelectorAll('.sb-meta-section').forEach(el => el.remove());
@@ -314,6 +316,7 @@ function injectMetaBlock(blocks, core) {
     for (const [k, v] of Object.entries(mb.meta)) {
       const label = META_FIELD_LABELS[k] || k;
       const fv = fmtMetaValue(k, v);
+      console.debug('[sb] meta field:', k, '→', fv ? fv.slice(0, 60) : '(empty)');
       if (fv) rows.push(`<tr><th>${esc(label)}</th><td>${fv}</td></tr>`);
     }
     if (!rows.length) continue;
@@ -324,6 +327,7 @@ function injectMetaBlock(blocks, core) {
     if (core?.pnCitation) tableHtml = core.pnCitation.expand(tableHtml);
     section.innerHTML = tableHtml;
     infobox.appendChild(section);
+    console.debug('[sb] meta section appended, pnCitation available:', !!core?.pnCitation);
   }
 
   infobox.removeAttribute('hidden');
