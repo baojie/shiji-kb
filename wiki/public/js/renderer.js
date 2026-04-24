@@ -63,7 +63,7 @@ function buildPager(current, total) {
 }
 
 
-/* Hero image 渲染. frontmatter 可指定:
+/* 人物页右浮动画像. frontmatter 可指定:
  *   image: images/xxx.jpg
  *   image_caption: "刘邦画像, 清南薰殿旧藏"
  *   image_credit: "Public Domain · 南薰殿"
@@ -73,11 +73,14 @@ function renderHeroImage(front) {
   if (!src) return '';
   const caption = front.image_caption || '';
   const credit = front.image_credit || '';
-  return `<figure class="hero-image">
+  const capHtml = caption
+    ? `<figcaption>${escapeHtml(caption)}${credit ? `<br><span class="credit">${escapeHtml(credit)}</span>` : ''}</figcaption>`
+    : '';
+  return `<figure class="page-portrait">
     <img src="${escapeHtml(src)}"
-         alt="${escapeHtml(caption)}"
+         alt="${escapeHtml(caption || front.label || '')}"
          onerror="this.closest('figure').style.display='none'">
-    ${caption ? `<figcaption>${escapeHtml(caption)}${credit ? ` <span class="credit">· ${escapeHtml(credit)}</span>` : ''}</figcaption>` : ''}
+    ${capHtml}
   </figure>`;
 }
 
@@ -346,6 +349,8 @@ export function renderHome(core) {
         <a href="#?recent" class="home-link">最近修订 →</a>
         <a href="#${encodeURIComponent('Special:Random')}" class="home-link">随机页 →</a>
       </nav>
+
+      <p class="home-disclaimer">⚠️ 本 Wiki 所有内容由 AI 机器人自动生成，难免有错误和疏漏。后台机器人 Butler 在持续巡逻纠错，但请勿用于学术引用。如发现问题欢迎<a href="https://github.com/baojie/shiji-kb/issues/new" target="_blank" rel="noopener">提交 Issue</a>。</p>
 
       <div id="k-panel" class="k-panel"><span class="muted">正在加载知识量...</span></div>
     </div>`;

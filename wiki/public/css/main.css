@@ -154,6 +154,17 @@ body.is-home .page { grid-template-columns: 1fr; }
   margin-top: -.4em;
 }
 
+.home-disclaimer {
+  font-size: .88em;
+  color: var(--fg-muted);
+  background: var(--bg-alt, #f8f6f0);
+  border-left: 3px solid var(--accent, #b5a37a);
+  padding: .5em .8em;
+  margin: 1.2em 0;
+  border-radius: 0 4px 4px 0;
+}
+.home-disclaimer a { color: inherit; text-decoration: underline; }
+
 .search-box { margin: 2em 0 2.5em; position: relative; }
 .wiki-home .search-box { max-width: 520px; }
 .search-box input {
@@ -249,7 +260,7 @@ body.is-home .page { grid-template-columns: 1fr; }
 }
 .card-thumb {
   width: 100%;
-  height: 160px;
+  height: 220px;
   overflow: hidden;
   background: #f0ece4;
   flex-shrink: 0;
@@ -968,6 +979,30 @@ footer code {
 .hero-image .credit {
   font-size: 12px;
   opacity: .8;
+}
+
+/* 人物页右浮动画像 */
+.page-portrait {
+  float: right;
+  margin: .2em 0 1.2em 1.5em;
+  width: 160px;
+  clear: right;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #f0ece4;
+}
+.page-portrait img {
+  width: 100%;
+  display: block;
+}
+.page-portrait figcaption {
+  font-size: 11px;
+  color: var(--fg-muted);
+  text-align: center;
+  padding: .3em .4em;
+  font-style: italic;
+  line-height: 1.3;
 }
 
 /* K sparkline (提案 25) */
