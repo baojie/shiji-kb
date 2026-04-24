@@ -148,7 +148,9 @@ aside.sidebar {
 .sidebar-portrait img {
   width: 100%;
   display: block;
+  transition: opacity .15s;
 }
+.portrait-zoom:hover img { opacity: .85; cursor: zoom-in; }
 .sidebar-portrait figcaption {
   font-size: 11px;
   color: var(--fg-muted);

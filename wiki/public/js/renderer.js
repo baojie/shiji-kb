@@ -72,9 +72,11 @@ function renderSidebarPortrait(front) {
   const caption = front.image_caption || '';
   const credit = front.image_credit || '';
   el.hidden = false;
-  el.innerHTML = `<img src="${escapeHtml(src)}"
-       alt="${escapeHtml(caption || front.label || '')}"
-       onerror="this.closest('figure').style.display='none'">
+  el.innerHTML = `<a href="${escapeHtml(src)}" target="_blank" rel="noopener" class="portrait-zoom" title="点击放大">
+      <img src="${escapeHtml(src)}"
+           alt="${escapeHtml(caption || front.label || '')}"
+           onerror="this.closest('figure').style.display='none'">
+    </a>
     ${caption ? `<figcaption>${escapeHtml(caption)}${credit ? `<br><span class="credit">${escapeHtml(credit)}</span>` : ''}</figcaption>` : ''}`;
 }
 
