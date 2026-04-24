@@ -723,8 +723,7 @@ export async function renderHistory(core, page) {
      </table>`;
 
   document.body.classList.add('is-home');
-  const ib = document.getElementById('infobox');
-  ib.hidden = true; ib.innerHTML = '';
+  hideSidebar();
   document.getElementById('crumb').textContent = `修订历史 / ${page}`;
   document.title = `${page} 修订历史 · 史记 Wiki`;
   document.getElementById('src-info').textContent = `history/${page}.json`;
@@ -756,8 +755,7 @@ export async function renderRevision(core, page, revId) {
   </div>`;
 
   document.getElementById('article').innerHTML = banner + html;
-  const ib = document.getElementById('infobox');
-  ib.hidden = true; ib.innerHTML = '';
+  hideSidebar();
   document.getElementById('crumb').textContent = `${page} @ ${revId}`;
   document.title = `${page} @ ${revId} · 史记 Wiki`;
   document.getElementById('src-info').textContent = `history/${page}/${revId}.md`;
@@ -1077,8 +1075,7 @@ export function renderAll(core) {
     }
 
     document.body.classList.add('is-home');
-    const ib = document.getElementById('infobox');
-    ib.hidden = true; ib.innerHTML = '';
+    hideSidebar();
     document.getElementById('crumb').textContent = 'Special:AllPages';
     document.title = '全部页面 · 史记 Wiki';
     document.getElementById('src-info').textContent = `共 ${allEntries.length} 页`;
@@ -1192,8 +1189,7 @@ export async function renderDiff(core, page, revId) {
     `<h1>版本差异 <small class="muted">${escapeHtml(page)}</small></h1>` +
     meta + `<div class="diff-body">${diffHtml}</div>`;
 
-  const ib = document.getElementById('infobox');
-  ib.hidden = true; ib.innerHTML = '';
+  hideSidebar();
   document.getElementById('crumb').textContent = `${page} diff ${revId}`;
   document.title = `${page} diff · 史记 Wiki`;
   document.getElementById('src-info').textContent = `history/${page}.json (diff ${revId} vs ${cur.parent_rev || 'null'})`;
@@ -1240,9 +1236,7 @@ export function renderNotFound(core, target) {
     `<h1>页面不存在</h1>
      <p>未找到页面 <code>${escapeHtml(target)}</code>。</p>
      <p><a href="#">回到首页</a></p>`;
-  const ib = document.getElementById('infobox');
-  ib.hidden = true;
-  ib.innerHTML = '';
+  hideSidebar();
   document.getElementById('crumb').textContent = '未找到';
   document.title = '未找到 · 史记 Wiki';
   document.getElementById('src-info').textContent = '';
