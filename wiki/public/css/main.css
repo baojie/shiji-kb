@@ -85,12 +85,8 @@ article ul, article ol { padding-left: 1.4em; }
 article li { margin: .3em 0; }
 article blockquote p { margin: 0; }
 article blockquote {
-  margin: .1em 0;
-  margin-block-start: .1em;
-  margin-block-end: .1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding: .3em 1em;
+  margin: .8em 0;
+  padding: .15em 1em;
   border-left: 3px solid var(--accent);
   background: var(--bg-box);
   color: var(--fg-muted);
