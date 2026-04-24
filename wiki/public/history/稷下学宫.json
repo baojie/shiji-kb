@@ -1,8 +1,18 @@
 {
   "page": "稷下学宫",
-  "latest_rev_id": "20260423-100000-070bf3",
-  "revision_count": 1,
+  "latest_rev_id": "20260424-020546-94f05d",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260424-020546-94f05d",
+      "timestamp": "2026-04-24T02:05:46Z",
+      "author": "butler",
+      "summary": "butler/merge: convert to redirect → 稷下学宫制度设计",
+      "parent_rev": "20260423-100000-070bf3",
+      "content_hash": "sha256:94f05df67a0234c5bea687dbc6a88386bb9a2b00f0761b4986386b228dc455aa",
+      "size": 136,
+      "content": "---\nid: \"稷下学宫\"\ntype: redirect\ntarget: 稷下学宫制度设计\nlabel: 稷下学宫\n---\n\n→ 参见 [[稷下学宫制度设计]]\n"
+    },
     {
       "rev_id": "20260423-100000-070bf3",
       "timestamp": "2026-04-23T10:00:00+08:00",

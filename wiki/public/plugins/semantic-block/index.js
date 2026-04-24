@@ -291,8 +291,9 @@ function fmtMetaValue(key, v) {
     return names.map(n => `<a href="#${encodeURIComponent(n)}">${esc(n)}</a>`).join(' · ');
   }
   if (key === 'pn') {
-    // 转为全角括号，供 pn-citation 插件展开为链接
-    const s = String(v).trim().replace(/^\(/, '（').replace(/\)$/, '）');
+    // 全局替换所有半角括号为全角，供 pn-citation 插件展开为链接
+    // 多段格式：(094-10) | (097-3.1) → （094-10） | （097-3.1）
+    const s = String(v).trim().replace(/\(/g, '（').replace(/\)/g, '）');
     return s;  // 不 escape，让 pn-citation 处理
   }
   if (Array.isArray(v)) return esc(v.join(' · '));
