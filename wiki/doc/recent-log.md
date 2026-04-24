@@ -5,7 +5,7 @@
 | 文件 | 说明 |
 |------|------|
 | `wiki/public/recent.json` | 滚动窗口（最近 500-600 条，前端直接读此文件） |
-| `wiki/public/log/recent.N.json` | 归档批次（每档 100 条，永久保留，仅供历史查询） |
+| `wiki/logs/recent/recent.N.json` | 归档批次（每档 100 条，永久保留，仅供历史查询） |
 
 ## recent.json 格式
 
@@ -33,7 +33,7 @@
 ## 滚动窗口机制
 
 - **`recent.json`** = 最新 `WINDOW_SIZE`（600）条的滚动窗口
-- **归档触发**：`entries` 超过 `WINDOW_SIZE`（600）时，把最旧的 `ARCHIVE_BATCH`（100）条移至 `log/recent.{N+1}.json`
+- **归档触发**：`entries` 超过 `WINDOW_SIZE`（600）时，把最旧的 `ARCHIVE_BATCH`（100）条移至 `wiki/logs/recent/recent.{N+1}.json`
 - **保留策略**：归档文件永久保留，不删除
 - **设计目标**：前端单次 fetch `recent.json` 即可获得足够显示 500 条的数据，无需循环补档
 

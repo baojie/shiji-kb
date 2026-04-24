@@ -10,8 +10,8 @@ record_revision.py — 为 wiki/public/pages/<page>.md 写入一条修订记录.
 产出:
     1. wiki/public/history/<slug>/<rev_id>.md   (内容副本)
     2. wiki/public/history/<slug>.json          (per-page 索引, 追加 entry)
-    3. wiki/public/recent.json                  (全局修订日志, append-only, 超限轮转至 log/)
-    4. wiki/public/log/recent.N.json            (轮转归档, 永久保留)
+    3. wiki/public/recent.json                  (全局修订日志, 滚动窗口 600 条)
+    4. wiki/logs/recent/recent.N.json           (归档批次, 永久保留)
 
 rev_id 格式: YYYYMMDD-HHMMSS-<sha256[:6]>  (北京时间)
 
@@ -32,7 +32,7 @@ PUBLIC = ROOT / 'wiki/public'
 PAGES = PUBLIC / 'pages'
 HIST = PUBLIC / 'history'
 RECENT = PUBLIC / 'recent.json'
-LOG_DIR = PUBLIC / 'log'   # 轮转归档目录
+LOG_DIR = ROOT / 'wiki/logs/recent'   # 归档批次目录
 
 TZ_BJ = timezone(timedelta(hours=8))
 TZ_UTC = timezone.utc
@@ -121,7 +121,7 @@ def main() -> int:
     )
 
     # 3. 更新 recent.json（滚动窗口：始终保留最近 WINDOW_SIZE 条；
-    #    超出后把最旧的 ARCHIVE_BATCH 条移入 log/recent.N.json 归档）
+    #    超出后把最旧的 ARCHIVE_BATCH 条移入 wiki/logs/recent/recent.N.json 归档）
     WINDOW_SIZE = 600     # recent.json 最多存 600 条（前端取其中最新 500）
     ARCHIVE_BATCH = 100   # 每次归档最旧的 100 条
 
@@ -156,7 +156,7 @@ def main() -> int:
             json.dumps({'entries': batch}, ensure_ascii=False, indent=2) + '\n',
             encoding='utf-8'
         )
-        print(f'  [archive] {len(batch)} entries → log/recent.{rotations}.json')
+        print(f'  [archive] {len(batch)} entries → wiki/logs/recent/recent.{rotations}.json')
 
     recent = {'entries': entries, 'rotations': rotations}
     RECENT.write_text(

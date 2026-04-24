@@ -2,9 +2,9 @@
 """
 migrate_recent_window.py — 迁移 recent.json 到滚动窗口设计.
 
-将所有 log/recent.N.json + recent.json 中的条目合并后：
+将所有 wiki/logs/recent/recent.N.json + recent.json 中的条目合并后：
   - 最近 WINDOW_SIZE 条保留在 recent.json（滚动窗口）
-  - 较旧的条目重新打包到 log/recent.1.json ... log/recent.M.json
+  - 较旧的条目重新打包到 wiki/logs/recent/recent.1.json ... recent.M.json
     （每档 ARCHIVE_BATCH 条，按时间从旧到新编号）
 
 执行前会打印预览；加 --run 才真正写入。
@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 PUBLIC = ROOT / 'wiki/public'
 RECENT = PUBLIC / 'recent.json'
-LOG_DIR = PUBLIC / 'log'
+LOG_DIR = ROOT / 'wiki/logs/recent'
 
 WINDOW_SIZE = 600
 ARCHIVE_BATCH = 100
@@ -82,7 +82,7 @@ def main():
             json.dumps({'entries': batch}, ensure_ascii=False, indent=2) + '\n',
             encoding='utf-8'
         )
-        print(f'  写入 log/recent.{idx}.json ({len(batch)} 条)')
+        print(f'  写入 wiki/logs/recent/recent.{idx}.json ({len(batch)} 条)')
 
     # 写新 recent.json
     RECENT.write_text(
