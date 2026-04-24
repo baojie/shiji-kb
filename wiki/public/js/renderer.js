@@ -6,6 +6,7 @@
 
 import { escapeHtml, TYPE_LABELS } from './util.js';
 import { parseMarkdown } from './parser.js';
+import { resolvePageId } from './registry.js';
 
 /* 只在本地开发服务器上启用"想要"按钮 */
 function isLocalhost() {
@@ -90,6 +91,45 @@ function fmtTimestamp(iso) {
   } catch { return iso; }
 }
 
+// 将事件页中 **主要人物**：XXX、YYY 和 **地点**：ZZZ 的纯文本转为 wikilink
+const LINKIFY_FIELDS = new Set(['主要人物', '地点']);
+
+function linkifyEventFields(articleEl, registry) {
+  articleEl.querySelectorAll('strong').forEach(strong => {
+    const label = strong.textContent.trim();
+    if (!LINKIFY_FIELDS.has(label)) return;
+    // 紧跟在 <strong> 后面的文本节点，形如 "：name1、name2"
+    const textNode = strong.nextSibling;
+    if (!textNode || textNode.nodeType !== Node.TEXT_NODE) return;
+    const text = textNode.textContent;
+    const sep = text[0];
+    if (sep !== '：' && sep !== ':') return;
+    const rest = text.slice(1).trim();
+    if (!rest) return;
+
+    // 分割：以 、或 ，分隔，保留分隔符样式
+    const parts = rest.split(/([、，])/);
+    const fragment = document.createDocumentFragment();
+    fragment.appendChild(document.createTextNode(sep));
+    for (const part of parts) {
+      if (part === '、' || part === '，') {
+        fragment.appendChild(document.createTextNode(part));
+        continue;
+      }
+      const name = part.trim();
+      if (!name) continue;
+      const resolved = resolvePageId(name, registry);
+      const a = document.createElement('a');
+      a.href = `#${encodeURIComponent(resolved ? resolved[0] : name)}`;
+      a.className = resolved ? 'wikilink resolved' : 'wikilink broken';
+      if (!resolved) a.title = `未解析: ${name}`;
+      a.textContent = name;
+      fragment.appendChild(a);
+    }
+    textNode.replaceWith(fragment);
+  });
+}
+
 export async function renderPage(core, pid, meta, mdText) {
   document.body.classList.remove('is-home');
   const { front, html, broken } = await parseMarkdown(core, mdText, { pid, meta });
@@ -98,6 +138,7 @@ export async function renderPage(core, pid, meta, mdText) {
   // Hero image (featured 页可选)
   const heroImg = renderHeroImage(front);
   document.getElementById('article').innerHTML = heroImg + html + tagsFooter;
+  linkifyEventFields(document.getElementById('article'), core.registry);
   const infoboxHtml = await renderInfobox(core, front, meta);
   document.getElementById('infobox').outerHTML = infoboxHtml;
 
