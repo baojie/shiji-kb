@@ -5756,6 +5756,23 @@
         "narrative": 8
       }
     },
+    "主父": {
+      "type": "disambiguation",
+      "label": "主父",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/主父.md",
+      "quality_score": 13,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 8
+      }
+    },
     "主父偃": {
       "type": "person",
       "label": "主父偃",
@@ -8422,6 +8439,23 @@
         "narrative": 0
       }
     },
+    "仲尼": {
+      "type": "redirect",
+      "label": "仲尼",
+      "aliases": [],
+      "tags": [],
+      "featured": false,
+      "path": "pages/仲尼.md",
+      "quality_score": 5,
+      "_score_parts": {
+        "base_refs": 0,
+        "tags": 0,
+        "revs": 0,
+        "size": 0,
+        "manual": 5,
+        "narrative": 0
+      }
+    },
     "仲尼不能容于鲁": {
       "type": "event",
       "label": "仲尼不能容于鲁",
@@ -8895,15 +8929,17 @@
     "伊尹放太甲": {
       "type": "story",
       "label": "伊尹放太甲",
-      "aliases": [],
+      "aliases": [
+        "伊尹放太甲于桐宫"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/伊尹放太甲.md",
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -17775,24 +17811,20 @@
       }
     },
     "华阳之战": {
-      "type": "event",
+      "type": "redirect",
       "label": "华阳之战",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "韩世家"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/华阳之战.md",
-      "quality_score": 29,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
+        "tags": 0,
+        "revs": 12,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "华阳之战斩首十三万": {
@@ -17844,14 +17876,15 @@
       "tags": [
         "史记",
         "事件",
-        "穰侯列传"
+        "穰侯列传",
+        "韩世家"
       ],
       "featured": false,
       "path": "pages/华阳之战破芒卯.md",
-      "quality_score": 30,
+      "quality_score": 32,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
+        "tags": 8,
         "revs": 9,
         "size": 2,
         "manual": 5,
@@ -18439,16 +18472,18 @@
     "博浪沙刺秦": {
       "type": "story",
       "label": "博浪沙刺秦",
-      "aliases": [],
+      "aliases": [
+        "博浪沙刺秦、东巡"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/博浪沙刺秦.md",
-      "quality_score": 23,
+      "quality_score": 27,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
-        "size": 7,
+        "revs": 6,
+        "size": 8,
         "manual": 5,
         "narrative": 8
       }
@@ -22312,7 +22347,9 @@
     "司马相如通西南夷": {
       "type": "story",
       "label": "司马相如通西南夷",
-      "aliases": [],
+      "aliases": [
+        "通西南夷"
+      ],
       "tags": [
         "史记",
         "故事",
@@ -22320,14 +22357,14 @@
       ],
       "featured": false,
       "path": "pages/司马相如通西南夷.md",
-      "quality_score": 19,
+      "quality_score": 35,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
-        "revs": 0,
-        "size": 8,
+        "revs": 6,
+        "size": 10,
         "manual": 5,
-        "narrative": 0
+        "narrative": 8
       }
     },
     "司马相如遗札论封禅": {
@@ -24909,28 +24946,20 @@
       }
     },
     "吴王夫差": {
-      "type": "person",
+      "type": "redirect",
       "label": "吴王夫差",
-      "aliases": [
-        "夫差",
-        "吴王夫差"
-      ],
-      "tags": [
-        "春秋",
-        "吴国",
-        "帝王",
-        "卧薪尝胆"
-      ],
-      "featured": true,
+      "aliases": [],
+      "tags": [],
+      "featured": false,
       "path": "pages/吴王夫差.md",
-      "quality_score": 26,
+      "quality_score": 8,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 8,
-        "revs": 0,
-        "size": 5,
+        "tags": 0,
+        "revs": 3,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "吴王濞": {
@@ -29729,25 +29758,20 @@
       }
     },
     "垓下之围": {
-      "type": "event",
+      "type": "redirect",
       "label": "垓下之围",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "秦楚之际月表",
-        "项羽本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/垓下之围.md",
-      "quality_score": 33,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 8,
-        "revs": 9,
-        "size": 3,
+        "tags": 0,
+        "revs": 12,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "垓下之围：四面楚歌": {
@@ -29864,15 +29888,17 @@
     "城濮之战": {
       "type": "story",
       "label": "城濮之战",
-      "aliases": [],
+      "aliases": [
+        "城濮之战：退避三舍"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/城濮之战.md",
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -31111,15 +31137,17 @@
     "大泽乡起义": {
       "type": "story",
       "label": "大泽乡起义",
-      "aliases": [],
+      "aliases": [
+        "大泽乡起义：王侯将相宁有种乎"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/大泽乡起义.md",
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -32889,7 +32917,8 @@
       "label": "夫差",
       "aliases": [
         "夫差",
-        "吴王夫差"
+        "吴王夫差",
+        "姬夫差"
       ],
       "tags": [
         "春秋",
@@ -32900,12 +32929,12 @@
       ],
       "featured": true,
       "path": "pages/夫差.md",
-      "quality_score": 36,
+      "quality_score": 40,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 9,
-        "size": 6,
+        "revs": 12,
+        "size": 7,
         "manual": 5,
         "narrative": 8
       }
@@ -33862,31 +33891,22 @@
       }
     },
     "姬夫差": {
-      "type": "person",
+      "type": "redirect",
       "label": "姬夫差",
-      "aliases": [
-        "夫差",
-        "吴王夫差"
-      ],
-      "tags": [
-        "春秋",
-        "吴国",
-        "吴越争霸",
-        "伍子胥",
-        "西施"
-      ],
-      "featured": true,
+      "aliases": [],
+      "tags": [],
+      "featured": false,
       "path": "pages/姬夫差.md",
       "total_refs": 28,
       "total_chapters": 17,
-      "quality_score": 43,
+      "quality_score": 21,
       "_score_parts": {
         "base_refs": 1,
-        "tags": 8,
+        "tags": 0,
         "revs": 15,
-        "size": 6,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "姬旦": {
@@ -35810,20 +35830,18 @@
       }
     },
     "存二王之后六原则：封前朝后裔的礼制怀柔与两千年制度传承方法论": {
-      "type": "overview",
+      "type": "redirect",
       "label": "存二王之后六原则：封前朝后裔的礼制怀柔与两千年制度传承方法论",
       "aliases": [],
-      "tags": [
-        "综述"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/存二王之后六原则：封前朝后裔的礼制怀柔与两千年制度传承方法论.md",
-      "quality_score": 17,
+      "quality_score": 8,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 2,
-        "revs": 0,
-        "size": 10,
+        "tags": 0,
+        "revs": 3,
+        "size": 0,
         "manual": 5,
         "narrative": 0
       }
@@ -37486,15 +37504,17 @@
     "季札观乐": {
       "type": "story",
       "label": "季札观乐",
-      "aliases": [],
+      "aliases": [
+        "季札观乐于鲁"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/季札观乐.md",
-      "quality_score": 25,
+      "quality_score": 28,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 9,
         "manual": 5,
         "narrative": 8
@@ -40086,7 +40106,9 @@
     "封狼居胥": {
       "type": "story",
       "label": "封狼居胥",
-      "aliases": [],
+      "aliases": [
+        "霍去病封狼居胥"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/封狼居胥.md",
@@ -46154,15 +46176,17 @@
     "张仪欺楚：六百里变六里": {
       "type": "story",
       "label": "张仪欺楚：六百里变六里",
-      "aliases": [],
+      "aliases": [
+        "张仪欺楚：六里商於"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/张仪欺楚：六百里变六里.md",
-      "quality_score": 25,
+      "quality_score": 28,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 9,
         "manual": 5,
         "narrative": 8
@@ -49663,15 +49687,17 @@
     "悬梁刺股": {
       "type": "story",
       "label": "悬梁刺股",
-      "aliases": [],
+      "aliases": [
+        "悬梁刺股、苏秦之志"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/悬梁刺股.md",
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -58709,14 +58735,15 @@
       "tags": [
         "史记",
         "故事",
-        "封禅书"
+        "封禅书",
+        "孝武本纪"
       ],
       "featured": false,
       "path": "pages/李少君、少翁、栾大：方士事.md",
-      "quality_score": 29,
+      "quality_score": 31,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
+        "tags": 8,
         "revs": 0,
         "size": 10,
         "manual": 5,
@@ -58745,24 +58772,20 @@
       }
     },
     "李少君方术": {
-      "type": "story",
+      "type": "redirect",
       "label": "李少君方术",
       "aliases": [],
-      "tags": [
-        "史记",
-        "故事",
-        "孝武本纪"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/李少君方术.md",
-      "quality_score": 26,
+      "quality_score": 8,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 7,
+        "tags": 0,
+        "revs": 3,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "李少君病死": {
@@ -65589,24 +65612,20 @@
       }
     },
     "武王伐纣": {
-      "type": "event",
+      "type": "redirect",
       "label": "武王伐纣",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "封禅书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/武王伐纣.md",
-      "quality_score": 29,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
+        "tags": 0,
+        "revs": 12,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "武王伐纣与太公为师": {
@@ -65616,14 +65635,15 @@
       "tags": [
         "史记",
         "故事",
-        "齐太公世家"
+        "齐太公世家",
+        "封禅书"
       ],
       "featured": false,
       "path": "pages/武王伐纣与太公为师.md",
-      "quality_score": 26,
+      "quality_score": 28,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
+        "tags": 8,
         "revs": 0,
         "size": 7,
         "manual": 5,
@@ -66588,15 +66608,17 @@
     "毛遂自荐": {
       "type": "story",
       "label": "毛遂自荐",
-      "aliases": [],
+      "aliases": [
+        "毛遂自荐、脱颖而出"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/毛遂自荐.md",
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -67556,22 +67578,20 @@
       }
     },
     "汉文帝六重合法性建构：外藩入继一日稳政与新君即位完整方法论": {
-      "type": "overview",
+      "type": "redirect",
       "label": "汉文帝六重合法性建构：外藩入继一日稳政与新君即位完整方法论",
       "aliases": [],
-      "tags": [
-        "综述"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/汉文帝六重合法性建构：外藩入继一日稳政与新君即位完整方法论.md",
-      "quality_score": 25,
+      "quality_score": 8,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 2,
-        "revs": 0,
-        "size": 10,
+        "tags": 0,
+        "revs": 3,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "汉文帝初祠五畤诏": {
@@ -72244,14 +72264,15 @@
       "tags": [
         "史记",
         "事件",
-        "孝武本纪"
+        "孝武本纪",
+        "封禅书"
       ],
       "featured": false,
       "path": "pages/灭南越兴郊乐舞.md",
-      "quality_score": 29,
+      "quality_score": 31,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
+        "tags": 8,
         "revs": 9,
         "size": 1,
         "manual": 5,
@@ -72259,24 +72280,20 @@
       }
     },
     "灭南越始用乐舞郊祀": {
-      "type": "event",
+      "type": "redirect",
       "label": "灭南越始用乐舞郊祀",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "封禅书"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/灭南越始用乐舞郊祀.md",
-      "quality_score": 29,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 1,
+        "tags": 0,
+        "revs": 12,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "灭南越置初郡十七": {
@@ -73535,7 +73552,9 @@
     "牧野之战": {
       "type": "story",
       "label": "牧野之战",
-      "aliases": [],
+      "aliases": [
+        "牧野之战：武王伐纣"
+      ],
       "tags": [
         "历史事件",
         "战争",
@@ -77247,15 +77266,17 @@
     "田氏代齐": {
       "type": "story",
       "label": "田氏代齐",
-      "aliases": [],
+      "aliases": [
+        "田氏代齐：田常弑简公"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/田氏代齐.md",
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -78771,16 +78792,19 @@
     "白起之死": {
       "type": "event",
       "label": "白起之死",
-      "aliases": [],
+      "aliases": [
+        "白起赐死杜邮",
+        "白起赐死"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/白起之死.md",
-      "quality_score": 24,
+      "quality_score": 35,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
-        "size": 8,
+        "revs": 12,
+        "size": 10,
         "manual": 5,
         "narrative": 8
       }
@@ -84860,13 +84884,17 @@
       "type": "overview",
       "label": "穰侯魏冉与秦国外戚政治",
       "aliases": [],
-      "tags": [],
+      "tags": [
+        "综述",
+        "穰侯列传",
+        "战国"
+      ],
       "featured": false,
       "path": "pages/穰侯魏冉与秦国外戚政治.md",
-      "quality_score": 18,
+      "quality_score": 24,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 0,
+        "tags": 6,
         "revs": 0,
         "size": 5,
         "manual": 5,
@@ -84874,22 +84902,18 @@
       }
     },
     "穰侯魏冉专秦政": {
-      "type": "story",
+      "type": "redirect",
       "label": "穰侯魏冉专秦政",
       "aliases": [],
-      "tags": [
-        "史记",
-        "故事",
-        "穰侯列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/穰侯魏冉专秦政.md",
-      "quality_score": 18,
+      "quality_score": 8,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 0,
-        "size": 7,
+        "tags": 0,
+        "revs": 3,
+        "size": 0,
         "manual": 5,
         "narrative": 0
       }
@@ -85042,15 +85066,17 @@
     "窃符救赵": {
       "type": "story",
       "label": "窃符救赵",
-      "aliases": [],
+      "aliases": [
+        "信陵君救赵：窃符救赵"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/窃符救赵.md",
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -86847,7 +86873,9 @@
     "管鲍之交": {
       "type": "story",
       "label": "管鲍之交",
-      "aliases": [],
+      "aliases": [
+        "管鲍之交与管仲相齐"
+      ],
       "tags": [
         "史记",
         "故事",
@@ -86855,12 +86883,12 @@
       ],
       "featured": false,
       "path": "pages/管鲍之交.md",
-      "quality_score": 25,
+      "quality_score": 32,
       "_score_parts": {
         "base_refs": 0,
         "tags": 6,
-        "revs": 0,
-        "size": 6,
+        "revs": 3,
+        "size": 10,
         "manual": 5,
         "narrative": 8
       }
@@ -87316,15 +87344,17 @@
     "纸上谈兵": {
       "type": "story",
       "label": "纸上谈兵",
-      "aliases": [],
+      "aliases": [
+        "赵括纸上谈兵"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/纸上谈兵.md",
-      "quality_score": 26,
+      "quality_score": 29,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -87561,7 +87591,9 @@
     "缇萦上书": {
       "type": "story",
       "label": "缇萦上书",
-      "aliases": [],
+      "aliases": [
+        "仓公医案：缇萦上书救父"
+      ],
       "tags": [
         "历史事件",
         "西汉",
@@ -87571,11 +87603,11 @@
       ],
       "featured": false,
       "path": "pages/缇萦上书.md",
-      "quality_score": 33,
+      "quality_score": 36,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 9,
         "manual": 5,
         "narrative": 8
@@ -88897,7 +88929,9 @@
     "背水一战": {
       "type": "story",
       "label": "背水一战",
-      "aliases": [],
+      "aliases": [
+        "背水一战：井陉破赵"
+      ],
       "tags": [
         "历史事件",
         "战争",
@@ -88907,11 +88941,11 @@
       ],
       "featured": false,
       "path": "pages/背水一战.md",
-      "quality_score": 34,
+      "quality_score": 37,
       "_score_parts": {
         "base_refs": 0,
         "tags": 8,
-        "revs": 3,
+        "revs": 6,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -89042,7 +89076,9 @@
     "胡服骑射": {
       "type": "story",
       "label": "胡服骑射",
-      "aliases": [],
+      "aliases": [
+        "赵武灵王胡服骑射"
+      ],
       "tags": [
         "历史事件",
         "战国",
@@ -89127,15 +89163,17 @@
     "胯下之辱与韩信的忍耐": {
       "type": "story",
       "label": "胯下之辱与韩信的忍耐",
-      "aliases": [],
+      "aliases": [
+        "胯下之辱、漂母饭信"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/胯下之辱与韩信的忍耐.md",
-      "quality_score": 25,
+      "quality_score": 28,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 9,
         "manual": 5,
         "narrative": 8
@@ -92500,15 +92538,17 @@
     "荆轲刺秦王": {
       "type": "story",
       "label": "荆轲刺秦王",
-      "aliases": [],
+      "aliases": [
+        "荆轲刺秦"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/荆轲刺秦王.md",
-      "quality_score": 29,
+      "quality_score": 32,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 6,
+        "revs": 9,
         "size": 10,
         "manual": 5,
         "narrative": 8
@@ -108643,14 +108683,15 @@
       "tags": [
         "史记",
         "事件",
-        "高祖功臣侯者年表"
+        "高祖功臣侯者年表",
+        "韩信卢绾列传"
       ],
       "featured": false,
       "path": "pages/陈豨反叛自立为王.md",
-      "quality_score": 30,
+      "quality_score": 32,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
+        "tags": 8,
         "revs": 9,
         "size": 2,
         "manual": 5,
@@ -108658,24 +108699,20 @@
       }
     },
     "陈豨反叛自立代王": {
-      "type": "event",
+      "type": "redirect",
       "label": "陈豨反叛自立代王",
       "aliases": [],
-      "tags": [
-        "史记",
-        "事件",
-        "韩信卢绾列传"
-      ],
+      "tags": [],
       "featured": false,
       "path": "pages/陈豨反叛自立代王.md",
-      "quality_score": 30,
+      "quality_score": 17,
       "_score_parts": {
         "base_refs": 0,
-        "tags": 6,
-        "revs": 9,
-        "size": 2,
+        "tags": 0,
+        "revs": 12,
+        "size": 0,
         "manual": 5,
-        "narrative": 8
+        "narrative": 0
       }
     },
     "陈豨封侯监赵代兵": {
@@ -117987,15 +118024,17 @@
     "齐威王烹阿大夫": {
       "type": "story",
       "label": "齐威王烹阿大夫",
-      "aliases": [],
+      "aliases": [
+        "齐威王烹阿大夫、封即墨"
+      ],
       "tags": [],
       "featured": false,
       "path": "pages/齐威王烹阿大夫.md",
-      "quality_score": 25,
+      "quality_score": 28,
       "_score_parts": {
         "base_refs": 0,
         "tags": 0,
-        "revs": 3,
+        "revs": 6,
         "size": 9,
         "manual": 5,
         "narrative": 8
@@ -119765,8 +119804,8 @@
     "丹阳之战取汉中": "丹阳之战取汉中",
     "丹阳蓝田大败": "丹阳蓝田大败",
     "为义帝发丧": "为义帝发丧",
+    "主父": "主父",
     "主父偃": "主父偃",
-    "主父": "主父偃",
     "主父偃为齐相逼死齐王": "主父偃为齐相逼死齐王",
     "主父偃入京上书": "主父偃入京上书",
     "主父偃族诛": "主父偃族诛",
@@ -119909,6 +119948,7 @@
     "以柔克刚的处世方法": "以柔克刚的处世方法",
     "以礼制夷：夹谷会盟": "以礼制夷：夹谷会盟",
     "仪行父": "仪行父",
+    "仲尼": "仲尼",
     "仲尼不能容于鲁": "仲尼不能容于鲁",
     "仲尼没后弟子散落": "仲尼没后弟子散落",
     "仲弓": "仲弓",
@@ -119937,7 +119977,7 @@
     "阿衡": "伊尹",
     "伊尹卒（沃丁时）": "伊尹卒（沃丁时）",
     "伊尹放太甲": "伊尹放太甲",
-    "伊尹放太甲于桐宫": "伊尹放太甲于桐宫",
+    "伊尹放太甲于桐宫": "伊尹放太甲",
     "伊尹放太甲于桐宫，悔过复位": "伊尹放太甲于桐宫，悔过复位",
     "伊尹立太甲": "伊尹立太甲",
     "伊尹辅汤": "伊尹辅汤",
@@ -120474,7 +120514,7 @@
     "博成侯国": "博成侯国",
     "博望侯国": "博望侯国",
     "博浪沙刺秦": "博浪沙刺秦",
-    "博浪沙刺秦、东巡": "博浪沙刺秦、东巡",
+    "博浪沙刺秦、东巡": "博浪沙刺秦",
     "博浪沙椎秦": "博浪沙椎秦",
     "博狼沙遇刺": "博狼沙遇刺",
     "博阳侯国": "博阳侯国",
@@ -120680,6 +120720,7 @@
     "犬子": "司马相如",
     "司马相如谏猎疏": "司马相如谏猎疏",
     "司马相如通西南夷": "司马相如通西南夷",
+    "通西南夷": "司马相如通西南夷",
     "司马相如遗札论封禅": "司马相如遗札论封禅",
     "司马穰苴": "司马穰苴",
     "田穰苴": "司马穰苴",
@@ -120828,7 +120869,6 @@
     "吴王太子": "吴王太子",
     "刘驹": "吴王太子",
     "吴王夫差": "吴王夫差",
-    "夫差": "吴王夫差",
     "吴王濞反诛": "吴王濞反诛",
     "吴王濞遗诸侯书": "吴王濞遗诸侯书",
     "吴王称病不朝四十余年": "吴王称病不朝四十余年",
@@ -121113,9 +121153,9 @@
     "垓下灭项、天下一统": "垓下灭项、天下一统",
     "垣侯国": "垣侯国",
     "城濮之战": "城濮之战",
+    "城濮之战：退避三舍": "城濮之战",
     "城濮之战大败楚": "城濮之战大败楚",
     "城濮之战楚败": "城濮之战楚败",
-    "城濮之战：退避三舍": "城濮之战：退避三舍",
     "城阳惠王": "城阳惠王",
     "城阳景王封立": "城阳景王封立",
     "堂邑侯国": "堂邑侯国",
@@ -121176,7 +121216,7 @@
     "大旱与民疫": "大旱与民疫",
     "大梁": "大梁",
     "大泽乡起义": "大泽乡起义",
-    "大泽乡起义：王侯将相宁有种乎": "大泽乡起义：王侯将相宁有种乎",
+    "大泽乡起义：王侯将相宁有种乎": "大泽乡起义",
     "大破右贤王": "大破右贤王",
     "大禹": "大禹",
     "帝禹": "大禹",
@@ -121264,6 +121304,8 @@
     "太戊修德复兴": "太戊修德复兴",
     "太戊祥桑之戒": "太戊祥桑之戒",
     "太甲悔过复位": "太甲悔过复位",
+    "夫差": "夫差",
+    "姬夫差": "夫差",
     "夫差北伐齐败艾陵": "夫差北伐齐败艾陵",
     "夫差即位": "夫差即位",
     "夫差杀伍子胥、属镂剑": "夫差杀伍子胥、属镂剑",
@@ -121311,7 +121353,6 @@
     "姒句践": "姒句践",
     "姜嫄": "姜嫄",
     "姬僚": "姬僚",
-    "姬夫差": "姬夫差",
     "姬旦": "姬旦",
     "威烈王命三晋": "威烈王命三晋",
     "威王选贤治国": "威王选贤治国",
@@ -121384,7 +121425,6 @@
     "子路被设礼收为弟子": "子路被设礼收为弟子",
     "子驷弑釐公": "子驷弑釐公",
     "孔子": "孔子",
-    "仲尼": "孔子",
     "夫子": "孔子",
     "孔丘": "孔子",
     "孔仲尼": "孔子",
@@ -121509,7 +121549,7 @@
     "季札挂剑徐君冢": "季札挂剑徐君冢",
     "季札聘鲁观周乐": "季札聘鲁观周乐",
     "季札观乐": "季札观乐",
-    "季札观乐于鲁": "季札观乐于鲁",
+    "季札观乐于鲁": "季札观乐",
     "季札让国不受": "季札让国不受",
     "季札让国": "季札让国不受",
     "季札逃位僚立": "季札逃位僚立",
@@ -121648,6 +121688,7 @@
     "封泰山禅肃然山": "封泰山禅肃然山",
     "封爵之誓河山之盟": "封爵之誓河山之盟",
     "封狼居胥": "封狼居胥",
+    "霍去病封狼居胥": "封狼居胥",
     "封王秦降将": "封王秦降将",
     "封皇太后弟武安侯": "封皇太后弟武安侯",
     "封皇子为诸侯王": "封皇子为诸侯王",
@@ -121958,7 +121999,7 @@
     "张仪欺楚以商於六百里": "张仪欺楚以商於六百里",
     "张仪欺楚绝齐": "张仪欺楚绝齐",
     "张仪欺楚：六百里变六里": "张仪欺楚：六百里变六里",
-    "张仪欺楚：六里商於": "张仪欺楚：六里商於",
+    "张仪欺楚：六里商於": "张仪欺楚：六百里变六里",
     "张仪相秦": "张仪相秦",
     "张仪相秦魏纳上郡": "张仪相秦魏纳上郡",
     "张仪相魏": "张仪相魏",
@@ -122144,7 +122185,7 @@
     "恶来事纣与蜚廉之死": "恶来事纣与蜚廉之死",
     "悉捕诸吕灭族": "悉捕诸吕灭族",
     "悬梁刺股": "悬梁刺股",
-    "悬梁刺股、苏秦之志": "悬梁刺股、苏秦之志",
+    "悬梁刺股、苏秦之志": "悬梁刺股",
     "悼公即位施德": "悼公即位施德",
     "悼公用魏绛和戎": "悼公用魏绛和戎",
     "悼太子死魏归葬": "悼太子死魏归葬",
@@ -123044,7 +123085,7 @@
     "毛先生": "毛遂",
     "毛遂定从于楚殿": "毛遂定从于楚殿",
     "毛遂自荐": "毛遂自荐",
-    "毛遂自荐、脱颖而出": "毛遂自荐、脱颖而出",
+    "毛遂自荐、脱颖而出": "毛遂自荐",
     "毛遂自荐赴楚": "毛遂自荐赴楚",
     "水灌废丘": "水灌废丘",
     "汁方侯国": "汁方侯国",
@@ -123426,7 +123467,7 @@
     "父子争位的处理——蒯聩与辄的典型案例": "父子争位的处理——蒯聩与辄的典型案例",
     "牧丘侯国": "牧丘侯国",
     "牧野之战": "牧野之战",
-    "牧野之战：武王伐纣": "牧野之战：武王伐纣",
+    "牧野之战：武王伐纣": "牧野之战",
     "犀首为大良造": "犀首为大良造",
     "犀首佩五国相印": "犀首佩五国相印",
     "犁侯国": "犁侯国",
@@ -123612,8 +123653,8 @@
     "田横收齐立田广": "田横收齐立田广",
     "田横自刎尸乡": "田横自刎尸乡",
     "田氏代齐": "田氏代齐",
+    "田氏代齐：田常弑简公": "田氏代齐",
     "田氏代齐渐进权力重构": "田氏代齐渐进权力重构",
-    "田氏代齐：田常弑简公": "田氏代齐：田常弑简公",
     "田氏源出陈国": "田氏源出陈国",
     "田氏篡齐三家分晋": "田氏篡齐三家分晋",
     "田生游说封王": "田生游说封王",
@@ -123696,6 +123737,8 @@
     "白起": "白起",
     "武安君": "白起",
     "白起之死": "白起之死",
+    "白起赐死杜邮": "白起之死",
+    "白起赐死": "白起之死",
     "白起伊阙破魏韩": "白起伊阙破魏韩",
     "白起伐魏楚人反江南": "白起伐魏楚人反江南",
     "白起击伊阙斩首二十四万": "白起击伊阙斩首二十四万",
@@ -123712,8 +123755,6 @@
     "白起攻魏拔六十一城": "白起攻魏拔六十一城",
     "白起攻魏楚取垣宛": "白起攻魏楚取垣宛",
     "白起攻魏河内取安邑": "白起攻魏河内取安邑",
-    "白起赐死": "白起赐死",
-    "白起赐死杜邮": "白起赐死杜邮",
     "白金、皮币、五铢钱": "白金、皮币、五铢钱",
     "白马之盟": "白马之盟",
     "白鹿皮币白金": "白鹿皮币白金",
@@ -124129,7 +124170,7 @@
     "管叔蔡叔监殷": "管叔蔡叔监殷",
     "管蔡作乱周公东征": "管蔡作乱周公东征",
     "管鲍之交": "管鲍之交",
-    "管鲍之交与管仲相齐": "管鲍之交与管仲相齐",
+    "管鲍之交与管仲相齐": "管鲍之交",
     "籍孺闳孺以佞幸贵": "籍孺闳孺以佞幸贵",
     "籍少公": "籍少公",
     "系雩浅": "系雩浅",
@@ -124154,6 +124195,7 @@
     "纪信诳楚": "纪信诳楚",
     "纳赵姬、生始皇": "纳赵姬、生始皇",
     "纸上谈兵": "纸上谈兵",
+    "赵括纸上谈兵": "纸上谈兵",
     "细柳屯军": "细柳屯军",
     "细柳营治军": "细柳营治军",
     "细柳营：周亚夫军": "细柳营：周亚夫军",
@@ -124238,12 +124280,13 @@
     "肥义": "肥义",
     "肥如侯国": "肥如侯国",
     "背水一战": "背水一战",
+    "背水一战：井陉破赵": "背水一战",
     "背水一战破赵": "背水一战破赵",
     "背水一战：井陉之战": "背水一战：井陉之战",
-    "背水一战：井陉破赵": "背水一战：井陉破赵",
     "胡亥即位": "胡亥即位",
     "胡公徙薄姑": "胡公徙薄姑",
     "胡服骑射": "胡服骑射",
+    "赵武灵王胡服骑射": "胡服骑射",
     "胡阳": "胡阳",
     "客卿胡阳": "胡阳",
     "胯下之辱": "胯下之辱",
@@ -124827,7 +124870,6 @@
     "赵惠文王卒孝成王立": "赵惠文王卒孝成王立",
     "赵括": "赵括",
     "马服子": "赵括",
-    "赵括纸上谈兵": "赵括纸上谈兵",
     "赵敬侯": "赵敬侯",
     "敬侯": "赵敬侯",
     "赵章": "赵敬侯",
@@ -124840,7 +124882,6 @@
     "武灵王": "赵武灵王",
     "赵武灵王初胡服": "赵武灵王初胡服",
     "赵武灵王灭中山": "赵武灵王灭中山",
-    "赵武灵王胡服骑射": "赵武灵王胡服骑射",
     "赵武灵王胡服骑射论": "赵武灵王胡服骑射论",
     "赵氏之先：造父驾马": "赵氏之先：造父驾马",
     "赵氏复位": "赵氏复位",
@@ -124965,7 +125006,6 @@
     "适周问礼于老子": "适周问礼于老子",
     "选定太子毋恤": "选定太子毋恤",
     "逐客令始末": "逐客令始末",
-    "通西南夷": "通西南夷",
     "通西南夷为中郎将": "通西南夷为中郎将",
     "造父": "造父",
     "造父御缪王平徐偃王之乱": "造父御缪王平徐偃王之乱",
@@ -125352,7 +125392,6 @@
     "霍去病击左右贤王": "霍去病击左右贤王",
     "霍去病初露锋芒": "霍去病初露锋芒",
     "霍去病封冠军侯": "霍去病封冠军侯",
-    "霍去病封狼居胥": "霍去病封狼居胥",
     "霍去病河西之战": "霍去病河西之战",
     "霍去病首次出陇西": "霍去病首次出陇西",
     "霍禹腰斩霍氏族灭": "霍禹腰斩霍氏族灭",
@@ -125799,7 +125838,7 @@
     "田因齐": "齐威王",
     "威王": "齐威王",
     "齐威王烹阿大夫": "齐威王烹阿大夫",
-    "齐威王烹阿大夫、封即墨": "齐威王烹阿大夫、封即墨",
+    "齐威王烹阿大夫、封即墨": "齐威王烹阿大夫",
     "齐威王追论司马兵法": "齐威王追论司马兵法",
     "齐孝王自杀": "齐孝王自杀",
     "齐宣王": "齐宣王",
@@ -125877,5 +125916,5 @@
     "𪸩渠侯国": "𪸩渠侯国",
     "𫘨兹侯国": "𫘨兹侯国"
   },
-  "generated": "2026-04-24T08:44:18"
+  "generated": "2026-04-24T08:59:25"
 }

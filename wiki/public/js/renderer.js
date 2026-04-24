@@ -139,7 +139,7 @@ export async function renderPage(core, pid, meta, mdText) {
   const heroImg = renderHeroImage(front);
   document.getElementById('article').innerHTML = heroImg + html + tagsFooter;
   linkifyEventFields(document.getElementById('article'), core.registry);
-  const infoboxHtml = await renderInfobox(core, front, meta);
+  const infoboxHtml = await renderInfobox(core, front, meta, pid);
   document.getElementById('infobox').outerHTML = infoboxHtml;
 
   const label = front.label || meta.label;
@@ -231,7 +231,7 @@ const INFOBOX_SKIP = new Set([
   'quality_score', 'path', 'paragraph_refs',
 ]);
 
-export async function renderInfobox(core, front, meta) {
+export async function renderInfobox(core, front, meta, pid) {
   let rows = [];
   const handled = new Set();
   const push = (k, v) => {
@@ -247,7 +247,13 @@ export async function renderInfobox(core, front, meta) {
   handled.add('canonical_name');
 
   if (front.aliases && front.aliases.length) {
-    push('别名', front.aliases.map(escapeHtml).join(' · '));
+    push('别名', front.aliases.map(a => {
+      const escaped = escapeHtml(a);
+      if (a !== pid && core.registry.pages[a]) {
+        return `<a href="#${encodeURIComponent(a)}">${escaped}</a>`;
+      }
+      return escaped;
+    }).join(' · '));
   }
   handled.add('aliases');
 
