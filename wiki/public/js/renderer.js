@@ -921,6 +921,15 @@ export function renderAll(core) {
       </label>`;
     }).join('');
 
+    const essayItems = orderedEssayTypes.map(et => {
+      const active = s.essays.includes(et);
+      return `<label class="facet-item${active ? ' active' : ''}">
+        <input type="checkbox" data-facet="essay" data-val="${escapeHtml(et)}"${active ? ' checked' : ''}>
+        <span class="facet-label">${escapeHtml(et)}</span>
+        <span class="facet-count">${essayTypeCounts[et]}</span>
+      </label>`;
+    }).join('');
+
     const tagItems = topTags.map(tag => {
       const active = s.tags.includes(tag);
       return `<label class="facet-item${active ? ' active' : ''}">
@@ -943,6 +952,12 @@ export function renderAll(core) {
       </label>`
     ).join('');
 
+    const essaySection = orderedEssayTypes.length ? `
+      <details class="facet-group" open>
+        <summary class="facet-group-title">散文类型</summary>
+        <div class="facet-items">${essayItems}</div>
+      </details>` : '';
+
     return `<aside class="facet-panel">
       <div class="facet-reset-row">
         <strong>筛选</strong>
@@ -951,7 +966,7 @@ export function renderAll(core) {
       <details class="facet-group" open>
         <summary class="facet-group-title">类型</summary>
         <div class="facet-items">${typeItems}</div>
-      </details>
+      </details>${essaySection}
       <details class="facet-group" open>
         <summary class="facet-group-title">标签</summary>
         <div class="facet-items facet-tags">${tagItems}</div>
@@ -997,7 +1012,7 @@ export function renderAll(core) {
       pagerHtml = `<div class="pager">${prev}${nums}${next}</div>`;
     }
 
-    const badge = [...s.types.map(t => TYPE_LABELS[t] || t), ...s.tags,
+    const badge = [...s.types.map(t => TYPE_LABELS[t] || t), ...s.essays, ...s.tags,
                    ...(s.qlevel ? [s.qlevel] : []), ...(s.search ? [`"${s.search}"`] : [])].join(' · ');
     return `<div class="res-header">
         <span class="res-count">共 <strong>${total}</strong> 个页面${badge ? ' · ' + badge : ''}</span>
@@ -1091,9 +1106,11 @@ export function renderAll(core) {
           const ns = getState();
           const { facet, val } = cb.dataset;
           if (facet === 'type') {
-            ns.types = cb.checked ? [...new Set([...ns.types, val])] : ns.types.filter(t => t !== val);
+            ns.types  = cb.checked ? [...new Set([...ns.types,  val])] : ns.types.filter(t => t !== val);
+          } else if (facet === 'essay') {
+            ns.essays = cb.checked ? [...new Set([...ns.essays, val])] : ns.essays.filter(t => t !== val);
           } else if (facet === 'tag') {
-            ns.tags  = cb.checked ? [...new Set([...ns.tags,  val])] : ns.tags.filter(t => t !== val);
+            ns.tags   = cb.checked ? [...new Set([...ns.tags,   val])] : ns.tags.filter(t => t !== val);
           } else if (facet === 'q') {
             ns.qlevel = cb.checked ? val : '';
           }
@@ -1109,7 +1126,7 @@ export function renderAll(core) {
 
       // 清除按钮
       article.querySelector('#facet-reset')?.addEventListener('click', () => {
-        history.replaceState(null, '', buildHash({ types: [], tags: [], qlevel: '', search: '', page: 1 }));
+        history.replaceState(null, '', buildHash({ types: [], essays: [], tags: [], qlevel: '', search: '', page: 1 }));
         render();
       });
     }

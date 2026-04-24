@@ -16,6 +16,12 @@ export const TYPE_LABELS = {
   sanwen: '散文',
   story: '故事',
   list: '列表',
+  disambiguation: '消歧义',
+  unknown: '未知',
+  special: '特殊页面',
+  redirect: '重定向',
+  侯国: '侯国',
+  skill: '技能',
 };
 
 export function escapeHtml(s) {

@@ -90,6 +90,7 @@ article blockquote {
   background: var(--bg-box);
   color: var(--fg-muted);
   font-size: .95em;
+  white-space: pre-line;
 }
 article table {
   border-collapse: collapse;
