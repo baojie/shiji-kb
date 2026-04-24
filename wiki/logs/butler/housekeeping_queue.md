@@ -2462,3 +2462,7 @@ python3 wiki/scripts/generate_chapter_redirects.py
 | H2 链接补全 | 0 | 3 | 多 | 3+ |
 | H3 REDIRECT | 2 | 11 | ~100 | 113+ |
 | 总计 | 4 | 15 | ~103 | 122+ |
+
+## P1（W11 R960 新增）
+
+- [ ] **H-W11a** registry 双 YAML 块解析漏读：build_registry.py 无法读取"裸YAML+---+标准YAML"格式页面的 type 字段，导致 130 页在 pages.json 中无 type。修复解析逻辑或统一页面格式。[2026-04-24 R960]

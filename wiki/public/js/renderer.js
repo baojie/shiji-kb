@@ -607,8 +607,7 @@ export function renderCategory(core, kind, value) {
 }
 
 /**
- * 最近修订页 (#?recent[&page=N]): 读 recent.json (活跃 500 条), 超出则拉归档.
- * user-req-7: 归档的历史也可翻页看到.
+ * 最近修订页 (#?recent[&page=N]): recent.json 是滚动窗口（最新 500-600 条），单次 fetch 即可.
  */
 export async function renderRecent(core, pageNum = 1) {
   const DISPLAY_LIMIT = 500;
@@ -617,21 +616,9 @@ export async function renderRecent(core, pageNum = 1) {
   const r = await fetch('recent.json');
   if (!r.ok) throw new Error('HTTP ' + r.status);
   const data = await r.json();
-  let allEntries = data.entries || [];
-  const rotations = data.rotations || 0;
 
-  // 若当前文件不足 DISPLAY_LIMIT，从轮转文件（最新编号往旧）补充，直到凑满
-  for (let n = rotations; n >= 1 && allEntries.length < DISPLAY_LIMIT; n--) {
-    try {
-      const rn = await fetch(`log/recent.${n}.json`);
-      if (!rn.ok) break;
-      const dn = await rn.json();
-      allEntries = (dn.entries || []).concat(allEntries);
-    } catch { break; }
-  }
-
-  // 取最后 DISPLAY_LIMIT 条，逆序显示（最新在前）
-  const recent500 = allEntries.slice(-DISPLAY_LIMIT).reverse();
+  // recent.json 已包含最近 500-600 条（滚动窗口），直接取最新 DISPLAY_LIMIT 条，逆序显示
+  const recent500 = (data.entries || []).slice(-DISPLAY_LIMIT).reverse();
 
   const totalEntries = recent500.length;
   const totalPages = Math.max(1, Math.ceil(totalEntries / PAGE_SIZE));
@@ -656,9 +643,9 @@ export async function renderRecent(core, pageNum = 1) {
 
   const pagerHtml = totalPages > 1 ? buildPager(pageNum, totalPages) : '';
 
-  const totalLog = allEntries.length;
   const uniquePages = new Set(recent500.map(e => e.page)).size;
-  const logNote = totalLog > DISPLAY_LIMIT ? `（日志共 ${totalLog} 条，显示最新 ${DISPLAY_LIMIT} 条）` : '';
+  const totalInFile = (data.entries || []).length;
+  const logNote = totalInFile > DISPLAY_LIMIT ? `（窗口共 ${totalInFile} 条，显示最新 ${DISPLAY_LIMIT} 条）` : '';
 
   const body = entries.length === 0
     ? '<p class="category-empty">暂无修订记录。</p>'

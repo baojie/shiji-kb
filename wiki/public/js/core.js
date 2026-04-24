@@ -51,7 +51,7 @@ async function loadPlugins(core) {
   } catch (e) {
     return; // 无 manifest = 无插件
   }
-  for (const entry of (manifest.plugins || [])) {
+  await Promise.all((manifest.plugins || []).map(async (entry) => {
     // 支持旧格式（字符串路径）和新格式（对象 {id, entry, ...}）
     const pluginPath = typeof entry === 'string' ? entry : entry.entry;
     const pluginId   = typeof entry === 'string' ? entry : entry.id;
@@ -60,7 +60,7 @@ async function loadPlugins(core) {
       const p = mod.default;
       if (!p || typeof p.init !== 'function') {
         console.warn(`[plugin] ${pluginId} 缺少 default.init`);
-        continue;
+        return;
       }
       await p.init(core);
       core.plugins.push({
@@ -72,7 +72,7 @@ async function loadPlugins(core) {
     } catch (e) {
       console.error(`[plugin] ${pluginId} 加载失败:`, e);
     }
-  }
+  }));
 }
 
 boot();

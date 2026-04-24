@@ -18,6 +18,24 @@
     - **T2**：直接做按需渲染（懒加载），更彻底但工作量更大
   - Butler 在收到批准前不会自动修改 renderer.js
 
+## W11 R960 新发现 (P1)
+
+- [x] 晋: `create-stub` ✓ R961
+- [x] 代: `create-stub` ✓ R962
+- [x] 吴: `create-stub` ✓ R963
+- [ ] 鲁: `create-stub` (wanted=22链接) [源:W11] [P1] [2026-04-24]
+- [x] 禹: redirect→大禹 ✓ R966
+- [x] 常山王: redirect→张耳 ✓ R978
+- [ ] 北平康侯: `create-redirect`→张苍 (refs=30) [源:discover_kg R983] [P1] [2026-04-24]
+- [ ] 王子城父: `create-stub` (refs=30/章=4) [源:discover_kg R993] [P1] [2026-04-24]
+- [x] 殷: `create-stub` ✓ R968
+- [x] 舜: `enrich-stub` ✓ R969
+- [ ] 汤: `create-stub` (wanted=16链接，成汤，人物) [源:W11 R970] [P1] [2026-04-24]
+- [ ] 梁: `create-redirect`→魏 或 stub (wanted=18链接) [源:W11 R970] [P1] [2026-04-24]
+- [ ] 陈: `create-stub` (wanted=15链接，春秋陈国) [源:explore R964] [P1] [2026-04-24]
+- [ ] 卫: `create-stub` (wanted=14链接，卫国) [源:explore R964] [P1] [2026-04-24]
+- [ ] 郑: `create-stub` (wanted=14链接，郑国) [源:explore R964] [P1] [2026-04-24]
+
 ## 来自 discover_kg (kg top-N 缺 wiki 页)
 
 - [ ] 周文王: `create-stub` (refs=97/章=42) [源:A] [P1] [2026-04-22]
@@ -56,6 +74,29 @@
   - 预期: link_hit_rate 20.8% → 40%+, K +~4000
   - 需同时给 compute_knowledge.py 增加 TYPE_WEIGHT["chapter"]=0.4
 - [ ] bootstrap.sh 末尾调用 compute_knowledge.py 自动打快照 [P0] [2026-04-23 v8]
+
+## P1 — add-tag (R976 explore, discover_tags)
+
+- [ ] 张仪: `add-tag` (+ 世家人物) [P1] [2026-04-24]
+- [ ] 赵襄子: `add-tag` (+ 世家人物, 战国) [P1] [2026-04-24]
+- [ ] 董仲舒: `add-tag` (+ 列传人物, 西汉) [P1] [2026-04-24]
+- [ ] 公孙弘: `add-tag` (+ 列传人物, 西汉) [P1] [2026-04-24]
+- [ ] 陈平: `add-tag` (+ 世家人物, 西汉) [P1] [2026-04-24]
+- [ ] 窦太后: `add-tag` (+ 世家人物, 西汉) [P1] [2026-04-24]
+- [ ] 墨子: `add-tag` (+ 列传人物) [P1] [2026-04-24]
+- [ ] 文种: `add-tag` (+ 世家人物, 战国) [P1] [2026-04-24]
+- [ ] 周宣王: `add-tag` (+ 世家人物) [P1] [2026-04-24]
+- [ ] 傅说: `add-tag` (+ 列传人物) [P1] [2026-04-24]
+- [ ] 司马穰苴: `add-tag` (+ 列传人物) [P1] [2026-04-24]
+- [ ] 邹阳: `add-tag` (+ 列传人物) [P1] [2026-04-24]
+- [注] discover_tags 总计 536 页有新标签建议，后续批量处理
+
+## P2 — cite-doc-report (寿命推断报告引用，R973 explore)
+
+- [ ] 扶苏: `cite-doc-report` [源: doc/lifespan_inference/秦/扶苏.md] [P2] [2026-04-24]
+- [ ] 蒙恬: `cite-doc-report` [源: doc/lifespan_inference/秦/蒙恬.md] [P2] [2026-04-24]
+- [ ] 太子丹: `cite-doc-report` [源: doc/lifespan_inference/秦/太子丹.md] [P2] [2026-04-24]
+- [ ] 陈胜: `cite-doc-report` [源: doc/lifespan_inference/秦/陈胜.md] [P2] [2026-04-24]
 
 ## P1 (v8 新增)
 
@@ -291,3 +332,13 @@
  → PN ? (conf=0.00, missing_pn)
 - [ ] `项梁` L78 （007-013）
  → PN ? (conf=0.00, missing_pn)
+
+## W11 R1020 新发现（2026-04-24）
+
+### P1 create-stub
+- [ ] 王：KG refs=40/章=11，需调查具体含义（人名？职位？）→ 可能需消歧页或调查KG canonical
+
+### R1021 调查结论：「王」KG bug
+- 「王」canonical 是 KG 侧 bug：田儋/田安/田市/田广/田荣/田都/申阳/英布/韩信 均被错误归入 canonical="王"（因为都封了王）
+- **结论**：不创建 wiki 页面；需 KG 侧修复（discover_kg 应将其加入 bad canonical 跳过列表）
+- ✓ R1021 已调查，标记为 skip

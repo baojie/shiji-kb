@@ -103,7 +103,7 @@ async function route(core) {
     renderSpecialPlugins(core);
     setStatus(''); return;
   }
-  if (raw === 'Special:AllPages') {
+  if (raw === 'Special:AllPages' || raw.startsWith('Special:AllPages?')) {
     renderAll(core);
     setStatus(''); return;
   }
