@@ -829,13 +829,18 @@ export function renderAll(core) {
     .filter(([id]) => !id.startsWith('Special:') && pages[id].type !== 'redirect')
     .map(([id, p]) => ({ id, ...p }));
 
-  const typeCounts = {};
-  const tagCounts  = {};
+  const typeCounts     = {};
+  const tagCounts      = {};
+  const essayTypeCounts = {};
   for (const p of allEntries) {
     const t = p.type || 'unknown';
     typeCounts[t] = (typeCounts[t] || 0) + 1;
     for (const tag of (p.tags || [])) tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    if (p.essay_type) essayTypeCounts[p.essay_type] = (essayTypeCounts[p.essay_type] || 0) + 1;
   }
+  const orderedEssayTypes = Object.keys(essayTypeCounts).sort(
+    (a, b) => essayTypeCounts[b] - essayTypeCounts[a]
+  );
 
   // 只显示出现 ≥ 5 次的 tag
   const topTags = Object.entries(tagCounts)
@@ -858,6 +863,7 @@ export function renderAll(core) {
     const p    = new URLSearchParams(qi >= 0 ? hash.slice(qi + 1) : '');
     return {
       types:  p.getAll('type'),
+      essays: p.getAll('essay'),
       tags:   p.getAll('tag'),
       qlevel: p.get('q') || '',
       search: p.get('s') || '',
@@ -867,8 +873,9 @@ export function renderAll(core) {
 
   function buildHash(s) {
     const p = new URLSearchParams();
-    s.types.forEach(t => p.append('type', t));
-    s.tags.forEach(t  => p.append('tag',  t));
+    s.types.forEach(t  => p.append('type',  t));
+    s.essays.forEach(e => p.append('essay', e));
+    s.tags.forEach(t   => p.append('tag',   t));
     if (s.qlevel) p.set('q',    s.qlevel);
     if (s.search) p.set('s',    s.search);
     if (s.page > 1) p.set('page', String(s.page));
@@ -882,6 +889,7 @@ export function renderAll(core) {
   function applyFilters(s) {
     let r = allEntries;
     if (s.types.length)  r = r.filter(p => s.types.includes(p.type || 'unknown'));
+    if (s.essays.length) r = r.filter(p => s.essays.includes(p.essay_type || ''));
     if (s.tags.length)   r = r.filter(p => s.tags.every(t => (p.tags || []).includes(t)));
     if (s.qlevel === 'featured') r = r.filter(p => p.featured);
     else if (s.qlevel === 'high') r = r.filter(p => !p.featured && (p.quality_score || 0) >= 30);

@@ -1432,3 +1432,20 @@
 {"ts":"2026-04-24T05:55:40Z","round":1115,"mode":"trail","action":"create-page","target":"安陵","type":"place","links":["101_袁盎晁错列传","105_扁鹊仓公列传","125_佞幸列传"],"note":"汉惠帝陵邑，关中陵邑制度"}
 {"ts":"2026-04-24T05:55:56Z","round":1116,"mode":"trail","action":"create-page","target":"南山","type":"place","links":["102_张释之冯唐列传","107_魏其武安侯列传","123_大宛列传"],"note":"终南山，关中四塞南屏"}
 {"ts":"2026-04-24T05:56:17Z","round":1117,"mode":"explore","action":"commit-trigger","note":"R1105(=17*65)漏commit，R1117补commit；积压~25页"}
+{"ts":"2026-04-24T05:57:24Z","round":1118,"mode":"trail","action":"create-page","target":"婴","type":"redirect","note":"婴→夏侯婴 redirect"}
+{"ts":"2026-04-24T05:57:53Z","round":1119,"mode":"explore","action":"scan-wanted","note":"地理优先：上党(4,长平之战)/九江(4,楚汉)/临晋(4,魏国)/上谷(4,汉匈)/睢阳(3,梁孝王)/甄(2,齐国); 单字歧义继续跳过; 下轮trail→上党"}
+{"ts":"2026-04-24T05:58:17Z","round":1120,"mode":"trail","action":"create-page","target":"上党","type":"place","links":["005_秦本纪","043_赵世家","073_白起王翦列传"],"note":"上党献赵引发长平之战，天下之脊"}
+{"ts":"2026-04-24T05:58:40Z","round":1121,"mode":"trail","action":"create-page","target":"九江","type":"place","links":["002_夏本纪","051_荆燕世家","091_黥布列传"],"note":"英布九江王，禹贡水系，淮南封国"}
+{"ts":"2026-04-24T05:58:52Z","round":1122,"mode":"explore","action":"scan-wanted","note":"临晋(4,魏国渡口/游侠)/上谷(3+,汉代北方边郡)/睢阳(3,梁孝王都城); 三者均为有效place; 下轮trail→临晋"}
+{"ts":"2026-04-24T05:59:07Z","round":1123,"mode":"trail","action":"create-page","target":"临晋","type":"place","links":["015_六国年表","044_魏世家","124_游侠列传"],"note":"魏国黄河西岸渡口，河西战略要地"}
+{"ts":"2026-04-24T05:59:24Z","round":1124,"mode":"trail","action":"create-page","target":"上谷","type":"place","links":["020_建元以来侯者年表","108_韩长孺列传","110_匈奴列传"],"note":"汉代北方边郡，抗击匈奴前线"}
+{"ts":"2026-04-24T05:59:40Z","round":1125,"mode":"explore","action":"scan-wanted","note":"睢阳(4,梁孝王都城)/甄(3,齐国城邑)/申(3,周初申国地)/燕王(3,廉颇蔺相如中燕王); 下轮trail→睢阳"}
+{"ts":"2026-04-24T06:00:01Z","round":1126,"mode":"trail","action":"create-page","target":"睢阳","type":"place","links":["058_梁孝王世家","090_魏豹彭越列传","108_韩长孺列传"],"note":"梁孝王都城，彭越游击基地，梁园文化"}
+{"ts":"2026-04-24T06:00:16Z","round":1127,"mode":"trail","action":"create-page","target":"甄","type":"place","links":["046_田敬仲完世家","064_司马穰苴列传","075_孟尝君列传"],"note":"齐国城邑，穰苴阿甄执法"}
+{"ts":"2026-04-24T06:00:42Z","round":1128,"mode":"explore","action":"update-wanted+scan","note":"wanted更新200条; 新地理优先：朝鲜(state)/朝歌(place,商纣都城)/江陵(place)/未央宫(place,汉代)/河西(concept/place); 胜/章/斯=人名别名; 下轮trail→朝鲜"}
+{"ts":"2026-04-24T06:01:13Z","round":1129,"mode":"trail","action":"create-page","target":"朝鲜","type":"state","links":["038_宋微子世家","111_卫将军骠骑列传","115_朝鲜列传"],"note":"卫满朝鲜，汉武帝灭朝置四郡"}
+{"ts":"2026-04-24T06:01:42Z","round":1130,"mode":"trail","action":"create-page","target":"朝歌","type":"place","links":["014_十二诸侯年表","024_乐书","098_傅靳蒯成列传"],"note":"商纣末都，卫国城邑，靡靡之音朝歌"}
+{"ts":"2026-04-24T06:01:58Z","round":1131,"mode":"explore","action":"scan-wanted","note":"江陵(3,汉代荆州中心)/未央宫(3,汉代皇宫)/明堂(3,礼制建筑)/河西(4,秦魏争夺地); 均有效; 下轮trail→江陵"}
+{"ts":"2026-04-24T06:02:17Z","round":1132,"mode":"trail","action":"create-page","target":"江陵","type":"place","links":["017_汉兴以来诸侯王年表","059_五宗世家","098_傅靳蒯成列传"],"note":"楚郢附近，汉代南郡，荆州核心"}
+{"ts":"2026-04-24T06:02:37Z","round":1133,"mode":"trail","action":"create-page","target":"未央宫","type":"place","links":["009_吕太后本纪","019_惠景间侯者年表","060_三王世家"],"note":"汉代皇宫，萧何建，政治权力核心"}
+{"ts":"2026-04-24T06:03:00Z","round":1134,"mode":"explore","action":"commit-trigger","note":"R1122(=17*66)漏commit，R1134补commit；下一标准commit R1139"}
