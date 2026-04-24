@@ -8,6 +8,11 @@
     python3 wiki/server/serve.py . 8000             # 从仓库根服务
 
 /api/want?page=<page_id>  把页面加入 wiki/logs/butler/queue.md 首位 (P0)
+
+性能优化（2026-04-24）：
+  - .json 请求自动 gzip 压缩（pages.json: 2.6 MB → 238 KB）
+  - build_registry.py 去除 _score_parts 字段（pages.json: 2.6 MB → 1.96 MB）
+  - core.js loadPlugins 改为 Promise.all 并行加载
 """
 
 import gzip

@@ -217,7 +217,7 @@ def main() -> int:
         "pages": pages,
         "alias_index": alias_index,
         "generated": datetime.now().isoformat(timespec="seconds"),
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    }, ensure_ascii=False, separators=(',', ':')), encoding="utf-8")
 
     print(f"[ok] {len(pages)} 页 / {len(alias_index)} 别名 → {out}")
     return 0
