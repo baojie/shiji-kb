@@ -85,6 +85,7 @@ article p:has(+ blockquote) { margin-bottom: .1em; }
 article blockquote + p { margin-top: .1em; }
 article ul, article ol { padding-left: 1.4em; }
 article li { margin: .3em 0; }
+article blockquote p { margin: 0; }
 article blockquote {
   margin: .1em 0;
   padding: .3em 1em;
