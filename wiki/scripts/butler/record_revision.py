@@ -122,8 +122,8 @@ def main() -> int:
 
     # 3. 更新 recent.json（滚动窗口：始终保留最近 WINDOW_SIZE 条；
     #    超出后把最旧的 ARCHIVE_BATCH 条移入 wiki/logs/recent/recent.N.json 归档）
-    WINDOW_SIZE = 600     # recent.json 最多存 600 条（前端取其中最新 500）
-    ARCHIVE_BATCH = 100   # 每次归档最旧的 100 条
+    WINDOW_SIZE = 1000    # recent.json 最多存 1000 条（前端取其中最新 500）
+    ARCHIVE_BATCH = 500   # 每次归档最旧的 500 条
 
     if RECENT.exists():
         recent = json.loads(RECENT.read_text(encoding='utf-8'))
@@ -152,11 +152,9 @@ def main() -> int:
         entries = entries[ARCHIVE_BATCH:]
         rotations += 1
         LOG_DIR.mkdir(exist_ok=True)
-        (LOG_DIR / f'recent.{rotations}.json').write_text(
-            json.dumps({'entries': batch}, ensure_ascii=False, indent=2) + '\n',
-            encoding='utf-8'
-        )
-        print(f'  [archive] {len(batch)} entries → wiki/logs/recent/recent.{rotations}.json')
+        lines = '\n'.join(json.dumps(e, ensure_ascii=False) for e in batch) + '\n'
+        (LOG_DIR / f'recent.{rotations}.jsonl').write_text(lines, encoding='utf-8')
+        print(f'  [archive] {len(batch)} entries → wiki/logs/recent/recent.{rotations}.jsonl')
 
     recent = {'entries': entries, 'rotations': rotations}
     RECENT.write_text(

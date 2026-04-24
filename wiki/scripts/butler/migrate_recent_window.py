@@ -3,9 +3,9 @@
 migrate_recent_window.py — 迁移 recent.json 到滚动窗口设计.
 
 将所有 wiki/logs/recent/recent.N.json + recent.json 中的条目合并后：
-  - 最近 WINDOW_SIZE 条保留在 recent.json（滚动窗口）
+  - 最近 WINDOW_SIZE 条保留在 recent.json（滚动窗口，前端取其中最新 500）
   - 较旧的条目重新打包到 wiki/logs/recent/recent.1.json ... recent.M.json
-    （每档 ARCHIVE_BATCH 条，按时间从旧到新编号）
+    （每档 ≤ARCHIVE_BATCH 条，按时间从旧到新编号）
 
 执行前会打印预览；加 --run 才真正写入。
 """
@@ -19,20 +19,32 @@ PUBLIC = ROOT / 'wiki/public'
 RECENT = PUBLIC / 'recent.json'
 LOG_DIR = ROOT / 'wiki/logs/recent'
 
-WINDOW_SIZE = 600
-ARCHIVE_BATCH = 100
+WINDOW_SIZE = 1000
+ARCHIVE_BATCH = 500
 
 
 def load_entries():
-    """读取所有条目，按时间升序（最旧在前）返回。"""
-    files = sorted(
-        LOG_DIR.glob('recent.*.json'),
-        key=lambda p: int(p.stem.split('.')[1])
-    )
+    """读取所有条目，按时间升序（最旧在前）返回。支持旧 .json 和新 .jsonl 格式。"""
+    # 收集所有归档文件（.json 旧格式 + .jsonl 新格式），按编号排序
+    all_files = []
+    for p in LOG_DIR.glob('recent.*.*'):
+        stem = p.stem  # e.g. "recent.12"
+        parts = stem.split('.')
+        if len(parts) == 2 and parts[1].isdigit():
+            all_files.append((int(parts[1]), p))
+    all_files.sort()
+
     all_entries = []
-    for f in files:
-        d = json.loads(f.read_text(encoding='utf-8'))
-        all_entries.extend(d.get('entries', []))
+    for _, f in all_files:
+        text = f.read_text(encoding='utf-8')
+        if f.suffix == '.jsonl':
+            for line in text.splitlines():
+                line = line.strip()
+                if line:
+                    all_entries.append(json.loads(line))
+        else:
+            d = json.loads(text)
+            all_entries.extend(d.get('entries', []))
 
     if RECENT.exists():
         d = json.loads(RECENT.read_text(encoding='utf-8'))
@@ -69,20 +81,18 @@ def main():
         print('\n[预览模式] 加 --run 才真正写入。')
         return
 
-    # 删除旧归档文件
-    for old in LOG_DIR.glob('recent.*.json'):
+    # 删除旧归档文件（.json 和 .jsonl 都清除）
+    for old in list(LOG_DIR.glob('recent.*.json')) + list(LOG_DIR.glob('recent.*.jsonl')):
         old.unlink()
         print(f'  删除旧归档: {old.name}')
 
-    # 写新归档文件
+    # 写新归档文件（JSONL 格式，每行一条）
     LOG_DIR.mkdir(exist_ok=True)
     for idx, batch in enumerate(archive_files, 1):
-        out = LOG_DIR / f'recent.{idx}.json'
-        out.write_text(
-            json.dumps({'entries': batch}, ensure_ascii=False, indent=2) + '\n',
-            encoding='utf-8'
-        )
-        print(f'  写入 wiki/logs/recent/recent.{idx}.json ({len(batch)} 条)')
+        out = LOG_DIR / f'recent.{idx}.jsonl'
+        lines = '\n'.join(json.dumps(e, ensure_ascii=False) for e in batch) + '\n'
+        out.write_text(lines, encoding='utf-8')
+        print(f'  写入 wiki/logs/recent/recent.{idx}.jsonl ({len(batch)} 条)')
 
     # 写新 recent.json
     RECENT.write_text(
