@@ -84,8 +84,11 @@ def main() -> int:
             "aliases": meta.get("aliases") or [],
             "tags": meta.get("tags") or [],
             "featured": bool(meta.get("featured", False)),
+            "image": meta.get("image") or None,
             "path": md.relative_to(site_root).as_posix(),
         }
+        if meta.get("essay_type"):
+            entry["essay_type"] = meta["essay_type"]
         pages[pid] = entry
 
         # alias_index: 收 slug(文件名) + id + label + aliases
