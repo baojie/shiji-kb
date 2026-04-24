@@ -1675,3 +1675,20 @@
 {"round": 1358, "action": "trail", "type": "create", "page": "东园公", "summary": "butler/create: 东园公（person，商山四皓之一，助定汉太子位）", "timestamp": "2026-04-24T07:40:19Z"}
 {"round": 1359, "action": "explore", "type": "scan", "summary": "扫描：夏黄公/甪里先生/绮里季(商山四皓另三人，东园公引入)/燕王(消歧)。R1360为commit轮，trail创建夏黄公", "timestamp": "2026-04-24T07:40:38Z"}
 {"round": 1360, "action": "trail", "type": "create", "page": "夏黄公", "summary": "butler/create: 夏黄公（person，商山四皓之一，助定汉太子位）", "timestamp": "2026-04-24T07:40:54Z"}
+{"round": 1361, "action": "trail", "type": "create", "page": "甪里先生", "summary": "butler/create: 甪里先生（person，商山四皓之一）", "timestamp": "2026-04-24T07:42:37Z"}
+{"round": 1362, "action": "trail", "type": "create", "page": "绮里季", "summary": "butler/create: 绮里季（person，商山四皓之一）", "timestamp": "2026-04-24T07:42:47Z"}
+{"round": 1363, "action": "explore", "type": "scan", "summary": "扫描：乐臣公(乐毅列传)/乌氏倮(货殖列传,富商)/与民休息(concept)/东郭先生(滑稽列传)/乌有先生(子虚赋,虚构)。下批trail：乐臣公/乌氏倮", "timestamp": "2026-04-24T07:43:01Z"}
+{"round": 1364, "action": "trail", "type": "create", "page": "乐臣公", "summary": "butler/create: 乐臣公（person，乐毅后裔，黄老学者，学脉传曹参之师）", "timestamp": "2026-04-24T07:43:35Z"}
+{"round": 1365, "action": "trail", "type": "create", "page": "乌氏倮", "summary": "butler/create: 乌氏倮（person，秦代西北畜牧富商，货殖列传）", "timestamp": "2026-04-24T07:43:58Z"}
+{"round": 1366, "action": "explore", "type": "scan", "summary": "扫描：寡妇清(2链接,货殖列传女富商)/东郭先生(滑稽列传)/乌有先生(子虚赋,虚构)/与民休息(concept)。下批trail：寡妇清/东郭先生", "timestamp": "2026-04-24T07:44:26Z"}
+{"round": 1367, "action": "trail", "type": "create", "page": "寡妇清", "summary": "butler/create: 寡妇清（person，秦代巴蜀女富商，守丹穴，秦始皇礼之）", "timestamp": "2026-04-24T07:45:03Z"}
+{"round": 1368, "action": "trail", "type": "create", "page": "东郭先生", "summary": "butler/create: 东郭先生（person，汉武帝时方士，献策卫青骤贵，滑稽列传）", "timestamp": "2026-04-24T07:45:40Z"}
+{"round": 1369, "action": "explore", "type": "scan", "summary": "扫描：井陉之战(张苍引用,韩信灭赵)/与民休息(concept,汉初政策)/乌有先生(子虚赋虚构人物)/五利将军栾大(孝武本纪)。下批trail：井陉之战/与民休息", "timestamp": "2026-04-24T07:46:26Z"}
+{"round": 1370, "action": "trail", "type": "create", "page": "井陉之战", "summary": "butler/create: 井陉之战（event，韩信背水一战灭赵，前205年）", "timestamp": "2026-04-24T07:46:51Z"}
+{"round": 1371, "action": "trail", "type": "create", "page": "与民休息", "summary": "butler/create: 与民休息（concept，汉初黄老无为施政理念，文景之治基础）", "timestamp": "2026-04-24T07:47:13Z"}
+{"round": 1372, "action": "explore", "type": "scan", "summary": "扫描：黄老(2链接,与民休息+刘邦,汉初道家思想)/乌有先生(子虚赋虚构)/五利(栾大)/五国(梁孝王世家)。下批trail：黄老/乌有先生", "timestamp": "2026-04-24T07:47:38Z"}
+{"round": 1373, "action": "trail", "type": "create", "page": "黄老", "summary": "butler/create: 黄老（concept，汉初道家政治哲学，文景之治思想基础）", "timestamp": "2026-04-24T07:47:58Z"}
+{"round": 1374, "action": "trail", "type": "create", "page": "乌有先生", "summary": "butler/create: 乌有先生（concept，子虚赋虚构人物，司马相如托体）", "timestamp": "2026-04-24T07:48:18Z"}
+{"round": 1375, "action": "explore", "type": "scan", "summary": "扫描：亚夫(绛侯周勃世家,周亚夫简称需redirect)/五帝(舜页引用,concept)/五国(梁孝王世家邦国)/五利(孝武本纪,栾大)。下批trail：亚夫redirect/五帝concept", "timestamp": "2026-04-24T07:48:44Z"}
+{"round": 1376, "action": "trail", "type": "create", "page": "亚夫", "summary": "butler/create: 亚夫（redirect→周亚夫）", "timestamp": "2026-04-24T07:48:58Z"}
+{"round": 1377, "action": "trail", "type": "create", "page": "五帝", "summary": "butler/create: 五帝（redirect→001_五帝本纪）", "timestamp": "2026-04-24T07:49:09Z"}
