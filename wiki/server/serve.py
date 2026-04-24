@@ -10,7 +10,9 @@
 /api/want?page=<page_id>  把页面加入 wiki/logs/butler/queue.md 首位 (P0)
 """
 
+import gzip
 import http.server
+import io
 import json
 import os
 import sys
@@ -64,8 +66,34 @@ class WikiHandler(http.server.SimpleHTTPRequestHandler):
         if parsed.path == '/api/want':
             params = dict(urllib.parse.parse_qsl(parsed.query))
             self._handle_want(params)
+        elif self._accepts_gzip() and parsed.path.endswith('.json'):
+            self._serve_gzip(parsed.path)
         else:
             super().do_GET()
+
+    def _accepts_gzip(self):
+        return 'gzip' in self.headers.get('Accept-Encoding', '')
+
+    def _serve_gzip(self, url_path):
+        # 把 URL 路径映射到本地文件
+        local = Path(os.getcwd()) / url_path.lstrip('/')
+        if not local.is_file():
+            super().do_GET()
+            return
+        data = local.read_bytes()
+        buf = io.BytesIO()
+        with gzip.GzipFile(fileobj=buf, mode='wb', compresslevel=6) as gz:
+            gz.write(data)
+        compressed = buf.getvalue()
+        ext = local.suffix.lstrip('.')
+        mime = 'application/json' if ext == 'json' else 'application/octet-stream'
+        self.send_response(200)
+        self.send_header('Content-Type', f'{mime}; charset=utf-8')
+        self.send_header('Content-Encoding', 'gzip')
+        self.send_header('Content-Length', str(len(compressed)))
+        self.send_header('Cache-Control', 'no-cache')
+        self.end_headers()
+        self.wfile.write(compressed)
 
     def _handle_want(self, params: dict):
         page = params.get('page', '').strip()

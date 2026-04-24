@@ -10,7 +10,8 @@ record_revision.py — 为 wiki/public/pages/<page>.md 写入一条修订记录.
 产出:
     1. wiki/public/history/<slug>/<rev_id>.md   (内容副本)
     2. wiki/public/history/<slug>.json          (per-page 索引, 追加 entry)
-    3. wiki/public/recent.json                  (全局修订日志, append-only, 无上限)
+    3. wiki/public/recent.json                  (全局修订日志, append-only, 超限轮转至 log/)
+    4. wiki/public/log/recent.N.json            (轮转归档, 永久保留)
 
 rev_id 格式: YYYYMMDD-HHMMSS-<sha256[:6]>  (北京时间)
 
@@ -31,6 +32,7 @@ PUBLIC = ROOT / 'wiki/public'
 PAGES = PUBLIC / 'pages'
 HIST = PUBLIC / 'history'
 RECENT = PUBLIC / 'recent.json'
+LOG_DIR = PUBLIC / 'log'   # 轮转归档目录
 
 TZ_BJ = timezone(timedelta(hours=8))
 TZ_UTC = timezone.utc
@@ -118,8 +120,10 @@ def main() -> int:
         encoding='utf-8'
     )
 
-    # 3. 更新 recent.json（append-only 日志，超限轮转，类 logrotate）
-    ROTATE_LIMIT = 100    # 超过此条数触发轮转（永久保留所有轮转文件）
+    # 3. 更新 recent.json（滚动窗口：始终保留最近 WINDOW_SIZE 条；
+    #    超出后把最旧的 ARCHIVE_BATCH 条移入 log/recent.N.json 归档）
+    WINDOW_SIZE = 600     # recent.json 最多存 600 条（前端取其中最新 500）
+    ARCHIVE_BATCH = 100   # 每次归档最旧的 100 条
 
     if RECENT.exists():
         recent = json.loads(RECENT.read_text(encoding='utf-8'))
@@ -135,24 +139,26 @@ def main() -> int:
     else:
         recent = {'entries': []}
 
+    rotations = recent.get('rotations', 0)
+    entries = recent.get('entries', [])
+
     # 追加新条目（不含 content 字段）
     new_entry = {'page': page, **{k: v for k, v in entry.items() if k != 'content'}}
-    recent['entries'].append(new_entry)
+    entries.append(new_entry)
 
-    # 轮转：超限则找最大编号 N，recent.json → recent.(N+1).json
-    rotations = recent.get('rotations', 0)
-    if len(recent['entries']) > ROTATE_LIMIT:
+    # 归档溢出：超过 WINDOW_SIZE 时把最旧的 ARCHIVE_BATCH 条移入 log/
+    if len(entries) > WINDOW_SIZE:
+        batch = entries[:ARCHIVE_BATCH]
+        entries = entries[ARCHIVE_BATCH:]
         rotations += 1
-        recent['rotations'] = rotations
-        RECENT.write_text(
-            json.dumps(recent, ensure_ascii=False, indent=2) + '\n',
+        LOG_DIR.mkdir(exist_ok=True)
+        (LOG_DIR / f'recent.{rotations}.json').write_text(
+            json.dumps({'entries': batch}, ensure_ascii=False, indent=2) + '\n',
             encoding='utf-8'
         )
-        RECENT.rename(PUBLIC / f'recent.{rotations}.json')
-        recent = {'entries': [], 'rotations': rotations}
-        print(f'  [rotate] recent.json → recent.{rotations}.json')
+        print(f'  [archive] {len(batch)} entries → log/recent.{rotations}.json')
 
-    recent['rotations'] = rotations
+    recent = {'entries': entries, 'rotations': rotations}
     RECENT.write_text(
         json.dumps(recent, ensure_ascii=False, indent=2) + '\n',
         encoding='utf-8'

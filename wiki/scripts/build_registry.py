@@ -210,11 +210,6 @@ def main() -> int:
         entry["quality_score"] = (
             base + tag_bonus + rev_bonus + size_bonus + manual_bonus + narrative_bonus
         )
-        entry["_score_parts"] = {
-            "base_refs": base, "tags": tag_bonus, "revs": rev_bonus,
-            "size": size_bonus, "manual": manual_bonus,
-            "narrative": narrative_bonus,
-        }
         score_details += 1
     print(f"[enrich] {score_details} 页计算了 quality_score")
 

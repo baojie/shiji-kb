@@ -4,8 +4,8 @@
 
 | 文件 | 说明 |
 |------|------|
-| `wiki/public/recent.json` | 当前活跃日志（append-only） |
-| `wiki/public/log/recent.N.json` | 轮转归档（永久保留） |
+| `wiki/public/recent.json` | 滚动窗口（最近 500-600 条，前端直接读此文件） |
+| `wiki/public/log/recent.N.json` | 归档批次（每档 100 条，永久保留，仅供历史查询） |
 
 ## recent.json 格式
 
@@ -27,23 +27,21 @@
 }
 ```
 
-- `entries`：按时间升序（最旧在前），append-only
-- `rotations`：已轮转次数，等于 `log/` 目录中最大编号
+- `entries`：按时间升序（最旧在前），始终保留最近 500-600 条
+- `rotations`：已归档批次数，等于 `log/` 目录中最大编号
 
-## 轮转机制
+## 滚动窗口机制
 
-类似 Linux logrotate：
-
-- **触发条件**：`entries` 超过 `ROTATE_LIMIT`（当前 100 条）
-- **操作**：`recent.json` → `log/recent.{N+1}.json`，新建空 `recent.json`
-- **保留策略**：永久保留所有轮转文件，不删除
+- **`recent.json`** = 最新 `WINDOW_SIZE`（600）条的滚动窗口
+- **归档触发**：`entries` 超过 `WINDOW_SIZE`（600）时，把最旧的 `ARCHIVE_BATCH`（100）条移至 `log/recent.{N+1}.json`
+- **保留策略**：归档文件永久保留，不删除
+- **设计目标**：前端单次 fetch `recent.json` 即可获得足够显示 500 条的数据，无需循环补档
 
 ## 前端显示逻辑
 
-1. 读取 `recent.json`（当前活跃日志）
-2. 若条数不足 500，从 `log/recent.{rotations}.json` 开始往前补充
-3. 取最后 500 条，逆序显示（最新在前）
-4. 分页，每页 50 条
+1. 读取 `recent.json`（单次 fetch）
+2. 取最后 500 条（`entries.slice(-500)`），逆序显示（最新在前）
+3. 分页，每页 50 条
 
 ## 写入方式
 
