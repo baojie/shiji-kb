@@ -78,7 +78,7 @@ description: Butler 的反思与自改机制 — 进化引擎。周期性扫 act
 
 若步骤 2·D 有架构越线 → **先写** `arch_YYYY-MM-DD.md`，再写普通反思（两者独立）。
 
-写 `logs/wiki_butler/reflections/YYYY-MM-DD.md`:
+写 `wiki/logs/butler/reflections/YYYY-MM-DD.md`:
 
 ```markdown
 # 反思 2026-04-22
@@ -139,7 +139,7 @@ description: Butler 的反思与自改机制 — 进化引擎。周期性扫 act
 
 ### 架构提案输出格式
 
-写 `logs/wiki_butler/reflections/arch_YYYY-MM-DD.md`（与普通反思分开存放）:
+写 `wiki/logs/butler/reflections/arch_YYYY-MM-DD.md`（与普通反思分开存放）:
 
 ```markdown
 # 架构提案 2026-MM-DD
@@ -183,7 +183,7 @@ Butler 不会自动执行以上任何方案。
 
 - 提案写入后，Butler 在 `queue.md` 顶部加一条 **P0 [ARCH]** 条目，标注提案文件路径
 - 每次反思仍检查该 P0 是否已批准：若已批准则升级为普通 P0 行动，按步骤正常执行
-- 若用户回复"暂不处理"，Butler 将临界线调高 20%（记入 `logs/wiki_butler/arch_snooze.json`），避免反复提醒
+- 若用户回复"暂不处理"，Butler 将临界线调高 20%（记入 `wiki/logs/butler/arch_snooze.json`），避免反复提醒
 
 ---
 
@@ -250,16 +250,16 @@ actions #1–20, failures 5 条
 ## 相关
 - [W0 总则](SKILL_W0_Butler总则.md)
 - [W3 质量标准](SKILL_W3_Butler质量标准.md) — 主要的修订目标
-- `logs/wiki_butler/reflections/` — 反思输出沉淀（普通：`YYYY-MM-DD.md`，架构：`arch_YYYY-MM-DD.md`）
-- `logs/wiki_butler/skill_changes.md` — 修订 changelog
-- `logs/wiki_butler/arch_snooze.json` — 用户暂缓的架构阈值覆盖
+- `wiki/logs/butler/reflections/` — 反思输出沉淀（普通：`YYYY-MM-DD.md`，架构：`arch_YYYY-MM-DD.md`）
+- `wiki/logs/butler/skill_changes.md` — 修订 changelog
+- `wiki/logs/butler/arch_snooze.json` — 用户暂缓的架构阈值覆盖
 - `wiki/scripts/butler/check_scale.py` — 规模指标快照工具（每次反思必跑）
 
 ---
 
 ## KB 写入规则
 
-反思结束后，将定论写入 `logs/wiki_butler/kb/w5_ops.md`：
+反思结束后，将定论写入 `wiki/logs/butler/kb/w5_ops.md`：
 
 - **写什么**：在 ≥2 次反思中重复出现、被 W5 修订采纳的操作规则
 - **不写什么**：单次失败、偶发异常、未经 ≥2 次验证的猜测

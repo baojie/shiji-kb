@@ -10,7 +10,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const QUEUE_PATH = path.resolve(__dirname, '../../../../logs/wiki_butler/queue.md');
+const QUEUE_PATH = path.resolve(__dirname, '../../../../wiki/logs/butler/queue.md');
 const SECTION_HEADER = '## ⭐ 用户想要 (P0)';
 
 function today() {

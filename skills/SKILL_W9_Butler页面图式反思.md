@@ -62,7 +62,7 @@ same_type = [p for p in pages.values()
 
 ### 步骤 4 · 输出
 
-写 `logs/wiki_butler/schema_patterns/YYYY-MM-DD-R<N>.md`（每轮一个文件）：
+写 `wiki/logs/butler/schema_patterns/YYYY-MM-DD-R<N>.md`（每轮一个文件）：
 
 ```markdown
 # 图式反思 2026-MM-DD R<N>
@@ -193,7 +193,7 @@ version: 1
 2. **当某类型积累 ≥3 页**时，如果还没有模板文件，当轮必须创建
 3. **当某类型积累 ≥5 页**时，如果模板文件超过 30 天未更新，当轮重新评估
 4. **每 10 轮**（即每次 W5 反思前），回顾 `skills/templates/` 目录，更新类型索引表
-5. 模板修订**必须**写进 `logs/wiki_butler/skill_changes.md`：
+5. 模板修订**必须**写进 `wiki/logs/butler/skill_changes.md`：
    ```
    YYYY-MM-DD  W9 template/<类型>.md v1→v2  增加"封国沿革"节 [R<N>]
    ```
@@ -212,9 +212,9 @@ version: 1
 ---
 
 ## 相关路径
-- `logs/wiki_butler/schema_patterns/` — 每轮反思输出
+- `wiki/logs/butler/schema_patterns/` — 每轮反思输出
 - `skills/templates/` — 细分类型模板（长期积累）
-- `logs/wiki_butler/skill_changes.md` — 模板修订记录
+- `wiki/logs/butler/skill_changes.md` — 模板修订记录
 - `skills/SKILL_W5_Butler反思与自改.md` — 系统反思（互补）
 - `skills/SKILL_W8_精品页建设方法论.md` — 精品页质量标准（互补）
 
@@ -222,7 +222,7 @@ version: 1
 
 ## KB 写入规则
 
-W9 反思确认某 schema 规则后，将定论写入 `logs/wiki_butler/kb/w9_schemas.md`：
+W9 反思确认某 schema 规则后，将定论写入 `wiki/logs/butler/kb/w9_schemas.md`：
 
 - **写什么**：在 ≥2 轮 W9 中重复发现、已被实际页面验证的结构规则
 - **不写什么**：schema_patterns/ 里的单轮发现（那里是草稿，KB 是结论）

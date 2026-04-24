@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 PAGES_DIR = ROOT / "wiki/public/pages"
-QUEUE_FILE = ROOT / "logs/wiki_butler/housekeeping_queue.md"
+QUEUE_FILE = ROOT / "wiki/logs/butler/housekeeping_queue.md"
 
 # 把 scripts/ 加入路径，以便 import find_pn_for_quote
 sys.path.insert(0, str(ROOT / "scripts"))

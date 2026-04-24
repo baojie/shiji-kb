@@ -7,7 +7,7 @@
     python3 wiki/server/serve.py wiki/public 8000   # 默认
     python3 wiki/server/serve.py . 8000             # 从仓库根服务
 
-/api/want?page=<page_id>  把页面加入 logs/wiki_butler/queue.md 首位 (P0)
+/api/want?page=<page_id>  把页面加入 wiki/logs/butler/queue.md 首位 (P0)
 """
 
 import http.server
@@ -22,7 +22,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent          # wiki/server/
 REPO = HERE.parent.parent                       # 仓库根
-QUEUE_PATH = REPO / 'logs' / 'wiki_butler' / 'queue.md'
+QUEUE_PATH = REPO / 'wiki' / 'logs' / 'butler' / 'queue.md'
 SECTION_HEADER = '## ⭐ 用户想要 (P0)'
 
 

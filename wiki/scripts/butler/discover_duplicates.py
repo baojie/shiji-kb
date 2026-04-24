@@ -29,7 +29,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 PAGES_DIR = ROOT / "wiki/public/pages"
-QUEUE_FILE = ROOT / "logs/wiki_butler/housekeeping_queue.md"
+QUEUE_FILE = ROOT / "wiki/logs/butler/housekeeping_queue.md"
 
 # 不参与重复检测的前缀（单字/常见歧义字）
 SKIP_PREFIXES = {"A", "Special", "index"}

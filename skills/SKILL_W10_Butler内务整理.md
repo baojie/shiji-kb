@@ -1,7 +1,7 @@
 ---
 name: SKILL_W10_Butler内务整理
 title: Wiki 内务整理（Housekeeping）队列与流程
-description: 发现并修复 wiki 结构性缺陷：重复/冗余页面合并、链接补全、重定向页创建。维护 logs/wiki_butler/housekeeping_queue.md，每 10 轮处理一条高优先级条目。
+description: 发现并修复 wiki 结构性缺陷：重复/冗余页面合并、链接补全、重定向页创建。维护 wiki/logs/butler/housekeeping_queue.md，每 10 轮处理一条高优先级条目。
 ---
 
 # SKILL W10: 内务整理（Housekeeping）
@@ -150,7 +150,7 @@ python3 wiki/scripts/butler/find_unsourced.py --max 50 --write-queue
 
 ## 二、Housekeeping 队列格式
 
-文件：`logs/wiki_butler/housekeeping_queue.md`
+文件：`wiki/logs/butler/housekeeping_queue.md`
 
 ```markdown
 # Housekeeping 队列
@@ -224,13 +224,13 @@ python3 wiki/scripts/butler/reflection_scan.py --aspect alias > /tmp/alias_scan.
 python3 -c "..." 2>/dev/null | head -50 > /tmp/missing_redirects.txt
 ```
 
-将扫描结果分类后填入 `logs/wiki_butler/housekeeping_queue.md`。
+将扫描结果分类后填入 `wiki/logs/butler/housekeeping_queue.md`。
 
 ---
 
 ## 相关路径
 
-- `logs/wiki_butler/housekeeping_queue.md` — 任务队列
+- `wiki/logs/butler/housekeeping_queue.md` — 任务队列
 - `wiki/scripts/butler/discover_duplicates.py` — **标题相似度扫描，每 10 轮运行**（含假阳性过滤）
 - `wiki/scripts/butler/find_unsourced.py` — **溯源缺失扫描，每 10 轮运行**（调用 find_pn_for_quote 在原文中取 PN）
 - `wiki/data/alias_conflicts.json` — 自动检测的 alias 冲突

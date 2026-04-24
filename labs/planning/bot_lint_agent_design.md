@@ -18,8 +18,8 @@ Wiki 页面中的引文使用 `NNN-MMM` 格式引用《史记》段落（如 `10
 |---|---|---|
 | `chapter_md/*.tagged.md` | **只读** — 检测报告，不修改 | CLAUDE.md 禁止自动修改标注文件 |
 | `wiki/public/pages/*.md` | **可修改** — 通过 butler revision | Wiki 页面由 butler 体系管理 |
-| `logs/wiki_butler/actions.jsonl` | 追加审计条目 | 与 butler 共用同一审计日志 |
-| `logs/wiki_butler/queue.md` | 追加待审条目 | 低置信度问题送人工 |
+| `wiki/logs/butler/actions.jsonl` | 追加审计条目 | 与 butler 共用同一审计日志 |
+| `wiki/logs/butler/queue.md` | 追加待审条目 | 低置信度问题送人工 |
 | `logs/lint/bot-lint-*.json` | 写入 L1 报告 | 章节问题离线报告 |
 
 ---
@@ -122,7 +122,7 @@ python3 wiki/scripts/butler/record_revision.py <slug> \
 | `scripts/lint_text_integrity.py` | L1 章节文本检查 |
 | `wiki/scripts/butler/record_revision.py` | 写 wiki revision 记录 |
 | `scripts/wiki_revisions.py` | revision 数据模型 |
-| `logs/wiki_butler/actions.jsonl` | 共用审计日志 |
+| `wiki/logs/butler/actions.jsonl` | 共用审计日志 |
 
 ---
 

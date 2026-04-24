@@ -2,7 +2,7 @@
 """
 discover_kg.py — 扫 wiki/data/semantic.json 找 kg 里高频但 wiki 无页的实体.
 
-输出: markdown (默认) 或 JSON, 可直接 append 到 logs/wiki_butler/queue.md.
+输出: markdown (默认) 或 JSON, 可直接 append 到 wiki/logs/butler/queue.md.
 
 用法:
     python wiki/scripts/butler/discover_kg.py

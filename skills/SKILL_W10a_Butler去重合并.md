@@ -88,6 +88,31 @@ cat "wiki/public/pages/冗余页2.md"
 
 整合后的规范页**应包含所有版本的精华**，但不重复。
 
+#### 字段独立性铁律（必读）
+
+**`event_ids` 与 `pn` 是完全独立的两套体系，绝不联动修改：**
+
+| 字段 | 含义 | 示例 |
+|---|---|---|
+| `event_ids` | 事件结构化编号，有自己的命名规则 | `[094-010, 097-003]` |
+| `pn` | 史记原文段落引用号（Purple Numbers） | `(094-10) \| (097-6)` |
+
+两者表面数字相近，但语义完全不同。修改其中一个时**绝对禁止**推断"相关"而联动修改另一个。
+
+#### PN 字段合并规范（必读）
+
+冗余页若有 `:::meta` 块中的 `pn:` 字段，合并时须遵守以下格式：
+
+| 情形 | 格式 | 示例 |
+|---|---|---|
+| 单个 PN | `(章节-段号)` | `(031-23.7)` |
+| 同章节多个 PN | 各自独立括号，第二个省略章节前缀 | `(031-41.1) (41.4)` |
+| 不同章节 PN | 管道符分隔 | `(031-23.7) \| (086-2.4)` |
+
+**❌ 严禁括号内连字符连接多个段号**：`(031-41.1-41.4)` 是错误格式，正确为 `(031-41.1) (41.4)`。
+
+合并脚本或手动合并时，若两页的 pn 均非空，必须先解析各自格式，再按上述规则拼接。
+
 ### Step 5：写入规范页
 
 ```bash
@@ -202,19 +227,20 @@ redirect_to: 规范页名
 | `wiki/scripts/butler/discover_duplicates.py` | 自动扫描重复候选，写入队列 |
 | `wiki/scripts/butler/record_revision.py` | 写入 revision（合并后必须调用）|
 | `wiki/scripts/butler/edit_page.py` | 编辑/创建页面（含 --redirect-to 选项）|
+| `scripts/fix_pn_range_syntax.py` | 扫描/修复 `(NNN-X.Y-Z.W)` 错误 PN 格式 |
 
 ```bash
 # 每 10 轮运行一次扫描（max-new 限制写入数量）
 python3 wiki/scripts/butler/discover_duplicates.py --max-new 10
 
 # 处理一条 P0 H1（读取后手动决策）
-cat logs/wiki_butler/housekeeping_queue.md | grep -A5 "P0" | head -20
+cat wiki/logs/butler/housekeeping_queue.md | grep -A5 "P0" | head -20
 ```
 
 ---
 
 ## 相关路径
 
-- `logs/wiki_butler/housekeeping_queue.md` — 任务队列（去重条目在 H1 标签下）
+- `wiki/logs/butler/housekeeping_queue.md` — 任务队列（去重条目在 H1 标签下）
 - `skills/SKILL_W10_Butler内务整理.md` — 上级 SKILL（包含 H2/H3 任务）
 - `wiki/scripts/butler/discover_duplicates.py` — 重复检测脚本

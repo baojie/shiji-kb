@@ -35,9 +35,9 @@ from config import PROJECT_ROOT, DATA_ROOT, LOGS_ROOT
 from find_pn_for_quote import load_index, find_pn
 
 WIKI_PAGES_DIR  = PROJECT_ROOT / "wiki" / "public" / "pages"
-ISSUES_LOG      = LOGS_ROOT / "wiki_butler" / "citation_issues.jsonl"
-CACHE_FILE      = LOGS_ROOT / "wiki_butler" / "quote_cache.json"
-STATE_FILE      = LOGS_ROOT / "wiki_butler" / "verify_state.json"
+ISSUES_LOG      = PROJECT_ROOT / "wiki" / "logs" / "butler" / "citation_issues.jsonl"
+CACHE_FILE      = PROJECT_ROOT / "wiki" / "logs" / "butler" / "quote_cache.json"
+STATE_FILE      = PROJECT_ROOT / "wiki" / "logs" / "butler" / "verify_state.json"
 RECORD_REV_PY   = PROJECT_ROOT / "wiki" / "scripts" / "butler" / "record_revision.py"
 ORIGINAL_DIR    = PROJECT_ROOT / "docs" / "original_text"
 

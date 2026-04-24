@@ -21,8 +21,8 @@ PAGES_JSON    = ROOT / "wiki/public/pages.json"
 PAGES_DIR     = ROOT / "wiki/public/pages"
 HISTORY_DIR   = ROOT / "wiki/public/history"
 RECENT_JSON   = ROOT / "wiki/public/recent.json"
-ACTIONS_JSONL = ROOT / "logs/wiki_butler/actions.jsonl"
-SNOOZE_JSON   = ROOT / "logs/wiki_butler/arch_snooze.json"
+ACTIONS_JSONL = ROOT / "wiki/logs/butler/actions.jsonl"
+SNOOZE_JSON   = ROOT / "wiki/logs/butler/arch_snooze.json"
 
 # 默认阈值（可被 snooze 文件临时调高）
 THRESHOLDS = {

@@ -60,7 +60,7 @@ python3 wiki/scripts/butler/check_facts.py --page 韩王信 --check lifespan
 
 ## 三、输出格式
 
-扫描完成后写入 `logs/wiki_butler/citation_issues.jsonl`，每行一个问题：
+扫描完成后写入 `wiki/logs/butler/citation_issues.jsonl`，每行一个问题：
 
 ```json
 {
@@ -166,4 +166,4 @@ Butler 生成修复建议，但不自动执行：
 - [W3 质量标准](SKILL_W3_Butler质量标准.md) — 溯源红旗定义
 - [W4 评估与检验](SKILL_W4_Butler评估与检验.md) — 步骤0溯源验证
 - `wiki/scripts/butler/check_citations.py` — 待实现的验证脚本
-- `logs/wiki_butler/citation_issues.jsonl` — 质检结果日志
+- `wiki/logs/butler/citation_issues.jsonl` — 质检结果日志

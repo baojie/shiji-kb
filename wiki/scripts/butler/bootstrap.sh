@@ -11,7 +11,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 BUTLER="$ROOT/wiki/scripts/butler"
-LOG="$ROOT/logs/wiki_butler"
+LOG="$ROOT/wiki/logs/butler"
 SEMANTIC="$ROOT/wiki/data/semantic.json"
 SEED="$ROOT/wiki/server/api/seed.js"
 
@@ -62,7 +62,7 @@ TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 P0_COUNT=$( { grep -o '\[P0\]' "$LOG/queue.md" || true; } | wc -l | tr -d ' ')
 P1_COUNT=$( { grep -o '\[P1\]' "$LOG/queue.md" || true; } | wc -l | tr -d ' ')
 cat >> "$LOG/actions.jsonl" <<JSONL
-{"ts":"$TS","mode":"observe","action":"bootstrap","target":"logs/wiki_butler/queue.md","rationale":"首次扫描填 queue","result":"accept","p0_count":$P0_COUNT,"p1_count":$P1_COUNT,"verdict":"accept","diff_lines":0}
+{"ts":"$TS","mode":"observe","action":"bootstrap","target":"wiki/logs/butler/queue.md","rationale":"首次扫描填 queue","result":"accept","p0_count":$P0_COUNT,"p1_count":$P1_COUNT,"verdict":"accept","diff_lines":0}
 JSONL
 
 # 知识量快照

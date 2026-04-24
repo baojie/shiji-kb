@@ -8,7 +8,7 @@ Bot Lint Agent — Wiki 引文 PN 核验
   < AUTOFIX_THRESHOLD        → 写入 queue.md 待人工审查
 
 所有编辑通过 wiki/scripts/butler/record_revision.py 留下 revision 记录
-（author=bot-lint），同时追加到 logs/wiki_butler/actions.jsonl。
+（author=bot-lint），同时追加到 wiki/logs/butler/actions.jsonl。
 
 用法：
     python scripts/bot_lint_agent.py                 # 扫描所有 wiki 页面
@@ -33,8 +33,8 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 from config import BASE_COPY, DATA_ROOT, PROJECT_ROOT
 
 WIKI_PAGES_DIR = PROJECT_ROOT / 'wiki' / 'public' / 'pages'
-ACTIONS_LOG    = PROJECT_ROOT / 'logs' / 'wiki_butler' / 'actions.jsonl'
-QUEUE_FILE     = PROJECT_ROOT / 'logs' / 'wiki_butler' / 'queue.md'
+ACTIONS_LOG    = PROJECT_ROOT / 'wiki' / 'logs' / 'butler' / 'actions.jsonl'
+QUEUE_FILE     = PROJECT_ROOT / 'wiki' / 'logs' / 'butler' / 'queue.md'
 RECORD_REV_PY  = PROJECT_ROOT / 'wiki' / 'scripts' / 'butler' / 'record_revision.py'
 
 AUTOFIX_THRESHOLD = 0.95   # 低于此分数不自动修复，送 queue

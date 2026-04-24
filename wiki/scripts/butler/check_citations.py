@@ -24,7 +24,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 ORIGINAL_TEXT_DIR = REPO_ROOT / "docs" / "original_text"
 CORPUS_OTHER_DIR = REPO_ROOT / "corpus" / "other"   # 汉书等扩展文本
 PAGES_DIR = REPO_ROOT / "wiki" / "public" / "pages"
-ISSUES_LOG = REPO_ROOT / "logs" / "wiki_butler" / "citation_issues.jsonl"
+ISSUES_LOG = REPO_ROOT / "wiki" / "logs" / "butler" / "citation_issues.jsonl"
 
 MIN_FRAGMENT_LEN = 8  # 少于8字的片段不验证（太短易误匹配）
 

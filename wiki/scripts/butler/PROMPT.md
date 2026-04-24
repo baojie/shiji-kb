@@ -1,7 +1,24 @@
 # Butler 单步 Prompt — 执行一次 atomic action
 
+**版本**: v1.9 · 2026-04-24
+
 > 粘进 `/loop <interval>` 作循环体, 或直接丢给 Claude 手动触发一次.
 > 每次只做 **一次** 原子动作, 不要连做多次.
+
+## 版本历史
+
+| 版本 | commit | 日期 | 变更 |
+|------|--------|------|------|
+| v1.0 | `34ea38f` | 2026-04-22 | 初版：trail/explore 循环，W2/W4 原子动作，基础 actions.jsonl 记账 |
+| v1.1 | `3e22bf5` | 2026-04-22 | 新增 wiki 修订记录（record_revision.py 必须调用）|
+| v1.2 | `0bc67cb` | 2026-04-23 | 新增 W6b 引文核验触发条件（≥10条未核验）|
+| v1.3 | `5829c0d` | 2026-04-23 | W6b → W7 引文核验（三层流水线重命名）|
+| v1.4 | `8b66dc0` | 2026-04-23 | 新增 W9 图式反思（每6次触发）+ W10 housekeeping P0 处理 |
+| v1.5 | `9abc3fd` | 2026-04-23 | 新增 W11 概念分类元反思（每10轮，mod 10 == 0）|
+| v1.6 | `e9c0b06` | 2026-04-23 | accept 改为只暂存（git add），每5轮由 /wiki 批量 commit |
+| v1.7 | `7cea37e` | 2026-04-23 | 删除操作前必须调用 record_revision --action delete |
+| v1.8 | `4267fca` | 2026-04-23 | 新增 KB 读取（w5_ops / w7_citations / w9_schemas / w11_taxonomy）|
+| v1.9 | — | 2026-04-24 | commit 频率从每5轮改为每17轮（质数轮次，减少 agent 碰撞）|
 
 ---
 
@@ -10,22 +27,22 @@
 ## 必读 (每次 invocation 开始)
 
 1. `skills/SKILL_W0_Butler总则.md` — 哲学 + 六不变量
-2. `logs/wiki_butler/queue.md` — 当前候选队列
-3. `logs/wiki_butler/actions.jsonl` 的最后 10 行 (了解最近 mode)
-4. `logs/wiki_butler/failures.jsonl` 的最后 5 行 (避开已失败路径)
-5. `logs/wiki_butler/kb/w5_ops.md` — 操作规则知识库（已验证的行动成功/失败模式）
-6. `logs/wiki_butler/kb/w7_citations.md` — 引文知识库（已核验的真实引文与误引）
-7. `logs/wiki_butler/kb/w9_schemas.md` — 页面结构知识库（各类型页面的定稿规则）
-8. `logs/wiki_butler/kb/w11_taxonomy.md` — 分类知识库（类型判断规则）
+2. `wiki/logs/butler/queue.md` — 当前候选队列
+3. `wiki/logs/butler/actions.jsonl` 的最后 10 行 (了解最近 mode)
+4. `wiki/logs/butler/failures.jsonl` 的最后 5 行 (避开已失败路径)
+5. `wiki/logs/butler/kb/w5_ops.md` — 操作规则知识库（已验证的行动成功/失败模式）
+6. `wiki/logs/butler/kb/w7_citations.md` — 引文知识库（已核验的真实引文与误引）
+7. `wiki/logs/butler/kb/w9_schemas.md` — 页面结构知识库（各类型页面的定稿规则）
+8. `wiki/logs/butler/kb/w11_taxonomy.md` — 分类知识库（类型判断规则）
 
 ## 判断 mode
 
 按优先顺序:
 
-- 若最近 3 条同 action 全 fail → 进入 **W5 反思**, 读 `skills/SKILL_W5_Butler反思与自改.md`, 写 `logs/wiki_butler/reflections/$(date +%F).md`, 本轮不做原子动作
+- 若最近 3 条同 action 全 fail → 进入 **W5 反思**, 读 `skills/SKILL_W5_Butler反思与自改.md`, 写 `wiki/logs/butler/reflections/$(date +%F).md`, 本轮不做原子动作
 - 若累计 atomic action ≥ 20 条未反思 → 进入 W5 反思
-- 若本轮是"每 6 次精品/stub 创建后的第 6 次"（即每完成 3 精品+3 stub 一组）→ 追加 **W9 图式反思**: 读 `skills/SKILL_W9_Butler页面图式反思.md`, 写 `logs/wiki_butler/schema_patterns/$(date +%F)-R<N>.md`; 若发现新细分类型 ≥3 页且缺模板则同时创建 `skills/templates/<类型>.md`。W9 **不阻塞**下一轮，不影响 actions.jsonl 计数。
-- 若 `logs/wiki_butler/round_counter.txt` 中当前轮次 **mod 10 == 0** → 执行 **W11 概念分类元反思**: 读 `skills/SKILL_W11_概念分类元反思.md`, 扫描错误分类候选、发现新概念、写 `logs/wiki_butler/type_audits/$(date +%F)-R<N>.md`，执行 ≥1 条 `reclassify` 修正（若有），新概念候选加入 queue.md P1。W11 **不阻塞**下一轮。
+- 若本轮是"每 6 次精品/stub 创建后的第 6 次"（即每完成 3 精品+3 stub 一组）→ 追加 **W9 图式反思**: 读 `skills/SKILL_W9_Butler页面图式反思.md`, 写 `wiki/logs/butler/schema_patterns/$(date +%F)-R<N>.md`; 若发现新细分类型 ≥3 页且缺模板则同时创建 `skills/templates/<类型>.md`。W9 **不阻塞**下一轮，不影响 actions.jsonl 计数。
+- 若 `wiki/logs/butler/round_counter.txt` 中当前轮次 **mod 10 == 0** → 执行 **W11 概念分类元反思**: 读 `skills/SKILL_W11_概念分类元反思.md`, 扫描错误分类候选、发现新概念、写 `wiki/logs/butler/type_audits/$(date +%F)-R<N>.md`，执行 ≥1 条 `reclassify` 修正（若有），新概念候选加入 queue.md P1。W11 **不阻塞**下一轮。
 - 若累计 trail/explore ≥ 10 条，且最近一条 `verify-citations` 距今 ≥ 10 条 → 本轮做 **W7 引文核验**:
   ```bash
   python3 scripts/verify_quotes_agent.py   # 处理下一个未检查页面
@@ -37,8 +54,8 @@
   python3 wiki/scripts/build_registry.py wiki/public/pages --out wiki/public/pages.json
   ```
   写 actions.jsonl (mode=observe, action=update-wanted-pages, target=Special:WantedPages)，不需要 W4 评估，**需要** commit（包含 wanted_pages.json + Special:WantedPages.md + pages.json，commit message: `butler/observe: update-wanted-pages`）。
-- 若 `logs/wiki_butler/housekeeping_queue.md` 有 P0 未处理，且本轮无其他 P0 → 处理一条 housekeeping P0（读 `skills/SKILL_W10_Butler内务整理.md`）
-- 若 `logs/wiki_butler/queue.md` 无 P0/P1 → 本轮做 W7 引文核验（优先于 explore）
+- 若 `wiki/logs/butler/housekeeping_queue.md` 有 P0 未处理，且本轮无其他 P0 → 处理一条 housekeeping P0（读 `skills/SKILL_W10_Butler内务整理.md`）
+- 若 `wiki/logs/butler/queue.md` 无 P0/P1 → 本轮做 W7 引文核验（优先于 explore）
 - 否则按 W1 的 2:1 比例:
   - 最近 [trail, trail] → 本次 `explore`
   - 否则 `trail`
@@ -65,14 +82,14 @@
 1. 红旗检查 (任一命中 → 回滚)
 2. 打分 5 维度 + bonus
 3. accept 门槛: score_after ≥ score_before + 1 或 score_after ≥ 8
-4. accept → `git add <file>`（暂存；**不立即 commit**，每5轮由 /wiki 批量提交）
+4. accept → `git add <file>`（暂存；**不立即 commit**，每17轮由 /wiki 批量提交）
 5. fail → `git restore <file>` + 写 `failures.jsonl`
 
 ## 记账
 
 ### 1. 写 butler 日志 (内部)
 
-追加 `logs/wiki_butler/actions.jsonl` 一行 JSON:
+追加 `wiki/logs/butler/actions.jsonl` 一行 JSON:
 ```json
 {"ts":"YYYY-MM-DDTHH:MM:SSZ","mode":"trail|explore|observe",
  "action":"<name>","target":"<path>","source":"<path>",

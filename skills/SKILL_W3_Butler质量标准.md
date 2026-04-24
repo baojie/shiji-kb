@@ -5,7 +5,7 @@ description: Butler 的 wiki 质量标准 (rubric) — 一个页面怎样算"好
 
 # SKILL W3: 质量标准 (Rubric)
 
-> **本 skill 会变**。W5 反思会修订本文, 改动记 `logs/wiki_butler/skill_changes.md`。
+> **本 skill 会变**。W5 反思会修订本文, 改动记 `wiki/logs/butler/skill_changes.md`。
 
 ---
 

@@ -82,9 +82,9 @@ python3 scripts/verify_quotes_agent.py --llm-off
 
 | 文件 | 作用 |
 |------|------|
-| `logs/wiki_butler/quote_cache.json` | 引文验证缓存；key = sha256(标准化引文)[:16] |
-| `logs/wiki_butler/verify_state.json` | 页面扫描进度；记录已检查的页面列表 |
-| `logs/wiki_butler/citation_issues.jsonl` | 问题输出；与 W6 共用（追加写） |
+| `wiki/logs/butler/quote_cache.json` | 引文验证缓存；key = sha256(标准化引文)[:16] |
+| `wiki/logs/butler/verify_state.json` | 页面扫描进度；记录已检查的页面列表 |
+| `wiki/logs/butler/citation_issues.jsonl` | 问题输出；与 W6 共用（追加写） |
 
 缓存 value 结构：
 ```json
@@ -152,7 +152,7 @@ W7 运行后需写 `actions.jsonl`：
 
 ## KB 写入规则
 
-每次核验完成一个页面后，将结论写入 `logs/wiki_butler/kb/w7_citations.md`：
+每次核验完成一个页面后，将结论写入 `wiki/logs/butler/kb/w7_citations.md`：
 
 - **写什么**：已验证的真实直引、已确认的转述、章节可信度评级、已知常见误引
 - **不写什么**：未完成核验的页面、存疑待确认的引文
