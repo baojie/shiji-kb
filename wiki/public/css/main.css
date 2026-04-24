@@ -80,14 +80,16 @@ article h3 {
   margin-top: 1.4em;
   color: var(--accent);
 }
-article p { margin: .7em 0; }
-article p:has(+ blockquote) { margin-bottom: .1em; }
-article blockquote + p { margin-top: .1em; }
+article p { margin: .4em 0; }
 article ul, article ol { padding-left: 1.4em; }
 article li { margin: .3em 0; }
 article blockquote p { margin: 0; }
 article blockquote {
   margin: .1em 0;
+  margin-block-start: .1em;
+  margin-block-end: .1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   padding: .3em 1em;
   border-left: 3px solid var(--accent);
   background: var(--bg-box);
@@ -161,6 +163,21 @@ aside.sidebar {
   padding: .3em .5em;
   font-style: italic;
   line-height: 1.3;
+}
+
+/* 地名地图（place-map 插件） */
+.map-cell {
+  padding: 0 !important;
+}
+.map-cell #sidebar-map-container {
+  border-radius: 0 0 3px 3px;
+}
+.map-cell .map-source {
+  display: block;
+  font-size: 10px;
+  color: var(--fg-muted);
+  text-align: right;
+  padding: .15em .4em;
 }
 
 .wikilink.resolved { color: var(--link); text-decoration: none; }

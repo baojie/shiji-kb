@@ -28,6 +28,13 @@
       "name": "反向引用",
       "version": "1.0.0",
       "description": "在页面底部显示哪些页面引用了本页，索引由 scripts/build_backlinks.py 生成"
+    },
+    {
+      "id": "place-map",
+      "entry": "plugins/place-map/index.js",
+      "name": "地名地图",
+      "version": "1.0.0",
+      "description": "在地名/邦国页面的 sidebar 底部显示 Leaflet 地图，坐标来自 CHGIS（coords 字段）"
     }
   ]
 }

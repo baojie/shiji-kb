@@ -246,6 +246,8 @@ const FIELD_LABELS = {
 const INFOBOX_SKIP = new Set([
   'id', 'label', 'title', 'type', 'featured', 'auto_generated',
   'quality_score', 'path', 'paragraph_refs',
+  // 地理坐标由 place-map 插件渲染为地图，无需文本显示
+  'coords', 'coords_name', 'coords_source',
 ]);
 
 export async function renderInfobox(core, front, meta, pid) {
