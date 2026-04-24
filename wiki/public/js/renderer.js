@@ -1006,25 +1006,52 @@ export function renderAll(core) {
       ${pagerHtml}`;
   }
 
+  // ── 移动端过滤栏 ─────────────────────────────────────────────────
+  function renderMobileFilters(s) {
+    const typeOptions = [`<option value="">全部类型</option>`]
+      .concat(orderedTypes.map(t =>
+        `<option value="${escapeHtml(t)}"${s.types[0] === t ? ' selected' : ''}>${escapeHtml(TYPE_LABELS[t] || t)} (${typeCounts[t]})</option>`
+      )).join('');
+    return `
+      <div class="ap-mobile-filters">
+        <input id="ap-search" class="allpages-search" type="search"
+          placeholder="搜索页面名称或别名…" value="${escapeHtml(s.search)}">
+        <select id="ap-type-select" class="ap-type-select">
+          ${typeOptions}
+        </select>
+      </div>`;
+  }
+
   // ── 主渲染 ────────────────────────────────────────────────────────
   function render() {
     const s       = getState();
     const results = applyFilters(s);
     const article = document.getElementById('article');
+    const isMobile = window.innerWidth < 700;
 
-    article.innerHTML = `
-      <nav class="category-crumb"><a href="#">← 首页</a></nav>
-      <h1>Special:AllPages</h1>
-      <div class="allpages-layout">
-        ${renderFacets(s)}
-        <div class="allpages-main">
-          <div class="allpages-search-row">
-            <input id="ap-search" class="allpages-search" type="search"
-              placeholder="搜索页面名称或别名…" value="${escapeHtml(s.search)}">
-          </div>
+    if (isMobile) {
+      article.innerHTML = `
+        <nav class="category-crumb"><a href="#">← 首页</a></nav>
+        <h1>Special:AllPages</h1>
+        <div class="allpages-mobile">
+          ${renderMobileFilters(s)}
           <div id="ap-results">${renderResults(results, s)}</div>
-        </div>
-      </div>`;
+        </div>`;
+    } else {
+      article.innerHTML = `
+        <nav class="category-crumb"><a href="#">← 首页</a></nav>
+        <h1>Special:AllPages</h1>
+        <div class="allpages-layout">
+          ${renderFacets(s)}
+          <div class="allpages-main">
+            <div class="allpages-search-row">
+              <input id="ap-search" class="allpages-search" type="search"
+                placeholder="搜索页面名称或别名…" value="${escapeHtml(s.search)}">
+            </div>
+            <div id="ap-results">${renderResults(results, s)}</div>
+          </div>
+        </div>`;
+    }
 
     document.body.classList.add('is-home');
     const ib = document.getElementById('infobox');
@@ -1035,29 +1062,7 @@ export function renderAll(core) {
     document.getElementById('broken-info').textContent = '';
     window.scrollTo(0, 0);
 
-    // 分面 checkbox / radio
-    article.querySelectorAll('input[data-facet]').forEach(cb => {
-      cb.addEventListener('change', () => {
-        const ns = getState();
-        const { facet, val } = cb.dataset;
-        if (facet === 'type') {
-          ns.types = cb.checked ? [...new Set([...ns.types, val])] : ns.types.filter(t => t !== val);
-        } else if (facet === 'tag') {
-          ns.tags  = cb.checked ? [...new Set([...ns.tags,  val])] : ns.tags.filter(t => t !== val);
-        } else if (facet === 'q') {
-          ns.qlevel = cb.checked ? val : '';
-        }
-        ns.page = 1;
-        history.replaceState(null, '', buildHash(ns));
-        document.getElementById('ap-results').innerHTML = renderResults(applyFilters(ns), ns);
-        article.querySelectorAll('.facet-item').forEach(lbl => {
-          const inp = lbl.querySelector('input');
-          lbl.classList.toggle('active', !!(inp && inp.checked));
-        });
-      });
-    });
-
-    // 搜索框（防抖 200ms）
+    // 搜索框（防抖 200ms，桌面/移动共用）
     let timer;
     article.querySelector('#ap-search').addEventListener('input', e => {
       clearTimeout(timer);
@@ -1070,11 +1075,44 @@ export function renderAll(core) {
       }, 200);
     });
 
-    // 清除按钮
-    article.querySelector('#facet-reset')?.addEventListener('click', () => {
-      history.replaceState(null, '', buildHash({ types: [], tags: [], qlevel: '', search: '', page: 1 }));
-      render();
-    });
+    if (isMobile) {
+      // 移动端：类型下拉框
+      article.querySelector('#ap-type-select').addEventListener('change', e => {
+        const ns = getState();
+        ns.types = e.target.value ? [e.target.value] : [];
+        ns.page = 1;
+        history.replaceState(null, '', buildHash(ns));
+        document.getElementById('ap-results').innerHTML = renderResults(applyFilters(ns), ns);
+      });
+    } else {
+      // 桌面端：分面 checkbox / radio
+      article.querySelectorAll('input[data-facet]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          const ns = getState();
+          const { facet, val } = cb.dataset;
+          if (facet === 'type') {
+            ns.types = cb.checked ? [...new Set([...ns.types, val])] : ns.types.filter(t => t !== val);
+          } else if (facet === 'tag') {
+            ns.tags  = cb.checked ? [...new Set([...ns.tags,  val])] : ns.tags.filter(t => t !== val);
+          } else if (facet === 'q') {
+            ns.qlevel = cb.checked ? val : '';
+          }
+          ns.page = 1;
+          history.replaceState(null, '', buildHash(ns));
+          document.getElementById('ap-results').innerHTML = renderResults(applyFilters(ns), ns);
+          article.querySelectorAll('.facet-item').forEach(lbl => {
+            const inp = lbl.querySelector('input');
+            lbl.classList.toggle('active', !!(inp && inp.checked));
+          });
+        });
+      });
+
+      // 清除按钮
+      article.querySelector('#facet-reset')?.addEventListener('click', () => {
+        history.replaceState(null, '', buildHash({ types: [], tags: [], qlevel: '', search: '', page: 1 }));
+        render();
+      });
+    }
   }
 
   render();

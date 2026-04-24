@@ -502,6 +502,26 @@ body.is-home .page { grid-template-columns: 1fr; }
   .allpages-layout { grid-template-columns: 1fr; }
 }
 
+/* 移动端 AllPages */
+.allpages-mobile { padding: 0; }
+.ap-mobile-filters {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  margin-bottom: 1em;
+}
+.ap-type-select {
+  width: 100%;
+  padding: .45em .7em;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: .95em;
+  background: var(--bg);
+  color: var(--fg);
+  box-sizing: border-box;
+}
+.ap-type-select:focus { outline: none; border-color: var(--accent); }
+
 /* 分面侧栏 */
 .facet-panel {
   border: 1px solid var(--border);
