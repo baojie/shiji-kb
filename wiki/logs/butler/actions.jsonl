@@ -1454,3 +1454,20 @@
 {"ts":"2026-04-24T06:04:39Z","round":1137,"mode":"explore","action":"scan-wanted","note":"新城(4,秦韩边境)/清河(4,汉代河北)/河上(4,穰苴等)/方与(4,楚汉沛地)/柯(3,齐桓会盟); 均为有效place; 下轮trail→新城"}
 {"ts":"2026-04-24T06:05:03Z","round":1138,"mode":"trail","action":"create-page","target":"新城","type":"place","links":["005_秦本纪","039_晋世家","073_白起王翦列传"],"note":"白起初展军威，秦韩边境要地"}
 {"ts":"2026-04-24T06:05:27Z","round":1139,"mode":"trail","action":"create-page","target":"清河","type":"place","links":["049_外戚世家","058_梁孝王世家","069_苏秦列传"],"note":"汉代河北郡国，窦氏外戚相关"}
+{"ts":"2026-04-24T06:06:23Z","round":1140,"mode":"trail","action":"create-page","target":"方与","type":"place","links":["049_外戚世家","054_曹相国世家","057_绛侯周勃世家"],"note":"沛地城邑，曹参/周勃楚汉征战"}
+{"ts":"2026-04-24T06:06:46Z","round":1141,"mode":"trail","action":"create-page","target":"柯","type":"place","links":["033_鲁周公世家","062_管晏列传","086_刺客列传"],"note":"柯地会盟，管仲守信典故"}
+{"ts":"2026-04-24T06:07:05Z","round":1142,"mode":"explore","action":"scan-wanted","note":"河上(3,地理)→create; 申(2,申国地名)→create; 偃=主父偃(exists)→建redirect; 下轮trail→河上"}
+{"ts":"2026-04-24T06:07:16Z","round":1143,"mode":"trail","action":"create-page","target":"偃","type":"redirect","note":"偃→主父偃 redirect，推恩令人物"}
+{"ts":"2026-04-24T06:07:34Z","round":1144,"mode":"trail","action":"create-page","target":"河上","type":"place","links":["014_十二诸侯年表","064_司马穰苴列传","126_滑稽列传"],"note":"黄河岸边，穰苴守河上御晋燕"}
+{"ts":"2026-04-24T06:08:05Z","round":1145,"mode":"explore","action":"update-wanted+scan","note":"新批：辽东/豫章/蕲/蒲/菑川/胶东(均地理); 越王句践→已是alias应建redirect; 遂/章/象=人名; 荆=楚别名需redirect; 下轮trail→蕲(陈胜首义地)"}
+{"ts":"2026-04-24T06:08:28Z","round":1146,"mode":"trail","action":"create-page","target":"蕲","type":"place","links":["048_陈涉世家","刘邦","项羽"],"note":"陈胜大泽乡起义后首攻蕲县"}
+{"ts":"2026-04-24T06:08:51Z","round":1147,"mode":"trail","action":"create-page","target":"蒲","type":"place","links":["039_晋世家","047_孔子世家","071_樗里子甘茂列传"],"note":"卫国城邑，孔子过蒲，晋文公早年封邑"}
+{"ts":"2026-04-24T06:09:16Z","round":1148,"mode":"trail","action":"create-page","target":"辽东","type":"place","links":["034_燕召公世家","088_蒙恬列传","115_朝鲜列传"],"note":"蒙恬长城东端，燕国前沿，汉朝鲜接壤"}
+{"ts":"2026-04-24T06:09:30Z","round":1149,"mode":"explore","action":"scan-wanted","note":"豫章(place,江南要地)/菑川(place,汉代诸侯)/胶东(place,汉代诸侯)/荆(=楚别名,state redirect); 下轮trail→豫章"}
+{"ts":"2026-04-24T06:09:50Z","round":1150,"mode":"trail","action":"create-page","target":"豫章","type":"place","links":["066_伍子胥列传","106_吴王濞列传","114_东越列传"],"note":"汉代江南郡，东越移民迁入，吴王濞封域"}
+{"ts":"2026-04-24T06:10:19Z","round":1151,"mode":"explore","action":"W11-type-audit","note":"5800页，place=106(+21)，state=23(+朝鲜)，redirect=192(+2)，K=127517，无误分类"}
+{"ts":"2026-04-24T06:10:38Z","round":1152,"mode":"trail","action":"create-page","target":"菑川","type":"place","links":["021_建元已来王子侯者年表","052_齐悼惠王世家","121_儒林列传"],"note":"汉代齐系分封，七国之乱，儒学传承"}
+{"ts":"2026-04-24T06:11:00Z","round":1153,"mode":"trail","action":"create-page","target":"胶东","type":"place","links":["052_齐悼惠王世家","059_五宗世家","094_田儋列传"],"note":"汉武帝初封胶东王，齐系诸侯分封"}
+{"ts":"2026-04-24T06:11:16Z","round":1154,"mode":"explore","action":"scan-wanted","note":"越王句践→建redirect到句践; 象(舜弟)→建person page; 荆→楚的别名，redirect; 下轮trail→越王句践redirect"}
+{"ts":"2026-04-24T06:11:56Z","round":1155,"mode":"trail","action":"create-page","target":"越王句践","type":"person","links":["041_越王句践世家","066_伍子胥列传"],"note":"卧薪尝胆，灭吴称霸，春秋末霸主"}
+{"ts":"2026-04-24T06:12:10Z","round":1156,"mode":"trail","action":"create-page","target":"荆","type":"redirect","note":"荆→楚 redirect，楚国别称"}
