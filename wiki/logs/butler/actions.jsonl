@@ -1386,3 +1386,20 @@
 {"ts":"2026-04-24T05:42:00Z","mode":"explore","action":"discover-wanted","source":"wanted_pages.json","rationale":"2:1比例explore","verdict":"accept","commit":null,"note":"调查吕(009/032齐/贳侯)=吕国/吕氏消歧；嘉/应多为谥号，侯国相关；东国=东方诸国通称"}
 {"ts":"2026-04-24T05:42:30Z","mode":"trail","action":"create-page","target":"吕","type":"disambiguation","rationale":"wanted_pages，4 refs，吕国/吕氏/吕不韦消歧","verdict":"accept","commit":null}
 {"ts":"2026-04-24T05:43:00Z","mode":"trail","action":"create-page","target":"东国","type":"concept","rationale":"wanted_pages，4 refs，纵横家语境东方诸国","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:46:00Z","mode":"observe","action":"update-wanted-pages","target":"Special:WantedPages","rationale":"commit后刷新wanted_pages","verdict":"accept","commit":"c1cebfbae"}
+{"ts":"2026-04-24T05:47:00Z","mode":"trail","action":"create-page","target":"桀","type":"person","rationale":"wanted_pages，5 refs，夏末暴君桀纣","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:47:30Z","mode":"trail","action":"create-page","target":"曲沃","type":"place","rationale":"wanted_pages，5 refs，曲沃代翼/晋国历史关键地","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:48:00Z","mode":"explore","action":"discover-wanted","source":"wanted_pages.json","rationale":"2:1比例explore","verdict":"accept","commit":null,"note":"commit后刷新：栎阳(5)/桀(5)/曲沃(5)/武遂(5)/关(5)/河内(5)/轵(4)/鄗(4)等新候选"}
+{"ts":"2026-04-24T05:48:30Z","mode":"trail","action":"create-page","target":"栎阳","type":"place","rationale":"wanted_pages，5 refs，秦献公迁都/商鞅变法据点","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:49:00Z","mode":"trail","action":"create-page","target":"沙丘","type":"place","rationale":"wanted_pages，5 refs，历史凶险地/秦始皇崩亡处","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:49:30Z","mode":"explore","action":"discover-wanted","source":"wanted_pages.json","rationale":"2:1比例explore","verdict":"accept","commit":null,"note":"下批5 refs：武遂(5)/河外(5)；4 refs：濮阳/甘泉/番禺/蔡/河内/轵/鄗；内容均清晰，可快速创建"}
+{"ts":"2026-04-24T05:52:00Z","mode":"trail","action":"create-page","target":"番禺","type":"place","rationale":"wanted_pages，4 refs，南越国都城今广州","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:52:30Z","mode":"trail","action":"create-page","target":"濮阳","type":"place","rationale":"wanted_pages，4 refs，卫国帝丘/荆轲/汲黯故里","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:53:00Z","mode":"explore","action":"W11","target":"type_audits/2026-04-24-R1080.md","rationale":"W11 R1080 mod10触发+2:1 explore","verdict":"accept","commit":null,"note":"5613页，place 61→70（session翻倍），分类无误，概念页 66→68"}
+{"ts":"2026-04-24T05:53:30Z","mode":"trail","action":"create-page","target":"甘泉","type":"place","rationale":"wanted_pages，4 refs，汉武帝甘泉宫/泰一祠","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:54:00Z","mode":"trail","action":"create-page","target":"蔡","type":"state","rationale":"wanted_pages，4 refs，蔡国/管蔡世家","verdict":"accept","commit":null}
+{"ts":"2026-04-24T05:58:00Z","mode":"explore","action":"discover-wanted","source":"wanted_pages.json","rationale":"2:1比例explore","verdict":"accept","commit":null,"note":"下批：武遂(5)/河外(5)/河内(4)/鄗(4)/轵(4)/枋头(4)/滕(4)/曲阜(4)等；武遂=韩地，河外/河内=地理概念"}
+{"ts":"2026-04-24T05:41:38Z","round":1085,"mode":"trail","action":"create-page","target":"薛","type":"place","links":["075_孟尝君列传","099_刘敬叔孙通列传","130_太史公自序"],"note":"孟尝君封地，冯谖市义，叔孙通薛人"}
+{"ts":"2026-04-24T05:42:21Z","round":1086,"mode":"trail","action":"create-page","target":"西河","type":"place","links":["065_孙子吴起列传","071_樗里子甘茂列传","092_淮阴侯列传","121_儒林列传"],"note":"吴起守西河，韩信渡西河，子夏讲学"}
+{"ts":"2026-04-24T05:43:11Z","round":1087,"mode":"explore","action":"scan-wanted","note":"4-ref batch: 颍川/陶/陇西/阿/鄢/观津/河外/武遂; 单字歧义(上/武/成/偃)需消歧; 下轮trail→颍川"}
+{"ts":"2026-04-24T05:43:34Z","round":1088,"mode":"trail","action":"create-page","target":"颍川","type":"place","links":["020_建元以来侯者年表","101_袁盎晁错列传","107_魏其武安侯列传","129_货殖列传"],"note":"韩国故地，晁错颍川人，灌夫豪强"}

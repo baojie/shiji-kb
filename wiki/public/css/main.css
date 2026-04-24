@@ -150,6 +150,7 @@ body.is-home .page { grid-template-columns: 1fr; }
 }
 
 .search-box { margin: 2em 0 2.5em; position: relative; }
+.wiki-home .search-box { max-width: 520px; }
 .search-box input {
   width: 100%;
   padding: 1em 1.3em;

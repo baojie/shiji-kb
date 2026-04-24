@@ -341,6 +341,7 @@ export function renderHome(core) {
       <div class="featured-grid">${featuredHtml}</div>
 
       <nav class="home-links">
+        <a href="#${encodeURIComponent('Special:About')}" class="home-link home-link--about">关于本 Wiki</a>
         <a href="#${encodeURIComponent('Special:AllPages')}" class="home-link">全部 ${ids.length} 页 →</a>
         <a href="#?recent" class="home-link">最近修订 →</a>
         <a href="#${encodeURIComponent('Special:Random')}" class="home-link">随机页 →</a>
