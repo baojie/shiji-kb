@@ -248,6 +248,8 @@ const INFOBOX_SKIP = new Set([
   'quality_score', 'path', 'paragraph_refs',
   // 地理坐标由 place-map 插件渲染为地图，无需文本显示
   'coords', 'coords_name', 'coords_source',
+  // 图片由 sidebar-portrait 渲染，无需在 infobox 表格里重复显示
+  'image', 'image_caption', 'image_credit',
 ]);
 
 export async function renderInfobox(core, front, meta, pid) {
