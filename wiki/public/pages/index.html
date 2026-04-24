@@ -69,11 +69,13 @@ article h3 {
   color: var(--accent);
 }
 article p { margin: .7em 0; }
+article p:has(+ blockquote) { margin-bottom: .1em; }
+article blockquote + p { margin-top: .1em; }
 article ul, article ol { padding-left: 1.4em; }
 article li { margin: .3em 0; }
 article blockquote {
-  margin: 1em 0;
-  padding: .6em 1em;
+  margin: .1em 0;
+  padding: .3em 1em;
   border-left: 3px solid var(--accent);
   background: var(--bg-box);
   color: var(--fg-muted);
@@ -173,13 +175,13 @@ footer .broken-list code { color: var(--link-broken); }
 <main class="page">
   
   <article>
-<h1>史记 Wiki (v0 原型)</h1><p>共 1 页。</p><ul class="page-list"><li><span class="type-tag">人名</span> <a href="晁错.html">晁错</a></li></ul>
+<h1>史记 Wiki (v0 原型)</h1><p>共 1 页。</p><ul class="page-list"><li><span class="type-tag">地名</span> <a href="蒲阪.html">蒲阪</a></li></ul>
   </article>
 </main>
 <footer>
   <small>
     源文件: <code>(生成)</code> ·
-    生成时间: 2026-04-23 07:05
+    生成时间: 2026-04-24 16:42
     
   </small>
 </footer>

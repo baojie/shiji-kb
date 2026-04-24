@@ -81,11 +81,13 @@ article h3 {
   color: var(--accent);
 }
 article p { margin: .7em 0; }
+article p:has(+ blockquote) { margin-bottom: .1em; }
+article blockquote + p { margin-top: .1em; }
 article ul, article ol { padding-left: 1.4em; }
 article li { margin: .3em 0; }
 article blockquote {
-  margin: .3em 0;
-  padding: .4em 1em;
+  margin: .1em 0;
+  padding: .3em 1em;
   border-left: 3px solid var(--accent);
   background: var(--bg-box);
   color: var(--fg-muted);
