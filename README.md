@@ -2,7 +2,7 @@
 
 > 两千年来我们读《史记》，现在让机器帮我们"看见"隐藏的知识网络。
 
-**在线阅读**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
+**在线阅读**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **Wiki**: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/) | **报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
 **许可证**: [CC BY-NC-SA 4.0](LICENSE)
 
 学术文献请引用：鲍捷，史记知识库，2026，在线发布于https://github.com/baojie/shiji-kb
@@ -158,6 +158,55 @@
 - **学术研究**：矛盾检测、史料溯源、系统化推理（详见[北大考古学生反馈](#社区反馈)）
 - **跨语言历史**：波斯文/蒙古文/阿拉伯文史料融合中文知识图谱，边疆史多视角呈现
 - **考古应用**：16万份甲骨拓片系统性分析，单字研究逻辑并行化
+
+---
+
+## 史记 Wiki
+
+**在线地址**: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/)
+
+《史记》结构化知识的百科式入口——把标注数据、知识图谱、史源分析整合为人可阅读的 wiki 页面网络。
+
+### 规模（2026-04-24）
+
+| 指标 | 数值 |
+|------|------|
+| 总页数 | 5,613+ |
+| 精品页 | 421 |
+| 知识量 K | 63,191 |
+| 页面类型 | person / event / story / chapter / place / state / concept / 侯国 / sanwen … 共 15 类 |
+
+### 页面类型
+
+- **person**：人物页，含生平、事件时间线、原文引证、横向对照
+- **event**：事件页，精品事件附五维评分与引文核验
+- **chapter**：130 章节索引页，链接原文阅读器
+- **state**：邦国页（秦/汉/楚/赵/燕/魏/韩/越…），含兴亡脉络
+- **place**：地名页（黄河/咸阳/番禺/鸿门…）
+- **story**：成语典故页（附史记出处与原文）
+- **concept**：政治地理与思想概念页（天下/中国/三秦…）
+- **sanwen**：诏令、辩论、誓词等散文体知识单元
+
+### Butler Agent
+
+wiki 由 **butler**（自主 AI agent）按轮次维护：每轮执行一个原子操作（新建 stub、深化精品页、引文核验、类型整理），每 17 轮批量提交一次。
+
+agent 配备三层反思机制：
+
+| 反思类型 | 触发条件 | 作用 |
+|----------|----------|------|
+| W5 流程反思 | 每 20 条 action | 识别系统性问题，修订操作规则 |
+| W9 图式反思 | 每完成 6 页（3 精品+3 stub） | 发现页面结构模式，建立类型模板 |
+| W11 类型审计 | 每 10 轮 | 扫描错误分类，追踪知识量分布 |
+
+详见：[wiki/doc/butler-reflections.md](wiki/doc/butler-reflections.md) — 所有反思记录总览
+
+### 本地运行
+
+```bash
+python3 wiki/server/serve.py wiki/public 8000
+# 浏览器打开 http://localhost:8000
+```
 
 ---
 

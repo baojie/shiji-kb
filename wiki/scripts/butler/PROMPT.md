@@ -19,6 +19,7 @@
 | v1.7 | `7cea37e` | 2026-04-23 | 删除操作前必须调用 record_revision --action delete |
 | v1.8 | `4267fca` | 2026-04-23 | 新增 KB 读取（w5_ops / w7_citations / w9_schemas / w11_taxonomy）|
 | v1.9 | — | 2026-04-24 | commit 频率从每5轮改为每17轮（质数轮次，减少 agent 碰撞）|
+| v2.0 | — | 2026-04-24 | accept 不再 git add；staging 统一由 /wiki commit 轮执行 |
 
 ---
 
@@ -82,7 +83,7 @@
 1. 红旗检查 (任一命中 → 回滚)
 2. 打分 5 维度 + bonus
 3. accept 门槛: score_after ≥ score_before + 1 或 score_after ≥ 8
-4. accept → `git add <file>`（暂存；**不立即 commit**，每17轮由 /wiki 批量提交）
+4. accept → 不做 git add（staging 由 /wiki commit 轮统一执行）
 5. fail → `git restore <file>` + 写 `failures.jsonl`
 
 ## 记账
