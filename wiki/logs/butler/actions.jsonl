@@ -1692,3 +1692,20 @@
 {"round": 1375, "action": "explore", "type": "scan", "summary": "扫描：亚夫(绛侯周勃世家,周亚夫简称需redirect)/五帝(舜页引用,concept)/五国(梁孝王世家邦国)/五利(孝武本纪,栾大)。下批trail：亚夫redirect/五帝concept", "timestamp": "2026-04-24T07:48:44Z"}
 {"round": 1376, "action": "trail", "type": "create", "page": "亚夫", "summary": "butler/create: 亚夫（redirect→周亚夫）", "timestamp": "2026-04-24T07:48:58Z"}
 {"round": 1377, "action": "trail", "type": "create", "page": "五帝", "summary": "butler/create: 五帝（redirect→001_五帝本纪）", "timestamp": "2026-04-24T07:49:09Z"}
+{"round": 1378, "action": "explore", "type": "scan", "summary": "扫描：仓海君(张良,博浪沙刺秦)/五利将军栾大(孝武本纪方士)/仇液(穰侯列传)/五国(梁孝王世家)。下批trail：仓海君/五利将军", "timestamp": "2026-04-24T07:50:04Z"}
+{"round": 1379, "action": "trail", "type": "create", "page": "仓海君", "summary": "butler/create: 仓海君（person，张良博浪沙刺秦的东方助力者）", "timestamp": "2026-04-24T07:50:19Z"}
+{"round": 1380, "action": "trail", "type": "create", "page": "五利", "summary": "butler/create: 五利（person，即栾大，汉武帝时方士，封五利将军后被诛）", "timestamp": "2026-04-24T07:50:44Z"}
+{"round": 1381, "action": "explore", "type": "scan", "summary": "扫描：仇液(穰侯列传,战国魏臣)/他广(樊郦滕灌列传,汉初人物)/代共王(王子侯者年表)/五国(梁孝王世家)。下批trail：仇液/他广", "timestamp": "2026-04-24T07:51:04Z"}
+{"round": 1382, "action": "trail", "type": "create", "page": "仇液", "summary": "butler/create: 仇液（person，战国赵国外交使臣，赵武灵王遣使韩，又促成魏厓拜秦相）", "timestamp": "2026-04-24T07:51:33Z"}
+{"round": 1383, "action": "trail", "type": "create", "page": "他广", "summary": "butler/create: 他广（person，樊哙后裔，舞阳侯最后一任，因非亲生被夺侯）", "timestamp": "2026-04-24T07:52:01Z"}
+{"round": 1384, "action": "explore", "type": "scan", "summary": "扫描：任嚣(南越列传,秦末南海尉托付赵佗)/令尹子西(楚昭王时令尹,阻止封孔子)/任氏(货殖列传富商)/代共王。下批trail：任嚣/令尹子西", "timestamp": "2026-04-24T07:52:38Z"}
+{"round": 1385, "action": "trail", "type": "create", "page": "任嚣", "summary": "butler/create: 任嚣（person，秦末南海尉，临终授赵佗职，南越建国之缘起）", "timestamp": "2026-04-24T07:53:06Z"}
+{"round": 1386, "action": "trail", "type": "create", "page": "令尹子西", "summary": "butler/create: 令尹子西（person，春秋楚国令尹，阻封孔子，白公胜乱中被杀）", "timestamp": "2026-04-24T07:53:36Z"}
+{"round": 1387, "action": "explore", "type": "scan", "summary": "扫描：任氏(货殖列传,秦汉之际囤粮富商)/中纻(汤诰,仲虺异写)/东王公(神话)/代共王/代顷王。下批trail：任氏/中纻", "timestamp": "2026-04-24T07:54:12Z"}
+{"round": 1388, "action": "trail", "type": "create", "page": "任氏", "summary": "butler/create: 任氏（person，秦汉之际宣曲窖粟富商，货殖列传）", "timestamp": "2026-04-24T07:54:28Z"}
+{"round": 1389, "action": "trail", "type": "create", "page": "中纻", "summary": "butler/create: 中纻（person，即仲虺，商汤辅臣，作仲虺之诰）", "timestamp": "2026-04-24T07:54:55Z"}
+{"round": 1390, "action": "explore", "type": "scan", "summary": "扫描：伊陟(殷本纪,伊尹之子商臣)/燕王(4链接,消歧)/三飐(殷本纪小国,偏僻)/任王后(梁孝王世家)/东王公。下批trail：伊陟/燕王消歧", "timestamp": "2026-04-24T07:55:26Z"}
+{"round": 1391, "action": "trail", "type": "create", "page": "伊陟", "summary": "butler/create: 伊陟（person，伊尹之子，商王太戊之相，以德消妖）", "timestamp": "2026-04-24T07:55:48Z"}
+{"round": 1392, "action": "trail", "type": "create", "page": "燕王", "summary": "butler/create: 燕王（disambiguation，战国/汉初多位燕王消歧）", "timestamp": "2026-04-24T07:56:11Z"}
+{"round": 1393, "action": "explore", "type": "scan+fix", "summary": "扫描+修复：燕王.md中029→034燕召公世家；候选：上官桂/不害/且居/东王公。R1394 commit轮trail：上官桂redirect", "timestamp": "2026-04-24T07:56:53Z"}
+{"round": 1394, "action": "trail", "type": "create", "page": "上官桂", "summary": "butler/create: 上官桂（person，燕王刘旦谋反参与者）", "timestamp": "2026-04-24T07:57:15Z"}
