@@ -1726,3 +1726,20 @@
 {"round": 1409, "action": "trail", "type": "create", "page": "允常", "summary": "butler/create: 允常（person，春秋越国君主，句践之父）", "timestamp": "2026-04-24T08:02:50Z"}
 {"round": 1410, "action": "explore", "type": "scan", "summary": "扫描：侯敞(王黄条目,汉初陈豨部将)/东王公(西王母条目,道教神话)。R1411 commit轮trail：侯敞", "timestamp": "2026-04-24T08:03:09Z"}
 {"round": 1411, "action": "trail", "type": "create", "page": "侯敞", "summary": "butler/create: 侯敞（person，汉初陈豨叛军将领，曲逆被擒）", "timestamp": "2026-04-24T08:03:21Z"}
+{"round":1412,"action":"explore","target":"Special:WantedPages","summary":"刷新wanted_pages：200条待建，top候选：冯驩(孟尝君列传)、头曼(匈奴列传)、公仲侈(樗里子甘茂列传)、共叔段(郑世家)、兒宽(儒林列传)"}
+{"round":1413,"action":"trail","target":"冯驩","type":"person","summary":"新建冯驩页面：战国齐孟尝君门客，弹铗焚券三窟之策，见075_孟尝君列传"}
+{"round":1414,"action":"trail","target":"头曼","type":"person","summary":"新建头曼页面：匈奴单于，冒顿之父，被冒顿鸣镝弑杀，见110_匈奴列传"}
+{"round":1415,"action":"explore","target":"章节链接审查","summary":"扫描所有页面的章节链接（pattern：NNN_标题），无破损链接，系统链接完整"}
+{"round":1416,"action":"trail","target":"兒宽","type":"person","summary":"新建兒宽页面：西汉儒学大臣，公孙弘弟子，御史大夫，参制太初历，见121_儒林列传"}
+{"round":1417,"action":"trail","target":"太戊","type":"person","summary":"新建太戊页面：商代中宗中兴之君，任用伊陟修德复兴，见003_殷本纪"}
+{"round":1418,"action":"explore","target":"wanted_pages实质链接分析","summary":"分析wanted_pages中来自实质章节的链接：top候选：共叔段(郑世家)、公仲侈(甘茂列传)、内史腾(韩安)、卫律(苏武)、东王公(西王母)、公孙敬声(公孙贺)"}
+{"round":1419,"action":"trail","target":"共叔段","type":"person","summary":"新建共叔段页面：春秋郑庄公弟，共叔段之乱主角，见042_郑世家"}
+{"round":1420,"action":"explore","target":"W11 type audit","summary":"类型审计R1420：总页8375，empty_type=0（R1350时127→全清），person=1011，concept=90，redirect=205，disambiguation=10"}
+{"round":1421,"action":"trail","target":"内史腾","type":"person","summary":"新建内史腾页面：秦始皇十七年灭韩之秦将，俘韩王安，见045_韩世家"}
+{"round":1422,"action":"explore","target":"人物候选优先级","summary":"分析人物候选：next batch选卫律(苏武)、公仲侈(甘茂列传)、刘嫖(馆陶公主/佞幸列传)、刘弗陵(汉昭帝/刘旦)、夏太后(吕不韦列传)"}
+{"round":1423,"action":"trail","target":"卫律","type":"person","summary":"新建卫律页面：叛汉降匈奴，逼降苏武反角，见110_匈奴列传"}
+{"round":1424,"action":"trail","target":"刘嫖","type":"person","summary":"新建刘嫖页面：馆陶公主，汉景帝姐，助刘彻立太子的外戚，见125_佞幸列传"}
+{"round":1425,"action":"explore","target":"概念类wanted_pages","summary":"概念候选：分封制(周公摄政)、六国(礼书)、养士(战国四公子)、太初历(历法政治合法性)、天人感应(封禅礼制)；next trail选分封制"}
+{"round":1426,"action":"trail","target":"分封制","type":"concept","summary":"新建分封制概念页：周代核心政治制度，天子→诸侯→卿大夫层级，见004_周本纪"}
+{"round":1427,"action":"trail","target":"夏太后","type":"person","summary":"新建夏太后页面：秦庄襄王母/秦始皇祖母，秦始皇七年薨，见085_吕不韦列传"}
+{"round":1428,"action":"trail","target":"R1428-commit","type":"admin","summary":"R1412-R1427 commit触发（17×84=1428）：新建15页（冯驩/头曼/兒宽/太戊/共叔段/内史腾/卫律/刘嫖/分封制/夏太后等），W11审计empty_type=0，K=248535"}
