@@ -23,10 +23,6 @@ body {
 }
 
 .topnav {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  padding: .6em 1.2em;
   background: #fff;
   border-bottom: 1px solid var(--border);
   font-family: var(--sans);
@@ -35,13 +31,21 @@ body {
   top: 0;
   z-index: 10;
 }
+.topnav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: .6em 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
 .topnav .brand { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
 .topnav .crumb { color: var(--fg-muted); }
 .topnav .spacer { flex: 1; }
-.topnav .spacer-sm { flex: 0 0 .4em; }
 .topnav-search { display: flex; align-items: center; }
 .topnav-search input { width: 160px; padding: .3em .6em; border: 1px solid var(--border); border-radius: 4px; font-size: 13px; font-family: var(--sans); outline: none; background: var(--bg-code); color: var(--fg); }
 .topnav-search input:focus { border-color: var(--accent); width: 220px; transition: width .2s; }
+body.is-home .topnav-search { display: none; }
 .topnav .status { color: var(--fg-muted); font-style: italic; font-size: 12px; }
 
 .page {
@@ -153,8 +157,8 @@ body.is-home .page { grid-template-columns: 1fr; }
 .wiki-home .search-box { max-width: 520px; }
 .search-box input {
   width: 100%;
-  padding: 1em 1.3em;
-  font-size: 1.4em;
+  padding: .55em 1em;
+  font-size: 1.1em;
   border: 2px solid var(--border);
   border-radius: 6px;
   background: white;
@@ -223,6 +227,12 @@ body.is-home .page { grid-template-columns: 1fr; }
   text-decoration: none;
   color: inherit;
   transition: transform .12s, box-shadow .12s, border-color .12s;
+  overflow: hidden;
+}
+.featured-card.has-thumb {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 .featured-card:hover {
   border-color: var(--accent);
@@ -235,6 +245,27 @@ body.is-home .page { grid-template-columns: 1fr; }
   color: var(--accent);
   border: none;
   padding: 0;
+}
+.card-thumb {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #f0ece4;
+  flex-shrink: 0;
+}
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform .2s;
+}
+.featured-card:hover .card-thumb img {
+  transform: scale(1.04);
+}
+.card-body {
+  padding: 1em 1.1em;
 }
 .card-life {
   font-size: .85em;

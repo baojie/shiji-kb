@@ -12,19 +12,21 @@
 <body>
 
 <nav class="topnav">
-  <a href="#" class="brand">史记 Wiki</a>
-  <span id="crumb" class="crumb"></span>
-  <span class="spacer"></span>
-  <form class="topnav-search" onsubmit="event.preventDefault();const v=this.q.value.trim();if(v)location.hash=encodeURIComponent(v);">
-    <input id="topnav-q" name="q" type="search" placeholder="搜索页面…" autocomplete="off" list="topnav-pages">
-    <datalist id="topnav-pages"></datalist>
-  </form>
-  <span class="spacer-sm"></span>
-  <a href="#Special%3AAll" class="topnav-link">特殊页面</a>
-  <a href="#?recent" class="topnav-link">最近修订</a>
-  <a href="shiji-kb/index.html" class="topnav-link">主站</a>
-  <a href="https://github.com/baojie/shiji-kb" class="topnav-link" target="_blank" rel="noopener">GitHub</a>
-  <span id="status" class="status"></span>
+  <div class="topnav-inner">
+    <a href="#" class="brand">史记 Wiki</a>
+    <form class="topnav-search" onsubmit="event.preventDefault();const v=this.q.value.trim();if(v)location.hash=encodeURIComponent(v);">
+      <input id="topnav-q" name="q" type="search" placeholder="搜索页面…" autocomplete="off" list="topnav-pages">
+      <datalist id="topnav-pages"></datalist>
+    </form>
+    <span id="crumb" class="crumb"></span>
+    <span class="spacer"></span>
+    <a href="#Special%3AAbout" class="topnav-link">关于</a>
+    <a href="#Special%3AAll" class="topnav-link">特殊页面</a>
+    <a href="#?recent" class="topnav-link">最近修订</a>
+    <a href="shiji-kb/index.html" class="topnav-link">主站</a>
+    <a href="https://github.com/baojie/shiji-kb" class="topnav-link" target="_blank" rel="noopener">GitHub</a>
+    <span id="status" class="status"></span>
+  </div>
 </nav>
 
 <main class="page" id="page-root">

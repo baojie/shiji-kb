@@ -510,9 +510,13 @@ function renderFeaturedCard(p) {
   const aliasPreview = (p.aliases || []).slice(0, 3).join(' · ');
   const aliasHtml = aliasPreview
     ? `<div class="card-aliases">${escapeHtml(aliasPreview)}</div>` : '';
-  return `<a class="featured-card" href="#${encodeURIComponent(p.id)}">
-    <h3>${escapeHtml(p.label)}</h3>
-    ${lifeS}${meta}${aliasHtml}
+  const imgHtml = p.image
+    ? `<div class="card-thumb"><img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.label)}" loading="lazy"></div>` : '';
+  return `<a class="featured-card${p.image ? ' has-thumb' : ''}" href="#${encodeURIComponent(p.id)}">
+    ${imgHtml}<div class="card-body">
+      <h3>${escapeHtml(p.label)}</h3>
+      ${lifeS}${meta}${aliasHtml}
+    </div>
   </a>`;
 }
 
