@@ -10,7 +10,7 @@ record_revision.py — 为 wiki/public/pages/<page>.md 写入一条修订记录.
 产出:
     1. wiki/public/history/<slug>/<rev_id>.md   (内容副本)
     2. wiki/public/history/<slug>.json          (per-page 索引, 追加 entry)
-    3. wiki/public/recent.json                  (全局最近, 追加 entry, 保 limit 条)
+    3. wiki/public/recent.json                  (全局修订日志, append-only, 无上限)
 
 rev_id 格式: YYYYMMDD-HHMMSS-<sha256[:6]>  (北京时间)
 
@@ -118,51 +118,41 @@ def main() -> int:
         encoding='utf-8'
     )
 
-    # 3. 更新 recent.json
+    # 3. 更新 recent.json（append-only 日志，超限轮转，类 logrotate）
+    ROTATE_LIMIT = 100    # 超过此条数触发轮转（永久保留所有轮转文件）
+
     if RECENT.exists():
         recent = json.loads(RECENT.read_text(encoding='utf-8'))
+        # 一次性迁移：旧格式有 'limit' key，entries 是倒序（最新在前）
+        if 'limit' in recent:
+            old_entries = recent.get('entries', [])
+            migrated = []
+            for e in reversed(old_entries):
+                clean = {k: v for k, v in e.items()
+                         if k not in ('limit', 'total_pages', 'total_revisions', 'content')}
+                migrated.append(clean)
+            recent = {'entries': migrated}
     else:
-        recent = {'limit': 50, 'total_pages': 0, 'entries': []}
+        recent = {'entries': []}
 
-    recent['entries'].insert(0, {'page': page, **entry})
+    # 追加新条目（不含 content 字段）
+    new_entry = {'page': page, **{k: v for k, v in entry.items() if k != 'content'}}
+    recent['entries'].append(new_entry)
 
-    # W5 v4 提案 11 + user-req-7: recent.json 上限 500, 旧的月度归档
-    ARCHIVE_LIMIT = 500
-    if len(recent['entries']) > ARCHIVE_LIMIT:
-        overflow = recent['entries'][ARCHIVE_LIMIT:]
-        recent['entries'] = recent['entries'][:ARCHIVE_LIMIT]
-        # 按月分卷归档
-        archive_dir = PUBLIC / 'recent-archive'
-        archive_dir.mkdir(exist_ok=True)
-        months_touched = set()
-        for item in overflow:
-            ym = item['timestamp'][:7]  # YYYY-MM
-            arc = archive_dir / f'{ym}.json'
-            if arc.exists():
-                data = json.loads(arc.read_text(encoding='utf-8'))
-            else:
-                data = {'month': ym, 'entries': []}
-            data['entries'].append(item)
-            arc.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n',
-                          encoding='utf-8')
-            months_touched.add(ym)
-        # 维护 archive-index.json 供前端 renderRecent 翻页用
-        idx_file = archive_dir / 'index.json'
-        if idx_file.exists():
-            idx = json.loads(idx_file.read_text(encoding='utf-8'))
-        else:
-            idx = {'months': []}
-        by_month = {m['name']: m for m in idx['months']}
-        for ym in months_touched:
-            arc = archive_dir / f'{ym}.json'
-            data = json.loads(arc.read_text(encoding='utf-8'))
-            by_month[ym] = {'name': ym, 'count': len(data['entries'])}
-        idx['months'] = sorted(by_month.values(), key=lambda x: x['name'], reverse=True)
-        idx['total_archived'] = sum(m['count'] for m in idx['months'])
-        idx_file.write_text(json.dumps(idx, ensure_ascii=False, indent=2) + '\n',
-                           encoding='utf-8')
-    recent['total_pages'] = len({e['page'] for e in recent['entries']})
-    recent['total_revisions'] = len(recent['entries'])
+    # 轮转：超限则找最大编号 N，recent.json → recent.(N+1).json
+    rotations = recent.get('rotations', 0)
+    if len(recent['entries']) > ROTATE_LIMIT:
+        rotations += 1
+        recent['rotations'] = rotations
+        RECENT.write_text(
+            json.dumps(recent, ensure_ascii=False, indent=2) + '\n',
+            encoding='utf-8'
+        )
+        RECENT.rename(PUBLIC / f'recent.{rotations}.json')
+        recent = {'entries': [], 'rotations': rotations}
+        print(f'  [rotate] recent.json → recent.{rotations}.json')
+
+    recent['rotations'] = rotations
     RECENT.write_text(
         json.dumps(recent, ensure_ascii=False, indent=2) + '\n',
         encoding='utf-8'

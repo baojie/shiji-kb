@@ -65,7 +65,7 @@ auto_generated: true
 
 《史记》第 {n} 篇 · {genre}
 
-*查看原文*: [{raw_name}](../../../chapter_md/{raw_name})
+*查看原文*: [https://baojie.github.io/shiji-kb/chapters/{pid}.html](https://baojie.github.io/shiji-kb/chapters/{pid}.html)
 """
 
 
@@ -103,7 +103,6 @@ def main() -> int:
             nn_raw=nn,
             n=n,
             genre=genre_of(n),
-            raw_name=md.name,
         )
         out.write_text(content, encoding="utf-8")
         created += 1

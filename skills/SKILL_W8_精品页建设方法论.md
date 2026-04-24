@@ -233,6 +233,8 @@ for f in sorted(os.listdir(facts_dir)):
 | entity_index | 跨章统计 | `kg/entities/data/entity_index.json` |
 | taxonomy | 全文频率 | `kg/taxonomy/person.ttl` |
 | pn_text_index | 原文查找（前30章）| `data/pn_text_index.pkl` |
+| find_pn_for_quote | 给定引文→全文模糊匹配→返回 PN | `python3 scripts/find_pn_for_quote.py "引文内容"` |
+| find_pn_by_text | 在指定章节中按文本查找 PN | `python3 scripts/find_pn_by_text.py` |
 | ontology v2 | 场景结构化数据 | `kg/ontology/ontology-v2/chapters/` |
 
 ---

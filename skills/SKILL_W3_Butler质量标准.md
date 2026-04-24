@@ -13,7 +13,7 @@ description: Butler 的 wiki 质量标准 (rubric) — 一个页面怎样算"好
 
 - **v0.1** (2026-04-22) · 初版, 5 维度, 量化阈值偏松
 - **v0.2** (2026-04-23) · 将"引证完整性"升为独立维度 (第6维), 强制 `required_citation: true`; 新增溯源红旗
-- v0.3 预期 (10 次反思后) · 收紧字数阈值
+- **v0.3** (2026-04-24) · 新增 `source_match_rules`：canonical_name ≥ 3 字才做自动匹配；新增2条溯源红旗；W2 对应新增 `source-with-pn` 动作
 
 ---
 
@@ -65,6 +65,10 @@ citation_integrity:                         # 新增 v0.2
     - pn_annotation   # PN 标注结果
     - sku_fact        # ontology-v2 fact
     - doc_report      # doc/entities 分析报告
+  source_match_rules:                       # 新增 v0.3
+    min_name_chars: 3                       # canonical_name 少于3字不做自动匹配（误链太多）
+    match_field_priority: [canonical_name, label, slug]
+    tool: wiki/scripts/butler/find_unsourced.py  # 标准扫描工具
 ```
 
 ---
@@ -81,6 +85,8 @@ citation_integrity:                         # 新增 v0.2
 - 🚩 页面字数 < 50 (空壳)
 - 🚩 **直接引文无法在 `chapter_md/` 中 grep 到** (v0.2 新增)
 - 🚩 **页面含结论性陈述但无任何出处标注** (v0.2 新增)
+- 🚩 **person/concept/overview 页无 `sources` + `event_ids` 字段，且 canonical_name ≥ 3 字** (v0.3 新增) → 用 `source-with-pn` 动作补充
+- 🚩 **溯源匹配使用了 ≤ 2 字的名称** (v0.3 新增) → 误链风险高，必须用 ≥ 3 字的 canonical_name 匹配
 
 ---
 
