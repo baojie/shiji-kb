@@ -1658,3 +1658,20 @@
 {"round": 1341, "action": "explore", "type": "scan", "summary": "扫描，新候选：哀姜(鲁，庆父之乱)/周室(redirect)/周天子(concept)，下批trail：哀姜/周室redirect", "timestamp": "2026-04-24T07:28:11Z"}
 {"round": 1342, "action": "trail", "type": "create", "page": "哀姜", "summary": "butler/create: 哀姜（person，春秋鲁国，庆父之乱参与者）", "timestamp": "2026-04-24T07:28:29Z"}
 {"round": 1343, "action": "trail", "type": "create", "page": "周室", "summary": "butler/create: 周室（redirect→周）", "timestamp": "2026-04-24T07:28:42Z"}
+{"round": 1344, "action": "explore", "type": "scan", "summary": "扫描，新候选：三桓(concept,鲁三卿)/中行说(person,匈奴列传)/燕王(disambig)/上官桀(person,汉昭帝)，下批trail：三桓/中行说", "timestamp": "2026-04-24T07:31:31Z"}
+{"round": 1345, "action": "trail", "type": "create", "page": "三桓", "summary": "butler/create: 三桓（concept，鲁国三大卿族：季孙/孟孙/叔孙）", "timestamp": "2026-04-24T07:32:01Z"}
+{"round": 1346, "action": "trail", "type": "create", "page": "中行说", "summary": "butler/create: 中行说（person，汉初降匈奴宦官，匈奴列传）", "timestamp": "2026-04-24T07:32:27Z"}
+{"round": 1347, "action": "explore", "type": "scan", "summary": "扫描：发现唐眛.md链接086→应084，纪传体.md链接065→应086；候选新页：上官桀/上官大夫；下批trail：修复两处错误链接/上官大夫", "timestamp": "2026-04-24T07:33:30Z"}
+{"round": 1348, "action": "trail", "type": "fix", "page": "唐眛,纪传体", "summary": "修复章节链接：唐眛086→084屈原贾生列传；纪传体065→086刺客列传", "timestamp": "2026-04-24T07:33:48Z"}
+{"round": 1349, "action": "trail", "type": "create", "page": "上官大夫", "summary": "butler/create: 上官大夫（person，战国楚臣，谗毁屈原者）", "timestamp": "2026-04-24T07:34:09Z"}
+{"round": 1350, "action": "explore", "type": "scan+W11audit", "summary": "W11审计：8321页，空type=127（同R1290，已知问题）。发现5处错误章节链接：巨鹿之战087→073，战国四公子074→075，柴武101→095，芒卯079_雎→079_睢，宜阳071_甘茂→071_樗里子甘茂。下批trail：修复这些链接", "timestamp": "2026-04-24T07:36:02Z"}
+{"round": 1351, "action": "trail", "type": "fix", "page": "巨鹿之战,战国四公子,柴武,芒卯,宜阳", "summary": "修复5处错误章节链接：087→073白起王翦/074→075孟尝君/101→095樊郦滕灌/079雎→079睢范睢/071甘茂→071樗里子甘茂", "timestamp": "2026-04-24T07:36:45Z"}
+{"round": 1352, "action": "trail", "type": "create", "page": "上官桀", "summary": "butler/create: 上官桀（person，汉武帝伐大宛将领，昭帝时辅政权臣，后谋反被诛）", "timestamp": "2026-04-24T07:37:08Z"}
+{"round": 1353, "action": "explore", "type": "scan", "summary": "扫描：上官安(2链接,汉昭帝时)/东越王郢/东海王摇(东越列传)/东郭先生(滑稽列传)/燕王(消歧)。下批trail：上官安/东越王郢", "timestamp": "2026-04-24T07:37:40Z"}
+{"round": 1354, "action": "trail", "type": "create", "page": "上官安", "summary": "butler/create: 上官安（person，上官桀之子，昭帝后父，谋反被诛）", "timestamp": "2026-04-24T07:38:00Z"}
+{"round": 1355, "action": "trail", "type": "fix", "page": "116_西南夷列传", "summary": "修复：东越王郢→闽越王郢（郢为闽越王，馀善才是东越王）", "timestamp": "2026-04-24T07:38:49Z"}
+{"round": 1356, "action": "explore", "type": "scan", "summary": "扫描：东海王摇(东越列传)/东园公(张良,商山四皓)/与民休息(concept)/乐臣公(乐毅列传)/燕王(消歧)。下批trail：东海王摇/东园公", "timestamp": "2026-04-24T07:39:39Z"}
+{"round": 1357, "action": "trail", "type": "create", "page": "东海王摇", "summary": "butler/create: 东海王摇（person，汉初东瓯国君，句践后裔）", "timestamp": "2026-04-24T07:39:59Z"}
+{"round": 1358, "action": "trail", "type": "create", "page": "东园公", "summary": "butler/create: 东园公（person，商山四皓之一，助定汉太子位）", "timestamp": "2026-04-24T07:40:19Z"}
+{"round": 1359, "action": "explore", "type": "scan", "summary": "扫描：夏黄公/甪里先生/绮里季(商山四皓另三人，东园公引入)/燕王(消歧)。R1360为commit轮，trail创建夏黄公", "timestamp": "2026-04-24T07:40:38Z"}
+{"round": 1360, "action": "trail", "type": "create", "page": "夏黄公", "summary": "butler/create: 夏黄公（person，商山四皓之一，助定汉太子位）", "timestamp": "2026-04-24T07:40:54Z"}
