@@ -87,6 +87,8 @@ function hideSidebar() {
   if (ib) { ib.hidden = true; ib.innerHTML = ''; }
   const portrait = document.getElementById('sidebar-portrait');
   if (portrait) { portrait.hidden = true; portrait.innerHTML = ''; }
+  const mapEl = document.getElementById('sidebar-map');
+  if (mapEl) { mapEl.hidden = true; mapEl.innerHTML = ''; }
 }
 
 function fmtTimestamp(iso) {
@@ -157,7 +159,8 @@ export async function renderPage(core, pid, meta, mdText) {
   }
   renderSidebarPortrait(front);
   const portraitEl = document.getElementById('sidebar-portrait');
-  sidebarEl.hidden = ibEl.hidden && (!portraitEl || portraitEl.hidden);
+  const mapEl = document.getElementById('sidebar-map');
+  sidebarEl.hidden = ibEl.hidden && (!portraitEl || portraitEl.hidden) && (!mapEl || mapEl.hidden);
 
   const label = front.label || meta.label;
   document.getElementById('crumb').textContent =
@@ -246,8 +249,6 @@ const FIELD_LABELS = {
 const INFOBOX_SKIP = new Set([
   'id', 'label', 'title', 'type', 'featured', 'auto_generated',
   'quality_score', 'path', 'paragraph_refs',
-  // 地理坐标由 place-map 插件渲染为地图，无需文本显示
-  'coords', 'coords_name', 'coords_source',
   // 图片由 sidebar-portrait 渲染，无需在 infobox 表格里重复显示
   'image', 'image_caption', 'image_credit',
 ]);

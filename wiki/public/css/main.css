@@ -166,18 +166,10 @@ aside.sidebar {
 }
 
 /* 地名地图（place-map 插件） */
-.map-cell {
-  padding: 0 !important;
-}
-.map-cell #sidebar-map-container {
-  border-radius: 0 0 3px 3px;
-}
-.map-cell .map-source {
-  display: block;
-  font-size: 10px;
-  color: var(--fg-muted);
-  text-align: right;
-  padding: .15em .4em;
+.sidebar-map {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .wikilink.resolved { color: var(--link); text-decoration: none; }

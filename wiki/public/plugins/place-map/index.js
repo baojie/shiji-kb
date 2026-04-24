@@ -1,10 +1,9 @@
 /**
- * place-map — 地名/邦国页面的地图 sidebar 插件
+ * place-map — 地名/邦国页面的地图插件
  *
  * 当页面 type 为 place 或 state 且 frontmatter 有 coords: [lon, lat] 时，
- * 在 infobox 底部注入 Leaflet 地图，标注地点位置。
- *
- * 数据来源：CHGIS V6（scripts/add_place_coords.py 写入）
+ * 在 sidebar 的独立 #sidebar-map 区块中渲染 Leaflet 地图，标注地点位置。
+ * infobox 中的 coords 文本字段保持原样显示。
  */
 
 const LEAFLET_CSS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
@@ -33,44 +32,48 @@ function loadLeaflet() {
   return _leafletPromise;
 }
 
-// 当前 Leaflet map 实例（每次导航重建）
 let _currentMap = null;
 
 export default {
   async init(core) {
     core.hooks.onInfobox.add(async (rows, front, meta) => {
+      const mapEl = document.getElementById('sidebar-map');
+      if (!mapEl) return rows;
+
       const type = front.type || meta.type;
-      if (type !== 'place' && type !== 'state') return rows;
+      if (type !== 'place' && type !== 'state') {
+        // 非地名页：隐藏地图区块
+        mapEl.hidden = true;
+        mapEl.innerHTML = '';
+        if (_currentMap) { _currentMap.remove(); _currentMap = null; }
+        return rows;
+      }
 
       const coords = front.coords;
-      if (!Array.isArray(coords) || coords.length < 2) return rows;
+      if (!Array.isArray(coords) || coords.length < 2) {
+        mapEl.hidden = true;
+        mapEl.innerHTML = '';
+        if (_currentMap) { _currentMap.remove(); _currentMap = null; }
+        return rows;
+      }
 
       const [lon, lat] = coords.map(Number);
       if (!isFinite(lon) || !isFinite(lat)) return rows;
 
-      const label    = front.label || meta.label || '';
-      const srcNote  = front.coords_source ? `<span class="map-source">${front.coords_source}</span>` : '';
+      const label = front.label || meta.label || '';
 
-      // 地图容器行（colspan=2，固定高度）
-      const mapRow = `<tr><td colspan="2" class="map-cell">
-        <div id="sidebar-map-container" style="height:200px;width:100%;"></div>
-        ${srcNote}
-      </td></tr>`;
+      // 准备容器，先显示骨架
+      mapEl.hidden = false;
+      mapEl.innerHTML = '<div id="sidebar-map-leaflet" style="height:200px;width:100%;"></div>';
 
-      rows = [...rows, mapRow];
-
-      // 等 DOM 更新后再初始化 Leaflet
+      // 等 DOM 更新后初始化 Leaflet
       setTimeout(async () => {
         try {
           await loadLeaflet();
-          const el = document.getElementById('sidebar-map-container');
+          const el = document.getElementById('sidebar-map-leaflet');
           if (!el) return;
 
-          // 销毁上一页残留的地图实例
-          if (_currentMap) {
-            _currentMap.remove();
-            _currentMap = null;
-          }
+          if (_currentMap) { _currentMap.remove(); _currentMap = null; }
 
           const map = window.L.map(el, {
             center: [lat, lon],
@@ -83,11 +86,13 @@ export default {
             { attribution: '© <a href="https://www.openstreetmap.org/">OpenStreetMap</a>', maxZoom: 18 }
           ).addTo(map);
 
-          window.L.marker([lat, lon])
-            .addTo(map)
-            .bindPopup(label || '');
+          window.L.marker([lat, lon]).addTo(map).bindPopup(label);
 
           _currentMap = map;
+
+          // 确保 sidebar 可见（地图已就位）
+          const sidebarEl = document.getElementById('sidebar');
+          if (sidebarEl) sidebarEl.hidden = false;
         } catch (e) {
           console.error('[place-map] Leaflet 初始化失败:', e);
         }
