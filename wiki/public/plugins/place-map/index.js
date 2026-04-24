@@ -88,6 +88,12 @@ export default {
 
           window.L.marker([lat, lon]).addTo(map).bindPopup(label);
 
+          // 点击地图任意位置，在新 tab 打开 OpenStreetMap 大图
+          const osmUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=10/${lat}/${lon}`;
+          el.style.cursor = 'pointer';
+          el.title = '点击在新标签页查看大图';
+          map.on('click', () => window.open(osmUrl, '_blank', 'noopener'));
+
           _currentMap = map;
 
           // 确保 sidebar 可见（地图已就位）
