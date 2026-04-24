@@ -623,7 +623,7 @@ export async function renderRecent(core, pageNum = 1) {
   // 若当前文件不足 DISPLAY_LIMIT，从轮转文件（最新编号往旧）补充，直到凑满
   for (let n = rotations; n >= 1 && allEntries.length < DISPLAY_LIMIT; n--) {
     try {
-      const rn = await fetch(`recent.${n}.json`);
+      const rn = await fetch(`log/recent.${n}.json`);
       if (!rn.ok) break;
       const dn = await rn.json();
       allEntries = (dn.entries || []).concat(allEntries);
