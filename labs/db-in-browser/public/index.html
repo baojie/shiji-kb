@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>史记知识库 · 浏览器端 SQLite 查询骨架</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 15px/1.55 -apple-system, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+         max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { margin: 0 0 .25rem; font-size: 1.35rem; }
+  .sub { color: #888; margin: 0 0 1.5rem; font-size: .9rem; }
+  fieldset { border: 1px solid #ccc3; border-radius: 6px; padding: .75rem 1rem 1rem; margin-bottom: 1rem; }
+  legend { padding: 0 .5rem; font-weight: 600; font-size: .9rem; }
+  label { display: inline-block; margin-right: .75rem; font-size: .9rem; }
+  input[type=text], select { font: inherit; padding: .35rem .5rem;
+                             border: 1px solid #ccc6; border-radius: 4px; background: transparent;
+                             color: inherit; }
+  input[type=text] { width: 14rem; }
+  button { font: inherit; padding: .35rem .8rem; border: 1px solid #8884;
+           border-radius: 4px; background: #8881; color: inherit; cursor: pointer; }
+  button:hover { background: #8883; }
+  table { border-collapse: collapse; width: 100%; margin-top: .5rem; font-size: .88rem; }
+  th, td { text-align: left; padding: .35rem .6rem; border-bottom: 1px solid #8882; vertical-align: top; }
+  th { background: #8881; font-weight: 600; }
+  .meta { color: #888; font-size: .82rem; margin-top: .5rem; }
+  #status { color: #888; font-size: .85rem; }
+  #status.err { color: #c33; }
+  pre.sql { background: #8881; padding: .5rem .75rem; border-radius: 4px;
+            font-size: .8rem; overflow-x: auto; margin: .4rem 0 0; }
+  .empty { color: #999; font-style: italic; padding: .5rem 0; }
+</style>
+</head>
+<body>
+
+<h1>史记知识库 · 浏览器端 SQLite 查询骨架</h1>
+<p class="sub">数据库完全由浏览器通过 HTTP Range Requests 按需读取。服务器只是静态文件托管。</p>
+
+<div id="status">正在加载数据库引擎…</div>
+
+<fieldset id="ui" disabled>
+  <legend>实体查询</legend>
+
+  <div style="margin-bottom:.6rem">
+    <label>名字包含
+      <input id="name" type="text" placeholder="例如：韩、秦始、刘">
+    </label>
+    <label>类型
+      <select id="type">
+        <option value="">（全部）</option>
+      </select>
+    </label>
+    <label>朝代
+      <select id="dynasty">
+        <option value="">（全部）</option>
+      </select>
+    </label>
+    <button id="go" type="button">查询</button>
+  </div>
+
+  <pre class="sql" id="sql"></pre>
+  <div id="result"></div>
+  <div class="meta" id="stats"></div>
+</fieldset>
+
+<!-- UMD: 加载后会将 createDbWorker 等符号挂到 window 上 -->
+<script src="./vendor/index.js"></script>
+<script>
+(async function main() {
+  const statusEl = document.getElementById("status");
+  const uiEl     = document.getElementById("ui");
+  const setStatus = (msg, isErr=false) => {
+    statusEl.textContent = msg;
+    statusEl.classList.toggle("err", isErr);
+  };
+
+  try {
+    // UMD 的导出被 webpack 铺在 window 上，直接取
+    const { createDbWorker } = window;
+    if (!createDbWorker) throw new Error("createDbWorker not found on window — vendor/index.js 是否加载成功？");
+
+    // 构建 worker。workerUrl 和 wasmUrl 必须是绝对 URL —— 因为
+    // worker 会在自己的作用域里去 fetch wasm，相对 URL 的 base 会变。
+    const base = new URL(".", location.href);
+    const workerUrl = new URL("./vendor/sqlite.worker.js", base).toString();
+    const wasmUrl   = new URL("./vendor/sql-wasm.wasm",    base).toString();
+    const cfgUrl    = new URL("./db-config.json",          base).toString();
+
+    const worker = await createDbWorker(
+      [{ from: "jsonconfig", configUrl: cfgUrl }],
+      workerUrl,
+      wasmUrl
+    );
+
+    window._dbWorker = worker; // 方便在控制台 debug: _dbWorker.db.query("...")
+
+    // 初始化下拉框：动态从数据库读出 distinct type / dynasty
+    const types     = await worker.db.query("SELECT DISTINCT type    FROM entity ORDER BY type");
+    const dynasties = await worker.db.query("SELECT DISTINCT dynasty FROM entity WHERE dynasty IS NOT NULL ORDER BY dynasty");
+
+    const typeSel = document.getElementById("type");
+    for (const r of types) {
+      const o = document.createElement("option");
+      o.value = r.type; o.textContent = r.type;
+      typeSel.appendChild(o);
+    }
+    const dynSel = document.getElementById("dynasty");
+    for (const r of dynasties) {
+      const o = document.createElement("option");
+      o.value = r.dynasty; o.textContent = r.dynasty;
+      dynSel.appendChild(o);
+    }
+
+    setStatus("就绪。可以在控制台用 window._dbWorker.db.query(sql) 直接跑 SQL。");
+    uiEl.disabled = false;
+
+    // 绑定查询
+    document.getElementById("go").addEventListener("click", runQuery);
+    document.getElementById("name").addEventListener("keydown", e => {
+      if (e.key === "Enter") runQuery();
+    });
+
+    // 首次默认查询
+    runQuery();
+
+  } catch (e) {
+    console.error(e);
+    setStatus("加载失败: " + e.message, true);
+  }
+})();
+
+async function runQuery() {
+  const worker = window._dbWorker;
+  if (!worker) return;
+
+  const name    = document.getElementById("name").value.trim();
+  const type    = document.getElementById("type").value;
+  const dynasty = document.getElementById("dynasty").value;
+
+  // 动态拼 WHERE，参数化绑定避免注入
+  const where = [];
+  const params = {};
+  if (name)    { where.push("name LIKE :name");       params[":name"]    = "%" + name + "%"; }
+  if (type)    { where.push("type = :type");          params[":type"]    = type; }
+  if (dynasty) { where.push("dynasty = :dynasty");    params[":dynasty"] = dynasty; }
+
+  const sql =
+    "SELECT id, name, type, dynasty, birth_year, death_year, description\n" +
+    "  FROM entity\n" +
+    (where.length ? " WHERE " + where.join("\n   AND ") + "\n" : "") +
+    " ORDER BY type, name\n" +
+    " LIMIT 200";
+
+  document.getElementById("sql").textContent = sql;
+
+  const t0 = performance.now();
+  const rows = await worker.db.query(sql, params);
+  const ms = (performance.now() - t0).toFixed(1);
+
+  const resEl = document.getElementById("result");
+  if (rows.length === 0) {
+    resEl.innerHTML = '<div class="empty">无匹配结果。</div>';
+  } else {
+    const fmtYear = y => y == null ? "" : (y < 0 ? "前" + (-y) : String(y));
+    const esc = s => s == null ? "" : String(s)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    let html = '<table><thead><tr>' +
+      '<th>名</th><th>类型</th><th>朝代</th><th>生</th><th>卒</th><th>描述</th>' +
+      '</tr></thead><tbody>';
+    for (const r of rows) {
+      html += `<tr>
+        <td>${esc(r.name)}</td>
+        <td>${esc(r.type)}</td>
+        <td>${esc(r.dynasty)}</td>
+        <td>${fmtYear(r.birth_year)}</td>
+        <td>${fmtYear(r.death_year)}</td>
+        <td>${esc(r.description)}</td>
+      </tr>`;
+    }
+    html += '</tbody></table>';
+    resEl.innerHTML = html;
+  }
+
+  // 展示字节数：这是整个 session 以来累计下载的数据库字节数
+  const stats = await worker.worker.getStats();
+  document.getElementById("stats").textContent =
+    `${rows.length} 行，${ms} ms · 累计已下载 ${(stats.totalFetchedBytes/1024).toFixed(1)} KB / ${(stats.totalBytes/1024).toFixed(1)} KB（共 ${stats.totalRequests} 次 Range 请求）`;
+}
+</script>
+
+</body>
+</html>
