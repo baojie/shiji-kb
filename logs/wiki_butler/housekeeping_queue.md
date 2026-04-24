@@ -72,6 +72,67 @@
 
 ## P1（本周内处理）
 
+- [x] **H1** 融合重复页 → 规范页：`秦灭六国` (concept/featured)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `秦灭六王并中国` (31行, jaccard=0.44)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 秦灭六王并中国→秦灭六国
+- [x] **H1** 融合重复页 → 规范页：`景帝十三子分封` (37行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `景帝十三子五母分宗` (31行, jaccard=0.50)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: story加event_ids[059-001]，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`陈平反间破楚` (32行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `陈平反间计` (32行, jaccard=0.44)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 双源融合+项羽本纪，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`蒙恬北逐匈奴筑长城` (32行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `蒙恬北击匈奴` (32行, jaccard=0.42)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 双源融合+秦始皇本纪，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`范睢上书求见昭王` (event) ← 反转：sanwen改redirect
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `范睢上秦昭王书` (66行) → 已改为redirect
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 全文加入event页，sanwen改redirect
+- [x] **H1** 融合重复页 → 规范页：`功狗与功人的双轨评价体系` (273行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `功狗与功人` (86行, jaccard=0.31)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 功狗与功人→功狗与功人的双轨评价体系
+- [x] **H1** 融合重复页 → 规范页：`细柳营：周亚夫军` (story) ← 反转：overview改redirect
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `细柳营治军` (81行) → 已改为redirect
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 细柳营治军→细柳营：周亚夫军
+- [x] **H1** 融合重复页 → 规范页：`吴起杀妻求将、母死不归` (story) ← 反转：event改redirect
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `吴起杀妻求将破齐` (32行) → 已改为redirect
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: story加event_ids[065-007]，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`唐叔虞与桐叶封弟` (story) ← 反转：event改redirect
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `唐叔虞受封` (32行) → 已改为redirect
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: story加event_ids[039-001]，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`鞍之战晋败齐` (32行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `鞍之战齐败于晋` (32行, jaccard=0.67)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 双源融合+齐太公世家，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`齐魏相王楚伐齐` (29行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `齐魏相王于徐州` (27行, jaccard=0.36)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 双源融合+六国年表，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`陈胜吴广起义、秦亡` (34行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `陈胜吴广起义` (32行, jaccard=0.60)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: story加event_ids[087-012]，redirect建立
+- [~] **H1** 融合重复页 → 规范页：`诛灭诸吕` (80行) — FALSE POSITIVE
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `诛灭诸假惠帝子` (31行, jaccard=0.30)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · 不同事件：诛灭诸吕(整体政变)≠诛灭诸假惠帝子(具体子事件)
+- [x] **H1** 融合重复页 → 规范页：`陆贾再使南越佗去帝号` (32行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `陆贾再使南越` (31行, jaccard=0.50)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 双源融合+郦生陆贾列传，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`代王立为孝文帝` (31行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `代王立为天子` (31行, jaccard=0.36)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R918完成: 双源融合+吕太后本纪，redirect建立
+
 - [x] **H1** 融合重复页 → 规范页：`齐王献城阳免祸` (29行)
       冗余候选（读取后融合进规范页，改为 REDIRECT）：
       - `齐王献城阳郡` (29行, jaccard=0.50)
