@@ -72,6 +72,67 @@
 
 ## P1（本周内处理）
 
+- [x] **H1** 融合重复页 → 规范页：`师旷鼓琴：清角之乐致灾异` (46行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `师旷鼓琴致大旱` (31行, jaccard=0.31)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 加event_ids，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`昭王南巡不返、穆王征犬戎` (33行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `昭王南巡不返` (32行, jaccard=0.50)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 加event_ids，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`李园献妹、刺杀春申君` (39行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `李园献女春申君` (32行, jaccard=0.50)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 加event_ids，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`重耳流亡十九年` (55行) ← 反转：overview改redirect
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `重耳流亡复国` (108行, jaccard=0.36) → 已改为redirect
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 重耳流亡复国→重耳流亡十九年
+- [~] **H1** 融合重复页 → 规范页：`立太子惠` (32行) — FALSE POSITIVE
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `立太子之议` (31行, jaccard=0.38)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · 不同皇帝：高祖立太子(前195)≠文帝立太子(前178)
+- [x] **H1** 融合重复页 → 规范页：`怀王入秦被囚` (32行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `怀王入秦不返` (32行, jaccard=0.40)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 双源融合+屈原列传，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`朱公救子` (32行) ← 反转：overview改redirect
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `朱公救子与财富的逻辑` (93行) → 已改为redirect
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 朱公救子与财富的逻辑→朱公救子
+- [x] **H1** 融合重复页 → 规范页：`淮南衡山江都王谋反` (30行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `淮南衡山王谋反自杀` (29行, jaccard=0.54)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 双源融合+年表，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`太康失国与孔甲扰龙` (45行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `太康失国` (32行, jaccard=0.36)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 加event_ids，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`郦生说齐罢兵` (32行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `郦生说齐七十余城` (32行, jaccard=0.33)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 双源融合+郦生陆贾列传，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`夏太后薨` (32行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `夏太后死` (31行, jaccard=0.43)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 双源融合+秦始皇本纪，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`乐毅报书燕惠王` (event) ← 反转：sanwen改redirect
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `乐毅报燕惠王书（附燕惠王让乐毅书）` (52行) → 已改为redirect
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 全文加入event页，sanwen改redirect
+- [x] **H1** 融合重复页 → 规范页：`开籍田亲耕` (31行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `开籍田` (28行, jaccard=0.43)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 诏令全文加入，redirect建立
+- [x] **H1** 融合重复页 → 规范页：`陈馀遗书章邯` (event) ← 反转：sanwen改redirect
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `陈馀遗章邯书` (34行) → 已改为redirect
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 全文加入event页，sanwen改redirect
+- [x] **H1** 融合重复页 → 规范页：`专诸刺王僚` (64行)
+      冗余候选（读取后融合进规范页，改为 REDIRECT）：
+      - `专诸刺吴王僚` (32行, jaccard=0.62)
+      → 发现: 2026-04-24 discover_duplicates 扫描 · R915完成: 加伍子胥列传第三源，redirect建立
+
 - [ ] **H1** 融合重复页 → 规范页：`王翦灭楚与请田自坚` (102行)
       冗余候选（读取后融合进规范页，改为 REDIRECT）：
       - `王翦灭楚平荆` (32行, jaccard=0.31)
