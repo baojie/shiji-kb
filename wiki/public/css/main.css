@@ -59,7 +59,7 @@ body.is-home .topnav-search { display: none; }
 @media (min-width: 900px) {
   .page { grid-template-columns: minmax(0, 1fr) 280px; }
   .page > article { grid-column: 1; grid-row: 1; }
-  .page > aside.infobox { grid-column: 2; grid-row: 1; }
+  .page > aside.sidebar { grid-column: 2; grid-row: 1; }
 }
 
 article h1 {
@@ -106,29 +106,57 @@ article th { background: var(--bg-box); font-weight: 600; }
 article hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
 article em { color: var(--fg-muted); font-style: normal; }
 
-aside.infobox {
+/* 右侧栏：可容纳 infobox、人物画像等多个 box */
+aside.sidebar {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: .8em;
+}
+.infobox {
   background: var(--bg-box);
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1em;
   font-size: .9em;
-  align-self: start;
 }
-aside.infobox h2 {
+.infobox h2 {
   margin: 0 0 .6em 0;
   font-size: 1.1em;
   padding-bottom: .3em;
   border-bottom: 1px solid var(--border);
   color: var(--accent);
 }
-aside.infobox table { width: 100%; border: none; margin: 0; }
-aside.infobox th, aside.infobox td {
+.infobox table { width: 100%; border: none; margin: 0; }
+.infobox th, .infobox td {
   border: none;
   padding: .25em .3em;
   vertical-align: top;
   background: transparent;
 }
-aside.infobox th { color: var(--fg-muted); font-weight: 500; width: 4.5em; }
+.infobox th { color: var(--fg-muted); font-weight: 500; width: 4.5em; }
+
+/* 右侧栏人物画像 */
+.sidebar-portrait {
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #f0ece4;
+}
+.sidebar-portrait img {
+  width: 100%;
+  display: block;
+}
+.sidebar-portrait figcaption {
+  font-size: 11px;
+  color: var(--fg-muted);
+  text-align: center;
+  padding: .3em .5em;
+  font-style: italic;
+  line-height: 1.3;
+}
 
 .wikilink.resolved { color: var(--link); text-decoration: none; }
 .wikilink.resolved:hover { text-decoration: underline; }
@@ -981,29 +1009,6 @@ footer code {
   opacity: .8;
 }
 
-/* 人物页右浮动画像 */
-.page-portrait {
-  float: right;
-  margin: .2em 0 1.2em 1.5em;
-  width: 160px;
-  clear: right;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow: hidden;
-  background: #f0ece4;
-}
-.page-portrait img {
-  width: 100%;
-  display: block;
-}
-.page-portrait figcaption {
-  font-size: 11px;
-  color: var(--fg-muted);
-  text-align: center;
-  padding: .3em .4em;
-  font-style: italic;
-  line-height: 1.3;
-}
 
 /* K sparkline (提案 25) */
 .k-spark {

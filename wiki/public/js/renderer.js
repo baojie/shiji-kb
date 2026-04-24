@@ -63,25 +63,28 @@ function buildPager(current, total) {
 }
 
 
-/* 人物页右浮动画像. frontmatter 可指定:
- *   image: images/xxx.jpg
- *   image_caption: "刘邦画像, 清南薰殿旧藏"
- *   image_credit: "Public Domain · 南薰殿"
- * 图片放 wiki/public/images/. 加载失败时隐藏. */
-function renderHeroImage(front) {
+/* 右侧栏人物画像. frontmatter: image / image_caption / image_credit */
+function renderSidebarPortrait(front) {
+  const el = document.getElementById('sidebar-portrait');
+  if (!el) return;
   const src = front.image;
-  if (!src) return '';
+  if (!src) { el.hidden = true; el.innerHTML = ''; return; }
   const caption = front.image_caption || '';
   const credit = front.image_credit || '';
-  const capHtml = caption
-    ? `<figcaption>${escapeHtml(caption)}${credit ? `<br><span class="credit">${escapeHtml(credit)}</span>` : ''}</figcaption>`
-    : '';
-  return `<figure class="page-portrait">
-    <img src="${escapeHtml(src)}"
-         alt="${escapeHtml(caption || front.label || '')}"
-         onerror="this.closest('figure').style.display='none'">
-    ${capHtml}
-  </figure>`;
+  el.hidden = false;
+  el.innerHTML = `<img src="${escapeHtml(src)}"
+       alt="${escapeHtml(caption || front.label || '')}"
+       onerror="this.closest('figure').style.display='none'">
+    ${caption ? `<figcaption>${escapeHtml(caption)}${credit ? `<br><span class="credit">${escapeHtml(credit)}</span>` : ''}</figcaption>` : ''}`;
+}
+
+function hideSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  if (sidebar) sidebar.hidden = true;
+  const ib = document.getElementById('infobox');
+  if (ib) { ib.hidden = true; ib.innerHTML = ''; }
+  const portrait = document.getElementById('sidebar-portrait');
+  if (portrait) { portrait.hidden = true; portrait.innerHTML = ''; }
 }
 
 function fmtTimestamp(iso) {
@@ -138,12 +141,21 @@ export async function renderPage(core, pid, meta, mdText) {
   const { front, html, broken } = await parseMarkdown(core, mdText, { pid, meta });
 
   const tagsFooter = renderTagsFooter(front, meta);
-  // Hero image (featured 页可选)
-  const heroImg = renderHeroImage(front);
-  document.getElementById('article').innerHTML = heroImg + html + tagsFooter;
+  document.getElementById('article').innerHTML = html + tagsFooter;
   linkifyEventFields(document.getElementById('article'), core.registry);
-  const infoboxHtml = await renderInfobox(core, front, meta, pid);
-  document.getElementById('infobox').outerHTML = infoboxHtml;
+  const infoboxContent = await renderInfobox(core, front, meta, pid);
+  const ibEl = document.getElementById('infobox');
+  const sidebarEl = document.getElementById('sidebar');
+  if (infoboxContent) {
+    ibEl.innerHTML = infoboxContent;
+    ibEl.hidden = false;
+  } else {
+    ibEl.innerHTML = '';
+    ibEl.hidden = true;
+  }
+  renderSidebarPortrait(front);
+  const portraitEl = document.getElementById('sidebar-portrait');
+  sidebarEl.hidden = ibEl.hidden && (!portraitEl || portraitEl.hidden);
 
   const label = front.label || meta.label;
   document.getElementById('crumb').textContent =
@@ -214,7 +226,7 @@ export async function renderSource(core, pid, meta) {
     <p class="muted"><a href="#${encodeURIComponent(pid)}">← 返回阅读页</a></p>
     <pre class="src-pre">${escapeHtml(mdText)}</pre>
   `;
-  document.getElementById('infobox').outerHTML = '<aside class="infobox" id="infobox" hidden></aside>';
+  hideSidebar();
   document.getElementById('src-info').textContent = '';
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
@@ -295,13 +307,9 @@ export async function renderInfobox(core, front, meta, pid) {
   // Plugin hook: 允许改写 infobox 行
   rows = await core.hooks.onInfobox.run(rows, front, meta);
 
-  if (!rows.length) {
-    return '<aside class="infobox" id="infobox" hidden></aside>';
-  }
-  return `<aside class="infobox" id="infobox">
-    <h2>${escapeHtml(front.label || meta.label)}</h2>
-    <table>${rows.join('')}</table>
-  </aside>`;
+  if (!rows.length) return null;
+  return `<h2>${escapeHtml(front.label || meta.label)}</h2>
+    <table>${rows.join('')}</table>`;
 }
 
 export function renderHome(core) {
@@ -413,9 +421,7 @@ export function renderHome(core) {
   }).catch(() => { const p = document.getElementById('k-panel'); if (p) p.innerHTML = ''; });
 
   document.body.classList.add('is-home');
-  const ib = document.getElementById('infobox');
-  ib.hidden = true;
-  ib.innerHTML = '';
+  hideSidebar();
   document.getElementById('crumb').textContent = '首页';
   document.title = '史记 Wiki';
   document.getElementById('src-info').textContent = 'pages.json';
@@ -605,9 +611,7 @@ export function renderCategory(core, kind, value) {
   if (filterable) setupFirstCharFilter(filterable);
 
   document.body.classList.add('is-home');
-  const ib = document.getElementById('infobox');
-  ib.hidden = true;
-  ib.innerHTML = '';
+  hideSidebar();
   document.getElementById('crumb').textContent = `${titleKind}：${displayValue}`;
   document.title = `${titleKind} ${displayValue} · 史记 Wiki`;
   document.getElementById('src-info').textContent =
@@ -672,8 +676,7 @@ export async function renderRecent(core, pageNum = 1) {
      ${body}`;
 
   document.body.classList.add('is-home');
-  const ib = document.getElementById('infobox');
-  ib.hidden = true; ib.innerHTML = '';
+  hideSidebar();
   document.getElementById('crumb').textContent = '最近修订';
   document.title = '最近修订 · 史记 Wiki';
   document.getElementById('src-info').textContent = 'recent.json';
