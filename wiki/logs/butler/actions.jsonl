@@ -1607,3 +1607,20 @@
 {"round": 1290, "action": "explore", "type": "W11_audit", "summary": "W11类型审计：8279页，K=237730，127个unknown(event格式问题)，place=1950(含自动生成stub)，无误分类", "timestamp": "2026-04-24T07:06:49Z"}
 {"round": 1291, "action": "trail", "type": "edit", "page": "昌邑", "summary": "butler/edit: 昌邑（place，auto→完整，彭越故乡，楚汉重地）", "timestamp": "2026-04-24T07:07:15Z"}
 {"round": 1292, "action": "trail", "type": "create", "page": "太甲", "summary": "butler/create: 太甲（person，商代第四王，伊尹放桐宫悔过复位）", "timestamp": "2026-04-24T07:07:51Z"}
+{"round": 1293, "action": "explore", "type": "scan", "summary": "扫描，新候选：春申(redirect→春申君)/无知(公孙无知)/三王(概念)/盛桥(人物)，下批trail：春申redirect/无知", "timestamp": "2026-04-24T07:09:06Z"}
+{"round": 1294, "action": "trail", "type": "create", "page": "春申", "summary": "butler/create: 春申（redirect→春申君）", "timestamp": "2026-04-24T07:09:20Z"}
+{"round": 1295, "action": "trail", "type": "create", "page": "公孙无知+无知", "summary": "butler/create: 公孙无知（person）+ 无知（disambiguation）", "timestamp": "2026-04-24T07:09:56Z"}
+{"round": 1296, "action": "explore", "type": "scan", "summary": "扫描，新候选：盛桥(person,秦使韩)/三王(concept)/王廖/杜赫/兒良(过秦论人物)，下批trail：盛桥/三王", "timestamp": "2026-04-24T07:10:24Z"}
+{"round": 1297, "action": "trail", "type": "create", "page": "盛桥", "summary": "butler/create: 盛桥（person，秦使韩官员，以地入秦）", "timestamp": "2026-04-24T07:10:38Z"}
+{"round": 1298, "action": "trail", "type": "create", "page": "三王", "summary": "butler/create: 三王（concept，三代之王，夏禹/商汤/周文武）", "timestamp": "2026-04-24T07:10:54Z"}
+{"round": 1299, "action": "explore", "type": "scan", "summary": "扫描，新候选：韩宣惠王/召忽/召平/史厌，过秦论群人物(翟景/王廖/杜赫/兒良/徐尚)，下批trail：韩宣惠王/召忽", "timestamp": "2026-04-24T07:11:11Z"}
+{"round": 1300, "action": "trail", "type": "create", "page": "韩宣惠王", "summary": "butler/create: 韩宣惠王（person，战国韩国君主）", "timestamp": "2026-04-24T07:11:35Z"}
+{"round": 1301, "action": "trail", "type": "create", "page": "召忽", "summary": "butler/create: 召忽（person，春秋齐国，殉公子纠难）", "timestamp": "2026-04-24T07:11:58Z"}
+{"round": 1302, "action": "explore", "type": "scan", "summary": "扫描，新候选：公子纠(2)/过秦论群人物(翟景/王廖/杜赫/兒良/徐尚)，下批trail：公子纠/翟景", "timestamp": "2026-04-24T07:12:28Z"}
+{"round": 1303, "action": "trail", "type": "create", "page": "公子纠", "summary": "butler/create: 公子纠（person，春秋齐国公子，争位败于桓公）", "timestamp": "2026-04-24T07:12:46Z"}
+{"round": 1304, "action": "trail", "type": "create", "page": "翟景", "summary": "butler/create: 翟景（person，战国合纵谋士，过秦论人物）", "timestamp": "2026-04-24T07:13:05Z"}
+{"round": 1305, "action": "explore", "type": "scan", "summary": "扫描，过秦论群人物(王廖/杜赫/兒良/徐尚/齐明)持续，新增司马季主/司马安，下批trail：过秦论人物批量", "timestamp": "2026-04-24T07:13:23Z"}
+{"round": 1306, "action": "trail", "type": "create", "page": "王廖+杜赫+兒良+徐尚+齐明", "summary": "butler/create: 过秦论人物×5（王廖/杜赫/兒良/徐尚/齐明，战国合纵抗秦参与者）", "timestamp": "2026-04-24T07:13:55Z"}
+{"round": 1307, "action": "trail", "type": "create", "page": "司马季主", "summary": "butler/create: 司马季主（person，汉文帝时楚卜者，日者列传主角）", "timestamp": "2026-04-24T07:14:14Z"}
+{"round": 1308, "action": "explore", "type": "scan", "summary": "扫描，新候选：甯越(3,过秦论)/向寿(1,樗里子)/后羿(1,逢蒙)，下批trail：甯越/向寿，R1309=17×77触发commit", "timestamp": "2026-04-24T07:14:33Z"}
+{"round": 1309, "action": "trail", "type": "create", "page": "甯越", "summary": "butler/create: 甯越（person，战国合纵谋士，过秦论人物）", "timestamp": "2026-04-24T07:14:47Z"}
