@@ -1624,3 +1624,20 @@
 {"round": 1307, "action": "trail", "type": "create", "page": "司马季主", "summary": "butler/create: 司马季主（person，汉文帝时楚卜者，日者列传主角）", "timestamp": "2026-04-24T07:14:14Z"}
 {"round": 1308, "action": "explore", "type": "scan", "summary": "扫描，新候选：甯越(3,过秦论)/向寿(1,樗里子)/后羿(1,逢蒙)，下批trail：甯越/向寿，R1309=17×77触发commit", "timestamp": "2026-04-24T07:14:33Z"}
 {"round": 1309, "action": "trail", "type": "create", "page": "甯越", "summary": "butler/create: 甯越（person，战国合纵谋士，过秦论人物）", "timestamp": "2026-04-24T07:14:47Z"}
+{"round": 1310, "action": "trail", "type": "create", "page": "向寿", "summary": "butler/create: 向寿（person，战国秦将，秦昭王时平宜阳）", "timestamp": "2026-04-24T07:16:03Z"}
+{"round": 1311, "action": "explore", "type": "scan", "summary": "扫描，新候选：过秦论(3,概念页)/019_惠景闲侯者年表(苏嘉.md错误链接需修复)/后羿/召平，下批trail：修复苏嘉/创建过秦论", "timestamp": "2026-04-24T07:16:31Z"}
+{"round": 1312, "action": "trail", "type": "fix", "page": "苏嘉", "summary": "butler/fix: 苏嘉（修复错误链接 惠景闲→惠景间）", "timestamp": "2026-04-24T07:16:51Z"}
+{"round": 1313, "action": "trail", "type": "create", "page": "过秦论", "summary": "butler/create: 过秦论（concept，贾谊政论文三篇，秦亡历史教训）", "timestamp": "2026-04-24T07:17:11Z"}
+{"round": 1314, "action": "explore", "type": "scan", "summary": "扫描，恭侯/康侯为通用谥号跳过，新候选：后羿(逢蒙)/召平(萧相国世家)/叔詹(郑世家)/叔孙生，下批trail：后羿/召平", "timestamp": "2026-04-24T07:17:32Z"}
+{"round": 1315, "action": "trail", "type": "create", "page": "后羿", "summary": "butler/create: 后羿（person，上古有穷国君，逢蒙弑师典故）", "timestamp": "2026-04-24T07:17:59Z"}
+{"round": 1316, "action": "trail", "type": "create", "page": "召平", "summary": "butler/create: 召平（person，秦东陵侯，东陵瓜，劝萧何让功）", "timestamp": "2026-04-24T07:18:32Z"}
+{"round": 1317, "action": "explore", "type": "scan+fix", "summary": "扫描+修复：景缺.md错误链接038_楚世家→040_楚世家，新候选：吴王寿梦/叔詹/叔孙生/司马安，下批trail：叔詹/叔孙生", "timestamp": "2026-04-24T07:19:06Z"}
+{"round": 1318, "action": "trail", "type": "create", "page": "叔詹", "summary": "butler/create: 叔詹（person，春秋郑国大夫，自杀殉国）", "timestamp": "2026-04-24T07:19:28Z"}
+{"round": 1319, "action": "trail", "type": "create", "page": "叔孙生", "summary": "butler/create: 叔孙生（redirect→叔孙通，诸生尊称）", "timestamp": "2026-04-24T07:20:04Z"}
+{"round": 1320, "action": "explore", "type": "scan", "summary": "扫描，新候选：吴王寿梦(季札父)/周仁(万石张叔)/吾丘寿王/叔孙氏，燕王4链接为多人故跳过disambiguation，下批trail：吴王寿梦/周仁", "timestamp": "2026-04-24T07:20:29Z"}
+{"round": 1321, "action": "trail", "type": "create", "page": "吴王寿梦", "summary": "butler/create: 吴王寿梦（person，春秋吴国首位称王者，季札父）", "timestamp": "2026-04-24T07:20:50Z"}
+{"round": 1322, "action": "trail", "type": "create", "page": "周仁", "summary": "butler/create: 周仁（person，汉景帝近臣，阴重得幸）", "timestamp": "2026-04-24T07:21:04Z"}
+{"round": 1323, "action": "explore", "type": "scan", "summary": "扫描，新候选：周勣(过秦论)/周公辅政(concept)/吾丘寿王/吕望，下批trail：周勣/周公辅政", "timestamp": "2026-04-24T07:21:22Z"}
+{"round": 1324, "action": "trail", "type": "create", "page": "周勣", "summary": "butler/create: 周勣（person，战国合纵谋士，过秦论人物）", "timestamp": "2026-04-24T07:21:36Z"}
+{"round": 1325, "action": "trail", "type": "create", "page": "周公辅政", "summary": "butler/create: 周公辅政（concept，周公摄政辅成王，成康之治）", "timestamp": "2026-04-24T07:21:52Z"}
+{"round": 1326, "action": "explore", "type": "scan", "summary": "扫描，候选：吴楚/吕望/吾丘寿王/司马安，R1326=17×78触发commit", "timestamp": "2026-04-24T07:22:06Z"}
