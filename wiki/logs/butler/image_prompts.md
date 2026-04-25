@@ -8,3 +8,6 @@
 - [x] [[二世皇帝]] (person) — 二世皇帝
   prompt: Portrait of Huhai Second Emperor Qin dynasty (二世皇帝), ancient Chinese historical figure. ancient Chinese ink painting, Song dynasty style, fine brushwork, traditional, dignified pose, official robes or armor appropriate to period, neutral background, high quality, museum artwork. Context: 胡亥（前230—前207），秦始皇第十八子，沙丘政变后继位，在位三年亡秦
   added: 2026-04-25
+- [x] [[宣太后]] (person) — 宣太后
+  prompt: Portrait of Queen Dowager Xuan Mi Bazi Qin regent (宣太后), ancient Chinese historical figure. ancient Chinese ink painting, Song dynasty style, fine brushwork, traditional, elegant court robes, noblewoman attire appropriate to period, dignified bearing, neutral background, high quality, museum artwork. Context: 芈氏（？—前265），楚人，秦昭王之母，掌秦国实权逾三十年，战国第一位垂帘听政的太后
+  added: 2026-04-25
