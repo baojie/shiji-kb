@@ -3538,3 +3538,21 @@
 {"round": 5319, "action": "expand-content", "page": "庄贾", "result": "accept", "note": "重写消歧义为散文（司马穰苴斩军纪/陈胜车夫弑主）2段"}
 {"round": 5320, "action": "H1-redirect", "page": "句践/二世/吴王/高皇帝/高帝/孝文帝/孝惠/孝景/孝景帝/孝文/西楚霸王", "result": "accept", "note": "批量11个存根帝号/别名页转REDIRECT→规范页"}
 {"round": 5321, "action": "registry-rebuild+commit", "page": "-", "result": "accept", "note": "rebuild+K=840640（redirect转换导致featured略降）"}
+{"round":5322,"action":"H1-redirect","page":"孝文皇帝/孝惠帝/晏子/犀首","result":"accept","note":"4 alias stubs → REDIRECT pages"}
+{"round":5322,"action":"expand-content","page":"颛顼","result":"accept","note":"五帝之一 绝地天通 秦楚始祖 3 prose paras"}
+{"round":5323,"action":"H1-redirect","page":"子胥/昭帝/荆王/梁惠王","result":"accept","note":"4 alias stubs → REDIRECT; also expanded 侯生 窃符救赵 3 prose paras"}
+{"round":5324,"action":"expand+redirect","page":"陈留/驺忌子/齐孝王","result":"accept","note":"陈留 expand 2 prose; 驺忌子→邹忌, 齐孝王→刘将闾 REDIRECT"}
+{"round":5325,"action":"expand-content","page":"泗/齐孝公/郑襄公","result":"accept","note":"3 stubs expanded: 泗水/齐孝公/郑襄公 各2-3 prose paras"}
+{"round":5326,"action":"H1-redirect+expand","page":"惠帝/塞王/硃公/太伯/蔡叔","result":"accept","note":"3 redirects + 太伯吴国始祖 + 蔡叔三监之乱 各2 prose paras"}
+{"round":5327,"action":"expand-content","page":"殽/卫戴公","result":"accept","note":"殽山崤之战+卫戴公狄灭卫流亡 各3 prose paras"}
+{"round":5328,"action":"expand-content","page":"关东/江南","result":"accept","note":"2 geographic concept pages expanded with 2 prose paras each"}
+{"round":5329,"action":"expand-content","page":"温/公子","result":"accept","note":"温邑晋国封邑 + 公子先秦称谓解释 各2 prose paras"}
+{"round":5330,"action":"expand-content","page":"洛阳/垓下","result":"accept","note":"洛阳东周王城汉初迁都+垓下楚汉决战项羽自刎 各3 prose paras"}
+{"round":5331,"action":"expand-content","page":"郦山/郑桓公/东周桓王","result":"accept","note":"骊山秦陵+郑桓公迁民+东周桓王繻葛中箭 各2-3 prose paras"}
+{"round":5332,"action":"H1-redirect+expand","page":"夏禹/子西","result":"accept","note":"夏禹→大禹 REDIRECT; 子西楚大夫阻孔子 2 prose paras"}
+{"round":5333,"action":"H1-redirect+expand","page":"姬光/吴王阖庐/东周威烈王","result":"accept","note":"姬光/吴王阖庐→公子光 REDIRECT; 东周威烈王三家分晋 2 prose paras"}
+{"round":5334,"action":"expand-content","page":"蔡景侯/洛/雒","result":"accept","note":"3 stubs expanded: 蔡景侯子夺妾+洛水雒邑 各2 prose paras"}
+{"round":5335,"action":"expand-content","page":"康叔/襃姒","result":"accept","note":"康叔卫国开国+褒姒烽火戏诸侯西周灭亡 各2 prose paras"}
+{"round":5336,"action":"expand-content","page":"赵夙/聊城","result":"accept","note":"赵夙晋国先祖封耿+聊城鲁仲连射书燕将自刎 各2 prose paras"}
+{"round":5337,"action":"expand-content","page":"汾阴/齐平公","result":"accept","note":"汾阴后土祠+齐平公田陈代齐过渡 各2 prose paras"}
+{"round":5338,"action":"registry-rebuild+commit","page":"-","result":"accept","note":"R5322→5338 commit: 30+ pages expanded/redirected; K=839834"}

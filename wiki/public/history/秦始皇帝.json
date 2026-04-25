@@ -1,8 +1,18 @@
 {
   "page": "秦始皇帝",
-  "latest_rev_id": "20260425-153758-23caa2",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-164054-4b0f4b",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-164054-4b0f4b",
+      "timestamp": "2026-04-25T16:40:54Z",
+      "author": "butler",
+      "summary": "H1-fix-redirect: 修复id错误(was秦庄公)，转为REDIRECT→秦始皇",
+      "parent_rev": "20260425-153758-23caa2",
+      "content_hash": "sha256:4b0f4b7b3b2291720cbaff458a3a6b98bada2b79ef96b23054ea39e4839bf40c",
+      "size": 159,
+      "content": "---\nid: 秦始皇帝\ntype: redirect\nlabel: 秦始皇帝\naliases: [秦始皇帝]\nfeatured: false\nredirect_to: 秦始皇\n---\n\n# 秦始皇帝\n\n→ [[秦始皇]]\n\n"
+    },
     {
       "rev_id": "20260425-153758-23caa2",
       "timestamp": "2026-04-25T15:37:58Z",

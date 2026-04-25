@@ -1,8 +1,18 @@
 {
   "page": "重耳",
-  "latest_rev_id": "20260425-153847-c94cfd",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-164011-eccd3b",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-164011-eccd3b",
+      "timestamp": "2026-04-25T16:40:11Z",
+      "author": "butler",
+      "summary": "H1-redirect: 转为REDIRECT→晋文公（已在aliases中）",
+      "parent_rev": "20260425-153847-c94cfd",
+      "content_hash": "sha256:eccd3b81c5eb9b262567013d16a1585d26839769e24e1cc8f7c1067e74c1a42f",
+      "size": 135,
+      "content": "---\nid: 重耳\ntype: redirect\nlabel: 重耳\naliases: [重耳]\nfeatured: false\nredirect_to: 晋文公\n---\n\n# 重耳\n\n→ [[晋文公]]\n\n"
+    },
     {
       "rev_id": "20260425-153847-c94cfd",
       "timestamp": "2026-04-25T15:38:47Z",
