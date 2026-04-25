@@ -1,22 +1,19 @@
 /**
- * semantic-block.js — 语义块插件（客户端）
+ * semantic-block — ::: infobox 和 ::: meta 渲染插件
  *
- * 处理 Markdown 中的 ::: block ... ::: 语法，走三个 hook：
+ * 职责：
+ *   onBeforeRender  解析页面中所有 ::: 块，替换为占位符（所有类型，含 query）
+ *   onAfterRender   展开 infobox / meta 占位符；query 占位符原样保留给 semantic-query
+ *   onInfobox       将第一个 ::: infobox 的字段注入 sidebar
  *
- *   onBeforeRender  解析 ::: 块，替换为占位符，防止 markdown-it 误处理
- *   onAfterRender   将占位符展开为 HTML（inline infobox / 隐藏 meta 块）
- *   onInfobox       将第一个 ::: infobox 块的字段注入 sidebar
- *
- * 支持两种块类型：
- *   ::: infobox     可见信息卡片（第一个→sidebar，后续→行内 float-right）
- *   ::: meta        隐藏元数据（<div data-meta> hidden）
+ * 通过 core.semanticBlock 暴露缓存，供 semantic-query 等插件读取。
  */
 
 const PLUGIN_NAME = 'semantic-block';
 
-// 占位符字符（Unicode 私用区，不同于 wikilink 的 /）
-const PH_OPEN  = '';
-const PH_CLOSE = '';
+// 占位符字符（Unicode 私用区）——semantic-query 使用相同值
+export const PH_OPEN  = '';
+export const PH_CLOSE = '';
 
 // 页面状态缓存：pid → blocks[]
 const _cache = new Map();
@@ -77,8 +74,8 @@ function fmtValue(key, v) {
   return String(v);
 }
 
-// 简单 YAML 解析：flat key: value / key: [a,b,c]
-function parseYaml(text) {
+// 简单 YAML 解析：flat key: value / key: [a,b,c] / key: {k:v,...}
+export function parseYaml(text) {
   const obj = {};
   for (const line of text.split('\n')) {
     const ci = line.indexOf(':');
@@ -93,8 +90,8 @@ function parseYaml(text) {
       const inner = val.slice(1, -1);
       const sub = {};
       for (const pair of inner.split(',')) {
-        const ci = pair.indexOf(':');
-        if (ci > 0) sub[pair.slice(0, ci).trim()] = pair.slice(ci + 1).trim();
+        const ci2 = pair.indexOf(':');
+        if (ci2 > 0) sub[pair.slice(0, ci2).trim()] = pair.slice(ci2 + 1).trim();
       }
       obj[key] = sub;
     } else if ((val[0] === '"' && val.endsWith('"')) || (val[0] === "'" && val.endsWith("'"))) {
@@ -124,8 +121,8 @@ function parseInlineAttrs(s) {
   return obj;
 }
 
-// ::: type [attrs]\ncontent\n::: → 占位符
-function extractBlocks(body) {
+// ::: type [attrs]\ncontent\n::: → 占位符（提取所有类型，含 query）
+export function extractBlocks(body) {
   const blocks = [];
   const re = /^:::[ \t]+(\w+)([^\n]*)\n([\s\S]*?)^:::[ \t]*$/gm;
   const newBody = body.replace(re, (_, blockType, inlineStr, content) => {
@@ -158,7 +155,6 @@ function renderInlineInfoboxHtml(meta) {
   return `<aside class="infobox inline">${h}<table>${rows.join('')}</table></aside>`;
 }
 
-// sidebar 需要注入的额外字段（已由 renderInfobox 处理的跳过）
 const SIDEBAR_HANDLED = new Set([
   'canonical_name', 'aliases', 'type', 'birth_ce', 'death_ce', 'tags', 'label',
 ]);
@@ -178,7 +174,7 @@ function buildExtraInfoboxRows(blockMeta) {
   return rows;
 }
 
-// ---------- 样式 ----------
+// ---------- 样式（infobox + meta，不含 query） ----------
 
 const STYLES = `
 aside.infobox.inline {
@@ -234,45 +230,6 @@ aside.infobox.inline.collapsed table { display: none; }
 }
 .sb-meta-section th { color: var(--fg-muted, #888); font-weight: 400; width: 5em; white-space: nowrap; }
 .sb-meta-section td { word-break: break-all; }
-.query-title {
-  font-weight: 600;
-  font-size: 1em;
-  margin: .8em 0 .3em;
-  color: var(--accent, #7a1f1f);
-}
-.query-count {
-  font-size: .85em;
-  color: var(--fg-muted, #888);
-  margin-bottom: .4em;
-}
-.query-empty { color: var(--fg-muted, #888); font-style: italic; }
-.query-results {
-  list-style: disc;
-  padding-left: 1.5em;
-  margin: .4em 0 .8em;
-  columns: 2;
-  column-gap: 2em;
-}
-.query-results li { break-inside: avoid; padding: .1em 0; }
-table.query-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: .93em;
-  margin: .4em 0 .8em;
-}
-table.query-table th {
-  background: var(--bg-box, #f0ece0);
-  border: 1px solid var(--border, #d8d2bf);
-  padding: .3em .5em;
-  text-align: left;
-  font-weight: 600;
-}
-table.query-table td {
-  border: 1px solid var(--border, #d8d2bf);
-  padding: .25em .5em;
-  vertical-align: top;
-}
-table.query-table tr:nth-child(even) td { background: var(--bg-stripe, #f8f5ed); }
 `;
 
 function injectStyles() {
@@ -299,10 +256,8 @@ function fmtMetaValue(key, v) {
     return names.map(n => `<a href="#${encodeURIComponent(n)}">${esc(n)}</a>`).join(' · ');
   }
   if (key === 'pn') {
-    // 全局替换所有半角括号为全角，供 pn-citation 插件展开为链接
-    // 多段格式：(094-10) | (097-3.1) → （094-10） | （097-3.1）
     const s = String(v).trim().replace(/\(/g, '（').replace(/\)/g, '）');
-    return s;  // 不 escape，让 pn-citation 处理
+    return s;
   }
   if (Array.isArray(v)) return esc(v.join(' · '));
   return esc(String(v));
@@ -310,11 +265,9 @@ function fmtMetaValue(key, v) {
 
 function injectMetaBlock(blocks, core) {
   const metaBlocks = blocks.filter(b => b.blockType === 'meta');
-  console.debug('[sb] injectMetaBlock: metaBlocks=', metaBlocks.length, 'blocks total=', blocks.length);
   if (!metaBlocks.length) return;
 
   const infobox = document.getElementById('infobox');
-  console.debug('[sb] infobox found:', !!infobox, infobox?.id);
   if (!infobox) return;
 
   infobox.querySelectorAll('.sb-meta-section').forEach(el => el.remove());
@@ -324,178 +277,18 @@ function injectMetaBlock(blocks, core) {
     for (const [k, v] of Object.entries(mb.meta)) {
       const label = META_FIELD_LABELS[k] || k;
       const fv = fmtMetaValue(k, v);
-      console.debug('[sb] meta field:', k, '→', fv ? fv.slice(0, 60) : '(empty)');
       if (fv) rows.push(`<tr><th>${esc(label)}</th><td>${fv}</td></tr>`);
     }
     if (!rows.length) continue;
     const section = document.createElement('div');
     section.className = 'sb-meta-section';
     let tableHtml = `<table>${rows.join('')}</table>`;
-    // pn-citation 插件负责将 （NNN-MMM） 展开为链接
     if (core?.pnCitation) tableHtml = core.pnCitation.expand(tableHtml);
     section.innerHTML = tableHtml;
     infobox.appendChild(section);
-    console.debug('[sb] meta section appended, pnCitation available:', !!core?.pnCitation);
   }
 
   infobox.removeAttribute('hidden');
-}
-
-// ---------- 查询引擎 ----------
-
-const QUERY_SYSTEM_KEYS = new Set([
-  'sort', 'order', 'limit', 'display', 'fields', 'title', 'field_labels',
-]);
-
-// Boolean operator keys: handled separately, not as equality filters
-const QUERY_BOOL_KEYS = new Set([
-  'tags_any', 'tags_not', 'type_any',
-]);
-
-// Computed (virtual) fields: key → fn(page) → value
-const COMPUTED_FIELDS = {
-  age: (p) => {
-    const b = p.birth_ce, d = p.death_ce;
-    return (typeof b === 'number' && typeof d === 'number') ? d - b : null;
-  },
-};
-
-const QUERY_FIELD_LABELS = {
-  label: '名称', type: '类型', tags: '标签',
-  total_refs: '引用', total_chapters: '章节数',
-  quality_score: '质量', featured: '精品',
-  lifespan: '活跃期', birth_ce: '生', death_ce: '卒', age: '寿命',
-};
-
-const QUERY_TYPE_LABELS = {
-  person: '人物', place: '地名', state: '邦国', official: '官职',
-  identity: '身份', dynasty: '朝代', event: '事件', chapter: '章节',
-  topic: '主题', list: '列表', sanwen: '散文', story: '故事',
-};
-
-function executeQuery(meta, registry) {
-  const allPages = Object.entries(registry.pages);
-
-  const filtered = allPages.filter(([pid, page]) => {
-    // Boolean operators
-    if (meta.tags_any) {
-      const any = Array.isArray(meta.tags_any) ? meta.tags_any : [meta.tags_any];
-      if (!any.some(t => (page.tags || []).includes(t))) return false;
-    }
-    if (meta.tags_not) {
-      const not = Array.isArray(meta.tags_not) ? meta.tags_not : [meta.tags_not];
-      if (not.some(t => (page.tags || []).includes(t))) return false;
-    }
-    if (meta.type_any) {
-      const anyT = Array.isArray(meta.type_any) ? meta.type_any : [meta.type_any];
-      if (!anyT.includes(page.type)) return false;
-    }
-
-    for (const [key, val] of Object.entries(meta)) {
-      if (QUERY_SYSTEM_KEYS.has(key) || QUERY_BOOL_KEYS.has(key)) continue;
-      // _min / _max 范围过滤
-      if (key.endsWith('_min')) {
-        const field = key.slice(0, -4);
-        const n = page[field];
-        if (typeof n !== 'number' || n < val) return false;
-        continue;
-      }
-      if (key.endsWith('_max')) {
-        const field = key.slice(0, -4);
-        const n = page[field];
-        if (typeof n !== 'number' || n > val) return false;
-        continue;
-      }
-      const pageVal = page[key];
-      // 数组包含：页面字段是数组，查询值是字符串
-      if (Array.isArray(pageVal) && typeof val === 'string') {
-        if (!pageVal.includes(val)) return false;
-        continue;
-      }
-      // 布尔/字符串/数字相等
-      if (pageVal !== val) return false;
-    }
-    return true;
-  });
-
-  const sortField = meta.sort || 'label';
-  const order = meta.order === 'desc' ? -1 : 1;
-  filtered.sort(([, a], [, b]) => {
-    const av = a[sortField] ?? '';
-    const bv = b[sortField] ?? '';
-    if (typeof av === 'number' && typeof bv === 'number') return (av - bv) * order;
-    return String(av).localeCompare(String(bv), 'zh') * order;
-  });
-
-  const limit = typeof meta.limit === 'number' ? meta.limit : 200;
-  return filtered.slice(0, limit).map(([pid, page]) => ({ pid, ...page }));
-}
-
-function fmtQueryValue(key, v) {
-  if (v == null || v === '') return '';
-  if (key === 'type') return QUERY_TYPE_LABELS[v] || String(v);
-  if (key === 'birth_ce' || key === 'death_ce') {
-    if (typeof v !== 'number') return String(v);
-    return v < 0 ? `前${-v}` : String(v);
-  }
-  if (key === 'age') {
-    if (typeof v !== 'number') return '';
-    return `${v}`;
-  }
-  if (Array.isArray(v)) return v.join(' · ');
-  if (typeof v === 'boolean') return v ? '是' : '';
-  return String(v);
-}
-
-function renderQueryBlock(meta, registry) {
-  if (!registry) return '<p class="query-error">数据未加载</p>';
-
-  const results = executeQuery(meta, registry);
-  const display = meta.display || 'list';
-  const titleHtml = meta.title ? `<div class="query-title">${esc(meta.title)}</div>` : '';
-  const countHtml = `<div class="query-count">${results.length} 条结果</div>`;
-
-  if (results.length === 0) {
-    return `${titleHtml}<p class="query-empty">无匹配结果</p>`;
-  }
-
-  if (display === 'table') {
-    const rawFields = meta.fields;
-    const fields = Array.isArray(rawFields) ? rawFields
-      : typeof rawFields === 'string' ? [rawFields]
-      : ['label', 'type', 'tags', 'total_refs'];
-    const customLabels = (meta.field_labels && typeof meta.field_labels === 'object')
-      ? meta.field_labels : {};
-
-    const thead = '<tr>' + fields.map(f =>
-      `<th>${esc(customLabels[f] || QUERY_FIELD_LABELS[f] || f)}</th>`
-    ).join('') + '</tr>';
-
-    const tbody = results.map(item => {
-      const cells = fields.map(f => {
-        if (f === 'label') {
-          return `<td><a class="wikilink resolved" href="#${encodeURIComponent(item.pid)}">${esc(item.label || item.pid)}</a></td>`;
-        }
-        // Computed fields
-        const computeFn = COMPUTED_FIELDS[f];
-        const val = computeFn ? computeFn(item) : item[f];
-        return `<td>${esc(fmtQueryValue(f, val))}</td>`;
-      }).join('');
-      return `<tr>${cells}</tr>`;
-    }).join('');
-
-    return `${titleHtml}${countHtml}
-<table class="query-table">
-<thead>${thead}</thead>
-<tbody>${tbody}</tbody>
-</table>`;
-  }
-
-  // list mode (default)
-  const items = results.map(item =>
-    `<li><a class="wikilink resolved" href="#${encodeURIComponent(item.pid)}">${esc(item.label || item.pid)}</a></li>`
-  ).join('');
-  return `${titleHtml}${countHtml}<ul class="query-results">${items}</ul>`;
 }
 
 // ---------- 折叠按钮 ----------
@@ -525,22 +318,22 @@ function initCollapseButtons() {
 
 export default {
   name: PLUGIN_NAME,
-  version: '1.0.0',
-  description: '语义块：::: infobox 和 ::: meta 解析渲染',
+  version: '1.1.0',
+  description: '语义块：::: infobox 和 ::: meta 解析渲染；暴露 core.semanticBlock 供其他插件读取',
 
   async init(core) {
     injectStyles();
 
-    // 1. onBeforeRender：提取 ::: 块，替换为占位符
+    // 1. onBeforeRender：提取所有 ::: 块（含 query），替换为占位符
     core.hooks.onBeforeRender.add(async (body, ctx) => {
       const pid = ctx?.pid ?? '__last__';
       const { newBody, blocks } = extractBlocks(body);
       _cache.set(pid, blocks);
-      _cache.set('__last__', blocks);   // 供 onInfobox 回退使用
+      _cache.set('__last__', blocks);
       return newBody;
     });
 
-    // 2. onAfterRender：展开占位符 → HTML
+    // 2. onAfterRender：展开 infobox/meta 占位符；query 占位符原样保留
     core.hooks.onAfterRender.add(async (html, ctx) => {
       const pid = ctx?.pid ?? '__last__';
       const blocks = _cache.get(pid) || _cache.get('__last__') || [];
@@ -551,28 +344,26 @@ export default {
         `<p>\\s*${PH_OPEN}(\\d+)${PH_CLOSE}\\s*<\\/p>`, 'g'
       );
 
-      const result = html.replace(PH_PARA_RE, (_, idxStr) => {
+      const result = html.replace(PH_PARA_RE, (match, idxStr) => {
         const block = blocks[parseInt(idxStr, 10)];
         if (!block) return '';
         const { blockType, meta } = block;
 
         if (blockType === 'infobox') {
           infoboxCount++;
-          if (infoboxCount === 1) return '';   // 第一个由 sidebar 处理
+          if (infoboxCount === 1) return '';
           return renderInlineInfoboxHtml(meta);
         }
         if (blockType === 'meta') {
-          // 不在 article 体内渲染，数据已缓存在 _cache，由 infobox 下方注入
           return '';
         }
         if (blockType === 'query') {
-          return renderQueryBlock(meta, core.registry);
+          return match; // 保留占位符，交给 semantic-query 处理
         }
         const safe = JSON.stringify({ type: blockType, ...meta }).replace(/'/g, '&#39;');
         return `<div class="semantic-block" data-block-type="${esc(blockType)}" data-meta='${safe}' hidden></div>`;
       });
 
-      // 折叠按钮 + meta块 在 DOM 更新后初始化
       setTimeout(() => {
         initCollapseButtons();
         injectMetaBlock(blocks, core);
@@ -597,21 +388,14 @@ export default {
           else rows.push(...extra);
         }
       }
-
       return rows;
     });
 
-    // 4. 暴露 API
+    // 4. 暴露 API：getBlocks 供 semantic-query 等插件读取
     core.semanticBlock = {
-      getBlocks: (pid) => _cache.get(pid) || [],
-      getPageMeta: () => {
-        const metas = [];
-        document.querySelectorAll('.semantic-meta[data-meta]').forEach(el => {
-          try { metas.push(JSON.parse(el.getAttribute('data-meta').replace(/&#39;/g, "'"))); }
-          catch (_) {}
-        });
-        return metas;
-      },
+      getBlocks: (pid) => _cache.get(pid) || _cache.get('__last__') || [],
+      PH_OPEN,
+      PH_CLOSE,
     };
   },
 };

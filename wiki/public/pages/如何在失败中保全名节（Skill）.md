@@ -4,7 +4,6 @@ type: skill
 description: "### 当任务注定失败时，如何保全名节"
 label: 如何在失败中保全名节（Skill）
 tags: [列传]
-featured: true
 ---
 
 # 如何在失败中保全名节（Skill）

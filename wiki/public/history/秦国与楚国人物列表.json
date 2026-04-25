@@ -1,8 +1,19 @@
 {
   "page": "秦国与楚国人物列表",
-  "latest_rev_id": "20260425-225717-840fc8",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-225949-250cfd",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-225949-250cfd",
+      "timestamp": "2026-04-25T22:59:49Z",
+      "author": "claude",
+      "summary": "[W12] 改用 computed 表达式求寿命，去掉插件硬编码",
+      "parent_rev": "20260425-225717-840fc8",
+      "content_hash": "sha256:250cfd3c87883124fc36f04bbe0cc2cef21acbe4f0c037963456d62d00c62e50",
+      "size_before": 798,
+      "size": 835,
+      "content": "---\nid: 秦国与楚国人物列表\ntype: list\nlabel: 秦国与楚国人物列表\ndescription: 史记中秦国或楚国的人物，但排除同时属于两国者\ntags: [列表, 人物, 秦国, 楚国]\n---\n\n# 秦国与楚国人物列表\n\n秦、楚两国是战国最强的两股力量。此列表收录属于秦国**或**楚国的人物，并排除同时带两国标签的模糊归属者。\n\n::: query\ntype: person\ntags_any: [秦国, 楚国]\ntags_not: [外邦]\nsort: total_refs\norder: desc\nlimit: 150\ndisplay: table\ncomputed: {age: death_ce - birth_ce}\nfields: [label, birth_ce, death_ce, age, tags, total_refs, total_chapters]\nfield_labels: {birth_ce: 生年, death_ce: 卒年, age: 寿命, total_refs: 引用次数, total_chapters: 涉及章节}\ntitle: 秦国或楚国人物（OR，且排除外邦标签，按引用次数排序）\n:::\n"
+    },
     {
       "rev_id": "20260425-225717-840fc8",
       "timestamp": "2026-04-25T22:57:17Z",

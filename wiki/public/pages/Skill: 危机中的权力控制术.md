@@ -4,7 +4,6 @@ type: skill
 description: "在权力真空或转移期，如何以弱势地位瓦解强势对手的控制？"
 label: 'Skill: 危机中的权力控制术'
 tags: [本纪]
-featured: true
 ---
 
 # Skill: 危机中的权力控制术

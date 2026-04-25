@@ -4,7 +4,6 @@ type: skill
 description: "史记智慧萃取：程序性知识（决策框架）"
 label: 如何在伦理困境中做出选择（Skill）
 tags: [列传]
-featured: true
 ---
 
 # 如何在伦理困境中做出选择（Skill）

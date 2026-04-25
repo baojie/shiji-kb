@@ -4,7 +4,6 @@ type: overview
 label: Fact 005：申包胥哭秦七日——一次成功的外交求援
 description: 吴军攻破郢都，楚昭王出逃，楚国几乎灭亡。此时申包胥的行动成为拯救楚国的关键变量
 tags: [史记, 综述]
-featured: true
 sources: [楚世家]
 ---
 # Fact 005：[[申包胥]]哭秦七日——一次成功的外交求援

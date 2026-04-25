@@ -4,7 +4,6 @@ type: skill
 description: "史记智慧萃取：高危沟通技巧"
 label: Skill 003：游说君主的方法（基于《说难》）
 tags: [列传]
-featured: true
 ---
 
 # Skill 003：游说君主的方法（基于《说难》）

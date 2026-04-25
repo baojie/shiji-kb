@@ -4,7 +4,6 @@ type: skill
 description: "定义：在权力、事业达到顶峰时,识别危险信号并主动退出,以保全自身的策略判断能力"
 label: 'Skill: 功成身退的时机判断'
 tags: [世家]
-featured: true
 ---
 
 # Skill: 功成身退的时机判断

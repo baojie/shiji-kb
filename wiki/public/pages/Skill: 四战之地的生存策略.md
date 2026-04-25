@@ -4,7 +4,6 @@ type: skill
 description: "定义：在强敌环伺的地缘政治环境中，小国/小组织通过战略定位、灵活外交、军事实力维持生存和影响力的方法"
 label: 'Skill: 四战之地的生存策略'
 tags: [世家]
-featured: true
 ---
 
 # Skill: 四战之地的生存策略

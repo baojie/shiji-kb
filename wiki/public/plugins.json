@@ -26,8 +26,15 @@
       "id": "semantic-block",
       "entry": "plugins/semantic-block/index.js",
       "name": "语义块",
+      "version": "1.1.0",
+      "description": "处理页面中的 ::: infobox 和 ::: meta 语义块；解析所有 ::: 块占位符；暴露 core.semanticBlock"
+    },
+    {
+      "id": "semantic-query",
+      "entry": "plugins/semantic-query/index.js",
+      "name": "语义查询",
       "version": "1.0.0",
-      "description": "处理页面中的 ::: infobox 和 ::: meta 语义块；支持 inline infobox 折叠/展开与元数据读取"
+      "description": "::: query 块渲染；支持布尔过滤（tags_any/tags_not/type_any）、computed 表达式字段、field_labels 自定义列标签"
     }
   ]
 }

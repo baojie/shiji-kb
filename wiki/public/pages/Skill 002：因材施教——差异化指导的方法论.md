@@ -4,7 +4,6 @@ type: skill
 description: "孔子对同一问题给出截然不同的答案，使弟子子华感到困惑：'敢问问同而答异"
 label: Skill 002：因材施教——差异化指导的方法论
 tags: [列传]
-featured: true
 ---
 
 # Skill 002：因材施教——差异化指导的方法论

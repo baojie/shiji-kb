@@ -4,7 +4,6 @@ type: skill
 description: "史记智慧萃取：治理策略"
 label: Skill 004：推行政治改革的方法（基于申不害经验）
 tags: [列传]
-featured: true
 ---
 
 # Skill 004：推行政治改革的方法（基于申不害经验）
