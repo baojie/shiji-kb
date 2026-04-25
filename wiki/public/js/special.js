@@ -7,7 +7,7 @@ import { escapeHtml } from './util.js';
 const SPECIAL_PAGES = [
   { id: 'Special:Recent',    label: '最近修订',     desc: '最近修订记录（滚动窗口，最新 500 条）' },
   { id: 'Special:AllPages',  label: '所有页面',     desc: '所有 wiki 页面的完整列表，支持分组切换' },
-  { id: 'Special:知识量',   label: '知识量 (K)',   desc: '知识量（K）度量的定义与公式' },
+  { id: 'Special:Statistics', label: '统计 (Statistics)', desc: '知识库统计：K 值增长曲线、质量分布、页面计数' },
   { id: 'Special:Settings',  label: '设置',         desc: '插件开关与用户设置' },
   { id: 'Special:Plugins',   label: '插件列表',     desc: '已安装插件列表' },
   { id: 'Special:All',       label: '所有特殊页面', desc: '所有特殊系统页面索引' },
@@ -181,8 +181,8 @@ export function renderSpecialAll(core) {
   `);
 }
 
-/* ── Special:知识量 — 动态 K 值页（含增长图表）── */
-export async function renderSpecialKnowledge(core) {
+/* ── Special:Statistics — 统计页（K 值增长 + 质量分布）── */
+export async function renderSpecialStatistics(core) {
   // 加载时间线数据
   let timeline = [];
   try {
@@ -202,14 +202,36 @@ export async function renderSpecialKnowledge(core) {
 
   const K = latest ? latest.K.toLocaleString() : '—';
   const pages = latest ? latest.page_count : '—';
-  const featured = latest ? latest.featured_count : '—';
   const hitRate = latest ? (latest.link_hit_rate * 100).toFixed(1) + '%' : '—';
+  const qc = latest && latest.quality_counts ? latest.quality_counts : {};
+  const premium = qc.premium ?? (latest ? latest.featured_count : '—');
 
   // SVG 折线图
   const chartHtml = buildKChart(timeline);
-  const featChartHtml = buildFeatChart(timeline);
+  const premiumChartHtml = buildPremiumChart(timeline);
 
-  // K 公式（仅文字，不依赖 KaTeX）
+  // 质量分布表格
+  const QUALITY_LABELS = [
+    ['premium', '旗舰', '#4f9cf9'],
+    ['featured', '精品', '#63b3ed'],
+    ['standard', '标准', '#68d391'],
+    ['basic',    '基础', '#fbd38d'],
+    ['stub',     '存根', '#fc8181'],
+  ];
+  const total = Object.values(qc).reduce((a, b) => a + b, 0) || 1;
+  const qualityRows = QUALITY_LABELS.map(([key, label, color]) => {
+    const n = qc[key] || 0;
+    const pct = (n / total * 100).toFixed(1);
+    const barW = Math.round(n / total * 200);
+    return `<tr>
+      <td><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${color};margin-right:6px"></span>${label} (${key})</td>
+      <td style="text-align:right;font-variant-numeric:tabular-nums">${n.toLocaleString()}</td>
+      <td style="text-align:right;color:var(--fg-muted)">${pct}%</td>
+      <td><div style="display:inline-block;height:8px;width:${barW}px;background:${color};border-radius:2px;vertical-align:middle"></div></td>
+    </tr>`;
+  }).join('');
+
+  // K 公式
   const formula = `
     <blockquote>
       <code>K = Σ_page  log₂(1+B) × (1 + min(D,5)) × W × clamp(q/30, 1, 3)</code>
@@ -228,23 +250,30 @@ export async function renderSpecialKnowledge(core) {
     `<tr><td>${i + 1}</td><td><a href="#${encodeURIComponent(p.pid)}">${escapeHtml(p.pid)}</a></td><td>${p.k}</td></tr>`
   ).join('') : '';
 
-  setPage('知识量 (K)', `
-    <h1>Special:知识量 — 知识量度量</h1>
+  setPage('统计 (Statistics)', `
+    <h1>Special:Statistics — 知识库统计</h1>
 
     <div class="k-stat-bar">
       <div class="k-stat"><span class="k-stat-val">${K}</span><span class="k-stat-label">当前 K 值</span></div>
       <div class="k-stat"><span class="k-stat-val">${pages}</span><span class="k-stat-label">总页数</span></div>
-      <div class="k-stat"><span class="k-stat-val">${featured}</span><span class="k-stat-label">精品页</span></div>
+      <div class="k-stat"><span class="k-stat-val">${premium}</span><span class="k-stat-label">旗舰页 (premium)</span></div>
       <div class="k-stat"><span class="k-stat-val">${hitRate}</span><span class="k-stat-label">链接命中率</span></div>
     </div>
 
-    <h2>增长曲线</h2>
+    <h2>K 值增长曲线</h2>
     ${chartHtml}
 
-    <h2>精品页增长</h2>
-    ${featChartHtml}
+    <h2>旗舰页增长</h2>
+    ${premiumChartHtml}
 
-    <h2>公式定义</h2>
+    <h2>页面质量分布</h2>
+    <p class="chart-desc">五级质量体系由 <code>compute_quality.py</code> 自动评定。只有 <b>premium</b> 旗舰页可出现在首页。</p>
+    <table>
+      <thead><tr><th>级别</th><th>数量</th><th>占比</th><th>分布</th></tr></thead>
+      <tbody>${qualityRows}</tbody>
+    </table>
+
+    <h2>K 值公式定义</h2>
     ${formula}
 
     <h2>K 值 Top 10 页面</h2>
@@ -324,31 +353,35 @@ function buildKChart(timeline) {
   </div>`;
 }
 
-function buildFeatChart(timeline) {
+function buildPremiumChart(timeline) {
   if (!timeline.length) return '';
 
-  const vals = timeline.map(d => d.featured_count || 0);
-  if (Math.max(...vals) === 0) return '';
+  // 兼容旧快照（featured_count）和新快照（quality_counts.premium）
+  const vals = timeline.map(d =>
+    d.quality_counts ? (d.quality_counts.premium || 0) : (d.featured_count || 0)
+  );
+  if (Math.max(...vals) === 0) return '<p class="muted">（暂无旗舰页历史数据）</p>';
 
-  const { W, H, PAD, cw, ch, xScale, yScale, points, areaClose, yTickHtml, xTickHtml } = _buildSvgBase(timeline, vals, 'rgba(99,179,237,1)');
+  const color = 'rgba(79,156,249,1)';
+  const { W, H, PAD, cw, ch, xScale, yScale, points, areaClose, yTickHtml, xTickHtml } = _buildSvgBase(timeline, vals, color);
 
-  // bar-style dots at each data point
   const dotHtml = timeline.map((d, i) => {
     const cx = xScale(i).toFixed(1), cy = yScale(vals[i]).toFixed(1);
-    return `<circle cx="${cx}" cy="${cy}" r="3.5" fill="rgba(99,179,237,1)"/>`;
+    return `<circle cx="${cx}" cy="${cy}" r="3.5" fill="${color}"/>`;
   }).join('');
 
   return `
-  <p class="chart-desc"><b>精品页</b>（featured）指内容完整、有详细叙述与引文的高质量词条。
-  精品页数量的增长节奏反映了知识库的深化进度，是衡量内容质量的核心指标之一。</p>
+  <p class="chart-desc"><b>旗舰页</b>（premium）是通过 <code>compute_quality.py</code> 自动评定的最高质量词条，
+  满足：有图 + ≥5节 + 散文≥1000字 + (PN≥10 或引文≥10 或散文≥2500)。
+  旗舰页数量增长反映了知识库的深化进度。</p>
   <div class="k-chart-wrap">
   <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">
     ${yTickHtml}
-    <polygon points="${points} ${areaClose}" fill="rgba(99,179,237,0.18)" stroke="none"/>
-    <polyline points="${points}" fill="none" stroke="rgba(99,179,237,1)" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="${points} ${areaClose}" fill="rgba(79,156,249,0.18)" stroke="none"/>
+    <polyline points="${points}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round"/>
     ${dotHtml}
     ${xTickHtml}
-    <text x="${PAD.left - 8}" y="${PAD.top - 10}" font-size="12" fill="rgba(99,179,237,1)" text-anchor="end">精品页数</text>
+    <text x="${PAD.left - 8}" y="${PAD.top - 10}" font-size="12" fill="${color}" text-anchor="end">旗舰页数</text>
     <text x="${PAD.left + cw / 2}" y="${H - 6}" font-size="12" fill="var(--fg-muted)" text-anchor="middle">提交日期</text>
   </svg>
   </div>`;

@@ -479,12 +479,12 @@ export function renderHome(core) {
     }
 
     panel.innerHTML = `
-      <h3>📊 <a href="#${encodeURIComponent('Special:知识量')}" class="k-title-link">知识量</a> <span class="k-value">${k.K.toLocaleString()}</span>
+      <h3>📊 <a href="#${encodeURIComponent('Special:Statistics')}" class="k-title-link">知识量</a> <span class="k-value">${k.K.toLocaleString()}</span>
         ${sparkSvg}
       </h3>
       <div class="k-row">
         <span>${k.page_count} 页</span>
-        <span>${k.featured_count} 精品</span>
+        <span>${(k.quality_counts?.premium ?? k.featured_count ?? 0)} 旗舰</span>
         <span>链接命中 ${pct}%</span>
         <span>${kb} KB</span>
         <span>${k.total_revisions} 修订</span>

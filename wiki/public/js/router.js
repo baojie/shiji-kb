@@ -6,7 +6,7 @@ import {
   renderRecent, renderHistory, renderRevision, renderAll, renderDiff,
   renderSource,
 } from './renderer.js';
-import { renderSpecialSettings, renderSpecialPlugins, renderSpecialAll, renderSpecialKnowledge } from './special.js';
+import { renderSpecialSettings, renderSpecialPlugins, renderSpecialAll, renderSpecialStatistics } from './special.js';
 import { setStatus, showFatal } from './util.js';
 
 export function setupRouter(core) {
@@ -142,8 +142,8 @@ async function route(core) {
     renderSpecialAll(core);
     setStatus(''); return;
   }
-  if (raw === 'Special:知识量') {
-    renderSpecialKnowledge(core);
+  if (raw === 'Special:Statistics' || raw === 'Special:知识量') {
+    renderSpecialStatistics(core);
     setStatus(''); return;
   }
 

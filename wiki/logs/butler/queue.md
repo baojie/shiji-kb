@@ -62,18 +62,18 @@
 
 ## P1 premium-upgrade 候选（2026-04-25 补充，按 refs 排序）
 
-- [ ] P1 | [[周武王]] | 133行 · refs=131 · type=person | action: premium-upgrade
-- [ ] P1 | [[二世皇帝]] | 122行 · refs=108 · type=person | action: premium-upgrade
-- [ ] P1 | [[汉景帝]] | 127行 · refs=102 · type=person | action: premium-upgrade
-- [ ] P1 | [[周文王]] | 118行 · refs=97 · type=person | action: premium-upgrade
-- [ ] P1 | [[晋文公]] | 127行 · refs=95 · type=person | action: premium-upgrade
-- [ ] P1 | [[黄帝]] | 128行 · refs=92 · type=person | action: premium-upgrade
-- [ ] P1 | [[秦昭襄王]] | 134行 · refs=89 · type=person | action: premium-upgrade
-- [ ] P1 | [[项梁]] | 150行 · refs=89 · type=person | action: premium-upgrade
-- [ ] P1 | [[袁盎]] | 140行 · refs=86 · type=person | action: premium-upgrade
-- [ ] P1 | [[秦缪公]] | 139行 · refs=76 · type=person | action: premium-upgrade
-- [ ] P1 | [[赵高]] | 138行 · refs=75 · type=person | action: premium-upgrade
-- [ ] P1 | [[尧]] | 136行 · refs=72 · type=person | action: premium-upgrade
-- [ ] P1 | [[廉颇]] | 138行 · refs=68 · type=person | action: premium-upgrade
-- [ ] P1 | [[管仲]] | 138行 · refs=65 · type=person | action: premium-upgrade
-- [ ] P1 | [[李斯]] | 146行 · refs=64 · type=person | action: premium-upgrade
+- [x] P1 | [[周武王]] | 133行 · refs=131 · type=person | action: premium-upgrade
+- [x] P1 | [[二世皇帝]] | 122行 · refs=108 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[汉景帝]] | 127行 · refs=102 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[周文王]] | 118行 · refs=97 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[晋文公]] | 127行 · refs=95 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[黄帝]] | 128行 · refs=92 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[秦昭襄王]] | 134行 · refs=89 · type=person | action: premium-upgrade
+- [x] P1 | [[项梁]] | 150行 · refs=89 · type=person | action: premium-upgrade
+- [x] P1 | [[袁盎]] | 140行 · refs=86 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[秦缪公]] | 139行 · refs=76 · type=person | action: premium-upgrade
+- [x] P1 | [[赵高]] | 138行 · refs=75 · type=person | action: premium-upgrade
+- [x] P1 | [[尧]] | 136行 · refs=72 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[廉颇]] | 138行 · refs=68 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[管仲]] | 138行 · refs=65 · type=person | action: premium-upgrade (already featured)
+- [x] P1 | [[李斯]] | 146行 · refs=64 · type=person | action: premium-upgrade

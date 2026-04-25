@@ -44,8 +44,8 @@ async function boot() {
   setupRouter(core);
 }
 
-// plugins.json 由 wiki/scripts/build_plugins.py 自动生成，勿手动编辑。
-// 添加新插件：在 plugins/<name>/plugin.json 中声明元数据，然后运行 build_plugins.py。
+// plugins.json 由服务器动态生成（serve.py 拦截请求，扫描 plugins/*/plugin.json）。
+// 添加新插件：在 plugins/<name>/ 下放 plugin.json + index.js，重启服务器即可。
 async function loadPlugins(core) {
   let manifest;
   try {
@@ -56,32 +56,25 @@ async function loadPlugins(core) {
     return;
   }
 
-  // 串行加载，保证 load_order 顺序（manifest 已由 build_plugins.py 排序）
+  // 串行加载，保证 load_order 顺序（manifest 已按 load_order 排序）
   for (const entry of (manifest.plugins || [])) {
-    const pluginPath = entry.entry;
-    const pluginId   = entry.id;
     try {
-      // 元数据优先读 plugin.json（entry 字段），JS 模块中不再需要重复声明
-      const [mod, meta] = await Promise.all([
-        import('../' + pluginPath),
-        fetch(pluginPath.replace(/\/[^/]+$/, '/plugin.json'))
-          .then(r => r.ok ? r.json() : {}).catch(() => ({})),
-      ]);
+      const mod = await import('../' + entry.entry);
       const p = mod.default;
       if (!p || typeof p.init !== 'function') {
-        console.warn(`[plugin] ${pluginId} 缺少 default.init`);
+        console.warn(`[plugin] ${entry.id} 缺少 default.init`);
         continue;
       }
       await p.init(core);
       core.plugins.push({
-        id:          pluginId,
-        name:        meta.name        || entry.name        || pluginId,
-        version:     meta.version     || entry.version     || '?',
-        description: meta.description || entry.description || '',
+        id:          entry.id,
+        name:        entry.name        || entry.id,
+        version:     entry.version     || '?',
+        description: entry.description || '',
       });
-      console.log(`[plugin] ${pluginId} v${meta.version || entry.version || '?'} loaded`);
+      console.log(`[plugin] ${entry.id} v${entry.version || '?'} loaded`);
     } catch (e) {
-      console.error(`[plugin] ${pluginId} 加载失败:`, e);
+      console.error(`[plugin] ${entry.id} 加载失败:`, e);
     }
   }
 }
