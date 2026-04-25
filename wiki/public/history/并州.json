@@ -1,8 +1,28 @@
 {
   "page": "并州",
-  "latest_rev_id": "20260425-205845-24f946",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-214109-045cbf",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260425-214109-045cbf",
+      "timestamp": "2026-04-25T21:41:09Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展补充上下文（完整句+邻句）",
+      "parent_rev": "20260425-213846-e01008",
+      "content_hash": "sha256:045cbf39c7e90c340512b775cf090fc7c4f8f9031df11e662b6901ca5ca8ca3e",
+      "size": 751,
+      "content": "---\nid: 并州\ntype: place\nsources: [天官书]\nlabel: 并州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"州\"]\nauto_generated: true\nimage: images/places/汉朝60BC.png\nimage_caption: \"汉朝疆域图（前60年），并州刺史部地理位置\"\nimage_credit: \"Wikimedia Commons, CC BY-SA\"\ncoords: [112.48875, 37.73958]\ncoords_name: \"并州\"\ncoords_source: \"CHGIS 210261\"\nfeatured: true\n---\n# 并州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[027_天官书]]：`67`\n\n**引文摘录：**\n\n> **出自 [[027_天官书]]（027-67）：** 虚、危，青州。营室至东壁，并州。奎、娄、胃，徐州。\n\n---\n\n## 相关章节\n\n- [[027_天官书|天官书]]"
+    },
+    {
+      "rev_id": "20260425-213846-e01008",
+      "timestamp": "2026-04-25T21:38:46Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-205845-24f946",
+      "content_hash": "sha256:e010083b258026128064ebed06d545537575b0278ceb98a407a0b105b5f0b061",
+      "size": 730,
+      "content": "---\nid: 并州\ntype: place\nsources: [天官书]\nlabel: 并州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"州\"]\nauto_generated: true\nimage: images/places/汉朝60BC.png\nimage_caption: \"汉朝疆域图（前60年），并州刺史部地理位置\"\nimage_credit: \"Wikimedia Commons, CC BY-SA\"\ncoords: [112.48875, 37.73958]\ncoords_name: \"并州\"\ncoords_source: \"CHGIS 210261\"\nfeatured: true\n---\n# 并州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[027_天官书]]：`67`\n\n**引文摘录：**\n\n> **出自 [[027_天官书]]（027-67）：** 营室至东壁，并州。奎、娄、胃，徐州。\n\n---\n\n## 相关章节\n\n- [[027_天官书|天官书]]"
+    },
     {
       "rev_id": "20260425-205845-24f946",
       "timestamp": "2026-04-25T20:58:45Z",

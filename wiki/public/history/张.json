@@ -1,8 +1,18 @@
 {
   "page": "张",
-  "latest_rev_id": "20260425-205845-0cd8f5",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-213847-1aeefd",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-213847-1aeefd",
+      "timestamp": "2026-04-25T21:38:47Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-205845-0cd8f5",
+      "content_hash": "sha256:1aeefd4b6e8bdf75b63aa45dec20f5a3aae06e134e610b009df672a6e0b0a736",
+      "size": 661,
+      "content": "---\nid: 张\ntype: place\nsources: [绛侯周勃世家]\nlabel: 张\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [100.33069, 38.99213]\ncoords_name: \"张掖郡\"\ncoords_source: \"CHGIS 211824\"\nfeatured: true\n---\n# 张\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[057_绛侯周勃世家]]：`2`\n\n**引文摘录：**\n\n> **出自 [[057_绛侯周勃世家]]（057-2）：** 攻都关、定陶，袭取宛朐，得单父令。夜袭取临济，攻张，以前至卷，破之。\n\n---\n\n## 相关章节\n\n- [[057_绛侯周勃世家|绛侯周勃世家]]"
+    },
     {
       "rev_id": "20260425-205845-0cd8f5",
       "timestamp": "2026-04-25T20:58:45Z",

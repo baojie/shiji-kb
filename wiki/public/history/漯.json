@@ -1,8 +1,18 @@
 {
   "page": "漯",
-  "latest_rev_id": "20260425-154417-09f2f5",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-213902-789f00",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-213902-789f00",
+      "timestamp": "2026-04-25T21:39:02Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-154417-09f2f5",
+      "content_hash": "sha256:789f009288b6882ac350cad0da1f5850d18383f95c08152e5d067fbd98909ec8",
+      "size": 628,
+      "content": "---\nid: 漯\ntype: place\nsources: [夏本纪]\nlabel: 漯\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\"]\nauto_generated: true\ncoords: [117.01056, 36.89413]\ncoords_name: \"漯阴县\"\ncoords_source: \"CHGIS hvd_45092\"\nfeatured: true\n---\n# 漯\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[002_夏本纪]]：`5`\n\n**引文摘录：**\n\n> **出自 [[002_夏本纪]]（002-5）：** 济、河维沇州：九河既道，雷夏既泽，雍、沮会同，桑土既蚕，於是民得下丘居土。\n\n---\n\n## 相关章节\n\n- [[002_夏本纪|夏本纪]]"
+    },
     {
       "rev_id": "20260425-154417-09f2f5",
       "timestamp": "2026-04-25T15:44:17Z",

@@ -1,8 +1,18 @@
 {
   "page": "汉中郡",
-  "latest_rev_id": "20260425-143318-3073bb",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-213856-b6b6bb",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-213856-b6b6bb",
+      "timestamp": "2026-04-25T21:38:56Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-143318-3073bb",
+      "content_hash": "sha256:b6b6bb9dd6adb9cbbd02d2944c2fb70349ef23020592a2432cbef6fb2f4a8b38",
+      "size": 660,
+      "content": "---\nid: 汉中郡\ntype: place\nsources: [秦本纪]\nlabel: 汉中郡\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"郡\"]\nauto_generated: true\ncoords: [109.01125, 32.70532]\ncoords_name: \"汉中郡\"\ncoords_source: \"CHGIS 211671\"\nfeatured: true\n---\n# 汉中郡\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[005_秦本纪]]：`59.10`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-59.10）：** 十三年，庶长章击楚於丹阳，虏其将屈匄，斩首八万；又攻楚汉中，取地六百里，置汉中郡。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]"
+    },
     {
       "rev_id": "20260425-143318-3073bb",
       "timestamp": "2026-04-25T14:33:18Z",

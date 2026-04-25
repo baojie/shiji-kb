@@ -1,8 +1,18 @@
 {
   "page": "城武",
-  "latest_rev_id": "20260425-205841-758ea2",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-213838-1b2131",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-213838-1b2131",
+      "timestamp": "2026-04-25T21:38:38Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-205841-758ea2",
+      "content_hash": "sha256:1b213182b49bee238eda91fc570eac5cfe8481ebb72f60f48c47d93ec3fe34b7",
+      "size": 658,
+      "content": "---\nid: 城武\ntype: place\nsources: [绛侯周勃世家]\nlabel: 城武\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [115.87518, 34.96223]\ncoords_name: \"城武县\"\ncoords_source: \"CHGIS hvd_85116\"\nfeatured: true\n---\n# 城武\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[057_绛侯周勃世家]]：`2`\n\n**引文摘录：**\n\n> **出自 [[057_绛侯周勃世家]]（057-2）：** 沛公拜勃为虎贲令，以令从沛公定魏地。攻东郡尉於城武，破之。\n\n---\n\n## 相关章节\n\n- [[057_绛侯周勃世家|绛侯周勃世家]]"
+    },
     {
       "rev_id": "20260425-205841-758ea2",
       "timestamp": "2026-04-25T20:58:41Z",

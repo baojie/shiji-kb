@@ -63,21 +63,42 @@ function buildPager(current, total) {
 }
 
 
-/* 右侧栏人物画像. frontmatter: image / image_caption / image_credit */
+/* 右侧栏图像区. 支持两种格式：
+   单图: frontmatter image / image_caption / image_credit
+   多图: frontmatter images: [{file, caption, credit}, ...] */
 function renderSidebarPortrait(front) {
   const el = document.getElementById('sidebar-portrait');
   if (!el) return;
-  const src = front.image;
-  if (!src) { el.hidden = true; el.innerHTML = ''; return; }
-  const caption = front.image_caption || '';
-  const credit = front.image_credit || '';
+
+  // 统一成图片条目数组
+  let items = [];
+  if (Array.isArray(front.images) && front.images.length) {
+    items = front.images.map(img => ({
+      src:     img.file    || img.src || '',
+      caption: img.caption || '',
+      credit:  img.credit  || '',
+    }));
+  } else if (front.image) {
+    items = [{
+      src:     front.image,
+      caption: front.image_caption || '',
+      credit:  front.image_credit  || '',
+    }];
+  }
+
+  if (!items.length) { el.hidden = true; el.innerHTML = ''; return; }
+
   el.hidden = false;
-  el.innerHTML = `<a href="${escapeHtml(src)}" target="_blank" rel="noopener" class="portrait-zoom" title="点击放大">
-      <img src="${escapeHtml(src)}"
-           alt="${escapeHtml(caption || front.label || '')}"
-           onerror="this.closest('figure').style.display='none'">
-    </a>
-    ${caption ? `<figcaption>${escapeHtml(caption)}${credit ? `<br><span class="credit">${escapeHtml(credit)}</span>` : ''}</figcaption>` : ''}`;
+  el.innerHTML = items.map((img, i) => `
+    <div class="portrait-item${i > 0 ? ' portrait-item--sep' : ''}">
+      <a href="${escapeHtml(img.src)}" target="_blank" rel="noopener" class="portrait-zoom" title="点击放大">
+        <img src="${escapeHtml(img.src)}"
+             alt="${escapeHtml(img.caption || front.label || '')}"
+             loading="lazy"
+             onerror="this.closest('.portrait-item').style.display='none'">
+      </a>
+      ${img.caption ? `<figcaption>${escapeHtml(img.caption)}${img.credit ? `<br><span class="credit">${escapeHtml(img.credit)}</span>` : ''}</figcaption>` : ''}
+    </div>`).join('');
 }
 
 function hideSidebar() {
@@ -252,7 +273,7 @@ const INFOBOX_SKIP = new Set([
   'id', 'label', 'title', 'type', 'featured', 'auto_generated',
   'quality_score', 'path', 'paragraph_refs',
   // 图片由 sidebar-portrait 渲染，无需在 infobox 表格里重复显示
-  'image', 'image_caption', 'image_credit',
+  'image', 'image_caption', 'image_credit', 'image_prompt', 'images',
 ]);
 
 export async function renderInfobox(core, front, meta, pid) {

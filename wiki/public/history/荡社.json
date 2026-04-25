@@ -1,8 +1,28 @@
 {
   "page": "荡社",
-  "latest_rev_id": "20260425-154619-8a981d",
-  "revision_count": 8,
+  "latest_rev_id": "20260425-214110-de8642",
+  "revision_count": 10,
   "revisions": [
+    {
+      "rev_id": "20260425-214110-de8642",
+      "timestamp": "2026-04-25T21:41:10Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展补充上下文（完整句+邻句）",
+      "parent_rev": "20260425-213907-966506",
+      "content_hash": "sha256:de86427e7f6968549022b6fb3aab217bca110c382459eb556fd6e882867799c2",
+      "size": 666,
+      "content": "---\nid: 荡社\ntype: place\nsources: [秦本纪]\nlabel: 荡社\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"建筑\"]\nauto_generated: true\nfeatured: true\n---\n# 荡社\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[005_秦本纪]]：`8`、`8.1`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-8）：** 宁公二年，公徙居平阳。遣兵伐荡社。三年，与亳战，亳王奔戎，遂灭荡社。\n\n> **出自 [[005_秦本纪]]（005-8.1）：** 遣兵伐荡社。三年，与亳战，亳王奔戎，遂灭荡社。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]"
+    },
+    {
+      "rev_id": "20260425-213907-966506",
+      "timestamp": "2026-04-25T21:39:07Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-154619-8a981d",
+      "content_hash": "sha256:9665064aaa787a3727789dcd47cef16558660c6fc67ecb009beca9a6e8aeee77",
+      "size": 615,
+      "content": "---\nid: 荡社\ntype: place\nsources: [秦本纪]\nlabel: 荡社\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"建筑\"]\nauto_generated: true\nfeatured: true\n---\n# 荡社\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[005_秦本纪]]：`8`、`8.1`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-8）：** 宁公二年，公徙居平阳。遣兵伐荡社。\n\n> **出自 [[005_秦本纪]]（005-8.1）：** 遣兵伐荡社。三年，与亳战，亳王奔戎，遂灭荡社。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]"
+    },
     {
       "rev_id": "20260425-154619-8a981d",
       "timestamp": "2026-04-25T15:46:19Z",

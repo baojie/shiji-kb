@@ -1,8 +1,18 @@
 {
   "page": "滇池",
-  "latest_rev_id": "20260425-143352-e53f5b",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-213902-90ae05",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-213902-90ae05",
+      "timestamp": "2026-04-25T21:39:02Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-143352-e53f5b",
+      "content_hash": "sha256:90ae059641881be5d46fe389731fb2b9c0d470b8cc541855945ce7512bb58b75",
+      "size": 638,
+      "content": "---\nid: 滇池\ntype: place\nsources: [西南夷列传]\nlabel: 滇池\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\", \"县\"]\nauto_generated: true\ncoords: [102.74321, 24.70312]\ncoords_name: \"滇池县\"\ncoords_source: \"CHGIS hvd_45514\"\nfeatured: true\n---\n# 滇池\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[116_西南夷列传]]：`2`\n\n**引文摘录：**\n\n> **出自 [[116_西南夷列传]]（116-2）：** 始楚威王时，使将军庄蹻将兵循江上，略巴、黔中以西。\n\n---\n\n## 相关章节\n\n- [[116_西南夷列传|西南夷列传]]"
+    },
     {
       "rev_id": "20260425-143352-e53f5b",
       "timestamp": "2026-04-25T14:33:52Z",

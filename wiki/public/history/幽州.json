@@ -1,8 +1,28 @@
 {
   "page": "幽州",
-  "latest_rev_id": "20260425-205845-c0ca88",
-  "revision_count": 8,
+  "latest_rev_id": "20260425-214109-30bf36",
+  "revision_count": 10,
   "revisions": [
+    {
+      "rev_id": "20260425-214109-30bf36",
+      "timestamp": "2026-04-25T21:41:09Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展补充上下文（完整句+邻句）",
+      "parent_rev": "20260425-213846-b677a5",
+      "content_hash": "sha256:30bf36a12156458c72bc025da56fb16eeb01e1472c25755c3e266b132f5c77dc",
+      "size": 735,
+      "content": "---\nid: 幽州\ntype: place\nsources: [天官书]\nlabel: 幽州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"州\"]\nauto_generated: true\nimage: images/places/汉朝60BC.png\nimage_caption: \"汉朝疆域图（前60年），幽州刺史部地理位置\"\nimage_credit: \"Wikimedia Commons, CC BY-SA\"\ncoords: [116.3498, 39.91969]\ncoords_name: \"幽州\"\ncoords_source: \"CHGIS 210406\"\nfeatured: true\n---\n# 幽州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[027_天官书]]：`67`\n\n**引文摘录：**\n\n> **出自 [[027_天官书]]（027-67）：** 房、心，豫州。尾、箕，幽州。斗，江、湖。\n\n---\n\n## 相关章节\n\n- [[027_天官书|天官书]]"
+    },
+    {
+      "rev_id": "20260425-213846-b677a5",
+      "timestamp": "2026-04-25T21:38:46Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-205845-c0ca88",
+      "content_hash": "sha256:b677a52260e3948b5af3b03e1af84f9f5518b1bc73395657e9a1ff067236c5fa",
+      "size": 714,
+      "content": "---\nid: 幽州\ntype: place\nsources: [天官书]\nlabel: 幽州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"州\"]\nauto_generated: true\nimage: images/places/汉朝60BC.png\nimage_caption: \"汉朝疆域图（前60年），幽州刺史部地理位置\"\nimage_credit: \"Wikimedia Commons, CC BY-SA\"\ncoords: [116.3498, 39.91969]\ncoords_name: \"幽州\"\ncoords_source: \"CHGIS 210406\"\nfeatured: true\n---\n# 幽州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[027_天官书]]：`67`\n\n**引文摘录：**\n\n> **出自 [[027_天官书]]（027-67）：** 尾、箕，幽州。斗，江、湖。\n\n---\n\n## 相关章节\n\n- [[027_天官书|天官书]]"
+    },
     {
       "rev_id": "20260425-205845-c0ca88",
       "timestamp": "2026-04-25T20:58:45Z",

@@ -1,8 +1,28 @@
 {
   "page": "西岳",
-  "latest_rev_id": "20260425-205906-c5ac70",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-214111-c3eced",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260425-214111-c3eced",
+      "timestamp": "2026-04-25T21:41:11Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展补充上下文（完整句+邻句）",
+      "parent_rev": "20260425-213910-93ad4e",
+      "content_hash": "sha256:c3ecedb9e76a682c361dac3e43881f679eb2d9844e73c73077c431dd5801ef2d",
+      "size": 631,
+      "content": "---\nid: 西岳\ntype: place\nsources: [封禅书]\nlabel: 西岳\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 西岳\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[028_封禅书]]：`2`\n\n**引文摘录：**\n\n> **出自 [[028_封禅书]]（028-2）：** 南岳，衡山也。八月，巡狩至西岳。西岳，华山也。\n> **出自 [[028_封禅书]]（028-2）：** 八月，巡狩至西岳。西岳，华山也。十一月，巡狩至北岳。\n\n---\n\n## 相关章节\n\n- [[028_封禅书|封禅书]]"
+    },
+    {
+      "rev_id": "20260425-213910-93ad4e",
+      "timestamp": "2026-04-25T21:39:10Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-205906-c5ac70",
+      "content_hash": "sha256:93ad4e9b2d057d618be80c333cc36da031f6b1ac05c27995e933547525cca0c3",
+      "size": 583,
+      "content": "---\nid: 西岳\ntype: place\nsources: [封禅书]\nlabel: 西岳\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 西岳\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[028_封禅书]]：`2`\n\n**引文摘录：**\n\n> **出自 [[028_封禅书]]（028-2）：** 八月，巡狩至西岳。西岳，华山也。\n> **出自 [[028_封禅书]]（028-2）：** 西岳，华山也。十一月，巡狩至北岳。\n\n---\n\n## 相关章节\n\n- [[028_封禅书|封禅书]]"
+    },
     {
       "rev_id": "20260425-205906-c5ac70",
       "timestamp": "2026-04-25T20:59:06Z",

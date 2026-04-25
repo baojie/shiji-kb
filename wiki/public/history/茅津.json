@@ -1,8 +1,18 @@
 {
   "page": "茅津",
-  "latest_rev_id": "20260425-143522-5bb2db",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-213907-a0207b",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-213907-a0207b",
+      "timestamp": "2026-04-25T21:39:07Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-143522-5bb2db",
+      "content_hash": "sha256:a0207b2e89260aefcf93f594db0a1c1b1f784b47f462557c08a6659472b8bf08",
+      "size": 801,
+      "content": "---\nid: 茅津\ntype: place\nsources: [秦本纪]\nlabel: 茅津\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"道桥\"]\nauto_generated: true\ncoords: [111.192, 34.819]\ncoords_name: \"茅津渡\"\ncoords_source: \"CHGIS hvd_20966\"\nfeatured: true\n---\n# 茅津\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[005_秦本纪]]：`17`、`33`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-17）：** 缪公任好元年，自将伐茅津，胜之。四年，迎妇於晋，晋太子申生姊也。\n\n> **出自 [[005_秦本纪]]（005-33）：** 三十六年，缪公复益厚孟明等，使将兵伐晋，渡河焚船，大败晋人，取王官及鄗，以报殽之役。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]"
+    },
     {
       "rev_id": "20260425-143522-5bb2db",
       "timestamp": "2026-04-25T14:35:22Z",

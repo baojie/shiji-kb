@@ -1,8 +1,28 @@
 {
   "page": "隞",
-  "latest_rev_id": "20260425-205908-0a0508",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-214111-af25a9",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260425-214111-af25a9",
+      "timestamp": "2026-04-25T21:41:11Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展补充上下文（完整句+邻句）",
+      "parent_rev": "20260425-213915-efd813",
+      "content_hash": "sha256:af25a911d6e351b1615c3e82cbd1bd92bd357de61e6d91a27200934f982aad18",
+      "size": 500,
+      "content": "---\nid: 隞\ntype: place\nsources: [殷本纪]\nlabel: 隞\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\nfeatured: true\n---\n# 隞\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[003_殷本纪]]：`16`\n\n**引文摘录：**\n\n> **出自 [[003_殷本纪]]（003-16）：** 中宗崩，子帝中丁立。帝中丁迁于隞。河亶甲居相。\n\n---\n\n## 相关章节\n\n- [[003_殷本纪|殷本纪]]"
+    },
+    {
+      "rev_id": "20260425-213915-efd813",
+      "timestamp": "2026-04-25T21:39:15Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-205908-0a0508",
+      "content_hash": "sha256:efd8135f7e70fc72f2cd63f018395e153260c178c0a3f26900e2343134a0b3e2",
+      "size": 470,
+      "content": "---\nid: 隞\ntype: place\nsources: [殷本纪]\nlabel: 隞\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\nfeatured: true\n---\n# 隞\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[003_殷本纪]]：`16`\n\n**引文摘录：**\n\n> **出自 [[003_殷本纪]]（003-16）：** 帝中丁迁于隞。河亶甲居相。\n\n---\n\n## 相关章节\n\n- [[003_殷本纪|殷本纪]]"
+    },
     {
       "rev_id": "20260425-205908-0a0508",
       "timestamp": "2026-04-25T20:59:08Z",

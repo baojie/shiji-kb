@@ -1,8 +1,18 @@
 {
   "page": "武垣",
-  "latest_rev_id": "20260425-205900-751a9b",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-213855-836ce0",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-213855-836ce0",
+      "timestamp": "2026-04-25T21:38:55Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-205900-751a9b",
+      "content_hash": "sha256:836ce021ba0298bf62fc49972f65010593ea3aae345866c23da1267d9c522e30",
+      "size": 643,
+      "content": "---\nid: 武垣\ntype: place\nsources: [曹相国世家]\nlabel: 武垣\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [115.93231, 38.37027]\ncoords_name: \"武垣县\"\ncoords_source: \"CHGIS hvd_87071\"\nfeatured: true\n---\n# 武垣\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[054_曹相国世家]]：`5`\n\n**引文摘录：**\n\n> **出自 [[054_曹相国世家]]（054-5）：** 因攻安邑，得魏将王襄。击魏王於曲阳，追至武垣，生得魏王豹。\n\n---\n\n## 相关章节\n\n- [[054_曹相国世家|曹相国世家]]"
+    },
     {
       "rev_id": "20260425-205900-751a9b",
       "timestamp": "2026-04-25T20:59:00Z",

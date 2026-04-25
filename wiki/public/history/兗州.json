@@ -1,8 +1,28 @@
 {
   "page": "兗州",
-  "latest_rev_id": "20260425-154149-b9ae36",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-214108-03812e",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260425-214108-03812e",
+      "timestamp": "2026-04-25T21:41:08Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展补充上下文（完整句+邻句）",
+      "parent_rev": "20260425-213833-0f3c39",
+      "content_hash": "sha256:03812ed64231fd2f224fb96324564abaf64fd6682395f1a875ee8610b5a721bf",
+      "size": 588,
+      "content": "---\nid: 兗州\ntype: place\nsources: [天官书]\nlabel: 兗州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"州\"]\nauto_generated: true\ncoords: [116.82392, 35.55302]\ncoords_name: \"兗州\"\ncoords_source: \"CHGIS 212537\"\nfeatured: true\n---\n# 兗州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[027_天官书]]：`67`\n\n**引文摘录：**\n\n> **出自 [[027_天官书]]（027-67）：** 角、亢、氐，兗州。房、心，豫州。尾、箕，幽州。\n\n---\n\n## 相关章节\n\n- [[027_天官书|天官书]]"
+    },
+    {
+      "rev_id": "20260425-213833-0f3c39",
+      "timestamp": "2026-04-25T21:38:33Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-154149-b9ae36",
+      "content_hash": "sha256:0f3c39f10ce0fe40c7305ef6c4d5f203c33dc20df6d3cce3043f79dc82e1eccc",
+      "size": 567,
+      "content": "---\nid: 兗州\ntype: place\nsources: [天官书]\nlabel: 兗州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"州\"]\nauto_generated: true\ncoords: [116.82392, 35.55302]\ncoords_name: \"兗州\"\ncoords_source: \"CHGIS 212537\"\nfeatured: true\n---\n# 兗州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[027_天官书]]：`67`\n\n**引文摘录：**\n\n> **出自 [[027_天官书]]（027-67）：** 角、亢、氐，兗州。房、心，豫州。\n\n---\n\n## 相关章节\n\n- [[027_天官书|天官书]]"
+    },
     {
       "rev_id": "20260425-154149-b9ae36",
       "timestamp": "2026-04-25T15:41:49Z",

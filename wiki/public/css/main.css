@@ -160,6 +160,18 @@ aside.sidebar {
   font-style: italic;
   line-height: 1.3;
 }
+.portrait-item--sep {
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+}
+.portrait-item figcaption { /* same as sidebar-portrait figcaption */
+  font-size: 11px;
+  color: var(--fg-muted);
+  text-align: center;
+  padding: .3em .5em;
+  font-style: italic;
+  line-height: 1.3;
+}
 
 /* 地名地图（place-map 插件） */
 .sidebar-map {

@@ -1,8 +1,28 @@
 {
   "page": "代光狼城",
-  "latest_rev_id": "20260425-142911-b0c23f",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-214108-33246a",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-214108-33246a",
+      "timestamp": "2026-04-25T21:41:08Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展补充上下文（完整句+邻句）",
+      "parent_rev": "20260425-213832-b8a194",
+      "content_hash": "sha256:33246ae7b5d73957f778aa099acb0b88b43678ec9c8d04a289a7de612bc0bb3a",
+      "size": 530,
+      "content": "---\nid: 代光狼城\ntype: place\nsources: [秦本纪]\nlabel: 代光狼城\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\nfeatured: true\n---\n# 代光狼城\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[005_秦本纪]]：`63.14`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-63.14）：** 侯厓复相。二十七年，错攻楚。赦罪人迁之南阳。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]"
+    },
+    {
+      "rev_id": "20260425-213832-b8a194",
+      "timestamp": "2026-04-25T21:38:32Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-142911-b0c23f",
+      "content_hash": "sha256:b8a1945aded0d8325b0fc251069ad78337fb8183c16372418ad929f05081e512",
+      "size": 515,
+      "content": "---\nid: 代光狼城\ntype: place\nsources: [秦本纪]\nlabel: 代光狼城\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\nfeatured: true\n---\n# 代光狼城\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[005_秦本纪]]：`63.14`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-63.14）：** 二十七年，错攻楚。赦罪人迁之南阳。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]"
+    },
     {
       "rev_id": "20260425-142911-b0c23f",
       "timestamp": "2026-04-25T14:29:11Z",

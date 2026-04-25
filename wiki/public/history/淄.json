@@ -1,8 +1,18 @@
 {
   "page": "淄",
-  "latest_rev_id": "20260425-154531-a40f43",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-213901-eed490",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-213901-eed490",
+      "timestamp": "2026-04-25T21:39:01Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-154531-a40f43",
+      "content_hash": "sha256:eed490e4437e4b786c720b67151c7bcbd2c0015f93d12b50d0b8d1a75a2a0e62",
+      "size": 607,
+      "content": "---\nid: 淄\ntype: place\nsources: [夏本纪]\nlabel: 淄\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\"]\nauto_generated: true\ncoords: [117.96098, 36.64605]\ncoords_name: \"淄州\"\ncoords_source: \"CHGIS 210472\"\nfeatured: true\n---\n# 淄\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[002_夏本纪]]：`6`\n\n**引文摘录：**\n\n> **出自 [[002_夏本纪]]（002-6）：** 海岱维青州：堣夷既略，濰、淄其道。其土白坟，海滨广潟，厥田斥卤。\n\n---\n\n## 相关章节\n\n- [[002_夏本纪|夏本纪]]"
+    },
     {
       "rev_id": "20260425-154531-a40f43",
       "timestamp": "2026-04-25T15:45:31Z",

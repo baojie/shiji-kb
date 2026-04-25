@@ -1,8 +1,18 @@
 {
   "page": "降水",
-  "latest_rev_id": "20260425-154938-8f6410",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-213915-15dc14",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-213915-15dc14",
+      "timestamp": "2026-04-25T21:39:15Z",
+      "author": "butler",
+      "summary": "fix: 引文扩展至完整句子（含上下文补充）",
+      "parent_rev": "20260425-154938-8f6410",
+      "content_hash": "sha256:15dc146948fe3d522012b6fc16928adb43af18653e07a1d2a1f941c742787029",
+      "size": 898,
+      "content": "---\nid: 降水\ntype: place\nsources: [河渠书]\nlabel: 降水\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\", \"山脉\", \"城邑\"]\nauto_generated: true\ncoords: [112.11229, 23.07562]\ncoords_name: \"降水汛\"\ncoords_source: \"CHGIS hvd_127260\"\ncoords: [112.11229, 23.07562]\ncoords_name: \"降水汛\"\ncoords_source: \"CHGIS hvd_127260\"\ncoords: [112.11229, 23.07562]\ncoords_name: \"降水汛\"\ncoords_source: \"CHGIS hvd_127260\"\nfeatured: true\n---\n# 降水\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[002_夏本纪]]：`14.3`\n- [[029_河渠书]]：`1`\n\n**引文摘录：**\n\n> **出自 [[029_河渠书]]（029-1）：** 夏书曰：禹抑洪水十三年，过家不入门。陆行载车，水行载舟，泥行蹈毳，山行即桥。\n\n---\n\n## 相关章节\n\n- [[029_河渠书|河渠书]]\n- [[002_夏本纪|夏本纪]]"
+    },
     {
       "rev_id": "20260425-154938-8f6410",
       "timestamp": "2026-04-25T15:49:38Z",
