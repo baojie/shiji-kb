@@ -2,13 +2,16 @@
 
 import { escapeHtml } from './util.js';
 
+// 所有硬编码的 Special 页。新增 Special 页时只需在此添加一行。
+// renderSpecialAll 自动用这个列表生成 Special:All 索引。
 const SPECIAL_PAGES = [
-  { id: 'Special:AllPages',  desc: '所有 wiki 页面的完整列表，支持分组切换' },
-  { id: 'Special:知识量',   desc: '知识量（K）度量的定义与公式' },
-  { id: 'Special:Settings',  desc: '插件开关与用户设置' },
-  { id: 'Special:Plugins',   desc: '已安装插件列表' },
-  { id: 'Special:All',       desc: '所有特殊系统页面索引' },
-  { id: 'Special:Random',    desc: '随机跳转到一个非章节页面' },
+  { id: 'Special:Recent',    label: '最近修订',     desc: '最近修订记录（滚动窗口，最新 500 条）' },
+  { id: 'Special:AllPages',  label: '所有页面',     desc: '所有 wiki 页面的完整列表，支持分组切换' },
+  { id: 'Special:知识量',   label: '知识量 (K)',   desc: '知识量（K）度量的定义与公式' },
+  { id: 'Special:Settings',  label: '设置',         desc: '插件开关与用户设置' },
+  { id: 'Special:Plugins',   label: '插件列表',     desc: '已安装插件列表' },
+  { id: 'Special:All',       label: '所有特殊页面', desc: '所有特殊系统页面索引' },
+  { id: 'Special:Random',    label: '随机页',       desc: '随机跳转到一个非章节页面' },
 ];
 
 function setPage(title, html) {
@@ -24,11 +27,13 @@ function setPage(title, html) {
 }
 
 // 从 plugins.json 加载插件定义（供 Settings 和 Plugins 页使用）
+// 注意：此缓存在同一页面会话中保持，切换路由不会重新 fetch。
+// 若需强制刷新，使用 getPluginDefs(true)。
 let _pluginDefs = null;
-async function getPluginDefs() {
-  if (_pluginDefs) return _pluginDefs;
+async function getPluginDefs(force = false) {
+  if (_pluginDefs && !force) return _pluginDefs;
   try {
-    const r = await fetch('plugins.json');
+    const r = await fetch('plugins.json?t=' + Date.now());
     if (!r.ok) return [];
     const m = await r.json();
     _pluginDefs = (m.plugins || []).map(p =>
@@ -57,7 +62,7 @@ function saveSettings(s) {
 
 export async function renderSpecialSettings(core) {
   const s = loadSettings();
-  const PLUGIN_DEFS = await getPluginDefs();
+  const PLUGIN_DEFS = await getPluginDefs(true);
 
   const rows = PLUGIN_DEFS.map(p => {
     const enabled = s?.plugins?.[p.key] === true;
@@ -101,7 +106,7 @@ export async function renderSpecialSettings(core) {
 
 /* ── Special:Plugins ── */
 export async function renderSpecialPlugins(core) {
-  const PLUGIN_DEFS = await getPluginDefs();
+  const PLUGIN_DEFS = await getPluginDefs(true);
   const s = loadSettings();
   const activatedDefs = PLUGIN_DEFS.filter(p => p.corePlugin || s?.plugins?.[p.key] === true);
   const pluginRows = activatedDefs.length
@@ -146,14 +151,11 @@ export function renderSpecialAll(core) {
     .filter(([pid]) => pid.startsWith('Special:'))
     .map(([pid, e]) => ({ pid, label: e.label || pid }));
 
-  // 合并硬编码路由（不在 registry 里的）
+  // 硬编码 + 插件动态注册的 Special 页合并
   const hardcoded = [
-    { pid: 'Special:AllPages', label: '所有页面' },
-    { pid: 'Special:Random',   label: '随机页' },
-    { pid: 'Special:Settings', label: '设置' },
-    { pid: 'Special:Plugins',  label: '插件列表' },
-    { pid: 'Special:All',      label: '所有特殊页面' },
-  ];
+    ...SPECIAL_PAGES,
+    ...core.specialPages,
+  ].map(p => ({ pid: p.id, label: p.label }));
 
   const seen = new Set(registered.map(r => r.pid));
   const all = [

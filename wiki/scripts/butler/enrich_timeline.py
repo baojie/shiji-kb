@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -157,6 +158,16 @@ def enrich_one(slug):
         text = text.rstrip() + '\n\n' + section
 
     page.write_text(text, encoding='utf-8')
+
+    subprocess.run(
+        [sys.executable,
+         str(ROOT / 'wiki' / 'scripts' / 'butler' / 'record_revision.py'),
+         slug,
+         '--summary', f'add-event-timeline: {len(events)} events from {top_chapter}',
+         '--author', 'butler'],
+        capture_output=True, text=True
+    )
+
     return True, f'added {len(events)} events from {top_chapter}'
 
 

@@ -47,7 +47,7 @@ function buildPager(current, total) {
   const mk = (n, label, cls = '') =>
     n === current
       ? `<span class="pager-current">${label}</span>`
-      : `<a class="pager-link${cls ? ' ' + cls : ''}" href="#?recent&page=${n}">${label}</a>`;
+      : `<a class="pager-link${cls ? ' ' + cls : ''}" href="#${encodeURIComponent('Special:Recent')}?page=${n}">${label}</a>`;
   const parts = [];
   if (current > 1) parts.push(mk(current - 1, '← 上一页', 'prev'));
   // 页码数字 (window of 5)
@@ -375,7 +375,7 @@ export function renderHome(core) {
       <nav class="home-links">
         <a href="#${encodeURIComponent('Special:About')}" class="home-link home-link--about">关于本 Wiki</a>
         <a href="#${encodeURIComponent('Special:AllPages')}" class="home-link">全部 ${ids.length} 页 →</a>
-        <a href="#?recent" class="home-link">最近修订 →</a>
+        <a href="#${encodeURIComponent('Special:Recent')}" class="home-link">最近修订 →</a>
         <a href="#${encodeURIComponent('Special:Random')}" class="home-link">随机页 →</a>
       </nav>
 

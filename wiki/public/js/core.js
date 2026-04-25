@@ -20,7 +20,9 @@ async function boot() {
     registry: null,
     md: null,
     plugins: [],
+    specialPages: [],  // 插件动态注册的 Special 页
   };
+  core.registerSpecialPage = (def) => core.specialPages.push(def);
   // 调试: 允许控制台访问 core
   window.__wiki = core;
 

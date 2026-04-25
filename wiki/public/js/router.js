@@ -17,6 +17,30 @@ export function setupRouter(core) {
 async function route(core) {
   // 先取原始 hash (未解码), 便于区分 '?query' 和普通 slug
   const rawHash = location.hash.slice(1) || '';
+
+  // 页内锚点（如脚注 #fn1 / #fnref1）：目标元素已在 DOM 中，直接滚动，不做页面路由
+  if (rawHash && !rawHash.startsWith('?')) {
+    const el = document.getElementById(decodeURIComponent(rawHash));
+    if (el) {
+      const id = decodeURIComponent(rawHash);
+      const isBackref = id.startsWith('fnref');
+      const navH = document.querySelector('.topnav')?.offsetHeight ?? 0;
+      if (isBackref) {
+        // 回跳到行内引用：找最近块级祖先，顶部对齐并留出 nav 高度
+        const BLOCK = new Set(['P','LI','TD','TH','H1','H2','H3','H4','H5','H6','BLOCKQUOTE','DIV','SECTION']);
+        let block = el.parentElement;
+        while (block && !BLOCK.has(block.tagName)) block = block.parentElement;
+        const target = block || el;
+        const top = target.getBoundingClientRect().top + window.scrollY - navH - 8;
+        window.scrollTo({ top, behavior: 'smooth' });
+      } else {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      setStatus('');
+      return;
+    }
+  }
+
   setStatus('载入…');
 
   // 特殊页: #?type=<type> · #?tag=<tag> · #?recent · #?history=<page> · #?revision=<page>&rev=<id>
@@ -31,6 +55,7 @@ async function route(core) {
       setStatus(''); return;
     }
     if (params.has('recent')) {
+      // 旧 URL 兼容：直接渲染，不做 redirect（避免 hashchange 不触发的问题）
       const pageNum = parseInt(params.get('page') || '1', 10);
       try { await renderRecent(core, pageNum); } catch (e) { showFatal(`recent.json 加载失败：${e.message}`); }
       setStatus(''); return;
@@ -95,6 +120,12 @@ async function route(core) {
     setStatus('');
     return;
   }
+  if (raw === 'Special:Recent' || raw.startsWith('Special:Recent?')) {
+    const qm = raw.indexOf('?');
+    const pageNum = qm >= 0 ? parseInt(new URLSearchParams(raw.slice(qm + 1)).get('page') || '1', 10) : 1;
+    try { await renderRecent(core, pageNum); } catch (e) { showFatal(`recent.json 加载失败：${e.message}`); }
+    setStatus(''); return;
+  }
   if (raw === 'Special:Settings') {
     renderSpecialSettings(core);
     setStatus(''); return;
@@ -113,6 +144,16 @@ async function route(core) {
   }
   if (raw === 'Special:知识量') {
     renderSpecialKnowledge(core);
+    setStatus(''); return;
+  }
+
+  // 动态 Special 页：由插件通过 core.registerSpecialPage() 注册
+  const dynPage = core.specialPages.find(
+    p => raw === p.id || raw.startsWith(p.id + '?')
+  );
+  if (dynPage?.render) {
+    const params = raw.includes('?') ? new URLSearchParams(raw.slice(raw.indexOf('?') + 1)) : new URLSearchParams();
+    try { await dynPage.render(core, params); } catch (e) { showFatal(`${dynPage.id} 渲染失败：${e.message}`); }
     setStatus(''); return;
   }
 
