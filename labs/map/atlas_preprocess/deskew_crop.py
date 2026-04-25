@@ -41,23 +41,40 @@ def _find_strip_width_frac(dark_fracs: np.ndarray, frac_thresh: float, max_strip
     return last_dark + 1
 
 
+def _find_blank_bottom(gray: np.ndarray, min_blank: int = 50,
+                        content_frac: float = 0.01) -> int:
+    """
+    从底部向上扫描，找内容结束位置。
+    若底部连续空白行 >= min_blank，返回应裁掉的行数；否则返回 0。
+    content_frac：某行暗像素占比超过此值即视为有内容（默认 0.5%）。
+    """
+    h, w = gray.shape
+    last_content = h - 1
+    for i in range(1, h):
+        if (gray[h - i, :] < 180).mean() > content_frac:
+            last_content = h - i
+            break
+    blank = h - last_content - 1
+    return blank if blank >= min_blank else 0
+
+
 def autocrop(arr: np.ndarray,
              dark_thresh: float = 130.0,
              dark_frac_thresh: float = 0.05,
              max_strip: int = 8,
-             margin: int = 0) -> tuple[np.ndarray, tuple]:
+             min_blank_bottom: int = 100) -> tuple[np.ndarray, tuple]:
     """
-    检测并裁切四边的扫描暗条（装订阴影、页面边缘等）。
+    检测并裁切四边的扫描暗条和底部大面积空白。
 
-    双重检测：均值法（dark_thresh）和暗像素比例法（dark_frac_thresh），取较大值。
-    暗像素比例法能捕捉均值被亮像素稀释、但实际含大量暗像素的非均匀暗条。
+    双重检测暗条：均值法（dark_thresh）+ 暗像素比例法（dark_frac_thresh）。
+    额外检测：底部连续空白 >= min_blank_bottom 行时自动裁除（半页图留白场景）。
 
     返回 (cropped_arr, (top, bot, left, right)) 裁切像素数。
     """
     h, w = arr.shape[:2]
     gray = arr.mean(axis=2)
 
-    # ── 均值法
+    # ── 均值法（边缘暗条）
     top_means  = gray[:max_strip, :].mean(axis=1)
     bot_means  = gray[h-max_strip:, :].mean(axis=1)[::-1]
     left_means = gray[:, :max_strip].mean(axis=0)
@@ -91,6 +108,10 @@ def autocrop(arr: np.ndarray,
     bot   = max(bot_m,   bot_f)
     left  = max(left_m,  left_f)
     right = max(right_m, right_f)
+
+    # ── 底部大面积空白（半页图留白，仅裁 >= min_blank_bottom 的连续空白）
+    blank_bot = _find_blank_bottom(gray, min_blank=min_blank_bottom)
+    bot = max(bot, blank_bot)
 
     r0 = top
     r1 = h - bot   if bot   > 0 else h
