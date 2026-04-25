@@ -3268,3 +3268,9 @@
 {"round": 5039, "ts": "2026-04-25T08:39:15Z", "mode": "trail", "action": "add-pn-sourcing", "target": "batch", "result": "accept"}
 {"round": 5040, "ts": "2026-04-25T08:39:15Z", "mode": "trail", "action": "add-pn-sourcing", "target": "batch", "result": "accept"}
 {"round": 5041, "ts": "2026-04-25T08:39:15Z", "mode": "trail", "action": "add-pn-sourcing", "target": "batch", "result": "accept"}
+{"round": 5043, "ts": "2026-04-25T08:44:09Z", "mode": "housekeeping", "action": "H1-redirect", "target": "冯唐论将——识将知人之道", "summary": "REDIRECT→冯唐论将；标记H-W11a已解决", "rev": "20260425-084409-55fde1", "result": "accept"}
+{"round": 5044, "ts": "2026-04-25T08:48:00Z", "mode": "housekeeping", "action": "H1-review", "target": "冯唐论将 重复组", "summary": "识将知人之道→REDIRECT；颇牧可用标假阳性保留；H1任务完成", "result": "accept"}
+{"round": 5045, "ts": "2026-04-25T08:52:00Z", "mode": "housekeeping", "action": "H1-review", "target": "推恩令+宋襄公+周公 重复组", "summary": "3组假阳性：不同类型页面互补，无需合并", "result": "accept"}
+{"round": 5046, "ts": "2026-04-25T08:55:00Z", "mode": "housekeeping", "action": "H20-verify-citations", "target": "韩信/项羽/刘邦 样本", "summary": "verify_quotes_agent.py不存在；改用check_citations.py；3页有格式问题待修", "result": "accept"}
+{"round": 5047, "ts": "2026-04-25T09:00:00Z", "mode": "explore", "action": "W1-explore", "target": "discover_duplicates", "summary": "发现10条新H1任务写入housekeeping_queue：P0×5+P1×5", "result": "accept"}
+{"round": 5048, "ts": "2026-04-25T09:05:00Z", "mode": "housekeeping", "action": "H1-review", "target": "七国之乱+王温舒+吴楚七国反+赵武灵王+田氏代齐 5组 + 春秋五霸轮替全景图", "summary": "5组假阳性：不同类型互补；春秋五霸轮替全景图(405行)vs春秋五霸(279行)留人工审查", "result": "accept"}
