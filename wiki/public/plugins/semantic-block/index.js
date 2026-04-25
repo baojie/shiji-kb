@@ -89,6 +89,14 @@ function parseYaml(text) {
     if (!val) continue;
     if (val.startsWith('[') && val.endsWith(']')) {
       obj[key] = val.slice(1, -1).split(',').map(s => s.trim()).filter(Boolean);
+    } else if (val.startsWith('{') && val.endsWith('}')) {
+      const inner = val.slice(1, -1);
+      const sub = {};
+      for (const pair of inner.split(',')) {
+        const ci = pair.indexOf(':');
+        if (ci > 0) sub[pair.slice(0, ci).trim()] = pair.slice(ci + 1).trim();
+      }
+      obj[key] = sub;
     } else if ((val[0] === '"' && val.endsWith('"')) || (val[0] === "'" && val.endsWith("'"))) {
       obj[key] = val.slice(1, -1);
     } else if (val === 'true') {
@@ -336,14 +344,27 @@ function injectMetaBlock(blocks, core) {
 // ---------- 查询引擎 ----------
 
 const QUERY_SYSTEM_KEYS = new Set([
-  'sort', 'order', 'limit', 'display', 'fields', 'title',
+  'sort', 'order', 'limit', 'display', 'fields', 'title', 'field_labels',
 ]);
+
+// Boolean operator keys: handled separately, not as equality filters
+const QUERY_BOOL_KEYS = new Set([
+  'tags_any', 'tags_not', 'type_any',
+]);
+
+// Computed (virtual) fields: key → fn(page) → value
+const COMPUTED_FIELDS = {
+  age: (p) => {
+    const b = p.birth_ce, d = p.death_ce;
+    return (typeof b === 'number' && typeof d === 'number') ? d - b : null;
+  },
+};
 
 const QUERY_FIELD_LABELS = {
   label: '名称', type: '类型', tags: '标签',
   total_refs: '引用', total_chapters: '章节数',
   quality_score: '质量', featured: '精品',
-  lifespan: '活跃期',
+  lifespan: '活跃期', birth_ce: '生', death_ce: '卒', age: '寿命',
 };
 
 const QUERY_TYPE_LABELS = {
@@ -356,8 +377,22 @@ function executeQuery(meta, registry) {
   const allPages = Object.entries(registry.pages);
 
   const filtered = allPages.filter(([pid, page]) => {
+    // Boolean operators
+    if (meta.tags_any) {
+      const any = Array.isArray(meta.tags_any) ? meta.tags_any : [meta.tags_any];
+      if (!any.some(t => (page.tags || []).includes(t))) return false;
+    }
+    if (meta.tags_not) {
+      const not = Array.isArray(meta.tags_not) ? meta.tags_not : [meta.tags_not];
+      if (not.some(t => (page.tags || []).includes(t))) return false;
+    }
+    if (meta.type_any) {
+      const anyT = Array.isArray(meta.type_any) ? meta.type_any : [meta.type_any];
+      if (!anyT.includes(page.type)) return false;
+    }
+
     for (const [key, val] of Object.entries(meta)) {
-      if (QUERY_SYSTEM_KEYS.has(key)) continue;
+      if (QUERY_SYSTEM_KEYS.has(key) || QUERY_BOOL_KEYS.has(key)) continue;
       // _min / _max 范围过滤
       if (key.endsWith('_min')) {
         const field = key.slice(0, -4);
@@ -399,6 +434,14 @@ function executeQuery(meta, registry) {
 function fmtQueryValue(key, v) {
   if (v == null || v === '') return '';
   if (key === 'type') return QUERY_TYPE_LABELS[v] || String(v);
+  if (key === 'birth_ce' || key === 'death_ce') {
+    if (typeof v !== 'number') return String(v);
+    return v < 0 ? `前${-v}` : String(v);
+  }
+  if (key === 'age') {
+    if (typeof v !== 'number') return '';
+    return `${v}`;
+  }
   if (Array.isArray(v)) return v.join(' · ');
   if (typeof v === 'boolean') return v ? '是' : '';
   return String(v);
@@ -421,9 +464,11 @@ function renderQueryBlock(meta, registry) {
     const fields = Array.isArray(rawFields) ? rawFields
       : typeof rawFields === 'string' ? [rawFields]
       : ['label', 'type', 'tags', 'total_refs'];
+    const customLabels = (meta.field_labels && typeof meta.field_labels === 'object')
+      ? meta.field_labels : {};
 
     const thead = '<tr>' + fields.map(f =>
-      `<th>${esc(QUERY_FIELD_LABELS[f] || f)}</th>`
+      `<th>${esc(customLabels[f] || QUERY_FIELD_LABELS[f] || f)}</th>`
     ).join('') + '</tr>';
 
     const tbody = results.map(item => {
@@ -431,7 +476,10 @@ function renderQueryBlock(meta, registry) {
         if (f === 'label') {
           return `<td><a class="wikilink resolved" href="#${encodeURIComponent(item.pid)}">${esc(item.label || item.pid)}</a></td>`;
         }
-        return `<td>${esc(fmtQueryValue(f, item[f]))}</td>`;
+        // Computed fields
+        const computeFn = COMPUTED_FIELDS[f];
+        const val = computeFn ? computeFn(item) : item[f];
+        return `<td>${esc(fmtQueryValue(f, val))}</td>`;
       }).join('');
       return `<tr>${cells}</tr>`;
     }).join('');

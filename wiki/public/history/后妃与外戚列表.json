@@ -1,0 +1,29 @@
+{
+  "page": "后妃与外戚列表",
+  "latest_rev_id": "20260425-224923-d72979",
+  "revision_count": 2,
+  "revisions": [
+    {
+      "rev_id": "20260425-224923-d72979",
+      "timestamp": "2026-04-25T22:49:23Z",
+      "author": "claude",
+      "summary": "[W12] 更新: 改用 tags_any 组合查询",
+      "parent_rev": "20260425-224606-8f0db8",
+      "content_hash": "sha256:d729794cf8cf964f10ba8be5fee1e307312bc27e4b1df9647a251a333736bf15",
+      "size_before": 797,
+      "size": 534,
+      "content": "---\nid: 后妃与外戚列表\ntype: list\nlabel: 后妃与外戚列表\ndescription: 史记中后妃或外戚人物，宫廷内外两股权力\ntags: [列表, 人物, 后妃, 外戚]\n---\n\n# 后妃与外戚列表\n\n后妃居于宫廷之内，外戚凭藉裙带之力，二者共同构成汉代宫廷政治的重要力量。\n\n::: query\ntype: person\ntags_any: [后妃, 外戚]\nsort: total_refs\norder: desc\nlimit: 100\ndisplay: table\nfields: [label, tags, total_refs, total_chapters]\ntitle: 后妃与外戚（OR：按引用次数排序）\n:::\n"
+    },
+    {
+      "rev_id": "20260425-224606-8f0db8",
+      "timestamp": "2026-04-25T22:46:06Z",
+      "author": "claude",
+      "summary": "[W12] 创建列表页: 后妃与外戚列表（双查询）",
+      "parent_rev": null,
+      "content_hash": "sha256:8f0db8f5a0ab33870ef8775ab282a467b159133eaf69c3dabfc8ea0b28bb8d45",
+      "size_before": 0,
+      "size": 797,
+      "content": "---\nid: 后妃与外戚列表\ntype: list\nlabel: 后妃与外戚列表\ndescription: 史记中的后妃与外戚人物，宫廷内外两股权力\ntags: [列表, 人物, 后妃, 外戚]\n---\n\n# 后妃与外戚列表\n\n后妃居于宫廷之内，外戚凭藉裙带之力，二者共同构成汉代宫廷政治的重要力量。吕后、窦太后、卫子夫等人的故事，折射出女性权力与家族政治的复杂交织。\n\n::: query\ntype: person\ntags: 后妃\nsort: total_refs\norder: desc\nlimit: 100\ndisplay: table\nfields: [label, tags, total_refs, total_chapters]\ntitle: 后妃（按引用次数排序）\n:::\n\n::: query\ntype: person\ntags: 外戚\nsort: total_refs\norder: desc\nlimit: 50\ndisplay: table\nfields: [label, tags, total_refs, total_chapters]\ntitle: 外戚（按引用次数排序）\n:::\n"
+    }
+  ]
+}
