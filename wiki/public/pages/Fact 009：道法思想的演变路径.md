@@ -2,6 +2,16 @@
 id: Fact 009：道法思想的演变路径
 type: overview
 label: Fact 009：道法思想的演变路径
+description: ```
+老子（道）
+    ↓ 虚无、无为
+庄子（道）
+    ↓ 散道德、归自然
+申不害（道→法）
+    ↓ 本黄老、主刑名
+韩非（法）
+    ↓ 归本黄老、集法术势
+```
 tags: [史记, 综述]
 featured: false
 ---

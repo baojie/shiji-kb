@@ -2,6 +2,7 @@
 id: Fact 003：伍子胥屡谏夫差——忠谏不纳的政治悲剧
 type: overview
 label: Fact 003：伍子胥屡谏夫差——忠谏不纳的政治悲剧
+description: 夫差即位后，两年败越于夫湫，越王句践以余兵五千人栖于会稽之上，遣大夫文种厚币求和
 tags: [史记, 综述]
 featured: false
 ---

@@ -2,6 +2,7 @@
 id: Fact 002：颜回与子路——两种极致人格的对照
 type: overview
 label: Fact 002：颜回与子路——两种极致人格的对照
+description: "这句话精炼了颜回的人格精髓：外在的贫困不能撼动内心的快乐。孔子以'贤哉'直接称赞，在论语中这种语气极为罕见"
 tags: [史记, 综述]
 featured: false
 ---
