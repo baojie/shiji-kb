@@ -868,6 +868,10 @@ export function renderAll(core) {
   for (const p of allEntries) {
     const t = p.type || 'unknown';
     typeCounts[t] = (typeCounts[t] || 0) + 1;
+    // jun_title: true 的页面也计入 jun 分面（无论其本身 type 是 person/official 等）
+    if (p.jun_title && t !== 'jun') {
+      typeCounts['jun'] = (typeCounts['jun'] || 0) + 1;
+    }
     for (const tag of (p.tags || [])) tagCounts[tag] = (tagCounts[tag] || 0) + 1;
     if (p.essay_type) essayTypeCounts[p.essay_type] = (essayTypeCounts[p.essay_type] || 0) + 1;
   }
@@ -903,15 +907,10 @@ export function renderAll(core) {
     'disambiguation', 'redirect', 'list', 'topic', 'skill', 'overview',
     'meta', 'special', 'unknown',
   ];
-  const orderedTypes = Object.keys(typeCounts).sort((a, b) => {
-    const ia = typeOrder.indexOf(a), ib = typeOrder.indexOf(b);
-    if (ia >= 0 && ib >= 0) return ia - ib;
-    if (ia >= 0) return -1;
-    if (ib >= 0) return 1;
-    // 未在列表中的类型：按中文标签排序
-    const la = TYPE_LABELS[a] || a, lb = TYPE_LABELS[b] || b;
-    return la.localeCompare(lb, 'zh');
-  });
+  // 类型分面：按条数降序排列
+  const orderedTypes = Object.keys(typeCounts).sort(
+    (a, b) => typeCounts[b] - typeCounts[a]
+  );
 
   // ── URL 状态 ──────────────────────────────────────────────────────
   function getState() {
@@ -945,7 +944,10 @@ export function renderAll(core) {
 
   function applyFilters(s) {
     let r = allEntries;
-    if (s.types.length)  r = r.filter(p => s.types.includes(p.type || 'unknown'));
+    if (s.types.length)  r = r.filter(p =>
+      s.types.includes(p.type || 'unknown') ||
+      (s.types.includes('jun') && p.jun_title)
+    );
     if (s.essays.length) r = r.filter(p => s.essays.includes(p.essay_type || ''));
     if (s.tags.length)   r = r.filter(p => s.tags.every(t => (p.tags || []).includes(t)));
     if (s.qlevel === 'featured') r = r.filter(p => p.featured);

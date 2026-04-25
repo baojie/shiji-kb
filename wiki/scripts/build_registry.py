@@ -89,6 +89,8 @@ def main() -> int:
         }
         if meta.get("essay_type"):
             entry["essay_type"] = meta["essay_type"]
+        if meta.get("jun_title"):
+            entry["jun_title"] = True
         pages[pid] = entry
 
         # alias_index: 收 slug(文件名) + id + label + aliases
