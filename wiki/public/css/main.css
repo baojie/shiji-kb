@@ -106,6 +106,8 @@ article th, article td {
 article th { background: var(--bg-box); font-weight: 600; }
 article hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
 article em { color: var(--fg-muted); font-style: normal; }
+article img { max-width: 100%; height: auto; display: block; margin: .8em 0 .2em; border-radius: 4px; }
+article img + em { display: block; font-size: .85em; color: var(--fg-muted); margin-bottom: .8em; }
 
 /* 右侧栏：可容纳 infobox、人物画像等多个 box */
 aside.sidebar {
@@ -178,6 +180,21 @@ aside.sidebar {
   border: 1px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
+}
+.map-caption {
+  font-size: .8rem;
+  color: var(--fg-muted, #666);
+  padding: .25rem .5rem;
+  background: var(--bg-subtle, #f7f7f7);
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+.map-source {
+  font-size: .7rem;
+  color: var(--fg-muted, #999);
+  margin-left: auto;
 }
 
 .wikilink.resolved { color: var(--link); text-decoration: none; }

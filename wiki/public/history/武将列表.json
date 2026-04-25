@@ -1,0 +1,18 @@
+{
+  "page": "武将列表",
+  "latest_rev_id": "20260425-221753-805d08",
+  "revision_count": 1,
+  "revisions": [
+    {
+      "rev_id": "20260425-221753-805d08",
+      "timestamp": "2026-04-25T22:17:53Z",
+      "author": "claude",
+      "summary": "[W12] 自动创建列表页: 武将列表",
+      "parent_rev": null,
+      "content_hash": "sha256:805d080a3b1515a33be85111bed534f181b930069c034aa8cd9e9695eb630fb0",
+      "size": 360,
+      "content": "---\nid: 武将列表\ntype: list\nlabel: 武将列表\ndescription: 史记中的武将人物\ntags: [\"列表\", \"人物\", \"武将\"]\n---\n\n# 武将列表\n\n史记中的武将人物\n\n::: query\ntype: person\ntags: 武将\nsort: total_refs\norder: desc\nlimit: 100\ndisplay: table\nfields: [label, tags, total_refs, total_chapters]\ntitle: 武将（按引用次数排序）\n:::\n",
+      "size_before": 0
+    }
+  ]
+}

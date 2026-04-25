@@ -101,6 +101,35 @@ function renderSidebarPortrait(front) {
     </div>`).join('');
 }
 
+function renderSidebarMap(front) {
+  const el = document.getElementById('sidebar-map');
+  if (!el) return;
+
+  const coords = front.coords;
+  if (!Array.isArray(coords) || coords.length < 2) {
+    el.hidden = true; el.innerHTML = '';
+    return;
+  }
+
+  const [lon, lat] = coords;
+  const name = front.coords_name || front.label || '';
+  const source = front.coords_source ? `<span class="map-source">${escapeHtml(front.coords_source)}</span>` : '';
+  const delta = 0.4;
+  const bbox = `${lon - delta},${lat - delta},${lon + delta},${lat + delta}`;
+  const osmEmbed = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lon}`;
+
+  el.hidden = false;
+  el.innerHTML = `
+    <iframe
+      src="${osmEmbed}"
+      style="width:100%;height:180px;border:none;display:block;"
+      loading="lazy"
+      title="${escapeHtml(name)}地图"
+      referrerpolicy="no-referrer">
+    </iframe>
+    <div class="map-caption">${escapeHtml(name)}${source}</div>`;
+}
+
 function hideSidebar() {
   const sidebar = document.getElementById('sidebar');
   if (sidebar) sidebar.hidden = true;
@@ -180,6 +209,7 @@ export async function renderPage(core, pid, meta, mdText) {
     ibEl.hidden = true;
   }
   renderSidebarPortrait(front);
+  renderSidebarMap(front);
   const portraitEl = document.getElementById('sidebar-portrait');
   const mapEl = document.getElementById('sidebar-map');
   sidebarEl.hidden = ibEl.hidden && (!portraitEl || portraitEl.hidden) && (!mapEl || mapEl.hidden);

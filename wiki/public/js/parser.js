@@ -20,12 +20,25 @@ export function createMarkdownIt() {
   if (!window.markdownit) {
     throw new Error('markdown-it 未加载');
   }
-  return window.markdownit({
+  const md = window.markdownit({
     html: false,
     linkify: true,
     typographer: true,
     breaks: false,
   });
+
+  // 图片点击在新 tab 打开
+  const defaultImageRender = md.renderer.rules.image || function(tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options);
+  };
+  md.renderer.rules.image = function(tokens, idx, options, env, self) {
+    const token = tokens[idx];
+    const src = token.attrGet('src') || '';
+    const alt = token.content || '';
+    return `<a href="${src}" target="_blank" rel="noopener">${defaultImageRender(tokens, idx, options, env, self)}</a>`;
+  };
+
+  return md;
 }
 
 export async function parseMarkdown(core, mdText, ctx = {}) {

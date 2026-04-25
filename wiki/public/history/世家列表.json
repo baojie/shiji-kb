@@ -1,0 +1,18 @@
+{
+  "page": "世家列表",
+  "latest_rev_id": "20260425-221754-3d2108",
+  "revision_count": 1,
+  "revisions": [
+    {
+      "rev_id": "20260425-221754-3d2108",
+      "timestamp": "2026-04-25T22:17:54Z",
+      "author": "claude",
+      "summary": "[W12] 自动创建列表页: 世家列表",
+      "parent_rev": null,
+      "content_hash": "sha256:3d21082400525852b4ae7299218ccfb5d2f1e7708ebff3ed2b4a927242a1c89b",
+      "size": 314,
+      "content": "---\nid: 世家列表\ntype: list\nlabel: 世家列表\ndescription: 史记三十世家\ntags: [\"列表\", \"章节\", \"世家\"]\n---\n\n# 世家列表\n\n史记三十世家\n\n::: query\ntype: chapter\ntags: 世家\nsort: label\norder: asc\nlimit: 40\ndisplay: table\nfields: [label, total_refs, quality_score]\ntitle: 三十世家\n:::\n",
+      "size_before": 0
+    }
+  ]
+}

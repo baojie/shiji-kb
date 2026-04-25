@@ -1,0 +1,18 @@
+{
+  "page": "楚国人物列表",
+  "latest_rev_id": "20260425-221753-22a225",
+  "revision_count": 1,
+  "revisions": [
+    {
+      "rev_id": "20260425-221753-22a225",
+      "timestamp": "2026-04-25T22:17:53Z",
+      "author": "claude",
+      "summary": "[W12] 自动创建列表页: 楚国人物列表",
+      "parent_rev": null,
+      "content_hash": "sha256:22a225934931f1831f3695142fcf870aa6ebe4a5957795fd04bc146c88e27216",
+      "size": 389,
+      "content": "---\nid: 楚国人物列表\ntype: list\nlabel: 楚国人物列表\ndescription: 史记中楚国相关人物\ntags: [\"列表\", \"人物\", \"楚国\"]\n---\n\n# 楚国人物列表\n\n史记中楚国相关人物\n\n::: query\ntype: person\ntags: 楚国\nsort: total_refs\norder: desc\nlimit: 50\ndisplay: table\nfields: [label, tags, total_refs, total_chapters]\ntitle: 楚国人物（按引用次数排序）\n:::\n",
+      "size_before": 0
+    }
+  ]
+}
