@@ -57,6 +57,55 @@ description: Butler 的反思与自改机制 — 进化引擎。周期性扫 act
 - 对照下方架构阈值表，识别是否越过警戒线或临界线
 - 如有越线 → 进入「架构提案」流程（§二.D 专节），**不计入** ≤3 条修订限额
 
+**E. 队列候选健康** ← *每次反思都必须检查，保证队列有改进候选*
+
+```python
+import json, os
+
+data = json.load(open('wiki/public/pages.json'))
+pages = data.get('pages', {})
+pages_dir = 'wiki/public/pages'
+
+scored = []
+for pid, meta in pages.items():
+    if not isinstance(meta, dict): continue
+    fpath = os.path.join(pages_dir, pid + '.md')
+    try: lines = open(fpath, encoding='utf-8').read().count('\n')
+    except: continue
+    scored.append({'id': pid, 'type': meta.get('type',''), 'lines': lines,
+                   'stub': meta.get('stub', False),
+                   'featured': meta.get('featured', False),
+                   'refs': meta.get('total_refs', 0)})
+
+# 注：featured 在本项目中使用宽泛，不代表真正精品质量；用行数做质量代理
+
+# expand-content 候选：15-60行，非stub，refs > 0，重点类型
+EXPAND_TYPES = {'person','concept','event','overview','story','state'}
+expand_pool = sorted(
+    [p for p in scored if 15 <= p['lines'] < 60
+     and not p['stub'] and p['refs'] > 0 and p['type'] in EXPAND_TYPES],
+    key=lambda x: -x['refs'])
+
+# premium-upgrade 候选：60-150行，refs > 0，精品类型（真正有内容但还能深化）
+UPGRADE_TYPES = {'person','concept','event'}
+upgrade_pool = sorted(
+    [p for p in scored if 60 <= p['lines'] <= 150
+     and p['refs'] > 0 and p['type'] in UPGRADE_TYPES],
+    key=lambda x: -x['refs'])
+
+print(f'expand 候选池: {len(expand_pool)} 页')
+print(f'upgrade 候选池: {len(upgrade_pool)} 页')
+print('Top 10 expand:', [p["id"] for p in expand_pool[:10]])
+print('Top 10 upgrade:', [p["id"] for p in upgrade_pool[:10]])
+```
+
+反思时向 `queue.md` 写入 **≥ 30 个 expand-content** + **≥ 10 个 premium-upgrade** 候选（按 refs 高低排序，去掉已在队列中的重复条目）。格式：
+```
+- [ ] P1 | [[人名]] | 35行 · refs=42 · type=person | action: expand-content
+- [ ] P1 | [[人名]] | 89行 · refs=108 · type=person | action: premium-upgrade
+```
+此步骤**不计入** ≤3 条修订限额（是观察/补充，不是规则修订）。
+
 #### 架构阈值表
 
 | 指标 | 采集命令 | 警戒线 🟡 | 临界线 🔴 | 推荐应对 |

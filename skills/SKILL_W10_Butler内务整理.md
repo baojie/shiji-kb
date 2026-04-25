@@ -68,6 +68,7 @@ echo "待处理 housekeeping: $(grep -c '^\- \[ \]' wiki/logs/butler/housekeepin
 | **H18** | Stub 扩展反思 | P2 | `SKILL_W10r_Stub扩展反思.md` |
 | **H19** | 正文断言 PN 核验 | P1 | `SKILL_W10s_正文断言核验.md` |
 | **H20** | 洞察探索队列管理 | P2 | `SKILL_W10t_洞察探索.md` → 委托 W14 |
+| **H21** | 首页精品页全面升级 | P1 | `SKILL_W10u_首页精品页升级.md` |
 
 ---
 
@@ -82,6 +83,7 @@ python3 wiki/scripts/butler/discover_duplicates.py --max-new 5       # H1
 python3 wiki/scripts/butler/find_unsourced.py --max 10 --write-queue  # H4
 python3 wiki/scripts/butler/reflection_scan.py --aspect alias          # H3
 grep -rl '〖\|⟦' wiki/public/pages/ | head -5  # H15 候选
+python3 wiki/scripts/butler/discover_homepage_new.py                  # H21 新晋首页
 ```
 
 ### 轮次 3–8：执行任务
@@ -136,11 +138,15 @@ grep -c '^\- \[x\]' wiki/logs/butler/housekeeping_queue.md
 
 | 频率 | 触发的任务 |
 |---|---|
-| **每 10 轮** | 健康度快照 + 批量扫描（H1/H3/H4）|
+| **每 10 轮** | 健康度快照 + 批量扫描（H1/H3/H4）+ H21 新晋首页扫描 |
 | **每 20 轮** | H7（精品页识别）+ H9（列表页识别）|
 | **每 30 轮** | H14（元反思，委托 W5）|
 | **每 10 轮最后 1-2 轮** | H6（随机诊断，5页抽样）|
 | **每 10 轮第 5 轮** | H18（Stub 扩展，5个一批）|
+
+> H21 新晋首页扫描：`python3 wiki/scripts/butler/discover_homepage_new.py`
+> 找出在首页但未打「首页精品」tag 的页面，加入 H21 升级队列。
+> H21 升级完成后，必须在该页面 tags 追加「首页精品」作为认证标志。
 
 ---
 

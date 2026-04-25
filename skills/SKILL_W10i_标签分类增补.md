@@ -111,7 +111,59 @@ tags: [战国, 人物, 军事]
 - [ ] 所有标签来自已确立的标签体系（无自创标签）
 - [ ] `type` 字段已有时，不重复加相同含义的类型标签
 - [ ] 每轮处理 ≤ 10 个页面
-- [ ] 只修改了 frontmatter 的 tags 字段，正文未动
+- [ ] **tags 只能写在 frontmatter（`---` 包围的区块）内，绝不插入正文**
+
+---
+
+## ⛔ 严禁：在正文插入 tags 行
+
+**这是最常见的错误**：将 `tags: [...]` 插入正文（frontmatter 结束的 `---` 之后）。
+
+```yaml
+# ✅ 正确：tags 在 frontmatter 内
+---
+title: 六国合纵盟约
+type: event
+tags: [史记, 事件]
+---
+
+# 六国合纵盟约
+...正文内容...
+```
+
+```yaml
+# ❌ 错误：tags 出现在正文中间
+---
+title: 六国合纵盟约
+type: event
+tags: [史记, 事件]
+---
+
+# 六国合纵盟约
+...正文内容...
+
+tags: [史记, 事件]   ← 绝对禁止！这行无效且污染页面
+---
+```
+
+**验证命令**（执行后每行输出都代表一个错误）：
+```bash
+python3 - <<'EOF'
+import os, re
+for fname in sorted(os.listdir('wiki/public/pages')):
+    if not fname.endswith('.md'):
+        continue
+    lines = open(f'wiki/public/pages/{fname}').read().split('\n')
+    if not lines[0].strip() == '---':
+        continue
+    fm_end = next((i for i, l in enumerate(lines[1:], 1) if l.strip() == '---'), None)
+    if fm_end is None:
+        continue
+    for i, line in enumerate(lines[fm_end+1:], fm_end+1):
+        if re.match(r'^tags:\s*\[', line):
+            print(f"ERROR {fname}:{i+1} tags in body: {line.strip()}")
+EOF
+```
 
 ---
 
