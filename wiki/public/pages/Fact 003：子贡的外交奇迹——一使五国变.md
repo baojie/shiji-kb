@@ -5,8 +5,8 @@ label: Fact 003：子贡的外交奇迹——一使五国变
 description: 田常欲在齐国作乱，忌惮齐国四大家族，故意将矛头转向外部——伐鲁。孔子得知，告弟子：
 tags: [史记, 综述]
 featured: false
+sources: [仲尼弟子列传]
 ---
-
 # Fact 003：子贡的外交奇迹——一使[[五国]]变
 
 **Fact ID**: 067_fact_003
