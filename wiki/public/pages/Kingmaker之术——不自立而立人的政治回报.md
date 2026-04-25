@@ -5,6 +5,7 @@ sources: [荆燕世家]
 description: "在一次权力更替中，自己没有资格登顶但可以影响谁登顶——如何在不当'君主'的前提下，成为'造君主者'并从中获得最大政治收益"
 label: Kingmaker之术——不自立而立人的政治回报
 tags: [世家]
+quality: standard
 ---
 
 # Kingmaker之术——不自立而立人的政治回报

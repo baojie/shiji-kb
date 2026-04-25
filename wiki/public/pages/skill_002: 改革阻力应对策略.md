@@ -4,6 +4,7 @@ type: skill
 description: "史记智慧萃取：程序性知识"
 label: 'skill_002: 改革阻力应对策略'
 tags: [列传]
+quality: standard
 ---
 
 # skill_002: 改革阻力应对策略

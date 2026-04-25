@@ -5,6 +5,7 @@ label: 'fact_005: 太子犯法 — 建立法律权威'
 description: 变法令颁布实施一年后，秦国国都中反对变法的声音很多，此时太子犯法
 tags: [史记, 综述]
 sources: [商君列传]
+quality: standard
 ---
 # fact_005: 太子犯法 — 建立法律权威
 

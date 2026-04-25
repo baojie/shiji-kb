@@ -4,6 +4,7 @@ type: skill
 description: "伍子胥之死，直接原因是太宰伯嚭的谗言，根本原因是吴王夫差本身的猜疑心理"
 label: Skill 003：识别谗言并构建防谗机制的方法
 tags: [列传]
+quality: standard
 ---
 
 # Skill 003：识别谗言并构建防谗机制的方法

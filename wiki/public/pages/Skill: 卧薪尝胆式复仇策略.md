@@ -4,6 +4,7 @@ type: skill
 description: "定义：在遭受重大失败后，通过长期隐忍、蓄积力量、把握时机，最终实现逆转和复仇的战略方法"
 label: 'Skill: 卧薪尝胆式复仇策略'
 tags: [世家]
+quality: standard
 ---
 
 # Skill: 卧薪尝胆式复仇策略

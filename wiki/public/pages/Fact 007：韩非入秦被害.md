@@ -7,6 +7,7 @@ description: 1. 身份论证：
    - 血缘决定忠诚
 tags: [史记, 综述]
 sources: [老子韩非列传]
+quality: standard
 ---
 # Fact 007：[[韩非入秦被害]]
 

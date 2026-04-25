@@ -4,6 +4,7 @@ type: special
 label: 想要的页面
 canonical_name: "Special:WantedPages"
 tags: [系统页面, 维护]
+quality: standard
 ---
 
 # Special:WantedPages — 想要的页面
@@ -80,7 +81,7 @@ tags: [系统页面, 维护]
 ## 相关页面
 
 - [[Special:All]] — 所有特殊页面索引
-- [[Special:知识量]] — 知识量统计
+- [[Special:Statistics]] — 知识量统计
 
 ---
 

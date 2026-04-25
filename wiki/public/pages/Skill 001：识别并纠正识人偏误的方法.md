@@ -4,6 +4,7 @@ type: skill
 description: "孔子是人类历史上最伟大的教育家之一，但他在识人方面犯了两个系统性错误：以言辞能力高估了宰予的品德，以外貌低估了子羽的才能"
 label: Skill 001：识别并纠正识人偏误的方法
 tags: [列传]
+quality: standard
 ---
 
 # Skill 001：识别并纠正识人偏误的方法

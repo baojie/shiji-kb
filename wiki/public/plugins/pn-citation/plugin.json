@@ -4,5 +4,6 @@
   "version": "1.0.0",
   "description": "将 （[[NNN_章节|NNN-MMM]]） 或 （NNN-MMM） 格式的引文渲染为指向章节原文段落的链接",
   "author": "bot-lint",
-  "entry": "plugins/pn-citation/index.js"
+  "entry": "index.js",
+  "load_order": 20
 }

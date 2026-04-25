@@ -4,6 +4,7 @@ type: skill
 description: "史记智慧萃取：程序性知识"
 label: 如何选择刺杀时机（Skill）
 tags: [列传]
+quality: standard
 ---
 
 # 如何选择刺杀时机（Skill）

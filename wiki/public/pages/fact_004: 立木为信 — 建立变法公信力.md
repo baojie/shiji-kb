@@ -5,6 +5,7 @@ label: 'fact_004: 立木为信 — 建立变法公信力'
 description: "商鞅制定变法令文已完备，但担心民众不信任新法，因此设计了'立木为信'的实验"
 tags: [史记, 综述]
 sources: [商君列传]
+quality: standard
 ---
 # fact_004: 立木为信 — 建立变法公信力
 

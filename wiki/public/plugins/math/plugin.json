@@ -5,5 +5,6 @@
   "description": "渲染页面中的 $...$ 行内公式和 $$...$$ 块级公式（需联网加载 KaTeX CDN）",
   "author": "butler",
   "entry": "index.js",
-  "settings_key": "math"
+  "settings_key": "math",
+  "load_order": 30
 }

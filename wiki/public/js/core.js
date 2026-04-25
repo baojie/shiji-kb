@@ -44,6 +44,8 @@ async function boot() {
   setupRouter(core);
 }
 
+// plugins.json 由 wiki/scripts/build_plugins.py 自动生成，勿手动编辑。
+// 添加新插件：在 plugins/<name>/plugin.json 中声明元数据，然后运行 build_plugins.py。
 async function loadPlugins(core) {
   let manifest;
   try {
@@ -51,30 +53,37 @@ async function loadPlugins(core) {
     if (!r.ok) return;
     manifest = await r.json();
   } catch (e) {
-    return; // 无 manifest = 无插件
+    return;
   }
-  await Promise.all((manifest.plugins || []).map(async (entry) => {
-    // 支持旧格式（字符串路径）和新格式（对象 {id, entry, ...}）
-    const pluginPath = typeof entry === 'string' ? entry : entry.entry;
-    const pluginId   = typeof entry === 'string' ? entry : entry.id;
+
+  // 串行加载，保证 load_order 顺序（manifest 已由 build_plugins.py 排序）
+  for (const entry of (manifest.plugins || [])) {
+    const pluginPath = entry.entry;
+    const pluginId   = entry.id;
     try {
-      const mod = await import('../' + pluginPath);
+      // 元数据优先读 plugin.json（entry 字段），JS 模块中不再需要重复声明
+      const [mod, meta] = await Promise.all([
+        import('../' + pluginPath),
+        fetch(pluginPath.replace(/\/[^/]+$/, '/plugin.json'))
+          .then(r => r.ok ? r.json() : {}).catch(() => ({})),
+      ]);
       const p = mod.default;
       if (!p || typeof p.init !== 'function') {
         console.warn(`[plugin] ${pluginId} 缺少 default.init`);
-        return;
+        continue;
       }
       await p.init(core);
       core.plugins.push({
-        name: p.name || pluginId,
-        version: p.version || entry.version || '?',
-        description: entry.description || '',
+        id:          pluginId,
+        name:        meta.name        || entry.name        || pluginId,
+        version:     meta.version     || entry.version     || '?',
+        description: meta.description || entry.description || '',
       });
-      console.log(`[plugin] ${p.name || pluginId} v${p.version || '?'} loaded`);
+      console.log(`[plugin] ${pluginId} v${meta.version || entry.version || '?'} loaded`);
     } catch (e) {
       console.error(`[plugin] ${pluginId} 加载失败:`, e);
     }
-  }));
+  }
 }
 
 boot();

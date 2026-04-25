@@ -4,6 +4,7 @@ type: skill
 description: "史记智慧萃取：程序性知识"
 label: 'skill_003: 公信力建立方法'
 tags: [列传]
+quality: standard
 ---
 
 # skill_003: 公信力建立方法

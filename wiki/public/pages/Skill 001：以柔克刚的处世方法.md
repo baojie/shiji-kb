@@ -4,6 +4,7 @@ type: skill
 description: "史记智慧萃取：处世智慧"
 label: Skill 001：以柔克刚的处世方法
 tags: [列传]
+quality: standard
 ---
 
 # Skill 001：以柔克刚的处世方法

@@ -5,6 +5,7 @@ label: 'fact_003: 赵良苦谏商君'
 description: 商君相秦十年，宗室贵戚多怨望者。赵良见商君，商君请与赵良交友
 tags: [史记, 综述]
 sources: [商君列传]
+quality: standard
 ---
 # fact_003: [[赵良苦谏商君]]
 

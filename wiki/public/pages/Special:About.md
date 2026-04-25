@@ -4,6 +4,7 @@ type: special
 label: 关于本 Wiki
 canonical_name: "Special:About"
 tags: [系统页面]
+quality: standard
 ---
 
 # 关于《史记》知识库 Wiki
@@ -55,4 +56,4 @@ tags: [系统页面]
 - **原典**：《史记》，西汉 · 司马迁著（约公元前 91 年）
 - **数据来源**：维基文库繁体版、三家注 HTML 版
 - **维护工具**：Claude Code + Wiki Butler Agent
-- **知识量（K）**：见 [[Special:知识量]] 说明
+- **知识量（K）**：见 [[Special:Statistics]] 说明

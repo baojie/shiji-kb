@@ -4,6 +4,7 @@ type: skill
 description: "史记智慧萃取：程序性知识"
 label: 'skill_001: 改革推行方法（商鞅变法）'
 tags: [列传]
+quality: standard
 ---
 
 # skill_001: 改革推行方法（商鞅变法）
