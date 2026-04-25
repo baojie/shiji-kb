@@ -1,8 +1,28 @@
 {
   "page": "公孙无知",
-  "latest_rev_id": "20260424-070956-cd6644",
-  "revision_count": 1,
+  "latest_rev_id": "20260425-073329-33816e",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260425-073329-33816e",
+      "timestamp": "2026-04-25T07:33:29Z",
+      "author": "butler",
+      "summary": "butler/fix-pn-format: 修正 pn 格式 [] → ()()",
+      "parent_rev": "20260425-062156-b457da",
+      "content_hash": "sha256:33816e9818554d1e603dea6eef4e30bb00f54bfafb3a5029918f7217554c63cc",
+      "size": 965,
+      "content": "---\nid: 公孙无知\ntype: person\nlabel: 公孙无知\naliases: [公孙无知]\ncanonical_name: 公孙无知\ntags: [春秋, 齐国, 弑君, 年表人物]\nfeatured: false\nsources: [秦本纪, 齐太公世家]\npn: (005-10)(032-19)(032-24)\n---\n\n# 公孙无知\n\n春秋齐国公族，齐僖公之孙，与连称、管至父联谋，弑[[齐襄公]]自立为君，后游于雍林时遭雍林人所杀。其死后[[齐桓公]]即位，开创春秋霸业。\n\n## 齐太公世家与公孙无知\n\n无知弑齐襄公，自立为君；后游雍林，雍林人因旧怨杀之；齐桓公乃得立，齐太公世家载此事（[[032_齐太公世家]]）。\n\n## 相关章节\n\n[[032_齐太公世家]]\n\n## 相关人物\n\n[[齐桓公]] · [[齐襄公]]\n\n[^life]: 生卒年推断参见[《公孙无知生卒年推断》](../../doc/lifespan_inference/春秋/公孙无知.md)（生：公元前 771 年 ~ 公元前 701 年·卒：公元前 686 年 ~ 公元前 671 年·置信度：低）。\n"
+    },
+    {
+      "rev_id": "20260425-062156-b457da",
+      "timestamp": "2026-04-25T06:21:56Z",
+      "author": "butler",
+      "summary": "butler/add-pn-sourcing: 公孙无知 添加 sources/pn（来源：find_unsourced + 005秦本纪/032齐太公世家）",
+      "parent_rev": "20260424-070956-cd6644",
+      "content_hash": "sha256:b457dae9ad1d47c32c7a75e0e0496c1aa658fdccdc58fa47b624647d41c2a7f4",
+      "size": 965,
+      "content": "---\nid: 公孙无知\ntype: person\nlabel: 公孙无知\naliases: [公孙无知]\ncanonical_name: 公孙无知\ntags: [春秋, 齐国, 弑君, 年表人物]\nfeatured: false\nsources: [秦本纪, 齐太公世家]\npn: [005-10, 032-19, 032-24]\n---\n\n# 公孙无知\n\n春秋齐国公族，齐僖公之孙，与连称、管至父联谋，弑[[齐襄公]]自立为君，后游于雍林时遭雍林人所杀。其死后[[齐桓公]]即位，开创春秋霸业。\n\n## 齐太公世家与公孙无知\n\n无知弑齐襄公，自立为君；后游雍林，雍林人因旧怨杀之；齐桓公乃得立，齐太公世家载此事（[[032_齐太公世家]]）。\n\n## 相关章节\n\n[[032_齐太公世家]]\n\n## 相关人物\n\n[[齐桓公]] · [[齐襄公]]\n\n[^life]: 生卒年推断参见[《公孙无知生卒年推断》](../../doc/lifespan_inference/春秋/公孙无知.md)（生：公元前 771 年 ~ 公元前 701 年·卒：公元前 686 年 ~ 公元前 671 年·置信度：低）。\n"
+    },
     {
       "rev_id": "20260424-070956-cd6644",
       "timestamp": "2026-04-24T07:09:56Z",

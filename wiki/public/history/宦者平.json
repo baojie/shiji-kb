@@ -1,8 +1,28 @@
 {
   "page": "宦者平",
-  "latest_rev_id": "20260424-100106-2f773c",
-  "revision_count": 1,
+  "latest_rev_id": "20260425-073332-b4761a",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260425-073332-b4761a",
+      "timestamp": "2026-04-25T07:33:32Z",
+      "author": "butler",
+      "summary": "butler/fix-pn-format: 修正 pn 格式 [] → ()()",
+      "parent_rev": "20260425-071428-830282",
+      "content_hash": "sha256:b4761aadf65e07fc0d47855e3690b05fd756568986287e7ce9fd9dd01510ebd7",
+      "size": 665,
+      "content": "---\nid: 宦者平\ntype: person\nlabel: 宦者平\naliases: []\ncanonical_name: 宦者平\ntags: [西汉, 汉文帝, 齐国, 医学, 列传人物]\nfeatured: false\nsources: [扁鹊仓公列传]\npn: (105-29)\n---\n\n# 宦者平\n\n西汉齐国宦官，曾向[[淳于意]]（仓公）学习脉诊之术。齐丞相舍人之奴入宫时，仓公望其气色有病，告知宦者平，平验证诊断后转告丞相，该奴后果于四月泄血而死。\n\n宦者平是仓公医案中少数记载了名字的旁观者，展现了医学知识在当时宫廷中的传播。\n\n## 相关人物\n\n- [[淳于意]]（宦者平的医学师父）\n\n## 相关章节\n\n[[105_扁鹊仓公列传]]\n"
+    },
+    {
+      "rev_id": "20260425-071428-830282",
+      "timestamp": "2026-04-25T07:14:28Z",
+      "author": "butler",
+      "summary": "butler/add-pn-sourcing: 宦者平 sources=[扁鹊仓公列传] pn=[105-29]",
+      "parent_rev": "20260424-100106-2f773c",
+      "content_hash": "sha256:8302825a548182ff9f4f4b17d494bbc16acc4023463994d9b1ae09570c7efea1",
+      "size": 665,
+      "content": "---\nid: 宦者平\ntype: person\nlabel: 宦者平\naliases: []\ncanonical_name: 宦者平\ntags: [西汉, 汉文帝, 齐国, 医学, 列传人物]\nfeatured: false\nsources: [扁鹊仓公列传]\npn: [105-29]\n---\n\n# 宦者平\n\n西汉齐国宦官，曾向[[淳于意]]（仓公）学习脉诊之术。齐丞相舍人之奴入宫时，仓公望其气色有病，告知宦者平，平验证诊断后转告丞相，该奴后果于四月泄血而死。\n\n宦者平是仓公医案中少数记载了名字的旁观者，展现了医学知识在当时宫廷中的传播。\n\n## 相关人物\n\n- [[淳于意]]（宦者平的医学师父）\n\n## 相关章节\n\n[[105_扁鹊仓公列传]]\n"
+    },
     {
       "rev_id": "20260424-100106-2f773c",
       "timestamp": "2026-04-24T10:01:06Z",

@@ -4,8 +4,8 @@
 > P0 高优 / P1 中优 / P2 低优. 每次 invocation 只做 1 条, 按 W1 优先级选.
 
 ## ⭐ 用户想要 (P0)
-- [ ] **[想要]** 楚: `create-stub` [P0] [2026-04-23] [用户请求]
-- [ ] **[想要]** 齐: `create-stub` [P0] [2026-04-23] [用户请求]
+- [x] **[想要]** 楚: `create-stub` [P0] [2026-04-23] [用户请求] ✓ 已存在
+- [x] **[想要]** 齐: `create-stub` [P0] [2026-04-23] [用户请求] ✓ 已存在
 
 ## ⛔ P0 [ARCH] — 等待用户批准
 
@@ -23,48 +23,48 @@
 - [x] 晋: `create-stub` ✓ R961
 - [x] 代: `create-stub` ✓ R962
 - [x] 吴: `create-stub` ✓ R963
-- [ ] 鲁: `create-stub` (wanted=22链接) [源:W11] [P1] [2026-04-24]
+- [x] 鲁: `create-stub` (wanted=22链接) [源:W11] [P1] [2026-04-24] ✓ 已存在
 - [x] 禹: redirect→大禹 ✓ R966
 - [x] 常山王: redirect→张耳 ✓ R978
-- [ ] 北平康侯: `create-redirect`→张苍 (refs=30) [源:discover_kg R983] [P1] [2026-04-24]
-- [ ] 王子城父: `create-stub` (refs=30/章=4) [源:discover_kg R993] [P1] [2026-04-24]
+- [x] 北平康侯: `create-redirect`→张苍 (refs=30) [源:discover_kg R983] [P1] [2026-04-24] ✓ 已存在
+- [x] 王子城父: `create-stub` (refs=30/章=4) [源:discover_kg R993] [P1] [2026-04-24] ✓ 已存在
 - [x] 殷: `create-stub` ✓ R968
 - [x] 舜: `enrich-stub` ✓ R969
-- [ ] 汤: `create-stub` (wanted=16链接，成汤，人物) [源:W11 R970] [P1] [2026-04-24]
-- [ ] 梁: `create-redirect`→魏 或 stub (wanted=18链接) [源:W11 R970] [P1] [2026-04-24]
-- [ ] 陈: `create-stub` (wanted=15链接，春秋陈国) [源:explore R964] [P1] [2026-04-24]
-- [ ] 卫: `create-stub` (wanted=14链接，卫国) [源:explore R964] [P1] [2026-04-24]
-- [ ] 郑: `create-stub` (wanted=14链接，郑国) [源:explore R964] [P1] [2026-04-24]
+- [x] 汤: `create-stub` (wanted=16链接，成汤，人物) [源:W11 R970] [P1] [2026-04-24] ✓ 已存在
+- [x] 梁: `create-redirect`→魏 或 stub (wanted=18链接) [源:W11 R970] [P1] [2026-04-24] ✓ 已存在
+- [x] 陈: `create-stub` (wanted=15链接，春秋陈国) [源:explore R964] [P1] [2026-04-24] ✓ 已存在
+- [x] 卫: `create-stub` (wanted=14链接，卫国) [源:explore R964] [P1] [2026-04-24] ✓ 已存在
+- [x] 郑: `create-stub` (wanted=14链接，郑国) [源:explore R964] [P1] [2026-04-24] ✓ 已存在
 
 ## 来自 discover_kg (kg top-N 缺 wiki 页)
 
-- [ ] 周文王: `create-stub` (refs=97/章=42) [源:A] [P1] [2026-04-22]
-- [ ] 晋文公: `create-stub` (refs=95/章=23) [源:A] [P1] [2026-04-22]
-- [ ] 黄帝: `create-stub` (refs=92/章=24) [源:A] [P1] [2026-04-22]
-- [ ] 项梁: `create-stub` (refs=89/章=21) [源:A] [P1] [2026-04-22]
-- [ ] 袁盎: `create-stub` (refs=86/章=14) [源:A] [P1] [2026-04-22]
-- [ ] 刘舜: `create-stub` (refs=81/章=26) [源:A] [P1] [2026-04-22]
-- [ ] 秦张仪: `create-stub` (refs=79/章=14) [源:A] [P1] [2026-04-22]
-- [ ] 雍王: `create-stub` (refs=79/章=17) [源:A] [P1] [2026-04-22]
-- [ ] 秦缪公: `create-stub` (refs=76/章=28) [源:A] [P1] [2026-04-22]
-- [ ] 赵高: `create-stub` (refs=75/章=11) [源:A] [P1] [2026-04-22]
-- [ ] 楚怀王: `create-stub` (refs=75/章=23) [源:A] [P1] [2026-04-22]
-- [ ] 尧: `create-stub` (refs=72/章=30) [源:A] [P1] [2026-04-22]
-- [ ] 张楚楚隐王: `create-stub` (refs=71/章=23) [源:A] [P1] [2026-04-22]
-- [ ] 秦二世: `create-stub` (refs=70/章=14) [源:A] [P1] [2026-04-22]
-- [ ] 汉孝文帝: `create-stub` (refs=69/章=24) [源:A] [P1] [2026-04-22]
-- [ ] 彭越: `create-stub` (refs=69/章=21) [源:A] [P1] [2026-04-22]
-- [ ] 汉孝景帝: `create-stub` (refs=69/章=20) [源:A] [P1] [2026-04-22]
-- [ ] 廉颇: `create-stub` (refs=68/章=15) [源:A] [P1] [2026-04-22]
-- [ ] 陈平: `create-stub` (refs=66/章=17) [源:A] [P1] [2026-04-22]
-- [ ] 管仲: `create-stub` (refs=65/章=21) [源:A] [P1] [2026-04-22]
-- [ ] 伍子胥: `create-stub` (refs=65/章=20) [源:A] [P1] [2026-04-22]
-- [ ] 李斯: `create-stub` (refs=64/章=12) [源:A] [P1] [2026-04-22]
+- [x] 周文王: `create-stub` (refs=97/章=42) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 晋文公: `create-stub` (refs=95/章=23) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 黄帝: `create-stub` (refs=92/章=24) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 项梁: `create-stub` (refs=89/章=21) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 袁盎: `create-stub` (refs=86/章=14) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 刘舜: `create-stub` (refs=81/章=26) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 秦张仪: `create-stub` (refs=79/章=14) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 雍王: `create-stub` (refs=79/章=17) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 秦缪公: `create-stub` (refs=76/章=28) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 赵高: `create-stub` (refs=75/章=11) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 楚怀王: `create-stub` (refs=75/章=23) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 尧: `create-stub` (refs=72/章=30) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 张楚楚隐王: `create-stub` (refs=71/章=23) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 秦二世: `create-stub` (refs=70/章=14) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 汉孝文帝: `create-stub` (refs=69/章=24) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 彭越: `create-stub` (refs=69/章=21) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 汉孝景帝: `create-stub` (refs=69/章=20) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 廉颇: `create-stub` (refs=68/章=15) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 陈平: `create-stub` (refs=66/章=17) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 管仲: `create-stub` (refs=65/章=21) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 伍子胥: `create-stub` (refs=65/章=20) [源:A] [P1] [2026-04-22] ✓ 已存在
+- [x] 李斯: `create-stub` (refs=64/章=12) [源:A] [P1] [2026-04-22] ✓ 已存在
 
 ## 来自 discover_sku (ontology-v2 SKU 缺 topic 页)
 
-- [ ] 司马迁的史学思想: `import-sku-as-topic` (源: `kg/ontology/ontology-v2/shiji-2026-04-05-v1/skus/facts/fact_001.md`) [P1] [2026-04-22]
-- [ ] 如何阅读史记: `import-sku-as-topic` (源: `kg/ontology/ontology-v2/shiji-2026-04-05-v1/skus/skills/skill_001.md`) [P1] [2026-04-22]
+- [x] 司马迁的史学思想: `import-sku-as-topic` ✓ 已存在
+- [x] 如何阅读史记: `import-sku-as-topic` ✓ 已存在
 
 ---
 
@@ -77,18 +77,18 @@
 
 ## P1 — add-tag (R976 explore, discover_tags)
 
-- [ ] 张仪: `add-tag` (+ 世家人物) [P1] [2026-04-24]
-- [ ] 赵襄子: `add-tag` (+ 世家人物, 战国) [P1] [2026-04-24]
-- [ ] 董仲舒: `add-tag` (+ 列传人物, 西汉) [P1] [2026-04-24]
-- [ ] 公孙弘: `add-tag` (+ 列传人物, 西汉) [P1] [2026-04-24]
-- [ ] 陈平: `add-tag` (+ 世家人物, 西汉) [P1] [2026-04-24]
-- [ ] 窦太后: `add-tag` (+ 世家人物, 西汉) [P1] [2026-04-24]
-- [ ] 墨子: `add-tag` (+ 列传人物) [P1] [2026-04-24]
-- [ ] 文种: `add-tag` (+ 世家人物, 战国) [P1] [2026-04-24]
-- [ ] 周宣王: `add-tag` (+ 世家人物) [P1] [2026-04-24]
-- [ ] 傅说: `add-tag` (+ 列传人物) [P1] [2026-04-24]
-- [ ] 司马穰苴: `add-tag` (+ 列传人物) [P1] [2026-04-24]
-- [ ] 邹阳: `add-tag` (+ 列传人物) [P1] [2026-04-24]
+- [x] 张仪: `add-tag` (+ 世家人物) ✓ 已存在
+- [x] 赵襄子: `add-tag` ✓ 已存在
+- [x] 董仲舒: `add-tag` ✓ 已存在
+- [x] 公孙弘: `add-tag` ✓ 已存在
+- [x] 陈平: `add-tag` ✓ 已存在
+- [x] 窦太后: `add-tag` ✓ 已存在
+- [x] 墨子: `add-tag` ✓ 已存在
+- [x] 文种: `add-tag` ✓ 已存在
+- [x] 周宣王: `add-tag` ✓ 已存在
+- [x] 傅说: `add-tag` ✓ 已存在
+- [x] 司马穰苴: `add-tag` ✓ 已存在
+- [x] 邹阳: `add-tag` ✓ 已存在
 - [注] discover_tags 总计 536 页有新标签建议，后续批量处理
 
 ## P2 — cite-doc-report (寿命推断报告引用，R973 explore)
@@ -342,3 +342,14 @@
 - 「王」canonical 是 KG 侧 bug：田儋/田安/田市/田广/田荣/田都/申阳/英布/韩信 均被错误归入 canonical="王"（因为都封了王）
 - **结论**：不创建 wiki 页面；需 KG 侧修复（discover_kg 应将其加入 bad canonical 跳过列表）
 - ✓ R1021 已调查，标记为 skip
+
+## explore 发现 - cite-doc-report 真阳性 (2026-04-25)
+
+（discover_doc.py 有大量假阳性；以下为手工验证的真阳性）
+
+- [x] 项羽: `cite-doc-report` ✓ R4957
+- [ ] 秦始皇: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/秦/秦始皇.md] [P1] [2026-04-25]
+- [ ] 韩信: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/西汉/韩信.md] [P1] [2026-04-25]
+- [ ] 张良: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/西汉/张良.md] [P1] [2026-04-25]
+- [ ] 司马迁: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/西汉/司马迁.md] [P1] [2026-04-25]
+- [ ] 孔子: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/春秋/孔子.md] [P1] [2026-04-25]

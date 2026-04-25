@@ -1,8 +1,28 @@
 {
   "page": "吴王寿梦",
-  "latest_rev_id": "20260424-072050-007034",
-  "revision_count": 1,
+  "latest_rev_id": "20260425-073331-bd7cb6",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260425-073331-bd7cb6",
+      "timestamp": "2026-04-25T07:33:31Z",
+      "author": "butler",
+      "summary": "butler/fix-pn-format: 修正 pn 格式 [] → ()()",
+      "parent_rev": "20260425-070210-a75cc0",
+      "content_hash": "sha256:bd7cb6901bf2f724b1558b5eacc479177d5b21a01dd5d14c953862d3c98b512c",
+      "size": 710,
+      "content": "---\nid: 吴王寿梦\ntype: person\nlabel: 吴王寿梦\naliases: [吴王寿梦, 寿梦]\ncanonical_name: 吴王寿梦\ntags: [春秋, 吴国, 吴王, 季札]\nfeatured: false\nsources: [鲁周公世家]\npn: (033-18.3)\n---\n\n# 吴王寿梦\n\n春秋吴国第一位称王的君主，[[季札]]之父。寿梦二年，楚国大夫申公巫臣奔晋，向吴传授车战与射法，使吴国军力大增，开始参与中原争霸。寿梦欲传位于季札，季札辞让，诸樊继位。\n\n## 吴太伯世家与吴王寿梦\n\n吴太伯世家载寿梦称王、申公巫臣通吴、季札让国等事（[[031_吴太伯世家]]）。\n\n## 相关章节\n\n[[031_吴太伯世家]]\n\n## 相关人物\n\n[[季札]] · [[申公巫臣]]\n"
+    },
+    {
+      "rev_id": "20260425-070210-a75cc0",
+      "timestamp": "2026-04-25T07:02:10Z",
+      "author": "butler",
+      "summary": "butler/add-pn-sourcing: 吴王寿梦 sources=[鲁周公世家] pn=[033-18.3]",
+      "parent_rev": "20260424-072050-007034",
+      "content_hash": "sha256:a75cc0a9db384d616906810baa0906348fc559c56487c8c63d2696cdbacc6760",
+      "size": 710,
+      "content": "---\nid: 吴王寿梦\ntype: person\nlabel: 吴王寿梦\naliases: [吴王寿梦, 寿梦]\ncanonical_name: 吴王寿梦\ntags: [春秋, 吴国, 吴王, 季札]\nfeatured: false\nsources: [鲁周公世家]\npn: [033-18.3]\n---\n\n# 吴王寿梦\n\n春秋吴国第一位称王的君主，[[季札]]之父。寿梦二年，楚国大夫申公巫臣奔晋，向吴传授车战与射法，使吴国军力大增，开始参与中原争霸。寿梦欲传位于季札，季札辞让，诸樊继位。\n\n## 吴太伯世家与吴王寿梦\n\n吴太伯世家载寿梦称王、申公巫臣通吴、季札让国等事（[[031_吴太伯世家]]）。\n\n## 相关章节\n\n[[031_吴太伯世家]]\n\n## 相关人物\n\n[[季札]] · [[申公巫臣]]\n"
+    },
     {
       "rev_id": "20260424-072050-007034",
       "timestamp": "2026-04-24T07:20:50Z",

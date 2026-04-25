@@ -1,8 +1,28 @@
 {
   "page": "卒正多",
-  "latest_rev_id": "20260424-103214-381b08",
-  "revision_count": 1,
+  "latest_rev_id": "20260425-073330-efacab",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260425-073330-efacab",
+      "timestamp": "2026-04-25T07:33:30Z",
+      "author": "butler",
+      "summary": "butler/fix-pn-format: 修正 pn 格式 [] → ()()",
+      "parent_rev": "20260425-065237-4c193d",
+      "content_hash": "sha256:efacabeeb1e1d95a558df54c893aa72339603f81b4d6c3e22d295953fe5f0819",
+      "size": 555,
+      "content": "---\nid: 卒正多\ntype: person\nlabel: 卒正多\naliases: []\ncanonical_name: 卒正多\ntags: [西汉, 汉武帝, 朝鲜, 卫满朝鲜, 列传人物]\nfeatured: false\nsources: [朝鲜列传]\npn: (115-4)\n---\n\n# 卒正多\n\n卫满朝鲜官员，\"卒正\"为其职衔，名\"多\"。[[右渠]]被杀后，卒正多率众降汉，因功获封\"澅清侯\"，为平朝鲜后汉廷封侯的朝鲜降臣之一。\n\n## 相关人物\n\n- [[右渠]]（卒正多原辅佐的朝鲜王）\n- [[韩阴]]（同为降汉获封的朝鲜降臣）\n\n## 相关章节\n\n[[115_朝鲜列传]]\n"
+    },
+    {
+      "rev_id": "20260425-065237-4c193d",
+      "timestamp": "2026-04-25T06:52:37Z",
+      "author": "butler",
+      "summary": "butler/add-pn-sourcing: 卒正多 sources=[朝鲜列传] pn=[115-4]",
+      "parent_rev": "20260424-103214-381b08",
+      "content_hash": "sha256:4c193df6db7b8cd04f0f8cb0914060b3f556a9f619e4d05224bc6b8079764294",
+      "size": 555,
+      "content": "---\nid: 卒正多\ntype: person\nlabel: 卒正多\naliases: []\ncanonical_name: 卒正多\ntags: [西汉, 汉武帝, 朝鲜, 卫满朝鲜, 列传人物]\nfeatured: false\nsources: [朝鲜列传]\npn: [115-4]\n---\n\n# 卒正多\n\n卫满朝鲜官员，\"卒正\"为其职衔，名\"多\"。[[右渠]]被杀后，卒正多率众降汉，因功获封\"澅清侯\"，为平朝鲜后汉廷封侯的朝鲜降臣之一。\n\n## 相关人物\n\n- [[右渠]]（卒正多原辅佐的朝鲜王）\n- [[韩阴]]（同为降汉获封的朝鲜降臣）\n\n## 相关章节\n\n[[115_朝鲜列传]]\n"
+    },
     {
       "rev_id": "20260424-103214-381b08",
       "timestamp": "2026-04-24T10:32:14Z",

@@ -1,8 +1,28 @@
 {
   "page": "无是公",
-  "latest_rev_id": "20260424-101637-0536b2",
-  "revision_count": 1,
+  "latest_rev_id": "20260425-073332-e47af1",
+  "revision_count": 3,
   "revisions": [
+    {
+      "rev_id": "20260425-073332-e47af1",
+      "timestamp": "2026-04-25T07:33:32Z",
+      "author": "butler",
+      "summary": "butler/fix-pn-format: 修正 pn 格式 [] → ()()",
+      "parent_rev": "20260425-072615-1d3b4e",
+      "content_hash": "sha256:e47af1fe73d42e42504d05b0ae3bb99687f23efcb100e4231cb6f48866d8f775",
+      "size": 698,
+      "content": "---\nid: 无是公\ntype: person\nlabel: 无是公\naliases: []\ncanonical_name: 无是公\ntags: [西汉, 汉武帝, 虚构, 文学]\nfeatured: false\nsources: [司马相如列传]\npn: (117-2)(117-2.1)(117-2.12)(117-3)\n---\n\n# 无是公\n\n[[司马相如]]大赋《子虚赋》《上林赋》中的虚构人物，与[[子虚]]（子虚先生）、[[乌有先生]]并列为赋中三个辩论者。无是公代表天子（皇帝）的立场，以上林苑的宏大壮观压倒子虚、乌有的描述，最终导入讽谏主题。\n\n## 相关人物\n\n- [[司马相如]]（《子虚赋》《上林赋》的作者）\n- [[乌有先生]]（赋中另一虚构辩论者）\n\n## 相关章节\n\n[[117_司马相如列传]]\n"
+    },
+    {
+      "rev_id": "20260425-072615-1d3b4e",
+      "timestamp": "2026-04-25T07:26:15Z",
+      "author": "butler",
+      "summary": "butler/add-pn-sourcing: 无是公 sources=[司马相如列传] pn=[117-2,117-2.1,117-2.12,117-3]",
+      "parent_rev": "20260424-101637-0536b2",
+      "content_hash": "sha256:1d3b4e623250d1b84b41bb43e206849d98bb0ec80b7d121c2988ae4584c28d16",
+      "size": 698,
+      "content": "---\nid: 无是公\ntype: person\nlabel: 无是公\naliases: []\ncanonical_name: 无是公\ntags: [西汉, 汉武帝, 虚构, 文学]\nfeatured: false\nsources: [司马相如列传]\npn: [117-2, 117-2.1, 117-2.12, 117-3]\n---\n\n# 无是公\n\n[[司马相如]]大赋《子虚赋》《上林赋》中的虚构人物，与[[子虚]]（子虚先生）、[[乌有先生]]并列为赋中三个辩论者。无是公代表天子（皇帝）的立场，以上林苑的宏大壮观压倒子虚、乌有的描述，最终导入讽谏主题。\n\n## 相关人物\n\n- [[司马相如]]（《子虚赋》《上林赋》的作者）\n- [[乌有先生]]（赋中另一虚构辩论者）\n\n## 相关章节\n\n[[117_司马相如列传]]\n"
+    },
     {
       "rev_id": "20260424-101637-0536b2",
       "timestamp": "2026-04-24T10:16:37Z",

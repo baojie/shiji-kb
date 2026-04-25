@@ -1,8 +1,18 @@
 {
   "page": "上官大夫",
-  "latest_rev_id": "20260424-073403-fbacf8",
-  "revision_count": 1,
+  "latest_rev_id": "20260425-073327-e8cef0",
+  "revision_count": 2,
   "revisions": [
+    {
+      "rev_id": "20260425-073327-e8cef0",
+      "timestamp": "2026-04-25T07:33:27Z",
+      "author": "butler",
+      "summary": "butler/fix-pn-format: 修正 pn 格式 [] → ()()",
+      "parent_rev": "20260424-073403-fbacf8",
+      "content_hash": "sha256:e8cef0502b6d2235d275762a3982aabc9f0ad9fe1fb13b3ecea94bd70727109c",
+      "size": 989,
+      "content": "---\nid: 上官大夫\ntype: person\nlabel: 上官大夫\naliases: [上官大夫]\npn: (084-2)(084-5.2)(084-6)\nsources: [屈原贾生列传]\ntags: [战国, 楚国, 楚怀王, 楚顷襄王, 谗佞]\nfeatured: false\n---\n\n# 上官大夫\n\n战国楚国臣子，与[[屈原]]同朝。因与屈原争宠，多次在楚怀王及楚顷襄王面前谗毁屈原，是导致屈原被放逐的重要人物之一。史记以\"上官大夫短屈原于顷襄王\"记其恶行。\n\n## 屈原贾生列传与上官大夫\n\n屈原贾生列传载：令尹[[子兰]]使上官大夫短屈原于顷襄王，顷襄王怒而迁之（[[084_屈原贾生列传]]）。\n\n## 相关章节\n\n[[084_屈原贾生列传]]\n\n## 相关人物\n\n[[屈原]] · [[楚怀王]] · [[楚顷襄王]] · [[子兰]]\n\n[^life]: 生卒年推断参见[《上官大夫生卒年推断》](../../doc/lifespan_inference/战国/上官大夫.md)（生：公元前 403 年 ~ 公元前 333 年·卒：公元前 318 年 ~ 公元前 303 年·置信度：低）。\n"
+    },
     {
       "rev_id": "20260424-073403-fbacf8",
       "timestamp": "2026-04-24T07:34:03Z",

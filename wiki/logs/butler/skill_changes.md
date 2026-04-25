@@ -34,3 +34,6 @@
 2026-04-22  user-req-10  刘邦精品页样本  多源综合: 原文引用 + 他人评价 + 典故成语 + 制度结构 + 互见法叙述. "消化不生产"约束对 featured 页放宽. [user-req]
 2026-04-22  premium-2  项羽+孔子精品页  "消化不生产"放宽适用于 featured, 多源综合产出百科式长页. [user-req]
 2026-04-22  user-req-11  SKILL_W0  移除不变量 #6 "消化不生产". 六不变量 → 五不变量. butler 可写分析性段落 (断言需有源). [user-req]
+2026-04-25  w5-v9-P26  PROMPT.md 规则提案：update-wanted-pages 强制优先（≥100条=强制，≥20条=提示）[reflections/2026-04-25-v9.md]
+2026-04-25  w5-v9-P27  housekeeping_queue H20：verify-citations 全量核验任务（9383页零核验）[reflections/2026-04-25-v9.md]
+2026-04-25  w5-v9-P28  arch_2026-04-25-escalation.md：规模升级至9394页，推荐方案C（SQLite）[reflections/2026-04-25-v9.md]
