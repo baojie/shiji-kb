@@ -151,7 +151,8 @@ export async function renderPage(core, pid, meta, mdText) {
   const ibEl = document.getElementById('infobox');
   const sidebarEl = document.getElementById('sidebar');
   if (infoboxContent) {
-    ibEl.innerHTML = infoboxContent;
+    const expandedInfobox = core.pnCitation ? core.pnCitation.expand(infoboxContent) : infoboxContent;
+    ibEl.innerHTML = expandedInfobox;
     ibEl.hidden = false;
   } else {
     ibEl.innerHTML = '';
@@ -243,6 +244,7 @@ const FIELD_LABELS = {
   sources: '来源', event_ids: '事件编号', essay_type: '散文类型',
   author: '作者', chapter_no: '章节', canonical_name: '规范名',
   aliases: '别名', birth_ce: '生', death_ce: '卒', tags: '标签',
+  pn: '原文位置',
 };
 
 // 纯内部字段，不对用户展示
@@ -302,7 +304,11 @@ export async function renderInfobox(core, front, meta, pid) {
     if (handled.has(key) || INFOBOX_SKIP.has(key)) continue;
     if (val == null || val === '') continue;
     const label = FIELD_LABELS[key] || key;
-    if (Array.isArray(val)) {
+    if (key === 'pn') {
+      // 半角括号转全角，供 pn-citation 插件展开为链接；不 escape
+      const s = String(val).trim().replace(/\(/g, '（').replace(/\)/g, '）');
+      push(label, s);
+    } else if (Array.isArray(val)) {
       if (val.length) push(label, val.map(v => escapeHtml(String(v))).join(' · '));
     } else if (typeof val === 'object') {
       // 嵌套对象（如 paragraph_refs）跳过

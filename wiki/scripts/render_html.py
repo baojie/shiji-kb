@@ -143,6 +143,8 @@ _CITE_WIKILINK_RE = re.compile(
 )
 # 匹配纯文本形式：（NNN-MMM）或（NNN-MMM意旨）
 _CITE_PLAIN_RE = re.compile(r'（(\d{3})-(\d{3}(?:\.\d+)?)(?:意旨)?）')
+# 匹配 frontmatter pn 字段格式：(NNN-M) 或 (NNN-M.N)，ASCII 括号，段落号位数不限
+_CITE_PAREN_RE = re.compile(r'\((\d{3})-(\d+(?:\.\d+)?)\)')
 
 
 def _pn_to_int(pn_str: str) -> str:
@@ -158,26 +160,34 @@ def _cite_link(ch_num: str, pn_str: str) -> str | None:
     return f'（<a class="pn-citation" href="{url}" target="_blank" title="{ch_num}-{pn_str} 原文">{ch_num}-{pn_str}</a>）'
 
 
+def _expand_re_skip_anchors(html: str, pattern: re.Pattern) -> str:
+    """对 html 中跳过 <a>...</a> 标签，对其余部分应用 pattern 替换为引文链接。"""
+    parts: list[str] = []
+    last = 0
+    for tag in re.finditer(r'<a[\s\S]*?</a>', html):
+        segment = html[last:tag.start()]
+        parts.append(pattern.sub(
+            lambda m: _cite_link(m.group(1), m.group(2)) or m.group(0), segment
+        ))
+        parts.append(tag.group(0))
+        last = tag.end()
+    parts.append(pattern.sub(
+        lambda m: _cite_link(m.group(1), m.group(2)) or m.group(0), html[last:]
+    ))
+    return ''.join(parts)
+
+
 def expand_pn_citations(html: str) -> str:
     """将 wiki HTML 中的 PN 引文转为指向章节段落锚的链接。在 expand_wikilinks 之后调用。"""
     # 1. wikilink 展开形式（优先）
     html = _CITE_WIKILINK_RE.sub(
         lambda m: _cite_link(m.group(1), m.group(2)) or m.group(0), html
     )
-    # 2. 纯文本形式（跳过已在 <a> 内的）
-    parts: list[str] = []
-    last = 0
-    for tag in re.finditer(r'<a[\s\S]*?</a>', html):
-        segment = html[last:tag.start()]
-        parts.append(_CITE_PLAIN_RE.sub(
-            lambda m: _cite_link(m.group(1), m.group(2)) or m.group(0), segment
-        ))
-        parts.append(tag.group(0))
-        last = tag.end()
-    parts.append(_CITE_PLAIN_RE.sub(
-        lambda m: _cite_link(m.group(1), m.group(2)) or m.group(0), html[last:]
-    ))
-    return ''.join(parts)
+    # 2. 全角括号纯文本形式：（NNN-MMM）
+    html = _expand_re_skip_anchors(html, _CITE_PLAIN_RE)
+    # 3. ASCII 括号形式（frontmatter pn 字段）：(NNN-M)
+    html = _expand_re_skip_anchors(html, _CITE_PAREN_RE)
+    return html
 
 
 def protect_wikilinks(body: str) -> tuple[str, list[tuple[str, str | None]]]:
@@ -239,7 +249,8 @@ def render_sidebar_infobox(page: Page, display_meta: dict) -> str:
         render_meta["label"] = page.label
     if "aliases" not in render_meta and page.aliases:
         render_meta["aliases"] = page.aliases
-    return render_infobox_html(render_meta, css_class="infobox")
+    html = render_infobox_html(render_meta, css_class="infobox")
+    return expand_pn_citations(html)
 
 
 # ---------- Markdown → HTML ----------

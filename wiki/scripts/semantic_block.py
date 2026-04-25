@@ -80,6 +80,7 @@ INFOBOX_FIELD_MAP: list[tuple[str, str]] = [
     ("tags",           "标签"),
     ("aliases",        "别名"),
     ("note",           "备注"),
+    ("pn",             "段落号"),
 ]
 
 _FIELD_MAP_KEYS: set[str] = {k for k, _ in INFOBOX_FIELD_MAP}
