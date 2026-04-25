@@ -4,8 +4,8 @@ type: overview
 label: Fact 008：申不害的术治思想与韩国改革
 tags: [史记, 综述]
 featured: false
+sources: [老子韩非列传]
 ---
-
 # Fact 008：[[申不害]]的术治思想与韩国改革
 
 **Fact ID**: 063_fact_008
@@ -192,3 +192,7 @@ featured: false
 - [[韩非]]
 - [[郑国]]
 - [[韩昭侯]]
+
+## 相关章节
+
+- [[063_老子韩非列传|老子韩非列传]]

@@ -4,8 +4,8 @@ type: overview
 label: Fact 010：老莱子身份疑辨
 tags: [史记, 综述]
 featured: false
+sources: [老子韩非列传]
 ---
-
 # Fact 010：[[老莱子]]身份疑辨
 
 **Fact ID**: 063_fact_010
@@ -223,3 +223,7 @@ featured: false
 - [[韩非]]
 - [[孔子]]
 - [[子寿]]
+
+## 相关章节
+
+- [[063_老子韩非列传|老子韩非列传]]

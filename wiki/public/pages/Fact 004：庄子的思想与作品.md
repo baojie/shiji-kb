@@ -4,8 +4,8 @@ type: overview
 label: Fact 004：庄子的思想与作品
 tags: [列传, 战国]
 featured: false
+sources: [老子韩非列传]
 ---
-
 # Fact 004：庄子的思想与作品
 
 **Fact ID**: 063_fact_004
@@ -187,3 +187,7 @@ featured: false
 - [[齐宣王]]
 - [[子之]]
 - [[盗跖]]
+
+## 相关章节
+
+- [[063_老子韩非列传|老子韩非列传]]
