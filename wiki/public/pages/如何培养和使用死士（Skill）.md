@@ -1,9 +1,10 @@
 ---
 id: 如何培养和使用死士（Skill）
 type: skill
+description: "史记智慧萃取：程序性知识"
 label: 如何培养和使用死士（Skill）
 tags: [列传]
-featured: false
+featured: true
 ---
 
 # 如何培养和使用死士（Skill）

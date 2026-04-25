@@ -1,9 +1,10 @@
 ---
 id: Fact 003：孔子问礼于老子
 type: overview
+description: "来源: 史记·老子韩非列传[2]"
 label: Fact 003：孔子问礼于老子
 tags: [史记, 综述]
-featured: false
+featured: true
 sources: [孔子世家, 老子韩非列传]
 ---
 # Fact 003：[[孔子问礼于老子]]

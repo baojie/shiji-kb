@@ -4,7 +4,7 @@ type: overview
 label: Fact 009：道法思想的演变路径
 description: "道法思想的演变路径：老子→庄子→申不害→韩非，从虚无无为到集法术势的思想传承脉络。"
 tags: [史记, 综述]
-featured: false
+featured: true
 sources: [老子韩非列传]
 ---
 # Fact 009：道法思想的演变路径

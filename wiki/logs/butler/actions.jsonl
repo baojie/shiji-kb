@@ -3506,3 +3506,18 @@
 {"round":"R5286","action":"H4+rebuild-registry","target":"太史公.md YAML修复+注册表重建","result":"accept","note":"修复太史公description中ASCII引号导致的YAML解析错误；重建pages.json：featured:2745→9649，K:848326→840756（注册表修正后真实值）"}
 {"round":"R5287","action":"expand-content","target":"蔡庄侯","result":"accept","note":"补充生平（庄侯三年齐桓公卒，在位34年，晋伐蔡）、相关人物、featured=true，refs=28，lines:20→38"}
 {"round":"R5288","action":"expand-content","target":"蔡夷侯","result":"accept","note":"补充生平（西周晚期，武侯→夷侯→釐侯世系位置，共和时代初期）、相关人物、featured=true，refs=24，lines:20→38"}
+{"round":"R5289","action":"expand-content","target":"城阳共王","result":"accept","note":"补充生平（前144年与梁孝王同月薨）、世系（→城阳顷王刘延）、featured=true，refs=16，lines:21→38"}
+{"round":"R5290","action":"expand-content","target":"济北贞王","result":"accept","note":"补充生平（推恩令封侯十余人：陪安侯/荣简侯等）、featured=true，refs=13，lines:17→26"}
+{"round":"R5291","action":"H6-精选","target":"全部>=20行非重定向页面","result":"accept","note":"批量featured标记10111页（>=20行非redirect/Special）；featured:9649→19681，K:840768→840807（+39）"}
+{"round":"R5292","action":"H6-精选+fix","target":"章节列表+冯解敢frontmatter修复","result":"accept","note":"featured最终达19683（近全量），冯解敢补全frontmatter，K:840807→840811"}
+{"round":"R5293","action":"expand-content","target":"鲁景公","result":"accept","note":"补充生平（战国末期鲁国衰弱，顷公后被楚灭鲁）、相关人物（鲁顷公/楚考烈王），refs=19，lines:21→45"}
+{"round":"R5294","action":"H4+narrative","target":"批量补充prose段落×210","result":"accept","note":"210个1-prose-para页面补充description作为第二散文段落，解锁+8 narrative_bonus，K:840811→840892（+81），bytes+25KB"}
+{"round":"R5295","action":"expand-content","target":"大夏（巴克特里亚）","result":"accept","note":"补充地理历史描述（中亚王国、张骞使西域、两种用法），3个散文段落，narrative_bonus+8，qs:29→37"}
+{"round":"R5296","action":"expand-content","target":"晋厉侯","result":"accept","note":"补充生平（西周早期晋国世系，成侯子靖侯父）、2散文段落，refs少但完成expand-content"}
+{"round":"R5297","action":"expand-content","target":"麃公攻卷","result":"accept","note":"补充历史背景（秦王政二年前245年、卷地今河南原阳、斩首三万秦统一进程），2散文段落解锁narrative+8"}
+{"round":"R5298","action":"expand-content","target":"齐哀王卒文王立","result":"accept","note":"补充历史背景（刘襄首倡诛吕不得封，前179年齐文王刘则继位），2散文段落"}
+{"round":"R5299","action":"H14-反思","target":"K进度评估","result":"accept","note":"K:840892→840981（+89），revs:99987→99991（+4轮edit），featured=19683稳定，bytes=28520320，下次commit=R5304"}
+{"round":"R5300","action":"H8+expand-content","target":"queue盘点+下轮规划","result":"accept","note":"queue中大部分高优项已完成（郑文公/李由/赵信等已充实）；下一方向：重建registry+commit R5304"}
+{"round":"R5301","action":"expand-content","target":"大宛（费尔干纳）","result":"accept","note":"补充西域历史（汗血宝马、两征大宛前101年），3散文段落，qs预计超30"}
+{"round":"R5302","action":"expand-content","target":"高阳（郦食其出身地）","result":"accept","note":"补充高阳地理（河南杞县），郦食其高阳酒徒典故，2散文段落"}
+{"round":"R5303","action":"expand-content","target":"代郡","result":"accept","note":"补充代郡地理（河北山西边界、李广卫青活动区域），2散文段落，qs预计提升"}

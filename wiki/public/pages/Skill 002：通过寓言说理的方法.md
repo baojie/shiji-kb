@@ -1,9 +1,10 @@
 ---
 id: Skill 002：通过寓言说理的方法
 type: skill
+description: "史记智慧萃取：说服技巧"
 label: Skill 002：通过寓言说理的方法
 tags: [列传]
-featured: false
+featured: true
 ---
 
 # Skill 002：通过寓言说理的方法

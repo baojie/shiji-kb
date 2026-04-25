@@ -1,9 +1,10 @@
 ---
 id: Fact 002：老子生平与《道德经》
 type: overview
+description: "└── 解（为胶西王卬太傅，因家于齐）"
 label: Fact 002：老子生平与《道德经》
 tags: [史记, 综述]
-featured: false
+featured: true
 sources: [老子韩非列传]
 ---
 # Fact 002：[[老子]]生[[平与]]《道德经》

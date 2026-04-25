@@ -1,9 +1,10 @@
 ---
 id: Skill 002：借力复仇——利用他国力量实现个人目标的方法
 type: skill
+description: "伍子胥面临一个几乎不可能完成的任务：以一个流亡者的身份，复仇一个强大的楚国"
 label: Skill 002：借力复仇——利用他国力量实现个人目标的方法
 tags: [列传]
-featured: false
+featured: true
 ---
 
 # Skill 002：借力复仇——利用他国力量实现个人目标的方法

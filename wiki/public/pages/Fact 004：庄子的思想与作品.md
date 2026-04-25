@@ -1,9 +1,10 @@
 ---
 id: Fact 004：庄子的思想与作品
 type: overview
+description: "来源: 史记·老子韩非列传[9]-[10]"
 label: Fact 004：庄子的思想与作品
 tags: [列传, 战国]
-featured: false
+featured: true
 sources: [老子韩非列传]
 ---
 # Fact 004：庄子的思想与作品

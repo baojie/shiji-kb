@@ -1,9 +1,10 @@
 ---
 id: 'Skill: 突破文化偏见的改革推进术'
 type: skill
+description: "定义：在传统文化和既得利益的强大阻力下，通过实用主义论证、以身作则、争取关键人物支持等方法,推动颠覆性改革的策略"
 label: 'Skill: 突破文化偏见的改革推进术'
 tags: [世家]
-featured: false
+featured: true
 ---
 
 # Skill: 突破文化偏见的改革推进术

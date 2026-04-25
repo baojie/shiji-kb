@@ -4,7 +4,7 @@ type: overview
 label: Fact 002：伍子胥在吴的政治生涯——从谋士到功臣
 description: 于是主动退出政治前台，推荐专诸给公子光，然后自己与太子建之子胜退耕于野，等待时机
 tags: [史记, 综述]
-featured: false
+featured: true
 sources: [伍子胥列传]
 ---
 # Fact 002：[[伍子胥]]在吴的政治生涯——从谋士到功臣

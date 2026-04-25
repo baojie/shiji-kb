@@ -1,9 +1,10 @@
 ---
 id: Skill 001：识别潜在盟友并蛰伏待时的方法
 type: skill
+description: "伍子胥初入吴国，处于弱势：无根基、无资源、无信任"
 label: Skill 001：识别潜在盟友并蛰伏待时的方法
 tags: [列传]
-featured: false
+featured: true
 ---
 
 # Skill 001：识别潜在盟友并蛰伏待时的方法

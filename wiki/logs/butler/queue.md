@@ -31,7 +31,7 @@
 - [ ] P1 | [[汉宣帝]] | 41行 · refs=21 · type=person | action: expand-content
 - [ ] P1 | [[卫顷侯]] | 29行 · refs=19 · type=person | action: expand-content
 - [ ] P1 | [[晋靖侯]] | 29行 · refs=19 · type=person | action: expand-content
-- [ ] P1 | [[鲁景公]] | 21行 · refs=19 · type=person | action: expand-content
+- [x] P1 | [[鲁景公]] | 21行 · refs=19 · type=person | action: expand-content <!-- R5293: 已完成 -->
 - [ ] P1 | [[城阳共王]] | 21行 · refs=16 · type=person | action: expand-content
 - [ ] P1 | [[太子建]] | 39行 · refs=16 · type=person | action: expand-content
 - [ ] P1 | [[晋孝侯]] | 40行 · refs=16 · type=person | action: expand-content

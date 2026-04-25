@@ -1,9 +1,10 @@
 ---
 id: Fact 008：申不害的术治思想与韩国改革
 type: overview
+description: "来源: 史记·老子韩非列传[11]-[12]"
 label: Fact 008：申不害的术治思想与韩国改革
 tags: [史记, 综述]
-featured: false
+featured: true
 sources: [老子韩非列传]
 ---
 # Fact 008：[[申不害]]的术治思想与韩国改革

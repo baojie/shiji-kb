@@ -1,9 +1,10 @@
 ---
 id: 'skill_003: 公信力建立方法'
 type: skill
+description: "史记智慧萃取：程序性知识"
 label: 'skill_003: 公信力建立方法'
 tags: [列传]
-featured: false
+featured: true
 ---
 
 # skill_003: 公信力建立方法

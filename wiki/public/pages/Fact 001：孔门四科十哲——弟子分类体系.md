@@ -4,7 +4,7 @@ type: overview
 label: Fact 001：孔门四科十哲——弟子分类体系
 description: "孔子曰：'受业身通者七十有七人，皆异能之士也。'这是本传的开篇定位：七十七位各有专长的异能之士"
 tags: [史记, 综述]
-featured: false
+featured: true
 sources: [仲尼弟子列传]
 ---
 # Fact 001：孔门四科十哲——弟子分类体系

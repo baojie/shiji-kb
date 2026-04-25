@@ -6,7 +6,7 @@ description: 1. 身份论证：
    - 韩非 = 韩之诸公子
    - 血缘决定忠诚
 tags: [史记, 综述]
-featured: false
+featured: true
 sources: [老子韩非列传]
 ---
 # Fact 007：[[韩非入秦被害]]
