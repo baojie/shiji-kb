@@ -11,3 +11,11 @@
 - [x] [[宣太后]] (person) — 宣太后
   prompt: Portrait of Queen Dowager Xuan Mi Bazi Qin regent (宣太后), ancient Chinese historical figure. ancient Chinese ink painting, Song dynasty style, fine brushwork, traditional, elegant court robes, noblewoman attire appropriate to period, dignified bearing, neutral background, high quality, museum artwork. Context: 芈氏（？—前265），楚人，秦昭王之母，掌秦国实权逾三十年，战国第一位垂帘听政的太后
   added: 2026-04-25
+
+- [ ] [[李少君、少翁、栾大：方士事]] (story) — 李少君、少翁、栾大：方士事
+  prompt: Ancient Chinese court scene: Taoist fangshi (方士) performing rituals before Han Emperor Wu, ancient Chinese ink painting Song dynasty style, incense smoke, ritual vessels, dramatic composition
+  added: 2026-04-26
+
+- [ ] [[108_韩长孺列传]] (chapter) — 韩长孺列传
+  prompt: Ancient Chinese general Han Anguo (韩安国) in Han dynasty military uniform, ancient Chinese ink painting Song dynasty style, dignified official portrait, traditional brushwork
+  added: 2026-04-26
