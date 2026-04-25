@@ -1,8 +1,18 @@
 {
   "page": "日食示警",
-  "latest_rev_id": "20260423-164750-fc8c7a",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-091431-f209cd",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-091431-f209cd",
+      "timestamp": "2026-04-25T09:14:31Z",
+      "author": "butler",
+      "summary": "butler/H15: 清理date字段标注符号",
+      "parent_rev": "20260423-164750-fc8c7a",
+      "content_hash": "sha256:f209cdec1df515e7d8e56fe0714e48fa39ac8514b7ba8d745c72569fee7226cd",
+      "size": 884,
+      "content": "---\nid: \"日食示警\"\ntype: event\ntitle: 日食示警\ndescription: 己丑日发生日食，白昼变得昏暗。太后厌恶此事，心中不乐，对左右说\"此为我也\"，认为是上天对自己的警示。\ntags: [史记, 事件, 吕太后本纪]\nsources: [吕太后本纪]\nevent_ids: [009-041]\ndate: \"己丑 [公元前181年]\"\n---\n\n::: meta\npn: (009-24.1)\nevent_type: 自然灾害\nchapter: [吕太后本纪]\n:::\n\n# 日食示警\n\n> 己丑日发生日食，白昼变得昏暗。太后厌恶此事，心中不乐，对左右说\"此为我也\"，认为是上天对自己的警示。\n\n**主要人物**：太后\n\n## 事件经过\n\n己丑日发生日食，白昼变得昏暗。太后厌恶此事，心中不乐，对左右说\"此为我也\"，认为是上天对自己的警示。\n\n## 原文\n\n> 己丑，日食，昼晦。太后恶之，心不乐，乃谓左右曰：'此为我也。'\n\n"
+    },
     {
       "rev_id": "20260423-164750-fc8c7a",
       "timestamp": "2026-04-23T16:47:50Z",

@@ -1,8 +1,28 @@
 {
   "page": "景公卒哀公立",
-  "latest_rev_id": "20260423-164755-ad46a8",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-091834-47e380",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260425-091834-47e380",
+      "timestamp": "2026-04-25T09:18:34Z",
+      "author": "butler",
+      "summary": "butler/H15: 清理正文/description中的标注符号",
+      "parent_rev": "20260425-091432-b0ca90",
+      "content_hash": "sha256:47e3800c14f970e56a935d64e9ed8d9894df29c8e1c6a3b28a1db287335b9dda",
+      "size": 622,
+      "content": "---\nid: \"景公卒哀公立\"\ntype: event\ntitle: 景公卒哀公立\ndescription: 景公立四十年卒，子哀公立。后子复来归秦。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-043]\ndate: \"景公四十年 （公元前537年）\"\n---\n\n::: meta\npn: (005-37.6)\nevent_type: 继位\nchapter: [秦本纪]\n:::\n\n# 景公卒哀公立\n\n> 景公立四十年卒，子哀公立。后子复来归秦。\n\n**主要人物**：后子、哀公、景公\n\n## 事件经过\n\n景公立四十年卒，子哀公立。后子复来归秦。\n\n## 原文\n\n> 景公立四十年卒，子哀公立。后子复来归秦。\n\n"
+    },
+    {
+      "rev_id": "20260425-091432-b0ca90",
+      "timestamp": "2026-04-25T09:14:32Z",
+      "author": "butler",
+      "summary": "butler/H15: 清理date字段标注符号",
+      "parent_rev": "20260423-164755-ad46a8",
+      "content_hash": "sha256:b0ca9048d0e5823e6ee7221b46c7dd5787e59d5426d5d88acc4c9a9a5e799674",
+      "size": 727,
+      "content": "---\nid: \"景公卒哀公立\"\ntype: event\ntitle: 景公卒哀公立\ndescription: 〖@景公〗立〖%四十年〗卒，子〖@哀公〗立。〖;后子〗复来归〖&秦〗。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-043]\ndate: \"景公四十年 （公元前537年）\"\n---\n\n::: meta\npn: (005-37.6)\nevent_type: 继位\nchapter: [秦本纪]\n:::\n\n# 景公卒哀公立\n\n> 〖@景公〗立〖%四十年〗卒，子〖@哀公〗立。〖;后子〗复来归〖&秦〗。\n\n**主要人物**：后子、哀公、景公\n\n## 事件经过\n\n〖@景公〗立〖%四十年〗卒，子〖@哀公〗立。〖;后子〗复来归〖&秦〗。\n\n## 原文\n\n> 景公立四十年卒，子哀公立。后子复来归秦。\n\n"
+    },
     {
       "rev_id": "20260423-164755-ad46a8",
       "timestamp": "2026-04-23T16:47:55Z",

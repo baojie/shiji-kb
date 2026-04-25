@@ -1,8 +1,28 @@
 {
   "page": "宣公战晋于河阳",
-  "latest_rev_id": "20260423-164714-42a417",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-091832-3c562c",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260425-091832-3c562c",
+      "timestamp": "2026-04-25T09:18:32Z",
+      "author": "butler",
+      "summary": "butler/H15: 清理正文/description中的标注符号",
+      "parent_rev": "20260425-091416-20023b",
+      "content_hash": "sha256:3c562c981ed0cf94683e2b696dc11cba72e8f6d76abd1d3aece8c180bd2f3777",
+      "size": 743,
+      "content": "---\nid: \"宣公战晋于河阳\"\ntype: event\ntitle: 宣公战晋于河阳\ndescription: 宣公四年，作密畤，与晋战于河阳，胜之。这是秦晋两国早期冲突的记录。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-023]\ndate: \"宣公四年 （公元前672年）\"\n---\n\n::: meta\npn: (005-14.2)\nevent_type: 战争\nlocation: \"河阳、密畤\"\nchapter: [秦本纪]\n:::\n\n# 宣公战晋于河阳\n\n> 宣公四年，作密畤，与晋战于河阳，胜之。这是秦晋两国早期冲突的记录。\n\n**主要人物**：宣公\n\n## 事件经过\n\n宣公四年，作密畤，与晋战于河阳，胜之。这是秦晋两国早期冲突的记录。\n\n## 原文\n\n> 四年，作密畤。与晋战河阳，胜之。\n\n"
+    },
+    {
+      "rev_id": "20260425-091416-20023b",
+      "timestamp": "2026-04-25T09:14:16Z",
+      "author": "butler",
+      "summary": "butler/H15: 清理date字段标注符号",
+      "parent_rev": "20260423-164714-42a417",
+      "content_hash": "sha256:20023bc387ef18bfa474643fe2ecf447fc7c32e9010460e1e0ca7aae72ce0c4d",
+      "size": 848,
+      "content": "---\nid: \"宣公战晋于河阳\"\ntype: event\ntitle: 宣公战晋于河阳\ndescription: 〖@宣公〗〖%四年〗，作〖=密畤〗，与〖&晋〗战于〖=河阳〗，胜之。这是秦晋两国早期冲突的记录。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-023]\ndate: \"宣公四年 （公元前672年）\"\n---\n\n::: meta\npn: (005-14.2)\nevent_type: 战争\nlocation: \"河阳、密畤\"\nchapter: [秦本纪]\n:::\n\n# 宣公战晋于河阳\n\n> 〖@宣公〗〖%四年〗，作〖=密畤〗，与〖&晋〗战于〖=河阳〗，胜之。这是秦晋两国早期冲突的记录。\n\n**主要人物**：宣公\n\n## 事件经过\n\n〖@宣公〗〖%四年〗，作〖=密畤〗，与〖&晋〗战于〖=河阳〗，胜之。这是秦晋两国早期冲突的记录。\n\n## 原文\n\n> 四年，作密畤。与晋战河阳，胜之。\n\n"
+    },
     {
       "rev_id": "20260423-164714-42a417",
       "timestamp": "2026-04-23T16:47:14Z",

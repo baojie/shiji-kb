@@ -3274,3 +3274,18 @@
 {"round": 5046, "ts": "2026-04-25T08:55:00Z", "mode": "housekeeping", "action": "H20-verify-citations", "target": "韩信/项羽/刘邦 样本", "summary": "verify_quotes_agent.py不存在；改用check_citations.py；3页有格式问题待修", "result": "accept"}
 {"round": 5047, "ts": "2026-04-25T09:00:00Z", "mode": "explore", "action": "W1-explore", "target": "discover_duplicates", "summary": "发现10条新H1任务写入housekeeping_queue：P0×5+P1×5", "result": "accept"}
 {"round": 5048, "ts": "2026-04-25T09:05:00Z", "mode": "housekeeping", "action": "H1-review", "target": "七国之乱+王温舒+吴楚七国反+赵武灵王+田氏代齐 5组 + 春秋五霸轮替全景图", "summary": "5组假阳性：不同类型互补；春秋五霸轮替全景图(405行)vs春秋五霸(279行)留人工审查", "result": "accept"}
+{"round": 5050, "ts": "2026-04-25T09:20:00Z", "mode": "housekeeping", "action": "H1-review", "target": "周亚夫之死+宋襄公+苏代穰侯+燕昭王 4组P1", "summary": "4组均为假阳性（overview vs event/story/sanwen互补），无需合并", "result": "accept"}
+{"round": 5051, "ts": "2026-04-25T09:25:00Z", "mode": "housekeeping", "action": "H1-review", "target": "春秋五霸轮替全景图 vs 春秋五霸", "summary": "假阳性：overview(年表)vs concept(分析)，不同视角互补", "result": "accept"}
+{"round": 5053, "ts": "2026-04-25T10:00:00Z", "mode": "housekeeping", "action": "H15-date-cleanup", "target": "batch-20", "summary": "清理20个event页面date字段中的〖%〗〖@〗〖;〗标注符号", "result": "accept"}
+{"round": 5054, "ts": "2026-04-25T10:05:00Z", "mode": "housekeeping", "action": "H15-date-cleanup", "target": "batch-49", "summary": "继续清理49个event页面date字段标注符号", "result": "accept"}
+{"round": 5055, "ts": "2026-04-25T10:15:00Z", "mode": "housekeeping", "action": "H15-date-cleanup", "target": "batch-full", "summary": "清理剩余49个页面date字段〖&年号〗标注符号，1253个date字段全部清零", "result": "accept"}
+{"round": 5056, "ts": "2026-04-25T10:30:00Z", "mode": "housekeeping", "action": "H15-body-cleanup", "target": "batch-110", "summary": "清理110个页面正文/description中的〖@〗〖=〗〖&〗等全类型标注符号", "result": "accept"}
+{"round": 5057, "ts": "2026-04-25T10:35:00Z", "mode": "housekeeping", "action": "H15-truncated-fix", "target": "batch-12", "summary": "修复12个description字段截断的不完整标注符号", "result": "accept"}
+{"round": 5058, "ts": "2026-04-25T10:38:00Z", "mode": "housekeeping", "action": "H15-verify", "target": "all-pages", "summary": "验证：wiki全库所有标注符号已全部清零", "result": "accept"}
+{"round": 5059, "ts": "2026-04-25T10:45:00Z", "mode": "explore", "action": "W1-explore", "target": "discover_duplicates", "summary": "发现5条新H1任务：P0-过秦论中+P1-3条; H21扫描首页18页均缺pn/sources字段", "result": "accept"}
+{"round": 5060, "ts": "2026-04-25T10:55:00Z", "mode": "housekeeping", "action": "H1-review", "target": "10组新候选", "summary": "10组H1候选：9组假阳性（overview/event/sanwen互补），1组真实重复（伦理困境Skill页），假阳性全部标记", "result": "accept"}
+{"round": 5061, "ts": "2026-04-25T11:00:00Z", "mode": "housekeeping", "action": "H1-redirect", "target": "如何在伦理困境中做出选择", "summary": "REDIRECT→如何在伦理困境中做出选择（Skill）；短版(180行)改为REDIRECT，保留长版(405行)为规范页", "result": "accept"}
+{"round": 5062, "ts": "2026-04-25T11:10:00Z", "mode": "housekeeping", "action": "H21-sources", "target": "刘邦/项羽/孔子/汉文帝/吕雉/张良", "summary": "为首页6个featured person页补sources字段", "result": "accept"}
+{"round": 5063, "ts": "2026-04-25T11:15:00Z", "mode": "housekeeping", "action": "H21-sources", "target": "白登之围/鸿门宴/李斯谏逐客书等7页", "summary": "为首页其余7个页面补sources字段，首页18页中13页已有sources", "result": "accept"}
+{"round": 5064, "ts": "2026-04-25T11:25:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "event-5页", "summary": "为5个缺tags的event页面补[史记,事件,章节名]标准tags", "result": "accept"}
+{"round": 5065, "ts": "2026-04-25T11:30:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "chapter-130页", "summary": "为130个chapter页面补[史记,本纪/世家/列传/表/书]标准tags", "result": "accept"}
