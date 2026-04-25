@@ -882,11 +882,35 @@ export function renderAll(core) {
     .slice(0, 30)
     .map(([t]) => t);
 
-  const typeOrder = ['person', 'story', '侯国', 'overview', 'chapter',
-                     'sanwen', 'event', 'concept', 'state', 'skill'];
+  const typeOrder = [
+    // 核心人事
+    'person', 'event', 'story',
+    // 地理政治
+    'place', 'state', '侯国', 'dynasty',
+    // 文献
+    'chapter', 'overview', 'sanwen', 'taishigongyue', 'chengyu', 'book',
+    // 社会制度
+    'official', 'identity', 'institution', 'tribe', 'ritual', 'legal',
+    // 物质文化
+    'artifact', 'biology', 'astronomy', 'quantity',
+    // 时间
+    'time', 'year',
+    // 思想概念
+    'concept', 'mythical', 'verb',
+    // 专项索引
+    'shihao', 'bihui', 'xing', 'jun',
+    // 页面管理
+    'disambiguation', 'redirect', 'list', 'topic', 'skill', 'overview',
+    'meta', 'special', 'unknown',
+  ];
   const orderedTypes = Object.keys(typeCounts).sort((a, b) => {
     const ia = typeOrder.indexOf(a), ib = typeOrder.indexOf(b);
-    return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib) || a.localeCompare(b);
+    if (ia >= 0 && ib >= 0) return ia - ib;
+    if (ia >= 0) return -1;
+    if (ib >= 0) return 1;
+    // 未在列表中的类型：按中文标签排序
+    const la = TYPE_LABELS[a] || a, lb = TYPE_LABELS[b] || b;
+    return la.localeCompare(lb, 'zh');
   });
 
   // ── URL 状态 ──────────────────────────────────────────────────────
