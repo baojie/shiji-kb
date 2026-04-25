@@ -1,3 +1,8 @@
+---
+name: skill-001-slow-usurpation
+description: Skill 001: 田氏代齐——百年渐进篡权的操盘术
+---
+
 # Skill 001: 田氏代齐——百年渐进篡权的操盘术
 
 ## 基本信息

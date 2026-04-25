@@ -1,3 +1,8 @@
+---
+name: skill-001-boundary-state-war
+description: Skill 001: 挡箭牌藩国战略——用边缘承担风险换中央的安全
+---
+
 # Skill 001: 挡箭牌藩国战略——用边缘承担风险换中央的安全
 
 ## 基本信息

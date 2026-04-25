@@ -1,3 +1,8 @@
+---
+name: fact-004-bribe-huns
+description: Fact 004: 白登之围——陈平以金贿阏氏脱困
+---
+
 # Fact 004: 白登之围——陈平以金贿阏氏脱困
 
 ## 基本信息

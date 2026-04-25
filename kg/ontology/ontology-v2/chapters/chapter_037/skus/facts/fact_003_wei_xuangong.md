@@ -1,3 +1,8 @@
+---
+name: fact-003-wei-xuangong
+description: Fact 003: 卫宣公夺子之妻——卫国衰乱的开端
+---
+
 # Fact 003: 卫宣公夺子之妻——卫国衰乱的开端
 
 ## 基本信息

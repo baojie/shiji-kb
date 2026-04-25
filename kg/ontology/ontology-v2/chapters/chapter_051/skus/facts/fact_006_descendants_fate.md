@@ -1,3 +1,8 @@
+---
+name: fact-006-descendants-fate
+description: Fact 006: 康王传位与定国禽兽行——燕国的最终覆灭
+---
+
 # Fact 006: 康王传位与定国禽兽行——燕国的最终覆灭
 
 ## 基本信息

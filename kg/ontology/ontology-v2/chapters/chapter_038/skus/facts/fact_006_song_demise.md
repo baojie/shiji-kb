@@ -1,3 +1,8 @@
+---
+name: fact-006-song-demise
+description: Fact 006: 宋康王"桀宋"与灭国
+---
+
 # Fact 006: 宋康王"桀宋"与灭国
 
 ## 基本信息

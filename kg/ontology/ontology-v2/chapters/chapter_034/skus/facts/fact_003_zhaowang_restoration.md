@@ -1,3 +1,8 @@
+---
+name: fact-003-zhaowang-restoration
+description: Fact 003: 燕昭王复仇——筑黄金台、招贤纳士
+---
+
 # Fact 003: 燕昭王复仇——筑黄金台、招贤纳士
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-002-hegemony-building
+description: Skill 002: 霸权建立与维持方法论
+---
+
 # Skill 002: 霸权建立与维持方法论
 
 ---

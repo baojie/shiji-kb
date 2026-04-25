@@ -1,3 +1,8 @@
+---
+name: skill-003-kill-mother-keep-son
+description: Skill 003: 杀母留子——武帝立储的极端制度设计
+---
+
 # Skill 003: 杀母留子——武帝立储的极端制度设计
 
 ## 基本信息

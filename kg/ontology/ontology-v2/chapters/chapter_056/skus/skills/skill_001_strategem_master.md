@@ -1,3 +1,8 @@
+---
+name: skill-001-strategem-master
+description: Skill 001: 奇谋制胜术——陈平六出奇计的模式分析
+---
+
 # Skill 001: 奇谋制胜术——陈平六出奇计的模式分析
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: fact-005-cao-trajectory
+description: Fact 005: 曹国从分封到灭亡
+---
+
 # Fact 005: 曹国从分封到灭亡
 
 ## 基本信息

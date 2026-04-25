@@ -1,3 +1,8 @@
+---
+name: skill-002-loyalty-test
+description: Skill 002: 忠诚考验——从"置醴"细节识别政治临界点
+---
+
 # Skill 002: 忠诚考验——从"置醴"细节识别政治临界点
 
 ## 基本信息

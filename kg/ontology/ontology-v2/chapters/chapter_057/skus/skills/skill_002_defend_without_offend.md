@@ -1,3 +1,8 @@
+---
+name: skill-002-defend-without-offend
+description: Skill 002: 细柳治军——独立性与合规性的平衡艺术
+---
+
 # Skill 002: 细柳治军——独立性与合规性的平衡艺术
 
 ## 基本信息

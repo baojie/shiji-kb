@@ -1,3 +1,8 @@
+---
+name: fact-003-state-survival-extinction
+description: Fact 003: 十二诸侯国生存与灭亡模式全景分析
+---
+
 # Fact 003: 十二诸侯国生存与灭亡模式全景分析
 
 ## 概述

@@ -1,3 +1,8 @@
+---
+name: fact-006-wei-destruction
+description: Fact 006: 魏国灭亡：王贲水灌大梁与太史公评价
+---
+
 # Fact 006: 魏国灭亡：王贲水灌大梁与太史公评价
 
 ## 基本信息

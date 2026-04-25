@@ -1,3 +1,8 @@
+---
+name: fact-006-retreat-chibi-gu
+description: Fact 006: 功成身退与赤松子游——四皓保储后的隐退
+---
+
 # Fact 006: 功成身退与赤松子游——四皓保储后的隐退
 
 ## 基本信息

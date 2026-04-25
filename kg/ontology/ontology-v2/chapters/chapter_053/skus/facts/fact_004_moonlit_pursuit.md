@@ -1,3 +1,8 @@
+---
+name: fact-004-moonlit-pursuit
+description: Fact 004: 月下追韩信——从小兵到大将军的识人决断
+---
+
 # Fact 004: 月下追韩信——从小兵到大将军的识人决断
 
 ## 基本信息

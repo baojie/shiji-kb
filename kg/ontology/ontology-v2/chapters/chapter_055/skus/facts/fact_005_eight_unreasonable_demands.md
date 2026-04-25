@@ -1,3 +1,8 @@
+---
+name: fact-005-eight-unreasonable-demands
+description: Fact 005: 八不可论——借箸筹策反对复立六国
+---
+
 # Fact 005: 八不可论——借箸筹策反对复立六国
 
 ## 基本信息

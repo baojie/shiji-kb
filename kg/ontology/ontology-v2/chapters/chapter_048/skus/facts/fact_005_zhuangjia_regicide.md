@@ -1,3 +1,8 @@
+---
+name: fact-005-zhuangjia-regicide
+description: Fact 005: 下城父之变——御者庄贾弑陈王
+---
+
 # Fact 005: 下城父之变——御者庄贾弑陈王
 
 ## 基本信息

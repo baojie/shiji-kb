@@ -1,3 +1,8 @@
+---
+name: fact-004-regional-uprisings
+description: Fact 004: 六国并起——张楚首事后的连锁反应
+---
+
 # Fact 004: 六国并起——张楚首事后的连锁反应
 
 ## 基本信息

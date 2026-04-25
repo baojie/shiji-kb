@@ -1,3 +1,8 @@
+---
+name: fact-008
+description: Fact 008：申不害的术治思想与韩国改革
+---
+
 # Fact 008：申不害的术治思想与韩国改革
 
 **Fact ID**: 063_fact_008

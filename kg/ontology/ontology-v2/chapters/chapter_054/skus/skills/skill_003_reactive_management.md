@@ -1,3 +1,8 @@
+---
+name: skill-003-reactive-management
+description: Skill 003: 不作为之作为——反应型管理的艺术
+---
+
 # Skill 003: 不作为之作为——反应型管理的艺术
 
 ## 基本信息

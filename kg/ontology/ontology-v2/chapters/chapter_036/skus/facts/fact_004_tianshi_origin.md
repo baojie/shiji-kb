@@ -1,3 +1,8 @@
+---
+name: fact-004-tianshi-origin
+description: Fact 004: 田氏源出陈国——陈完奔齐与八世代姜
+---
+
 # Fact 004: 田氏源出陈国——陈完奔齐与八世代姜
 
 ## 基本信息

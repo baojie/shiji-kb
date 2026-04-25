@@ -1,3 +1,8 @@
+---
+name: skill-002-jixia-academy
+description: Skill 002: 稷下学宫——国家办学与思想争鸣的制度设计
+---
+
 # Skill 002: 稷下学宫——国家办学与思想争鸣的制度设计
 
 ## 基本信息

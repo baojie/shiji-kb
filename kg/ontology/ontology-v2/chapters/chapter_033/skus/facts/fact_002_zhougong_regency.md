@@ -1,3 +1,8 @@
+---
+name: fact-002-zhougong-regency
+description: Fact 002: 周公摄政七年的完整叙事
+---
+
 # Fact 002: 周公摄政七年的完整叙事
 
 ## 基本信息

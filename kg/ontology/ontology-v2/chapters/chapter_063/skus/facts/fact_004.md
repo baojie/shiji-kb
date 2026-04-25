@@ -1,3 +1,8 @@
+---
+name: fact-004
+description: Fact 004：庄子的思想与作品
+---
+
 # Fact 004：庄子的思想与作品
 
 **Fact ID**: 063_fact_004

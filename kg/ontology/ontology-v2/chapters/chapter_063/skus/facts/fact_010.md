@@ -1,3 +1,8 @@
+---
+name: fact-010
+description: Fact 010：老莱子身份疑辨
+---
+
 # Fact 010：老莱子身份疑辨
 
 **Fact ID**: 063_fact_010

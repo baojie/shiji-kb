@@ -1,3 +1,8 @@
+---
+name: fact-005-wu-zigong
+description: Fact 005: 孔子与宋——宋人之礼
+---
+
 # Fact 005: 孔子与宋——宋人之礼
 
 ## 基本信息

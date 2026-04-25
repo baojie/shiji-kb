@@ -1,3 +1,8 @@
+---
+name: skill-003-sabotage-strategy
+description: Skill 003: 疲敌之计：成败反转的悖论——以郑国渠为例
+---
+
 # Skill 003: 疲敌之计：成败反转的悖论——以郑国渠为例
 
 ## 基本信息

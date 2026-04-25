@@ -1,3 +1,8 @@
+---
+name: fact-005-weiling-duke
+description: Fact 005: 卫灵公时代——蒯聩、孔子至卫
+---
+
 # Fact 005: 卫灵公时代——蒯聩、孔子至卫
 
 ## 基本信息

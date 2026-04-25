@@ -1,3 +1,8 @@
+---
+name: fact-006-wei-final
+description: Fact 006: 卫国末世——国小而能存至秦二世
+---
+
 # Fact 006: 卫国末世——国小而能存至秦二世
 
 ## 基本信息

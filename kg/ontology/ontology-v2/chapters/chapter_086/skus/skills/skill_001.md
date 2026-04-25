@@ -1,3 +1,8 @@
+---
+name: skill-001
+description: 如何培养和使用死士（Skill）
+---
+
 # 如何培养和使用死士（Skill）
 
 **Skill ID**: skill_001

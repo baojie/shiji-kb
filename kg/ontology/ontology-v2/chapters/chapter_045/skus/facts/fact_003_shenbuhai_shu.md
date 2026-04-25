@@ -1,3 +1,8 @@
+---
+name: fact-003-shenbuhai-shu
+description: Fact 003: 申不害相韩：术治思想的实践与局限
+---
+
 # Fact 003: 申不害相韩：术治思想的实践与局限
 
 ## 基本信息

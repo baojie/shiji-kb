@@ -1,3 +1,8 @@
+---
+name: fact-003-yi-qiao-shoulu
+description: Fact 003: 圯桥受书——从刺客到王者师的转型契机
+---
+
 # Fact 003: 圯桥受书——从刺客到王者师的转型契机
 
 ## 基本信息

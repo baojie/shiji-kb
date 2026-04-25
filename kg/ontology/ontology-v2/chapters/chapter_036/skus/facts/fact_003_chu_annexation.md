@@ -1,3 +1,8 @@
+---
+name: fact-003-chu-annexation
+description: Fact 003: 楚灭陈——楚灵王、楚惠王两度灭陈
+---
+
 # Fact 003: 楚灭陈——楚灵王、楚惠王两度灭陈
 
 ## 基本信息

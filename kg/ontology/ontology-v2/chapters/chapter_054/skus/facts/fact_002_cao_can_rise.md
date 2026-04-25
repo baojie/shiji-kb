@@ -1,3 +1,8 @@
+---
+name: fact-002-cao-can-rise
+description: Fact 002: 曹参起事——从沛狱掾到攻城野战之冠
+---
+
 # Fact 002: 曹参起事——从沛狱掾到攻城野战之冠
 
 ## 基本信息

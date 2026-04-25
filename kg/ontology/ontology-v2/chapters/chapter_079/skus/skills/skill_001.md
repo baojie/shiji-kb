@@ -1,3 +1,8 @@
+---
+name: skill-001
+description: Skill 079_001: 复仇策略的艺术
+---
+
 # Skill 079_001: 复仇策略的艺术
 
 ## 技能概述

@@ -1,3 +1,8 @@
+---
+name: skill-003-retreat-from-power
+description: Skill 003: 功高身退之术——避免功高震主的全套方案
+---
+
 # Skill 003: 功高身退之术——避免功高震主的全套方案
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: fact-002-bolang-assassination
+description: Fact 002: 博浪沙椎击——五世相韩的仇恨与失败的暗杀
+---
+
 # Fact 002: 博浪沙椎击——五世相韩的仇恨与失败的暗杀
 
 ## 基本信息

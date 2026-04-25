@@ -1,3 +1,8 @@
+---
+name: fact-003-three-huan-rise
+description: Fact 003: 三桓专政的兴起过程
+---
+
 # Fact 003: 三桓专政的兴起过程
 
 ## 基本信息

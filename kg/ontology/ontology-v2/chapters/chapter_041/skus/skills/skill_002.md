@@ -1,3 +1,8 @@
+---
+name: skill-002
+description: Skill: 卧薪尝胆式复仇策略
+---
+
 # Skill: 卧薪尝胆式复仇策略
 
 ## 技能概述

@@ -1,3 +1,8 @@
+---
+name: fact-004-liu-ze-ambition
+description: Fact 004: 田生激吕——从营陵侯到琅邪王的权术封王
+---
+
 # Fact 004: 田生激吕——从营陵侯到琅邪王的权术封王
 
 ## 基本信息

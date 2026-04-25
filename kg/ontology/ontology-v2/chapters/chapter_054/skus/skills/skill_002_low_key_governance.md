@@ -1,3 +1,8 @@
+---
+name: skill-002-low-key-governance
+description: Skill 002: 低调治理——黄老之术的可操作化
+---
+
 # Skill 002: 低调治理——黄老之术的可操作化
 
 ## 基本信息

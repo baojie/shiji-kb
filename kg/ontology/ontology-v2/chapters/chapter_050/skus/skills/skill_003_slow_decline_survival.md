@@ -1,3 +1,8 @@
+---
+name: skill-003-slow-decline-survival
+description: Skill 003: 缓慢衰落中的生存术——楚国续封三代的存续策略
+---
+
 # Skill 003: 缓慢衰落中的生存术——楚国续封三代的存续策略
 
 ## 基本信息

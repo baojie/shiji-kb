@@ -1,3 +1,8 @@
+---
+name: fact-005-xuanwang-jixia
+description: Fact 005: 齐宣王与稷下学宫——思想文化的鼎盛
+---
+
 # Fact 005: 齐宣王与稷下学宫——思想文化的鼎盛
 
 ## 基本信息

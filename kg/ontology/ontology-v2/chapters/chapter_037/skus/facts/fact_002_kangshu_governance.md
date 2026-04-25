@@ -1,3 +1,8 @@
+---
+name: fact-002-kangshu-governance
+description: Fact 002: 康叔治卫——《康诰》《酒诰》《梓材》
+---
+
 # Fact 002: 康叔治卫——《康诰》《酒诰》《梓材》
 
 ## 基本信息

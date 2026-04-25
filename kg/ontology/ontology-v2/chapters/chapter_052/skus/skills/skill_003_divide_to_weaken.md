@@ -1,3 +1,8 @@
+---
+name: skill-003-divide-to-weaken
+description: Skill 003: 分而治之——齐分七国作为"推恩令"的预演
+---
+
 # Skill 003: 分而治之——齐分七国作为"推恩令"的预演
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: fact-002-liang-xiao-wang
+description: Fact 002: 梁孝王刘武——窦太后偏爱下的诸侯王
+---
+
 # Fact 002: 梁孝王刘武——窦太后偏爱下的诸侯王
 
 ## 基本信息

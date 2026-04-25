@@ -1,3 +1,8 @@
+---
+name: fact-004-brother-succession
+description: Fact 004: 兄终弟及之争——窦太后欲立梁王为嗣
+---
+
 # Fact 004: 兄终弟及之争——窦太后欲立梁王为嗣
 
 ## 基本信息

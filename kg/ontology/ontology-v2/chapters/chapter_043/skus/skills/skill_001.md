@@ -1,3 +1,8 @@
+---
+name: skill-001
+description: Skill: 突破文化偏见的改革推进术
+---
+
 # Skill: 突破文化偏见的改革推进术
 
 ## 技能概述

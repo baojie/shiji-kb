@@ -1,3 +1,8 @@
+---
+name: fact-002-chen-internal-strife
+description: Fact 002: 陈国内乱——夏徵舒弑灵公
+---
+
 # Fact 002: 陈国内乱——夏徵舒弑灵公
 
 ## 基本信息

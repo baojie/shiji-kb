@@ -1,3 +1,8 @@
+---
+name: skill-001-backend-support
+description: Skill 001: 后方总管——关中管理与转漕补军的方法论
+---
+
 # Skill 001: 后方总管——关中管理与转漕补军的方法论
 
 ## 基本信息

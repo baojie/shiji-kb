@@ -1,3 +1,8 @@
+---
+name: fact-002-liu-jiao-scholar
+description: Fact 002: 楚元王刘交——学者型诸侯王的典范
+---
+
 # Fact 002: 楚元王刘交——学者型诸侯王的典范
 
 ## 基本信息

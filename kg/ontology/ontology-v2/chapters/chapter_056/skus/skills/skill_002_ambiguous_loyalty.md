@@ -1,3 +1,8 @@
+---
+name: skill-002-ambiguous-loyalty
+description: Skill 002: 模糊站队术——在政治漩涡中的生存方法
+---
+
 # Skill 002: 模糊站队术——在政治漩涡中的生存方法
 
 ## 基本信息

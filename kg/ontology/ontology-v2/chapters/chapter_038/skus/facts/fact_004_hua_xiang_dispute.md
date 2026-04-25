@@ -1,3 +1,8 @@
+---
+name: fact-004-hua-xiang-dispute
+description: Fact 004: 华向内斗与向戌弭兵
+---
+
 # Fact 004: 华向内斗与向戌弭兵
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-001
+description: Skill 001：以柔克刚的处世方法
+---
+
 # Skill 001：以柔克刚的处世方法
 
 **Skill ID**: 063_skill_001

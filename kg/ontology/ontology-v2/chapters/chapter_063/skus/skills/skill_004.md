@@ -1,3 +1,8 @@
+---
+name: skill-004
+description: Skill 004：推行政治改革的方法（基于申不害经验）
+---
+
 # Skill 004：推行政治改革的方法（基于申不害经验）
 
 **Skill ID**: 063_skill_004

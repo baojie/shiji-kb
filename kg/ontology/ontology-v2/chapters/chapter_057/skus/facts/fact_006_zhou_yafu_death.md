@@ -1,3 +1,8 @@
+---
+name: fact-006-zhou-yafu-death
+description: Fact 006: 周亚夫之死——细柳之遗与景帝之忌
+---
+
 # Fact 006: 周亚夫之死——细柳之遗与景帝之忌
 
 ## 基本信息

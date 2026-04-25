@@ -1,3 +1,8 @@
+---
+name: skill-001-strategic-talent-use
+description: Skill 001: 文侯用人术——尊贤、授权、问政的三位一体
+---
+
 # Skill 001: 文侯用人术——尊贤、授权、问政的三位一体
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-003
+description: skill_003: 公信力建立方法
+---
+
 # skill_003: 公信力建立方法
 
 **类型**: 程序性知识  

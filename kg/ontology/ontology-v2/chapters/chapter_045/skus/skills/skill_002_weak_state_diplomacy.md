@@ -1,3 +1,8 @@
+---
+name: skill-002-weak-state-diplomacy
+description: Skill 002: 弱国外交——摇摆、事大、求存的生存之道
+---
+
 # Skill 002: 弱国外交——摇摆、事大、求存的生存之道
 
 ## 基本信息

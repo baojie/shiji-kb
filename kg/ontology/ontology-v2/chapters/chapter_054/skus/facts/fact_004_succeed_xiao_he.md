@@ -1,3 +1,8 @@
+---
+name: fact-004-succeed-xiao-he
+description: Fact 004: 萧规曹随——政权稳定交接的经典范式
+---
+
 # Fact 004: 萧规曹随——政权稳定交接的经典范式
 
 ## 基本信息

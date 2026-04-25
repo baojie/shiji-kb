@@ -1,3 +1,8 @@
+---
+name: fact-003-tian-clan-rise
+description: Fact 003: 田氏代齐之路——大斗出、小斗进、收拢民心
+---
+
 # Fact 003: 田氏代齐之路——大斗出、小斗进、收拢民心
 
 ## 基本信息

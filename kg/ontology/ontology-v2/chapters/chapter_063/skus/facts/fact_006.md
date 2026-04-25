@@ -1,3 +1,8 @@
+---
+name: fact-006
+description: Fact 006：《说难》核心要点
+---
+
 # Fact 006：《说难》核心要点
 
 **Fact ID**: 063_fact_006

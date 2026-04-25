@@ -1,3 +1,8 @@
+---
+name: fact-004-leyi-attack-qi
+description: Fact 004: 乐毅伐齐——联合五国、下齐七十城
+---
+
 # Fact 004: 乐毅伐齐——联合五国、下齐七十城
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-001-dynasty-savior
+description: Skill 001: 乱世定国术——周勃式的军事政变方法论
+---
+
 # Skill 001: 乱世定国术——周勃式的军事政变方法论
 
 ## 基本信息

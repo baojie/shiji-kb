@@ -1,3 +1,8 @@
+---
+name: skill-002
+description: Skill 002：通过寓言说理的方法
+---
+
 # Skill 002：通过寓言说理的方法
 
 **Skill ID**: 063_skill_002

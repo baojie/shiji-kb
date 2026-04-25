@@ -1,3 +1,8 @@
+---
+name: skill-002-talent-retention-failure
+description: Skill 002: 为何魏国无法留住顶级人才——反面教材的五大病根
+---
+
 # Skill 002: 为何魏国无法留住顶级人才——反面教材的五大病根
 
 ## 基本信息

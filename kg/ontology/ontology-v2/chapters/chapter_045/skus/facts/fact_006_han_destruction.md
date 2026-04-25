@@ -1,3 +1,8 @@
+---
+name: fact-006-han-destruction
+description: Fact 006: 韩国灭亡：战国七雄中第一个被秦灭的国家
+---
+
 # Fact 006: 韩国灭亡：战国七雄中第一个被秦灭的国家
 
 ## 基本信息

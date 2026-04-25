@@ -1,3 +1,8 @@
+---
+name: fact-004-qi-branch-kings
+description: Fact 004: 齐分七国——文帝朝对齐系的分封与分解
+---
+
 # Fact 004: 齐分七国——文帝朝对齐系的分封与分解
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: fact-002-sanjia-fenjin
+description: Fact 002: 三家分晋：韩赵魏瓜分晋室的漫长过程
+---
+
 # Fact 002: 三家分晋：韩赵魏瓜分晋室的漫长过程
 
 ## 基本信息

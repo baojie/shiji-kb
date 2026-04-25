@@ -1,3 +1,8 @@
+---
+name: fact-002-wenhou-reforms
+description: Fact 002: 魏文侯任用李悝吴起西门豹：战国首霸的开启
+---
+
 # Fact 002: 魏文侯任用李悝吴起西门豹：战国首霸的开启
 
 ## 基本信息

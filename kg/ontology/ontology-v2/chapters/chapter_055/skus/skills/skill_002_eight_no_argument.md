@@ -1,3 +1,8 @@
+---
+name: skill-002-eight-no-argument
+description: Skill 002: 八不可反驳术——逐条点破的谏诤方法论
+---
+
 # Skill 002: 八不可反驳术——逐条点破的谏诤方法论
 
 ## 基本信息

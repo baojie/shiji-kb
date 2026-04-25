@@ -1,3 +1,8 @@
+---
+name: fact-005-liu-wuzong-decline
+description: Fact 005: 赵幽王-赵王遂的政治轨迹——本章附记的赵王一系
+---
+
 # Fact 005: 赵幽王-赵王遂的政治轨迹——本章附记的赵王一系
 
 ## 基本信息

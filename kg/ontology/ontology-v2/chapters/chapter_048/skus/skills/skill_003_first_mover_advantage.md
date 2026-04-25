@@ -1,3 +1,8 @@
+---
+name: skill-003-first-mover-advantage
+description: Skill 003: 首事者的定位战略——为何陈胜败而不朽
+---
+
 # Skill 003: 首事者的定位战略——为何陈胜败而不朽
 
 ## 基本信息

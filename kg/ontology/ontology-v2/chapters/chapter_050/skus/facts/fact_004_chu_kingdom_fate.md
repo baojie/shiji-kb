@@ -1,3 +1,8 @@
+---
+name: fact-004-chu-kingdom-fate
+description: Fact 004: 续楚以后——文王、安王、襄王三代的平庸延续
+---
+
 # Fact 004: 续楚以后——文王、安王、襄王三代的平庸延续
 
 ## 基本信息

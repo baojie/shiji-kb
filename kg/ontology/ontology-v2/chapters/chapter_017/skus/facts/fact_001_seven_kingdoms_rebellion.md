@@ -1,3 +1,8 @@
+---
+name: fact-001-seven-kingdoms-rebellion
+description: 七国之乱:诸侯削藩的终极对决
+---
+
 # 七国之乱:诸侯削藩的终极对决
 
 ## 年表简记

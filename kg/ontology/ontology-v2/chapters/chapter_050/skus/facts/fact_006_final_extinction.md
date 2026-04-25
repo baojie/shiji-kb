@@ -1,3 +1,8 @@
+---
+name: fact-006-final-extinction
+description: Fact 006: 楚王纯谋反与楚国除名——地节二年的结束
+---
+
 # Fact 006: 楚王纯谋反与楚国除名——地节二年的结束
 
 ## 基本信息

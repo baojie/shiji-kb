@@ -1,3 +1,8 @@
+---
+name: skill-003
+description: Skill: 功成身退的时机判断
+---
+
 # Skill: 功成身退的时机判断
 
 ## 技能概述

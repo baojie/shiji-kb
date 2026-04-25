@@ -1,3 +1,8 @@
+---
+name: 01-power-control-in-crisis
+description: Skill: 危机中的权力控制术
+---
+
 # Skill: 危机中的权力控制术
 
 ## 元数据

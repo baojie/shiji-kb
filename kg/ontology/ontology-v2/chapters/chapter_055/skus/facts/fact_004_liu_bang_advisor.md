@@ -1,3 +1,8 @@
+---
+name: fact-004-liu-bang-advisor
+description: Fact 004: 辅佐刘邦——从入关到垓下的运筹帷幄
+---
+
 # Fact 004: 辅佐刘邦——从入关到垓下的运筹帷幄
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: fact-002-liu-jia-founding
+description: Fact 002: 刘贾从征封荆——"诸刘"旁支以军功立国
+---
+
 # Fact 002: 刘贾从征封荆——"诸刘"旁支以军功立国
 
 ## 基本信息

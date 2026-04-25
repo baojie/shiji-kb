@@ -1,3 +1,8 @@
+---
+name: skill-002-kingmaker-role
+description: Skill 002: Kingmaker之术——不自立而立人的政治回报
+---
+
 # Skill 002: Kingmaker之术——不自立而立人的政治回报
 
 ## 基本信息

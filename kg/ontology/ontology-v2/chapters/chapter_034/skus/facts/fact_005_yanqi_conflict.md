@@ -1,3 +1,8 @@
+---
+name: fact-005-yanqi-conflict
+description: Fact 005: 燕齐世仇——从子之之乱到济西大战
+---
+
 # Fact 005: 燕齐世仇——从子之之乱到济西大战
 
 ## 基本信息

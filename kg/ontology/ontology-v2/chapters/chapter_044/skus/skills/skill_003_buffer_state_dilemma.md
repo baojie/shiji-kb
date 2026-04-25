@@ -1,3 +1,8 @@
+---
+name: skill-003-buffer-state-dilemma
+description: Skill 003: 四战之地的战略困境——魏国地缘处境的应对范式
+---
+
 # Skill 003: 四战之地的战略困境——魏国地缘处境的应对范式
 
 ## 基本信息

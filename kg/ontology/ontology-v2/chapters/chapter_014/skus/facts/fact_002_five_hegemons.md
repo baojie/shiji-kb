@@ -1,3 +1,8 @@
+---
+name: fact-002-five-hegemons
+description: Fact 002: 春秋五霸轮替全景图
+---
+
 # Fact 002: 春秋五霸轮替全景图
 
 ## 概述

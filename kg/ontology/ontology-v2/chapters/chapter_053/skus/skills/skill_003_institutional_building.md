@@ -1,3 +1,8 @@
+---
+name: skill-003-institutional-building
+description: Skill 003: 制度奠基——从"收秦图书"到"汉承秦制"的系统工程
+---
+
 # Skill 003: 制度奠基——从"收秦图书"到"汉承秦制"的系统工程
 
 ## 基本信息

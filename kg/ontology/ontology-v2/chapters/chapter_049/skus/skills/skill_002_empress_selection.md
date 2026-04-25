@@ -1,3 +1,8 @@
+---
+name: skill-002-empress-selection
+description: Skill 002: 皇后选拔的政治考量——从薄皇后到卫子夫的五代经验
+---
+
 # Skill 002: 皇后选拔的政治考量——从薄皇后到卫子夫的五代经验
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-003
+description: Skill 003：游说君主的方法（基于《说难》）
+---
+
 # Skill 003：游说君主的方法（基于《说难》）
 
 **Skill ID**: 063_skill_003

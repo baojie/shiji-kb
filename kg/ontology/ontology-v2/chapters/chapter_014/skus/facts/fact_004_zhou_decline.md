@@ -1,3 +1,8 @@
+---
+name: fact-004-zhou-decline
+description: Fact 004: 周王室衰落全景图：从共和行政到诸侯不朝
+---
+
 # Fact 004: 周王室衰落全景图：从共和行政到诸侯不朝
 
 ## 概述

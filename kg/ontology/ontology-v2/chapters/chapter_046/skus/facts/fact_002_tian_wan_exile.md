@@ -1,3 +1,8 @@
+---
+name: fact-002-tian-wan-exile
+description: Fact 002: 陈完奔齐——田氏源流与卦兆之验
+---
+
 # Fact 002: 陈完奔齐——田氏源流与卦兆之验
 
 ## 基本信息

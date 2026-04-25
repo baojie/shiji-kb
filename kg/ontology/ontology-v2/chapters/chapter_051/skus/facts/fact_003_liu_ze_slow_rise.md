@@ -1,3 +1,8 @@
+---
+name: fact-003-liu-ze-slow-rise
+description: Fact 003: 刘泽从郎中到营陵侯——"诸刘远属"的缓慢晋升
+---
+
 # Fact 003: 刘泽从郎中到营陵侯——"诸刘远属"的缓慢晋升
 
 ## 基本信息

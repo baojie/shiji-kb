@@ -1,3 +1,8 @@
+---
+name: skill-001
+description: Skill: 四战之地的生存策略
+---
+
 # Skill: 四战之地的生存策略
 
 ## 技能概述

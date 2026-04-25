@@ -1,3 +1,8 @@
+---
+name: skill-001-waiqi-rise-fall
+description: Skill 001: 外戚崛起与衰落的规律——从吕到钩弋的六代兴亡律
+---
+
 # Skill 001: 外戚崛起与衰落的规律——从吕到钩弋的六代兴亡律
 
 ## 基本信息

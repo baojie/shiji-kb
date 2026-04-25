@@ -1,3 +1,8 @@
+---
+name: fact-007
+description: Fact 007：韩非入秦被害
+---
+
 # Fact 007：韩非入秦被害
 
 **Fact ID**: 063_fact_007

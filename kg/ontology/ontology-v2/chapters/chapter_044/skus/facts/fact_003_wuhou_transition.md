@@ -1,3 +1,8 @@
+---
+name: fact-003-wuhou-transition
+description: Fact 003: 魏武侯时代：守成、过渡与人才流失的起点
+---
+
 # Fact 003: 魏武侯时代：守成、过渡与人才流失的起点
 
 ## 基本信息

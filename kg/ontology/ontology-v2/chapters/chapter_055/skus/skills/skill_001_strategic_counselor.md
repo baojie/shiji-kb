@@ -1,3 +1,8 @@
+---
+name: skill-001-strategic-counselor
+description: Skill 001: 帝师型谋士——独立战略顾问的角色定位
+---
+
 # Skill 001: 帝师型谋士——独立战略顾问的角色定位
 
 ## 基本信息

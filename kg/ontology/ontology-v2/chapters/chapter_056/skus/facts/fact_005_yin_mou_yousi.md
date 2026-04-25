@@ -1,3 +1,8 @@
+---
+name: fact-005-yin-mou-yousi
+description: Fact 005: 阴谋与悠游——陈平的两面人生
+---
+
 # Fact 005: 阴谋与悠游——陈平的两面人生
 
 ## 基本信息

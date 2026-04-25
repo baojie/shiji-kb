@@ -1,3 +1,8 @@
+---
+name: fact-006-liang-split
+description: Fact 006: 梁分五国——以分封化大为小的政治操作
+---
+
 # Fact 006: 梁分五国——以分封化大为小的政治操作
 
 ## 基本信息

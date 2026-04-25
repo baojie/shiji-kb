@@ -1,3 +1,8 @@
+---
+name: fact-002-zhou-bo-military
+description: Fact 002: 周勃军功——从织箔丧手到定诸侯的战神之路
+---
+
 # Fact 002: 周勃军功——从织箔丧手到定诸侯的战神之路
 
 ## 基本信息

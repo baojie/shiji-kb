@@ -1,3 +1,8 @@
+---
+name: fact-003-bo-dou-clans
+description: Fact 003: 薄氏与窦氏——汉初"低调派"外戚的典型
+---
+
 # Fact 003: 薄氏与窦氏——汉初"低调派"外戚的典型
 
 ## 基本信息

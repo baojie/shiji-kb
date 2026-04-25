@@ -1,3 +1,8 @@
+---
+name: skill-002
+description: skill_002: 改革阻力应对策略
+---
+
 # skill_002: 改革阻力应对策略
 
 **类型**: 程序性知识  

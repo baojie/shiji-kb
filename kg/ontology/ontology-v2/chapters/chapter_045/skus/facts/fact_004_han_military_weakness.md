@@ -1,3 +1,8 @@
+---
+name: fact-004-han-military-weakness
+description: Fact 004: 韩国军事弱势：七雄中最弱的结构性原因
+---
+
 # Fact 004: 韩国军事弱势：七雄中最弱的结构性原因
 
 ## 基本信息

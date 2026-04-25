@@ -1,3 +1,8 @@
+---
+name: skill-001-legitimacy-fabrication
+description: Skill 001: 借名起义——合法性包装术
+---
+
 # Skill 001: 借名起义——合法性包装术
 
 ## 基本信息

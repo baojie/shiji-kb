@@ -1,3 +1,8 @@
+---
+name: skill-003
+description: 如何在伦理困境中做出选择（Skill）
+---
+
 # 如何在伦理困境中做出选择（Skill）
 
 **Skill ID**: skill_003

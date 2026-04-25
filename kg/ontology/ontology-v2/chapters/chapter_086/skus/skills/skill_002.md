@@ -1,3 +1,8 @@
+---
+name: skill-002
+description: 如何选择刺杀时机（Skill）
+---
+
 # 如何选择刺杀时机（Skill）
 
 **Skill ID**: skill_002

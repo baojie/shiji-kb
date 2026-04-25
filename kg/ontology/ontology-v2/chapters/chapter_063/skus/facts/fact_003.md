@@ -1,3 +1,8 @@
+---
+name: fact-003
+description: Fact 003：孔子问礼于老子
+---
+
 # Fact 003：孔子问礼于老子
 
 **Fact ID**: 063_fact_003

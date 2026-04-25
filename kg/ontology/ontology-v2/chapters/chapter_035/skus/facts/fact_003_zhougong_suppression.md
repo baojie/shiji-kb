@@ -1,3 +1,8 @@
+---
+name: fact-003-zhougong-suppression
+description: Fact 003: 周公东征——平定三监之乱的二年之功
+---
+
 # Fact 003: 周公东征——平定三监之乱的二年之功
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-003-passive-extinction
+description: Skill 003: 齐王建式被动灭亡——五国救援缺席的代价
+---
+
 # Skill 003: 齐王建式被动灭亡——五国救援缺席的代价
 
 ## 基本信息

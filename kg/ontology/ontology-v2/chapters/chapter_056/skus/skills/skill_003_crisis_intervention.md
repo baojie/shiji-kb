@@ -1,3 +1,8 @@
+---
+name: skill-003-crisis-intervention
+description: Skill 003: 关键时刻出手节奏——从"不出手"到"必出手"的判断
+---
+
 # Skill 003: 关键时刻出手节奏——从"不出手"到"必出手"的判断
 
 ## 基本信息

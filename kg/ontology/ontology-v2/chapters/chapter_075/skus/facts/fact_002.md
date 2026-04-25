@@ -1,3 +1,8 @@
+---
+name: fact-002
+description: Fact 002: 鸡鸣狗盗脱秦难
+---
+
 # Fact 002: 鸡鸣狗盗脱秦难
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-001-great-power-inheritance
+description: Skill 001: 大国继承——作为"最大子女"的平衡艺术
+---
+
 # Skill 001: 大国继承——作为"最大子女"的平衡艺术
 
 ## 基本信息

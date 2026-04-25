@@ -1,3 +1,8 @@
+---
+name: fact-006-cao-family-descendants
+description: Fact 006: 平阳侯世家六代——从功臣到外戚的百年演化
+---
+
 # Fact 006: 平阳侯世家六代——从功臣到外戚的百年演化
 
 ## 基本信息

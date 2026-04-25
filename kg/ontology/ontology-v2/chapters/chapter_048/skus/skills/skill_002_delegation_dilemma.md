@@ -1,3 +1,8 @@
+---
+name: skill-002-delegation-dilemma
+description: Skill 002: 快速扩张中的授权困境——派遣与失控的张楚教训
+---
+
 # Skill 002: 快速扩张中的授权困境——派遣与失控的张楚教训
 
 ## 基本信息

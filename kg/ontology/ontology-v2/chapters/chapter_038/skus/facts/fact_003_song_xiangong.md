@@ -1,3 +1,8 @@
+---
+name: fact-003-song-xiangong
+description: Fact 003: 宋襄公争霸——泓水之战与"蠢猪式仁义"
+---
+
 # Fact 003: 宋襄公争霸——泓水之战与"蠢猪式仁义"
 
 ## 基本信息

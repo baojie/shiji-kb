@@ -1,3 +1,8 @@
+---
+name: fact-002-zhaogong-governance
+description: Fact 002: 召公治燕——甘棠之政
+---
+
 # Fact 002: 召公治燕——甘棠之政
 
 ## 基本信息

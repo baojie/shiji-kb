@@ -1,3 +1,8 @@
+---
+name: fact-002
+description: 曹沫劫盟：柯之盟的外交博弈
+---
+
 # 曹沫劫盟：柯之盟的外交博弈
 
 **Fact ID**: fact_002

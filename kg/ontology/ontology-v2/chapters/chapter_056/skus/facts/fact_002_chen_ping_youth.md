@@ -1,3 +1,8 @@
+---
+name: fact-002-chen-ping-youth
+description: Fact 002: 陈平早年——分肉公平与美色贫寒
+---
+
 # Fact 002: 陈平早年——分肉公平与美色贫寒
 
 ## 基本信息

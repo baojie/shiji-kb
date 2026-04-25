@@ -1,3 +1,8 @@
+---
+name: fact-005-yuan-ang-murder
+description: Fact 005: 刺袁盎——梁孝王的政治自毁
+---
+
 # Fact 005: 刺袁盎——梁孝王的政治自毁
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-002-contribution-without-reward
+description: Skill 002: 功不配位的应对——齐哀王首义未帝的心理与策略
+---
+
 # Skill 002: 功不配位的应对——齐哀王首义未帝的心理与策略
 
 ## 基本信息

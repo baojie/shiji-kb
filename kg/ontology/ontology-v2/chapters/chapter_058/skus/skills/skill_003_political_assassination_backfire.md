@@ -1,3 +1,8 @@
+---
+name: skill-003-political-assassination-backfire
+description: Skill 003: 暗杀反噬——用极端手段解决政治分歧的自毁规律
+---
+
 # Skill 003: 暗杀反噬——用极端手段解决政治分歧的自毁规律
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: skill-005
+description: 如何在失败中保全名节（Skill）
+---
+
 # 如何在失败中保全名节（Skill）
 
 **Skill ID**: skill_005

@@ -1,3 +1,8 @@
+---
+name: skill-002
+description: Skill 079_002: 功成身退的方法论
+---
+
 # Skill 079_002: 功成身退的方法论
 
 ## 技能概述

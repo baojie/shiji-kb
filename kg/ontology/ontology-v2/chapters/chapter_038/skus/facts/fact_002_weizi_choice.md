@@ -1,3 +1,8 @@
+---
+name: fact-002-weizi-choice
+description: Fact 002: 微子去商——三仁的不同选择
+---
+
 # Fact 002: 微子去商——三仁的不同选择
 
 ## 基本信息

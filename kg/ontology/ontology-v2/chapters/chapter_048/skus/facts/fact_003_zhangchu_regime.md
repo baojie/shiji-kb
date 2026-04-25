@@ -1,3 +1,8 @@
+---
+name: fact-003-zhangchu-regime
+description: Fact 003: 陈胜立国张楚——中国史上第一个平民政权
+---
+
 # Fact 003: 陈胜立国张楚——中国史上第一个平民政权
 
 ## 基本信息

@@ -1,3 +1,8 @@
+---
+name: fact-003-liang-defends-seven
+description: Fact 003: 梁挡吴楚——七国之乱中的关键屏障
+---
+
 # Fact 003: 梁挡吴楚——七国之乱中的关键屏障
 
 ## 基本信息

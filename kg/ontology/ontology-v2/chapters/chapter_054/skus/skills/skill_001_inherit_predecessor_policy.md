@@ -1,3 +1,8 @@
+---
+name: skill-001-inherit-predecessor-policy
+description: Skill 001: 继承前任方针——萧规曹随的方法论
+---
+
 # Skill 001: 继承前任方针——萧规曹随的方法论
 
 ## 基本信息

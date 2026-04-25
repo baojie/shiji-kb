@@ -1,3 +1,8 @@
+---
+name: fact-002-dazexiang-uprising
+description: Fact 002: 大泽乡起义——中国史上第一次大规模平民武装起事
+---
+
 # Fact 002: 大泽乡起义——中国史上第一次大规模平民武装起事
 
 ## 基本信息

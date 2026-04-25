@@ -1,3 +1,8 @@
+---
+name: skill-001-shu-governance
+description: Skill 001: 术治——如何以权术驭下（申不害方法）
+---
+
 # Skill 001: 术治——如何以权术驭下（申不害方法）
 
 ## 基本信息

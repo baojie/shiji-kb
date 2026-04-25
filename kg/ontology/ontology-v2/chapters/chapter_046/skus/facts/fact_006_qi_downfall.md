@@ -1,3 +1,8 @@
+---
+name: fact-006-qi-downfall
+description: Fact 006: 齐王建不救赵：坐视秦灭五国而后自毙
+---
+
 # Fact 006: 齐王建不救赵：坐视秦灭五国而后自毙
 
 ## 基本信息

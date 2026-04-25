@@ -1,3 +1,8 @@
+---
+name: skill-004
+description: 如何建立知遇关系（Skill）
+---
+
 # 如何建立知遇关系（Skill）
 
 **Skill ID**: skill_004

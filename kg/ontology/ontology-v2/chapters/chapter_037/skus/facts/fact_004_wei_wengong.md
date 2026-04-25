@@ -1,3 +1,8 @@
+---
+name: fact-004-wei-wengong
+description: Fact 004: 卫懿公好鹤、狄人灭卫、齐桓公存卫
+---
+
 # Fact 004: 卫懿公好鹤、狄人灭卫、齐桓公存卫
 
 ## 基本信息

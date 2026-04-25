@@ -1,3 +1,8 @@
+---
+name: skill-001-minor-branch-upgrade
+description: Skill 001: 旁支升格术——从"诸刘远属"到"南面称孤"的三级跳
+---
+
 # Skill 001: 旁支升格术——从"诸刘远属"到"南面称孤"的三级跳
 
 ## 基本信息

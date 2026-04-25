@@ -1,3 +1,8 @@
+---
+name: fact-005-cao-can-policy
+description: Fact 005: 无为而治的具体实践——日饮醇酒与见微掩覆
+---
+
 # Fact 005: 无为而治的具体实践——日饮醇酒与见微掩覆
 
 ## 基本信息

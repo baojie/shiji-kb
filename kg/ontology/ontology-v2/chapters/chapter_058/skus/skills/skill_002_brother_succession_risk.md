@@ -1,3 +1,8 @@
+---
+name: skill-002-brother-succession-risk
+description: Skill 002: 兄终弟及风险识别——当"非正统继承"被提上桌面
+---
+
 # Skill 002: 兄终弟及风险识别——当"非正统继承"被提上桌面
 
 ## 基本信息

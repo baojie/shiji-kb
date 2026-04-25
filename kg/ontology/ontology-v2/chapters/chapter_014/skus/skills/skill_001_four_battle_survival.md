@@ -1,3 +1,8 @@
+---
+name: skill-001-four-battle-survival
+description: Skill 001: 四战之地生存策略工具包
+---
+
 # Skill 001: 四战之地生存策略工具包
 
 ---

@@ -1,3 +1,8 @@
+---
+name: fact-009
+description: Fact 009：道法思想的演变路径
+---
+
 # Fact 009：道法思想的演变路径
 
 **Fact ID**: 063_fact_009

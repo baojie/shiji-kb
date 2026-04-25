@@ -1,3 +1,8 @@
+---
+name: fact-002-sanjian-rebellion
+description: Fact 002: 三监之乱——管叔、蔡叔联合武庚反周
+---
+
 # Fact 002: 三监之乱——管叔、蔡叔联合武庚反周
 
 ## 基本信息

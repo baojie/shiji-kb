@@ -1,3 +1,8 @@
+---
+name: fact-006-yan-downfall
+description: Fact 006: 燕国末年——太子丹、荆轲刺秦、最终灭亡
+---
+
 # Fact 006: 燕国末年——太子丹、荆轲刺秦、最终灭亡
 
 ## 基本信息

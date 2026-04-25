@@ -1,3 +1,8 @@
+---
+name: skill-001-power-reduction-strategy
+description: 削藩策略:中央集权的三种路径
+---
+
 # 削藩策略:中央集权的三种路径
 
 ## 概述

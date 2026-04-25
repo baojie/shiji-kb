@@ -1,3 +1,8 @@
+---
+name: skill-003-father-son-fate
+description: Skill 003: 功臣世家的传代魔咒——父子下狱的家族命运分析
+---
+
 # Skill 003: 功臣世家的传代魔咒——父子下狱的家族命运分析
 
 ## 基本信息

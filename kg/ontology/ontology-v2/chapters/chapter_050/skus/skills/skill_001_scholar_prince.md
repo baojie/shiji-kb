@@ -1,3 +1,8 @@
+---
+name: skill-001-scholar-prince
+description: Skill 001: 学者型诸侯王——以文化身份治理的领导方法论
+---
+
 # Skill 001: 学者型诸侯王——以文化身份治理的领导方法论
 
 ## 基本信息

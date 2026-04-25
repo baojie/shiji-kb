@@ -1,3 +1,8 @@
+---
+name: fact-006-first-starter-legacy
+description: Fact 006: 首事之功的历史定位——汉廷守冢与太史公列世家
+---
+
 # Fact 006: 首事之功的历史定位——汉廷守冢与太史公列世家
 
 ## 基本信息

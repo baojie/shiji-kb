@@ -1,3 +1,8 @@
+---
+name: fact-003-six-stratagems
+description: Fact 003: 六出奇计——反间、诈降与政治暗杀
+---
+
 # Fact 003: 六出奇计——反间、诈降与政治暗杀
 
 ## 基本信息

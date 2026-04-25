@@ -1,3 +1,8 @@
+---
+name: skill-001
+description: Skill 001: 外戚权力的建立与维持
+---
+
 # Skill 001: 外戚权力的建立与维持
 
 ## 技能概述

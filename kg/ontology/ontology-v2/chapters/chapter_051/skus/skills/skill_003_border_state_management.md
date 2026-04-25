@@ -1,3 +1,8 @@
+---
+name: skill-003-border-state-management
+description: Skill 003: 边境诸侯国的管理——从荆燕两国看"淮东"与"燕北"的地缘宿命
+---
+
 # Skill 003: 边境诸侯国的管理——从荆燕两国看"淮东"与"燕北"的地缘宿命
 
 ## 基本信息
