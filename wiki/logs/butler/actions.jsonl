@@ -3458,3 +3458,15 @@
 [R5238] H4 | entity desc补全 | accept | official/artifact/quantity/institution等6类×5591页补description字段
 [R5239] H4 | entity sources补全 | accept | official/artifact等实体类型从引文章节链接推导sources×5591页
 [R5240] H14-反思 | 知识库状态 | accept | K=711K/pages=19953/links=99.9%/revs=72853，entity类批量完成
+[R5241] H4 | year页description | accept | 622个年份页补充description字段
+[R5242] H4 | concept/dynasty desc+sources | accept | concept×239 + dynasty×182补description/sources
+[R5243] H4 | tribe/book desc+sources | accept | tribe×141+book×192补description/sources
+[R5244] H2 | event/place/state相关章节 | accept | 从sources推导相关章节×5392页（event/place/state/侯国）
+[R5245] H14-反思 | 知识库状态 | accept | K=775K/pages=19953/links=99.9%/revs=79620，相关章节全类型推进中
+[R5246] H2 | 实体类相关章节 | accept | official/artifact/concept等14类从史记引文推导相关章节×6430页
+[R5247] H2 | person相关章节 | accept | 从sources推导person相关章节×3736页
+[R5248] H2 | 相关人物节 | accept | overview/concept/event/place从wikilinks推导相关人物×94页
+[R5249] H2 | story相关人物 | accept | 从正文人名匹配推导story相关人物节×316页
+[R5250] H14-反思 | 知识库状态 | accept | K=836K/pages=19953/links=136K/revs=90K，相关节全面推进完成
+[R5251] H2 | person相关人物 | accept | 从wikilinks推导person相关人物节×47页
+[R5252] H1 | YAML质量检查 | accept | 0个YAML解析失败，数据质量良好
