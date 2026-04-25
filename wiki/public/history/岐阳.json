@@ -1,8 +1,18 @@
 {
   "page": "岐阳",
-  "latest_rev_id": "20260425-120112-ebf84e",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125308-4d51df",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125308-4d51df",
+      "timestamp": "2026-04-25T12:53:08Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120112-ebf84e",
+      "content_hash": "sha256:4d51df8f223b2d42197811440e2b46f3b0f90b94275510bc6a990f96d5cc8482",
+      "size": 769,
+      "content": "---\nid: 岐阳\ntype: place\nsources: [楚世家]\nlabel: 岐阳\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [107.79633, 34.47827]\ncoords_name: \"岐阳县\"\ncoords_source: \"CHGIS hvd_70910\"\n---\n# 岐阳\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[040_楚世家]]：`38`\n\n**引文摘录：**\n\n> **出自 [[040_楚世家]]（040-38）：** 灵王三年六月，楚使使告晋，欲会诸侯。诸侯皆会楚于申。伍举曰：“昔夏启有钧台之飨，商汤有景亳之命，周武王有盟津之誓，成王有岐阳之蒐，康王有丰宫之朝，穆王有涂山之会，齐桓有召陵之师，晋文有践土之盟，君其何用？”"
+    },
     {
       "rev_id": "20260425-120112-ebf84e",
       "timestamp": "2026-04-25T12:01:12Z",

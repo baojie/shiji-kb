@@ -1,8 +1,18 @@
 {
   "page": "龙",
-  "latest_rev_id": "20260425-120915-6fa772",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125707-341087",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125707-341087",
+      "timestamp": "2026-04-25T12:57:07Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120915-6fa772",
+      "content_hash": "sha256:341087bbc71263198f6a31e24aa0a3a0871b9e97a40d09346d634e831cb687f0",
+      "size": 522,
+      "content": "---\nid: 龙\ntype: place\nsources: [秦始皇本纪]\nlabel: 龙\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [104.83273, 32.20168]\ncoords_name: \"龙州\"\ncoords_source: \"CHGIS 211342\"\n---\n# 龙\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[006_秦始皇本纪]]：`8.2`\n\n**引文摘录：**\n\n> **出自 [[006_秦始皇本纪]]（006-8.2）：** 将军骜死。以攻龙、孤、庆都，还兵攻汲。"
+    },
     {
       "rev_id": "20260425-120915-6fa772",
       "timestamp": "2026-04-25T12:09:15Z",

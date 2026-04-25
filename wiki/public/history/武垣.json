@@ -1,8 +1,18 @@
 {
   "page": "武垣",
-  "latest_rev_id": "20260425-120152-026101",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125413-fa5ff3",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125413-fa5ff3",
+      "timestamp": "2026-04-25T12:54:13Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120152-026101",
+      "content_hash": "sha256:fa5ff31077c9d2291a8021fa6dcf626c7b9260c52707552465cd5e8569343c3b",
+      "size": 527,
+      "content": "---\nid: 武垣\ntype: place\nsources: [曹相国世家]\nlabel: 武垣\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [115.93231, 38.37027]\ncoords_name: \"武垣县\"\ncoords_source: \"CHGIS hvd_87071\"\n---\n# 武垣\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[054_曹相国世家]]：`5`\n\n**引文摘录：**\n\n> **出自 [[054_曹相国世家]]（054-5）：** 高祖年，拜为假左丞相，入屯兵关中。"
+    },
     {
       "rev_id": "20260425-120152-026101",
       "timestamp": "2026-04-25T12:01:52Z",

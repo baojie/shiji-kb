@@ -1,8 +1,18 @@
 {
   "page": "东郊",
-  "latest_rev_id": "20260425-120455-549d35",
-  "revision_count": 3,
+  "latest_rev_id": "20260425-125139-51454b",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260425-125139-51454b",
+      "timestamp": "2026-04-25T12:51:39Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120455-549d35",
+      "content_hash": "sha256:51454be71b388c8beefdcaee14b1503d8546212bb7e653ae2ff5377638e4d5f4",
+      "size": 415,
+      "content": "---\nid: 东郊\ntype: place\nsources: [殷本纪]\nlabel: 东郊\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"建筑\"]\nauto_generated: true\ncoords: [110.86127, 19.57644]\ncoords_name: \"东郊市\"\ncoords_source: \"CHGIS hvd_127150\"\n---\n# 东郊\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[003_殷本纪]]：`8.1`\n\n**引文摘录：**\n"
+    },
     {
       "rev_id": "20260425-120455-549d35",
       "timestamp": "2026-04-25T12:04:55Z",

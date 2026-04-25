@@ -1,8 +1,18 @@
 {
   "page": "山阳",
-  "latest_rev_id": "20260425-120112-7c28ed",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-125307-236930",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-125307-236930",
+      "timestamp": "2026-04-25T12:53:07Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120112-7c28ed",
+      "content_hash": "sha256:2369301ae14fb48fdd5c8d0e093d8171a4aaba247ccc1fbfd0086cebcbb3d9b2",
+      "size": 884,
+      "content": "---\nid: 山阳\ntype: place\nsources: [梁孝王世家]\nlabel: 山阳\ndescription: \"《史记》中出现 5 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\", \"郡\"]\nauto_generated: true\ncoords: [116.12691, 35.13948]\ncoords_name: \"山阳郡\"\ncoords_source: \"CHGIS 210586\"\n---\n# 山阳\n\n## 史记引文\n\n《史记》中出现 **5** 次，见于以下章节：\n\n- [[006_秦始皇本纪]]：`10.1`\n- [[020_建元以来侯者年表]]：`r8`\n- [[058_梁孝王世家]]：`14`、`21`\n\n**引文摘录：**\n\n> **出自 [[058_梁孝王世家]]（058-14）：** 梁孝王长子买为梁王，是为共王；子明为济川王；子彭离为济东王；子定为山阳王；子不识为济阴王。\n\n> **出自 [[058_梁孝王世家]]（058-21）：** 山阳哀王定者，梁孝王子，以孝景中六年为山阳王。九年卒，无子，国除，地入于汉，为山阳郡。"
+    },
     {
       "rev_id": "20260425-120112-7c28ed",
       "timestamp": "2026-04-25T12:01:12Z",

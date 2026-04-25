@@ -1,8 +1,18 @@
 {
   "page": "麦丘",
-  "latest_rev_id": "20260425-120345-4970bb",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125704-a419e2",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125704-a419e2",
+      "timestamp": "2026-04-25T12:57:04Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120345-4970bb",
+      "content_hash": "sha256:a419e264b0783f05df5e774ef384ce3b454e2dbc5ed5d776de720a78a8e753b2",
+      "size": 666,
+      "content": "---\nid: 麦丘\ntype: place\nsources: [赵世家]\nlabel: 麦丘\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\n---\n# 麦丘\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[043_赵世家]]：`88`\n\n**引文摘录：**\n\n> **出自 [[043_赵世家]]（043-88）：** 十七年，乐毅将赵师攻魏伯阳。而秦怨赵不与己击齐，伐赵，拔我两城。十八年，秦拔我石城。王再之卫东阳，决河水，伐魏氏。大潦，漳水出。魏厓来相赵。十九年，秦取我二城。赵与魏伯阳。赵奢将，攻齐麦丘，取之。"
+    },
     {
       "rev_id": "20260425-120345-4970bb",
       "timestamp": "2026-04-25T12:03:45Z",

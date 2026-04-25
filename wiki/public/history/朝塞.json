@@ -1,8 +1,18 @@
 {
   "page": "朝塞",
-  "latest_rev_id": "20260425-120733-278a8d",
-  "revision_count": 3,
+  "latest_rev_id": "20260425-125353-f4e138",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260425-125353-f4e138",
+      "timestamp": "2026-04-25T12:53:53Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120733-278a8d",
+      "content_hash": "sha256:f4e138b66132d7649cf0975e7130103ae995696f90ac40ef9fed8f9a0f398bc8",
+      "size": 333,
+      "content": "---\nid: 朝塞\ntype: place\nsources: [孝文本纪]\nlabel: 朝塞\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"关隘\"]\nauto_generated: true\n---\n# 朝塞\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[010_孝文本纪]]：`30.1`\n\n**引文摘录：**\n"
+    },
     {
       "rev_id": "20260425-120733-278a8d",
       "timestamp": "2026-04-25T12:07:33Z",

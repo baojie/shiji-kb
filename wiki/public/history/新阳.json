@@ -1,8 +1,18 @@
 {
   "page": "新阳",
-  "latest_rev_id": "20260425-120725-9eb662",
-  "revision_count": 3,
+  "latest_rev_id": "20260425-125344-74a88d",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260425-125344-74a88d",
+      "timestamp": "2026-04-25T12:53:44Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120725-9eb662",
+      "content_hash": "sha256:74a88d7a5a8da934f264180638b475a3249c94c6fff5805f12c1fc1cb8921d33",
+      "size": 417,
+      "content": "---\nid: 新阳\ntype: place\nsources: [陈涉世家]\nlabel: 新阳\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [112.1956, 28.17039]\ncoords_name: \"新阳县\"\ncoords_source: \"CHGIS hvd_41787\"\n---\n# 新阳\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[048_陈涉世家]]：`11.1`\n\n**引文摘录：**\n"
+    },
     {
       "rev_id": "20260425-120725-9eb662",
       "timestamp": "2026-04-25T12:07:25Z",

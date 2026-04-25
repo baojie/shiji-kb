@@ -1,8 +1,18 @@
 {
   "page": "东张",
-  "latest_rev_id": "20260425-120004-d9fd01",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125136-a421ba",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125136-a421ba",
+      "timestamp": "2026-04-25T12:51:36Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120004-d9fd01",
+      "content_hash": "sha256:a421ba48ed2930289241831afa1be64ea8e63f7bece545d0a5ad6770a3136309",
+      "size": 527,
+      "content": "---\nid: 东张\ntype: place\nsources: [曹相国世家]\nlabel: 东张\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [102.81838, 37.63697]\ncoords_name: \"东张掖郡\"\ncoords_source: \"CHGIS 211835\"\n---\n# 东张\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[054_曹相国世家]]：`5`\n\n**引文摘录：**\n\n> **出自 [[054_曹相国世家]]（054-5）：** 高祖年，拜为假左丞相，入屯兵关中。"
+    },
     {
       "rev_id": "20260425-120004-d9fd01",
       "timestamp": "2026-04-25T12:00:04Z",

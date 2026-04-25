@@ -1,8 +1,18 @@
 {
   "page": "釜山",
-  "latest_rev_id": "20260425-120321-12b27f",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125631-1544c6",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125631-1544c6",
+      "timestamp": "2026-04-25T12:56:31Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120321-12b27f",
+      "content_hash": "sha256:1544c6c3e0779b4dcd5f5cf60a04511837bde27a18774096e748a9831bf617cb",
+      "size": 420,
+      "content": "---\nid: 釜山\ntype: place\nsources: [五帝本纪]\nlabel: 釜山\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\n---\n# 釜山\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[001_五帝本纪]]：`2`\n\n**引文摘录：**\n\n> **出自 [[001_五帝本纪]]（001-2）：** - 东至于海，登丸山，及岱宗。"
+    },
     {
       "rev_id": "20260425-120321-12b27f",
       "timestamp": "2026-04-25T12:03:21Z",

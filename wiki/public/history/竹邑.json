@@ -1,8 +1,18 @@
 {
   "page": "竹邑",
-  "latest_rev_id": "20260425-120240-fe4919",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125522-2f2a22",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125522-2f2a22",
+      "timestamp": "2026-04-25T12:55:22Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120240-fe4919",
+      "content_hash": "sha256:2f2a22716fdd530d423c62a907923822d4cd0196fdf1830e5cd56d420ccd0b42",
+      "size": 864,
+      "content": "---\nid: 竹邑\ntype: place\nsources: [曹相国世家]\nlabel: 竹邑\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [116.96673, 33.76696]\ncoords_name: \"竹邑县\"\ncoords_source: \"CHGIS hvd_43191\"\n---\n# 竹邑\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[054_曹相国世家]]：`7`\n- [[098_傅靳蒯成列传]]：`7`\n\n**引文摘录：**\n\n> **出自 [[054_曹相国世家]]（054-7）：** 以齐相国击陈豨将张春军，破之。黥布反，参以齐相国从悼惠王将兵车骑十二万人，与高祖会击黥布军，大破之。南至蕲，还定竹邑、相、萧、留。\n\n> **出自 [[098_傅靳蒯成列传]]（098-7）：** 别之河内，击赵将贲郝军朝歌，破之，所将卒得骑将二人，车马二百五十匹。"
+    },
     {
       "rev_id": "20260425-120240-fe4919",
       "timestamp": "2026-04-25T12:02:40Z",

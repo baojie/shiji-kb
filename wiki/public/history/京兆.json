@@ -1,8 +1,18 @@
 {
   "page": "京兆",
-  "latest_rev_id": "20260425-120014-096e96",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125159-86927d",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125159-86927d",
+      "timestamp": "2026-04-25T12:51:59Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120014-096e96",
+      "content_hash": "sha256:86927db358660ea420af22e098b790d59ba988cae56e68622c6e170a03476812",
+      "size": 532,
+      "content": "---\nid: 京兆\ntype: place\nsources: [酷吏列传]\nlabel: 京兆\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"郡\"]\nauto_generated: true\ncoords: [108.93719, 34.31799]\ncoords_name: \"京兆尹\"\ncoords_source: \"CHGIS 212275\"\n---\n# 京兆\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[122_酷吏列传]]：`43`\n\n**引文摘录：**\n\n> **出自 [[122_酷吏列传]]（122-43）：** 太史公曰：自郅都、杜周十人者，此皆以酷烈为声。"
+    },
     {
       "rev_id": "20260425-120014-096e96",
       "timestamp": "2026-04-25T12:00:14Z",

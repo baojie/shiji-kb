@@ -1,8 +1,18 @@
 {
   "page": "平舆",
-  "latest_rev_id": "20260425-120714-edbbd4",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125319-2df53f",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125319-2df53f",
+      "timestamp": "2026-04-25T12:53:19Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120714-edbbd4",
+      "content_hash": "sha256:2df53f07440d883623a9a8190efe5b815845999ab698385ead0f1d2e4551adb4",
+      "size": 514,
+      "content": "---\nid: 平舆\ntype: place\nsources: [秦始皇本纪]\nlabel: 平舆\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [114.56728, 33.1555]\ncoords_name: \"平舆县\"\ncoords_source: \"CHGIS hvd_83172\"\n---\n# 平舆\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[006_秦始皇本纪]]：`30.2`\n\n**引文摘录：**\n\n> **出自 [[006_秦始皇本纪]]（006-30.2）：** 取陈以南至平舆，虏荆王。"
+    },
     {
       "rev_id": "20260425-120714-edbbd4",
       "timestamp": "2026-04-25T12:07:14Z",

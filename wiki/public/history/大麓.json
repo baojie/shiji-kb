@@ -1,8 +1,18 @@
 {
   "page": "大麓",
-  "latest_rev_id": "20260425-120055-dc6bf0",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125245-ec183e",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125245-ec183e",
+      "timestamp": "2026-04-25T12:52:45Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120055-dc6bf0",
+      "content_hash": "sha256:ec183e4e68a0b82f5fe410e90fa8cc220c3ce4f4ea483e254347d8bd3321f0e9",
+      "size": 603,
+      "content": "---\nid: 大麓\ntype: place\nsources: [五帝本纪]\nlabel: 大麓\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\n---\n# 大麓\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[001_五帝本纪]]：`23`\n\n**引文摘录：**\n\n> **出自 [[001_五帝本纪]]（001-23）：** 舜入于大麓，烈风雷雨不迷，尧乃知舜之足授天下。尧老，使舜摄行天子政，巡狩。舜得举用事二十年，而尧使摄政。摄政八年而尧崩。三年丧毕，让丹硃，天下归舜。"
+    },
     {
       "rev_id": "20260425-120055-dc6bf0",
       "timestamp": "2026-04-25T12:00:55Z",

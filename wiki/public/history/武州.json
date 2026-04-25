@@ -1,8 +1,18 @@
 {
   "page": "武州",
-  "latest_rev_id": "20260425-120152-7f8a7a",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125414-33f79c",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125414-33f79c",
+      "timestamp": "2026-04-25T12:54:14Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120152-7f8a7a",
+      "content_hash": "sha256:33f79cae4b01ed8d22a68ba4dbd5d79e6be6b113f811316428b11e0cf633681a",
+      "size": 546,
+      "content": "---\nid: 武州\ntype: place\nsources: [韩长孺列传]\nlabel: 武州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\", \"关隘\"]\nauto_generated: true\ncoords: [113.29398, 39.19319]\ncoords_name: \"武州\"\ncoords_source: \"CHGIS 210049\"\n---\n# 武州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[108_韩长孺列传]]：`9`\n\n**引文摘录：**\n\n> **出自 [[108_韩长孺列传]]（108-9）：** 当是时，汉伏兵车骑材官二十馀万，匿马邑旁谷中。"
+    },
     {
       "rev_id": "20260425-120152-7f8a7a",
       "timestamp": "2026-04-25T12:01:52Z",

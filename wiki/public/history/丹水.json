@@ -1,8 +1,18 @@
 {
   "page": "丹水",
-  "latest_rev_id": "20260425-120457-98ef2b",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125147-034fee",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125147-034fee",
+      "timestamp": "2026-04-25T12:51:47Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120457-98ef2b",
+      "content_hash": "sha256:034fee8a850de0369eea13a256195009a2bb301d4a58bc9999892cd949ebb87b",
+      "size": 809,
+      "content": "---\nid: 丹水\ntype: place\nsources: [高祖本纪]\nlabel: 丹水\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\"]\nauto_generated: true\ncoords: [111.28481, 33.04944]\ncoords_name: \"丹水郡\"\ncoords_source: \"CHGIS 210968\"\n---\n# 丹水\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[008_高祖本纪]]：`21.13`\n- [[117_司马相如列传]]：`2.13`\n\n**引文摘录：**\n\n> **出自 [[008_高祖本纪]]（008-21.13）：** 至丹水，高武侯鰓、襄侯王陵降投降西陵。\n\n> **出自 [[117_司马相如列传]]（117-2.13）：** “左苍梧，右西极，丹水更其南，紫渊径其北；终始霸浐，出入泾渭；酆鄗潦潏，纡馀委蛇，经营乎其内。荡荡兮八川分流，相背而异态。"
+    },
     {
       "rev_id": "20260425-120457-98ef2b",
       "timestamp": "2026-04-25T12:04:57Z",

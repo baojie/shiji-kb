@@ -1,8 +1,18 @@
 {
   "page": "原都",
-  "latest_rev_id": "20260425-120646-6087ec",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125227-6bcd36",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125227-6bcd36",
+      "timestamp": "2026-04-25T12:52:27Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120646-6087ec",
+      "content_hash": "sha256:6bcd363cf50a49e96a2052550d5fe843c050dff966d679a5f613f196603040d2",
+      "size": 433,
+      "content": "---\nid: 原都\ntype: place\nsources: [孝景本纪]\nlabel: 原都\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\n---\n# 原都\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[011_孝景本纪]]：`14.3`\n\n**引文摘录：**\n\n> **出自 [[011_孝景本纪]]（011-14.3）：** 地动。衡山、原都雨雹，大者尺八寸。"
+    },
     {
       "rev_id": "20260425-120646-6087ec",
       "timestamp": "2026-04-25T12:06:46Z",

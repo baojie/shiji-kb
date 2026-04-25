@@ -1,8 +1,18 @@
 {
   "page": "幽州",
-  "latest_rev_id": "20260425-120118-938089",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125321-cfe1eb",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125321-cfe1eb",
+      "timestamp": "2026-04-25T12:53:21Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120118-938089",
+      "content_hash": "sha256:cfe1ebf9484963cdc5bc302fdcb060ab713d2fe176d850b8b970f731988f6f8a",
+      "size": 634,
+      "content": "---\nid: 幽州\ntype: place\nsources: [天官书]\nlabel: 幽州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"州\"]\nauto_generated: true\nimage: images/places/汉朝60BC.png\nimage_caption: \"汉朝疆域图（前60年），幽州刺史部地理位置\"\nimage_credit: \"Wikimedia Commons, CC BY-SA\"\ncoords: [116.3498, 39.91969]\ncoords_name: \"幽州\"\ncoords_source: \"CHGIS 210406\"\n---\n# 幽州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[027_天官书]]：`67`\n\n**引文摘录：**\n\n> **出自 [[027_天官书]]（027-67）：** 角、亢、氐，兗州。"
+    },
     {
       "rev_id": "20260425-120118-938089",
       "timestamp": "2026-04-25T12:01:18Z",

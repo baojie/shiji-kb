@@ -1,8 +1,18 @@
 {
   "page": "玄丘",
-  "latest_rev_id": "20260425-120806-c04f46",
-  "revision_count": 3,
+  "latest_rev_id": "20260425-125504-eef7a9",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260425-125504-eef7a9",
+      "timestamp": "2026-04-25T12:55:04Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120806-c04f46",
+      "content_hash": "sha256:eef7a9fbcdb60e8bd9d3ece73ad0caa7b1a7336e607fe5080f38c89be21f3f07",
+      "size": 332,
+      "content": "---\nid: 玄丘\ntype: place\nsources: [三代世表]\nlabel: 玄丘\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\n---\n# 玄丘\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[013_三代世表]]：`5.1`\n\n**引文摘录：**\n"
+    },
     {
       "rev_id": "20260425-120806-c04f46",
       "timestamp": "2026-04-25T12:08:06Z",

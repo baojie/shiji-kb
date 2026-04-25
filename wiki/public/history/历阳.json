@@ -1,8 +1,18 @@
 {
   "page": "历阳",
-  "latest_rev_id": "20260425-120042-ccb7f2",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125226-c84d5c",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125226-c84d5c",
+      "timestamp": "2026-04-25T12:52:26Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120042-ccb7f2",
+      "content_hash": "sha256:c84d5ce09854b36140e468f3a3323b089d3bb5c8fc4ed452cd755c1131518fe0",
+      "size": 918,
+      "content": "---\nid: 历阳\ntype: place\nsources: [樊郦滕灌列传]\nlabel: 历阳\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [118.36112, 31.71422]\ncoords_name: \"历阳郡\"\ncoords_source: \"CHGIS 33507\"\n---\n# 历阳\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[007_项羽本纪]]：`127.2`\n- [[095_樊郦滕灌列传]]：`27`\n\n**引文摘录：**\n\n> **出自 [[007_项羽本纪]]（007-127.2）：** 历阳侯范增曰：\n\n> **出自 [[095_樊郦滕灌列传]]（095-27）：** 项籍败垓下去也，婴以御史大夫受诏将车骑别追项籍至东城，之。所将卒五人共斩项籍，皆赐爵列侯。降左右司马各一人，卒万二千人，尽得其军将吏。下东城、历阳。渡江，破吴郡长吴下，得吴守，遂定吴、豫章、会稽郡。还定淮北，凡五十二县。"
+    },
     {
       "rev_id": "20260425-120042-ccb7f2",
       "timestamp": "2026-04-25T12:00:42Z",

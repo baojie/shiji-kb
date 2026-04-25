@@ -1,8 +1,18 @@
 {
   "page": "北岳",
-  "latest_rev_id": "20260425-120036-71544e",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125213-1e7c40",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125213-1e7c40",
+      "timestamp": "2026-04-25T12:52:13Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120036-71544e",
+      "content_hash": "sha256:1e7c4026c00f9473a19b5329a4a041f58ee65d8e32355120482285ed62970199",
+      "size": 418,
+      "content": "---\nid: 北岳\ntype: place\nsources: [封禅书]\nlabel: 北岳\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\n---\n# 北岳\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[028_封禅书]]：`2`\n\n**引文摘录：**\n\n> **出自 [[028_封禅书]]（028-2）：** 尚书曰，舜在璇玑玉衡，以齐七政。"
+    },
     {
       "rev_id": "20260425-120036-71544e",
       "timestamp": "2026-04-25T12:00:36Z",

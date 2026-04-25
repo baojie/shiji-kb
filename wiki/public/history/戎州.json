@@ -1,8 +1,18 @@
 {
   "page": "戎州",
-  "latest_rev_id": "20260425-120123-b26ca1",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125331-b50e17",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125331-b50e17",
+      "timestamp": "2026-04-25T12:53:31Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120123-b26ca1",
+      "content_hash": "sha256:b50e177eff52cbc0abeab8939bee63f11769c5e8b2a895e7486e6e5e10f459fa",
+      "size": 797,
+      "content": "---\nid: 戎州\ntype: place\nsources: [卫康叔世家]\nlabel: 戎州\ndescription: \"《史记》中出现 5 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [104.60756, 28.756]\ncoords_name: \"戎州\"\ncoords_source: \"CHGIS 212666\"\n---\n# 戎州\n\n## 史记引文\n\n《史记》中出现 **5** 次，见于以下章节：\n\n- [[014_十二诸侯年表]]：`r364`\n- [[037_卫康叔世家]]：`41`\n\n**引文摘录：**\n\n> **出自 [[014_十二诸侯年表]]（014-r364）：** 四十二 十七 三 三十四 十三 十一 三十九 三庄公辱戎州人，戎州人与赵简子攻庄公，出奔。 十三 二十三 十五 十八越败我。\n\n> **出自 [[037_卫康叔世家]]（037-41）：** 三年，庄公上城，见戎州。曰：“戎虏何为是？”"
+    },
     {
       "rev_id": "20260425-120123-b26ca1",
       "timestamp": "2026-04-25T12:01:23Z",

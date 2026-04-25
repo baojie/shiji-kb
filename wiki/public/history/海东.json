@@ -1,8 +1,18 @@
 {
   "page": "海东",
-  "latest_rev_id": "20260425-120212-c42417",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125442-d8e1f3",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125442-d8e1f3",
+      "timestamp": "2026-04-25T12:54:42Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120212-c42417",
+      "content_hash": "sha256:d8e1f30e370dbf342a7b77877091bc28dbabca5bef635950461a43f177a7d923",
+      "size": 595,
+      "content": "---\nid: 海东\ntype: place\nsources: [太史公自序]\nlabel: 海东\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"区域\"]\nauto_generated: true\ncoords: [102.77368, 24.18964]\ncoords_name: \"海东\"\ncoords_source: \"CHGIS hvd_158833\"\n---\n# 海东\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[130_太史公自序]]：`153`\n\n**引文摘录：**\n\n> **出自 [[130_太史公自序]]（130-153）：** 燕丹散乱辽间，满收其亡民，厥聚海东，以集真籓，葆塞为外臣。作朝鲜列传第五十五。"
+    },
     {
       "rev_id": "20260425-120212-c42417",
       "timestamp": "2026-04-25T12:02:12Z",

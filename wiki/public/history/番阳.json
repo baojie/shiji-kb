@@ -1,8 +1,18 @@
 {
   "page": "番阳",
-  "latest_rev_id": "20260425-120232-8b8af3",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125509-315bb4",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125509-315bb4",
+      "timestamp": "2026-04-25T12:55:09Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120232-8b8af3",
+      "content_hash": "sha256:315bb45b30457e1ad28a99434a38ca14b4b024b99f7d3c9ff9b472eec450421d",
+      "size": 637,
+      "content": "---\nid: 番阳\ntype: place\nsources: [黥布列传]\nlabel: 番阳\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [116.66383, 28.99417]\ncoords_name: \"番阳县\"\ncoords_source: \"CHGIS hvd_41162\"\n---\n# 番阳\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[091_黥布列传]]：`17`\n\n**引文摘录：**\n\n> **出自 [[091_黥布列传]]（091-17）：** 遂西，与上兵遇蕲西，会甀。布兵精甚，上乃壁庸城，望布军置陈如项籍军，上恶之。与布相望见，遥谓布曰：“何苦而反？”"
+    },
     {
       "rev_id": "20260425-120232-8b8af3",
       "timestamp": "2026-04-25T12:02:32Z",

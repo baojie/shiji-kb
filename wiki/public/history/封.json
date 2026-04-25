@@ -1,8 +1,18 @@
 {
   "page": "封",
-  "latest_rev_id": "20260425-120708-fbeacb",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125303-e8ec51",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125303-e8ec51",
+      "timestamp": "2026-04-25T12:53:03Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120708-fbeacb",
+      "content_hash": "sha256:e8ec51f0bab0001a85d4f837cf87904a1731faf71db1b41b5d6878b0527f6559",
+      "size": 497,
+      "content": "---\nid: 封\ntype: place\nsources: [孔子世家]\nlabel: 封\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\ncoords: [113.01798, 22.63457]\ncoords_name: \"封州\"\ncoords_source: \"CHGIS 34199\"\n---\n# 封\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[047_孔子世家]]：`7.2`\n\n**引文摘录：**\n\n> **出自 [[047_孔子世家]]（047-7.2）：** 吴伐越，堕会稽，得骨节专车。"
+    },
     {
       "rev_id": "20260425-120708-fbeacb",
       "timestamp": "2026-04-25T12:07:08Z",

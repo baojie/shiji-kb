@@ -1,8 +1,18 @@
 {
   "page": "成",
-  "latest_rev_id": "20260425-120721-b920c2",
-  "revision_count": 5,
+  "latest_rev_id": "20260425-125331-bb3165",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260425-125331-bb3165",
+      "timestamp": "2026-04-25T12:53:31Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120721-b920c2",
+      "content_hash": "sha256:bb3165bf843320828ecd1c7f3f1bcbb69bf642064686cc2e4fe1b29bd7911082",
+      "size": 598,
+      "content": "---\nid: 成\ntype: place\nsources: [孔子世家]\nlabel: 成\ndescription: \"《史记》中出现 5 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [105.2759, 33.97031]\ncoords_name: \"成州\"\ncoords_source: \"CHGIS 212655\"\n---\n# 成\n\n## 史记引文\n\n《史记》中出现 **5** 次，见于以下章节：\n\n- [[047_孔子世家]]：`10.1`\n\n**引文摘录：**\n\n[^life]: 生卒年推断参见[《成生卒年推断》](../../doc/lifespan_inference/西汉/成.md)（生：公元前 260 年 ~ 公元前 190 年·卒：公元前 175 年·置信度：低）。\n"
+    },
     {
       "rev_id": "20260425-120721-b920c2",
       "timestamp": "2026-04-25T12:07:21Z",

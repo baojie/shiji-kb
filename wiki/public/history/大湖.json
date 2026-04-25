@@ -1,8 +1,18 @@
 {
   "page": "大湖",
-  "latest_rev_id": "20260425-120657-5abcd0",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125244-7a71ca",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125244-7a71ca",
+      "timestamp": "2026-04-25T12:52:44Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120657-5abcd0",
+      "content_hash": "sha256:7a71ca589094def16e0bab78388df1c26e200672a1e2a21efe013953c6680ca2",
+      "size": 671,
+      "content": "---\nid: 大湖\ntype: place\nsources: [司马相如列传]\nlabel: 大湖\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\"]\nauto_generated: true\ncoords: [119.09444, 26.36375]\ncoords_name: \"大湖\"\ncoords_source: \"CHGIS hvd_16145\"\n---\n# 大湖\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[117_司马相如列传]]：`2.13`\n\n**引文摘录：**\n\n> **出自 [[117_司马相如列传]]（117-2.13）：** “左苍梧，右西极，丹水更其南，紫渊径其北；终始霸浐，出入泾渭；酆鄗潦潏，纡馀委蛇，经营乎其内。荡荡兮八川分流，相背而异态。"
+    },
     {
       "rev_id": "20260425-120657-5abcd0",
       "timestamp": "2026-04-25T12:06:57Z",

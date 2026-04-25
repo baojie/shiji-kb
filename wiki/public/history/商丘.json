@@ -1,8 +1,18 @@
 {
   "page": "商丘",
-  "latest_rev_id": "20260425-120048-009748",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125234-3b5954",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125234-3b5954",
+      "timestamp": "2026-04-25T12:52:34Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120048-009748",
+      "content_hash": "sha256:3b5954d97d4b870bb149f80c8d4b3f61514b3dc9293835db147253a378e15762",
+      "size": 677,
+      "content": "---\nid: 商丘\ntype: place\nsources: [郑世家]\nlabel: 商丘\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\nimage: images/places/商朝都城.jpg\nimage_caption: \"商朝都城遗址，商丘（商地）为商朝早期都城区域\"\nimage_credit: \"Wikimedia Commons, CC BY-SA\"\ncoords: [115.64607, 34.44766]\ncoords_name: \"商丘县\"\ncoords_source: \"CHGIS hvd_82075\"\n---\n# 商丘\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[042_郑世家]]：`35`\n\n**引文摘录：**\n\n> **出自 [[042_郑世家]]（042-35）：** 二十五年，郑使子产於晋，问平公疾。"
+    },
     {
       "rev_id": "20260425-120048-009748",
       "timestamp": "2026-04-25T12:00:48Z",

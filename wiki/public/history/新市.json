@@ -1,8 +1,18 @@
 {
   "page": "新市",
-  "latest_rev_id": "20260425-120131-4f2366",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125343-cd7535",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125343-cd7535",
+      "timestamp": "2026-04-25T12:53:43Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120131-4f2366",
+      "content_hash": "sha256:cd7535b042ba27f6e3233605cd8933ec1dc0f3204b19673f61015a052ae45c07",
+      "size": 797,
+      "content": "---\nid: 新市\ntype: place\nsources: [惠景间侯者年表]\nlabel: 新市\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [114.68176, 38.2688]\ncoords_name: \"新市县\"\ncoords_source: \"CHGIS hvd_87542\"\n---\n# 新市\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[005_秦本纪]]：`62.7`\n- [[019_惠景间侯者年表]]：`4`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-62.7）：** 八年，使将军羋戎攻楚，取新市。齐使章子，魏使公孙喜，韩使暴鸢共攻楚方城，取唐眛。赵破中山，其君亡，竟死齐。魏公子劲、韩公子长为诸侯。\n\n> **出自 [[019_惠景间侯者年表]]（019-4）：** 惠景之际，天下已平。"
+    },
     {
       "rev_id": "20260425-120131-4f2366",
       "timestamp": "2026-04-25T12:01:31Z",

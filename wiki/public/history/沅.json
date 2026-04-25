@@ -1,8 +1,18 @@
 {
   "page": "沅",
-  "latest_rev_id": "20260425-120159-285e69",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125425-eba02f",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125425-eba02f",
+      "timestamp": "2026-04-25T12:54:25Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120159-285e69",
+      "content_hash": "sha256:eba02fa6203215725a2db1f986e660c685191d4ed0e0d0807c7abeb68c6a282f",
+      "size": 965,
+      "content": "---\nid: 沅\ntype: place\nsources: [太史公自序]\nlabel: 沅\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\"]\nauto_generated: true\ncoords: [109.81185, 27.19513]\ncoords_name: \"沅州\"\ncoords_source: \"CHGIS 32912\"\n---\n# 沅\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[084_屈原贾生列传]]：`8.4`\n- [[130_太史公自序]]：`19`\n\n**引文摘录：**\n\n> **出自 [[084_屈原贾生列传]]（084-8.4）：** 乱曰：浩浩沅、湘兮，分流汨兮。\n\n> **出自 [[130_太史公自序]]（130-19）：** 迁生龙门，耕牧河山之阳。年十岁则诵古文。二十而南游江、淮，上会稽，探禹穴，闚九疑，浮於沅、湘；北涉汶、泗，讲业齐、鲁之都，观孔子之遗风，乡射邹、峄；戹困鄱、薛、彭城，过梁、楚以归。於是迁仕为郎中，奉使西征巴、蜀以南，南略邛、笮、昆明，还报命。"
+    },
     {
       "rev_id": "20260425-120159-285e69",
       "timestamp": "2026-04-25T12:01:59Z",

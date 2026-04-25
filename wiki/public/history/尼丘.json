@@ -1,8 +1,18 @@
 {
   "page": "尼丘",
-  "latest_rev_id": "20260425-120110-f815cc",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125305-8fede0",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125305-8fede0",
+      "timestamp": "2026-04-25T12:53:05Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120110-f815cc",
+      "content_hash": "sha256:8fede05ddad55184d7c4a459b915dfed37a7778889a4e33f7033f744c099a994",
+      "size": 419,
+      "content": "---\nid: 尼丘\ntype: place\nsources: [孔子世家]\nlabel: 尼丘\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\n---\n# 尼丘\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[047_孔子世家]]：`1.1`、`38`\n\n**引文摘录：**\n\n> **出自 [[047_孔子世家]]（047-38）：** 孔子之胄，出于商国。"
+    },
     {
       "rev_id": "20260425-120110-f815cc",
       "timestamp": "2026-04-25T12:01:10Z",

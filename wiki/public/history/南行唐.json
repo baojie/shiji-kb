@@ -1,8 +1,18 @@
 {
   "page": "南行唐",
-  "latest_rev_id": "20260425-120040-69128f",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125223-394453",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125223-394453",
+      "timestamp": "2026-04-25T12:52:23Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120040-69128f",
+      "content_hash": "sha256:394453ef6259c24d3f065722c82d777d26fc3624d8d9eb882d1072399886ae6f",
+      "size": 496,
+      "content": "---\nid: 南行唐\ntype: place\nsources: [赵世家]\nlabel: 南行唐\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [114.52825, 38.55172]\ncoords_name: \"南行唐县\"\ncoords_source: \"CHGIS hvd_87242\"\n---\n# 南行唐\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[043_赵世家]]：`80`\n\n**引文摘录：**\n\n> **出自 [[043_赵世家]]（043-80）：** 五年，与燕鄚、易。"
+    },
     {
       "rev_id": "20260425-120040-69128f",
       "timestamp": "2026-04-25T12:00:40Z",

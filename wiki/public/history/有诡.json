@@ -1,8 +1,18 @@
 {
   "page": "有诡",
-  "latest_rev_id": "20260425-120732-dd9a92",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125352-6401d1",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125352-6401d1",
+      "timestamp": "2026-04-25T12:53:52Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120732-dd9a92",
+      "content_hash": "sha256:6401d1021e04b6e25278b3edef1db2a8cde9e543946e1c7989db860fb02e9e29",
+      "size": 457,
+      "content": "---\nid: 有诡\ntype: place\nsources: [秦始皇本纪]\nlabel: 有诡\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\n---\n# 有诡\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[006_秦始皇本纪]]：`4.4`、`5.1`\n\n**引文摘录：**\n\n> **出自 [[006_秦始皇本纪]]（006-4.4）：** 十月，将军蒙骜攻魏氏篸、有诡。岁大饥。"
+    },
     {
       "rev_id": "20260425-120732-dd9a92",
       "timestamp": "2026-04-25T12:07:32Z",

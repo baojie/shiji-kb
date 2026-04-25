@@ -1,8 +1,18 @@
 {
   "page": "泰卷",
-  "latest_rev_id": "20260425-120205-3ef80e",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125436-251878",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125436-251878",
+      "timestamp": "2026-04-25T12:54:36Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120205-3ef80e",
+      "content_hash": "sha256:251878ff6ea31e5d18d2615dfac7cd3d8c182c316ecd47e3f5772604c96ee859",
+      "size": 402,
+      "content": "---\nid: 泰卷\ntype: place\nsources: [殷本纪]\nlabel: 泰卷\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\n---\n# 泰卷\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[003_殷本纪]]：`35`\n\n**引文摘录：**\n\n> **出自 [[003_殷本纪]]（003-35）：** 简狄吞乙，是为殷祖。"
+    },
     {
       "rev_id": "20260425-120205-3ef80e",
       "timestamp": "2026-04-25T12:02:05Z",

@@ -1,8 +1,18 @@
 {
   "page": "少阳",
-  "latest_rev_id": "20260425-120710-ad1544",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125305-3742c6",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125305-3742c6",
+      "timestamp": "2026-04-25T12:53:05Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120710-ad1544",
+      "content_hash": "sha256:3742c6c6dd683969022ec1b0754a593be32745406cbb40af369033c19bcdbd9e",
+      "size": 454,
+      "content": "---\nid: 少阳\ntype: place\nsources: [司马相如列传]\nlabel: 少阳\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\n---\n# 少阳\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[117_司马相如列传]]：`12.2`\n\n**引文摘录：**\n\n> **出自 [[117_司马相如列传]]（117-12.2）：** 邪绝少阳而登太阴兮，与真人乎相求。"
+    },
     {
       "rev_id": "20260425-120710-ad1544",
       "timestamp": "2026-04-25T12:07:10Z",

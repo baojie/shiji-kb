@@ -1,8 +1,18 @@
 {
   "page": "吴城",
-  "latest_rev_id": "20260425-120047-38f52d",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125230-ab2ab9",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125230-ab2ab9",
+      "timestamp": "2026-04-25T12:52:30Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120047-38f52d",
+      "content_hash": "sha256:ab2ab9866f5631f5167ab26c50cffde37107fdc55edba19e0ecbcf168c30c33a",
+      "size": 673,
+      "content": "---\nid: 吴城\ntype: place\nsources: [秦本纪]\nlabel: 吴城\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [111.46727, 37.42912]\ncoords_name: \"吴城\"\ncoords_source: \"CHGIS hvd_146017\"\n---\n# 吴城\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[005_秦本纪]]：`65`\n- [[007_项羽本纪]]：`189`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-65）：** 五十三年，天下来宾。魏後，秦使摎伐魏，取吴城。韩王入朝，魏委国听令。\n\n> **出自 [[007_项羽本纪]]（007-189）：** 亡秦鹿走，伪楚狐鸣。"
+    },
     {
       "rev_id": "20260425-120047-38f52d",
       "timestamp": "2026-04-25T12:00:47Z",

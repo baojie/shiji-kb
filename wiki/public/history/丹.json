@@ -1,8 +1,18 @@
 {
   "page": "丹",
-  "latest_rev_id": "20260425-120457-1bd983",
-  "revision_count": 3,
+  "latest_rev_id": "20260425-125147-be64bd",
+  "revision_count": 4,
   "revisions": [
+    {
+      "rev_id": "20260425-125147-be64bd",
+      "timestamp": "2026-04-25T12:51:47Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120457-1bd983",
+      "content_hash": "sha256:be64bde9af5088ba9f51cac4d1154f248a0f0420895360f1525b1bb6a3e33eeb",
+      "size": 630,
+      "content": "---\nid: 丹\ntype: place\nsources: [屈原贾生列传]\nlabel: 丹\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\"]\nauto_generated: true\ncoords: [110.20954, 36.15466]\ncoords_name: \"丹州\"\ncoords_source: \"CHGIS 212652\"\n---\n# 丹\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[084_屈原贾生列传]]：`3.1`\n\n**引文摘录：**\n\n[^life]: 生卒年推断参见[《丹生卒年推断》](../../doc/lifespan_inference/秦/丹.md)（生：公元前 312 年 ~ 公元前 242 年·卒：公元前 227 年 ~ 公元前 212 年·置信度：低）。\n"
+    },
     {
       "rev_id": "20260425-120457-1bd983",
       "timestamp": "2026-04-25T12:04:57Z",

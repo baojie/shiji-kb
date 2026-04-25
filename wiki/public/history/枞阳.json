@@ -1,8 +1,18 @@
 {
   "page": "枞阳",
-  "latest_rev_id": "20260425-120138-f9ff52",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125358-d6a877",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125358-d6a877",
+      "timestamp": "2026-04-25T12:53:58Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120138-f9ff52",
+      "content_hash": "sha256:d6a87741d9cf661aa0953ac822367aa8d6b50462ccdc5416ef35e797530715bb",
+      "size": 809,
+      "content": "---\nid: 枞阳\ntype: place\nsources: [封禅书]\nlabel: 枞阳\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [117.21059, 30.69371]\ncoords_name: \"枞阳县\"\ncoords_source: \"CHGIS hvd_43021\"\n---\n# 枞阳\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[012_孝武本纪]]：`42.3`\n- [[028_封禅书]]：`96`\n\n**引文摘录：**\n\n> **出自 [[012_孝武本纪]]（012-42.3）：** 浮江，自寻阳出枞阳，过彭蠡，祀其名山川。\n\n> **出自 [[028_封禅书]]（028-96）：** 其明年冬，上巡南郡，至江陵而东。登礼灊之天柱山，号曰南岳。浮江，自寻阳出枞阳，过彭蠡，礼其名山川。北至琅邪，并海上。四月中，至奉高脩封焉。"
+    },
     {
       "rev_id": "20260425-120138-f9ff52",
       "timestamp": "2026-04-25T12:01:38Z",

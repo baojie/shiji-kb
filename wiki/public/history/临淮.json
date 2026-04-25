@@ -1,8 +1,18 @@
 {
   "page": "临淮",
-  "latest_rev_id": "20260425-120009-f3f897",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125146-019bea",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125146-019bea",
+      "timestamp": "2026-04-25T12:51:46Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120009-f3f897",
+      "content_hash": "sha256:019beaf5878735905d3a86c2adaac1e65e3ae14ab8e9f3a1e2ebe219aed01368",
+      "size": 864,
+      "content": "---\nid: 临淮\ntype: place\nsources: [游侠列传]\nlabel: 临淮\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"郡\"]\nauto_generated: true\ncoords: [118.24322, 33.29722]\ncoords_name: \"临淮郡\"\ncoords_source: \"CHGIS 33430\"\n---\n# 临淮\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[124_游侠列传]]：`15`\n\n**引文摘录：**\n\n> **出自 [[124_游侠列传]]（124-15）：** 自是之后，为侠者极众，敖而无足数者。然关中长安樊仲子，槐里赵王孙，长陵高公子，西河郭公仲，太原卤公孺，临淮儿长卿，东阳田君孺，虽为侠而逡逡有退让君子之风。至若北道姚氏，西道诸杜，南道仇景，东道赵他、羽公子，南阳赵调之徒，此盗跖居民间者耳，曷足道哉！此乃乡者朱家之羞也。"
+    },
     {
       "rev_id": "20260425-120009-f3f897",
       "timestamp": "2026-04-25T12:00:09Z",

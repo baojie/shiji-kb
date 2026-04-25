@@ -14,7 +14,7 @@ export function splitFrontmatter(text) {
       return { front, body: text.slice(m[0].length) };
     } catch (e) {
       console.warn('[frontmatter] 解析失败:', e);
-      return { front: {}, body: text };
+      return { front: {}, body: text.slice(m[0].length) };
     }
   }
   // 扩展格式: preamble 字段 + ---...--- 主块，合并后主块优先
@@ -26,7 +26,7 @@ export function splitFrontmatter(text) {
       return { front: { ...preamble, ...main }, body: text.slice(m2[0].length) };
     } catch (e) {
       console.warn('[frontmatter] 解析失败 (extended):', e);
-      return { front: {}, body: text };
+      return { front: {}, body: text.slice(m2[0].length) };
     }
   }
   return { front: {}, body: text };

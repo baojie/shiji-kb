@@ -1,8 +1,18 @@
 {
   "page": "江乘",
-  "latest_rev_id": "20260425-120746-d640d3",
-  "revision_count": 4,
+  "latest_rev_id": "20260425-125420-2efd63",
+  "revision_count": 5,
   "revisions": [
+    {
+      "rev_id": "20260425-125420-2efd63",
+      "timestamp": "2026-04-25T12:54:20Z",
+      "author": "butler",
+      "summary": "H4: 添加 description 字段（首段推导）",
+      "parent_rev": "20260425-120746-d640d3",
+      "content_hash": "sha256:2efd6323098e85f45b29f2dee297f1ee20ebe587120300f79c33a82f45e7ea3a",
+      "size": 542,
+      "content": "---\nid: 江乘\ntype: place\nsources: [秦始皇本纪]\nlabel: 江乘\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\", \"县\"]\nauto_generated: true\ncoords: [119.0522, 32.17656]\ncoords_name: \"江乘县\"\ncoords_source: \"CHGIS hvd_40526\"\n---\n# 江乘\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[006_秦始皇本纪]]：`78.2`\n\n**引文摘录：**\n\n> **出自 [[006_秦始皇本纪]]（006-78.2）：** 还过吴，从江乘渡。并海上，北至琅邪。"
+    },
     {
       "rev_id": "20260425-120746-d640d3",
       "timestamp": "2026-04-25T12:07:46Z",
