@@ -301,7 +301,7 @@ function renderResult(rows) {
 
       html += `<li>
         <span class="rc-time">${esc(time)}</span>
-        <a class="rc-page" href="#" onclick="return false">${esc(r.page)}</a>
+        <a class="rc-page" href="/#${encodeURIComponent(r.page)}">${esc(r.page)}</a>
         ${sizeHtml}
         <span class="rc-author">${esc(r.author)}</span>
         <span class="rc-action">${esc(r.action)}</span>

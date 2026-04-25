@@ -5,8 +5,7 @@
       "entry": "plugins/footnote/index.js",
       "name": "脚注",
       "version": "1.0.0",
-      "description": "渲染 [^id] 内联引用与 [^id]: 定义，用于生卒年推断等参考文献",
-      "settings_key": "footnote"
+      "description": "渲染 [^id] 内联引用与 [^id]: 定义，用于生卒年推断等参考文献"
     },
     {
       "id": "math",
@@ -29,20 +28,6 @@
       "name": "语义块",
       "version": "1.0.0",
       "description": "处理页面中的 ::: infobox 和 ::: meta 语义块；支持 inline infobox 折叠/展开与元数据读取"
-    },
-    {
-      "id": "backlinks",
-      "entry": "plugins/backlinks/index.js",
-      "name": "反向引用",
-      "version": "1.0.0",
-      "description": "在页面底部显示哪些页面引用了本页，索引由 scripts/build_backlinks.py 生成"
-    },
-    {
-      "id": "place-map",
-      "entry": "plugins/place-map/index.js",
-      "name": "地名地图",
-      "version": "1.0.0",
-      "description": "在地名/邦国页面的 sidebar 底部显示 Leaflet 地图，坐标来自 CHGIS（coords 字段）"
     }
   ]
 }
