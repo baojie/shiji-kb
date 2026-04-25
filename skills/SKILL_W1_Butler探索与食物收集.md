@@ -58,11 +58,23 @@ description: Butler agent 的探索与食物收集。定义 6 大食物源 (kg /
 
 ---
 
-## 二、候选队列 (queue.md)
+## 二、三队列体系
 
-markdown 格式, 人和 butler 共读。
+Butler 每轮读取三个独立队列，共同决定本轮任务：
 
-### 2.1 结构
+| 队列文件 | 维护者 | 任务类型 | 优先级标记 |
+|---|---|---|---|
+| `queue.md` | W1（本 skill） | 内容创建/丰富 | P0/P1/P2 |
+| `housekeeping_queue.md` | W10 | 内务整理 H1-H19 | P0/P1/P2 |
+| `insight_queue.md` | W14 | 洞察问题 I 类 | 待调查/已处理 |
+
+**每轮选取顺序**（完整算法见 W0 §六"三队列选取算法"）：
+- **普通轮**（`round % 11 ≠ 0`）：只看 queue.md 和 housekeeping_queue.md，跳过 insight_queue
+- **洞察轮**（`round % 11 == 0`）：在 P0 之后、P1 之前插入 insight_queue 最老待调查条目
+- P0 永远最优先，不受洞察轮/普通轮区分影响
+- 全部为空 → W1 explore / W10 扫描（洞察轮还可触发 W14 生成），本轮不空转
+
+### 2.1 queue.md 结构（内容任务）
 
 ```markdown
 # Butler 候选队列
@@ -81,15 +93,15 @@ markdown 格式, 人和 butler 共读。
 
 ### 2.2 入队规则
 
-- 每轮 invocation 可 **discover 1–3 条新候选** 加入队列
-- 但**本轮只执行 1 条**, 队列永远在增长
+- 每轮 invocation 可 **discover 1–3 条新候选** 加入 queue.md
+- 但**本轮只执行 1 条**，队列永远在增长
 - P0 = 已知入口缺失 / broken link 明显 / 主页代表人物缺内容
 - P1 = 有现成食物未利用
 - P2 = 全局扫描发现的不一致
 
 ### 2.3 去重
 
-同名候选 (同 target 页 + 同动作) 只入一次。如重复出现, W5 反思需要看是不是前置条件常年不满足。
+同名候选（同 target 页 + 同动作）只入一次。如重复出现，W5 反思需要看是不是前置条件常年不满足。
 
 ---
 
@@ -184,19 +196,24 @@ markdown 格式, 人和 butler 共读。
 
 ## 七、交给 W2
 
-本 skill 的输出 = 一个具体候选条目, 格式：
+本 skill 的输出 = 一个具体候选条目，格式：
 
 ```json
 {
   "target": "wiki/public/pages/萧何.md",
   "action": "create-stub",
   "source": "kg/entity_aliases.json",
+  "queue": "queue.md",
   "mode": "explore",
   "rationale": "萧何在 kg top-20 (refs=75), 无 wiki 页"
 }
 ```
 
-W2 按此执行。
+`queue` 字段标明来源队列（`queue.md` / `housekeeping_queue.md` / `insight_queue.md`），便于 actions.jsonl 追溯。W2 按此执行。
+
+**若任务来自 housekeeping_queue**：W2 执行前额外检查 W10 对应 H 类型的前置条件（W10 §各类型详规范）。
+
+**若任务来自 insight_queue**：W2 执行前先确认洞察置信度（high/medium），low 置信度跳过不执行，改记 dismissed。
 
 ---
 

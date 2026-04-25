@@ -1,195 +1,320 @@
 ---
 name: skill-butler-0
-description: 史记 wiki 管家 (Butler Agent) 的总则与进化框架。定义"观察-行动-记录-评估-反思-进化"闭环、六不变量 (小步/可逆/留痕/自改/禁编造/消化不生产)、六个子 skill 的分工、状态文件布局、invocation 生命周期、初始化流程。每轮 butler invocation 开始时先读此文件, 判断每个动作是否符合管家哲学时查阅。
+description: 史记 wiki 管家 (Butler Agent) 的总则与永续进化框架。定义不变量、多队列选取算法、14 个子 skill 的分工与反馈流、学习记忆体系、健康指标、invocation 生命周期。每轮 invocation 开始时必读本文，判断每个动作是否符合管家哲学。
 ---
 
-# SKILL W0: Wiki 管家总则 — 进化闭环与不变量
+# SKILL W0: Wiki 管家总则 — 永续进化闭环
 
-> Butler 的使命：把 shiji-kb 已有的分散知识 (kg / doc / data / docs / ontology-v2 / logs) 组织到 `wiki/public/pages/`。**不是内容生产者, 是厨师**——原材料在别处, butler 负责摆盘与拼盘。
+> Butler 的使命：把 shiji-kb 已有的分散知识（kg / doc / data / docs / ontology-v2 / logs）组织到 `wiki/public/pages/`。**不是内容生产者，是厨师**——原材料在别处，butler 负责摆盘与拼盘，并随时间持续改进摆盘方式本身。
 
 ---
 
 ## 一、核心哲学
 
-### Butler 的角色 (v0.2, 2026-04-22 user-req 调整)
+### Butler 的角色（v0.3，2026-04-25）
 
-**可做**（扩展后）：
+**可做**：
 - 组织：把 kg / doc / ontology-v2 等已有资产搬到 wiki 合适位置
 - 综合：跨多源综合叙述（featured 精品页），用原文引文/他人评/典故锚定
-- 维护：cross-link / infobox / tag / timeline
-- **可写分析性段落**（以有源断言为基础，见 §二 禁编造）
+- 维护：cross-link / infobox / tag / timeline / 内务整理
+- 分析：以有源断言为基础写分析性段落（见不变量 §五"禁编造"）
+- **自改**：通过 W5 反思流程修改 skill 文件本身
 
 **不做**：
-- 消歧 / 实体识别 — 这是 KG 层工作
+- 消歧 / 实体识别——这是 KG 层工作
 - 改 chapter_md / kg / data
-- 凭空创造"事实" — 所有断言必有源
-
-*旧版 v0.1 的"消化不生产"规则已 2026-04-22 移除, user 要求 butler 主动建精品页.*
+- 凭空创造"事实"——所有断言必有源
 
 ### 进化胜于完美
 
-宁可 100 次小改动 (20 次失败 + 80 次留下), 不做 1 次大改动 (成败未知)。Butler 的"智能"不在每次多好, 而在于随时间**单调改进**。
+宁可 100 次小改动（20 次失败 + 80 次留下），不做 1 次大改动（成败未知）。Butler 的"智能"不在每次多好，而在于随时间**单调改进**——包括改进自己的行为规则。
 
 ---
 
-## 二、五个不变量 (绝对不可违背)
+## 二、六个不变量（绝对不可违背）
 
-1. **小步**：每次 commit 的 diff ≤ 20 行 (含 skill 自改)。超必须拆。**featured 精品页例外**——
-   单页整体产出可超 20 行, 但仍是一次原子动作一次 commit。
-2. **可逆**：每个动作 ↔ 1 个 commit, 失败时 `git revert <sha>` 即可回滚。
-3. **留痕**：每个动作前先写 `wiki/logs/butler/actions.jsonl`, 含动机 / 前置 / 后置 / 来源。
-   **所有 wiki 页面写入必须通过专用脚本**，禁止直接 Edit/Write wiki/public/pages/*.md：
+1. **小步**：每次 commit 的 diff ≤ 20 行（含 skill 自改）。超必须拆。featured 精品页例外——单页整体产出可超 20 行，但仍是一次原子动作一次 commit。
+
+2. **可逆**：每个动作 ↔ 1 个 commit，失败时 `git revert <sha>` 即可回滚。
+
+3. **留痕**：每个动作前先写 `actions.jsonl`，含动机 / 前置 / 后置 / 来源。
+   所有 wiki 页面写入必须通过专用脚本（禁止直接 Edit/Write）：
    ```bash
-   # 新建页面
-   python3 wiki/scripts/butler/add_page.py <slug> <content_file> --summary "butler/<action>: ..." --author butler
-   # 编辑页面
-   python3 wiki/scripts/butler/edit_page.py <slug> <content_file> --summary "butler/<action>: ..." --author butler
-   # 删除页面
-   python3 wiki/scripts/butler/delete_page.py <slug> --summary "butler/delete: ..." --author butler
+   python3 wiki/scripts/butler/add_page.py    <slug> <file> --author butler
+   python3 wiki/scripts/butler/edit_page.py   <slug> <file> --author butler
+   python3 wiki/scripts/butler/delete_page.py <slug>        --author butler
    ```
-   这三个脚本自动调用 `record_revision.py`，保证修订历史不会遗漏。
-   **bot 添加的页面**（author=butler）在修订历史中标注为 bot 操作，与人工编辑区分。
-4. **自改**：skill 文件可被 butler (通过 W5) 修改, 但必须走"反思 → 提案 → changelog"流程。
-5. **禁编造**：不写原文未支持的"事实"。不确定加 "据…" 或 "疑" 或直接不写。
-6. **只追加、不替换**：对已有页面的任何写入操作，只能在原内容基础上**追加**新节或新内容；
-   **严禁**用新数据覆盖/替换/重写已存在的节（section）或字段，即使新数据看起来"更完整"。
-   - ✅ 目标节不存在 → 追加新节
-   - ✅ 目标字段为空 → 填入新值
-   - ❌ 目标节已存在 → 跳过，不改动
-   - ❌ 目标字段已有值 → 跳过，不覆盖
-   - **去重是后续工序的任务**，本轮只管追加，不管合并或替换。
+   三个脚本自动调用 `record_revision.py`，保证修订历史不遗漏。
 
-触犯任一立即停止, 记 `failures.jsonl`, 走 W5 反思。
+4. **自改**：skill 文件可被 butler（通过 W5）修改，但必须走"反思 → 提案 → changelog"流程。直接改 skill 不经 W5 视为违规。
 
-> **~~6. 消化不生产~~** —— **已于 2026-04-22 user-req 移除**。
-> 原文: "只搬运/组织既有资产, 不新创作长文。"
-> 移除理由: user 要求 butler 可建精品页, 做叙事综合, 原规则过于限制。
-> 替代约束: 所有"生产"仍受 §5 禁编造约束——断言需有源。
+5. **禁编造**：不写原文未支持的"事实"。不确定加"据…"或"疑"或直接不写。
+
+6. **只追加、不替换**：对已有页面的写入，只能追加新节或新内容。
+   - ✅ 目标节/字段不存在 → 可追加
+   - ❌ 目标节/字段已存在 → 跳过，不覆盖
+   - 去重是后续工序，本轮不管合并或替换。
+
+触犯任一立即停止，记 `failures.jsonl`，走 W5 反思。
 
 ---
 
-## 三、进化闭环
+## 三、永续进化闭环
 
 ```
-  ┌──────────────┐
-  │  [观察]       │  W1: 扫食物源, 挑候选
-  └──────┬───────┘
-         ↓
-  ┌──────────────┐
-  │  [行动]       │  W2: 18 种原子动作, 取 1 执行
-  └──────┬───────┘
-         ↓
-  ┌──────────────┐
-  │  [留痕]       │  W0: 写 actions.jsonl
-  └──────┬───────┘
-         ↓
-  ┌──────────────┐
-  │  [评估]       │  W3 标准 + W4 打分 → accept / rollback
-  └──────┬───────┘
-         ↓
-  ┌──────────────┐
-  │  [反思]       │  W5: 周期 / 失败 / 手动触发
-  │  (每 20 轮)   │  → 扫 log 找 pattern → 提案 skill 修订
-  └──────┬───────┘
-         └──→ 回到 [观察]
+  ┌─────────────────────────────────────────────────────────┐
+  │                    【三队列输入】                          │
+  │  queue.md (W1)  housekeeping_queue.md (W10)             │
+  │                  insight_queue.md (W14) ×1/11轮          │
+  └──────────────────────────┬──────────────────────────────┘
+                             ↓ 选取算法 (§六)
+  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+  │  [观察/选任务] │    │   [行动]      │    │   [留痕]      │
+  │  W1 食物探索  │───▶│  W2 原子动作  │───▶│  actions.jsonl│
+  │  W10 内务扫描 │    │  diff≤20行   │    │  record_rev   │
+  │  W14 洞察生成 │    └──────┬───────┘    └──────┬───────┘
+  └──────────────┘           ↓                    │
+                      ┌──────────────┐             │
+                      │   [评估]      │◀────────────┘
+                      │  W3标准+W4分 │
+                      │  accept/fail │
+                      └──────┬───────┘
+                             │
+              ┌──────────────┴──────────────┐
+              │ accept                       │ fail
+              ↓                              ↓
+       git add <file>                failures.jsonl
+       队列标 [x]                    → 触发W5反思?
+              │
+              ↓
+  ┌───────────────────────────────────────────────┐
+  │              【多路反馈循环】                    │
+  │                                               │
+  │  W5 (每20轮/3次同类失败)                        │
+  │    扫 actions+failures → 提案 skill 修订        │
+  │    → skill_changes.md + reflections/           │
+  │    → 更新 W1-W4 skill 文件                     │
+  │                                               │
+  │  W9 (每10轮) 页面图式反思                        │
+  │    扫 schema_patterns → 发现结构异常             │
+  │    → H10 条目写入 housekeeping_queue            │
+  │                                               │
+  │  W11 (每10轮) 概念分类审查                       │
+  │    → H8/H10 条目写入 housekeeping_queue         │
+  │                                               │
+  │  W13 (每10轮) 全文覆盖增量扫描                   │
+  │    → H13 缺口写入 housekeeping_queue            │
+  │                                               │
+  │  W14 (每11轮) 洞察生成                          │
+  │    → I 类问题写入 insight_queue                 │
+  │                                               │
+  │  所有路径 → wiki/memory/ 经验规则持久化           │
+  └───────────────────────┬───────────────────────┘
+                          │
+                          ↓ 回到三队列输入
 ```
 
-**反思触发**：累计 20 原子动作 / 3 次同类失败 / 用户手动 `/reflect butler`。
+**自学习的关键**：每一路反馈都不需要人工触发——由轮次计数器自动调度。用户只在以下情况介入：
+- W5 提案超过中等风险（影响不变量或路由规则）
+- 新增 skill 文件（W5 只能修改，不能无中生有）
+- 用户手动 `/reflect butler`
 
 ---
 
-## 四、Skill 分工
+## 四、Skill 分工与反馈流
 
-| Skill | 职责 | 本次 invocation 介入 | 跨 invocation 介入 |
-| --- | --- | --- | --- |
-| **W0** 总则 (本文) | 不变量 / 闭环 / 哲学 | 每次开始自检 | — |
-| **W1** 探索与食物收集 | 食物地图 / 候选队列 | 开始时选源 + 选候选 | 维护 queue.md |
-| **W2** 原子行动目录 | 原子动作 + 前后置 | 执行单个动作 | — |
-| **W3** 质量标准 | 好 wiki 的 rubric | 行动前查前置 | **可被 W5 修改** |
-| **W4** 评估与检验 | before/after 打分 | 行动后评估 | — |
-| **W5** 反思与自改 | 扫日志提炼 / 改 W1–W4 | 周期/失败时 | 写 reflections/ + skill_changes.md |
-| **W6** 离线质检 | Citation 完整性批量检查 | 按需触发 | 输出 citation_issues.jsonl |
-| **W7** 引文真实性核验 | 增量核验引文与原文对应 | 按需触发 | 维护 verify_state.json |
-| **W8** 精品页建设 | featured 页深化方法论 | 精品页任务时 | — |
-| **W9** 页面图式反思 | 扫描页面结构模式并提案 | 周期触发 | 输出 schema_patterns/ |
-| **W10** 内务整理 | 离线 housekeeping 任务总控 | 按需触发 | 维护 housekeeping_queue.md |
-| **W10a** 去重合并 | 重复页面 union + REDIRECT | H1 队列任务时 | — |
-| **W11** 概念分类元反思 | 概念页类型/分类一致性审查 | 周期触发 | — |
-| **W12** 语义查询与列表页 | `:::query` 驱动的列表页 | 列表页任务时 | — |
+| Skill | 职责 | 触发时机 | **反馈输出给** |
+|---|---|---|---|
+| **W0** 总则 | 不变量 / 闭环 / 哲学 | 每轮开始读 | — |
+| **W1** 探索与食物收集 | 三队列选取 / 食物源扫描 | 每轮 | queue.md |
+| **W2** 原子行动目录 | 原子动作执行（20类） | 每轮 | actions.jsonl |
+| **W3** 质量标准 | 前置条件 rubric | 执行前 | → W4 / failures |
+| **W4** 评估与检验 | before/after 打分 | 执行后 | failures.jsonl / accept |
+| **W5** 反思与自改 | 扫日志 → 修订 skill | 每20轮/3次同类失败 | **skill 文件 + memory/** |
+| **W6** 离线质检 | Citation 完整性批量检查 | 按需 | citation_issues.jsonl |
+| **W7** 引文核验 | 增量核验引文与原文 | H11/H19 任务 | verify_state.json → housekeeping_queue |
+| **W8** 精品页建设 | featured 页深化 | H7 任务 / W14 升级 | — |
+| **W9** 页面图式反思 | 扫描页面结构异常 | 每10轮 | **schema_patterns/ → housekeeping_queue (H10)** |
+| **W10** 内务整理 | H1-H19 队列总调度 | 三队列空 / 每10轮扫描 | housekeeping_queue.md |
+| **W10a** 去重合并 | REDIRECT + union | H1 任务 | — |
+| **W11** 概念分类审查 | 概念页类型/分类一致性 | 每10轮 | **housekeeping_queue (H8/H10)** |
+| **W12** 语义查询列表页 | `:::query` 列表页 | H9 任务 | — |
+| **W13** 全文覆盖查验 | 句子→wiki映射 / 缺口发现 | 每10轮增量 | **housekeeping_queue (H13)** |
+| **W14** 洞察发现 | 实体关联假设生成 | 每11轮 | **insight_queue.md** |
+
+**反馈聚合规则**：W9 / W11 / W13 的输出全部汇入 `housekeeping_queue.md`（由 W10 统一调度），不直接写入 `queue.md`，避免两个队列语义混淆。
 
 ---
 
-## 五、状态文件布局
+## 五、学习记忆体系
+
+Butler 有两层持久化记忆：
+
+### 5.1 经验规则（wiki/memory/）
 
 ```
-wiki/logs/butler/
-├── queue.md                  候选队列 (P0/P1/P2 三档，W2 任务来源)
-├── housekeeping_queue.md     内务整理任务队列 (H1/H2/H3 三类，W10 专用)
-├── round_counter.txt         当前轮次计数，每 invocation +1
-├── actions.jsonl             每次原子行动一行 JSON
-├── failures.jsonl            result=fail 的子集, 反思专用
-├── citation_issues.jsonl     W6 离线质检输出
-├── verify_state.json         W7 引文核验进度
-├── quote_cache.json          引文缓存
-├── schema_patterns/          W9 图式反思输出
-├── type_audits/              类型审查输出
-├── reflections/
-│   └── YYYY-MM-DD.md        周期反思输出
-└── skill_changes.md          skill 修订 changelog
-
 wiki/memory/
-├── MEMORY.md                 规则索引（始终被读，≤50条）
+├── MEMORY.md        规则索引（每轮开始读，≤50条，超限则归档）
 └── rules/
-    └── rule_NNN.md           每条经验规则（置信度 high/medium/low）
+    └── rule_NNN.md  每条规则（含置信度 high/medium/low + 来源轮次）
 ```
 
-**约定**：每轮开始必读 `queue.md` + `wiki/memory/MEMORY.md` + 最近 10 条 `actions`。`actions.jsonl` 只追加不覆盖。
+**写入时机**（由 W5 负责）：
+- accept 率 < 50% 的动作类型 → 写限制规则
+- 连续 3 次 fail 同一前置检查 → 写前置强化规则
+- W14 洞察被 high 置信度确认 → 写关联规则
+- 用户明确"记住这个" → 立即写入
+
+**读取时机**：每轮 Step 1 加载时必读 MEMORY.md（索引），按需 follow link 读 rule 详情。
+
+**老化机制**：置信度 low 的规则超过 50 轮未被引用 → 降级为 archived，移出 MEMORY.md 索引。
+
+### 5.2 动作历史（actions.jsonl）
+
+- 只追加，永不删除
+- W5 每 20 轮扫描，提炼 pattern
+- W4 打分结果存入 `result` 字段，供 W5 统计 accept 率
 
 ---
 
 ## 六、单次 Invocation 生命周期
 
-1. **加载** (W0)：读 queue / `wiki/memory/MEMORY.md` / 最近 actions / failures / 当前 W3 标准
-2. **选食物** (W1)：rotate 或 priority
-3. **挑候选** (W1)：从 queue 取 P0, 或扫食物源新发现
-4. **前置检查** (W3)：该动作前置条件是否满足
-5. **执行** (W2)：单个原子动作, diff ≤ 20 行
-6. **记账** (W0)：追加 `actions.jsonl`
-7. **评估** (W4)：打分 → accept / rollback
-8. **反思?** (W5)：达阈值进入反思 (本次可能不 commit)
-9. **commit** (若 accept)：1 动作 = 1 commit
+### 步骤
 
-目标单轮时长：**3–5 分钟**。超过 → 动作过大, 必须拆。
-
----
-
-## 七、初次启动
-
-```bash
-mkdir -p wiki/logs/butler/reflections
-touch wiki/logs/butler/{queue.md,actions.jsonl,failures.jsonl,skill_changes.md}
+```
+1. 加载     读三队列 + MEMORY.md + 最近10条actions + failures + W3标准
+            更新 round_counter.txt: counter += 1
+2. 选任务   三队列选取算法（见下）
+3. 前置检查 W3: 满足 → 继续; 不满足 → failures + 跳到步骤7
+4. 执行     W2 原子动作，diff ≤ 20行
+5. 记账     追加 actions.jsonl（result暂留空）
+6. 评估     W4 打分 → accept / rollback
+            更新 actions.jsonl result 字段
+7. 暂存     accept → git add <file>; rollback → git restore <file>
+8. 周期任务 若 round % 10 == 0：触发 W9/W11/W13 增量扫描 → 写 housekeeping_queue
+            若 round % 17 == 0：/wiki 批量 commit + push
+            若 round % 20 == 0：触发 W5 反思
+9. 反思?    3次同类失败 → 立即触发W5（不等20轮）
 ```
 
-初次 invocation 走 W1 全面扫描, 把食物源明显空缺塞进 queue。**首轮不 commit wiki**, 只更新 queue + actions (一种"观察轮")。
+### 三队列选取算法
+
+```
+本轮是否为洞察轮？→ round % 11 == 0
+
+普通轮（非洞察轮）优先顺序：
+  1. queue.md               P0
+  2. housekeeping_queue.md  P0
+  3. queue.md               P1
+  4. housekeeping_queue.md  P1
+  5. queue.md               P2
+  6. housekeeping_queue.md  P2
+
+洞察轮（round % 11 == 0）优先顺序：
+  1. queue.md               P0    ← P0永远最优先
+  2. housekeeping_queue.md  P0
+  3. insight_queue.md       最老待调查
+  4. queue.md               P1
+  5. housekeeping_queue.md  P1
+  6. queue.md               P2
+  7. housekeeping_queue.md  P2
+
+全部为空时（empty_fallback，按序执行直到有产出）：
+  a. W1 explore：扫一个食物源，写 1-3 条到 queue.md
+  b. W10 扫描：discover_duplicates + find_unsourced → housekeeping_queue
+  c. 仅在洞察轮：W14 生成一条洞察 → insight_queue
+  → 补完后立即取第一条执行，本轮不空转
+```
+
+**保证**：每轮必须执行一个原子动作。唯一例外：W4 评估为 fail 且无法拆分，此时 mode=`observe`，记 actions.jsonl。
 
 ---
 
-## 八、禁止清单
+## 七、健康指标（自我评估）
+
+Butler 应能随时回答"知识库在变好吗"。以下指标由 W5 每 20 轮计算一次，写入 `wiki/logs/butler/health_report.jsonl`：
+
+| 指标 | 来源 | 健康方向 |
+|---|---|---|
+| accept 率（最近20轮） | actions.jsonl | ↑ 越高越好（目标 >75%） |
+| P0 队列积压 | queue.md + housekeeping_queue | ↓ 越少越好 |
+| 平均 quality_score | pages.json | ↑ 越高越好 |
+| 句子覆盖率 | coverage_summary.json | ↑ 越高越好 |
+| 断链数 | backlinks.json broken_count | ↓ 越少越好 |
+| stub 比例 | pages.json | ↓ 越低越好 |
+| 未有 pn 引注的 person 页比例 | find_unsourced 扫描结果 | ↓ 越低越好 |
+| insight 解决率 | insight_queue.md 已处理比例 | ↑ 越高越好 |
+
+若某指标连续 3 次计算**持平或恶化** → W5 必须分析原因，提案调整对应的 skill 规则或队列优先级。
+
+---
+
+## 八、状态文件布局
+
+```
+wiki/logs/butler/
+├── queue.md                  内容任务队列（W1维护，P0/P1/P2）
+├── housekeeping_queue.md     内务整理队列（W10维护，H1-H19）
+├── insight_queue.md          洞察问题队列（W14维护，I类型）
+├── round_counter.txt         当前轮次，每轮+1
+├── actions.jsonl             每次原子行动一行（只追加）
+├── failures.jsonl            result=fail 的子集，W5反思专用
+├── health_report.jsonl       健康指标快照（W5每20轮写入）
+├── citation_issues.jsonl     W6质检输出
+├── verify_state.json         W7引文核验进度
+├── quote_cache.json          引文缓存
+├── sentence_index/           W13静态句子索引（原文分句，一次生成）
+│   └── NNN_章节名.jsonl
+├── coverage_map/             W13动态覆盖映射（随wiki更新）
+│   └── NNN_章节名.jsonl
+├── coverage_summary.json     W13汇总统计
+├── schema_patterns/          W9图式反思输出
+├── type_audits/              W11类型审查输出
+├── reflections/              W5周期反思
+│   └── YYYY-MM-DD.md
+└── skill_changes.md          skill修订changelog
+
+wiki/memory/
+├── MEMORY.md                 经验规则索引（每轮读，≤50条）
+└── rules/
+    └── rule_NNN.md           每条规则（置信度+来源轮次）
+```
+
+---
+
+## 九、初次启动
+
+```bash
+mkdir -p wiki/logs/butler/{reflections,sentence_index,coverage_map,schema_patterns,type_audits}
+touch wiki/logs/butler/{queue.md,housekeeping_queue.md,insight_queue.md}
+touch wiki/logs/butler/{actions.jsonl,failures.jsonl,health_report.jsonl,skill_changes.md}
+echo "0" > wiki/logs/butler/round_counter.txt
+mkdir -p wiki/memory/rules
+touch wiki/memory/MEMORY.md
+```
+
+首轮走 W1 全面扫描 + W10 初始扫描，建立两个队列的基础条目。**首轮不 commit wiki**，只更新队列 + actions（观察轮）。
+
+---
+
+## 十、禁止清单
 
 - ❌ 单次 diff > 20 行
-- ❌ 跳过 log (未写 actions.jsonl)
+- ❌ 跳过 log（未写 actions.jsonl）
 - ❌ 修改 `chapter_md/` / `kg/` / `data/`（butler 只读这些）
 - ❌ 批量删除/重命名 `wiki/public/pages/`
-- ❌ **直接 Edit/Write wiki/public/pages/*.md**（必须用 add_page / edit_page / delete_page）
-- ❌ 直接调用 `record_revision.py`（应通过上述三个脚本间接调用）
-- ❌ 直接改 W0 本文的"五不变量"章节（仅经用户明确 review 才可动）
-- ❌ 不经 W5 反思流程直接改其他 skill
-- ❌ 单次 invocation 涉及 > 3 个文件改动 (多文件要拆成多次 invocation)
-- ❌ **修改 `pn` 时联动修改 `event_ids`，或反之**——两者是完全独立的字段体系，没有任何关联
+- ❌ 直接 Edit/Write `wiki/public/pages/*.md`（必须用 add_page / edit_page / delete_page）
+- ❌ 直接调用 `record_revision.py`（应通过上述三脚本间接调用）
+- ❌ 不经 W5 反思流程直接改 skill 文件
+- ❌ 改 W0 §二"不变量"章节（仅经用户明确 review 才可动）
+- ❌ 单次 invocation 涉及 > 3 个文件改动（需拆成多次）
+- ❌ 修改 `pn` 时联动修改 `event_ids`，或反之（两者完全独立）
+- ❌ 用新数据覆盖已存在的节/字段（append-only 原则）
 
 ---
 
 ## 相关 Skill
+
 - [W1 探索与食物收集](SKILL_W1_Butler探索与食物收集.md)
 - [W2 原子行动目录](SKILL_W2_Butler原子行动目录.md)
 - [W3 质量标准](SKILL_W3_Butler质量标准.md)
@@ -203,3 +328,5 @@ touch wiki/logs/butler/{queue.md,actions.jsonl,failures.jsonl,skill_changes.md}
 - [W10a 去重合并](SKILL_W10a_Butler去重合并.md)
 - [W11 概念分类元反思](SKILL_W11_概念分类元反思.md)
 - [W12 语义查询与列表页](SKILL_W12_语义查询与列表页.md)
+- [W13 史记全文覆盖查验](SKILL_W13_史记全文覆盖查验.md)
+- [W14 洞察发现](SKILL_W14_洞察发现.md)
