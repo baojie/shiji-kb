@@ -3521,3 +3521,20 @@
 {"round":"R5301","action":"expand-content","target":"大宛（费尔干纳）","result":"accept","note":"补充西域历史（汗血宝马、两征大宛前101年），3散文段落，qs预计超30"}
 {"round":"R5302","action":"expand-content","target":"高阳（郦食其出身地）","result":"accept","note":"补充高阳地理（河南杞县），郦食其高阳酒徒典故，2散文段落"}
 {"round":"R5303","action":"expand-content","target":"代郡","result":"accept","note":"补充代郡地理（河北山西边界、李广卫青活动区域），2散文段落，qs预计提升"}
+{"round": 5305, "action": "expand-content", "page": "霍嬗", "result": "accept", "note": "补充生平（封禅独登泰山顶、夭折绝封、霍光关联）3段"}
+{"round": 5306, "action": "expand-content", "page": "楚考烈王", "result": "accept", "note": "补充生平3段（质秦归楚、灭鲁绝封、李园夺权）"}
+{"round": 5307, "action": "expand-content", "page": "刘遂", "result": "accept", "note": "补充生平3段（立王背景、削藩响应、邯郸七月守城自杀）"}
+{"round": 5308, "action": "expand-content", "page": "周孝王", "result": "accept", "note": "重写正文（封非子秦嬴、旁系即位），3段叙述解锁narrative_bonus"}
+{"round": 5309, "action": "expand-content", "page": "李少君", "result": "accept", "note": "重写为3段散文结构（进说武帝/仙方/死后影响）"}
+{"round": 5310, "action": "expand-content", "page": "西周幽王", "result": "accept", "note": "从空壳重写（褒姒/烽火戏诸侯/申侯联犬戎/西周亡），4段"}
+{"round": 5311, "action": "expand-content", "page": "沛", "result": "accept", "note": "修正散文段落（去[[开头）+ 补充沛丰集团和大风歌"}
+{"round": 5312, "action": "expand-content", "page": "琅邪", "result": "accept", "note": "从存根扩充（秦始皇东巡/琅邪台/徐福东渡）3段"}
+{"round": 5313, "action": "expand-content", "page": "亳", "result": "accept", "note": "从存根扩充（商汤建国/伊尹/亳地历史）2段"}
+{"round": 5314, "action": "expand-content", "page": "渭", "result": "accept", "note": "渭水从存根扩充（关中命脉/汧渭秦源/郑当时漕渠）2段"}
+{"round": 5315, "action": "expand-content", "page": "酒泉", "result": "accept", "note": "从存根扩充（河西四郡/霍去病/酒泉命名典故）3段"}
+{"round": 5316, "action": "expand-content", "page": "南郡/阳翟/南郑/废丘", "result": "accept", "note": "批量扩充4个地名存根（各2-3段）"}
+{"round": 5317, "action": "registry-rebuild", "page": "-", "result": "accept", "note": "rebuild pages.json + compute_knowledge K=841183（+148）"}
+{"round": 5318, "action": "expand-content", "page": "黥布", "result": "accept", "note": "从存根重写（随项梁/叛楚归汉/淮南王叛汉被杀）4段（143处引用）"}
+{"round": 5319, "action": "expand-content", "page": "庄贾", "result": "accept", "note": "重写消歧义为散文（司马穰苴斩军纪/陈胜车夫弑主）2段"}
+{"round": 5320, "action": "H1-redirect", "page": "句践/二世/吴王/高皇帝/高帝/孝文帝/孝惠/孝景/孝景帝/孝文/西楚霸王", "result": "accept", "note": "批量11个存根帝号/别名页转REDIRECT→规范页"}
+{"round": 5321, "action": "registry-rebuild+commit", "page": "-", "result": "accept", "note": "rebuild+K=840640（redirect转换导致featured略降）"}
