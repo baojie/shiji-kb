@@ -1,8 +1,18 @@
 {
   "page": "襄邑",
-  "latest_rev_id": "20260425-143545-875795",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205906-db056a",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205906-db056a",
+      "timestamp": "2026-04-25T20:59:06Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143545-875795",
+      "content_hash": "sha256:db056a63bff2f671d059a10e77266fb78fa14e540ee3337daa5ebf5fc1a1a40d",
+      "size": 1021,
+      "content": "---\nid: 襄邑\ntype: place\nsources: [樊郦滕灌列传]\nlabel: 襄邑\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\", \"城邑\"]\nauto_generated: true\ncoords: [113.04311, 33.2572]\ncoords_name: \"襄邑郡\"\ncoords_source: \"CHGIS 210944\"\ncoords: [113.04311, 33.2572]\ncoords_name: \"襄邑郡\"\ncoords_source: \"CHGIS 210944\"\ncoords: [113.04311, 33.2572]\ncoords_name: \"襄邑郡\"\ncoords_source: \"CHGIS 210944\"\nfeatured: true\n---\n# 襄邑\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[095_樊郦滕灌列传]]：`24`\n- [[098_傅靳蒯成列传]]：`7`\n\n**引文摘录：**\n\n> **出自 [[095_樊郦滕灌列传]]（095-24）：** 受诏别击楚军後，绝其饷道，起阳武至襄邑。\n\n> **出自 [[098_傅靳蒯成列传]]（098-7）：** 还军敖仓，破项籍军成皋南，击绝楚饟道，起荥阳至襄邑。\n\n---\n\n## 相关章节\n\n- [[095_樊郦滕灌列传|樊郦滕灌列传]]\n- [[098_傅靳蒯成列传|傅靳蒯成列传]]"
+    },
     {
       "rev_id": "20260425-143545-875795",
       "timestamp": "2026-04-25T14:35:45Z",

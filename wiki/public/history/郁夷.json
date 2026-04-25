@@ -1,8 +1,18 @@
 {
   "page": "郁夷",
-  "latest_rev_id": "20260425-143615-62125a",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205907-fd7fa1",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205907-fd7fa1",
+      "timestamp": "2026-04-25T20:59:07Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143615-62125a",
+      "content_hash": "sha256:fd7fa1c744457b24492e4384f03fca7dfe38c0ca94b3e996561b78fd69f64065",
+      "size": 755,
+      "content": "---\nid: 郁夷\ntype: place\nsources: [五帝本纪]\nlabel: 郁夷\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"区域\"]\nauto_generated: true\ncoords: [107.2786, 34.36926]\ncoords_name: \"郁夷县\"\ncoords_source: \"CHGIS hvd_70928\"\ncoords: [107.2786, 34.36926]\ncoords_name: \"郁夷县\"\ncoords_source: \"CHGIS hvd_70928\"\ncoords: [107.2786, 34.36926]\ncoords_name: \"郁夷县\"\ncoords_source: \"CHGIS hvd_70928\"\nfeatured: true\n---\n# 郁夷\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[001_五帝本纪]]：`11.1`、`28`\n\n**引文摘录：**\n\n> **出自 [[001_五帝本纪]]（001-28）：** 郁夷东作，昧谷西曛。\n\n---\n\n## 相关章节\n\n- [[001_五帝本纪|五帝本纪]]"
+    },
     {
       "rev_id": "20260425-143615-62125a",
       "timestamp": "2026-04-25T14:36:15Z",

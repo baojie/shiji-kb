@@ -1,8 +1,18 @@
 {
   "page": "防山",
-  "latest_rev_id": "20260425-154018-ff7db5",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205908-87b5c6",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205908-87b5c6",
+      "timestamp": "2026-04-25T20:59:08Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154018-ff7db5",
+      "content_hash": "sha256:87b5c6279daedf321a229b920dd3add082ff96fe3f2b0e69b1f7d993d81b300a",
+      "size": 604,
+      "content": "---\nid: 防山\ntype: place\nsources: [孔子世家]\nlabel: 防山\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 防山\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[047_孔子世家]]：`2`\n\n**引文摘录：**\n\n> **出自 [[047_孔子世家]]（047-2）：** 丘生而叔梁纥死，葬於防山。\n> **出自 [[047_孔子世家]]（047-2）：** 防山在鲁东，由是孔子疑其父墓处，母讳之也。\n\n---\n\n## 相关章节\n\n- [[047_孔子世家|孔子世家]]"
+    },
     {
       "rev_id": "20260425-154018-ff7db5",
       "timestamp": "2026-04-25T15:40:18Z",

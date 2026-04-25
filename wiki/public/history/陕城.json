@@ -1,8 +1,18 @@
 {
   "page": "陕城",
-  "latest_rev_id": "20260425-143644-5e4dd2",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205908-7a8b1a",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205908-7a8b1a",
+      "timestamp": "2026-04-25T20:59:08Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143644-5e4dd2",
+      "content_hash": "sha256:7a8b1a8b9d058556b1c26622b5413854361fa287afb8b5b627fc8521c3e8ca70",
+      "size": 498,
+      "content": "---\nid: 陕城\ntype: place\nsources: [秦本纪]\nlabel: 陕城\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\nfeatured: true\n---\n# 陕城\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[005_秦本纪]]：`48.1`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-48.1）：** ”於是乃出兵东围陕城，西斩戎之獂王。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]"
+    },
     {
       "rev_id": "20260425-143644-5e4dd2",
       "timestamp": "2026-04-25T14:36:44Z",

@@ -1,8 +1,18 @@
 {
   "page": "西岳",
-  "latest_rev_id": "20260425-143547-0adbb1",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205906-c5ac70",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205906-c5ac70",
+      "timestamp": "2026-04-25T20:59:06Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143547-0adbb1",
+      "content_hash": "sha256:c5ac70ff2572072e7c573dba31f611be114192d6661a662b3d880f855dd83cdf",
+      "size": 532,
+      "content": "---\nid: 西岳\ntype: place\nsources: [封禅书]\nlabel: 西岳\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 西岳\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[028_封禅书]]：`2`\n\n**引文摘录：**\n\n> **出自 [[028_封禅书]]（028-2）：** 八月，巡狩至西岳。\n> **出自 [[028_封禅书]]（028-2）：** 西岳，华山也。\n\n---\n\n## 相关章节\n\n- [[028_封禅书|封禅书]]"
+    },
     {
       "rev_id": "20260425-143547-0adbb1",
       "timestamp": "2026-04-25T14:35:47Z",

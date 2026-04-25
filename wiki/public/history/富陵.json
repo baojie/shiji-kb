@@ -1,8 +1,18 @@
 {
   "page": "富陵",
-  "latest_rev_id": "20260425-154758-c1c185",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205843-71008f",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205843-71008f",
+      "timestamp": "2026-04-25T20:58:43Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154758-c1c185",
+      "content_hash": "sha256:71008fb2d37f2427317de2a77322a0bb6e3aeed0b0ed24eb179442dab3e5bc9b",
+      "size": 901,
+      "content": "---\nid: 富陵\ntype: place\nsources: [荆燕世家]\nlabel: 富陵\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [118.79843, 33.38063]\ncoords_name: \"富陵县\"\ncoords_source: \"CHGIS hvd_42954\"\nfeatured: true\n---\n# 富陵\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[051_荆燕世家]]：`5`\n- [[091_黥布列传]]：`16`\n\n**引文摘录：**\n\n> **出自 [[051_荆燕世家]]（051-5）：** 高祖十一年秋，淮南王黥布反，东击荆。荆王贾与战，不胜，走富陵，为布军所杀。高祖自击破布。十二年，立沛侯刘濞为吴王，王故荆地。\n\n> **出自 [[091_黥布列传]]（091-16）：** 果如薛公筹之，东击荆，荆王刘贾走死富陵。\n\n---\n\n## 相关章节\n\n- [[051_荆燕世家|荆燕世家]]\n- [[091_黥布列传|黥布列传]]"
+    },
     {
       "rev_id": "20260425-154758-c1c185",
       "timestamp": "2026-04-25T15:47:58Z",

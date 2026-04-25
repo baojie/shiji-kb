@@ -1,8 +1,18 @@
 {
   "page": "兹乡",
-  "latest_rev_id": "20260425-142932-84ad48",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205840-a664e1",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205840-a664e1",
+      "timestamp": "2026-04-25T20:58:40Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-142932-84ad48",
+      "content_hash": "sha256:a664e1655d7cf4d1f313affc89eb68c06e81d2444a37227877d48426c00c6680",
+      "size": 601,
+      "content": "---\nid: 兹乡\ntype: place\nsources: [黥布列传]\nlabel: 兹乡\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"乡里\", \"县\"]\nauto_generated: true\ncoords: [119.09138, 36.17898]\ncoords_name: \"兹乡侯国\"\ncoords_source: \"CHGIS hvd_85356\"\nfeatured: true\n---\n# 兹乡\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[091_黥布列传]]：`17`\n\n**引文摘录：**\n\n> **出自 [[091_黥布列传]]（091-17）：** 番阳人杀布兹乡民田舍，遂灭黥布。\n\n---\n\n## 相关章节\n\n- [[091_黥布列传|黥布列传]]"
+    },
     {
       "rev_id": "20260425-142932-84ad48",
       "timestamp": "2026-04-25T14:29:32Z",

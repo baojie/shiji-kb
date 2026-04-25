@@ -1,8 +1,18 @@
 {
   "page": "淮西",
-  "latest_rev_id": "20260425-143347-a6638c",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205902-a7a836",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205902-a7a836",
+      "timestamp": "2026-04-25T20:59:02Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143347-a6638c",
+      "content_hash": "sha256:a7a836d7604b8f81d5de8379dd8d72c07875f068cc562ec24f68099ad5c553e6",
+      "size": 662,
+      "content": "---\nid: 淮西\ntype: place\nsources: [荆燕世家]\nlabel: 淮西\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"区域\"]\nauto_generated: true\ncoords: [113.68892, 31.26371]\ncoords_name: \"淮西节度使\"\ncoords_source: \"CHGIS hvd_111458\"\nfeatured: true\n---\n# 淮西\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[051_荆燕世家]]：`4`\n\n**引文摘录：**\n\n> **出自 [[051_荆燕世家]]（051-4）：** ”群臣皆曰：“立刘贾为荆王，王淮东五十二城；高祖弟交为楚王，王淮西三十六城。\n\n---\n\n## 相关章节\n\n- [[051_荆燕世家|荆燕世家]]"
+    },
     {
       "rev_id": "20260425-143347-a6638c",
       "timestamp": "2026-04-25T14:33:47Z",

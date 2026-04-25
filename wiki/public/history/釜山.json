@@ -1,8 +1,18 @@
 {
   "page": "釜山",
-  "latest_rev_id": "20260425-154228-b774eb",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205907-3b2cfb",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205907-3b2cfb",
+      "timestamp": "2026-04-25T20:59:07Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154228-b774eb",
+      "content_hash": "sha256:3b2cfb4b680679365c14ff42cc761f38c286d3aec3d71913cf93fce826c467cb",
+      "size": 507,
+      "content": "---\nid: 釜山\ntype: place\nsources: [五帝本纪]\nlabel: 釜山\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 釜山\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[001_五帝本纪]]：`2`\n\n**引文摘录：**\n\n> **出自 [[001_五帝本纪]]（001-2）：** 北逐荤粥，合符釜山，而邑于涿鹿之阿。\n\n---\n\n## 相关章节\n\n- [[001_五帝本纪|五帝本纪]]"
+    },
     {
       "rev_id": "20260425-154228-b774eb",
       "timestamp": "2026-04-25T15:42:28Z",

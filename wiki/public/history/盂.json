@@ -1,8 +1,18 @@
 {
   "page": "盂",
-  "latest_rev_id": "20260425-143426-b069d8",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205903-30324b",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205903-30324b",
+      "timestamp": "2026-04-25T20:59:03Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143426-b069d8",
+      "content_hash": "sha256:30324bc1975a794f5ad140affd196d5308e91acfe7ab47b3d79767d0dd6f882c",
+      "size": 754,
+      "content": "---\nid: 盂\ntype: place\nsources: [宋微子世家]\nlabel: 盂\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\", \"城邑\"]\nauto_generated: true\ncoords: [112.71207, 38.17819]\ncoords_name: \"盂县\"\ncoords_source: \"CHGIS hvd_95627\"\nfeatured: true\n---\n# 盂\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[038_宋微子世家]]：`36`\n- [[040_楚世家]]：`21`\n\n**引文摘录：**\n\n> **出自 [[038_宋微子世家]]（038-36）：** 八年，齐桓公卒，宋欲为盟会。\n\n> **出自 [[040_楚世家]]（040-21）：** ”遂行，至盂，遂执辱宋公，已而归之。\n\n---\n\n## 相关章节\n\n- [[038_宋微子世家|宋微子世家]]\n- [[040_楚世家|楚世家]]"
+    },
     {
       "rev_id": "20260425-143426-b069d8",
       "timestamp": "2026-04-25T14:34:26Z",

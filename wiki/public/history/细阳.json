@@ -1,8 +1,18 @@
 {
   "page": "细阳",
-  "latest_rev_id": "20260425-154408-b0c14a",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205904-f989d0",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205904-f989d0",
+      "timestamp": "2026-04-25T20:59:04Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154408-b0c14a",
+      "content_hash": "sha256:f989d002b9763dfa9c3a2f49cb288ec43d371322aa6eca4e83fc3973610b48f6",
+      "size": 597,
+      "content": "---\nid: 细阳\ntype: place\nsources: [樊郦滕灌列传]\nlabel: 细阳\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [115.74445, 33.18829]\ncoords_name: \"细阳县\"\ncoords_source: \"CHGIS hvd_43358\"\nfeatured: true\n---\n# 细阳\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[095_樊郦滕灌列传]]：`20`\n\n**引文摘录：**\n\n> **出自 [[095_樊郦滕灌列传]]（095-20）：** 益食婴细阳千户。\n\n---\n\n## 相关章节\n\n- [[095_樊郦滕灌列传|樊郦滕灌列传]]"
+    },
     {
       "rev_id": "20260425-154408-b0c14a",
       "timestamp": "2026-04-25T15:44:08Z",

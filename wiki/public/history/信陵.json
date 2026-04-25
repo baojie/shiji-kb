@@ -1,8 +1,18 @@
 {
   "page": "信陵",
-  "latest_rev_id": "20260425-154545-9e3925",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205840-1269e6",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205840-1269e6",
+      "timestamp": "2026-04-25T20:58:40Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154545-9e3925",
+      "content_hash": "sha256:1269e666585f5e4b7f5b383e37c1f23f118e8455d1c5867aa713a6e0cecea8e5",
+      "size": 621,
+      "content": "---\nid: 信陵\ntype: place\nsources: [魏公子列传]\nlabel: 信陵\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [110.82422, 30.92839]\ncoords_name: \"信陵县\"\ncoords_source: \"CHGIS hvd_45819\"\nfeatured: true\n---\n# 信陵\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[077_魏公子列传]]：`10`\n\n**引文摘录：**\n\n> **出自 [[077_魏公子列传]]（077-10）：** 赵王以鄗为公子汤沐邑，魏亦复以信陵奉公子。\n\n---\n\n## 相关章节\n\n- [[077_魏公子列传|魏公子列传]]"
+    },
     {
       "rev_id": "20260425-154545-9e3925",
       "timestamp": "2026-04-25T15:45:45Z",

@@ -1,8 +1,18 @@
 {
   "page": "稷",
-  "latest_rev_id": "20260425-143448-edbfae",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205904-b3abbd",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205904-b3abbd",
+      "timestamp": "2026-04-25T20:59:04Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143448-edbfae",
+      "content_hash": "sha256:b3abbd7411abe2f14107c766651d649cfd9180667fe97f913781ff3568298eb8",
+      "size": 981,
+      "content": "---\nid: 稷\ntype: place\nsources: [楚世家]\nlabel: 稷\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [108.16342, 34.25281]\ncoords_name: \"稷州\"\ncoords_source: \"CHGIS 211735\"\nfeatured: true\n---\n# 稷\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[040_楚世家]]：`59`\n- [[066_伍子胥列传]]：`13`\n\n**引文摘录：**\n\n> **出自 [[040_楚世家]]（040-59）：** 昭王之出郢也，使申鲍胥请救於秦。秦以车五百乘救楚，楚亦收馀散兵，与秦击吴。十一年六月，败吴於稷。会吴王弟夫概见吴王兵伤败，乃亡归，自立为王。阖闾闻之，引兵去楚，归击夫概。夫概败，奔楚，楚封之堂谿，号为堂谿氏。\n\n> **出自 [[066_伍子胥列传]]（066-13）：** 六月，败吴兵於稷。\n\n---\n\n## 相关章节\n\n- [[040_楚世家|楚世家]]\n- [[066_伍子胥列传|伍子胥列传]]"
+    },
     {
       "rev_id": "20260425-143448-edbfae",
       "timestamp": "2026-04-25T14:34:48Z",

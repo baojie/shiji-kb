@@ -1,8 +1,18 @@
 {
   "page": "西界",
-  "latest_rev_id": "20260425-143548-d6466e",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205906-1d97bb",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205906-1d97bb",
+      "timestamp": "2026-04-25T20:59:06Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143548-d6466e",
+      "content_hash": "sha256:1d97bb32a734bd74d82ac56d8d107b30415d644c01b5a49351c051936a36abb0",
+      "size": 798,
+      "content": "---\nid: 西界\ntype: place\nsources: [荆燕世家]\nlabel: 西界\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"区域\"]\nauto_generated: true\ncoords: [108.22005, 30.40813]\ncoords_name: \"西界沱\"\ncoords_source: \"CHGIS hvd_21437\"\ncoords: [108.22005, 30.40813]\ncoords_name: \"西界沱\"\ncoords_source: \"CHGIS hvd_21437\"\ncoords: [108.22005, 30.40813]\ncoords_name: \"西界沱\"\ncoords_source: \"CHGIS hvd_21437\"\nfeatured: true\n---\n# 西界\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[051_荆燕世家]]：`8`\n\n**引文摘录：**\n\n> **出自 [[051_荆燕世家]]（051-8）：** 至梁，闻汉遣灌将军屯荥阳，泽还兵备西界，遂跳驱至长安。\n\n---\n\n## 相关章节\n\n- [[051_荆燕世家|荆燕世家]]"
+    },
     {
       "rev_id": "20260425-143548-d6466e",
       "timestamp": "2026-04-25T14:35:48Z",

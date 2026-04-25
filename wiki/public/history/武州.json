@@ -1,8 +1,18 @@
 {
   "page": "武州",
-  "latest_rev_id": "20260425-154045-520d20",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205900-cce8fd",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205900-cce8fd",
+      "timestamp": "2026-04-25T20:59:00Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154045-520d20",
+      "content_hash": "sha256:cce8fdd1e2db1ecca6fd2b1865579134529d9c990ac54139fd55abed06fb65b6",
+      "size": 690,
+      "content": "---\nid: 武州\ntype: place\nsources: [韩长孺列传]\nlabel: 武州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\", \"关隘\"]\nauto_generated: true\ncoords: [113.29398, 39.19319]\ncoords_name: \"武州\"\ncoords_source: \"CHGIS 210049\"\nfeatured: true\n---\n# 武州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[108_韩长孺列传]]：`9`\n\n**引文摘录：**\n\n> **出自 [[108_韩长孺列传]]（108-9）：** 於是单于入汉长城武州塞。\n> **出自 [[108_韩长孺列传]]（108-9）：** 单于怪之，攻烽燧，得武州尉史。\n\n---\n\n## 相关章节\n\n- [[108_韩长孺列传|韩长孺列传]]"
+    },
     {
       "rev_id": "20260425-154045-520d20",
       "timestamp": "2026-04-25T15:40:45Z",

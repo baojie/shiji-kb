@@ -1,8 +1,18 @@
 {
   "page": "三亭",
-  "latest_rev_id": "20260425-142837-a1b326",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205837-e0fdec",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205837-e0fdec",
+      "timestamp": "2026-04-25T20:58:37Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-142837-a1b326",
+      "content_hash": "sha256:e0fdec6049689802579166b092a6ddd2ea0e9ba2c852beb31879948fec133f19",
+      "size": 646,
+      "content": "---\nid: 三亭\ntype: place\nsources: [范睢蔡泽列传]\nlabel: 三亭\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"乡里\"]\nauto_generated: true\ncoords: [109.64812, 28.70858]\ncoords_name: \"三亭县\"\ncoords_source: \"CHGIS hvd_42071\"\nfeatured: true\n---\n# 三亭\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[079_范睢蔡泽列传]]：`3`\n\n**引文摘录：**\n\n> **出自 [[079_范睢蔡泽列传]]（079-3）：** 语未究，王稽知范睢贤，谓曰：“先生待我於三亭之南。\n\n---\n\n## 相关章节\n\n- [[079_范睢蔡泽列传|范睢蔡泽列传]]"
+    },
     {
       "rev_id": "20260425-142837-a1b326",
       "timestamp": "2026-04-25T14:28:37Z",

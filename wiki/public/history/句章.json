@@ -1,8 +1,18 @@
 {
   "page": "句章",
-  "latest_rev_id": "20260425-154435-bd1416",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205841-4a26a7",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205841-4a26a7",
+      "timestamp": "2026-04-25T20:58:41Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154435-bd1416",
+      "content_hash": "sha256:4a26a781ae7ced8fa7108822813facac9e8ff603d85cb685593633de451e3fa6",
+      "size": 708,
+      "content": "---\nid: 句章\ntype: place\nsources: [东越列传]\nlabel: 句章\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [121.5124, 29.87441]\ncoords_name: \"句章县\"\ncoords_source: \"CHGIS hvd_40736\"\nfeatured: true\n---\n# 句章\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[114_东越列传]]：`8`\n\n**引文摘录：**\n\n> **出自 [[114_东越列传]]（114-8）：** 天子遣横海将军韩说出句章，浮海从东方往；楼船将军杨仆出武林；中尉王温舒出梅岭；越侯为戈船、下濑将军，出若邪、白沙。\n\n---\n\n## 相关章节\n\n- [[114_东越列传|东越列传]]"
+    },
     {
       "rev_id": "20260425-154435-bd1416",
       "timestamp": "2026-04-25T15:44:35Z",

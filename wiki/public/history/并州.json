@@ -1,8 +1,18 @@
 {
   "page": "并州",
-  "latest_rev_id": "20260425-143136-96dd6b",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205845-24f946",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205845-24f946",
+      "timestamp": "2026-04-25T20:58:45Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143136-96dd6b",
+      "content_hash": "sha256:24f946a44fa49467bda5b1d44d53a5e23825d5e7e84444240c3ec314ab8ba870",
+      "size": 703,
+      "content": "---\nid: 并州\ntype: place\nsources: [天官书]\nlabel: 并州\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"州\"]\nauto_generated: true\nimage: images/places/汉朝60BC.png\nimage_caption: \"汉朝疆域图（前60年），并州刺史部地理位置\"\nimage_credit: \"Wikimedia Commons, CC BY-SA\"\ncoords: [112.48875, 37.73958]\ncoords_name: \"并州\"\ncoords_source: \"CHGIS 210261\"\nfeatured: true\n---\n# 并州\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[027_天官书]]：`67`\n\n**引文摘录：**\n\n> **出自 [[027_天官书]]（027-67）：** 营室至东壁，并州。\n\n---\n\n## 相关章节\n\n- [[027_天官书|天官书]]"
+    },
     {
       "rev_id": "20260425-143136-96dd6b",
       "timestamp": "2026-04-25T14:31:36Z",

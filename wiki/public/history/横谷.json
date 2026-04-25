@@ -1,8 +1,18 @@
 {
   "page": "横谷",
-  "latest_rev_id": "20260425-143306-0d9561",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205900-076b3d",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205900-076b3d",
+      "timestamp": "2026-04-25T20:59:00Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143306-0d9561",
+      "content_hash": "sha256:076b3d14cbad3737935458a86450ae3bee70d62f48f3f626e427429efdf07bc6",
+      "size": 627,
+      "content": "---\nid: 横谷\ntype: place\nsources: [樊郦滕灌列传]\nlabel: 横谷\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 横谷\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[095_樊郦滕灌列传]]：`6`\n\n**引文摘录：**\n\n> **出自 [[095_樊郦滕灌列传]]（095-6）：** 军所将卒斩韩信，破豨胡骑横谷，斩将军赵既，虏代丞相冯梁、守孙奋、大将王黄、将军、太仆解福等十人。\n\n---\n\n## 相关章节\n\n- [[095_樊郦滕灌列传|樊郦滕灌列传]]"
+    },
     {
       "rev_id": "20260425-143306-0d9561",
       "timestamp": "2026-04-25T14:33:06Z",

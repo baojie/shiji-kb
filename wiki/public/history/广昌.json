@@ -1,8 +1,18 @@
 {
   "page": "广昌",
-  "latest_rev_id": "20260425-154907-47cf9a",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205845-580874",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205845-580874",
+      "timestamp": "2026-04-25T20:58:45Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154907-47cf9a",
+      "content_hash": "sha256:580874d1ed7466a5ef4b7ad83f96ce184618dc67947dd78c22c400bd9d1d1b68",
+      "size": 616,
+      "content": "---\nid: 广昌\ntype: place\nsources: [樊郦滕灌列传]\nlabel: 广昌\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [114.68795, 39.40358]\ncoords_name: \"广昌县\"\ncoords_source: \"CHGIS hvd_87426\"\nfeatured: true\n---\n# 广昌\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[095_樊郦滕灌列传]]：`6`\n\n**引文摘录：**\n\n> **出自 [[095_樊郦滕灌列传]]（095-6）：** 破得綦毋卬、尹潘军於无终、广昌。\n\n---\n\n## 相关章节\n\n- [[095_樊郦滕灌列传|樊郦滕灌列传]]"
+    },
     {
       "rev_id": "20260425-154907-47cf9a",
       "timestamp": "2026-04-25T15:49:07Z",

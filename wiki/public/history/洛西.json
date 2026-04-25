@@ -1,8 +1,18 @@
 {
   "page": "洛西",
-  "latest_rev_id": "20260425-143338-9d2f51",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205901-e41510",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205901-e41510",
+      "timestamp": "2026-04-25T20:59:01Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143338-9d2f51",
+      "content_hash": "sha256:e41510c0337ccb1444f5b7d7d2f3d64478d81e667292954785f17aff16ab938f",
+      "size": 743,
+      "content": "---\nid: 洛西\ntype: place\nsources: [殷本纪]\nlabel: 洛西\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [108.77299, 24.46873]\ncoords_name: \"洛西墟\"\ncoords_source: \"CHGIS hvd_153969\"\nfeatured: true\n---\n# 洛西\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[003_殷本纪]]：`30`\n- [[004_周本纪]]：`8`\n\n**引文摘录：**\n\n> **出自 [[003_殷本纪]]（003-30）：** 西伯出而献洛西之地，以请除砲格之刑。\n\n> **出自 [[004_周本纪]]（004-8）：** ”西伯乃献洛西之地，以请纣去砲格之刑。\n\n---\n\n## 相关章节\n\n- [[003_殷本纪|殷本纪]]\n- [[004_周本纪|周本纪]]"
+    },
     {
       "rev_id": "20260425-143338-9d2f51",
       "timestamp": "2026-04-25T14:33:38Z",

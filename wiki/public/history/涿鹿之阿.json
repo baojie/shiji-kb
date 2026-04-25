@@ -1,8 +1,18 @@
 {
   "page": "涿鹿之阿",
-  "latest_rev_id": "20260425-143345-7d0c8f",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205902-f58120",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205902-f58120",
+      "timestamp": "2026-04-25T20:59:02Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143345-7d0c8f",
+      "content_hash": "sha256:f58120c8170984d3d4959591809004813c1fbc3167df6f7dbe44df50ebb1a124",
+      "size": 525,
+      "content": "---\nid: 涿鹿之阿\ntype: place\nsources: [五帝本纪]\nlabel: 涿鹿之阿\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 涿鹿之阿\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[001_五帝本纪]]：`2`\n\n**引文摘录：**\n\n> **出自 [[001_五帝本纪]]（001-2）：** 北逐荤粥，合符釜山，而邑于涿鹿之阿。\n\n---\n\n## 相关章节\n\n- [[001_五帝本纪|五帝本纪]]"
+    },
     {
       "rev_id": "20260425-143345-7d0c8f",
       "timestamp": "2026-04-25T14:33:45Z",

@@ -1,8 +1,18 @@
 {
   "page": "东缗",
-  "latest_rev_id": "20260425-142849-c37c8a",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205838-08a221",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205838-08a221",
+      "timestamp": "2026-04-25T20:58:38Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-142849-c37c8a",
+      "content_hash": "sha256:08a221ce44ec6954dda85e9dcc7c527c8358badb1aaabd3880190c7d83c58654",
+      "size": 613,
+      "content": "---\nid: 东缗\ntype: place\nsources: [绛侯周勃世家]\nlabel: 东缗\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [116.30453, 35.06816]\ncoords_name: \"东缗县\"\ncoords_source: \"CHGIS hvd_85135\"\nfeatured: true\n---\n# 东缗\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[057_绛侯周勃世家]]：`2`\n\n**引文摘录：**\n\n> **出自 [[057_绛侯周勃世家]]（057-2）：** 攻爰戚、东缗，以往至栗，取之。\n\n---\n\n## 相关章节\n\n- [[057_绛侯周勃世家|绛侯周勃世家]]"
+    },
     {
       "rev_id": "20260425-142849-c37c8a",
       "timestamp": "2026-04-25T14:28:49Z",

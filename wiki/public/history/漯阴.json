@@ -1,8 +1,18 @@
 {
   "page": "漯阴",
-  "latest_rev_id": "20260425-154243-22e496",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205902-69408b",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205902-69408b",
+      "timestamp": "2026-04-25T20:59:02Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154243-22e496",
+      "content_hash": "sha256:69408b54d6b1ec4c0a22974de4fdf4b065473b438c17896168a828346cdf7314",
+      "size": 613,
+      "content": "---\nid: 漯阴\ntype: place\nsources: [曹相国世家]\nlabel: 漯阴\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [117.01056, 36.89413]\ncoords_name: \"漯阴县\"\ncoords_source: \"CHGIS hvd_45092\"\nfeatured: true\n---\n# 漯阴\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[054_曹相国世家]]：`5`\n\n**引文摘录：**\n\n> **出自 [[054_曹相国世家]]（054-5）：** 还定济北郡，攻著、漯阴、平原、鬲、卢。\n\n---\n\n## 相关章节\n\n- [[054_曹相国世家|曹相国世家]]"
+    },
     {
       "rev_id": "20260425-154243-22e496",
       "timestamp": "2026-04-25T15:42:43Z",

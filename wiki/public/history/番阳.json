@@ -1,8 +1,18 @@
 {
   "page": "番阳",
-  "latest_rev_id": "20260425-154934-9b4acb",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205903-2f3bc6",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205903-2f3bc6",
+      "timestamp": "2026-04-25T20:59:03Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154934-9b4acb",
+      "content_hash": "sha256:2f3bc6d95bcb5b130a60c5b4c4340a2f4d74061cc7f8f3841f69c2045a56e146",
+      "size": 743,
+      "content": "---\nid: 番阳\ntype: place\nsources: [黥布列传]\nlabel: 番阳\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [116.66383, 28.99417]\ncoords_name: \"番阳县\"\ncoords_source: \"CHGIS hvd_41162\"\nfeatured: true\n---\n# 番阳\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[091_黥布列传]]：`17`\n\n**引文摘录：**\n\n> **出自 [[091_黥布列传]]（091-17）：** 布故与番君婚，以故长沙哀王使人绐布，伪与亡，诱走越，故信而随之番阳。\n> **出自 [[091_黥布列传]]（091-17）：** 番阳人杀布兹乡民田舍，遂灭黥布。\n\n---\n\n## 相关章节\n\n- [[091_黥布列传|黥布列传]]"
+    },
     {
       "rev_id": "20260425-154934-9b4acb",
       "timestamp": "2026-04-25T15:49:34Z",

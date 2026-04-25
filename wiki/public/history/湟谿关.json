@@ -1,8 +1,18 @@
 {
   "page": "湟谿关",
-  "latest_rev_id": "20260425-154602-ccf60c",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205902-bac928",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205902-bac928",
+      "timestamp": "2026-04-25T20:59:02Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154602-ccf60c",
+      "content_hash": "sha256:bac928aee43a1ed1b632bc894254225af52ae08f43fd4c17b07a1e8529348455",
+      "size": 561,
+      "content": "---\nid: 湟谿关\ntype: place\nsources: [南越列传]\nlabel: 湟谿关\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"关隘\"]\nauto_generated: true\nfeatured: true\n---\n# 湟谿关\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[113_南越列传]]：`1`\n\n**引文摘录：**\n\n> **出自 [[113_南越列传]]（113-1）：** 嚣死，佗即移檄告横浦、阳山、湟谿关曰：“盗兵且至，急绝道聚兵自守！\n\n---\n\n## 相关章节\n\n- [[113_南越列传|南越列传]]"
+    },
     {
       "rev_id": "20260425-154602-ccf60c",
       "timestamp": "2026-04-25T15:46:02Z",

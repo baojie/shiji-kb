@@ -1,8 +1,18 @@
 {
   "page": "城武",
-  "latest_rev_id": "20260425-143031-7afa3a",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205841-758ea2",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205841-758ea2",
+      "timestamp": "2026-04-25T20:58:41Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143031-7afa3a",
+      "content_hash": "sha256:758ea236a7a34260a4c6db588d2393e265eb4fc439f60f415b91b3d18f970c81",
+      "size": 604,
+      "content": "---\nid: 城武\ntype: place\nsources: [绛侯周勃世家]\nlabel: 城武\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [115.87518, 34.96223]\ncoords_name: \"城武县\"\ncoords_source: \"CHGIS hvd_85116\"\nfeatured: true\n---\n# 城武\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[057_绛侯周勃世家]]：`2`\n\n**引文摘录：**\n\n> **出自 [[057_绛侯周勃世家]]（057-2）：** 攻东郡尉於城武，破之。\n\n---\n\n## 相关章节\n\n- [[057_绛侯周勃世家|绛侯周勃世家]]"
+    },
     {
       "rev_id": "20260425-143031-7afa3a",
       "timestamp": "2026-04-25T14:30:31Z",

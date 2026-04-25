@@ -1,8 +1,18 @@
 {
   "page": "霍太山",
-  "latest_rev_id": "20260425-143652-daaadc",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205909-ba5052",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205909-ba5052",
+      "timestamp": "2026-04-25T20:59:09Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143652-daaadc",
+      "content_hash": "sha256:ba50521d3f8d641013fd9c8b974454baeb182ed4cb4bbdad7ea201772988474e",
+      "size": 667,
+      "content": "---\nid: 霍太山\ntype: place\nsources: [秦本纪]\nlabel: 霍太山\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 霍太山\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[005_秦本纪]]：`3`\n\n**引文摘录：**\n\n> **出自 [[005_秦本纪]]（005-3）：** 是时蜚廉为纣石北方，还，无所报，为坛霍太山而报，得石棺，铭曰“帝令处父不与殷乱，赐尔石棺以华氏”。\n> **出自 [[005_秦本纪]]（005-3）：** 死，遂葬於霍太山。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]"
+    },
     {
       "rev_id": "20260425-143652-daaadc",
       "timestamp": "2026-04-25T14:36:52Z",

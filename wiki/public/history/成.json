@@ -1,8 +1,18 @@
 {
   "page": "成",
-  "latest_rev_id": "20260425-184338-f58612",
-  "revision_count": 8,
+  "latest_rev_id": "20260425-203852-cfcb64",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260425-203852-cfcb64",
+      "timestamp": "2026-04-25T20:38:52Z",
+      "author": "butler",
+      "summary": "restore: 恢复被expand覆盖的史记引文节",
+      "parent_rev": "20260425-184338-f58612",
+      "content_hash": "sha256:cfcb640ab19fca1ee9f8c135be0da9a24dbe732a5787117ccba4193131062f59",
+      "size": 1321,
+      "content": "---\nid: 成\ntype: place\nsources: [孔子世家]\nlabel: 成\ndescription: \"《史记》中出现 5 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [105.2759, 33.97031]\ncoords_name: \"成州\"\ncoords_source: \"CHGIS 212655\"\nfeatured: true\n---\n# 成\n\n成，春秋时期鲁国城邑，约在今山东宁阳一带，是鲁国三桓之一孟孙氏的采邑重镇，城防坚固，是孟孙氏维持政治独立性的军事依托。《孔子世家》中，成与费、郈并列，是孔子推行\"堕三都\"政策的核心目标之一。\n\n孔子出任鲁国司寇并摄行相事后，力主拆毁三桓私邑以加强公室权威。费邑、郈邑相继被拆，然孟孙氏拒绝拆除成邑，\"公围成，弗克\"，攻城未果，堕三都计划因此受挫，公室振兴的努力最终失败。成邑的坚守象征着三桓势力对公室改革的顽固抵制，也是孔子政治理想受挫的关键历史场景。\n\n\n## 史记引文\n\n《史记》中出现 **5** 次，见于以下章节：\n\n- [[047_孔子世家]]：`10.1`\n\n**引文摘录：**\n\n[^life]: 生卒年推断参见[《成生卒年推断》](../../doc/lifespan_inference/西汉/成.md)（生：公元前 260 年 ~ 公元前 190 年·卒：公元前 175 年·置信度：低）。\n\n## 相关章节\n\n[[047_孔子世家]]\n"
+    },
     {
       "rev_id": "20260425-184338-f58612",
       "timestamp": "2026-04-25T18:43:38Z",

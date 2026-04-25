@@ -1,8 +1,18 @@
 {
   "page": "祁",
-  "latest_rev_id": "20260425-154117-36cb63",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205904-36e701",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205904-36e701",
+      "timestamp": "2026-04-25T20:59:04Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154117-36cb63",
+      "content_hash": "sha256:36e701dbd48519d2236e3d218be31e1f0c844b1cc5e72eab4ad5c9c5e1af113e",
+      "size": 607,
+      "content": "---\nid: 祁\ntype: place\nsources: [曹相国世家]\nlabel: 祁\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [114.97085, 38.17533]\ncoords_name: \"祁州\"\ncoords_source: \"CHGIS 210274\"\nfeatured: true\n---\n# 祁\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[054_曹相国世家]]：`2`\n\n**引文摘录：**\n\n> **出自 [[054_曹相国世家]]（054-2）：** 击秦司马枿军砀东，破之，取砀、狐父、祁善置。\n\n---\n\n## 相关章节\n\n- [[054_曹相国世家|曹相国世家]]"
+    },
     {
       "rev_id": "20260425-154117-36cb63",
       "timestamp": "2026-04-25T15:41:17Z",

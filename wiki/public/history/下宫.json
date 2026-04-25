@@ -1,8 +1,18 @@
 {
   "page": "下宫",
-  "latest_rev_id": "20260425-154028-575f39",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205838-9eebd7",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205838-9eebd7",
+      "timestamp": "2026-04-25T20:58:38Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154028-575f39",
+      "content_hash": "sha256:9eebd75d81bfe82bcff64ebeef95152cd676a12593c1890ab9104a13305cc11a",
+      "size": 542,
+      "content": "---\nid: 下宫\ntype: place\nsources: [赵世家]\nlabel: 下宫\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"建筑\"]\nauto_generated: true\nfeatured: true\n---\n# 下宫\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[043_赵世家]]：`11`\n\n**引文摘录：**\n\n> **出自 [[043_赵世家]]（043-11）：** 贾不请而擅与诸将攻赵氏於下宫，杀赵朔、赵同、赵括、赵婴齐，皆灭其族。\n\n---\n\n## 相关章节\n\n- [[043_赵世家|赵世家]]"
+    },
     {
       "rev_id": "20260425-154028-575f39",
       "timestamp": "2026-04-25T15:40:28Z",

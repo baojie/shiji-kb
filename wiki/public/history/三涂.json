@@ -1,8 +1,18 @@
 {
   "page": "三涂",
-  "latest_rev_id": "20260425-142840-e2ecf6",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205838-6e2ff2",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205838-6e2ff2",
+      "timestamp": "2026-04-25T20:58:38Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-142840-e2ecf6",
+      "content_hash": "sha256:6e2ff21d3d6320805cfe475ca97a976215a41a92e128c333f017c724f17e24bc",
+      "size": 521,
+      "content": "---\nid: 三涂\ntype: place\nsources: [周本纪]\nlabel: 三涂\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"山脉\"]\nauto_generated: true\nfeatured: true\n---\n# 三涂\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[004_周本纪]]：`18`\n\n**引文摘录：**\n\n> **出自 [[004_周本纪]]（004-18）：** 我南望三涂，北望岳鄙，顾詹有河，粤詹雒、伊，毋远天室。\n\n---\n\n## 相关章节\n\n- [[004_周本纪|周本纪]]"
+    },
     {
       "rev_id": "20260425-142840-e2ecf6",
       "timestamp": "2026-04-25T14:28:40Z",

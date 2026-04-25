@@ -1,8 +1,18 @@
 {
   "page": "宣房宫",
-  "latest_rev_id": "20260425-143110-254db2",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205843-040ebb",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205843-040ebb",
+      "timestamp": "2026-04-25T20:58:43Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143110-254db2",
+      "content_hash": "sha256:040ebb4fe73c5cf4951f85799fd52b61dc4afa629334252db0078b4f7df388f1",
+      "size": 506,
+      "content": "---\nid: 宣房宫\ntype: place\nsources: [河渠书]\nlabel: 宣房宫\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"建筑\"]\nauto_generated: true\nfeatured: true\n---\n# 宣房宫\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[029_河渠书]]：`12`\n\n**引文摘录：**\n\n> **出自 [[029_河渠书]]（029-12）：** ”於是卒塞瓠子，筑宫其上，名曰宣房宫。\n\n---\n\n## 相关章节\n\n- [[029_河渠书|河渠书]]"
+    },
     {
       "rev_id": "20260425-143110-254db2",
       "timestamp": "2026-04-25T14:31:10Z",

@@ -1,8 +1,18 @@
 {
   "page": "徙",
-  "latest_rev_id": "20260425-154334-56b084",
-  "revision_count": 9,
+  "latest_rev_id": "20260425-205846-fba4e1",
+  "revision_count": 10,
   "revisions": [
+    {
+      "rev_id": "20260425-205846-fba4e1",
+      "timestamp": "2026-04-25T20:58:46Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154334-56b084",
+      "content_hash": "sha256:fba4e1b6de7e19a7b281188aedb156e7b4dfdac860a7db6b27460d22d4ba70d8",
+      "size": 596,
+      "content": "---\nid: 徙\ntype: place\nsources: [大宛列传]\nlabel: 徙\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [102.82552, 30.0271]\ncoords_name: \"徙县\"\ncoords_source: \"CHGIS hvd_96383\"\nfeatured: true\n---\n# 徙\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[123_大宛列传]]：`15`\n\n**引文摘录：**\n\n> **出自 [[123_大宛列传]]（123-15）：** 单于死，昆莫乃率其众远徙，中立，不肯朝会匈奴。\n\n---\n\n## 相关章节\n\n- [[123_大宛列传|大宛列传]]"
+    },
     {
       "rev_id": "20260425-154334-56b084",
       "timestamp": "2026-04-25T15:43:34Z",

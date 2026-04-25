@@ -1,8 +1,18 @@
 {
   "page": "江水",
-  "latest_rev_id": "20260425-143322-be8c24",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205901-197228",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205901-197228",
+      "timestamp": "2026-04-25T20:59:01Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143322-be8c24",
+      "content_hash": "sha256:197228019276b4210de49d1483ed2944f69d3ad011429e128325719c3de500e9",
+      "size": 601,
+      "content": "---\nid: 江水\ntype: place\nsources: [五帝本纪]\nlabel: 江水\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"水域\"]\nauto_generated: true\nfeatured: true\n---\n# 江水\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[001_五帝本纪]]：`4.1`\n\n**引文摘录：**\n\n> **出自 [[001_五帝本纪]]（001-4.1）：** 嫘祖为黄帝正妃，生二子，其後皆有天下：其一曰玄嚣，是为青阳，青阳降居江水；其二曰昌意，降居若水。\n\n---\n\n## 相关章节\n\n- [[001_五帝本纪|五帝本纪]]"
+    },
     {
       "rev_id": "20260425-143322-be8c24",
       "timestamp": "2026-04-25T14:33:22Z",

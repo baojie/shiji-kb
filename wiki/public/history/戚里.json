@@ -1,8 +1,18 @@
 {
   "page": "戚里",
-  "latest_rev_id": "20260425-143207-3253c9",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205846-3ccfe3",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205846-3ccfe3",
+      "timestamp": "2026-04-25T20:58:46Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-143207-3253c9",
+      "content_hash": "sha256:3ccfe3ba68e7c255879f7a18223fc25e66d324197520aadb58ba6221b8842c23",
+      "size": 688,
+      "content": "---\nid: 戚里\ntype: place\nsources: [万石张叔列传]\nlabel: 戚里\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"乡里\"]\nauto_generated: true\ncoords: [112.7362, 27.83956]\ncoords_name: \"戚里铺\"\ncoords_source: \"CHGIS hvd_129321\"\nfeatured: true\n---\n# 戚里\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[103_万石张叔列传]]：`1`\n\n**引文摘录：**\n\n> **出自 [[103_万石张叔列传]]（103-1）：** ”於是高祖召其姊为美人，以奋为中涓，受书谒，徙其家长安中戚里，以姊为美人故也。\n\n---\n\n## 相关章节\n\n- [[103_万石张叔列传|万石张叔列传]]"
+    },
     {
       "rev_id": "20260425-143207-3253c9",
       "timestamp": "2026-04-25T14:32:07Z",

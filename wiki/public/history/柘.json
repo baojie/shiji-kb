@@ -1,8 +1,18 @@
 {
   "page": "柘",
-  "latest_rev_id": "20260425-154437-55ae0e",
-  "revision_count": 7,
+  "latest_rev_id": "20260425-205859-62f3fe",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260425-205859-62f3fe",
+      "timestamp": "2026-04-25T20:58:59Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-154437-55ae0e",
+      "content_hash": "sha256:62f3fe67b6e4271f5c83c63e46cc1b9648b48019db64273d178858a67142c32c",
+      "size": 673,
+      "content": "---\nid: 柘\ntype: place\nsources: [陈涉世家]\nlabel: 柘\ndescription: \"《史记》中出现 2 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"县\"]\nauto_generated: true\ncoords: [103.72003, 32.32283]\ncoords_name: \"柘州\"\ncoords_source: \"CHGIS 211251\"\nfeatured: true\n---\n# 柘\n\n## 史记引文\n\n《史记》中出现 **2** 次，见于以下章节：\n\n- [[018_高祖功臣侯者年表]]：`r132`\n- [[048_陈涉世家]]：`2.2`\n\n**引文摘录：**\n\n> **出自 [[048_陈涉世家]]（048-2.2）：** 攻铚、酂、苦、柘、谯皆下之。\n\n---\n\n## 相关章节\n\n- [[048_陈涉世家|陈涉世家]]\n- [[018_高祖功臣侯者年表|高祖功臣侯者年表]]"
+    },
     {
       "rev_id": "20260425-154437-55ae0e",
       "timestamp": "2026-04-25T15:44:37Z",

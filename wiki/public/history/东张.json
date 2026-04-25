@@ -1,8 +1,18 @@
 {
   "page": "东张",
-  "latest_rev_id": "20260425-142847-5fa23a",
-  "revision_count": 6,
+  "latest_rev_id": "20260425-205838-670a5e",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260425-205838-670a5e",
+      "timestamp": "2026-04-25T20:58:38Z",
+      "author": "butler",
+      "summary": "fix: PN块内引文句子错位修复（取含实体名的句子）",
+      "parent_rev": "20260425-142847-5fa23a",
+      "content_hash": "sha256:670a5ef5a5e6b893f3c0bf05495646bd741d17da65045957be9d47d28a256c01",
+      "size": 652,
+      "content": "---\nid: 东张\ntype: place\nsources: [曹相国世家]\nlabel: 东张\ndescription: \"《史记》中出现 1 次，见于以下章节：\"\naliases: []\ntags: [\"地名\", \"城邑\"]\nauto_generated: true\ncoords: [102.81838, 37.63697]\ncoords_name: \"东张掖郡\"\ncoords_source: \"CHGIS 211835\"\nfeatured: true\n---\n# 东张\n\n## 史记引文\n\n《史记》中出现 **1** 次，见于以下章节：\n\n- [[054_曹相国世家]]：`5`\n\n**引文摘录：**\n\n> **出自 [[054_曹相国世家]]（054-5）：** 月馀，魏王豹反，以假左丞相别与韩信东攻魏将军孙遫军东张，大破之。\n\n---\n\n## 相关章节\n\n- [[054_曹相国世家|曹相国世家]]"
+    },
     {
       "rev_id": "20260425-142847-5fa23a",
       "timestamp": "2026-04-25T14:28:47Z",
