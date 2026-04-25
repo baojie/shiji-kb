@@ -348,8 +348,8 @@
 （discover_doc.py 有大量假阳性；以下为手工验证的真阳性）
 
 - [x] 项羽: `cite-doc-report` ✓ R4957
-- [ ] 秦始皇: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/秦/秦始皇.md] [P1] [2026-04-25]
-- [ ] 韩信: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/西汉/韩信.md] [P1] [2026-04-25]
-- [ ] 张良: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/西汉/张良.md] [P1] [2026-04-25]
-- [ ] 司马迁: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/西汉/司马迁.md] [P1] [2026-04-25]
-- [ ] 孔子: `cite-doc-report` [^life] 缺失 [源: doc/lifespan_inference/春秋/孔子.md] [P1] [2026-04-25]
+- [x] 秦始皇: `cite-doc-report` ✓ R4995 假阳性（页面已有[^life]）
+- [x] 韩信: `cite-doc-report` ✓ R4995 假阳性（页面已有[^life]）
+- [x] 张良: `cite-doc-report` ✓ R4995 假阳性（页面已有[^life]）
+- [x] 司马迁: `cite-doc-report` ✓ R4995 假阳性（页面已有[^life]）
+- [x] 孔子: `cite-doc-report` ✓ R4995 假阳性（页面已有[^life]）

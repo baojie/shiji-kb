@@ -3220,3 +3220,7 @@
 {"round": 4992, "ts": "2026-04-25T07:28:18Z", "mode": "trail", "action": "add-pn-sourcing", "target": "晋孝侯", "summary": "sources=[晋世家,楚世家] pn=[039-12,040-13]", "rev": "20260425-072810-aa64ed", "result": "accept"}
 {"round": 4993, "ts": "2026-04-25T07:30:13Z", "mode": "explore", "action": "add-pn-sourcing", "target": "晋文侯", "summary": "sources=[晋世家,赵世家] pn=[039-70,043-3]", "rev": "20260425-073006-765753", "result": "accept"}
 {"round": 4994, "ts": "2026-04-25T07:34:16Z", "mode": "housekeeping", "action": "fix-pn-format", "target": "wiki/public/pages/ (53 pages)", "summary": "批量修正 pn 字段格式：[a, b] → (a)(b)，影响53页", "result": "accept"}
+{"round": 4995, "ts": "2026-04-25T08:00:00Z", "mode": "housekeeping", "action": "queue-cleanup", "target": "queue.md cite-doc-report (5条)", "summary": "标记5条cite-doc-report为假阳性：秦始皇/韩信/张良/司马迁/孔子页面均已有[^life]注脚", "result": "accept"}
+{"round": 4996, "ts": "2026-04-25T08:03:39Z", "mode": "trail", "action": "add-pn-sourcing", "target": "晋穆侯", "summary": "sources=[晋世家] pn=(039-4)", "rev": "20260425-080339-442ee3", "result": "accept"}
+{"round": 4997, "ts": "2026-04-25T08:05:23Z", "mode": "trail", "action": "add-pn-sourcing", "target": "晋鄂侯", "summary": "sources=[晋世家] pn=(039-14)", "rev": "20260425-080523-81455d", "result": "accept"}
+{"round": 4998, "ts": "2026-04-25T08:07:09Z", "mode": "trail", "action": "add-pn-sourcing", "target": "曲沃庄伯", "summary": "sources=[卫康叔世家,晋世家,楚世家] pn=(037-12)(039-12)(039-14)(039-15)(040-13)", "rev": "20260425-080709-8e5a2e", "result": "accept"}
