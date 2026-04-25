@@ -2,7 +2,7 @@
 id: Fact 002：伍子胥在吴的政治生涯——从谋士到功臣
 type: overview
 label: Fact 002：伍子胥在吴的政治生涯——从谋士到功臣
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

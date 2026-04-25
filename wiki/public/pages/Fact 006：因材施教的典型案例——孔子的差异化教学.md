@@ -2,7 +2,7 @@
 id: Fact 006：因材施教的典型案例——孔子的差异化教学
 type: overview
 label: Fact 006：因材施教的典型案例——孔子的差异化教学
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

@@ -2,7 +2,7 @@
 id: Fact 003：伍子胥屡谏夫差——忠谏不纳的政治悲剧
 type: overview
 label: Fact 003：伍子胥屡谏夫差——忠谏不纳的政治悲剧
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

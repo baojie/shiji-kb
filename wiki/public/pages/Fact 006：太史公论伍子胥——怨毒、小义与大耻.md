@@ -2,7 +2,7 @@
 id: Fact 006：太史公论伍子胥——怨毒、小义与大耻
 type: overview
 label: Fact 006：太史公论伍子胥——怨毒、小义与大耻
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

@@ -2,7 +2,7 @@
 id: Fact 003：子贡的外交奇迹——一使五国变
 type: overview
 label: Fact 003：子贡的外交奇迹——一使五国变
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

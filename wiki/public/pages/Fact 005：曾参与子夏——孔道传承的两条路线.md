@@ -2,7 +2,7 @@
 id: Fact 005：曾参与子夏——孔道传承的两条路线
 type: overview
 label: Fact 005：曾参与子夏——孔道传承的两条路线
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

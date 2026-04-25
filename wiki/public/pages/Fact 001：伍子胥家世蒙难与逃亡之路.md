@@ -2,7 +2,7 @@
 id: Fact 001：伍子胥家世蒙难与逃亡之路
 type: overview
 label: Fact 001：伍子胥家世蒙难与逃亡之路
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

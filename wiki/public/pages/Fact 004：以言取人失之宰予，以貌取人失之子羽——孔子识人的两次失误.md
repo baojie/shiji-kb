@@ -2,7 +2,7 @@
 id: Fact 004：以言取人失之宰予，以貌取人失之子羽——孔子识人的两次失误
 type: overview
 label: Fact 004：以言取人失之宰予，以貌取人失之子羽——孔子识人的两次失误
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

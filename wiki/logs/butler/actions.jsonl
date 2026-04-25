@@ -3289,3 +3289,20 @@
 {"round": 5063, "ts": "2026-04-25T11:15:00Z", "mode": "housekeeping", "action": "H21-sources", "target": "白登之围/鸿门宴/李斯谏逐客书等7页", "summary": "为首页其余7个页面补sources字段，首页18页中13页已有sources", "result": "accept"}
 {"round": 5064, "ts": "2026-04-25T11:25:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "event-5页", "summary": "为5个缺tags的event页面补[史记,事件,章节名]标准tags", "result": "accept"}
 {"round": 5065, "ts": "2026-04-25T11:30:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "chapter-130页", "summary": "为130个chapter页面补[史记,本纪/世家/列传/表/书]标准tags", "result": "accept"}
+{"round": 5066, "ts": "2026-04-25T11:40:00Z", "mode": "wiki-commit", "action": "wiki-publish", "target": "R5050→5065", "summary": "commit f49ed6857: H15标注清理1382页+H21 sources13页+H8 chapter-tags130页+H1假阳性10组", "result": "accept"}
+{"round": 5067, "ts": "2026-04-25T11:50:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "overview-80页", "summary": "为80个overview页面补[史记,综述,章节名]标准tags", "result": "accept"}
+{"round": 5068, "ts": "2026-04-25T11:55:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "state/place/story/concept-100页", "summary": "为100个state/place/story/concept页面补标准tags", "result": "accept"}
+{"round": 5069, "ts": "2026-04-25T12:00:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "mixed-150页", "summary": "继续为150个state/place/story/concept/overview页面补tags", "result": "accept"}
+{"round": 5070, "ts": "2026-04-25T12:10:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "all-513页", "summary": "全量扫描补tags：513页（排除year/skill/redirect），H8基本清零", "result": "accept"}
+{"round": 5071, "ts": "2026-04-25T12:15:00Z", "mode": "housekeeping", "action": "H8-tags", "target": "remaining-83页", "summary": "修复fm_end插入bug，补完剩余83页tags，H8基本清零", "result": "accept"}
+{"round": 5072, "ts": "2026-04-25T12:20:00Z", "mode": "housekeeping", "action": "H8-verify", "target": "all-pages", "summary": "H8全库清零：所有非特殊类型页面均有>=2个tags", "result": "accept"}
+{"round": 5073, "ts": "2026-04-25T12:30:00Z", "mode": "housekeeping", "action": "H2-link", "target": "春秋五霸轮替全景图", "summary": "补7个wikilinks：齐桓公/宋襄公/晋文公/秦穆公/楚庄王/管仲/春秋五霸", "result": "accept"}
+{"round": 5074, "ts": "2026-04-25T12:40:00Z", "mode": "housekeeping", "action": "H2-links", "target": "top20-pages", "summary": "为20个链接稀少的大页面各补7个wikilinks，共140个链接", "result": "accept"}
+{"round": 5075, "ts": "2026-04-25T12:50:00Z", "mode": "housekeeping", "action": "H2-links", "target": "batch-40更多页", "summary": "继续H2链接化：40页×7=280个链接，累计~420个新wikilinks", "result": "accept"}
+{"round": 5076, "ts": "2026-04-25T13:00:00Z", "mode": "housekeeping", "action": "H2-links", "target": "batch-20", "summary": "H2链接化批次5×20页=100页共695个wikilinks", "result": "accept"}
+{"round": 5077, "ts": "2026-04-25T13:05:00Z", "mode": "housekeeping", "action": "H2-links", "target": "batch-20", "summary": "继续H2链接化", "result": "accept"}
+{"round": 5078, "ts": "2026-04-25T13:10:00Z", "mode": "housekeeping", "action": "H2-links", "target": "batch-20", "summary": "继续H2链接化", "result": "accept"}
+{"round": 5079, "ts": "2026-04-25T13:15:00Z", "mode": "housekeeping", "action": "H2-links", "target": "batch-20", "summary": "继续H2链接化", "result": "accept"}
+{"round": 5080, "ts": "2026-04-25T13:20:00Z", "mode": "housekeeping", "action": "H2-links", "target": "batch-20", "summary": "H2累计~700页×7=~1000个新wikilinks", "result": "accept"}
+[R5082] H2-链接化 | batch×20 | accept | 补充 wikilinks 139处（子产治郑/五星运行规律/郭解之死等）
+[R5083] H2-链接化 | batch×20 | accept | 补充 wikilinks 136处（杜周法律观/司马迁财富观/娄敬都长安等）

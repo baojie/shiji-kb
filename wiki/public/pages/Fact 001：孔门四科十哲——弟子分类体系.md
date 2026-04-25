@@ -2,7 +2,7 @@
 id: Fact 001：孔门四科十哲——弟子分类体系
 type: overview
 label: Fact 001：孔门四科十哲——弟子分类体系
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

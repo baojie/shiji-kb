@@ -2,7 +2,7 @@
 id: Fact 010：老莱子身份疑辨
 type: overview
 label: Fact 010：老莱子身份疑辨
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

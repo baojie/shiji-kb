@@ -2,7 +2,7 @@
 id: Fact 004：费无忌与伯嚭——谗臣的两种模式
 type: overview
 label: Fact 004：费无忌与伯嚭——谗臣的两种模式
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

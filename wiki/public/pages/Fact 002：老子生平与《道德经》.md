@@ -2,7 +2,7 @@
 id: Fact 002：老子生平与《道德经》
 type: overview
 label: Fact 002：老子生平与《道德经》
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

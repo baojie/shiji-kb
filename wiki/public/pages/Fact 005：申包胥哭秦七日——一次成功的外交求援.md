@@ -2,7 +2,7 @@
 id: Fact 005：申包胥哭秦七日——一次成功的外交求援
 type: overview
 label: Fact 005：申包胥哭秦七日——一次成功的外交求援
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

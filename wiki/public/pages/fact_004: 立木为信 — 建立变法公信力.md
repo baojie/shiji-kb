@@ -2,7 +2,7 @@
 id: 'fact_004: 立木为信 — 建立变法公信力'
 type: overview
 label: 'fact_004: 立木为信 — 建立变法公信力'
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 

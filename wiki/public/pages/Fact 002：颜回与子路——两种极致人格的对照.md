@@ -2,7 +2,7 @@
 id: Fact 002：颜回与子路——两种极致人格的对照
 type: overview
 label: Fact 002：颜回与子路——两种极致人格的对照
-tags: [列传]
+tags: [史记, 综述]
 featured: false
 ---
 
