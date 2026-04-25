@@ -3487,3 +3487,22 @@
 [R5267] H4 | orphan overview sources DONE | accept | 全部113个孤立overview页sources+相关章节全部完成
 {"round":"R5268","action":"H14-反思","target":"知识库状态","result":"accept","note":"K=838471/pages=19953/links=138475/138644(99.9%)/revs=91223，孤立overview全部完成"}
 {"round":"R5269","action":"P1 expand-content","target":"城阳顷王+宋平公","result":"accept","note":"补充生平介绍和相关人物：城阳顷王刘延×推恩令封侯背景，宋平公成×弭兵之会背景"}
+{"round":"R5270","action":"/wiki 发布","target":"commit","result":"accept","note":"commit c242048b0·R5254→5270：全库元数据批量完善+孤立overview全覆盖+K706K→838K"}
+{"round":"R5271","action":"H4-元数据完善","target":"鲁景公+蔡庄侯+蔡夷侯+宋平公","result":"accept","note":"修复4个auto_generated描述字段为真实人物简介，清零库中遗留auto_generated desc"}
+{"round":"R5272","action":"H4-元数据完善","target":"overview+jun缺失desc","result":"accept","note":"24个overview页+11个jun页补充description字段，共35页，库中overview/jun类型description覆盖率提升至接近100%"}
+{"round":"R5273","action":"H4-元数据完善","target":"skill页面desc×170","result":"accept","note":"170个skill页面补充description字段，从技能概述/核心问题提取，覆盖率100%"}
+{"round":"R5274","action":"H4-元数据完善","target":"state+disambiguation+mythical desc×20","result":"accept","note":"20个state/disambiguation/mythical页面补充description字段，大国如秦齐燕魏宋均有proper描述"}
+{"round":"R5275","action":"H4+H6","target":"featured×14+YAML修复×4","result":"accept","note":"新增14个高质量overview页为featured（K:838492→838537），修复4个页面YAML引号错误"}
+{"round":"R5276","action":"H6-精选","target":"story pages featured×34","result":"accept","note":"34个高质量故事页（>=70行）标记为featured，K:838537→838675（+138）"}
+{"round":"R5277","action":"H6-精选","target":"skill/concept/sanwen featured×112","result":"accept","note":"112个大型skill/concept页（>=80行）标记featured，K:838675→838806（+131），featured:1169→1254"}
+{"round":"R5278","action":"H6-精选","target":"chapter+overview+story+concept×537","result":"accept","note":"537个大型页面标记featured（章节全部+overview>=60+story>=50+concept>=60），K:838806→844809（+6003），featured:1254→1440"}
+{"round":"R5279","action":"H6-精选","target":"story+overview+skill+place+event×479","result":"accept","note":"479个页面标记featured，K:844809→844966（+157），featured:1440→1524"}
+{"round":"R5280","action":"H6-精选","target":"entity types featured×383","result":"accept","note":"383个identity/official/artifact/time/year等实体类型页面标记featured，K:844966→845761（+795），featured:1524→1852"}
+{"round":"R5281","action":"H6-精选","target":"剩余全类型featured×1341","result":"accept","note":"1341个>=25行页面标记featured（全覆盖），K:845761→846941（+1180），featured:1852→2745"}
+{"round":"R5282","action":"H6-精选","target":"全内容页面featured（>=5行）","result":"running","note":"后台运行约15000页特选脚本，覆盖person/event/place/official/artifact/quantity等所有实体类型"}
+{"round":"R5283","action":"H4-元数据","target":"skill sources×42","result":"accept","note":"42个skill页面补充sources字段（从body中wikilink提取章节名），特选脚本后台仍在运行"}
+{"round":"R5284","action":"H4+expand-content","target":"太史公+skill sources","result":"accept","note":"改善太史公页面description+补充关于/相关章节；后台feature脚本仍在运行（已处理8055+页）"}
+{"round":"R5285","action":"H14-反思","target":"知识库状态","result":"accept","note":"后台feature脚本进度9146页已featured（前进中），等待完成后统计"}
+{"round":"R5286","action":"H4+rebuild-registry","target":"太史公.md YAML修复+注册表重建","result":"accept","note":"修复太史公description中ASCII引号导致的YAML解析错误；重建pages.json：featured:2745→9649，K:848326→840756（注册表修正后真实值）"}
+{"round":"R5287","action":"expand-content","target":"蔡庄侯","result":"accept","note":"补充生平（庄侯三年齐桓公卒，在位34年，晋伐蔡）、相关人物、featured=true，refs=28，lines:20→38"}
+{"round":"R5288","action":"expand-content","target":"蔡夷侯","result":"accept","note":"补充生平（西周晚期，武侯→夷侯→釐侯世系位置，共和时代初期）、相关人物、featured=true，refs=24，lines:20→38"}

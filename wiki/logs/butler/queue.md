@@ -21,13 +21,13 @@
 - [ ] P1 | [[刘舜]] | 42行 · refs=81 · type=person | action: expand-content
 - [ ] P1 | [[雍王]] | 37行 · refs=79 · type=person | action: expand-content
 - [ ] P1 | [[张楚楚隐王]] | 41行 · refs=71 · type=person | action: expand-content
-- [ ] P1 | [[蔡庄侯]] | 20行 · refs=28 · type=person | action: expand-content
+- [x] P1 | [[蔡庄侯]] | 20行 · refs=28 · type=person | action: expand-content <!-- R5287: 已完成 -->
 - [ ] P1 | [[晋哀侯]] | 37行 · refs=26 · type=person | action: expand-content
 - [ ] P1 | [[蔡共侯]] | 36行 · refs=24 · type=person | action: expand-content
-- [ ] P1 | [[蔡夷侯]] | 20行 · refs=24 · type=person | action: expand-content
-- [ ] P1 | [[城阳顷王]] | 17行 · refs=22 · type=person | action: expand-content
+- [x] P1 | [[蔡夷侯]] | 20行 · refs=24 · type=person | action: expand-content <!-- R5288: 已完成 -->
+- [x] P1 | [[城阳顷王]] | 17行 · refs=22 · type=person | action: expand-content <!-- R5269: 已完成 -->
 - [ ] P1 | [[汉昭帝]] | 39行 · refs=22 · type=person | action: expand-content
-- [ ] P1 | [[宋平公]] | 20行 · refs=21 · type=person | action: expand-content
+- [x] P1 | [[宋平公]] | 20行 · refs=21 · type=person | action: expand-content <!-- R5269: 已完成 -->
 - [ ] P1 | [[汉宣帝]] | 41行 · refs=21 · type=person | action: expand-content
 - [ ] P1 | [[卫顷侯]] | 29行 · refs=19 · type=person | action: expand-content
 - [ ] P1 | [[晋靖侯]] | 29行 · refs=19 · type=person | action: expand-content
