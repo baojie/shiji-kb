@@ -1,8 +1,19 @@
 {
   "page": "（齐王，早卒无谥）",
-  "latest_rev_id": "20260426-111501-b464fb",
-  "revision_count": 5,
+  "latest_rev_id": "20260426-115150-b47495",
+  "revision_count": 6,
   "revisions": [
+    {
+      "rev_id": "20260426-115150-b47495",
+      "timestamp": "2026-04-26T11:51:50Z",
+      "author": "butler",
+      "summary": "修正REDIRECT格式：补 body REDIRECT [[刘闳]]",
+      "parent_rev": "20260426-111501-b464fb",
+      "content_hash": "sha256:b47495a95982ebb448a3c5713bd91045596f42b4ca837462bfe042c4623e2ee2",
+      "size_before": 105,
+      "size": 140,
+      "content": "---\nid: （齐王，早卒无谥）\ntype: person\nlabel: （齐王，早卒无谥）\nREDIRECT: 刘闳\nquality: stub\n---\n\nREDIRECT [[刘闳]]\n"
+    },
     {
       "rev_id": "20260426-111501-b464fb",
       "timestamp": "2026-04-26T11:15:01Z",

@@ -105,6 +105,24 @@ article th, article td {
 }
 article th { background: var(--bg-box); font-weight: 600; }
 article hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
+.seealso-block {
+  margin: .8em 0;
+  padding: .4em .8em;
+  background: #eef3e8;
+  border-left: 3px solid #5c8a42;
+  border-radius: 0 3px 3px 0;
+  font-size: .93em;
+}
+.seealso-label {
+  font-weight: 600;
+  color: #3d6b28;
+  margin: 0 .4em 0 0;
+  display: inline;
+}
+p.seealso-block { margin: .8em 0; }
+p.seealso-block .seealso-label { display: inline; }
+.seealso-block ul { margin: .2em 0 0 0; padding-left: 1.4em; }
+.seealso-block li { margin: .15em 0; }
 article em { color: var(--fg-muted); font-style: normal; }
 article img { max-width: 100%; height: auto; display: block; margin: .8em 0 .2em; border-radius: 4px; }
 article img + em { display: block; font-size: .85em; color: var(--fg-muted); margin-bottom: .8em; }

@@ -1,13 +1,15 @@
 /**
- * semantic-block — ::: infobox 和 ::: meta 渲染插件
+ * semantic-block — ::: infobox / ::: meta / ::: seealso 渲染插件
  *
  * 职责：
  *   onBeforeRender  解析页面中所有 ::: 块，替换为占位符（所有类型，含 query）
- *   onAfterRender   展开 infobox / meta 占位符；query 占位符原样保留给 semantic-query
+ *   onAfterRender   展开 infobox / meta / seealso 占位符；query 占位符原样保留给 semantic-query
  *   onInfobox       将第一个 ::: infobox 的字段注入 sidebar
  *
  * 通过 core.semanticBlock 暴露缓存，供 semantic-query 等插件读取。
  */
+
+import { resolvePageId } from '../../js/registry.js';
 
 const PLUGIN_NAME = 'semantic-block';
 
@@ -128,10 +130,44 @@ export function extractBlocks(body) {
   const newBody = body.replace(re, (_, blockType, inlineStr, content) => {
     const meta = { ...parseYaml(content), ...parseInlineAttrs(inlineStr || '') };
     const idx = blocks.length;
-    blocks.push({ idx, blockType: blockType.toLowerCase(), meta });
+    blocks.push({ idx, blockType: blockType.toLowerCase(), meta, rawContent: content });
     return `${PH_OPEN}${idx}${PH_CLOSE}`;
   });
   return { newBody, blocks };
+}
+
+// seealso：展开 rawContent 里的 [[...]] wikilink（在 onAfterRender 阶段手动展开）
+function renderSeeAlso(rawContent, resolve) {
+  const WIKILINK_RE = /\[\[([^\[\]|]+?)(?:\|([^\[\]]+?))?\]\]/g;
+  const lines = (rawContent || '').trim().split('\n').filter(l => l.trim());
+
+  function expandLine(line) {
+    let result = '';
+    let lastIndex = 0;
+    let m;
+    WIKILINK_RE.lastIndex = 0;
+    while ((m = WIKILINK_RE.exec(line)) !== null) {
+      result += esc(line.slice(lastIndex, m.index));
+      const target = m[1].trim();
+      const display = m[2] ? m[2].trim() : target;
+      const resolved = resolve(target);
+      if (!resolved) {
+        result += `<a class="wikilink broken" href="#${encodeURIComponent(target)}">${esc(display)}</a>`;
+      } else {
+        const [pid2] = resolved;
+        result += `<a class="wikilink resolved" href="#${encodeURIComponent(pid2)}">${esc(display)}</a>`;
+      }
+      lastIndex = m.index + m[0].length;
+    }
+    result += esc(line.slice(lastIndex));
+    return result;
+  }
+
+  if (lines.length === 1) {
+    return `<p class="seealso-block"><span class="seealso-label">📖 详细参见</span>${expandLine(lines[0])}</p>`;
+  }
+  const items = lines.map(l => `<li>${expandLine(l.trim())}</li>`).join('');
+  return `<div class="seealso-block"><p class="seealso-label">📖 详细参见</p><ul>${items}</ul></div>`;
 }
 
 // ---------- 渲染 ----------
@@ -359,6 +395,10 @@ export default {
         }
         if (blockType === 'query') {
           return match; // 保留占位符，交给 semantic-query 处理
+        }
+        if (blockType === 'seealso') {
+          const resolve = (target) => resolvePageId(target, core.registry);
+          return renderSeeAlso(block.rawContent, resolve);
         }
         const safe = JSON.stringify({ type: blockType, ...meta }).replace(/'/g, '&#39;');
         return `<div class="semantic-block" data-block-type="${esc(blockType)}" data-meta='${safe}' hidden></div>`;
