@@ -8,7 +8,7 @@ const SPECIAL_PAGES = [
   { id: 'Special:Recent',    label: '最近修订',     desc: '最近修订记录（滚动窗口，最新 500 条）' },
   { id: 'Special:AllPages',  label: '所有页面',     desc: '所有 wiki 页面的完整列表，支持分组切换' },
   { id: 'Special:Statistics', label: '统计 (Statistics)', desc: '知识库统计：K 值增长曲线、质量分布、页面计数' },
-  { id: 'Special:Settings',  label: '设置',         desc: '插件开关与用户设置' },
+  { id: 'Special:Settings',  label: '设置',         desc: '用户设置' },
   { id: 'Special:Plugins',   label: '插件列表',     desc: '已安装插件列表' },
   { id: 'Special:All',       label: '所有特殊页面', desc: '所有特殊系统页面索引' },
   { id: 'Special:Random',    label: '随机页',       desc: '随机跳转到一个非章节页面' },
@@ -51,70 +51,23 @@ async function getPluginDefs(force = false) {
   } catch { return []; }
 }
 
-function loadSettings() {
-  try { return JSON.parse(localStorage.getItem('wiki_settings') || '{}'); }
-  catch { return {}; }
-}
-
-function saveSettings(s) {
-  localStorage.setItem('wiki_settings', JSON.stringify(s));
-}
-
 export async function renderSpecialSettings(core) {
-  const s = loadSettings();
-  const PLUGIN_DEFS = await getPluginDefs(true);
-
-  const rows = PLUGIN_DEFS.map(p => {
-    const enabled = s?.plugins?.[p.key] === true;
-    return `<tr>
-      <td><strong>${escapeHtml(p.name)}</strong><br><small class="muted">${escapeHtml(p.desc)}</small></td>
-      <td style="text-align:center">
-        <label class="toggle-label">
-          <input type="checkbox" data-plugin="${escapeHtml(p.key)}" ${enabled ? 'checked' : ''}>
-          ${enabled ? '已启用' : '已关闭'}
-        </label>
-      </td>
-    </tr>`;
-  }).join('');
-
   setPage('Settings', `
     <h1>Special:Settings</h1>
-    <p class="muted">设置保存在浏览器 localStorage，不同设备独立。</p>
-    <h2>插件</h2>
-    <table class="settings-table">
-      <thead><tr><th>插件</th><th>状态</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>
-    <p><small>更改后刷新页面生效。</small></p>
-    <hr>
+    <p class="muted">所有插件默认启用，无需手动配置。</p>
     <h2>特殊页面</h2>
     <p>→ <a href="#${encodeURIComponent('Special:Plugins')}">Special:Plugins</a> &nbsp;
        → <a href="#${encodeURIComponent('Special:All')}">Special:All</a></p>
   `);
-
-  // 绑定 checkbox 事件
-  document.querySelectorAll('input[data-plugin]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      const settings = loadSettings();
-      if (!settings.plugins) settings.plugins = {};
-      settings.plugins[cb.dataset.plugin] = cb.checked;
-      saveSettings(settings);
-      cb.nextSibling.textContent = cb.checked ? '已启用' : '已关闭';
-    });
-  });
 }
 
 /* ── Special:Plugins ── */
 export async function renderSpecialPlugins(core) {
   const PLUGIN_DEFS = await getPluginDefs(true);
-  const s = loadSettings();
   const allDefs = PLUGIN_DEFS.map(p => {
-    const status = p.corePlugin
-      ? '🔵 核心插件，始终运行'
-      : (s?.plugins?.[p.key] === true ? '✅ 已启用' : '⭕ 已安装，未启用');
     return `<tr>
       <td><strong>${escapeHtml(p.name)}</strong></td>
-      <td>${status}</td>
+      <td>✅ 已启用</td>
       <td><small class="muted">${escapeHtml(p.desc)}</small></td>
     </tr>`;
   }).join('');
@@ -126,8 +79,6 @@ export async function renderSpecialPlugins(core) {
       <thead><tr><th>插件</th><th>状态</th><th>说明</th></tr></thead>
       <tbody>${allDefs}</tbody>
     </table>
-
-    <p>→ <a href="#${encodeURIComponent('Special:Settings')}">Special:Settings</a> 管理插件开关</p>
   `);
 }
 
