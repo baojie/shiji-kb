@@ -3,7 +3,7 @@ id: Fact 006：太史公论伍子胥——怨毒、小义与大耻
 type: overview
 label: Fact 006：太史公论伍子胥——怨毒、小义与大耻
 description: 太史公在列传结尾有一段精彩的评论，这段文字不仅是对伍子胥的总结，也是司马迁本人对人生、怨恨与复仇的深刻思考
-tags: [史记, 综述]
+tags: [综述]
 sources: [伍子胥列传]
 quality: featured
 ---

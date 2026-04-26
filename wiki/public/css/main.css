@@ -741,7 +741,9 @@ body.is-home .page { grid-template-columns: 1fr; }
   color: var(--link, #7a1a1a);
 }
 .res-title:hover { text-decoration: underline; color: var(--accent); }
-.res-star { margin-right: .2em; font-size: .85em; }
+.res-quality { border-radius: 3px; padding: 1px 5px; font-size: .85em; font-weight: 500; }
+.res-quality-premium  { background: #e9d8fd; color: #553c9a; }
+.res-quality-featured { background: #bee3f8; color: #2b6cb0; }
 .res-meta {
   margin-top: .2em;
   font-size: .82em;

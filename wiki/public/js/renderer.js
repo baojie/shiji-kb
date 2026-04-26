@@ -917,6 +917,8 @@ export function renderAll(core) {
   const tagCounts       = {};
   const essayTypeCounts = {};
   const eventTypeCounts = {};
+  const qualityCounts   = {};
+  const sourceCounts    = {};
   for (const p of allEntries) {
     const t = p.type || 'unknown';
     typeCounts[t] = (typeCounts[t] || 0) + 1;
@@ -927,6 +929,9 @@ export function renderAll(core) {
     for (const tag of (p.tags || [])) tagCounts[tag] = (tagCounts[tag] || 0) + 1;
     if (p.essay_type)  essayTypeCounts[p.essay_type]  = (essayTypeCounts[p.essay_type]  || 0) + 1;
     if (p.event_type)  eventTypeCounts[p.event_type]  = (eventTypeCounts[p.event_type]  || 0) + 1;
+    const q = p.quality || 'stub';
+    qualityCounts[q] = (qualityCounts[q] || 0) + 1;
+    for (const src of (p.sources || [])) sourceCounts[src] = (sourceCounts[src] || 0) + 1;
   }
   const orderedEssayTypes = Object.keys(essayTypeCounts).sort(
     (a, b) => essayTypeCounts[b] - essayTypeCounts[a]
@@ -934,6 +939,11 @@ export function renderAll(core) {
   const orderedEventTypes = Object.keys(eventTypeCounts).sort(
     (a, b) => eventTypeCounts[b] - eventTypeCounts[a]
   );
+  // 章节来源分面：按页面数降序，只显示出现 ≥ 3 次的
+  const orderedSources = Object.entries(sourceCounts)
+    .filter(([, c]) => c >= 3)
+    .sort((a, b) => b[1] - a[1])
+    .map(([s]) => s);
 
   // 只显示出现 ≥ 5 次的 tag
   const topTags = Object.entries(tagCounts)
@@ -974,22 +984,24 @@ export function renderAll(core) {
     const qi   = hash.indexOf('?');
     const p    = new URLSearchParams(qi >= 0 ? hash.slice(qi + 1) : '');
     return {
-      types:  p.getAll('type'),
-      essays: p.getAll('essay'),
-      events: p.getAll('event'),
-      tags:   p.getAll('tag'),
-      qlevel: p.get('q') || '',
-      search: p.get('s') || '',
-      page:   Math.max(1, parseInt(p.get('page') || '1', 10)),
+      types:   p.getAll('type'),
+      essays:  p.getAll('essay'),
+      events:  p.getAll('event'),
+      tags:    p.getAll('tag'),
+      sources: p.getAll('source'),
+      qlevel:  p.get('q') || '',
+      search:  p.get('s') || '',
+      page:    Math.max(1, parseInt(p.get('page') || '1', 10)),
     };
   }
 
   function buildHash(s) {
     const p = new URLSearchParams();
-    s.types.forEach(t  => p.append('type',  t));
-    s.essays.forEach(e => p.append('essay', e));
-    s.events.forEach(e => p.append('event', e));
-    s.tags.forEach(t   => p.append('tag',   t));
+    s.types.forEach(t   => p.append('type',   t));
+    s.essays.forEach(e  => p.append('essay',  e));
+    s.events.forEach(e  => p.append('event',  e));
+    s.tags.forEach(t    => p.append('tag',    t));
+    s.sources.forEach(s => p.append('source', s));
     if (s.qlevel) p.set('q', s.qlevel);
     if (s.search) p.set('s',    s.search);
     if (s.page > 1) p.set('page', String(s.page));
@@ -1002,16 +1014,15 @@ export function renderAll(core) {
 
   function applyFilters(s) {
     let r = allEntries;
-    if (s.types.length)  r = r.filter(p =>
+    if (s.types.length)   r = r.filter(p =>
       s.types.includes(p.type || 'unknown') ||
       (s.types.includes('jun') && p.jun_title)
     );
-    if (s.essays.length) r = r.filter(p => s.essays.includes(p.essay_type || ''));
-    if (s.events.length) r = r.filter(p => s.events.includes(p.event_type || ''));
-    if (s.tags.length)   r = r.filter(p => s.tags.every(t => (p.tags || []).includes(t)));
-    if (s.qlevel === 'high') r = r.filter(p => (p.k_score || 0) >= 50);
-    else if (s.qlevel === 'mid') r = r.filter(p => (p.k_score || 0) >= 30 && (p.k_score || 0) < 50);
-    else if (s.qlevel === 'low') r = r.filter(p => (p.k_score || 0) < 30);
+    if (s.essays.length)  r = r.filter(p => s.essays.includes(p.essay_type || ''));
+    if (s.events.length)  r = r.filter(p => s.events.includes(p.event_type || ''));
+    if (s.tags.length)    r = r.filter(p => s.tags.every(t => (p.tags || []).includes(t)));
+    if (s.sources.length) r = r.filter(p => s.sources.every(src => (p.sources || []).includes(src)));
+    if (s.qlevel) r = r.filter(p => (p.quality || 'stub') === s.qlevel);
     if (s.search) {
       const kw = s.search.toLowerCase();
       r = r.filter(p =>
@@ -1064,18 +1075,29 @@ export function renderAll(core) {
       </label>`;
     }).join('');
 
-    const qlevels = [
-      ['high', '精华 (K≥50)',  Object.values(pages).filter(p => (p.k_score || 0) >= 50).length],
-      ['mid',  '充实 (30–50)', Object.values(pages).filter(p => (p.k_score || 0) >= 30 && (p.k_score || 0) < 50).length],
-      ['low',  '基础 (K<30)',  Object.values(pages).filter(p => (p.k_score || 0) < 30).length],
+    const QUALITY_LEVELS = [
+      ['premium',  '旗舰'],
+      ['featured', '精品'],
+      ['standard', '标准'],
+      ['basic',    '基础'],
+      ['stub',     '存根'],
     ];
-    const qItems = qlevels.map(([val, lbl, cnt]) =>
+    const qItems = QUALITY_LEVELS.map(([val, lbl]) =>
       `<label class="facet-item${s.qlevel === val ? ' active' : ''}">
         <input type="radio" name="qlevel" data-facet="q" data-val="${val}"${s.qlevel === val ? ' checked' : ''}>
         <span class="facet-label">${lbl}</span>
-        <span class="facet-count">${cnt}</span>
+        <span class="facet-count">${qualityCounts[val] || 0}</span>
       </label>`
     ).join('');
+
+    const sourceItems = orderedSources.map(src => {
+      const active = s.sources.includes(src);
+      return `<label class="facet-item${active ? ' active' : ''}">
+        <input type="checkbox" data-facet="source" data-val="${escapeHtml(src)}"${active ? ' checked' : ''}>
+        <span class="facet-label">${escapeHtml(src)}</span>
+        <span class="facet-count">${sourceCounts[src]}</span>
+      </label>`;
+    }).join('');
 
     const essaySection = orderedEssayTypes.length ? `
       <details class="facet-group" open>
@@ -1087,6 +1109,12 @@ export function renderAll(core) {
       <details class="facet-group" open>
         <summary class="facet-group-title">事件类型</summary>
         <div class="facet-items">${eventItems}</div>
+      </details>` : '';
+
+    const sourceSection = orderedSources.length ? `
+      <details class="facet-group">
+        <summary class="facet-group-title">所在章节</summary>
+        <div class="facet-items facet-tags">${sourceItems}</div>
       </details>` : '';
 
     return `<aside class="facet-panel">
@@ -1101,7 +1129,7 @@ export function renderAll(core) {
       <details class="facet-group" open>
         <summary class="facet-group-title">标签</summary>
         <div class="facet-items facet-tags">${tagItems}</div>
-      </details>
+      </details>${sourceSection}
       <details class="facet-group">
         <summary class="facet-group-title">内容质量</summary>
         <div class="facet-items">${qItems}</div>
@@ -1116,13 +1144,14 @@ export function renderAll(core) {
     const page       = Math.min(s.page, totalPages);
     const slice      = results.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
+    const QUALITY_BADGE = { premium: '旗舰', featured: '精品' };
     const items = slice.map(p => {
-      const star  = p.featured ? '<span class="res-star">⭐</span>' : '';
+      const badge = QUALITY_BADGE[p.quality] ? `<span class="res-quality res-quality-${p.quality}">${QUALITY_BADGE[p.quality]}</span>` : '';
       const qs    = p.k_score != null ? `<span class="res-score">K=${p.k_score}</span>` : '';
       const tags  = (p.tags || []).slice(0, 4).map(t => `<span class="res-tag">${escapeHtml(t)}</span>`).join('');
       return `<li class="res-item">
-        <a class="res-title" href="#${encodeURIComponent(p.id)}">${star}${escapeHtml(p.label || p.id)}</a>
-        <div class="res-meta"><span class="res-type">${escapeHtml(TYPE_LABELS[p.type] || p.type || '')}</span>${qs}${tags}</div>
+        <a class="res-title" href="#${encodeURIComponent(p.id)}">${escapeHtml(p.label || p.id)}</a>
+        <div class="res-meta"><span class="res-type">${escapeHtml(TYPE_LABELS[p.type] || p.type || '')}</span>${badge}${qs}${tags}</div>
       </li>`;
     }).join('');
 
@@ -1144,7 +1173,7 @@ export function renderAll(core) {
     }
 
     const badge = [...s.types.map(t => TYPE_LABELS[t] || t), ...s.essays, ...s.events, ...s.tags,
-                   ...(s.qlevel ? [s.qlevel] : []), ...(s.search ? [`"${s.search}"`] : [])].join(' · ');
+                   ...s.sources, ...(s.qlevel ? [s.qlevel] : []), ...(s.search ? [`"${s.search}"`] : [])].join(' · ');
     return `<div class="res-header">
         <span class="res-count">共 <strong>${total}</strong> 个页面${badge ? ' · ' + badge : ''}</span>
       </div>
@@ -1242,7 +1271,9 @@ export function renderAll(core) {
           } else if (facet === 'event') {
             ns.events = cb.checked ? [...new Set([...ns.events, val])] : ns.events.filter(t => t !== val);
           } else if (facet === 'tag') {
-            ns.tags   = cb.checked ? [...new Set([...ns.tags,   val])] : ns.tags.filter(t => t !== val);
+            ns.tags    = cb.checked ? [...new Set([...ns.tags,    val])] : ns.tags.filter(t => t !== val);
+          } else if (facet === 'source') {
+            ns.sources = cb.checked ? [...new Set([...ns.sources, val])] : ns.sources.filter(t => t !== val);
           } else if (facet === 'q') {
             ns.qlevel = cb.checked ? val : '';
           }
@@ -1258,7 +1289,7 @@ export function renderAll(core) {
 
       // 清除按钮
       article.querySelector('#facet-reset')?.addEventListener('click', () => {
-        history.replaceState(null, '', buildHash({ types: [], essays: [], events: [], tags: [], qlevel: '', search: '', page: 1 }));
+        history.replaceState(null, '', buildHash({ types: [], essays: [], events: [], tags: [], sources: [], qlevel: '', search: '', page: 1 }));
         render();
       });
     }

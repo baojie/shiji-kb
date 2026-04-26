@@ -3,7 +3,7 @@ id: Fact 005：曾参与子夏——孔道传承的两条路线
 type: overview
 label: Fact 005：曾参与子夏——孔道传承的两条路线
 description: 孔子判断一个人能否传承某种道，不只看聪明，更看与这种道的内在契合性。曾参天性笃实，正适合传承孝这种需要躬身力行的道
-tags: [史记, 综述]
+tags: [综述]
 sources: [仲尼弟子列传]
 quality: standard
 ---

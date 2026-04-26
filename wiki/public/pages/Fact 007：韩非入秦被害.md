@@ -5,7 +5,7 @@ label: Fact 007：韩非入秦被害
 description: 1. 身份论证：
    - 韩非 = 韩之诸公子
    - 血缘决定忠诚
-tags: [史记, 综述]
+tags: [综述]
 sources: [老子韩非列传]
 quality: featured
 ---

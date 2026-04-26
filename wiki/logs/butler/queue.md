@@ -18,46 +18,46 @@
 
 ## P1 expand-content 候选（2026-04-25 补充，按 refs 排序）
 
-- [ ] P1 | [[刘舜]] | 42行 · refs=81 · type=person | action: expand-content
-- [ ] P1 | [[雍王]] | 37行 · refs=79 · type=person | action: expand-content
+- [x] P1 | [[刘舜]] | 42行 · refs=81 · type=person | action: expand-content
+- [x] P1 | [[雍王]] | 37行 · refs=79 · type=person | action: expand-content
 - [x] P1 | [[张楚楚隐王]] | 41行 · refs=71 · type=person | action: expand-content <!-- R5850: 已完成 -->
 - [x] P1 | [[蔡庄侯]] | 20行 · refs=28 · type=person | action: expand-content <!-- R5287: 已完成 -->
-- [ ] P1 | [[晋哀侯]] | 37行 · refs=26 · type=person | action: expand-content
-- [ ] P1 | [[蔡共侯]] | 36行 · refs=24 · type=person | action: expand-content
+- [x] P1 | [[晋哀侯]] | 37行 · refs=26 · type=person | action: expand-content
+- [x] P1 | [[蔡共侯]] | 36行 · refs=24 · type=person | action: expand-content
 - [x] P1 | [[蔡夷侯]] | 20行 · refs=24 · type=person | action: expand-content <!-- R5288: 已完成 -->
 - [x] P1 | [[城阳顷王]] | 17行 · refs=22 · type=person | action: expand-content <!-- R5269: 已完成 -->
-- [ ] P1 | [[汉昭帝]] | 39行 · refs=22 · type=person | action: expand-content
+- [x] P1 | [[汉昭帝]] | 39行 · refs=22 · type=person | action: expand-content
 - [x] P1 | [[宋平公]] | 20行 · refs=21 · type=person | action: expand-content <!-- R5269: 已完成 -->
-- [ ] P1 | [[汉宣帝]] | 41行 · refs=21 · type=person | action: expand-content
-- [ ] P1 | [[卫顷侯]] | 29行 · refs=19 · type=person | action: expand-content
-- [ ] P1 | [[晋靖侯]] | 29行 · refs=19 · type=person | action: expand-content
+- [x] P1 | [[汉宣帝]] | 41行 · refs=21 · type=person | action: expand-content
+- [x] P1 | [[卫顷侯]] | 29行 · refs=19 · type=person | action: expand-content
+- [x] P1 | [[晋靖侯]] | 29行 · refs=19 · type=person | action: expand-content
 - [x] P1 | [[鲁景公]] | 21行 · refs=19 · type=person | action: expand-content <!-- R5293: 已完成 -->
-- [ ] P1 | [[城阳共王]] | 21行 · refs=16 · type=person | action: expand-content
-- [ ] P1 | [[太子建]] | 39行 · refs=16 · type=person | action: expand-content
-- [ ] P1 | [[晋孝侯]] | 40行 · refs=16 · type=person | action: expand-content
-- [ ] P1 | [[王黄]] | 49行 · refs=16 · type=person | action: expand-content
-- [ ] P1 | [[卫绾]] | 45行 · refs=15 · type=person | action: expand-content
-- [ ] P1 | [[楚顷襄王]] | 41行 · refs=15 · type=person | action: expand-content
-- [ ] P1 | [[阳虎]] | 42行 · refs=15 · type=person | action: expand-content
-- [ ] P1 | [[鲁昭公]] | 44行 · refs=15 · type=person | action: expand-content
-- [ ] P1 | [[卫伉]] | 28行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[庄青翟]] | 37行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[晋武公]] | 43行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[李少君]] | 38行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[李由]] | 39行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[赵信]] | 50行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[郑文公]] | 46行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[霍嬗]] | 24行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[韩厥]] | 50行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[刘泽]] | 41行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[周孝王]] | 33行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[张武]] | 44行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[栾大]] | 39行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[楚考烈王]] | 29行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[济北贞王]] | 17行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[田乞]] | 37行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[韩说]] | 38行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[刘遂]] | 25行 · refs=12 · type=person | action: expand-content
+- [x] P1 | [[城阳共王]] | 21行 · refs=16 · type=person | action: expand-content
+- [x] P1 | [[太子建]] | 39行 · refs=16 · type=person | action: expand-content
+- [x] P1 | [[晋孝侯]] | 40行 · refs=16 · type=person | action: expand-content
+- [x] P1 | [[王黄]] | 49行 · refs=16 · type=person | action: expand-content
+- [x] P1 | [[卫绾]] | 45行 · refs=15 · type=person | action: expand-content
+- [x] P1 | [[楚顷襄王]] | 41行 · refs=15 · type=person | action: expand-content
+- [x] P1 | [[阳虎]] | 42行 · refs=15 · type=person | action: expand-content
+- [x] P1 | [[鲁昭公]] | 44行 · refs=15 · type=person | action: expand-content
+- [x] P1 | [[卫伉]] | 28行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[庄青翟]] | 37行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[晋武公]] | 43行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[李少君]] | 38行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[李由]] | 39行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[赵信]] | 50行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[郑文公]] | 46行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[霍嬗]] | 24行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[韩厥]] | 50行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[刘泽]] | 41行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[周孝王]] | 33行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[张武]] | 44行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[栾大]] | 39行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[楚考烈王]] | 29行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[济北贞王]] | 17行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[田乞]] | 37行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[韩说]] | 38行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[刘遂]] | 25行 · refs=12 · type=person | action: expand-content
 
 
 ## P1 premium-upgrade 候选（2026-04-25 补充，按 refs 排序）
