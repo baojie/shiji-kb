@@ -58,6 +58,36 @@ grep -r "实体名" kg/entities/data/
 
 ---
 
+### 步骤 0.5 · 字数损失审查（每次编辑后强制执行）
+
+**在步骤 1 之前**，对所有 edit 类动作必须运行：
+
+```bash
+python3 wiki/scripts/butler/check_size_loss.py <slug>
+```
+
+| 退出码 | 含义 | 处置 |
+|---|---|---|
+| `0` (safe) | 字数正常或增加 | 继续步骤 1 |
+| `1` (warning) | 字数轻度缩减 10%–20% | 继续步骤 1，但在 actions.jsonl 记录 `size_warning: true`；若步骤 1 还发现其他问题则一并 rollback |
+| `2` (critical) | **铁律违反 / 字数缩减 ≥ 20% / 其他关键节丢失** | **立即 rollback**，无需执行步骤 1–2；reasons 写入 failures.jsonl |
+
+**铁律（独立于阈值参数，无条件 critical）**：`## 史记引文` 节丢失
+- 此项由 `edit_page.py` 在写入前拦截（前置守卫），理论上不会到达此检查
+- 若绕过脚本直接写入，此检查作为兜底检测
+
+**其他关键节**（丢失即 critical）：`## 生平大事`、`## 引文`
+
+**frontmatter 字段**（丢失即 critical）：`pn:`、`sources:`、`event_ids:`
+
+**允许编辑 `## 史记引文` 的操作**（须加 `--allow-citation-edit`）：
+- `fix-citation`（纠错）
+- `H1` 去重合并
+
+> 背景：expand/narrative 操作曾因全量覆盖页面而静默删除 `## 史记引文` 节，354 页受损（2026-04-26）。
+
+---
+
 ### 步骤 1 · 红旗检查 (一票否决)
 
 对改动后的目标页, 检查 W3 §三 所有红旗:
@@ -126,11 +156,27 @@ grep -r "实体名" kg/entities/data/
 }
 ```
 
+若字数损失审查返回 warning：
+```json
+{
+  ...,
+  "size_warning": true,
+  "size_loss_ratio": 0.15,
+  "size_warning_reason": "字数轻度缩减 15%：1200 → 1020 bytes"
+}
+```
+
 且同时在 `failures.jsonl` 追加相同的行 (便于 W5 专门扫失败)。
 
 ---
 
-## 四、分数计算脚本 (建议)
+## 四、工具脚本
+
+| 脚本 | 调用时机 | 退出码含义 |
+|---|---|---|
+| `wiki/scripts/butler/check_size_loss.py <slug>` | **每次 edit 后必调** | 0=safe, 1=warning, 2=critical→rollback |
+
+### 分数计算脚本 (建议)
 
 `wiki/scripts/butler/score_page.py` (v0 先不实现, 手工打分):
 ```

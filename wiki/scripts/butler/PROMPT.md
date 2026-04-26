@@ -1,6 +1,6 @@
 # Butler 单步 Prompt — 执行一次 atomic action
 
-**版本**: v1.9 · 2026-04-24
+**版本**: v2.1 · 2026-04-26
 
 > 粘进 `/loop <interval>` 作循环体, 或直接丢给 Claude 手动触发一次.
 > 每次只做 **一次** 原子动作, 不要连做多次.
@@ -20,6 +20,8 @@
 | v1.8 | `4267fca` | 2026-04-23 | 新增 KB 读取（w5_ops / w7_citations / w9_schemas / w11_taxonomy）|
 | v1.9 | — | 2026-04-24 | commit 频率从每5轮改为每17轮（质数轮次，减少 agent 碰撞）|
 | v2.0 | — | 2026-04-24 | accept 不再 git add；staging 统一由 /wiki commit 轮执行 |
+| v2.1 | — | 2026-04-26 | W5 触发改为 round mod 30（强制，任何模式不可跳过）；废弃"≥20条未反思"触发；W5 新增模式 F（对话日志编辑错误扫描）|
+| v2.2 | — | 2026-04-26 | 所有 mod 改为质数减少碰撞：W5 30→**29**，W11 10→**13**；W10内部 10→11，20→19，30→29，50→47 |
 
 ---
 
@@ -40,10 +42,10 @@
 
 按优先顺序:
 
-- 若最近 3 条同 action 全 fail → 进入 **W5 反思**, 读 `skills/SKILL_W5_Butler反思与自改.md`, 写 `wiki/logs/butler/reflections/$(date +%F).md`, 本轮不做原子动作
-- 若累计 atomic action ≥ 20 条未反思 → 进入 W5 反思
+- 若 `round_counter.txt` 当前轮次 **mod 29 == 0** → **强制进入 W5 反思**（任何模式不可绕过）：读 `skills/SKILL_W5_Butler反思与自改.md`，扫描对话日志（模式 F），写 `wiki/logs/butler/reflections/$(date +%F).md`，将修复条目追加到 `housekeeping_queue.md`，本轮不做原子动作
+- 若最近 3 条同 action 全 fail → 进入 **W5 反思**，同上
 - 若本轮是"每 6 次精品/stub 创建后的第 6 次"（即每完成 3 精品+3 stub 一组）→ 追加 **W9 图式反思**: 读 `skills/SKILL_W9_Butler页面图式反思.md`, 写 `wiki/logs/butler/schema_patterns/$(date +%F)-R<N>.md`; 若发现新细分类型 ≥3 页且缺模板则同时创建 `skills/templates/<类型>.md`。W9 **不阻塞**下一轮，不影响 actions.jsonl 计数。
-- 若 `wiki/logs/butler/round_counter.txt` 中当前轮次 **mod 10 == 0** → 执行 **W11 概念分类元反思**: 读 `skills/SKILL_W11_概念分类元反思.md`, 扫描错误分类候选、发现新概念、写 `wiki/logs/butler/type_audits/$(date +%F)-R<N>.md`，执行 ≥1 条 `reclassify` 修正（若有），新概念候选加入 queue.md P1。W11 **不阻塞**下一轮。
+- 若 `wiki/logs/butler/round_counter.txt` 中当前轮次 **mod 13 == 0** → 执行 **W11 概念分类元反思**: 读 `skills/SKILL_W11_概念分类元反思.md`, 扫描错误分类候选、发现新概念、写 `wiki/logs/butler/type_audits/$(date +%F)-R<N>.md`，执行 ≥1 条 `reclassify` 修正（若有），新概念候选加入 queue.md P1。W11 **不阻塞**下一轮。
 - 若累计 trail/explore ≥ 10 条，且最近一条 `verify-citations` 距今 ≥ 10 条 → 本轮做 **W7 引文核验**:
   ```bash
   python3 scripts/verify_quotes_agent.py   # 处理下一个未检查页面

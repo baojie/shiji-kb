@@ -13,14 +13,17 @@ description: Butler 的反思与自改机制 — 进化引擎。周期性扫 act
 
 反思不是 happen-every-invocation, 由以下之一触发:
 
-| 触发 | 条件 | 动作 |
-|---|---|---|
-| **周期** | 累计 atomic action 达 20 次 | 自动进入反思 |
-| **连续失败** | `failures.jsonl` 最近 3 条同 action type | 立即进入 |
-| **手动** | 用户 `/reflect butler` 或命令行调用 | 立即进入 |
-| **红旗聚集** | 单个 target 页一周内被标同一红旗 ≥ 3 次 | 进入 (针对该页) |
+| 触发 | 条件 | 动作 | 可否被批量模式跳过 |
+|---|---|---|---|
+| **强制周期** | `round_counter.txt` mod 29 == 0 | 自动进入反思 | **否，任何模式都不可跳过** |
+| **连续失败** | `failures.jsonl` 最近 3 条同 action type | 立即进入 | 否 |
+| **手动** | 用户指示或 `/reflect butler` | 立即进入 | 否 |
+| **红旗聚集** | 单个 target 页一周内被标同一红旗 ≥ 3 次 | 进入（针对该页） | 否 |
+| **旧触发（已废弃）** | 累计 atomic action 达 20 次 | — | — |
 
-触发时**本轮不做 atomic action**, 整轮用于反思。
+> **旧触发"≥20条未反思"已废弃**，原因：H4 批量模式绕过 PROMPT.md 循环，导致该条件从未被检查，W5 事实上长期不执行。改为基于 `round_counter.txt` 的强制周期（mod 29，质数），任何模式都无法绕过。
+
+**触发时本轮不做 atomic action**，整轮用于反思。
 
 ---
 
@@ -29,15 +32,16 @@ description: Butler 的反思与自改机制 — 进化引擎。周期性扫 act
 ### 步骤 1 · 收集素材
 
 ```
-最近 20 条 actions.jsonl  (含 accept + fail)
-最近 所有 failures.jsonl
-过去 7 天 reflections/ 输出 (避免循环提议)
+最近 50 条 actions.jsonl（含 accept + fail）
+全部 failures.jsonl
+过去 14 天 reflections/ 输出（避免循环提议）
 当前 W1–W4 的版本
+最近 7 天的对话 JSONL（见步骤 2·F）
 ```
 
 ### 步骤 2 · 模式识别
 
-寻找 **4 类**模式:
+寻找 **6 类**模式：
 
 **A. 失败聚集**
 - 同 action type 连续失败 → 前置条件太松? 应禁用?
@@ -59,6 +63,77 @@ description: Butler 的反思与自改机制 — 进化引擎。周期性扫 act
 
 **E. 队列候选健康** ← *每次反思都必须检查，保证队列有改进候选*
 
+**F. 系统性编辑错误** ← *每次反思都必须检查，防止内容静默丢失*
+
+扫描最近 7 天的项目对话 JSONL（`~/.claude/projects/-home-baojie-work-knowledge-shiji-kb/*.jsonl`，按 mtime 取 ≤7天的文件），提取用户报告或 claude 承认的编辑错误：
+
+```bash
+# 找出最近 7 天的对话文件
+find ~/.claude/projects/-home-baojie-work-knowledge-shiji-kb/ \
+  -name "*.jsonl" -newer wiki/logs/butler/reflections/$(ls wiki/logs/butler/reflections/ | grep -v arch | sort | tail -1) \
+  -not -path "*/subagents/*" | sort -t/ -k1
+```
+
+重点提取的信号词（在 user 消息中出现）：
+- 丢失、删除、覆盖、缺失、没了、不见了、被清空
+- lost、missing、deleted、overwritten、gone
+- 恢复、还原、restore、rollback
+
+对每类发现的错误模式判断：
+
+| 结果 | 处置 |
+|---|---|
+| 已有 R 组动作可覆盖 → 只需生成队列条目 | 追加到 `housekeeping_queue.md`（`[repair]` 标记），**不计入** ≤3 条修订限额 |
+| 错误重复出现但无对应 R 动作 → 提案新增 R 动作 | 计入修订限额（R 组新增动作属于谨慎的结构扩展） |
+| 错误可通过加强现有 action 的前置/后置检查来预防 | 修改对应 W2/W4 条目，计入修订限额 |
+| 一次性偶发错误 → 仅记录 | 写入反思底部"已排除"节 |
+
+**G. 随机质量抽查** ← *每次反思都必须执行，模拟用户随机抽查*
+
+随机抽取 10 个页面（recent edits 中随机取 5 个 + 所有地名/人名页随机取 5 个），对每个页面逐项检查：
+
+```bash
+# 取最近编辑的 5 个页面
+python3 -c "
+import json; d=json.load(open('wiki/public/history.json' if __import__('os').path.exists('wiki/public/history.json') else '/dev/null') if False else open('wiki/logs/butler/actions.jsonl'))
+" 2>/dev/null || \
+python3 - << 'PYEOF'
+import json, random, os
+from pathlib import Path
+# 随机抽样：recent 5 + random 5
+actions = []
+try:
+    with open('wiki/logs/butler/actions.jsonl') as f:
+        for line in f:
+            try: a = json.loads(line)
+            except: continue
+            if a.get('target'): actions.append(a['target'])
+except: pass
+recent5 = list(dict.fromkeys(reversed(actions)))[:5]
+all_pages = [p.stem for p in Path('wiki/public/pages').glob('*.md')]
+random5 = random.sample(all_pages, min(5, len(all_pages)))
+sample = list(dict.fromkeys(recent5 + random5))[:10]
+for p in sample: print(p)
+PYEOF
+```
+
+**每个抽样页面检查清单**（共7项，发现问题即记录）：
+
+| # | 检查项 | 命令/方法 |
+|---|--------|---------|
+| Q1 | 史记引文节存在 | `grep -c '## 史记引文'` |
+| Q2 | 声称N次 == 实际引文条数（N ≤ 10 时严格要求，N > 10 允许展示子集） | `check_citation_count.py` 逻辑 |
+| Q3 | 引文格式标准（`> **出自 [[...]]（...）：** ...`） | `grep '^> \*\*出自'` |
+| Q4 | frontmatter 必要字段完整（label / type / sources） | `grep '^label:\|^type:\|^sources:'` |
+| Q5 | PN 引文（pn 字段中的 PN 有对应引文条目） | 对比 pn 字段与 ## 史记引文 节 |
+| Q6 | 正文不为空 stub（非 stub 页面正文 > 100 字） | `wc -c` |
+| Q7 | wikilink 密度（正文中 `[[...]]` ≥ 1） | `grep -c '\[\['` |
+
+**问题分类处理**：
+- 单页偶发 → 直接修复（不写规则）
+- ≥2 页同类问题 → 写入 `wiki/logs/butler/quality_rules.md` + 加入 repair 队列
+- 系统性问题（≥5 页同类）→ 同上，另提案 W2/W4 修订
+
 ```python
 import json, os
 
@@ -73,23 +148,23 @@ for pid, meta in pages.items():
     try: lines = open(fpath, encoding='utf-8').read().count('\n')
     except: continue
     scored.append({'id': pid, 'type': meta.get('type',''), 'lines': lines,
-                   'stub': meta.get('stub', False),
-                   'featured': meta.get('featured', False),
+                   'quality': meta.get('quality', 'basic'),
                    'refs': meta.get('total_refs', 0)})
 
-# 注：featured 在本项目中使用宽泛，不代表真正精品质量；用行数做质量代理
+# quality 五级：stub < basic < standard < featured < premium
+# 只有 premium 可上首页；编辑后必须跑 compute_quality.py 重评
 
-# expand-content 候选：15-60行，非stub，refs > 0，重点类型
+# expand-content 候选：quality=basic/standard，refs > 0，重点类型
 EXPAND_TYPES = {'person','concept','event','overview','story','state'}
 expand_pool = sorted(
-    [p for p in scored if 15 <= p['lines'] < 60
-     and not p['stub'] and p['refs'] > 0 and p['type'] in EXPAND_TYPES],
+    [p for p in scored if p['quality'] in ('basic', 'standard')
+     and p['refs'] > 0 and p['type'] in EXPAND_TYPES],
     key=lambda x: -x['refs'])
 
-# premium-upgrade 候选：60-150行，refs > 0，精品类型（真正有内容但还能深化）
-UPGRADE_TYPES = {'person','concept','event'}
+# premium-upgrade 候选：quality=featured，refs > 0（有图有结构，需深化达 premium）
+UPGRADE_TYPES = {'person','concept','event','overview','story','sanwen'}
 upgrade_pool = sorted(
-    [p for p in scored if 60 <= p['lines'] <= 150
+    [p for p in scored if p['quality'] == 'featured'
      and p['refs'] > 0 and p['type'] in UPGRADE_TYPES],
     key=lambda x: -x['refs'])
 
@@ -130,28 +205,46 @@ print('Top 10 upgrade:', [p["id"] for p in upgrade_pool[:10]])
 写 `wiki/logs/butler/reflections/YYYY-MM-DD.md`:
 
 ```markdown
-# 反思 2026-04-22
+# 反思 YYYY-MM-DD（第 R<N> 次，round=<N>）
 
 ## 素材
-- actions 第 20–40 号 (20 条)
-- failures 共 4 条
+- actions 最近 50 条（R<A>–R<B>）
+- failures 共 N 条
+- 对话日志：YYYY-MM-DD.jsonl 等 N 个文件
 
 ## 识别的模式
 
-### 模式 1: topic 页连续 3 次 create-stub 后, 无人 embed-sku-excerpt
-- 现象: action 22, 28, 34 都 create-stub, 但后续未链回实体页
-- 假设: W1 候选入队时只入创建, 未入关联
-- 提案: W1 §二 "入队规则" 加: 每次 create-stub 同时入队关联 action
+### 模式 A/B/C/D/E 类（略，同前）
 
-### 模式 2: readability 维度常年满分
-- 现象: 15 次评估中 14 次给 2 分
-- 假设: 此维度阈值过松, 无区分度
-- 提案: W3 v0.2 readability 量化阈值收紧
+### 模式 F: 编辑错误（本次反思新增）
+- 现象：[对话日志中用户报告的具体错误]
+- 影响范围：[N 个页面 / 某类操作]
+- 根因：[操作缺乏什么约束 / 检查]
+- 已有修复动作：R 组 restore-xxx / 无
 
-## 修订清单 (≤3 条)
-1. W1 §二 新增 "入队-联动" 规则
-2. W3 §二 readability 改 max_sentence_length 80 → 65
-3. W3 §一 新增 "引证覆盖" 维度 (v0.2)
+### 模式 G: 随机抽查结果
+- 抽样页面：[列出10页]
+- Q1–Q7 各项通过率：[X/10]
+- 发现问题：[具体问题及页面]
+- 是否达到规则沉淀阈值（≥2页同类问题）：是/否
+
+## 质量规则沉淀（模式 G 发现 ≥2 页同类问题时写入）
+
+新增/更新 `wiki/logs/butler/quality_rules.md` 条目：
+```
+- [R<N> 发现] <规则描述> → 检查方法：<Q几> （案例：页面1, 页面2）
+```
+
+## 修订清单（skill 修改，≤3 条）
+1. [W2/W4 具体修改]
+2. ...
+
+## R 组队列补充（不计入修订限额）
+- [ ] [repair] P0 | [[页面]] | 原因：史记引文节在 expand 后丢失 | action: restore-lost-section
+- [ ] [repair] P0 | [[页面]] | 原因：引文体被覆盖只剩标题 | action: restore-citation-body
+
+## 已排除
+- [一次性偶发错误，不做修订]
 ```
 
 ### 步骤 4 · 应用修订
@@ -303,6 +396,8 @@ actions #1–20, failures 5 条
 - `wiki/logs/butler/skill_changes.md` — 修订 changelog
 - `wiki/logs/butler/arch_snooze.json` — 用户暂缓的架构阈值覆盖
 - `wiki/scripts/butler/check_scale.py` — 规模指标快照工具（每次反思必跑）
+- `wiki/logs/butler/quality_rules.md` — 质量规则库（Pattern G 沉淀，≥2页同类问题才写入）
+- `wiki/scripts/butler/check_citation_count.py` — Q2 引文数量检查工具
 
 ---
 

@@ -97,6 +97,8 @@ def main() -> int:
             return 0
 
     parent_rev = data['latest_rev_id']
+    size_after = len(content.encode('utf-8'))
+    size_before = data['revisions'][0]['size'] if data['revisions'] else 0
     entry = {
         'rev_id': rev_id,
         'timestamp': ts_iso,
@@ -104,7 +106,8 @@ def main() -> int:
         'summary': args.summary or f'{args.author} edit',
         'parent_rev': parent_rev,
         'content_hash': f'sha256:{sha}',
-        'size': len(content.encode('utf-8')),
+        'size_before': size_before,
+        'size': size_after,
         'content': content,  # inlined
     }
     if args.action == 'delete':
@@ -163,7 +166,9 @@ def main() -> int:
     )
 
     verb = '(deleted)' if args.action == 'delete' else ''
-    print(f'✓ {page} rev={rev_id} size={len(content)} author={args.author} {verb}')
+    delta = size_after - size_before
+    delta_str = f'+{delta}' if delta >= 0 else str(delta)
+    print(f'✓ {page} rev={rev_id} size={size_before}→{size_after}({delta_str}) author={args.author} {verb}')
     return 0
 
 
