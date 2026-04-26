@@ -182,9 +182,9 @@ aside.sidebar {
   overflow: hidden;
 }
 .map-caption {
-  font-size: .8rem;
+  font-size: .75rem;
   color: var(--fg-muted, #666);
-  padding: .25rem .5rem;
+  padding: .2rem .5rem;
   background: var(--bg-subtle, #f7f7f7);
   border-top: 1px solid var(--border);
   display: flex;
@@ -192,7 +192,7 @@ aside.sidebar {
   align-items: center;
 }
 .map-source {
-  font-size: .7rem;
+  font-size: .65rem;
   color: var(--fg-muted, #999);
   margin-left: auto;
 }
@@ -1038,7 +1038,7 @@ footer code {
 }
 .hero-image figcaption {
   margin-top: .4em;
-  font-size: 13px;
+  font-size: 17px;
   color: var(--fg-muted);
   font-family: var(--sans);
   font-style: italic;
