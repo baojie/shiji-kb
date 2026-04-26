@@ -22,6 +22,13 @@
       "description": "渲染页面中的 $...$ 行内公式和 $$...$$ 块级公式（需联网加载 KaTeX CDN）"
     },
     {
+      "id": "semantic-block",
+      "entry": "plugins/semantic-block/index.js",
+      "name": "语义块",
+      "version": "1.0.0",
+      "description": "处理页面中的 ::: infobox 和 ::: meta 语义块；支持 inline infobox 折叠/展开与元数据读取"
+    },
+    {
       "id": "backlinks",
       "entry": "plugins/backlinks/index.js",
       "name": "反向引用",
@@ -41,13 +48,6 @@
       "name": "路线地图",
       "version": "1.0.0",
       "description": "::: route 块：将地点序列渲染为带箭头的 Leaflet 路线地图"
-    },
-    {
-      "id": "semantic-block",
-      "entry": "plugins/semantic-block/index.js",
-      "name": "语义块",
-      "version": "1.0.0",
-      "description": "处理页面中的 ::: infobox 和 ::: meta 语义块；支持 inline infobox 折叠/展开与元数据读取"
     },
     {
       "id": "geomap",

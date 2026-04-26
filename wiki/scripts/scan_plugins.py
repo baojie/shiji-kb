@@ -34,7 +34,11 @@ def scan() -> list[dict]:
     plugins = []
     if not PLUGINS_DIR.exists():
         return plugins
-    for sub in sorted(PLUGINS_DIR.iterdir()):
+    dirs = sorted(PLUGINS_DIR.iterdir(), key=lambda d: (
+        json.loads((d / "plugin.json").read_text(encoding="utf-8")).get("load_order", 50)
+        if (d / "plugin.json").exists() else 50, d.name
+    ))
+    for sub in dirs:
         if not sub.is_dir():
             continue
         meta_file = sub / "plugin.json"
