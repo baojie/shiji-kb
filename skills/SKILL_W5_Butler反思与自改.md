@@ -70,7 +70,7 @@ description: Butler 的反思与自改机制 — 进化引擎。周期性扫 act
 ```bash
 # 找出最近 7 天的对话文件
 find ~/.claude/projects/-home-baojie-work-knowledge-shiji-kb/ \
-  -name "*.jsonl" -newer wiki/logs/butler/reflections/$(ls wiki/logs/butler/reflections/ | grep -v arch | sort | tail -1) \
+  -name "*.jsonl" -newer wiki/memory/reflections/$(ls wiki/memory/reflections/ | grep "_W5" | sort | tail -1) \
   -not -path "*/subagents/*" | sort -t/ -k1
 ```
 
@@ -202,10 +202,10 @@ print('Top 10 upgrade:', [p["id"] for p in upgrade_pool[:10]])
 
 若步骤 2·D 有架构越线 → **先写** `arch_YYYY-MM-DD.md`，再写普通反思（两者独立）。
 
-写 `wiki/logs/butler/reflections/YYYY-MM-DD.md`:
+写 `wiki/memory/reflections/YYYY-MM-DD_RNNNN_W5[_topic].md`（NNNN 为触发本次反思的 round 号，当前最新 R6059）:
 
 ```markdown
-# 反思 YYYY-MM-DD（第 R<N> 次，round=<N>）
+# 反思 YYYY-MM-DD（round=NNNN）
 
 ## 素材
 - actions 最近 50 条（R<A>–R<B>）
@@ -281,7 +281,7 @@ print('Top 10 upgrade:', [p["id"] for p in upgrade_pool[:10]])
 
 ### 架构提案输出格式
 
-写 `wiki/logs/butler/reflections/arch_YYYY-MM-DD.md`（与普通反思分开存放）:
+写 `wiki/memory/reflections/YYYY-MM-DD_arch[_topic].md`（与普通反思分开存放）:
 
 ```markdown
 # 架构提案 2026-MM-DD
@@ -344,7 +344,7 @@ Butler 不会自动执行以上任何方案。
 
 ## 五、用户介入口
 
-用户可随时直接写 `reflections/<date>-user.md` 表达意见:
+用户可随时直接写 `wiki/memory/reflections/YYYY-MM-DD_user.md` 表达意见:
 
 ```markdown
 # 用户反思 2026-04-22
@@ -360,7 +360,7 @@ W5 下次 (或立即) 触发, 优先评估用户提案。
 
 ## 六、反思报告的长度
 
-一次反思 (`reflections/YYYY-MM-DD.md`) 建议 **50–200 行**:
+一次反思 (`wiki/memory/reflections/YYYY-MM-DD_NN_W5.md`) 建议 **50–200 行**:
 - 太短 = 敷衍 (一个 action type 可能值不了一次反思, 推迟)
 - 太长 = 想改太多 (拆成多次反思, 一次 3 条)
 
@@ -392,7 +392,7 @@ actions #1–20, failures 5 条
 ## 相关
 - [W0 总则](SKILL_W0_Butler总则.md)
 - [W3 质量标准](SKILL_W3_Butler质量标准.md) — 主要的修订目标
-- `wiki/logs/butler/reflections/` — 反思输出沉淀（普通：`YYYY-MM-DD.md`，架构：`arch_YYYY-MM-DD.md`）
+- `wiki/memory/reflections/` — 反思输出沉淀（W5：`YYYY-MM-DD_RNNNN_W5[_topic].md`，架构：`YYYY-MM-DD_arch[_topic].md`，编辑报告：`edit_report_NAME.md`）
 - `wiki/logs/butler/skill_changes.md` — 修订 changelog
 - `wiki/logs/butler/arch_snooze.json` — 用户暂缓的架构阈值覆盖
 - `wiki/scripts/butler/check_scale.py` — 规模指标快照工具（每次反思必跑）
