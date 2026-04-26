@@ -1,0 +1,410 @@
+{
+  "_comment": "谭其骧《中国历史地图集》各图幅地理范围注册表。lon_range=[W,E], lat_range=[S,N]（WGS84近似值）。content=[left,top,right,bottom] 归一化坐标，指图像中实际地图内容区域（排除边框、图例、页眉）。priority=1最优先（区域最精细）。",
+  "maps": [
+    {
+      "file": "1-05_夏-全图.jpg",
+      "periods": ["夏"],
+      "lon_range": [97, 130],
+      "lat_range": [25, 45],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 2,
+      "label": "夏·全图"
+    },
+    {
+      "file": "1-06_商-全图.jpg",
+      "periods": ["商"],
+      "lon_range": [97, 130],
+      "lat_range": [25, 44],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 2,
+      "label": "商·全图"
+    },
+    {
+      "file": "1-07_商-中心区域.jpg",
+      "periods": ["商"],
+      "lon_range": [107, 122],
+      "lat_range": [28, 38],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "商·中心区域"
+    },
+    {
+      "file": "1-08_西周-全图.jpg",
+      "periods": ["西周", "周"],
+      "lon_range": [96, 129],
+      "lat_range": [25, 43],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 2,
+      "label": "西周·全图"
+    },
+    {
+      "file": "1-09_西周-中心区域.jpg",
+      "periods": ["西周", "周"],
+      "lon_range": [106, 119],
+      "lat_range": [31, 39],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "西周·中心区域"
+    },
+    {
+      "file": "1-10_西周-宗周成周.jpg",
+      "periods": ["西周", "周"],
+      "lon_range": [106, 115],
+      "lat_range": [33, 37],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "西周·宗周成周"
+    },
+    {
+      "file": "1-11_春秋-全图.jpg",
+      "periods": ["春秋"],
+      "lon_range": [94, 128],
+      "lat_range": [22, 44],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 3,
+      "label": "春秋·全图"
+    },
+    {
+      "file": "1-12_春秋-晋秦.jpg",
+      "periods": ["春秋"],
+      "lon_range": [101, 115],
+      "lat_range": [31, 41],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "春秋·晋秦"
+    },
+    {
+      "file": "1-13_春秋-郑宋卫.jpg",
+      "periods": ["春秋"],
+      "lon_range": [111, 121],
+      "lat_range": [31, 37],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "春秋·郑宋卫"
+    },
+    {
+      "file": "1-14_春秋-齐鲁.jpg",
+      "periods": ["春秋"],
+      "lon_range": [112, 122],
+      "lat_range": [33, 38],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "春秋·齐鲁"
+    },
+    {
+      "file": "1-15_春秋-北燕.jpg",
+      "periods": ["春秋"],
+      "lon_range": [114, 124],
+      "lat_range": [38, 43],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "春秋·北燕"
+    },
+    {
+      "file": "1-16_春秋-楚吴越.jpg",
+      "periods": ["春秋"],
+      "lon_range": [107, 123],
+      "lat_range": [22, 34],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "春秋·楚吴越"
+    },
+    {
+      "file": "1-17_战国-全图.jpg",
+      "periods": ["战国"],
+      "lon_range": [94, 128],
+      "lat_range": [22, 44],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 3,
+      "label": "战国·全图"
+    },
+    {
+      "file": "1-18_战国-诸侯形势.jpg",
+      "periods": ["战国"],
+      "lon_range": [94, 127],
+      "lat_range": [22, 44],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 3,
+      "label": "战国·诸侯形势"
+    },
+    {
+      "file": "1-19_战国-韩魏.jpg",
+      "periods": ["战国"],
+      "lon_range": [107, 117],
+      "lat_range": [31, 38],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "战国·韩魏"
+    },
+    {
+      "file": "1-20_战国-赵中山.jpg",
+      "periods": ["战国"],
+      "lon_range": [108, 118],
+      "lat_range": [36, 43],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "战国·赵中山"
+    },
+    {
+      "file": "1-21_战国-齐鲁宋.jpg",
+      "periods": ["战国"],
+      "lon_range": [112, 122],
+      "lat_range": [31, 38],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "战国·齐鲁宋"
+    },
+    {
+      "file": "1-22_战国-燕.jpg",
+      "periods": ["战国"],
+      "lon_range": [113, 124],
+      "lat_range": [37, 43],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "战国·燕"
+    },
+    {
+      "file": "1-23_战国-秦蜀.jpg",
+      "periods": ["战国"],
+      "lon_range": [99, 113],
+      "lat_range": [28, 38],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "战国·秦蜀"
+    },
+    {
+      "file": "1-24_战国-楚越.jpg",
+      "periods": ["战国"],
+      "lon_range": [107, 122],
+      "lat_range": [22, 33],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "战国·楚越"
+    },
+    {
+      "file": "2-02_秦-全图.jpg",
+      "periods": ["秦"],
+      "lon_range": [97, 130],
+      "lat_range": [18, 44],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 3,
+      "label": "秦·全图"
+    },
+    {
+      "file": "2-03_秦-关中.jpg",
+      "periods": ["秦"],
+      "lon_range": [104, 112],
+      "lat_range": [32, 38],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "秦·关中"
+    },
+    {
+      "file": "2-04_秦-山东南.jpg",
+      "periods": ["秦"],
+      "lon_range": [111, 120],
+      "lat_range": [30, 36],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "秦·山东南"
+    },
+    {
+      "file": "2-05_秦-山东北.jpg",
+      "periods": ["秦"],
+      "lon_range": [112, 121],
+      "lat_range": [34, 40],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "秦·山东北"
+    },
+    {
+      "file": "2-06_秦-淮汉以南.jpg",
+      "periods": ["秦"],
+      "lon_range": [107, 120],
+      "lat_range": [23, 33],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "秦·淮汉以南"
+    },
+    {
+      "file": "2-07_西汉-全图.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [97, 135],
+      "lat_range": [16, 50],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 3,
+      "label": "西汉·全图"
+    },
+    {
+      "file": "2-08_西汉-司隶.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [105, 115],
+      "lat_range": [32, 39],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "西汉·司隶"
+    },
+    {
+      "file": "2-09_西汉-并州朔方.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [104, 117],
+      "lat_range": [36, 43],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "西汉·并州朔方"
+    },
+    {
+      "file": "2-10_西汉-兖豫青徐.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [112, 121],
+      "lat_range": [31, 37],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "西汉·兖豫青徐"
+    },
+    {
+      "file": "2-11_西汉-东郡北海.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [114, 120],
+      "lat_range": [34, 38],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "西汉·东郡北海"
+    },
+    {
+      "file": "2-12_西汉-荆州.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [108, 116],
+      "lat_range": [24, 33],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "西汉·荆州"
+    },
+    {
+      "file": "2-13_西汉-扬州.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [114, 122],
+      "lat_range": [24, 33],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "西汉·扬州"
+    },
+    {
+      "file": "2-14_西汉-冀州.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [112, 117],
+      "lat_range": [36, 40],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "西汉·冀州"
+    },
+    {
+      "file": "2-15_西汉-幽州.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [113, 124],
+      "lat_range": [38, 43],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "西汉·幽州"
+    },
+    {
+      "file": "2-16_西汉-益州北.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [102, 112],
+      "lat_range": [28, 35],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "西汉·益州北"
+    },
+    {
+      "file": "2-17_西汉-益州南.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [99, 110],
+      "lat_range": [21, 30],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "西汉·益州南"
+    },
+    {
+      "file": "2-18_西汉-凉州.jpg",
+      "periods": ["西汉", "汉", "两汉"],
+      "lon_range": [95, 107],
+      "lat_range": [34, 42],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "西汉·凉州"
+    },
+    {
+      "file": "2-22_东汉-全图.jpg",
+      "periods": ["东汉"],
+      "lon_range": [97, 135],
+      "lat_range": [16, 50],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 3,
+      "label": "东汉·全图"
+    },
+    {
+      "file": "2-23_东汉-司隶.jpg",
+      "periods": ["东汉"],
+      "lon_range": [105, 115],
+      "lat_range": [32, 39],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "东汉·司隶"
+    },
+    {
+      "file": "2-24_东汉-兖豫青徐.jpg",
+      "periods": ["东汉"],
+      "lon_range": [112, 121],
+      "lat_range": [31, 37],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "东汉·兖豫青徐"
+    },
+    {
+      "file": "2-26_东汉-冀州.jpg",
+      "periods": ["东汉"],
+      "lon_range": [112, 117],
+      "lat_range": [36, 41],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "东汉·冀州"
+    },
+    {
+      "file": "2-27_东汉-荆州.jpg",
+      "periods": ["东汉"],
+      "lon_range": [108, 116],
+      "lat_range": [24, 33],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "东汉·荆州"
+    },
+    {
+      "file": "2-29_东汉-益州北.jpg",
+      "periods": ["东汉"],
+      "lon_range": [102, 112],
+      "lat_range": [28, 35],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "东汉·益州北"
+    },
+    {
+      "file": "2-32_东汉-并州.jpg",
+      "periods": ["东汉"],
+      "lon_range": [108, 117],
+      "lat_range": [36, 43],
+      "content": [0.04, 0.05, 0.95, 0.92],
+      "priority": 1,
+      "label": "东汉·并州"
+    },
+    {
+      "file": "2-33_东汉-幽州.jpg",
+      "periods": ["东汉"],
+      "lon_range": [113, 124],
+      "lat_range": [38, 43],
+      "content": [0.04, 0.05, 0.96, 0.92],
+      "priority": 1,
+      "label": "东汉·幽州"
+    }
+  ]
+}
