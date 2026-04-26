@@ -222,12 +222,19 @@ export default {
         const title  = meta.title || '';
         const mapId  = `route-map-${++_mapCounter}`;
 
+        // 宽高：默认 width=100% height=260px；指定 height 时用 height，指定 square 时用 aspect-ratio
+        const w = meta.width  || '100%';
+        const h = meta.height || '260px';
+        const sizeStyle = h === 'square'
+          ? `width:${w};aspect-ratio:1/1;`
+          : `width:${w};height:${h};`;
+
         pending.push({ mapId, places, title });
 
         return `
           <div class="route-map-wrap">
             ${title ? `<div class="route-map-title">${title}</div>` : ''}
-            <div id="${mapId}" style="height:260px;width:100%;border-radius:4px;overflow:hidden;"></div>
+            <div id="${mapId}" style="${sizeStyle}border-radius:4px;overflow:hidden;"></div>
             <div id="${mapId}-missing" style="font-size:11px;color:#999;margin-top:3px;"></div>
           </div>`;
       });

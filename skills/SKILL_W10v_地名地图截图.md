@@ -272,13 +272,70 @@ image_credit: "谭其骧《中国历史地图集》<第N册>，<朝代>·<谭图
 
 ---
 
-## 四、成功标准
+## 四、红点标注（⛔ 默认关闭，需用户明确要求才执行）
+
+> **校准耗时较长，常规截图流程不包含此步骤。** 只在用户明确说"加红点"时才执行。
+
+为截图叠加小红点，精确指示地点位置。
+
+### 规范
+
+- **只在精品页使用**，普通 basic/standard 页不加
+- **一张图原则**：只为最主要的一张地图加红点（通常是战国或该地名存续的核心时期），多时期叠加性价比低
+- **从原始 corpus 源图重新裁切**，不要在已有 JPEG 上反复叠加（每次 encode 降质）
+
+### 代码
+
+```python
+from PIL import Image, ImageDraw
+
+def add_dot(img, x, y, color=(220,30,30)):
+    w, h = img.size
+    r = max(4, int(min(w, h) * 0.007))   # 约为短边的 0.7%
+    draw = ImageDraw.Draw(img)
+    draw.ellipse([x-r-2, y-r-2, x+r+2, y+r+2], fill=(255,255,255))  # 白描边
+    draw.ellipse([x-r,   y-r,   x+r,   y+r  ], fill=color)
+```
+
+### 坐标校准方法（按可靠度排序）
+
+1. **直读标注**：截图中能看到目标地名文字 → 直接读像素坐标（最准）
+2. **经纬度格线**：从图顶/左边读取度数刻度，线性插值
+3. **参考城市内插**：找郑州市 (113.63°E, 34.75°N) 和开封市 (114.31°E, 34.80°N) 的像素位置计算
+
+### 工作流
+
+```python
+src = Image.open('corpus/谭图/<源文件>.jpg')
+# Step 1: 裁切
+cropped = src.crop((left, top, right, bottom)).convert('RGB')
+# Step 2: 加点（一次完成，不分两步）
+add_dot(cropped, x, y)
+# Step 3: 单次保存
+cropped.save('wiki/public/images/<地名>-<朝代>.jpg', 'JPEG', quality=92, subsampling=0)
+```
+
+### 已校准案例：逢泽·战国
+
+| 字段 | 值 |
+|------|-----|
+| 源文件 | `1-19_战国-韩魏.jpg`（2165×1536） |
+| 逢泽在源图 | (1495, 905) |
+| 裁切框（像素） | (888, 89, 2024, 1235) |
+| 裁切框（归一化） | [0.410, 0.058, 0.935, 0.804] |
+| 输出尺寸 | 1136×1146 |
+| 红点位置 | (607, 816) |
+
+---
+
+## 五、成功标准
 
 - [ ] 图片已保存到 `wiki/public/images/<地名>-<朝代>.jpg`
 - [ ] 图中能清晰看到目标地名的汉字标注
 - [ ] `corpus/谭图/place_index.json` 已写入 `crop` 和 `image_file` 字段
 - [ ] wiki 页面 frontmatter 已更新 `image`、`image_caption`、`image_credit`
 - [ ] 使用 `edit_page.py` 完成页面写入（不直接编辑 .md 文件）
+- [ ] （如加红点）从原始 corpus 一次裁切+画点，坐标写入 `place_index.json`
 
 ---
 
