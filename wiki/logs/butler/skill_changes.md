@@ -37,3 +37,4 @@
 2026-04-25  w5-v9-P26  PROMPT.md 规则提案：update-wanted-pages 强制优先（≥100条=强制，≥20条=提示）[reflections/2026-04-25-v9.md]
 2026-04-25  w5-v9-P27  housekeeping_queue H20：verify-citations 全量核验任务（9383页零核验）[reflections/2026-04-25-v9.md]
 2026-04-25  w5-v9-P28  arch_2026-04-25-escalation.md：规模升级至9394页，推荐方案C（SQLite）[reflections/2026-04-25-v9.md]
+2026-04-27  W10v v0.1→v0.2  P29强化edit_page.py铁律+P30 H23多样性节流规则 [wiki/memory/reflections/2026-04-27_R6079_W5.md]
