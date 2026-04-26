@@ -35,9 +35,19 @@ Union 后再**反思去重**：
 - 合并相似案例，不重复列举
 - 统一术语，保持内部一致性
 
-### 2.3 REDIRECT 而非删除
-❌ **绝对禁止 `rm` 删除文件**
-✅ 冗余页**必须**改为 REDIRECT 页，保留 URL 有效性和历史记录
+### 2.3 REDIRECT 而非删除（铁律）
+❌ **绝对禁止 `rm` 物理删除任何页面文件**
+✅ 所有被合并的冗余页，**必须**用 `delete_page.py --redirect-to TARGET` 改为 REDIRECT 页
+
+**`delete_page.py` 新行为（2026-04-26 改造后）**：
+- `delete_page.py <slug> --redirect-to <target>`：写入 REDIRECT 页（合并场景用此）
+- `delete_page.py <slug>`（无参数）：写入 `type: deleted` empty stub（彻底下架时用此）
+- 两种模式**均不物理删除文件**，URL 始终有效
+
+**消歧义标注合并的特殊场景**：当章节标注文件中使用了 `〖@显示名|消歧页名〗` 格式（如 `〖@蔡哀侯|蔡国蔡哀侯〗`），合并时须：
+1. 将标注改回 `〖@规范名〗`（如 `〖@蔡哀侯〗`）
+2. 运行 `delete_page.py 消歧页名 --redirect-to 规范页名`
+3. **绝不使用无参数的 delete_page.py**（会变成空 stub，断开链接）
 
 ---
 
@@ -131,34 +141,14 @@ python3 wiki/scripts/butler/record_revision.py "规范页名" \
 ### Step 7：冗余页改为 REDIRECT
 
 ```bash
-# 每个冗余页执行一次
-python3 wiki/scripts/butler/edit_page.py "冗余页名" --redirect-to "规范页名"
-```
-
-若 edit_page.py 不支持 redirect，手动写入以下格式：
-
-```markdown
----
-id: 冗余页名
-type: redirect
-label: 冗余页名
-redirect_to: 规范页名
----
-
-# 冗余页名
-
-> **重定向**：本页重定向至 [[规范页名]]。
->
-> 本页内容已融合入 [[规范页名]]。
-```
-
-然后 `record_revision.py` 记录：
-
-```bash
-python3 wiki/scripts/butler/record_revision.py "冗余页名" \
-    --summary "butler/dedup: 转为REDIRECT→规范页名" \
+# 每个冗余页执行一次（--redirect-to 自动存档+写入 REDIRECT）
+python3 wiki/scripts/butler/delete_page.py "冗余页名" \
+    --redirect-to "规范页名" \
+    --summary "butler/dedup: 合并至规范页名，保留REDIRECT入口" \
     --author butler
 ```
+
+脚本会自动：1) record_revision 存档；2) 将文件改写为 type:redirect 页；3) 不删除文件。
 
 ### Step 8：更新反向链接（每次只改一个文件）
 

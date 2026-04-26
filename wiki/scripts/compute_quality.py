@@ -5,8 +5,8 @@
 质量五级标准：
   stub     - 存根：有 stub 注释 / 内容 < 100 字 / 无 h2 节且内容 < 300 字
   basic    - 基础：内容 < 500 字 或（节 < 2 且 PN < 2）
-  standard - 标准：有内容有结构，但无配图或引注不足
-  featured - 精品：有图 + ≥3 PN 或 ≥5 引文行 + ≥3 节 + 散文 ≥ 200 字
+  standard - 标准：有内容有结构，但引注不足或散文不足
+  featured - 精品：≥3 节 + (PN≥3 或引文行≥5) + 散文 ≥ 300 字（图片为 premium 加分项，不作 featured 门槛）
   premium  - 旗舰：有图 + ≥5 节 + 散文 ≥ 1000 字 + （PN ≥ 10 或引文 ≥ 10 或散文 ≥ 2500）
 
 用法：
@@ -59,8 +59,8 @@ def compute_quality(text: str) -> str:
             and (pn_count >= 10 or quote_lines >= 10 or prose_len >= 2500)):
         return "premium"
 
-    # featured
-    if (has_image and sections >= 3
+    # featured（不再要求配图；图片是 premium 的必要条件）
+    if (sections >= 3
             and (pn_count >= 3 or quote_lines >= 5)
             and prose_len >= 200):
         return "featured"

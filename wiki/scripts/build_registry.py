@@ -34,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import sys
 from datetime import datetime
@@ -43,6 +44,14 @@ import yaml
 
 
 FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+META_BLOCK_RE  = re.compile(r"^::: meta\s*\n(.*?)^:::", re.MULTILINE | re.DOTALL)
+WIKILINK_RE = re.compile(r'\[\[([^\]|]+)(?:\|[^\]]+)?\]\]')
+
+# Must match compute_knowledge.py
+_TYPE_WEIGHT = {
+    "person": 1.0, "event": 1.0, "place": 1.0, "state": 1.0,
+    "topic": 0.8, "chapter": 0.4, "surface": 0.5,
+}
 
 
 def parse_frontmatter(text: str) -> dict:
@@ -72,7 +81,8 @@ def main() -> int:
 
     md_files = sorted(root.rglob("*.md"))
     for md in md_files:
-        meta = parse_frontmatter(md.read_text(encoding="utf-8"))
+        md_text = md.read_text(encoding="utf-8")
+        meta = parse_frontmatter(md_text)
         pid = meta.get("id")
         if not pid:
             # 如无 id, 按目录结构推导: pages/<type>/<slug>.md → <type>/<slug>
@@ -91,8 +101,16 @@ def main() -> int:
         }
         if meta.get("essay_type"):
             entry["essay_type"] = meta["essay_type"]
+        # event_type lives in ::: meta block, not frontmatter
+        mb = META_BLOCK_RE.search(md_text)
+        if mb:
+            em = re.search(r'^event_type:\s*(.+)$', mb.group(1), re.MULTILINE)
+            if em:
+                entry["event_type"] = em.group(1).strip()
         if meta.get("jun_title"):
             entry["jun_title"] = True
+        if meta.get("sources"):
+            entry["sources"] = meta["sources"]
         pages[pid] = entry
 
         # alias_index: 收 slug(文件名) + id + label + aliases
@@ -222,8 +240,20 @@ def main() -> int:
         entry["quality_score"] = (
             base + tag_bonus + rev_bonus + size_bonus + manual_bonus + narrative_bonus
         )
+
+        # K score per page (formula mirrors compute_knowledge.py)
+        try:
+            body_bytes = len(body.encode("utf-8"))
+            page_wl = len(WIKILINK_RE.findall(body))
+            tw = _TYPE_WEIGHT.get(entry.get("type") or "", 0.6)
+            qnorm = min(max(1.0, entry["quality_score"] / 30.0), 3.0)
+            dens = min(page_wl / max(body_bytes / 1000.0, 0.1), 5.0)
+            entry["k_score"] = round(math.log2(1 + body_bytes) * (1 + dens) * tw * qnorm, 1)
+        except Exception:
+            pass
+
         score_details += 1
-    print(f"[enrich] {score_details} 页计算了 quality_score")
+    print(f"[enrich] {score_details} 页计算了 quality_score 和 k_score")
 
     out.write_text(json.dumps({
         "pages": pages,
