@@ -50,6 +50,13 @@
       "description": "处理页面中的 ::: infobox 和 ::: meta 语义块；支持 inline infobox 折叠/展开与元数据读取"
     },
     {
+      "id": "geomap",
+      "entry": "plugins/geomap/index.js",
+      "name": "地理概览地图",
+      "version": "1.0.0",
+      "description": "::: geomap 块：多地点图钉地图，无路线连线，适合分封/郡国/战场分布等地理概览"
+    },
+    {
       "id": "semantic-query",
       "entry": "plugins/semantic-query/index.js",
       "name": "语义查询",

@@ -4,22 +4,12 @@
  * 支持:
  *   - 行内: $...$ 或 \(...\)
  *   - 块级: $$...$$ 或 \[...\]
- *
- * 受 Special:Settings 中 plugins.math 控制（默认关闭）.
- * 启用后动态加载 KaTeX CDN.
  */
 
 const PLUGIN_NAME = 'math';
 const KATEX_CSS = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css';
 const KATEX_JS  = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js';
 const AUTO_RENDER_JS = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js';
-
-function isEnabled() {
-  try {
-    const s = JSON.parse(localStorage.getItem('wiki_settings') || '{}');
-    return s?.plugins?.math === true;
-  } catch { return false; }
-}
 
 async function loadKaTeX() {
   if (window.katex) return;
@@ -63,7 +53,6 @@ export default {
   description: 'KaTeX 数学公式渲染（$...$ 行内，$$...$$ 块级）',
 
   async init(core) {
-    if (!isEnabled()) return;
     await loadKaTeX();
 
     // 每次页面渲染后运行 KaTeX

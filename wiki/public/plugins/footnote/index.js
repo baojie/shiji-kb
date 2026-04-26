@@ -1,7 +1,6 @@
 /* footnote plugin — 渲染 [^id] 引用与 [^id]: 定义
  *
  * 依赖 markdown-it-footnote（本地 UMD 文件，无 CDN 依赖）。
- * 受 Special:Settings 中 plugins.footnote 控制（默认关闭）。
  */
 
 const LOCAL = new URL('./markdown-it-footnote.js', import.meta.url).href;
@@ -17,13 +16,6 @@ const CSS = `
 .footnote-ref a:hover,
 .footnote-backref:hover { color: #333; text-decoration: underline; }
 `;
-
-function isEnabled() {
-  try {
-    const s = JSON.parse(localStorage.getItem('wiki_settings') || '{}');
-    return s?.plugins?.footnote === true;
-  } catch { return false; }
-}
 
 async function loadPlugin() {
   if (window.markdownitFootnote) return window.markdownitFootnote;
@@ -50,7 +42,6 @@ export default {
   name: 'footnote',
   version: '1.0.0',
   async init(core) {
-    if (!isEnabled()) return;
     try {
       const plugin = await loadPlugin();
       core.md.use(plugin);
