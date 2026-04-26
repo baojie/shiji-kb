@@ -15,6 +15,7 @@ description: Butler 的 wiki 质量标准 (rubric) — 一个页面怎样算"好
 - **v0.2** (2026-04-23) · 将"引证完整性"升为独立维度 (第6维), 强制 `required_citation: true`; 新增溯源红旗
 - **v0.3** (2026-04-24) · 新增 `source_match_rules`：canonical_name ≥ 3 字才做自动匹配；新增2条溯源红旗；W2 对应新增 `source-with-pn` 动作
 - **v0.4** (2026-04-26) · 引入五级质量标签（stub/basic/standard/featured/premium）；新增§八"编辑后质量标签重评"铁律；only premium 可上首页
+- **v0.5** (2026-04-26) · `featured` 不再要求配图（图片是 premium 加分项）；门槛改为：≥3节 + (PN≥3 或引文行≥5) + 散文≥200字；新增 W2 `enrich-biography` 动作（以蔡哀侯页为模板）
 
 ---
 
@@ -168,7 +169,7 @@ python3 wiki/scripts/compute_quality.py <slug>
 | 级别 | 核心条件 |
 |------|---------|
 | `premium` | 有图 + ≥5节 + 散文≥1000字 + (PN≥10 或引文≥10 或散文≥2500) |
-| `featured` | 有图 + ≥3节 + (PN≥3 或引文≥5) + 散文≥200字 |
+| `featured` | ≥3节 + (PN≥3 或引文行≥5) + 散文≥200字（图片不作门槛，是 premium 条件）|
 | `standard` | 内容≥500字 + ≥2节或≥2 PN |
 | `basic` | 内容<500字 或节数/引注不足 |
 | `stub` | 有stub注释 / 内容<100字 / 无节结构 |

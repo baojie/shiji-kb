@@ -211,7 +211,7 @@ grep -n "此人\|此人\|<人名>\|评价\|太史公" docs/original_text/NNN_*.t
 
 ### 步骤4：编辑报告
 
-每个页面编辑完成后写 `wiki/logs/butler/reflections/edit_report_姓名.md`，包含：
+每个页面编辑完成后写 `wiki/memory/reflections/edit_report_姓名.md`，包含：
 1. 资源收集情况（7类资源，各有多少可用）
 2. 主要编辑内容表格
 3. 质量评估（原页优点 + 缺口 + 未来可改进点）
