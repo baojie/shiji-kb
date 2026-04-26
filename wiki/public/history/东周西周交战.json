@@ -1,8 +1,19 @@
 {
   "page": "东周西周交战",
-  "latest_rev_id": "20260425-142846-332842",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080131-a67977",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080131-a67977",
+      "timestamp": "2026-04-26T08:01:31Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 东周西周交战 追加战争元数据 (WAR-004-071)",
+      "parent_rev": "20260425-142846-332842",
+      "content_hash": "sha256:a67977ee29687cb6dc743ceabf6a7181a4075b907307afb236968d90288aab08",
+      "size_before": 910,
+      "size": 961,
+      "content": "---\nid: \"东周西周交战\"\ntype: event\ntitle: 东周西周交战\ndescription: 东周与西周交战，韩救西周。有人为东周说韩王按兵不出，可得西周之宝器。\ntags: [史记, 事件, 周本纪]\nsources: [周本纪]\nevent_ids: [004-071]\npn: (004-071)\ndate: \"[约公元前300年]\"\nquality: basic\n---\n\n::: meta\npn: (004-67.4)\nevent_type: 战争\nchapter: [周本纪]\nwar_id: WAR-004-071\nsource_count: 1\n:::\n\n# 东周西周交战\n\n> 东周与西周交战，韩救西周。有人为东周说韩王按兵不出，可得西周之宝器。\n\n**主要人物**：东周、西周、韩\n\n## 事件经过\n\n东周与西周交战，韩救西周。有人为东周说韩王按兵不出，可得西周之宝器。\n\n## 原文\n\n> 东周与西周战，韩救西周。或为东周说韩王曰：'西周故天子之国，多名器重宝。王案兵毋出，可以德东周，而西周之宝必可以尽矣。'\n\n---\n\n## 相关章节\n\n- [[004_周本纪|周本纪]]\n"
+    },
     {
       "rev_id": "20260425-142846-332842",
       "timestamp": "2026-04-25T14:28:46Z",

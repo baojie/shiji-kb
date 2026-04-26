@@ -1,8 +1,19 @@
 {
   "page": "吴王兵败被杀",
-  "latest_rev_id": "20260425-143014-596e9a",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080149-8d3420",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080149-8d3420",
+      "timestamp": "2026-04-26T08:01:49Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 吴王兵败被杀 追加战争元数据 (WAR-106-012)",
+      "parent_rev": "20260425-143014-596e9a",
+      "content_hash": "sha256:8d342097720ba9c9ea81e9e742ff4f3ce54e93ec470e47549270ec8ded981f2b",
+      "size_before": 1120,
+      "size": 1171,
+      "content": "---\nid: \"吴王兵败被杀\"\ntype: event\ntitle: 吴王兵败被杀\ndescription: 吴王与壮士数千人夜亡去，度江走丹徒保东越。汉使人以利啗东越，东越绐吴王出劳军，使人鏦杀吴王，盛头驰传以闻。楚王戊军败自杀。\ntags: [史记, 事件, 吴王濞列传]\nsources: [吴王濞列传]\nevent_ids: [106-012]\npn: (106-012)\ndate: \"景帝时 （公元前154年）\"\nquality: basic\n---\n\n::: meta\npn: (106-3.2)\nevent_type: 战争\nlocation: \"丹徒\"\nchapter: [吴王濞列传]\nwar_id: WAR-106-012\nsource_count: 1\n:::\n\n# 吴王兵败被杀\n\n> 吴王与壮士数千人夜亡去，度江走丹徒保东越。汉使人以利啗东越，东越绐吴王出劳军，使人鏦杀吴王，盛头驰传以闻。楚王戊军败自杀。\n\n**主要人物**：东越、吴王\n\n## 事件经过\n\n吴王与壮士数千人夜亡去，度江走丹徒保东越。汉使人以利啗东越，东越绐吴王出劳军，使人鏦杀吴王，盛头驰传以闻。楚王戊军败自杀。\n\n## 原文\n\n> 东越即绐吴王，吴王出劳军，即使人鏦杀吴王，盛其头，驰传以闻。\n\n---\n\n## 相关章节\n\n- [[106_吴王濞列传|吴王濞列传]]\n"
+    },
     {
       "rev_id": "20260425-143014-596e9a",
       "timestamp": "2026-04-25T14:30:14Z",

@@ -1,8 +1,19 @@
 {
   "page": "匈奴入雁门",
-  "latest_rev_id": "20260425-142942-8e0381",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080137-fa8100",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080137-fa8100",
+      "timestamp": "2026-04-26T08:01:37Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 匈奴入雁门 追加战争元数据 (WAR-011-047)",
+      "parent_rev": "20260425-142942-8e0381",
+      "content_hash": "sha256:fa810020f2d755574ccf5f49bc7a7bc1ce3b1fdb7884aa7c056228df97bac505",
+      "size_before": 545,
+      "size": 596,
+      "content": "---\nid: \"匈奴入雁门\"\ntype: event\ntitle: 匈奴入雁门\ndescription: 三月匈奴入雁门。\ntags: [史记, 事件, 孝景本纪]\nsources: [孝景本纪]\nevent_ids: [011-047]\npn: (011-047)\ndate: \"三月 （公元前142年）\"\nquality: basic\n---\n\n::: meta\npn: (011-24.3)\nevent_type: 战争\nlocation: \"雁门\"\nchapter: [孝景本纪]\nwar_id: WAR-011-047\nsource_count: 1\n:::\n\n# 匈奴入雁门\n\n> 三月匈奴入雁门。\n\n**主要人物**：匈奴\n\n## 事件经过\n\n三月匈奴入雁门。\n\n## 原文\n\n> 三月，匈奴入雁门。\n\n---\n\n## 相关章节\n\n- [[011_孝景本纪|孝景本纪]]\n"
+    },
     {
       "rev_id": "20260425-142942-8e0381",
       "timestamp": "2026-04-25T14:29:42Z",

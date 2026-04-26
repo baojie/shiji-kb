@@ -1,8 +1,19 @@
 {
   "page": "秦灭魏国",
-  "latest_rev_id": "20260425-143445-06ebc4",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080143-e5de02",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080143-e5de02",
+      "timestamp": "2026-04-26T08:01:43Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 秦灭魏国 追加战争元数据 (WAR-044-022)",
+      "parent_rev": "20260425-143445-06ebc4",
+      "content_hash": "sha256:e5de023e3b4ab4d2c589af6598fb1e0ad4aa0bdda176762b635f530376fb91b4",
+      "size_before": 776,
+      "size": 827,
+      "content": "---\nid: \"秦灭魏国\"\ntype: event\ntitle: 秦灭魏国\ndescription: 秦灌大梁，虏王假，遂灭魏以为郡县。引河沟灌大梁，三月城坏，王请降。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-022]\npn: (044-022)\ndate: \"王假三年 （公元前225年）\"\nquality: basic\n---\n\n::: meta\npn: (044-26.3)\nevent_type: 战争\nlocation: \"大梁\"\nchapter: [魏世家]\nwar_id: WAR-044-022\nsource_count: 1\n:::\n\n# 秦灭魏国\n\n> 秦灌大梁，虏王假，遂灭魏以为郡县。引河沟灌大梁，三月城坏，王请降。\n\n**主要人物**：王假\n\n## 事件经过\n\n秦灌大梁，虏王假，遂灭魏以为郡县。引河沟灌大梁，三月城坏，王请降。\n\n## 原文\n\n> 秦灌大梁，虏王假，遂灭魏以为郡县。\n\n---\n\n## 相关章节\n\n- [[044_魏世家|魏世家]]\n"
+    },
     {
       "rev_id": "20260425-143445-06ebc4",
       "timestamp": "2026-04-25T14:34:45Z",

@@ -1,8 +1,19 @@
 {
   "page": "秦灭楚",
-  "latest_rev_id": "20260425-154737-69daff",
-  "revision_count": 8,
+  "latest_rev_id": "20260426-080137-b521e3",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260426-080137-b521e3",
+      "timestamp": "2026-04-26T08:01:37Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 秦灭楚 追加战争元数据 (WAR-015-026)",
+      "parent_rev": "20260425-154737-69daff",
+      "content_hash": "sha256:b521e366a5c06eb172b2655827cfae8933f6645b42a56881f16ebe5b73a1271a",
+      "size_before": 1379,
+      "size": 1418,
+      "content": "---\nid: \"秦灭楚\"\ntype: event\ntitle: 秦灭楚\ndescription: 秦始皇二十四年，王翦、蒙武破楚军，虏楚王负刍。楚国灭亡。\ntags: [史记, 事件, 楚世家, 六国年表]\nsources: [楚世家, 六国年表]\nevent_ids: [015-026, 040-040]\npn: (015-026)\ndate: \"公元前223 （公元前223年）\"\nquality: standard\n---\n\n::: meta\npn: (015-r254) | (040-96.100)\nevent_type: 战争\nlocation: \"楚\"\nchapter: [六国年表, 楚世家]\nwar_id: WAR-015-026\nsource_count: 2\n:::\n\n# 秦灭楚\n\n> 秦始皇二十四年，王翦、蒙武破楚军，虏楚王负刍。楚国灭亡。\n\n**主要人物**：王翦、王负刍、蒙武\n\n## 各章节记载\n\n### 六国年表 (015-026) [战争] [PN:r254](../chapters/015_六国年表.html#pn-r254)\n\n秦始皇二十四年，王翦、蒙武破楚军，虏楚王负刍。楚国灭亡。\n\n**原文**：\n\n> 二十四。王翦、蒙武破楚，虏其王负刍。\n\n### 楚世家 (040-040) [战争] [PN:[96.100-97.101]](../chapters/040_楚世家.html#pn-96.100-97.101)\n\n考烈王卒子幽王立，李园杀春申君。幽王十年卒弟哀王立，庶兄负刍弑哀王自立。负刍四年秦将王翦破楚军杀将军项燕。五年王翦蒙武破楚国虏王负刍灭楚为郡。\n\n**原文**：\n\n> 五年，秦将王翦、蒙武遂破楚国，虏楚王负刍，灭楚名为郡云。\n\n---\n\n## 相关章节\n\n- [[040_楚世家|楚世家]]\n- [[015_六国年表|六国年表]]\n"
+    },
     {
       "rev_id": "20260425-154737-69daff",
       "timestamp": "2026-04-25T15:47:37Z",

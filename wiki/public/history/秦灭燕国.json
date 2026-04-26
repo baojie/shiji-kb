@@ -1,8 +1,19 @@
 {
   "page": "秦灭燕国",
-  "latest_rev_id": "20260425-143445-042965",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080147-571a3d",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080147-571a3d",
+      "timestamp": "2026-04-26T08:01:47Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 秦灭燕国 追加战争元数据 (WAR-086-018)",
+      "parent_rev": "20260425-143445-042965",
+      "content_hash": "sha256:571a3d6cbe32b18778d71fff03b373b1951ec1178d1f98d91f009702a91236eb",
+      "size_before": 1113,
+      "size": 1164,
+      "content": "---\nid: \"秦灭燕国\"\ntype: event\ntitle: 秦灭燕国\ndescription: 秦王大怒，诏王翦伐燕。十月拔蓟城，燕王喜、太子丹率精兵退保辽东。代王嘉遗书燕王杀丹献秦可解。燕王斩太子丹献秦，秦仍进兵，后五年卒灭燕。\ntags: [史记, 事件, 刺客列传]\nsources: [刺客列传]\nevent_ids: [086-018]\npn: (086-018)\ndate: \"（公元前222年）\"\nquality: basic\n---\n\n::: meta\npn: (086-5.14)\nevent_type: 战争\nlocation: \"蓟城、辽东\"\nchapter: [刺客列传]\nwar_id: WAR-086-018\nsource_count: 1\n:::\n\n# 秦灭燕国\n\n> 秦王大怒，诏王翦伐燕。十月拔蓟城，燕王喜、太子丹率精兵退保辽东。代王嘉遗书燕王杀丹献秦可解。燕王斩太子丹献秦，秦仍进兵，后五年卒灭燕。\n\n**主要人物**：太子丹、李信、燕王喜、王翦\n\n## 事件经过\n\n秦王大怒，诏王翦伐燕。十月拔蓟城，燕王喜、太子丹率精兵退保辽东。代王嘉遗书燕王杀丹献秦可解。燕王斩太子丹献秦，秦仍进兵，后五年卒灭燕。\n\n## 原文\n\n> 後五年,秦卒灭燕,虏燕王喜。\n\n---\n\n## 相关章节\n\n- [[086_刺客列传|刺客列传]]\n"
+    },
     {
       "rev_id": "20260425-143445-042965",
       "timestamp": "2026-04-25T14:34:45Z",

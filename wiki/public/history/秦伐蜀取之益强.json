@@ -1,8 +1,19 @@
 {
   "page": "秦伐蜀取之益强",
-  "latest_rev_id": "20260425-143440-0ac613",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080145-609d2c",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080145-609d2c",
+      "timestamp": "2026-04-26T08:01:45Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 秦伐蜀取之益强 追加战争元数据 (WAR-070-006)",
+      "parent_rev": "20260425-143440-0ac613",
+      "content_hash": "sha256:609d2cd9dca673dd36d210265c4f8a06fbfd39c2d63ae058ea0cdc0c88e59a1b",
+      "size_before": 982,
+      "size": 1033,
+      "content": "---\nid: \"秦伐蜀取之益强\"\ntype: event\ntitle: 秦伐蜀取之益强\ndescription: 秦卒起兵伐蜀，十月取之，定蜀，贬蜀王为侯，使陈庄相蜀。蜀既属秦，秦以益强富厚，轻诸侯。\ntags: [史记, 事件, 张仪列传]\nsources: [张仪列传]\nevent_ids: [070-006]\npn: (070-006)\ndate: \"（公元前316年）\"\nquality: basic\n---\n\n::: meta\npn: (070-9)\nevent_type: 战争\nlocation: \"蜀\"\nchapter: [张仪列传]\nwar_id: WAR-070-006\nsource_count: 1\n:::\n\n# 秦伐蜀取之益强\n\n> 秦卒起兵伐蜀，十月取之，定蜀，贬蜀王为侯，使陈庄相蜀。蜀既属秦，秦以益强富厚，轻诸侯。\n\n**主要人物**：惠王\n\n## 事件经过\n\n秦卒起兵伐蜀，十月取之，定蜀，贬蜀王为侯，使陈庄相蜀。蜀既属秦，秦以益强富厚，轻诸侯。\n\n## 原文\n\n> 卒起兵伐蜀，十月，取之，遂定蜀，贬蜀王更号为侯，而使陈庄相蜀。蜀既属秦，秦以益彊，富厚，轻诸侯。\n\n---\n\n## 相关章节\n\n- [[070_张仪列传|张仪列传]]\n"
+    },
     {
       "rev_id": "20260425-143440-0ac613",
       "timestamp": "2026-04-25T14:34:40Z",

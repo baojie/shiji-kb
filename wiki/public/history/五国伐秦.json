@@ -1,8 +1,19 @@
 {
   "page": "五国伐秦",
-  "latest_rev_id": "20260425-154127-42e0b3",
-  "revision_count": 8,
+  "latest_rev_id": "20260426-080142-1809d2",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260426-080142-1809d2",
+      "timestamp": "2026-04-26T08:01:42Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 五国伐秦 追加战争元数据 (WAR-044-021)",
+      "parent_rev": "20260425-154127-42e0b3",
+      "content_hash": "sha256:1809d2d1050d2c56ca93c04e1bfab7fe1d650ac90ff8f6ca3f54a2684e8f24b3",
+      "size_before": 827,
+      "size": 863,
+      "content": "---\nid: \"五国伐秦\"\ntype: event\ntitle: 五国伐秦\ndescription: 信陵君归魏，率五国兵攻秦，败之河外，走蒙骜。此为信陵君最大的军事成就。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-021]\npn: (044-021)\ndate: \"三十年 （公元前247年）\"\nquality: basic\n---\n\n::: meta\npn: (044-25.1)\nevent_type: 战争\nlocation: \"河外\"\nchapter: [魏世家]\nwar_id: WAR-044-021\nsource_count: 1\n:::\n\n# 五国伐秦\n\n> 信陵君归魏，率五国兵攻秦，败之河外，走蒙骜。此为信陵君最大的军事成就。\n\n**主要人物**：无忌、蒙骜\n\n## 事件经过\n\n信陵君归魏，率五国兵攻秦，败之河外，走蒙骜。此为信陵君最大的军事成就。\n\n## 原文\n\n> 无忌归魏，率五国兵攻秦，败之河外，走蒙骜。\n\n---\n\n## 相关章节\n\n- [[044_魏世家|魏世家]]\n"
+    },
     {
       "rev_id": "20260425-154127-42e0b3",
       "timestamp": "2026-04-25T15:41:27Z",

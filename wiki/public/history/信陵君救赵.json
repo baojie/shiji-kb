@@ -1,8 +1,19 @@
 {
   "page": "信陵君救赵",
-  "latest_rev_id": "20260425-154208-8115a6",
-  "revision_count": 9,
+  "latest_rev_id": "20260426-080142-4eb95b",
+  "revision_count": 10,
   "revisions": [
+    {
+      "rev_id": "20260426-080142-4eb95b",
+      "timestamp": "2026-04-26T08:01:42Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 信陵君救赵 追加战争元数据 (WAR-044-020)",
+      "parent_rev": "20260425-154208-8115a6",
+      "content_hash": "sha256:4eb95b0fd7358de31287c3b8c9eb3eba477337e8b18877da08f5e121297c3db1",
+      "size_before": 819,
+      "size": 855,
+      "content": "---\nid: \"信陵君救赵\"\ntype: event\ntitle: 信陵君救赵\ndescription: 秦围邯郸，信陵君无忌矫夺将军晋鄙兵以救赵，赵得全。无忌因留赵不归。\ntags: [史记, 事件, 魏世家]\nsources: [魏世家]\nevent_ids: [044-020]\npn: (044-020)\ndate: \"二十年 （公元前257年）\"\nquality: basic\n---\n\n::: meta\npn: (044-24)\nevent_type: 战争\nlocation: \"邯郸\"\nchapter: [魏世家]\nwar_id: WAR-044-020\nsource_count: 1\n:::\n\n# 信陵君救赵\n\n> 秦围邯郸，信陵君无忌矫夺将军晋鄙兵以救赵，赵得全。无忌因留赵不归。\n\n**主要人物**：信陵君、晋鄙\n\n## 事件经过\n\n秦围邯郸，信陵君无忌矫夺将军晋鄙兵以救赵，赵得全。无忌因留赵不归。\n\n## 原文\n\n> $信陵君无忌$矫夺;将军晋鄙兵以救赵，赵得全。\n\n---\n\n## 相关章节\n\n- [[044_魏世家|魏世家]]\n"
+    },
     {
       "rev_id": "20260425-154208-8115a6",
       "timestamp": "2026-04-25T15:42:08Z",

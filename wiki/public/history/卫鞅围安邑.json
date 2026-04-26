@@ -1,8 +1,19 @@
 {
   "page": "卫鞅围安邑",
-  "latest_rev_id": "20260425-142958-80d563",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080132-8bea50",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080132-8bea50",
+      "timestamp": "2026-04-26T08:01:32Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 卫鞅围安邑 追加战争元数据 (WAR-005-073)",
+      "parent_rev": "20260425-142958-80d563",
+      "content_hash": "sha256:8bea5045cdb98b15d7336289c570ecf25f03afbacdfcf9c2ca049c53d2e7d941",
+      "size_before": 725,
+      "size": 776,
+      "content": "---\nid: \"卫鞅围安邑\"\ntype: event\ntitle: 卫鞅围安邑\ndescription: 孝公十年，卫鞅为大良造，率兵围攻魏国安邑，魏军投降。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-073]\npn: (005-073)\ndate: \"十年 （公元前352年）\"\nquality: basic\n---\n\n::: meta\npn: (005-52.2)\nevent_type: 战争\nlocation: \"安邑\"\nchapter: [秦本纪]\nwar_id: WAR-005-073\nsource_count: 1\n:::\n\n# 卫鞅围安邑\n\n> 孝公十年，卫鞅为大良造，率兵围攻魏国安邑，魏军投降。\n\n**主要人物**：卫鞅\n\n## 事件经过\n\n孝公十年，卫鞅为大良造，率兵围攻魏国安邑，魏军投降。\n\n## 原文\n\n> 十年，卫鞅为大良造，将兵围魏安邑，降之。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]\n"
+    },
     {
       "rev_id": "20260425-142958-80d563",
       "timestamp": "2026-04-25T14:29:58Z",

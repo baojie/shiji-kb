@@ -1,8 +1,19 @@
 {
   "page": "樗里子伐曲沃",
-  "latest_rev_id": "20260425-143305-eb0346",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080145-2b1253",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080145-2b1253",
+      "timestamp": "2026-04-26T08:01:45Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 樗里子伐曲沃 追加战争元数据 (WAR-071-001)",
+      "parent_rev": "20260425-143305-eb0346",
+      "content_hash": "sha256:2b125319e335da7d35636fa9a88fa36facea86d4446d95df059d46eda6390974",
+      "size_before": 1106,
+      "size": 1157,
+      "content": "---\nid: \"樗里子伐曲沃\"\ntype: event\ntitle: 樗里子伐曲沃\ndescription: 秦惠王八年，樗里子被授予右更爵位，受命率军攻伐曲沃。秦军将城中之人全部驱出，夺取城池，曲沃之地并入秦国版图。\ntags: [史记, 事件, 樗里子甘茂列传]\nsources: [樗里子甘茂列传]\nevent_ids: [071-001]\npn: (071-001)\ndate: \"秦惠王八年 （公元前329年）\"\nquality: basic\n---\n\n::: meta\npn: (071-2)\nevent_type: 战争\nlocation: \"曲沃\"\nchapter: [樗里子甘茂列传]\nwar_id: WAR-071-001\nsource_count: 1\n:::\n\n# 樗里子伐曲沃\n\n> 秦惠王八年，樗里子被授予右更爵位，受命率军攻伐曲沃。秦军将城中之人全部驱出，夺取城池，曲沃之地并入秦国版图。\n\n**主要人物**：樗里子、秦惠王\n\n## 事件经过\n\n秦惠王八年，樗里子被授予右更爵位，受命率军攻伐曲沃。秦军将城中之人全部驱出，夺取城池，曲沃之地并入秦国版图。\n\n## 原文\n\n> 秦惠王八年，爵樗里子右更，使将而伐曲沃，尽出其人，取其城，地入秦。\n\n---\n\n## 相关章节\n\n- [[071_樗里子甘茂列传|樗里子甘茂列传]]\n"
+    },
     {
       "rev_id": "20260425-143305-eb0346",
       "timestamp": "2026-04-25T14:33:05Z",

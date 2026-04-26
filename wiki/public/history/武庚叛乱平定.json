@@ -1,8 +1,19 @@
 {
   "page": "武庚叛乱平定",
-  "latest_rev_id": "20260425-143311-e0dbdc",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080131-75d7c5",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080131-75d7c5",
+      "timestamp": "2026-04-26T08:01:31Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 武庚叛乱平定 追加战争元数据 (WAR-003-042)",
+      "parent_rev": "20260425-143311-e0dbdc",
+      "content_hash": "sha256:75d7c53e495aac49d6ede5db7ad34640c3e0145bf72b9489709bb4980821f59c",
+      "size_before": 890,
+      "size": 941,
+      "content": "---\nid: \"武庚叛乱平定\"\ntype: event\ntitle: 武庚叛乱平定\ndescription: 周武王崩后，武庚与管叔蔡叔作乱，成王命周公诛之。立微子于宋以续殷后。\ntags: [史记, 事件, 殷本纪]\nsources: [殷本纪]\nevent_ids: [003-042]\npn: (003-042)\ndate: \"[约公元前1041年]\"\nquality: basic\n---\n\n::: meta\npn: (003-33)\nevent_type: 战争\nlocation: \"宋\"\nchapter: [殷本纪]\nwar_id: WAR-003-042\nsource_count: 1\n:::\n\n# 武庚叛乱平定\n\n> 周武王崩后，武庚与管叔蔡叔作乱，成王命周公诛之。立微子于宋以续殷后。\n\n**主要人物**：周公、微子、成王、武庚、管叔、蔡叔\n\n## 事件经过\n\n周武王崩后，武庚与管叔蔡叔作乱，成王命周公诛之。立微子于宋以续殷后。\n\n## 原文\n\n> 周武王崩，武庚与管叔、蔡叔作乱，成王命周公诛之，而立微子於宋，以续殷後焉。\n\n---\n\n## 相关章节\n\n- [[003_殷本纪|殷本纪]]\n"
+    },
     {
       "rev_id": "20260425-143311-e0dbdc",
       "timestamp": "2026-04-25T14:33:11Z",

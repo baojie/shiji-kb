@@ -1,8 +1,19 @@
 {
   "page": "还定三秦",
-  "latest_rev_id": "20260425-154200-fcd4bc",
-  "revision_count": 8,
+  "latest_rev_id": "20260426-080135-4b595a",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260426-080135-4b595a",
+      "timestamp": "2026-04-26T08:01:35Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 还定三秦 追加战争元数据 (WAR-008-036)",
+      "parent_rev": "20260425-154200-fcd4bc",
+      "content_hash": "sha256:4b595aeb57c448d0d1f0cc646ee34eba71b88841f3203976e1d852a7a0abc0cd",
+      "size_before": 1257,
+      "size": 1293,
+      "content": "---\nid: \"还定三秦\"\ntype: event\ntitle: 还定三秦\ndescription: 汉王用韩信之计从故道还师，袭雍王章邯。邯迎击于陈仓兵败，又败于好畤，走废丘。汉王遂定雍地，东至咸阳，围废丘，遣将略定陇西、北地、上郡。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-036]\npn: (008-036)\ndate: \"八月 （公元前206年）\"\nquality: basic\n---\n\n::: meta\npn: (008-30)\nevent_type: 战争\nlocation: \"陈仓、好畤、废丘\"\nchapter: [高祖本纪]\nwar_id: WAR-008-036\nsource_count: 1\n:::\n\n# 还定三秦\n\n> 汉王用韩信之计从故道还师，袭雍王章邯。邯迎击于陈仓兵败，又败于好畤，走废丘。汉王遂定雍地，东至咸阳，围废丘，遣将略定陇西、北地、上郡。\n\n**主要人物**：刘邦、章邯、韩信\n\n## 事件经过\n\n汉王用韩信之计从故道还师，袭雍王章邯。邯迎击于陈仓兵败，又败于好畤，走废丘。汉王遂定雍地，东至咸阳，围废丘，遣将略定陇西、北地、上郡。\n\n## 原文\n\n> 八月，汉王用韩信之计，从故道还，袭雍王章邯。邯迎击汉陈仓，雍兵败，还走；止战好畤，又复败，走废丘。汉王遂定雍地。\n\n---\n\n## 相关章节\n\n- [[008_高祖本纪|高祖本纪]]\n"
+    },
     {
       "rev_id": "20260425-154200-fcd4bc",
       "timestamp": "2026-04-25T15:42:00Z",

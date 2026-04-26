@@ -1,8 +1,19 @@
 {
   "page": "秦王政统一天下",
-  "latest_rev_id": "20260425-143446-744a56",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080133-8bb6c8",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080133-8bb6c8",
+      "timestamp": "2026-04-26T08:01:33Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 秦王政统一天下 追加战争元数据 (WAR-005-148)",
+      "parent_rev": "20260425-143446-744a56",
+      "content_hash": "sha256:8bb6c83a3853522d40c1c61532036164ac1407d42c47444daf61779498b15b78",
+      "size_before": 989,
+      "size": 1040,
+      "content": "---\nid: \"秦王政统一天下\"\ntype: event\ntitle: 秦王政统一天下\ndescription: 秦王政立二十六年，初并天下为三十六郡，号为始皇帝。至此结束了五百余年的列国纷争，中国首次实现大一统。\ntags: [史记, 事件, 秦本纪]\nsources: [秦本纪]\nevent_ids: [005-148]\npn: (005-148)\ndate: \"秦王政立二十六年 （公元前221年）\"\nquality: basic\n---\n\n::: meta\npn: (005-68)\nevent_type: 战争\nchapter: [秦本纪]\nwar_id: WAR-005-148\nsource_count: 1\n:::\n\n# 秦王政统一天下\n\n> 秦王政立二十六年，初并天下为三十六郡，号为始皇帝。至此结束了五百余年的列国纷争，中国首次实现大一统。\n\n**主要人物**：秦王政（始皇帝）\n\n## 事件经过\n\n秦王政立二十六年，初并天下为三十六郡，号为始皇帝。至此结束了五百余年的列国纷争，中国首次实现大一统。\n\n## 原文\n\n> 秦王政立二十六年，初并天下为三十六郡，号为始皇帝。\n\n---\n\n## 相关章节\n\n- [[005_秦本纪|秦本纪]]\n"
+    },
     {
       "rev_id": "20260425-143446-744a56",
       "timestamp": "2026-04-25T14:34:46Z",

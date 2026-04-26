@@ -1,8 +1,19 @@
 {
   "page": "贰师再伐大宛",
-  "latest_rev_id": "20260425-143556-6b574b",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080152-084bd2",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080152-084bd2",
+      "timestamp": "2026-04-26T08:01:52Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 贰师再伐大宛 追加战争元数据 (WAR-123-019)",
+      "parent_rev": "20260425-143556-6b574b",
+      "content_hash": "sha256:084bd2c1deea776e49c0b8bd7acdf39e2aa00a98153f8784038fb3eec404ccfe",
+      "size_before": 1107,
+      "size": 1158,
+      "content": "---\nid: \"贰师再伐大宛\"\ntype: event\ntitle: 贰师再伐大宛\ndescription: 天子益发兵，出敦煌者六万人，牛十万、马三万余匹。贰师至宛，汉兵三万人围城攻四十余日，破其外城，虏宛勇将煎靡。\ntags: [史记, 事件, 大宛列传]\nsources: [大宛列传]\nevent_ids: [123-019]\npn: (123-019)\ndate: \"太初三年 （公元前102年）\"\nquality: basic\n---\n\n::: meta\npn: (123-29)\nevent_type: 战争\nlocation: \"宛\"\nchapter: [大宛列传]\nwar_id: WAR-123-019\nsource_count: 1\n:::\n\n# 贰师再伐大宛\n\n> 天子益发兵，出敦煌者六万人，牛十万、马三万余匹。贰师至宛，汉兵三万人围城攻四十余日，破其外城，虏宛勇将煎靡。\n\n**主要人物**：上官桀、李广利、赵始成\n\n## 事件经过\n\n天子益发兵，出敦煌者六万人，牛十万、马三万余匹。贰师至宛，汉兵三万人围城攻四十余日，破其外城，虏宛勇将煎靡。\n\n## 原文\n\n> 益发恶少年及边骑，岁馀而出敦煌者六万人……围其城，攻之四十馀日，其外城坏，虏宛贵人勇将煎靡。\n\n---\n\n## 相关章节\n\n- [[123_大宛列传|大宛列传]]\n"
+    },
     {
       "rev_id": "20260425-143556-6b574b",
       "timestamp": "2026-04-25T14:35:56Z",

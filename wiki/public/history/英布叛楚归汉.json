@@ -1,8 +1,19 @@
 {
   "page": "英布叛楚归汉",
-  "latest_rev_id": "20260425-143519-1be4d0",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080147-d64695",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080147-d64695",
+      "timestamp": "2026-04-26T08:01:47Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 英布叛楚归汉 追加战争元数据 (WAR-091-012)",
+      "parent_rev": "20260425-143519-1be4d0",
+      "content_hash": "sha256:d6469536b2eefc791c5a7574bac5b0683e268919d5efa39b9aba36d535390543",
+      "size_before": 1158,
+      "size": 1209,
+      "content": "---\nid: \"英布叛楚归汉\"\ntype: event\ntitle: 英布叛楚归汉\ndescription: 随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\ntags: [史记, 事件, 黥布列传]\nsources: [黥布列传]\nevent_ids: [091-012]\npn: (091-012)\ndate: \"（公元前204年）\"\nquality: basic\n---\n\n::: meta\npn: (091-8)\nevent_type: 战争\nlocation: \"淮南、下邑\"\nchapter: [黥布列传]\nwar_id: WAR-091-012\nsource_count: 1\n:::\n\n# 英布叛楚归汉\n\n> 随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\n\n**主要人物**：英布、随何、项声、龙且\n\n## 事件经过\n\n随何直入楚使者上座，宣布九江王已归汉。英布遂杀楚使者，起兵攻楚。楚使项声、龙且攻淮南，破英布军。英布间行与随何归汉。\n\n## 原文\n\n> 随何直入，坐楚使者上坐，曰：\"九江王已归汉，楚何以得发兵？\"...布欲引兵走汉，恐楚王杀之，故间行与何俱归汉。\n\n---\n\n## 相关章节\n\n- [[091_黥布列传|黥布列传]]\n"
+    },
     {
       "rev_id": "20260425-143519-1be4d0",
       "timestamp": "2026-04-25T14:35:19Z",

@@ -1,8 +1,19 @@
 {
   "page": "廉颇大破燕军",
-  "latest_rev_id": "20260425-143144-59984d",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080146-9c83db",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080146-9c83db",
+      "timestamp": "2026-04-26T08:01:46Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 廉颇大破燕军 追加战争元数据 (WAR-081-020)",
+      "parent_rev": "20260425-143144-59984d",
+      "content_hash": "sha256:9c83db3b38f1368a3aa4b67711cfaff12bbc7985c962d81415e468c729f999c4",
+      "size_before": 1141,
+      "size": 1192,
+      "content": "---\nid: \"廉颇大破燕军\"\ntype: event\ntitle: 廉颇大破燕军\ndescription: 邯郸围解五年后，燕国用栗腹之谋，趁赵壮者尽于长平举兵攻赵。赵使廉颇领兵迎战，大破燕军于鄗，杀栗腹，遂围燕。燕割五城求和。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-020]\npn: (081-020)\ndate: \"（公元前251年）\"\nquality: basic\n---\n\n::: meta\npn: (081-18.1)\nevent_type: 战争\nlocation: \"鄗\"\nchapter: [廉颇蔺相如列传]\nwar_id: WAR-081-020\nsource_count: 1\n:::\n\n# 廉颇大破燕军\n\n> 邯郸围解五年后，燕国用栗腹之谋，趁赵壮者尽于长平举兵攻赵。赵使廉颇领兵迎战，大破燕军于鄗，杀栗腹，遂围燕。燕割五城求和。\n\n**主要人物**：廉颇、栗腹\n\n## 事件经过\n\n邯郸围解五年后，燕国用栗腹之谋，趁赵壮者尽于长平举兵攻赵。赵使廉颇领兵迎战，大破燕军于鄗，杀栗腹，遂围燕。燕割五城求和。\n\n## 原文\n\n> 赵使廉颇将，击，大破燕军於鄗，杀栗腹，遂围燕。燕割五城请和，乃听之。\n\n---\n\n## 相关章节\n\n- [[081_廉颇蔺相如列传|廉颇蔺相如列传]]\n"
+    },
     {
       "rev_id": "20260425-143144-59984d",
       "timestamp": "2026-04-25T14:31:44Z",

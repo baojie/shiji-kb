@@ -1,8 +1,19 @@
 {
   "page": "韩信破赵",
-  "latest_rev_id": "20260425-154047-ede13c",
-  "revision_count": 8,
+  "latest_rev_id": "20260426-080136-cf2922",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260426-080136-cf2922",
+      "timestamp": "2026-04-26T08:01:36Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 韩信破赵 追加战争元数据 (WAR-008-045)",
+      "parent_rev": "20260425-154047-ede13c",
+      "content_hash": "sha256:cf2922638dd9a70653096ee0d6230815e78b4b1a43b39c0847fa7bc50993de6b",
+      "size_before": 875,
+      "size": 911,
+      "content": "---\nid: \"韩信破赵\"\ntype: event\ntitle: 韩信破赵\ndescription: 汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-045]\npn: (008-045)\ndate: \"三年 （公元前204年）\"\nquality: basic\n---\n\n::: meta\npn: (008-39.5)\nevent_type: 战争\nlocation: \"井陉\"\nchapter: [高祖本纪]\nwar_id: WAR-008-045\nsource_count: 1\n:::\n\n# 韩信破赵\n\n> 汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\n\n**主要人物**：张耳、赵歇、陈馀、韩信\n\n## 事件经过\n\n汉王令张耳与韩信东下井陉击赵，斩陈馀及赵王歇。次年立张耳为赵王。\n\n## 原文\n\n> 汉王乃令张耳与韩信遂东下井陉击赵，斩陈馀、赵王歇。其明年，立张耳为赵王。\n\n---\n\n## 相关章节\n\n- [[008_高祖本纪|高祖本纪]]\n"
+    },
     {
       "rev_id": "20260425-154047-ede13c",
       "timestamp": "2026-04-25T15:40:47Z",

@@ -1,8 +1,19 @@
 {
   "page": "涿鹿之战",
-  "latest_rev_id": "20260425-143345-4d0757",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080131-621d15",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080131-621d15",
+      "timestamp": "2026-04-26T08:01:31Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 涿鹿之战 追加战争元数据 (WAR-001-003)",
+      "parent_rev": "20260425-143345-4d0757",
+      "content_hash": "sha256:621d15d6a0f43fd2b892c6d1d054fa275fdac715ae5a53395cdcfb5be8df8c3b",
+      "size_before": 1002,
+      "size": 1053,
+      "content": "---\nid: \"涿鹿之战\"\ntype: event\ntitle: 涿鹿之战\ndescription: 蚩尤作乱，不服帝命。黄帝征集诸侯军队，与蚩尤战于涿鹿之野，最终擒杀蚩尤。这是黄帝统一天下的关键战役。\ntags: [史记, 事件, 五帝本纪]\nsources: [五帝本纪]\nevent_ids: [001-003]\npn: (001-003)\ndate: \"[约公元前2679年]\"\nquality: basic\n---\n\n::: meta\npn: (001-1.2)\nevent_type: 战争\nlocation: \"涿鹿之野\"\nchapter: [五帝本纪]\nwar_id: WAR-001-003\nsource_count: 1\n:::\n\n# 涿鹿之战\n\n> 蚩尤作乱，不服帝命。黄帝征集诸侯军队，与蚩尤战于涿鹿之野，最终擒杀蚩尤。这是黄帝统一天下的关键战役。\n\n**主要人物**：蚩尤、黄帝\n\n## 事件经过\n\n蚩尤作乱，不服帝命。黄帝征集诸侯军队，与蚩尤战于涿鹿之野，最终擒杀蚩尤。这是黄帝统一天下的关键战役。\n\n## 原文\n\n> 蚩尤作乱，不用帝命。於是黄帝乃徵师诸侯，与蚩尤战於涿鹿之野，遂禽杀蚩尤。\n\n---\n\n## 相关章节\n\n- [[001_五帝本纪|五帝本纪]]\n"
+    },
     {
       "rev_id": "20260425-143345-4d0757",
       "timestamp": "2026-04-25T14:33:45Z",

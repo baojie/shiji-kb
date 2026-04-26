@@ -1,8 +1,19 @@
 {
   "page": "秦灭燕",
-  "latest_rev_id": "20260425-143444-6ee47b",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080140-643341",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080140-643341",
+      "timestamp": "2026-04-26T08:01:40Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 秦灭燕 追加战争元数据 (WAR-034-016)",
+      "parent_rev": "20260425-143444-6ee47b",
+      "content_hash": "sha256:64334138b9ac6c451f83b7463e1a76f2cf03fce4926bc613687eda14534b5c18",
+      "size_before": 1183,
+      "size": 1234,
+      "content": "---\nid: \"秦灭燕\"\ntype: event\ntitle: 秦灭燕\ndescription: 二十九年，秦攻拔蓟，燕王亡徙居辽东，斩太子丹以献秦。三十三年，秦拔辽东，虏燕王喜，卒灭燕。燕自召公至王喜，社稷血食者八九百岁。\ntags: [史记, 事件, 燕召公世家]\nsources: [燕召公世家]\nevent_ids: [034-016]\npn: (034-016)\ndate: \"三十三年 （公元前222年）\"\nquality: basic\n---\n\n::: meta\npn: (034-22.1)\nevent_type: 战争\nlocation: \"辽东\"\nchapter: [燕召公世家]\nwar_id: WAR-034-016\nsource_count: 1\n:::\n\n# 秦灭燕\n\n> 二十九年，秦攻拔蓟，燕王亡徙居辽东，斩太子丹以献秦。三十三年，秦拔辽东，虏燕王喜，卒灭燕。燕自召公至王喜，社稷血食者八九百岁。\n\n**主要人物**：燕王喜、王翦、王贲\n\n## 事件经过\n\n二十九年，秦攻拔蓟，燕王亡徙居辽东，斩太子丹以献秦。三十三年，秦拔辽东，虏燕王喜，卒灭燕。燕自召公至王喜，社稷血食者八九百岁。\n\n## 原文\n\n> 二十九年,秦攻拔我蓟,燕王亡,徙居辽东,斩丹以献秦。三十年,秦灭魏。三十三年,秦拔辽东,虏燕$王@喜$,卒灭燕。\n\n---\n\n## 相关章节\n\n- [[034_燕召公世家|燕召公世家]]\n"
+    },
     {
       "rev_id": "20260425-143444-6ee47b",
       "timestamp": "2026-04-25T14:34:44Z",

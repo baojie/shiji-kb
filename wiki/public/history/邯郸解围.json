@@ -1,8 +1,19 @@
 {
   "page": "邯郸解围",
-  "latest_rev_id": "20260425-143613-63ce19",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080142-9bfc4f",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080142-9bfc4f",
+      "timestamp": "2026-04-26T08:01:42Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 邯郸解围 追加战争元数据 (WAR-043-026)",
+      "parent_rev": "20260425-143613-63ce19",
+      "content_hash": "sha256:9bfc4f30c7174f65c63c7b5bd66f2930d02fd3df0317322f7e4e0b26b3b1840f",
+      "size_before": 794,
+      "size": 845,
+      "content": "---\nid: \"邯郸解围\"\ntype: event\ntitle: 邯郸解围\ndescription: 平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\ntags: [史记, 事件, 赵世家]\nsources: [赵世家]\nevent_ids: [043-026]\npn: (043-026)\ndate: \"八年 （公元前258年）\"\nquality: basic\n---\n\n::: meta\npn: (043-31.5)\nevent_type: 战争\nlocation: \"邯郸\"\nchapter: [赵世家]\nwar_id: WAR-043-026\nsource_count: 1\n:::\n\n# 邯郸解围\n\n> 平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\n\n**主要人物**：信陵君、平原君\n\n## 事件经过\n\n平原君如楚请救，楚来救，及魏公子无忌亦来救，秦围邯郸乃解。\n\n## 原文\n\n> 平原君如楚请救。还，楚来救，及$魏公子无忌@$亦来救，秦围邯郸乃解。\n\n---\n\n## 相关章节\n\n- [[043_赵世家|赵世家]]\n"
+    },
     {
       "rev_id": "20260425-143613-63ce19",
       "timestamp": "2026-04-25T14:36:13Z",

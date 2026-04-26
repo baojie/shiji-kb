@@ -1,8 +1,19 @@
 {
   "page": "汉王出关复东",
-  "latest_rev_id": "20260425-143320-ca9b0f",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080136-4202ba",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080136-4202ba",
+      "timestamp": "2026-04-26T08:01:36Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 汉王出关复东 追加战争元数据 (WAR-008-049)",
+      "parent_rev": "20260425-143320-ca9b0f",
+      "content_hash": "sha256:4202ba71a64eededbdb8202ddd6abb1e0c1a86283bf70dd06ff23f60b5d43f49",
+      "size_before": 1044,
+      "size": 1095,
+      "content": "---\nid: \"汉王出关复东\"\ntype: event\ntitle: 汉王出关复东\ndescription: 汉王出荥阳入关收兵，用袁生之计出武关吸引项羽南走，令荥阳成皋间得休。与黥布行收兵于宛叶间，坚壁不战。\ntags: [史记, 事件, 高祖本纪]\nsources: [高祖本纪]\nevent_ids: [008-049]\npn: (008-049)\ndate: \"三年 （公元前204年）\"\nquality: basic\n---\n\n::: meta\npn: (008-42)\nevent_type: 战争\nlocation: \"宛叶\"\nchapter: [高祖本纪]\nwar_id: WAR-008-049\nsource_count: 1\n:::\n\n# 汉王出关复东\n\n> 汉王出荥阳入关收兵，用袁生之计出武关吸引项羽南走，令荥阳成皋间得休。与黥布行收兵于宛叶间，坚壁不战。\n\n**主要人物**：刘邦、袁生、黥布\n\n## 事件经过\n\n汉王出荥阳入关收兵，用袁生之计出武关吸引项羽南走，令荥阳成皋间得休。与黥布行收兵于宛叶间，坚壁不战。\n\n## 原文\n\n> 汉王从其计，出军宛叶间，与黥布行收兵。...项羽闻汉王在宛，果引兵南。汉王坚壁不与战。\n\n---\n\n## 相关章节\n\n- [[008_高祖本纪|高祖本纪]]\n"
+    },
     {
       "rev_id": "20260425-143320-ca9b0f",
       "timestamp": "2026-04-25T14:33:20Z",

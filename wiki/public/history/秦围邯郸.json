@@ -1,8 +1,19 @@
 {
   "page": "秦围邯郸",
-  "latest_rev_id": "20260425-143441-cd2feb",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080146-9ae1a1",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080146-9ae1a1",
+      "timestamp": "2026-04-26T08:01:46Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 秦围邯郸 追加战争元数据 (WAR-081-019)",
+      "parent_rev": "20260425-143441-cd2feb",
+      "content_hash": "sha256:9ae1a1005a2b45b1afa45d534fd80d53397aa88b740e805c6e1a53841be6f306",
+      "size_before": 938,
+      "size": 989,
+      "content": "---\nid: \"秦围邯郸\"\ntype: event\ntitle: 秦围邯郸\ndescription: 长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-019]\npn: (081-019)\ndate: \"明年 （公元前258年）\"\nquality: basic\n---\n\n::: meta\npn: (081-17.6)\nevent_type: 战争\nlocation: \"邯郸\"\nchapter: [廉颇蔺相如列传]\nwar_id: WAR-081-019\nsource_count: 1\n:::\n\n# 秦围邯郸\n\n> 长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\n\n## 事件经过\n\n长平惨败次年，秦兵围赵都邯郸，围困一年多几乎不能脱身。赖楚、魏等诸侯来救，方得解围。\n\n## 原文\n\n> 明年，秦兵遂围邯郸，岁馀，几不得脱。赖楚、魏诸侯来救，乃得解邯郸之围。\n\n---\n\n## 相关章节\n\n- [[081_廉颇蔺相如列传|廉颇蔺相如列传]]\n"
+    },
     {
       "rev_id": "20260425-143441-cd2feb",
       "timestamp": "2026-04-25T14:34:41Z",

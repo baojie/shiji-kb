@@ -1,8 +1,19 @@
 {
   "page": "吴王遗书诸侯",
-  "latest_rev_id": "20260425-143014-4fd68c",
-  "revision_count": 7,
+  "latest_rev_id": "20260426-080149-de06b3",
+  "revision_count": 8,
   "revisions": [
+    {
+      "rev_id": "20260426-080149-de06b3",
+      "timestamp": "2026-04-26T08:01:49Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 吴王遗书诸侯 追加战争元数据 (WAR-106-008)",
+      "parent_rev": "20260425-143014-4fd68c",
+      "content_hash": "sha256:de06b318765a920057690f33d5fa31132568b24e6f0a4ecddd93ade1e9b8bb65",
+      "size_before": 1125,
+      "size": 1176,
+      "content": "---\nid: \"吴王遗书诸侯\"\ntype: event\ntitle: 吴王遗书诸侯\ndescription: 吴王初起兵于广陵，西涉淮并楚兵，发使遗诸侯书，称汉有贼臣侵夺诸侯地，欲举兵诛之。书中许以斩大将赐金五千斤封万户等重赏。\ntags: [史记, 事件, 吴王濞列传]\nsources: [吴王濞列传]\nevent_ids: [106-008]\npn: (106-008)\ndate: \"孝景帝三年正月甲子 （公元前154年）\"\nquality: basic\n---\n\n::: meta\npn: (106-2.4)\nevent_type: 战争\nlocation: \"广陵\"\nchapter: [吴王濞列传]\nwar_id: WAR-106-008\nsource_count: 1\n:::\n\n# 吴王遗书诸侯\n\n> 吴王初起兵于广陵，西涉淮并楚兵，发使遗诸侯书，称汉有贼臣侵夺诸侯地，欲举兵诛之。书中许以斩大将赐金五千斤封万户等重赏。\n\n**主要人物**：吴王刘濞\n\n## 事件经过\n\n吴王初起兵于广陵，西涉淮并楚兵，发使遗诸侯书，称汉有贼臣侵夺诸侯地，欲举兵诛之。书中许以斩大将赐金五千斤封万户等重赏。\n\n## 原文\n\n> 以汉有贼臣，无功天下，侵夺诸侯地\"\"能斩捕大将者，赐金五千斤，封万户\n\n---\n\n## 相关章节\n\n- [[106_吴王濞列传|吴王濞列传]]\n"
+    },
     {
       "rev_id": "20260425-143014-4fd68c",
       "timestamp": "2026-04-25T14:30:14Z",

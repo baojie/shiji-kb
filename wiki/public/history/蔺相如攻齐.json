@@ -1,8 +1,19 @@
 {
   "page": "蔺相如攻齐",
-  "latest_rev_id": "20260425-154204-fb3093",
-  "revision_count": 8,
+  "latest_rev_id": "20260426-080146-e2f88b",
+  "revision_count": 9,
   "revisions": [
+    {
+      "rev_id": "20260426-080146-e2f88b",
+      "timestamp": "2026-04-26T08:01:46Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 蔺相如攻齐 追加战争元数据 (WAR-081-011)",
+      "parent_rev": "20260425-154204-fb3093",
+      "content_hash": "sha256:e2f88b96c751b0acf2b277084c763a5498c9970c6373d4e318e252c535fe1215",
+      "size_before": 737,
+      "size": 773,
+      "content": "---\nid: \"蔺相如攻齐\"\ntype: event\ntitle: 蔺相如攻齐\ndescription: 四年后，蔺相如领兵攻齐，至平邑而罢兵。\ntags: [史记, 事件, 廉颇蔺相如列传]\nsources: [廉颇蔺相如列传]\nevent_ids: [081-011]\npn: (081-011)\ndate: \"後四年 （公元前271年）\"\nquality: basic\n---\n\n::: meta\npn: (081-10.4)\nevent_type: 战争\nlocation: \"平邑\"\nchapter: [廉颇蔺相如列传]\nwar_id: WAR-081-011\nsource_count: 1\n:::\n\n# 蔺相如攻齐\n\n> 四年后，蔺相如领兵攻齐，至平邑而罢兵。\n\n**主要人物**：蔺相如\n\n## 事件经过\n\n四年后，蔺相如领兵攻齐，至平邑而罢兵。\n\n## 原文\n\n> 後四年，蔺相如将而攻齐，至平邑而罢。\n\n---\n\n## 相关章节\n\n- [[081_廉颇蔺相如列传|廉颇蔺相如列传]]\n"
+    },
     {
       "rev_id": "20260425-154204-fb3093",
       "timestamp": "2026-04-25T15:42:04Z",

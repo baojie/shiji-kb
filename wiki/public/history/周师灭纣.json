@@ -1,8 +1,19 @@
 {
   "page": "周师灭纣",
-  "latest_rev_id": "20260425-143021-6a2330",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080139-053ab1",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080139-053ab1",
+      "timestamp": "2026-04-26T08:01:39Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 周师灭纣 追加战争元数据 (WAR-023-014)",
+      "parent_rev": "20260425-143021-6a2330",
+      "content_hash": "sha256:053ab1eb8342eeea6e894c60bd273c32bf6fe810df173e25535c6d1513af9913",
+      "size_before": 808,
+      "size": 859,
+      "content": "---\nid: \"周师灭纣\"\ntype: event\ntitle: 周师灭纣\ndescription: 周师到来时，纣王令不行于下，不能役使其民。非因法令不严、刑罚不酷，而是统治之道非礼之故。\ntags: [史记, 事件, 礼书]\nsources: [礼书]\nevent_ids: [023-014]\npn: (023-014)\ndate: \"（公元前1046年）\"\nquality: basic\n---\n\n::: meta\npn: (023-15.2)\nevent_type: 战争\nchapter: [礼书]\nwar_id: WAR-023-014\nsource_count: 1\n:::\n\n# 周师灭纣\n\n> 周师到来时，纣王令不行于下，不能役使其民。非因法令不严、刑罚不酷，而是统治之道非礼之故。\n\n## 事件经过\n\n周师到来时，纣王令不行于下，不能役使其民。非因法令不严、刑罚不酷，而是统治之道非礼之故。\n\n## 原文\n\n> 然而周师至，而令不行乎下，不能用其民。\n\n---\n\n## 相关章节\n\n- [[023_礼书|礼书]]\n"
+    },
     {
       "rev_id": "20260425-143021-6a2330",
       "timestamp": "2026-04-25T14:30:21Z",

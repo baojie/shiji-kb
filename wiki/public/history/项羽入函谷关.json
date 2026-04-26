@@ -1,8 +1,19 @@
 {
   "page": "项羽入函谷关",
-  "latest_rev_id": "20260425-143702-ee8bde",
-  "revision_count": 6,
+  "latest_rev_id": "20260426-080134-80ad91",
+  "revision_count": 7,
   "revisions": [
+    {
+      "rev_id": "20260426-080134-80ad91",
+      "timestamp": "2026-04-26T08:01:34Z",
+      "author": "butler",
+      "summary": "butler/import-war-index: 项羽入函谷关 追加战争元数据 (WAR-007-023)",
+      "parent_rev": "20260425-143702-ee8bde",
+      "content_hash": "sha256:80ad91c7c6c1fc8118d9dd206ab45c166a24b5b5c6d7cb5b1d74aa5907d549aa",
+      "size_before": 1078,
+      "size": 1129,
+      "content": "---\nid: \"项羽入函谷关\"\ntype: event\ntitle: 项羽入函谷关\ndescription: 项羽大军行至函谷关，发现有兵守关不得入，又闻沛公已破咸阳。项羽大怒，令当阳君等攻破关卡，遂入关至戏西。\ntags: [史记, 事件, 项羽本纪]\nsources: [项羽本纪]\nevent_ids: [007-023]\npn: (007-023)\ndate: \"（公元前206年）\"\nquality: basic\n---\n\n::: meta\npn: (007-54.1)\nevent_type: 战争\nlocation: \"函谷关、戏\"\nchapter: [项羽本纪]\nwar_id: WAR-007-023\nsource_count: 1\n:::\n\n# 项羽入函谷关\n\n> 项羽大军行至函谷关，发现有兵守关不得入，又闻沛公已破咸阳。项羽大怒，令当阳君等攻破关卡，遂入关至戏西。\n\n**主要人物**：当阳君、项羽\n\n## 事件经过\n\n项羽大军行至函谷关，发现有兵守关不得入，又闻沛公已破咸阳。项羽大怒，令当阳君等攻破关卡，遂入关至戏西。\n\n## 原文\n\n> 行略定秦地。函谷关有兵守关，不得入。又闻沛公已破咸阳，项羽大怒，使当阳君等击关。项羽遂入，至于戏西。\n\n---\n\n## 相关章节\n\n- [[007_项羽本纪|项羽本纪]]\n"
+    },
     {
       "rev_id": "20260425-143702-ee8bde",
       "timestamp": "2026-04-25T14:37:02Z",
