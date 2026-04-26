@@ -611,20 +611,48 @@ function renderFeaturedCard(p) {
 
 function searchPages(q, registry) {
   const lower = q.toLowerCase();
-  const matched = new Map(); // pid → 命中的 surface
+  // type priority: core entities first, long-form content last
+  const TYPE_PRIO = { person: 40, state: 35, dynasty: 35, official: 30,
+    place: 30, institution: 25, identity: 25, xing: 25, shihao: 20,
+    concept: 15, artifact: 15, biology: 15, tribe: 15,
+    event: 5, story: 5, sanwen: 5, chapter: 5, taishigongyue: 5,
+    redirect: -20 };
+
+  function matchScore(surface) {
+    const s = surface.toLowerCase();
+    if (s === lower)            return 100;
+    if (s.startsWith(lower))   return 70;
+    if (s.includes(lower))     return 30;
+    return 0;
+  }
+
+  // pid → { surface, score }
+  const best = new Map();
+  function tryMatch(pid, surface) {
+    const sc = matchScore(surface);
+    if (!sc) return;
+    const prev = best.get(pid);
+    if (!prev || sc > prev.score) best.set(pid, { surface, score: sc });
+  }
+
   for (const [pid, entry] of Object.entries(registry.pages)) {
-    if (pid.toLowerCase().includes(lower)) matched.set(pid, pid);
-    else if (entry.label && entry.label.toLowerCase().includes(lower)) {
-      matched.set(pid, entry.label);
-    }
+    tryMatch(pid, pid);
+    if (entry.label) tryMatch(pid, entry.label);
   }
   for (const [alias, pid] of Object.entries(registry.alias_index || {})) {
-    if (matched.has(pid)) continue;
-    if (alias.toLowerCase().includes(lower)) matched.set(pid, alias);
+    tryMatch(pid, alias);
   }
-  return [...matched.entries()]
+
+  return [...best.entries()]
+    .map(([pid, { surface, score }]) => {
+      const entry = registry.pages[pid];
+      const typePrio = TYPE_PRIO[entry?.type] ?? 10;
+      const refs = entry?.total_refs ?? 0;
+      return { pid, entry, matched: surface, _sort: score * 100 + typePrio * 10 + Math.min(refs, 9) };
+    })
+    .sort((a, b) => b._sort - a._sort)
     .slice(0, 15)
-    .map(([pid, matched]) => ({ pid, entry: registry.pages[pid], matched }));
+    .map(({ pid, entry, matched }) => ({ pid, entry, matched }));
 }
 
 /**
@@ -705,7 +733,8 @@ export async function renderRecent(core, pageNum = 1) {
   const DISPLAY_LIMIT = 500;
   const PAGE_SIZE = 50;
 
-  const r = await fetch('recent.json');
+  const bust = `?v=${Math.floor(Date.now() / 60000)}`;
+  const r = await fetch('recent.json' + bust);
   if (!r.ok) throw new Error('HTTP ' + r.status);
   const data = await r.json();
 
@@ -1112,7 +1141,7 @@ export function renderAll(core) {
       </details>` : '';
 
     const sourceSection = orderedSources.length ? `
-      <details class="facet-group">
+      <details class="facet-group" open>
         <summary class="facet-group-title">所在章节</summary>
         <div class="facet-items facet-tags">${sourceItems}</div>
       </details>` : '';
@@ -1125,11 +1154,11 @@ export function renderAll(core) {
       <details class="facet-group" open>
         <summary class="facet-group-title">类型</summary>
         <div class="facet-items">${typeItems}</div>
-      </details>${essaySection}${eventSection}
+      </details>${essaySection}${eventSection}${sourceSection}
       <details class="facet-group" open>
         <summary class="facet-group-title">标签</summary>
         <div class="facet-items facet-tags">${tagItems}</div>
-      </details>${sourceSection}
+      </details>
       <details class="facet-group">
         <summary class="facet-group-title">内容质量</summary>
         <div class="facet-items">${qItems}</div>

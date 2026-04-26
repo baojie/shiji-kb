@@ -1,7 +1,8 @@
 /* 页面注册表加载与 id 解析。 */
 
 export async function loadRegistry(url = 'pages.json') {
-  const r = await fetch(url);
+  const bust = `?v=${Math.floor(Date.now() / 60000)}`;
+  const r = await fetch(url + bust);
   if (!r.ok) throw new Error(`pages.json HTTP ${r.status}`);
   return r.json();
 }
