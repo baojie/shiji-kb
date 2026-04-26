@@ -5,7 +5,7 @@ label: Fact 006：《说难》核心要点
 description: 1. 建立信任 → 旷日弥久，而周泽既渥 2. 深入交流 → 深计而不疑，交争而不罪 3. 发挥作用 → 乃明计利害以致其功，直指是非以饰其身
 tags: [史记, 综述]
 sources: [老子韩非列传]
-quality: standard
+quality: featured
 ---
 # Fact 006：《说难》核心要点
 

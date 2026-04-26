@@ -4248,3 +4248,27 @@
 {"round":5855,"action":"H5-建REDIRECT","page":"顷襄王","motivation":"断链8处，楚顷襄王页面aliases已含顷襄王","precondition":"顷襄王无独立页，楚顷襄王.md存在","expected":"新建顷襄王.md REDIRECT→楚顷襄王，修复8处断链","sources":["楚世家"],"ts":"2026-04-26T06:35:30Z"}
 {"round":5856,"action":"H18-stub扩展","page":"阳虎","motivation":"页面缺在晋事赵简子节：卫康叔世家§34载阳虎奉赵简子命助蒯聩复卫，是其在晋国最重要的政治行动","precondition":"page exists, quality=standard, 无在晋节","expected":"新增在晋事赵简子约5行，来源卫康叔世家§34","sources":["卫康叔世家037-34","赵世家043-21"],"ts":"2026-04-26T06:36:00Z"}
 {"round":5857,"action":"H2-链接化","page":"冒顿","motivation":"featured页链接化月氏×2、东胡×1、阏氏×3（prose部分）","precondition":"page exists, quality=featured, 月氏/东胡/阏氏均有对应wiki页面","expected":"prose节中链接化3个高频实体，diff≤10行","sources":[],"ts":"2026-04-26T06:38:51Z"}
+{"round":5858,"action":"H2-链接化","page":"伍被","motivation":"featured页3处淮南王刘安未链","precondition":"page exists, quality=featured, 刘安.md存在","expected":"行31/82/95链接化淮南王刘安","sources":[],"ts":"2026-04-26T07:04:50Z"}
+{"round":5859,"action":"H2-链接化","page":"信陵君","motivation":"featured页侯嬴×5处未链（prose/跨章节互见/典故）","precondition":"page exists, quality=featured, 侯嬴.md存在","expected":"prose节中侯嬴×5链接化","sources":[],"ts":"2026-04-26T07:05:32Z"}
+{"round": 5860, "action": "add-narrative", "page": "井陉口", "result": "accept", "note": "补充史记引文节：淮阴侯列传§9/§10，+1389字节", "ts": "2026-04-26T15:09:39.207549"}
+{"round": 5861, "action": "add-narrative", "page": "燕召公", "result": "accept", "note": "补充史记引文节（燕召公世家§1/§3，周本纪§31），+1272字节，featured页", "ts": "2026-04-26T15:12:48.283130"}
+{"round": 5862, "action": "add-narrative", "page": "赵王歇", "result": "accept", "note": "补充史记引文节（张耳陈馀列传§13/§22，项羽本纪§31），+1009字节，featured页", "ts": "2026-04-26T15:14:09.403820"}
+{"round": 5863, "action": "H2-链接化", "page": "封禅泰山", "result": "accept", "note": "featured story页补链：公孙卿×2（故事节第1/2次出现）", "ts": "2026-04-26T15:15:21.876007"}
+{"round": 5864, "action": "H2-链接化", "page": "天道是耶非耶：太史公之疑", "result": "accept", "note": "featured story页补链：伯夷×1、叔齐×1（故事节首次出现）", "ts": "2026-04-26T15:16:22.569895"}
+{"round": 5865, "action": "H2-链接化", "page": "汉文帝", "result": "accept", "note": "premium页补链：霸陵×2（袁盎谏车节+霸陵薄葬节）", "ts": "2026-04-26T15:19:47.868930"}
+{"round": 5866, "action": "add-narrative", "page": "吴王刘濞", "result": "accept", "note": "补充史记引文节（吴王濞列传§1/§2，太史公自序§84），+1272字节，featured页", "ts": "2026-04-26T15:21:12.691892"}
+{"round": 5867, "action": "add-narrative", "page": "勾践", "result": "accept", "note": "补充史记引文节（越王句践世家§1/§11，太史公自序§79），+1195字节，featured页", "ts": "2026-04-26T15:22:15.121169"}
+{"round": 5868, "action": "add-narrative", "page": "卓文君", "result": "accept", "note": "补充史记引文节（司马相如列传§1，9处），+886字节，featured页", "ts": "2026-04-26T15:23:05.457399"}
+{"round": 5869, "action": "H2-链接化", "page": "秦惠王", "result": "accept", "note": "featured页补链：张仪×2（首段intro+连横节prose）", "ts": "2026-04-26T15:24:02.490572"}
+{"round": 5870, "action": "H2-链接化", "page": "白起之死", "result": "accept", "note": "featured event页补链：范雎×1、白起×1、秦昭王×1（矛盾起源节）", "ts": "2026-04-26T15:24:56.765350"}
+{"round": 5871, "action": "H2-链接化", "page": "须贾", "result": "accept", "note": "featured页补链：范睢×2（生平节疑通齐/使秦节首次出现）", "ts": "2026-04-26T15:26:05.490377"}
+{"round": 5872, "action": "add-narrative", "page": "伯夷叔齐", "result": "accept", "note": "补充史记引文节（伯夷列传§2，太史公自序§61），+1246字节，standard页", "ts": "2026-04-26T15:26:59.327699"}
+{"round": 5873, "action": "add-narrative", "page": "朱亥", "result": "accept", "note": "补充史记引文节（魏公子列传§5/§8，共8处），+1025字节，standard页", "ts": "2026-04-26T15:27:41.782707"}
+{"round": 5874, "action": "H5-建REDIRECT", "page": "晁错削藩议", "result": "accept", "note": "晁错削藩议→晁错 REDIRECT，修复3处断链；晁错.md已有featured页", "ts": "2026-04-26T15:28:33.975003"}
+{"round": 5875, "action": "H2-链接化", "page": "鸿门宴", "result": "accept", "note": "premium页补链：张良×1（故事节首次出现 line 240）", "ts": "2026-04-26T15:29:35.159022"}
+{"round": 5876, "action": "add-narrative", "page": "介之推", "result": "accept", "note": "补充史记引文节（晋世家§62/§63/§146，共5处），+1029字节，standard页", "ts": "2026-04-26T15:32:42.180837"}
+{"round": 5877, "action": "H2-链接化", "page": "坑秦卒二十万于新安", "result": "accept", "note": "featured故事页补链：项羽×2、黥布×1、章邯×1、司马欣×1（故事节首次出现）", "ts": "2026-04-26T15:34:04.107324"}
+{"round": 5878, "action": "add-narrative", "page": "冒顿单于", "result": "accept", "note": "补充史记引文节（匈奴列传×24+5篇，共31处），+1307字节，standard页", "ts": "2026-04-26T15:34:54.080261"}
+{"round": 5879, "action": "H2-链接化", "page": "楚庄王一鸣惊人", "result": "accept", "note": "featured故事页补链：楚庄王×1、伍举×1（故事节首次出现）", "ts": "2026-04-26T15:35:33.280518"}
+{"round": 5880, "action": "add-narrative", "page": "公叔痤", "result": "accept", "note": "补充史记引文节（商君列传§2×2+§9，共3处，全列），+893字节，standard页", "ts": "2026-04-26T15:36:08.854629"}
+{"round": 5881, "action": "H2-链接化", "page": "唐叔虞与桐叶封弟", "result": "accept", "note": "featured故事页补链：周武王×1、周成王×1、周公×1、史佚×1（故事节首次出现）", "ts": "2026-04-26T15:37:05.981549"}

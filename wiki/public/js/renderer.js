@@ -1097,7 +1097,7 @@ export function renderAll(core) {
 
     const items = slice.map(p => {
       const star  = p.featured ? '<span class="res-star">⭐</span>' : '';
-      const qs    = p.quality_score != null ? `<span class="res-score">q=${p.quality_score}</span>` : '';
+      const qs    = p.k_score != null ? `<span class="res-score">K=${p.k_score}</span>` : '';
       const tags  = (p.tags || []).slice(0, 4).map(t => `<span class="res-tag">${escapeHtml(t)}</span>`).join('');
       return `<li class="res-item">
         <a class="res-title" href="#${encodeURIComponent(p.id)}">${star}${escapeHtml(p.label || p.id)}</a>

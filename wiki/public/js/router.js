@@ -7,7 +7,7 @@ import {
   renderSource,
 } from './renderer.js';
 import { renderSpecialSettings, renderSpecialPlugins, renderSpecialAll, renderSpecialStatistics } from './special.js';
-import { setStatus, showFatal } from './util.js';
+import { setStatus, showFatal, escapeHtml } from './util.js';
 
 export function setupRouter(core) {
   window.addEventListener('hashchange', () => route(core));
@@ -170,17 +170,28 @@ async function route(core) {
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const mdText = await r.text();
 
-    // Redirect syntax: first non-empty line is "#REDIRECT [[目标]]"
-    const firstLine = mdText.split('\n').find(l => l.trim());
-    const redirectMatch = firstLine && firstLine.match(/^#REDIRECT\s+\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/);
+    // Redirect syntax: "#REDIRECT [[目标]]" or "REDIRECT [[目标]]" in body (skip frontmatter)
+    const bodyText = mdText.replace(/^---\n[\s\S]*?\n---\n?/, '');
+    const firstBodyLine = bodyText.split('\n').find(l => l.trim());
+    const redirectMatch = firstBodyLine && firstBodyLine.match(/^#?REDIRECT\s+\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/);
     if (redirectMatch) {
       const target = redirectMatch[1].trim();
       const targetResolved = resolvePageId(target, core.registry);
-      if (targetResolved) {
-        location.hash = encodeURIComponent(targetResolved[0]);
-        setStatus('');
-        return;
-      }
+      // 渲染重定向页（含修订历史），不自动跳转
+      const label = meta.label || pid;
+      const strippedMd = mdText.replace(/^#?REDIRECT\s+\[\[[^\]]+\]\]\s*/m, `# ${label}\n`);
+      await renderPage(core, pid, meta, strippedMd);
+      const targetLink = targetResolved
+        ? `<a href="#${encodeURIComponent(targetResolved[0])}">${escapeHtml(target)}</a>`
+        : `<span class="broken-link">${escapeHtml(target)}</span>`;
+      const notice = document.createElement('div');
+      notice.className = 'redirect-notice';
+      notice.innerHTML = `<span class="redirect-arrow">⇒</span> 重定向至 ${targetLink}`;
+      const article = document.getElementById('article');
+      const h1 = article.querySelector('h1');
+      if (h1) h1.after(notice); else article.prepend(notice);
+      setStatus('');
+      return;
     }
 
     await renderPage(core, pid, meta, mdText);

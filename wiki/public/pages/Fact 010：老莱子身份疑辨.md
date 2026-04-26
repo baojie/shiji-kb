@@ -5,7 +5,7 @@ description: "来源: 史记·老子韩非列传[4]-[6]"
 label: Fact 010：老莱子身份疑辨
 tags: [史记, 综述]
 sources: [老子韩非列传]
-quality: standard
+quality: featured
 ---
 # Fact 010：[[老莱子]]身份疑辨
 

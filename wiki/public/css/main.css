@@ -1163,3 +1163,17 @@ footer code {
 .want-btn:disabled { cursor: default; }
 .want-btn--done    { border-color: #2e7d32; color: #2e7d32; }
 .want-btn--exists  { border-color: var(--fg-muted); color: var(--fg-muted); }
+
+/* 重定向页提示横条 */
+.redirect-notice {
+  font-size: 13px;
+  color: var(--fg-muted);
+  background: var(--bg-box);
+  border-left: 3px solid var(--accent);
+  padding: 5px 10px;
+  margin: 6px 0 16px;
+  border-radius: 0 4px 4px 0;
+}
+.redirect-notice a { color: var(--link); text-decoration: none; }
+.redirect-notice a:hover { text-decoration: underline; }
+.redirect-arrow { margin-right: 4px; color: var(--accent); }
