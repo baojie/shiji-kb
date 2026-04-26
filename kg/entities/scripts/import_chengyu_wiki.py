@@ -73,9 +73,9 @@ def build_shiji_section(chengyu: str, entries: list) -> str:
             else:
                 context = context[:200] + '…'
 
-        # Chapter link
+        # Chapter link with pn-citation format （NNN-pn）
         chap_ref = f'[[{cnum}_{ctitle}|{ctitle}]]'
-        pn_ref = f'§{pn}' if pn else ''
+        pn_ref = f'（{cnum}-{pn}）' if pn else ''
 
         lines.append(f'出自 {chap_ref}{" " + pn_ref if pn_ref else ""}：')
         lines.append('')
@@ -136,10 +136,25 @@ featured: false
     return front + '\n\n' + body
 
 
-def update_page_content(content: str, chengyu: str, entries: list) -> str:
-    """在已有页面末尾追加史记原文节（append-only）"""
-    if '## 史记原文' in content:
+def strip_shiji_section(content: str, section_title: str) -> str:
+    """删除已有的指定 ## 节（用于 --force 覆盖）"""
+    if section_title not in content:
         return content
+    start = content.find(section_title)
+    rest = content[start + len(section_title):]
+    next_h2 = rest.find('\n## ')
+    if next_h2 >= 0:
+        return content[:start] + content[start + len(section_title) + next_h2 + 1:]
+    return content[:start].rstrip('\n') + '\n'
+
+
+def update_page_content(content: str, chengyu: str, entries: list,
+                        force: bool = False) -> str:
+    """在已有页面末尾追加史记原文节（append-only，--force 时覆盖）"""
+    if '## 史记原文' in content:
+        if not force:
+            return content
+        content = strip_shiji_section(content, '## 史记原文')
     section = build_shiji_section(chengyu, entries)
     anchor = '## 相关页面'
     if anchor in content:
@@ -150,6 +165,7 @@ def update_page_content(content: str, chengyu: str, entries: list) -> str:
 
 def main():
     dry_run = '--dry-run' in sys.argv
+    force   = '--force' in sys.argv
     target  = next((a for a in sys.argv[1:] if not a.startswith('--')), None)
 
     print('1. 加载成语数据…')
@@ -183,7 +199,7 @@ def main():
                 created += 1
         else:
             old = page_path.read_text(encoding='utf-8')
-            new = update_page_content(old, chengyu, entries)
+            new = update_page_content(old, chengyu, entries, force=force)
             if new.strip() == old.strip():
                 skipped += 1
                 continue

@@ -121,6 +121,16 @@ def chapter_title(chapter_id: str) -> str:
     return parts[1] if len(parts) > 1 else chapter_id
 
 
+def chapter_num(chapter_id: str) -> str:
+    """提取三位章节编号，如 '007_项羽本纪' → '007'"""
+    return chapter_id.split('_')[0]
+
+
+def pn_cite(chap: str, pn: str) -> str:
+    """生成 pn-citation 插件可识别的引文链接格式，如 （007-36.1）"""
+    return f'（{chapter_num(chap)}-{pn}）'
+
+
 def build_shiji_section(canonical: str, entry: dict, para_index: dict) -> str:
     refs  = entry['refs']
     count = entry['count']
@@ -138,7 +148,7 @@ def build_shiji_section(canonical: str, entry: dict, para_index: dict) -> str:
     for chap in sorted(by_chap.keys()):
         pns   = by_chap[chap]
         title = chapter_title(chap)
-        pn_str = '、'.join(f'§{p}' for p in pns[:8])
+        pn_str = '、'.join(pn_cite(chap, p) for p in pns[:8])
         if len(pns) > 8:
             pn_str += f' 等共 {len(pns)} 处'
         lines.append(f'- [[{chap}|{title}]]：{pn_str}')
@@ -166,7 +176,7 @@ def build_shiji_section(canonical: str, entry: dict, para_index: dict) -> str:
         lines.append('')
         for chap, pn, snip_hl in snippets:
             title = chapter_title(chap)
-            lines.append(f'> 出自 [[{chap}|{title}]] §{pn}：{snip_hl}')
+            lines.append(f'> 出自 [[{chap}|{title}]] {pn_cite(chap, pn)}：{snip_hl}')
             lines.append('>')
         if lines[-1] == '>':
             lines.pop()
@@ -204,10 +214,25 @@ featured: false
     return front + '\n\n' + body
 
 
-def update_page_content(content: str, canonical: str, entry: dict,
-                        para_index: dict) -> str:
-    if '## 史记引文' in content:
+def strip_shiji_section(content: str) -> str:
+    """删除已有的 ## 史记引文 节（用于 --force 覆盖）"""
+    if '## 史记引文' not in content:
         return content
+    start = content.find('## 史记引文')
+    # 找下一个 ## 级标题或末尾
+    rest = content[start + 6:]
+    next_h2 = rest.find('\n## ')
+    if next_h2 >= 0:
+        return content[:start] + content[start + 6 + next_h2 + 1:]
+    return content[:start].rstrip('\n') + '\n'
+
+
+def update_page_content(content: str, canonical: str, entry: dict,
+                        para_index: dict, force: bool = False) -> str:
+    if '## 史记引文' in content:
+        if not force:
+            return content
+        content = strip_shiji_section(content)
     section = build_shiji_section(canonical, entry, para_index)
     anchor = '## 相关页面'
     if anchor in content:
@@ -218,6 +243,7 @@ def update_page_content(content: str, canonical: str, entry: dict,
 
 def main():
     dry_run = '--dry-run' in sys.argv
+    force   = '--force' in sys.argv
     limit = None
     for arg in sys.argv[1:]:
         if arg.startswith('--limit='):
@@ -260,7 +286,7 @@ def main():
         else:
             # 更新已有页面
             old = page_path.read_text(encoding='utf-8')
-            new = update_page_content(old, canonical, entry, para_index)
+            new = update_page_content(old, canonical, entry, para_index, force=force)
             if new.strip() == old.strip():
                 skipped += 1
                 continue
