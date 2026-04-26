@@ -52,7 +52,7 @@ python3 wiki/scripts/butler/check_facts.py --page 韩王信 --check lifespan
 
 ### 2.3 内容来源比例
 
-每个精品页（featured: true）需满足：
+每个旗舰页（quality: premium）需满足：
 - 至少 60% 的内容段落能追溯到 `chapter_md` 具体章节
 - 不得有超过 2 段"纯推断性"文字（无任何原文支撑）
 
@@ -88,7 +88,7 @@ python3 wiki/scripts/butler/check_facts.py --page 韩王信 --check lifespan
 
 Butler 可自动执行：
 1. 删除无法溯源的引文，替换为 `<!-- [W6质检删除] ... -->` 占位符
-2. 将该页 `featured: false`，降级为普通页
+2. 运行 `python3 wiki/scripts/compute_quality.py <slug>` 重新计算 quality 标签（可能降级）
 3. **调用 `record_revision.py` 写入修订历史**（不可省略，与人工编辑同等要求）
 
 ```bash
@@ -139,7 +139,7 @@ Butler 生成修复建议，但不自动执行：
 
 | 阶段 | 范围 | 预期问题数 |
 |---|---|---|
-| 第一轮（立即）| featured: true 的 44 个精品页 | 预计 5–20 处 critical |
+| 第一轮（立即）| quality=premium 的 22 个旗舰页 | 预计 5–20 处 critical |
 | 第二轮（1周内）| 全部 224 个人物页 | 预计 50–200 处 warning |
 | 持续 | 每次 butler 写新页后增量扫 | 按页增量 |
 

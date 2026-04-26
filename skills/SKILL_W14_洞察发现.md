@@ -148,7 +148,7 @@ print(f'随机实体对: {a} × {b}')
 | COMPARE | 比较/专题页 | `concept` |
 | CHAIN | 事件链页（A→B→C 因果链） | `story` |
 | CROSSREF | 人物专题深化（跨章综述） | `person`（丰富现有页） |
-| ANOMALY | 解读/分析页 | `concept` + `featured: true` |
+| ANOMALY | 解读/分析页 | `concept`（建设后可晋级 featured/premium）|
 | LINEAGE | 师承/家族专题 | `concept` 或 `list` |
 
 **关系页（`type: relation`）标准格式**：

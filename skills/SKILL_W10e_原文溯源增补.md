@@ -38,7 +38,7 @@ grep -L "(0[0-9][0-9]-" wiki/public/pages/*.md | \
 **筛选条件**：
 - `canonical_name` 长度 ≥ 3 字（太短的词自动匹配精度低）
 - 页面行数 ≥ 5 行（有足够内容才值得溯源）
-- 未标记 `stub: true`（stub 另有 H18 处理）
+- `quality` 不为 `stub`（stub 另有 H18 处理）
 
 ---
 

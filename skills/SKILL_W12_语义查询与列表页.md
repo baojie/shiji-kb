@@ -31,13 +31,13 @@ tags: [列表, 人物]   # 可选分类标签
 
 ::: query
 type: person
-featured: true
+quality: premium
 sort: total_refs
 order: desc
 limit: 50
 display: table
 fields: [label, tags, total_refs, total_chapters]
-title: 精品人物（按引用次数排序）
+title: 旗舰人物（按引用次数排序）
 :::
 ```
 
@@ -51,7 +51,7 @@ title: 精品人物（按引用次数排序）
 |------|------|------|------|
 | `type` | 字符串 | 页面类型相等 | `type: person` |
 | `tags` | 字符串 | tags 数组包含 | `tags: 楚国` |
-| `featured` | 布尔 | 是否精品 | `featured: true` |
+| `quality` | 字符串 | 质量级别 | `quality: premium` |
 | `total_refs_min` | 数字 | 引用次数下限 | `total_refs_min: 10` |
 | `total_refs_max` | 数字 | 引用次数上限 | `total_refs_max: 100` |
 | `total_chapters_min` | 数字 | 涉及章节数下限 | `total_chapters_min: 3` |
@@ -83,19 +83,53 @@ title: 精品人物（按引用次数排序）
 | `total_refs` | number | 被引用次数 |
 | `total_chapters` | number | 涉及章节数 |
 | `quality_score` | number | 质量分（综合计算） |
-| `lifespan` | string | 人物活跃期（如"战国"） |
+| `lifespan` | object | 生卒年对象 `{birth, death, note}`，不可直接过滤 |
 
 > **注意**：`birth_ce`、`death_ce`、`event_type` 等细粒度字段**尚未进入 registry**，
 > 需扩展 `build_registry.py` 后才可查询。详见下方"扩展 registry"节。
 
 ---
 
-## 内置示例页
+## 创建流程
+
+```bash
+# 1. 用 add_page.py 创建页面
+python3 wiki/scripts/butler/add_page.py <slug> <content_file> \
+    --summary "[W12] 创建列表页: <label>" --author claude
+
+# 2. 重建 registry（add_page 不会自动更新）
+# ⚠️ 服务器读的是 wiki/public/pages.json，不是 wiki/pages.json！
+python3 wiki/scripts/build_registry.py wiki/public/pages \
+    --out wiki/public/pages.json
+python3 wiki/scripts/build_registry.py wiki/public/pages \
+    --out wiki/public/data/registry.json
+```
+
+> **注意**：每次新增列表页后，必须重建 registry，否则页面不会出现在导航和搜索中。
+
+---
+
+## 内置列表页
 
 | 页面 ID | 查询内容 |
 |---------|---------|
 | `精品人物列表` | `type:person + featured:true`，按引用次数排序 |
 | `章节列表` | `type:chapter`，全部 130 章 |
+| `本纪列表` | `type:chapter + tags:本纪`，十二本纪 |
+| `世家列表` | `type:chapter + tags:世家`，三十世家 |
+| `列传列表` | `type:chapter + tags:列传`，七十列传 |
+| `春秋人物列表` | `type:person + tags:春秋`，72人 |
+| `战国人物列表` | `type:person + tags:战国`，61人 |
+| `汉朝人物列表` | `type:person + tags:汉朝`，61人 |
+| `楚汉之际人物列表` | `type:person + tags:楚汉之际`，24人 |
+| `齐国人物列表` | `type:person + tags:齐国`，22人 |
+| `秦国人物列表` | `type:person + tags:秦国`，20人 |
+| `楚国人物列表` | `type:person + tags:楚国`，14人 |
+| `晋国人物列表` | `type:person + tags:晋国`，20人 |
+| `赵国人物列表` | `type:person + tags:赵国`，18人 |
+| `武将列表` | `type:person + tags:武将`，26人 |
+| `诸侯王列表` | `type:person + tags:诸侯王`，16人 |
+| `外戚列表` | `type:person + tags:外戚`，10人 |
 
 ---
 
@@ -141,6 +175,6 @@ python3 wiki/scripts/build_registry.py wiki/public/pages --out wiki/public/data/
 ## 技术实现
 
 - **执行位置**：客户端，`semantic-block` 插件的 `onAfterRender` hook
-- **数据来源**：`core.registry.pages`（全量加载，约 400 条，纯内存过滤）
+- **数据来源**：`core.registry.pages`（全量加载，约 20000 条，纯内存过滤）
 - **渲染时机**：随页面 MD 渲染同步完成，无额外网络请求
 - **实现文件**：`wiki/public/plugins/semantic-block/index.js`（`executeQuery` / `renderQueryBlock`）

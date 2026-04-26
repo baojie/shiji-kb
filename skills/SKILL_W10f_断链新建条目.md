@@ -69,7 +69,7 @@ grep -roh '\[\[[^\]|]*\]\]' wiki/public/pages/*.md | \
 id: 页面名
 type: person  # 或 place/concept/event
 label: 页面名
-stub: true
+quality: stub
 tags: []
 ---
 
@@ -103,7 +103,7 @@ ls wiki/public/pages/页面名.md
 ## 四、成功标准 / 完成条件
 
 - [ ] 每轮最多建 3 个 stub
-- [ ] stub 必须包含：id、type、label、stub: true、一行描述占位、`## 史记引文` 节
+- [ ] stub 必须包含：id、type、label、quality: stub、一行描述占位、`## 史记引文` 节
 - [ ] 建立后原有红链变为有效蓝链
 - [ ] 新建的 stub 同步加入 H18（Stub扩展反思）队列
 

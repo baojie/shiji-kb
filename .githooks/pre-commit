@@ -1,0 +1,4 @@
+#!/bin/sh
+# 自动更新 plugins.json（扫描 plugins/*/plugin.json）
+python3 wiki/scripts/build_plugins.py --site-root wiki/public
+git add wiki/public/plugins.json

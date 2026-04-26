@@ -1,14 +1,14 @@
 ---
 name: SKILL_W11
 title: Butler 概念分类元反思
-description: 每10轮执行一次的顶级反思——审查所有页面是否在正确分类，发现需要新建的概念页
+description: 每13轮执行一次的顶级反思——审查所有页面是否在正确分类，发现需要新建的概念页
 ---
 
 # SKILL_W11 — 概念分类元反思
 
 ## 何时触发
 
-`round_counter.txt` 中当前轮次 **mod 10 == 0** 时，在本轮正常原子动作之前执行。
+`round_counter.txt` 中当前轮次 **mod 13 == 0** 时，在本轮正常原子动作之前执行。
 输出日志写入 `wiki/logs/butler/type_audits/YYYY-MM-DD-R<N>.md`。
 
 ## 执行步骤
