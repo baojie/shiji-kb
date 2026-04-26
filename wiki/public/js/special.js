@@ -209,6 +209,7 @@ export async function renderSpecialStatistics(core) {
   // SVG 折线图
   const chartHtml = buildKChart(timeline);
   const premiumChartHtml = buildPremiumChart(timeline);
+  const qualityStackHtml = buildQualityStackChart(timeline);
 
   // 质量分布表格
   const QUALITY_LABELS = [
@@ -266,7 +267,10 @@ export async function renderSpecialStatistics(core) {
     <h2>旗舰页增长</h2>
     ${premiumChartHtml}
 
-    <h2>页面质量分布</h2>
+    <h2>质量分布随时间变化</h2>
+    ${qualityStackHtml}
+
+    <h2>当前质量分布</h2>
     <p class="chart-desc">五级质量体系由 <code>compute_quality.py</code> 自动评定。只有 <b>premium</b> 旗舰页可出现在首页。</p>
     <table>
       <thead><tr><th>级别</th><th>数量</th><th>占比</th><th>分布</th></tr></thead>
@@ -383,6 +387,89 @@ function buildPremiumChart(timeline) {
     ${xTickHtml}
     <text x="${PAD.left - 8}" y="${PAD.top - 10}" font-size="12" fill="${color}" text-anchor="end">旗舰页数</text>
     <text x="${PAD.left + cw / 2}" y="${H - 6}" font-size="12" fill="var(--fg-muted)" text-anchor="middle">提交日期</text>
+  </svg>
+  </div>`;
+}
+
+/* 质量分布堆叠面积图 */
+function buildQualityStackChart(timeline) {
+  // 只用有 quality_counts 的快照
+  const data = timeline.filter(d => d.quality_counts);
+  if (data.length < 2) {
+    return `<p class="muted">（质量分布历史数据积累中，目前 ${data.length} 条，至少需要 2 条）</p>`;
+  }
+
+  const TIERS = [
+    { key: 'stub',     color: 'rgba(252,129,129,0.85)',  label: '存根' },
+    { key: 'basic',    color: 'rgba(251,211,141,0.85)',  label: '基础' },
+    { key: 'standard', color: 'rgba(104,211,145,0.85)', label: '标准' },
+    { key: 'featured', color: 'rgba(99,179,237,0.85)',  label: '精品' },
+    { key: 'premium',  color: 'rgba(79,156,249,1)',     label: '旗舰' },
+  ];
+
+  const W = 900, H = 320, PAD = { top: 28, right: 120, bottom: 48, left: 68 };
+  const cw = W - PAD.left - PAD.right;
+  const ch = H - PAD.top - PAD.bottom;
+  const n = data.length;
+
+  const xScale = i => PAD.left + (i / (n - 1)) * cw;
+
+  // 每个时间点各层累积高度
+  const stacks = data.map(d => {
+    const qc = d.quality_counts;
+    let acc = 0;
+    return TIERS.map(t => {
+      const v = qc[t.key] || 0;
+      const bot = acc;
+      acc += v;
+      return { v, bot, top: acc };
+    });
+  });
+
+  const maxTotal = Math.max(...stacks.map(s => s[TIERS.length - 1].top));
+  const yScale = v => PAD.top + ch - (v / (maxTotal || 1)) * ch;
+
+  // 绘制每层堆叠多边形
+  const layersSvg = TIERS.map((tier, ti) => {
+    // 上边缘从左到右，下边缘从右到左
+    const topPts = data.map((_, i) => `${xScale(i).toFixed(1)},${yScale(stacks[i][ti].top).toFixed(1)}`).join(' ');
+    const botPts = data.map((_, i) => `${xScale(i).toFixed(1)},${yScale(stacks[i][ti].bot).toFixed(1)}`).reverse().join(' ');
+    return `<polygon points="${topPts} ${botPts}" fill="${tier.color}" stroke="none"/>`;
+  }).join('');
+
+  // Y 轴刻度
+  const yTicks = 5;
+  const yTickHtml = Array.from({ length: yTicks + 1 }, (_, i) => {
+    const v = maxTotal * i / yTicks;
+    const y = yScale(v).toFixed(1);
+    const label = Math.round(v).toLocaleString();
+    return `<line x1="${PAD.left}" y1="${y}" x2="${PAD.left + cw}" y2="${y}" stroke="var(--border)" stroke-dasharray="3,3"/>
+      <text x="${PAD.left - 8}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="11" fill="var(--fg-muted)">${label}</text>`;
+  }).join('');
+
+  // X 轴日期
+  const step = Math.ceil(n / 8);
+  const xTickHtml = data.map((d, i) => {
+    if (i % step !== 0 && i !== n - 1) return '';
+    return `<text x="${xScale(i).toFixed(1)}" y="${H - PAD.bottom + 16}" text-anchor="middle" font-size="11" fill="var(--fg-muted)">${(d.generated || '').slice(0, 10)}</text>`;
+  }).join('');
+
+  // 图例（右侧）
+  const legendHtml = TIERS.slice().reverse().map((t, i) => {
+    const y = PAD.top + i * 22;
+    return `<rect x="${W - PAD.right + 8}" y="${y}" width="12" height="12" fill="${t.color}" rx="2"/>
+      <text x="${W - PAD.right + 26}" y="${y + 10}" font-size="12" fill="var(--fg)">${t.label}</text>`;
+  }).join('');
+
+  return `
+  <p class="chart-desc">各质量级别页面数量随时间的堆叠变化。数据从引入五级质量体系（2026-04-26）起积累。</p>
+  <div class="k-chart-wrap">
+  <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">
+    ${yTickHtml}
+    ${layersSvg}
+    <line x1="${PAD.left}" y1="${PAD.top}" x2="${PAD.left}" y2="${PAD.top + ch}" stroke="var(--border)"/>
+    ${xTickHtml}
+    ${legendHtml}
   </svg>
   </div>`;
 }
