@@ -36,6 +36,13 @@
       "description": "地名/邦国页面 sidebar 中渲染 Leaflet 地图（需 frontmatter coords: [lon, lat]）"
     },
     {
+      "id": "route-map",
+      "entry": "plugins/route-map/index.js",
+      "name": "路线地图",
+      "version": "1.0.0",
+      "description": "::: route 块：将地点序列渲染为带箭头的 Leaflet 路线地图"
+    },
+    {
       "id": "semantic-block",
       "entry": "plugins/semantic-block/index.js",
       "name": "语义块",

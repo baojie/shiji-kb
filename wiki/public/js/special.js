@@ -108,12 +108,6 @@ export async function renderSpecialSettings(core) {
 export async function renderSpecialPlugins(core) {
   const PLUGIN_DEFS = await getPluginDefs(true);
   const s = loadSettings();
-  const activatedDefs = PLUGIN_DEFS.filter(p => p.corePlugin || s?.plugins?.[p.key] === true);
-  const pluginRows = activatedDefs.length
-    ? activatedDefs.map(p =>
-        `<tr><td><strong>${escapeHtml(p.name)}</strong></td><td>${escapeHtml(p.version || '—')}</td></tr>`
-      ).join('')
-    : '<tr><td colspan="2" class="muted">（无已激活插件）</td></tr>';
   const allDefs = PLUGIN_DEFS.map(p => {
     const status = p.corePlugin
       ? '🔵 核心插件，始终运行'
@@ -128,13 +122,6 @@ export async function renderSpecialPlugins(core) {
   setPage('Plugins', `
     <h1>Special:Plugins</h1>
 
-    <h2>已激活插件</h2>
-    <table>
-      <thead><tr><th>名称</th><th>版本</th></tr></thead>
-      <tbody>${pluginRows}</tbody>
-    </table>
-
-    <h2>所有已安装插件</h2>
     <table>
       <thead><tr><th>插件</th><th>状态</th><th>说明</th></tr></thead>
       <tbody>${allDefs}</tbody>

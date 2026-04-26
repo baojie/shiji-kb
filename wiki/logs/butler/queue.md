@@ -3,6 +3,9 @@
 > 由 bootstrap.sh 于 2026-04-25 填充.
 > P0 高优 / P1 中优 / P2 低优. 每次 invocation 只做 1 条, 按 W1 优先级选.
 
+## ⭐ 用户想要 (P0)
+- [ ] **[想要]** 曹参征战时间线: `create-stub` [P0] [2026-04-26] [用户请求]
+
 ## 来自 discover_kg (kg top-N 缺 wiki 页)
 
 ## 来自 discover_sku (ontology-v2 SKU 缺 topic 页)
