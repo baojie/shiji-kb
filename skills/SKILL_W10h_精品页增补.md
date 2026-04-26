@@ -1,12 +1,12 @@
 ---
 name: SKILL_W10h_精品页增补
-title: Wiki 内务整理 H7：精品页候选识别
-description: 扫描 quality_score 低且未标记 featured 的页面，识别有潜力成为精品页的候选，写入队列交由 W8 执行建设。W10h 只负责识别，不执行精品页建设。
+title: Wiki 内务整理 H7：premium 候选识别
+description: 扫描 quality=standard 或 featured 但有潜力晋级的页面，识别 premium 候选，写入队列交由 W8 执行建设。W10h 只负责识别，不执行精品页建设。
 ---
 
 # SKILL W10h: 精品页增补（H7）
 
-> "精品页是知识库的门面。H7 是星探，不是导演——发现潜力股，交给 W8 去打磨。"
+> "旗舰页是知识库的门面。H7 是星探，不是导演——发现潜力股，交给 W8 去打磨。"
 
 ---
 
@@ -25,28 +25,30 @@ description: 扫描 quality_score 低且未标记 featured 的页面，识别有
 ## 二、发现候选（扫描方法）
 
 ```bash
-# 扫描低质量页面（若 pages.json 有 quality_score 字段）
+# 扫描有晋级潜力的页面（quality=standard 或 featured，refs > 0）
 python3 -c "
 import json
 data = json.load(open('wiki/public/pages.json'))
+pages = data.get('pages', {})
 candidates = [
-    p for p in data.get('pages', [])
-    if p.get('quality_score', 1) < 0.4
-    and not p.get('featured', False)
-    and p.get('type') in ('person', 'concept')
-    and not p.get('stub', False)
+    {'id': k, **v} for k, v in pages.items()
+    if v.get('quality') in ('standard', 'featured')
+    and v.get('type') in ('person', 'concept', 'overview', 'story', 'sanwen')
+    and (v.get('total_refs') or 0) > 0
 ]
-for p in sorted(candidates, key=lambda x: x.get('quality_score', 0))[:10]:
-    print(f\"{p['quality_score']:.2f}\t{p['id']}\")
+for p in sorted(candidates, key=lambda x: -(x.get('total_refs') or 0))[:10]:
+    print(f\"{p.get('quality'):10} refs={p.get('total_refs',0):4d}  {p['id']}\")
 "
 ```
 
-**候选条件**：
-- `quality_score < 0.4`
-- `featured: false` 或字段不存在
-- `type: person` 或 `type: concept`
-- `stub: false`（stub 的问题交 H18 先解决）
-- 页面行数 ≥ 10 行（有足够基础内容）
+**候选优先级**：
+1. `quality=featured`（已有图和结构，缺深度内容达 premium）— 最高优先
+2. `quality=standard`，`total_refs` 高（在史记中出现频繁，有丰富原材料）— 次之
+3. `type` 为 `person`/`overview`（最容易建成 premium）
+
+**排除**：
+- `quality=stub` 或 `quality=basic`（太薄，交 H18 先扩展）
+- `quality=premium`（已是最高级）
 
 ---
 
@@ -54,33 +56,32 @@ for p in sorted(candidates, key=lambda x: x.get('quality_score', 0))[:10]:
 
 ### Step 1：运行扫描，获得候选列表
 
-最多取前 5 个候选（按 quality_score 升序）。
+最多取前 5 个候选（按 total_refs 降序）。
 
 ### Step 2：快速评估每个候选
 
 ```bash
-# 快速看候选页内容和现状
-cat wiki/public/pages/候选页.md | head -30
+head -30 wiki/public/pages/候选页.md
 ```
 
 评估标准：
-| 检查项 | 达到精品页潜力的条件 |
+| 检查项 | 晋级 premium 的潜力条件 |
 |---|---|
-| 人物重要性 | 本纪/世家/主要列传的核心人物 |
-| 现有内容 | 有基本生平信息，不是空壳 |
-| 可扩展性 | 史记原文中有丰富相关内容 |
-| 独特性 | 不与其他精品页重复主题 |
+| 人物/事件重要性 | 本纪/世家/主要列传的核心内容 |
+| 现有 quality 级 | featured → premium 路径最短 |
+| 可扩展性 | ontology-v2 facts 丰富，史记原文有深度 |
+| 缺口类型 | 缺图/缺 PN/缺分析/缺太史公曰 → W8 明确任务 |
 
 ### Step 3：写入 W8 精品页建设队列
 
 ```markdown
 <!-- 在 housekeeping_queue.md 中追加 H7 条目 -->
-- [ ] H7 | P2 | [[候选页]] | quality=0.XX，type=person，建议由 W8 建设精品页
-  - 现状：有基本生平，缺深度分析/多角度引文
-  - W8 任务：enrich-infobox + 增补史记引文节 + 添加洞察节
+- [ ] H7 | P2 | [[候选页]] | quality=featured，type=person，refs=NN，建议由 W8 升级为 premium
+  - 现状：有图有基本结构，缺太史公曰分析/多角度引文/PN不足
+  - W8 任务：补太史公曰节 + 增补史记引文(PN≥10) + 跨章节评价
 ```
 
-**注意**：条目要写清楚"现状"和"W8 需要做什么"，让 W8 执行时有方向。
+**注意**：条目要写清楚"当前 quality 级别"和"W8 需要做什么才能达到 premium"。
 
 ---
 
@@ -88,7 +89,7 @@ cat wiki/public/pages/候选页.md | head -30
 
 - [ ] 扫描完成，获得候选列表
 - [ ] 每次识别写入 ≤ 5 个 H7 队列条目
-- [ ] 每个条目包含：quality_score、type、现状描述、W8 任务建议
+- [ ] 每个条目包含：当前 quality、type、total_refs、现状描述、W8 任务建议
 - [ ] 本轮未执行任何精品页建设操作（那是 W8 的工作）
 
 ---
@@ -97,7 +98,8 @@ cat wiki/public/pages/候选页.md | head -30
 
 | 工具 | 用途 |
 |---|---|
-| `pages.json` 的 `quality_score` 字段 | 获取候选列表 |
+| `pages.json` 的 `quality` 字段 | 获取候选列表 |
+| `python3 wiki/scripts/compute_quality.py <slug>` | 重新评估单页 quality |
 | `wiki/logs/butler/housekeeping_queue.md` | 写入 H7 队列条目 |
 
 ---
@@ -106,9 +108,9 @@ cat wiki/public/pages/候选页.md | head -30
 
 | 职责 | 负责方 |
 |---|---|
-| 识别精品页候选，评估潜力 | **H7（本文）** |
+| 识别 premium 候选，评估晋级路径 | **H7（本文）** |
 | 执行精品页建设（enrich/引文/洞察） | W8（`SKILL_W8_精品页建设方法论.md`）|
-| 维护 featured 页面列表 | W8 |
+| 编辑后重评 quality 标签 | W3 §八（调用 compute_quality.py）|
 
 ---
 
@@ -116,3 +118,4 @@ cat wiki/public/pages/候选页.md | head -30
 
 - `wiki/logs/butler/housekeeping_queue.md` — H7 任务队列（写入后由 W8 消费）
 - `skills/SKILL_W8_精品页建设方法论.md` — 执行精品页建设的 SKILL
+- `wiki/scripts/compute_quality.py` — 自动评定质量级别
