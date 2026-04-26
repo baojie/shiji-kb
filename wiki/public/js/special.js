@@ -213,8 +213,8 @@ export async function renderSpecialStatistics(core) {
 
   // 质量分布表格
   const QUALITY_LABELS = [
-    ['premium', '旗舰', '#4f9cf9'],
-    ['featured', '精品', '#63b3ed'],
+    ['premium', '旗舰', '#9f7aea'],
+    ['featured', '精品', '#4f9cf9'],
     ['standard', '标准', '#68d391'],
     ['basic',    '基础', '#fbd38d'],
     ['stub',     '存根', '#fc8181'],
@@ -366,7 +366,7 @@ function buildPremiumChart(timeline) {
   );
   if (Math.max(...vals) === 0) return '<p class="muted">（暂无旗舰页历史数据）</p>';
 
-  const color = 'rgba(79,156,249,1)';
+  const color = 'rgba(159,122,234,1)';
   const { W, H, PAD, cw, ch, xScale, yScale, points, areaClose, yTickHtml, xTickHtml } = _buildSvgBase(timeline, vals, color);
 
   const dotHtml = timeline.map((d, i) => {
@@ -381,14 +381,15 @@ function buildPremiumChart(timeline) {
   <div class="k-chart-wrap">
   <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">
     ${yTickHtml}
-    <polygon points="${points} ${areaClose}" fill="rgba(79,156,249,0.18)" stroke="none"/>
+    <polygon points="${points} ${areaClose}" fill="rgba(159,122,234,0.18)" stroke="none"/>
     <polyline points="${points}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round"/>
     ${dotHtml}
     ${xTickHtml}
     <text x="${PAD.left - 8}" y="${PAD.top - 10}" font-size="12" fill="${color}" text-anchor="end">旗舰页数</text>
     <text x="${PAD.left + cw / 2}" y="${H - 6}" font-size="12" fill="var(--fg-muted)" text-anchor="middle">提交日期</text>
   </svg>
-  </div>`;
+  </div>
+  <p class="chart-desc" style="color:var(--fg-muted)">⚠️ 曲线中的下降并不代表内容缩水，而是因为 <b>评定标准提高</b>（如门槛字数或 PN 要求上调），导致部分页面从旗舰降为精品，待持续扩写后将重新升级。</p>`;
 }
 
 /* 质量分布堆叠面积图 */
@@ -403,8 +404,8 @@ function buildQualityStackChart(timeline) {
     { key: 'stub',     color: 'rgba(252,129,129,0.85)',  label: '存根' },
     { key: 'basic',    color: 'rgba(251,211,141,0.85)',  label: '基础' },
     { key: 'standard', color: 'rgba(104,211,145,0.85)', label: '标准' },
-    { key: 'featured', color: 'rgba(99,179,237,0.85)',  label: '精品' },
-    { key: 'premium',  color: 'rgba(79,156,249,1)',     label: '旗舰' },
+    { key: 'featured', color: 'rgba(79,156,249,0.85)',  label: '精品' },
+    { key: 'premium',  color: 'rgba(159,122,234,1)',     label: '旗舰' },
   ];
 
   const W = 900, H = 320, PAD = { top: 28, right: 120, bottom: 48, left: 68 };
