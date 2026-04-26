@@ -69,7 +69,7 @@ def compute() -> dict:
     resolved_wl = 0
     by_type_count: dict[str, int] = {}
     by_type_k: dict[str, float] = {}
-    featured_count = 0
+    quality_counts: dict[str, int] = {q: 0 for q in ("stub", "basic", "standard", "featured", "premium")}
     total_revisions = 0
     top_pages: list[tuple[str, float]] = []
 
@@ -103,8 +103,9 @@ def compute() -> dict:
         total_k += page_k
         by_type_count[type_] = by_type_count.get(type_, 0) + 1
         by_type_k[type_] = by_type_k.get(type_, 0.0) + page_k
-        if entry.get("featured"):
-            featured_count += 1
+        q = entry.get("quality") or "basic"
+        if q in quality_counts:
+            quality_counts[q] += 1
 
         # revision count
         hist = HISTORY_DIR / f"{pid}.json"
@@ -130,7 +131,7 @@ def compute() -> dict:
         "resolved_wikilinks": resolved_wl,
         "link_hit_rate": round(resolved_wl / total_wl, 4) if total_wl else 0.0,
         "total_revisions": total_revisions,
-        "featured_count": featured_count,
+        "quality_counts": quality_counts,
         "top10_pages": [
             {"pid": p, "k": round(k, 2)} for p, k in top_pages[:10]
         ],
@@ -159,8 +160,10 @@ def main() -> int:
     with pub_tl.open("a", encoding="utf-8") as f:
         f.write(json.dumps(snapshot, ensure_ascii=False) + "\n")
 
+    qc = snapshot['quality_counts']
     print(f"[K] {snapshot['K']}  pages={snapshot['page_count']}  "
-          f"featured={snapshot['featured_count']}  "
+          f"premium={qc.get('premium',0)} featured={qc.get('featured',0)} "
+          f"standard={qc.get('standard',0)} basic={qc.get('basic',0)} stub={qc.get('stub',0)}  "
           f"links={snapshot['resolved_wikilinks']}/{snapshot['total_wikilinks']} "
           f"({snapshot['link_hit_rate']*100:.1f}%)  "
           f"revs={snapshot['total_revisions']}  "

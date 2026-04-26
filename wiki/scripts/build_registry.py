@@ -83,8 +83,10 @@ def main() -> int:
             "label": meta.get("label", md.stem),
             "aliases": meta.get("aliases") or [],
             "tags": meta.get("tags") or [],
-            "featured": bool(meta.get("featured", False)),
-            "image": meta.get("image") or None,
+            "quality": meta.get("quality", ""),
+            "image": meta.get("image") or (
+                (meta.get("images") or [{}])[0].get("file") or None
+            ),
             "path": md.relative_to(site_root).as_posix(),
         }
         if meta.get("essay_type"):
@@ -146,6 +148,11 @@ def main() -> int:
                     entry["total_chapters"] = e["total_chapters"]
                 if e.get("lifespan"):
                     entry["lifespan"] = e["lifespan"]
+                    ls = e["lifespan"]
+                    if ls.get("birth") is not None:
+                        entry["birth_ce"] = ls["birth"]
+                    if ls.get("death") is not None:
+                        entry["death_ce"] = ls["death"]
                 enriched += 1
             print(f"[enrich] {enriched} 页注入 semantic.json 数据")
         except Exception as exc:

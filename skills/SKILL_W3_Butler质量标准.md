@@ -14,6 +14,7 @@ description: Butler 的 wiki 质量标准 (rubric) — 一个页面怎样算"好
 - **v0.1** (2026-04-22) · 初版, 5 维度, 量化阈值偏松
 - **v0.2** (2026-04-23) · 将"引证完整性"升为独立维度 (第6维), 强制 `required_citation: true`; 新增溯源红旗
 - **v0.3** (2026-04-24) · 新增 `source_match_rules`：canonical_name ≥ 3 字才做自动匹配；新增2条溯源红旗；W2 对应新增 `source-with-pn` 动作
+- **v0.4** (2026-04-26) · 引入五级质量标签（stub/basic/standard/featured/premium）；新增§八"编辑后质量标签重评"铁律；only premium 可上首页
 
 ---
 
@@ -133,6 +134,47 @@ W5 可修订本 skill, 但需:
 - 统一风格 / 编辑语气 (那属于校对, 不属于 butler)
 - 完美的语言 (butler 不改措辞)
 - 绝对全覆盖 (butler 是渐进式, 不是一次性补完)
+
+---
+
+## 八、编辑后质量标签重评（v0.4 新增）
+
+**铁律：每次编辑页面后，必须重新评估该页面的 quality 标签。**
+
+### 操作步骤
+
+```bash
+# 每次编辑完页面后立即执行
+python3 wiki/scripts/compute_quality.py <slug>
+```
+
+脚本会：
+1. 重新计算 quality 级别（stub/basic/standard/featured/premium）
+2. 若与当前 frontmatter 中的 quality 字段不同，**自动写入新值**
+3. 输出变更摘要（如 `standard→featured`）
+
+### 何时触发
+
+| 场景 | 是否需要重评 |
+|------|-------------|
+| 编辑页面正文（新增内容/引文/分析）| ✅ 必须 |
+| 添加配图（image 字段）| ✅ 必须 |
+| 仅修改 frontmatter 非内容字段（tags/aliases 等）| ⬜ 可选 |
+| 删除页面内容 | ✅ 必须（可能降级） |
+| 批量导入操作后 | ✅ 批量重评：`python3 wiki/scripts/compute_quality.py` |
+
+### 质量五级标准（快速参考）
+
+| 级别 | 核心条件 |
+|------|---------|
+| `premium` | 有图 + ≥5节 + 散文≥1000字 + (PN≥10 或引文≥10 或散文≥2500) |
+| `featured` | 有图 + ≥3节 + (PN≥3 或引文≥5) + 散文≥200字 |
+| `standard` | 内容≥500字 + ≥2节或≥2 PN |
+| `basic` | 内容<500字 或节数/引注不足 |
+| `stub` | 有stub注释 / 内容<100字 / 无节结构 |
+
+> 详细标准见 `wiki/scripts/compute_quality.py` 顶部注释。
+> 只有 `premium` 页面可出现在首页。
 
 ---
 
