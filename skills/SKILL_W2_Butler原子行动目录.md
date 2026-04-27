@@ -1,18 +1,18 @@
 ---
 name: skill-butler-2
-description: Butler 的原子行动目录 — 23 种标准操作的前置条件、执行步骤、后置检查、预期 diff 大小与工作量单位(WU)。每次 invocation 按WU批量执行同类动作直到累计500WU，单个动作 diff ≤ 20 行。禁止自由发挥, 只能从此目录挑。新操作由 W5 反思流程追加。
+description: Butler 的原子行动目录 — 23 种标准操作的前置条件、执行步骤、后置检查、预期 diff 大小与工作量单位(WU)。每次 invocation 按WU批量执行同类动作直到累计1000WU，单个动作 diff ≤ 20 行。禁止自由发挥, 只能从此目录挑。新操作由 W5 反思流程追加。
 ---
 
 # SKILL W2: 原子行动目录
 
-> 每轮按"工作量单位(WU)"批量执行同类动作，目标 500 WU/轮。本 skill 是菜单——选一类，批量做。
+> 每轮按"工作量单位(WU)"批量执行同类动作，目标 1000 WU/轮。本 skill 是菜单——选一类，批量做。
 
 ---
 
 ## 一、通用约定
 
 - **单次 diff ≤ 20 行**（含空行），超则拆
-- 每轮按 **WU** 批量执行同类动作，目标 500 WU/轮（见 PROMPT.md WU 表）
+- 每轮按 **WU** 批量执行同类动作，目标 1000 WU/轮（见 PROMPT.md WU 表）
 - W4 **accept** → 不做 git add（staging 统一由 /wiki commit 轮执行）
 - W4 **fail** → `git restore <file>` 回滚工作区
 - **批量 commit**：每23轮由 `/wiki` skill 统一 commit + push（`round_counter.txt` mod 23 == 0）

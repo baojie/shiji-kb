@@ -223,7 +223,7 @@ cat wiki/logs/butler/round_counter.txt
                               + `python3 wiki/scripts/butler/discover_homepage_new.py`
                                 → 新晋首页页面写入 housekeeping_queue（H21）
             若 round % 13 == 0：W11 概念分类元反思 → 写 housekeeping_queue
-            若 round % 17 == 0：/wiki 批量 commit + push
+            若 round % 23 == 0：/wiki 批量 commit + push
             若 round % 29 == 0：W5 反思（扫 actions+failures+对话日志）
             （W9 图式反思由"每6次精品/stub"动作计数触发，非 mod 计时）
 9. 反思?    3次同类失败 → 立即触发W5（不等29轮）
@@ -239,7 +239,7 @@ cat wiki/logs/butler/round_counter.txt
 | 用户明确说"停止"/"pause" | 当轮完成后停止，记录当前 round 和队列状态 |
 | W5 反思提案需要用户 review（高风险变更） | 暂停等待用户确认，确认后继续 |
 | 连续 5 轮全部 fail（可能有系统性问题） | 暂停，输出诊断报告，等待用户介入 |
-| 上下文窗口将满（Claude 内部限制） | 执行一次 commit（不论 round % 17），记录断点，停止 |
+| 上下文窗口将满（Claude 内部限制） | 执行一次 commit（不论 round % 23），记录断点，停止 |
 
 **不得停止的情形**：三队列为空不是停止理由——触发 `empty_fallback` 补充队列后继续。
 
