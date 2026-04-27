@@ -21,10 +21,31 @@
 - [x] P1 | [[商鞅]] | 282行 · featured · type=person | action: premium-upgrade
 - [x] P1 | [[田蚡]] | 274行 · featured · type=person | action: premium-upgrade
 - [x] P1 | [[范睢]] | 250行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[李斯]] | 238行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[梁孝王]] | 231行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[荆轲]] | 230行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[商鞅变法]] | 416行 · featured · type=concept | action: premium-upgrade
+- [x] P1 | [[李斯]] | 238行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[梁孝王]] | 231行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[荆轲]] | 230行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[商鞅变法]] | 416行 · featured · type=concept | action: premium-upgrade
+
+## P1 premium-upgrade 候选（2026-04-28 R10001 W1 探索第二批，featured→premium）
+
+- [x] P1 | [[齐桓公]] | 222行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[曹参]] | 220行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[陈馀]] | 220行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[灌夫]] | 217行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[樊哙]] | 216行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[赵高]] | 215行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[周勃]] | 212行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[张汤]] | 212行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[垓下之战]] | 230行 · featured · type=event | action: premium-upgrade
+
+## P1 premium-upgrade 候选（2026-04-28 R10012 W1 探索第三批，featured→premium）
+
+- [x] P1 | [[李广]] | 210行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[晁错]] | 208行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[范蠡]] | 207行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[楚平王]] | 207行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[舜]] | 220行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[周公]] | 211行 · featured · type=person | action: premium-upgrade
 
 ## P2 低优 (手动加入)
 
