@@ -41,3 +41,4 @@
 2026-04-27  W1 v0.1→v0.2  新增 §八 expand-content 候选筛选条件：refs≥5 + has_bio过滤 [reflections/2026-04-27_R6823_W5.md]
 2026-04-28  W5 Q3检查修正  Pattern G：Q3 检查方法修正为接受 `> 出自` 和 `> **出自` 两种格式 [reflections/2026-04-28_R9959_W5.md]
 2026-04-28  arch提案  arch_2026-04-28.md：pages.json 5.4MB+页面20408临界，推荐方案A（拆分索引+分页）[wiki/memory/reflections/arch_2026-04-28.md]
+2026-04-28  W10h v0.1→v0.2  P31 新增"历代评价4段式标准模板"章节（26页实证，100%accept）[wiki/memory/reflections/2026-04-28_R10019_W5.md]

@@ -42,10 +42,19 @@
 
 - [x] P1 | [[李广]] | 210行 · featured · type=person | action: premium-upgrade
 - [x] P1 | [[晁错]] | 208行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[范蠡]] | 207行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[楚平王]] | 207行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[舜]] | 220行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[周公]] | 211行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[范蠡]] | 207行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[楚平王]] | 207行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[舜]] | 220行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[周公]] | 211行 · featured · type=person | action: premium-upgrade
+
+## P1 premium-upgrade 候选（2026-04-28 R10019 W1 探索第四批，featured→premium）
+
+- [x] P1 | [[秦献公]] | 208行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[齐景公]] | 207行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[刘长]] | 206行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[薄太后]] | 205行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[巨鹿之战]] | 203行 · featured · type=event | action: premium-upgrade
+- [x] P1 | [[吴起]] | 200行 · featured · type=person | action: premium-upgrade
 
 ## P2 低优 (手动加入)
 
@@ -220,3 +229,12 @@
 - [x] P1 | [[东周哀王]] | 48行 · refs=12 | action: expand-content <!-- 跳过: 页面描述有误，refs全为汉代年表 -->
 - [x] P1 | [[楚子西]] | 36行 · refs=12 | action: expand-content <!-- 跳过: frontmatter id混淆 -->
 - [x] P1 | [[赵国赵桓子]] | 62行 · refs=13 | action: expand-content <!-- R9986 done -->
+
+## 第五批 premium-upgrade 候选（R10028 W1-explore）
+
+- [ ] P1 | [[太史公]] | 247行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[季札]] | 229行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[崔杼]] | 219行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[秦襄公]] | 207行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[任安]] | 206行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[箕子]] | 203行 · featured · type=person | action: premium-upgrade
