@@ -9,7 +9,7 @@
 | [frontend.md](frontend.md) | 前端整体架构：模块分工、渲染流水线、插件系统、路由机制 |
 | [plugins.md](plugins.md) | 插件目录与开发规范 |
 | [query-syntax.md](query-syntax.md) | ::: query 语义查询语法参考 |
-| [recent-log.md](recent-log.md) | recent.json 修订日志格式与轮转机制 |
+| [recent-log.md](recent-log.md) | recent.jsonl 修订日志格式与轮转机制 |
 | [page-types.md](page-types.md) | 页面类型（type 字段）定义与各类型规范 |
 
 ## Butler 操作规范（skills/ 目录）
