@@ -5,13 +5,13 @@ import { escapeHtml } from './util.js';
 // 所有硬编码的 Special 页。新增 Special 页时只需在此添加一行。
 // renderSpecialAll 自动用这个列表生成 Special:All 索引。
 const SPECIAL_PAGES = [
-  { id: 'Special：Recent',    label: '最近修订',     desc: '最近修订记录（滚动窗口，最新 500 条）' },
-  { id: 'Special：AllPages',  label: '所有页面',     desc: '所有 wiki 页面的完整列表，支持分组切换' },
-  { id: 'Special：Statistics', label: '统计 (Statistics)', desc: '知识库统计：K 值增长曲线、质量分布、页面计数' },
-  { id: 'Special：Settings',  label: '设置',         desc: '用户设置' },
-  { id: 'Special：Plugins',   label: '插件列表',     desc: '已安装插件列表' },
-  { id: 'Special：All',       label: '所有特殊页面', desc: '所有特殊系统页面索引' },
-  { id: 'Special：Random',    label: '随机页',       desc: '随机跳转到一个非章节页面' },
+  { id: 'Special:Recent',    label: '最近修订',     desc: '最近修订记录（滚动窗口，最新 500 条）' },
+  { id: 'Special:AllPages',  label: '所有页面',     desc: '所有 wiki 页面的完整列表，支持分组切换' },
+  { id: 'Special:Statistics', label: '统计 (Statistics)', desc: '知识库统计：K 值增长曲线、质量分布、页面计数' },
+  { id: 'Special:Settings',  label: '设置',         desc: '用户设置' },
+  { id: 'Special:Plugins',   label: '插件列表',     desc: '已安装插件列表' },
+  { id: 'Special:All',       label: '所有特殊页面', desc: '所有特殊系统页面索引' },
+  { id: 'Special:Random',    label: '随机页',       desc: '随机跳转到一个非章节页面' },
 ];
 
 function setPage(title, html) {
@@ -56,8 +56,8 @@ export async function renderSpecialSettings(core) {
     <h1>Special:Settings</h1>
     <p class="muted">所有插件默认启用，无需手动配置。</p>
     <h2>特殊页面</h2>
-    <p>→ <a href="#${encodeURIComponent('Special：Plugins')}">Special:Plugins</a> &nbsp;
-       → <a href="#${encodeURIComponent('Special：All')}">Special:All</a></p>
+    <p>→ <a href="#${encodeURIComponent('Special:Plugins')}">Special:Plugins</a> &nbsp;
+       → <a href="#${encodeURIComponent('Special:All')}">Special:All</a></p>
   `);
 }
 
@@ -86,7 +86,7 @@ export async function renderSpecialPlugins(core) {
 export function renderSpecialAll(core) {
   // 从 registry 中找所有 special 页
   const registered = Object.entries(core.registry.pages)
-    .filter(([pid]) => pid.startsWith('Special：'))
+    .filter(([pid]) => pid.startsWith('Special:'))
     .map(([pid, e]) => ({ pid, label: e.label || pid }));
 
   // 硬编码 + 插件动态注册的 Special 页合并
@@ -233,8 +233,8 @@ export async function renderSpecialStatistics(core) {
     </ul>
 
     <p class="muted">Special: 系统页本身不计入 K。
-    →&nbsp;<a href="#${encodeURIComponent('Special：Settings')}">设置</a>
-    &nbsp;·&nbsp;<a href="#${encodeURIComponent('Special：All')}">所有特殊页面</a></p>
+    →&nbsp;<a href="#${encodeURIComponent('Special:Settings')}">设置</a>
+    &nbsp;·&nbsp;<a href="#${encodeURIComponent('Special:All')}">所有特殊页面</a></p>
   `);
 }
 
