@@ -90,29 +90,29 @@
 
 ## P1 premium-upgrade 候选（2026-04-27 R6823 W5 补充）
 
-- [ ] P1 | [[周武王]] | 225行 · refs=131 · type=person | action: premium-upgrade
-- [ ] P1 | [[二世皇帝]] | 163行 · refs=108 · type=person | action: premium-upgrade
-- [ ] P1 | [[汉景帝]] | 171行 · refs=102 · type=person | action: premium-upgrade
-- [ ] P1 | [[周文王]] | 197行 · refs=97 · type=person | action: premium-upgrade
-- [ ] P1 | [[晋文公]] | 182行 · refs=95 · type=person | action: premium-upgrade
-- [ ] P1 | [[黄帝]] | 223行 · refs=92 · type=person | action: premium-upgrade
-- [ ] P1 | [[秦昭襄王]] | 172行 · refs=89 · type=person | action: premium-upgrade
-- [ ] P1 | [[项梁]] | 209行 · refs=89 · type=person | action: premium-upgrade
-- [ ] P1 | [[袁盎]] | 192行 · refs=86 · type=person | action: premium-upgrade
-- [ ] P1 | [[秦缪公]] | 186行 · refs=76 · type=person | action: premium-upgrade
+- [x] P1 | [[周武王]] | 225行 · refs=131 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[二世皇帝]] | 163行 · refs=108 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[汉景帝]] | 171行 · refs=102 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[周文王]] | 197行 · refs=97 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[晋文公]] | 182行 · refs=95 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[黄帝]] | 223行 · refs=92 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[秦昭襄王]] | 194行 · refs=89 · type=person | action: premium-upgrade <!-- R9961 done -->
+- [x] P1 | [[项梁]] | 215行 · refs=89 · type=person | action: premium-upgrade <!-- R9962 done -->
+- [x] P1 | [[袁盎]] | 192行 · refs=86 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[秦缪公]] | 210行 · refs=76 · type=person | action: premium-upgrade <!-- R9963 done -->
 
 ## P1 premium-upgrade 候选（2026-04-27 R6079 W5 补充）
 
-- [ ] P1 | [[楚怀王]] | 243行 · refs=75 · type=person | action: premium-upgrade
-- [ ] P1 | [[彭越]] | 243行 · refs=69 · type=person | action: premium-upgrade
-- [ ] P1 | [[伍子胥]] | 209行 · refs=65 · type=person | action: premium-upgrade
-- [ ] P1 | [[姬旦]] | 200行 · refs=63 · type=person | action: premium-upgrade
-- [ ] P1 | [[公孙弘]] | 203行 · refs=62 · type=person | action: premium-upgrade
-- [ ] P1 | [[蔺相如]] | 161行 · refs=61 · type=person | action: premium-upgrade
-- [ ] P1 | [[萧何]] | 261行 · refs=59 · type=person | action: premium-upgrade
-- [ ] P1 | [[陈豨]] | 188行 · refs=59 · type=person | action: premium-upgrade
-- [ ] P1 | [[周成王]] | 205行 · refs=56 · type=person | action: premium-upgrade
-- [ ] P1 | [[卫青]] | 197行 · refs=54 · type=person | action: premium-upgrade
+- [x] P1 | [[楚怀王]] | 260行 · refs=75 · type=person | action: premium-upgrade <!-- R9964 done -->
+- [x] P1 | [[彭越]] | 243行 · refs=69 · type=person | action: premium-upgrade <!-- R9965 done -->
+- [x] P1 | [[伍子胥]] | 223行 · refs=65 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[姬旦]] | 214行 · refs=63 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[公孙弘]] | 216行 · refs=62 · type=person | action: premium-upgrade <!-- R9968 done -->
+- [x] P1 | [[蔺相如]] | 161行 · refs=61 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[萧何]] | 261行 · refs=59 · type=person | action: premium-upgrade <!-- 已是premium -->
+- [x] P1 | [[陈豨]] | 203行 · refs=59 · type=person | action: premium-upgrade <!-- R9969 done -->
+- [x] P1 | [[周成王]] | 219行 · refs=56 · type=person | action: premium-upgrade <!-- R9970 done -->
+- [x] P1 | [[卫青]] | 215行 · refs=54 · type=person | action: premium-upgrade <!-- R9971 done -->
 - [x] P1 | [[城阳顷王]] | 17行 · refs=22 · type=person | action: expand-content <!-- R5269: 已完成 -->
 - [x] P1 | [[汉昭帝]] | 39行 · refs=22 · type=person | action: expand-content
 - [x] P1 | [[宋平公]] | 20行 · refs=21 · type=person | action: expand-content <!-- R5269: 已完成 -->
@@ -173,15 +173,15 @@
 - [ ] P1 | [[文侯申]] | 94行 · refs=14 · type=person | action: expand-content
 - [ ] P1 | [[秦惠公]] | 62行 · refs=14 · type=person | action: expand-content
 - [ ] P1 | [[蔡戴侯]] | 79行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[蔡灵侯]] | 93行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[赵敬肃王]] | 81行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[霍嬗]] | 49行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[蔡灵侯]] | 100行 · refs=14 · type=person | action: expand-content <!-- R9975 done -->
+- [x] P1 | [[赵敬肃王]] | 87行 · refs=14 · type=person | action: expand-content <!-- R9976 done -->
+- [x] P1 | [[霍嬗]] | 67行 · refs=14 · type=person | action: expand-content <!-- R9977 done -->
 - [ ] P1 | [[东周惠王]] | 69行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[公孙衍]] | 124行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[吴广]] | 142行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[姬喜]] | 101行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[韩懿侯]] | 72行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[齐康公]] | 92行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[公孙衍]] | 150行 · refs=13 · type=person | action: expand-content <!-- R9973 done -->
+- [x] P1 | [[吴广]] | 164行 · refs=13 · type=person | action: expand-content <!-- R9972 done -->
+- [x] P1 | [[姬喜]] | 125行 · refs=13 · type=person | action: expand-content <!-- R9974 done -->
+- [x] P1 | [[韩懿侯]] | 95行 · refs=13 · type=person | action: expand-content <!-- R9978 done -->
+- [x] P1 | [[齐康公]] | 100行 · refs=13 · type=person | action: expand-content <!-- R9979 done -->
 - [ ] P1 | [[东周哀王]] | 48行 · refs=12 · type=person | action: expand-content
 - [ ] P1 | [[楚子西]] | 36行 · refs=12 · type=person | action: expand-content
 - [ ] P1 | [[赵国赵桓子]] | 49行 · refs=13 · type=person | action: expand-content
