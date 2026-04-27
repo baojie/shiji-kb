@@ -51,7 +51,7 @@ async function route(core) {
     if (type) { renderCategory(core, 'type', type); setStatus(''); return; }
     if (tag) { renderCategory(core, 'tag', tag); setStatus(''); return; }
     if (params.has('all')) {
-      location.hash = encodeURIComponent('Special:AllPages');
+      location.hash = encodeURIComponent('Special：AllPages');
       setStatus(''); return;
     }
     if (params.has('recent')) {
@@ -111,38 +111,38 @@ async function route(core) {
   }
 
   // Special: 系统页路由
-  if (raw === 'Special:Random') {
+  if (raw === 'Special：Random') {
     const pids = Object.keys(core.registry.pages).filter(
-      p => !p.startsWith('Special:') && core.registry.pages[p].type !== 'chapter'
+      p => !p.startsWith('Special：') && core.registry.pages[p].type !== 'chapter'
     );
     const randomPid = pids[Math.floor(Math.random() * pids.length)];
     location.hash = encodeURIComponent(randomPid);
     setStatus('');
     return;
   }
-  if (raw === 'Special:Recent' || raw.startsWith('Special:Recent?')) {
+  if (raw === 'Special：Recent' || raw.startsWith('Special：Recent?')) {
     const qm = raw.indexOf('?');
     const pageNum = qm >= 0 ? parseInt(new URLSearchParams(raw.slice(qm + 1)).get('page') || '1', 10) : 1;
     try { await renderRecent(core, pageNum); } catch (e) { showFatal(`recent.jsonl 加载失败：${e.message}`); }
     setStatus(''); return;
   }
-  if (raw === 'Special:Settings') {
+  if (raw === 'Special：Settings') {
     renderSpecialSettings(core);
     setStatus(''); return;
   }
-  if (raw === 'Special:Plugins') {
+  if (raw === 'Special：Plugins') {
     renderSpecialPlugins(core);
     setStatus(''); return;
   }
-  if (raw === 'Special:AllPages' || raw.startsWith('Special:AllPages?')) {
+  if (raw === 'Special：AllPages' || raw.startsWith('Special：AllPages?')) {
     renderAll(core);
     setStatus(''); return;
   }
-  if (raw === 'Special:All') {
+  if (raw === 'Special：All') {
     renderSpecialAll(core);
     setStatus(''); return;
   }
-  if (raw === 'Special:Statistics' || raw === 'Special:知识量') {
+  if (raw === 'Special：Statistics' || raw === 'Special：知识量') {
     renderSpecialStatistics(core);
     setStatus(''); return;
   }
