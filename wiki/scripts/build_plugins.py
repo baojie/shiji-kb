@@ -51,8 +51,6 @@ def main() -> int:
     out.write_text(json.dumps({'plugins': plugins}, ensure_ascii=False, indent=2) + '\n',
                    encoding='utf-8')
     print(f'[plugins] {len(plugins)} 个插件 → {out.relative_to(Path.cwd())}')
-    for p in plugins:
-        print(f'  {p["id"]}')
     return 0
 
 
