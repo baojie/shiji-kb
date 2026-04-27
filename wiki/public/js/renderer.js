@@ -727,19 +727,20 @@ export function renderCategory(core, kind, value) {
 }
 
 /**
- * 最近修订页 (#?recent[&page=N]): recent.json 是滚动窗口（最新 500-600 条），单次 fetch 即可.
+ * 最近修订页 (#?recent[&page=N]): recent.jsonl 是滚动窗口（最新 1000 条），单次 fetch 即可.
  */
 export async function renderRecent(core, pageNum = 1) {
   const DISPLAY_LIMIT = 500;
   const PAGE_SIZE = 50;
 
   const bust = `?v=${Math.floor(Date.now() / 60000)}`;
-  const r = await fetch('recent.json' + bust);
+  const r = await fetch('recent.jsonl' + bust);
   if (!r.ok) throw new Error('HTTP ' + r.status);
-  const data = await r.json();
+  const text = await r.text();
+  const allEntries = text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
 
-  // recent.json 已包含最近 500-600 条（滚动窗口），直接取最新 DISPLAY_LIMIT 条，逆序显示
-  const recent500 = (data.entries || []).slice(-DISPLAY_LIMIT).reverse();
+  // recent.jsonl 保留最近 1000 条（滚动窗口），取最新 DISPLAY_LIMIT 条逆序显示
+  const recent500 = allEntries.slice(-DISPLAY_LIMIT).reverse();
 
   const totalEntries = recent500.length;
   const totalPages = Math.max(1, Math.ceil(totalEntries / PAGE_SIZE));
@@ -765,8 +766,7 @@ export async function renderRecent(core, pageNum = 1) {
   const pagerHtml = totalPages > 1 ? buildPager(pageNum, totalPages) : '';
 
   const uniquePages = new Set(recent500.map(e => e.page)).size;
-  const totalInFile = (data.entries || []).length;
-  const logNote = totalInFile > DISPLAY_LIMIT ? `（窗口共 ${totalInFile} 条，显示最新 ${DISPLAY_LIMIT} 条）` : '';
+  const logNote = allEntries.length > DISPLAY_LIMIT ? `（窗口共 ${allEntries.length} 条，显示最新 ${DISPLAY_LIMIT} 条）` : '';
 
   const body = entries.length === 0
     ? '<p class="category-empty">暂无修订记录。</p>'
@@ -786,7 +786,7 @@ export async function renderRecent(core, pageNum = 1) {
   hideSidebar();
   document.getElementById('crumb').textContent = '最近修订';
   document.title = '最近修订 · 史记 Wiki';
-  document.getElementById('src-info').textContent = 'recent.json';
+  document.getElementById('src-info').textContent = 'recent.jsonl';
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
 }

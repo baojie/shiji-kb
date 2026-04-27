@@ -57,7 +57,7 @@ async function route(core) {
     if (params.has('recent')) {
       // 旧 URL 兼容：直接渲染，不做 redirect（避免 hashchange 不触发的问题）
       const pageNum = parseInt(params.get('page') || '1', 10);
-      try { await renderRecent(core, pageNum); } catch (e) { showFatal(`recent.json 加载失败：${e.message}`); }
+      try { await renderRecent(core, pageNum); } catch (e) { showFatal(`recent.jsonl 加载失败：${e.message}`); }
       setStatus(''); return;
     }
     if (params.has('history')) {
@@ -123,7 +123,7 @@ async function route(core) {
   if (raw === 'Special:Recent' || raw.startsWith('Special:Recent?')) {
     const qm = raw.indexOf('?');
     const pageNum = qm >= 0 ? parseInt(new URLSearchParams(raw.slice(qm + 1)).get('page') || '1', 10) : 1;
-    try { await renderRecent(core, pageNum); } catch (e) { showFatal(`recent.json 加载失败：${e.message}`); }
+    try { await renderRecent(core, pageNum); } catch (e) { showFatal(`recent.jsonl 加载失败：${e.message}`); }
     setStatus(''); return;
   }
   if (raw === 'Special:Settings') {

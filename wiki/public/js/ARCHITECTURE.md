@@ -229,7 +229,7 @@ core.hooks.onRoute.add(async (raw, core) => {
 |------|------|---------|
 | `pages.json` | 全量页面索引（id/label/aliases/type/tags/quality_score...） | `python wiki/scripts/build_registry.py` |
 | `plugins.json` | 已启用插件清单 | 手编 或 `python wiki/scripts/scan_plugins.py` |
-| `recent.json` | 最近更新列表 | `python wiki/scripts/record_revision.py` |
+| `recent.jsonl` | 最近更新列表（JSONL，每行一条，滚动窗口 1000 条） | `python wiki/scripts/record_revision.py` |
 | `pages/<id>.md` | 页面源文件（YAML frontmatter + Markdown body） | 手写 或脚本生成 |
 
 ---
