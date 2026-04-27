@@ -67,7 +67,7 @@ def main():
     total = len(all_entries)
     print(f'合并总条目数: {total}')
 
-    # 分割：最旧的 (total - WINDOW_SIZE) 条 → 归档；最新 WINDOW_SIZE 条 → recent.json
+    # 分割：最旧的 (total - WINDOW_SIZE) 条 → 归档；最新 WINDOW_SIZE 条 → recent.jsonl
     archive_entries = all_entries[:-WINDOW_SIZE] if total > WINDOW_SIZE else []
     window_entries = all_entries[-WINDOW_SIZE:] if total > WINDOW_SIZE else all_entries
 
