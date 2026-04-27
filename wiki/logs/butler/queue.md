@@ -34,26 +34,26 @@
 - [ ] P1 | [[王]] | 82行 · refs=40 · type=person | action: expand-content
 - [ ] P1 | [[西魏王]] | 44行 · refs=37 · type=person | action: expand-content
 - [ ] P1 | [[楚王]] | 52行 · refs=35 · type=person | action: expand-content
-- [ ] P1 | [[殷契]] | 51行 · refs=25 · type=person | action: expand-content
-- [ ] P1 | [[新垣衍]] | 102行 · refs=15 · type=person | action: expand-content
-- [ ] P1 | [[宋昭公]] | 40行 · refs=15 · type=person | action: expand-content
-- [ ] P1 | [[晋昭公]] | 67行 · refs=15 · type=person | action: expand-content
-- [ ] P1 | [[文侯申]] | 48行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[秦惠公]] | 51行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[蔡戴侯]] | 44行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[蔡灵侯]] | 48行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[赵敬肃王]] | 38行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[公孙衍]] | 124行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[吴广]] | 142行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[姬喜]] | 62行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[赵国赵桓子]] | 45行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[韩懿侯]] | 62行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[齐康公]] | 43行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[东周哀王]] | 44行 · refs=12 · type=person | action: expand-content
-- [ ] P1 | [[姬阖闾]] | 55行 · refs=12 · type=person | action: expand-content
-- [ ] P1 | [[楚子西]] | 36行 · refs=12 · type=person | action: expand-content
-- [ ] P1 | [[赵幽缪王]] | 53行 · refs=12 · type=person | action: expand-content
-- [ ] P1 | [[阎乐]] | 65行 · refs=12 · type=person | action: expand-content
+- [x] P1 | [[殷契]] | 51行 · refs=25 · type=person | action: expand-content <!-- R6820: 已完成 -->
+- [x] P1 | [[新垣衍]] | 102行 · refs=15 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[宋昭公]] | 40行 · refs=15 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[晋昭公]] | 67行 · refs=15 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[文侯申]] | 48行 · refs=14 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[秦惠公]] | 51行 · refs=14 · type=person | action: expand-content <!-- R6821: 已完成 -->
+- [x] P1 | [[蔡戴侯]] | 44行 · refs=14 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[蔡灵侯]] | 48行 · refs=14 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[赵敬肃王]] | 38行 · refs=14 · type=person | action: expand-content <!-- 仅thin源，跳过 -->
+- [x] P1 | [[公孙衍]] | 124行 · refs=13 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[吴广]] | 142行 · refs=13 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[姬喜]] | 62行 · refs=13 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[赵国赵桓子]] | 45行 · refs=13 · type=person | action: expand-content <!-- basic质量/1处引用，跳过 -->
+- [x] P1 | [[韩懿侯]] | 62行 · refs=13 · type=person | action: expand-content <!-- R6822: 已完成 -->
+- [x] P1 | [[齐康公]] | 43行 · refs=13 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[东周哀王]] | 44行 · refs=12 · type=person | action: expand-content <!-- 仅1个非thin源，跳过 -->
+- [x] P1 | [[姬阖闾]] | 55行 · refs=12 · type=person | action: expand-content <!-- type=redirect，跳过 -->
+- [x] P1 | [[楚子西]] | 36行 · refs=12 · type=person | action: expand-content <!-- basic质量/1源，跳过 -->
+- [x] P1 | [[赵幽缪王]] | 53行 · refs=12 · type=person | action: expand-content <!-- basic质量/3处引用，跳过 -->
+- [x] P1 | [[阎乐]] | 65行 · refs=12 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
 
 ## P1 premium-upgrade 候选（2026-04-27 R6079 W5 补充）
 
