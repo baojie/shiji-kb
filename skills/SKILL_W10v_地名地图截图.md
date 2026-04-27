@@ -374,3 +374,30 @@ cropped.save('wiki/public/images/<地名>-<朝代>.jpg', 'JPEG', quality=92, sub
 - 每 5 个地名完成后将 `place_index.json` 连同页面一起 commit
 - `place_index.json` 的 `crop` 坐标一旦写入，后续同一地名可直接复用，无需重新目视确认
 - 谭图每张地图上已印有地名汉字，确认方法：在图中找到汉字标注即可，无需与外部数据库对照
+
+## 八、P29/P30 约束（W5 R6079 写入）
+
+### P29：wiki 页面写入铁律（已有，需强调）
+
+⛔ **H23 写入 wiki 页面时禁止使用 Edit 工具或直接写文件。**
+必须工作流：
+1. Python 在内存中修改页面内容（frontmatter + 插入 `## 地理位置`）
+2. 写入 `/tmp/<slug>_h23.md`
+3. 调用 `python3 wiki/scripts/butler/edit_page.py <slug> /tmp/<slug>_h23.md --summary "map: 补写谭图配图" --author map`
+
+违反此规则属于 W0 不变量违反，本轮记 fail。
+
+### P30：H23 多样性节流
+
+**规则**：检查 `actions.jsonl` 最近 6 条，若 H23-地名地图 出现 ≥ 3 次：
+- 本轮强制从 housekeeping_queue 或 queue.md 选非 H23 任务
+- 完成 1 轮后方可继续 H23
+
+实现方法（每轮选任务前执行）：
+```bash
+h23_count=$(tail -6 wiki/logs/butler/actions.jsonl | grep -c '"H23-地名地图"')
+if [ "$h23_count" -ge 3 ]; then
+  # 选 housekeeping_queue 非 H23 P0/P1 条目
+  echo "H23 cooling down (${h23_count}/6)，本轮选其他类型"
+fi
+```

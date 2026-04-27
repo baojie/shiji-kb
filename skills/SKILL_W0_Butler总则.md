@@ -211,7 +211,10 @@ cat wiki/logs/butler/round_counter.txt
 2. 选任务   三队列选取算法（见下）
 3. 前置检查 W3: 满足 → 继续; 不满足 → failures + 跳到步骤7
 4. 执行     W2 原子动作，diff ≤ 20行
-5. 记账     追加 actions.jsonl（result暂留空）
+5. 记账     追加 actions.jsonl，必须包含 `reflection` 字段（result暂留空）
+            reflection = 1句话：本轮有何异常/新发现/改进点；无则写 "无异常"
+            示例：{"round":6060,"action":"H2-链接化","page":"韩信","result":null,
+                   "reflection":"页面已有大量链接，H2任务命中率低，建议降低此类页面优先级"}
 6. 评估     W4 打分 → accept / rollback
             更新 actions.jsonl result 字段
 7. 暂存     accept → git add <file>; rollback → git restore <file>
@@ -367,6 +370,7 @@ touch wiki/memory/MEMORY.md
 
 - ❌ 单次 diff > 20 行
 - ❌ 跳过 log（未写 actions.jsonl）
+- ❌ actions.jsonl 记录缺少 `reflection` 字段（哪怕写"无异常"也必须有）
 - ❌ 修改 `chapter_md/` / `kg/` / `data/`（butler 只读这些）
 - ❌ 批量删除/重命名 `wiki/public/pages/`
 - ❌ 直接 Edit/Write `wiki/public/pages/*.md`（必须用 add_page / edit_page / delete_page）
