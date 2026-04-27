@@ -165,3 +165,23 @@
 - [x] P1 | [[廉颇]] | 138行 · refs=68 · type=person | action: premium-upgrade (already featured)
 - [x] P1 | [[管仲]] | 138行 · refs=65 · type=person | action: premium-upgrade (already featured)
 - [x] P1 | [[李斯]] | 146行 · refs=64 · type=person | action: premium-upgrade
+
+## P1 expand-content 候选（2026-04-28 R9959 W5 补充，refs≥12+无生平节）
+
+- [ ] P1 | [[城阳共王]] | 52行 · refs=16 · type=person | action: expand-content
+- [ ] P1 | [[卫伉]] | 70行 · refs=14 · type=person | action: expand-content
+- [ ] P1 | [[文侯申]] | 94行 · refs=14 · type=person | action: expand-content
+- [ ] P1 | [[秦惠公]] | 62行 · refs=14 · type=person | action: expand-content
+- [ ] P1 | [[蔡戴侯]] | 79行 · refs=14 · type=person | action: expand-content
+- [ ] P1 | [[蔡灵侯]] | 93行 · refs=14 · type=person | action: expand-content
+- [ ] P1 | [[赵敬肃王]] | 81行 · refs=14 · type=person | action: expand-content
+- [ ] P1 | [[霍嬗]] | 49行 · refs=14 · type=person | action: expand-content
+- [ ] P1 | [[东周惠王]] | 69行 · refs=13 · type=person | action: expand-content
+- [ ] P1 | [[公孙衍]] | 124行 · refs=13 · type=person | action: expand-content
+- [ ] P1 | [[吴广]] | 142行 · refs=13 · type=person | action: expand-content
+- [ ] P1 | [[姬喜]] | 101行 · refs=13 · type=person | action: expand-content
+- [ ] P1 | [[韩懿侯]] | 72行 · refs=13 · type=person | action: expand-content
+- [ ] P1 | [[齐康公]] | 92行 · refs=13 · type=person | action: expand-content
+- [ ] P1 | [[东周哀王]] | 48行 · refs=12 · type=person | action: expand-content
+- [ ] P1 | [[楚子西]] | 36行 · refs=12 · type=person | action: expand-content
+- [ ] P1 | [[赵国赵桓子]] | 49行 · refs=13 · type=person | action: expand-content
