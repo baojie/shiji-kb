@@ -38,3 +38,4 @@
 2026-04-25  w5-v9-P27  housekeeping_queue H20：verify-citations 全量核验任务（9383页零核验）[reflections/2026-04-25-v9.md]
 2026-04-25  w5-v9-P28  arch_2026-04-25-escalation.md：规模升级至9394页，推荐方案C（SQLite）[reflections/2026-04-25-v9.md]
 2026-04-27  W10v v0.1→v0.2  P29强化edit_page.py铁律+P30 H23多样性节流规则 [wiki/memory/reflections/2026-04-27_R6079_W5.md]
+2026-04-27  W1 v0.1→v0.2  新增 §八 expand-content 候选筛选条件：refs≥5 + has_bio过滤 [reflections/2026-04-27_R6823_W5.md]

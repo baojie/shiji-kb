@@ -217,6 +217,29 @@ Butler 每轮读取三个独立队列，共同决定本轮任务：
 
 ---
 
+## 八、expand-content 候选筛选条件（v0.2，2026-04-27 W5 R6823）
+
+从 pages.json 生成 expand-content 候选时，必须同时满足：
+
+1. `quality` ∈ {basic, standard}
+2. `refs` ≥ **5**（v0.1 是 refs>0，已提升阈值聚焦高价值页面）
+3. `type` ∈ {person, concept, event, overview, story, state}
+4. **无生平节**：页面内容不含 `## 生平` / `## 在位` / `## 背景` 等正文节
+   （已有正文节的页面 skip 率高达 32%，纳入候选属于无效占位）
+
+筛选脚本示意（W5 §二.E 候选生成时应用）：
+```python
+expand_pool = sorted(
+    [p for p in scored if p['quality'] in ('basic', 'standard')
+     and p['refs'] >= 5 and p['type'] in EXPAND_TYPES
+     and not p.get('has_bio', False)],
+    key=lambda x: -x['refs'])
+```
+
+`has_bio` 判断：读页面内容，检测 `## 生平|在位|背景` 是否存在。
+
+---
+
 ## 相关
 - [W0 总则](SKILL_W0_Butler总则.md)
 - [W2 原子行动目录](SKILL_W2_Butler原子行动目录.md)
