@@ -232,9 +232,27 @@
 
 ## 第五批 premium-upgrade 候选（R10028 W1-explore）
 
-- [ ] P1 | [[太史公]] | 247行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[季札]] | 229行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[崔杼]] | 219行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[秦襄公]] | 207行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[任安]] | 206行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[箕子]] | 203行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[太史公]] | 247行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[季札]] | 229行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[崔杼]] | 219行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[秦襄公]] | 207行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[任安]] | 206行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[箕子]] | 203行 · featured · type=person | action: premium-upgrade
+
+## 第六批 premium-upgrade 候选（R10036 W1-explore）
+
+- [x] P1 | [[晋灵公]] | 202行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[周昌]] | 201行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[赵武灵王]] | 201行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[秦孝文王]] | 201行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[荆轲刺秦王]] | 227行 · featured · type=story | action: premium-upgrade
+- [x] P1 | [[陈完奔齐]] | 240行 · featured · type=story | action: premium-upgrade
+
+## 第七批 premium-upgrade 候选（R10044 W1-explore）
+
+- [ ] P1 | [[子贡]] | 199行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[孙武]] | 199行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[宋襄公]] | 199行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[晋厉公]] | 200行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[赵孝成王]] | 200行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[吕产]] | 199行 · featured · type=person | action: premium-upgrade
