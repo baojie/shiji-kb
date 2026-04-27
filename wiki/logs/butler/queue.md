@@ -292,3 +292,28 @@
 - [x] P1 | [[秦惠王]] | featured · type=person | action: premium-upgrade
 - [x] P1 | [[英布]] | featured · type=person | action: premium-upgrade
 - [x] P1 | [[楚庄王]] | featured · type=person | action: premium-upgrade
+
+## 第十二批 premium-upgrade 候选（R10085 W1-explore）
+
+- [x] P1 | [[窦太后]] | featured · type=person | action: premium-upgrade
+- [~] P1 | [[西周幽王]] | featured · skip-content-thin · type=person | action: premium-upgrade
+- [x] P1 | [[魏冉]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[秦孝公]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[秦庄襄王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[齐威王]] | featured · type=person | action: premium-upgrade
+
+## 第十三批 premium-upgrade 候选（R10092 W1-explore）
+
+- [x] P1 | [[蒙恬]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[齐湣王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[周亚夫]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[楚灵王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[韩王信]] | featured · type=person | action: premium-upgrade
+
+## 第十四批 premium-upgrade 候选（R10098 W1-explore）
+
+- [ ] P1 | [[吴王阖闾]] | featured · type=person | action: premium-upgrade
+- [ ] P1 | [[汉武帝]] | featured · type=person | action: premium-upgrade
+- [ ] P1 | [[田文]] | featured · type=person | action: premium-upgrade
+- [ ] P1 | [[刘濞]] | featured · type=person | action: premium-upgrade
+- [ ] P1 | [[魏无忌]] | featured · type=person | action: premium-upgrade
