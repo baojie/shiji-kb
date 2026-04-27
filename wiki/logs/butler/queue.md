@@ -12,6 +12,20 @@
 
 ---
 
+## P1 premium-upgrade 候选（2026-04-28 R9990 W1 探索，featured→premium）
+
+- [x] P1 | [[汲黯]] | 371行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[淳于意]] | 347行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[扁鹊]] | 326行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[窦婴]] | 283行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[商鞅]] | 282行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[田蚡]] | 274行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[范睢]] | 250行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[李斯]] | 238行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[梁孝王]] | 231行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[荆轲]] | 230行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[商鞅变法]] | 416行 · featured · type=concept | action: premium-upgrade
+
 ## P2 低优 (手动加入)
 
 （留给用户手动追加的低优任务）
@@ -168,20 +182,20 @@
 
 ## P1 expand-content 候选（2026-04-28 R9959 W5 补充，refs≥12+无生平节）
 
-- [ ] P1 | [[城阳共王]] | 52行 · refs=16 · type=person | action: expand-content
-- [ ] P1 | [[卫伉]] | 70行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[文侯申]] | 94行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[秦惠公]] | 62行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[蔡戴侯]] | 79行 · refs=14 · type=person | action: expand-content
+- [x] P1 | [[城阳共王]] | 58行 · refs=16 | action: expand-content <!-- R9989 done -->
+- [x] P1 | [[卫伉]] | 81行 · refs=14 · type=person | action: expand-content <!-- R9981 done -->
+- [x] P1 | [[文侯申]] | 101行 · refs=14 | action: expand-content <!-- R9988 done -->
+- [x] P1 | [[秦惠公]] | 68行 · refs=14 | action: expand-content <!-- R9987 done -->
+- [x] P1 | [[蔡戴侯]] | 85行 · refs=14 · type=person | action: expand-content <!-- R9982 done -->
 - [x] P1 | [[蔡灵侯]] | 100行 · refs=14 · type=person | action: expand-content <!-- R9975 done -->
 - [x] P1 | [[赵敬肃王]] | 87行 · refs=14 · type=person | action: expand-content <!-- R9976 done -->
 - [x] P1 | [[霍嬗]] | 67行 · refs=14 · type=person | action: expand-content <!-- R9977 done -->
-- [ ] P1 | [[东周惠王]] | 69行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[东周惠王]] | 76行 · refs=13 · type=person | action: expand-content <!-- R9983 done -->
 - [x] P1 | [[公孙衍]] | 150行 · refs=13 · type=person | action: expand-content <!-- R9973 done -->
 - [x] P1 | [[吴广]] | 164行 · refs=13 · type=person | action: expand-content <!-- R9972 done -->
 - [x] P1 | [[姬喜]] | 125行 · refs=13 · type=person | action: expand-content <!-- R9974 done -->
 - [x] P1 | [[韩懿侯]] | 95行 · refs=13 · type=person | action: expand-content <!-- R9978 done -->
 - [x] P1 | [[齐康公]] | 100行 · refs=13 · type=person | action: expand-content <!-- R9979 done -->
-- [ ] P1 | [[东周哀王]] | 48行 · refs=12 · type=person | action: expand-content
-- [ ] P1 | [[楚子西]] | 36行 · refs=12 · type=person | action: expand-content
-- [ ] P1 | [[赵国赵桓子]] | 49行 · refs=13 · type=person | action: expand-content
+- [x] P1 | [[东周哀王]] | 48行 · refs=12 | action: expand-content <!-- 跳过: 页面描述有误，refs全为汉代年表 -->
+- [x] P1 | [[楚子西]] | 36行 · refs=12 | action: expand-content <!-- 跳过: frontmatter id混淆 -->
+- [x] P1 | [[赵国赵桓子]] | 62行 · refs=13 | action: expand-content <!-- R9986 done -->
