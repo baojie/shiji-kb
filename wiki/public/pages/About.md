@@ -1,8 +1,8 @@
 ---
-id: "Special：About"
-type: special
+id: "About"
+type: project
 label: 关于本 Wiki
-canonical_name: "Special：About"
+canonical_name: "About"
 tags: [系统页面]
 quality: standard
 ---
