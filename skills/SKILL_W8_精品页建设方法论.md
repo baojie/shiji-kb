@@ -310,12 +310,12 @@ python3 wiki/scripts/butler/record_revision.py <页面slug> \
 
 此命令会同步更新：
 1. `wiki/public/history/<slug>.json` — 页面级 revision 历史
-2. `wiki/public/recent.json` — 全局最近编辑列表
+2. `wiki/public/recent.jsonl` — 全局最近编辑列表（JSONL 格式，每行一条）
 
 **Revision 文件需随页面一起 git add 和 commit。**
 
 ```bash
-git add wiki/public/pages/<slug>.md wiki/public/history/<slug>.json wiki/public/recent.json
+git add wiki/public/pages/<slug>.md wiki/public/history/<slug>.json wiki/public/recent.jsonl
 ```
 
 ---
