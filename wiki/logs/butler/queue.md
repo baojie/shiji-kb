@@ -370,3 +370,11 @@
 - [x] P1 | [[晋平公]] | featured · type=person | action: premium-upgrade
 - [x] P1 | [[赵括]] | featured · type=person | action: premium-upgrade
 - [x] P1 | [[鲁隐公]] | featured · type=person | action: premium-upgrade
+
+## 第二十三批 世系补全（R10145 batch-侯主）
+- [x] P1 | 115个侯国页面 | 批量添加历代侯主表 | action: batch-世系补全 | accept
+  - 来源：018/019/020年表JSON数据
+  - 覆盖范围：018=17页, 019=48页, 020=50页（共115页）
+
+## 剩余待处理的侯国页（无规则可提取，共43页）
+- [ ] P3 | 义阳侯国/乐平侯国/乐成侯国/乐昌侯国等43页 | 年表无标准侯主记录 | 暂搁置
