@@ -50,6 +50,7 @@ def main() -> int:
     out = site_root / 'plugins.json'
     out.write_text(json.dumps({'plugins': plugins}, ensure_ascii=False, indent=2) + '\n',
                    encoding='utf-8')
+    print('...... building plugins.json')
     return 0
 
 
