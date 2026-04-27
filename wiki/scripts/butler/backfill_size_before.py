@@ -4,7 +4,7 @@ backfill_size_before.py — 为所有修订记录补全缺失的 size_before 字
 
 处理三类文件：
   1. wiki/public/history/*.json   (per-page 修订历史)
-  2. wiki/public/recent.json      (滚动窗口)
+  2. wiki/public/recent.jsonl     (滚动窗口)
   3. wiki/logs/recent/*.jsonl     (归档批次)
 
 revisions 数组按时间倒序存储（最新在前），所以 revisions[i] 的 parent 是 revisions[i+1]。
@@ -22,7 +22,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 HIST = ROOT / 'wiki/public/history'
-RECENT = ROOT / 'wiki/public/recent.json'
+RECENT = ROOT / 'wiki/public/recent.jsonl'
 LOG_DIR = ROOT / 'wiki/logs/recent'
 
 
@@ -53,12 +53,16 @@ def backfill_file(path: Path, dry_run: bool) -> tuple[int, int]:
 
 
 def backfill_recent(rev_map: dict[str, int], dry_run: bool) -> tuple[int, int]:
-    """为 recent.json 的 entries 补全 size_before。"""
+    """为 recent.jsonl 的 entries 补全 size_before。"""
     if not RECENT.exists():
         return 0, 0
 
-    data = json.loads(RECENT.read_text(encoding='utf-8'))
-    entries = data.get('entries', [])
+    raw_lines = RECENT.read_text(encoding='utf-8').splitlines()
+    entries = []
+    for ln in raw_lines:
+        ln = ln.strip()
+        if ln:
+            entries.append(json.loads(ln))
 
     changed = 0
     for e in entries:
@@ -70,7 +74,10 @@ def backfill_recent(rev_map: dict[str, int], dry_run: bool) -> tuple[int, int]:
             changed += 1
 
     if changed and not dry_run:
-        RECENT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        RECENT.write_text(
+            '\n'.join(json.dumps(e, ensure_ascii=False) for e in entries) + '\n',
+            encoding='utf-8'
+        )
 
     return len(entries), changed
 
@@ -131,7 +138,7 @@ def main() -> int:
     print(f'  映射表 {len(rev_map)} 条')
 
     re_total, re_changed = backfill_recent(rev_map, args.dry_run)
-    print(f'recent.json: {re_total} 条 entries，补全 {re_changed} 条 size_before')
+    print(f'recent.jsonl: {re_total} 条 entries，补全 {re_changed} 条 size_before')
 
     jsonl_files = sorted(LOG_DIR.glob('recent.*.jsonl')) if LOG_DIR.exists() else []
     print(f'扫描 {len(jsonl_files)} 个 logs/recent/*.jsonl...')

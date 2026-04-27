@@ -20,7 +20,7 @@ ROOT = Path(__file__).parent.parent.parent.parent  # shiji-kb/
 PAGES_JSON    = ROOT / "wiki/public/pages.json"
 PAGES_DIR     = ROOT / "wiki/public/pages"
 HISTORY_DIR   = ROOT / "wiki/public/history"
-RECENT_JSON   = ROOT / "wiki/public/recent.json"
+RECENT_JSONL  = ROOT / "wiki/public/recent.jsonl"
 ACTIONS_JSONL = ROOT / "wiki/logs/butler/actions.jsonl"
 SNOOZE_JSON   = ROOT / "wiki/logs/butler/arch_snooze.json"
 
@@ -87,9 +87,8 @@ def avg_recent_action_duration(actions_path, n=20):
 
 def check_total_revisions(recent_path):
     try:
-        with open(recent_path) as f:
-            data = json.load(f)
-        return data.get("total_revisions", -1)
+        lines = Path(recent_path).read_text(encoding='utf-8').splitlines()
+        return sum(1 for l in lines if l.strip())
     except Exception:
         return -1
 
@@ -116,7 +115,7 @@ def main():
     metrics["history_files"] = len(list(HISTORY_DIR.glob("*.json"))) if HISTORY_DIR.exists() else -1
 
     # 5. 总修订数
-    metrics["total_revisions"] = check_total_revisions(RECENT_JSON)
+    metrics["total_revisions"] = check_total_revisions(RECENT_JSONL)
 
     # 6. 平均 action 耗时
     metrics["avg_action_s"] = avg_recent_action_duration(ACTIONS_JSONL)

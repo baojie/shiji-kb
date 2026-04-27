@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-migrate_recent_window.py — 迁移 recent.json 到滚动窗口设计.
+migrate_recent_window.py — 重建 recent.jsonl 滚动窗口.
 
-将所有 wiki/logs/recent/recent.N.json + recent.json 中的条目合并后：
-  - 最近 WINDOW_SIZE 条保留在 recent.json（滚动窗口，前端取其中最新 500）
-  - 较旧的条目重新打包到 wiki/logs/recent/recent.1.json ... recent.M.json
+将所有 wiki/logs/recent/recent.N.jsonl + recent.jsonl 中的条目合并后：
+  - 最近 WINDOW_SIZE 条保留在 recent.jsonl（滚动窗口，前端取其中最新 500）
+  - 较旧的条目重新打包到 wiki/logs/recent/recent.1.jsonl ... recent.M.jsonl
     （每档 ≤ARCHIVE_BATCH 条，按时间从旧到新编号）
 
 执行前会打印预览；加 --run 才真正写入。
@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 PUBLIC = ROOT / 'wiki/public'
-RECENT = PUBLIC / 'recent.json'
+RECENT = PUBLIC / 'recent.jsonl'
 LOG_DIR = ROOT / 'wiki/logs/recent'
 
 WINDOW_SIZE = 1000
@@ -47,8 +47,13 @@ def load_entries():
             all_entries.extend(d.get('entries', []))
 
     if RECENT.exists():
-        d = json.loads(RECENT.read_text(encoding='utf-8'))
-        all_entries.extend(d.get('entries', []))
+        for line in RECENT.read_text(encoding='utf-8').splitlines():
+            line = line.strip()
+            if line:
+                try:
+                    all_entries.append(json.loads(line))
+                except json.JSONDecodeError:
+                    pass
 
     return all_entries
 
@@ -75,7 +80,7 @@ def main():
     rotations = len(archive_files)
 
     print(f'归档文件: {rotations} 个（各 ≤{ARCHIVE_BATCH} 条）')
-    print(f'recent.json 滚动窗口: {len(window_entries)} 条（rotations={rotations}）')
+    print(f'recent.jsonl 滚动窗口: {len(window_entries)} 条（rotations={rotations}）')
 
     if not args.run:
         print('\n[预览模式] 加 --run 才真正写入。')
@@ -94,13 +99,12 @@ def main():
         out.write_text(lines, encoding='utf-8')
         print(f'  写入 wiki/logs/recent/recent.{idx}.jsonl ({len(batch)} 条)')
 
-    # 写新 recent.json
+    # 写新 recent.jsonl（每行一条）
     RECENT.write_text(
-        json.dumps({'entries': window_entries, 'rotations': rotations},
-                   ensure_ascii=False, indent=2) + '\n',
+        '\n'.join(json.dumps(e, ensure_ascii=False) for e in window_entries) + '\n',
         encoding='utf-8'
     )
-    print(f'✓ recent.json 重建完成: {len(window_entries)} 条, rotations={rotations}')
+    print(f'✓ recent.jsonl 重建完成: {len(window_entries)} 条, rotations={rotations}')
 
 
 if __name__ == '__main__':

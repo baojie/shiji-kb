@@ -10,8 +10,8 @@ record_revision.py — 为 wiki/public/pages/<page>.md 写入一条修订记录.
 产出:
     1. wiki/public/history/<slug>/<rev_id>.md   (内容副本)
     2. wiki/public/history/<slug>.json          (per-page 索引, 追加 entry)
-    3. wiki/public/recent.json                  (全局修订日志, 滚动窗口 600 条)
-    4. wiki/logs/recent/recent.N.json           (归档批次, 永久保留)
+    3. wiki/public/recent.jsonl                 (全局修订日志, 滚动窗口 JSONL，每行一条)
+    4. wiki/logs/recent/recent.N.jsonl          (归档批次, 永久保留)
 
 rev_id 格式: YYYYMMDD-HHMMSS-<sha256[:6]>  (北京时间)
 
@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parents[3]
 PUBLIC = ROOT / 'wiki/public'
 PAGES = PUBLIC / 'pages'
 HIST = PUBLIC / 'history'
-RECENT = PUBLIC / 'recent.json'
+RECENT = PUBLIC / 'recent.jsonl'
 LOG_DIR = ROOT / 'wiki/logs/recent'   # 归档批次目录
 
 TZ_BJ = timezone(timedelta(hours=8))
@@ -123,27 +123,21 @@ def main() -> int:
         encoding='utf-8'
     )
 
-    # 3. 更新 recent.json（滚动窗口：始终保留最近 WINDOW_SIZE 条；
-    #    超出后把最旧的 ARCHIVE_BATCH 条移入 wiki/logs/recent/recent.N.json 归档）
-    WINDOW_SIZE = 1000    # recent.json 最多存 1000 条（前端取其中最新 500）
+    # 3. 更新 recent.jsonl（滚动窗口：始终保留最近 WINDOW_SIZE 条；
+    #    超出后把最旧的 ARCHIVE_BATCH 条移入 wiki/logs/recent/recent.N.jsonl 归档）
+    WINDOW_SIZE = 1000    # recent.jsonl 最多存 1000 行（前端取其中最新 500）
     ARCHIVE_BATCH = 500   # 每次归档最旧的 500 条
 
+    # 读取现有条目（每行一个 JSON 对象）
     if RECENT.exists():
-        recent = json.loads(RECENT.read_text(encoding='utf-8'))
-        # 一次性迁移：旧格式有 'limit' key，entries 是倒序（最新在前）
-        if 'limit' in recent:
-            old_entries = recent.get('entries', [])
-            migrated = []
-            for e in reversed(old_entries):
-                clean = {k: v for k, v in e.items()
-                         if k not in ('limit', 'total_pages', 'total_revisions', 'content')}
-                migrated.append(clean)
-            recent = {'entries': migrated}
+        raw_lines = RECENT.read_text(encoding='utf-8').splitlines()
+        entries = []
+        for ln in raw_lines:
+            ln = ln.strip()
+            if ln:
+                entries.append(json.loads(ln))
     else:
-        recent = {'entries': []}
-
-    rotations = recent.get('rotations', 0)
-    entries = recent.get('entries', [])
+        entries = []
 
     # 追加新条目（不含 content 字段）
     new_entry = {'page': page, **{k: v for k, v in entry.items() if k != 'content'}}
@@ -153,15 +147,18 @@ def main() -> int:
     if len(entries) > WINDOW_SIZE:
         batch = entries[:ARCHIVE_BATCH]
         entries = entries[ARCHIVE_BATCH:]
-        rotations += 1
+        # 推断下一个归档编号
         LOG_DIR.mkdir(exist_ok=True)
-        lines = '\n'.join(json.dumps(e, ensure_ascii=False) for e in batch) + '\n'
-        (LOG_DIR / f'recent.{rotations}.jsonl').write_text(lines, encoding='utf-8')
+        existing = [int(p.stem.split('.')[1]) for p in LOG_DIR.glob('recent.*.jsonl')
+                    if p.stem.split('.')[1].isdigit()]
+        rotations = max(existing) + 1 if existing else 1
+        archive_lines = '\n'.join(json.dumps(e, ensure_ascii=False) for e in batch) + '\n'
+        (LOG_DIR / f'recent.{rotations}.jsonl').write_text(archive_lines, encoding='utf-8')
         print(f'  [archive] {len(batch)} entries → wiki/logs/recent/recent.{rotations}.jsonl')
 
-    recent = {'entries': entries, 'rotations': rotations}
+    # 回写滚动窗口（JSONL：每行一条）
     RECENT.write_text(
-        json.dumps(recent, ensure_ascii=False, indent=2) + '\n',
+        '\n'.join(json.dumps(e, ensure_ascii=False) for e in entries) + '\n',
         encoding='utf-8'
     )
 
