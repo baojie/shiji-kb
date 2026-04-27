@@ -333,3 +333,26 @@
 - [x] P1 | [[田单]] | featured · type=person | action: premium-upgrade
 - [~] 刘舜 | skip-content-thin (78行)
 - [~] 张楚楚隐王 | skip-content-thin (71行)
+
+## 第十七批 premium-upgrade 候选（R10117 W1-explore）
+- [x] P1 | [[王子城父]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[公孙卿]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[主父偃]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[张骞]] | featured · type=person | action: premium-upgrade
+
+## 第十八批 premium-upgrade 候选（R10122 W1-explore）
+- [x] P1 | [[赵敬侯]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[齐悼惠王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[老子]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[赵奢]] | featured · type=person | action: premium-upgrade
+
+## 第十九批 premium-upgrade 候选（R10127 W1-explore）
+- [x] P1 | [[赵襄子]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[齐宣王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[晏婴]] | featured · type=person | action: premium-upgrade
+- [~] 晋哀侯 | skip-content-thin (70行)
+
+## 第二十批 premium-upgrade 候选（R10131 W1-explore）
+- [ ] P1 | [[淮南厉王]] | featured · type=person | action: premium-upgrade
+- [ ] P1 | [[燕召公]] | featured · type=person | action: premium-upgrade
+- [ ] P1 | [[苏代]] | featured · type=person | action: premium-upgrade
