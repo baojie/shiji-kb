@@ -3,13 +3,13 @@
 build_wanted_pages.py — 扫描所有 wiki 页面的 wikilinks，找出"被链接但尚未创建"的页面。
 
 输出：
-  wiki/public/data/wanted_pages.json   机器可读，供 Special:WantedPages 渲染
-  （可选）覆盖写 Special:WantedPages.md 的数据区块
+  wiki/public/data/wanted_pages.json   机器可读，供 WantedPages 渲染
+  （可选）覆盖写 WantedPages.md 的数据区块
 
 用法：
     python3 wiki/scripts/build_wanted_pages.py
     python3 wiki/scripts/build_wanted_pages.py --top 100
-    python3 wiki/scripts/build_wanted_pages.py --update-page   # 同时更新 Special 页面
+    python3 wiki/scripts/build_wanted_pages.py --update-page   # 同时更新 WantedPages 页面
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 PAGES_DIR = ROOT / "wiki/public/pages"
 PAGES_JSON = ROOT / "wiki/public/pages.json"
 OUT_JSON = ROOT / "wiki/public/data/wanted_pages.json"
-SPECIAL_PAGE = PAGES_DIR / "Special:WantedPages.md"
+SPECIAL_PAGE = PAGES_DIR / "WantedPages.md"
 
 WIKILINK_RE = re.compile(r"\[\[([^\]|#][^\]|#]*)(?:\|[^\]]+)?\]\]")
 # 跳过 Special: 前缀的链接
@@ -98,14 +98,14 @@ def write_json(wanted: list[dict]) -> None:
 
 SPECIAL_HEADER = """\
 ---
-id: "Special:WantedPages"
-type: special
+id: "WantedPages"
+type: project
 label: 想要的页面
-canonical_name: "Special:WantedPages"
+canonical_name: "WantedPages"
 tags: [系统页面, 维护]
 ---
 
-# Special:WantedPages — 想要的页面
+# WantedPages — 想要的页面
 
 被其他页面链接、但**尚未创建**的页面列表，按入链数从多到少排列。
 数据由 [`build_wanted_pages.py`](../../scripts/build_wanted_pages.py) 自动生成，butler 每 20 轮刷新一次。
@@ -164,10 +164,10 @@ def update_special_page(wanted: list[dict]) -> None:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="构建 Special:WantedPages 数据")
+    ap = argparse.ArgumentParser(description="构建 WantedPages 数据")
     ap.add_argument("--top", type=int, default=200, help="保留前 N 条（默认 200）")
     ap.add_argument("--update-page", action="store_true",
-                    help="同时覆写 Special:WantedPages.md")
+                    help="同时覆写 WantedPages.md")
     ap.add_argument("--dry-run", action="store_true",
                     help="只打印统计，不写文件")
     args = ap.parse_args()

@@ -56,7 +56,7 @@
   python3 wiki/scripts/build_wanted_pages.py --update-page
   python3 wiki/scripts/build_registry.py wiki/public/pages --out wiki/public/pages.json
   ```
-  写 actions.jsonl (mode=observe, action=update-wanted-pages, target=Special:WantedPages)，不需要 W4 评估，**需要** commit（包含 wanted_pages.json + Special:WantedPages.md + pages.json，commit message: `butler/observe: update-wanted-pages`）。
+  写 actions.jsonl (mode=observe, action=update-wanted-pages, target=WantedPages)，不需要 W4 评估，**需要** commit（包含 wanted_pages.json + WantedPages.md + pages.json，commit message: `butler/observe: update-wanted-pages`）。
 - 若 `wiki/logs/butler/housekeeping_queue.md` 有 P0 未处理，且本轮无其他 P0 → 处理一条 housekeeping P0（读 `skills/SKILL_W10_Butler内务整理.md`）
 - 若 `wiki/logs/butler/queue.md` 无 P0/P1 → 本轮做 W7 引文核验（优先于 explore）
 - 否则按 W1 的 2:1 比例:
@@ -121,7 +121,7 @@ python3 wiki/scripts/butler/record_revision.py <slug> \
 产出:
 - `wiki/public/history/<slug>/<rev_id>.md` (内容副本)
 - `wiki/public/history/<slug>.json` (per-page 索引)
-- `wiki/public/recent.json` (全局最近, 首页 `#?recent` 可看)
+- `wiki/public/recent.jsonl` (全局最近, 首页 `#?recent` 可看)
 
 **不调用 = butler 的工作在前端不可见**. 连续忘记 → W5 反思触发.
 
