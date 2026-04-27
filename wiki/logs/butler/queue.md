@@ -268,9 +268,27 @@
 
 ## 第九批 premium-upgrade 候选（R10062 W1-explore）
 
-- [ ] P1 | [[章邯]] | 196行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[叔孙通]] | 195行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[吕禄]] | 195行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[张苍]] | 196行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[秦武王]] | 195行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[楚成王]] | 194行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[章邯]] | 196行 · featured · type=person | action: premium-upgrade ✓ R10063
+- [x] P1 | [[叔孙通]] | 195行 · featured · type=person | action: premium-upgrade ✓ R10064
+- [x] P1 | [[吕禄]] | 195行 · featured · type=person | action: premium-upgrade ✓ R10066
+- [x] P1 | [[张苍]] | 196行 · featured · type=person | action: premium-upgrade ✓ R10067
+- [x] P1 | [[秦武王]] | 195行 · featured · type=person | action: premium-upgrade ✓ R10068
+- [x] P1 | [[楚成王]] | 194行 · featured · type=person | action: premium-upgrade ✓ R10069
+
+## 第十批 premium-upgrade 候选（R10070 W1-explore）
+
+- [x] P1 | [[赵胜]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[灌婴]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[赵简子]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[姒句践]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[田常]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[周厉王]] | featured · type=person | action: premium-upgrade
+
+## 第十一批 premium-upgrade 候选（R10077 W1-explore）
+
+- [x] P1 | [[仲由]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[后稷]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[晋献公]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[秦惠王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[英布]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[楚庄王]] | featured · type=person | action: premium-upgrade
