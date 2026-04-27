@@ -353,9 +353,9 @@
 - [~] 晋哀侯 | skip-content-thin (70行)
 
 ## 第二十批 premium-upgrade 候选（R10131 W1-explore）
-- [ ] P1 | [[淮南厉王]] | featured · type=person | action: premium-upgrade
-- [ ] P1 | [[燕召公]] | featured · type=person | action: premium-upgrade
-- [ ] P1 | [[苏代]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[淮南厉王]] | featured · type=person | action: premium-upgrade <!-- skip-already-premium R10153 -->
+- [x] P1 | [[燕召公]] | featured · type=person | action: premium-upgrade <!-- skip-already-premium R10153 -->
+- [x] P1 | [[苏代]] | featured · type=person | action: premium-upgrade <!-- skip-already-premium R10153 -->
 
 ## 第二十一批 premium-upgrade 候选（R10134 W1-explore）
 - [x] P1 | [[燕召公]] | featured · type=person | action: premium-upgrade
@@ -378,3 +378,20 @@
 
 ## 剩余待处理的侯国页（无规则可提取，共43页）
 - [ ] P3 | 义阳侯国/乐平侯国/乐成侯国/乐昌侯国等43页 | 年表无标准侯主记录 | 暂搁置
+
+## P1 premium-upgrade 候选（2026-04-28 R10153 W1 探索第N批，featured→premium）
+
+- [x] P1 | [[淮南厉王]] | 194行 · featured · refs=26 | action: premium-upgrade <!-- skip-already-premium R10153 -->
+- [x] P1 | [[燕召公]] | 158行 · featured · refs=26 | action: premium-upgrade <!-- skip-already-premium R10153 -->
+- [x] P1 | [[苏代]] | 161行 · featured · refs=26 | action: premium-upgrade <!-- skip-already-premium R10153 -->
+- [ ] P1 | [[王离]] | 194行 · featured · refs=18 | action: premium-upgrade
+- [ ] P1 | [[田横]] | 192行 · featured · refs=17 | action: premium-upgrade
+- [ ] P1 | [[魏豹]] | 192行 · featured · refs=18 | action: premium-upgrade
+- [ ] P1 | [[鲁桓公]] | 191行 · featured · refs=18 | action: premium-upgrade
+- [ ] P1 | [[戚夫人]] | 190行 · featured · refs=17 | action: premium-upgrade
+- [ ] P1 | [[楚惠王]] | 190行 · featured · refs=17 | action: premium-upgrade
+- [ ] P1 | [[燕昭王]] | 189行 · featured · refs=18 | action: premium-upgrade
+- [ ] P1 | [[春申君]] | 186行 · featured · refs=15 | action: premium-upgrade
+- [ ] P1 | [[陆贾]] | 186行 · featured · refs=17 | action: premium-upgrade
+- [ ] P1 | [[张释之]] | 185行 · featured · refs=17 | action: premium-upgrade
+- [ ] P1 | [[里克]] | 181行 · featured · refs=19 | action: premium-upgrade
