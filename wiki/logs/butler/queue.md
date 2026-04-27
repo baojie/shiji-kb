@@ -265,3 +265,12 @@
 - [x] P1 | [[伊尹]] | 196行 · featured · type=person | action: premium-upgrade
 - [x] P1 | [[太子丹]] | 196行 · featured · type=person | action: premium-upgrade
 - [x] P1 | [[卢绾]] | 197行 · featured · type=person | action: premium-upgrade
+
+## 第九批 premium-upgrade 候选（R10062 W1-explore）
+
+- [ ] P1 | [[章邯]] | 196行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[叔孙通]] | 195行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[吕禄]] | 195行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[张苍]] | 196行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[秦武王]] | 195行 · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[楚成王]] | 194行 · featured · type=person | action: premium-upgrade
