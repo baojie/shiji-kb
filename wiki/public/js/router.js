@@ -63,7 +63,7 @@ async function route(core) {
     if (params.has('history')) {
       const page = params.get('history');
       try { await renderHistory(core, page); }
-      catch (e) { showFatal(`history/${page}.json 加载失败：${e.message}`); }
+      catch (e) { showFatal(`history/${page}.jsonl 加载失败：${e.message}`); }
       setStatus(''); return;
     }
     if (params.has('diff')) {
@@ -77,7 +77,7 @@ async function route(core) {
       const page = params.get('revision');
       const rev = params.get('rev');
       try { await renderRevision(core, page, rev); }
-      catch (e) { showFatal(`history/${page}.json#${rev} 加载失败：${e.message}`); }
+      catch (e) { showFatal(`history/${page}.jsonl#${rev} 加载失败：${e.message}`); }
       setStatus(''); return;
     }
     if (params.has('source')) {

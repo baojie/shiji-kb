@@ -792,16 +792,19 @@ export async function renderRecent(core, pageNum = 1) {
 }
 
 /**
- * 单页修订历史 (#?history=<page>): 读 docs/wiki/history/<page>.json.
+ * 单页修订历史 (#?history=<page>): 读 history/<page>.jsonl（JSONL 正序，末行最新）.
  */
 export async function renderHistory(core, page) {
-  const r = await fetch(`history/${encodeURIComponent(page)}.json`);
+  const r = await fetch(`history/${encodeURIComponent(page)}.jsonl`);
   if (!r.ok) throw new Error('HTTP ' + r.status);
-  const data = await r.json();
-  const revs = data.revisions || [];
+  const text = await r.text();
+  const revs = text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
+  // JSONL 正序（最旧在前），逆序显示（最新在前）
+  const revsDesc = revs.slice().reverse();
+  const latestRevId = revs.length ? revs[revs.length - 1].rev_id : null;
 
-  const rows = revs.map((rev, idx) => {
-    const isLatest = rev.rev_id === data.latest_rev_id;
+  const rows = revsDesc.map((rev) => {
+    const isLatest = rev.rev_id === latestRevId;
     const tag = isLatest ? ' <span class="rev-badge">最新</span>' : '';
     const revLink = `<a href="#?revision=${encodeURIComponent(page)}&rev=${encodeURIComponent(rev.rev_id)}">${escapeHtml(rev.rev_id)}</a>`;
     const diffLink = rev.parent_rev
@@ -823,7 +826,7 @@ export async function renderHistory(core, page) {
        <a href="#${encodeURIComponent(page)}">← ${escapeHtml(page)}</a>
      </nav>
      <h1>${escapeHtml(page)} · 修订历史</h1>
-     <p class="category-summary">共 <strong>${data.revision_count}</strong> 条修订</p>
+     <p class="category-summary">共 <strong>${revs.length}</strong> 条修订</p>
      <table class="recent-changes">
        <thead><tr><th>时间</th><th>作者</th><th>摘要</th><th>大小</th><th>修订</th></tr></thead>
        <tbody>${rows}</tbody>
@@ -833,20 +836,20 @@ export async function renderHistory(core, page) {
   hideSidebar();
   document.getElementById('crumb').textContent = `修订历史 / ${page}`;
   document.title = `${page} 修订历史 · 史记 Wiki`;
-  document.getElementById('src-info').textContent = `history/${page}.json`;
+  document.getElementById('src-info').textContent = `history/${page}.jsonl`;
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
 }
 
 /**
- * 单条历史版本 (#?revision=<page>&rev=<id>): 从 history/<page>.json 的
- * revisions[].content 中提取内容 (user-req-6 内联存储后). 历史数据在单文件里.
+ * 单条历史版本 (#?revision=<page>&rev=<id>): 从 history/<page>.jsonl 中查找对应行.
  */
 export async function renderRevision(core, page, revId) {
-  const r = await fetch(`history/${encodeURIComponent(page)}.json`);
+  const r = await fetch(`history/${encodeURIComponent(page)}.jsonl`);
   if (!r.ok) throw new Error('HTTP ' + r.status);
-  const data = await r.json();
-  const rev = (data.revisions || []).find((x) => x.rev_id === revId);
+  const text = await r.text();
+  const revs = text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
+  const rev = revs.find((x) => x.rev_id === revId);
   if (!rev) throw new Error(`rev not found: ${revId}`);
   if (rev.content == null) throw new Error(`rev missing content: ${revId}`);
   const mdText = rev.content;
@@ -865,7 +868,7 @@ export async function renderRevision(core, page, revId) {
   hideSidebar();
   document.getElementById('crumb').textContent = `${page} @ ${revId}`;
   document.title = `${page} @ ${revId} · 史记 Wiki`;
-  document.getElementById('src-info').textContent = `history/${page}/${revId}.md`;
+  document.getElementById('src-info').textContent = `history/${page}.jsonl @ ${revId}`;
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
 }
@@ -1333,10 +1336,10 @@ export function renderAll(core) {
  * user-req-8: 每个版本应可看上一个版本的 diff.
  */
 export async function renderDiff(core, page, revId) {
-  const r = await fetch(`history/${encodeURIComponent(page)}.json`);
+  const r = await fetch(`history/${encodeURIComponent(page)}.jsonl`);
   if (!r.ok) throw new Error('HTTP ' + r.status);
-  const data = await r.json();
-  const revs = data.revisions || [];
+  const text = await r.text();
+  const revs = text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
   const cur = revs.find((x) => x.rev_id === revId);
   if (!cur) throw new Error(`rev not found: ${revId}`);
 
@@ -1379,7 +1382,7 @@ export async function renderDiff(core, page, revId) {
   hideSidebar();
   document.getElementById('crumb').textContent = `${page} diff ${revId}`;
   document.title = `${page} diff · 史记 Wiki`;
-  document.getElementById('src-info').textContent = `history/${page}.json (diff ${revId} vs ${cur.parent_rev || 'null'})`;
+  document.getElementById('src-info').textContent = `history/${page}.jsonl (diff ${revId} vs ${cur.parent_rev || 'null'})`;
   document.getElementById('broken-info').textContent = '';
   window.scrollTo(0, 0);
 }
