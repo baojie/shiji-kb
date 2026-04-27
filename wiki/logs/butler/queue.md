@@ -356,3 +356,17 @@
 - [ ] P1 | [[淮南厉王]] | featured · type=person | action: premium-upgrade
 - [ ] P1 | [[燕召公]] | featured · type=person | action: premium-upgrade
 - [ ] P1 | [[苏代]] | featured · type=person | action: premium-upgrade
+
+## 第二十一批 premium-upgrade 候选（R10134 W1-explore）
+- [x] P1 | [[燕召公]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[苏代]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[韩安国]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[魏文侯]] | featured · type=person | action: premium-upgrade
+- [~] 晋哀侯 | skip-content-thin (70行)
+- [~] 东周平王 | skip-content-thin (52行)
+
+## 第二十二批 premium-upgrade 候选（R10139 W1-explore）
+- [x] P1 | [[中山靖王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[晋平公]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[赵括]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[鲁隐公]] | featured · type=person | action: premium-upgrade
