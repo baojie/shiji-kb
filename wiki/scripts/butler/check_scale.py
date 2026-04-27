@@ -112,7 +112,7 @@ def main():
     metrics["person_pages"] = count_person_pages(PAGES_JSON) if PAGES_JSON.exists() else -1
 
     # 4. history/ 文件数
-    metrics["history_files"] = len(list(HISTORY_DIR.glob("*.json"))) if HISTORY_DIR.exists() else -1
+    metrics["history_files"] = len(list(HISTORY_DIR.glob("*.jsonl"))) if HISTORY_DIR.exists() else -1
 
     # 5. 总修订数
     metrics["total_revisions"] = check_total_revisions(RECENT_JSONL)

@@ -19,7 +19,7 @@ delete_page.py — "删除" wiki 页面：保留文件，改为 deleted stub 或
     - 先调用 record_revision.py 存档当前版本快照
     - 无 --redirect-to：写入 type:deleted stub，record_revision 使用 --action delete
     - 有 --redirect-to：写入 type:redirect 页，record_revision 使用默认 edit action
-    - 修订历史目录 wiki/public/history/<slug>.json 始终保留
+    - 修订历史文件 wiki/public/history/<slug>.jsonl 始终保留
 """
 
 from __future__ import annotations

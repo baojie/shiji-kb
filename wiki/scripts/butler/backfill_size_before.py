@@ -3,11 +3,11 @@
 backfill_size_before.py — 为所有修订记录补全缺失的 size_before 字段。
 
 处理三类文件：
-  1. wiki/public/history/*.json   (per-page 修订历史)
+  1. wiki/public/history/*.jsonl  (per-page 修订历史，JSONL 正序末行最新)
   2. wiki/public/recent.jsonl     (滚动窗口)
   3. wiki/logs/recent/*.jsonl     (归档批次)
 
-revisions 数组按时间倒序存储（最新在前），所以 revisions[i] 的 parent 是 revisions[i+1]。
+JSONL 按时间正序存储（最旧在首行），revisions[i] 的 parent 是 revisions[i-1]。
 第一版（最旧）没有 parent，size_before = 0。
 
 用法:
@@ -27,27 +27,26 @@ LOG_DIR = ROOT / 'wiki/logs/recent'
 
 
 def backfill_file(path: Path, dry_run: bool) -> tuple[int, int]:
-    """返回 (总修订数, 补全数)"""
-    data = json.loads(path.read_text(encoding='utf-8'))
-    revs = data.get('revisions', [])
-    if not revs:
+    """返回 (总修订数, 补全数)。处理 JSONL 格式（正序，末行最新）。"""
+    lines = [ln for ln in path.read_text(encoding='utf-8').splitlines() if ln.strip()]
+    if not lines:
         return 0, 0
 
-    # revisions 是倒序（最新在前），index 0 = 最新，index -1 = 最旧
+    revs = [json.loads(ln) for ln in lines]
+    # JSONL 正序（最旧在首行），revs[i] 的 parent 是 revs[i-1]
     changed = 0
     for i, rev in enumerate(revs):
         if 'size_before' in rev:
             continue
-        # parent 是更旧的一条，即 revs[i+1]
-        if i + 1 < len(revs):
-            parent_size = revs[i + 1].get('size', 0)
-        else:
-            parent_size = 0  # 最旧的一条，创建时没有前版本
+        parent_size = revs[i - 1].get('size', 0) if i > 0 else 0
         rev['size_before'] = parent_size
         changed += 1
 
     if changed and not dry_run:
-        path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        path.write_text(
+            '\n'.join(json.dumps(r, ensure_ascii=False) for r in revs) + '\n',
+            encoding='utf-8',
+        )
 
     return len(revs), changed
 
@@ -83,11 +82,17 @@ def backfill_recent(rev_map: dict[str, int], dry_run: bool) -> tuple[int, int]:
 
 
 def build_rev_map() -> dict[str, int]:
-    """从已更新的 per-page history JSON 建立 rev_id -> size_before 映射。"""
+    """从已更新的 per-page history JSONL 建立 rev_id -> size_before 映射。"""
     rev_map: dict[str, int] = {}
-    for f in HIST.glob('*.json'):
-        page_data = json.loads(f.read_text(encoding='utf-8'))
-        for rev in page_data.get('revisions', []):
+    for f in HIST.glob('*.jsonl'):
+        for ln in f.read_text(encoding='utf-8').splitlines():
+            ln = ln.strip()
+            if not ln:
+                continue
+            try:
+                rev = json.loads(ln)
+            except json.JSONDecodeError:
+                continue
             rev_id = rev.get('rev_id', '')
             if rev_id and 'size_before' in rev:
                 rev_map[rev_id] = rev['size_before']
@@ -121,8 +126,8 @@ def main() -> int:
     ap.add_argument('--dry-run', action='store_true', help='只统计，不写入')
     args = ap.parse_args()
 
-    files = sorted(HIST.glob('*.json'))
-    print(f'扫描 {len(files)} 个 history JSON...')
+    files = sorted(HIST.glob('*.jsonl'))
+    print(f'扫描 {len(files)} 个 history JSONL...')
 
     total_revs = 0
     total_changed = 0

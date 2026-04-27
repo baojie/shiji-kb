@@ -190,16 +190,17 @@ def main() -> int:
         base = (entry.get("total_refs") or 0) // 20
         tag_bonus = min(len(entry.get("tags") or []), 4) * 2
 
-        # 从 history/<pid>.json 读 revision_count 和 size
+        # 从 history/<pid>.jsonl 读 revision_count 和 size（末行最新）
         rev_count = 1
         size = 0
-        hist_json = history_dir / f"{pid}.json"
-        if hist_json.exists():
+        hist_jsonl = history_dir / f"{pid}.jsonl"
+        if hist_jsonl.exists():
             try:
-                h = json.loads(hist_json.read_text(encoding="utf-8"))
-                rev_count = h.get("revision_count", 1)
-                if h.get("revisions"):
-                    size = h["revisions"][0].get("size", 0)
+                lines = [ln for ln in hist_jsonl.read_text(encoding="utf-8").splitlines() if ln.strip()]
+                rev_count = len(lines) or 1
+                if lines:
+                    latest = json.loads(lines[-1])
+                    size = latest.get("size", 0)
             except Exception:
                 pass
         rev_bonus = min(max(rev_count - 1, 0), 5) * 3

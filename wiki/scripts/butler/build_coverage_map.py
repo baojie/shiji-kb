@@ -57,7 +57,7 @@ def load_pages() -> dict:
 
 def build_indices(pages_meta: dict) -> tuple[dict, dict, dict, dict]:
     """
-    扫描所有 wiki/public/history/*.json，构建四个索引：
+    扫描所有 wiki/public/history/*.jsonl，构建四个索引：
 
     pn_index:     {(chapter_num_str, para_id) → [page_id, ...]}
     entity_index: {entity_name → [page_id, ...]}  （id + aliases，≥2字）
@@ -81,19 +81,19 @@ def build_indices(pages_meta: dict) -> tuple[dict, dict, dict, dict]:
                 entity_index[alias].append(pid)
 
     print("  扫描 wiki 页面...", end="", flush=True)
-    json_files = glob.glob(str(HISTORY_DIR / "*.json"))
+    json_files = glob.glob(str(HISTORY_DIR / "*.jsonl"))
     for i, fpath in enumerate(json_files):
         if i % 1000 == 0:
             print(f"\r  扫描 wiki 页面... {i}/{len(json_files)}", end="", flush=True)
         try:
-            d = json.loads(Path(fpath).read_text(encoding="utf-8"))
+            lines = [ln for ln in Path(fpath).read_text(encoding="utf-8").splitlines() if ln.strip()]
+            if not lines:
+                continue
+            latest = json.loads(lines[-1])
         except Exception:
             continue
-        page_id = d.get("page", "")
-        revs = d.get("revisions", [])
-        if not revs:
-            continue
-        content = revs[-1].get("content", "")
+        page_id = latest.get("page", "") or Path(fpath).stem
+        content = latest.get("content", "")
 
         # pn 索引
         for m in pn_re.finditer(content):
@@ -273,13 +273,13 @@ def find_incremental_chapters() -> list[Path]:
         s = json.loads(SUMMARY_FILE.read_text(encoding="utf-8"))
         last_updated = s.get("updated", "")
 
-    # git log 找自上次更新以来修改过的 history/*.json
+    # git log 找自上次更新以来修改过的 history/*.jsonl
     since = f"--since={last_updated}" if last_updated else "--since=1 day ago"
     result = subprocess.run(
         ["git", "log", since, "--name-only", "--pretty=format:", "--", "wiki/public/history/"],
         capture_output=True, text=True
     )
-    changed_files = {l.strip() for l in result.stdout.splitlines() if l.strip().endswith(".json")}
+    changed_files = {l.strip() for l in result.stdout.splitlines() if l.strip().endswith(".jsonl")}
 
     if not changed_files:
         print("  没有新修改的 wiki 页面，跳过增量更新")
