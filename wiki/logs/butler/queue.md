@@ -250,9 +250,18 @@
 
 ## 第七批 premium-upgrade 候选（R10044 W1-explore）
 
-- [ ] P1 | [[子贡]] | 199行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[孙武]] | 199行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[宋襄公]] | 199行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[晋厉公]] | 200行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[赵孝成王]] | 200行 · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[吕产]] | 199行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[子贡]] | 199行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[孙武]] | 199行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[宋襄公]] | 199行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[晋厉公]] | 200行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[赵孝成王]] | 200行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[吕产]] | 199行 · featured · type=person | action: premium-upgrade
+
+## 第八批 premium-upgrade 候选（R10053 W1-explore）
+
+- [x] P1 | [[白起]] | 197行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[蔡泽]] | 199行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[郭解]] | 199行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[伊尹]] | 196行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[太子丹]] | 196行 · featured · type=person | action: premium-upgrade
+- [x] P1 | [[卢绾]] | 197行 · featured · type=person | action: premium-upgrade
