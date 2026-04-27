@@ -312,8 +312,24 @@
 
 ## 第十四批 premium-upgrade 候选（R10098 W1-explore）
 
-- [ ] P1 | [[吴王阖闾]] | featured · type=person | action: premium-upgrade
-- [ ] P1 | [[汉武帝]] | featured · type=person | action: premium-upgrade
-- [ ] P1 | [[田文]] | featured · type=person | action: premium-upgrade
-- [ ] P1 | [[刘濞]] | featured · type=person | action: premium-upgrade
-- [ ] P1 | [[魏无忌]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[吴王阖闾]] | featured · type=person | action: premium-upgrade
+- [~] P1 | [[汉武帝]] | featured · skip-data-issue(段干子.md) · type=person | action: premium-upgrade
+- [x] P1 | [[田文]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[刘濞]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[魏无忌]] | featured · type=person | action: premium-upgrade
+
+## 第十五批 premium-upgrade 候选（R10105 W1-explore）✓
+
+- [x] P1 | [[周宣王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[秦子婴]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[齐襄公]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[楚昭王]] | featured · type=person | action: premium-upgrade
+
+## 第十六批 premium-upgrade 候选（R10110 W1-explore）
+- [x] P1 | [[郦食其]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[魏惠王]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[李牧]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[黄歇]] | featured · type=person | action: premium-upgrade
+- [x] P1 | [[田单]] | featured · type=person | action: premium-upgrade
+- [~] 刘舜 | skip-content-thin (78行)
+- [~] 张楚楚隐王 | skip-content-thin (71行)
