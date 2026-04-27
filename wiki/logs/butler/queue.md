@@ -57,36 +57,36 @@
 
 ## P1 expand-content 候选（2026-04-27 R6823 W5 补充，refs≥5+无生平节）
 
-- [ ] P1 | [[卫顷侯]] | 59行 · refs=19 · type=person | action: expand-content
-- [ ] P1 | [[曹奇]] | 36行 · refs=14 · type=person | action: expand-content
-- [ ] P1 | [[江都易王]] | 50行 · refs=13 · type=person | action: expand-content
-- [ ] P1 | [[燕惠侯]] | 51行 · refs=12 · type=person | action: expand-content
-- [ ] P1 | [[菑川懿王]] | 35行 · refs=12 · type=person | action: expand-content
-- [ ] P1 | [[平阳公主]] | 62行 · refs=11 · type=person | action: expand-content
-- [ ] P1 | [[故安节侯]] | 35行 · refs=11 · type=person | action: expand-content
-- [ ] P1 | [[晋出公]] | 65行 · refs=11 · type=person | action: expand-content
-- [ ] P1 | [[晋武侯]] | 50行 · refs=11 · type=person | action: expand-content
-- [ ] P1 | [[代共王]] | 42行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[卫殇公]] | 41行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[姬昌]] | 77行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[杨熊]] | 54行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[楚康王]] | 59行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[秦嘉]] | 66行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[蔡景侯]] | 44行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[陈申公]] | 34行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[（淮南王，谋反自杀，无谥）]] | 49行 · refs=10 · type=person | action: expand-content
-- [ ] P1 | [[傅则]] | 34行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[公孙敢]] | 37行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[南越明王]] | 38行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[卫平侯]] | 49行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[广川惠王]] | 50行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[张次公]] | 50行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[武庚]] | 61行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[胶东哀王]] | 51行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[胶西于王]] | 36行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[蔡悼侯]] | 49行 · refs=9 · type=person | action: expand-content
-- [ ] P1 | [[刘据]] | 53行 · refs=8 · type=person | action: expand-content
-- [ ] P1 | [[刘端]] | 52行 · refs=8 · type=person | action: expand-content
+- [x] P1 | [[卫顷侯]] | 59行 · refs=19 · type=person | action: expand-content <!-- R8987: 已完成 -->
+- [x] P1 | [[曹奇]] | 36行 · refs=14 · type=person | action: expand-content <!-- R8988: 已完成 -->
+- [x] P1 | [[江都易王]] | 50行 · refs=13 · type=person | action: expand-content <!-- R8989: 已完成 -->
+- [x] P1 | [[燕惠侯]] | 51行 · refs=12 · type=person | action: expand-content <!-- R8990: 已完成 -->
+- [x] P1 | [[菑川懿王]] | 35行 · refs=12 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[平阳公主]] | 62行 · refs=11 · type=person | action: expand-content <!-- R8991: 已完成 -->
+- [x] P1 | [[故安节侯]] | 35行 · refs=11 · type=person | action: expand-content <!-- R8992: 已完成 -->
+- [x] P1 | [[晋出公]] | 65行 · refs=11 · type=person | action: expand-content <!-- R8993: 已完成 -->
+- [x] P1 | [[晋武侯]] | 50行 · refs=11 · type=person | action: expand-content <!-- R8994: 已完成 -->
+- [x] P1 | [[代共王]] | 42行 · refs=10 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[卫殇公]] | 41行 · refs=10 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[姬昌]] | 77行 · refs=10 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[杨熊]] | 54行 · refs=10 · type=person | action: expand-content <!-- R8995: 已完成 -->
+- [x] P1 | [[楚康王]] | 59行 · refs=10 · type=person | action: expand-content <!-- R8996: 已完成 -->
+- [x] P1 | [[秦嘉]] | 66行 · refs=10 · type=person | action: expand-content <!-- R8997: 已完成 -->
+- [x] P1 | [[蔡景侯]] | 44行 · refs=10 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[陈申公]] | 34行 · refs=10 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[（淮南王，谋反自杀，无谥）]] | 49行 · refs=10 · type=person | action: expand-content <!-- R9003: 已完成 -->
+- [x] P1 | [[傅则]] | 34行 · refs=9 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[公孙敢]] | 37行 · refs=9 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[南越明王]] | 38行 · refs=9 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[卫平侯]] | 49行 · refs=9 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[广川惠王]] | 50行 · refs=9 · type=person | action: expand-content <!-- R8998: 已完成 -->
+- [x] P1 | [[张次公]] | 50行 · refs=9 · type=person | action: expand-content <!-- R8999: 已完成 -->
+- [x] P1 | [[武庚]] | 61行 · refs=9 · type=person | action: expand-content <!-- R9000: 已完成 -->
+- [x] P1 | [[胶东哀王]] | 51行 · refs=9 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[胶西于王]] | 36行 · refs=9 · type=person | action: expand-content <!-- R9001: 已完成 -->
+- [x] P1 | [[蔡悼侯]] | 49行 · refs=9 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
+- [x] P1 | [[刘据]] | 53行 · refs=8 · type=person | action: expand-content <!-- R9002: 已完成 -->
+- [x] P1 | [[刘端]] | 52行 · refs=8 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
 
 ## P1 premium-upgrade 候选（2026-04-27 R6823 W5 补充）
 
