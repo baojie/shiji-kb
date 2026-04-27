@@ -31,9 +31,9 @@
 
 ## P1 expand-content 候选（2026-04-27 R6079 W5 补充，按 refs 排序）
 
-- [ ] P1 | [[王]] | 82行 · refs=40 · type=person | action: expand-content
-- [ ] P1 | [[西魏王]] | 44行 · refs=37 · type=person | action: expand-content
-- [ ] P1 | [[楚王]] | 52行 · refs=35 · type=person | action: expand-content
+- [x] P1 | [[王]] | 82行 · refs=40 · type=person | action: expand-content <!-- R9700: 已完成（王子克生平） -->
+- [x] P1 | [[西魏王]] | 44行 · refs=37 · type=person | action: expand-content <!-- type=redirect，跳过 -->
+- [x] P1 | [[楚王]] | 52行 · refs=35 · type=person | action: expand-content <!-- R9701: 已完成（楚隆生平） -->
 - [x] P1 | [[殷契]] | 51行 · refs=25 · type=person | action: expand-content <!-- R6820: 已完成 -->
 - [x] P1 | [[新垣衍]] | 102行 · refs=15 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
 - [x] P1 | [[宋昭公]] | 40行 · refs=15 · type=person | action: expand-content <!-- 已有生平节，跳过 -->
