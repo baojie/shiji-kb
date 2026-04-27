@@ -395,3 +395,14 @@
 - [ ] P1 | [[陆贾]] | 186行 · featured · refs=17 | action: premium-upgrade
 - [ ] P1 | [[张释之]] | 185行 · featured · refs=17 | action: premium-upgrade
 - [ ] P1 | [[里克]] | 181行 · featured · refs=19 | action: premium-upgrade
+
+## P1 premium-upgrade 候选（2026-04-28 R10159 W1 探索第N+1批，featured→premium）
+
+- [ ] P1 | [[申屠嘉]] | 194行 · featured · refs=12 | action: premium-upgrade
+- [ ] P1 | [[魏武侯]] | 188行 · featured · refs=16 | action: premium-upgrade
+- [ ] P1 | [[比干]] | 183行 · featured · refs=18 | action: premium-upgrade
+- [ ] P1 | [[郑厉公]] | 183行 · featured · refs=17 | action: premium-upgrade
+- [ ] P1 | [[刘敬]] | 186行 · featured · refs=16 | action: premium-upgrade
+- [ ] P1 | [[季布]] | 181行 · featured · refs=12 | action: premium-upgrade
+- [ ] P1 | [[鲁哀公]] | 181行 · featured · refs=16 | action: premium-upgrade
+- [ ] P1 | [[田荣]] | 181行 · featured · refs=14 | action: premium-upgrade
