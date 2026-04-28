@@ -754,14 +754,17 @@ export async function renderRecent(core, pageNum = 1) {
     const histLink = `<a href="#?history=${encodeURIComponent(e.page)}">历史</a>`;
     const revLink = `<a href="#?revision=${encodeURIComponent(e.page)}&rev=${encodeURIComponent(e.rev_id)}">${escapeHtml(e.rev_id)}</a>`;
     const diffLink = `<a href="#?diff=${encodeURIComponent(e.page)}&rev=${encodeURIComponent(e.rev_id)}">diff</a>`;
-    const delta = (e.size != null && e.size_before != null) ? (e.size - e.size_before) : null;
+    const added   = e.diff ? e.diff.filter(d => d[0] === '+').length : null;
+    const removed = e.diff ? e.diff.filter(d => d[0] === '-').length : null;
     let sizeHtml;
-    if (delta === null) {
+    if (added === null) {
       sizeHtml = `<td class="rc-size rc-size-zero">—</td>`;
-    } else if (delta > 0) {
-      sizeHtml = `<td class="rc-size rc-size-plus">+${delta}</td>`;
-    } else if (delta < 0) {
-      sizeHtml = `<td class="rc-size rc-size-minus">${delta}</td>`;
+    } else if (added > 0 && removed === 0) {
+      sizeHtml = `<td class="rc-size rc-size-plus">+${added}</td>`;
+    } else if (added === 0 && removed > 0) {
+      sizeHtml = `<td class="rc-size rc-size-minus">−${removed}</td>`;
+    } else if (added > 0 && removed > 0) {
+      sizeHtml = `<td class="rc-size rc-size-mixed"><span class="rc-plus">+${added}</span> <span class="rc-minus">−${removed}</span></td>`;
     } else {
       sizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
     }
@@ -822,11 +825,25 @@ export async function renderHistory(core, page) {
     const diffLink = rev.parent_rev
       ? `<a href="#?diff=${encodeURIComponent(page)}&rev=${encodeURIComponent(rev.rev_id)}">diff</a>`
       : '<span class="muted">diff</span>';
+    const hadd = rev.diff ? rev.diff.filter(d => d[0] === '+').length : null;
+    const hrem = rev.diff ? rev.diff.filter(d => d[0] === '-').length : null;
+    let hSizeHtml;
+    if (hadd === null) {
+      hSizeHtml = `<td class="rc-size rc-size-zero">—</td>`;
+    } else if (hadd > 0 && hrem === 0) {
+      hSizeHtml = `<td class="rc-size rc-size-plus">+${hadd}</td>`;
+    } else if (hadd === 0 && hrem > 0) {
+      hSizeHtml = `<td class="rc-size rc-size-minus">−${hrem}</td>`;
+    } else if (hadd > 0 && hrem > 0) {
+      hSizeHtml = `<td class="rc-size rc-size-mixed"><span class="rc-plus">+${hadd}</span> <span class="rc-minus">−${hrem}</span></td>`;
+    } else {
+      hSizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
+    }
     return `<tr>
       <td class="rc-time">${escapeHtml(fmtTimestamp(rev.timestamp))}${tag}</td>
       <td class="rc-author">${escapeHtml(rev.author)}</td>
       <td class="rc-summary">${escapeHtml(rev.summary || '')}</td>
-      <td class="rc-size">${rev.size} B</td>
+      ${hSizeHtml}
       <td class="rc-diff">${diffLink}</td>
       <td class="rc-rev">${revLink}${tag}</td>
     </tr>`;
@@ -840,7 +857,7 @@ export async function renderHistory(core, page) {
      <h1>${escapeHtml(page)} · 修订历史</h1>
      <p class="category-summary">共 <strong>${revs.length}</strong> 条修订</p>
      <table class="recent-changes">
-       <thead><tr><th>时间</th><th>作者</th><th>摘要</th><th>大小</th><th>修订</th></tr></thead>
+       <thead><tr><th>时间</th><th>作者</th><th>摘要</th><th>大小</th><th>diff</th><th>修订</th></tr></thead>
        <tbody>${rows}</tbody>
      </table>`;
 

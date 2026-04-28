@@ -995,6 +995,9 @@ footer code {
 .recent-changes .rc-size-plus  { color: #2a7a2a; }
 .recent-changes .rc-size-minus { color: #c0392b; }
 .recent-changes .rc-size-zero  { color: var(--fg-muted); font-weight: 400; }
+.recent-changes .rc-size-mixed { color: var(--fg); }
+.recent-changes .rc-plus  { color: #2a7a2a; }
+.recent-changes .rc-minus { color: #c0392b; }
 .recent-changes .rc-rev { font-family: ui-monospace, monospace; font-size: 12px; white-space: nowrap; }
 .recent-changes a { color: var(--link); text-decoration: none; }
 .recent-changes a:hover { text-decoration: underline; }
