@@ -991,7 +991,10 @@ footer code {
 .recent-changes .rc-time { white-space: nowrap; color: var(--fg-muted); width: 11em; }
 .recent-changes .rc-page { font-weight: 500; }
 .recent-changes .rc-author { color: var(--fg-muted); width: 7em; }
-.recent-changes .rc-size { color: var(--fg-muted); white-space: nowrap; width: 5em; }
+.recent-changes .rc-size { white-space: nowrap; width: 5em; text-align: right; font-weight: 600; font-size: .9em; }
+.recent-changes .rc-size-plus  { color: #2a7a2a; }
+.recent-changes .rc-size-minus { color: #c0392b; }
+.recent-changes .rc-size-zero  { color: var(--fg-muted); font-weight: 400; }
 .recent-changes .rc-rev { font-family: ui-monospace, monospace; font-size: 12px; white-space: nowrap; }
 .recent-changes a { color: var(--link); text-decoration: none; }
 .recent-changes a:hover { text-decoration: underline; }

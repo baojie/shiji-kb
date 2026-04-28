@@ -754,10 +754,22 @@ export async function renderRecent(core, pageNum = 1) {
     const histLink = `<a href="#?history=${encodeURIComponent(e.page)}">历史</a>`;
     const revLink = `<a href="#?revision=${encodeURIComponent(e.page)}&rev=${encodeURIComponent(e.rev_id)}">${escapeHtml(e.rev_id)}</a>`;
     const diffLink = `<a href="#?diff=${encodeURIComponent(e.page)}&rev=${encodeURIComponent(e.rev_id)}">diff</a>`;
+    const delta = (e.size != null && e.size_before != null) ? (e.size - e.size_before) : null;
+    let sizeHtml;
+    if (delta === null) {
+      sizeHtml = `<td class="rc-size rc-size-zero">—</td>`;
+    } else if (delta > 0) {
+      sizeHtml = `<td class="rc-size rc-size-plus">+${delta}</td>`;
+    } else if (delta < 0) {
+      sizeHtml = `<td class="rc-size rc-size-minus">${delta}</td>`;
+    } else {
+      sizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
+    }
     return `<tr>
       <td class="rc-time">${escapeHtml(fmtTimestamp(e.timestamp))}</td>
       <td class="rc-page">${pageLink}</td>
       <td class="rc-author">${escapeHtml(e.author)}</td>
+      ${sizeHtml}
       <td class="rc-summary">${escapeHtml(e.summary || '')}</td>
       <td class="rc-rev">${revLink} · ${diffLink} · ${histLink}</td>
     </tr>`;
@@ -771,7 +783,7 @@ export async function renderRecent(core, pageNum = 1) {
   const body = entries.length === 0
     ? '<p class="category-empty">暂无修订记录。</p>'
     : `<table class="recent-changes">
-        <thead><tr><th>时间</th><th>页面</th><th>作者</th><th>摘要</th><th>修订</th></tr></thead>
+        <thead><tr><th>时间</th><th>页面</th><th>作者</th><th>大小</th><th>摘要</th><th>修订</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
       ${pagerHtml}`;
