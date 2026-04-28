@@ -9142,3 +9142,58 @@
 {"round": 10680, "action": "premium-upgrade", "page": "谋圣张良、辟谷学仙", "type": "story", "result": "accept", "summary": "featured→premium，添加历代评价", "ts": "2026-04-28T00:00:00Z"}
 {"round": 10681, "action": "premium-upgrade", "page": "诸吕之乱、周勃夺军 (左袒为刘氏)", "type": "story", "result": "accept", "summary": "featured→premium，添加历代评价", "ts": "2026-04-28T00:00:00Z"}
 {"round": 10682, "action": "premium-upgrade", "page": "诛吕立文帝与徙封燕王——刘泽的第二次权谋机遇", "type": "overview", "result": "accept", "summary": "featured→premium，添加历代评价", "ts": "2026-04-28T00:00:00Z"}
+{"round": 10690, "action": "STOP-premium-upgrade", "page": null, "result": "stop", "note": "用户指示停止历代评价工作：历代评价意义不大"}
+{"round": 10691, "action": "H10-redirect-batch", "page": "79 stub别名页", "result": "accept", "note": "79个stub别名页批量改为REDIRECT（→premium规范页），stub总数432→"}
+{"round": 10692, "action": "H10-redirect-batch2", "page": "37 stub别名页", "result": "accept", "note": "37个stub别名页→featured/standard规范页REDIRECT，stub总数 432→395"}
+{"round": 10693, "action": "H10-redirect-batch3", "page": "6 stub别名页", "result": "accept", "note": "6个stub别名页→basic规范页REDIRECT，stub别名全部清零，remaining stub=389（全为orphan）"}
+{"round": 10694, "action": "H10-jun-redirect", "page": "6 jun stub→redirect", "result": "accept", "note": "严君/华阳君×2/泾阳君/穰侯/长安君→canonical REDIRECT"}
+{"round": 10695, "action": "enrich-sanwen", "page": "4 sanwen stubs→basic", "result": "accept", "note": "大风歌/垓下歌/天马歌×2 添加历史背景，stub减至379"}
+{"round": 10696, "action": "H10-fix-redirect-quality", "page": "148 redirect-type stubs", "result": "accept", "note": "148个redirect-type页面quality字段由stub改为redirect，stub总数379→231"}
+{"round": 10697, "action": "H10-stub-cleanup-final", "page": "13 remaining stubs", "result": "accept", "note": "stub总数归零：7 person→redirect + 6 stub→basic。知识库stub=0里程碑！"}
+{"round": 10698, "action": "H10-fix-empty-quality", "page": "6 empty-quality pages", "result": "accept", "note": "6个quality为空页面修正，knowledge库quality分布清洁，stub=0持续"}
+{"round": 10698, "action": "H10-fix-empty-quality", "page": "6 empty-quality pages", "result": "accept", "note": "6个quality为空页面规范化"}
+{"round": 10699, "action": "H1-fix-corruption + insight-close", "page": "殇叔.md + I001/I003", "result": "accept", "note": "修复殇叔数据损坏；I001/I003标为已调查"}
+{"round": 10700, "action": "H10-basic-alias-redirect", "page": "452 basic别名页", "result": "accept", "note": "452个basic别名页→premium/featured/standard REDIRECT，basic总数 13420→12943"}
+{"round": 10701, "action": "H10-basic-basic-redirect", "page": "91 basic别名页", "result": "accept", "note": "91个basic→basic别名REDIRECT，basic 12943→12848"}
+{"round": 10702, "action": "H10-std-alias-redirect", "page": "115 standard别名页", "result": "accept", "note": "115个basic/standard别名→standard REDIRECT，持续清理重复页"}
+{"round": 10703, "action": "H10-cross-quality-redirect", "page": "223 cross-quality别名", "result": "accept", "note": "223个跨质量层别名→REDIRECT，持续精简知识库重复页"}
+{"round": 10704, "ts": "2026-04-28T03:54:16Z", "action": "premium-upgrade", "page": "屈原", "result": "accept", "note": "新增跨章节互见（张仪列传/太史公自序/楚世家三视角），quality: featured→premium"}
+{"round": 10705, "ts": "2026-04-28T03:55:04Z", "action": "premium-upgrade", "page": "秦昭王", "result": "accept", "note": "新增跨章节互见（廉颇蔺相如/楚世家/范睢三视角），featured→premium"}
+{"round": 10706, "ts": "2026-04-28T03:55:26Z", "action": "premium-upgrade", "page": "夫差", "result": "accept", "note": "quality featured→premium（已有跨章节互见）"}
+{"round": 10707, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "甘茂", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10708, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "杜周", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10709, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "穰侯", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10710, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "太公望", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10711, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "伯夷", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10712, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "子路", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10713, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "胡亥", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10714, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "智伯", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10715, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "冒顿", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10716, "ts": "2026-04-28T03:55:55Z", "action": "premium-upgrade", "page": "子产", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10717, "ts": "2026-04-28T03:58:22Z", "action": "premium-upgrade", "page": "严助", "result": "accept", "note": "featured→premium（新增跨章节互见：平准书/酷吏列传/平津侯主父列传）"}
+{"round": 10718, "ts": "2026-04-28T03:58:22Z", "action": "premium-upgrade", "page": "吴王濞", "result": "accept", "note": "featured→premium（新增跨章节互见：晁错/袁盎/周亚夫三视角）"}
+{"round": 10719, "ts": "2026-04-28T03:58:22Z", "action": "premium-upgrade", "page": "叔齐", "result": "accept", "note": "featured→premium（新增跨章节互见：伯夷列传副角+孔子世家评价）"}
+{"round": 10720, "ts": "2026-04-28T03:58:22Z", "action": "premium-upgrade", "page": "季友", "result": "accept", "note": "featured→premium（新增跨章节互见：世家内悖论+年表合读）"}
+{"round": 10721, "ts": "2026-04-28T03:59:45Z", "action": "premium-upgrade", "page": "肥义", "result": "accept", "note": "featured→premium（新增跨章节互见：赵世家前后两段+武灵王命运对照）"}
+{"round": 10722, "ts": "2026-04-28T03:59:45Z", "action": "premium-upgrade", "page": "卓文君", "result": "accept", "note": "featured→premium（新增跨章节互见：司马相如列传嵌入视角+货殖列传蜀地背景）"}
+{"round": 10723, "ts": "2026-04-28T03:59:45Z", "action": "premium-upgrade", "page": "严仲子", "result": "accept", "note": "featured→premium（新增跨章节互见：刺客列传识人链+聂政传隐形叙事）"}
+{"round": 10724, "ts": "2026-04-28T04:02:54Z", "action": "premium-upgrade", "page": "季康子", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10725, "ts": "2026-04-28T04:02:54Z", "action": "premium-upgrade", "page": "桀", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10726, "ts": "2026-04-28T04:02:54Z", "action": "premium-upgrade", "page": "武臣", "result": "accept", "note": "featured→premium（已有跨章节互见）"}
+{"round": 10727, "ts": "2026-04-28T04:02:54Z", "action": "premium-upgrade", "page": "徐乐", "result": "accept", "note": "featured→premium（新增跨章节互见：三上书命运各异+平准书对照）"}
+{"round": 10728, "ts": "2026-04-28T04:02:54Z", "action": "premium-upgrade", "page": "皋陶", "result": "accept", "note": "featured→premium（新增跨章节互见：五帝本纪/夏本纪合读+陈杞世家后代命运）"}
+{"round": 10729, "ts": "2026-04-28T04:02:54Z", "action": "premium-upgrade", "page": "樗里子", "result": "accept", "note": "featured→premium（新增跨章节互见：本纪列传分工+预言两百年应验）"}
+{"round": 10730, "ts": "2026-04-28T04:02:54Z", "action": "premium-upgrade", "page": "叔梁纥", "result": "accept", "note": "featured→premium（新增跨章节互见：孔子世家父亲缺席+英雄故事取舍）"}
+{"round": 10731, "ts": "2026-04-28T04:02:54Z", "action": "premium-upgrade", "page": "甘罗", "result": "accept", "note": "featured→premium（新增跨章节互见：三代结构+年少成功叙事）"}
+{"round": 10732, "ts": "2026-04-28T04:05:07Z", "action": "premium-upgrade", "page": "缇萦", "result": "accept", "note": "featured→premium（新增跨章节互见：医者传记嵌入+孝文本纪政令分离）"}
+{"round": 10733, "ts": "2026-04-28T04:05:07Z", "action": "premium-upgrade", "page": "扶苏", "result": "accept", "note": "featured→premium（新增跨章节互见：本纪/李斯列传矫诏双视角+陈涉世家旗帜）"}
+{"round": 10734, "ts": "2026-04-28T04:05:07Z", "action": "premium-upgrade", "page": "申生", "result": "accept", "note": "featured→premium（新增跨章节互见：骊姬乱双重叙事+重耳传奇的起点）"}
+{"round": 10735, "ts": "2026-04-28T04:05:07Z", "action": "premium-upgrade", "page": "弦高", "result": "accept", "note": "featured→premium（新增跨章节互见：秦晋双视角+货殖列传商贾地位）"}
+{"round": 10736, "ts": "2026-04-28T04:06:30", "action": "premium-upgrade", "page": "祭公谋父", "result": "accept", "note": "premium-upgrade: 添加跨章节互见（周本纪叙史意义+太史公自序存异论），featured→premium"}
+{"round": 10737, "ts": "2026-04-28T04:06:30", "action": "premium-upgrade", "page": "慎夫人", "result": "accept", "note": "premium-upgrade: 添加跨章节互见（本纪vs列传文体差异+戚夫人跨时代对照），featured→premium"}
+{"round": 10738, "ts": "2026-04-28T04:06:30", "action": "premium-upgrade", "page": "李克", "result": "accept", "note": "premium-upgrade: 添加跨章节互见（魏文侯善用人叙事+识人叙事谱系），featured→premium"}
+{"round": 10739, "ts": "2026-04-28T04:06:30", "action": "premium-upgrade", "page": "武姜", "result": "accept", "note": "premium-upgrade: 添加跨章节互见（母子矛盾作为政治叙事起点+典故跨时代回响），featured→premium"}
+{"round": 10740, "ts": "2026-04-28T04:11:16", "action": "premium-upgrade", "page": "触龙", "result": "accept", "note": "premium-upgrade: 添加跨章节互见（赵世家说太后+年表后裔入汉），featured→premium"}
+{"round": 10741, "ts": "2026-04-28T04:11:16", "action": "premium-upgrade", "page": "白乙丙", "result": "accept", "note": "premium-upgrade: 添加跨章节互见（秦本纪败将叙事+晋世家他者视角），featured→premium"}
+{"round": 10742, "ts": "2026-04-28T04:11:16", "action": "premium-upgrade", "page": "褒姒", "result": "accept", "note": "premium-upgrade: 添加跨章节互见（周本纪神话起源+年表历史压缩），featured→premium"}
+{"round": 10743, "ts": "2026-04-28T04:11:16", "action": "premium-upgrade", "page": "毕万", "result": "accept", "note": "premium-upgrade: 添加跨章节互见（魏世家祖先叙事+晋世家太史公自序跨篇验证），featured→premium"}
