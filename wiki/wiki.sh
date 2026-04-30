@@ -2,7 +2,7 @@
 # 启动史记 wiki 本地服务
 #
 # 用法:
-#   ./wiki/wiki.sh          # 默认端口 8000 (从仓库根运行)
+#   ./wiki/wiki.sh          # 默认端口 5247 (从仓库根运行)
 #   ./wiki.sh 9000          # 指定端口 (从 wiki/ 内运行)
 #
 # 目录约定:
@@ -17,7 +17,7 @@
 
 set -euo pipefail
 
-PORT="${1:-8000}"
+PORT="${1:-5247}"
 WIKI_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PUBLIC_DIR="$WIKI_ROOT/public"
 DATA_DIR="$WIKI_ROOT/data"

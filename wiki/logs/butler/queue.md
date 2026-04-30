@@ -674,3 +674,43 @@
 - [x] R11272 | [[蔡灵侯]] | qs=45 · standard · type=person | action: enrich-quality
 - [x] R11273 | [[虢叔]] | qs=45 · standard · type=person | action: enrich-quality
 - [x] R11274 | [[许由]] | qs=45 · standard · type=person | action: enrich-quality
+
+## 第八批 standard→featured 升级候选（2026-05-01，standard person → featured）
+- [x] R11276 | [[高不识]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11277 | [[韩懿侯]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11278 | [[龙贾]] | qs=44 · standard · type=person | action: enrich-quality
+- [x] R11279 | [[齐晏孺子]] | qs=44 · standard · type=person | action: enrich-quality
+- [x] R11280 | [[齐昭公]] | qs=44 · standard · type=person | action: enrich-quality
+- [x] R11281 | [[齐懿公]] | qs=44 · standard · type=person | action: enrich-quality
+- [x] R11282 | [[齐康公]] | qs=44 · standard · type=person | action: enrich-quality
+- [x] R11283 | [[齐哀王]] | qs=44 · standard · type=person | action: enrich-quality
+
+---
+
+## P1 standard→featured 候选人（2026-05-01 W1 探索，standard→featured）
+
+- [x] R11286 | [[秦简公]] | 5689B · type=person · src=秦本纪/秦始皇本纪/十二诸侯年表/六国年表 | action: enrich-quality
+- [x] R11287 | [[原宪]] | 5664B · type=person · src=仲尼弟子列传/游侠列传/货殖列传 | action: enrich-quality
+- [x] R11288 | [[齐厉王]] | 5662B · type=person · src=齐悼惠王世家/汉兴以来诸侯王年表/太史公自序 | action: enrich-quality
+- [x] R11290 | [[邴吉]] | 5628B · type=person · src=建元以来侯者年表/张丞相列传 | action: enrich-quality
+- [x] R11289 | [[苌弘]] | 5582B · type=person · src=乐书/天官书/封禅书 | action: enrich-quality
+- [x] R11291 | [[晋昭公]] | 5548B · type=person · src=晋世家/十二诸侯年表/齐太公世家 | action: enrich-quality
+- [x] R11292 | [[秦康公]] | 5441B · type=person · src=秦本纪/十二诸侯年表 | action: enrich-quality
+- [x] R11293 | [[管至父]] | 5458B · type=person · src=齐太公世家/十二诸侯年表 | action: enrich-quality
+
+## 来自 discover_kg (kg top-N 缺 wiki 页)
+
+- [ ] 宣孟: `create-stub` (refs=22/章=5) [源:A] [P1] [2026-05-01]
+
+---
+
+## P1 standard→featured 第十批（2026-05-01 W1 探索，standard→featured）
+
+- [x] R11294 | [[代成君]] | 5635B · type=person · src=赵世家/六国年表 | action: enrich-quality
+- [x] R11295 | [[韩釐王]] | 5735B · type=person · src=韩世家/留侯世家 | action: enrich-quality
+- [x] R11297 | [[魏相]] | 5619B · type=person · src=建元以来侯者年表/张丞相列传 | action: enrich-quality
+- [x] R11300 | [[破奴]] | 5556B · type=person · src=大宛列传/建元以来侯者年表 | action: enrich-quality
+- [x] R11302 | [[右渠]] | 5537B · type=person · src=朝鲜列传 | action: enrich-quality
+- [ ] P1 | [[陈招]] | 5523B · type=person · src=陈杞世家 | action: enrich-quality
+- [ ] P1 | [[薛泽]] | 5488B · type=person · src=张丞相列传/韩长孺列传 | action: enrich-quality
+- [ ] P1 | [[周昭王]] | 5479B · type=person · src=周本纪 | action: enrich-quality

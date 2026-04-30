@@ -2,7 +2,7 @@
 # wiki-daemon.sh — 史记 Wiki 守护进程管理
 #
 # 用法（从仓库根或 wiki/ 目录均可）:
-#   ./wiki/wiki-daemon.sh start [port]   # 启动（默认端口 8000）
+#   ./wiki/wiki-daemon.sh start [port]   # 启动（默认端口 5247）
 #   ./wiki/wiki-daemon.sh stop           # 停止
 #   ./wiki/wiki-daemon.sh restart [port] # 重启
 #   ./wiki/wiki-daemon.sh status         # 查看状态
@@ -10,7 +10,7 @@
 
 set -euo pipefail
 
-PORT="${2:-8000}"
+PORT="${2:-5247}"
 WIKI_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PUBLIC_DIR="$WIKI_ROOT/public"
 DATA_DIR="$WIKI_ROOT/data"
@@ -125,7 +125,7 @@ case "$CMD" in
     ;;
   *)
     echo "用法: $0 {start|stop|restart|status|log} [port]"
-    echo "  start [port]   启动守护进程（默认端口 8000）"
+    echo "  start [port]   启动守护进程（默认端口 5247）"
     echo "  stop           停止守护进程"
     echo "  restart [port] 重启守护进程"
     echo "  status         查看运行状态"
