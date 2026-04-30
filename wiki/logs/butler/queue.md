@@ -456,3 +456,29 @@
 - [x] P1 | [[苏武]] | 4063B · featured · type=person | action: premium-upgrade <!-- R10851 done -->
 - [x] P1 | [[益]] | 4026B · featured · type=person | action: premium-upgrade <!-- R10852 done -->
 - [x] P1 | [[周殷]] | 4023B · featured · type=person | action: premium-upgrade <!-- R10853 done -->
+
+## 第五批 premium-upgrade 候选（2026-04-30 R10855 W1 探索，featured→premium）
+
+- [x] P1 | [[吴王僚]] | 4016B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[慎到]] | 4006B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[叶公]] | 3989B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[乌获]] | 3920B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[章平]] | 3886B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[先轸]] | 3880B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[王然于]] | 3855B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[仲弓]] | 3800B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[荀彘]] | 3755B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[缪贤]] | 3687B · featured · type=person | action: premium-upgrade
+
+## 第六批 premium-upgrade 候选（2026-04-30 R10865 W1 探索，featured→premium）
+
+- [x] P1 | [[田骈]] | 3650B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[湣公]] | 3531B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[硃亥]] | 3518B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[许负]] | 3496B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[屈丐]] | 3492B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[向寿]] | 3490B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[子西]] | 3387B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[伊陟]] | 3349B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[目夷]] | 3256B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[武涉]] | 3245B · featured · type=person | action: premium-upgrade
