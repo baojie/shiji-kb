@@ -384,25 +384,49 @@
 - [x] P1 | [[淮南厉王]] | 194行 · featured · refs=26 | action: premium-upgrade <!-- skip-already-premium R10153 -->
 - [x] P1 | [[燕召公]] | 158行 · featured · refs=26 | action: premium-upgrade <!-- skip-already-premium R10153 -->
 - [x] P1 | [[苏代]] | 161行 · featured · refs=26 | action: premium-upgrade <!-- skip-already-premium R10153 -->
-- [ ] P1 | [[王离]] | 194行 · featured · refs=18 | action: premium-upgrade
-- [ ] P1 | [[田横]] | 192行 · featured · refs=17 | action: premium-upgrade
-- [ ] P1 | [[魏豹]] | 192行 · featured · refs=18 | action: premium-upgrade
-- [ ] P1 | [[鲁桓公]] | 191行 · featured · refs=18 | action: premium-upgrade
-- [ ] P1 | [[戚夫人]] | 190行 · featured · refs=17 | action: premium-upgrade
-- [ ] P1 | [[楚惠王]] | 190行 · featured · refs=17 | action: premium-upgrade
-- [ ] P1 | [[燕昭王]] | 189行 · featured · refs=18 | action: premium-upgrade
-- [ ] P1 | [[春申君]] | 186行 · featured · refs=15 | action: premium-upgrade
-- [ ] P1 | [[陆贾]] | 186行 · featured · refs=17 | action: premium-upgrade
-- [ ] P1 | [[张释之]] | 185行 · featured · refs=17 | action: premium-upgrade
-- [ ] P1 | [[里克]] | 181行 · featured · refs=19 | action: premium-upgrade
+- [x] P1 | [[王离]] | 194行 · featured · refs=18 | action: premium-upgrade <!-- already-premium R10815 -->
+- [x] P1 | [[田横]] | 192行 · featured · refs=17 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[魏豹]] | 192行 · featured · refs=18 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[鲁桓公]] | 191行 · featured · refs=18 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[戚夫人]] | 190行 · featured · refs=17 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[楚惠王]] | 190行 · featured · refs=17 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[燕昭王]] | 189行 · featured · refs=18 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[春申君]] | 186行 · featured · refs=15 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[陆贾]] | 186行 · featured · refs=17 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[张释之]] | 185行 · featured · refs=17 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[里克]] | 181行 · featured · refs=19 | action: premium-upgrade <!-- already-premium -->
 
 ## P1 premium-upgrade 候选（2026-04-28 R10159 W1 探索第N+1批，featured→premium）
 
-- [ ] P1 | [[申屠嘉]] | 194行 · featured · refs=12 | action: premium-upgrade
-- [ ] P1 | [[魏武侯]] | 188行 · featured · refs=16 | action: premium-upgrade
-- [ ] P1 | [[比干]] | 183行 · featured · refs=18 | action: premium-upgrade
-- [ ] P1 | [[郑厉公]] | 183行 · featured · refs=17 | action: premium-upgrade
-- [ ] P1 | [[刘敬]] | 186行 · featured · refs=16 | action: premium-upgrade
-- [ ] P1 | [[季布]] | 181行 · featured · refs=12 | action: premium-upgrade
-- [ ] P1 | [[鲁哀公]] | 181行 · featured · refs=16 | action: premium-upgrade
-- [ ] P1 | [[田荣]] | 181行 · featured · refs=14 | action: premium-upgrade
+- [x] P1 | [[申屠嘉]] | 194行 · featured · refs=12 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[魏武侯]] | 188行 · featured · refs=16 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[比干]] | 183行 · featured · refs=18 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[郑厉公]] | 183行 · featured · refs=17 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[刘敬]] | 186行 · featured · refs=16 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[季布]] | 181行 · featured · refs=12 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[鲁哀公]] | 181行 · featured · refs=16 | action: premium-upgrade <!-- already-premium -->
+- [x] P1 | [[田荣]] | 181行 · featured · refs=14 | action: premium-upgrade <!-- already-premium -->
+
+## New premium-upgrade 候选（2026-04-30 R10816 W1 探索，featured→premium）
+
+- [x] P1 | [[子之]] | 6675B · featured · type=person | action: premium-upgrade <!-- R10816 done -->
+- [x] P1 | [[荀卿]] | 5764B · featured · type=person | action: premium-upgrade <!-- R10817 done -->
+- [~] P1 | [[武丁]] | 5541B · featured · type=person | action: premium-upgrade <!-- skip: pages.json quality=f但文件quality=standard -->
+- [x] P1 | [[朱家]] | 5518B · featured · type=person | action: premium-upgrade <!-- R10819 done -->
+- [x] P1 | [[王夫人]] | 5450B · featured · type=person | action: premium-upgrade <!-- R10820 done -->
+- [x] P1 | [[审食其]] | 5371B · featured · type=person | action: premium-upgrade <!-- R10821 done -->
+- [x] P1 | [[吴王刘濞]] | 5371B · featured · type=person | action: premium-upgrade <!-- R10822 done -->
+- [~] P1 | [[汉武帝]] | 5233B · featured · type=person | action: premium-upgrade <!-- skip: frontmatter数据异常(id=河间刚王) -->
+
+## 第二批 premium-upgrade 候选（2026-04-30 R10823 W1 探索，featured→premium）
+
+- [x] P1 | [[义帝]] | 4923B · featured · type=person | action: premium-upgrade <!-- R10824 done -->
+- [x] P1 | [[穨当]] | 4901B · featured · type=person | action: premium-upgrade <!-- R10825 done -->
+- [x] P1 | [[州吁]] | 4791B · featured · type=person | action: premium-upgrade <!-- R10826 done -->
+- [x] P1 | [[子夏]] | 4776B · featured · type=person | action: premium-upgrade <!-- R10827 done -->
+- [x] P1 | [[唐都]] | 4755B · featured · type=person | action: premium-upgrade <!-- R10828 done -->
+- [x] P1 | [[杨仆]] | 4733B · featured · type=person | action: premium-upgrade <!-- R10829 done -->
+- [ ] P1 | [[周苛]] | 4720B · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[启]] | 4687B · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[任鄙]] | 4672B · featured · type=person | action: premium-upgrade
+- [ ] P1 | [[师旷]] | 4625B · featured · type=person | action: premium-upgrade
