@@ -711,6 +711,17 @@
 - [x] R11297 | [[魏相]] | 5619B · type=person · src=建元以来侯者年表/张丞相列传 | action: enrich-quality
 - [x] R11300 | [[破奴]] | 5556B · type=person · src=大宛列传/建元以来侯者年表 | action: enrich-quality
 - [x] R11302 | [[右渠]] | 5537B · type=person · src=朝鲜列传 | action: enrich-quality
-- [ ] P1 | [[陈招]] | 5523B · type=person · src=陈杞世家 | action: enrich-quality
-- [ ] P1 | [[薛泽]] | 5488B · type=person · src=张丞相列传/韩长孺列传 | action: enrich-quality
-- [ ] P1 | [[周昭王]] | 5479B · type=person · src=周本纪 | action: enrich-quality
+- [x] R11305 | [[陈招]] | 5523B · type=person · src=陈杞世家 | action: enrich-quality
+- [x] R11307 | [[薛泽]] | 5488B · type=person · src=张丞相列传/韩长孺列传 | action: enrich-quality
+- [x] R11309 | [[周昭王]] | 5479B · type=person · src=周本纪 | action: enrich-quality
+
+## P1 standard→featured 第十一批（2026-05-01，standard→featured）
+
+- [x] R11312 | [[武丁]] | 5541B · type=person · src=殷本纪 | action: enrich-quality
+- [x] R11314 | [[胶东康王]] | 5539B · type=person · src=汉兴以来诸侯王年表/三王世家/齐悼惠王世家 | action: enrich-quality
+- [x] R11316 | [[宋元公]] | 5460B · type=person · src=宋微子世家 | action: enrich-quality
+- [x] R11318 | [[子纠]] | 5455B · type=person · src=齐太公世家/鲁周公世家/管晏列传 | action: enrich-quality
+- [x] R11320 | [[宋桓公]] | 5436B · type=person · src=宋微子世家 | action: enrich-quality
+- [x] R11322 | [[柳下惠]] | 5371B · type=person · src=鲁周公世家/管晏列传/太史公自序 | action: enrich-quality
+- [x] R11324 | [[匡衡]] | 5367B · type=person · src=建元以来侯者年表/张丞相列传 | action: enrich-quality
+- [x] R11326 | [[隰朋]] | 5336B · type=person · src=齐太公世家/管晏列传 | action: enrich-quality
