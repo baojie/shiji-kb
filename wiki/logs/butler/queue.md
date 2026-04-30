@@ -3,6 +3,10 @@
 > 由 bootstrap.sh 于 2026-04-25 填充.
 > P0 高优 / P1 中优 / P2 低优. 每次 invocation 只做 1 条, 按 W1 优先级选.
 
+## P0 [ARCH] 架构提案待批准（2026-04-30 W5 发现）
+
+- [ ] P0 | [[架构：SQLite 迁移]] | 四项指标超临界线（pages.json=5347KB, pages=20408, person=4327, history=20227）| 见 `wiki/memory/reflections/2026-04-30_arch.md`
+
 ## ⭐ 用户想要 (P0)
 - [x] **[想要]** 曹参征战时间线: `create-stub` [P0] [2026-04-26] [用户请求] <!-- 页面已存在，featured质量，早前会话已完成 -->
 
