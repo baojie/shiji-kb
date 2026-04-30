@@ -512,3 +512,23 @@
 - [x] P1 | [[石奢]] | 2381B · featured · type=person | action: premium-upgrade
 - [x] P1 | [[毋寡]] | 2359B · featured · type=person | action: premium-upgrade
 - [x] P1 | [[程姬]] | 2355B · featured · type=person | action: premium-upgrade
+
+## 第九批 premium-upgrade 候选（2026-04-30 R10889 W1 探索，featured→premium）
+
+- [x] P1 | [[苏代谏齐王释帝号]] | 6942B · featured · type=sanwen | action: premium-upgrade ✓ R11145
+- [x] P1 | [[汉文帝遗诏]] | 6734B · featured · type=sanwen | action: premium-upgrade ✓ R11146
+- [x] P1 | [[召公谏厉王止谤]] | 6654B · featured · type=sanwen | action: premium-upgrade ✓ R11147
+- [x] P1 | [[伍被谏淮南王不可反]] | 6647B · featured · type=sanwen | action: premium-upgrade ✓ R11148
+- [x] P1 | [[太史公发愤著书]] | 6609B · featured · type=sanwen | action: premium-upgrade ✓ R11149
+- [x] P1 | [[苏代为齐阴遗穰侯书]] | 6591B · featured · type=sanwen | action: premium-upgrade ✓ R11150
+- [x] P1 | [[冯唐论将]] | 6452B · featured · type=sanwen | action: premium-upgrade ✓ R11151
+- [x] P1 | [[娄敬谏都关中]] | 6375B · featured · type=sanwen | action: premium-upgrade ✓ R11152
+- [x] P1 | [[缇萦救父上书]] | 6353B · featured · type=sanwen | action: premium-upgrade ✓ R11153
+- [x] P1 | [[宝鼎奏议]] | 6331B · featured · type=sanwen | action: premium-upgrade ✓ R11154
+
+## 第十批 premium-upgrade 候选（2026-04-30 R10889 W1 探索，featured→premium）
+
+- [x] P1 | [[李克论相]] | 6270B · featured · type=sanwen | action: premium-upgrade ✓ R11155
+- [x] P1 | [[穆王甫刑]] | 6236B · featured · type=sanwen | action: premium-upgrade ✓ R11156
+- [x] P1 | [[苏代见韩相国（高都）]] | 6099B · featured · type=sanwen | action: premium-upgrade ✓ R11157
+- [x] P1 | [[汉景帝追尊文帝庙乐诏]] | 6088B · featured · type=sanwen | action: premium-upgrade ✓ R11158
