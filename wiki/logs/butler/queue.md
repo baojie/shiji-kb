@@ -725,3 +725,36 @@
 - [x] R11322 | [[柳下惠]] | 5371B · type=person · src=鲁周公世家/管晏列传/太史公自序 | action: enrich-quality
 - [x] R11324 | [[匡衡]] | 5367B · type=person · src=建元以来侯者年表/张丞相列传 | action: enrich-quality
 - [x] R11326 | [[隰朋]] | 5336B · type=person · src=齐太公世家/管晏列传 | action: enrich-quality
+
+## P1 standard→featured 第十二批（2026-05-01，standard→featured）
+
+- [x] R11330 | [[鲁元]] | 5314B · type=person · src=鲁周公世家 | action: enrich-quality
+- [x] R11331 | [[孺子]] | 5298B · type=person · src=齐太公世家/十二诸侯年表 | action: enrich-quality
+- [x] R11332 | [[韩献子]] | 5278B · type=person · src=晋世家/韩世家 | action: enrich-quality
+- [x] R11333 | [[郑悼公]] | 5263B · type=person · src=郑世家/十二诸侯年表 | action: enrich-quality
+- [x] R11334 | [[无彊]] | 5259B · type=person · src=越王句践世家 | action: enrich-quality
+- [x] R11335 | [[卫釐侯]] | 5256B · type=person · src=卫康叔世家/十二诸侯年表 | action: enrich-quality
+- [x] R11336 | [[厓有]] | 5246B · type=person · src=建元以来侯者年表/卫将军骠骑列传 | action: enrich-quality
+- [x] R11337 | [[楚幽王]] | 5246B · type=person · src=楚世家/六国年表 | action: enrich-quality
+
+## P1 standard→featured 第十三批（2026-05-01，standard→featured）
+
+- [x] R11339 | [[李哆]] | 5236B · type=person · src=大宛列传 | action: enrich-quality
+- [x] R11340 | [[东周釐王]] | 5225B · type=person · src=周本纪/晋世家 | action: enrich-quality
+- [x] R11341 | [[郑声公]] | 5190B · type=person · src=郑世家/十二诸侯年表/六国年表 | action: enrich-quality
+- [x] R11342 | [[张仲]] | 5173B · type=person · src=陈丞相世家/张释之冯唐列传/日者列传 | action: enrich-quality
+- [x] R11343 | [[程郑]] | 5172B · type=person · src=司马相如列传/货殖列传 | action: enrich-quality
+- [x] R11344 | [[韦玄成]] | 5171B · type=person · src=张丞相列传/汉兴以来将相名臣年表 | action: enrich-quality
+- [x] R11345 | [[司马昌]] | 5154B · type=person · src=太史公自序 | action: enrich-quality
+- [x] R11346 | [[秦桓公]] | 5142B · type=person · src=秦本纪/十二诸侯年表 | action: enrich-quality
+
+## P1 standard→featured 第十四批（2026-05-01，standard→featured）
+
+- [x] R11347 | [[宰孔]] | 5135B · type=person · src=齐太公世家/晋世家 | action: enrich-quality
+- [x] R11348 | [[越人]] | 5130B · type=person · src=六国年表/扁鹊仓公列传 | action: enrich-quality
+- [x] R11349 | [[子服景伯]] | 5126B · type=person · src=鲁周公世家/仲尼弟子列传 | action: enrich-quality
+- [x] R11350 | [[赵惠后]] | 5122B · type=person · src=赵世家/六国年表 | action: enrich-quality
+- [ ] P1 | [[姬辄]] | 5119B · type=person · src=卫康叔世家 | action: enrich-quality
+- [ ] P1 | [[解扬]] | 5113B · type=person · src=郑世家/晋世家 | action: enrich-quality
+- [ ] P1 | [[司马卬]] | 5102B · type=person · src=太史公自序/项羽本纪 | action: enrich-quality
+- [ ] P1 | [[伯服]] | 5101B · type=person · src=周本纪/郑世家 | action: enrich-quality
