@@ -2,6 +2,10 @@
 
 > 由 bootstrap.sh 于 2026-04-25 填充.
 > P0 高优 / P1 中优 / P2 低优. 每次 invocation 只做 1 条, 按 W1 优先级选.
+>
+> **2026-05-01 状态**：featured→premium 管道全部清空（50侯国+多批person/sanwen/event升级完成）。
+> 剩余 561 个 standard/basic 实体页（person=330, place=129, concept=26, event=25, sanwen=16, story=9, state=6）
+> 可考虑下一阶段升级策略。
 
 ## P0 [ARCH] 架构提案待批准（2026-04-30 W5 发现）
 
@@ -584,3 +588,36 @@
 - [x] R11202 | [[衍侯国]] | 6689B→9938B(+3252) · featured→premium · type=侯国 | action: premium-upgrade
 - [x] R11203 | [[弓高侯国]] | 6613B→10934B(+4324) · featured→premium · type=侯国 | action: premium-upgrade
 - [x] R11204 | [[乐安侯国]] | 6534B→10500B(+3966) · featured→premium · type=侯国 | action: premium-upgrade
+## 第十五批 premium-upgrade 候选（2026-05-01，侯国 featured→premium）
+- [x] R11206 | [[汁方侯国]] | 6130B→9398B(+3271) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11207 | [[宁陵侯国]] | 5970B→9549B(+3582) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11208 | [[杜衍侯国]] | 5591B→8780B(+3192) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11209 | [[安丘侯国]] | 5544B→8205B(+2664) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11210 | [[昌武侯国]] | 5541B→8167B(+2629) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11211 | [[浩侯国]] | 5400B→8846B(+3446) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11212 | [[离侯国]] | 5335B→6679B · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11213 | [[安阳侯国]] | 5188B→9547B · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11214 | [[信武侯国]] | 5110B→9426B · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11215 | [[故安侯国]] | 5010B→10025B · featured→premium · type=侯国 | action: premium-upgrade
+
+## 第一批 standard→featured 升级候选（2026-05-01 W1 探索，standard person → featured）
+
+- [x] R11216 | [[吴广]] | 7690B→11091B(+3401) · standard→featured · type=person | action: enrich-quality
+- [x] R11217 | [[韩康子]] | 7291B · standard · type=person | action: enrich-quality
+- [x] R11218 | [[新垣衍]] | 6819B · standard · type=person | action: enrich-quality
+- [x] R11219 | [[魏齐]] | 6302B · standard · type=person | action: enrich-quality
+- [x] R11220 | [[鲁文公]] | 6283B · standard · type=person | action: enrich-quality
+- [x] R11221 | [[公孙衍]] | 6187B · standard · type=person | action: enrich-quality
+- [x] R11222 | [[陈宣公]] | 6132B · standard · type=person | action: enrich-quality
+- [x] R11224 | [[汉惠帝]] | 5791B · standard · type=person | action: enrich-quality
+
+## 第二批 standard→featured 升级候选（2026-05-01，standard person → featured）
+
+- [x] R11226 | [[武庚禄父]] | 6353B · standard · type=person | action: enrich-quality
+- [x] R11227 | [[赵食其]] | 6211B · standard · type=person | action: enrich-quality
+- [x] R11228 | [[魏尚]] | 6167B · standard · type=person | action: enrich-quality
+- [ ] P4 | [[广国]] | 6143B · standard · type=person | action: enrich-quality
+- [ ] P5 | [[卫黔牟]] | 6103B · standard · type=person | action: enrich-quality
+- [ ] P6 | [[郑简公]] | 6100B · standard · type=person | action: enrich-quality
+- [ ] P7 | [[姬喜]] | 6037B · standard · type=person | action: enrich-quality
+- [ ] P8 | [[华督]] | 6004B · standard · type=person | action: enrich-quality
