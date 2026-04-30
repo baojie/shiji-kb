@@ -557,4 +557,30 @@
 - [x] R11179 | [[沛侯国]] | 9810B→13005B(+3195) · featured→premium · type=侯国 | action: premium-upgrade
 - [x] R11180 | [[博望侯国]] | 9254B→12794B(+3540) · featured→premium · type=侯国 | action: premium-upgrade
 - [x] R11181 | [[漯阴侯国]] | 9229B→12575B(+3349) · featured→premium · type=侯国 | action: premium-upgrade
-- [ ] P1 | [[舞阳侯国]] | 8972B · featured · type=侯国 | action: premium-upgrade
+- [x] R11183 | [[舞阳侯国]] | 8972B→12405B(+3436) · featured→premium · type=侯国 | action: premium-upgrade
+
+## 第十三批 premium-upgrade 候选（2026-05-01，侯国 featured→premium）
+
+- [x] R11184 | [[汾阴侯国]] | 8685B→12292B(+3610) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11185 | [[周阳侯国]] | 8360B→12269B(+3912) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11186 | [[东城侯国]] | 8330B→11723B(+3396) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11187 | [[章武侯国]] | 8249B→11973B(+3727) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11188 | [[堂邑侯国]] | 8136B→11489B(+3356) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11189 | [[翕侯国]] | 7925B→10595B(+2670) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11190 | [[南皮侯国]] | 7811B→10587B(+2779) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11191 | [[魏其侯国]] | 7796B→11019B(+3223) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11192 | [[从骠侯国]] | 7773B→10810B(+3037) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11193 | [[合骑侯国]] | 7518B→10763B(+3245) · featured→premium · type=侯国 | action: premium-upgrade
+
+## 第十四批 premium-upgrade 候选（2026-05-01，侯国 featured→premium）
+
+- [x] R11194 | [[汝阴侯国]] | 7220B→11532B(+4315) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11195 | [[冠军侯国]] | 7206B→10883B(+3680) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11197 | [[蒲侯国]] | 7103B→9961B(+2861) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11198 | [[建陵侯国]] | 7102B→11001B(+3902) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11199 | [[戴侯国]] | 7062B→10431B(+3372) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11200 | [[臧马侯国]] | 6831B→10449B(+3621) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11201 | [[阳陵侯国]] | 6776B→10160B(+3387) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11202 | [[衍侯国]] | 6689B→9938B(+3252) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11203 | [[弓高侯国]] | 6613B→10934B(+4324) · featured→premium · type=侯国 | action: premium-upgrade
+- [x] R11204 | [[乐安侯国]] | 6534B→10500B(+3966) · featured→premium · type=侯国 | action: premium-upgrade
