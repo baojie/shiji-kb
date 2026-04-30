@@ -426,7 +426,33 @@
 - [x] P1 | [[子夏]] | 4776B · featured · type=person | action: premium-upgrade <!-- R10827 done -->
 - [x] P1 | [[唐都]] | 4755B · featured · type=person | action: premium-upgrade <!-- R10828 done -->
 - [x] P1 | [[杨仆]] | 4733B · featured · type=person | action: premium-upgrade <!-- R10829 done -->
-- [ ] P1 | [[周苛]] | 4720B · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[启]] | 4687B · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[任鄙]] | 4672B · featured · type=person | action: premium-upgrade
-- [ ] P1 | [[师旷]] | 4625B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[周苛]] | 4720B · featured · type=person | action: premium-upgrade <!-- R10830 done -->
+- [x] P1 | [[启]] | 4687B · featured · type=person | action: premium-upgrade <!-- R10831 done -->
+- [x] P1 | [[任鄙]] | 4672B · featured · type=person | action: premium-upgrade <!-- R10832 done -->
+- [x] P1 | [[师旷]] | 4625B · featured · type=person | action: premium-upgrade <!-- R10833 done -->
+
+## 第三批 premium-upgrade 候选（2026-04-30 R10834 W1 探索，featured→premium）
+
+- [x] P1 | [[夏姬]] | 4599B · featured · type=person | action: premium-upgrade <!-- R10834 done -->
+- [x] P1 | [[彭祖]] | 4562B · featured · type=person | action: premium-upgrade <!-- R10835 done -->
+- [x] P1 | [[所忠]] | 4541B · featured · type=person | action: premium-upgrade <!-- R10836 done -->
+- [x] P1 | [[祖伊]] | 4478B · featured · type=person | action: premium-upgrade <!-- R10837 done -->
+- [x] P1 | [[子兰]] | 4457B · featured · type=person | action: premium-upgrade <!-- R10838 done -->
+- [x] P1 | [[南子]] | 4453B · featured · type=person | action: premium-upgrade <!-- R10839 done -->
+- [x] P1 | [[王稽]] | 4401B · featured · type=person | action: premium-upgrade <!-- R10840 done -->
+- [x] P1 | [[周丘]] | 4380B · featured · type=person | action: premium-upgrade <!-- R10841 done -->
+- [x] P1 | [[子反]] | 4360B · featured · type=person | action: premium-upgrade <!-- R10842 done -->
+- [x] P1 | [[张羽]] | 4355B · featured · type=person | action: premium-upgrade <!-- R10843 done -->
+
+## 第四批 premium-upgrade 候选（2026-04-30 R10844 W1 探索，featured→premium）
+
+- [x] P1 | [[神农]] | 4288B · featured · type=person | action: premium-upgrade <!-- R10844 done -->
+- [x] P1 | [[任敖]] | 4252B · featured · type=person | action: premium-upgrade <!-- R10845 done -->
+- [x] P1 | [[契]] | 4239B · featured · type=person | action: premium-upgrade <!-- R10846 done -->
+- [x] P1 | [[有若]] | 4233B · featured · type=person | action: premium-upgrade <!-- R10847 done -->
+- [x] P1 | [[叔向]] | 4161B · featured · type=person | action: premium-upgrade <!-- R10848 done -->
+- [x] P1 | [[淖齿]] | 4101B · featured · type=person | action: premium-upgrade <!-- R10849 done -->
+- [x] P1 | [[文成]] | 4087B · featured · type=person | action: premium-upgrade <!-- R10850 done -->
+- [x] P1 | [[苏武]] | 4063B · featured · type=person | action: premium-upgrade <!-- R10851 done -->
+- [x] P1 | [[益]] | 4026B · featured · type=person | action: premium-upgrade <!-- R10852 done -->
+- [x] P1 | [[周殷]] | 4023B · featured · type=person | action: premium-upgrade <!-- R10853 done -->
