@@ -757,16 +757,28 @@ export async function renderRecent(core, pageNum = 1) {
     const added   = e.diff ? e.diff.filter(d => d[0] === '+').length : null;
     const removed = e.diff ? e.diff.filter(d => d[0] === '-').length : null;
     let sizeHtml;
-    if (added === null) {
-      sizeHtml = `<td class="rc-size rc-size-zero">—</td>`;
-    } else if (added > 0 && removed === 0) {
-      sizeHtml = `<td class="rc-size rc-size-plus">+${added}</td>`;
-    } else if (added === 0 && removed > 0) {
-      sizeHtml = `<td class="rc-size rc-size-minus">−${removed}</td>`;
-    } else if (added > 0 && removed > 0) {
-      sizeHtml = `<td class="rc-size rc-size-mixed"><span class="rc-plus">+${added}</span> <span class="rc-minus">−${removed}</span></td>`;
+    if (added !== null) {
+      if (added > 0 && removed === 0) {
+        sizeHtml = `<td class="rc-size rc-size-plus">+${added}</td>`;
+      } else if (added === 0 && removed > 0) {
+        sizeHtml = `<td class="rc-size rc-size-minus">−${removed}</td>`;
+      } else if (added > 0 && removed > 0) {
+        sizeHtml = `<td class="rc-size rc-size-mixed"><span class="rc-plus">+${added}</span> <span class="rc-minus">−${removed}</span></td>`;
+      } else {
+        sizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
+      }
+    } else if (e.size != null && e.size_before != null) {
+      const delta = e.size - e.size_before;
+      const fmt = n => n >= 1024 ? `${(n/1024).toFixed(1)}K` : `${n}B`;
+      if (delta > 0) {
+        sizeHtml = `<td class="rc-size rc-size-plus">+${fmt(delta)}</td>`;
+      } else if (delta < 0) {
+        sizeHtml = `<td class="rc-size rc-size-minus">−${fmt(-delta)}</td>`;
+      } else {
+        sizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
+      }
     } else {
-      sizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
+      sizeHtml = `<td class="rc-size rc-size-zero">—</td>`;
     }
     return `<tr>
       <td class="rc-time">${escapeHtml(fmtTimestamp(e.timestamp))}</td>
@@ -828,16 +840,28 @@ export async function renderHistory(core, page) {
     const hadd = rev.diff ? rev.diff.filter(d => d[0] === '+').length : null;
     const hrem = rev.diff ? rev.diff.filter(d => d[0] === '-').length : null;
     let hSizeHtml;
-    if (hadd === null) {
-      hSizeHtml = `<td class="rc-size rc-size-zero">—</td>`;
-    } else if (hadd > 0 && hrem === 0) {
-      hSizeHtml = `<td class="rc-size rc-size-plus">+${hadd}</td>`;
-    } else if (hadd === 0 && hrem > 0) {
-      hSizeHtml = `<td class="rc-size rc-size-minus">−${hrem}</td>`;
-    } else if (hadd > 0 && hrem > 0) {
-      hSizeHtml = `<td class="rc-size rc-size-mixed"><span class="rc-plus">+${hadd}</span> <span class="rc-minus">−${hrem}</span></td>`;
+    if (hadd !== null) {
+      if (hadd > 0 && hrem === 0) {
+        hSizeHtml = `<td class="rc-size rc-size-plus">+${hadd}</td>`;
+      } else if (hadd === 0 && hrem > 0) {
+        hSizeHtml = `<td class="rc-size rc-size-minus">−${hrem}</td>`;
+      } else if (hadd > 0 && hrem > 0) {
+        hSizeHtml = `<td class="rc-size rc-size-mixed"><span class="rc-plus">+${hadd}</span> <span class="rc-minus">−${hrem}</span></td>`;
+      } else {
+        hSizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
+      }
+    } else if (rev.size != null && rev.size_before != null) {
+      const delta = rev.size - rev.size_before;
+      const fmt = n => n >= 1024 ? `${(n/1024).toFixed(1)}K` : `${n}B`;
+      if (delta > 0) {
+        hSizeHtml = `<td class="rc-size rc-size-plus">+${fmt(delta)}</td>`;
+      } else if (delta < 0) {
+        hSizeHtml = `<td class="rc-size rc-size-minus">−${fmt(-delta)}</td>`;
+      } else {
+        hSizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
+      }
     } else {
-      hSizeHtml = `<td class="rc-size rc-size-zero">±0</td>`;
+      hSizeHtml = `<td class="rc-size rc-size-zero">—</td>`;
     }
     return `<tr>
       <td class="rc-time">${escapeHtml(fmtTimestamp(rev.timestamp))}${tag}</td>

@@ -20,6 +20,7 @@ butler 原子动作结束时应调用本脚本, 让 #?recent / #?history=<page> 
 from __future__ import annotations
 
 import argparse
+import difflib
 import fcntl
 import hashlib
 import json
@@ -38,6 +39,22 @@ TZ_UTC = timezone.utc
 
 WINDOW_SIZE = 1000   # recent.jsonl 最多存 1000 行
 ARCHIVE_BATCH = 500  # 每次归档最旧的 500 条
+
+
+def _diff(old: str, new: str, context: int = 2) -> list[list[str]]:
+    """行级 unified diff，返回 [["+"/"-"/" ", line], ...] 去掉 @@/---/+++ 头。"""
+    chunks = []
+    for line in difflib.unified_diff(
+        old.splitlines(keepends=True),
+        new.splitlines(keepends=True),
+        n=context,
+    ):
+        if line.startswith(('--- ', '+++ ', '@@ ')):
+            continue
+        op = line[0] if line else ' '
+        text = line[1:].rstrip('\n') if line else ''
+        chunks.append([op, text])
+    return chunks
 
 
 def iso_utc(dt: datetime) -> str:
@@ -101,8 +118,11 @@ def main() -> int:
 
         last = entries[-1] if entries else None
         parent_rev = last['rev_id'] if last else None
+        parent_content = last['content'] if last else ''
         size_before = last['size'] if last else 0
         size_after = len(content.encode('utf-8'))
+
+        diff_chunks = _diff(parent_content, content)
 
         entry = {
             'rev_id': rev_id,
@@ -133,7 +153,7 @@ def main() -> int:
     else:
         recent_entries = []
 
-    new_entry = {'page': page, **{k: v for k, v in entry.items() if k != 'content'}}
+    new_entry = {'page': page, **{k: v for k, v in entry.items() if k != 'content'}, 'diff': diff_chunks}
     recent_entries.append(new_entry)
 
     if len(recent_entries) > WINDOW_SIZE:
