@@ -482,3 +482,29 @@
 - [x] P1 | [[伊陟]] | 3349B · featured · type=person | action: premium-upgrade
 - [x] P1 | [[目夷]] | 3256B · featured · type=person | action: premium-upgrade
 - [x] P1 | [[武涉]] | 3245B · featured · type=person | action: premium-upgrade
+
+## 第七批 premium-upgrade 候选（2026-04-30 R10878 W1 探索，featured→premium）
+
+- [x] P1 | [[召平]] | 3232B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[翟公]] | 3229B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[许历]] | 3218B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[子羔]] | 3168B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[田禄伯]] | 3130B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[田子方]] | 3126B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[奚齐]] | 3119B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[庄生]] | 3118B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[孟舒]] | 3061B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[侯生]] | 3057B · featured · type=person | action: premium-upgrade
+
+## 第八批 premium-upgrade 候选（2026-04-30 R10889 W1 探索，featured→premium）
+
+- [x] P1 | [[徐来]] | 3055B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[田仁]] | 3024B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[子韦]] | 2999B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[优旃]] | 2764B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[弥子瑕]] | 2687B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[王生]] | 2668B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[无采]] | 2502B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[石奢]] | 2381B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[毋寡]] | 2359B · featured · type=person | action: premium-upgrade
+- [x] P1 | [[程姬]] | 2355B · featured · type=person | action: premium-upgrade
