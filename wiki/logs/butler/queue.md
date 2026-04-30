@@ -754,7 +754,43 @@
 - [x] R11348 | [[越人]] | 5130B · type=person · src=六国年表/扁鹊仓公列传 | action: enrich-quality
 - [x] R11349 | [[子服景伯]] | 5126B · type=person · src=鲁周公世家/仲尼弟子列传 | action: enrich-quality
 - [x] R11350 | [[赵惠后]] | 5122B · type=person · src=赵世家/六国年表 | action: enrich-quality
-- [ ] P1 | [[姬辄]] | 5119B · type=person · src=卫康叔世家 | action: enrich-quality
-- [ ] P1 | [[解扬]] | 5113B · type=person · src=郑世家/晋世家 | action: enrich-quality
-- [ ] P1 | [[司马卬]] | 5102B · type=person · src=太史公自序/项羽本纪 | action: enrich-quality
-- [ ] P1 | [[伯服]] | 5101B · type=person · src=周本纪/郑世家 | action: enrich-quality
+- [x] R11352 | [[姬辄]] | 5119B · type=person · src=卫康叔世家 | action: enrich-quality
+- [x] R11353 | [[解扬]] | 5113B · type=person · src=郑世家/晋世家 | action: enrich-quality
+- [x] R11354 | [[司马卬]] | 5102B · type=person · src=太史公自序/项羽本纪 | action: enrich-quality
+- [x] R11355 | [[伯服]] | 5101B · type=person · src=周本纪/郑世家 | action: enrich-quality
+
+## P1 standard→featured 第十五批（2026-05-01，standard→featured）
+
+- [x] R11356 | [[缪嬴]] | 5093B · type=person · src=晋世家 | action: enrich-quality
+- [x] R11357 | [[蔡平侯]] | 5083B · type=person · src=管蔡世家/十二诸侯年表 | action: enrich-quality
+- [x] R11358 | [[匈奴单于头曼]] | 5074B · type=person · src=十二诸侯年表/宋微子世家/匈奴列传 | action: enrich-quality
+- [x] R11359 | [[张黡]] | 5071B · type=person · src=张耳陈馀列传 | action: enrich-quality
+- [x] R11360 | [[郁成王]] | 5069B · type=person · src=大宛列传 | action: enrich-quality
+- [x] R11361 | [[齐懿仲]] | 5068B · type=person · src=陈杞世家/田敬仲完世家 | action: enrich-quality
+- [x] R11362 | [[周灵王]] | 5057B · type=person · src=周本纪/十二诸侯年表/封禅书 | action: enrich-quality
+- [x] R11363 | [[孔父]] | 5052B · type=person · src=十二诸侯年表/宋微子世家/郑世家 | action: enrich-quality
+- [x] R11364 | [[楚简王]] | 5051B · type=person · src=楚世家/六国年表 | action: enrich-quality
+- [x] R11365 | [[赵胡]] | 5047B · type=person · src=南越列传 | action: enrich-quality
+- [x] R11366 | [[楚王刘戊]] | 5036B · type=person · src=吴王濞列传 | action: enrich-quality
+- [x] R11367 | [[周共王]] | 5035B · type=person · src=周本纪/汉兴以来诸侯王年表 | action: enrich-quality
+- [x] R11368 | [[周灶]] | 5033B · type=person · src=高祖功臣侯者年表/汉兴以来将相名臣年表/匈奴列传 | action: enrich-quality
+- [x] R11369 | [[他]] | 5029B · type=person · src=十二诸侯年表/田敬仲完世家 | action: enrich-quality
+- [x] R11370 | [[孟懿子]] | 5001B · type=person · src=鲁周公世家/孔子世家 | action: enrich-quality
+
+## P1 standard→featured 第十六批（2026-05-01，standard→featured 4800B档）
+
+- [x] R11371 | [[子带]] | 4999B · type=person · src=周本纪/匈奴列传 | action: enrich-quality
+- [x] R11372 | [[张子卿]] | 4985B · type=person · src=荆燕世家 | action: enrich-quality
+- [x] R11373 | [[襄仲]] | 4962B · type=person · src=十二诸侯年表/鲁周公世家 | action: enrich-quality
+- [x] R11374 | [[荀林父]] | 4950B · type=person · src=十二诸侯年表/晋世家 | action: enrich-quality
+- [ ] P1 | [[子驷]] | 4927B · type=person · src=十二诸侯年表/郑世家 | action: enrich-quality
+- [ ] P1 | [[范献子]] | 4922B · type=person · src=晋世家/魏世家 | action: enrich-quality
+- [ ] P1 | [[淮南太子迁]] | 4914B · type=person · src=淮南衡山列传 | action: enrich-quality
+- [ ] P1 | [[济南王（反诛）]] | 4912B · type=person · src=孝景本纪/齐悼惠王世家/汉兴以来诸侯王年表 | action: enrich-quality
+- [ ] P1 | [[宋成公]] | 4892B · type=person · src=十二诸侯年表/宋微子世家 | action: enrich-quality
+- [ ] P1 | [[周定公]] | 4866B · type=person · src=周本纪/燕召公世家 | action: enrich-quality
+- [ ] P1 | [[周兰]] | 4835B · type=person · src=高祖本纪/曹相国世家/樊郦滕灌列传 | action: enrich-quality
+- [ ] P1 | [[公孙戎奴]] | 4828B · type=person · src=建元以来侯者年表/卫将军骠骑列传 | action: enrich-quality
+- [ ] P1 | [[郑子亹]] | 4815B · type=person · src=十二诸侯年表/郑世家 | action: enrich-quality
+- [ ] P1 | [[楚宣王]] | 4808B · type=person · src=六国年表/楚世家 | action: enrich-quality
+- [ ] P1 | [[陈穆公]] | 4804B · type=person · src=十二诸侯年表/陈杞世家 | action: enrich-quality
