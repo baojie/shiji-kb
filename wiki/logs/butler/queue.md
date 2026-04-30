@@ -647,10 +647,30 @@
 ## 第五批 standard→featured 升级候选（2026-05-01，standard person → featured）
 
 - [x] R11250 | [[子玉]] | 5226B · standard · type=person | action: enrich-quality
-- [ ] P2 | [[周舍]] | 5193B · standard · type=person | action: enrich-quality
-- [ ] P3 | [[卫太子]] | 5178B · standard · type=person | action: enrich-quality
-- [ ] P4 | [[宰予]] | 5120B · standard · type=person | action: enrich-quality
-- [ ] P5 | [[优孟]] | 5119B · standard · type=person | action: enrich-quality
-- [ ] P6 | [[酈商]] | 5103B · standard · type=person | action: enrich-quality
-- [ ] P7 | [[萧望之]] | 5055B · standard · type=person | action: enrich-quality
-- [ ] P8 | [[蔡女]] | 5032B · standard · type=person | action: enrich-quality
+- [x] R11252 | [[周舍]] | 5193B · standard · type=person | action: enrich-quality
+- [x] R11253 | [[卫太子]] | 5178B · standard · type=person | action: enrich-quality
+- [x] R11254 | [[宰予]] | 5120B · standard · type=person | action: enrich-quality
+- [x] R11255 | [[优孟]] | 5119B · standard · type=person | action: enrich-quality
+- [x] R11256 | [[酈商]] | 5103B · standard · type=person | action: enrich-quality
+- [x] R11257 | [[萧望之]] | 5055B · standard · type=person | action: enrich-quality
+- [x] R11258 | [[蔡女]] | 5032B · standard · type=person | action: enrich-quality
+
+## 第六批 standard→featured 升级候选（2026-05-01，standard person → featured）
+- [x] R11259 | [[吕须]] | qs=46 · standard · type=person | action: enrich-quality
+- [x] R11260 | [[中衍]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11261 | [[于定国]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11262 | [[伉]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11263 | [[公子比]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11264 | [[养由基]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11265 | [[叔振铎]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11266 | [[大骆]] | qs=45 · standard · type=person | action: enrich-quality
+
+## 第七批 standard→featured 升级候选（2026-05-01，standard person → featured）
+- [x] R11267 | [[宁成]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11268 | [[宋昭公]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11269 | [[李敢]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11270 | [[董安于]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11271 | [[蔡仲]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11272 | [[蔡灵侯]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11273 | [[虢叔]] | qs=45 · standard · type=person | action: enrich-quality
+- [x] R11274 | [[许由]] | qs=45 · standard · type=person | action: enrich-quality
