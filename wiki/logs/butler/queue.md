@@ -616,8 +616,41 @@
 - [x] R11226 | [[武庚禄父]] | 6353B · standard · type=person | action: enrich-quality
 - [x] R11227 | [[赵食其]] | 6211B · standard · type=person | action: enrich-quality
 - [x] R11228 | [[魏尚]] | 6167B · standard · type=person | action: enrich-quality
-- [ ] P4 | [[广国]] | 6143B · standard · type=person | action: enrich-quality
-- [ ] P5 | [[卫黔牟]] | 6103B · standard · type=person | action: enrich-quality
-- [ ] P6 | [[郑简公]] | 6100B · standard · type=person | action: enrich-quality
-- [ ] P7 | [[姬喜]] | 6037B · standard · type=person | action: enrich-quality
-- [ ] P8 | [[华督]] | 6004B · standard · type=person | action: enrich-quality
+- [x] R11229 | [[广国]] | 6143B · standard · type=person | action: enrich-quality
+- [x] R11230 | [[卫黔牟]] | 6103B · standard · type=person | action: enrich-quality
+- [x] R11231 | [[郑简公]] | 6100B · standard · type=person | action: enrich-quality
+- [x] R11232 | [[姬喜]] | 6037B · standard · type=person | action: enrich-quality
+- [x] R11233 | [[华督]] | 6004B · standard · type=person | action: enrich-quality
+
+## 第三批 standard→featured 升级候选（2026-05-01，standard person → featured）
+
+- [x] R11234 | [[蘧伯玉]] | 5992B · standard · type=person | action: enrich-quality
+- [x] R11235 | [[叔瞻]] | 5984B · standard · type=person | action: enrich-quality
+- [x] R11236 | [[田文子]] | 5915B · standard · type=person | action: enrich-quality
+- [x] R11237 | [[华元]] | 5894B · standard · type=person | action: enrich-quality
+- [x] R11238 | [[栗太子]] | 5874B · standard · type=person | action: enrich-quality
+- [x] R11239 | [[馀祭]] | 5827B · standard · type=person | action: enrich-quality
+- [x] R11240 | [[专诸]] | 5798B · standard · type=person | action: enrich-quality
+- [x] R11241 | [[卫元君]] | 5781B · standard · type=person | action: enrich-quality
+
+## 第四批 standard→featured 升级候选（2026-05-01，standard person → featured）
+
+- [x] R11242 | [[庞涓]] | 5706B · standard · type=person | action: enrich-quality
+- [x] R11243 | [[平阳主]] | 5611B · standard · type=person | action: enrich-quality
+- [x] R11244 | [[尹齐]] | 5457B · standard · type=person | action: enrich-quality
+- [x] R11245 | [[胶西王刘卬]] | 5445B · standard · type=person | action: enrich-quality
+- [x] R11246 | [[乐臣公]] | 5418B · standard · type=person | action: enrich-quality
+- [x] R11247 | [[季文子]] | 5405B · standard · type=person | action: enrich-quality
+- [x] R11248 | [[徐厉]] | 5254B · standard · type=person | action: enrich-quality
+- [x] R11249 | [[石乞]] | 5227B · standard · type=person | action: enrich-quality
+
+## 第五批 standard→featured 升级候选（2026-05-01，standard person → featured）
+
+- [x] R11250 | [[子玉]] | 5226B · standard · type=person | action: enrich-quality
+- [ ] P2 | [[周舍]] | 5193B · standard · type=person | action: enrich-quality
+- [ ] P3 | [[卫太子]] | 5178B · standard · type=person | action: enrich-quality
+- [ ] P4 | [[宰予]] | 5120B · standard · type=person | action: enrich-quality
+- [ ] P5 | [[优孟]] | 5119B · standard · type=person | action: enrich-quality
+- [ ] P6 | [[酈商]] | 5103B · standard · type=person | action: enrich-quality
+- [ ] P7 | [[萧望之]] | 5055B · standard · type=person | action: enrich-quality
+- [ ] P8 | [[蔡女]] | 5032B · standard · type=person | action: enrich-quality
