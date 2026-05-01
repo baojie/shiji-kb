@@ -256,6 +256,19 @@
 - [x] R11617 | [[宋殇公]] | 4037B→6699B · type=person · src=十二诸侯年表, 管蔡世家, 卫康叔世家 | action: enrich-quality
 - [x] R11618 | [[张辟彊]] | 4031B→7470B · type=person · src=吕太后本纪 | action: enrich-quality
 
+## P1 standard→featured 第二十九批（4028→3992B档）
+
+- [x] R11620 | [[周简王]] | 4028B→7752B · type=person · src=周本纪, 十二诸侯年表 | action: enrich-quality
+- [x] R11621 | [[茅焦]] | 4023B→8063B · type=person · src=秦始皇本纪, 吕不韦列传 | action: enrich-quality
+- [x] R11622 | [[刘贺]] | 4022B→6978B · type=person · src=五宗世家, 汉兴以来诸侯王年表, 建元已来王子侯者年表 | action: enrich-quality
+- [x] R11623 | [[菑川思王]] | 4018B→7078B · type=person · src=齐悼惠王世家, 建元已来王子侯者年表 | action: enrich-quality
+- [x] R11624 | [[大任]] | 4017B→7969B · type=person · src=外戚世家, 太史公自序, 周本纪 | action: enrich-quality
+- [x] R11625 | [[聂壹]] | 4012B→9739B · type=person · src=韩长孺列传, 匈奴列传 | action: enrich-quality
+- [x] R11626 | [[苏弘]] | 4009B→6778B · type=person · src=南越列传, 建元以来侯者年表 | action: enrich-quality
+- [x] R11627 | [[荒侯]] | 4005B→7291B · type=person · src=樊郦滕灌列传, 高祖功臣侯者年表 | action: enrich-quality
+- [x] R11628 | [[傅宽]] | 4002B→7984B · type=person · src=傅靳蒯成列传, 高祖功臣侯者年表 | action: enrich-quality
+- [x] R11629 | [[华阳太后]] | 3992B→10824B · type=person · src=吕不韦列传, 秦始皇本纪, 六国年表 | action: enrich-quality
+
 ## P1 expand-content 候选（2026-04-25 补充，按 refs 排序）
 
 - [x] P1 | [[刘舜]] | 42行 · refs=81 · type=person | action: expand-content
