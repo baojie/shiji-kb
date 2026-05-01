@@ -210,12 +210,25 @@
 - [x] R11562 | [[鞠武]] | 4191B→7977B · type=person · src=刺客列传 | action: enrich-quality
 - [x] R11564 | [[鲋]] | 4190B→6641B · type=person · src=孔子世家/高祖功臣侯者年表 | action: enrich-quality
 - [x] R11566 | [[无是公]] | 4179B→7693B · type=person · src=司马相如列传 | action: enrich-quality
-- [ ] P1 | [[郑伯]] | 4178B · type=person · src=周本纪/秦本纪 | action: enrich-quality
-- [ ] P1 | [[仇牧]] | 4174B · type=person · src=十二诸侯年表/宋微子世家 | action: enrich-quality
-- [ ] P1 | [[阳文君]] | 4170B · type=person · src=赵世家/春申君列传 | action: enrich-quality
-- [ ] P1 | [[田儋]] | 4170B · type=person · src=田儋列传/项羽本纪 | action: enrich-quality
-- [ ] P1 | [[鲁懿公]] | 4166B · type=person · src=十二诸侯年表/鲁周公世家 | action: enrich-quality
-- [ ] P1 | [[青]] | 4153B · type=person · src=高祖功臣侯者年表/平准书/酷吏列传 | action: enrich-quality
+- [x] R11568 | [[郑伯]] | 4178B→8295B · type=person · src=周本纪/秦本纪 | action: enrich-quality
+- [x] R11571 | [[仇牧]] | 4174B→6215B · type=person · src=十二诸侯年表/宋微子世家 | action: enrich-quality
+- [x] R11573 | [[阳文君]] | 4170B→6965B · type=person · src=赵世家/春申君列传 | action: enrich-quality
+- [x] R11575 | [[田儋]] | 4170B→7434B · type=person · src=田儋列传/项羽本纪 | action: enrich-quality
+- [x] R11577 | [[鲁懿公]] | 4166B→7245B · type=person · src=十二诸侯年表/鲁周公世家 | action: enrich-quality
+- [x] R11579 | [[青]] | 4153B→6343B · type=person · src=高祖功臣侯者年表/平准书/酷吏列传 | action: enrich-quality
+
+## P1 standard→featured 第二十六批（按剩余最大·从4146B起降序）
+
+- [x] R11581 | [[魏桓子]] | 4146B→8095B · type=person · src=六国年表/晋世家/魏世家 | action: enrich-quality
+- [x] R11583 | [[东越王（自称武帝）]] | 4146B→7878B · type=person · src=南越列传/东越列传 | action: enrich-quality
+- [x] R11585 | [[曼丘臣]] | 4139B→7801B · type=person · src=韩信卢绾列传/高祖本纪 | action: enrich-quality
+- [x] R11587 | [[蔡缪侯]] | 4134B→7228B · type=person · src=十二诸侯年表/燕召公世家/管蔡世家 | action: enrich-quality
+- [x] R11589 | [[襄彊]] | 4133B→6082B · type=person · src=秦楚之际月表/陈涉世家 | action: enrich-quality
+- [ ] P1 | [[魏侈]] | 4129B · type=person · src=晋世家/魏世家 | action: enrich-quality
+- [ ] P1 | [[吴阳]] | 4128B · type=person · src=东越列传 | action: enrich-quality
+- [ ] P1 | [[李左车]] | 4116B · type=person · src=淮阴侯列传 | action: enrich-quality
+- [ ] P1 | [[驷钧]] | 4111B · type=person · src=吕太后本纪/孝文本纪 | action: enrich-quality
+- [ ] P1 | [[帝俈]] | 4105B · type=person · src=三代世表 | action: enrich-quality
 
 ## P1 expand-content 候选（2026-04-25 补充，按 refs 排序）
 
