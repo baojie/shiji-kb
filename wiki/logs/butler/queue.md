@@ -224,11 +224,37 @@
 - [x] R11585 | [[曼丘臣]] | 4139B→7801B · type=person · src=韩信卢绾列传/高祖本纪 | action: enrich-quality
 - [x] R11587 | [[蔡缪侯]] | 4134B→7228B · type=person · src=十二诸侯年表/燕召公世家/管蔡世家 | action: enrich-quality
 - [x] R11589 | [[襄彊]] | 4133B→6082B · type=person · src=秦楚之际月表/陈涉世家 | action: enrich-quality
-- [ ] P1 | [[魏侈]] | 4129B · type=person · src=晋世家/魏世家 | action: enrich-quality
-- [ ] P1 | [[吴阳]] | 4128B · type=person · src=东越列传 | action: enrich-quality
-- [ ] P1 | [[李左车]] | 4116B · type=person · src=淮阴侯列传 | action: enrich-quality
-- [ ] P1 | [[驷钧]] | 4111B · type=person · src=吕太后本纪/孝文本纪 | action: enrich-quality
-- [ ] P1 | [[帝俈]] | 4105B · type=person · src=三代世表 | action: enrich-quality
+- [x] R11591 | [[魏侈]] | 4129B→5882B · type=person · src=晋世家/魏世家 | action: enrich-quality
+- [x] R11594 | [[吴阳]] | 4128B→8719B · type=person · src=东越列传 | action: enrich-quality
+- [x] R11595 | [[李左车]] | 4116B→9985B · type=person · src=淮阴侯列传 | action: enrich-quality
+- [x] R11596 | [[驷钧]] | 4111B→8912B · type=person · src=吕太后本纪/孝文本纪 | action: enrich-quality
+- [x] R11597 | [[帝俈]] | 4105B→10632B · type=person · src=三代世表/五帝本纪 | action: enrich-quality
+
+## P1 standard→featured 第二十七批（按剩余最大·从4104B起降序）
+
+- [x] R11598 | [[子孔]] | 4104B→7522B · type=person · src=十二诸侯年表/郑世家 | action: enrich-quality
+- [x] R11599 | [[燕桓公]] | 4103B→6307B · type=person · src=十二诸侯年表/六国年表/燕召公世家 | action: enrich-quality
+- [x] R11600 | [[卫满]] | 4103B→9408B · type=person · src=朝鲜列传 | action: enrich-quality
+- [x] R11601 | [[左吴]] | 4101B→6408B · type=person · src=淮南衡山列传 | action: enrich-quality
+- [x] R11602 | [[桓]] | 4099B→6770B · type=person · src=高祖功臣侯者年表/晋世家/楚世家 | action: enrich-quality
+- [x] R11603 | [[高昭子]] | 4095B→8785B · type=person · src=齐太公世家/田敬仲完世家/孔子世家 | action: enrich-quality
+- [x] R11604 | [[唐叔虞]] | 4084B→8573B · type=person · src=晋世家/郑世家 | action: enrich-quality
+- [x] R11605 | [[晋静公]] | 4079B→6755B · type=person · src=晋世家/六国年表 | action: enrich-quality
+- [x] R11606 | [[郑定公]] | 4077B→6682B · type=person · src=十二诸侯年表/郑世家 | action: enrich-quality
+- [x] R11607 | [[后胜]] | 4077B→9125B · type=person · src=秦始皇本纪/田敬仲完世家/蒙恬列传 | action: enrich-quality
+
+## P1 standard→featured 第二十八批（4060→4000B档）
+
+- [x] R11609 | [[介之推]] | 4070B→10284B · type=person · src=晋世家 | action: enrich-quality
+- [x] R11610 | [[陈惠公]] | 4062B→8716B · type=person · src=十二诸侯年表, 陈杞世家 | action: enrich-quality
+- [x] R11611 | [[褚先生]] | 4058B→9645B · type=person · src=三代世表, 陈涉世家, 外戚世家 | action: enrich-quality
+- [x] R11612 | [[周王孙满]] | 4055B→8570B · type=person · src=秦本纪, 楚世家 | action: enrich-quality
+- [x] R11613 | [[齐釐公]] | 4053B→8744B · type=person · src=匈奴列传, 郑世家 | action: enrich-quality
+- [x] R11614 | [[羡门]] | 4050B→8008B · type=person · src=孝武本纪, 封禅书 | action: enrich-quality
+- [x] R11615 | [[刘则]] | 4047B→6522B · type=person · src=汉兴以来诸侯王年表, 建元已来王子侯者年表, 齐悼惠王世家 | action: enrich-quality
+- [x] R11616 | [[商均]] | 4041B→7782B · type=person · src=五帝本纪, 夏本纪, 陈杞世家 | action: enrich-quality
+- [x] R11617 | [[宋殇公]] | 4037B→6699B · type=person · src=十二诸侯年表, 管蔡世家, 卫康叔世家 | action: enrich-quality
+- [x] R11618 | [[张辟彊]] | 4031B→7470B · type=person · src=吕太后本纪 | action: enrich-quality
 
 ## P1 expand-content 候选（2026-04-25 补充，按 refs 排序）
 
