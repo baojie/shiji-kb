@@ -1,0 +1,8 @@
+{
+  "id": "backlinks",
+  "name": "反向引用",
+  "version": "1.0.0",
+  "description": "在文章末尾注入「被以下页面引用」区块，数据来自 backlinks.json",
+  "entry": "index.js",
+  "load_order": 50
+}

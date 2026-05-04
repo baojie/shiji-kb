@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>史记知识库 · 最近更改</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 14px/1.6 -apple-system, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem;
+  }
+  h1 { margin: 0 0 .15rem; font-size: 1.3rem; }
+  .sub { color: #888; margin: 0 0 1rem; font-size: .85rem; }
+  .sub a { color: inherit; }
+
+  /* filter bar */
+  .filters {
+    display: flex; flex-wrap: wrap; gap: .5rem .75rem;
+    align-items: flex-end;
+    background: #8880; border: 1px solid #ccc4; border-radius: 6px;
+    padding: .65rem .85rem .7rem; margin-bottom: .85rem;
+  }
+  .fgroup { display: flex; flex-direction: column; gap: .2rem; }
+  .fgroup label { font-size: .78rem; color: #888; font-weight: 600; }
+  input[type=text], input[type=date], select {
+    font: inherit; padding: .3rem .5rem;
+    border: 1px solid #ccc6; border-radius: 4px;
+    background: var(--bg, transparent); color: inherit;
+  }
+  input[type=text] { width: 11rem; }
+  select { min-width: 7rem; }
+  button.go {
+    font: inherit; padding: .32rem .9rem; border: 1px solid #8885;
+    border-radius: 4px; background: #0071e3; color: #fff;
+    cursor: pointer; align-self: flex-end;
+  }
+  button.go:hover { background: #0077ed; }
+  button.go:disabled { background: #8884; color: #aaa; cursor: default; }
+
+  /* status */
+  #status { color: #888; font-size: .82rem; min-height: 1.4rem; margin-bottom: .3rem; }
+  #status.err { color: #c33; }
+
+  /* sql display */
+  pre.sql {
+    display: none; /* 默认隐藏，可在控制台用 showSql() 打开 */
+    background: #8881; padding: .4rem .65rem; border-radius: 4px;
+    font-size: .76rem; overflow-x: auto; margin: 0 0 .6rem;
+    white-space: pre-wrap; word-break: break-all;
+  }
+
+  /* group headers */
+  .day-group { margin-top: 1.1rem; }
+  .day-header {
+    font-size: .9rem; font-weight: 700; color: #555;
+    border-bottom: 1px solid #ccc5; padding-bottom: .2rem;
+    margin-bottom: .2rem;
+  }
+
+  /* change list */
+  ul.changes { list-style: none; margin: 0; padding: 0; }
+  ul.changes li {
+    display: flex; flex-wrap: wrap; gap: 0 .5rem;
+    padding: .22rem 0; border-bottom: 1px solid #8881;
+    font-size: .85rem; align-items: baseline;
+  }
+  ul.changes li:last-child { border-bottom: none; }
+
+  .rc-time  { color: #888; min-width: 5rem; white-space: nowrap; }
+  .rc-page  { font-weight: 600; color: #0051a8; text-decoration: none; }
+  .rc-page:hover { text-decoration: underline; }
+  .rc-size  {
+    font-size: .78rem; padding: .05rem .35rem; border-radius: 3px;
+    white-space: nowrap;
+  }
+  .rc-size.pos { background: #d4edda; color: #155724; }
+  .rc-size.neg { background: #f8d7da; color: #721c24; }
+  .rc-size.neu { background: #e2e3e5; color: #383d41; }
+  .rc-author { color: #555; font-size: .8rem; }
+  .rc-action {
+    font-size: .76rem; padding: .05rem .35rem;
+    border: 1px solid #ccc5; border-radius: 3px;
+    background: #f5f5f7; color: #555; white-space: nowrap;
+  }
+  .rc-summary { color: #666; font-size: .8rem; flex-basis: 100%; padding-left: 5.5rem; }
+
+  .empty { color: #999; font-style: italic; padding: .5rem 0; }
+  .meta  { color: #888; font-size: .78rem; margin-top: .6rem; }
+
+  /* dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    .rc-page { color: #69aaff; }
+    .rc-action { background: #2a2a2e; border-color: #555; color: #bbb; }
+    .rc-size.pos { background: #1a3a24; color: #75c795; }
+    .rc-size.neg { background: #3a1a1e; color: #e07575; }
+    .rc-size.neu { background: #2a2a2e; color: #aaa; }
+    .day-header { color: #aaa; border-color: #444; }
+    button.go { background: #0a84ff; }
+    button.go:hover { background: #1a90ff; }
+  }
+</style>
+</head>
+<body>
+
+<h1>史记知识库 · 最近更改</h1>
+<p class="sub">
+  数据库由浏览器按需读取（HTTP Range）。
+  <a href="./">← 首页</a>
+  · <a href="#" onclick="toggleSql();return false">SQL</a>
+</p>
+
+<div id="status">正在加载数据库引擎…</div>
+
+<div class="filters" id="filters" style="display:none">
+  <div class="fgroup">
+    <label>页面名</label>
+    <input id="page" type="text" placeholder="例如：秦始皇、韩信">
+  </div>
+  <div class="fgroup">
+    <label>作者</label>
+    <select id="author"><option value="">（全部）</option></select>
+  </div>
+  <div class="fgroup">
+    <label>操作类型</label>
+    <select id="action"><option value="">（全部）</option></select>
+  </div>
+  <div class="fgroup">
+    <label>从</label>
+    <input id="date_from" type="date">
+  </div>
+  <div class="fgroup">
+    <label>到</label>
+    <input id="date_to" type="date">
+  </div>
+  <div class="fgroup">
+    <label>显示</label>
+    <select id="limit">
+      <option value="50">50 条</option>
+      <option value="100" selected>100 条</option>
+      <option value="250">250 条</option>
+      <option value="500">500 条</option>
+    </select>
+  </div>
+  <button class="go" id="go" type="button" disabled>查询</button>
+</div>
+
+<pre class="sql" id="sql"></pre>
+<div id="result"></div>
+<div class="meta" id="stats"></div>
+
+<script src="./vendor/sql/index.js"></script>
+<script>
+(async function main() {
+  const statusEl = document.getElementById("status");
+  const filtersEl = document.getElementById("filters");
+  const goBtn = document.getElementById("go");
+
+  const setStatus = (msg, isErr = false) => {
+    statusEl.textContent = msg;
+    statusEl.classList.toggle("err", isErr);
+  };
+
+  try {
+    const { createDbWorker } = window;
+    if (!createDbWorker) throw new Error("createDbWorker 未找到 — vendor/sql/index.js 加载失败？");
+
+    const base      = new URL(".", location.href);
+    const workerUrl = new URL("./vendor/sql/sqlite.worker.js", base).toString();
+    const wasmUrl   = new URL("./vendor/sql/sql-wasm.wasm",    base).toString();
+    const cfgUrl    = new URL("./db-config-recent.json",       base).toString();
+
+    const worker = await createDbWorker(
+      [{ from: "jsonconfig", configUrl: cfgUrl }],
+      workerUrl,
+      wasmUrl
+    );
+    window._rcWorker = worker;
+
+    // 填充 author 下拉框
+    const authors = await worker.db.query(
+      "SELECT DISTINCT author FROM recent_changes WHERE author != '' ORDER BY author"
+    );
+    const authorSel = document.getElementById("author");
+    for (const r of authors) {
+      const o = document.createElement("option");
+      o.value = r.author; o.textContent = r.author;
+      authorSel.appendChild(o);
+    }
+
+    // 填充 action 下拉框
+    const actions = await worker.db.query(
+      "SELECT DISTINCT action FROM recent_changes WHERE action != '' ORDER BY action"
+    );
+    const actionSel = document.getElementById("action");
+    for (const r of actions) {
+      const o = document.createElement("option");
+      o.value = r.action; o.textContent = r.action;
+      actionSel.appendChild(o);
+    }
+
+    // 默认日期范围：最近 30 天
+    const today = new Date();
+    const d30ago = new Date(today); d30ago.setDate(today.getDate() - 30);
+    document.getElementById("date_to").value   = fmtDate(today);
+    document.getElementById("date_from").value = fmtDate(d30ago);
+
+    setStatus("就绪。");
+    filtersEl.style.display = "flex";
+    goBtn.disabled = false;
+
+    goBtn.addEventListener("click", runQuery);
+    ["page","author","action","date_from","date_to","limit"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el.tagName === "INPUT") {
+        el.addEventListener("keydown", e => { if (e.key === "Enter") runQuery(); });
+      }
+    });
+
+    // 首次加载
+    runQuery();
+
+  } catch (e) {
+    console.error(e);
+    setStatus("加载失败：" + e.message, true);
+  }
+})();
+
+function fmtDate(d) {
+  return d.toISOString().slice(0, 10);
+}
+
+async function runQuery() {
+  const worker = window._rcWorker;
+  if (!worker) return;
+
+  const page     = document.getElementById("page").value.trim();
+  const author   = document.getElementById("author").value;
+  const action   = document.getElementById("action").value;
+  const dateFrom = document.getElementById("date_from").value;
+  const dateTo   = document.getElementById("date_to").value;
+  const limit    = parseInt(document.getElementById("limit").value, 10) || 100;
+
+  const where = [];
+  const params = {};
+  if (page)     { where.push("page LIKE :page");         params[":page"]      = "%" + page + "%"; }
+  if (author)   { where.push("author = :author");        params[":author"]    = author; }
+  if (action)   { where.push("action = :action");        params[":action"]    = action; }
+  if (dateFrom) { where.push("date >= :date_from");      params[":date_from"] = dateFrom; }
+  if (dateTo)   { where.push("date <= :date_to");        params[":date_to"]   = dateTo; }
+
+  const sql =
+    "SELECT rev_id, page, timestamp, date, author, summary, action, parent_rev, size\n" +
+    "  FROM recent_changes\n" +
+    (where.length ? " WHERE " + where.join("\n   AND ") + "\n" : "") +
+    " ORDER BY timestamp DESC\n" +
+    " LIMIT " + limit;
+
+  document.getElementById("sql").textContent = sql;
+
+  const t0   = performance.now();
+  const rows = await worker.db.query(sql, params);
+  const ms   = (performance.now() - t0).toFixed(1);
+
+  renderResult(rows);
+
+  const stats = await worker.worker.getStats();
+  document.getElementById("stats").textContent =
+    `${rows.length} 条，${ms} ms · 累计下载 ${(stats.totalFetchedBytes / 1024).toFixed(1)} KB` +
+    ` / ${(stats.totalBytes / 1024).toFixed(1)} KB（${stats.totalRequests} 次 Range 请求）`;
+  document.getElementById("status").textContent = "就绪。";
+}
+
+function renderResult(rows) {
+  const resEl = document.getElementById("result");
+  if (rows.length === 0) {
+    resEl.innerHTML = '<div class="empty">无匹配结果。</div>';
+    return;
+  }
+
+  // 按日期分组
+  const groups = new Map();
+  for (const r of rows) {
+    const day = r.date || r.timestamp.slice(0, 10);
+    if (!groups.has(day)) groups.set(day, []);
+    groups.get(day).push(r);
+  }
+
+  let html = "";
+  for (const [day, dayRows] of groups) {
+    html += `<div class="day-group">`;
+    html += `<div class="day-header">${esc(day)}</div>`;
+    html += `<ul class="changes">`;
+    for (const r of dayRows) {
+      const time = r.timestamp ? r.timestamp.slice(11, 16) : "";
+      const sizeHtml = renderSize(r.size);
+      // 从 summary 去掉 action 前缀，只保留描述部分
+      const summaryShort = r.action !== "manual" && r.summary.includes(":")
+        ? r.summary.slice(r.summary.indexOf(":") + 1).trim()
+        : r.summary;
+
+      html += `<li>
+        <span class="rc-time">${esc(time)}</span>
+        <a class="rc-page" href="/#${encodeURIComponent(r.page)}">${esc(r.page)}</a>
+        ${sizeHtml}
+        <span class="rc-author">${esc(r.author)}</span>
+        <span class="rc-action">${esc(r.action)}</span>
+        <span class="rc-summary">${esc(summaryShort)}</span>
+      </li>`;
+    }
+    html += `</ul></div>`;
+  }
+  resEl.innerHTML = html;
+}
+
+function renderSize(size) {
+  if (size == null) return "";
+  const n = parseInt(size, 10);
+  if (isNaN(n)) return "";
+  const cls = n > 500 ? "pos" : n > 0 ? "neu" : "neg";
+  const sign = n > 0 ? "+" : "";
+  return `<span class="rc-size ${cls}">${sign}${n}</span>`;
+}
+
+function esc(s) {
+  if (s == null) return "";
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function toggleSql() {
+  const pre = document.getElementById("sql");
+  pre.style.display = pre.style.display === "none" ? "block" : "none";
+}
+</script>
+
+</body>
+</html>

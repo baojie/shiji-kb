@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>史记 Wiki</title>
+<link rel="stylesheet" href="css/main.css">
+<!-- 运行时依赖: markdown-it + js-yaml. 首次加载后由浏览器缓存 -->
+<script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="#" class="brand">史记 Wiki</a>
+    <form class="topnav-search" onsubmit="event.preventDefault();const v=this.q.value.trim();if(v)location.hash=encodeURIComponent(v);">
+      <input id="topnav-q" name="q" type="search" placeholder="搜索页面…" autocomplete="off" list="topnav-pages">
+      <datalist id="topnav-pages"></datalist>
+    </form>
+    <span id="crumb" class="crumb"></span>
+    <span class="spacer"></span>
+    <a href="#About" class="topnav-link">关于</a>
+    <a href="#Special%3AAll" class="topnav-link">特殊页面</a>
+    <a href="#Special%3ARecent" class="topnav-link">最近修订</a>
+    <a href="../index.html" class="topnav-link">主站</a>
+    <a href="https://github.com/baojie/shiji-kb/issues/new" class="topnav-link" target="_blank" rel="noopener">提想法</a>
+    <a href="https://github.com/baojie/shiji-kb" class="topnav-link" target="_blank" rel="noopener">GitHub</a>
+    <span id="status" class="status"></span>
+  </div>
+</nav>
+
+<main class="page" id="page-root">
+  <aside class="sidebar" id="sidebar" hidden>
+    <div class="infobox" id="infobox" hidden></div>
+    <figure class="sidebar-portrait" id="sidebar-portrait" hidden></figure>
+    <div class="sidebar-map" id="sidebar-map" hidden></div>
+  </aside>
+  <article id="article">
+    <p class="loading">载入中…</p>
+  </article>
+</main>
+
+<footer>
+  <small>
+    <span id="src-info"></span>
+    <span id="broken-info"></span>
+  </small>
+</footer>
+
+<script type="module" src="js/core.js?v=20260426c"></script>
+<script>
+// 从 pages.json 填充搜索 datalist
+fetch('pages.json').then(r=>r.json()).then(data=>{
+  const dl = document.getElementById('topnav-pages');
+  (data.pages||[]).forEach(p=>{
+    const o = document.createElement('option');
+    o.value = p.id || p.label || '';
+    if(p.label && p.label !== o.value) o.label = p.label;
+    dl.appendChild(o);
+  });
+}).catch(()=>{});
+</script>
+</body>
+</html>

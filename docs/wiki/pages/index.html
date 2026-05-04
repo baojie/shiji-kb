@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首页 · 史记 Wiki</title>
+<style>
+:root {
+  --fg: #1a1a1a;
+  --fg-muted: #666;
+  --bg: #fafaf7;
+  --bg-box: #f0ece0;
+  --accent: #7a1f1f;
+  --link: #1a5490;
+  --link-broken: #c44;
+  --border: #d8d2bf;
+  --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  --sans: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--serif);
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.75;
+  font-size: 17px;
+}
+.topnav {
+  padding: .6em 1.2em;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--sans);
+  font-size: 14px;
+}
+.topnav a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.topnav .crumb { margin-left: 1em; color: var(--fg-muted); }
+
+.page {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 0 1.2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+@media (min-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr) 260px; }
+  .page > article { grid-column: 1; grid-row: 1; }
+  .page > aside.infobox { grid-column: 2; grid-row: 1; }
+}
+
+article h1 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-bottom: .3em;
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
+}
+article h2 {
+  font-size: 1.35em;
+  margin-top: 1.8em;
+  padding-bottom: .2em;
+  border-bottom: 1px solid var(--border);
+}
+article h3 {
+  font-size: 1.1em;
+  margin-top: 1.4em;
+  color: var(--accent);
+}
+article p { margin: .7em 0; }
+article p:has(+ blockquote) { margin-bottom: .1em; }
+article blockquote + p { margin-top: .1em; }
+article ul, article ol { padding-left: 1.4em; }
+article li { margin: .3em 0; }
+article blockquote {
+  margin: .1em 0;
+  padding: .3em 1em;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-box);
+  color: var(--fg-muted);
+  font-size: .95em;
+}
+article table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: .93em;
+}
+article th, article td {
+  padding: .35em .8em;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+article th { background: var(--bg-box); font-weight: 600; }
+article hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+article em { color: var(--fg-muted); font-style: normal; }
+
+aside.infobox {
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1em;
+  font-size: .9em;
+  align-self: start;
+}
+aside.infobox h2 {
+  margin: 0 0 .6em 0;
+  font-size: 1.1em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid var(--border);
+  color: var(--accent);
+}
+aside.infobox table { width: 100%; border: none; margin: 0; }
+aside.infobox th, aside.infobox td {
+  border: none;
+  padding: .25em .3em;
+  vertical-align: top;
+  background: transparent;
+}
+aside.infobox th { color: var(--fg-muted); font-weight: 500; width: 4.5em; }
+
+aside.infobox.inline {
+  float: right;
+  clear: right;
+  margin: 0 0 1.2em 1.5em;
+  width: 240px;
+  font-size: .88em;
+}
+aside.infobox.inline h2 { font-size: 1em; }
+
+.wikilink.resolved { color: var(--link); text-decoration: none; }
+.wikilink.resolved:hover { text-decoration: underline; }
+.wikilink.self { color: var(--fg); font-weight: 600; text-decoration: none; cursor: default; }
+.wikilink.broken {
+  color: var(--link-broken);
+  text-decoration: underline dashed;
+  cursor: help;
+}
+
+a.pn-citation {
+  color: var(--fg-muted);
+  font-size: .88em;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--fg-muted);
+}
+a.pn-citation:hover {
+  color: var(--link);
+  border-bottom-color: var(--link);
+}
+
+footer {
+  max-width: 900px;
+  margin: 3em auto 2em;
+  padding: 1em 1.2em;
+  color: var(--fg-muted);
+  font-family: var(--sans);
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+}
+footer code { background: var(--bg-box); padding: 1px 4px; border-radius: 2px; }
+footer .broken-list { margin-top: .6em; }
+footer .broken-list summary { cursor: pointer; color: var(--link-broken); }
+footer .broken-list code { color: var(--link-broken); }
+.page-list { list-style: none; padding: 0; }.page-list li { padding: .3em 0; }.type-tag { display: inline-block; width: 3em; padding: 1px 6px;  margin-right: .6em; font-size: .8em; background: var(--bg-box);  color: var(--fg-muted); border-radius: 3px; text-align: center;  font-family: var(--sans); }</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="index.html">史记 Wiki</a>
+  <span class="crumb">首页 / 首页</span>
+</nav>
+<main class="page">
+  
+  <article>
+<h1>史记 Wiki (v0 原型)</h1><p>共 1 页。</p><ul class="page-list"><li><span class="type-tag">地名</span> <a href="蒲阪.html">蒲阪</a></li></ul>
+  </article>
+</main>
+<footer>
+  <small>
+    源文件: <code>(生成)</code> ·
+    生成时间: 2026-04-24 16:42
+    
+  </small>
+</footer>
+</body>
+</html>
