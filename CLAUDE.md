@@ -1,5 +1,8 @@
 # CLAUDE.md
 
+> 跨项目共享铁则参见：`/home/baojie/work/knowledge/shared-rules.md`
+> 所有知识库 wiki 通用的规则（Append-Only、原文只读等）定义在共享文件中，本文件仅包含本项目特有规则和更详细的执行细则。
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ---
