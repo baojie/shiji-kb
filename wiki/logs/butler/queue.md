@@ -269,6 +269,19 @@
 - [x] R11628 | [[傅宽]] | 4002B→7984B · type=person · src=傅靳蒯成列传, 高祖功臣侯者年表 | action: enrich-quality
 - [x] R11629 | [[华阳太后]] | 3992B→10824B · type=person · src=吕不韦列传, 秦始皇本纪, 六国年表 | action: enrich-quality
 
+## P1 standard→featured 第三十批（3987→3932B档）
+
+- [x] R11631 | [[鄂君]] | 3987B→7508B · type=person · src=萧相国世家 | action: enrich-quality
+- [x] R11632 | [[宋厉公]] | 3982B→6669B · type=person · src=孔子世家, 三代世表, 宋微子世家 | action: enrich-quality
+- [x] R11633 | [[李夫人]] | 3977B→8912B · type=person · src=外戚世家, 佞幸列传 | action: enrich-quality
+- [x] R11634 | [[公仲侈]] | 3955B→7970B · type=person · src=樗里子甘茂列传, 韩世家 | action: enrich-quality
+- [x] R11635 | [[惠后]] | 3953B→7859B · type=person · src=周本纪, 匈奴列传, 十二诸侯年表 | action: enrich-quality
+- [x] R11636 | [[钩弋夫人]] | 3948B→8790B · type=person · src=外戚世家 | action: enrich-quality
+- [x] R11637 | [[燕顷侯]] | 3942B→5884B · type=person · src=燕召公世家, 十二诸侯年表 | action: enrich-quality
+- [x] R11638 | [[晋哀公]] | 3938B→8238B · type=person · src=晋世家, 六国年表 | action: enrich-quality
+- [x] R11639 | [[公仪休]] | 3934B→8021B · type=person · src=循吏列传 | action: enrich-quality
+- [x] R11640 | [[陈幽公]] | 3932B→6486B · type=person · src=陈杞世家, 十二诸侯年表 | action: enrich-quality
+
 ## P1 expand-content 候选（2026-04-25 补充，按 refs 排序）
 
 - [x] P1 | [[刘舜]] | 42行 · refs=81 · type=person | action: expand-content
