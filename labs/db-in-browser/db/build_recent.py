@@ -17,6 +17,9 @@ import re
 OUT      = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "../../../wiki/public/data/recent.sqlite3")
 )
+CFG      = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "../../../wiki/public/db-config-recent.json")
+)
 LOGS_DIR = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "../../../wiki/logs/recent")
 )
@@ -117,6 +120,14 @@ def build():
 
     size = os.path.getsize(OUT)
     print(f"写入 {OUT}  ({size:,} bytes，{len(rows)} 条记录)")
+
+    with open(CFG, encoding="utf-8") as f:
+        cfg = json.load(f)
+    cfg["fileSize"] = size
+    with open(CFG, "w", encoding="utf-8") as f:
+        json.dump(cfg, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    print(f"更新 {CFG}  (fileSize={size})")
 
 
 if __name__ == "__main__":
