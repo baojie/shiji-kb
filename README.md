@@ -2,7 +2,11 @@
 
 > 两千年来我们读《史记》，现在让机器帮我们"看见"隐藏的知识网络。
 
-**在线阅读**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **Wiki**: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/) | **报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
+**在线阅读（GitHub Pages）**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **Wiki**: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/)
+
+**在线阅读（DigitalOcean · 备用/国内更快）**: [https://shiji-izxyt.ondigitalocean.app/](https://shiji-izxyt.ondigitalocean.app/) | **Wiki**: [https://shiji-izxyt.ondigitalocean.app/wiki/index.html](https://shiji-izxyt.ondigitalocean.app/wiki/index.html)
+
+**报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
 **许可证**: [CC BY-NC-SA 4.0](LICENSE)
 
 学术文献请引用：鲍捷，史记知识库，2026，在线发布于https://github.com/baojie/shiji-kb
@@ -39,9 +43,12 @@
 
 ### 在线阅读器
 
-**首页**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
+| 站点 | 地址 | 说明 |
+|------|------|------|
+| GitHub Pages | [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | 主站，通过 CDN 全球分发 |
+| DigitalOcean | [https://shiji-izxyt.ondigitalocean.app/](https://shiji-izxyt.ondigitalocean.app/) | 备用站，服务端渲染，国内访问更稳定 |
 
-**精选章节**:
+**精选章节**（两个站点均可访问）:
 - [五帝本纪](https://baojie.github.io/shiji-kb/chapters/001_五帝本纪.html) - 上古神话与帝王传说
 - [项羽本纪](https://baojie.github.io/shiji-kb/chapters/007_项羽本纪.html) - 西楚霸王的兴衰
 - [秦楚之际月表](https://baojie.github.io/shiji-kb/chapters/016_秦楚之际月表.html) - 交互式历史年表
@@ -163,7 +170,9 @@
 
 ## 史记 Wiki
 
-**在线地址**: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/)
+**在线地址**:
+- GitHub Pages: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/)
+- DigitalOcean: [https://shiji-izxyt.ondigitalocean.app/wiki/index.html](https://shiji-izxyt.ondigitalocean.app/wiki/index.html)
 
 《史记》结构化知识的百科式入口——把标注数据、知识图谱、史源分析整合为人可阅读的 wiki 页面网络。
 
@@ -519,7 +528,7 @@ python generate_all_chapters.py
 
 ---
 
-**项目维护者**：[baojie](https://github.com/baojie) (上海 / San Jose)· **最后更新**：2026-04-22
+**项目维护者**：[baojie](https://github.com/baojie) (上海 / San Jose)· **最后更新**：2026-05-06
 
 ## 赞助一杯咖啡
 
