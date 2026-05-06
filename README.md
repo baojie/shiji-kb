@@ -4,7 +4,7 @@
 
 **在线阅读（GitHub Pages）**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **Wiki**: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/)
 
-**在线阅读（DigitalOcean · 备用/国内更快）**: [https://shiji-izxyt.ondigitalocean.app/](https://shiji-izxyt.ondigitalocean.app/) | **Wiki**: [https://shiji-izxyt.ondigitalocean.app/wiki/index.html](https://shiji-izxyt.ondigitalocean.app/wiki/index.html)
+**在线阅读（自有域名 · 备用/国内更快）**: [https://shiji.memify.wiki/](https://shiji.memify.wiki/) | **Wiki**: [https://shiji.memify.wiki/wiki](https://shiji.memify.wiki/wiki)
 
 **报告问题**: [提交Issue](https://github.com/baojie/shiji-kb/issues/new) （推荐截屏+paste）
 **许可证**: [CC BY-NC-SA 4.0](LICENSE)
@@ -46,7 +46,7 @@
 | 站点 | 地址 | 说明 |
 |------|------|------|
 | GitHub Pages | [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | 主站，通过 CDN 全球分发 |
-| DigitalOcean | [https://shiji-izxyt.ondigitalocean.app/](https://shiji-izxyt.ondigitalocean.app/) | 备用站，服务端渲染，国内访问更稳定 |
+| shiji.memify.wiki | [https://shiji.memify.wiki/](https://shiji.memify.wiki/) | 备用站，服务端渲染，国内访问更稳定 |
 
 **精选章节**（两个站点均可访问）:
 - [五帝本纪](https://baojie.github.io/shiji-kb/chapters/001_五帝本纪.html) - 上古神话与帝王传说
@@ -172,7 +172,7 @@
 
 **在线地址**:
 - GitHub Pages: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/)
-- DigitalOcean: [https://shiji-izxyt.ondigitalocean.app/wiki/index.html](https://shiji-izxyt.ondigitalocean.app/wiki/index.html)
+- shiji.memify.wiki: [https://shiji.memify.wiki/wiki](https://shiji.memify.wiki/wiki)
 
 《史记》结构化知识的百科式入口——把标注数据、知识图谱、史源分析整合为人可阅读的 wiki 页面网络。
 
