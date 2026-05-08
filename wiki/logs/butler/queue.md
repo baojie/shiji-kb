@@ -11,6 +11,12 @@
 
 - [ ] P0 | [[架构：SQLite 迁移]] | 四项指标超临界线（pages.json=5347KB, pages=20408, person=4327, history=20227）| 见 `wiki/memory/reflections/2026-04-30_arch.md`
 
+## P0 [AUDIT] 全站质量审计修复（2026-05-09 发现）
+
+- [ ] P0 | 清理 934 个孤儿文件 | 磁盘上文件名与 frontmatter id 不匹配的 `.md` 文件，924 个为旧版本残存 | action: `scripts/cleanup_orphan_files.py`
+- [ ] P0 | 补 5,841 页史记引文 | 有 sources 字段但缺「史记引文」章节的页面 | action: /quote pipeline（可复用 butler W3）
+- [ ] P0 | 修复 291 处断链 | 142 页面含无效链接，最严重为避讳页（91 处）和章节目录的反斜杠后缀错误 | 见 `labs/analysis/quality_audit.csv` D1_BROKEN_LINKS
+
 ## ⭐ 用户想要 (P0)
 - [x] **[想要]** 曹参征战时间线: `create-stub` [P0] [2026-04-26] [用户请求] <!-- 页面已存在，featured质量，早前会话已完成 -->
 
@@ -911,7 +917,7 @@
 
 ## 来自 discover_kg (kg top-N 缺 wiki 页)
 
-- [ ] 宣孟: `create-stub` (refs=22/章=5) [源:A] [P1] [2026-05-01]
+- [x] R12095 | 宣孟: `create-stub` (refs=22/章=5) [源:A] [P1] [2026-05-01]
 
 ---
 
@@ -1025,3 +1031,46 @@
 - [x] P1 | [[侯公]] | 4728B→9638B · type=person · src=秦始皇本纪/项羽本纪/高祖功臣侯者年表 | action: enrich-quality
 - [x] P1 | [[象]] | 4720B→10116B · type=person · src=五帝本纪 | action: enrich-quality
 - [x] P1 | [[申差]] | 4709B→10239B · type=person · src=秦本纪/六国年表/韩世家/张仪列传 | action: enrich-quality
+
+---
+
+## P1 expand-content 候选（2026-05-06 W5 补充，basic/standard person >3000B）
+
+- [~] P1 | [[秦君主]] | 14352B · type=person | action: expand-content <!-- skip: premium/redirect for 秦始皇 -->
+- [~] P1 | [[曼姬]] | 7317B · type=person | action: expand-content <!-- skip: id mismatch -->
+- [x] P1 | [[石申]] | 7003B · type=person | action: expand-content <!-- R12101 done -->
+- [x] P1 | [[甫侯]] | 6959B · type=person | action: expand-content <!-- R12100 done -->
+- [x] P1 | [[大鸿]] | 6346B · type=person | action: expand-content <!-- R12102 done -->
+- [~] P1 | [[段干子]] | 5769B · type=person | action: expand-content <!-- skip: id mismatch -->
+- [~] P1 | [[盗蹠]] | 5544B · type=person | action: expand-content <!-- R12104 skip: id mismatch -->
+- [~] P1 | [[太上]] | 5501B · type=person | action: expand-content <!-- skip: concept, not person -->
+- [x] P1 | [[魏鲜]] | 4506B · type=person | action: expand-content <!-- R12106 done -->
+- [x] P1 | [[东郭咸阳]] | 4497B · type=person | action: expand-content <!-- R12107 done -->
+- [x] P1 | [[鲍焦]] | 4248B · type=person | action: expand-content <!-- R12108 done -->
+- [x] P1 | [[公孙度]] | 4151B · type=person | action: expand-content <!-- R12112 done -->
+- [x] P1 | [[周缪王]] | 4140B · type=person | action: expand-content <!-- R12113 done -->
+- [x] P1 | [[菑川顷王]] | 3918B · type=person | action: expand-content <!-- R12114 done -->
+- [x] P1 | [[东周简王]] | 3914B · type=person | action: expand-content <!-- R12115 done -->
+
+## P1 premium-upgrade 候选（2026-05-06 W5 补充，featured→premium）
+
+- [x] P1 | [[越人]] | 15148B · type=person | action: premium-upgrade <!-- R12117 done -->
+- [x] P1 | [[接舆]] | 13320B · type=person | action: premium-upgrade <!-- R12109 done -->
+- [x] P1 | [[国惠子]] | 12958B · type=person | action: premium-upgrade <!-- R12110 done -->
+- [x] P1 | [[鲍牧]] | 12839B · type=person | action: premium-upgrade <!-- R12111 done -->
+- [x] P1 | [[刘馀]] | 12792B · type=person | action: premium-upgrade <!-- R12116 done -->
+- [x] P1 | [[伯夷叔齐]] | 12646B · type=person | action: premium-upgrade <!-- R12118 done -->
+- [x] P1 | [[侠累]] | 12508B · type=person | action: premium-upgrade <!-- R12120 done -->
+- [x] P1 | [[赵豹]] | 12428B · type=person | action: premium-upgrade <!-- R12123 done -->
+- [x] P1 | [[申公巫臣]] | 12391B · type=person | action: premium-upgrade <!-- R12124 done -->
+- [x] P1 | [[鲁孝公]] | 12225B · type=person | action: premium-upgrade <!-- R12125 done -->
+- [x] P1 | [[陈庄公]] | 12223B · type=person | action: premium-upgrade <!-- R12128 done -->
+- [x] P1 | [[孟懿子]] | 12102B · type=person | action: premium-upgrade <!-- R12130 done -->
+- [x] P1 | [[武丁]] | 11983B · type=person | action: premium-upgrade <!-- R12132 done -->
+- [x] P1 | [[鲁惠公]] | 11954B · type=person | action: premium-upgrade <!-- R12136 done -->
+- [x] P1 | [[东周惠王]] | 11951B · type=person | action: premium-upgrade <!-- R12138 done -->
+- [x] P1 | [[鲧]] | 11877B · type=person | action: premium-upgrade <!-- R12140 done -->
+- [ ] P1 | [[临江哀王]] | 11848B · type=person | action: premium-upgrade
+- [ ] P1 | [[石碏]] | 11797B · type=person | action: premium-upgrade
+- [ ] P1 | [[李兑]] | 11719B · type=person | action: premium-upgrade
+- [ ] P1 | [[屈完]] | 11657B · type=person | action: premium-upgrade
