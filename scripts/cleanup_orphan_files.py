@@ -65,12 +65,28 @@ def get_files_to_clean():
         in_registry = fid in pages
 
         if proper_exists:
-            # Orphan: stale copy, proper file exists
-            proper_size = os.path.getsize(proper_path)
-            this_size = os.path.getsize(fp)
-            issues.append((fname, 'STALE_COPY',
-                          f'id="{fid}" proper={expected}({proper_size}B) '
-                          f'stale_size={this_size}B'))
+            # Check if the current filename is a legitimate entity name
+            # that happens to have wrong content, vs. a stale rename copy.
+            #
+            # Stale rename: fname is an old/short version of expected
+            #   e.g. 商鞅变法八步推行法 → 商鞅变法八步推行完整方法论：...
+            #   Sign: fname is substring of expected, or vice versa
+            # Content mismatch: fname is a valid entity, content is about someone else
+            #   e.g. 晋出公.md (id=景伯) — 晋出公 should exist, content is wrong
+            #   Sign: no common substring, different entity entirely
+            stem = fname[:-3] if fname.endswith('.md') else fname
+            is_substring = stem in expected or expected in stem
+            is_methodology_rename = ('方法论' in stem and '方法论' in expected)
+            is_genuine_stale = is_substring or is_methodology_rename
+
+            if is_genuine_stale:
+                issues.append((fname, 'STALE_COPY',
+                              f'id="{fid}" proper={expected} rename survivor'))
+            else:
+                # Filename is a legitimate entity name, content is about a different entity.
+                # Restore or keep the file; flag for content correction.
+                issues.append((fname, 'CONTENT_MISMATCH',
+                              f'id="{fid}" 文件名是合法实体名但内容填错了实体，需修正内容'))
         elif in_registry:
             # Proper file doesn't exist but registry knows this ID
             reg_path = pages[fid].get('path', '?')
@@ -98,16 +114,19 @@ def main():
     stale = [i for i in issues if i[1] == 'STALE_COPY']
     name_mismatch = [i for i in issues if i[1] == 'NAME_MISMATCH_IN_REG']
     orphans = [i for i in issues if i[1] == 'ORPHAN_NO_REG']
+    content_mismatch = [i for i in issues if i[1] == 'CONTENT_MISMATCH']
 
     print(f'\n总计孤儿文件: {len(issues)}')
-    print(f'  STALE_COPY (可安全删除): {len(stale)}')
+    print(f'  STALE_COPY (改名遗留残存, 可安全删除): {len(stale)}')
     print(f'  NAME_MISMATCH_IN_REG (需重命名): {len(name_mismatch)}')
     print(f'  ORPHAN_NO_REG (无注册信息): {len(orphans)}')
+    print(f'  CONTENT_MISMATCH (内容填错实体, 需修正不可删除): {len(content_mismatch)}')
 
     # Show samples
     for label, group in [('STALE_COPY — 可删除', stale),
                           ('NAME_MISMATCH_IN_REG — 需重命名', name_mismatch),
-                          ('ORPHAN_NO_REG — 待审查', orphans)]:
+                          ('ORPHAN_NO_REG — 待审查', orphans),
+                          ('CONTENT_MISMATCH — 内容填错实体, 保留待修正', content_mismatch)]:
         print(f'\n--- {label} ({len(group)}个) ---')
         for fname, issue_type, detail in group[:10]:
             print(f'  {fname}  {detail}')
@@ -155,6 +174,11 @@ def main():
                 except Exception as e:
                     print(f'  ERROR renaming {fname}: {e}')
                     errors += 1
+
+        elif issue_type == 'CONTENT_MISMATCH':
+            # NEVER delete these — filename is valid but content is wrong
+            print(f'  ⚠ KEEP {fname}  (内容填错实体，需修正，不可删除)')
+            errors += 1
 
         elif issue_type == 'ORPHAN_NO_REG' and do_delete:
             # Only delete if very small (stub) and no registry entry
