@@ -1,7 +1,7 @@
 ---
-id: "WantedPages"
+id: WantedPages
 type: project
-label: 想要的页面
+label: WantedPages
 canonical_name: "WantedPages"
 tags: [系统页面, 维护]
 ---

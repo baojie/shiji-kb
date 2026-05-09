@@ -1,7 +1,7 @@
 ---
-id: "About"
+id: About
 type: project
-label: 关于本 Wiki
+label: About
 canonical_name: "About"
 tags: [系统页面]
 quality: standard
