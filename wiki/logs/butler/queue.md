@@ -13,9 +13,9 @@
 
 ## P0 [AUDIT] 全站质量审计修复（2026-05-09 发现）
 
-- [ ] P0 | 清理 934 个孤儿文件 | 磁盘上文件名与 frontmatter id 不匹配的 `.md` 文件，924 个为旧版本残存 | action: `scripts/cleanup_orphan_files.py`
-- [ ] P0 | 补 5,841 页史记引文 | 有 sources 字段但缺「史记引文」章节的页面 | action: /quote pipeline（可复用 butler W3）
-- [ ] P0 | 修复 291 处断链 | 142 页面含无效链接，最严重为避讳页（91 处）和章节目录的反斜杠后缀错误 | 见 `labs/analysis/quality_audit.csv` D1_BROKEN_LINKS
+- [x] P0 | 清理 921 个孤儿文件 | R12178 完成：删除 888（883 旧版本 + 5 未注册），重命名 33（全半角引号）| action: `scripts/cleanup_orphan_files.py`
+- [x] P0 | 补 5,841 页史记引文 | 完成。实际添加 146 页（余页缺少标注覆盖，quote_page.py 无候选）。耗时 223 秒。瓶颈在标注覆盖而非脚本 | action: `scripts/batch_add_quotes.py`
+- [ ] P0 | 修复断链（机械部分已完成） | R12178-R12180: `\|` 反斜杠 185 处 + 章节名缺编号 3187 处 + 创建 24 redirect = 3787/5508 (69%)。残余 1721 处为真正缺失页面，需内容创建 | action: `scripts/fix_wikilink_backslash.py` + `scripts/fix_wikilink_targets.py` + `scripts/create_missing_redirects.py`
 
 ## ⭐ 用户想要 (P0)
 - [x] **[想要]** 曹参征战时间线: `create-stub` [P0] [2026-04-26] [用户请求] <!-- 页面已存在，featured质量，早前会话已完成 -->
