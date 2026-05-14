@@ -9,7 +9,240 @@
 
 ---
 
-## 2026-04-22
+## 2026-05-14
+
+**详细工作日志**: 无
+
+首页 Hero 区大改版：添加星河背景图、篆刻印章、渐变遮罩层与响应式布局；搜索框移至 Hero 区，所有尺寸使用 `clamp()` 全断点适配；新增两幅图片素材。更新注册表与别名冲突表。补录三篇缺失工作日志。提交 4 次。
+
+### 更改 (Changed)
+
+- **首页 Hero 改版**：CSS 新增 Hero 区完整样式（背景图、渐变遮罩、印章悬停提示、标题/副标题/搜索框）；JS 重构首页 HTML 结构为 Hero + .home-body 两层
+- **注册表更新**：pages.json 重生成；alias_conflicts.json 精简（2808→2232），新增周王/公子比等消歧记录
+- **图片素材**：新增 hero-bg.png（762KB 星空背景）、hero-seal.png（3.2KB 篆刻印章）
+
+### 新增 (Added)
+
+- **工作日志**：补录 2026-05-06、05-08、05-09 三日日志
+
+---
+
+## 2026-05-09
+
+**详细工作日志**: 无
+
+新增实体索引构建与质量审计工具链；批量规范化 wikilink 目标；补录 430 页历史修订记录；更新 Butler 原子行动目录与运行日志。提交 10 次。
+
+### 新增 (Added)
+
+- **实体索引构建脚本**：支持全量/增量构建
+- **质量审计分析工具与报告**：新增 `audit-completeness` 与 `refactor` Butler 动作
+- **wikilink 修复脚本**：批量规范化 wikilink 目标（加章节编号前缀）
+- **高引用页面深度优化队列**（TODO 更新）
+
+---
+
+## 2026-05-06
+
+**详细工作日志**: 无
+
+断链修复全面清零（R11662→12093）；高引用页面深度优化（齐/楚/秦/赵/汉/天下/淮 + 七国之乱配图）；新增 50+ 实体存根；READEME 新增 DigitalOcean 备用站点。提交 12 次。
+
+### 更改 (Changed)
+
+- **断链修复**：文内修复 + 重定向，累计清零（R11986→12093 最终批次）
+- **READEME 更新**：新增 DigitalOcean 第二阅读站点，备用站域名改为 `shiji.memify.wiki`
+
+---
+
+## 2026-05-05
+
+**详细工作日志**: 无
+
+docs/wiki 目录首次以符号链接形式发布（20001 页）；Butler skill 新增多实例支持；pre-commit hook 路径修复。
+
+### 更改 (Changed)
+
+- **符号链接重构**：`wiki/public` → `docs/wiki`，支持 DigitalOcean 部署
+- **Butler 多实例**：skill 更新支持 `--instance` / `--focus` 并行运行
+
+---
+
+## 2026-05-01
+
+**详细工作日志**: 无
+
+standard→featured 批量升级（R11159→11629，featured=681）；侯国 premium-upgrade 继续推进。提交 10 次。
+
+### 更改 (Changed)
+
+- **页面升级**：standard→featured ×196 页（含侯国国主等），featured 总数达 681
+- **注册表重建**：随每次批量升级同步重建
+
+---
+
+## 2026-04-30
+
+**详细工作日志**: 无
+
+premium-upgrade 大规模推进（R10814→11158）：专题人物/事件/sanwen 页升级，premium 达 1,168 页。提交 15 次。
+
+### 更改 (Changed)
+
+- **premium 升级**：人物/事件/sanwen 页共 173 页 featured→premium
+- **七国重命名**：`七国` → `七国之乱`，修正事件页命名
+- **注册表重建**：premium=1,168, featured=411
+
+---
+
+## 2026-04-28
+
+**详细工作日志**: 无
+
+expand-content 收尾（basic 全量完成）；premium-upgrade 大规模部署（batch 1-109）；别名 stub→REDIRECT 全库清理；质量字段规范化。提交 120+ 次。
+
+### 新增 (Added)
+
+- **Special:Recent 大小变化列**：新增 +绿/-红/±0 灰三色标记及行计数
+
+### 更改 (Changed)
+
+- **expand-content 收尾**：standard 品质人物页生平节全量完成 ~900 页，featured 补充 ~300 页
+- **premium-upgrade**：batch 1-109，完成 ~870 页 featured→premium（含侯国、事件、sanwen 等）
+- **别名清理**：~1,000 页 stub/basic 别名页 → REDIRECT，stub 总数归零
+- **质量字段规范化**：redirect/disambiguation 类型字段 148+452 页修正
+- **世系表**：145 个王子侯者侯国 + 115 个封国添加历代君主/侯主表
+
+---
+
+## 2026-04-27
+
+**详细工作日志**: 无
+
+H23 地名谭图配图大规模部署（兖豫青徐冀）；expand-content 人物生平节全库覆盖（R6000→8931，3,500+ 人物页）；history JSONL 格式迁移。提交 100+ 次。
+
+### 新增 (Added)
+
+- **/commit skill**：分组提交助手
+
+### 更改 (Changed)
+
+- **H23 地名配图**：兖豫青徐冀五州 200+ 页新增谭其骧地图截图
+- **expand-content 人物生平节**：R6000→8931，全量覆盖 3,500+ 人物页（含 basic 品质批量覆盖）
+- **history JSONL 迁移**：全部 ~20,000 页 revisions 从 `.json` 迁移至 `.jsonl`，后端+前端全面适配
+- **117 司马相如列传**：三家注 anchor 匹配脚本 + section 数据
+
+---
+
+## 2026-04-26
+
+**详细工作日志**: 无
+
+premium-upgrade 大规模部署（R5270→5882，~300 页 featured→premium）；narrative 扩写覆盖全部地名 stub（refs 清零）；五级质量评估体系上线；谭图地图截图工具。提交 50+ 次。
+
+### 新增 (Added)
+
+- **五级质量评估体系**：stub/basic/standard/featured/premium 自动化计算脚本
+- **谭图地图截图工具**：从《中国历史地图集》裁切邦国/地点区域图
+- **/enrich 与 /quote skill**：页面质量升级与引文补全
+- **fetch_image.py**：从 Wikimedia Commons 搜索配图
+- **geomap 图钉地图插件**：项羽分封地图页
+- **地名坐标修正**×6 处；避讳字库更新（实例 481→495）
+
+### 更改 (Changed)
+
+- **premium-upgrade**：~300 页 featured→premium（秦缪公/李斯/张仪/齐桓公/张汤/太史公 等系列）
+- **narrative 扩写**：refs=3-5 地名 stub 全清零，refs=2 持续推进
+- **Butler 反思循环重构**：W5 触发改为 round mod 29 强制机制
+- **插件加载顺序重构**：semantic-block 提前（load_order 55→40）
+- **三家注分发**：14,042 条注释，74% 分发到实体页
+
+---
+
+## 2026-04-25
+
+**详细工作日志**: 无
+
+add-event-timeline 全人物覆盖（R1942→4406，965 轮）；import-sku 批量导入（~528 页）；全库元数据批量完善（~16,000 页）；H4/H15/H21/H8 全库标注+源补充；谭图 corpus 初建。提交 60+ 次。
+
+### 新增 (Added)
+
+- **add-event-timeline**：965 人添加生平大事时间线，全量扫完 ~3,000 人物页
+- **import-sku**：~528 页章节/成语 SKU 批量导入
+- **谭图 corpus**：60 张谭其骧地图 + deskew_crop 倾斜纠正
+- **alias_conflicts.json**：别名冲突自动检测与记录
+- **Butler 永续 loop**：新增 `/butler` skill，W0 明确循环语义
+- **footnote 插件** + Special 页路由系统重构
+- **create-redirect** × 2 + add-tag × 695 页（时代标签）
+- **全类型实体导入**：官职/时间/朝代/制度/器物/典籍 20 类 ~6,290 页
+- **全章导读写入 history**：精品页 H21 修复
+
+### 更改 (Changed)
+
+- **全库元数据完善**：description + sources + 相关章节/人物全覆盖（~16,000 页）
+- **H15 全库标注清理** × 1,382 页 + H21 sources 补全 + H8 chapter-tags ×130 页
+- **H4 大规模补 pn/sources**：~3,800 页（知识量 K=29 万→49 万）
+- **H4 补 description** × 2,600 页 + sources × 170
+- **pn 引文语法修复**：§pn→（NNN-pn）×5,416 页
+- **Butler 自学习体系重构**：新增 W13/W14，扩展 W10 内务类型至 H20
+- **ontology-v2 全面整理**：frontmatter 补全、目录结构修正、JSON 格式转换
+- **W10 子 SKILL 体系**：H2-H20 各任务类型独立规范文件（17 个）
+- **labs/map 重构**：拆分 CHGIS 与地图集预处理
+
+---
+
+## 2026-04-24
+
+**详细工作日志**: 无
+
+Butler 超大规模运行日：新建 1,500+ wiki 页面、批量精品页升级（~500 页 featured）；事件全量导入；邦国实体全量导入（202 页新建+450 页更新）；20 国君主世系表；去重合并（H1/H3/H4）+ H4 溯源增补；散文丰富。知识量 K 从 ~95K→~267K。提交 200+ 次。
+
+### 新增 (Added)
+
+- **事件全量导入**：3,198 事件首次批量写入 wiki
+- **邦国实体全量导入**：202 页新建 + 450 页 "史记引文" 更新，K=278,860，pages=8,846
+- **20 国君主世系表**：含无年代/无页面君主，全量重建
+- **故事类型（story）**：458 篇史记故事批量导入
+- **SKILL_W12 语义查询与列表页规范**
+- **SKILL_W10a 去重合并规范**
+- **labs/db-in-browser**：浏览器端 SQLite 数据查询原型
+- **section_pn_index**：各章节小节首段 PN 索引
+
+### 更改 (Changed)
+
+- **Butler 批量新建**：R221→R1836，1,500+ 页（人物/地名/邦国/概念/redirect）
+- **W10 去重合并**：H1 重复页合并 × 100+ 组 + 假阳性标记 ~200 组
+- **H4 溯源增补**：R921→R951，追溯源头引文共 ~500 页
+- **散文丰富**（批次 R1819-1921）：诏令/谏言/策论/书信等 100+ 篇
+- **精品页大扫荡**：featured 从 541→885→清零 false featured
+- **recent.json 重构**：滚动窗口设计，前端始终显示 500 条
+- **wiki 首页优化**：gzip + 冗余字段去除 + 插件并行加载
+- **导航栏搜索框**：支持 datalist 补全
+- **append-only 原则写入 CLAUDE.md/W0/W2**
+- **历史记录迁移**：`logs/wiki_butler` → `wiki/logs/butler`
+
+---
+
+## 2026-04-23
+
+**详细工作日志**: 无
+
+Butler 集中消歧与新建日：修复 broken-link 批量消歧（桓公/惠王/昭王等 100+ 单字简称）；新增 story/overview 页面类型；散文全文分段修复；458 篇故事导入。知识量 K 从 ~62K→~96K。提交 30+ 次。
+
+### 新增 (Added)
+
+- **overview（综述）类型** + W11 概念分类元反思 SKILL + 152 页分类修正
+- **story（故事）类型**：从 `data/stories` 批量导入 458 篇史记故事
+- **Butler KB 目录规范**：`logs/wiki_butler/kb/` + W5/W7/W9/W11 写入规则
+
+### 更改 (Changed)
+
+- **fix-broken-link 消歧专项**：R141→R215，100+ 组单字简称消歧（桓/惠/昭/襄/文/威/宣/成/孝/简/庄/武 等）
+- **Butler 精品页扩写**：R121-140，76 页新增/深化（K=62,705→66,086）
+- **Butler stub 批量新建**：R196→R220，stub × 23 页 + alias × 6
+- **散文全文分段修复**：回车→段落，`〖{` 标记清除
+- **W2+PROMPT 更新**：accept 后只暂存，每 5 轮批量 commit
+- **删除操作留日志**：`record_revision --action delete`
 
 **详细工作日志**: [logs/daily/2026-04-22.md](logs/daily/2026-04-22.md)（待生成）
 
