@@ -416,29 +416,44 @@ export function renderHome(core) {
 
   document.getElementById('article').innerHTML =
     `<div class="wiki-home">
-      <h1>史记 Wiki</h1>
-      <p class="tagline">从 130 篇《史记》提取的 ${ids.length} 个实体页面, 可按姓名或别名搜索</p>
-
-      <div class="search-box">
-        <input id="wiki-search" type="search"
-          placeholder="搜索人名或别名 (如 '刘邦', '高祖', '沛公')"
-          autocomplete="off" autofocus>
-        <ul id="search-results" hidden></ul>
+      <div class="home-hero">
+        <img class="hero-cosmos" src="images/hero-bg.png" alt="史记 · 太史公">
+        <div class="hero-gradient"></div>
+        <div class="hero-seal" role="img" aria-label="史記之印">
+          <img src="images/hero-seal.png" alt="史記之印">
+          <div class="seal-tip">究天人之际，通古今之变，成一家之言</div>
+        </div>
+        <div class="hero-overlay">
+          <div class="hero-overlay-inner">
+            <div class="hero-eyebrow">史家之绝唱 · 无韵之离骚</div>
+            <h1 class="hero-title">史记</h1>
+            <div class="hero-tagline">从 130 篇《史记》提取的 <strong class="hero-count">${ids.length}</strong> 个实体页面</div>
+            <div class="hero-search">
+              <div class="search-box">
+                <input id="wiki-search" type="search"
+                  placeholder="搜索人名或别名 (如 '刘邦', '高祖', '沛公')"
+                  autocomplete="off" autofocus>
+                <ul id="search-results" hidden></ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="home-body">
+        <h2>精品页面 <small class="muted">(按质量排)</small></h2>
+        <div class="featured-grid">${featuredHtml}</div>
 
-      <h2>精品页面 <small class="muted">(按质量排)</small></h2>
-      <div class="featured-grid">${featuredHtml}</div>
+        <nav class="home-links">
+          <a href="#${encodeURIComponent('About')}" class="home-link home-link--about">关于本 Wiki</a>
+          <a href="#${encodeURIComponent('Special:AllPages')}" class="home-link">全部 ${ids.length} 页 →</a>
+          <a href="#${encodeURIComponent('Special:Recent')}" class="home-link">最近修订 →</a>
+          <a href="#${encodeURIComponent('Special:Random')}" class="home-link">随机页 →</a>
+        </nav>
 
-      <nav class="home-links">
-        <a href="#${encodeURIComponent('About')}" class="home-link home-link--about">关于本 Wiki</a>
-        <a href="#${encodeURIComponent('Special:AllPages')}" class="home-link">全部 ${ids.length} 页 →</a>
-        <a href="#${encodeURIComponent('Special:Recent')}" class="home-link">最近修订 →</a>
-        <a href="#${encodeURIComponent('Special:Random')}" class="home-link">随机页 →</a>
-      </nav>
+        <p class="home-disclaimer">⚠️ 本 Wiki 所有内容由 AI 机器人自动生成，难免有错误和疏漏。后台机器人 Butler 在持续巡逻纠错，但请勿用于学术引用。如发现问题欢迎<a href="https://github.com/baojie/shiji-kb/issues/new" target="_blank" rel="noopener">提交 Issue</a>。</p>
 
-      <p class="home-disclaimer">⚠️ 本 Wiki 所有内容由 AI 机器人自动生成，难免有错误和疏漏。后台机器人 Butler 在持续巡逻纠错，但请勿用于学术引用。如发现问题欢迎<a href="https://github.com/baojie/shiji-kb/issues/new" target="_blank" rel="noopener">提交 Issue</a>。</p>
-
-      <div id="k-panel" class="k-panel"><span class="muted">正在加载知识量...</span></div>
+        <div id="k-panel" class="k-panel"><span class="muted">正在加载知识量...</span></div>
+      </div>
     </div>`;
 
   // 知识量仪表板：latest + timeline sparkline

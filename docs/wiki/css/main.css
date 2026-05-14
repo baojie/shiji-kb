@@ -231,7 +231,170 @@ aside.sidebar {
 
 /* ---------- 首页 ---------- */
 
-body.is-home .page { grid-template-columns: 1fr; }
+body.is-home .page {
+  grid-template-columns: 1fr;
+  padding: 0;
+  margin-top: 0;
+}
+
+/* ====== Hero (首页顶栏) ====== */
+.home-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #7a1f1f;
+  line-height: 1;
+}
+.home-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(122,31,31,.25) 20%,
+    rgba(122,31,31,.5) 50%,
+    rgba(122,31,31,.25) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+.hero-cosmos {
+  display: block;
+  width: 100%;
+  height: clamp(280px, 36vw, 460px);
+  object-fit: cover;
+  object-position: center 18%;
+}
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,5,5,0)    0%,
+    rgba(10,5,5,0.05) 35%,
+    rgba(10,5,5,0.55) 72%,
+    rgba(8,3,3,0.88)  100%
+  );
+  pointer-events: none;
+}
+.hero-seal {
+  position: absolute;
+  bottom: clamp(0.8em, 2vw, 1.6em);
+  right: 1.2em;
+  z-index: 3;
+  opacity: .7;
+  transition: opacity .3s;
+  cursor: pointer;
+}
+.hero-seal:hover { opacity: 1; }
+.hero-seal img {
+  display: block;
+  width: clamp(48px, 6vw, 76px);
+  height: clamp(48px, 6vw, 76px);
+  filter: drop-shadow(0 1px 6px rgba(0,0,0,.4));
+}
+.seal-tip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  white-space: nowrap;
+  background: rgba(10,6,2,.88);
+  color: #ede0c8;
+  font-size: clamp(.65em, 1.1vw, .82em);
+  font-family: var(--serif);
+  padding: .4em .8em;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity .2s;
+  pointer-events: none;
+}
+.hero-seal:hover .seal-tip {
+  opacity: 1;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 0 clamp(2.5em, 7vw, 5em) 0;
+  pointer-events: none;
+}
+.hero-overlay-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.2em 0 2.8em;
+}
+.hero-eyebrow {
+  font-family: "Courier New", "Courier", monospace;
+  font-size: clamp(.55em, 1.1vw, .78em);
+  letter-spacing: .28em;
+  color: #f5eab5;
+  text-shadow: 0 0 8px rgba(0,0,0,.85), 0 0 24px rgba(0,0,0,.6), 0 0 48px rgba(0,0,0,.4);
+  text-transform: uppercase;
+  margin-bottom: .7em;
+  font-weight: 400;
+}
+.hero-title {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(2.6em, 6.5vw, 5em);
+  font-weight: 900;
+  color: #f5eab5;
+  text-shadow: 0 2px 28px rgba(122,31,31,.6), 0 0 80px rgba(240,180,50,.25);
+  line-height: 1.05;
+  margin: 0 0 .35em;
+  border: none;
+  letter-spacing: -.01em;
+}
+.hero-tagline {
+  font-family: var(--sans);
+  font-size: clamp(.78em, 1.4vw, 1em);
+  color: #dcc090;
+  letter-spacing: .06em;
+  font-weight: 300;
+}
+.hero-count {
+  color: #c89030;
+  font-weight: 500;
+}
+.hero-search {
+  position: relative;
+  margin-top: 1.2em;
+  pointer-events: auto;
+}
+.wiki-home .hero-search .search-box {
+  margin: 0;
+  max-width: 480px;
+}
+.hero-search .search-box input {
+  background: rgba(20,12,8,.72);
+  backdrop-filter: blur(6px);
+  border-color: rgba(200,168,112,.3);
+  color: #e8dcc8;
+  font-size: 1em;
+}
+.hero-search .search-box input::placeholder {
+  color: #a09070;
+  opacity: .8;
+}
+.hero-search .search-box input:focus {
+  border-color: #c8a870;
+  box-shadow: 0 0 0 3px rgba(200,168,112,.15);
+}
+
+/* Home body below hero */
+.home-body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2em 1.2em;
+}
 
 .wiki-home .tagline {
   color: var(--fg-muted);
