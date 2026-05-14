@@ -169,7 +169,7 @@ for 每个字符位置 i in 底本文本:
 每章生成一份校对报告:
 
 ```
-logs/curation/reports/001_五帝本纪_校对报告.md
+doc/curation/reports/001_五帝本纪_校对报告.md
 ```
 
 ---
@@ -328,7 +328,7 @@ logs/curation/reports/001_五帝本纪_校对报告.md
 ## 输出文件结构
 
 ```
-logs/curation/reports/          # 校对报告目录
+doc/curation/reports/          # 校对报告目录
 ├── 001_五帝本纪_校对报告.md
 ├── 002_夏本纪_校对报告.md
 ├── ...
@@ -630,12 +630,12 @@ corpus/archive/chapter/           ← 原始底本（不可变，校对基准）
 
 ```bash
 # 1. 对 corpus/archive/chapter/NNN_篇名.txt 进行多版本互校
-# 2. 生成校对报告: logs/curation/reports/NNN_篇名_校对报告.md
+# 2. 生成校对报告: doc/curation/reports/NNN_篇名_校对报告.md
 # 3. 报告中列出所有字符变更（如：筴→策, 暐→檋, 饹→奔）
 ```
 
 **输出文件**:
-- `logs/curation/reports/NNN_篇名_校对报告.md`
+- `doc/curation/reports/NNN_篇名_校对报告.md`
 
 #### 步骤2: 应用校对结果到标准底本
 
@@ -1188,7 +1188,7 @@ grep -o "〗" chapter_md/NNN_篇名.tagged.md | wc -l
 # 用法：./sync_collation_to_derivatives.sh 005
 
 CHAPTER_NUM=$1
-REPORT_FILE="logs/curation/reports/${CHAPTER_NUM}_*.md"
+REPORT_FILE="doc/curation/reports/${CHAPTER_NUM}_*.md"
 
 # 1. 从校对报告中提取所有字符替换规则
 # 2. 应用到 corpus/archive/chapter/

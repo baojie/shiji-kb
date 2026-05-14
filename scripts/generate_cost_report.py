@@ -67,7 +67,7 @@ def parse_args():
     parser.add_argument('--period', choices=['weekly', 'monthly'], help='报告周期')
     parser.add_argument('--start', help='开始日期 (YYYY-MM-DD)')
     parser.add_argument('--end', help='结束日期 (YYYY-MM-DD)')
-    parser.add_argument('--output', default='logs/cost_reports', help='输出目录')
+    parser.add_argument('--output', default='doc/reports', help='输出目录')
     parser.add_argument('--format', choices=['markdown', 'text'], default='markdown', help='输出格式')
     return parser.parse_args()
 

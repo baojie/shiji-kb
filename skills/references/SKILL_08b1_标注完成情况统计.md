@@ -141,9 +141,9 @@ python scripts/lint_text_integrity.py --check-nested  # 附加嵌套标注检测
 
 | 脚本 | 对象 | 输出 | 典型用法 |
 |------|------|------|----------|
-| [`scripts/scan_untagged_aliases.py`](../../scripts/scan_untagged_aliases.py) | 已知实体的漏标（`entity_index.json` 已有的正名/别名在正文中未被标） | `doc/analysis/patch/NNN_别名补标.tsv` | `python scripts/scan_untagged_aliases.py --all --types person place` |
+| [`scripts/scan_untagged_aliases.py`](../../scripts/scan_untagged_aliases.py) | 已知实体的漏标（`entity_index.json` 已有的正名/别名在正文中未被标） | `data/patches/NNN_别名补标.tsv` | `python scripts/scan_untagged_aliases.py --all --types person place` |
 | [`scripts/scan_sanwen_candidates.py`](../../scripts/scan_sanwen_candidates.py) | 散文候选（按触发短语与长度识别未收入 `sanwen.json` 的书信/诏令/策论） | `labs/planning/sanwen_candidates.{tsv,md}` | `python scripts/scan_sanwen_candidates.py` |
-| [`scripts/find_candidate_entities.py`](../../scripts/find_candidate_entities.py) | 未知候选（未标文本中按 n-gram 频次 + 可选词表过滤发现新候选） | `doc/analysis/candidates/{chapter}_candidates.tsv` + `summary.md` | `python scripts/find_candidate_entities.py --all --filter mingwu --min-freq 3` |
+| [`scripts/find_candidate_entities.py`](../../scripts/find_candidate_entities.py) | 未知候选（未标文本中按 n-gram 频次 + 可选词表过滤发现新候选） | `data/candidates/{chapter}_candidates.tsv` + `summary.md` | `python scripts/find_candidate_entities.py --all --filter mingwu --min-freq 3` |
 
 **`find_candidate_entities.py` 的关键点**：
 - 先剥离所有已标片段（连内容一并移除，用换行占位切断跨标注 n-gram），所以只扫描真正的未标文本

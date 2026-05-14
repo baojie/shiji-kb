@@ -71,7 +71,7 @@
 - **简体底本版本**: 7列（秦、楚、项、赵、齐、汉、燕），**缺少魏、韩两国**
 - **校勘结论**: 采用维基文库版本，简体底本需要补充
 
-详见：[logs/curation/collation_016_项羽分封后表头.md](../logs/curation/collation_016_项羽分封后表头.md)
+详见：[doc/curation/collation_016_项羽分封后表头.md](../doc/curation/collation_016_项羽分封后表头.md)
 
 **操作规范**:
 
@@ -79,7 +79,7 @@
 2. **列数确定**: 以维基文库的列数为准（包括合并单元格展开后的列数）
 3. **列名确定**: 以维基文库的`<th>`内容为准
 4. **简体底本修正**: 如果简体底本表头与维基文库不符，需要修正简体底本
-5. **校勘记录**: 重大差异必须记录在`logs/curation/`目录
+5. **校勘记录**: 重大差异必须记录在`doc/curation/`目录
 
 ---
 
@@ -299,7 +299,7 @@
 
 根据维基文库校勘，016章第二张表"项羽分封后"的表头应该使用合并单元格表示分封后的诸侯国扩展。
 
-详见：[logs/curation/collation_016_项羽分封后表头.md](../../logs/curation/collation_016_项羽分封后表头.md)
+详见：[doc/curation/collation_016_项羽分封后表头.md](../../doc/curation/collation_016_项羽分封后表头.md)
 
 **校勘结论**:
 ```
@@ -402,7 +402,7 @@ cat logs/lint_text_integrity_XXX.txt
 
 ### 第五步：生成校勘记录
 
-如果涉及异文，在 `logs/curation/` 目录下创建校勘记录：
+如果涉及异文，在 `doc/curation/` 目录下创建校勘记录：
 
 ```markdown
 # collation_XXX_问题描述.md

@@ -119,7 +119,7 @@ LOGS_ROOT = PROJECT_ROOT / 'logs'
 # logs/daily/ - 每日工作日志
 LOGS_DAILY_DIR = LOGS_ROOT / 'daily'
 
-# logs/curation/ - 校勘日志
+# doc/curation/ - 校勘日志
 LOGS_CURATION_DIR = LOGS_ROOT / 'curation'
 LOGS_CURATION_REPORTS_DIR = LOGS_CURATION_DIR / 'reports'
 

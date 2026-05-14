@@ -2,7 +2,7 @@
 """
 白话翻译JSON生成脚本
 
-从 doc/translation/NNN_章节名_白话.md 生成 docs/translations/NNN.json
+从 labs/translation/NNN_章节名_白话.md 生成 docs/translations/NNN.json
 在生成过程中完成语义标注的HTML渲染，确保前端直接使用渲染后的HTML
 
 用法:
@@ -112,7 +112,7 @@ def generate_translation_json(chapter_num: str, output_dir: Path = None):
     chapter_num = chapter_num.zfill(3)
 
     # 查找对应的翻译Markdown文件
-    translation_dir = Path('doc/translation')
+    translation_dir = Path('labs/translation')
     md_files = list(translation_dir.glob(f'{chapter_num}_*_白话.md'))
 
     if not md_files:
@@ -162,7 +162,7 @@ def main():
 
     if sys.argv[1] == '--all':
         # 生成所有已有的翻译
-        translation_dir = Path('doc/translation')
+        translation_dir = Path('labs/translation')
         md_files = sorted(translation_dir.glob('*_白话.md'))
 
         if not md_files:

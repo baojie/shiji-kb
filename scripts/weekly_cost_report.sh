@@ -5,7 +5,7 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-OUTPUT_DIR="$PROJECT_ROOT/logs/cost_reports"
+OUTPUT_DIR="$PROJECT_ROOT/doc/reports"
 
 echo "📊 生成 Claude Code 每周成本报告..."
 echo ""

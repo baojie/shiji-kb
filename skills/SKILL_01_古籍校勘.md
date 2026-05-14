@@ -575,7 +575,7 @@ shiji-kb/
 │       ├── 史记四库.txt        # 四库版
 │       └── 史記正文.繁体.txt   # 繁体正文
 ├── curation_base/            # 多版本互校定本
-├── logs/curation/reports/         # 各章校对报告
+├── doc/curation/reports/         # 各章校对报告
 ├── docs/
 │   ├── chapters/              # 130篇HTML展示页面
 │   ├── data/

@@ -36,7 +36,7 @@ def format_chapter(data: dict) -> str:
         '',
         '> **说明**：',
         '> - `原文` 为 `chapter_md` 去除实体标注后的文言正文',
-        '> - `本库` 为 `doc/translation` 去除实体标注后的译文',
+        '> - `本库` 为 `labs/translation` 去除实体标注后的译文',
         '> - `hunterhug` 为 `corpus/shiji/段译/` 对应段；一段可能覆盖多 PN（则多 PN 共享）',
         '> - `白话史记` 为 `corpus/shiji/白话史记.txt` 按章内比例估算的对应区段（粗粒度）',
         '',

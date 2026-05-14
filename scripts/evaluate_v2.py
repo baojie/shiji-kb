@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Phase 6 评估：对同一章节 v1 (doc/translation/) vs v2 (doc/translation_v2/) 对比关键指标。
+Phase 6 评估：对同一章节 v1 (labs/translation/) vs v2 (labs/translation/v2/) 对比关键指标。
 
 评估维度：
 1. PN 对齐数 / 总数（两版本都须 100% 对齐）
@@ -22,8 +22,8 @@ from pathlib import Path
 from difflib import SequenceMatcher
 
 ALIGN_DIR = Path('data/translation_alignment')
-V1_DIR = Path('doc/translation')
-V2_DIR = Path('doc/translation_v2')
+V1_DIR = Path('labs/translation')
+V2_DIR = Path('labs/translation/v2')
 
 TAG_RE = re.compile(r'〖[@=;%&◆^~•!?+#$:\[_\{][^〖〗]*〗|⟦[○◈◉◇][^⟦⟧]*⟧|〘※[^〘〙]*〙')
 DISAMBIG_RE = re.compile(r'〖[@=;%&◆^~•!?+#$:\[_\{]\s*([^|〗]+)\|([^〗]+)〗')
@@ -209,10 +209,10 @@ def main():
         chapters = [a.zfill(3) for a in args]
     results = [evaluate_chapter(ch) for ch in chapters]
     report = format_report(results)
-    Path('doc/translation_quality/eval').mkdir(parents=True, exist_ok=True)
-    Path('doc/translation_quality/v2_evaluation.md').write_text(report)
+    Path('labs/translation/quality/eval').mkdir(parents=True, exist_ok=True)
+    Path('labs/translation/quality/v2_evaluation.md').write_text(report)
     print(report)
-    print(f'\n报告已写入 doc/translation_quality/v2_evaluation.md')
+    print(f'\n报告已写入 labs/translation/quality/v2_evaluation.md')
 
 
 if __name__ == '__main__':

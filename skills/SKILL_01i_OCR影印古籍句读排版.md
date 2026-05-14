@@ -104,7 +104,7 @@ OCR 错字不在本 Skill 订正，只识别、标注、汇总。订正交由 SK
 
 **检查项**：总行数、非空行比例、页标形式、`【】` 长度分布、OCR 一字多义候选、卷/篇结构线索。
 
-**产出**：`logs/curation/reports/<书名>_OCR勘探报告.md`
+**产出**：`doc/curation/reports/<书名>_OCR勘探报告.md`
 
 ### 阶段 1：清洗
 
@@ -290,7 +290,7 @@ python scripts/curation/fix_quotes_scoped.py <path> --verify
 - [ ] 字符完整性脚本通过
 - [ ] 标点配对、全角（SKILL_01f）
 - [ ] 可疑字表就绪（交 01b）
-- [ ] 整理复盘写入 `logs/curation/reports/<书名>_整理复盘.md`
+- [ ] 整理复盘写入 `doc/curation/reports/<书名>_整理复盘.md`
 
 ---
 
@@ -300,8 +300,8 @@ python scripts/curation/fix_quotes_scoped.py <path> --verify
 
 - 输入：`corpus/shiji/读史记十表.txt`（1265 行 OCR，~10 万字）
 - 输出：`corpus/shiji/读史记十表.md`
-- OCR 可疑字：`logs/curation/reports/读史记十表_OCR可疑字.md`
-- **项目复盘**（时间线、遇到的问题、未完成事项、下一步清单）：`logs/curation/reports/读史记十表_整理复盘.md`
+- OCR 可疑字：`doc/curation/reports/读史记十表_OCR可疑字.md`
+- **项目复盘**（时间线、遇到的问题、未完成事项、下一步清单）：`doc/curation/reports/读史记十表_整理复盘.md`
 
 ---
 

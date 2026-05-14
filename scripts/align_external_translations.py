@@ -4,7 +4,7 @@ Phase 1：对齐外部白话版本到本库 PN 粒度。
 
 输入：
   - chapter_md/NNN_*.tagged.md           本库带标注原文
-  - doc/translation/NNN_*_白话.md         本库 LLM 译文
+  - labs/translation/NNN_*_白话.md         本库 LLM 译文
   - corpus/shiji/段译/NNN_*_段译.txt      hunterhug 段级对照
   - corpus/shiji/白话史记.txt             整本白话（仅白话，无原文）
 
@@ -34,7 +34,7 @@ from pathlib import Path
 from difflib import SequenceMatcher
 
 CHAPTER_MD = Path('chapter_md')
-WHITE_MD = Path('doc/translation')
+WHITE_MD = Path('labs/translation')
 DUANYI_DIR = Path('corpus/shiji/段译')
 BAIHUA_FILE = Path('corpus/shiji/白话史记.txt')
 OUTPUT_DIR = Path('data/translation_alignment')
@@ -101,7 +101,7 @@ def load_chapter_pns(tagged_path: Path):
 
 
 def load_white_translation(white_path: Path):
-    """解析 doc/translation/NNN_白话.md，返回 {pn: white_text_stripped}。"""
+    """解析 labs/translation/NNN_白话.md，返回 {pn: white_text_stripped}。"""
     content = white_path.read_text()
     result = {}
     pattern = re.compile(r'^##\s*\[(\d+(?:\.\d+)*)\][^\n]*\n((?:(?!^##).)*)', re.M | re.DOTALL)

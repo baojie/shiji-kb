@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-v2 校验：检查 doc/translation/*_白话.md 中的半角标点。
+v2 校验：检查 labs/translation/*_白话.md 中的半角标点。
 可选 --fix 自动替换为对应全角。
 
 约束（SKILL_01h v2 规则 11）：译文所有标点一律全角。允许的半角：
@@ -28,7 +28,7 @@ import re
 import sys
 from pathlib import Path
 
-TARGET_DIR = Path('doc/translation')
+TARGET_DIR = Path('labs/translation')
 
 # 半角→全角映射（非数字语境）
 SIMPLE_MAP = {

@@ -122,7 +122,7 @@
 | `analyze_tagged.py` | 可用 | 字频 + n-gram + 词表模式匹配（覆盖率统计已转至 `compute_annotation_coverage.py`） | doc/analysis/未标注实体分析报告.md |
 | `compute_annotation_coverage.py` | 月度 | SKILL_02f_文本统计.md<br>SKILL_08b1_标注完成情况统计.md | doc/analysis/汉字标注覆盖率统计报告_{YYYYMMDD}.md |
 | `pos_analysis.py` | 按需 | SKILL_08b1_标注完成情况统计.md | doc/analysis/pos/*.json<br>doc/analysis/pos_summary.md |
-| `find_candidate_entities.py` | 按需 | SKILL_08b1_标注完成情况统计.md | doc/analysis/candidates/*.tsv |
+| `find_candidate_entities.py` | 按需 | SKILL_08b1_标注完成情况统计.md | data/candidates/*.tsv |
 | `analyze_time_investment.py` | 1次 | SKILL_10g_项目成本与时间统计.md | logs/analysis/*.md |
 | `analyze_word_frequency.py` | 2次 | SKILL_02e_词法分析.md<br>SKILL_02f_文本统计.md | logs/analysis/*.md |
 

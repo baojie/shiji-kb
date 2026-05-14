@@ -2,7 +2,7 @@
 """
 白话翻译消歧同步与审核脚本
 
-目的：让 doc/translation/*_白话.md 的实体消歧保持与原始标注 chapter_md/*.tagged.md 一致。
+目的：让 labs/translation/*_白话.md 的实体消歧保持与原始标注 chapter_md/*.tagged.md 一致。
 
 规范（详见 SKILL_01h §消歧语法）：
 - 原文标注 〖@籍|项籍〗：显示名=籍，规范名=项籍
@@ -111,7 +111,7 @@ def audit_chapter(chapter_num: str, apply: bool = False):
     }
     """
     src_path = next(Path('chapter_md').glob(f'{chapter_num}_*.tagged.md'), None)
-    tgt_path = next(Path('doc/translation').glob(f'{chapter_num}_*_白话.md'), None)
+    tgt_path = next(Path('labs/translation').glob(f'{chapter_num}_*_白话.md'), None)
     if not src_path or not tgt_path:
         return {'issues': [(None, f'缺失文件: src={src_path} tgt={tgt_path}')], 'fixed': 0}
 
@@ -162,7 +162,7 @@ def main():
     args = ap.parse_args()
 
     if args.all:
-        chapters = sorted({f.name[:3] for f in Path('doc/translation').glob('*_白话.md')})
+        chapters = sorted({f.name[:3] for f in Path('labs/translation').glob('*_白话.md')})
     else:
         chapters = [c.zfill(3) for c in args.chapters]
 

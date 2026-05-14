@@ -10,16 +10,16 @@ TSV 格式（由各脚本生成，通用字段）：
 
 用法：
   # 单文件（dry-run，只显示不修改）
-  python scripts/apply_annotation_patches.py --file doc/analysis/patch/055_留侯世家_省称建议.tsv --dry-run
+  python scripts/apply_annotation_patches.py --file data/patches/055_留侯世家_省称建议.tsv --dry-run
 
   # 单文件（实际写入）
-  python scripts/apply_annotation_patches.py --file doc/analysis/patch/055_留侯世家_省称建议.tsv
+  python scripts/apply_annotation_patches.py --file data/patches/055_留侯世家_省称建议.tsv
 
   # 批量应用某目录下所有 TSV
-  python scripts/apply_annotation_patches.py --dir doc/analysis/patch/ --pattern 省称建议
+  python scripts/apply_annotation_patches.py --dir data/patches/ --pattern 省称建议
 
   # 应用别名补标 TSV
-  python scripts/apply_annotation_patches.py --dir doc/analysis/patch/ --pattern 别名补标
+  python scripts/apply_annotation_patches.py --dir data/patches/ --pattern 别名补标
 
 策略：
   - 使用上下文（context 字段）定位原文中的目标词，而非依赖位置数字（行号可能偏移）
@@ -34,7 +34,7 @@ import sys
 from pathlib import Path
 
 CHAPTER_DIR = Path('chapter_md')
-PATCH_DIR   = Path('doc/analysis/patch')
+PATCH_DIR   = Path('data/patches')
 
 # 实体类型 → 标注符号映射（v2.1 格式）
 TYPE_TO_SYMBOL = {

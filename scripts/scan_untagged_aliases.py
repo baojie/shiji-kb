@@ -9,7 +9,7 @@
 逻辑：
   1. 加载 entity_index.json（含所有类型：person/place/official/...）
   2. 对每章，在未标注文字中搜索已知词（按字数降序贪心匹配，防止子串重复覆盖）
-  3. 输出建议标注 TSV 到 doc/analysis/patch/NNN_别名补标.tsv
+  3. 输出建议标注 TSV 到 data/patches/NNN_别名补标.tsv
 
 字段（TSV）：
   章节    正名    别名    位置    句法框架类型    匹配模式    上下文    实体类型
@@ -29,7 +29,7 @@ from pathlib import Path
 from collections import defaultdict
 
 CHAPTER_DIR = Path('chapter_md')
-PATCH_DIR   = Path('doc/analysis/patch')
+PATCH_DIR   = Path('data/patches')
 ENTITY_INDEX = Path('kg/entities/data/entity_index.json')
 
 # 实体类型 → 标注符号（v2.1 格式）

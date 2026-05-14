@@ -30,7 +30,7 @@ description: Butler agent 的探索与食物收集。定义 6 大食物源 (kg /
 
 ### 源 C · 项目分析报告
 **路径**：`doc/**/*.md`
-**营养**：引证脚注, 如 `doc/lifespan_inference/<人名>.md` 证明某人物生卒
+**营养**：引证脚注, 如 `labs/lifespan/<人名>.md` 证明某人物生卒
 **探查信号**：
 - wiki 页声称生卒但无引证 + doc 存在 → 加脚注
 - `doc/events/*总结.md` 提及某人物 → 该页可加"相关反思"链
@@ -85,7 +85,7 @@ Butler 每轮读取三个独立队列，共同决定本轮任务：
 
 ## P1 中优
 - [ ] 建 topic 页 "神话与历史的界限" [源:B] [fact_005]
-- [ ] 刘邦页补生卒脚注 [源:C] [doc/lifespan_inference/刘邦.md]
+- [ ] 刘邦页补生卒脚注 [源:C] [labs/lifespan/刘邦.md]
 
 ## P2 低优
 - [ ] 全局扫"相关邦国"都空的人物页 [源:A]

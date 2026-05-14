@@ -16,7 +16,7 @@ description: "史记章节按PN段落进行文言文到白话文的翻译规范"
 ### 核心步骤
 1. 读取章节 `.tagged.md` 文件，提取所有PN段落
 2. 使用Task工具调用translation subagent，按PN顺序翻译
-3. 保存翻译结果到 `doc/translation/NNN_章节名_白话.md`
+3. 保存翻译结果到 `labs/translation/NNN_章节名_白话.md`
 4. 验证实体标注完整性
 
 ### 成功标准
@@ -173,7 +173,7 @@ description: "史记章节按PN段落进行文言文到白话文的翻译规范"
 python scripts/extract_pn_segments.py chapter_md/NNN_章节名.tagged.md
 
 # 2. 创建翻译输出目录（如不存在）
-mkdir -p doc/translation
+mkdir -p labs/translation
 ```
 
 ### 2. 翻译执行
@@ -190,7 +190,7 @@ mkdir -p doc/translation
 ```python
 import re
 src = open('chapter_md/NNN_章节名.tagged.md').read()
-tgt = open('doc/translation/NNN_章节名_白话.md').read()
+tgt = open('labs/translation/NNN_章节名_白话.md').read()
 src_pns = sorted(set(re.findall(r'\[(\d+(?:\.\d+)*)\]', src)))
 src_pns = [p for p in src_pns if p != '0']
 tgt_pns = sorted(set(re.findall(r'^## \[(\d+(?:\.\d+)*)\]', tgt, re.M)))
@@ -418,11 +418,11 @@ python scripts/generate_translation_json.py --all
 - [ ] 所有PN段落翻译完整
 - [ ] 实体标注验证通过
 - [ ] 译文质量符合准确性、流畅性、简洁性标准
-- [ ] 文件保存到 `doc/translation/` 目录
+- [ ] 文件保存到 `labs/translation/` 目录
 - [ ] 提交git时使用清晰的commit message
 
 ---
 
 **最后更新**: 2026-04-22 v2+v2b（基于 hunterhug 段译 + 白话史记对齐分析，增补：单字简称必展开/文言动词必改/标点全角/年龄岁vs时长岁/礼不擅改/分封句式必展开/连续对话必补主语/单字地名补后缀/X之Y 虚词替换）
-**关联文件**: `doc/translation/`, `chapter_md/*.tagged.md`, `docs/translations/*.json`, `data/translation_alignment/`, `doc/translation_quality/`
+**关联文件**: `labs/translation/`, `chapter_md/*.tagged.md`, `docs/translations/*.json`, `data/translation_alignment/`, `labs/translation/quality/`
 **关联脚本**: `scripts/generate_translation_json.py`, `scripts/semantic_tags.py`, `scripts/sync_translation_disambig.py`, `scripts/translate_surface.py`, `scripts/lint_halfwidth_punct.py`, `scripts/align_external_translations.py`, `scripts/build_triple_diff_report.py`, `scripts/extract_terminology_from_external.py`

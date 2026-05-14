@@ -9,7 +9,7 @@
 逻辑：
   1. 加载各类实体词表（来自 infer_entity_type.py）
   2. 对每章，在未标注文字中搜索词表词（按字数降序贪心匹配）
-  3. 输出建议标注 TSV 到 doc/analysis/patch/NNN_新实体.tsv
+  3. 输出建议标注 TSV 到 data/patches/NNN_新实体.tsv
 
 字段（TSV）：
   章节    正名    词    位置    框架类型    匹配模式    上下文    实体类型
@@ -28,7 +28,7 @@ from pathlib import Path
 from collections import defaultdict
 
 CHAPTER_DIR = Path('chapter_md')
-PATCH_DIR   = Path('doc/analysis/patch')
+PATCH_DIR   = Path('data/patches')
 
 # ── 4类新实体词表 ──────────────────────────────────────────────────────────────
 

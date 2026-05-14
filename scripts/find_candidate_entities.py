@@ -25,8 +25,8 @@
     python scripts/find_candidate_entities.py --all --filter-file mywords.txt
 
 输出：
-    doc/analysis/candidates/{chapter_id}_candidates.tsv
-    doc/analysis/candidates/summary.md
+    data/candidates/{chapter_id}_candidates.tsv
+    data/candidates/summary.md
 """
 
 from __future__ import annotations

@@ -2,7 +2,7 @@
 """
 白话译文 surface 翻译脚本
 
-把白话 doc/translation/*_白话.md 中仍保留文言形式的 surface
+把白话 labs/translation/*_白话.md 中仍保留文言形式的 surface
 （主要是 地名 `〖=〗` 和 时间 `〖%〗`）翻译为白话，
 同时保留/同步规范名消歧。
 
@@ -218,12 +218,12 @@ def main():
     args = ap.parse_args()
 
     if args.all:
-        files = sorted(Path('doc/translation').glob('*_白话.md'))
+        files = sorted(Path('labs/translation').glob('*_白话.md'))
     else:
         files = []
         for ch in args.chapters:
             ch = ch.zfill(3)
-            files += list(Path('doc/translation').glob(f'{ch}_*_白话.md'))
+            files += list(Path('labs/translation').glob(f'{ch}_*_白话.md'))
 
     if not files:
         ap.print_help()
