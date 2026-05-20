@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-/* Memex Wiki 本地静态服务器 (无外部依赖, 仅用 Node 内置 http/fs)。
+/* 史记 Wiki 本地静态服务器 (无外部依赖, 仅用 Node 内置 http/fs)。
  *
  * 用法:
  *   node wiki/server/serve.js [root] [port]
- *   node wiki/server/serve.js wiki/public         # 默认端口 1956
+ *   node wiki/server/serve.js wiki/public         # 默认端口 8000
  *   node wiki/server/serve.js wiki/public 9001    # 指定端口
  *
  * 常规启动走 wiki/wiki.sh, 无需直接调用本脚本。
- * 端口 1956 为达特茅斯会议召开年份。
+ * 
  */
 
 import http from 'node:http';
@@ -36,7 +36,7 @@ const MIME = {
 function resolveArgs() {
   const args = process.argv.slice(2);
   let root = process.cwd();
-  let port = 1956;
+  let port = 8000;
   let fallback = null;
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--fallback' && args[i + 1]) {
@@ -144,8 +144,8 @@ function tryListen(handler, port, attempt = 0) {
   server.listen(port, '0.0.0.0', () => {
     const { address, port: p } = server.address();
     const hostname = os.hostname();
-    console.log(`Memex · http://${address}:${p}/  (本机)`);
-    console.log(`Memex · http://${hostname}:${p}/  (局域网)`);
+    console.log(`史记 Wiki · http://${address}:${p}/  (本机)`);
+    console.log(`史记 Wiki · http://${hostname}:${p}/  (局域网)`);
     console.log('  Ctrl+C 停止\n');
   });
 }
