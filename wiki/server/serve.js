@@ -1,27 +1,19 @@
 #!/usr/bin/env node
-/* 史记 Wiki 本地静态服务器 (无外部依赖, 仅用 Node 内置 http/fs)。
+/* Memex Wiki 本地静态服务器 (无外部依赖, 仅用 Node 内置 http/fs)。
  *
  * 用法:
  *   node wiki/server/serve.js [root] [port]
- *   node wiki/server/serve.js wiki/public         # 默认端口 8000
- *   node wiki/server/serve.js wiki/public 9000    # 指定端口
+ *   node wiki/server/serve.js wiki/public         # 默认端口 1956
+ *   node wiki/server/serve.js wiki/public 9001    # 指定端口
  *
  * 常规启动走 wiki/wiki.sh, 无需直接调用本脚本。
- *
- * 特性:
- *   - 自动处理 /  → index.html
- *   - 合理 MIME (含 .md, .ttl, .svg)
- *   - 防止路径穿越
- *   - dev 禁缓存 (Cache-Control: no-store)
- *   - 端口被占用时自动往后加 1, 最多试 10 次
+ * 端口 1956 为达特茅斯会议召开年份。
  */
 
-'use strict';
-
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const apiRouter = require('./api/index.js');
+import http from 'node:http';
+import fs   from 'node:fs';
+import path from 'node:path';
+import os   from 'node:os';
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -39,33 +31,60 @@ const MIME = {
   '.ico':  'image/x-icon',
   '.woff': 'font/woff',
   '.woff2':'font/woff2',
-  '.ttl':  'text/turtle; charset=utf-8',
-  '.yaml': 'application/yaml; charset=utf-8',
-  '.yml':  'application/yaml; charset=utf-8',
 };
 
 function resolveArgs() {
   const args = process.argv.slice(2);
   let root = process.cwd();
-  let port = 8000;
-  for (const a of args) {
-    if (/^\d+$/.test(a)) {
-      port = parseInt(a, 10);
+  let port = 1956;
+  let fallback = null;
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === '--fallback' && args[i + 1]) {
+      fallback = path.resolve(args[++i]);
+    } else if (/^\d+$/.test(args[i])) {
+      port = parseInt(args[i], 10);
     } else {
-      root = path.resolve(a);
+      root = path.resolve(args[i]);
     }
   }
-  return { root, port };
+  return { root, port, fallback };
 }
 
-function makeHandler(root) {
-  return (req, res) => {
-    // /api/* 前置分派: 走 API 路由, 不落静态文件系统
-    if (req.url.startsWith('/api/') || req.url === '/api') {
-      console.log(`  ${req.method} ${req.url} → api`);
-      return apiRouter.dispatch(req, res);
-    }
+// 对"可选资源"路径返回空内容，避免浏览器控制台产生红色 404
+const OPTIONAL_CONFIG_RE = /^\/local\/config\/[^/]+\.config\.js$/;
+const OPTIONAL_DATA_RE   = /^(\/data\/[^/]+\.json|\/kb\.json)$/;
+const EMPTY_MODULE = 'export default {};\n';
+const EMPTY_JSON   = '{}\n';
 
+function serveOptional(urlPath, res) {
+  if (OPTIONAL_CONFIG_RE.test(urlPath)) {
+    res.writeHead(200, { 'Content-Type': 'application/javascript; charset=utf-8', 'Cache-Control': 'no-store' });
+    res.end(EMPTY_MODULE);
+    return true;
+  }
+  if (OPTIONAL_DATA_RE.test(urlPath)) {
+    res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
+    res.end(EMPTY_JSON);
+    return true;
+  }
+  return false;
+}
+
+function serveFile(filePath, urlPath, res) {
+  let final = filePath;
+  const ext  = path.extname(final).toLowerCase();
+  const type = MIME[ext] || 'application/octet-stream';
+  res.writeHead(200, {
+    'Content-Type': type,
+    'Cache-Control': 'no-store',
+    'Access-Control-Allow-Origin': '*',
+  });
+  fs.createReadStream(final).on('error', () => res.end()).pipe(res);
+  console.log(`  GET ${urlPath} → 200`);
+}
+
+function makeHandler(root, fallback) {
+  return (req, res) => {
     let urlPath;
     try {
       urlPath = decodeURIComponent(req.url.split('?')[0]);
@@ -74,34 +93,35 @@ function makeHandler(root) {
     }
     if (urlPath === '/') urlPath = '/index.html';
 
-    // 正规化 + 防穿越
     const filePath = path.normalize(path.join(root, urlPath));
     if (!filePath.startsWith(root)) {
       res.writeHead(403); res.end('Forbidden'); return;
     }
 
     fs.stat(filePath, (err, stat) => {
-      if (err) {
+      if (!err) {
+        const final = stat.isDirectory() ? path.join(filePath, 'index.html') : filePath;
+        return serveFile(final, urlPath, res);
+      }
+      // 主目录未找到 → 尝试 fallback 目录
+      if (fallback) {
+        const fbPath = path.normalize(path.join(fallback, urlPath));
+        if (!fbPath.startsWith(fallback)) { res.writeHead(403); res.end('Forbidden'); return; }
+        fs.stat(fbPath, (err2, stat2) => {
+          if (!err2) {
+            const final = stat2.isDirectory() ? path.join(fbPath, 'index.html') : fbPath;
+            console.log(`  GET ${urlPath} → fallback`);
+            return serveFile(final, urlPath, res);
+          }
+          if (serveOptional(urlPath, res)) return;
+          res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+          res.end(`404 Not Found: ${urlPath}`);
+        });
+      } else {
+        if (serveOptional(urlPath, res)) return;
         res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
         res.end(`404 Not Found: ${urlPath}`);
-        console.log(`  ${req.method} ${urlPath} → 404`);
-        return;
       }
-      let final = filePath;
-      if (stat.isDirectory()) {
-        final = path.join(filePath, 'index.html');
-      }
-      const ext = path.extname(final).toLowerCase();
-      const type = MIME[ext] || 'application/octet-stream';
-      res.writeHead(200, {
-        'Content-Type': type,
-        'Cache-Control': 'no-store',
-        'Access-Control-Allow-Origin': '*',
-      });
-      fs.createReadStream(final)
-        .on('error', () => { res.end(); })
-        .pipe(res);
-      console.log(`  ${req.method} ${urlPath} → 200 ${type.split(';')[0]}`);
     });
   };
 }
@@ -121,23 +141,23 @@ function tryListen(handler, port, attempt = 0) {
       process.exit(1);
     }
   });
-  server.listen(port, '127.0.0.1', () => {
-    const { address, port: actualPort } = server.address();
-    console.log(`史记 Wiki · http://${address}:${actualPort}/`);
+  server.listen(port, '0.0.0.0', () => {
+    const { address, port: p } = server.address();
+    const hostname = os.hostname();
+    console.log(`Memex · http://${address}:${p}/  (本机)`);
+    console.log(`Memex · http://${hostname}:${p}/  (局域网)`);
     console.log('  Ctrl+C 停止\n');
   });
 }
 
 function main() {
-  const { root, port } = resolveArgs();
+  const { root, port, fallback } = resolveArgs();
   if (!fs.existsSync(root)) {
     console.error(`根目录不存在: ${root}`); process.exit(1);
   }
-  if (!fs.statSync(root).isDirectory()) {
-    console.error(`不是目录: ${root}`); process.exit(1);
-  }
   console.log(`根目录: ${root}`);
-  tryListen(makeHandler(root), port);
+  if (fallback) console.log(`引擎回退: ${fallback}`);
+  tryListen(makeHandler(root, fallback), port);
 }
 
 main();
