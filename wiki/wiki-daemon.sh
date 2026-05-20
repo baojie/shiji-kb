@@ -80,7 +80,7 @@ _stop() {
   # 等待最多 5 秒
   local i=0
   while kill -0 "$pid" 2>/dev/null && (( i < 10 )); do
-    sleep 0.5; (( i++ ))
+    sleep 0.5; i=$(( i + 1 ))
   done
   if kill -0 "$pid" 2>/dev/null; then
     echo "[wiki] 未响应，强制终止..."
