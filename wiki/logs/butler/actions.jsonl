@@ -10927,3 +10927,10 @@
 {"round": 12182, "ts": "2026-05-09T06:03:59Z", "action": "housekeeping", "page": "fix-broken-redirects", "status": "accept", "note": "删除 6 个指向已清理孤儿文件的损坏 redirect", "instance": "太史令"}
 {"round": 12183, "ts": "2026-05-09T06:06:02Z", "action": "housekeeping", "page": "citation-check", "status": "accept", "note": "check_citations --all (后台运行)", "instance": "太史令"}
 {"round": 12184, "ts": "2026-05-09T06:07:01Z", "action": "housekeeping", "page": "idle", "status": "accept", "note": "无新任务可执行。P0 已清空，P1 全完成", "instance": "太史令"}
+{"round": 12185, "ts": "2026-05-14T15:47:17Z", "action": "housekeeping", "page": "刘舜", "status": "fail", "note": "页面内容混用（虞舜 frontmatter + 广川惠王引文），H2不适用，需消歧处理", "instance": "太史令", "reflect": "刘舜页面存在虞舜与常山宪王内容混合的结构问题"}
+{"round": 12186, "ts": "2026-05-14T15:48:07Z", "action": "housekeeping", "page": "《史记》书旨：通古今之变、成一家之言", "status": "accept", "note": "w10c: 补充词汇链接5个（司马迁/天下/三代/中国/京师）", "instance": "太史令", "reflect": "无异常"}
+{"round": 12187, "ts": "2026-05-14T15:48:55Z", "action": "discover", "page": "W1", "status": "accept", "note": "W1探索：源A/B/C/D/E/F 均无新候选（SKU已全覆盖，entity_index无新缺失）", "instance": "太史令", "reflect": "所有食物源当前无新候选，P0裂变链需人工审批SQLite迁移，断链修复需大规模create-page"}
+{"round": 12188, "ts": "2026-05-14T15:49:24Z", "action": "fix-links", "page": "静公", "status": "accept", "note": "创建redirect：静公→晋静公（从采样断链发现）", "instance": "太史令", "reflect": "无异常"}
+{"round": 12189, "ts": "2026-05-14T15:49:45Z", "action": "fix-links", "page": "刘季", "status": "accept", "note": "创建redirect：刘季→刘邦（refs=512最高优先别名）", "instance": "太史令", "reflect": "无异常"}
+{"round": 12190, "ts": "2026-05-14T15:49:54Z", "action": "fix-links", "page": "孔仲尼", "status": "accept", "note": "创建redirect：孔仲尼→孔子（refs=267）", "instance": "太史令", "reflect": "无异常"}
+{"round": 12191, "ts": "2026-05-14T15:50:20Z", "action": "housekeeping", "page": "health-snapshot", "status": "accept", "note": "W11健康度快照：pages=20833, K=827643, stub=1.6%达标, premium=1246, featured=686, basic=13021(主力), pages.json=5.6MB仍超临界", "instance": "太史令", "reflect": "pages.json持续膨胀至5.6MB，SQLite架构提案仍待审批。basic→standard升级空间巨大"}
