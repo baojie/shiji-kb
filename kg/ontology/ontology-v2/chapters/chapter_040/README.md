@@ -14,7 +14,7 @@ chapter_040/
 │   │   └── fact_002.md      # 楚庄王一鸣惊人与问鼎中原
 │   └── skills/         # 程序性知识单元（1个）
 │       └── skill_001.md     # 边缘国家的崛起策略（楚国案例）
-├── mapping.md          # SKU使用场景映射（待完善）
+├── mapping.md          # SKU使用场景映射（已完善）
 ├── eureka.md           # 跨领域洞察（9条）
 └── README.md           # 本文件
 ```
