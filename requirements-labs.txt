@@ -1,0 +1,21 @@
+# shiji-kb 实验性依赖（labs/）
+# 仅当运行 labs/map、labs/hybrid-semantic-analysis 等实验脚本时安装
+-r requirements.txt
+
+# 地图（labs/map）
+geopandas>=0.14
+shapely>=2.0
+matplotlib>=3.8
+numpy>=1.26
+dbfread>=2.0
+
+# NLP / 语义实验（labs/hybrid-semantic-analysis）
+hanlp>=2.1
+torch>=2.0
+transformers>=4.40
+accelerate>=0.30
+
+# 其他
+openai>=1.0
+pytesseract>=0.3
+scipy>=1.11

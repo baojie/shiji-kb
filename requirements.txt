@@ -1,0 +1,17 @@
+# shiji-kb 核心依赖
+# 安装：pip install -r requirements.txt
+# 可选依赖（地图/NLP 实验）见 requirements-labs.txt
+
+anthropic>=0.103
+beautifulsoup4>=4.14
+jieba>=0.42
+opencc-python-reimplemented>=0.1.7
+pypinyin>=0.55
+requests>=2.32
+weasyprint>=60
+Pillow>=10
+PyMuPDF>=1.27
+PyYAML>=6.0
+markdown>=3.10
+markdown-it-py>=3.0
+rdflib>=7.0
