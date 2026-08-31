@@ -237,7 +237,7 @@ def generate_html(json_path, output_path):
         </div>
 
         <div class="nav">
-            <a href="../../index.html">← 返回主页</a>
+            <a href="../index.html">← 返回主页</a>
             <a href="special_index.html">专项索引</a>
             <a href="#" class="pdf">📥 下载PDF（待生成）</a>
         </div>
