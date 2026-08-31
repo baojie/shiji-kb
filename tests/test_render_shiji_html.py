@@ -10,7 +10,8 @@ import re
 from pathlib import Path
 
 # 添加父目录到路径以导入被测模块
-sys.path.insert(0, str(Path(__file__).parent.parent))
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_REPO_ROOT))
 
 import render_shiji_html as rsh
 
@@ -148,17 +149,18 @@ def test_complex_text():
 
 def test_actual_file_rendering():
     """测试实际文件渲染（如果存在测试文件）"""
-    test_file = Path('chapter_md/004_周本纪.tagged.md')
+    test_file = _REPO_ROOT / 'chapter_md/004_周本纪.tagged.md'
     if not test_file.exists():
         print("⊘ 跳过文件渲染测试（测试文件不存在）")
         return True
 
-    output_file = Path('/tmp/test_render_output.html')
+    output_file = _REPO_ROOT / 'docs/test_render_output.html'
+    css_file = str(_REPO_ROOT / 'docs/css/shiji-styles.css')
     try:
         result = rsh.markdown_to_html(
             str(test_file),
             str(output_file),
-            css_file='docs/css/shiji-styles.css'
+            css_file=css_file
         )
 
         if not output_file.exists():
